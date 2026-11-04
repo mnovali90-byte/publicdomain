@@ -3,6 +3,10 @@ name: Aggiorna autori in pubblico dominio
 on:
   schedule:
     - cron: "17 5 1 * *"   # il primo di ogni mese
+  push:                     # parte da solo quando cambia uno script
+    paths:
+      - "scripts/**"
+      - ".github/workflows/aggiorna.yml"
   workflow_dispatch:        # pulsante "Run workflow" per lanciarlo a mano
 
 permissions:
