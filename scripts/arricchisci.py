@@ -10,6 +10,8 @@ letteraria precisa (romanziere, poeta, drammaturgo, saggista) aggiunge:
   visite_12m     visite alla pagina Wikipedia negli ultimi 12 mesi (it + en)
   gutenberg      download dei libri su Project Gutenberg (se l'autore c'è)
   indice         popolarità 0-100 (60% visite, 20% pagine Wikimedia, 20% Gutenberg)
+  foto           ritratto da Wikimedia Commons con licenza e autore (se esiste)
+  paesi, lingue  cittadinanza e lingue dell'autore da Wikidata
 
 Fonti: Wikidata (CC0), Wikipedia e API Wikimedia, Gutendex/Project Gutenberg.
 Niente è scritto a memoria: se un dato non si trova, il campo resta vuoto.
@@ -66,20 +68,60 @@ def sparql(query):
 
 # ---------------------------------------------------------------- Wikidata
 
-def titoli_wikipedia(codici):
-    """{codice: {'it': titolo, 'en': titolo}} per un gruppo di autori."""
+def dati_base(codici):
+    """Per un gruppo di autori: titoli delle pagine Wikipedia, immagine di Commons,
+    paesi di cittadinanza, lingue. {codice: {...}}"""
     valori = " ".join("wd:" + c for c in codici)
     q = f"""
-SELECT ?a ?it ?en WHERE {{
+SELECT ?a ?it ?en ?img ?paeseLabel ?linguaLabel WHERE {{
   VALUES ?a {{ {valori} }}
   OPTIONAL {{ ?pit schema:about ?a ; schema:isPartOf <https://it.wikipedia.org/> ; schema:name ?it }}
   OPTIONAL {{ ?pen schema:about ?a ; schema:isPartOf <https://en.wikipedia.org/> ; schema:name ?en }}
+  OPTIONAL {{ ?a wdt:P18 ?img }}
+  OPTIONAL {{ ?a wdt:P27 ?paese }}
+  OPTIONAL {{ ?a (wdt:P103|wdt:P1412) ?lingua }}
+  SERVICE wikibase:label {{ bd:serviceParam wikibase:language "it,en,mul". }}
 }}"""
     out = {}
     for r in sparql(q):
         c = r["a"]["value"].rsplit("/", 1)[-1]
-        out[c] = {"it": r.get("it", {}).get("value"), "en": r.get("en", {}).get("value")}
+        d = out.setdefault(c, {"titoli": {}, "img": None, "paesi": [], "lingue": []})
+        d["titoli"] = {"it": r.get("it", {}).get("value") or d["titoli"].get("it"),
+                       "en": r.get("en", {}).get("value") or d["titoli"].get("en")}
+        if r.get("img") and not d["img"]:
+            d["img"] = urllib.parse.unquote(r["img"]["value"].rsplit("/", 1)[-1])
+        for chiave, campo in (("paesi", "paeseLabel"), ("lingue", "linguaLabel")):
+            v = r.get(campo, {}).get("value")
+            if v and not re.fullmatch(r"Q\d+", v) and v not in d[chiave]:
+                d[chiave].append(v)
     return out
+
+
+def foto_commons(nome_file):
+    """Ritratto da Wikimedia Commons con licenza e autore, oppure None."""
+    api = "https://commons.wikimedia.org/w/api.php?" + urllib.parse.urlencode({
+        "action": "query", "titles": "File:" + nome_file, "prop": "imageinfo", "format": "json",
+        "formatversion": "2", "iiprop": "extmetadata",
+        "iiextmetadatafilter": "LicenseShortName|Artist",
+    })
+    dati = http_json(api)
+    time.sleep(PAUSA)
+    try:
+        meta = dati["query"]["pages"][0]["imageinfo"][0]["extmetadata"]
+    except (TypeError, KeyError, IndexError):
+        return None
+    licenza = meta.get("LicenseShortName", {}).get("value", "").strip()
+    if not licenza:
+        return None
+    autore = re.sub(r"<[^>]+>", "", meta.get("Artist", {}).get("value", ""))
+    autore = re.sub(r"\s+", " ", autore).strip()[:120]
+    nome = urllib.parse.quote(nome_file.replace(" ", "_"))
+    return {
+        "url": f"https://commons.wikimedia.org/wiki/Special:FilePath/{nome}?width=800",
+        "pagina": f"https://commons.wikimedia.org/wiki/File:{nome}",
+        "licenza": licenza,
+        "autore": autore,
+    }
 
 
 def opere_wikidata(codici):
@@ -129,7 +171,8 @@ def riassumi_opere(lista, massimo=8):
             conteggio[g] = conteggio.get(g, 0) + 1
     generi = [g for g, _ in sorted(conteggio.items(), key=lambda kv: (-kv[1], kv[0]))[:4]]
     return {
-        "opere": [{"titolo": o["titolo"], "anno": o["anno"]} for o in ordinate[:massimo]],
+        "opere": [{"titolo": o["titolo"], "anno": o["anno"], "generi": sorted(o["generi"]), "sl": o["sl"]}
+                  for o in ordinate[:massimo]],
         "n_opere": len(lista),
         "generi": generi,
     }
@@ -267,37 +310,62 @@ def e_recente(voce, oggi):
         return False
 
 
+VERSIONE_CACHE = 2   # 2 = opere con generi, foto, paesi, lingue
+
+
+def da_aggiornare(voce, oggi):
+    """True se mancano dati nuovi (versione vecchia) o se la voce è scaduta."""
+    return voce is None or voce.get("v", 1) < VERSIONE_CACHE or not e_recente(voce, oggi)
+
+
 def arricchisci_gruppo(gruppo, cache, oggi):
-    """Scarica i dati di un gruppo di autori (max ~25) e li mette in cache."""
+    """Scarica i dati di un gruppo di autori (max ~25) e li mette in cache.
+    Parte leggera (opere, foto, paesi, lingue): sempre. Parte pesante (biografia,
+    visite, Gutenberg): solo se la voce è nuova o scaduta, per non rifare lavoro già fatto."""
     codici = [a["wikidata"] for a in gruppo]
-    titoli = titoli_wikipedia(codici)
+    base = dati_base(codici)
     time.sleep(2)
     opere = opere_wikidata(codici)
     time.sleep(2)
     for a in gruppo:
         c = a["wikidata"]
-        t = titoli.get(c, {})
-        voce = {"ts": oggi.isoformat()}
+        b = base.get(c, {"titoli": {}, "img": None, "paesi": [], "lingue": []})
+        vecchia = cache.get(c) or {}
+        serve_pesante = not e_recente(vecchia, oggi)
+        voce = dict(vecchia)
         voce.update(riassumi_opere(opere.get(c, [])))
-        try:
-            voce.update(biografia(t))
-        except Exception as e:
-            print(f"  bio non riuscita per {a['nome']}: {e}", file=sys.stderr)
-        try:
-            voce["visite_12m"] = visite_12_mesi(t, oggi)
-        except Exception as e:
-            print(f"  visite non riuscite per {a['nome']}: {e}", file=sys.stderr)
-        try:
-            voce["gutenberg"] = gutenberg_download(a["nome"], int(a["morte"][:4]))
-        except Exception as e:
-            print(f"  gutenberg non riuscito per {a['nome']}: {e}", file=sys.stderr)
+        voce["paesi"], voce["lingue"], voce["titoli"] = b["paesi"], b["lingue"], b["titoli"]
+        voce.pop("foto", None)
+        if b["img"]:
+            try:
+                foto = foto_commons(b["img"])
+                if foto:
+                    voce["foto"] = foto
+            except Exception as e:
+                print(f"  foto non riuscita per {a['nome']}: {e}", file=sys.stderr)
+        voce["v"] = VERSIONE_CACHE
+        if serve_pesante:
+            t = b["titoli"]
+            try:
+                voce.update(biografia(t))
+            except Exception as e:
+                print(f"  bio non riuscita per {a['nome']}: {e}", file=sys.stderr)
+            try:
+                voce["visite_12m"] = visite_12_mesi(t, oggi)
+            except Exception as e:
+                print(f"  visite non riuscite per {a['nome']}: {e}", file=sys.stderr)
+            try:
+                voce["gutenberg"] = gutenberg_download(a["nome"], int(a["morte"][:4]))
+            except Exception as e:
+                print(f"  gutenberg non riuscito per {a['nome']}: {e}", file=sys.stderr)
+            voce["ts"] = oggi.isoformat()
         cache[c] = voce
 
 
 def elabora_anno(percorso, cache, oggi):
     pacchetto = json.loads(percorso.read_text(encoding="utf-8"))
     letterari = [a for a in pacchetto["autori"] if LETTERARI & set(a["professioni"])]
-    da_fare = [a for a in letterari if not (a["wikidata"] in cache and e_recente(cache[a["wikidata"]], oggi))]
+    da_fare = [a for a in letterari if da_aggiornare(cache.get(a["wikidata"]), oggi)]
     print(f"{percorso.name}: {len(letterari)} letterari, {len(da_fare)} da scaricare", file=sys.stderr)
     for i in range(0, len(da_fare), 25):
         gruppo = da_fare[i:i + 25]
@@ -309,12 +377,20 @@ def elabora_anno(percorso, cache, oggi):
             a["letterario"] = True
             a["tipo_catalogo"] = [TIPO_CATALOGO[p] for p in a["professioni"] if p in TIPO_CATALOGO]
             voce = cache.get(a["wikidata"], {})
-            for k in ("bio", "bio_url", "bio_lingua", "opere", "n_opere", "generi", "visite_12m", "gutenberg"):
+            for k in ("bio", "bio_url", "bio_lingua", "opere", "n_opere", "generi", "visite_12m",
+                      "gutenberg", "foto", "paesi", "lingue"):
                 if voce.get(k) not in (None, [], ""):
                     a[k] = voce[k]
             a.setdefault("n_opere", 0)
     calcola_indici([a for a in pacchetto["autori"] if a.get("letterario")])
     pacchetto["letterari"] = len(letterari)
+    for chiave, campo in (("paesi", "paesi"), ("lingue", "lingue")):
+        conteggio = {}
+        for a in pacchetto["autori"]:
+            if a.get("letterario") and a.get("n_opere", 0) > 0:
+                for v in a.get(campo, []):
+                    conteggio[v] = conteggio.get(v, 0) + 1
+        pacchetto[chiave] = [{"nome": k, "n": n} for k, n in sorted(conteggio.items(), key=lambda kv: (-kv[1], kv[0]))]
     pacchetto["arricchito"] = oggi.isoformat()
     pacchetto["indice_formula"] = "60% visite Wikipedia (12 mesi), 20% pagine Wikimedia, 20% download Project Gutenberg"
     return pacchetto, letterari
