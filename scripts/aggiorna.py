@@ -42,7 +42,7 @@ SELECT ?autore ?autoreLabel ?nascita ?morte ?sl ?professioneLabel WHERE {{
           wikibase:sitelinks ?sl .
   VALUES ?professione {{ {occ} }}
   OPTIONAL {{ ?autore wdt:P569 ?nascita }}
-  SERVICE wikibase:label {{ bd:serviceParam wikibase:language "it,en". }}
+  SERVICE wikibase:label {{ bd:serviceParam wikibase:language "it,en,mul,de,fr,es,ru,pl,pt,nl,sv,no,da,fi,cs,tr,ja,zh". }}
 }}
 """
 

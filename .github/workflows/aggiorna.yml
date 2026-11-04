@@ -8,6 +8,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: aggiorna
+  cancel-in-progress: false
+
 jobs:
   aggiorna:
     runs-on: ubuntu-latest
@@ -28,5 +32,6 @@ jobs:
             echo "Nessun cambiamento"
           else
             git commit -m "Aggiornamento dati $(date -u +%Y-%m-%d)"
+            git pull --rebase origin main
             git push
           fi
