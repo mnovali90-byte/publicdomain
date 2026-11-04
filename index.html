@@ -4,328 +4,827 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Public Domain Radar</title>
-<meta name="description" content="Gli autori le cui opere diventano di pubblico dominio in Europa il prossimo anno, con biografia, opere e popolarità. Aggiornato ogni mese da dati aperti.">
+<meta name="description" content="Gli autori le cui opere entrano nel pubblico dominio in Europa il prossimo 1° gennaio. Dati aperti da Wikidata e Wikipedia, aggiornati ogni mese.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Instrument+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{
-  --fondo:#F5F7FA; --carta:#FFFFFF; --inchiostro:#0E1B2C; --testo:#2B3A52; --tenue:#51607A;
-  --linea:#DDE3EC; --linea-forte:#C5CEDB; --accento:#0B6E63; --accento-scuro:#064E46;
-  --accento-chiaro:#DDF1EE; --aperto:#F0F7F6; --traccia:#E6EBF2; --chip:#EDF1F6;
+  --ink:#0C0C10; --carta:#F7F7F4; --vermiglio:#FF4326; --vermiglio-testo:#C2301A;
+  --muto:#5C5C66; --muto-chiaro:#B9B9C6; --riquadro:#E4E2DA; --iniziali:#D2CFC4;
+  --notte:#1C1C24; --bordo-notte:#2E2E3A; --verde:#0E3B2E; --crema:#E9E6DD;
+  --display:'Big Shoulders Display',Impact,'Arial Narrow',sans-serif;
+  --testo:'Instrument Sans',system-ui,sans-serif;
+  --mono:'DM Mono',ui-monospace,Menlo,monospace;
+  --lato:clamp(20px,4vw,48px);
 }
 *{box-sizing:border-box}
-body{margin:0;background:var(--fondo);color:var(--inchiostro);font-family:'IBM Plex Sans',system-ui,sans-serif;-webkit-text-size-adjust:100%}
-a{color:var(--accento)} a:hover{color:var(--accento-scuro)}
-button,input,select{font-family:inherit}
-:focus-visible{outline:3px solid #0B6E63;outline-offset:2px}
-.contenitore{max-width:1120px;margin:0 auto;padding:0 32px}
-.titolo-font{font-family:'Bricolage Grotesque',system-ui,sans-serif}
-.mono{font-family:'IBM Plex Mono',ui-monospace,monospace;font-weight:500}
-header.testata{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding-top:28px}
-.marchio{display:flex;align-items:center;gap:12px;font-family:'Bricolage Grotesque',system-ui,sans-serif;font-weight:700;font-size:22px;letter-spacing:-.01em}
-.marchio span.icona{width:36px;height:36px;border-radius:10px;background:var(--accento);display:flex;align-items:center;justify-content:center}
-.anni{display:flex;gap:8px;flex-wrap:wrap}
-.pillola{min-height:44px;padding:0 20px;border-radius:999px;border:1px solid var(--linea-forte);background:var(--carta);color:var(--inchiostro);font-size:15px;font-weight:500;cursor:pointer}
-.pillola[aria-pressed="true"]{background:var(--inchiostro);border-color:var(--inchiostro);color:#fff;font-weight:600}
-.etichetta{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accento)}
-h1{margin:16px 0 0;max-width:860px;font-family:'Bricolage Grotesque',system-ui,sans-serif;font-weight:700;font-size:clamp(34px,5vw,56px);line-height:1.06;letter-spacing:-.02em}
-.sotto{margin:20px 0 0;max-width:680px;font-size:18px;line-height:1.55;color:var(--tenue)}
-.controlli{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:40px}
-.filtri{display:flex;flex-wrap:wrap;gap:8px}
-.filtro{min-height:44px;padding:0 18px;border-radius:10px;border:1px solid var(--linea-forte);background:var(--carta);color:var(--inchiostro);font-size:15px;font-weight:500;cursor:pointer}
-.filtro[aria-pressed="true"]{background:var(--inchiostro);border-color:var(--inchiostro);color:#fff;font-weight:600}
-.cerca{flex:1 1 220px;display:flex;align-items:center;gap:10px;min-height:44px;padding:0 14px;border-radius:10px;border:1px solid var(--linea-forte);background:var(--carta)}
-.cerca input{flex:1;min-width:0;border:0;outline:0;background:transparent;font-size:15px;color:var(--inchiostro)}
-.cerca:focus-within{outline:3px solid #0B6E63;outline-offset:2px}
-.ordina{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--tenue)}
-.ordina select{min-height:44px;padding:0 12px;border-radius:10px;border:1px solid var(--linea-forte);background:var(--carta);font-size:15px;font-weight:500;color:var(--inchiostro)}
-.scheda{margin-top:20px;background:var(--carta);border:1px solid var(--linea);border-radius:16px;overflow:hidden}
-.colonne{display:grid;grid-template-columns:44px minmax(180px,1.4fr) minmax(200px,1.6fr) 110px 200px;gap:16px;align-items:center;padding:14px 24px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--tenue)}
-.riga{border-top:1px solid var(--linea)}
-.riga.aperta{background:var(--aperto)}
-.testa{all:unset;display:grid;grid-template-columns:44px minmax(180px,1.4fr) minmax(200px,1.6fr) 110px 200px;gap:16px;align-items:center;padding:16px 24px;width:100%;box-sizing:border-box;cursor:pointer}
-.testa:focus-visible{outline:3px solid #0B6E63;outline-offset:-3px}
-.testa:hover{background:#F7FAFB}
-.riga.aperta .testa:hover{background:transparent}
-.posto{font-size:14px;color:var(--tenue)}
-.nome{font-family:'Bricolage Grotesque',system-ui,sans-serif;font-weight:600;font-size:18px;display:flex;align-items:center;gap:10px}
-.riga.aperta .nome{font-weight:700;font-size:22px;letter-spacing:-.01em}
-.freccia{flex:none;width:16px;height:16px;transition:transform .15s}
-.riga.aperta .freccia{transform:rotate(90deg)}
-.chips{display:flex;flex-wrap:wrap;gap:6px}
-.chip{font-size:12px;padding:3px 9px;border-radius:999px;background:var(--chip);color:var(--testo)}
-.chip.forte{background:var(--accento-chiaro);color:var(--accento-scuro);font-weight:500}
-.chip.contorno{background:var(--carta);border:1px solid #B8D8D3;color:var(--accento-scuro);font-weight:500;font-size:13px;padding:4px 10px;border-radius:8px}
-.morte{font-size:14px;color:var(--testo)}
-.barra{display:flex;align-items:center;gap:10px}
-.barra .traccia{flex:1;height:8px;border-radius:4px;background:var(--traccia)}
-.riga.aperta .barra .traccia{background:#D3DEE4}
-.barra .riempi{height:8px;border-radius:4px;background:var(--accento)}
-.barra .num{min-width:34px;text-align:right;font-size:13px}
-.dettaglio{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;padding:8px 24px 24px 84px}
-.dettaglio h3{margin:0;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--accento)}
-.dettaglio p{margin:10px 0 0;font-size:15px;line-height:1.6;color:var(--testo)}
-.dettaglio ul{margin:10px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px;font-size:15px;color:var(--testo)}
-.fonte{margin-top:10px;font-size:13px;color:var(--tenue)}
-.nd{color:var(--tenue);font-style:italic}
-.formula{margin:0 24px 24px 84px;padding:16px 20px;border-radius:12px;background:var(--carta);border:1px solid var(--linea)}
-.formula strong{font-size:14px}
-.formula .tre{margin-top:12px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;font-size:14px;color:var(--testo)}
-.altri{display:flex;justify-content:center;padding:20px;border-top:1px solid var(--linea)}
-.altri[hidden],.errore[hidden]{display:none}
-.vuoto{padding:40px 24px;text-align:center;color:var(--tenue)}
-footer{margin:16px 0 64px;font-size:13px;line-height:1.6;color:var(--tenue)}
-.errore{margin-top:40px;padding:24px;border-radius:12px;background:#FBEBD3;color:#7A3F06}
-@media (max-width:860px){
-  .contenitore{padding:0 20px}
-  .colonne{display:none}
-  .testa{grid-template-columns:1fr auto;grid-template-areas:"nome barra" "chips chips" "morte morte";gap:8px 12px;padding:16px 18px}
-  .posto{display:none}
-  .testa .nome{grid-area:nome}.testa .chips{grid-area:chips}.testa .morte{grid-area:morte;font-size:13px;color:var(--tenue)}.testa .barra{grid-area:barra;width:120px}
-  .dettaglio{grid-template-columns:1fr;gap:20px;padding:4px 18px 20px}
-  .formula{margin:0 18px 18px}.formula .tre{grid-template-columns:1fr;gap:6px}
-  .sotto{font-size:16px}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--carta);color:var(--ink);font-family:var(--testo);-webkit-text-size-adjust:100%}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--vermiglio);outline-offset:3px}
+.contenitore{max-width:1280px;margin:0 auto;padding-left:var(--lato);padding-right:var(--lato)}
+.mono{font-family:var(--mono);font-weight:500;letter-spacing:.14em;text-transform:uppercase}
+.occhiello{font-family:var(--mono);font-weight:500;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--vermiglio-testo)}
+.titolo{font-family:var(--display);font-weight:800;text-transform:uppercase;line-height:.92;margin:16px 0 0;font-size:clamp(46px,8vw,88px)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+[hidden]{display:none!important}
+
+/* hero */
+.scuro{background:var(--ink);color:var(--carta)}
+.scuro .occhiello{color:var(--vermiglio)}
+.barra{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 28px;padding-top:24px}
+.marchio{display:flex;align-items:center;gap:12px;font-family:var(--mono);font-weight:500;font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+.marchio i{width:10px;height:10px;border-radius:50%;background:var(--vermiglio);display:block}
+.navigazione{display:flex;flex-wrap:wrap;gap:4px 24px;font-family:var(--mono);font-weight:500;font-size:14px}
+.navigazione button,.navigazione a{background:none;border:0;border-bottom:2px solid transparent;padding:12px 0;color:#A9A9B6;text-decoration:none;min-height:44px}
+.navigazione .attivo{color:var(--carta);border-bottom-color:var(--vermiglio)}
+.navigazione button:hover{color:var(--carta)}
+.eroe{display:flex;flex-wrap:wrap;gap:48px 56px;align-items:flex-end;padding-top:clamp(40px,9vw,88px);padding-bottom:clamp(64px,10vw,112px)}
+.eroe-testo{flex:1 1 520px;min-width:0}
+.eroe h1{margin:24px 0 0;font-family:var(--display);font-weight:900;line-height:.82;letter-spacing:-.01em;text-transform:uppercase;font-size:120px;overflow-wrap:normal}
+.eroe .predicato{margin:clamp(20px,3vw,40px) 0 0;font-size:clamp(24px,3.4vw,34px);line-height:1.15;font-weight:500}
+.eroe .spiega{margin:20px 0 0;max-width:560px;font-size:18px;line-height:1.6;color:var(--muto-chiaro)}
+.azioni{margin-top:36px;display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center}
+.bottone{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 28px;background:var(--vermiglio);color:var(--ink);font-weight:600;font-size:16px;text-decoration:none;border:0}
+.bottone:hover{background:#ff5a41}
+.bottone.vuoto{background:transparent;color:inherit;border:2px solid currentColor}
+.collegamento{background:none;border:0;padding:12px 0;font-weight:500;font-size:16px;color:inherit;text-decoration:underline;text-underline-offset:4px;min-height:44px}
+.eroe-foto{flex:0 1 400px;min-width:min(260px,100%);width:100%;max-width:400px}
+
+/* ritratti */
+.ritratto{position:relative;overflow:hidden;background:var(--riquadro);aspect-ratio:4/5;width:100%}
+.ritratto.quadrato{aspect-ratio:1/1}
+.ritratto.notte{background:var(--notte);border:1px solid var(--bordo-notte)}
+.ritratto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block}
+.ritratto .iniziali{position:absolute;left:5%;top:0;font-family:var(--display);font-weight:900;font-size:clamp(90px,17vw,210px);line-height:1;color:var(--iniziali);user-select:none}
+.ritratto.quadrato .iniziali{font-size:clamp(80px,14vw,150px)}
+.ritratto.notte .iniziali{color:#2A2A36}
+.didascalia{margin-top:10px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;line-height:1.5;color:var(--muto)}
+.scuro .didascalia{color:#A9A9B6}
+.didascalia a{text-underline-offset:3px}
+.dati-riga{margin-top:12px;font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--muto)}
+.scuro .dati-riga{color:#A9A9B6}
+
+/* nomi grandi */
+.sezione{padding-top:clamp(80px,12vw,128px)}
+.grandi{margin-top:clamp(40px,6vw,72px);display:grid;grid-template-columns:5fr 4fr 3fr;gap:40px;align-items:start}
+.piccoli{margin-top:clamp(56px,8vw,88px);display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px}
+.scheda-autore{position:relative;min-width:0}
+.scheda-autore .apri{display:block;width:100%;text-align:left;background:none;border:0;padding:0}
+.scheda-autore h3{margin:22px 0 0;font-family:var(--display);font-weight:800;text-transform:uppercase;line-height:.95;overflow-wrap:anywhere}
+.g1 h3{font-size:clamp(40px,5.4vw,64px)}
+.g2 h3{font-size:clamp(34px,4.3vw,52px)}
+.g3 h3{font-size:clamp(30px,3.4vw,40px)}
+.piccoli h3{font-size:clamp(24px,2.6vw,32px);margin-top:16px}
+.scheda-autore p{margin:12px 0 0;max-width:430px;font-size:16px;line-height:1.55;color:#3A3A44}
+.scheda-autore .apri:hover h3{text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:6px;text-decoration-color:var(--vermiglio)}
+.cuore{position:absolute;right:10px;top:10px;width:44px;height:44px;border-radius:50%;border:0;background:rgba(247,247,244,.92);display:grid;place-items:center;color:var(--ink);z-index:2}
+.cuore svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2}
+.cuore[aria-pressed="true"]{background:var(--vermiglio)}
+.cuore[aria-pressed="true"] svg{fill:var(--ink)}
+
+/* scaffali */
+.scaffale{margin-top:64px}
+.scaffale:first-of-type{margin-top:72px}
+.scaffale-testa{display:flex;align-items:baseline;justify-content:space-between;gap:16px}
+.scaffale h3{margin:0;min-width:0;font-family:var(--display);font-weight:800;font-size:clamp(30px,4vw,40px);text-transform:uppercase}
+.vedi{background:none;border:0;padding:12px 0;font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muto-chiaro);white-space:nowrap}
+.vedi:hover{color:var(--carta)}
+.fila{margin-top:16px;display:flex;gap:16px;overflow-x:auto;padding-bottom:16px;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch}
+.copertina{flex:none;width:184px;height:276px;padding:20px;text-align:left;display:flex;flex-direction:column;justify-content:space-between;border:0;scroll-snap-align:start}
+.copertina .t{font-family:var(--display);font-weight:900;line-height:.92;text-transform:uppercase;overflow-wrap:anywhere}
+.copertina .a{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;line-height:1.4}
+.copertina:hover{transform:translateY(-4px)}
+.copertina{transition:transform .15s}
+@media (prefers-reduced-motion:reduce){.copertina{transition:none}html{scroll-behavior:auto}}
+.c0{background:var(--vermiglio);color:var(--ink)}
+.c1{background:var(--crema);color:var(--ink)}
+.c2{background:var(--verde);color:var(--carta)}
+.c3{background:var(--notte);color:var(--carta);border:1px solid var(--bordo-notte)}
+.nota{margin:40px 0 0;max-width:640px;font-size:14px;line-height:1.6;color:#A9A9B6}
+
+/* paesi */
+.parole{margin:36px 0 0;max-width:1100px;display:flex;flex-wrap:wrap;gap:0 22px;font-family:var(--display);font-weight:700;font-size:clamp(32px,5vw,56px);line-height:1.12;text-transform:uppercase}
+.parole button{background:none;border:0;padding:0;font:inherit;text-transform:inherit;color:var(--ink);text-align:left}
+.parole button sup{font-family:var(--mono);font-size:13px;letter-spacing:.04em;color:var(--muto);margin-left:4px;vertical-align:top;position:relative;top:.45em}
+.parole button:hover,.parole button[aria-pressed="true"]{color:var(--vermiglio-testo)}
+.parole button[aria-pressed="true"]{text-decoration:underline;text-decoration-thickness:4px;text-underline-offset:6px}
+.sottotitolo{margin:56px 0 0;font-family:var(--mono);font-weight:500;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--muto)}
+.lingue{margin-top:12px;display:flex;flex-wrap:wrap;gap:4px 8px}
+.lingue button{background:none;border:0;border-bottom:2px solid transparent;padding:10px 4px;font-size:20px;color:#3A3A44;min-height:44px}
+.lingue button:hover{border-bottom-color:var(--ink)}
+.lingue button[aria-pressed="true"]{color:var(--vermiglio-testo);border-bottom-color:var(--vermiglio)}
+
+/* i miei */
+.miei-testa{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px 32px}
+.miei-lista{margin:36px 0 0;padding:0;list-style:none;border-top:2px solid var(--ink)}
+.miei-lista li{display:flex;align-items:center;gap:16px;border-bottom:1px solid #CFCDC3;padding:6px 0}
+.miei-lista .nome{flex:1;min-width:0;background:none;border:0;text-align:left;padding:12px 0;font-family:var(--display);font-weight:800;font-size:clamp(24px,3vw,32px);text-transform:uppercase;line-height:1}
+.miei-lista .nome small{display:block;margin-top:6px;font-family:var(--mono);font-weight:400;font-size:12px;letter-spacing:.06em;color:var(--muto);text-transform:none}
+.vuoto-testo{margin:28px 0 0;max-width:560px;font-size:18px;line-height:1.55;color:#3A3A44}
+.rimuovi{background:none;border:0;padding:12px;font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muto);min-height:44px}
+.rimuovi:hover{color:var(--vermiglio-testo)}
+
+/* archivio */
+.cerca{margin-top:36px;border-bottom:2px solid var(--ink);padding-bottom:10px}
+.cerca input{width:100%;border:0;outline:0;background:transparent;font-family:var(--display);font-weight:700;font-size:clamp(30px,5vw,44px);text-transform:uppercase;color:var(--ink);border-radius:0}
+.cerca input::placeholder{color:#9A9AA2}
+.cerca:focus-within{border-bottom-color:var(--vermiglio)}
+.strumenti{margin-top:20px;display:flex;flex-wrap:wrap;gap:8px 8px;align-items:center}
+.pillola{min-height:44px;padding:0 16px;background:transparent;border:1.5px solid var(--ink);font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+.pillola[aria-pressed="true"]{background:var(--ink);color:var(--carta)}
+.pillola.chip{border-color:var(--vermiglio-testo);color:var(--vermiglio-testo)}
+.spazio{flex:1}
+.elenco{margin:36px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:0 40px}
+.elenco li{display:flex;align-items:center;border-bottom:1px solid #DAD8CE}
+.elenco .riga{flex:1;min-width:0;background:none;border:0;text-align:left;padding:12px 0;font-size:18px;line-height:1.3}
+.elenco .riga small{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.05em;color:var(--muto);margin-top:3px}
+.elenco .riga:hover b{text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--vermiglio);text-decoration-thickness:2px}
+.elenco b{font-weight:600}
+.cuore-riga{position:static;background:none;flex:none;width:44px;height:44px;border-radius:50%}
+.cuore-riga[aria-pressed="true"]{background:var(--vermiglio)}
+.nessuno{margin:36px 0 0;font-size:18px;color:#3A3A44}
+.altro{margin-top:32px}
+
+footer{margin-top:clamp(96px,12vw,144px);background:var(--ink);color:var(--muto-chiaro)}
+footer .contenitore{padding-top:56px;padding-bottom:72px;font-size:14px;line-height:1.7}
+footer p{margin:16px 0 0;max-width:780px}
+
+/* scheda in finestra */
+dialog{border:0;padding:0;background:var(--carta);color:var(--ink);width:min(960px,100vw);max-width:100vw;max-height:100dvh;height:auto;margin:auto;overflow:auto}
+dialog::backdrop{background:rgba(12,12,16,.72)}
+.scheda{padding:clamp(20px,4vw,40px);position:relative}
+.chiudi{position:sticky;top:0;float:right;z-index:3;width:48px;height:48px;border:0;background:var(--ink);color:var(--carta);font-size:26px;line-height:1;margin:-8px -8px 0 12px}
+.scheda-corpo{display:grid;grid-template-columns:280px 1fr;gap:clamp(24px,4vw,48px);clear:both}
+.scheda h2{margin:0;font-family:var(--display);font-weight:900;text-transform:uppercase;line-height:.9;font-size:clamp(44px,8vw,84px);overflow-wrap:anywhere}
+.scheda .sotto{margin-top:14px;font-family:var(--mono);font-size:13px;letter-spacing:.06em;color:var(--muto);line-height:1.6}
+.scheda .bio{margin:24px 0 0;font-size:18px;line-height:1.6;color:#2A2A34}
+.scheda h4{margin:32px 0 10px;font-family:var(--mono);font-weight:500;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muto)}
+.scheda ul.opere{margin:0;padding:0;list-style:none;columns:2 240px;column-gap:32px}
+.scheda ul.opere li{padding:5px 0;break-inside:avoid;line-height:1.35}
+.scheda ul.opere span{font-family:var(--mono);font-size:12px;color:var(--muto);margin-left:6px}
+.indice{display:flex;align-items:center;gap:16px}
+.indice .num{font-family:var(--display);font-weight:900;font-size:56px;line-height:1}
+.indice .asta{flex:1;height:10px;background:var(--riquadro);position:relative;max-width:320px}
+.indice .asta i{position:absolute;left:0;top:0;bottom:0;background:var(--vermiglio)}
+.nd{color:var(--muto)}
+.pulsanti{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.pulsanti .pillola{display:inline-flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink)}
+.pulsanti .pillola svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2}
+.pulsanti .pillola[aria-pressed="true"]{color:var(--carta)}
+.pulsanti .pillola[aria-pressed="true"] svg{fill:var(--vermiglio)}
+.tag{display:inline-block;margin:0 8px 8px 0;padding:6px 12px;background:var(--riquadro);font-size:14px}
+.avviso{margin-top:24px;padding:14px 16px;border-left:4px solid var(--vermiglio);background:#EFEDE5;font-size:14px;line-height:1.55}
+.griglia-opere{margin-top:28px;display:flex;flex-wrap:wrap;gap:16px}
+.griglia-opere .copertina{width:calc(25% - 12px);min-width:150px;height:230px}
+
+.messaggio{padding:80px 0;font-size:18px}
+
+@media (max-width:900px){
+  .grandi{grid-template-columns:1fr;gap:56px}
+  .grandi .scheda-autore p{max-width:none}
+  .piccoli{grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 20px}
+  .scheda-corpo{grid-template-columns:1fr}
+  .scheda-corpo .ritratto{max-width:280px}
+  .eroe-foto{max-width:340px}
+}
+@media (max-width:520px){
+  .copertina{width:156px;height:240px;padding:16px}
+  .griglia-opere .copertina{width:calc(50% - 8px);min-width:0;height:210px}
+  .elenco{grid-template-columns:1fr}
+  .spazio{display:none}
 }
 </style>
 </head>
 <body>
-<div class="contenitore">
-  <header class="testata">
-    <div class="marchio">
-      <span class="icona"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5z"></path><path d="M9 8h6"></path></svg></span>
-      Public Domain Radar
-    </div>
-    <nav class="anni" id="anni" aria-label="Anno di liberazione"></nav>
-  </header>
 
-  <section style="padding-top:56px">
-    <div class="etichetta mono">Unione Europea · morte + 70 anni</div>
-    <h1 id="titolo">Caricamento…</h1>
-    <p class="sotto" id="sottotitolo">Aggiornato ogni mese da dati aperti.</p>
+<section class="scuro" id="inizio">
+  <div class="contenitore">
+    <header class="barra">
+      <div class="marchio"><i></i>Public Domain Radar</div>
+      <nav class="navigazione" id="navigazione" aria-label="Navigazione"></nav>
+    </header>
+    <div id="eroe"><p class="messaggio">Caricamento…</p></div>
+  </div>
+</section>
+
+<main>
+  <section class="contenitore sezione" id="grandi-nomi" hidden>
+    <div class="occhiello" id="grandi-occhiello"></div>
+    <h2 class="titolo" id="grandi-titolo"></h2>
+    <div class="grandi" id="grandi"></div>
+    <div class="piccoli" id="piccoli"></div>
   </section>
 
-  <section class="controlli" aria-label="Filtri">
-    <div class="filtri" id="filtri" role="group" aria-label="Quali autori mostrare"></div>
-    <label class="cerca"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#51607A" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg><span class="visually" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Cerca autore</span><input id="cerca" type="search" placeholder="Cerca autore" autocomplete="off"></label>
-    <label class="ordina">Ordina per
-      <select id="ordine">
-        <option value="popolarita">Popolarità</option>
-        <option value="morte">Data di morte</option>
-        <option value="nome">Nome</option>
-      </select>
-    </label>
+  <section class="scuro" id="scaffali" hidden style="margin-top:clamp(96px,12vw,144px)">
+    <div class="contenitore" style="padding-top:clamp(72px,10vw,112px);padding-bottom:clamp(72px,10vw,120px)">
+      <div class="occhiello">Le opere che si liberano</div>
+      <h2 class="titolo">Sfoglia per genere</h2>
+      <div id="scaffali-corpo"></div>
+      <p class="nota">Gli scaffali nascono dai dati di Wikidata e mostrano solo le opere che hanno un genere indicato. Le copertine sono tipografiche: le copertine vere sono protette.</p>
+    </div>
   </section>
 
-  <main>
-    <div id="errore" class="errore" hidden></div>
-    <div class="scheda" id="scheda" hidden>
-      <div class="colonne mono"><div>#</div><div>Autore</div><div>Qualifiche</div><div>Morte</div><div>Popolarità</div></div>
-      <div id="elenco"></div>
-      <div class="altri" id="altri" hidden></div>
+  <section class="contenitore sezione" id="esplora" hidden>
+    <div class="occhiello">Esplora</div>
+    <h2 class="titolo">Per paese</h2>
+    <div class="parole" id="paesi"></div>
+    <div id="lingue-blocco" hidden>
+      <h3 class="sottotitolo">Per lingua</h3>
+      <div class="lingue" id="lingue"></div>
     </div>
-  </main>
+  </section>
 
-  <footer id="piede">
-    Fonti: Wikidata (CC0), Wikipedia (CC BY-SA, con link alla pagina di ogni autore), statistiche Wikimedia e Project Gutenberg.
-    Regola europea di base: alcuni paesi, come l'Italia, hanno proroghe e va fatta una verifica nazionale prima di pubblicare.
-    La qualifica letteraria viene da Wikidata e non è sempre precisa.
-  </footer>
-</div>
+  <section class="contenitore sezione" id="miei">
+    <div class="miei-testa">
+      <div>
+        <div class="occhiello">La tua lista</div>
+        <h2 class="titolo">I miei candidati</h2>
+      </div>
+      <div id="miei-azioni"></div>
+    </div>
+    <div id="miei-corpo"></div>
+  </section>
 
-<noscript><div class="contenitore"><div class="errore">Questa pagina ha bisogno di JavaScript per mostrare l'elenco.</div></div></noscript>
+  <section class="contenitore sezione" id="archivio">
+    <div class="occhiello">L'archivio</div>
+    <h2 class="titolo" id="archivio-titolo">Tutti gli autori</h2>
+    <div class="cerca">
+      <label class="sr" for="cerca">Cerca un autore</label>
+      <input id="cerca" type="search" placeholder="Cerca un autore" autocomplete="off" spellcheck="false">
+    </div>
+    <div class="strumenti" id="strumenti"></div>
+    <ul class="elenco" id="elenco"></ul>
+    <div class="altro" id="altro"></div>
+  </section>
+</main>
+
+<footer>
+  <div class="contenitore">
+    <div class="mono" style="font-size:13px;color:var(--carta)">Public Domain Radar</div>
+    <p>Regola europea di base: le opere diventano libere il 1° gennaio dell'anno successivo ai 70 dalla morte dell'autore. Alcuni paesi, come l'Italia, hanno proroghe: prima di pubblicare va fatta una verifica nazionale. Una traduzione già esistente ha diritti propri: qui si parla solo delle opere originali.</p>
+    <p id="fonti">Fonti: Wikidata (CC0), Wikipedia (testi CC BY-SA, con link alla pagina d'origine), Wikimedia Commons (ritratti, ciascuno con la sua licenza), Project Gutenberg. Aggiornato ogni mese in automatico.</p>
+    <p><a href="https://github.com/mnovali90-byte/publicdomain">Codice e dati su GitHub</a></p>
+  </div>
+</footer>
+
+<dialog id="finestra" aria-label="Scheda"></dialog>
 
 <script>
 "use strict";
-const MESI = ["gen","feb","mar","apr","mag","giu","lug","ago","set","ott","nov","dic"];
-const PASSO = 50;
-const stato = { anni: [], anno: null, dati: null, filtro: "letterari", ordine: "popolarita", cerca: "", visibili: PASSO, aperto: null };
+const PASSO = 120;
+const LETTERARIE = ["romanziere", "poeta", "drammaturgo", "saggista"];
+const MESI = ["gennaio","febbraio","marzo","aprile","maggio","giugno","luglio","agosto","settembre","ottobre","novembre","dicembre"];
+const SVG = "http://www.w3.org/2000/svg";
+const CHIAVE_PREFERITI = "pdr_preferiti_v1";
 
+const stato = {
+  anni: [], dati: {}, anno: null,
+  cerca: "", filtro: "letterari", ordine: "popolarita", paese: null, lingua: null, visibili: PASSO,
+  preferiti: [], ultimoFocus: null
+};
+
+/* ---------- utilità ---------- */
 function h(tag, attrs, ...figli) {
-  const e = (tag === "svg" || tag === "path")
-    ? document.createElementNS("http://www.w3.org/2000/svg", tag)
-    : document.createElement(tag);
+  const e = tag === "svg" || tag === "path" ? document.createElementNS(SVG, tag) : document.createElement(tag);
   for (const [k, v] of Object.entries(attrs || {})) {
-    if (k === "class") e.setAttribute("class", v);
-    else if (k.startsWith("on")) e.addEventListener(k.slice(2), v);
-    else if (v !== false && v != null) e.setAttribute(k, v);
+    if (v === null || v === undefined || v === false) continue;
+    if (k.startsWith("on") && typeof v === "function") e.addEventListener(k.slice(2), v);
+    else if (k === "class") e.setAttribute("class", v);
+    else e.setAttribute(k, v === true ? "" : v);
   }
   for (const f of figli.flat()) {
-    if (f == null || f === false) continue;
+    if (f === null || f === undefined || f === false) continue;
     e.append(f.nodeType ? f : document.createTextNode(String(f)));
   }
   return e;
 }
+const $ = (s) => document.querySelector(s);
 const n = (x) => Number(x).toLocaleString("it-IT");
+const norm = (s) => String(s).normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+const pulisci = (s) => String(s || "").replace(/<[^>]*>/g, "").replace(/\s+/g, " ").trim();
+const maiuscola = (s) => s ? s.charAt(0).toUpperCase() + s.slice(1) : s;
 function dataIt(iso) {
-  const [a, m, g] = iso.split("-");
-  return `${parseInt(g, 10)} ${MESI[parseInt(m, 10) - 1]} ${a}`;
+  if (!iso) return "";
+  const m = /^(-?\d{1,4})(?:-(\d{2}))?(?:-(\d{2}))?/.exec(iso);
+  if (!m) return iso;
+  const anno = Number(m[1]);
+  if (!m[2] || !m[3]) return String(anno);
+  return `${Number(m[3]) === 1 ? "1°" : Number(m[3])} ${MESI[Number(m[2]) - 1]} ${anno}`;
 }
-function norm(s) { return s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase(); }
-
+function ripara(txt, quanto) { return txt.length > quanto ? txt.slice(0, quanto - 1).trimEnd() + "…" : txt; }
 async function leggi(url) {
   const r = await fetch(url, { cache: "no-cache" });
   if (!r.ok) throw new Error(`${url}: ${r.status}`);
   return r.json();
 }
+function salvaLocale(chiave, valore) { try { localStorage.setItem(chiave, JSON.stringify(valore)); } catch (e) { /* ok */ } }
+function leggiLocale(chiave, predefinito) { try { const v = localStorage.getItem(chiave); return v ? JSON.parse(v) : predefinito; } catch (e) { return predefinito; } }
+function iniziali(nome) {
+  const p = nome.replace(/[().,]/g, " ").split(/\s+/).filter(Boolean);
+  if (!p.length) return "?";
+  return (p[0][0] + (p.length > 1 ? p[p.length - 1][0] : "")).toUpperCase();
+}
+function hashNumero(s) { let x = 0; for (const c of s) x = (x * 31 + c.charCodeAt(0)) >>> 0; return x; }
 
-const QUALIFICHE_LETTERARIE = ["romanziere", "poeta", "drammaturgo", "saggista"];
-
-function gruppi() {
-  const tutti = stato.dati.autori;
-  const arricchito = Boolean(stato.dati.arricchito);
-  // il segno "letterario" lo aggiunge lo script di arricchimento; se manca, lo ricava dalle qualifiche
-  const letterari = tutti.filter((a) => a.letterario === true || (a.letterario === undefined && a.professioni.some((p) => QUALIFICHE_LETTERARIE.includes(p))));
-  return {
-    tutti,
-    letterari: letterari.filter((a) => !arricchito || (a.n_opere || 0) > 0),
-    senza: arricchito ? letterari.filter((a) => !(a.n_opere > 0)) : [],
+/* ---------- dati ---------- */
+const senzaNome = (a) => /^Q\d+$/.test(a.nome);
+const letteraria = (a) => !senzaNome(a) && (a.letterario === true || (a.letterario === undefined && a.professioni.some((p) => LETTERARIE.includes(p))));
+const punteggio = (a) => [(a.indice === undefined ? -1 : a.indice), a.pagine_wikipedia || 0];
+function perPopolarita(x, y) {
+  const a = punteggio(x), b = punteggio(y);
+  return (b[0] - a[0]) || (b[1] - a[1]) || x.nome.localeCompare(y.nome, "it");
+}
+const gruppiCache = new Map();
+function gruppi(anno) {
+  if (gruppiCache.has(anno)) return gruppiCache.get(anno);
+  const d = stato.dati[anno];
+  const arricchito = !!d.arricchito;
+  const tutti = d.autori;
+  const lett = tutti.filter(letteraria);
+  const g = {
+    tutti: tutti.slice().sort(perPopolarita),
+    letterari: lett.filter((a) => !arricchito || (a.n_opere || 0) > 0).sort(perPopolarita),
+    senza: arricchito ? lett.filter((a) => !(a.n_opere > 0)).sort(perPopolarita) : [],
+    arricchito
   };
+  gruppiCache.set(anno, g);
+  return g;
 }
-
-function elencoCorrente() {
-  const g = gruppi();
-  let lista = g[stato.filtro === "tutti" ? "tutti" : stato.filtro === "senza" ? "senza" : "letterari"];
-  if (stato.cerca) {
-    const q = norm(stato.cerca);
-    lista = lista.filter((a) => norm(a.nome).includes(q));
+function tuttiGliAutori() { return stato.anni.flatMap((an) => stato.dati[an] ? stato.dati[an].autori.map((a) => ({ a, anno: an })) : []); }
+function trovaAutore(id) {
+  for (const an of stato.anni) {
+    const a = (stato.dati[an] ? stato.dati[an].autori : []).find((x) => x.wikidata === id);
+    if (a) return { a, anno: an };
   }
-  const copia = lista.slice();
-  const usaIndice = stato.filtro !== "tutti";
-  const pop = (a) => (usaIndice && a.indice !== undefined ? a.indice : 0);
-  if (stato.ordine === "popolarita") copia.sort((a, b) => pop(b) - pop(a) || b.pagine_wikipedia - a.pagine_wikipedia || a.nome.localeCompare(b.nome));
-  else if (stato.ordine === "morte") copia.sort((a, b) => a.morte.localeCompare(b.morte) || a.nome.localeCompare(b.nome));
-  else copia.sort((a, b) => a.nome.localeCompare(b.nome));
-  return copia;
+  return null;
 }
 
-function barra(a, massimoPagine) {
-  const conIndice = stato.filtro !== "tutti" && a.indice !== undefined;
-  const valore = conIndice ? a.indice : a.pagine_wikipedia;
-  const larghezza = conIndice ? a.indice : Math.round((a.pagine_wikipedia / massimoPagine) * 100);
-  return h("span", { class: "barra", title: conIndice ? "Indice di popolarità da 0 a 100" : "Pagine Wikimedia" },
-    h("span", { class: "traccia" }, h("span", { class: "riempi", style: `display:block;width:${larghezza}%` })),
-    h("span", { class: "num mono" }, n(valore)));
+/* ---------- preferiti ---------- */
+const èPreferito = (id) => stato.preferiti.includes(id);
+function alternaPreferito(id) {
+  stato.preferiti = èPreferito(id) ? stato.preferiti.filter((x) => x !== id) : [...stato.preferiti, id];
+  salvaLocale(CHIAVE_PREFERITI, stato.preferiti);
+  aggiornaCuori();
+  disegnaMiei();
+  disegnaNavigazione();
 }
-
-function dettaglio(a) {
-  const nd = (t) => h("span", { class: "nd" }, t);
-  if (!stato.dati.arricchito) {
-    return h("div", { class: "dettaglio", style: "display:block" },
-      h("p", {}, nd("Biografia, opere e indice di popolarità arrivano con il prossimo aggiornamento mensile.")),
-      h("div", { class: "fonte" }, h("a", { href: a.url, target: "_blank", rel: "noopener" }, "Scheda su Wikidata")));
-  }
-  const bio = a.bio
-    ? [h("p", {}, a.bio), h("div", { class: "fonte" }, "Fonte: ", h("a", { href: a.bio_url, target: "_blank", rel: "noopener" }, `Wikipedia (${a.bio_lingua === "en" ? "inglese" : "italiano"})`), ", licenza CC BY-SA")]
-    : [h("p", {}, nd("Biografia non disponibile."))];
-  const opere = a.opere && a.opere.length
-    ? h("ul", {}, a.opere.map((o) => h("li", {}, o.titolo, o.anno ? ` · ${o.anno}` : "")))
-    : h("p", {}, nd("Nessuna opera collegata a questo autore nei dati aperti."));
-  const catalogo = [
-    h("div", { class: "chips", style: "margin-top:10px" },
-      (a.tipo_catalogo || []).map((t) => h("span", { class: "chip contorno" }, t)),
-      (a.generi || []).map((t) => h("span", { class: "chip" }, t))),
-    h("ul", { style: "font-size:14px;gap:6px" }, h("li", {}, "Opere note in Wikidata: ", a.n_opere ? n(a.n_opere) : "0")),
-  ];
-  const visite = a.visite_12m != null ? n(a.visite_12m) : nd("non disponibile");
-  const gut = a.gutenberg != null ? n(a.gutenberg) : nd("non disponibile");
-  return h("div", {},
-    h("div", { class: "dettaglio" },
-      h("div", {}, h("h3", { class: "mono" }, "Biografia"), bio),
-      h("div", {}, h("h3", { class: "mono" }, "Opere principali"), opere, h("div", { class: "fonte" }, "Fonte: Wikidata")),
-      h("div", {}, h("h3", { class: "mono" }, "Che catalogo è"), catalogo)),
-    h("div", { class: "formula" },
-      h("strong", {}, "Come si calcola la popolarità"),
-      h("span", { style: "color:var(--tenue);font-size:14px" }, " · indice da 0 a 100"),
-      h("div", { class: "tre" },
-        h("div", {}, h("span", { class: "mono" }, "60%"), " visite Wikipedia, ultimi 12 mesi: ", visite),
-        h("div", {}, h("span", { class: "mono" }, "20%"), " pagine Wikimedia: ", n(a.pagine_wikipedia)),
-        h("div", {}, h("span", { class: "mono" }, "20%"), " download Project Gutenberg: ", gut)),
-      h("div", { class: "fonte" }, "Se una fonte manca, il suo peso passa alle altre. ", h("a", { href: a.url, target: "_blank", rel: "noopener" }, "Scheda su Wikidata"))));
-}
-
-function disegna() {
-  const g = gruppi();
-  const lista = elencoCorrente();
-  const massimo = Math.max(1, ...stato.dati.autori.map((a) => a.pagine_wikipedia));
-  const elenco = document.getElementById("elenco");
-  elenco.replaceChildren();
-  if (!lista.length) elenco.append(h("div", { class: "vuoto" }, "Nessun autore trovato."));
-  lista.slice(0, stato.visibili).forEach((a, i) => {
-    const aperto = stato.aperto === a.wikidata;
-    const precise = a.professioni.filter((p) => QUALIFICHE_LETTERARIE.includes(p));
-    const altre = a.professioni.filter((p) => !precise.includes(p));
-    const testa = h("button", {
-      class: "testa", type: "button", "aria-expanded": String(aperto),
-      onclick: () => { stato.aperto = aperto ? null : a.wikidata; disegna(); },
-    },
-      h("span", { class: "posto mono" }, i + 1),
-      h("span", { class: "nome" },
-        h("svg", { class: "freccia", viewBox: "0 0 24 24", fill: "none", stroke: "#51607A", "stroke-width": "2.5", "stroke-linecap": "round", "stroke-linejoin": "round", "aria-hidden": "true" }, h("path", { d: "M9 6l6 6-6 6" })),
-        a.nome),
-      h("span", { class: "chips" }, precise.map((p) => h("span", { class: "chip forte" }, p)), altre.map((p) => h("span", { class: "chip" }, p))),
-      h("span", { class: "morte" }, dataIt(a.morte)),
-      barra(a, massimo));
-    elenco.append(h("article", { class: "riga" + (aperto ? " aperta" : "") }, testa, aperto ? dettaglio(a) : null));
+function aggiornaCuori() {
+  document.querySelectorAll("[data-cuore]").forEach((b) => {
+    const p = èPreferito(b.dataset.cuore);
+    b.setAttribute("aria-pressed", p ? "true" : "false");
+    const et = b.querySelector(".etichetta");
+    if (et) et.textContent = p ? "Nella tua lista" : "Salva nei miei candidati";
   });
-  const altri = document.getElementById("altri");
-  const restanti = lista.length - stato.visibili;
-  altri.hidden = restanti <= 0;
-  altri.replaceChildren();
-  if (restanti > 0) altri.append(h("button", { class: "filtro", type: "button", onclick: () => { stato.visibili += PASSO; disegna(); } }, `Mostra altri ${Math.min(PASSO, restanti)} (ne mancano ${n(restanti)})`));
-  const filtri = document.getElementById("filtri");
-  filtri.replaceChildren();
+}
+function cuoreSvg() {
+  return h("svg", { viewBox: "0 0 24 24", "aria-hidden": "true" },
+    h("path", { d: "M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z", "stroke-linejoin": "round" }));
+}
+function bottoneCuore(a, classe) {
+  const nome = a.nome;
+  return h("button", {
+    class: classe || "cuore", type: "button", "data-cuore": a.wikidata, "aria-pressed": èPreferito(a.wikidata) ? "true" : "false",
+    "aria-label": `Salva ${nome} nei miei candidati`,
+    onclick: (ev) => { ev.stopPropagation(); alternaPreferito(a.wikidata); }
+  }, cuoreSvg());
+}
+
+/* ---------- ritratti ---------- */
+function ritratto(a, opzioni = {}) {
+  const box = h("div", { class: "ritratto" + (opzioni.quadrato ? " quadrato" : "") + (opzioni.notte ? " notte" : "") });
+  const ini = h("span", { class: "iniziali", "aria-hidden": "true" }, iniziali(a.nome));
+  box.append(ini);
+  if (a.foto && a.foto.url) {
+    const img = h("img", { src: a.foto.url, alt: `Ritratto di ${a.nome}`, loading: opzioni.subito ? "eager" : "lazy", decoding: "async", referrerpolicy: "no-referrer" });
+    img.addEventListener("error", () => img.remove());
+    box.append(img);
+  }
+  return box;
+}
+function creditoFoto(a) {
+  if (!a.foto || !a.foto.url) return null;
+  const parti = [];
+  const autore = pulisci(a.foto.autore);
+  if (autore) parti.push(ripara(autore, 60));
+  if (a.foto.licenza) parti.push(pulisci(a.foto.licenza));
+  const testo = parti.length ? parti.join(" · ") : "Wikimedia Commons";
+  return h("div", { class: "didascalia" }, "Foto: ",
+    a.foto.pagina ? h("a", { href: a.foto.pagina, target: "_blank", rel: "noopener" }, testo) : testo);
+}
+function righeDati(a, pagineTesto = true) {
+  const t = [];
+  if (a.morte) t.push(`† ${dataIt(a.morte)}`);
+  if (pagineTesto && a.pagine_wikipedia) t.push(`${n(a.pagine_wikipedia)} pagine Wikimedia`);
+  return t.join(" · ");
+}
+function bioBreve(a, quanto) {
+  if (a.bio) return ripara(pulisci(a.bio), quanto);
+  const prof = a.professioni.filter((p) => p !== "scrittore").slice(0, 3);
+  const anni = [a.nascita ? a.nascita.slice(0, 4) : "?", a.morte ? a.morte.slice(0, 4) : "?"].join("–");
+  return prof.length ? `${maiuscola(prof.join(", "))} (${anni})` : `Scrittore (${anni})`;
+}
+
+/* ---------- intestazione e navigazione ---------- */
+function disegnaNavigazione() {
+  const nav = $("#navigazione");
+  nav.replaceChildren();
+  for (const an of stato.anni) {
+    nav.append(h("button", { type: "button", class: an === stato.anno ? "attivo" : "", "aria-current": an === stato.anno ? "true" : null, onclick: () => { location.hash = `#/${an}`; } }, String(an)));
+  }
+  nav.append(h("button", { type: "button", onclick: () => scorri("miei") }, `I miei · ${stato.preferiti.length}`));
+}
+function scorri(id) {
+  const el = document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+}
+function giorniA(iso) {
+  const t = new Date(iso + "T00:00:00");
+  const oggi = new Date(); oggi.setHours(0, 0, 0, 0);
+  return Math.round((t - oggi) / 86400000);
+}
+
+function disegnaEroe() {
+  const d = stato.dati[stato.anno], g = gruppi(stato.anno);
+  const box = $("#eroe");
+  box.replaceChildren();
+  const prima = g.letterari[0] || g.tutti[0];
+  if (!prima) { box.append(h("p", { class: "messaggio" }, "Nessun autore per questo anno.")); return; }
+  const giorni = giorniA(d.libero_dal);
+  const parole = prima.nome.split(/\s+/);
+  const riga2 = parole.length > 1 ? parole[parole.length - 1] : "";
+  const riga1 = parole.length > 1 ? parole.slice(0, -1).join(" ") : prima.nome;
+  const quando = giorni > 1 ? `Tra ${n(giorni)} giorni` : giorni === 1 ? "Domani" : giorni === 0 ? "Oggi" : "Libero dal";
+  const altri = Math.max(0, g.letterari.length - 1);
+  const h1 = h("h1", { id: "eroe-nome" }, riga1, riga2 ? h("br") : null, riga2);
+  const foto = h("div", { class: "eroe-foto" },
+    ritratto(prima, { notte: true, subito: true }),
+    creditoFoto(prima),
+    h("div", { class: "dati-riga" }, righeDati(prima)));
+  box.append(h("div", { class: "eroe" },
+    h("div", { class: "eroe-testo" },
+      h("div", { class: "occhiello" }, `${quando} · ${dataIt(d.libero_dal)}`),
+      h1,
+      h("p", { class: "predicato" }, giorni >= 0 ? "entra nel pubblico dominio." : "è nel pubblico dominio."),
+      h("p", { class: "spiega" }, `Dal ${dataIt(d.libero_dal)} le sue opere originali sono libere secondo la regola europea dei 70 anni.${altri ? ` E con lui altri ${n(altri)} autori.` : ""}`),
+      h("div", { class: "azioni" },
+        h("button", { class: "bottone", type: "button", onclick: () => scorri("archivio") }, `Vedi tutti i ${n(g.letterari.length)} autori`),
+        h("button", { class: "collegamento", type: "button", onclick: () => scorri(g.arricchito ? "scaffali" : "grandi-nomi") }, g.arricchito ? "Sfoglia per genere" : "I nomi più grandi"),
+        h("button", { class: "collegamento", type: "button", "data-apri": prima.wikidata, onclick: () => apriAutore(prima.wikidata) }, "Scheda di " + prima.nome))),
+    foto));
+  adattaTitolo();
+}
+function adattaTitolo() {
+  const t = $("#eroe-nome");
+  if (!t) return;
+  const colonna = t.parentElement.clientWidth || t.parentElement.getBoundingClientRect().width || 600;
+  const righe = t.innerText ? t.innerText.split("\n") : [t.textContent];
+  const lunga = Math.max(...righe.map((r) => r.length), 4);
+  const dimensione = Math.max(54, Math.min(208, Math.floor(colonna / (0.5 * lunga))));
+  t.style.fontSize = dimensione + "px";
+  // con un carattere di riserva più largo del previsto, rimpicciolisce finché sta nella colonna
+  let guardia = 40, d = dimensione;
+  while (t.scrollWidth > t.clientWidth + 1 && d > 40 && guardia-- > 0) { d -= 4; t.style.fontSize = d + "px"; }
+}
+
+/* ---------- nomi grandi ---------- */
+function schedaGrande(a, classe) {
+  return h("article", { class: "scheda-autore " + classe },
+    h("div", { style: "position:relative" },
+      h("button", { class: "apri", type: "button", "aria-label": `Apri la scheda di ${a.nome}`, onclick: () => apriAutore(a.wikidata) },
+        ritratto(a),
+        h("h3", {}, a.nome)),
+      bottoneCuore(a)),
+    creditoFoto(a),
+    h("div", { class: "dati-riga" }, righeDati(a)),
+    h("p", {}, bioBreve(a, classe === "g1" ? 190 : classe === "g2" ? 150 : 120)));
+}
+function disegnaGrandi() {
+  const g = gruppi(stato.anno);
+  const sez = $("#grandi-nomi");
+  const lista = g.letterari.slice(1, 8);
+  if (lista.length < 1) { sez.hidden = true; return; }
+  sez.hidden = false;
+  const prima = g.letterari[0];
+  $("#grandi-occhiello").textContent = `I nomi più grandi del ${stato.anno}`;
+  $("#grandi-titolo").textContent = prima ? `Chi si libera insieme a ${prima.nome}` : "Chi si libera";
+  const grandi = $("#grandi"), piccoli = $("#piccoli");
+  grandi.replaceChildren(...lista.slice(0, 3).map((a, i) => schedaGrande(a, ["g1", "g2", "g3"][i])));
+  piccoli.replaceChildren(...lista.slice(3).map((a) => h("article", { class: "scheda-autore" },
+    h("div", { style: "position:relative" },
+      h("button", { class: "apri", type: "button", "aria-label": `Apri la scheda di ${a.nome}`, onclick: () => apriAutore(a.wikidata) },
+        ritratto(a, { quadrato: true }),
+        h("h3", {}, a.nome)),
+      bottoneCuore(a)),
+    creditoFoto(a),
+    h("div", { class: "dati-riga" }, a.morte ? `† ${dataIt(a.morte)}` : ""))));
+}
+
+/* ---------- scaffali per genere ---------- */
+function opereDellAnno(anno) {
+  const g = gruppi(anno), viste = new Set(), out = [];
+  for (const a of g.letterari) {
+    for (const o of a.opere || []) {
+      const k = norm(o.titolo) + "|" + a.wikidata;
+      if (viste.has(k)) continue;
+      viste.add(k);
+      out.push({ titolo: o.titolo, anno: o.anno, generi: (o.generi || []).map((x) => norm(x.trim())), generiOrig: o.generi || [], sl: o.sl || 0, a });
+    }
+  }
+  return out;
+}
+function copertina(o) {
+  const c = hashNumero(o.titolo + o.a.nome) % 4;
+  const l = o.titolo.length;
+  const dim = l <= 12 ? 38 : l <= 24 ? 30 : l <= 40 ? 24 : 20;
+  return h("button", { class: `copertina c${c}`, type: "button", "aria-label": `${o.titolo}, di ${o.a.nome}`, onclick: () => apriAutore(o.a.wikidata) },
+    h("span", { class: "t", style: `font-size:${dim}px` }, o.titolo),
+    h("span", { class: "a" }, o.a.nome, o.anno ? ` · ${o.anno}` : ""));
+}
+function ordinaOpere(lista) {
+  return lista.slice().sort((x, y) => (y.sl - x.sl) || perPopolarita(x.a, y.a) || x.titolo.localeCompare(y.titolo, "it"));
+}
+function costruisciScaffali(anno) {
+  const opere = opereDellAnno(anno);
+  const scaffali = [];
+  if (opere.length) scaffali.push({ chiave: "_note", nome: "Le più note", opere: ordinaOpere(opere) });
+  const per = new Map();
+  for (const o of opere) {
+    o.generi.forEach((gk, i) => {
+      if (!gk) return;
+      if (!per.has(gk)) per.set(gk, { nome: maiuscola(o.generiOrig[i].trim()), opere: [] });
+      per.get(gk).opere.push(o);
+    });
+  }
+  const generi = [...per.entries()].filter(([, v]) => v.opere.length >= 3).sort((x, y) => y[1].opere.length - x[1].opere.length).slice(0, 7);
+  for (const [k, v] of generi) scaffali.push({ chiave: k, nome: v.nome, opere: ordinaOpere(v.opere) });
+  return scaffali;
+}
+function disegnaScaffali() {
+  const g = gruppi(stato.anno);
+  const sez = $("#scaffali");
+  const scaffali = g.arricchito ? costruisciScaffali(stato.anno) : [];
+  if (!scaffali.length) { sez.hidden = true; return; }
+  sez.hidden = false;
+  const corpo = $("#scaffali-corpo");
+  corpo.replaceChildren(...scaffali.map((s) => h("div", { class: "scaffale" },
+    h("div", { class: "scaffale-testa" },
+      h("h3", {}, s.nome),
+      s.opere.length > 14 ? h("button", { class: "vedi", type: "button", "aria-label": `Vedi tutte le ${n(s.opere.length)} opere: ${s.nome}`, onclick: () => { location.hash = `#/genere/${encodeURIComponent(s.chiave)}`; } }, "Vedi tutto →") : null),
+    h("div", { class: "fila", role: "list" }, s.opere.slice(0, 14).map((o) => h("div", { role: "listitem", style: "display:flex" }, copertina(o)))))));
+}
+function apriGenere(chiave) {
+  const scaffali = costruisciScaffali(stato.anno);
+  const s = scaffali.find((x) => x.chiave === chiave);
+  if (!s) return false;
+  mostraFinestra(h("div", { class: "scheda" },
+    chiudiBottone(),
+    h("div", { class: "occhiello" }, `Libere dal ${dataIt(stato.dati[stato.anno].libero_dal)}`),
+    h("h2", {}, s.nome),
+    h("div", { class: "sotto" }, `${n(s.opere.length)} opere`),
+    h("div", { class: "griglia-opere" }, s.opere.map(copertina))));
+  return true;
+}
+
+/* ---------- paesi e lingue ---------- */
+function disegnaEsplora() {
+  const d = stato.dati[stato.anno];
+  const sez = $("#esplora");
+  const paesi = (d.paesi || []).slice(0, 16), lingue = (d.lingue || []).slice(0, 14);
+  if (!paesi.length) { sez.hidden = true; return; }
+  sez.hidden = false;
+  $("#paesi").replaceChildren(...paesi.map((p) => h("button", {
+    type: "button", "aria-pressed": stato.paese === p.nome ? "true" : "false",
+    onclick: () => scegliFiltro("paese", p.nome)
+  }, p.nome, h("sup", {}, String(p.n)))));
+  $("#lingue-blocco").hidden = !lingue.length;
+  $("#lingue").replaceChildren(...lingue.map((l) => h("button", {
+    type: "button", "aria-pressed": stato.lingua === l.nome ? "true" : "false",
+    onclick: () => scegliFiltro("lingua", l.nome)
+  }, `${maiuscola(l.nome)} · ${l.n}`)));
+}
+function scegliFiltro(tipo, valore) {
+  stato[tipo] = stato[tipo] === valore ? null : valore;
+  stato.visibili = PASSO;
+  stato.filtro = "letterari";
+  disegnaEsplora();
+  disegnaArchivio();
+  if (stato[tipo]) scorri("archivio");
+}
+
+/* ---------- i miei candidati ---------- */
+function righeCsv(autori) {
+  const testa = ["Nome", "Nata/o", "Morta/o", "Libero dal", "Indice popolarità", "Pagine Wikimedia", "Visite Wikipedia 12 mesi", "Paesi", "Lingue", "Tipo di catalogo", "Generi", "Opere principali", "Wikipedia/Wikidata"];
+  const righe = [testa];
+  for (const { a, anno } of autori) {
+    const d = stato.dati[anno] || {};
+    righe.push([
+      a.nome, a.nascita || "", a.morte || "", d.libero_dal || "", a.indice ?? "", a.pagine_wikipedia ?? "", a.visite_12m ?? "",
+      (a.paesi || []).join(", "), (a.lingue || []).join(", "), (a.tipo_catalogo || []).join(", "), (a.generi || []).join(", "),
+      (a.opere || []).map((o) => o.titolo + (o.anno ? ` (${o.anno})` : "")).join(" | "), a.bio_url || a.url
+    ]);
+  }
+  return righe;
+}
+function scaricaCsv(nomeFile, autori) {
+  const cella = (v) => { let s = String(v ?? ""); if (/^[=+\-@]/.test(s)) s = "'" + s; return /[;"\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s; };
+  const testo = "﻿" + righeCsv(autori).map((r) => r.map(cella).join(";")).join("\r\n");
+  const url = URL.createObjectURL(new Blob([testo], { type: "text/csv;charset=utf-8" }));
+  const a = h("a", { href: url, download: nomeFile });
+  document.body.append(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 2000);
+}
+function disegnaMiei() {
+  const elenco = stato.preferiti.map(trovaAutore).filter(Boolean);
+  const azioni = $("#miei-azioni"), corpo = $("#miei-corpo");
+  azioni.replaceChildren();
+  corpo.replaceChildren();
+  if (!elenco.length) {
+    corpo.append(h("p", { class: "vuoto-testo" }, "Tocca il cuore su un autore per metterlo qui. La lista resta su questo dispositivo e puoi scaricarla in Excel."));
+    return;
+  }
+  azioni.append(h("button", { class: "pillola", type: "button", onclick: () => scaricaCsv("miei-candidati.csv", elenco) }, `Scarica in Excel · ${elenco.length}`));
+  corpo.append(h("ul", { class: "miei-lista" }, elenco.map(({ a, anno }) => h("li", {},
+    h("button", { class: "nome", type: "button", onclick: () => apriAutore(a.wikidata) }, a.nome,
+      h("small", {}, `libero dal ${dataIt(stato.dati[anno].libero_dal)}${a.indice !== undefined ? ` · indice ${a.indice}` : ""}`)),
+    h("button", { class: "rimuovi", type: "button", "aria-label": `Togli ${a.nome} dalla lista`, onclick: () => alternaPreferito(a.wikidata) }, "Togli")))));
+}
+
+/* ---------- archivio ---------- */
+function elencoArchivio() {
+  const g = gruppi(stato.anno);
+  let lista = stato.filtro === "tutti" ? g.tutti : stato.filtro === "senza" ? g.senza : g.letterari;
+  if (stato.paese) lista = lista.filter((a) => (a.paesi || []).includes(stato.paese));
+  if (stato.lingua) lista = lista.filter((a) => (a.lingue || []).includes(stato.lingua));
+  const q = norm(stato.cerca.trim());
+  if (q) lista = lista.filter((a) => norm(a.nome).includes(q));
+  if (stato.ordine === "nome") lista = lista.slice().sort((x, y) => x.nome.localeCompare(y.nome, "it"));
+  else if (stato.ordine === "morte") lista = lista.slice().sort((x, y) => (x.morte || "").localeCompare(y.morte || "") || x.nome.localeCompare(y.nome, "it"));
+  return lista;
+}
+function disegnaArchivio() {
+  const g = gruppi(stato.anno);
+  $("#archivio-titolo").textContent = `Tutti i ${n(g.letterari.length)}`;
+  const lista = elencoArchivio();
+  const strumenti = $("#strumenti");
   const voci = [["letterari", `Autori letterari · ${n(g.letterari.length)}`]];
   if (g.senza.length) voci.push(["senza", `Senza opere note · ${n(g.senza.length)}`]);
-  voci.push(["tutti", `Tutti gli scrittori · ${n(g.tutti.length)}`]);
-  voci.forEach(([k, testo]) => filtri.append(h("button", { class: "filtro", type: "button", "aria-pressed": String(stato.filtro === k), onclick: () => { stato.filtro = k; stato.visibili = PASSO; stato.aperto = null; disegna(); } }, testo)));
+  voci.push(["tutti", `Tutti · ${n(g.tutti.length)}`]);
+  strumenti.replaceChildren(
+    ...voci.map(([k, t]) => h("button", { class: "pillola", type: "button", "aria-pressed": stato.filtro === k ? "true" : "false", onclick: () => { stato.filtro = k; stato.visibili = PASSO; disegnaArchivio(); } }, t)),
+    h("span", { class: "spazio" }),
+    ...[["popolarita", "Popolarità"], ["morte", "Data"], ["nome", "A–Z"]].map(([k, t]) => h("button", { class: "pillola", type: "button", "aria-pressed": stato.ordine === k ? "true" : "false", onclick: () => { stato.ordine = k; disegnaArchivio(); } }, t)));
+  if (stato.paese) strumenti.append(h("button", { class: "pillola chip", type: "button", onclick: () => scegliFiltro("paese", stato.paese) }, `${stato.paese} ✕`));
+  if (stato.lingua) strumenti.append(h("button", { class: "pillola chip", type: "button", onclick: () => scegliFiltro("lingua", stato.lingua) }, `${maiuscola(stato.lingua)} ✕`));
+
+  const ul = $("#elenco");
+  const mostra = lista.slice(0, stato.visibili);
+  ul.replaceChildren(...mostra.map((a) => h("li", {},
+    h("button", { class: "riga", type: "button", onclick: () => apriAutore(a.wikidata) },
+      h("b", {}, a.nome),
+      h("small", {}, `† ${a.morte ? a.morte.slice(0, 4) : "?"}${a.indice !== undefined ? ` · indice ${a.indice}` : ""}`)),
+    bottoneCuore(a, "cuore cuore-riga"))));
+  const altro = $("#altro");
+  altro.replaceChildren();
+  if (!lista.length) altro.append(h("p", { class: "nessuno" }, "Nessun autore corrisponde alla ricerca."));
+  if (lista.length > mostra.length) altro.append(h("button", { class: "pillola", type: "button", onclick: () => { stato.visibili += PASSO * 3; disegnaArchivio(); } }, `Mostra altri ${n(Math.min(PASSO * 3, lista.length - mostra.length))} →`));
+  if (lista.length) altro.append(" ", h("button", { class: "pillola", type: "button", onclick: () => scaricaCsv(`autori-${stato.anno}.csv`, lista.map((a) => ({ a, anno: stato.anno }))) }, `Scarica questo elenco in Excel · ${n(lista.length)}`));
 }
 
-function intestazione() {
-  const d = stato.dati, g = gruppi();
-  document.getElementById("titolo").textContent = `Dal 1° gennaio ${d.anno_libero} diventano libere le opere di ${n(g.letterari.length)} ${g.letterari.length === 1 ? "autore" : "autori"}.`;
-  const extra = [];
-  if (g.senza.length) extra.push(`${n(g.senza.length)} letterari senza opere note nei dati aperti`);
-  extra.push(`${n(g.tutti.length - g.letterari.length - g.senza.length)} altri con la qualifica generica di scrittore`);
-  const quando = d.aggiornato ? ` (${dataIt(d.aggiornato)})` : "";
-  document.getElementById("sottotitolo").textContent = `Aggiornato ogni mese da dati aperti${quando}. Più ${extra.join(" e ")}.`;
-  document.getElementById("scheda").hidden = false;
-  const anni = document.getElementById("anni");
-  anni.replaceChildren();
-  stato.anni.forEach((a) => anni.append(h("button", { class: "pillola", type: "button", "aria-pressed": String(a === stato.anno), onclick: () => scegliAnno(a) }, a)));
+/* ---------- finestra con la scheda ---------- */
+function chiudiBottone() {
+  return h("button", { class: "chiudi", type: "button", "aria-label": "Chiudi", onclick: () => $("#finestra").close() }, "×");
+}
+function mostraFinestra(contenuto) {
+  const f = $("#finestra");
+  f.replaceChildren(contenuto);
+  if (!f.open) { stato.ultimoFocus = document.activeElement; f.showModal(); }
+  f.scrollTop = 0;
+}
+function apriAutore(id) { location.hash = `#/autore/${id}`; }
+function linkEsterno(href, testo) { return h("a", { class: "pillola", href, target: "_blank", rel: "noopener" }, testo); }
+function mostraAutore(id) {
+  const t = trovaAutore(id);
+  if (!t) return false;
+  const { a, anno } = t;
+  const d = stato.dati[anno];
+  const nasc = a.nascita ? a.nascita.slice(0, 4) : "?", mor = a.morte ? a.morte.slice(0, 4) : "?";
+  const sotto = [`${nasc} – ${mor}`, `libero dal ${dataIt(d.libero_dal)}`];
+  if ((a.paesi || []).length) sotto.push(a.paesi.join(", "));
+  const nome = a.nome;
+  const bio = a.bio ? h("p", { class: "bio" }, pulisci(a.bio), " ",
+    a.bio_url ? h("a", { href: a.bio_url, target: "_blank", rel: "noopener", style: "font-size:14px" }, "Wikipedia") : null) : null;
+  const opere = (a.opere || []);
+  const catalogo = [...(a.tipo_catalogo || [])];
+  const generi = (a.generi || []).map(maiuscola);
+  const indice = a.indice !== undefined ? h("div", {},
+    h("h4", {}, "Popolarità"),
+    h("div", { class: "indice" }, h("span", { class: "num" }, String(a.indice)),
+      h("div", { class: "asta", role: "img", "aria-label": `Indice ${a.indice} su 100` }, h("i", { style: `width:${Math.max(2, Math.min(100, a.indice))}%` }))),
+    h("div", { class: "sotto" },
+      a.visite_12m !== undefined && a.visite_12m !== null ? `${n(a.visite_12m)} visite su Wikipedia in 12 mesi` : h("span", { class: "nd" }, "visite Wikipedia: dato non disponibile"),
+      " · ", `${n(a.pagine_wikipedia || 0)} pagine Wikimedia`, " · ",
+      a.gutenberg !== undefined && a.gutenberg !== null ? `${n(a.gutenberg)} download su Project Gutenberg` : h("span", { class: "nd" }, "Gutenberg: nessun riscontro")),
+    d.indice_formula ? h("div", { class: "sotto", style: "margin-top:6px" }, "Formula: " + d.indice_formula) : null) : null;
+  const urlCondiviso = location.href.split("#")[0] + `#/autore/${a.wikidata}`;
+  const copia = h("button", { class: "pillola", type: "button", onclick: async (ev) => {
+    const b = ev.currentTarget;
+    try { await navigator.clipboard.writeText(urlCondiviso); b.textContent = "Link copiato"; }
+    catch (e) { window.prompt("Copia il link:", urlCondiviso); }
+  } }, "Copia il link");
+  const cuoreBtn = h("button", { class: "pillola", type: "button", "data-cuore": a.wikidata, "aria-pressed": èPreferito(a.wikidata) ? "true" : "false", onclick: () => alternaPreferito(a.wikidata) },
+    cuoreSvg(), h("span", { class: "etichetta" }, èPreferito(a.wikidata) ? "Nella tua lista" : "Salva nei miei candidati"));
+  const q = encodeURIComponent(`"${nome}"`);
+  const contenuto = h("div", { class: "scheda" },
+    chiudiBottone(),
+    h("div", { class: "scheda-corpo" },
+      h("div", {}, ritratto(a, { subito: true }), creditoFoto(a)),
+      h("div", {},
+        h("h2", {}, nome),
+        h("div", { class: "sotto" }, sotto.join(" · ")),
+        bio,
+        indice,
+        catalogo.length || generi.length ? h("div", {}, h("h4", {}, "Che tipo di catalogo"),
+          [...catalogo, ...generi].map((x) => h("span", { class: "tag" }, x))) : null,
+        opere.length ? h("div", {}, h("h4", {}, `Opere principali${a.n_opere > opere.length ? ` · ${n(opere.length)} su ${n(a.n_opere)}` : ""}`),
+          h("ul", { class: "opere" }, opere.map((o) => h("li", {}, o.titolo, o.anno ? h("span", {}, String(o.anno)) : null)))) : null,
+        (a.lingue || []).length ? h("div", {}, h("h4", {}, "Lingue"), a.lingue.map((x) => h("span", { class: "tag" }, maiuscola(x)))) : null,
+        h("div", { class: "avviso" }, "Prima di ritradurre: controlla se esiste già una traduzione italiana recente e verifica le regole del tuo paese. Per l'Italia ci sono proroghe per alcuni autori morti in periodo di guerra."),
+        h("div", { class: "pulsanti" },
+          cuoreBtn,
+          linkEsterno(`https://www.google.com/search?tbm=bks&lr=lang_it&q=inauthor:${q}`, "Libri in italiano"),
+          linkEsterno(`https://www.google.com/search?q=site:opac.sbn.it+${q}`, "Catalogo SBN"),
+          a.bio_url ? linkEsterno(a.bio_url, "Wikipedia") : null,
+          linkEsterno(a.url, "Wikidata"),
+          copia))));
+  mostraFinestra(contenuto);
+  return true;
 }
 
+/* ---------- instradamento ---------- */
 async function scegliAnno(anno) {
-  try {
-    stato.anno = anno;
-    stato.dati = await leggi(`data/${anno}.json`);
-    stato.visibili = PASSO; stato.aperto = null;
-    document.getElementById("errore").hidden = true;
-    intestazione();
-    disegna();
-  } catch (e) {
-    const box = document.getElementById("errore");
-    box.hidden = false;
-    box.textContent = "Non riesco a caricare i dati di questo anno. Riprova più tardi.";
-    console.error(e);
+  if (anno === stato.anno && stato.dati[anno]) return;
+  stato.anno = anno;
+  stato.paese = null; stato.lingua = null; stato.cerca = ""; stato.filtro = "letterari"; stato.visibili = PASSO;
+  $("#cerca").value = "";
+  disegnaTutto();
+}
+function disegnaTutto() {
+  disegnaNavigazione();
+  disegnaEroe();
+  disegnaGrandi();
+  disegnaScaffali();
+  disegnaEsplora();
+  disegnaMiei();
+  disegnaArchivio();
+  const d = stato.dati[stato.anno];
+  if (d && d.aggiornato) $("#fonti").textContent = `Fonti: Wikidata (CC0), Wikipedia (testi CC BY-SA, con link alla pagina d'origine), Wikimedia Commons (ritratti, ciascuno con la sua licenza), Project Gutenberg. Ultimo aggiornamento: ${dataIt(d.arricchito || d.aggiornato)}; si rinnova da solo ogni mese.`;
+}
+async function instrada() {
+  const f = $("#finestra");
+  const m = location.hash.replace(/^#\/?/, "").split("/");
+  if (m[0] === "autore" && m[1]) {
+    const t = trovaAutore(decodeURIComponent(m[1]));
+    if (t) { await scegliAnno(t.anno); if (mostraAutore(t.a.wikidata)) return; }
+  } else if (m[0] === "genere" && m[1]) {
+    if (apriGenere(decodeURIComponent(m[1]))) return;
+  } else if (/^\d{4}$/.test(m[0]) && stato.dati[Number(m[0])]) {
+    if (f.open) f.close();
+    await scegliAnno(Number(m[0]));
+    return;
   }
+  if (f.open) f.close();
 }
 
-document.getElementById("cerca").addEventListener("input", (e) => { stato.cerca = e.target.value; stato.visibili = PASSO; if (stato.dati) disegna(); });
-document.getElementById("ordine").addEventListener("change", (e) => { stato.ordine = e.target.value; if (stato.dati) disegna(); });
-
-(async () => {
+async function avvia() {
+  stato.preferiti = leggiLocale(CHIAVE_PREFERITI, []);
+  if (!Array.isArray(stato.preferiti)) stato.preferiti = [];
   try {
     const indice = await leggi("data/indice.json");
     stato.anni = indice.anni;
-    await scegliAnno(stato.anni[0]);
+    for (const an of stato.anni) stato.dati[an] = await leggi(`data/${an}.json`);
   } catch (e) {
-    const box = document.getElementById("errore");
-    box.hidden = false;
-    box.textContent = "I dati non sono ancora disponibili. Lancia l'aggiornamento da GitHub (Actions) e riprova.";
-    document.getElementById("titolo").textContent = "Public Domain Radar";
+    $("#eroe").replaceChildren(h("p", { class: "messaggio" }, "I dati non sono ancora disponibili. Riprova tra poco."));
     console.error(e);
+    return;
   }
-})();
+  stato.anno = stato.anni[0];
+  disegnaTutto();
+  $("#cerca").addEventListener("input", (ev) => { stato.cerca = ev.target.value; stato.visibili = PASSO; disegnaArchivio(); });
+  $("#finestra").addEventListener("click", (ev) => { if (ev.target === ev.currentTarget) ev.currentTarget.close(); });
+  $("#finestra").addEventListener("close", () => {
+    if (/^#\/(autore|genere)\//.test(location.hash)) history.replaceState(null, "", `#/${stato.anno}`);
+    if (stato.ultimoFocus && document.contains(stato.ultimoFocus)) stato.ultimoFocus.focus({ preventScroll: true });
+  });
+  window.addEventListener("hashchange", instrada);
+  window.addEventListener("resize", adattaTitolo);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(adattaTitolo);
+  instrada();
+}
+avvia();
 </script>
+<noscript><p style="padding:24px">Questa pagina ha bisogno di JavaScript per mostrare gli autori.</p></noscript>
 </body>
 </html>
