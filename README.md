@@ -1,26 +1,38 @@
 # Public Domain Radar
 
-Quali autori entrano in pubblico dominio il prossimo anno, aggiornato in automatico.
+Quali autori entrano in pubblico dominio il prossimo anno, con biografia, opere principali e un indice di popolarità. Si aggiorna da solo ogni mese.
 
 **Regola (Unione Europea):** le opere diventano libere il 1° gennaio dell'anno successivo ai 70 anni dalla morte dell'autore.
 Autore morto nel 1956 → opere libere dal 1° gennaio 2027.
 
 ## Come funziona
 
-- `scripts/aggiorna.py` scarica da [Wikidata](https://www.wikidata.org) (dati aperti) gli scrittori, poeti e drammaturghi morti nell'anno giusto, mese per mese, e li ordina per notorietà (numero di versioni Wikipedia).
-- `.github/workflows/aggiorna.yml` lo fa girare da solo il primo di ogni mese e salva il risultato in `data/`.
-- Se Wikidata non risponde, l'aggiornamento si ferma con errore e i dati precedenti restano intatti.
+1. `scripts/aggiorna.py` scarica da [Wikidata](https://www.wikidata.org) (dati aperti) gli scrittori, poeti e drammaturghi morti nell'anno giusto, mese per mese. Salva `data/<anno>.json`.
+2. `scripts/arricchisci.py` aggiunge, per gli autori con una qualifica letteraria precisa (romanziere, poeta, drammaturgo, saggista):
+   - **biografia**: prime frasi della pagina Wikipedia (italiano, altrimenti inglese), con link alla fonte;
+   - **opere e generi**: da Wikidata. Chi non ha nessuna opera collegata finisce nella sezione "senza opere note";
+   - **indice di popolarità (0-100)**: 60% visite a Wikipedia negli ultimi 12 mesi, 20% pagine Wikimedia, 20% download su Project Gutenberg. Se una fonte manca, il suo peso passa alle altre.
+3. `index.html` mostra tutto: scelta dell'anno, filtri, ricerca, dettaglio per autore.
+4. `.github/workflows/aggiorna.yml` esegue i passi 1 e 2 il primo di ogni mese e salva il risultato in `data/`.
+
+Se Wikidata non risponde, l'aggiornamento si ferma con errore e i dati precedenti restano intatti.
+
+## Metterlo online
+
+Su GitHub: **Settings → Pages → Source: Deploy from a branch → `main` / `(root)`**. L'indirizzo sarà `https://<utente>.github.io/publicdomain/`.
 
 ## Lanciarlo a mano
 
 Su GitHub: **Actions → Aggiorna autori in pubblico dominio → Run workflow**.
-In locale: `python scripts/aggiorna.py --anno 2027`
+In locale: `python scripts/aggiorna.py` e poi `python scripts/arricchisci.py`.
 
 ## Limiti da conoscere
 
-- La regola è quella europea base. Alcuni paesi hanno proroghe o eccezioni (per esempio proroghe di guerra): per questi casi serve una verifica nazionale.
+- Regola europea di base. Alcuni paesi hanno proroghe o eccezioni (per esempio proroghe di guerra): per questi casi serve una verifica nazionale.
 - Per gli autori anonimi o con pseudonimo la durata si calcola dalla pubblicazione, non dalla morte.
 - Il pubblico dominio riguarda l'opera dell'autore: una traduzione moderna o un'edizione critica può avere diritti propri.
-- I dati sono quelli di Wikidata: qualche data può mancare o essere approssimata.
+- Wikidata a volte chiama "poeta" o "scrittore" anche chi è soprattutto altro (pittori, sportivi): per questo conta anche avere opere collegate.
+- La popolarità è una stima fatta di indizi, non una misura esatta. Le opere in Wikidata sono ben coperte per gli autori famosi e poco per gli altri.
+- Le biografie sono testi di Wikipedia (CC BY-SA): vanno sempre mostrati con il link alla fonte.
 
-Fonte dati: Wikidata, licenza CC0.
+Fonti dati: Wikidata (CC0), Wikipedia e API Wikimedia, Project Gutenberg (tramite Gutendex).

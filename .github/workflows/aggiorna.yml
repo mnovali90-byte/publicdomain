@@ -15,14 +15,18 @@ concurrency:
 jobs:
   aggiorna:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Scarica i dati da Wikidata
+      - name: Scarica gli autori da Wikidata
         run: python scripts/aggiorna.py
+      - name: Aggiungi biografie, opere e popolarità
+        # se questo passo fallisce, l'elenco degli autori viene salvato comunque
+        continue-on-error: true
+        run: python scripts/arricchisci.py
       - name: Salva i dati nel repository
         run: |
           git config user.name "github-actions[bot]"
