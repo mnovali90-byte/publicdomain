@@ -15,19 +15,33 @@ def estratti(t, chiavi, largo=900, massimo=5):
         for m in re.finditer(k, t):
             print(f"  [{k}] ...{t[max(0, m.start()-200):m.start()+largo]}...\n"); n += 1
             if n >= massimo: return
-# 1) trattato di pace, PDF ufficiale del Regno Unito
-print("=" * 60, "\nTRATTATO (UK Treaty Series 1948 n.50)")
-d, fin = scarica("https://treaties.fcdo.gov.uk/data/Library2/pdf/1948-TS0050.pdf", True)
-print(" scaricati", len(d), "byte", fin)
-open("/tmp/trattato.pdf", "wb").write(d)
-try:
-    t = subprocess.run(["pdftotext", "-layout", "/tmp/trattato.pdf", "-"], capture_output=True, text=True, timeout=120).stdout
-except Exception as e:
-    t = ""; print(" pdftotext non disponibile", e)
-t = re.sub(r"\s+", " ", t); print(" caratteri di testo:", len(t))
-i = t.find("ANNEX XV")
-print(" posizioni 'ANNEX XV':", [m.start() for m in re.finditer("ANNEX XV", t)][:6])
-estratti(t, [r"Literary and artistic property|literary and artistic property", r"copyright"], largo=1800, massimo=4)
+# 1) trattato di pace: più fonti, con nuovi tentativi
+import time
+PDFS = ["https://treaties.fcdo.gov.uk/data/Library2/pdf/1948-TS0050.pdf",
+        "https://www.cvce.eu/content/publication/1999/1/1/0eaf4219-d6d9-4c35-935a-6f55327448e7/publishable_en.pdf",
+        "https://www.cvce.eu/content/publication/1999/1/1/0eaf4219-d6d9-4c35-935a-6f55327448e7/publishable_fr.pdf"]
+from pypdf import PdfReader
+import io
+for url in PDFS:
+    print("=" * 60, "\nTRATTATO", url)
+    d = b""
+    for tentativo in range(3):
+        d, fin = scarica(url, True)
+        if d: break
+        print(" ", fin); time.sleep(10)
+    print(" scaricati", len(d), "byte")
+    if not d: continue
+    try:
+        r = PdfReader(io.BytesIO(d)); pagine = [(re.sub(r"\s+", " ", (pg.extract_text() or ""))) for pg in r.pages]
+    except Exception as e:
+        print(" PDF illeggibile", e); continue
+    print(" pagine:", len(pagine), "| con testo:", sum(1 for x in pagine if len(x) > 200))
+    t = " ".join(pagine)
+    trovati = [m.start() for m in re.finditer(r"literary and artistic property|Literary and artistic|propri[eé]t[eé] litt[eé]raire", t)]
+    print(" occorrenze:", len(trovati))
+    for pos in trovati[:3]:
+        print("  ...", t[max(0, pos-300):pos+2200], "...\n")
+    if trovati: break
 # 2) legge spagnola 1879
 for nome, url, chiavi in [
   ("SPAGNA 1879 BOE ELI", "https://www.boe.es/eli/es/l/1879/01/10/(1)", [r"ochenta", r"Art[ií]culo 6"]),
