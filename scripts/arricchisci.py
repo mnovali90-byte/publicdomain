@@ -200,19 +200,36 @@ def accorcia(testo, massimo=480):
     return out if len(out) <= massimo + 120 else out[:massimo].rsplit(" ", 1)[0] + "…"
 
 
-def biografia(titoli):
-    """Riassunto da Wikipedia: italiano se esiste, altrimenti inglese."""
+def riassunto(lingua, titolo):
+    """Riassunto di una pagina Wikipedia nella lingua data, o None."""
+    url = f"https://{lingua}.wikipedia.org/api/rest_v1/page/summary/" + urllib.parse.quote(titolo.replace(" ", "_"), safe="")
+    dati = http_json(url)
+    time.sleep(PAUSA)
+    if dati and dati.get("extract"):
+        pagina = dati.get("content_urls", {}).get("desktop", {}).get("page") or \
+            f"https://{lingua}.wikipedia.org/wiki/" + urllib.parse.quote(titolo.replace(" ", "_"))
+        return {"testo": accorcia(dati["extract"]), "url": pagina}
+    return None
+
+
+def biografie(titoli, bios=None):
+    """Biografia in italiano e in inglese (quelle che esistono). Non rifà quelle già in mano."""
+    bios = dict(bios or {})
     for lingua in ("it", "en"):
-        t = titoli.get(lingua)
-        if not t:
+        if lingua in bios or not titoli.get(lingua):
             continue
-        url = f"https://{lingua}.wikipedia.org/api/rest_v1/page/summary/" + urllib.parse.quote(t.replace(" ", "_"), safe="")
-        dati = http_json(url)
-        time.sleep(PAUSA)
-        if dati and dati.get("extract"):
-            pagina = dati.get("content_urls", {}).get("desktop", {}).get("page") or \
-                f"https://{lingua}.wikipedia.org/wiki/" + urllib.parse.quote(t.replace(" ", "_"))
-            return {"bio": accorcia(dati["extract"]), "bio_url": pagina, "bio_lingua": lingua}
+        r = riassunto(lingua, titoli[lingua])
+        if r:
+            bios[lingua] = r
+    return bios
+
+
+def biografia(titoli):
+    """Compatibilità: una sola biografia, italiano se esiste altrimenti inglese."""
+    bios = biografie(titoli)
+    for lingua in ("it", "en"):
+        if lingua in bios:
+            return {"bio": bios[lingua]["testo"], "bio_url": bios[lingua]["url"], "bio_lingua": lingua}
     return {}
 
 
@@ -339,12 +356,22 @@ def _autore(a, b, opere_a, vecchia, oggi):
         except Exception as e:
             print(f"  foto non riuscita per {a['nome']}: {e}", file=sys.stderr)
     voce["v"] = VERSIONE_CACHE
-    if serve_pesante:
-        t = b["titoli"]
+    # biografie in italiano e inglese: complete se mancano, rifatte se la parte pesante è scaduta
+    if serve_pesante or voce.get("bios_v") != 2:
+        bios = {} if serve_pesante else dict(voce.get("bios") or {})
+        if not bios and voce.get("bio") and not serve_pesante:   # voce vecchia: una sola biografia
+            bios[voce.get("bio_lingua") or "it"] = {"testo": voce["bio"], "url": voce.get("bio_url")}
         try:
-            voce.update(biografia(t))
+            bios = biografie(b["titoli"], bios)
         except Exception as e:
             print(f"  bio non riuscita per {a['nome']}: {e}", file=sys.stderr)
+        if bios:
+            voce["bios"] = bios
+            pref = "it" if "it" in bios else "en"
+            voce["bio"], voce["bio_url"], voce["bio_lingua"] = bios[pref]["testo"], bios[pref]["url"], pref
+        voce["bios_v"] = 2
+    if serve_pesante:
+        t = b["titoli"]
         try:
             voce["visite_12m"] = visite_12_mesi(t, oggi)
         except Exception as e:
@@ -401,7 +428,7 @@ def elabora_anno(percorso, cache, oggi):
             a["letterario"] = True
             a["tipo_catalogo"] = [TIPO_CATALOGO[p] for p in a["professioni"] if p in TIPO_CATALOGO]
             voce = cache.get(a["wikidata"], {})
-            for k in ("bio", "bio_url", "bio_lingua", "opere", "n_opere", "generi", "visite_12m",
+            for k in ("bio", "bio_url", "bio_lingua", "bios", "opere", "n_opere", "generi", "visite_12m",
                       "gutenberg", "foto", "paesi", "lingue"):
                 if voce.get(k) not in (None, [], ""):
                     a[k] = voce[k]
