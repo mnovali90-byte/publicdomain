@@ -149,29 +149,13 @@
     "parziale": true,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 3,
-     "opere_con_edizione": 3,
-     "edizioni": 10,
-     "ultimo": 2015,
-     "per_opera": [
-      {
-       "titolo": "L'opera da tre soldi",
-       "n": 7,
-       "ultimo": 2015
-      },
-      {
-       "titolo": "Madre Coraggio e i suoi figli",
-       "n": 2,
-       "ultimo": 2005
-      },
-      {
-       "titolo": "Il signor Puntila e il suo servo Matti",
-       "n": 1,
-       "ultimo": 1972
-      }
-     ],
-     "fonte": "Google Libri"
+    "sbn_it": {
+     "trovato": true,
+     "edizioni": 419,
+     "ultimo": 2022,
+     "dal_2000": 101,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -306,29 +290,13 @@
     "parziale": true,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 3,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Annihilation of Caste",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "The Buddha and His Dhamma",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Waiting for a Visa",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -465,29 +433,13 @@
     "parziale": true,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 3,
-     "opere_con_edizione": 2,
-     "edizioni": 9,
-     "ultimo": 2022,
-     "per_opera": [
-      {
-       "titolo": "Winnie Puh",
-       "n": 8,
-       "ultimo": 2022
-      },
-      {
-       "titolo": "La strada di Puh",
-       "n": 1,
-       "ultimo": 1993
-      },
-      {
-       "titolo": "When We Were Very Young",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -600,29 +552,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 3,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Na rostaniach",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Novaja ziamlia",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Simon-musician",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -741,29 +677,13 @@
     "parziale": true,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 3,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "The American Language",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Notes on Democracy",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Treatise on the Gods",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -914,29 +834,13 @@
     "parziale": true,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 3,
-     "opere_con_edizione": 0,
-     "edizioni": 0,
-     "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "The Tree of Knowledge",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Zalacaín el aventurero",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "The Restlessness of Shanti Andía",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+    "sbn_it": {
+     "trovato": true,
+     "edizioni": 8,
+     "ultimo": 1908,
+     "dal_2000": 6,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -1072,29 +976,13 @@
     "parziale": true,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 3,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Static poems",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Two things only",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Morgue and other poems",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -1240,29 +1128,13 @@
     "parziale": true,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 3,
-     "opere_con_edizione": 3,
-     "edizioni": 7,
-     "ultimo": 2022,
-     "per_opera": [
-      {
-       "titolo": "I fratelli Tanner",
-       "n": 2,
-       "ultimo": 2021
-      },
-      {
-       "titolo": "Jakob von Gunten",
-       "n": 1,
-       "ultimo": 2014
-      },
-      {
-       "titolo": "L'assistente",
-       "n": 4,
-       "ultimo": 2022
-      }
-     ],
-     "fonte": "Google Libri"
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -1412,29 +1284,13 @@
     "parziale": true,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 3,
-     "opere_con_edizione": 3,
-     "edizioni": 14,
-     "ultimo": 1957,
-     "per_opera": [
-      {
-       "titolo": "Gog",
-       "n": 3,
-       "ultimo": 1953
-      },
-      {
-       "titolo": "Il libro nero - Nuovo diario di Gog",
-       "n": 1,
-       "ultimo": 1957
-      },
-      {
-       "titolo": "Storia di Cristo",
-       "n": 10,
-       "ultimo": 1957
-      }
-     ],
-     "fonte": "Google Libri"
+    "sbn_it": {
+     "trovato": true,
+     "edizioni": 356,
+     "ultimo": 2022,
+     "dal_2000": 181,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -1524,29 +1380,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 3,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Bréviaire des échecs",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Die hypermoderne Schachpartie",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "A Breviary of Chess",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -1746,29 +1586,13 @@
     "parziale": true,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 3,
-     "opere_con_edizione": 1,
-     "edizioni": 1,
-     "ultimo": 1947,
-     "per_opera": [
-      {
-       "titolo": "Zuleika Dobson",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Enoch Soames",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "L'ipocrita felice",
-       "n": 1,
-       "ultimo": 1947
-      }
-     ],
-     "fonte": "Google Libri"
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -1893,29 +1717,13 @@
     "parziale": true,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 3,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Çalıkuşu",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Yaprak Dökümü",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Acımak",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -2047,29 +1855,13 @@
     "parziale": true,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 3,
-     "opere_con_edizione": 3,
-     "edizioni": 8,
-     "ultimo": 1992,
-     "per_opera": [
-      {
-       "titolo": "L'uomo è forte",
-       "n": 3,
-       "ultimo": 1984
-      },
-      {
-       "titolo": "Belmoro",
-       "n": 1,
-       "ultimo": 1957
-      },
-      {
-       "titolo": "Gente in Aspromonte",
-       "n": 4,
-       "ultimo": 1992
-      }
-     ],
-     "fonte": "Google Libri"
+    "sbn_it": {
+     "trovato": true,
+     "edizioni": 239,
+     "ultimo": 1934,
+     "dal_2000": 105,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -2181,29 +1973,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 3,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Du \"Cubisme\"",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "L'Oiseau bleu",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "La Femme au Cheval",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -2361,29 +2137,13 @@
     "parziale": true,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 3,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Collected Stories for Children",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Eight Tales",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Flora, a book of drawings",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -2494,29 +2254,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 3,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Farhad and Shirin",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Vagif (play)",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Komsomol poem",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -2622,29 +2366,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 3,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Prologue from Ohrid",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Pobedna pesma",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Vjera naša, vjera stara",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -2760,29 +2488,13 @@
     "parziale": true,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 3,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Early Autumn",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "The Farm",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "The Green Bay Tree",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -2864,24 +2576,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 2,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Zaynab",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Fī Manzil al-waḥy",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -2972,24 +2673,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 2,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Ohvrisuits",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Võitluse päevil",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -3233,29 +2923,13 @@
     "parziale": true,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 3,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Die Frau vom guten Rat",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "A childhood",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Boyhood and youth",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -3405,19 +3079,13 @@
     "parziale": true,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 1,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Erste Liebe. Eine Liebesgeschichte und Aphorismen über die Liebe",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -3542,29 +3210,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 3,
-     "opere_con_edizione": 1,
-     "edizioni": 3,
-     "ultimo": 1996,
-     "per_opera": [
-      {
-       "titolo": "La vedova del miliardario",
-       "n": 3,
-       "ultimo": 1996
-      },
-      {
-       "titolo": "The Scoop and Behind the Screen",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Trent's Own Case",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -3708,29 +3360,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 3,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Bütün Şiirleri",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Evime ve Nihal'e Mektuplar",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Gün Eksilmesin Penceremden",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -3828,29 +3464,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 3,
-     "opere_con_edizione": 0,
-     "edizioni": 0,
-     "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "The Front Page",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Jumbo",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Twentieth Century",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+    "sbn_it": {
+     "trovato": true,
+     "edizioni": 15,
+     "ultimo": 1945,
+     "dal_2000": 13,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -3988,29 +3608,13 @@
     "parziale": true,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 3,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "The Green Hat",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "The Flying Dutchman",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Hell! Said the Duchess",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -4164,29 +3768,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 3,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Vardananq",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Nazar the Brave",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Vasak",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -4272,19 +3860,13 @@
     "parziale": true,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 1,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Gentlemen Prefer Blondes",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -4358,19 +3940,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 1,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Chieko-shō",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -4494,19 +4070,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 1,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Ḳontserṭ peredah ͑amami shel gadol ha-śaḥḳanim ha-Yehudim bi-yamenu",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -4644,29 +4214,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 3,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Fiddler's Farewell",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Measure Me, Sky!",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Therapy",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -4789,29 +4343,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 3,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Padma Nadir Majhi",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Putul Nacher Itikatha",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Ahingsa",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -4880,19 +4418,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 1,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Les Veillées du Lapin Agile",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -5065,19 +4597,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 1,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Borsóhercegnő",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -5235,24 +4761,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 2,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "America Is in the Heart",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Carlos Bulosan Papers",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -5490,29 +5005,13 @@
     "parziale": true,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 3,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Tales from Gavagan's Bar",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "The Well of the Unicorn",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Wall of Serpents",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -5600,19 +5099,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 1,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Der internationale Mädchenhandel",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -5685,19 +5178,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 1,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Haru no Umi",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -5774,19 +5261,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 1,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "La Mort de la biche",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -5937,19 +5418,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 1,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "ANTONIO es Dios",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -6120,19 +5595,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 1,
-     "opere_con_edizione": 1,
-     "edizioni": 3,
-     "ultimo": 1942,
-     "per_opera": [
-      {
-       "titolo": "Tra vestiti che ballano",
-       "n": 3,
-       "ultimo": 1942
-      }
-     ],
-     "fonte": "Google Libri"
+    "sbn_it": {
+     "trovato": true,
+     "edizioni": 93,
+     "ultimo": 1934,
+     "dal_2000": 48,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -6228,19 +5697,13 @@
     "parziale": true,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 1,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Destiny",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -6342,29 +5805,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 3,
-     "opere_con_edizione": 1,
-     "edizioni": 1,
-     "ultimo": 2017,
-     "per_opera": [
-      {
-       "titolo": "Lilli e il vagabondo",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Rip Kirby",
-       "n": 1,
-       "ultimo": 2017
-      },
-      {
-       "titolo": "Lady and the Tramp",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -6578,19 +6025,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 1,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "The Proving of Priscilla",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -6767,29 +6208,13 @@
     "parziale": true,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 3,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Caliban by the Yellow Sands",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "The Scarecrow",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "The Canterbury Tales of Geoffrey Chaucer",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -6880,24 +6305,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 2,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Introduzione a Finnegans Wake",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Village: As It Happened Through a Fifteen Year Period",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -7296,29 +6710,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 3,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Arayngetsimblṭ…",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Guṭ yom-ṭev",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Guṭ yom-ṭev (February, 1964)",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -7608,24 +7006,13 @@
     "parziale": true,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 2,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Kowa la Mystérieuse",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Mis Bell",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -7826,24 +7213,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 2,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Ardhasatabdir Odisa O Tanhire Mo Sthan",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "ଅଠରଶହ ସତର",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -7962,29 +7338,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 3,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "The Magical Mimics in Oz",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "American Fantastic Tales",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "The Shaggy Man of Oz",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -8179,19 +7539,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 1,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Fragments d'un journal",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -8298,29 +7652,13 @@
     "parziale": true,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 3,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Joanna Godden",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "The End of the House of Alard",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "The History of Susan Spray, the Female Preacher",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -8622,29 +7960,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 3,
-     "opere_con_edizione": 3,
-     "edizioni": 11,
-     "ultimo": 2026,
-     "per_opera": [
-      {
-       "titolo": "Dizionario dell'omo salvatico",
-       "n": 7,
-       "ultimo": 2026
-      },
-      {
-       "titolo": "L'ora di Barabba",
-       "n": 3,
-       "ultimo": 1982
-      },
-      {
-       "titolo": "L'òmo di Follonica",
-       "n": 1,
-       "ultimo": 1923
-      }
-     ],
-     "fonte": "Google Libri"
+    "sbn_it": {
+     "trovato": true,
+     "edizioni": 65,
+     "ultimo": 1934,
+     "dal_2000": 44,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -8720,19 +8042,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 1,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Weeds",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -8830,19 +8146,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 1,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Květinové pohádky",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -8980,29 +8290,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 3,
-     "opere_con_edizione": 0,
-     "edizioni": 0,
-     "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Aust paa Kronskogen og andre soger",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Brør og halvbrør",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Einstaka",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+    "sbn_it": {
+     "trovato": true,
+     "edizioni": 1,
+     "ultimo": 1952,
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -9195,29 +8489,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 3,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Enchanted waters",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "El gran Aleix",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "El pelegrí apassionat",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -9764,19 +9042,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 1,
-     "opere_con_edizione": 0,
-     "edizioni": 0,
-     "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Ráj děvčat",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+    "sbn_it": {
+     "trovato": true,
+     "edizioni": 114,
+     "ultimo": 1934,
+     "dal_2000": 60,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -9893,29 +9165,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 3,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Cosmos",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Four Dimensional Robberies",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "The Educated Pill",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -10008,19 +9264,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 1,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Tiny Pin Pricks",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -10127,29 +9377,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 3,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Thakurmar Jhuli",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Kishorder Mon",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Arya-nari (Part 1)",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -10344,29 +9578,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 3,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "A Woman of the World: An Everyday Story",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Disenchantment: An Every-day Story",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Hovenden, V.C., the Destiny of a Man of Act...",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -10557,19 +9775,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 1,
-     "opere_con_edizione": 1,
-     "edizioni": 1,
-     "ultimo": 2006,
-     "per_opera": [
-      {
-       "titolo": "La meravigliosa avventura di Cabeza de Vaca",
-       "n": 1,
-       "ultimo": 2006
-      }
-     ],
-     "fonte": "Google Libri"
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -10998,19 +10210,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 1,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "The Plastic Age",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -11133,29 +10339,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 3,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Cerddi'r gaeaf",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Perlau R. Williams Parry",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Pigion 2000: R. Williams Parry - 'Rhyfeddod Prin'",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -11330,19 +10520,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 1,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Tapasi Rabeya",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "nome",
+     "fonte": "SBN"
     }
    }
   },
@@ -11718,19 +10902,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 1,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Saundarya Ani Sahitya",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -11892,29 +11070,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 3,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Downright Dencey",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "The Forgotten Daughter",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Theras and His Town",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -12344,19 +11506,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 1,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "(Masterpiece in Bronze)",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -12666,24 +11822,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 2,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Wir lagen vor Madagaskar",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Der kleine Herr Niemand",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -12759,19 +11904,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 1,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Rang Tang",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "nome",
+     "fonte": "SBN"
     }
    }
   },
@@ -12894,24 +12033,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 2,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Sironia, Texas",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Eggs in cold storage; theory and practice in preserving eggs by refrigeration ..",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -12972,19 +12100,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 1,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Palestine",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -13152,29 +12274,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 3,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Üç İstanbul",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Edebiyat Defteri",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Epikür'ün Bahçesi",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -13373,29 +12479,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 3,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Los extremeños se tocan",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Fucar XXI",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Los amigos del alma",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -13852,24 +12942,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 2,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Isabella Valancy Crawford",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "The White Comrade, and other poems",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -14288,24 +13367,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 2,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Atlas Manuel de Diagnostic Clinique: Technique Médicale, Indications Thérapeutiques",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Filosofía de la naturaleza",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -14432,24 +13500,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 2,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "La femme française aux colonies",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Stories and legends of Annam",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -14619,24 +13676,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 2,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "A Pitiful Passion",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Fortune's Yellow: A Novel",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -14765,24 +13811,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 2,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "In Herself Complete: A Love Story",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "The Potentate: A Romance",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -14916,19 +13951,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 1,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Satan Sanderson",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -15010,19 +14039,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 1,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Wibbel the Tailor",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -15272,29 +14295,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 3,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "In the Grip of Terror",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Saith the Lord",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "The Eerie Mr. Murphy",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -15531,19 +14538,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 1,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Y greal a cherddi eraill",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -15623,24 +14624,13 @@
     "parziale": true,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 2,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Geirfa barddoniaeth gynnar Gymraeg",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Y Beibl Cymraeg",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -15712,29 +14702,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 3,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Léčivé rostliny a recepty na některé toaletní rostlinné přípravky, nápoje a prostředky",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Ptáci. Ptáci I Díl I.",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Význam polykání peří u Podiceps cristatus (L.) a obsah jeho žaludku",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -15818,24 +14792,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 2,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Betty the Scribe",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "The Lights of Sydney: or, No Past is Dead",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -15904,24 +14867,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 2,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Wongan Way",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Roses in Rain",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -16372,19 +15324,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 1,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Monsieur Bille dans la tourmente",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -16478,19 +15424,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 1,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "A dos vientos. Criticas y semblanzas",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -16644,29 +15584,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 3,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Marie Calumet",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Contes de chez Nous",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Florence",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -17174,19 +16098,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 1,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Zotz!",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -17831,19 +16749,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 1,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "କଂସ ଦିଗ୍ବିଜୟ",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -18607,29 +17519,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 3,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "F.S. Procházka: s výborem básní a podobiznou",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "J.S. Machar: s výborem básní a podobiznou",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Na zlatých strunách: verše",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -18708,19 +17604,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 1,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "La Femme de Seisaku",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -18914,19 +17804,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 1,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Benoita",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -19216,19 +18100,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 1,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Veit Stoss",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -19510,19 +18388,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 1,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Betelguese, a Trip Through Hell",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -20647,29 +19519,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 3,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Sorak and the Clouded Tiger; or, How the Terrible Ruler of the North Is Hunted and Destroyed",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Sorak and the Sultan's Ankus; or, How a Perilous Journey Leads to a Kingdom of Giants",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Sorak and the Treemen; or, How Sorak and His Friend Escape from Their Captives",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -20827,19 +19683,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 1,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "La revue blanche",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -20937,19 +19787,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 1,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Muʻjam ʻAṭīyah fī al-ʻāmmī wa-al-dakhīl",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -21881,29 +20725,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 3,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Augustin Thierry d’après sa correspondance",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Augustin Thierry d’après sa correspondance/01",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Augustin Thierry d’après sa correspondance/02",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -22214,24 +21042,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 2,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Côte d'Azur",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "La vie amoureuse de Lady Hamilton : ambassadrice d'Angleterre",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -24220,19 +23037,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 1,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Z mého psalteria: básně",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -24640,19 +23451,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 1,
-     "opere_con_edizione": 0,
-     "edizioni": 0,
-     "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Damballa ruft!",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+    "sbn_it": {
+     "trovato": true,
+     "edizioni": 4,
+     "ultimo": 1933,
+     "dal_2000": 2,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -25260,24 +24065,13 @@
     "parziale": true,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 2,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "The Beaten Track",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "The Crowning of Peace.;a short pageant of the Peace of Nations, with a translation into Welsh by T. Gwynn Jones",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -26125,19 +24919,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 1,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Jyothi Sasthram",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "nome",
+     "fonte": "SBN"
     }
    }
   },
@@ -26416,19 +25204,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 1,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Alma virgen",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "nome",
+     "fonte": "SBN"
     }
    }
   },
@@ -27578,19 +26360,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 1,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Eugène Fromentin - Lettres et fragments inédits 1848-1876",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -27868,19 +26644,13 @@
     "parziale": true,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 1,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "John Jones (Myrddin Fardd) 1837-1921",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -28401,19 +27171,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 1,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Les Amazones de la Chouannerie",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -29327,19 +28091,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 1,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Abeceda duševního prázdna",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -30256,19 +29014,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 1,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Slavko",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -30361,19 +29113,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 1,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Jarka a Věra",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -30554,29 +29300,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 3,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Filosof humanity: k šedesátým narozeninám universitního profesora Dra. Frant. Drtiny",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Masaryk: hlasatel pravdy a vítěz spravedlnosti",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Průvodce čítanky S úsměvem!",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -32186,24 +30916,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 2,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Německé překlady \"Máje\"",
-       "n": 0,
-       "ultimo": null
-      },
-      {
-       "titolo": "Přehled československého písemnictví v rámci světových literatur pro obchodní akademie. Díl třetí, (pro čtvrtý ročník)",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -32914,19 +31633,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 1,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "al-Darārī al-lāmiʻāt fī muntakhabāt al-lughāt",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -32976,19 +31689,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 1,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Poèmes acadiens",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -33912,19 +32619,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 1,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "The Rule of the Beasts",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "nome",
+     "fonte": "SBN"
     }
    }
   },
@@ -34013,19 +32714,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 1,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Kvetoucí zahrada",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
@@ -34073,19 +32768,13 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-05",
-    "google_it": {
-     "opere_controllate": 1,
-     "opere_con_edizione": 0,
+    "sbn_it": {
+     "trovato": false,
      "edizioni": 0,
      "ultimo": null,
-     "per_opera": [
-      {
-       "titolo": "Nebeský posel: novely",
-       "n": 0,
-       "ultimo": null
-      }
-     ],
-     "fonte": "Google Libri"
+     "dal_2000": 0,
+     "metodo": "viaf",
+     "fonte": "SBN"
     }
    }
   },
