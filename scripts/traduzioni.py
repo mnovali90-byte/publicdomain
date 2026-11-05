@@ -17,17 +17,6 @@ Scrive, per ogni autore, il campo "traduzioni" nei file data/<anno>.json:
    "parziale": bool, "fonte": "Open Library", "ts": "AAAA-MM-GG"}
 
 Cache in data/cache_traduzioni.json (una voce vale 45 giorni).
-
-Seconda fonte, per l'italiano: Google Libri (API Volumes), cercando per TITOLO ITALIANO
-dell'opera (preso da Wikidata) e cognome dell'autore. Cercare per autore non funziona:
-Google mostra prima i libri in inglese. Per ogni autore si controllano le 3 opere più
-note (quelle con più pagine Wikimedia) e si contano le edizioni con lingua = italiano.
-Scrive "google_it" dentro "traduzioni":
-  {"opere_controllate": k, "opere_con_edizione": j, "edizioni": n, "ultimo": anno|None,
-   "per_opera": [{"titolo", "n", "ultimo"}], "fonte": "Google Libri"}
-Cache in data/cache_google.json (45 giorni). La chiave gratuita è nella variabile
-GOOGLE_BOOKS_KEY (segreto del repository). Il limite gratuito è circa 1000 richieste al
-giorno: ogni giro ne fa al massimo GB_MAX_RICHIESTE e il resto arriva al giro dopo.
 """
 import concurrent.futures
 import datetime as dt
@@ -87,99 +76,6 @@ def conta_lingue(nome, risposta):
         "parziale": int((risposta or {}).get("numFound", 0)) > LIMITE,
         "fonte": "Open Library",
     }
-
-
-GB_URL = "https://www.googleapis.com/books/v1/volumes?"
-GB_CACHE = DATA_DIR / "cache_google.json"
-GB_CHIAVE = os.environ.get("GOOGLE_BOOKS_KEY", "")
-GB_PAUSA = 0.4 if GB_CHIAVE else 1.5
-GB_OPERE = 3
-GB_MAX_RICHIESTE = int(os.environ.get("GB_MAX_RICHIESTE", "350"))
-
-
-def cognome(nome):
-    p = norm(nome)
-    return p[-1] if p else ""
-
-
-def conta_google_opera(nome, risposta):
-    """Edizioni in italiano trovate per un'opera: lingua = it e il cognome dell'autore tra gli autori."""
-    voluto = cognome(nome)
-    n, anni = 0, []
-    for it in (risposta or {}).get("items") or []:
-        v = it.get("volumeInfo") or {}
-        if v.get("language") != "it":
-            continue
-        if not any(voluto in norm(a) for a in v.get("authors") or []):
-            continue
-        n += 1
-        m = re.match(r"(\d{4})", str(v.get("publishedDate") or ""))
-        if m:
-            anni.append(int(m.group(1)))
-    return n, (max(anni) if anni else None)
-
-
-def opere_da_controllare(a):
-    viste, out = set(), []
-    for o in sorted(a.get("opere") or [], key=lambda o: -(o.get("sl") or 0)):
-        t = (o.get("titolo") or "").strip()
-        if not t or re.fullmatch(r"Q\d+", t) or " ".join(norm(t)) in viste:
-            continue
-        viste.add(" ".join(norm(t)))
-        out.append(t)
-        if len(out) == GB_OPERE:
-            break
-    return out
-
-
-def interroga_google(a, http=None):
-    """Un autore: una richiesta per ognuna delle sue opere più note."""
-    http = http or http_json
-    per_opera = []
-    for t in opere_da_controllare(a):
-        q = {"q": f'intitle:"{t}" inauthor:{cognome(a["nome"])}', "maxResults": 20}
-        if GB_CHIAVE:
-            q["key"] = GB_CHIAVE
-        r = http(GB_URL + urllib.parse.urlencode(q), tentativi=3)
-        time.sleep(GB_PAUSA)
-        n, ultimo = conta_google_opera(a["nome"], r)
-        per_opera.append({"titolo": t, "n": n, "ultimo": ultimo})
-    anni = [x["ultimo"] for x in per_opera if x["ultimo"]]
-    return {"opere_controllate": len(per_opera), "opere_con_edizione": sum(1 for x in per_opera if x["n"]),
-            "edizioni": sum(x["n"] for x in per_opera), "ultimo": max(anni) if anni else None,
-            "per_opera": per_opera, "fonte": "Google Libri"}
-
-
-def elabora_google(oggi, pacchetti, interroga_fn=None):
-    """Google Libri, in sequenza. Si ferma al limite di richieste o ai primi errori ripetuti."""
-    interroga_fn = interroga_fn or interroga_google
-    cache = json.loads(GB_CACHE.read_text(encoding="utf-8")) if GB_CACHE.exists() else {}
-    da_fare = []
-    for _, p in pacchetti:
-        da_fare += [a for a in candidati(p) if a.get("opere") and not e_recente(cache.get(a["wikidata"]), oggi)]
-    print(f"google libri: {len(da_fare)} autori da controllare", file=sys.stderr)
-    fatti = errori = richieste = 0
-    for a in da_fare:
-        if time.time() > FINE_LAVORO or richieste >= GB_MAX_RICHIESTE:
-            print("  limite del giro raggiunto: il resto al prossimo giro", file=sys.stderr)
-            break
-        try:
-            voce = interroga_fn(a)
-            richieste += voce["opere_controllate"]
-            voce["ts"] = oggi.isoformat()
-            cache[a["wikidata"]] = voce
-            fatti += 1
-        except Exception as e:
-            errori += 1
-            print(f"  {a['nome']}: {e}", file=sys.stderr)
-            if errori >= 5 and fatti < errori:
-                print("  Google Libri non risponde (limite di richieste?): mi fermo, i dati già presi restano.", file=sys.stderr)
-                break
-        if fatti % 20 == 19:
-            GB_CACHE.write_text(json.dumps(cache, ensure_ascii=False), encoding="utf-8")
-    GB_CACHE.write_text(json.dumps(cache, ensure_ascii=False), encoding="utf-8")
-    print(f"google libri: {fatti} nuovi, {errori} errori, {richieste} richieste, {len(cache)} in cache", file=sys.stderr)
-    return cache
 
 
 def interroga(nome):
@@ -242,7 +138,6 @@ def elabora(oggi, interroga_fn=interroga):
             salva_cache(cache)
     if fatti + errori >= 10 and errori > fatti:
         raise RuntimeError("Open Library non risponde come previsto: non scrivo nulla.")
-    gb = elabora_google(oggi, pacchetti)
     ci_sono = 0
     for f, p in pacchetti:
         for a in p["autori"]:
@@ -250,9 +145,6 @@ def elabora(oggi, interroga_fn=interroga):
             if voce:
                 a["traduzioni"] = {k: v for k, v in voce.items()}
                 ci_sono += 1
-            g = gb.get(a["wikidata"])
-            if g:
-                a.setdefault("traduzioni", {})["google_it"] = {k: v for k, v in g.items() if k != "ts"}
         p["traduzioni_aggiornato"] = oggi.isoformat()
         f.write_text(json.dumps(p, ensure_ascii=False, indent=1), encoding="utf-8")
     salva_cache(cache)

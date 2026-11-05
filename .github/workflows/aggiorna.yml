@@ -35,9 +35,11 @@ jobs:
       - name: Controlla in quali lingue esistono le opere
         # dato accessorio: se fallisce, il resto viene salvato comunque
         continue-on-error: true
-        env:
-          GOOGLE_BOOKS_KEY: ${{ secrets.GOOGLE_BOOKS_KEY }}
         run: python scripts/traduzioni.py
+      - name: Conta le edizioni italiane nel catalogo SBN
+        # dato accessorio: se fallisce, il resto viene salvato comunque
+        continue-on-error: true
+        run: python scripts/sbn.py
       - name: Salva i dati nel repository
         run: |
           git config user.name "github-actions[bot]"
