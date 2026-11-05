@@ -20,7 +20,7 @@ concurrency:
 jobs:
   aggiorna:
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 200
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -31,16 +31,24 @@ jobs:
       - name: Aggiungi biografie, opere e popolarità
         # se questo passo fallisce, l'elenco degli autori viene salvato comunque
         continue-on-error: true
+        env:
+          BUDGET_MINUTI: "90"
         run: python scripts/arricchisci.py
       - name: Controlla in quali lingue esistono le opere
         # dato accessorio: se fallisce, il resto viene salvato comunque
         continue-on-error: true
+        env:
+          BUDGET_MINUTI_TRAD: "25"
         run: python scripts/traduzioni.py
       - name: Conta le edizioni italiane nel catalogo SBN
         # dato accessorio: se fallisce, il resto viene salvato comunque
         continue-on-error: true
+        env:
+          BUDGET_MINUTI_SBN: "25"
         run: python scripts/sbn.py
       - name: Salva i dati nel repository
+        # sempre, anche se un passo prima è stato interrotto: così il lavoro fatto non si perde
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
