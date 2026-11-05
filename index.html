@@ -94,7 +94,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 .vedi:hover{color:var(--carta)}
 .fila{margin-top:16px;display:flex;gap:16px;overflow-x:auto;padding-bottom:16px;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch}
 .copertina{flex:none;width:184px;height:276px;padding:20px;text-align:left;display:flex;flex-direction:column;justify-content:space-between;border:0;scroll-snap-align:start}
-.copertina .t{font-family:var(--display);font-weight:900;line-height:.92;text-transform:uppercase;overflow-wrap:anywhere}
+.copertina .t{font-family:var(--display);font-weight:900;line-height:.92;text-transform:uppercase;overflow-wrap:break-word;hyphens:auto}
 .copertina .a{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;line-height:1.4}
 .copertina:hover{transform:translateY(-4px)}
 .copertina{transition:transform .15s}
@@ -430,7 +430,69 @@ function iniziali(nome) {
 }
 function hashNumero(s) { let x = 0; for (const c of s) x = (x * 31 + c.charCodeAt(0)) >>> 0; return x; }
 
+/* ---------- ripulitura dei dati di Wikidata ---------- */
+const GENERI = [
+  [/fantascienza|science fiction|distopi|dystopi/, "Fantascienza", "Science fiction"],
+  [/fantasy/, "Fantasy", "Fantasy"],
+  [/orrore|horror|gotic|gothic/, "Horror", "Horror"],
+  [/mistero|giallo|detective|crime|thriller|polizie|mystery/, "Giallo e mistero", "Mystery"],
+  [/ragazzi|children|infanzia|young adult|fiaba|favola|fairy/, "Per ragazzi", "Children's"],
+  [/storic|historical/, "Storico", "Historical"],
+  [/avventura|adventure/, "Avventura", "Adventure"],
+  [/poesia|poetry|poema|lirica/, "Poesia", "Poetry"],
+  [/dramma|teatr|commedia|tragedia|\bplay\b|comedy/, "Teatro", "Theatre"],
+  [/satira|parodia|umor|humou?r|satire/, "Satira e umorismo", "Satire and humour"],
+  [/autobiograf|memori|diario|memoir|biograf/, "Memorie e biografie", "Memoir and biography"],
+  [/saggio|essay|filosof|religio|buddism|politic/, "Saggistica", "Non-fiction"],
+  [/viaggio|travel/, "Viaggio", "Travel"],
+  [/racconto|novella|short story|erzahlung|cuento|nouvelle/, "Racconti", "Short stories"],
+  [/romanzo|novel|narrativa|fiction|romance|sentimental|rosa/, "Romanzo", "Novel"]
+];
+function genereCanonico(etichetta) {
+  const k = norm(etichetta);
+  for (const [re, it, en] of GENERI) if (re.test(k)) return { chiave: it, it, en };
+  return null;
+}
+const nomeGenere = (g) => g[LING] || g.it;
+const PAESI = {
+  "Germania": ["reich tedesco", "impero tedesco", "repubblica di weimar", "germania nazista", "repubblica democratica tedesca", "germania ovest", "germania est", "confederazione germanica"],
+  "Regno Unito": ["regno unito di gran bretagna e irlanda", "regno unito di gran bretagna e irlanda del nord", "inghilterra", "impero britannico"],
+  "India": ["impero anglo-indiano", "dominion dell'india", "india britannica", "raj britannico"],
+  "Italia": ["regno d'italia", "regno di sardegna", "repubblica sociale italiana"],
+  "Russia": ["impero russo", "unione sovietica", "repubblica socialista federativa sovietica russa"],
+  "Austria": ["impero austriaco", "austria-ungheria", "impero austro-ungarico", "cisleitania"],
+  "Francia": ["terza repubblica francese", "seconda repubblica francese", "francia di vichy", "impero francese"],
+  "Spagna": ["regno di spagna", "seconda repubblica spagnola", "stato spagnolo"],
+  "Stati Uniti": ["stati uniti d'america"],
+  "Giappone": ["impero giapponese", "impero del giappone"],
+  "Cina": ["repubblica di cina", "impero cinese", "dinastia qing"]
+};
+const PAESE_MODERNO = new Map(Object.entries(PAESI).flatMap(([m, lista]) => lista.map((x) => [x, m])));
+function paeseModerno(nome) { return PAESE_MODERNO.get(norm(nome)) || nome; }
+function ripulisciDati() {
+  for (const an of stato.anni) {
+    const d = stato.dati[an];
+    const conta = new Map();
+    for (const a of d.autori) {
+      if (Array.isArray(a.paesi)) a.paesi = [...new Set(a.paesi.map(paeseModerno))];
+      if (Array.isArray(a.generi)) {
+        const visti = new Map();
+        for (const g of a.generi) { const c = genereCanonico(g); if (c) visti.set(c.chiave, c); }
+        a.generiCanonici = [...visti.values()];
+      }
+      if (a.letterario !== false && letteraria(a) && (a.paesi || []).length && (!d.arricchito || a.n_opere === undefined || a.n_opere > 0)) {
+        for (const p of a.paesi) conta.set(p, (conta.get(p) || 0) + 1);
+      }
+    }
+    if (d.arricchito) d.paesi = [...conta.entries()].map(([nome, n]) => ({ nome, n })).sort((x, y) => y.n - x.n || x.nome.localeCompare(y.nome, "it"));
+  }
+}
+
 /* ---------- dati ---------- */
+const NUCLEO = ["romanziere", "poeta", "drammaturgo"];
+const nucleo = (a) => a.professioni.some((p) => NUCLEO.includes(p));
+// i "nomi grandi" vengono dagli autori di narrativa, poesia e teatro; i soli saggisti restano nell'archivio
+function elencoTop(g) { const n = g.letterari.filter(nucleo); return n.length >= 8 ? n : g.letterari; }
 const senzaNome = (a) => /^Q\d+$/.test(a.nome);
 const letteraria = (a) => !senzaNome(a) && (a.letterario === true || (a.letterario === undefined && a.professioni.some((p) => LETTERARIE.includes(p))));
 const punteggio = (a) => [(a.indice === undefined ? -1 : a.indice), a.pagine_wikipedia || 0];
@@ -509,7 +571,8 @@ function ritratto(a, opzioni = {}) {
 function creditoFoto(a) {
   if (!a.foto || !a.foto.url) return null;
   const parti = [];
-  const autore = pulisci(a.foto.autore);
+  let autore = pulisci(a.foto.autore);
+  if (autore.length % 2 === 0 && autore.slice(0, autore.length / 2) === autore.slice(autore.length / 2)) autore = autore.slice(0, autore.length / 2);
   if (autore) parti.push(ripara(autore, 60));
   if (a.foto.licenza) parti.push(pulisci(a.foto.licenza));
   const testo = parti.length ? parti.join(" · ") : "Wikimedia Commons";
@@ -554,7 +617,7 @@ function disegnaEroe() {
   const d = stato.dati[stato.anno], g = gruppi(stato.anno);
   const box = $("#eroe");
   box.replaceChildren();
-  const prima = g.letterari[0] || g.tutti[0];
+  const prima = elencoTop(g)[0] || g.tutti[0];
   if (!prima) { box.append(h("p", { class: "messaggio" }, tr("nessunAutoreAnno"))); return; }
   const giorni = giorniA(d.libero_dal);
   const parole = prima.nome.split(/\s+/);
@@ -608,10 +671,11 @@ function schedaGrande(a, classe) {
 function disegnaGrandi() {
   const g = gruppi(stato.anno);
   const sez = $("#grandi-nomi");
-  const lista = g.letterari.slice(1, 8);
+  const base = elencoTop(g);
+  const lista = base.slice(1, 8);
   if (lista.length < 1) { sez.hidden = true; return; }
   sez.hidden = false;
-  const prima = g.letterari[0];
+  const prima = base[0];
   $("#grandi-occhiello").textContent = tr("grandiOcc", { anno: stato.anno });
   $("#grandi-titolo").textContent = prima ? tr("grandiTit", { nome: prima.nome }) : tr("grandiTit0");
   const grandi = $("#grandi"), piccoli = $("#piccoli");
@@ -634,7 +698,9 @@ function opereDellAnno(anno) {
       const k = norm(o.titolo) + "|" + a.wikidata;
       if (viste.has(k)) continue;
       viste.add(k);
-      out.push({ titolo: o.titolo, anno: o.anno, generi: (o.generi || []).map((x) => norm(x.trim())), generiOrig: o.generi || [], sl: o.sl || 0, a });
+      const canon = new Map();
+      for (const x of o.generi || []) { const c = genereCanonico(x); if (c) canon.set(c.chiave, c); }
+      out.push({ titolo: o.titolo, anno: o.anno, generi: [...canon.values()], sl: o.sl || 0, a });
     }
   }
   return out;
@@ -642,7 +708,10 @@ function opereDellAnno(anno) {
 function copertina(o) {
   const c = hashNumero(o.titolo + o.a.nome) % 4;
   const l = o.titolo.length;
-  const dim = l <= 12 ? 38 : l <= 24 ? 30 : l <= 40 ? 24 : 20;
+  let dim = l <= 12 ? 38 : l <= 24 ? 30 : l <= 40 ? 24 : 20;
+  const lunga = Math.max(...o.titolo.split(/\s+/).map((w) => w.length));
+  if (lunga > 9) dim = Math.min(dim, 26);
+  if (lunga > 12) dim = Math.min(dim, 22);
   return h("button", { class: `copertina c${c}`, type: "button", "aria-label": `${o.titolo}, di ${o.a.nome}`, onclick: () => apriAutore(o.a.wikidata) },
     h("span", { class: "t", style: `font-size:${dim}px` }, o.titolo),
     h("span", { class: "a" }, o.a.nome, o.anno ? ` · ${o.anno}` : ""));
@@ -656,11 +725,10 @@ function costruisciScaffali(anno) {
   if (opere.length) scaffali.push({ chiave: "_note", nome: tr("piuNote"), opere: ordinaOpere(opere) });
   const per = new Map();
   for (const o of opere) {
-    o.generi.forEach((gk, i) => {
-      if (!gk) return;
-      if (!per.has(gk)) per.set(gk, { nome: maiuscola(o.generiOrig[i].trim()), opere: [] });
-      per.get(gk).opere.push(o);
-    });
+    for (const gc of o.generi) {
+      if (!per.has(gc.chiave)) per.set(gc.chiave, { nome: nomeGenere(gc), opere: [] });
+      per.get(gc.chiave).opere.push(o);
+    }
   }
   const generi = [...per.entries()].filter(([, v]) => v.opere.length >= 3).sort((x, y) => y[1].opere.length - x[1].opere.length).slice(0, 7);
   for (const [k, v] of generi) scaffali.push({ chiave: k, nome: v.nome, opere: ordinaOpere(v.opere) });
@@ -839,7 +907,7 @@ function mostraAutore(id) {
     a.bio_url ? h("a", { href: a.bio_url, target: "_blank", rel: "noopener", style: "font-size:14px" }, tr("wikipedia")) : null) : null;
   const opere = (a.opere || []);
   const catalogo = (a.tipo_catalogo || []).map((x) => (tr("tipi") || {})[x] || x);
-  const generi = (a.generi || []).map(maiuscola);
+  const generi = (a.generiCanonici || []).map(nomeGenere);
   const indice = a.indice !== undefined ? h("div", {},
     h("h4", {}, tr("popolarita")),
     h("div", { class: "indice" }, h("span", { class: "num" }, String(a.indice)),
@@ -957,6 +1025,7 @@ async function avvia() {
     console.error(e);
     return;
   }
+  ripulisciDati();
   stato.anno = stato.anni[0];
   disegnaTutto();
   $("#cerca").addEventListener("input", (ev) => { stato.cerca = ev.target.value; stato.visibili = PASSO; disegnaArchivio(); });
