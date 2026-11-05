@@ -17,11 +17,11 @@ def estratti(t, chiavi, largo=500, massimo=6):
             n += 1
             if n >= massimo: return
 FONTI = [
- ("ITALIA legge 633/1941", "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1941-04-22;633!vig=", [r"Art\. ?25\b", r"cinquantesimo|settantesimo anno"]),
- ("ITALIA DLgsLgt 440/1945", "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo.luogotenenziale:1945-07-20;440", [r"prorogat", r"sei anni"]),
- ("ITALIA DLgsLgt 1948 n.1 (proroga bellica)", "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo.presidente.repubblica:1947-12-20;1", [r"prorog|proroga"]),
- ("SPAGNA TRLPI (BOE-A-1996-8930)", "https://www.boe.es/buscar/act.php?id=BOE-A-1996-8930", [r"Disposici[oó]n transitoria cuarta", r"ochenta a[ñn]os", r"7 de diciembre de 1987"]),
- ("SPAGNA TRLPI XML", "https://www.boe.es/diario_boe/xml.php?id=BOE-A-1996-8930", [r"transitoria cuarta", r"ochenta a[ñn]os"]),
+ ("ITALIA legge 633/1941 art. 25", "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1941-04-22;633~art25", [r"Art\. ?25", r"settantesimo anno|cinquantesimo anno"]),
+ ("ITALIA legge 633/1941 art. 32-ter", "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1941-04-22;633~art32ter", [r"1 gennaio|primo gennaio"]),
+ ("ITALIA trattato di pace 1947 (DLCPS 1430/1947)", "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo.capo.provvisorio.stato:1947-11-28;1430", [r"Allegato XV|propriet. letteraria|diritto d.autore", r"Trattato"]),
+ ("ITALIA DLgsLgt 440/1945 testo completo", "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo.luogotenenziale:1945-07-20;440", [r"Art\. ?[2-5]\.?", r"entrata in vigore"]),
+ ("SPAGNA legge 10 gennaio 1879 (BOE/Gazeta)", "https://www.boe.es/datos/pdfs/BOE//1879/012/A00097-00099.pdf", [r"ochenta", r"Art\. ?6"]),
 ]
 for nome, url, chiavi in FONTI:
     print("=" * 70, "\n", nome, url)
