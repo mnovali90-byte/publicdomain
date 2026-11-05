@@ -7,9 +7,11 @@ letteraria precisa (romanziere, poeta, drammaturgo, saggista) aggiunge:
   bio            prime frasi della pagina Wikipedia (it, altrimenti en), con link alla fonte
   opere          opere principali da Wikidata (titolo, anno)
   generi         generi delle opere da Wikidata
-  visite_12m     visite alla pagina Wikipedia negli ultimi 12 mesi (it + en)
+  visite_it/en   visite alla pagina Wikipedia italiana / inglese negli ultimi 12 mesi (0 = nessuna pagina)
+  visite_12m     somma delle due
   gutenberg      download dei libri su Project Gutenberg (se l'autore c'è)
-  indice         popolarità 0-100 (60% visite, 20% pagine Wikimedia, 20% Gutenberg)
+  indice_it/en/int  tre misure 0-100 rispetto alla lista dell'anno: visite it, visite en, lingue con una pagina
+  indice         vecchia media pesata, non più usata dal sito
   foto           ritratto da Wikimedia Commons con licenza e autore (se esiste)
   paesi, lingue  cittadinanza e lingue dell'autore da Wikidata
 
@@ -244,22 +246,30 @@ def mesi_da_considerare(oggi=None):
     return inizio.strftime("%Y%m%d") + "00", fine.strftime("%Y%m%d") + "00"
 
 
-def visite_12_mesi(titoli, oggi=None):
+def visite_per_lingua(titoli, oggi=None):
+    """Visite agli ultimi 12 mesi, separate per lingua di Wikipedia: {"it": n, "en": n}.
+    0 = l'autore non ha una pagina in quella lingua; None = la pagina c'è ma il dato non è arrivato."""
     inizio, fine = mesi_da_considerare(oggi)
-    totale, trovato = 0, False
+    out = {}
     for lingua in ("it", "en"):
         t = titoli.get(lingua)
         if not t:
+            out[lingua] = 0
             continue
         titolo = urllib.parse.quote(t.replace(" ", "_"), safe="")
         url = (f"https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/{lingua}.wikipedia/"
                f"all-access/user/{titolo}/monthly/{inizio}/{fine}")
         dati = http_json(url)
         time.sleep(PAUSA)
-        if dati and dati.get("items"):
-            totale += sum(int(i["views"]) for i in dati["items"])
-            trovato = True
-    return totale if trovato else None
+        out[lingua] = sum(int(i["views"]) for i in dati["items"]) if dati and dati.get("items") else None
+    return out
+
+
+def visite_12_mesi(titoli, oggi=None):
+    """Somma it + en (resta per compatibilità con i dati già salvati)."""
+    v = visite_per_lingua(titoli, oggi)
+    noti = [x for x in v.values() if x is not None]
+    return sum(noti) if noti else None
 
 
 # ---------------------------------------------------------------- Gutenberg
@@ -298,9 +308,28 @@ def percentile(valore, tutti):
     return (sotto + 0.5 * uguali) / len(tutti)
 
 
+def _percentili(autori, campo, chiave):
+    """Posizione 0-100 di ogni autore rispetto agli altri della lista, su UN solo dato.
+    Chi ha 0 (nessuna pagina in quella lingua) prende 0; chi non ha il dato non prende nulla."""
+    valori = [a[campo] for a in autori if a.get(campo) is not None]
+    for a in autori:
+        a.pop(chiave, None)
+        v = a.get(campo)
+        if v is None or not valori:
+            continue
+        a[chiave] = 0 if v == 0 else round(100 * percentile(v, valori))
+
+
 def calcola_indici(autori):
-    """Indice 0-100: media pesata dei piazzamenti (percentili) nelle componenti disponibili.
-    Una componente mancante non pesa come zero: i pesi si ridistribuiscono sulle altre."""
+    """Tre misure separate, ciascuna su un solo dato (0-100 rispetto alla lista dell'anno):
+      indice_it   visite alla pagina Wikipedia italiana (12 mesi)
+      indice_en   visite alla pagina Wikipedia inglese (12 mesi)
+      indice_int  in quante lingue esiste una pagina Wikimedia sull'autore
+    Più "indice": la vecchia media pesata (60% visite it+en, 20% pagine, 20% Gutenberg), tenuta
+    solo per i dati vecchi: il sito non la usa più quando ci sono le tre misure."""
+    _percentili(autori, "visite_it", "indice_it")
+    _percentili(autori, "visite_en", "indice_en")
+    _percentili(autori, "pagine_wikipedia", "indice_int")
     comp = {
         "visite": [a["visite_12m"] for a in autori if a.get("visite_12m") is not None],
         "pagine": [a["pagine_wikipedia"] for a in autori],
@@ -339,7 +368,8 @@ VERSIONE_CACHE = 2   # 2 = opere con generi, foto, paesi, lingue
 def da_aggiornare(voce, oggi):
     """True se mancano dati nuovi (versione vecchia) o se la voce è scaduta."""
     return (voce is None or voce.get("v", 1) < VERSIONE_CACHE or not e_recente(voce, oggi)
-            or voce.get("bios_v") != 2)   # biografie in italiano e inglese ancora da completare
+            or voce.get("bios_v") != 2        # biografie in italiano e inglese ancora da completare
+            or voce.get("visite_v") != 2)     # visite ancora da separare per lingua
 
 
 def _autore(a, b, opere_a, vecchia, oggi):
@@ -371,12 +401,17 @@ def _autore(a, b, opere_a, vecchia, oggi):
             pref = "it" if "it" in bios else "en"
             voce["bio"], voce["bio_url"], voce["bio_lingua"] = bios[pref]["testo"], bios[pref]["url"], pref
         voce["bios_v"] = 2
-    if serve_pesante:
-        t = b["titoli"]
+    if serve_pesante or voce.get("visite_v") != 2:
+        # le visite si rifanno anche da sole (2 richieste) quando serve solo separarle per lingua
         try:
-            voce["visite_12m"] = visite_12_mesi(t, oggi)
+            v = visite_per_lingua(b["titoli"], oggi)
+            voce["visite_it"], voce["visite_en"] = v["it"], v["en"]
+            noti = [x for x in v.values() if x is not None]
+            voce["visite_12m"] = sum(noti) if noti else None
+            voce["visite_v"] = 2     # un 404 (nessun dato) non si ripete ogni volta; un errore di rete solleva e riprova al giro dopo
         except Exception as e:
             print(f"  visite non riuscite per {a['nome']}: {e}", file=sys.stderr)
+    if serve_pesante:
         try:
             voce["gutenberg"] = gutenberg_download(a["nome"], int(a["morte"][:4]))
         except Exception as e:
@@ -429,7 +464,7 @@ def elabora_anno(percorso, cache, oggi):
             a["letterario"] = True
             a["tipo_catalogo"] = [TIPO_CATALOGO[p] for p in a["professioni"] if p in TIPO_CATALOGO]
             voce = cache.get(a["wikidata"], {})
-            for k in ("bio", "bio_url", "bio_lingua", "bios", "opere", "n_opere", "generi", "visite_12m",
+            for k in ("bio", "bio_url", "bio_lingua", "bios", "opere", "n_opere", "generi", "visite_12m", "visite_it", "visite_en",
                       "gutenberg", "foto", "paesi", "lingue"):
                 if voce.get(k) not in (None, [], ""):
                     a[k] = voce[k]
@@ -445,7 +480,7 @@ def elabora_anno(percorso, cache, oggi):
                     conteggio[v] = conteggio.get(v, 0) + 1
         pacchetto[chiave] = [{"nome": k, "n": n} for k, n in sorted(conteggio.items(), key=lambda kv: (-kv[1], kv[0]))]
     pacchetto["arricchito"] = oggi.isoformat()
-    pacchetto["indice_formula"] = "60% visite Wikipedia (12 mesi), 20% pagine Wikimedia, 20% download Project Gutenberg"
+    pacchetto["indice_formula"] = "tre misure separate: visite Wikipedia it, visite Wikipedia en, numero di lingue con una pagina; ciascuna 0-100 rispetto alla lista dell'anno"
     return pacchetto, letterari
 
 
