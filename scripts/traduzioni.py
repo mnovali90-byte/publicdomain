@@ -232,3 +232,4 @@ def elabora(oggi, interroga_fn=interroga):
 if __name__ == "__main__":
     elabora(dt.date.today())
 # Google Libri: chiave GOOGLE_BOOKS_KEY configurata come segreto del repository
+# riprova
