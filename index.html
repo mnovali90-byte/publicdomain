@@ -41,9 +41,21 @@ button{font:inherit;color:inherit;cursor:pointer}
 .navigazione button,.navigazione a{background:none;border:0;border-bottom:2px solid transparent;padding:12px 0;color:#A9A9B6;text-decoration:none;min-height:44px}
 .navigazione .attivo{color:var(--carta);border-bottom-color:var(--vermiglio)}
 .navigazione button:hover{color:var(--carta)}
-.eroe{display:flex;flex-wrap:wrap;gap:48px 56px;align-items:flex-end;padding-top:clamp(40px,9vw,88px);padding-bottom:clamp(64px,10vw,112px)}
+.carosello{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.carosello::-webkit-scrollbar{display:none}
+.slide{flex:0 0 100%;min-width:0;scroll-snap-align:start}
+.carosello:focus-visible{outline-offset:-3px}
+.comandi{display:flex;align-items:center;gap:20px;padding-bottom:clamp(56px,9vw,96px)}
+.puntini{display:flex;gap:4px}
+.puntino{width:44px;height:44px;background:none;border:0;position:relative}
+.puntino::after{content:"";position:absolute;left:10px;right:10px;top:21px;height:3px;background:#3A3A46}
+.puntino[aria-current="true"]::after{background:var(--vermiglio)}
+.freccia{width:48px;height:48px;border:1.5px solid #3A3A46;background:none;color:var(--carta);font-size:20px}
+.freccia:hover{border-color:var(--vermiglio)}
+.rango{margin-top:14px;font-family:var(--mono);font-weight:500;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--vermiglio)}
+.eroe{display:flex;flex-wrap:wrap;gap:48px 56px;align-items:flex-end;padding-top:clamp(40px,9vw,88px);padding-bottom:clamp(40px,6vw,64px)}
 .eroe-testo{flex:1 1 520px;min-width:0}
-.eroe h1{margin:24px 0 0;font-family:var(--display);font-weight:900;line-height:.82;letter-spacing:-.01em;text-transform:uppercase;font-size:120px;overflow-wrap:normal}
+.eroe .nome-eroe{margin:24px 0 0;font-family:var(--display);font-weight:900;line-height:.82;letter-spacing:-.01em;text-transform:uppercase;font-size:120px;overflow-wrap:normal}
 .eroe .predicato{margin:clamp(20px,3vw,40px) 0 0;font-size:clamp(24px,3.4vw,34px);line-height:1.15;font-weight:500}
 .eroe .spiega{margin:20px 0 0;max-width:560px;font-size:18px;line-height:1.6;color:var(--muto-chiaro)}
 .azioni{margin-top:36px;display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center}
@@ -306,7 +318,7 @@ it: {
   mieiVuoto: "Tocca il cuore su un autore per metterlo qui. La lista resta su questo dispositivo e puoi scaricarla in Excel.",
   scaricaMiei: "Scarica in Excel · {n}", togli: "Togli", togliAria: "Togli {nome} dalla lista", liberoIndice: "libero dal {d}", indiceN: "indice {n}",
   archOcc: "L'archivio", archTit: "Tutti i {n}", cerca: "Cerca un autore",
-  fLett: "Autori letterari · {n}", fNarr: "Narrativa, poesia, teatro · {n}", fAltri: "Saggisti e altri · {n}", fSenza: "Senza opere note · {n}", fTutti: "Tutti · {n}", fSenzaIt: "Senza edizioni italiane · {n}",
+  fLett: "Autori letterari · {n}", fCon: "Autori con opere · {n}", primoPer: "{r}° per notorietà online", slideAria: "Autore {i} di {t}", prec: "Precedente", succ: "Successivo", vaiA: "Vai all'autore {i}", fNarr: "Narrativa, poesia, teatro · {n}", fAltri: "Saggisti e altri · {n}", fSenza: "Senza opere note · {n}", fTutti: "Tutti · {n}", fSenzaIt: "Senza edizioni italiane · {n}",
   oPop: "Popolarità", oData: "Data", nessuno: "Nessun autore corrisponde alla ricerca.",
   mostraAltri: "Mostra altri {n} →", scaricaElenco: "Scarica questo elenco in Excel · {n}",
   foto: "Foto: ", ritrattoDi: "Ritratto di {nome}", pagineWm: "{n} pagine Wikimedia", pagineWmBreve: "{n} pagine",
@@ -356,7 +368,7 @@ en: {
   mieiVuoto: "Tap the heart on an author to put them here. The list stays on this device and you can download it as a spreadsheet.",
   scaricaMiei: "Download as Excel · {n}", togli: "Remove", togliAria: "Remove {nome} from the list", liberoIndice: "free from {d}", indiceN: "index {n}",
   archOcc: "The archive", archTit: "All {n}", cerca: "Search an author",
-  fLett: "Literary authors · {n}", fNarr: "Fiction, poetry, theatre · {n}", fAltri: "Essayists and others · {n}", fSenza: "No known works · {n}", fTutti: "All · {n}", fSenzaIt: "No Italian editions · {n}",
+  fLett: "Literary authors · {n}", fCon: "Authors with works · {n}", primoPer: "#{r} by online fame", slideAria: "Author {i} of {t}", prec: "Previous", succ: "Next", vaiA: "Go to author {i}", fNarr: "Fiction, poetry, theatre · {n}", fAltri: "Essayists and others · {n}", fSenza: "No known works · {n}", fTutti: "All · {n}", fSenzaIt: "No Italian editions · {n}",
   oPop: "Popularity", oData: "Date", nessuno: "No author matches your search.",
   mostraAltri: "Show {n} more →", scaricaElenco: "Download this list as Excel · {n}",
   foto: "Photo: ", ritrattoDi: "Portrait of {nome}", pagineWm: "{n} Wikimedia pages", pagineWmBreve: "{n} pages",
@@ -509,8 +521,7 @@ function ripulisciDati() {
 /* ---------- dati ---------- */
 const NUCLEO = ["romanziere", "poeta", "drammaturgo"];
 const nucleo = (a) => a.professioni.some((p) => NUCLEO.includes(p));
-// i "nomi grandi" vengono dagli autori di narrativa, poesia e teatro; i soli saggisti restano nell'archivio
-function elencoTop(g) { const n = g.letterari.filter(nucleo); return n.length >= 8 ? n : g.letterari; }
+function elencoTop(g) { return g.letterari; }
 const senzaNome = (a) => /^Q\d+$/.test(a.nome);
 const letteraria = (a) => !senzaNome(a) && (a.letterario === true || (a.letterario === undefined && a.professioni.some((p) => LETTERARIE.includes(p))));
 const punteggio = (a) => [(a.indice === undefined ? -1 : a.indice), a.pagine_wikipedia || 0];
@@ -532,8 +543,9 @@ function gruppi(anno) {
     senza: arricchito ? lett.filter((a) => a.n_opere === 0).sort(perPopolarita) : [],
     arricchito
   };
-  g.principali = elencoTop(g);                                   // narrativa, poesia, teatro (se sono abbastanza)
-  g.altri = g.letterari.filter((a) => !g.principali.includes(a)); // saggisti e altri
+  g.principali = g.letterari;                                      // tutti gli autori con opere note
+  g.nucleoLista = g.letterari.filter(nucleo);                       // narrativa, poesia, teatro
+  g.altri = g.letterari.filter((a) => !nucleo(a));                  // saggisti e altri
   gruppiCache.set(anno, g);
   return g;
 }
@@ -633,47 +645,72 @@ function giorniA(iso) {
   return Math.round((t - oggi) / 86400000);
 }
 
+function slideEroe(a, rango, indice, d, g, totale) {
+  const giorni = giorniA(d.libero_dal);
+  const parole = a.nome.split(/\s+/);
+  const riga2 = parole.length > 1 ? parole[parole.length - 1] : "";
+  const riga1 = parole.length > 1 ? parole.slice(0, -1).join(" ") : a.nome;
+  const quando = giorni > 1 ? tr("tra", { n: n(giorni) }) : giorni === 1 ? tr("domani") : giorni === 0 ? tr("oggi") : tr("liberoDal");
+  const altri = Math.max(0, g.letterari.length - 1);
+  const nome = h(indice === 0 ? "h1" : "h2", { class: "nome-eroe" }, riga1, riga2 ? h("br") : null, riga2);
+  return h("div", { class: "slide", role: "group", "aria-roledescription": "slide", "aria-label": tr("slideAria", { i: indice + 1, t: totale }) },
+    h("div", { class: "eroe" },
+      h("div", { class: "eroe-testo" },
+        h("div", { class: "occhiello" }, `${quando} · ${dataIt(d.libero_dal)}`),
+        nome,
+        h("p", { class: "predicato" }, giorni >= 0 ? tr("entra") : tr("ora")),
+        h("div", { class: "rango" }, tr("primoPer", { r: rango })),
+        h("p", { class: "spiega" }, tr("spiega", { d: dataIt(d.libero_dal) }) + (altri ? tr("eAltri", { n: n(altri) }) : "")),
+        h("div", { class: "azioni" },
+          h("button", { class: "bottone", type: "button", "data-apri": a.wikidata, onclick: () => apriAutore(a.wikidata) }, tr("schedaDi", { nome: a.nome })),
+          h("button", { class: "collegamento", type: "button", onclick: () => scorri("archivio") }, tr("vediTutti", { n: n(g.principali.length) })),
+          g.arricchito ? h("button", { class: "collegamento", type: "button", onclick: () => scorri("scaffali") }, tr("sfoglia")) : null)),
+      h("div", { class: "eroe-foto" },
+        ritratto(a, { notte: true, subito: indice === 0 }),
+        creditoFoto(a),
+        h("div", { class: "dati-riga" }, righeDati(a)))));
+}
 function disegnaEroe() {
   const d = stato.dati[stato.anno], g = gruppi(stato.anno);
   const box = $("#eroe");
   box.replaceChildren();
-  const prima = elencoTop(g)[0] || g.tutti[0];
-  if (!prima) { box.append(h("p", { class: "messaggio" }, tr("nessunAutoreAnno"))); return; }
-  const giorni = giorniA(d.libero_dal);
-  const parole = prima.nome.split(/\s+/);
-  const riga2 = parole.length > 1 ? parole[parole.length - 1] : "";
-  const riga1 = parole.length > 1 ? parole.slice(0, -1).join(" ") : prima.nome;
-  const quando = giorni > 1 ? tr("tra", { n: n(giorni) }) : giorni === 1 ? tr("domani") : giorni === 0 ? tr("oggi") : tr("liberoDal");
-  const altri = Math.max(0, g.letterari.length - 1);
-  const h1 = h("h1", { id: "eroe-nome" }, riga1, riga2 ? h("br") : null, riga2);
-  const foto = h("div", { class: "eroe-foto" },
-    ritratto(prima, { notte: true, subito: true }),
-    creditoFoto(prima),
-    h("div", { class: "dati-riga" }, righeDati(prima)));
-  box.append(h("div", { class: "eroe" },
-    h("div", { class: "eroe-testo" },
-      h("div", { class: "occhiello" }, `${quando} · ${dataIt(d.libero_dal)}`),
-      h1,
-      h("p", { class: "predicato" }, giorni >= 0 ? tr("entra") : tr("ora")),
-      h("p", { class: "spiega" }, tr("spiega", { d: dataIt(d.libero_dal) }) + (altri ? tr("eAltri", { n: n(altri) }) : "")),
-      h("div", { class: "azioni" },
-        h("button", { class: "bottone", type: "button", onclick: () => scorri("archivio") }, tr("vediTutti", { n: n(g.principali.length) })),
-        h("button", { class: "collegamento", type: "button", onclick: () => scorri(g.arricchito ? "scaffali" : "grandi-nomi") }, g.arricchito ? tr("sfoglia") : tr("nomiGrandi")),
-        h("button", { class: "collegamento", type: "button", "data-apri": prima.wikidata, onclick: () => apriAutore(prima.wikidata) }, tr("schedaDi", { nome: prima.nome })))),
-    foto));
+  const top = elencoTop(g).slice(0, 3);
+  if (!top.length) { box.append(h("p", { class: "messaggio" }, tr("nessunAutoreAnno"))); return; }
+  const slide = top.map((a, i) => slideEroe(a, i + 1, i, d, g, top.length));
+  const contenitore = h("div", { class: "carosello", tabindex: top.length > 1 ? "0" : null, role: "region", "aria-roledescription": "carousel", "aria-label": tr("nomiGrandi") }, slide);
+  box.append(contenitore);
+  if (top.length > 1) {
+    const puntini = top.map((a, i) => h("button", { type: "button", class: "puntino", "aria-label": tr("vaiA", { i: i + 1 }), onclick: () => vai(i) }));
+    const vai = (i) => {
+      const k = Math.max(0, Math.min(top.length - 1, i));
+      contenitore.scrollTo({ left: k * contenitore.clientWidth, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+    };
+    const indiceCorrente = () => Math.round(contenitore.scrollLeft / Math.max(1, contenitore.clientWidth));
+    const aggiorna = () => { const k = indiceCorrente(); puntini.forEach((p, i) => { p.setAttribute("aria-current", i === k ? "true" : "false"); }); };
+    contenitore.addEventListener("scroll", aggiorna, { passive: true });
+    contenitore.addEventListener("keydown", (ev) => {
+      if (ev.key === "ArrowRight") { ev.preventDefault(); vai(indiceCorrente() + 1); }
+      if (ev.key === "ArrowLeft") { ev.preventDefault(); vai(indiceCorrente() - 1); }
+    });
+    box.append(h("div", { class: "comandi" },
+      h("button", { type: "button", class: "freccia", "aria-label": tr("prec"), onclick: () => vai(indiceCorrente() - 1) }, "←"),
+      h("div", { class: "puntini" }, puntini),
+      h("button", { type: "button", class: "freccia", "aria-label": tr("succ"), onclick: () => vai(indiceCorrente() + 1) }, "→")));
+    aggiorna();
+  }
   adattaTitolo();
 }
 function adattaTitolo() {
-  const t = $("#eroe-nome");
-  if (!t) return;
-  const colonna = t.parentElement.clientWidth || t.parentElement.getBoundingClientRect().width || 600;
-  const righe = t.innerText ? t.innerText.split("\n") : [t.textContent];
-  const lunga = Math.max(...righe.map((r) => r.length), 4);
-  const dimensione = Math.max(54, Math.min(208, Math.floor(colonna / (0.5 * lunga))));
-  t.style.fontSize = dimensione + "px";
-  // con un carattere di riserva più largo del previsto, rimpicciolisce finché sta nella colonna
-  let guardia = 40, d = dimensione;
-  while (t.scrollWidth > t.clientWidth + 1 && d > 40 && guardia-- > 0) { d -= 4; t.style.fontSize = d + "px"; }
+  document.querySelectorAll(".nome-eroe").forEach((t) => {
+    const colonna = t.parentElement.clientWidth || 600;
+    const righe = (t.innerText || t.textContent).split("\n");
+    const lunga = Math.max(...righe.map((r) => r.length), 4);
+    let d = Math.max(54, Math.min(208, Math.floor(colonna / (0.5 * lunga))));
+    t.style.fontSize = d + "px";
+    // con un carattere di riserva più largo del previsto, rimpicciolisce finché sta nella colonna
+    let guardia = 40;
+    while (t.scrollWidth > t.clientWidth + 1 && d > 40 && guardia-- > 0) { d -= 4; t.style.fontSize = d + "px"; }
+  });
 }
 
 /* ---------- nomi grandi ---------- */
@@ -692,7 +729,7 @@ function disegnaGrandi() {
   const g = gruppi(stato.anno);
   const sez = $("#grandi-nomi");
   const base = elencoTop(g);
-  const lista = base.slice(1, 8);
+  const lista = base.slice(3, 10);
   if (lista.length < 1) { sez.hidden = true; return; }
   sez.hidden = false;
   const prima = base[0];
@@ -849,7 +886,7 @@ function disegnaMiei() {
 const senzaIt = (a) => !!(a.traduzioni && a.traduzioni.opere >= 2 && a.traduzioni.per_lingua.it === 0);
 function elencoArchivio() {
   const g = gruppi(stato.anno);
-  let lista = stato.filtro === "tutti" ? g.tutti : stato.filtro === "senza" ? g.senza : stato.filtro === "altri" ? g.altri : stato.filtro === "senzait" ? g.principali.filter(senzaIt) : g.principali;
+  let lista = stato.filtro === "tutti" ? g.tutti : stato.filtro === "senza" ? g.senza : stato.filtro === "altri" ? g.altri : stato.filtro === "nucleo" ? g.nucleoLista : stato.filtro === "senzait" ? g.principali.filter(senzaIt) : g.principali;
   if (stato.paese) lista = lista.filter((a) => (a.paesi || []).includes(stato.paese));
   if (stato.lingua) lista = lista.filter((a) => (a.lingue || []).includes(stato.lingua));
   const q = norm(stato.cerca.trim());
@@ -863,8 +900,11 @@ function disegnaArchivio() {
   $("#archivio-titolo").textContent = tr("archTit", { n: n(g.principali.length) });
   const lista = elencoArchivio();
   const strumenti = $("#strumenti");
-  const voci = [["letterari", g.altri.length ? tr("fNarr", { n: n(g.principali.length) }) : tr("fLett", { n: n(g.principali.length) })]];
-  if (g.altri.length) voci.push(["altri", tr("fAltri", { n: n(g.altri.length) })]);
+  const voci = [["letterari", tr("fCon", { n: n(g.principali.length) })]];
+  if (g.altri.length && g.nucleoLista.length) {
+    voci.push(["nucleo", tr("fNarr", { n: n(g.nucleoLista.length) })]);
+    voci.push(["altri", tr("fAltri", { n: n(g.altri.length) })]);
+  }
   if (g.senza.length) voci.push(["senza", tr("fSenza", { n: n(g.senza.length) })]);
   voci.push(["tutti", tr("fTutti", { n: n(g.tutti.length) })]);
   strumenti.replaceChildren(
