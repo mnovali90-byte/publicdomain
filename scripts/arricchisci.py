@@ -338,7 +338,8 @@ VERSIONE_CACHE = 2   # 2 = opere con generi, foto, paesi, lingue
 
 def da_aggiornare(voce, oggi):
     """True se mancano dati nuovi (versione vecchia) o se la voce è scaduta."""
-    return voce is None or voce.get("v", 1) < VERSIONE_CACHE or not e_recente(voce, oggi)
+    return (voce is None or voce.get("v", 1) < VERSIONE_CACHE or not e_recente(voce, oggi)
+            or voce.get("bios_v") != 2)   # biografie in italiano e inglese ancora da completare
 
 
 def _autore(a, b, opere_a, vecchia, oggi):
