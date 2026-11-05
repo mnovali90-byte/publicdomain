@@ -43,6 +43,7 @@ PER_ANNO = int(os.environ.get("SBN_PER_ANNO", "300"))
 BUDGET_MINUTI = float(os.environ.get("BUDGET_MINUTI_SBN", "40"))
 FINE_LAVORO = time.time() + BUDGET_MINUTI * 60
 PAUSA = 0.6
+LIMITE_AGENTI = 1000
 ENDPOINT = "https://triplestore.iccu.sbn.it/sparql"
 BF = "http://id.loc.gov/ontologies/bibframe/"
 SAME = "http://www.w3.org/2002/07/owl#sameAs"
@@ -93,8 +94,10 @@ def agenti_per_nome(nome, interroga_fn):
     if len(cognome) < 3:
         return []
     righe = interroga_fn(f'SELECT DISTINCT ?a ?l WHERE {{ ?a <{LAB}> ?l . ?l bif:contains "\'{cognome}\'" . '
-                         f'FILTER(CONTAINS(STR(?a), "/resource/Agent/")) }} LIMIT 80')
+                         f'FILTER(CONTAINS(STR(?a), "/resource/Agent/")) }} LIMIT {LIMITE_AGENTI}')
     time.sleep(PAUSA)
+    if len(righe) >= LIMITE_AGENTI:      # elenco tagliato: meglio non indovinare
+        return []
     uri = [r["a"]["value"] for r in righe if nome_compatibile(nome, r["l"]["value"])]
     return uri if 0 < len(uri) <= 6 else []
 
@@ -149,7 +152,7 @@ def codici_viaf(qids):
 
 def e_recente(voce, oggi):
     try:
-        if voce.get("v") != 2:      # 2 = VIAF poi nome; le voci della prima versione si rifanno
+        if voce.get("v") != 3:      # 2 = VIAF poi nome; le voci della prima versione si rifanno
             return False
         return (oggi - dt.date.fromisoformat(voce["ts"])).days < VALIDITA_GIORNI
     except Exception:
@@ -179,7 +182,7 @@ def elabora(oggi, conta_fn=edizioni_italiane, viaf_fn=codici_viaf):
         try:
             voce = conta_fn(a["nome"], viaf.get(a["wikidata"]))
             voce["ts"] = oggi.isoformat()
-            voce["v"] = 2
+            voce["v"] = 3
             cache[a["wikidata"]] = voce
             fatti += 1
         except Exception as e:
