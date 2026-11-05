@@ -1634,11 +1634,11 @@
     "fonte": "Open Library",
     "ts": "2026-11-05",
     "sbn_it": {
-     "trovato": true,
-     "edizioni": 2,
-     "ultimo": 2007,
-     "dal_2000": 2,
-     "metodo": "nome",
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
      "fonte": "SBN",
      "sospetto": true
     }
@@ -9458,11 +9458,11 @@
     "fonte": "Open Library",
     "ts": "2026-11-05",
     "sbn_it": {
-     "trovato": false,
-     "edizioni": 0,
-     "ultimo": null,
+     "trovato": true,
+     "edizioni": 1,
+     "ultimo": 1992,
      "dal_2000": 0,
-     "metodo": null,
+     "metodo": "nome",
      "fonte": "SBN"
     }
    }
@@ -12018,11 +12018,11 @@
     "fonte": "Open Library",
     "ts": "2026-11-05",
     "sbn_it": {
-     "trovato": true,
-     "edizioni": 12,
-     "ultimo": 2016,
-     "dal_2000": 10,
-     "metodo": "nome",
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
      "fonte": "SBN"
     }
    }
