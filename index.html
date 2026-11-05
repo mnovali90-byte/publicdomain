@@ -107,7 +107,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 .vedi:hover{color:var(--carta)}
 .fila{margin-top:16px;display:flex;gap:16px;overflow-x:auto;padding-bottom:16px;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch}
 .copertina{flex:none;width:184px;height:276px;padding:20px;text-align:left;display:flex;flex-direction:column;justify-content:space-between;border:0;scroll-snap-align:start}
-.copertina .t{font-family:var(--display);font-weight:900;line-height:.92;text-transform:uppercase;overflow-wrap:break-word;hyphens:auto}
+.copertina .t{font-family:var(--display);font-weight:900;line-height:.92;text-transform:uppercase;overflow-wrap:normal;word-break:normal;hyphens:none}
 .copertina .a{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;line-height:1.4}
 .copertina:hover{transform:translateY(-4px)}
 .copertina{transition:transform .15s}
@@ -780,8 +780,8 @@ function copertina(o) {
   const l = o.titolo.length;
   let dim = l <= 12 ? 38 : l <= 24 ? 30 : l <= 40 ? 24 : 20;
   const lunga = Math.max(...o.titolo.split(/\s+/).map((w) => w.length));
-  if (lunga > 9) dim = Math.min(dim, 26);
-  if (lunga > 12) dim = Math.min(dim, 22);
+  // la parola più lunga deve stare intera nella copertina: si rimpicciolisce, non si spezza
+  dim = Math.max(15, Math.min(dim, Math.floor(106 / (0.5 * lunga))));
   return h("button", { class: `copertina c${c}`, type: "button", "aria-label": `${o.titolo}, di ${o.a.nome}`, onclick: () => apriAutore(o.a.wikidata) },
     h("span", { class: "t", style: `font-size:${dim}px` }, o.titolo),
     h("span", { class: "a" }, o.a.nome, o.anno ? ` · ${o.anno}` : ""));
