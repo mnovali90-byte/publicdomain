@@ -408,11 +408,11 @@
     "fonte": "Open Library",
     "ts": "2026-11-05",
     "sbn_it": {
-     "trovato": false,
-     "edizioni": 0,
-     "ultimo": null,
-     "dal_2000": 0,
-     "metodo": "viaf",
+     "trovato": true,
+     "edizioni": 12,
+     "ultimo": 1932,
+     "dal_2000": 6,
+     "metodo": "nome",
      "fonte": "SBN"
     }
    }
@@ -853,11 +853,11 @@
     "fonte": "Open Library",
     "ts": "2026-11-05",
     "sbn_it": {
-     "trovato": false,
-     "edizioni": 0,
-     "ultimo": null,
-     "dal_2000": 0,
-     "metodo": "viaf",
+     "trovato": true,
+     "edizioni": 282,
+     "ultimo": 2021,
+     "dal_2000": 280,
+     "metodo": "nome",
      "fonte": "SBN"
     }
    }
@@ -1029,11 +1029,11 @@
     "fonte": "Open Library",
     "ts": "2026-11-05",
     "sbn_it": {
-     "trovato": false,
-     "edizioni": 0,
-     "ultimo": null,
-     "dal_2000": 0,
-     "metodo": "viaf",
+     "trovato": true,
+     "edizioni": 25,
+     "ultimo": 1948,
+     "dal_2000": 12,
+     "metodo": "nome",
      "fonte": "SBN"
     }
    }
@@ -1324,7 +1324,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -1430,11 +1430,11 @@
     "fonte": "Open Library",
     "ts": "2026-11-05",
     "sbn_it": {
-     "trovato": false,
-     "edizioni": 0,
-     "ultimo": null,
-     "dal_2000": 0,
-     "metodo": "viaf",
+     "trovato": true,
+     "edizioni": 10,
+     "ultimo": 2021,
+     "dal_2000": 7,
+     "metodo": "nome",
      "fonte": "SBN"
     }
    }
@@ -1633,11 +1633,11 @@
     "fonte": "Open Library",
     "ts": "2026-11-05",
     "sbn_it": {
-     "trovato": false,
-     "edizioni": 0,
-     "ultimo": null,
-     "dal_2000": 0,
-     "metodo": "viaf",
+     "trovato": true,
+     "edizioni": 2,
+     "ultimo": 2007,
+     "dal_2000": 2,
+     "metodo": "nome",
      "fonte": "SBN"
     }
    }
@@ -1765,11 +1765,11 @@
     "fonte": "Open Library",
     "ts": "2026-11-05",
     "sbn_it": {
-     "trovato": false,
-     "edizioni": 0,
-     "ultimo": null,
-     "dal_2000": 0,
-     "metodo": "viaf",
+     "trovato": true,
+     "edizioni": 11,
+     "ultimo": 1933,
+     "dal_2000": 3,
+     "metodo": "nome",
      "fonte": "SBN"
     }
    }
@@ -1983,11 +1983,11 @@
     "fonte": "Open Library",
     "ts": "2026-11-05",
     "sbn_it": {
-     "trovato": false,
-     "edizioni": 0,
-     "ultimo": null,
+     "trovato": true,
+     "edizioni": 1,
+     "ultimo": 1994,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": "nome",
      "fonte": "SBN"
     }
    }
@@ -2072,7 +2072,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -2185,7 +2185,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -2477,7 +2477,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -2761,7 +2761,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -2904,11 +2904,11 @@
     "fonte": "Open Library",
     "ts": "2026-11-05",
     "sbn_it": {
-     "trovato": false,
-     "edizioni": 0,
-     "ultimo": null,
-     "dal_2000": 0,
-     "metodo": "viaf",
+     "trovato": true,
+     "edizioni": 20,
+     "ultimo": 1932,
+     "dal_2000": 12,
+     "metodo": "nome",
      "fonte": "SBN"
     }
    }
@@ -3023,7 +3023,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -3097,11 +3097,11 @@
     "fonte": "Open Library",
     "ts": "2026-11-05",
     "sbn_it": {
-     "trovato": false,
-     "edizioni": 0,
-     "ultimo": null,
-     "dal_2000": 0,
-     "metodo": "viaf",
+     "trovato": true,
+     "edizioni": 1,
+     "ultimo": 2001,
+     "dal_2000": 1,
+     "metodo": "nome",
      "fonte": "SBN"
     }
    }
@@ -3372,7 +3372,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -3602,7 +3602,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -3850,11 +3850,11 @@
     "fonte": "Open Library",
     "ts": "2026-11-05",
     "sbn_it": {
-     "trovato": false,
-     "edizioni": 0,
-     "ultimo": null,
-     "dal_2000": 0,
-     "metodo": "viaf",
+     "trovato": true,
+     "edizioni": 1,
+     "ultimo": 1955,
+     "dal_2000": 1,
+     "metodo": "nome",
      "fonte": "SBN"
     }
    }
@@ -3938,7 +3938,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -4227,11 +4227,11 @@
     "fonte": "Open Library",
     "ts": "2026-11-05",
     "sbn_it": {
-     "trovato": false,
-     "edizioni": 0,
-     "ultimo": null,
+     "trovato": true,
+     "edizioni": 1,
+     "ultimo": 1949,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": "nome",
      "fonte": "SBN"
     }
    }
@@ -4322,7 +4322,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -4471,11 +4471,11 @@
     "fonte": "Open Library",
     "ts": "2026-11-05",
     "sbn_it": {
-     "trovato": false,
-     "edizioni": 0,
-     "ultimo": null,
-     "dal_2000": 0,
-     "metodo": "viaf",
+     "trovato": true,
+     "edizioni": 1,
+     "ultimo": 1929,
+     "dal_2000": 1,
+     "metodo": "nome",
      "fonte": "SBN"
     }
    }
@@ -4566,7 +4566,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -4801,7 +4801,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -4925,11 +4925,11 @@
     "fonte": "Open Library",
     "ts": "2026-11-05",
     "sbn_it": {
-     "trovato": false,
-     "edizioni": 0,
-     "ultimo": null,
-     "dal_2000": 0,
-     "metodo": "viaf",
+     "trovato": true,
+     "edizioni": 14,
+     "ultimo": 1955,
+     "dal_2000": 9,
+     "metodo": "nome",
      "fonte": "SBN"
     }
    }
@@ -5054,7 +5054,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -5182,7 +5182,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -5660,11 +5660,11 @@
     "fonte": "Open Library",
     "ts": "2026-11-05",
     "sbn_it": {
-     "trovato": false,
-     "edizioni": 0,
-     "ultimo": null,
-     "dal_2000": 0,
-     "metodo": "viaf",
+     "trovato": true,
+     "edizioni": 2,
+     "ultimo": 1959,
+     "dal_2000": 2,
+     "metodo": "nome",
      "fonte": "SBN"
     }
    }
@@ -5936,7 +5936,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -6146,7 +6146,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -6303,7 +6303,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -6430,7 +6430,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -6879,7 +6879,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -6982,7 +6982,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -7113,7 +7113,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -7338,7 +7338,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -7467,7 +7467,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -7591,7 +7591,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -7772,7 +7772,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -8449,11 +8449,11 @@
     "fonte": "Open Library",
     "ts": "2026-11-05",
     "sbn_it": {
-     "trovato": false,
-     "edizioni": 0,
-     "ultimo": null,
-     "dal_2000": 0,
-     "metodo": "viaf",
+     "trovato": true,
+     "edizioni": 7,
+     "ultimo": 1934,
+     "dal_2000": 4,
+     "metodo": "nome",
      "fonte": "SBN"
     }
    }
@@ -8606,7 +8606,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -9176,7 +9176,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -9460,7 +9460,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -9697,7 +9697,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -9923,7 +9923,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -10068,7 +10068,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -10170,7 +10170,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -10364,11 +10364,11 @@
     "fonte": "Open Library",
     "ts": "2026-11-05",
     "sbn_it": {
-     "trovato": false,
-     "edizioni": 0,
-     "ultimo": null,
-     "dal_2000": 0,
-     "metodo": "viaf",
+     "trovato": true,
+     "edizioni": 1,
+     "ultimo": 1959,
+     "dal_2000": 1,
+     "metodo": "nome",
      "fonte": "SBN"
     }
    }
@@ -10660,7 +10660,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -10730,7 +10730,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -10801,7 +10801,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -11131,7 +11131,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -11340,7 +11340,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -11441,7 +11441,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -11725,7 +11725,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -12020,7 +12020,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -12119,7 +12119,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -12348,7 +12348,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -12457,7 +12457,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -12627,7 +12627,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -12775,7 +12775,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -13836,11 +13836,11 @@
     "fonte": "Open Library",
     "ts": "2026-11-05",
     "sbn_it": {
-     "trovato": false,
-     "edizioni": 0,
-     "ultimo": null,
+     "trovato": true,
+     "edizioni": 1,
+     "ultimo": 1994,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": "nome",
      "fonte": "SBN"
     }
    }
@@ -13910,7 +13910,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -13990,7 +13990,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -14443,7 +14443,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -14536,7 +14536,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -14776,7 +14776,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -15050,7 +15050,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -15741,7 +15741,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -15853,7 +15853,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -16262,7 +16262,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -16646,7 +16646,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "nome",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -16949,7 +16949,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -17072,7 +17072,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -17158,7 +17158,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -17357,7 +17357,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -17448,7 +17448,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "nome",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -17547,7 +17547,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -17703,7 +17703,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -18666,7 +18666,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "nome",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -19079,7 +19079,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "nome",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -19356,7 +19356,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -19542,7 +19542,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -19743,7 +19743,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -20042,7 +20042,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -20984,7 +20984,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -21227,7 +21227,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -21335,7 +21335,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -21951,7 +21951,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "nome",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -23403,7 +23403,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -23965,7 +23965,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -24544,7 +24544,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -26799,11 +26799,11 @@
     "fonte": "Open Library",
     "ts": "2026-11-05",
     "sbn_it": {
-     "trovato": false,
-     "edizioni": 0,
-     "ultimo": null,
-     "dal_2000": 0,
-     "metodo": "viaf",
+     "trovato": true,
+     "edizioni": 9,
+     "ultimo": 1933,
+     "dal_2000": 4,
+     "metodo": "nome",
      "fonte": "SBN"
     }
    }
@@ -28960,7 +28960,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -29243,7 +29243,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -29606,7 +29606,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "nome",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -30911,7 +30911,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -31014,7 +31014,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -31201,7 +31201,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
@@ -33363,11 +33363,11 @@
     "fonte": "Open Library",
     "ts": "2026-11-05",
     "sbn_it": {
-     "trovato": false,
-     "edizioni": 0,
-     "ultimo": null,
+     "trovato": true,
+     "edizioni": 1,
+     "ultimo": 1951,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": "nome",
      "fonte": "SBN"
     }
    }
@@ -33469,7 +33469,7 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": "viaf",
+     "metodo": null,
      "fonte": "SBN"
     }
    }
