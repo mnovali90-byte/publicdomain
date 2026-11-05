@@ -29,31 +29,27 @@ def pdf_testo(d, lingua):
         out.append(subprocess.run(["tesseract", "/tmp/" + f, "-", "-l", lingua], capture_output=True, text=True).stdout)
     return re.sub(r"\s+", " ", " ".join(out)), "OCR"
 
-print("=" * 60, "\nITALIA: Allegato XV su Normattiva (DLCPS 1430/1947)")
-base = "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo.capo.provvisorio.stato:1947-11-28;1430"
-for suf in ["~allXV", "~all15", "~allegatoXV", "!vig=~allXV"]:
-    h, fin = scarica(base + suf, tentativi=1); t = testo(h)
-    print(" ", suf, "->", len(t), "caratteri;", "letter" in t.lower(), "propriet" in t.lower())
-    if re.search(r"propriet. letteraria|diritto d.autore|Annex XV|ALLEGATO XV", t, re.I) and len(t) > 3000:
-        estratti(t, [r"[Pp]ropriet. letteraria", r"diritti? d.autore"], largo=2500); break
+def cerca_pdf(nome, url, lingua, chiavi, largo=2500, massimo=3, timeout=400):
+    print("=" * 60, "\n", nome, url, flush=True)
+    d, fin = scarica(url, True, timeout=timeout, tentativi=2)
+    print(" byte:", len(d), flush=True)
+    if d[:4] != b"%PDF": print(" non è un PDF:", d[:80]); return ""
+    t, modo = pdf_testo(d, lingua); print(" modo:", modo, "| caratteri:", len(t), flush=True)
+    estratti(t, chiavi, largo=largo, massimo=massimo)
+    return t
 
-print("=" * 60, "\nITALIA: trattato PDF UK (timeout lungo)")
-d, fin = scarica("https://treaties.fcdo.gov.uk/data/Library2/pdf/1948-TS0050.pdf", True, timeout=400)
-print(" byte:", len(d))
-if d:
-    t, modo = pdf_testo(d, "eng"); print(" modo:", modo, "| caratteri:", len(t))
-    pos = [m.start() for m in re.finditer(r"ANNEX XV", t)]; print(" ANNEX XV a:", pos[:8])
-    estratti(t, [r"[Ll]iterary and artistic (property|works)", r"[Cc]opyright"], largo=2500, massimo=3)
-
-print("=" * 60, "\nSPAGNA: legge 1879, scheda BOE e PDF")
-h, fin = scarica("https://www.boe.es/eli/es/l/1879/01/10/(1)", tentativi=1)
-print(" pagina:", len(testo(h)), "caratteri;", testo(h)[:600])
-links = sorted(set(re.findall(r'href="([^"]+)"', h)))
-print(" link:", [l for l in links if "pdf" in l.lower() or "gazeta" in l.lower() or "BOE-A-1879" in l][:10])
-for l in [l for l in links if "pdf" in l.lower() or "BOE-A-1879" in l][:2]:
-    u = l if l.startswith("http") else "https://www.boe.es" + l
-    d, fin = scarica(u, True)
-    print(" scarico", u, len(d))
-    if d[:4] == b"%PDF":
-        t, modo = pdf_testo(d, "spa"); print(" modo:", modo, "| caratteri:", len(t))
-        estratti(t, [r"ochenta", r"Art\S* ?6"], largo=1200, massimo=4)
+# ITALIA: trattato, testo francese CVCE (86 pagine): le annexes ci sono?
+t = cerca_pdf("TRATTATO FR (CVCE)", "https://www.cvce.eu/content/publication/1999/1/1/0eaf4219-d6d9-4c35-935a-6f55327448e7/publishable_fr.pdf", "fra",
+              [r"Annexe XV", r"litt[eé]raire et artistique", r"droits d.auteur", r"[Pp]ropri[eé]t[eé] industrielle, litt"], largo=3500, massimo=4, timeout=300)
+print(" 'Annexe XV' a:", [m.start() for m in re.finditer(r"Annexe XV", t)][:10] if t else None, "| tot", len(t))
+# ITALIA: Nazioni Unite, UNTS vol. 49
+cerca_pdf("TRATTATO UNTS", "https://treaties.un.org/doc/Publication/UNTS/Volume%2049/volume-49-I-747-English.pdf", "eng",
+          [r"ANNEX XV", r"literary and artistic property", r"[Cc]opyright"], largo=3500, massimo=3)
+# SPAGNA: regolamento 1880 (BOE, testo consolidato) e Gazeta digitalizzata
+print("=" * 60, "\nSPAGNA regolamento 1880 BOE", flush=True)
+h, fin = scarica("https://www.boe.es/eli/es/rd/1880/09/03/(1)", tentativi=1); tt = testo(h); print(" caratteri:", len(tt))
+estratti(tt, [r"ochenta", r"Ley de 10 de enero de 1879"], largo=700, massimo=4)
+print("=" * 60, "\nSPAGNA Prensa Histórica (Ministerio de Cultura)", flush=True)
+h, fin = scarica("https://prensahistorica.mcu.es/va/catalogo_imagenes/grupo.do?path=43581", tentativi=1)
+print(" finale:", fin, "| caratteri:", len(testo(h)), "|", testo(h)[:500])
+print(" link pdf:", [l for l in sorted(set(re.findall(r'href="([^"]+)"', h))) if "pdf" in l.lower() or "descarga" in l.lower()][:10])
