@@ -17,6 +17,13 @@ Scrive, per ogni autore, il campo "traduzioni" nei file data/<anno>.json:
    "parziale": bool, "fonte": "Open Library", "ts": "AAAA-MM-GG"}
 
 Cache in data/cache_traduzioni.json (una voce vale 45 giorni).
+
+Seconda fonte, per l'italiano: Google Libri (API Volumes, filtro lingua = italiano).
+Per ogni autore conta le edizioni italiane che hanno esattamente quel nome come autore e
+l'anno di pubblicazione più recente. Scrive "google_it" dentro "traduzioni":
+  {"n": N, "ultimo": anno|None, "totale": N_trovati_da_Google, "fonte": "Google Libri"}
+Cache in data/cache_google.json. Se esiste la variabile GOOGLE_BOOKS_KEY (chiave gratuita
+di Google) viene usata, altrimenti si va senza chiave, con limiti più stretti.
 """
 import concurrent.futures
 import datetime as dt
@@ -78,6 +85,37 @@ def conta_lingue(nome, risposta):
     }
 
 
+GB_URL = "https://www.googleapis.com/books/v1/volumes?"
+GB_CACHE = DATA_DIR / "cache_google.json"
+GB_CHIAVE = os.environ.get("GOOGLE_BOOKS_KEY", "")
+GB_PAUSA = 0.4 if GB_CHIAVE else 1.5
+
+
+def conta_google(nome, risposta):
+    """Edizioni italiane in Google Libri: solo quelle il cui autore ha esattamente il nome cercato."""
+    items = (risposta or {}).get("items") or []
+    anni, n = [], 0
+    for it in items:
+        v = it.get("volumeInfo") or {}
+        if v.get("language") != "it" or not stesso_autore(nome, v.get("authors")):
+            continue
+        n += 1
+        m = re.match(r"(\d{4})", str(v.get("publishedDate") or ""))
+        if m:
+            anni.append(int(m.group(1)))
+    return {"n": n, "ultimo": max(anni) if anni else None,
+            "totale": int((risposta or {}).get("totalItems", 0)), "fonte": "Google Libri"}
+
+
+def interroga_google(nome):
+    q = {"q": f'inauthor:"{nome}"', "langRestrict": "it", "maxResults": 40, "printType": "books"}
+    if GB_CHIAVE:
+        q["key"] = GB_CHIAVE
+    r = http_json(GB_URL + urllib.parse.urlencode(q), tentativi=3)
+    time.sleep(GB_PAUSA)
+    return conta_google(nome, r)
+
+
 def interroga(nome):
     q = URL + urllib.parse.urlencode({
         "author": nome, "limit": LIMITE, "sort": "editions",
@@ -110,6 +148,37 @@ def candidati(pacchetto):
     return lista[:PER_ANNO]
 
 
+def elabora_google(oggi, pacchetti, interroga_fn=None):
+    """Google Libri, in sequenza (la fonte limita le richieste). Un errore non ferma il resto."""
+    interroga_fn = interroga_fn or interroga_google
+    cache = json.loads(GB_CACHE.read_text(encoding="utf-8")) if GB_CACHE.exists() else {}
+    da_fare = []
+    for _, p in pacchetti:
+        da_fare += [a for a in candidati(p) if not e_recente(cache.get(a["wikidata"]), oggi)]
+    print(f"google libri: {len(da_fare)} autori da controllare", file=sys.stderr)
+    fatti = errori = 0
+    for i, a in enumerate(da_fare):
+        if time.time() > FINE_LAVORO:
+            print("  tempo finito: il resto al prossimo giro", file=sys.stderr)
+            break
+        try:
+            voce = interroga_fn(a["nome"])
+            voce["ts"] = oggi.isoformat()
+            cache[a["wikidata"]] = voce
+            fatti += 1
+        except Exception as e:
+            errori += 1
+            print(f"  {a['nome']}: {e}", file=sys.stderr)
+            if errori >= 8 and fatti < errori:
+                print("  Google Libri non risponde (limite di richieste?): mi fermo, i dati già presi restano.", file=sys.stderr)
+                break
+        if i % 20 == 19:
+            GB_CACHE.write_text(json.dumps(cache, ensure_ascii=False), encoding="utf-8")
+    GB_CACHE.write_text(json.dumps(cache, ensure_ascii=False), encoding="utf-8")
+    print(f"google libri: {fatti} nuovi, {errori} errori, {len(cache)} in cache", file=sys.stderr)
+    return cache
+
+
 def elabora(oggi, interroga_fn=interroga):
     cache = carica_cache()
     file = sorted(DATA_DIR.glob("[0-9][0-9][0-9][0-9].json"))
@@ -138,6 +207,7 @@ def elabora(oggi, interroga_fn=interroga):
             salva_cache(cache)
     if fatti + errori >= 10 and errori > fatti:
         raise RuntimeError("Open Library non risponde come previsto: non scrivo nulla.")
+    gb = elabora_google(oggi, pacchetti)
     ci_sono = 0
     for f, p in pacchetti:
         for a in p["autori"]:
@@ -145,6 +215,9 @@ def elabora(oggi, interroga_fn=interroga):
             if voce:
                 a["traduzioni"] = {k: v for k, v in voce.items()}
                 ci_sono += 1
+            g = gb.get(a["wikidata"])
+            if g:
+                a.setdefault("traduzioni", {})["google_it"] = {k: v for k, v in g.items() if k != "ts"}
         p["traduzioni_aggiornato"] = oggi.isoformat()
         f.write_text(json.dumps(p, ensure_ascii=False, indent=1), encoding="utf-8")
     salva_cache(cache)
