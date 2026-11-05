@@ -120,7 +120,21 @@
    "lingue": [
     "tedesco"
    ],
-   "indice": 99
+   "indice": 99,
+   "traduzioni": {
+    "opere": 65,
+    "con_lingua": 65,
+    "per_lingua": {
+     "it": 1,
+     "en": 40,
+     "es": 3,
+     "fr": 6,
+     "de": 50
+    },
+    "parziale": true,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q231690",
@@ -224,7 +238,21 @@
     "kannada",
     "pāli"
    ],
-   "indice": 100
+   "indice": 100,
+   "traduzioni": {
+    "opere": 99,
+    "con_lingua": 99,
+    "per_lingua": {
+     "it": 0,
+     "en": 79,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": true,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q207036",
@@ -330,7 +358,21 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 99
+   "indice": 99,
+   "traduzioni": {
+    "opere": 90,
+    "con_lingua": 88,
+    "per_lingua": {
+     "it": 1,
+     "en": 87,
+     "es": 7,
+     "fr": 4,
+     "de": 3
+    },
+    "parziale": true,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q483709",
@@ -412,7 +454,21 @@
     "bielorusso",
     "russo"
    ],
-   "indice": 83
+   "indice": 83,
+   "traduzioni": {
+    "opere": 1,
+    "con_lingua": 1,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 1
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q439204",
@@ -500,7 +556,21 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 98
+   "indice": 98,
+   "traduzioni": {
+    "opere": 0,
+    "con_lingua": 0,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": true,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q186561",
@@ -620,7 +690,21 @@
    "lingue": [
     "spagnolo"
    ],
-   "indice": 94
+   "indice": 94,
+   "traduzioni": {
+    "opere": 100,
+    "con_lingua": 100,
+    "per_lingua": {
+     "it": 1,
+     "en": 19,
+     "es": 93,
+     "fr": 0,
+     "de": 1
+    },
+    "parziale": true,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q57277",
@@ -725,7 +809,21 @@
    "lingue": [
     "tedesco"
    ],
-   "indice": 83
+   "indice": 83,
+   "traduzioni": {
+    "opere": 94,
+    "con_lingua": 75,
+    "per_lingua": {
+     "it": 0,
+     "en": 12,
+     "es": 0,
+     "fr": 2,
+     "de": 68
+    },
+    "parziale": true,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q334297",
@@ -840,7 +938,21 @@
     "svizzero tedesco",
     "tedesco svizzero standard"
    ],
-   "indice": 97
+   "indice": 97,
+   "traduzioni": {
+    "opere": 99,
+    "con_lingua": 83,
+    "per_lingua": {
+     "it": 0,
+     "en": 26,
+     "es": 2,
+     "fr": 3,
+     "de": 62
+    },
+    "parziale": true,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q60128",
@@ -959,7 +1071,21 @@
    "lingue": [
     "italiano"
    ],
-   "indice": 89
+   "indice": 89,
+   "traduzioni": {
+    "opere": 100,
+    "con_lingua": 94,
+    "per_lingua": {
+     "it": 62,
+     "en": 27,
+     "es": 11,
+     "fr": 3,
+     "de": 2
+    },
+    "parziale": true,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q161135",
@@ -1018,7 +1144,21 @@
     "russo",
     "yiddish"
    ],
-   "indice": 93
+   "indice": 93,
+   "traduzioni": {
+    "opere": 0,
+    "con_lingua": 0,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q233088",
@@ -1172,7 +1312,21 @@
     "latino",
     "inglese"
    ],
-   "indice": 94
+   "indice": 94,
+   "traduzioni": {
+    "opere": 0,
+    "con_lingua": 0,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": true,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q379595",
@@ -1266,7 +1420,21 @@
     "arabo",
     "turco ottomano"
    ],
-   "indice": 88
+   "indice": 88,
+   "traduzioni": {
+    "opere": 100,
+    "con_lingua": 78,
+    "per_lingua": {
+     "it": 0,
+     "en": 27,
+     "es": 0,
+     "fr": 1,
+     "de": 0
+    },
+    "parziale": true,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q371925",
@@ -1367,7 +1535,21 @@
    "lingue": [
     "italiano"
    ],
-   "indice": 94
+   "indice": 94,
+   "traduzioni": {
+    "opere": 97,
+    "con_lingua": 94,
+    "per_lingua": {
+     "it": 84,
+     "en": 11,
+     "es": 1,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": true,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q311663",
@@ -1448,7 +1630,21 @@
    "lingue": [
     "francese"
    ],
-   "indice": 94
+   "indice": 94,
+   "traduzioni": {
+    "opere": 7,
+    "con_lingua": 7,
+    "per_lingua": {
+     "it": 0,
+     "en": 4,
+     "es": 0,
+     "fr": 4,
+     "de": 1
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q155270",
@@ -1575,7 +1771,21 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 95
+   "indice": 95,
+   "traduzioni": {
+    "opere": 100,
+    "con_lingua": 98,
+    "per_lingua": {
+     "it": 0,
+     "en": 98,
+     "es": 3,
+     "fr": 1,
+     "de": 0
+    },
+    "parziale": true,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q359251",
@@ -1659,7 +1869,21 @@
    "lingue": [
     "azero"
    ],
-   "indice": 76
+   "indice": 76,
+   "traduzioni": {
+    "opere": 0,
+    "con_lingua": 0,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q78877",
@@ -1738,7 +1962,21 @@
     "inglese",
     "serbo"
    ],
-   "indice": 91
+   "indice": 91,
+   "traduzioni": {
+    "opere": 92,
+    "con_lingua": 75,
+    "per_lingua": {
+     "it": 0,
+     "en": 32,
+     "es": 0,
+     "fr": 2,
+     "de": 1
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q500042",
@@ -1823,7 +2061,21 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 90
+   "indice": 90,
+   "traduzioni": {
+    "opere": 99,
+    "con_lingua": 84,
+    "per_lingua": {
+     "it": 0,
+     "en": 75,
+     "es": 4,
+     "fr": 12,
+     "de": 6
+    },
+    "parziale": true,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q2362588",
@@ -1874,7 +2126,21 @@
     "francese",
     "arabo"
    ],
-   "indice": 86
+   "indice": 86,
+   "traduzioni": {
+    "opere": 80,
+    "con_lingua": 79,
+    "per_lingua": {
+     "it": 0,
+     "en": 10,
+     "es": 0,
+     "fr": 1,
+     "de": 1
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q1392550",
@@ -1934,7 +2200,21 @@
     "svedese",
     "estone"
    ],
-   "indice": 66
+   "indice": 66,
+   "traduzioni": {
+    "opere": 20,
+    "con_lingua": 20,
+    "per_lingua": {
+     "it": 0,
+     "en": 2,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q242876",
@@ -2132,7 +2412,21 @@
    "lingue": [
     "tedesco"
    ],
-   "indice": 69
+   "indice": 69,
+   "traduzioni": {
+    "opere": 100,
+    "con_lingua": 91,
+    "per_lingua": {
+     "it": 1,
+     "en": 11,
+     "es": 0,
+     "fr": 0,
+     "de": 81
+    },
+    "parziale": true,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q713017",
@@ -2236,7 +2530,21 @@
    "lingue": [
     "francese"
    ],
-   "indice": 79
+   "indice": 79,
+   "traduzioni": {
+    "opere": 100,
+    "con_lingua": 88,
+    "per_lingua": {
+     "it": 0,
+     "en": 5,
+     "es": 0,
+     "fr": 73,
+     "de": 2
+    },
+    "parziale": true,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q61028",
@@ -2330,7 +2638,21 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 89
+   "indice": 89,
+   "traduzioni": {
+    "opere": 0,
+    "con_lingua": 0,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q220458",
@@ -2447,7 +2769,21 @@
     "turco",
     "francese"
    ],
-   "indice": 78
+   "indice": 78,
+   "traduzioni": {
+    "opere": 15,
+    "con_lingua": 13,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q983356",
@@ -2514,7 +2850,21 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 97
+   "indice": 97,
+   "traduzioni": {
+    "opere": 8,
+    "con_lingua": 8,
+    "per_lingua": {
+     "it": 0,
+     "en": 7,
+     "es": 0,
+     "fr": 2,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q196860",
@@ -2625,7 +2975,21 @@
     "inglese",
     "armeno"
    ],
-   "indice": 87
+   "indice": 87,
+   "traduzioni": {
+    "opere": 60,
+    "con_lingua": 52,
+    "per_lingua": {
+     "it": 0,
+     "en": 51,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": true,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q550391",
@@ -2752,7 +3116,21 @@
    "lingue": [
     "armeno"
    ],
-   "indice": 68
+   "indice": 68,
+   "traduzioni": {
+    "opere": 4,
+    "con_lingua": 4,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q15133288",
@@ -2807,7 +3185,21 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 75
+   "indice": 75,
+   "traduzioni": {
+    "opere": 17,
+    "con_lingua": 14,
+    "per_lingua": {
+     "it": 0,
+     "en": 14,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": true,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q1646239",
@@ -2850,7 +3242,21 @@
    "lingue": [
     "giapponese"
    ],
-   "indice": 77
+   "indice": 77,
+   "traduzioni": {
+    "opere": 67,
+    "con_lingua": 67,
+    "per_lingua": {
+     "it": 0,
+     "en": 5,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q8994469",
@@ -2932,7 +3338,21 @@
    "lingue": [
     "ebraico"
    ],
-   "indice": 58
+   "indice": 58,
+   "traduzioni": {
+    "opere": 60,
+    "con_lingua": 60,
+    "per_lingua": {
+     "it": 0,
+     "en": 2,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q661473",
@@ -3024,7 +3444,21 @@
    "paesi": [
     "Stati Uniti"
    ],
-   "indice": 62
+   "indice": 62,
+   "traduzioni": {
+    "opere": 12,
+    "con_lingua": 11,
+    "per_lingua": {
+     "it": 0,
+     "en": 11,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q164703",
@@ -3120,7 +3554,21 @@
    "lingue": [
     "bengali"
    ],
-   "indice": 90
+   "indice": 90,
+   "traduzioni": {
+    "opere": 39,
+    "con_lingua": 39,
+    "per_lingua": {
+     "it": 0,
+     "en": 10,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q2745779",
@@ -3162,7 +3610,21 @@
    "lingue": [
     "francese"
    ],
-   "indice": 89
+   "indice": 89,
+   "traduzioni": {
+    "opere": 71,
+    "con_lingua": 71,
+    "per_lingua": {
+     "it": 0,
+     "en": 6,
+     "es": 0,
+     "fr": 66,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q8563904",
@@ -3293,7 +3755,21 @@
    "lingue": [
     "ungherese"
    ],
-   "indice": 57
+   "indice": 57,
+   "traduzioni": {
+    "opere": 0,
+    "con_lingua": 0,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q3346493",
@@ -3409,7 +3885,21 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 92
+   "indice": 92,
+   "traduzioni": {
+    "opere": 24,
+    "con_lingua": 21,
+    "per_lingua": {
+     "it": 0,
+     "en": 20,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q449054",
@@ -3605,7 +4095,21 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 84
+   "indice": 84,
+   "traduzioni": {
+    "opere": 92,
+    "con_lingua": 79,
+    "per_lingua": {
+     "it": 0,
+     "en": 77,
+     "es": 0,
+     "fr": 3,
+     "de": 1
+    },
+    "parziale": true,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q69447",
@@ -3666,7 +4170,21 @@
    "lingue": [
     "tedesco"
    ],
-   "indice": 90
+   "indice": 90,
+   "traduzioni": {
+    "opere": 0,
+    "con_lingua": 0,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q1940929",
@@ -3708,7 +4226,21 @@
    "lingue": [
     "giapponese"
    ],
-   "indice": 82
+   "indice": 82,
+   "traduzioni": {
+    "opere": 17,
+    "con_lingua": 17,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q923614",
@@ -3754,7 +4286,21 @@
    "lingue": [
     "romeno"
    ],
-   "indice": 84
+   "indice": 84,
+   "traduzioni": {
+    "opere": 12,
+    "con_lingua": 11,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 1,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q71864",
@@ -3874,7 +4420,21 @@
     "francese",
     "spagnolo"
    ],
-   "indice": 68
+   "indice": 68,
+   "traduzioni": {
+    "opere": 26,
+    "con_lingua": 25,
+    "per_lingua": {
+     "it": 0,
+     "en": 7,
+     "es": 17,
+     "fr": 7,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q3084964",
@@ -4003,7 +4563,21 @@
    "lingue": [
     "italiano"
    ],
-   "indice": 82
+   "indice": 82,
+   "traduzioni": {
+    "opere": 80,
+    "con_lingua": 80,
+    "per_lingua": {
+     "it": 78,
+     "en": 3,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q725669",
@@ -4068,7 +4642,21 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 93
+   "indice": 93,
+   "traduzioni": {
+    "opere": 4,
+    "con_lingua": 4,
+    "per_lingua": {
+     "it": 0,
+     "en": 4,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": true,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q517360",
@@ -4143,7 +4731,21 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 85
+   "indice": 85,
+   "traduzioni": {
+    "opere": 18,
+    "con_lingua": 15,
+    "per_lingua": {
+     "it": 0,
+     "en": 15,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q8040107",
@@ -4304,7 +4906,21 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 68
+   "indice": 68,
+   "traduzioni": {
+    "opere": 1,
+    "con_lingua": 1,
+    "per_lingua": {
+     "it": 0,
+     "en": 1,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q6965778",
@@ -4435,7 +5051,21 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 77
+   "indice": 77,
+   "traduzioni": {
+    "opere": 100,
+    "con_lingua": 93,
+    "per_lingua": {
+     "it": 0,
+     "en": 92,
+     "es": 0,
+     "fr": 0,
+     "de": 1
+    },
+    "parziale": true,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q948713",
@@ -4499,7 +5129,21 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 82
+   "indice": 82,
+   "traduzioni": {
+    "opere": 27,
+    "con_lingua": 24,
+    "per_lingua": {
+     "it": 0,
+     "en": 24,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q4428989",
@@ -4827,7 +5471,21 @@
     "polacco",
     "yiddish"
    ],
-   "indice": 61
+   "indice": 61,
+   "traduzioni": {
+    "opere": 0,
+    "con_lingua": 0,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q625445",
@@ -5052,7 +5710,21 @@
     "francese",
     "inglese"
    ],
-   "indice": 84
+   "indice": 84,
+   "traduzioni": {
+    "opere": 0,
+    "con_lingua": 0,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": true,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q62577905",
@@ -5211,7 +5883,21 @@
    "lingue": [
     "oriya"
    ],
-   "indice": 85
+   "indice": 85,
+   "traduzioni": {
+    "opere": 0,
+    "con_lingua": 0,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q71597",
@@ -5303,7 +5989,21 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 74
+   "indice": 74,
+   "traduzioni": {
+    "opere": 10,
+    "con_lingua": 8,
+    "per_lingua": {
+     "it": 0,
+     "en": 7,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q6232486",
@@ -5445,7 +6145,21 @@
    "lingue": [
     "danese"
    ],
-   "indice": 22
+   "indice": 22,
+   "traduzioni": {
+    "opere": 26,
+    "con_lingua": 26,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 1
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q7155572",
@@ -5525,7 +6239,21 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 82
+   "indice": 82,
+   "traduzioni": {
+    "opere": 98,
+    "con_lingua": 93,
+    "per_lingua": {
+     "it": 0,
+     "en": 93,
+     "es": 0,
+     "fr": 0,
+     "de": 2
+    },
+    "parziale": true,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q1909106",
@@ -5763,7 +6491,21 @@
    "lingue": [
     "italiano"
    ],
-   "indice": 70
+   "indice": 70,
+   "traduzioni": {
+    "opere": 16,
+    "con_lingua": 16,
+    "per_lingua": {
+     "it": 15,
+     "en": 1,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q1285184",
@@ -5812,7 +6554,21 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 43
+   "indice": 43,
+   "traduzioni": {
+    "opere": 4,
+    "con_lingua": 4,
+    "per_lingua": {
+     "it": 0,
+     "en": 4,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q11285682",
@@ -5872,7 +6628,21 @@
    "lingue": [
     "tedesco"
    ],
-   "indice": 57
+   "indice": 57,
+   "traduzioni": {
+    "opere": 27,
+    "con_lingua": 27,
+    "per_lingua": {
+     "it": 0,
+     "en": 5,
+     "es": 0,
+     "fr": 0,
+     "de": 22
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q12766277",
@@ -5983,7 +6753,21 @@
    "lingue": [
     "norvegese"
    ],
-   "indice": 25
+   "indice": 25,
+   "traduzioni": {
+    "opere": 1,
+    "con_lingua": 1,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q7063104",
@@ -6138,7 +6922,21 @@
     "spagnolo",
     "catalano"
    ],
-   "indice": 52
+   "indice": 52,
+   "traduzioni": {
+    "opere": 34,
+    "con_lingua": 32,
+    "per_lingua": {
+     "it": 0,
+     "en": 2,
+     "es": 5,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q3809592",
@@ -6560,7 +7358,21 @@
     "italiano",
     "sloveno"
    ],
-   "indice": 72
+   "indice": 72,
+   "traduzioni": {
+    "opere": 64,
+    "con_lingua": 63,
+    "per_lingua": {
+     "it": 59,
+     "en": 2,
+     "es": 1,
+     "fr": 1,
+     "de": 1
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q694483",
@@ -6650,7 +7462,21 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 57
+   "indice": 57,
+   "traduzioni": {
+    "opere": 8,
+    "con_lingua": 5,
+    "per_lingua": {
+     "it": 0,
+     "en": 5,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q5045124",
@@ -6721,7 +7547,21 @@
     "russo",
     "ucraino"
    ],
-   "indice": 77
+   "indice": 77,
+   "traduzioni": {
+    "opere": 2,
+    "con_lingua": 2,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q5210092",
@@ -6801,7 +7641,21 @@
    "lingue": [
     "bengali"
    ],
-   "indice": 76
+   "indice": 76,
+   "traduzioni": {
+    "opere": 0,
+    "con_lingua": 0,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q1336951",
@@ -6952,7 +7806,21 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 42
+   "indice": 42,
+   "traduzioni": {
+    "opere": 3,
+    "con_lingua": 3,
+    "per_lingua": {
+     "it": 0,
+     "en": 3,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q1442266",
@@ -7090,7 +7958,21 @@
    "paesi": [
     "Stati Uniti"
    ],
-   "indice": 60
+   "indice": 60,
+   "traduzioni": {
+    "opere": 37,
+    "con_lingua": 31,
+    "per_lingua": {
+     "it": 0,
+     "en": 30,
+     "es": 0,
+     "fr": 2,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q3130777",
@@ -7443,7 +8325,21 @@
    "paesi": [
     "Stati Uniti"
    ],
-   "indice": 49
+   "indice": 49,
+   "traduzioni": {
+    "opere": 30,
+    "con_lingua": 26,
+    "per_lingua": {
+     "it": 1,
+     "en": 24,
+     "es": 0,
+     "fr": 0,
+     "de": 2
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q3381012",
@@ -7539,7 +8435,21 @@
     "inglese",
     "gallese"
    ],
-   "indice": 64
+   "indice": 64,
+   "traduzioni": {
+    "opere": 7,
+    "con_lingua": 6,
+    "per_lingua": {
+     "it": 0,
+     "en": 1,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q2947300",
@@ -7665,7 +8575,21 @@
    "lingue": [
     "bengali"
    ],
-   "indice": 44
+   "indice": 44,
+   "traduzioni": {
+    "opere": 2,
+    "con_lingua": 2,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q1411055",
@@ -7970,7 +8894,21 @@
    "lingue": [
     "marathi"
    ],
-   "indice": 68
+   "indice": 68,
+   "traduzioni": {
+    "opere": 0,
+    "con_lingua": 0,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q64514407",
@@ -8094,7 +9032,21 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 53
+   "indice": 53,
+   "traduzioni": {
+    "opere": 34,
+    "con_lingua": 31,
+    "per_lingua": {
+     "it": 0,
+     "en": 30,
+     "es": 1,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q20650922",
@@ -8441,7 +9393,21 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 67
+   "indice": 67,
+   "traduzioni": {
+    "opere": 0,
+    "con_lingua": 0,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q5920200",
@@ -8694,7 +9660,21 @@
    "lingue": [
     "tedesco"
    ],
-   "indice": 71
+   "indice": 71,
+   "traduzioni": {
+    "opere": 2,
+    "con_lingua": 2,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 2
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q787838",
@@ -8743,7 +9723,21 @@
    "paesi": [
     "Svezia"
    ],
-   "indice": 29
+   "indice": 29,
+   "traduzioni": {
+    "opere": 0,
+    "con_lingua": 0,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q25644732",
@@ -8824,7 +9818,21 @@
    "paesi": [
     "Stati Uniti"
    ],
-   "indice": 66
+   "indice": 66,
+   "traduzioni": {
+    "opere": 13,
+    "con_lingua": 10,
+    "per_lingua": {
+     "it": 0,
+     "en": 10,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q3277794",
@@ -8863,7 +9871,21 @@
    "lingue": [
     "arabo"
    ],
-   "indice": 71
+   "indice": 71,
+   "traduzioni": {
+    "opere": 0,
+    "con_lingua": 0,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q16219386",
@@ -9003,7 +10025,21 @@
     "turco",
     "arabo"
    ],
-   "indice": 71
+   "indice": 71,
+   "traduzioni": {
+    "opere": 27,
+    "con_lingua": 19,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q6917107",
@@ -9164,7 +10200,21 @@
    "lingue": [
     "spagnolo"
    ],
-   "indice": 25
+   "indice": 25,
+   "traduzioni": {
+    "opere": 28,
+    "con_lingua": 27,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 27,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q24287799",
@@ -9538,7 +10588,21 @@
     "licenza": "Public domain",
     "autore": "Photographer unattributed"
    },
-   "indice": 46
+   "indice": 46,
+   "traduzioni": {
+    "opere": 0,
+    "con_lingua": 0,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q4747962",
@@ -9862,7 +10926,21 @@
    "lingue": [
     "tedesco"
    ],
-   "indice": 62
+   "indice": 62,
+   "traduzioni": {
+    "opere": 3,
+    "con_lingua": 3,
+    "per_lingua": {
+     "it": 0,
+     "en": 1,
+     "es": 2,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q117069690",
@@ -9956,7 +11034,21 @@
    "lingue": [
     "francese"
    ],
-   "indice": 62
+   "indice": 62,
+   "traduzioni": {
+    "opere": 7,
+    "con_lingua": 7,
+    "per_lingua": {
+     "it": 0,
+     "en": 3,
+     "es": 0,
+     "fr": 3,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q967872",
@@ -10082,7 +11174,21 @@
    "paesi": [
     "Regno Unito di Gran Bretagna e Irlanda"
    ],
-   "indice": 29
+   "indice": 29,
+   "traduzioni": {
+    "opere": 4,
+    "con_lingua": 3,
+    "per_lingua": {
+     "it": 0,
+     "en": 3,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q11857801",
@@ -10178,7 +11284,21 @@
    "paesi": [
     "Regno Unito di Gran Bretagna e Irlanda"
    ],
-   "indice": 42
+   "indice": 42,
+   "traduzioni": {
+    "opere": 1,
+    "con_lingua": 1,
+    "per_lingua": {
+     "it": 0,
+     "en": 1,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q135110495",
@@ -10285,7 +11405,21 @@
    "paesi": [
     "Stati Uniti"
    ],
-   "indice": 64
+   "indice": 64,
+   "traduzioni": {
+    "opere": 52,
+    "con_lingua": 48,
+    "per_lingua": {
+     "it": 0,
+     "en": 48,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q40014175",
@@ -10340,7 +11474,21 @@
    "lingue": [
     "tedesco"
    ],
-   "indice": 21
+   "indice": 21,
+   "traduzioni": {
+    "opere": 5,
+    "con_lingua": 5,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 5
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q5657316",
@@ -10541,7 +11689,21 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 49
+   "indice": 49,
+   "traduzioni": {
+    "opere": 4,
+    "con_lingua": 3,
+    "per_lingua": {
+     "it": 0,
+     "en": 3,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q46535118",
@@ -10723,7 +11885,21 @@
     "licenza": "Public domain",
     "autore": "Daniel Rees"
    },
-   "indice": 44
+   "indice": 44,
+   "traduzioni": {
+    "opere": 0,
+    "con_lingua": 0,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q13129341",
@@ -10776,7 +11952,21 @@
    ],
    "n_opere": 5,
    "visite_12m": 361,
-   "indice": 33
+   "indice": 33,
+   "traduzioni": {
+    "opere": 1,
+    "con_lingua": 1,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": true,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q20755702",
@@ -10826,7 +12016,21 @@
    "lingue": [
     "ceco"
    ],
-   "indice": 62
+   "indice": 62,
+   "traduzioni": {
+    "opere": 1,
+    "con_lingua": 1,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q41269642",
@@ -10883,7 +12087,21 @@
     "licenza": "Public domain",
     "autore": "May Moore"
    },
-   "indice": 45
+   "indice": 45,
+   "traduzioni": {
+    "opere": 3,
+    "con_lingua": 3,
+    "per_lingua": {
+     "it": 0,
+     "en": 3,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q6547722",
@@ -10925,7 +12143,21 @@
     "licenza": "Public domain",
     "autore": "Unknown authorUnknown author"
    },
-   "indice": 29
+   "indice": 29,
+   "traduzioni": {
+    "opere": 1,
+    "con_lingua": 0,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q65409004",
@@ -11303,7 +12535,21 @@
    "lingue": [
     "francese"
    ],
-   "indice": 62
+   "indice": 62,
+   "traduzioni": {
+    "opere": 13,
+    "con_lingua": 13,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 12,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q12901739",
@@ -11375,7 +12621,21 @@
    "lingue": [
     "catalano"
    ],
-   "indice": 62
+   "indice": 62,
+   "traduzioni": {
+    "opere": 0,
+    "con_lingua": 0,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q21536457",
@@ -11501,7 +12761,21 @@
    "lingue": [
     "francese"
    ],
-   "indice": 62
+   "indice": 62,
+   "traduzioni": {
+    "opere": 29,
+    "con_lingua": 27,
+    "per_lingua": {
+     "it": 0,
+     "en": 1,
+     "es": 0,
+     "fr": 27,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q7382933",
@@ -11897,7 +13171,21 @@
    "paesi": [
     "Stati Uniti"
    ],
-   "indice": 67
+   "indice": 67,
+   "traduzioni": {
+    "opere": 31,
+    "con_lingua": 24,
+    "per_lingua": {
+     "it": 0,
+     "en": 24,
+     "es": 0,
+     "fr": 1,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q8048528",
@@ -12468,7 +13756,21 @@
    "lingue": [
     "oriya"
    ],
-   "indice": 53
+   "indice": 53,
+   "traduzioni": {
+    "opere": 0,
+    "con_lingua": 0,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q111459370",
@@ -13112,7 +14414,21 @@
    "paesi": [
     "Cecoslovacchia"
    ],
-   "indice": 48
+   "indice": 48,
+   "traduzioni": {
+    "opere": 0,
+    "con_lingua": 0,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q16938125",
@@ -13169,7 +14485,21 @@
    "lingue": [
     "giapponese"
    ],
-   "indice": 48
+   "indice": 48,
+   "traduzioni": {
+    "opere": 26,
+    "con_lingua": 26,
+    "per_lingua": {
+     "it": 0,
+     "en": 1,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q5534825",
@@ -13314,7 +14644,21 @@
    "lingue": [
     "occitano"
    ],
-   "indice": 48
+   "indice": 48,
+   "traduzioni": {
+    "opere": 0,
+    "con_lingua": 0,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q1515033",
@@ -13565,7 +14909,21 @@
    "lingue": [
     "tedesco"
    ],
-   "indice": 48
+   "indice": 48,
+   "traduzioni": {
+    "opere": 11,
+    "con_lingua": 11,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 11
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q5897756",
@@ -13785,7 +15143,21 @@
    "paesi": [
     "Stati Uniti"
    ],
-   "indice": 16
+   "indice": 16,
+   "traduzioni": {
+    "opere": 2,
+    "con_lingua": 2,
+    "per_lingua": {
+     "it": 0,
+     "en": 2,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q21857336",
@@ -14739,7 +16111,21 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 24
+   "indice": 24,
+   "traduzioni": {
+    "opere": 0,
+    "con_lingua": 0,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q4532329",
@@ -14858,7 +16244,21 @@
    "lingue": [
     "francese"
    ],
-   "indice": 48
+   "indice": 48,
+   "traduzioni": {
+    "opere": 5,
+    "con_lingua": 5,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 5,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q15839758",
@@ -14934,7 +16334,21 @@
     "dizionario di una lingua specifica",
     "terminological dictionary"
    ],
-   "indice": 48
+   "indice": 48,
+   "traduzioni": {
+    "opere": 2,
+    "con_lingua": 2,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q20731647",
@@ -15740,7 +17154,21 @@
    "lingue": [
     "francese"
    ],
-   "indice": 28
+   "indice": 28,
+   "traduzioni": {
+    "opere": 27,
+    "con_lingua": 26,
+    "per_lingua": {
+     "it": 0,
+     "en": 1,
+     "es": 0,
+     "fr": 24,
+     "de": 1
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q9321600",
@@ -15993,7 +17421,21 @@
    "lingue": [
     "francese"
    ],
-   "indice": 28
+   "indice": 28,
+   "traduzioni": {
+    "opere": 14,
+    "con_lingua": 14,
+    "per_lingua": {
+     "it": 0,
+     "en": 3,
+     "es": 0,
+     "fr": 11,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q86459527",
@@ -17757,7 +19199,21 @@
     "Cecoslovacchia",
     "Austria-Ungheria"
    ],
-   "indice": 28
+   "indice": 28,
+   "traduzioni": {
+    "opere": 0,
+    "con_lingua": 0,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q16438953",
@@ -18126,7 +19582,21 @@
    ],
    "n_opere": 1,
    "visite_12m": 157,
-   "indice": 10
+   "indice": 10,
+   "traduzioni": {
+    "opere": 2,
+    "con_lingua": 2,
+    "per_lingua": {
+     "it": 0,
+     "en": 1,
+     "es": 0,
+     "fr": 1,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q55674670",
@@ -18652,7 +20122,21 @@
     }
    ],
    "n_opere": 3,
-   "indice": 28
+   "indice": 28,
+   "traduzioni": {
+    "opere": 4,
+    "con_lingua": 4,
+    "per_lingua": {
+     "it": 0,
+     "en": 4,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": true,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q17380533",
@@ -19399,7 +20883,21 @@
    "lingue": [
     "malayalam"
    ],
-   "indice": 40
+   "indice": 40,
+   "traduzioni": {
+    "opere": 0,
+    "con_lingua": 0,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q12027912",
@@ -19638,7 +21136,21 @@
     }
    ],
    "n_opere": 1,
-   "indice": 28
+   "indice": 28,
+   "traduzioni": {
+    "opere": 5,
+    "con_lingua": 5,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 5,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q12032968",
@@ -20640,7 +22152,21 @@
    "lingue": [
     "francese"
    ],
-   "indice": 28
+   "indice": 28,
+   "traduzioni": {
+    "opere": 2,
+    "con_lingua": 2,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 2,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q3384413",
@@ -20878,7 +22404,21 @@
     "inglese",
     "gallese"
    ],
-   "indice": 28
+   "indice": 28,
+   "traduzioni": {
+    "opere": 3,
+    "con_lingua": 3,
+    "per_lingua": {
+     "it": 0,
+     "en": 3,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": true,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q20719667",
@@ -21318,7 +22858,21 @@
    "lingue": [
     "francese"
    ],
-   "indice": 28
+   "indice": 28,
+   "traduzioni": {
+    "opere": 8,
+    "con_lingua": 8,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 8,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q20513601",
@@ -22115,7 +23669,21 @@
    "paesi": [
     "Cecoslovacchia"
    ],
-   "indice": 8
+   "indice": 8,
+   "traduzioni": {
+    "opere": 2,
+    "con_lingua": 2,
+    "per_lingua": {
+     "it": 0,
+     "en": 1,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q61045238",
@@ -22926,7 +24494,21 @@
     }
    ],
    "n_opere": 1,
-   "indice": 8
+   "indice": 8,
+   "traduzioni": {
+    "opere": 0,
+    "con_lingua": 0,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q120479798",
@@ -22991,7 +24573,21 @@
    "paesi": [
     "Cecoslovacchia"
    ],
-   "indice": 8
+   "indice": 8,
+   "traduzioni": {
+    "opere": 7,
+    "con_lingua": 7,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q21608721",
@@ -23144,7 +24740,21 @@
    "lingue": [
     "ceco"
    ],
-   "indice": 8
+   "indice": 8,
+   "traduzioni": {
+    "opere": 4,
+    "con_lingua": 4,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q94830109",
@@ -24624,7 +26234,21 @@
     }
    ],
    "n_opere": 2,
-   "indice": 8
+   "indice": 8,
+   "traduzioni": {
+    "opere": 16,
+    "con_lingua": 16,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q23202664",
@@ -25289,7 +26913,21 @@
    "generi": [
     "dizionario bilingue"
    ],
-   "indice": 8
+   "indice": 8,
+   "traduzioni": {
+    "opere": 4,
+    "con_lingua": 4,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q94405664",
@@ -25317,7 +26955,21 @@
    "paesi": [
     "Canada"
    ],
-   "indice": 8
+   "indice": 8,
+   "traduzioni": {
+    "opere": 2,
+    "con_lingua": 2,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 2,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q141136975",
@@ -26147,7 +27799,21 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 8
+   "indice": 8,
+   "traduzioni": {
+    "opere": 0,
+    "con_lingua": 0,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q114232968",
@@ -26214,7 +27880,21 @@
     "francese",
     "ceco"
    ],
-   "indice": 8
+   "indice": 8,
+   "traduzioni": {
+    "opere": 2,
+    "con_lingua": 2,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q95471631",
@@ -26240,7 +27920,21 @@
     }
    ],
    "n_opere": 1,
-   "indice": 8
+   "indice": 8,
+   "traduzioni": {
+    "opere": 0,
+    "con_lingua": 0,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q115966837",
@@ -26937,5 +28631,6 @@
   }
  ],
  "arricchito": "2026-11-05",
- "indice_formula": "60% visite Wikipedia (12 mesi), 20% pagine Wikimedia, 20% download Project Gutenberg"
+ "indice_formula": "60% visite Wikipedia (12 mesi), 20% pagine Wikimedia, 20% download Project Gutenberg",
+ "traduzioni_aggiornato": "2026-11-05"
 }

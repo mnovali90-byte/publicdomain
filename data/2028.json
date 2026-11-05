@@ -98,7 +98,21 @@
    "lingue": [
     "spagnolo"
    ],
-   "indice": 97
+   "indice": 97,
+   "traduzioni": {
+    "opere": 100,
+    "con_lingua": 95,
+    "per_lingua": {
+     "it": 4,
+     "en": 23,
+     "es": 75,
+     "fr": 4,
+     "de": 0
+    },
+    "parziale": true,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q16390",
@@ -215,7 +229,21 @@
     "russo",
     "greco antico"
    ],
-   "indice": 99
+   "indice": 99,
+   "traduzioni": {
+    "opere": 96,
+    "con_lingua": 72,
+    "per_lingua": {
+     "it": 0,
+     "en": 45,
+     "es": 12,
+     "fr": 11,
+     "de": 5
+    },
+    "parziale": true,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q337276",
@@ -304,7 +332,21 @@
    "lingue": [
     "francese"
    ],
-   "indice": 94
+   "indice": 95,
+   "traduzioni": {
+    "opere": 100,
+    "con_lingua": 96,
+    "per_lingua": {
+     "it": 0,
+     "en": 12,
+     "es": 2,
+     "fr": 85,
+     "de": 0
+    },
+    "parziale": true,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q84412",
@@ -412,7 +454,21 @@
     "inglese",
     "russo"
    ],
-   "indice": 97
+   "indice": 98,
+   "traduzioni": {
+    "opere": 81,
+    "con_lingua": 61,
+    "per_lingua": {
+     "it": 30,
+     "en": 20,
+     "es": 9,
+     "fr": 9,
+     "de": 2
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q57389",
@@ -521,7 +577,21 @@
    "lingue": [
     "tedesco"
    ],
-   "indice": 88
+   "indice": 89,
+   "traduzioni": {
+    "opere": 89,
+    "con_lingua": 80,
+    "per_lingua": {
+     "it": 1,
+     "en": 24,
+     "es": 6,
+     "fr": 5,
+     "de": 68
+    },
+    "parziale": true,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q237514",
@@ -638,7 +708,21 @@
     "inglese americano",
     "inglese"
    ],
-   "indice": 99
+   "indice": 100,
+   "traduzioni": {
+    "opere": 97,
+    "con_lingua": 86,
+    "per_lingua": {
+     "it": 0,
+     "en": 86,
+     "es": 9,
+     "fr": 8,
+     "de": 5
+    },
+    "parziale": true,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q72911",
@@ -777,7 +861,21 @@
     "italiano",
     "inglese"
    ],
-   "indice": 99
+   "indice": 99,
+   "traduzioni": {
+    "opere": 15,
+    "con_lingua": 15,
+    "per_lingua": {
+     "it": 2,
+     "en": 15,
+     "es": 4,
+     "fr": 9,
+     "de": 14
+    },
+    "parziale": true,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q78508",
@@ -897,7 +995,21 @@
    "lingue": [
     "italiano"
    ],
-   "indice": 98
+   "indice": 98,
+   "traduzioni": {
+    "opere": 99,
+    "con_lingua": 78,
+    "per_lingua": {
+     "it": 58,
+     "en": 17,
+     "es": 1,
+     "fr": 10,
+     "de": 2
+    },
+    "parziale": true,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q154083",
@@ -994,7 +1106,21 @@
    "lingue": [
     "ceco"
    ],
-   "indice": 89
+   "indice": 90,
+   "traduzioni": {
+    "opere": 31,
+    "con_lingua": 31,
+    "per_lingua": {
+     "it": 0,
+     "en": 1,
+     "es": 0,
+     "fr": 0,
+     "de": 1
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q357120",
@@ -1067,7 +1193,21 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 95
+   "indice": 96,
+   "traduzioni": {
+    "opere": 98,
+    "con_lingua": 85,
+    "per_lingua": {
+     "it": 6,
+     "en": 61,
+     "es": 13,
+     "fr": 12,
+     "de": 7
+    },
+    "parziale": true,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q451312",
@@ -1147,7 +1287,21 @@
     "italiano",
     "sloveno"
    ],
-   "indice": 96
+   "indice": 97,
+   "traduzioni": {
+    "opere": 100,
+    "con_lingua": 92,
+    "per_lingua": {
+     "it": 69,
+     "en": 15,
+     "es": 2,
+     "fr": 6,
+     "de": 1
+    },
+    "parziale": true,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q294321",
@@ -1196,7 +1350,21 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 84
+   "indice": 86,
+   "traduzioni": {
+    "opere": 40,
+    "con_lingua": 39,
+    "per_lingua": {
+     "it": 0,
+     "en": 39,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": true,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q55410",
@@ -1291,7 +1459,21 @@
     "spagnolo",
     "inglese"
    ],
-   "indice": 81
+   "indice": 84,
+   "traduzioni": {
+    "opere": 99,
+    "con_lingua": 86,
+    "per_lingua": {
+     "it": 0,
+     "en": 14,
+     "es": 0,
+     "fr": 72,
+     "de": 0
+    },
+    "parziale": true,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q254988",
@@ -1326,7 +1508,7 @@
    "lingue": [
     "armeno"
    ],
-   "indice": 79
+   "indice": 82
   },
   {
    "wikidata": "Q57603",
@@ -1457,7 +1639,21 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 96
+   "indice": 97,
+   "traduzioni": {
+    "opere": 0,
+    "con_lingua": 0,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q369608",
@@ -1505,7 +1701,21 @@
    "lingue": [
     "cinese"
    ],
-   "indice": 92
+   "indice": 93,
+   "traduzioni": {
+    "opere": 100,
+    "con_lingua": 99,
+    "per_lingua": {
+     "it": 0,
+     "en": 22,
+     "es": 0,
+     "fr": 1,
+     "de": 6
+    },
+    "parziale": true,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q385288",
@@ -1585,7 +1795,21 @@
     "russo",
     "estone"
    ],
-   "indice": 50
+   "indice": 54,
+   "traduzioni": {
+    "opere": 8,
+    "con_lingua": 8,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q93450",
@@ -1691,7 +1915,21 @@
    "lingue": [
     "tedesco"
    ],
-   "indice": 78
+   "indice": 81,
+   "traduzioni": {
+    "opere": 100,
+    "con_lingua": 77,
+    "per_lingua": {
+     "it": 0,
+     "en": 26,
+     "es": 5,
+     "fr": 11,
+     "de": 37
+    },
+    "parziale": true,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q58830",
@@ -1803,7 +2041,21 @@
     "inglese",
     "ebraico"
    ],
-   "indice": 88
+   "indice": 91,
+   "traduzioni": {
+    "opere": 100,
+    "con_lingua": 93,
+    "per_lingua": {
+     "it": 0,
+     "en": 36,
+     "es": 1,
+     "fr": 1,
+     "de": 10
+    },
+    "parziale": true,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q780102",
@@ -1897,7 +2149,21 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 82
+   "indice": 84,
+   "traduzioni": {
+    "opere": 75,
+    "con_lingua": 73,
+    "per_lingua": {
+     "it": 1,
+     "en": 73,
+     "es": 0,
+     "fr": 3,
+     "de": 0
+    },
+    "parziale": true,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q2341186",
@@ -1945,7 +2211,7 @@
    "lingue": [
     "polacco"
    ],
-   "indice": 76
+   "indice": 80
   },
   {
    "wikidata": "Q291016",
@@ -1998,7 +2264,21 @@
    "lingue": [
     "croato"
    ],
-   "indice": 81
+   "indice": 85,
+   "traduzioni": {
+    "opere": 25,
+    "con_lingua": 23,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q453602",
@@ -2108,7 +2388,21 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 90
+   "indice": 92,
+   "traduzioni": {
+    "opere": 74,
+    "con_lingua": 74,
+    "per_lingua": {
+     "it": 1,
+     "en": 74,
+     "es": 3,
+     "fr": 0,
+     "de": 1
+    },
+    "parziale": true,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q2312843",
@@ -2186,7 +2480,21 @@
    "lingue": [
     "arabo"
    ],
-   "indice": 80
+   "indice": 83,
+   "traduzioni": {
+    "opere": 0,
+    "con_lingua": 0,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q2295334",
@@ -2227,7 +2535,21 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 84
+   "indice": 87,
+   "traduzioni": {
+    "opere": 24,
+    "con_lingua": 23,
+    "per_lingua": {
+     "it": 0,
+     "en": 23,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q126783",
@@ -2262,7 +2584,7 @@
    "lingue": [
     "persiano"
    ],
-   "indice": 72
+   "indice": 76
   },
   {
    "wikidata": "Q503276",
@@ -2306,7 +2628,7 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 96
+   "indice": 97
   },
   {
    "wikidata": "Q453472",
@@ -2356,7 +2678,7 @@
    "lingue": [
     "russo"
    ],
-   "indice": 85
+   "indice": 88
   },
   {
    "wikidata": "Q1340503",
@@ -2420,7 +2742,21 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 85
+   "indice": 88,
+   "traduzioni": {
+    "opere": 51,
+    "con_lingua": 39,
+    "per_lingua": {
+     "it": 0,
+     "en": 39,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q539738",
@@ -2489,7 +2825,7 @@
    "lingue": [
     "russo"
    ],
-   "indice": 74
+   "indice": 78
   },
   {
    "wikidata": "Q55453",
@@ -2526,7 +2862,7 @@
     "spagnolo",
     "inglese"
    ],
-   "indice": 80
+   "indice": 84
   },
   {
    "wikidata": "Q716579",
@@ -2583,7 +2919,21 @@
     "inglese",
     "ungherese"
    ],
-   "indice": 69
+   "indice": 74,
+   "traduzioni": {
+    "opere": 43,
+    "con_lingua": 42,
+    "per_lingua": {
+     "it": 0,
+     "en": 1,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q945641",
@@ -2690,7 +3040,21 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 86
+   "indice": 89,
+   "traduzioni": {
+    "opere": 91,
+    "con_lingua": 83,
+    "per_lingua": {
+     "it": 0,
+     "en": 83,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": true,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q3087522",
@@ -2761,7 +3125,21 @@
    "lingue": [
     "francese"
    ],
-   "indice": 65
+   "indice": 70,
+   "traduzioni": {
+    "opere": 92,
+    "con_lingua": 87,
+    "per_lingua": {
+     "it": 0,
+     "en": 27,
+     "es": 0,
+     "fr": 60,
+     "de": 1
+    },
+    "parziale": true,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q2987397",
@@ -2808,7 +3186,21 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 91
+   "indice": 93,
+   "traduzioni": {
+    "opere": 28,
+    "con_lingua": 27,
+    "per_lingua": {
+     "it": 0,
+     "en": 27,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": true,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q213592",
@@ -2853,7 +3245,21 @@
     "tedesco",
     "ceco"
    ],
-   "indice": 72
+   "indice": 77,
+   "traduzioni": {
+    "opere": 10,
+    "con_lingua": 10,
+    "per_lingua": {
+     "it": 1,
+     "en": 2,
+     "es": 0,
+     "fr": 0,
+     "de": 7
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q2160344",
@@ -2897,7 +3303,21 @@
     "italiano",
     "veneto"
    ],
-   "indice": 71
+   "indice": 75,
+   "traduzioni": {
+    "opere": 7,
+    "con_lingua": 5,
+    "per_lingua": {
+     "it": 5,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q8063471",
@@ -2943,7 +3363,7 @@
    "lingue": [
     "polacco"
    ],
-   "indice": 60
+   "indice": 65
   },
   {
    "wikidata": "Q459293",
@@ -2979,7 +3399,21 @@
    "lingue": [
     "spagnolo"
    ],
-   "indice": 75
+   "indice": 79,
+   "traduzioni": {
+    "opere": 14,
+    "con_lingua": 14,
+    "per_lingua": {
+     "it": 1,
+     "en": 10,
+     "es": 11,
+     "fr": 2,
+     "de": 1
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q645074",
@@ -3033,7 +3467,21 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 88
+   "indice": 91,
+   "traduzioni": {
+    "opere": 94,
+    "con_lingua": 75,
+    "per_lingua": {
+     "it": 0,
+     "en": 74,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q2510467",
@@ -3069,7 +3517,7 @@
    "lingue": [
     "cinese"
    ],
-   "indice": 77
+   "indice": 81
   },
   {
    "wikidata": "Q543360",
@@ -3138,7 +3586,21 @@
    "lingue": [
     "romeno"
    ],
-   "indice": 80
+   "indice": 84,
+   "traduzioni": {
+    "opere": 43,
+    "con_lingua": 38,
+    "per_lingua": {
+     "it": 0,
+     "en": 5,
+     "es": 0,
+     "fr": 3,
+     "de": 1
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q301391",
@@ -3192,7 +3654,21 @@
    "lingue": [
     "romeno"
    ],
-   "indice": 82
+   "indice": 86,
+   "traduzioni": {
+    "opere": 24,
+    "con_lingua": 23,
+    "per_lingua": {
+     "it": 1,
+     "en": 2,
+     "es": 1,
+     "fr": 5,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q4115299",
@@ -3259,7 +3735,21 @@
    "lingue": [
     "ungherese"
    ],
-   "indice": 50
+   "indice": 56,
+   "traduzioni": {
+    "opere": 56,
+    "con_lingua": 56,
+    "per_lingua": {
+     "it": 0,
+     "en": 4,
+     "es": 0,
+     "fr": 0,
+     "de": 1
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q1090185",
@@ -3357,7 +3847,21 @@
    "lingue": [
     "portoghese"
    ],
-   "indice": 67
+   "indice": 73,
+   "traduzioni": {
+    "opere": 100,
+    "con_lingua": 96,
+    "per_lingua": {
+     "it": 3,
+     "en": 6,
+     "es": 9,
+     "fr": 1,
+     "de": 0
+    },
+    "parziale": true,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q346729",
@@ -3452,7 +3956,21 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 77
+   "indice": 80,
+   "traduzioni": {
+    "opere": 37,
+    "con_lingua": 35,
+    "per_lingua": {
+     "it": 0,
+     "en": 35,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": true,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q265792",
@@ -3544,7 +4062,21 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 78
+   "indice": 82,
+   "traduzioni": {
+    "opere": 85,
+    "con_lingua": 84,
+    "per_lingua": {
+     "it": 1,
+     "en": 84,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": true,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q3631340",
@@ -3639,7 +4171,21 @@
    "lingue": [
     "punjabi"
    ],
-   "indice": 85
+   "indice": 88,
+   "traduzioni": {
+    "opere": 9,
+    "con_lingua": 8,
+    "per_lingua": {
+     "it": 0,
+     "en": 3,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q1292053",
@@ -3719,7 +4265,7 @@
    "lingue": [
     "lituano"
    ],
-   "indice": 51
+   "indice": 57
   },
   {
    "wikidata": "Q626601",
@@ -3809,7 +4355,7 @@
    "lingue": [
     "svedese"
    ],
-   "indice": 36
+   "indice": 42
   },
   {
    "wikidata": "Q1985506",
@@ -3838,7 +4384,7 @@
    "lingue": [
     "russo"
    ],
-   "indice": 53
+   "indice": 59
   },
   {
    "wikidata": "Q124251",
@@ -3893,7 +4439,7 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 81
+   "indice": 85
   },
   {
    "wikidata": "Q87600",
@@ -3953,7 +4499,7 @@
     "tedesco",
     "ceco"
    ],
-   "indice": 60
+   "indice": 65
   },
   {
    "wikidata": "Q347832",
@@ -4021,7 +4567,21 @@
    "lingue": [
     "spagnolo"
    ],
-   "indice": 65
+   "indice": 70,
+   "traduzioni": {
+    "opere": 37,
+    "con_lingua": 36,
+    "per_lingua": {
+     "it": 0,
+     "en": 4,
+     "es": 34,
+     "fr": 1,
+     "de": 0
+    },
+    "parziale": true,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q2622808",
@@ -4076,7 +4636,7 @@
    "lingue": [
     "greco moderno"
    ],
-   "indice": 89
+   "indice": 92
   },
   {
    "wikidata": "Q55963",
@@ -4132,7 +4692,7 @@
     "ciuvascio",
     "turco ottomano"
    ],
-   "indice": 43
+   "indice": 49
   },
   {
    "wikidata": "Q3296972",
@@ -4173,7 +4733,7 @@
    "lingue": [
     "ciuvascio"
    ],
-   "indice": 35
+   "indice": 41
   },
   {
    "wikidata": "Q276464",
@@ -4215,7 +4775,21 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 88
+   "indice": 91,
+   "traduzioni": {
+    "opere": 0,
+    "con_lingua": 0,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q629726",
@@ -4392,7 +4966,21 @@
    "lingue": [
     "olandese"
    ],
-   "indice": 36
+   "indice": 42,
+   "traduzioni": {
+    "opere": 0,
+    "con_lingua": 0,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q3028124",
@@ -4437,7 +5025,7 @@
    "lingue": [
     "russo"
    ],
-   "indice": 46
+   "indice": 53
   },
   {
    "wikidata": "Q1291529",
@@ -4501,7 +5089,21 @@
    "lingue": [
     "francese"
    ],
-   "indice": 29
+   "indice": 35,
+   "traduzioni": {
+    "opere": 6,
+    "con_lingua": 6,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 6,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q2695518",
@@ -4591,7 +5193,21 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 83
+   "indice": 87,
+   "traduzioni": {
+    "opere": 0,
+    "con_lingua": 0,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q2630960",
@@ -4630,7 +5246,7 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 41
+   "indice": 47
   },
   {
    "wikidata": "Q1797649",
@@ -4676,7 +5292,7 @@
    "lingue": [
     "russo"
    ],
-   "indice": 41
+   "indice": 46
   },
   {
    "wikidata": "Q2782998",
@@ -4768,7 +5384,21 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 76
+   "indice": 80,
+   "traduzioni": {
+    "opere": 34,
+    "con_lingua": 34,
+    "per_lingua": {
+     "it": 0,
+     "en": 34,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": true,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q15998964",
@@ -4847,7 +5477,7 @@
    "lingue": [
     "spagnolo"
    ],
-   "indice": 51
+   "indice": 57
   },
   {
    "wikidata": "Q7188194",
@@ -4880,7 +5510,7 @@
    "lingue": [
     "romeno"
    ],
-   "indice": 63
+   "indice": 69
   },
   {
    "wikidata": "Q2930497",
@@ -4922,7 +5552,21 @@
    "lingue": [
     "afrikaans"
    ],
-   "indice": 49
+   "indice": 56,
+   "traduzioni": {
+    "opere": 30,
+    "con_lingua": 30,
+    "per_lingua": {
+     "it": 0,
+     "en": 3,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q1639201",
@@ -4988,7 +5632,21 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 63
+   "indice": 67,
+   "traduzioni": {
+    "opere": 49,
+    "con_lingua": 47,
+    "per_lingua": {
+     "it": 0,
+     "en": 43,
+     "es": 0,
+     "fr": 2,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q5259986",
@@ -5033,7 +5691,7 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 89
+   "indice": 92
   },
   {
    "wikidata": "Q78437",
@@ -5075,7 +5733,21 @@
    "lingue": [
     "tedesco"
    ],
-   "indice": 69
+   "indice": 75,
+   "traduzioni": {
+    "opere": 6,
+    "con_lingua": 6,
+    "per_lingua": {
+     "it": 0,
+     "en": 3,
+     "es": 0,
+     "fr": 1,
+     "de": 6
+    },
+    "parziale": true,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q3541260",
@@ -5110,7 +5782,7 @@
    "lingue": [
     "romeno"
    ],
-   "indice": 56
+   "indice": 63
   },
   {
    "wikidata": "Q15999062",
@@ -5146,7 +5818,7 @@
     "tedesco",
     "inglese"
    ],
-   "indice": 38
+   "indice": 44
   },
   {
    "wikidata": "Q562939",
@@ -5241,7 +5913,21 @@
    "lingue": [
     "spagnolo"
    ],
-   "indice": 50
+   "indice": 57,
+   "traduzioni": {
+    "opere": 5,
+    "con_lingua": 5,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 5,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q12287614",
@@ -5288,7 +5974,21 @@
    "lingue": [
     "coreano"
    ],
-   "indice": 38
+   "indice": 45,
+   "traduzioni": {
+    "opere": 0,
+    "con_lingua": 0,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q11794223",
@@ -5379,7 +6079,21 @@
     "arabo",
     "turco ottomano"
    ],
-   "indice": 60
+   "indice": 66,
+   "traduzioni": {
+    "opere": 33,
+    "con_lingua": 23,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q7288689",
@@ -5527,7 +6241,21 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 73
+   "indice": 78,
+   "traduzioni": {
+    "opere": 99,
+    "con_lingua": 85,
+    "per_lingua": {
+     "it": 0,
+     "en": 85,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": true,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q354498",
@@ -5567,7 +6295,7 @@
    "lingue": [
     "russo"
    ],
-   "indice": 67
+   "indice": 74
   },
   {
    "wikidata": "Q1525988",
@@ -5630,7 +6358,7 @@
    "paesi": [
     "Stati Uniti"
    ],
-   "indice": 60
+   "indice": 67
   },
   {
    "wikidata": "Q3686190",
@@ -5666,7 +6394,7 @@
     "italiano",
     "latino"
    ],
-   "indice": 83
+   "indice": 88
   },
   {
    "wikidata": "Q1445671",
@@ -5706,7 +6434,7 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 77
+   "indice": 83
   },
   {
    "wikidata": "Q1417084",
@@ -5756,7 +6484,7 @@
    "lingue": [
     "georgiano"
    ],
-   "indice": 26
+   "indice": 33
   },
   {
    "wikidata": "Q1700583",
@@ -5798,7 +6526,7 @@
    "paesi": [
     "Canada"
    ],
-   "indice": 40
+   "indice": 47
   },
   {
    "wikidata": "Q460613",
@@ -5836,7 +6564,7 @@
    "lingue": [
     "giapponese"
    ],
-   "indice": 58
+   "indice": 65
   },
   {
    "wikidata": "Q1707054",
@@ -5876,7 +6604,7 @@
     "spagnolo",
     "catalano"
    ],
-   "indice": 42
+   "indice": 49
   },
   {
    "wikidata": "Q62108619",
@@ -5920,7 +6648,7 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 70
+   "indice": 76
   },
   {
    "wikidata": "Q12148966",
@@ -5977,7 +6705,7 @@
    "lingue": [
     "tataro"
    ],
-   "indice": 53
+   "indice": 60
   },
   {
    "wikidata": "Q18192170",
@@ -6032,7 +6760,7 @@
    "paesi": [
     "Stati Uniti"
    ],
-   "indice": 77
+   "indice": 83
   },
   {
    "wikidata": "Q935986",
@@ -6095,7 +6823,21 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 79
+   "indice": 84,
+   "traduzioni": {
+    "opere": 18,
+    "con_lingua": 18,
+    "per_lingua": {
+     "it": 0,
+     "en": 15,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q2060227",
@@ -6215,7 +6957,21 @@
    "paesi": [
     "Stati Uniti"
    ],
-   "indice": 56
+   "indice": 63,
+   "traduzioni": {
+    "opere": 40,
+    "con_lingua": 30,
+    "per_lingua": {
+     "it": 0,
+     "en": 29,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q4798634",
@@ -6287,7 +7043,7 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 69
+   "indice": 76
   },
   {
    "wikidata": "Q3680468",
@@ -6318,7 +7074,7 @@
     "italiano",
     "russo"
    ],
-   "indice": 79
+   "indice": 85
   },
   {
    "wikidata": "Q1563541",
@@ -6351,7 +7107,7 @@
    "lingue": [
     "croato"
    ],
-   "indice": 56
+   "indice": 64
   },
   {
    "wikidata": "Q4976087",
@@ -6502,7 +7258,7 @@
    "lingue": [
     "giapponese"
    ],
-   "indice": 28
+   "indice": 35
   },
   {
    "wikidata": "Q597779",
@@ -6547,7 +7303,7 @@
    "lingue": [
     "spagnolo"
    ],
-   "indice": 51
+   "indice": 59
   },
   {
    "wikidata": "Q6293192",
@@ -6581,7 +7337,7 @@
    "lingue": [
     "spagnolo"
    ],
-   "indice": 36
+   "indice": 43
   },
   {
    "wikidata": "Q6293593",
@@ -6615,7 +7371,7 @@
    "lingue": [
     "portoghese"
    ],
-   "indice": 50
+   "indice": 57
   },
   {
    "wikidata": "Q2271270",
@@ -6671,7 +7427,21 @@
    "paesi": [
     "Stati Uniti"
    ],
-   "indice": 27
+   "indice": 34,
+   "traduzioni": {
+    "opere": 0,
+    "con_lingua": 0,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q1262037",
@@ -6757,7 +7527,7 @@
    "lingue": [
     "romeno"
    ],
-   "indice": 46
+   "indice": 54
   },
   {
    "wikidata": "Q11315987",
@@ -6787,7 +7557,7 @@
    "lingue": [
     "bielorusso"
    ],
-   "indice": 65
+   "indice": 81
   },
   {
    "wikidata": "Q12975497",
@@ -6905,7 +7675,21 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 78
+   "indice": 84,
+   "traduzioni": {
+    "opere": 40,
+    "con_lingua": 36,
+    "per_lingua": {
+     "it": 0,
+     "en": 35,
+     "es": 1,
+     "fr": 1,
+     "de": 1
+    },
+    "parziale": true,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q102452",
@@ -6975,7 +7759,7 @@
     "francese",
     "arabo"
    ],
-   "indice": 21
+   "indice": 27
   },
   {
    "wikidata": "Q5591211",
@@ -7039,7 +7823,7 @@
    "paesi": [
     "Cina"
    ],
-   "indice": 50
+   "indice": 57
   },
   {
    "wikidata": "Q4231080",
@@ -7087,7 +7871,21 @@
    "lingue": [
     "francese"
    ],
-   "indice": 28
+   "indice": 36,
+   "traduzioni": {
+    "opere": 9,
+    "con_lingua": 8,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 8,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q4054338",
@@ -7135,7 +7933,7 @@
    "lingue": [
     "italiano"
    ],
-   "indice": 33
+   "indice": 41
   },
   {
    "wikidata": "Q20981829",
@@ -7215,7 +8013,7 @@
    "paesi": [
     "Svizzera"
    ],
-   "indice": 24
+   "indice": 32
   },
   {
    "wikidata": "Q3732147",
@@ -7263,7 +8061,21 @@
     "francese",
     "bretone"
    ],
-   "indice": 58
+   "indice": 77,
+   "traduzioni": {
+    "opere": 5,
+    "con_lingua": 5,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q3503549",
@@ -7302,7 +8114,7 @@
    "lingue": [
     "sloveno"
    ],
-   "indice": 51
+   "indice": 60
   },
   {
    "wikidata": "Q1448177",
@@ -7364,7 +8176,21 @@
    "paesi": [
     "Stati Uniti"
    ],
-   "indice": 54
+   "indice": 61,
+   "traduzioni": {
+    "opere": 47,
+    "con_lingua": 46,
+    "per_lingua": {
+     "it": 0,
+     "en": 46,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q524347",
@@ -7433,7 +8259,21 @@
    "lingue": [
     "bengali"
    ],
-   "indice": 59
+   "indice": 67,
+   "traduzioni": {
+    "opere": 0,
+    "con_lingua": 0,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q1679778",
@@ -7485,7 +8325,7 @@
     "tedesco",
     "inglese"
    ],
-   "indice": 40
+   "indice": 48
   },
   {
    "wikidata": "Q3177175",
@@ -7532,7 +8372,7 @@
    "paesi": [
     "Stati Uniti"
    ],
-   "indice": 43
+   "indice": 52
   },
   {
    "wikidata": "Q6288424",
@@ -7576,7 +8416,21 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 62
+   "indice": 70,
+   "traduzioni": {
+    "opere": 12,
+    "con_lingua": 9,
+    "per_lingua": {
+     "it": 0,
+     "en": 9,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q6391686",
@@ -7607,7 +8461,7 @@
    "paesi": [
     "Stati Uniti"
    ],
-   "indice": 38
+   "indice": 47
   },
   {
    "wikidata": "Q12211016",
@@ -7641,7 +8495,7 @@
    "lingue": [
     "arabo"
    ],
-   "indice": 49
+   "indice": 57
   },
   {
    "wikidata": "Q107844",
@@ -7688,7 +8542,7 @@
    "lingue": [
     "italiano"
    ],
-   "indice": 62
+   "indice": 70
   },
   {
    "wikidata": "Q1927183",
@@ -7723,7 +8577,7 @@
    "lingue": [
     "olandese"
    ],
-   "indice": 27
+   "indice": 33
   },
   {
    "wikidata": "Q3849004",
@@ -7791,7 +8645,21 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 65
+   "indice": 72,
+   "traduzioni": {
+    "opere": 96,
+    "con_lingua": 86,
+    "per_lingua": {
+     "it": 0,
+     "en": 85,
+     "es": 0,
+     "fr": 1,
+     "de": 0
+    },
+    "parziale": true,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q14946693",
@@ -7828,7 +8696,21 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 69
+   "indice": 76,
+   "traduzioni": {
+    "opere": 3,
+    "con_lingua": 2,
+    "per_lingua": {
+     "it": 0,
+     "en": 2,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q6963402",
@@ -7866,7 +8748,21 @@
    "lingue": [
     "telugu"
    ],
-   "indice": 51
+   "indice": 59,
+   "traduzioni": {
+    "opere": 2,
+    "con_lingua": 2,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q12043189",
@@ -7918,7 +8814,7 @@
    "lingue": [
     "oriya"
    ],
-   "indice": 33
+   "indice": 41
   },
   {
    "wikidata": "Q20610367",
@@ -7943,7 +8839,7 @@
    "paesi": [
     "Unione Sovietica"
    ],
-   "indice": 35
+   "indice": 43
   },
   {
    "wikidata": "Q24579007",
@@ -7989,7 +8885,7 @@
    "lingue": [
     "giapponese"
    ],
-   "indice": 28
+   "indice": 36
   },
   {
    "wikidata": "Q15999026",
@@ -8030,7 +8926,7 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 66
+   "indice": 74
   },
   {
    "wikidata": "Q47008374",
@@ -8119,7 +9015,21 @@
    "lingue": [
     "bengali"
    ],
-   "indice": 57
+   "indice": 66,
+   "traduzioni": {
+    "opere": 5,
+    "con_lingua": 5,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q3564868",
@@ -8158,7 +9068,7 @@
    "lingue": [
     "lettone"
    ],
-   "indice": 58
+   "indice": 77
   },
   {
    "wikidata": "Q761491",
@@ -8199,7 +9109,7 @@
     "russo",
     "ciuvascio"
    ],
-   "indice": 19
+   "indice": 25
   },
   {
    "wikidata": "Q167391",
@@ -8283,7 +9193,21 @@
    "lingue": [
     "sloveno"
    ],
-   "indice": 58
+   "indice": 77,
+   "traduzioni": {
+    "opere": 10,
+    "con_lingua": 10,
+    "per_lingua": {
+     "it": 0,
+     "en": 1,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q6499648",
@@ -8309,7 +9233,7 @@
     "turco",
     "turco ottomano"
    ],
-   "indice": 58
+   "indice": 77
   },
   {
    "wikidata": "Q4648282",
@@ -8345,7 +9269,21 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 52
+   "indice": 61,
+   "traduzioni": {
+    "opere": 15,
+    "con_lingua": 15,
+    "per_lingua": {
+     "it": 0,
+     "en": 15,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q4722810",
@@ -8375,7 +9313,7 @@
     "francese",
     "romeno"
    ],
-   "indice": 21
+   "indice": 30
   },
   {
    "wikidata": "Q24013670",
@@ -8414,7 +9352,7 @@
    "lingue": [
     "tedesco"
    ],
-   "indice": 15
+   "indice": 21
   },
   {
    "wikidata": "Q53454409",
@@ -8465,7 +9403,7 @@
    "lingue": [
     "slovacco"
    ],
-   "indice": 48
+   "indice": 72
   },
   {
    "wikidata": "Q30694495",
@@ -8568,7 +9506,21 @@
    "lingue": [
     "spagnolo"
    ],
-   "indice": 24
+   "indice": 33,
+   "traduzioni": {
+    "opere": 3,
+    "con_lingua": 3,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 2,
+     "fr": 2,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q5237761",
@@ -8596,7 +9548,7 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 36
+   "indice": 45
   },
   {
    "wikidata": "Q5802182",
@@ -8626,7 +9578,7 @@
    "lingue": [
     "spagnolo"
    ],
-   "indice": 48
+   "indice": 72
   },
   {
    "wikidata": "Q12346520",
@@ -8670,7 +9622,7 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 39
+   "indice": 49
   },
   {
    "wikidata": "Q3719585",
@@ -8712,7 +9664,21 @@
    "lingue": [
     "italiano"
    ],
-   "indice": 53
+   "indice": 63,
+   "traduzioni": {
+    "opere": 12,
+    "con_lingua": 12,
+    "per_lingua": {
+     "it": 12,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q18537380",
@@ -8769,7 +9735,21 @@
     "licenza": "Public domain",
     "autore": "Photographer unknown. Image provided by the F. W. Harvey Estate"
    },
-   "indice": 61
+   "indice": 70,
+   "traduzioni": {
+    "opere": 42,
+    "con_lingua": 35,
+    "per_lingua": {
+     "it": 0,
+     "en": 35,
+     "es": 1,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": true,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q123457182",
@@ -8835,7 +9815,21 @@
     "spagnolo",
     "catalano"
    ],
-   "indice": 22
+   "indice": 31,
+   "traduzioni": {
+    "opere": 0,
+    "con_lingua": 0,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q5543167",
@@ -8879,7 +9873,7 @@
    "lingue": [
     "romeno"
    ],
-   "indice": 20
+   "indice": 29
   },
   {
    "wikidata": "Q4441803",
@@ -8951,7 +9945,7 @@
     "francese",
     "italiano"
    ],
-   "indice": 16
+   "indice": 23
   },
   {
    "wikidata": "Q5729097",
@@ -9014,7 +10008,21 @@
    "paesi": [
     "Cecoslovacchia"
    ],
-   "indice": 48
+   "indice": 72,
+   "traduzioni": {
+    "opere": 0,
+    "con_lingua": 0,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q4533756",
@@ -9086,7 +10094,21 @@
    "paesi": [
     "Stati Uniti"
    ],
-   "indice": 30
+   "indice": 39,
+   "traduzioni": {
+    "opere": 8,
+    "con_lingua": 8,
+    "per_lingua": {
+     "it": 0,
+     "en": 8,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q72837364",
@@ -9118,7 +10140,7 @@
     "spagnolo",
     "arabo"
    ],
-   "indice": 48
+   "indice": 72
   },
   {
    "wikidata": "Q2671153",
@@ -9164,7 +10186,7 @@
    "lingue": [
     "tamil"
    ],
-   "indice": 34
+   "indice": 43
   },
   {
    "wikidata": "Q625336",
@@ -9206,7 +10228,21 @@
    "lingue": [
     "giapponese"
    ],
-   "indice": 27
+   "indice": 36,
+   "traduzioni": {
+    "opere": 0,
+    "con_lingua": 0,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q6433548",
@@ -9241,7 +10277,7 @@
    "paesi": [
     "Haiti"
    ],
-   "indice": 30
+   "indice": 39
   },
   {
    "wikidata": "Q1891444",
@@ -9271,7 +10307,7 @@
    "lingue": [
     "portoghese"
    ],
-   "indice": 48
+   "indice": 72
   },
   {
    "wikidata": "Q5993001",
@@ -9309,7 +10345,21 @@
     "spagnolo",
     "catalano"
    ],
-   "indice": 48
+   "indice": 72,
+   "traduzioni": {
+    "opere": 0,
+    "con_lingua": 0,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q3293696",
@@ -9365,7 +10415,7 @@
    "lingue": [
     "francese"
    ],
-   "indice": 16
+   "indice": 23
   },
   {
    "wikidata": "Q1908581",
@@ -9428,7 +10478,7 @@
    "lingue": [
     "greco moderno"
    ],
-   "indice": 48
+   "indice": 72
   },
   {
    "wikidata": "Q2702072",
@@ -9495,7 +10545,7 @@
     "russo",
     "arabo"
    ],
-   "indice": 48
+   "indice": 72
   },
   {
    "wikidata": "Q1178798",
@@ -9543,7 +10593,7 @@
    "lingue": [
     "spagnolo"
    ],
-   "indice": 50
+   "indice": 59
   },
   {
    "wikidata": "Q11909782",
@@ -9621,7 +10671,7 @@
    "lingue": [
     "spagnolo"
    ],
-   "indice": 48
+   "indice": 72
   },
   {
    "wikidata": "Q17468439",
@@ -9686,7 +10736,7 @@
     "francese",
     "polacco"
    ],
-   "indice": 34
+   "indice": 64
   },
   {
    "wikidata": "Q5658428",
@@ -9716,7 +10766,7 @@
    "lingue": [
     "spagnolo"
    ],
-   "indice": 34
+   "indice": 64
   },
   {
    "wikidata": "Q94776032",
@@ -9785,7 +10835,7 @@
    "lingue": [
     "ungherese"
    ],
-   "indice": 34
+   "indice": 64
   },
   {
    "wikidata": "Q4723587",
@@ -9826,7 +10876,7 @@
    "lingue": [
     "portoghese"
    ],
-   "indice": 34
+   "indice": 64
   },
   {
    "wikidata": "Q4749164",
@@ -9853,7 +10903,7 @@
     "licenza": "CC BY-SA 3.0",
     "autore": "Mikesclark"
    },
-   "indice": 15
+   "indice": 24
   },
   {
    "wikidata": "Q46997076",
@@ -9892,7 +10942,7 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 47
+   "indice": 58
   },
   {
    "wikidata": "Q22684368",
@@ -9939,7 +10989,7 @@
     "italiano",
     "sardo"
    ],
-   "indice": 54
+   "indice": 64
   },
   {
    "wikidata": "Q3619116",
@@ -9968,7 +11018,7 @@
    "lingue": [
     "italiano"
    ],
-   "indice": 41
+   "indice": 52
   },
   {
    "wikidata": "Q524298",
@@ -9999,7 +11049,7 @@
    "lingue": [
     "spagnolo"
    ],
-   "indice": 34
+   "indice": 64
   },
   {
    "wikidata": "Q13028512",
@@ -10025,7 +11075,7 @@
    "paesi": [
     "Unione Sovietica"
    ],
-   "indice": 34
+   "indice": 64
   },
   {
    "wikidata": "Q9160651",
@@ -10087,7 +11137,7 @@
    "lingue": [
     "romeno"
    ],
-   "indice": 34
+   "indice": 64
   },
   {
    "wikidata": "Q64859410",
@@ -10129,7 +11179,7 @@
    "paesi": [
     "Stati Uniti"
    ],
-   "indice": 15
+   "indice": 23
   },
   {
    "wikidata": "Q5498690",
@@ -10200,7 +11250,21 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 51
+   "indice": 62,
+   "traduzioni": {
+    "opere": 18,
+    "con_lingua": 16,
+    "per_lingua": {
+     "it": 0,
+     "en": 16,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q16899719",
@@ -10237,7 +11301,21 @@
     "norvegese",
     "Riksmål"
    ],
-   "indice": 10
+   "indice": 18,
+   "traduzioni": {
+    "opere": 3,
+    "con_lingua": 3,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q11912944",
@@ -10289,7 +11367,21 @@
     "spagnolo",
     "catalano"
    ],
-   "indice": 34
+   "indice": 64,
+   "traduzioni": {
+    "opere": 0,
+    "con_lingua": 0,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q5919271",
@@ -10360,7 +11452,7 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 65
+   "indice": 75
   },
   {
    "wikidata": "Q15998955",
@@ -10413,7 +11505,7 @@
    "paesi": [
     "Stati Uniti"
    ],
-   "indice": 12
+   "indice": 19
   },
   {
    "wikidata": "Q21438199",
@@ -10434,7 +11526,7 @@
    "lingue": [
     "armeno"
    ],
-   "indice": 34
+   "indice": 64
   },
   {
    "wikidata": "Q10271884",
@@ -10465,7 +11557,7 @@
    "lingue": [
     "portoghese"
    ],
-   "indice": 34
+   "indice": 64
   },
   {
    "wikidata": "Q6885755",
@@ -10493,7 +11585,7 @@
    "lingue": [
     "yiddish"
    ],
-   "indice": 32
+   "indice": 43
   },
   {
    "wikidata": "Q19753829",
@@ -10545,7 +11637,7 @@
    "lingue": [
     "ungherese"
    ],
-   "indice": 34
+   "indice": 64
   },
   {
    "wikidata": "Q15441802",
@@ -10572,7 +11664,7 @@
     "francese",
     "russo"
    ],
-   "indice": 12
+   "indice": 20
   },
   {
    "wikidata": "Q3072893",
@@ -10652,7 +11744,21 @@
    "lingue": [
     "francese"
    ],
-   "indice": 34
+   "indice": 64,
+   "traduzioni": {
+    "opere": 42,
+    "con_lingua": 41,
+    "per_lingua": {
+     "it": 0,
+     "en": 2,
+     "es": 1,
+     "fr": 37,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q5474737",
@@ -10712,7 +11818,21 @@
     "orrore"
    ],
    "visite_12m": 752,
-   "indice": 40
+   "indice": 51,
+   "traduzioni": {
+    "opere": 0,
+    "con_lingua": 0,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q11143242",
@@ -10747,7 +11867,7 @@
    "paesi": [
     "Stati Uniti"
    ],
-   "indice": 16
+   "indice": 27
   },
   {
    "wikidata": "Q124052090",
@@ -10815,7 +11935,21 @@
    "lingue": [
     "francese"
    ],
-   "indice": 9
+   "indice": 17,
+   "traduzioni": {
+    "opere": 13,
+    "con_lingua": 12,
+    "per_lingua": {
+     "it": 0,
+     "en": 2,
+     "es": 0,
+     "fr": 9,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q17119640",
@@ -10875,7 +12009,21 @@
    "lingue": [
     "tedesco"
    ],
-   "indice": 26
+   "indice": 37,
+   "traduzioni": {
+    "opere": 35,
+    "con_lingua": 35,
+    "per_lingua": {
+     "it": 0,
+     "en": 7,
+     "es": 0,
+     "fr": 2,
+     "de": 30
+    },
+    "parziale": true,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q12315666",
@@ -10927,7 +12075,7 @@
    "lingue": [
     "olandese"
    ],
-   "indice": 34
+   "indice": 64
   },
   {
    "wikidata": "Q15998926",
@@ -11072,7 +12220,7 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 33
+   "indice": 44
   },
   {
    "wikidata": "Q125412",
@@ -11104,7 +12252,21 @@
    "lingue": [
     "tedesco"
    ],
-   "indice": 34
+   "indice": 64,
+   "traduzioni": {
+    "opere": 6,
+    "con_lingua": 6,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 6
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q89718",
@@ -11151,7 +12313,7 @@
     "francese",
     "bretone"
    ],
-   "indice": 34
+   "indice": 64
   },
   {
    "wikidata": "Q4480607",
@@ -11204,7 +12366,7 @@
    "paesi": [
     "Argentina"
    ],
-   "indice": 24
+   "indice": 34
   },
   {
    "wikidata": "Q5945205",
@@ -11257,7 +12419,7 @@
     "Poesia"
    ],
    "n_opere": 0,
-   "indice": 34
+   "indice": 64
   },
   {
    "wikidata": "Q17381674",
@@ -11322,7 +12484,7 @@
    "bio_lingua": "en",
    "n_opere": 0,
    "visite_12m": 409,
-   "indice": 23
+   "indice": 34
   },
   {
    "wikidata": "Q19664741",
@@ -11381,7 +12543,7 @@
     "russo",
     "romeno"
    ],
-   "indice": 15
+   "indice": 24
   },
   {
    "wikidata": "Q96894930",
@@ -11423,7 +12585,7 @@
    "lingue": [
     "giapponese"
    ],
-   "indice": 34
+   "indice": 64
   },
   {
    "wikidata": "Q3843048",
@@ -11455,7 +12617,7 @@
    "paesi": [
     "Afghanistan"
    ],
-   "indice": 34
+   "indice": 64
   },
   {
    "wikidata": "Q16315929",
@@ -11524,7 +12686,7 @@
     "inglese",
     "ungherese"
    ],
-   "indice": 34
+   "indice": 64
   },
   {
    "wikidata": "Q140355287",
@@ -11558,7 +12720,7 @@
     "russo",
     "azero"
    ],
-   "indice": 34
+   "indice": 64
   },
   {
    "wikidata": "Q59631800",
@@ -11654,7 +12816,7 @@
    "lingue": [
     "francese"
    ],
-   "indice": 34
+   "indice": 64
   },
   {
    "wikidata": "Q18911624",
@@ -11687,7 +12849,21 @@
    "paesi": [
     "Stati Uniti"
    ],
-   "indice": 25
+   "indice": 36,
+   "traduzioni": {
+    "opere": 12,
+    "con_lingua": 12,
+    "per_lingua": {
+     "it": 0,
+     "en": 12,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": true,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q29915436",
@@ -11722,7 +12898,7 @@
    "paesi": [
     "Stati Uniti"
    ],
-   "indice": 43
+   "indice": 54
   },
   {
    "wikidata": "Q15090962",
@@ -11760,7 +12936,21 @@
    "lingue": [
     "russo"
    ],
-   "indice": 34
+   "indice": 64,
+   "traduzioni": {
+    "opere": 4,
+    "con_lingua": 4,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q20577796",
@@ -11815,7 +13005,7 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 20
+   "indice": 30
   },
   {
    "wikidata": "Q1674196",
@@ -11864,7 +13054,7 @@
    "lingue": [
     "russo"
    ],
-   "indice": 34
+   "indice": 64
   },
   {
    "wikidata": "Q6164075",
@@ -11949,7 +13139,7 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 34
+   "indice": 45
   },
   {
    "wikidata": "Q17022751",
@@ -11973,7 +13163,7 @@
    "paesi": [
     "Stati Uniti"
    ],
-   "indice": 29
+   "indice": 40
   },
   {
    "wikidata": "Q8009374",
@@ -12037,7 +13227,7 @@
    "lingue": [
     "ebraico"
    ],
-   "indice": 34
+   "indice": 64
   },
   {
    "wikidata": "Q169036",
@@ -12096,7 +13286,21 @@
    "lingue": [
     "ceco"
    ],
-   "indice": 34
+   "indice": 64,
+   "traduzioni": {
+    "opere": 16,
+    "con_lingua": 16,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q104971285",
@@ -12118,7 +13322,7 @@
    "paesi": [
     "Ungheria"
    ],
-   "indice": 34
+   "indice": 64
   },
   {
    "wikidata": "Q10861686",
@@ -12186,7 +13390,7 @@
    "lingue": [
     "careliano"
    ],
-   "indice": 34
+   "indice": 64
   },
   {
    "wikidata": "Q18649612",
@@ -12214,7 +13418,7 @@
     "Poesia"
    ],
    "n_opere": 0,
-   "indice": 34
+   "indice": 64
   },
   {
    "wikidata": "Q16484645",
@@ -12244,7 +13448,7 @@
    "lingue": [
     "portoghese"
    ],
-   "indice": 12
+   "indice": 50
   },
   {
    "wikidata": "Q94941916",
@@ -12291,7 +13495,7 @@
    "paesi": [
     "India"
    ],
-   "indice": 39
+   "indice": 52
   },
   {
    "wikidata": "Q89387887",
@@ -12344,7 +13548,7 @@
    "paesi": [
     "Spagna"
    ],
-   "indice": 12
+   "indice": 50
   },
   {
    "wikidata": "Q16488391",
@@ -12411,7 +13615,21 @@
    "lingue": [
     "bengali"
    ],
-   "indice": 12
+   "indice": 50,
+   "traduzioni": {
+    "opere": 0,
+    "con_lingua": 0,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q48866382",
@@ -12473,7 +13691,7 @@
    "lingue": [
     "francese"
    ],
-   "indice": 12
+   "indice": 50
   },
   {
    "wikidata": "Q5561585",
@@ -12502,7 +13720,7 @@
    "lingue": [
     "spagnolo"
    ],
-   "indice": 12
+   "indice": 50
   },
   {
    "wikidata": "Q16650123",
@@ -12555,7 +13773,7 @@
    "paesi": [
     "Australia"
    ],
-   "indice": 11
+   "indice": 23
   },
   {
    "wikidata": "Q5808435",
@@ -12588,7 +13806,7 @@
    "bio_lingua": "en",
    "n_opere": 0,
    "visite_12m": 963,
-   "indice": 40
+   "indice": 52
   },
   {
    "wikidata": "Q5052522",
@@ -12647,7 +13865,21 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 40
+   "indice": 52,
+   "traduzioni": {
+    "opere": 77,
+    "con_lingua": 74,
+    "per_lingua": {
+     "it": 0,
+     "en": 74,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q5126493",
@@ -12737,7 +13969,21 @@
     "licenza": "Public domain",
     "autore": "Unknown authorUnknown author"
    },
-   "indice": 16
+   "indice": 28,
+   "traduzioni": {
+    "opere": 9,
+    "con_lingua": 6,
+    "per_lingua": {
+     "it": 0,
+     "en": 6,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q18576052",
@@ -12795,7 +14041,21 @@
    "paesi": [
     "Cecoslovacchia"
    ],
-   "indice": 12
+   "indice": 50,
+   "traduzioni": {
+    "opere": 7,
+    "con_lingua": 7,
+    "per_lingua": {
+     "it": 0,
+     "en": 2,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q28107245",
@@ -12875,7 +14135,7 @@
    "lingue": [
     "romeno"
    ],
-   "indice": 12
+   "indice": 50
   },
   {
    "wikidata": "Q11878769",
@@ -12960,7 +14220,21 @@
     "tedesco",
     "ceco"
    ],
-   "indice": 12
+   "indice": 50,
+   "traduzioni": {
+    "opere": 0,
+    "con_lingua": 0,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q16562292",
@@ -12986,7 +14260,7 @@
    "lingue": [
     "spagnolo"
    ],
-   "indice": 12
+   "indice": 50
   },
   {
    "wikidata": "Q131522682",
@@ -13017,7 +14291,21 @@
     "licenza": "Public domain",
     "autore": "Not stated"
    },
-   "indice": 12
+   "indice": 50,
+   "traduzioni": {
+    "opere": 3,
+    "con_lingua": 3,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 3,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q11967701",
@@ -13088,7 +14376,21 @@
    "lingue": [
     "spagnolo"
    ],
-   "indice": 12
+   "indice": 50,
+   "traduzioni": {
+    "opere": 0,
+    "con_lingua": 0,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q105411",
@@ -13140,7 +14442,7 @@
    "lingue": [
     "tedesco"
    ],
-   "indice": 12
+   "indice": 50
   },
   {
    "wikidata": "Q9263007",
@@ -13164,7 +14466,7 @@
    "lingue": [
     "polacco"
    ],
-   "indice": 12
+   "indice": 50
   },
   {
    "wikidata": "Q5495431",
@@ -13199,7 +14501,21 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 49
+   "indice": 61,
+   "traduzioni": {
+    "opere": 40,
+    "con_lingua": 39,
+    "per_lingua": {
+     "it": 0,
+     "en": 37,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q55196805",
@@ -13255,7 +14571,7 @@
    "lingue": [
     "italiano"
    ],
-   "indice": 5
+   "indice": 15
   },
   {
    "wikidata": "Q19958975",
@@ -13396,7 +14712,7 @@
    "lingue": [
     "yiddish"
    ],
-   "indice": 12
+   "indice": 50
   },
   {
    "wikidata": "Q15456434",
@@ -13425,7 +14741,7 @@
     "Teatro"
    ],
    "n_opere": 0,
-   "indice": 12
+   "indice": 50
   },
   {
    "wikidata": "Q5902290",
@@ -13458,7 +14774,7 @@
    "lingue": [
     "spagnolo"
    ],
-   "indice": 5
+   "indice": 15
   },
   {
    "wikidata": "Q1624303",
@@ -13496,7 +14812,7 @@
    "lingue": [
     "spagnolo"
    ],
-   "indice": 33
+   "indice": 46
   },
   {
    "wikidata": "Q16406399",
@@ -13538,7 +14854,7 @@
    "lingue": [
     "arabo"
    ],
-   "indice": 12
+   "indice": 50
   },
   {
    "wikidata": "Q5408632",
@@ -13601,7 +14917,7 @@
    "lingue": [
     "ungherese"
    ],
-   "indice": 12
+   "indice": 50
   },
   {
    "wikidata": "Q12280828",
@@ -13630,7 +14946,7 @@
    "paesi": [
     "Bulgaria"
    ],
-   "indice": 12
+   "indice": 50
   },
   {
    "wikidata": "Q4226736",
@@ -13676,7 +14992,7 @@
    "lingue": [
     "sloveno"
    ],
-   "indice": 15
+   "indice": 28
   },
   {
    "wikidata": "Q4450064",
@@ -13715,7 +15031,7 @@
    "lingue": [
     "polacco"
    ],
-   "indice": 9
+   "indice": 20
   },
   {
    "wikidata": "Q21296207",
@@ -13772,7 +15088,7 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 14
+   "indice": 26
   },
   {
    "wikidata": "Q5932246",
@@ -13802,7 +15118,7 @@
    "lingue": [
     "spagnolo"
    ],
-   "indice": 12
+   "indice": 50
   },
   {
    "wikidata": "Q12025738",
@@ -13849,7 +15165,7 @@
    "paesi": [
     "Svizzera"
    ],
-   "indice": 3
+   "indice": 13
   },
   {
    "wikidata": "Q18534199",
@@ -13895,7 +15211,7 @@
     "licenza": "Public domain",
     "autore": "AnonymousUnknown author"
    },
-   "indice": 12
+   "indice": 50
   },
   {
    "wikidata": "Q12026111",
@@ -13972,7 +15288,7 @@
    "lingue": [
     "sloveno"
    ],
-   "indice": 12
+   "indice": 50
   },
   {
    "wikidata": "Q33110662",
@@ -14009,7 +15325,21 @@
    "lingue": [
     "spagnolo"
    ],
-   "indice": 12
+   "indice": 50,
+   "traduzioni": {
+    "opere": 4,
+    "con_lingua": 4,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 4,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q26863947",
@@ -14044,7 +15374,7 @@
    "lingue": [
     "romeno"
    ],
-   "indice": 12
+   "indice": 50
   },
   {
    "wikidata": "Q12816064",
@@ -14119,7 +15449,7 @@
    "lingue": [
     "polacco"
    ],
-   "indice": 12
+   "indice": 50
   },
   {
    "wikidata": "Q11653668",
@@ -14149,7 +15479,7 @@
    "lingue": [
     "giapponese"
    ],
-   "indice": 12
+   "indice": 50
   },
   {
    "wikidata": "Q22115110",
@@ -14178,7 +15508,7 @@
    "lingue": [
     "polacco"
    ],
-   "indice": 12
+   "indice": 50
   },
   {
    "wikidata": "Q11437198",
@@ -14208,7 +15538,7 @@
    "lingue": [
     "giapponese"
    ],
-   "indice": 12
+   "indice": 50
   },
   {
    "wikidata": "Q1782032",
@@ -14267,7 +15597,7 @@
     "ungherese",
     "romeno"
    ],
-   "indice": 12
+   "indice": 50
   },
   {
    "wikidata": "Q11144875",
@@ -14353,7 +15683,21 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 31
+   "indice": 45,
+   "traduzioni": {
+    "opere": 3,
+    "con_lingua": 3,
+    "per_lingua": {
+     "it": 0,
+     "en": 3,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q116921128",
@@ -14401,7 +15745,7 @@
    "lingue": [
     "polacco"
    ],
-   "indice": 12
+   "indice": 50
   },
   {
    "wikidata": "Q117470157",
@@ -14512,7 +15856,7 @@
    "lingue": [
     "francese"
    ],
-   "indice": 12
+   "indice": 50
   },
   {
    "wikidata": "Q12161600",
@@ -14548,7 +15892,7 @@
    "lingue": [
     "francese"
    ],
-   "indice": 12
+   "indice": 50
   },
   {
    "wikidata": "Q12035492",
@@ -14584,7 +15928,21 @@
     "Cecoslovacchia",
     "Austria-Ungheria"
    ],
-   "indice": 12
+   "indice": 50,
+   "traduzioni": {
+    "opere": 0,
+    "con_lingua": 0,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q84941121",
@@ -14621,7 +15979,7 @@
    "lingue": [
     "tedesco"
    ],
-   "indice": 12
+   "indice": 50
   },
   {
    "wikidata": "Q11881334",
@@ -14658,7 +16016,7 @@
    "lingue": [
     "francese"
    ],
-   "indice": 12
+   "indice": 50
   },
   {
    "wikidata": "Q15987813",
@@ -14682,7 +16040,7 @@
    "lingue": [
     "francese"
    ],
-   "indice": 12
+   "indice": 50
   },
   {
    "wikidata": "Q6796494",
@@ -14719,7 +16077,21 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 29
+   "indice": 41,
+   "traduzioni": {
+    "opere": 31,
+    "con_lingua": 27,
+    "per_lingua": {
+     "it": 0,
+     "en": 25,
+     "es": 0,
+     "fr": 0,
+     "de": 1
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q15459090",
@@ -14746,7 +16118,7 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 47
+   "indice": 60
   },
   {
    "wikidata": "Q12881128",
@@ -14791,7 +16163,7 @@
    "lingue": [
     "russo"
    ],
-   "indice": 12
+   "indice": 50
   },
   {
    "wikidata": "Q12037555",
@@ -14811,7 +16183,7 @@
    "paesi": [
     "Cecoslovacchia"
    ],
-   "indice": 12
+   "indice": 50
   },
   {
    "wikidata": "Q15733349",
@@ -14864,7 +16236,21 @@
    "lingue": [
     "gujarati"
    ],
-   "indice": 26
+   "indice": 39,
+   "traduzioni": {
+    "opere": 0,
+    "con_lingua": 0,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q12096141",
@@ -14929,7 +16315,7 @@
    "lingue": [
     "ceco"
    ],
-   "indice": 12
+   "indice": 50
   },
   {
    "wikidata": "Q18412056",
@@ -14975,7 +16361,7 @@
    "lingue": [
     "francese"
    ],
-   "indice": 12
+   "indice": 50
   },
   {
    "wikidata": "Q100376115",
@@ -15007,7 +16393,7 @@
    "lingue": [
     "francese"
    ],
-   "indice": 12
+   "indice": 50
   },
   {
    "wikidata": "Q5882191",
@@ -15042,7 +16428,7 @@
    "lingue": [
     "estone"
    ],
-   "indice": 12
+   "indice": 50
   },
   {
    "wikidata": "Q22808343",
@@ -15106,7 +16492,21 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 51
+   "indice": 64,
+   "traduzioni": {
+    "opere": 67,
+    "con_lingua": 56,
+    "per_lingua": {
+     "it": 0,
+     "en": 56,
+     "es": 0,
+     "fr": 1,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q3386257",
@@ -15141,7 +16541,7 @@
     "licenza": "Public domain",
     "autore": "Unknown authorUnknown author"
    },
-   "indice": 12
+   "indice": 50
   },
   {
    "wikidata": "Q134578345",
@@ -15158,7 +16558,7 @@
     "Poesia"
    ],
    "n_opere": 0,
-   "indice": 12
+   "indice": 50
   },
   {
    "wikidata": "Q16052540",
@@ -15223,7 +16623,7 @@
    "lingue": [
     "inglese"
    ],
-   "indice": 45
+   "indice": 58
   },
   {
    "wikidata": "Q11944638",
@@ -15249,7 +16649,7 @@
     "spagnolo",
     "catalano"
    ],
-   "indice": 12
+   "indice": 50
   },
   {
    "wikidata": "Q29024566",
@@ -15284,7 +16684,7 @@
    "lingue": [
     "francese"
    ],
-   "indice": 12
+   "indice": 50
   },
   {
    "wikidata": "Q7320855",
@@ -15356,7 +16756,7 @@
    "lingue": [
     "estone"
    ],
-   "indice": 4
+   "indice": 14
   },
   {
    "wikidata": "Q94361427",
@@ -15394,7 +16794,7 @@
    "paesi": [
     "Stati Uniti"
    ],
-   "indice": 50
+   "indice": 63
   },
   {
    "wikidata": "Q56033516",
@@ -15463,7 +16863,7 @@
    "lingue": [
     "russo"
    ],
-   "indice": 12
+   "indice": 50
   },
   {
    "wikidata": "Q23943584",
@@ -15488,7 +16888,7 @@
    "lingue": [
     "russo"
    ],
-   "indice": 12
+   "indice": 50
   },
   {
    "wikidata": "Q7581807",
@@ -15547,7 +16947,12 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Cina"
+   ],
+   "indice": 50
   },
   {
    "wikidata": "Q17380913",
@@ -15574,7 +16979,19 @@
    "letterario": true,
    "tipo_catalogo": [
     "Saggi"
-   ]
+   ],
+   "bio": "Trinidad \"Trina\" Padilla de Sanz was a Puerto Rican writer. She was born in Vega Baja and adopted at Arecibo; she was a piano teacher, storyteller, and poet. Daughter of the doctor and poet José Gualberto Padilla, known as \"El Caribe\". Thus, Trina Padilla de Sanz was known as \"La Hija del Caribe\". She studied at Ruiz Arnau high school in Arecibo.",
+   "bio_url": "https://en.wikipedia.org/wiki/Trina_Padilla_de_Sanz",
+   "bio_lingua": "en",
+   "n_opere": 0,
+   "visite_12m": 406,
+   "paesi": [
+    "Stati Uniti"
+   ],
+   "lingue": [
+    "spagnolo"
+   ],
+   "indice": 30
   },
   {
    "wikidata": "Q51730015",
@@ -15590,7 +17007,19 @@
    "letterario": true,
    "tipo_catalogo": [
     "Teatro"
-   ]
+   ],
+   "n_opere": 0,
+   "foto": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Valentin_%C5%A0indler.jpg?width=800",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Valentin_%C5%A0indler.jpg",
+    "licenza": "Public domain",
+    "autore": "Jan Nepomuk Langhans"
+   },
+   "paesi": [
+    "Cecoslovacchia",
+    "Austria-Ungheria"
+   ],
+   "indice": 50
   },
   {
    "wikidata": "Q113447484",
@@ -15616,7 +17045,18 @@
    "letterario": true,
    "tipo_catalogo": [
     "Teatro"
-   ]
+   ],
+   "n_opere": 0,
+   "foto": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vl%C3%A1%C4%8Fa_%C5%A0mejkal_1950.tif?width=800",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Vl%C3%A1%C4%8Fa_%C5%A0mejkal_1950.tif",
+    "licenza": "CC BY-SA 4.0",
+    "autore": "Unknown authorUnknown author"
+   },
+   "paesi": [
+    "Cecoslovacchia"
+   ],
+   "indice": 50
   },
   {
    "wikidata": "Q9370418",
@@ -15632,7 +17072,15 @@
    "letterario": true,
    "tipo_catalogo": [
     "Romanzo"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Polonia"
+   ],
+   "lingue": [
+    "polacco"
+   ],
+   "indice": 50
   },
   {
    "wikidata": "Q1511834",
@@ -15659,7 +17107,15 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Polonia"
+   ],
+   "lingue": [
+    "polacco"
+   ],
+   "indice": 50
   },
   {
    "wikidata": "Q2572397",
@@ -15696,7 +17152,16 @@
    "letterario": true,
    "tipo_catalogo": [
     "Teatro"
-   ]
+   ],
+   "bio": "William James Hurlbut was a playwright, screenwriter, and artist.",
+   "bio_url": "https://en.wikipedia.org/wiki/William_James_Hurlbut",
+   "bio_lingua": "en",
+   "n_opere": 0,
+   "visite_12m": 886,
+   "lingue": [
+    "inglese"
+   ],
+   "indice": 51
   },
   {
    "wikidata": "Q8017582",
@@ -15713,7 +17178,22 @@
    "tipo_catalogo": [
     "Poesia",
     "Romanzo"
-   ]
+   ],
+   "bio": "William Ridley Wills was an American novelist, poet, and journalist. Born in Brownsville, Tennessee, he was a graduate of Vanderbilt University and a member of the \"Fugitives\" a literary movement of the 1920s. He worked for the Memphis Press, The Commercial Appeal, and the Nashville Banner newspapers before leaving for New York to become the Sunday Editor for the New York World. He served as a 2nd Lieutenant with the U.S.",
+   "bio_url": "https://en.wikipedia.org/wiki/William_Ridley_Wills",
+   "bio_lingua": "en",
+   "n_opere": 0,
+   "visite_12m": 435,
+   "foto": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/William_Ridley_Wills%2C_%28poet%29_c._1923.jpg?width=800",
+    "pagina": "https://commons.wikimedia.org/wiki/File:William_Ridley_Wills%2C_%28poet%29_c._1923.jpg",
+    "licenza": "CC BY-SA 4.0",
+    "autore": "Unknown photographer, probably a school photo."
+   },
+   "paesi": [
+    "Stati Uniti"
+   ],
+   "indice": 31
   },
   {
    "wikidata": "Q111367527",
@@ -15728,7 +17208,13 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "bio": "William Stahley Troxell was an American writer in the Pennsylvania German language. Born in Rising Sun, Pennsylvania, Troxell's dialect pseudonym was Pumpernickel Bill. He was an author of frequent dialect columns in the Allentown Call-Chronicle newspaper from 1925 to 1955 and served as president of the Pennsylvania German Society from 1952 to 1957. Troxell was a popular teacher of Pennsylvania German, as well as a prolific author of poems, pageants, and radio shows.",
+   "bio_url": "https://en.wikipedia.org/wiki/William_S._Troxell",
+   "bio_lingua": "en",
+   "n_opere": 0,
+   "visite_12m": 279,
+   "indice": 22
   },
   {
    "wikidata": "Q18199743",
@@ -15743,7 +17229,15 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Seconda Repubblica di Polonia"
+   ],
+   "lingue": [
+    "polacco"
+   ],
+   "indice": 50
   },
   {
    "wikidata": "Q6169722",
@@ -15761,7 +17255,37 @@
    "tipo_catalogo": [
     "Teatro",
     "Poesia"
-   ]
+   ],
+   "opere": [
+    {
+     "titolo": "Cansancio (cuentos criollos)",
+     "anno": 1927,
+     "generi": [],
+     "sl": 1
+    }
+   ],
+   "n_opere": 1,
+   "paesi": [
+    "Uruguay"
+   ],
+   "lingue": [
+    "spagnolo"
+   ],
+   "indice": 50,
+   "traduzioni": {
+    "opere": 18,
+    "con_lingua": 18,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 18,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q17221750",
@@ -15776,7 +17300,22 @@
    "letterario": true,
    "tipo_catalogo": [
     "Romanzo"
-   ]
+   ],
+   "n_opere": 0,
+   "foto": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Yoshiharu_Makino%2C_circa_1952.jpg?width=800",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Yoshiharu_Makino%2C_circa_1952.jpg",
+    "licenza": "Public domain",
+    "autore": "Unknown authorUnknown author"
+   },
+   "paesi": [
+    "Impero giapponese",
+    "Giappone"
+   ],
+   "lingue": [
+    "giapponese"
+   ],
+   "indice": 50
   },
   {
    "wikidata": "Q25451557",
@@ -15825,7 +17364,14 @@
    "letterario": true,
    "tipo_catalogo": [
     "Teatro"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Russia sovietica",
+    "Impero russo",
+    "Unione Sovietica"
+   ],
+   "indice": 50
   },
   {
    "wikidata": "Q25647050",
@@ -15852,7 +17398,15 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "foto": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%A1%D0%BE%D1%80%D0%BE%D0%BA%D0%B8%D0%BD_%D0%A1%D0%B5%D1%80%D0%B3%D0%B5%D0%B9_%D0%A1%D0%B5%D0%BC%D0%B5%D0%BD%D0%BE%D0%B2%D0%B8%D1%87_1932.jpg?width=800",
+    "pagina": "https://commons.wikimedia.org/wiki/File:%D0%A1%D0%BE%D1%80%D0%BE%D0%BA%D0%B8%D0%BD_%D0%A1%D0%B5%D1%80%D0%B3%D0%B5%D0%B9_%D0%A1%D0%B5%D0%BC%D0%B5%D0%BD%D0%BE%D0%B2%D0%B8%D1%87_1932.jpg",
+    "licenza": "Public domain",
+    "autore": "Личный архив"
+   },
+   "indice": 50
   },
   {
    "wikidata": "Q89473053",
@@ -15879,7 +17433,70 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "opere": [
+    {
+     "titolo": "Alaiki Mini Salam",
+     "anno": null,
+     "generi": [],
+     "sl": 1
+    },
+    {
+     "titolo": "al-Mathālith wa-al-mathānī",
+     "anno": 1926,
+     "generi": [],
+     "sl": 1
+    },
+    {
+     "titolo": "Qāmūs al-ʻawām",
+     "anno": 1923,
+     "generi": [],
+     "sl": 0
+    },
+    {
+     "titolo": "al-Mathālith wa-al-mathānī  (2ed vol.)",
+     "anno": 1930,
+     "generi": [],
+     "sl": 0
+    },
+    {
+     "titolo": "al-Mathālith wa-al-mathānī (1st Vol.)",
+     "anno": 1926,
+     "generi": [],
+     "sl": 0
+    }
+   ],
+   "n_opere": 5,
+   "foto": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%E1%B8%A4al%C4%ABm_Damm%C5%ABs.png?width=800",
+    "pagina": "https://commons.wikimedia.org/wiki/File:%E1%B8%A4al%C4%ABm_Damm%C5%ABs.png",
+    "licenza": "Public domain",
+    "autore": "UnknownUnknown"
+   },
+   "paesi": [
+    "Regno Arabo di Siria",
+    "Grande Libano",
+    "Impero ottomano",
+    "Libano"
+   ],
+   "lingue": [
+    "arabo"
+   ],
+   "indice": 50,
+   "traduzioni": {
+    "opere": 4,
+    "con_lingua": 3,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q57342365",
@@ -15917,7 +17534,58 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "bio": "Aaron Zucker, better known by his pen name A. Lutzky, was a Ukrainian-born Jewish American Yiddish poet.",
+   "bio_url": "https://en.wikipedia.org/wiki/A._Lutzky",
+   "bio_lingua": "en",
+   "opere": [
+    {
+     "titolo": "Balebaṭish un demoḳratish",
+     "anno": null,
+     "generi": [
+      "musical comedy"
+     ],
+     "sl": 0
+    },
+    {
+     "titolo": "ʻErev peredah Eliyahu Goldenberg",
+     "anno": null,
+     "generi": [
+      "dramma",
+      "poesia"
+     ],
+     "sl": 0
+    }
+   ],
+   "n_opere": 2,
+   "generi": [
+    "dramma",
+    "musical comedy",
+    "poesia"
+   ],
+   "visite_12m": 448,
+   "paesi": [
+    "Impero russo",
+    "Stati Uniti"
+   ],
+   "lingue": [
+    "yiddish"
+   ],
+   "indice": 27,
+   "traduzioni": {
+    "opere": 8,
+    "con_lingua": 8,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q108569163",
@@ -15932,7 +17600,16 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Regno dell'Iraq",
+    "Impero ottomano"
+   ],
+   "lingue": [
+    "arabo"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q15626918",
@@ -15948,7 +17625,9 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "indice": 28
   },
   {
    "wikidata": "Q364780",
@@ -15964,7 +17643,15 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Germania"
+   ],
+   "lingue": [
+    "tedesco"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q27133232",
@@ -15979,7 +17666,12 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "lingue": [
+    "italiano"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q365562",
@@ -16083,7 +17775,15 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Spagna"
+   ],
+   "lingue": [
+    "spagnolo"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q5665410",
@@ -16110,7 +17810,16 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Spagna"
+   ],
+   "lingue": [
+    "spagnolo",
+    "basco"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q130417995",
@@ -16180,7 +17889,15 @@
    "letterario": true,
    "tipo_catalogo": [
     "Teatro"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Canada"
+   ],
+   "lingue": [
+    "francese"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q95149854",
@@ -16207,7 +17924,12 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Finlandia"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q124968048",
@@ -16235,7 +17957,15 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Unione Sovietica"
+   ],
+   "lingue": [
+    "russo"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q23951265",
@@ -16250,7 +17980,9 @@
    "letterario": true,
    "tipo_catalogo": [
     "Romanzo"
-   ]
+   ],
+   "n_opere": 0,
+   "indice": 28
   },
   {
    "wikidata": "Q10820307",
@@ -16277,7 +18009,21 @@
    "letterario": true,
    "tipo_catalogo": [
     "Teatro"
-   ]
+   ],
+   "n_opere": 0,
+   "foto": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Andrey_Mitr._Rennikov.jpg?width=800",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Andrey_Mitr._Rennikov.jpg",
+    "licenza": "Public domain",
+    "autore": "Unknown authorUnknown author"
+   },
+   "paesi": [
+    "Impero russo"
+   ],
+   "lingue": [
+    "russo"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q16144941",
@@ -16336,7 +18082,41 @@
    "letterario": true,
    "tipo_catalogo": [
     "Romanzo"
-   ]
+   ],
+   "bio": "Anna Gordon Keown (1899–1957) was an English writer and poet.",
+   "bio_url": "https://en.wikipedia.org/wiki/Anna_Gordon_Keown",
+   "bio_lingua": "en",
+   "opere": [
+    {
+     "titolo": "Mr. Theobald's Devil",
+     "anno": null,
+     "generi": [],
+     "sl": 0
+    },
+    {
+     "titolo": "The Cat Who Saw God",
+     "anno": null,
+     "generi": [],
+     "sl": 0
+    }
+   ],
+   "n_opere": 2,
+   "visite_12m": 280,
+   "indice": 17,
+   "traduzioni": {
+    "opere": 5,
+    "con_lingua": 5,
+    "per_lingua": {
+     "it": 0,
+     "en": 5,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q110165397",
@@ -16352,7 +18132,13 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "lingue": [
+    "esperanto",
+    "croato"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q95389903",
@@ -16379,7 +18165,16 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Impero ottomano",
+    "Turchia"
+   ],
+   "lingue": [
+    "turco"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q11852701",
@@ -16427,7 +18222,12 @@
    "letterario": true,
    "tipo_catalogo": [
     "Teatro"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Finlandia"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q764872",
@@ -16552,7 +18352,12 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Unione Sovietica"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q136163634",
@@ -16568,7 +18373,13 @@
    "letterario": true,
    "tipo_catalogo": [
     "Romanzo"
-   ]
+   ],
+   "bio": "Violet Elsie Bradda Field was a Canadian–British novelist. She is best known for her novels The Earthen Lot (1928), which marked the beginning of her long publishing relationship with Constable, and Miledi (1941), a historical biography of Emma, Lady Hamilton that was selected as a \"Book of the Month\" by the Literary Guild. In 1933, she received the Femina–Vie Heureuse Prize for her novel Small Town.",
+   "bio_url": "https://en.wikipedia.org/wiki/Bradda_Field",
+   "bio_lingua": "en",
+   "n_opere": 0,
+   "visite_12m": 315,
+   "indice": 19
   },
   {
    "wikidata": "Q5734537",
@@ -16595,7 +18406,14 @@
    "letterario": true,
    "tipo_catalogo": [
     "Romanzo"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Repubblica di Cina",
+    "dinastia Qing",
+    "Cina"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q102419722",
@@ -16611,7 +18429,12 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Ungheria"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q55680917",
@@ -16648,7 +18471,19 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "bio": "Cathal O'Byrne was an Irish singer, poet and writer.",
+   "bio_url": "https://en.wikipedia.org/wiki/Cathal_O'Byrne",
+   "bio_lingua": "en",
+   "n_opere": 0,
+   "visite_12m": 556,
+   "paesi": [
+    "Irlanda"
+   ],
+   "lingue": [
+    "irlandese"
+   ],
+   "indice": 33
   },
   {
    "wikidata": "Q60157022",
@@ -16675,7 +18510,13 @@
    "letterario": true,
    "tipo_catalogo": [
     "Romanzo"
-   ]
+   ],
+   "bio": "Charles Edward Williams Reith was a Scottish police historian, best known for distilling the thought of Robert Peel into nine principles in his 1948 book A short history of the British police. He worked in Sri Lanka as a tea- and rubber- planter, where he joined the Ceylon Planters' Rifle Corps and on its disbandment rose to Captain in the Indian Army Reserve of Officers.",
+   "bio_url": "https://en.wikipedia.org/wiki/Charles_Reith",
+   "bio_lingua": "en",
+   "n_opere": 0,
+   "visite_12m": 654,
+   "indice": 37
   },
   {
    "wikidata": "Q3675014",
@@ -16702,7 +18543,12 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Francia"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q21556635",
@@ -16728,7 +18574,12 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Regno dei Paesi Bassi"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q114376824",
@@ -16787,7 +18638,12 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Cina"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q12876039",
@@ -16824,7 +18680,15 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Repubblica Socialista Federale di Jugoslavia"
+   ],
+   "lingue": [
+    "croato"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q5322203",
@@ -16883,7 +18747,12 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Argentina"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q16945526",
@@ -17033,7 +18902,16 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Francia"
+   ],
+   "lingue": [
+    "francese",
+    "occitano"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q5381696",
@@ -17081,7 +18959,22 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "bio": "Eric Barry Wilfred Chappelow was an English poet and conscientious objector during the First World War. His arrest and harsh treatment during four months of imprisonment garnered support from prominent people in Britain, including Chappelow's connections within the literary community. A campaign for his release was supported by Bertrand Russell, W. B. Yeats, and George Bernard Shaw.",
+   "bio_url": "https://en.wikipedia.org/wiki/Eric_Chappelow",
+   "bio_lingua": "en",
+   "n_opere": 0,
+   "visite_12m": 1285,
+   "foto": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Eric_Chappelow_in_1916.jpg?width=800",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Eric_Chappelow_in_1916.jpg",
+    "licenza": "Public domain",
+    "autore": "Philip Morrell"
+   },
+   "paesi": [
+    "Regno Unito"
+   ],
+   "indice": 51
   },
   {
    "wikidata": "Q1352000",
@@ -17174,7 +19067,13 @@
    "letterario": true,
    "tipo_catalogo": [
     "Romanzo"
-   ]
+   ],
+   "bio": "Esther Morgan McCullough was an American novelist and anthologist.",
+   "bio_url": "https://en.wikipedia.org/wiki/Esther_Morgan_McCullough",
+   "bio_lingua": "en",
+   "n_opere": 0,
+   "visite_12m": 300,
+   "indice": 18
   },
   {
    "wikidata": "Q113681575",
@@ -17190,7 +19089,15 @@
    "letterario": true,
    "tipo_catalogo": [
     "Teatro"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Spagna"
+   ],
+   "lingue": [
+    "spagnolo"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q47498362",
@@ -17220,7 +19127,13 @@
    "tipo_catalogo": [
     "Poesia",
     "Romanzo"
-   ]
+   ],
+   "bio": "Evan Biddle Shipman was an American novelist, poet, newspaperman and soldier. After schooling in New England, Shipman befriended fellow American writer Ernest Hemingway in 1920s Paris and wrote poems and articles for various American magazines. In 1937, he aided the Republican side in the Spanish Civil War and was wounded in battle. He returned to the United States in 1938 and served in the U.S. Army during World War II as a war correspondent.",
+   "bio_url": "https://en.wikipedia.org/wiki/Evan_Shipman",
+   "bio_lingua": "en",
+   "n_opere": 0,
+   "visite_12m": 5034,
+   "indice": 66
   },
   {
    "wikidata": "Q138786997",
@@ -17257,7 +19170,13 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "bio": "Fabian Strachan Woodley, MC was a British newspaperman, a soldier in the Great War, a schoolmaster, and a poet.",
+   "bio_url": "https://en.wikipedia.org/wiki/Fabian_S._Woodley",
+   "bio_lingua": "en",
+   "n_opere": 0,
+   "visite_12m": 545,
+   "indice": 32
   },
   {
    "wikidata": "Q20789772",
@@ -17272,7 +19191,12 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Cuba"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q95901639",
@@ -17321,7 +19245,15 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Stati Uniti"
+   ],
+   "lingue": [
+    "inglese"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q139494955",
@@ -17348,7 +19280,16 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Spagna"
+   ],
+   "lingue": [
+    "spagnolo",
+    "asturiano"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q134373822",
@@ -17374,7 +19315,13 @@
    "letterario": true,
    "tipo_catalogo": [
     "Romanzo"
-   ]
+   ],
+   "bio": "Frank Tilsley was a British novelist, broadcaster, and television dramatist. Tilsley became a full-time author after the publication of his first novel, Plebeian's Progress (1933), and subsequently published over twenty novels, including She Was There Too (1938), Pleasure Beach (1944), Champion Road (1948), Heaven and Herbert Common (1953), and Brother Nap (1954). His novel Mutiny (1958) was adapted for film and released as H.M.S.",
+   "bio_url": "https://en.wikipedia.org/wiki/Frank_Tilsley",
+   "bio_lingua": "en",
+   "n_opere": 0,
+   "visite_12m": 976,
+   "indice": 47
   },
   {
    "wikidata": "Q106765089",
@@ -17390,7 +19337,40 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "opere": [
+    {
+     "titolo": "Boj o hospodářskou budoucnost Československa",
+     "anno": 1936,
+     "generi": [],
+     "sl": 0
+    }
+   ],
+   "n_opere": 1,
+   "foto": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Zeman_Franti%C5%A1ek.jpg?width=800",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Zeman_Franti%C5%A1ek.jpg",
+    "licenza": "Public domain",
+    "autore": "není známo"
+   },
+   "lingue": [
+    "ceco"
+   ],
+   "indice": 28,
+   "traduzioni": {
+    "opere": 0,
+    "con_lingua": 0,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q95223760",
@@ -17406,7 +19386,12 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "lingue": [
+    "tedesco"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q1448509",
@@ -17500,7 +19485,25 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "foto": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fouad-AlKhateeb.jpg?width=800",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Fouad-AlKhateeb.jpg",
+    "licenza": "Public domain",
+    "autore": "Public Domain"
+   },
+   "paesi": [
+    "Transgiordania",
+    "Regno hascemita dell'Hegiaz",
+    "Regno Arabo di Siria",
+    "Impero ottomano",
+    "Libano"
+   ],
+   "lingue": [
+    "arabo"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q12230093",
@@ -17526,7 +19529,18 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "foto": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gaston-Maxime_Gout%C3%A9_1922.jpg?width=800",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Gaston-Maxime_Gout%C3%A9_1922.jpg",
+    "licenza": "Public domain",
+    "autore": "Unknown authorUnknown author"
+   },
+   "paesi": [
+    "Francia"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q75405650",
@@ -17544,7 +19558,26 @@
    "tipo_catalogo": [
     "Poesia",
     "Romanzo"
-   ]
+   ],
+   "bio": "Georgette Agnew (1865–1957) was an English writer who occasionally published works under the pseudonym Nevin Halys. She was brought up in Egypt.",
+   "bio_url": "https://en.wikipedia.org/wiki/Georgette_Agnew",
+   "bio_lingua": "en",
+   "n_opere": 0,
+   "visite_12m": 170,
+   "foto": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/John_Singer_Sargent_%281856-1925%29_-_Mrs_Philip_Leslie_Agnew_-_T00158_-_Tate.jpg?width=800",
+    "pagina": "https://commons.wikimedia.org/wiki/File:John_Singer_Sargent_%281856-1925%29_-_Mrs_Philip_Leslie_Agnew_-_T00158_-_Tate.jpg",
+    "licenza": "Public domain",
+    "autore": "John Singer Sargent"
+   },
+   "paesi": [
+    "Regno Unito di Gran Bretagna e Irlanda",
+    "Regno Unito"
+   ],
+   "lingue": [
+    "inglese"
+   ],
+   "indice": 11
   },
   {
    "wikidata": "Q3771288",
@@ -17559,7 +19592,20 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "bio": "Giuseppe Raga è stato un poeta italiano.",
+   "bio_url": "https://it.wikipedia.org/wiki/Giuseppe_Raga",
+   "bio_lingua": "it",
+   "n_opere": 0,
+   "visite_12m": 188,
+   "paesi": [
+    "Regno d'Italia",
+    "Italia"
+   ],
+   "lingue": [
+    "italiano"
+   ],
+   "indice": 13
   },
   {
    "wikidata": "Q20606911",
@@ -17596,7 +19642,15 @@
    "letterario": true,
    "tipo_catalogo": [
     "Teatro"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Cuba"
+   ],
+   "lingue": [
+    "spagnolo"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q9282828",
@@ -17612,7 +19666,12 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "lingue": [
+    "polacco"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q1249640",
@@ -17627,7 +19686,12 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Ungheria"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q100949256",
@@ -17664,7 +19728,16 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Regno dell'Iraq",
+    "Impero ottomano"
+   ],
+   "lingue": [
+    "arabo"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q56701913",
@@ -17690,7 +19763,13 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Impero giapponese",
+    "Giappone"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q55192298",
@@ -17739,7 +19818,37 @@
    "letterario": true,
    "tipo_catalogo": [
     "Teatro"
-   ]
+   ],
+   "opere": [
+    {
+     "titolo": "Der Lehrling",
+     "anno": null,
+     "generi": [],
+     "sl": 0
+    }
+   ],
+   "n_opere": 1,
+   "paesi": [
+    "Svizzera"
+   ],
+   "lingue": [
+    "tedesco"
+   ],
+   "indice": 28,
+   "traduzioni": {
+    "opere": 10,
+    "con_lingua": 10,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 10
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q16427066",
@@ -17787,7 +19896,12 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "lingue": [
+    "tedesco"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q73571460",
@@ -17836,7 +19950,12 @@
    "letterario": true,
    "tipo_catalogo": [
     "Teatro"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Belgio"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q49995302",
@@ -17884,7 +20003,19 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "bio": "Herbert Elliott Pearce was an English poet from Gloucester.",
+   "bio_url": "https://en.wikipedia.org/wiki/Herbert_Elliott_Pearce",
+   "bio_lingua": "en",
+   "n_opere": 0,
+   "visite_12m": 110,
+   "foto": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/HerbertElliottPearceinRoyalFlyingCorpsUniform.jpg?width=800",
+    "pagina": "https://commons.wikimedia.org/wiki/File:HerbertElliottPearceinRoyalFlyingCorpsUniform.jpg",
+    "licenza": "Public domain",
+    "autore": "Unknown authorUnknown author"
+   },
+   "indice": 8
   },
   {
    "wikidata": "Q10295013",
@@ -17922,7 +20053,12 @@
    "letterario": true,
    "tipo_catalogo": [
     "Saggi"
-   ]
+   ],
+   "n_opere": 0,
+   "lingue": [
+    "tedesco"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q85584688",
@@ -17937,7 +20073,15 @@
    "letterario": true,
    "tipo_catalogo": [
     "Romanzo"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Giappone"
+   ],
+   "lingue": [
+    "giapponese"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q10298008",
@@ -17953,7 +20097,15 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Brasile"
+   ],
+   "lingue": [
+    "portoghese"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q5930698",
@@ -17968,7 +20120,19 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "bio": "Monsignor Hugh Francis Blunt was a Catholic priest, author, poet, and apologist. He was born in Medway, Massachusetts, to Irish immigrants Patrick Blunt and Ann Mahon. Blunt began writing while attending St. Laurent College in Montreal.",
+   "bio_url": "https://en.wikipedia.org/wiki/Hugh_F._Blunt",
+   "bio_lingua": "en",
+   "n_opere": 0,
+   "visite_12m": 349,
+   "paesi": [
+    "Stati Uniti"
+   ],
+   "lingue": [
+    "inglese"
+   ],
+   "indice": 21
   },
   {
    "wikidata": "Q6200066",
@@ -17995,7 +20159,16 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Austria-Ungheria",
+    "Romania"
+   ],
+   "lingue": [
+    "romeno"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q100456094",
@@ -18010,7 +20183,16 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Regno del Neged e dell'Hegiaz",
+    "Arabia Saudita"
+   ],
+   "lingue": [
+    "arabo"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q11710923",
@@ -18026,7 +20208,16 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Polonia"
+   ],
+   "lingue": [
+    "polacco",
+    "yiddish"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q133443963",
@@ -18042,7 +20233,13 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "bio": "Isaac Berliner was a Mexican-Jewish writer. He was born in Łódź during WW1 he began writing, but moved to Mexico in 1922 where he became an important Mexican Jewish writer and social figure; he died in 1957.",
+   "bio_url": "https://en.wikipedia.org/wiki/Isaac_Berliner",
+   "bio_lingua": "en",
+   "n_opere": 0,
+   "visite_12m": 607,
+   "indice": 36
   },
   {
    "wikidata": "Q112707995",
@@ -18057,7 +20254,22 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "bio": "Isabel Dutaud Nagle Lachaise (1872–1957) was an American-born, amateur poet and draftsman, and wife of sculptor Gaston Lachaise active in the early 20th century. Isabel Lachaise was his muse, model, and the primary inspiration for most of his sculptures and drawings.",
+   "bio_url": "https://en.wikipedia.org/wiki/Isabel_Dutaud_Nagle_Lachaise",
+   "bio_lingua": "en",
+   "n_opere": 0,
+   "visite_12m": 973,
+   "foto": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Belle_Lachaise_saam_1976.145.21.jpg?width=800",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Belle_Lachaise_saam_1976.145.21.jpg",
+    "licenza": "CC0",
+    "autore": "Gaston Lachaise"
+   },
+   "paesi": [
+    "Stati Uniti"
+   ],
+   "indice": 47
   },
   {
    "wikidata": "Q50298099",
@@ -18073,7 +20285,43 @@
    "letterario": true,
    "tipo_catalogo": [
     "Teatro"
-   ]
+   ],
+   "opere": [
+    {
+     "titolo": "Cap Wil Tomos",
+     "anno": 1946,
+     "generi": [],
+     "sl": 0
+    },
+    {
+     "titolo": "Storïau a phortreadau",
+     "anno": 1954,
+     "generi": [],
+     "sl": 0
+    }
+   ],
+   "n_opere": 2,
+   "paesi": [
+    "Galles"
+   ],
+   "lingue": [
+    "gallese"
+   ],
+   "indice": 28,
+   "traduzioni": {
+    "opere": 15,
+    "con_lingua": 13,
+    "per_lingua": {
+     "it": 0,
+     "en": 1,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q12952057",
@@ -18088,7 +20336,9 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "indice": 28
   },
   {
    "wikidata": "Q12791526",
@@ -18104,7 +20354,12 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Repubblica Socialista Federale di Jugoslavia"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q4492921",
@@ -18120,7 +20375,15 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Unione Sovietica"
+   ],
+   "lingue": [
+    "russo"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q12281275",
@@ -18147,7 +20410,16 @@
    "letterario": true,
    "tipo_catalogo": [
     "Teatro"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Impero russo",
+    "Unione Sovietica"
+   ],
+   "lingue": [
+    "russo"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q11977740",
@@ -18217,7 +20489,12 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Regno dei Paesi Bassi"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q51852828",
@@ -18266,7 +20543,16 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Francia"
+   ],
+   "lingue": [
+    "francese",
+    "occitano"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q60029190",
@@ -18293,7 +20579,15 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Francia"
+   ],
+   "lingue": [
+    "francese"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q102622238",
@@ -18377,7 +20671,15 @@
    "tipo_catalogo": [
     "Teatro",
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Germania"
+   ],
+   "lingue": [
+    "tedesco"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q24572885",
@@ -18459,7 +20761,15 @@
    "letterario": true,
    "tipo_catalogo": [
     "Teatro"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Francia"
+   ],
+   "lingue": [
+    "francese"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q1957341",
@@ -18475,7 +20785,15 @@
    "letterario": true,
    "tipo_catalogo": [
     "Teatro"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Belgio"
+   ],
+   "lingue": [
+    "olandese"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q65165600",
@@ -18502,7 +20820,15 @@
    "letterario": true,
    "tipo_catalogo": [
     "Saggi"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Uruguay"
+   ],
+   "lingue": [
+    "spagnolo"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q12260947",
@@ -18572,7 +20898,15 @@
    "letterario": true,
    "tipo_catalogo": [
     "Teatro"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Argentina"
+   ],
+   "lingue": [
+    "spagnolo"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q124041418",
@@ -18720,7 +21054,9 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "indice": 28
   },
   {
    "wikidata": "Q11413994",
@@ -18736,7 +21072,22 @@
    "letterario": true,
    "tipo_catalogo": [
     "Romanzo"
-   ]
+   ],
+   "n_opere": 0,
+   "foto": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Yoshida_Kinetaro.JPG?width=800",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Yoshida_Kinetaro.JPG",
+    "licenza": "Public domain",
+    "autore": "朝日新聞社"
+   },
+   "paesi": [
+    "Impero giapponese",
+    "Giappone"
+   ],
+   "lingue": [
+    "giapponese"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q17228173",
@@ -18797,7 +21148,16 @@
    "tipo_catalogo": [
     "Teatro",
     "Romanzo"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Impero giapponese",
+    "Giappone"
+   ],
+   "lingue": [
+    "giapponese"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q11874246",
@@ -18856,7 +21216,13 @@
    "letterario": true,
    "tipo_catalogo": [
     "Teatro"
-   ]
+   ],
+   "n_opere": 0,
+   "gutenberg": 252,
+   "paesi": [
+    "Finlandia"
+   ],
+   "indice": 17
   },
   {
    "wikidata": "Q131597688",
@@ -18904,7 +21270,16 @@
    "letterario": true,
    "tipo_catalogo": [
     "Romanzo"
-   ]
+   ],
+   "bio": "Lettie Hamlett Rogers was an American novelist and educator.",
+   "bio_url": "https://en.wikipedia.org/wiki/Lettie_Hamlet_Rogers",
+   "bio_lingua": "en",
+   "n_opere": 0,
+   "visite_12m": 197,
+   "paesi": [
+    "Stati Uniti"
+   ],
+   "indice": 14
   },
   {
    "wikidata": "Q112184470",
@@ -18954,7 +21329,12 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Stati Uniti"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q5983007",
@@ -18970,7 +21350,15 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Argentina"
+   ],
+   "lingue": [
+    "spagnolo"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q23017205",
@@ -18985,7 +21373,16 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "bio": "Luther Bacon Scherer was an American businessman, real estate investor and poet.",
+   "bio_url": "https://en.wikipedia.org/wiki/Luther_B._Scherer",
+   "bio_lingua": "en",
+   "n_opere": 0,
+   "visite_12m": 1871,
+   "paesi": [
+    "Stati Uniti"
+   ],
+   "indice": 56
   },
   {
    "wikidata": "Q11879945",
@@ -19024,7 +21421,9 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "indice": 28
   },
   {
    "wikidata": "Q135191380",
@@ -19039,7 +21438,12 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Belgio"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q11454699",
@@ -19054,7 +21458,13 @@
    "letterario": true,
    "tipo_catalogo": [
     "Saggi"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Impero giapponese",
+    "Giappone"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q5558280",
@@ -19070,7 +21480,15 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Nicaragua"
+   ],
+   "lingue": [
+    "spagnolo"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q85419669",
@@ -19087,7 +21505,23 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "foto": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Picture_of_Margarete_M%C3%BCnsterberg.jpg?width=800",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Picture_of_Margarete_M%C3%BCnsterberg.jpg",
+    "licenza": "Public domain",
+    "autore": "Unknown authorUnknown author"
+   },
+   "paesi": [
+    "Germania",
+    "Stati Uniti"
+   ],
+   "lingue": [
+    "tedesco",
+    "inglese"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q21536489",
@@ -19102,7 +21536,16 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "bio": "Marguerite Helen Power was an Australian poet.",
+   "bio_url": "https://en.wikipedia.org/wiki/Marguerite_Helen_Power",
+   "bio_lingua": "en",
+   "n_opere": 0,
+   "visite_12m": 513,
+   "paesi": [
+    "Australia"
+   ],
+   "indice": 30
   },
   {
    "wikidata": "Q139374471",
@@ -19117,7 +21560,13 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "bio": "Marguerite Lawall Janvrin Adams was an American poet active from the 1920s into the 1950s.",
+   "bio_url": "https://en.wikipedia.org/wiki/Marguerite_Janvrin_Adams",
+   "bio_lingua": "en",
+   "n_opere": 0,
+   "visite_12m": 92,
+   "indice": 8
   },
   {
    "wikidata": "Q11768732",
@@ -19146,7 +21595,15 @@
    "tipo_catalogo": [
     "Teatro",
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Spagna"
+   ],
+   "lingue": [
+    "spagnolo"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q95184845",
@@ -19195,7 +21652,13 @@
    "letterario": true,
    "tipo_catalogo": [
     "Romanzo"
-   ]
+   ],
+   "bio": "Mateel Howe Farnham was an American novelist. The daughter of Edgar \"E.W.\" Watson Howe and Clara L. (Frank) Howe, she wed Dwight T. Farnham (1881–1950) in 1910.",
+   "bio_url": "https://en.wikipedia.org/wiki/Mateel_Farnham",
+   "bio_lingua": "en",
+   "n_opere": 0,
+   "visite_12m": 218,
+   "indice": 15
   },
   {
    "wikidata": "Q65533192",
@@ -19211,7 +21674,22 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "foto": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Matilde_Sauvayre_da_C%C3%A0mara.jpg?width=800",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Matilde_Sauvayre_da_C%C3%A0mara.jpg",
+    "licenza": "Public domain",
+    "autore": "not stated"
+   },
+   "paesi": [
+    "Regno del Portogallo",
+    "Portogallo"
+   ],
+   "lingue": [
+    "portoghese"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q16028022",
@@ -19248,7 +21726,12 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "lingue": [
+    "tedesco"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q2716642",
@@ -19264,7 +21747,12 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Austria"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q1559477",
@@ -19312,7 +21800,13 @@
    "letterario": true,
    "tipo_catalogo": [
     "Romanzo"
-   ]
+   ],
+   "bio": "Michael Alexander Arabian was a playwright and novelist of the early 20th century. He was the author of Yeraz (1921) and Joykin (1926). In some reviews of Joykin, Arabian was compared to the novelist Michael Arlen.",
+   "bio_url": "https://en.wikipedia.org/wiki/Michael_Arabian",
+   "bio_lingua": "en",
+   "n_opere": 0,
+   "visite_12m": 172,
+   "indice": 12
   },
   {
    "wikidata": "Q106094680",
@@ -19327,7 +21821,15 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Spagna"
+   ],
+   "lingue": [
+    "spagnolo"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q23055465",
@@ -19353,7 +21855,16 @@
    "letterario": true,
    "tipo_catalogo": [
     "Romanzo"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Impero giapponese",
+    "Giappone"
+   ],
+   "lingue": [
+    "giapponese"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q16119216",
@@ -19368,7 +21879,15 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Arabia Saudita"
+   ],
+   "lingue": [
+    "arabo"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q11666072",
@@ -19383,7 +21902,9 @@
    "letterario": true,
    "tipo_catalogo": [
     "Teatro"
-   ]
+   ],
+   "n_opere": 0,
+   "indice": 28
   },
   {
    "wikidata": "Q106957245",
@@ -19411,7 +21932,17 @@
    "letterario": true,
    "tipo_catalogo": [
     "Teatro"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Impero russo",
+    "Unione Sovietica",
+    "Repubblica Socialista Federativa Sovietica Russa"
+   ],
+   "lingue": [
+    "russo"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q109858043",
@@ -19426,7 +21957,13 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Paraguay",
+    "Francia"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q60826249",
@@ -19474,7 +22011,12 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Bulgaria"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q4506190",
@@ -19577,7 +22119,16 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Regno dei Paesi Bassi"
+   ],
+   "lingue": [
+    "olandese",
+    "frisone occidentale"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q1268628",
@@ -19669,7 +22220,15 @@
    "letterario": true,
    "tipo_catalogo": [
     "Romanzo"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Francia"
+   ],
+   "lingue": [
+    "francese"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q119957913",
@@ -19695,7 +22254,37 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "opere": [
+    {
+     "titolo": "Monographies de l'art belge",
+     "anno": null,
+     "generi": [],
+     "sl": 0
+    }
+   ],
+   "n_opere": 1,
+   "paesi": [
+    "Belgio"
+   ],
+   "lingue": [
+    "francese"
+   ],
+   "indice": 28,
+   "traduzioni": {
+    "opere": 54,
+    "con_lingua": 48,
+    "per_lingua": {
+     "it": 0,
+     "en": 7,
+     "es": 0,
+     "fr": 44,
+     "de": 2
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q15445419",
@@ -19778,7 +22367,15 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Germania"
+   ],
+   "lingue": [
+    "tedesco"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q2077347",
@@ -19815,7 +22412,12 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Francia"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q116741965",
@@ -19864,7 +22466,16 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Ungheria"
+   ],
+   "lingue": [
+    "ungherese",
+    "tedesco"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q107605031",
@@ -19879,7 +22490,12 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Impero russo"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q109588912",
@@ -19895,7 +22511,12 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Egitto"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q12205690",
@@ -19911,7 +22532,15 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Libia"
+   ],
+   "lingue": [
+    "arabo"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q12227839",
@@ -19927,7 +22556,15 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Libia"
+   ],
+   "lingue": [
+    "arabo"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q12244854",
@@ -19953,7 +22590,12 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Kuwait"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q136644413",
@@ -19969,7 +22611,9 @@
    "letterario": true,
    "tipo_catalogo": [
     "Teatro"
-   ]
+   ],
+   "n_opere": 0,
+   "indice": 28
   },
   {
    "wikidata": "Q16714058",
@@ -19984,7 +22628,16 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Austria-Ungheria",
+    "Canada"
+   ],
+   "lingue": [
+    "ucraino"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q16714944",
@@ -20012,7 +22665,9 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "indice": 28
   },
   {
    "wikidata": "Q42331390",
@@ -20061,7 +22716,16 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Regno dell'Iraq",
+    "Impero ottomano"
+   ],
+   "lingue": [
+    "arabo"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q3929044",
@@ -20076,7 +22740,20 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "bio": "Raffaele Chiurazzi è stato un poeta italiano.",
+   "bio_url": "https://it.wikipedia.org/wiki/Raffaele_Chiurazzi",
+   "bio_lingua": "it",
+   "n_opere": 0,
+   "visite_12m": 267,
+   "paesi": [
+    "Regno d'Italia",
+    "Italia"
+   ],
+   "lingue": [
+    "italiano"
+   ],
+   "indice": 16
   },
   {
    "wikidata": "Q4940702",
@@ -20113,7 +22790,21 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "foto": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/AndresCabrelles.jpg?width=800",
+    "pagina": "https://commons.wikimedia.org/wiki/File:AndresCabrelles.jpg",
+    "licenza": "CC BY-SA 4.0",
+    "autore": "CbarqueroC"
+   },
+   "paesi": [
+    "Spagna"
+   ],
+   "lingue": [
+    "catalano"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q122878098",
@@ -20139,7 +22830,15 @@
    "letterario": true,
    "tipo_catalogo": [
     "Teatro"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Francia"
+   ],
+   "lingue": [
+    "francese"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q109887451",
@@ -20176,7 +22875,16 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "bio": "Richard Selig (1929–1957), was an American poet. Born in 1929, Selig attended the University of Washington and later Magdalen College, Oxford as a Rhodes Scholar. He was introduced to Irish soprano and harpist Mary O'Hara by Irish poet Thomas Kinsella. The couple married in 1956, and Selig moved to the United States with O'Hara.",
+   "bio_url": "https://en.wikipedia.org/wiki/Richard_Selig",
+   "bio_lingua": "en",
+   "n_opere": 0,
+   "visite_12m": 1894,
+   "paesi": [
+    "Stati Uniti"
+   ],
+   "indice": 57
   },
   {
    "wikidata": "Q27862856",
@@ -20202,7 +22910,17 @@
    "letterario": true,
    "tipo_catalogo": [
     "Romanzo"
-   ]
+   ],
+   "n_opere": 0,
+   "gutenberg": 266,
+   "paesi": [
+    "Granducato di Finlandia",
+    "Finlandia"
+   ],
+   "lingue": [
+    "finlandese"
+   ],
+   "indice": 19
   },
   {
    "wikidata": "Q1337292",
@@ -20273,7 +22991,18 @@
    "letterario": true,
    "tipo_catalogo": [
     "Teatro"
-   ]
+   ],
+   "n_opere": 0,
+   "foto": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/S_Jay_Kaufman_-_Dec_1918_EH.jpg?width=800",
+    "pagina": "https://commons.wikimedia.org/wiki/File:S_Jay_Kaufman_-_Dec_1918_EH.jpg",
+    "licenza": "Public domain",
+    "autore": "Unknown photographerUnknown photographer"
+   },
+   "paesi": [
+    "Stati Uniti"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q20041963",
@@ -20288,7 +23017,16 @@
    "letterario": true,
    "tipo_catalogo": [
     "Romanzo"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Impero giapponese",
+    "Giappone"
+   ],
+   "lingue": [
+    "giapponese"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q91431607",
@@ -20303,7 +23041,16 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Seconda Repubblica Siriana",
+    "Stato di Siria",
+    "Regno Arabo di Siria",
+    "Stato di Damasco",
+    "Impero ottomano"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q6121125",
@@ -20330,7 +23077,15 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Stati Uniti"
+   ],
+   "lingue": [
+    "yiddish"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q134171157",
@@ -20378,7 +23133,16 @@
    "letterario": true,
    "tipo_catalogo": [
     "Romanzo"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Impero giapponese",
+    "Giappone"
+   ],
+   "lingue": [
+    "giapponese"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q5894447",
@@ -20416,7 +23180,15 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Regno dei Paesi Bassi"
+   ],
+   "lingue": [
+    "olandese"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q7535871",
@@ -20431,7 +23203,16 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "bio": "Skipwith Cannell (1887–1957) was an American poet associated with the Imagist group. His surname is pronounced with the accent on the second syllable. He was a friend of William Carlos Williams, and like Ezra Pound he came from Philadelphia. Cannell studied at the University of Virginia and was enthusiastic about the work of Edgar Allan Poe and the free verse of The King James Version of The Bible.",
+   "bio_url": "https://en.wikipedia.org/wiki/Skipwith_Cannell",
+   "bio_lingua": "en",
+   "n_opere": 0,
+   "visite_12m": 686,
+   "paesi": [
+    "Stati Uniti"
+   ],
+   "indice": 39
   },
   {
    "wikidata": "Q24262151",
@@ -20457,7 +23238,15 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Polonia"
+   ],
+   "lingue": [
+    "polacco"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q16864293",
@@ -20549,7 +23338,16 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Impero giapponese",
+    "Giappone"
+   ],
+   "lingue": [
+    "giapponese"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q6142513",
@@ -20642,7 +23440,20 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "bio": "Ugo Gallo è stato un ispanista, traduttore e poeta italiano.",
+   "bio_url": "https://it.wikipedia.org/wiki/Ugo_Gallo",
+   "bio_lingua": "it",
+   "n_opere": 0,
+   "visite_12m": 170,
+   "paesi": [
+    "Regno d'Italia",
+    "Italia"
+   ],
+   "lingue": [
+    "italiano"
+   ],
+   "indice": 11
   },
   {
    "wikidata": "Q17381483",
@@ -20657,7 +23468,15 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Finlandia"
+   ],
+   "lingue": [
+    "finlandese"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q18645532",
@@ -20672,7 +23491,15 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Regno dei Serbi, Croati e Sloveni",
+    "Regno di Jugoslavia",
+    "Repubblica Socialista Federale di Jugoslavia",
+    "Austria-Ungheria"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q134247300",
@@ -20687,7 +23514,9 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "indice": 28
   },
   {
    "wikidata": "Q84730294",
@@ -20725,7 +23554,21 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "foto": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Victor_Gautron_du_Coudray_avant_1939.jpg?width=800",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Victor_Gautron_du_Coudray_avant_1939.jpg",
+    "licenza": "CC BY-SA 4.0",
+    "autore": "CVB"
+   },
+   "paesi": [
+    "Francia"
+   ],
+   "lingue": [
+    "francese"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q26769530",
@@ -20740,7 +23583,19 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "foto": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80_%D0%93%D0%BE%D0%BB%D1%8C%D1%86%D1%88%D0%BC%D0%B8%D0%B4%D1%82.jpg?width=800",
+    "pagina": "https://commons.wikimedia.org/wiki/File:%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80_%D0%93%D0%BE%D0%BB%D1%8C%D1%86%D1%88%D0%BC%D0%B8%D0%B4%D1%82.jpg",
+    "licenza": "Public domain",
+    "autore": "Unknown authorUnknown authorФотография из собр. В. В. Беляева, внука Гольцшмидта"
+   },
+   "paesi": [
+    "Impero russo",
+    "Unione Sovietica"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q2077646",
@@ -20845,7 +23700,16 @@
    "tipo_catalogo": [
     "Teatro",
     "Romanzo"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Regno Unito di Gran Bretagna e Irlanda",
+    "Regno Unito"
+   ],
+   "lingue": [
+    "inglese"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q8043294",
@@ -20872,7 +23736,12 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Sudan"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q13461607",
@@ -20888,7 +23757,15 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Lettonia"
+   ],
+   "lingue": [
+    "lettone"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q16507418",
@@ -20914,7 +23791,15 @@
    "letterario": true,
    "tipo_catalogo": [
     "Romanzo"
-   ]
+   ],
+   "n_opere": 0,
+   "foto": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Georges_Quet_%28i.e._Edouard_Quet%2C_romancier%29_-_btv1b6910456w.jpg?width=800",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Georges_Quet_%28i.e._Edouard_Quet%2C_romancier%29_-_btv1b6910456w.jpg",
+    "licenza": "Public domain",
+    "autore": "Agence Rol. Agence photographique (commanditaire)"
+   },
+   "indice": 28
   },
   {
    "wikidata": "Q16371423",
@@ -20941,7 +23826,15 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Unione Sovietica"
+   ],
+   "lingue": [
+    "russo"
+   ],
+   "indice": 28
   },
   {
    "wikidata": "Q26244618",
@@ -21000,7 +23893,16 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Stati Uniti"
+   ],
+   "lingue": [
+    "yiddish",
+    "ebraico"
+   ],
+   "indice": 7
   },
   {
    "wikidata": "Q124745862",
@@ -21070,7 +23972,12 @@
    "letterario": true,
    "tipo_catalogo": [
     "Saggi"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Ecuador"
+   ],
+   "indice": 7
   },
   {
    "wikidata": "Q112555172",
@@ -21087,7 +23994,13 @@
    "letterario": true,
    "tipo_catalogo": [
     "Teatro"
-   ]
+   ],
+   "n_opere": 0,
+   "lingue": [
+    "tedesco",
+    "russo"
+   ],
+   "indice": 7
   },
   {
    "wikidata": "Q133481504",
@@ -21124,7 +24037,9 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "indice": 7
   },
   {
    "wikidata": "Q95006230",
@@ -21141,7 +24056,16 @@
    "tipo_catalogo": [
     "Teatro",
     "Saggi"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Cisleitania",
+    "Austria"
+   ],
+   "lingue": [
+    "tedesco"
+   ],
+   "indice": 7
   },
   {
    "wikidata": "Q133761440",
@@ -21192,7 +24116,46 @@
    "tipo_catalogo": [
     "Teatro",
     "Poesia"
-   ]
+   ],
+   "opere": [
+    {
+     "titolo": "A my jsme ho zabili!: hra o třech jednáních",
+     "anno": 1924,
+     "generi": [],
+     "sl": 0
+    },
+    {
+     "titolo": "Don Bosco: hra o 4 jednáních",
+     "anno": 1938,
+     "generi": [],
+     "sl": 0
+    },
+    {
+     "titolo": "Na okraj dnů: sto epigramů",
+     "anno": 1926,
+     "generi": [],
+     "sl": 0
+    }
+   ],
+   "n_opere": 3,
+   "paesi": [
+    "Cecoslovacchia"
+   ],
+   "indice": 7,
+   "traduzioni": {
+    "opere": 1,
+    "con_lingua": 1,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q94649336",
@@ -21218,7 +24181,15 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Regno dei Serbi, Croati e Sloveni",
+    "Cisleitania",
+    "Regno di Jugoslavia",
+    "Repubblica Socialista Federale di Jugoslavia"
+   ],
+   "indice": 7
   },
   {
    "wikidata": "Q65036966",
@@ -21244,7 +24215,9 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "indice": 7
   },
   {
    "wikidata": "Q110969502",
@@ -21260,7 +24233,15 @@
    "letterario": true,
    "tipo_catalogo": [
     "Teatro"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Cisleitania"
+   ],
+   "lingue": [
+    "tedesco"
+   ],
+   "indice": 7
   },
   {
    "wikidata": "Q120481837",
@@ -21320,7 +24301,9 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "indice": 7
   },
   {
    "wikidata": "Q56541610",
@@ -21357,7 +24340,67 @@
    "letterario": true,
    "tipo_catalogo": [
     "Teatro"
-   ]
+   ],
+   "opere": [
+    {
+     "titolo": "L'ereditiera",
+     "anno": null,
+     "generi": [
+      "dramma"
+     ],
+     "sl": 8
+    },
+    {
+     "titolo": "The heiress",
+     "anno": null,
+     "generi": [
+      "teatro drammatico"
+     ],
+     "sl": 0
+    },
+    {
+     "titolo": "The heiress",
+     "anno": null,
+     "generi": [
+      "teatro drammatico"
+     ],
+     "sl": 0
+    },
+    {
+     "titolo": "The heiress",
+     "anno": null,
+     "generi": [
+      "teatro drammatico"
+     ],
+     "sl": 0
+    }
+   ],
+   "n_opere": 4,
+   "generi": [
+    "teatro drammatico",
+    "dramma"
+   ],
+   "paesi": [
+    "Stati Uniti"
+   ],
+   "lingue": [
+    "inglese"
+   ],
+   "indice": 7,
+   "traduzioni": {
+    "opere": 5,
+    "con_lingua": 4,
+    "per_lingua": {
+     "it": 0,
+     "en": 4,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q113133714",
@@ -21428,7 +24471,9 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "indice": 7
   },
   {
    "wikidata": "Q94901916",
@@ -21498,7 +24543,12 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "lingue": [
+    "francese"
+   ],
+   "indice": 7
   },
   {
    "wikidata": "Q120433008",
@@ -21568,7 +24618,12 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "lingue": [
+    "ceco"
+   ],
+   "indice": 7
   },
   {
    "wikidata": "Q120432813",
@@ -21605,7 +24660,9 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "indice": 7
   },
   {
    "wikidata": "Q140088299",
@@ -21620,7 +24677,44 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "opere": [
+    {
+     "titolo": "Vairagyavaidyuthi",
+     "anno": 1924,
+     "generi": [
+      "filosofia"
+     ],
+     "sl": 1
+    }
+   ],
+   "n_opere": 1,
+   "generi": [
+    "filosofia"
+   ],
+   "paesi": [
+    "Impero anglo-indiano",
+    "India"
+   ],
+   "lingue": [
+    "malayalam",
+    "sanscrito"
+   ],
+   "indice": 7,
+   "traduzioni": {
+    "opere": 0,
+    "con_lingua": 0,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q120481801",
@@ -21690,7 +24784,15 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Stati Uniti"
+   ],
+   "lingue": [
+    "inglese"
+   ],
+   "indice": 7
   },
   {
    "wikidata": "Q42397829",
@@ -21749,7 +24851,15 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Giappone"
+   ],
+   "lingue": [
+    "giapponese"
+   ],
+   "indice": 7
   },
   {
    "wikidata": "Q94744848",
@@ -21831,7 +24941,12 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "lingue": [
+    "italiano"
+   ],
+   "indice": 7
   },
   {
    "wikidata": "Q94747356",
@@ -21957,7 +25072,16 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Francia"
+   ],
+   "lingue": [
+    "francese",
+    "occitano"
+   ],
+   "indice": 7
   },
   {
    "wikidata": "Q110211960",
@@ -21994,7 +25118,14 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Cisleitania",
+    "Regno d'Italia",
+    "Italia"
+   ],
+   "indice": 7
   },
   {
    "wikidata": "Q102285223",
@@ -22009,7 +25140,12 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Stati Uniti"
+   ],
+   "indice": 7
   },
   {
    "wikidata": "Q42395363",
@@ -22200,7 +25336,12 @@
    "letterario": true,
    "tipo_catalogo": [
     "Romanzo"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Regno dei Paesi Bassi"
+   ],
+   "indice": 7
   },
   {
    "wikidata": "Q94379584",
@@ -22237,7 +25378,9 @@
    "letterario": true,
    "tipo_catalogo": [
     "Teatro"
-   ]
+   ],
+   "n_opere": 0,
+   "indice": 7
   },
   {
    "wikidata": "Q87367729",
@@ -22255,7 +25398,15 @@
    "tipo_catalogo": [
     "Poesia",
     "Romanzo"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Italia"
+   ],
+   "lingue": [
+    "italiano"
+   ],
+   "indice": 7
   },
   {
    "wikidata": "Q134425374",
@@ -22270,7 +25421,9 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "indice": 7
   },
   {
    "wikidata": "Q132907293",
@@ -22331,7 +25484,9 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "indice": 7
   },
   {
    "wikidata": "Q94925178",
@@ -22357,7 +25512,9 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "indice": 7
   },
   {
    "wikidata": "Q137106460",
@@ -22516,7 +25673,15 @@
    "letterario": true,
    "tipo_catalogo": [
     "Teatro"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Francia"
+   ],
+   "lingue": [
+    "francese"
+   ],
+   "indice": 7
   },
   {
    "wikidata": "Q20804712",
@@ -22532,7 +25697,16 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Regno Unito di Gran Bretagna e Irlanda",
+    "Regno Unito"
+   ],
+   "lingue": [
+    "inglese"
+   ],
+   "indice": 7
   },
   {
    "wikidata": "Q118430585",
@@ -22569,7 +25743,12 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Stati Uniti"
+   ],
+   "indice": 7
   },
   {
    "wikidata": "Q94908208",
@@ -22607,7 +25786,17 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Canada"
+   ],
+   "lingue": [
+    "tedesco",
+    "inglese",
+    "yiddish"
+   ],
+   "indice": 7
   },
   {
    "wikidata": "Q120433557",
@@ -22655,7 +25844,15 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Polonia"
+   ],
+   "lingue": [
+    "polacco"
+   ],
+   "indice": 7
   },
   {
    "wikidata": "Q95072057",
@@ -22670,7 +25867,43 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "opere": [
+    {
+     "titolo": "60 veselých pikantních anekdot pro labužníky a přátele humoru",
+     "anno": 1919,
+     "generi": [],
+     "sl": 0
+    },
+    {
+     "titolo": "Průvodce okolím Písku",
+     "anno": 1940,
+     "generi": [],
+     "sl": 0
+    },
+    {
+     "titolo": "Z mé lyry",
+     "anno": 1941,
+     "generi": [],
+     "sl": 0
+    }
+   ],
+   "n_opere": 3,
+   "indice": 7,
+   "traduzioni": {
+    "opere": 0,
+    "con_lingua": 0,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q95183293",
@@ -22687,7 +25920,79 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "opere": [
+    {
+     "titolo": "Antonín Dvořák: o životě a díle velikého českého umělce",
+     "anno": 1941,
+     "generi": [],
+     "sl": 0
+    },
+    {
+     "titolo": "Barevná sklíčka",
+     "anno": 1940,
+     "generi": [],
+     "sl": 0
+    },
+    {
+     "titolo": "Bedřich Smetana, jeho život a dílo",
+     "anno": 1924,
+     "generi": [],
+     "sl": 0
+    },
+    {
+     "titolo": "Drahokam: hra o jednom jednání",
+     "anno": 1908,
+     "generi": [],
+     "sl": 0
+    },
+    {
+     "titolo": "Frant. hrabě Pocci, klasik loutkových her",
+     "anno": 1917,
+     "generi": [],
+     "sl": 0
+    },
+    {
+     "titolo": "Jak kočička zapomněla mňoukat",
+     "anno": 1941,
+     "generi": [],
+     "sl": 0
+    },
+    {
+     "titolo": "Kytička pohádek pro nejmenší čtenáře a jejich maminky",
+     "anno": 1926,
+     "generi": [],
+     "sl": 0
+    },
+    {
+     "titolo": "O Malíčkovi",
+     "anno": 1943,
+     "generi": [],
+     "sl": 0
+    }
+   ],
+   "n_opere": 14,
+   "paesi": [
+    "Cecoslovacchia"
+   ],
+   "lingue": [
+    "ceco"
+   ],
+   "indice": 7,
+   "traduzioni": {
+    "opere": 12,
+    "con_lingua": 12,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q95101952",
@@ -22736,7 +26041,17 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Francia"
+   ],
+   "lingue": [
+    "francese",
+    "occitano",
+    "dialetto guascone"
+   ],
+   "indice": 7
   },
   {
    "wikidata": "Q55673243",
@@ -22775,7 +26090,15 @@
    "tipo_catalogo": [
     "Poesia",
     "Saggi"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Francia"
+   ],
+   "lingue": [
+    "francese"
+   ],
+   "indice": 7
   },
   {
    "wikidata": "Q109856880",
@@ -22803,7 +26126,34 @@
    "letterario": true,
    "tipo_catalogo": [
     "Teatro"
-   ]
+   ],
+   "opere": [
+    {
+     "titolo": "Muška: románek mladých srdcí",
+     "anno": 1930,
+     "generi": [],
+     "sl": 0
+    }
+   ],
+   "n_opere": 1,
+   "paesi": [
+    "Cecoslovacchia"
+   ],
+   "indice": 7,
+   "traduzioni": {
+    "opere": 0,
+    "con_lingua": 0,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q95364349",
@@ -22884,7 +26234,12 @@
    "letterario": true,
    "tipo_catalogo": [
     "Teatro"
-   ]
+   ],
+   "n_opere": 0,
+   "lingue": [
+    "ceco"
+   ],
+   "indice": 7
   },
   {
    "wikidata": "Q94896010",
@@ -22922,7 +26277,15 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Francia"
+   ],
+   "lingue": [
+    "francese"
+   ],
+   "indice": 7
   },
   {
    "wikidata": "Q120479645",
@@ -23026,7 +26389,16 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Francia"
+   ],
+   "lingue": [
+    "francese",
+    "occitano"
+   ],
+   "indice": 7
   },
   {
    "wikidata": "Q137386950",
@@ -23076,7 +26448,12 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Cecoslovacchia"
+   ],
+   "indice": 7
   },
   {
    "wikidata": "Q136373066",
@@ -23168,7 +26545,12 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "lingue": [
+    "russo"
+   ],
+   "indice": 7
   },
   {
    "wikidata": "Q110165474",
@@ -23205,7 +26587,12 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Canada"
+   ],
+   "indice": 7
   },
   {
    "wikidata": "Q112390235",
@@ -23221,7 +26608,9 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "indice": 7
   },
   {
    "wikidata": "Q42382617",
@@ -23303,7 +26692,9 @@
    "letterario": true,
    "tipo_catalogo": [
     "Teatro"
-   ]
+   ],
+   "n_opere": 0,
+   "indice": 7
   },
   {
    "wikidata": "Q111633417",
@@ -23318,7 +26709,12 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Spagna"
+   ],
+   "indice": 7
   },
   {
    "wikidata": "Q42381613",
@@ -23399,7 +26795,16 @@
    "letterario": true,
    "tipo_catalogo": [
     "Romanzo"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Regno Unito di Gran Bretagna e Irlanda",
+    "Regno Unito"
+   ],
+   "lingue": [
+    "inglese"
+   ],
+   "indice": 7
   },
   {
    "wikidata": "Q120479684",
@@ -23436,7 +26841,12 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Italia"
+   ],
+   "indice": 7
   },
   {
    "wikidata": "Q131705282",
@@ -23496,7 +26906,12 @@
    "letterario": true,
    "tipo_catalogo": [
     "Romanzo"
-   ]
+   ],
+   "n_opere": 0,
+   "lingue": [
+    "ceco"
+   ],
+   "indice": 7
   },
   {
    "wikidata": "Q78076005",
@@ -23523,7 +26938,15 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Unione Sovietica"
+   ],
+   "lingue": [
+    "yiddish"
+   ],
+   "indice": 7
   },
   {
    "wikidata": "Q123915786",
@@ -23539,7 +26962,16 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Regno d'Italia",
+    "Italia"
+   ],
+   "lingue": [
+    "italiano"
+   ],
+   "indice": 7
   },
   {
    "wikidata": "Q65681469",
@@ -23589,7 +27021,12 @@
    "letterario": true,
    "tipo_catalogo": [
     "Teatro"
-   ]
+   ],
+   "n_opere": 0,
+   "lingue": [
+    "serbo"
+   ],
+   "indice": 7
   },
   {
    "wikidata": "Q109857992",
@@ -23615,7 +27052,9 @@
    "letterario": true,
    "tipo_catalogo": [
     "Teatro"
-   ]
+   ],
+   "n_opere": 0,
+   "indice": 7
   },
   {
    "wikidata": "Q65032884",
@@ -23709,7 +27148,13 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "lingue": [
+    "tedesco",
+    "ceco"
+   ],
+   "indice": 7
   },
   {
    "wikidata": "Q118593747",
@@ -23747,7 +27192,15 @@
    "letterario": true,
    "tipo_catalogo": [
     "Saggi"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Germania"
+   ],
+   "lingue": [
+    "tedesco"
+   ],
+   "indice": 7
   },
   {
    "wikidata": "Q59601543",
@@ -23773,7 +27226,12 @@
    "letterario": true,
    "tipo_catalogo": [
     "Teatro"
-   ]
+   ],
+   "n_opere": 0,
+   "lingue": [
+    "tedesco"
+   ],
+   "indice": 7
   },
   {
    "wikidata": "Q71397128",
@@ -23810,7 +27268,9 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "indice": 7
   },
   {
    "wikidata": "Q138495855",
@@ -23869,7 +27329,12 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "lingue": [
+    "ceco"
+   ],
+   "indice": 7
   },
   {
    "wikidata": "Q120433446",
@@ -23951,7 +27416,17 @@
    "letterario": true,
    "tipo_catalogo": [
     "Romanzo"
-   ]
+   ],
+   "opere": [
+    {
+     "titolo": "Gila: a novella from rural life",
+     "anno": 1901,
+     "generi": [],
+     "sl": 0
+    }
+   ],
+   "n_opere": 1,
+   "indice": 7
   },
   {
    "wikidata": "Q67182512",
@@ -24242,7 +27717,9 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "indice": 7
   },
   {
    "wikidata": "Q124710774",
@@ -24257,7 +27734,12 @@
    "letterario": true,
    "tipo_catalogo": [
     "Teatro"
-   ]
+   ],
+   "n_opere": 0,
+   "lingue": [
+    "russo"
+   ],
+   "indice": 7
   },
   {
    "wikidata": "Q94514785",
@@ -24341,7 +27823,15 @@
    "tipo_catalogo": [
     "Poesia",
     "Saggi"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "India"
+   ],
+   "lingue": [
+    "hindī"
+   ],
+   "indice": 7
   },
   {
    "wikidata": "Q136303295",
@@ -24435,7 +27925,15 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "India"
+   ],
+   "lingue": [
+    "hindī"
+   ],
+   "indice": 7
   },
   {
    "wikidata": "Q120431585",
@@ -24473,7 +27971,14 @@
    "letterario": true,
    "tipo_catalogo": [
     "Saggi"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Regno dei Serbi, Croati e Sloveni",
+    "Regno di Jugoslavia",
+    "Repubblica Socialista Federale di Jugoslavia"
+   ],
+   "indice": 7
   },
   {
    "wikidata": "Q112480026",
@@ -24532,7 +28037,9 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "indice": 7
   },
   {
    "wikidata": "Q94904314",
@@ -24602,7 +28109,35 @@
    "letterario": true,
    "tipo_catalogo": [
     "Romanzo"
-   ]
+   ],
+   "opere": [
+    {
+     "titolo": "Sweet River in the Morning",
+     "anno": null,
+     "generi": [],
+     "sl": 0
+    }
+   ],
+   "n_opere": 1,
+   "paesi": [
+    "Regno Unito di Gran Bretagna e Irlanda",
+    "Regno Unito"
+   ],
+   "indice": 7,
+   "traduzioni": {
+    "opere": 23,
+    "con_lingua": 19,
+    "per_lingua": {
+     "it": 0,
+     "en": 19,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q94891868",
@@ -24663,7 +28198,34 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "opere": [
+    {
+     "titolo": "Srdce dokořán: kniha radosti",
+     "anno": 1946,
+     "generi": [],
+     "sl": 0
+    }
+   ],
+   "n_opere": 1,
+   "paesi": [
+    "Cecoslovacchia"
+   ],
+   "indice": 7,
+   "traduzioni": {
+    "opere": 2,
+    "con_lingua": 2,
+    "per_lingua": {
+     "it": 0,
+     "en": 0,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05"
+   }
   },
   {
    "wikidata": "Q109031810",
@@ -24701,7 +28263,15 @@
    "letterario": true,
    "tipo_catalogo": [
     "Poesia"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Impero russo"
+   ],
+   "lingue": [
+    "russo"
+   ],
+   "indice": 7
   },
   {
    "wikidata": "Q55671823",
@@ -24727,7 +28297,17 @@
    "letterario": true,
    "tipo_catalogo": [
     "Teatro"
-   ]
+   ],
+   "n_opere": 0,
+   "paesi": [
+    "Unione Sovietica",
+    "Lettonia"
+   ],
+   "lingue": [
+    "russo",
+    "lettone"
+   ],
+   "indice": 7
   },
   {
    "wikidata": "Q139031735",
@@ -24767,11 +28347,15 @@
  "paesi": [
   {
    "nome": "Stati Uniti",
-   "n": 21
+   "n": 23
   },
   {
    "nome": "Regno Unito",
-   "n": 13
+   "n": 14
+  },
+  {
+   "nome": "Cecoslovacchia",
+   "n": 9
   },
   {
    "nome": "Francia",
@@ -24779,18 +28363,18 @@
   },
   {
    "nome": "Regno Unito di Gran Bretagna e Irlanda",
-   "n": 8
+   "n": 9
   },
   {
    "nome": "India",
-   "n": 6
-  },
-  {
-   "nome": "Cecoslovacchia",
-   "n": 5
+   "n": 7
   },
   {
    "nome": "Dominion dell'India",
+   "n": 5
+  },
+  {
+   "nome": "Impero anglo-indiano",
    "n": 5
   },
   {
@@ -24806,10 +28390,6 @@
    "n": 5
   },
   {
-   "nome": "Impero anglo-indiano",
-   "n": 4
-  },
-  {
    "nome": "Austria",
    "n": 3
   },
@@ -24818,7 +28398,15 @@
    "n": 3
   },
   {
+   "nome": "Impero russo",
+   "n": 3
+  },
+  {
    "nome": "Ungheria",
+   "n": 3
+  },
+  {
+   "nome": "Uruguay",
    "n": 3
   },
   {
@@ -24838,7 +28426,7 @@
    "n": 2
   },
   {
-   "nome": "Impero russo",
+   "nome": "Impero ottomano",
    "n": 2
   },
   {
@@ -24847,6 +28435,10 @@
   },
   {
    "nome": "Israele",
+   "n": 2
+  },
+  {
+   "nome": "Libano",
    "n": 2
   },
   {
@@ -24874,15 +28466,19 @@
    "n": 2
   },
   {
+   "nome": "Svizzera",
+   "n": 2
+  },
+  {
    "nome": "Unione Sovietica",
    "n": 2
   },
   {
-   "nome": "Uruguay",
-   "n": 2
+   "nome": "Australia",
+   "n": 1
   },
   {
-   "nome": "Australia",
+   "nome": "Belgio",
    "n": 1
   },
   {
@@ -24910,19 +28506,19 @@
    "n": 1
   },
   {
+   "nome": "Galles",
+   "n": 1
+  },
+  {
+   "nome": "Grande Libano",
+   "n": 1
+  },
+  {
    "nome": "Grecia",
    "n": 1
   },
   {
    "nome": "Impero giapponese",
-   "n": 1
-  },
-  {
-   "nome": "Impero ottomano",
-   "n": 1
-  },
-  {
-   "nome": "Libano",
    "n": 1
   },
   {
@@ -24939,6 +28535,10 @@
   },
   {
    "nome": "Prima Repubblica cecoslovacca",
+   "n": 1
+  },
+  {
+   "nome": "Regno Arabo di Siria",
    "n": 1
   },
   {
@@ -24970,10 +28570,6 @@
    "n": 1
   },
   {
-   "nome": "Svizzera",
-   "n": 1
-  },
-  {
    "nome": "Turchia",
    "n": 1
   },
@@ -24985,19 +28581,19 @@
  "lingue": [
   {
    "nome": "inglese",
-   "n": 36
+   "n": 37
   },
   {
    "nome": "francese",
-   "n": 14
+   "n": 15
   },
   {
    "nome": "spagnolo",
-   "n": 13
+   "n": 14
   },
   {
    "nome": "tedesco",
-   "n": 12
+   "n": 13
   },
   {
    "nome": "italiano",
@@ -25005,11 +28601,15 @@
   },
   {
    "nome": "ceco",
-   "n": 4
+   "n": 6
   },
   {
    "nome": "russo",
    "n": 4
+  },
+  {
+   "nome": "arabo",
+   "n": 3
   },
   {
    "nome": "bengali",
@@ -25018,10 +28618,6 @@
   {
    "nome": "catalano",
    "n": 3
-  },
-  {
-   "nome": "arabo",
-   "n": 2
   },
   {
    "nome": "latino",
@@ -25037,6 +28633,10 @@
   },
   {
    "nome": "ungherese",
+   "n": 2
+  },
+  {
+   "nome": "yiddish",
    "n": 2
   },
   {
@@ -25072,6 +28672,10 @@
    "n": 1
   },
   {
+   "nome": "gallese",
+   "n": 1
+  },
+  {
    "nome": "giapponese",
    "n": 1
   },
@@ -25089,6 +28693,10 @@
   },
   {
    "nome": "inglese americano",
+   "n": 1
+  },
+  {
+   "nome": "malayalam",
    "n": 1
   },
   {
@@ -25112,6 +28720,10 @@
    "n": 1
   },
   {
+   "nome": "sanscrito",
+   "n": 1
+  },
+  {
    "nome": "telugu",
    "n": 1
   },
@@ -25126,12 +28738,9 @@
   {
    "nome": "veneto",
    "n": 1
-  },
-  {
-   "nome": "yiddish",
-   "n": 1
   }
  ],
  "arricchito": "2026-11-05",
- "indice_formula": "60% visite Wikipedia (12 mesi), 20% pagine Wikimedia, 20% download Project Gutenberg"
+ "indice_formula": "60% visite Wikipedia (12 mesi), 20% pagine Wikimedia, 20% download Project Gutenberg",
+ "traduzioni_aggiornato": "2026-11-05"
 }
