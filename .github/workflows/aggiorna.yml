@@ -32,6 +32,10 @@ jobs:
         # se questo passo fallisce, l'elenco degli autori viene salvato comunque
         continue-on-error: true
         run: python scripts/arricchisci.py
+      - name: Controlla in quali lingue esistono le opere
+        # dato accessorio: se fallisce, il resto viene salvato comunque
+        continue-on-error: true
+        run: python scripts/traduzioni.py
       - name: Salva i dati nel repository
         run: |
           git config user.name "github-actions[bot]"
