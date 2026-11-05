@@ -91,8 +91,16 @@ def nome_compatibile(nome, etichetta):
     loro, nostri = _parole(resto), mie[:-1]
     if not nostri or not loro:
         return False
-    a, b = nostri[0], loro[0]
-    return a == b or (len(a) == 1 and b.startswith(a)) or (len(b) == 1 and a.startswith(b))
+    def uguali(a, b):
+        return a == b or (len(a) == 1 and b.startswith(a)) or (len(b) == 1 and a.startswith(b))
+    # ogni nome si confronta con il suo corrispondente, non solo il primo:
+    # «A. A.» è compatibile con «Alan Alexander» ma non con «Annabel» né con «A. J. M.»
+    if not all(uguali(a, b) for a, b in zip(nostri, loro)):
+        return False
+    # se uno ha più nomi dell'altro, i nomi dell'altro devono essere scritti per intero e uguali
+    corto = nostri if len(nostri) < len(loro) else loro
+    lungo = loro if corto is nostri else nostri
+    return len(nostri) == len(loro) or all(c == l for c, l in zip(corto, lungo))
 
 
 def anni_etichetta(etichetta):
@@ -192,7 +200,7 @@ def codici_viaf(qids):
 
 def e_recente(voce, oggi):
     try:
-        if voce.get("v") != 4:      # 2 = VIAF poi nome; le voci della prima versione si rifanno
+        if voce.get("v") != 5:      # 2 = VIAF poi nome; le voci della prima versione si rifanno
             return False
         return (oggi - dt.date.fromisoformat(voce["ts"])).days < VALIDITA_GIORNI
     except Exception:
@@ -222,7 +230,7 @@ def elabora(oggi, conta_fn=edizioni_italiane, viaf_fn=codici_viaf):
         try:
             voce = conta_fn(a["nome"], viaf.get(a["wikidata"]), a.get("nascita"), a.get("morte"))
             voce["ts"] = oggi.isoformat()
-            voce["v"] = 4
+            voce["v"] = 5
             cache[a["wikidata"]] = voce
             fatti += 1
         except Exception as e:
