@@ -38,18 +38,21 @@ def cerca_pdf(nome, url, lingua, chiavi, largo=2500, massimo=3, timeout=400):
     estratti(t, chiavi, largo=largo, massimo=massimo)
     return t
 
-# ITALIA: trattato, testo francese CVCE (86 pagine): le annexes ci sono?
-t = cerca_pdf("TRATTATO FR (CVCE)", "https://www.cvce.eu/content/publication/1999/1/1/0eaf4219-d6d9-4c35-935a-6f55327448e7/publishable_fr.pdf", "fra",
-              [r"Annexe XV", r"litt[eé]raire et artistique", r"droits d.auteur", r"[Pp]ropri[eé]t[eé] industrielle, litt"], largo=3500, massimo=4, timeout=300)
-print(" 'Annexe XV' a:", [m.start() for m in re.finditer(r"Annexe XV", t)][:10] if t else None, "| tot", len(t))
-# ITALIA: Nazioni Unite, UNTS vol. 49
-cerca_pdf("TRATTATO UNTS", "https://treaties.un.org/doc/Publication/UNTS/Volume%2049/volume-49-I-747-English.pdf", "eng",
-          [r"ANNEX XV", r"literary and artistic property", r"[Cc]opyright"], largo=3500, massimo=3)
-# SPAGNA: regolamento 1880 (BOE, testo consolidato) e Gazeta digitalizzata
-print("=" * 60, "\nSPAGNA regolamento 1880 BOE", flush=True)
-h, fin = scarica("https://www.boe.es/eli/es/rd/1880/09/03/(1)", tentativi=1); tt = testo(h); print(" caratteri:", len(tt))
-estratti(tt, [r"ochenta", r"Ley de 10 de enero de 1879"], largo=700, massimo=4)
-print("=" * 60, "\nSPAGNA Prensa Histórica (Ministerio de Cultura)", flush=True)
-h, fin = scarica("https://prensahistorica.mcu.es/va/catalogo_imagenes/grupo.do?path=43581", tentativi=1)
-print(" finale:", fin, "| caratteri:", len(testo(h)), "|", testo(h)[:500])
-print(" link pdf:", [l for l in sorted(set(re.findall(r'href="([^"]+)"', h))) if "pdf" in l.lower() or "descarga" in l.lower()][:10])
+# ITALIA: Allegato XV dal testo francese CVCE
+d, fin = scarica("https://www.cvce.eu/content/publication/1999/1/1/0eaf4219-d6d9-4c35-935a-6f55327448e7/publishable_fr.pdf", True, timeout=300, tentativi=2)
+t, modo = pdf_testo(d, "fra"); print("FR byte", len(d), "caratteri", len(t), flush=True)
+pos = [m.start() for m in re.finditer(r"Annexe XV", t)]
+ultima_toc = pos[3] if len(pos) > 3 else 0
+print("posizioni Annexe XV:", pos)
+for k in re.finditer(r"propri[eé]t[eé] industrielle, litt[eé]raire et artistique|Propri[eé]t[eé] industrielle, litt[eé]raire et artistique", t):
+    print(" titolo a", k.start())
+inizio = max(x for x in pos if x > 200000) if [x for x in pos if x > 200000] else 0
+for x in [y for y in pos if y > 200000]:
+    print("=" * 40, "da", x, flush=True); print(t[x:x+4500], flush=True)
+# SPAGNA: legge 1879 nel BOE (BOE-A-1879-40001)
+for nome, url in [("scheda", "https://www.boe.es/buscar/doc.php?id=BOE-A-1879-40001"), ("xml", "https://www.boe.es/diario_boe/xml.php?id=BOE-A-1879-40001")]:
+    print("=" * 60, "\nSPAGNA 1879", nome, url, flush=True)
+    h, fin = scarica(url, tentativi=2); tt = testo(h); print(" caratteri:", len(tt))
+    print(" inizio:", tt[:400])
+    estratti(tt, [r"ochenta", r"Art\S*\.? ?6"], largo=1400, massimo=4)
+    print(" link pdf:", [l for l in sorted(set(re.findall(r'href="([^"]+)"', h))) if "pdf" in l.lower()][:5])
