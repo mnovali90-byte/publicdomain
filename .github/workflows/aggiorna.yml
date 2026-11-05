@@ -49,8 +49,14 @@ jobs:
             echo "Nessun cambiamento"
           else
             git commit -m "Aggiornamento dati $(date -u +%Y-%m-%d)"
-            git pull --rebase -X theirs origin main   # in caso di conflitto sui dati vincono quelli appena scaricati
-            git push
+            # GitHub ogni tanto rifiuta il push con un errore suo: si riprova fino a 5 volte
+            for i in 1 2 3 4 5; do
+              git pull --rebase -X theirs origin main   # in caso di conflitto sui dati vincono quelli appena scaricati
+              if git push; then break; fi
+              echo "Push fallito (tentativo $i), riprovo tra $((i*20)) secondi"
+              [ "$i" = 5 ] && exit 1
+              sleep $((i*20))
+            done
           fi
       - name: Se non ha fatto in tempo, riparte da solo
         # i dati già scaricati restano in cache: il giro dopo continua da dove si è fermato
