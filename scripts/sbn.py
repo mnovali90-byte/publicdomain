@@ -10,7 +10,8 @@ Wikidata ha autorizzato per le sue interrogazioni federate.
 Come si riconosce l'autore:
   1) dal codice VIAF che Wikidata indica per lui (proprietà P214): sicuro;
   2) se SBN non ha quell'autore collegato al VIAF, dal nome «Cognome, Nome» (cognome uguale,
-     nome per intero o per iniziale; se i candidati sono troppi si lascia perdere). Può
+     nome per intero o per iniziale; se SBN indica gli anni e non coincidono con Wikidata la
+     scheda è un omonimo e si scarta; se i candidati sono troppi si lascia perdere). Può
      confondere gli omonimi: in quel caso si scrive "metodo": "nome".
 
 Cosa si conta: le registrazioni (opere) il cui autore o collaboratore è quella persona e
@@ -44,6 +45,11 @@ BUDGET_MINUTI = float(os.environ.get("BUDGET_MINUTI_SBN", "40"))
 FINE_LAVORO = time.time() + BUDGET_MINUTI * 60
 PAUSA = 0.6
 LIMITE_AGENTI = 1000
+SOGLIA_NOTO = 40          # pagine Wikipedia: da qui in su l'autore è «molto noto»
+SOGLIA_POCHE = 3          # e con così poche edizioni in SBN è sospetto
+# Autori di cui sappiamo che in SBN hanno molte edizioni italiane: se un giro ne trova meno, c'è un bug.
+CONTROLLI = {"Q38757": ("Bertolt Brecht", 300), "Q207036": ("A. A. Milne", 50),
+             "Q237514": ("Laura Ingalls Wilder", 200), "Q529858": ("Giovanni Papini", 250)}
 ENDPOINT = "https://triplestore.iccu.sbn.it/sparql"
 BF = "http://id.loc.gov/ontologies/bibframe/"
 SAME = "http://www.w3.org/2002/07/owl#sameAs"
@@ -89,17 +95,51 @@ def nome_compatibile(nome, etichetta):
     return a == b or (len(a) == 1 and b.startswith(a)) or (len(b) == 1 and a.startswith(b))
 
 
-def agenti_per_nome(nome, interroga_fn):
+def anni_etichetta(etichetta):
+    """'Milne, A. A. <1882-1956>' -> (1882, 1956). Mancano o sono incompleti: None."""
+    m = re.search(r"<\s*(?:ca\.?\s*)?(\d{3,4})?\s*-\s*(\d{3,4})?\s*>", etichetta or "")
+    if not m:
+        return None, None
+    return (int(m.group(1)) if m.group(1) else None), (int(m.group(2)) if m.group(2) else None)
+
+
+def anni_compatibili(etichetta, nascita, morte):
+    """True = gli anni coincidono (±1); False = contraddicono; None = non confrontabili."""
+    n_et, m_et = anni_etichetta(etichetta)
+    try:
+        n_wd = int(str(nascita)[:4]) if nascita else None
+        m_wd = int(str(morte)[:4]) if morte else None
+    except ValueError:
+        return None
+    esito = None
+    for et, wd in ((n_et, n_wd), (m_et, m_wd)):
+        if et and wd:
+            if abs(et - wd) > 1:
+                return False
+            esito = True
+    return esito
+
+
+def agenti_per_nome(nome, interroga_fn, nascita=None, morte=None):
+    """Schede SBN con cognome uguale e nome compatibile. Restituisce (uri, verificato):
+    se l'etichetta ha gli anni e contraddicono Wikidata, la scheda si scarta (è un omonimo);
+    verificato = tutte le schede tenute hanno gli anni che coincidono."""
     cognome = re.sub(r"[^\w]", "", nome.split()[-1])
     if len(cognome) < 3:
-        return []
+        return [], False
     righe = interroga_fn(f'SELECT DISTINCT ?a ?l WHERE {{ ?a <{LAB}> ?l . ?l bif:contains "\'{cognome}\'" . '
                          f'FILTER(CONTAINS(STR(?a), "/resource/Agent/")) }} LIMIT {LIMITE_AGENTI}')
     time.sleep(PAUSA)
     if len(righe) >= LIMITE_AGENTI:      # elenco tagliato: meglio non indovinare
-        return []
-    uri = [r["a"]["value"] for r in righe if nome_compatibile(nome, r["l"]["value"])]
-    return uri if 0 < len(uri) <= 6 else []
+        return [], False
+    tenute = []
+    for r in righe:
+        et = r["l"]["value"]
+        if nome_compatibile(nome, et) and anni_compatibili(et, nascita, morte) is not False:
+            tenute.append((r["a"]["value"], anni_compatibili(et, nascita, morte)))
+    if not 0 < len(tenute) <= 6:
+        return [], False
+    return [u for u, _ in tenute], all(v is True for _, v in tenute)
 
 
 def corpo(filtro):
@@ -123,7 +163,7 @@ def conta(filtro, interroga_fn):
     return n, ultimo, int(r[0]["n"]["value"])
 
 
-def edizioni_italiane(nome, viaf, interroga_fn=interroga):
+def edizioni_italiane(nome, viaf, nascita=None, morte=None, interroga_fn=interroga):
     """Prima il codice VIAF; se SBN non ha quell'autore collegato al VIAF, il nome."""
     metodo, n, ultimo, dal_2000 = None, 0, None, 0
     if viaf:
@@ -131,10 +171,10 @@ def edizioni_italiane(nome, viaf, interroga_fn=interroga):
         n, ultimo, dal_2000 = conta(f, interroga_fn)
         metodo = "viaf"
     if not n:
-        uri = agenti_per_nome(nome, interroga_fn)
+        uri, verificato = agenti_per_nome(nome, interroga_fn, nascita, morte)
         if uri:
             n, ultimo, dal_2000 = conta("VALUES ?a { " + " ".join(f"<{u}>" for u in uri) + " }", interroga_fn)
-            metodo = "nome"
+            metodo = "nome_anni" if verificato else "nome"
     return {"trovato": n > 0, "edizioni": n, "ultimo": ultimo, "dal_2000": dal_2000,
             "metodo": metodo if n else None, "fonte": "SBN"}
 
@@ -152,7 +192,7 @@ def codici_viaf(qids):
 
 def e_recente(voce, oggi):
     try:
-        if voce.get("v") != 3:      # 2 = VIAF poi nome; le voci della prima versione si rifanno
+        if voce.get("v") != 4:      # 2 = VIAF poi nome; le voci della prima versione si rifanno
             return False
         return (oggi - dt.date.fromisoformat(voce["ts"])).days < VALIDITA_GIORNI
     except Exception:
@@ -180,9 +220,9 @@ def elabora(oggi, conta_fn=edizioni_italiane, viaf_fn=codici_viaf):
             print("  tempo finito: il resto al prossimo giro", file=sys.stderr)
             break
         try:
-            voce = conta_fn(a["nome"], viaf.get(a["wikidata"]))
+            voce = conta_fn(a["nome"], viaf.get(a["wikidata"]), a.get("nascita"), a.get("morte"))
             voce["ts"] = oggi.isoformat()
-            voce["v"] = 3
+            voce["v"] = 4
             cache[a["wikidata"]] = voce
             fatti += 1
         except Exception as e:
@@ -196,14 +236,25 @@ def elabora(oggi, conta_fn=edizioni_italiane, viaf_fn=codici_viaf):
     CACHE.write_text(json.dumps(cache, ensure_ascii=False), encoding="utf-8")
     if fatti + errori >= 10 and errori > fatti:
         raise RuntimeError("SBN non risponde come previsto: non scrivo nulla.")
-    ci_sono = 0
+    ci_sono, sospetti = 0, []
     for f, p in pacchetti:
         for a in p["autori"]:
             voce = cache.get(a["wikidata"])
             if voce:
-                a.setdefault("traduzioni", {})["sbn_it"] = {k: v for k, v in voce.items() if k not in ("ts", "v")}
+                dati = {k: v for k, v in voce.items() if k not in ("ts", "v")}
+                if a.get("pagine_wikipedia", 0) >= SOGLIA_NOTO and dati["edizioni"] <= SOGLIA_POCHE:
+                    dati["sospetto"] = True
+                    sospetti.append({"wikidata": a["wikidata"], "nome": a["nome"], "pagine": a["pagine_wikipedia"],
+                                     "edizioni": dati["edizioni"], "metodo": dati.get("metodo")})
+                a.setdefault("traduzioni", {})["sbn_it"] = dati
                 ci_sono += 1
         f.write_text(json.dumps(p, ensure_ascii=False, indent=1), encoding="utf-8")
+    (DATA_DIR / "sospetti_sbn.json").write_text(json.dumps(sospetti, ensure_ascii=False, indent=1), encoding="utf-8")
+    for q, (nome, minimo) in CONTROLLI.items():
+        v = cache.get(q)
+        if v and v["edizioni"] < minimo:
+            print(f"::warning::SBN: controllo fallito, {nome} ha {v['edizioni']} edizioni (attese almeno {minimo})", file=sys.stderr)
+    print(f"sbn: {len(sospetti)} autori sospetti (molto noti, quasi nessuna edizione) in data/sospetti_sbn.json", file=sys.stderr)
     print(f"sbn: {ci_sono} autori con dati ({fatti} nuovi, {errori} errori)", file=sys.stderr)
 
 

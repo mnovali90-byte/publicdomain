@@ -350,6 +350,8 @@ it: {
   sbnTit: "Edizioni italiane nel catalogo SBN", sbnTrovate: "{n} registrazioni in italiano", sbnUltima: " · la più recente: {y}", sbnDal2000: " · {m} dal 2000",
   sbnNonTrovato: "Autore non trovato in italiano nel catalogo SBN: non vuol dire che non sia tradotto, controlla a mano.",
   sbnPerNome: "Autore riconosciuto dal nome, non da un codice: può includere un omonimo.",
+  sbnPerAnni: "Autore riconosciuto dal nome e confermato dagli anni di nascita e morte.",
+  sbnSospetto: "Da verificare: autore molto noto con pochissime edizioni in SBN. Può essere schedato con un altro nome.",
   sbnNota: "SBN è il catalogo delle biblioteche italiane. Conta ristampe, antologie e libri in cui l'autore compare anche come collaboratore, e non dice se l'edizione è ancora in commercio né se la traduzione è buona.",
   fNoRecent: "Nessuna edizione italiana dal 2000 · {n}",
   vIt: "{n} visite in 12 mesi", vNoPag: "nessuna pagina in {l}", vNd: "dato non disponibile", vLingue: "{n} lingue con una pagina Wikimedia", nonReg: "non registrata",
@@ -410,6 +412,8 @@ en: {
   sbnTit: "Italian editions in the SBN catalogue", sbnTrovate: "{n} records in Italian", sbnUltima: " · latest: {y}", sbnDal2000: " · {m} since 2000",
   sbnNonTrovato: "Author not found in Italian in the SBN catalogue: it does not mean they are untranslated, check by hand.",
   sbnPerNome: "Author matched by name, not by an identifier: it may include a namesake.",
+  sbnPerAnni: "Author matched by name and confirmed by birth and death years.",
+  sbnSospetto: "To verify: a very well-known author with very few SBN editions. They may be catalogued under another name.",
   sbnNota: "SBN is the catalogue of Italian libraries. It counts reprints, anthologies and books where the author appears as a contributor, and it does not say whether an edition is still on sale or whether the translation is good.",
   fNoRecent: "No Italian edition since 2000 · {n}",
   vIt: "{n} views in 12 months", vNoPag: "no page in {l}", vNd: "data not available", vLingue: "{n} languages with a Wikimedia page", nonReg: "none recorded",
@@ -1006,6 +1010,8 @@ function bloccoSbn(g) {
   return h("div", { style: "margin-bottom:16px" }, h("h4", {}, tr("sbnTit")),
     h("p", { class: "sotto", style: "margin:0 0 6px;font-weight:600" }, riassunto),
     g.metodo === "nome" ? h("div", { class: "sotto" }, tr("sbnPerNome")) : null,
+    g.metodo === "nome_anni" ? h("div", { class: "sotto" }, tr("sbnPerAnni")) : null,
+    g.sospetto ? h("div", { class: "sotto", style: "color:var(--accento,#b45309)" }, tr("sbnSospetto")) : null,
     h("div", { class: "sotto" }, tr("sbnNota")));
 }
 function bloccoTraduzioni(a) {
