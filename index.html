@@ -212,6 +212,10 @@ dialog::backdrop{background:rgba(12,12,16,.72)}
 .griglia-opere .copertina{width:calc(25% - 12px);min-width:150px;height:230px}
 
 .messaggio{padding:80px 0;font-size:18px}
+.presentazione{padding:clamp(28px,5vw,56px) 0 clamp(8px,2vw,20px);max-width:46rem}
+.presentazione h1{font-family:var(--testo);font-weight:600;font-size:clamp(24px,4vw,38px);line-height:1.12;margin:0 0 14px;letter-spacing:-.01em}
+.presentazione p{margin:0;font-size:clamp(16px,2vw,18px);line-height:1.55;opacity:.82}
+.presentazione .fonti{margin-top:12px;font-size:14px;opacity:.62}
 
 @media (max-width:900px){
   .grandi{grid-template-columns:1fr;gap:56px}
@@ -238,6 +242,11 @@ dialog::backdrop{background:rgba(12,12,16,.72)}
       <div class="marchio"><i></i>Public Domain Radar</div>
       <nav class="navigazione" id="navigazione" data-ta="navAria" aria-label="Navigazione"></nav>
     </header>
+    <div class="presentazione">
+      <h1 data-t="presTit">Gli autori che diventano liberi in Europa il 1° gennaio</h1>
+      <p data-t="presTesto">Per ognuno vedi quanto è letto, quali opere ha scritto e se in Italia è già stato tradotto. Serve a scegliere cosa ritradurre e pubblicare.</p>
+      <p class="fonti" data-t="presFonti">Dati aperti da Wikidata, Wikipedia e SBN, aggiornati ogni mese in automatico.</p>
+    </div>
     <div class="mercato" id="mercato" role="group" hidden></div>
     <div id="eroe"><p class="messaggio" data-t="caricamento">Caricamento…</p></div>
   </div>
@@ -320,6 +329,9 @@ const TESTI = {
 it: {
   titolo: "Public Domain Radar",
   descrizione: "Gli autori le cui opere entrano nel pubblico dominio in Europa il prossimo 1° gennaio. Dati aperti da Wikidata e Wikipedia, aggiornati ogni mese.",
+  presTit: "Gli autori che diventano liberi in Europa il 1° gennaio",
+  presTesto: "Per ognuno vedi quanto è letto, quali opere ha scritto e se in Italia è già stato tradotto. Serve a scegliere cosa ritradurre e pubblicare.",
+  presFonti: "Dati aperti da Wikidata, Wikipedia e SBN, aggiornati ogni mese in automatico.",
   caricamento: "Caricamento…", navAria: "Navigazione", miei: "I miei · {n}",
   daDati: "I dati non sono ancora disponibili. Riprova tra poco.", nessunAutoreAnno: "Nessun autore per questo anno.",
   tra: "Tra {n} giorni", domani: "Domani", oggi: "Oggi", liberoDal: "Libero dal",
@@ -382,6 +394,9 @@ it: {
 en: {
   titolo: "Public Domain Radar",
   descrizione: "The authors whose works enter the public domain in Europe on 1 January next year. Open data from Wikidata and Wikipedia, updated monthly.",
+  presTit: "The authors who become free in Europe on 1 January",
+  presTesto: "For each one you see how widely read they are, which works they wrote and whether they have already been translated into Italian. Use it to choose what to retranslate and publish.",
+  presFonti: "Open data from Wikidata, Wikipedia and SBN, updated automatically every month.",
   caricamento: "Loading…", navAria: "Navigation", miei: "My list · {n}",
   daDati: "The data is not available yet. Please try again shortly.", nessunAutoreAnno: "No authors for this year.",
   tra: "In {n} days", domani: "Tomorrow", oggi: "Today", liberoDal: "Free since",
