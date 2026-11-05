@@ -9,6 +9,8 @@ Uso:
     python scripts/aggiorna.py --anno 2027    # un anno preciso
 
 Regola: morto nell'anno X  ->  libero dal 1 gennaio X + 71.
+Spagna (file es-<anno>.json): chi è morto prima del 1987 ha 80 anni (Ley de 10 enero 1879,
+art. 6) -> libero, in modo prudente, dal 1 gennaio X + 81.
 Se anche una sola richiesta fallisce, lo script si ferma con errore e NON
 scrive nulla: i dati buoni già presenti non vengono mai sostituiti da dati parziali.
 """
@@ -103,7 +105,16 @@ def scarica_anno(anno_morte, pausa=2):
     return autori
 
 
-def salva(anno_libero, autori):
+# prefisso del file -> anni da aggiungere alla morte per arrivare all'anno di liberazione
+PAESI = {"": (71, "ue"), "es-": (81, "es")}
+REGOLA = {
+    "": "UE: morte + 70 anni, dal 1 gennaio dell'anno successivo",
+    "es-": "Spagna, autori morti prima del 1987: 80 anni dalla morte (Ley de 10 de enero de 1879, art. 6; "
+           "Ley de Propiedad Intelectual, disp. trans. cuarta). Data prudente: 1 gennaio dell'anno dopo gli 80 anni",
+}
+
+
+def salva(anno_libero, autori, prefisso=""):
     righe = sorted(autori.values(), key=lambda x: (-x["pagine_wikipedia"], x["nome"]))
     for d in righe:
         d["professioni"].sort()
@@ -112,20 +123,24 @@ def salva(anno_libero, autori):
     pacchetto = {
         "anno_libero": anno_libero,
         "libero_dal": f"{anno_libero}-01-01",
-        "regola": "UE: morte + 70 anni, dal 1 gennaio dell'anno successivo",
+        "paese": PAESI[prefisso][1],
+        "regola": REGOLA[prefisso],
         "fonte": "Wikidata (CC0)",
         "aggiornato": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d"),
         "totale": len(righe),
         "autori": righe,
     }
-    percorso = DATA_DIR / f"{anno_libero}.json"
+    percorso = DATA_DIR / f"{prefisso}{anno_libero}.json"
     percorso.write_text(json.dumps(pacchetto, ensure_ascii=False, indent=1), encoding="utf-8")
     return percorso
 
 
 def aggiorna_indice():
     anni = sorted(int(p.stem) for p in DATA_DIR.glob("[0-9][0-9][0-9][0-9].json"))
-    (DATA_DIR / "indice.json").write_text(json.dumps({"anni": anni}), encoding="utf-8")
+    paesi = ["ue"]
+    if anni and all((DATA_DIR / f"es-{a}.json").exists() for a in anni):
+        paesi.append("es")
+    (DATA_DIR / "indice.json").write_text(json.dumps({"anni": anni, "paesi": paesi}), encoding="utf-8")
 
 
 def main():
@@ -135,9 +150,9 @@ def main():
     oggi = dt.date.today().year
     anni = [a.anno] if a.anno else [oggi + 1, oggi + 2]
     # scarica tutto PRIMA di scrivere: se qualcosa fallisce, non cambia nulla
-    risultati = {anno: scarica_anno(anno - 71) for anno in anni}
-    for anno, autori in risultati.items():
-        print(f"{anno}: {len(autori)} autori -> {salva(anno, autori)}")
+    risultati = {(pref, anno): scarica_anno(anno - dopo) for pref, (dopo, _) in PAESI.items() for anno in anni}
+    for (pref, anno), autori in risultati.items():
+        print(f"{pref}{anno}: {len(autori)} autori -> {salva(anno, autori, pref)}")
     aggiorna_indice()
 
 

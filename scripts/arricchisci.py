@@ -504,9 +504,9 @@ def main():
     cache = carica_cache()
     if FLAG_INCOMPLETO.exists():
         FLAG_INCOMPLETO.unlink()
-    file = sorted(DATA_DIR.glob("[0-9][0-9][0-9][0-9].json"))
+    file = sorted(DATA_DIR.glob("*[0-9][0-9][0-9][0-9].json"))
     if a.anno:
-        file = [f for f in file if f.stem == str(a.anno)]
+        file = [f for f in file if f.stem.endswith(str(a.anno))]
     if not file:
         sys.exit("Nessun file in data/: lancia prima scripts/aggiorna.py")
     risultati = []

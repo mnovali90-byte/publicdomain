@@ -194,6 +194,7 @@ dialog::backdrop{background:rgba(12,12,16,.72)}
 .indice .asta i{position:absolute;left:0;top:0;bottom:0;background:var(--vermiglio)}
 .nd{color:var(--muto)}
 .mercato{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:14px 0 20px}
+.mercato.giur{grid-template-columns:repeat(2,1fr);margin-bottom:6px}
 .mercato .et{grid-column:1/-1;font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase}
 .mercato .pillola{border-color:var(--carta);color:var(--carta);padding:0 6px;font-size:11px;letter-spacing:.02em;line-height:1.15;text-align:center}
 .mercato .pillola[aria-pressed="true"]{background:var(--carta);color:var(--ink)}
@@ -257,6 +258,7 @@ dialog::backdrop{background:rgba(12,12,16,.72)}
       <p data-t="presTesto">Per ognuno vedi quanto è letto, quali opere ha scritto e se in Italia è già stato tradotto. Serve a scegliere cosa ritradurre e pubblicare.</p>
       <p class="fonti" data-t="presFonti">Dati aperti da Wikidata, Wikipedia e SBN, aggiornati ogni mese in automatico.</p>
     </div>
+    <div class="mercato giur" id="giur" role="group" hidden></div>
     <div class="mercato" id="mercato" role="group" hidden></div>
     <div id="eroe"><p class="messaggio" data-t="caricamento">Caricamento…</p></div>
   </div>
@@ -334,6 +336,7 @@ const SVG = "http://www.w3.org/2000/svg";
 const CHIAVE_PREFERITI = "pdr_preferiti_v1";
 const CHIAVE_LINGUA = "pdr_lingua_v1";
 const CHIAVE_MERCATO = "pdr_mercato_v1";
+const CHIAVE_GIUR = "pdr_giur_v1";
 const MESI_EN = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 
 const TESTI = {
@@ -347,6 +350,12 @@ it: {
   paEs80: "Spagna: non prima del {d} (80 anni dalla morte, perché è morto prima del 1987; la legge non dice come si conta l'anno).",
   paEs70: "Spagna: dal {d}.",
   paNota: "Calcolo indicativo, dalle norme del riquadro in fondo alla pagina. Non è consulenza legale.",
+  giurEt: "Paese",
+  giurNomi: { ue: "UE · 70 anni", es: "Spagna · 80 anni" },
+  giurDesc: {
+    ue: "Regola europea di base: morte + 70 anni. Vale anche per la Germania; per Francia e Italia ci sono proroghe (vedi il riquadro in fondo).",
+    es: "Spagna: per gli autori morti prima del 1987 valgono 80 anni dalla morte (legge del 1879). La data è prudente: la legge non dice come si conta l'anno."
+  },
   regoleTit: "Regole sulla durata, paese per paese",
   regoleNota: "Testi di legge letti il 5 novembre 2026. Non è consulenza legale: prima di pubblicare controlla la norma e la data di morte nel tuo paese.",
   presTit: "Gli autori che diventano liberi in Europa il 1° gennaio",
@@ -421,6 +430,12 @@ en: {
   paEs80: "Spain: not before {d} (80 years after death, because the author died before 1987; the law does not say how the year is counted).",
   paEs70: "Spain: from {d}.",
   paNota: "Indicative calculation, based on the rules in the box at the bottom of the page. Not legal advice.",
+  giurEt: "Country",
+  giurNomi: { ue: "EU · 70 years", es: "Spain · 80 years" },
+  giurDesc: {
+    ue: "Basic EU rule: death + 70 years. It also applies to Germany; France and Italy have extensions (see the box at the bottom).",
+    es: "Spain: authors who died before 1987 get 80 years after death (1879 law). The date is cautious: the law does not say how the year is counted."
+  },
   regoleTit: "Term of protection, country by country",
   regoleNota: "Legal texts read on 5 November 2026. This is not legal advice: before publishing, check the law and the date of death in your country.",
   presTit: "The authors who become free in Europe on 1 January",
@@ -498,6 +513,7 @@ function tr(k, v) {
 
 const stato = {
   anni: [], dati: {}, anno: null,
+  giur: "ue", giurDisp: ["ue"], perGiur: {},
   mercato: "it", mercati: false,
   cerca: "", filtro: "letterari", ordine: "popolarita", paese: null, lingua: null, visibili: PASSO,
   preferiti: [], ultimoFocus: null
@@ -644,9 +660,13 @@ function gruppi(anno) {
 }
 function tuttiGliAutori() { return stato.anni.flatMap((an) => stato.dati[an] ? stato.dati[an].autori.map((a) => ({ a, anno: an })) : []); }
 function trovaAutore(id) {
-  for (const an of stato.anni) {
-    const a = (stato.dati[an] ? stato.dati[an].autori : []).find((x) => x.wikidata === id);
-    if (a) return { a, anno: an };
+  const ordine = [stato.giur, ...Object.keys(stato.perGiur).filter((g) => g !== stato.giur)];
+  for (const g of ordine) {
+    for (const an of stato.anni) {
+      const d = (stato.perGiur[g] || {})[an];
+      const a = (d ? d.autori : []).find((x) => x.wikidata === id);
+      if (a) return { a, anno: an, giur: g };
+    }
   }
   return null;
 }
@@ -951,8 +971,8 @@ function scegliFiltro(tipo, valore) {
 function righeCsv(autori) {
   const testa = tr("csv");
   const righe = [testa];
-  for (const { a, anno } of autori) {
-    const d = stato.dati[anno] || {};
+  for (const { a, anno, giur } of autori) {
+    const d = (stato.perGiur[giur] || stato.dati)[anno] || {};
     righe.push([
       a.nome, a.nascita || "", a.morte || "", d.libero_dal || "", a.indice_it ?? "", a.indice_en ?? "", a.indice_int ?? "", a.pagine_wikipedia ?? "", a.visite_it ?? "", a.visite_en ?? "", a.gutenberg ?? "",
       (a.paesi || []).join(", "), (a.lingue || []).join(", "), (a.tipo_catalogo || []).join(", "), (a.generi || []).join(", "),
@@ -980,9 +1000,9 @@ function disegnaMiei() {
     return;
   }
   azioni.append(h("button", { class: "pillola", type: "button", onclick: () => scaricaCsv("miei-candidati.csv", elenco) }, tr("scaricaMiei", { n: elenco.length })));
-  corpo.append(h("ul", { class: "miei-lista" }, elenco.map(({ a, anno }) => h("li", {},
+  corpo.append(h("ul", { class: "miei-lista" }, elenco.map(({ a, anno, giur }) => h("li", {},
     h("button", { class: "nome", type: "button", onclick: () => apriAutore(a.wikidata) }, a.nome,
-      h("small", {}, tr("liberoIndice", { d: dataIt(stato.dati[anno].libero_dal) }) + etIdx(a))),
+      h("small", {}, tr("liberoIndice", { d: dataIt(((stato.perGiur[giur] || stato.dati)[anno] || {}).libero_dal) }) + etIdx(a))),
     h("button", { class: "rimuovi", type: "button", "aria-label": tr("togliAria", { nome: a.nome }), onclick: () => alternaPreferito(a.wikidata) }, tr("togli"))))));
 }
 
@@ -1186,6 +1206,26 @@ async function scegliAnno(anno) {
   $("#cerca").value = "";
   disegnaTutto();
 }
+function impostaGiur(g, ridisegna = true) {
+  if (g === stato.giur || !stato.perGiur[g]) return;
+  stato.giur = g;
+  stato.dati = stato.perGiur[g];
+  salvaLocale(CHIAVE_GIUR, g);
+  stato.lingua = null; stato.paese = null; stato.cerca = ""; stato.filtro = "letterari"; stato.visibili = PASSO;
+  const c = $("#cerca"); if (c) c.value = "";
+  gruppiCache.clear();
+  if (ridisegna) { disegnaTutto(); if ($("#finestra").open) instrada(); }
+}
+function disegnaGiur() {
+  const box = $("#giur");
+  box.hidden = stato.giurDisp.length < 2;
+  if (box.hidden) return;
+  box.setAttribute("aria-label", tr("giurEt"));
+  box.replaceChildren(
+    h("span", { class: "et" }, tr("giurEt")),
+    ...stato.giurDisp.map((g) => h("button", { type: "button", class: "pillola", "aria-pressed": g === stato.giur ? "true" : "false", onclick: () => impostaGiur(g) }, tr("giurNomi")[g])),
+    h("p", { class: "nota-m" }, tr("giurDesc")[stato.giur]));
+}
 function impostaMercato(m) {
   if (m === stato.mercato) return;
   stato.mercato = m;
@@ -1206,6 +1246,7 @@ function disegnaMercato() {
 }
 function disegnaTutto() {
   disegnaNavigazione();
+  disegnaGiur();
   disegnaMercato();
   disegnaEroe();
   disegnaGrandi();
@@ -1221,7 +1262,7 @@ async function instrada() {
   const m = location.hash.replace(/^#\/?/, "").split("/");
   if (m[0] === "autore" && m[1]) {
     const t = trovaAutore(decodeURIComponent(m[1]));
-    if (t) { await scegliAnno(t.anno); if (mostraAutore(t.a.wikidata)) return; }
+    if (t) { if (t.giur !== stato.giur) impostaGiur(t.giur); await scegliAnno(t.anno); if (mostraAutore(t.a.wikidata)) return; }
   } else if (m[0] === "genere" && m[1]) {
     if (apriGenere(decodeURIComponent(m[1]))) return;
   } else if (/^\d{4}$/.test(m[0]) && stato.dati[Number(m[0])]) {
@@ -1292,17 +1333,30 @@ async function avvia() {
   try {
     const indice = await leggi("data/indice.json");
     stato.anni = indice.anni;
-    for (const an of stato.anni) stato.dati[an] = await leggi(`data/${an}.json`);
+    stato.perGiur.ue = {};
+    for (const an of stato.anni) stato.perGiur.ue[an] = await leggi(`data/${an}.json`);
+    stato.dati = stato.perGiur.ue;
+    // Spagna e altri paesi con regole diverse: file propri, facoltativi
+    for (const g of (indice.paesi || []).filter((x) => x !== "ue")) {
+      try {
+        const per = {};
+        for (const an of stato.anni) per[an] = await leggi(`data/${g}-${an}.json`);
+        stato.perGiur[g] = per; stato.giurDisp.push(g);
+      } catch (e) { console.warn("dati mancanti per", g, e); }
+    }
   } catch (e) {
     $("#eroe").replaceChildren(h("p", { class: "messaggio" }, tr("daDati")));
     console.error(e);
     return;
   }
-  ripulisciDati();
+  for (const g of stato.giurDisp) { stato.dati = stato.perGiur[g]; ripulisciDati(); }
+  stato.dati = stato.perGiur.ue;
   stato.mercati = stato.anni.some((an) => stato.dati[an].autori.some((a) => a.indice_it !== undefined));
   const m = leggiLocale(CHIAVE_MERCATO, "it");
   stato.mercato = ["it", "en", "int"].includes(m) ? m : "it";
   stato.anno = stato.anni[0];
+  const gsalvata = leggiLocale(CHIAVE_GIUR, "ue");
+  if (stato.giurDisp.includes(gsalvata)) { stato.giur = gsalvata; stato.dati = stato.perGiur[gsalvata]; }
   disegnaTutto();
   $("#cerca").addEventListener("input", (ev) => { stato.cerca = ev.target.value; stato.visibili = PASSO; disegnaArchivio(); });
   $("#finestra").addEventListener("click", (ev) => { if (ev.target === ev.currentTarget) ev.currentTarget.close(); });

@@ -112,7 +112,7 @@ def candidati(pacchetto):
 
 def elabora(oggi, interroga_fn=interroga):
     cache = carica_cache()
-    file = sorted(DATA_DIR.glob("[0-9][0-9][0-9][0-9].json"))
+    file = sorted(DATA_DIR.glob("*[0-9][0-9][0-9][0-9].json"))
     pacchetti = [(f, json.loads(f.read_text(encoding="utf-8"))) for f in file]
     da_fare = []
     for _, p in pacchetti:
