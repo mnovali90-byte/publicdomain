@@ -47,7 +47,7 @@ jobs:
             echo "Nessun cambiamento"
           else
             git commit -m "Aggiornamento dati $(date -u +%Y-%m-%d)"
-            git pull --rebase origin main
+            git pull --rebase -X theirs origin main   # in caso di conflitto sui dati vincono quelli appena scaricati
             git push
           fi
       - name: Se non ha fatto in tempo, riparte da solo
