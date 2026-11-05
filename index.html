@@ -183,11 +183,12 @@ dialog::backdrop{background:rgba(12,12,16,.72)}
 .indice .asta{flex:1;height:10px;background:var(--riquadro);position:relative;max-width:320px}
 .indice .asta i{position:absolute;left:0;top:0;bottom:0;background:var(--vermiglio)}
 .nd{color:var(--muto)}
-.mercato{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;margin:0 0 20px}
-.mercato .et{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;margin-right:4px}
-.mercato .pillola{border-color:var(--carta);color:var(--carta)}
+.mercato{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:14px 0 20px}
+.mercato .et{grid-column:1/-1;font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+.mercato .pillola{border-color:var(--carta);color:var(--carta);padding:0 6px;font-size:11px;letter-spacing:.02em;line-height:1.15;text-align:center}
 .mercato .pillola[aria-pressed="true"]{background:var(--carta);color:var(--ink)}
-.mercato .nota-m{flex-basis:100%;font-size:14px;line-height:1.5;opacity:.85;max-width:640px}
+.mercato .nota-m{grid-column:1/-1;margin:2px 0 0;font-size:13px;line-height:1.45;opacity:.85;max-width:640px}
+@media(min-width:720px){.mercato{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px}.mercato .et{grid-column:auto;margin-right:4px}.mercato .pillola{padding:0 16px;font-size:12px;letter-spacing:.06em}.mercato .nota-m{flex-basis:100%;font-size:14px}}
 .misure{display:grid;gap:10px;margin-top:4px}
 .misura{display:grid;grid-template-columns:128px 1fr;gap:4px 14px;align-items:center}
 .misura .et{font-weight:600;font-size:15px}
