@@ -346,8 +346,9 @@ function gruppi(anno) {
   const lett = tutti.filter(letteraria);
   const g = {
     tutti: tutti.slice().sort(perPopolarita),
-    letterari: lett.filter((a) => !arricchito || (a.n_opere || 0) > 0).sort(perPopolarita),
-    senza: arricchito ? lett.filter((a) => !(a.n_opere > 0)).sort(perPopolarita) : [],
+    // n_opere assente = autore non ancora elaborato (lavoro a metà): resta tra i letterari
+    letterari: lett.filter((a) => !arricchito || a.n_opere === undefined || a.n_opere > 0).sort(perPopolarita),
+    senza: arricchito ? lett.filter((a) => a.n_opere === 0).sort(perPopolarita) : [],
     arricchito
   };
   gruppiCache.set(anno, g);

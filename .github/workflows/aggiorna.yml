@@ -11,6 +11,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: aggiorna
@@ -42,4 +43,13 @@ jobs:
             git commit -m "Aggiornamento dati $(date -u +%Y-%m-%d)"
             git pull --rebase origin main
             git push
+          fi
+      - name: Se non ha fatto in tempo, riparte da solo
+        # i dati già scaricati restano in cache: il giro dopo continua da dove si è fermato
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ -f .incompleto ]; then
+            gh workflow run aggiorna.yml --ref main
           fi

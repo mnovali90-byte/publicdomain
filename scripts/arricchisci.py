@@ -18,6 +18,8 @@ Niente è scritto a memoria: se un dato non si trova, il campo resta vuoto.
 Una cache in data/cache_arricchimento.json evita di ripetere richieste recenti.
 """
 import argparse
+import concurrent.futures
+import os
 import datetime as dt
 import json
 import pathlib
@@ -35,7 +37,11 @@ SPARQL = "https://query.wikidata.org/sparql"
 LETTERARI = {"romanziere", "poeta", "drammaturgo", "saggista"}
 TIPO_CATALOGO = {"drammaturgo": "Teatro", "poeta": "Poesia", "romanziere": "Romanzo", "saggista": "Saggi"}
 VALIDITA_GIORNI = 20      # una voce in cache più recente di così non viene riscaricata
-PAUSA = 0.25              # secondi tra una richiesta e l'altra
+PAUSA = 0.25              # secondi tra una richiesta e l'altra (per ciascun lavoratore)
+LAVORATORI = 5            # autori elaborati in parallelo
+BUDGET_MINUTI = float(os.environ.get("BUDGET_MINUTI", "100"))   # oltre questo tempo si salva e si riprende al giro dopo
+FLAG_INCOMPLETO = pathlib.Path(".incompleto")
+FINE_LAVORO = time.time() + BUDGET_MINUTI * 60
 PESI = {"visite": 0.6, "pagine": 0.2, "gutenberg": 0.2}
 
 
@@ -318,48 +324,60 @@ def da_aggiornare(voce, oggi):
     return voce is None or voce.get("v", 1) < VERSIONE_CACHE or not e_recente(voce, oggi)
 
 
+def _autore(a, b, opere_a, vecchia, oggi):
+    """Tutti i dati di un autore. Gira in un lavoratore parallelo: non tocca la cache."""
+    serve_pesante = not e_recente(vecchia, oggi)
+    voce = dict(vecchia)
+    voce.update(riassumi_opere(opere_a))
+    voce["paesi"], voce["lingue"], voce["titoli"] = b["paesi"], b["lingue"], b["titoli"]
+    voce.pop("foto", None)
+    if b["img"]:
+        try:
+            foto = foto_commons(b["img"])
+            if foto:
+                voce["foto"] = foto
+        except Exception as e:
+            print(f"  foto non riuscita per {a['nome']}: {e}", file=sys.stderr)
+    voce["v"] = VERSIONE_CACHE
+    if serve_pesante:
+        t = b["titoli"]
+        try:
+            voce.update(biografia(t))
+        except Exception as e:
+            print(f"  bio non riuscita per {a['nome']}: {e}", file=sys.stderr)
+        try:
+            voce["visite_12m"] = visite_12_mesi(t, oggi)
+        except Exception as e:
+            print(f"  visite non riuscite per {a['nome']}: {e}", file=sys.stderr)
+        try:
+            voce["gutenberg"] = gutenberg_download(a["nome"], int(a["morte"][:4]))
+        except Exception as e:
+            print(f"  gutenberg non riuscito per {a['nome']}: {e}", file=sys.stderr)
+        voce["ts"] = oggi.isoformat()
+    return voce
+
+
 def arricchisci_gruppo(gruppo, cache, oggi):
     """Scarica i dati di un gruppo di autori (max ~25) e li mette in cache.
     Parte leggera (opere, foto, paesi, lingue): sempre. Parte pesante (biografia,
-    visite, Gutenberg): solo se la voce è nuova o scaduta, per non rifare lavoro già fatto."""
+    visite, Gutenberg): solo se la voce è nuova o scaduta. Gli autori del gruppo
+    sono elaborati in parallelo."""
     codici = [a["wikidata"] for a in gruppo]
     base = dati_base(codici)
     time.sleep(2)
     opere = opere_wikidata(codici)
     time.sleep(2)
-    for a in gruppo:
-        c = a["wikidata"]
-        b = base.get(c, {"titoli": {}, "img": None, "paesi": [], "lingue": []})
-        vecchia = cache.get(c) or {}
-        serve_pesante = not e_recente(vecchia, oggi)
-        voce = dict(vecchia)
-        voce.update(riassumi_opere(opere.get(c, [])))
-        voce["paesi"], voce["lingue"], voce["titoli"] = b["paesi"], b["lingue"], b["titoli"]
-        voce.pop("foto", None)
-        if b["img"]:
-            try:
-                foto = foto_commons(b["img"])
-                if foto:
-                    voce["foto"] = foto
-            except Exception as e:
-                print(f"  foto non riuscita per {a['nome']}: {e}", file=sys.stderr)
-        voce["v"] = VERSIONE_CACHE
-        if serve_pesante:
-            t = b["titoli"]
-            try:
-                voce.update(biografia(t))
-            except Exception as e:
-                print(f"  bio non riuscita per {a['nome']}: {e}", file=sys.stderr)
-            try:
-                voce["visite_12m"] = visite_12_mesi(t, oggi)
-            except Exception as e:
-                print(f"  visite non riuscite per {a['nome']}: {e}", file=sys.stderr)
-            try:
-                voce["gutenberg"] = gutenberg_download(a["nome"], int(a["morte"][:4]))
-            except Exception as e:
-                print(f"  gutenberg non riuscito per {a['nome']}: {e}", file=sys.stderr)
-            voce["ts"] = oggi.isoformat()
-        cache[c] = voce
+    vuota = {"titoli": {}, "img": None, "paesi": [], "lingue": []}
+    with concurrent.futures.ThreadPoolExecutor(max_workers=LAVORATORI) as ex:
+        futuri = {a["wikidata"]: ex.submit(_autore, a, base.get(a["wikidata"], vuota),
+                                           opere.get(a["wikidata"], []), cache.get(a["wikidata"]) or {}, oggi)
+                  for a in gruppo}
+        for c, f in futuri.items():
+            cache[c] = f.result()
+
+
+def salva_cache(cache):
+    CACHE.write_text(json.dumps(cache, ensure_ascii=False), encoding="utf-8")
 
 
 def elabora_anno(percorso, cache, oggi):
@@ -367,10 +385,16 @@ def elabora_anno(percorso, cache, oggi):
     letterari = [a for a in pacchetto["autori"] if LETTERARI & set(a["professioni"])]
     da_fare = [a for a in letterari if da_aggiornare(cache.get(a["wikidata"]), oggi)]
     print(f"{percorso.name}: {len(letterari)} letterari, {len(da_fare)} da scaricare", file=sys.stderr)
+    da_fare.sort(key=lambda a: -a.get("pagine_wikipedia", 0))   # i più noti per primi
     for i in range(0, len(da_fare), 25):
+        if time.time() > FINE_LAVORO:
+            print("  tempo a disposizione finito: salvo e riprendo al prossimo giro", file=sys.stderr)
+            FLAG_INCOMPLETO.write_text("1")
+            break
         gruppo = da_fare[i:i + 25]
         print(f"  gruppo {i // 25 + 1}/{(len(da_fare) + 24) // 25}", file=sys.stderr)
         arricchisci_gruppo(gruppo, cache, oggi)
+        salva_cache(cache)
     id_letterari = {x["wikidata"] for x in letterari}
     for a in pacchetto["autori"]:
         if a["wikidata"] in id_letterari:
@@ -381,8 +405,9 @@ def elabora_anno(percorso, cache, oggi):
                       "gutenberg", "foto", "paesi", "lingue"):
                 if voce.get(k) not in (None, [], ""):
                     a[k] = voce[k]
-            a.setdefault("n_opere", 0)
-    calcola_indici([a for a in pacchetto["autori"] if a.get("letterario")])
+            if voce:
+                a.setdefault("n_opere", 0)
+    calcola_indici([a for a in pacchetto["autori"] if a.get("letterario") and "n_opere" in a])
     pacchetto["letterari"] = len(letterari)
     for chiave, campo in (("paesi", "paesi"), ("lingue", "lingue")):
         conteggio = {}
@@ -398,9 +423,9 @@ def elabora_anno(percorso, cache, oggi):
 
 def controlla_qualita(letterari, cache):
     """Se quasi nulla è stato trovato, qualcosa non va: meglio un errore chiaro."""
-    if len(letterari) < 20:
+    voci = [cache[a["wikidata"]] for a in letterari if a["wikidata"] in cache]
+    if len(voci) < 20:
         return
-    voci = [cache.get(a["wikidata"], {}) for a in letterari]
     con_bio = sum(1 for v in voci if v.get("bio"))
     con_visite = sum(1 for v in voci if v.get("visite_12m") is not None)
     print(f"  qualità: bio {con_bio}/{len(voci)}, visite {con_visite}/{len(voci)}", file=sys.stderr)
@@ -414,6 +439,8 @@ def main():
     a = p.parse_args()
     oggi = dt.date.today()
     cache = carica_cache()
+    if FLAG_INCOMPLETO.exists():
+        FLAG_INCOMPLETO.unlink()
     file = sorted(DATA_DIR.glob("[0-9][0-9][0-9][0-9].json"))
     if a.anno:
         file = [f for f in file if f.stem == str(a.anno)]
@@ -427,8 +454,8 @@ def main():
     # scrive solo a fine lavoro e solo se i controlli sono passati
     for f, pacchetto in risultati:
         f.write_text(json.dumps(pacchetto, ensure_ascii=False, indent=1), encoding="utf-8")
-    CACHE.write_text(json.dumps(cache, ensure_ascii=False), encoding="utf-8")
-    print("Arricchimento completato.")
+    salva_cache(cache)
+    print("Arricchimento " + ("INCOMPLETO: continua al prossimo giro." if FLAG_INCOMPLETO.exists() else "completato."))
 
 
 if __name__ == "__main__":
