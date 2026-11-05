@@ -204,9 +204,9 @@ dialog::backdrop{background:rgba(12,12,16,.72)}
   <div class="contenitore">
     <header class="barra">
       <div class="marchio"><i></i>Public Domain Radar</div>
-      <nav class="navigazione" id="navigazione" aria-label="Navigazione"></nav>
+      <nav class="navigazione" id="navigazione" data-ta="navAria" aria-label="Navigazione"></nav>
     </header>
-    <div id="eroe"><p class="messaggio">Caricamento…</p></div>
+    <div id="eroe"><p class="messaggio" data-t="caricamento">Caricamento…</p></div>
   </div>
 </section>
 
@@ -220,19 +220,19 @@ dialog::backdrop{background:rgba(12,12,16,.72)}
 
   <section class="scuro" id="scaffali" hidden style="margin-top:clamp(96px,12vw,144px)">
     <div class="contenitore" style="padding-top:clamp(72px,10vw,112px);padding-bottom:clamp(72px,10vw,120px)">
-      <div class="occhiello">Le opere che si liberano</div>
-      <h2 class="titolo">Sfoglia per genere</h2>
+      <div class="occhiello" data-t="scaffOcc">Le opere che si liberano</div>
+      <h2 class="titolo" data-t="scaffTit">Sfoglia per genere</h2>
       <div id="scaffali-corpo"></div>
-      <p class="nota">Gli scaffali nascono dai dati di Wikidata e mostrano solo le opere che hanno un genere indicato. Le copertine sono tipografiche: le copertine vere sono protette.</p>
+      <p class="nota" data-t="scaffNota">Gli scaffali nascono dai dati di Wikidata e mostrano solo le opere che hanno un genere indicato. Le copertine sono tipografiche: le copertine vere sono protette.</p>
     </div>
   </section>
 
   <section class="contenitore sezione" id="esplora" hidden>
-    <div class="occhiello">Esplora</div>
-    <h2 class="titolo">Per paese</h2>
+    <div class="occhiello" data-t="esplora">Esplora</div>
+    <h2 class="titolo" data-t="perPaese">Per paese</h2>
     <div class="parole" id="paesi"></div>
     <div id="lingue-blocco" hidden>
-      <h3 class="sottotitolo">Per lingua</h3>
+      <h3 class="sottotitolo" data-t="perLingua">Per lingua</h3>
       <div class="lingue" id="lingue"></div>
     </div>
   </section>
@@ -240,8 +240,8 @@ dialog::backdrop{background:rgba(12,12,16,.72)}
   <section class="contenitore sezione" id="miei">
     <div class="miei-testa">
       <div>
-        <div class="occhiello">La tua lista</div>
-        <h2 class="titolo">I miei candidati</h2>
+        <div class="occhiello" data-t="mieiOcc">La tua lista</div>
+        <h2 class="titolo" data-t="mieiTit">I miei candidati</h2>
       </div>
       <div id="miei-azioni"></div>
     </div>
@@ -249,11 +249,11 @@ dialog::backdrop{background:rgba(12,12,16,.72)}
   </section>
 
   <section class="contenitore sezione" id="archivio">
-    <div class="occhiello">L'archivio</div>
+    <div class="occhiello" data-t="archOcc">L'archivio</div>
     <h2 class="titolo" id="archivio-titolo">Tutti gli autori</h2>
     <div class="cerca">
-      <label class="sr" for="cerca">Cerca un autore</label>
-      <input id="cerca" type="search" placeholder="Cerca un autore" autocomplete="off" spellcheck="false">
+      <label class="sr" for="cerca" data-t="cerca">Cerca un autore</label>
+      <input id="cerca" type="search" placeholder="Cerca un autore" data-tp="cerca" autocomplete="off" spellcheck="false">
     </div>
     <div class="strumenti" id="strumenti"></div>
     <ul class="elenco" id="elenco"></ul>
@@ -264,9 +264,9 @@ dialog::backdrop{background:rgba(12,12,16,.72)}
 <footer>
   <div class="contenitore">
     <div class="mono" style="font-size:13px;color:var(--carta)">Public Domain Radar</div>
-    <p>Regola europea di base: le opere diventano libere il 1° gennaio dell'anno successivo ai 70 dalla morte dell'autore. Alcuni paesi, come l'Italia, hanno proroghe: prima di pubblicare va fatta una verifica nazionale. Una traduzione già esistente ha diritti propri: qui si parla solo delle opere originali.</p>
+    <p data-t="regola">Regola europea di base: le opere diventano libere il 1° gennaio dell'anno successivo ai 70 dalla morte dell'autore. Alcuni paesi, come l'Italia, hanno proroghe: prima di pubblicare va fatta una verifica nazionale. Una traduzione già esistente ha diritti propri: qui si parla solo delle opere originali.</p>
     <p id="fonti">Fonti: Wikidata (CC0), Wikipedia (testi CC BY-SA, con link alla pagina d'origine), Wikimedia Commons (ritratti, ciascuno con la sua licenza), Project Gutenberg. Aggiornato ogni mese in automatico.</p>
-    <p><a href="https://github.com/mnovali90-byte/publicdomain">Codice e dati su GitHub</a></p>
+    <p><a href="https://github.com/mnovali90-byte/publicdomain" data-t="codice">Codice e dati su GitHub</a></p>
   </div>
 </footer>
 
@@ -279,6 +279,106 @@ const LETTERARIE = ["romanziere", "poeta", "drammaturgo", "saggista"];
 const MESI = ["gennaio","febbraio","marzo","aprile","maggio","giugno","luglio","agosto","settembre","ottobre","novembre","dicembre"];
 const SVG = "http://www.w3.org/2000/svg";
 const CHIAVE_PREFERITI = "pdr_preferiti_v1";
+const CHIAVE_LINGUA = "pdr_lingua_v1";
+const MESI_EN = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+const TESTI = {
+it: {
+  titolo: "Public Domain Radar",
+  descrizione: "Gli autori le cui opere entrano nel pubblico dominio in Europa il prossimo 1° gennaio. Dati aperti da Wikidata e Wikipedia, aggiornati ogni mese.",
+  caricamento: "Caricamento…", navAria: "Navigazione", miei: "I miei · {n}",
+  daDati: "I dati non sono ancora disponibili. Riprova tra poco.", nessunAutoreAnno: "Nessun autore per questo anno.",
+  tra: "Tra {n} giorni", domani: "Domani", oggi: "Oggi", liberoDal: "Libero dal",
+  entra: "entra nel pubblico dominio.", ora: "è nel pubblico dominio.",
+  spiega: "Dal {d} le sue opere originali sono libere secondo la regola europea dei 70 anni.", eAltri: " E con lui altri {n} autori.",
+  vediTutti: "Vedi tutti i {n} autori", sfoglia: "Sfoglia per genere", nomiGrandi: "I nomi più grandi", schedaDi: "Scheda di {nome}",
+  grandiOcc: "I nomi più grandi del {anno}", grandiTit: "Chi si libera insieme a {nome}", grandiTit0: "Chi si libera",
+  apriScheda: "Apri la scheda di {nome}",
+  scaffOcc: "Le opere che si liberano", scaffTit: "Sfoglia per genere",
+  scaffNota: "Gli scaffali nascono dai dati di Wikidata e mostrano solo le opere che hanno un genere indicato. Le copertine sono tipografiche: le copertine vere sono protette.",
+  piuNote: "Le più note", vediTutto: "Vedi tutto →", vediTutteAria: "Vedi tutte le {n} opere: {nome}", nOpere: "{n} opere", libereDal: "Libere dal {d}",
+  esplora: "Esplora", perPaese: "Per paese", perLingua: "Per lingua",
+  mieiOcc: "La tua lista", mieiTit: "I miei candidati",
+  mieiVuoto: "Tocca il cuore su un autore per metterlo qui. La lista resta su questo dispositivo e puoi scaricarla in Excel.",
+  scaricaMiei: "Scarica in Excel · {n}", togli: "Togli", togliAria: "Togli {nome} dalla lista", liberoIndice: "libero dal {d}", indiceN: "indice {n}",
+  archOcc: "L'archivio", archTit: "Tutti i {n}", cerca: "Cerca un autore",
+  fLett: "Autori letterari · {n}", fSenza: "Senza opere note · {n}", fTutti: "Tutti · {n}", fSenzaIt: "Senza edizioni italiane · {n}",
+  oPop: "Popolarità", oData: "Data", nessuno: "Nessun autore corrisponde alla ricerca.",
+  mostraAltri: "Mostra altri {n} →", scaricaElenco: "Scarica questo elenco in Excel · {n}",
+  foto: "Foto: ", ritrattoDi: "Ritratto di {nome}", pagineWm: "{n} pagine Wikimedia", pagineWmBreve: "{n} pagine",
+  salva: "Salva nei miei candidati", salvaAria: "Salva {nome} nei miei candidati", inLista: "Nella tua lista",
+  chiudi: "Chiudi", copiaLink: "Copia il link", linkCopiato: "Link copiato", copiaPrompt: "Copia il link:",
+  popolarita: "Popolarità", visite: "{n} visite su Wikipedia in 12 mesi", visiteNd: "visite Wikipedia: dato non disponibile",
+  gut: "{n} download su Project Gutenberg", gutNd: "Gutenberg: nessun riscontro",
+  formulaTitolo: "Formula: ", formula: "60% visite Wikipedia (12 mesi), 20% pagine Wikimedia, 20% download Project Gutenberg",
+  catalogo: "Che tipo di catalogo", opereP: "Opere principali", opereSu: " · {x} su {y}", lingue: "Lingue",
+  avviso: "Prima di ritradurre: controlla se esiste già una traduzione italiana recente e verifica le regole del tuo paese. Per l'Italia ci sono proroghe per alcuni autori morti in periodo di guerra.",
+  tradTit: "Esistono edizioni nelle altre lingue?", tradSu: "{n} opere trovate su Open Library", tradNessuna: "Open Library non ha trovato opere di questo autore.",
+  tradNoIt: "Nessuna edizione italiana registrata: possibile spazio per una nuova traduzione.",
+  tradNota: "Indicazione, non verdetto: non dice se una traduzione è buona o recente, e Open Library può non conoscere alcune edizioni.",
+  tradParz: "Controllate le {n} opere più pubblicate.",
+  librI: "Libri in italiano", sbn: "Catalogo SBN", wikipedia: "Wikipedia", wikidata: "Wikidata",
+  nato: "nato", scrittore: "Scrittore",
+  regola: "Regola europea di base: le opere diventano libere il 1° gennaio dell'anno successivo ai 70 dalla morte dell'autore. Alcuni paesi, come l'Italia, hanno proroghe: prima di pubblicare va fatta una verifica nazionale. Una traduzione già esistente ha diritti propri: qui si parla solo delle opere originali.",
+  fonti: "Fonti: Wikidata (CC0), Wikipedia (testi CC BY-SA, con link alla pagina d'origine), Wikimedia Commons (ritratti, ciascuno con la sua licenza), Open Library, Project Gutenberg. Ultimo aggiornamento: {d}; si rinnova da solo ogni mese.",
+  codice: "Codice e dati su GitHub", tastoLingua: "Lingua",
+  csv: ["Nome","Nata/o","Morta/o","Libero dal","Indice popolarità","Pagine Wikimedia","Visite Wikipedia 12 mesi","Paesi","Lingue","Tipo di catalogo","Generi","Opere principali","Edizioni italiane (Open Library)","Edizioni inglesi (Open Library)","Wikipedia/Wikidata"],
+  tipi: {}, prof: {},
+  nomiLingua: { it: "Italiano", en: "Inglese", es: "Spagnolo", fr: "Francese", de: "Tedesco" }
+},
+en: {
+  titolo: "Public Domain Radar",
+  descrizione: "The authors whose works enter the public domain in Europe on 1 January next year. Open data from Wikidata and Wikipedia, updated monthly.",
+  caricamento: "Loading…", navAria: "Navigation", miei: "My list · {n}",
+  daDati: "The data is not available yet. Please try again shortly.", nessunAutoreAnno: "No authors for this year.",
+  tra: "In {n} days", domani: "Tomorrow", oggi: "Today", liberoDal: "Free since",
+  entra: "enters the public domain.", ora: "is in the public domain.",
+  spiega: "From {d} their original works are free under the EU life-plus-70-years rule.", eAltri: " Along with them, {n} more authors.",
+  vediTutti: "See all {n} authors", sfoglia: "Browse by genre", nomiGrandi: "The big names", schedaDi: "{nome}'s profile",
+  grandiOcc: "The biggest names of {anno}", grandiTit: "Who is freed alongside {nome}", grandiTit0: "Who is freed",
+  apriScheda: "Open the profile of {nome}",
+  scaffOcc: "The works being freed", scaffTit: "Browse by genre",
+  scaffNota: "The shelves are built from Wikidata and only show works that have a genre. Covers are typographic: real covers are protected.",
+  piuNote: "Best known", vediTutto: "See all →", vediTutteAria: "See all {n} works: {nome}", nOpere: "{n} works", libereDal: "Free from {d}",
+  esplora: "Explore", perPaese: "By country", perLingua: "By language",
+  mieiOcc: "Your list", mieiTit: "My shortlist",
+  mieiVuoto: "Tap the heart on an author to put them here. The list stays on this device and you can download it as a spreadsheet.",
+  scaricaMiei: "Download as Excel · {n}", togli: "Remove", togliAria: "Remove {nome} from the list", liberoIndice: "free from {d}", indiceN: "index {n}",
+  archOcc: "The archive", archTit: "All {n}", cerca: "Search an author",
+  fLett: "Literary authors · {n}", fSenza: "No known works · {n}", fTutti: "All · {n}", fSenzaIt: "No Italian editions · {n}",
+  oPop: "Popularity", oData: "Date", nessuno: "No author matches your search.",
+  mostraAltri: "Show {n} more →", scaricaElenco: "Download this list as Excel · {n}",
+  foto: "Photo: ", ritrattoDi: "Portrait of {nome}", pagineWm: "{n} Wikimedia pages", pagineWmBreve: "{n} pages",
+  salva: "Save to my shortlist", salvaAria: "Save {nome} to my shortlist", inLista: "In your list",
+  chiudi: "Close", copiaLink: "Copy link", linkCopiato: "Link copied", copiaPrompt: "Copy the link:",
+  popolarita: "Popularity", visite: "{n} Wikipedia views in 12 months", visiteNd: "Wikipedia views: not available",
+  gut: "{n} downloads on Project Gutenberg", gutNd: "Gutenberg: no match",
+  formulaTitolo: "Formula: ", formula: "60% Wikipedia views (12 months), 20% Wikimedia pages, 20% Project Gutenberg downloads",
+  catalogo: "Type of catalogue", opereP: "Main works", opereSu: " · {x} of {y}", lingue: "Languages",
+  avviso: "Before retranslating: check whether a recent translation already exists in your market, and verify your country's rules. Some countries, Italy included, have wartime extensions for certain authors.",
+  tradTit: "Are there editions in other languages?", tradSu: "{n} works found on Open Library", tradNessuna: "Open Library found no works by this author.",
+  tradNoIt: "No Italian edition on record: there may be room for a new translation.",
+  tradNota: "An indication, not a verdict: it does not say whether a translation is good or recent, and Open Library may not know some editions.",
+  tradParz: "Checked the {n} most published works.",
+  librI: "Books in Italian", sbn: "SBN catalogue", wikipedia: "Wikipedia", wikidata: "Wikidata",
+  nato: "born", scrittore: "Writer",
+  regola: "Basic EU rule: works become free on 1 January of the year after the 70th anniversary of the author's death. Some countries, Italy included, have extensions: check national rules before publishing. An existing translation has its own rights: this site only covers original works.",
+  fonti: "Sources: Wikidata (CC0), Wikipedia (text CC BY-SA, linked to the original page), Wikimedia Commons (portraits, each with its own licence), Open Library, Project Gutenberg. Last updated: {d}; it renews itself every month.",
+  codice: "Code and data on GitHub", tastoLingua: "Language",
+  csv: ["Name","Born","Died","Free from","Popularity index","Wikimedia pages","Wikipedia views 12 months","Countries","Languages","Catalogue type","Genres","Main works","Italian editions (Open Library)","English editions (Open Library)","Wikipedia/Wikidata"],
+  tipi: { Teatro: "Theatre", Poesia: "Poetry", Romanzo: "Novel", Saggi: "Essays" },
+  prof: { romanziere: "novelist", poeta: "poet", drammaturgo: "playwright", saggista: "essayist", scrittore: "writer", traduttore: "translator" },
+  nomiLingua: { it: "Italian", en: "English", es: "Spanish", fr: "French", de: "German" }
+}
+};
+let LING = "it";
+function tr(k, v) {
+  let x = TESTI[LING][k];
+  if (x === undefined) x = TESTI.it[k];
+  if (typeof x !== "string") return x;
+  if (v) for (const [a, b] of Object.entries(v)) x = x.split("{" + a + "}").join(String(b));
+  return x;
+}
 
 const stato = {
   anni: [], dati: {}, anno: null,
@@ -302,7 +402,7 @@ function h(tag, attrs, ...figli) {
   return e;
 }
 const $ = (s) => document.querySelector(s);
-const n = (x) => Number(x).toLocaleString("it-IT");
+const n = (x) => Number(x).toLocaleString(LING === "it" ? "it-IT" : "en-GB");
 const norm = (s) => String(s).normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
 const pulisci = (s) => String(s || "").replace(/<[^>]*>/g, "").replace(/\s+/g, " ").trim();
 const maiuscola = (s) => s ? s.charAt(0).toUpperCase() + s.slice(1) : s;
@@ -312,6 +412,7 @@ function dataIt(iso) {
   if (!m) return iso;
   const anno = Number(m[1]);
   if (!m[2] || !m[3]) return String(anno);
+  if (LING === "en") return `${Number(m[3])} ${MESI_EN[Number(m[2]) - 1]} ${anno}`;
   return `${Number(m[3]) === 1 ? "1°" : Number(m[3])} ${MESI[Number(m[2]) - 1]} ${anno}`;
 }
 function ripara(txt, quanto) { return txt.length > quanto ? txt.slice(0, quanto - 1).trimEnd() + "…" : txt; }
@@ -377,7 +478,7 @@ function aggiornaCuori() {
     const p = èPreferito(b.dataset.cuore);
     b.setAttribute("aria-pressed", p ? "true" : "false");
     const et = b.querySelector(".etichetta");
-    if (et) et.textContent = p ? "Nella tua lista" : "Salva nei miei candidati";
+    if (et) et.textContent = p ? tr("inLista") : tr("salva");
   });
 }
 function cuoreSvg() {
@@ -388,7 +489,7 @@ function bottoneCuore(a, classe) {
   const nome = a.nome;
   return h("button", {
     class: classe || "cuore", type: "button", "data-cuore": a.wikidata, "aria-pressed": èPreferito(a.wikidata) ? "true" : "false",
-    "aria-label": `Salva ${nome} nei miei candidati`,
+    "aria-label": tr("salvaAria", { nome }),
     onclick: (ev) => { ev.stopPropagation(); alternaPreferito(a.wikidata); }
   }, cuoreSvg());
 }
@@ -399,7 +500,7 @@ function ritratto(a, opzioni = {}) {
   const ini = h("span", { class: "iniziali", "aria-hidden": "true" }, iniziali(a.nome));
   box.append(ini);
   if (a.foto && a.foto.url) {
-    const img = h("img", { src: a.foto.url, alt: `Ritratto di ${a.nome}`, loading: opzioni.subito ? "eager" : "lazy", decoding: "async", referrerpolicy: "no-referrer" });
+    const img = h("img", { src: a.foto.url, alt: tr("ritrattoDi", { nome: a.nome }), loading: opzioni.subito ? "eager" : "lazy", decoding: "async", referrerpolicy: "no-referrer" });
     img.addEventListener("error", () => img.remove());
     box.append(img);
   }
@@ -412,20 +513,20 @@ function creditoFoto(a) {
   if (autore) parti.push(ripara(autore, 60));
   if (a.foto.licenza) parti.push(pulisci(a.foto.licenza));
   const testo = parti.length ? parti.join(" · ") : "Wikimedia Commons";
-  return h("div", { class: "didascalia" }, "Foto: ",
+  return h("div", { class: "didascalia" }, tr("foto"),
     a.foto.pagina ? h("a", { href: a.foto.pagina, target: "_blank", rel: "noopener" }, testo) : testo);
 }
 function righeDati(a, pagineTesto = true) {
   const t = [];
   if (a.morte) t.push(`† ${dataIt(a.morte)}`);
-  if (pagineTesto && a.pagine_wikipedia) t.push(`${n(a.pagine_wikipedia)} pagine Wikimedia`);
+  if (pagineTesto && a.pagine_wikipedia) t.push(tr("pagineWm", { n: n(a.pagine_wikipedia) }));
   return t.join(" · ");
 }
 function bioBreve(a, quanto) {
   if (a.bio) return ripara(pulisci(a.bio), quanto);
-  const prof = a.professioni.filter((p) => p !== "scrittore").slice(0, 3);
+  const prof = a.professioni.filter((p) => p !== "scrittore").slice(0, 3).map((p) => (tr("prof") || {})[p] || p);
   const anni = [a.nascita ? a.nascita.slice(0, 4) : "?", a.morte ? a.morte.slice(0, 4) : "?"].join("–");
-  return prof.length ? `${maiuscola(prof.join(", "))} (${anni})` : `Scrittore (${anni})`;
+  return prof.length ? `${maiuscola(prof.join(", "))} (${anni})` : `${tr("scrittore")} (${anni})`;
 }
 
 /* ---------- intestazione e navigazione ---------- */
@@ -435,7 +536,9 @@ function disegnaNavigazione() {
   for (const an of stato.anni) {
     nav.append(h("button", { type: "button", class: an === stato.anno ? "attivo" : "", "aria-current": an === stato.anno ? "true" : null, onclick: () => { location.hash = `#/${an}`; } }, String(an)));
   }
-  nav.append(h("button", { type: "button", onclick: () => scorri("miei") }, `I miei · ${stato.preferiti.length}`));
+  nav.append(h("button", { type: "button", onclick: () => scorri("miei") }, tr("miei", { n: stato.preferiti.length })));
+  nav.append(h("span", { role: "group", "aria-label": tr("tastoLingua"), style: "display:inline-flex;gap:0;margin-left:8px" },
+    ...["it", "en"].map((l) => h("button", { type: "button", lang: l, class: l === LING ? "attivo" : "", "aria-pressed": l === LING ? "true" : "false", style: "padding:12px 8px", onclick: () => impostaLingua(l) }, l.toUpperCase()))));
 }
 function scorri(id) {
   const el = document.getElementById(id);
@@ -452,12 +555,12 @@ function disegnaEroe() {
   const box = $("#eroe");
   box.replaceChildren();
   const prima = g.letterari[0] || g.tutti[0];
-  if (!prima) { box.append(h("p", { class: "messaggio" }, "Nessun autore per questo anno.")); return; }
+  if (!prima) { box.append(h("p", { class: "messaggio" }, tr("nessunAutoreAnno"))); return; }
   const giorni = giorniA(d.libero_dal);
   const parole = prima.nome.split(/\s+/);
   const riga2 = parole.length > 1 ? parole[parole.length - 1] : "";
   const riga1 = parole.length > 1 ? parole.slice(0, -1).join(" ") : prima.nome;
-  const quando = giorni > 1 ? `Tra ${n(giorni)} giorni` : giorni === 1 ? "Domani" : giorni === 0 ? "Oggi" : "Libero dal";
+  const quando = giorni > 1 ? tr("tra", { n: n(giorni) }) : giorni === 1 ? tr("domani") : giorni === 0 ? tr("oggi") : tr("liberoDal");
   const altri = Math.max(0, g.letterari.length - 1);
   const h1 = h("h1", { id: "eroe-nome" }, riga1, riga2 ? h("br") : null, riga2);
   const foto = h("div", { class: "eroe-foto" },
@@ -468,12 +571,12 @@ function disegnaEroe() {
     h("div", { class: "eroe-testo" },
       h("div", { class: "occhiello" }, `${quando} · ${dataIt(d.libero_dal)}`),
       h1,
-      h("p", { class: "predicato" }, giorni >= 0 ? "entra nel pubblico dominio." : "è nel pubblico dominio."),
-      h("p", { class: "spiega" }, `Dal ${dataIt(d.libero_dal)} le sue opere originali sono libere secondo la regola europea dei 70 anni.${altri ? ` E con lui altri ${n(altri)} autori.` : ""}`),
+      h("p", { class: "predicato" }, giorni >= 0 ? tr("entra") : tr("ora")),
+      h("p", { class: "spiega" }, tr("spiega", { d: dataIt(d.libero_dal) }) + (altri ? tr("eAltri", { n: n(altri) }) : "")),
       h("div", { class: "azioni" },
-        h("button", { class: "bottone", type: "button", onclick: () => scorri("archivio") }, `Vedi tutti i ${n(g.letterari.length)} autori`),
-        h("button", { class: "collegamento", type: "button", onclick: () => scorri(g.arricchito ? "scaffali" : "grandi-nomi") }, g.arricchito ? "Sfoglia per genere" : "I nomi più grandi"),
-        h("button", { class: "collegamento", type: "button", "data-apri": prima.wikidata, onclick: () => apriAutore(prima.wikidata) }, "Scheda di " + prima.nome))),
+        h("button", { class: "bottone", type: "button", onclick: () => scorri("archivio") }, tr("vediTutti", { n: n(g.letterari.length) })),
+        h("button", { class: "collegamento", type: "button", onclick: () => scorri(g.arricchito ? "scaffali" : "grandi-nomi") }, g.arricchito ? tr("sfoglia") : tr("nomiGrandi")),
+        h("button", { class: "collegamento", type: "button", "data-apri": prima.wikidata, onclick: () => apriAutore(prima.wikidata) }, tr("schedaDi", { nome: prima.nome })))),
     foto));
   adattaTitolo();
 }
@@ -494,7 +597,7 @@ function adattaTitolo() {
 function schedaGrande(a, classe) {
   return h("article", { class: "scheda-autore " + classe },
     h("div", { style: "position:relative" },
-      h("button", { class: "apri", type: "button", "aria-label": `Apri la scheda di ${a.nome}`, onclick: () => apriAutore(a.wikidata) },
+      h("button", { class: "apri", type: "button", "aria-label": tr("apriScheda", { nome: a.nome }), onclick: () => apriAutore(a.wikidata) },
         ritratto(a),
         h("h3", {}, a.nome)),
       bottoneCuore(a)),
@@ -509,13 +612,13 @@ function disegnaGrandi() {
   if (lista.length < 1) { sez.hidden = true; return; }
   sez.hidden = false;
   const prima = g.letterari[0];
-  $("#grandi-occhiello").textContent = `I nomi più grandi del ${stato.anno}`;
-  $("#grandi-titolo").textContent = prima ? `Chi si libera insieme a ${prima.nome}` : "Chi si libera";
+  $("#grandi-occhiello").textContent = tr("grandiOcc", { anno: stato.anno });
+  $("#grandi-titolo").textContent = prima ? tr("grandiTit", { nome: prima.nome }) : tr("grandiTit0");
   const grandi = $("#grandi"), piccoli = $("#piccoli");
   grandi.replaceChildren(...lista.slice(0, 3).map((a, i) => schedaGrande(a, ["g1", "g2", "g3"][i])));
   piccoli.replaceChildren(...lista.slice(3).map((a) => h("article", { class: "scheda-autore" },
     h("div", { style: "position:relative" },
-      h("button", { class: "apri", type: "button", "aria-label": `Apri la scheda di ${a.nome}`, onclick: () => apriAutore(a.wikidata) },
+      h("button", { class: "apri", type: "button", "aria-label": tr("apriScheda", { nome: a.nome }), onclick: () => apriAutore(a.wikidata) },
         ritratto(a, { quadrato: true }),
         h("h3", {}, a.nome)),
       bottoneCuore(a)),
@@ -550,7 +653,7 @@ function ordinaOpere(lista) {
 function costruisciScaffali(anno) {
   const opere = opereDellAnno(anno);
   const scaffali = [];
-  if (opere.length) scaffali.push({ chiave: "_note", nome: "Le più note", opere: ordinaOpere(opere) });
+  if (opere.length) scaffali.push({ chiave: "_note", nome: tr("piuNote"), opere: ordinaOpere(opere) });
   const per = new Map();
   for (const o of opere) {
     o.generi.forEach((gk, i) => {
@@ -573,7 +676,7 @@ function disegnaScaffali() {
   corpo.replaceChildren(...scaffali.map((s) => h("div", { class: "scaffale" },
     h("div", { class: "scaffale-testa" },
       h("h3", {}, s.nome),
-      s.opere.length > 14 ? h("button", { class: "vedi", type: "button", "aria-label": `Vedi tutte le ${n(s.opere.length)} opere: ${s.nome}`, onclick: () => { location.hash = `#/genere/${encodeURIComponent(s.chiave)}`; } }, "Vedi tutto →") : null),
+      s.opere.length > 14 ? h("button", { class: "vedi", type: "button", "aria-label": tr("vediTutteAria", { n: n(s.opere.length), nome: s.nome }), onclick: () => { location.hash = `#/genere/${encodeURIComponent(s.chiave)}`; } }, tr("vediTutto")) : null),
     h("div", { class: "fila", role: "list" }, s.opere.slice(0, 14).map((o) => h("div", { role: "listitem", style: "display:flex" }, copertina(o)))))));
 }
 function apriGenere(chiave) {
@@ -582,9 +685,9 @@ function apriGenere(chiave) {
   if (!s) return false;
   mostraFinestra(h("div", { class: "scheda" },
     chiudiBottone(),
-    h("div", { class: "occhiello" }, `Libere dal ${dataIt(stato.dati[stato.anno].libero_dal)}`),
+    h("div", { class: "occhiello" }, tr("libereDal", { d: dataIt(stato.dati[stato.anno].libero_dal) })),
     h("h2", {}, s.nome),
-    h("div", { class: "sotto" }, `${n(s.opere.length)} opere`),
+    h("div", { class: "sotto" }, tr("nOpere", { n: n(s.opere.length) })),
     h("div", { class: "griglia-opere" }, s.opere.map(copertina))));
   return true;
 }
@@ -617,14 +720,15 @@ function scegliFiltro(tipo, valore) {
 
 /* ---------- i miei candidati ---------- */
 function righeCsv(autori) {
-  const testa = ["Nome", "Nata/o", "Morta/o", "Libero dal", "Indice popolarità", "Pagine Wikimedia", "Visite Wikipedia 12 mesi", "Paesi", "Lingue", "Tipo di catalogo", "Generi", "Opere principali", "Wikipedia/Wikidata"];
+  const testa = tr("csv");
   const righe = [testa];
   for (const { a, anno } of autori) {
     const d = stato.dati[anno] || {};
     righe.push([
       a.nome, a.nascita || "", a.morte || "", d.libero_dal || "", a.indice ?? "", a.pagine_wikipedia ?? "", a.visite_12m ?? "",
       (a.paesi || []).join(", "), (a.lingue || []).join(", "), (a.tipo_catalogo || []).join(", "), (a.generi || []).join(", "),
-      (a.opere || []).map((o) => o.titolo + (o.anno ? ` (${o.anno})` : "")).join(" | "), a.bio_url || a.url
+      (a.opere || []).map((o) => o.titolo + (o.anno ? ` (${o.anno})` : "")).join(" | "),
+      a.traduzioni ? a.traduzioni.per_lingua.it : "", a.traduzioni ? a.traduzioni.per_lingua.en : "", a.bio_url || a.url
     ]);
   }
   return righe;
@@ -643,20 +747,21 @@ function disegnaMiei() {
   azioni.replaceChildren();
   corpo.replaceChildren();
   if (!elenco.length) {
-    corpo.append(h("p", { class: "vuoto-testo" }, "Tocca il cuore su un autore per metterlo qui. La lista resta su questo dispositivo e puoi scaricarla in Excel."));
+    corpo.append(h("p", { class: "vuoto-testo" }, tr("mieiVuoto")));
     return;
   }
-  azioni.append(h("button", { class: "pillola", type: "button", onclick: () => scaricaCsv("miei-candidati.csv", elenco) }, `Scarica in Excel · ${elenco.length}`));
+  azioni.append(h("button", { class: "pillola", type: "button", onclick: () => scaricaCsv("miei-candidati.csv", elenco) }, tr("scaricaMiei", { n: elenco.length })));
   corpo.append(h("ul", { class: "miei-lista" }, elenco.map(({ a, anno }) => h("li", {},
     h("button", { class: "nome", type: "button", onclick: () => apriAutore(a.wikidata) }, a.nome,
-      h("small", {}, `libero dal ${dataIt(stato.dati[anno].libero_dal)}${a.indice !== undefined ? ` · indice ${a.indice}` : ""}`)),
-    h("button", { class: "rimuovi", type: "button", "aria-label": `Togli ${a.nome} dalla lista`, onclick: () => alternaPreferito(a.wikidata) }, "Togli")))));
+      h("small", {}, tr("liberoIndice", { d: dataIt(stato.dati[anno].libero_dal) }) + (a.indice !== undefined ? " · " + tr("indiceN", { n: a.indice }) : ""))),
+    h("button", { class: "rimuovi", type: "button", "aria-label": tr("togliAria", { nome: a.nome }), onclick: () => alternaPreferito(a.wikidata) }, tr("togli"))))));
 }
 
 /* ---------- archivio ---------- */
+const senzaIt = (a) => !!(a.traduzioni && a.traduzioni.opere >= 2 && a.traduzioni.per_lingua.it === 0);
 function elencoArchivio() {
   const g = gruppi(stato.anno);
-  let lista = stato.filtro === "tutti" ? g.tutti : stato.filtro === "senza" ? g.senza : g.letterari;
+  let lista = stato.filtro === "tutti" ? g.tutti : stato.filtro === "senza" ? g.senza : stato.filtro === "senzait" ? g.letterari.filter(senzaIt) : g.letterari;
   if (stato.paese) lista = lista.filter((a) => (a.paesi || []).includes(stato.paese));
   if (stato.lingua) lista = lista.filter((a) => (a.lingue || []).includes(stato.lingua));
   const q = norm(stato.cerca.trim());
@@ -667,16 +772,18 @@ function elencoArchivio() {
 }
 function disegnaArchivio() {
   const g = gruppi(stato.anno);
-  $("#archivio-titolo").textContent = `Tutti i ${n(g.letterari.length)}`;
+  $("#archivio-titolo").textContent = tr("archTit", { n: n(g.letterari.length) });
   const lista = elencoArchivio();
   const strumenti = $("#strumenti");
-  const voci = [["letterari", `Autori letterari · ${n(g.letterari.length)}`]];
-  if (g.senza.length) voci.push(["senza", `Senza opere note · ${n(g.senza.length)}`]);
-  voci.push(["tutti", `Tutti · ${n(g.tutti.length)}`]);
+  const voci = [["letterari", tr("fLett", { n: n(g.letterari.length) })]];
+  const nSenzaIt = g.letterari.filter(senzaIt).length;
+  if (nSenzaIt) voci.push(["senzait", tr("fSenzaIt", { n: n(nSenzaIt) })]);
+  if (g.senza.length) voci.push(["senza", tr("fSenza", { n: n(g.senza.length) })]);
+  voci.push(["tutti", tr("fTutti", { n: n(g.tutti.length) })]);
   strumenti.replaceChildren(
     ...voci.map(([k, t]) => h("button", { class: "pillola", type: "button", "aria-pressed": stato.filtro === k ? "true" : "false", onclick: () => { stato.filtro = k; stato.visibili = PASSO; disegnaArchivio(); } }, t)),
     h("span", { class: "spazio" }),
-    ...[["popolarita", "Popolarità"], ["morte", "Data"], ["nome", "A–Z"]].map(([k, t]) => h("button", { class: "pillola", type: "button", "aria-pressed": stato.ordine === k ? "true" : "false", onclick: () => { stato.ordine = k; disegnaArchivio(); } }, t)));
+    ...[["popolarita", tr("oPop")], ["morte", tr("oData")], ["nome", "A–Z"]].map(([k, t]) => h("button", { class: "pillola", type: "button", "aria-pressed": stato.ordine === k ? "true" : "false", onclick: () => { stato.ordine = k; disegnaArchivio(); } }, t)));
   if (stato.paese) strumenti.append(h("button", { class: "pillola chip", type: "button", onclick: () => scegliFiltro("paese", stato.paese) }, `${stato.paese} ✕`));
   if (stato.lingua) strumenti.append(h("button", { class: "pillola chip", type: "button", onclick: () => scegliFiltro("lingua", stato.lingua) }, `${maiuscola(stato.lingua)} ✕`));
 
@@ -685,18 +792,18 @@ function disegnaArchivio() {
   ul.replaceChildren(...mostra.map((a) => h("li", {},
     h("button", { class: "riga", type: "button", onclick: () => apriAutore(a.wikidata) },
       h("b", {}, a.nome),
-      h("small", {}, `† ${a.morte ? a.morte.slice(0, 4) : "?"}${a.indice !== undefined ? ` · indice ${a.indice}` : ""}`)),
+      h("small", {}, `† ${a.morte ? a.morte.slice(0, 4) : "?"}${a.indice !== undefined ? " · " + tr("indiceN", { n: a.indice }) : ""}`)),
     bottoneCuore(a, "cuore cuore-riga"))));
   const altro = $("#altro");
   altro.replaceChildren();
-  if (!lista.length) altro.append(h("p", { class: "nessuno" }, "Nessun autore corrisponde alla ricerca."));
-  if (lista.length > mostra.length) altro.append(h("button", { class: "pillola", type: "button", onclick: () => { stato.visibili += PASSO * 3; disegnaArchivio(); } }, `Mostra altri ${n(Math.min(PASSO * 3, lista.length - mostra.length))} →`));
-  if (lista.length) altro.append(" ", h("button", { class: "pillola", type: "button", onclick: () => scaricaCsv(`autori-${stato.anno}.csv`, lista.map((a) => ({ a, anno: stato.anno }))) }, `Scarica questo elenco in Excel · ${n(lista.length)}`));
+  if (!lista.length) altro.append(h("p", { class: "nessuno" }, tr("nessuno")));
+  if (lista.length > mostra.length) altro.append(h("button", { class: "pillola", type: "button", onclick: () => { stato.visibili += PASSO * 3; disegnaArchivio(); } }, tr("mostraAltri", { n: n(Math.min(PASSO * 3, lista.length - mostra.length)) })));
+  if (lista.length) altro.append(" ", h("button", { class: "pillola", type: "button", onclick: () => scaricaCsv(`autori-${stato.anno}.csv`, lista.map((a) => ({ a, anno: stato.anno }))) }, tr("scaricaElenco", { n: n(lista.length) })));
 }
 
 /* ---------- finestra con la scheda ---------- */
 function chiudiBottone() {
-  return h("button", { class: "chiudi", type: "button", "aria-label": "Chiudi", onclick: () => $("#finestra").close() }, "×");
+  return h("button", { class: "chiudi", type: "button", "aria-label": tr("chiudi"), onclick: () => $("#finestra").close() }, "×");
 }
 function mostraFinestra(contenuto) {
   const f = $("#finestra");
@@ -706,37 +813,50 @@ function mostraFinestra(contenuto) {
 }
 function apriAutore(id) { location.hash = `#/autore/${id}`; }
 function linkEsterno(href, testo) { return h("a", { class: "pillola", href, target: "_blank", rel: "noopener" }, testo); }
+function bloccoTraduzioni(a) {
+  const x = a.traduzioni;
+  if (!x) return null;
+  if (!x.opere) return h("div", {}, h("h4", {}, tr("tradTit")), h("p", { class: "sotto" }, tr("tradNessuna")));
+  const nomi = tr("nomiLingua");
+  const righe = ["it", "en", "es", "fr", "de"].map((l) => h("span", { class: "tag" }, `${nomi[l]}: ${n(x.per_lingua[l] || 0)}`));
+  return h("div", {},
+    h("h4", {}, tr("tradTit")),
+    righe,
+    h("div", { class: "sotto" }, tr("tradSu", { n: n(x.opere) }) + (x.parziale ? " · " + tr("tradParz", { n: 100 }) : "")),
+    x.per_lingua.it === 0 && x.opere >= 2 ? h("div", { class: "avviso" }, tr("tradNoIt")) : null,
+    h("div", { class: "sotto", style: "margin-top:8px" }, tr("tradNota")));
+}
 function mostraAutore(id) {
   const t = trovaAutore(id);
   if (!t) return false;
   const { a, anno } = t;
   const d = stato.dati[anno];
   const nasc = a.nascita ? a.nascita.slice(0, 4) : "?", mor = a.morte ? a.morte.slice(0, 4) : "?";
-  const sotto = [`${nasc} – ${mor}`, `libero dal ${dataIt(d.libero_dal)}`];
+  const sotto = [`${nasc} – ${mor}`, tr("liberoIndice", { d: dataIt(d.libero_dal) })];
   if ((a.paesi || []).length) sotto.push(a.paesi.join(", "));
   const nome = a.nome;
   const bio = a.bio ? h("p", { class: "bio" }, pulisci(a.bio), " ",
-    a.bio_url ? h("a", { href: a.bio_url, target: "_blank", rel: "noopener", style: "font-size:14px" }, "Wikipedia") : null) : null;
+    a.bio_url ? h("a", { href: a.bio_url, target: "_blank", rel: "noopener", style: "font-size:14px" }, tr("wikipedia")) : null) : null;
   const opere = (a.opere || []);
-  const catalogo = [...(a.tipo_catalogo || [])];
+  const catalogo = (a.tipo_catalogo || []).map((x) => (tr("tipi") || {})[x] || x);
   const generi = (a.generi || []).map(maiuscola);
   const indice = a.indice !== undefined ? h("div", {},
-    h("h4", {}, "Popolarità"),
+    h("h4", {}, tr("popolarita")),
     h("div", { class: "indice" }, h("span", { class: "num" }, String(a.indice)),
       h("div", { class: "asta", role: "img", "aria-label": `Indice ${a.indice} su 100` }, h("i", { style: `width:${Math.max(2, Math.min(100, a.indice))}%` }))),
     h("div", { class: "sotto" },
-      a.visite_12m !== undefined && a.visite_12m !== null ? `${n(a.visite_12m)} visite su Wikipedia in 12 mesi` : h("span", { class: "nd" }, "visite Wikipedia: dato non disponibile"),
-      " · ", `${n(a.pagine_wikipedia || 0)} pagine Wikimedia`, " · ",
-      a.gutenberg !== undefined && a.gutenberg !== null ? `${n(a.gutenberg)} download su Project Gutenberg` : h("span", { class: "nd" }, "Gutenberg: nessun riscontro")),
-    d.indice_formula ? h("div", { class: "sotto", style: "margin-top:6px" }, "Formula: " + d.indice_formula) : null) : null;
+      a.visite_12m !== undefined && a.visite_12m !== null ? tr("visite", { n: n(a.visite_12m) }) : h("span", { class: "nd" }, tr("visiteNd")),
+      " · ", tr("pagineWm", { n: n(a.pagine_wikipedia || 0) }), " · ",
+      a.gutenberg !== undefined && a.gutenberg !== null ? tr("gut", { n: n(a.gutenberg) }) : h("span", { class: "nd" }, tr("gutNd"))),
+    d.indice_formula ? h("div", { class: "sotto", style: "margin-top:6px" }, tr("formulaTitolo") + tr("formula")) : null) : null;
   const urlCondiviso = location.href.split("#")[0] + `#/autore/${a.wikidata}`;
   const copia = h("button", { class: "pillola", type: "button", onclick: async (ev) => {
     const b = ev.currentTarget;
-    try { await navigator.clipboard.writeText(urlCondiviso); b.textContent = "Link copiato"; }
-    catch (e) { window.prompt("Copia il link:", urlCondiviso); }
-  } }, "Copia il link");
+    try { await navigator.clipboard.writeText(urlCondiviso); b.textContent = tr("linkCopiato"); }
+    catch (e) { window.prompt(tr("copiaPrompt"), urlCondiviso); }
+  } }, tr("copiaLink"));
   const cuoreBtn = h("button", { class: "pillola", type: "button", "data-cuore": a.wikidata, "aria-pressed": èPreferito(a.wikidata) ? "true" : "false", onclick: () => alternaPreferito(a.wikidata) },
-    cuoreSvg(), h("span", { class: "etichetta" }, èPreferito(a.wikidata) ? "Nella tua lista" : "Salva nei miei candidati"));
+    cuoreSvg(), h("span", { class: "etichetta" }, èPreferito(a.wikidata) ? tr("inLista") : tr("salva")));
   const q = encodeURIComponent(`"${nome}"`);
   const contenuto = h("div", { class: "scheda" },
     chiudiBottone(),
@@ -747,18 +867,19 @@ function mostraAutore(id) {
         h("div", { class: "sotto" }, sotto.join(" · ")),
         bio,
         indice,
-        catalogo.length || generi.length ? h("div", {}, h("h4", {}, "Che tipo di catalogo"),
+        catalogo.length || generi.length ? h("div", {}, h("h4", {}, tr("catalogo")),
           [...catalogo, ...generi].map((x) => h("span", { class: "tag" }, x))) : null,
-        opere.length ? h("div", {}, h("h4", {}, `Opere principali${a.n_opere > opere.length ? ` · ${n(opere.length)} su ${n(a.n_opere)}` : ""}`),
+        opere.length ? h("div", {}, h("h4", {}, tr("opereP") + (a.n_opere > opere.length ? tr("opereSu", { x: n(opere.length), y: n(a.n_opere) }) : "")),
           h("ul", { class: "opere" }, opere.map((o) => h("li", {}, o.titolo, o.anno ? h("span", {}, String(o.anno)) : null)))) : null,
-        (a.lingue || []).length ? h("div", {}, h("h4", {}, "Lingue"), a.lingue.map((x) => h("span", { class: "tag" }, maiuscola(x)))) : null,
-        h("div", { class: "avviso" }, "Prima di ritradurre: controlla se esiste già una traduzione italiana recente e verifica le regole del tuo paese. Per l'Italia ci sono proroghe per alcuni autori morti in periodo di guerra."),
+        (a.lingue || []).length ? h("div", {}, h("h4", {}, tr("lingue")), a.lingue.map((x) => h("span", { class: "tag" }, maiuscola(x)))) : null,
+        bloccoTraduzioni(a),
+        h("div", { class: "avviso" }, tr("avviso")),
         h("div", { class: "pulsanti" },
           cuoreBtn,
-          linkEsterno(`https://www.google.com/search?tbm=bks&lr=lang_it&q=inauthor:${q}`, "Libri in italiano"),
-          linkEsterno(`https://www.google.com/search?q=site:opac.sbn.it+${q}`, "Catalogo SBN"),
-          a.bio_url ? linkEsterno(a.bio_url, "Wikipedia") : null,
-          linkEsterno(a.url, "Wikidata"),
+          linkEsterno(`https://www.google.com/search?tbm=bks&lr=lang_it&q=inauthor:${q}`, tr("librI")),
+          linkEsterno(`https://www.google.com/search?q=site:opac.sbn.it+${q}`, tr("sbn")),
+          a.bio_url ? linkEsterno(a.bio_url, tr("wikipedia")) : null,
+          linkEsterno(a.url, tr("wikidata")),
           copia))));
   mostraFinestra(contenuto);
   return true;
@@ -781,7 +902,7 @@ function disegnaTutto() {
   disegnaMiei();
   disegnaArchivio();
   const d = stato.dati[stato.anno];
-  if (d && d.aggiornato) $("#fonti").textContent = `Fonti: Wikidata (CC0), Wikipedia (testi CC BY-SA, con link alla pagina d'origine), Wikimedia Commons (ritratti, ciascuno con la sua licenza), Project Gutenberg. Ultimo aggiornamento: ${dataIt(d.arricchito || d.aggiornato)}; si rinnova da solo ogni mese.`;
+  if (d && d.aggiornato) $("#fonti").textContent = tr("fonti", { d: dataIt(d.arricchito || d.aggiornato) });
 }
 async function instrada() {
   const f = $("#finestra");
@@ -799,7 +920,32 @@ async function instrada() {
   if (f.open) f.close();
 }
 
+function applicaStatici() {
+  document.documentElement.lang = LING;
+  document.title = tr("titolo");
+  const m = document.querySelector('meta[name="description"]');
+  if (m) m.setAttribute("content", tr("descrizione"));
+  document.querySelectorAll("[data-t]").forEach((e) => { e.textContent = tr(e.dataset.t); });
+  document.querySelectorAll("[data-tp]").forEach((e) => { e.setAttribute("placeholder", tr(e.dataset.tp)); });
+  document.querySelectorAll("[data-ta]").forEach((e) => { e.setAttribute("aria-label", tr(e.dataset.ta)); });
+}
+function impostaLingua(l) {
+  if (!TESTI[l] || l === LING) return;
+  LING = l;
+  try { localStorage.setItem(CHIAVE_LINGUA, l); } catch (e) { /* ok */ }
+  applicaStatici();
+  if (stato.anno) { gruppiCache.clear(); disegnaTutto(); if ($("#finestra").open) instrada(); }
+}
+function lingua_iniziale() {
+  const q = new URLSearchParams(location.search).get("lang");
+  if (q && TESTI[q]) return q;
+  try { const l = localStorage.getItem(CHIAVE_LINGUA); if (l && TESTI[l]) return l; } catch (e) { /* ok */ }
+  return (navigator.language || "it").toLowerCase().startsWith("it") ? "it" : "en";
+}
+
 async function avvia() {
+  LING = lingua_iniziale();
+  applicaStatici();
   stato.preferiti = leggiLocale(CHIAVE_PREFERITI, []);
   if (!Array.isArray(stato.preferiti)) stato.preferiti = [];
   try {
@@ -807,7 +953,7 @@ async function avvia() {
     stato.anni = indice.anni;
     for (const an of stato.anni) stato.dati[an] = await leggi(`data/${an}.json`);
   } catch (e) {
-    $("#eroe").replaceChildren(h("p", { class: "messaggio" }, "I dati non sono ancora disponibili. Riprova tra poco."));
+    $("#eroe").replaceChildren(h("p", { class: "messaggio" }, tr("daDati")));
     console.error(e);
     return;
   }
