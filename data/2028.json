@@ -3368,11 +3368,11 @@
     "fonte": "Open Library",
     "ts": "2026-11-05",
     "sbn_it": {
-     "trovato": false,
-     "edizioni": 0,
-     "ultimo": null,
+     "trovato": true,
+     "edizioni": 1,
+     "ultimo": 1972,
      "dal_2000": 0,
-     "metodo": null,
+     "metodo": "nome",
      "fonte": "SBN"
     }
    }
@@ -4926,7 +4926,7 @@
     "ts": "2026-11-05",
     "sbn_it": {
      "trovato": true,
-     "edizioni": 14,
+     "edizioni": 17,
      "ultimo": 1955,
      "dal_2000": 9,
      "metodo": "nome",
@@ -5050,11 +5050,11 @@
     "fonte": "Open Library",
     "ts": "2026-11-05",
     "sbn_it": {
-     "trovato": false,
-     "edizioni": 0,
-     "ultimo": null,
+     "trovato": true,
+     "edizioni": 1,
+     "ultimo": 1995,
      "dal_2000": 0,
-     "metodo": null,
+     "metodo": "nome",
      "fonte": "SBN"
     }
    }
@@ -6978,11 +6978,11 @@
     "fonte": "Open Library",
     "ts": "2026-11-05",
     "sbn_it": {
-     "trovato": false,
-     "edizioni": 0,
-     "ultimo": null,
-     "dal_2000": 0,
-     "metodo": null,
+     "trovato": true,
+     "edizioni": 9,
+     "ultimo": 1955,
+     "dal_2000": 3,
+     "metodo": "nome",
      "fonte": "SBN"
     }
    }
@@ -12016,11 +12016,11 @@
     "fonte": "Open Library",
     "ts": "2026-11-05",
     "sbn_it": {
-     "trovato": false,
-     "edizioni": 0,
-     "ultimo": null,
-     "dal_2000": 0,
-     "metodo": null,
+     "trovato": true,
+     "edizioni": 12,
+     "ultimo": 2016,
+     "dal_2000": 10,
+     "metodo": "nome",
      "fonte": "SBN"
     }
    }
@@ -14772,11 +14772,11 @@
     "fonte": "Open Library",
     "ts": "2026-11-05",
     "sbn_it": {
-     "trovato": false,
-     "edizioni": 0,
-     "ultimo": null,
+     "trovato": true,
+     "edizioni": 1,
+     "ultimo": 1967,
      "dal_2000": 0,
-     "metodo": null,
+     "metodo": "nome",
      "fonte": "SBN"
     }
    }
@@ -17699,11 +17699,11 @@
     "fonte": "Open Library",
     "ts": "2026-11-05",
     "sbn_it": {
-     "trovato": false,
-     "edizioni": 0,
-     "ultimo": null,
+     "trovato": true,
+     "edizioni": 1,
+     "ultimo": 1935,
      "dal_2000": 0,
-     "metodo": null,
+     "metodo": "nome",
      "fonte": "SBN"
     }
    }
