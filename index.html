@@ -164,6 +164,14 @@ button{font:inherit;color:inherit;cursor:pointer}
 footer{margin-top:clamp(96px,12vw,144px);background:var(--ink);color:var(--muto-chiaro)}
 footer .contenitore{padding-top:56px;padding-bottom:72px;font-size:14px;line-height:1.7}
 footer p{margin:16px 0 0;max-width:780px}
+.regole{margin:24px 0 0;max-width:780px;border-top:1px solid rgba(255,255,255,.18);padding-top:16px}
+.regole summary{cursor:pointer;font-family:var(--mono);font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--carta)}
+.regole .paese{margin:22px 0 0}
+.regole .paese strong{display:block;color:var(--carta);font-size:15px}
+.regole ul{margin:6px 0 0;padding-left:18px}
+.regole li{margin:4px 0}
+.regole a{color:inherit;text-decoration:underline}
+.regole .aperto{opacity:.75}
 
 /* scheda in finestra */
 dialog{border:0;padding:0;background:var(--carta);color:var(--ink);width:min(960px,100vw);max-width:100vw;max-height:100dvh;height:auto;margin:auto;overflow:auto}
@@ -307,6 +315,7 @@ dialog::backdrop{background:rgba(12,12,16,.72)}
   <div class="contenitore">
     <div class="mono" style="font-size:13px;color:var(--carta)">Public Domain Radar</div>
     <p data-t="regola">Regola europea di base: le opere diventano libere il 1° gennaio dell'anno successivo ai 70 dalla morte dell'autore. Alcuni paesi, come l'Italia, hanno proroghe: prima di pubblicare va fatta una verifica nazionale. Una traduzione già esistente ha diritti propri: qui si parla solo delle opere originali.</p>
+    <details class="regole" id="regole-paesi"><summary data-t="regoleTit">Regole sulla durata, paese per paese</summary><div id="regole-corpo"></div></details>
     <p id="fonti">Fonti: Wikidata (CC0), Wikipedia (testi CC BY-SA, con link alla pagina d'origine), Wikimedia Commons (ritratti, ciascuno con la sua licenza), Project Gutenberg. Aggiornato ogni mese in automatico.</p>
     <p><a href="https://github.com/mnovali90-byte/publicdomain" data-t="codice">Codice e dati su GitHub</a></p>
   </div>
@@ -329,6 +338,8 @@ const TESTI = {
 it: {
   titolo: "Public Domain Radar",
   descrizione: "Gli autori le cui opere entrano nel pubblico dominio in Europa il prossimo 1° gennaio. Dati aperti da Wikidata e Wikipedia, aggiornati ogni mese.",
+  regoleTit: "Regole sulla durata, paese per paese",
+  regoleNota: "Testi di legge letti il 5 novembre 2026. Non è consulenza legale: prima di pubblicare controlla la norma e la data di morte nel tuo paese.",
   presTit: "Gli autori che diventano liberi in Europa il 1° gennaio",
   presTesto: "Per ognuno vedi quanto è letto, quali opere ha scritto e se in Italia è già stato tradotto. Serve a scegliere cosa ritradurre e pubblicare.",
   presFonti: "Dati aperti da Wikidata, Wikipedia e SBN, aggiornati ogni mese in automatico.",
@@ -394,6 +405,8 @@ it: {
 en: {
   titolo: "Public Domain Radar",
   descrizione: "The authors whose works enter the public domain in Europe on 1 January next year. Open data from Wikidata and Wikipedia, updated monthly.",
+  regoleTit: "Term of protection, country by country",
+  regoleNota: "Legal texts read on 5 November 2026. This is not legal advice: before publishing, check the law and the date of death in your country.",
   presTit: "The authors who become free in Europe on 1 January",
   presTesto: "For each one you see how widely read they are, which works they wrote and which editions already exist. Use it to choose what to retranslate and publish.",
   presFonti: "Open data from Wikidata, Wikipedia and SBN, updated automatically every month.",
@@ -1186,6 +1199,33 @@ async function instrada() {
   if (f.open) f.close();
 }
 
+const REGOLE = [
+  { paese: { it: "Unione europea", en: "European Union" }, voci: [
+    { t: { it: "Vita dell'autore + 70 anni (art. 1). Un termine nazionale più lungo già in corso al 1° luglio 1995 non viene accorciato (art. 10).", en: "Life of the author + 70 years (Art. 1). A longer national term already running on 1 July 1995 is not shortened (Art. 10)." }, f: "Direttiva 2006/116/CE", u: "https://www.wipo.int/wipolex/en/text/443261" },
+    { t: { it: "Opere di autori di paesi non UE: la protezione scade quando scade nel paese d'origine, senza superare il termine della direttiva (art. 7). Per questi autori i 70 anni possono essere troppi.", en: "Works of non-EU authors: protection ends when it ends in the country of origin, without exceeding the directive's term (Art. 7). For these authors 70 years may be too many." }, f: "Direttiva 93/98/CEE, art. 7", u: "https://www.wipo.int/wipolex/edocs/lexdocs/laws/en/eu/eu023en.pdf" } ] },
+  { paese: { it: "Italia", en: "Italy" }, voci: [
+    { t: { it: "Il testo dell'art. 25 dice 50 anni; la legge 52/1996, art. 17, li ha portati a 70.", en: "The text of Art. 25 says 50 years; Law 52/1996, Art. 17, raised it to 70." }, f: "Legge 633/1941, art. 25", u: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1941-04-22;633~art25" },
+    { t: { it: "I termini si contano dal 1° gennaio dell'anno successivo alla morte.", en: "Terms run from 1 January of the year after the death." }, f: "Legge 633/1941, art. 32-ter", u: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1941-04-22;633~art32ter" },
+    { t: { it: "Proroga di 6 anni per le opere pubblicate e non ancora libere alla data del decreto (1945). Come si applica a ogni opera va verificato.", en: "6-year extension for works published and not yet in the public domain on the date of the decree (1945). How it applies to each work must be checked." }, f: "D.Lgs.Lgt. 440/1945, art. 1", u: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo.luogotenenziale:1945-07-20;440" },
+    { aperto: true, t: { it: "Da verificare: l'effetto del trattato di pace del 1947 (allegato XV) sugli autori degli Stati alleati.", en: "To verify: the effect of the 1947 peace treaty (Annex XV) on authors from the Allied states." } } ] },
+  { paese: { it: "Francia", en: "France" }, voci: [
+    { t: { it: "70 anni, contando anche l'anno in corso (L123-1).", en: "70 years, counting the current calendar year too (L123-1)." }, f: "Code de la propriété intellectuelle", u: "https://www.wipo.int/wipolex/en/legislation/details/23227" },
+    { t: { it: "Proroghe di guerra per le opere pubblicate prima del 3 settembre 1939 e non ancora libere (L123-8, L123-9), e altri 30 anni se l'autore è «morto per la Francia» (L123-10).", en: "Wartime extensions for works published before 3 September 1939 and not yet free (L123-8, L123-9), and another 30 years if the author «died for France» (L123-10)." }, f: "Code de la propriété intellectuelle", u: "https://www.wipo.int/wipolex/en/legislation/details/23227" } ] },
+  { paese: { it: "Germania", en: "Germany" }, voci: [
+    { t: { it: "70 anni dalla morte (§64); i termini partono dalla fine dell'anno solare (§69).", en: "70 years after death (§64); terms start at the end of the calendar year (§69)." }, f: "Urheberrechtsgesetz", u: "https://www.wipo.int/wipolex/en/text/474282" } ] },
+  { paese: { it: "Spagna", en: "Spain" }, voci: [
+    { t: { it: "70 anni dalla morte (art. 26), contati dal 1° gennaio dell'anno successivo (art. 30).", en: "70 years after death (Art. 26), counted from 1 January of the following year (Art. 30)." }, f: "Ley de Propiedad Intelectual", u: "https://www.boe.es/buscar/act.php?id=BOE-A-1996-8930" },
+    { t: { it: "Per gli autori morti prima del 7 dicembre 1987 vale la durata della legge del 10 gennaio 1879 (disposizione transitoria quarta).", en: "For authors who died before 7 December 1987 the term of the Law of 10 January 1879 applies (fourth transitional provision)." }, f: "Ley de Propiedad Intelectual, disp. trans. cuarta", u: "https://www.boe.es/buscar/act.php?id=BOE-A-1996-8930" },
+    { aperto: true, t: { it: "Da verificare: quanti anni prevede la legge del 1879. Riguarda gli autori della nostra lista, morti prima del 1987.", en: "To verify: how many years the 1879 law provides. It affects the authors in our list, who died before 1987." } } ] },
+];
+function disegnaRegole() {
+  const box = document.getElementById("regole-corpo");
+  if (!box) return;
+  box.replaceChildren(...REGOLE.map((r) => h("div", { class: "paese" }, h("strong", {}, r.paese[LING]),
+    h("ul", {}, r.voci.map((v) => h("li", { class: v.aperto ? "aperto" : "" }, v.t[LING],
+      v.u ? h("span", {}, " ", h("a", { href: v.u, target: "_blank", rel: "noopener" }, v.f)) : null))))),
+    h("p", { class: "aperto" }, tr("regoleNota")));
+}
 function applicaStatici() {
   document.documentElement.lang = LING;
   document.title = tr("titolo");
@@ -1194,6 +1234,7 @@ function applicaStatici() {
   document.querySelectorAll("[data-t]").forEach((e) => { e.textContent = tr(e.dataset.t); });
   document.querySelectorAll("[data-tp]").forEach((e) => { e.setAttribute("placeholder", tr(e.dataset.tp)); });
   document.querySelectorAll("[data-ta]").forEach((e) => { e.setAttribute("aria-label", tr(e.dataset.ta)); });
+  disegnaRegole();
 }
 function impostaLingua(l) {
   if (!TESTI[l] || l === LING) return;
