@@ -9,8 +9,9 @@ Wikidata ha autorizzato per le sue interrogazioni federate.
 
 Come si riconosce l'autore:
   1) dal codice VIAF che Wikidata indica per lui (proprietà P214): sicuro;
-  2) se manca, dal nome nella forma «Cognome, Nome» esatta (può confondere gli omonimi):
-     in quel caso si scrive "metodo": "nome".
+  2) se SBN non ha quell'autore collegato al VIAF, dal nome «Cognome, Nome» (cognome uguale,
+     nome per intero o per iniziale; se i candidati sono troppi si lascia perdere). Può
+     confondere gli omonimi: in quel caso si scrive "metodo": "nome".
 
 Cosa si conta: le registrazioni (opere) il cui autore o collaboratore è quella persona e
 la cui lingua è l'italiano, con l'anno di pubblicazione più recente e quante sono dal 2000.
@@ -28,6 +29,7 @@ import pathlib
 import re
 import sys
 import time
+import unicodedata
 import urllib.parse
 import urllib.request
 
@@ -64,21 +66,37 @@ def interroga(query, tentativi=3):
     raise RuntimeError(f"SBN: {str(ultimo)[:120]}")
 
 
-def etichetta_sbn(nome):
-    """'Laura Ingalls Wilder' -> 'Wilder, Laura Ingalls' (la forma usata da SBN)."""
-    parole = nome.split()
-    return f"{parole[-1]}, {' '.join(parole[:-1])}" if len(parole) > 1 else nome
+def _parole(testo):
+    t = unicodedata.normalize("NFKD", testo or "")
+    t = "".join(c for c in t if not unicodedata.combining(c))
+    return re.sub(r"[^a-z ]+", " ", t.lower()).split()
 
 
-def filtro_agente(viaf, nome):
-    if viaf:
-        return f'?a <{SAME}> <http://viaf.org/viaf/{viaf}> . FILTER(CONTAINS(STR(?a), "/resource/Agent/"))', "viaf"
-    esatto = etichetta_sbn(nome).replace("\\", "").replace('"', "")
+def nome_compatibile(nome, etichetta):
+    """'Laura Ingalls Wilder' è compatibile con 'Wilder, Laura Ingalls' e con 'Wilder, L. I.';
+    'A. A. Milne' con 'Milne, Alan Alexander'. Il cognome deve coincidere; i nomi, per intero o per iniziale."""
+    if "," not in etichetta:
+        return False
+    cogn, resto = etichetta.split(",", 1)
+    mie = _parole(nome)
+    if not mie or _parole(cogn) != mie[-1:]:
+        return False
+    loro, nostri = _parole(resto), mie[:-1]
+    if not nostri or not loro:
+        return False
+    a, b = nostri[0], loro[0]
+    return a == b or (len(a) == 1 and b.startswith(a)) or (len(b) == 1 and a.startswith(b))
+
+
+def agenti_per_nome(nome, interroga_fn):
     cognome = re.sub(r"[^\w]", "", nome.split()[-1])
     if len(cognome) < 3:
-        return None, None
-    return (f'?a <{LAB}> ?l . ?l bif:contains "\'{cognome}\'" . '
-            f'FILTER(STR(?l) = "{esatto}" && CONTAINS(STR(?a), "/resource/Agent/"))'), "nome"
+        return []
+    righe = interroga_fn(f'SELECT DISTINCT ?a ?l WHERE {{ ?a <{LAB}> ?l . ?l bif:contains "\'{cognome}\'" . '
+                         f'FILTER(CONTAINS(STR(?a), "/resource/Agent/")) }} LIMIT 80')
+    time.sleep(PAUSA)
+    uri = [r["a"]["value"] for r in righe if nome_compatibile(nome, r["l"]["value"])]
+    return uri if 0 < len(uri) <= 6 else []
 
 
 def corpo(filtro):
@@ -86,24 +104,36 @@ def corpo(filtro):
             f"?ln <{VAL}> <{ITA}> .")
 
 
-def edizioni_italiane(nome, viaf, interroga_fn=interroga):
-    filtro, metodo = filtro_agente(viaf, nome)
-    if not filtro:
-        return {"trovato": False, "edizioni": 0, "ultimo": None, "dal_2000": 0, "metodo": None, "fonte": "SBN"}
+def conta(filtro, interroga_fn):
     c = corpo(filtro)
     n = int(interroga_fn(f"SELECT (COUNT(DISTINCT ?w) AS ?n) WHERE {{ {c} }}")[0]["n"]["value"])
     time.sleep(PAUSA)
-    ultimo, dal_2000 = None, 0
-    if n:
-        data = (f"?w <{BF}hasInstance> ?i . ?i <{BF}provisionActivity> ?pa . ?pa a <{BF}Publication> . "
-                f"?pa <{BF}date> ?d . FILTER(REGEX(?d, \"^[0-9]{{4}}$\"))")
-        r = interroga_fn(f"SELECT (MAX(?d) AS ?u) WHERE {{ {c} {data} }}")
-        ultimo = int(r[0]["u"]["value"]) if r and "u" in r[0] else None
-        time.sleep(PAUSA)
-        r = interroga_fn(f"SELECT (COUNT(DISTINCT ?w) AS ?n) WHERE {{ {c} {data} FILTER(?d >= \"2000\") }}")
-        dal_2000 = int(r[0]["n"]["value"])
-        time.sleep(PAUSA)
-    return {"trovato": n > 0, "edizioni": n, "ultimo": ultimo, "dal_2000": dal_2000, "metodo": metodo, "fonte": "SBN"}
+    if not n:
+        return 0, None, 0
+    data = (f"?w <{BF}hasInstance> ?i . ?i <{BF}provisionActivity> ?pa . ?pa a <{BF}Publication> . "
+            f"?pa <{BF}date> ?d . FILTER(REGEX(?d, \"^[0-9]{{4}}$\"))")
+    r = interroga_fn(f"SELECT (MAX(?d) AS ?u) WHERE {{ {c} {data} }}")
+    ultimo = int(r[0]["u"]["value"]) if r and "u" in r[0] else None
+    time.sleep(PAUSA)
+    r = interroga_fn(f"SELECT (COUNT(DISTINCT ?w) AS ?n) WHERE {{ {c} {data} FILTER(?d >= \"2000\") }}")
+    time.sleep(PAUSA)
+    return n, ultimo, int(r[0]["n"]["value"])
+
+
+def edizioni_italiane(nome, viaf, interroga_fn=interroga):
+    """Prima il codice VIAF; se SBN non ha quell'autore collegato al VIAF, il nome."""
+    metodo, n, ultimo, dal_2000 = None, 0, None, 0
+    if viaf:
+        f = f'?a <{SAME}> <http://viaf.org/viaf/{viaf}> . FILTER(CONTAINS(STR(?a), "/resource/Agent/"))'
+        n, ultimo, dal_2000 = conta(f, interroga_fn)
+        metodo = "viaf"
+    if not n:
+        uri = agenti_per_nome(nome, interroga_fn)
+        if uri:
+            n, ultimo, dal_2000 = conta("VALUES ?a { " + " ".join(f"<{u}>" for u in uri) + " }", interroga_fn)
+            metodo = "nome"
+    return {"trovato": n > 0, "edizioni": n, "ultimo": ultimo, "dal_2000": dal_2000,
+            "metodo": metodo if n else None, "fonte": "SBN"}
 
 
 def codici_viaf(qids):
@@ -119,6 +149,8 @@ def codici_viaf(qids):
 
 def e_recente(voce, oggi):
     try:
+        if voce.get("v") != 2:      # 2 = VIAF poi nome; le voci della prima versione si rifanno
+            return False
         return (oggi - dt.date.fromisoformat(voce["ts"])).days < VALIDITA_GIORNI
     except Exception:
         return False
@@ -147,6 +179,7 @@ def elabora(oggi, conta_fn=edizioni_italiane, viaf_fn=codici_viaf):
         try:
             voce = conta_fn(a["nome"], viaf.get(a["wikidata"]))
             voce["ts"] = oggi.isoformat()
+            voce["v"] = 2
             cache[a["wikidata"]] = voce
             fatti += 1
         except Exception as e:
@@ -165,7 +198,7 @@ def elabora(oggi, conta_fn=edizioni_italiane, viaf_fn=codici_viaf):
         for a in p["autori"]:
             voce = cache.get(a["wikidata"])
             if voce:
-                a.setdefault("traduzioni", {})["sbn_it"] = {k: v for k, v in voce.items() if k != "ts"}
+                a.setdefault("traduzioni", {})["sbn_it"] = {k: v for k, v in voce.items() if k not in ("ts", "v")}
                 ci_sono += 1
         f.write_text(json.dumps(p, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"sbn: {ci_sono} autori con dati ({fatti} nuovi, {errori} errori)", file=sys.stderr)
