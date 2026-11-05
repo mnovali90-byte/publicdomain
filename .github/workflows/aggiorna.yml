@@ -35,8 +35,6 @@ jobs:
       - name: Controlla in quali lingue esistono le opere
         # dato accessorio: se fallisce, il resto viene salvato comunque
         continue-on-error: true
-        env:
-          GOOGLE_BOOKS_KEY: ${{ secrets.GOOGLE_BOOKS_KEY }}   # facoltativa: senza, Google limita di più le richieste
         run: python scripts/traduzioni.py
       - name: Salva i dati nel repository
         run: |

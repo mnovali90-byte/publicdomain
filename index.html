@@ -346,8 +346,6 @@ it: {
   mDesc: { it: "Conta le visite alla pagina Wikipedia in italiano negli ultimi 12 mesi.", en: "Conta le visite alla pagina Wikipedia in inglese negli ultimi 12 mesi, da tutto il mondo (India inclusa).", int: "Conta in quante lingue esiste una pagina Wikimedia sull'autore: non dipende dalla grandezza di un pubblico." },
   primoPerM: { it: "{r}° per interesse in Italia", en: "{r}° nel mondo anglofono", int: "{r}° per presenza internazionale" },
   sottoM: { it: "Quanto è letta oggi la sua pagina Wikipedia in italiano, rispetto agli altri autori di questa lista", en: "Quanto è letta oggi la sua pagina Wikipedia in inglese, rispetto agli altri autori di questa lista", int: "In quante lingue esiste una pagina su di lui, rispetto agli altri autori di questa lista" },
-  gbTit: "Edizioni italiane su Google Libri", gbTrovate: "{n} edizioni in italiano", gbUltima: " · la più recente: {y}", gbNessuna: "Nessuna edizione italiana trovata",
-  gbNota: "Un indizio, non un verdetto: Google Libri non conosce tutte le edizioni (per esempio molti ebook). Prima di decidere, controlla un catalogo italiano.",
   vIt: "{n} visite in 12 mesi", vNoPag: "nessuna pagina in {l}", vNd: "dato non disponibile", vLingue: "{n} lingue con una pagina Wikimedia", nonReg: "non registrata",
   gut: "{n} download su Project Gutenberg", gutNd: "Gutenberg: nessun riscontro",
   formulaTitolo: "Da dove vengono i numeri: ", formula: "visite per pagina dall'API di Wikimedia (ultimi 12 mesi, senza i robot); pagine collegate da Wikidata. Nessuna media tra i tre numeri.",
@@ -364,7 +362,7 @@ it: {
   tradNoIt: "Nessuna edizione italiana registrata: possibile spazio per una nuova traduzione.",
   tradNota: "Copertura molto incompleta, soprattutto per l'italiano: autori molto tradotti da noi risultano con una sola edizione o nessuna. Non usarlo per concludere che un autore non è tradotto: serve per un confronto tra lingue, e per verificare in un catalogo italiano.",
   tradParz: "Controllate le {n} opere più pubblicate.",
-  librI: "Libri in italiano", sbn: "Catalogo SBN", wikipedia: "Wikipedia", wikidata: "Wikidata",
+  librI: "Libri in italiano", amazon: "Cerca su Amazon.it", sbn: "Catalogo SBN", wikipedia: "Wikipedia", wikidata: "Wikidata",
   nato: "nato", scrittore: "Scrittore",
   regola: "Regola europea di base: le opere diventano libere il 1° gennaio dell'anno successivo ai 70 dalla morte dell'autore. Alcuni paesi, come l'Italia, hanno proroghe: prima di pubblicare va fatta una verifica nazionale. Una traduzione già esistente ha diritti propri: qui si parla solo delle opere originali.",
   fonti: "Fonti: Wikidata (CC0), Wikipedia (testi CC BY-SA, con link alla pagina d'origine), Wikimedia Commons (ritratti, ciascuno con la sua licenza), Open Library, Project Gutenberg. Ultimo aggiornamento: {d}; si rinnova da solo ogni mese.",
@@ -403,8 +401,6 @@ en: {
   mDesc: { it: "Counts views of the author's Italian Wikipedia page over the last 12 months.", en: "Counts views of the English Wikipedia page over the last 12 months, from all over the world (India included).", int: "Counts in how many languages a Wikimedia page about the author exists: it does not depend on the size of one audience." },
   primoPerM: { it: "#{r} for interest in Italy", en: "#{r} in the English-speaking world", int: "#{r} for international reach" },
   sottoM: { it: "How much their Italian Wikipedia page is read today, compared with the other authors on this list", en: "How much their English Wikipedia page is read today, compared with the other authors on this list", int: "In how many languages a page about them exists, compared with the other authors on this list" },
-  gbTit: "Italian editions on Google Books", gbTrovate: "{n} editions in Italian", gbUltima: " · latest: {y}", gbNessuna: "No Italian edition found",
-  gbNota: "A hint, not a verdict: Google Books does not know every edition (many ebooks, for example). Check an Italian catalogue before deciding.",
   vIt: "{n} views in 12 months", vNoPag: "no page in {l}", vNd: "data not available", vLingue: "{n} languages with a Wikimedia page", nonReg: "none recorded",
   gut: "{n} downloads on Project Gutenberg", gutNd: "Gutenberg: no match",
   formulaTitolo: "Where the numbers come from: ", formula: "page views from the Wikimedia API (last 12 months, bots excluded); linked pages from Wikidata. No average between the three numbers.",
@@ -421,7 +417,7 @@ en: {
   tradNoIt: "No Italian edition on record: there may be room for a new translation.",
   tradNota: "Very incomplete coverage, especially for Italian: authors widely translated in Italy can show one edition or none. Do not conclude that an author is untranslated from this: use it to compare languages, and check an Italian catalogue.",
   tradParz: "Checked the {n} most published works.",
-  librI: "Books in Italian", sbn: "SBN catalogue", wikipedia: "Wikipedia", wikidata: "Wikidata",
+  librI: "Books in Italian", amazon: "Search Amazon.it", sbn: "SBN catalogue", wikipedia: "Wikipedia", wikidata: "Wikidata",
   nato: "born", scrittore: "Writer",
   regola: "Basic EU rule: works become free on 1 January of the year after the 70th anniversary of the author's death. Some countries, Italy included, have extensions: check national rules before publishing. An existing translation has its own rights: this site only covers original works.",
   fonti: "Sources: Wikidata (CC0), Wikipedia (text CC BY-SA, linked to the original page), Wikimedia Commons (portraits, each with its own licence), Open Library, Project Gutenberg. Last updated: {d}; it renews itself every month.",
@@ -989,24 +985,13 @@ function mostraFinestra(contenuto) {
 }
 function apriAutore(id) { location.hash = `#/autore/${id}`; }
 function linkEsterno(href, testo) { return h("a", { class: "pillola", href, target: "_blank", rel: "noopener" }, testo); }
-function bloccoGoogle(g) {
-  if (!g) return null;
-  const testo = g.n > 0
-    ? tr("gbTrovate", { n: n(g.n) }) + (g.ultimo ? tr("gbUltima", { y: g.ultimo }) : "")
-    : tr("gbNessuna");
-  return h("div", { style: "margin-bottom:14px" }, h("h4", {}, tr("gbTit")),
-    h("span", { class: "tag" }, testo),
-    h("div", { class: "sotto" }, tr("gbNota")));
-}
 function bloccoTraduzioni(a) {
   const x = a.traduzioni;
   if (!x) return null;
-  if (x.google_it && !x.opere) return bloccoGoogle(x.google_it);
   if (!x.opere) return h("div", {}, h("h4", {}, tr("tradTit")), h("p", { class: "sotto" }, tr("tradNessuna")));
   const nomi = tr("nomiLingua");
   const righe = ["it", "en", "es", "fr", "de"].map((l) => h("span", { class: "tag" }, `${nomi[l]}: ${x.per_lingua[l] ? n(x.per_lingua[l]) : tr("nonReg")}`));
   return h("div", {},
-    bloccoGoogle(x.google_it),
     h("h4", {}, tr("tradTit")),
     righe,
     h("div", { class: "sotto" }, tr("tradSu", { n: n(x.opere) }) + (x.parziale ? " · " + tr("tradParz", { n: 100 }) : "")),
@@ -1092,6 +1077,7 @@ function mostraAutore(id) {
         h("div", { class: "pulsanti" },
           cuoreBtn,
           linkEsterno(`https://www.google.com/search?tbm=bks&lr=lang_it&q=inauthor:${q}`, tr("librI")),
+          linkEsterno(`https://www.amazon.it/s?k=${encodeURIComponent(nome)}&i=digital-text`, tr("amazon")),
           linkEsterno(`https://www.google.com/search?q=site:opac.sbn.it+${q}`, tr("sbn")),
           bd && bd.url ? linkEsterno(bd.url, tr("wikipedia")) : null,
           linkEsterno(a.url, tr("wikidata")),
