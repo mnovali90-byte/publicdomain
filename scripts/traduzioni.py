@@ -113,6 +113,11 @@ def interroga_google(nome):
         q["key"] = GB_CHIAVE
     r = http_json(GB_URL + urllib.parse.urlencode(q), tentativi=3)
     time.sleep(GB_PAUSA)
+    if nome in ("Bertolt Brecht", "Robert Walser", "Laura Ingalls Wilder"):   # controllo temporaneo: come risponde Google
+        for it in ((r or {}).get("items") or [])[:4]:
+            v = it.get("volumeInfo") or {}
+            print(f"  [google] {nome}: {v.get('title')!r} autori={v.get('authors')} lingua={v.get('language')} data={v.get('publishedDate')}", file=sys.stderr)
+        print(f"  [google] {nome}: totalItems={(r or {}).get('totalItems')} items={len((r or {}).get('items') or [])}", file=sys.stderr)
     return conta_google(nome, r)
 
 
