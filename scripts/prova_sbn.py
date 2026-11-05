@@ -18,11 +18,13 @@ def mostra(nome, query, n=8):
         print("   [sbn] " + " | ".join(f"{k}={v['value'][-110:]}" for k, v in b.items()), file=sys.stderr)
     return r
 BF = "http://id.loc.gov/ontologies/bibframe/"
-V = "http://viaf.org/viaf/2467372"
-ag = mostra("agente via VIAF", f"SELECT ?a WHERE {{ ?a <http://www.w3.org/2002/07/owl#sameAs> <{V}> }} LIMIT 5")
-w = "http://triplestore.iccu.sbn.it/resource/IT-ICCU-CFI-0558156#Work"
-inst = "http://triplestore.iccu.sbn.it/resource/IT-ICCU-CFI-0558156#Instance"
-mostra("nodo lingua", f"SELECT ?l ?p ?o WHERE {{ <{w}> <{BF}language> ?l . ?l ?p ?o }} LIMIT 12")
-mostra("nodo pubblicazione", f"SELECT ?pa ?p ?o WHERE {{ <{inst}> <{BF}provisionActivity> ?pa . ?pa ?p ?o }} LIMIT 20", 20)
-mostra("nodo contributo", f"SELECT ?c ?p ?o WHERE {{ <{w}> <{BF}contribution> ?c . ?c ?p ?o }} LIMIT 20", 20)
-mostra("nodo titolo", f"SELECT ?t ?p ?o WHERE {{ <{w}> <{BF}title> ?t . ?t ?p ?o }} LIMIT 10")
+SAME = "http://www.w3.org/2002/07/owl#sameAs"
+LAB = "http://www.w3.org/2000/01/rdf-schema#label"
+VAL = "http://www.w3.org/1999/02/22-rdf-syntax-ns#value"
+def agenti_viaf(v):
+    return f"?a <{SAME}> <http://viaf.org/viaf/{v}> . FILTER(CONTAINS(STR(?a), \"/resource/Agent/\"))"
+def agenti_nome(parola, esatto):
+    return f"?a <{LAB}> ?l . ?l bif:contains \"'{parola}'\" . FILTER(STR(?l) = \"{esatto}\" && CONTAINS(STR(?a), \"/resource/Agent/\"))"
+for nome, filtro in [("Brecht via VIAF", agenti_viaf("2467372")), ("Wilder via nome", agenti_nome("wilder", "Wilder, Laura Ingalls")), ("Walser via nome", agenti_nome("walser", "Walser, Robert"))]:
+    mostra(f"{nome}: lingue delle opere", f"SELECT ?lang (COUNT(DISTINCT ?w) AS ?n) WHERE {{ {filtro} ?c <{BF}agent> ?a . ?w <{BF}contribution> ?c . ?w <{BF}language> ?ln . ?ln <{VAL}> ?lang }} GROUP BY ?lang ORDER BY DESC(?n) LIMIT 8")
+    mostra(f"{nome}: date delle edizioni in italiano", f"SELECT (COUNT(DISTINCT ?i) AS ?edizioni) (MAX(?d) AS ?ultima) WHERE {{ {filtro} ?c <{BF}agent> ?a . ?w <{BF}contribution> ?c . ?w <{BF}language> ?ln . ?ln <{VAL}> <http://id.loc.gov/vocabulary/languages/ita> . ?w <{BF}hasInstance> ?i . ?i <{BF}provisionActivity> ?pa . ?pa a <{BF}Publication> . ?pa <{BF}date> ?d . FILTER(REGEX(?d, \"^[0-9]{{4}}$\")) }}")
