@@ -306,7 +306,7 @@ it: {
   mieiVuoto: "Tocca il cuore su un autore per metterlo qui. La lista resta su questo dispositivo e puoi scaricarla in Excel.",
   scaricaMiei: "Scarica in Excel · {n}", togli: "Togli", togliAria: "Togli {nome} dalla lista", liberoIndice: "libero dal {d}", indiceN: "indice {n}",
   archOcc: "L'archivio", archTit: "Tutti i {n}", cerca: "Cerca un autore",
-  fLett: "Autori letterari · {n}", fSenza: "Senza opere note · {n}", fTutti: "Tutti · {n}", fSenzaIt: "Senza edizioni italiane · {n}",
+  fLett: "Autori letterari · {n}", fNarr: "Narrativa, poesia, teatro · {n}", fAltri: "Saggisti e altri · {n}", fSenza: "Senza opere note · {n}", fTutti: "Tutti · {n}", fSenzaIt: "Senza edizioni italiane · {n}",
   oPop: "Popolarità", oData: "Data", nessuno: "Nessun autore corrisponde alla ricerca.",
   mostraAltri: "Mostra altri {n} →", scaricaElenco: "Scarica questo elenco in Excel · {n}",
   foto: "Foto: ", ritrattoDi: "Ritratto di {nome}", pagineWm: "{n} pagine Wikimedia", pagineWmBreve: "{n} pagine",
@@ -356,7 +356,7 @@ en: {
   mieiVuoto: "Tap the heart on an author to put them here. The list stays on this device and you can download it as a spreadsheet.",
   scaricaMiei: "Download as Excel · {n}", togli: "Remove", togliAria: "Remove {nome} from the list", liberoIndice: "free from {d}", indiceN: "index {n}",
   archOcc: "The archive", archTit: "All {n}", cerca: "Search an author",
-  fLett: "Literary authors · {n}", fSenza: "No known works · {n}", fTutti: "All · {n}", fSenzaIt: "No Italian editions · {n}",
+  fLett: "Literary authors · {n}", fNarr: "Fiction, poetry, theatre · {n}", fAltri: "Essayists and others · {n}", fSenza: "No known works · {n}", fTutti: "All · {n}", fSenzaIt: "No Italian editions · {n}",
   oPop: "Popularity", oData: "Date", nessuno: "No author matches your search.",
   mostraAltri: "Show {n} more →", scaricaElenco: "Download this list as Excel · {n}",
   foto: "Photo: ", ritrattoDi: "Portrait of {nome}", pagineWm: "{n} Wikimedia pages", pagineWmBreve: "{n} pages",
@@ -532,6 +532,8 @@ function gruppi(anno) {
     senza: arricchito ? lett.filter((a) => a.n_opere === 0).sort(perPopolarita) : [],
     arricchito
   };
+  g.principali = elencoTop(g);                                   // narrativa, poesia, teatro (se sono abbastanza)
+  g.altri = g.letterari.filter((a) => !g.principali.includes(a)); // saggisti e altri
   gruppiCache.set(anno, g);
   return g;
 }
@@ -655,7 +657,7 @@ function disegnaEroe() {
       h("p", { class: "predicato" }, giorni >= 0 ? tr("entra") : tr("ora")),
       h("p", { class: "spiega" }, tr("spiega", { d: dataIt(d.libero_dal) }) + (altri ? tr("eAltri", { n: n(altri) }) : "")),
       h("div", { class: "azioni" },
-        h("button", { class: "bottone", type: "button", onclick: () => scorri("archivio") }, tr("vediTutti", { n: n(g.letterari.length) })),
+        h("button", { class: "bottone", type: "button", onclick: () => scorri("archivio") }, tr("vediTutti", { n: n(g.principali.length) })),
         h("button", { class: "collegamento", type: "button", onclick: () => scorri(g.arricchito ? "scaffali" : "grandi-nomi") }, g.arricchito ? tr("sfoglia") : tr("nomiGrandi")),
         h("button", { class: "collegamento", type: "button", "data-apri": prima.wikidata, onclick: () => apriAutore(prima.wikidata) }, tr("schedaDi", { nome: prima.nome })))),
     foto));
@@ -847,7 +849,7 @@ function disegnaMiei() {
 const senzaIt = (a) => !!(a.traduzioni && a.traduzioni.opere >= 2 && a.traduzioni.per_lingua.it === 0);
 function elencoArchivio() {
   const g = gruppi(stato.anno);
-  let lista = stato.filtro === "tutti" ? g.tutti : stato.filtro === "senza" ? g.senza : stato.filtro === "senzait" ? g.letterari.filter(senzaIt) : g.letterari;
+  let lista = stato.filtro === "tutti" ? g.tutti : stato.filtro === "senza" ? g.senza : stato.filtro === "altri" ? g.altri : stato.filtro === "senzait" ? g.principali.filter(senzaIt) : g.principali;
   if (stato.paese) lista = lista.filter((a) => (a.paesi || []).includes(stato.paese));
   if (stato.lingua) lista = lista.filter((a) => (a.lingue || []).includes(stato.lingua));
   const q = norm(stato.cerca.trim());
@@ -858,11 +860,12 @@ function elencoArchivio() {
 }
 function disegnaArchivio() {
   const g = gruppi(stato.anno);
-  $("#archivio-titolo").textContent = tr("archTit", { n: n(g.letterari.length) });
+  $("#archivio-titolo").textContent = tr("archTit", { n: n(g.principali.length) });
   const lista = elencoArchivio();
   const strumenti = $("#strumenti");
-  const voci = [["letterari", tr("fLett", { n: n(g.letterari.length) })]];
-  const nSenzaIt = g.letterari.filter(senzaIt).length;
+  const voci = [["letterari", g.altri.length ? tr("fNarr", { n: n(g.principali.length) }) : tr("fLett", { n: n(g.principali.length) })]];
+  if (g.altri.length) voci.push(["altri", tr("fAltri", { n: n(g.altri.length) })]);
+  const nSenzaIt = g.principali.filter(senzaIt).length;
   if (nSenzaIt) voci.push(["senzait", tr("fSenzaIt", { n: n(nSenzaIt) })]);
   if (g.senza.length) voci.push(["senza", tr("fSenza", { n: n(g.senza.length) })]);
   voci.push(["tutti", tr("fTutti", { n: n(g.tutti.length) })]);
