@@ -170,6 +170,10 @@ dialog::backdrop{background:rgba(12,12,16,.72)}
 .indice .asta{flex:1;height:10px;background:var(--riquadro);position:relative;max-width:320px}
 .indice .asta i{position:absolute;left:0;top:0;bottom:0;background:var(--vermiglio)}
 .nd{color:var(--muto)}
+.spiega-indice{margin-top:14px;max-width:620px}
+.spiega-indice summary{cursor:pointer;min-height:44px;display:flex;align-items:center;font-weight:600;font-size:15px;text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--vermiglio)}
+.spiega-indice p{margin:10px 0 0;font-size:15px;line-height:1.55;color:#2A2A34}
+.spiega-indice p.sotto{font-size:12px;color:var(--muto)}
 .pulsanti{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
 .pulsanti .pillola{display:inline-flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink)}
 .pulsanti .pillola svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2}
@@ -311,6 +315,13 @@ it: {
   popolarita: "Popolarità", visite: "{n} visite su Wikipedia in 12 mesi", visiteNd: "visite Wikipedia: dato non disponibile",
   gut: "{n} download su Project Gutenberg", gutNd: "Gutenberg: nessun riscontro",
   formulaTitolo: "Formula: ", formula: "60% visite Wikipedia (12 mesi), 20% pagine Wikimedia, 20% download Project Gutenberg",
+  posizione: "{r}° su {t} autori letterari del {anno}", sottoTitolo: "Quanto è noto oggi online, rispetto agli altri autori di questa lista",
+  comeSiLegge: "Come si legge questo numero",
+  spiegaIndice: [
+    "Confronta ogni autore con gli altri della lista del {anno}, non con tutti gli scrittori del mondo: 100 è il più noto di questa lista, un numero basso è un autore poco conosciuto oggi.",
+    "Mescola tre segnali di attenzione: quante persone hanno letto la sua pagina Wikipedia negli ultimi 12 mesi (peso 60%), in quante lingue esiste una pagina su di lui (20%), quanto è scaricato su Project Gutenberg (20%). Se un dato manca, il suo peso passa agli altri.",
+    "Non dice quanto sia bravo, né quanto venderebbe una nuova traduzione. Un nome molto cercato per altri motivi (politica, cronaca) può salire anche se come scrittore si legge poco. Gutenberg è quasi solo in inglese e copre pochi autori: «nessun riscontro» non è un voto negativo."
+  ],
   catalogo: "Che tipo di catalogo", opereP: "Opere principali", opereSu: " · {x} su {y}", lingue: "Lingue",
   avviso: "Prima di ritradurre: controlla se esiste già una traduzione italiana recente e verifica le regole del tuo paese. Per l'Italia ci sono proroghe per alcuni autori morti in periodo di guerra.",
   tradTit: "Esistono edizioni nelle altre lingue?", tradSu: "{n} opere trovate su Open Library", tradNessuna: "Open Library non ha trovato opere di questo autore.",
@@ -354,6 +365,13 @@ en: {
   popolarita: "Popularity", visite: "{n} Wikipedia views in 12 months", visiteNd: "Wikipedia views: not available",
   gut: "{n} downloads on Project Gutenberg", gutNd: "Gutenberg: no match",
   formulaTitolo: "Formula: ", formula: "60% Wikipedia views (12 months), 20% Wikimedia pages, 20% Project Gutenberg downloads",
+  posizione: "#{r} of {t} literary authors of {anno}", sottoTitolo: "How well known they are online today, compared with the other authors on this list",
+  comeSiLegge: "How to read this number",
+  spiegaIndice: [
+    "It compares each author with the others on the {anno} list, not with every writer in the world: 100 is the best known on this list, a low number is someone little known today.",
+    "It blends three signals of attention: how many people read their Wikipedia page in the last 12 months (60% weight), in how many languages a page about them exists (20%), and how much they are downloaded from Project Gutenberg (20%). If one signal is missing, its weight goes to the others.",
+    "It does not say how good they are, nor how well a new translation would sell. A name searched for other reasons (politics, news) can rank high even if little read as a writer. Gutenberg is almost only in English and covers few authors: “no match” is not a bad score."
+  ],
   catalogo: "Type of catalogue", opereP: "Main works", opereSu: " · {x} of {y}", lingue: "Languages",
   avviso: "Before retranslating: check whether a recent translation already exists in your market, and verify your country's rules. Some countries, Italy included, have wartime extensions for certain authors.",
   tradTit: "Are there editions in other languages?", tradSu: "{n} works found on Open Library", tradNessuna: "Open Library found no works by this author.",
@@ -908,15 +926,22 @@ function mostraAutore(id) {
   const opere = (a.opere || []);
   const catalogo = (a.tipo_catalogo || []).map((x) => (tr("tipi") || {})[x] || x);
   const generi = (a.generiCanonici || []).map(nomeGenere);
+  const posizioneLista = gruppi(anno).letterari.findIndex((x) => x.wikidata === a.wikidata) + 1;
   const indice = a.indice !== undefined ? h("div", {},
     h("h4", {}, tr("popolarita")),
     h("div", { class: "indice" }, h("span", { class: "num" }, String(a.indice)),
-      h("div", { class: "asta", role: "img", "aria-label": `Indice ${a.indice} su 100` }, h("i", { style: `width:${Math.max(2, Math.min(100, a.indice))}%` }))),
+      h("div", { class: "asta", role: "img", "aria-label": `${a.indice} / 100` }, h("i", { style: `width:${Math.max(2, Math.min(100, a.indice))}%` }))),
+    h("div", { class: "sotto", style: "margin-top:10px" },
+      posizioneLista ? h("b", {}, tr("posizione", { r: posizioneLista, t: n(gruppi(anno).letterari.length), anno }) + " · ") : null,
+      tr("sottoTitolo")),
     h("div", { class: "sotto" },
       a.visite_12m !== undefined && a.visite_12m !== null ? tr("visite", { n: n(a.visite_12m) }) : h("span", { class: "nd" }, tr("visiteNd")),
       " · ", tr("pagineWm", { n: n(a.pagine_wikipedia || 0) }), " · ",
       a.gutenberg !== undefined && a.gutenberg !== null ? tr("gut", { n: n(a.gutenberg) }) : h("span", { class: "nd" }, tr("gutNd"))),
-    d.indice_formula ? h("div", { class: "sotto", style: "margin-top:6px" }, tr("formulaTitolo") + tr("formula")) : null) : null;
+    h("details", { class: "spiega-indice" },
+      h("summary", {}, tr("comeSiLegge")),
+      tr("spiegaIndice").map((par) => h("p", {}, par.split("{anno}").join(String(anno)))),
+      h("p", { class: "sotto" }, tr("formulaTitolo") + tr("formula")))) : null;
   const urlCondiviso = location.href.split("#")[0] + `#/autore/${a.wikidata}`;
   const copia = h("button", { class: "pillola", type: "button", onclick: async (ev) => {
     const b = ev.currentTarget;
@@ -936,7 +961,7 @@ function mostraAutore(id) {
         bio,
         indice,
         catalogo.length || generi.length ? h("div", {}, h("h4", {}, tr("catalogo")),
-          [...catalogo, ...generi].map((x) => h("span", { class: "tag" }, x))) : null,
+          [...new Set([...catalogo, ...generi])].map((x) => h("span", { class: "tag" }, x))) : null,
         opere.length ? h("div", {}, h("h4", {}, tr("opereP") + (a.n_opere > opere.length ? tr("opereSu", { x: n(opere.length), y: n(a.n_opere) }) : "")),
           h("ul", { class: "opere" }, opere.map((o) => h("li", {}, o.titolo, o.anno ? h("span", {}, String(o.anno)) : null)))) : null,
         (a.lingue || []).length ? h("div", {}, h("h4", {}, tr("lingue")), a.lingue.map((x) => h("span", { class: "tag" }, maiuscola(x)))) : null,
