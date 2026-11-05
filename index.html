@@ -185,6 +185,8 @@ dialog::backdrop{background:rgba(12,12,16,.72)}
 .scheda h4{margin:32px 0 10px;font-family:var(--mono);font-weight:500;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muto)}
 .scheda ul.opere{margin:0;padding:0;list-style:none;columns:2 240px;column-gap:32px}
 .scheda ul.opere li{padding:5px 0;break-inside:avoid;line-height:1.35}
+.scheda ul.opere.paesi{columns:1}
+.scheda ul.opere.paesi li{padding:6px 0;line-height:1.45}
 .scheda ul.opere span{font-family:var(--mono);font-size:12px;color:var(--muto);margin-left:6px}
 .indice{display:flex;align-items:center;gap:16px}
 .indice .num{font-family:var(--display);font-weight:900;font-size:56px;line-height:1}
@@ -338,6 +340,13 @@ const TESTI = {
 it: {
   titolo: "Public Domain Radar",
   descrizione: "Gli autori le cui opere entrano nel pubblico dominio in Europa il prossimo 1° gennaio. Dati aperti da Wikidata e Wikipedia, aggiornati ogni mese.",
+  paTit: "Da quando è libero, paese per paese",
+  paUe: "UE (base) e Germania: dal {d}.",
+  paFr: "Francia: dal {d}. Per le opere pubblicate prima del 3 settembre 1939 la proroga di guerra sposta la data a circa {e}.",
+  paIt: "Italia: dal {d}. Se la proroga di 6 anni (opere pubblicate prima del 1945) si somma ai 70 anni: dal {e}. Per gli autori dei paesi alleati può esserci una proroga in più.",
+  paEs80: "Spagna: non prima del {d} (80 anni dalla morte, perché è morto prima del 1987; la legge non dice come si conta l'anno).",
+  paEs70: "Spagna: dal {d}.",
+  paNota: "Calcolo indicativo, dalle norme del riquadro in fondo alla pagina. Non è consulenza legale.",
   regoleTit: "Regole sulla durata, paese per paese",
   regoleNota: "Testi di legge letti il 5 novembre 2026. Non è consulenza legale: prima di pubblicare controlla la norma e la data di morte nel tuo paese.",
   presTit: "Gli autori che diventano liberi in Europa il 1° gennaio",
@@ -405,6 +414,13 @@ it: {
 en: {
   titolo: "Public Domain Radar",
   descrizione: "The authors whose works enter the public domain in Europe on 1 January next year. Open data from Wikidata and Wikipedia, updated monthly.",
+  paTit: "Free from when, country by country",
+  paUe: "EU (base rule) and Germany: from {d}.",
+  paFr: "France: from {d}. For works published before 3 September 1939 the wartime extension moves the date to about {e}.",
+  paIt: "Italy: from {d}. If the 6-year extension (works published before 1945) is added to the 70 years: from {e}. For authors from Allied countries there may be a further extension.",
+  paEs80: "Spain: not before {d} (80 years after death, because the author died before 1987; the law does not say how the year is counted).",
+  paEs70: "Spain: from {d}.",
+  paNota: "Indicative calculation, based on the rules in the box at the bottom of the page. Not legal advice.",
   regoleTit: "Term of protection, country by country",
   regoleNota: "Legal texts read on 5 November 2026. This is not legal advice: before publishing, check the law and the date of death in your country.",
   presTit: "The authors who become free in Europe on 1 January",
@@ -1042,6 +1058,22 @@ function bloccoSbn(g) {
     g.sospetto ? h("div", { class: "sotto", style: "color:var(--accento,#b45309)" }, tr("sbnSospetto")) : null,
     h("div", { class: "sotto" }, tr("sbnNota")));
 }
+function bloccoPaesi(a) {
+  const D = parseInt(String(a.morte || "").slice(0, 4), 10);
+  if (!D) return null;
+  const data = (y) => new Date(Date.UTC(y, 0, 1)).toLocaleDateString(LING === "it" ? "it-IT" : "en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
+  // Francia, L123-9: la durata si allunga del periodo tra il 3 settembre 1939 e il 1° gennaio 1948 (8 anni e 120 giorni)
+  const fine = new Date(Date.UTC(D + 70 + 8, 11, 31) + 120 * 86400000);
+  const frEstesa = fine.toLocaleDateString(LING === "it" ? "it-IT" : "en-GB", { month: "long", year: "numeric", timeZone: "UTC" });
+  const spagna80 = D < 1987;
+  return h("div", {}, h("h4", {}, tr("paTit")),
+    h("ul", { class: "opere paesi" },
+      h("li", {}, tr("paUe", { d: data(D + 71) })),
+      h("li", {}, tr("paFr", { d: data(D + 71), e: frEstesa })),
+      h("li", {}, tr("paIt", { d: data(D + 71), e: data(D + 77) })),
+      h("li", {}, spagna80 ? tr("paEs80", { d: data(D + 81) }) : tr("paEs70", { d: data(D + 71) }))),
+    h("div", { class: "sotto" }, tr("paNota")));
+}
 function bloccoTraduzioni(a) {
   const x = a.traduzioni;
   if (!x) return null;
@@ -1132,6 +1164,7 @@ function mostraAutore(id) {
           h("ul", { class: "opere" }, opere.map((o) => h("li", {}, o.titolo, o.anno ? h("span", {}, String(o.anno)) : null)))) : null,
         (a.lingue || []).length ? h("div", {}, h("h4", {}, tr("lingue")), a.lingue.map((x) => h("span", { class: "tag" }, maiuscola(x)))) : null,
         bloccoTraduzioni(a),
+        bloccoPaesi(a),
         h("div", { class: "avviso" }, tr("avviso")),
         h("div", { class: "pulsanti" },
           cuoreBtn,
