@@ -17,18 +17,12 @@ def mostra(nome, query, n=8):
     for b in r[:n]:
         print("   [sbn] " + " | ".join(f"{k}={v['value'][-110:]}" for k, v in b.items()), file=sys.stderr)
     return r
-ag = mostra("agenti Brecht", "SELECT DISTINCT ?a WHERE { ?a <http://www.w3.org/2000/01/rdf-schema#label> ?l . ?l bif:contains \"'brecht'\" . FILTER(STR(?l) = \"Brecht, Bertolt\" && CONTAINS(STR(?a), \"/Agent/\")) } LIMIT 5")
-if ag:
-    a = ag[0]["a"]["value"]
-    print("[sbn] uso", a, file=sys.stderr)
-    mostra("cosa punta all'agente", f"SELECT ?p (COUNT(*) AS ?n) WHERE {{ ?s ?p <{a}> }} GROUP BY ?p LIMIT 10")
-    mostra("predicati dell'agente", f"SELECT ?p ?o WHERE {{ <{a}> ?p ?o }} LIMIT 12")
-    c = mostra("contributi", f"SELECT ?c WHERE {{ ?c <http://id.loc.gov/ontologies/bibframe/agent> <{a}> }} LIMIT 3")
-    if c:
-        cc = c[0]["c"]["value"]
-        mostra("chi ha quel contributo", f"SELECT ?s ?p WHERE {{ ?s ?p <{cc}> }} LIMIT 5")
-        w = q(f"SELECT ?s WHERE {{ ?s <http://id.loc.gov/ontologies/bibframe/contribution> <{cc}> }} LIMIT 1")
-        if isinstance(w, list) and w:
-            ws = w[0]["s"]["value"]
-            mostra("predicati dell'opera/istanza", f"SELECT ?p ?o WHERE {{ <{ws}> ?p ?o }} LIMIT 25", 25)
-            mostra("istanze dell'opera", f"SELECT ?i ?p ?o WHERE {{ ?i <http://id.loc.gov/ontologies/bibframe/instanceOf> <{ws}> . ?i ?p ?o }} LIMIT 25", 25)
+BF = "http://id.loc.gov/ontologies/bibframe/"
+V = "http://viaf.org/viaf/2467372"
+ag = mostra("agente via VIAF", f"SELECT ?a WHERE {{ ?a <http://www.w3.org/2002/07/owl#sameAs> <{V}> }} LIMIT 5")
+w = "http://triplestore.iccu.sbn.it/resource/IT-ICCU-CFI-0558156#Work"
+inst = "http://triplestore.iccu.sbn.it/resource/IT-ICCU-CFI-0558156#Instance"
+mostra("nodo lingua", f"SELECT ?l ?p ?o WHERE {{ <{w}> <{BF}language> ?l . ?l ?p ?o }} LIMIT 12")
+mostra("nodo pubblicazione", f"SELECT ?pa ?p ?o WHERE {{ <{inst}> <{BF}provisionActivity> ?pa . ?pa ?p ?o }} LIMIT 20", 20)
+mostra("nodo contributo", f"SELECT ?c ?p ?o WHERE {{ <{w}> <{BF}contribution> ?c . ?c ?p ?o }} LIMIT 20", 20)
+mostra("nodo titolo", f"SELECT ?t ?p ?o WHERE {{ <{w}> <{BF}title> ?t . ?t ?p ?o }} LIMIT 10")
