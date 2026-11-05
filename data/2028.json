@@ -1325,7 +1325,8 @@
      "ultimo": null,
      "dal_2000": 0,
      "metodo": null,
-     "fonte": "SBN"
+     "fonte": "SBN",
+     "sospetto": true
     }
    }
   },
@@ -1638,7 +1639,8 @@
      "ultimo": 2007,
      "dal_2000": 2,
      "metodo": "nome",
-     "fonte": "SBN"
+     "fonte": "SBN",
+     "sospetto": true
     }
    }
   },

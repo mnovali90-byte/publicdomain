@@ -296,7 +296,8 @@
      "ultimo": 2017,
      "dal_2000": 1,
      "metodo": "nome",
-     "fonte": "SBN"
+     "fonte": "SBN",
+     "sospetto": true
     }
    }
   },
@@ -439,7 +440,8 @@
      "ultimo": null,
      "dal_2000": 0,
      "metodo": null,
-     "fonte": "SBN"
+     "fonte": "SBN",
+     "sospetto": true
     }
    }
   },
@@ -558,7 +560,8 @@
      "ultimo": null,
      "dal_2000": 0,
      "metodo": null,
-     "fonte": "SBN"
+     "fonte": "SBN",
+     "sospetto": true
     }
    }
   },
@@ -683,7 +686,8 @@
      "ultimo": null,
      "dal_2000": 0,
      "metodo": null,
-     "fonte": "SBN"
+     "fonte": "SBN",
+     "sospetto": true
     }
    }
   },
@@ -1386,7 +1390,8 @@
      "ultimo": null,
      "dal_2000": 0,
      "metodo": null,
-     "fonte": "SBN"
+     "fonte": "SBN",
+     "sospetto": true
     }
    }
   },
@@ -7011,7 +7016,7 @@
      "edizioni": 62,
      "ultimo": 1932,
      "dal_2000": 42,
-     "metodo": "nome",
+     "metodo": "nome_anni",
      "fonte": "SBN"
     }
    }
@@ -10341,7 +10346,7 @@
     "ts": "2026-11-05",
     "sbn_it": {
      "trovato": true,
-     "edizioni": 2,
+     "edizioni": 1,
      "ultimo": 2020,
      "dal_2000": 1,
      "metodo": "nome",
