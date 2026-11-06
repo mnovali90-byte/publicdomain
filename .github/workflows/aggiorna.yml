@@ -46,13 +46,16 @@ jobs:
         env:
           BUDGET_MINUTI_SBN: "25"
         run: python scripts/sbn.py
+      - name: Crea le pagine degli autori e la sitemap
+        if: always()
+        run: python scripts/pagine.py
       - name: Salva i dati nel repository
         # sempre, anche se un passo prima è stato interrotto: così il lavoro fatto non si perde
         if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data
+          git add data autore sitemap.xml
           if git diff --cached --quiet; then
             echo "Nessun cambiamento"
           else
