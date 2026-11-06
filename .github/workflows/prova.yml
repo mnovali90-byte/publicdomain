@@ -1,0 +1,10 @@
+name: prova
+on:
+  push:
+    paths: ["scripts/prova_*.py",".github/workflows/prova.yml"]
+jobs:
+  p:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/prova_opere.py
