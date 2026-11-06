@@ -20,6 +20,11 @@
    ],
    "pagine": 46,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Threepenny_Opera",
+   "lingua": {
+    "en": "German",
+    "it": "tedesco"
+   },
+   "generi": [],
    "visite_en": 147751,
    "copertina": {
     "file": "(1928) Brecht Dreigroschenoper.jpg",
@@ -41,6 +46,13 @@
    ],
    "pagine": 30,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Good_Earth",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "storico"
+   ],
    "visite_en": 115127,
    "copertina": {
     "file": "Bona-tero.jpg",
@@ -62,6 +74,11 @@
    ],
    "pagine": 23,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Waves",
+   "lingua": {
+    "en": "English",
+    "it": "inglese britannico"
+   },
+   "generi": [],
    "visite_en": 66256
   },
   {
@@ -76,6 +93,14 @@
    ],
    "pagine": 21,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Whisperer_in_Darkness",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "fantasy_sf",
+    "horror"
+   ],
    "visite_en": 63089,
    "copertina": {
     "file": "The Whisperer in Darkness.jpg",
@@ -97,6 +122,13 @@
    ],
    "pagine": 28,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Sittaford_Mystery",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "giallo"
+   ],
    "visite_en": 55863
   },
   {
@@ -111,6 +143,13 @@
    ],
    "pagine": 19,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Road_Back",
+   "lingua": {
+    "en": "German",
+    "it": "tedesco"
+   },
+   "generi": [
+    "guerra"
+   ],
    "visite_en": 31554,
    "copertina": {
     "file": "Erich Maria Remarque - Der Weg zurück 1931.jpg",
@@ -132,6 +171,13 @@
    ],
    "pagine": 12,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Glass_Key",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "giallo"
+   ],
    "visite_en": 25903,
    "copertina": {
     "file": "The Glass Key (1st ed cover).jpg",
@@ -153,6 +199,11 @@
    ],
    "pagine": 4,
    "wiki_en": "https://en.wikipedia.org/wiki/Gaban_(novel)",
+   "lingua": {
+    "en": "Hindi",
+    "it": "hindī"
+   },
+   "generi": [],
    "visite_en": 21532
   },
   {
@@ -167,6 +218,11 @@
    ],
    "pagine": 4,
    "wiki_en": "https://en.wikipedia.org/wiki/Green_Grow_the_Lilacs_(play)",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [],
    "visite_en": 20481,
    "copertina": {
     "file": "Green-Grow-the-Lilacs-1931.jpg",
@@ -188,6 +244,11 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Solar_Anus",
+   "lingua": {
+    "en": "French",
+    "it": "francese"
+   },
+   "generi": [],
    "visite_en": 15503
   },
   {
@@ -202,6 +263,11 @@
    ],
    "pagine": 9,
    "wiki_en": "https://en.wikipedia.org/wiki/Will_O%27_the_Wisp_(novel)",
+   "lingua": {
+    "en": "French",
+    "it": "francese"
+   },
+   "generi": [],
    "visite_en": 14719
   },
   {
@@ -216,6 +282,11 @@
    ],
    "pagine": 28,
    "wiki_en": "https://en.wikipedia.org/wiki/Night_Flight_(novel)",
+   "lingua": {
+    "en": "French",
+    "it": "francese"
+   },
+   "generi": [],
    "visite_en": 14351,
    "copertina": {
     "file": "Vol de nuit, 1931 (cropped).JPG",
@@ -237,6 +308,11 @@
    ],
    "pagine": 11,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Sleepwalkers_(Broch_novel)",
+   "lingua": {
+    "en": "German",
+    "it": "tedesco"
+   },
+   "generi": [],
    "visite_en": 14108,
    "copertina": {
     "file": "The Sleepwalkers Part 1.jpg",
@@ -258,6 +334,13 @@
    ],
    "pagine": 4,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Five_Red_Herrings",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "giallo"
+   ],
    "visite_en": 10847
   },
   {
@@ -272,6 +355,11 @@
    ],
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/If_It_Had_Happened_Otherwise",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [],
    "visite_en": 10705
   },
   {
@@ -286,6 +374,10 @@
    ],
    "pagine": 4,
    "wiki_en": "https://en.wikipedia.org/wiki/Wyatt_Earp:_Frontier_Marshal",
+   "generi": [
+    "memorie",
+    "storico"
+   ],
    "visite_en": 10480
   },
   {
@@ -316,6 +408,13 @@
    ],
    "pagine": 16,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Floating_Admiral",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "giallo"
+   ],
    "visite_en": 9910
   },
   {
@@ -330,6 +429,11 @@
    ],
    "pagine": 29,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Little_Golden_Calf",
+   "lingua": {
+    "en": "Russian",
+    "it": "russo"
+   },
+   "generi": [],
    "visite_en": 9133,
    "copertina": {
     "file": "Evgeny Petrov reads the novel The Golden Calf in English translation.jpg",
@@ -351,6 +455,11 @@
    ],
    "pagine": 4,
    "wiki_en": "https://en.wikipedia.org/wiki/San_Manuel_Bueno,_M%C3%A1rtir",
+   "lingua": {
+    "en": "Spanish",
+    "it": "spagnolo"
+   },
+   "generi": [],
    "visite_en": 9091,
    "copertina": {
     "file": "San Manuel Bueno mártir 1933.jpg",
@@ -372,6 +481,11 @@
    ],
    "pagine": 11,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Z%C3%BCrau_Aphorisms",
+   "lingua": {
+    "en": "German",
+    "it": "tedesco"
+   },
+   "generi": [],
    "visite_en": 8649
   },
   {
@@ -386,6 +500,11 @@
    ],
    "pagine": 4,
    "wiki_en": "https://en.wikipedia.org/wiki/Quicksand_(Tanizaki_novel)",
+   "lingua": {
+    "en": "Japanese",
+    "it": "giapponese"
+   },
+   "generi": [],
    "visite_en": 8586
   },
   {
@@ -400,6 +519,13 @@
    ],
    "pagine": 5,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Black_Stone",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "horror"
+   ],
    "visite_en": 8522
   },
   {
@@ -414,6 +540,11 @@
    ],
    "pagine": 11,
    "wiki_en": "https://en.wikipedia.org/wiki/Investigations_of_a_Dog",
+   "lingua": {
+    "en": "German",
+    "it": "tedesco"
+   },
+   "generi": [],
    "visite_en": 7648
   },
   {
@@ -428,6 +559,13 @@
    ],
    "pagine": 11,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Strange_High_House_in_the_Mist",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "horror"
+   ],
    "visite_en": 7366,
    "copertina": {
     "file": "The Strange High House in the Mist.jpg",
@@ -449,6 +587,13 @@
    ],
    "pagine": 8,
    "wiki_en": "https://en.wikipedia.org/wiki/Living_My_Life",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "memorie"
+   ],
    "visite_en": 7303
   },
   {
@@ -463,6 +608,11 @@
    ],
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/That_Evening_Sun",
+   "lingua": {
+    "en": "English",
+    "it": "inglese americano"
+   },
+   "generi": [],
    "visite_en": 6982
   },
   {
@@ -477,6 +627,11 @@
    ],
    "pagine": 10,
    "wiki_en": "https://en.wikipedia.org/wiki/Odessa_Stories",
+   "lingua": {
+    "en": "Russian",
+    "it": "russo"
+   },
+   "generi": [],
    "visite_en": 6680,
    "copertina": {
     "file": "Odesskie rasskazy - I. Babel, 1931.JPG",
@@ -498,6 +653,11 @@
    ],
    "pagine": 4,
    "wiki_en": "https://en.wikipedia.org/wiki/Dry_September",
+   "lingua": {
+    "en": "English",
+    "it": "inglese americano"
+   },
+   "generi": [],
    "visite_en": 5784
   },
   {
@@ -512,6 +672,13 @@
    ],
    "pagine": 4,
    "wiki_en": "https://en.wikipedia.org/wiki/Malice_Aforethought",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "giallo"
+   ],
    "visite_en": 5753
   },
   {
@@ -526,6 +693,11 @@
    ],
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/Lo!",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [],
    "visite_en": 5706
   },
   {
@@ -540,6 +712,11 @@
    ],
    "pagine": 8,
    "wiki_en": "https://en.wikipedia.org/wiki/A_Little_Fable",
+   "lingua": {
+    "en": "German",
+    "it": "tedesco"
+   },
+   "generi": [],
    "visite_en": 5281
   },
   {
@@ -554,6 +731,11 @@
    ],
    "pagine": 5,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Decision_(play)",
+   "lingua": {
+    "en": "German",
+    "it": "tedesco"
+   },
+   "generi": [],
    "visite_en": 5178
   },
   {
@@ -568,6 +750,14 @@
    ],
    "pagine": 7,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Secret_at_Shadow_Ranch",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "giallo",
+    "ragazzi"
+   ],
    "visite_en": 5128,
    "copertina": {
     "file": "The Secret at Shadow Ranch (1931) front cover, 1933B-9 printing.jpg",
@@ -589,6 +779,13 @@
    ],
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Children_of_the_Night_(short_story)",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "horror"
+   ],
    "visite_en": 4912
   },
   {
@@ -603,6 +800,13 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Shadows_on_the_Rock",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "storico"
+   ],
    "visite_en": 4882
   },
   {
@@ -617,6 +821,11 @@
    ],
    "pagine": 8,
    "wiki_en": "https://en.wikipedia.org/wiki/Lemon_(short_story)",
+   "lingua": {
+    "en": "Japanese",
+    "it": "giapponese"
+   },
+   "generi": [],
    "visite_en": 4813
   },
   {
@@ -631,6 +840,11 @@
    ],
    "pagine": 11,
    "wiki_en": "https://en.wikipedia.org/wiki/Fabian:_The_Story_of_a_Moralist",
+   "lingua": {
+    "en": "German",
+    "it": "tedesco"
+   },
+   "generi": [],
    "visite_en": 4760
   },
   {
@@ -645,6 +859,13 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Sands_of_Windee",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "giallo"
+   ],
    "visite_en": 4309
   },
   {
@@ -659,6 +880,11 @@
    ],
    "pagine": 8,
    "wiki_en": "https://en.wikipedia.org/wiki/Number_31328",
+   "lingua": {
+    "en": "Greek",
+    "it": "greco"
+   },
+   "generi": [],
    "visite_en": 4125
   },
   {
@@ -673,6 +899,11 @@
    ],
    "pagine": 5,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Mother_(Brecht_play)",
+   "lingua": {
+    "en": "German",
+    "it": "tedesco"
+   },
+   "generi": [],
    "visite_en": 3963
   },
   {
@@ -687,6 +918,13 @@
    ],
    "pagine": 5,
    "wiki_en": "https://en.wikipedia.org/wiki/Coup_d%27%C3%89tat:_The_Technique_of_Revolution",
+   "lingua": {
+    "en": "French",
+    "it": "francese"
+   },
+   "generi": [
+    "saggio"
+   ],
    "visite_en": 3828,
    "copertina": {
     "file": "Técnicas de golpe de Estado Curzio Malaparte.jpg",
@@ -708,6 +946,13 @@
    ],
    "pagine": 4,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Secret_of_Red_Gate_Farm",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "ragazzi"
+   ],
    "visite_en": 3818,
    "copertina": {
     "file": "The Secret of Red Gate Farm (1931) front cover, 1931B-1 printing.jpg",
@@ -729,6 +974,11 @@
    ],
    "pagine": 11,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Hunter_Gracchus",
+   "lingua": {
+    "en": "German",
+    "it": "tedesco"
+   },
+   "generi": [],
    "visite_en": 3814
   },
   {
@@ -743,6 +993,13 @@
    ],
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/Proust_(essay)",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "saggio"
+   ],
    "visite_en": 3762
   },
   {
@@ -757,6 +1014,13 @@
    ],
    "pagine": 13,
    "wiki_en": "https://en.wikipedia.org/wiki/Pietr_the_Latvian",
+   "lingua": {
+    "en": "French",
+    "it": "francese"
+   },
+   "generi": [
+    "giallo"
+   ],
    "visite_en": 3713
   },
   {
@@ -771,6 +1035,11 @@
    ],
    "pagine": 4,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Song_at_the_Scaffold",
+   "lingua": {
+    "en": "German",
+    "it": "tedesco"
+   },
+   "generi": [],
    "visite_en": 3594
   },
   {
@@ -785,6 +1054,13 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Tale_of_Satampra_Zeiros",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "horror"
+   ],
    "visite_en": 3594
   },
   {
@@ -799,6 +1075,14 @@
    ],
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Return_of_the_Sorcerer",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "fantasy_sf",
+    "horror"
+   ],
    "visite_en": 3424
   },
   {
@@ -813,6 +1097,11 @@
    ],
    "pagine": 8,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Silence_of_the_Sirens",
+   "lingua": {
+    "en": "German",
+    "it": "tedesco"
+   },
+   "generi": [],
    "visite_en": 3411
   },
   {
@@ -827,6 +1116,11 @@
    ],
    "pagine": 6,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Great_Wall_of_China_(short_story_collection)",
+   "lingua": {
+    "en": "German",
+    "it": "tedesco"
+   },
+   "generi": [],
    "visite_en": 3350,
    "copertina": {
     "file": "Kafka Beim Bau der Chinesischen Mauer 003.jpg",
@@ -848,6 +1142,14 @@
    ],
    "pagine": 8,
    "wiki_en": "https://en.wikipedia.org/wiki/Tarzan_the_Invincible",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "avventura",
+    "fantasy_sf"
+   ],
    "visite_en": 3098
   },
   {
@@ -862,6 +1164,11 @@
    ],
    "pagine": 5,
    "wiki_en": "https://en.wikipedia.org/wiki/Vlak_u_snijegu",
+   "lingua": {
+    "en": "Croatian",
+    "it": "croato"
+   },
+   "generi": [],
    "visite_en": 3060
   },
   {
@@ -876,6 +1183,11 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/The_American_Black_Chamber",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [],
    "visite_en": 2725
   },
   {
@@ -890,6 +1202,13 @@
    ],
    "pagine": 4,
    "wiki_en": "https://en.wikipedia.org/wiki/Altazor",
+   "lingua": {
+    "en": "Spanish",
+    "it": "spagnolo"
+   },
+   "generi": [
+    "poesia"
+   ],
    "visite_en": 2719,
    "copertina": {
     "file": "Altazor - Poema.JPG",
@@ -911,6 +1230,13 @@
    ],
    "pagine": 7,
    "wiki_en": "https://en.wikipedia.org/wiki/Gog_(novel)",
+   "lingua": {
+    "en": "Italian",
+    "it": "italiano"
+   },
+   "generi": [
+    "fantasy_sf"
+   ],
    "visite_en": 2718,
    "copertina": {
     "file": "Gog Papini 1931.jpg",
@@ -932,6 +1258,11 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Cartucho",
+   "lingua": {
+    "en": "Spanish",
+    "it": "spagnolo"
+   },
+   "generi": [],
    "visite_en": 2707
   },
   {
@@ -946,6 +1277,13 @@
    ],
    "pagine": 13,
    "wiki_en": "https://en.wikipedia.org/wiki/The_35th_of_May;_or,_Conrad%27s_Ride_to_the_South_Seas",
+   "lingua": {
+    "en": "German",
+    "it": "tedesco"
+   },
+   "generi": [
+    "ragazzi"
+   ],
    "visite_en": 2562,
    "copertina": {
     "file": "Buchdeckel des Kinderbuchs \"Der 35. Mai\" (33.-43 Aufl. 1948).jpg",
@@ -967,6 +1305,11 @@
    ],
    "pagine": 6,
    "wiki_en": "https://en.wikipedia.org/wiki/Marketa_Lazarov%C3%A1_(novel)",
+   "lingua": {
+    "en": "Czech",
+    "it": "ceco"
+   },
+   "generi": [],
    "visite_en": 2528
   },
   {
@@ -981,6 +1324,11 @@
    ],
    "pagine": 8,
    "wiki_en": "https://en.wikipedia.org/wiki/Tales_from_the_Vienna_Woods_(play)",
+   "lingua": {
+    "en": "German",
+    "it": "tedesco"
+   },
+   "generi": [],
    "visite_en": 2514
   },
   {
@@ -995,6 +1343,11 @@
    ],
    "pagine": 8,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Village_Schoolmaster",
+   "lingua": {
+    "en": "German",
+    "it": "tedesco"
+   },
+   "generi": [],
    "visite_en": 2111
   },
   {
@@ -1009,6 +1362,13 @@
    ],
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/Charlie_Chan_Carries_On",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "giallo"
+   ],
    "visite_en": 2062,
    "copertina": {
     "file": "Charlie Chan Carries On (1930) title page.png",
@@ -1030,6 +1390,11 @@
    ],
    "pagine": 8,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Truth_about_Sancho_Panza",
+   "lingua": {
+    "en": "German",
+    "it": "tedesco"
+   },
+   "generi": [],
    "visite_en": 2022
   },
   {
@@ -1044,6 +1409,13 @@
    ],
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/Tarzan_Triumphant",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "fantasy_sf"
+   ],
    "visite_en": 1989
   },
   {
@@ -1058,6 +1430,11 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Conqueror_(Heyer_novel)",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [],
    "visite_en": 1975
   },
   {
@@ -1072,6 +1449,13 @@
    ],
    "pagine": 5,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Hanged_Man_of_Saint-Pholien",
+   "lingua": {
+    "en": "French",
+    "it": "francese"
+   },
+   "generi": [
+    "giallo"
+   ],
    "visite_en": 1956
   },
   {
@@ -1086,6 +1470,11 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Letty_Lynton_(novel)",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [],
    "visite_en": 1927
   },
   {
@@ -1100,6 +1489,11 @@
    ],
    "pagine": 4,
    "wiki_en": "https://en.wikipedia.org/wiki/Schloss_Gripsholm",
+   "lingua": {
+    "en": "German",
+    "it": "tedesco"
+   },
+   "generi": [],
    "visite_en": 1898
   },
   {
@@ -1114,6 +1508,13 @@
    ],
    "pagine": 9,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Yellow_Dog_(novel)",
+   "lingua": {
+    "en": "French",
+    "it": "francese"
+   },
+   "generi": [
+    "giallo"
+   ],
    "visite_en": 1876
   },
   {
@@ -1128,6 +1529,11 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Work,_Wealth_and_Happiness_of_Mankind",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [],
    "visite_en": 1707
   },
   {
@@ -1142,6 +1548,7 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/My_Experiences_in_the_World_War",
+   "generi": [],
    "visite_en": 1595,
    "copertina": {
     "file": "John Pershing.jpg",
@@ -1163,6 +1570,13 @@
    ],
    "pagine": 5,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Dutch_Shoe_Mystery",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "giallo"
+   ],
    "visite_en": 1570
   },
   {
@@ -1177,6 +1591,11 @@
    ],
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/Father_Malachy%27s_Miracle",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [],
    "visite_en": 1482
   },
   {
@@ -1191,6 +1610,13 @@
    ],
    "pagine": 8,
    "wiki_en": "https://en.wikipedia.org/wiki/Night_at_the_Crossroads_(novel)",
+   "lingua": {
+    "en": "French",
+    "it": "francese"
+   },
+   "generi": [
+    "giallo"
+   ],
    "visite_en": 1414
   },
   {
@@ -1205,6 +1631,11 @@
    ],
    "pagine": 4,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Bridal_Canopy",
+   "lingua": {
+    "en": "Hebrew",
+    "it": "ebraico"
+   },
+   "generi": [],
    "visite_en": 1355
   },
   {
@@ -1219,6 +1650,11 @@
    ],
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/L%27allegria",
+   "lingua": {
+    "en": "Italian",
+    "it": "italiano"
+   },
+   "generi": [],
    "visite_en": 1353,
    "copertina": {
     "file": "Giuseppe Ungaretti (basco).jpg",
@@ -1240,6 +1676,13 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/The_London_Scene",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "saggio"
+   ],
    "visite_en": 1336
   },
   {
@@ -1254,6 +1697,13 @@
    ],
    "pagine": 8,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Permanent_Revolution",
+   "lingua": {
+    "en": "Russian",
+    "it": "russo"
+   },
+   "generi": [
+    "saggio"
+   ],
    "visite_en": 1305,
    "copertina": {
     "file": "Троцкий - Перманентная революция (1930, обложка).jpg",
@@ -1275,6 +1725,13 @@
    ],
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/Waterless_Mountain",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "ragazzi"
+   ],
    "visite_en": 1305,
    "copertina": {
     "file": "A 'Yebichai Sweat' Navajo medicine ceremony; three Navajos Wellcome V0038480.jpg",
@@ -1296,6 +1753,11 @@
    ],
    "pagine": 6,
    "wiki_en": "https://en.wikipedia.org/wiki/A_Small_Circus",
+   "lingua": {
+    "en": "German",
+    "it": "tedesco"
+   },
+   "generi": [],
    "visite_en": 1301
   },
   {
@@ -1310,6 +1772,11 @@
    ],
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/Las_lanzas_coloradas",
+   "lingua": {
+    "en": "Spanish",
+    "it": "spagnolo"
+   },
+   "generi": [],
    "visite_en": 1201
   },
   {
@@ -1324,6 +1791,11 @@
    ],
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/Machine_(novel)",
+   "lingua": {
+    "en": "Japanese",
+    "it": "giapponese"
+   },
+   "generi": [],
    "visite_en": 1123
   },
   {
@@ -1338,6 +1810,13 @@
    ],
    "pagine": 5,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Late_Monsieur_Gallet",
+   "lingua": {
+    "en": "French",
+    "it": "francese"
+   },
+   "generi": [
+    "giallo"
+   ],
    "visite_en": 1113
   },
   {
@@ -1352,6 +1831,13 @@
    ],
    "pagine": 4,
    "wiki_en": "https://en.wikipedia.org/wiki/Mr._Tot_A%C4%89etas_Mil_Okulojn",
+   "lingua": {
+    "en": "Esperanto",
+    "it": "esperanto"
+   },
+   "generi": [
+    "fantasy_sf"
+   ],
    "visite_en": 1096
   },
   {
@@ -1366,6 +1852,11 @@
    ],
    "pagine": 8,
    "wiki_en": "https://en.wikipedia.org/wiki/My_Neighbor",
+   "lingua": {
+    "en": "German",
+    "it": "tedesco"
+   },
+   "generi": [],
    "visite_en": 1088
   },
   {
@@ -1380,6 +1871,11 @@
    ],
    "pagine": 6,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Country_of_Carnival",
+   "lingua": {
+    "en": "Portuguese",
+    "it": "portoghese"
+   },
+   "generi": [],
    "visite_en": 1049
   },
   {
@@ -1394,6 +1890,11 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Terra_Incognita_(short_story)",
+   "lingua": {
+    "en": "Russian",
+    "it": "russo"
+   },
+   "generi": [],
    "visite_en": 1041
   },
   {
@@ -1408,6 +1909,11 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Flamethrowers_(Arlt_novel)",
+   "lingua": {
+    "en": "Spanish",
+    "it": "spagnolo"
+   },
+   "generi": [],
    "visite_en": 914,
    "copertina": {
     "file": "Los lanzallamas claridad 1931.jpg",
@@ -1429,6 +1935,13 @@
    ],
    "pagine": 8,
    "wiki_en": "https://en.wikipedia.org/wiki/A_Man%27s_Head",
+   "lingua": {
+    "en": "French",
+    "it": "francese"
+   },
+   "generi": [
+    "giallo"
+   ],
    "visite_en": 912
   },
   {
@@ -1443,6 +1956,13 @@
    ],
    "pagine": 5,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Two-Penny_Bar",
+   "lingua": {
+    "en": "French",
+    "it": "francese"
+   },
+   "generi": [
+    "giallo"
+   ],
    "visite_en": 907
   },
   {
@@ -1457,6 +1977,13 @@
    ],
    "pagine": 7,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Carter_of_%27La_Providence%27",
+   "lingua": {
+    "en": "French",
+    "it": "francese"
+   },
+   "generi": [
+    "giallo"
+   ],
    "visite_en": 848,
    "copertina": {
     "file": "Ecluse du grand carré Canal de Deule Péniche.jpg",
@@ -1478,6 +2005,11 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/What_Bird_Is_That%3F",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [],
    "visite_en": 843
   },
   {
@@ -1487,6 +2019,7 @@
    "autori": [],
    "pagine": 4,
    "wiki_en": "https://en.wikipedia.org/wiki/A_Hundred_Authors_Against_Einstein",
+   "generi": [],
    "visite_en": 825
   },
   {
@@ -1501,6 +2034,11 @@
    ],
    "pagine": 5,
    "wiki_en": "https://en.wikipedia.org/wiki/La_Bandera_(novel)",
+   "lingua": {
+    "en": "French",
+    "it": "francese"
+   },
+   "generi": [],
    "visite_en": 644
   },
   {
@@ -1515,6 +2053,13 @@
    ],
    "pagine": 5,
    "wiki_en": "https://en.wikipedia.org/wiki/Haravil%C4%81samu",
+   "lingua": {
+    "en": "Telugu",
+    "it": "telugu"
+   },
+   "generi": [
+    "poesia"
+   ],
    "visite_en": 637
   },
   {
@@ -1524,6 +2069,11 @@
    "autori": [],
    "pagine": 5,
    "wiki_en": "https://en.wikipedia.org/wiki/Rakhine_Razawin_Thit",
+   "lingua": {
+    "en": "Burmese",
+    "it": "birmano"
+   },
+   "generi": [],
    "visite_en": 597,
    "copertina": {
     "file": "Rakhine Yazawin Thit.JPG",
@@ -1545,6 +2095,11 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Strychnine_in_the_Soup",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [],
    "visite_en": 555
   },
   {
@@ -1559,6 +2114,11 @@
    ],
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Go-Getter_(short_story)",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [],
    "visite_en": 552
   },
   {
@@ -1573,6 +2133,13 @@
    ],
    "pagine": 7,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Life_of_Zamenhof",
+   "lingua": {
+    "en": "Esperanto",
+    "it": "esperanto"
+   },
+   "generi": [
+    "memorie"
+   ],
    "visite_en": 527,
    "copertina": {
     "file": "1920 Vivo de Zamenhof (unua eldono.jpg",
@@ -1594,6 +2161,7 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/CIOPW",
+   "generi": [],
    "visite_en": 507
   },
   {
@@ -1608,6 +2176,11 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Jane%27s_Island",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [],
    "visite_en": 505
   },
   {
@@ -1622,6 +2195,13 @@
    ],
    "pagine": 7,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Grand_Banks_Caf%C3%A9",
+   "lingua": {
+    "en": "French",
+    "it": "francese"
+   },
+   "generi": [
+    "giallo"
+   ],
    "visite_en": 488
   },
   {
@@ -1636,6 +2216,11 @@
    ],
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/Laura_a_la_ciutat_dels_sants",
+   "lingua": {
+    "en": "Catalan",
+    "it": "catalano"
+   },
+   "generi": [],
    "visite_en": 482
   },
   {
@@ -1650,6 +2235,13 @@
    ],
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/Castle_Skull",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "giallo"
+   ],
    "visite_en": 438
   },
   {
@@ -1664,6 +2256,13 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Out_of_the_Flame",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "storico"
+   ],
    "visite_en": 426
   },
   {
@@ -1678,6 +2277,11 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Mr._and_Mrs._Pennington",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [],
    "visite_en": 383
   },
   {
@@ -1692,6 +2296,11 @@
    ],
    "pagine": 4,
    "wiki_en": "https://en.wikipedia.org/wiki/Mort_de_dama",
+   "lingua": {
+    "en": "Catalan",
+    "it": "catalano"
+   },
+   "generi": [],
    "visite_en": 381,
    "copertina": {
     "file": "'Mort de dama', 9a edició.JPG",
@@ -1713,6 +2322,7 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Boy_of_the_South_Seas",
+   "generi": [],
    "visite_en": 373
   },
   {
@@ -1727,6 +2337,7 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/M%C3%A9lo_(play)",
+   "generi": [],
    "visite_en": 368
   },
   {
@@ -1741,6 +2352,11 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Blow_the_Chinks_Down!",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [],
    "visite_en": 337
   },
   {
@@ -1755,6 +2371,13 @@
    ],
    "pagine": 7,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Dancer_at_the_Gai-Moulin",
+   "lingua": {
+    "en": "French",
+    "it": "francese"
+   },
+   "generi": [
+    "giallo"
+   ],
    "visite_en": 332
   },
   {
@@ -1769,6 +2392,13 @@
    ],
    "pagine": 5,
    "wiki_en": "https://en.wikipedia.org/wiki/Maigret_in_Holland",
+   "lingua": {
+    "en": "French",
+    "it": "francese"
+   },
+   "generi": [
+    "giallo"
+   ],
    "visite_en": 321
   },
   {
@@ -1783,6 +2413,11 @@
    ],
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/En_dag_i_oktober",
+   "lingua": {
+    "en": "Norwegian",
+    "it": "norvegese"
+   },
+   "generi": [],
    "visite_en": 317
   },
   {
@@ -1797,6 +2432,11 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Alleys_of_Peril",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [],
    "visite_en": 288
   },
   {
@@ -1811,6 +2451,11 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Flamenco_(novel)",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [],
    "visite_en": 247
   },
   {
@@ -1825,6 +2470,11 @@
    ],
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Wanderers_(Shishkov_novel)",
+   "lingua": {
+    "en": "Russian",
+    "it": "russo"
+   },
+   "generi": [],
    "visite_en": 242
   },
   {
@@ -1839,6 +2489,11 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Sweepstake_Murders",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [],
    "visite_en": 232
   },
   {
@@ -1853,6 +2508,11 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Breed_of_Battle",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [],
    "visite_en": 231
   },
   {
@@ -1867,6 +2527,11 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Madah_Kelana",
+   "lingua": {
+    "en": "Indonesian",
+    "it": "indonesiano"
+   },
+   "generi": [],
    "visite_en": 226
   },
   {
@@ -1881,6 +2546,11 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Circus_Fists",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [],
    "visite_en": 195
   },
   {
@@ -1895,6 +2565,11 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/The_TNT_Punch",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [],
    "visite_en": 194
   },
   {
@@ -1909,6 +2584,11 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Sign_of_the_Snake",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [],
    "visite_en": 184
   },
   {
@@ -1923,6 +2603,11 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Texas_Fists",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [],
    "visite_en": 133
   },
   {
@@ -1937,6 +2622,11 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Keynote",
+   "lingua": {
+    "en": "French",
+    "it": "francese"
+   },
+   "generi": [],
    "visite_en": 59
   },
   {
@@ -1951,6 +2641,11 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Von_Dem_Alten_Kloster",
+   "lingua": {
+    "en": "Yiddish",
+    "it": "yiddish"
+   },
+   "generi": [],
    "visite_en": 32
   },
   {
@@ -1965,6 +2660,13 @@
    ],
    "pagine": 5,
    "wiki_en": null,
+   "lingua": {
+    "en": "Russian",
+    "it": "russo"
+   },
+   "generi": [
+    "memorie"
+   ],
    "visite_en": null
   },
   {
@@ -1979,6 +2681,11 @@
    ],
    "pagine": 5,
    "wiki_en": null,
+   "lingua": {
+    "en": "Spanish",
+    "it": "spagnolo"
+   },
+   "generi": [],
    "visite_en": null,
    "copertina": {
     "file": "Federico garcia lorca pagina manuscrita de vinetas flamencas en poema del cante jondo noviembre 1921.jpg",
@@ -2000,6 +2707,13 @@
    ],
    "pagine": 4,
    "wiki_en": null,
+   "lingua": {
+    "en": "French",
+    "it": "francese"
+   },
+   "generi": [
+    "giallo"
+   ],
    "visite_en": null,
    "copertina": {
     "file": "Entete La Barre-y-va.jpg",
@@ -2021,6 +2735,13 @@
    ],
    "pagine": 3,
    "wiki_en": null,
+   "lingua": {
+    "en": "German",
+    "it": "tedesco"
+   },
+   "generi": [
+    "saggio"
+   ],
    "visite_en": null
   },
   {
@@ -2035,6 +2756,11 @@
    ],
    "pagine": 3,
    "wiki_en": null,
+   "lingua": {
+    "en": "German",
+    "it": "tedesco"
+   },
+   "generi": [],
    "visite_en": null
   },
   {
@@ -2049,6 +2775,11 @@
    ],
    "pagine": 3,
    "wiki_en": null,
+   "lingua": {
+    "en": "Turkish",
+    "it": "turco"
+   },
+   "generi": [],
    "visite_en": null
   },
   {
@@ -2063,6 +2794,11 @@
    ],
    "pagine": 3,
    "wiki_en": null,
+   "lingua": {
+    "en": "Hungarian",
+    "it": "ungherese"
+   },
+   "generi": [],
    "visite_en": null,
    "copertina": {
     "file": "Feketekolostor.jpg",
@@ -2084,6 +2820,11 @@
    ],
    "pagine": 3,
    "wiki_en": null,
+   "lingua": {
+    "en": "Polish",
+    "it": "polacco"
+   },
+   "generi": [],
    "visite_en": null
   },
   {
@@ -2098,6 +2839,13 @@
    ],
    "pagine": 3,
    "wiki_en": null,
+   "lingua": {
+    "en": "French",
+    "it": "francese"
+   },
+   "generi": [
+    "ragazzi"
+   ],
    "visite_en": null,
    "copertina": {
     "file": "Histoire de Babar, couverture.png",
@@ -2119,6 +2867,11 @@
    ],
    "pagine": 3,
    "wiki_en": null,
+   "lingua": {
+    "en": "Czech",
+    "it": "ceco"
+   },
+   "generi": [],
    "visite_en": null
   },
   {
@@ -2133,6 +2886,7 @@
    ],
    "pagine": 3,
    "wiki_en": null,
+   "generi": [],
    "visite_en": null
   },
   {
@@ -2147,6 +2901,11 @@
    ],
    "pagine": 3,
    "wiki_en": null,
+   "lingua": {
+    "en": "Telugu",
+    "it": "telugu"
+   },
+   "generi": [],
    "visite_en": null
   },
   {
@@ -2161,6 +2920,13 @@
    ],
    "pagine": 2,
    "wiki_en": null,
+   "lingua": {
+    "en": "Dutch",
+    "it": "olandese"
+   },
+   "generi": [
+    "fantasy_sf"
+   ],
    "visite_en": null,
    "copertina": {
     "file": "Bordewijk3.jpg",
@@ -2182,6 +2948,11 @@
    ],
    "pagine": 2,
    "wiki_en": null,
+   "lingua": {
+    "en": "German",
+    "it": "tedesco"
+   },
+   "generi": [],
    "visite_en": null
   },
   {
@@ -2196,6 +2967,11 @@
    ],
    "pagine": 2,
    "wiki_en": null,
+   "lingua": {
+    "en": "French",
+    "it": "francese"
+   },
+   "generi": [],
    "visite_en": null
   },
   {
@@ -2210,6 +2986,11 @@
    ],
    "pagine": 2,
    "wiki_en": null,
+   "lingua": {
+    "en": "French",
+    "it": "francese"
+   },
+   "generi": [],
    "visite_en": null
   },
   {
@@ -2224,6 +3005,7 @@
    ],
    "pagine": 2,
    "wiki_en": null,
+   "generi": [],
    "visite_en": null
   },
   {
@@ -2238,6 +3020,11 @@
    ],
    "pagine": 2,
    "wiki_en": null,
+   "lingua": {
+    "en": "German",
+    "it": "tedesco"
+   },
+   "generi": [],
    "visite_en": null
   },
   {
@@ -2252,6 +3039,11 @@
    ],
    "pagine": 2,
    "wiki_en": null,
+   "lingua": {
+    "en": "Polish",
+    "it": "polacco"
+   },
+   "generi": [],
    "visite_en": null
   },
   {
@@ -2266,6 +3058,11 @@
    ],
    "pagine": 2,
    "wiki_en": null,
+   "lingua": {
+    "en": "Esperanto",
+    "it": "esperanto"
+   },
+   "generi": [],
    "visite_en": null,
    "copertina": {
     "file": "1931 Skizoj Teorio.jpg",
@@ -2287,6 +3084,11 @@
    ],
    "pagine": 2,
    "wiki_en": null,
+   "lingua": {
+    "en": "Estonian",
+    "it": "estone"
+   },
+   "generi": [],
    "visite_en": null
   },
   {
@@ -2301,6 +3103,13 @@
    ],
    "pagine": 2,
    "wiki_en": null,
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "horror"
+   ],
    "visite_en": null
   },
   {
@@ -2315,6 +3124,11 @@
    ],
    "pagine": 2,
    "wiki_en": null,
+   "lingua": {
+    "en": "Finnish",
+    "it": "finlandese"
+   },
+   "generi": [],
    "visite_en": null
   },
   {
@@ -2329,6 +3143,13 @@
    ],
    "pagine": 2,
    "wiki_en": null,
+   "lingua": {
+    "en": "Ukrainian",
+    "it": "ucraino"
+   },
+   "generi": [
+    "poesia"
+   ],
    "visite_en": null
   },
   {
@@ -2343,6 +3164,13 @@
    ],
    "pagine": 2,
    "wiki_en": null,
+   "lingua": {
+    "en": "Catalan",
+    "it": "catalano"
+   },
+   "generi": [
+    "memorie"
+   ],
    "visite_en": null
   },
   {
@@ -2357,6 +3185,13 @@
    ],
    "pagine": 2,
    "wiki_en": null,
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "giallo"
+   ],
    "visite_en": null
   },
   {
@@ -2371,6 +3206,11 @@
    ],
    "pagine": 2,
    "wiki_en": null,
+   "lingua": {
+    "en": "Spanish",
+    "it": "spagnolo"
+   },
+   "generi": [],
    "visite_en": null
   },
   {
@@ -2385,6 +3225,7 @@
    ],
    "pagine": 2,
    "wiki_en": null,
+   "generi": [],
    "visite_en": null,
    "copertina": {
     "file": "เครื่องมโหรีฯ - ดำรง - ๒๔๗๓ (๑).pdf",
@@ -2406,6 +3247,11 @@
    ],
    "pagine": 2,
    "wiki_en": null,
+   "lingua": {
+    "en": "Czech",
+    "it": "ceco"
+   },
+   "generi": [],
    "visite_en": null
   },
   {
@@ -2420,6 +3266,11 @@
    ],
    "pagine": 2,
    "wiki_en": null,
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [],
    "visite_en": null
   }
  ]
