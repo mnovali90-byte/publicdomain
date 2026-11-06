@@ -5,6 +5,8 @@ U = "https://query.wikidata.org/sparql"
 UA = {"User-Agent": "PublicDomainRadar/1.0 (https://publicdomainradar.com; open data project)"}
 OCC = "wd:Q6625963 wd:Q49757 wd:Q214917 wd:Q4853732 wd:Q15949613 wd:Q11774202"  # romanziere, poeta, drammaturgo, scrittore per ragazzi, novellista, saggista
 CL = "wd:Q8261 wd:Q49084 wd:Q25379 wd:Q5185279 wd:Q571 wd:Q7725634 wd:Q149537"
+BAD = 'wd:Q33999 wd:Q2526255 wd:Q82955 wd:Q639669 wd:Q36834 wd:Q901 wd:Q169470 wd:Q170790 wd:Q1028181 wd:Q10833314 wd:Q4964182 wd:Q1234713 wd:Q16533 wd:Q11513337 wd:Q483501 wd:Q2259451'
+ALLOW = {'Q41513','Q9439'}  # eccezioni da tenere anche se hanno altre occupazioni
 ETA = [50, 75, 100, 125, 150, 175, 200, 250, 300, 400]
 SL_P, SL_O = 30, 15
 
@@ -22,9 +24,11 @@ def intervallo(y):
 
 def persone(prop, y):
     a, b = intervallo(y)
-    return q(f'''SELECT ?p ?pLabel ?pit ?desc ?d ?pr ?sl WHERE {{ VALUES ?o {{ {OCC} }}
+    return q(f'''SELECT ?p ?pLabel ?pit ?desc ?d ?pr ?sl ?bad WHERE {{ VALUES ?o {{ {OCC} }}
  ?p wdt:P106 ?o; wdt:P31 wd:Q5; p:{prop}/psv:{prop} [wikibase:timeValue ?d; wikibase:timePrecision ?pr].
  FILTER(?d>={a} && ?d<{b}) ?p wikibase:sitelinks ?sl. FILTER(?sl>={SL_P})
+ FILTER NOT EXISTS {{ ?p wdt:{prop} ?altra. FILTER(?altra<{a} || ?altra>={b}) }}
+ OPTIONAL {{ ?p wdt:P106 ?bad. VALUES ?bad {{ {BAD} }} }}
  OPTIONAL {{ ?p rdfs:label ?pit FILTER(LANG(?pit)="it") }} OPTIONAL {{ ?p schema:description ?desc FILTER(LANG(?desc)="en") }}
  SERVICE wikibase:label {{ bd:serviceParam wikibase:language "en". }} }}''')
 
@@ -38,6 +42,7 @@ def opere(y):
  SERVICE wikibase:label {{ bd:serviceParam wikibase:language "en". }} }}''')
 
 voci = {}
+esclusi = set()
 for et in ETA:
     y = ANNO - et
     for tipo, fn in (("nascita", lambda y: persone("P569", y)), ("morte", lambda y: persone("P570", y)), ("prima edizione", opere)):
@@ -47,6 +52,8 @@ for et in ETA:
         for x in r:
             nome = x["pLabel"]["value"]
             if re.fullmatch(r"Q\d+", nome): continue
+            if "bad" in x and x["p"]["value"].rsplit("/", 1)[-1] not in ALLOW:
+                esclusi.add((tipo, x["p"]["value"])); continue
             k = (tipo, x["p"]["value"].rsplit("/", 1)[-1])
             v = voci.setdefault(k, {"tipo": tipo, "qid": k[1], "nome": nome, "it": x.get("pit", {}).get("value"),
                 "desc": x.get("desc", {}).get("value"), "autore": x.get("auth", {}).get("value"),
@@ -58,4 +65,4 @@ print("=== ELENCO ===")
 for v in sorted(voci.values(), key=lambda v: (v["data"][5:] if v["prec"] >= 11 else "99", -v["pagine"])):
     g = v["data"][5:] if v["prec"] >= 11 else "anno?"
     print(f'{g:>6} | {v["anni"]:>3}a {v["tipo"]:<14} | {v["nome"]} {("— "+v["autore"]) if v["autore"] else ""} | sl{v["pagine"]} | {v["data"][:4]} | {(v["desc"] or "")[:60]}')
-print("TOTALE", len(voci))
+print("TOTALE", len(voci), "esclusi per altre occupazioni:", len(esclusi))
