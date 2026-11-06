@@ -241,6 +241,20 @@ dialog::backdrop{background:rgba(12,12,16,.72)}
 .griglia-opere{margin-top:28px;display:flex;flex-wrap:wrap;gap:16px}
 .griglia-opere .copertina{width:calc(25% - 12px);min-width:150px;height:230px}
 
+.us-griglia{margin-top:28px;display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:22px 16px}
+.us-scheda{display:flex;flex-direction:column;text-align:left;background:none;border:0;padding:0;cursor:pointer;font:inherit;color:inherit}
+.us-scheda:hover .us-cop{transform:translateY(-4px)}
+.us-cop{transition:transform .15s}
+.us-cop.copertina{width:100%;height:auto;aspect-ratio:2/3}
+.us-cop.img{aspect-ratio:2/3;width:100%;background:var(--riquadro);overflow:hidden}
+.us-cop.img img{width:100%;height:100%;object-fit:cover;display:block}
+.us-info{padding:10px 2px 0}.us-info h3{margin:0;font-size:16px;line-height:1.25}.us-info p{margin:2px 0 6px;color:var(--muto);font-size:14px}
+.tag-us{font-family:var(--mono);font-size:11px;letter-spacing:.03em;color:var(--vermiglio-testo);text-transform:uppercase}
+.us-det{display:grid;grid-template-columns:200px 1fr;gap:28px;padding:clamp(20px,4vw,40px)}
+.us-det h2{font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:clamp(34px,6vw,52px);line-height:.95;margin:0 0 6px}
+.us-dl{display:grid;grid-template-columns:150px 1fr;gap:10px 16px;margin:20px 0}
+.us-dl dt{font-family:var(--mono);font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--muto);padding-top:4px}.us-dl dd{margin:0}
+@media (max-width:640px){.us-det{grid-template-columns:1fr}.us-det .us-cop{max-width:200px}.us-dl{grid-template-columns:1fr;gap:2px}.us-dl dd{margin-bottom:12px}}
 .messaggio{padding:80px 0;font-size:18px}
 .presentazione{padding:clamp(28px,5vw,56px) 0 clamp(8px,2vw,20px);max-width:46rem}
 .presentazione h1{font-family:var(--testo);font-weight:600;font-size:clamp(24px,4vw,38px);line-height:1.12;margin:0 0 14px;letter-spacing:-.01em}
@@ -300,6 +314,8 @@ dialog::backdrop{background:rgba(12,12,16,.72)}
       <p class="nota" data-t="scaffNota">Gli scaffali nascono dai dati di Wikidata e mostrano solo le opere che hanno un genere indicato. Le copertine sono tipografiche: le copertine vere sono protette.</p>
     </div>
   </section>
+
+  <section class="contenitore sezione" id="opere-us" hidden></section>
 
   <section class="contenitore sezione" id="esplora" hidden>
     <div class="occhiello" data-t="esplora">Esplora</div>
@@ -374,7 +390,7 @@ it: {
   paEs70: "Spagna: dal {d}.",
   paNota: "Calcolo indicativo, dalle norme del riquadro in fondo alla pagina. Non è consulenza legale.",
   giurEt: "Paese",
-  giurNomi: { it: "Italia · 70 anni + proroghe", fr: "Francia · 70 anni + proroghe", de: "Germania · 70 anni", es: "Spagna · 80 anni" },
+  giurNomi: { it: "Italia · 70 anni + proroghe", fr: "Francia · 70 anni + proroghe", de: "Germania · 70 anni", es: "Spagna · 80 anni", us: "USA · 95 anni dalla pubblicazione" },
   paesiNomi: { it: "Italia", fr: "Francia", de: "Germania", es: "Spagna" },
   giurDesc: {
     fr: "Francia: la lista usa la regola base dei 70 anni, ma ci sono proroghe di guerra per alcune opere e per gli «morti per la Francia». Le date per la Francia sono nella scheda di ogni autore.",
@@ -458,7 +474,7 @@ en: {
   paEs70: "Spain: from {d}.",
   paNota: "Indicative calculation, based on the rules in the box at the bottom of the page. Not legal advice.",
   giurEt: "Country",
-  giurNomi: { it: "Italy · 70 years + extensions", fr: "France · 70 years + extensions", de: "Germany · 70 years", es: "Spain · 80 years" },
+  giurNomi: { it: "Italy · 70 years + extensions", fr: "France · 70 years + extensions", de: "Germany · 70 years", es: "Spain · 80 years", us: "USA · 95 years from publication" },
   paesiNomi: { it: "Italy", fr: "France", de: "Germany", es: "Spain" },
   giurDesc: {
     fr: "France: the list uses the base 70-year rule, but there are wartime extensions for some works and for those who «died for France». The dates for France are in each author's card.",
@@ -1242,6 +1258,13 @@ async function scegliAnno(anno) {
   disegnaTutto();
 }
 function impostaGiur(id, ridisegna = true) {
+  if (id === "us") {
+    if (!stato.opere) return;
+    stato.opz = "us"; stato.visibiliUS = OPERE_PASSO;
+    if (ridisegna) { disegnaTutto(); if ($("#finestra").open) instrada(); }
+    return;
+  }
+  stato.visibiliUS = OPERE_PASSO;
   const opz = GIUR_OPZ.find((o) => o[0] === id);
   if (!opz || !stato.perGiur[opz[1]]) return;
   const g = opz[1];
@@ -1257,18 +1280,136 @@ function impostaGiur(id, ridisegna = true) {
   gruppiCache.clear();
   if (ridisegna) { disegnaTutto(); if ($("#finestra").open) instrada(); }
 }
+
+// ===== USA: elenco delle opere (non degli autori). Regola: 95 anni dalla pubblicazione =====
+const OP_T = {
+  it: {
+    nome: "USA · 95 anni dalla pubblicazione",
+    tit: "Le opere che diventano libere negli USA il 1° gennaio {a}",
+    desc: "USA: qui si contano le opere, non gli autori. Un'opera pubblicata nel {p} diventa libera il 1° gennaio {a}. Calcolo indicativo, con i casi particolari spiegati nella scheda.",
+    avviso: "Qui si contano le opere, non gli autori. Negli USA conta l'anno di pubblicazione: 95 anni dopo, il 1° gennaio. A gennaio {a} tocca alle opere del {p} che erano ancora protette. Calcolo indicativo, non è consulenza legale: in Italia e in Europa valgono altre regole (scegli il paese dal menu).",
+    tag: "Pubblicata nel {p} → libera dal 1° gennaio {a}",
+    quando: "Quando", regola: "Regola USA", semplice: "In parole semplici", attenzione: "Attenzione", autore: "Autore", autori: "Autori", fonti: "Fonti",
+    quandoTesto: "1° gennaio {a} (95 anni dalla pubblicazione nel {p})",
+    regolaTesto: "Opere pubblicate prima del 1978: 95 anni dalla pubblicazione (17 U.S.C. § 304).",
+    semplicetesto: "Un libro uscito nel {p} e ancora protetto diventa libero negli USA all'inizio del {a}, qualunque sia la data di morte dell'autore.",
+    attenzioneTesto: "Se l'edizione americana non fu rinnovata dopo 28 anni, era già libera prima. Per le opere straniere conta anche il «restauro» del 1996 (§ 104A). Fuori dagli USA le regole sono diverse: in Italia e in Europa conta la morte dell'autore.",
+    fontiTesto: "Wikidata (CC0), Wikipedia (CC BY-SA), Wikimedia Commons. Testo di legge: US Code, Title 17.",
+    copCredito: "Immagine: {c}, {l}", wiki: "Pagina Wikipedia", visite: "Visite alla pagina Wikipedia inglese, ultimi 12 mesi: {n}",
+    schedaAutore: "Scheda dell'autore (regole europee)", altre: "Mostra altre opere",
+    nota: "Le immagini (copertine o foto collegate all'opera) compaiono solo se hanno una licenza libera su Wikimedia Commons (con credito); le altre opere hanno la scheda con il titolo. Elenco parziale: solo opere con anno di pubblicazione su Wikidata e almeno 2 pagine Wikipedia. Non è consulenza legale: i dati arrivano da fonti aperte e possono contenere errori.",
+    vuoto: "Elenco delle opere non disponibile al momento.", tipo: {}
+  },
+  en: {
+    nome: "USA · 95 years from publication",
+    tit: "The works that become free in the USA on 1 January {a}",
+    desc: "USA: this list counts works, not authors. A work published in {p} becomes free on 1 January {a}. Indicative calculation, with the special cases explained in each entry.",
+    avviso: "This list counts works, not authors. In the USA what matters is the year of publication: 95 years later, on 1 January. In January {a} it is the turn of works from {p} that were still protected. Indicative calculation, not legal advice: Italy and Europe follow other rules (pick the country from the menu).",
+    tag: "Published {p} → free from 1 January {a}",
+    quando: "When", regola: "US rule", semplice: "In plain words", attenzione: "Careful", autore: "Author", autori: "Authors", fonti: "Sources",
+    quandoTesto: "1 January {a} (95 years after publication in {p})",
+    regolaTesto: "Works published before 1978: 95 years from publication (17 U.S.C. § 304).",
+    semplicetesto: "A book published in {p} that is still protected becomes free in the USA at the start of {a}, whatever the date of the author's death.",
+    attenzioneTesto: "If the US edition was not renewed after 28 years, it was already free earlier. For foreign works the 1996 «restoration» (§ 104A) also matters. Outside the USA the rules are different: in Italy and Europe the author's death counts.",
+    fontiTesto: "Wikidata (CC0), Wikipedia (CC BY-SA), Wikimedia Commons. Law: US Code, Title 17.",
+    copCredito: "Image: {c}, {l}", wiki: "Wikipedia page", visite: "English Wikipedia page views, last 12 months: {n}",
+    schedaAutore: "Author page (European rules)", altre: "Show more works",
+    nota: "Images (covers or photos linked to the work) appear only when they have a free licence on Wikimedia Commons (with credit); the other works get a title card. Partial list: only works with a publication year on Wikidata and at least 2 Wikipedia pages. Not legal advice: the data comes from open sources and may contain errors.",
+    vuoto: "The list of works is not available right now.", tipo: {}
+  }
+};
+const ot = (k, v) => { let t = OP_T[LING][k] || ""; for (const x in (v || {})) t = t.split("{" + x + "}").join(v[x]); return t; };
+const titoloOp = (o) => (LING === "it" && o.titolo_it) ? o.titolo_it : o.titolo;
+const autoriOp = (o) => (o.autori || []).map((a) => a.nome).join(", ");
+const OPERE_PASSO = 60;
+function copTipo(o) {
+  const titolo = titoloOp(o), aut = autoriOp(o);
+  const c = hashNumero(titolo + aut) % 4;
+  const l = titolo.length;
+  let dim = l <= 12 ? 34 : l <= 24 ? 27 : l <= 40 ? 22 : 18;
+  const lunga = Math.max(...titolo.split(/\s+/).map((w) => w.length));
+  dim = Math.max(14, Math.min(dim, Math.floor(100 / (0.5 * lunga))));
+  return h("div", { class: `copertina us-cop c${c}` },
+    h("span", { class: "t", style: `font-size:${dim}px` }, titolo),
+    h("span", { class: "a" }, aut, o.anno_pub ? ` · ${o.anno_pub}` : ""));
+}
+function copOpera(o, pub) {
+  const oo = Object.assign({ anno_pub: pub }, o);
+  return o.copertina && o.copertina.url
+    ? h("div", { class: "us-cop img" }, h("img", { src: o.copertina.url, alt: "", loading: "lazy", width: 400 }))
+    : copTipo(oo);
+}
+function schedaOperaUS(o, anno, pub) {
+  return h("button", { class: "us-scheda", type: "button", "aria-label": `${titoloOp(o)}, ${autoriOp(o)}`, onclick: () => { location.hash = `#/opera/${o.qid}`; } },
+    copOpera(o, pub),
+    h("div", { class: "us-info" }, h("h3", {}, titoloOp(o)), h("p", {}, (autoriOp(o) || "—") + " · " + pub),
+      h("span", { class: "tag-us" }, ot("tag", { p: pub, a: anno }))));
+}
+function disegnaOpereUS() {
+  const box = $("#opere-us");
+  const d = stato.opere && stato.opere[stato.anno];
+  box.hidden = false;
+  if (!d) { box.replaceChildren(h("p", { class: "messaggio" }, ot("vuoto"))); return; }
+  const lista = d.opere;
+  const mostra = Math.min(lista.length, stato.visibiliUS || OPERE_PASSO);
+  box.replaceChildren(
+    h("div", { class: "avviso", style: "margin-top:0" }, ot("avviso", { a: d.anno, p: d.anno_pubblicazione })),
+    h("div", { class: "us-griglia" }, lista.slice(0, mostra).map((o) => schedaOperaUS(o, d.anno, d.anno_pubblicazione))),
+    mostra < lista.length ? h("div", { class: "altro" }, h("button", { class: "pillola", type: "button", onclick: () => { stato.visibiliUS = mostra + OPERE_PASSO; disegnaOpereUS(); } }, ot("altre"))) : null,
+    h("p", { class: "nota", style: "margin-top:28px" }, ot("nota")));
+}
+function trovaOpera(q) {
+  for (const an of Object.keys(stato.opere || {})) {
+    const d = stato.opere[an], o = d.opere.find((x) => x.qid === q);
+    if (o) return { o, anno: Number(an), pub: d.anno_pubblicazione };
+  }
+  return null;
+}
+function mostraOpera(t) {
+  const { o, anno, pub } = t;
+  const autori = (o.autori || []).map((a, i) => {
+    const hit = trovaAutore(a.qid);
+    return [i ? ", " : "", hit ? h("button", { class: "collegamento", type: "button", onclick: () => apriAutore(a.qid) }, a.nome) : a.nome];
+  }).flat();
+  const prima = (o.autori || []).find((a) => trovaAutore(a.qid));
+  const riga = (et, v) => [h("dt", {}, et), h("dd", {}, v)];
+  const cr = o.copertina && o.copertina.url ? h("p", { class: "sotto", style: "margin-top:8px;font-size:12px" },
+    h("a", { href: o.copertina.pagina, target: "_blank", rel: "noopener" }, ot("copCredito", { c: o.copertina.autore || "Wikimedia Commons", l: o.copertina.licenza }))) : null;
+  mostraFinestra(h("div", { class: "scheda" }, chiudiBottone(),
+    h("div", { class: "us-det" },
+      h("div", {}, copOpera(o, pub), cr),
+      h("div", {},
+        h("h2", {}, titoloOp(o)),
+        h("div", { class: "sotto" }, (autoriOp(o) || "—") + " · " + pub),
+        h("dl", { class: "us-dl" },
+          ...riga(ot("quando"), ot("quandoTesto", { a: anno, p: pub })),
+          ...riga(ot("regola"), ot("regolaTesto")),
+          ...riga(ot("semplice"), ot("semplicetesto", { a: anno, p: pub })),
+          ...riga(ot("attenzione"), ot("attenzioneTesto")),
+          ...(autori.length ? riga((o.autori || []).length > 1 ? ot("autori") : ot("autore"), autori) : []),
+          ...(o.visite_en ? riga("Wikipedia", ot("visite", { n: n(o.visite_en) })) : [])),
+        h("div", { class: "azioni" },
+          o.wiki_en ? h("a", { class: "collegamento", href: o.wiki_en, target: "_blank", rel: "noopener" }, ot("wiki")) : null,
+          prima ? h("button", { class: "collegamento", type: "button", onclick: () => apriAutore(prima.qid) }, ot("schedaAutore")) : null),
+        h("p", { class: "sotto", style: "margin-top:18px;font-size:13px" }, ot("fonti") + ": " + ot("fontiTesto"))))));
+  return true;
+}
 function disegnaGiur() {
-  const pt = $("#pres-tit"); if (pt) pt.textContent = tr("presTit", { p: tr("paesiNomi")[stato.opz] });
+  const us = stato.opz === "us";
+  const dUS = stato.opere && stato.opere[stato.anno];
+  const pt = $("#pres-tit"); if (pt) pt.textContent = us ? ot("tit", { a: stato.anno }) : tr("presTit", { p: tr("paesiNomi")[stato.opz] });
+  document.querySelectorAll(".presentazione p").forEach((e) => { e.hidden = us; });
   const box = $("#giur");
   box.hidden = false;
   box.setAttribute("aria-label", tr("giurEt"));
   const sel = h("select", { class: "sel-giur", id: "sel-giur", "aria-label": tr("giurEt"), onchange: (ev) => impostaGiur(ev.target.value) },
-    GIUR_OPZ.filter((o) => stato.giurDisp.includes(o[1])).map((o) => h("option", { value: o[0] }, tr("giurNomi")[o[0]])));
+    [...GIUR_OPZ.filter((o) => stato.giurDisp.includes(o[1])).map((o) => h("option", { value: o[0] }, tr("giurNomi")[o[0]])),
+      ...(stato.opere ? [h("option", { value: "us" }, ot("nome"))] : [])]);
   sel.value = stato.opz;
   box.replaceChildren(
     h("label", { class: "et", for: "sel-giur" }, tr("giurEt")),
     sel,
-    h("p", { class: "nota-m" }, tr("giurDesc")[stato.opz]));
+    h("p", { class: "nota-m" }, us ? ot("desc", { a: stato.anno, p: dUS ? dUS.anno_pubblicazione : stato.anno - 96 }) : tr("giurDesc")[stato.opz]));
 }
 function impostaMercato(m) {
   if (m === stato.mercato) return;
@@ -1291,6 +1432,14 @@ function disegnaMercato() {
 function disegnaTutto() {
   disegnaNavigazione();
   disegnaGiur();
+  if (stato.opz === "us" && stato.opere) {
+    $("#mercato").hidden = true;
+    $("#eroe").replaceChildren();
+    for (const id of ["grandi-nomi", "scaffali", "esplora", "miei", "archivio"]) $("#" + id).hidden = true;
+    disegnaOpereUS();
+    return;
+  }
+  $("#opere-us").hidden = true; $("#miei").hidden = false; $("#archivio").hidden = false;
   disegnaMercato();
   disegnaEroe();
   disegnaGrandi();
@@ -1307,6 +1456,9 @@ async function instrada() {
   if (m[0] === "autore" && m[1]) {
     const t = trovaAutore(decodeURIComponent(m[1]));
     if (t) { if (t.giur !== stato.giur) impostaGiur(t.giur); await scegliAnno(t.anno); if (mostraAutore(t.a.wikidata)) return; }
+  } else if (m[0] === "opera" && m[1]) {
+    const t = trovaOpera(decodeURIComponent(m[1]));
+    if (t) { if (stato.opz !== "us") impostaGiur("us"); await scegliAnno(t.anno); if (mostraOpera(t)) return; }
   } else if (m[0] === "genere" && m[1]) {
     if (apriGenere(decodeURIComponent(m[1]))) return;
   } else if (/^\d{4}$/.test(m[0]) && stato.dati[Number(m[0])]) {
@@ -1399,6 +1551,14 @@ async function avvia() {
         stato.perGiur[g] = per; stato.giurDisp.push(g);
       } catch (e) { console.warn("dati mancanti per", g, e); }
     }
+    // opere USA: facoltative
+    if ((indice.opere_us || []).length) {
+      try {
+        const op = {};
+        for (const an of indice.opere_us) op[an] = await leggi(`/data/us-${an}.json`);
+        stato.opere = op;
+      } catch (e) { stato.opere = null; console.warn("opere USA non disponibili", e); }
+    }
   } catch (e) {
     $("#eroe").replaceChildren(h("p", { class: "messaggio" }, tr("daDati")));
     console.error(e);
@@ -1418,7 +1578,7 @@ async function avvia() {
   $("#cerca").addEventListener("input", (ev) => { stato.cerca = ev.target.value; stato.visibili = PASSO; disegnaArchivio(); });
   $("#finestra").addEventListener("click", (ev) => { if (ev.target === ev.currentTarget) ev.currentTarget.close(); });
   $("#finestra").addEventListener("close", () => {
-    if (/^#\/(autore|genere)\//.test(location.hash)) history.replaceState(null, "", `#/${stato.anno}`);
+    if (/^#\/(autore|genere|opera)\//.test(location.hash)) history.replaceState(null, "", `#/${stato.anno}`);
     if (stato.ultimoFocus && document.contains(stato.ultimoFocus)) stato.ultimoFocus.focus({ preventScroll: true });
   });
   window.addEventListener("hashchange", instrada);
