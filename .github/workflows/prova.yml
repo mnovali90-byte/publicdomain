@@ -1,0 +1,11 @@
+name: prova
+on:
+  push:
+    paths: ["prova/**",".github/workflows/prova.yml"]
+jobs:
+  p:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 -u prova/anniversari.py
