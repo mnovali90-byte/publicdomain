@@ -348,10 +348,16 @@ def crea_home_inglese():
     (RADICE / "en" / "index.html").write_text(s, encoding="utf-8")
 
 
+def file_autori():
+    """Solo i file degli autori (2027.json, es-2027.json); us-*.json sono le opere."""
+    return [f for f in sorted(glob.glob(str(RADICE / "data" / "*.json")))
+            if re.fullmatch(r"(es-)?\d{4}\.json", Path(f).name)]
+
+
 def main():
     oggi = datetime.date.today()
     autori = {}
-    for f in sorted(glob.glob(str(RADICE / "data" / "*[0-9][0-9][0-9][0-9].json"))):
+    for f in file_autori():
         for a in json.load(open(f, encoding="utf-8"))["autori"]:
             if abbastanza_contenuto(a):
                 autori.setdefault(a["wikidata"], a)
@@ -387,7 +393,7 @@ def main():
         (RADICE / PERCORSO[l] / "index.html").write_text(pagina_indice(voci[l], l), encoding="utf-8")
 
     # il sito usa il nome nell'indirizzo della scheda e linka la pagina dedicata: serve sapere quale autore ne ha una
-    for f in sorted(glob.glob(str(RADICE / "data" / "*[0-9][0-9][0-9][0-9].json"))):
+    for f in file_autori():
         pacchetto = json.load(open(f, encoding="utf-8"))
         for a_ in pacchetto["autori"]:
             q = a_["wikidata"]

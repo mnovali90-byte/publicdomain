@@ -512,7 +512,7 @@ def main():
     cache = carica_cache()
     if FLAG_INCOMPLETO.exists():
         FLAG_INCOMPLETO.unlink()
-    file = sorted(DATA_DIR.glob("*[0-9][0-9][0-9][0-9].json"))
+    file = [f for f in sorted(DATA_DIR.glob("*[0-9][0-9][0-9][0-9].json")) if not f.name.startswith("us-")]
     if a.anno:
         file = [f for f in file if f.stem.endswith(str(a.anno))]
     if not file:
