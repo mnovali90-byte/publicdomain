@@ -6,6 +6,7 @@ on:
   push:                     # parte da solo quando cambia uno script
     paths:
       - "scripts/**"
+      - "index.html"   # la home inglese (en/index.html) si rigenera da index.html
       - ".github/workflows/aggiorna.yml"
   workflow_dispatch:        # pulsante "Run workflow" per lanciarlo a mano
 

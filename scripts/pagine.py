@@ -156,8 +156,8 @@ PIEDE = {
 """,
     "en": """<footer>
 <p>Sources: Wikidata (CC0), Wikipedia (text CC BY-SA, linked to the original page), Wikimedia Commons (portraits, each with its own licence), Open Library, SBN catalogue. Open data, updated automatically every month.</p>
-<p>The dates are an indicative calculation from the rules listed in the <a href="/?lang=en#regole-paesi">rules box</a>. Not legal advice: check the law of the country before publishing.</p>
-<p><a href="/?lang=en">All authors</a> · <a href="/en/author/">Author index</a> · <a href="https://github.com/mnovali90-byte/publicdomain">Code and data on GitHub</a></p>
+<p>The dates are an indicative calculation from the rules listed in the <a href="/en/#regole-paesi">rules box</a>. Not legal advice: check the law of the country before publishing.</p>
+<p><a href="/en/">All authors</a> · <a href="/en/author/">Author index</a> · <a href="https://github.com/mnovali90-byte/publicdomain">Code and data on GitHub</a></p>
 </footer>
 </body>
 </html>
@@ -200,7 +200,7 @@ def pagina_autore(a, slug, lang, ha_altra):
     if iso_valida(a.get("morte")):
         persona["deathDate"] = a["morte"]
     briciole = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Public Domain Radar", "item": SITO + "/" + ("" if it else "?lang=en")},
+        {"@type": "ListItem", "position": 1, "name": "Public Domain Radar", "item": SITO + ("/" if it else "/en/")},
         {"@type": "ListItem", "position": 2, "name": "Autori" if it else "Authors", "item": url_pagina(lang)},
         {"@type": "ListItem", "position": 3, "name": nome, "item": url}]}
     jsonld = "".join('<script type="application/ld+json">' + json.dumps(j, ensure_ascii=False).replace("</", "<\\/") + "</script>\n" for j in (persona, briciole))
@@ -208,7 +208,7 @@ def pagina_autore(a, slug, lang, ha_altra):
     if ha_altra:
         altra = (f'<a href="{url_pagina("en" if it else "it", slug)}" hreflang="{"en" if it else "it"}">{"English" if it else "Italiano"}</a>')
     out = [TESTA.format(lang=lang, titolo=esc(titolo), descr=esc(descr), url=url, alterne=alterne(lang, slug) if ha_altra else "",
-                        og_tipo="profile", jsonld=jsonld, css=CSS, home="/" if it else "/?lang=en", altra_lingua=altra), "<main>\n"]
+                        og_tipo="profile", jsonld=jsonld, css=CSS, home="/" if it else "/en/", altra_lingua=altra), "<main>\n"]
     foto = a.get("foto") or {}
     if foto.get("url"):
         cap = " · ".join(x for x in (pulisci(foto.get("autore")), pulisci(foto.get("licenza"))) if x)
@@ -293,7 +293,7 @@ def pagina_autore(a, slug, lang, ha_altra):
             ln = f'<a href="{esc(bd["url"])}" rel="noopener">English Wikipedia</a>' if bd.get("url") else "Wikipedia"
             out.append(f'<h2>Who they were</h2>\n<p>{esc(bd["testo"])}</p>\n<p class="sotto">Text from {ln}, licence CC BY-SA.</p>\n')
 
-    cta = f'/#/autore/{esc(a["wikidata"])}' if it else f'/?lang=en#/autore/{esc(a["wikidata"])}'
+    cta = f'/#/autore/{esc(a["wikidata"])}' if it else f'/en/#/autore/{esc(a["wikidata"])}'
     out.append(f'<p><a class="cta" href="{cta}">{"Apri la scheda completa nel radar" if it else "Open the full card in the radar"}</a></p>\n')
     out.append("</main>\n" + PIEDE[lang])
     return "".join(out)
@@ -306,7 +306,7 @@ def pagina_indice(voci, lang):
     descr = (f"{len(voci)} autori con la data di pubblico dominio paese per paese (UE, Italia, Francia, Germania, Spagna), da dati aperti." if it else
              f"{len(voci)} authors with the public-domain date country by country (EU, Italy, France, Germany, Spain), from open data.")
     out = [TESTA.format(lang=lang, titolo=esc(titolo), descr=esc(descr), url=url, alterne="", og_tipo="website", jsonld="", css=CSS,
-                        home="/" if it else "/?lang=en", altra_lingua=""), "<main>\n",
+                        home="/" if it else "/en/", altra_lingua=""), "<main>\n",
            f"<h1>{'Indice degli autori' if it else 'Index of authors'}</h1>\n",
            f'<p class="lead">' + (f"{len(voci)} autori con una pagina dedicata: biografia, opere e data di pubblico dominio paese per paese." if it else
                                   f"{len(voci)} authors with a dedicated page: biography, Italian editions and the public-domain date country by country.") + "</p>\n"]
@@ -321,6 +321,31 @@ def pagina_indice(voci, lang):
         out.append(f'<li><a href="/{PERCORSO[lang]}/{slug}/">{esc(nome)}</a> <span class="sotto">{esc(anni)}</span></li>\n')
     out.append("</ul>\n</main>\n" + PIEDE[lang])
     return "".join(out)
+
+
+def crea_home_inglese():
+    """en/index.html: la stessa app di index.html, con intestazione in inglese. Sull'indirizzo /en/ l'app parte in inglese."""
+    s = (RADICE / "index.html").read_text(encoding="utf-8")
+    cambi = [
+        ('<html lang="it">', '<html lang="en">'),
+        (re.search(r"<title>.*?</title>", s).group(0), "<title>Public Domain Radar · authors entering the public domain</title>"),
+        (re.search(r'<meta name="description" content="[^"]*">', s).group(0),
+         '<meta name="description" content="Which authors enter the public domain on the next 1 January, with the term rules of Italy, France, Germany and Spain read from official legal texts. Open data from Wikidata, Wikipedia and SBN, updated monthly.">'),
+        ('<link rel="canonical" href="https://publicdomainradar.com/">', '<link rel="canonical" href="https://publicdomainradar.com/en/">'),
+        ('<meta property="og:url" content="https://publicdomainradar.com/">', '<meta property="og:url" content="https://publicdomainradar.com/en/">'),
+        ('<meta property="og:title" content="Public Domain Radar · autori che entrano in pubblico dominio">', '<meta property="og:title" content="Public Domain Radar · authors entering the public domain">'),
+        (re.search(r'<meta property="og:description" content="[^"]*">', s).group(0),
+         '<meta property="og:description" content="Which authors become free on 1 January, country by country, with open data and official legal sources.">'),
+        (re.search(r'<meta name="twitter:description" content="[^"]*">', s).group(0),
+         '<meta name="twitter:description" content="Which authors become free on 1 January, country by country, with open data and official legal sources.">'),
+        ('{"@type":"WebSite","name":"Public Domain Radar","url":"https://publicdomainradar.com/"', '{"@type":"WebSite","name":"Public Domain Radar","url":"https://publicdomainradar.com/en/"'),
+    ]
+    for a, b in cambi:
+        if a not in s:
+            raise RuntimeError("index.html è cambiato: la home inglese non trova " + a[:50])
+        s = s.replace(a, b, 1)
+    (RADICE / "en").mkdir(exist_ok=True)
+    (RADICE / "en" / "index.html").write_text(s, encoding="utf-8")
 
 
 def main():
@@ -376,7 +401,9 @@ def main():
                 a_.pop("pagina_en", None)
         Path(f).write_text(json.dumps(pacchetto, ensure_ascii=False, indent=1), encoding="utf-8")
 
+    crea_home_inglese()
     righe = [f"  <url><loc>{SITO}/</loc><lastmod>{oggi}</lastmod><changefreq>monthly</changefreq></url>",
+             f"  <url><loc>{SITO}/en/</loc><lastmod>{oggi}</lastmod><changefreq>monthly</changefreq></url>",
              f"  <url><loc>{url_pagina('it')}</loc><lastmod>{oggi}</lastmod><changefreq>monthly</changefreq></url>",
              f"  <url><loc>{url_pagina('en')}</loc><lastmod>{oggi}</lastmod><changefreq>monthly</changefreq></url>"]
     righe += [f"  <url><loc>{u}</loc><lastmod>{oggi}</lastmod></url>" for u in sorted(urls)]

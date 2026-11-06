@@ -12,7 +12,7 @@ It runs by itself: open data, automatic monthly updates, zero running cost (GitH
 - **Dates country by country** on every author card, with the legal sources in the box at the bottom of the site.
 - **Italian editions** from the national SBN catalogue: how many records exist, the latest, how many since 2000.
 - **One page per author** (`/autore/author-name/`, 316 in Italian) with a biography and at least one work, generated monthly; indexes and sitemap included. Authors with no biography or no works get no page, to avoid empty pages. **English version** (`/en/author/author-name/`, 310) only for authors with an English biography, linked to the Italian one with `hreflang`: without works, countries and professions, because in Wikidata those have Italian labels and two languages are not mixed on one page.
-- **Italian and English**, search, filters, "My list" (favourites saved in the browser), CSV export.
+- **Italian (`/`) and English (`/en/`)**, each with its own address and linked with `hreflang`; search, filters, "My list" (favourites saved in the browser), CSV export.
 
 ## How it works
 

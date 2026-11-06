@@ -6,6 +6,9 @@
 <title>Public Domain Radar · autori che entrano in pubblico dominio</title>
 <meta name="description" content="Quali autori entrano in pubblico dominio il prossimo 1° gennaio, con le regole di Italia, Francia, Germania e Spagna lette su testi di legge ufficiali. Dati aperti da Wikidata, Wikipedia e SBN, aggiornati ogni mese. Authors entering the public domain, with country-by-country rules.">
 <link rel="canonical" href="https://publicdomainradar.com/">
+<link rel="alternate" hreflang="it" href="https://publicdomainradar.com/">
+<link rel="alternate" hreflang="en" href="https://publicdomainradar.com/en/">
+<link rel="alternate" hreflang="x-default" href="https://publicdomainradar.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Public Domain Radar">
 <meta property="og:url" content="https://publicdomainradar.com/">
@@ -262,6 +265,7 @@ dialog::backdrop{background:rgba(12,12,16,.72)}
 </style>
 </head>
 <body>
+<a id="invito-en" href="/en/" hidden style="display:block;background:#FF4326;color:#0C0C10;text-align:center;padding:10px 16px;font:600 14px system-ui,sans-serif;text-decoration:none">Read this site in English →</a>
 
 <section class="scuro" id="inizio">
   <div class="contenitore">
@@ -1355,36 +1359,43 @@ function applicaStatici() {
   if (ia) ia.setAttribute("href", LING === "en" ? "/en/author/" : "/autore/");
   disegnaRegole();
 }
+const SU_EN = location.pathname.startsWith("/en/");   // /en/ è la versione inglese, con indirizzo proprio
 function impostaLingua(l) {
   if (!TESTI[l] || l === LING) return;
-  LING = l;
   try { localStorage.setItem(CHIAVE_LINGUA, l); } catch (e) { /* ok */ }
+  // ogni lingua ha il suo indirizzo: così Google le vede come due pagine, non come una che cambia
+  if (l === "it" && SU_EN) { location.href = "/" + location.hash; return; }
+  if (l === "en" && !SU_EN) { location.href = "/en/" + location.hash; return; }
+  LING = l;
   applicaStatici();
   if (stato.anno) { gruppiCache.clear(); disegnaTutto(); if ($("#finestra").open) instrada(); }
 }
 function lingua_iniziale() {
-  const q = new URLSearchParams(location.search).get("lang");
-  if (q && TESTI[q]) return q;
-  try { const l = localStorage.getItem(CHIAVE_LINGUA); if (l && TESTI[l]) return l; } catch (e) { /* ok */ }
-  return (navigator.language || "it").toLowerCase().startsWith("it") ? "it" : "en";
+  if (SU_EN) return "en";
+  // sulla pagina italiana la lingua non dipende dal browser: chi ha scelto l'inglese (o arriva con ?lang=en) va su /en/
+  let vuole = new URLSearchParams(location.search).get("lang");
+  if (!vuole) { try { vuole = localStorage.getItem(CHIAVE_LINGUA); } catch (e) { /* ok */ } }
+  if (vuole === "en") { location.replace("/en/" + location.hash); return "en"; }
+  return "it";
 }
 
 async function avvia() {
   LING = lingua_iniziale();
+  try { if (!SU_EN && !(navigator.language || "it").toLowerCase().startsWith("it") && !localStorage.getItem(CHIAVE_LINGUA)) $("#invito-en").hidden = false; } catch (e) { /* ok */ }
   applicaStatici();
   stato.preferiti = leggiLocale(CHIAVE_PREFERITI, []);
   if (!Array.isArray(stato.preferiti)) stato.preferiti = [];
   try {
-    const indice = await leggi("data/indice.json");
+    const indice = await leggi("/data/indice.json");
     stato.anni = indice.anni;
     stato.perGiur.ue = {};
-    for (const an of stato.anni) stato.perGiur.ue[an] = await leggi(`data/${an}.json`);
+    for (const an of stato.anni) stato.perGiur.ue[an] = await leggi(`/data/${an}.json`);
     stato.dati = stato.perGiur.ue;
     // Spagna e altri paesi con regole diverse: file propri, facoltativi
     for (const g of (indice.paesi || []).filter((x) => x !== "ue")) {
       try {
         const per = {};
-        for (const an of stato.anni) per[an] = await leggi(`data/${g}-${an}.json`);
+        for (const an of stato.anni) per[an] = await leggi(`/data/${g}-${an}.json`);
         stato.perGiur[g] = per; stato.giurDisp.push(g);
       } catch (e) { console.warn("dati mancanti per", g, e); }
     }

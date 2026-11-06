@@ -12,7 +12,7 @@ Funziona da solo: dati aperti, aggiornamento mensile automatico, costo di gestio
 - **Date paese per paese** su ogni scheda, con le norme di riferimento nel riquadro in fondo al sito.
 - **Edizioni italiane** dal catalogo nazionale SBN: quante registrazioni esistono già, l'ultima, quante dal 2000.
 - **Una pagina per ogni autore** (`/autore/nome-autore/`, 316) con biografia e almeno un'opera, generata ogni mese; indici e sitemap inclusi. Gli autori senza biografia o senza opere non hanno pagina, per non produrre pagine vuote. **Versione inglese** (`/en/author/nome-autore/`, 310) solo per chi ha la biografia inglese, collegata alla italiana con `hreflang`: senza opere, paesi e professioni, perché in Wikidata hanno etichette italiane e non si mescolano due lingue nella stessa pagina.
-- **Italiano e inglese**, ricerca, filtri, "I miei" (preferiti salvati nel browser), esportazione CSV.
+- **Italiano (`/`) e inglese (`/en/`)**, ciascuno con il suo indirizzo e collegati con `hreflang`; ricerca, filtri, "I miei" (preferiti salvati nel browser), esportazione CSV.
 
 ## Come funziona
 
