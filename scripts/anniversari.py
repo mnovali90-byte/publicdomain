@@ -143,8 +143,10 @@ def raccogli(righe, tipo, eta, anno_ev, voci, esclusi):
         if v["bad"]:
             esclusi.append(v["nome"])
             continue
-        gs = {x for x in v["giorni"] if x}
-        mg = next(iter(gs)) if len(gs) == 1 and None not in v["giorni"] else None
+        gs = {x for x in v["giorni"] if x}          # i valori «solo anno» non contano: contano i giorni
+        mg = next(iter(gs)) if len(gs) == 1 else None   # più giorni diversi = giorno non noto
+        if tipo == "prima edizione" and mg == (1, 1):    # 1 gennaio nei dati delle opere è quasi sempre un segnaposto
+            mg = None
         v["mese"], v["giorno"] = mg if mg else (None, None)
         del v["giorni"], v["bad"]
         voci.append(v)
@@ -195,17 +197,24 @@ def main():
     file = DATA / f"anniversari-{ANNO}.json"
     vecchio = json.loads(file.read_text(encoding="utf-8")) if file.exists() else {"voci": []}
     nuovi, esclusi, falliti = [], [], []
-    for eta in ETA:
+    from concurrent.futures import ThreadPoolExecutor
+    lavori = [(tipo, eta) for eta in ETA for tipo in ("nascita", "morte", "prima edizione")]
+
+    def esegui(lav):
+        tipo, eta = lav
+        if time.time() > FINE:
+            return lav, None
         y = ANNO - eta
-        for tipo, fn in (("nascita", lambda y: q_persone("P569", y)), ("morte", lambda y: q_persone("P570", y)),
-                         ("prima edizione", q_opere)):
-            if time.time() > FINE:
-                falliti.append((tipo, eta)); continue
-            r = fn(y)
+        r = q_persone("P569", y) if tipo == "nascita" else q_persone("P570", y) if tipo == "morte" else q_opere(y)
+        time.sleep(1)
+        return lav, r
+
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        for (tipo, eta), r in pool.map(esegui, lavori):
             if r is None:
-                falliti.append((tipo, eta)); continue
-            raccogli(r, tipo, eta, y, nuovi, esclusi)
-            time.sleep(1.5)
+                falliti.append((tipo, eta))
+            else:
+                raccogli(r, tipo, eta, ANNO - eta, nuovi, esclusi)
     for tipo, eta in falliti:  # gruppo non riuscito: restano i dati del giro precedente
         nuovi += [v for v in vecchio["voci"] if v["tipo"] == tipo and v["anni"] == eta]
     print(f"gruppi non riusciti: {falliti}", file=sys.stderr)

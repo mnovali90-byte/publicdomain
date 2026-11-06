@@ -149,7 +149,7 @@ PIEDE = {
     "it": """<footer>
 <p>Fonti: Wikidata (CC0), Wikipedia (testi CC BY-SA, con link alla pagina d'origine), Wikimedia Commons (ritratti, ciascuno con la sua licenza), Open Library, catalogo SBN. Dati aperti, aggiornati ogni mese in automatico; possono contenere errori.</p>
 <p>Le date sono un calcolo indicativo dalle norme elencate nel <a href="/#regole-paesi">riquadro delle regole</a>. Non è consulenza legale: prima di pubblicare va controllato nella legge del paese.</p>
-<p><a href="/">Tutti gli autori</a> · <a href="/calendario/2027/">Calendario anniversari</a> · <a href="/autore/">Indice degli autori</a> · <a href="https://github.com/mnovali90-byte/publicdomain">Codice e dati su GitHub</a></p>
+<p><a href="/">Tutti gli autori</a> · <a href="/autore/">Indice degli autori</a> · <a href="https://github.com/mnovali90-byte/publicdomain">Codice e dati su GitHub</a></p>
 </footer>
 </body>
 </html>
@@ -157,12 +157,19 @@ PIEDE = {
     "en": """<footer>
 <p>Sources: Wikidata (CC0), Wikipedia (text CC BY-SA, linked to the original page), Wikimedia Commons (portraits, each with its own licence), Open Library, SBN catalogue. Open data, updated automatically every month; it may contain errors.</p>
 <p>The dates are an indicative calculation from the rules listed in the <a href="/en/#regole-paesi">rules box</a>. Not legal advice: check the law of the country before publishing.</p>
-<p><a href="/en/">All authors</a> · <a href="/en/public-domain-2027/">Public domain 2027</a> · <a href="/en/calendar/2027/">Anniversaries calendar</a> · <a href="/en/author/">Author index</a> · <a href="https://github.com/mnovali90-byte/publicdomain">Code and data on GitHub</a></p>
+<p><a href="/en/">All authors</a> · <a href="/en/public-domain-2027/">Public domain 2027</a> · <a href="/en/author/">Author index</a> · <a href="https://github.com/mnovali90-byte/publicdomain">Code and data on GitHub</a></p>
 </footer>
 </body>
 </html>
 """,
 }
+
+
+# Il calendario compare nel sito solo quando esiste data/calendario_ok (approvazione di Marco).
+CALENDARIO_ON = (RADICE / "data" / "calendario_ok").exists()
+if CALENDARIO_ON:
+    PIEDE["it"] = PIEDE["it"].replace('<a href="/autore/">', '<a href="/calendario/2027/">Calendario anniversari</a> · <a href="/autore/">', 1)
+    PIEDE["en"] = PIEDE["en"].replace('<a href="/en/author/">', '<a href="/en/calendar/2027/">Anniversaries calendar</a> · <a href="/en/author/">', 1)
 
 
 def url_pagina(lang, slug=""):
@@ -605,8 +612,9 @@ def main():
 
     crea_home_inglese()
     landing_urls = crea_landing()
-    import calendario
-    landing_urls += calendario.crea_calendario()
+    if CALENDARIO_ON:
+        import calendario
+        landing_urls += calendario.crea_calendario()
     righe = [f"  <url><loc>{SITO}/</loc><lastmod>{oggi}</lastmod><changefreq>monthly</changefreq></url>",
              f"  <url><loc>{SITO}/en/</loc><lastmod>{oggi}</lastmod><changefreq>monthly</changefreq></url>",
              f"  <url><loc>{url_pagina('it')}</loc><lastmod>{oggi}</lastmod><changefreq>monthly</changefreq></url>",

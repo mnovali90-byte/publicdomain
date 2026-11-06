@@ -26,7 +26,7 @@ T = {
         "tipi": {"prima edizione": "Prima edizione", "nascita": "Nascita", "morte": "Morte"},
         "filtri_tipo": [("prima edizione", "Prime edizioni"), ("nascita", "Nascite"), ("morte", "Morti")],
         "anni": "{n} anni", "voce": "voce", "voci": "voci", "durante": "Durante l'anno", "nd": "giorno non noto", "soloanno": "{a} · solo anno",
-        "sbn": "Edizioni italiane dell'autore (SBN)", "sbn_n": "{n} edizioni · ultima: {u}", "sbn_zero": "nessuna trovata in SBN", "sbn_senza_anno": "{n} edizioni",
+        "sbn": "Edizioni italiane dell'autore (SBN)", "sbn_n": "{n} edizioni · ultima: {u}", "sbn_zero": "nessuna trovata in SBN", "sbn_poche": "poche trovate ({n}, ultima: {u}): da verificare", "sbn_senza_anno": "{n} edizioni",
         "copia": "Copia testo per un post →", "copiato": "Copiato ✓", "aggiungi": "Aggiungi al calendario →",
         "pdd": "Public Domain Day", "pdd_txt": "Entrano in pubblico dominio in Europa gli autori morti nel {eu}, e negli USA le opere pubblicate nel {us}.", "pdd_link": "Vedi l'elenco →",
         "vuoto": "Nessuna voce con questi filtri.",
@@ -48,7 +48,7 @@ T = {
         "tipi": {"prima edizione": "First edition", "nascita": "Birth", "morte": "Death"},
         "filtri_tipo": [("prima edizione", "First editions"), ("nascita", "Births"), ("morte", "Deaths")],
         "anni": "{n} years", "voce": "entry", "voci": "entries", "durante": "During the year", "nd": "day unknown", "soloanno": "{a} · year only",
-        "sbn": "Author's Italian editions (SBN)", "sbn_n": "{n} editions · latest: {u}", "sbn_zero": "none found in SBN", "sbn_senza_anno": "{n} editions",
+        "sbn": "Author's Italian editions (SBN)", "sbn_n": "{n} editions · latest: {u}", "sbn_zero": "none found in SBN", "sbn_poche": "few found ({n}, latest: {u}): to be checked", "sbn_senza_anno": "{n} editions",
         "copia": "Copy text for a post →", "copiato": "Copied ✓", "aggiungi": "Add to calendar →",
         "pdd": "Public Domain Day", "pdd_txt": "Authors who died in {eu} enter the public domain in Europe, and works published in {us} in the USA.", "pdd_link": "See the list →",
         "vuoto": "No entries with these filters.",
@@ -197,13 +197,20 @@ def scheda(v, lang, anno):
     s = v.get("sbn")
     sbn_html = ""
     recente = 0
+    attendibile = False
     if s is not None:
-        if s.get("edizioni"):
-            testo = t["sbn_n"].format(n=s["edizioni"], u=s["ultimo"]) if s.get("ultimo") else t["sbn_senza_anno"].format(n=s["edizioni"])
-        else:
-            testo = t["sbn_zero"]
-        recente = 1 if (s.get("ultimo") or 0) >= ANNI_RECENTE else 0
-        sbn_html = f'<b>{esc(t["sbn"])}</b>{esc(testo)}<br>'
+        ed = s.get("edizioni") or 0
+        # molto noto ma quasi nessuna edizione trovata: quasi sempre è un errore di abbinamento, non si mostra
+        attendibile = not (v["pagine"] >= 40 and ed <= 3) and not (v["tipo"] == "prima edizione" and ed == 0)
+        if attendibile:
+            if ed >= 4:
+                testo = t["sbn_n"].format(n=ed, u=s["ultimo"]) if s.get("ultimo") else t["sbn_senza_anno"].format(n=ed)
+            elif ed:
+                testo = t["sbn_poche"].format(n=ed, u=s.get("ultimo") or "?")
+            else:
+                testo = t["sbn_zero"]
+            recente = 1 if (s.get("ultimo") or 0) >= ANNI_RECENTE else 0
+            sbn_html = f'<b>{esc(t["sbn"])}</b>{esc(testo)}<br>'
     azioni = ""
     if dat:
         azioni += f'<button type="button" class="aggiungi" data-ics="{esc(v["tipo"])}-{v["qid"]}">{esc(t["aggiungi"])}</button><br>'
@@ -214,12 +221,12 @@ def scheda(v, lang, anno):
         au = f'<p class="au">{au}</p>' if au else ""
     elif orig:
         au = f'<p class="au"><i>{esc(orig)}</i></p>'
-    return (f'<div class="ev" data-tipo="{esc(v["tipo"])}" data-mese="{v.get("mese") or 0}" data-vecchia="{0 if (s is None or recente) else 1}" '
+    return (f'<div class="ev" data-tipo="{esc(v["tipo"])}" data-mese="{v.get("mese") or 0}" data-vecchia="{1 if (attendibile and not recente) else 0}" '
             f'data-id="{esc(v["tipo"])}-{v["qid"]}" data-ics-d="{anno}{v["mese"]:02d}{v["giorno"]:02d}" data-ics-t="{esc(evento_ics(v, lang, anno))}">'
             f'{gg}<div><div class="tipo"><b>{esc(t["tipi"][v["tipo"]])}</b>{esc(t["anni"].format(n=v["anni"]))} · {v["anno"]}</div>'
             f'<h3>{esc(nome)}</h3>{au}</div><div class="az">{sbn_html}{azioni}</div></div>'
             if dat else
-            f'<div class="ev" data-tipo="{esc(v["tipo"])}" data-mese="0" data-vecchia="{0 if (s is None or recente) else 1}" data-id="{esc(v["tipo"])}-{v["qid"]}">'
+            f'<div class="ev" data-tipo="{esc(v["tipo"])}" data-mese="0" data-vecchia="{1 if (attendibile and not recente) else 0}" data-id="{esc(v["tipo"])}-{v["qid"]}">'
             f'{gg}<div><div class="tipo"><b>{esc(t["tipi"][v["tipo"]])}</b>{esc(t["anni"].format(n=v["anni"]))} · {v["anno"]}</div>'
             f'<h3>{esc(nome)}</h3>{au}</div><div class="az">{sbn_html}{azioni}</div></div>')
 
