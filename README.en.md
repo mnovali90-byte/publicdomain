@@ -11,7 +11,7 @@ It runs by itself: open data, automatic monthly updates, zero running cost (GitH
 - **List by year and country.** A Country menu changes the term rule, and the ranking switches to interest in that country's language (Wikipedia in Italian, French, German, Spanish). "English-speaking world" and "International" (in how many languages a page exists) are always available.
 - **Dates country by country** on every author card, with the legal sources in the box at the bottom of the site.
 - **Italian editions** from the national SBN catalogue: how many records exist, the latest, how many since 2000.
-- **One page per author** (`/autore/author-name/`) with a biography and at least one work, generated monthly; index and sitemap included. Authors with no biography or no works get no page, to avoid empty pages. These pages are in Italian.
+- **One page per author** (`/autore/author-name/`, 316 in Italian) with a biography and at least one work, generated monthly; indexes and sitemap included. Authors with no biography or no works get no page, to avoid empty pages. **English version** (`/en/author/author-name/`, 310) only for authors with an English biography, linked to the Italian one with `hreflang`: without works, countries and professions, because in Wikidata those have Italian labels and two languages are not mixed on one page.
 - **Italian and English**, search, filters, "My list" (favourites saved in the browser), CSV export.
 
 ## How it works
@@ -24,7 +24,7 @@ Every month `.github/workflows/aggiorna.yml` runs, in order:
 | 2 | `scripts/arricchisci.py` | Biography (Wikipedia), works and genres (Wikidata), Wikipedia page views over 12 months in 5 languages, 0-100 indices relative to the year's list, portrait from Wikimedia Commons with its licence. |
 | 3 | `scripts/traduzioni.py` | Checks in which languages the works already exist ([Open Library](https://openlibrary.org)). |
 | 4 | `scripts/sbn.py` | Counts Italian editions in [SBN](https://opac.sbn.it) (ICCU SPARQL). |
-| 5 | `scripts/pagine.py` | Generates the author pages, the index and `sitemap.xml`. |
+| 5 | `scripts/pagine.py` | Generates the author pages in Italian and English, the two indexes and `sitemap.xml`. |
 
 `index.html` is the site (a single file, no framework). The workflow saves data to the repository, retries the push if GitHub rejects it and, if it does not finish within the time limit, **saves what it already has and restarts by itself** from where it stopped. Downloaded data stays cached (`data/cache_*.json`).
 
