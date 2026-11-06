@@ -57,6 +57,38 @@ def opere_anno(anno_pub):
         res.append(o)
     return res
 
+GENERI = [  # (parola cercata nell'etichetta inglese, chiave)
+    ("crime", "giallo"), ("detective", "giallo"), ("mystery", "giallo"), ("thriller", "giallo"),
+    ("horror", "horror"), ("weird", "horror"), ("gothic", "horror"),
+    ("science fiction", "fantasy_sf"), ("fantasy", "fantasy_sf"), ("dystopian", "fantasy_sf"),
+    ("historical", "storico"), ("children", "ragazzi"), ("poetry", "poesia"), ("poem", "poesia"),
+    ("essay", "saggio"), ("memoir", "memorie"), ("autobiograph", "memorie"), ("biograph", "memorie"),
+    ("satire", "satira"), ("adventure", "avventura"), ("romance", "sentimentale"), ("war", "guerra")]
+
+def lingua_genere(anno_pub, qids):
+    """Lingua originale (P407) e genere (P136) per le opere già scelte. Etichette in italiano e inglese."""
+    classi = " ".join("wd:" + c for c in CLASSI)
+    q = f'''SELECT ?w ?len ?lit ?gen WHERE {{
+      VALUES ?c {{ {classi} }}
+      ?w wdt:P31 ?c; wdt:P577 ?d. FILTER(YEAR(?d)={anno_pub})
+      OPTIONAL {{ ?w wdt:P407 ?l. ?l rdfs:label ?len FILTER(LANG(?len)="en"). OPTIONAL {{ ?l rdfs:label ?lit FILTER(LANG(?lit)="it") }} }}
+      OPTIONAL {{ ?w wdt:P136 ?g. ?g rdfs:label ?gen FILTER(LANG(?gen)="en") }} }}'''
+    out = {}
+    for r in sparql(q):
+        k = qid(val(r, "w"))
+        if k not in qids: continue
+        o = out.setdefault(k, {"lingua": None, "generi": set()})
+        if val(r, "len") and not o["lingua"]:
+            en = re.sub(r"^(American|British|Australian|Canadian) ", "", val(r, "len"))
+            it = val(r, "lit")
+            o["lingua"] = {"en": en, "it": it or en}
+        if val(r, "gen"):
+            g = val(r, "gen").lower()
+            for parola, chiave in GENERI:
+                if parola in g: o["generi"].add(chiave); break
+    for o in out.values(): o["generi"] = sorted(o["generi"])
+    return out
+
 def visite_en(titolo_url):
     t = urllib.parse.unquote(titolo_url.rsplit("/", 1)[-1])
     fine = date.today().replace(day=1)
@@ -95,6 +127,11 @@ def main():
             print(" troppo poche: lascio il file com'è"); continue
         ops.sort(key=lambda o: -o["pagine"])
         ops = ops[:MAX_OPERE]
+        lg = lingua_genere(pub, {o["qid"] for o in ops})
+        for o in ops:
+            x = lg.get(o["qid"], {})
+            if x.get("lingua"): o["lingua"] = x["lingua"]
+            o["generi"] = x.get("generi", [])
         for o in ops:
             o["visite_en"] = visite_en(o["wiki_en"]) if o["wiki_en"] else None
             if o["immagine"]:
