@@ -194,7 +194,8 @@ dialog::backdrop{background:rgba(12,12,16,.72)}
 .indice .asta i{position:absolute;left:0;top:0;bottom:0;background:var(--vermiglio)}
 .nd{color:var(--muto)}
 .mercato{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:14px 0 20px}
-.mercato.giur{grid-template-columns:repeat(2,1fr);margin-bottom:6px}
+.mercato.giur{grid-template-columns:1fr;margin-bottom:6px}
+.mercato .sel-giur{width:100%;background:var(--ink);color:var(--carta);border:1px solid var(--carta);border-radius:0;padding:12px 10px;font:inherit;font-family:var(--mono);font-size:13px;letter-spacing:.04em;text-transform:uppercase;appearance:auto}
 .mercato .et{grid-column:1/-1;font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase}
 .mercato .pillola{border-color:var(--carta);color:var(--carta);padding:0 6px;font-size:11px;letter-spacing:.02em;line-height:1.15;text-align:center}
 .mercato .pillola[aria-pressed="true"]{background:var(--carta);color:var(--ink)}
@@ -337,6 +338,7 @@ const CHIAVE_PREFERITI = "pdr_preferiti_v1";
 const CHIAVE_LINGUA = "pdr_lingua_v1";
 const CHIAVE_MERCATO = "pdr_mercato_v1";
 const CHIAVE_GIUR = "pdr_giur_v1";
+const GIUR_OPZ = [["ue","ue"],["de","ue"],["se","ue"],["fr","ue"],["it","ue"],["es","es"],["altri","ue"]];   // [voce del menù, file di dati che usa]
 const MESI_EN = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 
 const TESTI = {
@@ -351,10 +353,15 @@ it: {
   paEs70: "Spagna: dal {d}.",
   paNota: "Calcolo indicativo, dalle norme del riquadro in fondo alla pagina. Non è consulenza legale.",
   giurEt: "Paese",
-  giurNomi: { ue: "UE · 70 anni", es: "Spagna · 80 anni" },
+  giurNomi: { ue: "Unione europea · regola base, 70 anni", de: "Germania · 70 anni", se: "Svezia · 70 anni", fr: "Francia · 70 anni + proroghe", it: "Italia · 70 anni + proroghe", es: "Spagna · 80 anni", altri: "Altri paesi UE · da verificare" },
   giurDesc: {
-    ue: "Regola europea di base: morte + 70 anni. Vale anche per la Germania; per Francia e Italia ci sono proroghe (vedi il riquadro in fondo).",
-    es: "Spagna: per gli autori morti prima del 1987 valgono 80 anni dalla morte (legge del 1879). La data è prudente: la legge non dice come si conta l'anno."
+    ue: "Regola europea di base (direttiva 2006/116): morte + 70 anni. Ogni paese può avere proroghe proprie, che vanno lette nella sua legge.",
+    de: "Germania: morte + 70 anni, nessuna proroga (legge letta, vedi il riquadro in fondo).",
+    se: "Svezia: morte + 70 anni (art. 43 della legge sul diritto d'autore). Nel testo ufficiale letto non ci sono proroghe.",
+    fr: "Francia: la lista usa la regola base dei 70 anni, ma ci sono proroghe di guerra per alcune opere e per gli «morti per la Francia». Le date per la Francia sono nella scheda di ogni autore.",
+    it: "Italia: la lista usa la regola base dei 70 anni, ma ci sono proroghe per alcune opere del periodo di guerra. Le date per l'Italia sono nella scheda di ogni autore.",
+    es: "Spagna: per gli autori morti prima del 1987 valgono 80 anni dalla morte (legge del 1879). La data è prudente: la legge non dice come si conta l'anno.",
+    altri: "Altri paesi UE (per esempio Bulgaria): vale la regola base dei 70 anni, ma non ho ancora letto le leggi nazionali, quindi non so se ci sono proroghe. Controlla prima di pubblicare."
   },
   regoleTit: "Regole sulla durata, paese per paese",
   regoleNota: "Testi di legge letti il 5 novembre 2026. Non è consulenza legale: prima di pubblicare controlla la norma e la data di morte nel tuo paese.",
@@ -432,10 +439,15 @@ en: {
   paEs70: "Spain: from {d}.",
   paNota: "Indicative calculation, based on the rules in the box at the bottom of the page. Not legal advice.",
   giurEt: "Country",
-  giurNomi: { ue: "EU · 70 years", es: "Spain · 80 years" },
+  giurNomi: { ue: "European Union · base rule, 70 years", de: "Germany · 70 years", se: "Sweden · 70 years", fr: "France · 70 years + extensions", it: "Italy · 70 years + extensions", es: "Spain · 80 years", altri: "Other EU countries · to be verified" },
   giurDesc: {
-    ue: "Basic EU rule: death + 70 years. It also applies to Germany; France and Italy have extensions (see the box at the bottom).",
-    es: "Spain: authors who died before 1987 get 80 years after death (1879 law). The date is cautious: the law does not say how the year is counted."
+    ue: "Basic EU rule (Directive 2006/116): death + 70 years. Each country may have its own extensions, to be read in its own law.",
+    de: "Germany: death + 70 years, no extensions (law read, see the box at the bottom).",
+    se: "Sweden: death + 70 years (Art. 43 of the Copyright Act). The official text I read has no extensions.",
+    fr: "France: the list uses the base 70-year rule, but there are wartime extensions for some works and for those who «died for France». The dates for France are in each author's card.",
+    it: "Italy: the list uses the base 70-year rule, but there are extensions for some wartime works. The dates for Italy are in each author's card.",
+    es: "Spain: authors who died before 1987 get 80 years after death (1879 law). The date is cautious: the law does not say how the year is counted.",
+    altri: "Other EU countries (for example Bulgaria): the base 70-year rule applies, but I have not yet read the national laws, so I do not know whether they have extensions. Check before publishing."
   },
   regoleTit: "Term of protection, country by country",
   regoleNota: "Legal texts read on 5 November 2026. This is not legal advice: before publishing, check the law and the date of death in your country.",
@@ -515,7 +527,7 @@ function tr(k, v) {
 
 const stato = {
   anni: [], dati: {}, anno: null,
-  giur: "ue", giurDisp: ["ue"], perGiur: {},
+  giur: "ue", opz: "ue", giurDisp: ["ue"], perGiur: {},
   mercato: "it", mercati: false,
   cerca: "", filtro: "letterari", ordine: "popolarita", paese: null, lingua: null, visibili: PASSO,
   preferiti: [], ultimoFocus: null
@@ -1208,11 +1220,15 @@ async function scegliAnno(anno) {
   $("#cerca").value = "";
   disegnaTutto();
 }
-function impostaGiur(g, ridisegna = true) {
-  if (g === stato.giur || !stato.perGiur[g]) return;
+function impostaGiur(id, ridisegna = true) {
+  const opz = GIUR_OPZ.find((o) => o[0] === id);
+  if (!opz || !stato.perGiur[opz[1]]) return;
+  const g = opz[1];
+  salvaLocale(CHIAVE_GIUR, id);
+  if (g === stato.giur) { stato.opz = id; if (ridisegna) disegnaGiur(); return; }
+  stato.opz = id;
   stato.giur = g;
   stato.dati = stato.perGiur[g];
-  salvaLocale(CHIAVE_GIUR, g);
   stato.lingua = null; stato.paese = null; stato.cerca = ""; stato.filtro = "letterari"; stato.visibili = PASSO;
   const c = $("#cerca"); if (c) c.value = "";
   gruppiCache.clear();
@@ -1221,13 +1237,15 @@ function impostaGiur(g, ridisegna = true) {
 function disegnaGiur() {
   const pt = $("#pres-tit"); if (pt) pt.textContent = tr(stato.giur === "es" ? "presTitEs" : "presTit");
   const box = $("#giur");
-  box.hidden = stato.giurDisp.length < 2;
-  if (box.hidden) return;
+  box.hidden = false;
   box.setAttribute("aria-label", tr("giurEt"));
+  const sel = h("select", { class: "sel-giur", id: "sel-giur", "aria-label": tr("giurEt"), onchange: (ev) => impostaGiur(ev.target.value) },
+    GIUR_OPZ.filter((o) => stato.giurDisp.includes(o[1])).map((o) => h("option", { value: o[0] }, tr("giurNomi")[o[0]])));
+  sel.value = stato.opz;
   box.replaceChildren(
-    h("span", { class: "et" }, tr("giurEt")),
-    ...stato.giurDisp.map((g) => h("button", { type: "button", class: "pillola", "aria-pressed": g === stato.giur ? "true" : "false", onclick: () => impostaGiur(g) }, tr("giurNomi")[g])),
-    h("p", { class: "nota-m" }, tr("giurDesc")[stato.giur]));
+    h("label", { class: "et", for: "sel-giur" }, tr("giurEt")),
+    sel,
+    h("p", { class: "nota-m" }, tr("giurDesc")[stato.opz]));
 }
 function impostaMercato(m) {
   if (m === stato.mercato) return;
@@ -1290,6 +1308,8 @@ const REGOLE = [
     { t: { it: "Proroghe di guerra per le opere pubblicate prima del 3 settembre 1939 e non ancora libere (L123-8, L123-9), e altri 30 anni se l'autore è «morto per la Francia» (L123-10).", en: "Wartime extensions for works published before 3 September 1939 and not yet free (L123-8, L123-9), and another 30 years if the author «died for France» (L123-10)." }, f: "Code de la propriété intellectuelle", u: "https://www.wipo.int/wipolex/en/legislation/details/23227" } ] },
   { paese: { it: "Germania", en: "Germany" }, voci: [
     { t: { it: "70 anni dalla morte (§64); i termini partono dalla fine dell'anno solare (§69).", en: "70 years after death (§64); terms start at the end of the calendar year (§69)." }, f: "Urheberrechtsgesetz", u: "https://www.wipo.int/wipolex/en/text/474282" } ] },
+  { paese: { it: "Svezia", en: "Sweden" }, voci: [
+    { t: { it: "Il diritto dura fino alla fine del settantesimo anno dopo l'anno della morte dell'autore (art. 43). Nel testo letto non ci sono proroghe di guerra.", en: "Copyright lasts until the end of the seventieth year after the year of the author's death (Art. 43). The text I read has no wartime extensions." }, f: "Lag (1960:729) om upphovsrätt, art. 43", u: "https://www.wipo.int/wipolex/en/text/129542" } ] },
   { paese: { it: "Spagna", en: "Spain" }, voci: [
     { t: { it: "70 anni dalla morte (art. 26), contati dal 1° gennaio dell'anno successivo (art. 30).", en: "70 years after death (Art. 26), counted from 1 January of the following year (Art. 30)." }, f: "Ley de Propiedad Intelectual", u: "https://www.boe.es/buscar/act.php?id=BOE-A-1996-8930" },
     { t: { it: "Per gli autori morti prima del 7 dicembre 1987 vale la durata della legge del 10 gennaio 1879 (disposizione transitoria quarta).", en: "For authors who died before 7 December 1987 the term of the Law of 10 January 1879 applies (fourth transitional provision)." }, f: "Ley de Propiedad Intelectual, disp. trans. cuarta", u: "https://www.boe.es/buscar/act.php?id=BOE-A-1996-8930" },
@@ -1359,7 +1379,8 @@ async function avvia() {
   stato.mercato = ["it", "en", "int"].includes(m) ? m : "it";
   stato.anno = stato.anni[0];
   const gsalvata = leggiLocale(CHIAVE_GIUR, "ue");
-  if (stato.giurDisp.includes(gsalvata)) { stato.giur = gsalvata; stato.dati = stato.perGiur[gsalvata]; }
+  const og = GIUR_OPZ.find((o) => o[0] === gsalvata);
+  if (og && stato.giurDisp.includes(og[1])) { stato.opz = og[0]; stato.giur = og[1]; stato.dati = stato.perGiur[og[1]]; }
   disegnaTutto();
   $("#cerca").addEventListener("input", (ev) => { stato.cerca = ev.target.value; stato.visibili = PASSO; disegnaArchivio(); });
   $("#finestra").addEventListener("click", (ev) => { if (ev.target === ev.currentTarget) ev.currentTarget.close(); });
