@@ -254,7 +254,7 @@ dialog::backdrop{background:rgba(12,12,16,.72)}
       <nav class="navigazione" id="navigazione" data-ta="navAria" aria-label="Navigazione"></nav>
     </header>
     <div class="presentazione">
-      <h1 data-t="presTit">Gli autori che diventano liberi in Europa il 1° gennaio</h1>
+      <h1 id="pres-tit">Gli autori che diventano liberi in Europa il 1° gennaio</h1>
       <p data-t="presTesto">Per ognuno vedi quanto è letto, quali opere ha scritto e se in Italia è già stato tradotto. Serve a scegliere cosa ritradurre e pubblicare.</p>
       <p class="fonti" data-t="presFonti">Dati aperti da Wikidata, Wikipedia e SBN, aggiornati ogni mese in automatico.</p>
     </div>
@@ -359,6 +359,7 @@ it: {
   regoleTit: "Regole sulla durata, paese per paese",
   regoleNota: "Testi di legge letti il 5 novembre 2026. Non è consulenza legale: prima di pubblicare controlla la norma e la data di morte nel tuo paese.",
   presTit: "Gli autori che diventano liberi in Europa il 1° gennaio",
+  presTitEs: "Gli autori che diventano liberi in Spagna il 1° gennaio",
   presTesto: "Per ognuno vedi quanto è letto, quali opere ha scritto e se in Italia è già stato tradotto. Serve a scegliere cosa ritradurre e pubblicare.",
   presFonti: "Dati aperti da Wikidata, Wikipedia e SBN, aggiornati ogni mese in automatico.",
   caricamento: "Caricamento…", navAria: "Navigazione", miei: "I miei · {n}",
@@ -439,6 +440,7 @@ en: {
   regoleTit: "Term of protection, country by country",
   regoleNota: "Legal texts read on 5 November 2026. This is not legal advice: before publishing, check the law and the date of death in your country.",
   presTit: "The authors who become free in Europe on 1 January",
+  presTitEs: "The authors who become free in Spain on 1 January",
   presTesto: "For each one you see how widely read they are, which works they wrote and which editions already exist. Use it to choose what to retranslate and publish.",
   presFonti: "Open data from Wikidata, Wikipedia and SBN, updated automatically every month.",
   caricamento: "Loading…", navAria: "Navigation", miei: "My list · {n}",
@@ -1217,6 +1219,7 @@ function impostaGiur(g, ridisegna = true) {
   if (ridisegna) { disegnaTutto(); if ($("#finestra").open) instrada(); }
 }
 function disegnaGiur() {
+  const pt = $("#pres-tit"); if (pt) pt.textContent = tr(stato.giur === "es" ? "presTitEs" : "presTit");
   const box = $("#giur");
   box.hidden = stato.giurDisp.length < 2;
   if (box.hidden) return;
