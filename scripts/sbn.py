@@ -215,7 +215,7 @@ def candidati(pacchetto):
 
 def elabora(oggi, conta_fn=edizioni_italiane, viaf_fn=codici_viaf):
     cache = json.loads(CACHE.read_text(encoding="utf-8")) if CACHE.exists() else {}
-    file = [f for f in sorted(DATA_DIR.glob("*[0-9][0-9][0-9][0-9].json")) if not f.name.startswith("us-")]
+    file = [f for f in sorted(DATA_DIR.glob("*[0-9][0-9][0-9][0-9].json")) if not f.name.startswith(("us-", "anniversari-"))]
     pacchetti = [(f, json.loads(f.read_text(encoding="utf-8"))) for f in file]
     da_fare = []
     for _, p in pacchetti:
