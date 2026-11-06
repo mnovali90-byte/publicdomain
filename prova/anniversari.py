@@ -34,13 +34,17 @@ def persone(prop, y):
 
 def opere(y):
     a, b = intervallo(y)
-    return q(f'''SELECT ?p ?pLabel ?pit ?desc ?auth ?d ?pr ?sl WHERE {{ VALUES ?c {{ {CL} }}
- ?p wdt:P31 ?c; p:P577/psv:P577 [wikibase:timeValue ?d; wikibase:timePrecision ?pr].
- FILTER(?d>={a} && ?d<{b}) ?p wikibase:sitelinks ?sl. FILTER(?sl>={SL_O})
- FILTER NOT EXISTS {{ VALUES ?rif {{ wd:Q1580166 wd:Q23622 wd:Q1347367 wd:Q4006 }} ?p wdt:P31 ?rif }}
+    tutte = []
+    for c in CL.split():
+        r = q(f'''SELECT ?p ?pLabel ?pit ?desc ?auth ?d ?pr ?sl WHERE {{ ?p wdt:P31 {c}; wikibase:sitelinks ?sl. FILTER(?sl>={SL_O})
+ ?p p:P577/psv:P577 [wikibase:timeValue ?d; wikibase:timePrecision ?pr]. FILTER(?d>={a} && ?d<{b})
  OPTIONAL {{ ?p wdt:P50 ?au. ?au rdfs:label ?auth FILTER(LANG(?auth)="en") }}
  OPTIONAL {{ ?p rdfs:label ?pit FILTER(LANG(?pit)="it") }} OPTIONAL {{ ?p schema:description ?desc FILTER(LANG(?desc)="en") }}
  SERVICE wikibase:label {{ bd:serviceParam wikibase:language "en". }} }}''')
+        if r is None: return None
+        tutte += r
+        time.sleep(1)
+    return tutte
 
 voci = {}
 esclusi = set()
