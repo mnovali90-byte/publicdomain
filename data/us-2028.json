@@ -1,0 +1,2358 @@
+{
+ "anno": 2028,
+ "anno_pubblicazione": 1932,
+ "aggiornato": "2026-11-06",
+ "fonte": "Wikidata (CC0), Wikipedia, Wikimedia Commons",
+ "opere": [
+  {
+   "qid": "Q191949",
+   "titolo": "Brave New World",
+   "titolo_it": "Il mondo nuovo",
+   "autori": [
+    {
+     "qid": "Q81447",
+     "nome": "Aldous Huxley"
+    }
+   ],
+   "pagine": 74,
+   "wiki_en": "https://en.wikipedia.org/wiki/Brave_New_World",
+   "visite_en": 936988,
+   "copertina": {
+    "file": "Giveaway von Pinguin Books für Brave New World (cropped).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Giveaway_von_Pinguin_Books_f%C3%BCr_Brave_New_World_%28cropped%29.jpg/500px-Giveaway_von_Pinguin_Books_f%C3%BCr_Brave_New_World_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Giveaway_von_Pinguin_Books_f%C3%BCr_Brave_New_World_%28cropped%29.jpg",
+    "licenza": "CC BY-SA 4.0",
+    "autore": "Wöcki"
+   }
+  },
+  {
+   "qid": "Q7173181",
+   "titolo": "Little House in the Big Woods",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q237514",
+     "nome": "Laura Ingalls Wilder"
+    }
+   ],
+   "pagine": 11,
+   "wiki_en": "https://en.wikipedia.org/wiki/Little_House_in_the_Big_Woods",
+   "visite_en": 108874
+  },
+  {
+   "qid": "Q774233",
+   "titolo": "Journey to the End of the Night",
+   "titolo_it": "Viaggio al termine della notte",
+   "autori": [
+    {
+     "qid": "Q151820",
+     "nome": "Louis-Ferdinand Céline"
+    }
+   ],
+   "pagine": 48,
+   "wiki_en": "https://en.wikipedia.org/wiki/Journey_to_the_End_of_the_Night",
+   "visite_en": 85052,
+   "copertina": {
+    "file": "Journey to the End of the Night 1932.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/59/Journey_to_the_End_of_the_Night_1932.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Journey_to_the_End_of_the_Night_1932.jpg",
+    "licenza": "Public domain",
+    "autore": "Éditions Denoël et Steele"
+   }
+  },
+  {
+   "qid": "Q1195668",
+   "titolo": "The Man Without Qualities",
+   "titolo_it": "L'uomo senza qualità",
+   "autori": [
+    {
+     "qid": "Q78487",
+     "nome": "Robert Musil"
+    }
+   ],
+   "pagine": 34,
+   "wiki_en": "https://en.wikipedia.org/wiki/The_Man_Without_Qualities",
+   "visite_en": 78817,
+   "copertina": {
+    "file": "Robert Musil - Der Mann ohne Eigenschaften, 1930.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Robert_Musil_-_Der_Mann_ohne_Eigenschaften%2C_1930.jpg/500px-Robert_Musil_-_Der_Mann_ohne_Eigenschaften%2C_1930.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Robert_Musil_-_Der_Mann_ohne_Eigenschaften%2C_1930.jpg",
+    "licenza": "Public domain",
+    "autore": "Rowohlt Verlag"
+   }
+  },
+  {
+   "qid": "Q957248",
+   "titolo": "Peril at End House",
+   "titolo_it": "Il pericolo senza nome",
+   "autori": [
+    {
+     "qid": "Q35064",
+     "nome": "Agatha Christie"
+    }
+   ],
+   "pagine": 28,
+   "wiki_en": "https://en.wikipedia.org/wiki/Peril_at_End_House",
+   "visite_en": 56954
+  },
+  {
+   "qid": "Q5142221",
+   "titolo": "Cold Comfort Farm",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q1252645",
+     "nome": "Stella Gibbons"
+    }
+   ],
+   "pagine": 5,
+   "wiki_en": "https://en.wikipedia.org/wiki/Cold_Comfort_Farm",
+   "visite_en": 47256
+  },
+  {
+   "qid": "Q934396",
+   "titolo": "The Thirteen Problems",
+   "titolo_it": "Miss Marple e i tredici problemi",
+   "autori": [
+    {
+     "qid": "Q35064",
+     "nome": "Agatha Christie"
+    }
+   ],
+   "pagine": 26,
+   "wiki_en": "https://en.wikipedia.org/wiki/The_Thirteen_Problems",
+   "visite_en": 40916
+  },
+  {
+   "qid": "Q7727278",
+   "titolo": "The Concept of the Political",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q77148",
+     "nome": "Carl Schmitt"
+    }
+   ],
+   "pagine": 11,
+   "wiki_en": "https://en.wikipedia.org/wiki/The_Concept_of_the_Political",
+   "visite_en": 40564
+  },
+  {
+   "qid": "Q610428",
+   "titolo": "Radetzky March",
+   "titolo_it": "La marcia di Radetzky",
+   "autori": [
+    {
+     "qid": "Q78509",
+     "nome": "Joseph Roth"
+    }
+   ],
+   "pagine": 21,
+   "wiki_en": "https://en.wikipedia.org/wiki/Radetzky_March_(novel)",
+   "visite_en": 39662,
+   "copertina": {
+    "file": "Joseph Roth Radetzkymarsch 1932.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Joseph_Roth_Radetzkymarsch_1932.jpg/500px-Joseph_Roth_Radetzkymarsch_1932.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Joseph_Roth_Radetzkymarsch_1932.jpg",
+    "licenza": "CC BY 3.0",
+    "autore": "© Foto H.-P.Haack"
+   }
+  },
+  {
+   "qid": "Q63707",
+   "titolo": "How the Steel Was Tempered",
+   "titolo_it": "Come fu temprato l'acciaio",
+   "autori": [
+    {
+     "qid": "Q271853",
+     "nome": "Nikolai Ostrovsky"
+    }
+   ],
+   "pagine": 33,
+   "wiki_en": "https://en.wikipedia.org/wiki/How_the_Steel_Was_Tempered",
+   "visite_en": 36583,
+   "copertina": {
+    "file": "RUB 95 (Leipzig, 1984, 23.Auflage) - Ostrowski, Wie der Stahl.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/RUB_95_%28Leipzig%2C_1984%2C_23.Auflage%29_-_Ostrowski%2C_Wie_der_Stahl.jpg/500px-RUB_95_%28Leipzig%2C_1984%2C_23.Auflage%29_-_Ostrowski%2C_Wie_der_Stahl.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "pagina": "https://commons.wikimedia.org/wiki/File:RUB_95_%28Leipzig%2C_1984%2C_23.Auflage%29_-_Ostrowski%2C_Wie_der_Stahl.jpg",
+    "licenza": "Public domain",
+    "autore": "Cookroach"
+   }
+  },
+  {
+   "qid": "Q1169793",
+   "titolo": "Tobacco Road",
+   "titolo_it": "La via del tabacco",
+   "autori": [
+    {
+     "qid": "Q310464",
+     "nome": "Erskine Caldwell"
+    }
+   ],
+   "pagine": 9,
+   "wiki_en": "https://en.wikipedia.org/wiki/Tobacco_Road_(novel)",
+   "visite_en": 23856
+  },
+  {
+   "qid": "Q2512207",
+   "titolo": "The Phoenix on the Sword",
+   "titolo_it": "La fenice sulla lama",
+   "autori": [
+    {
+     "qid": "Q207640",
+     "nome": "Robert E. Howard"
+    }
+   ],
+   "pagine": 12,
+   "wiki_en": "https://en.wikipedia.org/wiki/The_Phoenix_on_the_Sword",
+   "visite_en": 22913
+  },
+  {
+   "qid": "Q1900478",
+   "titolo": "Mutiny on the Bounty",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q460952",
+     "nome": "Charles Nordhoff"
+    },
+    {
+     "qid": "Q933918",
+     "nome": "James Norman Hall"
+    }
+   ],
+   "pagine": 9,
+   "wiki_en": "https://en.wikipedia.org/wiki/Mutiny_on_the_Bounty_(novel)",
+   "visite_en": 20732
+  },
+  {
+   "qid": "Q5264340",
+   "titolo": "Design for Living",
+   "titolo_it": "Partita a quattro",
+   "autori": [
+    {
+     "qid": "Q298388",
+     "nome": "Noël Coward"
+    }
+   ],
+   "pagine": 4,
+   "wiki_en": "https://en.wikipedia.org/wiki/Design_for_Living",
+   "visite_en": 18682
+  },
+  {
+   "qid": "Q17036247",
+   "titolo": "Tripura Rahasya",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q139962707",
+     "nome": "Haritayana"
+    }
+   ],
+   "pagine": 8,
+   "wiki_en": "https://en.wikipedia.org/wiki/Tripura_Rahasya",
+   "visite_en": 18172
+  },
+  {
+   "qid": "Q370698",
+   "titolo": "Journey to the East",
+   "titolo_it": "Il pellegrinaggio in Oriente",
+   "autori": [
+    {
+     "qid": "Q25973",
+     "nome": "Hermann Hesse"
+    }
+   ],
+   "pagine": 14,
+   "wiki_en": "https://en.wikipedia.org/wiki/Journey_to_the_East",
+   "visite_en": 16648
+  },
+  {
+   "qid": "Q257144",
+   "titolo": "The Pastures of Heaven",
+   "titolo_it": "I pascoli del cielo",
+   "autori": [
+    {
+     "qid": "Q39212",
+     "nome": "John Steinbeck"
+    }
+   ],
+   "pagine": 10,
+   "wiki_en": "https://en.wikipedia.org/wiki/The_Pastures_of_Heaven",
+   "visite_en": 12510
+  },
+  {
+   "qid": "Q2182784",
+   "titolo": "Have His Carcase",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q106740",
+     "nome": "Dorothy L. Sayers"
+    }
+   ],
+   "pagine": 4,
+   "wiki_en": "https://en.wikipedia.org/wiki/Have_His_Carcase",
+   "visite_en": 11610
+  },
+  {
+   "qid": "Q20657367",
+   "titolo": "Moral Man and Immoral Society",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q358561",
+     "nome": "Reinhold Niebuhr"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/Moral_Man_and_Immoral_Society",
+   "visite_en": 9285
+  },
+  {
+   "qid": "Q6372683",
+   "titolo": "Karmabhoomi",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q174152",
+     "nome": "Premchand"
+    }
+   ],
+   "pagine": 5,
+   "wiki_en": "https://en.wikipedia.org/wiki/Karmabhoomi",
+   "visite_en": 8826
+  },
+  {
+   "qid": "Q1746652",
+   "titolo": "Little Man, What Now?",
+   "titolo_it": "E adesso, pover'uomo?",
+   "autori": [
+    {
+     "qid": "Q76539",
+     "nome": "Hans Fallada"
+    }
+   ],
+   "pagine": 16,
+   "wiki_en": "https://en.wikipedia.org/wiki/Little_Man,_What_Now%3F_(novel)",
+   "visite_en": 8503
+  },
+  {
+   "qid": "Q2614387",
+   "titolo": "The Career of Nicodemus Dyzma",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q973270",
+     "nome": "Tadeusz Dołęga-Mostowicz"
+    }
+   ],
+   "pagine": 9,
+   "wiki_en": "https://en.wikipedia.org/wiki/The_Career_of_Nicodemus_Dyzma",
+   "visite_en": 8362,
+   "copertina": {
+    "file": "Tadeusz Dolega-Mostowicz.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Tadeusz_Dolega-Mostowicz.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Tadeusz_Dolega-Mostowicz.jpg",
+    "licenza": "Public domain",
+    "autore": "Unknown authorUnknown author"
+   }
+  },
+  {
+   "qid": "Q357328",
+   "titolo": "Saint Joan of the Stockyards",
+   "titolo_it": "Santa Giovanna dei Macelli",
+   "autori": [
+    {
+     "qid": "Q38757",
+     "nome": "Bertolt Brecht"
+    }
+   ],
+   "pagine": 10,
+   "wiki_en": "https://en.wikipedia.org/wiki/Saint_Joan_of_the_Stockyards",
+   "visite_en": 8354,
+   "copertina": {
+    "file": "Carola Neher als 'Johanna' - Karl Schrecker, 1930.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Carola_Neher_als_%27Johanna%27_-_Karl_Schrecker%2C_1930.jpg/500px-Carola_Neher_als_%27Johanna%27_-_Karl_Schrecker%2C_1930.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Carola_Neher_als_%27Johanna%27_-_Karl_Schrecker%2C_1930.jpg",
+    "licenza": "Public domain",
+    "autore": "Karl Schrecker (1885-1935)"
+   }
+  },
+  {
+   "qid": "Q7562273",
+   "titolo": "Sons",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q80900",
+     "nome": "Pearl S. Buck"
+    }
+   ],
+   "pagine": 5,
+   "wiki_en": "https://en.wikipedia.org/wiki/Sons_(novel)",
+   "visite_en": 8236
+  },
+  {
+   "qid": "Q1192235",
+   "titolo": "The worker",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q76727",
+     "nome": "Ernst Jünger"
+    }
+   ],
+   "pagine": 4,
+   "wiki_en": "https://en.wikipedia.org/wiki/The_Worker:_Dominion_and_Form",
+   "visite_en": 7782
+  },
+  {
+   "qid": "Q5216075",
+   "titolo": "Dangerous Corner",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q443528",
+     "nome": "J. B. Priestley"
+    }
+   ],
+   "pagine": 4,
+   "wiki_en": "https://en.wikipedia.org/wiki/Dangerous_Corner",
+   "visite_en": 7237
+  },
+  {
+   "qid": "Q17060239",
+   "titolo": "Legend of the Swordsmen of the Mountains of Shu",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q2968343",
+     "nome": "Huanzhulouzhu"
+    }
+   ],
+   "pagine": 5,
+   "wiki_en": "https://en.wikipedia.org/wiki/Legend_of_the_Swordsmen_of_the_Mountains_of_Shu",
+   "visite_en": 7159
+  },
+  {
+   "qid": "Q1706363",
+   "titolo": "Marie Antoinette: The Portrait of an Average Woman",
+   "titolo_it": "Maria Antonietta - Una vita involontariamente eroica",
+   "autori": [
+    {
+     "qid": "Q78491",
+     "nome": "Stefan Zweig"
+    }
+   ],
+   "pagine": 8,
+   "wiki_en": "https://en.wikipedia.org/wiki/Marie_Antoinette:_The_Portrait_of_an_Average_Woman",
+   "visite_en": 7102,
+   "copertina": {
+    "file": "Louise Elisabeth Vigée-Lebrun - Marie-Antoinette dit « à la Rose » - Google Art Project.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Louise_Elisabeth_Vig%C3%A9e-Lebrun_-_Marie-Antoinette_dit_%C2%AB_%C3%A0_la_Rose_%C2%BB_-_Google_Art_Project.jpg/500px-Louise_Elisabeth_Vig%C3%A9e-Lebrun_-_Marie-Antoinette_dit_%C2%AB_%C3%A0_la_Rose_%C2%BB_-_Google_Art_Project.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Louise_Elisabeth_Vig%C3%A9e-Lebrun_-_Marie-Antoinette_dit_%C2%AB_%C3%A0_la_Rose_%C2%BB_-_Google_Art_Project.jpg",
+    "licenza": "Public domain",
+    "autore": "Élisabeth Louise Vigée Le Brun"
+   }
+  },
+  {
+   "qid": "Q104829995",
+   "titolo": "The Empire of the Necromancers",
+   "titolo_it": "L'impero dei negromanti",
+   "autori": [
+    {
+     "qid": "Q555298",
+     "nome": "Clark Ashton Smith"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/The_Empire_of_the_Necromancers",
+   "visite_en": 6954
+  },
+  {
+   "qid": "Q1171410",
+   "titolo": "The Artificial Silk Girl",
+   "titolo_it": "La ragazza di seta artificiale",
+   "autori": [
+    {
+     "qid": "Q71461",
+     "nome": "Irmgard Keun"
+    }
+   ],
+   "pagine": 3,
+   "wiki_en": "https://en.wikipedia.org/wiki/The_Artificial_Silk_Girl",
+   "visite_en": 6020
+  },
+  {
+   "qid": "Q7745219",
+   "titolo": "The Lagoon",
+   "titolo_it": "La laguna",
+   "autori": [
+    {
+     "qid": "Q82925",
+     "nome": "Joseph Conrad"
+    }
+   ],
+   "pagine": 4,
+   "wiki_en": "https://en.wikipedia.org/wiki/The_Lagoon",
+   "visite_en": 5700,
+   "copertina": {
+    "file": "W. J. Linton (1812-1897) design for The Cornhill Magazine front, on a copy dated December 1945.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/W._J._Linton_%281812-1897%29_design_for_The_Cornhill_Magazine_front%2C_on_a_copy_dated_December_1945.jpg/500px-W._J._Linton_%281812-1897%29_design_for_The_Cornhill_Magazine_front%2C_on_a_copy_dated_December_1945.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "pagina": "https://commons.wikimedia.org/wiki/File:W._J._Linton_%281812-1897%29_design_for_The_Cornhill_Magazine_front%2C_on_a_copy_dated_December_1945.jpg",
+    "licenza": "Public domain",
+    "autore": "W. J. Linton\n\n(Life time: (1812-1897))"
+   }
+  },
+  {
+   "qid": "Q1075805",
+   "titolo": "Cat Country",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q315167",
+     "nome": "Lao She"
+    }
+   ],
+   "pagine": 13,
+   "wiki_en": "https://en.wikipedia.org/wiki/Cat_Country",
+   "visite_en": 5651
+  },
+  {
+   "qid": "Q7718329",
+   "titolo": "The Black Girl in Search of God",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q19185",
+     "nome": "George Bernard Shaw"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/The_Adventures_of_the_Black_Girl_in_Her_Search_for_God",
+   "visite_en": 5562
+  },
+  {
+   "qid": "Q8036886",
+   "titolo": "Worms of the Earth",
+   "titolo_it": "Vermi della Terra",
+   "autori": [
+    {
+     "qid": "Q207640",
+     "nome": "Robert E. Howard"
+    }
+   ],
+   "pagine": 3,
+   "wiki_en": "https://en.wikipedia.org/wiki/Worms_of_the_Earth",
+   "visite_en": 5437
+  },
+  {
+   "qid": "Q5278419",
+   "titolo": "Dinner at Eight",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q163662",
+     "nome": "George S. Kaufman"
+    },
+    {
+     "qid": "Q283496",
+     "nome": "Edna Ferber"
+    }
+   ],
+   "pagine": 5,
+   "wiki_en": "https://en.wikipedia.org/wiki/Dinner_at_Eight_(play)",
+   "visite_en": 5367,
+   "copertina": {
+    "file": "Dinner-at-Eight-FE.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Dinner-at-Eight-FE.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Dinner-at-Eight-FE.jpg",
+    "licenza": "Public domain",
+    "autore": "Doubleday Doran, publisher; George S. Kaufman, Edna Ferber"
+   }
+  },
+  {
+   "qid": "Q12410009",
+   "titolo": "Sweeney Agonistes",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q37767",
+     "nome": "T. S. Eliot"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/Sweeney_Agonistes",
+   "visite_en": 5329
+  },
+  {
+   "qid": "Q6165398",
+   "titolo": "Javid Nama",
+   "titolo_it": "Il poema celeste",
+   "autori": [
+    {
+     "qid": "Q484141",
+     "nome": "Muhammad Iqbal"
+    }
+   ],
+   "pagine": 5,
+   "wiki_en": "https://en.wikipedia.org/wiki/Javid_Nama",
+   "visite_en": 5252
+  },
+  {
+   "qid": "Q3791139",
+   "titolo": "Pirates of Venus",
+   "titolo_it": "I pirati di Venere",
+   "autori": [
+    {
+     "qid": "Q148234",
+     "nome": "Edgar Rice Burroughs"
+    }
+   ],
+   "pagine": 5,
+   "wiki_en": "https://en.wikipedia.org/wiki/Pirates_of_Venus",
+   "visite_en": 5221,
+   "copertina": {
+    "file": "Pirates of Venus frontispiece.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Pirates_of_Venus_frontispiece.jpg/500px-Pirates_of_Venus_frontispiece.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Pirates_of_Venus_frontispiece.jpg",
+    "licenza": "Public domain",
+    "autore": "J. Allen St. John"
+   }
+  },
+  {
+   "qid": "Q5247648",
+   "titolo": "Death to the French",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q430182",
+     "nome": "C. S. Forester"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/Death_to_the_French",
+   "visite_en": 5166
+  },
+  {
+   "qid": "Q7173756",
+   "titolo": "Peter Duck",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q515845",
+     "nome": "Arthur Ransome"
+    }
+   ],
+   "pagine": 3,
+   "wiki_en": "https://en.wikipedia.org/wiki/Peter_Duck",
+   "visite_en": 4445,
+   "copertina": {
+    "file": "Swallows and Amazons 03.png",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Swallows_and_Amazons_03.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Swallows_and_Amazons_03.png",
+    "licenza": "CC BY-SA 3.0",
+    "autore": "wwoods"
+   }
+  },
+  {
+   "qid": "Q104830453",
+   "titolo": "Angarey",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q81576",
+     "nome": "Rashid Jahan"
+    },
+    {
+     "qid": "Q4695257",
+     "nome": "Ahmad Ali"
+    },
+    {
+     "qid": "Q7402689",
+     "nome": "Sajjad Zaheer"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/Angarey",
+   "visite_en": 4347
+  },
+  {
+   "qid": "Q5267101",
+   "titolo": "Devil's Cub",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q272706",
+     "nome": "Georgette Heyer"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/Devil%27s_Cub",
+   "visite_en": 4333
+  },
+  {
+   "qid": "Q7758787",
+   "titolo": "The Pure and the Impure",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q218679",
+     "nome": "Colette"
+    }
+   ],
+   "pagine": 3,
+   "wiki_en": "https://en.wikipedia.org/wiki/The_Pure_and_the_Impure",
+   "visite_en": 4014
+  },
+  {
+   "qid": "Q104856374",
+   "titolo": "The Stalin School of Falsification",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q33391",
+     "nome": "Leon Trotsky"
+    }
+   ],
+   "pagine": 3,
+   "wiki_en": "https://en.wikipedia.org/wiki/The_Stalin_School_of_Falsification",
+   "visite_en": 4001,
+   "copertina": {
+    "file": "Trotsky - The Stalin school of falsification (cover, 1930).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Trotsky_-_The_Stalin_school_of_falsification_%28cover%2C_1930%29.jpg/500px-Trotsky_-_The_Stalin_school_of_falsification_%28cover%2C_1930%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Trotsky_-_The_Stalin_school_of_falsification_%28cover%2C_1930%29.jpg",
+    "licenza": "Public domain",
+    "autore": "Leon Trotsky"
+   }
+  },
+  {
+   "qid": "Q7234896",
+   "titolo": "Pother Kanta",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q117737",
+     "nome": "Sharadindu Bandyopadhyay"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/Pother_Kanta",
+   "visite_en": 3901
+  },
+  {
+   "qid": "Q5872036",
+   "titolo": "Hitler Youth Quex",
+   "titolo_it": null,
+   "autori": [],
+   "pagine": 5,
+   "wiki_en": "https://en.wikipedia.org/wiki/Der_Hitlerjunge_Quex",
+   "visite_en": 3538
+  },
+  {
+   "qid": "Q21162245",
+   "titolo": "The Narrow Corner",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q134942",
+     "nome": "William Somerset Maugham"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/The_Narrow_Corner",
+   "visite_en": 3529
+  },
+  {
+   "qid": "Q1979886",
+   "titolo": "Glory",
+   "titolo_it": "Gloria",
+   "autori": [
+    {
+     "qid": "Q36591",
+     "nome": "Vladimir Nabokov"
+    }
+   ],
+   "pagine": 9,
+   "wiki_en": "https://en.wikipedia.org/wiki/Glory_(Vladimir_Nabokov_novel)",
+   "visite_en": 3238,
+   "copertina": {
+    "file": "Podvig.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Podvig.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Podvig.jpg",
+    "licenza": "Public domain",
+    "autore": "Издательство журнала Современные записки (1920-1940)"
+   }
+  },
+  {
+   "qid": "Q5318076",
+   "titolo": "Dwellers in the Mirage",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q330376",
+     "nome": "Abraham Grace Merritt"
+    }
+   ],
+   "pagine": 3,
+   "wiki_en": "https://en.wikipedia.org/wiki/Dwellers_in_the_Mirage",
+   "visite_en": 3224,
+   "copertina": {
+    "file": "Fantastic Novels cover September 1949.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Fantastic_Novels_cover_September_1949.jpg/500px-Fantastic_Novels_cover_September_1949.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Fantastic_Novels_cover_September_1949.jpg",
+    "licenza": "Public domain",
+    "autore": "Fantastic Novels"
+   }
+  },
+  {
+   "qid": "Q8199988",
+   "titolo": "The Clue in the Diary",
+   "titolo_it": "Il diario rivelatore",
+   "autori": [
+    {
+     "qid": "Q1044648",
+     "nome": "Carolyn Keene"
+    }
+   ],
+   "pagine": 5,
+   "wiki_en": "https://en.wikipedia.org/wiki/The_Clue_in_the_Diary",
+   "visite_en": 3156,
+   "copertina": {
+    "file": "The Clue in the Diary (1932) front cover, 1945 printing.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/The_Clue_in_the_Diary_%281932%29_front_cover%2C_1945_printing.jpg/500px-The_Clue_in_the_Diary_%281932%29_front_cover%2C_1945_printing.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "pagina": "https://commons.wikimedia.org/wiki/File:The_Clue_in_the_Diary_%281932%29_front_cover%2C_1945_printing.jpg",
+    "licenza": "Public domain",
+    "autore": "Cover art by Russell H. Tandy"
+   }
+  },
+  {
+   "qid": "Q16385280",
+   "titolo": "Christmas Pudding",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q260026",
+     "nome": "Nancy Mitford"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/Christmas_Pudding_(novel)",
+   "visite_en": 3116
+  },
+  {
+   "qid": "Q3412860",
+   "titolo": "Nancy's Mysterious Letter",
+   "titolo_it": "La lettera misteriosa",
+   "autori": [
+    {
+     "qid": "Q1044648",
+     "nome": "Carolyn Keene"
+    }
+   ],
+   "pagine": 6,
+   "wiki_en": "https://en.wikipedia.org/wiki/Nancy%27s_Mysterious_Letter",
+   "visite_en": 2755,
+   "copertina": {
+    "file": "Nancy's Mysterious Letter (1932) front cover, first edition.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Nancy%27s_Mysterious_Letter_%281932%29_front_cover%2C_first_edition.jpg/500px-Nancy%27s_Mysterious_Letter_%281932%29_front_cover%2C_first_edition.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Nancy%27s_Mysterious_Letter_%281932%29_front_cover%2C_first_edition.jpg",
+    "licenza": "Public domain",
+    "autore": "Cover art by Russell H. Tandy"
+   }
+  },
+  {
+   "qid": "Q85806586",
+   "titolo": "The Black Swan",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q345104",
+     "nome": "Rafael Sabatini"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/The_Black_Swan_(Sabatini_novel)",
+   "visite_en": 2697
+  },
+  {
+   "qid": "Q6383214",
+   "titolo": "Keeper of the Keys",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q983421",
+     "nome": "Earl Derr Biggers"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/Keeper_of_the_Keys",
+   "visite_en": 2644
+  },
+  {
+   "qid": "Q8000821",
+   "titolo": "Wild Talents",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q443325",
+     "nome": "Charles Fort"
+    }
+   ],
+   "pagine": 3,
+   "wiki_en": "https://en.wikipedia.org/wiki/Wild_Talents_(book)",
+   "visite_en": 2470
+  },
+  {
+   "qid": "Q3818205",
+   "titolo": "The Greek Coffin Mystery",
+   "titolo_it": "L'affare Khalkis",
+   "autori": [
+    {
+     "qid": "Q586362",
+     "nome": "Ellery Queen"
+    }
+   ],
+   "pagine": 6,
+   "wiki_en": "https://en.wikipedia.org/wiki/The_Greek_Coffin_Mystery",
+   "visite_en": 2463
+  },
+  {
+   "qid": "Q7735448",
+   "titolo": "The Fun of It",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q3355",
+     "nome": "Amelia Earhart"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/The_Fun_of_It",
+   "visite_en": 2444
+  },
+  {
+   "qid": "Q15032732",
+   "titolo": "Tarzan and the City of Gold",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q148234",
+     "nome": "Edgar Rice Burroughs"
+    }
+   ],
+   "pagine": 4,
+   "wiki_en": "https://en.wikipedia.org/wiki/Tarzan_and_the_City_of_Gold",
+   "visite_en": 2405
+  },
+  {
+   "qid": "Q23035595",
+   "titolo": "Invitation to the Waltz",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q3442258",
+     "nome": "Rosamond Lehmann"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/Invitation_to_the_Waltz_(novel)",
+   "visite_en": 2391
+  },
+  {
+   "qid": "Q5677810",
+   "titolo": "Three Drops of Blood",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q315017",
+     "nome": "Sadegh Hedayat"
+    }
+   ],
+   "pagine": 6,
+   "wiki_en": "https://en.wikipedia.org/wiki/Three_Drops_of_Blood",
+   "visite_en": 2354
+  },
+  {
+   "qid": "Q3772100",
+   "titolo": "The Idiots",
+   "titolo_it": "Gli idioti",
+   "autori": [
+    {
+     "qid": "Q82925",
+     "nome": "Joseph Conrad"
+    }
+   ],
+   "pagine": 3,
+   "wiki_en": "https://en.wikipedia.org/wiki/The_Idiots_(short_story)",
+   "visite_en": 2229,
+   "copertina": {
+    "file": "Joseph Conrad.PNG",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Joseph_Conrad.PNG/500px-Joseph_Conrad.PNG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Joseph_Conrad.PNG",
+    "licenza": "Public domain",
+    "autore": "George Charles Beresford"
+   }
+  },
+  {
+   "qid": "Q5614417",
+   "titolo": "Gub Gub's Book",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q560015",
+     "nome": "Hugh Lofting"
+    }
+   ],
+   "pagine": 4,
+   "wiki_en": "https://en.wikipedia.org/wiki/Gub_Gub%27s_Book",
+   "visite_en": 2115
+  },
+  {
+   "qid": "Q7797601",
+   "titolo": "Three Loves",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q179059",
+     "nome": "A. J. Cronin"
+    }
+   ],
+   "pagine": 3,
+   "wiki_en": "https://en.wikipedia.org/wiki/Three_Loves",
+   "visite_en": 1973
+  },
+  {
+   "qid": "Q8058128",
+   "titolo": "Young Fu of the Upper Yangtze",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q5362784",
+     "nome": "Elizabeth Foreman Lewis"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/Young_Fu_of_the_Upper_Yangtze",
+   "visite_en": 1962
+  },
+  {
+   "qid": "Q5910588",
+   "titolo": "Hot Water",
+   "titolo_it": "Acqua bollente",
+   "autori": [
+    {
+     "qid": "Q207515",
+     "nome": "P. G. Wodehouse"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/Hot_Water_(novel)",
+   "visite_en": 1861
+  },
+  {
+   "qid": "Q7804791",
+   "titolo": "Time, Forward!",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q333873",
+     "nome": "Valentin Kataev"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/Time,_Forward!_(novel)",
+   "visite_en": 1839
+  },
+  {
+   "qid": "Q8046351",
+   "titolo": "Yaban",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q1151724",
+     "nome": "Yakup Kadri Karaosmanoğlu"
+    }
+   ],
+   "pagine": 4,
+   "wiki_en": "https://en.wikipedia.org/wiki/Yaban",
+   "visite_en": 1829
+  },
+  {
+   "qid": "Q7090080",
+   "titolo": "Omenuko",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q111509677",
+     "nome": "Pita Nwana"
+    }
+   ],
+   "pagine": 4,
+   "wiki_en": "https://en.wikipedia.org/wiki/Omenuko",
+   "visite_en": 1753
+  },
+  {
+   "qid": "Q3794795",
+   "titolo": "The Egyptian Cross Mystery",
+   "titolo_it": "Il mistero delle croci egizie",
+   "autori": [
+    {
+     "qid": "Q586362",
+     "nome": "Ellery Queen"
+    }
+   ],
+   "pagine": 5,
+   "wiki_en": "https://en.wikipedia.org/wiki/The_Egyptian_Cross_Mystery",
+   "visite_en": 1750
+  },
+  {
+   "qid": "Q7765614",
+   "titolo": "The Sowers of the Thunder",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q207640",
+     "nome": "Robert E. Howard"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/The_Sowers_of_the_Thunder",
+   "visite_en": 1427,
+   "copertina": {
+    "file": "Oriental stories 1932win.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Oriental_stories_1932win.jpg/500px-Oriental_stories_1932win.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Oriental_stories_1932win.jpg",
+    "licenza": "Public domain",
+    "autore": "Popular Fiction Publishing / J. Allen St. John"
+   }
+  },
+  {
+   "qid": "Q1112060",
+   "titolo": "The Madman of Bergerac",
+   "titolo_it": "Il pazzo di Bergerac",
+   "autori": [
+    {
+     "qid": "Q128790",
+     "nome": "Georges Simenon"
+    }
+   ],
+   "pagine": 6,
+   "wiki_en": "https://en.wikipedia.org/wiki/The_Madman_of_Bergerac",
+   "visite_en": 1420
+  },
+  {
+   "qid": "Q7773771",
+   "titolo": "The Waxworks Murder",
+   "titolo_it": "L'ultima carta",
+   "autori": [
+    {
+     "qid": "Q365664",
+     "nome": "John Dickson Carr"
+    }
+   ],
+   "pagine": 3,
+   "wiki_en": "https://en.wikipedia.org/wiki/The_Waxworks_Murder",
+   "visite_en": 1408
+  },
+  {
+   "qid": "Q3795569",
+   "titolo": "The Return",
+   "titolo_it": "Il ritorno",
+   "autori": [
+    {
+     "qid": "Q82925",
+     "nome": "Joseph Conrad"
+    }
+   ],
+   "pagine": 4,
+   "wiki_en": "https://en.wikipedia.org/wiki/The_Return_(Conrad_short_story)",
+   "visite_en": 1368
+  },
+  {
+   "qid": "Q7768564",
+   "titolo": "The Testament of Athammaus",
+   "titolo_it": "Il testamento di Athammaus",
+   "autori": [
+    {
+     "qid": "Q555298",
+     "nome": "Clark Ashton Smith"
+    }
+   ],
+   "pagine": 3,
+   "wiki_en": "https://en.wikipedia.org/wiki/The_Testament_of_Athammaus",
+   "visite_en": 1274
+  },
+  {
+   "qid": "Q7759037",
+   "titolo": "The Queer Story of Brownlow's Newspaper",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q42511",
+     "nome": "H. G. Wells"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/The_Queer_Story_of_Brownlow%27s_Newspaper",
+   "visite_en": 1174
+  },
+  {
+   "qid": "Q13017091",
+   "titolo": "Phu Chana Sip Thit",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q13026668",
+     "nome": "Chote Praepan"
+    }
+   ],
+   "pagine": 3,
+   "wiki_en": "https://en.wikipedia.org/wiki/Phu_Chana_Sip_Thit",
+   "visite_en": 1149
+  },
+  {
+   "qid": "Q6925288",
+   "titolo": "Mountain Victory",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q38392",
+     "nome": "William Faulkner"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/Mountain_Victory",
+   "visite_en": 1071
+  },
+  {
+   "qid": "Q17151836",
+   "titolo": "Wild Pilgrimage",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q122644",
+     "nome": "Lynd Ward"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/Wild_Pilgrimage",
+   "visite_en": 1016
+  },
+  {
+   "qid": "Q5058034",
+   "titolo": "Celia en el colegio",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q5359012",
+     "nome": "Elena Fortún"
+    }
+   ],
+   "pagine": 3,
+   "wiki_en": "https://en.wikipedia.org/wiki/Celia_en_el_colegio",
+   "visite_en": 926
+  },
+  {
+   "qid": "Q7208469",
+   "titolo": "Poison in Jest",
+   "titolo_it": "Piazza pulita",
+   "autori": [
+    {
+     "qid": "Q365664",
+     "nome": "John Dickson Carr"
+    }
+   ],
+   "pagine": 3,
+   "wiki_en": "https://en.wikipedia.org/wiki/Poison_in_Jest",
+   "visite_en": 801
+  },
+  {
+   "qid": "Q1325013",
+   "titolo": "Maigret Goes Home",
+   "titolo_it": "L'affare Saint-Fiacre",
+   "autori": [
+    {
+     "qid": "Q128790",
+     "nome": "Georges Simenon"
+    }
+   ],
+   "pagine": 8,
+   "wiki_en": "https://en.wikipedia.org/wiki/The_Saint-Fiacre_Affair",
+   "visite_en": 738,
+   "copertina": {
+    "file": "Paray-le-Frésil.JPG",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Paray-le-Fr%C3%A9sil.JPG/500px-Paray-le-Fr%C3%A9sil.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Paray-le-Fr%C3%A9sil.JPG",
+    "licenza": "CC BY-SA 3.0",
+    "autore": "Bmazerolles"
+   }
+  },
+  {
+   "qid": "Q735269",
+   "titolo": "Ursonate",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q155158",
+     "nome": "Kurt Schwitters"
+    }
+   ],
+   "pagine": 3,
+   "wiki_en": "https://en.wikipedia.org/wiki/Ursonate",
+   "visite_en": 682
+  },
+  {
+   "qid": "Q110732464",
+   "titolo": "Sudden Death",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q645074",
+     "nome": "Freeman Wills Crofts"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/Sudden_Death_(novel)",
+   "visite_en": 605
+  },
+  {
+   "qid": "Q17173648",
+   "titolo": "The Night Club",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q128790",
+     "nome": "Georges Simenon"
+    }
+   ],
+   "pagine": 3,
+   "wiki_en": "https://en.wikipedia.org/wiki/The_Night_Club_(novel)",
+   "visite_en": 592
+  },
+  {
+   "qid": "Q6817094",
+   "titolo": "Menino de engenho",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q2712435",
+     "nome": "José Lins do Rego"
+    }
+   ],
+   "pagine": 4,
+   "wiki_en": "https://en.wikipedia.org/wiki/Menino_de_engenho",
+   "visite_en": 564
+  },
+  {
+   "qid": "Q16387178",
+   "titolo": "Music",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q36591",
+     "nome": "Vladimir Nabokov"
+    }
+   ],
+   "pagine": 4,
+   "wiki_en": "https://en.wikipedia.org/wiki/Music_(short_story)",
+   "visite_en": 554
+  },
+  {
+   "qid": "Q23035603",
+   "titolo": "Laughing in the Jungle",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q713658",
+     "nome": "Louis Adamic"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/Laughing_in_the_Jungle",
+   "visite_en": 506,
+   "copertina": {
+    "file": "Adamic.JPG",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/df/Adamic.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Adamic.JPG",
+    "licenza": "CC BY-SA 4.0",
+    "autore": "Ribashevina"
+   }
+  },
+  {
+   "qid": "Q7759291",
+   "titolo": "The Railroad To Freedom: A Story of the Civil War",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q16159816",
+     "nome": "Hildegarde Hoyt Swift"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/The_Railroad_to_Freedom",
+   "visite_en": 502
+  },
+  {
+   "qid": "Q5271049",
+   "titolo": "Dian yang Tak Kunjung Padam",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q1755191",
+     "nome": "Sutan Takdir Alisjahbana"
+    }
+   ],
+   "pagine": 5,
+   "wiki_en": "https://en.wikipedia.org/wiki/Dian_yang_Tak_Kunjung_Padam",
+   "visite_en": 482
+  },
+  {
+   "qid": "Q7656082",
+   "titolo": "Swift Rivers",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q5171168",
+     "nome": "Cornelia Meigs"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/Swift_Rivers",
+   "visite_en": 479
+  },
+  {
+   "qid": "Q16385501",
+   "titolo": "Distant Lands",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q202537",
+     "nome": "Arkady Gaidar"
+    }
+   ],
+   "pagine": 4,
+   "wiki_en": "https://en.wikipedia.org/wiki/Distant_Lands",
+   "visite_en": 476
+  },
+  {
+   "qid": "Q16677418",
+   "titolo": "The Solitude of Compassion",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q177411",
+     "nome": "Jean Giono"
+    }
+   ],
+   "pagine": 3,
+   "wiki_en": "https://en.wikipedia.org/wiki/The_Solitude_of_Compassion",
+   "visite_en": 463
+  },
+  {
+   "qid": "Q8025166",
+   "titolo": "Winged Girl of Knossos",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q35202244",
+     "nome": "Erick Berry"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/The_Winged_Girl_of_Knossos",
+   "visite_en": 448
+  },
+  {
+   "qid": "Q60785449",
+   "titolo": "Christopher Strong",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q5560909",
+     "nome": "Gilbert Frankau"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/Christopher_Strong_(novel)",
+   "visite_en": 435
+  },
+  {
+   "qid": "Q5352372",
+   "titolo": "El amor brujo",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q188838",
+     "nome": "Roberto Arlt"
+    }
+   ],
+   "pagine": 3,
+   "wiki_en": "https://en.wikipedia.org/wiki/El_amor_brujo_(novel)",
+   "visite_en": 427,
+   "copertina": {
+    "file": "El amor brujo portada 1932.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/El_amor_brujo_portada_1932.jpg/500px-El_amor_brujo_portada_1932.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "pagina": "https://commons.wikimedia.org/wiki/File:El_amor_brujo_portada_1932.jpg",
+    "licenza": "Public domain",
+    "autore": "Unknown authorUnknown author"
+   }
+  },
+  {
+   "qid": "Q18351196",
+   "titolo": "Alicia Deane",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q5321676",
+     "nome": "E. V. Timms"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/Alicia_Deane",
+   "visite_en": 360
+  },
+  {
+   "qid": "Q3210349",
+   "titolo": "The House on the Dune",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q648241",
+     "nome": "Maxence Van Der Meersch"
+    }
+   ],
+   "pagine": 4,
+   "wiki_en": "https://en.wikipedia.org/wiki/The_House_on_the_Dune_(novel)",
+   "visite_en": 359
+  },
+  {
+   "qid": "Q96373014",
+   "titolo": "Ballerina",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q5354389",
+     "nome": "Eleanor Smith"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/Ballerina_(novel)",
+   "visite_en": 355
+  },
+  {
+   "qid": "Q3237799",
+   "titolo": "Maigret on the Riviera",
+   "titolo_it": "Liberty Bar",
+   "autori": [
+    {
+     "qid": "Q128790",
+     "nome": "Georges Simenon"
+    }
+   ],
+   "pagine": 5,
+   "wiki_en": "https://en.wikipedia.org/wiki/Liberty_Bar",
+   "visite_en": 345
+  },
+  {
+   "qid": "Q109167813",
+   "titolo": "Murder by an Aristocrat",
+   "titolo_it": "Uno di noi",
+   "autori": [
+    {
+     "qid": "Q452249",
+     "nome": "Mignon G. Eberhart"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/Murder_by_an_Aristocrat_(novel)",
+   "visite_en": 342
+  },
+  {
+   "qid": "Q7099218",
+   "titolo": "Orache",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q36591",
+     "nome": "Vladimir Nabokov"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/Orache_(short_story)",
+   "visite_en": 339
+  },
+  {
+   "qid": "Q7170795",
+   "titolo": "Pertemuan Jodoh",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q1401053",
+     "nome": "Abdul Muis"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/Pertemuan_Jodoh",
+   "visite_en": 327
+  },
+  {
+   "qid": "Q86753954",
+   "titolo": "Evensong",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q4899427",
+     "nome": "Beverley Nichols"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/Evensong_(novel)",
+   "visite_en": 326
+  },
+  {
+   "qid": "Q23035584",
+   "titolo": "Flesh in Armour",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q6525536",
+     "nome": "Leonard Mann"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/Flesh_in_Armour",
+   "visite_en": 295
+  },
+  {
+   "qid": "Q1885256",
+   "titolo": "The Flemish House",
+   "titolo_it": "La casa dei fiamminghi",
+   "autori": [
+    {
+     "qid": "Q128790",
+     "nome": "Georges Simenon"
+    }
+   ],
+   "pagine": 6,
+   "wiki_en": "https://en.wikipedia.org/wiki/The_Flemish_House",
+   "visite_en": 276
+  },
+  {
+   "qid": "Q17633276",
+   "titolo": "The Multiple States of Being",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q496850",
+     "nome": "René Guénon"
+    }
+   ],
+   "pagine": 3,
+   "wiki_en": "https://en.wikipedia.org/wiki/The_Multiple_States_of_Being",
+   "visite_en": 257
+  },
+  {
+   "qid": "Q18392587",
+   "titolo": "Hell's Doorway",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q5423761",
+     "nome": "F. J. Thwaites"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/Hell%27s_Doorway",
+   "visite_en": 249
+  },
+  {
+   "qid": "Q29379121",
+   "titolo": "The Soldier and the Gentlewoman",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q5761498",
+     "nome": "Hilda Vaughan"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/The_Soldier_and_the_Gentlewoman",
+   "visite_en": 239
+  },
+  {
+   "qid": "Q16999020",
+   "titolo": "Night of Battle",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q207640",
+     "nome": "Robert E. Howard"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/Night_of_Battle",
+   "visite_en": 211
+  },
+  {
+   "qid": "Q5223407",
+   "titolo": "Dark Shanghai",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q207640",
+     "nome": "Robert E. Howard"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/Dark_Shanghai",
+   "visite_en": 209
+  },
+  {
+   "qid": "Q3204486",
+   "titolo": "The Shadow in the Courtyard",
+   "titolo_it": "L'ombra cinese",
+   "autori": [
+    {
+     "qid": "Q128790",
+     "nome": "Georges Simenon"
+    }
+   ],
+   "pagine": 6,
+   "wiki_en": "https://en.wikipedia.org/wiki/The_Shadow_Puppet",
+   "visite_en": 205
+  },
+  {
+   "qid": "Q7929510",
+   "titolo": "Vikings of the Gloves",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q207640",
+     "nome": "Robert E. Howard"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/Vikings_of_the_Gloves",
+   "visite_en": 172
+  },
+  {
+   "qid": "Q7562673",
+   "titolo": "Soomustüdruk",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q1814763",
+     "nome": "Leida Kibuvits"
+    }
+   ],
+   "pagine": 3,
+   "wiki_en": "https://en.wikipedia.org/wiki/Soomust%C3%BCdruk",
+   "visite_en": 86
+  },
+  {
+   "qid": "Q685630",
+   "titolo": "The Port of Shadows",
+   "titolo_it": "Il porto delle nebbie",
+   "autori": [
+    {
+     "qid": "Q128790",
+     "nome": "Georges Simenon"
+    }
+   ],
+   "pagine": 6,
+   "wiki_en": "https://en.wikipedia.org/wiki/The_Misty_Harbour",
+   "visite_en": 52,
+   "copertina": {
+    "file": "Andrémare.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Andr%C3%A9mare.jpg/500px-Andr%C3%A9mare.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Andr%C3%A9mare.jpg",
+    "licenza": "Public domain",
+    "autore": "André Mare"
+   }
+  },
+  {
+   "qid": "Q4367932",
+   "titolo": "The New Land",
+   "titolo_it": "Terre dissodate",
+   "autori": [
+    {
+     "qid": "Q42398",
+     "nome": "Mikhail Sholokhov"
+    }
+   ],
+   "pagine": 14,
+   "wiki_en": null,
+   "visite_en": null,
+   "copertina": {
+    "file": "Поднятая целина 1937.jpeg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/%D0%9F%D0%BE%D0%B4%D0%BD%D1%8F%D1%82%D0%B0%D1%8F_%D1%86%D0%B5%D0%BB%D0%B8%D0%BD%D0%B0_1937.jpeg/500px-%D0%9F%D0%BE%D0%B4%D0%BD%D1%8F%D1%82%D0%B0%D1%8F_%D1%86%D0%B5%D0%BB%D0%B8%D0%BD%D0%B0_1937.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "pagina": "https://commons.wikimedia.org/wiki/File:%D0%9F%D0%BE%D0%B4%D0%BD%D1%8F%D1%82%D0%B0%D1%8F_%D1%86%D0%B5%D0%BB%D0%B8%D0%BD%D0%B0_1937.jpeg",
+    "licenza": "CC BY-SA 3.0",
+    "autore": "AndreyRussia"
+   }
+  },
+  {
+   "qid": "Q3225099",
+   "titolo": "Vipers' Tangle",
+   "titolo_it": "Groviglio di vipere",
+   "autori": [
+    {
+     "qid": "Q81685",
+     "nome": "François Mauriac"
+    }
+   ],
+   "pagine": 8,
+   "wiki_en": null,
+   "visite_en": null
+  },
+  {
+   "qid": "Q59198105",
+   "titolo": "Yegor Bulychov and Others",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q12706",
+     "nome": "Maxim Gorky"
+    }
+   ],
+   "pagine": 4,
+   "wiki_en": null,
+   "visite_en": null,
+   "copertina": {
+    "file": "Sundukyan theater in Yerevan, 1946-1949.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Sundukyan_theater_in_Yerevan%2C_1946-1949.jpg/500px-Sundukyan_theater_in_Yerevan%2C_1946-1949.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Sundukyan_theater_in_Yerevan%2C_1946-1949.jpg",
+    "licenza": "CC BY 4.0",
+    "autore": "Jakob Khalip"
+   }
+  },
+  {
+   "qid": "Q3824666",
+   "titolo": "The Tragedy of X",
+   "titolo_it": "La tragedia di X",
+   "autori": [
+    {
+     "qid": "Q586362",
+     "nome": "Ellery Queen"
+    },
+    {
+     "qid": "Q16028228",
+     "nome": "Barnaby Ross"
+    }
+   ],
+   "pagine": 3,
+   "wiki_en": null,
+   "visite_en": null
+  },
+  {
+   "qid": "Q3824667",
+   "titolo": "The Tragedy of Y",
+   "titolo_it": "La tragedia di Y",
+   "autori": [
+    {
+     "qid": "Q586362",
+     "nome": "Ellery Queen"
+    },
+    {
+     "qid": "Q16028228",
+     "nome": "Barnaby Ross"
+    }
+   ],
+   "pagine": 3,
+   "wiki_en": null,
+   "visite_en": null
+  },
+  {
+   "qid": "Q5952364",
+   "titolo": "Dash Akol",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q315017",
+     "nome": "Sadegh Hedayat"
+    }
+   ],
+   "pagine": 3,
+   "wiki_en": null,
+   "visite_en": null
+  },
+  {
+   "qid": "Q7228197",
+   "titolo": "Picking the morning flower in the evening",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q23114",
+     "nome": "Lu Xun"
+    }
+   ],
+   "pagine": 3,
+   "wiki_en": null,
+   "visite_en": null
+  },
+  {
+   "qid": "Q10432740",
+   "titolo": "Bombi Bitt och jag",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q5504807",
+     "nome": "Fritiof Nilsson Piraten"
+    }
+   ],
+   "pagine": 3,
+   "wiki_en": null,
+   "visite_en": null
+  },
+  {
+   "qid": "Q10493925",
+   "titolo": "The Family Circle",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q224029",
+     "nome": "André Maurois"
+    }
+   ],
+   "pagine": 3,
+   "wiki_en": null,
+   "visite_en": null
+  },
+  {
+   "qid": "Q13554420",
+   "titolo": "The Fantastic Clan",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q5864669",
+     "nome": "Frances Bonker"
+    },
+    {
+     "qid": "Q5933374",
+     "nome": "John James Thornber"
+    }
+   ],
+   "pagine": 3,
+   "wiki_en": null,
+   "visite_en": null
+  },
+  {
+   "qid": "Q16648039",
+   "titolo": "Karain: un ricordo",
+   "titolo_it": "Karain: un ricordo",
+   "autori": [
+    {
+     "qid": "Q82925",
+     "nome": "Joseph Conrad"
+    }
+   ],
+   "pagine": 3,
+   "wiki_en": null,
+   "visite_en": null,
+   "copertina": {
+    "file": "Joseph Conrad.PNG",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Joseph_Conrad.PNG/500px-Joseph_Conrad.PNG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Joseph_Conrad.PNG",
+    "licenza": "Public domain",
+    "autore": "George Charles Beresford"
+   }
+  },
+  {
+   "qid": "Q21651654",
+   "titolo": "Rangun Raudi",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q20650996",
+     "nome": "Somaraju Ramanujarao"
+    }
+   ],
+   "pagine": 3,
+   "wiki_en": null,
+   "visite_en": null
+  },
+  {
+   "qid": "Q21864337",
+   "titolo": "Adhunika Rajyanga Samsthalu",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q6428924",
+     "nome": "Konda Venkatappaiah"
+    }
+   ],
+   "pagine": 3,
+   "wiki_en": null,
+   "visite_en": null
+  },
+  {
+   "qid": "Q22067782",
+   "titolo": "Sarvey Ganita Chandrika",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q130601795",
+     "nome": "Chadaluwada Koti Narasimham"
+    }
+   ],
+   "pagine": 3,
+   "wiki_en": null,
+   "visite_en": null,
+   "copertina": {
+    "file": "Sarvey Ganita Chandrika 1932 Cover page (page 6 crop).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Sarvey_Ganita_Chandrika_1932_Cover_page_%28page_6_crop%29.jpg/500px-Sarvey_Ganita_Chandrika_1932_Cover_page_%28page_6_crop%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Sarvey_Ganita_Chandrika_1932_Cover_page_%28page_6_crop%29.jpg",
+    "licenza": "CC BY-SA 3.0",
+    "autore": "Chadalavada Kota Narasimham"
+   }
+  },
+  {
+   "qid": "Q29559196",
+   "titolo": "Forgiveness",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q315017",
+     "nome": "Sadegh Hedayat"
+    }
+   ],
+   "pagine": 3,
+   "wiki_en": null,
+   "visite_en": null
+  },
+  {
+   "qid": "Q55736663",
+   "titolo": "The Life of Guskō Budori",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q55993",
+     "nome": "Kenji Miyazawa"
+    }
+   ],
+   "pagine": 3,
+   "wiki_en": null,
+   "visite_en": null
+  },
+  {
+   "qid": "Q1198971",
+   "titolo": "Josephus",
+   "titolo_it": "La fine di Gerusalemme",
+   "autori": [
+    {
+     "qid": "Q77024",
+     "nome": "Lion Feuchtwanger"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": null,
+   "visite_en": null,
+   "copertina": {
+    "file": "Lion Feuchtwanger, Der jüdische Krieg 1979.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Lion_Feuchtwanger%2C_Der_j%C3%BCdische_Krieg_1979.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Lion_Feuchtwanger%2C_Der_j%C3%BCdische_Krieg_1979.jpg",
+    "licenza": "Public domain",
+    "autore": "Unknown authorUnknown author"
+   }
+  },
+  {
+   "qid": "Q3794895",
+   "titolo": "Blind Beast",
+   "titolo_it": "Il mostro cieco",
+   "autori": [
+    {
+     "qid": "Q347412",
+     "nome": "Edogawa Ranpo"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": null,
+   "visite_en": null
+  },
+  {
+   "qid": "Q3828461",
+   "titolo": "Wings in the Night",
+   "titolo_it": "Le ali notturne",
+   "autori": [
+    {
+     "qid": "Q207640",
+     "nome": "Robert E. Howard"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": null,
+   "visite_en": null
+  },
+  {
+   "qid": "Q4506215",
+   "titolo": "Tsushima",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q2143362",
+     "nome": "Alexey Novikov-Priboy"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": null,
+   "visite_en": null
+  },
+  {
+   "qid": "Q6500301",
+   "titolo": "Mount of Olives",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q2920160",
+     "nome": "Falih Rıfkı Atay"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": null,
+   "visite_en": null
+  },
+  {
+   "qid": "Q11509176",
+   "titolo": "Nihon Shihonshugi Hattatsushi Kōza",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q11470546",
+     "nome": "Moritarō Yamada"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": null,
+   "visite_en": null
+  },
+  {
+   "qid": "Q12218416",
+   "titolo": "The Pure Tree of Light in the Layers of the Malikis",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q12240997",
+     "nome": "Muhammad ibn Muhammad Makhluf"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": null,
+   "visite_en": null,
+   "copertina": {
+    "file": "شجرة النور الزكية في طبقات المالكية.svg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/%D8%B4%D8%AC%D8%B1%D8%A9_%D8%A7%D9%84%D9%86%D9%88%D8%B1_%D8%A7%D9%84%D8%B2%D9%83%D9%8A%D8%A9_%D9%81%D9%8A_%D8%B7%D8%A8%D9%82%D8%A7%D8%AA_%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%83%D9%8A%D8%A9.svg/500px-%D8%B4%D8%AC%D8%B1%D8%A9_%D8%A7%D9%84%D9%86%D9%88%D8%B1_%D8%A7%D9%84%D8%B2%D9%83%D9%8A%D8%A9_%D9%81%D9%8A_%D8%B7%D8%A8%D9%82%D8%A7%D8%AA_%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%83%D9%8A%D8%A9.svg.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "pagina": "https://commons.wikimedia.org/wiki/File:%D8%B4%D8%AC%D8%B1%D8%A9_%D8%A7%D9%84%D9%86%D9%88%D8%B1_%D8%A7%D9%84%D8%B2%D9%83%D9%8A%D8%A9_%D9%81%D9%8A_%D8%B7%D8%A8%D9%82%D8%A7%D8%AA_%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%83%D9%8A%D8%A9.svg",
+    "licenza": "Public domain",
+    "autore": "محمد بن محمد مخلوف"
+   }
+  },
+  {
+   "qid": "Q12597454",
+   "titolo": "Identical Toes",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q625815",
+     "nome": "Kim Dong-in"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": null,
+   "visite_en": null
+  },
+  {
+   "qid": "Q12599279",
+   "titolo": "Red mountain",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q625815",
+     "nome": "Kim Dong-in"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": null,
+   "visite_en": null
+  },
+  {
+   "qid": "Q12728549",
+   "titolo": "Fram the polar bear",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q2428037",
+     "nome": "Cezar Petrescu"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": null,
+   "visite_en": null,
+   "copertina": {
+    "file": "Tonitza, Fram 15.JPG",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Tonitza%2C_Fram_15.JPG/500px-Tonitza%2C_Fram_15.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Tonitza%2C_Fram_15.JPG",
+    "licenza": "Public domain",
+    "autore": "Nicolae Tonitza"
+   }
+  },
+  {
+   "qid": "Q16407465",
+   "titolo": "Truth and Justice IV",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q353637",
+     "nome": "A. H. Tammsaare"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": null,
+   "visite_en": null
+  },
+  {
+   "qid": "Q19101057",
+   "titolo": "The Trap",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q169566",
+     "nome": "H. P. Lovecraft"
+    },
+    {
+     "qid": "Q1607236",
+     "nome": "Henry S. Whitehead"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": null,
+   "visite_en": null
+  },
+  {
+   "qid": "Q19101656",
+   "titolo": "The Vaults of Yoh-Vombis",
+   "titolo_it": "Le Cripte di Yoh-Vombis",
+   "autori": [
+    {
+     "qid": "Q555298",
+     "nome": "Clark Ashton Smith"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": null,
+   "visite_en": null
+  },
+  {
+   "qid": "Q19217469",
+   "titolo": "Lerne lachen ohne zu weinen",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q57386",
+     "nome": "Kurt Tucholsky"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": null,
+   "visite_en": null,
+   "copertina": {
+    "file": "Lerne lachen ohne zu weinen 003.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Lerne_lachen_ohne_zu_weinen_003.jpg/500px-Lerne_lachen_ohne_zu_weinen_003.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Lerne_lachen_ohne_zu_weinen_003.jpg",
+    "licenza": "Public domain",
+    "autore": "Kurt Tucholsky"
+   }
+  },
+  {
+   "qid": "Q21660419",
+   "titolo": "The Thing on the Roof",
+   "titolo_it": "Sul tetto",
+   "autori": [
+    {
+     "qid": "Q207640",
+     "nome": "Robert E. Howard"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": null,
+   "visite_en": null
+  },
+  {
+   "qid": "Q29405101",
+   "titolo": "The Broken Mirror",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q315017",
+     "nome": "Sadegh Hedayat"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": null,
+   "visite_en": null
+  },
+  {
+   "qid": "Q89784584",
+   "titolo": "De minuit à sept heures",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q314993",
+     "nome": "Maurice Leblanc"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": null,
+   "visite_en": null,
+   "copertina": {
+    "file": "Leblanc - De minuit à sept heures, paru dans Le Journal, 1931 (page 92 crop).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Leblanc_-_De_minuit_%C3%A0_sept_heures%2C_paru_dans_Le_Journal%2C_1931_%28page_92_crop%29.jpg/500px-Leblanc_-_De_minuit_%C3%A0_sept_heures%2C_paru_dans_Le_Journal%2C_1931_%28page_92_crop%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Leblanc_-_De_minuit_%C3%A0_sept_heures%2C_paru_dans_Le_Journal%2C_1931_%28page_92_crop%29.jpg",
+    "licenza": "Public domain",
+    "autore": "Maurice Leblanc"
+   }
+  },
+  {
+   "qid": "Q102229104",
+   "titolo": "The Man of Stone",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q169566",
+     "nome": "H. P. Lovecraft"
+    },
+    {
+     "qid": "Q11336366",
+     "nome": "Hazel Heald"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": null,
+   "visite_en": null
+  },
+  {
+   "qid": "Q107359351",
+   "titolo": "Supplementary Collected Stele Biographies",
+   "titolo_it": null,
+   "autori": [],
+   "pagine": 2,
+   "wiki_en": null,
+   "visite_en": null
+  },
+  {
+   "qid": "Q136086965",
+   "titolo": "Wise Parenthood",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q442231",
+     "nome": "Marie Stopes"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": null,
+   "visite_en": null
+  }
+ ]
+}
