@@ -47,6 +47,10 @@ jobs:
         env:
           BUDGET_MINUTI_SBN: "25"
         run: python scripts/sbn.py
+      - name: Opere in pubblico dominio negli USA (Wikidata, Wikipedia, Commons)
+        # dato accessorio: se fallisce, il resto viene salvato comunque
+        continue-on-error: true
+        run: python scripts/opere.py
       - name: Crea le pagine degli autori e la sitemap
         if: always()
         run: python scripts/pagine.py
@@ -56,7 +60,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data autore sitemap.xml
+          git add data autore en sitemap.xml
           if git diff --cached --quiet; then
             echo "Nessun cambiamento"
           else
