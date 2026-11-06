@@ -1,0 +1,3840 @@
+{
+ "anno": 2027,
+ "generato": "2026-11-06",
+ "fonti": [
+  "Wikidata",
+  "SBN"
+ ],
+ "voci": [
+  {
+   "tipo": "prima edizione",
+   "qid": "Q2529101",
+   "nome": "Illusions",
+   "it": "Illusioni: Le avventure di un messia riluttante",
+   "desc": "1977 novel by Richard Bach",
+   "autore": "Richard Bach",
+   "autore_qid": "Q245407",
+   "anno": 1977,
+   "anni": 50,
+   "pagine": 15,
+   "mese": 1,
+   "giorno": 1,
+   "sbn": {
+    "edizioni": 68,
+    "ultimo": 2023,
+    "dal_2000": 31,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q1252645",
+   "nome": "Stella Gibbons",
+   "it": "Stella Gibbons",
+   "desc": "British writer (1902–1989)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1902,
+   "anni": 125,
+   "pagine": 30,
+   "mese": 1,
+   "giorno": 5,
+   "sbn": {
+    "edizioni": 2,
+    "ultimo": 2014,
+    "dal_2000": 2,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q233953",
+   "nome": "Sofi Oksanen",
+   "it": "Sofi Oksanen",
+   "desc": "Finnish-Estonian writer (born 1977)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1977,
+   "anni": 50,
+   "pagine": 56,
+   "mese": 1,
+   "giorno": 7,
+   "sbn": {
+    "edizioni": 2,
+    "ultimo": 2014,
+    "dal_2000": 2,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q191004",
+   "nome": "Carl Rogers",
+   "it": null,
+   "desc": "American psychologist (1902–1987)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1902,
+   "anni": 125,
+   "pagine": 76,
+   "mese": 1,
+   "giorno": 8,
+   "sbn": {
+    "edizioni": 9,
+    "ultimo": 1970,
+    "dal_2000": 4,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q272492",
+   "nome": "Diana Gabaldon",
+   "it": "Diana Gabaldon",
+   "desc": "American author (born 1952)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1952,
+   "anni": 75,
+   "pagine": 36,
+   "mese": 1,
+   "giorno": 11,
+   "sbn": {
+    "edizioni": 35,
+    "ultimo": 2020,
+    "dal_2000": 35,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q311461",
+   "nome": "George Ostrogorsky",
+   "it": "Georgij Aleksandrovič Ostrogorskij",
+   "desc": "Russian Byzantinist (1902-1976)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1902,
+   "anni": 125,
+   "pagine": 34,
+   "mese": 1,
+   "giorno": 19,
+   "sbn": {
+    "edizioni": 0,
+    "ultimo": null,
+    "dal_2000": 0,
+    "trovato": false
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q43393",
+   "nome": "Robert Boyle",
+   "it": "Robert Boyle",
+   "desc": "Anglo-Irish natural philosopher, chemist, physicist, and inventor (1627-1691)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1627,
+   "anni": 400,
+   "pagine": 116,
+   "mese": 1,
+   "giorno": 25,
+   "sbn": {
+    "edizioni": 5,
+    "ultimo": 2018,
+    "dal_2000": 2,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q734675",
+   "nome": "The Big Four",
+   "it": "Poirot e i quattro",
+   "desc": "1927 novel by Agatha Christie",
+   "autore": "Agatha Christie",
+   "autore_qid": "Q35064",
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 31,
+   "mese": 1,
+   "giorno": 27,
+   "sbn": {
+    "edizioni": 1041,
+    "ultimo": 2023,
+    "dal_2000": 752,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q470937",
+   "nome": "The Shining",
+   "it": "Shining",
+   "desc": "1977 novel by Stephen King",
+   "autore": "Stephen King",
+   "autore_qid": "Q39829",
+   "anno": 1977,
+   "anni": 50,
+   "pagine": 45,
+   "mese": 1,
+   "giorno": 28,
+   "sbn": {
+    "edizioni": 503,
+    "ultimo": 2023,
+    "dal_2000": 394,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q937610",
+   "nome": "Edward Abbey",
+   "it": "Edward Abbey",
+   "desc": "American author and essayist (1927-1989)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 45,
+   "mese": 1,
+   "giorno": 29,
+   "sbn": {
+    "edizioni": 3,
+    "ultimo": 2008,
+    "dal_2000": 3,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q77371",
+   "nome": "Friedrich de la Motte Fouqué",
+   "it": "Friedrich de la Motte Fouqué",
+   "desc": "German writer (1777-1843)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1777,
+   "anni": 250,
+   "pagine": 37,
+   "mese": 2,
+   "giorno": 12,
+   "sbn": {
+    "edizioni": 8,
+    "ultimo": 1828,
+    "dal_2000": 4,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q315132",
+   "nome": "Ion Luca Caragiale",
+   "it": "Ion Luca Caragiale",
+   "desc": "Romanian playwright, writer and poet (1852-1912)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1852,
+   "anni": 175,
+   "pagine": 47,
+   "mese": 2,
+   "giorno": 13,
+   "sbn": {
+    "edizioni": 10,
+    "ultimo": 2021,
+    "dal_2000": 6,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q314462",
+   "nome": "Harold Lasswell",
+   "it": "Harold Lasswell",
+   "desc": "American political scientist (1902-1978)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1902,
+   "anni": 125,
+   "pagine": 35,
+   "mese": 2,
+   "giorno": 13,
+   "sbn": {
+    "edizioni": 8,
+    "ultimo": 1969,
+    "dal_2000": 3,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q234989",
+   "nome": "Amy Tan",
+   "it": "Amy Tan",
+   "desc": "American novelist",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1952,
+   "anni": 75,
+   "pagine": 50,
+   "mese": 2,
+   "giorno": 19,
+   "sbn": {
+    "edizioni": 9,
+    "ultimo": 2019,
+    "dal_2000": 6,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q380265",
+   "nome": "Ryū Murakami",
+   "it": "Ryū Murakami",
+   "desc": "Japanese novelist, film director, and screenwriter (1952–2026)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1952,
+   "anni": 75,
+   "pagine": 44,
+   "mese": 2,
+   "giorno": 19,
+   "sbn": {
+    "edizioni": 8,
+    "ultimo": 2021,
+    "dal_2000": 5,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q359548",
+   "nome": "Jonathan Safran Foer",
+   "it": "Jonathan Safran Foer",
+   "desc": "American novelist (born 1977)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1977,
+   "anni": 50,
+   "pagine": 43,
+   "mese": 2,
+   "giorno": 21,
+   "sbn": {
+    "edizioni": 24,
+    "ultimo": 2022,
+    "dal_2000": 24,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q965927",
+   "nome": "George Moore",
+   "it": "George Moore",
+   "desc": "Irish novelist, short-story writer, poet, art critic, memoirist and dramatist (1852-1933)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1852,
+   "anni": 175,
+   "pagine": 32,
+   "mese": 2,
+   "giorno": 24,
+   "sbn": {
+    "edizioni": 0,
+    "ultimo": null,
+    "dal_2000": 0,
+    "trovato": false
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q462634",
+   "nome": "Jean Bruller",
+   "it": "Vercors",
+   "desc": "French author and illustrator (1902–1991)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1902,
+   "anni": 125,
+   "pagine": 37,
+   "mese": 2,
+   "giorno": 26,
+   "sbn": {
+    "edizioni": 15,
+    "ultimo": 1969,
+    "dal_2000": 5,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q39212",
+   "nome": "John Steinbeck",
+   "it": "John Steinbeck",
+   "desc": "American writer (1902–1968)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1902,
+   "anni": 125,
+   "pagine": 149,
+   "mese": 2,
+   "giorno": 27,
+   "sbn": {
+    "edizioni": 274,
+    "ultimo": 1980,
+    "dal_2000": 146,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q365664",
+   "nome": "John Dickson Carr",
+   "it": "John Dickson Carr",
+   "desc": "American writer (1906–1977)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1977,
+   "anni": 50,
+   "pagine": 33,
+   "mese": 2,
+   "giorno": 27,
+   "sbn": {
+    "edizioni": 95,
+    "ultimo": 2021,
+    "dal_2000": 53,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q234403",
+   "nome": "Robin Hobb",
+   "it": "Robin Hobb",
+   "desc": "American fiction writer (pseudonym) (born 1952)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1952,
+   "anni": 75,
+   "pagine": 38,
+   "mese": 3,
+   "giorno": 5,
+   "sbn": {
+    "edizioni": 12,
+    "ultimo": 2017,
+    "dal_2000": 12,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q2740697",
+   "nome": "The Adventure of Shoscombe Old Place",
+   "it": "L’avventura di Shoscombe Old Place",
+   "desc": "short story by Arthur Conan Doyle",
+   "autore": "Arthur Conan Doyle",
+   "autore_qid": "Q35610",
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 23,
+   "mese": 3,
+   "giorno": 5,
+   "sbn": {
+    "edizioni": 459,
+    "ultimo": 2023,
+    "dal_2000": 341,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q5878",
+   "nome": "Gabriel García Márquez",
+   "it": null,
+   "desc": "Colombian writer and Nobel laureate (1927–2014)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 209,
+   "mese": 3,
+   "giorno": 6,
+   "sbn": {
+    "edizioni": 116,
+    "ultimo": 2023,
+    "dal_2000": 67,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q326000",
+   "nome": "Maurice Halbwachs",
+   "it": "Maurice Halbwachs",
+   "desc": "French sociologist (1877-1945), died in Buchenwald concentration camp",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1877,
+   "anni": 150,
+   "pagine": 33,
+   "mese": 3,
+   "giorno": 11,
+   "sbn": {
+    "edizioni": 5,
+    "ultimo": 2014,
+    "dal_2000": 3,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q381720",
+   "nome": "Jan Patočka",
+   "it": "Jan Patočka",
+   "desc": "Czech essayist and philosopher (1907-1977)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1977,
+   "anni": 50,
+   "pagine": 30,
+   "mese": 3,
+   "giorno": 13,
+   "sbn": {
+    "edizioni": 6,
+    "ultimo": 2015,
+    "dal_2000": 5,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q2222",
+   "nome": "Uncle Tom's Cabin",
+   "it": "La capanna dello zio Tom",
+   "desc": "1852 novel by Harriet Beecher Stowe",
+   "autore": "Harriet Beecher Stowe",
+   "autore_qid": "Q102513",
+   "anno": 1852,
+   "anni": 175,
+   "pagine": 71,
+   "mese": 3,
+   "giorno": 20,
+   "sbn": {
+    "edizioni": 149,
+    "ultimo": 2022,
+    "dal_2000": 73,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q130779",
+   "nome": "Kim Stanley Robinson",
+   "it": "Kim Stanley Robinson",
+   "desc": "American science fiction writer (born 1952)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1952,
+   "anni": 75,
+   "pagine": 45,
+   "mese": 3,
+   "giorno": 23,
+   "sbn": {
+    "edizioni": 5,
+    "ultimo": 2020,
+    "dal_2000": 4,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q57387",
+   "nome": "Martin Walser",
+   "it": "Martin Walser",
+   "desc": "German writer (1927–2023)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 42,
+   "mese": 3,
+   "giorno": 24,
+   "sbn": {
+    "edizioni": 2,
+    "ultimo": 2013,
+    "dal_2000": 2,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q333653",
+   "nome": "Quim Monzó",
+   "it": "Quim Monzó",
+   "desc": "Spanish writer and translator",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1952,
+   "anni": 75,
+   "pagine": 33,
+   "mese": 3,
+   "giorno": 24,
+   "sbn": {
+    "edizioni": 6,
+    "ultimo": 2014,
+    "dal_2000": 3,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q235291",
+   "nome": "Jung Chang",
+   "it": "Jung Chang",
+   "desc": "Chinese-British author (born 1952)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1952,
+   "anni": 75,
+   "pagine": 35,
+   "mese": 3,
+   "giorno": 25,
+   "sbn": {
+    "edizioni": 14,
+    "ultimo": 2022,
+    "dal_2000": 14,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q318667",
+   "nome": "François Furet",
+   "it": "François Furet",
+   "desc": "French historian (1927–1997)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 30,
+   "mese": 3,
+   "giorno": 27,
+   "sbn": {
+    "edizioni": 37,
+    "ultimo": 2020,
+    "dal_2000": 12,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q318026",
+   "nome": "Marcel Aymé",
+   "it": "Marcel Aymé",
+   "desc": "French writer (1902–1967)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1902,
+   "anni": 125,
+   "pagine": 48,
+   "mese": 3,
+   "giorno": 29,
+   "sbn": {
+    "edizioni": 26,
+    "ultimo": 2020,
+    "dal_2000": 15,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q357102",
+   "nome": "Lew Wallace",
+   "it": "Lew Wallace",
+   "desc": "American lawyer, Union general in the American Civil War, territorial governor and statesman, politician, and author of 'Ben Hur' (1827-1905)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1827,
+   "anni": 200,
+   "pagine": 49,
+   "mese": 4,
+   "giorno": 10,
+   "sbn": {
+    "edizioni": 0,
+    "ultimo": null,
+    "dal_2000": 0,
+    "trovato": false
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q165274",
+   "nome": "Jacques Prévert",
+   "it": "Jacques Prévert",
+   "desc": "French poet and screenwriter (1900-1977)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1977,
+   "anni": 50,
+   "pagine": 81,
+   "mese": 4,
+   "giorno": 11,
+   "sbn": {
+    "edizioni": 168,
+    "ultimo": 2022,
+    "dal_2000": 71,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q1784288",
+   "nome": "Invisible Man",
+   "it": "Uomo invisibile",
+   "desc": "1952 novel by Ralph Ellison",
+   "autore": "Ralph Ellison",
+   "autore_qid": "Q299965",
+   "anno": 1952,
+   "anni": 75,
+   "pagine": 22,
+   "mese": 4,
+   "giorno": 14,
+   "sbn": {
+    "edizioni": 4,
+    "ultimo": 2003,
+    "dal_2000": 1,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q80321",
+   "nome": "Halldór Laxness",
+   "it": "Halldór Laxness",
+   "desc": "Icelandic author (1902-1998)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1902,
+   "anni": 125,
+   "pagine": 102,
+   "mese": 4,
+   "giorno": 23,
+   "sbn": {
+    "edizioni": 5,
+    "ultimo": 2012,
+    "dal_2000": 2,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q312747",
+   "nome": "Leopoldo Alas",
+   "it": "Leopoldo Alas",
+   "desc": "Spanish author (1852–1901)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1852,
+   "anni": 175,
+   "pagine": 45,
+   "mese": 4,
+   "giorno": 25,
+   "sbn": {
+    "edizioni": 6,
+    "ultimo": 2018,
+    "dal_2000": 2,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q71027",
+   "nome": "Karl Abraham",
+   "it": "Karl Abraham",
+   "desc": "German psychoanalyst (1877–1925)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1877,
+   "anni": 150,
+   "pagine": 34,
+   "mese": 5,
+   "giorno": 3,
+   "sbn": {
+    "edizioni": 11,
+    "ultimo": 2012,
+    "dal_2000": 2,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q215339",
+   "nome": "Johan Ludvig Runeberg",
+   "it": "Johan Ludvig Runeberg",
+   "desc": "Finland’s national poet, author of Finland’s national anthem, Swedish-speaking writer and poet (1804–77)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1877,
+   "anni": 150,
+   "pagine": 59,
+   "mese": 5,
+   "giorno": 6,
+   "sbn": {
+    "edizioni": 6,
+    "ultimo": 1905,
+    "dal_2000": 3,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q235759",
+   "nome": "Ruth Prawer Jhabvala",
+   "it": "Ruth Prawer Jhabvala",
+   "desc": "German-born British-American author (1927-2013)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 51,
+   "mese": 5,
+   "giorno": 7,
+   "sbn": {
+    "edizioni": 20,
+    "ultimo": 2018,
+    "dal_2000": 13,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q462629",
+   "nome": "James Jones",
+   "it": "James Jones",
+   "desc": "American author (1921–1977)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1977,
+   "anni": 50,
+   "pagine": 35,
+   "mese": 5,
+   "giorno": 9,
+   "sbn": {
+    "edizioni": 0,
+    "ultimo": null,
+    "dal_2000": 0,
+    "trovato": false
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q221303",
+   "nome": "Anne Robert Jacques Turgot",
+   "it": "Anne Robert Jacques Turgot",
+   "desc": "French economist and statesman (1727–1781)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1727,
+   "anni": 300,
+   "pagine": 61,
+   "mese": 5,
+   "giorno": 10,
+   "sbn": {
+    "edizioni": 1,
+    "ultimo": 1999,
+    "dal_2000": 0,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q892108",
+   "nome": "Peter Matthiessen",
+   "it": "Peter Matthiessen",
+   "desc": "American novelist (1927–2014)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 31,
+   "mese": 5,
+   "giorno": 22,
+   "sbn": {
+    "edizioni": 10,
+    "ultimo": 1998,
+    "dal_2000": 4,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q224113",
+   "nome": "Robert Ludlum",
+   "it": "Robert Ludlum",
+   "desc": "American novelist (1927–2001)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 55,
+   "mese": 5,
+   "giorno": 25,
+   "sbn": {
+    "edizioni": 131,
+    "ultimo": 2022,
+    "dal_2000": 94,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q502912",
+   "nome": "John Bagnell Bury",
+   "it": "John Bagnell Bury",
+   "desc": "Anglo-Irish historian and classical scholar (1861–1927)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 31,
+   "mese": 6,
+   "giorno": 1,
+   "sbn": {
+    "edizioni": 4,
+    "ultimo": 1983,
+    "dal_2000": 0,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q241248",
+   "nome": "Orhan Pamuk",
+   "it": "Orhan Pamuk",
+   "desc": "Turkish novelist, academic and Nobel laureate (born 1952)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1952,
+   "anni": 75,
+   "pagine": 138,
+   "mese": 6,
+   "giorno": 7,
+   "sbn": {
+    "edizioni": 21,
+    "ultimo": 2023,
+    "dal_2000": 21,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q2004200",
+   "nome": "Guzal Sitdikova",
+   "it": "Guzal' Sitdykova",
+   "desc": "Bashkir writer (born 1952)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1952,
+   "anni": 75,
+   "pagine": 36,
+   "mese": 6,
+   "giorno": 10,
+   "sbn": {
+    "edizioni": 0,
+    "ultimo": null,
+    "dal_2000": 0,
+    "trovato": false
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q275628",
+   "nome": "Renée Vivien",
+   "it": "Renée Vivien",
+   "desc": "British poet who wrote in French",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1877,
+   "anni": 150,
+   "pagine": 36,
+   "mese": 6,
+   "giorno": 11,
+   "sbn": {
+    "edizioni": 1,
+    "ultimo": 2016,
+    "dal_2000": 1,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q425644",
+   "nome": "Itzhak Peretz",
+   "it": "Isacco Leyb Peretz",
+   "desc": "Yiddish language author and playwright (1852–1915)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1852,
+   "anni": 175,
+   "pagine": 34,
+   "mese": 6,
+   "giorno": 11,
+   "sbn": {
+    "edizioni": 0,
+    "ultimo": null,
+    "dal_2000": 0,
+    "trovato": false
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q123053",
+   "nome": "Johanna Spyri",
+   "it": "Johanna Spyri",
+   "desc": "Swiss writer (1827–1901)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1827,
+   "anni": 200,
+   "pagine": 70,
+   "mese": 6,
+   "giorno": 12,
+   "sbn": {
+    "edizioni": 91,
+    "ultimo": 2021,
+    "dal_2000": 62,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q58074",
+   "nome": "Erik Erikson",
+   "it": "Erik Erikson",
+   "desc": "American German-born psychoanalyst & essayist",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1902,
+   "anni": 125,
+   "pagine": 72,
+   "mese": 6,
+   "giorno": 15,
+   "sbn": {
+    "edizioni": 18,
+    "ultimo": 1970,
+    "dal_2000": 5,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q783017",
+   "nome": "A Sound of Thunder",
+   "it": "Rumore di tuono",
+   "desc": "short story by Ray Bradbury",
+   "autore": "Ray Bradbury",
+   "autore_qid": "Q40640",
+   "anno": 1952,
+   "anni": 75,
+   "pagine": 17,
+   "mese": 6,
+   "giorno": 28,
+   "sbn": {
+    "edizioni": 84,
+    "ultimo": 2022,
+    "dal_2000": 47,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q36591",
+   "nome": "Vladimir Nabokov",
+   "it": "Vladimir Nabokov",
+   "desc": "Russian-American novelist, lepidopterist, professor (1899–1977)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1977,
+   "anni": 50,
+   "pagine": 154,
+   "mese": 7,
+   "giorno": 2,
+   "sbn": {
+    "edizioni": 71,
+    "ultimo": 2021,
+    "dal_2000": 44,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q315808",
+   "nome": "Neil Simon",
+   "it": "Neil Simon",
+   "desc": "American playwright, writer, and academic (1927–2018)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 47,
+   "mese": 7,
+   "giorno": 4,
+   "sbn": {
+    "edizioni": 30,
+    "ultimo": 1969,
+    "dal_2000": 21,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q465700",
+   "nome": "Hilary Mantel",
+   "it": "Hilary Mantel",
+   "desc": "British writer (1952–2022)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1952,
+   "anni": 75,
+   "pagine": 57,
+   "mese": 7,
+   "giorno": 6,
+   "sbn": {
+    "edizioni": 4,
+    "ultimo": 2020,
+    "dal_2000": 4,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q334118",
+   "nome": "Nicolás Guillén",
+   "it": "Nicolás Guillén",
+   "desc": "Cuban poet, journalist, political activist, and writer (1902–1989)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1902,
+   "anni": 125,
+   "pagine": 38,
+   "mese": 7,
+   "giorno": 10,
+   "sbn": {
+    "edizioni": 10,
+    "ultimo": 2021,
+    "dal_2000": 5,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q313038",
+   "nome": "Jeff Lindsay",
+   "it": "Jeff Lindsay",
+   "desc": "American playwright and crime novelist (born 1952)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1952,
+   "anni": 75,
+   "pagine": 36,
+   "mese": 7,
+   "giorno": 14,
+   "sbn": {
+    "edizioni": 0,
+    "ultimo": null,
+    "dal_2000": 0,
+    "trovato": false
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q466672",
+   "nome": "Simin Behbahani",
+   "it": "Simin Behbahani",
+   "desc": "Iranian poet (1927-2014)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 36,
+   "mese": 7,
+   "giorno": 20,
+   "sbn": {
+    "edizioni": 1,
+    "ultimo": 2016,
+    "dal_2000": 1,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q588692",
+   "nome": "Eric Hoffer",
+   "it": "Eric Hoffer",
+   "desc": "American philosopher (1902–1983)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1902,
+   "anni": 125,
+   "pagine": 47,
+   "mese": 7,
+   "giorno": 25,
+   "sbn": {
+    "edizioni": 1,
+    "ultimo": 2013,
+    "dal_2000": 1,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q81244",
+   "nome": "Karl Popper",
+   "it": "Karl Popper",
+   "desc": "Austrian-British philosopher of science and social and política e falsificationism and for criticism of Plato, Hegel and Marx as totalitarian opponents of open society (1902-1994)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1902,
+   "anni": 125,
+   "pagine": 129,
+   "mese": 7,
+   "giorno": 28,
+   "sbn": {
+    "edizioni": 129,
+    "ultimo": 2022,
+    "dal_2000": 60,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q29418",
+   "nome": "John Ashbery",
+   "it": "John Ashbery",
+   "desc": "poet from the United States of America (1927–2017)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 40,
+   "mese": 7,
+   "giorno": 28,
+   "sbn": {
+    "edizioni": 1,
+    "ultimo": 1975,
+    "dal_2000": 0,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q927",
+   "nome": "Harry Mulisch",
+   "it": "Harry Mulisch",
+   "desc": "Dutch writer (1927–2010)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 75,
+   "mese": 7,
+   "giorno": 29,
+   "sbn": {
+    "edizioni": 3,
+    "ultimo": 1960,
+    "dal_2000": 3,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q380456",
+   "nome": "Edward B. Titchener",
+   "it": "Edward Titchener",
+   "desc": "American psychologist (1867–1927)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 37,
+   "mese": 8,
+   "giorno": 3,
+   "sbn": {
+    "edizioni": 0,
+    "ultimo": null,
+    "dal_2000": 0,
+    "trovato": false
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q185548",
+   "nome": "Jostein Gaarder",
+   "it": "Jostein Gaarder",
+   "desc": "Norwegian author (born 1952)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1952,
+   "anni": 75,
+   "pagine": 78,
+   "mese": 8,
+   "giorno": 8,
+   "sbn": {
+    "edizioni": 53,
+    "ultimo": 2022,
+    "dal_2000": 50,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q185714",
+   "nome": "Daniel Keyes",
+   "it": "Daniel Keyes",
+   "desc": "American author",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 45,
+   "mese": 8,
+   "giorno": 9,
+   "sbn": {
+    "edizioni": 5,
+    "ultimo": 2021,
+    "dal_2000": 5,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q468156",
+   "nome": "James Oliver Curwood",
+   "it": "James Oliver Curwood",
+   "desc": "American writer and conservationist (1878–1927)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 31,
+   "mese": 8,
+   "giorno": 13,
+   "sbn": {
+    "edizioni": 61,
+    "ultimo": 1934,
+    "dal_2000": 30,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q350778",
+   "nome": "Alexander Luria",
+   "it": "Aleksandr Romanovič Lurija",
+   "desc": "Soviet psychologist (1902–1977)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1977,
+   "anni": 50,
+   "pagine": 41,
+   "mese": 8,
+   "giorno": 14,
+   "sbn": {
+    "edizioni": 19,
+    "ultimo": 2020,
+    "dal_2000": 3,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q272706",
+   "nome": "Georgette Heyer",
+   "it": "Georgette Heyer",
+   "desc": "British historical romance and detective fiction novelist (1902–1974)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1902,
+   "anni": 125,
+   "pagine": 37,
+   "mese": 8,
+   "giorno": 16,
+   "sbn": {
+    "edizioni": 60,
+    "ultimo": 2023,
+    "dal_2000": 53,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q334842",
+   "nome": "Marvin Harris",
+   "it": "Marvin Harris",
+   "desc": "American anthropologist (1927-2001)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 35,
+   "mese": 8,
+   "giorno": 18,
+   "sbn": {
+    "edizioni": 8,
+    "ultimo": 2017,
+    "dal_2000": 4,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q719228",
+   "nome": "Ogden Nash",
+   "it": "Ogden Nash",
+   "desc": "American poet (1902–1971)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1902,
+   "anni": 125,
+   "pagine": 36,
+   "mese": 8,
+   "giorno": 19,
+   "sbn": {
+    "edizioni": 3,
+    "ultimo": 1981,
+    "dal_2000": 0,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q379589",
+   "nome": "Ananda Coomaraswamy",
+   "it": "Ananda Coomaraswamy",
+   "desc": "Sri Lankan Tamil metaphysician (1877–1947)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1877,
+   "anni": 150,
+   "pagine": 43,
+   "mese": 8,
+   "giorno": 22,
+   "sbn": {
+    "edizioni": 20,
+    "ultimo": 2021,
+    "dal_2000": 14,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q185105",
+   "nome": "Fernand Braudel",
+   "it": "Fernand Braudel",
+   "desc": "French historian and leader of the Annales School",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1902,
+   "anni": 125,
+   "pagine": 71,
+   "mese": 8,
+   "giorno": 24,
+   "sbn": {
+    "edizioni": 63,
+    "ultimo": 2023,
+    "dal_2000": 27,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q630446",
+   "nome": "John Green",
+   "it": "John Green",
+   "desc": "American author and vlogger",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1977,
+   "anni": 50,
+   "pagine": 66,
+   "mese": 8,
+   "giorno": 24,
+   "sbn": {
+    "edizioni": 0,
+    "ultimo": null,
+    "dal_2000": 0,
+    "trovato": false
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q26505",
+   "nome": "The Old Man and the Sea",
+   "it": "Il vecchio e il mare",
+   "desc": "1952 short novel by Ernest Hemingway, written between December 1950 and February 1951",
+   "autore": "Ernest Hemingway",
+   "autore_qid": "Q23434",
+   "anno": 1952,
+   "anni": 75,
+   "pagine": 91,
+   "mese": 9,
+   "giorno": 1,
+   "sbn": {
+    "edizioni": 229,
+    "ultimo": 2023,
+    "dal_2000": 107,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q287953",
+   "nome": "Jean Rostand",
+   "it": "Jean Rostand",
+   "desc": "French writer (1894–1977)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1977,
+   "anni": 50,
+   "pagine": 39,
+   "mese": 9,
+   "giorno": 4,
+   "sbn": {
+    "edizioni": 24,
+    "ultimo": 1969,
+    "dal_2000": 16,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q76526",
+   "nome": "E. F. Schumacher",
+   "it": "Ernst Friedrich Schumacher",
+   "desc": "British economist (1911–1977)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1977,
+   "anni": 50,
+   "pagine": 38,
+   "mese": 9,
+   "giorno": 4,
+   "sbn": {
+    "edizioni": 3,
+    "ultimo": 2011,
+    "dal_2000": 1,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q981448",
+   "nome": "Robert Lowell",
+   "it": "Robert Lowell",
+   "desc": "American poet (1917–1977)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1977,
+   "anni": 50,
+   "pagine": 37,
+   "mese": 9,
+   "giorno": 12,
+   "sbn": {
+    "edizioni": 4,
+    "ultimo": 2010,
+    "dal_2000": 1,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q277260",
+   "nome": "Rage",
+   "it": "Ossessione",
+   "desc": "1977 novel by Stephen King",
+   "autore": "Stephen King",
+   "autore_qid": "Q39829",
+   "anno": 1977,
+   "anni": 50,
+   "pagine": 25,
+   "mese": 9,
+   "giorno": 13,
+   "sbn": {
+    "edizioni": 503,
+    "ultimo": 2023,
+    "dal_2000": 394,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q230141",
+   "nome": "Chimamanda Ngozi Adichie",
+   "it": "Chimamanda Ngozi Adichie",
+   "desc": "Nigerian writer (born 1977)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1977,
+   "anni": 50,
+   "pagine": 98,
+   "mese": 9,
+   "giorno": 15,
+   "sbn": {
+    "edizioni": 2,
+    "ultimo": 2017,
+    "dal_2000": 2,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q79762",
+   "nome": "The Silmarillion",
+   "it": "Il Silmarillion",
+   "desc": "collection of myths and stories written by J. R. R. Tolkien",
+   "autore": "J. R. R. Tolkien",
+   "autore_qid": "Q892",
+   "anno": 1977,
+   "anni": 50,
+   "pagine": 66,
+   "mese": 9,
+   "giorno": 15,
+   "sbn": {
+    "edizioni": 204,
+    "ultimo": 2022,
+    "dal_2000": 166,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q331656",
+   "nome": "The Voyage of the Dawn Treader",
+   "it": "Il viaggio del veliero",
+   "desc": "fantasy novel by C. S. Lewis",
+   "autore": "C. S. Lewis",
+   "autore_qid": "Q9204",
+   "anno": 1952,
+   "anni": 75,
+   "pagine": 42,
+   "mese": 9,
+   "giorno": 15,
+   "sbn": {
+    "edizioni": 74,
+    "ultimo": 2021,
+    "dal_2000": 59,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q330826",
+   "nome": "Ainulindalë",
+   "it": "Musica degli Ainur",
+   "desc": "short story by J.R.R. Tolkien",
+   "autore": "J. R. R. Tolkien",
+   "autore_qid": "Q892",
+   "anno": 1977,
+   "anni": 50,
+   "pagine": 23,
+   "mese": 9,
+   "giorno": 15,
+   "sbn": {
+    "edizioni": 204,
+    "ultimo": 2022,
+    "dal_2000": 166,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q315152",
+   "nome": "Masaoka Shiki",
+   "it": "Masaoka Shiki",
+   "desc": "Japanese poet, author, and literary critic in Meiji period Japan (1867-1902)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1902,
+   "anni": 125,
+   "pagine": 43,
+   "mese": 9,
+   "giorno": 19,
+   "sbn": {
+    "edizioni": 0,
+    "ultimo": null,
+    "dal_2000": 0,
+    "trovato": false
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q439578",
+   "nome": "Luis Cernuda",
+   "it": "Luis Cernuda",
+   "desc": "Spanish poet (1902–1963)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1902,
+   "anni": 125,
+   "pagine": 39,
+   "mese": 9,
+   "giorno": 21,
+   "sbn": {
+    "edizioni": 2,
+    "ultimo": 2007,
+    "dal_2000": 2,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q259507",
+   "nome": "bell hooks",
+   "it": "bell hooks",
+   "desc": "American author and activist (1952–2021)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1952,
+   "anni": 75,
+   "pagine": 62,
+   "mese": 9,
+   "giorno": 25,
+   "sbn": {
+    "edizioni": 4,
+    "ultimo": 2022,
+    "dal_2000": 3,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q76518",
+   "nome": "Hans Vaihinger",
+   "it": "Hans Vaihinger",
+   "desc": "German philosopher (1852–1933)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1852,
+   "anni": 175,
+   "pagine": 32,
+   "mese": 9,
+   "giorno": 25,
+   "sbn": {
+    "edizioni": 0,
+    "ultimo": null,
+    "dal_2000": 0,
+    "trovato": false
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q238584",
+   "nome": "R. D. Laing",
+   "it": "Ronald Laing",
+   "desc": "unorthodox Scottish psychiatrist",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 57,
+   "mese": 10,
+   "giorno": 7,
+   "sbn": {
+    "edizioni": 21,
+    "ultimo": 1980,
+    "dal_2000": 13,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q6538",
+   "nome": "Günter Grass",
+   "it": null,
+   "desc": "German novelist, poet, playwright, illustrator, graphic artist, and sculptor (1927–2015)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 137,
+   "mese": 10,
+   "giorno": 16,
+   "sbn": {
+    "edizioni": 26,
+    "ultimo": 1969,
+    "dal_2000": 17,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q838776",
+   "nome": "Bridge to Terabithia",
+   "it": "Un ponte per Terabithia",
+   "desc": "1977 novel by Katherine Paterson",
+   "autore": "Katherine Paterson",
+   "autore_qid": "Q236321",
+   "anno": 1977,
+   "anni": 50,
+   "pagine": 26,
+   "mese": 10,
+   "giorno": 21,
+   "sbn": {
+    "edizioni": 10,
+    "ultimo": 2021,
+    "dal_2000": 8,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q157318",
+   "nome": "Leszek Kołakowski",
+   "it": "Leszek Kołakowski",
+   "desc": "Philosopher, historian of ideas (1927–2009)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 54,
+   "mese": 10,
+   "giorno": 23,
+   "sbn": {
+    "edizioni": 0,
+    "ultimo": null,
+    "dal_2000": 0,
+    "trovato": false
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q260604",
+   "nome": "Antjie Krog",
+   "it": "Antjie Krog",
+   "desc": "South African writer and academic",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1952,
+   "anni": 75,
+   "pagine": 30,
+   "mese": 10,
+   "giorno": 23,
+   "sbn": {
+    "edizioni": 3,
+    "ultimo": 2006,
+    "dal_2000": 2,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q311745",
+   "nome": "Lawrence Kohlberg",
+   "it": "Lawrence Kohlberg",
+   "desc": "American psychologist",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 45,
+   "mese": 10,
+   "giorno": 25,
+   "sbn": {
+    "edizioni": 0,
+    "ultimo": null,
+    "dal_2000": 0,
+    "trovato": false
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q186123",
+   "nome": "Francis Fukuyama",
+   "it": "Francis Fukuyama",
+   "desc": "American political scientist, political economist, and author",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1952,
+   "anni": 75,
+   "pagine": 80,
+   "mese": 10,
+   "giorno": 27,
+   "sbn": {
+    "edizioni": 10,
+    "ultimo": 2011,
+    "dal_2000": 8,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q81071",
+   "nome": "James M. Cain",
+   "it": "James M. Cain",
+   "desc": "American novelist, short story writer, journalist (1892–1977)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1977,
+   "anni": 50,
+   "pagine": 34,
+   "mese": 10,
+   "giorno": 27,
+   "sbn": {
+    "edizioni": 51,
+    "ultimo": 2020,
+    "dal_2000": 27,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q381734",
+   "nome": "Nordahl Grieg",
+   "it": "Nordahl Grieg",
+   "desc": "Norwegian author (1902–1943)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1902,
+   "anni": 125,
+   "pagine": 42,
+   "mese": 11,
+   "giorno": 1,
+   "sbn": {
+    "edizioni": 0,
+    "ultimo": null,
+    "dal_2000": 0,
+    "trovato": false
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q192214",
+   "nome": "René Goscinny",
+   "it": "René Goscinny",
+   "desc": "French comic book artist and author (1926-1977)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1977,
+   "anni": 50,
+   "pagine": 61,
+   "mese": 11,
+   "giorno": 5,
+   "sbn": {
+    "edizioni": 177,
+    "ultimo": 1980,
+    "dal_2000": 115,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q310257",
+   "nome": "Michael Cunningham",
+   "it": "Michael Cunningham",
+   "desc": "American novelist and screenwriter",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1952,
+   "anni": 75,
+   "pagine": 46,
+   "mese": 11,
+   "giorno": 6,
+   "sbn": {
+    "edizioni": 24,
+    "ultimo": 2023,
+    "dal_2000": 23,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q919277",
+   "nome": "William Hope Hodgson",
+   "it": "William Hope Hodgson",
+   "desc": "British writer (1877–1918)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1877,
+   "anni": 150,
+   "pagine": 30,
+   "mese": 11,
+   "giorno": 15,
+   "sbn": {
+    "edizioni": 9,
+    "ultimo": 2022,
+    "dal_2000": 7,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q211392",
+   "nome": "Endre Ady",
+   "it": "Endre Ady",
+   "desc": "Hungarian poet (1877–1919)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1877,
+   "anni": 150,
+   "pagine": 53,
+   "mese": 11,
+   "giorno": 22,
+   "sbn": {
+    "edizioni": 10,
+    "ultimo": 1959,
+    "dal_2000": 2,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q921405",
+   "nome": "Stanisław Przybyszewski",
+   "it": "Stanisław Przybyszewski",
+   "desc": "Polish writer, playwright and journalist (1868–1927)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 38,
+   "mese": 11,
+   "giorno": 23,
+   "sbn": {
+    "edizioni": 10,
+    "ultimo": 1932,
+    "dal_2000": 5,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q880092",
+   "nome": "Black Beauty",
+   "it": "Black Beauty",
+   "desc": "1877 novel by Anna Sewell",
+   "autore": "Anna Sewell",
+   "autore_qid": "Q258741",
+   "anno": 1877,
+   "anni": 150,
+   "pagine": 36,
+   "mese": 11,
+   "giorno": 24,
+   "sbn": {
+    "edizioni": 12,
+    "ultimo": 1896,
+    "dal_2000": 7,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q380728",
+   "nome": "Fyodor Sologub",
+   "it": "Fëdor Sologub",
+   "desc": "Russian writer (1863–1927)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 43,
+   "mese": 12,
+   "giorno": 5,
+   "sbn": {
+    "edizioni": 9,
+    "ultimo": 1923,
+    "dal_2000": 4,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q57238",
+   "nome": "Niklas Luhmann",
+   "it": "Niklas Luhmann",
+   "desc": "German sociologist, administration expert, and social systems theorist (1927-1998)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 48,
+   "mese": 12,
+   "giorno": 8,
+   "sbn": {
+    "edizioni": 47,
+    "ultimo": 2021,
+    "dal_2000": 11,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q77082",
+   "nome": "Richard von Krafft-Ebing",
+   "it": "Richard von Krafft-Ebing",
+   "desc": "Austrian neurologist, psychiatrist, and nobleman (1840–1902)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1902,
+   "anni": 125,
+   "pagine": 43,
+   "mese": 12,
+   "giorno": 22,
+   "sbn": {
+    "edizioni": 0,
+    "ultimo": null,
+    "dal_2000": 0,
+    "trovato": false
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q231736",
+   "nome": "Mary Higgins Clark",
+   "it": "Mary Higgins Clark",
+   "desc": "American author of suspense novels (1927–2020)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 53,
+   "mese": 12,
+   "giorno": 24,
+   "sbn": {
+    "edizioni": 161,
+    "ultimo": 2022,
+    "dal_2000": 128,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q221723",
+   "nome": "Vladimir Bekhterev",
+   "it": "Vladimir Michajlovič Bechterev",
+   "desc": "Russian neurologist",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 50,
+   "mese": 12,
+   "giorno": 24,
+   "sbn": {
+    "edizioni": 1,
+    "ultimo": 1909,
+    "dal_2000": 1,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q313929",
+   "nome": "Mortimer J. Adler",
+   "it": "Mortimer Adler",
+   "desc": "American philosopher, author and educator (1902–2001)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1902,
+   "anni": 125,
+   "pagine": 44,
+   "mese": 12,
+   "giorno": 28,
+   "sbn": {
+    "edizioni": 5,
+    "ultimo": 1989,
+    "dal_2000": 2,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q504",
+   "nome": "Émile Zola",
+   "it": "Émile Zola",
+   "desc": "French novelist, journalist, playwright, and poet (1840–1902)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1902,
+   "anni": 125,
+   "pagine": 167,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 541,
+    "ultimo": 2022,
+    "dal_2000": 359,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q25973",
+   "nome": "Hermann Hesse",
+   "it": "Hermann Hesse",
+   "desc": "Nobel Prize winning German-Swiss poet, novelist and painter (1877–1962)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1877,
+   "anni": 150,
+   "pagine": 164,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 287,
+    "ultimo": 2022,
+    "dal_2000": 134,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q41513",
+   "nome": "William Blake",
+   "it": "William Blake",
+   "desc": "English poet and artist (1757–1827)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1827,
+   "anni": 200,
+   "pagine": 162,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 28,
+    "ultimo": 2020,
+    "dal_2000": 16,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q43718",
+   "nome": "Nikolai Gogol",
+   "it": "Nikolaj Vasil'evič Gogol'",
+   "desc": "Russian writer of Ukrainian origin (1809–1852)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1852,
+   "anni": 175,
+   "pagine": 157,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 223,
+    "ultimo": 1010,
+    "dal_2000": 115,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q147787",
+   "nome": "Anna Karenina",
+   "it": "Anna Karenina",
+   "desc": "1877 novel by Leo Tolstoy",
+   "autore": "Leo Tolstoy",
+   "autore_qid": "Q7243",
+   "anno": 1877,
+   "anni": 150,
+   "pagine": 109,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 664,
+    "ultimo": 2023,
+    "dal_2000": 337,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q186326",
+   "nome": "Ryūnosuke Akutagawa",
+   "it": "Ryūnosuke Akutagawa",
+   "desc": "Japanese writer (1892–1927)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 96,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 15,
+    "ultimo": 2022,
+    "dal_2000": 8,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q220018",
+   "nome": "Anaïs Nin",
+   "it": "Anaïs Nin",
+   "desc": "French-born American author (1903–1977)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1977,
+   "anni": 50,
+   "pagine": 91,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 45,
+    "ultimo": 2020,
+    "dal_2000": 20,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q45735",
+   "nome": "Charlotte's Web",
+   "it": "La tela di Carlotta",
+   "desc": "1952 children's novel by E. B. White",
+   "autore": "E. B. White",
+   "autore_qid": "Q361617",
+   "anno": 1952,
+   "anni": 75,
+   "pagine": 83,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 17,
+    "ultimo": 2016,
+    "dal_2000": 17,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q218698",
+   "nome": "Jerome K. Jerome",
+   "it": "Jerome K. Jerome",
+   "desc": "English humorist (1859-1927)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 83,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 158,
+    "ultimo": 2022,
+    "dal_2000": 80,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q19871",
+   "nome": "Waiting for Godot",
+   "it": "Aspettando Godot",
+   "desc": "play by Samuel Beckett",
+   "autore": "Samuel Beckett",
+   "autore_qid": "Q37327",
+   "anno": 1952,
+   "anni": 75,
+   "pagine": 79,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 73,
+    "ultimo": 2022,
+    "dal_2000": 31,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q166234",
+   "nome": "Ugo Foscolo",
+   "it": "Ugo Foscolo",
+   "desc": "Italian writer and poet (1778–1827)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1827,
+   "anni": 200,
+   "pagine": 77,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 1008,
+    "ultimo": 2022,
+    "dal_2000": 614,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q312829",
+   "nome": "Samuel Butler",
+   "it": "Samuel Butler",
+   "desc": "English novelist and critic (1835–1902)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1902,
+   "anni": 125,
+   "pagine": 72,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 11,
+    "ultimo": 1897,
+    "dal_2000": 7,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q157623",
+   "nome": "Vasily Zhukovsky",
+   "it": "Vasilij Andreevič Žukovskij",
+   "desc": "Russian poet (1783-1852)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1852,
+   "anni": 175,
+   "pagine": 68,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 4,
+    "ultimo": 1989,
+    "dal_2000": 1,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q315346",
+   "nome": "Thomas Moore",
+   "it": "Thomas Moore",
+   "desc": "Irish poet, singer and songwriter (1779–1852)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1852,
+   "anni": 175,
+   "pagine": 67,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 0,
+    "ultimo": null,
+    "dal_2000": 0,
+    "trovato": false
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q219744",
+   "nome": "Luis de Góngora",
+   "it": "Luis de Góngora",
+   "desc": "Spanish Baroque lyric poet (1561-1627)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1627,
+   "anni": 400,
+   "pagine": 64,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 0,
+    "ultimo": null,
+    "dal_2000": 0,
+    "trovato": false
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q45192",
+   "nome": "The Hound of the Baskervilles",
+   "it": "Il mastino dei Baskerville",
+   "desc": "crime novel by Arthur Conan Doyle",
+   "autore": "Arthur Conan Doyle",
+   "autore_qid": "Q35610",
+   "anno": 1902,
+   "anni": 125,
+   "pagine": 63,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 459,
+    "ultimo": 2023,
+    "dal_2000": 341,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q198644",
+   "nome": "Paul Bourget",
+   "it": "Paul Bourget",
+   "desc": "French writer, playwright and critic (1852–1935)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1852,
+   "anni": 175,
+   "pagine": 61,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 140,
+    "ultimo": 1896,
+    "dal_2000": 87,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q217073",
+   "nome": "Steppenwolf",
+   "it": "Il lupo della steppa",
+   "desc": "1927 novel by Hermann Hesse",
+   "autore": "Hermann Hesse",
+   "autore_qid": "Q25973",
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 58,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 287,
+    "ultimo": 2022,
+    "dal_2000": 134,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q57966",
+   "nome": "Wilhelm Hauff",
+   "it": "Wilhelm Hauff",
+   "desc": "German poet and novelist (1802–1827)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1827,
+   "anni": 200,
+   "pagine": 58,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 37,
+    "ultimo": 1934,
+    "dal_2000": 19,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q316045",
+   "nome": "Georg Brandes",
+   "it": "Georg Brandes",
+   "desc": "Danish literature critic and scholar (1842–1927)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 54,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 13,
+    "ultimo": 1903,
+    "dal_2000": 7,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q317475",
+   "nome": "Ali Shariati",
+   "it": "Ali Shariati",
+   "desc": "Iranian writer, scholar of Islam, and political activist(1933-1977)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1977,
+   "anni": 50,
+   "pagine": 53,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 0,
+    "ultimo": null,
+    "dal_2000": 0,
+    "trovato": false
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q298827",
+   "nome": "Gaston Leroux",
+   "it": "Gaston Leroux",
+   "desc": "French author and journalist (1868–1927)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 53,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 79,
+    "ultimo": 2022,
+    "dal_2000": 58,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q301983",
+   "nome": "Bret Harte",
+   "it": "Bret Harte",
+   "desc": "American writer and poet (1836–1902)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1902,
+   "anni": 125,
+   "pagine": 49,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 17,
+    "ultimo": 1892,
+    "dal_2000": 13,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q379762",
+   "nome": "Vikram Seth",
+   "it": "Vikram Seth",
+   "desc": "Indian novelist and poet",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1952,
+   "anni": 75,
+   "pagine": 48,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 10,
+    "ultimo": 2017,
+    "dal_2000": 8,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q849701",
+   "nome": "East of Eden",
+   "it": "La valle dell'Eden",
+   "desc": "1952 novel by John Steinbeck",
+   "autore": "John Steinbeck",
+   "autore_qid": "Q39212",
+   "anno": 1952,
+   "anni": 75,
+   "pagine": 48,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 274,
+    "ultimo": 1980,
+    "dal_2000": 146,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q239540",
+   "nome": "Augusta, Lady Gregory",
+   "it": "Augusta Gregory",
+   "desc": "Irish playwright, poet, folklorist (1852-1932)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1852,
+   "anni": 175,
+   "pagine": 45,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 2,
+    "ultimo": 2005,
+    "dal_2000": 2,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q478016",
+   "nome": "To the Lighthouse",
+   "it": "Gita al faro",
+   "desc": "1927 novel by Virginia Woolf",
+   "autore": "Virginia Woolf",
+   "autore_qid": "Q40909",
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 44,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 219,
+    "ultimo": 2022,
+    "dal_2000": 133,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q315176",
+   "nome": "Charles De Coster",
+   "it": "Charles De Coster",
+   "desc": "Belgian novelist (1827–1879)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1827,
+   "anni": 200,
+   "pagine": 44,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 28,
+    "ultimo": 1932,
+    "dal_2000": 16,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q57879",
+   "nome": "Wilhelm Müller",
+   "it": "Wilhelm Müller",
+   "desc": "German poet (1794-1827)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1827,
+   "anni": 200,
+   "pagine": 42,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 0,
+    "ultimo": null,
+    "dal_2000": 0,
+    "trovato": false
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q350778",
+   "nome": "Alexander Luria",
+   "it": "Aleksandr Romanovič Lurija",
+   "desc": "Soviet psychologist (1902–1977)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1902,
+   "anni": 125,
+   "pagine": 41,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 19,
+    "ultimo": 2020,
+    "dal_2000": 3,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q973869",
+   "nome": "Mirza Shafi Vazeh",
+   "it": "Mirza Shafi Vazeh",
+   "desc": "Azerbaijani poet (1794–1852)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1852,
+   "anni": 175,
+   "pagine": 39,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 0,
+    "ultimo": null,
+    "dal_2000": 0,
+    "trovato": false
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q28491",
+   "nome": "The Betrothed",
+   "it": "I promessi sposi",
+   "desc": "Italian historical novel by Alessandro Manzoni",
+   "autore": "Alessandro Manzoni",
+   "autore_qid": "Q1064",
+   "anno": 1827,
+   "anni": 200,
+   "pagine": 38,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 2440,
+    "ultimo": 2023,
+    "dal_2000": 1382,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q448143",
+   "nome": "Mikhail Artsybashev",
+   "it": "Michail Arcybašev",
+   "desc": "Russian writer and playwright (1878–1927)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 37,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 9,
+    "ultimo": 1929,
+    "dal_2000": 6,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q379290",
+   "nome": "Jacint Verdaguer",
+   "it": "Jacint Verdaguer",
+   "desc": "Catalan writer and poet (1845-1902)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1902,
+   "anni": 125,
+   "pagine": 37,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 8,
+    "ultimo": 1917,
+    "dal_2000": 2,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q291397",
+   "nome": "Fernán Caballero",
+   "it": "Fernán Caballero",
+   "desc": "Spanish women novelist (1796-1877)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1877,
+   "anni": 150,
+   "pagine": 36,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 17,
+    "ultimo": 1872,
+    "dal_2000": 10,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q628346",
+   "nome": "Dick Bruna",
+   "it": "Dick Bruna",
+   "desc": "Dutch graphic designer (1927-2017)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 35,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 23,
+    "ultimo": 1989,
+    "dal_2000": 12,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q606465",
+   "nome": "The Thorn Birds",
+   "it": "Uccelli di rovo",
+   "desc": "1977 novel by Colleen McCullough",
+   "autore": "Colleen McCullough",
+   "autore_qid": "Q228801",
+   "anno": 1977,
+   "anni": 50,
+   "pagine": 34,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 66,
+    "ultimo": 1980,
+    "dal_2000": 37,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q344865",
+   "nome": "Thomas Middleton",
+   "it": "Thomas Middleton",
+   "desc": "English playwright and poet",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1627,
+   "anni": 400,
+   "pagine": 34,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 3,
+    "ultimo": 1990,
+    "dal_2000": 0,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q31215",
+   "nome": "Miloš Crnjanski",
+   "it": "Miloš Crnjanski",
+   "desc": "expressionist modernist poet, author, and diplomat from Austria-Hungary",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1977,
+   "anni": 50,
+   "pagine": 33,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 4,
+    "ultimo": 2019,
+    "dal_2000": 1,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q384594",
+   "nome": "Matilde Serao",
+   "it": "Matilde Serao",
+   "desc": "Italian journalist and writer, editor (1856–1927)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 33,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 265,
+    "ultimo": 2022,
+    "dal_2000": 173,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q48229",
+   "nome": "Lost in America",
+   "it": "America",
+   "desc": "unfinished novel by Franz Kafka",
+   "autore": "Franz Kafka",
+   "autore_qid": "Q905",
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 33,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 286,
+    "ultimo": 2023,
+    "dal_2000": 163,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q946877",
+   "nome": "What Is to Be Done?",
+   "it": "Che fare?",
+   "desc": "1902 pamphlet by Lenin that argues for a vanguard to spread Marxism since workers do not spontaneously become political by fighting economic battles, which precipitated the Bolshevik–Menshevik split",
+   "autore": "Vladimir Lenin",
+   "autore_qid": "Q1394",
+   "anno": 1902,
+   "anni": 125,
+   "pagine": 33,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 360,
+    "ultimo": 2022,
+    "dal_2000": 153,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q1233830",
+   "nome": "New Atlantis",
+   "it": "La nuova Atlantide",
+   "desc": "incomplete utopian novel by Sir Francis Bacon",
+   "autore": "Francis Bacon",
+   "autore_qid": "Q37388",
+   "anno": 1627,
+   "anni": 400,
+   "pagine": 33,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 74,
+    "ultimo": 1828,
+    "dal_2000": 45,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q2119956",
+   "nome": "Urvashi Butalia",
+   "it": "Urvashi Butalia",
+   "desc": "Indian feminist and historian",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1952,
+   "anni": 75,
+   "pagine": 32,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 0,
+    "ultimo": null,
+    "dal_2000": 0,
+    "trovato": false
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q1129378",
+   "nome": "The Case-Book of Sherlock Holmes",
+   "it": "Il taccuino di Sherlock Holmes",
+   "desc": "collection of short stories by Arthur Conan Doyle",
+   "autore": "Arthur Conan Doyle",
+   "autore_qid": "Q35610",
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 32,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 459,
+    "ultimo": 2023,
+    "dal_2000": 341,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q171242",
+   "nome": "Gleb Uspensky",
+   "it": "Gleb Ivanovič Uspenskij",
+   "desc": "Russian writer (1843-1902)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1902,
+   "anni": 125,
+   "pagine": 32,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 0,
+    "ultimo": null,
+    "dal_2000": 0,
+    "trovato": false
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q429915",
+   "nome": "Alexander Sumarokov",
+   "it": "Aleksandr Petrovič Sumarokov",
+   "desc": "Russian poet, playwright",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1777,
+   "anni": 250,
+   "pagine": 32,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 0,
+    "ultimo": null,
+    "dal_2000": 0,
+    "trovato": false
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q580463",
+   "nome": "The Tale of Peter Rabbit",
+   "it": "La storia di Peter Coniglio",
+   "desc": "book by Beatrix Potter",
+   "autore": "Beatrix Potter",
+   "autore_qid": "Q214565",
+   "anno": 1902,
+   "anni": 125,
+   "pagine": 31,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 65,
+    "ultimo": 2023,
+    "dal_2000": 55,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q574630",
+   "nome": "Anti-Dühring",
+   "it": "Anti-Dühring",
+   "desc": "polemic pamphlet by Friedrich Engels against Eugen Dühring",
+   "autore": "Friedrich Engels",
+   "autore_qid": "Q34787",
+   "anno": 1877,
+   "anni": 150,
+   "pagine": 31,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 381,
+    "ultimo": 2022,
+    "dal_2000": 224,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q11843",
+   "nome": "Snow-White and Rose-Red",
+   "it": "Biancaneve e Rosarossa",
+   "desc": "fairy tale by the Brothers Grimm",
+   "autore": "Brothers Grimm",
+   "autore_qid": "Q2793",
+   "anno": 1827,
+   "anni": 200,
+   "pagine": 31,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 0,
+    "ultimo": null,
+    "dal_2000": 0,
+    "trovato": false
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q467741",
+   "nome": "Veniamin Kaverin",
+   "it": "Veniamin Aleksandrovič Kaverin",
+   "desc": "Russian-Soviet writer and memoirist (1902–1989)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1902,
+   "anni": 125,
+   "pagine": 30,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 1,
+    "ultimo": 1966,
+    "dal_2000": 0,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q839800",
+   "nome": "Foundation and Empire",
+   "it": "Fondazione e Impero",
+   "desc": "1952 novel by Isaac Asimov",
+   "autore": "Isaac Asimov",
+   "autore_qid": "Q34981",
+   "anno": 1952,
+   "anni": 75,
+   "pagine": 29,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 243,
+    "ultimo": 2022,
+    "dal_2000": 106,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q1198259",
+   "nome": "The Eighteenth Brumaire of Louis Bonaparte",
+   "it": "Il 18 brumaio di Luigi Bonaparte",
+   "desc": "1852 essay by Karl Marx on the French coup of 1851",
+   "autore": "Karl Marx",
+   "autore_qid": "Q9061",
+   "anno": 1852,
+   "anni": 175,
+   "pagine": 29,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 584,
+    "ultimo": 2023,
+    "dal_2000": 311,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q568210",
+   "nome": "They Do It with Mirrors",
+   "it": "Miss Marple: giochi di prestigio",
+   "desc": "1952 novel by Agatha Christie",
+   "autore": "Agatha Christie",
+   "autore_qid": "Q35064",
+   "anno": 1952,
+   "anni": 75,
+   "pagine": 28,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 1041,
+    "ultimo": 2023,
+    "dal_2000": 752,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q143707",
+   "nome": "The Child of the Cavern",
+   "it": "Le Indie nere",
+   "desc": "1877 novel by Jules Verne",
+   "autore": "Jules Verne",
+   "autore_qid": "Q33977",
+   "anno": 1877,
+   "anni": 150,
+   "pagine": 27,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 1517,
+    "ultimo": 2023,
+    "dal_2000": 979,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q1210939",
+   "nome": "The Monkey's Paw",
+   "it": "La zampa di scimmia",
+   "desc": "short story by W. W. Jacobs",
+   "autore": "W. W. Jacobs",
+   "autore_qid": "Q1385758",
+   "anno": 1902,
+   "anni": 125,
+   "pagine": 26,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 4,
+    "ultimo": 2013,
+    "dal_2000": 1,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q971152",
+   "nome": "The Dream of a Ridiculous Man",
+   "it": "Il sogno di un uomo ridicolo",
+   "desc": "short story by Fyodor Dostoyevsky written in 1877",
+   "autore": "Fyodor Dostoyevsky",
+   "autore_qid": "Q991",
+   "anno": 1877,
+   "anni": 150,
+   "pagine": 26,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 784,
+    "ultimo": 2023,
+    "dal_2000": 437,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q845106",
+   "nome": "Mrs McGinty's Dead",
+   "it": "Fermate il boia",
+   "desc": "1952 novel by Agatha Christie",
+   "autore": "Agatha Christie",
+   "autore_qid": "Q35064",
+   "anno": 1952,
+   "anni": 75,
+   "pagine": 25,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 1041,
+    "ultimo": 2023,
+    "dal_2000": 752,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q31285",
+   "nome": "Thérèse Desqueyroux",
+   "it": "Thérèse Desqueyroux",
+   "desc": "1927 novel by François Mauriac",
+   "autore": "François Mauriac",
+   "autore_qid": "Q81685",
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 25,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 65,
+    "ultimo": 2022,
+    "dal_2000": 28,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q786615",
+   "nome": "The Currents of Space",
+   "it": "Le correnti dello spazio",
+   "desc": "1952 novel by Isaac Asimov",
+   "autore": "Isaac Asimov",
+   "autore_qid": "Q34981",
+   "anno": 1952,
+   "anni": 75,
+   "pagine": 23,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 243,
+    "ultimo": 2022,
+    "dal_2000": 106,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q2740089",
+   "nome": "The Adventure of the Veiled Lodger",
+   "it": "L’avventura dell’inquilina velata",
+   "desc": "short story by Arthur Conan Doyle",
+   "autore": "Arthur Conan Doyle",
+   "autore_qid": "Q35610",
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 23,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 459,
+    "ultimo": 2023,
+    "dal_2000": 341,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q1212384",
+   "nome": "The Colour Out of Space",
+   "it": "Il colore venuto dallo spazio",
+   "desc": "short story written by American horror author H. P. Lovecraft",
+   "autore": "H. P. Lovecraft",
+   "autore_qid": "Q169566",
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 23,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 107,
+    "ultimo": 2023,
+    "dal_2000": 73,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q443071",
+   "nome": "The Old New Land",
+   "it": "Altneuland",
+   "desc": "1902 novel published by Theodor Herzl",
+   "autore": "Theodor Herzl",
+   "autore_qid": "Q44003",
+   "anno": 1902,
+   "anni": 125,
+   "pagine": 23,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 7,
+    "ultimo": 1925,
+    "dal_2000": 4,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q383835",
+   "nome": "Letter to His Father",
+   "it": "Lettera al padre",
+   "desc": "letter by Franz Kafka to Hermann Kafka",
+   "autore": "Franz Kafka",
+   "autore_qid": "Q905",
+   "anno": 1952,
+   "anni": 75,
+   "pagine": 21,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 286,
+    "ultimo": 2023,
+    "dal_2000": 163,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q1198489",
+   "nome": "A Scanner Darkly",
+   "it": "Un oscuro scrutare",
+   "desc": "1977 novel by Philip K. Dick",
+   "autore": "Philip K. Dick",
+   "autore_qid": "Q171091",
+   "anno": 1977,
+   "anni": 50,
+   "pagine": 20,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 141,
+    "ultimo": 2022,
+    "dal_2000": 114,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q1211785",
+   "nome": "The Bridge over the River Kwai",
+   "it": "Il ponte sul fiume Kwai",
+   "desc": "novel by Pierre Boulle",
+   "autore": "Pierre Boulle",
+   "autore_qid": "Q219910",
+   "anno": 1952,
+   "anni": 75,
+   "pagine": 20,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 84,
+    "ultimo": 1955,
+    "dal_2000": 78,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q1212855",
+   "nome": "The Kip Brothers",
+   "it": "I fratelli Kip",
+   "desc": "novel by Jules Verne",
+   "autore": "Jules Verne",
+   "autore_qid": "Q33977",
+   "anno": 1902,
+   "anni": 125,
+   "pagine": 20,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 1517,
+    "ultimo": 2023,
+    "dal_2000": 979,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q1498315",
+   "nome": "Mutual Aid: A Factor of Evolution",
+   "it": "Il mutuo appoggio: un fattore dell'evoluzione",
+   "desc": "non-fiction work by Peter Kropotkin on the subject of mutual aid",
+   "autore": "Peter Kropotkin",
+   "autore_qid": "Q5752",
+   "anno": 1902,
+   "anni": 125,
+   "pagine": 20,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 116,
+    "ultimo": 2023,
+    "dal_2000": 69,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q1167737",
+   "nome": "The Future of an Illusion",
+   "it": "L'avvenire di un'illusione",
+   "desc": "1927 non-fiction work by Sigmund Freud",
+   "autore": "Sigmund Freud",
+   "autore_qid": "Q9215",
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 19,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 449,
+    "ultimo": 2023,
+    "dal_2000": 202,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q1766899",
+   "nome": "Childhood",
+   "it": "Infanzia",
+   "desc": "first published novel by Leo Tolstoy",
+   "autore": "Leo Tolstoy",
+   "autore_qid": "Q7243",
+   "anno": 1852,
+   "anni": 175,
+   "pagine": 19,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 664,
+    "ultimo": 2023,
+    "dal_2000": 337,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q389380",
+   "nome": "The Cloven Viscount",
+   "it": "Il visconte dimezzato",
+   "desc": "1952 novel by Italo Calvino",
+   "autore": "Italo Calvino",
+   "autore_qid": "Q154756",
+   "anno": 1952,
+   "anni": 75,
+   "pagine": 18,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 538,
+    "ultimo": 2023,
+    "dal_2000": 260,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q2317316",
+   "nome": "Pickman's Model",
+   "it": "Il modello di Pickman",
+   "desc": "short story by H. P. Lovecraft",
+   "autore": "H. P. Lovecraft",
+   "autore_qid": "Q169566",
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 18,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 107,
+    "ultimo": 2023,
+    "dal_2000": 73,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q649267",
+   "nome": "Player Piano",
+   "it": "Piano meccanico",
+   "desc": "1952 novel by Kurt Vonnegut",
+   "autore": "Kurt Vonnegut",
+   "autore_qid": "Q49074",
+   "anno": 1952,
+   "anni": 75,
+   "pagine": 17,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 44,
+    "ultimo": 2022,
+    "dal_2000": 28,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q1247723",
+   "nome": "Just So Stories",
+   "it": "Storie proprio così",
+   "desc": "short story collection by Rudyard Kipling",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1902,
+   "anni": 125,
+   "pagine": 17,
+   "mese": null,
+   "giorno": null,
+   "sbn": null
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q2605035",
+   "nome": "The Varieties of Religious Experience",
+   "it": "La varie forme dell'esperienza religiosa. Uno studio sulla natura umana",
+   "desc": "essay by William James",
+   "autore": "William James",
+   "autore_qid": "Q125249",
+   "anno": 1902,
+   "anni": 125,
+   "pagine": 17,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 51,
+    "ultimo": 2022,
+    "dal_2000": 25,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q2443779",
+   "nome": "Children of the Corn",
+   "it": "I figli del grano",
+   "desc": "short story by Stephen King",
+   "autore": "Stephen King",
+   "autore_qid": "Q39829",
+   "anno": 1977,
+   "anni": 50,
+   "pagine": 16,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 503,
+    "ultimo": 2023,
+    "dal_2000": 394,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q1388516",
+   "nome": "Twenty-Four Hours in the Life of a Woman",
+   "it": null,
+   "desc": "novella by Stefan Zweig",
+   "autore": "Stefan Zweig",
+   "autore_qid": "Q78491",
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 16,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 129,
+    "ultimo": 2022,
+    "dal_2000": 85,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q1213811",
+   "nome": "The Killers",
+   "it": "Gli uccisori",
+   "desc": "short story by Ernest Hemingway",
+   "autore": "Ernest Hemingway",
+   "autore_qid": "Q23434",
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 16,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 229,
+    "ultimo": 2023,
+    "dal_2000": 107,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q1152481",
+   "nome": "The Dragons of Eden: Speculations on the Evolution of Human Intelligence",
+   "it": "I draghi dell'Eden: considerazioni sull'evoluzione dell'intelligenza umana",
+   "desc": "1977 essay by Carl Sagan",
+   "autore": "Carl Sagan",
+   "autore_qid": "Q410",
+   "anno": 1977,
+   "anni": 50,
+   "pagine": 15,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 16,
+    "ultimo": 1980,
+    "dal_2000": 9,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q2642138",
+   "nome": "A Daughter's a Daughter",
+   "it": "Il destino degli altri",
+   "desc": "book by Agatha Christie",
+   "autore": "Agatha Christie",
+   "autore_qid": "Q35064",
+   "anno": 1952,
+   "anni": 75,
+   "pagine": 15,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 1041,
+    "ultimo": 2023,
+    "dal_2000": 752,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q478110",
+   "nome": "City",
+   "it": "Anni senza fine",
+   "desc": "1952 fix-up novel by Clifford D. Simak",
+   "autore": "Clifford D. Simak",
+   "autore_qid": "Q294625",
+   "anno": 1952,
+   "anni": 75,
+   "pagine": 15,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 12,
+    "ultimo": 2022,
+    "dal_2000": 7,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q4179831",
+   "nome": "Men Without Women",
+   "it": null,
+   "desc": "short story collection by Ernest Hemingway",
+   "autore": "Ernest Hemingway",
+   "autore_qid": "Q23434",
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 15,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 229,
+    "ultimo": 2023,
+    "dal_2000": 107,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q875183",
+   "nome": "Decisive Moments in History",
+   "it": "Momenti fatali",
+   "desc": "1927 essay by Stefan Zweig",
+   "autore": "Stefan Zweig",
+   "autore_qid": "Q78491",
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 15,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 129,
+    "ultimo": 2022,
+    "dal_2000": 85,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q1305285",
+   "nome": "A Dream Play",
+   "it": "Il sogno",
+   "desc": "1902 play by August Strindberg",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1902,
+   "anni": 125,
+   "pagine": 15,
+   "mese": null,
+   "giorno": null,
+   "sbn": null
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q651866",
+   "nome": "Five Children and It",
+   "it": null,
+   "desc": "1902 novel by E. Nesbit",
+   "autore": "Edith Nesbit",
+   "autore_qid": "Q231708",
+   "anno": 1902,
+   "anni": 125,
+   "pagine": 15,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 11,
+    "ultimo": 1934,
+    "dal_2000": 7,
+    "trovato": true
+   }
+  }
+ ]
+}
