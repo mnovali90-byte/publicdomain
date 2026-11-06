@@ -39,6 +39,7 @@ SPARQL = "https://query.wikidata.org/sparql"
 LETTERARI = {"romanziere", "poeta", "drammaturgo", "saggista"}
 TIPO_CATALOGO = {"drammaturgo": "Teatro", "poeta": "Poesia", "romanziere": "Romanzo", "saggista": "Saggi"}
 VALIDITA_GIORNI = 20      # una voce in cache più recente di così non viene riscaricata
+LINGUE_VISITE = ("it", "en", "es", "de", "fr")   # lingue di Wikipedia di cui si contano le visite
 PAUSA = 0.25              # secondi tra una richiesta e l'altra (per ciascun lavoratore)
 LAVORATORI = 5            # autori elaborati in parallelo
 BUDGET_MINUTI = float(os.environ.get("BUDGET_MINUTI", "100"))   # oltre questo tempo si salva e si riprende al giro dopo
@@ -81,10 +82,13 @@ def dati_base(codici):
     paesi di cittadinanza, lingue. {codice: {...}}"""
     valori = " ".join("wd:" + c for c in codici)
     q = f"""
-SELECT ?a ?it ?en ?img ?paeseLabel ?linguaLabel WHERE {{
+SELECT ?a ?it ?en ?es ?de ?fr ?img ?paeseLabel ?linguaLabel WHERE {{
   VALUES ?a {{ {valori} }}
   OPTIONAL {{ ?pit schema:about ?a ; schema:isPartOf <https://it.wikipedia.org/> ; schema:name ?it }}
   OPTIONAL {{ ?pen schema:about ?a ; schema:isPartOf <https://en.wikipedia.org/> ; schema:name ?en }}
+  OPTIONAL {{ ?pes schema:about ?a ; schema:isPartOf <https://es.wikipedia.org/> ; schema:name ?es }}
+  OPTIONAL {{ ?pde schema:about ?a ; schema:isPartOf <https://de.wikipedia.org/> ; schema:name ?de }}
+  OPTIONAL {{ ?pfr schema:about ?a ; schema:isPartOf <https://fr.wikipedia.org/> ; schema:name ?fr }}
   OPTIONAL {{ ?a wdt:P18 ?img }}
   OPTIONAL {{ ?a wdt:P27 ?paese }}
   OPTIONAL {{ ?a (wdt:P103|wdt:P1412) ?lingua }}
@@ -94,8 +98,7 @@ SELECT ?a ?it ?en ?img ?paeseLabel ?linguaLabel WHERE {{
     for r in sparql(q):
         c = r["a"]["value"].rsplit("/", 1)[-1]
         d = out.setdefault(c, {"titoli": {}, "img": None, "paesi": [], "lingue": []})
-        d["titoli"] = {"it": r.get("it", {}).get("value") or d["titoli"].get("it"),
-                       "en": r.get("en", {}).get("value") or d["titoli"].get("en")}
+        d["titoli"] = {l: r.get(l, {}).get("value") or d["titoli"].get(l) for l in LINGUE_VISITE}
         if r.get("img") and not d["img"]:
             d["img"] = urllib.parse.unquote(r["img"]["value"].rsplit("/", 1)[-1])
         for chiave, campo in (("paesi", "paeseLabel"), ("lingue", "linguaLabel")):
@@ -246,12 +249,12 @@ def mesi_da_considerare(oggi=None):
     return inizio.strftime("%Y%m%d") + "00", fine.strftime("%Y%m%d") + "00"
 
 
-def visite_per_lingua(titoli, oggi=None):
-    """Visite agli ultimi 12 mesi, separate per lingua di Wikipedia: {"it": n, "en": n}.
+def visite_per_lingua(titoli, oggi=None, lingue=LINGUE_VISITE):
+    """Visite agli ultimi 12 mesi, separate per lingua di Wikipedia: {"it": n, "en": n, ...}.
     0 = l'autore non ha una pagina in quella lingua; None = la pagina c'è ma il dato non è arrivato."""
     inizio, fine = mesi_da_considerare(oggi)
     out = {}
-    for lingua in ("it", "en"):
+    for lingua in lingue:
         t = titoli.get(lingua)
         if not t:
             out[lingua] = 0
@@ -267,7 +270,7 @@ def visite_per_lingua(titoli, oggi=None):
 
 def visite_12_mesi(titoli, oggi=None):
     """Somma it + en (resta per compatibilità con i dati già salvati)."""
-    v = visite_per_lingua(titoli, oggi)
+    v = visite_per_lingua(titoli, oggi, ("it", "en"))
     noti = [x for x in v.values() if x is not None]
     return sum(noti) if noti else None
 
@@ -329,6 +332,8 @@ def calcola_indici(autori):
     solo per i dati vecchi: il sito non la usa più quando ci sono le tre misure."""
     _percentili(autori, "visite_it", "indice_it")
     _percentili(autori, "visite_en", "indice_en")
+    for l in ("es", "de", "fr"):
+        _percentili(autori, "visite_" + l, "indice_" + l)
     _percentili(autori, "pagine_wikipedia", "indice_int")
     comp = {
         "visite": [a["visite_12m"] for a in autori if a.get("visite_12m") is not None],
@@ -369,7 +374,7 @@ def da_aggiornare(voce, oggi):
     """True se mancano dati nuovi (versione vecchia) o se la voce è scaduta."""
     return (voce is None or voce.get("v", 1) < VERSIONE_CACHE or not e_recente(voce, oggi)
             or voce.get("bios_v") != 2        # biografie in italiano e inglese ancora da completare
-            or voce.get("visite_v") != 2)     # visite ancora da separare per lingua
+            or voce.get("visite_v") != 3)     # visite ancora da separare per lingua (3 = anche es, de, fr)
 
 
 def _autore(a, b, opere_a, vecchia, oggi):
@@ -401,14 +406,17 @@ def _autore(a, b, opere_a, vecchia, oggi):
             pref = "it" if "it" in bios else "en"
             voce["bio"], voce["bio_url"], voce["bio_lingua"] = bios[pref]["testo"], bios[pref]["url"], pref
         voce["bios_v"] = 2
-    if serve_pesante or voce.get("visite_v") != 2:
-        # le visite si rifanno anche da sole (2 richieste) quando serve solo separarle per lingua
+    if serve_pesante or voce.get("visite_v") != 3:
+        # se le visite it/en sono già in mano (versione 2) si scaricano solo le lingue che mancano
+        gia = {} if serve_pesante or voce.get("visite_v") != 2 else {l: voce.get("visite_" + l) for l in ("it", "en") if voce.get("visite_" + l) is not None}
         try:
-            v = visite_per_lingua(b["titoli"], oggi)
-            voce["visite_it"], voce["visite_en"] = v["it"], v["en"]
-            noti = [x for x in v.values() if x is not None]
+            v = dict(gia)
+            v.update(visite_per_lingua(b["titoli"], oggi, tuple(l for l in LINGUE_VISITE if l not in gia)))
+            for l in LINGUE_VISITE:
+                voce["visite_" + l] = v[l]
+            noti = [v[l] for l in ("it", "en") if v[l] is not None]
             voce["visite_12m"] = sum(noti) if noti else None
-            voce["visite_v"] = 2     # un 404 (nessun dato) non si ripete ogni volta; un errore di rete solleva e riprova al giro dopo
+            voce["visite_v"] = 3     # un 404 (nessun dato) non si ripete ogni volta; un errore di rete solleva e riprova al giro dopo
         except Exception as e:
             print(f"  visite non riuscite per {a['nome']}: {e}", file=sys.stderr)
     if serve_pesante:
@@ -465,7 +473,7 @@ def elabora_anno(percorso, cache, oggi):
             a["tipo_catalogo"] = [TIPO_CATALOGO[p] for p in a["professioni"] if p in TIPO_CATALOGO]
             voce = cache.get(a["wikidata"], {})
             for k in ("bio", "bio_url", "bio_lingua", "bios", "opere", "n_opere", "generi", "visite_12m", "visite_it", "visite_en",
-                      "gutenberg", "foto", "paesi", "lingue"):
+                      "visite_es", "visite_de", "visite_fr", "gutenberg", "foto", "paesi", "lingue"):
                 if voce.get(k) not in (None, [], ""):
                     a[k] = voce[k]
             if voce:

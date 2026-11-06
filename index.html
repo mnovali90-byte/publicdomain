@@ -193,7 +193,7 @@ dialog::backdrop{background:rgba(12,12,16,.72)}
 .indice .asta{flex:1;height:10px;background:var(--riquadro);position:relative;max-width:320px}
 .indice .asta i{position:absolute;left:0;top:0;bottom:0;background:var(--vermiglio)}
 .nd{color:var(--muto)}
-.mercato{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:14px 0 20px}
+.mercato{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:14px 0 20px}
 .mercato.giur{grid-template-columns:1fr;margin-bottom:6px}
 .mercato .sel-giur{width:100%;background:var(--ink);color:var(--carta);border:1px solid var(--carta);border-radius:0;padding:12px 10px;font:inherit;font-family:var(--mono);font-size:13px;letter-spacing:.04em;text-transform:uppercase;appearance:auto}
 .mercato .et{grid-column:1/-1;font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase}
@@ -255,7 +255,7 @@ dialog::backdrop{background:rgba(12,12,16,.72)}
       <nav class="navigazione" id="navigazione" data-ta="navAria" aria-label="Navigazione"></nav>
     </header>
     <div class="presentazione">
-      <h1 id="pres-tit">Gli autori che diventano liberi in Europa il 1° gennaio</h1>
+      <h1 id="pres-tit">Gli autori che diventano liberi in Italia il 1° gennaio</h1>
       <p data-t="presTesto">Per ognuno vedi quanto è letto, quali opere ha scritto e se in Italia è già stato tradotto. Serve a scegliere cosa ritradurre e pubblicare.</p>
       <p class="fonti" data-t="presFonti">Dati aperti da Wikidata, Wikipedia e SBN, aggiornati ogni mese in automatico.</p>
     </div>
@@ -338,7 +338,7 @@ const CHIAVE_PREFERITI = "pdr_preferiti_v1";
 const CHIAVE_LINGUA = "pdr_lingua_v1";
 const CHIAVE_MERCATO = "pdr_mercato_v1";
 const CHIAVE_GIUR = "pdr_giur_v1";
-const GIUR_OPZ = [["ue","ue"],["de","ue"],["se","ue"],["fr","ue"],["it","ue"],["es","es"],["altri","ue"]];   // [voce del menù, file di dati che usa]
+const GIUR_OPZ = [["it","ue"],["fr","ue"],["de","ue"],["es","es"]];   // [nazione del menù, file di dati che usa]; la classifica passa all'interesse nella lingua della nazione
 const MESI_EN = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 
 const TESTI = {
@@ -353,20 +353,17 @@ it: {
   paEs70: "Spagna: dal {d}.",
   paNota: "Calcolo indicativo, dalle norme del riquadro in fondo alla pagina. Non è consulenza legale.",
   giurEt: "Paese",
-  giurNomi: { ue: "Unione europea · regola base, 70 anni", de: "Germania · 70 anni", se: "Svezia · 70 anni", fr: "Francia · 70 anni + proroghe", it: "Italia · 70 anni + proroghe", es: "Spagna · 80 anni", altri: "Altri paesi UE · da verificare" },
+  giurNomi: { it: "Italia · 70 anni + proroghe", fr: "Francia · 70 anni + proroghe", de: "Germania · 70 anni", es: "Spagna · 80 anni" },
+  paesiNomi: { it: "Italia", fr: "Francia", de: "Germania", es: "Spagna" },
   giurDesc: {
-    ue: "Regola europea di base (direttiva 2006/116): morte + 70 anni. Ogni paese può avere proroghe proprie, che vanno lette nella sua legge.",
-    de: "Germania: morte + 70 anni, nessuna proroga (legge letta, vedi il riquadro in fondo).",
-    se: "Svezia: morte + 70 anni (art. 43 della legge sul diritto d'autore). Nel testo ufficiale letto non ci sono proroghe.",
     fr: "Francia: la lista usa la regola base dei 70 anni, ma ci sono proroghe di guerra per alcune opere e per gli «morti per la Francia». Le date per la Francia sono nella scheda di ogni autore.",
     it: "Italia: la lista usa la regola base dei 70 anni, ma ci sono proroghe per alcune opere del periodo di guerra. Le date per l'Italia sono nella scheda di ogni autore.",
-    es: "Spagna: per gli autori morti prima del 1987 valgono 80 anni dalla morte (legge del 1879). La data è prudente: la legge non dice come si conta l'anno.",
-    altri: "Altri paesi UE (per esempio Bulgaria): vale la regola base dei 70 anni, ma non ho ancora letto le leggi nazionali, quindi non so se ci sono proroghe. Controlla prima di pubblicare."
+    de: "Germania: morte + 70 anni, nessuna proroga (legge letta, vedi il riquadro in fondo).",
+    es: "Spagna: per gli autori morti prima del 1987 valgono 80 anni dalla morte (legge del 1879). La data è prudente: la legge non dice come si conta l'anno."
   },
   regoleTit: "Regole sulla durata, paese per paese",
   regoleNota: "Testi di legge letti il 5 novembre 2026. Non è consulenza legale: prima di pubblicare controlla la norma e la data di morte nel tuo paese.",
-  presTit: "Gli autori che diventano liberi in Europa il 1° gennaio",
-  presTitEs: "Gli autori che diventano liberi in Spagna il 1° gennaio",
+  presTit: "Gli autori che diventano liberi in {p} il 1° gennaio",
   presTesto: "Per ognuno vedi quanto è letto, quali opere ha scritto e se in Italia è già stato tradotto. Serve a scegliere cosa ritradurre e pubblicare.",
   presFonti: "Dati aperti da Wikidata, Wikipedia e SBN, aggiornati ogni mese in automatico.",
   caricamento: "Caricamento…", navAria: "Navigazione", miei: "I miei · {n}",
@@ -392,9 +389,9 @@ it: {
   salva: "Salva nei miei candidati", salvaAria: "Salva {nome} nei miei candidati", inLista: "Nella tua lista",
   chiudi: "Chiudi", copiaLink: "Copia il link", linkCopiato: "Link copiato", copiaPrompt: "Copia il link:",
   popolarita: "Interesse online", visite: "{n} visite su Wikipedia in 12 mesi", visiteNd: "visite Wikipedia: dato non disponibile",
-  mercatoEt: "Ordina per interesse", mNomi: { it: "Italia", en: "Mondo anglofono", int: "Internazionale" },
-  mDesc: { it: "Conta le visite alla pagina Wikipedia in italiano negli ultimi 12 mesi.", en: "Conta le visite alla pagina Wikipedia in inglese negli ultimi 12 mesi, da tutto il mondo (India inclusa).", int: "Conta in quante lingue esiste una pagina Wikimedia sull'autore: non dipende dalla grandezza di un pubblico." },
-  primoPerM: { it: "{r}° per interesse in Italia", en: "{r}° nel mondo anglofono", int: "{r}° per presenza internazionale" },
+  mercatoEt: "Ordina per interesse", mNomi: { it: "Italia", fr: "Francia", de: "Germania", es: "Spagna", en: "Mondo anglofono", int: "Internazionale" },
+  mDesc: { it: "Conta le visite alla pagina Wikipedia in italiano negli ultimi 12 mesi.", fr: "Conta le visite alla pagina Wikipedia in francese negli ultimi 12 mesi, da tutto il mondo francofono.", de: "Conta le visite alla pagina Wikipedia in tedesco negli ultimi 12 mesi, da Germania, Austria e Svizzera.", es: "Conta le visite alla pagina Wikipedia in spagnolo negli ultimi 12 mesi, da tutto il mondo ispanofono (America Latina inclusa).", en: "Conta le visite alla pagina Wikipedia in inglese negli ultimi 12 mesi, da tutto il mondo (India inclusa).", int: "Conta in quante lingue esiste una pagina Wikimedia sull'autore: non dipende dalla grandezza di un pubblico." },
+  primoPerM: { it: "{r}° per interesse in Italia", fr: "{r}° per interesse in Francia", de: "{r}° per interesse in Germania", es: "{r}° per interesse in Spagna", en: "{r}° nel mondo anglofono", int: "{r}° per presenza internazionale" },
   sottoM: { it: "Quanto è letta oggi la sua pagina Wikipedia in italiano, rispetto agli altri autori di questa lista", en: "Quanto è letta oggi la sua pagina Wikipedia in inglese, rispetto agli altri autori di questa lista", int: "In quante lingue esiste una pagina su di lui, rispetto agli altri autori di questa lista" },
   sbnTit: "Edizioni italiane nel catalogo SBN", sbnTrovate: "{n} registrazioni in italiano", sbnUltima: " · la più recente: {y}", sbnDal2000: " · {m} dal 2000",
   sbnNonTrovato: "Autore non trovato in italiano nel catalogo SBN: non vuol dire che non sia tradotto, controlla a mano.",
@@ -439,20 +436,17 @@ en: {
   paEs70: "Spain: from {d}.",
   paNota: "Indicative calculation, based on the rules in the box at the bottom of the page. Not legal advice.",
   giurEt: "Country",
-  giurNomi: { ue: "European Union · base rule, 70 years", de: "Germany · 70 years", se: "Sweden · 70 years", fr: "France · 70 years + extensions", it: "Italy · 70 years + extensions", es: "Spain · 80 years", altri: "Other EU countries · to be verified" },
+  giurNomi: { it: "Italy · 70 years + extensions", fr: "France · 70 years + extensions", de: "Germany · 70 years", es: "Spain · 80 years" },
+  paesiNomi: { it: "Italy", fr: "France", de: "Germany", es: "Spain" },
   giurDesc: {
-    ue: "Basic EU rule (Directive 2006/116): death + 70 years. Each country may have its own extensions, to be read in its own law.",
-    de: "Germany: death + 70 years, no extensions (law read, see the box at the bottom).",
-    se: "Sweden: death + 70 years (Art. 43 of the Copyright Act). The official text I read has no extensions.",
     fr: "France: the list uses the base 70-year rule, but there are wartime extensions for some works and for those who «died for France». The dates for France are in each author's card.",
     it: "Italy: the list uses the base 70-year rule, but there are extensions for some wartime works. The dates for Italy are in each author's card.",
-    es: "Spain: authors who died before 1987 get 80 years after death (1879 law). The date is cautious: the law does not say how the year is counted.",
-    altri: "Other EU countries (for example Bulgaria): the base 70-year rule applies, but I have not yet read the national laws, so I do not know whether they have extensions. Check before publishing."
+    de: "Germany: death + 70 years, no extensions (law read, see the box at the bottom).",
+    es: "Spain: authors who died before 1987 get 80 years after death (1879 law). The date is cautious: the law does not say how the year is counted."
   },
   regoleTit: "Term of protection, country by country",
   regoleNota: "Legal texts read on 5 November 2026. This is not legal advice: before publishing, check the law and the date of death in your country.",
-  presTit: "The authors who become free in Europe on 1 January",
-  presTitEs: "The authors who become free in Spain on 1 January",
+  presTit: "The authors who become free in {p} on 1 January",
   presTesto: "For each one you see how widely read they are, which works they wrote and which editions already exist. Use it to choose what to retranslate and publish.",
   presFonti: "Open data from Wikidata, Wikipedia and SBN, updated automatically every month.",
   caricamento: "Loading…", navAria: "Navigation", miei: "My list · {n}",
@@ -478,9 +472,9 @@ en: {
   salva: "Save to my shortlist", salvaAria: "Save {nome} to my shortlist", inLista: "In your list",
   chiudi: "Close", copiaLink: "Copy link", linkCopiato: "Link copied", copiaPrompt: "Copy the link:",
   popolarita: "Online interest", visite: "{n} Wikipedia views in 12 months", visiteNd: "Wikipedia views: not available",
-  mercatoEt: "Rank by interest", mNomi: { it: "Italy", en: "English-speaking world", int: "International" },
-  mDesc: { it: "Counts views of the author's Italian Wikipedia page over the last 12 months.", en: "Counts views of the English Wikipedia page over the last 12 months, from all over the world (India included).", int: "Counts in how many languages a Wikimedia page about the author exists: it does not depend on the size of one audience." },
-  primoPerM: { it: "#{r} for interest in Italy", en: "#{r} in the English-speaking world", int: "#{r} for international reach" },
+  mercatoEt: "Rank by interest", mNomi: { it: "Italy", fr: "France", de: "Germany", es: "Spain", en: "English-speaking world", int: "International" },
+  mDesc: { it: "Counts views of the author's Italian Wikipedia page over the last 12 months.", fr: "Counts views of the French Wikipedia page over the last 12 months, from the whole French-speaking world.", de: "Counts views of the German Wikipedia page over the last 12 months, from Germany, Austria and Switzerland.", es: "Counts views of the Spanish Wikipedia page over the last 12 months, from the whole Spanish-speaking world (Latin America included).", en: "Counts views of the English Wikipedia page over the last 12 months, from all over the world (India included).", int: "Counts in how many languages a Wikimedia page about the author exists: it does not depend on the size of one audience." },
+  primoPerM: { it: "#{r} for interest in Italy", fr: "#{r} for interest in France", de: "#{r} for interest in Germany", es: "#{r} for interest in Spain", en: "#{r} in the English-speaking world", int: "#{r} for international reach" },
   sottoM: { it: "How much their Italian Wikipedia page is read today, compared with the other authors on this list", en: "How much their English Wikipedia page is read today, compared with the other authors on this list", int: "In how many languages a page about them exists, compared with the other authors on this list" },
   sbnTit: "Italian editions in the SBN catalogue", sbnTrovate: "{n} records in Italian", sbnUltima: " · latest: {y}", sbnDal2000: " · {m} since 2000",
   sbnNonTrovato: "Author not found in Italian in the SBN catalogue: it does not mean they are untranslated, check by hand.",
@@ -527,7 +521,7 @@ function tr(k, v) {
 
 const stato = {
   anni: [], dati: {}, anno: null,
-  giur: "ue", opz: "ue", giurDisp: ["ue"], perGiur: {},
+  giur: "ue", opz: "it", giurDisp: ["ue"], perGiur: {},
   mercato: "it", mercati: false,
   cerca: "", filtro: "letterari", ordine: "popolarita", paese: null, lingua: null, visibili: PASSO,
   preferiti: [], ultimoFocus: null
@@ -643,7 +637,11 @@ const senzaNome = (a) => /^Q\d+$/.test(a.nome);
 const letteraria = (a) => !senzaNome(a) && (a.letterario === true || (a.letterario === undefined && a.professioni.some((p) => LETTERARIE.includes(p))));
 /* Tre misure separate (Italia, mondo anglofono, internazionale). Se i dati sono ancora quelli vecchi
    (senza visite per lingua) si usa il vecchio indice unico, finché il prossimo aggiornamento non arriva. */
-const CAMPO_M = { it: "visite_it", en: "visite_en", int: "pagine_wikipedia" };
+const CAMPO_M = { it: "visite_it", fr: "visite_fr", de: "visite_de", es: "visite_es", en: "visite_en", int: "pagine_wikipedia" };
+/* Mercati disponibili: quello della nazione scelta (se i dati ci sono già), l'Italia, il mondo anglofono, l'internazionale. */
+const haIndice = (m) => ["en", "int", "it"].includes(m) || Object.values(stato.perGiur).some((per) => Object.values(per).some((d) => d.autori.some((a) => a["indice_" + m] !== undefined)));
+const mercatoPaese = (id) => { const m = (GIUR_OPZ.find((o) => o[0] === id) || [])[0]; return m && haIndice(m) ? m : "int"; };
+const mercatiDisp = () => [...new Set([...(haIndice(stato.opz) ? [stato.opz] : []), "it", "en", "int"])];
 const idx = (a) => (stato.mercati ? a["indice_" + stato.mercato] : a.indice);
 const grezzo = (a) => (stato.mercati ? (a[CAMPO_M[stato.mercato]] || 0) : (a.pagine_wikipedia || 0));
 const etIdx = (a) => (idx(a) !== undefined ? " · " + tr("indiceN", { m: stato.mercati ? tr("mNomi")[stato.mercato] : tr("popolarita"), n: idx(a) }) : "");
@@ -1149,7 +1147,7 @@ function mostraAutore(id) {
   const riga = (m) => {
     const v = a["indice_" + m];
     const grezzoM = m === "int" ? a.pagine_wikipedia : a[CAMPO_M[m]];
-    const lingua = tr("nomiLingua")[m === "it" ? "it" : "en"].toLowerCase();
+    const lingua = tr("nomiLingua")[["it", "es", "de", "fr"].includes(m) ? m : "en"].toLowerCase();
     const testo = v === undefined ? tr("vNd")
       : m === "int" ? tr("vLingue", { n: n(grezzoM || 0) })
       : grezzoM === 0 ? tr("vNoPag", { l: lingua })
@@ -1167,7 +1165,7 @@ function mostraAutore(id) {
   const gut = a.gutenberg !== undefined && a.gutenberg !== null ? tr("gut", { n: n(a.gutenberg) }) : tr("gutNd");
   const indice = stato.mercati && (a.indice_it !== undefined || a.indice_en !== undefined || a.indice_int !== undefined) ? h("div", {},
     h("h4", {}, tr("popolarita")),
-    h("div", { class: "misure" }, ["it", "en", "int"].map(riga)),
+    h("div", { class: "misure" }, mercatiDisp().map(riga)),
     h("div", { class: "sotto", style: "margin-top:10px" }, gut),
     spiegazione) : (a.indice !== undefined ? h("div", {},
     h("h4", {}, tr("popolarita")),
@@ -1225,17 +1223,19 @@ function impostaGiur(id, ridisegna = true) {
   if (!opz || !stato.perGiur[opz[1]]) return;
   const g = opz[1];
   salvaLocale(CHIAVE_GIUR, id);
-  if (g === stato.giur) { stato.opz = id; if (ridisegna) disegnaGiur(); return; }
   stato.opz = id;
-  stato.giur = g;
-  stato.dati = stato.perGiur[g];
-  stato.lingua = null; stato.paese = null; stato.cerca = ""; stato.filtro = "letterari"; stato.visibili = PASSO;
-  const c = $("#cerca"); if (c) c.value = "";
+  if (ridisegna) { stato.mercato = mercatoPaese(id); salvaLocale(CHIAVE_MERCATO, stato.mercato); }   // la classifica passa subito all'interesse della nazione
+  if (g !== stato.giur) {
+    stato.giur = g;
+    stato.dati = stato.perGiur[g];
+    stato.lingua = null; stato.paese = null; stato.cerca = ""; stato.filtro = "letterari"; stato.visibili = PASSO;
+    const c = $("#cerca"); if (c) c.value = "";
+  }
   gruppiCache.clear();
   if (ridisegna) { disegnaTutto(); if ($("#finestra").open) instrada(); }
 }
 function disegnaGiur() {
-  const pt = $("#pres-tit"); if (pt) pt.textContent = tr(stato.giur === "es" ? "presTitEs" : "presTit");
+  const pt = $("#pres-tit"); if (pt) pt.textContent = tr("presTit", { p: tr("paesiNomi")[stato.opz] });
   const box = $("#giur");
   box.hidden = false;
   box.setAttribute("aria-label", tr("giurEt"));
@@ -1262,7 +1262,7 @@ function disegnaMercato() {
   box.setAttribute("aria-label", tr("mercatoEt"));
   box.replaceChildren(
     h("span", { class: "et" }, tr("mercatoEt")),
-    ...["it", "en", "int"].map((m) => h("button", { type: "button", class: "pillola", "aria-pressed": m === stato.mercato ? "true" : "false", onclick: () => impostaMercato(m) }, tr("mNomi")[m])),
+    ...mercatiDisp().map((m) => h("button", { type: "button", class: "pillola", "aria-pressed": m === stato.mercato ? "true" : "false", onclick: () => impostaMercato(m) }, tr("mNomi")[m])),
     h("p", { class: "nota-m" }, tr("mDesc")[stato.mercato]));
 }
 function disegnaTutto() {
@@ -1376,11 +1376,12 @@ async function avvia() {
   stato.dati = stato.perGiur.ue;
   stato.mercati = stato.anni.some((an) => stato.dati[an].autori.some((a) => a.indice_it !== undefined));
   const m = leggiLocale(CHIAVE_MERCATO, "it");
-  stato.mercato = ["it", "en", "int"].includes(m) ? m : "it";
+  stato.mercato = ["it", "es", "de", "fr", "en", "int"].includes(m) ? m : "it";
   stato.anno = stato.anni[0];
-  const gsalvata = leggiLocale(CHIAVE_GIUR, "ue");
+  const gsalvata = leggiLocale(CHIAVE_GIUR, "it");
   const og = GIUR_OPZ.find((o) => o[0] === gsalvata);
   if (og && stato.giurDisp.includes(og[1])) { stato.opz = og[0]; stato.giur = og[1]; stato.dati = stato.perGiur[og[1]]; }
+  if (!mercatiDisp().includes(stato.mercato)) stato.mercato = mercatoPaese(stato.opz);
   disegnaTutto();
   $("#cerca").addEventListener("input", (ev) => { stato.cerca = ev.target.value; stato.visibili = PASSO; disegnaArchivio(); });
   $("#finestra").addEventListener("click", (ev) => { if (ev.target === ev.currentTarget) ev.currentTarget.close(); });
