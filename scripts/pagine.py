@@ -456,7 +456,8 @@ def pagina_landing(anno, pacchetto_ue, opere_us):
          f"Not automatically. In Europe what matters is when the author died. A book from {pub} by Virginia Woolf (died 1941) is already free there, "
          f"while one by Dashiell Hammett (died 1961) is not free until 2032. National rules can add extensions (for example France and Italy), so check your country."),
         (f"Is every work published in {pub} really free in the USA?",
-         "Not always. Works whose US copyright was not renewed after 28 years were already free earlier. For foreign works, the 1996 restoration (17 U.S.C. § 104A) also matters. "
+         "Not always. Works first published in the USA whose copyright was not renewed after 28 years were already free earlier. Foreign works that regained protection in 1996 (17 U.S.C. § 104A) "
+         "last 95 years from publication, but only if they were still protected in their country of origin and the author was from a member country. "
          "Our list shows works that probably become free; it is not a legal clearance."),
         ("Is this legal advice?",
          "No. It is general information built from open data, and it may contain errors. Before publishing, check the law and the facts for your country and your edition."),
