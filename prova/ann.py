@@ -11,11 +11,13 @@ OCC="wd:Q36180 wd:Q49757 wd:Q6625963 wd:Q214917 wd:Q4853732 wd:Q482980 wd:Q11774
 CL="wd:Q8261 wd:Q49084 wd:Q25379 wd:Q5185279 wd:Q571 wd:Q7725634 wd:Q149537"
 ETA=[50,100,150,200]
 def persone(prop,y):
+    y1=y+1
     return q(f'''SELECT ?pLabel ?d ?pr ?sl WHERE {{ VALUES ?o {{ {OCC} }} ?p wdt:P106 ?o; wdt:P31 wd:Q5; p:{prop}/psv:{prop} [wikibase:timeValue ?d; wikibase:timePrecision ?pr].
-    FILTER(YEAR(?d)={y}) ?p wikibase:sitelinks ?sl. FILTER(?sl>=30) SERVICE wikibase:label {{ bd:serviceParam wikibase:language "en,it". }} }}''')
+    FILTER(?d >= "{y}-01-01T00:00:00Z"^^xsd:dateTime && ?d < "{y1}-01-01T00:00:00Z"^^xsd:dateTime) ?p wikibase:sitelinks ?sl. FILTER(?sl>=30) SERVICE wikibase:label {{ bd:serviceParam wikibase:language "en,it". }} }}''')
 def opere(y):
+    y1=y+1
     return q(f'''SELECT ?pLabel ?d ?pr ?sl WHERE {{ VALUES ?c {{ {CL} }} ?p wdt:P31 ?c; p:P577/psv:P577 [wikibase:timeValue ?d; wikibase:timePrecision ?pr].
-    FILTER(YEAR(?d)={y}) ?p wikibase:sitelinks ?sl. FILTER(?sl>=15) SERVICE wikibase:label {{ bd:serviceParam wikibase:language "en,it". }} }}''')
+    FILTER(?d >= "{y}-01-01T00:00:00Z"^^xsd:dateTime && ?d < "{y1}-01-01T00:00:00Z"^^xsd:dateTime) ?p wikibase:sitelinks ?sl. FILTER(?sl>=15) SERVICE wikibase:label {{ bd:serviceParam wikibase:language "en,it". }} }}''')
 tot={"nascita":0,"morte":0,"prima edizione":0}
 for et in ETA:
     y=2027-et
