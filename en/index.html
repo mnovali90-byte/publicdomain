@@ -1456,6 +1456,8 @@ async function instrada() {
   if (m[0] === "autore" && m[1]) {
     const t = trovaAutore(decodeURIComponent(m[1]));
     if (t) { if (t.giur !== stato.giur) impostaGiur(t.giur); await scegliAnno(t.anno); if (mostraAutore(t.a.wikidata)) return; }
+  } else if (m[0] === "us") {
+    if (stato.opere) { if (stato.opz !== "us") impostaGiur("us"); if (/^\d{4}$/.test(m[1]) && stato.opere[Number(m[1])]) await scegliAnno(Number(m[1])); }
   } else if (m[0] === "opera" && m[1]) {
     const t = trovaOpera(decodeURIComponent(m[1]));
     if (t) { if (stato.opz !== "us") impostaGiur("us"); await scegliAnno(t.anno); if (mostraOpera(t)) return; }

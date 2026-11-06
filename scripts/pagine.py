@@ -157,7 +157,7 @@ PIEDE = {
     "en": """<footer>
 <p>Sources: Wikidata (CC0), Wikipedia (text CC BY-SA, linked to the original page), Wikimedia Commons (portraits, each with its own licence), Open Library, SBN catalogue. Open data, updated automatically every month; it may contain errors.</p>
 <p>The dates are an indicative calculation from the rules listed in the <a href="/en/#regole-paesi">rules box</a>. Not legal advice: check the law of the country before publishing.</p>
-<p><a href="/en/">All authors</a> · <a href="/en/author/">Author index</a> · <a href="https://github.com/mnovali90-byte/publicdomain">Code and data on GitHub</a></p>
+<p><a href="/en/">All authors</a> · <a href="/en/public-domain-2027/">Public domain 2027</a> · <a href="/en/author/">Author index</a> · <a href="https://github.com/mnovali90-byte/publicdomain">Code and data on GitHub</a></p>
 </footer>
 </body>
 </html>
@@ -354,6 +354,201 @@ def file_autori():
             if re.fullmatch(r"(es-)?\d{4}\.json", Path(f).name)]
 
 
+CSS_LANDING = """
+body{background:var(--carta)}
+.lp-in{max-width:1120px;margin:0 auto;padding:0 clamp(20px,4vw,48px)}
+.lp-hero{background:var(--ink);color:#fff;padding:clamp(48px,9vw,112px) 0 clamp(56px,9vw,104px);position:relative;overflow:hidden}
+.lp-hero:after{content:"";position:absolute;right:-8vw;top:-10vw;width:46vw;height:46vw;max-width:620px;max-height:620px;border-radius:50%;background:var(--vermiglio);opacity:.95}
+.lp-hero .lp-in{position:relative;z-index:1}
+.lp-occ{font-family:var(--mono);font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#fff;margin:0 0 22px}
+.lp-occ i{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--vermiglio);margin-right:10px;box-shadow:0 0 0 2px #fff}
+.lp-hero h1{font-size:clamp(56px,13vw,176px);line-height:.86;margin:0 0 26px;color:#fff;max-width:11ch;mix-blend-mode:normal}
+.lp-hero h1 em{font-style:normal;color:var(--vermiglio);text-shadow:0 0 0 #000}
+.lp-hero .lead{font-size:clamp(18px,2.2vw,22px);max-width:34rem;color:#E4E2DA;margin:0 0 34px}
+.lp-cont{display:inline-flex;align-items:baseline;gap:14px;margin:0 0 34px;padding:14px 20px;border:1.5px solid #fff;background:var(--ink)}
+.lp-cont b{font-family:var(--display);font-weight:900;font-size:clamp(44px,7vw,72px);line-height:1;color:#fff}
+.lp-cont span{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#B9B9C6}
+.lp-bott{display:flex;flex-wrap:wrap;gap:14px}
+.lp-b{display:inline-block;padding:16px 24px;font-family:var(--mono);font-size:13px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border:2px solid #fff}
+.lp-b1{background:#fff;color:var(--ink)}.lp-b1:hover{background:var(--vermiglio);border-color:var(--vermiglio)}
+.lp-b2{background:var(--ink);color:#fff}.lp-b2:hover{background:#fff;color:var(--ink)}
+.lp-sez{padding:clamp(56px,8vw,104px) 0}
+.lp-sez h2{font-family:var(--display);font-weight:900;font-size:clamp(36px,6.5vw,72px);line-height:.95;text-transform:uppercase;color:var(--ink);letter-spacing:0;margin:0 0 14px;border:0;padding:0}
+.lp-occh{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--vermiglio-testo);margin:0 0 12px}
+.lp-sez .lead{max-width:40rem;color:#33333B}
+.lp-due{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:36px}
+.lp-card{border:2px solid var(--ink);padding:clamp(22px,3vw,36px);display:flex;flex-direction:column;background:#fff}
+.lp-card.us{background:var(--ink);color:#fff;border-color:var(--ink)}
+.lp-num{font-family:var(--display);font-weight:900;font-size:clamp(96px,14vw,168px);line-height:.8;color:var(--vermiglio)}
+.lp-card h3{font-family:var(--mono);font-weight:500;font-size:13px;letter-spacing:.1em;text-transform:uppercase;margin:14px 0 6px}
+.lp-card .gr{font-family:var(--display);font-weight:900;font-size:clamp(26px,3.4vw,38px);line-height:1;text-transform:uppercase;margin:0 0 12px}
+.lp-card p{margin:0 0 18px;font-size:16px}
+.lp-card a{margin-top:auto;font-family:var(--mono);font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:inherit;font-weight:500}
+.lp-card.us a{color:#fff}
+.lp-gr{display:grid;grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:16px;margin-top:34px}
+.lp-cop{aspect-ratio:2/3;padding:16px;display:flex;flex-direction:column;justify-content:space-between;text-decoration:none;transition:transform .15s;overflow:hidden}
+.lp-cop:hover{transform:translateY(-5px)}
+.lp-cop .t{font-family:var(--display);font-weight:900;line-height:.92;text-transform:uppercase;overflow-wrap:normal;word-break:normal}
+.lp-cop .a{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;line-height:1.4}
+.c0{background:var(--vermiglio);color:var(--ink)}.c1{background:#E9E6DD;color:var(--ink)}.c2{background:#0E3B2E;color:var(--carta)}.c3{background:var(--notte);color:var(--carta)}
+.lp-piu{margin-top:26px}
+.lp-piu a{font-family:var(--mono);font-size:13px;letter-spacing:.06em;text-transform:uppercase;font-weight:500}
+.lp-scuro{background:var(--notte);color:#fff}
+.lp-scuro h2{color:#fff}.lp-scuro .lead{color:#D2CFC4}.lp-scuro .lp-occh{color:var(--vermiglio)}
+.lp-aut{margin-top:34px;display:grid;grid-template-columns:1fr 1fr;column-gap:48px}
+.lp-aut a{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:16px 0;border-top:1px solid #4A4A58;text-decoration:none;color:#fff}
+.lp-aut a:hover b{color:var(--vermiglio)}
+.lp-aut b{font-family:var(--display);font-weight:900;font-size:clamp(24px,3vw,34px);line-height:1;text-transform:uppercase}
+.lp-aut span{font-family:var(--mono);font-size:12px;color:#B9B9C6;white-space:nowrap}
+.lp-pass{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:34px}
+.lp-pass div{border-top:3px solid var(--ink);padding-top:14px}
+.lp-pass b{font-family:var(--display);font-weight:900;font-size:56px;line-height:1;color:var(--vermiglio)}
+.lp-pass h3{font-family:var(--mono);font-weight:500;font-size:13px;letter-spacing:.1em;text-transform:uppercase;margin:8px 0 6px}
+.lp-pass p{margin:0;font-size:16px}
+.lp-faq{margin-top:30px;max-width:46rem}
+.lp-faq details{border-top:1px solid var(--ink);padding:16px 0}.lp-faq details:last-child{border-bottom:1px solid var(--ink)}
+.lp-faq summary{cursor:pointer;font-weight:600;font-size:18px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.lp-faq summary::-webkit-details-marker{display:none}
+.lp-faq summary:after{content:"+";font-family:var(--mono);font-size:22px;line-height:1}
+.lp-faq details[open] summary:after{content:"–"}
+.lp-faq p{margin:12px 0 0;max-width:40rem}
+.lp-fin{background:var(--vermiglio);color:var(--ink);padding:clamp(56px,8vw,96px) 0}
+.lp-fin h2{font-family:var(--display);font-weight:900;text-transform:uppercase;letter-spacing:0;line-height:.95;border:0;padding:0;margin:0 0 16px;color:var(--ink);font-size:clamp(34px,6vw,64px)}
+.lp-fin p{font-size:19px;max-width:36rem;margin:0 0 26px}
+.lp-fin .lp-b{background:var(--ink);color:#fff;border-color:var(--ink)}.lp-fin .lp-b:hover{background:#fff;color:var(--ink)}
+.lp-nota{font-size:13px;color:var(--muto);margin-top:30px;max-width:46rem}
+@media(max-width:760px){.lp-due,.lp-aut,.lp-pass{grid-template-columns:1fr}.lp-hero:after{opacity:.9;right:-26vw;top:-14vw;width:70vw;height:70vw}.lp-gr{grid-template-columns:repeat(2,1fr)}}
+@media(prefers-reduced-motion:reduce){.lp-cop{transition:none}}
+"""
+
+
+def _dim_titolo(t, base=30):
+    l = len(t)
+    dim = base if l <= 12 else int(base * .8) if l <= 24 else int(base * .64) if l <= 40 else int(base * .52)
+    lunga = max((len(w) for w in t.split()), default=1)
+    return max(14, min(dim, int(100 / (0.5 * lunga))))
+
+
+def _cop(href, titolo, sotto):
+    c = sum(ord(ch) * (i + 1) for i, ch in enumerate(titolo + sotto)) % 4
+    return (f'<a class="lp-cop c{c}" href="{href}"><span class="t" style="font-size:{_dim_titolo(titolo)}px">{esc(titolo)}</span>'
+            f'<span class="a">{esc(sotto)}</span></a>\n')
+
+
+def pagina_landing(anno, pacchetto_ue, opere_us):
+    """Pagina di presentazione in inglese per «Public domain <anno>»: dati e regole già verificati nel sito."""
+    oggi = datetime.date.today()
+    url = f"{SITO}/en/public-domain-{anno}/"
+    pub = opere_us["anno_pubblicazione"] if opere_us else anno - 96
+    morti = anno - 71
+    libero = pacchetto_ue.get("libero_dal") or f"{anno}-01-01"
+    titolo = f"Public Domain {anno}: what becomes free on 1 January · Public Domain Radar"
+    descr = (f"The works (USA) and authors (Europe) entering the public domain on 1 January {anno}, from open data. "
+             f"Two rules explained in plain words, with sources.")
+    faq = [
+        (f"What enters the public domain in {anno}?",
+         f"It depends on the country. In the USA, works published in {pub} (95 years after publication, 17 U.S.C. § 304). "
+         f"In the European Union, the works of authors who died in {morti} (author's life + 70 years, Directive 2006/116/EC, Art. 1)."),
+        ("Why are the USA and Europe different?",
+         "They use different rules. The USA counts from the year a work was published. Europe counts from the year the author died. "
+         "So a book can be free in one place and still protected in the other."),
+        (f"Can I publish a book from {pub} in Europe?",
+         f"Not automatically. In Europe what matters is when the author died. A book from {pub} by Virginia Woolf (died 1941) is already free there, "
+         f"while one by Dashiell Hammett (died 1961) is not free until 2032. National rules can add extensions (for example France and Italy), so check your country."),
+        (f"Is every work published in {pub} really free in the USA?",
+         "Not always. Works whose US copyright was not renewed after 28 years were already free earlier. For foreign works, the 1996 restoration (17 U.S.C. § 104A) also matters. "
+         "Our list shows works that probably become free; it is not a legal clearance."),
+        ("Is this legal advice?",
+         "No. It is general information built from open data, and it may contain errors. Before publishing, check the law and the facts for your country and your edition."),
+        ("Where does the data come from?",
+         "Wikidata (CC0), Wikipedia (text CC BY-SA, always linked to the page) and Wikimedia Commons (each image with its own licence). "
+         "The laws are read from the official texts. The site updates itself every month."),
+    ]
+    jl = {"@context": "https://schema.org", "@graph": [
+        {"@type": "WebPage", "@id": url, "url": url, "name": titolo, "description": descr, "inLanguage": "en",
+         "dateModified": str(oggi), "isPartOf": {"@type": "WebSite", "name": "Public Domain Radar", "url": SITO + "/en/"}},
+        {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q,
+                                             "acceptedAnswer": {"@type": "Answer", "text": r}} for q, r in faq]}]}
+    jsonld = '<script type="application/ld+json">' + json.dumps(jl, ensure_ascii=False).replace("</", "<\\/") + "</script>"
+    out = [TESTA.format(lang="en", titolo=esc(titolo), descr=esc(descr), url=url, alterne="", og_tipo="website", jsonld=jsonld,
+                        css=CSS + CSS_LANDING, home="/en/", altra_lingua='<a href="/">Italiano</a>')]
+    out.append(f"""<header class="lp-hero"><div class="lp-in">
+<p class="lp-occ"><i></i>Public Domain Day · 1 January {anno}</p>
+<h1>What becomes free in <em>{anno}</em></h1>
+<p class="lead">The works and authors that enter the public domain on 1 January {anno}, in the USA and in Europe. Open data, explained in plain words, updated every month.</p>
+<div class="lp-cont" id="cont"><b id="giorni">{anno}</b><span id="giorni-et">1 January</span></div>
+<div class="lp-bott"><a class="lp-b lp-b1" href="/en/#/us/{anno}">See the works (USA)</a><a class="lp-b lp-b2" href="/en/#/{anno}">See the authors (Europe)</a></div>
+</div></header>
+""")
+    out.append(f"""<section class="lp-sez"><div class="lp-in">
+<p class="lp-occh">Two rules, two lists</p>
+<h2>It depends where you publish</h2>
+<p class="lead">The USA looks at when a work was published. Europe looks at when the author died. That is why there are two lists.</p>
+<div class="lp-due">
+<div class="lp-card us"><div class="lp-num">95</div><h3>USA · works</h3><p class="gr">Years after publication</p>
+<p>Works published in <b>{pub}</b> that were still protected become free on 1 January {anno}. Rule: 17 U.S.C. § 304.</p><a href="/en/#/us/{anno}">Browse the works →</a></div>
+<div class="lp-card"><div class="lp-num">70</div><h3>Europe · authors</h3><p class="gr">Years after the author's death</p>
+<p>Authors who died in <b>{morti}</b> become free on 1 January {anno}. Some countries add extensions, so each author page shows the date country by country.</p><a href="/en/#/{anno}">Browse the authors →</a></div>
+</div></div></section>
+""")
+    if opere_us and opere_us.get("opere"):
+        out.append(f'<section class="lp-sez" style="padding-top:0"><div class="lp-in">\n<p class="lp-occh">USA · published in {pub}</p>\n'
+                   f'<h2>The most read works entering in {anno}</h2>\n'
+                   f'<p class="lead">Ranked by how much people read about them on English Wikipedia.</p>\n<div class="lp-gr">\n')
+        for o in opere_us["opere"][:12]:
+            aut = ", ".join(a["nome"] for a in o.get("autori", [])) or "—"
+            out.append(_cop(f"/en/#/opera/{o['qid']}", o["titolo"], f"{aut} · {pub}"))
+        out.append(f'</div>\n<p class="lp-piu"><a href="/en/#/us/{anno}">All {len(opere_us["opere"])} works →</a></p>\n</div></section>\n')
+    aut = [a for a in pacchetto_ue.get("autori", []) if a.get("letterario") and a.get("morte")]
+    aut.sort(key=lambda a: -(a.get("indice_int") or a.get("indice") or 0))
+    if aut:
+        out.append(f'<section class="lp-sez lp-scuro"><div class="lp-in">\n<p class="lp-occh">Europe · died in {morti}</p>\n'
+                   f'<h2>The authors entering in {anno}</h2>\n<p class="lead">Writers who died in {morti}, ranked by international interest.</p>\n<div class="lp-aut">\n')
+        for a in aut[:12]:
+            href = f"/en/author/{a['pagina_en']}/" if a.get("pagina_en") else f"/en/#/autore/{a['wikidata']}"
+            anni = f"{anno_di(a.get('nascita')) or '?'} – {anno_di(a['morte'])}"
+            out.append(f'<a href="{href}"><b>{esc(pulisci(a["nome"]))}</b><span>{esc(anni)}</span></a>\n')
+        out.append(f'</div>\n<p class="lp-piu"><a href="/en/#/{anno}" style="color:#fff">All authors →</a></p>\n</div></section>\n')
+    out.append("""<section class="lp-sez"><div class="lp-in">
+<p class="lp-occh">How it works</p>
+<h2>Open data, no guesswork</h2>
+<div class="lp-pass">
+<div><b>01</b><h3>Read from open sources</h3><p>Authors and works come from Wikidata, interest from Wikipedia page views. Nothing is typed by hand.</p></div>
+<div><b>02</b><h3>Rules from the law</h3><p>The term rules are read from the official legal texts. What we could not verify is declared on the site.</p></div>
+<div><b>03</b><h3>Updated by itself</h3><p>Every month the whole list is rebuilt. You always see the last update date.</p></div>
+</div></div></section>
+""")
+    out.append('<section class="lp-sez" style="padding-top:0"><div class="lp-in">\n<p class="lp-occh">Questions</p>\n<h2>Public domain, in plain words</h2>\n<div class="lp-faq">\n')
+    for q, r in faq:
+        out.append(f"<details><summary>{esc(q)}</summary><p>{esc(r)}</p></details>\n")
+    out.append("</div>\n<p class=\"lp-nota\">General information, not legal advice. The data comes from open sources and may contain errors: before publishing, check the law for your country.</p>\n</div></section>\n")
+    out.append(f"""<section class="lp-fin"><div class="lp-in">
+<h2>Choosing what to republish?</h2>
+<p>Built for editors, translators and agents: see who becomes free, how much they are read, and the date country by country.</p>
+<a class="lp-b" href="/en/">Open the full tool</a>
+</div></section>
+<script>(function(){{var t=new Date("{libero}T00:00:00"),d=Math.ceil((t-new Date())/864e5),b=document.getElementById("giorni"),l=document.getElementById("giorni-et");if(!b||!l)return;if(d>0){{b.textContent=d;l.textContent=d===1?"day to go":"days to go"}}else{{b.textContent="Free";l.textContent="since 1 January {anno}"}}}})();</script>
+""")
+    out.append(PIEDE["en"])
+    return "".join(out), url
+
+
+def crea_landing():
+    """en/public-domain-<anno>/index.html per ogni anno disponibile. Restituisce gli indirizzi."""
+    urls = []
+    for f in sorted(glob.glob(str(RADICE / "data" / "[0-9][0-9][0-9][0-9].json"))):
+        anno = int(Path(f).stem)
+        ue = json.load(open(f, encoding="utf-8"))
+        fus = RADICE / "data" / f"us-{anno}.json"
+        us = json.load(open(fus, encoding="utf-8")) if fus.exists() else None
+        html_, url = pagina_landing(anno, ue, us)
+        d = RADICE / "en" / f"public-domain-{anno}"
+        d.mkdir(parents=True, exist_ok=True)
+        (d / "index.html").write_text(html_, encoding="utf-8")
+        urls.append(url)
+    return urls
+
+
 def main():
     oggi = datetime.date.today()
     autori = {}
@@ -408,10 +603,12 @@ def main():
         Path(f).write_text(json.dumps(pacchetto, ensure_ascii=False, indent=1), encoding="utf-8")
 
     crea_home_inglese()
+    landing_urls = crea_landing()
     righe = [f"  <url><loc>{SITO}/</loc><lastmod>{oggi}</lastmod><changefreq>monthly</changefreq></url>",
              f"  <url><loc>{SITO}/en/</loc><lastmod>{oggi}</lastmod><changefreq>monthly</changefreq></url>",
              f"  <url><loc>{url_pagina('it')}</loc><lastmod>{oggi}</lastmod><changefreq>monthly</changefreq></url>",
              f"  <url><loc>{url_pagina('en')}</loc><lastmod>{oggi}</lastmod><changefreq>monthly</changefreq></url>"]
+    righe += [f"  <url><loc>{u}</loc><lastmod>{oggi}</lastmod><changefreq>weekly</changefreq></url>" for u in landing_urls]
     righe += [f"  <url><loc>{u}</loc><lastmod>{oggi}</lastmod></url>" for u in sorted(urls)]
     (RADICE / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "\n".join(righe) + "\n</urlset>\n", encoding="utf-8")
     print(f"Pagine create: {len(voci['it'])} in italiano, {len(voci['en'])} in inglese (su {len(autori)} autori con biografia e opere)")
