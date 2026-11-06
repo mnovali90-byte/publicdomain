@@ -360,7 +360,7 @@ const MESI_EN = ["January","February","March","April","May","June","July","Augus
 const TESTI = {
 it: {
   titolo: "Public Domain Radar · autori che entrano in pubblico dominio",
-  indiceAutori: "Indice degli autori (una pagina per ogni autore, in italiano)",
+  indiceAutori: "Indice degli autori (una pagina per ogni autore, in italiano)", paginaDedicata: "Pagina dedicata",
   descrizione: "Gli autori le cui opere entrano nel pubblico dominio in Europa il prossimo 1° gennaio. Dati aperti da Wikidata e Wikipedia, aggiornati ogni mese.",
   paTit: "Da quando è libero, paese per paese",
   paUe: "UE (base) e Germania: dal {d}.",
@@ -444,7 +444,7 @@ it: {
 },
 en: {
   titolo: "Public Domain Radar · authors entering the public domain",
-  indiceAutori: "Index of authors (one page per author, in Italian)",
+  indiceAutori: "Index of authors (one page per author, in Italian)", paginaDedicata: "Dedicated page (Italian)",
   descrizione: "The authors whose works enter the public domain in Europe on 1 January next year. Open data from Wikidata and Wikipedia, updated monthly.",
   paTit: "Free from when, country by country",
   paUe: "EU (base rule) and Germany: from {d}.",
@@ -694,7 +694,7 @@ function trovaAutore(id) {
   for (const g of ordine) {
     for (const an of stato.anni) {
       const d = (stato.perGiur[g] || {})[an];
-      const a = (d ? d.autori : []).find((x) => x.wikidata === id);
+      const a = (d ? d.autori : []).find((x) => x.wikidata === id || x.pagina === id);
       if (a) return { a, anno: an, giur: g };
     }
   }
@@ -1094,7 +1094,7 @@ function mostraFinestra(contenuto) {
   if (!f.open) { stato.ultimoFocus = document.activeElement; f.showModal(); }
   f.scrollTop = 0;
 }
-function apriAutore(id) { location.hash = `#/autore/${id}`; }
+function apriAutore(id) { const t = trovaAutore(id); location.hash = `#/autore/${t && t.a.pagina ? t.a.pagina : id}`; }   // col nome nell'indirizzo quando l'autore ha la pagina dedicata
 function linkEsterno(href, testo) { return h("a", { class: "pillola", href, target: "_blank", rel: "noopener" }, testo); }
 function bloccoSbn(g) {
   if (!g) return null;
@@ -1190,7 +1190,7 @@ function mostraAutore(id) {
     h("div", { class: "indice" }, h("span", { class: "num" }, String(a.indice)),
       h("div", { class: "asta", role: "img", "aria-label": `${a.indice} / 100` }, h("i", { style: `width:${Math.max(2, Math.min(100, a.indice))}%` }))),
     h("div", { class: "sotto", style: "margin-top:10px" }, a.visite_12m !== undefined && a.visite_12m !== null ? tr("visite", { n: n(a.visite_12m) }) : tr("visiteNd"), " · ", tr("pagineWm", { n: n(a.pagine_wikipedia || 0) }))) : null);
-  const urlCondiviso = location.href.split("#")[0] + `#/autore/${a.wikidata}`;
+  const urlCondiviso = a.pagina ? `${location.origin}/autore/${a.pagina}/` : location.href.split("#")[0] + `#/autore/${a.wikidata}`;
   const copia = h("button", { class: "pillola", type: "button", onclick: async (ev) => {
     const b = ev.currentTarget;
     try { await navigator.clipboard.writeText(urlCondiviso); b.textContent = tr("linkCopiato"); }
@@ -1221,6 +1221,7 @@ function mostraAutore(id) {
           linkEsterno(`https://www.google.com/search?tbm=bks&lr=lang_it&q=inauthor:${q}`, tr("librI")),
           linkEsterno(`https://www.amazon.it/s?k=${encodeURIComponent(nome)}&i=digital-text`, tr("amazon")),
           linkEsterno(`https://www.google.com/search?q=site:opac.sbn.it+${q}`, tr("sbn")),
+          a.pagina ? h("a", { class: "pillola", href: `/autore/${a.pagina}/` }, tr("paginaDedicata")) : null,
           bd && bd.url ? linkEsterno(bd.url, tr("wikipedia")) : null,
           linkEsterno(a.url, tr("wikidata")),
           copia))));

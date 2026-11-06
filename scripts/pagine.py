@@ -269,6 +269,19 @@ def main():
             (d / "index.html").write_text(pagina_autore(a, slug, oggi), encoding="utf-8")
             voci.append((pulisci(a["nome"]), slug, f"{anno_di(a.get('nascita')) or '?'} – {anno_di(a['morte'])}"))
             urls.append(f"{SITO}/autore/{slug}/")
+    # il sito usa il nome nell'indirizzo della scheda e linka la pagina dedicata: serve sapere quale autore ne ha una
+    slug_di = {}
+    for s_, gruppo in usati.items():
+        for a_ in gruppo:
+            slug_di[a_["wikidata"]] = s_ if len(gruppo) == 1 else f"{s_}-{a_['wikidata'].lower()}"
+    for f in sorted(glob.glob(str(RADICE / "data" / "*[0-9][0-9][0-9][0-9].json"))):
+        pacchetto = json.load(open(f, encoding="utf-8"))
+        for a_ in pacchetto["autori"]:
+            if a_["wikidata"] in slug_di:
+                a_["pagina"] = slug_di[a_["wikidata"]]
+            else:
+                a_.pop("pagina", None)
+        Path(f).write_text(json.dumps(pacchetto, ensure_ascii=False, indent=1), encoding="utf-8")
     voci.sort(key=lambda v: (slug_base(v[0]), v[1]))
     (cartella / "index.html").write_text(pagina_indice(voci, oggi), encoding="utf-8")
     righe = [f"  <url><loc>{SITO}/</loc><lastmod>{oggi}</lastmod><changefreq>monthly</changefreq></url>",
