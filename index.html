@@ -656,7 +656,11 @@ function hashNumero(s) { let x = 0; for (const c of s) x = (x * 31 + c.charCodeA
 
 /* ---------- ripulitura dei dati di Wikidata ---------- */
 const GENERI = [
-  [/fantascienza|science fiction|distopi|dystopi/, "Fantascienza", "Science fiction"],
+  [/dramma storico|historical drama/, "Teatro", "Theatre"],
+  [/romanzo autobiografico|autobiographical fiction/, "Romanzo", "Novel"],
+  [/non-?fiction|monografia|libro storico/, "Saggistica", "Non-fiction"],
+  [/romancero/, "Poesia", "Poetry"],
+  [/fantascienza|science fiction|distopi|dystopi|fantapolitica|time-?travel/, "Fantascienza", "Science fiction"],
   [/fantasy/, "Fantasy", "Fantasy"],
   [/orrore|horror|gotic|gothic/, "Horror", "Horror"],
   [/mistero|giallo|detective|crime|thriller|polizie|mystery/, "Giallo e mistero", "Mystery"],
@@ -674,6 +678,7 @@ const GENERI = [
 ];
 function genereCanonico(etichetta) {
   const k = norm(etichetta);
+  if (/\bfilm\b|animat/.test(k)) return null;   // «film fantasy», «film drammatico»: sono generi del film, non del libro
   for (const [re, it, en] of GENERI) if (re.test(k)) return { chiave: it, it, en };
   return null;
 }
