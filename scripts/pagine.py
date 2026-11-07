@@ -151,6 +151,7 @@ CSS += CSS_MARCHIO
 
 PIEDE = {
     "it": """<footer>
+<p>Un progetto di Marco Novali.</p>
 <p>Fonti: Wikidata (CC0), Wikipedia (testi CC BY-SA, con link alla pagina d'origine), Wikimedia Commons (ritratti, ciascuno con la sua licenza), Open Library, catalogo SBN. Dati aperti, aggiornati ogni mese in automatico; possono contenere errori.</p>
 <p>Le date sono un calcolo indicativo dalle norme elencate nel <a href="/#regole-paesi">riquadro delle regole</a>. Non è consulenza legale: prima di pubblicare va controllato nella legge del paese.</p>
 <p><a href="/">Tutti gli autori</a> · <a href="/autore/">Indice degli autori</a> · <a href="https://github.com/mnovali90-byte/publicdomain">Codice e dati su GitHub</a></p>
@@ -159,6 +160,7 @@ PIEDE = {
 </html>
 """,
     "en": """<footer>
+<p>A project by Marco Novali.</p>
 <p>Sources: Wikidata (CC0), Wikipedia (text CC BY-SA, linked to the original page), Wikimedia Commons (portraits, each with its own licence), Open Library, SBN catalogue. Open data, updated automatically every month; it may contain errors.</p>
 <p>The dates are an indicative calculation from the rules listed in the <a href="/en/#regole-paesi">rules box</a>. Not legal advice: check the law of the country before publishing.</p>
 <p><a href="/en/">All authors</a> · <a href="/en/public-domain-2027/">Public domain 2027</a> · <a href="/en/author/">Author index</a> · <a href="https://github.com/mnovali90-byte/publicdomain">Code and data on GitHub</a></p>

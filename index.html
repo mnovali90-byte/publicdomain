@@ -21,7 +21,7 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
 {"@type":"WebSite","name":"Public Domain Radar","url":"https://publicdomainradar.com/","inLanguage":["it","en"]},
-{"@type":"Dataset","name":"Public Domain Radar: authors entering the public domain","description":"Authors whose works enter the public domain on 1 January of the coming years, with country-specific term rules (Italy, France, Germany, Spain), built from open data.","url":"https://publicdomainradar.com/","isAccessibleForFree":true,"creator":{"@type":"Organization","name":"Public Domain Radar","url":"https://publicdomainradar.com/"},"license":"https://creativecommons.org/licenses/by-sa/4.0/","keywords":["public domain","pubblico dominio","copyright term","authors","retranslation"],"inLanguage":["it","en"],"distribution":[{"@type":"DataDownload","encodingFormat":"application/json","contentUrl":"https://publicdomainradar.com/data/indice.json"}]}
+{"@type":"Dataset","name":"Public Domain Radar: authors entering the public domain","description":"Authors whose works enter the public domain on 1 January of the coming years, with country-specific term rules (Italy, France, Germany, Spain), built from open data.","url":"https://publicdomainradar.com/","isAccessibleForFree":true,"creator":{"@type":"Person","name":"Marco Novali"},"license":"https://creativecommons.org/licenses/by-sa/4.0/","keywords":["public domain","pubblico dominio","copyright term","authors","retranslation"],"inLanguage":["it","en"],"distribution":[{"@type":"DataDownload","encodingFormat":"application/json","contentUrl":"https://publicdomainradar.com/data/indice.json"}]}
 ]}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -393,6 +393,7 @@ dialog::backdrop{background:rgba(12,12,16,.72)}
 <footer>
   <div class="contenitore">
     <div class="mono" style="font-size:13px;color:var(--carta)">Public Domain Radar</div>
+    <p data-t="progetto">Un progetto di Marco Novali.</p>
     <p data-t="regola">Regola europea di base: le opere diventano libere il 1° gennaio dell'anno successivo ai 70 dalla morte dell'autore. Alcuni paesi, come l'Italia, hanno proroghe: prima di pubblicare va fatta una verifica nazionale. Una traduzione già esistente ha diritti propri: qui si parla solo delle opere originali.</p>
     <details class="regole" id="regole-paesi"><summary data-t="regoleTit">Regole sulla durata, paese per paese</summary><div id="regole-corpo"></div></details>
     <p><a href="/autore/" data-t="indiceAutori">Indice degli autori (pagina per ogni autore)</a></p>
@@ -498,6 +499,7 @@ it: {
   librI: "Libri in italiano", amazon: "Cerca su Amazon.it", sbn: "Catalogo SBN", wikipedia: "Wikipedia", wikidata: "Wikidata",
   nato: "nato", scrittore: "Scrittore",
   regola: "Regola europea di base: le opere diventano libere il 1° gennaio dell'anno successivo ai 70 dalla morte dell'autore. Alcuni paesi, come l'Italia, hanno proroghe: prima di pubblicare va fatta una verifica nazionale. Una traduzione già esistente ha diritti propri: qui si parla solo delle opere originali.",
+  progetto: "Un progetto di Marco Novali.",
   fonti: "Fonti: Wikidata (CC0), Wikipedia (testi CC BY-SA, con link alla pagina d'origine), Wikimedia Commons (ritratti, ciascuno con la sua licenza), Open Library, Project Gutenberg. Ultimo aggiornamento: {d}; si rinnova da solo ogni mese. Informazioni generali, non consulenza legale: i dati arrivano da fonti aperte e possono contenere errori.",
   codice: "Codice e dati su GitHub", tastoLingua: "Lingua",
   csv: ["Nome","Nata/o","Morta/o","Libero dal","Indice Italia","Indice mondo anglofono","Indice internazionale","Pagine Wikimedia","Visite Wikipedia italiana 12 mesi","Visite Wikipedia inglese 12 mesi","Download Gutenberg","Paesi","Lingue","Tipo di catalogo","Generi","Opere principali","Registrazioni italiane in SBN","Più recente edizione italiana in SBN","Edizioni italiane registrate su Open Library (incompleto)","Edizioni inglesi registrate su Open Library","Wikipedia/Wikidata"],
@@ -585,6 +587,7 @@ en: {
   librI: "Books in Italian", amazon: "Search Amazon.it", sbn: "SBN catalogue", wikipedia: "Wikipedia", wikidata: "Wikidata",
   nato: "born", scrittore: "Writer",
   regola: "Basic EU rule: works become free on 1 January of the year after the 70th anniversary of the author's death. Some countries, Italy included, have extensions: check national rules before publishing. An existing translation has its own rights: this site only covers original works.",
+  progetto: "A project by Marco Novali.",
   fonti: "Sources: Wikidata (CC0), Wikipedia (text CC BY-SA, linked to the original page), Wikimedia Commons (portraits, each with its own licence), Open Library, Project Gutenberg. Last updated: {d}; it renews itself every month. General information, not legal advice: the data comes from open sources and may contain errors.",
   codice: "Code and data on GitHub", tastoLingua: "Language",
   csv: ["Name","Born","Died","Free from","Italy index","English-speaking world index","International index","Wikimedia pages","Italian Wikipedia views 12 months","English Wikipedia views 12 months","Gutenberg downloads","Countries","Languages","Catalogue type","Genres","Main works","Italian records in SBN","Latest Italian edition in SBN","Italian editions recorded on Open Library (incomplete)","English editions recorded on Open Library","Wikipedia/Wikidata"],
