@@ -1,7 +1,7 @@
 {
  "anno": 2027,
  "anno_pubblicazione": 1931,
- "aggiornato": "2026-11-06",
+ "aggiornato": "2026-11-07",
  "fonte": "Wikidata (CC0), Wikipedia, Wikimedia Commons",
  "opere": [
   {
@@ -2890,25 +2890,6 @@
    "visite_en": null
   },
   {
-   "qid": "Q130472608",
-   "titolo": "Rasabharanamu",
-   "titolo_it": null,
-   "autori": [
-    {
-     "qid": "Q12990256",
-     "nome": "Anantamatyudu"
-    }
-   ],
-   "pagine": 3,
-   "wiki_en": null,
-   "lingua": {
-    "en": "Telugu",
-    "it": "telugu"
-   },
-   "generi": [],
-   "visite_en": null
-  },
-  {
    "qid": "Q952083",
    "titolo": "Blocchi",
    "titolo_it": "Blocchi",
@@ -3250,6 +3231,25 @@
    "lingua": {
     "en": "Czech",
     "it": "ceco"
+   },
+   "generi": [],
+   "visite_en": null
+  },
+  {
+   "qid": "Q130472608",
+   "titolo": "Rasabharanamu",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q12990256",
+     "nome": "Anantamatyudu"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": null,
+   "lingua": {
+    "en": "Telugu",
+    "it": "telugu"
    },
    "generi": [],
    "visite_en": null

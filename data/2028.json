@@ -4,7 +4,7 @@
  "paese": "ue",
  "regola": "UE: morte + 70 anni, dal 1 gennaio dell'anno successivo",
  "fonte": "Wikidata (CC0)",
- "aggiornato": "2026-11-06",
+ "aggiornato": "2026-11-07",
  "totale": 1402,
  "autori": [
   {
@@ -13188,6 +13188,17 @@
    "url": "https://www.wikidata.org/wiki/Q1028225"
   },
   {
+   "wikidata": "Q16357408",
+   "nome": "Hafiz Ali Korça",
+   "nascita": "1873-04-05",
+   "morte": "1957-01-07",
+   "pagine_wikipedia": 4,
+   "professioni": [
+    "traduttore"
+   ],
+   "url": "https://www.wikidata.org/wiki/Q16357408"
+  },
+  {
    "wikidata": "Q1583439",
    "nome": "Hans von Kahlenberg",
    "nascita": "1870-02-23",
@@ -15936,17 +15947,6 @@
     "scrittore"
    ],
    "url": "https://www.wikidata.org/wiki/Q17119640"
-  },
-  {
-   "wikidata": "Q16357408",
-   "nome": "Hafiz Ali Korça",
-   "nascita": "1873-04-05",
-   "morte": "1957-01-07",
-   "pagine_wikipedia": 3,
-   "professioni": [
-    "traduttore"
-   ],
-   "url": "https://www.wikidata.org/wiki/Q16357408"
   },
   {
    "wikidata": "Q1578424",
@@ -37196,7 +37196,7 @@
    "n": 1
   }
  ],
- "arricchito": "2026-11-06",
+ "arricchito": "2026-11-07",
  "indice_formula": "tre misure separate: visite Wikipedia it, visite Wikipedia en, numero di lingue con una pagina; ciascuna 0-100 rispetto alla lista dell'anno",
- "traduzioni_aggiornato": "2026-11-06"
+ "traduzioni_aggiornato": "2026-11-07"
 }
