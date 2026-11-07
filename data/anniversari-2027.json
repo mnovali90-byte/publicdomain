@@ -19,6 +19,7 @@
    "pagine": 30,
    "mese": 1,
    "giorno": 5,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 2,
     "ultimo": 2014,
@@ -39,6 +40,7 @@
    "pagine": 56,
    "mese": 1,
    "giorno": 7,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 2,
     "ultimo": 2014,
@@ -59,6 +61,7 @@
    "pagine": 76,
    "mese": 1,
    "giorno": 8,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 9,
     "ultimo": 1970,
@@ -79,6 +82,7 @@
    "pagine": 36,
    "mese": 1,
    "giorno": 11,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 35,
     "ultimo": 2020,
@@ -99,6 +103,7 @@
    "pagine": 91,
    "mese": 1,
    "giorno": 14,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 45,
     "ultimo": 2020,
@@ -119,6 +124,7 @@
    "pagine": 34,
    "mese": 1,
    "giorno": 19,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 0,
     "ultimo": null,
@@ -139,6 +145,7 @@
    "pagine": 116,
    "mese": 1,
    "giorno": 25,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 5,
     "ultimo": 2018,
@@ -201,6 +208,7 @@
    "pagine": 45,
    "mese": 1,
    "giorno": 29,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 3,
     "ultimo": 2008,
@@ -221,6 +229,7 @@
    "pagine": 37,
    "mese": 2,
    "giorno": 11,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 0,
     "ultimo": null,
@@ -241,30 +250,11 @@
    "pagine": 37,
    "mese": 2,
    "giorno": 12,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 8,
     "ultimo": 1828,
     "dal_2000": 4,
-    "trovato": true
-   }
-  },
-  {
-   "tipo": "nascita",
-   "qid": "Q315132",
-   "nome": "Ion Luca Caragiale",
-   "it": "Ion Luca Caragiale",
-   "desc": "Romanian playwright, writer and poet (1852-1912)",
-   "autore": null,
-   "autore_qid": null,
-   "anno": 1852,
-   "anni": 175,
-   "pagine": 47,
-   "mese": 2,
-   "giorno": 13,
-   "sbn": {
-    "edizioni": 10,
-    "ultimo": 2021,
-    "dal_2000": 6,
     "trovato": true
    }
   },
@@ -281,6 +271,7 @@
    "pagine": 35,
    "mese": 2,
    "giorno": 13,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 8,
     "ultimo": 1969,
@@ -301,6 +292,7 @@
    "pagine": 135,
    "mese": 2,
    "giorno": 19,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 70,
     "ultimo": 2022,
@@ -326,7 +318,8 @@
     "ultimo": 1903,
     "dal_2000": 7,
     "trovato": true
-   }
+   },
+   "fonte_data": "wikidata+wikipedia"
   },
   {
    "tipo": "nascita",
@@ -341,6 +334,7 @@
    "pagine": 50,
    "mese": 2,
    "giorno": 19,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 9,
     "ultimo": 2019,
@@ -361,12 +355,34 @@
    "pagine": 44,
    "mese": 2,
    "giorno": 19,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 8,
     "ultimo": 2021,
     "dal_2000": 5,
     "trovato": true
    }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q43718",
+   "nome": "Nikolai Gogol",
+   "it": "Nikolaj Vasil'evič Gogol'",
+   "desc": "Russian writer of Ukrainian origin (1809–1852)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1852,
+   "anni": 175,
+   "pagine": 157,
+   "mese": 2,
+   "giorno": 21,
+   "sbn": {
+    "edizioni": 223,
+    "ultimo": 1010,
+    "dal_2000": 115,
+    "trovato": true
+   },
+   "fonte_data": "wikipedia"
   },
   {
    "tipo": "nascita",
@@ -381,6 +397,7 @@
    "pagine": 43,
    "mese": 2,
    "giorno": 21,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 24,
     "ultimo": 2022,
@@ -401,6 +418,7 @@
    "pagine": 32,
    "mese": 2,
    "giorno": 24,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 0,
     "ultimo": null,
@@ -426,7 +444,8 @@
     "ultimo": null,
     "dal_2000": 0,
     "trovato": false
-   }
+   },
+   "fonte_data": "wikidata+wikipedia"
   },
   {
    "tipo": "nascita",
@@ -441,6 +460,7 @@
    "pagine": 269,
    "mese": 2,
    "giorno": 26,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 858,
     "ultimo": 2023,
@@ -461,6 +481,7 @@
    "pagine": 37,
    "mese": 2,
    "giorno": 26,
+   "fonte_data": "wikidata",
    "sbn": {
     "edizioni": 15,
     "ultimo": 1969,
@@ -481,6 +502,7 @@
    "pagine": 149,
    "mese": 2,
    "giorno": 27,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 274,
     "ultimo": 1980,
@@ -501,6 +523,7 @@
    "pagine": 33,
    "mese": 2,
    "giorno": 27,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 95,
     "ultimo": 2021,
@@ -526,7 +549,8 @@
     "ultimo": 1929,
     "dal_2000": 6,
     "trovato": true
-   }
+   },
+   "fonte_data": "wikidata+wikipedia"
   },
   {
    "tipo": "nascita",
@@ -541,6 +565,7 @@
    "pagine": 38,
    "mese": 3,
    "giorno": 5,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 12,
     "ultimo": 2017,
@@ -582,6 +607,7 @@
    "pagine": 209,
    "mese": 3,
    "giorno": 6,
+   "fonte_data": "wikidata",
    "sbn": {
     "edizioni": 116,
     "ultimo": 2023,
@@ -602,6 +628,7 @@
    "pagine": 33,
    "mese": 3,
    "giorno": 11,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 5,
     "ultimo": 2014,
@@ -622,10 +649,32 @@
    "pagine": 30,
    "mese": 3,
    "giorno": 13,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 6,
     "ultimo": 2015,
     "dal_2000": 5,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q239540",
+   "nome": "Augusta, Lady Gregory",
+   "it": "Augusta Gregory",
+   "desc": "Irish playwright, poet, folklorist (1852-1932)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1852,
+   "anni": 175,
+   "pagine": 45,
+   "mese": 3,
+   "giorno": 15,
+   "fonte_data": "wikipedia",
+   "sbn": {
+    "edizioni": 2,
+    "ultimo": 2005,
+    "dal_2000": 2,
     "trovato": true
    }
   },
@@ -663,6 +712,7 @@
    "pagine": 45,
    "mese": 3,
    "giorno": 23,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 5,
     "ultimo": 2020,
@@ -683,30 +733,11 @@
    "pagine": 42,
    "mese": 3,
    "giorno": 24,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 2,
     "ultimo": 2013,
     "dal_2000": 2,
-    "trovato": true
-   }
-  },
-  {
-   "tipo": "nascita",
-   "qid": "Q333653",
-   "nome": "Quim Monzó",
-   "it": "Quim Monzó",
-   "desc": "Spanish writer and translator",
-   "autore": null,
-   "autore_qid": null,
-   "anno": 1952,
-   "anni": 75,
-   "pagine": 33,
-   "mese": 3,
-   "giorno": 24,
-   "sbn": {
-    "edizioni": 6,
-    "ultimo": 2014,
-    "dal_2000": 3,
     "trovato": true
    }
   },
@@ -744,6 +775,7 @@
    "pagine": 35,
    "mese": 3,
    "giorno": 25,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 14,
     "ultimo": 2022,
@@ -764,6 +796,7 @@
    "pagine": 30,
    "mese": 3,
    "giorno": 27,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 37,
     "ultimo": 2020,
@@ -784,6 +817,7 @@
    "pagine": 48,
    "mese": 3,
    "giorno": 29,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 26,
     "ultimo": 2020,
@@ -793,21 +827,22 @@
   },
   {
    "tipo": "morte",
-   "qid": "Q291397",
-   "nome": "Fernán Caballero",
-   "it": "Fernán Caballero",
-   "desc": "Spanish women novelist (1796-1877)",
+   "qid": "Q296809",
+   "nome": "Ferenc Molnár",
+   "it": "Ferenc Molnár",
+   "desc": "Hungarian-born dramatist and novelist (1878-1952)",
    "autore": null,
    "autore_qid": null,
-   "anno": 1877,
-   "anni": 150,
-   "pagine": 36,
+   "anno": 1952,
+   "anni": 75,
+   "pagine": 49,
    "mese": 4,
-   "giorno": 7,
+   "giorno": 1,
+   "fonte_data": "wikipedia",
    "sbn": {
-    "edizioni": 17,
-    "ultimo": 1872,
-    "dal_2000": 10,
+    "edizioni": 144,
+    "ultimo": 2021,
+    "dal_2000": 73,
     "trovato": true
    }
   },
@@ -824,6 +859,7 @@
    "pagine": 33,
    "mese": 4,
    "giorno": 4,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 0,
     "ultimo": null,
@@ -844,6 +880,7 @@
    "pagine": 36,
    "mese": 4,
    "giorno": 7,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 17,
     "ultimo": 1872,
@@ -864,6 +901,7 @@
    "pagine": 79,
    "mese": 4,
    "giorno": 9,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 1,
     "ultimo": 1992,
@@ -884,6 +922,7 @@
    "pagine": 49,
    "mese": 4,
    "giorno": 10,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 0,
     "ultimo": null,
@@ -904,10 +943,32 @@
    "pagine": 81,
    "mese": 4,
    "giorno": 11,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 168,
     "ultimo": 2022,
     "dal_2000": 71,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q232916",
+   "nome": "Abraham Ortelius",
+   "it": "Abramo Ortelio",
+   "desc": "Flemish cartographer, geographer and cosmographer (1527–1598)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1527,
+   "anni": 500,
+   "pagine": 66,
+   "mese": 4,
+   "giorno": 14,
+   "fonte_data": "wikipedia",
+   "sbn": {
+    "edizioni": 10,
+    "ultimo": 1724,
+    "dal_2000": 6,
     "trovato": true
    }
   },
@@ -934,6 +995,27 @@
   },
   {
    "tipo": "morte",
+   "qid": "Q298827",
+   "nome": "Gaston Leroux",
+   "it": "Gaston Leroux",
+   "desc": "French author and journalist (1868–1927)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 53,
+   "mese": 4,
+   "giorno": 15,
+   "sbn": {
+    "edizioni": 79,
+    "ultimo": 2022,
+    "dal_2000": 58,
+    "trovato": true
+   },
+   "fonte_data": "wikipedia"
+  },
+  {
+   "tipo": "morte",
    "qid": "Q234050",
    "nome": "Erasmus Darwin",
    "it": "Erasmus Darwin",
@@ -945,6 +1027,7 @@
    "pagine": 55,
    "mese": 4,
    "giorno": 18,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 5,
     "ultimo": 1802,
@@ -953,23 +1036,24 @@
    }
   },
   {
-   "tipo": "morte",
-   "qid": "Q171242",
-   "nome": "Gleb Uspensky",
-   "it": "Gleb Ivanovič Uspenskij",
-   "desc": "Russian writer (1843-1902)",
+   "tipo": "nascita",
+   "qid": "Q467741",
+   "nome": "Veniamin Kaverin",
+   "it": "Veniamin Aleksandrovič Kaverin",
+   "desc": "Russian-Soviet writer and memoirist (1902–1989)",
    "autore": null,
    "autore_qid": null,
    "anno": 1902,
    "anni": 125,
-   "pagine": 32,
+   "pagine": 30,
    "mese": 4,
    "giorno": 19,
+   "fonte_data": "wikipedia",
    "sbn": {
-    "edizioni": 0,
-    "ultimo": null,
+    "edizioni": 1,
+    "ultimo": 1966,
     "dal_2000": 0,
-    "trovato": false
+    "trovato": true
    }
   },
   {
@@ -985,12 +1069,34 @@
    "pagine": 102,
    "mese": 4,
    "giorno": 23,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 5,
     "ultimo": 2012,
     "dal_2000": 2,
     "trovato": true
    }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q157623",
+   "nome": "Vasily Zhukovsky",
+   "it": "Vasilij Andreevič Žukovskij",
+   "desc": "Russian poet (1783-1852)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1852,
+   "anni": 175,
+   "pagine": 68,
+   "mese": 4,
+   "giorno": 24,
+   "sbn": {
+    "edizioni": 4,
+    "ultimo": 1989,
+    "dal_2000": 1,
+    "trovato": true
+   },
+   "fonte_data": "wikipedia"
   },
   {
    "tipo": "nascita",
@@ -1005,6 +1111,7 @@
    "pagine": 45,
    "mese": 4,
    "giorno": 25,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 6,
     "ultimo": 2018,
@@ -1025,10 +1132,32 @@
    "pagine": 34,
    "mese": 5,
    "giorno": 3,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 11,
     "ultimo": 2012,
     "dal_2000": 2,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q301983",
+   "nome": "Bret Harte",
+   "it": "Bret Harte",
+   "desc": "American writer and poet (1836–1902)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1902,
+   "anni": 125,
+   "pagine": 49,
+   "mese": 5,
+   "giorno": 5,
+   "fonte_data": "wikipedia",
+   "sbn": {
+    "edizioni": 17,
+    "ultimo": 1892,
+    "dal_2000": 13,
     "trovato": true
    }
   },
@@ -1066,26 +1195,7 @@
    "pagine": 109,
    "mese": 5,
    "giorno": 6,
-   "sbn": {
-    "edizioni": 100,
-    "ultimo": 2023,
-    "dal_2000": 65,
-    "trovato": true
-   }
-  },
-  {
-   "tipo": "morte",
-   "qid": "Q131117",
-   "nome": "Maria Montessori",
-   "it": "Maria Montessori",
-   "desc": "Italian physician and educator (1870-1952)",
-   "autore": null,
-   "autore_qid": null,
-   "anno": 1952,
-   "anni": 75,
-   "pagine": 109,
-   "mese": 5,
-   "giorno": 6,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 100,
     "ultimo": 2023,
@@ -1106,6 +1216,7 @@
    "pagine": 59,
    "mese": 5,
    "giorno": 6,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 6,
     "ultimo": 1905,
@@ -1126,6 +1237,7 @@
    "pagine": 51,
    "mese": 5,
    "giorno": 7,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 20,
     "ultimo": 2018,
@@ -1146,6 +1258,7 @@
    "pagine": 35,
    "mese": 5,
    "giorno": 9,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 0,
     "ultimo": null,
@@ -1166,6 +1279,7 @@
    "pagine": 61,
    "mese": 5,
    "giorno": 10,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 1,
     "ultimo": 1999,
@@ -1186,6 +1300,7 @@
    "pagine": 34,
    "mese": 5,
    "giorno": 10,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 0,
     "ultimo": null,
@@ -1206,11 +1321,33 @@
    "pagine": 31,
    "mese": 5,
    "giorno": 22,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 10,
     "ultimo": 1998,
     "dal_2000": 4,
     "trovato": true
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q219744",
+   "nome": "Luis de Góngora",
+   "it": "Luis de Góngora",
+   "desc": "Spanish Baroque lyric poet (1561-1627)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1627,
+   "anni": 400,
+   "pagine": 64,
+   "mese": 5,
+   "giorno": 24,
+   "fonte_data": "wikipedia",
+   "sbn": {
+    "edizioni": 0,
+    "ultimo": null,
+    "dal_2000": 0,
+    "trovato": false
    }
   },
   {
@@ -1226,6 +1363,7 @@
    "pagine": 55,
    "mese": 5,
    "giorno": 25,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 131,
     "ultimo": 2022,
@@ -1246,6 +1384,7 @@
    "pagine": 111,
    "mese": 6,
    "giorno": 1,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 97,
     "ultimo": 2023,
@@ -1271,7 +1410,8 @@
     "ultimo": 1983,
     "dal_2000": 0,
     "trovato": true
-   }
+   },
+   "fonte_data": "wikidata+wikipedia"
   },
   {
    "tipo": "nascita",
@@ -1286,6 +1426,7 @@
    "pagine": 138,
    "mese": 6,
    "giorno": 7,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 21,
     "ultimo": 2023,
@@ -1306,6 +1447,7 @@
    "pagine": 37,
    "mese": 6,
    "giorno": 10,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 8,
     "ultimo": 1917,
@@ -1326,6 +1468,7 @@
    "pagine": 36,
    "mese": 6,
    "giorno": 10,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 0,
     "ultimo": null,
@@ -1346,6 +1489,7 @@
    "pagine": 36,
    "mese": 6,
    "giorno": 11,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 1,
     "ultimo": 2016,
@@ -1366,6 +1510,7 @@
    "pagine": 34,
    "mese": 6,
    "giorno": 11,
+   "fonte_data": "wikidata",
    "sbn": {
     "edizioni": 0,
     "ultimo": null,
@@ -1386,6 +1531,7 @@
    "pagine": 70,
    "mese": 6,
    "giorno": 12,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 91,
     "ultimo": 2021,
@@ -1406,12 +1552,34 @@
    "pagine": 55,
    "mese": 6,
    "giorno": 12,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 5,
     "ultimo": 1923,
     "dal_2000": 5,
     "trovato": true
    }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q218698",
+   "nome": "Jerome K. Jerome",
+   "it": "Jerome K. Jerome",
+   "desc": "English humorist (1859-1927)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 83,
+   "mese": 6,
+   "giorno": 14,
+   "sbn": {
+    "edizioni": 158,
+    "ultimo": 2022,
+    "dal_2000": 80,
+    "trovato": true
+   },
+   "fonte_data": "wikipedia"
   },
   {
    "tipo": "nascita",
@@ -1426,6 +1594,7 @@
    "pagine": 72,
    "mese": 6,
    "giorno": 15,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 18,
     "ultimo": 1970,
@@ -1446,11 +1615,33 @@
    "pagine": 72,
    "mese": 6,
    "giorno": 18,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 11,
     "ultimo": 1897,
     "dal_2000": 7,
     "trovato": true
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q317475",
+   "nome": "Ali Shariati",
+   "it": "Ali Shariati",
+   "desc": "Iranian writer, scholar of Islam, and political activist(1933-1977)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1977,
+   "anni": 50,
+   "pagine": 53,
+   "mese": 6,
+   "giorno": 18,
+   "fonte_data": "wikipedia",
+   "sbn": {
+    "edizioni": 0,
+    "ultimo": null,
+    "dal_2000": 0,
+    "trovato": false
    }
   },
   {
@@ -1466,10 +1657,32 @@
    "pagine": 48,
    "mese": 6,
    "giorno": 20,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 10,
     "ultimo": 2017,
     "dal_2000": 8,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q1399",
+   "nome": "Niccolò Machiavelli",
+   "it": null,
+   "desc": "Florentine statesman, diplomat, and political theorist (1469–1527)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1527,
+   "anni": 500,
+   "pagine": 230,
+   "mese": 6,
+   "giorno": 21,
+   "fonte_data": "verifica: Studenti.it e Wissen.de (21 giugno 1527)",
+   "sbn": {
+    "edizioni": 708,
+    "ultimo": 2022,
+    "dal_2000": 426,
     "trovato": true
    }
   },
@@ -1507,6 +1720,7 @@
    "pagine": 164,
    "mese": 7,
    "giorno": 2,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 287,
     "ultimo": 2022,
@@ -1527,6 +1741,7 @@
    "pagine": 154,
    "mese": 7,
    "giorno": 2,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 71,
     "ultimo": 2021,
@@ -1547,6 +1762,7 @@
    "pagine": 47,
    "mese": 7,
    "giorno": 4,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 30,
     "ultimo": 1969,
@@ -1567,6 +1783,7 @@
    "pagine": 57,
    "mese": 7,
    "giorno": 6,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 4,
     "ultimo": 2020,
@@ -1587,6 +1804,7 @@
    "pagine": 38,
    "mese": 7,
    "giorno": 10,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 10,
     "ultimo": 2021,
@@ -1607,11 +1825,33 @@
    "pagine": 36,
    "mese": 7,
    "giorno": 14,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 0,
     "ultimo": null,
     "dal_2000": 0,
     "trovato": false
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q350778",
+   "nome": "Alexander Luria",
+   "it": "Aleksandr Romanovič Lurija",
+   "desc": "Soviet psychologist (1902–1977)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1902,
+   "anni": 125,
+   "pagine": 41,
+   "mese": 7,
+   "giorno": 16,
+   "fonte_data": "wikipedia",
+   "sbn": {
+    "edizioni": 19,
+    "ultimo": 2020,
+    "dal_2000": 3,
+    "trovato": true
    }
   },
   {
@@ -1648,10 +1888,32 @@
    "pagine": 36,
    "mese": 7,
    "giorno": 20,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 1,
     "ultimo": 2016,
     "dal_2000": 1,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q38337",
+   "nome": "Alexandre Dumas",
+   "it": "Alexandre Dumas padre",
+   "desc": "French writer and dramatist (1802–1870)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1802,
+   "anni": 225,
+   "pagine": 174,
+   "mese": 7,
+   "giorno": 24,
+   "fonte_data": "wikipedia",
+   "sbn": {
+    "edizioni": 1182,
+    "ultimo": 2023,
+    "dal_2000": 721,
     "trovato": true
    }
   },
@@ -1673,7 +1935,8 @@
     "ultimo": 2022,
     "dal_2000": 8,
     "trovato": true
-   }
+   },
+   "fonte_data": "wikidata+wikipedia"
   },
   {
    "tipo": "nascita",
@@ -1688,12 +1951,34 @@
    "pagine": 47,
    "mese": 7,
    "giorno": 25,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 1,
     "ultimo": 2013,
     "dal_2000": 1,
     "trovato": true
    }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q384594",
+   "nome": "Matilde Serao",
+   "it": "Matilde Serao",
+   "desc": "Italian journalist and writer, editor (1856–1927)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 33,
+   "mese": 7,
+   "giorno": 25,
+   "sbn": {
+    "edizioni": 265,
+    "ultimo": 2022,
+    "dal_2000": 173,
+    "trovato": true
+   },
+   "fonte_data": "wikipedia"
   },
   {
    "tipo": "nascita",
@@ -1708,6 +1993,7 @@
    "pagine": 129,
    "mese": 7,
    "giorno": 28,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 129,
     "ultimo": 2022,
@@ -1728,6 +2014,7 @@
    "pagine": 40,
    "mese": 7,
    "giorno": 28,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 1,
     "ultimo": 1975,
@@ -1748,30 +2035,11 @@
    "pagine": 75,
    "mese": 7,
    "giorno": 29,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 3,
     "ultimo": 1960,
     "dal_2000": 3,
-    "trovato": true
-   }
-  },
-  {
-   "tipo": "nascita",
-   "qid": "Q201484",
-   "nome": "John Dee",
-   "it": "John Dee",
-   "desc": "16th-century English mathematician, astrologer, and alchemist",
-   "autore": null,
-   "autore_qid": null,
-   "anno": 1527,
-   "anni": 500,
-   "pagine": 60,
-   "mese": 8,
-   "giorno": 2,
-   "sbn": {
-    "edizioni": 2,
-    "ultimo": 2007,
-    "dal_2000": 1,
     "trovato": true
    }
   },
@@ -1793,7 +2061,8 @@
     "ultimo": null,
     "dal_2000": 0,
     "trovato": false
-   }
+   },
+   "fonte_data": "wikidata+wikipedia"
   },
   {
    "tipo": "nascita",
@@ -1808,6 +2077,7 @@
    "pagine": 78,
    "mese": 8,
    "giorno": 8,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 53,
     "ultimo": 2022,
@@ -1828,6 +2098,7 @@
    "pagine": 45,
    "mese": 8,
    "giorno": 9,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 5,
     "ultimo": 2021,
@@ -1848,6 +2119,7 @@
    "pagine": 162,
    "mese": 8,
    "giorno": 12,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 28,
     "ultimo": 2020,
@@ -1873,7 +2145,8 @@
     "ultimo": 1934,
     "dal_2000": 30,
     "trovato": true
-   }
+   },
+   "fonte_data": "wikidata+wikipedia"
   },
   {
    "tipo": "morte",
@@ -1888,6 +2161,7 @@
    "pagine": 41,
    "mese": 8,
    "giorno": 14,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 19,
     "ultimo": 2020,
@@ -1908,6 +2182,7 @@
    "pagine": 37,
    "mese": 8,
    "giorno": 16,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 60,
     "ultimo": 2023,
@@ -1928,6 +2203,7 @@
    "pagine": 35,
    "mese": 8,
    "giorno": 18,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 8,
     "ultimo": 2017,
@@ -1969,10 +2245,32 @@
    "pagine": 36,
    "mese": 8,
    "giorno": 19,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 3,
     "ultimo": 1981,
     "dal_2000": 0,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q315176",
+   "nome": "Charles De Coster",
+   "it": "Charles De Coster",
+   "desc": "Belgian novelist (1827–1879)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1827,
+   "anni": 200,
+   "pagine": 44,
+   "mese": 8,
+   "giorno": 20,
+   "fonte_data": "wikipedia",
+   "sbn": {
+    "edizioni": 28,
+    "ultimo": 1932,
+    "dal_2000": 16,
     "trovato": true
    }
   },
@@ -1989,6 +2287,7 @@
    "pagine": 43,
    "mese": 8,
    "giorno": 22,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 20,
     "ultimo": 2021,
@@ -2009,6 +2308,7 @@
    "pagine": 35,
    "mese": 8,
    "giorno": 23,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 23,
     "ultimo": 1989,
@@ -2029,6 +2329,7 @@
    "pagine": 71,
    "mese": 8,
    "giorno": 24,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 63,
     "ultimo": 2023,
@@ -2049,32 +2350,12 @@
    "pagine": 66,
    "mese": 8,
    "giorno": 24,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 0,
     "ultimo": null,
     "dal_2000": 0,
     "trovato": false
-   }
-  },
-  {
-   "tipo": "prima edizione",
-   "qid": "Q26505",
-   "nome": "The Old Man and the Sea",
-   "it": "Il vecchio e il mare",
-   "desc": "1952 short novel by Ernest Hemingway, written between December 1950 and February 1951",
-   "autore": "Ernest Hemingway",
-   "autore_qid": "Q23434",
-   "anno": 1952,
-   "anni": 75,
-   "pagine": 91,
-   "mese": 9,
-   "giorno": 1,
-   "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 229,
-    "ultimo": 2023,
-    "dal_2000": 107,
-    "trovato": true
    }
   },
   {
@@ -2090,6 +2371,7 @@
    "pagine": 61,
    "mese": 9,
    "giorno": 2,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 140,
     "ultimo": 1896,
@@ -2110,6 +2392,7 @@
    "pagine": 39,
    "mese": 9,
    "giorno": 4,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 24,
     "ultimo": 1969,
@@ -2130,10 +2413,53 @@
    "pagine": 38,
    "mese": 9,
    "giorno": 4,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 3,
     "ultimo": 2011,
     "dal_2000": 1,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q26505",
+   "nome": "The Old Man and the Sea",
+   "it": "Il vecchio e il mare",
+   "desc": "1952 short novel by Ernest Hemingway, written between December 1950 and February 1951",
+   "autore": "Ernest Hemingway",
+   "autore_qid": "Q23434",
+   "anno": 1952,
+   "anni": 75,
+   "pagine": 91,
+   "mese": 9,
+   "giorno": 8,
+   "fonte_data": "verifica: Wikipedia: il libro uscì una settimana dopo il numero di Life del 1 settembre 1952",
+   "sbn": {
+    "edizioni": 229,
+    "ultimo": 2023,
+    "dal_2000": 107,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q166234",
+   "nome": "Ugo Foscolo",
+   "it": "Ugo Foscolo",
+   "desc": "Italian writer and poet (1778–1827)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1827,
+   "anni": 200,
+   "pagine": 77,
+   "mese": 9,
+   "giorno": 10,
+   "fonte_data": "verifica: Studenti.it (10 settembre 1827)",
+   "sbn": {
+    "edizioni": 1008,
+    "ultimo": 2022,
+    "dal_2000": 614,
     "trovato": true
    }
   },
@@ -2150,6 +2476,7 @@
    "pagine": 37,
    "mese": 9,
    "giorno": 12,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 4,
     "ultimo": 2010,
@@ -2170,6 +2497,7 @@
    "pagine": 34,
    "mese": 9,
    "giorno": 12,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 11,
     "ultimo": 1955,
@@ -2211,6 +2539,7 @@
    "pagine": 98,
    "mese": 9,
    "giorno": 15,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 2,
     "ultimo": 2017,
@@ -2315,6 +2644,7 @@
    "pagine": 43,
    "mese": 9,
    "giorno": 19,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 0,
     "ultimo": null,
@@ -2335,11 +2665,33 @@
    "pagine": 39,
    "mese": 9,
    "giorno": 21,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 2,
     "ultimo": 2007,
     "dal_2000": 2,
     "trovato": true
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q217470",
+   "nome": "Alexander Radishchev",
+   "it": "Aleksandr Nikolaevič Radiščev",
+   "desc": "18th century Russian author and social critic",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1802,
+   "anni": 225,
+   "pagine": 55,
+   "mese": 9,
+   "giorno": 24,
+   "fonte_data": "wikipedia",
+   "sbn": {
+    "edizioni": 0,
+    "ultimo": null,
+    "dal_2000": 0,
+    "trovato": false
    }
   },
   {
@@ -2355,6 +2707,7 @@
    "pagine": 62,
    "mese": 9,
    "giorno": 25,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 4,
     "ultimo": 2022,
@@ -2375,6 +2728,7 @@
    "pagine": 32,
    "mese": 9,
    "giorno": 25,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 0,
     "ultimo": null,
@@ -2395,6 +2749,7 @@
    "pagine": 84,
    "mese": 9,
    "giorno": 26,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 7,
     "ultimo": 2023,
@@ -2415,11 +2770,33 @@
    "pagine": 167,
    "mese": 9,
    "giorno": 29,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 541,
     "ultimo": 2022,
     "dal_2000": 359,
     "trovato": true
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q57879",
+   "nome": "Wilhelm Müller",
+   "it": "Wilhelm Müller",
+   "desc": "German poet (1794-1827)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1827,
+   "anni": 200,
+   "pagine": 42,
+   "mese": 9,
+   "giorno": 30,
+   "fonte_data": "wikipedia",
+   "sbn": {
+    "edizioni": 0,
+    "ultimo": null,
+    "dal_2000": 0,
+    "trovato": false
    }
   },
   {
@@ -2435,10 +2812,53 @@
    "pagine": 57,
    "mese": 10,
    "giorno": 7,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 21,
     "ultimo": 1980,
     "dal_2000": 13,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q429915",
+   "nome": "Alexander Sumarokov",
+   "it": "Aleksandr Petrovič Sumarokov",
+   "desc": "Russian poet, playwright",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1777,
+   "anni": 250,
+   "pagine": 32,
+   "mese": 10,
+   "giorno": 12,
+   "fonte_data": "wikipedia",
+   "sbn": {
+    "edizioni": 0,
+    "ultimo": null,
+    "dal_2000": 0,
+    "trovato": false
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q45735",
+   "nome": "Charlotte's Web",
+   "it": "La tela di Carlotta",
+   "desc": "1952 children's novel by E. B. White",
+   "autore": "E. B. White",
+   "autore_qid": "Q361617",
+   "anno": 1952,
+   "anni": 75,
+   "pagine": 83,
+   "mese": 10,
+   "giorno": 15,
+   "fonte_data": "verifica: Wikipedia (infobox: 15 ottobre 1952)",
+   "sbn": {
+    "edizioni": 17,
+    "ultimo": 2016,
+    "dal_2000": 17,
     "trovato": true
    }
   },
@@ -2455,6 +2875,7 @@
    "pagine": 137,
    "mese": 10,
    "giorno": 16,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 26,
     "ultimo": 1969,
@@ -2475,6 +2896,7 @@
    "pagine": 34,
    "mese": 10,
    "giorno": 20,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 9,
     "ultimo": 2002,
@@ -2516,6 +2938,7 @@
    "pagine": 54,
    "mese": 10,
    "giorno": 23,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 0,
     "ultimo": null,
@@ -2536,6 +2959,7 @@
    "pagine": 30,
    "mese": 10,
    "giorno": 23,
+   "fonte_data": "wikidata",
    "sbn": {
     "edizioni": 3,
     "ultimo": 2006,
@@ -2556,6 +2980,7 @@
    "pagine": 45,
    "mese": 10,
    "giorno": 25,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 0,
     "ultimo": null,
@@ -2576,6 +3001,7 @@
    "pagine": 80,
    "mese": 10,
    "giorno": 27,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 10,
     "ultimo": 2011,
@@ -2596,6 +3022,7 @@
    "pagine": 34,
    "mese": 10,
    "giorno": 27,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 51,
     "ultimo": 2020,
@@ -2616,6 +3043,7 @@
    "pagine": 42,
    "mese": 11,
    "giorno": 1,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 0,
     "ultimo": null,
@@ -2636,6 +3064,7 @@
    "pagine": 61,
    "mese": 11,
    "giorno": 5,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 177,
     "ultimo": 1980,
@@ -2656,6 +3085,7 @@
    "pagine": 46,
    "mese": 11,
    "giorno": 6,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 24,
     "ultimo": 2023,
@@ -2676,6 +3106,7 @@
    "pagine": 30,
    "mese": 11,
    "giorno": 15,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 9,
     "ultimo": 2022,
@@ -2701,7 +3132,8 @@
     "ultimo": null,
     "dal_2000": 0,
     "trovato": false
-   }
+   },
+   "fonte_data": "wikidata+wikipedia"
   },
   {
    "tipo": "morte",
@@ -2716,6 +3148,7 @@
    "pagine": 58,
    "mese": 11,
    "giorno": 18,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 37,
     "ultimo": 1934,
@@ -2736,6 +3169,7 @@
    "pagine": 53,
    "mese": 11,
    "giorno": 22,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 10,
     "ultimo": 1959,
@@ -2761,7 +3195,8 @@
     "ultimo": 1932,
     "dal_2000": 5,
     "trovato": true
-   }
+   },
+   "fonte_data": "wikidata+wikipedia"
   },
   {
    "tipo": "prima edizione",
@@ -2818,6 +3253,7 @@
    "pagine": 58,
    "mese": 11,
    "giorno": 29,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 37,
     "ultimo": 1934,
@@ -2838,26 +3274,7 @@
    "pagine": 33,
    "mese": 11,
    "giorno": 30,
-   "sbn": {
-    "edizioni": 4,
-    "ultimo": 2019,
-    "dal_2000": 1,
-    "trovato": true
-   }
-  },
-  {
-   "tipo": "morte",
-   "qid": "Q31215",
-   "nome": "Miloš Crnjanski",
-   "it": "Miloš Crnjanski",
-   "desc": "expressionist modernist poet, author, and diplomat from Austria-Hungary",
-   "autore": null,
-   "autore_qid": null,
-   "anno": 1977,
-   "anni": 50,
-   "pagine": 33,
-   "mese": 11,
-   "giorno": 30,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 4,
     "ultimo": 2019,
@@ -2883,7 +3300,8 @@
     "ultimo": 1923,
     "dal_2000": 4,
     "trovato": true
-   }
+   },
+   "fonte_data": "wikidata+wikipedia"
   },
   {
    "tipo": "nascita",
@@ -2898,6 +3316,7 @@
    "pagine": 48,
    "mese": 12,
    "giorno": 8,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 47,
     "ultimo": 2021,
@@ -2918,6 +3337,7 @@
    "pagine": 37,
    "mese": 12,
    "giorno": 12,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 0,
     "ultimo": null,
@@ -2938,6 +3358,7 @@
    "pagine": 43,
    "mese": 12,
    "giorno": 22,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 0,
     "ultimo": null,
@@ -2958,6 +3379,7 @@
    "pagine": 31,
    "mese": 12,
    "giorno": 23,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 0,
     "ultimo": null,
@@ -2978,6 +3400,7 @@
    "pagine": 53,
    "mese": 12,
    "giorno": 24,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 161,
     "ultimo": 2022,
@@ -3003,7 +3426,8 @@
     "ultimo": 1909,
     "dal_2000": 1,
     "trovato": true
-   }
+   },
+   "fonte_data": "wikidata+wikipedia"
   },
   {
    "tipo": "nascita",
@@ -3018,70 +3442,11 @@
    "pagine": 44,
    "mese": 12,
    "giorno": 28,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 5,
     "ultimo": 1989,
     "dal_2000": 2,
-    "trovato": true
-   }
-  },
-  {
-   "tipo": "morte",
-   "qid": "Q1399",
-   "nome": "Niccolò Machiavelli",
-   "it": null,
-   "desc": "Florentine statesman, diplomat, and political theorist (1469–1527)",
-   "autore": null,
-   "autore_qid": null,
-   "anno": 1527,
-   "anni": 500,
-   "pagine": 230,
-   "mese": null,
-   "giorno": null,
-   "sbn": {
-    "edizioni": 708,
-    "ultimo": 2022,
-    "dal_2000": 426,
-    "trovato": true
-   }
-  },
-  {
-   "tipo": "nascita",
-   "qid": "Q38337",
-   "nome": "Alexandre Dumas",
-   "it": "Alexandre Dumas padre",
-   "desc": "French writer and dramatist (1802–1870)",
-   "autore": null,
-   "autore_qid": null,
-   "anno": 1802,
-   "anni": 225,
-   "pagine": 174,
-   "mese": null,
-   "giorno": null,
-   "sbn": {
-    "edizioni": 1182,
-    "ultimo": 2023,
-    "dal_2000": 721,
-    "trovato": true
-   }
-  },
-  {
-   "tipo": "morte",
-   "qid": "Q43718",
-   "nome": "Nikolai Gogol",
-   "it": "Nikolaj Vasil'evič Gogol'",
-   "desc": "Russian writer of Ukrainian origin (1809–1852)",
-   "autore": null,
-   "autore_qid": null,
-   "anno": 1852,
-   "anni": 175,
-   "pagine": 157,
-   "mese": null,
-   "giorno": null,
-   "sbn": {
-    "edizioni": 223,
-    "ultimo": 1010,
-    "dal_2000": 115,
     "trovato": true
    }
   },
@@ -3108,47 +3473,6 @@
   },
   {
    "tipo": "prima edizione",
-   "qid": "Q45735",
-   "nome": "Charlotte's Web",
-   "it": "La tela di Carlotta",
-   "desc": "1952 children's novel by E. B. White",
-   "autore": "E. B. White",
-   "autore_qid": "Q361617",
-   "anno": 1952,
-   "anni": 75,
-   "pagine": 83,
-   "mese": null,
-   "giorno": null,
-   "fonte_data": null,
-   "sbn": {
-    "edizioni": 17,
-    "ultimo": 2016,
-    "dal_2000": 17,
-    "trovato": true
-   }
-  },
-  {
-   "tipo": "morte",
-   "qid": "Q218698",
-   "nome": "Jerome K. Jerome",
-   "it": "Jerome K. Jerome",
-   "desc": "English humorist (1859-1927)",
-   "autore": null,
-   "autore_qid": null,
-   "anno": 1927,
-   "anni": 100,
-   "pagine": 83,
-   "mese": null,
-   "giorno": null,
-   "sbn": {
-    "edizioni": 158,
-    "ultimo": 2022,
-    "dal_2000": 80,
-    "trovato": true
-   }
-  },
-  {
-   "tipo": "prima edizione",
    "qid": "Q19871",
    "nome": "Waiting for Godot",
    "it": "Aspettando Godot",
@@ -3169,83 +3493,24 @@
    }
   },
   {
-   "tipo": "morte",
-   "qid": "Q166234",
-   "nome": "Ugo Foscolo",
-   "it": "Ugo Foscolo",
-   "desc": "Italian writer and poet (1778–1827)",
-   "autore": null,
-   "autore_qid": null,
-   "anno": 1827,
-   "anni": 200,
-   "pagine": 77,
-   "mese": null,
-   "giorno": null,
-   "sbn": {
-    "edizioni": 1008,
-    "ultimo": 2022,
-    "dal_2000": 614,
-    "trovato": true
-   }
-  },
-  {
-   "tipo": "morte",
-   "qid": "Q157623",
-   "nome": "Vasily Zhukovsky",
-   "it": "Vasilij Andreevič Žukovskij",
-   "desc": "Russian poet (1783-1852)",
-   "autore": null,
-   "autore_qid": null,
-   "anno": 1852,
-   "anni": 175,
-   "pagine": 68,
-   "mese": null,
-   "giorno": null,
-   "sbn": {
-    "edizioni": 4,
-    "ultimo": 1989,
-    "dal_2000": 1,
-    "trovato": true
-   }
-  },
-  {
    "tipo": "nascita",
-   "qid": "Q232916",
-   "nome": "Abraham Ortelius",
-   "it": "Abramo Ortelio",
-   "desc": "Flemish cartographer, geographer and cosmographer (1527–1598)",
+   "qid": "Q201484",
+   "nome": "John Dee",
+   "it": "John Dee",
+   "desc": "16th-century English mathematician, astrologer, and alchemist",
    "autore": null,
    "autore_qid": null,
    "anno": 1527,
    "anni": 500,
-   "pagine": 66,
+   "pagine": 60,
    "mese": null,
    "giorno": null,
+   "fonte_data": "discordante",
    "sbn": {
-    "edizioni": 10,
-    "ultimo": 1724,
-    "dal_2000": 6,
+    "edizioni": 2,
+    "ultimo": 2007,
+    "dal_2000": 1,
     "trovato": true
-   }
-  },
-  {
-   "tipo": "morte",
-   "qid": "Q219744",
-   "nome": "Luis de Góngora",
-   "it": "Luis de Góngora",
-   "desc": "Spanish Baroque lyric poet (1561-1627)",
-   "autore": null,
-   "autore_qid": null,
-   "anno": 1627,
-   "anni": 400,
-   "pagine": 64,
-   "mese": null,
-   "giorno": null,
-   "sbn": {
-    "edizioni": 0,
-    "ultimo": null,
-    "dal_2000": 0,
-    "trovato": false
    }
   },
   {
@@ -3270,66 +3535,6 @@
    }
   },
   {
-   "tipo": "morte",
-   "qid": "Q217470",
-   "nome": "Alexander Radishchev",
-   "it": "Aleksandr Nikolaevič Radiščev",
-   "desc": "18th century Russian author and social critic",
-   "autore": null,
-   "autore_qid": null,
-   "anno": 1802,
-   "anni": 225,
-   "pagine": 55,
-   "mese": null,
-   "giorno": null,
-   "sbn": {
-    "edizioni": 0,
-    "ultimo": null,
-    "dal_2000": 0,
-    "trovato": false
-   }
-  },
-  {
-   "tipo": "morte",
-   "qid": "Q317475",
-   "nome": "Ali Shariati",
-   "it": "Ali Shariati",
-   "desc": "Iranian writer, scholar of Islam, and political activist(1933-1977)",
-   "autore": null,
-   "autore_qid": null,
-   "anno": 1977,
-   "anni": 50,
-   "pagine": 53,
-   "mese": null,
-   "giorno": null,
-   "sbn": {
-    "edizioni": 0,
-    "ultimo": null,
-    "dal_2000": 0,
-    "trovato": false
-   }
-  },
-  {
-   "tipo": "morte",
-   "qid": "Q298827",
-   "nome": "Gaston Leroux",
-   "it": "Gaston Leroux",
-   "desc": "French author and journalist (1868–1927)",
-   "autore": null,
-   "autore_qid": null,
-   "anno": 1927,
-   "anni": 100,
-   "pagine": 53,
-   "mese": null,
-   "giorno": null,
-   "sbn": {
-    "edizioni": 79,
-    "ultimo": 2022,
-    "dal_2000": 58,
-    "trovato": true
-   }
-  },
-  {
    "tipo": "nascita",
    "qid": "Q84280",
    "nome": "Nikolaus Lenau",
@@ -3342,6 +3547,7 @@
    "pagine": 50,
    "mese": null,
    "giorno": null,
+   "fonte_data": null,
    "sbn": {
     "edizioni": 23,
     "ultimo": 2022,
@@ -3350,142 +3556,23 @@
    }
   },
   {
-   "tipo": "morte",
-   "qid": "Q296809",
-   "nome": "Ferenc Molnár",
-   "it": "Ferenc Molnár",
-   "desc": "Hungarian-born dramatist and novelist (1878-1952)",
-   "autore": null,
-   "autore_qid": null,
-   "anno": 1952,
-   "anni": 75,
-   "pagine": 49,
-   "mese": null,
-   "giorno": null,
-   "sbn": {
-    "edizioni": 144,
-    "ultimo": 2021,
-    "dal_2000": 73,
-    "trovato": true
-   }
-  },
-  {
-   "tipo": "morte",
-   "qid": "Q296809",
-   "nome": "Ferenc Molnár",
-   "it": "Ferenc Molnár",
-   "desc": "Hungarian-born dramatist and novelist (1878-1952)",
-   "autore": null,
-   "autore_qid": null,
-   "anno": 1952,
-   "anni": 75,
-   "pagine": 49,
-   "mese": null,
-   "giorno": null,
-   "sbn": {
-    "edizioni": 144,
-    "ultimo": 2021,
-    "dal_2000": 73,
-    "trovato": true
-   }
-  },
-  {
-   "tipo": "morte",
-   "qid": "Q301983",
-   "nome": "Bret Harte",
-   "it": "Bret Harte",
-   "desc": "American writer and poet (1836–1902)",
-   "autore": null,
-   "autore_qid": null,
-   "anno": 1902,
-   "anni": 125,
-   "pagine": 49,
-   "mese": null,
-   "giorno": null,
-   "sbn": {
-    "edizioni": 17,
-    "ultimo": 1892,
-    "dal_2000": 13,
-    "trovato": true
-   }
-  },
-  {
    "tipo": "nascita",
-   "qid": "Q239540",
-   "nome": "Augusta, Lady Gregory",
-   "it": "Augusta Gregory",
-   "desc": "Irish playwright, poet, folklorist (1852-1932)",
+   "qid": "Q315132",
+   "nome": "Ion Luca Caragiale",
+   "it": "Ion Luca Caragiale",
+   "desc": "Romanian playwright, writer and poet (1852-1912)",
    "autore": null,
    "autore_qid": null,
    "anno": 1852,
    "anni": 175,
-   "pagine": 45,
+   "pagine": 47,
    "mese": null,
    "giorno": null,
+   "fonte_data": "discordante",
    "sbn": {
-    "edizioni": 2,
-    "ultimo": 2005,
-    "dal_2000": 2,
-    "trovato": true
-   }
-  },
-  {
-   "tipo": "nascita",
-   "qid": "Q315176",
-   "nome": "Charles De Coster",
-   "it": "Charles De Coster",
-   "desc": "Belgian novelist (1827–1879)",
-   "autore": null,
-   "autore_qid": null,
-   "anno": 1827,
-   "anni": 200,
-   "pagine": 44,
-   "mese": null,
-   "giorno": null,
-   "sbn": {
-    "edizioni": 28,
-    "ultimo": 1932,
-    "dal_2000": 16,
-    "trovato": true
-   }
-  },
-  {
-   "tipo": "morte",
-   "qid": "Q57879",
-   "nome": "Wilhelm Müller",
-   "it": "Wilhelm Müller",
-   "desc": "German poet (1794-1827)",
-   "autore": null,
-   "autore_qid": null,
-   "anno": 1827,
-   "anni": 200,
-   "pagine": 42,
-   "mese": null,
-   "giorno": null,
-   "sbn": {
-    "edizioni": 0,
-    "ultimo": null,
-    "dal_2000": 0,
-    "trovato": false
-   }
-  },
-  {
-   "tipo": "nascita",
-   "qid": "Q350778",
-   "nome": "Alexander Luria",
-   "it": "Aleksandr Romanovič Lurija",
-   "desc": "Soviet psychologist (1902–1977)",
-   "autore": null,
-   "autore_qid": null,
-   "anno": 1902,
-   "anni": 125,
-   "pagine": 41,
-   "mese": null,
-   "giorno": null,
-   "sbn": {
-    "edizioni": 19,
-    "ultimo": 2020,
-    "dal_2000": 3,
+    "edizioni": 10,
+    "ultimo": 2021,
+    "dal_2000": 6,
     "trovato": true
    }
   },
@@ -3523,6 +3610,7 @@
    "pagine": 38,
    "mese": null,
    "giorno": null,
+   "fonte_data": null,
    "sbn": {
     "edizioni": 8,
     "ultimo": 1608,
@@ -3564,6 +3652,7 @@
    "pagine": 34,
    "mese": null,
    "giorno": null,
+   "fonte_data": null,
    "sbn": {
     "edizioni": 3,
     "ultimo": 1990,
@@ -3572,22 +3661,23 @@
    }
   },
   {
-   "tipo": "morte",
-   "qid": "Q384594",
-   "nome": "Matilde Serao",
-   "it": "Matilde Serao",
-   "desc": "Italian journalist and writer, editor (1856–1927)",
+   "tipo": "nascita",
+   "qid": "Q333653",
+   "nome": "Quim Monzó",
+   "it": "Quim Monzó",
+   "desc": "Spanish writer and translator",
    "autore": null,
    "autore_qid": null,
-   "anno": 1927,
-   "anni": 100,
+   "anno": 1952,
+   "anni": 75,
    "pagine": 33,
    "mese": null,
    "giorno": null,
+   "fonte_data": "discordante",
    "sbn": {
-    "edizioni": 265,
-    "ultimo": 2022,
-    "dal_2000": 173,
+    "edizioni": 6,
+    "ultimo": 2014,
+    "dal_2000": 3,
     "trovato": true
    }
   },
@@ -3667,6 +3757,7 @@
    "pagine": 32,
    "mese": null,
    "giorno": null,
+   "fonte_data": null,
    "sbn": {
     "edizioni": 0,
     "ultimo": null,
@@ -3697,17 +3788,18 @@
   },
   {
    "tipo": "morte",
-   "qid": "Q429915",
-   "nome": "Alexander Sumarokov",
-   "it": "Aleksandr Petrovič Sumarokov",
-   "desc": "Russian poet, playwright",
+   "qid": "Q171242",
+   "nome": "Gleb Uspensky",
+   "it": "Gleb Ivanovič Uspenskij",
+   "desc": "Russian writer (1843-1902)",
    "autore": null,
    "autore_qid": null,
-   "anno": 1777,
-   "anni": 250,
+   "anno": 1902,
+   "anni": 125,
    "pagine": 32,
    "mese": null,
    "giorno": null,
+   "fonte_data": "discordante",
    "sbn": {
     "edizioni": 0,
     "ultimo": null,
@@ -3776,26 +3868,6 @@
     "ultimo": null,
     "dal_2000": 0,
     "trovato": false
-   }
-  },
-  {
-   "tipo": "nascita",
-   "qid": "Q467741",
-   "nome": "Veniamin Kaverin",
-   "it": "Veniamin Aleksandrovič Kaverin",
-   "desc": "Russian-Soviet writer and memoirist (1902–1989)",
-   "autore": null,
-   "autore_qid": null,
-   "anno": 1902,
-   "anni": 125,
-   "pagine": 30,
-   "mese": null,
-   "giorno": null,
-   "sbn": {
-    "edizioni": 1,
-    "ultimo": 1966,
-    "dal_2000": 0,
-    "trovato": true
    }
   },
   {
@@ -4026,26 +4098,6 @@
     "edizioni": 107,
     "ultimo": 2023,
     "dal_2000": 73,
-    "trovato": true
-   }
-  },
-  {
-   "tipo": "prima edizione",
-   "qid": "Q2740089",
-   "nome": "The Adventure of the Veiled Lodger",
-   "it": "L’avventura dell’inquilina velata",
-   "desc": "short story by Arthur Conan Doyle",
-   "autore": "Arthur Conan Doyle",
-   "autore_qid": "Q35610",
-   "anno": 1927,
-   "anni": 100,
-   "pagine": 23,
-   "mese": null,
-   "giorno": null,
-   "sbn": {
-    "edizioni": 459,
-    "ultimo": 2023,
-    "dal_2000": 341,
     "trovato": true
    }
   },
@@ -4340,26 +4392,6 @@
   },
   {
    "tipo": "prima edizione",
-   "qid": "Q1213811",
-   "nome": "The Killers",
-   "it": "Gli uccisori",
-   "desc": "short story by Ernest Hemingway",
-   "autore": "Ernest Hemingway",
-   "autore_qid": "Q23434",
-   "anno": 1927,
-   "anni": 100,
-   "pagine": 16,
-   "mese": null,
-   "giorno": null,
-   "sbn": {
-    "edizioni": 229,
-    "ultimo": 2023,
-    "dal_2000": 107,
-    "trovato": true
-   }
-  },
-  {
-   "tipo": "prima edizione",
    "qid": "Q1388516",
    "nome": "Twenty-Four Hours in the Life of a Woman",
    "it": null,
@@ -4381,22 +4413,22 @@
   },
   {
    "tipo": "prima edizione",
-   "qid": "Q2529101",
-   "nome": "Illusions",
-   "it": "Illusioni: Le avventure di un messia riluttante",
-   "desc": "1977 novel by Richard Bach",
-   "autore": "Richard Bach",
-   "autore_qid": "Q245407",
-   "anno": 1977,
-   "anni": 50,
-   "pagine": 15,
+   "qid": "Q1213811",
+   "nome": "The Killers",
+   "it": "Gli uccisori",
+   "desc": "short story by Ernest Hemingway",
+   "autore": "Ernest Hemingway",
+   "autore_qid": "Q23434",
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 16,
    "mese": null,
    "giorno": null,
    "fonte_data": null,
    "sbn": {
-    "edizioni": 68,
+    "edizioni": 229,
     "ultimo": 2023,
-    "dal_2000": 31,
+    "dal_2000": 107,
     "trovato": true
    }
   },
