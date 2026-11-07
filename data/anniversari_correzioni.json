@@ -1,9 +1,45 @@
 {
  "_nota": "Giorni verificati a mano su fonti esterne quando Wikidata/Wikipedia sono in conflitto o mancanti. Chiave: tipo:qid.",
  "voci": {
-  "morte:Q1399": {"mese": 6, "giorno": 21, "fonte": "Studenti.it e Wissen.de (21 giugno 1527)"},
-  "morte:Q166234": {"mese": 9, "giorno": 10, "fonte": "Studenti.it (10 settembre 1827)"},
-  "prima edizione:Q26505": {"mese": 9, "giorno": 8, "fonte": "Wikipedia: il libro uscì una settimana dopo il numero di Life del 1 settembre 1952"},
-  "prima edizione:Q45735": {"mese": 10, "giorno": 15, "fonte": "Wikipedia (infobox: 15 ottobre 1952)"}
+  "morte:Q1399": {
+   "mese": 6,
+   "giorno": 21,
+   "fonte": "Studenti.it e Wissen.de (21 giugno 1527)"
+  },
+  "morte:Q166234": {
+   "mese": 9,
+   "giorno": 10,
+   "fonte": "Studenti.it (10 settembre 1827)"
+  },
+  "prima edizione:Q26505": {
+   "mese": 9,
+   "giorno": 8,
+   "fonte": "Wikipedia: il libro uscì una settimana dopo il numero di Life del 1 settembre 1952"
+  },
+  "prima edizione:Q45735": {
+   "mese": 10,
+   "giorno": 15,
+   "fonte": "Wikipedia (infobox: 15 ottobre 1952)"
+  },
+  "prima edizione:Q19871": {
+   "mese": 10,
+   "giorno": 17,
+   "fonte": "Wikipedia (en): libro uscito il 17 ottobre 1952, Les Éditions de Minuit"
+  },
+  "prima edizione:Q1129378": {
+   "mese": 6,
+   "giorno": 16,
+   "fonte": "John H. Watson Society: in vendita dal 16 giugno 1927, John Murray"
+  },
+  "prima edizione:Q568210": {
+   "mese": 11,
+   "giorno": 17,
+   "fonte": "Wikipedia (en): Collins Crime Club, 17 novembre 1952 (la data di aprile era la rivista Cosmopolitan)"
+  },
+  "prima edizione:Q2740089": {
+   "mese": 1,
+   "giorno": null,
+   "fonte": "Wikipedia (en): prima pubblicazione su Liberty, gennaio 1927"
+  }
  }
 }

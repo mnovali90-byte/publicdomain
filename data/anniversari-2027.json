@@ -457,6 +457,41 @@
   },
   {
    "tipo": "prima edizione",
+   "qid": "Q2740089",
+   "nome": "The Adventure of the Veiled Lodger",
+   "it": "L’avventura dell’inquilina velata",
+   "desc": "short story by Arthur Conan Doyle",
+   "autore": "Arthur Conan Doyle",
+   "autore_qid": "Q35610",
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 23,
+   "mese": 1,
+   "giorno": null,
+   "fonte_data": "verifica: Wikipedia (en): prima pubblicazione su Liberty, gennaio 1927",
+   "scheda": {
+    "it": {
+     "desc": "racconto di Arthur Conan Doyle",
+     "generi": [
+      "letteratura poliziesca"
+     ],
+     "lingua": "inglese",
+     "titolo_orig": "The Adventure of the Veiled Lodger",
+     "wiki": null
+    },
+    "en": {
+     "desc": "short story by Arthur Conan Doyle",
+     "generi": [
+      "detective literature"
+     ],
+     "lingua": "English",
+     "titolo_orig": "The Adventure of the Veiled Lodger",
+     "wiki": "https://en.wikipedia.org/wiki/The_Adventure_of_the_Veiled_Lodger"
+    }
+   }
+  },
+  {
+   "tipo": "prima edizione",
    "qid": "Q1198489",
    "nome": "A Scanner Darkly",
    "it": "Un oscuro scrutare",
@@ -2529,43 +2564,6 @@
   },
   {
    "tipo": "prima edizione",
-   "qid": "Q568210",
-   "nome": "They Do It with Mirrors",
-   "it": "Miss Marple: giochi di prestigio",
-   "desc": "1952 novel by Agatha Christie",
-   "autore": "Agatha Christie",
-   "autore_qid": "Q35064",
-   "anno": 1952,
-   "anni": 75,
-   "pagine": 28,
-   "mese": 4,
-   "giorno": null,
-   "fonte_data": "wikipedia (mese, testo)",
-   "scheda": {
-    "it": {
-     "desc": "romanzo scritto da Agatha Christie",
-     "generi": [
-      "poliziesco",
-      "giallo"
-     ],
-     "lingua": "inglese",
-     "titolo_orig": "Jogo de Espelhos",
-     "wiki": "https://it.wikipedia.org/wiki/Giochi_di_prestigio_(romanzo)"
-    },
-    "en": {
-     "desc": "1952 novel by Agatha Christie",
-     "generi": [
-      "detective fiction",
-      "crime fiction"
-     ],
-     "lingua": "English",
-     "titolo_orig": "Jogo de Espelhos",
-     "wiki": "https://en.wikipedia.org/wiki/They_Do_It_with_Mirrors"
-    }
-   }
-  },
-  {
-   "tipo": "prima edizione",
    "qid": "Q143707",
    "nome": "The Child of the Cavern",
    "it": "Le Indie nere",
@@ -3637,6 +3635,43 @@
      "lingua": "Italian",
      "titolo_orig": "I promessi sposi",
      "wiki": "https://en.wikipedia.org/wiki/The_Betrothed"
+    }
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q1129378",
+   "nome": "The Case-Book of Sherlock Holmes",
+   "it": "Il taccuino di Sherlock Holmes",
+   "desc": "collection of short stories by Arthur Conan Doyle",
+   "autore": "Arthur Conan Doyle",
+   "autore_qid": "Q35610",
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 32,
+   "mese": 6,
+   "giorno": 16,
+   "fonte_data": "verifica: John H. Watson Society: in vendita dal 16 giugno 1927, John Murray",
+   "scheda": {
+    "it": {
+     "desc": "raccolta di racconti di Arthur Conan Doyle",
+     "generi": [
+      "poliziesco",
+      "giallo"
+     ],
+     "lingua": "inglese",
+     "titolo_orig": "The Case-Book of Sherlock Holmes",
+     "wiki": "https://it.wikipedia.org/wiki/Il_taccuino_di_Sherlock_Holmes"
+    },
+    "en": {
+     "desc": "collection of short stories by Arthur Conan Doyle",
+     "generi": [
+      "detective fiction",
+      "crime fiction"
+     ],
+     "lingua": "English",
+     "titolo_orig": "The Case-Book of Sherlock Holmes",
+     "wiki": "https://en.wikipedia.org/wiki/The_Case-Book_of_Sherlock_Holmes"
     }
    }
   },
@@ -6278,6 +6313,41 @@
    }
   },
   {
+   "tipo": "prima edizione",
+   "qid": "Q19871",
+   "nome": "Waiting for Godot",
+   "it": "Aspettando Godot",
+   "desc": "play by Samuel Beckett",
+   "autore": "Samuel Beckett",
+   "autore_qid": "Q37327",
+   "anno": 1952,
+   "anni": 75,
+   "pagine": 79,
+   "mese": 10,
+   "giorno": 17,
+   "fonte_data": "verifica: Wikipedia (en): libro uscito il 17 ottobre 1952, Les Éditions de Minuit",
+   "scheda": {
+    "it": {
+     "desc": "opera teatrale di Samuel Beckett",
+     "generi": [
+      "teatro dell'assurdo"
+     ],
+     "lingua": "francese",
+     "titolo_orig": "En attendant Godot",
+     "wiki": "https://it.wikipedia.org/wiki/Aspettando_Godot"
+    },
+    "en": {
+     "desc": "play by Samuel Beckett",
+     "generi": [
+      "theatre of the absurd"
+     ],
+     "lingua": "French",
+     "titolo_orig": "En attendant Godot",
+     "wiki": "https://en.wikipedia.org/wiki/Waiting_for_Godot"
+    }
+   }
+  },
+  {
    "tipo": "morte",
    "qid": "Q502983",
    "nome": "Michael Rostovtzeff",
@@ -6926,6 +6996,43 @@
    }
   },
   {
+   "tipo": "prima edizione",
+   "qid": "Q568210",
+   "nome": "They Do It with Mirrors",
+   "it": "Miss Marple: giochi di prestigio",
+   "desc": "1952 novel by Agatha Christie",
+   "autore": "Agatha Christie",
+   "autore_qid": "Q35064",
+   "anno": 1952,
+   "anni": 75,
+   "pagine": 28,
+   "mese": 11,
+   "giorno": 17,
+   "fonte_data": "verifica: Wikipedia (en): Collins Crime Club, 17 novembre 1952 (la data di aprile era la rivista Cosmopolitan)",
+   "scheda": {
+    "it": {
+     "desc": "romanzo scritto da Agatha Christie",
+     "generi": [
+      "poliziesco",
+      "giallo"
+     ],
+     "lingua": "inglese",
+     "titolo_orig": "Jogo de Espelhos",
+     "wiki": "https://it.wikipedia.org/wiki/Giochi_di_prestigio_(romanzo)"
+    },
+    "en": {
+     "desc": "1952 novel by Agatha Christie",
+     "generi": [
+      "detective fiction",
+      "crime fiction"
+     ],
+     "lingua": "English",
+     "titolo_orig": "Jogo de Espelhos",
+     "wiki": "https://en.wikipedia.org/wiki/They_Do_It_with_Mirrors"
+    }
+   }
+  },
+  {
    "tipo": "morte",
    "qid": "Q57966",
    "nome": "Wilhelm Hauff",
@@ -7555,41 +7662,6 @@
    }
   },
   {
-   "tipo": "prima edizione",
-   "qid": "Q19871",
-   "nome": "Waiting for Godot",
-   "it": "Aspettando Godot",
-   "desc": "play by Samuel Beckett",
-   "autore": "Samuel Beckett",
-   "autore_qid": "Q37327",
-   "anno": 1952,
-   "anni": 75,
-   "pagine": 79,
-   "mese": null,
-   "giorno": null,
-   "fonte_data": null,
-   "scheda": {
-    "it": {
-     "desc": "opera teatrale di Samuel Beckett",
-     "generi": [
-      "teatro dell'assurdo"
-     ],
-     "lingua": "francese",
-     "titolo_orig": "En attendant Godot",
-     "wiki": "https://it.wikipedia.org/wiki/Aspettando_Godot"
-    },
-    "en": {
-     "desc": "play by Samuel Beckett",
-     "generi": [
-      "theatre of the absurd"
-     ],
-     "lingua": "French",
-     "titolo_orig": "En attendant Godot",
-     "wiki": "https://en.wikipedia.org/wiki/Waiting_for_Godot"
-    }
-   }
-  },
-  {
    "tipo": "nascita",
    "qid": "Q201484",
    "nome": "John Dee",
@@ -7990,43 +8062,6 @@
    }
   },
   {
-   "tipo": "prima edizione",
-   "qid": "Q1129378",
-   "nome": "The Case-Book of Sherlock Holmes",
-   "it": "Il taccuino di Sherlock Holmes",
-   "desc": "collection of short stories by Arthur Conan Doyle",
-   "autore": "Arthur Conan Doyle",
-   "autore_qid": "Q35610",
-   "anno": 1927,
-   "anni": 100,
-   "pagine": 32,
-   "mese": null,
-   "giorno": null,
-   "fonte_data": null,
-   "scheda": {
-    "it": {
-     "desc": "raccolta di racconti di Arthur Conan Doyle",
-     "generi": [
-      "poliziesco",
-      "giallo"
-     ],
-     "lingua": "inglese",
-     "titolo_orig": "The Case-Book of Sherlock Holmes",
-     "wiki": "https://it.wikipedia.org/wiki/Il_taccuino_di_Sherlock_Holmes"
-    },
-    "en": {
-     "desc": "collection of short stories by Arthur Conan Doyle",
-     "generi": [
-      "detective fiction",
-      "crime fiction"
-     ],
-     "lingua": "English",
-     "titolo_orig": "The Case-Book of Sherlock Holmes",
-     "wiki": "https://en.wikipedia.org/wiki/The_Case-Book_of_Sherlock_Holmes"
-    }
-   }
-  },
-  {
    "tipo": "morte",
    "qid": "Q171242",
    "nome": "Gleb Uspensky",
@@ -8198,41 +8233,6 @@
      "lingua": "English",
      "titolo_orig": "The Currents of Space",
      "wiki": "https://en.wikipedia.org/wiki/The_Currents_of_Space"
-    }
-   }
-  },
-  {
-   "tipo": "prima edizione",
-   "qid": "Q2740089",
-   "nome": "The Adventure of the Veiled Lodger",
-   "it": "L’avventura dell’inquilina velata",
-   "desc": "short story by Arthur Conan Doyle",
-   "autore": "Arthur Conan Doyle",
-   "autore_qid": "Q35610",
-   "anno": 1927,
-   "anni": 100,
-   "pagine": 23,
-   "mese": null,
-   "giorno": null,
-   "fonte_data": null,
-   "scheda": {
-    "it": {
-     "desc": "racconto di Arthur Conan Doyle",
-     "generi": [
-      "letteratura poliziesca"
-     ],
-     "lingua": "inglese",
-     "titolo_orig": "The Adventure of the Veiled Lodger",
-     "wiki": null
-    },
-    "en": {
-     "desc": "short story by Arthur Conan Doyle",
-     "generi": [
-      "detective literature"
-     ],
-     "lingua": "English",
-     "titolo_orig": "The Adventure of the Veiled Lodger",
-     "wiki": "https://en.wikipedia.org/wiki/The_Adventure_of_the_Veiled_Lodger"
     }
    }
   },
