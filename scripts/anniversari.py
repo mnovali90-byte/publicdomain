@@ -33,7 +33,8 @@ sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 DATA = pathlib.Path(__file__).resolve().parent.parent / "data"
 ANNO = int(os.environ.get("ANNO_CALENDARIO", "2027"))
 ETA = [50, 75, 100, 125, 150, 175, 200, 225, 250, 300, 400, 500]
-SOGLIA_PERSONE, SOGLIA_OPERE = 30, 15
+SOGLIA_PERSONE, SOGLIA_OPERE_SENZA_DATA = 25
+SOGLIA_OPERE = 30, 15
 BUDGET_MIN = float(os.environ.get("BUDGET_MINUTI_ANNIV", "70"))
 FINE = time.time() + BUDGET_MIN * 60
 UA = {"User-Agent": "PublicDomainRadar/1.0 (https://publicdomainradar.com; open data project)"}
@@ -482,6 +483,10 @@ def main():
         controlla_date_opere(uniche)
         cerca_date_testo(uniche)
         date_da_edizioni(uniche)
+        # niente coda lunga: un'opera senza nemmeno il mese entra solo se è molto conosciuta
+        tolte = [v["nome"] for v in uniche if v["tipo"] == "prima edizione" and not v.get("mese") and v["pagine"] < SOGLIA_OPERE_SENZA_DATA]
+        uniche[:] = [v for v in uniche if v["nome"] not in tolte]
+        print("opere senza data tolte (poco note):", len(tolte), file=sys.stderr)
     except Exception as e:
         print('Controllo date non riuscito:', e, file=sys.stderr)
     try:
