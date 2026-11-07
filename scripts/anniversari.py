@@ -279,7 +279,8 @@ def date_da_testo(testo, anno, lg):
     """Date (mese, giorno) o solo mese trovate in frasi che parlano di pubblicazione, nell'anno atteso."""
     mesi = MESI_L[lg]
     nome = "|".join(sorted(mesi, key=len, reverse=True))
-    t = re.sub(r"\[\[(?:[^\]|]*\|)?([^\]]*)\]\]", r"\1", testo)
+    t = re.sub(r"\{\{\s*(?:nowrap|nobr)\s*\|([^{}]*)\}\}", r"\1", testo, flags=re.I)
+    t = re.sub(r"\[\[(?:[^\]|]*\|)?([^\]]*)\]\]", r"\1", t)
     t = re.sub(r"<ref[^>]*>.*?</ref>|<ref[^>/]*/>|\{\{[^{}]*\}\}|<!--.*?-->", " ", t, flags=re.S)
     giorni, soli = set(), set()
     for frase in re.split(r"(?<=[^\d][.!?])\s+|\n", t):
@@ -334,6 +335,33 @@ def cerca_date_testo(voci):
         elif len(giorni) > 1:
             print("  date multiple nel testo:", v["nome"], sorted(giorni), file=sys.stderr)
     print("date dal testo di Wikipedia:", n, "su", len(da), file=sys.stderr)
+
+
+def date_da_edizioni(voci):
+    """Edizioni nella lingua originale presenti su Wikidata, con data di pubblicazione nell'anno atteso."""
+    da = [v for v in voci if v["tipo"] == "prima edizione" and not v.get("giorno")]
+    n = 0
+    for i in range(0, len(da), 25):
+        gruppo = da[i:i + 25]
+        ids = " ".join("wd:" + v["qid"] for v in gruppo)
+        r = sparql(f"""SELECT ?w ?d ?pr WHERE {{ VALUES ?w {{ {ids} }}
+ ?e wdt:P629 ?w; wdt:P407 ?l. ?w wdt:P364 ?l.
+ ?e p:P577/psv:P577 [wikibase:timeValue ?d; wikibase:timePrecision ?pr; wikibase:timeCalendarModel wd:Q1985727]. FILTER(?pr>=10) }}""")
+        time.sleep(1)
+        if not r:
+            continue
+        per = {}
+        for x in r:
+            per.setdefault(qid(g(x, "w")), []).append((int(g(x, "pr")), g(x, "d")[:10]))
+        for v in gruppo:
+            righe = [(pr, d) for pr, d in per.get(v["qid"], []) if int(d[:4]) == v["anno"]]
+            giorni = {(int(d[5:7]), int(d[8:10])) for pr, d in righe if pr >= 11} - {(1, 1)}
+            mesi = {int(d[5:7]) for pr, d in righe if pr == 10}
+            if len(giorni) == 1 and (not v.get("mese") or v["mese"] == next(iter(giorni))[0]):
+                v["mese"], v["giorno"] = next(iter(giorni)); v["fonte_data"] = "wikidata (edizione)"; n += 1
+            elif not v.get("mese") and not giorni and len(mesi) == 1 and next(iter(mesi)) != 1:
+                v["mese"] = next(iter(mesi)); v["fonte_data"] = "wikidata (edizione, mese)"; n += 1
+    print("date dalle edizioni su Wikidata:", n, "su", len(da), file=sys.stderr)
 
 
 def schede_voci(voci):
@@ -453,6 +481,7 @@ def main():
     try:
         controlla_date_opere(uniche)
         cerca_date_testo(uniche)
+        date_da_edizioni(uniche)
     except Exception as e:
         print('Controllo date non riuscito:', e, file=sys.stderr)
     try:
