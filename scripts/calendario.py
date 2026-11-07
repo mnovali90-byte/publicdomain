@@ -23,7 +23,7 @@ T = {
     "it": {
         "html": "it", "titolo": "Calendario degli anniversari letterari {a}: nascite, morti e prime edizioni · Public Domain Radar",
         "descr": "Gli anniversari letterari del {a}: nascite, morti e prime edizioni con anniversario tondo, giorno per giorno. Dati aperti, con calendario .ics e tabella CSV.",
-        "occ": "Anniversari letterari · {a}", "h1a": "Cosa ricordare nel ", "lead": "Le ricorrenze letterarie da ricordare: nascite, morti e prime edizioni con anniversario tondo, giorno per giorno. Ogni voce ha una scheda e un testo pronto per un post.",
+        "occ": "Anniversari letterari · {a}", "h1a": "Cosa ricordare nel ", "lead": "Le ricorrenze letterarie da ricordare: nascite, morti e prime edizioni con anniversario tondo, giorno per giorno. Ogni voce ha una scheda da condividere.",
         "ics": "Aggiungi al tuo calendario (.ics)", "csv": "Scarica la tabella (CSV)",
         "mese": "Mese", "tipo": "Tipo", "tutti": "Tutti", "tutte": "Tutte", "eta": "Anniversario", "piu": "oltre 200",
         "tipi": {"prima edizione": "Prima edizione", "nascita": "Nascita", "morte": "Morte"},
@@ -45,7 +45,7 @@ T = {
     "en": {
         "html": "en", "titolo": "Literary anniversaries {a}: births, deaths and first editions calendar · Public Domain Radar",
         "descr": "Literary anniversaries of {a}: births, deaths and first editions with a round anniversary, day by day. Open data, with .ics calendar and CSV table.",
-        "occ": "Literary anniversaries · {a}", "h1a": "What to remember in ", "lead": "Literary anniversaries worth remembering: births, deaths and first editions with a round anniversary, day by day. Every entry has a short profile and a ready text for a post.",
+        "occ": "Literary anniversaries · {a}", "h1a": "What to remember in ", "lead": "Literary anniversaries worth remembering: births, deaths and first editions with a round anniversary, day by day. Every entry has a short profile and a card to share.",
         "ics": "Add to your calendar (.ics)", "csv": "Download the table (CSV)",
         "mese": "Month", "tipo": "Type", "tutti": "All", "tutte": "All", "eta": "Anniversario", "piu": "oltre 200",
         "tipi": {"prima edizione": "First edition", "nascita": "Birth", "morte": "Death"},
@@ -239,7 +239,6 @@ def scheda(v, lang, anno):
         azioni += f'<button type="button" class="aggiungi" data-ics="{esc(v["tipo"])}-{v["qid"]}">{esc(t["aggiungi"])}</button>'
     if dat:
         azioni += f'<button type="button" class="crea">{esc(SCH.TESTI[lang]["crea"])}</button>'
-    azioni += f'<button type="button" class="copia" data-testo="{esc(testo_post(v, lang))}">{esc(t["copia"])}</button>'
     au = ""
     if v["tipo"] == "prima edizione":
         au = esc(autore_di(v)) + (f' · <i>{esc(orig)}</i>' if orig else "")
@@ -326,13 +325,6 @@ function gruppo(attr,chiave){
   });
 }
 gruppo("data-mese","mese");gruppo("data-tipo","tipo");gruppo("data-eta","eta");
-[].slice.call(document.querySelectorAll(".copia")).forEach(function(b){
-  b.addEventListener("click",function(){
-    var t=b.dataset.testo+" https://publicdomainradar.com", orig=b.textContent;
-    var fine=function(){b.textContent=COPIATO;setTimeout(function(){b.textContent=orig},1800)};
-    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(fine,function(){window.prompt("",t)})}else{window.prompt("",t)}
-  });
-});
 [].slice.call(document.querySelectorAll(".aggiungi")).forEach(function(b){
   b.addEventListener("click",function(){
     var e=b.closest(".ev"),d=e.dataset.icsD,t=e.dataset.icsT;
