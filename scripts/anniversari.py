@@ -125,6 +125,13 @@ def giorno(x):
     return m, dd
 
 
+def mese_solo(x):
+    """Mese della data se Wikidata la dà solo con mese e anno (precisione 10)."""
+    if int(g(x, "pr")) == 10:
+        return int(g(x, "d")[5:7])
+    return None
+
+
 def raccogli(righe, tipo, eta, anno_ev, voci, esclusi):
     """Raggruppa le righe per (tipo, qid); più giorni diversi -> giorno non noto."""
     per = {}
@@ -135,8 +142,10 @@ def raccogli(righe, tipo, eta, anno_ev, voci, esclusi):
         k = qid(g(x, "p"))
         v = per.setdefault(k, {"tipo": tipo, "qid": k, "nome": nome, "it": g(x, "pit"), "desc": g(x, "desc"),
                                "autore": g(x, "auth"), "autore_qid": qid(g(x, "au")) if g(x, "au") else None,
-                               "anno": anno_ev, "anni": eta, "pagine": int(g(x, "sl")), "giorni": set(), "bad": False})
+                               "anno": anno_ev, "anni": eta, "pagine": int(g(x, "sl")), "giorni": set(), "mesi": set(), "bad": False})
         v["giorni"].add(giorno(x))
+        if mese_solo(x):
+            v["mesi"].add(mese_solo(x))
         if x.get("bad"):
             v["bad"] = True
     for k, v in per.items():
@@ -148,7 +157,9 @@ def raccogli(righe, tipo, eta, anno_ev, voci, esclusi):
         if tipo == "prima edizione" and mg == (1, 1):    # 1 gennaio nei dati delle opere è quasi sempre un segnaposto
             mg = None
         v["mese"], v["giorno"] = mg if mg else (None, None)
-        del v["giorni"], v["bad"]
+        if not mg and not gs and len(v["mesi"]) == 1:   # solo mese e anno
+            v["mese"] = next(iter(v["mesi"]))
+        del v["giorni"], v["mesi"], v["bad"]
         voci.append(v)
 
 
@@ -193,6 +204,19 @@ def data_da_infobox(testo, anno, campi="released|release_date|published|pub_date
     return next(iter(trovate)) if len(trovate) == 1 else None
 
 
+def mese_da_infobox(testo, anno, campi="released|release_date|published|pub_date|publication_date|first_published|date"):
+    """Mese di pubblicazione dall'infobox («Month YYYY»), se uno solo."""
+    trovati = set()
+    for riga in re.findall(r"\|\s*(?:" + campi + r")\s*=([^\n]*(?:\n(?!\s*\|)[^\n]*)*)", testo, re.I):
+        for m in re.finditer(r"\b([A-Za-z]+)\s+(\d{4})\b", riga):
+            if int(m[2]) == anno and m[1].lower() in MESI_EN:
+                trovati.add(MESI_EN[m[1].lower()])
+        for m in re.finditer(r"\{\{\s*(?:start|release|publication)[ _]date[^|}]*\|(?:df=\w+\|)?(\d{4})\|(\d{1,2})(?:\||\}\})", riga, re.I):
+            if int(m[1]) == anno:
+                trovati.add(int(m[2]))
+    return next(iter(trovati)) if len(trovati) == 1 else None
+
+
 def controlla_date_opere(voci):
     """Controllo incrociato Wikidata - Wikipedia (infobox inglese) per le date delle prime edizioni."""
     opere = list(voci)   # opere e persone
@@ -225,12 +249,16 @@ def controlla_date_opere(voci):
         testo = wp.get(v["qid"], "")
         campi = {"nascita": "birth_date", "morte": "death_date"}.get(v["tipo"])
         d = (data_da_infobox(testo[:15000], v["anno"], campi) if campi else data_da_infobox(testo[:12000], v["anno"])) if testo else None
-        wd = (v["mese"], v["giorno"]) if v.get("mese") else None
+        wd = (v["mese"], v["giorno"]) if v.get("mese") and v.get("giorno") else None
         v["fonte_data"] = "wikidata" if wd else None
         if d and wd and d == wd:
             v["fonte_data"] = "wikidata+wikipedia"; conta["conferma"] += 1
-        elif d and not wd and d != (1, 1):
+        elif d and not wd and d != (1, 1) and (not v.get("mese") or v["mese"] == d[0]):
             v["mese"], v["giorno"] = d; v["fonte_data"] = "wikipedia"; conta["aggiunta"] += 1
+        elif not wd and not d and not v.get("mese") and testo and v["tipo"] == "prima edizione":
+            mm = mese_da_infobox(testo[:12000], v["anno"])
+            if mm and mm != 1:
+                v["mese"] = mm; v["fonte_data"] = "wikipedia (mese)"; conta["mese"] = conta.get("mese", 0) + 1
         elif d and wd and d != wd:
             v["mese"] = v["giorno"] = None; v["fonte_data"] = "discordante"; conta["discordante"] += 1
             print("  data discordante:", v["nome"], wd, d, file=sys.stderr)
@@ -370,7 +398,7 @@ def main():
             for v in uniche:
                 if f'{v["tipo"]}:{v["qid"]}' == k:
                     v["mese"], v["giorno"], v["fonte_data"] = c["mese"], c["giorno"], "verifica: " + c["fonte"]
-    uniche.sort(key=lambda v: ((v["mese"] or 13), (v["giorno"] or 0), -v["pagine"]))
+    uniche.sort(key=lambda v: ((v["mese"] or 13), (v["giorno"] or 99), -v["pagine"]))
     out = {"anno": ANNO, "generato": dt.date.today().isoformat(), "fonti": ["Wikidata", "Wikipedia"], "voci": uniche}
     file.write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"{len(uniche)} voci; escluse per altre occupazioni: {len(esclusi)}")

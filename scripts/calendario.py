@@ -140,7 +140,7 @@ def testo_post(v, lang):
     k = {"nascita": "n", "morte": "m", "prima edizione": "p"}[v["tipo"]]
     aut = (t["di"] + autore_di(v)) if v["tipo"] == "prima edizione" and autore_di(v) else ""
     base = dict(e=v["anni"], y=v["anno"], nome=nome_di(v, lang), aut=aut)
-    if v.get("mese"):
+    if v.get("mese") and v.get("giorno"):
         return t["post_" + k].format(g=v["giorno"], m=MESI[lang][v["mese"] - 1], **base)
     return t["post_" + k + "0"].format(**base)
 
@@ -159,7 +159,7 @@ def ics_testo(vv, lang, anno):
              "X-WR-TIMEZONE:Europe/Rome"]
     ora = datetime.datetime.utcnow().strftime("%Y%m%dT%H%M%SZ")
     for v in vv:
-        if not v.get("mese"):
+        if not (v.get("mese") and v.get("giorno")):
             continue
         try:
             d = datetime.date(anno, v["mese"], v["giorno"])
@@ -180,7 +180,7 @@ def csv_testo(vv, lang, anno):
     w = csv.writer(buf)
     w.writerow(t["csv_cols"])
     for v in vv:
-        d = f"{anno}-{v['mese']:02d}-{v['giorno']:02d}" if v.get("mese") else ""
+        d = f"{anno}-{v['mese']:02d}-{v['giorno']:02d}" if v.get("mese") and v.get("giorno") else (f"{anno}-{v['mese']:02d}" if v.get("mese") else "")
         w.writerow([t["tipi"][v["tipo"]], nome_di(v, lang), autore_di(v) if v["tipo"] == "prima edizione" else "", v["anni"], v["anno"], d,
                     "https://www.wikidata.org/wiki/" + v["qid"]])
     return "\ufeff" + buf.getvalue()
@@ -224,9 +224,11 @@ def scheda(v, lang, anno):
     t = T[lang]
     nome = nome_di(v, lang)
     orig = v["nome"] if v["nome"] != nome else ""
-    dat = v.get("mese")
+    dat = v.get("mese") and v.get("giorno")
     if dat:
         gg = f'<div class="gg">{v["giorno"]}<small>{BREVI[lang][v["mese"] - 1]}</small></div>'
+    elif v.get("mese"):
+        gg = f'<div class="gg nd">—<small>{BREVI[lang][v["mese"] - 1]}</small></div>'
     else:
         gg = f'<div class="gg nd">?<small>{esc(t["soloanno"].format(a=anno))}</small></div>'
     azioni = ""
@@ -271,7 +273,7 @@ def pagina(dati, lang):
         titolo = MESI[lang][m - 1] if m else t["durante"]
         n = len(elenco)
         sotto = f"{n} {t['voce'] if n == 1 else t['voci']}" + (f" · {t['nd']}" if m == 0 else "")
-        elenco.sort(key=lambda v: ((v.get("giorno") or 0), -v["pagine"]))
+        elenco.sort(key=lambda v: ((v.get("giorno") or 99), -v["pagine"]))
         corpo.append(f'<section class="mese" data-mese="{m}"><h2>{esc(titolo.capitalize() if m else titolo)} <small>{esc(sotto)}</small></h2>{extra}'
                      + "".join(scheda(v, lang, anno) for v in elenco) + "</section>")
     mesi_btn = "".join(f'<button type="button" class="ch" data-mese="{m}" aria-pressed="false">{BREVI[lang][m - 1]}</button>' for m in range(1, 13))
