@@ -237,7 +237,6 @@ def pagina(dati, lang):
     t = T[lang]
     vv = dati["voci"]
     url = f"{SITO}{'/en/calendar' if lang == 'en' else '/calendario'}/{anno}/"
-    altra_url = T["en" if lang == "it" else "it"]
     eu, us = anno - 71, anno - 96
     spec_it = (f'<div class="spec"><div class="gg">1<small>{BREVI[lang][0]}</small></div><div><h3>{esc(t["pdd"])}</h3>'
                f'<p>{esc(t["pdd_txt"].format(eu=eu, us=us))}</p>'
@@ -265,7 +264,7 @@ def pagina(dati, lang):
     base_csv = f"anniversari-{anno}.csv" if lang == "it" else f"anniversaries-{anno}.csv"
     ics_nome = base_ics.rsplit("/", 1)[-1]
     nav = "".join((f'<a class="on" href="{url}">{n}</a>' if h is None else f'<a href="{h.format(a=anno)}">{n}</a>') for n, h in t["navt"])
-    altra_lingua = f'<span>{nav}<a href="{altra_url["altra"][1].format(a=anno)}" hreflang="{"en" if lang == "it" else "it"}">{altra_url["altra"][0]}</a></span>'
+    altra_lingua = f'<span>{nav}<a href="{t["altra"][1].format(a=anno)}" hreflang="{"en" if lang == "it" else "it"}">{t["altra"][0]}</a></span>'
     faq_ld = ""
     ld = {"@context": "https://schema.org", "@type": "CollectionPage", "name": t["titolo"].format(a=anno), "url": url, "inLanguage": lang,
           "dateModified": dati.get("generato"), "isPartOf": {"@type": "WebSite", "name": "Public Domain Radar", "url": SITO + ("/en/" if lang == "en" else "/")}}
