@@ -116,9 +116,9 @@
       "Finland"
      ],
      "opere": [
-      "Stalin's Cows",
       "Purge",
-      "Baby Jane"
+      "Baby Jane",
+      "Norma"
      ],
      "nato": 1977,
      "morto": null,
@@ -314,8 +314,8 @@
      "desc": "chimico, fisico e inventore irlandese",
      "paesi": [],
      "opere": [
-      "New Experiments Physico-Mechanicall, Touching the Spring of the Air and its Effects",
       "Il chimico scettico",
+      "New Experiments Physico-Mechanicall, Touching the Spring of the Air and its Effects",
       "legge di Boyle-Mariotte"
      ],
      "nato": 1627,
@@ -328,8 +328,8 @@
      "paesi": [],
      "opere": [
       "The Sceptical Chymist",
-      "New Experiments Physico-Mechanicall, Touching the Spring of the Air and its Effects",
-      "Boyle's law"
+      "Boyle's law",
+      "New Experiments Physico-Mechanicall, Touching the Spring of the Air and its Effects"
      ],
      "nato": 1627,
      "morto": 1691,
@@ -391,8 +391,8 @@
     "it": {
      "desc": "romanzo scritto da Stephen King",
      "generi": [
-      "horror psicologico",
-      "thriller"
+      "thriller",
+      "horror psicologico"
      ],
      "lingua": "inglese",
      "titolo_orig": "The Shining",
@@ -402,7 +402,7 @@
      "desc": "1977 novel by Stephen King",
      "generi": [
       "thriller",
-      "horror fiction"
+      "psychological horror fiction"
      ],
      "lingua": "English",
      "titolo_orig": "The Shining",
@@ -484,7 +484,7 @@
      "desc": "1977 novel by Philip K. Dick",
      "generi": [
       "science fiction",
-      "philosophical fiction"
+      "paranoid fiction"
      ],
      "lingua": "American English",
      "titolo_orig": "A Scanner Darkly",
@@ -513,8 +513,8 @@
       "Stati Uniti"
      ],
      "opere": [
-      "Hobomok: A Tale of Early Times",
-      "An Appeal in Favor of that Class of Americans Called Africans"
+      "An Appeal in Favor of that Class of Americans Called Africans",
+      "Hobomok: A Tale of Early Times"
      ],
      "nato": 1802,
      "morto": 1880,
@@ -738,8 +738,8 @@
       "United States"
      ],
      "opere": [
-      "The Bonesetter's Daughter",
-      "The Joy Luck Club"
+      "The Joy Luck Club",
+      "The Bonesetter's Daughter"
      ],
      "nato": 1952,
      "morto": null,
@@ -958,8 +958,8 @@
     "en": {
      "desc": "Irish poet, singer and songwriter (1779–1852)",
      "paesi": [
-      "Kingdom of Great Britain",
-      "United Kingdom of Great Britain and Ireland"
+      "United Kingdom of Great Britain and Ireland",
+      "Kingdom of Great Britain"
      ],
      "opere": [],
      "nato": 1779,
@@ -991,8 +991,8 @@
      ],
      "opere": [
       "I miserabili",
-      "Notre-Dame de Paris",
-      "Novantatré"
+      "Novantatré",
+      "Notre-Dame de Paris"
      ],
      "nato": 1802,
      "morto": 1885,
@@ -1091,8 +1091,8 @@
       "United States"
      ],
      "opere": [
-      "The Grapes of Wrath",
       "Of Mice and Men",
+      "The Grapes of Wrath",
       "East of Eden"
      ],
      "nato": 1902,
@@ -1591,7 +1591,7 @@
      "desc": "German writer (1927–2023)",
      "paesi": [
       "West Germany",
-      "Bavaria"
+      "Germany"
      ],
      "opere": [
       "Marriage in Philippsburg",
@@ -2226,7 +2226,7 @@
      "desc": "romanzo scritto da Ralph Waldo Ellison",
      "generi": [
       "fantascienza",
-      "romanzo a sfondo sociale"
+      "romanzo autobiografico"
      ],
      "lingua": "inglese",
      "titolo_orig": "Invisible Man",
@@ -2257,7 +2257,7 @@
    "pagine": 53,
    "mese": 4,
    "giorno": 15,
-   "fonte_data": "wikidata+wikipedia",
+   "fonte_data": "wikipedia",
    "scheda": {
     "it": {
      "desc": "poeta, giornalista e scrittore francese",
@@ -2281,8 +2281,8 @@
      ],
      "opere": [
       "The Phantom of the Opera",
-      "La Double Vie de Théophraste Longuet",
-      "The Perfume of the Lady in Black"
+      "The Mystery of the Yellow Room",
+      "La Double Vie de Théophraste Longuet"
      ],
      "nato": 1868,
      "morto": 1927,
@@ -2349,7 +2349,7 @@
      "desc": "scrittore sovietico",
      "paesi": [
       "Russia sovietica",
-      "Impero russo"
+      "Unione Sovietica"
      ],
      "opere": [],
      "nato": 1902,
@@ -2593,7 +2593,7 @@
      "desc": "1877 novel by Jules Verne",
      "generi": [
       "science fiction",
-      "subterranean fiction"
+      "adventure fiction"
      ],
      "lingua": "French",
      "titolo_orig": "Les Indes noires",
@@ -2707,9 +2707,9 @@
       "United States"
      ],
      "opere": [
-      "Tennessee's Partner",
       "The Luck of Roaring Camp",
-      "The Outcasts of Poker Flat"
+      "The Outcasts of Poker Flat",
+      "The Idyl of Red Gulch"
      ],
      "nato": 1836,
      "morto": 1902,
@@ -2832,8 +2832,8 @@
      ],
      "opere": [
       "Maamme",
-      "The Elk Hunters",
-      "The Tales of Ensign Stål"
+      "The Tales of Ensign Stål",
+      "The Elk Hunters"
      ],
      "nato": 1804,
      "morto": 1877,
@@ -3158,7 +3158,7 @@
      "opere": [
       "Democrazia e educazione",
       "Esperienza e educazione",
-      "The Public and its Problems"
+      "Scuola e società"
      ],
      "nato": 1859,
      "morto": 1952,
@@ -3173,7 +3173,7 @@
      "opere": [
       "Democracy and Education",
       "Experience and Education",
-      "The School and Society"
+      "The Public and its Problems"
      ],
      "nato": 1859,
      "morto": 1952,
@@ -3244,9 +3244,9 @@
       "Turchia"
      ],
      "opere": [
+      "La nuova vita",
       "Cevdet Bey and His Sons",
-      "Nights of Plague",
-      "La nuova vita"
+      "Nights of Plague"
      ],
      "nato": 1952,
      "morto": null,
@@ -3291,8 +3291,8 @@
       "Spagna"
      ],
      "opere": [
-      "L'Atlàntida",
-      "Canigó"
+      "Canigó",
+      "L'Atlàntida"
      ],
      "nato": 1845,
      "morto": 1902,
@@ -3305,8 +3305,8 @@
       "Spain"
      ],
      "opere": [
-      "L'Atlàntida",
-      "Canigó"
+      "Canigó",
+      "L'Atlàntida"
      ],
      "nato": 1845,
      "morto": 1902,
@@ -3531,7 +3531,7 @@
    "pagine": 83,
    "mese": 6,
    "giorno": 14,
-   "fonte_data": "wikidata+wikipedia",
+   "fonte_data": "wikipedia",
    "scheda": {
     "it": {
      "desc": "scrittore e giornalista britannico (1859-1927)",
@@ -3692,7 +3692,7 @@
    "pagine": 53,
    "mese": 6,
    "giorno": 18,
-   "fonte_data": "wikidata+wikipedia",
+   "fonte_data": "wikipedia",
    "scheda": {
     "it": {
      "desc": "sociologo e filosofo iraniano",
@@ -3748,8 +3748,8 @@
      ],
      "opere": [
       "Il ragazzo giusto (romanzo)",
-      "Golden Gate (romanzo)",
-      "An Equal Music"
+      "An Equal Music",
+      "Golden Gate (romanzo)"
      ],
      "nato": 1952,
      "morto": null,
@@ -3762,8 +3762,8 @@
       "India"
      ],
      "opere": [
-      "An Equal Music",
       "A Suitable Boy",
+      "An Equal Music",
       "The Golden Gate"
      ],
      "nato": 1952,
@@ -3794,8 +3794,8 @@
       "Repubblica di Firenze"
      ],
      "opere": [
-      "Capitoli",
       "Il principe",
+      "Capitoli",
       "Discorsi sopra la prima Deca di Tito Livio"
      ],
      "nato": 1469,
@@ -3878,8 +3878,8 @@
       "Germania"
      ],
      "opere": [
-      "Il lupo della steppa",
       "Siddharta",
+      "Il lupo della steppa",
       "Peter Camenzind"
      ],
      "nato": 1877,
@@ -3894,8 +3894,8 @@
       "Germany"
      ],
      "opere": [
-      "Steppenwolf",
       "Siddhartha",
+      "Steppenwolf",
       "Peter Camenzind"
      ],
      "nato": 1877,
@@ -3977,7 +3977,7 @@
      "opere": [
       "Goodbye amore mio!",
       "La strana coppia",
-      "Brighton Beach Memoirs"
+      "Come Blow Your Horn"
      ],
      "nato": 1927,
      "morto": 2018,
@@ -3991,8 +3991,8 @@
      ],
      "opere": [
       "The Goodbye Girl",
-      "Come Blow Your Horn",
-      "Lost in Yonkers"
+      "The Odd Couple",
+      "Come Blow Your Horn"
      ],
      "nato": 1927,
      "morto": 2018,
@@ -4023,8 +4023,8 @@
      ],
      "opere": [
       "Wolf Hall",
-      "Every Day is Mother's Day",
-      "Anna Bolena, una questione di famiglia"
+      "Anna Bolena, una questione di famiglia",
+      "Every Day is Mother's Day"
      ],
      "nato": 1952,
      "morto": 2022,
@@ -4037,8 +4037,8 @@
       "United Kingdom"
      ],
      "opere": [
-      "Bring Up the Bodies",
       "Wolf Hall",
+      "Bring Up the Bodies",
       "Every Day is Mother's Day"
      ],
      "nato": 1952,
@@ -4360,7 +4360,7 @@
    "pagine": 33,
    "mese": 7,
    "giorno": 25,
-   "fonte_data": "wikidata+wikipedia",
+   "fonte_data": "wikipedia",
    "scheda": {
     "it": {
      "desc": "scrittrice e giornalista italiana (1856-1927)",
@@ -4377,8 +4377,8 @@
     "en": {
      "desc": "Italian journalist and writer, editor (1856–1927)",
      "paesi": [
-      "Kingdom of Italy",
-      "Kingdom of the Two Sicilies"
+      "Kingdom of the Two Sicilies",
+      "Kingdom of Italy"
      ],
      "opere": [],
      "nato": 1856,
@@ -4458,9 +4458,9 @@
       "Stati Uniti"
      ],
      "opere": [
+      "A Wave",
       "Chinese Whispers",
-      "Flow Chart",
-      "Girls on the Run"
+      "Flow Chart"
      ],
      "nato": 1927,
      "morto": 2017,
@@ -4684,7 +4684,7 @@
      "opere": [
       "Jerusalem The Emanation of the Giant Albion",
       "Milton",
-      "Vala, or The Four Zoas"
+      "Jerusalem"
      ],
      "nato": 1757,
      "morto": 1827,
@@ -4694,8 +4694,8 @@
     "en": {
      "desc": "English poet and artist (1757–1827)",
      "paesi": [
-      "Kingdom of Great Britain",
-      "United Kingdom of Great Britain and Ireland"
+      "United Kingdom of Great Britain and Ireland",
+      "Kingdom of Great Britain"
      ],
      "opere": [
       "Jerusalem The Emanation of the Giant Albion",
@@ -5278,8 +5278,8 @@
     "en": {
      "desc": "British economist (1911–1977)",
      "paesi": [
-      "United Kingdom of Great Britain and Ireland",
-      "Germany"
+      "Germany",
+      "United Kingdom of Great Britain and Ireland"
      ],
      "opere": [
       "Small Is Beautiful",
@@ -5350,8 +5350,8 @@
       "Repubblica di Venezia"
      ],
      "opere": [
-      "Ultime lettere di Jacopo Ortis",
       "Dei sepolcri",
+      "Ultime lettere di Jacopo Ortis",
       "Discorso sul testo della Divina Commedia"
      ],
      "nato": 1778,
@@ -5365,8 +5365,8 @@
       "Republic of Venice"
      ],
      "opere": [
-      "The Last Letters of Jacopo Ortis",
-      "Dei Sepolcri"
+      "Dei Sepolcri",
+      "The Last Letters of Jacopo Ortis"
      ],
      "nato": 1778,
      "morto": 1827,
@@ -5479,8 +5479,8 @@
     "it": {
      "desc": "romanzo scritto da Stephen King",
      "generi": [
-      "thriller psicologico",
-      "romanzo thriller"
+      "romanzo thriller",
+      "thriller psicologico"
      ],
      "lingua": "inglese",
      "titolo_orig": "Rage",
@@ -5489,8 +5489,8 @@
     "en": {
      "desc": "1977 novel by Stephen King",
      "generi": [
-      "thriller novel",
-      "psychological thriller"
+      "psychological thriller",
+      "thriller novel"
      ],
      "lingua": "English",
      "titolo_orig": "Rage",
@@ -5839,9 +5839,9 @@
       "Stati Uniti"
      ],
      "opere": [
-      "Feminist Theory: From Margin to Center",
-      "We Real Cool: Black Men and Masculinity",
-      "Ain't I a Woman?"
+      "Ain't I a Woman?",
+      "All About Love: New Visions",
+      "Bone Black: Memories of Girlhood"
      ],
      "nato": 1952,
      "morto": 2021,
@@ -6089,7 +6089,7 @@
      "desc": "racconto scritto da Howard Phillips Lovecraft",
      "generi": [
       "fantascienza",
-      "Weird"
+      "orrore"
      ],
      "lingua": "inglese",
      "titolo_orig": "The Colour Out of Space",
@@ -6250,8 +6250,8 @@
       "Germania"
      ],
      "opere": [
-      "Il richiamo dell'ululone",
       "Last dances",
+      "Il richiamo dell'ululone",
       "Anni di cani"
      ],
      "nato": 1927,
@@ -6266,8 +6266,8 @@
       "Germany"
      ],
      "opere": [
-      "Last dances",
       "The Call of the Toad",
+      "Last dances",
       "Dog Years"
      ],
      "nato": 1927,
@@ -6373,8 +6373,8 @@
     "it": {
      "desc": "filosofo e storico polacco",
      "paesi": [
-      "Seconda Repubblica di Polonia",
-      "Repubblica Popolare di Polonia"
+      "Repubblica Popolare di Polonia",
+      "Seconda Repubblica di Polonia"
      ],
      "opere": [
       "Is God Happy?"
@@ -6790,8 +6790,8 @@
      ],
      "opere": [
       "Asterix",
-      "Lucky Luke",
-      "Le Petit Nicolas"
+      "Le Petit Nicolas",
+      "Lucky Luke"
      ],
      "nato": 1926,
      "morto": 1977,
@@ -6914,8 +6914,8 @@
     "en": {
      "desc": "Azerbaijani poet (1794–1852)",
      "paesi": [
-      "Ganja khanate",
-      "Russian Empire"
+      "Russian Empire",
+      "Ganja khanate"
      ],
      "opere": [],
      "nato": 1794,
@@ -7189,9 +7189,9 @@
       "Repubblica Socialista Federale di Jugoslavia"
      ],
      "opere": [
-      "Migrations",
       "The Journal of Carnojevic",
-      "A Novel about London"
+      "A Novel about London",
+      "Migrations"
      ],
      "nato": 1893,
      "morto": 1977,
@@ -7205,9 +7205,9 @@
       "Socialist Federal Republic of Yugoslavia"
      ],
      "opere": [
-      "Migrations",
       "The Journal of Carnojevic",
-      "A Novel about London"
+      "A Novel about London",
+      "Migrations"
      ],
      "nato": 1893,
      "morto": 1977,
@@ -7322,8 +7322,8 @@
     "it": {
      "desc": "linguista, orientalista e archeologo ceco (1879-1952)",
      "paesi": [
-      "Cecoslovacchia",
-      "Austria-Ungheria"
+      "Austria-Ungheria",
+      "Cecoslovacchia"
      ],
      "opere": [],
      "nato": 1879,
@@ -7363,8 +7363,8 @@
     "it": {
      "desc": "psichiatra e neurologo tedesco",
      "paesi": [
-      "Granducato di Baden",
-      "Austria-Ungheria"
+      "Austria-Ungheria",
+      "Granducato di Baden"
      ],
      "opere": [
       "Psychopathia sexualis",
@@ -7488,8 +7488,8 @@
     "it": {
      "desc": "medico russo",
      "paesi": [
-      "Repubblica Socialista Federativa Sovietica Russa",
-      "Impero russo"
+      "Impero russo",
+      "Repubblica Socialista Federativa Sovietica Russa"
      ],
      "opere": [
       "Kollektivnaya refleksologiya"
@@ -7502,8 +7502,8 @@
     "en": {
      "desc": "Russian neurologist",
      "paesi": [
-      "Russian Empire",
-      "Soviet Union"
+      "Russian Soviet Federative Socialist Republic",
+      "Russian Empire"
      ],
      "opere": [
       "Kollektivnaya refleksologiya"
@@ -7729,7 +7729,7 @@
      "desc": "drammaturgo e scrittore romeno",
      "paesi": [
       "Principato di Romania",
-      "Regno di Romania"
+      "Principato di Valacchia"
      ],
      "opere": [],
      "nato": 1852,
@@ -7740,8 +7740,8 @@
     "en": {
      "desc": "Romanian playwright, writer and poet (1852-1912)",
      "paesi": [
-      "Principality of Wallachia",
-      "United Principalities of Moldavia and Wallachia"
+      "United Principalities of Moldavia and Wallachia",
+      "Kingdom of Romania"
      ],
      "opere": [],
      "nato": 1852,
@@ -7856,9 +7856,9 @@
       "Spagna"
      ],
      "opere": [
-      "A Thousand Morons",
       "Uf, va dir ell",
-      "The Enormity of the Tragedy"
+      "The Enormity of the Tragedy",
+      "Why, Why, Why?"
      ],
      "nato": 1952,
      "morto": null,
@@ -7871,9 +7871,9 @@
       "Spain"
      ],
      "opere": [
-      "A Thousand Morons",
       "Uf, va dir ell",
-      "The Enormity of the Tragedy"
+      "The Enormity of the Tragedy",
+      "Why, Why, Why?"
      ],
      "nato": 1952,
      "morto": null,
@@ -7934,7 +7934,7 @@
       "fantascienza",
       "fantasy"
      ],
-     "lingua": "nuovo latino",
+     "lingua": "inglese della prima età moderna",
      "titolo_orig": "Nova Atlantis",
      "wiki": "https://it.wikipedia.org/wiki/La_nuova_Atlantide"
     },
@@ -7944,7 +7944,7 @@
       "science fiction",
       "fantasy"
      ],
-     "lingua": "Neo-Latin",
+     "lingua": "Early Modern English",
      "titolo_orig": "Nova Atlantis",
      "wiki": "https://en.wikipedia.org/wiki/New_Atlantis"
     }
@@ -8352,8 +8352,8 @@
     "it": {
      "desc": "romanzo scritto da Jules Verne",
      "generi": [
-      "letteratura di viaggio",
-      "narrativa marinaresca"
+      "narrativa marinaresca",
+      "letteratura di viaggio"
      ],
      "lingua": "francese",
      "titolo_orig": "Les Frères Kip",
@@ -8362,8 +8362,8 @@
     "en": {
      "desc": "novel by Jules Verne",
      "generi": [
-      "crime fiction",
-      "nautical fiction"
+      "travel literature",
+      "crime fiction"
      ],
      "lingua": "French",
      "titolo_orig": "Les Frères Kip",
@@ -8698,8 +8698,8 @@
     "it": {
      "desc": "saggio del 1977 di Carl Sagan",
      "generi": [
-      "saggio",
-      "non-fiction"
+      "non-fiction",
+      "saggio"
      ],
      "lingua": "inglese americano",
      "titolo_orig": "The Dragons of Eden",
@@ -8708,8 +8708,8 @@
     "en": {
      "desc": "1977 essay by Carl Sagan",
      "generi": [
-      "essay",
-      "non-fiction"
+      "non-fiction",
+      "essay"
      ],
      "lingua": "American English",
      "titolo_orig": "The Dragons of Eden",
@@ -8791,6 +8791,41 @@
   },
   {
    "tipo": "prima edizione",
+   "qid": "Q1305285",
+   "nome": "A Dream Play",
+   "it": "Il sogno",
+   "desc": "1902 play by August Strindberg",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1902,
+   "anni": 125,
+   "pagine": 15,
+   "mese": null,
+   "giorno": null,
+   "fonte_data": null,
+   "scheda": {
+    "it": {
+     "desc": "opera teatrale scritta da August Strindberg",
+     "generi": [
+      "espressionismo"
+     ],
+     "lingua": "svedese",
+     "titolo_orig": "Ett drömspel",
+     "wiki": "https://it.wikipedia.org/wiki/Il_sogno_(dramma)"
+    },
+    "en": {
+     "desc": "1902 play by August Strindberg",
+     "generi": [
+      "Expressionism"
+     ],
+     "lingua": "Swedish",
+     "titolo_orig": "Ett drömspel",
+     "wiki": "https://en.wikipedia.org/wiki/A_Dream_Play"
+    }
+   }
+  },
+  {
+   "tipo": "prima edizione",
    "qid": "Q651866",
    "nome": "Five Children and It",
    "it": null,
@@ -8823,41 +8858,6 @@
      "lingua": "English",
      "titolo_orig": "Five Children and It",
      "wiki": "https://en.wikipedia.org/wiki/Five_Children_and_It"
-    }
-   }
-  },
-  {
-   "tipo": "prima edizione",
-   "qid": "Q1305285",
-   "nome": "A Dream Play",
-   "it": "Il sogno",
-   "desc": "1902 play by August Strindberg",
-   "autore": null,
-   "autore_qid": null,
-   "anno": 1902,
-   "anni": 125,
-   "pagine": 15,
-   "mese": null,
-   "giorno": null,
-   "fonte_data": null,
-   "scheda": {
-    "it": {
-     "desc": "opera teatrale scritta da August Strindberg",
-     "generi": [
-      "espressionismo"
-     ],
-     "lingua": "svedese",
-     "titolo_orig": "Ett drömspel",
-     "wiki": "https://it.wikipedia.org/wiki/Il_sogno_(dramma)"
-    },
-    "en": {
-     "desc": "1902 play by August Strindberg",
-     "generi": [
-      "Expressionism"
-     ],
-     "lingua": "Swedish",
-     "titolo_orig": "Ett drömspel",
-     "wiki": "https://en.wikipedia.org/wiki/A_Dream_Play"
     }
    }
   }
