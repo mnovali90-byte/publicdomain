@@ -265,6 +265,77 @@ def controlla_date_opere(voci):
     print("controllo date (opere e persone):", conta, file=sys.stderr)
 
 
+MESI_L = {
+    "en": MESI_EN,
+    "it": {m: i + 1 for i, m in enumerate(["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio", "agosto", "settembre", "ottobre", "novembre", "dicembre"])},
+    "fr": {m: i + 1 for i, m in enumerate(["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"])},
+    "de": {m: i + 1 for i, m in enumerate(["januar", "februar", "märz", "april", "mai", "juni", "juli", "august", "september", "oktober", "november", "dezember"])},
+    "es": {m: i + 1 for i, m in enumerate(["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"])},
+}
+VERBI = re.compile(r"published|publication|released|appeared|issued|pubblicat|uscì|uscito|edito|prima edizione|publié|paru|parution|parut|para[îi]t|sort[ie]|erschien|erschienen|veröffentlicht|publicad|apareci", re.I)
+
+
+def date_da_testo(testo, anno, lg):
+    """Date (mese, giorno) o solo mese trovate in frasi che parlano di pubblicazione, nell'anno atteso."""
+    mesi = MESI_L[lg]
+    nome = "|".join(sorted(mesi, key=len, reverse=True))
+    t = re.sub(r"\[\[(?:[^\]|]*\|)?([^\]]*)\]\]", r"\1", testo)
+    t = re.sub(r"<ref[^>]*>.*?</ref>|<ref[^>/]*/>|\{\{[^{}]*\}\}|<!--.*?-->", " ", t, flags=re.S)
+    giorni, soli = set(), set()
+    for frase in re.split(r"(?<=[^\d][.!?])\s+|\n", t):
+        if not VERBI.search(frase) or str(anno) not in frase:
+            continue
+        for m in re.finditer(rf"\b(\d{{1,2}})(?:º|°|er|\.)?\s+(?:de\s+)?({nome})\s+(?:de\s+)?{anno}\b", frase, re.I):
+            giorni.add((mesi[m[2].lower()], int(m[1])))
+        for m in re.finditer(rf"\b({nome})\s+(\d{{1,2}})(?:st|nd|rd|th)?,?\s+{anno}\b", frase, re.I):
+            giorni.add((mesi[m[1].lower()], int(m[2])))
+        for m in re.finditer(rf"\b({nome})\s+(?:de\s+)?{anno}\b", frase, re.I):
+            soli.add(mesi[m[1].lower()])
+    return giorni, soli
+
+
+def cerca_date_testo(voci):
+    """Per le opere senza giorno: cerca nelle frasi di Wikipedia (en, it, fr, de, es) la data di pubblicazione."""
+    da = [v for v in voci if v["tipo"] == "prima edizione" and not v.get("giorno")]
+    titoli = {}
+    for i in range(0, len(da), 50):
+        gruppo = da[i:i + 50]
+        r = json_url("https://www.wikidata.org/w/api.php?" + urllib.parse.urlencode({
+            "action": "wbgetentities", "ids": "|".join(v["qid"] for v in gruppo), "props": "sitelinks",
+            "sitefilter": "|".join(l + "wiki" for l in MESI_L), "format": "json"}))
+        for k, e in ((r or {}).get("entities") or {}).items():
+            titoli[k] = {l: s["title"] for l in MESI_L for s in [(e.get("sitelinks") or {}).get(l + "wiki")] if s}
+    esiti = {}
+    for lg in MESI_L:
+        lista = [(k, t[lg]) for k, t in titoli.items() if lg in t]
+        for i in range(0, len(lista), 20):
+            gruppo = lista[i:i + 20]
+            r = json_url(f"https://{lg}.wikipedia.org/w/api.php?" + urllib.parse.urlencode({
+                "action": "query", "prop": "revisions", "rvprop": "content", "rvslots": "main", "redirects": 1,
+                "titles": "|".join(t for _, t in gruppo), "format": "json", "formatversion": 2}))
+            if not r:
+                continue
+            pt = {p["title"]: (p.get("revisions") or [{}])[0].get("slots", {}).get("main", {}).get("content", "") for p in r.get("query", {}).get("pages", [])}
+            for red in r.get("query", {}).get("redirects", []) or []:
+                pt[red["from"]] = pt.get(red["to"], "")
+            for k, t in gruppo:
+                esiti.setdefault(k, {})[lg] = date_da_testo(pt.get(t, "")[:20000], next(v["anno"] for v in da if v["qid"] == k), lg)
+            time.sleep(1)
+    n = 0
+    for v in da:
+        e = esiti.get(v["qid"], {})
+        giorni = set().union(*[x[0] for x in e.values()]) if e else set()
+        soli = set().union(*[x[1] for x in e.values()]) if e else set()
+        giorni.discard((1, 1))
+        if len(giorni) == 1 and (not v.get("mese") or v["mese"] == next(iter(giorni))[0]):
+            v["mese"], v["giorno"] = next(iter(giorni)); v["fonte_data"] = "wikipedia (testo: " + ",".join(l for l, x in e.items() if x[0]) + ")"; n += 1
+        elif not v.get("mese") and not giorni and len(soli) == 1 and next(iter(soli)) != 1:
+            v["mese"] = next(iter(soli)); v["fonte_data"] = "wikipedia (mese, testo)"; n += 1
+        elif len(giorni) > 1:
+            print("  date multiple nel testo:", v["nome"], sorted(giorni), file=sys.stderr)
+    print("date dal testo di Wikipedia:", n, "su", len(da), file=sys.stderr)
+
+
 def schede_voci(voci):
     """Informazioni per le schede (italiano e inglese): descrizione breve, paese, anni di vita, opere
     principali, Nobel per la letteratura, genere e lingua originale delle opere, link a Wikipedia."""
@@ -381,6 +452,7 @@ def main():
             visti.add(k); uniche.append(v)
     try:
         controlla_date_opere(uniche)
+        cerca_date_testo(uniche)
     except Exception as e:
         print('Controllo date non riuscito:', e, file=sys.stderr)
     try:
