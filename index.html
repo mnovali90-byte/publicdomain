@@ -2,6 +2,7 @@
 <html lang="it">
 <head>
 <meta charset="utf-8">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Public Domain Radar · autori che entrano in pubblico dominio</title>
 <meta name="description" content="Quali autori entrano in pubblico dominio il prossimo 1° gennaio, con le regole di Italia, Francia, Germania e Spagna lette su testi di legge ufficiali. Dati aperti da Wikidata, Wikipedia e SBN, aggiornati ogni mese. Authors entering the public domain, with country-by-country rules.">
@@ -54,7 +55,18 @@ button{font:inherit;color:inherit;cursor:pointer}
 .scuro .occhiello{color:var(--vermiglio)}
 .barra{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 28px;padding-top:24px}
 .marchio{display:flex;align-items:center;gap:12px;font-family:var(--mono);font-weight:500;font-size:13px;letter-spacing:.14em;text-transform:uppercase}
-.marchio i{width:10px;height:10px;border-radius:50%;background:var(--vermiglio);display:block}
+.marchio .legacy{width:10px;height:10px;border-radius:50%;background:var(--vermiglio);display:block}
+.pdr{display:inline-flex;flex-direction:column;align-items:stretch;width:var(--w,110px);color:currentColor;text-transform:none;letter-spacing:0;line-height:1;vertical-align:middle}
+.pdr svg{display:block;width:100%;height:auto;color:#F7F7F4}
+.pdr .sub{position:relative;display:block;height:calc(var(--w)*.06);margin-top:calc(var(--w)*.05);font:500 calc(var(--w)*.052)/1 'DM Mono',ui-monospace,Menlo,monospace;text-transform:uppercase;color:#A9A9B6}
+.pdr .sub b{position:absolute;top:0;display:flex;justify-content:space-between;font-weight:500}
+.pdr .sub i{font-style:normal}.pdr .sub b i:first-child{margin-left:-.06em}.pdr .sub b i:last-child{margin-right:-.06em}
+.pres-gen .occ{font-family:var(--mono);font-weight:500;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--vermiglio);margin:0 0 14px;opacity:1}
+.presentazione h1.gen{font-family:var(--display);font-weight:900;font-size:clamp(46px,9vw,104px);line-height:.88;text-transform:uppercase;letter-spacing:0;max-width:13ch;margin:0 0 18px}
+.presentazione h1.gen em{font-style:normal;color:var(--vermiglio)}
+.presentazione.pres-gen{max-width:50rem}
+.presentazione.pres-gen p.lead{font-size:clamp(17px,2.2vw,21px);line-height:1.5;opacity:.9;max-width:40rem}
+.tit-paese{font-family:var(--testo);font-weight:600;font-size:clamp(22px,3vw,30px);line-height:1.15;margin:30px 0 10px;color:var(--carta);letter-spacing:-.01em}
 .navigazione{display:flex;flex-wrap:wrap;gap:4px 24px;font-family:var(--mono);font-weight:500;font-size:14px}
 .navigazione button,.navigazione a{background:none;border:0;border-bottom:2px solid transparent;padding:12px 0;color:#A9A9B6;text-decoration:none;min-height:44px}
 .navigazione .attivo{color:var(--carta);border-bottom-color:var(--vermiglio)}
@@ -304,16 +316,23 @@ dialog::backdrop{background:rgba(12,12,16,.72)}
 <section class="scuro" id="inizio">
   <div class="contenitore">
     <header class="barra">
-      <div class="marchio"><i></i>Public Domain Radar</div>
+      <div class="marchio" role="img" aria-label="Public Domain Radar"><span class="pdr" style="--w:150px"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 215.67 120" aria-hidden="true" focusable="false">
+<defs><mask id="pdrt" maskUnits="userSpaceOnUse" x="-5" y="-5" width="225.67" height="130.00"><rect x="-5" y="-5" width="225.67" height="130.00" fill="#fff"/><line x1="193.05" y1="60.60" x2="429.45" y2="-124.10" stroke="#000" stroke-width="6"/></mask></defs>
+<path fill="currentColor" mask="url(#pdrt)" d="M0 120V0H28.95Q45.75 0 53.21 6.79Q60.67 13.58 61.2 29.25Q61.42 35.55 61.42 40.95Q61.42 46.35 61.2 52.65Q60.67 68.25 53.21 75.08Q45.75 81.9 28.95 81.9H22.5V120ZM22.5 62.1H28.95Q33.67 62.1 36.08 59.92Q38.48 57.75 38.7 53.85Q38.92 50.17 39 45.56Q39.07 40.95 39 36.34Q38.92 31.73 38.7 28.05Q38.48 24.08 36.08 21.94Q33.67 19.8 28.95 19.8H22.5Z M74.58 120V0H105.03Q121.9 0 129.44 7.16Q136.97 14.33 137.28 30.75Q137.5 41.17 137.57 50.55Q137.65 59.93 137.57 69.3Q137.5 78.68 137.28 89.1Q136.97 105.6 129.44 112.8Q121.9 120 105.03 120ZM97.08 100.2H105.03Q109.75 100.2 112.22 98.03Q114.7 95.85 114.78 91.8Q115 83.78 115.11 75.83Q115.22 67.88 115.22 59.93Q115.22 51.98 115.11 43.99Q115 36 114.78 28.05Q114.7 24.08 112.22 21.94Q109.75 19.8 105.03 19.8H97.08Z M152.82 120V0H181.77Q198.57 0 206.04 6.79Q213.5 13.58 214.02 29.25Q214.17 33.45 214.21 36.6Q214.25 39.75 214.21 42.9Q214.17 46.05 214.02 50.25Q213.72 60 210.76 66.22Q207.8 72.45 201.57 75.75L215.67 120H191.82L180.42 79.5H175.32V120ZM175.32 59.7H181.77Q186.5 59.7 188.9 57.53Q191.3 55.35 191.52 51.45Q191.75 47.78 191.82 43.76Q191.9 39.75 191.82 35.74Q191.75 31.73 191.52 28.05Q191.3 24.08 188.9 21.94Q186.5 19.8 181.77 19.8H175.32Z"/></svg><span class="sub"><b style="left:0.000%;width:28.479%"><i>P</i><i>U</i><i>B</i><i>L</i><i>I</i><i>C</i></b><b style="left:34.581%;width:29.244%"><i>D</i><i>O</i><i>M</i><i>A</i><i>I</i><i>N</i></b><b style="left:70.858%;width:29.142%"><i>R</i><i>A</i><i>D</i><i>A</i><i>R</i></b></span></span></div>
       <nav class="navigazione" id="navigazione" data-ta="navAria" aria-label="Navigazione"></nav>
     </header>
-    <div class="presentazione">
-      <h1 id="pres-tit">Gli autori che diventano liberi in Italia il 1° gennaio</h1>
-      <p data-t="presTesto">Per ognuno vedi quanto è letto, quali opere ha scritto e se in Italia è già stato tradotto. Serve a scegliere cosa ritradurre e pubblicare.</p>
-      <p class="fonti" data-t="presFonti">Dati aperti da Wikidata, Wikipedia e SBN, aggiornati ogni mese in automatico.</p>
+    <div class="presentazione pres-gen" id="pres-gen">
+      <p class="occ" data-t="genOcc">Radar sul pubblico dominio</p>
+      <h1 class="gen"><span data-t="genA">Cosa diventa </span><em data-t="genB">libero</em><span data-t="genC">, e quando</span></h1>
+      <p class="lead" data-t="genLead">Ogni 1° gennaio autori e opere escono dal diritto d'autore. Qui li vedi in anticipo, paese per paese, con le regole di legge e i libri da cui partire, più le ricorrenze letterarie dell'anno.</p>
+      <p class="fonti" data-t="genFonti">Per editori, traduttori, creator e chi racconta libri. Dati aperti da Wikidata, Wikipedia e SBN, leggi ufficiali, aggiornati ogni mese in automatico.</p>
+    </div>
+    <div class="presentazione" id="pres-us" hidden>
+      <h1 id="pres-tit"></h1>
     </div>
     <div class="mercato giur" id="giur" role="group" hidden></div>
     <div class="mercato" id="mercato" role="group" hidden></div>
+    <h2 class="tit-paese" id="tit-paese"></h2>
     <div id="eroe"><p class="messaggio" data-t="caricamento">Caricamento…</p></div>
   </div>
 </section>
@@ -423,6 +442,9 @@ it: {
   presTit: "Gli autori che diventano liberi in {p} il 1° gennaio",
   presTesto: "Per ognuno vedi quanto è letto, quali opere ha scritto e se in Italia è già stato tradotto. Serve a scegliere cosa ritradurre e pubblicare.",
   presFonti: "Dati aperti da Wikidata, Wikipedia e SBN, aggiornati ogni mese in automatico.",
+  genOcc: "Radar sul pubblico dominio", genA: "Cosa diventa ", genB: "libero", genC: ", e quando",
+  genLead: "Ogni 1° gennaio autori e opere escono dal diritto d'autore. Qui li vedi in anticipo, paese per paese, con le regole di legge e i libri da cui partire, più le ricorrenze letterarie dell'anno.",
+  genFonti: "Per editori, traduttori, creator e chi racconta libri. Dati aperti da Wikidata, Wikipedia e SBN, leggi ufficiali, aggiornati ogni mese in automatico.",
   caricamento: "Caricamento…", navAria: "Navigazione", miei: "I miei · {n}",
   daDati: "I dati non sono ancora disponibili. Riprova tra poco.", nessunAutoreAnno: "Nessun autore per questo anno.",
   tra: "Tra {n} giorni", domani: "Domani", oggi: "Oggi", liberoDal: "Libero dal",
@@ -507,6 +529,9 @@ en: {
   presTit: "The authors who become free in {p} on 1 January",
   presTesto: "For each one you see how widely read they are, which works they wrote and which editions already exist. Use it to choose what to retranslate and publish.",
   presFonti: "Open data from Wikidata, Wikipedia and SBN, updated automatically every month.",
+  genOcc: "Public domain radar", genA: "What becomes ", genB: "free", genC: ", and when",
+  genLead: "Every 1 January, authors and works leave copyright. See them in advance here, country by country, with the legal rules and the books to start from, plus the year's literary anniversaries.",
+  genFonti: "For publishers, translators, creators and anyone who talks about books. Open data from Wikidata, Wikipedia and SBN, official legal texts, updated automatically every month.",
   caricamento: "Loading…", navAria: "Navigation", miei: "My list · {n}",
   daDati: "The data is not available yet. Please try again shortly.", nessunAutoreAnno: "No authors for this year.",
   tra: "In {n} days", domani: "Tomorrow", oggi: "Today", liberoDal: "Free since",
@@ -1483,8 +1508,9 @@ function mostraOpera(t) {
 function disegnaGiur() {
   const us = stato.opz === "us";
   const dUS = stato.opere && stato.opere[stato.anno];
-  const pt = $("#pres-tit"); if (pt) pt.textContent = us ? ot("tit", { a: stato.anno }) : tr("presTit", { p: tr("paesiNomi")[stato.opz] });
-  document.querySelectorAll(".presentazione p").forEach((e) => { e.hidden = us; });
+  const pt = $("#pres-tit"); if (pt) pt.textContent = us ? ot("tit", { a: stato.anno }) : "";
+  const tp = $("#tit-paese"); if (tp) { tp.hidden = us; tp.textContent = us ? "" : tr("presTit", { p: tr("paesiNomi")[stato.opz] }); }
+  $("#pres-gen").hidden = us; $("#pres-us").hidden = !us;
   if (pt) { pt.classList.toggle("pres-us", us); pt.parentElement.classList.toggle("pres-us-box", us); }
   $("#inizio").classList.toggle("us-modo", us);
   const box = $("#giur");

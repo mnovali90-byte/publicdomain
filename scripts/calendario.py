@@ -70,7 +70,6 @@ body{margin:0;background:var(--carta);color:var(--ink);font-family:var(--testo);
 a{color:inherit}
 .barra{background:var(--ink);color:#fff;padding:18px clamp(20px,4vw,48px);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-family:var(--mono);font-weight:500;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
 .barra a{color:#8E8E9B;text-decoration:none;margin-left:16px}.barra a:first-child{margin-left:0;color:#fff}
-.barra i{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--verm);margin-right:10px}
 .barra .on{color:#fff;border-bottom:2px solid var(--verm);padding-bottom:3px}
 .barra span a:hover{color:#fff}
 .hero{background:var(--ink);color:#fff;padding:clamp(36px,6vw,72px) 0 clamp(36px,5vw,56px);position:relative;overflow:hidden}
@@ -290,7 +289,7 @@ def pagina(dati, lang):
     jsonld = '<script type="application/ld+json">' + json.dumps(ld, ensure_ascii=False).replace("</", "<\\/") + "</script>"
     alt = (f'<link rel="alternate" hreflang="it" href="{SITO}/calendario/{anno}/">\n<link rel="alternate" hreflang="en" href="{SITO}/en/calendar/{anno}/">\n')
     testa = TESTA.format(lang=lang, titolo=esc(t["titolo"].format(a=anno)), descr=esc(t["descr"].format(a=anno)), url=url, alterne=alt,
-                         og_tipo="website", jsonld=jsonld, css=CSS_CAL, home=t["home"], altra_lingua=altra_lingua)
+                         og_tipo="website", jsonld=jsonld, css=CSS_CAL + __import__('marchio').CSS_MARCHIO, home=t["home"], altra_lingua=altra_lingua)
     js = """<script>
 (function(){
 var st={mese:0,tipo:"",eta:""};

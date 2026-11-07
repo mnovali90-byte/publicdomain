@@ -108,7 +108,6 @@ body{margin:0;background:var(--carta);color:var(--ink);font-family:var(--testo);
 a{color:var(--vermiglio-testo)}
 .barra{background:var(--ink);color:#fff;padding:14px 20px;font-family:var(--mono);font-size:13px;letter-spacing:.08em;text-transform:uppercase;display:flex;justify-content:space-between;gap:16px}
 .barra a{color:#fff;text-decoration:none}
-.barra i{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--vermiglio);margin-right:10px}
 main{max-width:780px;margin:0 auto;padding:32px 20px 72px}
 h1{font-family:var(--display);font-weight:900;font-size:clamp(40px,9vw,76px);line-height:.95;text-transform:uppercase;margin:8px 0 12px}
 h2{font-family:var(--mono);font-weight:500;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--muto);margin:40px 0 10px;border-top:2px solid var(--ink);padding-top:12px}
@@ -126,6 +125,7 @@ TESTA = """<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <title>{titolo}</title>
 <meta name="description" content="{descr}">
 <link rel="canonical" href="{url}">
@@ -142,8 +142,12 @@ TESTA = """<!doctype html>
 <style>{css}</style>
 </head>
 <body>
-<div class="barra"><a href="{home}"><i></i>Public Domain Radar</a>{altra_lingua}</div>
+<div class="barra"><a href="{home}" aria-label="Public Domain Radar">@@MARCHIO@@</a>{altra_lingua}</div>
 """
+
+from marchio import marchio_html, CSS_MARCHIO
+TESTA = TESTA.replace("@@MARCHIO@@", marchio_html(104))
+CSS += CSS_MARCHIO
 
 PIEDE = {
     "it": """<footer>
