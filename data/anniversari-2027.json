@@ -117,7 +117,7 @@
      ],
      "opere": [
       "Purge",
-      "Baby Jane",
+      "Stalin's Cows",
       "Norma"
      ],
      "nato": 1977,
@@ -272,8 +272,8 @@
     "it": {
      "desc": "storico russo-jugoslavo",
      "paesi": [
-      "Regno di Jugoslavia",
-      "Repubblica Socialista Federale di Jugoslavia"
+      "Impero russo",
+      "Regno di Jugoslavia"
      ],
      "opere": [],
      "nato": 1902,
@@ -315,8 +315,8 @@
      "paesi": [],
      "opere": [
       "Il chimico scettico",
-      "New Experiments Physico-Mechanicall, Touching the Spring of the Air and its Effects",
-      "legge di Boyle-Mariotte"
+      "legge di Boyle-Mariotte",
+      "New Experiments Physico-Mechanicall, Touching the Spring of the Air and its Effects"
      ],
      "nato": 1627,
      "morto": 1691,
@@ -457,41 +457,6 @@
   },
   {
    "tipo": "prima edizione",
-   "qid": "Q2740089",
-   "nome": "The Adventure of the Veiled Lodger",
-   "it": "L’avventura dell’inquilina velata",
-   "desc": "short story by Arthur Conan Doyle",
-   "autore": "Arthur Conan Doyle",
-   "autore_qid": "Q35610",
-   "anno": 1927,
-   "anni": 100,
-   "pagine": 23,
-   "mese": 1,
-   "giorno": null,
-   "fonte_data": "verifica: Wikipedia (en): prima pubblicazione su Liberty, gennaio 1927",
-   "scheda": {
-    "it": {
-     "desc": "racconto di Arthur Conan Doyle",
-     "generi": [
-      "letteratura poliziesca"
-     ],
-     "lingua": "inglese",
-     "titolo_orig": "The Adventure of the Veiled Lodger",
-     "wiki": null
-    },
-    "en": {
-     "desc": "short story by Arthur Conan Doyle",
-     "generi": [
-      "detective literature"
-     ],
-     "lingua": "English",
-     "titolo_orig": "The Adventure of the Veiled Lodger",
-     "wiki": "https://en.wikipedia.org/wiki/The_Adventure_of_the_Veiled_Lodger"
-    }
-   }
-  },
-  {
-   "tipo": "prima edizione",
    "qid": "Q1198489",
    "nome": "A Scanner Darkly",
    "it": "Un oscuro scrutare",
@@ -519,7 +484,7 @@
      "desc": "1977 novel by Philip K. Dick",
      "generi": [
       "science fiction",
-      "paranoid fiction"
+      "dystopian fiction"
      ],
      "lingua": "American English",
      "titolo_orig": "A Scanner Darkly",
@@ -562,8 +527,8 @@
       "United States"
      ],
      "opere": [
-      "Hobomok: A Tale of Early Times",
-      "An Appeal in Favor of that Class of Americans Called Africans"
+      "An Appeal in Favor of that Class of Americans Called Africans",
+      "Hobomok: A Tale of Early Times"
      ],
      "nato": 1802,
      "morto": 1880,
@@ -804,8 +769,8 @@
       "Giappone"
      ],
      "opere": [
-      "Blu quasi trasparente",
-      "Coin Locker Babies"
+      "Coin Locker Babies",
+      "Blu quasi trasparente"
      ],
      "nato": 1952,
      "morto": 2026,
@@ -981,8 +946,8 @@
     "it": {
      "desc": "poeta, commediografo e attore irlandese",
      "paesi": [
-      "Regno di Gran Bretagna",
-      "Regno Unito di Gran Bretagna e Irlanda"
+      "Regno Unito di Gran Bretagna e Irlanda",
+      "Regno di Gran Bretagna"
      ],
      "opere": [],
      "nato": 1779,
@@ -993,8 +958,8 @@
     "en": {
      "desc": "Irish poet, singer and songwriter (1779–1852)",
      "paesi": [
-      "United Kingdom of Great Britain and Ireland",
-      "Kingdom of Great Britain"
+      "Kingdom of Great Britain",
+      "United Kingdom of Great Britain and Ireland"
      ],
      "opere": [],
      "nato": 1779,
@@ -1026,8 +991,8 @@
      ],
      "opere": [
       "I miserabili",
-      "Novantatré",
-      "Notre-Dame de Paris"
+      "Notre-Dame de Paris",
+      "Novantatré"
      ],
      "nato": 1802,
      "morto": 1885,
@@ -1041,8 +1006,8 @@
      ],
      "opere": [
       "Les Misérables",
-      "The Hunchback of Notre Dame",
-      "Ninety-Three"
+      "Ninety-Three",
+      "The Hunchback of Notre Dame"
      ],
      "nato": 1802,
      "morto": 1885,
@@ -1583,7 +1548,7 @@
      "opere": [
       "The Years of Rice and Salt",
       "Mars trilogy",
-      "Three Californias Trilogy"
+      "The Ministry for the Future"
      ],
      "nato": 1952,
      "morto": null,
@@ -1626,7 +1591,7 @@
      "desc": "German writer (1927–2023)",
      "paesi": [
       "West Germany",
-      "Germany"
+      "Bavaria"
      ],
      "opere": [
       "Marriage in Philippsburg",
@@ -1668,7 +1633,7 @@
      "desc": "crime novel by Arthur Conan Doyle",
      "generi": [
       "detective fiction",
-      "crime fiction"
+      "mystery fiction"
      ],
      "lingua": "English",
      "titolo_orig": "The Hound of the Baskervilles",
@@ -2261,7 +2226,7 @@
      "desc": "romanzo scritto da Ralph Waldo Ellison",
      "generi": [
       "fantascienza",
-      "romanzo autobiografico"
+      "romanzo di formazione"
      ],
      "lingua": "inglese",
      "titolo_orig": "Invisible Man",
@@ -2271,7 +2236,7 @@
      "desc": "1952 novel by Ralph Ellison",
      "generi": [
       "science fiction",
-      "social novel"
+      "Bildungsroman"
      ],
      "lingua": "English",
      "titolo_orig": "Invisible Man",
@@ -2316,8 +2281,8 @@
      ],
      "opere": [
       "The Phantom of the Opera",
-      "The Mystery of the Yellow Room",
-      "La Double Vie de Théophraste Longuet"
+      "La Double Vie de Théophraste Longuet",
+      "The Perfume of the Lady in Black"
      ],
      "nato": 1868,
      "morto": 1927,
@@ -2383,8 +2348,8 @@
     "it": {
      "desc": "scrittore sovietico",
      "paesi": [
-      "Russia sovietica",
-      "Unione Sovietica"
+      "Impero russo",
+      "Russia sovietica"
      ],
      "opere": [],
      "nato": 1902,
@@ -2396,7 +2361,7 @@
      "desc": "Russian-Soviet writer and memoirist (1902–1989)",
      "paesi": [
       "Russian Socialist Federative Soviet Republic",
-      "Russian Empire"
+      "Soviet Union"
      ],
      "opere": [],
      "nato": 1902,
@@ -2591,7 +2556,7 @@
      "desc": "1877 novel by Jules Verne",
      "generi": [
       "science fiction",
-      "adventure fiction"
+      "subterranean fiction"
      ],
      "lingua": "French",
      "titolo_orig": "Les Indes noires",
@@ -2705,9 +2670,9 @@
       "United States"
      ],
      "opere": [
-      "The Luck of Roaring Camp",
-      "The Outcasts of Poker Flat",
-      "The Idyl of Red Gulch"
+      "Tennessee's Partner",
+      "The Idyl of Red Gulch",
+      "What the Chimney Sang"
      ],
      "nato": 1836,
      "morto": 1902,
@@ -2871,7 +2836,7 @@
      "desc": "German-born British-American author (1927-2013)",
      "paesi": [
       "German Reich",
-      "United Kingdom"
+      "United States"
      ],
      "opere": [],
      "nato": 1927,
@@ -3154,9 +3119,9 @@
       "Stati Uniti"
      ],
      "opere": [
-      "Democrazia e educazione",
-      "Esperienza e educazione",
-      "Scuola e società"
+      "The Public and its Problems",
+      "Scuola e società",
+      "Democrazia e educazione"
      ],
      "nato": 1859,
      "morto": 1952,
@@ -3243,8 +3208,8 @@
      ],
      "opere": [
       "La nuova vita",
-      "Cevdet Bey and His Sons",
-      "Nights of Plague"
+      "Nights of Plague",
+      "Il libro nero"
      ],
      "nato": 1952,
      "morto": null,
@@ -3750,9 +3715,9 @@
       "Iran"
      ],
      "opere": [
-      "Fatemeh Is Fatemeh",
-      "Horr",
-      "Red Shi'ism vs. Black Shi'ism"
+      "Hubut in Kavir",
+      "Guftuguhaye Tanha’i",
+      "Ba Mukhatabhaye Ashna"
      ],
      "nato": 1933,
      "morto": 1977,
@@ -3797,8 +3762,8 @@
       "India"
      ],
      "opere": [
-      "A Suitable Boy",
       "An Equal Music",
+      "A Suitable Boy",
       "The Golden Gate"
      ],
      "nato": 1952,
@@ -3844,8 +3809,8 @@
       "Republic of Florence"
      ],
      "opere": [
-      "The Prince",
       "Capitoli",
+      "The Prince",
       "Discourses on Livy"
      ],
      "nato": 1469,
@@ -3882,8 +3847,8 @@
     "en": {
      "desc": "short story by Ray Bradbury",
      "generi": [
-      "science fiction",
-      "time-travel fiction"
+      "time-travel fiction",
+      "science fiction"
      ],
      "lingua": "English",
      "titolo_orig": "A Sound of Thunder",
@@ -3913,8 +3878,8 @@
       "Germania"
      ],
      "opere": [
-      "Siddharta",
       "Il lupo della steppa",
+      "Siddharta",
       "Peter Camenzind"
      ],
      "nato": 1877,
@@ -3931,7 +3896,7 @@
      "opere": [
       "Siddhartha",
       "Steppenwolf",
-      "Peter Camenzind"
+      "The Glass Bead Game"
      ],
      "nato": 1877,
      "morto": 1962,
@@ -4072,8 +4037,8 @@
       "United Kingdom"
      ],
      "opere": [
-      "Wolf Hall",
       "Bring Up the Bodies",
+      "Wolf Hall",
       "Every Day is Mother's Day"
      ],
      "nato": 1952,
@@ -4330,7 +4295,7 @@
      "opere": [
       "The Nose",
       "Spinning Gears",
-      "Hell Screen"
+      "Rashōmon"
      ],
      "nato": 1892,
      "morto": 1927,
@@ -4400,8 +4365,8 @@
     "it": {
      "desc": "scrittrice e giornalista italiana (1856-1927)",
      "paesi": [
-      "Regno delle Due Sicilie",
-      "Regno d'Italia"
+      "Regno d'Italia",
+      "Regno delle Due Sicilie"
      ],
      "opere": [],
      "nato": 1856,
@@ -4493,9 +4458,9 @@
       "Stati Uniti"
      ],
      "opere": [
-      "A Wave",
       "Chinese Whispers",
-      "Flow Chart"
+      "Flow Chart",
+      "Girls on the Run"
      ],
      "nato": 1927,
      "morto": 2017,
@@ -4540,9 +4505,9 @@
       "Regno dei Paesi Bassi"
      ],
      "opere": [
-      "L'attentato",
       "La scoperta del cielo",
-      "The Stone Bridal Bed"
+      "L'attentato",
+      "The Procedure"
      ],
      "nato": 1927,
      "morto": 2010,
@@ -4713,13 +4678,13 @@
     "it": {
      "desc": "poeta, incisore, filosofo e pittore inglese",
      "paesi": [
-      "Regno di Gran Bretagna",
-      "Regno Unito di Gran Bretagna e Irlanda"
+      "Regno Unito di Gran Bretagna e Irlanda",
+      "Regno di Gran Bretagna"
      ],
      "opere": [
-      "Jerusalem The Emanation of the Giant Albion",
-      "Milton",
-      "Jerusalem"
+      "Vala, or The Four Zoas",
+      "Jerusalem",
+      "Jerusalem The Emanation of the Giant Albion"
      ],
      "nato": 1757,
      "morto": 1827,
@@ -4729,8 +4694,8 @@
     "en": {
      "desc": "English poet and artist (1757–1827)",
      "paesi": [
-      "United Kingdom of Great Britain and Ireland",
-      "Kingdom of Great Britain"
+      "Kingdom of Great Britain",
+      "United Kingdom of Great Britain and Ireland"
      ],
      "opere": [
       "Jerusalem The Emanation of the Giant Albion",
@@ -5168,9 +5133,9 @@
       "Stati Uniti"
      ],
      "opere": [
+      "Tartarughe all'infinito",
       "Crash Course",
-      "Let It Snow",
-      "Tartarughe all'infinito"
+      "Let It Snow"
      ],
      "nato": 1977,
      "morto": null,
@@ -5313,8 +5278,8 @@
     "en": {
      "desc": "British economist (1911–1977)",
      "paesi": [
-      "Germany",
-      "United Kingdom of Great Britain and Ireland"
+      "United Kingdom of Great Britain and Ireland",
+      "Germany"
      ],
      "opere": [
       "Small Is Beautiful",
@@ -5514,8 +5479,8 @@
     "it": {
      "desc": "romanzo scritto da Stephen King",
      "generi": [
-      "romanzo thriller",
-      "thriller psicologico"
+      "thriller psicologico",
+      "romanzo thriller"
      ],
      "lingua": "inglese",
      "titolo_orig": "Rage",
@@ -5889,9 +5854,9 @@
       "United States"
      ],
      "opere": [
-      "Ain't I a Woman?",
-      "All About Love: New Visions",
-      "Bone Black: Memories of Girlhood"
+      "Feminist Theory: From Margin to Center",
+      "We Real Cool: Black Men and Masculinity",
+      "Ain't I a Woman?"
      ],
      "nato": 1952,
      "morto": 2021,
@@ -6124,7 +6089,7 @@
      "desc": "racconto scritto da Howard Phillips Lovecraft",
      "generi": [
       "fantascienza",
-      "orrore"
+      "Weird"
      ],
      "lingua": "inglese",
      "titolo_orig": "The Colour Out of Space",
@@ -6285,8 +6250,8 @@
       "Germania"
      ],
      "opere": [
-      "Last dances",
       "Il richiamo dell'ululone",
+      "Last dances",
       "Anni di cani"
      ],
      "nato": 1927,
@@ -6457,8 +6422,8 @@
     "en": {
      "desc": "Philosopher, historian of ideas (1927–2009)",
      "paesi": [
-      "Second Polish Republic",
-      "Polish People's Republic"
+      "Polish People's Republic",
+      "Second Polish Republic"
      ],
      "opere": [
       "Is God Happy?"
@@ -6860,8 +6825,8 @@
      ],
      "opere": [
       "Asterix",
-      "Le Petit Nicolas",
-      "Lucky Luke"
+      "Lucky Luke",
+      "Le Petit Nicolas"
      ],
      "nato": 1926,
      "morto": 1977,
@@ -6972,8 +6937,8 @@
     "it": {
      "desc": "poeta azero",
      "paesi": [
-      "Khanato di Ganja",
-      "Impero russo"
+      "Impero russo",
+      "Khanato di Ganja"
      ],
      "opere": [],
      "nato": 1794,
@@ -7429,8 +7394,8 @@
     "it": {
      "desc": "linguista, orientalista e archeologo ceco (1879-1952)",
      "paesi": [
-      "Austria-Ungheria",
-      "Cecoslovacchia"
+      "Cecoslovacchia",
+      "Austria-Ungheria"
      ],
      "opere": [],
      "nato": 1879,
@@ -7470,8 +7435,8 @@
     "it": {
      "desc": "psichiatra e neurologo tedesco",
      "paesi": [
-      "Austria-Ungheria",
-      "Granducato di Baden"
+      "Granducato di Baden",
+      "Austria-Ungheria"
      ],
      "opere": [
       "Psychopathia sexualis",
@@ -7485,8 +7450,8 @@
     "en": {
      "desc": "Austrian neurologist, psychiatrist, and nobleman (1840–1902)",
      "paesi": [
-      "Grand Duchy of Baden",
-      "Austria–Hungary"
+      "Austria–Hungary",
+      "Grand Duchy of Baden"
      ],
      "opere": [
       "Psychopathia Sexualis",
@@ -7595,8 +7560,8 @@
     "it": {
      "desc": "medico russo",
      "paesi": [
-      "Impero russo",
-      "Repubblica Socialista Federativa Sovietica Russa"
+      "Unione Sovietica",
+      "Impero russo"
      ],
      "opere": [
       "Kollektivnaya refleksologiya"
@@ -7609,8 +7574,8 @@
     "en": {
      "desc": "Russian neurologist",
      "paesi": [
-      "Russian Soviet Federative Socialist Republic",
-      "Russian Empire"
+      "Russian Empire",
+      "Soviet Union"
      ],
      "opere": [
       "Kollektivnaya refleksologiya"
@@ -7698,8 +7663,8 @@
      ],
      "opere": [
       "Enochian",
-      "Monas Hieroglyphica",
-      "Enochian magic"
+      "Enochian magic",
+      "Monas Hieroglyphica"
      ],
      "nato": 1527,
      "morto": 1609,
@@ -7813,7 +7778,7 @@
      "desc": "Romanian playwright, writer and poet (1852-1912)",
      "paesi": [
       "United Principalities of Moldavia and Wallachia",
-      "Kingdom of Romania"
+      "Principality of Wallachia"
      ],
      "opere": [],
      "nato": 1852,
@@ -8006,7 +7971,7 @@
       "fantascienza",
       "fantasy"
      ],
-     "lingua": "inglese della prima età moderna",
+     "lingua": "nuovo latino",
      "titolo_orig": "Nova Atlantis",
      "wiki": "https://it.wikipedia.org/wiki/La_nuova_Atlantide"
     },
@@ -8198,666 +8163,6 @@
      "lingua": "French",
      "titolo_orig": "Thérèse Desqueyroux",
      "wiki": "https://en.wikipedia.org/wiki/Th%C3%A9r%C3%A8se_Desqueyroux_(novel)"
-    }
-   }
-  },
-  {
-   "tipo": "prima edizione",
-   "qid": "Q786615",
-   "nome": "The Currents of Space",
-   "it": "Le correnti dello spazio",
-   "desc": "1952 novel by Isaac Asimov",
-   "autore": "Isaac Asimov",
-   "autore_qid": "Q34981",
-   "anno": 1952,
-   "anni": 75,
-   "pagine": 23,
-   "mese": null,
-   "giorno": null,
-   "fonte_data": null,
-   "scheda": {
-    "it": {
-     "desc": "romanzo scritto da Isaac Asimov",
-     "generi": [
-      "fantascienza"
-     ],
-     "lingua": "inglese",
-     "titolo_orig": "The Currents of Space",
-     "wiki": "https://it.wikipedia.org/wiki/Le_correnti_dello_spazio"
-    },
-    "en": {
-     "desc": "1952 novel by Isaac Asimov",
-     "generi": [
-      "science fiction"
-     ],
-     "lingua": "English",
-     "titolo_orig": "The Currents of Space",
-     "wiki": "https://en.wikipedia.org/wiki/The_Currents_of_Space"
-    }
-   }
-  },
-  {
-   "tipo": "prima edizione",
-   "qid": "Q443071",
-   "nome": "The Old New Land",
-   "it": "Altneuland",
-   "desc": "1902 novel published by Theodor Herzl",
-   "autore": "Theodor Herzl",
-   "autore_qid": "Q44003",
-   "anno": 1902,
-   "anni": 125,
-   "pagine": 23,
-   "mese": null,
-   "giorno": null,
-   "fonte_data": null,
-   "scheda": {
-    "it": {
-     "desc": null,
-     "generi": [],
-     "lingua": "tedesco",
-     "titolo_orig": "Altneuland",
-     "wiki": "https://it.wikipedia.org/wiki/Altneuland"
-    },
-    "en": {
-     "desc": "1902 novel published by Theodor Herzl",
-     "generi": [],
-     "lingua": "German",
-     "titolo_orig": "Altneuland",
-     "wiki": "https://en.wikipedia.org/wiki/The_Old_New_Land"
-    }
-   }
-  },
-  {
-   "tipo": "prima edizione",
-   "qid": "Q383835",
-   "nome": "Letter to His Father",
-   "it": "Lettera al padre",
-   "desc": "letter by Franz Kafka to Hermann Kafka",
-   "autore": "Franz Kafka",
-   "autore_qid": "Q905",
-   "anno": 1952,
-   "anni": 75,
-   "pagine": 21,
-   "mese": null,
-   "giorno": null,
-   "fonte_data": null,
-   "scheda": {
-    "it": {
-     "desc": "lettera di Franz Kafka",
-     "generi": [],
-     "lingua": "tedesco",
-     "titolo_orig": "Brief an den Vater",
-     "wiki": "https://it.wikipedia.org/wiki/Lettera_al_padre"
-    },
-    "en": {
-     "desc": "letter by Franz Kafka to Hermann Kafka",
-     "generi": [],
-     "lingua": "German",
-     "titolo_orig": "Brief an den Vater",
-     "wiki": "https://en.wikipedia.org/wiki/Letter_to_His_Father"
-    }
-   }
-  },
-  {
-   "tipo": "prima edizione",
-   "qid": "Q1211785",
-   "nome": "The Bridge over the River Kwai",
-   "it": "Il ponte sul fiume Kwai",
-   "desc": "novel by Pierre Boulle",
-   "autore": "Pierre Boulle",
-   "autore_qid": "Q219910",
-   "anno": 1952,
-   "anni": 75,
-   "pagine": 20,
-   "mese": null,
-   "giorno": null,
-   "fonte_data": null,
-   "scheda": {
-    "it": {
-     "desc": "romanzo scritto da Pierre Boulle",
-     "generi": [
-      "romanzo di guerra"
-     ],
-     "lingua": "francese",
-     "titolo_orig": "Le Pont de la Rivière Kwai",
-     "wiki": "https://it.wikipedia.org/wiki/Il_ponte_sul_fiume_Kwai_(romanzo)"
-    },
-    "en": {
-     "desc": "novel by Pierre Boulle",
-     "generi": [
-      "historical fiction",
-      "war novel"
-     ],
-     "lingua": "French",
-     "titolo_orig": "Le Pont de la Rivière Kwai",
-     "wiki": "https://en.wikipedia.org/wiki/The_Bridge_over_the_River_Kwai"
-    }
-   }
-  },
-  {
-   "tipo": "prima edizione",
-   "qid": "Q1212855",
-   "nome": "The Kip Brothers",
-   "it": "I fratelli Kip",
-   "desc": "novel by Jules Verne",
-   "autore": "Jules Verne",
-   "autore_qid": "Q33977",
-   "anno": 1902,
-   "anni": 125,
-   "pagine": 20,
-   "mese": null,
-   "giorno": null,
-   "fonte_data": null,
-   "scheda": {
-    "it": {
-     "desc": "romanzo scritto da Jules Verne",
-     "generi": [
-      "narrativa marinaresca",
-      "letteratura di viaggio"
-     ],
-     "lingua": "francese",
-     "titolo_orig": "Les Frères Kip",
-     "wiki": "https://it.wikipedia.org/wiki/I_fratelli_Kip"
-    },
-    "en": {
-     "desc": "novel by Jules Verne",
-     "generi": [
-      "travel literature",
-      "crime fiction"
-     ],
-     "lingua": "French",
-     "titolo_orig": "Les Frères Kip",
-     "wiki": "https://en.wikipedia.org/wiki/The_Kip_Brothers"
-    }
-   }
-  },
-  {
-   "tipo": "prima edizione",
-   "qid": "Q1167737",
-   "nome": "The Future of an Illusion",
-   "it": "L'avvenire di un'illusione",
-   "desc": "1927 non-fiction work by Sigmund Freud",
-   "autore": "Sigmund Freud",
-   "autore_qid": "Q9215",
-   "anno": 1927,
-   "anni": 100,
-   "pagine": 19,
-   "mese": null,
-   "giorno": null,
-   "fonte_data": null,
-   "scheda": {
-    "it": {
-     "desc": "saggio di Sigmund Freud",
-     "generi": [
-      "saggistica",
-      "scienza delle religioni"
-     ],
-     "lingua": "tedesco",
-     "titolo_orig": "Die Zukunft einer Illusion",
-     "wiki": "https://it.wikipedia.org/wiki/L%27avvenire_di_un%27illusione"
-    },
-    "en": {
-     "desc": "1927 non-fiction work by Sigmund Freud",
-     "generi": [
-      "non-fiction literature",
-      "religious studies"
-     ],
-     "lingua": "German",
-     "titolo_orig": "Die Zukunft einer Illusion",
-     "wiki": "https://en.wikipedia.org/wiki/The_Future_of_an_Illusion"
-    }
-   }
-  },
-  {
-   "tipo": "prima edizione",
-   "qid": "Q1766899",
-   "nome": "Childhood",
-   "it": "Infanzia",
-   "desc": "first published novel by Leo Tolstoy",
-   "autore": "Leo Tolstoy",
-   "autore_qid": "Q7243",
-   "anno": 1852,
-   "anni": 175,
-   "pagine": 19,
-   "mese": null,
-   "giorno": null,
-   "fonte_data": null,
-   "scheda": {
-    "it": {
-     "desc": "romanzo di Lev Tolstoj",
-     "generi": [
-      "autobiografia"
-     ],
-     "lingua": "russo",
-     "titolo_orig": "История моего детства",
-     "wiki": "https://it.wikipedia.org/wiki/Infanzia_(romanzo)"
-    },
-    "en": {
-     "desc": "first published novel by Leo Tolstoy",
-     "generi": [
-      "autobiography"
-     ],
-     "lingua": "Russian",
-     "titolo_orig": "История моего детства",
-     "wiki": "https://en.wikipedia.org/wiki/Childhood_(Tolstoy_novel)"
-    }
-   }
-  },
-  {
-   "tipo": "prima edizione",
-   "qid": "Q389380",
-   "nome": "The Cloven Viscount",
-   "it": "Il visconte dimezzato",
-   "desc": "1952 novel by Italo Calvino",
-   "autore": "Italo Calvino",
-   "autore_qid": "Q154756",
-   "anno": 1952,
-   "anni": 75,
-   "pagine": 18,
-   "mese": null,
-   "giorno": null,
-   "fonte_data": null,
-   "scheda": {
-    "it": {
-     "desc": "romanzo di Italo Calvino",
-     "generi": [
-      "fantasy"
-     ],
-     "lingua": "italiano",
-     "titolo_orig": null,
-     "wiki": "https://it.wikipedia.org/wiki/Il_visconte_dimezzato"
-    },
-    "en": {
-     "desc": "1952 novel by Italo Calvino",
-     "generi": [
-      "fantasy"
-     ],
-     "lingua": "Italian",
-     "titolo_orig": null,
-     "wiki": "https://en.wikipedia.org/wiki/The_Cloven_Viscount"
-    }
-   }
-  },
-  {
-   "tipo": "prima edizione",
-   "qid": "Q753251",
-   "nome": "Atala",
-   "it": "Atala",
-   "desc": "novella by François-René de Chateaubriand",
-   "autore": "François-Auguste-René de Chateaubriand",
-   "autore_qid": "Q49767",
-   "anno": 1802,
-   "anni": 225,
-   "pagine": 18,
-   "mese": null,
-   "giorno": null,
-   "fonte_data": null,
-   "scheda": {
-    "it": {
-     "desc": "romanzo di François-René de Chateaubriand",
-     "generi": [],
-     "lingua": "francese",
-     "titolo_orig": "Atala",
-     "wiki": "https://it.wikipedia.org/wiki/Atala_(romanzo)"
-    },
-    "en": {
-     "desc": "novella by François-René de Chateaubriand",
-     "generi": [],
-     "lingua": "French",
-     "titolo_orig": "Atala",
-     "wiki": "https://en.wikipedia.org/wiki/Atala_(novella)"
-    }
-   }
-  },
-  {
-   "tipo": "prima edizione",
-   "qid": "Q1097238",
-   "nome": "René",
-   "it": "René",
-   "desc": "short novella by François-René de Chateaubriand",
-   "autore": "François-Auguste-René de Chateaubriand",
-   "autore_qid": "Q49767",
-   "anno": 1802,
-   "anni": 225,
-   "pagine": 18,
-   "mese": null,
-   "giorno": null,
-   "fonte_data": null,
-   "scheda": {
-    "it": {
-     "desc": "romanzo di François-René de Chateaubriand",
-     "generi": [
-      "autobiografia"
-     ],
-     "lingua": "francese",
-     "titolo_orig": "René",
-     "wiki": "https://it.wikipedia.org/wiki/Ren%C3%A9_(romanzo)"
-    },
-    "en": {
-     "desc": "short novella by François-René de Chateaubriand",
-     "generi": [
-      "autobiography"
-     ],
-     "lingua": "French",
-     "titolo_orig": "René",
-     "wiki": "https://en.wikipedia.org/wiki/Ren%C3%A9_(novella)"
-    }
-   }
-  },
-  {
-   "tipo": "prima edizione",
-   "qid": "Q1247723",
-   "nome": "Just So Stories",
-   "it": "Storie proprio così",
-   "desc": "short story collection by Rudyard Kipling",
-   "autore": null,
-   "autore_qid": null,
-   "anno": 1902,
-   "anni": 125,
-   "pagine": 17,
-   "mese": null,
-   "giorno": null,
-   "fonte_data": null,
-   "scheda": {
-    "it": {
-     "desc": "raccolta di racconti di Rudyard Kipling",
-     "generi": [
-      "letteratura per ragazzi"
-     ],
-     "lingua": "inglese",
-     "titolo_orig": "Just So Stories",
-     "wiki": "https://it.wikipedia.org/wiki/Storie_proprio_cos%C3%AC"
-    },
-    "en": {
-     "desc": "short story collection by Rudyard Kipling",
-     "generi": [
-      "children's literature"
-     ],
-     "lingua": "English",
-     "titolo_orig": "Just So Stories",
-     "wiki": "https://en.wikipedia.org/wiki/Just_So_Stories"
-    }
-   }
-  },
-  {
-   "tipo": "prima edizione",
-   "qid": "Q2605035",
-   "nome": "The Varieties of Religious Experience",
-   "it": "La varie forme dell'esperienza religiosa. Uno studio sulla natura umana",
-   "desc": "essay by William James",
-   "autore": "William James",
-   "autore_qid": "Q125249",
-   "anno": 1902,
-   "anni": 125,
-   "pagine": 17,
-   "mese": null,
-   "giorno": null,
-   "fonte_data": null,
-   "scheda": {
-    "it": {
-     "desc": null,
-     "generi": [
-      "saggio"
-     ],
-     "lingua": "inglese",
-     "titolo_orig": "The Varieties of Religious Experience",
-     "wiki": "https://it.wikipedia.org/wiki/Le_varie_forme_dell%27esperienza_religiosa._Uno_studio_sulla_natura_umana"
-    },
-    "en": {
-     "desc": "essay by William James",
-     "generi": [
-      "essay"
-     ],
-     "lingua": "English",
-     "titolo_orig": "The Varieties of Religious Experience",
-     "wiki": "https://en.wikipedia.org/wiki/The_Varieties_of_Religious_Experience"
-    }
-   }
-  },
-  {
-   "tipo": "prima edizione",
-   "qid": "Q1388516",
-   "nome": "Twenty-Four Hours in the Life of a Woman",
-   "it": null,
-   "desc": "novella by Stefan Zweig",
-   "autore": "Stefan Zweig",
-   "autore_qid": "Q78491",
-   "anno": 1927,
-   "anni": 100,
-   "pagine": 16,
-   "mese": null,
-   "giorno": null,
-   "fonte_data": null,
-   "scheda": {
-    "it": {
-     "desc": null,
-     "generi": [],
-     "lingua": "tedesco",
-     "titolo_orig": "Veinticuatro horas en la vida de una mujer",
-     "wiki": null
-    },
-    "en": {
-     "desc": "novella by Stefan Zweig",
-     "generi": [],
-     "lingua": "German",
-     "titolo_orig": "Veinticuatro horas en la vida de una mujer",
-     "wiki": "https://en.wikipedia.org/wiki/Twenty-Four_Hours_in_the_Life_of_a_Woman"
-    }
-   }
-  },
-  {
-   "tipo": "prima edizione",
-   "qid": "Q2529101",
-   "nome": "Illusions",
-   "it": "Illusioni: Le avventure di un messia riluttante",
-   "desc": "1977 novel by Richard Bach",
-   "autore": "Richard Bach",
-   "autore_qid": "Q245407",
-   "anno": 1977,
-   "anni": 50,
-   "pagine": 15,
-   "mese": null,
-   "giorno": null,
-   "fonte_data": null,
-   "scheda": {
-    "it": {
-     "desc": "romanzo scritto da Richard Bach",
-     "generi": [
-      "realismo magico"
-     ],
-     "lingua": "inglese",
-     "titolo_orig": "Illusions",
-     "wiki": "https://it.wikipedia.org/wiki/Illusioni:_Le_avventure_di_un_messia_riluttante"
-    },
-    "en": {
-     "desc": "1977 novel by Richard Bach",
-     "generi": [
-      "magic realism"
-     ],
-     "lingua": "English",
-     "titolo_orig": "Illusions",
-     "wiki": "https://en.wikipedia.org/wiki/Illusions_(Bach_novel)"
-    }
-   }
-  },
-  {
-   "tipo": "prima edizione",
-   "qid": "Q1152481",
-   "nome": "The Dragons of Eden: Speculations on the Evolution of Human Intelligence",
-   "it": "I draghi dell'Eden: considerazioni sull'evoluzione dell'intelligenza umana",
-   "desc": "1977 essay by Carl Sagan",
-   "autore": "Carl Sagan",
-   "autore_qid": "Q410",
-   "anno": 1977,
-   "anni": 50,
-   "pagine": 15,
-   "mese": null,
-   "giorno": null,
-   "fonte_data": null,
-   "scheda": {
-    "it": {
-     "desc": "saggio del 1977 di Carl Sagan",
-     "generi": [
-      "non-fiction",
-      "saggio"
-     ],
-     "lingua": "inglese americano",
-     "titolo_orig": "The Dragons of Eden",
-     "wiki": "https://it.wikipedia.org/wiki/I_draghi_dell%27Eden:_considerazioni_sull%27evoluzione_dell%27intelligenza_umana"
-    },
-    "en": {
-     "desc": "1977 essay by Carl Sagan",
-     "generi": [
-      "non-fiction",
-      "essay"
-     ],
-     "lingua": "American English",
-     "titolo_orig": "The Dragons of Eden",
-     "wiki": "https://en.wikipedia.org/wiki/The_Dragons_of_Eden"
-    }
-   }
-  },
-  {
-   "tipo": "prima edizione",
-   "qid": "Q478110",
-   "nome": "City",
-   "it": "Anni senza fine",
-   "desc": "1952 fix-up novel by Clifford D. Simak",
-   "autore": "Clifford D. Simak",
-   "autore_qid": "Q294625",
-   "anno": 1952,
-   "anni": 75,
-   "pagine": 15,
-   "mese": null,
-   "giorno": null,
-   "fonte_data": null,
-   "scheda": {
-    "it": {
-     "desc": "romanzo scritto da Clifford D. Simak",
-     "generi": [
-      "fantascienza",
-      "Storia futura"
-     ],
-     "lingua": "inglese",
-     "titolo_orig": "City",
-     "wiki": "https://it.wikipedia.org/wiki/Anni_senza_fine_(romanzo)"
-    },
-    "en": {
-     "desc": "1952 fix-up novel by Clifford D. Simak",
-     "generi": [
-      "science fiction",
-      "future history"
-     ],
-     "lingua": "English",
-     "titolo_orig": "City",
-     "wiki": "https://en.wikipedia.org/wiki/City_(novel)"
-    }
-   }
-  },
-  {
-   "tipo": "prima edizione",
-   "qid": "Q875183",
-   "nome": "Decisive Moments in History",
-   "it": "Momenti fatali",
-   "desc": "1927 essay by Stefan Zweig",
-   "autore": "Stefan Zweig",
-   "autore_qid": "Q78491",
-   "anno": 1927,
-   "anni": 100,
-   "pagine": 15,
-   "mese": null,
-   "giorno": null,
-   "fonte_data": null,
-   "scheda": {
-    "it": {
-     "desc": null,
-     "generi": [
-      "saggio"
-     ],
-     "lingua": "tedesco",
-     "titolo_orig": "Sternstunden der Menschheit",
-     "wiki": "https://it.wikipedia.org/wiki/Momenti_fatali"
-    },
-    "en": {
-     "desc": "1927 essay by Stefan Zweig",
-     "generi": [
-      "essay"
-     ],
-     "lingua": "German",
-     "titolo_orig": "Sternstunden der Menschheit",
-     "wiki": "https://en.wikipedia.org/wiki/Decisive_Moments_in_History"
-    }
-   }
-  },
-  {
-   "tipo": "prima edizione",
-   "qid": "Q1305285",
-   "nome": "A Dream Play",
-   "it": "Il sogno",
-   "desc": "1902 play by August Strindberg",
-   "autore": null,
-   "autore_qid": null,
-   "anno": 1902,
-   "anni": 125,
-   "pagine": 15,
-   "mese": null,
-   "giorno": null,
-   "fonte_data": null,
-   "scheda": {
-    "it": {
-     "desc": "opera teatrale scritta da August Strindberg",
-     "generi": [
-      "espressionismo"
-     ],
-     "lingua": "svedese",
-     "titolo_orig": "Ett drömspel",
-     "wiki": "https://it.wikipedia.org/wiki/Il_sogno_(dramma)"
-    },
-    "en": {
-     "desc": "1902 play by August Strindberg",
-     "generi": [
-      "Expressionism"
-     ],
-     "lingua": "Swedish",
-     "titolo_orig": "Ett drömspel",
-     "wiki": "https://en.wikipedia.org/wiki/A_Dream_Play"
-    }
-   }
-  },
-  {
-   "tipo": "prima edizione",
-   "qid": "Q651866",
-   "nome": "Five Children and It",
-   "it": null,
-   "desc": "1902 novel by E. Nesbit",
-   "autore": "Edith Nesbit",
-   "autore_qid": "Q231708",
-   "anno": 1902,
-   "anni": 125,
-   "pagine": 15,
-   "mese": null,
-   "giorno": null,
-   "fonte_data": null,
-   "scheda": {
-    "it": {
-     "desc": null,
-     "generi": [
-      "fantasy",
-      "narrativa per ragazzi"
-     ],
-     "lingua": "inglese",
-     "titolo_orig": "Five Children and It",
-     "wiki": null
-    },
-    "en": {
-     "desc": "1902 novel by E. Nesbit",
-     "generi": [
-      "fantasy",
-      "children's fiction"
-     ],
-     "lingua": "English",
-     "titolo_orig": "Five Children and It",
-     "wiki": "https://en.wikipedia.org/wiki/Five_Children_and_It"
     }
    }
   }
