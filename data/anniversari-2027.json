@@ -3857,6 +3857,41 @@
    }
   },
   {
+   "tipo": "prima edizione",
+   "qid": "Q217073",
+   "nome": "Steppenwolf",
+   "it": "Il lupo della steppa",
+   "desc": "1927 novel by Hermann Hesse",
+   "autore": "Hermann Hesse",
+   "autore_qid": "Q25973",
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 58,
+   "mese": 6,
+   "giorno": null,
+   "fonte_data": "verifica: hhesse.de: edizione in volume, S. Fischer, giugno 1927",
+   "scheda": {
+    "it": {
+     "desc": "romanzo scritto da Hermann Hesse",
+     "generi": [
+      "fiction filosofica"
+     ],
+     "lingua": "tedesco",
+     "titolo_orig": "Der Steppenwolf",
+     "wiki": "https://it.wikipedia.org/wiki/Il_lupo_della_steppa"
+    },
+    "en": {
+     "desc": "1927 novel by Hermann Hesse",
+     "generi": [
+      "philosophical fiction"
+     ],
+     "lingua": "German",
+     "titolo_orig": "Der Steppenwolf",
+     "wiki": "https://en.wikipedia.org/wiki/Steppenwolf_(novel)"
+    }
+   }
+  },
+  {
    "tipo": "nascita",
    "qid": "Q25973",
    "nome": "Hermann Hesse",
@@ -7627,6 +7662,37 @@
    }
   },
   {
+   "tipo": "prima edizione",
+   "qid": "Q48229",
+   "nome": "Lost in America",
+   "it": "America",
+   "desc": "unfinished novel by Franz Kafka",
+   "autore": "Franz Kafka",
+   "autore_qid": "Q905",
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 33,
+   "mese": 12,
+   "giorno": null,
+   "fonte_data": "verifica: franzkafka.de: Amerika, Kurt Wolff Verlag, dicembre 1927",
+   "scheda": {
+    "it": {
+     "desc": "romanzo scritto da Franz Kafka",
+     "generi": [],
+     "lingua": "tedesco",
+     "titolo_orig": "Der Verschollene",
+     "wiki": "https://it.wikipedia.org/wiki/America_(Kafka)"
+    },
+    "en": {
+     "desc": "unfinished novel by Franz Kafka",
+     "generi": [],
+     "lingua": "German",
+     "titolo_orig": "Der Verschollene",
+     "wiki": "https://en.wikipedia.org/wiki/Amerika_(novel)"
+    }
+   }
+  },
+  {
    "tipo": "nascita",
    "qid": "Q201484",
    "nome": "John Dee",
@@ -7670,41 +7736,6 @@
      "morto": 1609,
      "nobel": null,
      "wiki": "https://en.wikipedia.org/wiki/John_Dee"
-    }
-   }
-  },
-  {
-   "tipo": "prima edizione",
-   "qid": "Q217073",
-   "nome": "Steppenwolf",
-   "it": "Il lupo della steppa",
-   "desc": "1927 novel by Hermann Hesse",
-   "autore": "Hermann Hesse",
-   "autore_qid": "Q25973",
-   "anno": 1927,
-   "anni": 100,
-   "pagine": 58,
-   "mese": null,
-   "giorno": null,
-   "fonte_data": null,
-   "scheda": {
-    "it": {
-     "desc": "romanzo scritto da Hermann Hesse",
-     "generi": [
-      "fiction filosofica"
-     ],
-     "lingua": "tedesco",
-     "titolo_orig": "Der Steppenwolf",
-     "wiki": "https://it.wikipedia.org/wiki/Il_lupo_della_steppa"
-    },
-    "en": {
-     "desc": "1927 novel by Hermann Hesse",
-     "generi": [
-      "philosophical fiction"
-     ],
-     "lingua": "German",
-     "titolo_orig": "Der Steppenwolf",
-     "wiki": "https://en.wikipedia.org/wiki/Steppenwolf_(novel)"
     }
    }
   },
@@ -7916,74 +7947,6 @@
      "morto": null,
      "nobel": null,
      "wiki": "https://en.wikipedia.org/wiki/Quim_Monz%C3%B3"
-    }
-   }
-  },
-  {
-   "tipo": "prima edizione",
-   "qid": "Q48229",
-   "nome": "Lost in America",
-   "it": "America",
-   "desc": "unfinished novel by Franz Kafka",
-   "autore": "Franz Kafka",
-   "autore_qid": "Q905",
-   "anno": 1927,
-   "anni": 100,
-   "pagine": 33,
-   "mese": null,
-   "giorno": null,
-   "fonte_data": null,
-   "scheda": {
-    "it": {
-     "desc": "romanzo scritto da Franz Kafka",
-     "generi": [],
-     "lingua": "tedesco",
-     "titolo_orig": "Der Verschollene",
-     "wiki": "https://it.wikipedia.org/wiki/America_(Kafka)"
-    },
-    "en": {
-     "desc": "unfinished novel by Franz Kafka",
-     "generi": [],
-     "lingua": "German",
-     "titolo_orig": "Der Verschollene",
-     "wiki": "https://en.wikipedia.org/wiki/Amerika_(novel)"
-    }
-   }
-  },
-  {
-   "tipo": "prima edizione",
-   "qid": "Q1233830",
-   "nome": "New Atlantis",
-   "it": "La nuova Atlantide",
-   "desc": "incomplete utopian novel by Sir Francis Bacon",
-   "autore": "Francis Bacon",
-   "autore_qid": "Q37388",
-   "anno": 1627,
-   "anni": 400,
-   "pagine": 33,
-   "mese": null,
-   "giorno": null,
-   "fonte_data": null,
-   "scheda": {
-    "it": {
-     "desc": "racconto filosofico di Francis Bacon",
-     "generi": [
-      "fantascienza",
-      "fantasy"
-     ],
-     "lingua": "nuovo latino",
-     "titolo_orig": "Nova Atlantis",
-     "wiki": "https://it.wikipedia.org/wiki/La_nuova_Atlantide"
-    },
-    "en": {
-     "desc": "incomplete utopian novel by Sir Francis Bacon",
-     "generi": [
-      "science fiction",
-      "fantasy"
-     ],
-     "lingua": "Early Modern English",
-     "titolo_orig": "Nova Atlantis",
-     "wiki": "https://en.wikipedia.org/wiki/New_Atlantis"
     }
    }
   },
