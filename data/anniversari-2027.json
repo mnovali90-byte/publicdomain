@@ -7,6 +7,37 @@
  ],
  "voci": [
   {
+   "tipo": "prima edizione",
+   "qid": "Q574630",
+   "nome": "Anti-Dühring",
+   "it": "Anti-Dühring",
+   "desc": "polemic pamphlet by Friedrich Engels against Eugen Dühring",
+   "autore": "Friedrich Engels",
+   "autore_qid": "Q34787",
+   "anno": 1877,
+   "anni": 150,
+   "pagine": 31,
+   "mese": 1,
+   "giorno": 3,
+   "fonte_data": "wikipedia (testo: de)",
+   "scheda": {
+    "it": {
+     "desc": "saggio di Friedrich Engels",
+     "generi": [],
+     "lingua": "tedesco",
+     "titolo_orig": "Herrn Eugen Dührings Umwälzung der Wissenschaft",
+     "wiki": "https://it.wikipedia.org/wiki/Anti-D%C3%BChring"
+    },
+    "en": {
+     "desc": "polemic pamphlet by Friedrich Engels against Eugen Dühring",
+     "generi": [],
+     "lingua": "German",
+     "titolo_orig": "Herrn Eugen Dührings Umwälzung der Wissenschaft",
+     "wiki": "https://en.wikipedia.org/wiki/Anti-D%C3%BChring"
+    }
+   }
+  },
+  {
    "tipo": "nascita",
    "qid": "Q1252645",
    "nome": "Stella Gibbons",
@@ -71,8 +102,8 @@
      ],
      "opere": [
       "Purge",
-      "Stalin's Cows",
-      "Baby Jane"
+      "Baby Jane",
+      "Stalin's Cows"
      ],
      "nato": 1977,
      "morto": null,
@@ -85,8 +116,8 @@
       "Finland"
      ],
      "opere": [
-      "Purge",
       "Stalin's Cows",
+      "Purge",
       "Baby Jane"
      ],
      "nato": 1977,
@@ -241,8 +272,8 @@
     "it": {
      "desc": "storico russo-jugoslavo",
      "paesi": [
-      "Impero russo",
-      "Regno di Jugoslavia"
+      "Regno di Jugoslavia",
+      "Repubblica Socialista Federale di Jugoslavia"
      ],
      "opere": [],
      "nato": 1902,
@@ -254,7 +285,7 @@
      "desc": "Russian Byzantinist (1902-1976)",
      "paesi": [
       "Kingdom of Yugoslavia",
-      "Russian Empire"
+      "Socialist Federal Republic of Yugoslavia"
      ],
      "opere": [],
      "nato": 1902,
@@ -283,9 +314,9 @@
      "desc": "chimico, fisico e inventore irlandese",
      "paesi": [],
      "opere": [
+      "New Experiments Physico-Mechanicall, Touching the Spring of the Air and its Effects",
       "Il chimico scettico",
-      "legge di Boyle-Mariotte",
-      "New Experiments Physico-Mechanicall, Touching the Spring of the Air and its Effects"
+      "legge di Boyle-Mariotte"
      ],
      "nato": 1627,
      "morto": 1691,
@@ -360,8 +391,8 @@
     "it": {
      "desc": "romanzo scritto da Stephen King",
      "generi": [
-      "thriller",
-      "horror psicologico"
+      "horror psicologico",
+      "thriller"
      ],
      "lingua": "inglese",
      "titolo_orig": "The Shining",
@@ -371,7 +402,7 @@
      "desc": "1977 novel by Stephen King",
      "generi": [
       "thriller",
-      "psychological horror fiction"
+      "horror fiction"
      ],
      "lingua": "English",
      "titolo_orig": "The Shining",
@@ -400,8 +431,8 @@
       "Stati Uniti"
      ],
      "opere": [
-      "Desert Solitaire",
-      "I sabotatori"
+      "I sabotatori",
+      "Desert Solitaire"
      ],
      "nato": 1927,
      "morto": 1989,
@@ -453,7 +484,7 @@
      "desc": "1977 novel by Philip K. Dick",
      "generi": [
       "science fiction",
-      "dystopian fiction"
+      "philosophical fiction"
      ],
      "lingua": "American English",
      "titolo_orig": "A Scanner Darkly",
@@ -496,8 +527,8 @@
       "United States"
      ],
      "opere": [
-      "An Appeal in Favor of that Class of Americans Called Africans",
-      "Hobomok: A Tale of Early Times"
+      "Hobomok: A Tale of Early Times",
+      "An Appeal in Favor of that Class of Americans Called Africans"
      ],
      "nato": 1802,
      "morto": 1880,
@@ -707,8 +738,8 @@
       "United States"
      ],
      "opere": [
-      "The Joy Luck Club",
-      "The Bonesetter's Daughter"
+      "The Bonesetter's Daughter",
+      "The Joy Luck Club"
      ],
      "nato": 1952,
      "morto": null,
@@ -927,8 +958,8 @@
     "en": {
      "desc": "Irish poet, singer and songwriter (1779–1852)",
      "paesi": [
-      "United Kingdom of Great Britain and Ireland",
-      "Kingdom of Great Britain"
+      "Kingdom of Great Britain",
+      "United Kingdom of Great Britain and Ireland"
      ],
      "opere": [],
      "nato": 1779,
@@ -974,8 +1005,8 @@
       "France"
      ],
      "opere": [
-      "The Hunchback of Notre Dame",
       "Les Misérables",
+      "The Hunchback of Notre Dame",
       "Ninety-Three"
      ],
      "nato": 1802,
@@ -1315,8 +1346,8 @@
      ],
      "opere": [
       "One Hundred Years of Solitude",
-      "The Autumn of the Patriarch",
-      "Love in the Time of Cholera"
+      "Love in the Time of Cholera",
+      "The Story of a Shipwrecked Sailor"
      ],
      "nato": 1927,
      "morto": 2014,
@@ -1851,6 +1882,37 @@
    }
   },
   {
+   "tipo": "prima edizione",
+   "qid": "Q1213811",
+   "nome": "The Killers",
+   "it": "Gli uccisori",
+   "desc": "short story by Ernest Hemingway",
+   "autore": "Ernest Hemingway",
+   "autore_qid": "Q23434",
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 16,
+   "mese": 3,
+   "giorno": null,
+   "fonte_data": "wikipedia (mese, testo)",
+   "scheda": {
+    "it": {
+     "desc": "racconto scritto da Ernest Hemingway",
+     "generi": [],
+     "lingua": "inglese americano",
+     "titolo_orig": "The Killers",
+     "wiki": "https://it.wikipedia.org/wiki/Gli_uccisori"
+    },
+    "en": {
+     "desc": "short story by Ernest Hemingway",
+     "generi": [],
+     "lingua": "American English",
+     "titolo_orig": "The Killers",
+     "wiki": "https://en.wikipedia.org/wiki/The_Killers_(Hemingway_short_story)"
+    }
+   }
+  },
+  {
    "tipo": "morte",
    "qid": "Q296809",
    "nome": "Ferenc Molnár",
@@ -2164,7 +2226,7 @@
      "desc": "romanzo scritto da Ralph Waldo Ellison",
      "generi": [
       "fantascienza",
-      "romanzo di formazione"
+      "romanzo a sfondo sociale"
      ],
      "lingua": "inglese",
      "titolo_orig": "Invisible Man",
@@ -2174,7 +2236,7 @@
      "desc": "1952 novel by Ralph Ellison",
      "generi": [
       "science fiction",
-      "Bildungsroman"
+      "social novel"
      ],
      "lingua": "English",
      "titolo_orig": "Invisible Man",
@@ -2195,7 +2257,7 @@
    "pagine": 53,
    "mese": 4,
    "giorno": 15,
-   "fonte_data": "wikipedia",
+   "fonte_data": "wikidata+wikipedia",
    "scheda": {
     "it": {
      "desc": "poeta, giornalista e scrittore francese",
@@ -2204,8 +2266,8 @@
      ],
      "opere": [
       "Il fantasma dell'Opera",
-      "La Double Vie de Théophraste Longuet",
-      "The Perfume of the Lady in Black"
+      "Il mistero della camera gialla",
+      "La Double Vie de Théophraste Longuet"
      ],
      "nato": 1868,
      "morto": 1927,
@@ -2219,8 +2281,8 @@
      ],
      "opere": [
       "The Phantom of the Opera",
-      "The Mystery of the Yellow Room",
-      "La Double Vie de Théophraste Longuet"
+      "La Double Vie de Théophraste Longuet",
+      "The Perfume of the Lady in Black"
      ],
      "nato": 1868,
      "morto": 1927,
@@ -2467,6 +2529,43 @@
   },
   {
    "tipo": "prima edizione",
+   "qid": "Q568210",
+   "nome": "They Do It with Mirrors",
+   "it": "Miss Marple: giochi di prestigio",
+   "desc": "1952 novel by Agatha Christie",
+   "autore": "Agatha Christie",
+   "autore_qid": "Q35064",
+   "anno": 1952,
+   "anni": 75,
+   "pagine": 28,
+   "mese": 4,
+   "giorno": null,
+   "fonte_data": "wikipedia (mese, testo)",
+   "scheda": {
+    "it": {
+     "desc": "romanzo scritto da Agatha Christie",
+     "generi": [
+      "poliziesco",
+      "giallo"
+     ],
+     "lingua": "inglese",
+     "titolo_orig": "Jogo de Espelhos",
+     "wiki": "https://it.wikipedia.org/wiki/Giochi_di_prestigio_(romanzo)"
+    },
+    "en": {
+     "desc": "1952 novel by Agatha Christie",
+     "generi": [
+      "detective fiction",
+      "crime fiction"
+     ],
+     "lingua": "English",
+     "titolo_orig": "Jogo de Espelhos",
+     "wiki": "https://en.wikipedia.org/wiki/They_Do_It_with_Mirrors"
+    }
+   }
+  },
+  {
+   "tipo": "prima edizione",
    "qid": "Q143707",
    "nome": "The Child of the Cavern",
    "it": "Le Indie nere",
@@ -2499,6 +2598,37 @@
      "lingua": "French",
      "titolo_orig": "Les Indes noires",
      "wiki": "https://en.wikipedia.org/wiki/The_Child_of_the_Cavern"
+    }
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q971152",
+   "nome": "The Dream of a Ridiculous Man",
+   "it": "Il sogno di un uomo ridicolo",
+   "desc": "short story by Fyodor Dostoyevsky written in 1877",
+   "autore": "Fyodor Dostoyevsky",
+   "autore_qid": "Q991",
+   "anno": 1877,
+   "anni": 150,
+   "pagine": 26,
+   "mese": 4,
+   "giorno": null,
+   "fonte_data": "wikipedia (mese, testo)",
+   "scheda": {
+    "it": {
+     "desc": "racconto di Fëdor Dostoevskij",
+     "generi": [],
+     "lingua": "russo",
+     "titolo_orig": null,
+     "wiki": "https://it.wikipedia.org/wiki/Il_sogno_di_un_uomo_ridicolo"
+    },
+    "en": {
+     "desc": "short story by Fyodor Dostoyevsky written in 1877",
+     "generi": [],
+     "lingua": "Russian",
+     "titolo_orig": null,
+     "wiki": "https://en.wikipedia.org/wiki/The_Dream_of_a_Ridiculous_Man"
     }
    }
   },
@@ -2562,9 +2692,9 @@
       "Stati Uniti"
      ],
      "opere": [
-      "Tennessee's Partner",
       "The Luck of Roaring Camp",
-      "The Outcasts of Poker Flat"
+      "The Outcasts of Poker Flat",
+      "Tennessee's Partner"
      ],
      "nato": 1836,
      "morto": 1902,
@@ -2702,8 +2832,8 @@
      ],
      "opere": [
       "Maamme",
-      "The Tales of Ensign Stål",
-      "The Elk Hunters"
+      "The Elk Hunters",
+      "The Tales of Ensign Stål"
      ],
      "nato": 1804,
      "morto": 1877,
@@ -2743,7 +2873,7 @@
      "desc": "German-born British-American author (1927-2013)",
      "paesi": [
       "German Reich",
-      "United States"
+      "United Kingdom"
      ],
      "opere": [],
      "nato": 1927,
@@ -3043,7 +3173,7 @@
      "opere": [
       "Democracy and Education",
       "Experience and Education",
-      "The Public and its Problems"
+      "The School and Society"
      ],
      "nato": 1859,
      "morto": 1952,
@@ -3114,9 +3244,9 @@
       "Turchia"
      ],
      "opere": [
-      "La nuova vita",
       "Cevdet Bey and His Sons",
-      "Nights of Plague"
+      "Nights of Plague",
+      "La nuova vita"
      ],
      "nato": 1952,
      "morto": null,
@@ -3401,7 +3531,7 @@
    "pagine": 83,
    "mese": 6,
    "giorno": 14,
-   "fonte_data": "wikipedia",
+   "fonte_data": "wikidata+wikipedia",
    "scheda": {
     "it": {
      "desc": "scrittore e giornalista britannico (1859-1927)",
@@ -3475,6 +3605,42 @@
    }
   },
   {
+   "tipo": "prima edizione",
+   "qid": "Q28491",
+   "nome": "The Betrothed",
+   "it": "I promessi sposi",
+   "desc": "Italian historical novel by Alessandro Manzoni",
+   "autore": "Alessandro Manzoni",
+   "autore_qid": "Q1064",
+   "anno": 1827,
+   "anni": 200,
+   "pagine": 38,
+   "mese": 6,
+   "giorno": 15,
+   "fonte_data": "wikipedia (testo: en)",
+   "scheda": {
+    "it": {
+     "desc": "romanzo di Alessandro Manzoni",
+     "generi": [
+      "fiction storica"
+     ],
+     "lingua": "italiano",
+     "titolo_orig": "I promessi sposi",
+     "wiki": "https://it.wikipedia.org/wiki/I_promessi_sposi"
+    },
+    "en": {
+     "desc": "Italian historical novel by Alessandro Manzoni",
+     "generi": [
+      "historical fiction",
+      "romantic fiction"
+     ],
+     "lingua": "Italian",
+     "titolo_orig": "I promessi sposi",
+     "wiki": "https://en.wikipedia.org/wiki/The_Betrothed"
+    }
+   }
+  },
+  {
    "tipo": "morte",
    "qid": "Q312829",
    "nome": "Samuel Butler",
@@ -3526,7 +3692,7 @@
    "pagine": 53,
    "mese": 6,
    "giorno": 18,
-   "fonte_data": "wikipedia",
+   "fonte_data": "wikidata+wikipedia",
    "scheda": {
     "it": {
      "desc": "sociologo e filosofo iraniano",
@@ -3581,9 +3747,9 @@
       "India"
      ],
      "opere": [
-      "An Equal Music",
+      "Il ragazzo giusto (romanzo)",
       "Golden Gate (romanzo)",
-      "Il ragazzo giusto (romanzo)"
+      "An Equal Music"
      ],
      "nato": 1952,
      "morto": null,
@@ -3596,9 +3762,9 @@
       "India"
      ],
      "opere": [
+      "An Equal Music",
       "A Suitable Boy",
-      "The Golden Gate",
-      "An Equal Music"
+      "The Golden Gate"
      ],
      "nato": 1952,
      "morto": null,
@@ -3628,8 +3794,8 @@
       "Repubblica di Firenze"
      ],
      "opere": [
-      "Il principe",
       "Capitoli",
+      "Il principe",
       "Discorsi sopra la prima Deca di Tito Livio"
      ],
      "nato": 1469,
@@ -3811,7 +3977,7 @@
      "opere": [
       "Goodbye amore mio!",
       "La strana coppia",
-      "Come Blow Your Horn"
+      "Brighton Beach Memoirs"
      ],
      "nato": 1927,
      "morto": 2018,
@@ -3825,8 +3991,8 @@
      ],
      "opere": [
       "The Goodbye Girl",
-      "The Odd Couple",
-      "Brighton Beach Memoirs"
+      "Come Blow Your Horn",
+      "Lost in Yonkers"
      ],
      "nato": 1927,
      "morto": 2018,
@@ -3856,9 +4022,9 @@
       "Regno Unito"
      ],
      "opere": [
-      "Anna Bolena, una questione di famiglia",
+      "Wolf Hall",
       "Every Day is Mother's Day",
-      "Wolf Hall"
+      "Anna Bolena, una questione di famiglia"
      ],
      "nato": 1952,
      "morto": 2022,
@@ -3871,9 +4037,9 @@
       "United Kingdom"
      ],
      "opere": [
+      "Bring Up the Bodies",
       "Wolf Hall",
-      "Every Day is Mother's Day",
-      "Bring Up the Bodies"
+      "Every Day is Mother's Day"
      ],
      "nato": 1952,
      "morto": 2022,
@@ -4129,7 +4295,7 @@
      "opere": [
       "The Nose",
       "Spinning Gears",
-      "Rashōmon"
+      "Hell Screen"
      ],
      "nato": 1892,
      "morto": 1927,
@@ -4194,7 +4360,7 @@
    "pagine": 33,
    "mese": 7,
    "giorno": 25,
-   "fonte_data": "wikipedia",
+   "fonte_data": "wikidata+wikipedia",
    "scheda": {
     "it": {
      "desc": "scrittrice e giornalista italiana (1856-1927)",
@@ -4211,8 +4377,8 @@
     "en": {
      "desc": "Italian journalist and writer, editor (1856–1927)",
      "paesi": [
-      "Kingdom of the Two Sicilies",
-      "Kingdom of Italy"
+      "Kingdom of Italy",
+      "Kingdom of the Two Sicilies"
      ],
      "opere": [],
      "nato": 1856,
@@ -4240,8 +4406,8 @@
     "it": {
      "desc": "filosofo ed epistemologo austriaco naturalizzato britannico (1902-1994)",
      "paesi": [
-      "Regno Unito di Gran Bretagna e Irlanda",
-      "Cisleitania"
+      "Cisleitania",
+      "Regno Unito di Gran Bretagna e Irlanda"
      ],
      "opere": [
       "Unended Quest",
@@ -4339,8 +4505,8 @@
       "Regno dei Paesi Bassi"
      ],
      "opere": [
-      "La scoperta del cielo",
       "L'attentato",
+      "La scoperta del cielo",
       "The Stone Bridal Bed"
      ],
      "nato": 1927,
@@ -4354,8 +4520,8 @@
       "Kingdom of the Netherlands"
      ],
      "opere": [
-      "The Discovery of Heaven",
       "The Assault",
+      "The Discovery of Heaven",
       "The Stone Bridal Bed"
      ],
      "nato": 1927,
@@ -4528,8 +4694,8 @@
     "en": {
      "desc": "English poet and artist (1757–1827)",
      "paesi": [
-      "United Kingdom of Great Britain and Ireland",
-      "Kingdom of Great Britain"
+      "Kingdom of Great Britain",
+      "United Kingdom of Great Britain and Ireland"
      ],
      "opere": [
       "Jerusalem The Emanation of the Giant Albion",
@@ -5029,9 +5195,9 @@
       "France"
      ],
      "opere": [
-      "Au bord de la mer",
-      "Cruelle énigme",
-      "L'Étape"
+      "L'Étape",
+      "The noon demon",
+      "Un Divorce"
      ],
      "nato": 1852,
      "morto": 1935,
@@ -5184,8 +5350,8 @@
       "Repubblica di Venezia"
      ],
      "opere": [
-      "Dei sepolcri",
       "Ultime lettere di Jacopo Ortis",
+      "Dei sepolcri",
       "Discorso sul testo della Divina Commedia"
      ],
      "nato": 1778,
@@ -5199,8 +5365,8 @@
       "Republic of Venice"
      ],
      "opere": [
-      "Dei Sepolcri",
-      "The Last Letters of Jacopo Ortis"
+      "The Last Letters of Jacopo Ortis",
+      "Dei Sepolcri"
      ],
      "nato": 1778,
      "morto": 1827,
@@ -5323,8 +5489,8 @@
     "en": {
      "desc": "1977 novel by Stephen King",
      "generi": [
-      "psychological thriller",
-      "thriller novel"
+      "thriller novel",
+      "psychological thriller"
      ],
      "lingua": "English",
      "titolo_orig": "Rage",
@@ -5673,9 +5839,9 @@
       "Stati Uniti"
      ],
      "opere": [
-      "Ain't I a Woman?",
-      "All About Love: New Visions",
-      "Bone Black: Memories of Girlhood"
+      "Feminist Theory: From Margin to Center",
+      "We Real Cool: Black Men and Masculinity",
+      "Ain't I a Woman?"
      ],
      "nato": 1952,
      "morto": 2021,
@@ -6100,8 +6266,8 @@
       "Germany"
      ],
      "opere": [
-      "The Call of the Toad",
       "Last dances",
+      "The Call of the Toad",
       "Dog Years"
      ],
      "nato": 1927,
@@ -6207,8 +6373,8 @@
     "it": {
      "desc": "filosofo e storico polacco",
      "paesi": [
-      "Repubblica Popolare di Polonia",
-      "Germania nazista"
+      "Seconda Repubblica di Polonia",
+      "Repubblica Popolare di Polonia"
      ],
      "opere": [
       "Is God Happy?"
@@ -6221,8 +6387,8 @@
     "en": {
      "desc": "Philosopher, historian of ideas (1927–2009)",
      "paesi": [
-      "Nazi Germany",
-      "Second Polish Republic"
+      "Second Polish Republic",
+      "Polish People's Republic"
      ],
      "opere": [
       "Is God Happy?"
@@ -6445,6 +6611,41 @@
   },
   {
    "tipo": "prima edizione",
+   "qid": "Q1498315",
+   "nome": "Mutual Aid: A Factor of Evolution",
+   "it": "Il mutuo appoggio: un fattore dell'evoluzione",
+   "desc": "non-fiction work by Peter Kropotkin on the subject of mutual aid",
+   "autore": "Peter Kropotkin",
+   "autore_qid": "Q5752",
+   "anno": 1902,
+   "anni": 125,
+   "pagine": 20,
+   "mese": 10,
+   "giorno": null,
+   "fonte_data": "wikipedia (mese, testo)",
+   "scheda": {
+    "it": {
+     "desc": "libro di Pëtr Alekseevič Kropotkin",
+     "generi": [
+      "saggio"
+     ],
+     "lingua": "inglese",
+     "titolo_orig": "Mutual Aid",
+     "wiki": "https://it.wikipedia.org/wiki/Il_mutuo_appoggio:_un_fattore_dell%27evoluzione"
+    },
+    "en": {
+     "desc": "non-fiction work by Peter Kropotkin on the subject of mutual aid",
+     "generi": [
+      "essay"
+     ],
+     "lingua": "English",
+     "titolo_orig": "Mutual Aid",
+     "wiki": "https://en.wikipedia.org/wiki/Mutual_Aid:_A_Factor_of_Evolution"
+    }
+   }
+  },
+  {
+   "tipo": "prima edizione",
    "qid": "Q2317316",
    "nome": "Pickman's Model",
    "it": "Il modello di Pickman",
@@ -6475,6 +6676,37 @@
      "lingua": "English",
      "titolo_orig": "Pickman's Model",
      "wiki": "https://en.wikipedia.org/wiki/Pickman%27s_Model"
+    }
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q4179831",
+   "nome": "Men Without Women",
+   "it": null,
+   "desc": "short story collection by Ernest Hemingway",
+   "autore": "Ernest Hemingway",
+   "autore_qid": "Q23434",
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 15,
+   "mese": 10,
+   "giorno": null,
+   "fonte_data": "wikipedia (mese, testo)",
+   "scheda": {
+    "it": {
+     "desc": null,
+     "generi": [],
+     "lingua": "inglese",
+     "titolo_orig": "Men Without Women",
+     "wiki": null
+    },
+    "en": {
+     "desc": "short story collection by Ernest Hemingway",
+     "generi": [],
+     "lingua": "English",
+     "titolo_orig": "Men Without Women",
+     "wiki": "https://en.wikipedia.org/wiki/Men_Without_Women_(Hemingway_short_story_collection)"
     }
    }
   },
@@ -6542,8 +6774,8 @@
       "Francia"
      ],
      "opere": [
-      "Lucky Luke",
       "Asterix",
+      "Lucky Luke",
       "Il Piccolo Nicolas"
      ],
      "nato": 1926,
@@ -6957,9 +7189,9 @@
       "Repubblica Socialista Federale di Jugoslavia"
      ],
      "opere": [
+      "Migrations",
       "The Journal of Carnojevic",
-      "A Novel about London",
-      "Migrations"
+      "A Novel about London"
      ],
      "nato": 1893,
      "morto": 1977,
@@ -6970,12 +7202,12 @@
      "desc": "expressionist modernist poet, author, and diplomat from Austria-Hungary",
      "paesi": [
       "Kingdom of Yugoslavia",
-      "Austria–Hungary"
+      "Socialist Federal Republic of Yugoslavia"
      ],
      "opere": [
+      "Migrations",
       "The Journal of Carnojevic",
-      "A Novel about London",
-      "Migrations"
+      "A Novel about London"
      ],
      "nato": 1893,
      "morto": 1977,
@@ -7256,8 +7488,8 @@
     "it": {
      "desc": "medico russo",
      "paesi": [
-      "Unione Sovietica",
-      "Repubblica Socialista Federativa Sovietica Russa"
+      "Repubblica Socialista Federativa Sovietica Russa",
+      "Impero russo"
      ],
      "opere": [
       "Kollektivnaya refleksologiya"
@@ -7270,8 +7502,8 @@
     "en": {
      "desc": "Russian neurologist",
      "paesi": [
-      "Russian Soviet Federative Socialist Republic",
-      "Russian Empire"
+      "Russian Empire",
+      "Soviet Union"
      ],
      "opere": [
       "Kollektivnaya refleksologiya"
@@ -7319,41 +7551,6 @@
      "morto": 2001,
      "nobel": null,
      "wiki": "https://en.wikipedia.org/wiki/Mortimer_J._Adler"
-    }
-   }
-  },
-  {
-   "tipo": "prima edizione",
-   "qid": "Q147787",
-   "nome": "Anna Karenina",
-   "it": "Anna Karenina",
-   "desc": "1877 novel by Leo Tolstoy",
-   "autore": "Leo Tolstoy",
-   "autore_qid": "Q7243",
-   "anno": 1877,
-   "anni": 150,
-   "pagine": 109,
-   "mese": null,
-   "giorno": null,
-   "fonte_data": null,
-   "scheda": {
-    "it": {
-     "desc": "romanzo scritto da Lev Tolstoj",
-     "generi": [
-      "romanzo realistico"
-     ],
-     "lingua": "russo",
-     "titolo_orig": "Анна Каренина",
-     "wiki": "https://it.wikipedia.org/wiki/Anna_Karenina"
-    },
-    "en": {
-     "desc": "1877 novel by Leo Tolstoy",
-     "generi": [
-      "realist novel"
-     ],
-     "lingua": "Russian",
-     "titolo_orig": "Анна Каренина",
-     "wiki": "https://en.wikipedia.org/wiki/Anna_Karenina"
     }
    }
   },
@@ -7414,8 +7611,8 @@
      ],
      "opere": [
       "Enochian",
-      "Enochian magic",
-      "Monas Hieroglyphica"
+      "Monas Hieroglyphica",
+      "Enochian magic"
      ],
      "nato": 1527,
      "morto": 1609,
@@ -7429,8 +7626,8 @@
      ],
      "opere": [
       "Enochian",
-      "Enochian magic",
-      "Monas Hieroglyphica"
+      "Monas Hieroglyphica",
+      "Enochian magic"
      ],
      "nato": 1527,
      "morto": 1609,
@@ -7532,7 +7729,7 @@
      "desc": "drammaturgo e scrittore romeno",
      "paesi": [
       "Principato di Romania",
-      "Principato di Valacchia"
+      "Regno di Romania"
      ],
      "opere": [],
      "nato": 1852,
@@ -7543,50 +7740,14 @@
     "en": {
      "desc": "Romanian playwright, writer and poet (1852-1912)",
      "paesi": [
-      "United Principalities of Moldavia and Wallachia",
-      "Principality of Wallachia"
+      "Principality of Wallachia",
+      "United Principalities of Moldavia and Wallachia"
      ],
      "opere": [],
      "nato": 1852,
      "morto": 1912,
      "nobel": null,
      "wiki": "https://en.wikipedia.org/wiki/Ion_Luca_Caragiale"
-    }
-   }
-  },
-  {
-   "tipo": "prima edizione",
-   "qid": "Q28491",
-   "nome": "The Betrothed",
-   "it": "I promessi sposi",
-   "desc": "Italian historical novel by Alessandro Manzoni",
-   "autore": "Alessandro Manzoni",
-   "autore_qid": "Q1064",
-   "anno": 1827,
-   "anni": 200,
-   "pagine": 38,
-   "mese": null,
-   "giorno": null,
-   "fonte_data": null,
-   "scheda": {
-    "it": {
-     "desc": "romanzo di Alessandro Manzoni",
-     "generi": [
-      "fiction storica"
-     ],
-     "lingua": "italiano",
-     "titolo_orig": "I promessi sposi",
-     "wiki": "https://it.wikipedia.org/wiki/I_promessi_sposi"
-    },
-    "en": {
-     "desc": "Italian historical novel by Alessandro Manzoni",
-     "generi": [
-      "historical fiction",
-      "romantic fiction"
-     ],
-     "lingua": "Italian",
-     "titolo_orig": "I promessi sposi",
-     "wiki": "https://en.wikipedia.org/wiki/The_Betrothed"
     }
    }
   },
@@ -7695,9 +7856,9 @@
       "Spagna"
      ],
      "opere": [
+      "A Thousand Morons",
       "Uf, va dir ell",
-      "The Enormity of the Tragedy",
-      "Why, Why, Why?"
+      "The Enormity of the Tragedy"
      ],
      "nato": 1952,
      "morto": null,
@@ -7710,9 +7871,9 @@
       "Spain"
      ],
      "opere": [
+      "A Thousand Morons",
       "Uf, va dir ell",
-      "The Enormity of the Tragedy",
-      "Why, Why, Why?"
+      "The Enormity of the Tragedy"
      ],
      "nato": 1952,
      "morto": null,
@@ -7906,37 +8067,6 @@
   },
   {
    "tipo": "prima edizione",
-   "qid": "Q574630",
-   "nome": "Anti-Dühring",
-   "it": "Anti-Dühring",
-   "desc": "polemic pamphlet by Friedrich Engels against Eugen Dühring",
-   "autore": "Friedrich Engels",
-   "autore_qid": "Q34787",
-   "anno": 1877,
-   "anni": 150,
-   "pagine": 31,
-   "mese": null,
-   "giorno": null,
-   "fonte_data": null,
-   "scheda": {
-    "it": {
-     "desc": "saggio di Friedrich Engels",
-     "generi": [],
-     "lingua": "tedesco",
-     "titolo_orig": "Herrn Eugen Dührings Umwälzung der Wissenschaft",
-     "wiki": "https://it.wikipedia.org/wiki/Anti-D%C3%BChring"
-    },
-    "en": {
-     "desc": "polemic pamphlet by Friedrich Engels against Eugen Dühring",
-     "generi": [],
-     "lingua": "German",
-     "titolo_orig": "Herrn Eugen Dührings Umwälzung der Wissenschaft",
-     "wiki": "https://en.wikipedia.org/wiki/Anti-D%C3%BChring"
-    }
-   }
-  },
-  {
-   "tipo": "prima edizione",
    "qid": "Q11843",
    "nome": "Snow-White and Rose-Red",
    "it": "Biancaneve e Rosarossa",
@@ -8002,74 +8132,6 @@
      "lingua": "American English",
      "titolo_orig": "Foundation and Empire",
      "wiki": "https://en.wikipedia.org/wiki/Foundation_and_Empire"
-    }
-   }
-  },
-  {
-   "tipo": "prima edizione",
-   "qid": "Q568210",
-   "nome": "They Do It with Mirrors",
-   "it": "Miss Marple: giochi di prestigio",
-   "desc": "1952 novel by Agatha Christie",
-   "autore": "Agatha Christie",
-   "autore_qid": "Q35064",
-   "anno": 1952,
-   "anni": 75,
-   "pagine": 28,
-   "mese": null,
-   "giorno": null,
-   "fonte_data": null,
-   "scheda": {
-    "it": {
-     "desc": "romanzo scritto da Agatha Christie",
-     "generi": [
-      "poliziesco",
-      "giallo"
-     ],
-     "lingua": "inglese",
-     "titolo_orig": "Jogo de Espelhos",
-     "wiki": "https://it.wikipedia.org/wiki/Giochi_di_prestigio_(romanzo)"
-    },
-    "en": {
-     "desc": "1952 novel by Agatha Christie",
-     "generi": [
-      "detective fiction",
-      "crime fiction"
-     ],
-     "lingua": "English",
-     "titolo_orig": "Jogo de Espelhos",
-     "wiki": "https://en.wikipedia.org/wiki/They_Do_It_with_Mirrors"
-    }
-   }
-  },
-  {
-   "tipo": "prima edizione",
-   "qid": "Q971152",
-   "nome": "The Dream of a Ridiculous Man",
-   "it": "Il sogno di un uomo ridicolo",
-   "desc": "short story by Fyodor Dostoyevsky written in 1877",
-   "autore": "Fyodor Dostoyevsky",
-   "autore_qid": "Q991",
-   "anno": 1877,
-   "anni": 150,
-   "pagine": 26,
-   "mese": null,
-   "giorno": null,
-   "fonte_data": null,
-   "scheda": {
-    "it": {
-     "desc": "racconto di Fëdor Dostoevskij",
-     "generi": [],
-     "lingua": "russo",
-     "titolo_orig": null,
-     "wiki": "https://it.wikipedia.org/wiki/Il_sogno_di_un_uomo_ridicolo"
-    },
-    "en": {
-     "desc": "short story by Fyodor Dostoyevsky written in 1877",
-     "generi": [],
-     "lingua": "Russian",
-     "titolo_orig": null,
-     "wiki": "https://en.wikipedia.org/wiki/The_Dream_of_a_Ridiculous_Man"
     }
    }
   },
@@ -8300,47 +8362,12 @@
     "en": {
      "desc": "novel by Jules Verne",
      "generi": [
-      "travel literature",
-      "crime fiction"
+      "crime fiction",
+      "nautical fiction"
      ],
      "lingua": "French",
      "titolo_orig": "Les Frères Kip",
      "wiki": "https://en.wikipedia.org/wiki/The_Kip_Brothers"
-    }
-   }
-  },
-  {
-   "tipo": "prima edizione",
-   "qid": "Q1498315",
-   "nome": "Mutual Aid: A Factor of Evolution",
-   "it": "Il mutuo appoggio: un fattore dell'evoluzione",
-   "desc": "non-fiction work by Peter Kropotkin on the subject of mutual aid",
-   "autore": "Peter Kropotkin",
-   "autore_qid": "Q5752",
-   "anno": 1902,
-   "anni": 125,
-   "pagine": 20,
-   "mese": null,
-   "giorno": null,
-   "fonte_data": null,
-   "scheda": {
-    "it": {
-     "desc": "libro di Pëtr Alekseevič Kropotkin",
-     "generi": [
-      "saggio"
-     ],
-     "lingua": "inglese",
-     "titolo_orig": "Mutual Aid",
-     "wiki": "https://it.wikipedia.org/wiki/Il_mutuo_appoggio:_un_fattore_dell%27evoluzione"
-    },
-    "en": {
-     "desc": "non-fiction work by Peter Kropotkin on the subject of mutual aid",
-     "generi": [
-      "essay"
-     ],
-     "lingua": "English",
-     "titolo_orig": "Mutual Aid",
-     "wiki": "https://en.wikipedia.org/wiki/Mutual_Aid:_A_Factor_of_Evolution"
     }
    }
   },
@@ -8620,37 +8647,6 @@
   },
   {
    "tipo": "prima edizione",
-   "qid": "Q1213811",
-   "nome": "The Killers",
-   "it": "Gli uccisori",
-   "desc": "short story by Ernest Hemingway",
-   "autore": "Ernest Hemingway",
-   "autore_qid": "Q23434",
-   "anno": 1927,
-   "anni": 100,
-   "pagine": 16,
-   "mese": null,
-   "giorno": null,
-   "fonte_data": null,
-   "scheda": {
-    "it": {
-     "desc": "racconto scritto da Ernest Hemingway",
-     "generi": [],
-     "lingua": "inglese americano",
-     "titolo_orig": "The Killers",
-     "wiki": "https://it.wikipedia.org/wiki/Gli_uccisori"
-    },
-    "en": {
-     "desc": "short story by Ernest Hemingway",
-     "generi": [],
-     "lingua": "American English",
-     "titolo_orig": "The Killers",
-     "wiki": "https://en.wikipedia.org/wiki/The_Killers_(Hemingway_short_story)"
-    }
-   }
-  },
-  {
-   "tipo": "prima edizione",
    "qid": "Q2529101",
    "nome": "Illusions",
    "it": "Illusioni: Le avventure di un messia riluttante",
@@ -8755,37 +8751,6 @@
      "lingua": "English",
      "titolo_orig": "City",
      "wiki": "https://en.wikipedia.org/wiki/City_(novel)"
-    }
-   }
-  },
-  {
-   "tipo": "prima edizione",
-   "qid": "Q4179831",
-   "nome": "Men Without Women",
-   "it": null,
-   "desc": "short story collection by Ernest Hemingway",
-   "autore": "Ernest Hemingway",
-   "autore_qid": "Q23434",
-   "anno": 1927,
-   "anni": 100,
-   "pagine": 15,
-   "mese": null,
-   "giorno": null,
-   "fonte_data": null,
-   "scheda": {
-    "it": {
-     "desc": null,
-     "generi": [],
-     "lingua": "inglese",
-     "titolo_orig": "Men Without Women",
-     "wiki": null
-    },
-    "en": {
-     "desc": "short story collection by Ernest Hemingway",
-     "generi": [],
-     "lingua": "English",
-     "titolo_orig": "Men Without Women",
-     "wiki": "https://en.wikipedia.org/wiki/Men_Without_Women_(Hemingway_short_story_collection)"
     }
    }
   },
