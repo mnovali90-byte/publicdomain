@@ -32,7 +32,7 @@ sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 
 DATA = pathlib.Path(__file__).resolve().parent.parent / "data"
 ANNO = int(os.environ.get("ANNO_CALENDARIO", "2027"))
-ETA = [50, 75, 100, 125, 150, 175, 200, 250, 300, 400]
+ETA = [50, 75, 100, 125, 150, 175, 200, 225, 250, 300, 400, 500]
 SOGLIA_PERSONE, SOGLIA_OPERE = 30, 15
 BUDGET_MIN = float(os.environ.get("BUDGET_MINUTI_ANNIV", "70"))
 FINE = time.time() + BUDGET_MIN * 60
