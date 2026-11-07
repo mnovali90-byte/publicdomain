@@ -1,0 +1,20 @@
+name: Logo
+on:
+  push:
+    paths: ["scripts/logo.py", ".github/workflows/logo.yml"]
+permissions:
+  contents: write
+jobs:
+  logo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install fonttools
+      - run: python3 scripts/logo.py
+      - run: |
+          git config user.name "github-actions"
+          git config user.email "actions@users.noreply.github.com"
+          git add assets/logo-pdr.svg
+          git commit -m "Logo PDR: disegno fisso delle lettere" || exit 0
+          git pull --rebase --autostash origin main
+          git push
