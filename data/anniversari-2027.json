@@ -71,8 +71,8 @@
      ],
      "opere": [
       "Purge",
-      "Baby Jane",
-      "Stalin's Cows"
+      "Stalin's Cows",
+      "Baby Jane"
      ],
      "nato": 1977,
      "morto": null,
@@ -86,7 +86,7 @@
      ],
      "opere": [
       "Purge",
-      "Norma",
+      "Stalin's Cows",
       "Baby Jane"
      ],
      "nato": 1977,
@@ -241,8 +241,8 @@
     "it": {
      "desc": "storico russo-jugoslavo",
      "paesi": [
-      "Regno di Jugoslavia",
-      "Repubblica Socialista Federale di Jugoslavia"
+      "Impero russo",
+      "Regno di Jugoslavia"
      ],
      "opere": [],
      "nato": 1902,
@@ -297,8 +297,8 @@
      "paesi": [],
      "opere": [
       "The Sceptical Chymist",
-      "Boyle's law",
-      "New Experiments Physico-Mechanicall, Touching the Spring of the Air and its Effects"
+      "New Experiments Physico-Mechanicall, Touching the Spring of the Air and its Effects",
+      "Boyle's law"
      ],
      "nato": 1627,
      "morto": 1691,
@@ -361,7 +361,7 @@
      "desc": "romanzo scritto da Stephen King",
      "generi": [
       "thriller",
-      "Letteratura gotica"
+      "horror psicologico"
      ],
      "lingua": "inglese",
      "titolo_orig": "The Shining",
@@ -370,8 +370,8 @@
     "en": {
      "desc": "1977 novel by Stephen King",
      "generi": [
-      "psychological horror fiction",
-      "thriller"
+      "thriller",
+      "psychological horror fiction"
      ],
      "lingua": "English",
      "titolo_orig": "The Shining",
@@ -400,8 +400,8 @@
       "Stati Uniti"
      ],
      "opere": [
-      "I sabotatori",
-      "Desert Solitaire"
+      "Desert Solitaire",
+      "I sabotatori"
      ],
      "nato": 1927,
      "morto": 1989,
@@ -421,6 +421,43 @@
      "morto": 1989,
      "nobel": null,
      "wiki": "https://en.wikipedia.org/wiki/Edward_Abbey"
+    }
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q1198489",
+   "nome": "A Scanner Darkly",
+   "it": "Un oscuro scrutare",
+   "desc": "1977 novel by Philip K. Dick",
+   "autore": "Philip K. Dick",
+   "autore_qid": "Q171091",
+   "anno": 1977,
+   "anni": 50,
+   "pagine": 20,
+   "mese": 1,
+   "giorno": null,
+   "fonte_data": null,
+   "scheda": {
+    "it": {
+     "desc": "romanzo scritto da Philip K. Dick",
+     "generi": [
+      "fantascienza",
+      "fiction filosofica"
+     ],
+     "lingua": "inglese americano",
+     "titolo_orig": "A Scanner Darkly",
+     "wiki": "https://it.wikipedia.org/wiki/Un_oscuro_scrutare"
+    },
+    "en": {
+     "desc": "1977 novel by Philip K. Dick",
+     "generi": [
+      "science fiction",
+      "dystopian fiction"
+     ],
+     "lingua": "American English",
+     "titolo_orig": "A Scanner Darkly",
+     "wiki": "https://en.wikipedia.org/wiki/A_Scanner_Darkly"
     }
    }
   },
@@ -445,8 +482,8 @@
       "Stati Uniti"
      ],
      "opere": [
-      "An Appeal in Favor of that Class of Americans Called Africans",
-      "Hobomok: A Tale of Early Times"
+      "Hobomok: A Tale of Early Times",
+      "An Appeal in Favor of that Class of Americans Called Africans"
      ],
      "nato": 1802,
      "morto": 1880,
@@ -747,8 +784,8 @@
      ],
      "opere": [
       "Marriage",
-      "Le anime morte",
-      "L'ispettore generale"
+      "L'ispettore generale",
+      "Le anime morte"
      ],
      "nato": 1809,
      "morto": 1852,
@@ -878,8 +915,8 @@
     "it": {
      "desc": "poeta, commediografo e attore irlandese",
      "paesi": [
-      "Regno Unito di Gran Bretagna e Irlanda",
-      "Regno di Gran Bretagna"
+      "Regno di Gran Bretagna",
+      "Regno Unito di Gran Bretagna e Irlanda"
      ],
      "opere": [],
      "nato": 1779,
@@ -923,8 +960,8 @@
      ],
      "opere": [
       "I miserabili",
-      "Novantatré",
-      "Notre-Dame de Paris"
+      "Notre-Dame de Paris",
+      "Novantatré"
      ],
      "nato": 1802,
      "morto": 1885,
@@ -938,8 +975,8 @@
      ],
      "opere": [
       "The Hunchback of Notre Dame",
-      "Ninety-Three",
-      "Les Misérables"
+      "Les Misérables",
+      "Ninety-Three"
      ],
      "nato": 1802,
      "morto": 1885,
@@ -1055,9 +1092,9 @@
       "Stati Uniti"
      ],
      "opere": [
+      "La corte delle streghe",
       "Le tre bare",
-      "Assassinio nell'abbazia",
-      "La corte delle streghe"
+      "Assassinio nell'abbazia"
      ],
      "nato": 1906,
      "morto": 1977,
@@ -1078,6 +1115,43 @@
      "morto": 1977,
      "nobel": null,
      "wiki": "https://en.wikipedia.org/wiki/John_Dickson_Carr"
+    }
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q845106",
+   "nome": "Mrs McGinty's Dead",
+   "it": "Fermate il boia",
+   "desc": "1952 novel by Agatha Christie",
+   "autore": "Agatha Christie",
+   "autore_qid": "Q35064",
+   "anno": 1952,
+   "anni": 75,
+   "pagine": 25,
+   "mese": 2,
+   "giorno": null,
+   "fonte_data": "wikipedia (mese)",
+   "scheda": {
+    "it": {
+     "desc": "romanzo scritto da Agatha Christie",
+     "generi": [
+      "poliziesco",
+      "giallo"
+     ],
+     "lingua": "inglese",
+     "titolo_orig": "Poirot Contra a Evidência",
+     "wiki": "https://it.wikipedia.org/wiki/Fermate_il_boia"
+    },
+    "en": {
+     "desc": "1952 novel by Agatha Christie",
+     "generi": [
+      "detective fiction",
+      "crime fiction"
+     ],
+     "lingua": "English",
+     "titolo_orig": "Poirot Contra a Evidência",
+     "wiki": "https://en.wikipedia.org/wiki/Mrs_McGinty%27s_Dead"
     }
    }
   },
@@ -1241,8 +1315,8 @@
      ],
      "opere": [
       "One Hundred Years of Solitude",
-      "Love in the Time of Cholera",
-      "The Story of a Shipwrecked Sailor"
+      "The Autumn of the Patriarch",
+      "Love in the Time of Cholera"
      ],
      "nato": 1927,
      "morto": 2014,
@@ -1443,7 +1517,7 @@
      "opere": [
       "The Years of Rice and Salt",
       "Mars trilogy",
-      "The Ministry for the Future"
+      "Three Californias Trilogy"
      ],
      "nato": 1952,
      "morto": null,
@@ -1485,8 +1559,8 @@
     "en": {
      "desc": "German writer (1927–2023)",
      "paesi": [
-      "Bavaria",
-      "West Germany"
+      "West Germany",
+      "Bavaria"
      ],
      "opere": [
       "Marriage in Philippsburg",
@@ -1666,6 +1740,113 @@
      "morto": 1967,
      "nobel": null,
      "wiki": "https://en.wikipedia.org/wiki/Marcel_Aym%C3%A9"
+    }
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q946877",
+   "nome": "What Is to Be Done?",
+   "it": "Che fare?",
+   "desc": "1902 pamphlet by Lenin that argues for a vanguard to spread Marxism since workers do not spontaneously become political by fighting economic battles, which precipitated the Bolshevik–Menshevik split",
+   "autore": "Vladimir Lenin",
+   "autore_qid": "Q1394",
+   "anno": 1902,
+   "anni": 125,
+   "pagine": 33,
+   "mese": 3,
+   "giorno": null,
+   "fonte_data": null,
+   "scheda": {
+    "it": {
+     "desc": "saggio di Lenin",
+     "generi": [
+      "saggio",
+      "giornalismo d'opinione"
+     ],
+     "lingua": "russo",
+     "titolo_orig": "Что дѣлать?",
+     "wiki": "https://it.wikipedia.org/wiki/Che_fare%3F_(Lenin)"
+    },
+    "en": {
+     "desc": "1902 pamphlet by Lenin that argues for a vanguard to spread Marxism since workers do not spontaneously become political by fighting economic battles, which precipitated the Bolshevik–Menshevik split",
+     "generi": [
+      "essay",
+      "opinion journalism"
+     ],
+     "lingua": "Russian",
+     "titolo_orig": "Что дѣлать?",
+     "wiki": "https://en.wikipedia.org/wiki/What_Is_to_Be_Done%3F"
+    }
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q1198259",
+   "nome": "The Eighteenth Brumaire of Louis Bonaparte",
+   "it": "Il 18 brumaio di Luigi Bonaparte",
+   "desc": "1852 essay by Karl Marx on the French coup of 1851",
+   "autore": "Karl Marx",
+   "autore_qid": "Q9061",
+   "anno": 1852,
+   "anni": 175,
+   "pagine": 29,
+   "mese": 3,
+   "giorno": null,
+   "fonte_data": "wikipedia (mese)",
+   "scheda": {
+    "it": {
+     "desc": "saggio di Karl Marx",
+     "generi": [
+      "saggio"
+     ],
+     "lingua": "tedesco",
+     "titolo_orig": "Der 18te Brumaire des Louis FILIPH Napoleon",
+     "wiki": "https://it.wikipedia.org/wiki/Il_18_brumaio_di_Luigi_Bonaparte"
+    },
+    "en": {
+     "desc": "1852 essay by Karl Marx on the French coup of 1851",
+     "generi": [
+      "essay"
+     ],
+     "lingua": "German",
+     "titolo_orig": "Der 18te Brumaire des Louis FILIPH Napoleon",
+     "wiki": "https://en.wikipedia.org/wiki/The_Eighteenth_Brumaire_of_Louis_Bonaparte"
+    }
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q2443779",
+   "nome": "Children of the Corn",
+   "it": "I figli del grano",
+   "desc": "short story by Stephen King",
+   "autore": "Stephen King",
+   "autore_qid": "Q39829",
+   "anno": 1977,
+   "anni": 50,
+   "pagine": 16,
+   "mese": 3,
+   "giorno": null,
+   "fonte_data": null,
+   "scheda": {
+    "it": {
+     "desc": "racconto scritto da Stephen King",
+     "generi": [
+      "orrore"
+     ],
+     "lingua": "inglese americano",
+     "titolo_orig": "Children of the Corn",
+     "wiki": "https://it.wikipedia.org/wiki/I_figli_del_grano"
+    },
+    "en": {
+     "desc": "short story by Stephen King",
+     "generi": [
+      "horror fiction"
+     ],
+     "lingua": "American English",
+     "titolo_orig": "Children of the Corn",
+     "wiki": "https://en.wikipedia.org/wiki/Children_of_the_Corn"
     }
    }
   },
@@ -1983,7 +2164,7 @@
      "desc": "romanzo scritto da Ralph Waldo Ellison",
      "generi": [
       "fantascienza",
-      "romanzo autobiografico"
+      "romanzo di formazione"
      ],
      "lingua": "inglese",
      "titolo_orig": "Invisible Man",
@@ -2250,6 +2431,78 @@
    }
   },
   {
+   "tipo": "prima edizione",
+   "qid": "Q606465",
+   "nome": "The Thorn Birds",
+   "it": "Uccelli di rovo",
+   "desc": "1977 novel by Colleen McCullough",
+   "autore": "Colleen McCullough",
+   "autore_qid": "Q228801",
+   "anno": 1977,
+   "anni": 50,
+   "pagine": 34,
+   "mese": 4,
+   "giorno": null,
+   "fonte_data": null,
+   "scheda": {
+    "it": {
+     "desc": "romanzo scritto da Colleen McCullough",
+     "generi": [
+      "fiction storica"
+     ],
+     "lingua": "inglese",
+     "titolo_orig": "The Thorn Birds",
+     "wiki": "https://it.wikipedia.org/wiki/Uccelli_di_rovo_(romanzo)"
+    },
+    "en": {
+     "desc": "1977 novel by Colleen McCullough",
+     "generi": [
+      "historical fiction"
+     ],
+     "lingua": "English",
+     "titolo_orig": "The Thorn Birds",
+     "wiki": "https://en.wikipedia.org/wiki/The_Thorn_Birds"
+    }
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q143707",
+   "nome": "The Child of the Cavern",
+   "it": "Le Indie nere",
+   "desc": "1877 novel by Jules Verne",
+   "autore": "Jules Verne",
+   "autore_qid": "Q33977",
+   "anno": 1877,
+   "anni": 150,
+   "pagine": 27,
+   "mese": 4,
+   "giorno": null,
+   "fonte_data": "wikipedia (mese)",
+   "scheda": {
+    "it": {
+     "desc": "romanzo scritto da Jules Verne",
+     "generi": [
+      "fantascienza",
+      "fiction d'avventura"
+     ],
+     "lingua": "francese",
+     "titolo_orig": "Les Indes noires",
+     "wiki": "https://it.wikipedia.org/wiki/Le_Indie_nere"
+    },
+    "en": {
+     "desc": "1877 novel by Jules Verne",
+     "generi": [
+      "science fiction",
+      "subterranean fiction"
+     ],
+     "lingua": "French",
+     "titolo_orig": "Les Indes noires",
+     "wiki": "https://en.wikipedia.org/wiki/The_Child_of_the_Cavern"
+    }
+   }
+  },
+  {
    "tipo": "nascita",
    "qid": "Q71027",
    "nome": "Karl Abraham",
@@ -2309,9 +2562,9 @@
       "Stati Uniti"
      ],
      "opere": [
+      "Tennessee's Partner",
       "The Luck of Roaring Camp",
-      "The Outcasts of Poker Flat",
-      "Tennessee's Partner"
+      "The Outcasts of Poker Flat"
      ],
      "nato": 1836,
      "morto": 1902,
@@ -2324,9 +2577,9 @@
       "United States"
      ],
      "opere": [
-      "The Idyl of Red Gulch",
-      "What the Chimney Sang",
-      "The Luck of Roaring Camp"
+      "Tennessee's Partner",
+      "The Luck of Roaring Camp",
+      "The Outcasts of Poker Flat"
      ],
      "nato": 1836,
      "morto": 1902,
@@ -2490,7 +2743,7 @@
      "desc": "German-born British-American author (1927-2013)",
      "paesi": [
       "German Reich",
-      "United Kingdom"
+      "United States"
      ],
      "opere": [],
      "nato": 1927,
@@ -2788,9 +3041,9 @@
       "United States"
      ],
      "opere": [
-      "The Public and its Problems",
       "Democracy and Education",
-      "Experience and Education"
+      "Experience and Education",
+      "The Public and its Problems"
      ],
      "nato": 1859,
      "morto": 1952,
@@ -2863,7 +3116,7 @@
      "opere": [
       "La nuova vita",
       "Cevdet Bey and His Sons",
-      "Il museo dell'innocenza"
+      "Nights of Plague"
      ],
      "nato": 1952,
      "morto": null,
@@ -2878,7 +3131,7 @@
      "opere": [
       "The New Life",
       "Cevdet Bey and His Sons",
-      "The Black Book"
+      "Nights of Plague"
      ],
      "nato": 1952,
      "morto": null,
@@ -2922,8 +3175,8 @@
       "Spain"
      ],
      "opere": [
-      "Canigó",
-      "L'Atlàntida"
+      "L'Atlàntida",
+      "Canigó"
      ],
      "nato": 1845,
      "morto": 1902,
@@ -3296,9 +3549,9 @@
       "Iran"
      ],
      "opere": [
-      "Hubut in Kavir",
-      "Guftuguhaye Tanha’i",
-      "Ba Mukhatabhaye Ashna"
+      "Fatemeh Is Fatemeh",
+      "Horr",
+      "Red Shi'ism vs. Black Shi'ism"
      ],
      "nato": 1933,
      "morto": 1977,
@@ -3329,8 +3582,8 @@
      ],
      "opere": [
       "An Equal Music",
-      "Il ragazzo giusto (romanzo)",
-      "Golden Gate (romanzo)"
+      "Golden Gate (romanzo)",
+      "Il ragazzo giusto (romanzo)"
      ],
      "nato": 1952,
      "morto": null,
@@ -3344,8 +3597,8 @@
      ],
      "opere": [
       "A Suitable Boy",
-      "An Equal Music",
-      "The Golden Gate"
+      "The Golden Gate",
+      "An Equal Music"
      ],
      "nato": 1952,
      "morto": null,
@@ -3459,7 +3712,7 @@
       "Germania"
      ],
      "opere": [
-      "Il giuoco delle perle di vetro",
+      "Il lupo della steppa",
       "Siddharta",
       "Peter Camenzind"
      ],
@@ -3475,9 +3728,9 @@
       "Germany"
      ],
      "opere": [
-      "Peter Camenzind",
       "Steppenwolf",
-      "Siddhartha"
+      "Siddhartha",
+      "Peter Camenzind"
      ],
      "nato": 1877,
      "morto": 1962,
@@ -3571,9 +3824,9 @@
       "United States"
      ],
      "opere": [
-      "The Odd Couple",
       "The Goodbye Girl",
-      "Come Blow Your Horn"
+      "The Odd Couple",
+      "Brighton Beach Memoirs"
      ],
      "nato": 1927,
      "morto": 2018,
@@ -3604,8 +3857,8 @@
      ],
      "opere": [
       "Anna Bolena, una questione di famiglia",
-      "Wolf Hall",
-      "Every Day is Mother's Day"
+      "Every Day is Mother's Day",
+      "Wolf Hall"
      ],
      "nato": 1952,
      "morto": 2022,
@@ -3619,8 +3872,8 @@
      ],
      "opere": [
       "Wolf Hall",
-      "Bring Up the Bodies",
-      "Every Day is Mother's Day"
+      "Every Day is Mother's Day",
+      "Bring Up the Bodies"
      ],
      "nato": 1952,
      "morto": 2022,
@@ -3751,41 +4004,6 @@
    }
   },
   {
-   "tipo": "prima edizione",
-   "qid": "Q2317316",
-   "nome": "Pickman's Model",
-   "it": "Il modello di Pickman",
-   "desc": "short story by H. P. Lovecraft",
-   "autore": "H. P. Lovecraft",
-   "autore_qid": "Q169566",
-   "anno": 1927,
-   "anni": 100,
-   "pagine": 18,
-   "mese": 7,
-   "giorno": 17,
-   "fonte_data": "wikipedia",
-   "scheda": {
-    "it": {
-     "desc": "racconto scritto da Howard Phillips Lovecraft",
-     "generi": [
-      "orrore"
-     ],
-     "lingua": "inglese",
-     "titolo_orig": "Pickman's Model",
-     "wiki": "https://it.wikipedia.org/wiki/Il_modello_di_Pickman"
-    },
-    "en": {
-     "desc": "short story by H. P. Lovecraft",
-     "generi": [
-      "horror fiction"
-     ],
-     "lingua": "English",
-     "titolo_orig": "Pickman's Model",
-     "wiki": "https://en.wikipedia.org/wiki/Pickman%27s_Model"
-    }
-   }
-  },
-  {
    "tipo": "nascita",
    "qid": "Q466672",
    "nome": "Simin Behbahani",
@@ -3849,7 +4067,7 @@
      "opere": [
       "I tre moschettieri",
       "Il conte di Montecristo",
-      "Il visconte di Bragelonne"
+      "Ange Pitou"
      ],
      "nato": 1802,
      "morto": 1870,
@@ -3862,9 +4080,9 @@
       "France"
      ],
      "opere": [
-      "Ange Pitou",
       "The Three Musketeers",
-      "The Count of Monte Cristo"
+      "The Count of Monte Cristo",
+      "Ange Pitou"
      ],
      "nato": 1802,
      "morto": 1870,
@@ -3896,7 +4114,7 @@
      "opere": [
       "Il naso (racconto di Akutagawa)",
       "Spinning Gears",
-      "Rashōmon"
+      "La scena dell'inferno"
      ],
      "nato": 1892,
      "morto": 1927,
@@ -3911,7 +4129,7 @@
      "opere": [
       "The Nose",
       "Spinning Gears",
-      "Hell Screen"
+      "Rashōmon"
      ],
      "nato": 1892,
      "morto": 1927,
@@ -4022,8 +4240,8 @@
     "it": {
      "desc": "filosofo ed epistemologo austriaco naturalizzato britannico (1902-1994)",
      "paesi": [
-      "Cisleitania",
-      "Regno Unito di Gran Bretagna e Irlanda"
+      "Regno Unito di Gran Bretagna e Irlanda",
+      "Cisleitania"
      ],
      "opere": [
       "Unended Quest",
@@ -4038,8 +4256,8 @@
     "en": {
      "desc": "Austrian-British philosopher of science and social and política e falsificationism and for criticism of Plato, Hegel and Marx as totalitarian opponents of open society (1902-1994)",
      "paesi": [
-      "United Kingdom of Great Britain and Ireland",
-      "Cisleithania"
+      "Cisleithania",
+      "United Kingdom of Great Britain and Ireland"
      ],
      "opere": [
       "Unended Quest",
@@ -4074,9 +4292,9 @@
       "Stati Uniti"
      ],
      "opere": [
-      "A Wave",
       "Chinese Whispers",
-      "Flow Chart"
+      "Flow Chart",
+      "Girls on the Run"
      ],
      "nato": 1927,
      "morto": 2017,
@@ -4089,9 +4307,9 @@
       "United States"
      ],
      "opere": [
-      "A Wave",
-      "The Tennis Court Oath",
-      "Where Shall I Wander"
+      "Chinese Whispers",
+      "Flow Chart",
+      "Girls on the Run"
      ],
      "nato": 1927,
      "morto": 2017,
@@ -4121,8 +4339,8 @@
       "Regno dei Paesi Bassi"
      ],
      "opere": [
-      "L'attentato",
       "La scoperta del cielo",
+      "L'attentato",
       "The Stone Bridal Bed"
      ],
      "nato": 1927,
@@ -4294,13 +4512,13 @@
     "it": {
      "desc": "poeta, incisore, filosofo e pittore inglese",
      "paesi": [
-      "Regno Unito di Gran Bretagna e Irlanda",
-      "Regno di Gran Bretagna"
+      "Regno di Gran Bretagna",
+      "Regno Unito di Gran Bretagna e Irlanda"
      ],
      "opere": [
       "Jerusalem The Emanation of the Giant Albion",
       "Milton",
-      "Jerusalem"
+      "Vala, or The Four Zoas"
      ],
      "nato": 1757,
      "morto": 1827,
@@ -4314,9 +4532,9 @@
       "Kingdom of Great Britain"
      ],
      "opere": [
-      "Vala, or The Four Zoas",
       "Jerusalem The Emanation of the Giant Albion",
-      "Milton"
+      "Milton",
+      "Vala, or The Four Zoas"
      ],
      "nato": 1757,
      "morto": 1827,
@@ -4751,7 +4969,7 @@
      "opere": [
       "Crash Course",
       "Let It Snow",
-      "Colpa delle stelle"
+      "Tartarughe all'infinito"
      ],
      "nato": 1977,
      "morto": null,
@@ -4811,9 +5029,9 @@
       "France"
      ],
      "opere": [
-      "L'Étape",
-      "The noon demon",
-      "Un Divorce"
+      "Au bord de la mer",
+      "Cruelle énigme",
+      "L'Étape"
      ],
      "nato": 1852,
      "morto": 1935,
@@ -4966,8 +5184,8 @@
       "Repubblica di Venezia"
      ],
      "opere": [
-      "Ultime lettere di Jacopo Ortis",
       "Dei sepolcri",
+      "Ultime lettere di Jacopo Ortis",
       "Discorso sul testo della Divina Commedia"
      ],
      "nato": 1778,
@@ -4981,8 +5199,8 @@
       "Republic of Venice"
      ],
      "opere": [
-      "The Last Letters of Jacopo Ortis",
-      "Dei Sepolcri"
+      "Dei Sepolcri",
+      "The Last Letters of Jacopo Ortis"
      ],
      "nato": 1778,
      "morto": 1827,
@@ -5095,8 +5313,8 @@
     "it": {
      "desc": "romanzo scritto da Stephen King",
      "generi": [
-      "romanzo thriller",
-      "thriller psicologico"
+      "thriller psicologico",
+      "romanzo thriller"
      ],
      "lingua": "inglese",
      "titolo_orig": "Rage",
@@ -5581,8 +5799,8 @@
      ],
      "opere": [
       "I Rougon-Macquart",
-      "J'accuse",
-      "Teresa Raquin"
+      "Teresa Raquin",
+      "J'accuse"
      ],
      "nato": 1840,
      "morto": 1902,
@@ -5648,6 +5866,78 @@
      "morto": 1827,
      "nobel": null,
      "wiki": "https://en.wikipedia.org/wiki/Wilhelm_M%C3%BCller"
+    }
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q1210939",
+   "nome": "The Monkey's Paw",
+   "it": "La zampa di scimmia",
+   "desc": "short story by W. W. Jacobs",
+   "autore": "W. W. Jacobs",
+   "autore_qid": "Q1385758",
+   "anno": 1902,
+   "anni": 125,
+   "pagine": 26,
+   "mese": 9,
+   "giorno": null,
+   "fonte_data": null,
+   "scheda": {
+    "it": {
+     "desc": "racconto horror scritto da William Wymark Jacobs",
+     "generi": [
+      "orrore"
+     ],
+     "lingua": "inglese",
+     "titolo_orig": "The Monkey's Paw",
+     "wiki": "https://it.wikipedia.org/wiki/La_zampa_di_scimmia"
+    },
+    "en": {
+     "desc": "short story by W. W. Jacobs",
+     "generi": [
+      "horror fiction"
+     ],
+     "lingua": "English",
+     "titolo_orig": "The Monkey's Paw",
+     "wiki": "https://en.wikipedia.org/wiki/The_Monkey%27s_Paw"
+    }
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q1212384",
+   "nome": "The Colour Out of Space",
+   "it": "Il colore venuto dallo spazio",
+   "desc": "short story written by American horror author H. P. Lovecraft",
+   "autore": "H. P. Lovecraft",
+   "autore_qid": "Q169566",
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 23,
+   "mese": 9,
+   "giorno": null,
+   "fonte_data": null,
+   "scheda": {
+    "it": {
+     "desc": "racconto scritto da Howard Phillips Lovecraft",
+     "generi": [
+      "fantascienza",
+      "Weird"
+     ],
+     "lingua": "inglese",
+     "titolo_orig": "The Colour Out of Space",
+     "wiki": "https://it.wikipedia.org/wiki/Il_colore_venuto_dallo_spazio"
+    },
+    "en": {
+     "desc": "short story written by American horror author H. P. Lovecraft",
+     "generi": [
+      "science fiction",
+      "weird fiction"
+     ],
+     "lingua": "English",
+     "titolo_orig": "The Colour Out of Space",
+     "wiki": "https://en.wikipedia.org/wiki/The_Colour_Out_of_Space"
     }
    }
   },
@@ -5794,8 +6084,8 @@
       "Germania"
      ],
      "opere": [
-      "The Rat",
       "Il richiamo dell'ululone",
+      "Last dances",
       "Anni di cani"
      ],
      "nato": 1927,
@@ -5811,8 +6101,8 @@
      ],
      "opere": [
       "The Call of the Toad",
-      "Dog Years",
-      "Last dances"
+      "Last dances",
+      "Dog Years"
      ],
      "nato": 1927,
      "morto": 2015,
@@ -5917,8 +6207,8 @@
     "it": {
      "desc": "filosofo e storico polacco",
      "paesi": [
-      "Seconda Repubblica di Polonia",
-      "Repubblica Popolare di Polonia"
+      "Repubblica Popolare di Polonia",
+      "Germania nazista"
      ],
      "opere": [
       "Is God Happy?"
@@ -5931,8 +6221,8 @@
     "en": {
      "desc": "Philosopher, historian of ideas (1927–2009)",
      "paesi": [
-      "Second Polish Republic",
-      "Polish People's Republic"
+      "Nazi Germany",
+      "Second Polish Republic"
      ],
      "opere": [
       "Is God Happy?"
@@ -6119,6 +6409,76 @@
    }
   },
   {
+   "tipo": "prima edizione",
+   "qid": "Q580463",
+   "nome": "The Tale of Peter Rabbit",
+   "it": "La storia di Peter Coniglio",
+   "desc": "book by Beatrix Potter",
+   "autore": "Beatrix Potter",
+   "autore_qid": "Q214565",
+   "anno": 1902,
+   "anni": 125,
+   "pagine": 31,
+   "mese": 10,
+   "giorno": null,
+   "fonte_data": null,
+   "scheda": {
+    "it": {
+     "desc": "racconto di Beatrix Potter",
+     "generi": [
+      "letteratura per ragazzi"
+     ],
+     "lingua": "inglese",
+     "titolo_orig": "The Tale of Peter Rabbit",
+     "wiki": "https://it.wikipedia.org/wiki/La_storia_di_Peter_Coniglio"
+    },
+    "en": {
+     "desc": "book by Beatrix Potter",
+     "generi": [
+      "children's literature"
+     ],
+     "lingua": "English",
+     "titolo_orig": "The Tale of Peter Rabbit",
+     "wiki": "https://en.wikipedia.org/wiki/The_Tale_of_Peter_Rabbit"
+    }
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q2317316",
+   "nome": "Pickman's Model",
+   "it": "Il modello di Pickman",
+   "desc": "short story by H. P. Lovecraft",
+   "autore": "H. P. Lovecraft",
+   "autore_qid": "Q169566",
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 18,
+   "mese": 10,
+   "giorno": null,
+   "fonte_data": null,
+   "scheda": {
+    "it": {
+     "desc": "racconto scritto da Howard Phillips Lovecraft",
+     "generi": [
+      "orrore"
+     ],
+     "lingua": "inglese",
+     "titolo_orig": "Pickman's Model",
+     "wiki": "https://it.wikipedia.org/wiki/Il_modello_di_Pickman"
+    },
+    "en": {
+     "desc": "short story by H. P. Lovecraft",
+     "generi": [
+      "horror fiction"
+     ],
+     "lingua": "English",
+     "titolo_orig": "Pickman's Model",
+     "wiki": "https://en.wikipedia.org/wiki/Pickman%27s_Model"
+    }
+   }
+  },
+  {
    "tipo": "nascita",
    "qid": "Q381734",
    "nome": "Nordahl Grieg",
@@ -6268,8 +6628,8 @@
       "Regno Unito di Gran Bretagna e Irlanda"
      ],
      "opere": [
-      "La terra dell'eterna notte",
-      "La casa sull'abisso"
+      "La casa sull'abisso",
+      "La terra dell'eterna notte"
      ],
      "nato": 1877,
      "morto": 1918,
@@ -6451,9 +6811,9 @@
       "Poland"
      ],
      "opere": [
+      "Homo sapiens",
       "Confiteor",
-      "Snow",
-      "Homo sapiens"
+      "Snow"
      ],
      "nato": 1868,
      "morto": 1927,
@@ -6597,9 +6957,9 @@
       "Repubblica Socialista Federale di Jugoslavia"
      ],
      "opere": [
-      "Migrations",
       "The Journal of Carnojevic",
-      "A Novel about London"
+      "A Novel about London",
+      "Migrations"
      ],
      "nato": 1893,
      "morto": 1977,
@@ -6656,8 +7016,8 @@
     "en": {
      "desc": "Russian writer (1863–1927)",
      "paesi": [
-      "Soviet Union",
-      "Russian Empire"
+      "Russian Empire",
+      "Soviet Union"
      ],
      "opere": [
       "The Petty Demon"
@@ -6730,8 +7090,8 @@
     "it": {
      "desc": "linguista, orientalista e archeologo ceco (1879-1952)",
      "paesi": [
-      "Austria-Ungheria",
-      "Cecoslovacchia"
+      "Cecoslovacchia",
+      "Austria-Ungheria"
      ],
      "opere": [],
      "nato": 1879,
@@ -6771,8 +7131,8 @@
     "it": {
      "desc": "psichiatra e neurologo tedesco",
      "paesi": [
-      "Austria-Ungheria",
-      "Granducato di Baden"
+      "Granducato di Baden",
+      "Austria-Ungheria"
      ],
      "opere": [
       "Psychopathia sexualis",
@@ -6896,8 +7256,8 @@
     "it": {
      "desc": "medico russo",
      "paesi": [
-      "Impero russo",
-      "Unione Sovietica"
+      "Unione Sovietica",
+      "Repubblica Socialista Federativa Sovietica Russa"
      ],
      "opere": [
       "Kollektivnaya refleksologiya"
@@ -7069,8 +7429,8 @@
      ],
      "opere": [
       "Enochian",
-      "Monas Hieroglyphica",
-      "Enochian magic"
+      "Enochian magic",
+      "Monas Hieroglyphica"
      ],
      "nato": 1527,
      "morto": 1609,
@@ -7171,8 +7531,8 @@
     "it": {
      "desc": "drammaturgo e scrittore romeno",
      "paesi": [
-      "Principato di Valacchia",
-      "Regno di Romania"
+      "Principato di Romania",
+      "Principato di Valacchia"
      ],
      "opere": [],
      "nato": 1852,
@@ -7270,41 +7630,6 @@
    }
   },
   {
-   "tipo": "prima edizione",
-   "qid": "Q606465",
-   "nome": "The Thorn Birds",
-   "it": "Uccelli di rovo",
-   "desc": "1977 novel by Colleen McCullough",
-   "autore": "Colleen McCullough",
-   "autore_qid": "Q228801",
-   "anno": 1977,
-   "anni": 50,
-   "pagine": 34,
-   "mese": null,
-   "giorno": null,
-   "fonte_data": null,
-   "scheda": {
-    "it": {
-     "desc": "romanzo scritto da Colleen McCullough",
-     "generi": [
-      "fiction storica"
-     ],
-     "lingua": "inglese",
-     "titolo_orig": "The Thorn Birds",
-     "wiki": "https://it.wikipedia.org/wiki/Uccelli_di_rovo_(romanzo)"
-    },
-    "en": {
-     "desc": "1977 novel by Colleen McCullough",
-     "generi": [
-      "historical fiction"
-     ],
-     "lingua": "English",
-     "titolo_orig": "The Thorn Birds",
-     "wiki": "https://en.wikipedia.org/wiki/The_Thorn_Birds"
-    }
-   }
-  },
-  {
    "tipo": "morte",
    "qid": "Q344865",
    "nome": "Thomas Middleton",
@@ -7370,9 +7695,9 @@
       "Spagna"
      ],
      "opere": [
-      "A Thousand Morons",
       "Uf, va dir ell",
-      "The Enormity of the Tragedy"
+      "The Enormity of the Tragedy",
+      "Why, Why, Why?"
      ],
      "nato": 1952,
      "morto": null,
@@ -7429,43 +7754,6 @@
   },
   {
    "tipo": "prima edizione",
-   "qid": "Q946877",
-   "nome": "What Is to Be Done?",
-   "it": "Che fare?",
-   "desc": "1902 pamphlet by Lenin that argues for a vanguard to spread Marxism since workers do not spontaneously become political by fighting economic battles, which precipitated the Bolshevik–Menshevik split",
-   "autore": "Vladimir Lenin",
-   "autore_qid": "Q1394",
-   "anno": 1902,
-   "anni": 125,
-   "pagine": 33,
-   "mese": null,
-   "giorno": null,
-   "fonte_data": null,
-   "scheda": {
-    "it": {
-     "desc": "saggio di Lenin",
-     "generi": [
-      "saggio",
-      "giornalismo d'opinione"
-     ],
-     "lingua": "russo",
-     "titolo_orig": "Что дѣлать?",
-     "wiki": "https://it.wikipedia.org/wiki/Che_fare%3F_(Lenin)"
-    },
-    "en": {
-     "desc": "1902 pamphlet by Lenin that argues for a vanguard to spread Marxism since workers do not spontaneously become political by fighting economic battles, which precipitated the Bolshevik–Menshevik split",
-     "generi": [
-      "essay",
-      "opinion journalism"
-     ],
-     "lingua": "Russian",
-     "titolo_orig": "Что дѣлать?",
-     "wiki": "https://en.wikipedia.org/wiki/What_Is_to_Be_Done%3F"
-    }
-   }
-  },
-  {
-   "tipo": "prima edizione",
    "qid": "Q1233830",
    "nome": "New Atlantis",
    "it": "La nuova Atlantide",
@@ -7485,7 +7773,7 @@
       "fantascienza",
       "fantasy"
      ],
-     "lingua": "inglese della prima età moderna",
+     "lingua": "nuovo latino",
      "titolo_orig": "Nova Atlantis",
      "wiki": "https://it.wikipedia.org/wiki/La_nuova_Atlantide"
     },
@@ -7495,7 +7783,7 @@
       "science fiction",
       "fantasy"
      ],
-     "lingua": "Early Modern English",
+     "lingua": "Neo-Latin",
      "titolo_orig": "Nova Atlantis",
      "wiki": "https://en.wikipedia.org/wiki/New_Atlantis"
     }
@@ -7618,41 +7906,6 @@
   },
   {
    "tipo": "prima edizione",
-   "qid": "Q580463",
-   "nome": "The Tale of Peter Rabbit",
-   "it": "La storia di Peter Coniglio",
-   "desc": "book by Beatrix Potter",
-   "autore": "Beatrix Potter",
-   "autore_qid": "Q214565",
-   "anno": 1902,
-   "anni": 125,
-   "pagine": 31,
-   "mese": null,
-   "giorno": null,
-   "fonte_data": null,
-   "scheda": {
-    "it": {
-     "desc": "racconto di Beatrix Potter",
-     "generi": [
-      "letteratura per ragazzi"
-     ],
-     "lingua": "inglese",
-     "titolo_orig": "The Tale of Peter Rabbit",
-     "wiki": "https://it.wikipedia.org/wiki/La_storia_di_Peter_Coniglio"
-    },
-    "en": {
-     "desc": "book by Beatrix Potter",
-     "generi": [
-      "children's literature"
-     ],
-     "lingua": "English",
-     "titolo_orig": "The Tale of Peter Rabbit",
-     "wiki": "https://en.wikipedia.org/wiki/The_Tale_of_Peter_Rabbit"
-    }
-   }
-  },
-  {
-   "tipo": "prima edizione",
    "qid": "Q574630",
    "nome": "Anti-Dühring",
    "it": "Anti-Dühring",
@@ -7754,41 +8007,6 @@
   },
   {
    "tipo": "prima edizione",
-   "qid": "Q1198259",
-   "nome": "The Eighteenth Brumaire of Louis Bonaparte",
-   "it": "Il 18 brumaio di Luigi Bonaparte",
-   "desc": "1852 essay by Karl Marx on the French coup of 1851",
-   "autore": "Karl Marx",
-   "autore_qid": "Q9061",
-   "anno": 1852,
-   "anni": 175,
-   "pagine": 29,
-   "mese": null,
-   "giorno": null,
-   "fonte_data": null,
-   "scheda": {
-    "it": {
-     "desc": "saggio di Karl Marx",
-     "generi": [
-      "saggio"
-     ],
-     "lingua": "tedesco",
-     "titolo_orig": "Der 18te Brumaire des Louis FILIPH Napoleon",
-     "wiki": "https://it.wikipedia.org/wiki/Il_18_brumaio_di_Luigi_Bonaparte"
-    },
-    "en": {
-     "desc": "1852 essay by Karl Marx on the French coup of 1851",
-     "generi": [
-      "essay"
-     ],
-     "lingua": "German",
-     "titolo_orig": "Der 18te Brumaire des Louis FILIPH Napoleon",
-     "wiki": "https://en.wikipedia.org/wiki/The_Eighteenth_Brumaire_of_Louis_Bonaparte"
-    }
-   }
-  },
-  {
-   "tipo": "prima edizione",
    "qid": "Q568210",
    "nome": "They Do It with Mirrors",
    "it": "Miss Marple: giochi di prestigio",
@@ -7826,78 +8044,6 @@
   },
   {
    "tipo": "prima edizione",
-   "qid": "Q143707",
-   "nome": "The Child of the Cavern",
-   "it": "Le Indie nere",
-   "desc": "1877 novel by Jules Verne",
-   "autore": "Jules Verne",
-   "autore_qid": "Q33977",
-   "anno": 1877,
-   "anni": 150,
-   "pagine": 27,
-   "mese": null,
-   "giorno": null,
-   "fonte_data": null,
-   "scheda": {
-    "it": {
-     "desc": "romanzo scritto da Jules Verne",
-     "generi": [
-      "fantascienza",
-      "fiction d'avventura"
-     ],
-     "lingua": "francese",
-     "titolo_orig": "Les Indes noires",
-     "wiki": "https://it.wikipedia.org/wiki/Le_Indie_nere"
-    },
-    "en": {
-     "desc": "1877 novel by Jules Verne",
-     "generi": [
-      "science fiction",
-      "subterranean fiction"
-     ],
-     "lingua": "French",
-     "titolo_orig": "Les Indes noires",
-     "wiki": "https://en.wikipedia.org/wiki/The_Child_of_the_Cavern"
-    }
-   }
-  },
-  {
-   "tipo": "prima edizione",
-   "qid": "Q1210939",
-   "nome": "The Monkey's Paw",
-   "it": "La zampa di scimmia",
-   "desc": "short story by W. W. Jacobs",
-   "autore": "W. W. Jacobs",
-   "autore_qid": "Q1385758",
-   "anno": 1902,
-   "anni": 125,
-   "pagine": 26,
-   "mese": null,
-   "giorno": null,
-   "fonte_data": null,
-   "scheda": {
-    "it": {
-     "desc": "racconto horror scritto da William Wymark Jacobs",
-     "generi": [
-      "orrore"
-     ],
-     "lingua": "inglese",
-     "titolo_orig": "The Monkey's Paw",
-     "wiki": "https://it.wikipedia.org/wiki/La_zampa_di_scimmia"
-    },
-    "en": {
-     "desc": "short story by W. W. Jacobs",
-     "generi": [
-      "horror fiction"
-     ],
-     "lingua": "English",
-     "titolo_orig": "The Monkey's Paw",
-     "wiki": "https://en.wikipedia.org/wiki/The_Monkey%27s_Paw"
-    }
-   }
-  },
-  {
-   "tipo": "prima edizione",
    "qid": "Q971152",
    "nome": "The Dream of a Ridiculous Man",
    "it": "Il sogno di un uomo ridicolo",
@@ -7924,43 +8070,6 @@
      "lingua": "Russian",
      "titolo_orig": null,
      "wiki": "https://en.wikipedia.org/wiki/The_Dream_of_a_Ridiculous_Man"
-    }
-   }
-  },
-  {
-   "tipo": "prima edizione",
-   "qid": "Q845106",
-   "nome": "Mrs McGinty's Dead",
-   "it": "Fermate il boia",
-   "desc": "1952 novel by Agatha Christie",
-   "autore": "Agatha Christie",
-   "autore_qid": "Q35064",
-   "anno": 1952,
-   "anni": 75,
-   "pagine": 25,
-   "mese": null,
-   "giorno": null,
-   "fonte_data": null,
-   "scheda": {
-    "it": {
-     "desc": "romanzo scritto da Agatha Christie",
-     "generi": [
-      "poliziesco",
-      "giallo"
-     ],
-     "lingua": "inglese",
-     "titolo_orig": "Poirot Contra a Evidência",
-     "wiki": "https://it.wikipedia.org/wiki/Fermate_il_boia"
-    },
-    "en": {
-     "desc": "1952 novel by Agatha Christie",
-     "generi": [
-      "detective fiction",
-      "crime fiction"
-     ],
-     "lingua": "English",
-     "titolo_orig": "Poirot Contra a Evidência",
-     "wiki": "https://en.wikipedia.org/wiki/Mrs_McGinty%27s_Dead"
     }
    }
   },
@@ -8067,43 +8176,6 @@
   },
   {
    "tipo": "prima edizione",
-   "qid": "Q1212384",
-   "nome": "The Colour Out of Space",
-   "it": "Il colore venuto dallo spazio",
-   "desc": "short story written by American horror author H. P. Lovecraft",
-   "autore": "H. P. Lovecraft",
-   "autore_qid": "Q169566",
-   "anno": 1927,
-   "anni": 100,
-   "pagine": 23,
-   "mese": null,
-   "giorno": null,
-   "fonte_data": null,
-   "scheda": {
-    "it": {
-     "desc": "racconto scritto da Howard Phillips Lovecraft",
-     "generi": [
-      "fantascienza",
-      "orrore"
-     ],
-     "lingua": "inglese",
-     "titolo_orig": "The Colour Out of Space",
-     "wiki": "https://it.wikipedia.org/wiki/Il_colore_venuto_dallo_spazio"
-    },
-    "en": {
-     "desc": "short story written by American horror author H. P. Lovecraft",
-     "generi": [
-      "science fiction",
-      "weird fiction"
-     ],
-     "lingua": "English",
-     "titolo_orig": "The Colour Out of Space",
-     "wiki": "https://en.wikipedia.org/wiki/The_Colour_Out_of_Space"
-    }
-   }
-  },
-  {
-   "tipo": "prima edizione",
    "qid": "Q443071",
    "nome": "The Old New Land",
    "it": "Altneuland",
@@ -8166,43 +8238,6 @@
   },
   {
    "tipo": "prima edizione",
-   "qid": "Q1198489",
-   "nome": "A Scanner Darkly",
-   "it": "Un oscuro scrutare",
-   "desc": "1977 novel by Philip K. Dick",
-   "autore": "Philip K. Dick",
-   "autore_qid": "Q171091",
-   "anno": 1977,
-   "anni": 50,
-   "pagine": 20,
-   "mese": null,
-   "giorno": null,
-   "fonte_data": null,
-   "scheda": {
-    "it": {
-     "desc": "romanzo scritto da Philip K. Dick",
-     "generi": [
-      "fantascienza",
-      "fiction filosofica"
-     ],
-     "lingua": "inglese americano",
-     "titolo_orig": "A Scanner Darkly",
-     "wiki": "https://it.wikipedia.org/wiki/Un_oscuro_scrutare"
-    },
-    "en": {
-     "desc": "1977 novel by Philip K. Dick",
-     "generi": [
-      "science fiction",
-      "psychological fiction"
-     ],
-     "lingua": "American English",
-     "titolo_orig": "A Scanner Darkly",
-     "wiki": "https://en.wikipedia.org/wiki/A_Scanner_Darkly"
-    }
-   }
-  },
-  {
-   "tipo": "prima edizione",
    "qid": "Q1211785",
    "nome": "The Bridge over the River Kwai",
    "it": "Il ponte sul fiume Kwai",
@@ -8256,7 +8291,7 @@
      "desc": "romanzo scritto da Jules Verne",
      "generi": [
       "letteratura di viaggio",
-      "giallo"
+      "narrativa marinaresca"
      ],
      "lingua": "francese",
      "titolo_orig": "Les Frères Kip",
@@ -8337,8 +8372,8 @@
     "en": {
      "desc": "1927 non-fiction work by Sigmund Freud",
      "generi": [
-      "religious studies",
-      "non-fiction literature"
+      "non-fiction literature",
+      "religious studies"
      ],
      "lingua": "German",
      "titolo_orig": "Die Zukunft einer Illusion",
@@ -8554,41 +8589,6 @@
   },
   {
    "tipo": "prima edizione",
-   "qid": "Q2443779",
-   "nome": "Children of the Corn",
-   "it": "I figli del grano",
-   "desc": "short story by Stephen King",
-   "autore": "Stephen King",
-   "autore_qid": "Q39829",
-   "anno": 1977,
-   "anni": 50,
-   "pagine": 16,
-   "mese": null,
-   "giorno": null,
-   "fonte_data": null,
-   "scheda": {
-    "it": {
-     "desc": "racconto scritto da Stephen King",
-     "generi": [
-      "orrore"
-     ],
-     "lingua": "inglese americano",
-     "titolo_orig": "Children of the Corn",
-     "wiki": "https://it.wikipedia.org/wiki/I_figli_del_grano"
-    },
-    "en": {
-     "desc": "short story by Stephen King",
-     "generi": [
-      "horror fiction"
-     ],
-     "lingua": "American English",
-     "titolo_orig": "Children of the Corn",
-     "wiki": "https://en.wikipedia.org/wiki/Children_of_the_Corn"
-    }
-   }
-  },
-  {
-   "tipo": "prima edizione",
    "qid": "Q1388516",
    "nome": "Twenty-Four Hours in the Life of a Woman",
    "it": null,
@@ -8712,8 +8712,8 @@
     "en": {
      "desc": "1977 essay by Carl Sagan",
      "generi": [
-      "non-fiction",
-      "essay"
+      "essay",
+      "non-fiction"
      ],
      "lingua": "American English",
      "titolo_orig": "The Dragons of Eden",
