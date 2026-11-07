@@ -237,6 +237,54 @@ def controlla_date_opere(voci):
     print("controllo date (opere e persone):", conta, file=sys.stderr)
 
 
+def schede_voci(voci):
+    """Informazioni per le schede (italiano e inglese): descrizione breve, paese, anni di vita, opere
+    principali, Nobel per la letteratura, genere e lingua originale delle opere, link a Wikipedia."""
+    persone = [v["qid"] for v in voci if v["tipo"] != "prima edizione"]
+    opere = [v["qid"] for v in voci if v["tipo"] == "prima edizione"]
+    out = {}
+
+    def lista(x, k):
+        return [t for t in (g(x, k) or "").split("|") if t]
+
+    for lang in ("it", "en"):
+        sito = "https://%s.wikipedia.org/" % lang
+        for i in range(0, len(persone), 40):
+            gruppo = " ".join("wd:" + q for q in persone[i:i + 40])
+            r = sparql(f'''SELECT ?p (SAMPLE(?di) AS ?desc) (GROUP_CONCAT(DISTINCT ?paese; separator="|") AS ?paesi)
+ (GROUP_CONCAT(DISTINCT ?opera; separator="|") AS ?opere) (MIN(YEAR(?bd)) AS ?nato) (MIN(YEAR(?dd)) AS ?morto)
+ (MIN(?ny) AS ?nobel) (SAMPLE(?w) AS ?wiki) WHERE {{ VALUES ?p {{ {gruppo} }}
+ OPTIONAL {{ ?p schema:description ?di FILTER(LANG(?di)="{lang}") }}
+ OPTIONAL {{ ?p wdt:P27 ?c. ?c rdfs:label ?paese FILTER(LANG(?paese)="{lang}") }}
+ OPTIONAL {{ ?p wdt:P800 ?o. OPTIONAL {{ ?o rdfs:label ?ol FILTER(LANG(?ol)="{lang}") }} OPTIONAL {{ ?o rdfs:label ?oe FILTER(LANG(?oe)="en") }} BIND(COALESCE(?ol, ?oe) AS ?opera) }}
+ OPTIONAL {{ ?p wdt:P569 ?bd }} OPTIONAL {{ ?p wdt:P570 ?dd }}
+ OPTIONAL {{ ?p p:P166 ?st. ?st ps:P166 wd:Q37922. OPTIONAL {{ ?st pq:P585 ?nd. BIND(YEAR(?nd) AS ?ny) }} }}
+ OPTIONAL {{ ?w schema:about ?p; schema:isPartOf <{sito}> }}
+ }} GROUP BY ?p''') or []
+            for x in r:
+                d = out.setdefault(qid(g(x, "p")), {}).setdefault(lang, {})
+                d.update({"desc": g(x, "desc"), "paesi": lista(x, "paesi")[:2], "opere": lista(x, "opere")[:3],
+                          "nato": int(g(x, "nato")) if g(x, "nato") else None, "morto": int(g(x, "morto")) if g(x, "morto") else None,
+                          "nobel": int(g(x, "nobel")) if g(x, "nobel") else None, "wiki": g(x, "wiki")})
+            time.sleep(1)
+        for i in range(0, len(opere), 40):
+            gruppo = " ".join("wd:" + q for q in opere[i:i + 40])
+            r = sparql(f'''SELECT ?p (SAMPLE(?di) AS ?desc) (GROUP_CONCAT(DISTINCT ?gen; separator="|") AS ?generi)
+ (SAMPLE(?lin) AS ?lingua) (SAMPLE(?tit) AS ?titolo) (SAMPLE(?w) AS ?wiki) WHERE {{ VALUES ?p {{ {gruppo} }}
+ OPTIONAL {{ ?p schema:description ?di FILTER(LANG(?di)="{lang}") }}
+ OPTIONAL {{ ?p wdt:P136 ?g. ?g rdfs:label ?gen FILTER(LANG(?gen)="{lang}") }}
+ OPTIONAL {{ ?p wdt:P407 ?l. ?l rdfs:label ?lin FILTER(LANG(?lin)="{lang}") }}
+ OPTIONAL {{ ?p wdt:P1476 ?tit }}
+ OPTIONAL {{ ?w schema:about ?p; schema:isPartOf <{sito}> }}
+ }} GROUP BY ?p''') or []
+            for x in r:
+                d = out.setdefault(qid(g(x, "p")), {}).setdefault(lang, {})
+                d.update({"desc": g(x, "desc"), "generi": lista(x, "generi")[:2], "lingua": g(x, "lingua"),
+                          "titolo_orig": g(x, "titolo"), "wiki": g(x, "wiki")})
+            time.sleep(1)
+    return out
+
+
 def sbn_autori(voci):
     """Edizioni italiane dell'autore (SBN): per le persone, e per l'autore delle opere."""
     import sbn
@@ -308,14 +356,14 @@ def main():
     except Exception as e:
         print('Controllo date non riuscito:', e, file=sys.stderr)
     try:
-        sbn_dati = sbn_autori(uniche)
+        sch = schede_voci(uniche)
     except Exception as e:
-        print("SBN non disponibile:", e, file=sys.stderr)
-        sbn_dati = {}
-    vecchio_sbn = {(v["tipo"], v["qid"]): v.get("sbn") for v in vecchio["voci"]}
+        print("Schede non riuscite:", e, file=sys.stderr)
+        sch = {}
+    vecchio_sch = {(v["tipo"], v["qid"]): v.get("scheda") for v in vecchio["voci"]}
     for v in uniche:
-        q = v["qid"] if v["tipo"] != "prima edizione" else v.get("autore_qid")
-        v["sbn"] = sbn_dati.get(q) or vecchio_sbn.get((v["tipo"], v["qid"]))
+        v["scheda"] = sch.get(v["qid"]) or vecchio_sch.get((v["tipo"], v["qid"]))
+        v.pop("sbn", None)
     corr = DATA / "anniversari_correzioni.json"
     if corr.exists():
         for k, c in json.loads(corr.read_text(encoding="utf-8")).get("voci", {}).items():
@@ -323,7 +371,7 @@ def main():
                 if f'{v["tipo"]}:{v["qid"]}' == k:
                     v["mese"], v["giorno"], v["fonte_data"] = c["mese"], c["giorno"], "verifica: " + c["fonte"]
     uniche.sort(key=lambda v: ((v["mese"] or 13), (v["giorno"] or 0), -v["pagine"]))
-    out = {"anno": ANNO, "generato": dt.date.today().isoformat(), "fonti": ["Wikidata", "SBN"], "voci": uniche}
+    out = {"anno": ANNO, "generato": dt.date.today().isoformat(), "fonti": ["Wikidata", "Wikipedia"], "voci": uniche}
     file.write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"{len(uniche)} voci; escluse per altre occupazioni: {len(esclusi)}")
 
