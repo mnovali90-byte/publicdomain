@@ -173,12 +173,15 @@ def json_url(u):
     return None
 
 
-def data_da_infobox(testo, anno):
+def data_da_infobox(testo, anno, campi="released|release_date|published|pub_date|publication_date|first_published|date"):
     """Cerca nell'infobox la data di pubblicazione con giorno. Restituisce (mese, giorno) o None.
     Se l'infobox indica più date diverse nell'anno atteso, non si decide (None)."""
     trovate = set()
-    for riga in re.findall(r"\|\s*(?:released|release_date|published|pub_date|publication_date|first_published|date)\s*=([^\n]*(?:\n(?!\s*\|)[^\n]*)*)", testo, re.I):
+    for riga in re.findall(r"\|\s*(?:" + campi + r")\s*=([^\n]*(?:\n(?!\s*\|)[^\n]*)*)", testo, re.I):
         for m in re.finditer(r"\{\{\s*(?:start|release|publication)[ _]date[^|}]*\|(?:df=\w+\|)?(\d{4})\|(\d{1,2})\|(\d{1,2})", riga, re.I):
+            if int(m[1]) == anno:
+                trovate.add((int(m[2]), int(m[3])))
+        for m in re.finditer(r"\{\{\s*(?:birth|death)[ _-]date(?:[ _]and[ _]age)?\s*\|(?:[a-z]+=\w+\|)*(\d{4})\|(\d{1,2})\|(\d{1,2})", riga, re.I):
             if int(m[1]) == anno:
                 trovate.add((int(m[2]), int(m[3])))
         for m in re.finditer(r"(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})", riga):
@@ -192,7 +195,7 @@ def data_da_infobox(testo, anno):
 
 def controlla_date_opere(voci):
     """Controllo incrociato Wikidata - Wikipedia (infobox inglese) per le date delle prime edizioni."""
-    opere = [v for v in voci if v["tipo"] == "prima edizione"]
+    opere = list(voci)   # opere e persone
     titoli = {}
     for i in range(0, len(opere), 50):
         gruppo = opere[i:i + 50]
@@ -220,7 +223,8 @@ def controlla_date_opere(voci):
     conta = {"conferma": 0, "aggiunta": 0, "discordante": 0}
     for v in opere:
         testo = wp.get(v["qid"], "")
-        d = data_da_infobox(testo[:12000], v["anno"]) if testo else None
+        campi = {"nascita": "birth_date", "morte": "death_date"}.get(v["tipo"])
+        d = (data_da_infobox(testo[:15000], v["anno"], campi) if campi else data_da_infobox(testo[:12000], v["anno"])) if testo else None
         wd = (v["mese"], v["giorno"]) if v.get("mese") else None
         v["fonte_data"] = "wikidata" if wd else None
         if d and wd and d == wd:
@@ -230,7 +234,7 @@ def controlla_date_opere(voci):
         elif d and wd and d != wd:
             v["mese"] = v["giorno"] = None; v["fonte_data"] = "discordante"; conta["discordante"] += 1
             print("  data discordante:", v["nome"], wd, d, file=sys.stderr)
-    print("controllo date opere:", conta, file=sys.stderr)
+    print("controllo date (opere e persone):", conta, file=sys.stderr)
 
 
 def sbn_autori(voci):
@@ -312,6 +316,12 @@ def main():
     for v in uniche:
         q = v["qid"] if v["tipo"] != "prima edizione" else v.get("autore_qid")
         v["sbn"] = sbn_dati.get(q) or vecchio_sbn.get((v["tipo"], v["qid"]))
+    corr = DATA / "anniversari_correzioni.json"
+    if corr.exists():
+        for k, c in json.loads(corr.read_text(encoding="utf-8")).get("voci", {}).items():
+            for v in uniche:
+                if f'{v["tipo"]}:{v["qid"]}' == k:
+                    v["mese"], v["giorno"], v["fonte_data"] = c["mese"], c["giorno"], "verifica: " + c["fonte"]
     uniche.sort(key=lambda v: ((v["mese"] or 13), (v["giorno"] or 0), -v["pagine"]))
     out = {"anno": ANNO, "generato": dt.date.today().isoformat(), "fonti": ["Wikidata", "SBN"], "voci": uniche}
     file.write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
