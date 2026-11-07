@@ -5,13 +5,7 @@ on:
 jobs:
   p:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
-    strategy:
-      fail-fast: false
-      matrix:
-        eta: [50, 75, 100, 125, 150, 175, 200, 250, 300, 400]
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
-      - run: python3 -u prova/anniversari.py
-        env:
-          ETA: ${{ matrix.eta }}
+      - run: python3 -u prova/bibliografia.py
