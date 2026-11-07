@@ -6,7 +6,11 @@ import html
 import io
 import json
 import re
+import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import schede as SCH
 
 RADICE = Path(__file__).resolve().parent.parent
 SITO = "https://publicdomainradar.com"
@@ -233,6 +237,8 @@ def scheda(v, lang, anno):
     azioni = ""
     if dat:
         azioni += f'<button type="button" class="aggiungi" data-ics="{esc(v["tipo"])}-{v["qid"]}">{esc(t["aggiungi"])}</button>'
+    if dat:
+        azioni += f'<button type="button" class="crea">{esc(SCH.TESTI[lang]["crea"])}</button>'
     azioni += f'<button type="button" class="copia" data-testo="{esc(testo_post(v, lang))}">{esc(t["copia"])}</button>'
     au = ""
     if v["tipo"] == "prima edizione":
@@ -240,10 +246,13 @@ def scheda(v, lang, anno):
         au = f'<p class="au">{au}</p>' if au else ""
     elif orig:
         au = f'<p class="au"><i>{esc(orig)}</i></p>'
+    sc_attr = ""
+    if dat:
+        sc_attr = f' data-sc="{esc(json.dumps(SCH.dati_scheda(v, lang, t, MESI[lang], nome, autore_di(v), ((v.get("scheda") or {}).get(lang)) or {}), ensure_ascii=False))}"'
     extra = f' data-ics-d="{anno}{v["mese"]:02d}{v["giorno"]:02d}" data-ics-t="{esc(evento_ics(v, lang, anno))}"' if dat else ""
     info = info_html(v, lang)
     return (f'<div class="ev" data-tipo="{esc(v["tipo"])}" data-mese="{v.get("mese") or 0}" data-eta="{v["anni"]}" '
-            f'data-id="{esc(v["tipo"])}-{v["qid"]}"{extra}>'
+            f'data-id="{esc(v["tipo"])}-{v["qid"]}"{extra}{sc_attr}>'
             f'{gg}<div><div class="tipo"><b>{esc(t["tipi"][v["tipo"]])}</b>{esc(t["anni"].format(n=v["anni"]))} · {v["anno"]}</div>'
             f'<h3>{esc(nome)}</h3>{au}<div class="az">{info}</div></div><div class="az2">{azioni}</div></div>')
 
@@ -289,7 +298,7 @@ def pagina(dati, lang):
     jsonld = '<script type="application/ld+json">' + json.dumps(ld, ensure_ascii=False).replace("</", "<\\/") + "</script>"
     alt = (f'<link rel="alternate" hreflang="it" href="{SITO}/calendario/{anno}/">\n<link rel="alternate" hreflang="en" href="{SITO}/en/calendar/{anno}/">\n')
     testa = TESTA.format(lang=lang, titolo=esc(t["titolo"].format(a=anno)), descr=esc(t["descr"].format(a=anno)), url=url, alterne=alt,
-                         og_tipo="website", jsonld=jsonld, css=CSS_CAL + __import__('marchio').CSS_MARCHIO, home=t["home"], altra_lingua=altra_lingua)
+                         og_tipo="website", jsonld=jsonld, css=CSS_CAL + SCH.CSS + __import__('marchio').CSS_MARCHIO, home=t["home"], altra_lingua=altra_lingua)
     js = """<script>
 (function(){
 var st={mese:0,tipo:"",eta:""};
@@ -352,6 +361,7 @@ gruppo("data-mese","mese");gruppo("data-tipo","tipo");gruppo("data-eta","eta");
     out.append(f'<p class="vuoto" id="vuoto" hidden>{esc(t["vuoto"])}</p>\n<p class="nota">{esc(t["nota"])}</p>\n</main>\n')
     out.append(f"""<section class="fine"><div class="in"><h2>{esc(t["fine_h"])}</h2><p>{esc(t["fine_p"])}</p><a class="btn p" href="{ics_nome}">{esc(t["ics"])}</a></div></section>
 {js}
+{SCH.finestra(lang)}{SCH.js(lang, anno)}
 """)
     out.append(PIEDE[lang])
     return "".join(out), url
