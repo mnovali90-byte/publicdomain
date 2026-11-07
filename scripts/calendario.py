@@ -98,9 +98,12 @@ h1 em{font-style:normal;color:var(--verm)}
 .tipo b{background:var(--ink);color:#fff;padding:3px 8px;margin-right:8px;font-weight:500;letter-spacing:.08em}
 .ev h3{font:900 clamp(26px,3.6vw,38px)/1 var(--display);text-transform:uppercase;margin:0 0 4px}
 .ev .au{color:var(--muto);margin:0 0 10px}
-.az2{border-left:0;padding-left:0;display:flex;flex-direction:column;align-items:flex-start;gap:2px}.az2 button{margin-top:0}.ev>div>.az{margin-top:12px;max-width:44rem}.ev>div>.az .nobel{display:inline-block;margin-top:6px;font:500 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;background:var(--ink);color:#fff;padding:3px 8px}.ev>div>.az a{margin-top:6px}.az{font-size:14px;color:#33333B;border-left:3px solid var(--verm);padding-left:12px;align-self:start}
-.az b{display:block;font:500 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muto);margin-bottom:4px}
-.az a,.az button{display:inline-block;margin-top:8px;font:500 12px var(--mono);letter-spacing:.06em;text-transform:uppercase;background:none;border:0;padding:6px 0;color:var(--vt);cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.az{font-size:15px;line-height:1.45;color:#33333B;border-left:3px solid var(--verm);padding-left:14px;display:flex;flex-direction:column;gap:6px;margin-top:12px;max-width:44rem}
+.az b{font:500 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muto);font-weight:500}
+.az .nobel{align-self:flex-start;font:500 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;background:var(--ink);color:#fff;padding:3px 8px}
+.az a{align-self:flex-start;font:500 12px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--vt);text-decoration:underline;text-underline-offset:3px;padding:4px 0}
+.az2{display:flex;flex-direction:column;align-items:flex-start;gap:6px;align-self:start;margin-top:12px}
+.az2 button{font:500 12px var(--mono);letter-spacing:.06em;text-transform:uppercase;background:none;border:0;padding:4px 0;color:var(--vt);cursor:pointer;text-decoration:underline;text-underline-offset:3px;text-align:left}
 .spec{background:var(--verm);color:var(--ink);padding:26px 28px;margin:26px 0 0;display:grid;grid-template-columns:96px 1fr;gap:24px}
 .spec h3{font:900 clamp(30px,4vw,46px)/1 var(--display);text-transform:uppercase;margin:0 0 6px}
 .spec p{margin:0 0 10px;max-width:40rem}.spec a{font:500 13px var(--mono);letter-spacing:.06em;text-transform:uppercase}
@@ -112,7 +115,7 @@ h1 em{font-style:normal;color:var(--verm)}
 .vuoto{padding:40px 0;color:var(--muto)}
 footer{background:var(--ink);color:#B9B9C6;font-size:13px;padding:32px 20px}footer p{max-width:780px;margin:0 auto 10px}footer a{color:#fff}
 [hidden]{display:none!important}
-@media(max-width:820px){.filtri{position:static}.ev{grid-template-columns:70px 1fr}.ev .az2{grid-column:2}.gg{font-size:50px}.spec{grid-template-columns:1fr}.hero:after{width:60vw;height:60vw;right:-22vw;top:40px}}
+@media(max-width:820px){.filtri{position:static}.ev{grid-template-columns:70px 1fr}.ev .az2{grid-column:2;flex-direction:row;flex-wrap:wrap;gap:4px 20px;margin-top:0}.gg{font-size:50px}.spec{grid-template-columns:1fr}.hero:after{width:60vw;height:60vw;right:-22vw;top:40px}}
 """
 
 
@@ -198,7 +201,7 @@ def info_html(v, lang):
     else:
         det = []
         if sc.get("paesi"):
-            det.append(", ".join(sc["paesi"]))
+            det.append(", ".join(sc["paesi"][-1:]))
         if sc.get("nato") and sc.get("morto"):
             det.append(f'{sc["nato"]}–{sc["morto"]}')
         elif sc.get("nato"):
@@ -214,7 +217,7 @@ def info_html(v, lang):
     wiki = sc.get("wiki") or ((v.get("scheda") or {}).get("en" if lang == "it" else "it") or {}).get("wiki")
     if wiki:
         righe.append(f'<a href="{esc(wiki)}" rel="noopener" target="_blank">{esc(t["wiki"])}</a>')
-    return "<br>".join(righe)
+    return "".join(righe)
 
 
 def scheda(v, lang, anno):
@@ -228,7 +231,7 @@ def scheda(v, lang, anno):
         gg = f'<div class="gg nd">?<small>{esc(t["soloanno"].format(a=anno))}</small></div>'
     azioni = ""
     if dat:
-        azioni += f'<button type="button" class="aggiungi" data-ics="{esc(v["tipo"])}-{v["qid"]}">{esc(t["aggiungi"])}</button><br>'
+        azioni += f'<button type="button" class="aggiungi" data-ics="{esc(v["tipo"])}-{v["qid"]}">{esc(t["aggiungi"])}</button>'
     azioni += f'<button type="button" class="copia" data-testo="{esc(testo_post(v, lang))}">{esc(t["copia"])}</button>'
     au = ""
     if v["tipo"] == "prima edizione":
@@ -241,7 +244,7 @@ def scheda(v, lang, anno):
     return (f'<div class="ev" data-tipo="{esc(v["tipo"])}" data-mese="{v.get("mese") or 0}" data-eta="{v["anni"]}" '
             f'data-id="{esc(v["tipo"])}-{v["qid"]}"{extra}>'
             f'{gg}<div><div class="tipo"><b>{esc(t["tipi"][v["tipo"]])}</b>{esc(t["anni"].format(n=v["anni"]))} · {v["anno"]}</div>'
-            f'<h3>{esc(nome)}</h3>{au}<div class="az">{info}</div></div><div class="az az2">{azioni}</div></div>')
+            f'<h3>{esc(nome)}</h3>{au}<div class="az">{info}</div></div><div class="az2">{azioni}</div></div>')
 
 
 def pagina(dati, lang):
