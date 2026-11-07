@@ -472,12 +472,12 @@ it: {
   mDesc: { it: "Conta le visite alla pagina Wikipedia in italiano negli ultimi 12 mesi.", fr: "Conta le visite alla pagina Wikipedia in francese negli ultimi 12 mesi, da tutto il mondo francofono.", de: "Conta le visite alla pagina Wikipedia in tedesco negli ultimi 12 mesi, da Germania, Austria e Svizzera.", es: "Conta le visite alla pagina Wikipedia in spagnolo negli ultimi 12 mesi, da tutto il mondo ispanofono (America Latina inclusa).", en: "Conta le visite alla pagina Wikipedia in inglese negli ultimi 12 mesi, da tutto il mondo (India inclusa).", int: "Conta in quante lingue esiste una pagina Wikimedia sull'autore: non dipende dalla grandezza di un pubblico." },
   primoPerM: { it: "{r}° per interesse in Italia", fr: "{r}° per interesse in Francia", de: "{r}° per interesse in Germania", es: "{r}° per interesse in Spagna", en: "{r}° nel mondo anglofono", int: "{r}° per presenza internazionale" },
   sottoM: { it: "Quanto è letta oggi la sua pagina Wikipedia in italiano, rispetto agli altri autori di questa lista", en: "Quanto è letta oggi la sua pagina Wikipedia in inglese, rispetto agli altri autori di questa lista", int: "In quante lingue esiste una pagina su di lui, rispetto agli altri autori di questa lista" },
-  sbnTit: "Edizioni italiane nel catalogo SBN", sbnTrovate: "{n} registrazioni in italiano", sbnUltima: " · la più recente: {y}", sbnDal2000: " · {m} dal 2000",
+  sbnTit: "Traduzioni in italiano (catalogo SBN)", sbnTrovate: "{n} libri in italiano", sbnUno: "1 libro in italiano", sbnUltima: "", sbnDal2000: ", di cui {m} usciti dal 2000 in poi", sbnNessuno2000: ", nessuno uscito dal 2000 in poi",
   sbnNonTrovato: "Autore non trovato in italiano nel catalogo SBN: non vuol dire che non sia tradotto, controlla a mano.",
   sbnPerNome: "Autore riconosciuto dal nome, non da un codice: può includere un omonimo.",
   sbnPerAnni: "Autore riconosciuto dal nome e confermato dagli anni di nascita e morte.",
   sbnSospetto: "Da verificare: autore molto noto con pochissime edizioni in SBN. Può essere schedato con un altro nome.",
-  sbnNota: "SBN è il catalogo delle biblioteche italiane. Conta ristampe, antologie e libri in cui l'autore compare anche come collaboratore, e non dice se l'edizione è ancora in commercio né se la traduzione è buona.",
+  sbnNota: "SBN è il catalogo delle biblioteche italiane. Conta anche ristampe, antologie e libri in cui l'autore compare come collaboratore. Non dice se il libro è ancora in commercio né se la traduzione è buona.",
   fNoRecent: "Nessuna edizione italiana dal 2000 · {n}",
   vIt: "{n} visite in 12 mesi", vNoPag: "nessuna pagina in {l}", vNd: "dato non disponibile", vLingue: "{n} lingue con una pagina Wikimedia", nonReg: "non registrata",
   gut: "{n} download su Project Gutenberg", gutNd: "Gutenberg: nessun riscontro",
@@ -559,12 +559,12 @@ en: {
   mDesc: { it: "Counts views of the author's Italian Wikipedia page over the last 12 months.", fr: "Counts views of the French Wikipedia page over the last 12 months, from the whole French-speaking world.", de: "Counts views of the German Wikipedia page over the last 12 months, from Germany, Austria and Switzerland.", es: "Counts views of the Spanish Wikipedia page over the last 12 months, from the whole Spanish-speaking world (Latin America included).", en: "Counts views of the English Wikipedia page over the last 12 months, from all over the world (India included).", int: "Counts in how many languages a Wikimedia page about the author exists: it does not depend on the size of one audience." },
   primoPerM: { it: "#{r} for interest in Italy", fr: "#{r} for interest in France", de: "#{r} for interest in Germany", es: "#{r} for interest in Spain", en: "#{r} in the English-speaking world", int: "#{r} for international reach" },
   sottoM: { it: "How much their Italian Wikipedia page is read today, compared with the other authors on this list", en: "How much their English Wikipedia page is read today, compared with the other authors on this list", int: "In how many languages a page about them exists, compared with the other authors on this list" },
-  sbnTit: "Italian editions in the SBN catalogue", sbnTrovate: "{n} records in Italian", sbnUltima: " · latest: {y}", sbnDal2000: " · {m} since 2000",
+  sbnTit: "Translations into Italian (SBN catalogue)", sbnTrovate: "{n} books in Italian", sbnUno: "1 book in Italian", sbnUltima: "", sbnDal2000: ", {m} of them published since 2000", sbnNessuno2000: ", none published since 2000",
   sbnNonTrovato: "Author not found in Italian in the SBN catalogue: it does not mean they are untranslated, check by hand.",
   sbnPerNome: "Author matched by name, not by an identifier: it may include a namesake.",
   sbnPerAnni: "Author matched by name and confirmed by birth and death years.",
   sbnSospetto: "To verify: a very well-known author with very few SBN editions. They may be catalogued under another name.",
-  sbnNota: "SBN is the catalogue of Italian libraries. It counts reprints, anthologies and books where the author appears as a contributor, and it does not say whether an edition is still on sale or whether the translation is good.",
+  sbnNota: "SBN is the catalogue of Italian libraries. It also counts reprints, anthologies and books where the author appears as a contributor. It does not say whether a book is still on sale or whether the translation is good.",
   fNoRecent: "No Italian edition since 2000 · {n}",
   vIt: "{n} views in 12 months", vNoPag: "no page in {l}", vNd: "data not available", vLingue: "{n} languages with a Wikimedia page", nonReg: "none recorded",
   gut: "{n} downloads on Project Gutenberg", gutNd: "Gutenberg: no match",
@@ -1188,7 +1188,7 @@ function linkEsterno(href, testo) { return h("a", { class: "pillola", href, targ
 function bloccoSbn(g) {
   if (!g) return null;
   const riassunto = g.trovato
-    ? tr("sbnTrovate", { n: n(g.edizioni) }) + (g.ultimo ? tr("sbnUltima", { y: g.ultimo }) : "") + tr("sbnDal2000", { m: n(g.dal_2000) })
+    ? (g.edizioni === 1 ? tr("sbnUno") : tr("sbnTrovate", { n: n(g.edizioni) })) + (g.dal_2000 ? tr("sbnDal2000", { m: n(g.dal_2000) }) : tr("sbnNessuno2000"))
     : tr("sbnNonTrovato");
   return h("div", { style: "margin-bottom:16px" }, h("h4", {}, tr("sbnTit")),
     h("p", { class: "sotto", style: "margin:0 0 6px;font-weight:600" }, riassunto),

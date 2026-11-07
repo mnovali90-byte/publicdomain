@@ -246,18 +246,15 @@ def pagina_autore(a, slug, lang, ha_altra):
 
     sbn = (a.get("traduzioni") or {}).get("sbn_it")
     if sbn:
-        out.append(f"<h2>{'Edizioni italiane nel catalogo SBN' if it else 'Italian editions in the SBN catalogue'}</h2>\n")
+        out.append(f"<h2>{'Traduzioni in italiano (catalogo SBN)' if it else 'Translations into Italian (SBN catalogue)'}</h2>\n")
         if sbn.get("trovato"):
+            ne, d2 = sbn["edizioni"], sbn.get("dal_2000", 0)
             if it:
-                r = f"{migliaia(sbn['edizioni'])} registrazioni in italiano"
-                if sbn.get("ultimo"):
-                    r += f" · la più recente: {sbn['ultimo']}"
-                r += f" · {migliaia(sbn.get('dal_2000', 0))} dal 2000"
+                r = ("1 libro in italiano" if ne == 1 else f"{migliaia(ne)} libri in italiano")
+                r += f", di cui {migliaia(d2)} usciti dal 2000 in poi" if d2 else ", nessuno uscito dal 2000 in poi"
             else:
-                r = f"{migliaia(sbn['edizioni'], lang)} records in Italian"
-                if sbn.get("ultimo"):
-                    r += f" · latest: {sbn['ultimo']}"
-                r += f" · {migliaia(sbn.get('dal_2000', 0), lang)} since 2000"
+                r = ("1 book in Italian" if ne == 1 else f"{migliaia(ne, lang)} books in Italian")
+                r += f", {migliaia(d2, lang)} of them published since 2000" if d2 else ", none published since 2000"
             out.append(f"<p><strong>{esc(r)}</strong></p>\n")
             if sbn.get("metodo") == "nome_anni":
                 out.append('<p class="sotto">' + ("Autore riconosciuto dal nome e confermato dagli anni di nascita e morte."
