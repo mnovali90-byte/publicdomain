@@ -159,6 +159,7 @@
    "pagine": 31,
    "mese": 1,
    "giorno": 27,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 1041,
     "ultimo": 2023,
@@ -179,6 +180,7 @@
    "pagine": 45,
    "mese": 1,
    "giorno": 28,
+   "fonte_data": "wikidata",
    "sbn": {
     "edizioni": 503,
     "ultimo": 2023,
@@ -204,6 +206,26 @@
     "ultimo": 2008,
     "dal_2000": 3,
     "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q443132",
+   "nome": "Lydia Maria Child",
+   "it": "Lydia Child",
+   "desc": "American abolitionist, author and women's rights activist (1802-1880)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1802,
+   "anni": 225,
+   "pagine": 37,
+   "mese": 2,
+   "giorno": 11,
+   "sbn": {
+    "edizioni": 0,
+    "ultimo": null,
+    "dal_2000": 0,
+    "trovato": false
    }
   },
   {
@@ -408,6 +430,26 @@
   },
   {
    "tipo": "nascita",
+   "qid": "Q535",
+   "nome": "Victor Hugo",
+   "it": "Victor Hugo",
+   "desc": "French novelist, poet, dramatist and politician (1802–1885)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1802,
+   "anni": 225,
+   "pagine": 269,
+   "mese": 2,
+   "giorno": 26,
+   "sbn": {
+    "edizioni": 858,
+    "ultimo": 2023,
+    "dal_2000": 523,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
    "qid": "Q462634",
    "nome": "Jean Bruller",
    "it": "Vercors",
@@ -519,6 +561,7 @@
    "pagine": 23,
    "mese": 3,
    "giorno": 5,
+   "fonte_data": "wikidata",
    "sbn": {
     "edizioni": 459,
     "ultimo": 2023,
@@ -599,6 +642,7 @@
    "pagine": 71,
    "mese": 3,
    "giorno": 20,
+   "fonte_data": "wikidata",
    "sbn": {
     "edizioni": 149,
     "ultimo": 2022,
@@ -663,6 +707,27 @@
     "edizioni": 6,
     "ultimo": 2014,
     "dal_2000": 3,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q45192",
+   "nome": "The Hound of the Baskervilles",
+   "it": "Il mastino dei Baskerville",
+   "desc": "crime novel by Arthur Conan Doyle",
+   "autore": "Arthur Conan Doyle",
+   "autore_qid": "Q35610",
+   "anno": 1902,
+   "anni": 125,
+   "pagine": 63,
+   "mese": 3,
+   "giorno": 25,
+   "fonte_data": "wikipedia",
+   "sbn": {
+    "edizioni": 459,
+    "ultimo": 2023,
+    "dal_2000": 341,
     "trovato": true
    }
   },
@@ -748,6 +813,66 @@
   },
   {
    "tipo": "nascita",
+   "qid": "Q452469",
+   "nome": "Dorothea Dix",
+   "it": "Dorothea Dix",
+   "desc": "American author and social reformer (1802–1887)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1802,
+   "anni": 225,
+   "pagine": 33,
+   "mese": 4,
+   "giorno": 4,
+   "sbn": {
+    "edizioni": 0,
+    "ultimo": null,
+    "dal_2000": 0,
+    "trovato": false
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q291397",
+   "nome": "Fernán Caballero",
+   "it": "Fernán Caballero",
+   "desc": "Spanish women novelist (1796-1877)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1877,
+   "anni": 150,
+   "pagine": 36,
+   "mese": 4,
+   "giorno": 7,
+   "sbn": {
+    "edizioni": 17,
+    "ultimo": 1872,
+    "dal_2000": 10,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q153159",
+   "nome": "Elias Lönnrot",
+   "it": null,
+   "desc": "Finnish physician, philologist and collector of traditional Finnish oral poetry (1802–1884)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1802,
+   "anni": 225,
+   "pagine": 79,
+   "mese": 4,
+   "giorno": 9,
+   "sbn": {
+    "edizioni": 1,
+    "ultimo": 1992,
+    "dal_2000": 0,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
    "qid": "Q357102",
    "nome": "Lew Wallace",
    "it": "Lew Wallace",
@@ -799,10 +924,31 @@
    "pagine": 22,
    "mese": 4,
    "giorno": 14,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 4,
     "ultimo": 2003,
     "dal_2000": 1,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q234050",
+   "nome": "Erasmus Darwin",
+   "it": "Erasmus Darwin",
+   "desc": "English physician (1731-1802)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1802,
+   "anni": 225,
+   "pagine": 55,
+   "mese": 4,
+   "giorno": 18,
+   "sbn": {
+    "edizioni": 5,
+    "ultimo": 1802,
+    "dal_2000": 3,
     "trovato": true
    }
   },
@@ -883,6 +1029,47 @@
     "edizioni": 11,
     "ultimo": 2012,
     "dal_2000": 2,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q478016",
+   "nome": "To the Lighthouse",
+   "it": "Gita al faro",
+   "desc": "1927 novel by Virginia Woolf",
+   "autore": "Virginia Woolf",
+   "autore_qid": "Q40909",
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 44,
+   "mese": 5,
+   "giorno": 5,
+   "fonte_data": "wikipedia",
+   "sbn": {
+    "edizioni": 219,
+    "ultimo": 2022,
+    "dal_2000": 133,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q131117",
+   "nome": "Maria Montessori",
+   "it": "Maria Montessori",
+   "desc": "Italian physician and educator (1870-1952)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1952,
+   "anni": 75,
+   "pagine": 109,
+   "mese": 5,
+   "giorno": 6,
+   "sbn": {
+    "edizioni": 100,
+    "ultimo": 2023,
+    "dal_2000": 65,
     "trovato": true
    }
   },
@@ -1208,6 +1395,26 @@
   },
   {
    "tipo": "nascita",
+   "qid": "Q234570",
+   "nome": "Harriet Martineau",
+   "it": "Harriet Martineau",
+   "desc": "English writer and sociologist (1802–1876)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1802,
+   "anni": 225,
+   "pagine": 55,
+   "mese": 6,
+   "giorno": 12,
+   "sbn": {
+    "edizioni": 5,
+    "ultimo": 1923,
+    "dal_2000": 5,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
    "qid": "Q58074",
    "nome": "Erik Erikson",
    "it": "Erik Erikson",
@@ -1279,6 +1486,7 @@
    "pagine": 17,
    "mese": 6,
    "giorno": 28,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 84,
     "ultimo": 2022,
@@ -1407,6 +1615,27 @@
    }
   },
   {
+   "tipo": "prima edizione",
+   "qid": "Q2317316",
+   "nome": "Pickman's Model",
+   "it": "Il modello di Pickman",
+   "desc": "short story by H. P. Lovecraft",
+   "autore": "H. P. Lovecraft",
+   "autore_qid": "Q169566",
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 18,
+   "mese": 7,
+   "giorno": 17,
+   "fonte_data": "wikipedia",
+   "sbn": {
+    "edizioni": 107,
+    "ultimo": 2023,
+    "dal_2000": 73,
+    "trovato": true
+   }
+  },
+  {
    "tipo": "nascita",
    "qid": "Q466672",
    "nome": "Simin Behbahani",
@@ -1523,6 +1752,26 @@
     "edizioni": 3,
     "ultimo": 1960,
     "dal_2000": 3,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q201484",
+   "nome": "John Dee",
+   "it": "John Dee",
+   "desc": "16th-century English mathematician, astrologer, and alchemist",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1527,
+   "anni": 500,
+   "pagine": 60,
+   "mese": 8,
+   "giorno": 2,
+   "sbn": {
+    "edizioni": 2,
+    "ultimo": 2007,
+    "dal_2000": 1,
     "trovato": true
    }
   },
@@ -1687,6 +1936,27 @@
    }
   },
   {
+   "tipo": "prima edizione",
+   "qid": "Q649267",
+   "nome": "Player Piano",
+   "it": "Piano meccanico",
+   "desc": "1952 novel by Kurt Vonnegut",
+   "autore": "Kurt Vonnegut",
+   "autore_qid": "Q49074",
+   "anno": 1952,
+   "anni": 75,
+   "pagine": 17,
+   "mese": 8,
+   "giorno": 18,
+   "fonte_data": "wikipedia",
+   "sbn": {
+    "edizioni": 44,
+    "ultimo": 2022,
+    "dal_2000": 28,
+    "trovato": true
+   }
+  },
+  {
    "tipo": "nascita",
    "qid": "Q719228",
    "nome": "Ogden Nash",
@@ -1799,6 +2069,7 @@
    "pagine": 91,
    "mese": 9,
    "giorno": 1,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 229,
     "ultimo": 2023,
@@ -1919,6 +2190,7 @@
    "pagine": 25,
    "mese": 9,
    "giorno": 13,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 503,
     "ultimo": 2023,
@@ -1959,6 +2231,7 @@
    "pagine": 66,
    "mese": 9,
    "giorno": 15,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 204,
     "ultimo": 2022,
@@ -1979,6 +2252,7 @@
    "pagine": 42,
    "mese": 9,
    "giorno": 15,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 74,
     "ultimo": 2021,
@@ -1999,10 +2273,32 @@
    "pagine": 23,
    "mese": 9,
    "giorno": 15,
+   "fonte_data": "wikidata",
    "sbn": {
     "edizioni": 204,
     "ultimo": 2022,
     "dal_2000": 166,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q849701",
+   "nome": "East of Eden",
+   "it": "La valle dell'Eden",
+   "desc": "1952 novel by John Steinbeck",
+   "autore": "John Steinbeck",
+   "autore_qid": "Q39212",
+   "anno": 1952,
+   "anni": 75,
+   "pagine": 48,
+   "mese": 9,
+   "giorno": 19,
+   "fonte_data": "wikipedia",
+   "sbn": {
+    "edizioni": 274,
+    "ultimo": 1980,
+    "dal_2000": 146,
     "trovato": true
    }
   },
@@ -2199,6 +2495,7 @@
    "pagine": 26,
    "mese": 10,
    "giorno": 21,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 10,
     "ultimo": 2021,
@@ -2479,10 +2776,72 @@
    "pagine": 36,
    "mese": 11,
    "giorno": 24,
+   "fonte_data": "wikidata+wikipedia",
    "sbn": {
     "edizioni": 12,
     "ultimo": 1896,
     "dal_2000": 7,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q2642138",
+   "nome": "A Daughter's a Daughter",
+   "it": "Il destino degli altri",
+   "desc": "book by Agatha Christie",
+   "autore": "Agatha Christie",
+   "autore_qid": "Q35064",
+   "anno": 1952,
+   "anni": 75,
+   "pagine": 15,
+   "mese": 11,
+   "giorno": 24,
+   "fonte_data": "wikipedia",
+   "sbn": {
+    "edizioni": 1041,
+    "ultimo": 2023,
+    "dal_2000": 752,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q57966",
+   "nome": "Wilhelm Hauff",
+   "it": "Wilhelm Hauff",
+   "desc": "German poet and novelist (1802–1827)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1802,
+   "anni": 225,
+   "pagine": 58,
+   "mese": 11,
+   "giorno": 29,
+   "sbn": {
+    "edizioni": 37,
+    "ultimo": 1934,
+    "dal_2000": 19,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q31215",
+   "nome": "Miloš Crnjanski",
+   "it": "Miloš Crnjanski",
+   "desc": "expressionist modernist poet, author, and diplomat from Austria-Hungary",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1977,
+   "anni": 50,
+   "pagine": 33,
+   "mese": 11,
+   "giorno": 30,
+   "sbn": {
+    "edizioni": 4,
+    "ultimo": 2019,
+    "dal_2000": 1,
     "trovato": true
    }
   },
@@ -2668,6 +3027,46 @@
   },
   {
    "tipo": "morte",
+   "qid": "Q1399",
+   "nome": "Niccolò Machiavelli",
+   "it": null,
+   "desc": "Florentine statesman, diplomat, and political theorist (1469–1527)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1527,
+   "anni": 500,
+   "pagine": 230,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 708,
+    "ultimo": 2022,
+    "dal_2000": 426,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q38337",
+   "nome": "Alexandre Dumas",
+   "it": "Alexandre Dumas padre",
+   "desc": "French writer and dramatist (1802–1870)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1802,
+   "anni": 225,
+   "pagine": 174,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 1182,
+    "ultimo": 2023,
+    "dal_2000": 721,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "morte",
    "qid": "Q43718",
    "nome": "Nikolai Gogol",
    "it": "Nikolaj Vasil'evič Gogol'",
@@ -2699,6 +3098,7 @@
    "pagine": 109,
    "mese": null,
    "giorno": null,
+   "fonte_data": null,
    "sbn": {
     "edizioni": 664,
     "ultimo": 2023,
@@ -2719,6 +3119,7 @@
    "pagine": 83,
    "mese": null,
    "giorno": null,
+   "fonte_data": null,
    "sbn": {
     "edizioni": 17,
     "ultimo": 2016,
@@ -2759,6 +3160,7 @@
    "pagine": 79,
    "mese": null,
    "giorno": null,
+   "fonte_data": null,
    "sbn": {
     "edizioni": 73,
     "ultimo": 2022,
@@ -2807,6 +3209,26 @@
    }
   },
   {
+   "tipo": "nascita",
+   "qid": "Q232916",
+   "nome": "Abraham Ortelius",
+   "it": "Abramo Ortelio",
+   "desc": "Flemish cartographer, geographer and cosmographer (1527–1598)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1527,
+   "anni": 500,
+   "pagine": 66,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 10,
+    "ultimo": 1724,
+    "dal_2000": 6,
+    "trovato": true
+   }
+  },
+  {
    "tipo": "morte",
    "qid": "Q219744",
    "nome": "Luis de Góngora",
@@ -2828,26 +3250,6 @@
   },
   {
    "tipo": "prima edizione",
-   "qid": "Q45192",
-   "nome": "The Hound of the Baskervilles",
-   "it": "Il mastino dei Baskerville",
-   "desc": "crime novel by Arthur Conan Doyle",
-   "autore": "Arthur Conan Doyle",
-   "autore_qid": "Q35610",
-   "anno": 1902,
-   "anni": 125,
-   "pagine": 63,
-   "mese": null,
-   "giorno": null,
-   "sbn": {
-    "edizioni": 459,
-    "ultimo": 2023,
-    "dal_2000": 341,
-    "trovato": true
-   }
-  },
-  {
-   "tipo": "prima edizione",
    "qid": "Q217073",
    "nome": "Steppenwolf",
    "it": "Il lupo della steppa",
@@ -2859,11 +3261,32 @@
    "pagine": 58,
    "mese": null,
    "giorno": null,
+   "fonte_data": null,
    "sbn": {
     "edizioni": 287,
     "ultimo": 2022,
     "dal_2000": 134,
     "trovato": true
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q217470",
+   "nome": "Alexander Radishchev",
+   "it": "Aleksandr Nikolaevič Radiščev",
+   "desc": "18th century Russian author and social critic",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1802,
+   "anni": 225,
+   "pagine": 55,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 0,
+    "ultimo": null,
+    "dal_2000": 0,
+    "trovato": false
    }
   },
   {
@@ -2903,6 +3326,46 @@
     "edizioni": 79,
     "ultimo": 2022,
     "dal_2000": 58,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q84280",
+   "nome": "Nikolaus Lenau",
+   "it": "Nikolaus Lenau",
+   "desc": "Austrian poet (1802-1850)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1802,
+   "anni": 225,
+   "pagine": 50,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 23,
+    "ultimo": 2022,
+    "dal_2000": 15,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q296809",
+   "nome": "Ferenc Molnár",
+   "it": "Ferenc Molnár",
+   "desc": "Hungarian-born dramatist and novelist (1878-1952)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1952,
+   "anni": 75,
+   "pagine": 49,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 144,
+    "ultimo": 2021,
+    "dal_2000": 73,
     "trovato": true
    }
   },
@@ -2947,26 +3410,6 @@
    }
   },
   {
-   "tipo": "prima edizione",
-   "qid": "Q849701",
-   "nome": "East of Eden",
-   "it": "La valle dell'Eden",
-   "desc": "1952 novel by John Steinbeck",
-   "autore": "John Steinbeck",
-   "autore_qid": "Q39212",
-   "anno": 1952,
-   "anni": 75,
-   "pagine": 48,
-   "mese": null,
-   "giorno": null,
-   "sbn": {
-    "edizioni": 274,
-    "ultimo": 1980,
-    "dal_2000": 146,
-    "trovato": true
-   }
-  },
-  {
    "tipo": "nascita",
    "qid": "Q239540",
    "nome": "Augusta, Lady Gregory",
@@ -2983,26 +3426,6 @@
     "edizioni": 2,
     "ultimo": 2005,
     "dal_2000": 2,
-    "trovato": true
-   }
-  },
-  {
-   "tipo": "prima edizione",
-   "qid": "Q478016",
-   "nome": "To the Lighthouse",
-   "it": "Gita al faro",
-   "desc": "1927 novel by Virginia Woolf",
-   "autore": "Virginia Woolf",
-   "autore_qid": "Q40909",
-   "anno": 1927,
-   "anni": 100,
-   "pagine": 44,
-   "mese": null,
-   "giorno": null,
-   "sbn": {
-    "edizioni": 219,
-    "ultimo": 2022,
-    "dal_2000": 133,
     "trovato": true
    }
   },
@@ -3079,10 +3502,31 @@
    "pagine": 38,
    "mese": null,
    "giorno": null,
+   "fonte_data": null,
    "sbn": {
     "edizioni": 2440,
     "ultimo": 2023,
     "dal_2000": 1382,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q450246",
+   "nome": "Luis de León",
+   "it": "Luis de León",
+   "desc": "Spanish poet and Augustinian friar (1527-1591)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1527,
+   "anni": 500,
+   "pagine": 38,
+   "mese": null,
+   "giorno": null,
+   "sbn": {
+    "edizioni": 8,
+    "ultimo": 1608,
+    "dal_2000": 3,
     "trovato": true
    }
   },
@@ -3099,6 +3543,7 @@
    "pagine": 34,
    "mese": null,
    "giorno": null,
+   "fonte_data": null,
    "sbn": {
     "edizioni": 66,
     "ultimo": 1980,
@@ -3159,6 +3604,7 @@
    "pagine": 33,
    "mese": null,
    "giorno": null,
+   "fonte_data": null,
    "sbn": {
     "edizioni": 286,
     "ultimo": 2023,
@@ -3179,6 +3625,7 @@
    "pagine": 33,
    "mese": null,
    "giorno": null,
+   "fonte_data": null,
    "sbn": {
     "edizioni": 360,
     "ultimo": 2022,
@@ -3199,6 +3646,7 @@
    "pagine": 33,
    "mese": null,
    "giorno": null,
+   "fonte_data": null,
    "sbn": {
     "edizioni": 74,
     "ultimo": 1828,
@@ -3239,6 +3687,7 @@
    "pagine": 32,
    "mese": null,
    "giorno": null,
+   "fonte_data": null,
    "sbn": {
     "edizioni": 459,
     "ultimo": 2023,
@@ -3279,6 +3728,7 @@
    "pagine": 31,
    "mese": null,
    "giorno": null,
+   "fonte_data": null,
    "sbn": {
     "edizioni": 65,
     "ultimo": 2023,
@@ -3299,6 +3749,7 @@
    "pagine": 31,
    "mese": null,
    "giorno": null,
+   "fonte_data": null,
    "sbn": {
     "edizioni": 381,
     "ultimo": 2022,
@@ -3319,6 +3770,7 @@
    "pagine": 31,
    "mese": null,
    "giorno": null,
+   "fonte_data": null,
    "sbn": {
     "edizioni": 0,
     "ultimo": null,
@@ -3359,6 +3811,7 @@
    "pagine": 29,
    "mese": null,
    "giorno": null,
+   "fonte_data": null,
    "sbn": {
     "edizioni": 243,
     "ultimo": 2022,
@@ -3379,6 +3832,7 @@
    "pagine": 29,
    "mese": null,
    "giorno": null,
+   "fonte_data": null,
    "sbn": {
     "edizioni": 584,
     "ultimo": 2023,
@@ -3399,6 +3853,7 @@
    "pagine": 28,
    "mese": null,
    "giorno": null,
+   "fonte_data": null,
    "sbn": {
     "edizioni": 1041,
     "ultimo": 2023,
@@ -3419,6 +3874,7 @@
    "pagine": 27,
    "mese": null,
    "giorno": null,
+   "fonte_data": null,
    "sbn": {
     "edizioni": 1517,
     "ultimo": 2023,
@@ -3439,6 +3895,7 @@
    "pagine": 26,
    "mese": null,
    "giorno": null,
+   "fonte_data": null,
    "sbn": {
     "edizioni": 4,
     "ultimo": 2013,
@@ -3459,6 +3916,7 @@
    "pagine": 26,
    "mese": null,
    "giorno": null,
+   "fonte_data": null,
    "sbn": {
     "edizioni": 784,
     "ultimo": 2023,
@@ -3479,6 +3937,7 @@
    "pagine": 25,
    "mese": null,
    "giorno": null,
+   "fonte_data": null,
    "sbn": {
     "edizioni": 1041,
     "ultimo": 2023,
@@ -3499,6 +3958,7 @@
    "pagine": 25,
    "mese": null,
    "giorno": null,
+   "fonte_data": null,
    "sbn": {
     "edizioni": 65,
     "ultimo": 2022,
@@ -3519,10 +3979,32 @@
    "pagine": 23,
    "mese": null,
    "giorno": null,
+   "fonte_data": null,
    "sbn": {
     "edizioni": 243,
     "ultimo": 2022,
     "dal_2000": 106,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q2740089",
+   "nome": "The Adventure of the Veiled Lodger",
+   "it": "L’avventura dell’inquilina velata",
+   "desc": "short story by Arthur Conan Doyle",
+   "autore": "Arthur Conan Doyle",
+   "autore_qid": "Q35610",
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 23,
+   "mese": null,
+   "giorno": null,
+   "fonte_data": null,
+   "sbn": {
+    "edizioni": 459,
+    "ultimo": 2023,
+    "dal_2000": 341,
     "trovato": true
    }
   },
@@ -3539,6 +4021,7 @@
    "pagine": 23,
    "mese": null,
    "giorno": null,
+   "fonte_data": null,
    "sbn": {
     "edizioni": 107,
     "ultimo": 2023,
@@ -3579,6 +4062,7 @@
    "pagine": 23,
    "mese": null,
    "giorno": null,
+   "fonte_data": null,
    "sbn": {
     "edizioni": 7,
     "ultimo": 1925,
@@ -3599,6 +4083,7 @@
    "pagine": 21,
    "mese": null,
    "giorno": null,
+   "fonte_data": null,
    "sbn": {
     "edizioni": 286,
     "ultimo": 2023,
@@ -3619,6 +4104,7 @@
    "pagine": 20,
    "mese": null,
    "giorno": null,
+   "fonte_data": null,
    "sbn": {
     "edizioni": 141,
     "ultimo": 2022,
@@ -3639,6 +4125,7 @@
    "pagine": 20,
    "mese": null,
    "giorno": null,
+   "fonte_data": null,
    "sbn": {
     "edizioni": 84,
     "ultimo": 1955,
@@ -3659,6 +4146,7 @@
    "pagine": 20,
    "mese": null,
    "giorno": null,
+   "fonte_data": null,
    "sbn": {
     "edizioni": 1517,
     "ultimo": 2023,
@@ -3679,6 +4167,7 @@
    "pagine": 20,
    "mese": null,
    "giorno": null,
+   "fonte_data": null,
    "sbn": {
     "edizioni": 116,
     "ultimo": 2023,
@@ -3699,6 +4188,7 @@
    "pagine": 19,
    "mese": null,
    "giorno": null,
+   "fonte_data": null,
    "sbn": {
     "edizioni": 449,
     "ultimo": 2023,
@@ -3719,6 +4209,7 @@
    "pagine": 19,
    "mese": null,
    "giorno": null,
+   "fonte_data": null,
    "sbn": {
     "edizioni": 664,
     "ultimo": 2023,
@@ -3739,6 +4230,7 @@
    "pagine": 18,
    "mese": null,
    "giorno": null,
+   "fonte_data": null,
    "sbn": {
     "edizioni": 538,
     "ultimo": 2023,
@@ -3748,41 +4240,43 @@
   },
   {
    "tipo": "prima edizione",
-   "qid": "Q2317316",
-   "nome": "Pickman's Model",
-   "it": "Il modello di Pickman",
-   "desc": "short story by H. P. Lovecraft",
-   "autore": "H. P. Lovecraft",
-   "autore_qid": "Q169566",
-   "anno": 1927,
-   "anni": 100,
+   "qid": "Q753251",
+   "nome": "Atala",
+   "it": "Atala",
+   "desc": "novella by François-René de Chateaubriand",
+   "autore": "François-Auguste-René de Chateaubriand",
+   "autore_qid": "Q49767",
+   "anno": 1802,
+   "anni": 225,
    "pagine": 18,
    "mese": null,
    "giorno": null,
+   "fonte_data": null,
    "sbn": {
-    "edizioni": 107,
-    "ultimo": 2023,
-    "dal_2000": 73,
+    "edizioni": 149,
+    "ultimo": 1805,
+    "dal_2000": 110,
     "trovato": true
    }
   },
   {
    "tipo": "prima edizione",
-   "qid": "Q649267",
-   "nome": "Player Piano",
-   "it": "Piano meccanico",
-   "desc": "1952 novel by Kurt Vonnegut",
-   "autore": "Kurt Vonnegut",
-   "autore_qid": "Q49074",
-   "anno": 1952,
-   "anni": 75,
-   "pagine": 17,
+   "qid": "Q1097238",
+   "nome": "René",
+   "it": "René",
+   "desc": "short novella by François-René de Chateaubriand",
+   "autore": "François-Auguste-René de Chateaubriand",
+   "autore_qid": "Q49767",
+   "anno": 1802,
+   "anni": 225,
+   "pagine": 18,
    "mese": null,
    "giorno": null,
+   "fonte_data": null,
    "sbn": {
-    "edizioni": 44,
-    "ultimo": 2022,
-    "dal_2000": 28,
+    "edizioni": 149,
+    "ultimo": 1805,
+    "dal_2000": 110,
     "trovato": true
    }
   },
@@ -3799,6 +4293,7 @@
    "pagine": 17,
    "mese": null,
    "giorno": null,
+   "fonte_data": null,
    "sbn": null
   },
   {
@@ -3814,6 +4309,7 @@
    "pagine": 17,
    "mese": null,
    "giorno": null,
+   "fonte_data": null,
    "sbn": {
     "edizioni": 51,
     "ultimo": 2022,
@@ -3834,6 +4330,7 @@
    "pagine": 16,
    "mese": null,
    "giorno": null,
+   "fonte_data": null,
    "sbn": {
     "edizioni": 503,
     "ultimo": 2023,
@@ -3874,6 +4371,7 @@
    "pagine": 16,
    "mese": null,
    "giorno": null,
+   "fonte_data": null,
    "sbn": {
     "edizioni": 129,
     "ultimo": 2022,
@@ -3894,6 +4392,28 @@
    "pagine": 15,
    "mese": null,
    "giorno": null,
+   "fonte_data": null,
+   "sbn": {
+    "edizioni": 68,
+    "ultimo": 2023,
+    "dal_2000": 31,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q2529101",
+   "nome": "Illusions",
+   "it": "Illusioni: Le avventure di un messia riluttante",
+   "desc": "1977 novel by Richard Bach",
+   "autore": "Richard Bach",
+   "autore_qid": "Q245407",
+   "anno": 1977,
+   "anni": 50,
+   "pagine": 15,
+   "mese": null,
+   "giorno": null,
+   "fonte_data": null,
    "sbn": {
     "edizioni": 68,
     "ultimo": 2023,
@@ -3914,30 +4434,11 @@
    "pagine": 15,
    "mese": null,
    "giorno": null,
+   "fonte_data": null,
    "sbn": {
     "edizioni": 16,
     "ultimo": 1980,
     "dal_2000": 9,
-    "trovato": true
-   }
-  },
-  {
-   "tipo": "prima edizione",
-   "qid": "Q2642138",
-   "nome": "A Daughter's a Daughter",
-   "it": "Il destino degli altri",
-   "desc": "book by Agatha Christie",
-   "autore": "Agatha Christie",
-   "autore_qid": "Q35064",
-   "anno": 1952,
-   "anni": 75,
-   "pagine": 15,
-   "mese": null,
-   "giorno": null,
-   "sbn": {
-    "edizioni": 1041,
-    "ultimo": 2023,
-    "dal_2000": 752,
     "trovato": true
    }
   },
@@ -3954,30 +4455,11 @@
    "pagine": 15,
    "mese": null,
    "giorno": null,
+   "fonte_data": null,
    "sbn": {
     "edizioni": 12,
     "ultimo": 2022,
     "dal_2000": 7,
-    "trovato": true
-   }
-  },
-  {
-   "tipo": "prima edizione",
-   "qid": "Q875183",
-   "nome": "Decisive Moments in History",
-   "it": "Momenti fatali",
-   "desc": "1927 essay by Stefan Zweig",
-   "autore": "Stefan Zweig",
-   "autore_qid": "Q78491",
-   "anno": 1927,
-   "anni": 100,
-   "pagine": 15,
-   "mese": null,
-   "giorno": null,
-   "sbn": {
-    "edizioni": 129,
-    "ultimo": 2022,
-    "dal_2000": 85,
     "trovato": true
    }
   },
@@ -3994,10 +4476,53 @@
    "pagine": 15,
    "mese": null,
    "giorno": null,
+   "fonte_data": null,
    "sbn": {
     "edizioni": 229,
     "ultimo": 2023,
     "dal_2000": 107,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q875183",
+   "nome": "Decisive Moments in History",
+   "it": "Momenti fatali",
+   "desc": "1927 essay by Stefan Zweig",
+   "autore": "Stefan Zweig",
+   "autore_qid": "Q78491",
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 15,
+   "mese": null,
+   "giorno": null,
+   "fonte_data": null,
+   "sbn": {
+    "edizioni": 129,
+    "ultimo": 2022,
+    "dal_2000": 85,
+    "trovato": true
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q651866",
+   "nome": "Five Children and It",
+   "it": null,
+   "desc": "1902 novel by E. Nesbit",
+   "autore": "Edith Nesbit",
+   "autore_qid": "Q231708",
+   "anno": 1902,
+   "anni": 125,
+   "pagine": 15,
+   "mese": null,
+   "giorno": null,
+   "fonte_data": null,
+   "sbn": {
+    "edizioni": 11,
+    "ultimo": 1934,
+    "dal_2000": 7,
     "trovato": true
    }
   },
@@ -4014,27 +4539,8 @@
    "pagine": 15,
    "mese": null,
    "giorno": null,
+   "fonte_data": null,
    "sbn": null
-  },
-  {
-   "tipo": "prima edizione",
-   "qid": "Q651866",
-   "nome": "Five Children and It",
-   "it": null,
-   "desc": "1902 novel by E. Nesbit",
-   "autore": "Edith Nesbit",
-   "autore_qid": "Q231708",
-   "anno": 1902,
-   "anni": 125,
-   "pagine": 15,
-   "mese": null,
-   "giorno": null,
-   "sbn": {
-    "edizioni": 11,
-    "ultimo": 1934,
-    "dal_2000": 7,
-    "trovato": true
-   }
   }
  ]
 }
