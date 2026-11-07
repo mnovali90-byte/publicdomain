@@ -96,7 +96,7 @@ h1 em{font-style:normal;color:var(--verm)}
 .gg small{display:block;font:500 11px var(--mono);letter-spacing:.1em;color:var(--muto);margin-top:6px;text-transform:uppercase}
 .tipo{font:500 11px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--vt);margin-bottom:4px}
 .tipo b{background:var(--ink);color:#fff;padding:3px 8px;margin-right:8px;font-weight:500;letter-spacing:.08em}
-.ev h3{font:900 clamp(26px,3.6vw,38px)/1 var(--display);text-transform:uppercase;margin:0 0 4px}
+.ev h3{font:900 clamp(26px,3.6vw,38px)/1.12 var(--display);text-transform:uppercase;margin:0 0 4px;padding-top:12px}
 .ev .au{color:var(--muto);margin:0 0 10px}
 .az{font-size:15px;line-height:1.45;color:#33333B;border-left:3px solid var(--verm);padding-left:14px;display:flex;flex-direction:column;gap:6px;margin-top:12px;max-width:44rem}
 .az b{font:500 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muto);font-weight:500}
