@@ -159,6 +159,79 @@ def carica_esclusioni():
     d = json.loads(f.read_text(encoding="utf-8"))
     return set(d.get("qid", {}).keys()), set(d.get("nomi", {}).keys())
 
+MESI_EN = {m: i + 1 for i, m in enumerate(["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"])}
+
+
+def json_url(u):
+    for t in range(3):
+        try:
+            with urllib.request.urlopen(urllib.request.Request(u, headers=UA), timeout=60) as f:
+                return json.load(f)
+        except Exception as e:
+            print("  errore:", str(e)[:80], file=sys.stderr)
+            time.sleep(5 * (t + 1))
+    return None
+
+
+def data_da_infobox(testo, anno):
+    """Cerca nell'infobox la data di pubblicazione con giorno. Restituisce (mese, giorno) o None.
+    Se l'infobox indica più date diverse nell'anno atteso, non si decide (None)."""
+    trovate = set()
+    for riga in re.findall(r"\|\s*(?:released|release_date|published|pub_date|publication_date|first_published|date)\s*=([^\n]*(?:\n(?!\s*\|)[^\n]*)*)", testo, re.I):
+        for m in re.finditer(r"\{\{\s*(?:start|release|publication)[ _]date[^|}]*\|(?:df=\w+\|)?(\d{4})\|(\d{1,2})\|(\d{1,2})", riga, re.I):
+            if int(m[1]) == anno:
+                trovate.add((int(m[2]), int(m[3])))
+        for m in re.finditer(r"(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})", riga):
+            if int(m[3]) == anno and m[2].lower() in MESI_EN:
+                trovate.add((MESI_EN[m[2].lower()], int(m[1])))
+        for m in re.finditer(r"([A-Za-z]+)\s+(\d{1,2}),\s*(\d{4})", riga):
+            if int(m[3]) == anno and m[1].lower() in MESI_EN:
+                trovate.add((MESI_EN[m[1].lower()], int(m[2])))
+    return next(iter(trovate)) if len(trovate) == 1 else None
+
+
+def controlla_date_opere(voci):
+    """Controllo incrociato Wikidata - Wikipedia (infobox inglese) per le date delle prime edizioni."""
+    opere = [v for v in voci if v["tipo"] == "prima edizione"]
+    titoli = {}
+    for i in range(0, len(opere), 50):
+        gruppo = opere[i:i + 50]
+        r = json_url("https://www.wikidata.org/w/api.php?" + urllib.parse.urlencode({
+            "action": "wbgetentities", "ids": "|".join(v["qid"] for v in gruppo), "props": "sitelinks", "sitefilter": "enwiki", "format": "json"}))
+        for k, e in ((r or {}).get("entities") or {}).items():
+            t = (e.get("sitelinks") or {}).get("enwiki", {}).get("title")
+            if t:
+                titoli[k] = t
+    wp = {}
+    lista = list(titoli.items())
+    for i in range(0, len(lista), 20):
+        gruppo = lista[i:i + 20]
+        r = json_url("https://en.wikipedia.org/w/api.php?" + urllib.parse.urlencode({
+            "action": "query", "prop": "revisions", "rvprop": "content", "rvslots": "main", "redirects": 1,
+            "titles": "|".join(t for _, t in gruppo), "format": "json", "formatversion": 2}))
+        if not r:
+            continue
+        per_titolo = {p["title"]: (p.get("revisions") or [{}])[0].get("slots", {}).get("main", {}).get("content", "") for p in r.get("query", {}).get("pages", [])}
+        for red in r.get("query", {}).get("redirects", []) or []:
+            per_titolo[red["from"]] = per_titolo.get(red["to"], "")
+        for k, t in gruppo:
+            wp[k] = per_titolo.get(t, "")
+        time.sleep(1)
+    conta = {"conferma": 0, "aggiunta": 0, "discordante": 0}
+    for v in opere:
+        testo = wp.get(v["qid"], "")
+        d = data_da_infobox(testo[:12000], v["anno"]) if testo else None
+        wd = (v["mese"], v["giorno"]) if v.get("mese") else None
+        v["fonte_data"] = "wikidata" if wd else None
+        if d and wd and d == wd:
+            v["fonte_data"] = "wikidata+wikipedia"; conta["conferma"] += 1
+        elif d and not wd and d != (1, 1):
+            v["mese"], v["giorno"] = d; v["fonte_data"] = "wikipedia"; conta["aggiunta"] += 1
+        elif d and wd and d != wd:
+            v["mese"] = v["giorno"] = None; v["fonte_data"] = "discordante"; conta["discordante"] += 1
+            print("  data discordante:", v["nome"], wd, d, file=sys.stderr)
+    print("controllo date opere:", conta, file=sys.stderr)
+
 
 def sbn_autori(voci):
     """Edizioni italiane dell'autore (SBN): per le persone, e per l'autore delle opere."""
@@ -226,6 +299,10 @@ def main():
         k = (v["tipo"], v["qid"])
         if k not in visti:
             visti.add(k); uniche.append(v)
+    try:
+        controlla_date_opere(uniche)
+    except Exception as e:
+        print('Controllo date non riuscito:', e, file=sys.stderr)
     try:
         sbn_dati = sbn_autori(uniche)
     except Exception as e:
