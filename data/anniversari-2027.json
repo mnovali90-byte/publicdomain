@@ -3,7 +3,7 @@
  "generato": "2026-11-07",
  "fonti": [
   "Wikidata",
-  "SBN"
+  "Wikipedia"
  ],
  "voci": [
   {
@@ -20,11 +20,33 @@
    "mese": 1,
    "giorno": 5,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 2,
-    "ultimo": 2014,
-    "dal_2000": 2,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "scrittrice, giornalista e poetessa britannica",
+     "paesi": [
+      "Regno Unito"
+     ],
+     "opere": [
+      "Cold Comfort Farm"
+     ],
+     "nato": 1902,
+     "morto": 1989,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Stella_Gibbons"
+    },
+    "en": {
+     "desc": "British writer (1902–1989)",
+     "paesi": [
+      "United Kingdom"
+     ],
+     "opere": [
+      "Cold Comfort Farm"
+     ],
+     "nato": 1902,
+     "morto": 1989,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Stella_Gibbons"
+    }
    }
   },
   {
@@ -41,11 +63,37 @@
    "mese": 1,
    "giorno": 7,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 2,
-    "ultimo": 2014,
-    "dal_2000": 2,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "scrittrice e drammaturga finlandese",
+     "paesi": [
+      "Finlandia"
+     ],
+     "opere": [
+      "Purge",
+      "Baby Jane",
+      "Stalin's Cows"
+     ],
+     "nato": 1977,
+     "morto": null,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Sofi_Oksanen"
+    },
+    "en": {
+     "desc": "Finnish-Estonian writer (born 1977)",
+     "paesi": [
+      "Finland"
+     ],
+     "opere": [
+      "Purge",
+      "Norma",
+      "Baby Jane"
+     ],
+     "nato": 1977,
+     "morto": null,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Sofi_Oksanen"
+    }
    }
   },
   {
@@ -62,11 +110,29 @@
    "mese": 1,
    "giorno": 8,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 9,
-    "ultimo": 1970,
-    "dal_2000": 4,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "psicologo statunitense",
+     "paesi": [
+      "Stati Uniti"
+     ],
+     "opere": [],
+     "nato": 1902,
+     "morto": 1987,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Carl_Rogers"
+    },
+    "en": {
+     "desc": "American psychologist (1902–1987)",
+     "paesi": [
+      "United States"
+     ],
+     "opere": [],
+     "nato": 1902,
+     "morto": 1987,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Carl_Rogers"
+    }
    }
   },
   {
@@ -83,11 +149,33 @@
    "mese": 1,
    "giorno": 11,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 35,
-    "ultimo": 2020,
-    "dal_2000": 35,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "scrittrice statunitense",
+     "paesi": [
+      "Stati Uniti"
+     ],
+     "opere": [
+      "La straniera"
+     ],
+     "nato": 1952,
+     "morto": null,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Diana_Gabaldon"
+    },
+    "en": {
+     "desc": "American author (born 1952)",
+     "paesi": [
+      "United States"
+     ],
+     "opere": [
+      "Outlander"
+     ],
+     "nato": 1952,
+     "morto": null,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Diana_Gabaldon"
+    }
    }
   },
   {
@@ -104,11 +192,35 @@
    "mese": 1,
    "giorno": 14,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 45,
-    "ultimo": 2020,
-    "dal_2000": 20,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "scrittrice statunitense",
+     "paesi": [
+      "Cuba",
+      "Francia"
+     ],
+     "opere": [
+      "Delta of Venus"
+     ],
+     "nato": 1903,
+     "morto": 1977,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Ana%C3%AFs_Nin"
+    },
+    "en": {
+     "desc": "French-born American author (1903–1977)",
+     "paesi": [
+      "Cuba",
+      "France"
+     ],
+     "opere": [
+      "Delta of Venus"
+     ],
+     "nato": 1903,
+     "morto": 1977,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Ana%C3%AFs_Nin"
+    }
    }
   },
   {
@@ -125,11 +237,31 @@
    "mese": 1,
    "giorno": 19,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 0,
-    "ultimo": null,
-    "dal_2000": 0,
-    "trovato": false
+   "scheda": {
+    "it": {
+     "desc": "storico russo-jugoslavo",
+     "paesi": [
+      "Regno di Jugoslavia",
+      "Repubblica Socialista Federale di Jugoslavia"
+     ],
+     "opere": [],
+     "nato": 1902,
+     "morto": 1976,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Georgij_Aleksandrovi%C4%8D_Ostrogorskij"
+    },
+    "en": {
+     "desc": "Russian Byzantinist (1902-1976)",
+     "paesi": [
+      "Kingdom of Yugoslavia",
+      "Russian Empire"
+     ],
+     "opere": [],
+     "nato": 1902,
+     "morto": 1976,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/George_Ostrogorsky"
+    }
    }
   },
   {
@@ -146,11 +278,33 @@
    "mese": 1,
    "giorno": 25,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 5,
-    "ultimo": 2018,
-    "dal_2000": 2,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "chimico, fisico e inventore irlandese",
+     "paesi": [],
+     "opere": [
+      "Il chimico scettico",
+      "legge di Boyle-Mariotte",
+      "New Experiments Physico-Mechanicall, Touching the Spring of the Air and its Effects"
+     ],
+     "nato": 1627,
+     "morto": 1691,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Robert_Boyle"
+    },
+    "en": {
+     "desc": "Anglo-Irish natural philosopher, chemist, physicist, and inventor (1627-1691)",
+     "paesi": [],
+     "opere": [
+      "The Sceptical Chymist",
+      "Boyle's law",
+      "New Experiments Physico-Mechanicall, Touching the Spring of the Air and its Effects"
+     ],
+     "nato": 1627,
+     "morto": 1691,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Robert_Boyle"
+    }
    }
   },
   {
@@ -167,11 +321,25 @@
    "mese": 1,
    "giorno": 27,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 1041,
-    "ultimo": 2023,
-    "dal_2000": 752,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "romanzo scritto da Agatha Christie",
+     "generi": [
+      "poliziesco"
+     ],
+     "lingua": "inglese",
+     "titolo_orig": "As Quatro Potências do Mal",
+     "wiki": "https://it.wikipedia.org/wiki/Poirot_e_i_quattro"
+    },
+    "en": {
+     "desc": "1927 novel by Agatha Christie",
+     "generi": [
+      "detective fiction"
+     ],
+     "lingua": "English",
+     "titolo_orig": "As Quatro Potências do Mal",
+     "wiki": "https://en.wikipedia.org/wiki/The_Big_Four_(novel)"
+    }
    }
   },
   {
@@ -188,11 +356,27 @@
    "mese": 1,
    "giorno": 28,
    "fonte_data": "wikidata",
-   "sbn": {
-    "edizioni": 503,
-    "ultimo": 2023,
-    "dal_2000": 394,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "romanzo scritto da Stephen King",
+     "generi": [
+      "thriller",
+      "Letteratura gotica"
+     ],
+     "lingua": "inglese",
+     "titolo_orig": "The Shining",
+     "wiki": "https://it.wikipedia.org/wiki/Shining_(romanzo)"
+    },
+    "en": {
+     "desc": "1977 novel by Stephen King",
+     "generi": [
+      "psychological horror fiction",
+      "thriller"
+     ],
+     "lingua": "English",
+     "titolo_orig": "The Shining",
+     "wiki": "https://en.wikipedia.org/wiki/The_Shining_(novel)"
+    }
    }
   },
   {
@@ -209,11 +393,35 @@
    "mese": 1,
    "giorno": 29,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 3,
-    "ultimo": 2008,
-    "dal_2000": 3,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "scrittore statunitense",
+     "paesi": [
+      "Stati Uniti"
+     ],
+     "opere": [
+      "I sabotatori",
+      "Desert Solitaire"
+     ],
+     "nato": 1927,
+     "morto": 1989,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Edward_Abbey"
+    },
+    "en": {
+     "desc": "American author and essayist (1927-1989)",
+     "paesi": [
+      "United States"
+     ],
+     "opere": [
+      "The Monkey Wrench Gang",
+      "Desert Solitaire"
+     ],
+     "nato": 1927,
+     "morto": 1989,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Edward_Abbey"
+    }
    }
   },
   {
@@ -230,11 +438,35 @@
    "mese": 2,
    "giorno": 11,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 0,
-    "ultimo": null,
-    "dal_2000": 0,
-    "trovato": false
+   "scheda": {
+    "it": {
+     "desc": "scrittrice statunitense",
+     "paesi": [
+      "Stati Uniti"
+     ],
+     "opere": [
+      "An Appeal in Favor of that Class of Americans Called Africans",
+      "Hobomok: A Tale of Early Times"
+     ],
+     "nato": 1802,
+     "morto": 1880,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Lydia_Maria_Child"
+    },
+    "en": {
+     "desc": "American abolitionist, author and women's rights activist (1802-1880)",
+     "paesi": [
+      "United States"
+     ],
+     "opere": [
+      "An Appeal in Favor of that Class of Americans Called Africans",
+      "Hobomok: A Tale of Early Times"
+     ],
+     "nato": 1802,
+     "morto": 1880,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Lydia_Maria_Child"
+    }
    }
   },
   {
@@ -251,11 +483,33 @@
    "mese": 2,
    "giorno": 12,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 8,
-    "ultimo": 1828,
-    "dal_2000": 4,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "scrittore tedesco",
+     "paesi": [
+      "Regno di Prussia"
+     ],
+     "opere": [
+      "Undine"
+     ],
+     "nato": 1777,
+     "morto": 1843,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Friedrich_de_la_Motte_Fouqu%C3%A9"
+    },
+    "en": {
+     "desc": "German writer (1777-1843)",
+     "paesi": [
+      "Kingdom of Prussia"
+     ],
+     "opere": [
+      "Undine"
+     ],
+     "nato": 1777,
+     "morto": 1843,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Friedrich_de_la_Motte_Fouqu%C3%A9"
+    }
    }
   },
   {
@@ -272,11 +526,29 @@
    "mese": 2,
    "giorno": 13,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 8,
-    "ultimo": 1969,
-    "dal_2000": 3,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "politologo statunitense",
+     "paesi": [
+      "Stati Uniti"
+     ],
+     "opere": [],
+     "nato": 1902,
+     "morto": 1978,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Harold_Lasswell"
+    },
+    "en": {
+     "desc": "American political scientist (1902-1978)",
+     "paesi": [
+      "United States"
+     ],
+     "opere": [],
+     "nato": 1902,
+     "morto": 1978,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Harold_Lasswell"
+    }
    }
   },
   {
@@ -293,11 +565,35 @@
    "mese": 2,
    "giorno": 19,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 70,
-    "ultimo": 2022,
-    "dal_2000": 41,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "scrittore norvegese",
+     "paesi": [
+      "Norvegia"
+     ],
+     "opere": [
+      "Fame",
+      "Il risveglio della terra"
+     ],
+     "nato": 1859,
+     "morto": 1952,
+     "nobel": 1920,
+     "wiki": "https://it.wikipedia.org/wiki/Knut_Hamsun"
+    },
+    "en": {
+     "desc": "Norwegian novelist (1859–1952)",
+     "paesi": [
+      "Norway"
+     ],
+     "opere": [
+      "Hunger",
+      "Growth of the Soil"
+     ],
+     "nato": 1859,
+     "morto": 1952,
+     "nobel": 1920,
+     "wiki": "https://en.wikipedia.org/wiki/Knut_Hamsun"
+    }
    }
   },
   {
@@ -313,13 +609,31 @@
    "pagine": 54,
    "mese": 2,
    "giorno": 19,
-   "sbn": {
-    "edizioni": 13,
-    "ultimo": 1903,
-    "dal_2000": 7,
-    "trovato": true
-   },
-   "fonte_data": "wikidata+wikipedia"
+   "fonte_data": "wikidata+wikipedia",
+   "scheda": {
+    "it": {
+     "desc": "critico letterario e filosofo danese",
+     "paesi": [
+      "Regno di Danimarca"
+     ],
+     "opere": [],
+     "nato": 1842,
+     "morto": 1927,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Georg_Brandes"
+    },
+    "en": {
+     "desc": "Danish literature critic and scholar (1842–1927)",
+     "paesi": [
+      "Kingdom of Denmark"
+     ],
+     "opere": [],
+     "nato": 1842,
+     "morto": 1927,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Georg_Brandes"
+    }
+   }
   },
   {
    "tipo": "nascita",
@@ -335,11 +649,35 @@
    "mese": 2,
    "giorno": 19,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 9,
-    "ultimo": 2019,
-    "dal_2000": 6,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "scrittrice statunitense",
+     "paesi": [
+      "Stati Uniti"
+     ],
+     "opere": [
+      "Il circolo della fortuna e della felicità",
+      "La figlia dell'aggiustaossa"
+     ],
+     "nato": 1952,
+     "morto": null,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Amy_Tan"
+    },
+    "en": {
+     "desc": "American novelist",
+     "paesi": [
+      "United States"
+     ],
+     "opere": [
+      "The Joy Luck Club",
+      "The Bonesetter's Daughter"
+     ],
+     "nato": 1952,
+     "morto": null,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Amy_Tan"
+    }
    }
   },
   {
@@ -356,11 +694,35 @@
    "mese": 2,
    "giorno": 19,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 8,
-    "ultimo": 2021,
-    "dal_2000": 5,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "scrittore, saggista, sceneggiatore e regista giapponese (1952-2026)",
+     "paesi": [
+      "Giappone"
+     ],
+     "opere": [
+      "Blu quasi trasparente",
+      "Coin Locker Babies"
+     ],
+     "nato": 1952,
+     "morto": 2026,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Ry%C5%AB_Murakami"
+    },
+    "en": {
+     "desc": "Japanese novelist, film director, and screenwriter (1952–2026)",
+     "paesi": [
+      "Japan"
+     ],
+     "opere": [
+      "Almost Transparent Blue",
+      "Coin Locker Babies"
+     ],
+     "nato": 1952,
+     "morto": 2026,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Ry%C5%AB_Murakami"
+    }
    }
   },
   {
@@ -376,13 +738,39 @@
    "pagine": 157,
    "mese": 2,
    "giorno": 21,
-   "sbn": {
-    "edizioni": 223,
-    "ultimo": 1010,
-    "dal_2000": 115,
-    "trovato": true
-   },
-   "fonte_data": "wikipedia"
+   "fonte_data": "wikipedia",
+   "scheda": {
+    "it": {
+     "desc": "scrittore e drammaturgo russo",
+     "paesi": [
+      "Impero russo"
+     ],
+     "opere": [
+      "Marriage",
+      "Le anime morte",
+      "L'ispettore generale"
+     ],
+     "nato": 1809,
+     "morto": 1852,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Nikolaj_Vasil%27evi%C4%8D_Gogol%27"
+    },
+    "en": {
+     "desc": "Russian writer of Ukrainian origin (1809–1852)",
+     "paesi": [
+      "Russian Empire"
+     ],
+     "opere": [
+      "Marriage",
+      "The Government Inspector",
+      "Dead Souls"
+     ],
+     "nato": 1809,
+     "morto": 1852,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Nikolai_Gogol"
+    }
+   }
   },
   {
    "tipo": "nascita",
@@ -398,11 +786,35 @@
    "mese": 2,
    "giorno": 21,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 24,
-    "ultimo": 2022,
-    "dal_2000": 24,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "scrittore statunitense",
+     "paesi": [
+      "Stati Uniti"
+     ],
+     "opere": [
+      "Ogni cosa è illuminata",
+      "Molto forte, incredibilmente vicino"
+     ],
+     "nato": 1977,
+     "morto": null,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Jonathan_Safran_Foer"
+    },
+    "en": {
+     "desc": "American novelist (born 1977)",
+     "paesi": [
+      "United States"
+     ],
+     "opere": [
+      "Everything Is Illuminated",
+      "Extremely Loud & Incredibly Close"
+     ],
+     "nato": 1977,
+     "morto": null,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Jonathan_Safran_Foer"
+    }
    }
   },
   {
@@ -419,11 +831,33 @@
    "mese": 2,
    "giorno": 24,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 0,
-    "ultimo": null,
-    "dal_2000": 0,
-    "trovato": false
+   "scheda": {
+    "it": {
+     "desc": "scrittore, poeta e drammaturgo irlandese",
+     "paesi": [
+      "Irlanda"
+     ],
+     "opere": [
+      "Confessions of a Young Man"
+     ],
+     "nato": 1852,
+     "morto": 1933,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/George_Moore_(scrittore)"
+    },
+    "en": {
+     "desc": "Irish novelist, short-story writer, poet, art critic, memoirist and dramatist (1852-1933)",
+     "paesi": [
+      "Ireland"
+     ],
+     "opere": [
+      "Confessions of a Young Man"
+     ],
+     "nato": 1852,
+     "morto": 1933,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/George_Moore_(novelist)"
+    }
    }
   },
   {
@@ -439,13 +873,33 @@
    "pagine": 67,
    "mese": 2,
    "giorno": 25,
-   "sbn": {
-    "edizioni": 0,
-    "ultimo": null,
-    "dal_2000": 0,
-    "trovato": false
-   },
-   "fonte_data": "wikidata+wikipedia"
+   "fonte_data": "wikidata+wikipedia",
+   "scheda": {
+    "it": {
+     "desc": "poeta, commediografo e attore irlandese",
+     "paesi": [
+      "Regno Unito di Gran Bretagna e Irlanda",
+      "Regno di Gran Bretagna"
+     ],
+     "opere": [],
+     "nato": 1779,
+     "morto": 1852,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Thomas_Moore"
+    },
+    "en": {
+     "desc": "Irish poet, singer and songwriter (1779–1852)",
+     "paesi": [
+      "United Kingdom of Great Britain and Ireland",
+      "Kingdom of Great Britain"
+     ],
+     "opere": [],
+     "nato": 1779,
+     "morto": 1852,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Thomas_Moore"
+    }
+   }
   },
   {
    "tipo": "nascita",
@@ -461,11 +915,37 @@
    "mese": 2,
    "giorno": 26,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 858,
-    "ultimo": 2023,
-    "dal_2000": 523,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "scrittore, poeta, drammaturgo e politico francese (1802-1885)",
+     "paesi": [
+      "Francia"
+     ],
+     "opere": [
+      "I miserabili",
+      "Novantatré",
+      "Notre-Dame de Paris"
+     ],
+     "nato": 1802,
+     "morto": 1885,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Victor_Hugo"
+    },
+    "en": {
+     "desc": "French novelist, poet, dramatist and politician (1802–1885)",
+     "paesi": [
+      "France"
+     ],
+     "opere": [
+      "The Hunchback of Notre Dame",
+      "Ninety-Three",
+      "Les Misérables"
+     ],
+     "nato": 1802,
+     "morto": 1885,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Victor_Hugo"
+    }
    }
   },
   {
@@ -482,11 +962,29 @@
    "mese": 2,
    "giorno": 26,
    "fonte_data": "wikidata",
-   "sbn": {
-    "edizioni": 15,
-    "ultimo": 1969,
-    "dal_2000": 5,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "scrittore e illustratore francese",
+     "paesi": [
+      "Francia"
+     ],
+     "opere": [],
+     "nato": 1902,
+     "morto": 1991,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Vercors_(scrittore)"
+    },
+    "en": {
+     "desc": "French author and illustrator (1902–1991)",
+     "paesi": [
+      "France"
+     ],
+     "opere": [],
+     "nato": 1902,
+     "morto": 1991,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Jean_Bruller"
+    }
    }
   },
   {
@@ -503,11 +1001,37 @@
    "mese": 2,
    "giorno": 27,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 274,
-    "ultimo": 1980,
-    "dal_2000": 146,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "scrittore statunitense (1902-1968)",
+     "paesi": [
+      "Stati Uniti"
+     ],
+     "opere": [
+      "Furore",
+      "Uomini e topi",
+      "La valle dell'Eden"
+     ],
+     "nato": 1902,
+     "morto": 1968,
+     "nobel": 1962,
+     "wiki": "https://it.wikipedia.org/wiki/John_Steinbeck"
+    },
+    "en": {
+     "desc": "American writer (1902–1968)",
+     "paesi": [
+      "United States"
+     ],
+     "opere": [
+      "The Grapes of Wrath",
+      "Of Mice and Men",
+      "East of Eden"
+     ],
+     "nato": 1902,
+     "morto": 1968,
+     "nobel": 1962,
+     "wiki": "https://en.wikipedia.org/wiki/John_Steinbeck"
+    }
    }
   },
   {
@@ -524,11 +1048,37 @@
    "mese": 2,
    "giorno": 27,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 95,
-    "ultimo": 2021,
-    "dal_2000": 53,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "scrittore statunitense",
+     "paesi": [
+      "Stati Uniti"
+     ],
+     "opere": [
+      "Le tre bare",
+      "Assassinio nell'abbazia",
+      "La corte delle streghe"
+     ],
+     "nato": 1906,
+     "morto": 1977,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/John_Dickson_Carr"
+    },
+    "en": {
+     "desc": "American writer (1906–1977)",
+     "paesi": [
+      "United States"
+     ],
+     "opere": [
+      "The Burning Court",
+      "The Hollow Man",
+      "The White Priory Murders"
+     ],
+     "nato": 1906,
+     "morto": 1977,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/John_Dickson_Carr"
+    }
    }
   },
   {
@@ -544,13 +1094,31 @@
    "pagine": 37,
    "mese": 3,
    "giorno": 3,
-   "sbn": {
-    "edizioni": 9,
-    "ultimo": 1929,
-    "dal_2000": 6,
-    "trovato": true
-   },
-   "fonte_data": "wikidata+wikipedia"
+   "fonte_data": "wikidata+wikipedia",
+   "scheda": {
+    "it": {
+     "desc": "scrittore russo",
+     "paesi": [
+      "Impero russo"
+     ],
+     "opere": [],
+     "nato": 1878,
+     "morto": 1927,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Michail_Arcyba%C5%A1ev"
+    },
+    "en": {
+     "desc": "Russian writer and playwright (1878–1927)",
+     "paesi": [
+      "Russian Empire"
+     ],
+     "opere": [],
+     "nato": 1878,
+     "morto": 1927,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Mikhail_Artsybashev"
+    }
+   }
   },
   {
    "tipo": "nascita",
@@ -566,11 +1134,37 @@
    "mese": 3,
    "giorno": 5,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 12,
-    "ultimo": 2017,
-    "dal_2000": 12,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "scrittrice statunitense",
+     "paesi": [
+      "Stati Uniti"
+     ],
+     "opere": [
+      "L'assassino di corte",
+      "L'apprendista assassino",
+      "Il viaggio dell'assassino"
+     ],
+     "nato": 1952,
+     "morto": null,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Robin_Hobb"
+    },
+    "en": {
+     "desc": "American fiction writer (pseudonym) (born 1952)",
+     "paesi": [
+      "United States"
+     ],
+     "opere": [
+      "Royal Assassin",
+      "Assassin's Apprentice",
+      "Assassin's Quest"
+     ],
+     "nato": 1952,
+     "morto": null,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Robin_Hobb"
+    }
    }
   },
   {
@@ -587,11 +1181,27 @@
    "mese": 3,
    "giorno": 5,
    "fonte_data": "wikidata",
-   "sbn": {
-    "edizioni": 459,
-    "ultimo": 2023,
-    "dal_2000": 341,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "racconto di Arthur Conan Doyle",
+     "generi": [
+      "poliziesco",
+      "giallo"
+     ],
+     "lingua": "inglese",
+     "titolo_orig": "The Adventure of Shoscombe Old Place",
+     "wiki": null
+    },
+    "en": {
+     "desc": "short story by Arthur Conan Doyle",
+     "generi": [
+      "detective fiction",
+      "crime fiction"
+     ],
+     "lingua": "English",
+     "titolo_orig": "The Adventure of Shoscombe Old Place",
+     "wiki": "https://en.wikipedia.org/wiki/The_Adventure_of_Shoscombe_Old_Place"
+    }
    }
   },
   {
@@ -608,11 +1218,37 @@
    "mese": 3,
    "giorno": 6,
    "fonte_data": "wikidata",
-   "sbn": {
-    "edizioni": 116,
-    "ultimo": 2023,
-    "dal_2000": 67,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "scrittore e giornalista colombiano (1927-2014)",
+     "paesi": [
+      "Colombia"
+     ],
+     "opere": [
+      "Cent'anni di solitudine",
+      "L'amore ai tempi del colera",
+      "Racconto di un naufrago"
+     ],
+     "nato": 1927,
+     "morto": 2014,
+     "nobel": 1982,
+     "wiki": "https://it.wikipedia.org/wiki/Gabriel_Garc%C3%ADa_M%C3%A1rquez"
+    },
+    "en": {
+     "desc": "Colombian writer and Nobel laureate (1927–2014)",
+     "paesi": [
+      "Colombia"
+     ],
+     "opere": [
+      "One Hundred Years of Solitude",
+      "Love in the Time of Cholera",
+      "The Story of a Shipwrecked Sailor"
+     ],
+     "nato": 1927,
+     "morto": 2014,
+     "nobel": 1982,
+     "wiki": "https://en.wikipedia.org/wiki/Gabriel_Garc%C3%ADa_M%C3%A1rquez"
+    }
    }
   },
   {
@@ -629,11 +1265,29 @@
    "mese": 3,
    "giorno": 11,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 5,
-    "ultimo": 2014,
-    "dal_2000": 3,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "filosofo e sociologo francese",
+     "paesi": [
+      "Francia"
+     ],
+     "opere": [],
+     "nato": 1877,
+     "morto": 1945,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Maurice_Halbwachs"
+    },
+    "en": {
+     "desc": "French sociologist (1877-1945), died in Buchenwald concentration camp",
+     "paesi": [
+      "France"
+     ],
+     "opere": [],
+     "nato": 1877,
+     "morto": 1945,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Maurice_Halbwachs"
+    }
    }
   },
   {
@@ -650,11 +1304,29 @@
    "mese": 3,
    "giorno": 13,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 6,
-    "ultimo": 2015,
-    "dal_2000": 5,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "filosofo ceco",
+     "paesi": [
+      "Cecoslovacchia"
+     ],
+     "opere": [],
+     "nato": 1907,
+     "morto": 1977,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Jan_Pato%C4%8Dka"
+    },
+    "en": {
+     "desc": "Czech essayist and philosopher (1907-1977)",
+     "paesi": [
+      "Czechoslovakia"
+     ],
+     "opere": [],
+     "nato": 1907,
+     "morto": 1977,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Jan_Pato%C4%8Dka"
+    }
    }
   },
   {
@@ -671,11 +1343,31 @@
    "mese": 3,
    "giorno": 15,
    "fonte_data": "wikipedia",
-   "sbn": {
-    "edizioni": 2,
-    "ultimo": 2005,
-    "dal_2000": 2,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "scrittrice e drammaturga irlandese",
+     "paesi": [
+      "Regno Unito di Gran Bretagna e Irlanda",
+      "Irlanda"
+     ],
+     "opere": [],
+     "nato": 1852,
+     "morto": 1932,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Augusta_Gregory"
+    },
+    "en": {
+     "desc": "Irish playwright, poet, folklorist (1852-1932)",
+     "paesi": [
+      "United Kingdom of Great Britain and Ireland",
+      "Ireland"
+     ],
+     "opere": [],
+     "nato": 1852,
+     "morto": 1932,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Lady_Gregory"
+    }
    }
   },
   {
@@ -692,11 +1384,25 @@
    "mese": 3,
    "giorno": 20,
    "fonte_data": "wikidata",
-   "sbn": {
-    "edizioni": 149,
-    "ultimo": 2022,
-    "dal_2000": 73,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "romanzo di Harriet Beecher Stowe",
+     "generi": [
+      "romanzo d'appendice"
+     ],
+     "lingua": "inglese",
+     "titolo_orig": "Uncle Tom's Cabin; or, Life Among the Lowly",
+     "wiki": "https://it.wikipedia.org/wiki/La_capanna_dello_zio_Tom"
+    },
+    "en": {
+     "desc": "1852 novel by Harriet Beecher Stowe",
+     "generi": [
+      "serialized fiction"
+     ],
+     "lingua": "English",
+     "titolo_orig": "Uncle Tom's Cabin; or, Life Among the Lowly",
+     "wiki": "https://en.wikipedia.org/wiki/Uncle_Tom%27s_Cabin"
+    }
    }
   },
   {
@@ -713,11 +1419,37 @@
    "mese": 3,
    "giorno": 23,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 5,
-    "ultimo": 2020,
-    "dal_2000": 4,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "autore di fantascienza statunitense",
+     "paesi": [
+      "Stati Uniti"
+     ],
+     "opere": [
+      "Gli anni del riso e del sale",
+      "Trilogia di Marte",
+      "Three Californias Trilogy"
+     ],
+     "nato": 1952,
+     "morto": null,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Kim_Stanley_Robinson"
+    },
+    "en": {
+     "desc": "American science fiction writer (born 1952)",
+     "paesi": [
+      "United States"
+     ],
+     "opere": [
+      "The Years of Rice and Salt",
+      "Mars trilogy",
+      "The Ministry for the Future"
+     ],
+     "nato": 1952,
+     "morto": null,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Kim_Stanley_Robinson"
+    }
    }
   },
   {
@@ -734,11 +1466,37 @@
    "mese": 3,
    "giorno": 24,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 2,
-    "ultimo": 2013,
-    "dal_2000": 2,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "scrittore tedesco (1927-2023)",
+     "paesi": [
+      "Germania Ovest",
+      "Baviera"
+     ],
+     "opere": [
+      "Marriage in Philippsburg",
+      "Runaway Horse"
+     ],
+     "nato": 1927,
+     "morto": 2023,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Martin_Walser"
+    },
+    "en": {
+     "desc": "German writer (1927–2023)",
+     "paesi": [
+      "Bavaria",
+      "West Germany"
+     ],
+     "opere": [
+      "Marriage in Philippsburg",
+      "Runaway Horse"
+     ],
+     "nato": 1927,
+     "morto": 2023,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Martin_Walser"
+    }
    }
   },
   {
@@ -755,11 +1513,27 @@
    "mese": 3,
    "giorno": 25,
    "fonte_data": "wikipedia",
-   "sbn": {
-    "edizioni": 459,
-    "ultimo": 2023,
-    "dal_2000": 341,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "romanzo scritto da Arthur Conan Doyle",
+     "generi": [
+      "poliziesco",
+      "giallo"
+     ],
+     "lingua": "inglese",
+     "titolo_orig": "The Hound of the Baskervilles",
+     "wiki": "https://it.wikipedia.org/wiki/Il_mastino_dei_Baskerville"
+    },
+    "en": {
+     "desc": "crime novel by Arthur Conan Doyle",
+     "generi": [
+      "detective fiction",
+      "crime fiction"
+     ],
+     "lingua": "English",
+     "titolo_orig": "The Hound of the Baskervilles",
+     "wiki": "https://en.wikipedia.org/wiki/The_Hound_of_the_Baskervilles"
+    }
    }
   },
   {
@@ -776,11 +1550,37 @@
    "mese": 3,
    "giorno": 25,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 14,
-    "ultimo": 2022,
-    "dal_2000": 14,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "scrittrice cinese",
+     "paesi": [
+      "Regno Unito"
+     ],
+     "opere": [
+      "Mao: la storia sconosciuta",
+      "Cigni selvatici",
+      "Empress Dowager Cixi: The Concubine Who Launched Modern China"
+     ],
+     "nato": 1952,
+     "morto": null,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Jung_Chang"
+    },
+    "en": {
+     "desc": "Chinese-British author (born 1952)",
+     "paesi": [
+      "United Kingdom"
+     ],
+     "opere": [
+      "Mao: The Unknown Story",
+      "Wild Swans",
+      "Empress Dowager Cixi: The Concubine Who Launched Modern China"
+     ],
+     "nato": 1952,
+     "morto": null,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Jung_Chang"
+    }
    }
   },
   {
@@ -797,11 +1597,33 @@
    "mese": 3,
    "giorno": 27,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 37,
-    "ultimo": 2020,
-    "dal_2000": 12,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "storico francese (1927-1997)",
+     "paesi": [
+      "Francia"
+     ],
+     "opere": [
+      "The Passing of an Illusion"
+     ],
+     "nato": 1927,
+     "morto": 1997,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Fran%C3%A7ois_Furet"
+    },
+    "en": {
+     "desc": "French historian (1927–1997)",
+     "paesi": [
+      "France"
+     ],
+     "opere": [
+      "The Passing of an Illusion"
+     ],
+     "nato": 1927,
+     "morto": 1997,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Fran%C3%A7ois_Furet"
+    }
    }
   },
   {
@@ -818,11 +1640,33 @@
    "mese": 3,
    "giorno": 29,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 26,
-    "ultimo": 2020,
-    "dal_2000": 15,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "scrittore francese",
+     "paesi": [
+      "Francia"
+     ],
+     "opere": [
+      "The Hollow Field"
+     ],
+     "nato": 1902,
+     "morto": 1967,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Marcel_Aym%C3%A9"
+    },
+    "en": {
+     "desc": "French writer (1902–1967)",
+     "paesi": [
+      "France"
+     ],
+     "opere": [
+      "The Hollow Field"
+     ],
+     "nato": 1902,
+     "morto": 1967,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Marcel_Aym%C3%A9"
+    }
    }
   },
   {
@@ -839,11 +1683,33 @@
    "mese": 4,
    "giorno": 1,
    "fonte_data": "wikipedia",
-   "sbn": {
-    "edizioni": 144,
-    "ultimo": 2021,
-    "dal_2000": 73,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "scrittore, drammaturgo e giornalista ungherese",
+     "paesi": [
+      "Ungheria"
+     ],
+     "opere": [
+      "I ragazzi della via Pál"
+     ],
+     "nato": 1878,
+     "morto": 1952,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Ferenc_Moln%C3%A1r"
+    },
+    "en": {
+     "desc": "Hungarian-born dramatist and novelist (1878-1952)",
+     "paesi": [
+      "Hungary"
+     ],
+     "opere": [
+      "The Paul Street Boys"
+     ],
+     "nato": 1878,
+     "morto": 1952,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Ferenc_Moln%C3%A1r"
+    }
    }
   },
   {
@@ -860,11 +1726,29 @@
    "mese": 4,
    "giorno": 4,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 0,
-    "ultimo": null,
-    "dal_2000": 0,
-    "trovato": false
+   "scheda": {
+    "it": {
+     "desc": "attivista statunitense",
+     "paesi": [
+      "Stati Uniti"
+     ],
+     "opere": [],
+     "nato": 1802,
+     "morto": 1887,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Dorothea_Dix"
+    },
+    "en": {
+     "desc": "American author and social reformer (1802–1887)",
+     "paesi": [
+      "United States"
+     ],
+     "opere": [],
+     "nato": 1802,
+     "morto": 1887,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Dorothea_Dix"
+    }
    }
   },
   {
@@ -881,11 +1765,29 @@
    "mese": 4,
    "giorno": 7,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 17,
-    "ultimo": 1872,
-    "dal_2000": 10,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "scrittrice spagnola",
+     "paesi": [
+      "Spagna"
+     ],
+     "opere": [],
+     "nato": 1796,
+     "morto": 1877,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Fern%C3%A1n_Caballero_(scrittrice)"
+    },
+    "en": {
+     "desc": "Spanish women novelist (1796-1877)",
+     "paesi": [
+      "Spain"
+     ],
+     "opere": [],
+     "nato": 1796,
+     "morto": 1877,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Fern%C3%A1n_Caballero"
+    }
    }
   },
   {
@@ -902,11 +1804,35 @@
    "mese": 4,
    "giorno": 9,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 1,
-    "ultimo": 1992,
-    "dal_2000": 0,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "filologo, medico e botanico finlandese (1802-1884)",
+     "paesi": [
+      "Granducato di Finlandia",
+      "Svezia"
+     ],
+     "opere": [
+      "Kalevala"
+     ],
+     "nato": 1802,
+     "morto": 1884,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Elias_L%C3%B6nnrot"
+    },
+    "en": {
+     "desc": "Finnish physician, philologist and collector of traditional Finnish oral poetry (1802–1884)",
+     "paesi": [
+      "Grand Duchy of Finland",
+      "Sweden"
+     ],
+     "opere": [
+      "Kalevala"
+     ],
+     "nato": 1802,
+     "morto": 1884,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Elias_L%C3%B6nnrot"
+    }
    }
   },
   {
@@ -923,11 +1849,33 @@
    "mese": 4,
    "giorno": 10,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 0,
-    "ultimo": null,
-    "dal_2000": 0,
-    "trovato": false
+   "scheda": {
+    "it": {
+     "desc": "scrittore, politico e generale statunitense",
+     "paesi": [
+      "Stati Uniti"
+     ],
+     "opere": [
+      "Ben-Hur"
+     ],
+     "nato": 1827,
+     "morto": 1905,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Lew_Wallace"
+    },
+    "en": {
+     "desc": "American lawyer, Union general in the American Civil War, territorial governor and statesman, politician, and author of 'Ben Hur' (1827-1905)",
+     "paesi": [
+      "United States"
+     ],
+     "opere": [
+      "Ben-Hur: A Tale of the Christ"
+     ],
+     "nato": 1827,
+     "morto": 1905,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Lew_Wallace"
+    }
    }
   },
   {
@@ -944,11 +1892,33 @@
    "mese": 4,
    "giorno": 11,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 168,
-    "ultimo": 2022,
-    "dal_2000": 71,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "poeta e sceneggiatore francese (1900-1977)",
+     "paesi": [
+      "Francia"
+     ],
+     "opere": [
+      "Paroles"
+     ],
+     "nato": 1900,
+     "morto": 1977,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Jacques_Pr%C3%A9vert"
+    },
+    "en": {
+     "desc": "French poet and screenwriter (1900-1977)",
+     "paesi": [
+      "France"
+     ],
+     "opere": [
+      "Paroles"
+     ],
+     "nato": 1900,
+     "morto": 1977,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Jacques_Pr%C3%A9vert"
+    }
    }
   },
   {
@@ -965,11 +1935,33 @@
    "mese": 4,
    "giorno": 14,
    "fonte_data": "wikipedia",
-   "sbn": {
-    "edizioni": 10,
-    "ultimo": 1724,
-    "dal_2000": 6,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "cartografo fiammingo",
+     "paesi": [
+      "Paesi Bassi spagnoli"
+     ],
+     "opere": [
+      "Theatrum Orbis Terrarum"
+     ],
+     "nato": 1527,
+     "morto": 1598,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Abramo_Ortelio"
+    },
+    "en": {
+     "desc": "Flemish cartographer, geographer and cosmographer (1527–1598)",
+     "paesi": [
+      "Spanish Netherlands"
+     ],
+     "opere": [
+      "Theatrum Orbis Terrarum"
+     ],
+     "nato": 1527,
+     "morto": 1598,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Abraham_Ortelius"
+    }
    }
   },
   {
@@ -986,11 +1978,27 @@
    "mese": 4,
    "giorno": 14,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 4,
-    "ultimo": 2003,
-    "dal_2000": 1,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "romanzo scritto da Ralph Waldo Ellison",
+     "generi": [
+      "fantascienza",
+      "romanzo autobiografico"
+     ],
+     "lingua": "inglese",
+     "titolo_orig": "Invisible Man",
+     "wiki": "https://it.wikipedia.org/wiki/Uomo_invisibile_(romanzo)"
+    },
+    "en": {
+     "desc": "1952 novel by Ralph Ellison",
+     "generi": [
+      "science fiction",
+      "Bildungsroman"
+     ],
+     "lingua": "English",
+     "titolo_orig": "Invisible Man",
+     "wiki": "https://en.wikipedia.org/wiki/Invisible_Man"
+    }
    }
   },
   {
@@ -1006,13 +2014,39 @@
    "pagine": 53,
    "mese": 4,
    "giorno": 15,
-   "sbn": {
-    "edizioni": 79,
-    "ultimo": 2022,
-    "dal_2000": 58,
-    "trovato": true
-   },
-   "fonte_data": "wikipedia"
+   "fonte_data": "wikipedia",
+   "scheda": {
+    "it": {
+     "desc": "poeta, giornalista e scrittore francese",
+     "paesi": [
+      "Francia"
+     ],
+     "opere": [
+      "Il fantasma dell'Opera",
+      "La Double Vie de Théophraste Longuet",
+      "The Perfume of the Lady in Black"
+     ],
+     "nato": 1868,
+     "morto": 1927,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Gaston_Leroux"
+    },
+    "en": {
+     "desc": "French author and journalist (1868–1927)",
+     "paesi": [
+      "France"
+     ],
+     "opere": [
+      "The Phantom of the Opera",
+      "The Mystery of the Yellow Room",
+      "La Double Vie de Théophraste Longuet"
+     ],
+     "nato": 1868,
+     "morto": 1927,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Gaston_Leroux"
+    }
+   }
   },
   {
    "tipo": "morte",
@@ -1028,11 +2062,29 @@
    "mese": 4,
    "giorno": 18,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 5,
-    "ultimo": 1802,
-    "dal_2000": 3,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "filosofo, poeta e medico britannico (1731-1802)",
+     "paesi": [
+      "Regno Unito di Gran Bretagna e Irlanda"
+     ],
+     "opere": [],
+     "nato": 1731,
+     "morto": 1802,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Erasmus_Darwin"
+    },
+    "en": {
+     "desc": "English physician (1731-1802)",
+     "paesi": [
+      "United Kingdom of Great Britain and Ireland"
+     ],
+     "opere": [],
+     "nato": 1731,
+     "morto": 1802,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Erasmus_Darwin"
+    }
    }
   },
   {
@@ -1049,11 +2101,31 @@
    "mese": 4,
    "giorno": 19,
    "fonte_data": "wikipedia",
-   "sbn": {
-    "edizioni": 1,
-    "ultimo": 1966,
-    "dal_2000": 0,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "scrittore sovietico",
+     "paesi": [
+      "Russia sovietica",
+      "Impero russo"
+     ],
+     "opere": [],
+     "nato": 1902,
+     "morto": 1989,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Veniamin_Aleksandrovi%C4%8D_Kaverin"
+    },
+    "en": {
+     "desc": "Russian-Soviet writer and memoirist (1902–1989)",
+     "paesi": [
+      "Russian Socialist Federative Soviet Republic",
+      "Russian Empire"
+     ],
+     "opere": [],
+     "nato": 1902,
+     "morto": 1989,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Veniamin_Kaverin"
+    }
    }
   },
   {
@@ -1070,11 +2142,29 @@
    "mese": 4,
    "giorno": 23,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 5,
-    "ultimo": 2012,
-    "dal_2000": 2,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "scrittore islandese",
+     "paesi": [
+      "Islanda"
+     ],
+     "opere": [],
+     "nato": 1902,
+     "morto": 1998,
+     "nobel": 1955,
+     "wiki": "https://it.wikipedia.org/wiki/Halld%C3%B3r_Laxness"
+    },
+    "en": {
+     "desc": "Icelandic author (1902-1998)",
+     "paesi": [
+      "Iceland"
+     ],
+     "opere": [],
+     "nato": 1902,
+     "morto": 1998,
+     "nobel": 1955,
+     "wiki": "https://en.wikipedia.org/wiki/Halld%C3%B3r_Laxness"
+    }
    }
   },
   {
@@ -1090,13 +2180,31 @@
    "pagine": 68,
    "mese": 4,
    "giorno": 24,
-   "sbn": {
-    "edizioni": 4,
-    "ultimo": 1989,
-    "dal_2000": 1,
-    "trovato": true
-   },
-   "fonte_data": "wikipedia"
+   "fonte_data": "wikipedia",
+   "scheda": {
+    "it": {
+     "desc": "poeta e traduttore russo",
+     "paesi": [
+      "Impero russo"
+     ],
+     "opere": [],
+     "nato": 1783,
+     "morto": 1852,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Vasilij_Andreevi%C4%8D_%C5%BDukovskij"
+    },
+    "en": {
+     "desc": "Russian poet (1783-1852)",
+     "paesi": [
+      "Russian Empire"
+     ],
+     "opere": [],
+     "nato": 1783,
+     "morto": 1852,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Vasily_Zhukovsky"
+    }
+   }
   },
   {
    "tipo": "nascita",
@@ -1112,11 +2220,33 @@
    "mese": 4,
    "giorno": 25,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 6,
-    "ultimo": 2018,
-    "dal_2000": 2,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "romanziere, drammaturgo, critico letterario e docente spagnolo",
+     "paesi": [
+      "Spagna"
+     ],
+     "opere": [
+      "La regenta"
+     ],
+     "nato": 1852,
+     "morto": 1901,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Leopoldo_Alas"
+    },
+    "en": {
+     "desc": "Spanish author (1852–1901)",
+     "paesi": [
+      "Spain"
+     ],
+     "opere": [
+      "La Regenta"
+     ],
+     "nato": 1852,
+     "morto": 1901,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Leopoldo_Alas"
+    }
    }
   },
   {
@@ -1133,11 +2263,29 @@
    "mese": 5,
    "giorno": 3,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 11,
-    "ultimo": 2012,
-    "dal_2000": 2,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "psichiatra e psicoanalista tedesco",
+     "paesi": [
+      "Germania"
+     ],
+     "opere": [],
+     "nato": 1877,
+     "morto": 1925,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Karl_Abraham"
+    },
+    "en": {
+     "desc": "German psychoanalyst (1877–1925)",
+     "paesi": [
+      "Germany"
+     ],
+     "opere": [],
+     "nato": 1877,
+     "morto": 1925,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Karl_Abraham"
+    }
    }
   },
   {
@@ -1154,11 +2302,37 @@
    "mese": 5,
    "giorno": 5,
    "fonte_data": "wikipedia",
-   "sbn": {
-    "edizioni": 17,
-    "ultimo": 1892,
-    "dal_2000": 13,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "scrittore e poeta statunitense",
+     "paesi": [
+      "Stati Uniti"
+     ],
+     "opere": [
+      "The Luck of Roaring Camp",
+      "The Outcasts of Poker Flat",
+      "Tennessee's Partner"
+     ],
+     "nato": 1836,
+     "morto": 1902,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Bret_Harte"
+    },
+    "en": {
+     "desc": "American writer and poet (1836–1902)",
+     "paesi": [
+      "United States"
+     ],
+     "opere": [
+      "The Idyl of Red Gulch",
+      "What the Chimney Sang",
+      "The Luck of Roaring Camp"
+     ],
+     "nato": 1836,
+     "morto": 1902,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Bret_Harte"
+    }
    }
   },
   {
@@ -1175,11 +2349,26 @@
    "mese": 5,
    "giorno": 5,
    "fonte_data": "wikipedia",
-   "sbn": {
-    "edizioni": 219,
-    "ultimo": 2022,
-    "dal_2000": 133,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "romanzo scritto da Virginia Woolf",
+     "generi": [
+      "modernismo"
+     ],
+     "lingua": "inglese britannico",
+     "titolo_orig": "To the Lighthouse",
+     "wiki": "https://it.wikipedia.org/wiki/Gita_al_faro"
+    },
+    "en": {
+     "desc": "1927 novel by Virginia Woolf",
+     "generi": [
+      "modernist literature",
+      "psychological fiction"
+     ],
+     "lingua": "British English",
+     "titolo_orig": "To the Lighthouse",
+     "wiki": "https://en.wikipedia.org/wiki/To_the_Lighthouse"
+    }
    }
   },
   {
@@ -1196,11 +2385,31 @@
    "mese": 5,
    "giorno": 6,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 100,
-    "ultimo": 2023,
-    "dal_2000": 65,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "pedagogista, filosofa e medico italiana (1870-1952)",
+     "paesi": [
+      "Regno d'Italia",
+      "Italia"
+     ],
+     "opere": [],
+     "nato": 1870,
+     "morto": 1952,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Maria_Montessori"
+    },
+    "en": {
+     "desc": "Italian physician and educator (1870-1952)",
+     "paesi": [
+      "Kingdom of Italy",
+      "Italy"
+     ],
+     "opere": [],
+     "nato": 1870,
+     "morto": 1952,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Maria_Montessori"
+    }
    }
   },
   {
@@ -1217,11 +2426,37 @@
    "mese": 5,
    "giorno": 6,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 6,
-    "ultimo": 1905,
-    "dal_2000": 3,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "poeta nazionale della Finlandia, autore dell'inno nazionale finlandese, scrittore e poeta di lingua svedese (1804–77)",
+     "paesi": [
+      "Granducato di Finlandia"
+     ],
+     "opere": [
+      "Maamme",
+      "The Tales of Ensign Stål",
+      "The Elk Hunters"
+     ],
+     "nato": 1804,
+     "morto": 1877,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Johan_Ludvig_Runeberg"
+    },
+    "en": {
+     "desc": "Finland’s national poet, author of Finland’s national anthem, Swedish-speaking writer and poet (1804–77)",
+     "paesi": [
+      "Grand Duchy of Finland"
+     ],
+     "opere": [
+      "Maamme",
+      "The Tales of Ensign Stål",
+      "The Elk Hunters"
+     ],
+     "nato": 1804,
+     "morto": 1877,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Johan_Ludvig_Runeberg"
+    }
    }
   },
   {
@@ -1238,11 +2473,31 @@
    "mese": 5,
    "giorno": 7,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 20,
-    "ultimo": 2018,
-    "dal_2000": 13,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "sceneggiatrice e scrittrice inglese",
+     "paesi": [
+      "Reich tedesco",
+      "Regno Unito"
+     ],
+     "opere": [],
+     "nato": 1927,
+     "morto": 2013,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Ruth_Prawer_Jhabvala"
+    },
+    "en": {
+     "desc": "German-born British-American author (1927-2013)",
+     "paesi": [
+      "German Reich",
+      "United Kingdom"
+     ],
+     "opere": [],
+     "nato": 1927,
+     "morto": 2013,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Ruth_Prawer_Jhabvala"
+    }
    }
   },
   {
@@ -1259,11 +2514,33 @@
    "mese": 5,
    "giorno": 9,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 0,
-    "ultimo": null,
-    "dal_2000": 0,
-    "trovato": false
+   "scheda": {
+    "it": {
+     "desc": "scrittore statunitense",
+     "paesi": [
+      "Stati Uniti"
+     ],
+     "opere": [
+      "Da qui all'eternità"
+     ],
+     "nato": 1921,
+     "morto": 1977,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/James_Jones_(scrittore)"
+    },
+    "en": {
+     "desc": "American author (1921–1977)",
+     "paesi": [
+      "United States"
+     ],
+     "opere": [
+      "From Here to Eternity"
+     ],
+     "nato": 1921,
+     "morto": 1977,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/James_Jones_(author)"
+    }
    }
   },
   {
@@ -1280,11 +2557,29 @@
    "mese": 5,
    "giorno": 10,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 1,
-    "ultimo": 1999,
-    "dal_2000": 0,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "economista e filosofo francese",
+     "paesi": [
+      "Francia"
+     ],
+     "opere": [],
+     "nato": 1727,
+     "morto": 1781,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Anne_Robert_Jacques_Turgot"
+    },
+    "en": {
+     "desc": "French economist and statesman (1727–1781)",
+     "paesi": [
+      "France"
+     ],
+     "opere": [],
+     "nato": 1727,
+     "morto": 1781,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Anne_Robert_Jacques_Turgot"
+    }
    }
   },
   {
@@ -1301,11 +2596,29 @@
    "mese": 5,
    "giorno": 10,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 0,
-    "ultimo": null,
-    "dal_2000": 0,
-    "trovato": false
+   "scheda": {
+    "it": {
+     "desc": "psicologo statunitense",
+     "paesi": [
+      "Stati Uniti"
+     ],
+     "opere": [],
+     "nato": 1884,
+     "morto": 1952,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Clark_Hull"
+    },
+    "en": {
+     "desc": "American psychologist (1884–1952)",
+     "paesi": [
+      "United States"
+     ],
+     "opere": [],
+     "nato": 1884,
+     "morto": 1952,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Clark_L._Hull"
+    }
    }
   },
   {
@@ -1322,11 +2635,33 @@
    "mese": 5,
    "giorno": 22,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 10,
-    "ultimo": 1998,
-    "dal_2000": 4,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "scrittore e naturalista statunitense",
+     "paesi": [
+      "Stati Uniti"
+     ],
+     "opere": [
+      "Il leopardo delle nevi"
+     ],
+     "nato": 1927,
+     "morto": 2014,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Peter_Matthiessen"
+    },
+    "en": {
+     "desc": "American novelist (1927–2014)",
+     "paesi": [
+      "United States"
+     ],
+     "opere": [
+      "The Snow Leopard"
+     ],
+     "nato": 1927,
+     "morto": 2014,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Peter_Matthiessen"
+    }
    }
   },
   {
@@ -1343,11 +2678,35 @@
    "mese": 5,
    "giorno": 24,
    "fonte_data": "wikipedia",
-   "sbn": {
-    "edizioni": 0,
-    "ultimo": null,
-    "dal_2000": 0,
-    "trovato": false
+   "scheda": {
+    "it": {
+     "desc": "religioso, poeta e drammaturgo spagnolo",
+     "paesi": [
+      "Spagna"
+     ],
+     "opere": [
+      "Soledades",
+      "Fábula de Píramo y Tisbe"
+     ],
+     "nato": 1561,
+     "morto": 1627,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Luis_de_G%C3%B3ngora"
+    },
+    "en": {
+     "desc": "Spanish Baroque lyric poet (1561-1627)",
+     "paesi": [
+      "Spain"
+     ],
+     "opere": [
+      "Soledades",
+      "Fábula de Píramo y Tisbe"
+     ],
+     "nato": 1561,
+     "morto": 1627,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Luis_de_G%C3%B3ngora"
+    }
    }
   },
   {
@@ -1364,11 +2723,33 @@
    "mese": 5,
    "giorno": 25,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 131,
-    "ultimo": 2022,
-    "dal_2000": 94,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "scrittore statunitense",
+     "paesi": [
+      "Stati Uniti"
+     ],
+     "opere": [
+      "Bourne Trilogy"
+     ],
+     "nato": 1927,
+     "morto": 2001,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Robert_Ludlum"
+    },
+    "en": {
+     "desc": "American novelist (1927–2001)",
+     "paesi": [
+      "United States"
+     ],
+     "opere": [
+      "Bourne Trilogy"
+     ],
+     "nato": 1927,
+     "morto": 2001,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Robert_Ludlum"
+    }
    }
   },
   {
@@ -1385,11 +2766,37 @@
    "mese": 6,
    "giorno": 1,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 97,
-    "ultimo": 2023,
-    "dal_2000": 33,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "filosofo e pedagogista statunitense",
+     "paesi": [
+      "Stati Uniti"
+     ],
+     "opere": [
+      "Democrazia e educazione",
+      "Esperienza e educazione",
+      "The Public and its Problems"
+     ],
+     "nato": 1859,
+     "morto": 1952,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/John_Dewey"
+    },
+    "en": {
+     "desc": "American philosopher, psychologist, and educational reformer (1859–1952)",
+     "paesi": [
+      "United States"
+     ],
+     "opere": [
+      "The Public and its Problems",
+      "Democracy and Education",
+      "Experience and Education"
+     ],
+     "nato": 1859,
+     "morto": 1952,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/John_Dewey"
+    }
    }
   },
   {
@@ -1405,13 +2812,33 @@
    "pagine": 31,
    "mese": 6,
    "giorno": 1,
-   "sbn": {
-    "edizioni": 4,
-    "ultimo": 1983,
-    "dal_2000": 0,
-    "trovato": true
-   },
-   "fonte_data": "wikidata+wikipedia"
+   "fonte_data": "wikidata+wikipedia",
+   "scheda": {
+    "it": {
+     "desc": "storico, grecista, filologo e filosofo libero pensatore irlandese",
+     "paesi": [
+      "Regno Unito di Gran Bretagna e Irlanda",
+      "Regno Unito"
+     ],
+     "opere": [],
+     "nato": 1861,
+     "morto": 1927,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/John_Bagnell_Bury"
+    },
+    "en": {
+     "desc": "Anglo-Irish historian and classical scholar (1861–1927)",
+     "paesi": [
+      "United Kingdom of Great Britain and Ireland",
+      "United Kingdom"
+     ],
+     "opere": [],
+     "nato": 1861,
+     "morto": 1927,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/J._B._Bury"
+    }
+   }
   },
   {
    "tipo": "nascita",
@@ -1427,11 +2854,37 @@
    "mese": 6,
    "giorno": 7,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 21,
-    "ultimo": 2023,
-    "dal_2000": 21,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "scrittore e saggista turco",
+     "paesi": [
+      "Turchia"
+     ],
+     "opere": [
+      "La nuova vita",
+      "Cevdet Bey and His Sons",
+      "Il museo dell'innocenza"
+     ],
+     "nato": 1952,
+     "morto": null,
+     "nobel": 2006,
+     "wiki": "https://it.wikipedia.org/wiki/Orhan_Pamuk"
+    },
+    "en": {
+     "desc": "Turkish novelist, academic and Nobel laureate (born 1952)",
+     "paesi": [
+      "Turkey"
+     ],
+     "opere": [
+      "The New Life",
+      "Cevdet Bey and His Sons",
+      "The Black Book"
+     ],
+     "nato": 1952,
+     "morto": null,
+     "nobel": 2006,
+     "wiki": "https://en.wikipedia.org/wiki/Orhan_Pamuk"
+    }
    }
   },
   {
@@ -1448,11 +2901,35 @@
    "mese": 6,
    "giorno": 10,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 8,
-    "ultimo": 1917,
-    "dal_2000": 2,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "poeta spagnolo",
+     "paesi": [
+      "Spagna"
+     ],
+     "opere": [
+      "L'Atlàntida",
+      "Canigó"
+     ],
+     "nato": 1845,
+     "morto": 1902,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Jacint_Verdaguer"
+    },
+    "en": {
+     "desc": "Catalan writer and poet (1845-1902)",
+     "paesi": [
+      "Spain"
+     ],
+     "opere": [
+      "Canigó",
+      "L'Atlàntida"
+     ],
+     "nato": 1845,
+     "morto": 1902,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Jacint_Verdaguer"
+    }
    }
   },
   {
@@ -1469,11 +2946,31 @@
    "mese": 6,
    "giorno": 10,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 0,
-    "ultimo": null,
-    "dal_2000": 0,
-    "trovato": false
+   "scheda": {
+    "it": {
+     "desc": "scrittrice russa",
+     "paesi": [
+      "Unione Sovietica",
+      "Russia"
+     ],
+     "opere": [],
+     "nato": 1952,
+     "morto": null,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Guzal%27_Sitdykova"
+    },
+    "en": {
+     "desc": "Bashkir writer (born 1952)",
+     "paesi": [
+      "Soviet Union",
+      "Russia"
+     ],
+     "opere": [],
+     "nato": 1952,
+     "morto": null,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Guzal_Sitdykowa"
+    }
    }
   },
   {
@@ -1490,11 +2987,29 @@
    "mese": 6,
    "giorno": 11,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 1,
-    "ultimo": 2016,
-    "dal_2000": 1,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "poetessa britannica che ha scritto in francese",
+     "paesi": [
+      "Regno Unito di Gran Bretagna e Irlanda"
+     ],
+     "opere": [],
+     "nato": 1877,
+     "morto": 1909,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Ren%C3%A9e_Vivien"
+    },
+    "en": {
+     "desc": "British poet who wrote in French",
+     "paesi": [
+      "United Kingdom of Great Britain and Ireland"
+     ],
+     "opere": [],
+     "nato": 1877,
+     "morto": 1909,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Ren%C3%A9e_Vivien"
+    }
    }
   },
   {
@@ -1511,11 +3026,31 @@
    "mese": 6,
    "giorno": 11,
    "fonte_data": "wikidata",
-   "sbn": {
-    "edizioni": 0,
-    "ultimo": null,
-    "dal_2000": 0,
-    "trovato": false
+   "scheda": {
+    "it": {
+     "desc": "scrittore polacco",
+     "paesi": [
+      "Impero russo",
+      "Polonia"
+     ],
+     "opere": [],
+     "nato": 1852,
+     "morto": 1915,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Isacco_Leyb_Peretz"
+    },
+    "en": {
+     "desc": "Yiddish language author and playwright (1852–1915)",
+     "paesi": [
+      "Russian Empire",
+      "Poland"
+     ],
+     "opere": [],
+     "nato": 1852,
+     "morto": 1915,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/I._L._Peretz"
+    }
    }
   },
   {
@@ -1532,11 +3067,33 @@
    "mese": 6,
    "giorno": 12,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 91,
-    "ultimo": 2021,
-    "dal_2000": 62,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "scrittrice svizzera",
+     "paesi": [
+      "Svizzera"
+     ],
+     "opere": [
+      "Heidi"
+     ],
+     "nato": 1827,
+     "morto": 1901,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Johanna_Spyri"
+    },
+    "en": {
+     "desc": "Swiss writer (1827–1901)",
+     "paesi": [
+      "Switzerland"
+     ],
+     "opere": [
+      "Heidi"
+     ],
+     "nato": 1827,
+     "morto": 1901,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Johanna_Spyri"
+    }
    }
   },
   {
@@ -1553,11 +3110,29 @@
    "mese": 6,
    "giorno": 12,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 5,
-    "ultimo": 1923,
-    "dal_2000": 5,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "scrittrice, giornalista e filosofa britannica",
+     "paesi": [
+      "Regno Unito di Gran Bretagna e Irlanda"
+     ],
+     "opere": [],
+     "nato": 1802,
+     "morto": 1876,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Harriet_Martineau"
+    },
+    "en": {
+     "desc": "English writer and sociologist (1802–1876)",
+     "paesi": [
+      "United Kingdom of Great Britain and Ireland"
+     ],
+     "opere": [],
+     "nato": 1802,
+     "morto": 1876,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Harriet_Martineau"
+    }
    }
   },
   {
@@ -1573,13 +3148,37 @@
    "pagine": 83,
    "mese": 6,
    "giorno": 14,
-   "sbn": {
-    "edizioni": 158,
-    "ultimo": 2022,
-    "dal_2000": 80,
-    "trovato": true
-   },
-   "fonte_data": "wikipedia"
+   "fonte_data": "wikipedia",
+   "scheda": {
+    "it": {
+     "desc": "scrittore e giornalista britannico (1859-1927)",
+     "paesi": [
+      "Regno Unito di Gran Bretagna e Irlanda"
+     ],
+     "opere": [
+      "Tre uomini a zonzo",
+      "Tre uomini in barca"
+     ],
+     "nato": 1859,
+     "morto": 1927,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Jerome_K._Jerome"
+    },
+    "en": {
+     "desc": "English humorist (1859-1927)",
+     "paesi": [
+      "United Kingdom of Great Britain and Ireland"
+     ],
+     "opere": [
+      "Three Men on the Bummel",
+      "Three Men in a Boat"
+     ],
+     "nato": 1859,
+     "morto": 1927,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Jerome_K._Jerome"
+    }
+   }
   },
   {
    "tipo": "nascita",
@@ -1595,11 +3194,31 @@
    "mese": 6,
    "giorno": 15,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 18,
-    "ultimo": 1970,
-    "dal_2000": 5,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "psicologo e psicoanalista tedesco",
+     "paesi": [
+      "Germania",
+      "Stati Uniti"
+     ],
+     "opere": [],
+     "nato": 1902,
+     "morto": 1994,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Erik_Erikson"
+    },
+    "en": {
+     "desc": "American German-born psychoanalyst & essayist",
+     "paesi": [
+      "Germany",
+      "United States"
+     ],
+     "opere": [],
+     "nato": 1902,
+     "morto": 1994,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Erik_Erikson"
+    }
    }
   },
   {
@@ -1616,11 +3235,29 @@
    "mese": 6,
    "giorno": 18,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 11,
-    "ultimo": 1897,
-    "dal_2000": 7,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "scrittore inglese",
+     "paesi": [
+      "Regno Unito di Gran Bretagna e Irlanda"
+     ],
+     "opere": [],
+     "nato": 1835,
+     "morto": 1902,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Samuel_Butler"
+    },
+    "en": {
+     "desc": "English novelist and critic (1835–1902)",
+     "paesi": [
+      "United Kingdom of Great Britain and Ireland"
+     ],
+     "opere": [],
+     "nato": 1835,
+     "morto": 1902,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Samuel_Butler_(novelist)"
+    }
    }
   },
   {
@@ -1637,11 +3274,37 @@
    "mese": 6,
    "giorno": 18,
    "fonte_data": "wikipedia",
-   "sbn": {
-    "edizioni": 0,
-    "ultimo": null,
-    "dal_2000": 0,
-    "trovato": false
+   "scheda": {
+    "it": {
+     "desc": "sociologo e filosofo iraniano",
+     "paesi": [
+      "Iran"
+     ],
+     "opere": [
+      "Fatemeh Is Fatemeh",
+      "Horr",
+      "Red Shi'ism vs. Black Shi'ism"
+     ],
+     "nato": 1933,
+     "morto": 1977,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Ali_Shariati"
+    },
+    "en": {
+     "desc": "Iranian writer, scholar of Islam, and political activist(1933-1977)",
+     "paesi": [
+      "Iran"
+     ],
+     "opere": [
+      "Hubut in Kavir",
+      "Guftuguhaye Tanha’i",
+      "Ba Mukhatabhaye Ashna"
+     ],
+     "nato": 1933,
+     "morto": 1977,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Ali_Shariati"
+    }
    }
   },
   {
@@ -1658,11 +3321,37 @@
    "mese": 6,
    "giorno": 20,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 10,
-    "ultimo": 2017,
-    "dal_2000": 8,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "scrittore indiano",
+     "paesi": [
+      "India"
+     ],
+     "opere": [
+      "An Equal Music",
+      "Il ragazzo giusto (romanzo)",
+      "Golden Gate (romanzo)"
+     ],
+     "nato": 1952,
+     "morto": null,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Vikram_Seth"
+    },
+    "en": {
+     "desc": "Indian novelist and poet",
+     "paesi": [
+      "India"
+     ],
+     "opere": [
+      "A Suitable Boy",
+      "An Equal Music",
+      "The Golden Gate"
+     ],
+     "nato": 1952,
+     "morto": null,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Vikram_Seth"
+    }
    }
   },
   {
@@ -1679,11 +3368,37 @@
    "mese": 6,
    "giorno": 21,
    "fonte_data": "verifica: Studenti.it e Wissen.de (21 giugno 1527)",
-   "sbn": {
-    "edizioni": 708,
-    "ultimo": 2022,
-    "dal_2000": 426,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "politico, politologo, storico, drammaturgo, scrittore, diplomatico e filosofo italiano (1469-1527)",
+     "paesi": [
+      "Repubblica di Firenze"
+     ],
+     "opere": [
+      "Il principe",
+      "Capitoli",
+      "Discorsi sopra la prima Deca di Tito Livio"
+     ],
+     "nato": 1469,
+     "morto": 1527,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Niccol%C3%B2_Machiavelli"
+    },
+    "en": {
+     "desc": "Florentine statesman, diplomat, and political theorist (1469–1527)",
+     "paesi": [
+      "Republic of Florence"
+     ],
+     "opere": [
+      "The Prince",
+      "Capitoli",
+      "Discourses on Livy"
+     ],
+     "nato": 1469,
+     "morto": 1527,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Niccol%C3%B2_Machiavelli"
+    }
    }
   },
   {
@@ -1700,11 +3415,26 @@
    "mese": 6,
    "giorno": 28,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 84,
-    "ultimo": 2022,
-    "dal_2000": 47,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": null,
+     "generi": [
+      "fantascienza"
+     ],
+     "lingua": "inglese",
+     "titolo_orig": "A Sound of Thunder",
+     "wiki": "https://it.wikipedia.org/wiki/Rumore_di_tuono"
+    },
+    "en": {
+     "desc": "short story by Ray Bradbury",
+     "generi": [
+      "science fiction",
+      "time-travel fiction"
+     ],
+     "lingua": "English",
+     "titolo_orig": "A Sound of Thunder",
+     "wiki": "https://en.wikipedia.org/wiki/A_Sound_of_Thunder"
+    }
    }
   },
   {
@@ -1721,11 +3451,39 @@
    "mese": 7,
    "giorno": 2,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 287,
-    "ultimo": 2022,
-    "dal_2000": 134,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "scrittore, poeta e aforista tedesco svizzero",
+     "paesi": [
+      "Impero tedesco",
+      "Germania"
+     ],
+     "opere": [
+      "Il giuoco delle perle di vetro",
+      "Siddharta",
+      "Peter Camenzind"
+     ],
+     "nato": 1877,
+     "morto": 1962,
+     "nobel": 1946,
+     "wiki": "https://it.wikipedia.org/wiki/Hermann_Hesse"
+    },
+    "en": {
+     "desc": "Nobel Prize winning German-Swiss poet, novelist and painter (1877–1962)",
+     "paesi": [
+      "German Empire",
+      "Germany"
+     ],
+     "opere": [
+      "Peter Camenzind",
+      "Steppenwolf",
+      "Siddhartha"
+     ],
+     "nato": 1877,
+     "morto": 1962,
+     "nobel": 1946,
+     "wiki": "https://en.wikipedia.org/wiki/Hermann_Hesse"
+    }
    }
   },
   {
@@ -1742,11 +3500,39 @@
    "mese": 7,
    "giorno": 2,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 71,
-    "ultimo": 2021,
-    "dal_2000": 44,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "scrittore, saggista e critico letterario russo (1899-1977)",
+     "paesi": [
+      "Impero russo",
+      "Stati Uniti"
+     ],
+     "opere": [
+      "Ada o ardore",
+      "Lolita",
+      "La difesa di Lužin"
+     ],
+     "nato": 1899,
+     "morto": 1977,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Vladimir_Nabokov"
+    },
+    "en": {
+     "desc": "Russian-American novelist, lepidopterist, professor (1899–1977)",
+     "paesi": [
+      "Russian Empire",
+      "United States"
+     ],
+     "opere": [
+      "Ada or Ardor: A Family Chronicle",
+      "Lolita",
+      "The Defense"
+     ],
+     "nato": 1899,
+     "morto": 1977,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Vladimir_Nabokov"
+    }
    }
   },
   {
@@ -1763,11 +3549,37 @@
    "mese": 7,
    "giorno": 4,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 30,
-    "ultimo": 1969,
-    "dal_2000": 21,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "drammaturgo e sceneggiatore statunitense",
+     "paesi": [
+      "Stati Uniti"
+     ],
+     "opere": [
+      "Goodbye amore mio!",
+      "La strana coppia",
+      "Come Blow Your Horn"
+     ],
+     "nato": 1927,
+     "morto": 2018,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Neil_Simon"
+    },
+    "en": {
+     "desc": "American playwright, writer, and academic (1927–2018)",
+     "paesi": [
+      "United States"
+     ],
+     "opere": [
+      "The Odd Couple",
+      "The Goodbye Girl",
+      "Come Blow Your Horn"
+     ],
+     "nato": 1927,
+     "morto": 2018,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Neil_Simon"
+    }
    }
   },
   {
@@ -1784,11 +3596,37 @@
    "mese": 7,
    "giorno": 6,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 4,
-    "ultimo": 2020,
-    "dal_2000": 4,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "scrittrice e critica letteraria britannica (1952-2022)",
+     "paesi": [
+      "Regno Unito"
+     ],
+     "opere": [
+      "Anna Bolena, una questione di famiglia",
+      "Wolf Hall",
+      "Every Day is Mother's Day"
+     ],
+     "nato": 1952,
+     "morto": 2022,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Hilary_Mantel"
+    },
+    "en": {
+     "desc": "British writer (1952–2022)",
+     "paesi": [
+      "United Kingdom"
+     ],
+     "opere": [
+      "Wolf Hall",
+      "Bring Up the Bodies",
+      "Every Day is Mother's Day"
+     ],
+     "nato": 1952,
+     "morto": 2022,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Hilary_Mantel"
+    }
    }
   },
   {
@@ -1805,11 +3643,29 @@
    "mese": 7,
    "giorno": 10,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 10,
-    "ultimo": 2021,
-    "dal_2000": 5,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "scrittore cubano",
+     "paesi": [
+      "Cuba"
+     ],
+     "opere": [],
+     "nato": 1902,
+     "morto": 1989,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Nicol%C3%A1s_Guill%C3%A9n"
+    },
+    "en": {
+     "desc": "Cuban poet, journalist, political activist, and writer (1902–1989)",
+     "paesi": [
+      "Cuba"
+     ],
+     "opere": [],
+     "nato": 1902,
+     "morto": 1989,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Nicol%C3%A1s_Guill%C3%A9n"
+    }
    }
   },
   {
@@ -1826,11 +3682,33 @@
    "mese": 7,
    "giorno": 14,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 0,
-    "ultimo": null,
-    "dal_2000": 0,
-    "trovato": false
+   "scheda": {
+    "it": {
+     "desc": "scrittore statunitense",
+     "paesi": [
+      "Stati Uniti"
+     ],
+     "opere": [
+      "La mano sinistra di Dio"
+     ],
+     "nato": 1952,
+     "morto": null,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Jeff_Lindsay"
+    },
+    "en": {
+     "desc": "American playwright and crime novelist (born 1952)",
+     "paesi": [
+      "United States"
+     ],
+     "opere": [
+      "Darkly Dreaming Dexter"
+     ],
+     "nato": 1952,
+     "morto": null,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Jeff_Lindsay"
+    }
    }
   },
   {
@@ -1847,11 +3725,29 @@
    "mese": 7,
    "giorno": 16,
    "fonte_data": "wikipedia",
-   "sbn": {
-    "edizioni": 19,
-    "ultimo": 2020,
-    "dal_2000": 3,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "medico, sociologo e psicologo sovietico",
+     "paesi": [
+      "Unione Sovietica"
+     ],
+     "opere": [],
+     "nato": 1902,
+     "morto": 1977,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Aleksandr_Romanovi%C4%8D_Lurija"
+    },
+    "en": {
+     "desc": "Soviet psychologist (1902–1977)",
+     "paesi": [
+      "Soviet Union"
+     ],
+     "opere": [],
+     "nato": 1902,
+     "morto": 1977,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Alexander_Luria"
+    }
    }
   },
   {
@@ -1868,11 +3764,25 @@
    "mese": 7,
    "giorno": 17,
    "fonte_data": "wikipedia",
-   "sbn": {
-    "edizioni": 107,
-    "ultimo": 2023,
-    "dal_2000": 73,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "racconto scritto da Howard Phillips Lovecraft",
+     "generi": [
+      "orrore"
+     ],
+     "lingua": "inglese",
+     "titolo_orig": "Pickman's Model",
+     "wiki": "https://it.wikipedia.org/wiki/Il_modello_di_Pickman"
+    },
+    "en": {
+     "desc": "short story by H. P. Lovecraft",
+     "generi": [
+      "horror fiction"
+     ],
+     "lingua": "English",
+     "titolo_orig": "Pickman's Model",
+     "wiki": "https://en.wikipedia.org/wiki/Pickman%27s_Model"
+    }
    }
   },
   {
@@ -1889,11 +3799,31 @@
    "mese": 7,
    "giorno": 20,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 1,
-    "ultimo": 2016,
-    "dal_2000": 1,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "poetessa iraniana",
+     "paesi": [
+      "Stato Imperiale dell'Iran",
+      "Iran"
+     ],
+     "opere": [],
+     "nato": 1927,
+     "morto": 2014,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Simin_Behbah%C4%81ni"
+    },
+    "en": {
+     "desc": "Iranian poet (1927-2014)",
+     "paesi": [
+      "Pahlavi Iran",
+      "Iran"
+     ],
+     "opere": [],
+     "nato": 1927,
+     "morto": 2014,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Simin_Behbahani"
+    }
    }
   },
   {
@@ -1910,11 +3840,37 @@
    "mese": 7,
    "giorno": 24,
    "fonte_data": "wikipedia",
-   "sbn": {
-    "edizioni": 1182,
-    "ultimo": 2023,
-    "dal_2000": 721,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "scrittore francese",
+     "paesi": [
+      "Francia"
+     ],
+     "opere": [
+      "I tre moschettieri",
+      "Il conte di Montecristo",
+      "Il visconte di Bragelonne"
+     ],
+     "nato": 1802,
+     "morto": 1870,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Alexandre_Dumas_padre"
+    },
+    "en": {
+     "desc": "French writer and dramatist (1802–1870)",
+     "paesi": [
+      "France"
+     ],
+     "opere": [
+      "Ange Pitou",
+      "The Three Musketeers",
+      "The Count of Monte Cristo"
+     ],
+     "nato": 1802,
+     "morto": 1870,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Alexandre_Dumas"
+    }
    }
   },
   {
@@ -1930,13 +3886,39 @@
    "pagine": 96,
    "mese": 7,
    "giorno": 24,
-   "sbn": {
-    "edizioni": 15,
-    "ultimo": 2022,
-    "dal_2000": 8,
-    "trovato": true
-   },
-   "fonte_data": "wikidata+wikipedia"
+   "fonte_data": "wikidata+wikipedia",
+   "scheda": {
+    "it": {
+     "desc": "scrittore e poeta giapponese",
+     "paesi": [
+      "Giappone"
+     ],
+     "opere": [
+      "Il naso (racconto di Akutagawa)",
+      "Spinning Gears",
+      "Rashōmon"
+     ],
+     "nato": 1892,
+     "morto": 1927,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Ry%C5%ABnosuke_Akutagawa"
+    },
+    "en": {
+     "desc": "Japanese writer (1892–1927)",
+     "paesi": [
+      "Japan"
+     ],
+     "opere": [
+      "The Nose",
+      "Spinning Gears",
+      "Hell Screen"
+     ],
+     "nato": 1892,
+     "morto": 1927,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Ry%C5%ABnosuke_Akutagawa"
+    }
+   }
   },
   {
    "tipo": "nascita",
@@ -1952,11 +3934,33 @@
    "mese": 7,
    "giorno": 25,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 1,
-    "ultimo": 2013,
-    "dal_2000": 1,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "scrittore e filosofo statunitense",
+     "paesi": [
+      "Stati Uniti"
+     ],
+     "opere": [
+      "The Ordeal of Change"
+     ],
+     "nato": 1902,
+     "morto": 1983,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Eric_Hoffer"
+    },
+    "en": {
+     "desc": "American philosopher (1902–1983)",
+     "paesi": [
+      "United States"
+     ],
+     "opere": [
+      "The Ordeal of Change"
+     ],
+     "nato": 1902,
+     "morto": 1983,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Eric_Hoffer"
+    }
    }
   },
   {
@@ -1972,13 +3976,33 @@
    "pagine": 33,
    "mese": 7,
    "giorno": 25,
-   "sbn": {
-    "edizioni": 265,
-    "ultimo": 2022,
-    "dal_2000": 173,
-    "trovato": true
-   },
-   "fonte_data": "wikipedia"
+   "fonte_data": "wikipedia",
+   "scheda": {
+    "it": {
+     "desc": "scrittrice e giornalista italiana (1856-1927)",
+     "paesi": [
+      "Regno delle Due Sicilie",
+      "Regno d'Italia"
+     ],
+     "opere": [],
+     "nato": 1856,
+     "morto": 1927,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Matilde_Serao"
+    },
+    "en": {
+     "desc": "Italian journalist and writer, editor (1856–1927)",
+     "paesi": [
+      "Kingdom of the Two Sicilies",
+      "Kingdom of Italy"
+     ],
+     "opere": [],
+     "nato": 1856,
+     "morto": 1927,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Matilde_Serao"
+    }
+   }
   },
   {
    "tipo": "nascita",
@@ -1994,11 +4018,39 @@
    "mese": 7,
    "giorno": 28,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 129,
-    "ultimo": 2022,
-    "dal_2000": 60,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "filosofo ed epistemologo austriaco naturalizzato britannico (1902-1994)",
+     "paesi": [
+      "Cisleitania",
+      "Regno Unito di Gran Bretagna e Irlanda"
+     ],
+     "opere": [
+      "Unended Quest",
+      "The Self and Its Brain",
+      "Objective Knowledge"
+     ],
+     "nato": 1902,
+     "morto": 1994,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Karl_Popper"
+    },
+    "en": {
+     "desc": "Austrian-British philosopher of science and social and política e falsificationism and for criticism of Plato, Hegel and Marx as totalitarian opponents of open society (1902-1994)",
+     "paesi": [
+      "United Kingdom of Great Britain and Ireland",
+      "Cisleithania"
+     ],
+     "opere": [
+      "Unended Quest",
+      "The Self and Its Brain",
+      "Objective Knowledge"
+     ],
+     "nato": 1902,
+     "morto": 1994,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Karl_Popper"
+    }
    }
   },
   {
@@ -2015,11 +4067,37 @@
    "mese": 7,
    "giorno": 28,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 1,
-    "ultimo": 1975,
-    "dal_2000": 0,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "poeta statunitense",
+     "paesi": [
+      "Stati Uniti"
+     ],
+     "opere": [
+      "A Wave",
+      "Chinese Whispers",
+      "Flow Chart"
+     ],
+     "nato": 1927,
+     "morto": 2017,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/John_Ashbery"
+    },
+    "en": {
+     "desc": "poet from the United States of America (1927–2017)",
+     "paesi": [
+      "United States"
+     ],
+     "opere": [
+      "A Wave",
+      "The Tennis Court Oath",
+      "Where Shall I Wander"
+     ],
+     "nato": 1927,
+     "morto": 2017,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/John_Ashbery"
+    }
    }
   },
   {
@@ -2036,11 +4114,37 @@
    "mese": 7,
    "giorno": 29,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 3,
-    "ultimo": 1960,
-    "dal_2000": 3,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "scrittore, poeta, drammaturgo e saggista olandese",
+     "paesi": [
+      "Regno dei Paesi Bassi"
+     ],
+     "opere": [
+      "L'attentato",
+      "La scoperta del cielo",
+      "The Stone Bridal Bed"
+     ],
+     "nato": 1927,
+     "morto": 2010,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Harry_Mulisch"
+    },
+    "en": {
+     "desc": "Dutch writer (1927–2010)",
+     "paesi": [
+      "Kingdom of the Netherlands"
+     ],
+     "opere": [
+      "The Discovery of Heaven",
+      "The Assault",
+      "The Stone Bridal Bed"
+     ],
+     "nato": 1927,
+     "morto": 2010,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Harry_Mulisch"
+    }
    }
   },
   {
@@ -2056,13 +4160,33 @@
    "pagine": 37,
    "mese": 8,
    "giorno": 3,
-   "sbn": {
-    "edizioni": 0,
-    "ultimo": null,
-    "dal_2000": 0,
-    "trovato": false
-   },
-   "fonte_data": "wikidata+wikipedia"
+   "fonte_data": "wikidata+wikipedia",
+   "scheda": {
+    "it": {
+     "desc": "filosofo e psicologo britannico",
+     "paesi": [
+      "Regno Unito",
+      "Stati Uniti"
+     ],
+     "opere": [],
+     "nato": 1867,
+     "morto": 1927,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Edward_Titchener"
+    },
+    "en": {
+     "desc": "American psychologist (1867–1927)",
+     "paesi": [
+      "United Kingdom",
+      "United States"
+     ],
+     "opere": [],
+     "nato": 1867,
+     "morto": 1927,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Edward_B._Titchener"
+    }
+   }
   },
   {
    "tipo": "nascita",
@@ -2078,11 +4202,35 @@
    "mese": 8,
    "giorno": 8,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 53,
-    "ultimo": 2022,
-    "dal_2000": 50,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "scrittore norvegese",
+     "paesi": [
+      "Norvegia"
+     ],
+     "opere": [
+      "Il mondo di Sofia",
+      "L'enigma del solitario"
+     ],
+     "nato": 1952,
+     "morto": null,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Jostein_Gaarder"
+    },
+    "en": {
+     "desc": "Norwegian author (born 1952)",
+     "paesi": [
+      "Norway"
+     ],
+     "opere": [
+      "Sophie's World",
+      "The Solitaire Mystery"
+     ],
+     "nato": 1952,
+     "morto": null,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Jostein_Gaarder"
+    }
    }
   },
   {
@@ -2099,11 +4247,33 @@
    "mese": 8,
    "giorno": 9,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 5,
-    "ultimo": 2021,
-    "dal_2000": 5,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "autore di fantascienza statunitense (1927-2014)",
+     "paesi": [
+      "Stati Uniti"
+     ],
+     "opere": [
+      "Fiori per Algernon"
+     ],
+     "nato": 1927,
+     "morto": 2014,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Daniel_Keyes"
+    },
+    "en": {
+     "desc": "American author",
+     "paesi": [
+      "United States"
+     ],
+     "opere": [
+      "Flowers for Algernon"
+     ],
+     "nato": 1927,
+     "morto": 2014,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Daniel_Keyes"
+    }
    }
   },
   {
@@ -2120,11 +4290,39 @@
    "mese": 8,
    "giorno": 12,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 28,
-    "ultimo": 2020,
-    "dal_2000": 16,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "poeta, incisore, filosofo e pittore inglese",
+     "paesi": [
+      "Regno Unito di Gran Bretagna e Irlanda",
+      "Regno di Gran Bretagna"
+     ],
+     "opere": [
+      "Jerusalem The Emanation of the Giant Albion",
+      "Milton",
+      "Jerusalem"
+     ],
+     "nato": 1757,
+     "morto": 1827,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/William_Blake"
+    },
+    "en": {
+     "desc": "English poet and artist (1757–1827)",
+     "paesi": [
+      "United Kingdom of Great Britain and Ireland",
+      "Kingdom of Great Britain"
+     ],
+     "opere": [
+      "Vala, or The Four Zoas",
+      "Jerusalem The Emanation of the Giant Albion",
+      "Milton"
+     ],
+     "nato": 1757,
+     "morto": 1827,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/William_Blake"
+    }
    }
   },
   {
@@ -2140,13 +4338,31 @@
    "pagine": 31,
    "mese": 8,
    "giorno": 13,
-   "sbn": {
-    "edizioni": 61,
-    "ultimo": 1934,
-    "dal_2000": 30,
-    "trovato": true
-   },
-   "fonte_data": "wikidata+wikipedia"
+   "fonte_data": "wikidata+wikipedia",
+   "scheda": {
+    "it": {
+     "desc": "scrittore statunitense (1878-1927)",
+     "paesi": [
+      "Stati Uniti"
+     ],
+     "opere": [],
+     "nato": 1878,
+     "morto": 1927,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/James_Oliver_Curwood"
+    },
+    "en": {
+     "desc": "American writer and conservationist (1878–1927)",
+     "paesi": [
+      "United States"
+     ],
+     "opere": [],
+     "nato": 1878,
+     "morto": 1927,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/James_Oliver_Curwood"
+    }
+   }
   },
   {
    "tipo": "morte",
@@ -2162,11 +4378,29 @@
    "mese": 8,
    "giorno": 14,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 19,
-    "ultimo": 2020,
-    "dal_2000": 3,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "medico, sociologo e psicologo sovietico",
+     "paesi": [
+      "Unione Sovietica"
+     ],
+     "opere": [],
+     "nato": 1902,
+     "morto": 1977,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Aleksandr_Romanovi%C4%8D_Lurija"
+    },
+    "en": {
+     "desc": "Soviet psychologist (1902–1977)",
+     "paesi": [
+      "Soviet Union"
+     ],
+     "opere": [],
+     "nato": 1902,
+     "morto": 1977,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Alexander_Luria"
+    }
    }
   },
   {
@@ -2183,11 +4417,33 @@
    "mese": 8,
    "giorno": 16,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 60,
-    "ultimo": 2023,
-    "dal_2000": 53,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "scrittrice inglese",
+     "paesi": [
+      "Regno Unito"
+     ],
+     "opere": [
+      "opera letteraria"
+     ],
+     "nato": 1902,
+     "morto": 1974,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Georgette_Heyer"
+    },
+    "en": {
+     "desc": "British historical romance and detective fiction novelist (1902–1974)",
+     "paesi": [
+      "United Kingdom"
+     ],
+     "opere": [
+      "literary work"
+     ],
+     "nato": 1902,
+     "morto": 1974,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Georgette_Heyer"
+    }
    }
   },
   {
@@ -2204,11 +4460,29 @@
    "mese": 8,
    "giorno": 18,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 8,
-    "ultimo": 2017,
-    "dal_2000": 4,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "antropologo statunitense",
+     "paesi": [
+      "Stati Uniti"
+     ],
+     "opere": [],
+     "nato": 1927,
+     "morto": 2001,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Marvin_Harris"
+    },
+    "en": {
+     "desc": "American anthropologist (1927-2001)",
+     "paesi": [
+      "United States"
+     ],
+     "opere": [],
+     "nato": 1927,
+     "morto": 2001,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Marvin_Harris"
+    }
    }
   },
   {
@@ -2225,11 +4499,26 @@
    "mese": 8,
    "giorno": 18,
    "fonte_data": "wikipedia",
-   "sbn": {
-    "edizioni": 44,
-    "ultimo": 2022,
-    "dal_2000": 28,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "romanzo scritto da Kurt Vonnegut",
+     "generi": [
+      "fantascienza"
+     ],
+     "lingua": "inglese",
+     "titolo_orig": "Player Piano",
+     "wiki": "https://it.wikipedia.org/wiki/Piano_meccanico_(romanzo)"
+    },
+    "en": {
+     "desc": "1952 novel by Kurt Vonnegut",
+     "generi": [
+      "science fiction",
+      "dystopian fiction"
+     ],
+     "lingua": "English",
+     "titolo_orig": "Player Piano",
+     "wiki": "https://en.wikipedia.org/wiki/Player_Piano_(novel)"
+    }
    }
   },
   {
@@ -2246,11 +4535,33 @@
    "mese": 8,
    "giorno": 19,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 3,
-    "ultimo": 1981,
-    "dal_2000": 0,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "poeta statunitense",
+     "paesi": [
+      "Stati Uniti"
+     ],
+     "opere": [
+      "Speak Low"
+     ],
+     "nato": 1902,
+     "morto": 1971,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Ogden_Nash"
+    },
+    "en": {
+     "desc": "American poet (1902–1971)",
+     "paesi": [
+      "United States"
+     ],
+     "opere": [
+      "Speak Low"
+     ],
+     "nato": 1902,
+     "morto": 1971,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Ogden_Nash"
+    }
    }
   },
   {
@@ -2267,11 +4578,29 @@
    "mese": 8,
    "giorno": 20,
    "fonte_data": "wikipedia",
-   "sbn": {
-    "edizioni": 28,
-    "ultimo": 1932,
-    "dal_2000": 16,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "scrittore belga",
+     "paesi": [
+      "Belgio"
+     ],
+     "opere": [],
+     "nato": 1827,
+     "morto": 1879,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Charles_De_Coster"
+    },
+    "en": {
+     "desc": "Belgian novelist (1827–1879)",
+     "paesi": [
+      "Belgium"
+     ],
+     "opere": [],
+     "nato": 1827,
+     "morto": 1879,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Charles_De_Coster"
+    }
    }
   },
   {
@@ -2288,11 +4617,29 @@
    "mese": 8,
    "giorno": 22,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 20,
-    "ultimo": 2021,
-    "dal_2000": 14,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "storico dell'arte dello Sri Lanka",
+     "paesi": [
+      "Ceylon britannico"
+     ],
+     "opere": [],
+     "nato": 1877,
+     "morto": 1947,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Ananda_Coomaraswamy"
+    },
+    "en": {
+     "desc": "Sri Lankan Tamil metaphysician (1877–1947)",
+     "paesi": [
+      "British Ceylon"
+     ],
+     "opere": [],
+     "nato": 1877,
+     "morto": 1947,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Ananda_Coomaraswamy"
+    }
    }
   },
   {
@@ -2309,11 +4656,33 @@
    "mese": 8,
    "giorno": 23,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 23,
-    "ultimo": 1989,
-    "dal_2000": 12,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "fumettista, disegnatore e illustratore olandese",
+     "paesi": [
+      "Regno dei Paesi Bassi"
+     ],
+     "opere": [
+      "Miffy"
+     ],
+     "nato": 1927,
+     "morto": 2017,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Dick_Bruna"
+    },
+    "en": {
+     "desc": "Dutch graphic designer (1927-2017)",
+     "paesi": [
+      "Kingdom of the Netherlands"
+     ],
+     "opere": [
+      "Miffy"
+     ],
+     "nato": 1927,
+     "morto": 2017,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Dick_Bruna"
+    }
    }
   },
   {
@@ -2330,11 +4699,33 @@
    "mese": 8,
    "giorno": 24,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 63,
-    "ultimo": 2023,
-    "dal_2000": 27,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "storico francese",
+     "paesi": [
+      "Francia"
+     ],
+     "opere": [
+      "The Mediterranean and the Mediterranean World in the Age of Philip II"
+     ],
+     "nato": 1902,
+     "morto": 1985,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Fernand_Braudel"
+    },
+    "en": {
+     "desc": "French historian and leader of the Annales School",
+     "paesi": [
+      "France"
+     ],
+     "opere": [
+      "The Mediterranean and the Mediterranean World in the Age of Philip II"
+     ],
+     "nato": 1902,
+     "morto": 1985,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Fernand_Braudel"
+    }
    }
   },
   {
@@ -2351,11 +4742,37 @@
    "mese": 8,
    "giorno": 24,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 0,
-    "ultimo": null,
-    "dal_2000": 0,
-    "trovato": false
+   "scheda": {
+    "it": {
+     "desc": "scrittore statunitense",
+     "paesi": [
+      "Stati Uniti"
+     ],
+     "opere": [
+      "Crash Course",
+      "Let It Snow",
+      "Colpa delle stelle"
+     ],
+     "nato": 1977,
+     "morto": null,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/John_Green_(scrittore)"
+    },
+    "en": {
+     "desc": "American author and vlogger",
+     "paesi": [
+      "United States"
+     ],
+     "opere": [
+      "Crash Course",
+      "Let It Snow",
+      "Turtles All the Way Down"
+     ],
+     "nato": 1977,
+     "morto": null,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/John_Green"
+    }
    }
   },
   {
@@ -2372,11 +4789,37 @@
    "mese": 9,
    "giorno": 2,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 140,
-    "ultimo": 1896,
-    "dal_2000": 87,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "scrittore e saggista francese (1852－1935）",
+     "paesi": [
+      "Francia"
+     ],
+     "opere": [
+      "L'Étape",
+      "Il demone meridiano",
+      "Un Divorce"
+     ],
+     "nato": 1852,
+     "morto": 1935,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Paul_Bourget"
+    },
+    "en": {
+     "desc": "French writer, playwright and critic (1852–1935)",
+     "paesi": [
+      "France"
+     ],
+     "opere": [
+      "L'Étape",
+      "The noon demon",
+      "Un Divorce"
+     ],
+     "nato": 1852,
+     "morto": 1935,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Paul_Bourget"
+    }
    }
   },
   {
@@ -2393,11 +4836,29 @@
    "mese": 9,
    "giorno": 4,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 24,
-    "ultimo": 1969,
-    "dal_2000": 16,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "biologo, filosofo e aforista francese (1894–1977)",
+     "paesi": [
+      "Francia"
+     ],
+     "opere": [],
+     "nato": 1894,
+     "morto": 1977,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Jean_Rostand"
+    },
+    "en": {
+     "desc": "French writer (1894–1977)",
+     "paesi": [
+      "France"
+     ],
+     "opere": [],
+     "nato": 1894,
+     "morto": 1977,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Jean_Rostand"
+    }
    }
   },
   {
@@ -2414,11 +4875,37 @@
    "mese": 9,
    "giorno": 4,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 3,
-    "ultimo": 2011,
-    "dal_2000": 1,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "economista, filosofo e scrittore tedesco",
+     "paesi": [
+      "Regno Unito di Gran Bretagna e Irlanda",
+      "Germania"
+     ],
+     "opere": [
+      "Piccolo è bello",
+      "A Guide for the Perplexed"
+     ],
+     "nato": 1911,
+     "morto": 1977,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Ernst_Friedrich_Schumacher"
+    },
+    "en": {
+     "desc": "British economist (1911–1977)",
+     "paesi": [
+      "United Kingdom of Great Britain and Ireland",
+      "Germany"
+     ],
+     "opere": [
+      "Small Is Beautiful",
+      "A Guide for the Perplexed"
+     ],
+     "nato": 1911,
+     "morto": 1977,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/E._F._Schumacher"
+    }
    }
   },
   {
@@ -2435,11 +4922,27 @@
    "mese": 9,
    "giorno": 8,
    "fonte_data": "verifica: Wikipedia: il libro uscì una settimana dopo il numero di Life del 1 settembre 1952",
-   "sbn": {
-    "edizioni": 229,
-    "ultimo": 2023,
-    "dal_2000": 107,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "romanzo scritto da Ernest Hemingway",
+     "generi": [
+      "letteratura",
+      "novella"
+     ],
+     "lingua": "inglese americano",
+     "titolo_orig": "The Old Man and the Sea",
+     "wiki": "https://it.wikipedia.org/wiki/Il_vecchio_e_il_mare"
+    },
+    "en": {
+     "desc": "1952 short novel by Ernest Hemingway, written between December 1950 and February 1951",
+     "generi": [
+      "literature",
+      "novella"
+     ],
+     "lingua": "American English",
+     "titolo_orig": "The Old Man and the Sea",
+     "wiki": "https://en.wikipedia.org/wiki/The_Old_Man_and_the_Sea"
+    }
    }
   },
   {
@@ -2456,11 +4959,36 @@
    "mese": 9,
    "giorno": 10,
    "fonte_data": "verifica: Studenti.it (10 settembre 1827)",
-   "sbn": {
-    "edizioni": 1008,
-    "ultimo": 2022,
-    "dal_2000": 614,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "poeta, scrittore, drammaturgo, traduttore e critico letterario italiano (1778-1827)",
+     "paesi": [
+      "Repubblica di Venezia"
+     ],
+     "opere": [
+      "Ultime lettere di Jacopo Ortis",
+      "Dei sepolcri",
+      "Discorso sul testo della Divina Commedia"
+     ],
+     "nato": 1778,
+     "morto": 1827,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Ugo_Foscolo"
+    },
+    "en": {
+     "desc": "Italian writer and poet (1778–1827)",
+     "paesi": [
+      "Republic of Venice"
+     ],
+     "opere": [
+      "The Last Letters of Jacopo Ortis",
+      "Dei Sepolcri"
+     ],
+     "nato": 1778,
+     "morto": 1827,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Ugo_Foscolo"
+    }
    }
   },
   {
@@ -2477,11 +5005,37 @@
    "mese": 9,
    "giorno": 12,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 4,
-    "ultimo": 2010,
-    "dal_2000": 1,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "poeta statunitense",
+     "paesi": [
+      "Stati Uniti"
+     ],
+     "opere": [
+      "For the Union Dead",
+      "Life Studies",
+      "Lord Weary's Castle"
+     ],
+     "nato": 1917,
+     "morto": 1977,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Robert_Lowell"
+    },
+    "en": {
+     "desc": "American poet (1917–1977)",
+     "paesi": [
+      "United States"
+     ],
+     "opere": [
+      "For the Union Dead",
+      "Life Studies",
+      "Lord Weary's Castle"
+     ],
+     "nato": 1917,
+     "morto": 1977,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Robert_Lowell"
+    }
    }
   },
   {
@@ -2498,11 +5052,29 @@
    "mese": 9,
    "giorno": 12,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 11,
-    "ultimo": 1955,
-    "dal_2000": 7,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "storico francese",
+     "paesi": [
+      "Francia"
+     ],
+     "opere": [],
+     "nato": 1885,
+     "morto": 1952,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Ren%C3%A9_Grousset"
+    },
+    "en": {
+     "desc": "French historian (1885-1952)",
+     "paesi": [
+      "France"
+     ],
+     "opere": [],
+     "nato": 1885,
+     "morto": 1952,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Ren%C3%A9_Grousset"
+    }
    }
   },
   {
@@ -2519,11 +5091,27 @@
    "mese": 9,
    "giorno": 13,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 503,
-    "ultimo": 2023,
-    "dal_2000": 394,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "romanzo scritto da Stephen King",
+     "generi": [
+      "romanzo thriller",
+      "thriller psicologico"
+     ],
+     "lingua": "inglese",
+     "titolo_orig": "Rage",
+     "wiki": "https://it.wikipedia.org/wiki/Ossessione_(Stephen_King)"
+    },
+    "en": {
+     "desc": "1977 novel by Stephen King",
+     "generi": [
+      "psychological thriller",
+      "thriller novel"
+     ],
+     "lingua": "English",
+     "titolo_orig": "Rage",
+     "wiki": "https://en.wikipedia.org/wiki/Rage_(King_novel)"
+    }
    }
   },
   {
@@ -2540,11 +5128,37 @@
    "mese": 9,
    "giorno": 15,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 2,
-    "ultimo": 2017,
-    "dal_2000": 2,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "scrittrice nigeriana",
+     "paesi": [
+      "Nigeria"
+     ],
+     "opere": [
+      "L'ibisco viola",
+      "Americanah",
+      "Metà di un sole giallo"
+     ],
+     "nato": 1977,
+     "morto": null,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Chimamanda_Ngozi_Adichie"
+    },
+    "en": {
+     "desc": "Nigerian writer (born 1977)",
+     "paesi": [
+      "Nigeria"
+     ],
+     "opere": [
+      "Purple Hibiscus",
+      "Americanah",
+      "Half of a Yellow Sun"
+     ],
+     "nato": 1977,
+     "morto": null,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Chimamanda_Ngozi_Adichie"
+    }
    }
   },
   {
@@ -2561,11 +5175,27 @@
    "mese": 9,
    "giorno": 15,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 204,
-    "ultimo": 2022,
-    "dal_2000": 166,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "Romanzo di J.R.R. Tolkien",
+     "generi": [
+      "fantasy",
+      "mitopoiesi"
+     ],
+     "lingua": "inglese",
+     "titolo_orig": "The Silmarillion",
+     "wiki": "https://it.wikipedia.org/wiki/Il_Silmarillion"
+    },
+    "en": {
+     "desc": "collection of myths and stories written by J. R. R. Tolkien",
+     "generi": [
+      "fantasy",
+      "mythopoeia"
+     ],
+     "lingua": "English",
+     "titolo_orig": "The Silmarillion",
+     "wiki": "https://en.wikipedia.org/wiki/The_Silmarillion"
+    }
    }
   },
   {
@@ -2582,11 +5212,25 @@
    "mese": 9,
    "giorno": 15,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 74,
-    "ultimo": 2021,
-    "dal_2000": 59,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "romanzo scritto da C. S. Lewis",
+     "generi": [
+      "fantasy"
+     ],
+     "lingua": "inglese britannico",
+     "titolo_orig": "The Voyage of the Dawn Treader",
+     "wiki": "https://it.wikipedia.org/wiki/Il_viaggio_del_veliero"
+    },
+    "en": {
+     "desc": "fantasy novel by C. S. Lewis",
+     "generi": [
+      "fantasy"
+     ],
+     "lingua": "British English",
+     "titolo_orig": "The Voyage of the Dawn Treader",
+     "wiki": "https://en.wikipedia.org/wiki/The_Voyage_of_the_Dawn_Treader"
+    }
    }
   },
   {
@@ -2603,11 +5247,25 @@
    "mese": 9,
    "giorno": 15,
    "fonte_data": "wikidata",
-   "sbn": {
-    "edizioni": 204,
-    "ultimo": 2022,
-    "dal_2000": 166,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "primo capitolo de Il Silmarillion",
+     "generi": [
+      "fantasy"
+     ],
+     "lingua": "inglese",
+     "titolo_orig": "Ainulindalë",
+     "wiki": "https://it.wikipedia.org/wiki/Musica_degli_Ainur"
+    },
+    "en": {
+     "desc": "short story by J.R.R. Tolkien",
+     "generi": [
+      "fantasy"
+     ],
+     "lingua": "English",
+     "titolo_orig": "Ainulindalë",
+     "wiki": "https://en.wikipedia.org/wiki/Ainulindal%C3%AB"
+    }
    }
   },
   {
@@ -2624,11 +5282,25 @@
    "mese": 9,
    "giorno": 19,
    "fonte_data": "wikipedia",
-   "sbn": {
-    "edizioni": 274,
-    "ultimo": 1980,
-    "dal_2000": 146,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "romanzo scritto da John Steinbeck",
+     "generi": [
+      "saga familiare"
+     ],
+     "lingua": "inglese americano",
+     "titolo_orig": "East of Eden",
+     "wiki": "https://it.wikipedia.org/wiki/La_valle_dell%27Eden_(romanzo)"
+    },
+    "en": {
+     "desc": "1952 novel by John Steinbeck",
+     "generi": [
+      "family saga"
+     ],
+     "lingua": "American English",
+     "titolo_orig": "East of Eden",
+     "wiki": "https://en.wikipedia.org/wiki/East_of_Eden_(novel)"
+    }
    }
   },
   {
@@ -2645,11 +5317,35 @@
    "mese": 9,
    "giorno": 19,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 0,
-    "ultimo": null,
-    "dal_2000": 0,
-    "trovato": false
+   "scheda": {
+    "it": {
+     "desc": "poeta, critico letterario e giornalista giapponese",
+     "paesi": [
+      "Giappone"
+     ],
+     "opere": [
+      "Kaki kueba kane ga narunari Hōryū-ji",
+      "Keitō no jūshigohon moarinubeshi"
+     ],
+     "nato": 1867,
+     "morto": 1902,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Masaoka_Shiki"
+    },
+    "en": {
+     "desc": "Japanese poet, author, and literary critic in Meiji period Japan (1867-1902)",
+     "paesi": [
+      "Japan"
+     ],
+     "opere": [
+      "Kaki kueba kane ga narunari Hōryū-ji",
+      "Keitō no jūshigohon moarinubeshi"
+     ],
+     "nato": 1867,
+     "morto": 1902,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Masaoka_Shiki"
+    }
    }
   },
   {
@@ -2666,11 +5362,33 @@
    "mese": 9,
    "giorno": 21,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 2,
-    "ultimo": 2007,
-    "dal_2000": 2,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "poeta spagnolo",
+     "paesi": [
+      "Spagna"
+     ],
+     "opere": [
+      "Donde habite el olvido"
+     ],
+     "nato": 1902,
+     "morto": 1963,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Luis_Cernuda"
+    },
+    "en": {
+     "desc": "Spanish poet (1902–1963)",
+     "paesi": [
+      "Spain"
+     ],
+     "opere": [
+      "Donde habite el olvido"
+     ],
+     "nato": 1902,
+     "morto": 1963,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Luis_Cernuda"
+    }
    }
   },
   {
@@ -2687,11 +5405,33 @@
    "mese": 9,
    "giorno": 24,
    "fonte_data": "wikipedia",
-   "sbn": {
-    "edizioni": 0,
-    "ultimo": null,
-    "dal_2000": 0,
-    "trovato": false
+   "scheda": {
+    "it": {
+     "desc": "scrittore russo",
+     "paesi": [
+      "Impero russo"
+     ],
+     "opere": [
+      "Journey from St. Petersburg to Moscow"
+     ],
+     "nato": 1749,
+     "morto": 1802,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Aleksandr_Nikolaevi%C4%8D_Radi%C5%A1%C4%8Dev"
+    },
+    "en": {
+     "desc": "18th century Russian author and social critic",
+     "paesi": [
+      "Russian Empire"
+     ],
+     "opere": [
+      "Journey from St. Petersburg to Moscow"
+     ],
+     "nato": 1749,
+     "morto": 1802,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Alexander_Radishchev"
+    }
    }
   },
   {
@@ -2708,11 +5448,37 @@
    "mese": 9,
    "giorno": 25,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 4,
-    "ultimo": 2022,
-    "dal_2000": 3,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "scrittrice, attivista e femminista statunitense (1952-2021)",
+     "paesi": [
+      "Stati Uniti"
+     ],
+     "opere": [
+      "Ain't I a Woman?",
+      "All About Love: New Visions",
+      "Bone Black: Memories of Girlhood"
+     ],
+     "nato": 1952,
+     "morto": 2021,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Bell_hooks"
+    },
+    "en": {
+     "desc": "American author and activist (1952–2021)",
+     "paesi": [
+      "United States"
+     ],
+     "opere": [
+      "Ain't I a Woman?",
+      "All About Love: New Visions",
+      "Bone Black: Memories of Girlhood"
+     ],
+     "nato": 1952,
+     "morto": 2021,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Bell_hooks"
+    }
    }
   },
   {
@@ -2729,11 +5495,29 @@
    "mese": 9,
    "giorno": 25,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 0,
-    "ultimo": null,
-    "dal_2000": 0,
-    "trovato": false
+   "scheda": {
+    "it": {
+     "desc": "filosofo tedesco (1852-1933)",
+     "paesi": [
+      "Germania"
+     ],
+     "opere": [],
+     "nato": 1852,
+     "morto": 1933,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Hans_Vaihinger"
+    },
+    "en": {
+     "desc": "German philosopher (1852–1933)",
+     "paesi": [
+      "Germany"
+     ],
+     "opere": [],
+     "nato": 1852,
+     "morto": 1933,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Hans_Vaihinger"
+    }
    }
   },
   {
@@ -2750,11 +5534,29 @@
    "mese": 9,
    "giorno": 26,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 7,
-    "ultimo": 2023,
-    "dal_2000": 5,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "filosofo, scrittore e poeta spagnolo",
+     "paesi": [
+      "Spagna"
+     ],
+     "opere": [],
+     "nato": 1863,
+     "morto": 1952,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/George_Santayana"
+    },
+    "en": {
+     "desc": "Spanish-American philosopher",
+     "paesi": [
+      "Spain"
+     ],
+     "opere": [],
+     "nato": 1863,
+     "morto": 1952,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/George_Santayana"
+    }
    }
   },
   {
@@ -2771,11 +5573,37 @@
    "mese": 9,
    "giorno": 29,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 541,
-    "ultimo": 2022,
-    "dal_2000": 359,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "giornalista e scrittore francese (1840–1902)",
+     "paesi": [
+      "Francia"
+     ],
+     "opere": [
+      "I Rougon-Macquart",
+      "J'accuse",
+      "Teresa Raquin"
+     ],
+     "nato": 1840,
+     "morto": 1902,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/%C3%89mile_Zola"
+    },
+    "en": {
+     "desc": "French novelist, journalist, playwright, and poet (1840–1902)",
+     "paesi": [
+      "France"
+     ],
+     "opere": [
+      "Les Rougon-Macquart",
+      "Thérèse Raquin",
+      "J’accuse…!"
+     ],
+     "nato": 1840,
+     "morto": 1902,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/%C3%89mile_Zola"
+    }
    }
   },
   {
@@ -2792,11 +5620,35 @@
    "mese": 9,
    "giorno": 30,
    "fonte_data": "wikipedia",
-   "sbn": {
-    "edizioni": 0,
-    "ultimo": null,
-    "dal_2000": 0,
-    "trovato": false
+   "scheda": {
+    "it": {
+     "desc": "poeta tedesco",
+     "paesi": [
+      "Anhalt-Dessau"
+     ],
+     "opere": [
+      "Die schöne Müllerin",
+      "Homerische Vorschule: eine Einleitung in das Studium der Ilias und Odyssee"
+     ],
+     "nato": 1794,
+     "morto": 1827,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Wilhelm_M%C3%BCller"
+    },
+    "en": {
+     "desc": "German poet (1794-1827)",
+     "paesi": [
+      "Anhalt-Dessau"
+     ],
+     "opere": [
+      "Die schöne Müllerin",
+      "Homerische Vorschule: eine Einleitung in das Studium der Ilias und Odyssee"
+     ],
+     "nato": 1794,
+     "morto": 1827,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Wilhelm_M%C3%BCller"
+    }
    }
   },
   {
@@ -2813,11 +5665,35 @@
    "mese": 10,
    "giorno": 7,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 21,
-    "ultimo": 1980,
-    "dal_2000": 13,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "psichiatra britannico",
+     "paesi": [
+      "Regno Unito"
+     ],
+     "opere": [
+      "L'io diviso",
+      "The Self and Other"
+     ],
+     "nato": 1927,
+     "morto": 1989,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Ronald_Laing"
+    },
+    "en": {
+     "desc": "unorthodox Scottish psychiatrist",
+     "paesi": [
+      "United Kingdom"
+     ],
+     "opere": [
+      "The Divided Self",
+      "The Self and Other"
+     ],
+     "nato": 1927,
+     "morto": 1989,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/R._D._Laing"
+    }
    }
   },
   {
@@ -2834,11 +5710,29 @@
    "mese": 10,
    "giorno": 12,
    "fonte_data": "wikipedia",
-   "sbn": {
-    "edizioni": 0,
-    "ultimo": null,
-    "dal_2000": 0,
-    "trovato": false
+   "scheda": {
+    "it": {
+     "desc": "poeta e drammaturgo russo",
+     "paesi": [
+      "Impero russo"
+     ],
+     "opere": [],
+     "nato": 1717,
+     "morto": 1777,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Aleksandr_Petrovi%C4%8D_Sumarokov"
+    },
+    "en": {
+     "desc": "Russian poet, playwright",
+     "paesi": [
+      "Russian Empire"
+     ],
+     "opere": [],
+     "nato": 1717,
+     "morto": 1777,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Alexander_Sumarokov"
+    }
    }
   },
   {
@@ -2855,11 +5749,27 @@
    "mese": 10,
    "giorno": 15,
    "fonte_data": "verifica: Wikipedia (infobox: 15 ottobre 1952)",
-   "sbn": {
-    "edizioni": 17,
-    "ultimo": 2016,
-    "dal_2000": 17,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "romanzo scritto da E. B. White",
+     "generi": [
+      "fiaba",
+      "fantasy"
+     ],
+     "lingua": "inglese",
+     "titolo_orig": "Charlotte’s Web",
+     "wiki": "https://it.wikipedia.org/wiki/La_tela_di_Carlotta_(romanzo)"
+    },
+    "en": {
+     "desc": "1952 children's novel by E. B. White",
+     "generi": [
+      "fairy tale",
+      "fantasy"
+     ],
+     "lingua": "English",
+     "titolo_orig": "Charlotte’s Web",
+     "wiki": "https://en.wikipedia.org/wiki/Charlotte%27s_Web"
+    }
    }
   },
   {
@@ -2876,11 +5786,39 @@
    "mese": 10,
    "giorno": 16,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 26,
-    "ultimo": 1969,
-    "dal_2000": 17,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "scrittore, poeta e drammaturgo tedesco",
+     "paesi": [
+      "Libera Città di Danzica",
+      "Germania"
+     ],
+     "opere": [
+      "The Rat",
+      "Il richiamo dell'ululone",
+      "Anni di cani"
+     ],
+     "nato": 1927,
+     "morto": 2015,
+     "nobel": 1999,
+     "wiki": "https://it.wikipedia.org/wiki/G%C3%BCnter_Grass"
+    },
+    "en": {
+     "desc": "German novelist, poet, playwright, illustrator, graphic artist, and sculptor (1927–2015)",
+     "paesi": [
+      "Free City of Danzig",
+      "Germany"
+     ],
+     "opere": [
+      "The Call of the Toad",
+      "Dog Years",
+      "Last dances"
+     ],
+     "nato": 1927,
+     "morto": 2015,
+     "nobel": 1999,
+     "wiki": "https://en.wikipedia.org/wiki/G%C3%BCnter_Grass"
+    }
    }
   },
   {
@@ -2897,11 +5835,31 @@
    "mese": 10,
    "giorno": 20,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 9,
-    "ultimo": 2002,
-    "dal_2000": 1,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "storico russo (1870-1952)",
+     "paesi": [
+      "Impero russo",
+      "Stati Uniti"
+     ],
+     "opere": [],
+     "nato": 1870,
+     "morto": 1952,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Michail_Ivanovi%C4%8D_Rostovcev"
+    },
+    "en": {
+     "desc": "Russian historian of ancient history (1870–1952)",
+     "paesi": [
+      "Russian Empire",
+      "United States"
+     ],
+     "opere": [],
+     "nato": 1870,
+     "morto": 1952,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Michael_Rostovtzeff"
+    }
    }
   },
   {
@@ -2918,11 +5876,27 @@
    "mese": 10,
    "giorno": 21,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 10,
-    "ultimo": 2021,
-    "dal_2000": 8,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "romanzo scritto da Katherine Paterson",
+     "generi": [
+      "fantasy",
+      "narrativa per ragazzi"
+     ],
+     "lingua": "inglese",
+     "titolo_orig": "Bridge to Terabithia",
+     "wiki": "https://it.wikipedia.org/wiki/Un_ponte_per_Terabithia_(romanzo)"
+    },
+    "en": {
+     "desc": "1977 novel by Katherine Paterson",
+     "generi": [
+      "fantasy",
+      "children's fiction"
+     ],
+     "lingua": "English",
+     "titolo_orig": "Bridge to Terabithia",
+     "wiki": "https://en.wikipedia.org/wiki/Bridge_to_Terabithia_(novel)"
+    }
    }
   },
   {
@@ -2939,11 +5913,35 @@
    "mese": 10,
    "giorno": 23,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 0,
-    "ultimo": null,
-    "dal_2000": 0,
-    "trovato": false
+   "scheda": {
+    "it": {
+     "desc": "filosofo e storico polacco",
+     "paesi": [
+      "Seconda Repubblica di Polonia",
+      "Repubblica Popolare di Polonia"
+     ],
+     "opere": [
+      "Is God Happy?"
+     ],
+     "nato": 1927,
+     "morto": 2009,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Leszek_Ko%C5%82akowski"
+    },
+    "en": {
+     "desc": "Philosopher, historian of ideas (1927–2009)",
+     "paesi": [
+      "Second Polish Republic",
+      "Polish People's Republic"
+     ],
+     "opere": [
+      "Is God Happy?"
+     ],
+     "nato": 1927,
+     "morto": 2009,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Leszek_Ko%C5%82akowski"
+    }
    }
   },
   {
@@ -2960,11 +5958,33 @@
    "mese": 10,
    "giorno": 23,
    "fonte_data": "wikidata",
-   "sbn": {
-    "edizioni": 3,
-    "ultimo": 2006,
-    "dal_2000": 2,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "scrittrice sudafricana",
+     "paesi": [
+      "Sudafrica"
+     ],
+     "opere": [
+      "Country of My Skull"
+     ],
+     "nato": 1952,
+     "morto": null,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Antjie_Krog"
+    },
+    "en": {
+     "desc": "South African writer and academic",
+     "paesi": [
+      "South Africa"
+     ],
+     "opere": [
+      "Country of My Skull"
+     ],
+     "nato": 1952,
+     "morto": null,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Antjie_Krog"
+    }
    }
   },
   {
@@ -2981,11 +6001,33 @@
    "mese": 10,
    "giorno": 25,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 0,
-    "ultimo": null,
-    "dal_2000": 0,
-    "trovato": false
+   "scheda": {
+    "it": {
+     "desc": "psicologo statunitense",
+     "paesi": [
+      "Stati Uniti"
+     ],
+     "opere": [
+      "Lawrence Kohlberg's stages of moral development"
+     ],
+     "nato": 1927,
+     "morto": 1987,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Lawrence_Kohlberg"
+    },
+    "en": {
+     "desc": "American psychologist",
+     "paesi": [
+      "United States"
+     ],
+     "opere": [
+      "Lawrence Kohlberg's stages of moral development"
+     ],
+     "nato": 1927,
+     "morto": 1987,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Lawrence_Kohlberg"
+    }
    }
   },
   {
@@ -3002,11 +6044,33 @@
    "mese": 10,
    "giorno": 27,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 10,
-    "ultimo": 2011,
-    "dal_2000": 8,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "politologo statunitense",
+     "paesi": [
+      "Stati Uniti"
+     ],
+     "opere": [
+      "Fine della storia"
+     ],
+     "nato": 1952,
+     "morto": null,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Francis_Fukuyama"
+    },
+    "en": {
+     "desc": "American political scientist, political economist, and author",
+     "paesi": [
+      "United States"
+     ],
+     "opere": [
+      "The End of History and the Last Man"
+     ],
+     "nato": 1952,
+     "morto": null,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Francis_Fukuyama"
+    }
    }
   },
   {
@@ -3023,11 +6087,35 @@
    "mese": 10,
    "giorno": 27,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 51,
-    "ultimo": 2020,
-    "dal_2000": 27,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "scrittore, giornalista e sceneggiatore statunitense",
+     "paesi": [
+      "Stati Uniti"
+     ],
+     "opere": [
+      "Il postino suona sempre due volte",
+      "La morte paga doppio"
+     ],
+     "nato": 1892,
+     "morto": 1977,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/James_M._Cain"
+    },
+    "en": {
+     "desc": "American novelist, short story writer, journalist (1892–1977)",
+     "paesi": [
+      "United States"
+     ],
+     "opere": [
+      "The Postman Always Rings Twice",
+      "Double Indemnity"
+     ],
+     "nato": 1892,
+     "morto": 1977,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/James_M._Cain"
+    }
    }
   },
   {
@@ -3044,11 +6132,33 @@
    "mese": 11,
    "giorno": 1,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 0,
-    "ultimo": null,
-    "dal_2000": 0,
-    "trovato": false
+   "scheda": {
+    "it": {
+     "desc": "scrittore, giornalista e attivista norvegese",
+     "paesi": [
+      "Norvegia"
+     ],
+     "opere": [
+      "Til Ungdommen"
+     ],
+     "nato": 1902,
+     "morto": 1943,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Nordahl_Grieg"
+    },
+    "en": {
+     "desc": "Norwegian author (1902–1943)",
+     "paesi": [
+      "Norway"
+     ],
+     "opere": [
+      "Til Ungdommen"
+     ],
+     "nato": 1902,
+     "morto": 1943,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Nordahl_Grieg"
+    }
    }
   },
   {
@@ -3065,11 +6175,37 @@
    "mese": 11,
    "giorno": 5,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 177,
-    "ultimo": 1980,
-    "dal_2000": 115,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "fumettista e editore francese",
+     "paesi": [
+      "Francia"
+     ],
+     "opere": [
+      "Lucky Luke",
+      "Asterix",
+      "Il Piccolo Nicolas"
+     ],
+     "nato": 1926,
+     "morto": 1977,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Ren%C3%A9_Goscinny"
+    },
+    "en": {
+     "desc": "French comic book artist and author (1926-1977)",
+     "paesi": [
+      "France"
+     ],
+     "opere": [
+      "Asterix",
+      "Lucky Luke",
+      "Le Petit Nicolas"
+     ],
+     "nato": 1926,
+     "morto": 1977,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Ren%C3%A9_Goscinny"
+    }
    }
   },
   {
@@ -3086,11 +6222,29 @@
    "mese": 11,
    "giorno": 6,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 24,
-    "ultimo": 2023,
-    "dal_2000": 23,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "scrittore statunitense",
+     "paesi": [
+      "Stati Uniti"
+     ],
+     "opere": [],
+     "nato": 1952,
+     "morto": null,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Michael_Cunningham"
+    },
+    "en": {
+     "desc": "American novelist and screenwriter",
+     "paesi": [
+      "United States"
+     ],
+     "opere": [],
+     "nato": 1952,
+     "morto": null,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Michael_Cunningham"
+    }
    }
   },
   {
@@ -3107,11 +6261,35 @@
    "mese": 11,
    "giorno": 15,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 9,
-    "ultimo": 2022,
-    "dal_2000": 7,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "scrittore britannico",
+     "paesi": [
+      "Regno Unito di Gran Bretagna e Irlanda"
+     ],
+     "opere": [
+      "La terra dell'eterna notte",
+      "La casa sull'abisso"
+     ],
+     "nato": 1877,
+     "morto": 1918,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/William_Hope_Hodgson"
+    },
+    "en": {
+     "desc": "British writer (1877–1918)",
+     "paesi": [
+      "United Kingdom of Great Britain and Ireland"
+     ],
+     "opere": [
+      "The House on the Borderland",
+      "The Night Land"
+     ],
+     "nato": 1877,
+     "morto": 1918,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/William_Hope_Hodgson"
+    }
    }
   },
   {
@@ -3127,13 +6305,33 @@
    "pagine": 39,
    "mese": 11,
    "giorno": 16,
-   "sbn": {
-    "edizioni": 0,
-    "ultimo": null,
-    "dal_2000": 0,
-    "trovato": false
-   },
-   "fonte_data": "wikidata+wikipedia"
+   "fonte_data": "wikidata+wikipedia",
+   "scheda": {
+    "it": {
+     "desc": "poeta azero",
+     "paesi": [
+      "Khanato di Ganja",
+      "Impero russo"
+     ],
+     "opere": [],
+     "nato": 1794,
+     "morto": 1852,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Mirza_Shafi_Vazeh"
+    },
+    "en": {
+     "desc": "Azerbaijani poet (1794–1852)",
+     "paesi": [
+      "Ganja khanate",
+      "Russian Empire"
+     ],
+     "opere": [],
+     "nato": 1794,
+     "morto": 1852,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Mirza_Shafi_Vazeh"
+    }
+   }
   },
   {
    "tipo": "morte",
@@ -3149,11 +6347,33 @@
    "mese": 11,
    "giorno": 18,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 37,
-    "ultimo": 1934,
-    "dal_2000": 19,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "scrittore tedesco",
+     "paesi": [
+      "Regno del Württemberg"
+     ],
+     "opere": [
+      "The Story of Caliph Stork"
+     ],
+     "nato": 1802,
+     "morto": 1827,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Wilhelm_Hauff"
+    },
+    "en": {
+     "desc": "German poet and novelist (1802–1827)",
+     "paesi": [
+      "Kingdom of Württemberg"
+     ],
+     "opere": [
+      "The Story of Caliph Stork"
+     ],
+     "nato": 1802,
+     "morto": 1827,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Wilhelm_Hauff"
+    }
    }
   },
   {
@@ -3170,11 +6390,29 @@
    "mese": 11,
    "giorno": 22,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 10,
-    "ultimo": 1959,
-    "dal_2000": 2,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "poeta ungherese",
+     "paesi": [
+      "Ungheria"
+     ],
+     "opere": [],
+     "nato": 1877,
+     "morto": 1919,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Endre_Ady"
+    },
+    "en": {
+     "desc": "Hungarian poet (1877–1919)",
+     "paesi": [
+      "Hungary"
+     ],
+     "opere": [],
+     "nato": 1877,
+     "morto": 1919,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Endre_Ady"
+    }
    }
   },
   {
@@ -3190,13 +6428,39 @@
    "pagine": 38,
    "mese": 11,
    "giorno": 23,
-   "sbn": {
-    "edizioni": 10,
-    "ultimo": 1932,
-    "dal_2000": 5,
-    "trovato": true
-   },
-   "fonte_data": "wikidata+wikipedia"
+   "fonte_data": "wikidata+wikipedia",
+   "scheda": {
+    "it": {
+     "desc": "scrittore e giornalista polacco",
+     "paesi": [
+      "Polonia"
+     ],
+     "opere": [
+      "Homo sapiens",
+      "Confiteor",
+      "Snow"
+     ],
+     "nato": 1868,
+     "morto": 1927,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Stanis%C5%82aw_Przybyszewski"
+    },
+    "en": {
+     "desc": "Polish writer, playwright and journalist (1868–1927)",
+     "paesi": [
+      "Poland"
+     ],
+     "opere": [
+      "Confiteor",
+      "Snow",
+      "Homo sapiens"
+     ],
+     "nato": 1868,
+     "morto": 1927,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Stanis%C5%82aw_Przybyszewski"
+    }
+   }
   },
   {
    "tipo": "prima edizione",
@@ -3212,11 +6476,25 @@
    "mese": 11,
    "giorno": 24,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 12,
-    "ultimo": 1896,
-    "dal_2000": 7,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "romanzo scritto da Anna Sewell",
+     "generi": [
+      "narrativa per giovani adulti"
+     ],
+     "lingua": "inglese",
+     "titolo_orig": "Black Beauty",
+     "wiki": "https://it.wikipedia.org/wiki/Black_Beauty_(romanzo)"
+    },
+    "en": {
+     "desc": "1877 novel by Anna Sewell",
+     "generi": [
+      "young adult fiction"
+     ],
+     "lingua": "English",
+     "titolo_orig": "Black Beauty",
+     "wiki": "https://en.wikipedia.org/wiki/Black_Beauty"
+    }
    }
   },
   {
@@ -3233,11 +6511,25 @@
    "mese": 11,
    "giorno": 24,
    "fonte_data": "wikipedia",
-   "sbn": {
-    "edizioni": 1041,
-    "ultimo": 2023,
-    "dal_2000": 752,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "romanzo e opera teatrale di Agatha Christie",
+     "generi": [
+      "letteratura gialla"
+     ],
+     "lingua": "inglese",
+     "titolo_orig": "Entre Mãe e Filha",
+     "wiki": "https://it.wikipedia.org/wiki/Il_destino_degli_altri"
+    },
+    "en": {
+     "desc": "book by Agatha Christie",
+     "generi": [
+      "crime literature"
+     ],
+     "lingua": "English",
+     "titolo_orig": "Entre Mãe e Filha",
+     "wiki": "https://en.wikipedia.org/wiki/A_Daughter%27s_a_Daughter"
+    }
    }
   },
   {
@@ -3254,11 +6546,33 @@
    "mese": 11,
    "giorno": 29,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 37,
-    "ultimo": 1934,
-    "dal_2000": 19,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "scrittore tedesco",
+     "paesi": [
+      "Regno del Württemberg"
+     ],
+     "opere": [
+      "The Story of Caliph Stork"
+     ],
+     "nato": 1802,
+     "morto": 1827,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Wilhelm_Hauff"
+    },
+    "en": {
+     "desc": "German poet and novelist (1802–1827)",
+     "paesi": [
+      "Kingdom of Württemberg"
+     ],
+     "opere": [
+      "The Story of Caliph Stork"
+     ],
+     "nato": 1802,
+     "morto": 1827,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Wilhelm_Hauff"
+    }
    }
   },
   {
@@ -3275,11 +6589,39 @@
    "mese": 11,
    "giorno": 30,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 4,
-    "ultimo": 2019,
-    "dal_2000": 1,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "scrittore e poeta serbo",
+     "paesi": [
+      "Regno di Jugoslavia",
+      "Repubblica Socialista Federale di Jugoslavia"
+     ],
+     "opere": [
+      "Migrations",
+      "The Journal of Carnojevic",
+      "A Novel about London"
+     ],
+     "nato": 1893,
+     "morto": 1977,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Milo%C5%A1_Crnjanski"
+    },
+    "en": {
+     "desc": "expressionist modernist poet, author, and diplomat from Austria-Hungary",
+     "paesi": [
+      "Kingdom of Yugoslavia",
+      "Austria–Hungary"
+     ],
+     "opere": [
+      "The Journal of Carnojevic",
+      "A Novel about London",
+      "Migrations"
+     ],
+     "nato": 1893,
+     "morto": 1977,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Milo%C5%A1_Crnjanski"
+    }
    }
   },
   {
@@ -3295,13 +6637,37 @@
    "pagine": 43,
    "mese": 12,
    "giorno": 5,
-   "sbn": {
-    "edizioni": 9,
-    "ultimo": 1923,
-    "dal_2000": 4,
-    "trovato": true
-   },
-   "fonte_data": "wikidata+wikipedia"
+   "fonte_data": "wikidata+wikipedia",
+   "scheda": {
+    "it": {
+     "desc": "scrittore, poeta e drammaturgo russo",
+     "paesi": [
+      "Impero russo",
+      "Unione Sovietica"
+     ],
+     "opere": [
+      "Il demone meschino"
+     ],
+     "nato": 1863,
+     "morto": 1927,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/F%C3%ABdor_Sologub"
+    },
+    "en": {
+     "desc": "Russian writer (1863–1927)",
+     "paesi": [
+      "Soviet Union",
+      "Russian Empire"
+     ],
+     "opere": [
+      "The Petty Demon"
+     ],
+     "nato": 1863,
+     "morto": 1927,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Fyodor_Sologub"
+    }
+   }
   },
   {
    "tipo": "nascita",
@@ -3317,11 +6683,33 @@
    "mese": 12,
    "giorno": 8,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 47,
-    "ultimo": 2021,
-    "dal_2000": 11,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "sociologo e filosofo tedesco",
+     "paesi": [
+      "Germania"
+     ],
+     "opere": [
+      "Luhmann's systems theory"
+     ],
+     "nato": 1927,
+     "morto": 1998,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Niklas_Luhmann"
+    },
+    "en": {
+     "desc": "German sociologist, administration expert, and social systems theorist (1927-1998)",
+     "paesi": [
+      "Germany"
+     ],
+     "opere": [
+      "Luhmann's systems theory"
+     ],
+     "nato": 1927,
+     "morto": 1998,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Niklas_Luhmann"
+    }
    }
   },
   {
@@ -3338,11 +6726,31 @@
    "mese": 12,
    "giorno": 12,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 0,
-    "ultimo": null,
-    "dal_2000": 0,
-    "trovato": false
+   "scheda": {
+    "it": {
+     "desc": "linguista, orientalista e archeologo ceco (1879-1952)",
+     "paesi": [
+      "Austria-Ungheria",
+      "Cecoslovacchia"
+     ],
+     "opere": [],
+     "nato": 1879,
+     "morto": 1952,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Bed%C5%99ich_Hrozn%C3%BD"
+    },
+    "en": {
+     "desc": "Czech archeologist, linguist and orientalist (1879-1952)",
+     "paesi": [
+      "Czechoslovakia",
+      "Austria–Hungary"
+     ],
+     "opere": [],
+     "nato": 1879,
+     "morto": 1952,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Bed%C5%99ich_Hrozn%C3%BD"
+    }
    }
   },
   {
@@ -3359,11 +6767,37 @@
    "mese": 12,
    "giorno": 22,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 0,
-    "ultimo": null,
-    "dal_2000": 0,
-    "trovato": false
+   "scheda": {
+    "it": {
+     "desc": "psichiatra e neurologo tedesco",
+     "paesi": [
+      "Austria-Ungheria",
+      "Granducato di Baden"
+     ],
+     "opere": [
+      "Psychopathia sexualis",
+      "Textbook of Forensic Psychopathology: Considering the Legislation of Austria, Germany, and France"
+     ],
+     "nato": 1840,
+     "morto": 1902,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Richard_von_Krafft-Ebing"
+    },
+    "en": {
+     "desc": "Austrian neurologist, psychiatrist, and nobleman (1840–1902)",
+     "paesi": [
+      "Grand Duchy of Baden",
+      "Austria–Hungary"
+     ],
+     "opere": [
+      "Psychopathia Sexualis",
+      "Textbook of Forensic Psychopathology: Considering the Legislation of Austria, Germany, and France"
+     ],
+     "nato": 1840,
+     "morto": 1902,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Richard_von_Krafft-Ebing"
+    }
    }
   },
   {
@@ -3380,11 +6814,29 @@
    "mese": 12,
    "giorno": 23,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 0,
-    "ultimo": null,
-    "dal_2000": 0,
-    "trovato": false
+   "scheda": {
+    "it": {
+     "desc": "economista svedese",
+     "paesi": [
+      "Svezia"
+     ],
+     "opere": [],
+     "nato": 1879,
+     "morto": 1952,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Eli_Heckscher"
+    },
+    "en": {
+     "desc": "Swedish historian and economist (1879–1952)",
+     "paesi": [
+      "Sweden"
+     ],
+     "opere": [],
+     "nato": 1879,
+     "morto": 1952,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Eli_Heckscher"
+    }
    }
   },
   {
@@ -3401,11 +6853,29 @@
    "mese": 12,
    "giorno": 24,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 161,
-    "ultimo": 2022,
-    "dal_2000": 128,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "scrittrice statunitense (1927–2020)",
+     "paesi": [
+      "Stati Uniti"
+     ],
+     "opere": [],
+     "nato": 1927,
+     "morto": 2020,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Mary_Higgins_Clark"
+    },
+    "en": {
+     "desc": "American author of suspense novels (1927–2020)",
+     "paesi": [
+      "United States"
+     ],
+     "opere": [],
+     "nato": 1927,
+     "morto": 2020,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Mary_Higgins_Clark"
+    }
    }
   },
   {
@@ -3421,13 +6891,37 @@
    "pagine": 50,
    "mese": 12,
    "giorno": 24,
-   "sbn": {
-    "edizioni": 1,
-    "ultimo": 1909,
-    "dal_2000": 1,
-    "trovato": true
-   },
-   "fonte_data": "wikidata+wikipedia"
+   "fonte_data": "wikidata+wikipedia",
+   "scheda": {
+    "it": {
+     "desc": "medico russo",
+     "paesi": [
+      "Impero russo",
+      "Unione Sovietica"
+     ],
+     "opere": [
+      "Kollektivnaya refleksologiya"
+     ],
+     "nato": 1857,
+     "morto": 1927,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Vladimir_Michajlovi%C4%8D_Bechterev"
+    },
+    "en": {
+     "desc": "Russian neurologist",
+     "paesi": [
+      "Russian Soviet Federative Socialist Republic",
+      "Russian Empire"
+     ],
+     "opere": [
+      "Kollektivnaya refleksologiya"
+     ],
+     "nato": 1857,
+     "morto": 1927,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Vladimir_Bekhterev"
+    }
+   }
   },
   {
    "tipo": "nascita",
@@ -3443,11 +6937,29 @@
    "mese": 12,
    "giorno": 28,
    "fonte_data": "wikidata+wikipedia",
-   "sbn": {
-    "edizioni": 5,
-    "ultimo": 1989,
-    "dal_2000": 2,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "filosofo statunitense",
+     "paesi": [
+      "Stati Uniti"
+     ],
+     "opere": [],
+     "nato": 1902,
+     "morto": 2001,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Mortimer_Adler"
+    },
+    "en": {
+     "desc": "American philosopher, author and educator (1902–2001)",
+     "paesi": [
+      "United States"
+     ],
+     "opere": [],
+     "nato": 1902,
+     "morto": 2001,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Mortimer_J._Adler"
+    }
    }
   },
   {
@@ -3464,11 +6976,25 @@
    "mese": null,
    "giorno": null,
    "fonte_data": null,
-   "sbn": {
-    "edizioni": 664,
-    "ultimo": 2023,
-    "dal_2000": 337,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "romanzo scritto da Lev Tolstoj",
+     "generi": [
+      "romanzo realistico"
+     ],
+     "lingua": "russo",
+     "titolo_orig": "Анна Каренина",
+     "wiki": "https://it.wikipedia.org/wiki/Anna_Karenina"
+    },
+    "en": {
+     "desc": "1877 novel by Leo Tolstoy",
+     "generi": [
+      "realist novel"
+     ],
+     "lingua": "Russian",
+     "titolo_orig": "Анна Каренина",
+     "wiki": "https://en.wikipedia.org/wiki/Anna_Karenina"
+    }
    }
   },
   {
@@ -3485,11 +7011,25 @@
    "mese": null,
    "giorno": null,
    "fonte_data": null,
-   "sbn": {
-    "edizioni": 73,
-    "ultimo": 2022,
-    "dal_2000": 31,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "opera teatrale di Samuel Beckett",
+     "generi": [
+      "teatro dell'assurdo"
+     ],
+     "lingua": "francese",
+     "titolo_orig": "En attendant Godot",
+     "wiki": "https://it.wikipedia.org/wiki/Aspettando_Godot"
+    },
+    "en": {
+     "desc": "play by Samuel Beckett",
+     "generi": [
+      "theatre of the absurd"
+     ],
+     "lingua": "French",
+     "titolo_orig": "En attendant Godot",
+     "wiki": "https://en.wikipedia.org/wiki/Waiting_for_Godot"
+    }
    }
   },
   {
@@ -3506,11 +7046,37 @@
    "mese": null,
    "giorno": null,
    "fonte_data": "discordante",
-   "sbn": {
-    "edizioni": 2,
-    "ultimo": 2007,
-    "dal_2000": 1,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "matematico, geografo, alchimista, astrologo, astronomo inglese (1527-1608)",
+     "paesi": [
+      "Regno d'Inghilterra"
+     ],
+     "opere": [
+      "Enochian",
+      "Enochian magic",
+      "Monas Hieroglyphica"
+     ],
+     "nato": 1527,
+     "morto": 1609,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/John_Dee"
+    },
+    "en": {
+     "desc": "16th-century English mathematician, astrologer, and alchemist",
+     "paesi": [
+      "Kingdom of England"
+     ],
+     "opere": [
+      "Enochian",
+      "Monas Hieroglyphica",
+      "Enochian magic"
+     ],
+     "nato": 1527,
+     "morto": 1609,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/John_Dee"
+    }
    }
   },
   {
@@ -3527,11 +7093,25 @@
    "mese": null,
    "giorno": null,
    "fonte_data": null,
-   "sbn": {
-    "edizioni": 287,
-    "ultimo": 2022,
-    "dal_2000": 134,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "romanzo scritto da Hermann Hesse",
+     "generi": [
+      "fiction filosofica"
+     ],
+     "lingua": "tedesco",
+     "titolo_orig": "Der Steppenwolf",
+     "wiki": "https://it.wikipedia.org/wiki/Il_lupo_della_steppa"
+    },
+    "en": {
+     "desc": "1927 novel by Hermann Hesse",
+     "generi": [
+      "philosophical fiction"
+     ],
+     "lingua": "German",
+     "titolo_orig": "Der Steppenwolf",
+     "wiki": "https://en.wikipedia.org/wiki/Steppenwolf_(novel)"
+    }
    }
   },
   {
@@ -3548,11 +7128,29 @@
    "mese": null,
    "giorno": null,
    "fonte_data": null,
-   "sbn": {
-    "edizioni": 23,
-    "ultimo": 2022,
-    "dal_2000": 15,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "poeta austriaco",
+     "paesi": [
+      "Impero austriaco"
+     ],
+     "opere": [],
+     "nato": 1802,
+     "morto": 1850,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Nikolaus_Lenau"
+    },
+    "en": {
+     "desc": "Austrian poet (1802-1850)",
+     "paesi": [
+      "Austrian Empire"
+     ],
+     "opere": [],
+     "nato": 1802,
+     "morto": 1850,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Nikolaus_Lenau"
+    }
    }
   },
   {
@@ -3569,11 +7167,31 @@
    "mese": null,
    "giorno": null,
    "fonte_data": "discordante",
-   "sbn": {
-    "edizioni": 10,
-    "ultimo": 2021,
-    "dal_2000": 6,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "drammaturgo e scrittore romeno",
+     "paesi": [
+      "Principato di Valacchia",
+      "Regno di Romania"
+     ],
+     "opere": [],
+     "nato": 1852,
+     "morto": 1912,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Ion_Luca_Caragiale"
+    },
+    "en": {
+     "desc": "Romanian playwright, writer and poet (1852-1912)",
+     "paesi": [
+      "United Principalities of Moldavia and Wallachia",
+      "Principality of Wallachia"
+     ],
+     "opere": [],
+     "nato": 1852,
+     "morto": 1912,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Ion_Luca_Caragiale"
+    }
    }
   },
   {
@@ -3590,11 +7208,26 @@
    "mese": null,
    "giorno": null,
    "fonte_data": null,
-   "sbn": {
-    "edizioni": 2440,
-    "ultimo": 2023,
-    "dal_2000": 1382,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "romanzo di Alessandro Manzoni",
+     "generi": [
+      "fiction storica"
+     ],
+     "lingua": "italiano",
+     "titolo_orig": "I promessi sposi",
+     "wiki": "https://it.wikipedia.org/wiki/I_promessi_sposi"
+    },
+    "en": {
+     "desc": "Italian historical novel by Alessandro Manzoni",
+     "generi": [
+      "historical fiction",
+      "romantic fiction"
+     ],
+     "lingua": "Italian",
+     "titolo_orig": "I promessi sposi",
+     "wiki": "https://en.wikipedia.org/wiki/The_Betrothed"
+    }
    }
   },
   {
@@ -3611,11 +7244,29 @@
    "mese": null,
    "giorno": null,
    "fonte_data": null,
-   "sbn": {
-    "edizioni": 8,
-    "ultimo": 1608,
-    "dal_2000": 3,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "poeta, traduttore e teologo spagnolo",
+     "paesi": [
+      "Spagna"
+     ],
+     "opere": [],
+     "nato": 1527,
+     "morto": 1591,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Luis_de_Le%C3%B3n"
+    },
+    "en": {
+     "desc": "Spanish poet and Augustinian friar (1527-1591)",
+     "paesi": [
+      "Spain"
+     ],
+     "opere": [],
+     "nato": 1527,
+     "morto": 1591,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Luis_de_Le%C3%B3n"
+    }
    }
   },
   {
@@ -3632,11 +7283,25 @@
    "mese": null,
    "giorno": null,
    "fonte_data": null,
-   "sbn": {
-    "edizioni": 66,
-    "ultimo": 1980,
-    "dal_2000": 37,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "romanzo scritto da Colleen McCullough",
+     "generi": [
+      "fiction storica"
+     ],
+     "lingua": "inglese",
+     "titolo_orig": "The Thorn Birds",
+     "wiki": "https://it.wikipedia.org/wiki/Uccelli_di_rovo_(romanzo)"
+    },
+    "en": {
+     "desc": "1977 novel by Colleen McCullough",
+     "generi": [
+      "historical fiction"
+     ],
+     "lingua": "English",
+     "titolo_orig": "The Thorn Birds",
+     "wiki": "https://en.wikipedia.org/wiki/The_Thorn_Birds"
+    }
    }
   },
   {
@@ -3653,11 +7318,35 @@
    "mese": null,
    "giorno": null,
    "fonte_data": null,
-   "sbn": {
-    "edizioni": 3,
-    "ultimo": 1990,
-    "dal_2000": 0,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "drammaturgo britannico",
+     "paesi": [
+      "Regno d'Inghilterra"
+     ],
+     "opere": [
+      "Donne attente alle donne",
+      "The Changeling"
+     ],
+     "nato": 1580,
+     "morto": 1627,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Thomas_Middleton"
+    },
+    "en": {
+     "desc": "English playwright and poet",
+     "paesi": [
+      "Kingdom of England"
+     ],
+     "opere": [
+      "Women Beware Women",
+      "The Changeling"
+     ],
+     "nato": 1580,
+     "morto": 1627,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Thomas_Middleton"
+    }
    }
   },
   {
@@ -3674,11 +7363,37 @@
    "mese": null,
    "giorno": null,
    "fonte_data": "discordante",
-   "sbn": {
-    "edizioni": 6,
-    "ultimo": 2014,
-    "dal_2000": 3,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "scrittore catalano",
+     "paesi": [
+      "Spagna"
+     ],
+     "opere": [
+      "A Thousand Morons",
+      "Uf, va dir ell",
+      "The Enormity of the Tragedy"
+     ],
+     "nato": 1952,
+     "morto": null,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Quim_Monz%C3%B3"
+    },
+    "en": {
+     "desc": "Spanish writer and translator",
+     "paesi": [
+      "Spain"
+     ],
+     "opere": [
+      "Uf, va dir ell",
+      "The Enormity of the Tragedy",
+      "Why, Why, Why?"
+     ],
+     "nato": 1952,
+     "morto": null,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Quim_Monz%C3%B3"
+    }
    }
   },
   {
@@ -3695,11 +7410,21 @@
    "mese": null,
    "giorno": null,
    "fonte_data": null,
-   "sbn": {
-    "edizioni": 286,
-    "ultimo": 2023,
-    "dal_2000": 163,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "romanzo scritto da Franz Kafka",
+     "generi": [],
+     "lingua": "tedesco",
+     "titolo_orig": "Der Verschollene",
+     "wiki": "https://it.wikipedia.org/wiki/America_(Kafka)"
+    },
+    "en": {
+     "desc": "unfinished novel by Franz Kafka",
+     "generi": [],
+     "lingua": "German",
+     "titolo_orig": "Der Verschollene",
+     "wiki": "https://en.wikipedia.org/wiki/Amerika_(novel)"
+    }
    }
   },
   {
@@ -3716,11 +7441,27 @@
    "mese": null,
    "giorno": null,
    "fonte_data": null,
-   "sbn": {
-    "edizioni": 360,
-    "ultimo": 2022,
-    "dal_2000": 153,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "saggio di Lenin",
+     "generi": [
+      "saggio",
+      "giornalismo d'opinione"
+     ],
+     "lingua": "russo",
+     "titolo_orig": "Что дѣлать?",
+     "wiki": "https://it.wikipedia.org/wiki/Che_fare%3F_(Lenin)"
+    },
+    "en": {
+     "desc": "1902 pamphlet by Lenin that argues for a vanguard to spread Marxism since workers do not spontaneously become political by fighting economic battles, which precipitated the Bolshevik–Menshevik split",
+     "generi": [
+      "essay",
+      "opinion journalism"
+     ],
+     "lingua": "Russian",
+     "titolo_orig": "Что дѣлать?",
+     "wiki": "https://en.wikipedia.org/wiki/What_Is_to_Be_Done%3F"
+    }
    }
   },
   {
@@ -3737,11 +7478,27 @@
    "mese": null,
    "giorno": null,
    "fonte_data": null,
-   "sbn": {
-    "edizioni": 74,
-    "ultimo": 1828,
-    "dal_2000": 45,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "racconto filosofico di Francis Bacon",
+     "generi": [
+      "fantascienza",
+      "fantasy"
+     ],
+     "lingua": "inglese della prima età moderna",
+     "titolo_orig": "Nova Atlantis",
+     "wiki": "https://it.wikipedia.org/wiki/La_nuova_Atlantide"
+    },
+    "en": {
+     "desc": "incomplete utopian novel by Sir Francis Bacon",
+     "generi": [
+      "science fiction",
+      "fantasy"
+     ],
+     "lingua": "Early Modern English",
+     "titolo_orig": "Nova Atlantis",
+     "wiki": "https://en.wikipedia.org/wiki/New_Atlantis"
+    }
    }
   },
   {
@@ -3758,11 +7515,29 @@
    "mese": null,
    "giorno": null,
    "fonte_data": null,
-   "sbn": {
-    "edizioni": 0,
-    "ultimo": null,
-    "dal_2000": 0,
-    "trovato": false
+   "scheda": {
+    "it": {
+     "desc": null,
+     "paesi": [
+      "India"
+     ],
+     "opere": [],
+     "nato": 1952,
+     "morto": null,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Urvashi_Butalia"
+    },
+    "en": {
+     "desc": "Indian feminist and historian",
+     "paesi": [
+      "India"
+     ],
+     "opere": [],
+     "nato": 1952,
+     "morto": null,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Urvashi_Butalia"
+    }
    }
   },
   {
@@ -3779,11 +7554,27 @@
    "mese": null,
    "giorno": null,
    "fonte_data": null,
-   "sbn": {
-    "edizioni": 459,
-    "ultimo": 2023,
-    "dal_2000": 341,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "raccolta di racconti di Arthur Conan Doyle",
+     "generi": [
+      "poliziesco",
+      "giallo"
+     ],
+     "lingua": "inglese",
+     "titolo_orig": "The Case-Book of Sherlock Holmes",
+     "wiki": "https://it.wikipedia.org/wiki/Il_taccuino_di_Sherlock_Holmes"
+    },
+    "en": {
+     "desc": "collection of short stories by Arthur Conan Doyle",
+     "generi": [
+      "detective fiction",
+      "crime fiction"
+     ],
+     "lingua": "English",
+     "titolo_orig": "The Case-Book of Sherlock Holmes",
+     "wiki": "https://en.wikipedia.org/wiki/The_Case-Book_of_Sherlock_Holmes"
+    }
    }
   },
   {
@@ -3800,11 +7591,29 @@
    "mese": null,
    "giorno": null,
    "fonte_data": "discordante",
-   "sbn": {
-    "edizioni": 0,
-    "ultimo": null,
-    "dal_2000": 0,
-    "trovato": false
+   "scheda": {
+    "it": {
+     "desc": "scrittore russo",
+     "paesi": [
+      "Impero russo"
+     ],
+     "opere": [],
+     "nato": 1843,
+     "morto": 1902,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Gleb_Ivanovi%C4%8D_Uspenskij"
+    },
+    "en": {
+     "desc": "Russian writer (1843-1902)",
+     "paesi": [
+      "Russian Empire"
+     ],
+     "opere": [],
+     "nato": 1843,
+     "morto": 1902,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Gleb_Uspensky"
+    }
    }
   },
   {
@@ -3821,11 +7630,25 @@
    "mese": null,
    "giorno": null,
    "fonte_data": null,
-   "sbn": {
-    "edizioni": 65,
-    "ultimo": 2023,
-    "dal_2000": 55,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "racconto di Beatrix Potter",
+     "generi": [
+      "letteratura per ragazzi"
+     ],
+     "lingua": "inglese",
+     "titolo_orig": "The Tale of Peter Rabbit",
+     "wiki": "https://it.wikipedia.org/wiki/La_storia_di_Peter_Coniglio"
+    },
+    "en": {
+     "desc": "book by Beatrix Potter",
+     "generi": [
+      "children's literature"
+     ],
+     "lingua": "English",
+     "titolo_orig": "The Tale of Peter Rabbit",
+     "wiki": "https://en.wikipedia.org/wiki/The_Tale_of_Peter_Rabbit"
+    }
    }
   },
   {
@@ -3842,11 +7665,21 @@
    "mese": null,
    "giorno": null,
    "fonte_data": null,
-   "sbn": {
-    "edizioni": 381,
-    "ultimo": 2022,
-    "dal_2000": 224,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "saggio di Friedrich Engels",
+     "generi": [],
+     "lingua": "tedesco",
+     "titolo_orig": "Herrn Eugen Dührings Umwälzung der Wissenschaft",
+     "wiki": "https://it.wikipedia.org/wiki/Anti-D%C3%BChring"
+    },
+    "en": {
+     "desc": "polemic pamphlet by Friedrich Engels against Eugen Dühring",
+     "generi": [],
+     "lingua": "German",
+     "titolo_orig": "Herrn Eugen Dührings Umwälzung der Wissenschaft",
+     "wiki": "https://en.wikipedia.org/wiki/Anti-D%C3%BChring"
+    }
    }
   },
   {
@@ -3863,11 +7696,25 @@
    "mese": null,
    "giorno": null,
    "fonte_data": null,
-   "sbn": {
-    "edizioni": 0,
-    "ultimo": null,
-    "dal_2000": 0,
-    "trovato": false
+   "scheda": {
+    "it": {
+     "desc": "fiaba",
+     "generi": [
+      "fiaba"
+     ],
+     "lingua": "tedesco",
+     "titolo_orig": "Schneeweißchen und Rosenrot",
+     "wiki": "https://it.wikipedia.org/wiki/Biancaneve_e_Rosarossa"
+    },
+    "en": {
+     "desc": "fairy tale by the Brothers Grimm",
+     "generi": [
+      "fairy tale"
+     ],
+     "lingua": "German",
+     "titolo_orig": "Schneeweißchen und Rosenrot",
+     "wiki": "https://en.wikipedia.org/wiki/Snow-White_and_Rose-Red"
+    }
    }
   },
   {
@@ -3884,11 +7731,25 @@
    "mese": null,
    "giorno": null,
    "fonte_data": null,
-   "sbn": {
-    "edizioni": 243,
-    "ultimo": 2022,
-    "dal_2000": 106,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "romanzo scritto da Isaac Asimov",
+     "generi": [
+      "fantascienza"
+     ],
+     "lingua": "inglese americano",
+     "titolo_orig": "Foundation and Empire",
+     "wiki": "https://it.wikipedia.org/wiki/Fondazione_e_Impero"
+    },
+    "en": {
+     "desc": "1952 novel by Isaac Asimov",
+     "generi": [
+      "science fiction"
+     ],
+     "lingua": "American English",
+     "titolo_orig": "Foundation and Empire",
+     "wiki": "https://en.wikipedia.org/wiki/Foundation_and_Empire"
+    }
    }
   },
   {
@@ -3905,11 +7766,25 @@
    "mese": null,
    "giorno": null,
    "fonte_data": null,
-   "sbn": {
-    "edizioni": 584,
-    "ultimo": 2023,
-    "dal_2000": 311,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "saggio di Karl Marx",
+     "generi": [
+      "saggio"
+     ],
+     "lingua": "tedesco",
+     "titolo_orig": "Der 18te Brumaire des Louis FILIPH Napoleon",
+     "wiki": "https://it.wikipedia.org/wiki/Il_18_brumaio_di_Luigi_Bonaparte"
+    },
+    "en": {
+     "desc": "1852 essay by Karl Marx on the French coup of 1851",
+     "generi": [
+      "essay"
+     ],
+     "lingua": "German",
+     "titolo_orig": "Der 18te Brumaire des Louis FILIPH Napoleon",
+     "wiki": "https://en.wikipedia.org/wiki/The_Eighteenth_Brumaire_of_Louis_Bonaparte"
+    }
    }
   },
   {
@@ -3926,11 +7801,27 @@
    "mese": null,
    "giorno": null,
    "fonte_data": null,
-   "sbn": {
-    "edizioni": 1041,
-    "ultimo": 2023,
-    "dal_2000": 752,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "romanzo scritto da Agatha Christie",
+     "generi": [
+      "poliziesco",
+      "giallo"
+     ],
+     "lingua": "inglese",
+     "titolo_orig": "Jogo de Espelhos",
+     "wiki": "https://it.wikipedia.org/wiki/Giochi_di_prestigio_(romanzo)"
+    },
+    "en": {
+     "desc": "1952 novel by Agatha Christie",
+     "generi": [
+      "detective fiction",
+      "crime fiction"
+     ],
+     "lingua": "English",
+     "titolo_orig": "Jogo de Espelhos",
+     "wiki": "https://en.wikipedia.org/wiki/They_Do_It_with_Mirrors"
+    }
    }
   },
   {
@@ -3947,11 +7838,27 @@
    "mese": null,
    "giorno": null,
    "fonte_data": null,
-   "sbn": {
-    "edizioni": 1517,
-    "ultimo": 2023,
-    "dal_2000": 979,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "romanzo scritto da Jules Verne",
+     "generi": [
+      "fantascienza",
+      "fiction d'avventura"
+     ],
+     "lingua": "francese",
+     "titolo_orig": "Les Indes noires",
+     "wiki": "https://it.wikipedia.org/wiki/Le_Indie_nere"
+    },
+    "en": {
+     "desc": "1877 novel by Jules Verne",
+     "generi": [
+      "science fiction",
+      "subterranean fiction"
+     ],
+     "lingua": "French",
+     "titolo_orig": "Les Indes noires",
+     "wiki": "https://en.wikipedia.org/wiki/The_Child_of_the_Cavern"
+    }
    }
   },
   {
@@ -3968,11 +7875,25 @@
    "mese": null,
    "giorno": null,
    "fonte_data": null,
-   "sbn": {
-    "edizioni": 4,
-    "ultimo": 2013,
-    "dal_2000": 1,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "racconto horror scritto da William Wymark Jacobs",
+     "generi": [
+      "orrore"
+     ],
+     "lingua": "inglese",
+     "titolo_orig": "The Monkey's Paw",
+     "wiki": "https://it.wikipedia.org/wiki/La_zampa_di_scimmia"
+    },
+    "en": {
+     "desc": "short story by W. W. Jacobs",
+     "generi": [
+      "horror fiction"
+     ],
+     "lingua": "English",
+     "titolo_orig": "The Monkey's Paw",
+     "wiki": "https://en.wikipedia.org/wiki/The_Monkey%27s_Paw"
+    }
    }
   },
   {
@@ -3989,11 +7910,21 @@
    "mese": null,
    "giorno": null,
    "fonte_data": null,
-   "sbn": {
-    "edizioni": 784,
-    "ultimo": 2023,
-    "dal_2000": 437,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "racconto di Fëdor Dostoevskij",
+     "generi": [],
+     "lingua": "russo",
+     "titolo_orig": null,
+     "wiki": "https://it.wikipedia.org/wiki/Il_sogno_di_un_uomo_ridicolo"
+    },
+    "en": {
+     "desc": "short story by Fyodor Dostoyevsky written in 1877",
+     "generi": [],
+     "lingua": "Russian",
+     "titolo_orig": null,
+     "wiki": "https://en.wikipedia.org/wiki/The_Dream_of_a_Ridiculous_Man"
+    }
    }
   },
   {
@@ -4010,11 +7941,27 @@
    "mese": null,
    "giorno": null,
    "fonte_data": null,
-   "sbn": {
-    "edizioni": 1041,
-    "ultimo": 2023,
-    "dal_2000": 752,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "romanzo scritto da Agatha Christie",
+     "generi": [
+      "poliziesco",
+      "giallo"
+     ],
+     "lingua": "inglese",
+     "titolo_orig": "Poirot Contra a Evidência",
+     "wiki": "https://it.wikipedia.org/wiki/Fermate_il_boia"
+    },
+    "en": {
+     "desc": "1952 novel by Agatha Christie",
+     "generi": [
+      "detective fiction",
+      "crime fiction"
+     ],
+     "lingua": "English",
+     "titolo_orig": "Poirot Contra a Evidência",
+     "wiki": "https://en.wikipedia.org/wiki/Mrs_McGinty%27s_Dead"
+    }
    }
   },
   {
@@ -4031,11 +7978,21 @@
    "mese": null,
    "giorno": null,
    "fonte_data": null,
-   "sbn": {
-    "edizioni": 65,
-    "ultimo": 2022,
-    "dal_2000": 28,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "romanzo di François Mauriac del 1927",
+     "generi": [],
+     "lingua": "francese",
+     "titolo_orig": "Thérèse Desqueyroux",
+     "wiki": "https://it.wikipedia.org/wiki/Th%C3%A9r%C3%A8se_Desqueyroux_(romanzo)"
+    },
+    "en": {
+     "desc": "1927 novel by François Mauriac",
+     "generi": [],
+     "lingua": "French",
+     "titolo_orig": "Thérèse Desqueyroux",
+     "wiki": "https://en.wikipedia.org/wiki/Th%C3%A9r%C3%A8se_Desqueyroux_(novel)"
+    }
    }
   },
   {
@@ -4052,11 +8009,25 @@
    "mese": null,
    "giorno": null,
    "fonte_data": null,
-   "sbn": {
-    "edizioni": 243,
-    "ultimo": 2022,
-    "dal_2000": 106,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "romanzo scritto da Isaac Asimov",
+     "generi": [
+      "fantascienza"
+     ],
+     "lingua": "inglese",
+     "titolo_orig": "The Currents of Space",
+     "wiki": "https://it.wikipedia.org/wiki/Le_correnti_dello_spazio"
+    },
+    "en": {
+     "desc": "1952 novel by Isaac Asimov",
+     "generi": [
+      "science fiction"
+     ],
+     "lingua": "English",
+     "titolo_orig": "The Currents of Space",
+     "wiki": "https://en.wikipedia.org/wiki/The_Currents_of_Space"
+    }
    }
   },
   {
@@ -4073,11 +8044,25 @@
    "mese": null,
    "giorno": null,
    "fonte_data": null,
-   "sbn": {
-    "edizioni": 459,
-    "ultimo": 2023,
-    "dal_2000": 341,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "racconto di Arthur Conan Doyle",
+     "generi": [
+      "letteratura poliziesca"
+     ],
+     "lingua": "inglese",
+     "titolo_orig": "The Adventure of the Veiled Lodger",
+     "wiki": null
+    },
+    "en": {
+     "desc": "short story by Arthur Conan Doyle",
+     "generi": [
+      "detective literature"
+     ],
+     "lingua": "English",
+     "titolo_orig": "The Adventure of the Veiled Lodger",
+     "wiki": "https://en.wikipedia.org/wiki/The_Adventure_of_the_Veiled_Lodger"
+    }
    }
   },
   {
@@ -4094,11 +8079,27 @@
    "mese": null,
    "giorno": null,
    "fonte_data": null,
-   "sbn": {
-    "edizioni": 107,
-    "ultimo": 2023,
-    "dal_2000": 73,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "racconto scritto da Howard Phillips Lovecraft",
+     "generi": [
+      "fantascienza",
+      "orrore"
+     ],
+     "lingua": "inglese",
+     "titolo_orig": "The Colour Out of Space",
+     "wiki": "https://it.wikipedia.org/wiki/Il_colore_venuto_dallo_spazio"
+    },
+    "en": {
+     "desc": "short story written by American horror author H. P. Lovecraft",
+     "generi": [
+      "science fiction",
+      "weird fiction"
+     ],
+     "lingua": "English",
+     "titolo_orig": "The Colour Out of Space",
+     "wiki": "https://en.wikipedia.org/wiki/The_Colour_Out_of_Space"
+    }
    }
   },
   {
@@ -4115,11 +8116,21 @@
    "mese": null,
    "giorno": null,
    "fonte_data": null,
-   "sbn": {
-    "edizioni": 7,
-    "ultimo": 1925,
-    "dal_2000": 4,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": null,
+     "generi": [],
+     "lingua": "tedesco",
+     "titolo_orig": "Altneuland",
+     "wiki": "https://it.wikipedia.org/wiki/Altneuland"
+    },
+    "en": {
+     "desc": "1902 novel published by Theodor Herzl",
+     "generi": [],
+     "lingua": "German",
+     "titolo_orig": "Altneuland",
+     "wiki": "https://en.wikipedia.org/wiki/The_Old_New_Land"
+    }
    }
   },
   {
@@ -4136,11 +8147,21 @@
    "mese": null,
    "giorno": null,
    "fonte_data": null,
-   "sbn": {
-    "edizioni": 286,
-    "ultimo": 2023,
-    "dal_2000": 163,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "lettera di Franz Kafka",
+     "generi": [],
+     "lingua": "tedesco",
+     "titolo_orig": "Brief an den Vater",
+     "wiki": "https://it.wikipedia.org/wiki/Lettera_al_padre"
+    },
+    "en": {
+     "desc": "letter by Franz Kafka to Hermann Kafka",
+     "generi": [],
+     "lingua": "German",
+     "titolo_orig": "Brief an den Vater",
+     "wiki": "https://en.wikipedia.org/wiki/Letter_to_His_Father"
+    }
    }
   },
   {
@@ -4157,11 +8178,27 @@
    "mese": null,
    "giorno": null,
    "fonte_data": null,
-   "sbn": {
-    "edizioni": 141,
-    "ultimo": 2022,
-    "dal_2000": 114,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "romanzo scritto da Philip K. Dick",
+     "generi": [
+      "fantascienza",
+      "fiction filosofica"
+     ],
+     "lingua": "inglese americano",
+     "titolo_orig": "A Scanner Darkly",
+     "wiki": "https://it.wikipedia.org/wiki/Un_oscuro_scrutare"
+    },
+    "en": {
+     "desc": "1977 novel by Philip K. Dick",
+     "generi": [
+      "science fiction",
+      "psychological fiction"
+     ],
+     "lingua": "American English",
+     "titolo_orig": "A Scanner Darkly",
+     "wiki": "https://en.wikipedia.org/wiki/A_Scanner_Darkly"
+    }
    }
   },
   {
@@ -4178,11 +8215,26 @@
    "mese": null,
    "giorno": null,
    "fonte_data": null,
-   "sbn": {
-    "edizioni": 84,
-    "ultimo": 1955,
-    "dal_2000": 78,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "romanzo scritto da Pierre Boulle",
+     "generi": [
+      "romanzo di guerra"
+     ],
+     "lingua": "francese",
+     "titolo_orig": "Le Pont de la Rivière Kwai",
+     "wiki": "https://it.wikipedia.org/wiki/Il_ponte_sul_fiume_Kwai_(romanzo)"
+    },
+    "en": {
+     "desc": "novel by Pierre Boulle",
+     "generi": [
+      "historical fiction",
+      "war novel"
+     ],
+     "lingua": "French",
+     "titolo_orig": "Le Pont de la Rivière Kwai",
+     "wiki": "https://en.wikipedia.org/wiki/The_Bridge_over_the_River_Kwai"
+    }
    }
   },
   {
@@ -4199,11 +8251,27 @@
    "mese": null,
    "giorno": null,
    "fonte_data": null,
-   "sbn": {
-    "edizioni": 1517,
-    "ultimo": 2023,
-    "dal_2000": 979,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "romanzo scritto da Jules Verne",
+     "generi": [
+      "letteratura di viaggio",
+      "giallo"
+     ],
+     "lingua": "francese",
+     "titolo_orig": "Les Frères Kip",
+     "wiki": "https://it.wikipedia.org/wiki/I_fratelli_Kip"
+    },
+    "en": {
+     "desc": "novel by Jules Verne",
+     "generi": [
+      "travel literature",
+      "crime fiction"
+     ],
+     "lingua": "French",
+     "titolo_orig": "Les Frères Kip",
+     "wiki": "https://en.wikipedia.org/wiki/The_Kip_Brothers"
+    }
    }
   },
   {
@@ -4220,11 +8288,25 @@
    "mese": null,
    "giorno": null,
    "fonte_data": null,
-   "sbn": {
-    "edizioni": 116,
-    "ultimo": 2023,
-    "dal_2000": 69,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "libro di Pëtr Alekseevič Kropotkin",
+     "generi": [
+      "saggio"
+     ],
+     "lingua": "inglese",
+     "titolo_orig": "Mutual Aid",
+     "wiki": "https://it.wikipedia.org/wiki/Il_mutuo_appoggio:_un_fattore_dell%27evoluzione"
+    },
+    "en": {
+     "desc": "non-fiction work by Peter Kropotkin on the subject of mutual aid",
+     "generi": [
+      "essay"
+     ],
+     "lingua": "English",
+     "titolo_orig": "Mutual Aid",
+     "wiki": "https://en.wikipedia.org/wiki/Mutual_Aid:_A_Factor_of_Evolution"
+    }
    }
   },
   {
@@ -4241,11 +8323,27 @@
    "mese": null,
    "giorno": null,
    "fonte_data": null,
-   "sbn": {
-    "edizioni": 449,
-    "ultimo": 2023,
-    "dal_2000": 202,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "saggio di Sigmund Freud",
+     "generi": [
+      "saggistica",
+      "scienza delle religioni"
+     ],
+     "lingua": "tedesco",
+     "titolo_orig": "Die Zukunft einer Illusion",
+     "wiki": "https://it.wikipedia.org/wiki/L%27avvenire_di_un%27illusione"
+    },
+    "en": {
+     "desc": "1927 non-fiction work by Sigmund Freud",
+     "generi": [
+      "religious studies",
+      "non-fiction literature"
+     ],
+     "lingua": "German",
+     "titolo_orig": "Die Zukunft einer Illusion",
+     "wiki": "https://en.wikipedia.org/wiki/The_Future_of_an_Illusion"
+    }
    }
   },
   {
@@ -4262,11 +8360,25 @@
    "mese": null,
    "giorno": null,
    "fonte_data": null,
-   "sbn": {
-    "edizioni": 664,
-    "ultimo": 2023,
-    "dal_2000": 337,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "romanzo di Lev Tolstoj",
+     "generi": [
+      "autobiografia"
+     ],
+     "lingua": "russo",
+     "titolo_orig": "История моего детства",
+     "wiki": "https://it.wikipedia.org/wiki/Infanzia_(romanzo)"
+    },
+    "en": {
+     "desc": "first published novel by Leo Tolstoy",
+     "generi": [
+      "autobiography"
+     ],
+     "lingua": "Russian",
+     "titolo_orig": "История моего детства",
+     "wiki": "https://en.wikipedia.org/wiki/Childhood_(Tolstoy_novel)"
+    }
    }
   },
   {
@@ -4283,11 +8395,25 @@
    "mese": null,
    "giorno": null,
    "fonte_data": null,
-   "sbn": {
-    "edizioni": 538,
-    "ultimo": 2023,
-    "dal_2000": 260,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "romanzo di Italo Calvino",
+     "generi": [
+      "fantasy"
+     ],
+     "lingua": "italiano",
+     "titolo_orig": null,
+     "wiki": "https://it.wikipedia.org/wiki/Il_visconte_dimezzato"
+    },
+    "en": {
+     "desc": "1952 novel by Italo Calvino",
+     "generi": [
+      "fantasy"
+     ],
+     "lingua": "Italian",
+     "titolo_orig": null,
+     "wiki": "https://en.wikipedia.org/wiki/The_Cloven_Viscount"
+    }
    }
   },
   {
@@ -4304,11 +8430,21 @@
    "mese": null,
    "giorno": null,
    "fonte_data": null,
-   "sbn": {
-    "edizioni": 149,
-    "ultimo": 1805,
-    "dal_2000": 110,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "romanzo di François-René de Chateaubriand",
+     "generi": [],
+     "lingua": "francese",
+     "titolo_orig": "Atala",
+     "wiki": "https://it.wikipedia.org/wiki/Atala_(romanzo)"
+    },
+    "en": {
+     "desc": "novella by François-René de Chateaubriand",
+     "generi": [],
+     "lingua": "French",
+     "titolo_orig": "Atala",
+     "wiki": "https://en.wikipedia.org/wiki/Atala_(novella)"
+    }
    }
   },
   {
@@ -4325,11 +8461,25 @@
    "mese": null,
    "giorno": null,
    "fonte_data": null,
-   "sbn": {
-    "edizioni": 149,
-    "ultimo": 1805,
-    "dal_2000": 110,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "romanzo di François-René de Chateaubriand",
+     "generi": [
+      "autobiografia"
+     ],
+     "lingua": "francese",
+     "titolo_orig": "René",
+     "wiki": "https://it.wikipedia.org/wiki/Ren%C3%A9_(romanzo)"
+    },
+    "en": {
+     "desc": "short novella by François-René de Chateaubriand",
+     "generi": [
+      "autobiography"
+     ],
+     "lingua": "French",
+     "titolo_orig": "René",
+     "wiki": "https://en.wikipedia.org/wiki/Ren%C3%A9_(novella)"
+    }
    }
   },
   {
@@ -4346,7 +8496,26 @@
    "mese": null,
    "giorno": null,
    "fonte_data": null,
-   "sbn": null
+   "scheda": {
+    "it": {
+     "desc": "raccolta di racconti di Rudyard Kipling",
+     "generi": [
+      "letteratura per ragazzi"
+     ],
+     "lingua": "inglese",
+     "titolo_orig": "Just So Stories",
+     "wiki": "https://it.wikipedia.org/wiki/Storie_proprio_cos%C3%AC"
+    },
+    "en": {
+     "desc": "short story collection by Rudyard Kipling",
+     "generi": [
+      "children's literature"
+     ],
+     "lingua": "English",
+     "titolo_orig": "Just So Stories",
+     "wiki": "https://en.wikipedia.org/wiki/Just_So_Stories"
+    }
+   }
   },
   {
    "tipo": "prima edizione",
@@ -4362,11 +8531,25 @@
    "mese": null,
    "giorno": null,
    "fonte_data": null,
-   "sbn": {
-    "edizioni": 51,
-    "ultimo": 2022,
-    "dal_2000": 25,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": null,
+     "generi": [
+      "saggio"
+     ],
+     "lingua": "inglese",
+     "titolo_orig": "The Varieties of Religious Experience",
+     "wiki": "https://it.wikipedia.org/wiki/Le_varie_forme_dell%27esperienza_religiosa._Uno_studio_sulla_natura_umana"
+    },
+    "en": {
+     "desc": "essay by William James",
+     "generi": [
+      "essay"
+     ],
+     "lingua": "English",
+     "titolo_orig": "The Varieties of Religious Experience",
+     "wiki": "https://en.wikipedia.org/wiki/The_Varieties_of_Religious_Experience"
+    }
    }
   },
   {
@@ -4383,11 +8566,25 @@
    "mese": null,
    "giorno": null,
    "fonte_data": null,
-   "sbn": {
-    "edizioni": 503,
-    "ultimo": 2023,
-    "dal_2000": 394,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "racconto scritto da Stephen King",
+     "generi": [
+      "orrore"
+     ],
+     "lingua": "inglese americano",
+     "titolo_orig": "Children of the Corn",
+     "wiki": "https://it.wikipedia.org/wiki/I_figli_del_grano"
+    },
+    "en": {
+     "desc": "short story by Stephen King",
+     "generi": [
+      "horror fiction"
+     ],
+     "lingua": "American English",
+     "titolo_orig": "Children of the Corn",
+     "wiki": "https://en.wikipedia.org/wiki/Children_of_the_Corn"
+    }
    }
   },
   {
@@ -4404,11 +8601,21 @@
    "mese": null,
    "giorno": null,
    "fonte_data": null,
-   "sbn": {
-    "edizioni": 129,
-    "ultimo": 2022,
-    "dal_2000": 85,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": null,
+     "generi": [],
+     "lingua": "tedesco",
+     "titolo_orig": "Veinticuatro horas en la vida de una mujer",
+     "wiki": null
+    },
+    "en": {
+     "desc": "novella by Stefan Zweig",
+     "generi": [],
+     "lingua": "German",
+     "titolo_orig": "Veinticuatro horas en la vida de una mujer",
+     "wiki": "https://en.wikipedia.org/wiki/Twenty-Four_Hours_in_the_Life_of_a_Woman"
+    }
    }
   },
   {
@@ -4425,11 +8632,21 @@
    "mese": null,
    "giorno": null,
    "fonte_data": null,
-   "sbn": {
-    "edizioni": 229,
-    "ultimo": 2023,
-    "dal_2000": 107,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "racconto scritto da Ernest Hemingway",
+     "generi": [],
+     "lingua": "inglese americano",
+     "titolo_orig": "The Killers",
+     "wiki": "https://it.wikipedia.org/wiki/Gli_uccisori"
+    },
+    "en": {
+     "desc": "short story by Ernest Hemingway",
+     "generi": [],
+     "lingua": "American English",
+     "titolo_orig": "The Killers",
+     "wiki": "https://en.wikipedia.org/wiki/The_Killers_(Hemingway_short_story)"
+    }
    }
   },
   {
@@ -4446,11 +8663,25 @@
    "mese": null,
    "giorno": null,
    "fonte_data": null,
-   "sbn": {
-    "edizioni": 68,
-    "ultimo": 2023,
-    "dal_2000": 31,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "romanzo scritto da Richard Bach",
+     "generi": [
+      "realismo magico"
+     ],
+     "lingua": "inglese",
+     "titolo_orig": "Illusions",
+     "wiki": "https://it.wikipedia.org/wiki/Illusioni:_Le_avventure_di_un_messia_riluttante"
+    },
+    "en": {
+     "desc": "1977 novel by Richard Bach",
+     "generi": [
+      "magic realism"
+     ],
+     "lingua": "English",
+     "titolo_orig": "Illusions",
+     "wiki": "https://en.wikipedia.org/wiki/Illusions_(Bach_novel)"
+    }
    }
   },
   {
@@ -4467,11 +8698,27 @@
    "mese": null,
    "giorno": null,
    "fonte_data": null,
-   "sbn": {
-    "edizioni": 16,
-    "ultimo": 1980,
-    "dal_2000": 9,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "saggio del 1977 di Carl Sagan",
+     "generi": [
+      "saggio",
+      "non-fiction"
+     ],
+     "lingua": "inglese americano",
+     "titolo_orig": "The Dragons of Eden",
+     "wiki": "https://it.wikipedia.org/wiki/I_draghi_dell%27Eden:_considerazioni_sull%27evoluzione_dell%27intelligenza_umana"
+    },
+    "en": {
+     "desc": "1977 essay by Carl Sagan",
+     "generi": [
+      "non-fiction",
+      "essay"
+     ],
+     "lingua": "American English",
+     "titolo_orig": "The Dragons of Eden",
+     "wiki": "https://en.wikipedia.org/wiki/The_Dragons_of_Eden"
+    }
    }
   },
   {
@@ -4488,11 +8735,27 @@
    "mese": null,
    "giorno": null,
    "fonte_data": null,
-   "sbn": {
-    "edizioni": 12,
-    "ultimo": 2022,
-    "dal_2000": 7,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": "romanzo scritto da Clifford D. Simak",
+     "generi": [
+      "fantascienza",
+      "Storia futura"
+     ],
+     "lingua": "inglese",
+     "titolo_orig": "City",
+     "wiki": "https://it.wikipedia.org/wiki/Anni_senza_fine_(romanzo)"
+    },
+    "en": {
+     "desc": "1952 fix-up novel by Clifford D. Simak",
+     "generi": [
+      "science fiction",
+      "future history"
+     ],
+     "lingua": "English",
+     "titolo_orig": "City",
+     "wiki": "https://en.wikipedia.org/wiki/City_(novel)"
+    }
    }
   },
   {
@@ -4509,11 +8772,21 @@
    "mese": null,
    "giorno": null,
    "fonte_data": null,
-   "sbn": {
-    "edizioni": 229,
-    "ultimo": 2023,
-    "dal_2000": 107,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": null,
+     "generi": [],
+     "lingua": "inglese",
+     "titolo_orig": "Men Without Women",
+     "wiki": null
+    },
+    "en": {
+     "desc": "short story collection by Ernest Hemingway",
+     "generi": [],
+     "lingua": "English",
+     "titolo_orig": "Men Without Women",
+     "wiki": "https://en.wikipedia.org/wiki/Men_Without_Women_(Hemingway_short_story_collection)"
+    }
    }
   },
   {
@@ -4530,11 +8803,25 @@
    "mese": null,
    "giorno": null,
    "fonte_data": null,
-   "sbn": {
-    "edizioni": 129,
-    "ultimo": 2022,
-    "dal_2000": 85,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": null,
+     "generi": [
+      "saggio"
+     ],
+     "lingua": "tedesco",
+     "titolo_orig": "Sternstunden der Menschheit",
+     "wiki": "https://it.wikipedia.org/wiki/Momenti_fatali"
+    },
+    "en": {
+     "desc": "1927 essay by Stefan Zweig",
+     "generi": [
+      "essay"
+     ],
+     "lingua": "German",
+     "titolo_orig": "Sternstunden der Menschheit",
+     "wiki": "https://en.wikipedia.org/wiki/Decisive_Moments_in_History"
+    }
    }
   },
   {
@@ -4551,11 +8838,27 @@
    "mese": null,
    "giorno": null,
    "fonte_data": null,
-   "sbn": {
-    "edizioni": 11,
-    "ultimo": 1934,
-    "dal_2000": 7,
-    "trovato": true
+   "scheda": {
+    "it": {
+     "desc": null,
+     "generi": [
+      "fantasy",
+      "narrativa per ragazzi"
+     ],
+     "lingua": "inglese",
+     "titolo_orig": "Five Children and It",
+     "wiki": null
+    },
+    "en": {
+     "desc": "1902 novel by E. Nesbit",
+     "generi": [
+      "fantasy",
+      "children's fiction"
+     ],
+     "lingua": "English",
+     "titolo_orig": "Five Children and It",
+     "wiki": "https://en.wikipedia.org/wiki/Five_Children_and_It"
+    }
    }
   },
   {
@@ -4572,7 +8875,26 @@
    "mese": null,
    "giorno": null,
    "fonte_data": null,
-   "sbn": null
+   "scheda": {
+    "it": {
+     "desc": "opera teatrale scritta da August Strindberg",
+     "generi": [
+      "espressionismo"
+     ],
+     "lingua": "svedese",
+     "titolo_orig": "Ett drömspel",
+     "wiki": "https://it.wikipedia.org/wiki/Il_sogno_(dramma)"
+    },
+    "en": {
+     "desc": "1902 play by August Strindberg",
+     "generi": [
+      "Expressionism"
+     ],
+     "lingua": "Swedish",
+     "titolo_orig": "Ett drömspel",
+     "wiki": "https://en.wikipedia.org/wiki/A_Dream_Play"
+    }
+   }
   }
  ]
 }
