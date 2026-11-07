@@ -455,7 +455,7 @@ it: {
   apriScheda: "Apri la scheda di {nome}",
   scaffOcc: "Le opere che si liberano", scaffTit: "Sfoglia per genere",
   scaffNota: "Gli scaffali nascono dai dati di Wikidata e mostrano solo le opere che hanno un genere indicato. Le copertine sono tipografiche: le copertine vere sono protette.",
-  piuNote: "Le più note", vediTutto: "Vedi tutto →", vediTutteAria: "Vedi tutte le {n} opere: {nome}", nOpere: "{n} opere", libereDal: "Libere dal {d}",
+  piuNote: "Le più note", vediTutto: "Vedi tutto →", vediTutteAria: "Vedi tutte le {n} opere: {nome}", nOpere: "{n} opere", libereDal: "Libere dal {d}", opGenere: "Genere", opLibera: "Libera in Europa dal", opAutore: "Autore", opScheda: "Scheda dell'autore →", opNota: "Data secondo la regola europea dei 70 anni dalla morte dell'autore. Nella scheda dell'autore trovi le date paese per paese.",
   esplora: "Esplora", perPaese: "Per paese", perLingua: "Per lingua",
   mieiOcc: "La tua lista", mieiTit: "I miei candidati",
   mieiVuoto: "Tocca il cuore su un autore per metterlo qui. La lista resta su questo dispositivo e puoi scaricarla in Excel.",
@@ -542,7 +542,7 @@ en: {
   apriScheda: "Open the profile of {nome}",
   scaffOcc: "The works being freed", scaffTit: "Browse by genre",
   scaffNota: "The shelves are built from Wikidata and only show works that have a genre. Covers are typographic: real covers are protected.",
-  piuNote: "Best known", vediTutto: "See all →", vediTutteAria: "See all {n} works: {nome}", nOpere: "{n} works", libereDal: "Free from {d}",
+  piuNote: "Best known", vediTutto: "See all →", vediTutteAria: "See all {n} works: {nome}", nOpere: "{n} works", libereDal: "Free from {d}", opGenere: "Genre", opLibera: "Free in Europe from", opAutore: "Author", opScheda: "Author profile →", opNota: "Date under the European life-plus-70-years rule. The author profile shows the date country by country.",
   esplora: "Explore", perPaese: "By country", perLingua: "By language",
   mieiOcc: "Your list", mieiTit: "My shortlist",
   mieiVuoto: "Tap the heart on an author to put them here. The list stays on this device and you can download it as a spreadsheet.",
@@ -982,16 +982,34 @@ function opereDellAnno(anno) {
   }
   return out;
 }
-function copertina(o) {
+function copertina(o, soloVista) {
   const c = hashNumero(o.titolo + o.a.nome) % 4;
   const l = o.titolo.length;
   let dim = l <= 12 ? 38 : l <= 24 ? 30 : l <= 40 ? 24 : 20;
   const lunga = Math.max(...o.titolo.split(/\s+/).map((w) => w.length));
   // la parola più lunga deve stare intera nella copertina: si rimpicciolisce, non si spezza
   dim = Math.max(15, Math.min(dim, Math.floor(106 / (0.5 * lunga))));
-  return h("button", { class: `copertina c${c}`, type: "button", "aria-label": `${o.titolo}, di ${o.a.nome}`, onclick: () => apriAutore(o.a.wikidata) },
-    h("span", { class: "t", style: `font-size:${dim}px` }, o.titolo),
-    h("span", { class: "a" }, o.a.nome, o.anno ? ` · ${o.anno}` : ""));
+  const interno = [h("span", { class: "t", style: `font-size:${dim}px` }, o.titolo),
+    h("span", { class: "a" }, o.a.nome, o.anno ? ` · ${o.anno}` : "")];
+  if (soloVista) return h("div", { class: `copertina us-cop c${c}` }, ...interno);
+  return h("button", { class: `copertina c${c}`, type: "button", "aria-label": `${o.titolo}, di ${o.a.nome}`, onclick: () => mostraOperaEU(o) }, ...interno);
+}
+function mostraOperaEU(o) {
+  const a = o.a, gen = (o.generi || []).map((g) => nomeGenere(g)).join(", ");
+  const riga = (et, v) => [h("dt", {}, et), h("dd", {}, v)];
+  mostraFinestra(h("div", { class: "scheda" }, chiudiBottone(),
+    h("div", { class: "us-det" },
+      h("div", {}, copertina(o, true)),
+      h("div", {},
+        h("h2", {}, o.titolo),
+        h("div", { class: "sotto" }, a.nome + (o.anno ? " · " + o.anno : "")),
+        h("dl", { class: "us-dl" },
+          ...(gen ? riga(tr("opGenere"), gen) : []),
+          ...riga(tr("opLibera"), dataIt(stato.dati[stato.anno].libero_dal)),
+          ...riga(tr("opAutore"), h("button", { class: "collegamento", type: "button", onclick: () => apriAutore(a.wikidata) }, a.nome))),
+        h("div", { class: "azioni" },
+          h("button", { class: "collegamento", type: "button", onclick: () => apriAutore(a.wikidata) }, tr("opScheda"))),
+        h("p", { class: "sotto", style: "margin-top:18px;font-size:13px" }, tr("opNota"))))));
 }
 function ordinaOpere(lista) {
   return lista.slice().sort((x, y) => (y.sl - x.sl) || perPopolarita(x.a, y.a) || x.titolo.localeCompare(y.titolo, "it"));
