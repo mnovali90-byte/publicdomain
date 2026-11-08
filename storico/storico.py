@@ -1,44 +1,73 @@
 """Dati per la pagina "Storico" di Public Domain Radar: opere già in pubblico dominio negli USA
-(pubblicate fino al 1930, cioè 95 anni compiuti), ordinate per interesse della settimana.
+(tutto ciò che è uscito fino al 1930, cioè 95 anni compiuti), con le playlist più lette della settimana.
 
-Fonti aperte: Wikidata (opere, autori, anno di prima pubblicazione), Wikipedia (visite),
-Wikimedia Commons non serve qui. Regola USA: l'anno di pubblicazione + 95 anni.
+Fonti aperte: Wikidata (opere, autori, anno di prima pubblicazione), Wikipedia (visite).
 
-Scrive in data/storico/:
-  opere.json      tutte le opere, con visite della settimana (Wikipedia en + it)
-  autori.json     elenco autori per la barra di ricerca (nome, anno di morte, numero di opere)
-  playlist.json   le playlist: più letti, per autore ("This is..."), per genere, per lingua, per anno
-Le opere molto antiche spesso non hanno un anno di prima pubblicazione su Wikidata e restano fuori.
-Una sola regola: si elencano solo opere con anno di prima pubblicazione CERTO su Wikidata.
-Se l'aggiornamento si interrompe, le visite non rinfrescate restano quelle della settimana prima.
+Due insiemi di dati con due scopi diversi, così il lavoro resta leggero:
+  RICERCA   TUTTE le opere con anno certo e almeno una pagina Wikipedia, senza visite.
+            Spezzata in un file per lettera (data/storico/ricerca/a.json ...): la pagina scarica
+            solo la lettera che serve. Contiene anche gli autori (nome, anno di morte).
+  PLAYLIST  solo le prime MAX_VISITE opere per fama (numero di lingue con pagina Wikipedia):
+            per queste si contano le visite della settimana (Wikipedia en + it).
+            Scrive data/storico/opere.json (quelle misurate) e data/storico/playlist.json.
 
+Regola per la lettera di un file: prima lettera (senza accenti) della prima parola e della prima parola
+dopo un eventuale articolo (the, il, la, der, les...). Per gli autori: prima e ultima parola del nome.
+La pagina deve usare la stessa regola (funzione chiavi_ricerca).
+
+Limite noto: le opere molto antiche spesso non hanno un anno di prima pubblicazione su Wikidata e restano fuori.
 Si lancia a mano o dalla GitHub Action .github/workflows/storico.yml (ogni lunedì).
 """
-import json, os, re, sys, time, urllib.error, urllib.parse, urllib.request
+import json, os, re, sys, time, unicodedata, urllib.error, urllib.parse, urllib.request
 from datetime import date, datetime, timedelta, timezone
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "scripts"))
-from opere import CLASSI, GENERI, get, lingua_genere, qid, sparql, val  # noqa: E402
+from opere import CLASSI, get, lingua_genere, qid, sparql, val  # noqa: E402
 
 UA = {"User-Agent": "PublicDomainRadar/1.0 (https://publicdomainradar.com; open data project)"}
-ANNO_DA = int(os.environ.get("STORICO_ANNO_DA", 1800))   # prima di questo anno: una sola fascia "prima del 1800"
 ANNO_A = int(os.environ.get("STORICO_ANNO_A", date.today().year - 96))   # 2026 -> 1930
-MIN_PAGINE = 3          # lingue con una pagina Wikipedia: taglia le opere sconosciute
-MAX_PER_ANNO = 150      # per gli anni dal 1900
-MAX_800 = 40            # per gli anni 1800-1899
-MAX_ANTICHE = 300       # una sola fascia: tutto ciò che è prima di ANNO_DA
+ANNO_DA = int(os.environ.get("STORICO_ANNO_DA", 1800))
+FASCE_ANTICHE = [(-3000, 1400), (1400, 1600), (1600, 1700), (1700, ANNO_DA)]   # prima di ANNO_DA, a fasce
+MAX_VISITE = int(os.environ.get("STORICO_MAX_VISITE", 3000))
 BUDGET_MINUTI = float(os.environ.get("BUDGET_MINUTI_STORICO", 60))
 USCITA = "data/storico"
+SOGLIA = 1000   # sotto questo numero di opere qualcosa è andato storto: non si sovrascrive nulla
+ARTICOLI = {"the", "a", "an", "il", "lo", "la", "l", "le", "i", "gli", "un", "una", "uno", "der", "die", "das", "den",
+            "ein", "eine", "les", "el", "los", "las", "de", "het"}
 
 
-def opere_anno(anno_pub, prima_di=None):
-    """Opere pubblicate in un anno; con prima_di=1800 tutte quelle prima del 1800 (anno_pub ignorato)."""
+# ------------------------------------------------------------------ regola di ricerca
+def _norm(t):
+    t = unicodedata.normalize("NFKD", t or "").encode("ascii", "ignore").decode().lower()
+    return re.findall(r"[a-z0-9]+", t)
+
+
+def _lettera(parola):
+    return parola[0] if parola and parola[0].isalpha() else "_"
+
+
+def chiavi_ricerca(testo, autore=False):
+    """Lettere (file) sotto cui va cercato un titolo o un autore."""
+    p = _norm(testo)
+    if not p:
+        return set()
+    if autore:
+        return {_lettera(p[0]), _lettera(p[-1])}
+    ks = {_lettera(p[0])}
+    for w in p:
+        if w not in ARTICOLI:
+            ks.add(_lettera(w)); break
+    return ks
+
+
+# ------------------------------------------------------------------ Wikidata
+def opere_periodo(da, a):
+    """Opere con anno di prima pubblicazione tra da e a (inclusi), almeno una pagina Wikipedia."""
     classi = " ".join("wd:" + c for c in CLASSI)
-    filtro_anno = f"YEAR(?d)<{prima_di}" if prima_di else f"YEAR(?d)={anno_pub}"
     q = f'''SELECT ?w ?wLabel ?wit ?a ?aLabel ?morte ?sl ?en ?itw (YEAR(?d) AS ?anno) WHERE {{
       VALUES ?c {{ {classi} }}
-      ?w wdt:P31 ?c; wdt:P577 ?d. FILTER({filtro_anno})
-      ?w wikibase:sitelinks ?sl. FILTER(?sl>={MIN_PAGINE})
+      ?w wdt:P31 ?c; wdt:P577 ?d. FILTER(YEAR(?d)>={da} && YEAR(?d)<={a})
+      ?w wikibase:sitelinks ?sl. FILTER(?sl>=1)
       OPTIONAL {{ ?w wdt:P50 ?a. OPTIONAL {{ ?a wdt:P570 ?morte }} }}
       OPTIONAL {{ ?w rdfs:label ?wit FILTER(LANG(?wit)="it") }}
       OPTIONAL {{ ?en schema:about ?w; schema:isPartOf <https://en.wikipedia.org/> }}
@@ -47,35 +76,35 @@ def opere_anno(anno_pub, prima_di=None):
     out = {}
     for r in sparql(q):
         k = qid(val(r, "w"))
-        o = out.setdefault(k, {"qid": k, "titolo": val(r, "wLabel"), "titolo_it": val(r, "wit"), "anno": int(val(r, "anno") or anno_pub or 0),
-                               "autori": {}, "pagine": int(val(r, "sl")), "wiki_en": None, "wiki_it": None})
+        o = out.setdefault(k, {"qid": k, "titolo": val(r, "wLabel"), "titolo_it": val(r, "wit"),
+                               "anno": int(val(r, "anno") or 0), "autori": {}, "pagine": int(val(r, "sl")),
+                               "wiki_en": None, "wiki_it": None})
         if val(r, "a"):
-            a = o["autori"].setdefault(qid(val(r, "a")), {"nome": val(r, "aLabel"), "morte": None})
-            if val(r, "morte") and not a["morte"]:
+            x = o["autori"].setdefault(qid(val(r, "a")), {"nome": val(r, "aLabel"), "morte": None})
+            if val(r, "morte") and not x["morte"]:
                 m = re.match(r"-?(\d{4})", val(r, "morte"))
-                a["morte"] = int(m.group(1)) if m else None
+                x["morte"] = int(m.group(1)) if m else None
         if val(r, "en") and not o["wiki_en"]: o["wiki_en"] = val(r, "en")
         if val(r, "itw") and not o["wiki_it"]: o["wiki_it"] = val(r, "itw")
     res = []
     for o in out.values():
         if re.fullmatch(r"Q\d+", o["titolo"] or ""):
             continue  # senza etichetta leggibile
-        o["autori"] = [{"qid": a, "nome": d["nome"], "morte": d["morte"]} for a, d in o["autori"].items()
+        o["autori"] = [{"qid": k, "nome": d["nome"], "morte": d["morte"]} for k, d in o["autori"].items()
                        if not re.fullmatch(r"Q\d+", d["nome"] or "")]
         res.append(o)
-    res.sort(key=lambda o: -o["pagine"])
-    limite = MAX_ANTICHE if prima_di else (MAX_PER_ANNO if anno_pub >= 1900 else MAX_800)
-    return res[:limite]
+    return res
 
 
+# ------------------------------------------------------------------ Wikipedia
 def finestra():
-    """Gli ultimi 7 giorni completi per cui Wikimedia ha già i dati (di solito si fermano a ieri)."""
+    """Gli ultimi 7 giorni per cui Wikimedia ha già i dati (di solito si fermano a ieri)."""
     fine = date.today() - timedelta(days=2)
     return fine - timedelta(days=6), fine
 
 
 def visite_settimana(wiki, url, ini, fine):
-    """Visite (persone, non robot) in 7 giorni alla pagina Wikipedia. 0 se la pagina non ha visite; None se errore."""
+    """Visite (persone, non robot) in 7 giorni. 0 se la pagina non ha visite; None se manca la pagina o c'è un errore."""
     if not url:
         return None
     t = urllib.parse.unquote(url.rsplit("/", 1)[-1])
@@ -94,10 +123,7 @@ def visite_settimana(wiki, url, ini, fine):
     return None
 
 
-def chiave_genere(o):
-    return o.get("generi") or []
-
-
+# ------------------------------------------------------------------ playlist
 def costruisci_playlist(ops):
     def top(lista, n):
         return [o["qid"] for o in sorted(lista, key=lambda o: (-o["visite_sett"], -o["pagine"]))[:n]]
@@ -106,26 +132,53 @@ def costruisci_playlist(ops):
     for o in ops:
         for a in o["autori"]:
             per_autore.setdefault(a["qid"], {"nome": a["nome"], "opere": []})["opere"].append(o)
-    autori = []
-    for k, a in per_autore.items():
-        if len(a["opere"]) < 3:
-            continue
-        autori.append({"qid": k, "nome": a["nome"], "visite_sett": sum(o["visite_sett"] for o in a["opere"]),
-                       "opere": top(a["opere"], 30)})
+    autori = [{"qid": k, "nome": a["nome"], "visite_sett": sum(o["visite_sett"] for o in a["opere"]),
+               "opere": top(a["opere"], 30)} for k, a in per_autore.items() if len(a["opere"]) >= 3]
     autori.sort(key=lambda a: -a["visite_sett"])
 
-    generi, lingue, anni = {}, {}, {}
+    generi, lingue, decenni = {}, {}, {}
     for o in ops:
-        for g in chiave_genere(o):
+        for g in o.get("generi") or []:
             generi.setdefault(g, []).append(o)
         if o.get("lingua"):
             lingue.setdefault(o["lingua"]["en"], []).append(o)
-        anni.setdefault(str(o["anno"]), []).append(o)
+        decenni.setdefault(str(o["anno"] // 10 * 10) if o["anno"] >= 1800 else "prima del 1800", []).append(o)
+
     def gruppi(d, minimo, n=30):
         r = [{"chiave": k, "n": len(v), "opere": top(v, n)} for k, v in d.items() if len(v) >= minimo]
         return sorted(r, key=lambda g: -g["n"])
     return {"piu_letti": top(ops, 50), "autori": autori[:40],
-            "generi": gruppi(generi, 5), "lingue": gruppi(lingue, 5), "anni": gruppi(anni, 1, 20)}
+            "generi": gruppi(generi, 5), "lingue": gruppi(lingue, 5), "decenni": gruppi(decenni, 1, 20)}
+
+
+# ------------------------------------------------------------------ ricerca (un file per lettera)
+def scrivi_ricerca(ops):
+    cartella = f"{USCITA}/ricerca"
+    os.makedirs(cartella, exist_ok=True)
+    for f in os.listdir(cartella):
+        if f.endswith(".json"):
+            os.remove(os.path.join(cartella, f))
+    lettere = {}
+    autori = {}
+    for o in ops:
+        riga = [o["qid"], o["titolo"], o["titolo_it"] or "", o["anno"], o["pagine"],
+                [[a["qid"], a["nome"], a["morte"]] for a in o["autori"]]]
+        for k in chiavi_ricerca(o["titolo"]) | chiavi_ricerca(o["titolo_it"] or ""):
+            lettere.setdefault(k, {"opere": [], "autori": []})["opere"].append(riga)
+        for a in o["autori"]:
+            x = autori.setdefault(a["qid"], {"qid": a["qid"], "nome": a["nome"], "morte": a["morte"], "n": 0})
+            x["n"] += 1
+    for a in autori.values():
+        for k in chiavi_ricerca(a["nome"], autore=True):
+            lettere.setdefault(k, {"opere": [], "autori": []})["autori"].append([a["qid"], a["nome"], a["morte"], a["n"]])
+    peso = 0
+    for k, d in lettere.items():
+        d["opere"].sort(key=lambda r: -r[4])
+        d["autori"].sort(key=lambda r: -r[3])
+        s = json.dumps(d, ensure_ascii=False, separators=(",", ":"))
+        peso += len(s)
+        open(f"{cartella}/{k}.json", "w", encoding="utf8").write(s)
+    return len(autori), len(lettere), peso
 
 
 def main():
@@ -137,23 +190,27 @@ def main():
     except Exception:
         pass
     ini, fine = finestra()
-    ops = []
-    for anno in [None] + list(range(ANNO_DA, ANNO_A + 1)):   # None = la fascia "prima del 1800"
-        lista = opere_anno(anno, prima_di=ANNO_DA) if anno is None else opere_anno(anno)
-        print(anno or f"prima del {ANNO_DA}", "opere:", len(lista), flush=True)
-        if lista and anno:
-            lg = lingua_genere(anno, {o["qid"] for o in lista})
+
+    tutte = {}
+    periodi = [(da, a - 1) for da, a in FASCE_ANTICHE] + [(y, y) for y in range(ANNO_DA, ANNO_A + 1)]
+    for da, a in periodi:
+        lista = opere_periodo(da, a)
+        print(da if da == a else f"{da}-{a}", "opere:", len(lista), flush=True)
+        if lista and da == a:
+            lg = lingua_genere(da, {o["qid"] for o in lista})
             for o in lista:
                 x = lg.get(o["qid"], {})
                 if x.get("lingua"): o["lingua"] = x["lingua"]
                 o["generi"] = x.get("generi", [])
-        ops += lista
-    if len(ops) < 500:
-        print("troppe poche opere trovate (%d): non tocco i file" % len(ops)); sys.exit(1)
+        for o in lista:
+            tutte[o["qid"]] = o
+    ops = sorted(tutte.values(), key=lambda o: (-o["pagine"], o["qid"]))
+    if len(ops) < SOGLIA:
+        print("troppo poche opere trovate (%d): non tocco i file" % len(ops)); sys.exit(1)
 
-    esaurito = False
-    ops.sort(key=lambda o: -o["pagine"])  # le più note per prime: se il tempo finisce, mancano le meno note
-    for o in ops:
+    # PLAYLIST: visite solo per le più note
+    misurate, esaurito = ops[:MAX_VISITE], False
+    for o in misurate:
         if time.time() - inizio > BUDGET_MINUTI * 60:
             esaurito = True
         vecchio = precedenti.get(o["qid"], {})
@@ -164,26 +221,21 @@ def main():
             o["visite_it"] = visite_settimana("it", o["wiki_it"], ini, fine)
             time.sleep(0.05)
         o["visite_sett"] = (o["visite_en"] or 0) + (o["visite_it"] or 0)
-    ops.sort(key=lambda o: (-o["visite_sett"], -o["pagine"]))
+    misurate.sort(key=lambda o: (-o["visite_sett"], -o["pagine"]))
 
-    agg = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    meta = {"aggiornato": agg, "settimana": [ini.isoformat(), fine.isoformat()], "interrotto_per_tempo": esaurito,
+    meta = {"aggiornato": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
+            "settimana": [ini.isoformat(), fine.isoformat()], "interrotto_per_tempo": esaurito,
             "regola": f"USA: opere pubblicate fino al {ANNO_A} (95 anni compiuti), compreso tutto ciò che è più antico",
-            "fonte": "Wikidata (CC0), Wikipedia (visite)", "copertura":
-            f"solo opere con anno di prima pubblicazione su Wikidata e almeno {MIN_PAGINE} pagine Wikipedia, "
-            f"al massimo {MAX_PER_ANNO} per anno dal 1900, {MAX_800} per anno nell'Ottocento, {MAX_ANTICHE} in tutto prima del {ANNO_DA}"}
-    json.dump({**meta, "opere": ops}, open(f"{USCITA}/opere.json", "w", encoding="utf8"), ensure_ascii=False)
-
-    autori = {}
-    for o in ops:
-        for a in o["autori"]:
-            x = autori.setdefault(a["qid"], {"qid": a["qid"], "nome": a["nome"], "morte": a["morte"], "n_opere": 0, "visite_sett": 0})
-            x["n_opere"] += 1
-            x["visite_sett"] += o["visite_sett"]
-    json.dump({**meta, "autori": sorted(autori.values(), key=lambda a: -a["visite_sett"])},
-              open(f"{USCITA}/autori.json", "w", encoding="utf8"), ensure_ascii=False)
-    json.dump({**meta, **costruisci_playlist(ops)}, open(f"{USCITA}/playlist.json", "w", encoding="utf8"), ensure_ascii=False)
-    print("scritte", len(ops), "opere,", len(autori), "autori; visite aggiornate:", not esaurito)
+            "fonte": "Wikidata (CC0), Wikipedia (visite)",
+            "copertura": f"ricerca: tutte le opere con anno di prima pubblicazione su Wikidata e una pagina Wikipedia; "
+                         f"playlist e visite: le {MAX_VISITE} più note"}
+    json.dump({**meta, "opere": [{k: v for k, v in o.items() if k not in ("wiki_en", "wiki_it")} for o in misurate]},
+              open(f"{USCITA}/opere.json", "w", encoding="utf8"), ensure_ascii=False, separators=(",", ":"))
+    json.dump({**meta, **costruisci_playlist(misurate)}, open(f"{USCITA}/playlist.json", "w", encoding="utf8"),
+              ensure_ascii=False, separators=(",", ":"))
+    n_aut, n_file, peso = scrivi_ricerca(ops)
+    print(f"ricerca: {len(ops)} opere, {n_aut} autori, {n_file} file, {peso/1e6:.1f} MB in tutto "
+          f"(la pagina ne scarica uno alla volta); visite aggiornate: {not esaurito}")
 
 
 if __name__ == "__main__":
