@@ -22,14 +22,16 @@ import json, os, re, sys, time, unicodedata, urllib.error, urllib.parse, urllib.
 from datetime import date, datetime, timedelta, timezone
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "scripts"))
-from opere import CLASSI, get, lingua_genere, qid, sparql, val  # noqa: E402
+from opere import CLASSI, GENERI, get, qid, sparql, val  # noqa: E402
 
 UA = {"User-Agent": "PublicDomainRadar/1.0 (https://publicdomainradar.com; open data project)"}
 ANNO_A = int(os.environ.get("STORICO_ANNO_A", date.today().year - 96))   # 2026 -> 1930
 ANNO_DA = int(os.environ.get("STORICO_ANNO_DA", 1800))
 FASCE_ANTICHE = [(-3000, 1400), (1400, 1600), (1600, 1700), (1700, ANNO_DA)]   # prima di ANNO_DA, a fasce
 MAX_VISITE = int(os.environ.get("STORICO_MAX_VISITE", 3000))
-BUDGET_MINUTI = float(os.environ.get("BUDGET_MINUTI_STORICO", 60))
+BUDGET_WIKIDATA = float(os.environ.get("BUDGET_MINUTI_WIKIDATA", 60))   # tempo massimo per scaricare periodi nuovi
+BUDGET_VISITE = float(os.environ.get("BUDGET_MINUTI_VISITE", 35))       # tempo massimo per le visite della settimana
+RINFRESCA_GIORNI = 30   # un periodo già scaricato si riscarica solo dopo 30 giorni
 USCITA = "data/storico"
 SOGLIA = 1000   # sotto questo numero di opere qualcosa è andato storto: non si sovrascrive nulla
 ARTICOLI = {"the", "a", "an", "il", "lo", "la", "l", "le", "i", "gli", "un", "una", "uno", "der", "die", "das", "den",
@@ -94,6 +96,32 @@ def opere_periodo(da, a):
                        if not re.fullmatch(r"Q\d+", d["nome"] or "")]
         res.append(o)
     return res
+
+
+def lingua_genere_qid(qids):
+    """Lingua originale (P407) e genere (P136) per un elenco di opere, a blocchi di 150 (query leggere)."""
+    out = {}
+    qids = list(qids)
+    for i in range(0, len(qids), 150):
+        valori = " ".join("wd:" + k for k in qids[i:i + 150])
+        q = f'''SELECT ?w ?len ?lit ?gen WHERE {{ VALUES ?w {{ {valori} }}
+          OPTIONAL {{ ?w wdt:P407 ?l. ?l rdfs:label ?len FILTER(LANG(?len)="en"). OPTIONAL {{ ?l rdfs:label ?lit FILTER(LANG(?lit)="it") }} }}
+          OPTIONAL {{ ?w wdt:P136 ?g. ?g rdfs:label ?gen FILTER(LANG(?gen)="en") }} }}'''
+        for r in sparql(q):
+            k = qid(val(r, "w"))
+            o = out.setdefault(k, {"lingua": None, "generi": set()})
+            if val(r, "len") and not o["lingua"]:
+                en = re.sub(r"^(American|British|Australian|Canadian) ", "", val(r, "len"))
+                o["lingua"] = {"en": en, "it": val(r, "lit") or en}
+            if val(r, "gen"):
+                g = val(r, "gen").lower()
+                for parola, chiave in GENERI:
+                    if parola in g:
+                        o["generi"].add(chiave); break
+        time.sleep(1)
+    for o in out.values():
+        o["generi"] = sorted(o["generi"])
+    return out
 
 
 # ------------------------------------------------------------------ Wikipedia
@@ -191,37 +219,76 @@ def main():
         pass
     ini, fine = finestra()
 
-    tutte = {}
+    # 1) OPERE: ogni periodo si salva in data/storico/periodi/ appena scaricato.
+    #    Se il tempo finisce, il giro dopo riparte dai periodi mancanti (niente lavoro perso).
+    cartella_p = f"{USCITA}/periodi"
+    os.makedirs(cartella_p, exist_ok=True)
+    oggi = date.today()
     periodi = [(da, a - 1) for da, a in FASCE_ANTICHE] + [(y, y) for y in range(ANNO_DA, ANNO_A + 1)]
-    saltati = []
+    tutte, mancanti, saltati = {}, [], []
+    inizio_wd = time.time()
     for da, a in periodi:
-        lista = []
-        for tentativo in range(3):          # Wikidata ogni tanto va in timeout e risponde "vuoto": si riprova
-            lista = opere_periodo(da, a)
+        nome = f"{da}-{a}"
+        f = f"{cartella_p}/{nome}.json"
+        vecchio = None
+        try:
+            vecchio = json.load(open(f, encoding="utf8"))
+        except Exception:
+            pass
+        fresco = vecchio and (oggi - date.fromisoformat(vecchio["scaricato"])).days < RINFRESCA_GIORNI
+        if not fresco and time.time() - inizio_wd < BUDGET_WIKIDATA * 60:
+            lista = []
+            for tentativo in range(3):          # Wikidata ogni tanto va in timeout: si riprova
+                lista = opere_periodo(da, a)
+                if lista:
+                    break
+                time.sleep(20 * (tentativo + 1))
+            print(nome, "opere:", len(lista), flush=True)
             if lista:
-                break
-            time.sleep(30 * (tentativo + 1))
-        if not lista:
-            saltati.append(da if da == a else f"{da}-{a}")
-        print(da if da == a else f"{da}-{a}", "opere:", len(lista), flush=True)
-        if lista and da == a:
-            lg = lingua_genere(da, {o["qid"] for o in lista})
-            for o in lista:
-                x = lg.get(o["qid"], {})
-                if x.get("lingua"): o["lingua"] = x["lingua"]
-                o["generi"] = x.get("generi", [])
-        for o in lista:
-            tutte[o["qid"]] = o
-    ops = sorted(tutte.values(), key=lambda o: (-o["pagine"], o["qid"]))
+                json.dump({"scaricato": oggi.isoformat(), "opere": lista}, open(f, "w", encoding="utf8"),
+                          ensure_ascii=False, separators=(",", ":"))
+                vecchio = {"opere": lista}
+            else:
+                saltati.append(nome)
+        if vecchio:
+            for o in vecchio["opere"]:
+                tutte[o["qid"]] = o
+        else:
+            mancanti.append(nome)
+    incompleto = bool(mancanti)
     if saltati:
         print("PERIODI SENZA RISPOSTA da Wikidata:", ", ".join(saltati))
-    if len(ops) < SOGLIA or len(saltati) > 5:
-        print("troppo poche opere trovate (%d): non tocco i file" % len(ops)); sys.exit(1)
+    if mancanti:
+        print(f"periodi ancora da scaricare ({len(mancanti)}): il prossimo giro riparte da qui")
+        open(".storico_incompleto", "w").write(" ".join(mancanti))
+    ops = sorted(tutte.values(), key=lambda o: (-o["pagine"], o["qid"]))
+    if len(ops) < SOGLIA:
+        print("ancora poche opere (%d): salvo i periodi scaricati, non scrivo la pagina" % len(ops)); return
+
+    # 2) lingua e genere solo per le opere che vanno nelle playlist (cache in dettagli.json)
+    f_det = f"{USCITA}/dettagli.json"
+    try:
+        det = json.load(open(f_det, encoding="utf8"))
+    except Exception:
+        det = {}
+    da_chiedere = [o["qid"] for o in ops[:MAX_VISITE] if o["qid"] not in det]
+    if da_chiedere:
+        try:
+            for k, v in lingua_genere_qid(da_chiedere).items():
+                det[k] = v
+            json.dump(det, open(f_det, "w", encoding="utf8"), ensure_ascii=False, separators=(",", ":"))
+        except Exception as e:
+            print("lingua/genere non aggiornati:", e)
+    for o in ops[:MAX_VISITE]:
+        x = det.get(o["qid"], {})
+        if x.get("lingua"): o["lingua"] = x["lingua"]
+        o["generi"] = x.get("generi", [])
 
     # PLAYLIST: visite solo per le più note
     misurate, esaurito = ops[:MAX_VISITE], False
+    inizio_vis = time.time()
     for o in misurate:
-        if time.time() - inizio > BUDGET_MINUTI * 60:
+        if time.time() - inizio_vis > BUDGET_VISITE * 60:
             esaurito = True
         vecchio = precedenti.get(o["qid"], {})
         if not esaurito:
@@ -237,7 +304,7 @@ def main():
     misurate.sort(key=lambda o: (-o["visite_sett"], -o["pagine"]))
 
     meta = {"aggiornato": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
-            "settimana": [ini.isoformat(), fine.isoformat()], "interrotto_per_tempo": esaurito,
+            "settimana": [ini.isoformat(), fine.isoformat()], "interrotto_per_tempo": esaurito, "periodi_mancanti": mancanti,
             "regola": f"USA: opere pubblicate fino al {ANNO_A} (95 anni compiuti), compreso tutto ciò che è più antico",
             "fonte": "Wikidata (CC0), Wikipedia (visite)",
             "copertura": f"ricerca: tutte le opere con anno di prima pubblicazione su Wikidata e una pagina Wikipedia; "

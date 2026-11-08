@@ -11,6 +11,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: storico
@@ -27,7 +28,8 @@ jobs:
           python-version: "3.12"
       - name: Opere libere negli USA, con le visite della settimana
         env:
-          BUDGET_MINUTI_STORICO: "80"
+          BUDGET_MINUTI_WIKIDATA: "60"
+          BUDGET_MINUTI_VISITE: "35"
         run: python storico/storico.py
       - name: Salva i dati nel repository
         if: always()   # salva comunque quello che è stato prodotto
@@ -45,4 +47,12 @@ jobs:
               [ "$i" = 5 ] && exit 1
               sleep $((i*20))
             done
+          fi
+      - name: Se mancano periodi, riparte da solo
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ -f .storico_incompleto ]; then
+            gh workflow run storico.yml --ref main
           fi
