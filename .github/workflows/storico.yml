@@ -30,7 +30,7 @@ jobs:
           BUDGET_MINUTI_STORICO: "80"
         run: python storico/storico.py
       - name: Salva i dati nel repository
-        if: success()
+        if: always()   # salva comunque quello che è stato prodotto
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

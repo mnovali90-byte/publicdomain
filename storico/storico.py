@@ -193,8 +193,16 @@ def main():
 
     tutte = {}
     periodi = [(da, a - 1) for da, a in FASCE_ANTICHE] + [(y, y) for y in range(ANNO_DA, ANNO_A + 1)]
+    saltati = []
     for da, a in periodi:
-        lista = opere_periodo(da, a)
+        lista = []
+        for tentativo in range(3):          # Wikidata ogni tanto va in timeout e risponde "vuoto": si riprova
+            lista = opere_periodo(da, a)
+            if lista:
+                break
+            time.sleep(30 * (tentativo + 1))
+        if not lista:
+            saltati.append(da if da == a else f"{da}-{a}")
         print(da if da == a else f"{da}-{a}", "opere:", len(lista), flush=True)
         if lista and da == a:
             lg = lingua_genere(da, {o["qid"] for o in lista})
@@ -205,7 +213,9 @@ def main():
         for o in lista:
             tutte[o["qid"]] = o
     ops = sorted(tutte.values(), key=lambda o: (-o["pagine"], o["qid"]))
-    if len(ops) < SOGLIA:
+    if saltati:
+        print("PERIODI SENZA RISPOSTA da Wikidata:", ", ".join(saltati))
+    if len(ops) < SOGLIA or len(saltati) > 5:
         print("troppo poche opere trovate (%d): non tocco i file" % len(ops)); sys.exit(1)
 
     # PLAYLIST: visite solo per le più note
@@ -214,12 +224,15 @@ def main():
         if time.time() - inizio > BUDGET_MINUTI * 60:
             esaurito = True
         vecchio = precedenti.get(o["qid"], {})
+        if not esaurito:
+            try:
+                o["visite_en"] = visite_settimana("en", o["wiki_en"], ini, fine)
+                o["visite_it"] = visite_settimana("it", o["wiki_it"], ini, fine)
+                time.sleep(0.05)
+            except Exception as e:           # qualunque guaio: si smette di misurare, ma si salva quello che c'è
+                print("misura interrotta:", e); esaurito = True
         if esaurito:
             o["visite_en"], o["visite_it"] = vecchio.get("visite_en"), vecchio.get("visite_it")
-        else:
-            o["visite_en"] = visite_settimana("en", o["wiki_en"], ini, fine)
-            o["visite_it"] = visite_settimana("it", o["wiki_it"], ini, fine)
-            time.sleep(0.05)
         o["visite_sett"] = (o["visite_en"] or 0) + (o["visite_it"] or 0)
     misurate.sort(key=lambda o: (-o["visite_sett"], -o["pagine"]))
 
