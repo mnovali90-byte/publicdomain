@@ -735,7 +735,13 @@ const mercatoPaese = (id) => { const m = (GIUR_OPZ.find((o) => o[0] === id) || [
 const mercatiDisp = () => [...new Set([...(haIndice(stato.opz) ? [stato.opz] : []), "it", "en", "int"])];
 const idx = (a) => (stato.mercati ? a["indice_" + stato.mercato] : a.indice);
 const grezzo = (a) => (stato.mercati ? (a[CAMPO_M[stato.mercato]] || 0) : (a.pagine_wikipedia || 0));
-const etIdx = (a) => (idx(a) !== undefined ? " · " + tr("indiceN", { m: stato.mercati ? tr("mNomi")[stato.mercato] : tr("popolarita"), n: idx(a) }) : "");
+const etIdx = (a) => {
+  if (idx(a) === undefined) return "";
+  if (!stato.mercati) return " · " + tr("indiceN", { m: tr("popolarita"), n: idx(a) });
+  const g = grezzo(a), m = stato.mercato;
+  const testo = m === "int" ? tr("vLingue", { n: n(g) }) : g === 0 ? tr("vNoPag", { l: tr("nomiLingua")[["it", "es", "de", "fr"].includes(m) ? m : "en"].toLowerCase() }) : tr("vIt", { n: n(g) });
+  return " · " + tr("mNomi")[m] + ": " + testo;
+};
 const punteggio = (a) => [(idx(a) === undefined ? -1 : idx(a)), grezzo(a), a.pagine_wikipedia || 0];
 function perPopolarita(x, y) {
   const a = punteggio(x), b = punteggio(y);
@@ -1264,7 +1270,7 @@ function mostraAutore(id) {
       : tr("vIt", { n: n(grezzoM) });
     const r = rangoM(m);
     return h("div", { class: "misura" + (m === stato.mercato ? " attiva" : "") },
-      h("span", { class: "et" }, tr("mNomi")[m] + (v !== undefined ? " · " + v : "")),
+      h("span", { class: "et" }, tr("mNomi")[m]),
       h("div", { class: "asta", role: "img", "aria-label": `${v ?? 0} / 100` }, h("i", { style: `width:${Math.max(0, Math.min(100, v || 0))}%` })),
       h("span", { class: "val" }, testo + (r ? " · " + tr("posizione", { r, t: n(lista.length), anno }) : "")));
   };
