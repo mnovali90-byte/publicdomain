@@ -8,6 +8,7 @@ Scrive in data/storico/:
   opere.json      tutte le opere, con visite della settimana (Wikipedia en + it)
   autori.json     elenco autori per la barra di ricerca (nome, anno di morte, numero di opere)
   playlist.json   le playlist: più letti, per autore ("This is..."), per genere, per lingua, per anno
+Le opere molto antiche spesso non hanno un anno di prima pubblicazione su Wikidata e restano fuori.
 Una sola regola: si elencano solo opere con anno di prima pubblicazione CERTO su Wikidata.
 Se l'aggiornamento si interrompe, le visite non rinfrescate restano quelle della settimana prima.
 
@@ -20,19 +21,23 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."
 from opere import CLASSI, GENERI, get, lingua_genere, qid, sparql, val  # noqa: E402
 
 UA = {"User-Agent": "PublicDomainRadar/1.0 (https://publicdomainradar.com; open data project)"}
-ANNO_DA = int(os.environ.get("STORICO_ANNO_DA", 1900))
+ANNO_DA = int(os.environ.get("STORICO_ANNO_DA", 1800))   # prima di questo anno: una sola fascia "prima del 1800"
 ANNO_A = int(os.environ.get("STORICO_ANNO_A", date.today().year - 96))   # 2026 -> 1930
 MIN_PAGINE = 3          # lingue con una pagina Wikipedia: taglia le opere sconosciute
-MAX_PER_ANNO = 150
+MAX_PER_ANNO = 150      # per gli anni dal 1900
+MAX_800 = 40            # per gli anni 1800-1899
+MAX_ANTICHE = 300       # una sola fascia: tutto ciò che è prima di ANNO_DA
 BUDGET_MINUTI = float(os.environ.get("BUDGET_MINUTI_STORICO", 60))
 USCITA = "data/storico"
 
 
-def opere_anno(anno_pub):
+def opere_anno(anno_pub, prima_di=None):
+    """Opere pubblicate in un anno; con prima_di=1800 tutte quelle prima del 1800 (anno_pub ignorato)."""
     classi = " ".join("wd:" + c for c in CLASSI)
-    q = f'''SELECT ?w ?wLabel ?wit ?a ?aLabel ?morte ?sl ?en ?itw WHERE {{
+    filtro_anno = f"YEAR(?d)<{prima_di}" if prima_di else f"YEAR(?d)={anno_pub}"
+    q = f'''SELECT ?w ?wLabel ?wit ?a ?aLabel ?morte ?sl ?en ?itw (YEAR(?d) AS ?anno) WHERE {{
       VALUES ?c {{ {classi} }}
-      ?w wdt:P31 ?c; wdt:P577 ?d. FILTER(YEAR(?d)={anno_pub})
+      ?w wdt:P31 ?c; wdt:P577 ?d. FILTER({filtro_anno})
       ?w wikibase:sitelinks ?sl. FILTER(?sl>={MIN_PAGINE})
       OPTIONAL {{ ?w wdt:P50 ?a. OPTIONAL {{ ?a wdt:P570 ?morte }} }}
       OPTIONAL {{ ?w rdfs:label ?wit FILTER(LANG(?wit)="it") }}
@@ -42,7 +47,7 @@ def opere_anno(anno_pub):
     out = {}
     for r in sparql(q):
         k = qid(val(r, "w"))
-        o = out.setdefault(k, {"qid": k, "titolo": val(r, "wLabel"), "titolo_it": val(r, "wit"), "anno": anno_pub,
+        o = out.setdefault(k, {"qid": k, "titolo": val(r, "wLabel"), "titolo_it": val(r, "wit"), "anno": int(val(r, "anno") or anno_pub or 0),
                                "autori": {}, "pagine": int(val(r, "sl")), "wiki_en": None, "wiki_it": None})
         if val(r, "a"):
             a = o["autori"].setdefault(qid(val(r, "a")), {"nome": val(r, "aLabel"), "morte": None})
@@ -59,7 +64,8 @@ def opere_anno(anno_pub):
                        if not re.fullmatch(r"Q\d+", d["nome"] or "")]
         res.append(o)
     res.sort(key=lambda o: -o["pagine"])
-    return res[:MAX_PER_ANNO]
+    limite = MAX_ANTICHE if prima_di else (MAX_PER_ANNO if anno_pub >= 1900 else MAX_800)
+    return res[:limite]
 
 
 def finestra():
@@ -132,10 +138,10 @@ def main():
         pass
     ini, fine = finestra()
     ops = []
-    for anno in range(ANNO_DA, ANNO_A + 1):
-        lista = opere_anno(anno)
-        print(anno, "opere:", len(lista), flush=True)
-        if lista:
+    for anno in [None] + list(range(ANNO_DA, ANNO_A + 1)):   # None = la fascia "prima del 1800"
+        lista = opere_anno(anno, prima_di=ANNO_DA) if anno is None else opere_anno(anno)
+        print(anno or f"prima del {ANNO_DA}", "opere:", len(lista), flush=True)
+        if lista and anno:
             lg = lingua_genere(anno, {o["qid"] for o in lista})
             for o in lista:
                 x = lg.get(o["qid"], {})
@@ -162,10 +168,10 @@ def main():
 
     agg = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     meta = {"aggiornato": agg, "settimana": [ini.isoformat(), fine.isoformat()], "interrotto_per_tempo": esaurito,
-            "regola": f"USA: opere pubblicate fino al {ANNO_A} (95 anni compiuti)",
+            "regola": f"USA: opere pubblicate fino al {ANNO_A} (95 anni compiuti), compreso tutto ciò che è più antico",
             "fonte": "Wikidata (CC0), Wikipedia (visite)", "copertura":
             f"solo opere con anno di prima pubblicazione su Wikidata e almeno {MIN_PAGINE} pagine Wikipedia, "
-            f"al massimo {MAX_PER_ANNO} per anno"}
+            f"al massimo {MAX_PER_ANNO} per anno dal 1900, {MAX_800} per anno nell'Ottocento, {MAX_ANTICHE} in tutto prima del {ANNO_DA}"}
     json.dump({**meta, "opere": ops}, open(f"{USCITA}/opere.json", "w", encoding="utf8"), ensure_ascii=False)
 
     autori = {}
