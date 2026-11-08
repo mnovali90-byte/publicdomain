@@ -3,6 +3,10 @@ name: Aggiorna lo Storico (opere già libere)
 on:
   schedule:
     - cron: "23 4 * * 1"   # ogni lunedì mattina
+  push:                     # parte da solo quando cambia lo script
+    paths:
+      - "storico/**"
+      - ".github/workflows/storico.yml"
   workflow_dispatch:        # pulsante "Run workflow" per lanciarlo a mano
 
 permissions:
