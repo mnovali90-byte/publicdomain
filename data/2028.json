@@ -4,7 +4,7 @@
  "paese": "ue",
  "regola": "UE: morte + 70 anni, dal 1 gennaio dell'anno successivo",
  "fonte": "Wikidata (CC0)",
- "aggiornato": "2026-11-07",
+ "aggiornato": "2026-11-08",
  "totale": 1402,
  "autori": [
   {
@@ -25295,6 +25295,17 @@
    "indice": 61
   },
   {
+   "wikidata": "Q115730088",
+   "nome": "Faysal Al Mubarak",
+   "nascita": "1895-01-01",
+   "morte": "1957-01-01",
+   "pagine_wikipedia": 1,
+   "professioni": [
+    "scrittore"
+   ],
+   "url": "https://www.wikidata.org/wiki/Q115730088"
+  },
+  {
    "wikidata": "Q20789772",
    "nome": "Felipe Pichardo Moya",
    "nascita": "1892-10-18",
@@ -32852,17 +32863,6 @@
    "url": "https://www.wikidata.org/wiki/Q141881708"
   },
   {
-   "wikidata": "Q115730088",
-   "nome": "Faysal Al Mubarak",
-   "nascita": "1895-01-01",
-   "morte": "1957-01-01",
-   "pagine_wikipedia": 0,
-   "professioni": [
-    "scrittore"
-   ],
-   "url": "https://www.wikidata.org/wiki/Q115730088"
-  },
-  {
    "wikidata": "Q117849749",
    "nome": "Fernand Clément",
    "nascita": "1877-02-05",
@@ -37196,7 +37196,7 @@
    "n": 1
   }
  ],
- "arricchito": "2026-11-07",
+ "arricchito": "2026-11-08",
  "indice_formula": "tre misure separate: visite Wikipedia it, visite Wikipedia en, numero di lingue con una pagina; ciascuna 0-100 rispetto alla lista dell'anno",
- "traduzioni_aggiornato": "2026-11-07"
+ "traduzioni_aggiornato": "2026-11-08"
 }
