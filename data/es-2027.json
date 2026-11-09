@@ -165,6 +165,46 @@
      "fonte": "SBN"
     }
    },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   },
+   "illustratori": [
+    {
+     "opera": "La guerra dei mondi",
+     "nome": "Warwick Goble",
+     "morte": 1943
+    },
+    {
+     "opera": "The Outline of History",
+     "nome": "J. F. Horrabin",
+     "morte": 1962
+    },
+    {
+     "opera": "The Wheels of Chance",
+     "nome": "James Ayton Symington",
+     "morte": 1939
+    },
+    {
+     "opera": "The Story of the Late Mr. Elvesham",
+     "nome": "Max Cowper",
+     "morte": 1911
+    },
+    {
+     "opera": "The Soul of a Bishop",
+     "nome": "Charles Allan Gilbert",
+     "morte": 1929
+    },
+    {
+     "opera": "The First Men in the Moon",
+     "nome": "Claude Allin Shepperson",
+     "morte": 1921
+    }
+   ],
    "pagina": "h-g-wells",
    "pagina_en": "h-g-wells"
   },
@@ -312,6 +352,14 @@
      "dal_2000": 12,
      "metodo": "viaf",
      "fonte": "SBN"
+    }
+   },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
     }
    },
    "pagina": "gerhart-hauptmann",
@@ -469,6 +517,21 @@
      "fonte": "SBN"
     }
    },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   },
+   "illustratori": [
+    {
+     "opera": "Svět je kulatý",
+     "nome": "Nikola Logosová",
+     "morte": null
+    }
+   ],
    "pagina": "gertrude-stein",
    "pagina_en": "gertrude-stein"
   },
@@ -630,6 +693,14 @@
      "fonte": "SBN"
     }
    },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   },
    "pagina": "manuel-de-falla",
    "pagina_en": "manuel-de-falla"
   },
@@ -686,7 +757,15 @@
    "indice_de": 97,
    "indice_fr": 95,
    "indice_int": 99,
-   "indice": 99
+   "indice": 99,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q76746",
@@ -836,6 +915,14 @@
      "dal_2000": 4,
      "metodo": "nome",
      "fonte": "SBN"
+    }
+   },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
     }
    },
    "pagina": "ernest-thompson-seton",
@@ -1000,6 +1087,21 @@
      "fonte": "SBN"
     }
    },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   },
+   "illustratori": [
+    {
+     "opera": "Seventeen",
+     "nome": "Arthur William Brown",
+     "morte": 1966
+    }
+   ],
    "pagina": "booth-tarkington",
    "pagina_en": "booth-tarkington"
   },
@@ -1125,6 +1227,14 @@
      "fonte": "SBN"
     }
    },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   },
    "pagina": "amir-hamzah",
    "pagina_en": "amir-hamzah"
   },
@@ -1210,6 +1320,14 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    }
+   },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
     }
    },
    "pagina": "madan-mohan-malaviya",
@@ -1312,6 +1430,14 @@
      "fonte": "SBN"
     }
    },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   },
    "pagina": "nikolaj-aleksandrovic-morozov",
    "pagina_en": "nikolaj-aleksandrovic-morozov"
   },
@@ -1392,6 +1518,14 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    }
+   },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
     }
    },
    "pagina": "wen-yiduo",
@@ -1523,6 +1657,14 @@
      "fonte": "SBN"
     }
    },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   },
    "pagina": "dion-fortune",
    "pagina_en": "dion-fortune"
   },
@@ -1578,7 +1720,15 @@
    "indice_de": 83,
    "indice_fr": 0,
    "indice_int": 97,
-   "indice": 78
+   "indice": 78,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q714880",
@@ -1642,7 +1792,15 @@
    "indice_de": 92,
    "indice_fr": 90,
    "indice_int": 97,
-   "indice": 93
+   "indice": 93,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q448142",
@@ -1708,7 +1866,15 @@
    "indice_de": 99,
    "indice_fr": 99,
    "indice_int": 97,
-   "indice": 99
+   "indice": 99,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q1131497",
@@ -1844,6 +2010,14 @@
      "fonte": "SBN"
     }
    },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   },
    "pagina": "may-sinclair",
    "pagina_en": "may-sinclair"
   },
@@ -1900,7 +2074,15 @@
    "indice_de": 90,
    "indice_fr": 89,
    "indice_int": 96,
-   "indice": 96
+   "indice": 96,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q336479",
@@ -2042,6 +2224,14 @@
      "fonte": "SBN"
     }
    },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   },
    "pagina": "countee-cullen",
    "pagina_en": "countee-cullen"
   },
@@ -2122,7 +2312,15 @@
    "indice_de": 94,
    "indice_fr": 89,
    "indice_int": 96,
-   "indice": 94
+   "indice": 94,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q3275944",
@@ -2218,6 +2416,14 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    }
+   },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
     }
    },
    "pagina": "john-langalibalele-dube",
@@ -2331,7 +2537,15 @@
    "indice_de": 97,
    "indice_fr": 93,
    "indice_int": 95,
-   "indice": 97
+   "indice": 97,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q163069",
@@ -2466,6 +2680,26 @@
      "fonte": "SBN"
     }
    },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   },
+   "illustratori": [
+    {
+     "opera": "The Seven Conundrums",
+     "nome": "Wallace Morgan",
+     "morte": 1948
+    },
+    {
+     "opera": "The Long Arm of Mannister",
+     "nome": "Frank Snapp",
+     "morte": 1927
+    }
+   ],
    "pagina": "e-phillips-oppenheim",
    "pagina_en": "e-phillips-oppenheim"
   },
@@ -2582,6 +2816,14 @@
      "fonte": "SBN"
     }
    },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   },
    "pagina": "georges-dumas",
    "pagina_en": "georges-dumas"
   },
@@ -2674,6 +2916,14 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    }
+   },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
     }
    },
    "pagina": "harley-granville-barker",
@@ -2812,6 +3062,14 @@
      "fonte": "SBN"
     }
    },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   },
    "pagina": "henry-handel-richardson",
    "pagina_en": "henry-handel-richardson"
   },
@@ -2921,6 +3179,14 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    }
+   },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
     }
    },
    "pagina": "shekib-arslan",
@@ -3064,6 +3330,41 @@
      "fonte": "SBN"
     }
    },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   },
+   "illustratori": [
+    {
+     "opera": "The Clansman",
+     "nome": "Arthur I. Keller",
+     "morte": 1924
+    },
+    {
+     "opera": "The One Woman",
+     "nome": "Benjamin West Clinedinst",
+     "morte": 1931
+    },
+    {
+     "opera": "The Flaming Sword",
+     "nome": "Edward Shenton",
+     "morte": 1977
+    },
+    {
+     "opera": "The Leopard's Spots",
+     "nome": "David Williams",
+     "morte": 1954
+    },
+    {
+     "opera": "The Traitor",
+     "nome": "David Williams",
+     "morte": 1954
+    }
+   ],
    "pagina": "thomas-dixon-jr",
    "pagina_en": "thomas-dixon-jr"
   },
@@ -3161,6 +3462,21 @@
      "fonte": "SBN"
     }
    },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   },
+   "illustratori": [
+    {
+     "opera": "Bronzové plémě",
+     "nome": "Bohumila Doleželová",
+     "morte": 1993
+    }
+   ],
    "pagina": "alcides-arguedas",
    "pagina_en": "alcides-arguedas"
   },
@@ -3333,6 +3649,14 @@
      "fonte": "SBN"
     }
    },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   },
    "pagina": "gabriela-preissova",
    "pagina_en": "gabriela-preissova"
   },
@@ -3387,7 +3711,15 @@
    "indice_de": 88,
    "indice_fr": 88,
    "indice_int": 93,
-   "indice": 96
+   "indice": 96,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q112913",
@@ -3449,7 +3781,14 @@
    "indice_de": 0,
    "indice_fr": 87,
    "indice_int": 93,
-   "indice": 89
+   "indice": 89,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   }
   },
   {
    "wikidata": "Q204135",
@@ -3604,6 +3943,14 @@
      "fonte": "SBN"
     }
    },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   },
    "pagina": "arthur-van-schendel",
    "pagina_en": "arthur-van-schendel"
   },
@@ -3744,6 +4091,14 @@
      "fonte": "SBN"
     }
    },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   },
    "pagina": "eduard-marquina-i-angulo",
    "pagina_en": "eduard-marquina-i-angulo"
   },
@@ -3799,7 +4154,15 @@
    "indice_de": 81,
    "indice_fr": 0,
    "indice_int": 92,
-   "indice": 79
+   "indice": 79,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q1058883",
@@ -3852,7 +4215,15 @@
    "indice_de": 93,
    "indice_fr": 0,
    "indice_int": 92,
-   "indice": 88
+   "indice": 88,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q84676",
@@ -3973,6 +4344,14 @@
      "fonte": "SBN"
     }
    },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   },
    "pagina": "karl-hans-strobl",
    "pagina_en": "karl-hans-strobl"
   },
@@ -4075,7 +4454,15 @@
    "indice_de": 85,
    "indice_fr": 80,
    "indice_int": 91,
-   "indice": 79
+   "indice": 79,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q2333242",
@@ -4168,6 +4555,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    }
+   },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
     }
    },
    "pagina": "ilarie-voronca",
@@ -4300,6 +4694,14 @@
      "fonte": "SBN"
     }
    },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   },
    "pagina": "karel-toman",
    "pagina_en": "karel-toman"
   },
@@ -4383,6 +4785,14 @@
      "fonte": "SBN"
     }
    },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   },
    "pagina": "marius-grout",
    "pagina_en": "marius-grout"
   },
@@ -4430,7 +4840,15 @@
    "indice_de": 0,
    "indice_fr": 79,
    "indice_int": 90,
-   "indice": 76
+   "indice": 76,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q4775790",
@@ -4487,7 +4905,14 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 90,
-   "indice": 90
+   "indice": 90,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   }
   },
   {
    "wikidata": "Q2585507",
@@ -4575,6 +5000,14 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    }
+   },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
     }
    },
    "pagina": "arvid-morne",
@@ -4671,6 +5104,14 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    }
+   },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
     }
    },
    "pagina": "hans-bethge",
@@ -4797,6 +5238,14 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    }
+   },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
     }
    },
    "pagina": "mary-eliza-fullerton",
@@ -4946,6 +5395,14 @@
      "fonte": "SBN"
     }
    },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   },
    "pagina": "padmanath-gohain-baruah",
    "pagina_en": "padmanath-gohain-baruah"
   },
@@ -5036,7 +5493,15 @@
    "indice_de": 89,
    "indice_fr": 86,
    "indice_int": 88,
-   "indice": 88
+   "indice": 88,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q2667301",
@@ -5157,6 +5622,14 @@
      "fonte": "SBN"
     }
    },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   },
    "pagina": "channing-pollock",
    "pagina_en": "channing-pollock"
   },
@@ -5226,7 +5699,15 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 88,
-   "indice": 85
+   "indice": 85,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q350953",
@@ -5324,6 +5805,13 @@
      "fonte": "SBN"
     }
    },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   },
    "pagina": "frederich-bataille",
    "pagina_en": "frederich-bataille"
   },
@@ -5391,7 +5879,13 @@
    "indice_de": 87,
    "indice_fr": 0,
    "indice_int": 88,
-   "indice": 86
+   "indice": 86,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q1958799",
@@ -5443,7 +5937,15 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 88,
-   "indice": 82
+   "indice": 82,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q215606",
@@ -5537,6 +6039,14 @@
      "dal_2000": 0,
      "metodo": "nome",
      "fonte": "SBN"
+    }
+   },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
     }
    },
    "pagina": "ludwig-winder",
@@ -5702,6 +6212,20 @@
      "fonte": "SBN"
     }
    },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   },
+   "illustratori": [
+    {
+     "opera": "The Port of Peril",
+     "nome": "J. Allen St. John",
+     "morte": 1957
+    }
+   ],
    "pagina": "otis-kline",
    "pagina_en": "otis-kline"
   },
@@ -5848,6 +6372,21 @@
      "fonte": "SBN"
     }
    },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   },
+   "illustratori": [
+    {
+     "opera": "Kinobuch 1913, aneb, Spisovatelé píší pro film",
+     "nome": "Alexey Klyuykov",
+     "morte": null
+    }
+   ],
    "pagina": "paul-zech",
    "pagina_en": "paul-zech"
   },
@@ -5903,7 +6442,15 @@
    "indice_de": 94,
    "indice_fr": 90,
    "indice_int": 88,
-   "indice": 94
+   "indice": 94,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q11729535",
@@ -6021,6 +6568,13 @@
      "fonte": "SBN"
     }
    },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "loc": 1946
+    }
+   },
    "pagina": "doane-robinson",
    "pagina_en": "doane-robinson"
   },
@@ -6131,6 +6685,14 @@
      "fonte": "SBN"
     }
    },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   },
    "pagina": "edward-sheldon",
    "pagina_en": "edward-sheldon"
   },
@@ -6205,7 +6767,14 @@
    "indice_de": 99,
    "indice_fr": 96,
    "indice_int": 86,
-   "indice": 90
+   "indice": 90,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   }
   },
   {
    "wikidata": "Q3066426",
@@ -6300,7 +6869,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 86,
-   "indice": 79
+   "indice": 79,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q6941274",
@@ -6380,6 +6955,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    }
+   },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "loc": 1946
     }
    },
    "pagina": "mushitaro-oguri",
@@ -6464,6 +7046,14 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    }
+   },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
     }
    },
    "pagina": "valdemar-rrdam",
@@ -6677,6 +7267,13 @@
      "fonte": "SBN"
     }
    },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "loc": 1946
+    }
+   },
    "pagina": "george-henry-weiss",
    "pagina_en": "george-henry-weiss"
   },
@@ -6788,6 +7385,13 @@
      "fonte": "SBN"
     }
    },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "loc": 1946
+    }
+   },
    "pagina": "ibn-zaydan",
    "pagina_en": "ibn-zaydan"
   },
@@ -6840,7 +7444,15 @@
    "indice_de": 0,
    "indice_fr": 95,
    "indice_int": 85,
-   "indice": 83
+   "indice": 83,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q1328019",
@@ -6990,6 +7602,14 @@
      "fonte": "SBN"
     }
    },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   },
    "pagina": "nanalal-dalpatram-kavi",
    "pagina_en": "nanalal-dalpatram-kavi"
   },
@@ -7117,6 +7737,13 @@
      "fonte": "SBN"
     }
    },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   },
    "pagina": "pramatha-chaudhuri",
    "pagina_en": "pramatha-chaudhuri"
   },
@@ -7229,6 +7856,14 @@
      "fonte": "SBN"
     }
    },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   },
    "pagina": "salomo-friedlaender",
    "pagina_en": "salomo-friedlaender"
   },
@@ -7312,6 +7947,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    }
+   },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "loc": 1946
     }
    },
    "pagina": "sigurd-wettenhovi-aspa",
@@ -7428,6 +8070,21 @@
      "fonte": "SBN"
     }
    },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   },
+   "illustratori": [
+    {
+     "opera": "The Mystery",
+     "nome": "Will Crawford",
+     "morte": 1944
+    }
+   ],
    "pagina": "stewart-white",
    "pagina_en": "stewart-white"
   },
@@ -7483,7 +8140,15 @@
    "indice_de": 90,
    "indice_fr": 0,
    "indice_int": 85,
-   "indice": 91
+   "indice": 91,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q1259652",
@@ -7540,7 +8205,14 @@
    "indice_de": 84,
    "indice_fr": 0,
    "indice_int": 85,
-   "indice": 81
+   "indice": 81,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   }
   },
   {
    "wikidata": "Q164913",
@@ -7609,7 +8281,15 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 85,
-   "indice": 79
+   "indice": 79,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q251832",
@@ -7704,6 +8384,14 @@
      "metodo": "nome",
      "fonte": "SBN"
     }
+   },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
    }
   },
   {
@@ -7760,7 +8448,15 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 82,
-   "indice": 82
+   "indice": 82,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q16488592",
@@ -7849,6 +8545,14 @@
      "fonte": "SBN"
     }
    },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   },
    "pagina": "alice-moderno",
    "pagina_en": "alice-moderno"
   },
@@ -7911,7 +8615,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 82,
-   "indice": 82
+   "indice": 82,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q2876420",
@@ -7962,7 +8672,13 @@
    "indice_de": 0,
    "indice_fr": 99,
    "indice_int": 82,
-   "indice": 80
+   "indice": 80,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q1050940",
@@ -8020,7 +8736,15 @@
    "indice_de": 80,
    "indice_fr": 0,
    "indice_int": 82,
-   "indice": 87
+   "indice": 87,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q5097576",
@@ -8081,7 +8805,13 @@
    "indice_de": 0,
    "indice_fr": 81,
    "indice_int": 82,
-   "indice": 71
+   "indice": 71,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q1339022",
@@ -8179,6 +8909,14 @@
      "fonte": "SBN"
     }
    },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   },
    "pagina": "hafiz-mehmood-khan-shirani",
    "pagina_en": "hafiz-mehmood-khan-shirani"
   },
@@ -8219,7 +8957,15 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 82,
-   "indice": 43
+   "indice": 43,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q2363775",
@@ -8281,7 +9027,15 @@
    "indice_de": 82,
    "indice_fr": 0,
    "indice_int": 82,
-   "indice": 80
+   "indice": 80,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q71543",
@@ -8326,7 +9080,15 @@
    "indice_de": 95,
    "indice_fr": 0,
    "indice_int": 82,
-   "indice": 79
+   "indice": 79,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q505393",
@@ -8429,6 +9191,13 @@
      "fonte": "SBN"
     }
    },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "loc": 1946
+    }
+   },
    "pagina": "kaoru-morimoto",
    "pagina_en": "kaoru-morimoto"
   },
@@ -8523,6 +9292,14 @@
      "dal_2000": 1,
      "metodo": "nome",
      "fonte": "SBN"
+    }
+   },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
     }
    }
   },
@@ -8645,6 +9422,14 @@
      "fonte": "SBN"
     }
    },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   },
    "pagina": "walter-j-turner",
    "pagina_en": "walter-j-turner"
   },
@@ -8724,7 +9509,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 79,
-   "indice": 91
+   "indice": 91,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q16337108",
@@ -8804,6 +9595,14 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    }
+   },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
     }
    },
    "pagina": "catulo-da-paixao-cearense",
@@ -8914,6 +9713,14 @@
      "fonte": "SBN"
     }
    },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   },
    "pagina": "georges-de-la-fouchardiere",
    "pagina_en": "georges-de-la-fouchardiere"
   },
@@ -8998,6 +9805,14 @@
      "fonte": "SBN"
     }
    },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   },
    "pagina": "hasse-zetterstrom",
    "pagina_en": "hasse-zetterstrom"
   },
@@ -9076,7 +9891,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 79,
-   "indice": 75
+   "indice": 75,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q216566",
@@ -9200,7 +10021,15 @@
    "indice_de": 0,
    "indice_fr": 95,
    "indice_int": 79,
-   "indice": 77
+   "indice": 77,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q6749099",
@@ -9247,7 +10076,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 79,
-   "indice": 81
+   "indice": 81,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q15521717",
@@ -9321,6 +10156,12 @@
      "fonte": "SBN"
     }
    },
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   },
    "pagina": "mary-ellen-bamford",
    "pagina_en": "mary-ellen-bamford"
   },
@@ -9368,7 +10209,14 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 79,
-   "indice": 89
+   "indice": 89,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q1360853",
@@ -9470,7 +10318,15 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 79,
-   "indice": 43
+   "indice": 43,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q7494312",
@@ -9589,6 +10445,14 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    }
+   },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
     }
    },
    "pagina": "b-m-srikantaiah",
@@ -9720,6 +10584,14 @@
      "metodo": null,
      "fonte": "SBN"
     }
+   },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
    }
   },
   {
@@ -9839,6 +10711,14 @@
      "fonte": "SBN"
     }
    },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   },
    "pagina": "ernest-rhys",
    "pagina_en": "ernest-rhys"
   },
@@ -9909,7 +10789,15 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 76,
-   "indice": 42
+   "indice": 42,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q3099143",
@@ -9957,7 +10845,14 @@
    "indice_de": 92,
    "indice_fr": 0,
    "indice_int": 76,
-   "indice": 34
+   "indice": 34,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   }
   },
   {
    "wikidata": "Q18876847",
@@ -10038,7 +10933,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 76,
-   "indice": 70
+   "indice": 70,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q5929163",
@@ -10114,7 +11015,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 76,
-   "indice": 68
+   "indice": 68,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q11868720",
@@ -10180,7 +11087,15 @@
    "indice_de": 0,
    "indice_fr": 87,
    "indice_int": 76,
-   "indice": 42
+   "indice": 42,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q1894950",
@@ -10271,7 +11186,15 @@
    "indice_de": 0,
    "indice_fr": 81,
    "indice_int": 76,
-   "indice": 72
+   "indice": 72,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q11546264",
@@ -10313,7 +11236,15 @@
    "indice_de": 87,
    "indice_fr": 0,
    "indice_int": 76,
-   "indice": 42
+   "indice": 42,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q1390219",
@@ -10398,6 +11329,14 @@
      "fonte": "SBN"
     }
    },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   },
    "pagina": "robert-heymann",
    "pagina_en": "robert-heymann"
   },
@@ -10447,7 +11386,15 @@
    "indice_de": 0,
    "indice_fr": 80,
    "indice_int": 76,
-   "indice": 70
+   "indice": 70,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q5162274",
@@ -10498,7 +11445,15 @@
    "indice_de": 80,
    "indice_fr": 0,
    "indice_int": 76,
-   "indice": 72
+   "indice": 72,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q43292544",
@@ -10559,7 +11514,14 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 76,
-   "indice": 76
+   "indice": 76,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   }
   },
   {
    "wikidata": "Q21013040",
@@ -10665,7 +11627,13 @@
    "indice_de": 0,
    "indice_fr": 82,
    "indice_int": 71,
-   "indice": 64
+   "indice": 64,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q19834135",
@@ -10718,7 +11686,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 71,
-   "indice": 67
+   "indice": 67,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q5663077",
@@ -10774,7 +11748,14 @@
    "indice_de": 77,
    "indice_fr": 0,
    "indice_int": 71,
-   "indice": 76
+   "indice": 76,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q4731653",
@@ -10837,7 +11818,14 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 71,
-   "indice": 66
+   "indice": 66,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q12111720",
@@ -10932,7 +11920,14 @@
    "indice_de": 93,
    "indice_fr": 0,
    "indice_int": 71,
-   "indice": 70
+   "indice": 70,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   }
   },
   {
    "wikidata": "Q15997412",
@@ -10973,7 +11968,15 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 71,
-   "indice": 77
+   "indice": 77,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q1338749",
@@ -11040,7 +12043,14 @@
    "indice_de": 95,
    "indice_fr": 0,
    "indice_int": 71,
-   "indice": 72
+   "indice": 72,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   }
   },
   {
    "wikidata": "Q1872437",
@@ -11083,7 +12093,13 @@
    "indice_de": 0,
    "indice_fr": 93,
    "indice_int": 71,
-   "indice": 41
+   "indice": 41,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q12788880",
@@ -11127,7 +12143,15 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 71,
-   "indice": 41
+   "indice": 41,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q1447835",
@@ -11221,6 +12245,13 @@
      "fonte": "SBN"
     }
    },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "loc": 1946
+    }
+   },
    "pagina": "frona-eunice-wait",
    "pagina_en": "frona-eunice-wait"
   },
@@ -11286,7 +12317,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 71,
-   "indice": 41
+   "indice": 41,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q104916",
@@ -11351,7 +12388,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 71,
-   "indice": 41
+   "indice": 41,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q23542449",
@@ -11394,7 +12437,14 @@
    "indice_de": 0,
    "indice_fr": 87,
    "indice_int": 71,
-   "indice": 41
+   "indice": 41,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   }
   },
   {
    "wikidata": "Q12547574",
@@ -11430,7 +12480,14 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 71,
-   "indice": 41
+   "indice": 41,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q5368442",
@@ -11474,7 +12531,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 71,
-   "indice": 41
+   "indice": 41,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q28042701",
@@ -11566,6 +12629,14 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    }
+   },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
     }
    },
    "pagina": "jane-findlater",
@@ -11671,6 +12742,14 @@
      "dal_2000": 0,
      "metodo": "viaf",
      "fonte": "SBN"
+    }
+   },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
     }
    },
    "pagina": "john-colton",
@@ -11783,6 +12862,13 @@
      "metodo": null,
      "fonte": "SBN"
     }
+   },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
    }
   },
   {
@@ -11828,7 +12914,14 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 71,
-   "indice": 82
+   "indice": 82,
+   "verifica": {
+    "esito": "discorde",
+    "fonti": {
+     "wikidata": 1946,
+     "loc": 1947
+    }
+   }
   },
   {
    "wikidata": "Q6504238",
@@ -11933,7 +13026,15 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 71,
-   "indice": 81
+   "indice": 81,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q79356330",
@@ -11989,7 +13090,15 @@
    "indice_de": 0,
    "indice_fr": 96,
    "indice_int": 71,
-   "indice": 41
+   "indice": 41,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q30534305",
@@ -12062,7 +13171,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 71,
-   "indice": 41
+   "indice": 41,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q1393779",
@@ -12105,7 +13220,14 @@
    "indice_de": 93,
    "indice_fr": 84,
    "indice_int": 71,
-   "indice": 41
+   "indice": 41,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   }
   },
   {
    "wikidata": "Q6069490",
@@ -12160,7 +13282,15 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 71,
-   "indice": 72
+   "indice": 72,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q31881436",
@@ -12213,7 +13343,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 71,
-   "indice": 41
+   "indice": 41,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q16405455",
@@ -12264,7 +13400,14 @@
    "indice_de": 78,
    "indice_fr": 0,
    "indice_int": 71,
-   "indice": 65
+   "indice": 65,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   }
   },
   {
    "wikidata": "Q4420006",
@@ -12308,7 +13451,15 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 71,
-   "indice": 41
+   "indice": 41,
+   "verifica": {
+    "esito": "discorde",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1949,
+     "loc": 1949
+    }
+   }
   },
   {
    "wikidata": "Q7923178",
@@ -12378,7 +13529,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 71,
-   "indice": 61
+   "indice": 61,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q8002774",
@@ -12476,7 +13633,15 @@
    "indice_de": 79,
    "indice_fr": 0,
    "indice_int": 62,
-   "indice": 38
+   "indice": 38,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q2644343",
@@ -12567,6 +13732,13 @@
      "metodo": null,
      "fonte": "SBN"
     }
+   },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
    }
   },
   {
@@ -12604,7 +13776,14 @@
    "indice_de": 79,
    "indice_fr": 0,
    "indice_int": 62,
-   "indice": 38
+   "indice": 38,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   }
   },
   {
    "wikidata": "Q33194564",
@@ -12653,7 +13832,14 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 62,
-   "indice": 76
+   "indice": 76,
+   "verifica": {
+    "esito": "discorde",
+    "fonti": {
+     "wikidata": 1946,
+     "loc": 1945
+    }
+   }
   },
   {
    "wikidata": "Q559387",
@@ -12790,7 +13976,14 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 62,
-   "indice": 69
+   "indice": 69,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q1037730",
@@ -12878,6 +14071,14 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    }
+   },
+   "verifica": {
+    "esito": "discorde",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1948,
+     "loc": 1948
     }
    }
   },
@@ -12977,7 +14178,15 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 62,
-   "indice": 38
+   "indice": 38,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q11966536",
@@ -13024,7 +14233,14 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 62,
-   "indice": 38
+   "indice": 38,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   }
   },
   {
    "wikidata": "Q5345388",
@@ -13088,7 +14304,14 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 62,
-   "indice": 68
+   "indice": 68,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   }
   },
   {
    "wikidata": "Q11878907",
@@ -13196,7 +14419,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 62,
-   "indice": 74
+   "indice": 74,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q3746442",
@@ -13255,7 +14484,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 62,
-   "indice": 79
+   "indice": 79,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q47489866",
@@ -13329,7 +14564,14 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 62,
-   "indice": 38
+   "indice": 38,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   }
   },
   {
    "wikidata": "Q18681634",
@@ -13386,7 +14628,15 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 62,
-   "indice": 38
+   "indice": 38,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q5542039",
@@ -13438,7 +14688,14 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 62,
-   "indice": 72
+   "indice": 72,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q1508500",
@@ -13493,7 +14750,14 @@
    "indice_de": 0,
    "indice_fr": 91,
    "indice_int": 62,
-   "indice": 38
+   "indice": 38,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   }
   },
   {
    "wikidata": "Q66134881",
@@ -13531,7 +14795,14 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 62,
-   "indice": 38
+   "indice": 38,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   }
   },
   {
    "wikidata": "Q3764069",
@@ -13581,7 +14852,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 62,
-   "indice": 63
+   "indice": 63,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q55227698",
@@ -13685,7 +14962,14 @@
    "indice_de": 85,
    "indice_fr": 0,
    "indice_int": 62,
-   "indice": 38
+   "indice": 38,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   }
   },
   {
    "wikidata": "Q1598097",
@@ -13775,6 +15059,12 @@
      "fonte": "SBN"
     }
    },
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   },
    "pagina": "helen-prothero-lewis",
    "pagina_en": "helen-prothero-lewis"
   },
@@ -13836,7 +15126,14 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 62,
-   "indice": 71
+   "indice": 71,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   }
   },
   {
    "wikidata": "Q56706727",
@@ -13890,7 +15187,14 @@
    "indice_de": 0,
    "indice_fr": 97,
    "indice_int": 62,
-   "indice": 38
+   "indice": 38,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q19662734",
@@ -13935,7 +15239,14 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 62,
-   "indice": 67
+   "indice": 67,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q12022774",
@@ -14041,6 +15352,13 @@
      "metodo": null,
      "fonte": "SBN"
     }
+   },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
    }
   },
   {
@@ -14083,7 +15401,14 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 62,
-   "indice": 38
+   "indice": 38,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   }
   },
   {
    "wikidata": "Q12024026",
@@ -14181,7 +15506,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 62,
-   "indice": 67
+   "indice": 67,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q13040438",
@@ -14240,7 +15571,14 @@
    "indice_de": 79,
    "indice_fr": 0,
    "indice_int": 62,
-   "indice": 38
+   "indice": 38,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q1730271",
@@ -14387,6 +15725,14 @@
      "metodo": null,
      "fonte": "SBN"
     }
+   },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
    }
   },
   {
@@ -14478,6 +15824,12 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    }
+   },
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
     }
    },
    "pagina": "laura-troubridge",
@@ -14596,6 +15948,12 @@
      "metodo": null,
      "fonte": "SBN"
     }
+   },
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
    }
   },
   {
@@ -14638,7 +15996,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 62,
-   "indice": 38
+   "indice": 38,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q19521356",
@@ -14689,7 +16053,14 @@
    "indice_de": 0,
    "indice_fr": 96,
    "indice_int": 62,
-   "indice": 73
+   "indice": 73,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   }
   },
   {
    "wikidata": "Q17362097",
@@ -14721,7 +16092,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 62,
-   "indice": 38
+   "indice": 38,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q3271300",
@@ -14793,6 +16170,14 @@
      "metodo": null,
      "fonte": "SBN"
     }
+   },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
    }
   },
   {
@@ -14831,7 +16216,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 62,
-   "indice": 38
+   "indice": 38,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q20086907",
@@ -14869,7 +16260,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 62,
-   "indice": 83
+   "indice": 83,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q5992572",
@@ -14942,7 +16339,14 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 62,
-   "indice": 38
+   "indice": 38,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q6796417",
@@ -15003,7 +16407,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 62,
-   "indice": 38
+   "indice": 38,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q6036409",
@@ -15038,7 +16448,15 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 62,
-   "indice": 38
+   "indice": 38,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q131861859",
@@ -15143,6 +16561,13 @@
      "metodo": null,
      "fonte": "SBN"
     }
+   },
+   "verifica": {
+    "esito": "discorde",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1945
+    }
    }
   },
   {
@@ -15207,7 +16632,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 62,
-   "indice": 63
+   "indice": 63,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q11885337",
@@ -15260,7 +16691,14 @@
    "indice_de": 78,
    "indice_fr": 0,
    "indice_int": 62,
-   "indice": 38
+   "indice": 38,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   }
   },
   {
    "wikidata": "Q1750379",
@@ -15357,6 +16795,14 @@
      "metodo": null,
      "fonte": "SBN"
     }
+   },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
    }
   },
   {
@@ -15415,7 +16861,14 @@
    "indice_de": 0,
    "indice_fr": 94,
    "indice_int": 62,
-   "indice": 38
+   "indice": 38,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   }
   },
   {
    "wikidata": "Q3386497",
@@ -15489,7 +16942,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 62,
-   "indice": 64
+   "indice": 64,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q11889557",
@@ -15532,7 +16991,15 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 62,
-   "indice": 38
+   "indice": 38,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q7273942",
@@ -15619,6 +17086,14 @@
      "fonte": "SBN"
     }
    },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   },
    "pagina": "r-raghava-iyengar",
    "pagina_en": "r-raghava-iyengar"
   },
@@ -15700,7 +17175,14 @@
    "indice_de": 0,
    "indice_fr": 90,
    "indice_int": 62,
-   "indice": 38
+   "indice": 38,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   }
   },
   {
    "wikidata": "Q2163347",
@@ -15838,6 +17320,14 @@
      "metodo": "nome",
      "fonte": "SBN"
     }
+   },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
    }
   },
   {
@@ -15917,7 +17407,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 62,
-   "indice": 67
+   "indice": 67,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q1074398",
@@ -15990,7 +17486,14 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 62,
-   "indice": 38
+   "indice": 38,
+   "verifica": {
+    "esito": "discorde",
+    "fonti": {
+     "wikidata": 1946,
+     "loc": 1945
+    }
+   }
   },
   {
    "wikidata": "Q91742500",
@@ -16027,7 +17530,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 62,
-   "indice": 38
+   "indice": 38,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q15244085",
@@ -16090,7 +17599,15 @@
    "indice_de": 0,
    "indice_fr": 84,
    "indice_int": 62,
-   "indice": 86
+   "indice": 86,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q20535636",
@@ -16153,7 +17670,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 62,
-   "indice": 38
+   "indice": 38,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q15997338",
@@ -16209,7 +17732,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 62,
-   "indice": 38
+   "indice": 38,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q10931830",
@@ -16265,7 +17794,15 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 35
+   "indice": 35,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q132471292",
@@ -16333,7 +17870,13 @@
    "indice_de": 0,
    "indice_fr": 83,
    "indice_int": 47,
-   "indice": 35
+   "indice": 35,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q25438468",
@@ -16461,7 +18004,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 35
+   "indice": 35,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q16131146",
@@ -16501,7 +18050,15 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 35
+   "indice": 35,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q64935077",
@@ -16554,7 +18111,15 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 35
+   "indice": 35,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q11221124",
@@ -16586,7 +18151,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 35
+   "indice": 35,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q4492267",
@@ -16658,7 +18229,15 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 35
+   "indice": 35,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q3659106",
@@ -16734,7 +18313,15 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 67
+   "indice": 67,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q1100052",
@@ -16832,6 +18419,14 @@
      "fonte": "SBN"
     }
    },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   },
    "pagina": "dana-chambers",
    "pagina_en": "dana-chambers"
   },
@@ -16869,7 +18464,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 35
+   "indice": 35,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q15971309",
@@ -16911,7 +18512,15 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 53
+   "indice": 53,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q11856196",
@@ -17046,7 +18655,31 @@
      "metodo": null,
      "fonte": "SBN"
     }
-   }
+   },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   },
+   "illustratori": [
+    {
+     "opera": "Kouzelný prsten krále Šalomouna: biblické legendy",
+     "nome": "Artuš Scheiner",
+     "morte": 1938
+    },
+    {
+     "opera": "Zlatá studánka: pohádky zašlých dnů",
+     "nome": "Josef Wenig",
+     "morte": 1939
+    },
+    {
+     "opera": "Druhým životem: román dobrého člověka",
+     "nome": "Milada Marešová",
+     "morte": 1987
+    }
+   ]
   },
   {
    "wikidata": "Q19998289",
@@ -17149,7 +18782,15 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 35
+   "indice": 35,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q5364934",
@@ -17201,7 +18842,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 35
+   "indice": 35,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q11878622",
@@ -17279,7 +18926,15 @@
    "indice_de": 85,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 58
+   "indice": 58,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q110473",
@@ -17326,7 +18981,14 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 35
+   "indice": 35,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q12714559",
@@ -17369,7 +19031,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 35
+   "indice": 35,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q15063463",
@@ -17405,7 +19073,15 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 35
+   "indice": 35,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q135976801",
@@ -17443,7 +19119,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 58
+   "indice": 58,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q9431951",
@@ -17483,7 +19165,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 35
+   "indice": 35,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q14565852",
@@ -17620,6 +19308,14 @@
      "metodo": null,
      "fonte": "SBN"
     }
+   },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
    }
   },
   {
@@ -17726,7 +19422,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 35
+   "indice": 35,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q23836136",
@@ -17819,6 +19521,13 @@
      "metodo": null,
      "fonte": "SBN"
     }
+   },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
    }
   },
   {
@@ -17904,7 +19613,15 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 74
+   "indice": 74,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q112443126",
@@ -17964,7 +19681,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 35
+   "indice": 35,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q1553589",
@@ -18011,7 +19734,15 @@
    "indice_de": 77,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 35
+   "indice": 35,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q12207051",
@@ -18061,7 +19792,14 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 35
+   "indice": 35,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q11482041",
@@ -18125,7 +19863,14 @@
    "indice_de": 86,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 35
+   "indice": 35,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   }
   },
   {
    "wikidata": "Q1581977",
@@ -18192,7 +19937,14 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 58
+   "indice": 58,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q15997317",
@@ -18249,7 +20001,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 61
+   "indice": 61,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q1596966",
@@ -18349,6 +20107,12 @@
      "metodo": null,
      "fonte": "SBN"
     }
+   },
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
    }
   },
   {
@@ -18389,7 +20153,15 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 35
+   "indice": 35,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q23900593",
@@ -18442,7 +20214,15 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 35
+   "indice": 35,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q5902307",
@@ -18507,7 +20287,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 35
+   "indice": 35,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q1672509",
@@ -18568,7 +20354,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 35
+   "indice": 35,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q21296206",
@@ -18657,6 +20449,14 @@
      "metodo": null,
      "fonte": "SBN"
     }
+   },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
    }
   },
   {
@@ -18714,7 +20514,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 35
+   "indice": 35,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q124637550",
@@ -18753,7 +20559,14 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 35
+   "indice": 35,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   }
   },
   {
    "wikidata": "Q104540912",
@@ -18827,7 +20640,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 35
+   "indice": 35,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q21507099",
@@ -18869,7 +20688,15 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 35
+   "indice": 35,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q21793418",
@@ -19002,7 +20829,27 @@
      "metodo": null,
      "fonte": "SBN"
     }
-   }
+   },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   },
+   "illustratori": [
+    {
+     "opera": "Chlapci z Vysočiny",
+     "nome": "Alois Moravec",
+     "morte": 1987
+    },
+    {
+     "opera": "Jak ho máme rádi",
+     "nome": "Rudolf Adámek",
+     "morte": 1953
+    }
+   ]
   },
   {
    "wikidata": "Q21032310",
@@ -19109,7 +20956,14 @@
    "indice_de": 91,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 61
+   "indice": 61,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   }
   },
   {
    "wikidata": "Q5795237",
@@ -19157,7 +21011,14 @@
    "indice_de": 91,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 35
+   "indice": 35,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   }
   },
   {
    "wikidata": "Q16565654",
@@ -19230,6 +21091,13 @@
      "metodo": null,
      "fonte": "SBN"
     }
+   },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "loc": 1946
+    }
    }
   },
   {
@@ -19279,7 +21147,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 35
+   "indice": 35,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q11591938",
@@ -19317,7 +21191,14 @@
    "indice_de": 86,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 35
+   "indice": 35,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q5192935",
@@ -19346,7 +21227,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 35
+   "indice": 35,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q5541530",
@@ -19415,7 +21302,14 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 35
+   "indice": 35,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q19289200",
@@ -19487,7 +21381,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 59
+   "indice": 59,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q28970633",
@@ -19522,7 +21422,13 @@
    "indice_de": 0,
    "indice_fr": 81,
    "indice_int": 47,
-   "indice": 35
+   "indice": 35,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q122223952",
@@ -19588,7 +21494,15 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 79
+   "indice": 79,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q12285330",
@@ -19632,7 +21546,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 35
+   "indice": 35,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q3270666",
@@ -19683,7 +21603,13 @@
    "indice_de": 0,
    "indice_fr": 87,
    "indice_int": 47,
-   "indice": 62
+   "indice": 62,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q27968515",
@@ -19745,7 +21671,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 35
+   "indice": 35,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q12035406",
@@ -19835,7 +21767,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 35
+   "indice": 35,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q6015294",
@@ -19872,7 +21810,15 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 35
+   "indice": 35,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q61126209",
@@ -19932,7 +21878,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 35
+   "indice": 35,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q112085467",
@@ -19966,7 +21918,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 35
+   "indice": 35,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q4960521",
@@ -20043,7 +22001,14 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 74
+   "indice": 74,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q27955732",
@@ -20128,6 +22093,13 @@
      "metodo": null,
      "fonte": "SBN"
     }
+   },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
    }
   },
   {
@@ -20172,7 +22144,14 @@
    "indice_de": 94,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 35
+   "indice": 35,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   }
   },
   {
    "wikidata": "Q2040138",
@@ -20231,7 +22210,14 @@
    "indice_de": 0,
    "indice_fr": 85,
    "indice_int": 47,
-   "indice": 35
+   "indice": 35,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   }
   },
   {
    "wikidata": "Q2746496",
@@ -20274,7 +22260,13 @@
    "indice_de": 0,
    "indice_fr": 92,
    "indice_int": 47,
-   "indice": 35
+   "indice": 35,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q3374036",
@@ -20361,7 +22353,14 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 35
+   "indice": 35,
+   "verifica": {
+    "esito": "discorde",
+    "fonti": {
+     "wikidata": 1946,
+     "loc": 1939
+    }
+   }
   },
   {
    "wikidata": "Q51881909",
@@ -20416,7 +22415,14 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 35
+   "indice": 35,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   }
   },
   {
    "wikidata": "Q29514767",
@@ -20452,7 +22458,15 @@
    "indice_de": 76,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 35
+   "indice": 35,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q1247642",
@@ -20499,7 +22513,14 @@
    "indice_de": 82,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 35
+   "indice": 35,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   }
   },
   {
    "wikidata": "Q104381684",
@@ -20541,7 +22562,14 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 63
+   "indice": 63,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   }
   },
   {
    "wikidata": "Q131905298",
@@ -20626,7 +22654,15 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 58
+   "indice": 58,
+   "verifica": {
+    "esito": "discorde",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1913,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q123553097",
@@ -20732,7 +22768,15 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 69
+   "indice": 69,
+   "verifica": {
+    "esito": "discorde",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1947,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q6161064",
@@ -20778,7 +22822,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 35
+   "indice": 35,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q58875332",
@@ -20866,6 +22916,13 @@
      "metodo": null,
      "fonte": "SBN"
     }
+   },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "loc": 1946
+    }
    }
   },
   {
@@ -20930,7 +22987,15 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 72
+   "indice": 72,
+   "verifica": {
+    "esito": "discorde",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1945
+    }
+   }
   },
   {
    "wikidata": "Q108840292",
@@ -21027,6 +23092,13 @@
      "fonte": "SBN"
     }
    },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "loc": 1946
+    }
+   },
    "pagina": "william-murray-graydon",
    "pagina_en": "william-murray-graydon"
   },
@@ -21099,7 +23171,14 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 35
+   "indice": 35,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q133628847",
@@ -21143,7 +23222,15 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 35
+   "indice": 35,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q20420019",
@@ -21190,7 +23277,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 35
+   "indice": 35,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q30609508",
@@ -21294,6 +23387,12 @@
      "metodo": null,
      "fonte": "SBN"
     }
+   },
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
    }
   },
   {
@@ -21338,7 +23437,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q42296841",
@@ -21380,7 +23485,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q4083840",
@@ -21460,7 +23571,15 @@
    "indice_de": 90,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q18117863",
@@ -21525,6 +23644,12 @@
      "metodo": null,
      "fonte": "SBN"
     }
+   },
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
    }
   },
   {
@@ -21588,6 +23713,13 @@
      "metodo": null,
      "fonte": "SBN"
     }
+   },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
    }
   },
   {
@@ -21626,7 +23758,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q1688815",
@@ -21706,7 +23844,15 @@
    "indice_de": 79,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q66582928",
@@ -21767,7 +23913,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 59
+   "indice": 59,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q94870123",
@@ -21805,7 +23957,14 @@
    "indice_de": 84,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   }
   },
   {
    "wikidata": "Q20525590",
@@ -21884,7 +24043,14 @@
    "indice_de": 85,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   }
   },
   {
    "wikidata": "Q12648780",
@@ -22048,7 +24214,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q94665173",
@@ -22083,7 +24255,14 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q826468",
@@ -22119,7 +24298,14 @@
    "indice_de": 88,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   }
   },
   {
    "wikidata": "Q9169497",
@@ -22177,7 +24363,14 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q106688974",
@@ -22231,7 +24424,14 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 59
+   "indice": 59,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q16446222",
@@ -22295,7 +24495,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q15928244",
@@ -22327,7 +24533,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q23988563",
@@ -22391,7 +24603,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q43401059",
@@ -22448,7 +24666,14 @@
    "indice_de": 0,
    "indice_fr": 83,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q115294153",
@@ -22484,7 +24709,14 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q63089389",
@@ -22522,7 +24754,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 54
+   "indice": 54,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q42395332",
@@ -22579,7 +24817,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q56072477",
@@ -22614,7 +24858,15 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q35289035",
@@ -22652,7 +24904,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 57
+   "indice": 57,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q39089830",
@@ -22707,7 +24965,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 53
+   "indice": 53,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q10270821",
@@ -22884,7 +25148,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 55
+   "indice": 55,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q55281877",
@@ -23011,7 +25281,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q27971392",
@@ -23060,7 +25336,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 62
+   "indice": 62,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q56071812",
@@ -23123,7 +25405,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q95249033",
@@ -23227,6 +25515,13 @@
      "metodo": null,
      "fonte": "SBN"
     }
+   },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "loc": 1946
+    }
    }
   },
   {
@@ -23289,7 +25584,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 56
+   "indice": 56,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q55233598",
@@ -23335,7 +25636,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q5537482",
@@ -23402,7 +25709,15 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 63
+   "indice": 63,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q5545436",
@@ -23440,7 +25755,14 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 55
+   "indice": 55,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q18634611",
@@ -23538,7 +25860,14 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   }
   },
   {
    "wikidata": "Q28357112",
@@ -23660,7 +25989,14 @@
    "indice_de": 82,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   }
   },
   {
    "wikidata": "Q5664742",
@@ -23732,7 +26068,14 @@
    "indice_de": 87,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   }
   },
   {
    "wikidata": "Q60834713",
@@ -23817,7 +26160,14 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q116236889",
@@ -23873,7 +26223,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 54
+   "indice": 54,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q15449259",
@@ -23990,6 +26346,13 @@
      "fonte": "SBN"
     }
    },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "loc": 1946
+    }
+   },
    "pagina": "hubert-skidmore",
    "pagina_en": "hubert-skidmore"
   },
@@ -24030,7 +26393,14 @@
    "indice_de": 81,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   }
   },
   {
    "wikidata": "Q5476081",
@@ -24080,7 +26450,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q16560378",
@@ -24135,7 +26511,15 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 56
+   "indice": 56,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q16332976",
@@ -24215,7 +26599,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q17119759",
@@ -24384,6 +26774,13 @@
      "metodo": null,
      "fonte": "SBN"
     }
+   },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
    }
   },
   {
@@ -24495,6 +26892,13 @@
      "metodo": null,
      "fonte": "SBN"
     }
+   },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "loc": 1946
+    }
    }
   },
   {
@@ -24569,7 +26973,14 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 57
+   "indice": 57,
+   "verifica": {
+    "esito": "discorde",
+    "fonti": {
+     "wikidata": 1946,
+     "loc": 1949
+    }
+   }
   },
   {
    "wikidata": "Q123617637",
@@ -24682,7 +27093,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q12260932",
@@ -24745,7 +27162,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q1712858",
@@ -24847,7 +27270,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q6384140",
@@ -24885,7 +27314,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 56
+   "indice": 56,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q20558558",
@@ -24919,7 +27354,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q48600175",
@@ -24989,7 +27430,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q130296148",
@@ -25037,7 +27484,15 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q11874071",
@@ -25082,7 +27537,14 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q1102368",
@@ -25114,7 +27576,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q17381583",
@@ -25150,7 +27618,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q11753349",
@@ -25343,7 +27817,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q105070656",
@@ -25399,7 +27879,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q54944011",
@@ -25470,7 +27956,14 @@
    "indice_de": 86,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   }
   },
   {
    "wikidata": "Q12369939",
@@ -25564,7 +28057,14 @@
    "indice_de": 94,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 34
+   "indice": 34,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   }
   },
   {
    "wikidata": "Q78075155",
@@ -25610,7 +28110,14 @@
    "indice_de": 82,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   }
   },
   {
    "wikidata": "Q131734650",
@@ -25678,7 +28185,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q94752640",
@@ -25725,7 +28238,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q11638254",
@@ -25761,7 +28280,14 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   }
   },
   {
    "wikidata": "Q67180122",
@@ -25797,7 +28323,15 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q108557184",
@@ -25835,7 +28369,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q23688944",
@@ -25900,7 +28440,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q78076420",
@@ -25956,7 +28502,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q16508960",
@@ -26016,7 +28568,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q4454332",
@@ -26052,7 +28610,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q5577539",
@@ -26124,7 +28688,14 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   }
   },
   {
    "wikidata": "Q15831268",
@@ -26189,6 +28760,12 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    }
+   },
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
     }
    }
   },
@@ -26255,7 +28832,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q133458849",
@@ -26291,7 +28874,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q7149963",
@@ -26355,7 +28944,15 @@
    "indice_de": 0,
    "indice_fr": 83,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q103914743",
@@ -26447,7 +29044,14 @@
    "indice_de": 0,
    "indice_fr": 82,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q95389753",
@@ -26498,7 +29102,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q12160488",
@@ -26538,7 +29148,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q135525045",
@@ -26574,7 +29190,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q16119099",
@@ -26614,7 +29236,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q5990104",
@@ -26656,7 +29284,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q5754784",
@@ -26706,7 +29340,13 @@
    "indice_de": 0,
    "indice_fr": 86,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q111284045",
@@ -26755,7 +29395,14 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   }
   },
   {
    "wikidata": "Q2150522",
@@ -26802,7 +29449,15 @@
    "indice_de": 97,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q22670523",
@@ -26831,7 +29486,14 @@
    "indice_de": 83,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q98096429",
@@ -26933,7 +29595,14 @@
    "indice_de": 89,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   }
   },
   {
    "wikidata": "Q80238451",
@@ -27015,7 +29684,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q57085296",
@@ -27061,7 +29736,15 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q12604889",
@@ -27099,7 +29782,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q106781489",
@@ -27134,7 +29823,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q2283216",
@@ -27181,7 +29876,14 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   }
   },
   {
    "wikidata": "Q95999989",
@@ -27255,7 +29957,14 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q59307936",
@@ -27319,7 +30028,15 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q10382756",
@@ -27355,7 +30072,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q114810061",
@@ -27426,7 +30149,14 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q10390369",
@@ -27491,7 +30221,15 @@
    "indice_de": 0,
    "indice_fr": 82,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q25647148",
@@ -27563,7 +30301,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q3565860",
@@ -27622,7 +30366,14 @@
    "indice_de": 90,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   }
   },
   {
    "wikidata": "Q18911090",
@@ -27694,7 +30445,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 60
+   "indice": 60,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q20751834",
@@ -27723,7 +30480,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q18161830",
@@ -27819,7 +30582,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q4259291",
@@ -27872,7 +30641,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q119165525",
@@ -27902,7 +30677,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q94629434",
@@ -27931,7 +30712,14 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q64681592",
@@ -27978,7 +30766,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 26,
-   "indice": 29
+   "indice": 29,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q66132643",
@@ -28013,7 +30807,14 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 0,
-   "indice": 25
+   "indice": 25,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q60822295",
@@ -28093,7 +30894,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 0,
-   "indice": 25
+   "indice": 25,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q2786997",
@@ -28166,7 +30973,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 0,
-   "indice": 25
+   "indice": 25,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q119857162",
@@ -28308,7 +31121,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 0,
-   "indice": 25
+   "indice": 25,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q120431743",
@@ -28481,7 +31300,14 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 0,
-   "indice": 25
+   "indice": 25,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   }
   },
   {
    "wikidata": "Q141510409",
@@ -28524,7 +31350,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 0,
-   "indice": 25
+   "indice": 25,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q95557826",
@@ -28588,6 +31420,12 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    }
+   },
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
     }
    }
   },
@@ -28655,7 +31493,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 0,
-   "indice": 25
+   "indice": 25,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q112418555",
@@ -28791,7 +31635,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 0,
-   "indice": 25
+   "indice": 25,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q94654677",
@@ -28893,7 +31743,14 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 0,
-   "indice": 25
+   "indice": 25,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   }
   },
   {
    "wikidata": "Q94518053",
@@ -28980,7 +31837,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 0,
-   "indice": 25
+   "indice": 25,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q95101994",
@@ -29041,6 +31904,12 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    }
+   },
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
     }
    }
   },
@@ -29242,7 +32111,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 0,
-   "indice": 25
+   "indice": 25,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q112440165",
@@ -29349,7 +32224,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 0,
-   "indice": 25
+   "indice": 25,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q27999017",
@@ -29403,7 +32284,14 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 0,
-   "indice": 25
+   "indice": 25,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   }
   },
   {
    "wikidata": "Q94531193",
@@ -29463,7 +32351,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 0,
-   "indice": 25
+   "indice": 25,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q110842349",
@@ -29542,6 +32436,12 @@
      "metodo": null,
      "fonte": "SBN"
     }
+   },
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
    }
   },
   {
@@ -29599,7 +32499,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 0,
-   "indice": 25
+   "indice": 25,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q115970599",
@@ -29639,7 +32545,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 0,
-   "indice": 25
+   "indice": 25,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q140810040",
@@ -29668,7 +32580,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 0,
-   "indice": 25
+   "indice": 25,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q50385553",
@@ -29700,7 +32618,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 0,
-   "indice": 25
+   "indice": 25,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q94640117",
@@ -29732,7 +32656,15 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 0,
-   "indice": 25
+   "indice": 25,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q115901867",
@@ -29831,7 +32763,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 0,
-   "indice": 25
+   "indice": 25,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q65952223",
@@ -29875,7 +32813,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 0,
-   "indice": 25
+   "indice": 25,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q94923334",
@@ -29973,7 +32917,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 0,
-   "indice": 25
+   "indice": 25,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q68902071",
@@ -30082,7 +33032,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 0,
-   "indice": 25
+   "indice": 25,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q110323419",
@@ -30115,7 +33071,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 0,
-   "indice": 25
+   "indice": 25,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q120432381",
@@ -30243,6 +33205,12 @@
      "metodo": null,
      "fonte": "SBN"
     }
+   },
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
    }
   },
   {
@@ -30275,7 +33243,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 0,
-   "indice": 25
+   "indice": 25,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q140337472",
@@ -30486,6 +33460,12 @@
      "metodo": null,
      "fonte": "SBN"
     }
+   },
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
    }
   },
   {
@@ -30570,7 +33550,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 0,
-   "indice": 25
+   "indice": 25,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q120481409",
@@ -30780,7 +33766,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 0,
-   "indice": 25
+   "indice": 25,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q6437975",
@@ -30907,7 +33899,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 0,
-   "indice": 25
+   "indice": 25,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q109857530",
@@ -30970,7 +33968,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 0,
-   "indice": 25
+   "indice": 25,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q137804160",
@@ -31039,7 +34043,15 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 0,
-   "indice": 25
+   "indice": 25,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q42381593",
@@ -31109,7 +34121,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 0,
-   "indice": 25
+   "indice": 25,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q95743559",
@@ -31235,7 +34253,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 0,
-   "indice": 25
+   "indice": 25,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q120481769",
@@ -31325,7 +34349,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 0,
-   "indice": 25
+   "indice": 25,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q55989807",
@@ -31420,7 +34450,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 0,
-   "indice": 25
+   "indice": 25,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q115015736",
@@ -31455,7 +34491,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 0,
-   "indice": 25
+   "indice": 25,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q131345084",
@@ -31484,7 +34526,14 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 0,
-   "indice": 25
+   "indice": 25,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   }
   },
   {
    "wikidata": "Q75761784",
@@ -31516,7 +34565,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 0,
-   "indice": 25
+   "indice": 25,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q100775410",
@@ -31549,7 +34604,14 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 0,
-   "indice": 25
+   "indice": 25,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   }
   },
   {
    "wikidata": "Q94859766",
@@ -31600,7 +34662,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 0,
-   "indice": 25
+   "indice": 25,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q113509862",
@@ -31662,7 +34730,14 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 0,
-   "indice": 25
+   "indice": 25,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   }
   },
   {
    "wikidata": "Q95295492",
@@ -31746,7 +34821,14 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 0,
-   "indice": 25
+   "indice": 25,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   }
   },
   {
    "wikidata": "Q94757386",
@@ -31775,7 +34857,14 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 0,
-   "indice": 25
+   "indice": 25,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   }
   },
   {
    "wikidata": "Q136865439",
@@ -31819,7 +34908,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 0,
-   "indice": 25
+   "indice": 25,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q93251267",
@@ -31861,7 +34956,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 0,
-   "indice": 25
+   "indice": 25,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q131277714",
@@ -31893,7 +34994,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 0,
-   "indice": 25
+   "indice": 25,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q67182287",
@@ -32021,6 +35128,13 @@
      "metodo": null,
      "fonte": "SBN"
     }
+   },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "loc": 1946
+    }
    }
   },
   {
@@ -32107,7 +35221,14 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 0,
-   "indice": 25
+   "indice": 25,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946
+    }
+   }
   },
   {
    "wikidata": "Q120481112",
@@ -32193,7 +35314,14 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 0,
-   "indice": 31
+   "indice": 31,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q110174994",
@@ -32248,7 +35376,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 0,
-   "indice": 25
+   "indice": 25,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q134360351",
@@ -32393,7 +35527,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 0,
-   "indice": 25
+   "indice": 25,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q141795346",
@@ -32440,7 +35580,15 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 0,
-   "indice": 25
+   "indice": 25,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "gnd": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q95174553",
@@ -32469,7 +35617,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 0,
-   "indice": 25
+   "indice": 25,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q140137732",
@@ -32502,7 +35656,13 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 0,
-   "indice": 25
+   "indice": 25,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
   },
   {
    "wikidata": "Q63486399",
@@ -32681,7 +35841,14 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 0,
-   "indice": 25
+   "indice": 25,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "loc": 1946
+    }
+   }
   },
   {
    "wikidata": "Q130633483",
