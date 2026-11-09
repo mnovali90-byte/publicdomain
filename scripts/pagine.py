@@ -418,10 +418,10 @@ def crea_home_inglese():
     A = ANNO_PROSSIMO
     s = (RADICE / "index.html").read_text(encoding="utf-8")
     en = testi_app(s, "en")
-    tit = f"Public Domain {A}: authors entering the public domain · Public Domain Radar"
-    descr = (f"Which authors enter the public domain on 1 January {A}, with the term rules of Italy, France, Germany and Spain "
+    tit = f"Public Domain {A}: books and authors entering the public domain · Public Domain Radar"
+    descr = (f"Which books and authors enter the public domain on 1 January {A}, with the term rules of Italy, France, Germany and Spain "
              f"read from official legal texts. Open data from Wikidata, Wikipedia and SBN, updated monthly.")
-    breve = f"Which authors become free on 1 January {A}, country by country, with open data and official legal sources."
+    breve = f"Which books and authors become free on 1 January {A}, country by country, with open data and official legal sources."
     s = s.replace('<html lang="it">', '<html lang="en">', 1)
     s = sostituisci(s, r"<title>.*?</title>", f"<title>{esc(tit)}</title>")
     s = sostituisci(s, r'<meta name="description" content="[^"]*">', f'<meta name="description" content="{esc(descr)}">')
@@ -571,7 +571,7 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en"):
              "Le leggi sono lette sui testi ufficiali. Il sito si aggiorna da solo ogni mese."),
         ]
     else:
-        titolo = f"Public Domain {anno}: what becomes free on 1 January · Public Domain Radar"
+        titolo = f"Public Domain {anno}: books and authors that become free on 1 January · Public Domain Radar"
         descr = (f"The works (USA) and authors (Europe) entering the public domain on 1 January {anno}, from open data. "
                  f"Two rules explained in plain words, with sources.")
         faq = [
