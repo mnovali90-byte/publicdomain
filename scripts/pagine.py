@@ -210,6 +210,11 @@ def blocco_verifica(a, lang):
         t = (f"Anno di morte confermato da {len(nomi)} fonti indipendenti: {', '.join(nomi)}." if it
              else f"Year of death confirmed by {len(nomi)} independent sources: {', '.join(nomi)}.")
         return [f'<p class="sotto">{esc(t)}</p>\n']
+    if v["esito"] == "nazionale":
+        n = v.get("nazionale", {})
+        t = (f"Anno di morte controllato a mano su una fonte del paese dell'autore ({n.get('fonte')}), perché le altre fonti non concordavano." if it
+             else f"Year of death checked by hand against a source from the author's country ({n.get('fonte')}), because the other sources disagreed.")
+        return [f'<p class="sotto">{esc(t)} <a href="{esc(n.get("url", ""))}" rel="noopener">{"Fonte" if it else "Source"}</a></p>\n']
     if v["esito"] == "discorde":
         el = ", ".join(f"{NOMI_FONTE[lang][k]} {y}" for k, y in fv.items() if k in NOMI_FONTE[lang])
         t = (f"Da verificare: le fonti non concordano sull'anno di morte ({el}). Le date qui sopra usano Wikidata." if it

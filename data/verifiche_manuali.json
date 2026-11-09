@@ -1,0 +1,14 @@
+{
+ "nota": "Terza fonte, controllata a mano sulla fonte del paese dell'autore, per i casi in cui Wikidata e le biblioteche (GND, Library of Congress) non concordano. 'morte' è l'anno giusto secondo quella fonte. Se è diverso da Wikidata, l'autore esce dall'elenco dell'anno sbagliato.",
+ "autori": {
+  "Q12731091": {"nome": "Isaiia Răcăciuni", "morte": 1976, "fonte": "Wikipedia (en), con fonti; Ziarul de Bacău", "url": "https://en.wikipedia.org/wiki/Isaia_R%C4%83c%C4%83ciuni", "controllato": "2026-11-09"},
+  "Q20142373": {"nome": "Gerard Diels", "morte": 1956, "fonte": "DBNL, biblioteca digitale della letteratura olandese", "url": "https://dbnl.org/tekst/bork001schr01_01/bork001schr01_01_0260.php", "controllato": "2026-11-09"},
+  "Q3174476": {"nome": "Jean Royère", "morte": 1956, "fonte": "Biblioteca nazionale di Francia (BnF)", "url": "https://catalogue.bnf.fr/ark:/12148/cb121395463", "controllato": "2026-11-09"},
+  "Q20738418": {"nome": "Marcel Romanescu", "morte": 1956, "fonte": "Dicționarul biografic al literaturii române (A. Sasu)", "url": "https://en.wikipedia.org/wiki/Marcel_Romanescu", "controllato": "2026-11-09"},
+  "Q5210092": {"nome": "Dakshinaranjan Mitra Majumder", "morte": 1957, "fonte": "Banglapedia", "url": "https://en.banglapedia.org/index.php/Mitra_Majumder,_Dakshinaranjan", "controllato": "2026-11-09"},
+  "Q115085": {"nome": "Helmut von den Steinen", "morte": 1957, "fonte": "Wikipedia (de) via BookBrainz: 26 novembre 1957, Rodi (l'archivio Cavafy dice 1956)", "url": "https://bookbrainz.org/author/2fa0e7be-054c-489b-a193-c37ea7358fd7", "controllato": "2026-11-09"},
+  "Q4303556": {"nome": "Ilo Mosashvili", "morte": 1954, "fonte": "Grande enciclopedia sovietica: 4 agosto 1954, Tbilisi", "url": "https://booksite.ru/FullText/1/001/008/078/395.htm", "controllato": "2026-11-09"},
+  "Q6963402": {"nome": "Nanduri Venkata Subba Rao", "morte": 1957, "fonte": "Wikipedia (en): 29 maggio 1957", "url": "https://en.wikipedia.org/wiki/Nanduri_Venkata_Subba_Rao", "controllato": "2026-11-09"},
+  "Q16484645": {"nome": "Abílio Barreto", "morte": 1959, "fonte": "Redalyc, articolo accademico: Diamantina 1882 – Ouro Preto 1959", "url": "https://www.redalyc.org/pdf/4056/405641272008.pdf", "controllato": "2026-11-09"}
+ }
+}

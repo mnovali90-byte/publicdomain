@@ -155,9 +155,32 @@ def main():
                 print(nome_f, c, "non letto:", e)
             time.sleep(0.2)
 
-    conta = {"verificato": 0, "discorde": 0, "una_fonte": 0}
+    try:
+        manuali = json.load(open(DATA / "verifiche_manuali.json", encoding="utf-8"))["autori"]
+    except Exception:
+        manuali = {}
+    conta = {"verificato": 0, "discorde": 0, "una_fonte": 0, "nazionale": 0, "tolti": 0}
     for f, p in pacchetti.items():
+        anno_file = int(re.search(r"(\d{4})\.json$", f.name).group(1))
+        tenuti = []
         for a in p["autori"]:
+            m = manuali.get(a["wikidata"])
+            if m and anno(a.get("morte")) != m["morte"]:
+                # la fonte nazionale dà un altro anno di morte: l'autore non appartiene a questo elenco
+                print(f"  TOLTO da {f.name}: {a['nome']} (Wikidata {anno(a.get('morte'))}, {m['fonte']} {m['morte']})")
+                conta["tolti"] += 1
+                continue
+            tenuti.append(a)
+        p["autori"] = tenuti
+        for a in p["autori"]:
+            m = manuali.get(a["wikidata"])
+            if m:
+                a["verifica"] = {"esito": "nazionale", "fonti": {"wikidata": anno(a.get("morte"))},
+                                 "nazionale": {"fonte": m["fonte"], "url": m["url"], "morte": m["morte"]}}
+                conta["nazionale"] += 1
+                if ill.get(a["wikidata"]):
+                    a["illustratori"] = ill[a["wikidata"]]
+                continue
             if not a.get("letterario"):
                 continue
             q = a["wikidata"]
