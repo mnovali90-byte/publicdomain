@@ -163,6 +163,14 @@ def costruisci_playlist(ops):
     autori = [{"qid": k, "nome": a["nome"], "visite_sett": sum(o["visite_sett"] for o in a["opere"]),
                "opere": top(a["opere"], 30)} for k, a in per_autore.items() if len(a["opere"]) >= 3]
     autori.sort(key=lambda a: -a["visite_sett"])
+    # un autore con quasi le stesse opere di uno già in lista (Jacob e Wilhelm dopo "Fratelli Grimm") si salta
+    unici, visti = [], []
+    for a in autori:
+        s = set(a["opere"])
+        if any(len(s & v) >= 0.6 * len(s) for v in visti):
+            continue
+        visti.append(s); unici.append(a)
+    autori = unici
 
     generi, lingue, decenni = {}, {}, {}
     for o in ops:
