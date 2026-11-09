@@ -793,11 +793,11 @@
     }
    },
    "verifica": {
-    "esito": "discorde",
+    "esito": "verificato",
     "fonti": {
      "wikidata": 1956,
      "gnd": 1956,
-     "loc": 1900
+     "loc": 1956
     }
    },
    "pagina": "henry-louis-mencken",
@@ -11194,10 +11194,9 @@
     }
    },
    "verifica": {
-    "esito": "verificato",
+    "esito": "una_fonte",
     "fonti": {
-     "wikidata": 1956,
-     "loc": 1956
+     "wikidata": 1956
     }
    },
    "pagina": "frances-mabel-robinson",
