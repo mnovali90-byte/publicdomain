@@ -4,7 +4,7 @@
  "paese": "es",
  "regola": "Spagna, autori morti prima del 1987: 80 anni dalla morte (Ley de 10 de enero de 1879, art. 6; Ley de Propiedad Intelectual, disp. trans. cuarta). Data prudente: 1 gennaio dell'anno dopo gli 80 anni",
  "fonte": "Wikidata (CC0)",
- "aggiornato": "2026-11-08",
+ "aggiornato": "2026-11-09",
  "totale": 1302,
  "autori": [
   {
@@ -20944,6 +20944,93 @@
    "url": "https://www.wikidata.org/wiki/Q108840292"
   },
   {
+   "wikidata": "Q52150387",
+   "nome": "William Murray Graydon",
+   "nascita": "1864-02-04",
+   "morte": "1946-04-05",
+   "pagine_wikipedia": 2,
+   "professioni": [
+    "romanziere"
+   ],
+   "url": "https://www.wikidata.org/wiki/Q52150387",
+   "letterario": true,
+   "tipo_catalogo": [
+    "Romanzo"
+   ],
+   "bio": "William Murray Graydon was an extremely prolific American writer who also wrote under the pen-names Alfred Armitage, William Murray, and Tom Olliver. He wrote adventure, historical fiction and Sexton Blake detective stories for boy's story papers.",
+   "bio_url": "https://en.wikipedia.org/wiki/William_Murray_Graydon",
+   "bio_lingua": "en",
+   "bios": {
+    "en": {
+     "testo": "William Murray Graydon was an extremely prolific American writer who also wrote under the pen-names Alfred Armitage, William Murray, and Tom Olliver. He wrote adventure, historical fiction and Sexton Blake detective stories for boy's story papers.",
+     "url": "https://en.wikipedia.org/wiki/William_Murray_Graydon"
+    }
+   },
+   "opere": [
+    {
+     "titolo": "Cavaleir and Rogues: The Adventures of Rich...",
+     "anno": 1901,
+     "generi": [],
+     "sl": 0
+    },
+    {
+     "titolo": "The Fighting Lads of Devon: or, In the Days...",
+     "anno": 1900,
+     "generi": [],
+     "sl": 0
+    },
+    {
+     "titolo": "The River of Darkness; or, Under Africa",
+     "anno": null,
+     "generi": [],
+     "sl": 0
+    }
+   ],
+   "n_opere": 3,
+   "visite_12m": 13681,
+   "visite_it": 0,
+   "visite_en": 13681,
+   "visite_es": 0,
+   "visite_de": 0,
+   "visite_fr": 0,
+   "gutenberg": 4398,
+   "paesi": [
+    "Regno d'Inghilterra",
+    "Stati Uniti"
+   ],
+   "indice_it": 0,
+   "indice_en": 96,
+   "indice_es": 0,
+   "indice_de": 0,
+   "indice_fr": 0,
+   "indice_int": 47,
+   "indice": 81,
+   "traduzioni": {
+    "opere": 34,
+    "con_lingua": 32,
+    "per_lingua": {
+     "it": 0,
+     "en": 32,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "fonte": "SBN"
+    }
+   },
+   "pagina": "william-murray-graydon",
+   "pagina_en": "william-murray-graydon"
+  },
+  {
    "wikidata": "Q947959",
    "nome": "Witold Makowiecki",
    "nascita": "1902-08-03",
@@ -27650,93 +27737,6 @@
    "url": "https://www.wikidata.org/wiki/Q18161830"
   },
   {
-   "wikidata": "Q52150387",
-   "nome": "William Murray Graydon",
-   "nascita": "1864-02-04",
-   "morte": "1946-04-05",
-   "pagine_wikipedia": 1,
-   "professioni": [
-    "romanziere"
-   ],
-   "url": "https://www.wikidata.org/wiki/Q52150387",
-   "letterario": true,
-   "tipo_catalogo": [
-    "Romanzo"
-   ],
-   "bio": "William Murray Graydon was an extremely prolific American writer who also wrote under the pen-names Alfred Armitage, William Murray, and Tom Olliver. He wrote adventure, historical fiction and Sexton Blake detective stories for boy's story papers.",
-   "bio_url": "https://en.wikipedia.org/wiki/William_Murray_Graydon",
-   "bio_lingua": "en",
-   "bios": {
-    "en": {
-     "testo": "William Murray Graydon was an extremely prolific American writer who also wrote under the pen-names Alfred Armitage, William Murray, and Tom Olliver. He wrote adventure, historical fiction and Sexton Blake detective stories for boy's story papers.",
-     "url": "https://en.wikipedia.org/wiki/William_Murray_Graydon"
-    }
-   },
-   "opere": [
-    {
-     "titolo": "Cavaleir and Rogues: The Adventures of Rich...",
-     "anno": 1901,
-     "generi": [],
-     "sl": 0
-    },
-    {
-     "titolo": "The Fighting Lads of Devon: or, In the Days...",
-     "anno": 1900,
-     "generi": [],
-     "sl": 0
-    },
-    {
-     "titolo": "The River of Darkness; or, Under Africa",
-     "anno": null,
-     "generi": [],
-     "sl": 0
-    }
-   ],
-   "n_opere": 3,
-   "visite_12m": 13681,
-   "visite_it": 0,
-   "visite_en": 13681,
-   "visite_es": 0,
-   "visite_de": 0,
-   "visite_fr": 0,
-   "gutenberg": 4398,
-   "paesi": [
-    "Regno d'Inghilterra",
-    "Stati Uniti"
-   ],
-   "indice_it": 0,
-   "indice_en": 96,
-   "indice_es": 0,
-   "indice_de": 0,
-   "indice_fr": 0,
-   "indice_int": 26,
-   "indice": 76,
-   "traduzioni": {
-    "opere": 34,
-    "con_lingua": 32,
-    "per_lingua": {
-     "it": 0,
-     "en": 32,
-     "es": 0,
-     "fr": 0,
-     "de": 0
-    },
-    "parziale": false,
-    "fonte": "Open Library",
-    "ts": "2026-11-05",
-    "sbn_it": {
-     "trovato": false,
-     "edizioni": 0,
-     "ultimo": null,
-     "dal_2000": 0,
-     "metodo": null,
-     "fonte": "SBN"
-    }
-   },
-   "pagina": "william-murray-graydon",
-   "pagina_en": "william-murray-graydon"
-  },
-  {
    "wikidata": "Q28946822",
    "nome": "William Nevin Tatlow Hurst",
    "nascita": "1868-04-11",
@@ -33029,7 +33029,7 @@
    "n": 1
   }
  ],
- "arricchito": "2026-11-08",
+ "arricchito": "2026-11-09",
  "indice_formula": "tre misure separate: visite Wikipedia it, visite Wikipedia en, numero di lingue con una pagina; ciascuna 0-100 rispetto alla lista dell'anno",
- "traduzioni_aggiornato": "2026-11-08"
+ "traduzioni_aggiornato": "2026-11-09"
 }
