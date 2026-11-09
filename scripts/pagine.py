@@ -154,7 +154,7 @@ PIEDE = {
 <p>Un progetto di Marco Novali.</p>
 <p>Fonti: Wikidata (CC0), Wikipedia (testi CC BY-SA, con link alla pagina d'origine), Wikimedia Commons (ritratti, ciascuno con la sua licenza), Open Library, catalogo SBN. Dati aperti, aggiornati ogni mese in automatico; possono contenere errori.</p>
 <p>Le date sono un calcolo indicativo dalle norme elencate nel <a href="/#regole-paesi">riquadro delle regole</a>. Non è consulenza legale: prima di pubblicare va controllato nella legge del paese.</p>
-<p><a href="/">Tutti gli autori</a> · <a href="/autore/">Indice degli autori</a> · <a href="https://github.com/mnovali90-byte/publicdomain">Codice e dati su GitHub</a></p>
+<p><a href="/">Tutti gli autori</a> · <a href="/pubblico-dominio-@@ANNO@@/">Pubblico dominio @@ANNO@@</a> · <a href="/autore/">Indice degli autori</a> · <a href="https://github.com/mnovali90-byte/publicdomain">Codice e dati su GitHub</a></p>
 </footer>
 </body>
 </html>
@@ -163,12 +163,16 @@ PIEDE = {
 <p>A project by Marco Novali.</p>
 <p>Sources: Wikidata (CC0), Wikipedia (text CC BY-SA, linked to the original page), Wikimedia Commons (portraits, each with its own licence), Open Library, SBN catalogue. Open data, updated automatically every month; it may contain errors.</p>
 <p>The dates are an indicative calculation from the rules listed in the <a href="/en/#regole-paesi">rules box</a>. Not legal advice: check the law of the country before publishing.</p>
-<p><a href="/en/">All authors</a> · <a href="/en/public-domain-2027/">Public domain 2027</a> · <a href="/en/author/">Author index</a> · <a href="https://github.com/mnovali90-byte/publicdomain">Code and data on GitHub</a></p>
+<p><a href="/en/">All authors</a> · <a href="/en/public-domain-@@ANNO@@/">Public domain @@ANNO@@</a> · <a href="/en/author/">Author index</a> · <a href="https://github.com/mnovali90-byte/publicdomain">Code and data on GitHub</a></p>
 </footer>
 </body>
 </html>
 """,
 }
+
+
+ANNO_PROSSIMO = datetime.date.today().year + 1   # l'anno del prossimo 1° gennaio
+PIEDE = {k: v.replace("@@ANNO@@", str(ANNO_PROSSIMO)) for k, v in PIEDE.items()}
 
 
 # Il calendario compare nel sito solo quando esiste data/calendario_ok (approvazione di Marco).
@@ -203,7 +207,7 @@ def pagina_autore(a, slug, lang, ha_altra):
         descr = (f"{nome} è morto nel {D}: nell'UE le sue opere sono libere dal {data_l(lang, D + 71)}. "
                  f"Date per Italia, Francia, Germania e Spagna, edizioni italiane in SBN e opere principali, da dati aperti.")
     else:
-        titolo = f"{nome} ({anni}): when it enters the public domain · Public Domain Radar"
+        titolo = f"{nome} ({anni}): when the works enter the public domain · Public Domain Radar"
         descr = (f"{nome} died in {D}: in the EU the works are free from {data_l(lang, D + 71)}. "
                  f"Dates for Italy, France, Germany and Spain, Italian editions in SBN and online interest, from open data.")
     persona = {"@context": "https://schema.org", "@type": "Person", "name": nome, "url": url,
@@ -333,27 +337,113 @@ def pagina_indice(voci, lang):
     return "".join(out)
 
 
+def testi_app(s, lang):
+    """Le frasi dell'app (oggetto TESTI in index.html) per una lingua: {chiave: testo}."""
+    inizio = s.index("const TESTI = {")
+    j = s.index("\n" + lang + ": {", inizio)
+    fine = s.index("\n};", j) if lang == "en" else s.index("\nen: {", j)
+    out = {}
+    for k, v in re.findall(r'(\w+): "((?:[^"\\]|\\.)*)"', s[j:fine]):
+        out.setdefault(k, json.loads('"' + v + '"'))
+    return out
+
+
+def autori_in_vetrina(n=12):
+    """I letterari più noti che si liberano il prossimo 1° gennaio (dati del sito), per il testo statico delle home."""
+    f = RADICE / "data" / f"{ANNO_PROSSIMO}.json"
+    if not f.exists():
+        return []
+    aut = [a for a in json.load(open(f, encoding="utf-8"))["autori"] if a.get("letterario") and a.get("pagina")]
+    aut.sort(key=lambda a: -(a.get("indice_int") or a.get("indice") or 0))
+    return aut[:n]
+
+
+def blocco_statico(lang):
+    """Elenco scritto nella pagina: Google lo legge subito; quando l'app parte lo sostituisce col carosello."""
+    A = ANNO_PROSSIMO
+    aut = autori_in_vetrina()
+    if not aut:
+        return ""
+    if lang == "it":
+        tit = f"Chi entra in pubblico dominio il 1° gennaio {A}"
+        sotto = f"Autori morti nel {A - 71}: nell'Unione europea le loro opere diventano libere il 1° gennaio {A}."
+        voci = "".join(f'<li><a href="/autore/{a["pagina"]}/">{esc(pulisci(a["nome"]))}</a> ({anno_di(a.get("nascita")) or "?"}–{anno_di(a["morte"])})</li>' for a in aut)
+        piu = f'<p><a href="/pubblico-dominio-{A}/">Pubblico dominio {A}: tutto quello che diventa libero</a></p>'
+    else:
+        tit = f"Who enters the public domain on 1 January {A}"
+        sotto = f"Authors who died in {A - 71}: in the European Union their works become free on 1 January {A}."
+        voci = "".join(f'<li><a href="/en/author/{a["pagina_en"]}/">{esc(pulisci(a["nome"]))}</a> ({anno_di(a.get("nascita")) or "?"}–{anno_di(a["morte"])})</li>' for a in aut if a.get("pagina_en"))
+        piu = f'<p><a href="/en/public-domain-{A}/">Public Domain {A}: everything that becomes free</a></p>'
+    return (f'<!--statico--><div class="messaggio" style="padding:40px 0"><h2 style="font-size:22px;margin:0 0 8px">{esc(tit)}</h2>'
+            f'<p style="margin:0 0 12px">{esc(sotto)}</p><ul style="margin:0;padding-left:20px;line-height:1.7">{voci}</ul>{piu}</div><!--/statico-->')
+
+
+def metti_statico(s, lang):
+    s = re.sub(r"<!--statico-->.*?<!--/statico-->", "", s, flags=re.S)
+    a = '<div id="eroe">'
+    if a not in s:
+        raise RuntimeError("index.html è cambiato: manca il riquadro #eroe")
+    return s.replace(a, a + blocco_statico(lang), 1)
+
+
+def sostituisci(s, schema, nuovo):
+    s2, n = re.subn(schema, lambda m: nuovo, s, count=1)
+    if not n:
+        raise RuntimeError("index.html è cambiato: non trovo " + schema[:50])
+    return s2
+
+
+def aggiorna_home_italiana():
+    """Titolo, descrizione e testo statico della home con l'anno del prossimo 1° gennaio (parola chiave «pubblico dominio <anno>»)."""
+    A = ANNO_PROSSIMO
+    f = RADICE / "index.html"
+    s = f.read_text(encoding="utf-8")
+    tit = f"Pubblico dominio {A}: gli autori che diventano liberi · Public Domain Radar"
+    descr = (f"Quali autori entrano in pubblico dominio il 1° gennaio {A}, con le regole di Italia, Francia, Germania e Spagna "
+             f"lette sui testi di legge ufficiali. Dati aperti da Wikidata, Wikipedia e SBN, aggiornati ogni mese.")
+    breve = f"Quali autori diventano liberi il 1° gennaio {A}, paese per paese, con dati aperti e fonti di legge ufficiali."
+    s = sostituisci(s, r"<title>.*?</title>", f"<title>{esc(tit)}</title>")
+    s = sostituisci(s, r'<meta name="description" content="[^"]*">', f'<meta name="description" content="{esc(descr)}">')
+    s = sostituisci(s, r'<meta property="og:title" content="[^"]*">', f'<meta property="og:title" content="{esc(tit)}">')
+    s = sostituisci(s, r'<meta property="og:description" content="[^"]*">', f'<meta property="og:description" content="{esc(breve)}">')
+    s = sostituisci(s, r'<meta name="twitter:description" content="[^"]*">', f'<meta name="twitter:description" content="{esc(breve)}">')
+    i = s.index("const TESTI = {")
+    s = s[:i] + re.sub(r'titolo: "[^"]*"', 'titolo: ' + json.dumps(tit, ensure_ascii=False), s[i:], count=1)
+    s = metti_statico(s, "it")
+    f.write_text(s, encoding="utf-8")
+
+
 def crea_home_inglese():
-    """en/index.html: la stessa app di index.html, con intestazione in inglese. Sull'indirizzo /en/ l'app parte in inglese."""
+    """en/index.html: la stessa app di index.html, con testi già in inglese nel codice della pagina (così Google la legge in inglese)."""
+    A = ANNO_PROSSIMO
     s = (RADICE / "index.html").read_text(encoding="utf-8")
-    cambi = [
-        ('<html lang="it">', '<html lang="en">'),
-        (re.search(r"<title>.*?</title>", s).group(0), "<title>Public Domain Radar · authors entering the public domain</title>"),
-        (re.search(r'<meta name="description" content="[^"]*">', s).group(0),
-         '<meta name="description" content="Which authors enter the public domain on the next 1 January, with the term rules of Italy, France, Germany and Spain read from official legal texts. Open data from Wikidata, Wikipedia and SBN, updated monthly.">'),
-        ('<link rel="canonical" href="https://publicdomainradar.com/">', '<link rel="canonical" href="https://publicdomainradar.com/en/">'),
-        ('<meta property="og:url" content="https://publicdomainradar.com/">', '<meta property="og:url" content="https://publicdomainradar.com/en/">'),
-        ('<meta property="og:title" content="Public Domain Radar · autori che entrano in pubblico dominio">', '<meta property="og:title" content="Public Domain Radar · authors entering the public domain">'),
-        (re.search(r'<meta property="og:description" content="[^"]*">', s).group(0),
-         '<meta property="og:description" content="Which authors become free on 1 January, country by country, with open data and official legal sources.">'),
-        (re.search(r'<meta name="twitter:description" content="[^"]*">', s).group(0),
-         '<meta name="twitter:description" content="Which authors become free on 1 January, country by country, with open data and official legal sources.">'),
-        ('{"@type":"WebSite","name":"Public Domain Radar","url":"https://publicdomainradar.com/"', '{"@type":"WebSite","name":"Public Domain Radar","url":"https://publicdomainradar.com/en/"'),
-    ]
-    for a, b in cambi:
-        if a not in s:
-            raise RuntimeError("index.html è cambiato: la home inglese non trova " + a[:50])
-        s = s.replace(a, b, 1)
+    en = testi_app(s, "en")
+    tit = f"Public Domain {A}: authors entering the public domain · Public Domain Radar"
+    descr = (f"Which authors enter the public domain on 1 January {A}, with the term rules of Italy, France, Germany and Spain "
+             f"read from official legal texts. Open data from Wikidata, Wikipedia and SBN, updated monthly.")
+    breve = f"Which authors become free on 1 January {A}, country by country, with open data and official legal sources."
+    s = s.replace('<html lang="it">', '<html lang="en">', 1)
+    s = sostituisci(s, r"<title>.*?</title>", f"<title>{esc(tit)}</title>")
+    s = sostituisci(s, r'<meta name="description" content="[^"]*">', f'<meta name="description" content="{esc(descr)}">')
+    s = sostituisci(s, r'<meta property="og:title" content="[^"]*">', f'<meta property="og:title" content="{esc(tit)}">')
+    s = sostituisci(s, r'<meta property="og:description" content="[^"]*">', f'<meta property="og:description" content="{esc(breve)}">')
+    s = sostituisci(s, r'<meta name="twitter:description" content="[^"]*">', f'<meta name="twitter:description" content="{esc(breve)}">')
+    s = sostituisci(s, r'<link rel="canonical" href="https://publicdomainradar.com/">', '<link rel="canonical" href="https://publicdomainradar.com/en/">')
+    s = sostituisci(s, r'<meta property="og:url" content="https://publicdomainradar.com/">', '<meta property="og:url" content="https://publicdomainradar.com/en/">')
+    s = sostituisci(s, r'\{"@type":"WebSite","name":"Public Domain Radar","url":"https://publicdomainradar.com/"',
+                    '{"@type":"WebSite","name":"Public Domain Radar","url":"https://publicdomainradar.com/en/"')
+    i = s.index("const TESTI = {")
+    j = s.index("\nen: {", i)
+    s = s[:j] + re.sub(r'titolo: "[^"]*"', 'titolo: ' + json.dumps(tit, ensure_ascii=False), s[j:], count=1)
+    # i testi fissi della pagina (data-t) già in inglese, prima che parta l'app
+    def trad(m):
+        k = m.group(2)
+        v = en.get(k)
+        if v is None or "{" in v:
+            return m.group(0)
+        return m.group(1) + esc(v)
+    s = re.sub(r'(<[^>]*\bdata-t="(\w+)"[^>]*>)([^<]*)(?=<)', trad, s)
+    s = metti_statico(s, "en")
     (RADICE / "en").mkdir(exist_ok=True)
     (RADICE / "en" / "index.html").write_text(s, encoding="utf-8")
 
@@ -445,118 +535,153 @@ def _cop(href, titolo, sotto):
             f'<span class="a">{esc(sotto)}</span></a>\n')
 
 
-def pagina_landing(anno, pacchetto_ue, opere_us):
-    """Pagina di presentazione in inglese per «Public domain <anno>»: dati e regole già verificati nel sito."""
+def url_landing(lang, anno):
+    return f"{SITO}/en/public-domain-{anno}/" if lang == "en" else f"{SITO}/pubblico-dominio-{anno}/"
+
+
+def pagina_landing(anno, pacchetto_ue, opere_us, lang="en"):
+    """Pagina «Public domain <anno>» / «Pubblico dominio <anno>»: dati e regole già verificati nel sito."""
     oggi = datetime.date.today()
-    url = f"{SITO}/en/public-domain-{anno}/"
+    url = url_landing(lang, anno)
     pub = opere_us["anno_pubblicazione"] if opere_us else anno - 96
     morti = anno - 71
     libero = pacchetto_ue.get("libero_dal") or f"{anno}-01-01"
-    titolo = f"Public Domain {anno}: what becomes free on 1 January · Public Domain Radar"
-    descr = (f"The works (USA) and authors (Europe) entering the public domain on 1 January {anno}, from open data. "
-             f"Two rules explained in plain words, with sources.")
-    faq = [
-        (f"What enters the public domain in {anno}?",
-         f"It depends on the country. In the USA, works published in {pub} (95 years after publication, 17 U.S.C. § 304). "
-         f"In the European Union, the works of authors who died in {morti} (author's life + 70 years, Directive 2006/116/EC, Art. 1)."),
-        ("Why are the USA and Europe different?",
-         "They use different rules. The USA counts from the year a work was published. Europe counts from the year the author died. "
-         "So a book can be free in one place and still protected in the other."),
-        (f"Can I publish a book from {pub} in Europe?",
-         f"Not automatically. In Europe what matters is when the author died. A book from {pub} by Virginia Woolf (died 1941) is already free there, "
-         f"while one by Dashiell Hammett (died 1961) is not free until 2032. National rules can add extensions (for example France and Italy), so check your country."),
-        (f"Is every work published in {pub} really free in the USA?",
-         "Not always. Works first published in the USA whose copyright was not renewed after 28 years were already free earlier. Foreign works that regained protection in 1996 (17 U.S.C. § 104A) "
-         "last 95 years from publication, but only if they were still protected in their country of origin and the author was from a member country. "
-         "Our list shows works that probably become free; it is not a legal clearance."),
-        ("Is this legal advice?",
-         "No. It is general information built from open data, and it may contain errors. Before publishing, check the law and the facts for your country and your edition."),
-        ("Where does the data come from?",
-         "Wikidata (CC0), Wikipedia (text CC BY-SA, always linked to the page) and Wikimedia Commons (each image with its own licence). "
-         "The laws are read from the official texts. The site updates itself every month."),
-    ]
+    it = lang == "it"
+    app = "/" if it else "/en/"
+    if it:
+        titolo = f"Pubblico dominio {anno}: cosa diventa libero il 1° gennaio · Public Domain Radar"
+        descr = (f"Le opere (USA) e gli autori (Europa) che entrano in pubblico dominio il 1° gennaio {anno}, dai dati aperti. "
+                 f"Due regole spiegate in parole semplici, con le fonti.")
+        faq = [
+            (f"Cosa entra in pubblico dominio nel {anno}?",
+             f"Dipende dal paese. Negli USA le opere pubblicate nel {pub} (95 anni dalla pubblicazione, 17 U.S.C. § 304). "
+             f"Nell'Unione europea le opere degli autori morti nel {morti} (vita dell'autore + 70 anni, direttiva 2006/116/CE, art. 1)."),
+            ("Perché USA ed Europa sono diversi?",
+             "Usano regole diverse. Gli USA contano dall'anno in cui l'opera è stata pubblicata, l'Europa dall'anno in cui è morto l'autore. "
+             "Così un libro può essere libero in un posto e ancora protetto nell'altro."),
+            (f"Posso pubblicare in Italia un libro uscito nel {pub}?",
+             f"Non automaticamente. In Europa conta quando è morto l'autore. Un libro del {pub} di Virginia Woolf (morta nel 1941) lì è già libero, "
+             f"mentre uno di Dashiell Hammett (morto nel 1961) lo sarà solo dal 2032. Le leggi nazionali possono aggiungere proroghe (per esempio Francia e Italia): controlla il tuo paese."),
+            ("Una traduzione italiana di un'opera libera è libera anche lei?",
+             "No. La traduzione ha diritti propri, che durano 70 anni dalla morte del traduttore. Libero è il testo originale: per pubblicarlo in italiano serve una traduzione nuova o una già libera."),
+            ("È consulenza legale?",
+             "No. Sono informazioni generali costruite da dati aperti e possono contenere errori. Prima di pubblicare controlla la legge e i fatti per il tuo paese e la tua edizione."),
+            ("Da dove vengono i dati?",
+             "Wikidata (CC0), Wikipedia (testi CC BY-SA, sempre con il link alla pagina) e Wikimedia Commons (ogni immagine con la sua licenza). "
+             "Le leggi sono lette sui testi ufficiali. Il sito si aggiorna da solo ogni mese."),
+        ]
+    else:
+        titolo = f"Public Domain {anno}: what becomes free on 1 January · Public Domain Radar"
+        descr = (f"The works (USA) and authors (Europe) entering the public domain on 1 January {anno}, from open data. "
+                 f"Two rules explained in plain words, with sources.")
+        faq = [
+            (f"What enters the public domain in {anno}?",
+             f"It depends on the country. In the USA, works published in {pub} (95 years after publication, 17 U.S.C. § 304). "
+             f"In the European Union, the works of authors who died in {morti} (author's life + 70 years, Directive 2006/116/EC, Art. 1)."),
+            ("Why are the USA and Europe different?",
+             "They use different rules. The USA counts from the year a work was published. Europe counts from the year the author died. "
+             "So a book can be free in one place and still protected in the other."),
+            (f"Can I publish a book from {pub} in Europe?",
+             f"Not automatically. In Europe what matters is when the author died. A book from {pub} by Virginia Woolf (died 1941) is already free there, "
+             f"while one by Dashiell Hammett (died 1961) is not free until 2032. National rules can add extensions (for example France and Italy), so check your country."),
+            (f"Is every work published in {pub} really free in the USA?",
+             "Not always. Works first published in the USA whose copyright was not renewed after 28 years were already free earlier. Foreign works that regained protection in 1996 (17 U.S.C. § 104A) "
+             "last 95 years from publication, but only if they were still protected in their country of origin and the author was from a member country. "
+             "Our list shows works that probably become free; it is not a legal clearance."),
+            ("Is this legal advice?",
+             "No. It is general information built from open data, and it may contain errors. Before publishing, check the law and the facts for your country and your edition."),
+            ("Where does the data come from?",
+             "Wikidata (CC0), Wikipedia (text CC BY-SA, always linked to the page) and Wikimedia Commons (each image with its own licence). "
+             "The laws are read from the official texts. The site updates itself every month."),
+        ]
     jl = {"@context": "https://schema.org", "@graph": [
-        {"@type": "WebPage", "@id": url, "url": url, "name": titolo, "description": descr, "inLanguage": "en",
-         "dateModified": str(oggi), "isPartOf": {"@type": "WebSite", "name": "Public Domain Radar", "url": SITO + "/en/"}},
+        {"@type": "WebPage", "@id": url, "url": url, "name": titolo, "description": descr, "inLanguage": lang,
+         "dateModified": str(oggi), "isPartOf": {"@type": "WebSite", "name": "Public Domain Radar", "url": SITO + app}},
         {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q,
                                              "acceptedAnswer": {"@type": "Answer", "text": r}} for q, r in faq]}]}
     jsonld = '<script type="application/ld+json">' + json.dumps(jl, ensure_ascii=False).replace("</", "<\\/") + "</script>"
-    out = [TESTA.format(lang="en", titolo=esc(titolo), descr=esc(descr), url=url, alterne="", og_tipo="website", jsonld=jsonld,
-                        css=CSS + CSS_LANDING, home="/en/", altra_lingua='<a href="/">Italiano</a>')]
+    alt = (f'<link rel="alternate" hreflang="it" href="{url_landing("it", anno)}">\n'
+           f'<link rel="alternate" hreflang="en" href="{url_landing("en", anno)}">\n')
+    altra = (f'<a href="/en/public-domain-{anno}/">English</a>' if it else f'<a href="/pubblico-dominio-{anno}/">Italiano</a>')
+    out = [TESTA.format(lang=lang, titolo=esc(titolo), descr=esc(descr), url=url, alterne=alt, og_tipo="website", jsonld=jsonld,
+                        css=CSS + CSS_LANDING, home=app, altra_lingua=altra)]
+    T = (lambda a, b: a) if it else (lambda a, b: b)
     out.append(f"""<header class="lp-hero"><div class="lp-in">
-<p class="lp-occ"><i></i>Public Domain Day · 1 January {anno}</p>
-<h1>What becomes free in <em>{anno}</em></h1>
-<p class="lead">The works and authors that enter the public domain on 1 January {anno}, in the USA and in Europe. Open data, explained in plain words, updated every month.</p>
-<div class="lp-cont" id="cont"><b id="giorni">{anno}</b><span id="giorni-et">1 January</span></div>
-<div class="lp-bott"><a class="lp-b lp-b1" href="/en/#/us/{anno}">See the works (USA)</a><a class="lp-b lp-b2" href="/en/#/{anno}">See the authors (Europe)</a></div>
+<p class="lp-occ"><i></i>{T("Public Domain Day · 1° gennaio", "Public Domain Day · 1 January")} {anno}</p>
+<h1>{T("Cosa diventa libero nel", "What becomes free in")} <em>{anno}</em></h1>
+<p class="lead">{T(f"Le opere e gli autori che entrano in pubblico dominio il 1° gennaio {anno}, negli USA e in Europa. Dati aperti, spiegati in parole semplici, aggiornati ogni mese.", f"The works and authors that enter the public domain on 1 January {anno}, in the USA and in Europe. Open data, explained in plain words, updated every month.")}</p>
+<div class="lp-cont" id="cont"><b id="giorni">{anno}</b><span id="giorni-et">{T("1° gennaio", "1 January")}</span></div>
+<div class="lp-bott"><a class="lp-b lp-b1" href="{app}#/us/{anno}">{T("Le opere (USA)", "See the works (USA)")}</a><a class="lp-b lp-b2" href="{app}#/{anno}">{T("Gli autori (Europa)", "See the authors (Europe)")}</a></div>
 </div></header>
 """)
     out.append(f"""<section class="lp-sez"><div class="lp-in">
-<p class="lp-occh">Two rules, two lists</p>
-<h2>It depends where you publish</h2>
-<p class="lead">The USA looks at when a work was published. Europe looks at when the author died. That is why there are two lists.</p>
+<p class="lp-occh">{T("Due regole, due elenchi", "Two rules, two lists")}</p>
+<h2>{T("Dipende da dove pubblichi", "It depends where you publish")}</h2>
+<p class="lead">{T("Gli USA guardano quando è uscita l'opera. L'Europa guarda quando è morto l'autore. Per questo gli elenchi sono due.", "The USA looks at when a work was published. Europe looks at when the author died. That is why there are two lists.")}</p>
 <div class="lp-due">
-<div class="lp-card us"><div class="lp-num">95</div><h3>USA · works</h3><p class="gr">Years after publication</p>
-<p>Works published in <b>{pub}</b> that were still protected become free on 1 January {anno}. Rule: 17 U.S.C. § 304.</p><a href="/en/#/us/{anno}">Browse the works →</a></div>
-<div class="lp-card"><div class="lp-num">70</div><h3>Europe · authors</h3><p class="gr">Years after the author's death</p>
-<p>Authors who died in <b>{morti}</b> become free on 1 January {anno}. Some countries add extensions, so each author page shows the date country by country.</p><a href="/en/#/{anno}">Browse the authors →</a></div>
+<div class="lp-card us"><div class="lp-num">95</div><h3>{T("USA · opere", "USA · works")}</h3><p class="gr">{T("Anni dalla pubblicazione", "Years after publication")}</p>
+<p>{T(f"Le opere pubblicate nel <b>{pub}</b> ancora protette diventano libere il 1° gennaio {anno}. Regola: 17 U.S.C. § 304.", f"Works published in <b>{pub}</b> that were still protected become free on 1 January {anno}. Rule: 17 U.S.C. § 304.")}</p><a href="{app}#/us/{anno}">{T("Sfoglia le opere →", "Browse the works →")}</a></div>
+<div class="lp-card"><div class="lp-num">70</div><h3>{T("Europa · autori", "Europe · authors")}</h3><p class="gr">{T("Anni dalla morte dell'autore", "Years after the author's death")}</p>
+<p>{T(f"Gli autori morti nel <b>{morti}</b> diventano liberi il 1° gennaio {anno}. Alcuni paesi aggiungono proroghe: ogni scheda autore mostra la data paese per paese.", f"Authors who died in <b>{morti}</b> become free on 1 January {anno}. Some countries add extensions, so each author page shows the date country by country.")}</p><a href="{app}#/{anno}">{T("Sfoglia gli autori →", "Browse the authors →")}</a></div>
 </div></div></section>
 """)
     if opere_us and opere_us.get("opere"):
-        out.append(f'<section class="lp-sez" style="padding-top:0"><div class="lp-in">\n<p class="lp-occh">USA · published in {pub}</p>\n'
-                   f'<h2>The most read works entering in {anno}</h2>\n'
-                   f'<p class="lead">Ranked by how much people read about them on English Wikipedia.</p>\n<div class="lp-gr">\n')
+        out.append(f'<section class="lp-sez" style="padding-top:0"><div class="lp-in">\n<p class="lp-occh">{T("USA · pubblicate nel", "USA · published in")} {pub}</p>\n'
+                   f'<h2>{T(f"Le opere più lette che si liberano nel {anno}", f"The most read works entering in {anno}")}</h2>\n'
+                   f'<p class="lead">{T("In ordine di quanto se ne legge su Wikipedia in inglese.", "Ranked by how much people read about them on English Wikipedia.")}</p>\n<div class="lp-gr">\n')
         for o in opere_us["opere"][:12]:
             aut = ", ".join(a["nome"] for a in o.get("autori", [])) or "—"
-            out.append(_cop(f"/en/#/opera/{o['qid']}", o["titolo"], f"{aut} · {pub}"))
-        out.append(f'</div>\n<p class="lp-piu"><a href="/en/#/us/{anno}">All {len(opere_us["opere"])} works →</a></p>\n</div></section>\n')
+            out.append(_cop(f"{app}#/opera/{o['qid']}", o["titolo"], f"{aut} · {pub}"))
+        out.append(f'</div>\n<p class="lp-piu"><a href="{app}#/us/{anno}">{T("Tutte le", "All")} {len(opere_us["opere"])} {T("opere", "works")} →</a></p>\n</div></section>\n')
     aut = [a for a in pacchetto_ue.get("autori", []) if a.get("letterario") and a.get("morte")]
-    aut.sort(key=lambda a: -(a.get("indice_int") or a.get("indice") or 0))
+    aut.sort(key=lambda a: -((a.get("visite_it") or 0) if it else (a.get("indice_int") or a.get("indice") or 0)))
     if aut:
-        out.append(f'<section class="lp-sez lp-scuro"><div class="lp-in">\n<p class="lp-occh">Europe · died in {morti}</p>\n'
-                   f'<h2>The authors entering in {anno}</h2>\n<p class="lead">Writers who died in {morti}, ranked by international interest.</p>\n<div class="lp-aut">\n')
+        out.append(f'<section class="lp-sez lp-scuro"><div class="lp-in">\n<p class="lp-occh">{T("Europa · morti nel", "Europe · died in")} {morti}</p>\n'
+                   f'<h2>{T(f"Gli autori che entrano nel {anno}", f"The authors entering in {anno}")}</h2>\n<p class="lead">{T(f"Scrittori morti nel {morti}, in ordine di interesse in Italia.", f"Writers who died in {morti}, ranked by international interest.")}</p>\n<div class="lp-aut">\n')
         for a in aut[:12]:
-            href = f"/en/author/{a['pagina_en']}/" if a.get("pagina_en") else f"/en/#/autore/{a['wikidata']}"
+            pag = a.get("pagina") if it else a.get("pagina_en")
+            href = (f"/autore/{pag}/" if it else f"/en/author/{pag}/") if pag else f"{app}#/autore/{a['wikidata']}"
             anni = f"{anno_di(a.get('nascita')) or '?'} – {anno_di(a['morte'])}"
             out.append(f'<a href="{href}"><b>{esc(pulisci(a["nome"]))}</b><span>{esc(anni)}</span></a>\n')
-        out.append(f'</div>\n<p class="lp-piu"><a href="/en/#/{anno}" style="color:#fff">All authors →</a></p>\n</div></section>\n')
-    out.append("""<section class="lp-sez"><div class="lp-in">
-<p class="lp-occh">How it works</p>
-<h2>Open data, no guesswork</h2>
+        out.append(f'</div>\n<p class="lp-piu"><a href="{app}#/{anno}" style="color:#fff">{T("Tutti gli autori →", "All authors →")}</a></p>\n</div></section>\n')
+    out.append(f"""<section class="lp-sez"><div class="lp-in">
+<p class="lp-occh">{T("Come funziona", "How it works")}</p>
+<h2>{T("Dati aperti, niente a occhio", "Open data, no guesswork")}</h2>
 <div class="lp-pass">
-<div><b>01</b><h3>Read from open sources</h3><p>Authors and works come from Wikidata, interest from Wikipedia page views. Nothing is typed by hand.</p></div>
-<div><b>02</b><h3>Rules from the law</h3><p>The term rules are read from the official legal texts. What we could not verify is declared on the site.</p></div>
-<div><b>03</b><h3>Updated by itself</h3><p>Every month the whole list is rebuilt. You always see the last update date.</p></div>
+<div><b>01</b><h3>{T("Letto da fonti aperte", "Read from open sources")}</h3><p>{T("Autori e opere vengono da Wikidata, l'interesse dalle visite a Wikipedia. Niente è scritto a mano.", "Authors and works come from Wikidata, interest from Wikipedia page views. Nothing is typed by hand.")}</p></div>
+<div><b>02</b><h3>{T("Regole dalla legge", "Rules from the law")}</h3><p>{T("Le regole sulla durata sono lette sui testi di legge ufficiali. Quello che non abbiamo potuto verificare è dichiarato nel sito.", "The term rules are read from the official legal texts. What we could not verify is declared on the site.")}</p></div>
+<div><b>03</b><h3>{T("Si aggiorna da solo", "Updated by itself")}</h3><p>{T("Ogni mese l'elenco viene ricostruito da capo. Vedi sempre la data dell'ultimo aggiornamento.", "Every month the whole list is rebuilt. You always see the last update date.")}</p></div>
 </div></div></section>
 """)
-    out.append('<section class="lp-sez" style="padding-top:0"><div class="lp-in">\n<p class="lp-occh">Questions</p>\n<h2>Public domain, in plain words</h2>\n<div class="lp-faq">\n')
+    out.append(f'<section class="lp-sez" style="padding-top:0"><div class="lp-in">\n<p class="lp-occh">{T("Domande", "Questions")}</p>\n<h2>{T("Il pubblico dominio, in parole semplici", "Public domain, in plain words")}</h2>\n<div class="lp-faq">\n')
     for q, r in faq:
         out.append(f"<details><summary>{esc(q)}</summary><p>{esc(r)}</p></details>\n")
-    out.append("</div>\n<p class=\"lp-nota\">General information, not legal advice. The data comes from open sources and may contain errors: before publishing, check the law for your country.</p>\n</div></section>\n")
+    out.append(f'</div>\n<p class="lp-nota">{T("Informazioni generali, non consulenza legale. I dati vengono da fonti aperte e possono contenere errori: prima di pubblicare controlla la legge del tuo paese.", "General information, not legal advice. The data comes from open sources and may contain errors: before publishing, check the law for your country.")}</p>\n</div></section>\n')
+    giorni_et = ('d===1?"giorno":"giorni"', '"Libero"', f'"dal 1° gennaio {anno}"') if it else ('d===1?"day to go":"days to go"', '"Free"', f'"since 1 January {anno}"')
     out.append(f"""<section class="lp-fin"><div class="lp-in">
-<h2>Choosing what to republish?</h2>
-<p>Built for editors, translators and agents: see who becomes free, how much they are read, and the date country by country.</p>
-<a class="lp-b" href="/en/">Open the full tool</a>
+<h2>{T("Stai scegliendo cosa ripubblicare?", "Choosing what to republish?")}</h2>
+<p>{T("Pensato per editori, traduttori e agenti: chi diventa libero, quanto è letto e la data paese per paese.", "Built for editors, translators and agents: see who becomes free, how much they are read, and the date country by country.")}</p>
+<a class="lp-b" href="{app}">{T("Apri lo strumento completo", "Open the full tool")}</a>
 </div></section>
-<script>(function(){{var t=new Date("{libero}T00:00:00"),d=Math.ceil((t-new Date())/864e5),b=document.getElementById("giorni"),l=document.getElementById("giorni-et");if(!b||!l)return;if(d>0){{b.textContent=d;l.textContent=d===1?"day to go":"days to go"}}else{{b.textContent="Free";l.textContent="since 1 January {anno}"}}}})();</script>
+<script>(function(){{var t=new Date("{libero}T00:00:00"),d=Math.ceil((t-new Date())/864e5),b=document.getElementById("giorni"),l=document.getElementById("giorni-et");if(!b||!l)return;if(d>0){{b.textContent=d;l.textContent={giorni_et[0]}}}else{{b.textContent={giorni_et[1]};l.textContent={giorni_et[2]}}}}})();</script>
 """)
-    out.append(PIEDE["en"])
+    out.append(PIEDE[lang])
     return "".join(out), url
 
 
 def crea_landing():
-    """en/public-domain-<anno>/index.html per ogni anno disponibile. Restituisce gli indirizzi."""
+    """Per ogni anno disponibile: en/public-domain-<anno>/ e pubblico-dominio-<anno>/. Restituisce gli indirizzi."""
     urls = []
     for f in sorted(glob.glob(str(RADICE / "data" / "[0-9][0-9][0-9][0-9].json"))):
         anno = int(Path(f).stem)
         ue = json.load(open(f, encoding="utf-8"))
         fus = RADICE / "data" / f"us-{anno}.json"
         us = json.load(open(fus, encoding="utf-8")) if fus.exists() else None
-        html_, url = pagina_landing(anno, ue, us)
-        d = RADICE / "en" / f"public-domain-{anno}"
-        d.mkdir(parents=True, exist_ok=True)
-        (d / "index.html").write_text(html_, encoding="utf-8")
-        urls.append(url)
+        for lang, d in (("en", RADICE / "en" / f"public-domain-{anno}"), ("it", RADICE / f"pubblico-dominio-{anno}")):
+            html_, url = pagina_landing(anno, ue, us, lang)
+            d.mkdir(parents=True, exist_ok=True)
+            (d / "index.html").write_text(html_, encoding="utf-8")
+            urls.append(url)
     return urls
 
 
@@ -613,6 +738,7 @@ def main():
                 a_.pop("pagina_en", None)
         Path(f).write_text(json.dumps(pacchetto, ensure_ascii=False, indent=1), encoding="utf-8")
 
+    aggiorna_home_italiana()
     crea_home_inglese()
     landing_urls = crea_landing()
     if CALENDARIO_ON:
