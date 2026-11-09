@@ -194,6 +194,58 @@ def alterne(lang, slug):
             f'<link rel="alternate" hreflang="en" href="{url_pagina("en", slug)}">\n')
 
 
+NOMI_FONTE = {"it": {"wikidata": "Wikidata", "gnd": "Biblioteca nazionale tedesca (GND)", "loc": "Library of Congress"},
+              "en": {"wikidata": "Wikidata", "gnd": "German National Library (GND)", "loc": "Library of Congress"}}
+
+
+def blocco_verifica(a, lang):
+    """Quante fonti indipendenti confermano l'anno di morte (scritto da scripts/verifica.py)."""
+    v = a.get("verifica")
+    if not v:
+        return []
+    it = lang == "it"
+    fv = v.get("fonti", {})
+    nomi = [NOMI_FONTE[lang][k] for k in fv if k in NOMI_FONTE[lang]]
+    if v["esito"] == "verificato":
+        t = (f"Anno di morte confermato da {len(nomi)} fonti indipendenti: {', '.join(nomi)}." if it
+             else f"Year of death confirmed by {len(nomi)} independent sources: {', '.join(nomi)}.")
+        return [f'<p class="sotto">{esc(t)}</p>\n']
+    if v["esito"] == "discorde":
+        el = ", ".join(f"{NOMI_FONTE[lang][k]} {y}" for k, y in fv.items() if k in NOMI_FONTE[lang])
+        t = (f"Da verificare: le fonti non concordano sull'anno di morte ({el}). Le date qui sopra usano Wikidata." if it
+             else f"To verify: the sources disagree on the year of death ({el}). The dates above use Wikidata.")
+        return [f'<p><strong>{esc(t)}</strong></p>\n']
+    t = ("Anno di morte da una sola fonte (Wikidata): le biblioteche nazionali consultate non lo riportano." if it
+         else "Year of death from a single source (Wikidata): the national libraries we check do not record it.")
+    return [f'<p class="sotto">{esc(t)}</p>\n']
+
+
+def blocco_illustrazioni(a, lang):
+    """Le illustrazioni (e le traduzioni) hanno diritti propri: si liberano con la morte di chi le ha fatte."""
+    it = lang == "it"
+    out = [f"<h2>{'Illustrazioni e traduzioni' if it else 'Illustrations and translations'}</h2>\n"]
+    ill = [x for x in (a.get("illustratori") or []) if x.get("nome")]
+    if ill:
+        out.append("<ul>\n")
+        for x in ill:
+            if x.get("morte"):
+                quando = (f"libere nell'UE dal {data_l(lang, x['morte'] + 71)}" if it else f"free in the EU from {data_l(lang, x['morte'] + 71)}")
+                morto = f"morto nel {x['morte']}" if it else f"died {x['morte']}"
+                r = f"{x['opera']}: illustrazioni di {x['nome']} ({morto}), {quando}" if it else f"{x['opera']}: illustrations by {x['nome']} ({morto}), {quando}"
+            else:
+                r = (f"{x['opera']}: illustrazioni di {x['nome']}, data di morte non nota" if it
+                     else f"{x['opera']}: illustrations by {x['nome']}, year of death unknown")
+            out.append(f"<li>{esc(r)}</li>\n")
+        out.append("</ul>\n")
+    out.append('<p class="sotto">' + (
+        "Le date di questa pagina valgono per i testi originali. Illustrazioni e traduzioni hanno diritti propri, "
+        "che durano 70 anni dalla morte dell'illustratore o del traduttore: un libro può avere il testo libero e i disegni ancora protetti."
+        if it else
+        "The dates on this page apply to the original texts. Illustrations and translations have their own rights, "
+        "lasting 70 years after the death of the illustrator or translator: a book can have a free text and still-protected drawings.") + "</p>\n")
+    return out
+
+
 def pagina_autore(a, slug, lang, ha_altra):
     nome = pulisci(a["nome"])
     nasc, mor = anno_di(a.get("nascita")), anno_di(a.get("morte"))
@@ -249,6 +301,7 @@ def pagina_autore(a, slug, lang, ha_altra):
     out += [f"<li>{esc(r)}</li>\n" for r in paese_per_paese(D, lang)]
     out.append('</ul>\n<p class="sotto">' + ("Calcolo indicativo, dalle norme del riquadro in fondo alla pagina. Non è consulenza legale."
                if it else "Indicative calculation, based on the rules in the box at the bottom of the page. Not legal advice.") + "</p>\n")
+    out += blocco_verifica(a, lang) + blocco_illustrazioni(a, lang)
 
     sbn = (a.get("traduzioni") or {}).get("sbn_it")
     if sbn:

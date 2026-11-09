@@ -51,6 +51,10 @@ jobs:
         # dato accessorio: se fallisce, il resto viene salvato comunque
         continue-on-error: true
         run: python scripts/opere.py
+      - name: Seconda fonte per gli anni di morte (GND, Library of Congress) e illustratori
+        # controllo in più: se le biblioteche non rispondono, le pagine escono comunque
+        continue-on-error: true
+        run: python scripts/verifica.py
       - name: Crea le pagine degli autori e la sitemap
         if: always()
         run: python scripts/pagine.py
