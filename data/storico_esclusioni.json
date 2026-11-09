@@ -1,0 +1,19 @@
+{
+ "nota": "Opere che non entrano in classifiche e playlist dello Storico (restano nella ricerca). Si esclude per QID e, per sicurezza, per autore.",
+ "qid": {
+  "Q662930": "The Myth of the Twentieth Century (Alfred Rosenberg, 1930)",
+  "Q3058688": "An Essay on the Inequality of the Human Races (Arthur de Gobineau, 1853)",
+  "Q48244": "Mein Kampf (Hitler, 1925)",
+  "Q1926728": "Michael (Joseph Goebbels, 1929)",
+  "Q7734955": "The Foundations of the Nineteenth Century (Houston Stewart Chamberlain, 1899)",
+  "Q7760921": "The Rising Tide of Color Against White World-Supremacy (Lothrop Stoddard, 1920)"
+ },
+ "autori_qid": {
+  "Q75849": "Alfred Rosenberg",
+  "Q264918": "Arthur de Gobineau",
+  "Q346521": "Hitler",
+  "Q41749": "Joseph Goebbels",
+  "Q57737": "Houston Stewart Chamberlain",
+  "Q1871107": "Lothrop Stoddard"
+ }
+}

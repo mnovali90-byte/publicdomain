@@ -152,7 +152,18 @@ def visite_settimana(wiki, url, ini, fine):
 
 
 # ------------------------------------------------------------------ playlist
+def escluse():
+    """QID di opere e autori che non entrano mai in classifiche e playlist (data/storico_esclusioni.json)."""
+    try:
+        e = json.load(open("data/storico_esclusioni.json", encoding="utf8"))
+        return set(e.get("qid", {})), set(e.get("autori_qid", {}))
+    except Exception:
+        return set(), set()
+
+
 def costruisci_playlist(ops):
+    no_opere, no_autori = escluse()
+    ops = [o for o in ops if o["qid"] not in no_opere and not any(a["qid"] in no_autori for a in o["autori"])]
     def top(lista, n):
         return [o["qid"] for o in sorted(lista, key=lambda o: (-o["visite_sett"], -o["pagine"]))[:n]]
 
