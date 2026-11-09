@@ -108,9 +108,12 @@ def morte_loc(codice):
     if t is None:
         return None
     etichette = []
+    io = "http://id.loc.gov/authorities/names/" + codice
     for nodo in json.loads(t):
+        if nodo.get("@id") != io:          # il file contiene anche altre schede collegate: solo quella dell'autore
+            continue
         for v in nodo.get("http://www.loc.gov/mads/rdf/v1#authoritativeLabel", []):
-            etichette.append(v.get("@value", ""))
+            etichette.append(v.get("@value", "") if isinstance(v, dict) else str(v))
     for e in etichette:
         m = re.search(r"(\d{4})\??-(\d{4})", e)   # «Brecht, Bertolt, 1898-1956»
         if m:
@@ -125,6 +128,8 @@ def main():
         cache = json.load(open(CACHE, encoding="utf-8"))
     except Exception:
         cache = {"gnd": {}, "loc": {}}
+    if cache.get("versione_loc") != 2:   # la prima lettura LoC prendeva anche schede collegate: si rilegge
+        cache["loc"], cache["versione_loc"] = {}, 2
     file = [f for f in sorted(DATA.glob("*[0-9][0-9][0-9][0-9].json")) if not f.name.startswith(("us-", "anniversari-"))]
     pacchetti = {f: json.load(open(f, encoding="utf-8")) for f in file}
     qids = sorted({a["wikidata"] for p in pacchetti.values() for a in p["autori"] if a.get("letterario")})
@@ -177,6 +182,8 @@ def main():
                 a.pop("illustratori", None)
         f.write_text(json.dumps(p, ensure_ascii=False, indent=1), encoding="utf-8")
     CACHE.write_text(json.dumps(cache, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    n_ill = len({a["wikidata"] for p in pacchetti.values() for a in p["autori"] if a.get("illustratori")})
+    print("autori con illustratori noti:", n_ill)
     print("esiti (per file, un autore può contare più volte):", conta, "| tempo finito prima del termine:" if esauriti else "")
     discordi = sorted({(a["nome"], json.dumps(a["verifica"]["fonti"])) for p in pacchetti.values() for a in p["autori"]
                        if (a.get("verifica") or {}).get("esito") == "discorde"})
