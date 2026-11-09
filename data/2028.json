@@ -7760,14 +7760,14 @@
    },
    "illustratori": [
     {
-     "opera": "The Understanding Heart",
-     "nome": "Herbert Morton Stoops",
-     "morte": 1948
-    },
-    {
      "opera": "The Three Godfathers",
      "nome": "Maynard Dixon",
      "morte": 1946
+    },
+    {
+     "opera": "The Understanding Heart",
+     "nome": "Herbert Morton Stoops",
+     "morte": 1948
     }
    ],
    "pagina": "peter-b-kyne",
@@ -9369,70 +9369,6 @@
     "scrittore"
    ],
    "url": "https://www.wikidata.org/wiki/Q1417084"
-  },
-  {
-   "wikidata": "Q4303556",
-   "nome": "Ilo Mosashvili",
-   "nascita": "1896-01-07",
-   "morte": "1957-08-03",
-   "pagine_wikipedia": 7,
-   "professioni": [
-    "drammaturgo",
-    "poeta",
-    "scrittore",
-    "traduttore"
-   ],
-   "url": "https://www.wikidata.org/wiki/Q4303556",
-   "letterario": true,
-   "tipo_catalogo": [
-    "Teatro",
-    "Poesia"
-   ],
-   "bio": "Ilo Onysymovych Mosashvili was a Georgian and Soviet writer, playwright and translator.",
-   "bio_url": "https://en.wikipedia.org/wiki/Ilo_Mosashvili",
-   "bio_lingua": "en",
-   "bios": {
-    "en": {
-     "testo": "Ilo Onysymovych Mosashvili was a Georgian and Soviet writer, playwright and translator.",
-     "url": "https://en.wikipedia.org/wiki/Ilo_Mosashvili"
-    }
-   },
-   "n_opere": 0,
-   "visite_12m": 314,
-   "visite_it": 0,
-   "visite_en": 314,
-   "visite_es": 0,
-   "visite_de": 0,
-   "visite_fr": 0,
-   "foto": {
-    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ilo_Mosashvili_1935.jpg?width=800",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Ilo_Mosashvili_1935.jpg",
-    "licenza": "Public domain",
-    "autore": "Unknown authorUnknown author"
-   },
-   "paesi": [
-    "Repubblica Democratica di Georgia",
-    "Impero russo",
-    "Unione Sovietica"
-   ],
-   "lingue": [
-    "georgiano"
-   ],
-   "indice_it": 0,
-   "indice_en": 65,
-   "indice_es": 0,
-   "indice_de": 0,
-   "indice_fr": 0,
-   "indice_int": 83,
-   "indice": 69,
-   "verifica": {
-    "esito": "discorde",
-    "fonti": {
-     "wikidata": 1957,
-     "gnd": 1954,
-     "loc": 1954
-    }
-   }
   },
   {
    "wikidata": "Q1700583",
@@ -12687,11 +12623,14 @@
     }
    },
    "verifica": {
-    "esito": "discorde",
+    "esito": "nazionale",
     "fonti": {
-     "wikidata": 1957,
-     "gnd": 1958,
-     "loc": 1958
+     "wikidata": 1957
+    },
+    "nazionale": {
+     "fonte": "Wikipedia (en): 29 maggio 1957",
+     "url": "https://en.wikipedia.org/wiki/Nanduri_Venkata_Subba_Rao",
+     "morte": 1957
     }
    },
    "pagina": "nanduri-venkata-subbaravu",
@@ -19447,55 +19386,6 @@
     "esito": "una_fonte",
     "fonti": {
      "wikidata": 1957
-    }
-   }
-  },
-  {
-   "wikidata": "Q16484645",
-   "nome": "Abílio Barreto",
-   "nascita": "1883-10-22",
-   "morte": "1957-07-17",
-   "pagine_wikipedia": 2,
-   "professioni": [
-    "poeta",
-    "scrittore"
-   ],
-   "url": "https://www.wikidata.org/wiki/Q16484645",
-   "letterario": true,
-   "tipo_catalogo": [
-    "Poesia"
-   ],
-   "n_opere": 0,
-   "visite_12m": 0,
-   "visite_it": 0,
-   "visite_en": 0,
-   "visite_es": 0,
-   "visite_de": 0,
-   "visite_fr": 0,
-   "foto": {
-    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ab%C3%ADlio_Barreto.jpg?width=800",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Ab%C3%ADlio_Barreto.jpg",
-    "licenza": "Public domain",
-    "autore": "M.J. Garnier"
-   },
-   "paesi": [
-    "Brasile"
-   ],
-   "lingue": [
-    "portoghese"
-   ],
-   "indice_it": 0,
-   "indice_en": 0,
-   "indice_es": 0,
-   "indice_de": 0,
-   "indice_fr": 0,
-   "indice_int": 50,
-   "indice": 34,
-   "verifica": {
-    "esito": "discorde",
-    "fonti": {
-     "wikidata": 1957,
-     "loc": 1959
     }
    }
   },
