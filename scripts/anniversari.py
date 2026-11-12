@@ -31,7 +31,9 @@ import urllib.request
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 
 DATA = pathlib.Path(__file__).resolve().parent.parent / "data"
-ANNO = int(os.environ.get("ANNO_CALENDARIO", "2027"))
+_oggi = dt.date.today()
+# da settembre si prepara il calendario dell'anno dopo (resta nascosto finché Marco non lo approva)
+ANNO = int(os.environ.get("ANNO_CALENDARIO") or (_oggi.year + 1 if _oggi.month >= 9 else _oggi.year))
 ETA = [50, 75, 100, 125, 150, 175, 200, 225, 250, 300, 400, 500]
 SOGLIA_PERSONE, SOGLIA_OPERE = 30, 15
 SOGLIA_OPERE_SENZA_DATA = 25

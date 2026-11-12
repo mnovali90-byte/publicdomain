@@ -359,14 +359,26 @@ gruppo("data-mese","mese");gruppo("data-tipo","tipo");gruppo("data-eta","eta");
     return "".join(out), url
 
 
+def anni_approvati():
+    """Anni approvati da Marco (data/calendari_approvati.json): solo questi vanno sul sito."""
+    try:
+        return set(json.loads((RADICE / "data" / "calendari_approvati.json").read_text(encoding="utf-8"))["anni"])
+    except Exception:
+        return set()
+
+
 def crea_calendario():
     """Scrive le pagine IT/EN con .ics e .csv per ogni anno con dati. Restituisce gli indirizzi."""
     urls = []
+    approvati = anni_approvati()
     for f in sorted((RADICE / "data").glob("anniversari-[0-9][0-9][0-9][0-9].json")):
         dati = json.loads(f.read_text(encoding="utf-8"))
         if not dati.get("voci"):
             continue
         anno = dati["anno"]
+        if anno not in approvati:
+            print(f"calendario {anno}: pronto ma non ancora approvato, resta fuori dal sito")
+            continue
         for lang in ("it", "en"):
             html_, url = pagina(dati, lang)
             d = RADICE / ("en/calendar" if lang == "en" else "calendario") / str(anno)

@@ -7,11 +7,13 @@ on:
     paths:
       - "scripts/anniversari.py"
       - "data/anniversari_esclusioni.json"
+      - "data/calendari_approvati.json"
       - ".github/workflows/anniversari.yml"
   workflow_dispatch:
 
 permissions:
   contents: write
+  issues: write
 
 concurrency:
   group: anniversari
@@ -47,3 +49,32 @@ jobs:
               sleep $((i*20))
             done
           fi
+      - name: Avvisa Marco se c'è un calendario nuovo da controllare
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p /tmp/avvisi
+          python - <<'EOF'
+          import json, glob
+          ok = set(json.load(open("data/calendari_approvati.json"))["anni"])
+          for f in sorted(glob.glob("data/anniversari-[0-9][0-9][0-9][0-9].json")):
+              d = json.load(open(f))
+              if d["anno"] in ok or not d.get("voci"):
+                  continue
+              top = sorted(d["voci"], key=lambda v: -v.get("pagine", 0))[:15]
+              righe = "\n".join(f"- {v.get('giorno') or '?'}/{v.get('mese') or '?'} · {v.get('it') or v['nome']} ({v['tipo']}, {v['anni']} anni)" for v in top)
+              corpo = (f"Il calendario degli anniversari **{d['anno']}** è pronto ({len(d['voci'])} voci) ma **non è ancora sul sito**.\n\n"
+                       f"Controllalo con Claude prima di pubblicarlo. Per pubblicarlo si aggiunge {d['anno']} in `data/calendari_approvati.json`.\n\n"
+                       f"Le voci più note:\n{righe}\n")
+              open(f"/tmp/avvisi/{d['anno']}.md", "w").write(corpo)
+          EOF
+          for f in /tmp/avvisi/*.md; do
+            [ -e "$f" ] || continue
+            anno=$(basename "$f" .md)
+            titolo="Calendario anniversari $anno pronto da controllare"
+            if [ -n "$(gh issue list --state open --search "$titolo in:title" --json number -q '.[].number')" ]; then
+              echo "Avviso già aperto per il $anno"; continue
+            fi
+            gh issue create --title "$titolo" --body-file "$f" --assignee "${{ github.repository_owner }}"
+          done

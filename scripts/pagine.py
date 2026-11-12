@@ -178,8 +178,12 @@ PIEDE = {k: v.replace("@@ANNO@@", str(ANNO_PROSSIMO)) for k, v in PIEDE.items()}
 # Il calendario compare nel sito solo quando esiste data/calendario_ok (approvazione di Marco).
 CALENDARIO_ON = (RADICE / "data" / "calendario_ok").exists()
 if CALENDARIO_ON:
-    PIEDE["it"] = PIEDE["it"].replace('<a href="/autore/">', '<a href="/calendario/2027/">Calendario anniversari</a> · <a href="/autore/">', 1)
-    PIEDE["en"] = PIEDE["en"].replace('<a href="/en/author/">', '<a href="/en/calendar/2027/">Anniversaries calendar</a> · <a href="/en/author/">', 1)
+    try:
+        _cal = max(json.loads((RADICE / "data" / "calendari_approvati.json").read_text(encoding="utf-8"))["anni"])
+    except Exception:
+        _cal = 2027
+    PIEDE["it"] = PIEDE["it"].replace('<a href="/autore/">', f'<a href="/calendario/{_cal}/">Calendario anniversari</a> · <a href="/autore/">', 1)
+    PIEDE["en"] = PIEDE["en"].replace('<a href="/en/author/">', f'<a href="/en/calendar/{_cal}/">Anniversaries calendar</a> · <a href="/en/author/">', 1)
 
 
 def url_pagina(lang, slug=""):
