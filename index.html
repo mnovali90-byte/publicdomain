@@ -704,6 +704,8 @@ const PAESI = {
 };
 const PAESE_MODERNO = new Map(Object.entries(PAESI).flatMap(([m, lista]) => lista.map((x) => [x, m])));
 function paeseModerno(nome) { return PAESE_MODERNO.get(norm(nome)) || nome; }
+let ETICHETTE_EN = {};   // nomi inglesi di paesi e lingue, da Wikidata (data/etichette_en.json)
+function et(x) { return LING === "en" ? (ETICHETTE_EN[x] || x) : x; }
 function ripulisciDati() {
   for (const an of stato.anni) {
     const d = stato.dati[an];
@@ -1082,12 +1084,12 @@ function disegnaEsplora() {
   $("#paesi").replaceChildren(...paesi.map((p) => h("button", {
     type: "button", "aria-pressed": stato.paese === p.nome ? "true" : "false",
     onclick: () => scegliFiltro("paese", p.nome)
-  }, p.nome, h("sup", {}, String(p.n)))));
+  }, et(p.nome), h("sup", {}, String(p.n)))));
   $("#lingue-blocco").hidden = !lingue.length;
   $("#lingue").replaceChildren(...lingue.map((l) => h("button", {
     type: "button", "aria-pressed": stato.lingua === l.nome ? "true" : "false",
     onclick: () => scegliFiltro("lingua", l.nome)
-  }, `${maiuscola(l.nome)} · ${l.n}`)));
+  }, `${maiuscola(et(l.nome))} · ${l.n}`)));
 }
 function scegliFiltro(tipo, valore) {
   stato[tipo] = stato[tipo] === valore ? null : valore;
@@ -1313,7 +1315,7 @@ function mostraAutore(id) {
           [...new Set([...catalogo, ...generi])].map((x) => h("span", { class: "tag" }, x))) : null,
         opere.length ? h("div", {}, h("h4", {}, tr("opereP") + (a.n_opere > opere.length ? tr("opereSu", { x: n(opere.length), y: n(a.n_opere) }) : "")),
           h("ul", { class: "opere" }, opere.map((o) => h("li", {}, o.titolo, o.anno ? h("span", {}, String(o.anno)) : null)))) : null,
-        (a.lingue || []).length ? h("div", {}, h("h4", {}, tr("lingue")), a.lingue.map((x) => h("span", { class: "tag" }, maiuscola(x)))) : null,
+        (a.lingue || []).length ? h("div", {}, h("h4", {}, tr("lingue")), a.lingue.map((x) => h("span", { class: "tag" }, maiuscola(et(x))))) : null,
         bloccoTraduzioni(a),
         bloccoPaesi(a),
         h("div", { class: "avviso" }, tr("avviso")),
@@ -1689,6 +1691,7 @@ async function avvia() {
   stato.preferiti = leggiLocale(CHIAVE_PREFERITI, []);
   if (!Array.isArray(stato.preferiti)) stato.preferiti = [];
   try {
+    try { ETICHETTE_EN = await leggi("/data/etichette_en.json"); } catch (e) { /* facoltativo */ }
     const indice = await leggi("/data/indice.json");
     stato.anni = indice.anni;
     stato.perGiur.ue = {};

@@ -51,6 +51,9 @@ jobs:
         # dato accessorio: se fallisce, il resto viene salvato comunque
         continue-on-error: true
         run: python scripts/opere.py
+      - name: Nomi inglesi di paesi e lingue (Wikidata)
+        continue-on-error: true
+        run: python scripts/etichette.py
       - name: Seconda fonte per gli anni di morte (GND, Library of Congress) e illustratori
         # controllo in più: se le biblioteche non rispondono, le pagine escono comunque
         continue-on-error: true
