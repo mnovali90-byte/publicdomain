@@ -25,7 +25,7 @@ T = {
         "descr": "Gli anniversari letterari del {a}: nascite, morti e prime edizioni con anniversario tondo, giorno per giorno. Dati aperti, con calendario .ics e tabella CSV.",
         "occ": "Anniversari letterari · {a}", "h1a": "Cosa ricordare nel ", "lead": "Le ricorrenze letterarie da ricordare: nascite, morti e prime edizioni con anniversario tondo, giorno per giorno. Ogni voce ha una scheda da condividere.",
         "ics": "Aggiungi al tuo calendario (.ics)", "csv": "Scarica la tabella (CSV)",
-        "mese": "Mese", "tipo": "Tipo", "tutti": "Tutti", "tutte": "Tutte", "eta": "Anniversario", "piu": "oltre 200",
+        "mese": "Mese", "tipo": "Tipo", "tutti": "Tutti", "tutte": "Tutte", "eta": "Anniversario", "piu": "oltre 200", "filtri": "Filtri", "attivi": "attivi",
         "tipi": {"prima edizione": "Prima edizione", "nascita": "Nascita", "morte": "Morte"},
         "filtri_tipo": [("prima edizione", "Prime edizioni"), ("nascita", "Nascite"), ("morte", "Morti")],
         "anni": "{n} anni", "voce": "voce", "voci": "voci", "durante": "Durante l'anno", "nd": "giorno non noto", "soloanno": "{a} · solo anno",
@@ -47,7 +47,7 @@ T = {
         "descr": "Literary anniversaries of {a}: births, deaths and first editions with a round anniversary, day by day. Open data, with .ics calendar and CSV table.",
         "occ": "Literary anniversaries · {a}", "h1a": "What to remember in ", "lead": "Literary anniversaries worth remembering: births, deaths and first editions with a round anniversary, day by day. Every entry has a short profile and a card to share.",
         "ics": "Add to your calendar (.ics)", "csv": "Download the table (CSV)",
-        "mese": "Month", "tipo": "Type", "tutti": "All", "tutte": "All", "eta": "Anniversario", "piu": "oltre 200",
+        "mese": "Month", "tipo": "Type", "tutti": "All", "tutte": "All", "eta": "Anniversary", "piu": "over 200", "filtri": "Filters", "attivi": "active",
         "tipi": {"prima edizione": "First edition", "nascita": "Birth", "morte": "Death"},
         "filtri_tipo": [("prima edizione", "First editions"), ("nascita", "Births"), ("morte", "Deaths")],
         "anni": "{n} years", "voce": "entry", "voci": "entries", "durante": "During the year", "nd": "day unknown", "soloanno": "{a} · year only",
@@ -87,7 +87,13 @@ h1 em{font-style:normal;color:var(--verm)}
 .btn{display:inline-block;padding:14px 20px;font:500 13px var(--mono);letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border:2px solid #fff;color:#fff;background:none;cursor:pointer}
 .btn.p{background:#fff;color:var(--ink)}
 .filtri{background:#fff;border-bottom:1px solid var(--riq);position:sticky;top:0;z-index:5}
-.filtri .in{display:flex;flex-wrap:wrap;gap:12px 34px;padding-top:12px;padding-bottom:12px;align-items:center}
+.filtri>.in{display:flex;flex-wrap:wrap;gap:12px 34px;padding-top:4px;padding-bottom:14px;align-items:center}
+.filtri summary{list-style:none;cursor:pointer;min-height:48px;display:flex;align-items:center}.filtri summary::-webkit-details-marker{display:none}
+.filtri summary .in{display:flex;align-items:center;gap:12px;width:100%}
+.filtri .ftit{font:500 12px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink)}
+.filtri .ftit:after{content:"+";display:inline-block;margin-left:10px;font-size:16px;color:var(--vermiglio-testo, #C2301A)}
+.filtri[open] .ftit:after{content:"\2212"}
+.filtri .fatt{font:500 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:#fff;background:var(--ink);padding:3px 8px}.filtri .fatt:empty{display:none}
 .gr{display:flex;flex-wrap:wrap;gap:6px;align-items:center}.gr>span{font:500 11px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muto);margin-right:6px}
 .ch{font:500 12px var(--mono);letter-spacing:.05em;text-transform:uppercase;padding:0 12px;min-height:44px;border:1.5px solid var(--ink);background:#fff;color:var(--ink);cursor:pointer}
 .ch[aria-pressed="true"]{background:var(--ink);color:#fff}
@@ -313,6 +319,8 @@ function applica(){
     s.hidden=!n&&!(spec&&!st.tipo&&!st.eta&&(!st.mese||s.dataset.mese==st.mese));
   });
   document.getElementById("vuoto").hidden=visibili>0;
+  var n=(st.mese?1:0)+(st.tipo?1:0)+(st.eta?1:0),fa=document.getElementById("fatt");
+  if(fa)fa.textContent=n?n+" "+fa.getAttribute("data-attivi"):"";
 }
 function gruppo(attr,chiave){
   [].slice.call(document.querySelectorAll(".ch["+attr+"]")).forEach(function(b){
@@ -342,11 +350,11 @@ gruppo("data-mese","mese");gruppo("data-tipo","tipo");gruppo("data-eta","eta");
 <p class="lead">{esc(t["lead"])}</p>
 <div class="abb"><a class="btn p" href="{ics_nome}">{esc(t["ics"])}</a><a class="btn" href="{base_csv}">{esc(t["csv"])}</a></div>
 </div></header>
-<div class="filtri"><div class="in">
+<details class="filtri" id="filtri"><summary><span class="in"><span class="ftit">{esc(t["filtri"])}</span><span class="fatt" id="fatt" data-attivi="{esc(t["attivi"])}"></span></span></summary><div class="in">
 <div class="gr" role="group"><span>{esc(t["mese"])}</span>{mesi_btn}</div>
 <div class="gr" role="group"><span>{esc(t["tipo"])}</span>{tipi_btn}</div>
 <div class="gr" role="group"><span>{esc(t["eta"])}</span>{eta_btn}</div>
-</div></div>
+</div></details>
 <main class="in">
 """)
     out += corpo
