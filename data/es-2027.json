@@ -4,8 +4,8 @@
  "paese": "es",
  "regola": "Spagna, autori morti prima del 1987: 80 anni dalla morte (Ley de 10 de enero de 1879, art. 6; Ley de Propiedad Intelectual, disp. trans. cuarta). Data prudente: 1 gennaio dell'anno dopo gli 80 anni",
  "fonte": "Wikidata (CC0)",
- "aggiornato": "2026-11-09",
- "totale": 1302,
+ "aggiornato": "2026-11-12",
+ "totale": 1303,
  "autori": [
   {
    "wikidata": "Q42511",
@@ -190,6 +190,11 @@
      "morte": 1939
     },
     {
+     "opera": "The Story of the Late Mr. Elvesham",
+     "nome": "Max Cowper",
+     "morte": 1911
+    },
+    {
      "opera": "The Soul of a Bishop",
      "nome": "Charles Allan Gilbert",
      "morte": 1929
@@ -198,11 +203,6 @@
      "opera": "The First Men in the Moon",
      "nome": "Claude Allin Shepperson",
      "morte": 1921
-    },
-    {
-     "opera": "The Story of the Late Mr. Elvesham",
-     "nome": "Max Cowper",
-     "morte": 1911
     }
    ],
    "pagina": "h-g-wells",
@@ -17977,41 +17977,6 @@
    "url": "https://www.wikidata.org/wiki/Q10859112"
   },
   {
-   "wikidata": "Q16365308",
-   "nome": "Aşıq Nəcəf Əlimərdanlı",
-   "nascita": "1900-01-01",
-   "morte": "1946-01-01",
-   "pagine_wikipedia": 2,
-   "professioni": [
-    "poeta"
-   ],
-   "url": "https://www.wikidata.org/wiki/Q16365308",
-   "letterario": true,
-   "tipo_catalogo": [
-    "Poesia"
-   ],
-   "n_opere": 0,
-   "visite_12m": 0,
-   "visite_it": 0,
-   "visite_en": 0,
-   "visite_es": 0,
-   "visite_de": 0,
-   "visite_fr": 0,
-   "indice_it": 0,
-   "indice_en": 0,
-   "indice_es": 0,
-   "indice_de": 0,
-   "indice_fr": 0,
-   "indice_int": 47,
-   "indice": 35,
-   "verifica": {
-    "esito": "una_fonte",
-    "fonti": {
-     "wikidata": 1946
-    }
-   }
-  },
-  {
    "wikidata": "Q16131146",
    "nome": "Barukh Chemerinsky",
    "nascita": "1889-09-03",
@@ -22311,6 +22276,41 @@
    "url": "https://www.wikidata.org/wiki/Q7167334"
   },
   {
+   "wikidata": "Q16365308",
+   "nome": "Q16365308",
+   "nascita": "1900-01-01",
+   "morte": "1946-01-01",
+   "pagine_wikipedia": 2,
+   "professioni": [
+    "poeta"
+   ],
+   "url": "https://www.wikidata.org/wiki/Q16365308",
+   "letterario": true,
+   "tipo_catalogo": [
+    "Poesia"
+   ],
+   "n_opere": 0,
+   "visite_12m": 0,
+   "visite_it": 0,
+   "visite_en": 0,
+   "visite_es": 0,
+   "visite_de": 0,
+   "visite_fr": 0,
+   "indice_it": 0,
+   "indice_en": 0,
+   "indice_es": 0,
+   "indice_de": 0,
+   "indice_fr": 0,
+   "indice_int": 47,
+   "indice": 35,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
+  },
+  {
    "wikidata": "Q60607846",
    "nome": "Ramón de Solano Polanco",
    "nascita": "1871-12-02",
@@ -24137,6 +24137,17 @@
     "scrittore"
    ],
    "url": "https://www.wikidata.org/wiki/Q22017263"
+  },
+  {
+   "wikidata": "Q126846653",
+   "nome": "Arthur Usthal",
+   "nascita": "1874-10-05",
+   "morte": "1946-01-01",
+   "pagine_wikipedia": 1,
+   "professioni": [
+    "scrittore"
+   ],
+   "url": "https://www.wikidata.org/wiki/Q126846653"
   },
   {
    "wikidata": "Q23063173",
@@ -29197,6 +29208,17 @@
    }
   },
   {
+   "wikidata": "Q142117006",
+   "nome": "Q142117006",
+   "nascita": "1905-01-01",
+   "morte": "1946-01-01",
+   "pagine_wikipedia": 1,
+   "professioni": [
+    "scrittore"
+   ],
+   "url": "https://www.wikidata.org/wiki/Q142117006"
+  },
+  {
    "wikidata": "Q16119099",
    "nome": "Q16119099",
    "nascita": "1908-01-01",
@@ -31237,17 +31259,6 @@
     "scrittore"
    ],
    "url": "https://www.wikidata.org/wiki/Q135643474"
-  },
-  {
-   "wikidata": "Q126846653",
-   "nome": "Arthur Usthal",
-   "nascita": "1874-10-05",
-   "morte": "1946-01-01",
-   "pagine_wikipedia": 0,
-   "professioni": [
-    "scrittore"
-   ],
-   "url": "https://www.wikidata.org/wiki/Q126846653"
   },
   {
    "wikidata": "Q135457558",
@@ -36194,7 +36205,7 @@
    "n": 1
   }
  ],
- "arricchito": "2026-11-09",
+ "arricchito": "2026-11-12",
  "indice_formula": "tre misure separate: visite Wikipedia it, visite Wikipedia en, numero di lingue con una pagina; ciascuna 0-100 rispetto alla lista dell'anno",
- "traduzioni_aggiornato": "2026-11-09"
+ "traduzioni_aggiornato": "2026-11-12"
 }

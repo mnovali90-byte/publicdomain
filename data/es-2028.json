@@ -4,7 +4,7 @@
  "paese": "es",
  "regola": "Spagna, autori morti prima del 1987: 80 anni dalla morte (Ley de 10 de enero de 1879, art. 6; Ley de Propiedad Intelectual, disp. trans. cuarta). Data prudente: 1 gennaio dell'anno dopo gli 80 anni",
  "fonte": "Wikidata (CC0)",
- "aggiornato": "2026-11-09",
+ "aggiornato": "2026-11-12",
  "totale": 1291,
  "autori": [
   {
@@ -1237,7 +1237,7 @@
    "nome": "Ananda Coomaraswamy",
    "nascita": "1877-08-22",
    "morte": "1947-09-09",
-   "pagine_wikipedia": 43,
+   "pagine_wikipedia": 44,
    "professioni": [
     "scrittore",
     "traduttore"
@@ -13362,6 +13362,17 @@
    "url": "https://www.wikidata.org/wiki/Q20507980"
   },
   {
+   "wikidata": "Q28098772",
+   "nome": "Artur Heye",
+   "nascita": "1885-11-04",
+   "morte": "1947-11-01",
+   "pagine_wikipedia": 4,
+   "professioni": [
+    "scrittore"
+   ],
+   "url": "https://www.wikidata.org/wiki/Q28098772"
+  },
+  {
    "wikidata": "Q105034",
    "nome": "Augustin Wibbelt",
    "nascita": "1862-09-19",
@@ -16033,17 +16044,6 @@
     "scrittore"
    ],
    "url": "https://www.wikidata.org/wiki/Q25743391"
-  },
-  {
-   "wikidata": "Q28098772",
-   "nome": "Artur Heye",
-   "nascita": "1885-11-04",
-   "morte": "1947-11-01",
-   "pagine_wikipedia": 3,
-   "professioni": [
-    "scrittore"
-   ],
-   "url": "https://www.wikidata.org/wiki/Q28098772"
   },
   {
    "wikidata": "Q55229241",
@@ -37622,7 +37622,7 @@
    "n": 1
   }
  ],
- "arricchito": "2026-11-09",
+ "arricchito": "2026-11-12",
  "indice_formula": "tre misure separate: visite Wikipedia it, visite Wikipedia en, numero di lingue con una pagina; ciascuna 0-100 rispetto alla lista dell'anno",
- "traduzioni_aggiornato": "2026-11-09"
+ "traduzioni_aggiornato": "2026-11-12"
 }
