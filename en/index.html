@@ -1732,11 +1732,17 @@ async function avvia() {
   const og = GIUR_OPZ.find((o) => o[0] === gsalvata);
   if (og && stato.giurDisp.includes(og[1])) { stato.opz = og[0]; stato.giur = og[1]; stato.dati = stato.perGiur[og[1]]; }
   else if (LING === "en") {
-    // versione inglese senza una scelta salvata: Regno Unito (e paesi con la stessa regola) o USA, in base al browser
-    const loc = (navigator.language || "en-US").toLowerCase();
-    const regola70 = /^en-(gb|ie|au|nz|in|za)/.test(loc);
-    if (regola70) { stato.opz = "uk"; stato.mercato = "en"; }
-    else if (stato.opere) { stato.opz = "us"; stato.mercato = "en"; }
+    // versione inglese senza una scelta salvata: il paese si sceglie dalla lingua del browser
+    const loc = (navigator.language || "en-US").toLowerCase(), pre = loc.slice(0, 2);
+    const UE = ["nl", "pl", "sv", "da", "fi", "pt", "cs", "sk", "sl", "hr", "ro", "bg", "el", "hu", "et", "lv", "lt", "ga", "mt"];
+    let scelta;
+    if (["it", "fr", "de", "es"].includes(pre)) scelta = pre;                    // paesi con regole proprie nel sito
+    else if (/^en-(gb|ie|au|nz|in|za)/.test(loc)) scelta = "uk";                  // 70 anni dalla morte
+    else if (UE.includes(pre)) scelta = "de";                                     // altri paesi UE: regola base europea (= Germania)
+    else scelta = stato.opere ? "us" : "uk";                                      // inglese americano e resto del mondo
+    const og2 = GIUR_OPZ.find((o) => o[0] === scelta);
+    if (scelta === "us") { stato.opz = "us"; stato.mercato = "en"; }
+    else if (og2 && stato.giurDisp.includes(og2[1])) { stato.opz = og2[0]; stato.giur = og2[1]; stato.dati = stato.perGiur[og2[1]]; stato.mercato = mercatoPaese(og2[0]); }
   }
   if (!mercatiDisp().includes(stato.mercato)) stato.mercato = mercatoPaese(stato.opz);
   disegnaTutto();
