@@ -417,7 +417,7 @@ const CHIAVE_PREFERITI = "pdr_preferiti_v1";
 const CHIAVE_LINGUA = "pdr_lingua_v1";
 const CHIAVE_MERCATO = "pdr_mercato_v1";
 const CHIAVE_GIUR = "pdr_giur_v1";
-const GIUR_OPZ = [["it","ue"],["fr","ue"],["de","ue"],["es","es"]];   // [nazione del menù, file di dati che usa]; la classifica passa all'interesse nella lingua della nazione
+const GIUR_OPZ = [["it","ue"],["fr","ue"],["de","ue"],["uk","ue"],["es","es"]];   // [nazione del menù, file di dati che usa]; la classifica passa all'interesse nella lingua della nazione
 const MESI_EN = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 
 const TESTI = {
@@ -426,19 +426,20 @@ it: {
   indiceAutori: "Indice degli autori (una pagina per ogni autore)", paginaDedicata: "Pagina dedicata", paginaDedicataEn: "Pagina dedicata",
   descrizione: "Gli autori le cui opere entrano nel pubblico dominio in Europa il prossimo 1° gennaio. Dati aperti da Wikidata e Wikipedia, aggiornati ogni mese.",
   paTit: "Da quando è libero, paese per paese",
-  paUe: "UE (base) e Germania: dal {d}.",
+  paUe: "UE (base), Germania e Regno Unito: dal {d}.",
   paFr: "Francia: dal {d}. Per le opere pubblicate prima del 3 settembre 1939 la proroga di guerra sposta la data a circa {e}.",
   paIt: "Italia: dal {d}. Se la proroga di 6 anni (opere pubblicate prima del 1945) si somma ai 70 anni: dal {e}. Per gli autori dei paesi alleati può esserci una proroga in più.",
   paEs80: "Spagna: non prima del {d} (80 anni dalla morte, perché è morto prima del 1987; la legge non dice come si conta l'anno).",
   paEs70: "Spagna: dal {d}.",
   paNota: "Calcolo indicativo, dalle norme del riquadro in fondo alla pagina. Non è consulenza legale.",
   giurEt: "Paese",
-  giurNomi: { it: "Italia · 70 anni + proroghe", fr: "Francia · 70 anni + proroghe", de: "Germania · 70 anni", es: "Spagna · 80 anni", us: "USA · 95 anni dalla pubblicazione" },
-  paesiNomi: { it: "Italia", fr: "Francia", de: "Germania", es: "Spagna" },
+  giurNomi: { it: "Italia · 70 anni + proroghe", fr: "Francia · 70 anni + proroghe", de: "Germania · 70 anni", uk: "Regno Unito · 70 anni", es: "Spagna · 80 anni", us: "USA · 95 anni dalla pubblicazione" },
+  paesiNomi: { it: "Italia", fr: "Francia", de: "Germania", uk: "Regno Unito", es: "Spagna" },
   giurDesc: {
     fr: "Francia: la lista usa la regola base dei 70 anni, ma ci sono proroghe di guerra per alcune opere e per gli «morti per la Francia». Le date per la Francia sono nella scheda di ogni autore.",
     it: "Italia: la lista usa la regola base dei 70 anni, ma ci sono proroghe per alcune opere del periodo di guerra. Le date per l'Italia sono nella scheda di ogni autore.",
     de: "Germania: morte + 70 anni, nessuna proroga (legge letta, vedi il riquadro in fondo).",
+    uk: "Regno Unito: morte + 70 anni, contati dalla fine dell'anno della morte, senza proroghe di guerra (Copyright, Designs and Patents Act 1988, sezione 12). La lista è la stessa dell'Europa.",
     es: "Spagna: per gli autori morti prima del 1987 valgono 80 anni dalla morte (legge del 1879). La data è prudente: la legge non dice come si conta l'anno."
   },
   regoleTit: "Regole sulla durata, paese per paese",
@@ -514,19 +515,20 @@ en: {
   indiceAutori: "Index of authors (one page per author)", paginaDedicata: "Dedicated page (Italian)", paginaDedicataEn: "Dedicated page",
   descrizione: "The authors whose works enter the public domain in Europe on 1 January next year. Open data from Wikidata and Wikipedia, updated monthly.",
   paTit: "Free from when, country by country",
-  paUe: "EU (base rule) and Germany: from {d}.",
+  paUe: "EU (base rule), Germany and the United Kingdom: from {d}.",
   paFr: "France: from {d}. For works published before 3 September 1939 the wartime extension moves the date to about {e}.",
   paIt: "Italy: from {d}. If the 6-year extension (works published before 1945) is added to the 70 years: from {e}. For authors from Allied countries there may be a further extension.",
   paEs80: "Spain: not before {d} (80 years after death, because the author died before 1987; the law does not say how the year is counted).",
   paEs70: "Spain: from {d}.",
   paNota: "Indicative calculation, based on the rules in the box at the bottom of the page. Not legal advice.",
   giurEt: "Country",
-  giurNomi: { it: "Italy · 70 years + extensions", fr: "France · 70 years + extensions", de: "Germany · 70 years", es: "Spain · 80 years", us: "USA · 95 years from publication" },
-  paesiNomi: { it: "Italy", fr: "France", de: "Germany", es: "Spain" },
+  giurNomi: { it: "Italy · 70 years + extensions", fr: "France · 70 years + extensions", de: "Germany · 70 years", uk: "United Kingdom · 70 years", es: "Spain · 80 years", us: "USA · 95 years from publication" },
+  paesiNomi: { it: "Italy", fr: "France", de: "Germany", uk: "the United Kingdom", es: "Spain" },
   giurDesc: {
     fr: "France: the list uses the base 70-year rule, but there are wartime extensions for some works and for those who «died for France». The dates for France are in each author's card.",
     it: "Italy: the list uses the base 70-year rule, but there are extensions for some wartime works. The dates for Italy are in each author's card.",
     de: "Germany: death + 70 years, no extensions (law read, see the box at the bottom).",
+    uk: "United Kingdom: death + 70 years, counted from the end of the year of death, with no wartime extensions (Copyright, Designs and Patents Act 1988, section 12). The list is the same as for Europe.",
     es: "Spain: authors who died before 1987 get 80 years after death (1879 law). The date is cautious: the law does not say how the year is counted."
   },
   regoleTit: "Term of protection, country by country",
@@ -736,7 +738,7 @@ const letteraria = (a) => !senzaNome(a) && (a.letterario === true || (a.letterar
 const CAMPO_M = { it: "visite_it", fr: "visite_fr", de: "visite_de", es: "visite_es", en: "visite_en", int: "pagine_wikipedia" };
 /* Mercati disponibili: quello della nazione scelta (se i dati ci sono già), l'Italia, il mondo anglofono, l'internazionale. */
 const haIndice = (m) => ["en", "int", "it"].includes(m) || Object.values(stato.perGiur).some((per) => Object.values(per).some((d) => d.autori.some((a) => a["indice_" + m] !== undefined)));
-const mercatoPaese = (id) => { const m = (GIUR_OPZ.find((o) => o[0] === id) || [])[0]; return m && haIndice(m) ? m : "int"; };
+const mercatoPaese = (id) => { if (id === "uk") return "en"; const m = (GIUR_OPZ.find((o) => o[0] === id) || [])[0]; return m && haIndice(m) ? m : "int"; };
 const mercatiDisp = () => [...new Set([...(haIndice(stato.opz) ? [stato.opz] : []), "it", "en", "int"])];
 const idx = (a) => (stato.mercati ? a["indice_" + stato.mercato] : a.indice);
 const grezzo = (a) => (stato.mercati ? (a[CAMPO_M[stato.mercato]] || 0) : (a.pagine_wikipedia || 0));
@@ -1636,6 +1638,8 @@ const REGOLE = [
     { t: { it: "Proroghe di guerra per le opere pubblicate prima del 3 settembre 1939 e non ancora libere (L123-8, L123-9), e altri 30 anni se l'autore è «morto per la Francia» (L123-10).", en: "Wartime extensions for works published before 3 September 1939 and not yet free (L123-8, L123-9), and another 30 years if the author «died for France» (L123-10)." }, f: "Code de la propriété intellectuelle", u: "https://www.wipo.int/wipolex/en/legislation/details/23227" } ] },
   { paese: { it: "Germania", en: "Germany" }, voci: [
     { t: { it: "70 anni dalla morte (§64); i termini partono dalla fine dell'anno solare (§69).", en: "70 years after death (§64); terms start at the end of the calendar year (§69)." }, f: "Urheberrechtsgesetz", u: "https://www.wipo.int/wipolex/en/text/474282" } ] },
+  { paese: { it: "Regno Unito", en: "United Kingdom" }, voci: [
+    { t: { it: "Il copyright scade alla fine del periodo di 70 anni dalla fine dell'anno in cui l'autore muore (sezione 12(2)). Non ci sono proroghe di guerra come in Italia e Francia.", en: "Copyright expires at the end of the period of 70 years from the end of the calendar year in which the author dies (section 12(2)). There are no wartime extensions as in Italy and France." }, f: "Copyright, Designs and Patents Act 1988, s. 12", u: "https://www.legislation.gov.uk/ukpga/1988/48/section/12" } ] },
   { paese: { it: "Svezia", en: "Sweden" }, voci: [
     { t: { it: "Il diritto dura fino alla fine del settantesimo anno dopo l'anno della morte dell'autore (art. 43). Nel testo letto non ci sono proroghe di guerra.", en: "Copyright lasts until the end of the seventieth year after the year of the author's death (Art. 43). The text I read has no wartime extensions." }, f: "Lag (1960:729) om upphovsrätt, art. 43", u: "https://www.wipo.int/wipolex/en/text/129542" } ] },
   { paese: { it: "Spagna", en: "Spain" }, voci: [
@@ -1727,6 +1731,13 @@ async function avvia() {
   const gsalvata = leggiLocale(CHIAVE_GIUR, "it");
   const og = GIUR_OPZ.find((o) => o[0] === gsalvata);
   if (og && stato.giurDisp.includes(og[1])) { stato.opz = og[0]; stato.giur = og[1]; stato.dati = stato.perGiur[og[1]]; }
+  else if (LING === "en") {
+    // versione inglese senza una scelta salvata: Regno Unito (e paesi con la stessa regola) o USA, in base al browser
+    const loc = (navigator.language || "en-US").toLowerCase();
+    const regola70 = /^en-(gb|ie|au|nz|in|za)/.test(loc);
+    if (regola70) { stato.opz = "uk"; stato.mercato = "en"; }
+    else if (stato.opere) { stato.opz = "us"; stato.mercato = "en"; }
+  }
   if (!mercatiDisp().includes(stato.mercato)) stato.mercato = mercatoPaese(stato.opz);
   disegnaTutto();
   $("#cerca").addEventListener("input", (ev) => { stato.cerca = ev.target.value; stato.visibili = PASSO; disegnaArchivio(); });

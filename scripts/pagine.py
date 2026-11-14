@@ -83,7 +83,7 @@ def paese_per_paese(D, lang="it"):
     d = lambda y: data_l(lang, y)
     if lang == "en":
         return [
-            f"EU (base rule) and Germany: from {d(D + 71)}.",
+            f"EU (base rule), Germany and the United Kingdom: from {d(D + 71)}.",
             f"France: from {d(D + 71)}. For works published before 3 September 1939 the wartime extension moves the date to about {MESI_EN[fine.month - 1]} {fine.year}.",
             f"Italy: from {d(D + 71)}. If the 6-year extension (works published before 1945) is added to the 70 years: from {d(D + 77)}. "
             "For authors from Allied countries there may be a further extension.",
@@ -91,7 +91,7 @@ def paese_per_paese(D, lang="it"):
              if D < 1987 else f"Spain: from {d(D + 71)}."),
         ]
     return [
-        f"UE (base) e Germania: dal {d(D + 71)}.",
+        f"UE (base), Germania e Regno Unito: dal {d(D + 71)}.",
         f"Francia: dal {d(D + 71)}. Per le opere pubblicate prima del 3 settembre 1939 la proroga di guerra sposta la data a circa {MESI[fine.month - 1]} {fine.year}.",
         f"Italia: dal {d(D + 71)}. Se la proroga di 6 anni (opere pubblicate prima del 1945) si somma ai 70 anni: dal {d(D + 77)}. "
         "Per gli autori dei paesi alleati può esserci una proroga in più.",
