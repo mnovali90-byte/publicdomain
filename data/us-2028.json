@@ -23,14 +23,8 @@
    "generi": [
     "fantasy_sf"
    ],
-   "visite_en": 935714,
-   "copertina": {
-    "file": "Giveaway von Pinguin Books für Brave New World (cropped).jpg",
-    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Giveaway_von_Pinguin_Books_f%C3%BCr_Brave_New_World_%28cropped%29.jpg/500px-Giveaway_von_Pinguin_Books_f%C3%BCr_Brave_New_World_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Giveaway_von_Pinguin_Books_f%C3%BCr_Brave_New_World_%28cropped%29.jpg",
-    "licenza": "CC BY-SA 4.0",
-    "autore": "Wöcki"
-   }
+   "visite_en": 935857,
+   "copertina": null
   },
   {
    "qid": "Q7173181",
@@ -51,7 +45,7 @@
    "generi": [
     "ragazzi"
    ],
-   "visite_en": 109109
+   "visite_en": 109099
   },
   {
    "qid": "Q774233",
@@ -72,7 +66,7 @@
    "generi": [
     "memorie"
    ],
-   "visite_en": 84863,
+   "visite_en": 84868,
    "copertina": {
     "file": "Journey to the End of the Night 1932.jpg",
     "url": "https://upload.wikimedia.org/wikipedia/commons/5/59/Journey_to_the_End_of_the_Night_1932.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -100,13 +94,41 @@
    "generi": [
     "storico"
    ],
-   "visite_en": 78796,
+   "visite_en": 78792,
    "copertina": {
     "file": "Robert Musil - Der Mann ohne Eigenschaften, 1930.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Robert_Musil_-_Der_Mann_ohne_Eigenschaften%2C_1930.jpg/500px-Robert_Musil_-_Der_Mann_ohne_Eigenschaften%2C_1930.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "pagina": "https://commons.wikimedia.org/wiki/File:Robert_Musil_-_Der_Mann_ohne_Eigenschaften%2C_1930.jpg",
     "licenza": "Public domain",
     "autore": "Rowohlt Verlag"
+   }
+  },
+  {
+   "qid": "Q1823273",
+   "titolo": "Light in August",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q38392",
+     "nome": "William Faulkner"
+    }
+   ],
+   "pagine": 27,
+   "wiki_en": "https://en.wikipedia.org/wiki/Light_in_August",
+   "lingua": {
+    "en": "English",
+    "it": "inglese americano"
+   },
+   "generi": [
+    "horror"
+   ],
+   "visite_en": 60849,
+   "copertina": {
+    "file": "Light in August (1932 dust jacket cover).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Light_in_August_%281932_dust_jacket_cover%29.jpg/500px-Light_in_August_%281932_dust_jacket_cover%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Light_in_August_%281932_dust_jacket_cover%29.jpg",
+    "licenza": "Public domain",
+    "autore": "Illustration by Arthur Hawkins (signature at bottom right). Published in New York by Harrison Smith and Robert Haas."
    }
   },
   {
@@ -128,7 +150,7 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 56724
+   "visite_en": 56855
   },
   {
    "qid": "Q5142221",
@@ -149,7 +171,7 @@
    "generi": [
     "satira"
    ],
-   "visite_en": 47218
+   "visite_en": 47219
   },
   {
    "qid": "Q934396",
@@ -168,7 +190,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 40859
+   "visite_en": 40865
   },
   {
    "qid": "Q7727278",
@@ -187,7 +209,7 @@
     "it": "tedesco"
    },
    "generi": [],
-   "visite_en": 40469
+   "visite_en": 40466
   },
   {
    "qid": "Q610428",
@@ -208,13 +230,39 @@
    "generi": [
     "storico"
    ],
-   "visite_en": 39630,
+   "visite_en": 39629,
    "copertina": {
     "file": "Joseph Roth Radetzkymarsch 1932.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Joseph_Roth_Radetzkymarsch_1932.jpg/500px-Joseph_Roth_Radetzkymarsch_1932.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "pagina": "https://commons.wikimedia.org/wiki/File:Joseph_Roth_Radetzkymarsch_1932.jpg",
     "licenza": "CC BY 3.0",
     "autore": "© Foto H.-P.Haack"
+   }
+  },
+  {
+   "qid": "Q1970223",
+   "titolo": "Death in the Afternoon",
+   "titolo_it": "Morte nel pomeriggio",
+   "autori": [
+    {
+     "qid": "Q23434",
+     "nome": "Ernest Hemingway"
+    }
+   ],
+   "pagine": 18,
+   "wiki_en": "https://en.wikipedia.org/wiki/Death_in_the_Afternoon",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [],
+   "visite_en": 36646,
+   "copertina": {
+    "file": "Heming Way.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Heming_Way.jpg/500px-Heming_Way.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Heming_Way.jpg",
+    "licenza": "CC BY-SA 3.0",
+    "autore": "Peter Clarke"
    }
   },
   {
@@ -234,7 +282,7 @@
     "it": "russo"
    },
    "generi": [],
-   "visite_en": 36517,
+   "visite_en": 36519,
    "copertina": {
     "file": "RUB 95 (Leipzig, 1984, 23.Auflage) - Ostrowski, Wie der Stahl.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/RUB_95_%28Leipzig%2C_1984%2C_23.Auflage%29_-_Ostrowski%2C_Wie_der_Stahl.jpg/500px-RUB_95_%28Leipzig%2C_1984%2C_23.Auflage%29_-_Ostrowski%2C_Wie_der_Stahl.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -281,7 +329,28 @@
    "generi": [
     "fantasy_sf"
    ],
-   "visite_en": 22745
+   "visite_en": 22746
+  },
+  {
+   "qid": "Q1955781",
+   "titolo": "Stamboul Train",
+   "titolo_it": "Il treno d'Istanbul",
+   "autori": [
+    {
+     "qid": "Q128560",
+     "nome": "Graham Greene"
+    }
+   ],
+   "pagine": 6,
+   "wiki_en": "https://en.wikipedia.org/wiki/Stamboul_Train",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "giallo"
+   ],
+   "visite_en": 22610
   },
   {
    "qid": "Q1900478",
@@ -306,7 +375,7 @@
    "generi": [
     "storico"
    ],
-   "visite_en": 20626
+   "visite_en": 20629
   },
   {
    "qid": "Q5264340",
@@ -325,7 +394,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 18650
+   "visite_en": 18649
   },
   {
    "qid": "Q17036247",
@@ -344,7 +413,26 @@
     "it": "sanscrito"
    },
    "generi": [],
-   "visite_en": 18201
+   "visite_en": 18202
+  },
+  {
+   "qid": "Q3655833",
+   "titolo": "Sunset Song",
+   "titolo_it": "Canto del tramonto",
+   "autori": [
+    {
+     "qid": "Q650800",
+     "nome": "James Leslie Mitchell"
+    }
+   ],
+   "pagine": 3,
+   "wiki_en": "https://en.wikipedia.org/wiki/Sunset_Song",
+   "lingua": {
+    "en": "Scots",
+    "it": "lingua scots"
+   },
+   "generi": [],
+   "visite_en": 17383
   },
   {
    "qid": "Q370698",
@@ -366,6 +454,27 @@
    "visite_en": 16578
   },
   {
+   "qid": "Q751574",
+   "titolo": "My Friend Flicka",
+   "titolo_it": "Frida",
+   "autori": [
+    {
+     "qid": "Q273077",
+     "nome": "Mary O'Hara"
+    }
+   ],
+   "pagine": 3,
+   "wiki_en": "https://en.wikipedia.org/wiki/My_Friend_Flicka",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "ragazzi"
+   ],
+   "visite_en": 15320
+  },
+  {
    "qid": "Q257144",
    "titolo": "The Pastures of Heaven",
    "titolo_it": "I pascoli del cielo",
@@ -382,7 +491,7 @@
     "it": "inglese americano"
    },
    "generi": [],
-   "visite_en": 12445
+   "visite_en": 12448
   },
   {
    "qid": "Q2182784",
@@ -403,7 +512,26 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 11591
+   "visite_en": 11588
+  },
+  {
+   "qid": "Q1529809",
+   "titolo": "A Glastonbury Romance",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q1398332",
+     "nome": "John Cowper Powys"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/A_Glastonbury_Romance",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [],
+   "visite_en": 10002
   },
   {
    "qid": "Q20657367",
@@ -422,7 +550,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 9238
+   "visite_en": 9240
   },
   {
    "qid": "Q6372683",
@@ -441,7 +569,7 @@
     "it": "hindī"
    },
    "generi": [],
-   "visite_en": 8811
+   "visite_en": 8814
   },
   {
    "qid": "Q1746652",
@@ -460,7 +588,7 @@
     "it": "tedesco"
    },
    "generi": [],
-   "visite_en": 8463
+   "visite_en": 8460
   },
   {
    "qid": "Q2614387",
@@ -479,7 +607,7 @@
     "it": "polacco"
    },
    "generi": [],
-   "visite_en": 8331,
+   "visite_en": 8332,
    "copertina": {
     "file": "Tadeusz Dolega-Mostowicz.jpg",
     "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Tadeusz_Dolega-Mostowicz.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -505,7 +633,7 @@
     "it": "tedesco"
    },
    "generi": [],
-   "visite_en": 8262,
+   "visite_en": 8265,
    "copertina": {
     "file": "Carola Neher als 'Johanna' - Karl Schrecker, 1930.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Carola_Neher_als_%27Johanna%27_-_Karl_Schrecker%2C_1930.jpg/500px-Carola_Neher_als_%27Johanna%27_-_Karl_Schrecker%2C_1930.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -531,7 +659,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 8204
+   "visite_en": 8208
   },
   {
    "qid": "Q1192235",
@@ -571,7 +699,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 7211
+   "visite_en": 7212
   },
   {
    "qid": "Q17060239",
@@ -614,7 +742,7 @@
    "generi": [
     "memorie"
    ],
-   "visite_en": 7086,
+   "visite_en": 7085,
    "copertina": {
     "file": "Louise Elisabeth Vigée-Lebrun - Marie-Antoinette dit « à la Rose » - Google Art Project.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Louise_Elisabeth_Vig%C3%A9e-Lebrun_-_Marie-Antoinette_dit_%C2%AB_%C3%A0_la_Rose_%C2%BB_-_Google_Art_Project.jpg/500px-Louise_Elisabeth_Vig%C3%A9e-Lebrun_-_Marie-Antoinette_dit_%C2%AB_%C3%A0_la_Rose_%C2%BB_-_Google_Art_Project.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -643,7 +771,7 @@
     "fantasy_sf",
     "horror"
    ],
-   "visite_en": 6950
+   "visite_en": 6951
   },
   {
    "qid": "Q1171410",
@@ -662,7 +790,7 @@
     "it": "tedesco"
    },
    "generi": [],
-   "visite_en": 5987
+   "visite_en": 5989
   },
   {
    "qid": "Q7745219",
@@ -681,7 +809,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 5666,
+   "visite_en": 5669,
    "copertina": {
     "file": "W. J. Linton (1812-1897) design for The Cornhill Magazine front, on a copy dated December 1945.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/W._J._Linton_%281812-1897%29_design_for_The_Cornhill_Magazine_front%2C_on_a_copy_dated_December_1945.jpg/500px-W._J._Linton_%281812-1897%29_design_for_The_Cornhill_Magazine_front%2C_on_a_copy_dated_December_1945.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -743,7 +871,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 5403
+   "visite_en": 5402
   },
   {
    "qid": "Q5278419",
@@ -766,7 +894,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 5344,
+   "visite_en": 5345,
    "copertina": {
     "file": "Dinner-at-Eight-FE.jpg",
     "url": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Dinner-at-Eight-FE.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -792,7 +920,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 5317
+   "visite_en": 5318
   },
   {
    "qid": "Q6165398",
@@ -862,7 +990,7 @@
    "generi": [
     "storico"
    ],
-   "visite_en": 5143
+   "visite_en": 5146
   },
   {
    "qid": "Q7173756",
@@ -915,7 +1043,7 @@
     "it": "urdu"
    },
    "generi": [],
-   "visite_en": 4343
+   "visite_en": 4344
   },
   {
    "qid": "Q5267101",
@@ -934,7 +1062,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 4328
+   "visite_en": 4327
   },
   {
    "qid": "Q7758787",
@@ -953,7 +1081,7 @@
     "it": "francese"
    },
    "generi": [],
-   "visite_en": 3998
+   "visite_en": 4000
   },
   {
    "qid": "Q104856374",
@@ -1000,7 +1128,7 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 3899
+   "visite_en": 3900
   },
   {
    "qid": "Q5872036",
@@ -1014,7 +1142,7 @@
     "it": "tedesco"
    },
    "generi": [],
-   "visite_en": 3517
+   "visite_en": 3519
   },
   {
    "qid": "Q21162245",
@@ -1033,7 +1161,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 3487
+   "visite_en": 3489
   },
   {
    "qid": "Q5318076",
@@ -1054,7 +1182,7 @@
    "generi": [
     "fantasy_sf"
    ],
-   "visite_en": 3216,
+   "visite_en": 3217,
    "copertina": {
     "file": "Fantastic Novels cover September 1949.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Fantastic_Novels_cover_September_1949.jpg/500px-Fantastic_Novels_cover_September_1949.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -1080,7 +1208,7 @@
     "it": "russo"
    },
    "generi": [],
-   "visite_en": 3211,
+   "visite_en": 3212,
    "copertina": {
     "file": "Podvig.jpg",
     "url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Podvig.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -1108,7 +1236,7 @@
    "generi": [
     "ragazzi"
    ],
-   "visite_en": 3125,
+   "visite_en": 3129,
    "copertina": {
     "file": "The Clue in the Diary (1932) front cover, 1945 printing.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/The_Clue_in_the_Diary_%281932%29_front_cover%2C_1945_printing.jpg/500px-The_Clue_in_the_Diary_%281932%29_front_cover%2C_1945_printing.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -1181,7 +1309,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 2678
+   "visite_en": 2680
   },
   {
    "qid": "Q6383214",
@@ -1203,6 +1331,25 @@
    "visite_en": 2636
   },
   {
+   "qid": "Q8000821",
+   "titolo": "Wild Talents",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q443325",
+     "nome": "Charles Fort"
+    }
+   ],
+   "pagine": 3,
+   "wiki_en": "https://en.wikipedia.org/wiki/Wild_Talents_(book)",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [],
+   "visite_en": 2429
+  },
+  {
    "qid": "Q7735448",
    "titolo": "The Fun of It",
    "titolo_it": null,
@@ -1221,26 +1368,7 @@
    "generi": [
     "memorie"
    ],
-   "visite_en": 2425
-  },
-  {
-   "qid": "Q8000821",
-   "titolo": "Wild Talents",
-   "titolo_it": null,
-   "autori": [
-    {
-     "qid": "Q443325",
-     "nome": "Charles Fort"
-    }
-   ],
-   "pagine": 3,
-   "wiki_en": "https://en.wikipedia.org/wiki/Wild_Talents_(book)",
-   "lingua": {
-    "en": "English",
-    "it": "inglese"
-   },
-   "generi": [],
-   "visite_en": 2423
+   "visite_en": 2427
   },
   {
    "qid": "Q3818205",
@@ -1261,7 +1389,7 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 2409
+   "visite_en": 2415
   },
   {
    "qid": "Q15032732",
@@ -1282,7 +1410,7 @@
    "generi": [
     "fantasy_sf"
    ],
-   "visite_en": 2391
+   "visite_en": 2394
   },
   {
    "qid": "Q23035595",
@@ -1339,7 +1467,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 2209,
+   "visite_en": 2212,
    "copertina": {
     "file": "Joseph Conrad.PNG",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Joseph_Conrad.PNG/500px-Joseph_Conrad.PNG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -1405,7 +1533,7 @@
    "generi": [
     "ragazzi"
    ],
-   "visite_en": 1949
+   "visite_en": 1951
   },
   {
    "qid": "Q5910588",
@@ -1424,7 +1552,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 1848
+   "visite_en": 1849
   },
   {
    "qid": "Q7804791",
@@ -1462,7 +1590,7 @@
     "it": "turco"
    },
    "generi": [],
-   "visite_en": 1811
+   "visite_en": 1813
   },
   {
    "qid": "Q3794795",
@@ -1483,7 +1611,7 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 1722
+   "visite_en": 1724
   },
   {
    "qid": "Q7090080",
@@ -1502,7 +1630,7 @@
     "it": "igbo"
    },
    "generi": [],
-   "visite_en": 1702
+   "visite_en": 1706
   },
   {
    "qid": "Q7765614",
@@ -1592,7 +1720,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 1369
+   "visite_en": 1370
   },
   {
    "qid": "Q7768564",
@@ -1652,7 +1780,7 @@
     "it": "thailandese"
    },
    "generi": [],
-   "visite_en": 1141
+   "visite_en": 1143
   },
   {
    "qid": "Q6925288",
@@ -1705,7 +1833,7 @@
     "it": "spagnolo"
    },
    "generi": [],
-   "visite_en": 867
+   "visite_en": 871
   },
   {
    "qid": "Q7208469",
@@ -1788,7 +1916,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 596
+   "visite_en": 597
   },
   {
    "qid": "Q17173648",
@@ -1828,7 +1956,7 @@
     "it": "portoghese"
    },
    "generi": [],
-   "visite_en": 551
+   "visite_en": 556
   },
   {
    "qid": "Q16387178",
@@ -1847,7 +1975,7 @@
     "it": "russo"
    },
    "generi": [],
-   "visite_en": 542
+   "visite_en": 543
   },
   {
    "qid": "Q23035603",
@@ -1868,7 +1996,7 @@
    "generi": [
     "memorie"
    ],
-   "visite_en": 493,
+   "visite_en": 494,
    "copertina": {
     "file": "Adamic.JPG",
     "url": "https://upload.wikimedia.org/wikipedia/commons/d/df/Adamic.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -1890,7 +2018,7 @@
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Railroad_to_Freedom",
    "generi": [],
-   "visite_en": 483
+   "visite_en": 487
   },
   {
    "qid": "Q7656082",
@@ -1970,7 +2098,7 @@
    "generi": [
     "storico"
    ],
-   "visite_en": 437
+   "visite_en": 438
   },
   {
    "qid": "Q16385501",
@@ -1989,7 +2117,7 @@
     "it": "russo"
    },
    "generi": [],
-   "visite_en": 430
+   "visite_en": 431
   },
   {
    "qid": "Q60785449",
@@ -2008,7 +2136,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 423
+   "visite_en": 425
   },
   {
    "qid": "Q5352372",
@@ -2091,7 +2219,7 @@
     "it": "francese"
    },
    "generi": [],
-   "visite_en": 345
+   "visite_en": 346
   },
   {
    "qid": "Q109167813",
@@ -2131,7 +2259,7 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 337
+   "visite_en": 338
   },
   {
    "qid": "Q7099218",
@@ -2188,7 +2316,24 @@
     "it": "indonesiano"
    },
    "generi": [],
-   "visite_en": 315
+   "visite_en": 317
+  },
+  {
+   "qid": "Q5098569",
+   "titolo": "Children of the Soil",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q19974442",
+     "nome": "Nora Burglon"
+    }
+   ],
+   "pagine": 3,
+   "wiki_en": "https://en.wikipedia.org/wiki/Children_of_the_Soil",
+   "generi": [
+    "storico"
+   ],
+   "visite_en": 308
   },
   {
    "qid": "Q23035584",
@@ -2262,7 +2407,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 230
+   "visite_en": 231
   },
   {
    "qid": "Q18392587",
@@ -2360,6 +2505,34 @@
    },
    "generi": [],
    "visite_en": 162
+  },
+  {
+   "qid": "Q691326",
+   "titolo": "Querelles de famille",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q20733",
+     "nome": "Georges Duhamel"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/Querelles_de_famille",
+   "lingua": {
+    "en": "French",
+    "it": "francese"
+   },
+   "generi": [
+    "storico"
+   ],
+   "visite_en": 133,
+   "copertina": {
+    "file": "Woman, with large bow in her hair, putting needle on record on phonograph.png",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Woman%2C_with_large_bow_in_her_hair%2C_putting_needle_on_record_on_phonograph.png/500px-Woman%2C_with_large_bow_in_her_hair%2C_putting_needle_on_record_on_phonograph.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Woman%2C_with_large_bow_in_her_hair%2C_putting_needle_on_record_on_phonograph.png",
+    "licenza": "Public domain",
+    "autore": "Photographer not named"
+   }
   },
   {
    "qid": "Q7562673",

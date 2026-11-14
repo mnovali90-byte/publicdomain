@@ -25,14 +25,8 @@
     "it": "tedesco"
    },
    "generi": [],
-   "visite_en": 147660,
-   "copertina": {
-    "file": "(1928) Brecht Dreigroschenoper.jpg",
-    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/%281928%29_Brecht_Dreigroschenoper.jpg/500px-%281928%29_Brecht_Dreigroschenoper.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "pagina": "https://commons.wikimedia.org/wiki/File:%281928%29_Brecht_Dreigroschenoper.jpg",
-    "licenza": "CC BY 3.0",
-    "autore": "© Foto H.-P.Haack"
-   }
+   "visite_en": 147662,
+   "copertina": null
   },
   {
    "qid": "Q1218608",
@@ -53,14 +47,8 @@
    "generi": [
     "storico"
    ],
-   "visite_en": 115053,
-   "copertina": {
-    "file": "Bona-tero.jpg",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Bona-tero.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Bona-tero.jpg",
-    "licenza": "CC BY-SA 4.0",
-    "autore": "Johano78"
-   }
+   "visite_en": 115057,
+   "copertina": null
   },
   {
    "qid": "Q1217475",
@@ -79,7 +67,7 @@
     "it": "inglese britannico"
    },
    "generi": [],
-   "visite_en": 66249
+   "visite_en": 66253
   },
   {
    "qid": "Q1152214",
@@ -129,7 +117,26 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 55831
+   "visite_en": 55830
+  },
+  {
+   "qid": "Q1212765",
+   "titolo": "Sanctuary",
+   "titolo_it": "Santuario",
+   "autori": [
+    {
+     "qid": "Q38392",
+     "nome": "William Faulkner"
+    }
+   ],
+   "pagine": 15,
+   "wiki_en": "https://en.wikipedia.org/wiki/Sanctuary_(Faulkner_novel)",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [],
+   "visite_en": 49447
   },
   {
    "qid": "Q1197989",
@@ -150,7 +157,7 @@
    "generi": [
     "guerra"
    ],
-   "visite_en": 31553,
+   "visite_en": 31550,
    "copertina": {
     "file": "Erich Maria Remarque - Der Weg zurück 1931.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Erich_Maria_Remarque_-_Der_Weg_zur%C3%BCck_1931.jpg/500px-Erich_Maria_Remarque_-_Der_Weg_zur%C3%BCck_1931.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -178,7 +185,7 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 25795,
+   "visite_en": 25797,
    "copertina": {
     "file": "The Glass Key (1st ed cover).jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/The_Glass_Key_%281st_ed_cover%29.jpg/500px-The_Glass_Key_%281st_ed_cover%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -204,7 +211,7 @@
     "it": "hindī"
    },
    "generi": [],
-   "visite_en": 21554
+   "visite_en": 21557
   },
   {
    "qid": "Q4190252",
@@ -249,7 +256,7 @@
     "it": "francese"
    },
    "generi": [],
-   "visite_en": 15500
+   "visite_en": 15499
   },
   {
    "qid": "Q887062",
@@ -268,7 +275,7 @@
     "it": "francese"
    },
    "generi": [],
-   "visite_en": 14673
+   "visite_en": 14674
   },
   {
    "qid": "Q1070729",
@@ -287,7 +294,7 @@
     "it": "francese"
    },
    "generi": [],
-   "visite_en": 14309,
+   "visite_en": 14310,
    "copertina": {
     "file": "Vol de nuit, 1931 (cropped).JPG",
     "url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Vol_de_nuit%2C_1931_%28cropped%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -313,7 +320,7 @@
     "it": "tedesco"
    },
    "generi": [],
-   "visite_en": 14078,
+   "visite_en": 14082,
    "copertina": {
     "file": "The Sleepwalkers Part 1.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/The_Sleepwalkers_Part_1.jpg/500px-The_Sleepwalkers_Part_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -341,7 +348,7 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 10770
+   "visite_en": 10773
   },
   {
    "qid": "Q5990586",
@@ -378,7 +385,7 @@
     "memorie",
     "storico"
    ],
-   "visite_en": 10420
+   "visite_en": 10421
   },
   {
    "qid": "Q265042",
@@ -418,6 +425,27 @@
    "visite_en": 9885
   },
   {
+   "qid": "Q3228173",
+   "titolo": "The Face in the Abyss",
+   "titolo_it": "Il volto nell'abisso",
+   "autori": [
+    {
+     "qid": "Q330376",
+     "nome": "Abraham Grace Merritt"
+    }
+   ],
+   "pagine": 4,
+   "wiki_en": "https://en.wikipedia.org/wiki/The_Face_in_the_Abyss",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "fantasy_sf"
+   ],
+   "visite_en": 9506
+  },
+  {
    "qid": "Q1171231",
    "titolo": "The Little Golden Calf",
    "titolo_it": null,
@@ -434,7 +462,7 @@
     "it": "russo"
    },
    "generi": [],
-   "visite_en": 9098,
+   "visite_en": 9100,
    "copertina": {
     "file": "Evgeny Petrov reads the novel The Golden Calf in English translation.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Evgeny_Petrov_reads_the_novel_The_Golden_Calf_in_English_translation.jpg/500px-Evgeny_Petrov_reads_the_novel_The_Golden_Calf_in_English_translation.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -460,7 +488,7 @@
     "it": "spagnolo"
    },
    "generi": [],
-   "visite_en": 9054,
+   "visite_en": 9052,
    "copertina": {
     "file": "San Manuel Bueno mártir 1933.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/San_Manuel_Bueno_m%C3%A1rtir_1933.jpg/500px-San_Manuel_Bueno_m%C3%A1rtir_1933.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -486,7 +514,7 @@
     "it": "tedesco"
    },
    "generi": [],
-   "visite_en": 8611
+   "visite_en": 8610
   },
   {
    "qid": "Q7271766",
@@ -505,7 +533,7 @@
     "it": "giapponese"
    },
    "generi": [],
-   "visite_en": 8565
+   "visite_en": 8567
   },
   {
    "qid": "Q7718449",
@@ -526,7 +554,7 @@
    "generi": [
     "horror"
    ],
-   "visite_en": 8447
+   "visite_en": 8453
   },
   {
    "qid": "Q1438006",
@@ -545,7 +573,26 @@
     "it": "tedesco"
    },
    "generi": [],
-   "visite_en": 7626
+   "visite_en": 7628
+  },
+  {
+   "qid": "Q2498251",
+   "titolo": "Hatter's Castle",
+   "titolo_it": "Il castello del cappellaio",
+   "autori": [
+    {
+     "qid": "Q179059",
+     "nome": "A. J. Cronin"
+    }
+   ],
+   "pagine": 8,
+   "wiki_en": "https://en.wikipedia.org/wiki/Hatter%27s_Castle",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [],
+   "visite_en": 7399
   },
   {
    "qid": "Q7766907",
@@ -566,7 +613,7 @@
    "generi": [
     "horror"
    ],
-   "visite_en": 7348,
+   "visite_en": 7347,
    "copertina": {
     "file": "The Strange High House in the Mist.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/The_Strange_High_House_in_the_Mist.jpg/500px-The_Strange_High_House_in_the_Mist.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -613,7 +660,7 @@
     "it": "inglese americano"
    },
    "generi": [],
-   "visite_en": 6954
+   "visite_en": 6957
   },
   {
    "qid": "Q1775716",
@@ -679,7 +726,7 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 5736
+   "visite_en": 5737
   },
   {
    "qid": "Q6663021",
@@ -717,7 +764,7 @@
     "it": "tedesco"
    },
    "generi": [],
-   "visite_en": 5241
+   "visite_en": 5243
   },
   {
    "qid": "Q318208",
@@ -736,7 +783,7 @@
     "it": "tedesco"
    },
    "generi": [],
-   "visite_en": 5125
+   "visite_en": 5129
   },
   {
    "qid": "Q2836696",
@@ -786,7 +833,7 @@
    "generi": [
     "horror"
    ],
-   "visite_en": 4895
+   "visite_en": 4896
   },
   {
    "qid": "Q7460836",
@@ -807,7 +854,7 @@
    "generi": [
     "storico"
    ],
-   "visite_en": 4874
+   "visite_en": 4873
   },
   {
    "qid": "Q11544643",
@@ -848,6 +895,25 @@
    "visite_en": 4733
   },
   {
+   "qid": "Q4659979",
+   "titolo": "A Tangled Web",
+   "titolo_it": "Matassa ingarbugliata",
+   "autori": [
+    {
+     "qid": "Q273034",
+     "nome": "Lucy Maud Montgomery"
+    }
+   ],
+   "pagine": 4,
+   "wiki_en": "https://en.wikipedia.org/wiki/A_Tangled_Web_(Montgomery_novel)",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [],
+   "visite_en": 4685
+  },
+  {
    "qid": "Q119144545",
    "titolo": "The Sands of Windee",
    "titolo_it": null,
@@ -867,6 +933,32 @@
     "giallo"
    ],
    "visite_en": 4292
+  },
+  {
+   "qid": "Q3506429",
+   "titolo": "Swallowdale",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q515845",
+     "nome": "Arthur Ransome"
+    }
+   ],
+   "pagine": 4,
+   "wiki_en": "https://en.wikipedia.org/wiki/Swallowdale",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [],
+   "visite_en": 4193,
+   "copertina": {
+    "file": "Swallows and Amazons 02.png",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Swallows_and_Amazons_02.png/500px-Swallows_and_Amazons_02.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Swallows_and_Amazons_02.png",
+    "licenza": "CC BY-SA 3.0",
+    "autore": "wwoods"
+   }
   },
   {
    "qid": "Q7069500",
@@ -904,7 +996,7 @@
     "it": "tedesco"
    },
    "generi": [],
-   "visite_en": 3941
+   "visite_en": 3942
   },
   {
    "qid": "Q2836721",
@@ -925,7 +1017,7 @@
    "generi": [
     "ragazzi"
    ],
-   "visite_en": 3803,
+   "visite_en": 3805,
    "copertina": {
     "file": "The Secret of Red Gate Farm (1931) front cover, 1931B-1 printing.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/The_Secret_of_Red_Gate_Farm_%281931%29_front_cover%2C_1931B-1_printing.jpg/500px-The_Secret_of_Red_Gate_Farm_%281931%29_front_cover%2C_1931B-1_printing.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -953,7 +1045,7 @@
    "generi": [
     "saggio"
    ],
-   "visite_en": 3800,
+   "visite_en": 3799,
    "copertina": {
     "file": "Técnicas de golpe de Estado Curzio Malaparte.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/T%C3%A9cnicas_de_golpe_de_Estado_Curzio_Malaparte.jpg/500px-T%C3%A9cnicas_de_golpe_de_Estado_Curzio_Malaparte.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -979,7 +1071,7 @@
     "it": "tedesco"
    },
    "generi": [],
-   "visite_en": 3792
+   "visite_en": 3793
   },
   {
    "qid": "Q7252252",
@@ -1000,7 +1092,7 @@
    "generi": [
     "saggio"
    ],
-   "visite_en": 3742
+   "visite_en": 3743
   },
   {
    "qid": "Q1885291",
@@ -1042,7 +1134,7 @@
    "generi": [
     "horror"
    ],
-   "visite_en": 3573
+   "visite_en": 3574
   },
   {
    "qid": "Q1214380",
@@ -1061,7 +1153,7 @@
     "it": "tedesco"
    },
    "generi": [],
-   "visite_en": 3547
+   "visite_en": 3546
   },
   {
    "qid": "Q7760465",
@@ -1083,7 +1175,7 @@
     "fantasy_sf",
     "horror"
    ],
-   "visite_en": 3406
+   "visite_en": 3408
   },
   {
    "qid": "Q1170330",
@@ -1102,7 +1194,7 @@
     "it": "tedesco"
    },
    "generi": [],
-   "visite_en": 3402
+   "visite_en": 3403
   },
   {
    "qid": "Q1306780",
@@ -1121,7 +1213,7 @@
     "it": "tedesco"
    },
    "generi": [],
-   "visite_en": 3330,
+   "visite_en": 3331,
    "copertina": {
     "file": "Kafka Beim Bau der Chinesischen Mauer 003.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Kafka_Beim_Bau_der_Chinesischen_Mauer_003.jpg/500px-Kafka_Beim_Bau_der_Chinesischen_Mauer_003.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -1150,7 +1242,7 @@
     "avventura",
     "fantasy_sf"
    ],
-   "visite_en": 3093
+   "visite_en": 3094
   },
   {
    "qid": "Q7939007",
@@ -1169,7 +1261,7 @@
     "it": "croato"
    },
    "generi": [],
-   "visite_en": 3040
+   "visite_en": 3042
   },
   {
    "qid": "Q7713437",
@@ -1237,7 +1329,7 @@
    "generi": [
     "poesia"
    ],
-   "visite_en": 2690,
+   "visite_en": 2692,
    "copertina": {
     "file": "Altazor - Poema.JPG",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Altazor_-_Poema.JPG/500px-Altazor_-_Poema.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -1263,7 +1355,7 @@
     "it": "spagnolo"
    },
    "generi": [],
-   "visite_en": 2679
+   "visite_en": 2678
   },
   {
    "qid": "Q1192045",
@@ -1284,7 +1376,7 @@
    "generi": [
     "ragazzi"
    ],
-   "visite_en": 2538,
+   "visite_en": 2537,
    "copertina": {
     "file": "Buchdeckel des Kinderbuchs \"Der 35. Mai\" (33.-43 Aufl. 1948).jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Buchdeckel_des_Kinderbuchs_%22Der_35._Mai%22_%2833.-43_Aufl._1948%29.jpg/500px-Buchdeckel_des_Kinderbuchs_%22Der_35._Mai%22_%2833.-43_Aufl._1948%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -1348,7 +1440,7 @@
     "it": "tedesco"
    },
    "generi": [],
-   "visite_en": 2106
+   "visite_en": 2105
   },
   {
    "qid": "Q3821967",
@@ -1435,7 +1527,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 1966
+   "visite_en": 1968
   },
   {
    "qid": "Q1885266",
@@ -1537,6 +1629,25 @@
    "visite_en": 1695
   },
   {
+   "qid": "Q3220209",
+   "titolo": "Le Bal",
+   "titolo_it": "Il ballo",
+   "autori": [
+    {
+     "qid": "Q168441",
+     "nome": "Irène Némirovsky"
+    }
+   ],
+   "pagine": 5,
+   "wiki_en": "https://en.wikipedia.org/wiki/Le_Bal_(novella)",
+   "lingua": {
+    "en": "French",
+    "it": "francese"
+   },
+   "generi": [],
+   "visite_en": 1673
+  },
+  {
    "qid": "Q4003978",
    "titolo": "The Dutch Shoe Mystery",
    "titolo_it": "Un paio di scarpe",
@@ -1555,7 +1666,7 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 1546
+   "visite_en": 1548
   },
   {
    "qid": "Q5437626",
@@ -1575,6 +1686,25 @@
    },
    "generi": [],
    "visite_en": 1463
+  },
+  {
+   "qid": "Q5019855",
+   "titolo": "Calico Bush",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q1453687",
+     "nome": "Rachel Field"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/Calico_Bush_(novel)",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [],
+   "visite_en": 1427
   },
   {
    "qid": "Q328061",
@@ -1636,7 +1766,7 @@
     "it": "ebraico"
    },
    "generi": [],
-   "visite_en": 1346
+   "visite_en": 1348
   },
   {
    "qid": "Q3817893",
@@ -1655,7 +1785,7 @@
     "it": "italiano"
    },
    "generi": [],
-   "visite_en": 1342,
+   "visite_en": 1343,
    "copertina": {
     "file": "Giuseppe Ungaretti (basco).jpg",
     "url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Giuseppe_Ungaretti_%28basco%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -1683,7 +1813,7 @@
    "generi": [
     "saggio"
    ],
-   "visite_en": 1317
+   "visite_en": 1319
   },
   {
    "qid": "Q7756737",
@@ -1796,7 +1926,7 @@
     "it": "giapponese"
    },
    "generi": [],
-   "visite_en": 1105
+   "visite_en": 1106
   },
   {
    "qid": "Q1404733",
@@ -1836,7 +1966,7 @@
     "it": "tedesco"
    },
    "generi": [],
-   "visite_en": 1068
+   "visite_en": 1064
   },
   {
    "qid": "Q6929263",
@@ -1857,7 +1987,7 @@
    "generi": [
     "fantasy_sf"
    ],
-   "visite_en": 1042
+   "visite_en": 1043
   },
   {
    "qid": "Q154783",
@@ -1876,7 +2006,7 @@
     "it": "portoghese"
    },
    "generi": [],
-   "visite_en": 1039
+   "visite_en": 1040
   },
   {
    "qid": "Q4050857",
@@ -1935,7 +2065,7 @@
     "it": "spagnolo"
    },
    "generi": [],
-   "visite_en": 900,
+   "visite_en": 901,
    "copertina": {
     "file": "Los lanzallamas claridad 1931.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Los_lanzallamas_claridad_1931.jpg/500px-Los_lanzallamas_claridad_1931.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -2041,7 +2171,7 @@
    "generi": [
     "poesia"
    ],
-   "visite_en": 630
+   "visite_en": 631
   },
   {
    "qid": "Q6461108",
@@ -2060,7 +2190,7 @@
     "it": "francese"
    },
    "generi": [],
-   "visite_en": 615
+   "visite_en": 616
   },
   {
    "qid": "Q7286666",
@@ -2100,7 +2230,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 540
+   "visite_en": 541
   },
   {
    "qid": "Q7736867",
@@ -2181,7 +2311,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 496
+   "visite_en": 497
   },
   {
    "qid": "Q523506",
@@ -2242,7 +2372,7 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 420
+   "visite_en": 421
   },
   {
    "qid": "Q7111757",
@@ -2282,7 +2412,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 377
+   "visite_en": 378
   },
   {
    "qid": "Q21085990",
@@ -2301,7 +2431,7 @@
     "it": "catalano"
    },
    "generi": [],
-   "visite_en": 373,
+   "visite_en": 372,
    "copertina": {
     "file": "'Mort de dama', 9a edició.JPG",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/%27Mort_de_dama%27%2C_9a_edici%C3%B3.JPG/500px-%27Mort_de_dama%27%2C_9a_edici%C3%B3.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -2338,7 +2468,7 @@
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/M%C3%A9lo_(play)",
    "generi": [],
-   "visite_en": 353
+   "visite_en": 355
   },
   {
    "qid": "Q972066",
@@ -2418,7 +2548,7 @@
     "it": "norvegese"
    },
    "generi": [],
-   "visite_en": 309
+   "visite_en": 310
   },
   {
    "qid": "Q4732223",
@@ -2437,7 +2567,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 279
+   "visite_en": 280
   },
   {
    "qid": "Q96378028",
@@ -2475,7 +2605,7 @@
     "it": "russo"
    },
    "generi": [],
-   "visite_en": 236
+   "visite_en": 237
   },
   {
    "qid": "Q3887314",
@@ -2551,7 +2681,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 189
+   "visite_en": 190
   },
   {
    "qid": "Q7767852",
@@ -2724,25 +2854,6 @@
    }
   },
   {
-   "qid": "Q2824300",
-   "titolo": "Aden Arabia",
-   "titolo_it": "Aden Arabia",
-   "autori": [
-    {
-     "qid": "Q723621",
-     "nome": "Paul Nizan"
-    }
-   ],
-   "pagine": 3,
-   "wiki_en": "https://en.wikipedia.org/wiki/Aden_Arabie",
-   "lingua": {
-    "en": "French",
-    "it": "francese"
-   },
-   "generi": [],
-   "visite_en": 0
-  },
-  {
    "qid": "Q1213323",
    "titolo": "Cure through the spirit.",
    "titolo_it": "L'anima che guarisce",
@@ -2907,6 +3018,25 @@
    "wiki_en": null,
    "generi": [],
    "visite_en": null
+  },
+  {
+   "qid": "Q2824300",
+   "titolo": "Aden Arabia",
+   "titolo_it": "Aden Arabia",
+   "autori": [
+    {
+     "qid": "Q723621",
+     "nome": "Paul Nizan"
+    }
+   ],
+   "pagine": 3,
+   "wiki_en": "https://en.wikipedia.org/wiki/Aden_Arabie",
+   "lingua": {
+    "en": "French",
+    "it": "francese"
+   },
+   "generi": [],
+   "visite_en": 0
   },
   {
    "qid": "Q952083",
@@ -3269,6 +3399,44 @@
    "lingua": {
     "en": "English",
     "it": "inglese"
+   },
+   "generi": [],
+   "visite_en": null
+  },
+  {
+   "qid": "Q3881234",
+   "titolo": "All Passion Spent",
+   "titolo_it": "Ogni passione spenta",
+   "autori": [
+    {
+     "qid": "Q235505",
+     "nome": "Vita Sackville-West"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/All_Passion_Spent",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [],
+   "visite_en": null
+  },
+  {
+   "qid": "Q4915806",
+   "titolo": "Bird's Shadow",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q46602",
+     "nome": "Ivan Bunin"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/Bird%27s_Shadow",
+   "lingua": {
+    "en": "Russian",
+    "it": "russo"
    },
    "generi": [],
    "visite_en": null
