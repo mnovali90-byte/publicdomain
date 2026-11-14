@@ -100,7 +100,8 @@ def q_opere(y):
     a, b = estremi(y)
     tutte = []
     for c in CLASSI:
-        r = sparql(f'''SELECT ?p ?pLabel ?pit ?desc ?au ?auth ?d ?pr ?cal ?sl WHERE {{ ?p wdt:P31 wd:{c}; wikibase:sitelinks ?sl. FILTER(?sl>={SOGLIA_OPERE})
+        r = sparql(f'''SELECT ?p ?pLabel ?pit ?desc ?au ?auth ?d ?pr ?cal ?sl WHERE {{ {{ ?p wdt:P31 wd:{c} }} UNION {{ ?p wdt:P31 wd:Q47461344; wdt:P7937 wd:{c} }}
+ ?p wikibase:sitelinks ?sl. FILTER(?sl>={SOGLIA_OPERE})
  ?p p:P577/psv:P577 [wikibase:timeValue ?d; wikibase:timePrecision ?pr; wikibase:timeCalendarModel ?cal]. FILTER(?d>={a} && ?d<{b})
  FILTER NOT EXISTS {{ VALUES ?rif {{ {RIFERIMENTO} }} ?p wdt:P31 ?rif }}
  OPTIONAL {{ ?p wdt:P50 ?au. ?au rdfs:label ?auth FILTER(LANG(?auth)="en") }}
@@ -449,6 +450,12 @@ def sbn_autori(voci):
 
 
 def main():
+    # Un calendario già approvato da Marco non si rigenera: resta com'era quando l'ha controllato.
+    # Per rifarlo apposta: ANNO_CALENDARIO=<anno> RIGENERA_APPROVATO=1
+    approvati = set(json.loads((DATA / "calendari_approvati.json").read_text(encoding="utf-8")).get("anni", []))
+    if ANNO in approvati and not os.environ.get("RIGENERA_APPROVATO"):
+        print(f"Il calendario {ANNO} è già approvato: non lo tocco.")
+        return
     file = DATA / f"anniversari-{ANNO}.json"
     vecchio = json.loads(file.read_text(encoding="utf-8")) if file.exists() else {"voci": []}
     nuovi, esclusi, falliti = [], [], []

@@ -68,7 +68,8 @@ def opere_periodo(da, a):
     classi = " ".join("wd:" + c for c in CLASSI)
     q = f'''SELECT ?w ?wLabel ?wit ?a ?aLabel ?morte ?sl ?en ?itw (YEAR(?d) AS ?anno) WHERE {{
       VALUES ?c {{ {classi} }}
-      ?w wdt:P31 ?c; wdt:P577 ?d. FILTER(YEAR(?d)>={da} && YEAR(?d)<={a})
+      {{ ?w wdt:P31 ?c }} UNION {{ ?w wdt:P31 wd:Q47461344; wdt:P7937 ?c }}
+      ?w wdt:P577 ?d. FILTER(YEAR(?d)>={da} && YEAR(?d)<={a})
       ?w wikibase:sitelinks ?sl. FILTER(?sl>=1)
       OPTIONAL {{ ?w wdt:P50 ?a. OPTIONAL {{ ?a wdt:P570 ?morte }} }}
       OPTIONAL {{ ?w rdfs:label ?wit FILTER(LANG(?wit)="it") }}

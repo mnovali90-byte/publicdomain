@@ -35,7 +35,8 @@ def opere_anno(anno_pub):
     classi = " ".join("wd:" + c for c in CLASSI)
     q = f'''SELECT ?w ?wLabel ?wit ?a ?aLabel ?sl ?img ?en WHERE {{
       VALUES ?c {{ {classi} }}
-      ?w wdt:P31 ?c; wdt:P577 ?d. FILTER(YEAR(?d)={anno_pub})
+      {{ ?w wdt:P31 ?c }} UNION {{ ?w wdt:P31 wd:Q47461344; wdt:P7937 ?c }}
+      ?w wdt:P577 ?d. FILTER(YEAR(?d)={anno_pub})
       ?w wikibase:sitelinks ?sl. FILTER(?sl>={MIN_PAGINE})
       OPTIONAL {{ ?w wdt:P50 ?a }} OPTIONAL {{ ?w wdt:P18 ?img }}
       OPTIONAL {{ ?w rdfs:label ?wit FILTER(LANG(?wit)="it") }}
@@ -70,7 +71,8 @@ def lingua_genere(anno_pub, qids):
     classi = " ".join("wd:" + c for c in CLASSI)
     q = f'''SELECT ?w ?len ?lit ?gen WHERE {{
       VALUES ?c {{ {classi} }}
-      ?w wdt:P31 ?c; wdt:P577 ?d. FILTER(YEAR(?d)={anno_pub})
+      {{ ?w wdt:P31 ?c }} UNION {{ ?w wdt:P31 wd:Q47461344; wdt:P7937 ?c }}
+      ?w wdt:P577 ?d. FILTER(YEAR(?d)={anno_pub})
       OPTIONAL {{ ?w wdt:P407 ?l. ?l rdfs:label ?len FILTER(LANG(?len)="en"). OPTIONAL {{ ?l rdfs:label ?lit FILTER(LANG(?lit)="it") }} }}
       OPTIONAL {{ ?w wdt:P136 ?g. ?g rdfs:label ?gen FILTER(LANG(?gen)="en") }} }}'''
     out = {}
