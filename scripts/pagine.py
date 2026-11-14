@@ -79,22 +79,19 @@ def abbastanza_contenuto(a, lang="it"):
 
 def paese_per_paese(D, lang="it"):
     """Stesse regole della scheda del sito (bloccoPaesi in index.html): vanno tenute allineate."""
-    fine = datetime.date(D + 70 + 8, 12, 31) + datetime.timedelta(days=120)
     d = lambda y: data_l(lang, y)
     if lang == "en":
         return [
             f"EU (base rule), Germany and the United Kingdom: from {d(D + 71)}.",
-            f"France: from {d(D + 71)}. For works published before 3 September 1939 the wartime extension moves the date to about {MESI_EN[fine.month - 1]} {fine.year}.",
-            f"Italy: from {d(D + 71)}. If the 6-year extension (works published before 1945) is added to the 70 years: from {d(D + 77)}. "
-            "For authors from Allied countries there may be a further extension.",
+            f"France: from {d(D + 71)}. Wartime extensions are not added to the 70 years (French Court of Cassation, 2007). Exception: authors who «died for France» get 30 more years.",
+            f"Italy: from {d(D + 71)}. The 6-year wartime extension was repealed in 1996. For authors from Allied countries in the Second World War the term can be longer (1947 Peace Treaty): check case by case.",
             (f"Spain: not before {d(D + 81)} (80 years after death, because the author died before 1987; the law does not say how the year is counted)."
              if D < 1987 else f"Spain: from {d(D + 71)}."),
         ]
     return [
         f"UE (base), Germania e Regno Unito: dal {d(D + 71)}.",
-        f"Francia: dal {d(D + 71)}. Per le opere pubblicate prima del 3 settembre 1939 la proroga di guerra sposta la data a circa {MESI[fine.month - 1]} {fine.year}.",
-        f"Italia: dal {d(D + 71)}. Se la proroga di 6 anni (opere pubblicate prima del 1945) si somma ai 70 anni: dal {d(D + 77)}. "
-        "Per gli autori dei paesi alleati può esserci una proroga in più.",
+        f"Francia: dal {d(D + 71)}. Le proroghe di guerra non si sommano ai 70 anni (Cassazione francese, 2007). Eccezione: gli autori «morti per la Francia» hanno 30 anni in più.",
+        f"Italia: dal {d(D + 71)}. La proroga di guerra di 6 anni è stata abrogata nel 1996. Per gli autori di paesi alleati nella Seconda guerra mondiale la durata può essere più lunga (Trattato di pace del 1947): va verificato caso per caso.",
         (f"Spagna: non prima del {d(D + 81)} (80 anni dalla morte, perché è morto prima del 1987; la legge non dice come si conta l'anno)."
          if D < 1987 else f"Spagna: dal {d(D + 71)}."),
     ]
@@ -626,7 +623,7 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en"):
             (f"Posso pubblicare in Italia un libro uscito nel {pub}?",
              f"Non automaticamente. In Italia conta quando è morto l'autore, anche per gli autori americani: la Cassazione ha applicato i 70 anni dalla morte "
              f"a un autore statunitense anche se negli USA l'opera era già libera (caso Zorro). Un libro del {pub} di Virginia Woolf (morta nel 1941) è già libero, "
-             f"uno di Dashiell Hammett (morto nel 1961) lo sarà solo dal 2032. Le leggi nazionali possono aggiungere proroghe (per esempio Francia e Italia): va verificato caso per caso."),
+             f"uno di Dashiell Hammett (morto nel 1961) lo sarà solo dal 2032. Alcuni paesi hanno regole proprie (la Spagna 80 anni per chi è morto prima del 1987): va verificato caso per caso."),
             ("Una traduzione italiana di un'opera libera è libera anche lei?",
              "No. La traduzione ha diritti propri, che durano 70 anni dalla morte del traduttore. Libero è il testo originale: per pubblicarlo in italiano serve una traduzione nuova o una già libera."),
             ("È consulenza legale?",
@@ -651,7 +648,7 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en"):
              f"Dashiell Hammett (died 1961) is protected until 2031 under the 70-year rule. The EU directive lets protection end earlier for non-EU works (Art. 7), "
              f"but countries apply it differently: in Italy the Court of Cassation applied 70 years even to a US author. The UK applies the shorter term of the "
              f"country of origin (section 12(6)), unless the book was also published in the UK at the same time, as many American novels were. "
-             f"National rules can also add extensions (for example France and Italy): check case by case."),
+             f"Some countries have their own rules (Spain gives 80 years to authors who died before 1987): check case by case."),
             (f"Is every work published in {pub} really free in the USA?",
              "Not always. Works first published in the USA whose copyright was not renewed after 28 years were already free earlier. Foreign works that regained protection in 1996 (17 U.S.C. § 104A) "
              "last 95 years from publication, but only if they were still protected in their country of origin and the author was from a member country. "
@@ -690,7 +687,7 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en"):
 <div class="lp-card us"><div class="lp-num">95</div><h3>{T("USA · opere", "USA · works")}</h3><p class="gr">{T("Anni dalla pubblicazione", "Years after publication")}</p>
 <p>{T(f"Le opere pubblicate nel <b>{pub}</b> ancora protette diventano libere il 1° gennaio {anno}. Regola: 17 U.S.C. § 304.", f"Works published in <b>{pub}</b> that were still protected become free on 1 January {anno}. Rule: 17 U.S.C. § 304.")}</p><a href="{app}#/us/{anno}">{T("Sfoglia le opere →", "Browse the works →")}</a></div>
 <div class="lp-card"><div class="lp-num">70</div><h3>{T("Europa e Regno Unito · autori", "Europe and UK · authors")}</h3><p class="gr">{T("Anni dalla morte dell'autore", "Years after the author's death")}</p>
-<p>{T(f"Gli autori morti nel <b>{morti}</b> diventano liberi il 1° gennaio {anno}. Alcuni paesi aggiungono proroghe: ogni scheda autore mostra la data paese per paese.", f"Authors who died in <b>{morti}</b> become free on 1 January {anno}. Some countries add extensions, so each author page shows the date country by country.")}</p><a href="{app}#/{anno}">{T("Sfoglia gli autori →", "Browse the authors →")}</a></div>
+<p>{T(f"Gli autori morti nel <b>{morti}</b> diventano liberi il 1° gennaio {anno}. Alcuni paesi hanno regole proprie: ogni scheda autore mostra la data paese per paese.", f"Authors who died in <b>{morti}</b> become free on 1 January {anno}. Some countries have their own rules, so each author page shows the date country by country.")}</p><a href="{app}#/{anno}">{T("Sfoglia gli autori →", "Browse the authors →")}</a></div>
 </div></div></section>
 """)
     if opere_us and opere_us.get("opere"):

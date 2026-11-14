@@ -397,7 +397,7 @@ dialog::backdrop{background:rgba(12,12,16,.72)}
   <div class="contenitore">
     <div class="mono" style="font-size:13px;color:var(--carta)">Public Domain Radar</div>
     <p data-t="progetto">Un progetto di Marco Novali.</p>
-    <p data-t="regola">Regola europea di base: le opere diventano libere il 1° gennaio dell'anno successivo ai 70 dalla morte dell'autore. Alcuni paesi, come l'Italia, hanno proroghe: prima di pubblicare va fatta una verifica nazionale. Una traduzione già esistente ha diritti propri: qui si parla solo delle opere originali.</p>
+    <p data-t="regola">Regola europea di base: le opere diventano libere il 1° gennaio dell'anno successivo ai 70 dalla morte dell'autore. Alcuni paesi hanno regole diverse (la Spagna 80 anni per gli autori morti prima del 1987, la Francia 30 anni in più per i «morti per la Francia»): prima di pubblicare va fatta una verifica nazionale. Una traduzione già esistente ha diritti propri: qui si parla solo delle opere originali.</p>
     <details class="regole" id="regole-paesi"><summary data-t="regoleTit">Regole sulla durata, paese per paese</summary><div id="regole-corpo"></div></details>
     <p><a href="/autore/" data-t="indiceAutori">Indice degli autori (pagina per ogni autore)</a></p>
     <p id="fonti">Fonti: Wikidata (CC0), Wikipedia (testi CC BY-SA, con link alla pagina d'origine), Wikimedia Commons (ritratti, ciascuno con la sua licenza), Project Gutenberg. Aggiornato ogni mese in automatico. Informazioni generali, non consulenza legale: i dati arrivano da fonti aperte e possono contenere errori.</p>
@@ -427,23 +427,23 @@ it: {
   descrizione: "Gli autori le cui opere entrano nel pubblico dominio in Europa il prossimo 1° gennaio. Dati aperti da Wikidata e Wikipedia, aggiornati ogni mese.",
   paTit: "Da quando è libero, paese per paese",
   paUe: "UE (base), Germania e Regno Unito: dal {d}.",
-  paFr: "Francia: dal {d}. Per le opere pubblicate prima del 3 settembre 1939 la proroga di guerra sposta la data a circa {e}.",
-  paIt: "Italia: dal {d}. Se la proroga di 6 anni (opere pubblicate prima del 1945) si somma ai 70 anni: dal {e}. Per gli autori dei paesi alleati può esserci una proroga in più.",
+  paFr: "Francia: dal {d}. Le proroghe di guerra non si sommano ai 70 anni (Cassazione francese, 2007). Eccezione: gli autori «morti per la Francia» hanno 30 anni in più.",
+  paIt: "Italia: dal {d}. La proroga di guerra di 6 anni è stata abrogata nel 1996. Per gli autori di paesi alleati nella Seconda guerra mondiale la durata può essere più lunga (Trattato di pace del 1947): va verificato caso per caso.",
   paEs80: "Spagna: non prima del {d} (80 anni dalla morte, perché è morto prima del 1987; la legge non dice come si conta l'anno).",
   paEs70: "Spagna: dal {d}.",
   paNota: "Calcolo indicativo, dalle norme del riquadro in fondo alla pagina. Non è consulenza legale.",
   giurEt: "Paese",
-  giurNomi: { it: "Italia · 70 anni + proroghe", fr: "Francia · 70 anni + proroghe", de: "Germania · 70 anni", uk: "Regno Unito · 70 anni", es: "Spagna · 80 anni", us: "USA · 95 anni dalla pubblicazione" },
+  giurNomi: { it: "Italia · 70 anni", fr: "Francia · 70 anni", de: "Germania · 70 anni", uk: "Regno Unito · 70 anni", es: "Spagna · 80 anni", us: "USA · 95 anni dalla pubblicazione" },
   paesiNomi: { it: "in Italia", fr: "in Francia", de: "in Germania", uk: "nel Regno Unito", es: "in Spagna" },
   giurDesc: {
-    fr: "Francia: la lista usa la regola base dei 70 anni, ma ci sono proroghe di guerra per alcune opere e per gli «morti per la Francia». Le date per la Francia sono nella scheda di ogni autore.",
-    it: "Italia: la lista usa la regola base dei 70 anni, ma ci sono proroghe per alcune opere del periodo di guerra. Le date per l'Italia sono nella scheda di ogni autore.",
+    fr: "Francia: morte + 70 anni. Le proroghe di guerra sono comprese nei 70 anni (Cassazione francese, 2007); fanno eccezione gli autori «morti per la Francia», che hanno 30 anni in più.",
+    it: "Italia: morte + 70 anni. La proroga di guerra di 6 anni è stata abrogata nel 1996; per gli autori di paesi alleati nella Seconda guerra mondiale la durata può essere più lunga. Le date sono nella scheda di ogni autore.",
     de: "Germania: morte + 70 anni, nessuna proroga (legge letta, vedi il riquadro in fondo).",
     uk: "Regno Unito: morte + 70 anni, contati dalla fine dell'anno della morte, senza proroghe di guerra (Copyright, Designs and Patents Act 1988, sezione 12). La lista è la stessa dell'Europa. Per le opere straniere vale la durata del paese d'origine, se è più breve: vedi le regole in fondo.",
     es: "Spagna: per gli autori morti prima del 1987 valgono 80 anni dalla morte (legge del 1879). La data è prudente: la legge non dice come si conta l'anno."
   },
   regoleTit: "Regole sulla durata, paese per paese",
-  regoleNota: "Testi di legge letti il 5 novembre 2026. Non è consulenza legale: prima di pubblicare controlla la norma e la data di morte nel tuo paese.",
+  regoleNota: "Testi di legge letti il 14 novembre 2026. Non è consulenza legale: prima di pubblicare controlla la norma e la data di morte nel tuo paese.",
   presTit: "Gli autori che diventano liberi {p} il 1° gennaio",
   presTesto: "Per ognuno vedi quanto è letto, quali opere ha scritto e se in Italia è già stato tradotto. Serve a scegliere cosa ritradurre e pubblicare.",
   presFonti: "Dati aperti da Wikidata, Wikipedia e SBN, aggiornati ogni mese in automatico.",
@@ -495,14 +495,14 @@ it: {
     "Attenzione: le visite dipendono anche da quanti lettori ha una lingua (l'inglese si legge in tutto il mondo, India compresa) e da cosa succede fuori dai libri: un anniversario o una notizia fanno salire un nome anche se come scrittore si legge poco. Nessuno dei tre numeri dice quanto sia bravo l'autore o quanto venderebbe una nuova traduzione."
   ],
   catalogo: "Che tipo di catalogo", opereP: "Opere principali", opereSu: " · {x} su {y}", lingue: "Lingue",
-  avviso: "Prima di ritradurre: controlla se esiste già una traduzione italiana recente e verifica le regole del tuo paese. Per l'Italia ci sono proroghe per alcuni autori morti in periodo di guerra.",
+  avviso: "Prima di ritradurre: controlla se esiste già una traduzione italiana recente e verifica le regole del tuo paese. In Italia, per gli autori di paesi alleati nella Seconda guerra mondiale, la durata può essere più lunga.",
   tradTit: "Edizioni registrate su Open Library", tradSu: "{n} opere trovate su Open Library", tradNessuna: "Open Library non ha trovato opere di questo autore.",
   tradNoIt: "Nessuna edizione italiana registrata: possibile spazio per una nuova traduzione.",
   tradNota: "Copertura molto incompleta, soprattutto per l'italiano: autori molto tradotti da noi risultano con una sola edizione o nessuna. Non usarlo per concludere che un autore non è tradotto: serve per un confronto tra lingue, e per verificare in un catalogo italiano.",
   tradParz: "Controllate le {n} opere più pubblicate.",
   librI: "Libri in italiano", amazon: "Cerca su Amazon.it", sbn: "Catalogo SBN", wikipedia: "Wikipedia", wikidata: "Wikidata",
   nato: "nato", scrittore: "Scrittore",
-  regola: "Regola europea di base: le opere diventano libere il 1° gennaio dell'anno successivo ai 70 dalla morte dell'autore. Alcuni paesi, come l'Italia, hanno proroghe: prima di pubblicare va fatta una verifica nazionale. Una traduzione già esistente ha diritti propri: qui si parla solo delle opere originali.",
+  regola: "Regola europea di base: le opere diventano libere il 1° gennaio dell'anno successivo ai 70 dalla morte dell'autore. Alcuni paesi hanno regole diverse (la Spagna 80 anni per gli autori morti prima del 1987, la Francia 30 anni in più per i «morti per la Francia»): prima di pubblicare va fatta una verifica nazionale. Una traduzione già esistente ha diritti propri: qui si parla solo delle opere originali.",
   progetto: "Un progetto di Marco Novali.",
   fonti: "Fonti: Wikidata (CC0), Wikipedia (testi CC BY-SA, con link alla pagina d'origine), Wikimedia Commons (ritratti, ciascuno con la sua licenza), Open Library, Project Gutenberg. Ultimo aggiornamento: {d}; si rinnova da solo ogni mese. Informazioni generali, non consulenza legale: i dati arrivano da fonti aperte e possono contenere errori.",
   codice: "Codice e dati su GitHub", tastoLingua: "Lingua",
@@ -516,23 +516,23 @@ en: {
   descrizione: "The authors whose works enter the public domain in Europe on 1 January next year. Open data from Wikidata and Wikipedia, updated monthly.",
   paTit: "Free from when, country by country",
   paUe: "EU (base rule), Germany and the United Kingdom: from {d}.",
-  paFr: "France: from {d}. For works published before 3 September 1939 the wartime extension moves the date to about {e}.",
-  paIt: "Italy: from {d}. If the 6-year extension (works published before 1945) is added to the 70 years: from {e}. For authors from Allied countries there may be a further extension.",
+  paFr: "France: from {d}. Wartime extensions are not added to the 70 years (French Court of Cassation, 2007). Exception: authors who «died for France» get 30 more years.",
+  paIt: "Italy: from {d}. The 6-year wartime extension was repealed in 1996. For authors from Allied countries in the Second World War the term can be longer (1947 Peace Treaty): check case by case.",
   paEs80: "Spain: not before {d} (80 years after death, because the author died before 1987; the law does not say how the year is counted).",
   paEs70: "Spain: from {d}.",
   paNota: "Indicative calculation, based on the rules in the box at the bottom of the page. Not legal advice.",
   giurEt: "Country",
-  giurNomi: { it: "Italy · 70 years + extensions", fr: "France · 70 years + extensions", de: "Germany · 70 years", uk: "United Kingdom · 70 years", es: "Spain · 80 years", us: "USA · 95 years from publication" },
+  giurNomi: { it: "Italy · 70 years", fr: "France · 70 years", de: "Germany · 70 years", uk: "United Kingdom · 70 years", es: "Spain · 80 years", us: "USA · 95 years from publication" },
   paesiNomi: { it: "in Italy", fr: "in France", de: "in Germany", uk: "in the United Kingdom", es: "in Spain" },
   giurDesc: {
-    fr: "France: the list uses the base 70-year rule, but there are wartime extensions for some works and for those who «died for France». The dates for France are in each author's card.",
-    it: "Italy: the list uses the base 70-year rule, but there are extensions for some wartime works. The dates for Italy are in each author's card.",
+    fr: "France: death + 70 years. Wartime extensions are included in the 70 years (French Court of Cassation, 2007); the exception is authors who «died for France», who get 30 more years.",
+    it: "Italy: death + 70 years. The 6-year wartime extension was repealed in 1996; for authors from Allied countries in the Second World War the term can be longer. The dates are in each author's card.",
     de: "Germany: death + 70 years, no extensions (law read, see the box at the bottom).",
     uk: "United Kingdom: death + 70 years, counted from the end of the year of death, with no wartime extensions (Copyright, Designs and Patents Act 1988, section 12). The list is the same as for Europe. For foreign works the term of the country of origin applies if it is shorter: see the rules at the bottom.",
     es: "Spain: authors who died before 1987 get 80 years after death (1879 law). The date is cautious: the law does not say how the year is counted."
   },
   regoleTit: "Term of protection, country by country",
-  regoleNota: "Legal texts read on 5 November 2026. This is not legal advice: before publishing, check the law and the date of death in your country.",
+  regoleNota: "Legal texts read on 14 November 2026. This is not legal advice: before publishing, check the law and the date of death in your country.",
   presTit: "The authors who become free {p} on 1 January",
   presTesto: "For each one you see how widely read they are, which works they wrote and which editions already exist. Use it to choose what to retranslate and publish.",
   presFonti: "Open data from Wikidata, Wikipedia and SBN, updated automatically every month.",
@@ -584,14 +584,14 @@ en: {
     "Careful: views also depend on how many readers a language has (English is read all over the world, India included) and on what happens outside books: an anniversary or a news story lifts a name even if it is little read as a writer. None of the three numbers says how good the author is or how well a new translation would sell."
   ],
   catalogo: "Type of catalogue", opereP: "Main works", opereSu: " · {x} of {y}", lingue: "Languages",
-  avviso: "Before retranslating: check whether a recent translation already exists in your market, and verify your country's rules. Some countries, Italy included, have wartime extensions for certain authors.",
+  avviso: "Before retranslating: check whether a recent translation already exists in your market, and verify your country's rules. In Italy the term can be longer for authors from Allied countries in the Second World War.",
   tradTit: "Editions recorded on Open Library", tradSu: "{n} works found on Open Library", tradNessuna: "Open Library found no works by this author.",
   tradNoIt: "No Italian edition on record: there may be room for a new translation.",
   tradNota: "Very incomplete coverage, especially for Italian: authors widely translated in Italy can show one edition or none. Do not conclude that an author is untranslated from this: use it to compare languages, and check an Italian catalogue.",
   tradParz: "Checked the {n} most published works.",
   librI: "Books in Italian", amazon: "Search Amazon.it", sbn: "SBN catalogue", wikipedia: "Wikipedia", wikidata: "Wikidata",
   nato: "born", scrittore: "Writer",
-  regola: "Basic EU rule: works become free on 1 January of the year after the 70th anniversary of the author's death. Some countries, Italy included, have extensions: check national rules before publishing. An existing translation has its own rights: this site only covers original works.",
+  regola: "Basic EU rule: works become free on 1 January of the year after the 70th anniversary of the author's death. Some countries have different rules (Spain 80 years for authors who died before 1987, France 30 more years for those who «died for France»): check national rules before publishing. An existing translation has its own rights: this site only covers original works.",
   progetto: "A project by Marco Novali.",
   fonti: "Sources: Wikidata (CC0), Wikipedia (text CC BY-SA, linked to the original page), Wikimedia Commons (portraits, each with its own licence), Open Library, Project Gutenberg. Last updated: {d}; it renews itself every month. General information, not legal advice: the data comes from open sources and may contain errors.",
   codice: "Code and data on GitHub", tastoLingua: "Language",
@@ -1217,15 +1217,12 @@ function bloccoPaesi(a) {
   const D = parseInt(String(a.morte || "").slice(0, 4), 10);
   if (!D) return null;
   const data = (y) => new Date(Date.UTC(y, 0, 1)).toLocaleDateString(LING === "it" ? "it-IT" : "en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
-  // Francia, L123-9: la durata si allunga del periodo tra il 3 settembre 1939 e il 1° gennaio 1948 (8 anni e 120 giorni)
-  const fine = new Date(Date.UTC(D + 70 + 8, 11, 31) + 120 * 86400000);
-  const frEstesa = fine.toLocaleDateString(LING === "it" ? "it-IT" : "en-GB", { month: "long", year: "numeric", timeZone: "UTC" });
   const spagna80 = D < 1987;
   return h("div", {}, h("h4", {}, tr("paTit")),
     h("ul", { class: "opere paesi" },
       h("li", {}, tr("paUe", { d: data(D + 71) })),
-      h("li", {}, tr("paFr", { d: data(D + 71), e: frEstesa })),
-      h("li", {}, tr("paIt", { d: data(D + 71), e: data(D + 77) })),
+      h("li", {}, tr("paFr", { d: data(D + 71) })),
+      h("li", {}, tr("paIt", { d: data(D + 71) })),
       h("li", {}, spagna80 ? tr("paEs80", { d: data(D + 81) }) : tr("paEs70", { d: data(D + 71) }))),
     h("div", { class: "sotto" }, tr("paNota")));
 }
@@ -1631,15 +1628,15 @@ const REGOLE = [
   { paese: { it: "Italia", en: "Italy" }, voci: [
     { t: { it: "Il testo dell'art. 25 dice 50 anni; la legge 52/1996, art. 17, li ha portati a 70.", en: "The text of Art. 25 says 50 years; Law 52/1996, Art. 17, raised it to 70." }, f: "Legge 633/1941, art. 25", u: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1941-04-22;633~art25" },
     { t: { it: "I termini si contano dal 1° gennaio dell'anno successivo alla morte.", en: "Terms run from 1 January of the year after the death." }, f: "Legge 633/1941, art. 32-ter", u: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1941-04-22;633~art32ter" },
-    { t: { it: "Proroga di 6 anni per le opere pubblicate e non ancora libere alla data del decreto (1945). Come si applica a ogni opera va verificato.", en: "6-year extension for works published and not yet in the public domain on the date of the decree (1945). How it applies to each work must be checked." }, f: "D.Lgs.Lgt. 440/1945, art. 1", u: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo.luogotenenziale:1945-07-20;440" },
+    { t: { it: "La proroga di 6 anni del 1945 (D.Lgs.Lgt. 440/1945) è stata abrogata dalla legge 52/1996, art. 17, la stessa che ha portato la durata a 70 anni. Non si somma più.", en: "The 6-year extension of 1945 (Legislative Decree 440/1945) was repealed by Law 52/1996, Art. 17, the same law that raised the term to 70 years. It is no longer added." }, f: "Legge 52/1996, art. 17", u: "https://www.gazzettaufficiale.it/atto/serie_generale/caricaArticolo?art.versione=1&art.idGruppo=2&art.flagTipoArticolo=0&art.codiceRedazionale=096G0038&art.idArticolo=17&art.idSottoArticolo=1&art.idSottoArticolo1=10&art.dataPubblicazioneGazzetta=1996-02-10&art.progressivo=0" },
     { t: { it: "Trattato di pace del 1947, allegato XV, parte A, punto 3: per i diritti degli Stati Alleati e dei loro cittadini in Italia, il periodo tra l'inizio delle ostilità e l'entrata in vigore del trattato non conta nella durata, che è prolungata di altrettanto. Vale per autori di quei paesi, non per gli italiani. Come si applica a ogni opera va verificato.", en: "1947 Peace Treaty, Annex XV, Part A, point 3: for the rights of the Allied Powers and their nationals in Italy, the period between the outbreak of hostilities and the entry into force of the treaty is not counted in the term, which is extended by the same length. It applies to authors of those countries, not to Italians. How it applies to each work must be checked." }, f: "Trattato di pace con l'Italia (testo francese)", u: "https://www.cvce.eu/content/publication/1999/1/1/0eaf4219-d6d9-4c35-935a-6f55327448e7/publishable_fr.pdf" } ] },
   { paese: { it: "Francia", en: "France" }, voci: [
     { t: { it: "70 anni, contando anche l'anno in corso (L123-1).", en: "70 years, counting the current calendar year too (L123-1)." }, f: "Code de la propriété intellectuelle", u: "https://www.wipo.int/wipolex/en/legislation/details/23227" },
-    { t: { it: "Proroghe di guerra per le opere pubblicate prima del 3 settembre 1939 e non ancora libere (L123-8, L123-9), e altri 30 anni se l'autore è «morto per la Francia» (L123-10).", en: "Wartime extensions for works published before 3 September 1939 and not yet free (L123-8, L123-9), and another 30 years if the author «died for France» (L123-10)." }, f: "Code de la propriété intellectuelle", u: "https://www.wipo.int/wipolex/en/legislation/details/23227" } ] },
+    { t: { it: "Le proroghe di guerra (L123-8, L123-9) restano nel codice, ma la Cassazione ha deciso che i 70 anni le comprendono, salvo durate più lunghe già in corso il 1° luglio 1995 (sentenze del 27 febbraio 2007, casi Monet e Boldini). Gli autori «morti per la Francia» hanno 30 anni in più (L123-10): se si sommino ai 70 anni la Cassazione non l'ha deciso.", en: "The wartime extensions (L123-8, L123-9) are still in the code, but the Court of Cassation ruled that the 70 years include them, unless a longer term was already running on 1 July 1995 (rulings of 27 February 2007, Monet and Boldini cases). Authors who «died for France» get 30 more years (L123-10): whether these are added to the 70 years the Court has not decided." }, f: "Code de la propriété intellectuelle", u: "https://www.wipo.int/wipolex/en/legislation/details/23227" } ] },
   { paese: { it: "Germania", en: "Germany" }, voci: [
     { t: { it: "70 anni dalla morte (§64); i termini partono dalla fine dell'anno solare (§69).", en: "70 years after death (§64); terms start at the end of the calendar year (§69)." }, f: "Urheberrechtsgesetz", u: "https://www.wipo.int/wipolex/en/text/474282" } ] },
   { paese: { it: "Regno Unito", en: "United Kingdom" }, voci: [
-    { t: { it: "Il copyright scade alla fine del periodo di 70 anni dalla fine dell'anno in cui l'autore muore (sezione 12(2)). Non ci sono proroghe di guerra come in Italia e Francia.", en: "Copyright expires at the end of the period of 70 years from the end of the calendar year in which the author dies (section 12(2)). There are no wartime extensions as in Italy and France." }, f: "Copyright, Designs and Patents Act 1988, s. 12", u: "https://www.legislation.gov.uk/ukpga/1988/48/section/12" },
+    { t: { it: "Il copyright scade alla fine del periodo di 70 anni dalla fine dell'anno in cui l'autore muore (sezione 12(2)). Non ci sono proroghe di guerra.", en: "Copyright expires at the end of the period of 70 years from the end of the calendar year in which the author dies (section 12(2)). There are no wartime extensions." }, f: "Copyright, Designs and Patents Act 1988, s. 12", u: "https://www.legislation.gov.uk/ukpga/1988/48/section/12" },
     { t: { it: "Opere straniere: se il paese d'origine non è il Regno Unito e l'autore non è cittadino britannico, la durata è quella del paese d'origine, se più breve (sezione 12(6)). Per un libro uscito prima in un altro paese la data può quindi essere diversa.", en: "Foreign works: if the country of origin is not the United Kingdom and the author is not a British national, the term is that of the country of origin, if shorter (section 12(6)). For a book first published in another country the date can therefore differ." }, f: "Copyright, Designs and Patents Act 1988, s. 12(6)", u: "https://www.legislation.gov.uk/ukpga/1988/48/section/12" },
     { t: { it: "Opere rimaste inedite a fine 1988, di autori morti prima del 1969: protette fino al 31 dicembre 2039 (la «regola del 2039»). Vale per testi pubblicati per la prima volta dopo il 1988, per esempio lettere o diari.", en: "Works still unpublished at the end of 1988, by authors who died before 1969: protected until 31 December 2039 (the «2039 rule»). This covers texts first published after 1988, such as letters or diaries." }, f: "UK IPO, Copyright Notice: duration of copyright", u: "https://www.gov.uk/government/publications/copyright-notice-duration-of-copyright-term/copyright-notice-duration-of-copyright-term" },
     { t: { it: "La veste tipografica di un'edizione ha un diritto suo di 25 anni dalla prima pubblicazione: un testo libero non autorizza a fotografare un'edizione recente.", en: "The typographical arrangement of an edition has its own right for 25 years from first publication: a free text does not allow you to photocopy a recent edition." }, f: "UK IPO, Copyright Notice: duration of copyright", u: "https://www.gov.uk/government/publications/copyright-notice-duration-of-copyright-term/copyright-notice-duration-of-copyright-term" },
