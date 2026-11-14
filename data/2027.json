@@ -4,7 +4,7 @@
  "paese": "ue",
  "regola": "UE: morte + 70 anni, dal 1 gennaio dell'anno successivo",
  "fonte": "Wikidata (CC0)",
- "aggiornato": "2026-11-12",
+ "aggiornato": "2026-11-14",
  "totale": 1426,
  "autori": [
   {
@@ -17200,6 +17200,17 @@
    "url": "https://www.wikidata.org/wiki/Q41269642"
   },
   {
+   "wikidata": "Q18910718",
+   "nome": "Katharine Berry Judson",
+   "nascita": "1871-05-26",
+   "morte": "1956-01-01",
+   "pagine_wikipedia": 3,
+   "professioni": [
+    "scrittore"
+   ],
+   "url": "https://www.wikidata.org/wiki/Q18910718"
+  },
+  {
    "wikidata": "Q19667016",
    "nome": "Lilian Turner",
    "nascita": "1867-08-21",
@@ -22207,17 +22218,6 @@
     "scrittore"
    ],
    "url": "https://www.wikidata.org/wiki/Q124384"
-  },
-  {
-   "wikidata": "Q18910718",
-   "nome": "Katharine Berry Judson",
-   "nascita": "1871-05-26",
-   "morte": "1956-01-01",
-   "pagine_wikipedia": 2,
-   "professioni": [
-    "scrittore"
-   ],
-   "url": "https://www.wikidata.org/wiki/Q18910718"
   },
   {
    "wikidata": "Q111154468",
@@ -39593,7 +39593,7 @@
    "n": 1
   }
  ],
- "arricchito": "2026-11-12",
+ "arricchito": "2026-11-14",
  "indice_formula": "tre misure separate: visite Wikipedia it, visite Wikipedia en, numero di lingue con una pagina; ciascuna 0-100 rispetto alla lista dell'anno",
- "traduzioni_aggiornato": "2026-11-12"
+ "traduzioni_aggiornato": "2026-11-14"
 }
