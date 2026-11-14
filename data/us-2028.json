@@ -1203,25 +1203,6 @@
    "visite_en": 2636
   },
   {
-   "qid": "Q8000821",
-   "titolo": "Wild Talents",
-   "titolo_it": null,
-   "autori": [
-    {
-     "qid": "Q443325",
-     "nome": "Charles Fort"
-    }
-   ],
-   "pagine": 3,
-   "wiki_en": "https://en.wikipedia.org/wiki/Wild_Talents_(book)",
-   "lingua": {
-    "en": "English",
-    "it": "inglese"
-   },
-   "generi": [],
-   "visite_en": 2429
-  },
-  {
    "qid": "Q7735448",
    "titolo": "The Fun of It",
    "titolo_it": null,
@@ -1241,6 +1222,25 @@
     "memorie"
    ],
    "visite_en": 2427
+  },
+  {
+   "qid": "Q8000821",
+   "titolo": "Wild Talents",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q443325",
+     "nome": "Charles Fort"
+    }
+   ],
+   "pagine": 3,
+   "wiki_en": "https://en.wikipedia.org/wiki/Wild_Talents_(book)",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [],
+   "visite_en": 2424
   },
   {
    "qid": "Q3818205",
@@ -1890,7 +1890,7 @@
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Railroad_to_Freedom",
    "generi": [],
-   "visite_en": 487
+   "visite_en": 486
   },
   {
    "qid": "Q7656082",
