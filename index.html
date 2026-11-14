@@ -434,17 +434,17 @@ it: {
   paNota: "Calcolo indicativo, dalle norme del riquadro in fondo alla pagina. Non è consulenza legale.",
   giurEt: "Paese",
   giurNomi: { it: "Italia · 70 anni + proroghe", fr: "Francia · 70 anni + proroghe", de: "Germania · 70 anni", uk: "Regno Unito · 70 anni", es: "Spagna · 80 anni", us: "USA · 95 anni dalla pubblicazione" },
-  paesiNomi: { it: "Italia", fr: "Francia", de: "Germania", uk: "Regno Unito", es: "Spagna" },
+  paesiNomi: { it: "in Italia", fr: "in Francia", de: "in Germania", uk: "nel Regno Unito", es: "in Spagna" },
   giurDesc: {
     fr: "Francia: la lista usa la regola base dei 70 anni, ma ci sono proroghe di guerra per alcune opere e per gli «morti per la Francia». Le date per la Francia sono nella scheda di ogni autore.",
     it: "Italia: la lista usa la regola base dei 70 anni, ma ci sono proroghe per alcune opere del periodo di guerra. Le date per l'Italia sono nella scheda di ogni autore.",
     de: "Germania: morte + 70 anni, nessuna proroga (legge letta, vedi il riquadro in fondo).",
-    uk: "Regno Unito: morte + 70 anni, contati dalla fine dell'anno della morte, senza proroghe di guerra (Copyright, Designs and Patents Act 1988, sezione 12). La lista è la stessa dell'Europa.",
+    uk: "Regno Unito: morte + 70 anni, contati dalla fine dell'anno della morte, senza proroghe di guerra (Copyright, Designs and Patents Act 1988, sezione 12). La lista è la stessa dell'Europa. Per le opere straniere vale la durata del paese d'origine, se è più breve: vedi le regole in fondo.",
     es: "Spagna: per gli autori morti prima del 1987 valgono 80 anni dalla morte (legge del 1879). La data è prudente: la legge non dice come si conta l'anno."
   },
   regoleTit: "Regole sulla durata, paese per paese",
   regoleNota: "Testi di legge letti il 5 novembre 2026. Non è consulenza legale: prima di pubblicare controlla la norma e la data di morte nel tuo paese.",
-  presTit: "Gli autori che diventano liberi in {p} il 1° gennaio",
+  presTit: "Gli autori che diventano liberi {p} il 1° gennaio",
   presTesto: "Per ognuno vedi quanto è letto, quali opere ha scritto e se in Italia è già stato tradotto. Serve a scegliere cosa ritradurre e pubblicare.",
   presFonti: "Dati aperti da Wikidata, Wikipedia e SBN, aggiornati ogni mese in automatico.",
   genOcc: "Radar sul pubblico dominio", genA: "Cosa diventa ", genB: "libero", genC: ", e quando",
@@ -523,17 +523,17 @@ en: {
   paNota: "Indicative calculation, based on the rules in the box at the bottom of the page. Not legal advice.",
   giurEt: "Country",
   giurNomi: { it: "Italy · 70 years + extensions", fr: "France · 70 years + extensions", de: "Germany · 70 years", uk: "United Kingdom · 70 years", es: "Spain · 80 years", us: "USA · 95 years from publication" },
-  paesiNomi: { it: "Italy", fr: "France", de: "Germany", uk: "the United Kingdom", es: "Spain" },
+  paesiNomi: { it: "in Italy", fr: "in France", de: "in Germany", uk: "in the United Kingdom", es: "in Spain" },
   giurDesc: {
     fr: "France: the list uses the base 70-year rule, but there are wartime extensions for some works and for those who «died for France». The dates for France are in each author's card.",
     it: "Italy: the list uses the base 70-year rule, but there are extensions for some wartime works. The dates for Italy are in each author's card.",
     de: "Germany: death + 70 years, no extensions (law read, see the box at the bottom).",
-    uk: "United Kingdom: death + 70 years, counted from the end of the year of death, with no wartime extensions (Copyright, Designs and Patents Act 1988, section 12). The list is the same as for Europe.",
+    uk: "United Kingdom: death + 70 years, counted from the end of the year of death, with no wartime extensions (Copyright, Designs and Patents Act 1988, section 12). The list is the same as for Europe. For foreign works the term of the country of origin applies if it is shorter: see the rules at the bottom.",
     es: "Spain: authors who died before 1987 get 80 years after death (1879 law). The date is cautious: the law does not say how the year is counted."
   },
   regoleTit: "Term of protection, country by country",
   regoleNota: "Legal texts read on 5 November 2026. This is not legal advice: before publishing, check the law and the date of death in your country.",
-  presTit: "The authors who become free in {p} on 1 January",
+  presTit: "The authors who become free {p} on 1 January",
   presTesto: "For each one you see how widely read they are, which works they wrote and which editions already exist. Use it to choose what to retranslate and publish.",
   presFonti: "Open data from Wikidata, Wikipedia and SBN, updated automatically every month.",
   genOcc: "Public domain radar", genA: "What becomes ", genB: "free", genC: ", and when",
@@ -1639,7 +1639,11 @@ const REGOLE = [
   { paese: { it: "Germania", en: "Germany" }, voci: [
     { t: { it: "70 anni dalla morte (§64); i termini partono dalla fine dell'anno solare (§69).", en: "70 years after death (§64); terms start at the end of the calendar year (§69)." }, f: "Urheberrechtsgesetz", u: "https://www.wipo.int/wipolex/en/text/474282" } ] },
   { paese: { it: "Regno Unito", en: "United Kingdom" }, voci: [
-    { t: { it: "Il copyright scade alla fine del periodo di 70 anni dalla fine dell'anno in cui l'autore muore (sezione 12(2)). Non ci sono proroghe di guerra come in Italia e Francia.", en: "Copyright expires at the end of the period of 70 years from the end of the calendar year in which the author dies (section 12(2)). There are no wartime extensions as in Italy and France." }, f: "Copyright, Designs and Patents Act 1988, s. 12", u: "https://www.legislation.gov.uk/ukpga/1988/48/section/12" } ] },
+    { t: { it: "Il copyright scade alla fine del periodo di 70 anni dalla fine dell'anno in cui l'autore muore (sezione 12(2)). Non ci sono proroghe di guerra come in Italia e Francia.", en: "Copyright expires at the end of the period of 70 years from the end of the calendar year in which the author dies (section 12(2)). There are no wartime extensions as in Italy and France." }, f: "Copyright, Designs and Patents Act 1988, s. 12", u: "https://www.legislation.gov.uk/ukpga/1988/48/section/12" },
+    { t: { it: "Opere straniere: se il paese d'origine non è il Regno Unito e l'autore non è cittadino britannico, la durata è quella del paese d'origine, se più breve (sezione 12(6)). Per un libro uscito prima in un altro paese la data può quindi essere diversa.", en: "Foreign works: if the country of origin is not the United Kingdom and the author is not a British national, the term is that of the country of origin, if shorter (section 12(6)). For a book first published in another country the date can therefore differ." }, f: "Copyright, Designs and Patents Act 1988, s. 12(6)", u: "https://www.legislation.gov.uk/ukpga/1988/48/section/12" },
+    { t: { it: "Opere rimaste inedite a fine 1988, di autori morti prima del 1969: protette fino al 31 dicembre 2039 (la «regola del 2039»). Vale per testi pubblicati per la prima volta dopo il 1988, per esempio lettere o diari.", en: "Works still unpublished at the end of 1988, by authors who died before 1969: protected until 31 December 2039 (the «2039 rule»). This covers texts first published after 1988, such as letters or diaries." }, f: "UK IPO, Copyright Notice: duration of copyright", u: "https://www.gov.uk/government/publications/copyright-notice-duration-of-copyright-term/copyright-notice-duration-of-copyright-term" },
+    { t: { it: "La veste tipografica di un'edizione ha un diritto suo di 25 anni dalla prima pubblicazione: un testo libero non autorizza a fotografare un'edizione recente.", en: "The typographical arrangement of an edition has its own right for 25 years from first publication: a free text does not allow you to photocopy a recent edition." }, f: "UK IPO, Copyright Notice: duration of copyright", u: "https://www.gov.uk/government/publications/copyright-notice-duration-of-copyright-term/copyright-notice-duration-of-copyright-term" },
+    { t: { it: "Peter Pan di J. M. Barrie: il copyright è scaduto, ma una legge del 1988 dà al Great Ormond Street Hospital un diritto perpetuo ai compensi per il suo uso.", en: "J. M. Barrie's Peter Pan: the copyright has expired, but a 1988 law gives Great Ormond Street Hospital a perpetual right to royalties for its use." }, f: "UK IPO, Copyright Notice: duration of copyright", u: "https://www.gov.uk/government/publications/copyright-notice-duration-of-copyright-term/copyright-notice-duration-of-copyright-term" } ] },
   { paese: { it: "Svezia", en: "Sweden" }, voci: [
     { t: { it: "Il diritto dura fino alla fine del settantesimo anno dopo l'anno della morte dell'autore (art. 43). Nel testo letto non ci sono proroghe di guerra.", en: "Copyright lasts until the end of the seventieth year after the year of the author's death (Art. 43). The text I read has no wartime extensions." }, f: "Lag (1960:729) om upphovsrätt, art. 43", u: "https://www.wipo.int/wipolex/en/text/129542" } ] },
   { paese: { it: "Spagna", en: "Spain" }, voci: [

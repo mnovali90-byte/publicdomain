@@ -624,8 +624,10 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en"):
              "Usano regole diverse. Gli USA contano dall'anno in cui l'opera è stata pubblicata, l'Europa dall'anno in cui è morto l'autore. "
              "Così un libro può essere libero in un posto e ancora protetto nell'altro."),
             (f"Posso pubblicare in Italia un libro uscito nel {pub}?",
-             f"Non automaticamente. In Europa conta quando è morto l'autore. Un libro del {pub} di Virginia Woolf (morta nel 1941) lì è già libero, "
-             f"mentre uno di Dashiell Hammett (morto nel 1961) lo sarà solo dal 2032. Le leggi nazionali possono aggiungere proroghe (per esempio Francia e Italia): controlla il tuo paese."),
+             f"Non automaticamente. In Europa e nel Regno Unito la regola di base guarda alla morte dell'autore: un libro del {pub} di Virginia Woolf (morta nel 1941) "
+             f"è già libero, uno di Dashiell Hammett (morto nel 1961) secondo la regola di base lo sarebbe solo dal 2032. Per le opere uscite fuori dall'UE di autori non europei "
+             f"può però valere la durata, più breve, del paese d'origine (direttiva 2006/116/CE, art. 7; nel Regno Unito la sezione 12(6) della legge del 1988), "
+             f"con eccezioni previste da trattati tra singoli paesi. Le leggi nazionali possono anche aggiungere proroghe (per esempio Francia e Italia): va verificato caso per caso."),
             ("Una traduzione italiana di un'opera libera è libera anche lei?",
              "No. La traduzione ha diritti propri, che durano 70 anni dalla morte del traduttore. Libero è il testo originale: per pubblicarlo in italiano serve una traduzione nuova o una già libera."),
             ("È consulenza legale?",
@@ -645,9 +647,11 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en"):
             ("Why are the USA and Europe different?",
              "They use different rules. The USA counts from the year a work was published. Europe counts from the year the author died. "
              "So a book can be free in one place and still protected in the other."),
-            (f"Can I publish a book from {pub} in Europe?",
-             f"Not automatically. In Europe what matters is when the author died. A book from {pub} by Virginia Woolf (died 1941) is already free there, "
-             f"while one by Dashiell Hammett (died 1961) is not free until 2032. National rules can add extensions (for example France and Italy), so check your country."),
+            (f"Can I publish a book from {pub} in Europe or the UK?",
+             f"Not automatically. In Europe and the UK the base rule looks at when the author died: a book from {pub} by Virginia Woolf (died 1941) is already free, "
+             f"while one by Dashiell Hammett (died 1961) would only be free from 2032 under the base rule. For works first published outside the EU by non-European authors, "
+             f"the shorter term of the country of origin may apply instead (Directive 2006/116/EC, Art. 7; in the UK, section 12(6) of the 1988 Act), "
+             f"with exceptions set by treaties between individual countries. National rules can also add extensions (for example France and Italy): check case by case."),
             (f"Is every work published in {pub} really free in the USA?",
              "Not always. Works first published in the USA whose copyright was not renewed after 28 years were already free earlier. Foreign works that regained protection in 1996 (17 U.S.C. § 104A) "
              "last 95 years from publication, but only if they were still protected in their country of origin and the author was from a member country. "
@@ -685,7 +689,7 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en"):
 <div class="lp-due">
 <div class="lp-card us"><div class="lp-num">95</div><h3>{T("USA · opere", "USA · works")}</h3><p class="gr">{T("Anni dalla pubblicazione", "Years after publication")}</p>
 <p>{T(f"Le opere pubblicate nel <b>{pub}</b> ancora protette diventano libere il 1° gennaio {anno}. Regola: 17 U.S.C. § 304.", f"Works published in <b>{pub}</b> that were still protected become free on 1 January {anno}. Rule: 17 U.S.C. § 304.")}</p><a href="{app}#/us/{anno}">{T("Sfoglia le opere →", "Browse the works →")}</a></div>
-<div class="lp-card"><div class="lp-num">70</div><h3>{T("Europa · autori", "Europe · authors")}</h3><p class="gr">{T("Anni dalla morte dell'autore", "Years after the author's death")}</p>
+<div class="lp-card"><div class="lp-num">70</div><h3>{T("Europa e Regno Unito · autori", "Europe and UK · authors")}</h3><p class="gr">{T("Anni dalla morte dell'autore", "Years after the author's death")}</p>
 <p>{T(f"Gli autori morti nel <b>{morti}</b> diventano liberi il 1° gennaio {anno}. Alcuni paesi aggiungono proroghe: ogni scheda autore mostra la data paese per paese.", f"Authors who died in <b>{morti}</b> become free on 1 January {anno}. Some countries add extensions, so each author page shows the date country by country.")}</p><a href="{app}#/{anno}">{T("Sfoglia gli autori →", "Browse the authors →")}</a></div>
 </div></div></section>
 """)
