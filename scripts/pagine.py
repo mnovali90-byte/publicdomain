@@ -624,10 +624,9 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en"):
              "Usano regole diverse. Gli USA contano dall'anno in cui l'opera è stata pubblicata, l'Europa dall'anno in cui è morto l'autore. "
              "Così un libro può essere libero in un posto e ancora protetto nell'altro."),
             (f"Posso pubblicare in Italia un libro uscito nel {pub}?",
-             f"Non automaticamente. In Europa e nel Regno Unito la regola di base guarda alla morte dell'autore: un libro del {pub} di Virginia Woolf (morta nel 1941) "
-             f"è già libero, uno di Dashiell Hammett (morto nel 1961) secondo la regola di base lo sarebbe solo dal 2032. Per le opere uscite fuori dall'UE di autori non europei "
-             f"può però valere la durata, più breve, del paese d'origine (direttiva 2006/116/CE, art. 7; nel Regno Unito la sezione 12(6) della legge del 1988), "
-             f"con eccezioni previste da trattati tra singoli paesi. Le leggi nazionali possono anche aggiungere proroghe (per esempio Francia e Italia): va verificato caso per caso."),
+             f"Non automaticamente. In Italia conta quando è morto l'autore, anche per gli autori americani: la Cassazione ha applicato i 70 anni dalla morte "
+             f"a un autore statunitense anche se negli USA l'opera era già libera (caso Zorro). Un libro del {pub} di Virginia Woolf (morta nel 1941) è già libero, "
+             f"uno di Dashiell Hammett (morto nel 1961) lo sarà solo dal 2032. Le leggi nazionali possono aggiungere proroghe (per esempio Francia e Italia): va verificato caso per caso."),
             ("Una traduzione italiana di un'opera libera è libera anche lei?",
              "No. La traduzione ha diritti propri, che durano 70 anni dalla morte del traduttore. Libero è il testo originale: per pubblicarlo in italiano serve una traduzione nuova o una già libera."),
             ("È consulenza legale?",
@@ -648,10 +647,11 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en"):
              "They use different rules. The USA counts from the year a work was published. Europe counts from the year the author died. "
              "So a book can be free in one place and still protected in the other."),
             (f"Can I publish a book from {pub} in Europe or the UK?",
-             f"Not automatically. In Europe and the UK the base rule looks at when the author died: a book from {pub} by Virginia Woolf (died 1941) is already free, "
-             f"while one by Dashiell Hammett (died 1961) would only be free from 2032 under the base rule. For works first published outside the EU by non-European authors, "
-             f"the shorter term of the country of origin may apply instead (Directive 2006/116/EC, Art. 7; in the UK, section 12(6) of the 1988 Act), "
-             f"with exceptions set by treaties between individual countries. National rules can also add extensions (for example France and Italy): check case by case."),
+             f"Not automatically. In Europe what matters is when the author died: a book from {pub} by Virginia Woolf (died 1941) is already free, while one by "
+             f"Dashiell Hammett (died 1961) is protected until 2031 under the 70-year rule. The EU directive lets protection end earlier for non-EU works (Art. 7), "
+             f"but countries apply it differently: in Italy the Court of Cassation applied 70 years even to a US author. The UK applies the shorter term of the "
+             f"country of origin (section 12(6)), unless the book was also published in the UK at the same time, as many American novels were. "
+             f"National rules can also add extensions (for example France and Italy): check case by case."),
             (f"Is every work published in {pub} really free in the USA?",
              "Not always. Works first published in the USA whose copyright was not renewed after 28 years were already free earlier. Foreign works that regained protection in 1996 (17 U.S.C. § 104A) "
              "last 95 years from publication, but only if they were still protected in their country of origin and the author was from a member country. "
