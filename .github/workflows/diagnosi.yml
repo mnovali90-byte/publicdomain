@@ -1,0 +1,36 @@
+name: diagnosi
+on:
+  push:
+    paths: [".github/workflows/diagnosi.yml"]
+  workflow_dispatch:
+jobs:
+  d:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          python3 - <<'PY'
+          import json,urllib.request,urllib.parse
+          q='''SELECT ?w ?wLabel ?p31 ?p31Label ?d ?form ?formLabel ?sl WHERE {
+            VALUES ?w { wd:Q1212765 }
+            OPTIONAL { ?w wdt:P31 ?p31 } OPTIONAL { ?w wdt:P577 ?d } OPTIONAL { ?w wdt:P7937 ?form }
+            ?w wikibase:sitelinks ?sl.
+            SERVICE wikibase:label { bd:serviceParam wikibase:language "en". } }'''
+          def run(q):
+            u="https://query.wikidata.org/sparql?"+urllib.parse.urlencode({"query":q,"format":"json"})
+            r=urllib.request.Request(u,headers={"User-Agent":"PublicDomainRadar-diagnosi/1.0"})
+            return json.load(urllib.request.urlopen(r,timeout=120))["results"]["bindings"]
+          for r in run(q): print("SANCT",{k:v["value"] for k,v in r.items()})
+          q2='''SELECT ?w ?wLabel ?p31Label ?d ?sl WHERE {
+            ?w rdfs:label ?l. VALUES ?l { "Cavalcade"@en "The Living Shadow"@en "Sanctuary"@en }
+            OPTIONAL { ?w wdt:P31 ?p31 } OPTIONAL { ?w wdt:P577 ?d } ?w wikibase:sitelinks ?sl. FILTER(?sl>=2)
+            SERVICE wikibase:label { bd:serviceParam wikibase:language "en". } }'''
+          for r in run(q2):
+            x={k:v["value"] for k,v in r.items()}
+            if "1931" in x.get("d","") or "Faulkner" in str(x): print("ALTRI",x)
+          # quante opere 1931 hanno P31=literary work (Q7725634) ma con forma P7937 e non sono nelle nostre classi
+          q3='''SELECT ?c ?cLabel (COUNT(DISTINCT ?w) AS ?n) WHERE {
+            ?w wdt:P577 ?d. FILTER(YEAR(?d)=1931) ?w wdt:P50 ?a. ?w wikibase:sitelinks ?sl. FILTER(?sl>=2)
+            ?w wdt:P31 ?c. SERVICE wikibase:label { bd:serviceParam wikibase:language "en". } }
+            GROUP BY ?c ?cLabel ORDER BY DESC(?n) LIMIT 40'''
+          for r in run(q3): print("CLASSE",r["c"]["value"].rsplit("/",1)[-1],r.get("cLabel",{}).get("value"),r["n"]["value"])
+          PY
