@@ -4,8 +4,8 @@
  "paese": "es",
  "regola": "Spagna, autori morti prima del 1987: 80 anni dalla morte (Ley de 10 de enero de 1879, art. 6; Ley de Propiedad Intelectual, disp. trans. cuarta). Data prudente: 1 gennaio dell'anno dopo gli 80 anni",
  "fonte": "Wikidata (CC0)",
- "aggiornato": "2026-11-14",
- "totale": 1303,
+ "aggiornato": "2026-11-15",
+ "totale": 1304,
  "autori": [
   {
    "wikidata": "Q42511",
@@ -3625,7 +3625,7 @@
    "indice_de": 92,
    "indice_fr": 85,
    "indice_int": 93,
-   "indice": 85,
+   "indice": 86,
    "traduzioni": {
     "opere": 0,
     "con_lingua": 0,
@@ -4837,7 +4837,7 @@
    "indice_en": 72,
    "indice_es": 0,
    "indice_de": 0,
-   "indice_fr": 79,
+   "indice_fr": 80,
    "indice_int": 90,
    "indice": 76,
    "verifica": {
@@ -6017,7 +6017,7 @@
    "indice_de": 96,
    "indice_fr": 86,
    "indice_int": 88,
-   "indice": 86,
+   "indice": 87,
    "traduzioni": {
     "opere": 13,
     "con_lingua": 13,
@@ -8198,7 +8198,7 @@
    "lingue": [
     "russo"
    ],
-   "indice_it": 90,
+   "indice_it": 91,
    "indice_en": 80,
    "indice_es": 0,
    "indice_de": 84,
@@ -10971,7 +10971,7 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 76,
-   "indice": 69,
+   "indice": 70,
    "verifica": {
     "esito": "una_fonte",
     "fonti": {
@@ -13279,6 +13279,17 @@
      "loc": 1946
     }
    }
+  },
+  {
+   "wikidata": "Q60821076",
+   "nome": "Radu Sbiera",
+   "nascita": "1876-12-17",
+   "morte": "1946-04-06",
+   "pagine_wikipedia": 4,
+   "professioni": [
+    "scrittore"
+   ],
+   "url": "https://www.wikidata.org/wiki/Q60821076"
   },
   {
    "wikidata": "Q31881436",
@@ -17086,17 +17097,6 @@
    "pagina_en": "r-raghava-iyengar"
   },
   {
-   "wikidata": "Q60821076",
-   "nome": "Radu Sbiera",
-   "nascita": "1876-12-17",
-   "morte": "1946-04-06",
-   "pagine_wikipedia": 3,
-   "professioni": [
-    "scrittore"
-   ],
-   "url": "https://www.wikidata.org/wiki/Q60821076"
-  },
-  {
    "wikidata": "Q27654120",
    "nome": "Raoul Dal Molin Ferenzona",
    "nascita": "1879-09-24",
@@ -17161,7 +17161,7 @@
    "indice_en": 0,
    "indice_es": 0,
    "indice_de": 0,
-   "indice_fr": 90,
+   "indice_fr": 91,
    "indice_int": 62,
    "indice": 38,
    "verifica": {
@@ -20636,7 +20636,7 @@
    ],
    "indice_it": 0,
    "indice_en": 0,
-   "indice_es": 90,
+   "indice_es": 91,
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 47,
@@ -22442,7 +22442,7 @@
    "indice_it": 0,
    "indice_en": 0,
    "indice_es": 97,
-   "indice_de": 76,
+   "indice_de": 77,
    "indice_fr": 0,
    "indice_int": 47,
    "indice": 35,
@@ -22755,7 +22755,7 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 69,
+   "indice": 70,
    "verifica": {
     "esito": "discorde",
     "fonti": {
@@ -27919,6 +27919,49 @@
    "url": "https://www.wikidata.org/wiki/Q83528793"
   },
   {
+   "wikidata": "Q142170004",
+   "nome": "Marie Ravenel de La Coste",
+   "nascita": "1835-01-01",
+   "morte": "1946-01-01",
+   "pagine_wikipedia": 1,
+   "professioni": [
+    "poeta",
+    "scrittore"
+   ],
+   "url": "https://www.wikidata.org/wiki/Q142170004",
+   "letterario": true,
+   "tipo_catalogo": [
+    "Poesia"
+   ],
+   "bio": "Marie Ravenel de La Coste was an American poet and French language teacher. She is known for her poem Somebody's Darling, which she wrote while serving as a Confederate nurse during the American Civil War.",
+   "bio_url": "https://en.wikipedia.org/wiki/Marie_Ravenel_de_La_Coste",
+   "bio_lingua": "en",
+   "bios": {
+    "en": {
+     "testo": "Marie Ravenel de La Coste was an American poet and French language teacher. She is known for her poem Somebody's Darling, which she wrote while serving as a Confederate nurse during the American Civil War.",
+     "url": "https://en.wikipedia.org/wiki/Marie_Ravenel_de_La_Coste"
+    }
+   },
+   "n_opere": 0,
+   "visite_12m": 0,
+   "visite_it": 0,
+   "visite_es": 0,
+   "visite_de": 0,
+   "visite_fr": 0,
+   "indice_it": 0,
+   "indice_es": 0,
+   "indice_de": 0,
+   "indice_fr": 0,
+   "indice_int": 26,
+   "indice": 29,
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1946
+    }
+   }
+  },
+  {
    "wikidata": "Q27966108",
    "nome": "Martha Grosse",
    "nascita": "1877-05-10",
@@ -30372,7 +30415,7 @@
    "indice_it": 0,
    "indice_en": 0,
    "indice_es": 0,
-   "indice_de": 90,
+   "indice_de": 91,
    "indice_fr": 0,
    "indice_int": 26,
    "indice": 29,
@@ -33787,7 +33830,7 @@
    "wikidata": "Q6437975",
    "nome": "Kristian Prestgard",
    "nascita": "1866-04-29",
-   "morte": "1946-01-25",
+   "morte": "1946-01-18",
    "pagine_wikipedia": 0,
    "professioni": [
     "scrittore"
@@ -35904,7 +35947,7 @@
    "url": "https://www.wikidata.org/wiki/Q15113664"
   }
  ],
- "letterari": 436,
+ "letterari": 437,
  "paesi": [
   {
    "nome": "Stati Uniti",
@@ -36205,7 +36248,7 @@
    "n": 1
   }
  ],
- "arricchito": "2026-11-14",
+ "arricchito": "2026-11-15",
  "indice_formula": "tre misure separate: visite Wikipedia it, visite Wikipedia en, numero di lingue con una pagina; ciascuna 0-100 rispetto alla lista dell'anno",
- "traduzioni_aggiornato": "2026-11-14"
+ "traduzioni_aggiornato": "2026-11-15"
 }
