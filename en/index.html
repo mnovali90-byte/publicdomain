@@ -136,7 +136,9 @@ button{font:inherit;color:inherit;cursor:pointer}
 .vedi{background:none;border:0;padding:12px 0;font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muto-chiaro);white-space:nowrap}
 .vedi:hover{color:var(--carta)}
 .fila{margin-top:16px;display:flex;gap:16px;overflow-x:auto;padding-bottom:16px;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch}
-.copertina{flex:none;width:184px;height:276px;padding:20px;text-align:left;display:flex;flex-direction:column;justify-content:space-between;border:0;scroll-snap-align:start}
+.copertina{flex:none;width:184px;height:276px;padding:0;text-align:left;display:flex;flex-direction:column;justify-content:flex-end;border:0;scroll-snap-align:start;position:relative;overflow:hidden}
+.copertina .trama{position:absolute;inset:0;background-repeat:repeat;background-size:58px 58px;background-position:-6px -4px}
+.copertina .fascia{position:relative;background:inherit;padding:16px 20px 20px;display:flex;flex-direction:column;gap:10px}
 .copertina .t{font-family:var(--display);font-weight:900;line-height:.92;text-transform:uppercase;overflow-wrap:normal;word-break:normal;hyphens:none}
 .copertina .a{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;line-height:1.4}
 .copertina:hover{transform:translateY(-4px)}
@@ -302,7 +304,8 @@ dialog::backdrop{background:rgba(12,12,16,.72)}
   .eroe-foto{max-width:340px}
 }
 @media (max-width:520px){
-  .copertina{width:156px;height:240px;padding:16px}
+  .copertina{width:156px;height:240px}
+  .copertina .fascia{padding:14px 16px 16px}
   .griglia-opere .copertina{width:calc(50% - 8px);min-width:0;height:210px}
   .elenco{grid-template-columns:1fr}
   .spazio{display:none}
@@ -1009,6 +1012,29 @@ function opereDellAnno(anno) {
   }
   return out;
 }
+/* ---------- copertine a trama: un simbolo per genere, ripetuto (disegni originali, nessun personaggio) ---------- */
+const SIMBOLI = {"teatro": "<path fill=\"A\" d=\"M4 5h40v3.5c-2.6 3-6.4 3-9 0-2.6 3-6.4 3-9 0h-4c-2.6 3-6.4 3-9 0-2.6 3-6.4 3-9 0z\"/><path fill=\"A\" d=\"M5 12h14c-.6 9-3.4 15.5-9.5 19.5 2.2 2.4 2.6 6.6 1.6 11.5H5z\"/><path fill=\"A\" d=\"M43 12H29c.6 9 3.4 15.5 9.5 19.5-2.2 2.4-2.6 6.6-1.6 11.5H43z\"/><rect fill=\"A\" x=\"3\" y=\"43\" width=\"42\" height=\"2.5\" rx=\"1.2\"/>", "fantascienza": "<circle fill=\"A\" cx=\"24\" cy=\"24\" r=\"11\"/><path fill=\"none\" stroke=\"B\" stroke-width=\"5\" d=\"M6.5 30.5c4 4.6 31 -4.4 35 -13\"/><path fill=\"none\" stroke=\"A\" stroke-width=\"2.6\" stroke-linecap=\"round\" d=\"M14.2 19.2C5.4 23.4 2.2 28.6 6.5 30.5c4 4.6 31-4.4 35-13 1.4-3.4-2.4-4.4-8.6-3.6\"/><path fill=\"A\" d=\"M39 4l1.2 3.3 3.3 1.2-3.3 1.2L39 13l-1.2-3.3-3.3-1.2 3.3-1.2zM9 38l.9 2.3 2.3.9-2.3.9L9 44.4l-.9-2.3-2.3-.9 2.3-.9z\"/>", "fantasy": "<path fill=\"A\" d=\"M14 44V20h-2v-8h4v3h3v-3h4v3h2v-3h4v3h3v-3h4v8h-2v24z\"/><path fill=\"A\" d=\"M24 12V3l9 3.2-9 3.2z\"/><path fill=\"B\" d=\"M20.5 44v-7a3.5 3.5 0 017 0v7zM22.6 24h2.8v5h-2.8z\"/>", "poesia": "<path fill=\"A\" d=\"M39 4C26 6 15 15 12.5 32l-1.5 6 4.5-1.5C33 34 39.5 21 39 4z\"/><path fill=\"none\" stroke=\"B\" stroke-width=\"1.6\" stroke-linecap=\"round\" d=\"M14 36L33 12M20.5 28l6-.6M24.5 22.8l6.2-1.4\"/><path fill=\"none\" stroke=\"A\" stroke-width=\"2.4\" stroke-linecap=\"round\" d=\"M14.2 36.2L8 44\"/>", "horror": "<circle fill=\"A\" cx=\"25\" cy=\"24\" r=\"17\"/><path fill=\"B\" d=\"M10 25c3-1.8 5.6-1.2 7 .8.6-2 2-3.3 3.6-3.6l1.2 2.4 1.2-1.4 1.2 1.4 1.2-2.4c1.6.3 3 1.6 3.6 3.6 1.4-2 4-2.6 7-.8-3.2.4-5 2.4-5.4 5-1.6-1.6-3.8-1.6-5 .4-1-1-2.2-1.4-3.6-1.4s-2.6.4-3.6 1.4c-1.2-2-3.4-2-5-.4-.4-2.6-2.2-4.6-5.4-5z\"/><path fill=\"A\" d=\"M6 41l.9 2.3 2.3.9-2.3.9L6 47.4l-.9-2.3-2.3-.9 2.3-.9zM42 4l.7 1.8 1.8.7-1.8.7L42 9l-.7-1.8-1.8-.7 1.8-.7z\"/>", "saggistica": "<path fill=\"A\" d=\"M22.5 13C17 9.5 10 9 4 10.5V38c6-1.5 13-1 18.5 2.5z\"/><path fill=\"A\" d=\"M25.5 13C31 9.5 38 9 44 10.5V38c-6-1.5-13-1-18.5 2.5z\"/><path fill=\"none\" stroke=\"B\" stroke-width=\"1.6\" stroke-linecap=\"round\" d=\"M8.5 17.5c3.6-.6 7.4-.2 10 1.2M8.5 23c3.6-.6 7.4-.2 10 1.2M8.5 28.5c3.6-.6 7.4-.2 10 1.2M29.5 18.7c2.6-1.4 6.4-1.8 10-1.2M29.5 24.2c2.6-1.4 6.4-1.8 10-1.2\"/>", "memorie": "<rect fill=\"A\" x=\"4\" y=\"11\" width=\"40\" height=\"27\" rx=\"2\"/><path fill=\"none\" stroke=\"B\" stroke-width=\"2\" stroke-linejoin=\"round\" d=\"M5 12.5l19 14 19-14\"/><circle fill=\"A\" cx=\"24\" cy=\"28\" r=\"5.4\"/><circle fill=\"B\" cx=\"24\" cy=\"28\" r=\"2.2\"/>", "ragazzi": "<path fill=\"A\" d=\"M30 3l12 14-12 16-12-16z\"/><path fill=\"none\" stroke=\"B\" stroke-width=\"1.6\" d=\"M30 3v30M18 17h24\"/><path fill=\"none\" stroke=\"A\" stroke-width=\"2\" stroke-linecap=\"round\" d=\"M30 33c-1 5-6 5-9 4.4s-6 .6-7 4.6-5 4.4-8 3\"/><path fill=\"A\" d=\"M22.6 37.6l-2.6-2.6-.4 3.8zM12.4 44.6l-1.8-3-1.4 3.4z\"/>", "giallo": "<circle fill=\"none\" stroke=\"A\" stroke-width=\"5\" cx=\"19\" cy=\"19\" r=\"12\"/><path fill=\"A\" d=\"M27.5 31.4l3.9-3.9 12.7 12.7a2.75 2.75 0 01-3.9 3.9z\"/><path fill=\"none\" stroke=\"A\" stroke-width=\"2\" stroke-linecap=\"round\" d=\"M13 15.5a7 7 0 016-4\"/>", "storico": "<path fill=\"A\" d=\"M8 6h32v3.5c-2 0-3.2 1.2-3.2 2.8H11.2C11.2 10.7 10 9.5 8 9.5zM12 14h24v3H12zM14 19h20v20H14zM11 40h26v3H11zM8 44h32v2.5H8z\"/><path fill=\"none\" stroke=\"B\" stroke-width=\"1.6\" d=\"M18 20v18M22 20v18M26 20v18M30 20v18\"/>", "satira": "<path fill=\"A\" d=\"M8 9c10-3.6 22-3.6 32 0 0 18-6.4 31-16 31S8 27 8 9z\"/><path fill=\"B\" d=\"M13.5 19.5c1.8-3 6.4-3 8.2 0-2.6-1.2-5.6-1.2-8.2 0zM26.3 19.5c1.8-3 6.4-3 8.2 0-2.6-1.2-5.6-1.2-8.2 0zM15 27c4.6 4.4 13.4 4.4 18 0-1 6.4-4.6 9.6-9 9.6S16 33.4 15 27z\"/>", "avventura": "<path fill=\"A\" d=\"M24 2l4.2 17.8L46 24l-17.8 4.2L24 46l-4.2-17.8L2 24l17.8-4.2z\"/><path fill=\"A\" d=\"M24 7l2.6 14.4L41 24l-14.4 2.6L24 41l-2.6-14.4L7 24l14.4-2.6z\" transform=\"rotate(45 24 24)\"/><path fill=\"A\" d=\"M24 2l4.2 17.8L46 24l-17.8 4.2L24 46l-4.2-17.8L2 24l17.8-4.2z\"/><circle fill=\"none\" stroke=\"B\" stroke-width=\"1.4\" cx=\"24\" cy=\"24\" r=\"6\"/><circle fill=\"B\" cx=\"24\" cy=\"24\" r=\"2.2\"/>", "viaggio": "<path fill=\"A\" d=\"M24 3c-9.4 0-16 6.8-16 15.4 0 7.6 5.6 12.4 10.4 15.8h11.2C34.4 30.8 40 26 40 18.4 40 9.8 33.4 3 24 3z\"/><path fill=\"none\" stroke=\"B\" stroke-width=\"1.6\" d=\"M24 3.5c-4.4 4-6.2 9.4-6.2 15s2 11 4.4 15.4M24 3.5c4.4 4 6.2 9.4 6.2 15s-2 11-4.4 15.4\"/><path fill=\"none\" stroke=\"A\" stroke-width=\"1.6\" d=\"M19.4 34.4l1.4 5.2M28.6 34.4l-1.4 5.2\"/><rect fill=\"A\" x=\"19.5\" y=\"39\" width=\"9\" height=\"6.5\" rx=\"1.2\"/>", "racconti": "<path fill=\"none\" stroke=\"A\" stroke-width=\"2.4\" d=\"M24 2.5a4 4 0 100 8 4 4 0 100-8z\" transform=\"translate(0 -1)\"/><path fill=\"A\" d=\"M14 10.5h20l3 4.5H11zM12.5 16h23v3h-23zM14 19h20l-1.5 19h-17zM11 38.5h26v4H11zM14 43h20v2.5H14z\"/><path fill=\"B\" d=\"M24 22.5c-3 3.6-4.2 6.6-4.2 9a4.2 4.2 0 008.4 0c0-2.4-1.2-5.4-4.2-9z\"/><path fill=\"none\" stroke=\"B\" stroke-width=\"1.4\" d=\"M18 19.5l-1 18M30 19.5l1 18\"/>", "guerra": "<path fill=\"A\" d=\"M24 6c3.6-3.6 10-2 11 3.6 5.6 1 7.2 7.4 3.6 11 3.6 3.6 2 10-3.6 11-1 5.6-7.4 7.2-11 3.6-3.6 3.6-10 2-11-3.6-5.6-1-7.2-7.4-3.6-11-3.6-3.6-2-10 3.6-11 1-5.6 7.4-7.2 11-3.6z\"/><circle fill=\"B\" cx=\"24\" cy=\"20.6\" r=\"5\"/><circle fill=\"A\" cx=\"24\" cy=\"20.6\" r=\"2.2\"/><path fill=\"none\" stroke=\"A\" stroke-width=\"2.2\" stroke-linecap=\"round\" d=\"M24 36v10\"/>", "sentimentale": "<path fill=\"A\" d=\"M24 42S6 31.4 6 18.6C6 12.4 10.6 8 16 8c3.6 0 6.4 1.8 8 4.6C25.6 9.8 28.4 8 32 8c5.4 0 10 4.4 10 10.6C42 31.4 24 42 24 42z\"/><path fill=\"none\" stroke=\"B\" stroke-width=\"1.6\" stroke-linecap=\"round\" d=\"M12.4 17.4c.4-2.8 2.4-4.6 5-4.8\"/>", "libro": "<path fill=\"A\" d=\"M10 5h24a4 4 0 014 4v34H14a4 4 0 01-4-4z\"/><path fill=\"none\" stroke=\"B\" stroke-width=\"1.6\" d=\"M14 5v31.5M10 39a4 4 0 014-4h24\"/><path fill=\"A\" d=\"M30 5h5v15l-2.5-2.2L30 20z\"/><path fill=\"B\" d=\"M19 13h12v1.8H19zM19 17h9v1.8h-9z\"/>", "calamaio": "<path fill=\"A\" d=\"M10 30c0-3.4 2.8-6 6.2-6h15.6c3.4 0 6.2 2.6 6.2 6v14H10z\"/><rect fill=\"A\" x=\"17\" y=\"20\" width=\"14\" height=\"5\" rx=\"1\"/><path fill=\"A\" d=\"M26 21L41 2.5c1.2 4.4.2 10.4-4.4 14.4-3 2.6-6.6 4-10.6 4.1z\"/><path fill=\"none\" stroke=\"B\" stroke-width=\"1.4\" stroke-linecap=\"round\" d=\"M27 20L37.5 8\"/>", "lampada": "<path fill=\"A\" d=\"M12 4h24l6 16H6z\"/><path fill=\"A\" d=\"M22.4 20h3.2v18h-3.2z\"/><path fill=\"A\" d=\"M12 40c0-3 3.4-5 12-5s12 2 12 5v4H12z\"/><path fill=\"none\" stroke=\"A\" stroke-width=\"1.6\" stroke-linecap=\"round\" d=\"M32 20v6\"/><circle fill=\"A\" cx=\"32\" cy=\"27.6\" r=\"1.6\"/>"};
+const SIMBOLO_GENERE = { "Teatro": "teatro", "Fantascienza": "fantascienza", "Fantasy": "fantasy", "Poesia": "poesia", "Horror": "horror",
+  "Saggistica": "saggistica", "Memorie e biografie": "memorie", "Per ragazzi": "ragazzi", "Giallo e mistero": "giallo", "Storico": "storico",
+  "Satira e umorismo": "satira", "Avventura": "avventura", "Viaggio": "viaggio", "Racconti": "racconti",
+  giallo: "giallo", fantasy_sf: "fantascienza", storico: "storico", horror: "horror", ragazzi: "ragazzi", memorie: "memorie", saggio: "saggistica",
+  poesia: "poesia", avventura: "avventura", satira: "satira", sentimentale: "sentimentale", guerra: "guerra" };
+const SIMBOLI_NEUTRI = ["libro", "calamaio", "lampada"];
+const COLORI_TRAMA = [["#FF4326", "#0C0C10"], ["#E9E6DD", "#FF4326"], ["#0E3B2E", "#FF4326"], ["#1C1C24", "#FF4326"]];  // sfondo, disegno (come .c0–.c3)
+const _trame = new Map();
+function trama(chiavi, seme, c) {
+  let nome = null;
+  for (const g of chiavi || []) { const k = SIMBOLO_GENERE[typeof g === "string" ? g : g.chiave]; if (k) { nome = k; break; } }
+  if (!nome) nome = SIMBOLI_NEUTRI[hashNumero(seme) % 3];
+  const id = nome + c;
+  if (!_trame.has(id)) {
+    const [fondo, dis] = COLORI_TRAMA[c];
+    const g = (x, y) => `<g transform="translate(${x} ${y}) scale(.5)">${SIMBOLI[nome].split('"A"').join(`"${dis}"`).split('"B"').join(`"${fondo}"`)}</g>`;
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="58" height="58">${g(6, 6)}${g(35, 35)}<circle cx="46" cy="16" r="1.6" fill="${dis}"/><circle cx="17" cy="45" r="1.6" fill="${dis}"/></svg>`;
+    _trame.set(id, `url("data:image/svg+xml,${encodeURIComponent(svg)}")`);
+  }
+  return h("div", { class: "trama", "aria-hidden": "true", style: `background-image:${_trame.get(id)}` });
+}
 function copertina(o, soloVista) {
   const c = hashNumero(o.titolo + o.a.nome) % 4;
   const l = o.titolo.length;
@@ -1016,8 +1042,8 @@ function copertina(o, soloVista) {
   const lunga = Math.max(...o.titolo.split(/\s+/).map((w) => w.length));
   // la parola più lunga deve stare intera nella copertina: si rimpicciolisce, non si spezza
   dim = Math.max(15, Math.min(dim, Math.floor(106 / (0.5 * lunga))));
-  const interno = [h("span", { class: "t", style: `font-size:${dim}px` }, o.titolo),
-    h("span", { class: "a" }, o.a.nome, o.anno ? ` · ${o.anno}` : "")];
+  const interno = [trama(o.generi, o.titolo, c), h("div", { class: "fascia" }, h("span", { class: "t", style: `font-size:${dim}px` }, o.titolo),
+    h("span", { class: "a" }, o.a.nome, o.anno ? ` · ${o.anno}` : ""))];
   if (soloVista) return h("div", { class: `copertina us-cop c${c}` }, ...interno);
   return h("button", { class: `copertina c${c}`, type: "button", "aria-label": `${o.titolo}, di ${o.a.nome}`, onclick: () => mostraOperaEU(o) }, ...interno);
 }
@@ -1432,9 +1458,9 @@ function copTipo(o) {
   let dim = l <= 12 ? 34 : l <= 24 ? 27 : l <= 40 ? 22 : 18;
   const lunga = Math.max(...titolo.split(/\s+/).map((w) => w.length));
   dim = Math.max(14, Math.min(dim, Math.floor(100 / (0.5 * lunga))));
-  return h("div", { class: `copertina us-cop c${c}` },
+  return h("div", { class: `copertina us-cop c${c}` }, trama(o.generi, titolo, c), h("div", { class: "fascia" },
     h("span", { class: "t", style: `font-size:${dim}px` }, titolo),
-    h("span", { class: "a" }, o.autori && o.autori.length > 2 && !o.completo ? autoriBreve(o) : aut, o.anno_pub ? ` · ${o.anno_pub}` : ""));
+    h("span", { class: "a" }, o.autori && o.autori.length > 2 && !o.completo ? autoriBreve(o) : aut, o.anno_pub ? ` · ${o.anno_pub}` : "")));
 }
 function copOpera(o, pub) {
   const oo = Object.assign({ anno_pub: pub }, o);
