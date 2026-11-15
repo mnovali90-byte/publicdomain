@@ -611,10 +611,29 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en"):
     libero = pacchetto_ue.get("libero_dal") or f"{anno}-01-01"
     it = lang == "it"
     app = "/" if it else "/en/"
+    # Nomi più cercati, per il titolo e la descrizione che si vedono su Google: chi cerca vuole sapere QUALI libri.
+    _aut = [x for x in pacchetto_ue.get("autori", []) if x.get("letterario") and x.get("morte")]
+    _aut.sort(key=lambda x: -((x.get("visite_it") or 0) if it else (x.get("indice_int") or x.get("indice") or 0)))
+    _cogn = lambda nome: nome.split()[-1] if nome else ""
+    _au = [_cogn(x["nome"]) for x in _aut[:3]]
+    _op = []
+    for o in (opere_us or {}).get("opere", []):
+        chi = _cogn(o["autori"][0]["nome"]) if o.get("autori") else ""
+        if chi in _au:  # niente nomi ripetuti (es. Brecht autore e Brecht opera)
+            continue
+        t = (o.get("titolo_it") or o["titolo"]) if it else o["titolo"]
+        _op.append((t, chi))
+        if len(_op) == 2:
+            break
+    _n_us = len((opere_us or {}).get("opere", [])); _n_ue = len(_aut)
     if it:
         titolo = f"Pubblico dominio {anno}: cosa diventa libero il 1° gennaio · Public Domain Radar"
         descr = (f"Le opere (USA) e gli autori (Europa) che entrano in pubblico dominio il 1° gennaio {anno}, dai dati aperti. "
                  f"Due regole spiegate in parole semplici, con le fonti.")
+        if len(_au) >= 3 and len(_op) >= 2:
+            titolo = f"Pubblico dominio {anno}: {_au[0]}, {_au[1]}, {_op[0][0]} e cosa diventa libero"
+            descr = (f"Dal 1° gennaio {anno} in Europa diventano liberi {_au[0]}, {_au[1]}, {_au[2]} e altri {_n_ue - 3} autori; "
+                     f"negli USA {_op[0][0]} ({_op[0][1]}), {_op[1][0]} ({_op[1][1]}) e altre {_n_us - 2} opere. Dati aperti, con le fonti.")
         faq = [
             (f"Cosa entra in pubblico dominio nel {anno}?",
              f"Dipende dal paese. Negli USA le opere pubblicate nel {pub} (95 anni dalla pubblicazione, 17 U.S.C. § 304). "
@@ -638,6 +657,10 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en"):
         titolo = f"Public Domain {anno}: books and authors that become free on 1 January · Public Domain Radar"
         descr = (f"The works (USA) and authors (Europe) entering the public domain on 1 January {anno}, from open data. "
                  f"Two rules explained in plain words, with sources.")
+        if len(_au) >= 3 and len(_op) >= 2:
+            titolo = f"Public Domain {anno}: {_op[0][0]}, {_op[1][0]}, {_au[0]}, {_au[1]} and more"
+            descr = (f"Free on 1 January {anno}: {_op[0][0]} ({_op[0][1]}), {_op[1][0]} ({_op[1][1]}) and {_n_us - 2} more US books; "
+                     f"{_au[0]}, {_au[1]}, {_au[2]} and {_n_ue - 3} more authors in Europe and the UK. Open data, with sources.")
         faq = [
             (f"What enters the public domain in {anno}?",
              f"It depends on the country. In the USA, works published in {pub} (95 years after publication, 17 U.S.C. § 304). "
