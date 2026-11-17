@@ -24,7 +24,7 @@ from datetime import date, datetime, timedelta, timezone
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "scripts"))
 from opere import CLASSI, GENERI, get, qid, sparql, val  # noqa: E402
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from per_autore import semi, opere_per_autore  # noqa: E402
+from per_autore import semi, opere_per_autore, opere_anonime, libera_ue, libera_usa  # noqa: E402
 
 UA = {"User-Agent": "PublicDomainRadar/1.0 (https://publicdomainradar.com; open data project)"}
 ANNO_A = int(os.environ.get("STORICO_ANNO_A", date.today().year - 96))   # 2026 -> 1930
@@ -198,11 +198,7 @@ def costruisci_playlist(ops):
 
     # tre scaffali sulle differenze tra paesi: utili a chi pubblica (un libro libero negli USA non lo è per forza in Italia)
     anno_ue = date.today().year - 71
-    def ue(o):
-        au = o.get("autori") or []
-        return bool(au) and all((a.get("morte") is not None and a["morte"] <= anno_ue) or a.get("antico") for a in au)
-    def usa(o):
-        return o.get("anno") is not None and o["anno"] <= ANNO_A
+    ue, usa = libera_ue, libera_usa
     def ultimo_morto(o):
         m = [a.get("morte") for a in o.get("autori") or [] if a.get("morte") is not None]
         return max(m) if m else None
@@ -304,6 +300,10 @@ def main():
     prima = len(tutte)
     for o in per_aut:
         tutte[o["qid"]] = o
+    anonime = opere_anonime() if time.time() < fine_budget else None
+    for o in anonime or []:
+        tutte.setdefault(o["qid"], o)
+    print("opere famose senza autore:", "non lette" if anonime is None else len(anonime))
     print(f"autori-seme: {len(semi_q)} | opere dalla ricerca per data: {prima} | dopo la ricerca per autore: {len(tutte)}"
           f" | fasce di autori mancanti: {len(fasce_mancanti)} | cassetti da riscaricare: {cassetti_mancanti}", flush=True)
     if fasce_mancanti or cassetti_mancanti:
