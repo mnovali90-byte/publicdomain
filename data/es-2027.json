@@ -38,6 +38,7 @@
    "opere": [
     {
      "titolo": "La guerra dei mondi",
+     "titolo_en": "The War of the Worlds",
      "anno": 1897,
      "generi": [
       "fantascienza",
@@ -50,6 +51,7 @@
     },
     {
      "titolo": "La macchina del tempo",
+     "titolo_en": "The Time Machine",
      "anno": 1895,
      "generi": [
       "dystopian fiction",
@@ -62,6 +64,7 @@
     },
     {
      "titolo": "L'uomo invisibile",
+     "titolo_en": "The Invisible Man",
      "anno": 1897,
      "generi": [
       "fantascienza"
@@ -70,6 +73,7 @@
     },
     {
      "titolo": "L'isola del dottor Moreau",
+     "titolo_en": "The Island of Dr Moreau",
      "anno": 1895,
      "generi": [
       "fantascienza",
@@ -79,6 +83,7 @@
     },
     {
      "titolo": "I primi uomini sulla Luna",
+     "titolo_en": "The First Men in the Moon",
      "anno": 1901,
      "generi": [
       "fantascienza",
@@ -88,6 +93,7 @@
     },
     {
      "titolo": "The Outline of History",
+     "titolo_en": "The Outline of History",
      "anno": 1919,
      "generi": [
       "libro storico"
@@ -96,6 +102,7 @@
     },
     {
      "titolo": "The Shape of Things to Come",
+     "titolo_en": "The Shape of Things to Come",
      "anno": 1933,
      "generi": [
       "Storia futura",
@@ -105,12 +112,13 @@
     },
     {
      "titolo": "Marriage",
+     "titolo_en": "Marriage",
      "anno": 1912,
      "generi": [],
      "sl": 4
     }
    ],
-   "n_opere": 6748,
+   "n_opere": 6749,
    "generi": [
     "fantascienza",
     "orrore",
@@ -190,11 +198,6 @@
      "morte": 1939
     },
     {
-     "opera": "The Story of the Late Mr. Elvesham",
-     "nome": "Max Cowper",
-     "morte": 1911
-    },
-    {
      "opera": "The Soul of a Bishop",
      "nome": "Charles Allan Gilbert",
      "morte": 1929
@@ -203,6 +206,11 @@
      "opera": "The First Men in the Moon",
      "nome": "Claude Allin Shepperson",
      "morte": 1921
+    },
+    {
+     "opera": "The Story of the Late Mr. Elvesham",
+     "nome": "Max Cowper",
+     "morte": 1911
     }
    ],
    "pagina": "h-g-wells",
@@ -243,6 +251,7 @@
    "opere": [
     {
      "titolo": "I tessitori",
+     "titolo_en": "The Weavers",
      "anno": 1892,
      "generi": [
       "social drama"
@@ -251,6 +260,7 @@
     },
     {
      "titolo": "The Rats",
+     "titolo_en": "The Rats",
      "anno": 1911,
      "generi": [
       "tragicommedia"
@@ -259,24 +269,28 @@
     },
     {
      "titolo": "The Assumption of Hannele",
+     "titolo_en": "The Assumption of Hannele",
      "anno": 1893,
      "generi": [],
      "sl": 4
     },
     {
      "titolo": "Il casellante Thiel",
+     "titolo_en": "Bahnwärter Thiel",
      "anno": 1888,
      "generi": [],
      "sl": 7
     },
     {
      "titolo": "Before Sunrise",
+     "titolo_en": "Before Sunrise",
      "anno": 1889,
      "generi": [],
      "sl": 5
     },
     {
      "titolo": "Drayman Henschel",
+     "titolo_en": "Drayman Henschel",
      "anno": 1899,
      "generi": [
       "naturalismo"
@@ -285,6 +299,7 @@
     },
     {
      "titolo": "Lonely lives : a drama",
+     "titolo_en": "Lonely lives : a drama",
      "anno": 1891,
      "generi": [
       "naturalismo"
@@ -293,6 +308,7 @@
     },
     {
      "titolo": "The Beaver Coat",
+     "titolo_en": "The Beaver Coat",
      "anno": 1893,
      "generi": [],
      "sl": 4
@@ -410,6 +426,7 @@
    "opere": [
     {
      "titolo": "Autobiografia di Alice Toklas",
+     "titolo_en": "The Autobiography of Alice B. Toklas",
      "anno": 1933,
      "generi": [
       "autobiografia",
@@ -419,42 +436,49 @@
     },
     {
      "titolo": "Four Saints in Three Acts",
+     "titolo_en": "Four Saints in Three Acts",
      "anno": null,
      "generi": [],
      "sl": 7
     },
     {
      "titolo": "Tender Buttons",
+     "titolo_en": "Tender Buttons",
      "anno": 1914,
      "generi": [],
      "sl": 5
     },
     {
      "titolo": "Three Lives",
+     "titolo_en": "Three Lives",
      "anno": 1909,
      "generi": [],
      "sl": 4
     },
     {
      "titolo": "C'era una volta gli americani",
+     "titolo_en": "The Making of Americans",
      "anno": 1925,
      "generi": [],
      "sl": 2
     },
     {
      "titolo": "Doctor Faustus Lights the Lights",
+     "titolo_en": "Doctor Faustus Lights the Lights",
      "anno": null,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "Everybody's Autobiography",
+     "titolo_en": "Everybody's Autobiography",
      "anno": null,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "If I Told Him: A Completed Portrait of Picasso",
+     "titolo_en": "If I Told Him: A Completed Portrait of Picasso",
      "anno": 1924,
      "generi": [
       "poesia"
@@ -598,12 +622,14 @@
    "opere": [
     {
      "titolo": "El amor brujo",
+     "titolo_en": "El amor brujo",
      "anno": null,
      "generi": [],
      "sl": 19
     },
     {
      "titolo": "Il cappello a tre punte",
+     "titolo_en": "The Three-Cornered Hat",
      "anno": null,
      "generi": [
       "balletto"
@@ -612,30 +638,35 @@
     },
     {
      "titolo": "El retablo de maese Pedro",
+     "titolo_en": "El retablo de maese Pedro",
      "anno": 2000,
      "generi": [],
      "sl": 11
     },
     {
      "titolo": "Fantasía Bética",
+     "titolo_en": "Fantasía Bética",
      "anno": 1922,
      "generi": [],
      "sl": 9
     },
     {
      "titolo": "Harpsichord Concerto",
+     "titolo_en": "Harpsichord Concerto",
      "anno": null,
      "generi": [],
      "sl": 8
     },
     {
      "titolo": "Asturiana = Cân o Asturia : Siete canciones populares Españolas",
+     "titolo_en": "Asturiana = Cân o Asturia : Siete canciones populares Españolas",
      "anno": 1999,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "Jota = Jota - cân o Aragon : Siete canciones populares Españolas",
+     "titolo_en": "Jota = Jota - cân o Aragon : Siete canciones populares Españolas",
      "anno": 1999,
      "generi": [],
      "sl": 0
@@ -820,48 +851,56 @@
    "opere": [
     {
      "titolo": "Teachers' manual of bird-life; a guide to the study of our common birds",
+     "titolo_en": "Teachers' manual of bird-life; a guide to the study of our common birds",
      "anno": 1899,
      "generi": [],
      "sl": 2
     },
     {
      "titolo": "Bird-Lore, Volume I",
+     "titolo_en": "Bird-Lore, Volume I",
      "anno": 1899,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "Bird-life; a guide to the study of our common birds",
+     "titolo_en": "Bird-life; a guide to the study of our common birds",
      "anno": 1898,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "The Book of Woodcraft and Indian Lore",
+     "titolo_en": "The Book of Woodcraft and Indian Lore",
      "anno": null,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "Lobo di Currumpaw",
+     "titolo_en": "Lobo, the King of Currumpaw",
      "anno": 1898,
      "generi": [],
      "sl": 13
     },
     {
      "titolo": "Two little savages",
+     "titolo_en": "Two little savages",
      "anno": 1903,
      "generi": [],
      "sl": 5
     },
     {
      "titolo": "Wild Animals I Have Known",
+     "titolo_en": "Wild Animals I Have Known",
      "anno": 1898,
      "generi": [],
      "sl": 5
     },
     {
      "titolo": "Bannertail",
+     "titolo_en": "Bannertail",
      "anno": 1922,
      "generi": [],
      "sl": 3
@@ -983,18 +1022,21 @@
    "opere": [
     {
      "titolo": "I magnifici Amberson",
+     "titolo_en": "The Magnificent Ambersons",
      "anno": 1918,
      "generi": [],
      "sl": 8
     },
     {
      "titolo": "Alice Adams",
+     "titolo_en": "Alice Adams",
      "anno": 1921,
      "generi": [],
      "sl": 3
     },
     {
      "titolo": "Monsieur Beaucaire",
+     "titolo_en": "Monsieur Beaucaire",
      "anno": 1900,
      "generi": [
       "fiction storica"
@@ -1003,6 +1045,7 @@
     },
     {
      "titolo": "Seventeen",
+     "titolo_en": "Seventeen",
      "anno": 1916,
      "generi": [
       "commedia"
@@ -1011,24 +1054,28 @@
     },
     {
      "titolo": "Claire Ambler",
+     "titolo_en": "Claire Ambler",
      "anno": 1928,
      "generi": [],
      "sl": 2
     },
     {
      "titolo": "Gentle Julia",
+     "titolo_en": "Gentle Julia",
      "anno": 1922,
      "generi": [],
      "sl": 2
     },
     {
      "titolo": "Penrod",
+     "titolo_en": "Penrod",
      "anno": 1914,
      "generi": [],
      "sl": 2
     },
     {
      "titolo": "Rose Briar",
+     "titolo_en": "Rose Briar",
      "anno": null,
      "generi": [],
      "sl": 2
@@ -1154,6 +1201,7 @@
    "opere": [
     {
      "titolo": "Nyanyi Sunyi",
+     "titolo_en": "Nyanyi Sunyi",
      "anno": 1937,
      "generi": [
       "list of poetry collections"
@@ -1162,6 +1210,7 @@
     },
     {
      "titolo": "Buah Rindu",
+     "titolo_en": "Buah Rindu",
      "anno": null,
      "generi": [
       "list of poetry collections"
@@ -1264,6 +1313,7 @@
    "opere": [
     {
      "titolo": "Hamara Kartavya",
+     "titolo_en": "Hamara Kartavya",
      "anno": 1920,
      "generi": [
       "civic duty"
@@ -1375,6 +1425,7 @@
    "opere": [
     {
      "titolo": "Apocalypse of John – dated astronomically",
+     "titolo_en": "Apocalypse of John – dated astronomically",
      "anno": null,
      "generi": [],
      "sl": 4
@@ -1472,6 +1523,7 @@
    "opere": [
     {
      "titolo": "The Last Speech",
+     "titolo_en": "The Last Speech",
      "anno": 1946,
      "generi": [],
      "sl": 2
@@ -1562,48 +1614,56 @@
    "opere": [
     {
      "titolo": "Fraternity of the Inner Light",
+     "titolo_en": "Fraternity of the Inner Light",
      "anno": null,
      "generi": [],
      "sl": 4
     },
     {
      "titolo": "A Daughter of Pan",
+     "titolo_en": "A Daughter of Pan",
      "anno": null,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "A Son of the Night",
+     "titolo_en": "A Son of the Night",
      "anno": null,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "Moon Magic",
+     "titolo_en": "Moon Magic",
      "anno": null,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "The Demon Lover",
+     "titolo_en": "The Demon Lover",
      "anno": null,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "The Goat-Foot God",
+     "titolo_en": "The Goat-Foot God",
      "anno": null,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "The Power House",
+     "titolo_en": "The Power House",
      "anno": null,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "The Sea Priestess",
+     "titolo_en": "The Sea Priestess",
      "anno": null,
      "generi": [],
      "sl": 0
@@ -1909,12 +1969,14 @@
    "opere": [
     {
      "titolo": "Life and Death of Harriett Frean",
+     "titolo_en": "Life and Death of Harriett Frean",
      "anno": 1922,
      "generi": [],
      "sl": 2
     },
     {
      "titolo": "Arnold Waterlow: a Life",
+     "titolo_en": "Arnold Waterlow: a Life",
      "anno": null,
      "generi": [],
      "sl": 1
@@ -1927,30 +1989,35 @@
     },
     {
      "titolo": "Mary Olivier: A Life",
+     "titolo_en": "Mary Olivier: A Life",
      "anno": null,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "Mr. and Mrs. Nevill Tyson",
+     "titolo_en": "Mr. and Mrs. Nevill Tyson",
      "anno": 1898,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "The Divine Fire",
+     "titolo_en": "The Divine Fire",
      "anno": null,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "The Flaw in the Crystal",
+     "titolo_en": "The Flaw in the Crystal",
      "anno": null,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "The Intercessor",
+     "titolo_en": "The Intercessor",
      "anno": null,
      "generi": [
       "orrore"
@@ -2127,48 +2194,56 @@
    "opere": [
     {
      "titolo": "Copper Sun",
+     "titolo_en": "Copper Sun",
      "anno": 1927,
      "generi": [],
      "sl": 2
     },
     {
      "titolo": "Color",
+     "titolo_en": "Color",
      "anno": null,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "Copper Sun",
+     "titolo_en": "Copper Sun",
      "anno": 1927,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "Incident",
+     "titolo_en": "Incident",
      "anno": null,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "The Ballad of the Brown Girl",
+     "titolo_en": "The Ballad of the Brown Girl",
      "anno": null,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "The Black Christ & Other Poems",
+     "titolo_en": "The Black Christ & Other Poems",
      "anno": 1929,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "My Lives and How I Lost Them",
+     "titolo_en": "My Lives and How I Lost Them",
      "anno": null,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "One Way to Heaven",
+     "titolo_en": "One Way to Heaven",
      "anno": null,
      "generi": [],
      "sl": 0
@@ -2363,6 +2438,7 @@
    "opere": [
     {
      "titolo": "Jeqe, the Bodyservant of King Shaka",
+     "titolo_en": "Jeqe, the Bodyservant of King Shaka",
      "anno": null,
      "generi": [],
      "sl": 0
@@ -2577,42 +2653,49 @@
    "opere": [
     {
      "titolo": "The Game of Liberty",
+     "titolo_en": "The Game of Liberty",
      "anno": 1915,
      "generi": [],
      "sl": 3
     },
     {
      "titolo": "An Amiable Charlatan",
+     "titolo_en": "An Amiable Charlatan",
      "anno": 1916,
      "generi": [],
      "sl": 2
     },
     {
      "titolo": "Jacob's Ladder",
+     "titolo_en": "Jacob's Ladder",
      "anno": null,
      "generi": [],
      "sl": 2
     },
     {
      "titolo": "Prodigals of Monte Carlo",
+     "titolo_en": "Prodigals of Monte Carlo",
      "anno": null,
      "generi": [],
      "sl": 2
     },
     {
      "titolo": "The Double Life of Mr. Alfred Burton",
+     "titolo_en": "The Double Life of Mr. Alfred Burton",
      "anno": null,
      "generi": [],
      "sl": 2
     },
     {
      "titolo": "The Ex-Duke",
+     "titolo_en": "The Ex-Duke",
      "anno": null,
      "generi": [],
      "sl": 2
     },
     {
      "titolo": "The Great Impersonation",
+     "titolo_en": "The Great Impersonation",
      "anno": 1920,
      "generi": [
       "letteratura del mistero"
@@ -2621,6 +2704,7 @@
     },
     {
      "titolo": "The Great Prince Shan",
+     "titolo_en": "The Great Prince Shan",
      "anno": null,
      "generi": [],
      "sl": 2
@@ -2857,12 +2941,14 @@
    "opere": [
     {
      "titolo": "The Voysey Inheritance",
+     "titolo_en": "The Voysey Inheritance",
      "anno": 1905,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "Waste",
+     "titolo_en": "Waste",
      "anno": null,
      "generi": [],
      "sl": 1
@@ -2959,24 +3045,28 @@
    "opere": [
     {
      "titolo": "The Fortunes of Richard Mahony",
+     "titolo_en": "The Fortunes of Richard Mahony",
      "anno": 1917,
      "generi": [],
      "sl": 2
     },
     {
      "titolo": "Maurice Guest",
+     "titolo_en": "Maurice Guest",
      "anno": 1908,
      "generi": [],
      "sl": 2
     },
     {
      "titolo": "Australia Felix",
+     "titolo_en": "Australia Felix",
      "anno": 1917,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "The Getting of Wisdom",
+     "titolo_en": "The Getting of Wisdom",
      "anno": 1910,
      "generi": [
       "narrativa per ragazzi"
@@ -2985,6 +3075,7 @@
     },
     {
      "titolo": "The Young Cosima",
+     "titolo_en": "The Young Cosima",
      "anno": 1939,
      "generi": [],
      "sl": 1
@@ -2997,12 +3088,14 @@
     },
     {
      "titolo": "The Way Home",
+     "titolo_en": "The Way Home",
      "anno": 1925,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "Ultima Thule",
+     "titolo_en": "Ultima Thule",
      "anno": 1929,
      "generi": [],
      "sl": 0
@@ -3103,12 +3196,14 @@
    "opere": [
     {
      "titolo": "Khulāṣat Tārīkh Al-Andalus",
+     "titolo_en": "Khulāṣat Tārīkh Al-Andalus",
      "anno": null,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "Khulāṣat Tārīkh Al-Andalus (Dār Maktabat Al-Ḥayāh, 1983)",
+     "titolo_en": "Khulāṣat Tārīkh Al-Andalus (Dār Maktabat Al-Ḥayāh, 1983)",
      "anno": 1983,
      "generi": [
       "non-fiction"
@@ -3117,6 +3212,7 @@
     },
     {
      "titolo": "Tārīkh ibn Khaldūn (Muʼassasat Hindāwī)",
+     "titolo_en": "Tārīkh ibn Khaldūn (Muʼassasat Hindāwī)",
      "anno": 2011,
      "generi": [
       "non-fiction"
@@ -3224,6 +3320,7 @@
    "opere": [
     {
      "titolo": "L'uomo del Ku Klux Klan",
+     "titolo_en": "The Clansman",
      "anno": 1905,
      "generi": [
       "fiction storica"
@@ -3232,6 +3329,7 @@
     },
     {
      "titolo": "The Leopard's Spots",
+     "titolo_en": "The Leopard's Spots",
      "anno": 1902,
      "generi": [
       "fiction storica"
@@ -3240,12 +3338,14 @@
     },
     {
      "titolo": "The Root of Evil",
+     "titolo_en": "The Root of Evil",
      "anno": 1911,
      "generi": [],
      "sl": 4
     },
     {
      "titolo": "The Traitor",
+     "titolo_en": "The Traitor",
      "anno": 1907,
      "generi": [
       "fiction storica"
@@ -3254,24 +3354,28 @@
     },
     {
      "titolo": "Comrades: A Story of Social Adventure in California",
+     "titolo_en": "Comrades: A Story of Social Adventure in California",
      "anno": 1909,
      "generi": [],
      "sl": 3
     },
     {
      "titolo": "The One Woman",
+     "titolo_en": "The One Woman",
      "anno": 1903,
      "generi": [],
      "sl": 3
     },
     {
      "titolo": "The Fall of a Nation",
+     "titolo_en": "The Fall of a Nation",
      "anno": 1916,
      "generi": [],
      "sl": 2
     },
     {
      "titolo": "The Foolish Virgin: A Romance of Today",
+     "titolo_en": "The Foolish Virgin: A Romance of Today",
      "anno": 1915,
      "generi": [],
      "sl": 2
@@ -3396,6 +3500,7 @@
    "opere": [
     {
      "titolo": "Raza de bronce",
+     "titolo_en": "Raza de bronce",
      "anno": 1919,
      "generi": [],
      "sl": 2
@@ -3544,6 +3649,7 @@
    "opere": [
     {
      "titolo": "Gazdina roba",
+     "titolo_en": "Gazdina roba",
      "anno": 1890,
      "generi": [
       "dramma",
@@ -3876,12 +3982,14 @@
    "opere": [
     {
      "titolo": "De Nederlanden",
+     "titolo_en": "De Nederlanden",
      "anno": 1946,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "Een zwerver verliefd",
+     "titolo_en": "Een zwerver verliefd",
      "anno": 1904,
      "generi": [],
      "sl": 1
@@ -3986,6 +4094,7 @@
    "opere": [
     {
      "titolo": "Doña María la Brava",
+     "titolo_en": "Doña María la Brava",
      "anno": null,
      "generi": [],
      "sl": 2
@@ -4006,12 +4115,14 @@
     },
     {
      "titolo": "Las hijas del Cid",
+     "titolo_en": "Las hijas del Cid",
      "anno": null,
      "generi": [],
      "sl": 2
     },
     {
      "titolo": "Cuando florezcan los rosales",
+     "titolo_en": "Cuando florezcan los rosales",
      "anno": null,
      "generi": [],
      "sl": 1
@@ -4024,6 +4135,7 @@
     },
     {
      "titolo": "Doña María la Brava",
+     "titolo_en": "Doña María la Brava",
      "anno": 1920,
      "generi": [
       "romancero"
@@ -4279,6 +4391,7 @@
     },
     {
      "titolo": "The Triumph of Mechanics",
+     "titolo_en": "The Triumph of Mechanics",
      "anno": 1907,
      "generi": [
       "fantascienza"
@@ -4287,6 +4400,7 @@
     },
     {
      "titolo": "The Triumph of Mechanics",
+     "titolo_en": "The Triumph of Mechanics",
      "anno": 2016,
      "generi": [],
      "sl": 0
@@ -4501,6 +4615,7 @@
    "opere": [
     {
      "titolo": "Poètes maudits d'aujourd'hui: 1946-1970",
+     "titolo_en": "Poètes maudits d'aujourd'hui: 1946-1970",
      "anno": 1972,
      "generi": [],
      "sl": 1
@@ -4598,24 +4713,28 @@
    "opere": [
     {
      "titolo": "An Anthology of Czechoslovak Literature",
+     "titolo_en": "An Anthology of Czechoslovak Literature",
      "anno": 1929,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "April",
+     "titolo_en": "April",
      "anno": null,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "February",
+     "titolo_en": "February",
      "anno": null,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "Old Autumn Allegory",
+     "titolo_en": "Old Autumn Allegory",
      "anno": 1913,
      "generi": [],
      "sl": 1
@@ -4628,6 +4747,7 @@
     },
     {
      "titolo": "The Sentimental Carousers",
+     "titolo_en": "The Sentimental Carousers",
      "anno": null,
      "generi": [],
      "sl": 1
@@ -4945,6 +5065,7 @@
    "opere": [
     {
      "titolo": "Ett liv",
+     "titolo_en": "Ett liv",
      "anno": 1925,
      "generi": [],
      "sl": 0
@@ -5051,6 +5172,7 @@
    "opere": [
     {
      "titolo": "Das Pfingstbier der Halloren",
+     "titolo_en": "Das Pfingstbier der Halloren",
      "anno": 1899,
      "generi": [],
      "sl": 1
@@ -5180,12 +5302,14 @@
    "opere": [
     {
      "titolo": "Emus",
+     "titolo_en": "Emus",
      "anno": 1944,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "The Wonder and the Apple",
+     "titolo_en": "The Wonder and the Apple",
      "anno": 1946,
      "generi": [],
      "sl": 1
@@ -5291,18 +5415,21 @@
    "opere": [
     {
      "titolo": "Bhanumoti",
+     "titolo_en": "Bhanumoti",
      "anno": 1908,
      "generi": [],
      "sl": 2
     },
     {
      "titolo": "Bhanumoti",
+     "titolo_en": "Bhanumoti",
      "anno": 1908,
      "generi": [],
      "sl": 2
     },
     {
      "titolo": "Lahori",
+     "titolo_en": "Lahori",
      "anno": 1892,
      "generi": [
       "social fiction"
@@ -5311,30 +5438,35 @@
     },
     {
      "titolo": "Asamar Buranji",
+     "titolo_en": "Asamar Buranji",
      "anno": 2004,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "Bhoot Ne Bhram (Ed. 2)",
+     "titolo_en": "Bhoot Ne Bhram (Ed. 2)",
      "anno": 1940,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "Buranjibodh (Ed. 5)",
+     "titolo_en": "Buranjibodh (Ed. 5)",
      "anno": 1929,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "Fular Chaneki",
+     "titolo_en": "Fular Chaneki",
      "anno": 1901,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "Gadadhar (Ed. 2)",
+     "titolo_en": "Gadadhar (Ed. 2)",
      "anno": 1907,
      "generi": [],
      "sl": 1
@@ -5556,6 +5688,7 @@
    "opere": [
     {
      "titolo": "The Pit",
+     "titolo_en": "The Pit",
      "anno": 1904,
      "generi": [
       "teatro drammatico"
@@ -5564,6 +5697,7 @@
     },
     {
      "titolo": "The Sign on the Door",
+     "titolo_en": "The Sign on the Door",
      "anno": null,
      "generi": [],
      "sl": 0
@@ -5751,6 +5885,7 @@
    "opere": [
     {
      "titolo": "Flore monographique des Cortinaires d'Europe",
+     "titolo_en": "Flore monographique des Cortinaires d'Europe",
      "anno": 1912,
      "generi": [],
      "sl": 0
@@ -6104,6 +6239,7 @@
    "opere": [
     {
      "titolo": "Cosmos",
+     "titolo_en": "Cosmos",
      "anno": null,
      "generi": [
       "fantascienza"
@@ -6112,6 +6248,7 @@
     },
     {
      "titolo": "Dr. Dorp",
+     "titolo_en": "Dr. Dorp",
      "anno": 1927,
      "generi": [
       "fantascienza"
@@ -6120,6 +6257,7 @@
     },
     {
      "titolo": "Maza of the Moon",
+     "titolo_en": "Maza of the Moon",
      "anno": 1930,
      "generi": [
       "fantascienza"
@@ -6128,12 +6266,14 @@
     },
     {
      "titolo": "The Malignant Entity",
+     "titolo_en": "The Malignant Entity",
      "anno": 1926,
      "generi": [],
      "sl": 2
     },
     {
      "titolo": "The Planet of Peril",
+     "titolo_en": "The Planet of Peril",
      "anno": 1929,
      "generi": [
       "fantascienza"
@@ -6142,6 +6282,7 @@
     },
     {
      "titolo": "The Radio Ghost",
+     "titolo_en": "The Radio Ghost",
      "anno": 1927,
      "generi": [
       "fantascienza"
@@ -6150,6 +6291,7 @@
     },
     {
      "titolo": "Dr. Dorp",
+     "titolo_en": "Dr. Dorp",
      "anno": 1927,
      "generi": [
       "fantascienza"
@@ -6158,6 +6300,7 @@
     },
     {
      "titolo": "The Malignant Entity",
+     "titolo_en": "The Malignant Entity",
      "anno": 1924,
      "generi": [
       "fantascienza",
@@ -6258,6 +6401,7 @@
    "opere": [
     {
      "titolo": "Ich bin so wild nach deinem Erdbeermund",
+     "titolo_en": "Ich bin so wild nach deinem Erdbeermund",
      "anno": 1930,
      "generi": [
       "verse poetry"
@@ -6510,12 +6654,14 @@
    "opere": [
     {
      "titolo": "A Brief History of South Dakota",
+     "titolo_en": "A Brief History of South Dakota",
      "anno": 1905,
      "generi": [],
      "sl": 2
     },
     {
      "titolo": "History of South Dakota",
+     "titolo_en": "History of South Dakota",
      "anno": 1904,
      "generi": [],
      "sl": 0
@@ -6608,24 +6754,28 @@
    "opere": [
     {
      "titolo": "Romance",
+     "titolo_en": "Romance",
      "anno": null,
      "generi": [],
      "sl": 2
     },
     {
      "titolo": "The Song of Songs",
+     "titolo_en": "The Song of Songs",
      "anno": null,
      "generi": [],
      "sl": 2
     },
     {
      "titolo": "The Boss",
+     "titolo_en": "The Boss",
      "anno": 1922,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "The Nigger",
+     "titolo_en": "The Nigger",
      "anno": 1915,
      "generi": [
       "melodramma"
@@ -6903,6 +7053,7 @@
    "opere": [
     {
      "titolo": "Aru Kenji no Isho",
+     "titolo_en": "Aru Kenji no Isho",
      "anno": null,
      "generi": [],
      "sl": 1
@@ -7164,6 +7315,7 @@
    "opere": [
     {
      "titolo": "Cosmos",
+     "titolo_en": "Cosmos",
      "anno": null,
      "generi": [
       "fantascienza"
@@ -7172,6 +7324,7 @@
     },
     {
      "titolo": "Ardathia",
+     "titolo_en": "Ardathia",
      "anno": 1932,
      "generi": [
       "fantascienza"
@@ -7180,24 +7333,28 @@
     },
     {
      "titolo": "The Blue Dimension",
+     "titolo_en": "The Blue Dimension",
      "anno": 1928,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "The Cities of Ardathia",
+     "titolo_en": "The Cities of Ardathia",
      "anno": null,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "The Master Ants",
+     "titolo_en": "The Master Ants",
      "anno": 1928,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "The Night People",
+     "titolo_en": "The Night People",
      "anno": 1947,
      "generi": [
       "fantasy"
@@ -7206,6 +7363,7 @@
     },
     {
      "titolo": "The Machine Man of Ardathia",
+     "titolo_en": "The Machine Man of Ardathia",
      "anno": 1927,
      "generi": [
       "fantascienza"
@@ -7324,6 +7482,7 @@
    "opere": [
     {
      "titolo": "al-Durar al-fākhirah bmʼthr al-mulūk al-ʻAlawīyīn bi-Fās al-Zāhirah",
+     "titolo_en": "al-Durar al-fākhirah bmʼthr al-mulūk al-ʻAlawīyīn bi-Fās al-Zāhirah",
      "anno": 1937,
      "generi": [],
      "sl": 0
@@ -7512,42 +7671,49 @@
    "opere": [
     {
      "titolo": "Chitradarshano",
+     "titolo_en": "Chitradarshano",
      "anno": 1921,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "Jaya-Jayant",
+     "titolo_en": "Jaya-Jayant",
      "anno": 1937,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "Nana Nana Ras - Part 1",
+     "titolo_en": "Nana Nana Ras - Part 1",
      "anno": null,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "Nana Nana Ras - Part 2",
+     "titolo_en": "Nana Nana Ras - Part 2",
      "anno": null,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "Pankhadio",
+     "titolo_en": "Pankhadio",
      "anno": 1930,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "Indukumar",
+     "titolo_en": "Indukumar",
      "anno": 1909,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "Nana Nana Ras - Part 3",
+     "titolo_en": "Nana Nana Ras - Part 3",
      "anno": 1937,
      "generi": [],
      "sl": 1
@@ -7641,48 +7807,56 @@
    "opere": [
     {
      "titolo": "Sonnet-panchashat",
+     "titolo_en": "Sonnet-panchashat",
      "anno": 1913,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "Bernard Shaw",
+     "titolo_en": "Bernard Shaw",
      "anno": null,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "Birbaler Halkhata",
+     "titolo_en": "Birbaler Halkhata",
      "anno": null,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "Beerbaler Halkhata",
-     "anno": 1917,
-     "generi": [],
-     "sl": 0
-    },
-    {
-     "titolo": "Beerbaler Halkhata",
+     "titolo_en": "Beerbaler Halkhata",
      "anno": 1926,
      "generi": [],
      "sl": 0
     },
     {
+     "titolo": "Beerbaler Halkhata",
+     "titolo_en": "Beerbaler Halkhata",
+     "anno": 1917,
+     "generi": [],
+     "sl": 0
+    },
+    {
      "titolo": "Bernard Shaw",
+     "titolo_en": "Bernard Shaw",
      "anno": null,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "Galpasangraha",
+     "titolo_en": "Galpasangraha",
      "anno": 1941,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "Nana Charchcha",
+     "titolo_en": "Nana Charchcha",
      "anno": 1932,
      "generi": [],
      "sl": 0
@@ -7892,6 +8066,7 @@
    "opere": [
     {
      "titolo": "The Diamondking of Sahara",
+     "titolo_en": "The Diamondking of Sahara",
      "anno": null,
      "generi": [],
      "sl": 0
@@ -7985,6 +8160,7 @@
    "opere": [
     {
      "titolo": "The Mystery",
+     "titolo_en": "The Mystery",
      "anno": 1907,
      "generi": [
       "giallo",
@@ -7995,6 +8171,7 @@
     },
     {
      "titolo": "The Rose Dawn",
+     "titolo_en": "The Rose Dawn",
      "anno": 1920,
      "generi": [
       "romanzo di formazione"
@@ -8003,12 +8180,14 @@
     },
     {
      "titolo": "The Pass",
+     "titolo_en": "The Pass",
      "anno": 1906,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "The Sign at Six",
+     "titolo_en": "The Sign at Six",
      "anno": null,
      "generi": [],
      "sl": 0
@@ -8330,6 +8509,7 @@
    "opere": [
     {
      "titolo": "Da linguagem e do canto",
+     "titolo_en": "Da linguagem e do canto",
      "anno": 1923,
      "generi": [],
      "sl": 0
@@ -8484,12 +8664,14 @@
    "opere": [
     {
      "titolo": "O Dr. Luís Sandoval",
+     "titolo_en": "O Dr. Luís Sandoval",
      "anno": 1892,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "O Dr. Luís Sandoval: Edição para o ELTeC",
+     "titolo_en": "O Dr. Luís Sandoval: Edição para o ELTeC",
      "anno": 2021,
      "generi": [],
      "sl": 0
@@ -8861,6 +9043,7 @@
    "opere": [
     {
      "titolo": "Punjab main Urdu",
+     "titolo_en": "Punjab main Urdu",
      "anno": null,
      "generi": [],
      "sl": 0
@@ -8945,10 +9128,10 @@
     "Ungheria"
    ],
    "lingue": [
+    "ruteno",
     "russo",
     "ucraino",
-    "ungherese",
-    "ruteno"
+    "ungherese"
    ],
    "indice_it": 0,
    "indice_en": 0,
@@ -9137,6 +9320,7 @@
    "opere": [
     {
      "titolo": "A woman's life",
+     "titolo_en": "A woman's life",
      "anno": null,
      "generi": [],
      "sl": 1
@@ -9366,6 +9550,7 @@
    "opere": [
     {
      "titolo": "The Duchess of Popocatapetl",
+     "titolo_en": "The Duchess of Popocatapetl",
      "anno": null,
      "generi": [],
      "sl": 0
@@ -9543,6 +9728,7 @@
    "opere": [
     {
      "titolo": "Luar do Sertão",
+     "titolo_en": "Luar do Sertão",
      "anno": null,
      "generi": [],
      "sl": 2
@@ -9647,6 +9833,7 @@
    "opere": [
     {
      "titolo": "Le Crime du Bouif (play, theatre)",
+     "titolo_en": "Le Crime du Bouif (play, theatre)",
      "anno": null,
      "generi": [],
      "sl": 2
@@ -9659,6 +9846,7 @@
     },
     {
      "titolo": "Le Bouif Errant",
+     "titolo_en": "Le Bouif Errant",
      "anno": 1927,
      "generi": [],
      "sl": 1
@@ -9750,6 +9938,7 @@
    "opere": [
     {
      "titolo": "Ulf",
+     "titolo_en": "Ulf",
      "anno": 1926,
      "generi": [],
      "sl": 0
@@ -10110,6 +10299,7 @@
    "opere": [
     {
      "titolo": "Angel Island: The Ellis Island of the West",
+     "titolo_en": "Angel Island: The Ellis Island of the West",
      "anno": 1917,
      "generi": [],
      "sl": 0
@@ -10388,6 +10578,7 @@
    "opere": [
     {
      "titolo": "Gadhayuddha Nataka",
+     "titolo_en": "Gadhayuddha Nataka",
      "anno": 1926,
      "generi": [],
      "sl": 0
@@ -10620,30 +10811,35 @@
    "opere": [
     {
      "titolo": "Buddle, John (DNB00)",
+     "titolo_en": "Buddle, John (DNB00)",
      "anno": null,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "Rabindranath Tagore, A Biographical Study",
+     "titolo_en": "Rabindranath Tagore, A Biographical Study",
      "anno": 1916,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "Readings in Welsh literature",
+     "titolo_en": "Readings in Welsh literature",
      "anno": 1924,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "The Fiddler of Carne: A North Sea Winter's ...",
+     "titolo_en": "The Fiddler of Carne: A North Sea Winter's ...",
      "anno": 1896,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "The Whistling Maid: A Romance",
+     "titolo_en": "The Whistling Maid: A Romance",
      "anno": 1900,
      "generi": [],
      "sl": 0
@@ -10893,7 +11089,8 @@
     "autore": "F.T."
    },
    "paesi": [
-    "Regno d'Italia"
+    "Regno d'Italia",
+    "Austria-Ungheria"
    ],
    "lingue": [
     "italiano",
@@ -12229,6 +12426,7 @@
    "opere": [
     {
      "titolo": "Yermah the Dorado",
+     "titolo_en": "Yermah the Dorado",
      "anno": null,
      "generi": [],
      "sl": 0
@@ -12565,6 +12763,7 @@
    "opere": [
     {
      "titolo": "The Green Graves of Balgowrie",
+     "titolo_en": "The Green Graves of Balgowrie",
      "anno": 1896,
      "generi": [],
      "sl": 0
@@ -12668,12 +12867,14 @@
    "opere": [
     {
      "titolo": "Rain",
+     "titolo_en": "Rain",
      "anno": null,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "Rain",
+     "titolo_en": "Rain",
      "anno": null,
      "generi": [
       "teatro drammatico"
@@ -12682,6 +12883,7 @@
     },
     {
      "titolo": "The Shanghai Gesture",
+     "titolo_en": "The Shanghai Gesture",
      "anno": null,
      "generi": [],
      "sl": 0
@@ -14019,6 +14221,7 @@
     },
     {
      "titolo": "The Five Frankfurters",
+     "titolo_en": "The Five Frankfurters",
      "anno": null,
      "generi": [],
      "sl": 0
@@ -14926,10 +15129,10 @@
    "visite_de": 0,
    "visite_fr": 0,
    "foto": {
-    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Habib_Istifan_-_Al-Alam%2C_V2%2C_P_205.jpg?width=800",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Habib_Istifan_-_Al-Alam%2C_V2%2C_P_205.jpg",
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Habib_Est%C3%A9fano_en_La_Reforma_%28Al-Islah%29_en_1932.png?width=800",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Habib_Est%C3%A9fano_en_La_Reforma_%28Al-Islah%29_en_1932.png",
     "licenza": "Public domain",
-    "autore": "Khayr al-Din al-Zirikli"
+    "autore": "La Reforma (Al-Islah)"
    },
    "paesi": [
     "Regno Arabo di Siria",
@@ -15065,6 +15268,7 @@
    "opere": [
     {
      "titolo": "A Lady of my Own",
+     "titolo_en": "A Lady of my Own",
      "anno": 1891,
      "generi": [],
      "sl": 0
@@ -15340,12 +15544,14 @@
     },
     {
      "titolo": "Wagner",
+     "titolo_en": "Wagner",
      "anno": null,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "Šimáček",
+     "titolo_en": "Šimáček",
      "anno": null,
      "generi": [],
      "sl": 1
@@ -15829,6 +16035,7 @@
    "opere": [
     {
      "titolo": "His Grace Gives Notice",
+     "titolo_en": "His Grace Gives Notice",
      "anno": 1922,
      "generi": [],
      "sl": 3
@@ -15915,42 +16122,49 @@
     },
     {
      "titolo": "!Sense feyna!",
+     "titolo_en": "!Sense feyna!",
      "anno": 1906,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "El burro dels cops",
+     "titolo_en": "El burro dels cops",
      "anno": 1907,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "La sardana dels geperuts",
+     "titolo_en": "La sardana dels geperuts",
      "anno": 1911,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "La setmana dels tres dijous",
+     "titolo_en": "La setmana dels tres dijous",
      "anno": 1907,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "Las estatuas del Tenorio",
+     "titolo_en": "Las estatuas del Tenorio",
      "anno": 1900,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "Pitarra",
+     "titolo_en": "Pitarra",
      "anno": 1905,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "Sabates noves",
+     "titolo_en": "Sabates noves",
      "anno": 1919,
      "generi": [],
      "sl": 0
@@ -17084,6 +17298,7 @@
    "opere": [
     {
      "titolo": "Kurunthogai Vilakkam",
+     "titolo_en": "Kurunthogai Vilakkam",
      "anno": 1947,
      "generi": [
       "poesia"
@@ -18381,6 +18596,7 @@
    "opere": [
     {
      "titolo": "The Last Secret",
+     "titolo_en": "The Last Secret",
      "anno": null,
      "generi": [],
      "sl": 0
@@ -20297,8 +20513,8 @@
     "autore": "Unknown authorUnknown author"
    },
    "lingue": [
-    "inglese",
-    "arabo"
+    "arabo",
+    "inglese"
    ],
    "indice_it": 0,
    "indice_en": 0,
@@ -20990,6 +21206,7 @@
    "opere": [
     {
      "titolo": "Dziennikarstwo",
+     "titolo_en": "Dziennikarstwo",
      "anno": 1899,
      "generi": [],
      "sl": 1
@@ -23021,18 +23238,21 @@
    "opere": [
     {
      "titolo": "Cavaleir and Rogues: The Adventures of Rich...",
+     "titolo_en": "Cavaleir and Rogues: The Adventures of Rich...",
      "anno": 1901,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "The Fighting Lads of Devon: or, In the Days...",
+     "titolo_en": "The Fighting Lads of Devon: or, In the Days...",
      "anno": 1900,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "The River of Darkness; or, Under Africa",
+     "titolo_en": "The River of Darkness; or, Under Africa",
      "anno": null,
      "generi": [],
      "sl": 0
@@ -23314,6 +23534,7 @@
    "opere": [
     {
      "titolo": "Mukamal Sharah Kalam Ghalib",
+     "titolo_en": "Mukamal Sharah Kalam Ghalib",
      "anno": null,
      "generi": [
       "critica letteraria"
@@ -23322,6 +23543,7 @@
     },
     {
      "titolo": "Tazkiratul Khawateen",
+     "titolo_en": "Tazkiratul Khawateen",
      "anno": null,
      "generi": [
       "poesia"
@@ -23657,6 +23879,7 @@
    "opere": [
     {
      "titolo": "Laster",
+     "titolo_en": "Laster",
      "anno": 1904,
      "generi": [],
      "sl": 1
@@ -25461,6 +25684,7 @@
    "opere": [
     {
      "titolo": "Upstairs and Down",
+     "titolo_en": "Upstairs and Down",
      "anno": null,
      "generi": [],
      "sl": 1
@@ -26300,6 +26524,7 @@
    "opere": [
     {
      "titolo": "Hawk's Nest",
+     "titolo_en": "Hawk's Nest",
      "anno": null,
      "generi": [],
      "sl": 1
@@ -30807,9 +31032,9 @@
     "Impero ottomano"
    ],
    "lingue": [
-    "arabo",
     "francese",
     "inglese",
+    "arabo",
     "turco ottomano"
    ],
    "indice_it": 0,
@@ -35137,6 +35362,7 @@
    "opere": [
     {
      "titolo": "Idylls of Rosehill",
+     "titolo_en": "Idylls of Rosehill",
      "anno": 1901,
      "generi": [],
      "sl": 0

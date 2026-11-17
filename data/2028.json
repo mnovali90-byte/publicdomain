@@ -38,6 +38,7 @@
    "opere": [
     {
      "titolo": "Desolación",
+     "titolo_en": "Desolación",
      "anno": 1922,
      "generi": [
       "poesia"
@@ -46,12 +47,14 @@
     },
     {
      "titolo": "Caperucita Roja",
+     "titolo_en": "Caperucita Roja",
      "anno": null,
      "generi": [],
      "sl": 2
     },
     {
      "titolo": "Lagar",
+     "titolo_en": "Lagar",
      "anno": 1954,
      "generi": [
       "poesia"
@@ -60,6 +63,7 @@
     },
     {
      "titolo": "Sonetos de la muerte",
+     "titolo_en": "Sonetos de la muerte",
      "anno": 2018,
      "generi": [
       "poesia"
@@ -141,6 +145,13 @@
      "dal_2000": 2,
      "metodo": "viaf",
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": true,
+     "edizioni": 14,
+     "dal_2000": 5,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -201,6 +212,7 @@
    "opere": [
     {
      "titolo": "Zorba il greco",
+     "titolo_en": "Zorba the Greek",
      "anno": 1946,
      "generi": [
       "existentialist novel"
@@ -209,6 +221,7 @@
     },
     {
      "titolo": "L'ultima tentazione",
+     "titolo_en": "The Last Temptation of Christ",
      "anno": 1954,
      "generi": [
       "fiction storica",
@@ -218,24 +231,28 @@
     },
     {
      "titolo": "Captain Michalis",
+     "titolo_en": "Captain Michalis",
      "anno": 1953,
      "generi": [],
      "sl": 11
     },
     {
      "titolo": "Cristo di nuovo in croce",
+     "titolo_en": "Christ Recrucified",
      "anno": 1950,
      "generi": [],
      "sl": 10
     },
     {
      "titolo": "The Odyssey: A Modern Sequel",
+     "titolo_en": "The Odyssey: A Modern Sequel",
      "anno": 1938,
      "generi": [],
      "sl": 5
     },
     {
      "titolo": "Report to Greco",
+     "titolo_en": "Report to Greco",
      "anno": 1961,
      "generi": [
       "autobiografia"
@@ -244,6 +261,7 @@
     },
     {
      "titolo": "The Saviors of God",
+     "titolo_en": "The Saviors of God",
      "anno": 1945,
      "generi": [
       "saggio"
@@ -252,6 +270,7 @@
     },
     {
      "titolo": "God's pauper: St Francis of Assisi",
+     "titolo_en": "God's pauper: St Francis of Assisi",
      "anno": 1954,
      "generi": [],
      "sl": 2
@@ -270,6 +289,12 @@
    "visite_es": 17684,
    "visite_de": 23458,
    "visite_fr": 18782,
+   "foto": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nikos_Kazantzakis_%281956%29.jpg?width=800",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Nikos_Kazantzakis_%281956%29.jpg",
+    "licenza": "CC BY 4.0",
+    "autore": "Chaillet, Henri (L' Ajoupa) Κάννες, rue de Roche"
+   },
    "paesi": [
     "Grecia"
    ],
@@ -311,6 +336,13 @@
      "dal_2000": 14,
      "metodo": "viaf",
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": true,
+     "edizioni": 126,
+     "dal_2000": 36,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -354,6 +386,7 @@
    "opere": [
     {
      "titolo": "Pasteur",
+     "titolo_en": "Pasteur",
      "anno": 1935,
      "generi": [
       "film drammatico"
@@ -362,18 +395,21 @@
     },
     {
      "titolo": "Deburau",
+     "titolo_en": "Deburau",
      "anno": null,
      "generi": [],
      "sl": 4
     },
     {
      "titolo": "Le Scandale de Monte-Carlo",
+     "titolo_en": "Le Scandale de Monte-Carlo",
      "anno": null,
      "generi": [],
      "sl": 2
     },
     {
      "titolo": "N'écoutez pas, mesdames !",
+     "titolo_en": "N'écoutez pas, mesdames !",
      "anno": null,
      "generi": [],
      "sl": 2
@@ -392,6 +428,7 @@
     },
     {
      "titolo": "Désiré",
+     "titolo_en": "Désiré",
      "anno": null,
      "generi": [],
      "sl": 1
@@ -453,6 +490,13 @@
      "dal_2000": 6,
      "metodo": "nome",
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": true,
+     "edizioni": 724,
+     "dal_2000": 148,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -510,6 +554,7 @@
    "opere": [
     {
      "titolo": "Il Gattopardo",
+     "titolo_en": "The Leopard",
      "anno": 1958,
      "generi": [
       "finzione letteraria"
@@ -518,6 +563,7 @@
     },
     {
      "titolo": "La sirena",
+     "titolo_en": "The Professor and the Siren",
      "anno": 1961,
      "generi": [],
      "sl": 5
@@ -542,6 +588,7 @@
     },
     {
      "titolo": "The Leopard",
+     "titolo_en": "The Leopard",
      "anno": null,
      "generi": [],
      "sl": 0
@@ -614,6 +661,13 @@
      "dal_2000": 53,
      "metodo": "viaf",
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": true,
+     "edizioni": 57,
+     "dal_2000": 28,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -664,6 +718,7 @@
    "opere": [
     {
      "titolo": "Berlin Alexanderplatz",
+     "titolo_en": "Berlin Alexanderplatz",
      "anno": 1929,
      "generi": [
       "Neue Sachlichkeit (Literatur)"
@@ -672,6 +727,7 @@
     },
     {
      "titolo": "Berge Meere und Giganten",
+     "titolo_en": "Berge Meere und Giganten",
      "anno": 1924,
      "generi": [
       "fantascienza"
@@ -680,12 +736,14 @@
     },
     {
      "titolo": "Tales of a Long Night",
+     "titolo_en": "Tales of a Long Night",
      "anno": 1956,
      "generi": [],
      "sl": 4
     },
     {
      "titolo": "November 1918: A German Revolution",
+     "titolo_en": "November 1918: A German Revolution",
      "anno": 1948,
      "generi": [
       "fiction storica"
@@ -694,6 +752,7 @@
     },
     {
      "titolo": "The Three Leaps of Wang Lun",
+     "titolo_en": "The Three Leaps of Wang Lun",
      "anno": 1916,
      "generi": [
       "fiction storica"
@@ -702,6 +761,7 @@
     },
     {
      "titolo": "Wallenstein",
+     "titolo_en": "Wallenstein",
      "anno": 1920,
      "generi": [
       "fiction storica"
@@ -710,12 +770,14 @@
     },
     {
      "titolo": "Wadzeks Kampf mit der Dampfturbine",
+     "titolo_en": "Wadzeks Kampf mit der Dampfturbine",
      "anno": 1918,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "L'assassinio di un ranuncolo",
+     "titolo_en": "The Murder of a Buttercup",
      "anno": 1913,
      "generi": [],
      "sl": 4
@@ -776,6 +838,13 @@
      "dal_2000": 13,
      "metodo": "viaf",
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": true,
+     "edizioni": 55,
+     "dal_2000": 20,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -820,6 +889,7 @@
    "opere": [
     {
      "titolo": "La piccola casa nella prateria",
+     "titolo_en": "Little House on the Prairie",
      "anno": 1935,
      "generi": [
       "letteratura per ragazzi",
@@ -831,6 +901,7 @@
     },
     {
      "titolo": "La piccola casa nella prateria",
+     "titolo_en": "Little House on the Prairie",
      "anno": 1935,
      "generi": [
       "letteratura per ragazzi",
@@ -841,6 +912,7 @@
     },
     {
      "titolo": "Little House in the Big Woods",
+     "titolo_en": "Little House in the Big Woods",
      "anno": 1932,
      "generi": [
       "narrativa per ragazzi",
@@ -851,6 +923,7 @@
     },
     {
      "titolo": "On the Banks of Plum Creek",
+     "titolo_en": "On the Banks of Plum Creek",
      "anno": 1937,
      "generi": [
       "narrativa western",
@@ -861,6 +934,7 @@
     },
     {
      "titolo": "Farmer Boy",
+     "titolo_en": "Farmer Boy",
      "anno": 1933,
      "generi": [
       "fiction storica",
@@ -870,6 +944,7 @@
     },
     {
      "titolo": "By the Shores of Silver Lake",
+     "titolo_en": "By the Shores of Silver Lake",
      "anno": 1939,
      "generi": [
       "narrativa western",
@@ -880,6 +955,7 @@
     },
     {
      "titolo": "Little Town on the Prairie",
+     "titolo_en": "Little Town on the Prairie",
      "anno": 1941,
      "generi": [
       "romanzo per ragazzi"
@@ -888,6 +964,7 @@
     },
     {
      "titolo": "The First Four Years",
+     "titolo_en": "The First Four Years",
      "anno": 1971,
      "generi": [],
      "sl": 6
@@ -946,6 +1023,13 @@
      "dal_2000": 280,
      "metodo": "nome",
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": true,
+     "edizioni": 88,
+     "dal_2000": 46,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -1040,6 +1124,7 @@
    "opere": [
     {
      "titolo": "Bellona Club",
+     "titolo_en": "The Unpleasantness at the Bellona Club",
      "anno": 1928,
      "generi": [
       "letteratura gialla",
@@ -1049,6 +1134,7 @@
     },
     {
      "titolo": "Gli occhi verdi del gatto",
+     "titolo_en": "Clouds of Witness",
      "anno": 1926,
      "generi": [
       "letteratura del mistero",
@@ -1059,6 +1145,7 @@
     },
     {
      "titolo": "Peter Wimsey e il cadavere sconosciuto",
+     "titolo_en": "Whose Body?",
      "anno": 1923,
      "generi": [
       "letteratura gialla",
@@ -1068,6 +1155,7 @@
     },
     {
      "titolo": "Veleno mortale",
+     "titolo_en": "Strong Poison",
      "anno": 1930,
      "generi": [
       "letteratura gialla",
@@ -1077,6 +1165,7 @@
     },
     {
      "titolo": "Il segreto delle campane",
+     "titolo_en": "The Nine Tailors",
      "anno": 1934,
      "generi": [
       "letteratura del mistero",
@@ -1087,6 +1176,7 @@
     },
     {
      "titolo": "Per morte innaturale",
+     "titolo_en": "Unnatural Death",
      "anno": 1927,
      "generi": [
       "letteratura del mistero",
@@ -1096,6 +1186,7 @@
     },
     {
      "titolo": "Cinque piste false",
+     "titolo_en": "Five Red Herrings",
      "anno": 1931,
      "generi": [
       "letteratura gialla",
@@ -1105,6 +1196,7 @@
     },
     {
      "titolo": "Gaudy Night",
+     "titolo_en": "Gaudy Night",
      "anno": 1935,
      "generi": [
       "letteratura gialla",
@@ -1170,6 +1262,13 @@
      "dal_2000": 12,
      "metodo": "nome",
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": true,
+     "edizioni": 46,
+     "dal_2000": 10,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -1231,6 +1330,7 @@
    "opere": [
     {
      "titolo": "Kaputt",
+     "titolo_en": "Kaputt",
      "anno": 1944,
      "generi": [
       "autobiographical fiction"
@@ -1239,6 +1339,7 @@
     },
     {
      "titolo": "La pelle",
+     "titolo_en": "The skin",
      "anno": 1949,
      "generi": [
       "romanzo autobiografico"
@@ -1247,6 +1348,7 @@
     },
     {
      "titolo": "Tecnica del colpo di Stato",
+     "titolo_en": "Coup d'État: The Technique of Revolution",
      "anno": 1931,
      "generi": [
       "saggio"
@@ -1255,6 +1357,7 @@
     },
     {
      "titolo": "Maledetti toscani",
+     "titolo_en": "Those Cursed Tuscans",
      "anno": 1956,
      "generi": [
       "saggio"
@@ -1263,6 +1366,7 @@
     },
     {
      "titolo": "Il ballo al Cremlino e altri inediti di romanzo",
+     "titolo_en": "The Kremlin Ball",
      "anno": 1971,
      "generi": [],
      "sl": 2
@@ -1343,6 +1447,13 @@
      "dal_2000": 76,
      "metodo": "viaf",
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": true,
+     "edizioni": 108,
+     "dal_2000": 37,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -1405,6 +1516,7 @@
    "opere": [
     {
      "titolo": "Rudá záře nad Kladnem",
+     "titolo_en": "Rudá záře nad Kladnem",
      "anno": null,
      "generi": [],
      "sl": 2
@@ -1501,6 +1613,13 @@
      "metodo": null,
      "fonte": "SBN",
      "sospetto": true
+    },
+    "bnf_fr": {
+     "trovato": true,
+     "edizioni": 6,
+     "dal_2000": 0,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -1547,6 +1666,7 @@
    "opere": [
     {
      "titolo": "Sotto il vulcano",
+     "titolo_en": "Under the Volcano",
      "anno": 1947,
      "generi": [
       "romanzo autobiografico"
@@ -1555,24 +1675,28 @@
     },
     {
      "titolo": "October Ferry to Gabriola",
+     "titolo_en": "October Ferry to Gabriola",
      "anno": 1970,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "Ultramarine",
+     "titolo_en": "Ultramarine",
      "anno": null,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "Dark as the Grave Wherein My Friend is Laid",
+     "titolo_en": "Dark as the Grave Wherein My Friend is Laid",
      "anno": 1968,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "Hear Us O Lord from Heaven Thy Dwelling Place",
+     "titolo_en": "Hear Us O Lord from Heaven Thy Dwelling Place",
      "anno": null,
      "generi": [],
      "sl": 0
@@ -1627,6 +1751,13 @@
      "dal_2000": 7,
      "metodo": "nome",
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": true,
+     "edizioni": 57,
+     "dal_2000": 22,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -1673,6 +1804,7 @@
    "opere": [
     {
      "titolo": "Ernesto",
+     "titolo_en": "Ernesto",
      "anno": 1975,
      "generi": [
       "temi LGBT nella letteratura"
@@ -1681,6 +1813,7 @@
     },
     {
      "titolo": "Canzoniere",
+     "titolo_en": "Canzoniere",
      "anno": 1921,
      "generi": [],
      "sl": 2
@@ -1760,6 +1893,13 @@
      "dal_2000": 135,
      "metodo": "viaf",
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": true,
+     "edizioni": 21,
+     "dal_2000": 4,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -1804,12 +1944,14 @@
    "opere": [
     {
      "titolo": "The Medicine Ship",
+     "titolo_en": "The Medicine Ship",
      "anno": 1915,
      "generi": [],
      "sl": 2
     },
     {
      "titolo": "The Truth of the Oliver Cromwell",
+     "titolo_en": "The Truth of the Oliver Cromwell",
      "anno": 1905,
      "generi": [],
      "sl": 1
@@ -1863,6 +2005,13 @@
      "metodo": null,
      "fonte": "SBN",
      "sospetto": true
+    },
+    "bnf_fr": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 0,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -1955,6 +2104,7 @@
    "opere": [
     {
      "titolo": "Fermina Márquez",
+     "titolo_en": "Fermina Márquez",
      "anno": 1911,
      "generi": [],
      "sl": 3
@@ -1973,6 +2123,7 @@
     },
     {
      "titolo": "Amants, heureux amants",
+     "titolo_en": "Amants, heureux amants",
      "anno": null,
      "generi": [],
      "sl": 0
@@ -2034,6 +2185,13 @@
      "dal_2000": 3,
      "metodo": "nome",
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": true,
+     "edizioni": 340,
+     "dal_2000": 27,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -2158,6 +2316,7 @@
    "opere": [
     {
      "titolo": "The King of Elfland's Daughter",
+     "titolo_en": "The King of Elfland's Daughter",
      "anno": 1924,
      "generi": [
       "fantasy"
@@ -2166,6 +2325,7 @@
     },
     {
      "titolo": "The Gods of Pegāna",
+     "titolo_en": "The Gods of Pegāna",
      "anno": 1905,
      "generi": [
       "fantasy"
@@ -2174,18 +2334,21 @@
     },
     {
      "titolo": "Joseph Jorkens",
+     "titolo_en": "Joseph Jorkens",
      "anno": null,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "The Gods of the Mountain",
+     "titolo_en": "The Gods of the Mountain",
      "anno": null,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "A Dreamer's Tales",
+     "titolo_en": "A Dreamer's Tales",
      "anno": 1910,
      "generi": [
       "fantasy"
@@ -2194,6 +2357,7 @@
     },
     {
      "titolo": "Fifty-One Tales",
+     "titolo_en": "Fifty-One Tales",
      "anno": 1915,
      "generi": [
       "fantasy"
@@ -2202,12 +2366,14 @@
     },
     {
      "titolo": "The Fortress Unvanquishable, Save for Sacnoth",
+     "titolo_en": "The Fortress Unvanquishable, Save for Sacnoth",
      "anno": null,
      "generi": [],
      "sl": 4
     },
     {
      "titolo": "The Book of Wonder",
+     "titolo_en": "The Book of Wonder",
      "anno": 1912,
      "generi": [
       "fantasy"
@@ -2271,6 +2437,13 @@
      "dal_2000": 0,
      "metodo": "nome",
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": true,
+     "edizioni": 28,
+     "dal_2000": 13,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -2346,6 +2519,7 @@
    "opere": [
     {
      "titolo": "The Palm Tree",
+     "titolo_en": "The Palm Tree",
      "anno": null,
      "generi": [
       "pittura floreale"
@@ -2404,6 +2578,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 1,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -2533,6 +2714,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -2580,6 +2768,7 @@
    "opere": [
     {
      "titolo": "The master of the Day of Judgment",
+     "titolo_en": "The master of the Day of Judgment",
      "anno": 1923,
      "generi": [
       "Weird",
@@ -2589,6 +2778,7 @@
     },
     {
      "titolo": "Di notte sotto il ponte di pietra",
+     "titolo_en": "By night under the stone bridge",
      "anno": 1953,
      "generi": [
       "fiction storica"
@@ -2597,6 +2787,7 @@
     },
     {
      "titolo": "From Nine to Nine",
+     "titolo_en": "From Nine to Nine",
      "anno": 1918,
      "generi": [],
      "sl": 6
@@ -2609,6 +2800,7 @@
     },
     {
      "titolo": "Il cavaliere svedese",
+     "titolo_en": "The Swedish cavalier",
      "anno": 1936,
      "generi": [
       "fiction storica"
@@ -2617,12 +2809,14 @@
     },
     {
      "titolo": "Little apple",
+     "titolo_en": "Little apple",
      "anno": 1928,
      "generi": [],
      "sl": 2
     },
     {
      "titolo": "Marquis of Bolibar",
+     "titolo_en": "Marquis of Bolibar",
      "anno": 1920,
      "generi": [
       "fantasy",
@@ -2692,6 +2886,13 @@
      "dal_2000": 5,
      "metodo": "viaf",
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": true,
+     "edizioni": 52,
+     "dal_2000": 14,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -2763,18 +2964,21 @@
    "opere": [
     {
      "titolo": "Dio della vendetta",
+     "titolo_en": "God of Vengeance",
      "anno": 1906,
      "generi": [],
      "sl": 3
     },
     {
      "titolo": "The God of Vengeance",
+     "titolo_en": "The God of Vengeance",
      "anno": null,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "M'leḳt nishṭ ḳeyn honiḳ",
+     "titolo_en": "M'leḳt nishṭ ḳeyn honiḳ",
      "anno": null,
      "generi": [
       "commedia",
@@ -2790,12 +2994,14 @@
     },
     {
      "titolo": "The Nazarene",
+     "titolo_en": "The Nazarene",
      "anno": null,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "Uncle Moses",
+     "titolo_en": "Uncle Moses",
      "anno": 1918,
      "generi": [],
      "sl": 0
@@ -2857,6 +3063,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": true,
+     "edizioni": 27,
+     "dal_2000": 8,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -2903,12 +3116,14 @@
    "opere": [
     {
      "titolo": "Blasting and Bombardiering",
+     "titolo_en": "Blasting and Bombardiering",
      "anno": 1937,
      "generi": [],
      "sl": 2
     },
     {
      "titolo": "Tarr",
+     "titolo_en": "Tarr",
      "anno": 1918,
      "generi": [
       "modernismo"
@@ -2917,36 +3132,42 @@
     },
     {
      "titolo": "The Apes of God",
+     "titolo_en": "The Apes of God",
      "anno": 1930,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "Enemy of the Stars",
+     "titolo_en": "Enemy of the Stars",
      "anno": 1914,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "Malign Fiesta",
+     "titolo_en": "Malign Fiesta",
      "anno": null,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "Monstre Gai",
+     "titolo_en": "Monstre Gai",
      "anno": null,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "Self Condemned",
+     "titolo_en": "Self Condemned",
      "anno": 1954,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "Tarr",
+     "titolo_en": "Tarr",
      "anno": null,
      "generi": [],
      "sl": 0
@@ -3004,6 +3225,13 @@
      "dal_2000": 1,
      "metodo": "viaf",
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": true,
+     "edizioni": 12,
+     "dal_2000": 3,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -3127,6 +3355,7 @@
    "opere": [
     {
      "titolo": "Grička vještica",
+     "titolo_en": "Grička vještica",
      "anno": 1912,
      "generi": [
       "fiction storica"
@@ -3248,18 +3477,21 @@
    "opere": [
     {
      "titolo": "Thunder on the Left",
+     "titolo_en": "Thunder on the Left",
      "anno": 1925,
      "generi": [],
      "sl": 3
     },
     {
      "titolo": "Parnassus on Wheels",
+     "titolo_en": "Parnassus on Wheels",
      "anno": 1917,
      "generi": [],
      "sl": 4
     },
     {
      "titolo": "The Haunted Bookshop",
+     "titolo_en": "The Haunted Bookshop",
      "anno": 1919,
      "generi": [
       "thriller"
@@ -3268,12 +3500,14 @@
     },
     {
      "titolo": "Travels in Philadelphia",
+     "titolo_en": "Travels in Philadelphia",
      "anno": 1920,
      "generi": [],
      "sl": 2
     },
     {
      "titolo": "I Know a Secret",
+     "titolo_en": "I Know a Secret",
      "anno": 1927,
      "generi": [
       "narrativa per ragazzi"
@@ -3282,18 +3516,21 @@
     },
     {
      "titolo": "I Know a Secret",
+     "titolo_en": "I Know a Secret",
      "anno": 1927,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "Kitty Foyle",
+     "titolo_en": "Kitty Foyle",
      "anno": 1939,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "Parnassus on Wheels",
+     "titolo_en": "Parnassus on Wheels",
      "anno": 1917,
      "generi": [],
      "sl": 1
@@ -3350,6 +3587,13 @@
      "dal_2000": 12,
      "metodo": "nome",
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": true,
+     "edizioni": 8,
+     "dal_2000": 4,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -3401,42 +3645,49 @@
    "opere": [
     {
      "titolo": "Abdullah Al-Bustani",
+     "titolo_en": "Abdullah Al-Bustani",
      "anno": null,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "Al-Anqa",
+     "titolo_en": "Al-Anqa",
      "anno": null,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "Complaint",
+     "titolo_en": "Complaint",
      "anno": null,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "El-Ouyoun El-Soud",
+     "titolo_en": "El-Ouyoun El-Soud",
      "anno": null,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "Imtinan",
+     "titolo_en": "Imtinan",
      "anno": null,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "Life philosophy",
+     "titolo_en": "Life philosophy",
      "anno": null,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "al-Karim",
+     "titolo_en": "al-Karim",
      "anno": null,
      "generi": [],
      "sl": 1
@@ -3488,6 +3739,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -3531,6 +3789,7 @@
    "opere": [
     {
      "titolo": "Piano della Contea di Londra",
+     "titolo_en": "County of London Plan",
      "anno": 1943,
      "generi": [],
      "sl": 2
@@ -3582,6 +3841,13 @@
      "dal_2000": 1,
      "metodo": "nome",
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": true,
+     "edizioni": 2,
+     "dal_2000": 0,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -3851,18 +4117,21 @@
    "opere": [
     {
      "titolo": "Pilgrimage",
+     "titolo_en": "Pilgrimage",
      "anno": null,
      "generi": [],
      "sl": 3
     },
     {
      "titolo": "Pointed Roofs",
+     "titolo_en": "Pointed Roofs",
      "anno": null,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "The Long Day",
+     "titolo_en": "The Long Day",
      "anno": null,
      "generi": [],
      "sl": 1
@@ -3910,6 +4179,13 @@
      "dal_2000": 0,
      "metodo": "nome",
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": true,
+     "edizioni": 6,
+     "dal_2000": 1,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -4130,6 +4406,7 @@
    "opere": [
     {
      "titolo": "The twenty-sixth year",
+     "titolo_en": "The twenty-sixth year",
      "anno": 1957,
      "generi": [],
      "sl": 0
@@ -4184,6 +4461,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": true,
+     "edizioni": 2,
+     "dal_2000": 0,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -4262,12 +4546,14 @@
    "opere": [
     {
      "titolo": "A History of Ancient Greek Literature",
+     "titolo_en": "A History of Ancient Greek Literature",
      "anno": 1901,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "Euripides and His Age",
+     "titolo_en": "Euripides and His Age",
      "anno": 1913,
      "generi": [
       "non-fiction"
@@ -4276,18 +4562,21 @@
     },
     {
      "titolo": "The League of Nations and the democratic idea",
+     "titolo_en": "The League of Nations and the democratic idea",
      "anno": 1918,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "Gobi or Shamo",
+     "titolo_en": "Gobi or Shamo",
      "anno": null,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "Gobi or Shamo: A Story of Three Songs",
+     "titolo_en": "Gobi or Shamo: A Story of Three Songs",
      "anno": 1889,
      "generi": [],
      "sl": 0
@@ -4343,6 +4632,13 @@
      "dal_2000": 0,
      "metodo": "viaf",
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": true,
+     "edizioni": 10,
+     "dal_2000": 0,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -4387,12 +4683,14 @@
    "opere": [
     {
      "titolo": "Capitaine Conan",
+     "titolo_en": "Capitaine Conan",
      "anno": 1934,
      "generi": [],
      "sl": 5
     },
     {
      "titolo": "Troubled Waters",
+     "titolo_en": "Troubled Waters",
      "anno": null,
      "generi": [],
      "sl": 1
@@ -4407,12 +4705,14 @@
     },
     {
      "titolo": "Capitano Conan",
+     "titolo_en": "Captain Conan",
      "anno": 1934,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "Capitano Conan",
+     "titolo_en": "Capitano Conan",
      "anno": 1934,
      "generi": [],
      "sl": 0
@@ -4467,6 +4767,13 @@
      "dal_2000": 1,
      "metodo": "nome",
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": true,
+     "edizioni": 222,
+     "dal_2000": 23,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -4511,6 +4818,7 @@
    "opere": [
     {
      "titolo": "The Flaming Terrapin",
+     "titolo_en": "The Flaming Terrapin",
      "anno": 2021,
      "generi": [
       "fiction"
@@ -4567,6 +4875,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": true,
+     "edizioni": 2,
+     "dal_2000": 0,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -4612,6 +4927,7 @@
    "opere": [
     {
      "titolo": "Al cavallino bianco",
+     "titolo_en": "The White Horse Inn",
      "anno": null,
      "generi": [],
      "sl": 12
@@ -4665,6 +4981,13 @@
      "dal_2000": 22,
      "metodo": "viaf",
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": true,
+     "edizioni": 102,
+     "dal_2000": 13,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -4709,6 +5032,7 @@
    "opere": [
     {
      "titolo": "Lyrics and Idylls",
+     "titolo_en": "Lyrics and Idylls",
      "anno": null,
      "generi": [],
      "sl": 1
@@ -4762,6 +5086,13 @@
      "dal_2000": 4,
      "metodo": "viaf",
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": true,
+     "edizioni": 3,
+     "dal_2000": 3,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -4877,6 +5208,7 @@
    "opere": [
     {
      "titolo": "The Forging of a Rebel",
+     "titolo_en": "The Forging of a Rebel",
      "anno": null,
      "generi": [],
      "sl": 5
@@ -4922,6 +5254,13 @@
      "dal_2000": 0,
      "metodo": "nome",
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": true,
+     "edizioni": 3,
+     "dal_2000": 1,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -4977,6 +5316,7 @@
    "opere": [
     {
      "titolo": "As I Was Going Down Sackville Street",
+     "titolo_en": "As I Was Going Down Sackville Street",
      "anno": null,
      "generi": [],
      "sl": 1
@@ -5029,6 +5369,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -5161,6 +5508,7 @@
    "opere": [
     {
      "titolo": "Last night of love, first night of war",
+     "titolo_en": "Last night of love, first night of war",
      "anno": 1930,
      "generi": [],
      "sl": 1
@@ -5212,6 +5560,13 @@
      "dal_2000": 1,
      "metodo": "nome",
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": true,
+     "edizioni": 7,
+     "dal_2000": 2,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -5256,18 +5611,21 @@
    "opere": [
     {
      "titolo": "Amurg violet",
+     "titolo_en": "Amurg violet",
      "anno": 1904,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "Lacustră",
+     "titolo_en": "Lacustră",
      "anno": null,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "Plumb",
+     "titolo_en": "Plumb",
      "anno": null,
      "generi": [],
      "sl": 1
@@ -5319,6 +5677,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": true,
+     "edizioni": 4,
+     "dal_2000": 1,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -5435,6 +5800,13 @@
      "dal_2000": 5,
      "metodo": "viaf",
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": true,
+     "edizioni": 5,
+     "dal_2000": 0,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -5523,18 +5895,21 @@
    "opere": [
     {
      "titolo": "Menino de engenho",
+     "titolo_en": "Menino de engenho",
      "anno": 1932,
      "generi": [],
      "sl": 4
     },
     {
      "titolo": "Brandão entre o Mar e o Amor",
+     "titolo_en": "Brandão entre o Mar e o Amor",
      "anno": 1942,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "Pureza",
+     "titolo_en": "Pureza",
      "anno": null,
      "generi": [],
      "sl": 1
@@ -5586,6 +5961,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": true,
+     "edizioni": 3,
+     "dal_2000": 2,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -5626,6 +6008,7 @@
    "opere": [
     {
      "titolo": "Passaggio a Nord-Ovest",
+     "titolo_en": "Northwest Passage",
      "anno": 1937,
      "generi": [
       "fiction storica"
@@ -5634,12 +6017,14 @@
     },
     {
      "titolo": "Lydia Bailey",
+     "titolo_en": "Lydia Bailey",
      "anno": 1947,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "March to Quebec",
+     "titolo_en": "March to Quebec",
      "anno": null,
      "generi": [
       "fiction storica"
@@ -5648,12 +6033,14 @@
     },
     {
      "titolo": "Oliver Wiswell",
+     "titolo_en": "Oliver Wiswell",
      "anno": null,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "The Battle of Cowpens",
+     "titolo_en": "The Battle of Cowpens",
      "anno": null,
      "generi": [
       "saggio"
@@ -5662,6 +6049,7 @@
     },
     {
      "titolo": "Boon Island",
+     "titolo_en": "Boon Island",
      "anno": null,
      "generi": [],
      "sl": 0
@@ -5674,6 +6062,7 @@
     },
     {
      "titolo": "Captain Caution",
+     "titolo_en": "Captain Caution",
      "anno": null,
      "generi": [],
      "sl": 0
@@ -5730,6 +6119,13 @@
      "dal_2000": 9,
      "metodo": "nome",
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": true,
+     "edizioni": 12,
+     "dal_2000": 1,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -5770,12 +6166,14 @@
    "opere": [
     {
      "titolo": "A Brand New World",
+     "titolo_en": "A Brand New World",
      "anno": null,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "Around the Universe",
+     "titolo_en": "Around the Universe",
      "anno": 1927,
      "generi": [
       "fantascienza"
@@ -5784,6 +6182,7 @@
     },
     {
      "titolo": "Around the Universe",
+     "titolo_en": "Around the Universe",
      "anno": 1923,
      "generi": [
       "fantascienza"
@@ -5792,30 +6191,35 @@
     },
     {
      "titolo": "Beyond the Stars",
+     "titolo_en": "Beyond the Stars",
      "anno": null,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "Brigands of the Moon",
+     "titolo_en": "Brigands of the Moon",
      "anno": null,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "Explorers Into Infinity",
+     "titolo_en": "Explorers Into Infinity",
      "anno": null,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "Flood",
+     "titolo_en": "Flood",
      "anno": null,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "Gods of Space",
+     "titolo_en": "Gods of Space",
      "anno": 1942,
      "generi": [],
      "sl": 0
@@ -5871,6 +6275,13 @@
      "dal_2000": 0,
      "metodo": "nome",
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": true,
+     "edizioni": 4,
+     "dal_2000": 0,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -5919,12 +6330,14 @@
    "opere": [
     {
      "titolo": "Janam Sakhi",
+     "titolo_en": "Janamsakhis",
      "anno": null,
      "generi": [],
      "sl": 8
     },
     {
      "titolo": "Mere Sainya Jio",
+     "titolo_en": "Mere Sainya Jio",
      "anno": null,
      "generi": [
       "poesia",
@@ -5934,36 +6347,42 @@
     },
     {
      "titolo": "Kambadi Kalai",
+     "titolo_en": "Kambadi Kalai",
      "anno": null,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "Satwant Kaur",
+     "titolo_en": "Satwant Kaur",
      "anno": 1900,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "Kambadi Kalai",
+     "titolo_en": "Kambadi Kalai",
      "anno": 1963,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "Nitnem Steek",
+     "titolo_en": "Nitnem Steek",
      "anno": 2012,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "Nitnem Steek",
+     "titolo_en": "Nitnem Steek",
      "anno": null,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "Pyaar Atharu",
+     "titolo_en": "Pyaar Atharu",
      "anno": null,
      "generi": [],
      "sl": 0
@@ -6021,6 +6440,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 0,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -6588,6 +7014,13 @@
      "dal_2000": 2,
      "metodo": "nome",
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -6865,6 +7298,7 @@
    "opere": [
     {
      "titolo": "The Authentic Arabian Horse",
+     "titolo_en": "The Authentic Arabian Horse",
      "anno": 1979,
      "generi": [],
      "sl": 0
@@ -7028,6 +7462,7 @@
    "opere": [
     {
      "titolo": "Don Juan",
+     "titolo_en": "Don Juan",
      "anno": 1913,
      "generi": [
       "film muto"
@@ -7036,6 +7471,7 @@
     },
     {
      "titolo": "Een danstragedie",
+     "titolo_en": "Een danstragedie",
      "anno": 1916,
      "generi": [
       "film muto"
@@ -7044,6 +7480,7 @@
     },
     {
      "titolo": "Oorlog en Vrede - 1918",
+     "titolo_en": "Oorlog en Vrede - 1918",
      "anno": 1918,
      "generi": [
       "film muto"
@@ -7052,6 +7489,7 @@
     },
     {
      "titolo": "Roze Kate",
+     "titolo_en": "Roze Kate",
      "anno": 1912,
      "generi": [
       "film drammatico",
@@ -7061,6 +7499,7 @@
     },
     {
      "titolo": "Silvia Silombra",
+     "titolo_en": "Silvia Silombra",
      "anno": 1913,
      "generi": [
       "film muto"
@@ -7069,6 +7508,7 @@
     },
     {
      "titolo": "De bannelingen",
+     "titolo_en": "De bannelingen",
      "anno": 1911,
      "generi": [
       "film muto"
@@ -7077,6 +7517,7 @@
     },
     {
      "titolo": "Het geheim van het slot arco",
+     "titolo_en": "Het geheim van het slot arco",
      "anno": 1915,
      "generi": [
       "film muto"
@@ -7085,6 +7526,7 @@
     },
     {
      "titolo": "Ontrouw",
+     "titolo_en": "Ontrouw",
      "anno": 1911,
      "generi": [
       "film muto"
@@ -7266,6 +7708,7 @@
    "opere": [
     {
      "titolo": "Les deux Monsieur de Madame",
+     "titolo_en": "Les deux Monsieur de Madame",
      "anno": 1921,
      "generi": [
       "comedy"
@@ -7328,6 +7771,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": true,
+     "edizioni": 50,
+     "dal_2000": 4,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -7371,18 +7821,21 @@
    "opere": [
     {
      "titolo": "I Am a Camera",
+     "titolo_en": "I Am a Camera",
      "anno": null,
      "generi": [],
      "sl": 6
     },
     {
      "titolo": "I Remember Mama",
+     "titolo_en": "I Remember Mama",
      "anno": null,
      "generi": [],
      "sl": 2
     },
     {
      "titolo": "The Voice of the Turtle",
+     "titolo_en": "The Voice of the Turtle",
      "anno": null,
      "generi": [
       "comedy"
@@ -7391,30 +7844,35 @@
     },
     {
      "titolo": "Young Woodley",
+     "titolo_en": "Young Woodley",
      "anno": null,
      "generi": [],
      "sl": 2
     },
     {
      "titolo": "Bell, Book and Candle",
+     "titolo_en": "Bell, Book and Candle",
      "anno": null,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "London Wall",
+     "titolo_en": "London Wall",
      "anno": null,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "Sea Fever",
+     "titolo_en": "Sea Fever",
      "anno": null,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "The Return of the Soldier",
+     "titolo_en": "The Return of the Soldier",
      "anno": null,
      "generi": [],
      "sl": 1
@@ -7470,6 +7928,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": true,
+     "edizioni": 12,
+     "dal_2000": 6,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -7647,6 +8112,7 @@
    "opere": [
     {
      "titolo": "The Three Godfathers",
+     "titolo_en": "The Three Godfathers",
      "anno": 1912,
      "generi": [
       "narrativa western"
@@ -7655,6 +8121,7 @@
     },
     {
      "titolo": "The Understanding Heart",
+     "titolo_en": "The Understanding Heart",
      "anno": 1926,
      "generi": [
       "narrativa western"
@@ -7663,36 +8130,42 @@
     },
     {
      "titolo": "A Motion to Adjourn",
+     "titolo_en": "A Motion to Adjourn",
      "anno": 1929,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "Ballarat Bob's Romance",
+     "titolo_en": "Ballarat Bob's Romance",
      "anno": 1929,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "Bread Upon the Waters",
+     "titolo_en": "Bread Upon the Waters",
      "anno": 1929,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "Cornflower Cassie's Concert",
+     "titolo_en": "Cornflower Cassie's Concert",
      "anno": 1929,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "Cornflower Cassie's Concert",
+     "titolo_en": "Cornflower Cassie's Concert",
      "anno": null,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "Salt of the Earth",
+     "titolo_en": "Salt of the Earth",
      "anno": 1929,
      "generi": [],
      "sl": 1
@@ -7748,6 +8221,13 @@
      "dal_2000": 4,
      "metodo": "viaf",
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": true,
+     "edizioni": 6,
+     "dal_2000": 2,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -7966,12 +8446,14 @@
    "opere": [
     {
      "titolo": "Die Afrikaanse gedagte",
+     "titolo_en": "Die Afrikaanse gedagte",
      "anno": null,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "Leuens",
+     "titolo_en": "Leuens",
      "anno": 1934,
      "generi": [],
      "sl": 1
@@ -8061,18 +8543,21 @@
    "opere": [
     {
      "titolo": "Eight Faces at Three",
+     "titolo_en": "Eight Faces at Three",
      "anno": null,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "Having Wonderful Crime",
+     "titolo_en": "Having Wonderful Crime",
      "anno": null,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "The G-String Murders",
+     "titolo_en": "The G-String Murders",
      "anno": 1941,
      "generi": [
       "letteratura del mistero"
@@ -8081,6 +8566,7 @@
     },
     {
      "titolo": "Telefair, The House on the Island",
+     "titolo_en": "Telefair, The House on the Island",
      "anno": null,
      "generi": [],
      "sl": 0
@@ -8136,6 +8622,13 @@
      "dal_2000": 3,
      "metodo": "nome",
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": true,
+     "edizioni": 32,
+     "dal_2000": 2,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -8246,6 +8739,7 @@
    "opere": [
     {
      "titolo": "Duch Německa",
+     "titolo_en": "Duch Německa",
      "anno": 1917,
      "generi": [],
      "sl": 2
@@ -8297,6 +8791,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": true,
+     "edizioni": 5,
+     "dal_2000": 1,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -8514,6 +9015,7 @@
     },
     {
      "titolo": "Tierra y Tiempo",
+     "titolo_en": "Tierra y Tiempo",
      "anno": 1982,
      "generi": [],
      "sl": 0
@@ -8565,6 +9067,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -8678,6 +9187,7 @@
    "opere": [
     {
      "titolo": "The Deer",
+     "titolo_en": "The Deer",
      "anno": null,
      "generi": [],
      "sl": 1
@@ -8764,6 +9274,7 @@
    "opere": [
     {
      "titolo": "Ararken",
+     "titolo_en": "Ararken",
      "anno": 1954,
      "generi": [
       "saggio"
@@ -8772,12 +9283,14 @@
     },
     {
      "titolo": "Ataç'ın Tiyatro Yazıları",
+     "titolo_en": "Ataç'ın Tiyatro Yazıları",
      "anno": 2010,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "Dergilerde",
+     "titolo_en": "Dergilerde",
      "anno": 1980,
      "generi": [
       "saggio"
@@ -8786,6 +9299,7 @@
     },
     {
      "titolo": "Diyelim",
+     "titolo_en": "Diyelim",
      "anno": 1954,
      "generi": [
       "saggio"
@@ -8794,24 +9308,28 @@
     },
     {
      "titolo": "Günce (1953)",
+     "titolo_en": "Günce (1953)",
      "anno": 1960,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "Günce 1953-55",
+     "titolo_en": "Günce 1953-55",
      "anno": 1972,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "Günce 1956-57",
+     "titolo_en": "Günce 1956-57",
      "anno": 1972,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "Günlerin Getirdiği",
+     "titolo_en": "Günlerin Getirdiği",
      "anno": 1946,
      "generi": [],
      "sl": 0
@@ -8832,8 +9350,8 @@
     "Turchia"
    ],
    "lingue": [
-    "francese",
     "turco",
+    "francese",
     "arabo",
     "turco ottomano"
    ],
@@ -8864,6 +9382,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 0,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -8960,6 +9485,7 @@
    "opere": [
     {
      "titolo": "Fearful Pleasures",
+     "titolo_en": "Fearful Pleasures",
      "anno": 1946,
      "generi": [
       "fantasy",
@@ -8969,6 +9495,7 @@
     },
     {
      "titolo": "Arabesque: The Mouse",
+     "titolo_en": "Arabesque: The Mouse",
      "anno": null,
      "generi": [
       "orrore"
@@ -8977,6 +9504,7 @@
     },
     {
      "titolo": "Cheese",
+     "titolo_en": "Cheese",
      "anno": null,
      "generi": [
       "orrore"
@@ -8985,6 +9513,7 @@
     },
     {
      "titolo": "Gone Away",
+     "titolo_en": "Gone Away",
      "anno": null,
      "generi": [
       "orrore"
@@ -8993,6 +9522,7 @@
     },
     {
      "titolo": "Old Martin",
+     "titolo_en": "Old Martin",
      "anno": null,
      "generi": [
       "orrore"
@@ -9001,12 +9531,14 @@
     },
     {
      "titolo": "Pink Furniture",
+     "titolo_en": "Pink Furniture",
      "anno": null,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "Silver Circus",
+     "titolo_en": "Silver Circus",
      "anno": null,
      "generi": [
       "orrore"
@@ -9015,6 +9547,7 @@
     },
     {
      "titolo": "The Higgler",
+     "titolo_en": "The Higgler",
      "anno": null,
      "generi": [],
      "sl": 0
@@ -9071,6 +9604,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -9282,8 +9822,8 @@
     "Italia"
    ],
    "lingue": [
-    "latino",
-    "italiano"
+    "italiano",
+    "latino"
    ],
    "indice_it": 99,
    "indice_en": 79,
@@ -9778,6 +10318,7 @@
    "opere": [
     {
      "titolo": "Ex-Wife",
+     "titolo_en": "Ex-Wife",
      "anno": 1929,
      "generi": [],
      "sl": 1
@@ -9829,6 +10370,13 @@
      "dal_2000": 4,
      "metodo": "nome",
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": true,
+     "edizioni": 11,
+     "dal_2000": 9,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -9902,12 +10450,14 @@
    "opere": [
     {
      "titolo": "The Dream Coach",
+     "titolo_en": "The Dream Coach",
      "anno": null,
      "generi": [],
      "sl": 3
     },
     {
      "titolo": "Floating Island",
+     "titolo_en": "Floating Island",
      "anno": 1930,
      "generi": [
       "narrativa per ragazzi"
@@ -9916,36 +10466,42 @@
     },
     {
      "titolo": "All Kneeling",
+     "titolo_en": "All Kneeling",
      "anno": 1928,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "All Kneeling",
+     "titolo_en": "All Kneeling",
      "anno": 1928,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "Floating Island",
+     "titolo_en": "Floating Island",
      "anno": 1930,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "The Story of Appleby Capple",
+     "titolo_en": "The Story of Appleby Capple",
      "anno": null,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "To-morrow Morning",
+     "titolo_en": "To-morrow Morning",
      "anno": 1927,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "To-morrow Morning",
+     "titolo_en": "To-morrow Morning",
      "anno": 1927,
      "generi": [],
      "sl": 1
@@ -10626,12 +11182,14 @@
    "opere": [
     {
      "titolo": "The Return",
+     "titolo_en": "The Return",
      "anno": null,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "The Return",
+     "titolo_en": "The Return",
      "anno": null,
      "generi": [],
      "sl": 0
@@ -10911,12 +11469,14 @@
    "opere": [
     {
      "titolo": "The Story of Ferdinand",
+     "titolo_en": "The Story of Ferdinand",
      "anno": 1936,
      "generi": [],
      "sl": 14
     },
     {
      "titolo": "Rabbit Hill",
+     "titolo_en": "Rabbit Hill",
      "anno": 1944,
      "generi": [
       "narrativa per ragazzi"
@@ -10925,6 +11485,7 @@
     },
     {
      "titolo": "The Great Wheel",
+     "titolo_en": "The Great Wheel",
      "anno": 1957,
      "generi": [
       "narrativa per ragazzi"
@@ -10933,30 +11494,35 @@
     },
     {
      "titolo": "Ben and Me",
+     "titolo_en": "Ben and Me",
      "anno": null,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "They Were Strong and Good",
+     "titolo_en": "They Were Strong and Good",
      "anno": 1940,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "Mr. Twigg's Mistake",
+     "titolo_en": "Mr. Twigg's Mistake",
      "anno": null,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "Mr. Wilmer",
+     "titolo_en": "Mr. Wilmer",
      "anno": null,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "The Fabulous Flight",
+     "titolo_en": "The Fabulous Flight",
      "anno": null,
      "generi": [],
      "sl": 0
@@ -11005,6 +11571,13 @@
      "dal_2000": 0,
      "metodo": "nome",
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": true,
+     "edizioni": 9,
+     "dal_2000": 5,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -11227,6 +11800,7 @@
    "opere": [
     {
      "titolo": "Dominion",
+     "titolo_en": "Dominion",
      "anno": 1938,
      "generi": [],
      "sl": 1
@@ -11324,6 +11898,7 @@
    "opere": [
     {
      "titolo": "Poètes maudits d'aujourd'hui: 1946-1970",
+     "titolo_en": "Poètes maudits d'aujourd'hui: 1946-1970",
      "anno": 1972,
      "generi": [],
      "sl": 1
@@ -11369,6 +11944,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": true,
+     "edizioni": 79,
+     "dal_2000": 7,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -11607,8 +12189,8 @@
     "Francia"
    ],
    "lingue": [
-    "bretone",
-    "francese"
+    "francese",
+    "bretone"
    ],
    "indice_it": 0,
    "indice_en": 0,
@@ -11637,6 +12219,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 0,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -11765,6 +12354,7 @@
    "opere": [
     {
      "titolo": "Tess of the Storm Country",
+     "titolo_en": "Tess of the Storm Country",
      "anno": 1909,
      "generi": [],
      "sl": 1
@@ -11814,6 +12404,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 1,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -11865,24 +12462,28 @@
    "opere": [
     {
      "titolo": "Asadhu Siddhartha",
+     "titolo_en": "Asadhu Siddhartha",
      "anno": null,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "Jagadish Gupta Rachanabali (Volume 1)",
+     "titolo_en": "Jagadish Gupta Rachanabali (Volume 1)",
      "anno": 1958,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "Jagadish Gupta Rachanabali (Volume 2)",
+     "titolo_en": "Jagadish Gupta Rachanabali (Volume 2)",
      "anno": 1958,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "Meghabrita Ashani",
+     "titolo_en": "Meghabrita Ashani",
      "anno": 1947,
      "generi": [],
      "sl": 0
@@ -12121,6 +12722,7 @@
    "opere": [
     {
      "titolo": "Great Mischief",
+     "titolo_en": "Great Mischief",
      "anno": null,
      "generi": [],
      "sl": 0
@@ -12172,6 +12774,13 @@
      "dal_2000": 1,
      "metodo": "nome",
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -12468,24 +13077,28 @@
    "opere": [
     {
      "titolo": "Fanny by Gaslight",
+     "titolo_en": "Fanny by Gaslight",
      "anno": null,
      "generi": [],
      "sl": 2
     },
     {
      "titolo": "Forlorn Sunset",
+     "titolo_en": "Forlorn Sunset",
      "anno": null,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "Maxwell, Mary Elizabeth",
+     "titolo_en": "Maxwell, Mary Elizabeth",
      "anno": 1927,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "Xix Century Fiction: a Bibliographical Record Based On His Own Collection",
+     "titolo_en": "Xix Century Fiction: a Bibliographical Record Based On His Own Collection",
      "anno": 1951,
      "generi": [],
      "sl": 0
@@ -12533,6 +13146,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": true,
+     "edizioni": 3,
+     "dal_2000": 0,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -12573,6 +13193,7 @@
    "opere": [
     {
      "titolo": "The Gate of the Year",
+     "titolo_en": "The Gate of the Year",
      "anno": null,
      "generi": [],
      "sl": 1
@@ -12658,6 +13279,7 @@
    "opere": [
     {
      "titolo": "Yenki Paatalu",
+     "titolo_en": "Yenki Paatalu",
      "anno": 1925,
      "generi": [],
      "sl": 3
@@ -13012,48 +13634,56 @@
    "opere": [
     {
      "titolo": "Chhander Tungtang",
+     "titolo_en": "Chhander Tungtang",
      "anno": 1929,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "Sunirmal Basur Shrestha Kabita",
+     "titolo_en": "Sunirmal Basur Shrestha Kabita",
      "anno": 1927,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "Adim-dwipe",
+     "titolo_en": "Adim-dwipe",
      "anno": 1940,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "Asambhab Duniyay",
+     "titolo_en": "Asambhab Duniyay",
      "anno": 1937,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "Dillika Laddu",
+     "titolo_en": "Dillika Laddu",
      "anno": 1939,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "Hasi-Kanna",
+     "titolo_en": "Hasi-Kanna",
      "anno": 1961,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "Jeebankhatar Kayek Pata (Volume 1)",
+     "titolo_en": "Jeebankhatar Kayek Pata (Volume 1)",
      "anno": 1955,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "Jeebanta Kankal",
+     "titolo_en": "Jeebanta Kankal",
      "anno": 1936,
      "generi": [],
      "sl": 0
@@ -13260,36 +13890,42 @@
    "opere": [
     {
      "titolo": "Gadje gnezdo",
+     "titolo_en": "Gadje gnezdo",
      "anno": 1918,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "Blagorodje doktor Ambrož Čander",
+     "titolo_en": "Blagorodje doktor Ambrož Čander",
      "anno": 1909,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "Blagorodje doktor Ambrož Čander : edicija ELTeC",
+     "titolo_en": "Blagorodje doktor Ambrož Čander : edicija ELTeC",
      "anno": 2021,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "Gadje gnezdo : edicija ELTeC",
+     "titolo_en": "Gadje gnezdo : edicija ELTeC",
      "anno": 2021,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "Za svobodo in ljubezen",
+     "titolo_en": "Za svobodo in ljubezen",
      "anno": 1913,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "Za svobodo in ljubezen : edicija ELTeC",
+     "titolo_en": "Za svobodo in ljubezen : edicija ELTeC",
      "anno": 2021,
      "generi": [],
      "sl": 0
@@ -13356,6 +13992,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 0,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -13738,6 +14381,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 0,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -13947,6 +14597,7 @@
    "opere": [
     {
      "titolo": "targa con poesia di Edoardo Firpo a Vernazzola",
+     "titolo_en": "plaque with poem by Edoardo Firpo in Vernazzola",
      "anno": null,
      "generi": [],
      "sl": 0
@@ -13999,6 +14650,13 @@
      "dal_2000": 9,
      "metodo": "viaf",
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -14059,6 +14717,7 @@
    "opere": [
     {
      "titolo": "The hardy flower book",
+     "titolo_en": "The hardy flower book",
      "anno": 1914,
      "generi": [],
      "sl": 0
@@ -14104,6 +14763,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -14155,12 +14821,14 @@
    "opere": [
     {
      "titolo": "L'home que es va perdre",
+     "titolo_en": "L'home que es va perdre",
      "anno": 1929,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "Vals",
+     "titolo_en": "Vals",
      "anno": 1935,
      "generi": [],
      "sl": 1
@@ -14219,6 +14887,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": true,
+     "edizioni": 2,
+     "dal_2000": 1,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -14447,6 +15122,7 @@
    "opere": [
     {
      "titolo": "An Anthology of Czechoslovak Poetry",
+     "titolo_en": "An Anthology of Czechoslovak Poetry",
      "anno": 1929,
      "generi": [],
      "sl": 1
@@ -14576,6 +15252,7 @@
    "opere": [
     {
      "titolo": "Nobody's Buddy",
+     "titolo_en": "Nobody's Buddy",
      "anno": 1936,
      "generi": [],
      "sl": 2
@@ -14781,6 +15458,7 @@
    "opere": [
     {
      "titolo": "Jinjutap",
+     "titolo_en": "Jinjutap",
      "anno": 1947,
      "generi": [],
      "sl": 2
@@ -14970,6 +15648,7 @@
    "opere": [
     {
      "titolo": "L'auca de la cupletista",
+     "titolo_en": "L'auca de la cupletista",
      "anno": 1919,
      "generi": [],
      "sl": 0
@@ -16247,24 +16926,28 @@
    "opere": [
     {
      "titolo": "A Thousand Years a Minute",
+     "titolo_en": "A Thousand Years a Minute",
      "anno": null,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "The Blue Grotto Terror",
+     "titolo_en": "The Blue Grotto Terror",
      "anno": null,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "The Land of No Shadow",
+     "titolo_en": "The Land of No Shadow",
      "anno": null,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "The Mystery Men of Mars",
+     "titolo_en": "The Mystery Men of Mars",
      "anno": null,
      "generi": [],
      "sl": 0
@@ -16356,6 +17039,7 @@
    "opere": [
     {
      "titolo": "Den bakvendte familieboken",
+     "titolo_en": "Den bakvendte familieboken",
      "anno": 1951,
      "generi": [],
      "sl": 1
@@ -16994,6 +17678,7 @@
     },
     {
      "titolo": "Romanciers anglais contemporains - Madame Humphry Ward",
+     "titolo_en": "Romanciers anglais contemporains - Madame Humphry Ward",
      "anno": 1910,
      "generi": [],
      "sl": 1
@@ -17051,6 +17736,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": true,
+     "edizioni": 254,
+     "dal_2000": 2,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -17099,12 +17791,14 @@
    "opere": [
     {
      "titolo": "Finis",
+     "titolo_en": "Finis",
      "anno": 1906,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "Horror Omnibus",
+     "titolo_en": "Horror Omnibus",
      "anno": 1965,
      "generi": [
       "orrore"
@@ -17113,6 +17807,7 @@
     },
     {
      "titolo": "The Last Dawn",
+     "titolo_en": "The Last Dawn",
      "anno": null,
      "generi": [
       "orrore"
@@ -17331,6 +18026,13 @@
      "dal_2000": 1,
      "metodo": "viaf",
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": true,
+     "edizioni": 241,
+     "dal_2000": 1,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -17383,6 +18085,7 @@
    "opere": [
     {
      "titolo": "Die Nacht vor dem Ultimo",
+     "titolo_en": "Die Nacht vor dem Ultimo",
      "anno": 1934,
      "generi": [],
      "sl": 0
@@ -17429,6 +18132,13 @@
      "dal_2000": 0,
      "metodo": "nome",
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": true,
+     "edizioni": 2,
+     "dal_2000": 2,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -17701,6 +18411,7 @@
    "opere": [
     {
      "titolo": "Liedli ab em Land",
+     "titolo_en": "Liedli ab em Land",
      "anno": null,
      "generi": [],
      "sl": 1
@@ -18337,8 +19048,8 @@
     "Ungheria"
    ],
    "lingue": [
-    "ungherese",
-    "inglese"
+    "inglese",
+    "ungherese"
    ],
    "indice_it": 0,
    "indice_en": 0,
@@ -18548,6 +19259,7 @@
    "opere": [
     {
      "titolo": "Eight Harvard Poets",
+     "titolo_en": "Eight Harvard Poets",
      "anno": 1917,
      "generi": [],
      "sl": 1
@@ -18678,12 +19390,14 @@
    "opere": [
     {
      "titolo": "Priklyucheniya Travki",
+     "titolo_en": "Priklyucheniya Travki",
      "anno": null,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "Maysajonning sarguzashtlari",
+     "titolo_en": "Maysajonning sarguzashtlari",
      "anno": 1974,
      "generi": [],
      "sl": 0
@@ -19218,6 +19932,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -19595,6 +20316,7 @@
    "opere": [
     {
      "titolo": "Rail Liner Dhare",
+     "titolo_en": "Rail Liner Dhare",
      "anno": 1954,
      "generi": [],
      "sl": 0
@@ -20099,6 +20821,7 @@
    "opere": [
     {
      "titolo": "The Singing Gold",
+     "titolo_en": "The Singing Gold",
      "anno": null,
      "generi": [],
      "sl": 1
@@ -20387,6 +21110,7 @@
     },
     {
      "titolo": "Faust a Don Juan: commedia del arte o 3 dějstvích a 30 obrazech",
+     "titolo_en": "Faust a Don Juan: commedia del arte o 3 dějstvích a 30 obrazech",
      "anno": 1928,
      "generi": [],
      "sl": 0
@@ -20649,6 +21373,7 @@
    "opere": [
     {
      "titolo": "Los semidioses",
+     "titolo_en": "Los semidioses",
      "anno": 1917,
      "generi": [],
      "sl": 0
@@ -20700,6 +21425,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -22487,6 +23219,7 @@
    "opere": [
     {
      "titolo": "The Skylark of Space",
+     "titolo_en": "The Skylark of Space",
      "anno": 1928,
      "generi": [
       "fantascienza"
@@ -22495,24 +23228,28 @@
     },
     {
      "titolo": "The Skylark of Space",
+     "titolo_en": "The Skylark of Space",
      "anno": 1928,
      "generi": [],
      "sl": 2
     },
     {
      "titolo": "The Skylark of Space, Part 1",
+     "titolo_en": "The Skylark of Space, Part 1",
      "anno": 1928,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "The Skylark of Space, Part 2",
+     "titolo_en": "The Skylark of Space, Part 2",
      "anno": 1928,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "The Skylark of Space, Part 3",
+     "titolo_en": "The Skylark of Space, Part 3",
      "anno": 1928,
      "generi": [],
      "sl": 0
@@ -23112,6 +23849,7 @@
    "opere": [
     {
      "titolo": "Secrets",
+     "titolo_en": "Secrets",
      "anno": null,
      "generi": [],
      "sl": 1
@@ -23362,6 +24100,7 @@
    "opere": [
     {
      "titolo": "Saubhagya Sundari",
+     "titolo_en": "Saubhagya Sundari",
      "anno": null,
      "generi": [],
      "sl": 2
@@ -23759,18 +24498,21 @@
    "opere": [
     {
      "titolo": "Honk, the Moose",
+     "titolo_en": "Honk, the Moose",
      "anno": 1935,
      "generi": [],
      "sl": 2
     },
     {
      "titolo": "State Fair",
+     "titolo_en": "State Fair",
      "anno": null,
      "generi": [],
      "sl": 2
     },
     {
      "titolo": "The Other Worlds",
+     "titolo_en": "The Other Worlds",
      "anno": 1941,
      "generi": [
       "fantascienza"
@@ -23821,6 +24563,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": true,
+     "edizioni": 3,
+     "dal_2000": 3,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -25033,6 +25782,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -25249,30 +26005,35 @@
    "opere": [
     {
      "titolo": "Alaiki Mini Salam",
+     "titolo_en": "Alaiki Mini Salam",
      "anno": null,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "al-Mathālith wa-al-mathānī",
+     "titolo_en": "al-Mathālith wa-al-mathānī",
      "anno": 1926,
      "generi": [],
      "sl": 1
     },
     {
      "titolo": "Qāmūs al-ʻawām",
+     "titolo_en": "Qāmūs al-ʻawām",
      "anno": 1923,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "al-Mathālith wa-al-mathānī  (2ed vol.)",
+     "titolo_en": "al-Mathālith wa-al-mathānī  (2ed vol.)",
      "anno": 1930,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "al-Mathālith wa-al-mathānī (1st Vol.)",
+     "titolo_en": "al-Mathālith wa-al-mathānī (1st Vol.)",
      "anno": 1926,
      "generi": [],
      "sl": 0
@@ -25327,6 +26088,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -25385,6 +26153,7 @@
    "opere": [
     {
      "titolo": "Balebaṭish un demoḳratish",
+     "titolo_en": "Balebaṭish un demoḳratish",
      "anno": null,
      "generi": [
       "musical comedy"
@@ -25393,6 +26162,7 @@
     },
     {
      "titolo": "ʻErev peredah Eliyahu Goldenberg",
+     "titolo_en": "ʻErev peredah Eliyahu Goldenberg",
      "anno": null,
      "generi": [
       "dramma",
@@ -25447,6 +26217,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": true,
+     "edizioni": 2,
+     "dal_2000": 1,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -26169,12 +26946,14 @@
    "opere": [
     {
      "titolo": "Mr. Theobald's Devil",
+     "titolo_en": "Mr. Theobald's Devil",
      "anno": null,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "The Cat Who Saw God",
+     "titolo_en": "The Cat Who Saw God",
      "anno": null,
      "generi": [],
      "sl": 0
@@ -28645,6 +29424,7 @@
    "opere": [
     {
      "titolo": "Der Lehrling",
+     "titolo_en": "Der Lehrling",
      "anno": null,
      "generi": [],
      "sl": 0
@@ -29384,12 +30164,14 @@
    "opere": [
     {
      "titolo": "Cap Wil Tomos",
+     "titolo_en": "Cap Wil Tomos",
      "anno": 1946,
      "generi": [],
      "sl": 0
     },
     {
      "titolo": "Storïau a phortreadau",
+     "titolo_en": "Storïau a phortreadau",
      "anno": 1954,
      "generi": [],
      "sl": 0
@@ -32154,6 +32936,7 @@
    "opere": [
     {
      "titolo": "Monographies de l'art belge",
+     "titolo_en": "Monographies de l'art belge",
      "anno": null,
      "generi": [],
      "sl": 0
@@ -32199,6 +32982,13 @@
      "dal_2000": 4,
      "metodo": "nome",
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": true,
+     "edizioni": 88,
+     "dal_2000": 1,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -32438,8 +33228,8 @@
     "Ungheria"
    ],
    "lingue": [
-    "ungherese",
-    "tedesco"
+    "tedesco",
+    "ungherese"
    ],
    "indice_it": 0,
    "indice_en": 0,
@@ -34849,6 +35639,7 @@
     },
     {
      "titolo": "Na okraj dnů: sto epigramů",
+     "titolo_en": "Na okraj dnů: sto epigramů",
      "anno": 1926,
      "generi": [],
      "sl": 0
@@ -35160,6 +35951,7 @@
    "opere": [
     {
      "titolo": "L'ereditiera",
+     "titolo_en": "The Heiress",
      "anno": null,
      "generi": [
       "dramma"
@@ -35168,6 +35960,7 @@
     },
     {
      "titolo": "The heiress",
+     "titolo_en": "The heiress",
      "anno": null,
      "generi": [
       "teatro drammatico"
@@ -35176,6 +35969,7 @@
     },
     {
      "titolo": "The heiress",
+     "titolo_en": "The heiress",
      "anno": null,
      "generi": [
       "teatro drammatico"
@@ -35184,6 +35978,7 @@
     },
     {
      "titolo": "The heiress",
+     "titolo_en": "The heiress",
      "anno": null,
      "generi": [
       "teatro drammatico"
@@ -35235,6 +36030,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bnf_fr": {
+     "trovato": true,
+     "edizioni": 17,
+     "dal_2000": 6,
+     "metodo": "codice_bnf",
+     "fonte": "BnF"
     }
    },
    "verifica": {
@@ -35608,6 +36410,7 @@
    "opere": [
     {
      "titolo": "Vairagyavaidyuthi",
+     "titolo_en": "Vairagyavaidyuthi",
      "anno": 1924,
      "generi": [
       "filosofia"
@@ -35630,8 +36433,8 @@
     "India"
    ],
    "lingue": [
-    "sanscrito",
-    "malayalam"
+    "malayalam",
+    "sanscrito"
    ],
    "indice_it": 0,
    "indice_en": 0,
@@ -39215,6 +40018,7 @@
    "opere": [
     {
      "titolo": "Gila: a novella from rural life",
+     "titolo_en": "Gila: a novella from rural life",
      "anno": 1901,
      "generi": [],
      "sl": 0
@@ -40038,6 +40842,7 @@
    "opere": [
     {
      "titolo": "Sweet River in the Morning",
+     "titolo_en": "Sweet River in the Morning",
      "anno": null,
      "generi": [],
      "sl": 0
