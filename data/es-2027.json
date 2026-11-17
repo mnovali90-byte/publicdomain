@@ -403,7 +403,9 @@
      "ultimo": 1896,
      "dal_2000": 12,
      "metodo": "viaf",
-     "fonte": "SBN"
+     "fonte": "SBN",
+     "stato": "da_verificare",
+     "motivo": "12 registrazioni dal 2000 ma la più recente sarebbe del 1896"
     },
     "bne_es": {
      "trovato": true,
@@ -819,7 +821,9 @@
      "ultimo": 1969,
      "dal_2000": 26,
      "metodo": "viaf",
-     "fonte": "SBN"
+     "fonte": "SBN",
+     "stato": "da_verificare",
+     "motivo": "26 registrazioni dal 2000 ma la più recente sarebbe del 1969"
     },
     "bne_es": {
      "trovato": true,
@@ -1084,7 +1088,9 @@
      "ultimo": 1948,
      "dal_2000": 4,
      "metodo": "nome",
-     "fonte": "SBN"
+     "fonte": "SBN",
+     "stato": "da_verificare",
+     "motivo": "4 registrazioni dal 2000 ma la più recente sarebbe del 1948"
     },
     "bne_es": {
      "trovato": true,
@@ -1284,7 +1290,9 @@
      "ultimo": 1955,
      "dal_2000": 6,
      "metodo": "nome",
-     "fonte": "SBN"
+     "fonte": "SBN",
+     "stato": "da_verificare",
+     "motivo": "6 registrazioni dal 2000 ma la più recente sarebbe del 1955"
     },
     "bne_es": {
      "trovato": true,
@@ -2593,7 +2601,9 @@
      "ultimo": 1946,
      "dal_2000": 1,
      "metodo": "nome",
-     "fonte": "SBN"
+     "fonte": "SBN",
+     "stato": "da_verificare",
+     "motivo": "1 registrazioni dal 2000 ma la più recente sarebbe del 1946"
     },
     "bl_en": {
      "trovato": true,
@@ -7608,7 +7618,9 @@
      "ultimo": 1905,
      "dal_2000": 1,
      "metodo": "nome",
-     "fonte": "SBN"
+     "fonte": "SBN",
+     "stato": "da_verificare",
+     "motivo": "1 registrazioni dal 2000 ma la più recente sarebbe del 1905"
     },
     "bne_es": {
      "trovato": true,
@@ -8237,7 +8249,9 @@
      "ultimo": 1960,
      "dal_2000": 1,
      "metodo": "nome",
-     "fonte": "SBN"
+     "fonte": "SBN",
+     "stato": "da_verificare",
+     "motivo": "1 registrazioni dal 2000 ma la più recente sarebbe del 1960"
     },
     "bl_en": {
      "trovato": true,
@@ -9130,7 +9144,9 @@
      "ultimo": 1934,
      "dal_2000": 2,
      "metodo": "nome",
-     "fonte": "SBN"
+     "fonte": "SBN",
+     "stato": "da_verificare",
+     "motivo": "2 registrazioni dal 2000 ma la più recente sarebbe del 1934"
     },
     "bl_en": {
      "trovato": true,
@@ -10453,7 +10469,9 @@
      "ultimo": 1906,
      "dal_2000": 1,
      "metodo": "nome",
-     "fonte": "SBN"
+     "fonte": "SBN",
+     "stato": "da_verificare",
+     "motivo": "1 registrazioni dal 2000 ma la più recente sarebbe del 1906"
     },
     "bl_en": {
      "trovato": false,
@@ -12701,7 +12719,9 @@
      "ultimo": 1929,
      "dal_2000": 1,
      "metodo": "nome",
-     "fonte": "SBN"
+     "fonte": "SBN",
+     "stato": "da_verificare",
+     "motivo": "1 registrazioni dal 2000 ma la più recente sarebbe del 1929"
     },
     "bl_en": {
      "trovato": false,

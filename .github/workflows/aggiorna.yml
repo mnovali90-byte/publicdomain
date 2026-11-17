@@ -70,6 +70,10 @@ jobs:
         # controllo in più: se le biblioteche non rispondono, le pagine escono comunque
         continue-on-error: true
         run: python scripts/verifica.py
+      - name: Controlli sui conteggi dei cataloghi (i dati che si contraddicono restano sospesi)
+        # anche se un passo prima è fallito: i dati vecchi nei file vanno ricontrollati comunque
+        if: always()
+        run: python scripts/controlli.py
       - name: Crea le pagine degli autori e la sitemap
         if: always()
         run: python scripts/pagine.py

@@ -9,6 +9,7 @@ Esce in: autore/<nome>/ (italiano), en/author/<nome>/ (inglese, solo se esiste l
 i due indici e sitemap.xml. Le pagine inglesi non mostrano opere, paesi e professioni, perché in Wikidata
 hanno etichette italiane: meglio meno contenuto che contenuto in due lingue.
 """
+from controlli import problemi as problemi_conteggio  # noqa: E402
 import datetime
 import glob
 import html
@@ -420,15 +421,18 @@ def scheda_statica(a, lang, bd):
                  if a.get("n_opere", 0) > len(opere) else "")
         o.append(sez(T("Opere principali", "Main works"), f'<ul class="sa-opere">\n{righe}</ul>\n{extra}'))
     g = ((a.get("traduzioni") or {}).get("sbn_it") if it else (a.get("traduzioni") or {}).get("bl_en"))
-    if g and g.get("trovato"):
+    if g and g.get("trovato") and (g.get("stato") == "da_verificare" or problemi_conteggio(g, datetime.date.today().year)):
+        o.append(sez(T("Registrazioni in italiano", "Records in English"),
+                     f'<p class="sa-nota">{esc(T("Dati in verifica: per questo autore i numeri del catalogo si contraddicono, quindi non li mostriamo finché non sono corretti.", "Data under review: for this author the catalogue figures contradict each other, so we do not show them until they are fixed."))}</p>\n'))
+    elif g and g.get("trovato"):
         box = lambda num, et: f'<div class="ed-box"><b>{migliaia(num, lang)}</b><span>{esc(et)}</span></div>'
-        ult = f" · {T('ultimo', 'latest')} {g['ultimo']}" if g.get("ultimo") else ""
-        nota = (T("Dal catalogo delle biblioteche italiane (SBN). Conta anche ristampe e antologie.", "")
-                if it else "From the British Library catalogue, searched by surname and years of birth and death: some editions catalogued differently may be missed. It also counts reprints and anthologies.")
+        ult = f" · {T('più recente con anno certo:', 'latest with a certain year:')} {g['ultimo']}" if g.get("ultimo") else ""
+        nota = (T("Registrazioni bibliografiche in italiano collegate all'autore nel catalogo SBN, comprese ristampe e antologie. Per ora comprendono anche altre collaborazioni (traduzioni, curatele, prefazioni), non solo i testi di cui è autore.", "")
+                if it else "Bibliographic records in English linked to the author in the British Library catalogue, searched by surname and years of birth and death: some records catalogued differently may be missed. For now they also include other contributions (translations, editing, prefaces).")
         if it and g.get("metodo") == "nome":
             nota += " Autore riconosciuto solo dal nome: il conteggio può essere impreciso."
-        o.append(sez(T("Edizioni in italiano", "Editions in English"),
-                     f'<div class="ed-boxes">{box(g["edizioni"], T("libri in italiano", "books in English"))}{box(g.get("dal_2000", 0), T("usciti dal 2000", "published since 2000") + ult)}</div>\n<p class="sa-nota">{esc(nota)}</p>\n'))
+        o.append(sez(T("Registrazioni in italiano", "Records in English"),
+                     f'<div class="ed-boxes">{box(g["edizioni"], T("registrazioni in italiano", "records in English"))}{box(g.get("dal_2000", 0), T("con anno dal 2000", "dated 2000 or later") + ult)}</div>\n<p class="sa-nota">{esc(nota)}</p>\n'))
     barre = []
     for m, campo, etich in ((("it", "visite_it", T("In Italia", "")),) if it else (("en", "visite_en", "In the English-speaking world"),)) + (("int", "pagine_wikipedia", T("Nel mondo", "Worldwide")),):
         idx = a.get("indice_" + m)

@@ -161,12 +161,16 @@ def conta(filtro, interroga_fn):
     time.sleep(PAUSA)
     if not n:
         return 0, None, 0
+    # Le date in SBN arrivano in formati diversi (testo semplice, anno tipizzato...): confrontarle così come sono
+    # dava risultati sbagliati (17/11/2026, Alvaro: «ultimo 1934» con 105 registrazioni «dal 2000»).
+    # Si tengono solo gli anni di 4 cifre e si trasformano in numero; massimo e «dal 2000» dallo stesso insieme.
     data = (f"?w <{BF}hasInstance> ?i . ?i <{BF}provisionActivity> ?pa . ?pa a <{BF}Publication> . "
-            f"?pa <{BF}date> ?d . FILTER(REGEX(?d, \"^[0-9]{{4}}$\"))")
-    r = interroga_fn(f"SELECT (MAX(?d) AS ?u) WHERE {{ {c} {data} }}")
+            f"?pa <{BF}date> ?d . FILTER(REGEX(STR(?d), \"^[0-9]{{4}}$\")) "
+            f"BIND(<http://www.w3.org/2001/XMLSchema#integer>(STR(?d)) AS ?anno)")
+    r = interroga_fn(f"SELECT (MAX(?anno) AS ?u) WHERE {{ {c} {data} }}")
     ultimo = int(r[0]["u"]["value"]) if r and "u" in r[0] else None
     time.sleep(PAUSA)
-    r = interroga_fn(f"SELECT (COUNT(DISTINCT ?w) AS ?n) WHERE {{ {c} {data} FILTER(?d >= \"2000\") }}")
+    r = interroga_fn(f"SELECT (COUNT(DISTINCT ?w) AS ?n) WHERE {{ {c} {data} FILTER(?anno >= 2000) }}")
     time.sleep(PAUSA)
     return n, ultimo, int(r[0]["n"]["value"])
 
@@ -200,7 +204,7 @@ def codici_viaf(qids):
 
 def e_recente(voce, oggi):
     try:
-        if voce.get("v") != 5:      # 2 = VIAF poi nome; le voci della prima versione si rifanno
+        if voce.get("v") != 6:      # 6 = anni trasformati in numero (17/11/2026): le voci precedenti si rifanno
             return False
         return (oggi - dt.date.fromisoformat(voce["ts"])).days < VALIDITA_GIORNI
     except Exception:
@@ -230,7 +234,7 @@ def elabora(oggi, conta_fn=edizioni_italiane, viaf_fn=codici_viaf):
         try:
             voce = conta_fn(a["nome"], viaf.get(a["wikidata"]), a.get("nascita"), a.get("morte"))
             voce["ts"] = oggi.isoformat()
-            voce["v"] = 5
+            voce["v"] = 6
             cache[a["wikidata"]] = voce
             fatti += 1
         except Exception as e:

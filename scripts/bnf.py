@@ -71,7 +71,8 @@ def edizioni_francesi(codice_bnf, anno_oggi, quanti_fn=quanti):
     n = quanti_fn(base)
     anni = " ".join(str(y) for y in range(2000, anno_oggi + 1))
     d2000 = quanti_fn(f'{base} and bib.date any "{anni}"') if n else 0
-    return {"trovato": n > 0, "edizioni": n, "dal_2000": min(d2000, n), "metodo": "codice_bnf", "fonte": "BnF"}
+    # niente min(): se i recenti superano il totale è un errore da vedere (scripts/controlli.py)
+    return {"trovato": n > 0, "edizioni": n, "dal_2000": d2000, "metodo": "codice_bnf", "fonte": "BnF"}
 
 
 def codici_bnf(qids):

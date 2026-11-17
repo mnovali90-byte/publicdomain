@@ -88,7 +88,8 @@ def conta(cat, filtro_autore, quanti_fn=quanti):
     base = f'{filtro_autore} and alma.language={c["lingua"]}'
     n = quanti_fn(c["url"], base)
     d = quanti_fn(c["url"], f"{base} and alma.main_pub_date>=2000") if n else 0
-    return {"trovato": n > 0, "edizioni": n, "dal_2000": min(d, n), "fonte": c["fonte"]}
+    # niente min(): se i recenti superano il totale è un errore da vedere (scripts/controlli.py)
+    return {"trovato": n > 0, "edizioni": n, "dal_2000": d, "fonte": c["fonte"]}
 
 
 def codici_bne(qids):
