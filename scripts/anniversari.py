@@ -172,7 +172,7 @@ def carica_esclusioni():
     if not f.exists():
         return set(), set()
     d = json.loads(f.read_text(encoding="utf-8"))
-    return set(d.get("qid", {}).keys()), set(d.get("nomi", {}).keys())
+    return set(d.get("qid", {}).keys()) | set(d.get("autori_qid", {}).keys()), set(d.get("nomi", {}).keys())
 
 MESI_EN = {m: i + 1 for i, m in enumerate(["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"])}
 
@@ -481,7 +481,7 @@ def main():
         nuovi += [v for v in vecchio["voci"] if v["tipo"] == tipo and v["anni"] == eta]
     print(f"gruppi non riusciti: {falliti}", file=sys.stderr)
     ex_q, ex_nomi = carica_esclusioni()
-    voci = [v for v in nuovi if v["qid"] not in ex_q and v["nome"] not in ex_nomi]
+    voci = [v for v in nuovi if v["qid"] not in ex_q and v.get("autore_qid") not in ex_q and v["nome"] not in ex_nomi]   # autori_qid: fuori anche le loro opere
     # una persona/opera per tipo e anni
     visti, uniche = set(), []
     for v in sorted(voci, key=lambda v: -v["pagine"]):
