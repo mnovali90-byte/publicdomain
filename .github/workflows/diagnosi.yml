@@ -21,19 +21,17 @@ jobs:
               try:
                 t=get(ep+"?"+urllib.parse.urlencode({"query":q}),"application/sparql-results+json"); return t[:600]
               except Exception as e: return f"ERR {e}"
-          print("DNB ger2000", dnb(f"SELECT (COUNT(DISTINCT ?r) AS ?n) WHERE {{ ?r <http://purl.org/dc/terms/creator> <{G}> ; <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/ger> ; <http://purl.org/dc/terms/issued> ?d . FILTER(xsd:integer(SUBSTR(STR(?d),1,4)) >= 2000) }}"))
-          print("DNB senza_lingua", dnb(f"SELECT (COUNT(DISTINCT ?r) AS ?n) WHERE {{ ?r <http://purl.org/dc/terms/creator> <{G}> . FILTER NOT EXISTS {{ ?r <http://purl.org/dc/terms/language> ?l }} }}"))
           def sru(nome,base,q,ver="1.2"):
             try:
               t=get(base+"?"+urllib.parse.urlencode({"version":ver,"operation":"searchRetrieve","query":q,"maximumRecords":"0"}))
               print(nome,q,"->",n(t))
             except Exception as e: print(nome,q,"ERR",e)
-          BNE="https://catalogo.bne.es/view/sru/34BNE_INST"; BL="https://eu06.alma.exlibrisgroup.com/view/sru/44BL_MAIN"
-          sru("BNE",BNE,'alma.authority_id=XX1150786 and alma.language=spa')
-          sru("BNE",BNE,'alma.authority_id=XX1150786 and alma.language=spa and alma.main_pub_date>=2000')
-          sru("BL",BL,'alma.isni_identifier=0000000121268426')
-          sru("BL",BL,'alma.isni_identifier="0000 0001 2126 8426"')
-          sru("BL",BL,'alma.authority_id=n79006035')
-          sru("BL",BL,'alma.authority_id="(uk)n79006035"')
-          sru("BL",BL,'alma.creator="Brecht, Bertolt, 1898-1956"')
+          BL="https://eu06.alma.exlibrisgroup.com/view/sru/44BL_MAIN"
+          q='SELECT ?a ?aLabel ?isni ?lc ?viaf WHERE { VALUES ?a { wd:Q38757 wd:Q207036 wd:Q123075 } OPTIONAL{?a wdt:P213 ?isni} OPTIONAL{?a wdt:P244 ?lc} OPTIONAL{?a wdt:P214 ?viaf} SERVICE wikibase:label { bd:serviceParam wikibase:language "en". } }'
+          r=json.loads(get("https://query.wikidata.org/sparql?"+urllib.parse.urlencode({"query":q,"format":"json"})))["results"]["bindings"]
+          for b in r:
+            nome=b["aLabel"]["value"]; isni=b.get("isni",{}).get("value",""); lc=b.get("lc",{}).get("value","")
+            print("BL ID",nome,isni,lc)
+            for qq in [f'alma.isni_identifier={isni.replace(" ","")}', f'alma.isni_identifier="{isni}"', f'alma.authority_id={lc}', f'alma.identifierAuthority={lc}', f'alma.authority_id="(DLC){lc}"', f'alma.all_for_ui={lc}']:
+              sru("BL",BL,qq)
           PY
