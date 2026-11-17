@@ -5,52 +5,43 @@ on:
 jobs:
   d:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 50
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Prova ricerca dello storico partendo dagli autori (non salva nulla)
+      - name: Prova storico per autore, a blocchi (non salva nulla)
         run: |
           cd scripts && python3 - <<'PY'
           import json, glob, time
           from opere import sparql, val, qid
-          gia=set()
+          gia=set(); autori={}
           for f in glob.glob("../data/storico/ricerca/*.json"):
-              for o in json.load(open(f))["opere"]: gia.add(o[0])
-          ESCLUSE="wd:Q13442814 wd:Q732577 wd:Q1980247 wd:Q187685 wd:Q1266946 wd:Q3331189"  # articoli scientifici, pubblicazioni, capitoli, tesi, edizioni
-          def per_morte(da, a):
-              q=f"""SELECT ?w ?wLabel ?sl (MIN(YEAR(?p)) AS ?pub) (MIN(YEAR(?c)) AS ?cre) (SAMPLE(?aLabel) AS ?aut) (SAMPLE(?tipoLabel) AS ?tipo) WHERE {{
-                ?a wdt:P570 ?m. FILTER(YEAR(?m)>={da} && YEAR(?m)<={a})
-                ?a wdt:P106 ?occ. VALUES ?occ {{ wd:Q36180 wd:Q49757 wd:Q214917 wd:Q6625963 wd:Q4853732 wd:Q482980 wd:Q1930187 wd:Q11774202 wd:Q18844224 wd:Q1607826 wd:Q12144794 wd:Q4964182 }}
-                ?w wdt:P50 ?a. ?w wikibase:sitelinks ?sl. FILTER(?sl>=1)
-                ?w wdt:P31 ?tipo. FILTER(?tipo NOT IN ({ESCLUSE.replace(' ',',')}))
+              d=json.load(open(f))
+              for o in d["opere"]: gia.add(o[0])
+              for a in d["autori"]: autori[a[0]]=a
+          lista=sorted(autori.values(), key=lambda a:-a[3])
+          print("AUTORI|",len(lista))
+          ESC="wd:Q13442814,wd:Q732577,wd:Q1980247,wd:Q187685,wd:Q1266946,wd:Q3331189,wd:Q5,wd:Q4167410"
+          tot={}; t0=time.time(); err=0
+          for i in range(0, min(len(lista),3000), 150):
+              v=" ".join("wd:"+a[0] for a in lista[i:i+150])
+              q=f"""SELECT ?w ?wLabel ?sl (MIN(YEAR(?p)) AS ?pub) (MIN(YEAR(?c)) AS ?cre) (SAMPLE(?a) AS ?aut) WHERE {{
+                VALUES ?a {{ {v} }} ?w wdt:P50 ?a. ?w wikibase:sitelinks ?sl. FILTER(?sl>=1)
+                FILTER NOT EXISTS {{ ?w wdt:P31 ?x. VALUES ?x {{ {ESC.replace(',',' ')} }} }}
                 OPTIONAL {{ ?w wdt:P577 ?p }} OPTIONAL {{ ?w wdt:P571 ?c }}
-                ?a rdfs:label ?aLabel FILTER(LANG(?aLabel)="en")
-                ?tipo rdfs:label ?tipoLabel FILTER(LANG(?tipoLabel)="en")
-                SERVICE wikibase:label {{ bd:serviceParam wikibase:language "it,en". }}
-              }} GROUP BY ?w ?wLabel ?sl"""
+                SERVICE wikibase:label {{ bd:serviceParam wikibase:language "it,en". }} }} GROUP BY ?w ?wLabel ?sl"""
               t=time.time()
               try: r=sparql(q)
-              except Exception as e: print("ERR|",da,a,e); return []
-              print(f"TEMPO| {da}-{a} {time.time()-t:.0f}s righe {len(r)}")
-              return r
-          for da,a in [(-3000,1399),(1400,1599),(1600,1699),(1616,1616),(1880,1880),(1936,1936),(1955,1955)]:
-              r=per_morte(da,a)
-              nuove=[x for x in r if qid(val(x,"w")) not in gia]
-              senza=[x for x in r if not val(x,"pub") and not val(x,"cre")]
-              dopo1930=[x for x in r if (val(x,"pub") and int(float(val(x,"pub")))>1930)]
-              print(f"PERIODO| {da}-{a} | opere {len(r)} | nuove {len(nuove)} | senza data {len(senza)} | pubblicate dopo 1930 {len(dopo1930)}")
-              top=sorted(nuove,key=lambda x:-int(val(x,"sl")))[:25]
-              print("NUOVE|",[(val(x,"wLabel"),val(x,"aut"),val(x,"pub") or val(x,"cre"),val(x,"tipo")) for x in top])
-              time.sleep(5)
-          # autori senza data di morte (Omero e simili)
-          q="""SELECT ?w ?wLabel ?sl ?aLabel WHERE { ?w wdt:P50 ?a. FILTER NOT EXISTS { ?a wdt:P570 ?m }
-               ?a wdt:P31 wd:Q5. { ?a wdt:P1317 ?f } UNION { ?a wdt:P569 ?n FILTER(YEAR(?n)<1700) } UNION { ?a wdt:P2032 ?e FILTER(YEAR(?e)<1800) }
-               ?w wikibase:sitelinks ?sl. FILTER(?sl>=10)
-               SERVICE wikibase:label { bd:serviceParam wikibase:language "it,en". } }"""
-          try:
-              r=sparql(q); print("ANTICHI|",len(r),sorted({(int(val(x,'sl')),val(x,'wLabel'),val(x,'aLabel')) for x in r},reverse=True)[:30])
-          except Exception as e: print("ERR| antichi",e)
+              except Exception as e: err+=1; print("ERR|",i,e); continue
+              for x in r: tot[qid(val(x,"w"))]=x
+              print(f"BLOCCO| {i} {time.time()-t:.0f}s righe {len(r)}", flush=True)
+              time.sleep(1)
+          nuove=[x for k,x in tot.items() if k not in gia]
+          senza=[x for x in nuove if not val(x,"pub") and not val(x,"cre")]
+          print(f"TOT| tempo {time.time()-t0:.0f}s | errori {err} | opere {len(tot)} | nuove {len(nuove)} | nuove senza data {len(senza)}")
+          print("NUOVE|",[(val(x,"wLabel"),val(x,"pub") or val(x,"cre")) for x in sorted(nuove,key=lambda x:-int(val(x,"sl")))[:60]])
+          for t in ["Q41567","Q8275","Q35160","Q16867","Q1004","Q191380","Q16867","Q482"]:
+              print("CASO|",t,t in tot, t in gia)
           PY
