@@ -53,6 +53,12 @@ jobs:
         env:
           BUDGET_MINUTI_BNF: "25"
         run: python scripts/bnf.py
+      - name: Conta le edizioni in spagnolo (BNE) e in inglese (British Library)
+        # dato accessorio: se fallisce, il resto viene salvato comunque
+        continue-on-error: true
+        env:
+          BUDGET_MINUTI_ALMA: "30"
+        run: python scripts/alma.py
       - name: Opere in pubblico dominio negli USA (Wikidata, Wikipedia, Commons)
         # dato accessorio: se fallisce, il resto viene salvato comunque
         continue-on-error: true
