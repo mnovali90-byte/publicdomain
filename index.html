@@ -291,6 +291,7 @@ dialog::backdrop{background:rgba(12,12,16,.72)}
 .sa-sez h4{margin:0 0 16px}
 .sa .bio{margin:0;font-size:17px;line-height:1.55}
 .sa-sez a{display:inline-block;margin-top:12px;font-size:15px;color:var(--ink)}
+.sa-inedito{font-weight:700;font-size:17px;color:var(--vermiglio);margin:4px 0 6px}
 .sa-nota{margin:12px 0 0;font-size:14px;line-height:1.5;color:var(--muto)}
 .sa-testo{margin:0;font-size:15px;line-height:1.55}
 .sa-opere{list-style:none;margin:0;padding:0}
@@ -516,6 +517,8 @@ it: {
   edizBne: "Dal catalogo della Biblioteca nacional de España (BNE), cercato con il codice dell'autore. Conta anche ristampe e antologie.",
   edizBl: "Dal catalogo della British Library, cercato per cognome e anni di nascita e morte: qualche edizione schedata in altro modo può sfuggire. Conta anche ristampe e antologie.",
   edizNonTrovato: "Autore non trovato nel catalogo: non vuol dire che non sia tradotto, può essere schedato con un altro nome.",
+  edizInedito: "Nessun libro in {l}",
+  edizIneditoNota: "La {b} conosce questo autore (lo riconosce dal suo codice, senza rischio di omonimi) ma non ha nessun suo libro in {l}: in questo paese è ancora inedito.",
   primaPubbl: "Prima di pubblicare", avvisoBreve: "Libero è il testo originale. Traduzioni, curatele e illustrazioni hanno diritti propri. Calcolo indicativo, non consulenza legale.",
   avvisoIt: " In Italia, per gli autori di paesi alleati nella Seconda guerra mondiale, la durata può essere più lunga.", libriL: "Libri in {l}", amazonP: "Cerca su {d}", bnf: "Catalogo BnF",
   paTit: "Da quando è libero, paese per paese",
@@ -623,6 +626,8 @@ en: {
   edizBne: "From the catalogue of the National Library of Spain (BNE), searched by the author's identifier. It also counts reprints and anthologies.",
   edizBl: "From the British Library catalogue, searched by surname and years of birth and death: some editions catalogued differently may be missed. It also counts reprints and anthologies.",
   edizNonTrovato: "Author not found in the catalogue: it does not mean they are untranslated, they may be catalogued under another name.",
+  edizInedito: "No books in {l}",
+  edizIneditoNota: "The {b} knows this author (identified by their authority code, so no risk of namesakes) but holds no book by them in {l}: in this country they are still unpublished.",
   primaPubbl: "Before publishing", avvisoBreve: "Only the original text is free. Translations, editorial work and illustrations have their own rights. Indicative calculation, not legal advice.",
   avvisoIt: " In Italy the term can be longer for authors from Allied countries in the Second World War.", libriL: "Books in {l}", amazonP: "Search {d}", bnf: "BnF catalogue",
   paTit: "Free from when, country by country",
@@ -1485,6 +1490,10 @@ function bloccoEdizioni(a, c) {
   const tit = h("h4", {}, tr("edizTit", { l }));
   const sez = (...f) => h("section", { class: "sa-sez" }, ...f);
   if (!g) return sez(tit, h("p", { class: "sa-nota" }, c === "fr" || c === "es" ? tr("edizSenzaCodice", { b: c === "fr" ? "BnF" : "BNE" }) : tr("edizNd")));
+  if (!g.trovato && /^codice/.test(g.metodo || "")) {
+    const b = c === "fr" ? "BnF" : "BNE";
+    return sez(tit, h("p", { class: "sa-inedito" }, tr("edizInedito", { l })), h("p", { class: "sa-nota" }, tr("edizIneditoNota", { b, l })));
+  }
   if (!g.trovato) return sez(tit, h("p", { class: "sa-nota" }, tr("edizNonTrovato")));
   const box = (num, et) => h("div", { class: "ed-box" }, h("b", {}, n(num)), h("span", {}, et));
   return sez(tit,
