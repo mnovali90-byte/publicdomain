@@ -2489,6 +2489,43 @@
    }
   },
   {
+   "tipo": "prima edizione",
+   "qid": "Q2939820",
+   "nome": "The Price of Salt",
+   "it": "Carol",
+   "desc": "novel by Patricia Highsmith",
+   "autore": "Patricia Highsmith",
+   "autore_qid": "Q270635",
+   "anno": 1952,
+   "anni": 75,
+   "pagine": 17,
+   "mese": 4,
+   "giorno": null,
+   "fonte_data": "wikipedia (mese, testo)",
+   "scheda": {
+    "it": {
+     "desc": null,
+     "generi": [
+      "temi LGBT nella letteratura",
+      "Letteratura lesbica"
+     ],
+     "lingua": "inglese americano",
+     "titolo_orig": "The Price of Salt",
+     "wiki": "https://it.wikipedia.org/wiki/Carol_(romanzo)"
+    },
+    "en": {
+     "desc": "novel by Patricia Highsmith",
+     "generi": [
+      "LGBT-related literature",
+      "lesbian literature"
+     ],
+     "lingua": "American English",
+     "titolo_orig": "The Price of Salt",
+     "wiki": "https://en.wikipedia.org/wiki/The_Price_of_Salt"
+    }
+   }
+  },
+  {
    "tipo": "nascita",
    "qid": "Q71027",
    "nome": "Karl Abraham",
