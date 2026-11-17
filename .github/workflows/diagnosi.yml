@@ -1,0 +1,47 @@
+name: diagnosi
+on:
+  push:
+    paths: [".github/workflows/diagnosi.yml"]
+jobs:
+  d:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          python3 - <<'PY'
+          import urllib.request,urllib.parse,re,json
+          UA={"User-Agent":"PublicDomainRadar-diagnosi/1.0 (publicdomainradar.com)"}
+          def get(u,acc=None):
+            h=dict(UA); 
+            if acc: h["Accept"]=acc
+            return urllib.request.urlopen(urllib.request.Request(u,headers=h),timeout=90).read().decode("utf-8","replace")
+          def n(t): m=re.search(r"numberOfRecords>(\d+)",t); return m.group(1) if m else ("DIAG:"+(re.search(r"<(?:diag:)?message>([^<]*)",t) or re.search(r"(.{0,200})",t)).group(1))
+          G="https://d-nb.info/gnd/118514768"
+          def dnb(q):
+            for ep in ["https://sparql.dnb.de/api/dnbgnd"]:
+              try:
+                t=get(ep+"?"+urllib.parse.urlencode({"query":q}),"application/sparql-results+json"); return t[:600]
+              except Exception as e: return f"ERR {e}"
+          print("DNB pred", dnb(f"SELECT ?p (COUNT(*) AS ?c) WHERE {{ ?r <http://purl.org/dc/terms/creator> <{G}> . ?r ?p ?o }} GROUP BY ?p ORDER BY DESC(?c) LIMIT 30"))
+          print("DNB tot", dnb(f"SELECT (COUNT(DISTINCT ?r) AS ?n) WHERE {{ ?r <http://purl.org/dc/terms/creator> <{G}> }}"))
+          print("DNB lang", dnb(f"SELECT ?l (COUNT(DISTINCT ?r) AS ?n) WHERE {{ ?r <http://purl.org/dc/terms/creator> <{G}> ; <http://purl.org/dc/terms/language> ?l }} GROUP BY ?l ORDER BY DESC(?n) LIMIT 5"))
+          print("DNB issued", dnb(f"SELECT ?d WHERE {{ ?r <http://purl.org/dc/terms/creator> <{G}> ; <http://purl.org/dc/terms/issued> ?d }} LIMIT 5"))
+          def sru(nome,base,q,ver="1.2"):
+            try:
+              t=get(base+"?"+urllib.parse.urlencode({"version":ver,"operation":"searchRetrieve","query":q,"maximumRecords":"0"}))
+              print(nome,q,"->",n(t))
+            except Exception as e: print(nome,q,"ERR",e)
+          def explain(nome,base,ver="1.2"):
+            try:
+              t=get(base+"?"+urllib.parse.urlencode({"version":ver,"operation":"explain"}))
+              idx=sorted(set(re.findall(r'<(?:\w+:)?name[^>]*>([^<]+)</(?:\w+:)?name>',t)))
+              print(nome,"INDICI",[i for i in idx if re.search(r"auth|lang|date|year|creator|author|type|id",i,re.I)][:60])
+            except Exception as e: print(nome,"explain ERR",e)
+          BNE="https://catalogo.bne.es/view/sru/34BNE_INST"; BL="https://eu06.alma.exlibrisgroup.com/view/sru/44BL_MAIN"
+          explain("BNE",BNE); explain("BL",BL)
+          sru("BNE",BNE,'alma.creator="Brecht, Bertolt"'); sru("BNE",BNE,'alma.creator="Brecht, Bertolt" and alma.language=spa')
+          sru("BNE",BNE,'alma.authority_id=XX1150786'); sru("BNE",BNE,'alma.creator="Brecht, Bertolt" and alma.main_pub_date>=2000')
+          sru("BL",BL,'alma.creator="Brecht, Bertolt"'); sru("BL",BL,'alma.creator="Brecht, Bertolt" and alma.language=eng')
+          sru("BL",BL,'alma.creator="Brecht, Bertolt" and alma.language=eng and alma.main_pub_date>=2000')
+          sru("LOC","https://lx2.loc.gov/sru/lcdb",'dc.author="Brecht, Bertolt"',"1.1")
+          sru("JISC","https://discover.libraryhub.jisc.ac.uk/sru-api",'dc.creator="Brecht, Bertolt"',"1.1")
+          PY
