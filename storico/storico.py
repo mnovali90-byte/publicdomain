@@ -11,7 +11,7 @@ Due insiemi di dati con due scopi diversi, così il lavoro resta leggero:
             per queste si contano le visite della settimana (Wikipedia en + it).
             Scrive data/storico/opere.json (quelle misurate) e data/storico/playlist.json.
 
-Regola per la lettera di un file: prima lettera (senza accenti) della prima parola e della prima parola
+Regola per il file: prime due lettere (senza accenti) della prima parola e della prima parola
 dopo un eventuale articolo (the, il, la, der, les...). Per gli autori: prima e ultima parola del nome.
 La pagina deve usare la stessa regola (funzione chiavi_ricerca).
 
@@ -23,6 +23,8 @@ from datetime import date, datetime, timedelta, timezone
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "scripts"))
 from opere import CLASSI, GENERI, get, qid, sparql, val  # noqa: E402
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from per_autore import semi, opere_per_autore  # noqa: E402
 
 UA = {"User-Agent": "PublicDomainRadar/1.0 (https://publicdomainradar.com; open data project)"}
 ANNO_A = int(os.environ.get("STORICO_ANNO_A", date.today().year - 96))   # 2026 -> 1930
@@ -45,7 +47,8 @@ def _norm(t):
 
 
 def _lettera(parola):
-    return parola[0] if parola and parola[0].isalpha() else "_"
+    """Le prime due lettere della parola (file più piccoli da scaricare): «promessi» -> «pr»."""
+    return parola[:2] if parola and parola[0].isalpha() else "_"
 
 
 def chiavi_ricerca(testo, autore=False):
@@ -190,7 +193,8 @@ def costruisci_playlist(ops):
             generi.setdefault(g, []).append(o)
         if o.get("lingua"):
             lingue.setdefault(o["lingua"]["en"], []).append(o)
-        decenni.setdefault(str(o["anno"] // 10 * 10) if o["anno"] >= 1800 else "prima del 1800", []).append(o)
+        y = o.get("anno")
+        decenni.setdefault("data non nota" if y is None else str(y // 10 * 10) if y >= 1800 else "prima del 1800", []).append(o)
 
     def gruppi(d, minimo, n=30):
         r = [{"chiave": k, "n": len(v), "opere": top(v, n)} for k, v in d.items() if len(v) >= minimo]
@@ -210,15 +214,16 @@ def scrivi_ricerca(ops):
     autori = {}
     for o in ops:
         riga = [o["qid"], o["titolo"], o["titolo_it"] or "", o["anno"], o["pagine"],
-                [[a["qid"], a["nome"], a["morte"]] for a in o["autori"]]]
+                [[a["qid"], a["nome"], a["morte"], 1 if a.get("antico") else 0] for a in o["autori"]]]
         for k in chiavi_ricerca(o["titolo"]) | chiavi_ricerca(o["titolo_it"] or ""):
             lettere.setdefault(k, {"opere": [], "autori": []})["opere"].append(riga)
         for a in o["autori"]:
-            x = autori.setdefault(a["qid"], {"qid": a["qid"], "nome": a["nome"], "morte": a["morte"], "n": 0})
+            x = autori.setdefault(a["qid"], {"qid": a["qid"], "nome": a["nome"], "morte": a["morte"], "n": 0,
+                                             "antico": 1 if a.get("antico") else 0})
             x["n"] += 1
     for a in autori.values():
         for k in chiavi_ricerca(a["nome"], autore=True):
-            lettere.setdefault(k, {"opere": [], "autori": []})["autori"].append([a["qid"], a["nome"], a["morte"], a["n"]])
+            lettere.setdefault(k, {"opere": [], "autori": []})["autori"].append([a["qid"], a["nome"], a["morte"], a["n"], a["antico"]])
     peso = 0
     for k, d in lettere.items():
         d["opere"].sort(key=lambda r: -r[4])
@@ -275,9 +280,21 @@ def main():
                 tutte[o["qid"]] = o
         else:
             mancanti.append(nome)
-    incompleto = bool(mancanti)
+    # 1b) SECONDA STRADA: tutte le opere scritte degli autori (vedi storico/per_autore.py)
+    fine_budget = inizio_wd + BUDGET_WIKIDATA * 60
+    autori_date = {a["qid"] for o in tutte.values() for a in o["autori"]}
+    semi_q, fasce_mancanti = semi(autori_date, fine_budget)
+    per_aut, cassetti_mancanti = opere_per_autore(semi_q, fine_budget)
+    prima = len(tutte)
+    for o in per_aut:
+        tutte[o["qid"]] = o
+    print(f"autori-seme: {len(semi_q)} | opere dalla ricerca per data: {prima} | dopo la ricerca per autore: {len(tutte)}"
+          f" | fasce di autori mancanti: {len(fasce_mancanti)} | cassetti da riscaricare: {cassetti_mancanti}", flush=True)
+    if fasce_mancanti or cassetti_mancanti:
+        mancanti = mancanti + [f"semi:{k}" for k in fasce_mancanti] + ([f"cassetti:{cassetti_mancanti}"] if cassetti_mancanti else [])
     if saltati:
         print("PERIODI SENZA RISPOSTA da Wikidata:", ", ".join(saltati))
+    incompleto = bool(mancanti)
     if mancanti:
         print(f"periodi ancora da scaricare ({len(mancanti)}): il prossimo giro riparte da qui")
         open(".storico_incompleto", "w").write(" ".join(mancanti))
@@ -327,7 +344,8 @@ def main():
             "settimana": [ini.isoformat(), fine.isoformat()], "interrotto_per_tempo": esaurito, "periodi_mancanti": mancanti,
             "regola": f"USA: opere pubblicate fino al {ANNO_A} (95 anni compiuti), compreso tutto ciò che è più antico",
             "fonte": "Wikidata (CC0), Wikipedia (visite)",
-            "copertura": f"ricerca: tutte le opere con anno di prima pubblicazione su Wikidata e una pagina Wikipedia; "
+            "copertura": f"ricerca: le opere con anno su Wikidata e una pagina Wikipedia, più tutte le opere scritte degli scrittori morti "
+                         f"entro il {date.today().year - 71} e degli autori delle opere più note, se libere in almeno un paese; "
                          f"playlist e visite: le {MAX_VISITE} più note"}
     json.dump({**meta, "opere": [{k: v for k, v in o.items() if k not in ("wiki_en", "wiki_it")} for o in misurate]},
               open(f"{USCITA}/opere.json", "w", encoding="utf8"), ensure_ascii=False, separators=(",", ":"))

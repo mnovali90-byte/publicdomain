@@ -28,7 +28,7 @@ jobs:
           python-version: "3.12"
       - name: Opere libere negli USA, con le visite della settimana
         env:
-          BUDGET_MINUTI_WIKIDATA: "60"
+          BUDGET_MINUTI_WIKIDATA: "75"
           BUDGET_MINUTI_VISITE: "35"
         run: python storico/storico.py
       - name: Salva i dati nel repository
