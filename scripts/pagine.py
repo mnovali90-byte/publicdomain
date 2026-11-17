@@ -358,6 +358,11 @@ def pagina_autore(a, slug, lang, ha_altra):
         out.append("</ul>\n")
         if a.get("n_opere", 0) > len(a["opere"][:10]):
             out.append(f'<p class="sotto">Su {migliaia(a["n_opere"])} opere registrate in Wikidata, qui le più note.</p>\n')
+    elif [o for o in a["opere"][:10] if o.get("titolo_en")]:   # titoli inglesi da Wikidata, dove esistono
+        out.append("<h2>Main works</h2>\n<ul>\n")
+        for o in [o for o in a["opere"][:10] if o.get("titolo_en")]:
+            out.append(f"<li>{esc(o['titolo_en'])}" + (f" ({esc(o['anno'])})" if o.get("anno") else "") + "</li>\n")
+        out.append("</ul>\n")
     elif a.get("n_opere"):
         out.append(f"<h2>Works</h2>\n<p>{migliaia(a['n_opere'], lang)} works are recorded in Wikidata for this author.</p>\n")
 

@@ -139,12 +139,13 @@ def opere_wikidata(codici):
     """{codice: [opere]}: opere collegate all'autore (autore di, opera notevole)."""
     valori = " ".join("wd:" + c for c in codici)
     q = f"""
-SELECT ?a ?o ?oLabel ?data ?sl ?genereLabel ?notevole WHERE {{
+SELECT ?a ?o ?oLabel ?titoloEn ?data ?sl ?genereLabel ?notevole WHERE {{
   VALUES ?a {{ {valori} }}
   {{ ?o wdt:P50 ?a }} UNION {{ ?a wdt:P800 ?o }}
   ?o wikibase:sitelinks ?sl .
   FILTER NOT EXISTS {{ ?o wdt:P31 wd:Q13442814 }}
   OPTIONAL {{ ?o wdt:P577 ?data }}
+  OPTIONAL {{ ?o rdfs:label ?titoloEn . FILTER(LANG(?titoloEn) = "en") }}
   OPTIONAL {{ ?o wdt:P136 ?genere }}
   OPTIONAL {{ ?a wdt:P800 ?o . BIND(true AS ?notevole) }}
   SERVICE wikibase:label {{ bd:serviceParam wikibase:language "it,en,mul,de,fr,es". }}
@@ -158,8 +159,10 @@ SELECT ?a ?o ?oLabel ?data ?sl ?genereLabel ?notevole WHERE {{
             continue
         d = per_autore.setdefault(a, {}).setdefault(o, {
             "titolo": titolo, "anno": None, "sl": int(r["sl"]["value"]),
-            "notevole": False, "generi": set(),
+            "notevole": False, "generi": set(), "titolo_en": None,
         })
+        if r.get("titoloEn") and not d["titolo_en"]:
+            d["titolo_en"] = r["titoloEn"]["value"]
         anno = r.get("data", {}).get("value", "")[:4]
         if anno.isdigit() and (d["anno"] is None or int(anno) < d["anno"]):
             d["anno"] = int(anno)
@@ -182,7 +185,7 @@ def riassumi_opere(lista, massimo=8):
             conteggio[g] = conteggio.get(g, 0) + 1
     generi = [g for g, _ in sorted(conteggio.items(), key=lambda kv: (-kv[1], kv[0]))[:4]]
     return {
-        "opere": [{"titolo": o["titolo"], "anno": o["anno"], "generi": sorted(o["generi"]), "sl": o["sl"]}
+        "opere": [{"titolo": o["titolo"], **({"titolo_en": o["titolo_en"]} if o.get("titolo_en") else {}), "anno": o["anno"], "generi": sorted(o["generi"]), "sl": o["sl"]}
                   for o in ordinate[:massimo]],
         "n_opere": len(lista),
         "generi": generi,
@@ -374,7 +377,8 @@ def da_aggiornare(voce, oggi):
     """True se mancano dati nuovi (versione vecchia) o se la voce è scaduta."""
     return (voce is None or voce.get("v", 1) < VERSIONE_CACHE or not e_recente(voce, oggi)
             or voce.get("bios_v") != 2        # biografie in italiano e inglese ancora da completare
-            or voce.get("visite_v") != 3)     # visite ancora da separare per lingua (3 = anche es, de, fr)
+            or voce.get("visite_v") != 3
+            or voce.get("opere_v") != 2)      # 2 = anche il titolo inglese delle opere     # visite ancora da separare per lingua (3 = anche es, de, fr)
 
 
 def _autore(a, b, opere_a, vecchia, oggi):
@@ -382,6 +386,7 @@ def _autore(a, b, opere_a, vecchia, oggi):
     serve_pesante = not e_recente(vecchia, oggi)
     voce = dict(vecchia)
     voce.update(riassumi_opere(opere_a))
+    voce["opere_v"] = 2
     voce["paesi"], voce["lingue"], voce["titoli"] = b["paesi"], b["lingue"], b["titoli"]
     voce.pop("foto", None)
     if b["img"]:

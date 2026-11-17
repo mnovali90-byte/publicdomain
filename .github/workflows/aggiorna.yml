@@ -47,6 +47,12 @@ jobs:
         env:
           BUDGET_MINUTI_SBN: "25"
         run: python scripts/sbn.py
+      - name: Conta le edizioni francesi nel catalogo della BnF
+        # dato accessorio: se fallisce, il resto viene salvato comunque
+        continue-on-error: true
+        env:
+          BUDGET_MINUTI_BNF: "25"
+        run: python scripts/bnf.py
       - name: Opere in pubblico dominio negli USA (Wikidata, Wikipedia, Commons)
         # dato accessorio: se fallisce, il resto viene salvato comunque
         continue-on-error: true
