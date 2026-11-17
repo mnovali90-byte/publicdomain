@@ -100,6 +100,7 @@ def semi(da_date, budget_fine):
     if s.get("famose"):
         tutti |= set(s["famose"]["autori"])
     mancanti = [k for k in (f"{da}-{a}" for da, a in fasce_morte()) if k not in s["fasce"]]
+    tutti = {a for a in tutti if a and re.fullmatch(r"Q\d+", a)}   # niente autori «anonimi» senza codice
     return sorted(tutti), mancanti
 
 

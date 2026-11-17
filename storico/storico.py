@@ -196,11 +196,27 @@ def costruisci_playlist(ops):
         y = o.get("anno")
         decenni.setdefault("data non nota" if y is None else str(y // 10 * 10) if y >= 1800 else "prima del 1800", []).append(o)
 
+    # tre scaffali sulle differenze tra paesi: utili a chi pubblica (un libro libero negli USA non lo è per forza in Italia)
+    anno_ue = date.today().year - 71
+    def ue(o):
+        au = o.get("autori") or []
+        return bool(au) and all((a.get("morte") is not None and a["morte"] <= anno_ue) or a.get("antico") for a in au)
+    def usa(o):
+        return o.get("anno") is not None and o["anno"] <= ANNO_A
+    def ultimo_morto(o):
+        m = [a.get("morte") for a in o.get("autori") or [] if a.get("morte") is not None]
+        return max(m) if m else None
+    confronto = {
+        "solo_usa": top([o for o in ops if usa(o) and not ue(o)], 30),
+        "solo_ue": top([o for o in ops if ue(o) and not usa(o)], 30),
+        "nuovi": top([o for o in ops if o.get("anno") == ANNO_A or (ue(o) and ultimo_morto(o) == anno_ue)], 30),
+    }
+
     def gruppi(d, minimo, n=30):
         r = [{"chiave": k, "n": len(v), "opere": top(v, n)} for k, v in d.items() if len(v) >= minimo]
         return sorted(r, key=lambda g: -g["n"])
     return {"piu_letti": top(ops, 50), "autori": autori[:40],
-            "generi": gruppi(generi, 5), "lingue": gruppi(lingue, 5), "decenni": gruppi(decenni, 1, 20)}
+            "generi": gruppi(generi, 5), "lingue": gruppi(lingue, 5), "decenni": gruppi(decenni, 1, 20), **confronto}
 
 
 # ------------------------------------------------------------------ ricerca (un file per lettera)
