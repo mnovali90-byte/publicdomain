@@ -9181,6 +9181,13 @@
      "metodo": "viaf",
      "fonte": "SBN"
     },
+    "bne_es": {
+     "trovato": true,
+     "edizioni": 5,
+     "dal_2000": 0,
+     "fonte": "BNE",
+     "metodo": "nome_anni"
+    },
     "bl_en": {
      "trovato": true,
      "edizioni": 1,
@@ -25463,6 +25470,13 @@
      "metodo": null,
      "fonte": "SBN"
     },
+    "bne_es": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 0,
+     "fonte": "BNE",
+     "metodo": "nome_anni"
+    },
     "bl_en": {
      "trovato": true,
      "edizioni": 7,
@@ -37443,9 +37457,10 @@
    "indice_int": 0,
    "indice": 23,
    "verifica": {
-    "esito": "una_fonte",
+    "esito": "verificato",
     "fonti": {
-     "wikidata": 1947
+     "wikidata": 1947,
+     "gnd": 1947
     }
    }
   },
@@ -37909,6 +37924,13 @@
      "dal_2000": 0,
      "metodo": "viaf",
      "fonte": "SBN"
+    },
+    "bne_es": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 0,
+     "fonte": "BNE",
+     "metodo": "nome_anni"
     },
     "bl_en": {
      "trovato": false,

@@ -212,6 +212,11 @@
      "morte": 1939
     },
     {
+     "opera": "The Story of the Late Mr. Elvesham",
+     "nome": "Max Cowper",
+     "morte": 1911
+    },
+    {
      "opera": "The Soul of a Bishop",
      "nome": "Charles Allan Gilbert",
      "morte": 1929
@@ -220,11 +225,6 @@
      "opera": "The First Men in the Moon",
      "nome": "Claude Allin Shepperson",
      "morte": 1921
-    },
-    {
-     "opera": "The Story of the Late Mr. Elvesham",
-     "nome": "Max Cowper",
-     "morte": 1911
     }
    ],
    "pagina": "h-g-wells",
@@ -18300,6 +18300,13 @@
      "dal_2000": 1,
      "metodo": "nome",
      "fonte": "SBN"
+    },
+    "bne_es": {
+     "trovato": true,
+     "edizioni": 11,
+     "dal_2000": 1,
+     "fonte": "BNE",
+     "metodo": "nome_anni"
     },
     "bl_en": {
      "trovato": false,

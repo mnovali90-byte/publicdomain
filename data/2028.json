@@ -6221,6 +6221,13 @@
      "metodo": "codice_bnf",
      "fonte": "BnF"
     },
+    "bne_es": {
+     "trovato": true,
+     "edizioni": 10,
+     "dal_2000": 1,
+     "fonte": "BNE",
+     "metodo": "nome_anni"
+    },
     "bl_en": {
      "trovato": true,
      "edizioni": 7,
@@ -20192,6 +20199,13 @@
      "metodo": null,
      "fonte": "SBN"
     },
+    "bne_es": {
+     "trovato": true,
+     "edizioni": 3,
+     "dal_2000": 3,
+     "fonte": "BNE",
+     "metodo": "nome_anni"
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -22139,6 +22153,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bne_es": {
+     "trovato": true,
+     "edizioni": 10,
+     "dal_2000": 0,
+     "fonte": "BNE",
+     "metodo": "nome_anni"
     },
     "bl_en": {
      "trovato": false,

@@ -9111,6 +9111,13 @@
      "metodo": "codice_bnf",
      "fonte": "BnF"
     },
+    "bne_es": {
+     "trovato": true,
+     "edizioni": 18,
+     "dal_2000": 0,
+     "fonte": "BNE",
+     "metodo": "nome_anni"
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -30341,6 +30348,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bne_es": {
+     "trovato": true,
+     "edizioni": 5,
+     "dal_2000": 5,
+     "fonte": "BNE",
+     "metodo": "nome_anni"
     },
     "bl_en": {
      "trovato": true,
