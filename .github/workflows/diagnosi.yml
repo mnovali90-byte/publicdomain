@@ -1,0 +1,42 @@
+name: diagnosi
+on:
+  push:
+    paths: [".github/workflows/diagnosi.yml"]
+jobs:
+  d:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Quante opere mancano allo storico (non salva nulla)
+        run: |
+          cd scripts && python3 - <<'PY'
+          import json, glob, time
+          from opere import CLASSI, sparql, val, qid
+          gia=set()
+          for f in glob.glob("../data/storico/ricerca/*.json"):
+              for o in json.load(open(f))["opere"]: gia.add(o[0])
+          classi=" ".join("wd:"+c for c in CLASSI)
+          def conta(nome, filtro, soglia):
+              q=f"""SELECT DISTINCT ?w ?wLabel ?sl WHERE {{ VALUES ?c {{ {classi} }}
+                {{ ?w wdt:P31 ?c }} UNION {{ ?w wdt:P31 wd:Q47461344; wdt:P7937 ?c }}
+                ?w wikibase:sitelinks ?sl. FILTER(?sl>={soglia})
+                FILTER NOT EXISTS {{ ?w wdt:P577 ?d }}
+                {filtro}
+                SERVICE wikibase:label {{ bd:serviceParam wikibase:language "it,en". }} }}"""
+              try: r=sparql(q)
+              except Exception as e: print("ERR|",nome,e); return
+              nuove=[(int(val(x,"sl")),val(x,"wLabel")) for x in r if qid(val(x,"w")) not in gia]
+              nuove=sorted(set(nuove),reverse=True)
+              print("GRUPPO|",nome,"| soglia",soglia,"| nuove",len(nuove))
+              print("ESEMPI|",nome,"|",[t for s,t in nuove[:40]])
+              time.sleep(3)
+          conta("data di creazione fino al 1930", "?w wdt:P571 ?i. FILTER(YEAR(?i)<=1930)", 1)
+          conta("nessuna data, autori morti prima del 1900", "FILTER NOT EXISTS { ?w wdt:P571 ?i } ?w wdt:P50 ?a. ?a wdt:P570 ?m. FILTER(YEAR(?m)<1900) FILTER NOT EXISTS { ?w wdt:P50 ?b. ?b wdt:P570 ?m2. FILTER(YEAR(?m2)>=1900) } FILTER NOT EXISTS { ?w wdt:P50 ?b2. FILTER NOT EXISTS { ?b2 wdt:P570 ?m3 } }", 1)
+          for t in ["Q41567","Q1052","Q8275","Q35160","Q160434","Q4580"]:
+              r=sparql(f"SELECT ?l ?p ?i ?c WHERE {{ wd:{t} rdfs:label ?l FILTER(LANG(?l)='en') OPTIONAL {{ wd:{t} wdt:P577 ?p }} OPTIONAL {{ wd:{t} wdt:P571 ?i }} OPTIONAL {{ wd:{t} wdt:P31 ?c }} }}")
+              print("CASO|",t,t in gia,[(val(x,"l"),val(x,"p"),val(x,"i"),val(x,"c")) for x in r][:3]); time.sleep(1)
+          PY
