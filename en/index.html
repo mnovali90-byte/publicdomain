@@ -251,12 +251,52 @@ dialog::backdrop{background:rgba(12,12,16,.72)}
 .pulsanti .pillola[aria-pressed="true"]{color:var(--carta)}
 .pulsanti .pillola[aria-pressed="true"] svg{fill:var(--vermiglio)}
 .tag{display:inline-block;margin:0 8px 8px 0;padding:6px 12px;background:var(--riquadro);font-size:14px}
+.sa{padding:0;max-width:720px;margin:0 auto}
+.sa-top{position:sticky;top:0;z-index:3;display:flex;justify-content:space-between;align-items:center;padding:14px 16px 0 24px;background:var(--carta)}
+.sa-top .chiudi{position:static;float:none;margin:0}
+.sa-et,.sa-sez h4,.sa-paese span{font-family:var(--mono);font-weight:500;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muto)}
+.sa-head{display:flex;gap:18px;align-items:flex-end;padding:18px 24px 8px}
+.sa-foto{flex:none;width:104px}
+.sa-foto .ritratto{aspect-ratio:104/132}
+.sa-foto .ritratto .iniziali{font-size:64px}
+.sa h2{font-size:clamp(40px,10vw,64px)}
+.sa-desc{margin:8px 0 0;font-size:15px;line-height:1.4;color:var(--muto)}
+.sa-credito{padding:0 24px;font-family:var(--mono);font-size:11px;color:var(--muto)}
+.sa-paese{margin:16px 24px 22px;display:flex;align-items:center;gap:10px;border:1.5px solid var(--ink);height:48px;padding:0 12px 0 16px}
+.sa-paese span{color:var(--ink)}
+.sa-paese select{flex:1;height:100%;border:0;background:transparent;font-family:var(--mono);font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);cursor:pointer}
+.sa-libero{padding:0 24px 30px}
+.sa-libero .libero-blocco{margin-top:0}
+.lb-ver{margin-top:12px;display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.45;color:var(--muto)}
+.lb-ver svg{flex:none;margin-top:2px;color:var(--ink)}
+.sa-sez{padding:28px 24px;border-top:1px solid #D9D6CC}
+.sa-sez h4{margin:0 0 16px}
+.sa .bio{margin:0;font-size:17px;line-height:1.55}
+.sa-sez a{display:inline-block;margin-top:12px;font-size:15px;color:var(--ink)}
+.sa-nota{margin:12px 0 0;font-size:14px;line-height:1.5;color:var(--muto)}
+.sa-testo{margin:0;font-size:15px;line-height:1.55}
+.sa-opere{list-style:none;margin:0;padding:0}
+.sa-opere li{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid #D9D6CC;font-size:17px;line-height:1.35}
+.sa-opere .anno{flex:none;font-family:var(--mono);font-size:13px;color:var(--muto)}
+.sa-barra{display:flex;flex-direction:column;gap:8px;margin-bottom:18px}
+.sa-bn{font-size:17px;font-weight:600}
+.sa-asta{height:10px;background:var(--riquadro)}
+.sa-asta i{display:block;height:10px;background:var(--vermiglio)}
+.sa-val{font-size:14px;color:var(--muto)}
+.sa-val b{color:var(--ink)}
+.sa-azioni{padding:8px 24px 16px}
+.sa-salva{width:100%;height:56px;background:var(--ink);color:var(--carta);border:0;font-family:var(--mono);font-size:13px;letter-spacing:.12em;text-transform:uppercase;display:flex;align-items:center;justify-content:center;gap:10px;cursor:pointer}
+.sa-salva svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2}
+.sa-salva[aria-pressed="true"] svg{fill:var(--vermiglio);stroke:var(--vermiglio)}
+.sa-link{display:flex;flex-wrap:wrap;gap:10px 18px;padding:4px 24px 36px;font-size:14px}
+.sa-link a,.sa-linkbtn{color:var(--ink);font-size:14px}
+.sa-linkbtn{background:none;border:0;padding:0;text-decoration:underline;cursor:pointer;font-family:inherit}
 .libero-blocco{margin-top:22px;background:var(--vermiglio);color:var(--ink);padding:20px 22px}
 .libero-blocco .lb-et{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase}
 .libero-blocco .lb-data{font-family:var(--display);font-weight:900;font-size:clamp(36px,9vw,52px);line-height:.95;text-transform:uppercase;margin:6px 0}
 .libero-blocco .lb-sotto{font-size:15px}
 .lb-ver{margin-top:10px}
-.lb-altri{margin-top:14px;border-top:1px solid var(--riquadro);border-bottom:1px solid var(--riquadro)}
+.lb-altri{margin-top:18px;border-top:1px solid var(--riquadro);border-bottom:1px solid var(--riquadro)}
 .lb-altri summary{padding:12px 0;font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;cursor:pointer}
 .lb-altri ul{list-style:none;margin:0;padding:0 0 12px}
 .lb-altri li{display:flex;justify-content:space-between;gap:16px;padding:6px 0;font-size:15px}
@@ -444,6 +484,8 @@ it: {
   titolo: "Pubblico dominio 2027: gli autori che diventano liberi · Public Domain Radar",
   indiceAutori: "Indice degli autori (una pagina per ogni autore)", paginaDedicata: "Pagina dedicata", paginaDedicataEn: "Pagina dedicata",
   descrizione: "Gli autori le cui opere entrano nel pubblico dominio in Europa il prossimo 1° gennaio. Dati aperti da Wikidata e Wikipedia, aggiornati ogni mese.",
+  schedaAutore: "Scheda autore", paeseEt: "Paese", continuaWp: "Continua su Wikipedia", vVisWp: "{n} visite su Wikipedia in 12 mesi", vLingueWp: "pagina Wikipedia in {n} lingue",
+  barraNomi: { it: "In Italia", fr: "In Francia", de: "In Germania", es: "In Spagna", en: "Nel mondo anglofono", int: "Nel mondo" }, altriLink: "Cerca altrove",
   liberoIn: "Libero {p} dal", nonPrima: "non prima del ", traGiorni: "tra {n} giorni", giaLibero: "già libero", mortoIl: "anno di morte {a}",
   verificato: "Anno di morte confermato da {n} fonti: {f}.", fontiNomi: { wikidata: "Wikidata", gnd: "Biblioteca nazionale tedesca", loc: "Library of Congress" },
   altriPaesi: "Negli altri paesi", nomiPaesi: { it: "Italia", fr: "Francia", de: "Germania", uk: "Regno Unito", es: "Spagna" }, usaRiga: "dipende dall'anno di pubblicazione di ogni opera",
@@ -548,6 +590,8 @@ en: {
   titolo: "Public Domain 2027: books and authors entering the public domain · Public Domain Radar",
   indiceAutori: "Index of authors (one page per author)", paginaDedicata: "Dedicated page (Italian)", paginaDedicataEn: "Dedicated page",
   descrizione: "The authors whose works enter the public domain in Europe on 1 January next year. Open data from Wikidata and Wikipedia, updated monthly.",
+  schedaAutore: "Author card", paeseEt: "Country", continuaWp: "Continue on Wikipedia", vVisWp: "{n} Wikipedia views in 12 months", vLingueWp: "Wikipedia page in {n} languages",
+  barraNomi: { it: "In Italy", fr: "In France", de: "In Germany", es: "In Spain", en: "In the English-speaking world", int: "Worldwide" }, altriLink: "Look elsewhere",
   liberoIn: "Free {p} from", nonPrima: "not before ", traGiorni: "in {n} days", giaLibero: "already free", mortoIl: "died in {a}",
   verificato: "Year of death confirmed by {n} sources: {f}.", fontiNomi: { wikidata: "Wikidata", gnd: "German National Library", loc: "Library of Congress" },
   altriPaesi: "In other countries", nomiPaesi: { it: "Italy", fr: "France", de: "Germany", uk: "United Kingdom", es: "Spain" }, usaRiga: "depends on the publication year of each work",
@@ -1329,6 +1373,11 @@ function dataLibera(a, c) {
   return { anno: D + anni, prima: anni === 81 };
 }
 const dataLunga = (y) => new Date(Date.UTC(y, 0, 1)).toLocaleDateString(LING === "it" ? "it-IT" : "en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
+function spunta() {
+  const s = h("svg", { viewBox: "0 0 24 24", width: "18", height: "18", "aria-hidden": "true", fill: "none", stroke: "currentColor", "stroke-width": "2.2", "stroke-linecap": "round", "stroke-linejoin": "round" });
+  s.append(h("path", { d: "M4 12l5 5L20 6" }));
+  return s;
+}
 function bloccoLibero(a, c) {
   const x = dataLibera(a, c);
   if (!x) return null;
@@ -1341,7 +1390,7 @@ function bloccoLibero(a, c) {
       h("div", { class: "lb-et" }, tr("liberoIn", { p: tr("paesiNomi")[c] })),
       h("div", { class: "lb-data" }, (x.prima ? tr("nonPrima") : "") + dataLunga(x.anno)),
       h("div", { class: "lb-sotto" }, (giorni > 0 ? tr("traGiorni", { n: n(giorni) }) : tr("giaLibero")) + " · " + tr("mortoIl", { a: String(a.morte).slice(0, 4) }))),
-    v.length >= 2 ? h("p", { class: "sotto lb-ver" }, tr("verificato", { n: v.length, f: v.map((k) => tr("fontiNomi")[k] || k).join(", ") })) : null,
+    v.length >= 2 ? h("div", { class: "lb-ver" }, spunta(), h("span", {}, tr("verificato", { n: v.length, f: v.map((k) => tr("fontiNomi")[k] || k).join(", ") }))) : null,
     h("details", { class: "lb-altri" }, h("summary", {}, tr("altriPaesi")), h("ul", {}, altri)));
 }
 function bloccoEdizioni(a, c) {
@@ -1349,32 +1398,29 @@ function bloccoEdizioni(a, c) {
   const x = a.traduzioni || {};
   const g = { it: x.sbn_it, fr: x.bnf_fr, es: x.bne_es, uk: x.bl_en }[c] || null;
   const tit = h("h4", {}, tr("edizTit", { l }));
-  if (!g) return h("div", {}, tit, h("p", { class: "sotto" }, c === "fr" || c === "es" ? tr("edizSenzaCodice", { b: c === "fr" ? "BnF" : "BNE" }) : tr("edizNd")));
-  if (!g.trovato) return h("div", {}, tit, h("p", { class: "sotto" }, tr("edizNonTrovato")));
+  const sez = (...f) => h("section", { class: "sa-sez" }, ...f);
+  if (!g) return sez(tit, h("p", { class: "sa-nota" }, c === "fr" || c === "es" ? tr("edizSenzaCodice", { b: c === "fr" ? "BnF" : "BNE" }) : tr("edizNd")));
+  if (!g.trovato) return sez(tit, h("p", { class: "sa-nota" }, tr("edizNonTrovato")));
   const box = (num, et) => h("div", { class: "ed-box" }, h("b", {}, n(num)), h("span", {}, et));
-  return h("div", {}, tit,
+  return sez(tit,
     h("div", { class: "ed-boxes" }, box(g.edizioni, tr("edizLibri", { l })), box(g.dal_2000 || 0, tr("edizDal2000") + (g.ultimo ? " · " + tr("edizUltimo", { a: g.ultimo }) : ""))),
-    h("p", { class: "sotto" }, tr({ it: "edizSbn", fr: "edizBnf", es: "edizBne", uk: "edizBl" }[c])),
-    c === "it" && g.metodo === "nome" ? h("p", { class: "sotto" }, tr("sbnPerNome")) : null);
+    h("p", { class: "sa-nota" }, tr({ it: "edizSbn", fr: "edizBnf", es: "edizBne", uk: "edizBl" }[c])),
+    c === "it" && g.metodo === "nome" ? h("p", { class: "sa-nota" }, tr("sbnPerNome")) : null);
 }
-function mostraAutore(id) {
+function mostraAutore(id, paeseForzato) {
   const t = trovaAutore(id);
   if (!t) return false;
   const { a, anno } = t;
-  const d = stato.dati[anno];
-  const cP = paeseScheda();
+  const cP = paeseForzato || paeseScheda();
   const nasc = a.nascita ? a.nascita.slice(0, 4) : "?", mor = a.morte ? a.morte.slice(0, 4) : "?";
-  const sotto = [`${nasc} – ${mor}`];
-  if ((a.paesi || []).length) sotto.push(a.paesi.map((x) => et(x)).join(", "));
+  const desc = [`${nasc} – ${mor}`];
+  if (LING === "it" && (a.professioni || []).length) desc.push(a.professioni.slice(0, 2).join(", "));
+  if ((a.paesi || []).length) desc.push(a.paesi.slice(0, 2).map((x) => et(x)).join(", "));
   const nome = a.nome;
   const bd = bioDi(a);
-  const bio = bd ? h("p", { class: "bio" }, pulisci(bd.testo), " ",
-    bd.url ? h("a", { href: bd.url, target: "_blank", rel: "noopener", style: "font-size:14px" }, tr("wikipedia")) : null,
-    bd.lingua !== LING ? h("span", { class: "sotto", style: "display:block;margin-top:8px" }, tr(a.bios ? "bioAltra" : "bioAltraPresto", { l: tr("nomiLingua")[bd.lingua] || bd.lingua })) : null) : null;
   const opere = (a.opere || []);
-  const catalogo = (a.tipo_catalogo || []).map((x) => (tr("tipi") || {})[x] || x);
-  const generi = (a.generiCanonici || []).map(nomeGenere);
   const lista = gruppi(anno).letterari;
+  const sez = (titolo, ...figli) => h("section", { class: "sa-sez" }, h("h4", {}, titolo), ...figli);
   const rangoM = (m) => {
     if (!stato.mercati || a["indice_" + m] === undefined) return 0;
     const salva = stato.mercato; stato.mercato = m;
@@ -1382,67 +1428,58 @@ function mostraAutore(id) {
     stato.mercato = salva;
     return r;
   };
-  const riga = (m) => {
+  const barra = (m) => {
     const v = a["indice_" + m];
-    const grezzoM = m === "int" ? a.pagine_wikipedia : a[CAMPO_M[m]];
-    const lingua = nomeLingua(["it", "es", "de", "fr"].includes(m) ? m : "en");
-    const testo = v === undefined ? tr("vNd")
-      : m === "int" ? tr("vLingue", { n: n(grezzoM || 0) })
-      : grezzoM === 0 ? tr("vNoPag", { l: lingua })
-      : tr("vIt", { n: n(grezzoM) });
+    const g = m === "int" ? a.pagine_wikipedia : a[CAMPO_M[m]];
+    const testo = v === undefined ? tr("vNd") : m === "int" ? tr("vLingueWp", { n: n(g || 0) })
+      : !g ? tr("vNoPag", { l: nomeLingua(["it", "es", "de", "fr"].includes(m) ? m : "en") }) : tr("vVisWp", { n: n(g) });
     const r = rangoM(m);
-    return h("div", { class: "misura" + (m === stato.mercato ? " attiva" : "") },
-      h("span", { class: "et" }, tr("mNomi")[m]),
-      h("div", { class: "asta", role: "img", "aria-label": `${v ?? 0} / 100` }, h("i", { style: `width:${Math.max(0, Math.min(100, v || 0))}%` })),
-      h("span", { class: "val" }, testo + (r ? " · " + tr("posizione", { r, t: n(lista.length), anno }) : "")));
+    return h("div", { class: "sa-barra" },
+      h("div", { class: "sa-bn" }, tr("barraNomi")[m]),
+      h("div", { class: "sa-asta", role: "img", "aria-label": `${v ?? 0} / 100` }, h("i", { style: `width:${Math.max(0, Math.min(100, v || 0))}%` })),
+      h("div", { class: "sa-val" }, testo, r ? [" · ", h("b", {}, tr("posizione", { r, t: n(lista.length), anno }))] : null));
   };
-  const spiegazione = h("details", { class: "spiega-indice" },
-    h("summary", {}, tr("comeSiLegge")),
-    tr("spiegaIndice").map((par) => h("p", {}, par.split("{anno}").join(String(anno)))),
-    h("p", { class: "sotto" }, tr("formulaTitolo") + tr("formula")));
-  const gut = a.gutenberg !== undefined && a.gutenberg !== null ? tr("gut", { n: n(a.gutenberg) }) : tr("gutNd");
-  const indice = stato.mercati && (a.indice_it !== undefined || a.indice_en !== undefined || a.indice_int !== undefined) ? h("div", {},
-    h("h4", {}, tr("quantoNoto")),
-    h("div", { class: "misure" }, mercatiDisp().filter((m) => m !== "scop").map(riga)),
-    h("p", { class: "sotto", style: "margin-top:10px" }, tr("curiosita"))) : (a.indice !== undefined ? h("div", {},
-    h("h4", {}, tr("popolarita")),
-    h("div", { class: "indice" }, h("span", { class: "num" }, String(a.indice)),
-      h("div", { class: "asta", role: "img", "aria-label": `${a.indice} / 100` }, h("i", { style: `width:${Math.max(2, Math.min(100, a.indice))}%` }))),
-    h("div", { class: "sotto", style: "margin-top:10px" }, a.visite_12m !== undefined && a.visite_12m !== null ? tr("visite", { n: n(a.visite_12m) }) : tr("visiteNd"), " · ", tr("pagineWm", { n: n(a.pagine_wikipedia || 0) }))) : null);
+  const mercatiScheda = [...new Set([mercatoPaese(cP), "int"])];
+  const noto = stato.mercati && a.indice_int !== undefined ? sez(tr("quantoNoto"), mercatiScheda.map(barra), h("p", { class: "sa-nota" }, tr("curiosita"))) : null;
+  const paesiScheda = ["it", "fr", "de", "uk", "es"];
+  const sceltaPaese = h("label", { class: "sa-paese" }, h("span", {}, tr("paeseEt")),
+    h("select", { "aria-label": tr("paeseEt"), onchange: (ev) => mostraAutore(id, ev.target.value) },
+      paesiScheda.map((k) => h("option", { value: k, selected: k === cP }, tr("nomiPaesi")[k]))));
   const urlCondiviso = LING === "en" && a.pagina_en ? `${location.origin}/en/author/${a.pagina_en}/` : a.pagina ? `${location.origin}/autore/${a.pagina}/` : location.href.split("#")[0] + `#/autore/${a.wikidata}`;
-  const copia = h("button", { class: "pillola", type: "button", onclick: async (ev) => {
+  const copia = h("button", { class: "sa-linkbtn", type: "button", onclick: async (ev) => {
     const b = ev.currentTarget;
     try { await navigator.clipboard.writeText(urlCondiviso); b.textContent = tr("linkCopiato"); }
     catch (e) { window.prompt(tr("copiaPrompt"), urlCondiviso); }
   } }, tr("copiaLink"));
-  const cuoreBtn = h("button", { class: "pillola", type: "button", "data-cuore": a.wikidata, "aria-pressed": èPreferito(a.wikidata) ? "true" : "false", onclick: () => alternaPreferito(a.wikidata) },
+  const salva = h("button", { class: "sa-salva", type: "button", "data-cuore": a.wikidata, "aria-pressed": èPreferito(a.wikidata) ? "true" : "false", onclick: () => alternaPreferito(a.wikidata) },
     cuoreSvg(), h("span", { class: "etichetta" }, èPreferito(a.wikidata) ? tr("inLista") : tr("salva")));
   const q = encodeURIComponent(`"${nome}"`);
-  const contenuto = h("div", { class: "scheda" },
-    chiudiBottone(),
-    h("div", { class: "scheda-corpo" },
-      h("div", {}, ritratto(a, { subito: true }), creditoFoto(a)),
-      h("div", {},
-        h("h2", {}, nome),
-        h("div", { class: "sotto" }, sotto.join(" · ")),
-        bloccoLibero(a, cP),
-        bio ? h("div", {}, h("h4", {}, tr("chiEra")), bio) : null,
-        opere.length ? h("div", {}, h("h4", {}, tr("opereP") + (a.n_opere > opere.length ? tr("opereSu", { x: n(opere.length), y: n(a.n_opere) }) : "")),
-          h("ul", { class: "opere" }, opere.map((o) => h("li", {}, (LING === "en" && o.titolo_en) || o.titolo, o.anno ? h("span", {}, String(o.anno)) : null)))) : null,
-        bloccoEdizioni(a, cP),
-        indice,
-        h("h4", {}, tr("primaPubbl")),
-        h("div", { class: "avviso", style: "margin-top:0" }, tr("avvisoBreve") + (cP === "it" ? tr("avvisoIt") : "")),
-        h("div", { class: "pulsanti" },
-          cuoreBtn,
-          linkEsterno(`https://www.google.com/search?tbm=bks&lr=lang_${LINGUA_PAESE[cP]}&q=inauthor:${q}`, tr("libriL", { l: nomeLingua(LINGUA_PAESE[cP]) })),
-          linkEsterno(`https://www.${AMAZON[cP]}/s?k=${encodeURIComponent(nome)}&i=digital-text`, tr("amazonP", { d: AMAZON[cP].replace(/^./, (m) => m.toUpperCase()) })),
-          cP === "it" ? linkEsterno(`https://www.google.com/search?q=site:opac.sbn.it+${q}`, tr("sbn")) : null,
-          cP === "fr" ? linkEsterno(`https://catalogue.bnf.fr/rechercher.do?motRecherche=${encodeURIComponent(nome)}`, tr("bnf")) : null,
-          a.pagina ? (LING === "en" && a.pagina_en ? h("a", { class: "pillola", href: `/en/author/${a.pagina_en}/` }, tr("paginaDedicataEn")) : h("a", { class: "pillola", href: `/autore/${a.pagina}/` }, tr("paginaDedicata"))) : null,
-          bd && bd.url ? linkEsterno(bd.url, tr("wikipedia")) : null,
-          linkEsterno(a.url, tr("wikidata")),
-          copia))));
+  const link = (href, testo) => h("a", { href, target: "_blank", rel: "noopener" }, testo);
+  const contenuto = h("div", { class: "scheda sa" },
+    h("div", { class: "sa-top" }, h("span", { class: "sa-et" }, tr("schedaAutore")), chiudiBottone()),
+    h("header", { class: "sa-head" },
+      h("div", { class: "sa-foto" }, ritratto(a, { subito: true })),
+      h("div", {}, h("h2", {}, nome), h("p", { class: "sa-desc" }, desc.join(" · ")))),
+    a.foto && a.foto.url ? h("div", { class: "sa-credito" }, creditoFoto(a)) : null,
+    sceltaPaese,
+    h("div", { class: "sa-libero" }, bloccoLibero(a, cP)),
+    bd ? sez(tr("chiEra"), h("p", { class: "bio" }, pulisci(bd.testo)),
+      bd.lingua !== LING ? h("p", { class: "sa-nota" }, tr(a.bios ? "bioAltra" : "bioAltraPresto", { l: tr("nomiLingua")[bd.lingua] || bd.lingua })) : null,
+      bd.url ? link(bd.url, tr("continuaWp")) : null) : null,
+    opere.length ? sez(tr("opereP") + (a.n_opere > opere.length ? tr("opereSu", { x: n(opere.length), y: n(a.n_opere) }) : ""),
+      h("ul", { class: "sa-opere" }, opere.map((o) => h("li", {}, h("span", {}, (LING === "en" && o.titolo_en) || o.titolo), o.anno ? h("span", { class: "anno" }, String(o.anno)) : null)))) : null,
+    bloccoEdizioni(a, cP),
+    noto,
+    sez(tr("primaPubbl"), h("p", { class: "sa-testo" }, tr("avvisoBreve") + (cP === "it" ? tr("avvisoIt") : ""))),
+    h("div", { class: "sa-azioni" }, salva),
+    h("div", { class: "sa-link" },
+      link(`https://www.google.com/search?tbm=bks&lr=lang_${LINGUA_PAESE[cP]}&q=inauthor:${q}`, tr("libriL", { l: nomeLingua(LINGUA_PAESE[cP]) })),
+      link(`https://www.${AMAZON[cP]}/s?k=${encodeURIComponent(nome)}&i=digital-text`, tr("amazonP", { d: AMAZON[cP].replace(/^./, (m) => m.toUpperCase()) })),
+      cP === "it" ? link(`https://www.google.com/search?q=site:opac.sbn.it+${q}`, tr("sbn")) : null,
+      cP === "fr" ? link(`https://catalogue.bnf.fr/rechercher.do?motRecherche=${encodeURIComponent(nome)}`, tr("bnf")) : null,
+      a.pagina ? (LING === "en" && a.pagina_en ? h("a", { href: `/en/author/${a.pagina_en}/` }, tr("paginaDedicataEn")) : h("a", { href: `/autore/${a.pagina}/` }, tr("paginaDedicata"))) : null,
+      link(a.url, tr("wikidata")),
+      copia));
   mostraFinestra(contenuto);
   return true;
 }
