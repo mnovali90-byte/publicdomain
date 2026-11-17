@@ -1,0 +1,40 @@
+name: diagnosi
+on:
+  push:
+    paths: [".github/workflows/diagnosi.yml"]
+jobs:
+  d:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Prova BNE per nome e anni (non salva nulla)
+        run: |
+          cd scripts && python3 - <<'PY'
+          import json, pathlib
+          from alma import quanti, chiave_nome, _ascii, CATALOGHI
+          url=CATALOGHI["bne_es"]["url"]
+          d=json.load(open("../data/2027.json")); au={a["wikidata"]:a for a in d["autori"]}
+          cache=json.load(open("../data/cache_alma.json"))
+          con=[(q,v) for q,v in cache.items() if q in au and (v.get("bne_es") or {}).get("trovato")]
+          con.sort(key=lambda x:-x[1]["bne_es"]["edizioni"])
+          print("== CON CODICE: codice vs nome+anni ==")
+          for q,v in con[:20]:
+              a=au[q]; k=chiave_nome(a)
+              if not k: continue
+              for forma in [f'alma.creator all "{_ascii(k)}"']:
+                  try: n=quanti(url, forma+' and alma.language=spa')
+                  except Exception as e: n=str(e)
+                  print("CMP|",a["nome"],"|",k,"| codice",v["bne_es"]["edizioni"],"| nome",n)
+          print("== SENZA CODICE ==")
+          senza=sorted([a for a in d["autori"] if a.get("letterario") and not (cache.get(a["wikidata"]) or {}).get("bne_es")], key=lambda a:-(a.get("indice_int") or 0))[:25]
+          for a in senza:
+              k=chiave_nome(a)
+              if not k: print("NOK|",a["nome"],"| senza anni"); continue
+              try: n=quanti(url, f'alma.creator all "{_ascii(k)}" and alma.language=spa')
+              except Exception as e: n=str(e)
+              print("NEW|",a["nome"],"|",k,"|",n)
+          PY
