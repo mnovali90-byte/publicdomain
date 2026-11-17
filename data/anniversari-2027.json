@@ -7,37 +7,6 @@
  ],
  "voci": [
   {
-   "tipo": "prima edizione",
-   "qid": "Q574630",
-   "nome": "Anti-Dühring",
-   "it": "Anti-Dühring",
-   "desc": "polemic pamphlet by Friedrich Engels against Eugen Dühring",
-   "autore": "Friedrich Engels",
-   "autore_qid": "Q34787",
-   "anno": 1877,
-   "anni": 150,
-   "pagine": 31,
-   "mese": 1,
-   "giorno": 3,
-   "fonte_data": "wikipedia (testo: de)",
-   "scheda": {
-    "it": {
-     "desc": "saggio di Friedrich Engels",
-     "generi": [],
-     "lingua": "tedesco",
-     "titolo_orig": "Herrn Eugen Dührings Umwälzung der Wissenschaft",
-     "wiki": "https://it.wikipedia.org/wiki/Anti-D%C3%BChring"
-    },
-    "en": {
-     "desc": "polemic pamphlet by Friedrich Engels against Eugen Dühring",
-     "generi": [],
-     "lingua": "German",
-     "titolo_orig": "Herrn Eugen Dührings Umwälzung der Wissenschaft",
-     "wiki": "https://en.wikipedia.org/wiki/Anti-D%C3%BChring"
-    }
-   }
-  },
-  {
    "tipo": "nascita",
    "qid": "Q1252645",
    "nome": "Stella Gibbons",
@@ -577,45 +546,6 @@
      "morto": 1843,
      "nobel": null,
      "wiki": "https://en.wikipedia.org/wiki/Friedrich_de_la_Motte_Fouqu%C3%A9"
-    }
-   }
-  },
-  {
-   "tipo": "nascita",
-   "qid": "Q314462",
-   "nome": "Harold Lasswell",
-   "it": "Harold Lasswell",
-   "desc": "American political scientist (1902-1978)",
-   "autore": null,
-   "autore_qid": null,
-   "anno": 1902,
-   "anni": 125,
-   "pagine": 35,
-   "mese": 2,
-   "giorno": 13,
-   "fonte_data": "wikidata+wikipedia",
-   "scheda": {
-    "it": {
-     "desc": "politologo statunitense",
-     "paesi": [
-      "Stati Uniti"
-     ],
-     "opere": [],
-     "nato": 1902,
-     "morto": 1978,
-     "nobel": null,
-     "wiki": "https://it.wikipedia.org/wiki/Harold_Lasswell"
-    },
-    "en": {
-     "desc": "American political scientist (1902-1978)",
-     "paesi": [
-      "United States"
-     ],
-     "opere": [],
-     "nato": 1902,
-     "morto": 1978,
-     "nobel": null,
-     "wiki": "https://en.wikipedia.org/wiki/Harold_Lasswell"
     }
    }
   },
@@ -2849,45 +2779,6 @@
      "morto": 1977,
      "nobel": null,
      "wiki": "https://en.wikipedia.org/wiki/James_Jones_(author)"
-    }
-   }
-  },
-  {
-   "tipo": "nascita",
-   "qid": "Q221303",
-   "nome": "Anne Robert Jacques Turgot",
-   "it": "Anne Robert Jacques Turgot",
-   "desc": "French economist and statesman (1727–1781)",
-   "autore": null,
-   "autore_qid": null,
-   "anno": 1727,
-   "anni": 300,
-   "pagine": 61,
-   "mese": 5,
-   "giorno": 10,
-   "fonte_data": "wikidata+wikipedia",
-   "scheda": {
-    "it": {
-     "desc": "economista e filosofo francese",
-     "paesi": [
-      "Francia"
-     ],
-     "opere": [],
-     "nato": 1727,
-     "morto": 1781,
-     "nobel": null,
-     "wiki": "https://it.wikipedia.org/wiki/Anne_Robert_Jacques_Turgot"
-    },
-    "en": {
-     "desc": "French economist and statesman (1727–1781)",
-     "paesi": [
-      "France"
-     ],
-     "opere": [],
-     "nato": 1727,
-     "morto": 1781,
-     "nobel": null,
-     "wiki": "https://en.wikipedia.org/wiki/Anne_Robert_Jacques_Turgot"
     }
    }
   },
@@ -7459,45 +7350,6 @@
      "morto": 1902,
      "nobel": null,
      "wiki": "https://en.wikipedia.org/wiki/Richard_von_Krafft-Ebing"
-    }
-   }
-  },
-  {
-   "tipo": "morte",
-   "qid": "Q365824",
-   "nome": "Eli Heckscher",
-   "it": "Eli Heckscher",
-   "desc": "Swedish historian and economist (1879–1952)",
-   "autore": null,
-   "autore_qid": null,
-   "anno": 1952,
-   "anni": 75,
-   "pagine": 31,
-   "mese": 12,
-   "giorno": 23,
-   "fonte_data": "wikidata+wikipedia",
-   "scheda": {
-    "it": {
-     "desc": "economista svedese",
-     "paesi": [
-      "Svezia"
-     ],
-     "opere": [],
-     "nato": 1879,
-     "morto": 1952,
-     "nobel": null,
-     "wiki": "https://it.wikipedia.org/wiki/Eli_Heckscher"
-    },
-    "en": {
-     "desc": "Swedish historian and economist (1879–1952)",
-     "paesi": [
-      "Sweden"
-     ],
-     "opere": [],
-     "nato": 1879,
-     "morto": 1952,
-     "nobel": null,
-     "wiki": "https://en.wikipedia.org/wiki/Eli_Heckscher"
     }
    }
   },
