@@ -70,6 +70,8 @@ button{font:inherit;color:inherit;cursor:pointer}
 .navigazione{display:flex;flex-wrap:wrap;gap:4px 24px;font-family:var(--mono);font-weight:500;font-size:14px}
 .navigazione button,.navigazione a{background:none;border:0;border-bottom:2px solid transparent;padding:12px 0;color:#A9A9B6;text-decoration:none;min-height:44px}
 .navigazione .attivo{color:var(--carta);border-bottom-color:var(--vermiglio)}
+.navigazione .nav-forte{color:var(--carta)}
+.navigazione .nav-lieve{font-size:12px;color:#8A8A96}
 .navigazione button:hover{color:var(--carta)}
 .carosello{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch}
 .carosello::-webkit-scrollbar{display:none}
@@ -991,8 +993,9 @@ function disegnaNavigazione() {
   for (const an of stato.anni) {
     nav.append(h("button", { type: "button", class: an === stato.anno ? "attivo" : "", "aria-current": an === stato.anno ? "true" : null, onclick: () => { location.hash = `#/${an}`; } }, String(an)));
   }
-  nav.append(h("button", { type: "button", onclick: () => scorri("miei") }, tr("miei", { n: stato.preferiti.length })));
-  nav.append(h("a", { href: LING === "en" ? `/en/calendar/${stato.anni[0]}/` : `/calendario/${stato.anni[0]}/` }, LING === "en" ? "Calendar" : "Calendario"));
+  // il calendario è la pagina più visitata da Google: viene subito dopo gli anni ed è in evidenza; la lista personale è secondaria
+  nav.append(h("a", { class: "nav-forte", href: LING === "en" ? `/en/calendar/${stato.anni[0]}/` : `/calendario/${stato.anni[0]}/` }, LING === "en" ? "Calendar" : "Calendario"));
+  nav.append(h("button", { type: "button", class: "nav-lieve", onclick: () => scorri("miei") }, tr("miei", { n: stato.preferiti.length })));
   nav.append(h("span", { role: "group", "aria-label": tr("tastoLingua"), style: "display:inline-flex;gap:0;margin-left:8px" },
     ...["it", "en"].map((l) => h("button", { type: "button", lang: l, class: l === LING ? "attivo" : "", "aria-pressed": l === LING ? "true" : "false", style: "padding:12px 8px", onclick: () => impostaLingua(l) }, l.toUpperCase()))));
 }
