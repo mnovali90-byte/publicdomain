@@ -785,7 +785,8 @@ const mercatoPaese = (id) => { if (id === "uk" || id === "us") return "en"; cons
 // la classifica segue il paese scelto: la sua lingua (per il Regno Unito l'inglese) più la fama nel mondo
 const mercatiDisp = () => { const l = mercatoPaese(stato.opz); return l === "int" ? ["int"] : [l, "int", "scop"]; };
 // «Da scoprire»: molto noto nel mondo, poco nella lingua del paese scelto
-const idxScop = (a) => { const w = a.indice_int, l = a["indice_" + mercatoPaese(stato.opz)]; if (w === undefined) return undefined; return w < 90 ? -100 + w : w - (l || 0); };
+const ESCLUSI_SCOPRIRE = new Set(["Q566764"]);   // figure religiose o politiche controverse: non si propongono come scoperte
+const idxScop = (a) => { if (ESCLUSI_SCOPRIRE.has(a.wikidata)) return undefined; const w = a.indice_int, l = a["indice_" + mercatoPaese(stato.opz)]; if (w === undefined) return undefined; return w < 90 ? -100 + w : w - (l || 0); };
 const idx = (a) => (!stato.mercati ? a.indice : stato.mercato === "scop" ? idxScop(a) : a["indice_" + stato.mercato]);
 const grezzo = (a) => (stato.mercati && stato.mercato !== "scop" ? (a[CAMPO_M[stato.mercato]] || 0) : (a.pagine_wikipedia || 0));
 const etIdx = (a) => {
