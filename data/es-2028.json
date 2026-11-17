@@ -32445,9 +32445,10 @@
    "indice_int": 28,
    "indice": 28,
    "verifica": {
-    "esito": "una_fonte",
+    "esito": "verificato",
     "fonti": {
-     "wikidata": 1947
+     "wikidata": 1947,
+     "gnd": 1947
     }
    }
   },
