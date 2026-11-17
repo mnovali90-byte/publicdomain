@@ -29,9 +29,9 @@ jobs:
                   viaf.setdefault(b["a"]["value"].rsplit("/",1)[-1], b["v"]["value"])
               time.sleep(2)
           print("CODICI| una_fonte",len(una),"con codice VIAF:",sum(1 for a in una if a["wikidata"] in viaf))
-          def prova(url, data=None, acc="application/json"):
+          def prova(url, data=None, acc="application/json", extra=None):
               try:
-                  r=urllib.request.Request(url, data=data, headers={**UA,"Accept":acc,**({"Content-Type":"application/json"} if data else {})})
+                  r=urllib.request.Request(url, data=data, headers={**UA,"Accept":acc,**({"Content-Type":"application/json"} if data else {}),**(extra or {})})
                   with urllib.request.urlopen(r,timeout=40) as x: return x.status, x.read().decode("utf-8","replace")
               except urllib.error.HTTPError as e: return e.code, (e.read() or b"").decode("utf-8","replace")[:200]
               except Exception as e: return "ERR", str(e)
@@ -42,12 +42,17 @@ jobs:
             "json": lambda i: prova(f"https://viaf.org/viaf/{i}/viaf.json"),
             "jsonld": lambda i: prova(f"https://viaf.org/viaf/{i}/viaf.jsonld", acc="application/ld+json"),
             "api": lambda i: prova("https://viaf.org/api/cluster-record", json.dumps({"reqValues":{"recordId":str(i)},"meta":{"env":"prod","pageIndex":0,"pageSize":1}}).encode()),
-            "pagina": lambda i: prova(f"https://viaf.org/viaf/{i}/", acc="application/json"),
+            "pagina": lambda i: prova(f"https://viaf.org/viaf/{i}", acc="application/json"),
+            "justlinks": lambda i: prova(f"https://viaf.org/viaf/{i}/justlinks.json"),
+            "api_origin": lambda i: prova("https://viaf.org/api/cluster-record", json.dumps({"reqValues":{"recordId":str(i)},"meta":{"env":"prod","pageIndex":0,"pageSize":1}}).encode(), extra={"Origin":"https://viaf.org","Referer":f"https://viaf.org/en/viaf/{i}"}),
+            "sru": lambda i: prova("https://viaf.org/viaf/search?"+urllib.parse.urlencode({"query":f'local.viafID = "{i}"',"httpAccept":"application/json","recordSchema":"info:srw/schema/1/JSON"})),
+            "sru2": lambda i: prova("https://viaf.org/viaf/search?"+urllib.parse.urlencode({"query":'local.personalNames all "brecht bertolt"',"httpAccept":"application/json","maximumRecords":"1"})),
+            "autosuggest": lambda i: prova("https://viaf.org/viaf/AutoSuggest?query=brecht+bertolt"),
           }
           buona=None
           for n,f in forme.items():
               s,t=f(vid); print("FORMA|",n,s,len(t),t[:300].replace("\n"," "))
-              if s==200 and buona is None and re.search(r"1[89]\d\d", t): buona=n
+              if s==200 and buona is None and n not in("sru2","autosuggest","justlinks") and re.search(r"1[89]\d\d", t): buona=n
               time.sleep(1)
           print("BUONA|",buona)
           if not buona: raise SystemExit
