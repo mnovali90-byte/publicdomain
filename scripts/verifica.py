@@ -8,7 +8,13 @@ Per ogni autore «letterario» dei file data/<anno>.json:
    "verifica": {"esito": "verificato" | "discorde" | "una_fonte", "fonti": {"wikidata": 1956, "gnd": 1956, "loc": 1956}}
    - verificato: almeno un'altra fonte e tutte uguali a Wikidata
    - discorde: almeno una fonte dà un anno diverso -> il sito lo segnala "da verificare"
-   - una_fonte: le biblioteche non hanno l'autore o non scrivono la data
+   - documentato: le biblioteche non hanno l'autore, ma in Wikidata l'anno di morte è accompagnato da una o più
+     fonti citate (per esempio l'autorità nazionale ceca, BnF, Oxford Dictionary of National Biography), tutte con lo stesso anno.
+     Più debole di "verificato": la fonte non la leggiamo noi, la riporta Wikidata. Le citazioni sono in "citate".
+     Se una fonte citata dà un anno diverso, l'esito è "discorde" anche quando GND e LoC concordano.
+   - una_fonte: nessuna biblioteca e nessuna fonte citata
+   VIAF provato il 17/11/2026 come terza fonte: dai server di GitHub risponde solo "troppe richieste" (Cloudflare)
+   e la nuova interfaccia chiede un accesso da browser. Non usabile in automatico.
 4. da Wikidata prende anche gli illustratori (P110) delle opere dell'autore, con il loro anno di morte:
    "illustratori": [{"opera": "...", "nome": "...", "morte": 1976}]  (le illustrazioni hanno diritti propri).
 
@@ -95,6 +101,24 @@ def codici_e_illustratori(qids):
     return cod, ill
 
 
+def citazioni(qids):
+    """Per ogni autore: {nome fonte: anno di morte} dalle fonti citate in Wikidata (P248 «affermato in»).
+    Le importazioni da Wikipedia (P143) non contano: non sono una fonte esterna."""
+    out = {}
+    for i in range(0, len(qids), 50):
+        valori = " ".join("wd:" + q for q in qids[i:i + 50])
+        for r in sparql(f"""SELECT ?a ?anno ?fonteLabel WHERE {{ VALUES ?a {{ {valori} }}
+            ?a p:P570 ?s . ?s psv:P570/wikibase:timeValue ?t . BIND(YEAR(?t) AS ?anno)
+            ?s prov:wasDerivedFrom/pr:P248 ?fonte .
+            SERVICE wikibase:label {{ bd:serviceParam wikibase:language "en,mul". }} }}"""):
+            nome = val(r, "fonteLabel")
+            if not nome or re.fullmatch(r"Q\d+", nome):
+                continue
+            out.setdefault(val(r, "a").rsplit("/", 1)[-1], {}).setdefault(nome, int(val(r, "anno")))
+        time.sleep(1)
+    return out
+
+
 def morte_gnd(codice):
     t = get("https://lobid.org/gnd/" + urllib.parse.quote(codice) + ".json")
     if t is None:
@@ -135,6 +159,11 @@ def main():
     qids = sorted({a["wikidata"] for p in pacchetti.values() for a in p["autori"] if a.get("letterario")})
     print("autori da verificare:", len(qids))
     cod, ill = codici_e_illustratori(qids)
+    try:
+        cit = citazioni(qids)
+    except Exception as e:      # se Wikidata non risponde si va avanti senza: restano GND e LoC
+        print("fonti citate non lette:", e)
+        cit = None
 
     fonti = {"gnd": morte_gnd, "loc": morte_loc}
     esauriti = False
@@ -159,7 +188,7 @@ def main():
         manuali = json.load(open(DATA / "verifiche_manuali.json", encoding="utf-8"))["autori"]
     except Exception:
         manuali = {}
-    conta = {"verificato": 0, "discorde": 0, "una_fonte": 0, "nazionale": 0, "tolti": 0}
+    conta = {"verificato": 0, "documentato": 0, "discorde": 0, "una_fonte": 0, "nazionale": 0, "tolti": 0}
     for f, p in pacchetti.items():
         anno_file = int(re.search(r"(\d{4})\.json$", f.name).group(1))
         tenuti = []
@@ -191,13 +220,21 @@ def main():
                 if y:
                     fv[nome_f] = y
             altre = [y for k, y in fv.items() if k != "wikidata"]
-            if not altre:
-                esito = "una_fonte"
-            elif all(y == fv["wikidata"] for y in altre):
-                esito = "verificato"
+            if cit is None:     # giro senza citazioni: si tengono quelle del giro prima
+                citate = (a.get("verifica") or {}).get("citate") or {}
             else:
+                citate = cit.get(q, {})
+            if any(y != fv["wikidata"] for y in altre + list(citate.values())):
                 esito = "discorde"
+            elif altre:
+                esito = "verificato"
+            elif citate:
+                esito = "documentato"
+            else:
+                esito = "una_fonte"
             a["verifica"] = {"esito": esito, "fonti": fv}
+            if citate:
+                a["verifica"]["citate"] = citate
             conta[esito] += 1
             if ill.get(q):
                 a["illustratori"] = ill[q]
@@ -210,6 +247,8 @@ def main():
     print("esiti (per file, un autore può contare più volte):", conta, "| tempo finito prima del termine:" if esauriti else "")
     discordi = sorted({(a["nome"], json.dumps(a["verifica"]["fonti"])) for p in pacchetti.values() for a in p["autori"]
                        if (a.get("verifica") or {}).get("esito") == "discorde"})
+    discordi = sorted({(a["nome"], json.dumps({**a["verifica"]["fonti"], **a["verifica"].get("citate", {})}, ensure_ascii=False))
+                       for p in pacchetti.values() for a in p["autori"] if (a.get("verifica") or {}).get("esito") == "discorde"})
     for n, fv in discordi[:40]:
         print("  DISCORDE:", n, fv)
 

@@ -291,6 +291,7 @@ dialog::backdrop{background:rgba(12,12,16,.72)}
 .sa-sez h4{margin:0 0 16px}
 .sa .bio{margin:0;font-size:17px;line-height:1.55}
 .sa-sez a{display:inline-block;margin-top:12px;font-size:15px;color:var(--ink)}
+.lb-discorde span{font-weight:700;color:var(--vermiglio)}
 .sa-inedito{font-weight:700;font-size:17px;color:var(--vermiglio);margin:4px 0 6px}
 .sa-nota{margin:12px 0 0;font-size:14px;line-height:1.5;color:var(--muto)}
 .sa-testo{margin:0;font-size:15px;line-height:1.55}
@@ -507,7 +508,9 @@ it: {
   schedaAutore: "Scheda autore", paeseEt: "Paese", continuaWp: "Continua su Wikipedia", vVisWp: "{n} visite su Wikipedia in 12 mesi", vLingueWp: "pagina Wikipedia in {n} lingue",
   barraNomi: { it: "In Italia", fr: "In Francia", de: "In Germania", es: "In Spagna", en: "Nel mondo anglofono", int: "Nel mondo" }, altriLink: "Cerca altrove",
   liberoIn: "Libero {p} dal", nonPrima: "non prima del ", traGiorni: "tra {n} giorni", giaLibero: "già libero", mortoIl: "anno di morte {a}",
-  verificato: "Anno di morte confermato da {n} fonti: {f}.", fontiNomi: { wikidata: "Wikidata", gnd: "Biblioteca nazionale tedesca", loc: "Library of Congress" },
+  verificato: "Anno di morte confermato da {n} fonti: {f}.",
+  documentato: "Anno di morte documentato: Wikidata lo riporta citando {f}.",
+  discorde: "Da verificare: le fonti non concordano sull'anno di morte ({f}). La data qui sopra usa Wikidata.", fontiNomi: { wikidata: "Wikidata", gnd: "Biblioteca nazionale tedesca", loc: "Library of Congress" },
   altriPaesi: "Negli altri paesi", nomiPaesi: { it: "Italia", fr: "Francia", de: "Germania", uk: "Regno Unito", es: "Spagna" }, usaRiga: "dipende dall'anno di pubblicazione di ogni opera",
   chiEra: "Chi era", quantoNoto: "Quanto è conosciuto", curiosita: "Misura la curiosità per l'autore (visite alle pagine Wikipedia), non le vendite dei suoi libri.",
   edizTit: "Edizioni in {l}", edizLibri: "libri in {l}", edizDal2000: "usciti dal 2000", edizUltimo: "ultimo {a}",
@@ -616,7 +619,9 @@ en: {
   schedaAutore: "Author card", paeseEt: "Country", continuaWp: "Continue on Wikipedia", vVisWp: "{n} Wikipedia views in 12 months", vLingueWp: "Wikipedia page in {n} languages",
   barraNomi: { it: "In Italy", fr: "In France", de: "In Germany", es: "In Spain", en: "In the English-speaking world", int: "Worldwide" }, altriLink: "Look elsewhere",
   liberoIn: "Free {p} from", nonPrima: "not before ", traGiorni: "in {n} days", giaLibero: "already free", mortoIl: "died in {a}",
-  verificato: "Year of death confirmed by {n} sources: {f}.", fontiNomi: { wikidata: "Wikidata", gnd: "German National Library", loc: "Library of Congress" },
+  verificato: "Year of death confirmed by {n} sources: {f}.",
+  documentato: "Year of death documented: Wikidata gives it citing {f}.",
+  discorde: "To verify: the sources disagree on the year of death ({f}). The date above uses Wikidata.", fontiNomi: { wikidata: "Wikidata", gnd: "German National Library", loc: "Library of Congress" },
   altriPaesi: "In other countries", nomiPaesi: { it: "Italy", fr: "France", de: "Germany", uk: "United Kingdom", es: "Spain" }, usaRiga: "depends on the publication year of each work",
   chiEra: "Who they were", quantoNoto: "How well known", curiosita: "Measures curiosity about the author (Wikipedia page views), not sales of their books.",
   edizTit: "Editions in {l}", edizLibri: "books in {l}", edizDal2000: "published since 2000", edizUltimo: "latest {a}",
@@ -1472,7 +1477,8 @@ function bloccoLibero(a, c) {
   const x = dataLibera(a, c);
   if (!x) return null;
   const giorni = Math.ceil((Date.UTC(x.anno, 0, 1) - Date.now()) / 864e5);
-  const v = a.verifica && a.verifica.esito === "verificato" && a.verifica.fonti ? Object.keys(a.verifica.fonti) : [];
+  const vv = a.verifica || {}, es = vv.esito;
+  const v = es === "verificato" && vv.fonti ? Object.keys(vv.fonti) : [];
   const altri = ["it", "fr", "de", "uk", "es"].filter((k) => k !== c).map((k) => { const y = dataLibera(a, k); return h("li", {}, h("b", {}, tr("nomiPaesi")[k]), h("span", {}, (y.prima ? tr("nonPrima") : "") + dataLunga(y.anno))); });
   altri.push(h("li", {}, h("b", {}, "USA"), h("span", {}, tr("usaRiga"))));
   return h("div", {},
@@ -1481,6 +1487,8 @@ function bloccoLibero(a, c) {
       h("div", { class: "lb-data" }, (x.prima ? tr("nonPrima") : "") + dataLunga(x.anno)),
       h("div", { class: "lb-sotto" }, (giorni > 0 ? tr("traGiorni", { n: n(giorni) }) : tr("giaLibero")) + " · " + tr("mortoIl", { a: String(a.morte).slice(0, 4) }))),
     v.length >= 2 ? h("div", { class: "lb-ver" }, spunta(), h("span", {}, tr("verificato", { n: v.length, f: v.map((k) => tr("fontiNomi")[k] || k).join(", ") }))) : null,
+    es === "documentato" ? h("div", { class: "lb-ver" }, h("span", {}, tr("documentato", { f: Object.keys(vv.citate || {}).join(", ") }))) : null,
+    es === "discorde" ? h("div", { class: "lb-ver lb-discorde" }, h("span", {}, tr("discorde", { f: [...Object.entries(vv.fonti || {}).map(([k, y]) => (tr("fontiNomi")[k] || k) + " " + y), ...Object.entries(vv.citate || {}).map(([k, y]) => k + " " + y)].join(", ") }))) : null,
     h("details", { class: "lb-altri" }, h("summary", {}, tr("altriPaesi")), h("ul", {}, altri)));
 }
 function bloccoEdizioni(a, c) {

@@ -255,13 +255,19 @@ def blocco_verifica(a, lang):
         t = (f"Anno di morte controllato a mano su una fonte del paese dell'autore ({n.get('fonte')}), perché le altre fonti non concordavano." if it
              else f"Year of death checked by hand against a source from the author's country ({n.get('fonte')}), because the other sources disagreed.")
         return [f'<p class="sotto">{esc(t)} <a href="{esc(n.get("url", ""))}" rel="noopener">{"Fonte" if it else "Source"}</a></p>\n']
+    if v["esito"] == "documentato":
+        cit = ", ".join(v.get("citate", {}))
+        t = (f"Anno di morte documentato: Wikidata lo riporta citando {cit}. Le biblioteche nazionali che consultiamo non hanno questo autore." if it
+             else f"Year of death documented: Wikidata gives it citing {cit}. The national libraries we check do not hold this author.")
+        return [f'<p class="sotto">{esc(t)}</p>\n']
     if v["esito"] == "discorde":
-        el = ", ".join(f"{NOMI_FONTE[lang][k]} {y}" for k, y in fv.items() if k in NOMI_FONTE[lang])
+        el = ", ".join([f"{NOMI_FONTE[lang][k]} {y}" for k, y in fv.items() if k in NOMI_FONTE[lang]]
+                       + [f"{k} {y}" for k, y in v.get("citate", {}).items()])
         t = (f"Da verificare: le fonti non concordano sull'anno di morte ({el}). Le date qui sopra usano Wikidata." if it
              else f"To verify: the sources disagree on the year of death ({el}). The dates above use Wikidata.")
         return [f'<p><strong>{esc(t)}</strong></p>\n']
-    t = ("Anno di morte da una sola fonte (Wikidata): le biblioteche nazionali consultate non lo riportano." if it
-         else "Year of death from a single source (Wikidata): the national libraries we check do not record it.")
+    t = ("Anno di morte da una sola fonte (Wikidata), senza fonti citate: le biblioteche nazionali consultate non lo riportano." if it
+         else "Year of death from a single source (Wikidata), with no cited source: the national libraries we check do not record it.")
     return [f'<p class="sotto">{esc(t)}</p>\n']
 
 
