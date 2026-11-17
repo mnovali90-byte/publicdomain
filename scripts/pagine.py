@@ -114,6 +114,41 @@ ul{padding-left:20px}li{margin:6px 0}
 table{border-collapse:collapse;width:100%;font-size:15px}td,th{border-bottom:1px solid var(--riquadro);padding:8px 6px;text-align:left}
 figure{margin:0 0 20px}figure img{max-width:100%;max-height:420px;display:block;background:var(--riquadro)}figcaption{font-size:12px;color:var(--muto);margin-top:6px}
 .cta{display:inline-block;margin-top:28px;padding:12px 18px;border:1.5px solid var(--ink);color:var(--ink);text-decoration:none;font-family:var(--mono);font-size:13px;text-transform:uppercase;letter-spacing:.06em}
+main:has(.sa){max-width:720px;padding:20px 0 72px}
+.sa-et{font-family:var(--mono);font-weight:500;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muto);margin:0;padding:0 24px}
+.sa-head{display:flex;gap:18px;align-items:flex-end;padding:18px 24px 8px}
+.sa-foto{flex:none;width:104px;height:132px;background:var(--riquadro);overflow:hidden}
+.sa-foto img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block}
+.sa-ini{display:flex;align-items:flex-start;padding:4px 8px;font-family:var(--display);font-weight:900;font-size:64px;line-height:1;color:#D2CFC4}
+.sa h1{font-size:clamp(40px,10vw,64px);line-height:.9;margin:0}
+.sa-desc{margin:8px 0 0;font-size:15px;line-height:1.4;color:var(--muto)}
+.sa-credito{padding:0 24px;margin:0;font-family:var(--mono);font-size:11px;color:var(--muto)}
+.sa-libero{padding:18px 24px 30px}
+.libero-blocco{background:var(--vermiglio);color:var(--ink);padding:20px 22px}
+.lb-et{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+.lb-data{font-family:var(--display);font-weight:900;font-size:clamp(36px,9vw,52px);line-height:.95;text-transform:uppercase;margin:6px 0}
+.lb-sotto{font-size:15px}
+.lb-ver{margin:12px 0 0;display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.45;color:var(--muto)}
+.lb-ver svg{flex:none;margin-top:2px;color:var(--ink)}
+.lb-altri{margin-top:18px;border-top:1px solid var(--riquadro);border-bottom:1px solid var(--riquadro)}
+.lb-altri summary{padding:12px 0;font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;cursor:pointer}
+.lb-altri ul{list-style:none;margin:0;padding:0 0 4px}.lb-altri li{margin:0;padding:6px 0;font-size:15px;line-height:1.45}
+.sa-sez{padding:28px 24px;border-top:1px solid #D9D6CC}
+.sa-sez h2{margin:0 0 16px;border:0;padding:0;font-size:12px;letter-spacing:.14em}
+.sa-bio{margin:0;font-size:17px;line-height:1.55}
+.sa-sez a{color:var(--ink)}
+.sa-nota{margin:12px 0 0;font-size:14px;line-height:1.5;color:var(--muto)}
+.sa-testo{margin:0 0 10px;font-size:15px;line-height:1.55}
+.sa-opere{list-style:none;margin:0;padding:0}
+.sa-opere li{display:flex;justify-content:space-between;gap:16px;margin:0;padding:10px 0;border-bottom:1px solid #D9D6CC;font-size:17px;line-height:1.35}
+.sa-opere .anno{flex:none;font-family:var(--mono);font-size:13px;color:var(--muto)}
+.ed-boxes{display:flex;gap:12px;flex-wrap:wrap}.ed-box{flex:1;min-width:140px;background:var(--riquadro);padding:14px 16px}
+.ed-box b{display:block;font-family:var(--display);font-weight:900;font-size:40px;line-height:1}.ed-box span{font-size:14px}
+.sa-barra{display:flex;flex-direction:column;gap:8px;margin-bottom:18px}.sa-bn{font-size:17px;font-weight:600}
+.sa-asta{height:10px;background:var(--riquadro)}.sa-asta i{display:block;height:10px;background:var(--vermiglio)}
+.sa-val{font-size:14px;color:var(--muto)}.sa-val b{color:var(--ink)}
+.sa-azioni{padding:8px 24px 0}
+.sa-salva{display:flex;align-items:center;justify-content:center;height:56px;background:var(--ink);color:var(--carta);text-decoration:none;font-family:var(--mono);font-size:13px;letter-spacing:.12em;text-transform:uppercase}
 footer{background:var(--ink);color:#B9B9C6;font-size:13px;padding:32px 20px}footer p{max-width:780px;margin:0 auto 10px}footer a{color:#fff}
 """
 
@@ -256,6 +291,108 @@ def blocco_illustrazioni(a, lang):
     return out
 
 
+RANGHI = {}   # (wikidata, misura) -> (posizione, totale): calcolati in main() come nella classifica del sito
+
+
+def calcola_ranghi(pacchetto):
+    lett = [x for x in pacchetto["autori"] if x.get("letterario") and x.get("n_opere", 1) > 0 and not re.fullmatch(r"Q\d+", x["nome"])]
+    for m, campo in (("it", "visite_it"), ("en", "visite_en"), ("int", "pagine_wikipedia")):
+        ordine = sorted(lett, key=lambda x: (-(x.get("indice_" + m) if x.get("indice_" + m) is not None else -1), -(x.get(campo) or 0),
+                                             -(x.get("pagine_wikipedia") or 0), x["nome"]))
+        for r, x in enumerate(ordine, 1):
+            RANGHI.setdefault((x["wikidata"], m), (r, len(ordine)))
+
+
+def iniziali_nome(nome):
+    p = [w for w in re.split(r"[\s().,]+", nome) if w]
+    return ((p[0][:1] + p[-1][:1]) if len(p) > 1 else (p[0][:2] if p else "?")).upper()
+
+
+def scheda_statica(a, lang, bd):
+    """Corpo della pagina autore, con lo stesso disegno della scheda del sito (mockup approvato)."""
+    it = lang == "it"
+    nome = pulisci(a["nome"])
+    nasc, D = anno_di(a.get("nascita")), anno_di(a.get("morte"))
+    T = (lambda x, y: x) if it else (lambda x, y: y)
+    o = ['<div class="sa">\n', f'<p class="sa-et">{T("Scheda autore", "Author card")}</p>\n<header class="sa-head">\n']
+    foto = a.get("foto") or {}
+    if foto.get("url"):
+        o.append(f'<div class="sa-foto"><img src="{esc(foto["url"])}" alt="{T("Ritratto di", "Portrait of")} {esc(nome)}" loading="lazy"></div>\n')
+    else:
+        o.append(f'<div class="sa-foto sa-ini" aria-hidden="true">{esc(iniziali_nome(nome))}</div>\n')
+    desc = [f"{nasc if nasc else '?'} – {D}"]
+    if it and a.get("professioni"):
+        desc.append(", ".join(a["professioni"][:2]))
+    if it and a.get("paesi"):
+        desc.append(", ".join(a["paesi"][:2]))
+    o.append(f'<div><h1>{esc(nome)}</h1>\n<p class="sa-desc">{esc(" · ".join(desc))}</p></div>\n</header>\n')
+    if foto.get("url"):
+        cap = " · ".join(x for x in (pulisci(foto.get("autore")), pulisci(foto.get("licenza"))) if x)
+        pag = f' <a href="{esc(foto["pagina"])}" rel="noopener">Wikimedia Commons</a>' if foto.get("pagina") else ""
+        o.append(f'<p class="sa-credito">{T("Foto", "Photo")}: {esc(cap)}{pag}</p>\n')
+    # la risposta principale
+    giorni = (datetime.date(D + 71, 1, 1) - datetime.date.today()).days
+    quando = (T(f"tra {migliaia(giorni)} giorni", f"in {migliaia(giorni, lang)} days") if giorni > 0 else T("già libero", "already free"))
+    o.append('<div class="sa-libero">\n<div class="libero-blocco">'
+             f'<div class="lb-et">{T("Libero in Italia dal", "Free in the UK and the EU from")}</div>'
+             f'<div class="lb-data">{data_l(lang, D + 71)}</div>'
+             f'<div class="lb-sotto">{quando} · {T(f"anno di morte {D}", f"died in {D}")}</div></div>\n')
+    v = a.get("verifica") or {}
+    if v.get("esito") == "verificato":
+        nomi = [NOMI_FONTE[lang][k] for k in v.get("fonti", {}) if k in NOMI_FONTE[lang]]
+        o.append('<p class="lb-ver"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" '
+                 'stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg><span>'
+                 + esc(T(f"Anno di morte confermato da {len(nomi)} fonti: {', '.join(nomi)}.", f"Year of death confirmed by {len(nomi)} sources: {', '.join(nomi)}."))
+                 + "</span></p>\n")
+    else:
+        o += [x.replace('<p class="sotto">', '<p class="lb-ver">') for x in blocco_verifica(a, lang)]
+    o.append(f'<details class="lb-altri"><summary>{T("Negli altri paesi", "In other countries")}</summary>\n<ul>\n')
+    o += [f"<li>{esc(r)}</li>\n" for r in paese_per_paese(D, lang)]
+    o.append(f"<li>{esc(T('USA: dipende dall’anno di pubblicazione di ogni opera (95 anni).', 'USA: depends on the publication year of each work (95 years).'))}</li>\n")
+    o.append(f'</ul>\n<p class="sa-nota">{T("Calcolo indicativo, dalle norme del sito. Non è consulenza legale.", "Indicative calculation, based on the rules on the site. Not legal advice.")}</p></details>\n</div>\n')
+    sez = lambda tit, corpo: f'<section class="sa-sez">\n<h2>{tit}</h2>\n{corpo}</section>\n'
+    if bd:
+        ln = f'<a href="{esc(bd["url"])}" rel="noopener">{T("Continua su Wikipedia", "Continue on Wikipedia")}</a>' if bd.get("url") else ""
+        o.append(sez(T("Chi era", "Who they were"), f'<p class="sa-bio">{esc(bd["testo"])}</p>\n{ln}\n<p class="sa-nota">{T("Testo da Wikipedia, licenza CC BY-SA.", "Text from Wikipedia, licence CC BY-SA.")}</p>\n'))
+    opere = [(x.get("titolo") if it else x.get("titolo_en"), x.get("anno")) for x in a.get("opere", [])[:10]]
+    opere = [(t, y) for t, y in opere if t]
+    if opere:
+        righe = "".join(f'<li><span>{esc(t)}</span>' + (f'<span class="anno">{esc(y)}</span>' if y else "") + "</li>\n" for t, y in opere)
+        extra = (f'<p class="sa-nota">{T(f"Su {migliaia(a["n_opere"])} opere registrate in Wikidata, qui le più note.", f"Of {migliaia(a["n_opere"], lang)} works recorded in Wikidata, the best known.")}</p>\n'
+                 if a.get("n_opere", 0) > len(opere) else "")
+        o.append(sez(T("Opere principali", "Main works"), f'<ul class="sa-opere">\n{righe}</ul>\n{extra}'))
+    g = ((a.get("traduzioni") or {}).get("sbn_it") if it else (a.get("traduzioni") or {}).get("bl_en"))
+    if g and g.get("trovato"):
+        box = lambda num, et: f'<div class="ed-box"><b>{migliaia(num, lang)}</b><span>{esc(et)}</span></div>'
+        ult = f" · {T('ultimo', 'latest')} {g['ultimo']}" if g.get("ultimo") else ""
+        nota = (T("Dal catalogo delle biblioteche italiane (SBN). Conta anche ristampe e antologie.", "")
+                if it else "From the British Library catalogue, searched by surname and years of birth and death: some editions catalogued differently may be missed. It also counts reprints and anthologies.")
+        if it and g.get("metodo") == "nome":
+            nota += " Autore riconosciuto solo dal nome: il conteggio può essere impreciso."
+        o.append(sez(T("Edizioni in italiano", "Editions in English"),
+                     f'<div class="ed-boxes">{box(g["edizioni"], T("libri in italiano", "books in English"))}{box(g.get("dal_2000", 0), T("usciti dal 2000", "published since 2000") + ult)}</div>\n<p class="sa-nota">{esc(nota)}</p>\n'))
+    barre = []
+    for m, campo, etich in ((("it", "visite_it", T("In Italia", "")),) if it else (("en", "visite_en", "In the English-speaking world"),)) + (("int", "pagine_wikipedia", T("Nel mondo", "Worldwide")),):
+        idx = a.get("indice_" + m)
+        if idx is None:
+            continue
+        val = a.get(campo) or 0
+        testo = (T(f"pagina Wikipedia in {val} lingue", f"Wikipedia page in {val} languages") if m == "int"
+                 else T(f"{migliaia(val)} visite su Wikipedia in 12 mesi", f"{migliaia(val, lang)} Wikipedia views in 12 months") if val
+                 else T("nessuna pagina in italiano", "no page in English"))
+        rg = RANGHI.get((a["wikidata"], m))
+        pos = f' · <b>{T(f"{rg[0]}° su {rg[1]}", f"#{rg[0]} of {rg[1]}")}</b>' if rg else ""
+        barre.append(f'<div class="sa-barra"><div class="sa-bn">{etich}</div><div class="sa-asta"><i style="width:{max(0, min(100, idx))}%"></i></div>'
+                     f'<div class="sa-val">{esc(testo)}{pos}</div></div>\n')
+    if barre:
+        o.append(sez(T("Quanto è conosciuto", "How well known"), "".join(barre)
+                     + f'<p class="sa-nota">{T("Misura la curiosità per l’autore (visite alle pagine Wikipedia), non le vendite dei suoi libri.", "Measures curiosity about the author (Wikipedia page views), not sales of their books.")}</p>\n'))
+    ill = "".join(blocco_illustrazioni(a, lang)[1:]).replace('<p class="sotto">', '<p class="sa-testo">')
+    o.append(sez(T("Prima di pubblicare", "Before publishing"), ill + f'<p class="sa-nota">{T("Calcolo indicativo, non consulenza legale.", "Indicative calculation, not legal advice.")}</p>\n'))
+    o.append("</div>\n")
+    return "".join(o)
+
+
 def pagina_autore(a, slug, lang, ha_altra):
     nome = pulisci(a["nome"])
     nasc, mor = anno_di(a.get("nascita")), anno_di(a.get("morte"))
@@ -288,95 +425,10 @@ def pagina_autore(a, slug, lang, ha_altra):
         altra = (f'<a href="{url_pagina("en" if it else "it", slug)}" hreflang="{"en" if it else "it"}">{"English" if it else "Italiano"}</a>')
     out = [TESTA.format(lang=lang, titolo=esc(titolo), descr=esc(descr), url=url, alterne=alterne(lang, slug) if ha_altra else "",
                         og_tipo="profile", jsonld=jsonld, css=CSS, home="/" if it else "/en/", altra_lingua=altra), "<main>\n"]
-    foto = a.get("foto") or {}
-    if foto.get("url"):
-        cap = " · ".join(x for x in (pulisci(foto.get("autore")), pulisci(foto.get("licenza"))) if x)
-        pag = f' <a href="{esc(foto["pagina"])}" rel="noopener">Wikimedia Commons</a>' if foto.get("pagina") else ""
-        out.append(f'<figure><img src="{esc(foto["url"])}" alt="{"Ritratto di" if it else "Portrait of"} {esc(nome)}" loading="lazy"><figcaption>{esc(cap)}{pag}</figcaption></figure>\n')
-    out.append(f"<h1>{esc(nome)}</h1>\n<p class=\"sotto\">{esc(anni)}")
-    if it:   # paesi e professioni sono etichette italiane di Wikidata: solo nella pagina italiana
-        if a.get("paesi"):
-            out.append(" · " + esc(", ".join(a["paesi"])))
-        if a.get("professioni"):
-            out.append(" · " + esc(", ".join(a["professioni"][:4])))
-    out.append("</p>\n")
-    if it:
-        out.append(f'<p class="lead">Morto nel {D}, nell\'Unione europea le sue opere sono libere dal <strong>{data_l(lang, D + 71)}</strong>. '
-                   "Altri paesi hanno regole diverse, qui sotto.</p>\n")
-    else:
-        out.append(f'<p class="lead">Died in {D}, in the European Union the works are free from <strong>{data_l(lang, D + 71)}</strong>. '
-                   "Other countries have different rules, below.</p>\n")
-
-    out.append(f"<h2>{'Da quando è libero, paese per paese' if it else 'Free from when, country by country'}</h2>\n<ul>\n")
-    out += [f"<li>{esc(r)}</li>\n" for r in paese_per_paese(D, lang)]
-    out.append('</ul>\n<p class="sotto">' + ("Calcolo indicativo, dalle norme del riquadro in fondo alla pagina. Non è consulenza legale."
-               if it else "Indicative calculation, based on the rules in the box at the bottom of the page. Not legal advice.") + "</p>\n")
-    out += blocco_verifica(a, lang) + blocco_illustrazioni(a, lang)
-
-    sbn = (a.get("traduzioni") or {}).get("sbn_it")
-    if sbn and it:   # il catalogo SBN è italiano: solo nella pagina italiana
-        out.append(f"<h2>{'Traduzioni in italiano (catalogo SBN)' if it else 'Translations into Italian (SBN catalogue)'}</h2>\n")
-        if sbn.get("trovato"):
-            ne, d2 = sbn["edizioni"], sbn.get("dal_2000", 0)
-            if it:
-                r = ("1 libro in italiano" if ne == 1 else f"{migliaia(ne)} libri in italiano")
-                r += f", di cui {migliaia(d2)} usciti dal 2000 in poi" if d2 else ", nessuno uscito dal 2000 in poi"
-            else:
-                r = ("1 book in Italian" if ne == 1 else f"{migliaia(ne, lang)} books in Italian")
-                r += f", {migliaia(d2, lang)} of them published since 2000" if d2 else ", none published since 2000"
-            out.append(f"<p><strong>{esc(r)}</strong></p>\n")
-            if sbn.get("metodo") == "nome_anni":
-                out.append('<p class="sotto">' + ("Autore riconosciuto dal nome e confermato dagli anni di nascita e morte."
-                           if it else "Author matched by name and confirmed by birth and death years.") + "</p>\n")
-            elif sbn.get("metodo") == "nome":
-                out.append('<p class="sotto">' + ("Autore riconosciuto solo dal nome: il conteggio può essere impreciso."
-                           if it else "Author matched by name only: the count may be inaccurate.") + "</p>\n")
-            if sbn.get("sospetto"):
-                out.append('<p class="sotto">' + ("Da verificare: autore molto noto con pochissime edizioni in SBN. Può essere schedato con un altro nome."
-                           if it else "To verify: a very well-known author with very few SBN editions. They may be catalogued under another name.") + "</p>\n")
-        else:
-            out.append("<p><strong>" + ("Nessuna registrazione trovata in SBN" if it else "No record found in SBN") + "</strong></p>\n")
-        out.append('<p class="sotto">' + ("Conta le registrazioni del catalogo nazionale delle biblioteche (SBN): è un indizio di quanto è già stato pubblicato, non un elenco di libri in commercio."
-                   if it else "Counts records of the Italian national library catalogue (SBN): a hint of how much has already been published, not a list of books on sale.") + "</p>\n")
-
-    visite = [(l, a.get("visite_" + l)) for l in ("it", "en", "es", "de", "fr") if a.get("visite_" + l) is not None]
-    if visite:
-        out.append(f"<h2>{'Quanto è letto' if it else 'How widely read'}</h2>\n<table>\n<tr><th>{'Wikipedia in' if it else 'Wikipedia in'}</th>"
-                   f"<th>{'Visite negli ultimi 12 mesi' if it else 'Views in the last 12 months'}</th></tr>\n")
-        out += [f"<tr><td>{NOMI_LINGUA[lang][l]}</td><td>{migliaia(v, lang) if v else ('nessuna pagina' if it else 'no page')}</td></tr>\n" for l, v in visite]
-        out.append("</table>\n")
-
-    if it:   # i titoli delle opere sono etichette italiane di Wikidata: solo nella pagina italiana
-        out.append("<h2>Opere principali</h2>\n<ul>\n")
-        for o in a["opere"][:10]:
-            riga = esc(o.get("titolo"))
-            if o.get("anno"):
-                riga += f" ({esc(o['anno'])})"
-            if o.get("generi"):
-                riga += f' <span class="sotto">· {esc(", ".join(o["generi"][:2]))}</span>'
-            out.append(f"<li>{riga}</li>\n")
-        out.append("</ul>\n")
-        if a.get("n_opere", 0) > len(a["opere"][:10]):
-            out.append(f'<p class="sotto">Su {migliaia(a["n_opere"])} opere registrate in Wikidata, qui le più note.</p>\n')
-    elif [o for o in a["opere"][:10] if o.get("titolo_en")]:   # titoli inglesi da Wikidata, dove esistono
-        out.append("<h2>Main works</h2>\n<ul>\n")
-        for o in [o for o in a["opere"][:10] if o.get("titolo_en")]:
-            out.append(f"<li>{esc(o['titolo_en'])}" + (f" ({esc(o['anno'])})" if o.get("anno") else "") + "</li>\n")
-        out.append("</ul>\n")
-    elif a.get("n_opere"):
-        out.append(f"<h2>Works</h2>\n<p>{migliaia(a['n_opere'], lang)} works are recorded in Wikidata for this author.</p>\n")
-
-    if bd:
-        if it:
-            l = "italiano" if bd["lingua"] == "it" else "inglese"
-            ln = f'<a href="{esc(bd["url"])}" rel="noopener">Wikipedia in {l}</a>' if bd.get("url") else "Wikipedia"
-            out.append(f'<h2>Chi era</h2>\n<p>{esc(bd["testo"])}</p>\n<p class="sotto">Testo da {ln}, licenza CC BY-SA.</p>\n')
-        else:
-            ln = f'<a href="{esc(bd["url"])}" rel="noopener">English Wikipedia</a>' if bd.get("url") else "Wikipedia"
-            out.append(f'<h2>Who they were</h2>\n<p>{esc(bd["testo"])}</p>\n<p class="sotto">Text from {ln}, licence CC BY-SA.</p>\n')
+    out.append(scheda_statica(a, lang, bd))
 
     cta = f'/#/autore/{esc(a["wikidata"])}' if it else f'/en/#/autore/{esc(a["wikidata"])}'
-    out.append(f'<p><a class="cta" href="{cta}">{"Apri la scheda completa nel radar" if it else "Open the full card in the radar"}</a></p>\n')
+    out.append(f'<p class="sa-azioni"><a class="sa-salva" href="{cta}">{"Apri la scheda nel radar" if it else "Open the card in the radar"}</a></p>\n')
     out.append("</main>\n" + PIEDE[lang])
     return "".join(out)
 
@@ -796,6 +848,8 @@ def main():
         for a_ in gruppo:
             slug_di[a_["wikidata"]] = s_ if len(gruppo) == 1 else f"{s_}-{a_['wikidata'].lower()}"
     en_ok = {q for q, a in autori.items() if abbastanza_contenuto(a, "en")}
+    for f in file_autori():
+        calcola_ranghi(json.load(open(f, encoding="utf-8")))
 
     for l in ("it", "en"):
         cartella = RADICE / PERCORSO[l]

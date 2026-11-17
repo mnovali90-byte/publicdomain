@@ -38,6 +38,41 @@ ul{padding-left:20px}li{margin:6px 0}
 table{border-collapse:collapse;width:100%;font-size:15px}td,th{border-bottom:1px solid var(--riquadro);padding:8px 6px;text-align:left}
 figure{margin:0 0 20px}figure img{max-width:100%;max-height:420px;display:block;background:var(--riquadro)}figcaption{font-size:12px;color:var(--muto);margin-top:6px}
 .cta{display:inline-block;margin-top:28px;padding:12px 18px;border:1.5px solid var(--ink);color:var(--ink);text-decoration:none;font-family:var(--mono);font-size:13px;text-transform:uppercase;letter-spacing:.06em}
+main:has(.sa){max-width:720px;padding:20px 0 72px}
+.sa-et{font-family:var(--mono);font-weight:500;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muto);margin:0;padding:0 24px}
+.sa-head{display:flex;gap:18px;align-items:flex-end;padding:18px 24px 8px}
+.sa-foto{flex:none;width:104px;height:132px;background:var(--riquadro);overflow:hidden}
+.sa-foto img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block}
+.sa-ini{display:flex;align-items:flex-start;padding:4px 8px;font-family:var(--display);font-weight:900;font-size:64px;line-height:1;color:#D2CFC4}
+.sa h1{font-size:clamp(40px,10vw,64px);line-height:.9;margin:0}
+.sa-desc{margin:8px 0 0;font-size:15px;line-height:1.4;color:var(--muto)}
+.sa-credito{padding:0 24px;margin:0;font-family:var(--mono);font-size:11px;color:var(--muto)}
+.sa-libero{padding:18px 24px 30px}
+.libero-blocco{background:var(--vermiglio);color:var(--ink);padding:20px 22px}
+.lb-et{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+.lb-data{font-family:var(--display);font-weight:900;font-size:clamp(36px,9vw,52px);line-height:.95;text-transform:uppercase;margin:6px 0}
+.lb-sotto{font-size:15px}
+.lb-ver{margin:12px 0 0;display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.45;color:var(--muto)}
+.lb-ver svg{flex:none;margin-top:2px;color:var(--ink)}
+.lb-altri{margin-top:18px;border-top:1px solid var(--riquadro);border-bottom:1px solid var(--riquadro)}
+.lb-altri summary{padding:12px 0;font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;cursor:pointer}
+.lb-altri ul{list-style:none;margin:0;padding:0 0 4px}.lb-altri li{margin:0;padding:6px 0;font-size:15px;line-height:1.45}
+.sa-sez{padding:28px 24px;border-top:1px solid #D9D6CC}
+.sa-sez h2{margin:0 0 16px;border:0;padding:0;font-size:12px;letter-spacing:.14em}
+.sa-bio{margin:0;font-size:17px;line-height:1.55}
+.sa-sez a{color:var(--ink)}
+.sa-nota{margin:12px 0 0;font-size:14px;line-height:1.5;color:var(--muto)}
+.sa-testo{margin:0 0 10px;font-size:15px;line-height:1.55}
+.sa-opere{list-style:none;margin:0;padding:0}
+.sa-opere li{display:flex;justify-content:space-between;gap:16px;margin:0;padding:10px 0;border-bottom:1px solid #D9D6CC;font-size:17px;line-height:1.35}
+.sa-opere .anno{flex:none;font-family:var(--mono);font-size:13px;color:var(--muto)}
+.ed-boxes{display:flex;gap:12px;flex-wrap:wrap}.ed-box{flex:1;min-width:140px;background:var(--riquadro);padding:14px 16px}
+.ed-box b{display:block;font-family:var(--display);font-weight:900;font-size:40px;line-height:1}.ed-box span{font-size:14px}
+.sa-barra{display:flex;flex-direction:column;gap:8px;margin-bottom:18px}.sa-bn{font-size:17px;font-weight:600}
+.sa-asta{height:10px;background:var(--riquadro)}.sa-asta i{display:block;height:10px;background:var(--vermiglio)}
+.sa-val{font-size:14px;color:var(--muto)}.sa-val b{color:var(--ink)}
+.sa-azioni{padding:8px 24px 0}
+.sa-salva{display:flex;align-items:center;justify-content:center;height:56px;background:var(--ink);color:var(--carta);text-decoration:none;font-family:var(--mono);font-size:13px;letter-spacing:.12em;text-transform:uppercase}
 footer{background:var(--ink);color:#B9B9C6;font-size:13px;padding:32px 20px}footer p{max-width:780px;margin:0 auto 10px}footer a{color:#fff}
 
 .pdr{display:inline-flex;flex-direction:column;align-items:stretch;width:var(--w,110px);color:currentColor;text-transform:none;letter-spacing:0;line-height:1;vertical-align:middle}
@@ -54,38 +89,52 @@ footer{background:var(--ink);color:#B9B9C6;font-size:13px;padding:32px 20px}foot
 <defs><mask id="pdrt" maskUnits="userSpaceOnUse" x="-5" y="-5" width="225.67" height="130.00"><rect x="-5" y="-5" width="225.67" height="130.00" fill="#fff"/><line x1="193.05" y1="60.60" x2="429.45" y2="-124.10" stroke="#000" stroke-width="6"/></mask></defs>
 <path fill="currentColor" mask="url(#pdrt)" d="M0 120V0H28.95Q45.75 0 53.21 6.79Q60.67 13.58 61.2 29.25Q61.42 35.55 61.42 40.95Q61.42 46.35 61.2 52.65Q60.67 68.25 53.21 75.08Q45.75 81.9 28.95 81.9H22.5V120ZM22.5 62.1H28.95Q33.67 62.1 36.08 59.92Q38.48 57.75 38.7 53.85Q38.92 50.17 39 45.56Q39.07 40.95 39 36.34Q38.92 31.73 38.7 28.05Q38.48 24.08 36.08 21.94Q33.67 19.8 28.95 19.8H22.5Z M74.58 120V0H105.03Q121.9 0 129.44 7.16Q136.97 14.33 137.28 30.75Q137.5 41.17 137.57 50.55Q137.65 59.93 137.57 69.3Q137.5 78.68 137.28 89.1Q136.97 105.6 129.44 112.8Q121.9 120 105.03 120ZM97.08 100.2H105.03Q109.75 100.2 112.22 98.03Q114.7 95.85 114.78 91.8Q115 83.78 115.11 75.83Q115.22 67.88 115.22 59.93Q115.22 51.98 115.11 43.99Q115 36 114.78 28.05Q114.7 24.08 112.22 21.94Q109.75 19.8 105.03 19.8H97.08Z M152.82 120V0H181.77Q198.57 0 206.04 6.79Q213.5 13.58 214.02 29.25Q214.17 33.45 214.21 36.6Q214.25 39.75 214.21 42.9Q214.17 46.05 214.02 50.25Q213.72 60 210.76 66.22Q207.8 72.45 201.57 75.75L215.67 120H191.82L180.42 79.5H175.32V120ZM175.32 59.7H181.77Q186.5 59.7 188.9 57.53Q191.3 55.35 191.52 51.45Q191.75 47.78 191.82 43.76Q191.9 39.75 191.82 35.74Q191.75 31.73 191.52 28.05Q191.3 24.08 188.9 21.94Q186.5 19.8 181.77 19.8H175.32Z"/></svg><span class="sub"><b style="left:0.000%;width:28.479%"><i>P</i><i>U</i><i>B</i><i>L</i><i>I</i><i>C</i></b><b style="left:34.581%;width:29.244%"><i>D</i><i>O</i><i>M</i><i>A</i><i>I</i><i>N</i></b><b style="left:70.858%;width:29.142%"><i>R</i><i>A</i><i>D</i><i>A</i><i>R</i></b></span></span></a><a href="https://publicdomainradar.com/autore/ralph-benatzky/" hreflang="it">Italiano</a></div>
 <main>
-<figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ralph_Benatzky_%281884-1957%29.jpg?width=800" alt="Portrait of Ralph Benatzky" loading="lazy"><figcaption>AnonymousUnknown author · Public domain <a href="https://commons.wikimedia.org/wiki/File:Ralph_Benatzky_%281884-1957%29.jpg" rel="noopener">Wikimedia Commons</a></figcaption></figure>
-<h1>Ralph Benatzky</h1>
-<p class="sotto">1884 – 1957</p>
-<p class="lead">Died in 1957, in the European Union the works are free from <strong>1 January 2028</strong>. Other countries have different rules, below.</p>
-<h2>Free from when, country by country</h2>
+<div class="sa">
+<p class="sa-et">Author card</p>
+<header class="sa-head">
+<div class="sa-foto"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ralph_Benatzky_%281884-1957%29.jpg?width=800" alt="Portrait of Ralph Benatzky" loading="lazy"></div>
+<div><h1>Ralph Benatzky</h1>
+<p class="sa-desc">1884 – 1957</p></div>
+</header>
+<p class="sa-credito">Photo: AnonymousUnknown author · Public domain <a href="https://commons.wikimedia.org/wiki/File:Ralph_Benatzky_%281884-1957%29.jpg" rel="noopener">Wikimedia Commons</a></p>
+<div class="sa-libero">
+<div class="libero-blocco"><div class="lb-et">Free in the UK and the EU from</div><div class="lb-data">1 January 2028</div><div class="lb-sotto">in 410 days · died in 1957</div></div>
+<p class="lb-ver"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg><span>Year of death confirmed by 3 sources: Wikidata, German National Library (GND), Library of Congress.</span></p>
+<details class="lb-altri"><summary>In other countries</summary>
 <ul>
 <li>EU (base rule), Germany and the United Kingdom: from 1 January 2028.</li>
 <li>France: from 1 January 2028. Wartime extensions are not added to the 70 years (French Court of Cassation, 2007). Exception: authors who «died for France» get 30 more years.</li>
 <li>Italy: from 1 January 2028. The 6-year wartime extension was repealed in 1996. For authors from Allied countries in the Second World War the term can be longer (1947 Peace Treaty): check case by case.</li>
 <li>Spain: not before 1 January 2038 (80 years after death, because the author died before 1987; the law does not say how the year is counted).</li>
+<li>USA: depends on the publication year of each work (95 years).</li>
 </ul>
-<p class="sotto">Indicative calculation, based on the rules in the box at the bottom of the page. Not legal advice.</p>
-<p class="sotto">Year of death confirmed by 3 independent sources: Wikidata, German National Library (GND), Library of Congress.</p>
-<h2>Illustrations and translations</h2>
-<p class="sotto">The dates on this page apply to the original texts. Illustrations and translations have their own rights, lasting 70 years after the death of the illustrator or translator: a book can have a free text and still-protected drawings.</p>
-<h2>How widely read</h2>
-<table>
-<tr><th>Wikipedia in</th><th>Views in the last 12 months</th></tr>
-<tr><td>Italian</td><td>509</td></tr>
-<tr><td>English</td><td>2,412</td></tr>
-<tr><td>Spanish</td><td>194</td></tr>
-<tr><td>German</td><td>9,447</td></tr>
-<tr><td>French</td><td>864</td></tr>
-</table>
-<h2>Main works</h2>
-<ul>
-<li>The White Horse Inn</li>
-</ul>
+<p class="sa-nota">Indicative calculation, based on the rules on the site. Not legal advice.</p></details>
+</div>
+<section class="sa-sez">
 <h2>Who they were</h2>
-<p>Ralph Benatzky was a Czech-Austrian composer. He composed operas and operettas, such as Casanova (1928), Die drei Musketiere (1929), The White Horse Inn (1930) and Meine Schwester und ich (1930).</p>
-<p class="sotto">Text from <a href="https://en.wikipedia.org/wiki/Ralph_Benatzky" rel="noopener">English Wikipedia</a>, licence CC BY-SA.</p>
-<p><a class="cta" href="/en/#/autore/Q213592">Open the full card in the radar</a></p>
+<p class="sa-bio">Ralph Benatzky was a Czech-Austrian composer. He composed operas and operettas, such as Casanova (1928), Die drei Musketiere (1929), The White Horse Inn (1930) and Meine Schwester und ich (1930).</p>
+<a href="https://en.wikipedia.org/wiki/Ralph_Benatzky" rel="noopener">Continue on Wikipedia</a>
+<p class="sa-nota">Text from Wikipedia, licence CC BY-SA.</p>
+</section>
+<section class="sa-sez">
+<h2>Main works</h2>
+<ul class="sa-opere">
+<li><span>The White Horse Inn</span></li>
+</ul>
+</section>
+<section class="sa-sez">
+<h2>How well known</h2>
+<div class="sa-barra"><div class="sa-bn">In the English-speaking world</div><div class="sa-asta"><i style="width:88%"></i></div><div class="sa-val">2,412 Wikipedia views in 12 months · <b>#44 of 116</b></div></div>
+<div class="sa-barra"><div class="sa-bn">Worldwide</div><div class="sa-asta"><i style="width:93%"></i></div><div class="sa-val">Wikipedia page in 18 languages · <b>#29 of 116</b></div></div>
+<p class="sa-nota">Measures curiosity about the author (Wikipedia page views), not sales of their books.</p>
+</section>
+<section class="sa-sez">
+<h2>Before publishing</h2>
+<p class="sa-testo">The dates on this page apply to the original texts. Illustrations and translations have their own rights, lasting 70 years after the death of the illustrator or translator: a book can have a free text and still-protected drawings.</p>
+<p class="sa-nota">Indicative calculation, not legal advice.</p>
+</section>
+</div>
+<p class="sa-azioni"><a class="sa-salva" href="/en/#/autore/Q213592">Open the card in the radar</a></p>
 </main>
 <footer>
 <p>A project by Marco Novali · <a href="https://www.linkedin.com/in/marconovali" rel="me noopener" target="_blank">LinkedIn</a></p>
