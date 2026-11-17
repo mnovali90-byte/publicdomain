@@ -21,18 +21,18 @@ jobs:
               for a in json.load(open(f))["autori"]: autori[a[0]]=a
           OCC="wd:Q36180 wd:Q49757 wd:Q214917 wd:Q6625963 wd:Q4853732 wd:Q482980 wd:Q1930187 wd:Q11774202 wd:Q18844224"
           trovati={}; t0=time.time()
-          fasce=[(-3000,999),(1000,1499),(1500,1699),(1700,1799)]+[(y,y+9) for y in range(1800,1950,10)]+[(1950,1955)]
+          fasce=[(1000,1499),(1500,1699),(1700,1799)]+[(y,y) for y in range(1800,1956)]
           for da,a in fasce:
-              q=f"""SELECT ?a ?aLabel ?sl (YEAR(MIN(?m)) AS ?morte) WHERE {{
-                ?a wdt:P570 ?m. FILTER(?m >= "{da:+05d}-01-01T00:00:00Z"^^xsd:dateTime && ?m < "{a+1:+05d}-01-01T00:00:00Z"^^xsd:dateTime)
-                ?a wdt:P106 ?o. VALUES ?o {{ {OCC} }}
-                ?a wikibase:sitelinks ?sl. FILTER(?sl>=3)
-                SERVICE wikibase:label {{ bd:serviceParam wikibase:language "it,en". }} }} GROUP BY ?a ?aLabel ?sl"""
+              q=f"""SELECT ?a ?aLabel ?sl WHERE {{
+                ?a wdt:P570 ?m. hint:Prior hint:rangeSafe true .
+                FILTER(?m >= "{da:04d}-01-01T00:00:00Z"^^xsd:dateTime && ?m < "{a+1:04d}-01-01T00:00:00Z"^^xsd:dateTime)
+                ?a wdt:P31 wd:Q5; wdt:P106 ?o; wikibase:sitelinks ?sl. VALUES ?o {{ {OCC} }} FILTER(?sl>=3)
+                SERVICE wikibase:label {{ bd:serviceParam wikibase:language "it,en". }} }}"""
               t=time.time()
               try: r=sparql(q)
               except Exception as e: print("ERR|",da,a,str(e)[:80]); continue
               for x in r: trovati[qid(val(x,"a"))]=(val(x,"aLabel"),int(val(x,"sl")))
-              print(f"FASCIA| {da}-{a} {time.time()-t:.0f}s scrittori {len(r)}", flush=True); time.sleep(2)
+              print(f"FASCIA| {da}-{a} {time.time()-t:.0f}s scrittori {len(r)}", flush=True); time.sleep(1)
           nuovi={k:v for k,v in trovati.items() if k not in autori}
           print(f"TOT| {time.time()-t0:.0f}s | scrittori morti entro il 1955 con almeno 3 pagine: {len(trovati)} | che non abbiamo: {len(nuovi)}")
           print("NUOVI|",[v for v in sorted(nuovi.values(),key=lambda v:-v[1])[:60]])
