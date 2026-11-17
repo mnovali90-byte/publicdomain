@@ -6,32 +6,8 @@ jobs:
   d:
     runs-on: ubuntu-latest
     steps:
-      - run: |
-          python3 - <<'PY'
-          import urllib.request,urllib.parse,re,json
-          UA={"User-Agent":"PublicDomainRadar-diagnosi/1.0 (publicdomainradar.com)"}
-          def get(u,acc=None):
-            h=dict(UA); 
-            if acc: h["Accept"]=acc
-            return urllib.request.urlopen(urllib.request.Request(u,headers=h),timeout=90).read().decode("utf-8","replace")
-          def n(t): m=re.search(r"numberOfRecords>(\d+)",t); return m.group(1) if m else ("DIAG:"+(re.search(r"<(?:diag:)?message>([^<]*)",t) or re.search(r"(.{0,200})",t)).group(1))
-          G="https://d-nb.info/gnd/118514768"
-          def dnb(q):
-            for ep in ["https://sparql.dnb.de/api/dnbgnd"]:
-              try:
-                t=get(ep+"?"+urllib.parse.urlencode({"query":q}),"application/sparql-results+json"); return t[:600]
-              except Exception as e: return f"ERR {e}"
-          def sru(nome,base,q,ver="1.2"):
-            try:
-              t=get(base+"?"+urllib.parse.urlencode({"version":ver,"operation":"searchRetrieve","query":q,"maximumRecords":"0"}))
-              print(nome,q,"->",n(t))
-            except Exception as e: print(nome,q,"ERR",e)
-          BL="https://eu06.alma.exlibrisgroup.com/view/sru/44BL_MAIN"
-          q='SELECT ?a ?aLabel ?isni ?lc ?viaf WHERE { VALUES ?a { wd:Q38757 wd:Q207036 wd:Q123075 } OPTIONAL{?a wdt:P213 ?isni} OPTIONAL{?a wdt:P244 ?lc} OPTIONAL{?a wdt:P214 ?viaf} SERVICE wikibase:label { bd:serviceParam wikibase:language "en". } }'
-          r=json.loads(get("https://query.wikidata.org/sparql?"+urllib.parse.urlencode({"query":q,"format":"json"})))["results"]["bindings"]
-          for b in r:
-            nome=b["aLabel"]["value"]; isni=b.get("isni",{}).get("value",""); lc=b.get("lc",{}).get("value","")
-            print("BL ID",nome,isni,lc)
-            for qq in [f'alma.isni_identifier={isni.replace(" ","")}', f'alma.isni_identifier="{isni}"', f'alma.authority_id={lc}', f'alma.identifierAuthority={lc}', f'alma.authority_id="(DLC){lc}"', f'alma.all_for_ui={lc}']:
-              sru("BL",BL,qq)
-          PY
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python scripts/alma.py prova
