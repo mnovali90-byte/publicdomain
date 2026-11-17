@@ -1150,7 +1150,7 @@ function apriGenere(chiave) {
     h("div", { class: "occhiello" }, tr("libereDal", { d: dataIt(stato.dati[stato.anno].libero_dal) })),
     h("h2", {}, s.nome),
     h("div", { class: "sotto" }, tr("nOpere", { n: n(s.opere.length) })),
-    h("div", { class: "griglia-opere" }, s.opere.map(copertina))));
+    h("div", { class: "griglia-opere" }, s.opere.map((o) => copertina(o)))));
   return true;
 }
 
@@ -1845,7 +1845,7 @@ async function avvia() {
   const m = leggiLocale(CHIAVE_MERCATO, "it");
   stato.mercato = ["it", "es", "de", "fr", "en", "int", "scop"].includes(m) ? m : "it";
   stato.anno = stato.anni[0];
-  const gsalvata = leggiLocale(CHIAVE_GIUR, "it");
+  const gsalvata = leggiLocale(CHIAVE_GIUR, LING === "en" ? null : "it");   // in inglese, senza scelta salvata, decide la lingua del browser
   const og = GIUR_OPZ.find((o) => o[0] === gsalvata);
   if (og && stato.giurDisp.includes(og[1])) { stato.opz = og[0]; stato.giur = og[1]; stato.dati = stato.perGiur[og[1]]; }
   else if (LING === "en") {
