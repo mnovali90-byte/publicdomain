@@ -187,6 +187,19 @@ button{font:inherit;color:inherit;cursor:pointer}
 .elenco{margin:36px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:0 40px}
 .elenco li{display:flex;align-items:center;border-bottom:1px solid #DAD8CE}
 .elenco .riga{flex:1;min-width:0;background:none;border:0;text-align:left;padding:12px 0;font-size:18px;line-height:1.3}
+.elenco.elenco-scop{display:block;columns:auto}
+.elenco-scop li{display:flex;align-items:flex-start;border-bottom:1px solid #D9D6CC}
+.riga-scop{flex:1;min-width:0;display:grid;grid-template-columns:34px 1fr;gap:12px;padding:18px 0;background:none;border:0;text-align:left;color:inherit;cursor:pointer}
+.rs-n{font-family:var(--display);font-weight:900;font-size:30px;line-height:1;color:var(--vermiglio)}
+.rs-c{display:flex;flex-direction:column;gap:6px}
+.rs-c b{font-size:19px;font-weight:600}
+.rs-d{font-size:14px;color:var(--muto)}
+.rs-c i{font-size:15px}
+.rs-chip{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.rs-nero,.rs-crema{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:5px 8px}
+.rs-nero{background:var(--ink);color:var(--carta)}.rs-crema{background:var(--riquadro);color:var(--ink)}
+.rs-nota{display:block;border:0;padding-top:18px;font-size:13px;line-height:1.5;color:var(--muto)}
+.riga-scop:hover b{text-decoration:underline;text-decoration-color:var(--vermiglio)}
 .elenco .riga small{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.05em;color:var(--muto);margin-top:3px}
 .elenco .riga:hover b{text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--vermiglio);text-decoration-thickness:2px}
 .elenco b{font-weight:600}
@@ -486,6 +499,7 @@ it: {
   titolo: "Pubblico dominio 2027: gli autori che diventano liberi · Public Domain Radar",
   indiceAutori: "Indice degli autori (una pagina per ogni autore)", paginaDedicata: "Pagina dedicata", paginaDedicataEn: "Pagina dedicata",
   descrizione: "Gli autori le cui opere entrano nel pubblico dominio in Europa il prossimo 1° gennaio. Dati aperti da Wikidata e Wikipedia, aggiornati ogni mese.",
+  chipLingue: "Pagine in {n} lingue", chipVisite: "{n} visite {p}", scopCome: "Come si calcola: in quante lingue esiste la pagina Wikipedia dell'autore, confrontato con le visite nella lingua del paese scelto (meno di 300 in un anno). È un indizio, non la prova che manchi una traduzione.",
   schedaAutore: "Scheda autore", paeseEt: "Paese", continuaWp: "Continua su Wikipedia", vVisWp: "{n} visite su Wikipedia in 12 mesi", vLingueWp: "pagina Wikipedia in {n} lingue",
   barraNomi: { it: "In Italia", fr: "In Francia", de: "In Germania", es: "In Spagna", en: "Nel mondo anglofono", int: "Nel mondo" }, altriLink: "Cerca altrove",
   liberoIn: "Libero {p} dal", nonPrima: "non prima del ", traGiorni: "tra {n} giorni", giaLibero: "già libero", mortoIl: "anno di morte {a}",
@@ -552,7 +566,7 @@ it: {
   chiudi: "Chiudi", copiaLink: "Copia il link", linkCopiato: "Link copiato", copiaPrompt: "Copia il link:",
   popolarita: "Interesse online", visite: "{n} visite su Wikipedia in 12 mesi", visiteNd: "visite Wikipedia: dato non disponibile",
   mercatoEt: "Ordina per interesse", mNomi: { it: "Italia", fr: "Francia", de: "Germania", es: "Spagna", en: "Mondo anglofono", int: "Fama nel mondo", scop: "Da scoprire" },
-  mDesc: { it: "Conta le visite alla pagina Wikipedia in italiano negli ultimi 12 mesi.", fr: "Conta le visite alla pagina Wikipedia in francese negli ultimi 12 mesi, da tutto il mondo francofono.", de: "Conta le visite alla pagina Wikipedia in tedesco negli ultimi 12 mesi, da Germania, Austria e Svizzera.", es: "Conta le visite alla pagina Wikipedia in spagnolo negli ultimi 12 mesi, da tutto il mondo ispanofono (America Latina inclusa).", en: "Conta le visite alla pagina Wikipedia in inglese negli ultimi 12 mesi, da tutto il mondo (India inclusa).", int: "Conta in quante lingue esiste una pagina Wikimedia sull'autore: non dipende dalla grandezza di un pubblico.", scop: "Famosi nel mondo, poco letti nella lingua del paese scelto: autori che probabilmente aspettano ancora una traduzione. Confronta in quante lingue esiste la pagina Wikipedia con le visite nella lingua del paese. È un indizio, non la prova che una traduzione manchi." },
+  mDesc: { it: "Conta le visite alla pagina Wikipedia in italiano negli ultimi 12 mesi.", fr: "Conta le visite alla pagina Wikipedia in francese negli ultimi 12 mesi, da tutto il mondo francofono.", de: "Conta le visite alla pagina Wikipedia in tedesco negli ultimi 12 mesi, da Germania, Austria e Svizzera.", es: "Conta le visite alla pagina Wikipedia in spagnolo negli ultimi 12 mesi, da tutto il mondo ispanofono (America Latina inclusa).", en: "Conta le visite alla pagina Wikipedia in inglese negli ultimi 12 mesi, da tutto il mondo (India inclusa).", int: "Conta in quante lingue esiste una pagina Wikimedia sull'autore: non dipende dalla grandezza di un pubblico.", scop: "Famosi nel mondo, poco letti {p}: autori che probabilmente aspettano ancora una traduzione." },
   primoPerM: { it: "{r}° per interesse in Italia", fr: "{r}° per interesse in Francia", de: "{r}° per interesse in Germania", es: "{r}° per interesse in Spagna", en: "{r}° nel mondo anglofono", int: "{r}° per fama nel mondo", scop: "{r}° da scoprire" },
   sottoM: { it: "Quanto è letta oggi la sua pagina Wikipedia in italiano, rispetto agli altri autori di questa lista", en: "Quanto è letta oggi la sua pagina Wikipedia in inglese, rispetto agli altri autori di questa lista", int: "In quante lingue esiste una pagina su di lui, rispetto agli altri autori di questa lista" },
   sbnTit: "Traduzioni in italiano (catalogo SBN)", sbnTrovate: "{n} libri in italiano", sbnUno: "1 libro in italiano", sbnUltima: "", sbnDal2000: ", di cui {m} usciti dal 2000 in poi", sbnNessuno2000: ", nessuno uscito dal 2000 in poi",
@@ -592,6 +606,7 @@ en: {
   titolo: "Public Domain 2027: books and authors entering the public domain · Public Domain Radar",
   indiceAutori: "Index of authors (one page per author)", paginaDedicata: "Dedicated page (Italian)", paginaDedicataEn: "Dedicated page",
   descrizione: "The authors whose works enter the public domain in Europe on 1 January next year. Open data from Wikidata and Wikipedia, updated monthly.",
+  chipLingue: "Pages in {n} languages", chipVisite: "{n} views {p}", scopCome: "How it is calculated: how many languages have a Wikipedia page for the author, compared with the views in the chosen country's language (fewer than 300 a year). It is a clue, not proof that a translation is missing.",
   schedaAutore: "Author card", paeseEt: "Country", continuaWp: "Continue on Wikipedia", vVisWp: "{n} Wikipedia views in 12 months", vLingueWp: "Wikipedia page in {n} languages",
   barraNomi: { it: "In Italy", fr: "In France", de: "In Germany", es: "In Spain", en: "In the English-speaking world", int: "Worldwide" }, altriLink: "Look elsewhere",
   liberoIn: "Free {p} from", nonPrima: "not before ", traGiorni: "in {n} days", giaLibero: "already free", mortoIl: "died in {a}",
@@ -658,7 +673,7 @@ en: {
   chiudi: "Close", copiaLink: "Copy link", linkCopiato: "Link copied", copiaPrompt: "Copy the link:",
   popolarita: "Online interest", visite: "{n} Wikipedia views in 12 months", visiteNd: "Wikipedia views: not available",
   mercatoEt: "Rank by interest", mNomi: { it: "Italy", fr: "France", de: "Germany", es: "Spain", en: "English-speaking world", int: "Worldwide fame", scop: "To discover" },
-  mDesc: { it: "Counts views of the author's Italian Wikipedia page over the last 12 months.", fr: "Counts views of the French Wikipedia page over the last 12 months, from the whole French-speaking world.", de: "Counts views of the German Wikipedia page over the last 12 months, from Germany, Austria and Switzerland.", es: "Counts views of the Spanish Wikipedia page over the last 12 months, from the whole Spanish-speaking world (Latin America included).", en: "Counts views of the English Wikipedia page over the last 12 months, from all over the world (India included).", int: "Counts in how many languages a Wikimedia page about the author exists: it does not depend on the size of one audience.", scop: "Famous worldwide, little read in the language of the chosen country: authors who are probably still waiting for a translation. It compares how many languages have a Wikipedia page with the views in the country's language. It is a clue, not proof that a translation is missing." },
+  mDesc: { it: "Counts views of the author's Italian Wikipedia page over the last 12 months.", fr: "Counts views of the French Wikipedia page over the last 12 months, from the whole French-speaking world.", de: "Counts views of the German Wikipedia page over the last 12 months, from Germany, Austria and Switzerland.", es: "Counts views of the Spanish Wikipedia page over the last 12 months, from the whole Spanish-speaking world (Latin America included).", en: "Counts views of the English Wikipedia page over the last 12 months, from all over the world (India included).", int: "Counts in how many languages a Wikimedia page about the author exists: it does not depend on the size of one audience.", scop: "Famous worldwide, little read {p}: authors who are probably still waiting for a translation." },
   primoPerM: { it: "#{r} for interest in Italy", fr: "#{r} for interest in France", de: "#{r} for interest in Germany", es: "#{r} for interest in Spain", en: "#{r} in the English-speaking world", int: "#{r} for worldwide fame", scop: "#{r} to discover" },
   sottoM: { it: "How much their Italian Wikipedia page is read today, compared with the other authors on this list", en: "How much their English Wikipedia page is read today, compared with the other authors on this list", int: "In how many languages a page about them exists, compared with the other authors on this list" },
   sbnTit: "Translations into Italian (SBN catalogue)", sbnTrovate: "{n} books in Italian", sbnUno: "1 book in Italian", sbnUltima: "", sbnDal2000: ", {m} of them published since 2000", sbnNessuno2000: ", none published since 2000",
@@ -863,7 +878,10 @@ const mercatoPaese = (id) => { if (id === "uk" || id === "us") return "en"; cons
 const mercatiDisp = () => { const l = mercatoPaese(stato.opz); return l === "int" ? ["int"] : [l, "int", "scop"]; };
 // «Da scoprire»: molto noto nel mondo, poco nella lingua del paese scelto
 const ESCLUSI_SCOPRIRE = new Set(["Q566764"]);   // figure religiose o politiche controverse: non si propongono come scoperte
-const idxScop = (a) => { if (ESCLUSI_SCOPRIRE.has(a.wikidata)) return undefined; const w = a.indice_int, l = a["indice_" + mercatoPaese(stato.opz)]; if (w === undefined) return undefined; return w < 90 ? -100 + w : w - (l || 0); };
+// candidati: tra i più noti nel mondo (indice ≥ 90) e con meno di 300 visite all'anno nella lingua del paese; in ordine di lingue
+const SOGLIA_SCOP_VISITE = 300;
+const èScoperta = (a) => !ESCLUSI_SCOPRIRE.has(a.wikidata) && (a.indice_int || 0) >= 90 && (a[CAMPO_M[mercatoPaese(stato.opz)]] || 0) < SOGLIA_SCOP_VISITE;
+const idxScop = (a) => (èScoperta(a) ? a.pagine_wikipedia || 0 : undefined);
 const idx = (a) => (!stato.mercati ? a.indice : stato.mercato === "scop" ? idxScop(a) : a["indice_" + stato.mercato]);
 const grezzo = (a) => (stato.mercati && stato.mercato !== "scop" ? (a[CAMPO_M[stato.mercato]] || 0) : (a.pagine_wikipedia || 0));
 const etIdx = (a) => {
@@ -1300,6 +1318,7 @@ function elencoArchivio() {
   if (stato.lingua) lista = lista.filter((a) => (a.lingue || []).includes(stato.lingua));
   const q = norm(stato.cerca.trim());
   if (q) lista = lista.filter((a) => norm(a.nome).includes(q));
+  if (stato.mercati && stato.mercato === "scop") lista = lista.filter(èScoperta).sort((x, y) => (y.pagine_wikipedia || 0) - (x.pagine_wikipedia || 0));
   if (stato.ordine === "nome") lista = lista.slice().sort((x, y) => x.nome.localeCompare(y.nome, "it"));
   else if (stato.ordine === "morte") lista = lista.slice().sort((x, y) => (x.morte || "").localeCompare(y.morte || "") || x.nome.localeCompare(y.nome, "it"));
   return lista;
@@ -1327,7 +1346,28 @@ function disegnaArchivio() {
 
   const ul = $("#elenco");
   const mostra = lista.slice(0, stato.visibili);
-  ul.replaceChildren(...mostra.map((a) => h("li", {},
+  const scop = stato.mercati && stato.mercato === "scop";
+  ul.classList.toggle("elenco-scop", scop);
+  if (scop) {
+    const l = mercatoPaese(stato.opz);
+    ul.replaceChildren(...mostra.map((a, i) => {
+      const v = a[CAMPO_M[l]] || 0;
+      const paesi = (a.paesi || []).slice(0, 2).map((x) => et(x)).join(", ");
+      const opere = (a.opere || []).slice(0, 2).map((o) => (LING === "en" && o.titolo_en) || o.titolo).join(" · ");
+      return h("li", {},
+        h("button", { class: "riga-scop", type: "button", onclick: () => apriAutore(a.wikidata) },
+          h("span", { class: "rs-n" }, String(i + 1)),
+          h("span", { class: "rs-c" },
+            h("b", {}, a.nome),
+            h("span", { class: "rs-d" }, `${a.nascita ? a.nascita.slice(0, 4) : "?"} – ${a.morte ? a.morte.slice(0, 4) : "?"}` + (paesi ? " · " + paesi : "")),
+            opere ? h("i", {}, opere) : null,
+            h("span", { class: "rs-chip" },
+              h("span", { class: "rs-nero" }, tr("chipLingue", { n: n(a.pagine_wikipedia || 0) })),
+              h("span", { class: "rs-crema" }, v ? tr("chipVisite", { n: n(v), p: tr("paesiNomi")[stato.opz] || "" }) : tr("vNoPag", { l: nomeLingua(["it", "es", "de", "fr"].includes(l) ? l : "en") }))))),
+        bottoneCuore(a, "cuore cuore-riga"));
+    }));
+    if (lista.length) ul.append(h("li", { class: "rs-nota" }, tr("scopCome")));
+  } else ul.replaceChildren(...mostra.map((a) => h("li", {},
     h("button", { class: "riga", type: "button", onclick: () => apriAutore(a.wikidata) },
       h("b", {}, a.nome),
       h("small", {}, `† ${a.morte ? a.morte.slice(0, 4) : "?"}${etIdx(a)}`)),
@@ -1758,7 +1798,7 @@ function disegnaMercato() {
   box.replaceChildren(
     h("span", { class: "et" }, tr("mercatoEt")),
     ...mercatiDisp().map((m) => h("button", { type: "button", class: "pillola", "aria-pressed": m === stato.mercato ? "true" : "false", onclick: () => impostaMercato(m) }, tr("mNomi")[m])),
-    h("p", { class: "nota-m" }, tr("mDesc")[stato.mercato]));
+    h("p", { class: "nota-m" }, tr("mDesc")[stato.mercato].split("{p}").join(tr("paesiNomi")[stato.opz] || "")));
 }
 function disegnaTutto() {
   disegnaNavigazione();
