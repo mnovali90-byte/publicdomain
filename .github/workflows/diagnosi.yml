@@ -1,0 +1,74 @@
+name: diagnosi
+on:
+  push:
+    paths: [".github/workflows/diagnosi.yml"]
+jobs:
+  d:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Prova VIAF sugli autori con una sola fonte (non salva nulla)
+        run: |
+          cd scripts && python3 - <<'PY'
+          import json, re, time, urllib.request, urllib.parse
+          from verifica import sparql
+          UA={"User-Agent":"PublicDomainRadar/1.0 (https://publicdomainradar.com; open data project)"}
+          d=json.load(open("../data/2027.json"))
+          tutti=[a for a in d["autori"] if a.get("letterario")]
+          una=[a for a in tutti if (a.get("verifica") or {}).get("esito")=="una_fonte"]
+          ver=[a for a in tutti if (a.get("verifica") or {}).get("esito") in("verificato","discorde")][:15]
+          qs=[a["wikidata"] for a in una+ver]
+          viaf={}
+          for i in range(0,len(qs),80):
+              v=" ".join("wd:"+q for q in qs[i:i+80])
+              for b in sparql(f"SELECT ?a ?v WHERE {{ VALUES ?a {{ {v} }} ?a wdt:P214 ?v }}"):
+                  viaf.setdefault(b["a"]["value"].rsplit("/",1)[-1], b["v"]["value"])
+              time.sleep(2)
+          print("CODICI| una_fonte",len(una),"con codice VIAF:",sum(1 for a in una if a["wikidata"] in viaf))
+          def prova(url, data=None, acc="application/json"):
+              try:
+                  r=urllib.request.Request(url, data=data, headers={**UA,"Accept":acc,**({"Content-Type":"application/json"} if data else {})})
+                  with urllib.request.urlopen(r,timeout=40) as x: return x.status, x.read().decode("utf-8","replace")
+              except urllib.error.HTTPError as e: return e.code, (e.read() or b"").decode("utf-8","replace")[:200]
+              except Exception as e: return "ERR", str(e)
+          # quale indirizzo funziona
+          vid=viaf.get(ver[0]["wikidata"]) if ver else None
+          print("PROVA| autore",ver[0]["nome"],vid)
+          forme={
+            "json": lambda i: prova(f"https://viaf.org/viaf/{i}/viaf.json"),
+            "jsonld": lambda i: prova(f"https://viaf.org/viaf/{i}/viaf.jsonld", acc="application/ld+json"),
+            "api": lambda i: prova("https://viaf.org/api/cluster-record", json.dumps({"reqValues":{"recordId":str(i)},"meta":{"env":"prod","pageIndex":0,"pageSize":1}}).encode()),
+            "pagina": lambda i: prova(f"https://viaf.org/viaf/{i}/", acc="application/json"),
+          }
+          buona=None
+          for n,f in forme.items():
+              s,t=f(vid); print("FORMA|",n,s,len(t),t[:300].replace("\n"," "))
+              if s==200 and buona is None and re.search(r"1[89]\d\d", t): buona=n
+              time.sleep(1)
+          print("BUONA|",buona)
+          if not buona: raise SystemExit
+          def anni_morte(t, nasc):
+              # ogni intestazione delle biblioteche: "..., 1898-1956" -> anno di morte dopo l'anno di nascita
+              trovati=re.findall(r"(1[789]\d\d)\s*-\s*(1[89]\d\d|20\d\d)", t)
+              return [int(m) for b,m in trovati if not nasc or str(b)==str(nasc)]
+          def fonti(t):
+              return sorted(set(re.findall(r'"(?:sid|source|ns1:s|s)"\s*:\s*"([A-Z]{2,8})', t)))
+          tot={"conferma":0,"discorde":0,"niente":0,"senza_codice":0}
+          for gruppo,lista in (("CONTROLLO",ver),("UNA",una)):
+              for a in lista:
+                  i=viaf.get(a["wikidata"])
+                  if not i:
+                      if gruppo=="UNA": tot["senza_codice"]+=1
+                      continue
+                  s,t=forme[buona](i); time.sleep(1)
+                  nasc=str(a.get("nascita") or "")[:4]; mor=int(str(a["morte"])[:4])
+                  m=anni_morte(t, nasc) if s==200 else []
+                  esito="niente" if not m else ("conferma" if all(x==mor for x in m) or m.count(mor)>len(m)/2 else "discorde")
+                  if gruppo=="UNA": tot[esito]+=1
+                  print(gruppo+"|",a["nome"],"| wikidata",mor,"| viaf",sorted(set(m)),"x",len(m),"|",esito)
+          print("TOTALE|",tot)
+          PY
