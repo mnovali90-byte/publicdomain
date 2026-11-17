@@ -291,6 +291,33 @@ def blocco_illustrazioni(a, lang):
     return out
 
 
+# Stati dell'epoca -> paese di oggi: stessa tabella della scheda del sito (PAESI in index.html), da tenere allineata
+PAESI_MODERNI = {
+    "Germania": ["reich tedesco", "impero tedesco", "repubblica di weimar", "germania nazista", "repubblica democratica tedesca", "germania ovest", "germania est", "confederazione germanica"],
+    "Regno Unito": ["regno unito di gran bretagna e irlanda", "regno unito di gran bretagna e irlanda del nord", "inghilterra", "impero britannico"],
+    "India": ["impero anglo-indiano", "dominion dell'india", "india britannica", "raj britannico"],
+    "Italia": ["regno d'italia", "regno di sardegna", "repubblica sociale italiana"],
+    "Russia": ["impero russo", "unione sovietica", "repubblica socialista federativa sovietica russa"],
+    "Austria": ["impero austriaco", "austria-ungheria", "impero austro-ungarico", "cisleitania"],
+    "Francia": ["terza repubblica francese", "seconda repubblica francese", "francia di vichy", "impero francese"],
+    "Spagna": ["regno di spagna", "seconda repubblica spagnola", "stato spagnolo"],
+    "Stati Uniti": ["stati uniti d'america"],
+    "Giappone": ["impero giapponese", "impero del giappone"],
+    "Cina": ["repubblica di cina", "impero cinese", "dinastia qing"],
+}
+_MODERNO = {v: k for k, lista in PAESI_MODERNI.items() for v in lista}
+
+
+def paesi_moderni(lista):
+    norm = lambda x: unicodedata.normalize("NFD", str(x)).encode("ascii", "ignore").decode().lower()
+    out = []
+    for x in lista or []:
+        m = _MODERNO.get(norm(x), x)
+        if m not in out:
+            out.append(m)
+    return out
+
+
 RANGHI = {}   # (wikidata, misura) -> (posizione, totale): calcolati in main() come nella classifica del sito
 
 
@@ -324,7 +351,7 @@ def scheda_statica(a, lang, bd):
     if it and a.get("professioni"):
         desc.append(", ".join(a["professioni"][:2]))
     if it and a.get("paesi"):
-        desc.append(", ".join(a["paesi"][:2]))
+        desc.append(", ".join(paesi_moderni(a["paesi"])[:2]))
     o.append(f'<div><h1>{esc(nome)}</h1>\n<p class="sa-desc">{esc(" · ".join(desc))}</p></div>\n</header>\n')
     if foto.get("url"):
         cap = " · ".join(x for x in (pulisci(foto.get("autore")), pulisci(foto.get("licenza"))) if x)
