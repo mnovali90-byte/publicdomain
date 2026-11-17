@@ -304,7 +304,30 @@ PAESI_MODERNI = {
     "Stati Uniti": ["stati uniti d'america"],
     "Giappone": ["impero giapponese", "impero del giappone"],
     "Cina": ["repubblica di cina", "impero cinese", "dinastia qing"],
+    "Bielorussia": ["rss bielorussa", "repubblica socialista sovietica bielorussa"],
+    "Ucraina": ["rss ucraina", "repubblica socialista sovietica ucraina"],
+    "Georgia": ["rss georgiana", "repubblica socialista sovietica georgiana", "repubblica democratica di georgia"],
+    "Armenia": ["rss armena", "repubblica socialista sovietica armena", "prima repubblica di armenia"],
+    "Azerbaigian": ["rss azera", "repubblica socialista sovietica azera", "repubblica democratica di azerbaigian"],
+    "Estonia": ["rss estone"],
+    "Lettonia": ["rss lettone"],
+    "Lituania": ["rss lituana"],
+    "Kazakistan": ["rss kazaka"],
+    "Uzbekistan": ["rss uzbeka"],
+    "Moldavia": ["rss moldava"],
+    "Paesi Bassi": ["regno dei paesi bassi"],
+    "Polonia": ["seconda repubblica di polonia", "repubblica popolare di polonia", "regno del congresso"],
+    "Danimarca": ["regno di danimarca"],
+    "Egitto": ["regno d'egitto"],
+    "Iraq": ["regno dell'iraq"],
+    "Ungheria": ["regno d'ungheria", "repubblica popolare d'ungheria"],
+    "Romania": ["regno di romania", "repubblica socialista di romania"],
+    "Grecia": ["regno di grecia"],
+    "Belgio": ["regno del belgio"],
+    "Svezia": ["regno di svezia"],
+    "Norvegia": ["regno di norvegia"],
 }
+POST_SOVIETICI = set(['Bielorussia', 'Ucraina', 'Georgia', 'Armenia', 'Azerbaigian', 'Estonia', 'Lettonia', 'Lituania', 'Kazakistan', 'Uzbekistan', 'Moldavia'])
 _MODERNO = {v: k for k, lista in PAESI_MODERNI.items() for v in lista}
 
 
@@ -315,6 +338,8 @@ def paesi_moderni(lista):
         m = _MODERNO.get(norm(x), x)
         if m not in out:
             out.append(m)
+    if "Russia" in out and any(x in POST_SOVIETICI for x in out):   # Bielorussia, non anche «Russia» per via dell'Impero russo
+        out.remove("Russia")
     return out
 
 

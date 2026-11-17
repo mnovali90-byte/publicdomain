@@ -795,8 +795,33 @@ const PAESI = {
   "Spagna": ["regno di spagna", "seconda repubblica spagnola", "stato spagnolo"],
   "Stati Uniti": ["stati uniti d'america"],
   "Giappone": ["impero giapponese", "impero del giappone"],
-  "Cina": ["repubblica di cina", "impero cinese", "dinastia qing"]
+  "Cina": ["repubblica di cina", "impero cinese", "dinastia qing"],
+  "Bielorussia": ["rss bielorussa", "repubblica socialista sovietica bielorussa"],
+  "Ucraina": ["rss ucraina", "repubblica socialista sovietica ucraina"],
+  "Georgia": ["rss georgiana", "repubblica socialista sovietica georgiana", "repubblica democratica di georgia"],
+  "Armenia": ["rss armena", "repubblica socialista sovietica armena", "prima repubblica di armenia"],
+  "Azerbaigian": ["rss azera", "repubblica socialista sovietica azera", "repubblica democratica di azerbaigian"],
+  "Estonia": ["rss estone"],
+  "Lettonia": ["rss lettone"],
+  "Lituania": ["rss lituana"],
+  "Kazakistan": ["rss kazaka"],
+  "Uzbekistan": ["rss uzbeka"],
+  "Moldavia": ["rss moldava"],
+  "Paesi Bassi": ["regno dei paesi bassi"],
+  "Polonia": ["seconda repubblica di polonia", "repubblica popolare di polonia", "regno del congresso"],
+  "Danimarca": ["regno di danimarca"],
+  "Egitto": ["regno d'egitto"],
+  "Iraq": ["regno dell'iraq"],
+  "Ungheria": ["regno d'ungheria", "repubblica popolare d'ungheria"],
+  "Romania": ["regno di romania", "repubblica socialista di romania"],
+  "Grecia": ["regno di grecia"],
+  "Belgio": ["regno del belgio"],
+  "Svezia": ["regno di svezia"],
+  "Norvegia": ["regno di norvegia"]
 };
+// un autore sovietico di una repubblica precisa (es. Bielorussia) non diventa anche «Russia» per via di Impero russo/URSS
+const POST_SOVIETICI = new Set(["Bielorussia", "Ucraina", "Georgia", "Armenia", "Azerbaigian", "Estonia", "Lettonia", "Lituania", "Kazakistan", "Uzbekistan", "Moldavia"].concat(["Russia"]));
+const senzaRussiaGenerica = (l) => (l.includes("Russia") && l.some((x) => x !== "Russia" && POST_SOVIETICI.has(x)) ? l.filter((x) => x !== "Russia") : l);
 const PAESE_MODERNO = new Map(Object.entries(PAESI).flatMap(([m, lista]) => lista.map((x) => [x, m])));
 function paeseModerno(nome) { return PAESE_MODERNO.get(norm(nome)) || nome; }
 let ETICHETTE_EN = {};   // nomi inglesi di paesi e lingue, da Wikidata (data/etichette_en.json)
@@ -806,7 +831,7 @@ function ripulisciDati() {
     const d = stato.dati[an];
     const conta = new Map();
     for (const a of d.autori) {
-      if (Array.isArray(a.paesi)) a.paesi = [...new Set(a.paesi.map(paeseModerno))];
+      if (Array.isArray(a.paesi)) a.paesi = senzaRussiaGenerica([...new Set(a.paesi.map(paeseModerno))]);
       if (Array.isArray(a.generi)) {
         const visti = new Map();
         for (const g of a.generi) { const c = genereCanonico(g); if (c) visti.set(c.chiave, c); }
