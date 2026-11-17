@@ -114,10 +114,34 @@ def candidati(pacchetto):
     return lista[:PER_ANNO]
 
 
+def chiave_nome_intero(a):
+    """'Nome Cognome nascita-morte' con tutte le parole del nome: più severo, per la BNE senza codice."""
+    k = chiave_nome(a)
+    if not k:
+        return None
+    parole = [p for p in re.split(r"[\s,]+", _ascii(a["nome"])) if p and not p.endswith(".") and len(p) > 1]
+    return " ".join(parole) + " " + k.split()[-1] if parole else None
+
+
+def bne_per_nome(a, quanti_fn=quanti):
+    """Senza codice BNE: cerca nome intero + anni di nascita e morte. Si tiene solo se trova qualcosa.
+    Provato il 17/11/2026 su 20 autori col codice: stessi numeri nella gran parte dei casi, a volte meno
+    (forme del nome diverse), raramente di più (Ward Greene 23 contro 6)."""
+    k = chiave_nome_intero(a)
+    if not k:
+        return None
+    v = dict(conta("bne_es", f'alma.creator all "{k}"', quanti_fn), metodo="nome_anni")
+    return v if v["trovato"] else None
+
+
 def voce_autore(a, codice_bne, quanti_fn=quanti):
-    out = {}
+    out = {"bne_nome": 1}
     if codice_bne and re.fullmatch(r"[A-Za-z0-9]+", codice_bne):
         out["bne_es"] = dict(conta("bne_es", f"alma.authority_id={codice_bne}", quanti_fn), metodo="codice_bne")
+    else:
+        v = bne_per_nome(a, quanti_fn)
+        if v:
+            out["bne_es"] = v
     k = chiave_nome(a)
     if k:
         out["bl_en"] = dict(conta("bl_en", f'alma.creator all "{_ascii(k)}"', quanti_fn), metodo="nome_anni")
@@ -128,12 +152,27 @@ def elabora(oggi, quanti_fn=quanti, codici_fn=codici_bne):
     cache = json.loads(CACHE.read_text(encoding="utf-8")) if CACHE.exists() else {}
     file = [f for f in sorted(DATA_DIR.glob("*[0-9][0-9][0-9][0-9].json")) if not f.name.startswith(("us-", "anniversari-"))]
     pacchetti = [(f, json.loads(f.read_text(encoding="utf-8"))) for f in file]
-    da_fare, visti = [], set()
+    da_fare, solo_bne, visti = [], [], set()
     for _, p in pacchetti:
         for a in candidati(p):
-            if a["wikidata"] not in visti and not e_recente(cache.get(a["wikidata"]), oggi):
+            if a["wikidata"] in visti:
+                continue
+            voce = cache.get(a["wikidata"])
+            if not e_recente(voce, oggi):
                 da_fare.append(a); visti.add(a["wikidata"])
-    print(f"alma: {len(da_fare)} autori da controllare", file=sys.stderr)
+            elif not voce.get("bne_es") and not voce.get("bne_nome"):
+                solo_bne.append(a); visti.add(a["wikidata"])
+    print(f"alma: {len(da_fare)} autori da controllare, {len(solo_bne)} da cercare in Spagna per nome", file=sys.stderr)
+    for a in solo_bne:          # voci già fatte senza codice BNE: si aggiunge solo la ricerca per nome
+        if time.time() > FINE_LAVORO:
+            break
+        try:
+            v = bne_per_nome(a, quanti_fn)
+            if v:
+                cache[a["wikidata"]]["bne_es"] = v
+            cache[a["wikidata"]]["bne_nome"] = 1
+        except Exception as e:
+            print(f"  {a['nome']}: {e}", file=sys.stderr)
     codici = codici_fn([a["wikidata"] for a in da_fare]) if da_fare else {}
     fatti = errori = 0
     for a in da_fare:
