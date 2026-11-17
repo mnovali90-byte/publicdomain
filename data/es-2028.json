@@ -178,6 +178,20 @@
      "dal_2000": 4,
      "metodo": "nome",
      "fonte": "SBN"
+    },
+    "bne_es": {
+     "trovato": true,
+     "edizioni": 51,
+     "dal_2000": 31,
+     "fonte": "BNE",
+     "metodo": "codice_bne"
+    },
+    "bl_en": {
+     "trovato": true,
+     "edizioni": 250,
+     "dal_2000": 36,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -276,6 +290,20 @@
      "metodo": null,
      "fonte": "SBN",
      "sospetto": true
+    },
+    "bne_es": {
+     "trovato": true,
+     "edizioni": 10,
+     "dal_2000": 8,
+     "fonte": "BNE",
+     "metodo": "codice_bne"
+    },
+    "bl_en": {
+     "trovato": true,
+     "edizioni": 17,
+     "dal_2000": 6,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -439,6 +467,20 @@
      "dal_2000": 16,
      "metodo": "viaf",
      "fonte": "SBN"
+    },
+    "bne_es": {
+     "trovato": true,
+     "edizioni": 44,
+     "dal_2000": 40,
+     "fonte": "BNE",
+     "metodo": "codice_bne"
+    },
+    "bl_en": {
+     "trovato": true,
+     "edizioni": 217,
+     "dal_2000": 80,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -775,6 +817,20 @@
      "dal_2000": 12,
      "metodo": "nome",
      "fonte": "SBN"
+    },
+    "bne_es": {
+     "trovato": true,
+     "edizioni": 15,
+     "dal_2000": 5,
+     "fonte": "BNE",
+     "metodo": "codice_bne"
+    },
+    "bl_en": {
+     "trovato": true,
+     "edizioni": 23,
+     "dal_2000": 8,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -928,6 +984,20 @@
      "dal_2000": 20,
      "metodo": "viaf",
      "fonte": "SBN"
+    },
+    "bne_es": {
+     "trovato": true,
+     "edizioni": 48,
+     "dal_2000": 21,
+     "fonte": "BNE",
+     "metodo": "codice_bne"
+    },
+    "bl_en": {
+     "trovato": true,
+     "edizioni": 62,
+     "dal_2000": 34,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -1079,6 +1149,20 @@
      "dal_2000": 7,
      "metodo": "nome",
      "fonte": "SBN"
+    },
+    "bne_es": {
+     "trovato": true,
+     "edizioni": 10,
+     "dal_2000": 6,
+     "fonte": "BNE",
+     "metodo": "codice_bne"
+    },
+    "bl_en": {
+     "trovato": true,
+     "edizioni": 13,
+     "dal_2000": 2,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -1249,6 +1333,20 @@
      "metodo": null,
      "fonte": "SBN",
      "sospetto": true
+    },
+    "bne_es": {
+     "trovato": true,
+     "edizioni": 76,
+     "dal_2000": 14,
+     "fonte": "BNE",
+     "metodo": "codice_bne"
+    },
+    "bl_en": {
+     "trovato": true,
+     "edizioni": 252,
+     "dal_2000": 78,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -1452,6 +1550,20 @@
      "dal_2000": 5,
      "metodo": "nome",
      "fonte": "SBN"
+    },
+    "bne_es": {
+     "trovato": true,
+     "edizioni": 32,
+     "dal_2000": 18,
+     "fonte": "BNE",
+     "metodo": "codice_bne"
+    },
+    "bl_en": {
+     "trovato": true,
+     "edizioni": 214,
+     "dal_2000": 50,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -1612,6 +1724,20 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bne_es": {
+     "trovato": true,
+     "edizioni": 17,
+     "dal_2000": 0,
+     "fonte": "BNE",
+     "metodo": "codice_bne"
+    },
+    "bl_en": {
+     "trovato": true,
+     "edizioni": 13,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -1759,6 +1885,20 @@
      "dal_2000": 1,
      "metodo": "nome",
      "fonte": "SBN"
+    },
+    "bne_es": {
+     "trovato": true,
+     "edizioni": 3,
+     "dal_2000": 2,
+     "fonte": "BNE",
+     "metodo": "codice_bne"
+    },
+    "bl_en": {
+     "trovato": true,
+     "edizioni": 3,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -1938,6 +2078,20 @@
      "dal_2000": 17,
      "metodo": "nome",
      "fonte": "SBN"
+    },
+    "bne_es": {
+     "trovato": true,
+     "edizioni": 25,
+     "dal_2000": 9,
+     "fonte": "BNE",
+     "metodo": "codice_bne"
+    },
+    "bl_en": {
+     "trovato": true,
+     "edizioni": 100,
+     "dal_2000": 42,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -2185,6 +2339,20 @@
      "dal_2000": 5,
      "metodo": "nome",
      "fonte": "SBN"
+    },
+    "bne_es": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "BNE",
+     "metodo": "codice_bne"
+    },
+    "bl_en": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 1,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -2301,6 +2469,20 @@
      "dal_2000": 1,
      "metodo": "nome",
      "fonte": "SBN"
+    },
+    "bne_es": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 1,
+     "fonte": "BNE",
+     "metodo": "codice_bne"
+    },
+    "bl_en": {
+     "trovato": true,
+     "edizioni": 2,
+     "dal_2000": 2,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -2455,6 +2637,20 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bne_es": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 0,
+     "fonte": "BNE",
+     "metodo": "codice_bne"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -2603,6 +2799,20 @@
      "dal_2000": 1,
      "metodo": "nome",
      "fonte": "SBN"
+    },
+    "bne_es": {
+     "trovato": true,
+     "edizioni": 296,
+     "dal_2000": 58,
+     "fonte": "BNE",
+     "metodo": "codice_bne"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -2758,6 +2968,20 @@
      "dal_2000": 6,
      "metodo": "viaf",
      "fonte": "SBN"
+    },
+    "bne_es": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 1,
+     "fonte": "BNE",
+     "metodo": "codice_bne"
+    },
+    "bl_en": {
+     "trovato": true,
+     "edizioni": 146,
+     "dal_2000": 9,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -3023,6 +3247,20 @@
      "dal_2000": 41,
      "metodo": "nome",
      "fonte": "SBN"
+    },
+    "bne_es": {
+     "trovato": true,
+     "edizioni": 3,
+     "dal_2000": 2,
+     "fonte": "BNE",
+     "metodo": "codice_bne"
+    },
+    "bl_en": {
+     "trovato": true,
+     "edizioni": 39,
+     "dal_2000": 2,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -3218,6 +3456,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -3399,6 +3644,13 @@
      "dal_2000": 1,
      "metodo": "nome",
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": true,
+     "edizioni": 4,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -3503,6 +3755,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -3660,6 +3919,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -3758,6 +4024,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": true,
+     "edizioni": 2,
+     "dal_2000": 1,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -3965,6 +4238,20 @@
      "dal_2000": 2,
      "metodo": "viaf",
      "fonte": "SBN"
+    },
+    "bne_es": {
+     "trovato": true,
+     "edizioni": 374,
+     "dal_2000": 17,
+     "fonte": "BNE",
+     "metodo": "codice_bne"
+    },
+    "bl_en": {
+     "trovato": true,
+     "edizioni": 37,
+     "dal_2000": 4,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -4571,6 +4858,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": true,
+     "edizioni": 13,
+     "dal_2000": 10,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -4744,6 +5038,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": true,
+     "edizioni": 150,
+     "dal_2000": 5,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -4876,6 +5177,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": true,
+     "edizioni": 5,
+     "dal_2000": 4,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -5013,6 +5321,20 @@
      "dal_2000": 7,
      "metodo": "nome",
      "fonte": "SBN"
+    },
+    "bne_es": {
+     "trovato": true,
+     "edizioni": 24,
+     "dal_2000": 5,
+     "fonte": "BNE",
+     "metodo": "codice_bne"
+    },
+    "bl_en": {
+     "trovato": true,
+     "edizioni": 48,
+     "dal_2000": 1,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -5226,6 +5548,20 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bne_es": {
+     "trovato": true,
+     "edizioni": 4,
+     "dal_2000": 4,
+     "fonte": "BNE",
+     "metodo": "codice_bne"
+    },
+    "bl_en": {
+     "trovato": true,
+     "edizioni": 2,
+     "dal_2000": 2,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -5411,6 +5747,20 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bne_es": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 1,
+     "fonte": "BNE",
+     "metodo": "codice_bne"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -5599,6 +5949,20 @@
      "dal_2000": 5,
      "metodo": "nome",
      "fonte": "SBN"
+    },
+    "bne_es": {
+     "trovato": true,
+     "edizioni": 3,
+     "dal_2000": 0,
+     "fonte": "BNE",
+     "metodo": "codice_bne"
+    },
+    "bl_en": {
+     "trovato": true,
+     "edizioni": 70,
+     "dal_2000": 13,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -5824,6 +6188,13 @@
      "dal_2000": 2,
      "metodo": "viaf",
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": true,
+     "edizioni": 2,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -5950,6 +6321,13 @@
      "dal_2000": 0,
      "metodo": "nome",
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -6111,6 +6489,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -6483,6 +6868,20 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bne_es": {
+     "trovato": true,
+     "edizioni": 216,
+     "dal_2000": 18,
+     "fonte": "BNE",
+     "metodo": "codice_bne"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -6591,6 +6990,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": true,
+     "edizioni": 6,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -6737,6 +7143,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": true,
+     "edizioni": 2,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -6925,6 +7338,20 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bne_es": {
+     "trovato": true,
+     "edizioni": 5,
+     "dal_2000": 0,
+     "fonte": "BNE",
+     "metodo": "codice_bne"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -7068,6 +7495,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -7234,6 +7668,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": true,
+     "edizioni": 12,
+     "dal_2000": 2,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -7331,6 +7772,13 @@
      "dal_2000": 1,
      "metodo": "nome",
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -7436,6 +7884,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -7757,6 +8212,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -7963,6 +8425,20 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bne_es": {
+     "trovato": true,
+     "edizioni": 3,
+     "dal_2000": 0,
+     "fonte": "BNE",
+     "metodo": "codice_bne"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -8143,6 +8619,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -8315,6 +8798,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": true,
+     "edizioni": 18,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -8412,6 +8902,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -8545,6 +9042,20 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bne_es": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "BNE",
+     "metodo": "codice_bne"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -8669,6 +9180,13 @@
      "dal_2000": 18,
      "metodo": "viaf",
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 1,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -9005,6 +9523,20 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bne_es": {
+     "trovato": true,
+     "edizioni": 12,
+     "dal_2000": 1,
+     "fonte": "BNE",
+     "metodo": "codice_bne"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -9298,6 +9830,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": true,
+     "edizioni": 80,
+     "dal_2000": 1,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -9397,6 +9936,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -9608,6 +10154,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -9828,6 +10381,20 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bne_es": {
+     "trovato": true,
+     "edizioni": 9,
+     "dal_2000": 2,
+     "fonte": "BNE",
+     "metodo": "codice_bne"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -10119,6 +10686,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -10276,6 +10850,20 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bne_es": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 0,
+     "fonte": "BNE",
+     "metodo": "codice_bne"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -10495,6 +11083,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": true,
+     "edizioni": 4,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -10671,6 +11266,20 @@
      "dal_2000": 8,
      "metodo": "nome",
      "fonte": "SBN"
+    },
+    "bne_es": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "BNE",
+     "metodo": "codice_bne"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -10982,6 +11591,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -11300,6 +11916,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -11679,6 +12302,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -11831,6 +12461,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -12013,6 +12650,20 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bne_es": {
+     "trovato": true,
+     "edizioni": 30,
+     "dal_2000": 0,
+     "fonte": "BNE",
+     "metodo": "codice_bne"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -12102,6 +12753,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -12485,6 +13143,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -12584,6 +13249,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": true,
+     "edizioni": 10,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -13064,6 +13736,13 @@
      "dal_2000": 2,
      "metodo": "viaf",
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": true,
+     "edizioni": 2,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -13169,6 +13848,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -13318,6 +14004,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -13885,6 +14578,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": true,
+     "edizioni": 2,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -14091,6 +14791,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": true,
+     "edizioni": 2,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -14311,6 +15018,20 @@
      "dal_2000": 1,
      "metodo": "nome",
      "fonte": "SBN"
+    },
+    "bne_es": {
+     "trovato": true,
+     "edizioni": 3,
+     "dal_2000": 0,
+     "fonte": "BNE",
+     "metodo": "codice_bne"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -14436,6 +15157,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -14703,6 +15431,20 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bne_es": {
+     "trovato": true,
+     "edizioni": 8,
+     "dal_2000": 0,
+     "fonte": "BNE",
+     "metodo": "codice_bne"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -14953,6 +15695,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -15059,6 +15808,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -15192,6 +15948,13 @@
      "dal_2000": 11,
      "metodo": "viaf",
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -15344,6 +16107,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -15662,6 +16432,20 @@
      "dal_2000": 1,
      "metodo": "nome",
      "fonte": "SBN"
+    },
+    "bne_es": {
+     "trovato": true,
+     "edizioni": 2,
+     "dal_2000": 1,
+     "fonte": "BNE",
+     "metodo": "codice_bne"
+    },
+    "bl_en": {
+     "trovato": true,
+     "edizioni": 2,
+     "dal_2000": 1,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -15799,6 +16583,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -16252,6 +17043,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -16340,6 +17138,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -17095,6 +17900,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -17189,6 +18001,20 @@
      "dal_2000": 54,
      "metodo": "viaf",
      "fonte": "SBN"
+    },
+    "bne_es": {
+     "trovato": true,
+     "edizioni": 9,
+     "dal_2000": 1,
+     "fonte": "BNE",
+     "metodo": "codice_bne"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -17327,6 +18153,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": true,
+     "edizioni": 48,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -17743,6 +18576,20 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bne_es": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 1,
+     "fonte": "BNE",
+     "metodo": "codice_bne"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -17876,6 +18723,20 @@
      "dal_2000": 0,
      "metodo": "viaf",
      "fonte": "SBN"
+    },
+    "bne_es": {
+     "trovato": true,
+     "edizioni": 245,
+     "dal_2000": 4,
+     "fonte": "BNE",
+     "metodo": "codice_bne"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -19076,6 +19937,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -19931,6 +20799,20 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bne_es": {
+     "trovato": true,
+     "edizioni": 3,
+     "dal_2000": 1,
+     "fonte": "BNE",
+     "metodo": "codice_bne"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -20450,6 +21332,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -20567,6 +21456,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 1,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -21459,6 +22355,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -21792,6 +22695,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -21876,6 +22786,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -21975,6 +22892,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -22183,6 +23107,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -23193,6 +24124,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -24134,6 +25072,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -24283,6 +25228,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -24510,6 +25462,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": true,
+     "edizioni": 7,
+     "dal_2000": 1,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -24647,6 +25606,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -26000,6 +26966,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -27408,6 +28381,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -27669,6 +28649,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -27788,6 +28775,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -28560,6 +29554,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -28875,6 +29876,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -31058,6 +32066,13 @@
      "dal_2000": 1,
      "metodo": "nome",
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -33656,6 +34671,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -36718,6 +37740,20 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bne_es": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "BNE",
+     "metodo": "codice_bne"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -36872,6 +37908,13 @@
      "dal_2000": 0,
      "metodo": "viaf",
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
@@ -36980,6 +38023,13 @@
      "dal_2000": 0,
      "metodo": null,
      "fonte": "SBN"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "metodo": "nome_anni"
     }
    },
    "verifica": {
