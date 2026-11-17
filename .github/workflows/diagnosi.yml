@@ -21,27 +21,19 @@ jobs:
               try:
                 t=get(ep+"?"+urllib.parse.urlencode({"query":q}),"application/sparql-results+json"); return t[:600]
               except Exception as e: return f"ERR {e}"
-          print("DNB pred", dnb(f"SELECT ?p (COUNT(*) AS ?c) WHERE {{ ?r <http://purl.org/dc/terms/creator> <{G}> . ?r ?p ?o }} GROUP BY ?p ORDER BY DESC(?c) LIMIT 30"))
-          print("DNB tot", dnb(f"SELECT (COUNT(DISTINCT ?r) AS ?n) WHERE {{ ?r <http://purl.org/dc/terms/creator> <{G}> }}"))
-          print("DNB lang", dnb(f"SELECT ?l (COUNT(DISTINCT ?r) AS ?n) WHERE {{ ?r <http://purl.org/dc/terms/creator> <{G}> ; <http://purl.org/dc/terms/language> ?l }} GROUP BY ?l ORDER BY DESC(?n) LIMIT 5"))
-          print("DNB issued", dnb(f"SELECT ?d WHERE {{ ?r <http://purl.org/dc/terms/creator> <{G}> ; <http://purl.org/dc/terms/issued> ?d }} LIMIT 5"))
+          print("DNB ger2000", dnb(f"SELECT (COUNT(DISTINCT ?r) AS ?n) WHERE {{ ?r <http://purl.org/dc/terms/creator> <{G}> ; <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/ger> ; <http://purl.org/dc/terms/issued> ?d . FILTER(xsd:integer(SUBSTR(STR(?d),1,4)) >= 2000) }}"))
+          print("DNB senza_lingua", dnb(f"SELECT (COUNT(DISTINCT ?r) AS ?n) WHERE {{ ?r <http://purl.org/dc/terms/creator> <{G}> . FILTER NOT EXISTS {{ ?r <http://purl.org/dc/terms/language> ?l }} }}"))
           def sru(nome,base,q,ver="1.2"):
             try:
               t=get(base+"?"+urllib.parse.urlencode({"version":ver,"operation":"searchRetrieve","query":q,"maximumRecords":"0"}))
               print(nome,q,"->",n(t))
             except Exception as e: print(nome,q,"ERR",e)
-          def explain(nome,base,ver="1.2"):
-            try:
-              t=get(base+"?"+urllib.parse.urlencode({"version":ver,"operation":"explain"}))
-              idx=sorted(set(re.findall(r'<(?:\w+:)?name[^>]*>([^<]+)</(?:\w+:)?name>',t)))
-              print(nome,"INDICI",[i for i in idx if re.search(r"auth|lang|date|year|creator|author|type|id",i,re.I)][:60])
-            except Exception as e: print(nome,"explain ERR",e)
           BNE="https://catalogo.bne.es/view/sru/34BNE_INST"; BL="https://eu06.alma.exlibrisgroup.com/view/sru/44BL_MAIN"
-          explain("BNE",BNE); explain("BL",BL)
-          sru("BNE",BNE,'alma.creator="Brecht, Bertolt"'); sru("BNE",BNE,'alma.creator="Brecht, Bertolt" and alma.language=spa')
-          sru("BNE",BNE,'alma.authority_id=XX1150786'); sru("BNE",BNE,'alma.creator="Brecht, Bertolt" and alma.main_pub_date>=2000')
-          sru("BL",BL,'alma.creator="Brecht, Bertolt"'); sru("BL",BL,'alma.creator="Brecht, Bertolt" and alma.language=eng')
-          sru("BL",BL,'alma.creator="Brecht, Bertolt" and alma.language=eng and alma.main_pub_date>=2000')
-          sru("LOC","https://lx2.loc.gov/sru/lcdb",'dc.author="Brecht, Bertolt"',"1.1")
-          sru("JISC","https://discover.libraryhub.jisc.ac.uk/sru-api",'dc.creator="Brecht, Bertolt"',"1.1")
+          sru("BNE",BNE,'alma.authority_id=XX1150786 and alma.language=spa')
+          sru("BNE",BNE,'alma.authority_id=XX1150786 and alma.language=spa and alma.main_pub_date>=2000')
+          sru("BL",BL,'alma.isni_identifier=0000000121268426')
+          sru("BL",BL,'alma.isni_identifier="0000 0001 2126 8426"')
+          sru("BL",BL,'alma.authority_id=n79006035')
+          sru("BL",BL,'alma.authority_id="(uk)n79006035"')
+          sru("BL",BL,'alma.creator="Brecht, Bertolt, 1898-1956"')
           PY
