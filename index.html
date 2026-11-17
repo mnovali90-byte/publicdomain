@@ -187,7 +187,10 @@ button{font:inherit;color:inherit;cursor:pointer}
 .elenco{margin:36px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:0 40px}
 .elenco li{display:flex;align-items:center;border-bottom:1px solid #DAD8CE}
 .elenco .riga{flex:1;min-width:0;background:none;border:0;text-align:left;padding:12px 0;font-size:18px;line-height:1.3}
-.elenco.elenco-scop{display:block;columns:auto}
+.elenco.elenco-scop{display:block;columns:auto;margin:0;max-width:760px}
+#grandi:has(.elenco-scop){display:block;margin-top:0}
+#grandi-nomi:has(.elenco-scop){margin-top:0;padding-top:12px}
+#inizio:has(~ #grandi-nomi .elenco-scop){padding-bottom:28px}
 .elenco-scop li{display:flex;align-items:flex-start;border-bottom:1px solid #D9D6CC}
 .riga-scop{flex:1;min-width:0;display:grid;grid-template-columns:34px 1fr;gap:12px;padding:18px 0;background:none;border:0;text-align:left;color:inherit;cursor:pointer}
 .rs-n{font-family:var(--display);font-weight:900;font-size:30px;line-height:1;color:var(--vermiglio)}
@@ -1060,6 +1063,9 @@ function disegnaEroe() {
   const d = stato.dati[stato.anno], g = gruppi(stato.anno);
   const box = $("#eroe");
   box.replaceChildren();
+  const tp = $("#tit-paese");
+  if (stato.mercati && stato.mercato === "scop") { if (tp) tp.hidden = true; return; }   // «Da scoprire»: niente foto, la lista sta subito sotto
+  if (tp && stato.opz !== "us") tp.hidden = false;
   const top = elencoTop(g).slice(0, 3);
   if (!top.length) { box.append(h("p", { class: "messaggio" }, tr("nessunAutoreAnno"))); return; }
   const slide = top.map((a, i) => slideEroe(a, i + 1, i, d, g, top.length));
@@ -1111,7 +1117,36 @@ function schedaGrande(a, classe) {
     h("div", { class: "dati-riga" }, righeDati(a)),
     h("p", {}, bioBreve(a, classe === "g1" ? 190 : classe === "g2" ? 150 : 120)));
 }
+function rigaScoperta(a, i) {
+  const l = mercatoPaese(stato.opz);
+  const v = a[CAMPO_M[l]] || 0;
+  const paesi = (a.paesi || []).slice(0, 2).map((x) => et(x)).join(", ");
+  const opere = (a.opere || []).slice(0, 2).map((o) => (LING === "en" && o.titolo_en) || o.titolo).join(" · ");
+  return h("li", {},
+    h("button", { class: "riga-scop", type: "button", onclick: () => apriAutore(a.wikidata) },
+      h("span", { class: "rs-n" }, String(i + 1)),
+      h("span", { class: "rs-c" },
+        h("b", {}, a.nome),
+        h("span", { class: "rs-d" }, `${a.nascita ? a.nascita.slice(0, 4) : "?"} – ${a.morte ? a.morte.slice(0, 4) : "?"}` + (paesi ? " · " + paesi : "")),
+        opere ? h("i", {}, opere) : null,
+        h("span", { class: "rs-chip" },
+          h("span", { class: "rs-nero" }, tr("chipLingue", { n: n(a.pagine_wikipedia || 0) })),
+          h("span", { class: "rs-crema" }, v ? tr("chipVisite", { n: n(v), p: tr("paesiNomi")[stato.opz] || "" }) : tr("vNoPag", { l: nomeLingua(["it", "es", "de", "fr"].includes(l) ? l : "en") }))))),
+    bottoneCuore(a, "cuore cuore-riga"));
+}
+function disegnaScoperte() {
+  const sez = $("#grandi-nomi");
+  const lista = gruppi(stato.anno).letterari.filter(èScoperta).sort((x, y) => (y.pagine_wikipedia || 0) - (x.pagine_wikipedia || 0));
+  sez.hidden = false;
+  $("#grandi-occhiello").textContent = "";
+  $("#grandi-titolo").textContent = "";
+  $("#piccoli").replaceChildren();
+  $("#grandi").replaceChildren(lista.length
+    ? h("ul", { class: "elenco elenco-scop" }, lista.map(rigaScoperta), h("li", { class: "rs-nota" }, tr("scopCome")))
+    : h("p", { class: "messaggio" }, tr("nessuno")));
+}
 function disegnaGrandi() {
+  if (stato.mercati && stato.mercato === "scop") return disegnaScoperte();
   const g = gruppi(stato.anno);
   const sez = $("#grandi-nomi");
   const base = elencoTop(g);
@@ -1318,12 +1353,12 @@ function elencoArchivio() {
   if (stato.lingua) lista = lista.filter((a) => (a.lingue || []).includes(stato.lingua));
   const q = norm(stato.cerca.trim());
   if (q) lista = lista.filter((a) => norm(a.nome).includes(q));
-  if (stato.mercati && stato.mercato === "scop") lista = lista.filter(èScoperta).sort((x, y) => (y.pagine_wikipedia || 0) - (x.pagine_wikipedia || 0));
   if (stato.ordine === "nome") lista = lista.slice().sort((x, y) => x.nome.localeCompare(y.nome, "it"));
   else if (stato.ordine === "morte") lista = lista.slice().sort((x, y) => (x.morte || "").localeCompare(y.morte || "") || x.nome.localeCompare(y.nome, "it"));
   return lista;
 }
 function disegnaArchivio() {
+  if (stato.mercati && stato.mercato === "scop") { stato.mercato = mercatoPaese(stato.opz); gruppiCache.clear(); try { return disegnaArchivio(); } finally { stato.mercato = "scop"; gruppiCache.clear(); } }
   const g = gruppi(stato.anno);
   $("#archivio-titolo").textContent = tr("archTit", { n: n(g.principali.length) });
   const lista = elencoArchivio();
@@ -1346,32 +1381,14 @@ function disegnaArchivio() {
 
   const ul = $("#elenco");
   const mostra = lista.slice(0, stato.visibili);
-  const scop = stato.mercati && stato.mercato === "scop";
-  ul.classList.toggle("elenco-scop", scop);
-  if (scop) {
-    const l = mercatoPaese(stato.opz);
-    ul.replaceChildren(...mostra.map((a, i) => {
-      const v = a[CAMPO_M[l]] || 0;
-      const paesi = (a.paesi || []).slice(0, 2).map((x) => et(x)).join(", ");
-      const opere = (a.opere || []).slice(0, 2).map((o) => (LING === "en" && o.titolo_en) || o.titolo).join(" · ");
-      return h("li", {},
-        h("button", { class: "riga-scop", type: "button", onclick: () => apriAutore(a.wikidata) },
-          h("span", { class: "rs-n" }, String(i + 1)),
-          h("span", { class: "rs-c" },
-            h("b", {}, a.nome),
-            h("span", { class: "rs-d" }, `${a.nascita ? a.nascita.slice(0, 4) : "?"} – ${a.morte ? a.morte.slice(0, 4) : "?"}` + (paesi ? " · " + paesi : "")),
-            opere ? h("i", {}, opere) : null,
-            h("span", { class: "rs-chip" },
-              h("span", { class: "rs-nero" }, tr("chipLingue", { n: n(a.pagine_wikipedia || 0) })),
-              h("span", { class: "rs-crema" }, v ? tr("chipVisite", { n: n(v), p: tr("paesiNomi")[stato.opz] || "" }) : tr("vNoPag", { l: nomeLingua(["it", "es", "de", "fr"].includes(l) ? l : "en") }))))),
-        bottoneCuore(a, "cuore cuore-riga"));
-    }));
-    if (lista.length) ul.append(h("li", { class: "rs-nota" }, tr("scopCome")));
-  } else ul.replaceChildren(...mostra.map((a) => h("li", {},
+  ul.classList.remove("elenco-scop");
+  {
+ul.replaceChildren(...mostra.map((a) => h("li", {},
     h("button", { class: "riga", type: "button", onclick: () => apriAutore(a.wikidata) },
       h("b", {}, a.nome),
       h("small", {}, `† ${a.morte ? a.morte.slice(0, 4) : "?"}${etIdx(a)}`)),
     bottoneCuore(a, "cuore cuore-riga"))));
+  }
   const altro = $("#altro");
   altro.replaceChildren();
   if (!lista.length) altro.append(h("p", { class: "nessuno" }, tr("nessuno")));
