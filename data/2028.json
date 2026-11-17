@@ -4,7 +4,7 @@
  "paese": "ue",
  "regola": "UE: morte + 70 anni, dal 1 gennaio dell'anno successivo",
  "fonte": "Wikidata (CC0)",
- "aggiornato": "2026-11-15",
+ "aggiornato": "2026-11-17",
  "totale": 1402,
  "autori": [
   {
@@ -8901,8 +8901,8 @@
   {
    "wikidata": "Q7367724",
    "nome": "Rose Fyleman",
-   "nascita": "1877-01-01",
-   "morte": "1957-01-01",
+   "nascita": "1877-03-06",
+   "morte": "1957-08-01",
    "pagine_wikipedia": 8,
    "professioni": [
     "scrittore"
@@ -11201,6 +11201,91 @@
    }
   },
   {
+   "wikidata": "Q4648282",
+   "nome": "A. R. D. Fairburn",
+   "nascita": "1904-02-02",
+   "morte": "1957-03-25",
+   "pagine_wikipedia": 5,
+   "professioni": [
+    "poeta",
+    "scrittore"
+   ],
+   "url": "https://www.wikidata.org/wiki/Q4648282",
+   "letterario": true,
+   "tipo_catalogo": [
+    "Poesia"
+   ],
+   "bio": "Arthur Rex Dugard Fairburn, commonly known by his initials A. R. D. Fairburn and otherwise as Rex, was a New Zealand poet who was born and died in Auckland.",
+   "bio_url": "https://en.wikipedia.org/wiki/A._R._D._Fairburn",
+   "bio_lingua": "en",
+   "bios": {
+    "en": {
+     "testo": "Arthur Rex Dugard Fairburn, commonly known by his initials A. R. D. Fairburn and otherwise as Rex, was a New Zealand poet who was born and died in Auckland.",
+     "url": "https://en.wikipedia.org/wiki/A._R._D._Fairburn"
+    }
+   },
+   "opere": [
+    {
+     "titolo": "Dominion",
+     "anno": 1938,
+     "generi": [],
+     "sl": 1
+    }
+   ],
+   "n_opere": 1,
+   "visite_12m": 1280,
+   "visite_it": 0,
+   "visite_en": 1280,
+   "visite_es": 0,
+   "visite_de": 66,
+   "visite_fr": 0,
+   "paesi": [
+    "Nuova Zelanda"
+   ],
+   "lingue": [
+    "inglese"
+   ],
+   "indice_it": 0,
+   "indice_en": 83,
+   "indice_es": 0,
+   "indice_de": 82,
+   "indice_fr": 0,
+   "indice_int": 77,
+   "indice": 81,
+   "traduzioni": {
+    "opere": 15,
+    "con_lingua": 15,
+    "per_lingua": {
+     "it": 0,
+     "en": 15,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-05",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "fonte": "SBN"
+    }
+   },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1957,
+     "gnd": 1957,
+     "loc": 1957
+    }
+   },
+   "pagina": "a-r-d-fairburn",
+   "pagina_en": "a-r-d-fairburn"
+  },
+  {
    "wikidata": "Q4231080",
    "nome": "Aleksandr Kononov",
    "nascita": "1895-03-25",
@@ -11623,7 +11708,7 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 77,
-   "indice": 80,
+   "indice": 79,
    "verifica": {
     "esito": "una_fonte",
     "fonti": {
@@ -13328,91 +13413,6 @@
    }
   },
   {
-   "wikidata": "Q4648282",
-   "nome": "A. R. D. Fairburn",
-   "nascita": "1904-02-02",
-   "morte": "1957-03-25",
-   "pagine_wikipedia": 4,
-   "professioni": [
-    "poeta",
-    "scrittore"
-   ],
-   "url": "https://www.wikidata.org/wiki/Q4648282",
-   "letterario": true,
-   "tipo_catalogo": [
-    "Poesia"
-   ],
-   "bio": "Arthur Rex Dugard Fairburn, commonly known by his initials A. R. D. Fairburn and otherwise as Rex, was a New Zealand poet who was born and died in Auckland.",
-   "bio_url": "https://en.wikipedia.org/wiki/A._R._D._Fairburn",
-   "bio_lingua": "en",
-   "bios": {
-    "en": {
-     "testo": "Arthur Rex Dugard Fairburn, commonly known by his initials A. R. D. Fairburn and otherwise as Rex, was a New Zealand poet who was born and died in Auckland.",
-     "url": "https://en.wikipedia.org/wiki/A._R._D._Fairburn"
-    }
-   },
-   "opere": [
-    {
-     "titolo": "Dominion",
-     "anno": 1938,
-     "generi": [],
-     "sl": 1
-    }
-   ],
-   "n_opere": 1,
-   "visite_12m": 1280,
-   "visite_it": 0,
-   "visite_en": 1280,
-   "visite_es": 0,
-   "visite_de": 66,
-   "visite_fr": 0,
-   "paesi": [
-    "Nuova Zelanda"
-   ],
-   "lingue": [
-    "inglese"
-   ],
-   "indice_it": 0,
-   "indice_en": 83,
-   "indice_es": 0,
-   "indice_de": 82,
-   "indice_fr": 0,
-   "indice_int": 72,
-   "indice": 79,
-   "traduzioni": {
-    "opere": 15,
-    "con_lingua": 15,
-    "per_lingua": {
-     "it": 0,
-     "en": 15,
-     "es": 0,
-     "fr": 0,
-     "de": 0
-    },
-    "parziale": false,
-    "fonte": "Open Library",
-    "ts": "2026-11-05",
-    "sbn_it": {
-     "trovato": false,
-     "edizioni": 0,
-     "ultimo": null,
-     "dal_2000": 0,
-     "metodo": null,
-     "fonte": "SBN"
-    }
-   },
-   "verifica": {
-    "esito": "verificato",
-    "fonti": {
-     "wikidata": 1957,
-     "gnd": 1957,
-     "loc": 1957
-    }
-   },
-   "pagina": "a-r-d-fairburn",
-   "pagina_en": "a-r-d-fairburn"
-  },
-  {
    "wikidata": "Q4722810",
    "nome": "Alfred Hefter",
    "nascita": "1892-12-13",
@@ -14291,7 +14291,7 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 72,
-   "indice": 66,
+   "indice": 65,
    "verifica": {
     "esito": "verificato",
     "fonti": {
@@ -15340,7 +15340,7 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 72,
-   "indice": 79,
+   "indice": 78,
    "verifica": {
     "esito": "verificato",
     "fonti": {
@@ -16223,8 +16223,8 @@
   {
    "wikidata": "Q5040265",
    "nome": "Carl H. Claudy",
-   "nascita": "1879-01-01",
-   "morte": "1957-01-01",
+   "nascita": "1879-01-13",
+   "morte": "1957-05-27",
    "pagine_wikipedia": 3,
    "professioni": [
     "romanziere",
@@ -18019,8 +18019,8 @@
   {
    "wikidata": "Q3816702",
    "nome": "Lambert Escaler i Milà",
-   "nascita": "1874-01-01",
-   "morte": "1957-01-01",
+   "nascita": "1874-02-02",
+   "morte": "1957-05-04",
    "pagine_wikipedia": 3,
    "professioni": [
     "scrittore"
@@ -18409,8 +18409,8 @@
   {
    "wikidata": "Q59631800",
    "nome": "Nina Brown Baker",
-   "nascita": "1888-01-01",
-   "morte": "1957-01-01",
+   "nascita": "1888-12-31",
+   "morte": "1957-09-01",
    "pagine_wikipedia": 3,
    "professioni": [
     "scrittore"
@@ -20925,8 +20925,8 @@
   {
    "wikidata": "Q16004447",
    "nome": "George Alan Works",
-   "nascita": "1877-01-01",
-   "morte": "1957-01-01",
+   "nascita": "1877-05-14",
+   "morte": "1957-12-13",
    "pagine_wikipedia": 2,
    "professioni": [
     "scrittore"
@@ -22715,7 +22715,7 @@
    "wikidata": "Q17364395",
    "nome": "Luis Eduardo Nieto Caballero",
    "nascita": "1888-05-05",
-   "morte": "1957-01-01",
+   "morte": "1957-04-07",
    "pagine_wikipedia": 2,
    "professioni": [
     "scrittore"
@@ -23926,7 +23926,7 @@
    "wikidata": "Q16052540",
    "nome": "Q16052540",
    "nascita": "1904-01-01",
-   "morte": "1957-01-01",
+   "morte": "1957-08-10",
    "pagine_wikipedia": 2,
    "professioni": [
     "traduttore"
@@ -27091,8 +27091,8 @@
   {
    "wikidata": "Q94924865",
    "nome": "Eduard Egger",
-   "nascita": "1882-01-01",
-   "morte": "1957-01-01",
+   "nascita": "1882-03-15",
+   "morte": "1957-01-08",
    "pagine_wikipedia": 1,
    "professioni": [
     "scrittore"
@@ -29966,8 +29966,8 @@
   {
    "wikidata": "Q101437821",
    "nome": "Joseph Elias Heller",
-   "nascita": "1888-01-01",
-   "morte": "1957-01-01",
+   "nascita": "1888-05-16",
+   "morte": "1957-04-13",
    "pagine_wikipedia": 1,
    "professioni": [
     "scrittore"
@@ -35558,7 +35558,7 @@
   {
    "wikidata": "Q94753081",
    "nome": "Dora Stieler",
-   "nascita": "1875-01-01",
+   "nascita": "1875-06-27",
    "morte": "1957-01-01",
    "pagine_wikipedia": 0,
    "professioni": [
@@ -35886,8 +35886,8 @@
   {
    "wikidata": "Q94901487",
    "nome": "Emil Alfred Herrmann",
-   "nascita": "1871-01-01",
-   "morte": "1957-01-01",
+   "nascita": "1871-03-17",
+   "morte": "1957-04-23",
    "pagine_wikipedia": 0,
    "professioni": [
     "scrittore"
@@ -36415,7 +36415,7 @@
   {
    "wikidata": "Q94379584",
    "nome": "Gerda Schybergson",
-   "nascita": "1882-01-01",
+   "nascita": "1882-09-10",
    "morte": "1957-01-01",
    "pagine_wikipedia": 0,
    "professioni": [
@@ -36723,8 +36723,8 @@
   {
    "wikidata": "Q94918870",
    "nome": "Hans Beerli",
-   "nascita": "1880-01-01",
-   "morte": "1957-01-01",
+   "nascita": "1880-04-24",
+   "morte": "1957-12-11",
    "pagine_wikipedia": 0,
    "professioni": [
     "scrittore"
@@ -36745,8 +36745,8 @@
   {
    "wikidata": "Q94898441",
    "nome": "Hans Schlegel",
-   "nascita": "1882-01-01",
-   "morte": "1957-01-01",
+   "nascita": "1882-10-29",
+   "morte": "1957-03-01",
    "pagine_wikipedia": 0,
    "professioni": [
     "scrittore",
@@ -37623,7 +37623,7 @@
    "wikidata": "Q109857147",
    "nome": "John S. Hoyland",
    "nascita": "1887-01-01",
-   "morte": "1957-01-01",
+   "morte": "1957-10-31",
    "pagine_wikipedia": 0,
    "professioni": [
     "scrittore"
@@ -38891,7 +38891,7 @@
    "wikidata": "Q73513016",
    "nome": "Oskar Binz",
    "nascita": "1895-12-02",
-   "morte": "1957-01-01",
+   "morte": "1957-07-02",
    "pagine_wikipedia": 0,
    "professioni": [
     "scrittore"
@@ -39454,8 +39454,8 @@
   {
    "wikidata": "Q94818818",
    "nome": "Rudolf Bach",
-   "nascita": "1901-01-01",
-   "morte": "1957-01-01",
+   "nascita": "1901-09-14",
+   "morte": "1957-03-01",
    "pagine_wikipedia": 0,
    "professioni": [
     "scrittore"
@@ -39932,8 +39932,8 @@
   {
    "wikidata": "Q112400885",
    "nome": "Wilhelm Jondorf",
-   "nascita": "1890-01-01",
-   "morte": "1957-01-01",
+   "nascita": "1890-12-07",
+   "morte": "1957-02-17",
    "pagine_wikipedia": 0,
    "professioni": [
     "poeta"
@@ -40129,8 +40129,8 @@
   {
    "wikidata": "Q97064696",
    "nome": "Xavier Sorondo",
-   "nascita": "1883-01-01",
-   "morte": "1957-01-01",
+   "nascita": "1883-07-08",
+   "morte": "1957-08-01",
    "pagine_wikipedia": 0,
    "professioni": [
     "scrittore"
@@ -40756,7 +40756,7 @@
    "n": 1
   }
  ],
- "arricchito": "2026-11-15",
+ "arricchito": "2026-11-17",
  "indice_formula": "tre misure separate: visite Wikipedia it, visite Wikipedia en, numero di lingue con una pagina; ciascuna 0-100 rispetto alla lista dell'anno",
- "traduzioni_aggiornato": "2026-11-15"
+ "traduzioni_aggiornato": "2026-11-17"
 }

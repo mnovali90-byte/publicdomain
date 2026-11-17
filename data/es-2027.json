@@ -4,7 +4,7 @@
  "paese": "es",
  "regola": "Spagna, autori morti prima del 1987: 80 anni dalla morte (Ley de 10 de enero de 1879, art. 6; Ley de Propiedad Intelectual, disp. trans. cuarta). Data prudente: 1 gennaio dell'anno dopo gli 80 anni",
  "fonte": "Wikidata (CC0)",
- "aggiornato": "2026-11-15",
+ "aggiornato": "2026-11-17",
  "totale": 1304,
  "autori": [
   {
@@ -14904,6 +14904,63 @@
    "url": "https://www.wikidata.org/wiki/Q5826391"
   },
   {
+   "wikidata": "Q12207051",
+   "nome": "Habib Estéfano",
+   "nascita": "1888-03-09",
+   "morte": "1946-04-03",
+   "pagine_wikipedia": 3,
+   "professioni": [
+    "poeta",
+    "scrittore"
+   ],
+   "url": "https://www.wikidata.org/wiki/Q12207051",
+   "letterario": true,
+   "tipo_catalogo": [
+    "Poesia"
+   ],
+   "n_opere": 0,
+   "visite_12m": 0,
+   "visite_it": 0,
+   "visite_en": 0,
+   "visite_es": 0,
+   "visite_de": 0,
+   "visite_fr": 0,
+   "foto": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Habib_Istifan_-_Al-Alam%2C_V2%2C_P_205.jpg?width=800",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Habib_Istifan_-_Al-Alam%2C_V2%2C_P_205.jpg",
+    "licenza": "Public domain",
+    "autore": "Khayr al-Din al-Zirikli"
+   },
+   "paesi": [
+    "Regno Arabo di Siria",
+    "Impero ottomano"
+   ],
+   "lingue": [
+    "francese",
+    "tedesco",
+    "latino",
+    "spagnolo",
+    "inglese",
+    "portoghese",
+    "arabo",
+    "siriaco"
+   ],
+   "indice_it": 0,
+   "indice_en": 0,
+   "indice_es": 0,
+   "indice_de": 0,
+   "indice_fr": 0,
+   "indice_int": 62,
+   "indice": 38,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "loc": 1946
+    }
+   }
+  },
+  {
    "wikidata": "Q9286156",
    "nome": "Hans Hauptmann",
    "nascita": "1865-11-23",
@@ -19579,7 +19636,7 @@
   {
    "wikidata": "Q112443126",
    "nome": "Gotthold Merten",
-   "nascita": "1866-01-01",
+   "nascita": "1866-09-15",
    "morte": "1946-01-01",
    "pagine_wikipedia": 2,
    "professioni": [
@@ -19693,63 +19750,6 @@
     "fonti": {
      "wikidata": 1946,
      "gnd": 1946,
-     "loc": 1946
-    }
-   }
-  },
-  {
-   "wikidata": "Q12207051",
-   "nome": "Habib Estefano",
-   "nascita": "1888-03-09",
-   "morte": "1946-04-03",
-   "pagine_wikipedia": 2,
-   "professioni": [
-    "poeta",
-    "scrittore"
-   ],
-   "url": "https://www.wikidata.org/wiki/Q12207051",
-   "letterario": true,
-   "tipo_catalogo": [
-    "Poesia"
-   ],
-   "n_opere": 0,
-   "visite_12m": 0,
-   "visite_it": 0,
-   "visite_en": 0,
-   "visite_es": 0,
-   "visite_de": 0,
-   "visite_fr": 0,
-   "foto": {
-    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Habib_Istifan_-_Al-Alam%2C_V2%2C_P_205.jpg?width=800",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Habib_Istifan_-_Al-Alam%2C_V2%2C_P_205.jpg",
-    "licenza": "Public domain",
-    "autore": "Khayr al-Din al-Zirikli"
-   },
-   "paesi": [
-    "Regno Arabo di Siria",
-    "Impero ottomano"
-   ],
-   "lingue": [
-    "francese",
-    "tedesco",
-    "latino",
-    "spagnolo",
-    "inglese",
-    "portoghese",
-    "arabo",
-    "siriaco"
-   ],
-   "indice_it": 0,
-   "indice_en": 0,
-   "indice_es": 0,
-   "indice_de": 0,
-   "indice_fr": 0,
-   "indice_int": 47,
-   "indice": 35,
-   "verifica": {
-    "esito": "verificato",
-    "fonti": {
-     "wikidata": 1946,
      "loc": 1946
     }
    }
@@ -22755,7 +22755,7 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 47,
-   "indice": 70,
+   "indice": 69,
    "verifica": {
     "esito": "discorde",
     "fonti": {
@@ -27627,7 +27627,7 @@
   {
    "wikidata": "Q11753349",
    "nome": "Lazar Ḳahan",
-   "nascita": "1885-01-01",
+   "nascita": "1885-01-09",
    "morte": "1946-05-26",
    "pagine_wikipedia": 1,
    "professioni": [
@@ -27899,8 +27899,8 @@
   {
    "wikidata": "Q18916891",
    "nome": "Margarete Driesch",
-   "nascita": "1874-01-01",
-   "morte": "1946-01-01",
+   "nascita": "1874-04-10",
+   "morte": "1946-12-22",
    "pagine_wikipedia": 1,
    "professioni": [
     "scrittore"
@@ -30979,8 +30979,8 @@
   {
    "wikidata": "Q133480584",
    "nome": "Albert Saint-Paul",
-   "nascita": "1861-01-01",
-   "morte": "1946-01-01",
+   "nascita": "1861-05-25",
+   "morte": "1946-03-11",
    "pagine_wikipedia": 0,
    "professioni": [
     "scrittore"
@@ -31306,8 +31306,8 @@
   {
    "wikidata": "Q135457558",
    "nome": "Arthur Westcott",
-   "nascita": "1859-01-01",
-   "morte": "1946-01-01",
+   "nascita": "1859-08-15",
+   "morte": "1946-02-16",
    "pagine_wikipedia": 0,
    "professioni": [
     "scrittore"
@@ -32174,7 +32174,7 @@
   {
    "wikidata": "Q112440165",
    "nome": "Ferdinand Runkel",
-   "nascita": "1864-01-01",
+   "nascita": "1864-12-23",
    "morte": "1946-01-01",
    "pagine_wikipedia": 0,
    "professioni": [
@@ -32643,7 +32643,7 @@
   {
    "wikidata": "Q50385553",
    "nome": "Germain Trézel",
-   "nascita": "1877-01-01",
+   "nascita": "1877-03-14",
    "morte": "1946-01-01",
    "pagine_wikipedia": 0,
    "professioni": [
@@ -33157,7 +33157,7 @@
    "wikidata": "Q94908153",
    "nome": "Jakob Dont",
    "nascita": "1864-12-29",
-   "morte": "1946-01-01",
+   "morte": "1946-02-05",
    "pagine_wikipedia": 0,
    "professioni": [
     "scrittore"
@@ -33873,8 +33873,8 @@
   {
    "wikidata": "Q110225865",
    "nome": "Lage Staël von Holstein",
-   "nascita": "1886-01-01",
-   "morte": "1946-01-01",
+   "nascita": "1886-04-15",
+   "morte": "1946-01-10",
    "pagine_wikipedia": 0,
    "professioni": [
     "scrittore"
@@ -34261,8 +34261,8 @@
   {
    "wikidata": "Q112489649",
    "nome": "Marie Rudofsky",
-   "nascita": "1846-01-01",
-   "morte": "1946-01-01",
+   "nascita": "1846-09-07",
+   "morte": "1946-11-03",
    "pagine_wikipedia": 0,
    "professioni": [
     "scrittore"
@@ -35247,8 +35247,8 @@
   {
    "wikidata": "Q94829630",
    "nome": "Robert Schäfer",
-   "nascita": "1904-01-01",
-   "morte": "1946-01-01",
+   "nascita": "1904-01-25",
+   "morte": "1946-11-25",
    "pagine_wikipedia": 0,
    "professioni": [
     "drammaturgo",
@@ -35764,8 +35764,8 @@
   {
    "wikidata": "Q109885378",
    "nome": "Wilhelm Plog",
-   "nascita": "1884-01-01",
-   "morte": "1946-01-01",
+   "nascita": "1884-09-28",
+   "morte": "1946-12-16",
    "pagine_wikipedia": 0,
    "professioni": [
     "scrittore"
@@ -36248,7 +36248,7 @@
    "n": 1
   }
  ],
- "arricchito": "2026-11-15",
+ "arricchito": "2026-11-17",
  "indice_formula": "tre misure separate: visite Wikipedia it, visite Wikipedia en, numero di lingue con una pagina; ciascuna 0-100 rispetto alla lista dell'anno",
- "traduzioni_aggiornato": "2026-11-15"
+ "traduzioni_aggiornato": "2026-11-17"
 }

@@ -4,8 +4,8 @@
  "paese": "es",
  "regola": "Spagna, autori morti prima del 1987: 80 anni dalla morte (Ley de 10 de enero de 1879, art. 6; Ley de Propiedad Intelectual, disp. trans. cuarta). Data prudente: 1 gennaio dell'anno dopo gli 80 anni",
  "fonte": "Wikidata (CC0)",
- "aggiornato": "2026-11-15",
- "totale": 1291,
+ "aggiornato": "2026-11-17",
+ "totale": 1293,
  "autori": [
   {
    "wikidata": "Q8768",
@@ -10179,7 +10179,7 @@
   {
    "wikidata": "Q4707865",
    "nome": "Alan Sullivan",
-   "nascita": "1868-01-01",
+   "nascita": "1868-11-29",
    "morte": "1947-08-05",
    "pagine_wikipedia": 6,
    "professioni": [
@@ -13766,7 +13766,7 @@
    "wikidata": "Q19974953",
    "nome": "Grace Purdie Moon",
    "nascita": "1877-01-01",
-   "morte": "1947-01-01",
+   "morte": "1947-09-06",
    "pagine_wikipedia": 4,
    "professioni": [
     "romanziere",
@@ -15607,6 +15607,65 @@
    "url": "https://www.wikidata.org/wiki/Q12083533"
   },
   {
+   "wikidata": "Q11358655",
+   "nome": "Shōken Kamitsukasa",
+   "nascita": "1874-12-15",
+   "morte": "1947-09-02",
+   "pagine_wikipedia": 4,
+   "professioni": [
+    "romanziere",
+    "scrittore"
+   ],
+   "url": "https://www.wikidata.org/wiki/Q11358655",
+   "letterario": true,
+   "tipo_catalogo": [
+    "Romanzo"
+   ],
+   "bio": "Kamitsukasa Shōken (1874–1947) was a Japanese novelist and literary critic. Although having initially only primary school education he became a teacher, then joined the editorial staff of Yomiuri Shimbun in 1897, and worked his way up to become chief editor of its literary department until retirement in 1916. He was elected to the Japan Art Academy in 1937. Having begun with stories of local life in Osaka he later took up socialist themes.",
+   "bio_url": "https://en.wikipedia.org/wiki/Sh%C5%8Dken_Kamitsukasa",
+   "bio_lingua": "en",
+   "bios": {
+    "en": {
+     "testo": "Kamitsukasa Shōken (1874–1947) was a Japanese novelist and literary critic. Although having initially only primary school education he became a teacher, then joined the editorial staff of Yomiuri Shimbun in 1897, and worked his way up to become chief editor of its literary department until retirement in 1916. He was elected to the Japan Art Academy in 1937. Having begun with stories of local life in Osaka he later took up socialist themes.",
+     "url": "https://en.wikipedia.org/wiki/Sh%C5%8Dken_Kamitsukasa"
+    }
+   },
+   "n_opere": 0,
+   "visite_12m": 165,
+   "visite_it": 0,
+   "visite_en": 165,
+   "visite_es": 0,
+   "visite_de": 47,
+   "visite_fr": 0,
+   "foto": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kamitsukasa_Shoken.jpg?width=800",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Kamitsukasa_Shoken.jpg",
+    "licenza": "Public domain",
+    "autore": "Unknown authorUnknown author"
+   },
+   "paesi": [
+    "Giappone"
+   ],
+   "lingue": [
+    "giapponese"
+   ],
+   "indice_it": 0,
+   "indice_en": 61,
+   "indice_es": 0,
+   "indice_de": 79,
+   "indice_fr": 0,
+   "indice_int": 68,
+   "indice": 61,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1947,
+     "gnd": 1947,
+     "loc": 1947
+    }
+   }
+  },
+  {
    "wikidata": "Q2419343",
    "nome": "Theos Casimir Bernard",
    "nascita": "1908-12-10",
@@ -16010,7 +16069,7 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 60,
-   "indice": 76,
+   "indice": 75,
    "traduzioni": {
     "opere": 24,
     "con_lingua": 23,
@@ -16087,7 +16146,7 @@
   {
    "wikidata": "Q55229241",
    "nome": "Atilio Chiappori",
-   "nascita": "1880-01-01",
+   "nascita": "1880-06-07",
    "morte": "1947-03-13",
    "pagine_wikipedia": 3,
    "professioni": [
@@ -17308,7 +17367,7 @@
   {
    "wikidata": "Q112559320",
    "nome": "Ive Ćaće",
-   "nascita": "1903-01-01",
+   "nascita": "1903-04-26",
    "morte": "1947-01-01",
    "pagine_wikipedia": 3,
    "professioni": [
@@ -18042,7 +18101,7 @@
    "wikidata": "Q3310685",
    "nome": "Michel Revon",
    "nascita": "1867-03-24",
-   "morte": "1947-01-01",
+   "morte": "1947-01-10",
    "pagine_wikipedia": 3,
    "professioni": [
     "scrittore",
@@ -18328,65 +18387,6 @@
     "traduttore"
    ],
    "url": "https://www.wikidata.org/wiki/Q20379294"
-  },
-  {
-   "wikidata": "Q11358655",
-   "nome": "Shōken Kamitsukasa",
-   "nascita": "1874-12-15",
-   "morte": "1947-09-02",
-   "pagine_wikipedia": 3,
-   "professioni": [
-    "romanziere",
-    "scrittore"
-   ],
-   "url": "https://www.wikidata.org/wiki/Q11358655",
-   "letterario": true,
-   "tipo_catalogo": [
-    "Romanzo"
-   ],
-   "bio": "Kamitsukasa Shōken (1874–1947) was a Japanese novelist and literary critic. Although having initially only primary school education he became a teacher, then joined the editorial staff of Yomiuri Shimbun in 1897, and worked his way up to become chief editor of its literary department until retirement in 1916. He was elected to the Japan Art Academy in 1937. Having begun with stories of local life in Osaka he later took up socialist themes.",
-   "bio_url": "https://en.wikipedia.org/wiki/Sh%C5%8Dken_Kamitsukasa",
-   "bio_lingua": "en",
-   "bios": {
-    "en": {
-     "testo": "Kamitsukasa Shōken (1874–1947) was a Japanese novelist and literary critic. Although having initially only primary school education he became a teacher, then joined the editorial staff of Yomiuri Shimbun in 1897, and worked his way up to become chief editor of its literary department until retirement in 1916. He was elected to the Japan Art Academy in 1937. Having begun with stories of local life in Osaka he later took up socialist themes.",
-     "url": "https://en.wikipedia.org/wiki/Sh%C5%8Dken_Kamitsukasa"
-    }
-   },
-   "n_opere": 0,
-   "visite_12m": 165,
-   "visite_it": 0,
-   "visite_en": 165,
-   "visite_es": 0,
-   "visite_de": 47,
-   "visite_fr": 0,
-   "foto": {
-    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kamitsukasa_Shoken.jpg?width=800",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Kamitsukasa_Shoken.jpg",
-    "licenza": "Public domain",
-    "autore": "Unknown authorUnknown author"
-   },
-   "paesi": [
-    "Giappone"
-   ],
-   "lingue": [
-    "giapponese"
-   ],
-   "indice_it": 0,
-   "indice_en": 61,
-   "indice_es": 0,
-   "indice_de": 79,
-   "indice_fr": 0,
-   "indice_int": 60,
-   "indice": 59,
-   "verifica": {
-    "esito": "verificato",
-    "fonti": {
-     "wikidata": 1947,
-     "gnd": 1947,
-     "loc": 1947
-    }
-   }
   },
   {
    "wikidata": "Q18760406",
@@ -21168,6 +21168,17 @@
    }
   },
   {
+   "wikidata": "Q31737926",
+   "nome": "J.J. Groeneweg",
+   "nascita": "1870-01-01",
+   "morte": "1947-01-01",
+   "pagine_wikipedia": 2,
+   "professioni": [
+    "scrittore"
+   ],
+   "url": "https://www.wikidata.org/wiki/Q31737926"
+  },
+  {
    "wikidata": "Q26869556",
    "nome": "J.M.W. Scheltema",
    "nascita": "1921-04-03",
@@ -22546,7 +22557,7 @@
   {
    "wikidata": "Q15204841",
    "nome": "Meyer Iosifovich Alberton",
-   "nascita": "1900-01-01",
+   "nascita": "1900-08-15",
    "morte": "1947-11-20",
    "pagine_wikipedia": 2,
    "professioni": [
@@ -24822,6 +24833,17 @@
    "url": "https://www.wikidata.org/wiki/Q140452643"
   },
   {
+   "wikidata": "Q142176772",
+   "nome": "Anton Shkialionak",
+   "nascita": "1889-01-20",
+   "morte": "1947-01-01",
+   "pagine_wikipedia": 1,
+   "professioni": [
+    "traduttore"
+   ],
+   "url": "https://www.wikidata.org/wiki/Q142176772"
+  },
+  {
    "wikidata": "Q9157905",
    "nome": "Antonio Escoto",
    "nascita": "1889-01-01",
@@ -25602,7 +25624,7 @@
   {
    "wikidata": "Q59630403",
    "nome": "Edward Alden Jewell",
-   "nascita": "1888-01-01",
+   "nascita": "1888-03-10",
    "morte": "1947-10-11",
    "pagine_wikipedia": 1,
    "professioni": [
@@ -32319,7 +32341,7 @@
   {
    "wikidata": "Q95264281",
    "nome": "Artur Hoffmann-Kutschke",
-   "nascita": "1882-01-01",
+   "nascita": "1882-06-24",
    "morte": "1947-01-01",
    "pagine_wikipedia": 0,
    "professioni": [
@@ -32526,7 +32548,7 @@
   {
    "wikidata": "Q136506801",
    "nome": "Claude Egerton Lowe",
-   "nascita": "1860-01-01",
+   "nascita": "1860-10-07",
    "morte": "1947-01-01",
    "pagine_wikipedia": 0,
    "professioni": [
@@ -32537,8 +32559,8 @@
   {
    "wikidata": "Q66486361",
    "nome": "Conrad Höfer",
-   "nascita": "1872-01-01",
-   "morte": "1947-01-01",
+   "nascita": "1872-07-27",
+   "morte": "1947-02-25",
    "pagine_wikipedia": 0,
    "professioni": [
     "scrittore"
@@ -32548,7 +32570,7 @@
   {
    "wikidata": "Q94739156",
    "nome": "Cornelie Nuernberg",
-   "nascita": "1874-01-01",
+   "nascita": "1874-02-10",
    "morte": "1947-01-01",
    "pagine_wikipedia": 0,
    "professioni": [
@@ -33597,7 +33619,7 @@
   {
    "wikidata": "Q95221476",
    "nome": "Friedrich von Paungarten",
-   "nascita": "1874-01-01",
+   "nascita": "1874-05-30",
    "morte": "1947-01-01",
    "pagine_wikipedia": 0,
    "professioni": [
@@ -34154,7 +34176,7 @@
   {
    "wikidata": "Q94858689",
    "nome": "Ingo Krauss",
-   "nascita": "1878-01-01",
+   "nascita": "1878-01-02",
    "morte": "1947-01-01",
    "pagine_wikipedia": 0,
    "professioni": [
@@ -35178,7 +35200,7 @@
    "wikidata": "Q113803409",
    "nome": "Lolo",
    "nascita": "1868-01-01",
-   "morte": "1947-01-01",
+   "morte": "1947-08-06",
    "pagine_wikipedia": 0,
    "professioni": [
     "scrittore"
@@ -35639,7 +35661,7 @@
   {
    "wikidata": "Q84412501",
    "nome": "Max Dürr",
-   "nascita": "1874-01-01",
+   "nascita": "1874-11-01",
    "morte": "1947-01-01",
    "pagine_wikipedia": 0,
    "professioni": [
@@ -36921,8 +36943,8 @@
   {
    "wikidata": "Q125116628",
    "nome": "Theobald Bieder",
-   "nascita": "1876-01-01",
-   "morte": "1947-01-01",
+   "nascita": "1876-05-26",
+   "morte": "1947-04-24",
    "pagine_wikipedia": 0,
    "professioni": [
     "scrittore"
@@ -37661,7 +37683,7 @@
    "n": 1
   }
  ],
- "arricchito": "2026-11-15",
+ "arricchito": "2026-11-17",
  "indice_formula": "tre misure separate: visite Wikipedia it, visite Wikipedia en, numero di lingue con una pagina; ciascuna 0-100 rispetto alla lista dell'anno",
- "traduzioni_aggiornato": "2026-11-15"
+ "traduzioni_aggiornato": "2026-11-17"
 }
