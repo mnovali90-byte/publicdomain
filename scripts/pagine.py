@@ -271,7 +271,7 @@ def pagina_autore(a, slug, lang, ha_altra):
     else:
         titolo = f"{nome} ({anni}): when the works enter the public domain · Public Domain Radar"
         descr = (f"{nome} died in {D}: in the EU the works are free from {data_l(lang, D + 71)}. "
-                 f"Dates for Italy, France, Germany and Spain, Italian editions in SBN and online interest, from open data.")
+                 f"Dates for the UK, Italy, France, Germany and Spain, and online interest, from open data.")
     persona = {"@context": "https://schema.org", "@type": "Person", "name": nome, "url": url,
                "sameAs": [u for u in (bd.get("url") if bd else None, a.get("url")) if u]}
     if iso_valida(a.get("nascita")):
@@ -314,7 +314,7 @@ def pagina_autore(a, slug, lang, ha_altra):
     out += blocco_verifica(a, lang) + blocco_illustrazioni(a, lang)
 
     sbn = (a.get("traduzioni") or {}).get("sbn_it")
-    if sbn:
+    if sbn and it:   # il catalogo SBN è italiano: solo nella pagina italiana
         out.append(f"<h2>{'Traduzioni in italiano (catalogo SBN)' if it else 'Translations into Italian (SBN catalogue)'}</h2>\n")
         if sbn.get("trovato"):
             ne, d2 = sbn["edizioni"], sbn.get("dal_2000", 0)

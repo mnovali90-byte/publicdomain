@@ -251,6 +251,20 @@ dialog::backdrop{background:rgba(12,12,16,.72)}
 .pulsanti .pillola[aria-pressed="true"]{color:var(--carta)}
 .pulsanti .pillola[aria-pressed="true"] svg{fill:var(--vermiglio)}
 .tag{display:inline-block;margin:0 8px 8px 0;padding:6px 12px;background:var(--riquadro);font-size:14px}
+.libero-blocco{margin-top:22px;background:var(--vermiglio);color:var(--ink);padding:20px 22px}
+.libero-blocco .lb-et{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+.libero-blocco .lb-data{font-family:var(--display);font-weight:900;font-size:clamp(36px,9vw,52px);line-height:.95;text-transform:uppercase;margin:6px 0}
+.libero-blocco .lb-sotto{font-size:15px}
+.lb-ver{margin-top:10px}
+.lb-altri{margin-top:14px;border-top:1px solid var(--riquadro);border-bottom:1px solid var(--riquadro)}
+.lb-altri summary{padding:12px 0;font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;cursor:pointer}
+.lb-altri ul{list-style:none;margin:0;padding:0 0 12px}
+.lb-altri li{display:flex;justify-content:space-between;gap:16px;padding:6px 0;font-size:15px}
+.lb-altri li span{color:var(--muto);text-align:right}
+.ed-boxes{display:flex;gap:12px;flex-wrap:wrap}
+.ed-box{flex:1;min-width:140px;background:var(--riquadro);padding:14px 16px}
+.ed-box b{display:block;font-family:var(--display);font-weight:900;font-size:40px;line-height:1}
+.ed-box span{font-size:14px}
 .avviso{margin-top:24px;padding:14px 16px;border-left:4px solid var(--vermiglio);background:#EFEDE5;font-size:14px;line-height:1.55}
 .griglia-opere{margin-top:28px;display:flex;flex-wrap:wrap;gap:16px}
 .griglia-opere .copertina{width:calc(25% - 12px);min-width:150px;height:230px}
@@ -430,6 +444,16 @@ it: {
   titolo: "Pubblico dominio 2027: gli autori che diventano liberi · Public Domain Radar",
   indiceAutori: "Indice degli autori (una pagina per ogni autore)", paginaDedicata: "Pagina dedicata", paginaDedicataEn: "Pagina dedicata",
   descrizione: "Gli autori le cui opere entrano nel pubblico dominio in Europa il prossimo 1° gennaio. Dati aperti da Wikidata e Wikipedia, aggiornati ogni mese.",
+  liberoIn: "Libero {p} dal", nonPrima: "non prima del ", traGiorni: "tra {n} giorni", giaLibero: "già libero", mortoIl: "anno di morte {a}",
+  verificato: "Anno di morte confermato da {n} fonti: {f}.", fontiNomi: { wikidata: "Wikidata", gnd: "Biblioteca nazionale tedesca", loc: "Library of Congress" },
+  altriPaesi: "Negli altri paesi", nomiPaesi: { it: "Italia", fr: "Francia", de: "Germania", uk: "Regno Unito", es: "Spagna" }, usaRiga: "dipende dall'anno di pubblicazione di ogni opera",
+  chiEra: "Chi era", quantoNoto: "Quanto è conosciuto", curiosita: "Misura la curiosità per l'autore (visite alle pagine Wikipedia), non le vendite dei suoi libri.",
+  edizTit: "Edizioni in {l}", edizLibri: "libri in {l}", edizDal2000: "usciti dal 2000", edizUltimo: "ultimo {a}",
+  edizSbn: "Dal catalogo delle biblioteche italiane (SBN). Conta anche ristampe e antologie.", edizBnf: "Dal catalogo della Biblioteca nazionale di Francia (BnF), cercato con il codice dell'autore. Conta anche ristampe e antologie.",
+  edizNd: "Per questo paese non abbiamo ancora un catalogo nazionale aperto da consultare in automatico. Lo aggiungeremo quando ci sarà una fonte affidabile.",
+  edizNonTrovato: "Autore non trovato nel catalogo: non vuol dire che non sia tradotto, può essere schedato con un altro nome.",
+  primaPubbl: "Prima di pubblicare", avvisoBreve: "Libero è il testo originale. Traduzioni, curatele e illustrazioni hanno diritti propri. Calcolo indicativo, non consulenza legale.",
+  avvisoIt: " In Italia, per gli autori di paesi alleati nella Seconda guerra mondiale, la durata può essere più lunga.", libriL: "Libri in {l}", amazonP: "Cerca su {d}", bnf: "Catalogo BnF",
   paTit: "Da quando è libero, paese per paese",
   paUe: "UE (base), Germania e Regno Unito: dal {d}.",
   paFr: "Francia: dal {d}. Le proroghe di guerra non si sommano ai 70 anni (Cassazione francese, 2007). Eccezione: gli autori «morti per la Francia» hanno 30 anni in più.",
@@ -480,9 +504,9 @@ it: {
   salva: "Salva nei miei candidati", salvaAria: "Salva {nome} nei miei candidati", inLista: "Nella tua lista",
   chiudi: "Chiudi", copiaLink: "Copia il link", linkCopiato: "Link copiato", copiaPrompt: "Copia il link:",
   popolarita: "Interesse online", visite: "{n} visite su Wikipedia in 12 mesi", visiteNd: "visite Wikipedia: dato non disponibile",
-  mercatoEt: "Ordina per interesse", mNomi: { it: "Italia", fr: "Francia", de: "Germania", es: "Spagna", en: "Mondo anglofono", int: "Fama nel mondo" },
-  mDesc: { it: "Conta le visite alla pagina Wikipedia in italiano negli ultimi 12 mesi.", fr: "Conta le visite alla pagina Wikipedia in francese negli ultimi 12 mesi, da tutto il mondo francofono.", de: "Conta le visite alla pagina Wikipedia in tedesco negli ultimi 12 mesi, da Germania, Austria e Svizzera.", es: "Conta le visite alla pagina Wikipedia in spagnolo negli ultimi 12 mesi, da tutto il mondo ispanofono (America Latina inclusa).", en: "Conta le visite alla pagina Wikipedia in inglese negli ultimi 12 mesi, da tutto il mondo (India inclusa).", int: "Conta in quante lingue esiste una pagina Wikimedia sull'autore: non dipende dalla grandezza di un pubblico." },
-  primoPerM: { it: "{r}° per interesse in Italia", fr: "{r}° per interesse in Francia", de: "{r}° per interesse in Germania", es: "{r}° per interesse in Spagna", en: "{r}° nel mondo anglofono", int: "{r}° per fama nel mondo" },
+  mercatoEt: "Ordina per interesse", mNomi: { it: "Italia", fr: "Francia", de: "Germania", es: "Spagna", en: "Mondo anglofono", int: "Fama nel mondo", scop: "Da scoprire" },
+  mDesc: { it: "Conta le visite alla pagina Wikipedia in italiano negli ultimi 12 mesi.", fr: "Conta le visite alla pagina Wikipedia in francese negli ultimi 12 mesi, da tutto il mondo francofono.", de: "Conta le visite alla pagina Wikipedia in tedesco negli ultimi 12 mesi, da Germania, Austria e Svizzera.", es: "Conta le visite alla pagina Wikipedia in spagnolo negli ultimi 12 mesi, da tutto il mondo ispanofono (America Latina inclusa).", en: "Conta le visite alla pagina Wikipedia in inglese negli ultimi 12 mesi, da tutto il mondo (India inclusa).", int: "Conta in quante lingue esiste una pagina Wikimedia sull'autore: non dipende dalla grandezza di un pubblico.", scop: "Famosi nel mondo, poco letti nella lingua del paese scelto: autori che probabilmente aspettano ancora una traduzione. Confronta in quante lingue esiste la pagina Wikipedia con le visite nella lingua del paese. È un indizio, non la prova che una traduzione manchi." },
+  primoPerM: { it: "{r}° per interesse in Italia", fr: "{r}° per interesse in Francia", de: "{r}° per interesse in Germania", es: "{r}° per interesse in Spagna", en: "{r}° nel mondo anglofono", int: "{r}° per fama nel mondo", scop: "{r}° da scoprire" },
   sottoM: { it: "Quanto è letta oggi la sua pagina Wikipedia in italiano, rispetto agli altri autori di questa lista", en: "Quanto è letta oggi la sua pagina Wikipedia in inglese, rispetto agli altri autori di questa lista", int: "In quante lingue esiste una pagina su di lui, rispetto agli altri autori di questa lista" },
   sbnTit: "Traduzioni in italiano (catalogo SBN)", sbnTrovate: "{n} libri in italiano", sbnUno: "1 libro in italiano", sbnUltima: "", sbnDal2000: ", di cui {m} usciti dal 2000 in poi", sbnNessuno2000: ", nessuno uscito dal 2000 in poi",
   sbnNonTrovato: "Autore non trovato in italiano nel catalogo SBN: non vuol dire che non sia tradotto, controlla a mano.",
@@ -521,6 +545,16 @@ en: {
   titolo: "Public Domain 2027: books and authors entering the public domain · Public Domain Radar",
   indiceAutori: "Index of authors (one page per author)", paginaDedicata: "Dedicated page (Italian)", paginaDedicataEn: "Dedicated page",
   descrizione: "The authors whose works enter the public domain in Europe on 1 January next year. Open data from Wikidata and Wikipedia, updated monthly.",
+  liberoIn: "Free {p} from", nonPrima: "not before ", traGiorni: "in {n} days", giaLibero: "already free", mortoIl: "died in {a}",
+  verificato: "Year of death confirmed by {n} sources: {f}.", fontiNomi: { wikidata: "Wikidata", gnd: "German National Library", loc: "Library of Congress" },
+  altriPaesi: "In other countries", nomiPaesi: { it: "Italy", fr: "France", de: "Germany", uk: "United Kingdom", es: "Spain" }, usaRiga: "depends on the publication year of each work",
+  chiEra: "Who they were", quantoNoto: "How well known", curiosita: "Measures curiosity about the author (Wikipedia page views), not sales of their books.",
+  edizTit: "Editions in {l}", edizLibri: "books in {l}", edizDal2000: "published since 2000", edizUltimo: "latest {a}",
+  edizSbn: "From the catalogue of Italian libraries (SBN). It also counts reprints and anthologies.", edizBnf: "From the catalogue of the National Library of France (BnF), searched by the author's identifier. It also counts reprints and anthologies.",
+  edizNd: "For this country we do not yet have an open national catalogue we can query automatically. We will add it when a reliable source exists.",
+  edizNonTrovato: "Author not found in the catalogue: it does not mean they are untranslated, they may be catalogued under another name.",
+  primaPubbl: "Before publishing", avvisoBreve: "Only the original text is free. Translations, editorial work and illustrations have their own rights. Indicative calculation, not legal advice.",
+  avvisoIt: " In Italy the term can be longer for authors from Allied countries in the Second World War.", libriL: "Books in {l}", amazonP: "Search {d}", bnf: "BnF catalogue",
   paTit: "Free from when, country by country",
   paUe: "EU (base rule), Germany and the United Kingdom: from {d}.",
   paFr: "France: from {d}. Wartime extensions are not added to the 70 years (French Court of Cassation, 2007). Exception: authors who «died for France» get 30 more years.",
@@ -571,9 +605,9 @@ en: {
   salva: "Save to my shortlist", salvaAria: "Save {nome} to my shortlist", inLista: "In your list",
   chiudi: "Close", copiaLink: "Copy link", linkCopiato: "Link copied", copiaPrompt: "Copy the link:",
   popolarita: "Online interest", visite: "{n} Wikipedia views in 12 months", visiteNd: "Wikipedia views: not available",
-  mercatoEt: "Rank by interest", mNomi: { it: "Italy", fr: "France", de: "Germany", es: "Spain", en: "English-speaking world", int: "Worldwide fame" },
-  mDesc: { it: "Counts views of the author's Italian Wikipedia page over the last 12 months.", fr: "Counts views of the French Wikipedia page over the last 12 months, from the whole French-speaking world.", de: "Counts views of the German Wikipedia page over the last 12 months, from Germany, Austria and Switzerland.", es: "Counts views of the Spanish Wikipedia page over the last 12 months, from the whole Spanish-speaking world (Latin America included).", en: "Counts views of the English Wikipedia page over the last 12 months, from all over the world (India included).", int: "Counts in how many languages a Wikimedia page about the author exists: it does not depend on the size of one audience." },
-  primoPerM: { it: "#{r} for interest in Italy", fr: "#{r} for interest in France", de: "#{r} for interest in Germany", es: "#{r} for interest in Spain", en: "#{r} in the English-speaking world", int: "#{r} for worldwide fame" },
+  mercatoEt: "Rank by interest", mNomi: { it: "Italy", fr: "France", de: "Germany", es: "Spain", en: "English-speaking world", int: "Worldwide fame", scop: "To discover" },
+  mDesc: { it: "Counts views of the author's Italian Wikipedia page over the last 12 months.", fr: "Counts views of the French Wikipedia page over the last 12 months, from the whole French-speaking world.", de: "Counts views of the German Wikipedia page over the last 12 months, from Germany, Austria and Switzerland.", es: "Counts views of the Spanish Wikipedia page over the last 12 months, from the whole Spanish-speaking world (Latin America included).", en: "Counts views of the English Wikipedia page over the last 12 months, from all over the world (India included).", int: "Counts in how many languages a Wikimedia page about the author exists: it does not depend on the size of one audience.", scop: "Famous worldwide, little read in the language of the chosen country: authors who are probably still waiting for a translation. It compares how many languages have a Wikipedia page with the views in the country's language. It is a clue, not proof that a translation is missing." },
+  primoPerM: { it: "#{r} for interest in Italy", fr: "#{r} for interest in France", de: "#{r} for interest in Germany", es: "#{r} for interest in Spain", en: "#{r} in the English-speaking world", int: "#{r} for worldwide fame", scop: "#{r} to discover" },
   sottoM: { it: "How much their Italian Wikipedia page is read today, compared with the other authors on this list", en: "How much their English Wikipedia page is read today, compared with the other authors on this list", int: "In how many languages a page about them exists, compared with the other authors on this list" },
   sbnTit: "Translations into Italian (SBN catalogue)", sbnTrovate: "{n} books in Italian", sbnUno: "1 book in Italian", sbnUltima: "", sbnDal2000: ", {m} of them published since 2000", sbnNessuno2000: ", none published since 2000",
   sbnNonTrovato: "Author not found in Italian in the SBN catalogue: it does not mean they are untranslated, check by hand.",
@@ -749,14 +783,18 @@ const CAMPO_M = { it: "visite_it", fr: "visite_fr", de: "visite_de", es: "visite
 const haIndice = (m) => ["en", "int", "it"].includes(m) || Object.values(stato.perGiur).some((per) => Object.values(per).some((d) => d.autori.some((a) => a["indice_" + m] !== undefined)));
 const mercatoPaese = (id) => { if (id === "uk" || id === "us") return "en"; const m = (GIUR_OPZ.find((o) => o[0] === id) || [])[0]; return m && haIndice(m) ? m : "int"; };
 // la classifica segue il paese scelto: la sua lingua (per il Regno Unito l'inglese) più la fama nel mondo
-const mercatiDisp = () => [...new Set([mercatoPaese(stato.opz), "int"])];
-const idx = (a) => (stato.mercati ? a["indice_" + stato.mercato] : a.indice);
-const grezzo = (a) => (stato.mercati ? (a[CAMPO_M[stato.mercato]] || 0) : (a.pagine_wikipedia || 0));
+const mercatiDisp = () => { const l = mercatoPaese(stato.opz); return l === "int" ? ["int"] : [l, "int", "scop"]; };
+// «Da scoprire»: molto noto nel mondo, poco nella lingua del paese scelto
+const idxScop = (a) => { const w = a.indice_int, l = a["indice_" + mercatoPaese(stato.opz)]; if (w === undefined) return undefined; return w < 90 ? -100 + w : w - (l || 0); };
+const idx = (a) => (!stato.mercati ? a.indice : stato.mercato === "scop" ? idxScop(a) : a["indice_" + stato.mercato]);
+const grezzo = (a) => (stato.mercati && stato.mercato !== "scop" ? (a[CAMPO_M[stato.mercato]] || 0) : (a.pagine_wikipedia || 0));
 const etIdx = (a) => {
   if (idx(a) === undefined) return "";
   if (!stato.mercati) return " · " + tr("indiceN", { m: tr("popolarita"), n: idx(a) });
   const g = grezzo(a), m = stato.mercato;
-  const testo = m === "int" ? tr("vLingue", { n: n(g) }) : g === 0 ? tr("vNoPag", { l: tr("nomiLingua")[["it", "es", "de", "fr"].includes(m) ? m : "en"].toLowerCase() }) : tr("vIt", { n: n(g) });
+  if (m === "scop") { const l = mercatoPaese(stato.opz), v = a[CAMPO_M[l]] || 0;
+    return " · " + tr("vLingue", { n: n(a.pagine_wikipedia || 0) }) + " · " + (v === 0 ? tr("vNoPag", { l: nomeLingua(["it", "es", "de", "fr"].includes(l) ? l : "en") }) : tr("vIt", { n: n(v) })); }
+  const testo = m === "int" ? tr("vLingue", { n: n(g) }) : g === 0 ? tr("vNoPag", { l: nomeLingua(["it", "es", "de", "fr"].includes(m) ? m : "en") }) : tr("vIt", { n: n(g) });
   return " · " + tr("mNomi")[m] + ": " + testo;
 };
 const punteggio = (a) => [(idx(a) === undefined ? -1 : idx(a)), grezzo(a), a.pagine_wikipedia || 0];
@@ -1198,7 +1236,7 @@ function disegnaArchivio() {
     voci.push(["altri", tr("fAltri", { n: n(g.altri.length) })]);
   }
   const nR = g.principali.filter(senzaRecente).length;
-  if (nR) voci.push(["norecent", tr("fNoRecent", { n: n(nR) })]);
+  if (nR && stato.opz === "it") voci.push(["norecent", tr("fNoRecent", { n: n(nR) })]);
   if (g.senza.length) voci.push(["senza", tr("fSenza", { n: n(g.senza.length) })]);
   voci.push(["tutti", tr("fTutti", { n: n(g.tutti.length) })]);
   strumenti.replaceChildren(
@@ -1273,14 +1311,54 @@ function bloccoTraduzioni(a) {
     h("div", { class: "sotto" }, tr("tradSu", { n: n(x.opere) }) + (x.parziale ? " · " + tr("tradParz", { n: 100 }) : "")),
     h("div", { class: "sotto", style: "margin-top:8px" }, tr("tradNota")));
 }
+const nomeLingua = (l) => { const x = tr("nomiLingua")[l] || l; return LING === "it" ? x.toLowerCase() : x; };
+const LINGUA_PAESE = { it: "it", fr: "fr", de: "de", es: "es", uk: "en" };
+const AMAZON = { it: "amazon.it", fr: "amazon.fr", de: "amazon.de", uk: "amazon.co.uk", es: "amazon.es" };
+const paeseScheda = () => (["it", "fr", "de", "uk", "es"].includes(stato.opz) ? stato.opz : (LING === "it" ? "it" : "uk"));
+function dataLibera(a, c) {
+  const D = parseInt(String(a.morte || "").slice(0, 4), 10);
+  if (!D) return null;
+  const anni = c === "es" && D < 1987 ? 81 : 71;
+  return { anno: D + anni, prima: anni === 81 };
+}
+const dataLunga = (y) => new Date(Date.UTC(y, 0, 1)).toLocaleDateString(LING === "it" ? "it-IT" : "en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
+function bloccoLibero(a, c) {
+  const x = dataLibera(a, c);
+  if (!x) return null;
+  const giorni = Math.ceil((Date.UTC(x.anno, 0, 1) - Date.now()) / 864e5);
+  const v = a.verifica && a.verifica.esito === "verificato" && a.verifica.fonti ? Object.keys(a.verifica.fonti) : [];
+  const altri = ["it", "fr", "de", "uk", "es"].filter((k) => k !== c).map((k) => { const y = dataLibera(a, k); return h("li", {}, h("b", {}, tr("nomiPaesi")[k]), h("span", {}, (y.prima ? tr("nonPrima") : "") + dataLunga(y.anno))); });
+  altri.push(h("li", {}, h("b", {}, "USA"), h("span", {}, tr("usaRiga"))));
+  return h("div", {},
+    h("div", { class: "libero-blocco" },
+      h("div", { class: "lb-et" }, tr("liberoIn", { p: tr("paesiNomi")[c] })),
+      h("div", { class: "lb-data" }, (x.prima ? tr("nonPrima") : "") + dataLunga(x.anno)),
+      h("div", { class: "lb-sotto" }, (giorni > 0 ? tr("traGiorni", { n: n(giorni) }) : tr("giaLibero")) + " · " + tr("mortoIl", { a: String(a.morte).slice(0, 4) }))),
+    v.length >= 2 ? h("p", { class: "sotto lb-ver" }, tr("verificato", { n: v.length, f: v.map((k) => tr("fontiNomi")[k] || k).join(", ") })) : null,
+    h("details", { class: "lb-altri" }, h("summary", {}, tr("altriPaesi")), h("ul", {}, altri)));
+}
+function bloccoEdizioni(a, c) {
+  const l = nomeLingua(LINGUA_PAESE[c]);
+  const x = a.traduzioni || {};
+  const g = c === "it" ? x.sbn_it : c === "fr" ? x.bnf_fr : null;
+  const tit = h("h4", {}, tr("edizTit", { l }));
+  if (!g) return h("div", {}, tit, h("p", { class: "sotto" }, tr("edizNd")));
+  if (!g.trovato) return h("div", {}, tit, h("p", { class: "sotto" }, tr("edizNonTrovato")));
+  const box = (num, et) => h("div", { class: "ed-box" }, h("b", {}, n(num)), h("span", {}, et));
+  return h("div", {}, tit,
+    h("div", { class: "ed-boxes" }, box(g.edizioni, tr("edizLibri", { l })), box(g.dal_2000 || 0, tr("edizDal2000") + (g.ultimo ? " · " + tr("edizUltimo", { a: g.ultimo }) : ""))),
+    h("p", { class: "sotto" }, c === "it" ? tr("edizSbn") : tr("edizBnf")),
+    c === "it" && g.metodo === "nome" ? h("p", { class: "sotto" }, tr("sbnPerNome")) : null);
+}
 function mostraAutore(id) {
   const t = trovaAutore(id);
   if (!t) return false;
   const { a, anno } = t;
   const d = stato.dati[anno];
+  const cP = paeseScheda();
   const nasc = a.nascita ? a.nascita.slice(0, 4) : "?", mor = a.morte ? a.morte.slice(0, 4) : "?";
-  const sotto = [`${nasc} – ${mor}`, tr("liberoIndice", { d: dataIt(d.libero_dal) })];
-  if ((a.paesi || []).length) sotto.push(a.paesi.join(", "));
+  const sotto = [`${nasc} – ${mor}`];
+  if ((a.paesi || []).length) sotto.push(a.paesi.map((x) => et(x)).join(", "));
   const nome = a.nome;
   const bd = bioDi(a);
   const bio = bd ? h("p", { class: "bio" }, pulisci(bd.testo), " ",
@@ -1300,7 +1378,7 @@ function mostraAutore(id) {
   const riga = (m) => {
     const v = a["indice_" + m];
     const grezzoM = m === "int" ? a.pagine_wikipedia : a[CAMPO_M[m]];
-    const lingua = tr("nomiLingua")[["it", "es", "de", "fr"].includes(m) ? m : "en"].toLowerCase();
+    const lingua = nomeLingua(["it", "es", "de", "fr"].includes(m) ? m : "en");
     const testo = v === undefined ? tr("vNd")
       : m === "int" ? tr("vLingue", { n: n(grezzoM || 0) })
       : grezzoM === 0 ? tr("vNoPag", { l: lingua })
@@ -1317,10 +1395,9 @@ function mostraAutore(id) {
     h("p", { class: "sotto" }, tr("formulaTitolo") + tr("formula")));
   const gut = a.gutenberg !== undefined && a.gutenberg !== null ? tr("gut", { n: n(a.gutenberg) }) : tr("gutNd");
   const indice = stato.mercati && (a.indice_it !== undefined || a.indice_en !== undefined || a.indice_int !== undefined) ? h("div", {},
-    h("h4", {}, tr("popolarita")),
-    h("div", { class: "misure" }, mercatiDisp().map(riga)),
-    h("div", { class: "sotto", style: "margin-top:10px" }, gut),
-    spiegazione) : (a.indice !== undefined ? h("div", {},
+    h("h4", {}, tr("quantoNoto")),
+    h("div", { class: "misure" }, mercatiDisp().filter((m) => m !== "scop").map(riga)),
+    h("p", { class: "sotto", style: "margin-top:10px" }, tr("curiosita"))) : (a.indice !== undefined ? h("div", {},
     h("h4", {}, tr("popolarita")),
     h("div", { class: "indice" }, h("span", { class: "num" }, String(a.indice)),
       h("div", { class: "asta", role: "img", "aria-label": `${a.indice} / 100` }, h("i", { style: `width:${Math.max(2, Math.min(100, a.indice))}%` }))),
@@ -1341,21 +1418,20 @@ function mostraAutore(id) {
       h("div", {},
         h("h2", {}, nome),
         h("div", { class: "sotto" }, sotto.join(" · ")),
-        bio,
-        indice,
-        catalogo.length || generi.length ? h("div", {}, h("h4", {}, tr("catalogo")),
-          [...new Set([...catalogo, ...generi])].map((x) => h("span", { class: "tag" }, x))) : null,
+        bloccoLibero(a, cP),
+        bio ? h("div", {}, h("h4", {}, tr("chiEra")), bio) : null,
         opere.length ? h("div", {}, h("h4", {}, tr("opereP") + (a.n_opere > opere.length ? tr("opereSu", { x: n(opere.length), y: n(a.n_opere) }) : "")),
           h("ul", { class: "opere" }, opere.map((o) => h("li", {}, o.titolo, o.anno ? h("span", {}, String(o.anno)) : null)))) : null,
-        (a.lingue || []).length ? h("div", {}, h("h4", {}, tr("lingue")), a.lingue.map((x) => h("span", { class: "tag" }, maiuscola(et(x))))) : null,
-        bloccoTraduzioni(a),
-        bloccoPaesi(a),
-        h("div", { class: "avviso" }, tr("avviso")),
+        bloccoEdizioni(a, cP),
+        indice,
+        h("h4", {}, tr("primaPubbl")),
+        h("div", { class: "avviso", style: "margin-top:0" }, tr("avvisoBreve") + (cP === "it" ? tr("avvisoIt") : "")),
         h("div", { class: "pulsanti" },
           cuoreBtn,
-          linkEsterno(`https://www.google.com/search?tbm=bks&lr=lang_it&q=inauthor:${q}`, tr("librI")),
-          linkEsterno(`https://www.amazon.it/s?k=${encodeURIComponent(nome)}&i=digital-text`, tr("amazon")),
-          linkEsterno(`https://www.google.com/search?q=site:opac.sbn.it+${q}`, tr("sbn")),
+          linkEsterno(`https://www.google.com/search?tbm=bks&lr=lang_${LINGUA_PAESE[cP]}&q=inauthor:${q}`, tr("libriL", { l: nomeLingua(LINGUA_PAESE[cP]) })),
+          linkEsterno(`https://www.${AMAZON[cP]}/s?k=${encodeURIComponent(nome)}&i=digital-text`, tr("amazonP", { d: AMAZON[cP].replace(/^./, (m) => m.toUpperCase()) })),
+          cP === "it" ? linkEsterno(`https://www.google.com/search?q=site:opac.sbn.it+${q}`, tr("sbn")) : null,
+          cP === "fr" ? linkEsterno(`https://catalogue.bnf.fr/rechercher.do?motRecherche=${encodeURIComponent(nome)}`, tr("bnf")) : null,
           a.pagina ? (LING === "en" && a.pagina_en ? h("a", { class: "pillola", href: `/en/author/${a.pagina_en}/` }, tr("paginaDedicataEn")) : h("a", { class: "pillola", href: `/autore/${a.pagina}/` }, tr("paginaDedicata"))) : null,
           bd && bd.url ? linkEsterno(bd.url, tr("wikipedia")) : null,
           linkEsterno(a.url, tr("wikidata")),
@@ -1760,7 +1836,7 @@ async function avvia() {
   stato.dati = stato.perGiur.ue;
   stato.mercati = stato.anni.some((an) => stato.dati[an].autori.some((a) => a.indice_it !== undefined));
   const m = leggiLocale(CHIAVE_MERCATO, "it");
-  stato.mercato = ["it", "es", "de", "fr", "en", "int"].includes(m) ? m : "it";
+  stato.mercato = ["it", "es", "de", "fr", "en", "int", "scop"].includes(m) ? m : "it";
   stato.anno = stato.anni[0];
   const gsalvata = leggiLocale(CHIAVE_GIUR, "it");
   const og = GIUR_OPZ.find((o) => o[0] === gsalvata);
