@@ -5,13 +5,13 @@ on:
 jobs:
   d:
     runs-on: ubuntu-latest
-    timeout-minutes: 50
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Prova storico per autore, a blocchi (non salva nulla)
+      - name: Prova storico per autore con filtro tipo (non salva nulla)
         run: |
           cd scripts && python3 - <<'PY'
           import json, glob, time
@@ -22,26 +22,45 @@ jobs:
               for o in d["opere"]: gia.add(o[0])
               for a in d["autori"]: autori[a[0]]=a
           lista=sorted(autori.values(), key=lambda a:-a[3])
-          print("AUTORI|",len(lista))
-          ESC="wd:Q13442814,wd:Q732577,wd:Q1980247,wd:Q187685,wd:Q1266946,wd:Q3331189,wd:Q5,wd:Q4167410"
-          tot={}; t0=time.time(); err=0
-          for i in range(0, min(len(lista),3000), 150):
-              v=" ".join("wd:"+a[0] for a in lista[i:i+150])
-              q=f"""SELECT ?w ?wLabel ?sl (MIN(YEAR(?p)) AS ?pub) (MIN(YEAR(?c)) AS ?cre) (SAMPLE(?a) AS ?aut) WHERE {{
-                VALUES ?a {{ {v} }} ?w wdt:P50 ?a. ?w wikibase:sitelinks ?sl. FILTER(?sl>=1)
-                FILTER NOT EXISTS {{ ?w wdt:P31 ?x. VALUES ?x {{ {ESC.replace(',',' ')} }} }}
+          def blocco(qs):
+              v=" ".join("wd:"+q for q in qs)
+              q=f"""SELECT ?w ?wLabel ?sl (MIN(YEAR(?p)) AS ?pub) (MIN(YEAR(?c)) AS ?cre) (MAX(YEAR(?m)) AS ?morte) (COUNT(DISTINCT ?a) AS ?na) (COUNT(DISTINCT ?m) AS ?nm) WHERE {{
+                VALUES ?a0 {{ {v} }} ?w wdt:P50 ?a0. ?w wikibase:sitelinks ?sl. FILTER(?sl>=1)
+                ?w wdt:P31/wdt:P279* ?radice. VALUES ?radice {{ wd:Q7725634 wd:Q47461344 }}
+                ?w wdt:P50 ?a. OPTIONAL {{ ?a wdt:P570 ?m }}
                 OPTIONAL {{ ?w wdt:P577 ?p }} OPTIONAL {{ ?w wdt:P571 ?c }}
                 SERVICE wikibase:label {{ bd:serviceParam wikibase:language "it,en". }} }} GROUP BY ?w ?wLabel ?sl"""
+              return sparql(q)
+          tot={}; t0=time.time(); err=0; i=0
+          while i < len(lista) and time.time()-t0 < 40*60:
+              n = 20 if i < 300 else (60 if i < 1500 else 150)
               t=time.time()
-              try: r=sparql(q)
-              except Exception as e: err+=1; print("ERR|",i,e); continue
+              try: r=blocco([a[0] for a in lista[i:i+n]])
+              except Exception as e: err+=1; print("ERR|",i,str(e)[:80]); i+=n; continue
               for x in r: tot[qid(val(x,"w"))]=x
-              print(f"BLOCCO| {i} {time.time()-t:.0f}s righe {len(r)}", flush=True)
-              time.sleep(1)
-          nuove=[x for k,x in tot.items() if k not in gia]
-          senza=[x for x in nuove if not val(x,"pub") and not val(x,"cre")]
-          print(f"TOT| tempo {time.time()-t0:.0f}s | errori {err} | opere {len(tot)} | nuove {len(nuove)} | nuove senza data {len(senza)}")
-          print("NUOVE|",[(val(x,"wLabel"),val(x,"pub") or val(x,"cre")) for x in sorted(nuove,key=lambda x:-int(val(x,"sl")))[:60]])
-          for t in ["Q41567","Q8275","Q35160","Q16867","Q1004","Q191380","Q16867","Q482"]:
-              print("CASO|",t,t in tot, t in gia)
+              if i % 600 < n: print(f"BLOCCO| {i} n{n} {time.time()-t:.0f}s righe {len(r)}", flush=True)
+              i+=n; time.sleep(0.5)
+          print("ARRIVATO|",i,"di",len(lista))
+          def libera(x):
+              pub=[int(float(val(x,k))) for k in ("pub","cre") if val(x,k)]
+              morte=val(x,"morte"); tutti=val(x,"na")==val(x,"nm")
+              usa = bool(pub) and min(pub)<=1930
+              ue = bool(morte) and tutti and int(float(morte))<=1955
+              return usa or ue, usa, ue
+          lib=[x for x in tot.values() if libera(x)[0]]
+          nuove=[x for x in lib if qid(val(x,"w")) not in gia]
+          solo_ue=[x for x in lib if not libera(x)[1]]
+          print(f"TOT| tempo {time.time()-t0:.0f}s errori {err} | trovate {len(tot)} | libere {len(lib)} | nuove libere {len(nuove)} | libere solo in UE {len(solo_ue)} | non libere {len(tot)-len(lib)}")
+          print("NUOVE|",[(val(x,"wLabel"),val(x,"pub") or val(x,"cre")) for x in sorted(nuove,key=lambda x:-int(val(x,"sl")))[:70]])
+          print("NONLIBERE|",[(val(x,"wLabel"),val(x,"pub"),val(x,"morte")) for x in sorted([x for x in tot.values() if not libera(x)[0]],key=lambda x:-int(val(x,"sl")))[:25]])
+          for t,n in [("Q41567","Amleto"),("Q16867","Decameron"),("Q1004","Commedia?"),("Q482","Divina?"),("Q8275","Iliade"),("Q35160","Odissea")]:
+              print("CASO|",n,t in tot, t in gia)
+          # opere famose di autori che non abbiamo
+          q="""SELECT ?w ?wLabel ?sl ?a ?aLabel WHERE { ?w wikibase:sitelinks ?sl. FILTER(?sl>=40)
+               ?w wdt:P31/wdt:P279* wd:Q7725634. ?w wdt:P50 ?a.
+               SERVICE wikibase:label { bd:serviceParam wikibase:language "it,en". } }"""
+          try:
+              r=sparql(q); fuori=[x for x in r if qid(val(x,"a")) not in autori]
+              print("FAMOSE|",len(r),"di autori che non abbiamo:",len(fuori),sorted({(int(val(x,'sl')),val(x,'wLabel'),val(x,'aLabel')) for x in fuori},reverse=True)[:50])
+          except Exception as e: print("ERR| famose",str(e)[:100])
           PY
