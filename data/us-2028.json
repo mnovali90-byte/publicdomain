@@ -2209,25 +2209,6 @@
    "visite_en": 348
   },
   {
-   "qid": "Q18351196",
-   "titolo": "Alicia Deane",
-   "titolo_it": null,
-   "autori": [
-    {
-     "qid": "Q5321676",
-     "nome": "E. V. Timms"
-    }
-   ],
-   "pagine": 2,
-   "wiki_en": "https://en.wikipedia.org/wiki/Alicia_Deane",
-   "lingua": {
-    "en": "English",
-    "it": "inglese"
-   },
-   "generi": [],
-   "visite_en": 347
-  },
-  {
    "qid": "Q96373014",
    "titolo": "Ballerina",
    "titolo_it": null,
@@ -2239,6 +2220,25 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Ballerina_(novel)",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [],
+   "visite_en": 347
+  },
+  {
+   "qid": "Q18351196",
+   "titolo": "Alicia Deane",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q5321676",
+     "nome": "E. V. Timms"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/Alicia_Deane",
    "lingua": {
     "en": "English",
     "it": "inglese"
@@ -2304,25 +2304,6 @@
    "visite_en": 322
   },
   {
-   "qid": "Q7170795",
-   "titolo": "Pertemuan Jodoh",
-   "titolo_it": null,
-   "autori": [
-    {
-     "qid": "Q1401053",
-     "nome": "Abdul Muis"
-    }
-   ],
-   "pagine": 2,
-   "wiki_en": "https://en.wikipedia.org/wiki/Pertemuan_Jodoh",
-   "lingua": {
-    "en": "Indonesian",
-    "it": "indonesiano"
-   },
-   "generi": [],
-   "visite_en": 322
-  },
-  {
    "qid": "Q86753954",
    "titolo": "Evensong",
    "titolo_it": null,
@@ -2337,6 +2318,25 @@
    "lingua": {
     "en": "English",
     "it": "inglese"
+   },
+   "generi": [],
+   "visite_en": 322
+  },
+  {
+   "qid": "Q7170795",
+   "titolo": "Pertemuan Jodoh",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q1401053",
+     "nome": "Abdul Muis"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/Pertemuan_Jodoh",
+   "lingua": {
+    "en": "Indonesian",
+    "it": "indonesiano"
    },
    "generi": [],
    "visite_en": 322
