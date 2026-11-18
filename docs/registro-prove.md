@@ -58,17 +58,36 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
   - assenti: il sistema collega comunque qualcosa in 1 caso su 54.
 - **Scoperta:** in SBN una stessa scheda può mescolare due persone («Leclercq, Paul»: libri su Toulouse-Lautrec e un supplemento di diritto civile). Lì il conteggio è gonfiato anche con il collegamento giusto: è un limite del catalogo, da dichiarare.
 - **Conseguenza per la fase 3/4:** la regola «nome compatibile» non può aggiungere schede con le sole iniziali o con il solo nome di battesimo; serve una prova (anni, titolo, codice).
-- **18/11, Saldías:** Marco l'ha trovato su OPAC («Saldias, José Antonio»). Causa del mio «assente» sbagliato: in SBN gli accenti sono usati in modo incoerente dentro la stessa scheda («Saldias» senza, «José» con). Cercare togliendo tutti gli accenti o tenendoli tutti non basta: va cercata ogni parola in tutte e due le forme. Lo stesso problema tocca il sistema e va nella fase 4. Esiti: presenti 75, assenti 53, irrisolti 12.
+- **18/11, Saldías:** Marco l'ha trovato su OPAC («Saldias, José Antonio»). Causa del mio «assente» sbagliato: in SBN gli accenti sono usati in modo incoerente dentro la stessa scheda («Saldias» senza, «José» con). Cercare togliendo tutti gli accenti o tenendoli tutti non basta: va cercata ogni parola in tutte e due le forme. Lo stesso problema tocca il sistema e va nella fase 4. Esiti: presenti 75, assenti 54, irrisolti 11 (Saldías era tra gli irrisolti, non tra gli assenti: correzione del 18/11).
 
 ### 18/11/2026 — Fase 3 (SBN): nuovo riconoscimento dell'autore
 - **Come funziona** (`scripts/riconosci_sbn.py`, misura con `scripts/campione_valuta.py`, risultato in `docs/campione/sbn-fase3.json`). Per ogni autore, in ordine: 1) codice SBN di Wikidata (P396): se c'è si usa solo quello, anche con zero registrazioni; 2) VIAF; 3) ricerca per nome. Nella ricerca per nome i nomi vengono **normalizzati da tutte e due le parti** (senza accenti, minuscole, particelle «de/von/i» separate, iniziali, trattini, ordine orientale per Cina/Giappone/Corea) e ogni parola si cerca con e senza accenti e come prefisso fino al primo accento («Sald*»). Una scheda si accetta solo se il nome torna (cognome intero + primo nome, anche come iniziale) **e** c'è una prova: anni di nascita/morte entro ±1, oppure un titolo che coincide con le opere in Wikidata, oppure cognome raro in SBN (≤3 schede) con nome di battesimo per intero e nessun nome in più. Anni o secolo nella scheda che contraddicono escludono la scheda. Senza prova la scheda resta «ambigua» e non si collega.
 - **Primo giro:** trovati 64 su 75 presenti; 3 errori nuovi: Jeanne collegato a «Laon, Jean : de <sec. 17.>» (via pseudonimo), Subbārāvu (assente) collegato a «Subbarao, Karumuri Venkata», F. W. Harvey a «Harvey, John Wilfred <1889-tr>».
 - **Correzioni:** il primo nome deve tornare; se la scheda ha nomi che Wikidata non ha, il cognome raro non basta; il secolo nella scheda («sec. 17.») conta come contraddizione; per i cognomi troppo comuni (oltre 1000 schede) si cerca cognome + nome insieme.
+- **Perché i presenti sono passati da 71 a 75 e gli assenti da 52 a 54** (classificazione a mano, non il sistema):
+  - prima classificazione (17/11): presenti 71 (53 certi + 18 probabili), assenti 52, irrisolti 17;
+  - prova con i titoli (18/11): 3 irrisolti diventano presenti (Abercrombie, Leclercq, Hardt: i titoli SBN sono loro); 3 irrisolti diventano assenti (Alan Sullivan, Ahmed Galal, Pedro Pérez Fernández: l'unica scheda con quel nome ha libri di un'altra persona); Saldías passa da assente a irrisolto (dubbio sugli accenti). Quindi presenti 71 + 3 = 74, assenti 52 + 3 − 1 = 54, irrisolti 17 − 6 + 1 = 12;
+  - Marco su OPAC (18/11): Saldías da irrisolto a presente. Finale: presenti 75, assenti 54, irrisolti 11;
+  - i 18 «probabili» sono stati tutti confermati (Marco sull'OPAC o titoli) e restano presenti.
+- **Confronto prima/dopo con la stessa classificazione finale (75 / 54 / 11).** Anche il vecchio sistema è rimisurato su questi esiti, non su quelli del 17/11:
+  - vecchio: presenti trovati 43 su 75 (37 puliti, 5 con anche schede di altre persone, 1 incompleto), mancati 32; assenti collegati per errore 1 su 54; irrisolti collegati 1 su 11 (Richard Griffith, con un omonimo musicista). Le 7 «schede di altre persone» del 18/11 sono quindi 5 + 1 + 1;
+  - nuovo: vedi sotto.
 - **Secondo giro (risultato attuale), prima → dopo:**
   - presenti trovati: 43 → 64 su 75 (58% → 85%); 53 col codice SBN, 11 col nome e una prova;
-  - collegamenti con schede di altre persone: 7 → 0; schede sbagliate o falsi positivi introdotti: 0;
+  - presenti collegati anche a schede di altre persone: 5 → 0; schede sbagliate o falsi positivi introdotti: 0;
   - assenti: collegamenti sbagliati 1 → 0 su 54;
-  - irrisolti (12, non si contano): nessuno riceve un collegamento;
+  - irrisolti (11, non si contano): collegati 1 → 0;
   - tempo: circa 580 secondi per 140 autori.
 - **Gli 11 mancati** hanno tutti la scheda giusta tra le «ambigue», ma senza anni né titolo che lo provino: Leclercq, Jeanne, Maurey, Shimoni, Bradby, von Bodman, Saint-Paul, Sainsbury, Broderzon, Stewart White, Haava. È una scelta voluta: meglio non collegare che collegare la persona sbagliata.
 - **Limite:** misura sullo stesso campione usato per costruire le regole (rischio di regole «su misura»). Prima di passare in produzione serve un secondo campione nuovo.
+- **Stato del campione dei 140:** è di sviluppo. Le regole sono state cambiate dopo averne visto gli errori, quindi i suoi numeri non valgono come verifica.
+
+### 18/11/2026 — Fase 3 (SBN): verifica su un campione nuovo
+- **Protocollo** (`scripts/verifica_sbn.py`, file in `docs/verifica-sbn/`):
+  1. **regole congelate prima della prova**: impronta sha256 di `riconosci_sbn.py` e `sbn.py` in `regole-congelate.json`; la misura non parte se i file sono cambiati;
+  2. **campione nuovo, a caso**: 100 autori estratti (seme 20261118) tra i 319 autori del sito interrogati in SBN che **non** sono nei 140 di sviluppo; nessun criterio di scelta, quindi ci sono anche gli autori che il sistema non trova (81 su 100 per il vecchio sistema, che è la proporzione reale del sito);
+  3. **prove raccolte senza il nuovo sistema**: codice SBN e VIAF di Wikidata, schede con il cognome in tutte le forme (con e senza accenti, prefisso), schede con tutte le parole del nome e degli pseudonimi, titoli collegati a ogni scheda, opere in Wikidata; più il risultato del vecchio sistema;
+  4. **decisione a mano prima della misura**: per ogni autore presente / assente / irrisolto e, per ogni scheda, giusta / altra persona / non dimostrabile (`esiti.json`), salvata prima di far girare il nuovo sistema;
+  5. **misura**: tre conteggi separati: persone sbagliate, collegamenti senza prove sufficienti, autori mancati.
+  6. Se dopo la misura si cambiano le regole, anche questo campione diventa di sviluppo e serve un'altra verifica nuova.
+- **Limite del campione:** essendo casuale, ha pochi autori presenti in SBN (circa uno su cinque), quindi misura bene gli errori sugli assenti e meno bene quanti presenti si trovano.
