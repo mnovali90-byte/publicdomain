@@ -21,7 +21,7 @@ jobs:
       - name: Passo indicato in passo.txt
         env:
           BUDGET_MINUTI_SBN: "100"
-        run: python scripts/esplora_ambigui.py
+        run: python scripts/$(tr -d "[:space:]" < docs/esplora-ambigui/passo.txt).py
       - name: Salva
         if: always()
         run: |
