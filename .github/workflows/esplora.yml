@@ -1,0 +1,34 @@
+name: Esplorazione dei 20 ambigui SBN (non cambia il sito)
+
+# Analisi esplorativa: parte quando cambia docs/esplora-ambigui/passo.txt. Non cambia il sito né le regole.
+on:
+  push:
+    paths:
+      - "docs/esplora-ambigui/passo.txt"
+
+permissions:
+  contents: write
+
+jobs:
+  verifica:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Passo indicato in passo.txt
+        env:
+          BUDGET_MINUTI_SBN: "100"
+        run: python scripts/esplora_ambigui.py
+      - name: Salva
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/esplora-ambigui
+          if ! git diff --cached --quiet; then
+            git commit -m "Esplorazione ambigui: passo $(cat docs/esplora-ambigui/passo.txt)"
+            for i in 1 2 3 4 5; do git pull --rebase --autostash -X theirs origin main && git push && break; sleep $((i*20)); done
+          fi
