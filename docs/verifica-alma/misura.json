@@ -1,0 +1,617 @@
+{
+ "regole": {
+  "commit": "5654949592e76146ba636487b069673c41aeb63d",
+  "sha256": {
+   "scripts/voce_alma.py": "068c2234b414698485dabf91bdafa9db8d8f3399bfdf650c8b5cbd05ceea8141"
+  }
+ },
+ "totale_notizie": {
+  "sua, tenuta": 798,
+  "sua, scartata": 41,
+  "di altri, scartata": 5
+ },
+ "autori": [
+  {
+   "n": 1,
+   "nome": "Percy Marks",
+   "oggi": 7,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 7,
+    "dal_2000": 0,
+    "trovate_dalla_ricerca": 7,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 7
+   }
+  },
+  {
+   "n": 2,
+   "nome": "Alfred Döblin",
+   "oggi": 25,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 25,
+    "dal_2000": 17,
+    "trovate_dalla_ricerca": 25,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 25
+   }
+  },
+  {
+   "n": 3,
+   "nome": "Edward Plunkett, XVIII barone Dunsany",
+   "oggi": 228,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 228,
+    "dal_2000": 43,
+    "trovate_dalla_ricerca": 228,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 50
+   }
+  },
+  {
+   "n": 4,
+   "nome": "Eva Emery Dye",
+   "oggi": 10,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 10,
+    "dal_2000": 0,
+    "trovate_dalla_ricerca": 10,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 10
+   }
+  },
+  {
+   "n": 5,
+   "nome": "Lilian Turner",
+   "oggi": 18,
+   "nuovo": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "trovate_dalla_ricerca": 18,
+    "scartate": 18
+   },
+   "notizie": {
+    "sua, scartata": 17,
+    "di altri, scartata": 1
+   }
+  },
+  {
+   "n": 6,
+   "nome": "Arthur Machen",
+   "oggi": 214,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 214,
+    "dal_2000": 50,
+    "trovate_dalla_ricerca": 214,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 50
+   }
+  },
+  {
+   "n": 7,
+   "nome": "Amelia Beers Warnock",
+   "oggi": 11,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 11,
+    "dal_2000": 0,
+    "trovate_dalla_ricerca": 11,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 11
+   }
+  },
+  {
+   "n": 8,
+   "nome": "Juan María Oliver",
+   "oggi": 2,
+   "nuovo": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "trovate_dalla_ricerca": 2,
+    "scartate": 2
+   },
+   "notizie": {
+    "di altri, scartata": 2
+   }
+  },
+  {
+   "n": 9,
+   "nome": "Oliver St. John Gogarty",
+   "oggi": 65,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 65,
+    "dal_2000": 1,
+    "trovate_dalla_ricerca": 65,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 50
+   }
+  },
+  {
+   "n": 10,
+   "nome": "Wyndham Lewis",
+   "oggi": 219,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 219,
+    "dal_2000": 24,
+    "trovate_dalla_ricerca": 219,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 50
+   }
+  },
+  {
+   "n": 11,
+   "nome": "Sacha Guitry",
+   "oggi": 16,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 16,
+    "dal_2000": 0,
+    "trovate_dalla_ricerca": 16,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 16
+   }
+  },
+  {
+   "n": 12,
+   "nome": "E. C. Vivian",
+   "oggi": 80,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 80,
+    "dal_2000": 1,
+    "trovate_dalla_ricerca": 80,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 50
+   }
+  },
+  {
+   "n": 13,
+   "nome": "Felix Timmermans",
+   "oggi": 1,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 1,
+    "dal_2000": 1,
+    "trovate_dalla_ricerca": 1,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 1
+   }
+  },
+  {
+   "n": 14,
+   "nome": "Herbert Asquith",
+   "oggi": 18,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 18,
+    "dal_2000": 0,
+    "trovate_dalla_ricerca": 18,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 18
+   }
+  },
+  {
+   "n": 15,
+   "nome": "Ray Cummings",
+   "oggi": 22,
+   "nuovo": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "trovate_dalla_ricerca": 22,
+    "scartate": 22
+   },
+   "notizie": {
+    "sua, scartata": 22
+   }
+  },
+  {
+   "n": 16,
+   "nome": "Jean-Richard Bloch",
+   "oggi": 4,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 4,
+    "dal_2000": 0,
+    "trovate_dalla_ricerca": 4,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 4
+   }
+  },
+  {
+   "n": 17,
+   "nome": "Bhai Vir Singh",
+   "oggi": 4,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 2,
+    "dal_2000": 0,
+    "trovate_dalla_ricerca": 4,
+    "scartate": 2
+   },
+   "notizie": {
+    "sua, tenuta": 2,
+    "sua, scartata": 2
+   }
+  },
+  {
+   "n": 18,
+   "nome": "César Moro",
+   "oggi": 3,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 3,
+    "dal_2000": 2,
+    "trovate_dalla_ricerca": 3,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 3
+   }
+  },
+  {
+   "n": 19,
+   "nome": "Michael Sadleir",
+   "oggi": 115,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 115,
+    "dal_2000": 6,
+    "trovate_dalla_ricerca": 115,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 50
+   }
+  },
+  {
+   "n": 20,
+   "nome": "Gabriela Preissová",
+   "oggi": 5,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 5,
+    "dal_2000": 5,
+    "trovate_dalla_ricerca": 5,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 5
+   }
+  },
+  {
+   "n": 21,
+   "nome": "Percy MacKaye",
+   "oggi": 68,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 68,
+    "dal_2000": 1,
+    "trovate_dalla_ricerca": 68,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 50
+   }
+  },
+  {
+   "n": 22,
+   "nome": "Umberto Saba",
+   "oggi": 14,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 14,
+    "dal_2000": 9,
+    "trovate_dalla_ricerca": 14,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 14
+   }
+  },
+  {
+   "n": 23,
+   "nome": "Carl H. Claudy",
+   "oggi": 4,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 4,
+    "dal_2000": 2,
+    "trovate_dalla_ricerca": 4,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 4
+   }
+  },
+  {
+   "n": 24,
+   "nome": "Paul Gsell",
+   "oggi": 2,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 2,
+    "dal_2000": 1,
+    "trovate_dalla_ricerca": 2,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 2
+   }
+  },
+  {
+   "n": 25,
+   "nome": "Muhammad Husayn Haykal",
+   "oggi": 5,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 5,
+    "dal_2000": 1,
+    "trovate_dalla_ricerca": 5,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 5
+   }
+  },
+  {
+   "n": 26,
+   "nome": "Valery Larbaud",
+   "oggi": 13,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 13,
+    "dal_2000": 2,
+    "trovate_dalla_ricerca": 13,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 13
+   }
+  },
+  {
+   "n": 27,
+   "nome": "John Colton",
+   "oggi": 1,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 1,
+    "dal_2000": 0,
+    "trovate_dalla_ricerca": 1,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 1
+   }
+  },
+  {
+   "n": 28,
+   "nome": "Robert Walser",
+   "oggi": 36,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 36,
+    "dal_2000": 22,
+    "trovate_dalla_ricerca": 36,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 36
+   }
+  },
+  {
+   "n": 29,
+   "nome": "Minnie Louise Haskins",
+   "oggi": 1,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 1,
+    "dal_2000": 1,
+    "trovate_dalla_ricerca": 1,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 1
+   }
+  },
+  {
+   "n": 30,
+   "nome": "Christopher Morley",
+   "oggi": 134,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 134,
+    "dal_2000": 6,
+    "trovate_dalla_ricerca": 134,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 50
+   }
+  },
+  {
+   "n": 31,
+   "nome": "C. M. van den Heever",
+   "oggi": 1,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 1,
+    "dal_2000": 1,
+    "trovate_dalla_ricerca": 1,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 1
+   }
+  },
+  {
+   "n": 32,
+   "nome": "Dorothy Richardson",
+   "oggi": 44,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 44,
+    "dal_2000": 3,
+    "trovate_dalla_ricerca": 44,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 44
+   }
+  },
+  {
+   "n": 33,
+   "nome": "Curzio Malaparte",
+   "oggi": 8,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 8,
+    "dal_2000": 7,
+    "trovate_dalla_ricerca": 8,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 8
+   }
+  },
+  {
+   "n": 34,
+   "nome": "Winston Churchill",
+   "oggi": 39,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 39,
+    "dal_2000": 2,
+    "trovate_dalla_ricerca": 39,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 39
+   }
+  },
+  {
+   "n": 35,
+   "nome": "Jhaverchand Meghani",
+   "oggi": 2,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 2,
+    "dal_2000": 0,
+    "trovate_dalla_ricerca": 2,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 2
+   }
+  },
+  {
+   "n": 36,
+   "nome": "George Bacovia",
+   "oggi": 1,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 1,
+    "dal_2000": 1,
+    "trovate_dalla_ricerca": 1,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 1
+   }
+  },
+  {
+   "n": 37,
+   "nome": "Edward Sheldon",
+   "oggi": 2,
+   "nuovo": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "trovate_dalla_ricerca": 2,
+    "scartate": 2
+   },
+   "notizie": {
+    "di altri, scartata": 2
+   }
+  },
+  {
+   "n": 38,
+   "nome": "Roy Campbell",
+   "oggi": 66,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 66,
+    "dal_2000": 7,
+    "trovate_dalla_ricerca": 66,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 50
+   }
+  },
+  {
+   "n": 39,
+   "nome": "Hugh Lofting",
+   "oggi": 100,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 100,
+    "dal_2000": 42,
+    "trovate_dalla_ricerca": 100,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 50
+   }
+  },
+  {
+   "n": 40,
+   "nome": "Countee Cullen",
+   "oggi": 25,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 25,
+    "dal_2000": 5,
+    "trovate_dalla_ricerca": 25,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 25
+   }
+  }
+ ]
+}
