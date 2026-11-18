@@ -724,53 +724,6 @@
    }
   },
   {
-   "tipo": "morte",
-   "qid": "Q43718",
-   "nome": "Nikolai Gogol",
-   "it": "Nikolaj Vasil'evič Gogol'",
-   "desc": "Russian writer of Ukrainian origin (1809–1852)",
-   "autore": null,
-   "autore_qid": null,
-   "anno": 1852,
-   "anni": 175,
-   "pagine": 157,
-   "mese": 2,
-   "giorno": 21,
-   "fonte_data": "wikidata+wikipedia",
-   "scheda": {
-    "it": {
-     "desc": "scrittore e drammaturgo russo",
-     "paesi": [
-      "Impero russo"
-     ],
-     "opere": [
-      "Taras Bul'ba",
-      "Marriage",
-      "Le anime morte"
-     ],
-     "nato": 1809,
-     "morto": 1852,
-     "nobel": null,
-     "wiki": "https://it.wikipedia.org/wiki/Nikolaj_Vasil%27evi%C4%8D_Gogol%27"
-    },
-    "en": {
-     "desc": "Russian writer of Ukrainian origin (1809–1852)",
-     "paesi": [
-      "Russian Empire"
-     ],
-     "opere": [
-      "Marriage",
-      "The Government Inspector",
-      "Dead Souls"
-     ],
-     "nato": 1809,
-     "morto": 1852,
-     "nobel": null,
-     "wiki": "https://en.wikipedia.org/wiki/Nikolai_Gogol"
-    }
-   }
-  },
-  {
    "tipo": "nascita",
    "qid": "Q359548",
    "nome": "Jonathan Safran Foer",
@@ -1152,6 +1105,53 @@
      "morto": 1927,
      "nobel": null,
      "wiki": "https://en.wikipedia.org/wiki/Mikhail_Artsybashev"
+    }
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q43718",
+   "nome": "Nikolai Gogol",
+   "it": "Nikolaj Vasil'evič Gogol'",
+   "desc": "Russian writer of Ukrainian origin (1809–1852)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1852,
+   "anni": 175,
+   "pagine": 157,
+   "mese": 3,
+   "giorno": 4,
+   "fonte_data": "verifica: Britannica: morto il 21 febbraio (4 marzo nel calendario gregoriano) 1852; Wikipedia inglese nella scheda riporta la data del calendario russo",
+   "scheda": {
+    "it": {
+     "desc": "scrittore e drammaturgo russo",
+     "paesi": [
+      "Impero russo"
+     ],
+     "opere": [
+      "Taras Bul'ba",
+      "Marriage",
+      "Le anime morte"
+     ],
+     "nato": 1809,
+     "morto": 1852,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Nikolaj_Vasil%27evi%C4%8D_Gogol%27"
+    },
+    "en": {
+     "desc": "Russian writer of Ukrainian origin (1809–1852)",
+     "paesi": [
+      "Russian Empire"
+     ],
+     "opere": [
+      "Marriage",
+      "The Government Inspector",
+      "Dead Souls"
+     ],
+     "nato": 1809,
+     "morto": 1852,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Nikolai_Gogol"
     }
    }
   },
@@ -2913,8 +2913,8 @@
    "anni": 400,
    "pagine": 64,
    "mese": 5,
-   "giorno": 24,
-   "fonte_data": "wikipedia",
+   "giorno": 23,
+   "fonte_data": "verifica: Britannica (23 maggio 1627) e la prima biografia di Chacón, 1628; Wikipedia dà il 24",
    "scheda": {
     "it": {
      "desc": "religioso, poeta e drammaturgo spagnolo",
@@ -3460,42 +3460,6 @@
   },
   {
    "tipo": "prima edizione",
-   "qid": "Q28491",
-   "nome": "The Betrothed",
-   "it": "I promessi sposi",
-   "desc": "Italian historical novel by Alessandro Manzoni",
-   "autore": "Alessandro Manzoni",
-   "autore_qid": "Q1064",
-   "anno": 1827,
-   "anni": 200,
-   "pagine": 38,
-   "mese": 6,
-   "giorno": 15,
-   "fonte_data": "wikipedia (testo: en)",
-   "scheda": {
-    "it": {
-     "desc": "romanzo di Alessandro Manzoni",
-     "generi": [
-      "fiction storica"
-     ],
-     "lingua": "italiano",
-     "titolo_orig": "I promessi sposi",
-     "wiki": "https://it.wikipedia.org/wiki/I_promessi_sposi"
-    },
-    "en": {
-     "desc": "Italian historical novel by Alessandro Manzoni",
-     "generi": [
-      "historical fiction",
-      "romantic fiction"
-     ],
-     "lingua": "Italian",
-     "titolo_orig": "I promessi sposi",
-     "wiki": "https://en.wikipedia.org/wiki/The_Betrothed"
-    }
-   }
-  },
-  {
-   "tipo": "prima edizione",
    "qid": "Q1129378",
    "nome": "The Case-Book of Sherlock Holmes",
    "it": "Il taccuino di Sherlock Holmes",
@@ -3779,6 +3743,42 @@
      "lingua": "German",
      "titolo_orig": "Der Steppenwolf",
      "wiki": "https://en.wikipedia.org/wiki/Steppenwolf_(novel)"
+    }
+   }
+  },
+  {
+   "tipo": "prima edizione",
+   "qid": "Q28491",
+   "nome": "The Betrothed",
+   "it": "I promessi sposi",
+   "desc": "Italian historical novel by Alessandro Manzoni",
+   "autore": "Alessandro Manzoni",
+   "autore_qid": "Q1064",
+   "anno": 1827,
+   "anni": 200,
+   "pagine": 38,
+   "mese": 6,
+   "giorno": null,
+   "fonte_data": "verifica: Martinelli (Università di Bologna): la Ventisettana fu ultimata nel giugno 1827; un documento del 14 luglio 1827 (Università di Milano) parla di copie in vendita dal 5 luglio. Il 15 giugno non è confermato",
+   "scheda": {
+    "it": {
+     "desc": "romanzo di Alessandro Manzoni",
+     "generi": [
+      "fiction storica"
+     ],
+     "lingua": "italiano",
+     "titolo_orig": "I promessi sposi",
+     "wiki": "https://it.wikipedia.org/wiki/I_promessi_sposi"
+    },
+    "en": {
+     "desc": "Italian historical novel by Alessandro Manzoni",
+     "generi": [
+      "historical fiction",
+      "romantic fiction"
+     ],
+     "lingua": "Italian",
+     "titolo_orig": "I promessi sposi",
+     "wiki": "https://en.wikipedia.org/wiki/The_Betrothed"
     }
    }
   },

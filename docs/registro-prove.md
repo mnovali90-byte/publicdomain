@@ -215,3 +215,10 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - **Una sola fonte:** la scheda del sito ora lo dice («controllalo prima di pubblicare»); le pagine autore lo dicevano già.
 - **Autori di paesi alleati (Italia):** avviso sulla scheda (Paese Italia) e sulle pagine autore quando la cittadinanza in Wikidata è di una delle Potenze alleate e associate del Trattato di pace del 1947 (preambolo; Albania per adesione). È un indizio, non cambia la data. Oggi riguarda 70 dei 120 autori principali del 2027 e 76 dei 117 del 2028.
 - **Regno Unito:** aggiunta la regola del 2039 per le opere inedite al 1989 di autori morti prima del 1969 (CDPA, allegato 1, paragrafo 12; gov.uk, Copyright Notice: Duration of copyright).
+
+### 18/11/2026 — Calendario anniversari 2027: due date corrette dopo una verifica esterna
+- **Verifica fatta fuori da qui** (82 date controllate sul web, portata da Marco): 2 sbagliate, 4 incerte.
+- **Gogol':** il calendario aveva il 21 febbraio, che è la data del calendario russo dell'epoca; la morte è il 4 marzo 1852 nel calendario gregoriano (Britannica). La data veniva dalla scheda di Wikipedia inglese, che riporta il calendario vecchio. Corretto in `anniversari_correzioni.json`.
+- **Góngora:** 23 maggio 1627 (Britannica; prima biografia di Chacón, 1628), non il 24 di Wikipedia. Corretto.
+- **I promessi sposi:** il 15 giugno non è confermato; la Ventisettana fu ultimata nel giugno 1827 (Martinelli) e un documento del 14 luglio parla di copie in vendita dal 5 luglio. Ora il calendario dice giugno 1827, senza giorno.
+- **Restano come sono:** Aspettando Godot 17 ottobre 1952 (fonte già registrata; un libraio antiquario dice settembre), Gaston Leroux 15 aprile 1927 (Britannica dà 15 o 16).
