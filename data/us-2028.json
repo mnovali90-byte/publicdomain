@@ -16,7 +16,13 @@
    ],
    "pagine": 74,
    "wiki_en": "https://en.wikipedia.org/wiki/Brave_New_World",
-   "generi": [],
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "fantasy_sf"
+   ],
    "visite_en": 932247,
    "copertina": {
     "file": "Giveaway von Pinguin Books für Brave New World (cropped).jpg",
@@ -38,7 +44,13 @@
    ],
    "pagine": 11,
    "wiki_en": "https://en.wikipedia.org/wiki/Little_House_in_the_Big_Woods",
-   "generi": [],
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "ragazzi"
+   ],
    "visite_en": 109179
   },
   {
@@ -53,7 +65,13 @@
    ],
    "pagine": 48,
    "wiki_en": "https://en.wikipedia.org/wiki/Journey_to_the_End_of_the_Night",
-   "generi": [],
+   "lingua": {
+    "en": "French",
+    "it": "francese"
+   },
+   "generi": [
+    "memorie"
+   ],
    "visite_en": 84915,
    "copertina": {
     "file": "Journey to the End of the Night 1932.jpg",
@@ -75,8 +93,14 @@
    ],
    "pagine": 34,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Man_Without_Qualities",
-   "generi": [],
-   "visite_en": 78777,
+   "lingua": {
+    "en": "German",
+    "it": "tedesco"
+   },
+   "generi": [
+    "storico"
+   ],
+   "visite_en": 78775,
    "copertina": {
     "file": "Robert Musil - Der Mann ohne Eigenschaften, 1930.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Robert_Musil_-_Der_Mann_ohne_Eigenschaften%2C_1930.jpg/500px-Robert_Musil_-_Der_Mann_ohne_Eigenschaften%2C_1930.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -97,8 +121,14 @@
    ],
    "pagine": 27,
    "wiki_en": "https://en.wikipedia.org/wiki/Light_in_August",
-   "generi": [],
-   "visite_en": 60832,
+   "lingua": {
+    "en": "English",
+    "it": "inglese americano"
+   },
+   "generi": [
+    "horror"
+   ],
+   "visite_en": 60823,
    "copertina": {
     "file": "Light in August (1932 dust jacket cover).jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Light_in_August_%281932_dust_jacket_cover%29.jpg/500px-Light_in_August_%281932_dust_jacket_cover%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -119,7 +149,13 @@
    ],
    "pagine": 28,
    "wiki_en": "https://en.wikipedia.org/wiki/Peril_at_End_House",
-   "generi": [],
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "giallo"
+   ],
    "visite_en": 56365
   },
   {
@@ -134,7 +170,13 @@
    ],
    "pagine": 5,
    "wiki_en": "https://en.wikipedia.org/wiki/Cold_Comfort_Farm",
-   "generi": [],
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "satira"
+   ],
    "visite_en": 47264
   },
   {
@@ -149,6 +191,10 @@
    ],
    "pagine": 11,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Concept_of_the_Political",
+   "lingua": {
+    "en": "German",
+    "it": "tedesco"
+   },
    "generi": [],
    "visite_en": 40406
   },
@@ -164,6 +210,10 @@
    ],
    "pagine": 26,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Thirteen_Problems",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
    "generi": [],
    "visite_en": 40316
   },
@@ -179,8 +229,14 @@
    ],
    "pagine": 21,
    "wiki_en": "https://en.wikipedia.org/wiki/Radetzky_March_(novel)",
-   "generi": [],
-   "visite_en": 39496,
+   "lingua": {
+    "en": "German",
+    "it": "tedesco"
+   },
+   "generi": [
+    "storico"
+   ],
+   "visite_en": 39495,
    "copertina": {
     "file": "Joseph Roth Radetzkymarsch 1932.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Joseph_Roth_Radetzkymarsch_1932.jpg/500px-Joseph_Roth_Radetzkymarsch_1932.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -201,8 +257,12 @@
    ],
    "pagine": 18,
    "wiki_en": "https://en.wikipedia.org/wiki/Death_in_the_Afternoon",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
    "generi": [],
-   "visite_en": 36570,
+   "visite_en": 36571,
    "copertina": {
     "file": "Heming Way.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Heming_Way.jpg/500px-Heming_Way.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -223,6 +283,10 @@
    ],
    "pagine": 33,
    "wiki_en": "https://en.wikipedia.org/wiki/How_the_Steel_Was_Tempered",
+   "lingua": {
+    "en": "Russian",
+    "it": "russo"
+   },
    "generi": [],
    "visite_en": 36017,
    "copertina": {
@@ -245,6 +309,10 @@
    ],
    "pagine": 9,
    "wiki_en": "https://en.wikipedia.org/wiki/Tobacco_Road_(novel)",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
    "generi": [],
    "visite_en": 23690
   },
@@ -260,7 +328,13 @@
    ],
    "pagine": 6,
    "wiki_en": "https://en.wikipedia.org/wiki/Stamboul_Train",
-   "generi": [],
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "giallo"
+   ],
    "visite_en": 22533
   },
   {
@@ -275,7 +349,13 @@
    ],
    "pagine": 13,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Phoenix_on_the_Sword",
-   "generi": [],
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "fantasy_sf"
+   ],
    "visite_en": 22475
   },
   {
@@ -294,7 +374,13 @@
    ],
    "pagine": 9,
    "wiki_en": "https://en.wikipedia.org/wiki/Mutiny_on_the_Bounty_(novel)",
-   "generi": [],
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "storico"
+   ],
    "visite_en": 20534
   },
   {
@@ -309,8 +395,12 @@
    ],
    "pagine": 4,
    "wiki_en": "https://en.wikipedia.org/wiki/Design_for_Living",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
    "generi": [],
-   "visite_en": 18649
+   "visite_en": 18650
   },
   {
    "qid": "Q17036247",
@@ -324,6 +414,10 @@
    ],
    "pagine": 8,
    "wiki_en": "https://en.wikipedia.org/wiki/Tripura_Rahasya",
+   "lingua": {
+    "en": "Sanskrit",
+    "it": "sanscrito"
+   },
    "generi": [],
    "visite_en": 18159
   },
@@ -339,6 +433,10 @@
    ],
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/Sunset_Song",
+   "lingua": {
+    "en": "Scots",
+    "it": "lingua scots"
+   },
    "generi": [],
    "visite_en": 17360
   },
@@ -354,6 +452,10 @@
    ],
    "pagine": 14,
    "wiki_en": "https://en.wikipedia.org/wiki/Journey_to_the_East",
+   "lingua": {
+    "en": "German",
+    "it": "tedesco"
+   },
    "generi": [],
    "visite_en": 16260
   },
@@ -369,7 +471,13 @@
    ],
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/My_Friend_Flicka",
-   "generi": [],
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "ragazzi"
+   ],
    "visite_en": 15304
   },
   {
@@ -384,6 +492,10 @@
    ],
    "pagine": 10,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Pastures_of_Heaven",
+   "lingua": {
+    "en": "English",
+    "it": "inglese americano"
+   },
    "generi": [],
    "visite_en": 12308
   },
@@ -399,8 +511,14 @@
    ],
    "pagine": 4,
    "wiki_en": "https://en.wikipedia.org/wiki/Have_His_Carcase",
-   "generi": [],
-   "visite_en": 11440
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "giallo"
+   ],
+   "visite_en": 11431
   },
   {
    "qid": "Q1529809",
@@ -414,6 +532,10 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/A_Glastonbury_Romance",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
    "generi": [],
    "visite_en": 9983
   },
@@ -429,6 +551,10 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Moral_Man_and_Immoral_Society",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
    "generi": [],
    "visite_en": 9180
   },
@@ -444,8 +570,12 @@
    ],
    "pagine": 5,
    "wiki_en": "https://en.wikipedia.org/wiki/Karmabhoomi",
+   "lingua": {
+    "en": "Hindi",
+    "it": "hindī"
+   },
    "generi": [],
-   "visite_en": 8735
+   "visite_en": 8734
   },
   {
    "qid": "Q1746652",
@@ -459,6 +589,10 @@
    ],
    "pagine": 16,
    "wiki_en": "https://en.wikipedia.org/wiki/Little_Man,_What_Now%3F_(novel)",
+   "lingua": {
+    "en": "German",
+    "it": "tedesco"
+   },
    "generi": [],
    "visite_en": 8591
   },
@@ -474,6 +608,10 @@
    ],
    "pagine": 9,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Career_of_Nicodemus_Dyzma",
+   "lingua": {
+    "en": "Polish",
+    "it": "polacco"
+   },
    "generi": [],
    "visite_en": 8261,
    "copertina": {
@@ -496,6 +634,10 @@
    ],
    "pagine": 5,
    "wiki_en": "https://en.wikipedia.org/wiki/Sons_(novel)",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
    "generi": [],
    "visite_en": 8196
   },
@@ -511,8 +653,12 @@
    ],
    "pagine": 10,
    "wiki_en": "https://en.wikipedia.org/wiki/Saint_Joan_of_the_Stockyards",
+   "lingua": {
+    "en": "German",
+    "it": "tedesco"
+   },
    "generi": [],
-   "visite_en": 8189,
+   "visite_en": 8187,
    "copertina": {
     "file": "Carola Neher als 'Johanna' - Karl Schrecker, 1930.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Carola_Neher_als_%27Johanna%27_-_Karl_Schrecker%2C_1930.jpg/500px-Carola_Neher_als_%27Johanna%27_-_Karl_Schrecker%2C_1930.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -533,7 +679,13 @@
    ],
    "pagine": 4,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Worker:_Dominion_and_Form",
-   "generi": [],
+   "lingua": {
+    "en": "German",
+    "it": "tedesco"
+   },
+   "generi": [
+    "saggio"
+   ],
    "visite_en": 7672
   },
   {
@@ -548,6 +700,10 @@
    ],
    "pagine": 4,
    "wiki_en": "https://en.wikipedia.org/wiki/Dangerous_Corner",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
    "generi": [],
    "visite_en": 7197
   },
@@ -563,7 +719,14 @@
    ],
    "pagine": 5,
    "wiki_en": "https://en.wikipedia.org/wiki/Legend_of_the_Swordsmen_of_the_Mountains_of_Shu",
-   "generi": [],
+   "lingua": {
+    "en": "Chinese",
+    "it": "cinese"
+   },
+   "generi": [
+    "fantasy_sf",
+    "sentimentale"
+   ],
    "visite_en": 7100
   },
   {
@@ -578,8 +741,14 @@
    ],
    "pagine": 8,
    "wiki_en": "https://en.wikipedia.org/wiki/Marie_Antoinette:_The_Portrait_of_an_Average_Woman",
-   "generi": [],
-   "visite_en": 6992,
+   "lingua": {
+    "en": "German",
+    "it": "tedesco"
+   },
+   "generi": [
+    "memorie"
+   ],
+   "visite_en": 6991,
    "copertina": {
     "file": "Louise Elisabeth Vigée-Lebrun - Marie-Antoinette dit « à la Rose » - Google Art Project.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Louise_Elisabeth_Vig%C3%A9e-Lebrun_-_Marie-Antoinette_dit_%C2%AB_%C3%A0_la_Rose_%C2%BB_-_Google_Art_Project.jpg/500px-Louise_Elisabeth_Vig%C3%A9e-Lebrun_-_Marie-Antoinette_dit_%C2%AB_%C3%A0_la_Rose_%C2%BB_-_Google_Art_Project.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -600,7 +769,14 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Empire_of_the_Necromancers",
-   "generi": [],
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "fantasy_sf",
+    "horror"
+   ],
    "visite_en": 6962
   },
   {
@@ -615,8 +791,12 @@
    ],
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Artificial_Silk_Girl",
+   "lingua": {
+    "en": "German",
+    "it": "tedesco"
+   },
    "generi": [],
-   "visite_en": 5932
+   "visite_en": 5926
   },
   {
    "qid": "Q7745219",
@@ -630,6 +810,10 @@
    ],
    "pagine": 4,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Lagoon",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
    "generi": [],
    "visite_en": 5616,
    "copertina": {
@@ -667,7 +851,13 @@
    ],
    "pagine": 13,
    "wiki_en": "https://en.wikipedia.org/wiki/Cat_Country",
-   "generi": [],
+   "lingua": {
+    "en": "Mandarin",
+    "it": "cinese mandarino"
+   },
+   "generi": [
+    "fantasy_sf"
+   ],
    "visite_en": 5522
   },
   {
@@ -682,6 +872,10 @@
    ],
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/Worms_of_the_Earth",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
    "generi": [],
    "visite_en": 5425
   },
@@ -701,8 +895,12 @@
    ],
    "pagine": 5,
    "wiki_en": "https://en.wikipedia.org/wiki/Dinner_at_Eight_(play)",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
    "generi": [],
-   "visite_en": 5333,
+   "visite_en": 5335,
    "copertina": {
     "file": "Dinner-at-Eight-FE.jpg",
     "url": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Dinner-at-Eight-FE.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -723,8 +921,12 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Sweeney_Agonistes",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
    "generi": [],
-   "visite_en": 5300
+   "visite_en": 5299
   },
   {
    "qid": "Q6165398",
@@ -738,7 +940,13 @@
    ],
    "pagine": 5,
    "wiki_en": "https://en.wikipedia.org/wiki/Javid_Nama",
-   "generi": [],
+   "lingua": {
+    "en": "Persian",
+    "it": "persiano"
+   },
+   "generi": [
+    "poesia"
+   ],
    "visite_en": 5246
   },
   {
@@ -753,8 +961,14 @@
    ],
    "pagine": 5,
    "wiki_en": "https://en.wikipedia.org/wiki/Pirates_of_Venus",
-   "generi": [],
-   "visite_en": 5193,
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "fantasy_sf"
+   ],
+   "visite_en": 5192,
    "copertina": {
     "file": "Pirates of Venus frontispiece.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Pirates_of_Venus_frontispiece.jpg/500px-Pirates_of_Venus_frontispiece.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -775,8 +989,14 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Death_to_the_French",
-   "generi": [],
-   "visite_en": 5110
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "storico"
+   ],
+   "visite_en": 5109
   },
   {
    "qid": "Q7173756",
@@ -790,6 +1010,10 @@
    ],
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/Peter_Duck",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
    "generi": [],
    "visite_en": 4441,
    "copertina": {
@@ -820,6 +1044,10 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Angarey",
+   "lingua": {
+    "en": "Urdu",
+    "it": "urdu"
+   },
    "generi": [],
    "visite_en": 4364
   },
@@ -835,6 +1063,10 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Devil%27s_Cub",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
    "generi": [],
    "visite_en": 4274
   },
@@ -850,6 +1082,10 @@
    ],
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Stalin_School_of_Falsification",
+   "lingua": {
+    "en": "Russian",
+    "it": "russo"
+   },
    "generi": [],
    "visite_en": 3954,
    "copertina": {
@@ -872,7 +1108,13 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Pother_Kanta",
-   "generi": [],
+   "lingua": {
+    "en": "Bangla",
+    "it": "bengali"
+   },
+   "generi": [
+    "giallo"
+   ],
    "visite_en": 3915
   },
   {
@@ -887,6 +1129,10 @@
    ],
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Pure_and_the_Impure",
+   "lingua": {
+    "en": "French",
+    "it": "francese"
+   },
    "generi": [],
    "visite_en": 3888
   },
@@ -897,6 +1143,10 @@
    "autori": [],
    "pagine": 5,
    "wiki_en": "https://en.wikipedia.org/wiki/Der_Hitlerjunge_Quex",
+   "lingua": {
+    "en": "German",
+    "it": "tedesco"
+   },
    "generi": [],
    "visite_en": 3460
   },
@@ -912,8 +1162,12 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Narrow_Corner",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
    "generi": [],
-   "visite_en": 3454
+   "visite_en": 3447
   },
   {
    "qid": "Q5318076",
@@ -927,7 +1181,13 @@
    ],
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/Dwellers_in_the_Mirage",
-   "generi": [],
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "fantasy_sf"
+   ],
    "visite_en": 3159,
    "copertina": {
     "file": "Fantastic Novels cover September 1949.jpg",
@@ -949,7 +1209,13 @@
    ],
    "pagine": 5,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Clue_in_the_Diary",
-   "generi": [],
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "ragazzi"
+   ],
    "visite_en": 3140,
    "copertina": {
     "file": "The Clue in the Diary (1932) front cover, 1945 printing.jpg",
@@ -971,6 +1237,10 @@
    ],
    "pagine": 9,
    "wiki_en": "https://en.wikipedia.org/wiki/Glory_(Vladimir_Nabokov_novel)",
+   "lingua": {
+    "en": "Russian",
+    "it": "russo"
+   },
    "generi": [],
    "visite_en": 3135,
    "copertina": {
@@ -993,6 +1263,10 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Christmas_Pudding_(novel)",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
    "generi": [],
    "visite_en": 3121
   },
@@ -1008,8 +1282,14 @@
    ],
    "pagine": 6,
    "wiki_en": "https://en.wikipedia.org/wiki/Nancy%27s_Mysterious_Letter",
-   "generi": [],
-   "visite_en": 2731,
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "ragazzi"
+   ],
+   "visite_en": 2730,
    "copertina": {
     "file": "Nancy's Mysterious Letter (1932) front cover, first edition.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Nancy%27s_Mysterious_Letter_%281932%29_front_cover%2C_first_edition.jpg/500px-Nancy%27s_Mysterious_Letter_%281932%29_front_cover%2C_first_edition.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -1030,8 +1310,12 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Black_Swan_(Sabatini_novel)",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
    "generi": [],
-   "visite_en": 2626
+   "visite_en": 2624
   },
   {
    "qid": "Q6383214",
@@ -1045,8 +1329,12 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Keeper_of_the_Keys",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
    "generi": [],
-   "visite_en": 2605
+   "visite_en": 2604
   },
   {
    "qid": "Q7735448",
@@ -1060,7 +1348,13 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Fun_of_It",
-   "generi": [],
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "memorie"
+   ],
    "visite_en": 2428
   },
   {
@@ -1075,8 +1369,12 @@
    ],
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/Wild_Talents_(book)",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
    "generi": [],
-   "visite_en": 2393
+   "visite_en": 2392
   },
   {
    "qid": "Q3818205",
@@ -1090,8 +1388,14 @@
    ],
    "pagine": 6,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Greek_Coffin_Mystery",
-   "generi": [],
-   "visite_en": 2373
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "giallo"
+   ],
+   "visite_en": 2365
   },
   {
    "qid": "Q15032732",
@@ -1105,7 +1409,13 @@
    ],
    "pagine": 4,
    "wiki_en": "https://en.wikipedia.org/wiki/Tarzan_and_the_City_of_Gold",
-   "generi": [],
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "fantasy_sf"
+   ],
    "visite_en": 2363
   },
   {
@@ -1120,6 +1430,10 @@
    ],
    "pagine": 6,
    "wiki_en": "https://en.wikipedia.org/wiki/Three_Drops_of_Blood",
+   "lingua": {
+    "en": "Persian",
+    "it": "persiano"
+   },
    "generi": [],
    "visite_en": 2340
   },
@@ -1135,8 +1449,12 @@
    ],
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Idiots_(short_story)",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
    "generi": [],
-   "visite_en": 2222,
+   "visite_en": 2219,
    "copertina": {
     "file": "Joseph Conrad.PNG",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Joseph_Conrad.PNG/500px-Joseph_Conrad.PNG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -1157,6 +1475,10 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Invitation_to_the_Waltz_(novel)",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
    "generi": [],
    "visite_en": 2145
   },
@@ -1172,6 +1494,10 @@
    ],
    "pagine": 4,
    "wiki_en": "https://en.wikipedia.org/wiki/Gub_Gub%27s_Book",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
    "generi": [],
    "visite_en": 2071
   },
@@ -1187,7 +1513,13 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Young_Fu_of_the_Upper_Yangtze",
-   "generi": [],
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "ragazzi"
+   ],
    "visite_en": 1925
   },
   {
@@ -1202,6 +1534,10 @@
    ],
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/Three_Loves",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
    "generi": [],
    "visite_en": 1896
   },
@@ -1217,6 +1553,10 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Time,_Forward!_(novel)",
+   "lingua": {
+    "en": "Russian",
+    "it": "russo"
+   },
    "generi": [],
    "visite_en": 1851
   },
@@ -1232,8 +1572,12 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Hot_Water_(novel)",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
    "generi": [],
-   "visite_en": 1836
+   "visite_en": 1838
   },
   {
    "qid": "Q8046351",
@@ -1247,6 +1591,10 @@
    ],
    "pagine": 4,
    "wiki_en": "https://en.wikipedia.org/wiki/Yaban",
+   "lingua": {
+    "en": "Turkish",
+    "it": "turco"
+   },
    "generi": [],
    "visite_en": 1809
   },
@@ -1262,6 +1610,10 @@
    ],
    "pagine": 4,
    "wiki_en": "https://en.wikipedia.org/wiki/Omenuko",
+   "lingua": {
+    "en": "Igbo",
+    "it": "igbo"
+   },
    "generi": [],
    "visite_en": 1667
   },
@@ -1277,7 +1629,13 @@
    ],
    "pagine": 5,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Egyptian_Cross_Mystery",
-   "generi": [],
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "giallo"
+   ],
    "visite_en": 1611
   },
   {
@@ -1292,7 +1650,14 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Sowers_of_the_Thunder",
-   "generi": [],
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "avventura",
+    "storico"
+   ],
    "visite_en": 1412,
    "copertina": {
     "file": "Oriental stories 1932win.jpg",
@@ -1314,6 +1679,10 @@
    ],
    "pagine": 4,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Return_(Conrad_short_story)",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
    "generi": [],
    "visite_en": 1364
   },
@@ -1329,8 +1698,14 @@
    ],
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Waxworks_Murder",
-   "generi": [],
-   "visite_en": 1331
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "giallo"
+   ],
+   "visite_en": 1328
   },
   {
    "qid": "Q1112060",
@@ -1344,7 +1719,13 @@
    ],
    "pagine": 6,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Madman_of_Bergerac",
-   "generi": [],
+   "lingua": {
+    "en": "French",
+    "it": "francese"
+   },
+   "generi": [
+    "giallo"
+   ],
    "visite_en": 1290
   },
   {
@@ -1359,7 +1740,14 @@
    ],
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Testament_of_Athammaus",
-   "generi": [],
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "fantasy_sf",
+    "horror"
+   ],
    "visite_en": 1257
   },
   {
@@ -1374,6 +1762,10 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Queer_Story_of_Brownlow%27s_Newspaper",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
    "generi": [],
    "visite_en": 1201
   },
@@ -1389,6 +1781,10 @@
    ],
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/Phu_Chana_Sip_Thit",
+   "lingua": {
+    "en": "Thai",
+    "it": "thailandese"
+   },
    "generi": [],
    "visite_en": 1138
   },
@@ -1404,6 +1800,10 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Mountain_Victory",
+   "lingua": {
+    "en": "English",
+    "it": "inglese americano"
+   },
    "generi": [],
    "visite_en": 1072
   },
@@ -1434,7 +1834,13 @@
    ],
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/Poison_in_Jest",
-   "generi": [],
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "giallo"
+   ],
    "visite_en": 745
   },
   {
@@ -1449,8 +1855,12 @@
    ],
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/Celia_en_el_colegio",
+   "lingua": {
+    "en": "Spanish",
+    "it": "spagnolo"
+   },
    "generi": [],
-   "visite_en": 705
+   "visite_en": 702
   },
   {
    "qid": "Q1325013",
@@ -1464,7 +1874,13 @@
    ],
    "pagine": 8,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Saint-Fiacre_Affair",
-   "generi": [],
+   "lingua": {
+    "en": "French",
+    "it": "francese"
+   },
+   "generi": [
+    "giallo"
+   ],
    "visite_en": 683,
    "copertina": {
     "file": "Paray-le-Frésil.JPG",
@@ -1501,6 +1917,10 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Sudden_Death_(novel)",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
    "generi": [],
    "visite_en": 582
   },
@@ -1516,6 +1936,10 @@
    ],
    "pagine": 4,
    "wiki_en": "https://en.wikipedia.org/wiki/Music_(short_story)",
+   "lingua": {
+    "en": "Russian",
+    "it": "russo"
+   },
    "generi": [],
    "visite_en": 547
   },
@@ -1531,7 +1955,13 @@
    ],
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Night_Club_(novel)",
-   "generi": [],
+   "lingua": {
+    "en": "French",
+    "it": "francese"
+   },
+   "generi": [
+    "giallo"
+   ],
    "visite_en": 541
   },
   {
@@ -1546,6 +1976,10 @@
    ],
    "pagine": 4,
    "wiki_en": "https://en.wikipedia.org/wiki/Menino_de_engenho",
+   "lingua": {
+    "en": "Portuguese",
+    "it": "portoghese"
+   },
    "generi": [],
    "visite_en": 524
   },
@@ -1561,7 +1995,13 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Laughing_in_the_Jungle",
-   "generi": [],
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "memorie"
+   ],
    "visite_en": 472,
    "copertina": {
     "file": "Adamic.JPG",
@@ -1583,8 +2023,14 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Swift_Rivers",
-   "generi": [],
-   "visite_en": 469
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "storico"
+   ],
+   "visite_en": 468
   },
   {
    "qid": "Q16677418",
@@ -1598,6 +2044,10 @@
    ],
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Solitude_of_Compassion",
+   "lingua": {
+    "en": "French",
+    "it": "francese"
+   },
    "generi": [],
    "visite_en": 465
   },
@@ -1628,8 +2078,12 @@
    ],
    "pagine": 5,
    "wiki_en": "https://en.wikipedia.org/wiki/Dian_yang_Tak_Kunjung_Padam",
+   "lingua": {
+    "en": "Indonesian",
+    "it": "indonesiano"
+   },
    "generi": [],
-   "visite_en": 458
+   "visite_en": 457
   },
   {
    "qid": "Q60785449",
@@ -1643,6 +2097,10 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Christopher_Strong_(novel)",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
    "generi": [],
    "visite_en": 421
   },
@@ -1658,6 +2116,10 @@
    ],
    "pagine": 4,
    "wiki_en": "https://en.wikipedia.org/wiki/Distant_Lands",
+   "lingua": {
+    "en": "Russian",
+    "it": "russo"
+   },
    "generi": [],
    "visite_en": 419
   },
@@ -1673,7 +2135,13 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Winged_Girl_of_Knossos",
-   "generi": [],
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "storico"
+   ],
    "visite_en": 417
   },
   {
@@ -1688,6 +2156,10 @@
    ],
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/El_amor_brujo_(novel)",
+   "lingua": {
+    "en": "Spanish",
+    "it": "spagnolo"
+   },
    "generi": [],
    "visite_en": 416,
    "copertina": {
@@ -1710,6 +2182,10 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Murder_by_an_Aristocrat_(novel)",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
    "generi": [],
    "visite_en": 355
   },
@@ -1725,8 +2201,10 @@
    ],
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/Children_of_the_Soil",
-   "generi": [],
-   "visite_en": 348
+   "generi": [
+    "storico"
+   ],
+   "visite_en": 347
   },
   {
    "qid": "Q3210349",
@@ -1740,6 +2218,10 @@
    ],
    "pagine": 4,
    "wiki_en": "https://en.wikipedia.org/wiki/The_House_on_the_Dune_(novel)",
+   "lingua": {
+    "en": "French",
+    "it": "francese"
+   },
    "generi": [],
    "visite_en": 338
   },
@@ -1755,6 +2237,10 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Orache_(short_story)",
+   "lingua": {
+    "en": "Russian",
+    "it": "russo"
+   },
    "generi": [],
    "visite_en": 333
   },
@@ -1770,6 +2256,10 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Ballerina_(novel)",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
    "generi": [],
    "visite_en": 331
   },
@@ -1785,8 +2275,12 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Alicia_Deane",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
    "generi": [],
-   "visite_en": 329
+   "visite_en": 328
   },
   {
    "qid": "Q86753954",
@@ -1800,6 +2294,10 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Evensong_(novel)",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
    "generi": [],
    "visite_en": 322
   },
@@ -1815,7 +2313,13 @@
    ],
    "pagine": 5,
    "wiki_en": "https://en.wikipedia.org/wiki/Liberty_Bar",
-   "generi": [],
+   "lingua": {
+    "en": "French",
+    "it": "francese"
+   },
+   "generi": [
+    "giallo"
+   ],
    "visite_en": 317
   },
   {
@@ -1830,8 +2334,12 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Pertemuan_Jodoh",
+   "lingua": {
+    "en": "Indonesian",
+    "it": "indonesiano"
+   },
    "generi": [],
-   "visite_en": 312
+   "visite_en": 311
   },
   {
    "qid": "Q23035584",
@@ -1845,6 +2353,10 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Flesh_in_Armour",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
    "generi": [],
    "visite_en": 283
   },
@@ -1860,6 +2372,10 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Soldier_and_the_Gentlewoman",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
    "generi": [],
    "visite_en": 256
   },
@@ -1875,7 +2391,13 @@
    ],
    "pagine": 6,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Flemish_House",
-   "generi": [],
+   "lingua": {
+    "en": "French",
+    "it": "francese"
+   },
+   "generi": [
+    "giallo"
+   ],
    "visite_en": 236
   },
   {
@@ -1905,6 +2427,10 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Hell%27s_Doorway",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
    "generi": [],
    "visite_en": 204
   },
@@ -1920,7 +2446,13 @@
    ],
    "pagine": 6,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Shadow_Puppet",
-   "generi": [],
+   "lingua": {
+    "en": "French",
+    "it": "francese"
+   },
+   "generi": [
+    "giallo"
+   ],
    "visite_en": 203
   },
   {
@@ -1935,8 +2467,12 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Dark_Shanghai",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
    "generi": [],
-   "visite_en": 194
+   "visite_en": 193
   },
   {
    "qid": "Q16999020",
@@ -1950,6 +2486,10 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Night_of_Battle",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
    "generi": [],
    "visite_en": 190
   },
@@ -1965,6 +2505,10 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Vikings_of_the_Gloves",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
    "generi": [],
    "visite_en": 156
   },
@@ -1980,7 +2524,13 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Querelles_de_famille",
-   "generi": [],
+   "lingua": {
+    "en": "French",
+    "it": "francese"
+   },
+   "generi": [
+    "storico"
+   ],
    "visite_en": 155,
    "copertina": {
     "file": "Woman, with large bow in her hair, putting needle on record on phonograph.png",
@@ -2002,6 +2552,10 @@
    ],
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/Soomust%C3%BCdruk",
+   "lingua": {
+    "en": "Estonian",
+    "it": "estone"
+   },
    "generi": [],
    "visite_en": 87
   },
@@ -2017,7 +2571,13 @@
    ],
    "pagine": 6,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Misty_Harbour",
-   "generi": [],
+   "lingua": {
+    "en": "French",
+    "it": "francese"
+   },
+   "generi": [
+    "giallo"
+   ],
    "visite_en": 52,
    "copertina": {
     "file": "Andrémare.jpg",
@@ -2039,6 +2599,10 @@
    ],
    "pagine": 14,
    "wiki_en": null,
+   "lingua": {
+    "en": "Russian",
+    "it": "russo"
+   },
    "generi": [],
    "visite_en": null,
    "copertina": {
@@ -2061,6 +2625,10 @@
    ],
    "pagine": 8,
    "wiki_en": null,
+   "lingua": {
+    "en": "French",
+    "it": "francese"
+   },
    "generi": [],
    "visite_en": null
   },
@@ -2076,6 +2644,10 @@
    ],
    "pagine": 4,
    "wiki_en": null,
+   "lingua": {
+    "en": "Russian",
+    "it": "russo"
+   },
    "generi": [],
    "visite_en": null,
    "copertina": {
@@ -2102,7 +2674,13 @@
    ],
    "pagine": 3,
    "wiki_en": null,
-   "generi": [],
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "giallo"
+   ],
    "visite_en": null
   },
   {
@@ -2121,7 +2699,13 @@
    ],
    "pagine": 3,
    "wiki_en": null,
-   "generi": [],
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "giallo"
+   ],
    "visite_en": null
   },
   {
@@ -2136,6 +2720,10 @@
    ],
    "pagine": 3,
    "wiki_en": null,
+   "lingua": {
+    "en": "Persian",
+    "it": "persiano"
+   },
    "generi": [],
    "visite_en": null
   },
@@ -2151,6 +2739,10 @@
    ],
    "pagine": 3,
    "wiki_en": null,
+   "lingua": {
+    "en": "Chinese",
+    "it": "cinese"
+   },
    "generi": [],
    "visite_en": null
   },
@@ -2166,6 +2758,10 @@
    ],
    "pagine": 3,
    "wiki_en": null,
+   "lingua": {
+    "en": "Swedish",
+    "it": "svedese"
+   },
    "generi": [],
    "visite_en": null
   },
@@ -2181,6 +2777,10 @@
    ],
    "pagine": 3,
    "wiki_en": null,
+   "lingua": {
+    "en": "French",
+    "it": "francese"
+   },
    "generi": [],
    "visite_en": null
   },
@@ -2200,6 +2800,10 @@
    ],
    "pagine": 3,
    "wiki_en": null,
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
    "generi": [],
    "visite_en": null
   },
@@ -2215,6 +2819,10 @@
    ],
    "pagine": 3,
    "wiki_en": null,
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
    "generi": [],
    "visite_en": null,
    "copertina": {
@@ -2237,6 +2845,10 @@
    ],
    "pagine": 3,
    "wiki_en": null,
+   "lingua": {
+    "en": "Telugu",
+    "it": "telugu"
+   },
    "generi": [],
    "visite_en": null
   },
@@ -2252,6 +2864,10 @@
    ],
    "pagine": 3,
    "wiki_en": null,
+   "lingua": {
+    "en": "Telugu",
+    "it": "telugu"
+   },
    "generi": [],
    "visite_en": null
   },
@@ -2267,6 +2883,10 @@
    ],
    "pagine": 3,
    "wiki_en": null,
+   "lingua": {
+    "en": "Telugu",
+    "it": "telugu"
+   },
    "generi": [],
    "visite_en": null,
    "copertina": {
@@ -2289,6 +2909,10 @@
    ],
    "pagine": 3,
    "wiki_en": null,
+   "lingua": {
+    "en": "Persian",
+    "it": "persiano"
+   },
    "generi": [],
    "visite_en": null
   },
@@ -2304,7 +2928,14 @@
    ],
    "pagine": 3,
    "wiki_en": null,
-   "generi": [],
+   "lingua": {
+    "en": "Japanese",
+    "it": "giapponese"
+   },
+   "generi": [
+    "fantasy_sf",
+    "ragazzi"
+   ],
    "visite_en": null
   },
   {
@@ -2319,6 +2950,10 @@
    ],
    "pagine": 2,
    "wiki_en": null,
+   "lingua": {
+    "en": "German",
+    "it": "tedesco"
+   },
    "generi": [],
    "visite_en": null,
    "copertina": {
@@ -2341,7 +2976,13 @@
    ],
    "pagine": 2,
    "wiki_en": null,
-   "generi": [],
+   "lingua": {
+    "en": "Romanian",
+    "it": "romeno"
+   },
+   "generi": [
+    "fantasy_sf"
+   ],
    "visite_en": null
   },
   {
@@ -2356,6 +2997,10 @@
    ],
    "pagine": 2,
    "wiki_en": null,
+   "lingua": {
+    "en": "Japanese",
+    "it": "giapponese"
+   },
    "generi": [],
    "visite_en": null
   },
@@ -2371,7 +3016,13 @@
    ],
    "pagine": 2,
    "wiki_en": null,
-   "generi": [],
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "fantasy_sf"
+   ],
    "visite_en": null,
    "copertina": {
     "file": "Kingkong1932.jpg",
@@ -2393,7 +3044,13 @@
    ],
    "pagine": 2,
    "wiki_en": null,
-   "generi": [],
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "fantasy_sf"
+   ],
    "visite_en": null
   },
   {
@@ -2408,6 +3065,10 @@
    ],
    "pagine": 2,
    "wiki_en": null,
+   "lingua": {
+    "en": "Russian",
+    "it": "russo"
+   },
    "generi": [],
    "visite_en": null
   },
@@ -2423,7 +3084,13 @@
    ],
    "pagine": 2,
    "wiki_en": null,
-   "generi": [],
+   "lingua": {
+    "en": "Turkish",
+    "it": "turco"
+   },
+   "generi": [
+    "memorie"
+   ],
    "visite_en": null
   },
   {
@@ -2453,6 +3120,10 @@
    ],
    "pagine": 2,
    "wiki_en": null,
+   "lingua": {
+    "en": "Arabic",
+    "it": "arabo"
+   },
    "generi": [],
    "visite_en": null,
    "copertina": {
@@ -2475,6 +3146,10 @@
    ],
    "pagine": 2,
    "wiki_en": null,
+   "lingua": {
+    "en": "Korean",
+    "it": "coreano"
+   },
    "generi": [],
    "visite_en": null
   },
@@ -2490,6 +3165,10 @@
    ],
    "pagine": 2,
    "wiki_en": null,
+   "lingua": {
+    "en": "Korean",
+    "it": "coreano"
+   },
    "generi": [],
    "visite_en": null
   },
@@ -2505,6 +3184,10 @@
    ],
    "pagine": 2,
    "wiki_en": null,
+   "lingua": {
+    "en": "Romanian",
+    "it": "romeno"
+   },
    "generi": [],
    "visite_en": null,
    "copertina": {
@@ -2527,6 +3210,10 @@
    ],
    "pagine": 2,
    "wiki_en": null,
+   "lingua": {
+    "en": "Estonian",
+    "it": "estone"
+   },
    "generi": [],
    "visite_en": null
   },
@@ -2546,6 +3233,10 @@
    ],
    "pagine": 2,
    "wiki_en": null,
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
    "generi": [],
    "visite_en": null
   },
@@ -2561,7 +3252,13 @@
    ],
    "pagine": 2,
    "wiki_en": null,
-   "generi": [],
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "horror"
+   ],
    "visite_en": null
   },
   {
@@ -2598,7 +3295,13 @@
    ],
    "pagine": 2,
    "wiki_en": null,
-   "generi": [],
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "horror"
+   ],
    "visite_en": null
   },
   {
@@ -2613,6 +3316,10 @@
    ],
    "pagine": 2,
    "wiki_en": null,
+   "lingua": {
+    "en": "Persian",
+    "it": "persiano"
+   },
    "generi": [],
    "visite_en": null
   },
@@ -2628,6 +3335,10 @@
    ],
    "pagine": 2,
    "wiki_en": null,
+   "lingua": {
+    "en": "French",
+    "it": "francese"
+   },
    "generi": [],
    "visite_en": null,
    "copertina": {
@@ -2654,7 +3365,13 @@
    ],
    "pagine": 2,
    "wiki_en": null,
-   "generi": [],
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "horror"
+   ],
    "visite_en": null
   },
   {
@@ -2664,7 +3381,13 @@
    "autori": [],
    "pagine": 2,
    "wiki_en": null,
-   "generi": [],
+   "lingua": {
+    "en": "Classical Chinese",
+    "it": "cinese classico"
+   },
+   "generi": [
+    "memorie"
+   ],
    "visite_en": null
   },
   {
@@ -2679,6 +3402,10 @@
    ],
    "pagine": 2,
    "wiki_en": null,
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
    "generi": [],
    "visite_en": null
   }
