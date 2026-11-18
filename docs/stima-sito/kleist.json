@@ -1,7 +1,232 @@
 {
- "wikidata": [],
- "nella_ricerca_del_calendario": [],
- "OCC": "wd:Q6625963 wd:Q49757 wd:Q214917 wd:Q4853732 wd:Q15949613 wd:Q11774202 wd:Q4964182 wd:Q212980 wd:Q211423 wd:Q201788",
- "NON_LETT": "wd:Q33999 wd:Q2526255 wd:Q82955 wd:Q639669 wd:Q36834 wd:Q901 wd:Q169470 wd:Q170790 wd:Q1028181 wd:Q10833314 wd:Q1234713 wd:Q16533 wd:Q11513337 wd:Q483501 wd:Q2259451 wd:Q937857 wd:Q11513337",
- "soglia": 30
+ "date": [
+  {
+   "d": {
+    "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+    "type": "literal",
+    "value": "1777-10-18T00:00:00Z"
+   },
+   "pr": {
+    "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+    "type": "literal",
+    "value": "11"
+   },
+   "cal": {
+    "type": "uri",
+    "value": "http://www.wikidata.org/entity/Q1985727"
+   },
+   "rank": {
+    "type": "uri",
+    "value": "http://wikiba.se/ontology#NormalRank"
+   }
+  }
+ ],
+ "professioni": [
+  {
+   "q": "Q36180",
+   "nome": "writer",
+   "letteraria": false,
+   "non_letteraria": false
+  },
+  {
+   "q": "Q49757",
+   "nome": "poet",
+   "letteraria": true,
+   "non_letteraria": false
+  },
+  {
+   "q": "Q214917",
+   "nome": "playwright",
+   "letteraria": true,
+   "non_letteraria": false
+  },
+  {
+   "q": "Q1209498",
+   "nome": "poet lawyer",
+   "letteraria": false,
+   "non_letteraria": false
+  },
+  {
+   "q": "Q6051619",
+   "nome": "opinion journalist",
+   "letteraria": false,
+   "non_letteraria": false
+  },
+  {
+   "q": "Q6625963",
+   "nome": "novelist",
+   "letteraria": true,
+   "non_letteraria": false
+  },
+  {
+   "q": "Q15949613",
+   "nome": "short story writer",
+   "letteraria": true,
+   "non_letteraria": false
+  }
+ ],
+ "info": [
+  {
+   "desc": {
+    "xml:lang": "en",
+    "type": "literal",
+    "value": "German poet, dramatist, novelist and short story writer (1777–1811)"
+   },
+   "sl": {
+    "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+    "type": "literal",
+    "value": "86"
+   }
+  }
+ ],
+ "opere_con_P50": [
+  [
+   "Michael Kohlhaas",
+   "20"
+  ],
+  [
+   "St. Cecilia, or the Power of Music",
+   "4"
+  ],
+  [
+   "Das Käthchen von Heilbronn",
+   "7"
+  ],
+  [
+   "About the Puppet Theatre",
+   "2"
+  ],
+  [
+   "On the gradual proliferation of thoughts in speech",
+   "3"
+  ],
+  [
+   "The Prince of Homburg",
+   "9"
+  ],
+  [
+   "Penthesilea",
+   "7"
+  ],
+  [
+   "Amphitryon",
+   "2"
+  ],
+  [
+   "The Broken Jug",
+   "15"
+  ],
+  [
+   "Anecdote from the last Prussian war",
+   "1"
+  ],
+  [
+   "The Battle of Arminius",
+   "5"
+  ],
+  [
+   "The mendicant of Locarno",
+   "4"
+  ],
+  [
+   "The Earthquake in Chile",
+   "7"
+  ],
+  [
+   "Q1193396",
+   "3"
+  ],
+  [
+   "Q1212309",
+   "3"
+  ],
+  [
+   "The Marquise of O",
+   "9"
+  ],
+  [
+   "Q1217163",
+   "3"
+  ],
+  [
+   "Q1735720",
+   "2"
+  ],
+  [
+   "Q3816166",
+   "1"
+  ],
+  [
+   "Penthésilée (French edition, 1954)",
+   "0"
+  ],
+  [
+   "Q19144365",
+   "1"
+  ],
+  [
+   "Q19977103",
+   "0"
+  ],
+  [
+   "Q19977104",
+   "0"
+  ],
+  [
+   "The duell",
+   "4"
+  ],
+  [
+   "Q26262785",
+   "1"
+  ],
+  [
+   "Q30887947",
+   "1"
+  ],
+  [
+   "Robert Guiscard",
+   "1"
+  ],
+  [
+   "Käthchen di Heilbronn",
+   "0"
+  ],
+  [
+   "Q98803966",
+   "0"
+  ],
+  [
+   "Q104829417",
+   "1"
+  ],
+  [
+   "Q121915558",
+   "0"
+  ],
+  [
+   "Q121926808",
+   "0"
+  ],
+  [
+   "Q121926809",
+   "0"
+  ],
+  [
+   "Q121933505",
+   "0"
+  ],
+  [
+   "Q121934567",
+   "0"
+  ],
+  [
+   "Q121943037",
+   "0"
+  ],
+  [
+   "Ī spasménī stámna",
+   "0"
+  ]
+ ]
 }
