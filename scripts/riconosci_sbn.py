@@ -59,6 +59,15 @@ def anni_scheda(etichetta):
     return nato, morto
 
 
+def secolo_scheda(etichetta):
+    """«<sec. 17.>» -> (1601, 1700); None se la scheda non indica un secolo."""
+    m = re.search(r"<[^>]*sec\.?\s*(\d{1,2})", etichetta or "")
+    if not m:
+        return None
+    n = int(m.group(1))
+    return (n - 1) * 100 + 1, n * 100
+
+
 def scomponi(etichetta):
     """«Falla, Manuel : de <1876-1946>» -> cognome {falla}, particelle {de}, nome [manuel]."""
     e = re.sub(r"<[^>]*>", " ", etichetta or "")
@@ -75,30 +84,36 @@ def scomponi(etichetta):
     return set(cog_p), part, [w for w in parole(nom) if w not in PARTICELLE]
 
 
-def compatibile(nome_wd, etichetta):
-    """Il nome di Wikidata e la scheda SBN possono essere la stessa persona? Restituisce (sì/no, nome intero?).
-    Tutte le parole del cognome SBN devono stare nel nome Wikidata. Almeno una parola del nome di battesimo SBN
-    deve tornare, per intero o come iniziale (in tutte e due le direzioni: «A. E.» e «Alfred Edgar»); le altre
-    parole del nome SBN possono mancare in Wikidata (secondi nomi: «White, Stewart Edward»), ma non possono
-    contraddirlo: un'iniziale diversa da tutte quelle di Wikidata esclude la scheda."""
+def compatibile(nome_wd, etichetta, orientale=False):
+    """Il nome di Wikidata e la scheda SBN possono essere la stessa persona? Restituisce (sì/no, nome intero?, nomi in più?).
+    - Tutte le parole del cognome SBN devono stare nel nome Wikidata.
+    - Il PRIMO nome di battesimo SBN deve tornare con il primo di Wikidata, per intero o come iniziale in tutte e due
+      le direzioni («A. E.» / «Alfred Edgar»). Per i nomi in ordine orientale basta che torni uno dei nomi.
+    - Gli altri nomi SBN possono mancare in Wikidata (secondi nomi: «White, Stewart Edward»); un'iniziale che non c'è
+      esclude la scheda. «nomi in più» = la scheda ha nomi che Wikidata non ha: allora il cognome raro non basta,
+      serve una prova di anni o di titolo."""
     wd = parole(nome_wd)
-    wds = set(wd)
     cog, _part, nom = scomponi(etichetta)
-    if not cog or not cog <= wds or not nom:
-        return False, False
-    resto = [w for w in wd if w not in cog and w not in PARTICELLE]
+    if not cog or not cog <= set(wd) or not nom:
+        return False, False, False
+    resto = [w for w in wd if w not in cog and (len(w) == 1 or w not in PARTICELLE)]   # «E.» è un'iniziale, non «e»
     if not resto:
-        return False, False
-    tornano, intero = 0, False
+        return False, False, False
+    torna = lambda a, b: a == b or (len(a) == 1 and b.startswith(a)) or (len(b) == 1 and a.startswith(b))
+    if not orientale and not torna(nom[0], resto[0]):
+        return False, False, False
+    tornano, intero, in_piu = 0, False, False
     for w in nom:
         if w in resto:
             tornano += 1
             intero = intero or len(w) > 1
-        elif any((len(w) == 1 and r.startswith(w)) or (len(r) == 1 and w.startswith(r)) for r in resto):
+        elif any(torna(w, r) for r in resto):
             tornano += 1
         elif len(w) == 1:
-            return False, False                   # iniziale che non c'è: altra persona
-    return tornano > 0, intero
+            return False, False, False
+        else:
+            in_piu = True
+    return tornano > 0, intero, in_piu
 
 
 ORDINE_ORIENTALE = {"Giappone", "Cina", "Corea", "Corea del Sud", "Corea del Nord", "Ungheria", "Vietnam", "Taiwan"}
@@ -135,8 +150,9 @@ def forme_ricerca(nome, alias=(), paesi=()):
     return sorted(forme)
 
 
-def pesca(forme, interroga_fn):
-    """Schede SBN (uri -> etichetta) che contengono una delle forme. Se una forma dà troppe schede si segnala."""
+def pesca(forme, interroga_fn, nomi_battesimo=()):
+    """Schede SBN (uri -> etichetta) che contengono una delle forme. Se una forma dà troppe schede (cognomi
+    comuni: White, Thomas) si ripete chiedendo cognome E nome di battesimo, con e senza accenti."""
     out, troppe = {}, []
     for tipo, f in forme:
         cond = f"'{f}*'" if tipo == "prefisso" else f"'{f}'"
@@ -148,6 +164,15 @@ def pesca(forme, interroga_fn):
         time.sleep(sbn.PAUSA)
         if len(r) >= LIMITE:
             troppe.append(f)
+            for nb in nomi_battesimo:
+                try:
+                    r2 = interroga_fn(f'SELECT DISTINCT ?a ?l WHERE {{ ?a <{sbn.LAB}> ?l . ?l bif:contains "{cond} and \'{nb}\'" . '
+                                      f'FILTER(CONTAINS(STR(?a), "/resource/Agent/")) }} LIMIT {LIMITE}')
+                except Exception:
+                    continue
+                time.sleep(sbn.PAUSA)
+                for x in r2:
+                    out.setdefault(x["a"]["value"], x["l"]["value"])
         for x in r:
             out.setdefault(x["a"]["value"], x["l"]["value"])
     return out, troppe
@@ -210,7 +235,10 @@ def riconosci(autore, interroga_fn=sbn.interroga):
                     "prove": {x["a"]["value"]: f"collegata al VIAF {v}: {x['l']['value']}" for x in r}}
     # 3. nome
     nomi = [nome] + list(autore.get("alias") or [])
-    cand, troppe = pesca(forme_ricerca(nome, autore.get("alias") or [], autore.get("paesi") or []), interroga_fn)
+    orientale = bool(set(autore.get("paesi") or ()) & ORDINE_ORIENTALE)
+    battesimo = sorted({f for n in nomi for p in n.split()[:-1] if len(senza_accenti(p).strip(".")) >= 3
+                        for f in (re.sub(r"[^\w]", "", p), re.sub(r"[^\w]", "", senza_accenti(p)))})[:6]
+    cand, troppe = pesca(forme_ricerca(nome, autore.get("alias") or [], autore.get("paesi") or []), interroga_fn, battesimo)
     nato_wd = int(str(autore["nascita"])[:4]) if autore.get("nascita") and str(autore["nascita"])[:4].isdigit() else None
     morto_wd = int(str(autore["morte"])[:4]) if autore.get("morte") and str(autore["morte"])[:4].isdigit() else None
     per_cognome = {}
@@ -219,16 +247,19 @@ def riconosci(autore, interroga_fn=sbn.interroga):
         per_cognome.setdefault(" ".join(sorted(c)), set()).add(u)
     accettate, ambigue = {}, {}
     for u, l in cand.items():
-        ok, intero = False, False
+        ok, intero, in_piu = False, False, True
         for n in nomi:
-            o, i = compatibile(n, l)
+            o, i, p = compatibile(n, l, orientale)
             if o:
-                ok, intero = True, intero or i
+                ok, intero, in_piu = True, intero or i, in_piu and p
         if not ok:
             continue
         na, mo = anni_scheda(l)
         if (na and nato_wd and abs(na - nato_wd) > 1) or (mo and morto_wd and abs(mo - morto_wd) > 1):
             continue                                     # anni che contraddicono: omonimo
+        sec = secolo_scheda(l)
+        if sec and ((nato_wd and not sec[0] - 30 <= nato_wd <= sec[1]) or (morto_wd and not sec[0] <= morto_wd <= sec[1] + 30)):
+            continue                                     # «<sec. 17.>» per un autore del Novecento: omonimo
         if (na and nato_wd) or (mo and morto_wd):
             accettate[u] = f"nome compatibile e anni che coincidono: {l}"
             continue
@@ -239,7 +270,7 @@ def riconosci(autore, interroga_fn=sbn.interroga):
         c, _, _ = scomponi(l)
         quanti = len(per_cognome.get(" ".join(sorted(c)), ()))
         raro = quanti <= SOGLIA_RARO and not any(f.lower() in " ".join(sorted(c)) for f in troppe)
-        if raro and intero:
+        if raro and intero and not in_piu:
             accettate[u] = f"nome intero e cognome raro in SBN ({quanti} schede): {l}"
         else:
             ambigue[u] = l
