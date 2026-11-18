@@ -36,7 +36,7 @@ PER_ANNO = int(os.environ.get("BNF_PER_ANNO", "300"))
 BUDGET_MINUTI = float(os.environ.get("BUDGET_MINUTI_BNF", "25"))
 FINE_LAVORO = time.time() + BUDGET_MINUTI * 60
 PAUSA = 0.6
-VERSIONE = 1
+VERSIONE = 2   # 2 = tutti i codici BnF dell'autore, non solo il primo (18/11/2026)
 ENDPOINT = "https://catalogue.bnf.fr/api/SRU"
 UA = "publicdomain-radar/1.0 (https://github.com/mnovali90-byte/publicdomain)"
 # Autori di cui sappiamo che la BnF ha molte edizioni francesi: se un giro ne trova meno, c'è un problema.
@@ -63,25 +63,34 @@ def quanti(query, tentativi=3):
             time.sleep(PAUSA)
 
 
-def edizioni_francesi(codice_bnf, anno_oggi, quanti_fn=quanti):
-    rid = re.sub(r"\D", "", codice_bnf or "")[:8]
-    if len(rid) != 8:
+def edizioni_francesi(codici_bnf, anno_oggi, quanti_fn=quanti):
+    """Notizie in francese collegate a TUTTE le schede BnF dell'autore indicate da Wikidata (P268): alcuni autori ne
+    hanno due, per esempio il nome d'arte e il vero nome (Vercel / Crétin, Döblin / Linke Poot): verificato il 18/11/2026
+    su 64 codici, tutti della persona giusta (docs/registro-prove.md)."""
+    if isinstance(codici_bnf, str):
+        codici_bnf = [codici_bnf]
+    rids = sorted({re.sub(r"\D", "", c or "")[:8] for c in (codici_bnf or [])} - {""})
+    rids = [r for r in rids if len(r) == 8]
+    if not rids:
         return {"trovato": False, "edizioni": 0, "dal_2000": 0, "metodo": None, "fonte": "BnF"}
-    base = f'bib.author2bib all "{rid}" and bib.language any "fre"'
+    autori = " or ".join(f'bib.author2bib all "{r}"' for r in rids)
+    base = f'({autori}) and bib.language any "fre"'
     n = quanti_fn(base)
     anni = " ".join(str(y) for y in range(2000, anno_oggi + 1))
     d2000 = quanti_fn(f'{base} and bib.date any "{anni}"') if n else 0
     # niente min(): se i recenti superano il totale è un errore da vedere (scripts/controlli.py)
-    return {"trovato": n > 0, "edizioni": n, "dal_2000": d2000, "metodo": "codice_bnf", "fonte": "BnF"}
+    return {"trovato": n > 0, "edizioni": n, "dal_2000": d2000, "metodo": "codice_bnf", "fonte": "BnF", "schede": len(rids)}
 
 
 def codici_bnf(qids):
-    """Il codice BnF che Wikidata indica per ogni autore (proprietà P268)."""
+    """Tutti i codici BnF che Wikidata indica per ogni autore (proprietà P268)."""
     out = {}
     for i in range(0, len(qids), 80):
         valori = " ".join(f"wd:{q}" for q in qids[i:i + 80])
         for b in sparql(f"SELECT ?a ?v WHERE {{ VALUES ?a {{ {valori} }} ?a wdt:P268 ?v }}"):
-            out.setdefault(b["a"]["value"].rsplit("/", 1)[-1], b["v"]["value"])
+            out.setdefault(b["a"]["value"].rsplit("/", 1)[-1], [])
+            if b["v"]["value"] not in out[b["a"]["value"].rsplit("/", 1)[-1]]:
+                out[b["a"]["value"].rsplit("/", 1)[-1]].append(b["v"]["value"])
         time.sleep(2)
     return out
 

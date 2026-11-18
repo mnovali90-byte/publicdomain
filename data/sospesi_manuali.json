@@ -1,5 +1,42 @@
 [
- {"wikidata": "Q265792", "nome": "Ray Cummings", "catalogo": "sbn_it",
+ {
+  "wikidata": "Q265792",
+  "nome": "Ray Cummings",
+  "catalogo": "sbn_it",
   "motivo": "il codice SBN di Wikidata (RAVV030671) porta a una scheda il cui unico titolo è il film «Sabotatori» (Saboteur, 1942), che non è suo",
-  "dal": "2026-11-18", "fonte": "docs/verifica-sbn/esiti.json"}
+  "dal": "2026-11-18",
+  "fonte": "docs/verifica-sbn/esiti.json"
+ },
+ {
+  "wikidata": "Q18535623",
+  "nome": "J. O. Francis",
+  "catalogo": "bne_es",
+  "motivo": "le 5 notizie BNE trovate per nome (Cándida, Frankenstein…) sono di altre persone: il cognome e gli anni stanno in voci d'autore diverse",
+  "dal": "2026-11-18",
+  "fonte": "docs/campione-bl/prove.json"
+ },
+ {
+  "wikidata": "Q18911624",
+  "nome": "Robert Mitchell",
+  "catalogo": "bne_es",
+  "motivo": "le 3 notizie BNE trovate per nome (Locos del aire) sono di altre persone: cognome e anni in voci diverse",
+  "dal": "2026-11-18",
+  "fonte": "docs/campione-bl/prove.json"
+ },
+ {
+  "wikidata": "Q94136022",
+  "nome": "A. E. Thomas",
+  "catalogo": "bne_es",
+  "motivo": "l'unica notizia BNE trovata per nome è un Don Quijote: cognome e anni in voci diverse",
+  "dal": "2026-11-18",
+  "fonte": "docs/campione-bl/prove.json"
+ },
+ {
+  "wikidata": "Q5424072",
+  "nome": "F. W. Harvey",
+  "catalogo": "bl_en",
+  "motivo": "su 142 notizie British Library ne risultano sue solo una parte (5 su 50 lette): le altre sono di Michael Sadleir (1888-1957) e altri, trovate perché cognome e anni stanno in voci diverse",
+  "dal": "2026-11-18",
+  "fonte": "docs/campione-bl/prove.json"
+ }
 ]
