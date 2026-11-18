@@ -12,13 +12,13 @@
    "sospesi": 0
   },
   "bne_es": {
-   "controllati": 141,
+   "controllati": 139,
    "ok": 138,
-   "sospesi": 3
+   "sospesi": 1
   },
   "bl_en": {
-   "controllati": 174,
-   "ok": 173,
+   "controllati": 160,
+   "ok": 159,
    "sospesi": 1
   }
  },
@@ -28,8 +28,8 @@
    "nome": "F. W. Harvey",
    "catalogo": "bl_en",
    "motivo": "collegamento non dimostrato: su 142 notizie British Library ne risultano sue solo una parte (5 su 50 lette): le altre sono di Michael Sadleir (1888-1957) e altri, trovate perché cognome e anni stanno in voci diverse",
-   "edizioni": 142,
-   "dal_2000": 13,
+   "edizioni": 27,
+   "dal_2000": 7,
    "ultimo": null
   },
   {
@@ -39,24 +39,6 @@
    "motivo": "collegamento non dimostrato: l'unica notizia BNE trovata per nome è un Don Quijote: cognome e anni in voci diverse",
    "edizioni": 1,
    "dal_2000": 0,
-   "ultimo": null
-  },
-  {
-   "wikidata": "Q18535623",
-   "nome": "J. O. Francis",
-   "catalogo": "bne_es",
-   "motivo": "collegamento non dimostrato: le 5 notizie BNE trovate per nome (Cándida, Frankenstein…) sono di altre persone: il cognome e gli anni stanno in voci d'autore diverse",
-   "edizioni": 5,
-   "dal_2000": 5,
-   "ultimo": null
-  },
-  {
-   "wikidata": "Q18911624",
-   "nome": "Robert Mitchell",
-   "catalogo": "bne_es",
-   "motivo": "collegamento non dimostrato: le 3 notizie BNE trovate per nome (Locos del aire) sono di altre persone: cognome e anni in voci diverse",
-   "edizioni": 3,
-   "dal_2000": 3,
    "ultimo": null
   },
   {

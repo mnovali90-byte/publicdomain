@@ -193,6 +193,7 @@
      "edizioni": 250,
      "dal_2000": 36,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -317,6 +318,7 @@
      "edizioni": 17,
      "dal_2000": 6,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -504,6 +506,7 @@
      "edizioni": 217,
      "dal_2000": 80,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -888,6 +891,7 @@
      "edizioni": 23,
      "dal_2000": 8,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -1074,6 +1078,7 @@
      "edizioni": 62,
      "dal_2000": 34,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -1259,6 +1264,7 @@
      "edizioni": 13,
      "dal_2000": 2,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -1460,6 +1466,7 @@
      "edizioni": 252,
      "dal_2000": 78,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -1694,6 +1701,7 @@
      "edizioni": 214,
      "dal_2000": 50,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -1875,9 +1883,10 @@
     },
     "bl_en": {
      "trovato": true,
-     "edizioni": 13,
+     "edizioni": 11,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 2,
      "metodo": "nome_anni"
     }
    },
@@ -2056,6 +2065,7 @@
      "edizioni": 3,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -2267,6 +2277,7 @@
      "edizioni": 100,
      "dal_2000": 42,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -2689,6 +2700,7 @@
      "edizioni": 2,
      "dal_2000": 2,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -2870,6 +2882,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -3039,6 +3052,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -3050,15 +3064,15 @@
      "loc": 1947
     },
     "citate": {
+     "Brockhaus Enzyklopädie": 1947,
+     "Spanish Biographical Dictionary": 1947,
+     "Discogs": 1947,
      "Find a Grave": 1947,
      "Manuel Machado y el catolicismo": 1947,
      "Integrated Authority File": 1947,
      "Great Norwegian Encyclopedia": 1947,
      "Gran Enciclopèdia Catalana": 1947,
-     "Encyclopædia Britannica Online": 1947,
-     "Brockhaus Enzyklopädie": 1947,
-     "Spanish Biographical Dictionary": 1947,
-     "Discogs": 1947
+     "Encyclopædia Britannica Online": 1947
     }
    },
    "pagina": "manuel-machado",
@@ -3221,6 +3235,7 @@
      "edizioni": 146,
      "dal_2000": 9,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -3511,6 +3526,7 @@
      "edizioni": 39,
      "dal_2000": 2,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -3725,6 +3741,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -4054,6 +4071,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -4346,6 +4364,7 @@
      "edizioni": 2,
      "dal_2000": 1,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -4430,8 +4449,8 @@
      "loc": 1947
     },
     "citate": {
-     "al-Aʻlām (Dār al-ʻIlm, 2002)": 1947,
-     "BnF authorities": 1947
+     "BnF authorities": 1947,
+     "al-Aʻlām (Dār al-ʻIlm, 2002)": 1947
     }
    }
   },
@@ -5223,6 +5242,7 @@
      "edizioni": 13,
      "dal_2000": 10,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -5409,6 +5429,7 @@
      "edizioni": 150,
      "dal_2000": 5,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -5555,6 +5576,7 @@
      "edizioni": 5,
      "dal_2000": 4,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -5947,10 +5969,11 @@
      "metodo": "codice_bne"
     },
     "bl_en": {
-     "trovato": true,
-     "edizioni": 2,
-     "dal_2000": 2,
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 2,
      "metodo": "nome_anni"
     }
    },
@@ -6161,6 +6184,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -6368,9 +6392,10 @@
     },
     "bl_en": {
      "trovato": true,
-     "edizioni": 70,
-     "dal_2000": 13,
+     "edizioni": 65,
+     "dal_2000": 10,
      "fonte": "British Library",
+     "scartate": 5,
      "metodo": "nome_anni"
     }
    },
@@ -6524,10 +6549,10 @@
      "gnd": 1931
     },
     "citate": {
+     "Integrated Authority File": 1931,
      "Digitale Bibliotheek voor de Nederlandse Letteren": 1947,
      "MAK": 1947,
-     "WeChangEd": 1947,
-     "Integrated Authority File": 1931
+     "WeChangEd": 1947
     }
    }
   },
@@ -6762,6 +6787,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -6936,6 +6962,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -7461,6 +7488,7 @@
      "edizioni": 6,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -7620,6 +7648,7 @@
      "edizioni": 2,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -7980,10 +8009,11 @@
      "ambigue": 0
     },
     "bl_en": {
-     "trovato": true,
-     "edizioni": 1,
+     "trovato": false,
+     "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 1,
      "metodo": "nome_anni"
     }
    },
@@ -9355,6 +9385,7 @@
      "edizioni": 18,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
