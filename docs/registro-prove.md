@@ -188,3 +188,9 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
   - tolte parti morte del codice (vecchio blocco SBN, testi di Open Library mai mostrati);
   - README italiano e inglese riscritti: metodi attuali di ogni catalogo, USA coperti, Germania non collegata, come si evitano gli errori.
 - **Proroga italiana di 6 anni (D.Lgs.Lgt. 440/1945):** verificata sul testo della L. 52/1996 art. 17 riportato da WIPO Lex. Il comma 1 abroga la proroga dei termini; i commi 3 e 5 richiamano solo le procedure degli articoli 2-5 del decreto (accordi tra autori, eredi ed editori; compenso per il cinema). Quindi la frase del sito «abrogata dalla legge 52/1996, art. 17» è corretta e resta.
+
+### 18/11/2026 — Controllo dei numeri nuovi e fine di 4 sospensioni a mano
+- **F. W. Harvey, British Library:** con la regola nuova 142 → 27 notizie (115 scartate), come previsto dallo sviluppo. Controllo: rifatta la regola sulle 50 notizie lette a mano a novembre (`docs/campione-bl/prove.json`): tiene 5 notizie, tutte con la voce «Harvey, F. W. (Frederick William), 1888-1957» (Gloucestershire Lad, Collected poems, Comrades in captivity); le 45 di Michael Sadleir e altri sono scartate. Sospensione tolta.
+- **J. O. Francis, Robert Mitchell, A. E. Thomas, BNE:** con la regola nuova nessuna notizia per nome è loro, quindi il sito non mostra più un numero ma «Wikidata non indica il codice BNE di questo autore». Sospensioni tolte perché non c'è più un numero da sospendere.
+- **Ray Cummings, SBN:** resta sospeso (il codice porta al film «Sabotatori»).
+- **Limite:** di Harvey sono controllate a mano 50 notizie su 142; le altre 92 sono state giudicate solo dalla regola.
