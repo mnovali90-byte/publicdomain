@@ -9600,8 +9600,10 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": null,
-     "fonte": "SBN"
+     "metodo": "codice_sbn",
+     "riconoscimento": "riconosciuto",
+     "fonte": "SBN",
+     "ambigue": 0
     },
     "bne_es": {
      "trovato": false,
@@ -10541,7 +10543,9 @@
      "ultimo": null,
      "dal_2000": 0,
      "metodo": null,
-     "fonte": "SBN"
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
     },
     "bl_en": {
      "trovato": false,
@@ -11386,8 +11390,10 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": null,
-     "fonte": "SBN"
+     "metodo": "nome_con_prova",
+     "riconoscimento": "riconosciuto",
+     "fonte": "SBN",
+     "ambigue": 0
     },
     "bne_es": {
      "trovato": true,
@@ -12166,7 +12172,9 @@
      "ultimo": null,
      "dal_2000": 0,
      "metodo": null,
-     "fonte": "SBN"
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
     },
     "bl_en": {
      "trovato": false,
@@ -13276,8 +13284,10 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": null,
-     "fonte": "SBN"
+     "metodo": "nome_con_prova",
+     "riconoscimento": "riconosciuto",
+     "fonte": "SBN",
+     "ambigue": 2
     },
     "bne_es": {
      "trovato": true,
@@ -13384,7 +13394,9 @@
      "ultimo": null,
      "dal_2000": 0,
      "metodo": null,
-     "fonte": "SBN"
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
     },
     "bl_en": {
      "trovato": false,
@@ -13902,7 +13914,9 @@
      "ultimo": null,
      "dal_2000": 0,
      "metodo": null,
-     "fonte": "SBN"
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
     },
     "bl_en": {
      "trovato": true,
@@ -14541,7 +14555,9 @@
      "ultimo": null,
      "dal_2000": 0,
      "metodo": null,
-     "fonte": "SBN"
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
     },
     "bl_en": {
      "trovato": false,
@@ -15293,7 +15309,9 @@
      "ultimo": null,
      "dal_2000": 0,
      "metodo": null,
-     "fonte": "SBN"
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
     },
     "bl_en": {
      "trovato": true,
@@ -15741,12 +15759,14 @@
     "fonte": "Open Library",
     "ts": "2026-11-05",
     "sbn_it": {
-     "trovato": true,
-     "edizioni": 1,
-     "ultimo": 1940,
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
      "dal_2000": 0,
-     "metodo": "nome",
-     "fonte": "SBN"
+     "metodo": null,
+     "riconoscimento": "ambiguo",
+     "fonte": "SBN",
+     "ambigue": 2
     },
     "bne_es": {
      "trovato": true,
@@ -15894,7 +15914,9 @@
      "ultimo": null,
      "dal_2000": 0,
      "metodo": null,
-     "fonte": "SBN"
+     "riconoscimento": "ambiguo",
+     "fonte": "SBN",
+     "ambigue": 2
     },
     "bl_en": {
      "trovato": false,
@@ -16170,8 +16192,10 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": null,
-     "fonte": "SBN"
+     "metodo": "nome_con_prova",
+     "riconoscimento": "riconosciuto",
+     "fonte": "SBN",
+     "ambigue": 0
     },
     "bne_es": {
      "trovato": true,
@@ -16448,7 +16472,9 @@
      "ultimo": null,
      "dal_2000": 0,
      "metodo": null,
-     "fonte": "SBN"
+     "riconoscimento": "ambiguo",
+     "fonte": "SBN",
+     "ambigue": 1
     },
     "bl_en": {
      "trovato": false,
@@ -16564,7 +16590,9 @@
      "ultimo": null,
      "dal_2000": 0,
      "metodo": null,
-     "fonte": "SBN"
+     "riconoscimento": "ambiguo",
+     "fonte": "SBN",
+     "ambigue": 12
     },
     "bl_en": {
      "trovato": false,
@@ -16877,8 +16905,10 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": null,
-     "fonte": "SBN"
+     "metodo": "nome_con_prova",
+     "riconoscimento": "riconosciuto",
+     "fonte": "SBN",
+     "ambigue": 0
     },
     "bl_en": {
      "trovato": false,
@@ -17212,12 +17242,14 @@
     "fonte": "Open Library",
     "ts": "2026-11-05",
     "sbn_it": {
-     "trovato": true,
-     "edizioni": 1,
-     "ultimo": 1907,
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
      "dal_2000": 0,
-     "metodo": "nome",
-     "fonte": "SBN"
+     "metodo": null,
+     "riconoscimento": "ambiguo",
+     "fonte": "SBN",
+     "ambigue": 1
     },
     "bne_es": {
      "trovato": true,
@@ -17372,7 +17404,9 @@
      "ultimo": null,
      "dal_2000": 0,
      "metodo": null,
-     "fonte": "SBN"
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
     },
     "bl_en": {
      "trovato": false,
@@ -18725,8 +18759,10 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": null,
-     "fonte": "SBN"
+     "metodo": "nome_con_prova",
+     "riconoscimento": "riconosciuto",
+     "fonte": "SBN",
+     "ambigue": 4
     },
     "bl_en": {
      "trovato": false,
@@ -18987,7 +19023,9 @@
      "ultimo": null,
      "dal_2000": 0,
      "metodo": null,
-     "fonte": "SBN"
+     "riconoscimento": "ambiguo",
+     "fonte": "SBN",
+     "ambigue": 1
     },
     "bl_en": {
      "trovato": true,
@@ -19436,7 +19474,9 @@
      "ultimo": null,
      "dal_2000": 0,
      "metodo": null,
-     "fonte": "SBN"
+     "riconoscimento": "ambiguo",
+     "fonte": "SBN",
+     "ambigue": 4
     },
     "bne_es": {
      "trovato": true,
@@ -19582,8 +19622,10 @@
      "edizioni": 1,
      "ultimo": 1981,
      "dal_2000": 0,
-     "metodo": "viaf",
-     "fonte": "SBN"
+     "metodo": "codice_sbn",
+     "riconoscimento": "riconosciuto",
+     "fonte": "SBN",
+     "ambigue": 0
     },
     "bne_es": {
      "trovato": true,
@@ -20830,7 +20872,9 @@
      "ultimo": null,
      "dal_2000": 0,
      "metodo": null,
-     "fonte": "SBN"
+     "riconoscimento": "ambiguo",
+     "fonte": "SBN",
+     "ambigue": 1
     },
     "bl_en": {
      "trovato": false,
@@ -21716,7 +21760,9 @@
      "ultimo": null,
      "dal_2000": 0,
      "metodo": null,
-     "fonte": "SBN"
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
     },
     "bne_es": {
      "trovato": true,
@@ -22266,7 +22312,9 @@
      "ultimo": null,
      "dal_2000": 0,
      "metodo": null,
-     "fonte": "SBN"
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
     },
     "bl_en": {
      "trovato": false,
@@ -23326,7 +23374,9 @@
      "ultimo": null,
      "dal_2000": 0,
      "metodo": null,
-     "fonte": "SBN"
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
     },
     "bl_en": {
      "trovato": false,
@@ -23675,7 +23725,9 @@
      "ultimo": null,
      "dal_2000": 0,
      "metodo": null,
-     "fonte": "SBN"
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
     },
     "bl_en": {
      "trovato": false,
@@ -23770,8 +23822,10 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": null,
-     "fonte": "SBN"
+     "metodo": "codice_sbn",
+     "riconoscimento": "riconosciuto",
+     "fonte": "SBN",
+     "ambigue": 0
     },
     "bl_en": {
      "trovato": false,
@@ -23881,7 +23935,9 @@
      "ultimo": null,
      "dal_2000": 0,
      "metodo": null,
-     "fonte": "SBN"
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
     },
     "bl_en": {
      "trovato": false,
@@ -24105,7 +24161,9 @@
      "ultimo": null,
      "dal_2000": 0,
      "metodo": null,
-     "fonte": "SBN"
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
     },
     "bl_en": {
      "trovato": false,
@@ -25146,7 +25204,9 @@
      "ultimo": null,
      "dal_2000": 0,
      "metodo": null,
-     "fonte": "SBN"
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
     },
     "bl_en": {
      "trovato": false,
@@ -26118,7 +26178,9 @@
      "ultimo": null,
      "dal_2000": 0,
      "metodo": null,
-     "fonte": "SBN"
+     "riconoscimento": "ambiguo",
+     "fonte": "SBN",
+     "ambigue": 1
     },
     "bl_en": {
      "trovato": false,
@@ -26277,7 +26339,9 @@
      "ultimo": null,
      "dal_2000": 0,
      "metodo": null,
-     "fonte": "SBN"
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
     },
     "bl_en": {
      "trovato": false,
@@ -26511,7 +26575,9 @@
      "ultimo": null,
      "dal_2000": 0,
      "metodo": null,
-     "fonte": "SBN"
+     "riconoscimento": "ambiguo",
+     "fonte": "SBN",
+     "ambigue": 10
     },
     "bne_es": {
      "trovato": true,
@@ -26666,7 +26732,9 @@
      "ultimo": null,
      "dal_2000": 0,
      "metodo": null,
-     "fonte": "SBN"
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
     },
     "bl_en": {
      "trovato": false,
@@ -28059,8 +28127,10 @@
      "edizioni": 0,
      "ultimo": null,
      "dal_2000": 0,
-     "metodo": null,
-     "fonte": "SBN"
+     "metodo": "codice_sbn",
+     "riconoscimento": "riconosciuto",
+     "fonte": "SBN",
+     "ambigue": 0
     },
     "bl_en": {
      "trovato": false,
@@ -29502,7 +29572,9 @@
      "ultimo": null,
      "dal_2000": 0,
      "metodo": null,
-     "fonte": "SBN"
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
     },
     "bl_en": {
      "trovato": false,
@@ -29778,7 +29850,9 @@
      "ultimo": null,
      "dal_2000": 0,
      "metodo": null,
-     "fonte": "SBN"
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
     },
     "bl_en": {
      "trovato": false,
@@ -29908,7 +29982,9 @@
      "ultimo": null,
      "dal_2000": 0,
      "metodo": null,
-     "fonte": "SBN"
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
     },
     "bl_en": {
      "trovato": false,
@@ -30698,7 +30774,9 @@
      "ultimo": null,
      "dal_2000": 0,
      "metodo": null,
-     "fonte": "SBN"
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
     },
     "bl_en": {
      "trovato": false,
@@ -31023,7 +31101,9 @@
      "ultimo": null,
      "dal_2000": 0,
      "metodo": null,
-     "fonte": "SBN"
+     "riconoscimento": "ambiguo",
+     "fonte": "SBN",
+     "ambigue": 2
     },
     "bl_en": {
      "trovato": false,
@@ -33260,12 +33340,14 @@
     "fonte": "Open Library",
     "ts": "2026-11-05",
     "sbn_it": {
-     "trovato": true,
-     "edizioni": 1,
-     "ultimo": 2008,
-     "dal_2000": 1,
-     "metodo": "nome",
-     "fonte": "SBN"
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "ambiguo",
+     "fonte": "SBN",
+     "ambigue": 1
     },
     "bl_en": {
      "trovato": false,
@@ -35938,7 +36020,9 @@
      "ultimo": null,
      "dal_2000": 0,
      "metodo": null,
-     "fonte": "SBN"
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
     },
     "bl_en": {
      "trovato": false,
@@ -39124,7 +39208,9 @@
      "ultimo": null,
      "dal_2000": 0,
      "metodo": null,
-     "fonte": "SBN"
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
     },
     "bne_es": {
      "trovato": false,
@@ -39296,8 +39382,10 @@
      "edizioni": 1,
      "ultimo": 1928,
      "dal_2000": 0,
-     "metodo": "viaf",
-     "fonte": "SBN"
+     "metodo": "codice_sbn",
+     "riconoscimento": "riconosciuto",
+     "fonte": "SBN",
+     "ambigue": 0
     },
     "bne_es": {
      "trovato": true,
@@ -39423,7 +39511,9 @@
      "ultimo": null,
      "dal_2000": 0,
      "metodo": null,
-     "fonte": "SBN"
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
     },
     "bl_en": {
      "trovato": false,
