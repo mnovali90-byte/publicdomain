@@ -223,7 +223,7 @@
     "it": "hindī"
    },
    "generi": [],
-   "visite_en": 21561
+   "visite_en": 21548
   },
   {
    "qid": "Q4190252",
@@ -360,7 +360,7 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 10720
+   "visite_en": 10706
   },
   {
    "qid": "Q5990586",
@@ -455,7 +455,7 @@
    "generi": [
     "fantasy_sf"
    ],
-   "visite_en": 9314
+   "visite_en": 9292
   },
   {
    "qid": "Q1171231",
@@ -717,7 +717,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 6227
+   "visite_en": 6219
   },
   {
    "qid": "Q5309555",
@@ -776,7 +776,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 5632
+   "visite_en": 5631
   },
   {
    "qid": "Q318208",
@@ -795,7 +795,7 @@
     "it": "tedesco"
    },
    "generi": [],
-   "visite_en": 5270
+   "visite_en": 5271
   },
   {
    "qid": "Q1746433",
@@ -923,7 +923,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 4663
+   "visite_en": 4662
   },
   {
    "qid": "Q573765",
@@ -961,7 +961,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 4200,
+   "visite_en": 4197,
    "copertina": {
     "file": "Swallows and Amazons 02.png",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Swallows_and_Amazons_02.png/500px-Swallows_and_Amazons_02.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -1030,34 +1030,6 @@
    "visite_en": 3861
   },
   {
-   "qid": "Q43578331",
-   "titolo": "Coup d'État: The Technique of Revolution",
-   "titolo_it": "Tecnica del colpo di Stato",
-   "autori": [
-    {
-     "qid": "Q312637",
-     "nome": "Curzio Malaparte"
-    }
-   ],
-   "pagine": 5,
-   "wiki_en": "https://en.wikipedia.org/wiki/Coup_d%27%C3%89tat:_The_Technique_of_Revolution",
-   "lingua": {
-    "en": "French",
-    "it": "francese"
-   },
-   "generi": [
-    "saggio"
-   ],
-   "visite_en": 3786,
-   "copertina": {
-    "file": "Técnicas de golpe de Estado Curzio Malaparte.jpg",
-    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/T%C3%A9cnicas_de_golpe_de_Estado_Curzio_Malaparte.jpg/500px-T%C3%A9cnicas_de_golpe_de_Estado_Curzio_Malaparte.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "pagina": "https://commons.wikimedia.org/wiki/File:T%C3%A9cnicas_de_golpe_de_Estado_Curzio_Malaparte.jpg",
-    "licenza": "Public domain",
-    "autore": "BackList"
-   }
-  },
-  {
    "qid": "Q2836721",
    "titolo": "The Secret of Red Gate Farm",
    "titolo_it": null,
@@ -1076,13 +1048,41 @@
    "generi": [
     "ragazzi"
    ],
-   "visite_en": 3782,
+   "visite_en": 3784,
    "copertina": {
     "file": "The Secret of Red Gate Farm (1931) front cover, 1931B-1 printing.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/The_Secret_of_Red_Gate_Farm_%281931%29_front_cover%2C_1931B-1_printing.jpg/500px-The_Secret_of_Red_Gate_Farm_%281931%29_front_cover%2C_1931B-1_printing.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "pagina": "https://commons.wikimedia.org/wiki/File:The_Secret_of_Red_Gate_Farm_%281931%29_front_cover%2C_1931B-1_printing.jpg",
     "licenza": "Public domain",
     "autore": "Cover art by Russell H. Tandy"
+   }
+  },
+  {
+   "qid": "Q43578331",
+   "titolo": "Coup d'État: The Technique of Revolution",
+   "titolo_it": "Tecnica del colpo di Stato",
+   "autori": [
+    {
+     "qid": "Q312637",
+     "nome": "Curzio Malaparte"
+    }
+   ],
+   "pagine": 5,
+   "wiki_en": "https://en.wikipedia.org/wiki/Coup_d%27%C3%89tat:_The_Technique_of_Revolution",
+   "lingua": {
+    "en": "French",
+    "it": "francese"
+   },
+   "generi": [
+    "saggio"
+   ],
+   "visite_en": 3772,
+   "copertina": {
+    "file": "Técnicas de golpe de Estado Curzio Malaparte.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/T%C3%A9cnicas_de_golpe_de_Estado_Curzio_Malaparte.jpg/500px-T%C3%A9cnicas_de_golpe_de_Estado_Curzio_Malaparte.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "pagina": "https://commons.wikimedia.org/wiki/File:T%C3%A9cnicas_de_golpe_de_Estado_Curzio_Malaparte.jpg",
+    "licenza": "Public domain",
+    "autore": "BackList"
    }
   },
   {
@@ -1292,7 +1292,7 @@
     "it": "croato"
    },
    "generi": [],
-   "visite_en": 2989
+   "visite_en": 2973
   },
   {
    "qid": "Q3109849",
@@ -1339,7 +1339,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 2665
+   "visite_en": 2664
   },
   {
    "qid": "Q5047445",
@@ -1358,7 +1358,7 @@
     "it": "spagnolo"
    },
    "generi": [],
-   "visite_en": 2645
+   "visite_en": 2646
   },
   {
    "qid": "Q5670870",
@@ -1424,7 +1424,7 @@
     "it": "ceco"
    },
    "generi": [],
-   "visite_en": 2508
+   "visite_en": 2506
   },
   {
    "qid": "Q1192045",
@@ -1617,7 +1617,7 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 1733
+   "visite_en": 1725
   },
   {
    "qid": "Q1366540",
@@ -1762,28 +1762,6 @@
    }
   },
   {
-   "qid": "Q56308426",
-   "titolo": "My Experiences in the World War",
-   "titolo_it": null,
-   "autori": [
-    {
-     "qid": "Q272383",
-     "nome": "John J. Pershing"
-    }
-   ],
-   "pagine": 2,
-   "wiki_en": "https://en.wikipedia.org/wiki/My_Experiences_in_the_World_War",
-   "generi": [],
-   "visite_en": 1389,
-   "copertina": {
-    "file": "John Pershing.jpg",
-    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/John_Pershing.jpg/500px-John_Pershing.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "pagina": "https://commons.wikimedia.org/wiki/File:John_Pershing.jpg",
-    "licenza": "Public domain",
-    "autore": "2d Lt. L J. Rode."
-   }
-  },
-  {
    "qid": "Q5437626",
    "titolo": "Father Malachy's Miracle",
    "titolo_it": "Il miracolo di padre Malachia",
@@ -1819,28 +1797,7 @@
     "it": "ebraico"
    },
    "generi": [],
-   "visite_en": 1322
-  },
-  {
-   "qid": "Q16210839",
-   "titolo": "The London Scene",
-   "titolo_it": "Scene di Londra",
-   "autori": [
-    {
-     "qid": "Q40909",
-     "nome": "Virginia Woolf"
-    }
-   ],
-   "pagine": 2,
-   "wiki_en": "https://en.wikipedia.org/wiki/The_London_Scene",
-   "lingua": {
-    "en": "English",
-    "it": "inglese"
-   },
-   "generi": [
-    "saggio"
-   ],
-   "visite_en": 1297
+   "visite_en": 1317
   },
   {
    "qid": "Q3817893",
@@ -1955,7 +1912,7 @@
    "generi": [
     "ragazzi"
    ],
-   "visite_en": 1270,
+   "visite_en": 1269,
    "copertina": {
     "file": "A 'Yebichai Sweat' Navajo medicine ceremony; three Navajos Wellcome V0038480.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/A_%27Yebichai_Sweat%27_Navajo_medicine_ceremony%3B_three_Navajos_Wellcome_V0038480.jpg/500px-A_%27Yebichai_Sweat%27_Navajo_medicine_ceremony%3B_three_Navajos_Wellcome_V0038480.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -2019,7 +1976,26 @@
     "it": "giapponese"
    },
    "generi": [],
-   "visite_en": 1073
+   "visite_en": 1072
+  },
+  {
+   "qid": "Q4050857",
+   "titolo": "Terra Incognita",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q36591",
+     "nome": "Vladimir Nabokov"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/Terra_Incognita_(short_story)",
+   "lingua": {
+    "en": "Russian",
+    "it": "russo"
+   },
+   "generi": [],
+   "visite_en": 1038
   },
   {
    "qid": "Q6929263",
@@ -2040,25 +2016,6 @@
    "generi": [
     "fantasy_sf"
    ],
-   "visite_en": 1036
-  },
-  {
-   "qid": "Q4050857",
-   "titolo": "Terra Incognita",
-   "titolo_it": null,
-   "autori": [
-    {
-     "qid": "Q36591",
-     "nome": "Vladimir Nabokov"
-    }
-   ],
-   "pagine": 2,
-   "wiki_en": "https://en.wikipedia.org/wiki/Terra_Incognita_(short_story)",
-   "lingua": {
-    "en": "Russian",
-    "it": "russo"
-   },
-   "generi": [],
    "visite_en": 1036
   },
   {
@@ -2118,7 +2075,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 893
+   "visite_en": 889
   },
   {
    "qid": "Q6683419",
@@ -2285,7 +2242,7 @@
     "it": "francese"
    },
    "generi": [],
-   "visite_en": 582
+   "visite_en": 577
   },
   {
    "qid": "Q4915806",
@@ -2304,7 +2261,7 @@
     "it": "russo"
    },
    "generi": [],
-   "visite_en": 579
+   "visite_en": 574
   },
   {
    "qid": "Q7736867",
@@ -2326,34 +2283,6 @@
    "visite_en": 528
   },
   {
-   "qid": "Q1355242",
-   "titolo": "The Life of Zamenhof",
-   "titolo_it": null,
-   "autori": [
-    {
-     "qid": "Q12571",
-     "nome": "Edmond Privat"
-    }
-   ],
-   "pagine": 7,
-   "wiki_en": "https://en.wikipedia.org/wiki/The_Life_of_Zamenhof",
-   "lingua": {
-    "en": "Esperanto",
-    "it": "esperanto"
-   },
-   "generi": [
-    "memorie"
-   ],
-   "visite_en": 526,
-   "copertina": {
-    "file": "1920 Vivo de Zamenhof (unua eldono.jpg",
-    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/1920_Vivo_de_Zamenhof_%28unua_eldono.jpg/500px-1920_Vivo_de_Zamenhof_%28unua_eldono.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "pagina": "https://commons.wikimedia.org/wiki/File:1920_Vivo_de_Zamenhof_%28unua_eldono.jpg",
-    "licenza": "Public domain",
-    "autore": "AnonymousUnknown author"
-   }
-  },
-  {
    "qid": "Q7625506",
    "titolo": "Strychnine in the Soup",
    "titolo_it": "Stricnina nella minestra",
@@ -2373,6 +2302,34 @@
    "visite_en": 526
   },
   {
+   "qid": "Q1355242",
+   "titolo": "The Life of Zamenhof",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q12571",
+     "nome": "Edmond Privat"
+    }
+   ],
+   "pagine": 7,
+   "wiki_en": "https://en.wikipedia.org/wiki/The_Life_of_Zamenhof",
+   "lingua": {
+    "en": "Esperanto",
+    "it": "esperanto"
+   },
+   "generi": [
+    "memorie"
+   ],
+   "visite_en": 525,
+   "copertina": {
+    "file": "1920 Vivo de Zamenhof (unua eldono.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/1920_Vivo_de_Zamenhof_%28unua_eldono.jpg/500px-1920_Vivo_de_Zamenhof_%28unua_eldono.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "pagina": "https://commons.wikimedia.org/wiki/File:1920_Vivo_de_Zamenhof_%28unua_eldono.jpg",
+    "licenza": "Public domain",
+    "autore": "AnonymousUnknown author"
+   }
+  },
+  {
    "qid": "Q16385287",
    "titolo": "CIOPW",
    "titolo_it": null,
@@ -2385,7 +2342,7 @@
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/CIOPW",
    "generi": [],
-   "visite_en": 500
+   "visite_en": 499
   },
   {
    "qid": "Q6151026",
@@ -2947,6 +2904,25 @@
    }
   },
   {
+   "qid": "Q2824300",
+   "titolo": "Aden Arabia",
+   "titolo_it": "Aden Arabia",
+   "autori": [
+    {
+     "qid": "Q723621",
+     "nome": "Paul Nizan"
+    }
+   ],
+   "pagine": 3,
+   "wiki_en": "https://en.wikipedia.org/wiki/Aden_Arabie",
+   "lingua": {
+    "en": "French",
+    "it": "francese"
+   },
+   "generi": [],
+   "visite_en": 0
+  },
+  {
    "qid": "Q1213323",
    "titolo": "Cure through the spirit.",
    "titolo_it": "L'anima che guarisce",
@@ -3111,25 +3087,6 @@
    "wiki_en": null,
    "generi": [],
    "visite_en": null
-  },
-  {
-   "qid": "Q2824300",
-   "titolo": "Aden Arabia",
-   "titolo_it": "Aden Arabia",
-   "autori": [
-    {
-     "qid": "Q723621",
-     "nome": "Paul Nizan"
-    }
-   ],
-   "pagine": 3,
-   "wiki_en": "https://en.wikipedia.org/wiki/Aden_Arabie",
-   "lingua": {
-    "en": "French",
-    "it": "francese"
-   },
-   "generi": [],
-   "visite_en": 0
   },
   {
    "qid": "Q952083",

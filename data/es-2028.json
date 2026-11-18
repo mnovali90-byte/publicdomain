@@ -2551,6 +2551,7 @@
      "edizioni": 1,
      "dal_2000": 1,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -3944,6 +3945,7 @@
      "edizioni": 4,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -4251,6 +4253,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -4449,8 +4452,8 @@
      "loc": 1947
     },
     "citate": {
-     "BnF authorities": 1947,
-     "al-Aʻlām (Dār al-ʻIlm, 2002)": 1947
+     "al-Aʻlām (Dār al-ʻIlm, 2002)": 1947,
+     "BnF authorities": 1947
     }
    }
   },
@@ -4597,6 +4600,7 @@
      "edizioni": 37,
      "dal_2000": 4,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -5734,6 +5738,7 @@
      "edizioni": 48,
      "dal_2000": 1,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -6647,6 +6652,7 @@
      "edizioni": 2,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -7365,6 +7371,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -7856,6 +7863,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -8192,9 +8200,10 @@
     },
     "bl_en": {
      "trovato": true,
-     "edizioni": 12,
+     "edizioni": 11,
      "dal_2000": 2,
      "fonte": "British Library",
+     "scartate": 1,
      "metodo": "nome_anni"
     }
    },
@@ -8308,6 +8317,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -8425,6 +8435,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -8771,6 +8782,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -8998,6 +9010,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -9195,6 +9208,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -9496,6 +9510,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -9648,6 +9663,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -9786,6 +9802,7 @@
      "edizioni": 5,
      "dal_2000": 0,
      "fonte": "BNE",
+     "scartate": 0,
      "metodo": "nome_anni"
     },
     "bl_en": {
@@ -9793,6 +9810,7 @@
      "edizioni": 1,
      "dal_2000": 1,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -10157,6 +10175,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -10469,6 +10488,7 @@
      "edizioni": 80,
      "dal_2000": 1,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -10583,6 +10603,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -10955,6 +10976,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -11262,6 +11284,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -11438,6 +11461,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -11678,6 +11702,7 @@
      "edizioni": 4,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -11881,6 +11906,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -12212,6 +12238,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -12555,6 +12582,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -12964,6 +12992,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -13128,6 +13157,7 @@
      "edizioni": 1,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -13332,6 +13362,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -13434,6 +13465,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -13842,6 +13874,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -13954,6 +13987,7 @@
      "edizioni": 10,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -14476,6 +14510,7 @@
      "edizioni": 2,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -14595,6 +14630,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -14753,6 +14789,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -15349,6 +15386,7 @@
      "edizioni": 2,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -15571,6 +15609,7 @@
      "edizioni": 2,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -15811,6 +15850,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -15954,6 +15994,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -16240,6 +16281,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -16512,6 +16554,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -16630,6 +16673,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -16776,6 +16820,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -16946,6 +16991,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -17294,6 +17340,7 @@
      "edizioni": 2,
      "dal_2000": 1,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -17444,6 +17491,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -17915,6 +17963,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -18012,6 +18061,7 @@
      "edizioni": 1,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -18800,6 +18850,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -18913,6 +18964,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -19063,6 +19115,7 @@
      "edizioni": 48,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -19521,6 +19574,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -19670,6 +19724,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -20912,6 +20967,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -21807,6 +21863,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -22352,6 +22409,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -22480,10 +22538,11 @@
      "ambigue": 17
     },
     "bl_en": {
-     "trovato": true,
-     "edizioni": 1,
-     "dal_2000": 1,
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 1,
      "metodo": "nome_anni"
     }
    },
@@ -23414,6 +23473,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -23765,6 +23825,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -23863,6 +23924,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -23975,6 +24037,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -24201,6 +24264,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -25244,6 +25308,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -26218,6 +26283,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -26379,6 +26445,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -26610,21 +26677,12 @@
      "fonte": "SBN",
      "ambigue": 10
     },
-    "bne_es": {
-     "trovato": true,
-     "edizioni": 1,
-     "dal_2000": 0,
-     "fonte": "BNE",
-     "metodo": "nome_anni",
-     "stato": "da_verificare",
-     "motivo": "collegamento non dimostrato: l'unica notizia BNE trovata per nome è un Don Quijote: cognome e anni in voci diverse",
-     "sospeso_manuale": true
-    },
     "bl_en": {
-     "trovato": true,
-     "edizioni": 7,
-     "dal_2000": 1,
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 7,
      "metodo": "nome_anni"
     }
    },
@@ -26775,6 +26833,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -28171,6 +28230,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -29615,6 +29675,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -29893,6 +29954,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -30025,6 +30087,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -30817,6 +30880,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -31144,6 +31208,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -33265,13 +33330,13 @@
      "wikidata": 1947
     },
     "citate": {
-     "Les Archives du spectacle": 1947,
-     "NUKAT": 1947,
-     "The LiederNet Archive": 1947,
      "datos.bne.es": 1947,
      "Babelio": 1947,
      "VIAF ID": 1947,
-     "BnF authorities": 1947
+     "BnF authorities": 1947,
+     "Les Archives du spectacle": 1947,
+     "NUKAT": 1947,
+     "The LiederNet Archive": 1947
     }
    }
   },
@@ -33388,6 +33453,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -36063,6 +36129,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -39258,6 +39325,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -39426,6 +39494,7 @@
      "edizioni": 1,
      "dal_2000": 0,
      "fonte": "BNE",
+     "scartate": 0,
      "metodo": "nome_anni"
     },
     "bl_en": {
@@ -39433,6 +39502,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },
@@ -39554,6 +39624,7 @@
      "edizioni": 0,
      "dal_2000": 0,
      "fonte": "British Library",
+     "scartate": 0,
      "metodo": "nome_anni"
     }
    },

@@ -12,13 +12,13 @@
    "sospesi": 0
   },
   "bne_es": {
-   "controllati": 139,
+   "controllati": 138,
    "ok": 138,
-   "sospesi": 1
+   "sospesi": 0
   },
   "bl_en": {
-   "controllati": 160,
-   "ok": 159,
+   "controllati": 158,
+   "ok": 157,
    "sospesi": 1
   }
  },
@@ -30,15 +30,6 @@
    "motivo": "collegamento non dimostrato: su 142 notizie British Library ne risultano sue solo una parte (5 su 50 lette): le altre sono di Michael Sadleir (1888-1957) e altri, trovate perché cognome e anni stanno in voci diverse",
    "edizioni": 27,
    "dal_2000": 7,
-   "ultimo": null
-  },
-  {
-   "wikidata": "Q94136022",
-   "nome": "A. E. Thomas",
-   "catalogo": "bne_es",
-   "motivo": "collegamento non dimostrato: l'unica notizia BNE trovata per nome è un Don Quijote: cognome e anni in voci diverse",
-   "edizioni": 1,
-   "dal_2000": 0,
    "ultimo": null
   },
   {
