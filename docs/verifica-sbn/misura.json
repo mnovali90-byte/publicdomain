@@ -1,0 +1,1831 @@
+{
+ "regole": {
+  "commit": "8b08c0f (dopo il rebase; i file congelati sono identici, vedi sha256)",
+  "sha256": {
+   "scripts/riconosci_sbn.py": "c0f770f15fe1f84bd30e6439fa0eb5a5044d464c6ddc1352e54e0bed5d941905",
+   "scripts/sbn.py": "77f610f9201aa5cbbec9ace9230407899f0f4c376399dff9056568ef97df8c87"
+  },
+  "nota": "regole del riconoscimento congelate prima della verifica; non modificarle fino alla fine della misura"
+ },
+ "conteggi_dopo": {
+  "trovato": 39,
+  "mancato": 7,
+  "giusto (assente)": 52,
+  "senza prove sufficienti": 1,
+  "irrisolto, non collegato": 1
+ },
+ "conteggi_prima": {
+  "mancato": 29,
+  "trovato": 13,
+  "giusto (assente)": 51,
+  "senza prove sufficienti": 1,
+  "persona sbagliata (con anche la giusta)": 4,
+  "persona sbagliata": 1,
+  "irrisolto, non collegato": 1
+ },
+ "autori": [
+  {
+   "n": 1,
+   "qid": "Q2585507",
+   "nome": "Arvid Mörne",
+   "manuale": "C",
+   "prima": "mancato",
+   "dopo": "trovato",
+   "schede_nuove": [
+    "MILV239559"
+   ],
+   "schede_vecchie": [],
+   "metodo": "codice_sbn",
+   "stato": "riconosciuto",
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-239559": "codice SBN di Wikidata (P396): Mörne, Arvid"
+   },
+   "ambigue": {},
+   "secondi": 1.7
+  },
+  {
+   "n": 2,
+   "qid": "Q459293",
+   "nome": "Arturo Barea",
+   "manuale": "C",
+   "prima": "trovato",
+   "dopo": "trovato",
+   "schede_nuove": [
+    "SBLV030645"
+   ],
+   "schede_vecchie": [
+    "SBLV030645"
+   ],
+   "metodo": "nome_con_prova",
+   "stato": "riconosciuto",
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-SBLV-030645": "nome compatibile e titolo che torna («<<La >>forja de un rebelde»): Barea, Arturo"
+   },
+   "ambigue": {},
+   "secondi": 5.3
+  },
+  {
+   "n": 3,
+   "qid": "Q1265363",
+   "nome": "Duncan Campbell Scott",
+   "manuale": "C",
+   "prima": "mancato",
+   "dopo": "mancato",
+   "schede_nuove": [],
+   "schede_vecchie": [],
+   "metodo": null,
+   "stato": "ambiguo",
+   "prove": {},
+   "ambigue": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-TO0V-080789": "Scott, Duncan Campbell",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-DDSV-330471": "Scott, Duncan",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-DDSV-281183": "Scott, D.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-208265": "Scott, D."
+   },
+   "secondi": 13.5
+  },
+  {
+   "n": 4,
+   "qid": "Q11878769",
+   "nome": "Emmerich Alois Hruška",
+   "manuale": "A",
+   "prima": "giusto (assente)",
+   "dopo": "giusto (assente)",
+   "schede_nuove": [],
+   "schede_vecchie": [],
+   "metodo": null,
+   "stato": "non_trovato",
+   "prove": {},
+   "ambigue": {},
+   "secondi": 8.5
+  },
+  {
+   "n": 5,
+   "qid": "Q108755956",
+   "nome": "Pierre Lafenestre",
+   "manuale": "A",
+   "prima": "giusto (assente)",
+   "dopo": "giusto (assente)",
+   "schede_nuove": [],
+   "schede_vecchie": [],
+   "metodo": null,
+   "stato": "non_trovato",
+   "prove": {},
+   "ambigue": {},
+   "secondi": 3.1
+  },
+  {
+   "n": 6,
+   "qid": "Q2847789",
+   "nome": "André Frédérique",
+   "manuale": "A",
+   "prima": "giusto (assente)",
+   "dopo": "giusto (assente)",
+   "schede_nuove": [],
+   "schede_vecchie": [],
+   "metodo": null,
+   "stato": "non_trovato",
+   "prove": {},
+   "ambigue": {},
+   "secondi": 3.6
+  },
+  {
+   "n": 7,
+   "qid": "Q52150387",
+   "nome": "William Murray Graydon",
+   "manuale": "A",
+   "prima": "giusto (assente)",
+   "dopo": "giusto (assente)",
+   "schede_nuove": [],
+   "schede_vecchie": [],
+   "metodo": null,
+   "stato": "non_trovato",
+   "prove": {},
+   "ambigue": {},
+   "secondi": 2.3
+  },
+  {
+   "n": 8,
+   "qid": "Q379595",
+   "nome": "Reşat Nuri Güntekin",
+   "manuale": "A",
+   "prima": "giusto (assente)",
+   "dopo": "giusto (assente)",
+   "schede_nuove": [],
+   "schede_vecchie": [],
+   "metodo": null,
+   "stato": "non_trovato",
+   "prove": {},
+   "ambigue": {},
+   "secondi": 4.6
+  },
+  {
+   "n": 9,
+   "qid": "Q6547722",
+   "nome": "Lilian Wooster Greaves",
+   "manuale": "A",
+   "prima": "giusto (assente)",
+   "dopo": "giusto (assente)",
+   "schede_nuove": [],
+   "schede_vecchie": [],
+   "metodo": null,
+   "stato": "non_trovato",
+   "prove": {},
+   "ambigue": {},
+   "secondi": 2.3
+  },
+  {
+   "n": 10,
+   "qid": "Q5642970",
+   "nome": "Hallie Erminie Rives",
+   "manuale": "A",
+   "prima": "giusto (assente)",
+   "dopo": "giusto (assente)",
+   "schede_nuove": [],
+   "schede_vecchie": [],
+   "metodo": null,
+   "stato": "ambiguo",
+   "prove": {},
+   "ambigue": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-007278": "Wheeler, H. Brownell"
+   },
+   "secondi": 6.8
+  },
+  {
+   "n": 11,
+   "qid": "Q18911624",
+   "nome": "Robert Mitchell",
+   "manuale": "A",
+   "prima": "giusto (assente)",
+   "dopo": "giusto (assente)",
+   "schede_nuove": [],
+   "schede_vecchie": [],
+   "metodo": null,
+   "stato": "ambiguo",
+   "prove": {},
+   "ambigue": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-RAVV-387704": "Mitchell, Radha",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-UFIV-138900": "Mitchell, Richard",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CFIV-138325": "Mitchell, Roy",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-PALV-016471": "Mitchell, Riccardo",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-UBOV-632230": "Mitchell, Roscoe",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-DDSV-026842": "Mitchell, S.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-DDSV-376346": "Mitchell, Robert <musicista>",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-SBLV-120713": "Mitchell, Rosamund Jocelyn",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-176879": "Mitchell, Richard S.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-GEAV-003399": "Mitchell, Robert Lyell",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-PUVV-145040": "Mitchell, Ruth",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-IEIV-123960": "Mitchell, R. Keith",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-IEIV-216620": "Mitchell, Roberta",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-SBLV-297389": "Mitchell, Robert Victor",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-PALV-031507": "Mitchell, Robert Cameron",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-367988": "Mitchell, Raymond Earle",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-405980": "Mitchell, Ruth Comfort",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-RMSV-972497": "Mitchell, Rebecca",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LUAV-231648": "Mitchell, Rain",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-018496": "Mitchell, R. Judson",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-068981": "Mitchell, Richard E.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-118644": "Mitchell, Robert James",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-122537": "Mitchell, Robert Lloyd",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-209328": "Mitchell, Ronald Bruce",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-227169": "Mitchell, Roger S.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-268696": "Mitchell, Reid",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-URBV-034315": "Mitchell, Rick",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MODV-351220": "Mitchell, R.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MODV-662314": "Mitchell, Ray",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-UBOV-445363": "Mitchell, Ryan"
+   },
+   "secondi": 38.2
+  },
+  {
+   "n": 12,
+   "qid": "Q2745779",
+   "nome": "Curnonsky",
+   "manuale": "C",
+   "prima": "mancato",
+   "dopo": "trovato",
+   "schede_nuove": [
+    "RMLV034140"
+   ],
+   "schede_vecchie": [],
+   "metodo": "codice_sbn",
+   "stato": "riconosciuto",
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-RMLV-034140": "codice SBN di Wikidata (P396): Curnonsky <1872-1956>"
+   },
+   "ambigue": {},
+   "secondi": 1.1
+  },
+  {
+   "n": 13,
+   "qid": "Q1040341",
+   "nome": "Carl Rössler",
+   "manuale": "C",
+   "prima": "mancato",
+   "dopo": "mancato",
+   "schede_nuove": [],
+   "schede_vecchie": [],
+   "metodo": null,
+   "stato": "ambiguo",
+   "prove": {},
+   "ambigue": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-TO0V-421223": "Rössler, Carl"
+   },
+   "secondi": 4.6
+  },
+  {
+   "n": 14,
+   "qid": "Q291016",
+   "nome": "Marija Jurić Zagorka",
+   "manuale": "A",
+   "prima": "giusto (assente)",
+   "dopo": "giusto (assente)",
+   "schede_nuove": [],
+   "schede_vecchie": [],
+   "metodo": null,
+   "stato": "non_trovato",
+   "prove": {},
+   "ambigue": {},
+   "secondi": 10.1
+  },
+  {
+   "n": 15,
+   "qid": "Q780102",
+   "nome": "Wyndham Lewis",
+   "manuale": "C",
+   "prima": "trovato",
+   "dopo": "trovato",
+   "schede_nuove": [
+    "CUBV091373"
+   ],
+   "schede_vecchie": [
+    "CUBV091373"
+   ],
+   "metodo": "codice_sbn",
+   "stato": "riconosciuto",
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CUBV-091373": "codice SBN di Wikidata (P396): Lewis, Wyndham"
+   },
+   "ambigue": {},
+   "secondi": 1.1
+  },
+  {
+   "n": 16,
+   "qid": "Q12021431",
+   "nome": "Ignác Grebáč-Orlov",
+   "manuale": "A",
+   "prima": "giusto (assente)",
+   "dopo": "giusto (assente)",
+   "schede_nuove": [],
+   "schede_vecchie": [],
+   "metodo": null,
+   "stato": "non_trovato",
+   "prove": {},
+   "ambigue": {},
+   "secondi": 8.1
+  },
+  {
+   "n": 17,
+   "qid": "Q500042",
+   "nome": "Louis Bromfield",
+   "manuale": "C",
+   "prima": "trovato",
+   "dopo": "trovato",
+   "schede_nuove": [
+    "RAVV036909"
+   ],
+   "schede_vecchie": [
+    "RAVV036909"
+   ],
+   "metodo": "codice_sbn",
+   "stato": "riconosciuto",
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-RAVV-036909": "codice SBN di Wikidata (P396): Bromfield, Louis"
+   },
+   "ambigue": {},
+   "secondi": 1.1
+  },
+  {
+   "n": 18,
+   "qid": "Q106740",
+   "nome": "Dorothy L. Sayers",
+   "manuale": "C",
+   "prima": "trovato",
+   "dopo": "trovato",
+   "schede_nuove": [
+    "RAVV005038"
+   ],
+   "schede_vecchie": [
+    "RAVV005038"
+   ],
+   "metodo": "codice_sbn",
+   "stato": "riconosciuto",
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-RAVV-005038": "codice SBN di Wikidata (P396): Sayers, Dorothy L."
+   },
+   "ambigue": {},
+   "secondi": 1.2
+  },
+  {
+   "n": 19,
+   "qid": "Q265792",
+   "nome": "Ray Cummings",
+   "manuale": "I",
+   "prima": "senza prove sufficienti",
+   "dopo": "senza prove sufficienti",
+   "schede_nuove": [
+    "RAVV030671"
+   ],
+   "schede_vecchie": [
+    "RAVV030671"
+   ],
+   "metodo": "codice_sbn",
+   "stato": "riconosciuto",
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-RAVV-030671": "codice SBN di Wikidata (P396): Cummings, Ray"
+   },
+   "ambigue": {},
+   "secondi": 1.1
+  },
+  {
+   "n": 20,
+   "qid": "Q3271300",
+   "nome": "Léon Riotor",
+   "manuale": "C",
+   "prima": "mancato",
+   "dopo": "trovato",
+   "schede_nuove": [
+    "LO1V135919"
+   ],
+   "schede_vecchie": [],
+   "metodo": "codice_sbn",
+   "stato": "riconosciuto",
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-135919": "codice SBN di Wikidata (P396): Riotor, Léon"
+   },
+   "ambigue": {},
+   "secondi": 1.1
+  },
+  {
+   "n": 21,
+   "qid": "Q47291754",
+   "nome": "Richard Schneiter",
+   "manuale": "A",
+   "prima": "giusto (assente)",
+   "dopo": "giusto (assente)",
+   "schede_nuove": [],
+   "schede_vecchie": [],
+   "metodo": null,
+   "stato": "non_trovato",
+   "prove": {},
+   "ambigue": {},
+   "secondi": 2.3
+  },
+  {
+   "n": 22,
+   "qid": "Q1395155",
+   "nome": "Alcides Arguedas",
+   "manuale": "C",
+   "prima": "mancato",
+   "dopo": "trovato",
+   "schede_nuove": [
+    "MILV054254"
+   ],
+   "schede_vecchie": [],
+   "metodo": "nome_con_prova",
+   "stato": "riconosciuto",
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-054254": "nome compatibile e titolo che torna («Raza de bronce»): Arguedas, Alcides"
+   },
+   "ambigue": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-DDSV-194367": "Diaz, A."
+   },
+   "secondi": 8.6
+  },
+  {
+   "n": 23,
+   "qid": "Q931105",
+   "nome": "Christopher Morley",
+   "manuale": "C",
+   "prima": "persona sbagliata (con anche la giusta)",
+   "dopo": "trovato",
+   "schede_nuove": [
+    "BVEV010983"
+   ],
+   "schede_vecchie": [
+    "BVEV010983",
+    "MILV299926"
+   ],
+   "metodo": "codice_sbn",
+   "stato": "riconosciuto",
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-BVEV-010983": "codice SBN di Wikidata (P396): Morley, Christopher"
+   },
+   "ambigue": {},
+   "secondi": 1.1
+  },
+  {
+   "n": 24,
+   "qid": "Q715814",
+   "nome": "Winston Churchill",
+   "manuale": "A",
+   "prima": "persona sbagliata",
+   "dopo": "giusto (assente)",
+   "schede_nuove": [],
+   "schede_vecchie": [
+    "RAVV003813"
+   ],
+   "metodo": null,
+   "stato": "non_trovato",
+   "prove": {},
+   "ambigue": {},
+   "secondi": 3.5
+  },
+  {
+   "n": 25,
+   "qid": "Q95150216",
+   "nome": "Vilém Kirchner",
+   "manuale": "A",
+   "prima": "giusto (assente)",
+   "dopo": "giusto (assente)",
+   "schede_nuove": [],
+   "schede_vecchie": [],
+   "metodo": null,
+   "stato": "non_trovato",
+   "prove": {},
+   "ambigue": {},
+   "secondi": 2.3
+  },
+  {
+   "n": 26,
+   "qid": "Q5345299",
+   "nome": "Edward Sheldon",
+   "manuale": "C",
+   "prima": "persona sbagliata (con anche la giusta)",
+   "dopo": "mancato",
+   "schede_nuove": [],
+   "schede_vecchie": [
+    "IEIV038628",
+    "LO1V347062",
+    "LO1V361694"
+   ],
+   "metodo": null,
+   "stato": "ambiguo",
+   "prove": {},
+   "ambigue": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-IEIV-038628": "Sheldon, Edward Stevens",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-361694": "Sheldon, Edward"
+   },
+   "secondi": 5.1
+  },
+  {
+   "n": 27,
+   "qid": "Q1700787",
+   "nome": "John Langalibalele Dube",
+   "manuale": "A",
+   "prima": "giusto (assente)",
+   "dopo": "giusto (assente)",
+   "schede_nuove": [],
+   "schede_vecchie": [],
+   "metodo": null,
+   "stato": "non_trovato",
+   "prove": {},
+   "ambigue": {},
+   "secondi": 2.3
+  },
+  {
+   "n": 28,
+   "qid": "Q27183960",
+   "nome": "Priyanath Mukhopadhyay",
+   "manuale": "A",
+   "prima": "giusto (assente)",
+   "dopo": "giusto (assente)",
+   "schede_nuove": [],
+   "schede_vecchie": [],
+   "metodo": null,
+   "stato": "non_trovato",
+   "prove": {},
+   "ambigue": {},
+   "secondi": 1.1
+  },
+  {
+   "n": 29,
+   "qid": "Q29209751",
+   "nome": "Jindřich Hradecký",
+   "manuale": "A",
+   "prima": "giusto (assente)",
+   "dopo": "giusto (assente)",
+   "schede_nuove": [],
+   "schede_vecchie": [],
+   "metodo": null,
+   "stato": "non_trovato",
+   "prove": {},
+   "ambigue": {},
+   "secondi": 9.1
+  },
+  {
+   "n": 30,
+   "qid": "Q14946693",
+   "nome": "Minnie Louise Haskins",
+   "manuale": "C",
+   "prima": "mancato",
+   "dopo": "mancato",
+   "schede_nuove": [],
+   "schede_vecchie": [],
+   "metodo": null,
+   "stato": "non_trovato",
+   "prove": {},
+   "ambigue": {},
+   "secondi": 2.3
+  },
+  {
+   "n": 31,
+   "qid": "Q65246944",
+   "nome": "Emanuel Havelka",
+   "manuale": "A",
+   "prima": "giusto (assente)",
+   "dopo": "giusto (assente)",
+   "schede_nuove": [],
+   "schede_vecchie": [],
+   "metodo": null,
+   "stato": "non_trovato",
+   "prove": {},
+   "ambigue": {},
+   "secondi": 2.3
+  },
+  {
+   "n": 32,
+   "qid": "Q566764",
+   "nome": "Nikolaj Velimirović",
+   "manuale": "C",
+   "prima": "mancato",
+   "dopo": "trovato",
+   "schede_nuove": [
+    "IEIV060137"
+   ],
+   "schede_vecchie": [],
+   "metodo": "codice_sbn",
+   "stato": "riconosciuto",
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-IEIV-060137": "codice SBN di Wikidata (P396): Velimirović, Nicholaj"
+   },
+   "ambigue": {},
+   "secondi": 1.2
+  },
+  {
+   "n": 33,
+   "qid": "Q2721496",
+   "nome": "Madan Mohan Malaviya",
+   "manuale": "A",
+   "prima": "giusto (assente)",
+   "dopo": "giusto (assente)",
+   "schede_nuove": [],
+   "schede_vecchie": [],
+   "metodo": null,
+   "stato": "non_trovato",
+   "prove": {},
+   "ambigue": {},
+   "secondi": 3.4
+  },
+  {
+   "n": 34,
+   "qid": "Q12017814",
+   "nome": "František Salesius Frabša",
+   "manuale": "A",
+   "prima": "giusto (assente)",
+   "dopo": "giusto (assente)",
+   "schede_nuove": [],
+   "schede_vecchie": [],
+   "metodo": null,
+   "stato": "non_trovato",
+   "prove": {},
+   "ambigue": {},
+   "secondi": 5.7
+  },
+  {
+   "n": 35,
+   "qid": "Q6206463",
+   "nome": "Joaquín Gallegos Lara",
+   "manuale": "C",
+   "prima": "mancato",
+   "dopo": "trovato",
+   "schede_nuove": [
+    "LO1V175294"
+   ],
+   "schede_vecchie": [],
+   "metodo": "codice_sbn",
+   "stato": "riconosciuto",
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-175294": "codice SBN di Wikidata (P396): Gallegos Lara, Joaquin"
+   },
+   "ambigue": {},
+   "secondi": 1.1
+  },
+  {
+   "n": 36,
+   "qid": "Q20755702",
+   "nome": "Josef Jirsík",
+   "manuale": "C",
+   "prima": "mancato",
+   "dopo": "trovato",
+   "schede_nuove": [
+    "RMSV940108"
+   ],
+   "schede_vecchie": [],
+   "metodo": "codice_sbn",
+   "stato": "riconosciuto",
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-RMSV-940108": "codice SBN di Wikidata (P396): Jirsík, Josef <1898-1956>"
+   },
+   "ambigue": {},
+   "secondi": 1.1
+  },
+  {
+   "n": 37,
+   "qid": "Q3057547",
+   "nome": "Erwan ar Moal",
+   "manuale": "A",
+   "prima": "giusto (assente)",
+   "dopo": "giusto (assente)",
+   "schede_nuove": [],
+   "schede_vecchie": [],
+   "metodo": null,
+   "stato": "non_trovato",
+   "prove": {},
+   "ambigue": {},
+   "secondi": 9.2
+  },
+  {
+   "n": 38,
+   "qid": "Q18011968",
+   "nome": "Pierre Blanchon",
+   "manuale": "C",
+   "prima": "mancato",
+   "dopo": "mancato",
+   "schede_nuove": [],
+   "schede_vecchie": [],
+   "metodo": null,
+   "stato": "ambiguo",
+   "prove": {},
+   "ambigue": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-VEAV-051458": "Blanchon, Pierre"
+   },
+   "secondi": 5.7
+  },
+  {
+   "n": 39,
+   "qid": "Q5415043",
+   "nome": "Eva Emery Dye",
+   "manuale": "A",
+   "prima": "giusto (assente)",
+   "dopo": "giusto (assente)",
+   "schede_nuove": [],
+   "schede_vecchie": [],
+   "metodo": null,
+   "stato": "non_trovato",
+   "prove": {},
+   "ambigue": {},
+   "secondi": 2.2
+  },
+  {
+   "n": 40,
+   "qid": "Q5041871",
+   "nome": "Carlos Bulosan",
+   "manuale": "A",
+   "prima": "giusto (assente)",
+   "dopo": "giusto (assente)",
+   "schede_nuove": [],
+   "schede_vecchie": [],
+   "metodo": null,
+   "stato": "non_trovato",
+   "prove": {},
+   "ambigue": {},
+   "secondi": 2.3
+  },
+  {
+   "n": 41,
+   "qid": "Q4762392",
+   "nome": "Angela Brazil",
+   "manuale": "C",
+   "prima": "trovato",
+   "dopo": "trovato",
+   "schede_nuove": [
+    "SBLV149609"
+   ],
+   "schede_vecchie": [
+    "SBLV149609"
+   ],
+   "metodo": "codice_sbn",
+   "stato": "riconosciuto",
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-SBLV-149609": "codice SBN di Wikidata (P396): Brazil, Angela"
+   },
+   "ambigue": {},
+   "secondi": 1.1
+  },
+  {
+   "n": 42,
+   "qid": "Q12024899",
+   "nome": "Jindřiška Konopásková",
+   "manuale": "A",
+   "prima": "giusto (assente)",
+   "dopo": "giusto (assente)",
+   "schede_nuove": [],
+   "schede_vecchie": [],
+   "metodo": null,
+   "stato": "non_trovato",
+   "prove": {},
+   "ambigue": {},
+   "secondi": 9.7
+  },
+  {
+   "n": 43,
+   "qid": "Q12035492",
+   "nome": "Marie Votrubová-Haunerová",
+   "manuale": "C",
+   "prima": "mancato",
+   "dopo": "trovato",
+   "schede_nuove": [
+    "LO1V184069"
+   ],
+   "schede_vecchie": [],
+   "metodo": "nome_con_prova",
+   "stato": "riconosciuto",
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-184069": "nome intero e cognome raro in SBN (1 schede): Votrubova Haunerova, Marie"
+   },
+   "ambigue": {},
+   "secondi": 12.5
+  },
+  {
+   "n": 44,
+   "qid": "Q346729",
+   "nome": "Kenneth Roberts",
+   "manuale": "C",
+   "prima": "persona sbagliata (con anche la giusta)",
+   "dopo": "trovato",
+   "schede_nuove": [
+    "RAVV037619",
+    "SBLV273665"
+   ],
+   "schede_vecchie": [
+    "PUVV223660",
+    "RAVV037619",
+    "SBLV273665",
+    "UBOV405026"
+   ],
+   "metodo": "codice_sbn",
+   "stato": "riconosciuto",
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-RAVV-037619": "codice SBN di Wikidata (P396): Roberts, Kenneth",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-SBLV-273665": "codice SBN di Wikidata (P396): Roberts, Kenneth Lewis"
+   },
+   "ambigue": {},
+   "secondi": 1.1
+  },
+  {
+   "n": 45,
+   "qid": "Q983507",
+   "nome": "Səməd Vurğun",
+   "manuale": "C",
+   "prima": "mancato",
+   "dopo": "trovato",
+   "schede_nuove": [
+    "BVEV043852"
+   ],
+   "schede_vecchie": [],
+   "metodo": "nome_con_prova",
+   "stato": "riconosciuto",
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-BVEV-043852": "nome intero e cognome raro in SBN (1 schede): Vurgun, Samed"
+   },
+   "ambigue": {},
+   "secondi": 4.5
+  },
+  {
+   "n": 46,
+   "qid": "Q78437",
+   "nome": "Ernst Bertram",
+   "manuale": "C",
+   "prima": "mancato",
+   "dopo": "trovato",
+   "schede_nuove": [
+    "CFIV084472"
+   ],
+   "schede_vecchie": [],
+   "metodo": "codice_sbn",
+   "stato": "riconosciuto",
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CFIV-084472": "codice SBN di Wikidata (P396): Bertram, Ernst"
+   },
+   "ambigue": {},
+   "secondi": 1.1
+  },
+  {
+   "n": 47,
+   "qid": "Q18535612",
+   "nome": "Robert Evans",
+   "manuale": "A",
+   "prima": "giusto (assente)",
+   "dopo": "giusto (assente)",
+   "schede_nuove": [],
+   "schede_vecchie": [],
+   "metodo": null,
+   "stato": "ambiguo",
+   "prove": {},
+   "ambigue": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-DDSV-012585": "Evans, R.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CFIV-222287": "Evans, Robert Wilson",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-PUVV-001580": "Evans, Robert",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-DDSV-153309": "Evans, Robert George",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-116122": "Evans, Robert Rees",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-182432": "Evans, Robert R.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-372632": "Evans, Robert <basso>"
+   },
+   "secondi": 15.5
+  },
+  {
+   "n": 48,
+   "qid": "Q540166",
+   "nome": "Arthur Machen",
+   "manuale": "C",
+   "prima": "trovato",
+   "dopo": "trovato",
+   "schede_nuove": [
+    "CFIV071887"
+   ],
+   "schede_vecchie": [
+    "CFIV071887"
+   ],
+   "metodo": "codice_sbn",
+   "stato": "riconosciuto",
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CFIV-071887": "codice SBN di Wikidata (P396): Machen, Arthur"
+   },
+   "ambigue": {},
+   "secondi": 1.1
+  },
+  {
+   "n": 49,
+   "qid": "Q3170295",
+   "nome": "Jean Ajalbert",
+   "manuale": "C",
+   "prima": "mancato",
+   "dopo": "trovato",
+   "schede_nuove": [
+    "RAVV058456"
+   ],
+   "schede_vecchie": [],
+   "metodo": "codice_sbn",
+   "stato": "riconosciuto",
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-RAVV-058456": "codice SBN di Wikidata (P396): Ajalbert, Jean"
+   },
+   "ambigue": {},
+   "secondi": 1.3
+  },
+  {
+   "n": 50,
+   "qid": "Q443398",
+   "nome": "Henry Handel Richardson",
+   "manuale": "A",
+   "prima": "giusto (assente)",
+   "dopo": "giusto (assente)",
+   "schede_nuove": [],
+   "schede_vecchie": [],
+   "metodo": null,
+   "stato": "ambiguo",
+   "prove": {},
+   "ambigue": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-FOGV-129214": "Richardson, Henry Brush",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-207185": "Richardson, H. Wayne",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-VEAV-028638": "Richardson, Henry Hobson",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-DDSV-021444": "Robertson, F."
+   },
+   "secondi": 15.0
+  },
+  {
+   "n": 51,
+   "qid": "Q15485418",
+   "nome": "Louie Bennett",
+   "manuale": "A",
+   "prima": "giusto (assente)",
+   "dopo": "giusto (assente)",
+   "schede_nuove": [],
+   "schede_vecchie": [],
+   "metodo": null,
+   "stato": "ambiguo",
+   "prove": {},
+   "ambigue": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-465130": "Bennett, L. <illustratore>"
+   },
+   "secondi": 4.4
+  },
+  {
+   "n": 52,
+   "qid": "Q234530",
+   "nome": "Emma Orczy",
+   "manuale": "C",
+   "prima": "mancato",
+   "dopo": "trovato",
+   "schede_nuove": [
+    "RAVV036196"
+   ],
+   "schede_vecchie": [],
+   "metodo": "codice_sbn",
+   "stato": "riconosciuto",
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-RAVV-036196": "codice SBN di Wikidata (P396): Orczy, Emmuska"
+   },
+   "ambigue": {},
+   "secondi": 1.3
+  },
+  {
+   "n": 53,
+   "qid": "Q95126535",
+   "nome": "Alexandra Urbanová",
+   "manuale": "A",
+   "prima": "giusto (assente)",
+   "dopo": "giusto (assente)",
+   "schede_nuove": [],
+   "schede_vecchie": [],
+   "metodo": null,
+   "stato": "non_trovato",
+   "prove": {},
+   "ambigue": {},
+   "secondi": 4.7
+  },
+  {
+   "n": 54,
+   "qid": "Q57389",
+   "nome": "Alfred Döblin",
+   "manuale": "C",
+   "prima": "trovato",
+   "dopo": "trovato",
+   "schede_nuove": [
+    "CFIV044108"
+   ],
+   "schede_vecchie": [
+    "CFIV044108"
+   ],
+   "metodo": "codice_sbn",
+   "stato": "riconosciuto",
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CFIV-044108": "codice SBN di Wikidata (P396): Döblin, Alfred"
+   },
+   "ambigue": {},
+   "secondi": 1.2
+  },
+  {
+   "n": 55,
+   "qid": "Q62514122",
+   "nome": "Frederic Hatton",
+   "manuale": "A",
+   "prima": "giusto (assente)",
+   "dopo": "giusto (assente)",
+   "schede_nuove": [],
+   "schede_vecchie": [],
+   "metodo": null,
+   "stato": "non_trovato",
+   "prove": {},
+   "ambigue": {},
+   "secondi": 2.4
+  },
+  {
+   "n": 56,
+   "qid": "Q1725105",
+   "nome": "Otakar Levý",
+   "manuale": "A",
+   "prima": "giusto (assente)",
+   "dopo": "giusto (assente)",
+   "schede_nuove": [],
+   "schede_vecchie": [],
+   "metodo": null,
+   "stato": "ambiguo",
+   "prove": {},
+   "ambigue": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-DDSV-138427": "Levy, O.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-DDSV-138428": "Levy, O. <Jnr.>",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-DDSV-234629": "Levy, O' Done"
+   },
+   "secondi": 9.1
+  },
+  {
+   "n": 57,
+   "qid": "Q18002932",
+   "nome": "A. Augustin-Thierry",
+   "manuale": "C",
+   "prima": "mancato",
+   "dopo": "trovato",
+   "schede_nuove": [
+    "RT1V027732"
+   ],
+   "schede_vecchie": [],
+   "metodo": "codice_sbn",
+   "stato": "riconosciuto",
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-RT1V-027732": "codice SBN di Wikidata (P396): Augustin-Thierry, A. <1870-1956>"
+   },
+   "ambigue": {},
+   "secondi": 2.0
+  },
+  {
+   "n": 58,
+   "qid": "Q12043213",
+   "nome": "Otakar Wünsch",
+   "manuale": "A",
+   "prima": "giusto (assente)",
+   "dopo": "giusto (assente)",
+   "schede_nuove": [],
+   "schede_vecchie": [],
+   "metodo": null,
+   "stato": "non_trovato",
+   "prove": {},
+   "ambigue": {},
+   "secondi": 3.4
+  },
+  {
+   "n": 59,
+   "qid": "Q2956128",
+   "nome": "Channing Pollock",
+   "manuale": "C",
+   "prima": "trovato",
+   "dopo": "mancato",
+   "schede_nuove": [],
+   "schede_vecchie": [
+    "DDSV054000",
+    "LO1V154189"
+   ],
+   "metodo": null,
+   "stato": "ambiguo",
+   "prove": {},
+   "ambigue": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-DDSV-054000": "Pollock, C.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-154189": "Pollock, Channing"
+   },
+   "secondi": 4.7
+  },
+  {
+   "n": 60,
+   "qid": "Q5045036",
+   "nome": "Caroline Dale Snedeker",
+   "manuale": "C",
+   "prima": "mancato",
+   "dopo": "trovato",
+   "schede_nuove": [
+    "LO1V180782"
+   ],
+   "schede_vecchie": [],
+   "metodo": "nome_con_prova",
+   "stato": "riconosciuto",
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-180782": "nome compatibile e titolo che torna («Downright Dencey»): Snedeker, Caroline Dale"
+   },
+   "ambigue": {},
+   "secondi": 5.9
+  },
+  {
+   "n": 61,
+   "qid": "Q853226",
+   "nome": "Jenő Heltai",
+   "manuale": "C",
+   "prima": "trovato",
+   "dopo": "trovato",
+   "schede_nuove": [
+    "UBOV022716"
+   ],
+   "schede_vecchie": [
+    "UBOV022716"
+   ],
+   "metodo": "codice_sbn",
+   "stato": "riconosciuto",
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-UBOV-022716": "codice SBN di Wikidata (P396): Heltai, Jenö"
+   },
+   "ambigue": {},
+   "secondi": 1.2
+  },
+  {
+   "n": 62,
+   "qid": "Q5591308",
+   "nome": "Grace Miller White",
+   "manuale": "A",
+   "prima": "giusto (assente)",
+   "dopo": "giusto (assente)",
+   "schede_nuove": [],
+   "schede_vecchie": [],
+   "metodo": null,
+   "stato": "ambiguo",
+   "prove": {},
+   "ambigue": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-DDSV-101572": "White, G. <musicista>",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-SBLV-132504": "White, G. Edward",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-PUVV-234551": "White, E. G.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-205694": "White, E. Grace"
+   },
+   "secondi": 8.4
+  },
+  {
+   "n": 63,
+   "qid": "Q1131497",
+   "nome": "May Sinclair",
+   "manuale": "C",
+   "prima": "persona sbagliata (con anche la giusta)",
+   "dopo": "trovato",
+   "schede_nuove": [
+    "BVEV010470"
+   ],
+   "schede_vecchie": [
+    "BVEV010470",
+    "DDSV171783"
+   ],
+   "metodo": "codice_sbn",
+   "stato": "riconosciuto",
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-BVEV-010470": "codice SBN di Wikidata (P396): Sinclair, May"
+   },
+   "ambigue": {},
+   "secondi": 1.1
+  },
+  {
+   "n": 64,
+   "qid": "Q3277794",
+   "nome": "Mahmoud Bourguiba",
+   "manuale": "A",
+   "prima": "giusto (assente)",
+   "dopo": "giusto (assente)",
+   "schede_nuove": [],
+   "schede_vecchie": [],
+   "metodo": null,
+   "stato": "non_trovato",
+   "prove": {},
+   "ambigue": {},
+   "secondi": 2.3
+  },
+  {
+   "n": 65,
+   "qid": "Q571888",
+   "nome": "Balys Sruoga",
+   "manuale": "A",
+   "prima": "giusto (assente)",
+   "dopo": "giusto (assente)",
+   "schede_nuove": [],
+   "schede_vecchie": [],
+   "metodo": null,
+   "stato": "non_trovato",
+   "prove": {},
+   "ambigue": {},
+   "secondi": 2.3
+  },
+  {
+   "n": 66,
+   "qid": "Q6271965",
+   "nome": "Max Jiménez",
+   "manuale": "A",
+   "prima": "giusto (assente)",
+   "dopo": "giusto (assente)",
+   "schede_nuove": [],
+   "schede_vecchie": [],
+   "metodo": null,
+   "stato": "ambiguo",
+   "prove": {},
+   "ambigue": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-DDSV-057375": "Jimenez, M."
+   },
+   "secondi": 6.8
+  },
+  {
+   "n": 67,
+   "qid": "Q7182457",
+   "nome": "Phil Stong",
+   "manuale": "C",
+   "prima": "mancato",
+   "dopo": "trovato",
+   "schede_nuove": [
+    "LO1V183728"
+   ],
+   "schede_vecchie": [],
+   "metodo": "nome_con_prova",
+   "stato": "riconosciuto",
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-183728": "nome compatibile e titolo che torna («State Fair»): Stong, Philip"
+   },
+   "ambigue": {},
+   "secondi": 3.4
+  },
+  {
+   "n": 68,
+   "qid": "Q978324",
+   "nome": "Salomo Friedlaender",
+   "manuale": "C",
+   "prima": "mancato",
+   "dopo": "trovato",
+   "schede_nuove": [
+    "PUVV022787"
+   ],
+   "schede_vecchie": [],
+   "metodo": "codice_sbn",
+   "stato": "riconosciuto",
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-PUVV-022787": "codice SBN di Wikidata (P396): Mynona <pseud.>"
+   },
+   "ambigue": {},
+   "secondi": 1.1
+  },
+  {
+   "n": 69,
+   "qid": "Q8345656",
+   "nome": "Christofredo Jakob",
+   "manuale": "C",
+   "prima": "mancato",
+   "dopo": "trovato",
+   "schede_nuove": [
+    "LO1V148443"
+   ],
+   "schede_vecchie": [],
+   "metodo": "codice_sbn",
+   "stato": "riconosciuto",
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-148443": "codice SBN di Wikidata (P396): Jakob, Christfried"
+   },
+   "ambigue": {},
+   "secondi": 1.1
+  },
+  {
+   "n": 70,
+   "qid": "Q1392550",
+   "nome": "Gustav Suits",
+   "manuale": "A",
+   "prima": "giusto (assente)",
+   "dopo": "giusto (assente)",
+   "schede_nuove": [],
+   "schede_vecchie": [],
+   "metodo": null,
+   "stato": "non_trovato",
+   "prove": {},
+   "ambigue": {},
+   "secondi": 2.2
+  },
+  {
+   "n": 71,
+   "qid": "Q57277",
+   "nome": "Gottfried Benn",
+   "manuale": "C",
+   "prima": "trovato",
+   "dopo": "trovato",
+   "schede_nuove": [
+    "CFIV056642"
+   ],
+   "schede_vecchie": [
+    "CFIV056642"
+   ],
+   "metodo": "codice_sbn",
+   "stato": "riconosciuto",
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CFIV-056642": "codice SBN di Wikidata (P396): Benn, Gottfried"
+   },
+   "ambigue": {},
+   "secondi": 1.1
+  },
+  {
+   "n": 72,
+   "qid": "Q6782093",
+   "nome": "María Nieves y Bustamante",
+   "manuale": "C",
+   "prima": "mancato",
+   "dopo": "trovato",
+   "schede_nuove": [
+    "LO1V445528"
+   ],
+   "schede_vecchie": [],
+   "metodo": "nome_con_prova",
+   "stato": "riconosciuto",
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-445528": "nome compatibile e titolo che torna («Jorge el hijo del pueblo»): Nieves Y Bustamante, Maria"
+   },
+   "ambigue": {},
+   "secondi": 3.4
+  },
+  {
+   "n": 73,
+   "qid": "Q19839444",
+   "nome": "Margaret Cameron",
+   "manuale": "I",
+   "prima": "irrisolto, non collegato",
+   "dopo": "irrisolto, non collegato",
+   "schede_nuove": [],
+   "schede_vecchie": [],
+   "metodo": null,
+   "stato": "ambiguo",
+   "prove": {},
+   "ambigue": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-DDSV-317268": "Cameron, Margaret <musicista>",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-244056": "Cameron, Margaret",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-UBOV-109002": "Cameron, Margaret M.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CUBV-091368": "Lewis, Margaret C.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-DDSV-149194": "Lewis, Margaret",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-IEIV-068563": "Lewis, Margaret",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-DDSV-061906": "Lewis, M.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-RAVV-081150": "Smith, Margaret",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-TO0V-079345": "Smith, Margaret M.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-UFIV-133825": "Smith, Margaret Mary",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-DDSV-020380": "Smith, M.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-TO0V-349984": "Smith, M."
+   },
+   "secondi": 40.0
+  },
+  {
+   "n": 74,
+   "qid": "Q1088881",
+   "nome": "Nanalal Dalpatram Kavi",
+   "manuale": "A",
+   "prima": "giusto (assente)",
+   "dopo": "giusto (assente)",
+   "schede_nuove": [],
+   "schede_vecchie": [],
+   "metodo": null,
+   "stato": "non_trovato",
+   "prove": {},
+   "ambigue": {},
+   "secondi": 3.4
+  },
+  {
+   "n": 75,
+   "qid": "Q86629526",
+   "nome": "Kaj Gynt",
+   "manuale": "A",
+   "prima": "giusto (assente)",
+   "dopo": "giusto (assente)",
+   "schede_nuove": [],
+   "schede_vecchie": [],
+   "metodo": null,
+   "stato": "non_trovato",
+   "prove": {},
+   "ambigue": {},
+   "secondi": 3.5
+  },
+  {
+   "n": 76,
+   "qid": "Q2930497",
+   "nome": "C. M. van den Heever",
+   "manuale": "C",
+   "prima": "mancato",
+   "dopo": "trovato",
+   "schede_nuove": [
+    "LO1V210358"
+   ],
+   "schede_vecchie": [],
+   "metodo": "nome_con_prova",
+   "stato": "riconosciuto",
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-210358": "nome intero e cognome raro in SBN (2 schede): Heever, Christiaan Maurits : van den"
+   },
+   "ambigue": {},
+   "secondi": 3.4
+  },
+  {
+   "n": 77,
+   "qid": "Q1650288",
+   "nome": "Percy MacKaye",
+   "manuale": "A",
+   "prima": "giusto (assente)",
+   "dopo": "giusto (assente)",
+   "schede_nuove": [],
+   "schede_vecchie": [],
+   "metodo": null,
+   "stato": "non_trovato",
+   "prove": {},
+   "ambigue": {},
+   "secondi": 2.2
+  },
+  {
+   "n": 78,
+   "qid": "Q379949",
+   "nome": "Tristan Bernard",
+   "manuale": "C",
+   "prima": "mancato",
+   "dopo": "trovato",
+   "schede_nuove": [
+    "UBOV076572"
+   ],
+   "schede_vecchie": [],
+   "metodo": "codice_sbn",
+   "stato": "riconosciuto",
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-UBOV-076572": "codice SBN di Wikidata (P396): Bernard, Tristan <1866-1947>"
+   },
+   "ambigue": {},
+   "secondi": 1.1
+  },
+  {
+   "n": 79,
+   "qid": "Q3187690",
+   "nome": "Juan José Morosoli",
+   "manuale": "A",
+   "prima": "giusto (assente)",
+   "dopo": "giusto (assente)",
+   "schede_nuove": [],
+   "schede_vecchie": [],
+   "metodo": null,
+   "stato": "non_trovato",
+   "prove": {},
+   "ambigue": {},
+   "secondi": 3.8
+  },
+  {
+   "n": 80,
+   "qid": "Q90156741",
+   "nome": "Clotilde Chivas-Baron",
+   "manuale": "A",
+   "prima": "giusto (assente)",
+   "dopo": "giusto (assente)",
+   "schede_nuove": [],
+   "schede_vecchie": [],
+   "metodo": null,
+   "stato": "non_trovato",
+   "prove": {},
+   "ambigue": {},
+   "secondi": 5.0
+  },
+  {
+   "n": 81,
+   "qid": "Q214622",
+   "nome": "Nikos Kazantzakis",
+   "manuale": "C",
+   "prima": "trovato",
+   "dopo": "trovato",
+   "schede_nuove": [
+    "CFIV069227"
+   ],
+   "schede_vecchie": [
+    "CFIV069227"
+   ],
+   "metodo": "codice_sbn",
+   "stato": "riconosciuto",
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CFIV-069227": "codice SBN di Wikidata (P396): Kazantzàkīs, Nìkos"
+   },
+   "ambigue": {},
+   "secondi": 1.1
+  },
+  {
+   "n": 82,
+   "qid": "Q95165041",
+   "nome": "František Chramosta",
+   "manuale": "A",
+   "prima": "giusto (assente)",
+   "dopo": "giusto (assente)",
+   "schede_nuove": [],
+   "schede_vecchie": [],
+   "metodo": null,
+   "stato": "non_trovato",
+   "prove": {},
+   "ambigue": {},
+   "secondi": 7.9
+  },
+  {
+   "n": 83,
+   "qid": "Q4690359",
+   "nome": "Afrânio Peixoto",
+   "manuale": "C",
+   "prima": "mancato",
+   "dopo": "trovato",
+   "schede_nuove": [
+    "UMCV015063"
+   ],
+   "schede_vecchie": [],
+   "metodo": "codice_sbn",
+   "stato": "riconosciuto",
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-UMCV-015063": "codice SBN di Wikidata (P396): Peixoto, Afrânio"
+   },
+   "ambigue": {},
+   "secondi": 1.1
+  },
+  {
+   "n": 84,
+   "qid": "Q50298099",
+   "nome": "Islwyn Williams",
+   "manuale": "A",
+   "prima": "giusto (assente)",
+   "dopo": "giusto (assente)",
+   "schede_nuove": [],
+   "schede_vecchie": [],
+   "metodo": null,
+   "stato": "non_trovato",
+   "prove": {},
+   "ambigue": {},
+   "secondi": 5.3
+  },
+  {
+   "n": 85,
+   "qid": "Q1398181",
+   "nome": "Karel Toman",
+   "manuale": "A",
+   "prima": "giusto (assente)",
+   "dopo": "giusto (assente)",
+   "schede_nuove": [],
+   "schede_vecchie": [],
+   "metodo": null,
+   "stato": "non_trovato",
+   "prove": {},
+   "ambigue": {},
+   "secondi": 2.3
+  },
+  {
+   "n": 86,
+   "qid": "Q11926354",
+   "nome": "Ibn Zaydan",
+   "manuale": "A",
+   "prima": "giusto (assente)",
+   "dopo": "giusto (assente)",
+   "schede_nuove": [],
+   "schede_vecchie": [],
+   "metodo": null,
+   "stato": "non_trovato",
+   "prove": {},
+   "ambigue": {},
+   "secondi": 2.3
+  },
+  {
+   "n": 87,
+   "qid": "Q7901271",
+   "nome": "Ursula Parrott",
+   "manuale": "C",
+   "prima": "trovato",
+   "dopo": "trovato",
+   "schede_nuove": [
+    "AQ1V018496"
+   ],
+   "schede_vecchie": [
+    "AQ1V018496"
+   ],
+   "metodo": "codice_sbn",
+   "stato": "riconosciuto",
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-AQ1V-018496": "codice SBN di Wikidata (P396): Parrott, Ursula"
+   },
+   "ambigue": {},
+   "secondi": 1.1
+  },
+  {
+   "n": 88,
+   "qid": "Q55948066",
+   "nome": "Augustus Goetz",
+   "manuale": "C",
+   "prima": "mancato",
+   "dopo": "trovato",
+   "schede_nuove": [
+    "RLZV018817"
+   ],
+   "schede_vecchie": [],
+   "metodo": "nome_con_prova",
+   "stato": "riconosciuto",
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-RLZV-018817": "nome compatibile e titolo che torna («<<The >>heiress»): Goetz, Augustus"
+   },
+   "ambigue": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-GEAV-080983": "Goetz, A."
+   },
+   "secondi": 4.5
+  },
+  {
+   "n": 89,
+   "qid": "Q965359",
+   "nome": "Saint-Georges de Bouhélier",
+   "manuale": "C",
+   "prima": "mancato",
+   "dopo": "trovato",
+   "schede_nuove": [
+    "LO1V389595",
+    "TO0V493196"
+   ],
+   "schede_vecchie": [],
+   "metodo": "nome_con_prova",
+   "stato": "riconosciuto",
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-TO0V-493196": "nome intero e cognome raro in SBN (2 schede): Bouhelier, Saint-Georges : de",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-389595": "nome intero e cognome raro in SBN (2 schede): De Bouhélier, Saint Georges"
+   },
+   "ambigue": {},
+   "secondi": 10.2
+  },
+  {
+   "n": 90,
+   "qid": "Q135640",
+   "nome": "Valery Larbaud",
+   "manuale": "C",
+   "prima": "trovato",
+   "dopo": "trovato",
+   "schede_nuove": [
+    "CFIV108418"
+   ],
+   "schede_vecchie": [
+    "CFIV108418"
+   ],
+   "metodo": "codice_sbn",
+   "stato": "riconosciuto",
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CFIV-108418": "codice SBN di Wikidata (P396): Larbaud, Valéry"
+   },
+   "ambigue": {},
+   "secondi": 1.1
+  },
+  {
+   "n": 91,
+   "qid": "Q106765089",
+   "nome": "František Zeman",
+   "manuale": "A",
+   "prima": "giusto (assente)",
+   "dopo": "giusto (assente)",
+   "schede_nuove": [],
+   "schede_vecchie": [],
+   "metodo": null,
+   "stato": "non_trovato",
+   "prove": {},
+   "ambigue": {},
+   "secondi": 3.4
+  },
+  {
+   "n": 92,
+   "qid": "Q549496",
+   "nome": "Renée Erdős",
+   "manuale": "C",
+   "prima": "mancato",
+   "dopo": "mancato",
+   "schede_nuove": [],
+   "schede_vecchie": [],
+   "metodo": null,
+   "stato": "ambiguo",
+   "prove": {},
+   "ambigue": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-IEIV-005400": "Erdös, Renée"
+   },
+   "secondi": 9.3
+  },
+  {
+   "n": 93,
+   "qid": "Q32041639",
+   "nome": "Jiří Dréman",
+   "manuale": "A",
+   "prima": "giusto (assente)",
+   "dopo": "giusto (assente)",
+   "schede_nuove": [],
+   "schede_vecchie": [],
+   "metodo": null,
+   "stato": "non_trovato",
+   "prove": {},
+   "ambigue": {},
+   "secondi": 3.4
+  },
+  {
+   "n": 94,
+   "qid": "Q95557826",
+   "nome": "Bedřich Wunderlich",
+   "manuale": "A",
+   "prima": "giusto (assente)",
+   "dopo": "giusto (assente)",
+   "schede_nuove": [],
+   "schede_vecchie": [],
+   "metodo": null,
+   "stato": "non_trovato",
+   "prove": {},
+   "ambigue": {},
+   "secondi": 2.3
+  },
+  {
+   "n": 95,
+   "qid": "Q294321",
+   "nome": "James Connolly",
+   "manuale": "C",
+   "prima": "mancato",
+   "dopo": "trovato",
+   "schede_nuove": [
+    "LIGV015562"
+   ],
+   "schede_vecchie": [],
+   "metodo": "codice_sbn",
+   "stato": "riconosciuto",
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LIGV-015562": "codice SBN di Wikidata (P396): Connolly, James Brendan"
+   },
+   "ambigue": {},
+   "secondi": 1.1
+  },
+  {
+   "n": 96,
+   "qid": "Q6457087",
+   "nome": "Sukanta Bhattacharya",
+   "manuale": "A",
+   "prima": "giusto (assente)",
+   "dopo": "giusto (assente)",
+   "schede_nuove": [],
+   "schede_vecchie": [],
+   "metodo": null,
+   "stato": "non_trovato",
+   "prove": {},
+   "ambigue": {},
+   "secondi": 3.4
+  },
+  {
+   "n": 97,
+   "qid": "Q134119918",
+   "nome": "Elias Gewurz",
+   "manuale": "A",
+   "prima": "giusto (assente)",
+   "dopo": "giusto (assente)",
+   "schede_nuove": [],
+   "schede_vecchie": [],
+   "metodo": null,
+   "stato": "non_trovato",
+   "prove": {},
+   "ambigue": {},
+   "secondi": 2.3
+  },
+  {
+   "n": 98,
+   "qid": "Q125412",
+   "nome": "Josef Reinhart",
+   "manuale": "A",
+   "prima": "giusto (assente)",
+   "dopo": "giusto (assente)",
+   "schede_nuove": [],
+   "schede_vecchie": [],
+   "metodo": null,
+   "stato": "non_trovato",
+   "prove": {},
+   "ambigue": {},
+   "secondi": 2.3
+  },
+  {
+   "n": 99,
+   "qid": "Q138829252",
+   "nome": "Sophie Gaby",
+   "manuale": "A",
+   "prima": "giusto (assente)",
+   "dopo": "giusto (assente)",
+   "schede_nuove": [],
+   "schede_vecchie": [],
+   "metodo": null,
+   "stato": "non_trovato",
+   "prove": {},
+   "ambigue": {},
+   "secondi": 2.3
+  },
+  {
+   "n": 100,
+   "qid": "Q5993001",
+   "nome": "Manuel Fontdevila",
+   "manuale": "A",
+   "prima": "giusto (assente)",
+   "dopo": "giusto (assente)",
+   "schede_nuove": [],
+   "schede_vecchie": [],
+   "metodo": null,
+   "stato": "non_trovato",
+   "prove": {},
+   "ambigue": {},
+   "secondi": 2.3
+  }
+ ]
+}
