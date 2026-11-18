@@ -521,10 +521,11 @@ it: {
   edizBne: "Registrazioni bibliografiche in spagnolo collegate all'autore nel catalogo della Biblioteca nacional de España (BNE). Per ora comprendono anche altre collaborazioni (traduzioni, curatele, prefazioni).",
   edizBl: "Registrazioni bibliografiche in inglese collegate all'autore nel catalogo della British Library, cercato per cognome e anni di nascita e morte: qualche registrazione schedata in altro modo può sfuggire. Per ora comprendono anche altre collaborazioni (traduzioni, curatele, prefazioni).",
   edizNonTrovato: "Autore non trovato nel catalogo: non vuol dire che non sia tradotto, può essere schedato con un altro nome.",
-  edizInedito: "Nessuna registrazione in {l}",
+  edizInedito: "Nessuna registrazione in {l} collegata all'autore",
   edizCatSbn: "Il catalogo SBN", edizCatBnf: "La BnF", edizCatBne: "La BNE",
   sbnConProva: "Autore riconosciuto dal nome con una prova in più (anni di nascita e morte, un titolo o un cognome unico nel catalogo), non da un codice.",
-  edizIneditoNota: "{b} conosce questo autore (lo riconosce dal suo codice, senza rischio di omonimi) ma non ha nessuna registrazione in {l} collegata a lui: in questo paese risulta inedito.",
+  edizIneditoNota: "{b} riconosce questo autore dal suo codice, ma non ha nessuna registrazione in {l} collegata a lui. Non basta per dire che sia inedito: un'edizione può essere collegata a un'altra scheda o mancare dal catalogo.",
+  edizSospesoColl: "Dati in verifica: non è ancora dimostrato che la scheda del catalogo collegata a questo autore sia davvero sua, quindi non mostriamo i numeri finché non è chiarito.",
   primaPubbl: "Prima di pubblicare", avvisoBreve: "Libero è il testo originale. Traduzioni, curatele e illustrazioni hanno diritti propri. Calcolo indicativo, non consulenza legale.",
   avvisoIt: " In Italia, per gli autori di paesi alleati nella Seconda guerra mondiale, la durata può essere più lunga.", libriL: "Libri in {l}", amazonP: "Cerca su {d}", bnf: "Catalogo BnF",
   paTit: "Da quando è libero, paese per paese",
@@ -635,10 +636,11 @@ en: {
   edizBne: "Bibliographic records in Spanish linked to the author in the catalogue of the National Library of Spain (BNE). For now they also include other contributions (translations, editing, prefaces).",
   edizBl: "Bibliographic records in English linked to the author in the British Library catalogue, searched by surname and years of birth and death: some records catalogued differently may be missed. For now they also include other contributions (translations, editing, prefaces).",
   edizNonTrovato: "Author not found in the catalogue: it does not mean they are untranslated, they may be catalogued under another name.",
-  edizInedito: "No records in {l}",
+  edizInedito: "No records in {l} linked to the author",
   edizCatSbn: "The SBN catalogue", edizCatBnf: "The BnF", edizCatBne: "The BNE",
   sbnConProva: "Author matched by name with one more piece of evidence (years of birth and death, a title or a surname unique in the catalogue), not by an identifier.",
-  edizIneditoNota: "{b} knows this author (identified by their authority code, so no risk of namesakes) but holds no record in {l} linked to them: in this country they appear to be unpublished.",
+  edizIneditoNota: "{b} identifies this author by their authority code, but holds no record in {l} linked to them. That is not enough to say they are unpublished: an edition may be linked to another record or be missing from the catalogue.",
+  edizSospesoColl: "Data under review: it is not yet shown that the catalogue record linked to this author is really theirs, so we do not show the figures until this is cleared up.",
   primaPubbl: "Before publishing", avvisoBreve: "Only the original text is free. Translations, editorial work and illustrations have their own rights. Indicative calculation, not legal advice.",
   avvisoIt: " In Italy the term can be longer for authors from Allied countries in the Second World War.", libriL: "Books in {l}", amazonP: "Search {d}", bnf: "BnF catalogue",
   paTit: "Free from when, country by country",
@@ -1500,8 +1502,9 @@ function bloccoLibero(a, c) {
 }
 // stesse regole di scripts/controlli.py: numeri che si contraddicono non si mostrano mai, anche se il controllo sui dati non è girato
 function conteggioSospeso(g) {
-  if (!g || !g.trovato) return false;
+  if (!g) return false;
   if (g.stato === "da_verificare") return true;
+  if (!g.trovato) return false;
   const tot = g.edizioni, d = g.dal_2000, u = g.ultimo;
   if (typeof tot !== "number" || tot < 0) return true;
   if (typeof d === "number" && (d < 0 || d > tot)) return true;
@@ -1516,12 +1519,12 @@ function bloccoEdizioni(a, c) {
   const tit = h("h4", {}, tr("edizTit", { l }));
   const sez = (...f) => h("section", { class: "sa-sez" }, ...f);
   if (!g) return sez(tit, h("p", { class: "sa-nota" }, c === "fr" || c === "es" ? tr("edizSenzaCodice", { b: c === "fr" ? "BnF" : "BNE" }) : tr("edizNd")));
+  if (conteggioSospeso(g)) return sez(tit, h("p", { class: "sa-nota" }, tr(g.sospeso_manuale ? "edizSospesoColl" : "edizSospeso")));
   if (!g.trovato && /^codice/.test(g.metodo || "")) {
     const b = tr({ it: "edizCatSbn", fr: "edizCatBnf", es: "edizCatBne" }[c] || "edizCatBne");
     return sez(tit, h("p", { class: "sa-inedito" }, tr("edizInedito", { l })), h("p", { class: "sa-nota" }, tr("edizIneditoNota", { b, l })));
   }
   if (!g.trovato) return sez(tit, h("p", { class: "sa-nota" }, tr("edizNonTrovato")));
-  if (conteggioSospeso(g)) return sez(tit, h("p", { class: "sa-nota" }, tr("edizSospeso")));
   const box = (num, et) => h("div", { class: "ed-box" }, h("b", {}, n(num)), h("span", {}, et));
   return sez(tit,
     h("div", { class: "ed-boxes" }, box(g.edizioni, tr("edizLibri", { l })), box(g.dal_2000 || 0, tr("edizDal2000") + (g.ultimo ? " · " + tr("edizUltimo", { a: g.ultimo }) : ""))),

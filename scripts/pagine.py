@@ -421,7 +421,10 @@ def scheda_statica(a, lang, bd):
                  if a.get("n_opere", 0) > len(opere) else "")
         o.append(sez(T("Opere principali", "Main works"), f'<ul class="sa-opere">\n{righe}</ul>\n{extra}'))
     g = ((a.get("traduzioni") or {}).get("sbn_it") if it else (a.get("traduzioni") or {}).get("bl_en"))
-    if g and g.get("trovato") and (g.get("stato") == "da_verificare" or problemi_conteggio(g, datetime.date.today().year)):
+    if g and g.get("sospeso_manuale"):
+        o.append(sez(T("Registrazioni in italiano", "Records in English"),
+                     f'<p class="sa-nota">{esc(T("Dati in verifica: non è ancora dimostrato che la scheda del catalogo collegata a questo autore sia davvero sua, quindi non mostriamo i numeri finché non è chiarito.", "Data under review: it is not yet shown that the catalogue record linked to this author is really theirs, so we do not show the figures until this is cleared up."))}</p>\n'))
+    elif g and g.get("trovato") and (g.get("stato") == "da_verificare" or problemi_conteggio(g, datetime.date.today().year)):
         o.append(sez(T("Registrazioni in italiano", "Records in English"),
                      f'<p class="sa-nota">{esc(T("Dati in verifica: per questo autore i numeri del catalogo si contraddicono, quindi non li mostriamo finché non sono corretti.", "Data under review: for this author the catalogue figures contradict each other, so we do not show them until they are fixed."))}</p>\n'))
     elif g and g.get("trovato"):

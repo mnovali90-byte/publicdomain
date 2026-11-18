@@ -10,7 +10,8 @@ Wikidata ha autorizzato per le sue interrogazioni federate.
 Come si riconosce l'autore (dal 18/11/2026, scripts/riconosci_sbn.py; prove in docs/registro-prove.md):
   1) codice SBN che Wikidata indica per lui (P396); 2) VIAF (P214); 3) nome normalizzato da tutte e due le
   parti, accettato solo con una prova (anni, titolo che torna, cognome raro con nome intero). Senza prova
-  la scheda resta ambigua e non si conta: «stato» = riconosciuto / ambiguo / non_trovato.
+  la scheda resta ambigua e non si conta: «riconoscimento» = riconosciuto / ambiguo / non_trovato
+  («stato» resta riservato ai controlli: "da_verificare").
   La vecchia ricerca (edizioni_italiane) resta solo per anniversari.py.
 
 Cosa si conta: le registrazioni (opere) il cui autore o collaboratore è quella persona e
@@ -19,7 +20,7 @@ Non dice se l'edizione è ancora in commercio, né quanto è buona la traduzione
 
 Scrive, per ogni autore, "traduzioni": {"sbn_it": {...}} nei file data/<anno>.json:
   {"trovato": bool, "edizioni": N, "ultimo": anno|None, "dal_2000": N,
-   "metodo": "codice_sbn"|"viaf"|"nome_con_prova"|None, "stato": ..., "ambigue": N, "fonte": "SBN"}
+   "metodo": "codice_sbn"|"viaf"|"nome_con_prova"|None, "riconoscimento": ..., "ambigue": N, "fonte": "SBN"}
 Cache in data/cache_sbn.json (45 giorni). Gentile con il server: una richiesta alla volta.
 """
 import datetime as dt
@@ -233,7 +234,7 @@ def edizioni_riconosciute(autore, wd, interroga_fn=interroga):
     if r["schede"]:
         n, ultimo, dal_2000 = conta("VALUES ?a { " + " ".join(f"<{u}>" for u in r["schede"]) + " }", interroga_fn)
     return {"trovato": n > 0, "edizioni": n, "ultimo": ultimo, "dal_2000": dal_2000,
-            "metodo": r.get("metodo"), "stato": r["stato"], "fonte": "SBN",
+            "metodo": r.get("metodo"), "riconoscimento": r["stato"], "fonte": "SBN",
             "schede": [u.rsplit("/", 1)[-1] for u in r["schede"]], "ambigue": len(r.get("ambigue") or {})}
 
 
@@ -301,6 +302,8 @@ def elabora(oggi, conta_fn=edizioni_riconosciute, wd_fn=dati_wikidata):
             voce = cache.get(a["wikidata"])
             if voce:
                 dati = {k: v for k, v in voce.items() if k not in ("ts", "v", "schede")}
+                if dati.get("stato") in ("riconosciuto", "ambiguo", "non_trovato"):   # voci del primo giro del 18/11
+                    dati["riconoscimento"] = dati.pop("stato")
                 if a.get("pagine_wikipedia", 0) >= SOGLIA_NOTO and dati["edizioni"] <= SOGLIA_POCHE:
                     dati["sospetto"] = True
                     sospetti.append({"wikidata": a["wikidata"], "nome": a["nome"], "pagine": a["pagine_wikipedia"],
