@@ -1,0 +1,3831 @@
+{
+ "congelato": "2026-11-18",
+ "nota": "risultato di bnf.py prima di qualsiasi modifica (fase BnF, punto 1)",
+ "autori": {
+  "Q101529": {
+   "nome": "Karl M. Baer",
+   "nascita": "1885-05-20",
+   "morte": "1956-06-26",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q106740": {
+   "nome": "Dorothy L. Sayers",
+   "nascita": "1893-06-13",
+   "morte": "1957-12-17",
+   "p268_oggi": [
+    "119238811"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 46,
+    "dal_2000": 10,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q106765089": {
+   "nome": "František Zeman",
+   "nascita": "1881-10-15",
+   "morte": "1957-08-13",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q108405815": {
+   "nome": "Annapurna Goswami",
+   "nascita": "1916-03-08",
+   "morte": "1957-01-01",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q10856213": {
+   "nome": "Noh Cheon-myeong",
+   "nascita": "1911-11-11",
+   "morte": "1957-03-07",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q108616921": {
+   "nome": "Muḥammad ʻAlī Unsī",
+   "nascita": "1869-01-01",
+   "morte": "1956-01-01",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q108983658": {
+   "nome": "Dragutin J. Ranković",
+   "nascita": "1882-01-01",
+   "morte": "1956-01-01",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q1153256": {
+   "nome": "Robert Lawson",
+   "nascita": "1892-10-04",
+   "morte": "1957-05-26",
+   "p268_oggi": [
+    "131782491"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 9,
+    "dal_2000": 5,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q115683": {
+   "nome": "Michael Arlen",
+   "nascita": "1895-11-16",
+   "morte": "1956-06-23",
+   "p268_oggi": [
+    "121525742"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 5,
+    "dal_2000": 2,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q116230289": {
+   "nome": "K. Sukumaran",
+   "nascita": "1876-01-01",
+   "morte": "1956-01-01",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q11794223": {
+   "nome": "Nurullah Ataç",
+   "nascita": "1898-08-21",
+   "morte": "1957-05-17",
+   "p268_oggi": [
+    "13326258t"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 1,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q11871501": {
+   "nome": "Edmond Konrád",
+   "nascita": "1889-05-30",
+   "morte": "1957-05-09",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q11878769": {
+   "nome": "Emmerich Alois Hruška",
+   "nascita": "1895-02-02",
+   "morte": "1957-05-11",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q11912944": {
+   "nome": "Casimir Giralt i Bullich",
+   "nascita": "1883-07-23",
+   "morte": "1957-01-01",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q12017814": {
+   "nome": "František Salesius Frabša",
+   "nascita": "1887-02-04",
+   "morte": "1956-06-10",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q12021431": {
+   "nome": "Ignác Grebáč-Orlov",
+   "nascita": "1888-01-25",
+   "morte": "1957-04-26",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q12035492": {
+   "nome": "Marie Votrubová-Haunerová",
+   "nascita": "1878-08-02",
+   "morte": "1957-05-23",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q121008": {
+   "nome": "Ernst Kreidolf",
+   "nascita": "1863-02-09",
+   "morte": "1956-08-12",
+   "p268_oggi": [
+    "149802203"
+   ],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q12208643": {
+   "nome": "Ḥalīm Dammūs",
+   "nascita": "1888-01-01",
+   "morte": "1957-01-01",
+   "p268_oggi": [
+    "17738763q"
+   ],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q123075": {
+   "nome": "Robert Walser",
+   "nascita": "1878-04-15",
+   "morte": "1956-12-25",
+   "p268_oggi": [
+    "119288383"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 79,
+    "dal_2000": 53,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q12357525": {
+   "nome": "Baishnaba Pani",
+   "nascita": "1882-10-26",
+   "morte": "1956-05-10",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q125412": {
+   "nome": "Josef Reinhart",
+   "nascita": "1875-09-01",
+   "morte": "1957-04-14",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q1285184": {
+   "nome": "Edith Summers Kelley",
+   "nascita": "1884-04-28",
+   "morte": "1956-06-09",
+   "p268_oggi": [
+    "13163330g"
+   ],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q129256623": {
+   "nome": "Leonardo F. Napolitano",
+   "nascita": "1885-01-01",
+   "morte": "1956-01-01",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q13123001": {
+   "nome": "Herbert Isaac Ernest Dhlomo",
+   "nascita": "1903-02-26",
+   "morte": "1956-10-23",
+   "p268_oggi": [
+    "12722434z"
+   ],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q13129341": {
+   "nome": "John Lloyd-Jones",
+   "nascita": "1885-10-14",
+   "morte": "1956-02-01",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q131522682": {
+   "nome": "Enrique Vázquez de Aldana",
+   "nascita": "1900-01-01",
+   "morte": "1957-08-15",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q1351464": {
+   "nome": "Fletcher Pratt",
+   "nascita": "1897-04-25",
+   "morte": "1956-06-10",
+   "p268_oggi": [
+    "12632874b"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 7,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q135640": {
+   "nome": "Valery Larbaud",
+   "nascita": "1881-08-29",
+   "morte": "1957-02-02",
+   "p268_oggi": [
+    "11911085h"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 340,
+    "dal_2000": 27,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q1388518": {
+   "nome": "Oliver St. John Gogarty",
+   "nascita": "1878-08-17",
+   "morte": "1957-09-22",
+   "p268_oggi": [
+    "119414272"
+   ],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q1392550": {
+   "nome": "Gustav Suits",
+   "nascita": "1883-11-30",
+   "morte": "1956-05-23",
+   "p268_oggi": [
+    "10292324p"
+   ],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q1398493": {
+   "nome": "Hans Müller-Schlösser",
+   "nascita": "1884-06-14",
+   "morte": "1956-03-21",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q140088299": {
+   "nome": "E.V. Raman Nampoothiri",
+   "nascita": "1896-01-01",
+   "morte": "1957-01-01",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q1470667": {
+   "nome": "Hans Ganz",
+   "nascita": "1890-03-09",
+   "morte": "1957-07-27",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q14946693": {
+   "nome": "Minnie Louise Haskins",
+   "nascita": "1875-05-12",
+   "morte": "1957-01-01",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q15090962": {
+   "nome": "Sergei Rozanov",
+   "nascita": "1894-09-07",
+   "morte": "1957-01-09",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q1547340": {
+   "nome": "Leonora Speyer",
+   "nascita": "1872-11-07",
+   "morte": "1956-02-10",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q15485418": {
+   "nome": "Louie Bennett",
+   "nascita": "1870-01-01",
+   "morte": "1956-11-25",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q15689600": {
+   "nome": "Amelia Beers Warnock",
+   "nascita": "1878-01-01",
+   "morte": "1956-01-01",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q1578424": {
+   "nome": "Hans Adler",
+   "nascita": "1880-04-13",
+   "morte": "1957-11-11",
+   "p268_oggi": [
+    "155546758"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 2,
+    "dal_2000": 2,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q15987617": {
+   "nome": "Julia Green (efternamn)",
+   "nascita": "1861-05-25",
+   "morte": "1957-07-10",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q161135": {
+   "nome": "Savelij Grigor'evič Tartakover",
+   "nascita": "1887-02-22",
+   "morte": "1956-02-05",
+   "p268_oggi": [
+    "119260539"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 14,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q1611440": {
+   "nome": "Hermann Heinz Ortner",
+   "nascita": "1895-11-14",
+   "morte": "1956-08-18",
+   "p268_oggi": [
+    "16660648x"
+   ],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q1639201": {
+   "nome": "Craig Rice",
+   "nascita": "1908-06-05",
+   "morte": "1957-08-28",
+   "p268_oggi": [
+    "120508867"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 32,
+    "dal_2000": 2,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q1646239": {
+   "nome": "Kōtarō Takamura",
+   "nascita": "1883-03-13",
+   "morte": "1956-04-02",
+   "p268_oggi": [
+    "12373074p"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 1,
+    "dal_2000": 1,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q1650288": {
+   "nome": "Percy MacKaye",
+   "nascita": "1875-03-16",
+   "morte": "1956-08-31",
+   "p268_oggi": [
+    "10967709p"
+   ],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q167391": {
+   "nome": "Vladimir Levstik",
+   "nascita": "1886-01-19",
+   "morte": "1957-12-23",
+   "p268_oggi": [
+    "12620904r"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 1,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q16831409": {
+   "nome": "František Dohnal",
+   "nascita": "1876-07-31",
+   "morte": "1956-07-28",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q16899719": {
+   "nome": "Carl Keilhau",
+   "nascita": "1919-07-25",
+   "morte": "1957-12-20",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q16901261": {
+   "nome": "Noel Everingham Sainsbury",
+   "nascita": "1884-06-11",
+   "morte": "1956-12-01",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q169036": {
+   "nome": "Zdeněk Němeček",
+   "nascita": "1894-02-19",
+   "morte": "1957-07-05",
+   "p268_oggi": [
+    "12977081z"
+   ],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q16976846": {
+   "nome": "Ramon Domènec Perés i Perés",
+   "nascita": "1863-01-01",
+   "morte": "1956-10-25",
+   "p268_oggi": [
+    "11986970m"
+   ],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q1714111": {
+   "nome": "Just Scheu",
+   "nascita": "1903-02-22",
+   "morte": "1956-08-08",
+   "p268_oggi": [
+    "140415543"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 4,
+    "dal_2000": 2,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q1753084": {
+   "nome": "Czesław Jastrzębiec-Kozłowski",
+   "nascita": "1894-12-31",
+   "morte": "1956-06-14",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q18002932": {
+   "nome": "A. Augustin-Thierry",
+   "nascita": "1868-01-01",
+   "morte": "1956-01-01",
+   "p268_oggi": [
+    "12747209t"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 44,
+    "dal_2000": 1,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q18011968": {
+   "nome": "Pierre Blanchon",
+   "nascita": "1867-01-01",
+   "morte": "1956-01-01",
+   "p268_oggi": [
+    "107279646",
+    "123405187"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 18,
+    "dal_2000": 1,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q18535612": {
+   "nome": "Robert Evans",
+   "nascita": "1871-11-27",
+   "morte": "1956-10-16",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q18535623": {
+   "nome": "J. O. Francis",
+   "nascita": "1882-09-07",
+   "morte": "1956-10-01",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q18576661": {
+   "nome": "Frances Mabel Robinson",
+   "nascita": "1858-06-16",
+   "morte": "1956-01-01",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q18684289": {
+   "nome": "Germaine Waton de Ferry",
+   "nascita": "1885-01-01",
+   "morte": "1956-01-01",
+   "p268_oggi": [
+    "10612174q"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 2,
+    "dal_2000": 1,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q18911624": {
+   "nome": "Robert Mitchell",
+   "nascita": "1892-01-01",
+   "morte": "1957-01-01",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q1940929": {
+   "nome": "Miyagi Michio",
+   "nascita": "1894-04-07",
+   "morte": "1956-06-25",
+   "p268_oggi": [
+    "13957490r"
+   ],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q19667016": {
+   "nome": "Lilian Turner",
+   "nascita": "1867-08-21",
+   "morte": "1956-08-25",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q19754062": {
+   "nome": "Paul Fierens",
+   "nascita": "1895-07-08",
+   "morte": "1957-03-22",
+   "p268_oggi": [
+    "12334872m"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 88,
+    "dal_2000": 1,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q207036": {
+   "nome": "A. A. Milne",
+   "nascita": "1882-01-18",
+   "morte": "1956-01-31",
+   "p268_oggi": [
+    "119161881"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 218,
+    "dal_2000": 133,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q20755702": {
+   "nome": "Josef Jirsík",
+   "nascita": "1898-11-26",
+   "morte": "1956-12-30",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q213482": {
+   "nome": "Giuseppe Tomasi di Lampedusa",
+   "nascita": "1896-12-23",
+   "morte": "1957-07-23",
+   "p268_oggi": [
+    "11926785v"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 57,
+    "dal_2000": 28,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q213592": {
+   "nome": "Ralph Benatzky",
+   "nascita": "1884-06-05",
+   "morte": "1957-10-16",
+   "p268_oggi": [
+    "13891332h"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 102,
+    "dal_2000": 13,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q214622": {
+   "nome": "Nikos Kazantzakis",
+   "nascita": "1883-03-02",
+   "morte": "1957-10-26",
+   "p268_oggi": [
+    "11909524d"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 126,
+    "dal_2000": 36,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q2160344": {
+   "nome": "Virgilio Giotti",
+   "nascita": "1885-01-15",
+   "morte": "1957-09-21",
+   "p268_oggi": [
+    "12367880k"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 3,
+    "dal_2000": 3,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q220980": {
+   "nome": "Pío Baroja",
+   "nascita": "1872-12-28",
+   "morte": "1956-10-30",
+   "p268_oggi": [
+    "11885704v"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 30,
+    "dal_2000": 1,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q2295334": {
+   "nome": "Patrick Abercrombie",
+   "nascita": "1879-06-06",
+   "morte": "1957-03-23",
+   "p268_oggi": [
+    "11273420j"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 2,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q2312843": {
+   "nome": "Elia Abu Madi",
+   "nascita": "1889-01-01",
+   "morte": "1957-01-01",
+   "p268_oggi": [
+    "13485125r"
+   ],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q231690": {
+   "nome": "B. R. Ambedkar",
+   "nascita": "1891-04-14",
+   "morte": "1956-12-06",
+   "p268_oggi": [
+    "12126992f"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 2,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q2358343": {
+   "nome": "Moishe Broderzon",
+   "nascita": "1890-11-22",
+   "morte": "1956-08-17",
+   "p268_oggi": [
+    "135343794"
+   ],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q2362588": {
+   "nome": "Muhammad Husayn Haykal",
+   "nascita": "1888-08-20",
+   "morte": "1956-12-08",
+   "p268_oggi": [
+    "12550018d"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 2,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q237514": {
+   "nome": "Laura Ingalls Wilder",
+   "nascita": "1867-02-07",
+   "morte": "1957-02-10",
+   "p268_oggi": [
+    "11929193j"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 88,
+    "dal_2000": 46,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q2545012": {
+   "nome": "Walter Karig",
+   "nascita": "1898-11-13",
+   "morte": "1956-09-30",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q2614668": {
+   "nome": "Caroline van Dommelen",
+   "nascita": "1874-11-09",
+   "morte": "1957-03-04",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q265792": {
+   "nome": "Ray Cummings",
+   "nascita": "1887-08-30",
+   "morte": "1957-01-23",
+   "p268_oggi": [
+    "12781478k"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 4,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q2695518": {
+   "nome": "John William Van Druten",
+   "nascita": "1901-06-01",
+   "morte": "1957-12-19",
+   "p268_oggi": [
+    "141429329"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 12,
+    "dal_2000": 6,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q2712435": {
+   "nome": "José Lins do Rego",
+   "nascita": "1901-07-03",
+   "morte": "1957-09-12",
+   "p268_oggi": [
+    "12026323s"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 3,
+    "dal_2000": 2,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q2745779": {
+   "nome": "Curnonsky",
+   "nascita": "1872-10-12",
+   "morte": "1956-07-22",
+   "p268_oggi": [
+    "11898316p"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 161,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q276464": {
+   "nome": "Judith Blunt-Lytton",
+   "nascita": "1873-02-06",
+   "morte": "1957-08-08",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q2782998": {
+   "nome": "Peter B. Kyne",
+   "nascita": "1880-10-12",
+   "morte": "1957-11-25",
+   "p268_oggi": [
+    "13171545s"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 6,
+    "dal_2000": 2,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q281775": {
+   "nome": "Robert McAlmon",
+   "nascita": "1895-03-09",
+   "morte": "1956-02-02",
+   "p268_oggi": [
+    "11984619j"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 1,
+    "dal_2000": 1,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q2847789": {
+   "nome": "André Frédérique",
+   "nascita": "1915-02-27",
+   "morte": "1957-05-17",
+   "p268_oggi": [
+    "11903508q"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 79,
+    "dal_2000": 7,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q291016": {
+   "nome": "Marija Jurić Zagorka",
+   "nascita": "1873-03-02",
+   "morte": "1957-11-30",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q2930497": {
+   "nome": "C. M. van den Heever",
+   "nascita": "1902-01-01",
+   "morte": "1957-01-01",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q2933169": {
+   "nome": "Cahit Sıtkı Tarancı",
+   "nascita": "1910-10-04",
+   "morte": "1956-01-12",
+   "p268_oggi": [
+    "123002057"
+   ],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q294321": {
+   "nome": "James Connolly",
+   "nascita": "1868-10-28",
+   "morte": "1957-01-20",
+   "p268_oggi": [
+    "17700457d"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 1,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q2987397": {
+   "nome": "Roy Campbell",
+   "nascita": "1901-10-02",
+   "morte": "1957-04-23",
+   "p268_oggi": [
+    "12031543z"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 2,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q3010499": {
+   "nome": "César Moro",
+   "nascita": "1903-08-19",
+   "morte": "1956-01-10",
+   "p268_oggi": [
+    "121024099"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 6,
+    "dal_2000": 2,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q301391": {
+   "nome": "George Bacovia",
+   "nascita": "1881-09-17",
+   "morte": "1957-05-22",
+   "p268_oggi": [
+    "121751089"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 4,
+    "dal_2000": 1,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q3057547": {
+   "nome": "Erwan ar Moal",
+   "nascita": "1874-02-09",
+   "morte": "1957-02-14",
+   "p268_oggi": [
+    "12056943p"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 1,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q3072893": {
+   "nome": "Firmin Roz",
+   "nascita": "1866-06-15",
+   "morte": "1957-11-05",
+   "p268_oggi": [
+    "12122686q"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 254,
+    "dal_2000": 2,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q3087522": {
+   "nome": "Roger Vercel",
+   "nascita": "1894-01-08",
+   "morte": "1957-02-26",
+   "p268_oggi": [
+    "16178881k",
+    "119279086"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 222,
+    "dal_2000": 23,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q3100750": {
+   "nome": "Genjirō Yoshida",
+   "nascita": "1886-11-24",
+   "morte": "1956-04-21",
+   "p268_oggi": [
+    "15524627s"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 4,
+    "dal_2000": 4,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q3115772": {
+   "nome": "Manik Bandyopadhyay",
+   "nascita": "1908-05-19",
+   "morte": "1956-12-03",
+   "p268_oggi": [
+    "12007731b"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 1,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q3122298": {
+   "nome": "Guy de Téramond",
+   "nascita": "1869-03-02",
+   "morte": "1957-11-12",
+   "p268_oggi": [
+    "12102847z"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 241,
+    "dal_2000": 1,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q312637": {
+   "nome": "Curzio Malaparte",
+   "nascita": "1898-06-09",
+   "morte": "1957-07-19",
+   "p268_oggi": [
+    "11038928q",
+    "11914063x"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 108,
+    "dal_2000": 37,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q313096": {
+   "nome": "Jean Metzinger",
+   "nascita": "1883-06-24",
+   "morte": "1956-11-01",
+   "p268_oggi": [
+    "12625390q"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 11,
+    "dal_2000": 2,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q3157322": {
+   "nome": "Jack Snow",
+   "nascita": "1907-08-15",
+   "morte": "1956-07-13",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q3187690": {
+   "nome": "Juan José Morosoli",
+   "nascita": "1899-01-19",
+   "morte": "1957-12-29",
+   "p268_oggi": [
+    "12018826g"
+   ],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q3277794": {
+   "nome": "Mahmoud Bourguiba",
+   "nascita": "1909-08-20",
+   "morte": "1956-05-22",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q33110662": {
+   "nome": "Juan María Oliver",
+   "nascita": "1881-01-01",
+   "morte": "1957-01-01",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q337276": {
+   "nome": "Sacha Guitry",
+   "nascita": "1885-02-21",
+   "morte": "1957-07-24",
+   "p268_oggi": [
+    "119065193"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 724,
+    "dal_2000": 148,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q3387299": {
+   "nome": "Pierre Villetard",
+   "nascita": "1874-12-10",
+   "morte": "1956-11-20",
+   "p268_oggi": [
+    "12110875x"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 54,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q3398467": {
+   "nome": "John Dyfnallt Owen",
+   "nascita": "1873-04-07",
+   "morte": "1956-12-28",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q3438314": {
+   "nome": "Rodolphe Girard",
+   "nascita": "1879-04-24",
+   "morte": "1956-03-29",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q3453278": {
+   "nome": "Rupert Hughes",
+   "nascita": "1872-01-31",
+   "morte": "1956-09-09",
+   "p268_oggi": [
+    "10959075t"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 1,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q346729": {
+   "nome": "Kenneth Roberts",
+   "nascita": "1885-12-08",
+   "morte": "1957-07-21",
+   "p268_oggi": [
+    "122571196"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 12,
+    "dal_2000": 1,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q347832": {
+   "nome": "Ricardo Rojas",
+   "nascita": "1882-09-16",
+   "morte": "1957-07-29",
+   "p268_oggi": [
+    "12371832g"
+   ],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q3526636": {
+   "nome": "Théophile Briant",
+   "nascita": "1891-08-02",
+   "morte": "1956-08-05",
+   "p268_oggi": [
+    "118939958"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 39,
+    "dal_2000": 3,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q357120": {
+   "nome": "Malcolm Lowry",
+   "nascita": "1909-07-28",
+   "morte": "1957-06-26",
+   "p268_oggi": [
+    "11913520s"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 57,
+    "dal_2000": 22,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q3623504": {
+   "nome": "Arnaldo Fraccaroli",
+   "nascita": "1882-04-26",
+   "morte": "1956-06-16",
+   "p268_oggi": [
+    "124627583"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 2,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q3631340": {
+   "nome": "Bhai Vir Singh",
+   "nascita": "1872-12-05",
+   "morte": "1957-06-10",
+   "p268_oggi": [
+    "12047102x"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 1,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q3646436": {
+   "nome": "Derenik Demirchian",
+   "nascita": "1877-01-17",
+   "morte": "1956-12-06",
+   "p268_oggi": [
+    "15618257j"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 2,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q366715": {
+   "nome": "David Shimoni",
+   "nascita": "1886-08-22",
+   "morte": "1956-12-10",
+   "p268_oggi": [
+    "150939974"
+   ],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q369608": {
+   "nome": "Qi Baishi",
+   "nascita": "1864-01-01",
+   "morte": "1957-09-16",
+   "p268_oggi": [
+    "13172572x"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 1,
+    "dal_2000": 1,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q3713064": {
+   "nome": "Domenico Giuliotti",
+   "nascita": "1877-02-18",
+   "morte": "1956-01-12",
+   "p268_oggi": [
+    "12059243g"
+   ],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q371854": {
+   "nome": "Antonín Zápotocký",
+   "nascita": "1884-12-19",
+   "morte": "1957-11-13",
+   "p268_oggi": [
+    "14033506h"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 6,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q371925": {
+   "nome": "Corrado Alvaro",
+   "nascita": "1895-04-15",
+   "morte": "1956-06-11",
+   "p268_oggi": [
+    "12160250z"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 10,
+    "dal_2000": 2,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q3719585": {
+   "nome": "Edoardo Firpo",
+   "nascita": "1889-04-20",
+   "morte": "1957-02-10",
+   "p268_oggi": [
+    "12058774w"
+   ],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q3783036": {
+   "nome": "Haniel Long",
+   "nascita": "1888-03-09",
+   "morte": "1956-10-17",
+   "p268_oggi": [
+    "119132877"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 4,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q379595": {
+   "nome": "Reşat Nuri Güntekin",
+   "nascita": "1889-11-25",
+   "morte": "1956-12-07",
+   "p268_oggi": [
+    "12055294d"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 1,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q380439": {
+   "nome": "Sholem Asch",
+   "nascita": "1880-01-01",
+   "morte": "1957-07-10",
+   "p268_oggi": [
+    "12051934h"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 27,
+    "dal_2000": 8,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q3809247": {
+   "nome": "John Emerson",
+   "nascita": "1874-05-29",
+   "morte": "1956-03-07",
+   "p268_oggi": [
+    "140960392"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 6,
+    "dal_2000": 6,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q38757": {
+   "nome": "Bertolt Brecht",
+   "nascita": "1898-02-10",
+   "morte": "1956-08-14",
+   "p268_oggi": [
+    "11893857f"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 657,
+    "dal_2000": 182,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q3902928": {
+   "nome": "Pier Maria Rosso di San Secondo",
+   "nascita": "1887-11-30",
+   "morte": "1956-11-22",
+   "p268_oggi": [
+    "121993203"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 3,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q4018179": {
+   "nome": "Ward Greene",
+   "nascita": "1892-12-23",
+   "morte": "1956-01-22",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q4170627": {
+   "nome": "Godabarish Mishra",
+   "nascita": "1886-10-26",
+   "morte": "1956-07-26",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q439204": {
+   "nome": "Henry Louis Mencken",
+   "nascita": "1880-09-12",
+   "morte": "1956-01-29",
+   "p268_oggi": [
+    "120271809"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 8,
+    "dal_2000": 2,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q447268": {
+   "nome": "Dorothy Richardson",
+   "nascita": "1873-05-17",
+   "morte": "1957-06-17",
+   "p268_oggi": [
+    "11921885x"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 6,
+    "dal_2000": 1,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q451312": {
+   "nome": "Umberto Saba",
+   "nascita": "1883-03-09",
+   "morte": "1957-08-25",
+   "p268_oggi": [
+    "119231875"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 21,
+    "dal_2000": 4,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q4583273": {
+   "nome": "Halvor Floden",
+   "nascita": "1884-07-22",
+   "morte": "1956-12-03",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q458658": {
+   "nome": "Edward Plunkett, XVIII barone Dunsany",
+   "nascita": "1878-07-24",
+   "morte": "1957-10-25",
+   "p268_oggi": [
+    "11920077v"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 28,
+    "dal_2000": 13,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q459293": {
+   "nome": "Arturo Barea",
+   "nascita": "1897-09-20",
+   "morte": "1957-12-24",
+   "p268_oggi": [
+    "12996495x"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 3,
+    "dal_2000": 1,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q4647724": {
+   "nome": "A. E. Coppard",
+   "nascita": "1878-01-04",
+   "morte": "1957-01-13",
+   "p268_oggi": [
+    "108909644"
+   ],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q4648282": {
+   "nome": "A. R. D. Fairburn",
+   "nascita": "1904-02-02",
+   "morte": "1957-03-25",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q468708": {
+   "nome": "Anna Haava",
+   "nascita": "1864-10-15",
+   "morte": "1957-03-13",
+   "p268_oggi": [
+    "12559787b"
+   ],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q47008374": {
+   "nome": "Sunirmal Basu",
+   "nascita": "1902-07-20",
+   "morte": "1957-02-25",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q472071": {
+   "nome": "Max Beerbohm",
+   "nascita": "1872-08-24",
+   "morte": "1956-05-20",
+   "p268_oggi": [
+    "12015477j"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 9,
+    "dal_2000": 2,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q4767044": {
+   "nome": "Anna Gordon Keown",
+   "nascita": "1899-01-01",
+   "morte": "1957-01-01",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q4834199": {
+   "nome": "B. S. Mardhekar",
+   "nascita": "1909-12-01",
+   "morte": "1956-03-20",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q483709": {
+   "nome": "Jakub Kolas",
+   "nascita": "1882-11-03",
+   "morte": "1956-08-13",
+   "p268_oggi": [
+    "11955701c"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 1,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q48889747": {
+   "nome": "Charles Foleÿ",
+   "nascita": "1861-01-09",
+   "morte": "1956-02-27",
+   "p268_oggi": [
+    "12091284z"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 283,
+    "dal_2000": 2,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q4933556": {
+   "nome": "Bob Olsen",
+   "nascita": "1884-04-12",
+   "morte": "1956-05-20",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q4958416": {
+   "nome": "Sheila Kaye-Smith",
+   "nascita": "1887-02-04",
+   "morte": "1956-01-14",
+   "p268_oggi": [
+    "118866729"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 6,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q500042": {
+   "nome": "Louis Bromfield",
+   "nascita": "1896-12-27",
+   "morte": "1956-03-18",
+   "p268_oggi": [
+    "118941374"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 138,
+    "dal_2000": 14,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q50298099": {
+   "nome": "Islwyn Williams",
+   "nascita": "1903-01-01",
+   "morte": "1957-01-01",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q5040265": {
+   "nome": "Carl H. Claudy",
+   "nascita": "1879-01-13",
+   "morte": "1957-05-27",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q5041871": {
+   "nome": "Carlos Bulosan",
+   "nascita": "1913-11-24",
+   "morte": "1956-09-11",
+   "p268_oggi": [
+    "144070096"
+   ],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q5045036": {
+   "nome": "Caroline Dale Snedeker",
+   "nascita": "1871-03-03",
+   "morte": "1956-01-22",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q5298362": {
+   "nome": "Dorothy Cottrell",
+   "nascita": "1902-07-16",
+   "morte": "1957-06-29",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q529858": {
+   "nome": "Giovanni Papini",
+   "nascita": "1881-01-09",
+   "morte": "1956-07-08",
+   "p268_oggi": [
+    "11918564m"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 37,
+    "dal_2000": 11,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q538478": {
+   "nome": "Gilbert Murray",
+   "nascita": "1866-01-02",
+   "morte": "1957-05-20",
+   "p268_oggi": [
+    "12367831c"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 10,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q5424072": {
+   "nome": "F. W. Harvey",
+   "nascita": "1888-03-26",
+   "morte": "1957-02-13",
+   "p268_oggi": [
+    "121342222"
+   ],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q549496": {
+   "nome": "Renée Erdős",
+   "nascita": "1878-05-07",
+   "morte": "1956-07-07",
+   "p268_oggi": [
+    "130023377"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 2,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q5495431": {
+   "nome": "Fred Henderson",
+   "nascita": "1867-01-01",
+   "morte": "1957-01-01",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q5591308": {
+   "nome": "Grace Miller White",
+   "nascita": "1868-01-01",
+   "morte": "1957-01-01",
+   "p268_oggi": [
+    "10517928s"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 1,
+    "dal_2000": 1,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q55948066": {
+   "nome": "Augustus Goetz",
+   "nascita": "1897-10-03",
+   "morte": "1957-09-30",
+   "p268_oggi": [
+    "14681463n"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 17,
+    "dal_2000": 6,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q55979103": {
+   "nome": "Ella MacMahon",
+   "nascita": "1864-07-23",
+   "morte": "1956-04-19",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q56051696": {
+   "nome": "Mulshankar Mulani",
+   "nascita": "1867-11-01",
+   "morte": "1957-12-14",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q56064825": {
+   "nome": "V. T. Murray",
+   "nascita": "1874-01-01",
+   "morte": "1956-01-01",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q561656": {
+   "nome": "Lőrinc Szabó",
+   "nascita": "1900-03-31",
+   "morte": "1957-10-03",
+   "p268_oggi": [
+    "121724986"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 2,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q5642970": {
+   "nome": "Hallie Erminie Rives",
+   "nascita": "1874-05-02",
+   "morte": "1956-08-16",
+   "p268_oggi": [
+    "144948295"
+   ],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q565684": {
+   "nome": "Anne Parrish",
+   "nascita": "1888-11-12",
+   "morte": "1957-09-05",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q566764": {
+   "nome": "Nikolaj Velimirović",
+   "nascita": "1881-01-04",
+   "morte": "1956-03-18",
+   "p268_oggi": [
+    "12114643q"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 15,
+    "dal_2000": 13,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q57277": {
+   "nome": "Gottfried Benn",
+   "nascita": "1886-05-02",
+   "morte": "1956-06-07",
+   "p268_oggi": [
+    "118912230"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 13,
+    "dal_2000": 2,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q57389": {
+   "nome": "Alfred Döblin",
+   "nascita": "1878-08-10",
+   "morte": "1957-06-24",
+   "p268_oggi": [
+    "170357090",
+    "11898864x"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 55,
+    "dal_2000": 20,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q5798363": {
+   "nome": "Daniel García-Mansilla",
+   "nascita": "1867-10-12",
+   "morte": "1957-06-23",
+   "p268_oggi": [
+    "16355376t"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 1,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q5857770": {
+   "nome": "Federico Oliver Crespo",
+   "nascita": "1873-10-22",
+   "morte": "1957-02-21",
+   "p268_oggi": [
+    "13550281v"
+   ],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q5921198": {
+   "nome": "Howard Wandrei",
+   "nascita": "1909-09-24",
+   "morte": "1956-09-05",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q596925": {
+   "nome": "Edmund Clerihew Bentley",
+   "nascita": "1875-07-10",
+   "morte": "1956-03-30",
+   "p268_oggi": [
+    "11891301z"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 8,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q5993001": {
+   "nome": "Manuel Fontdevila",
+   "nascita": "1887-06-23",
+   "morte": "1957-05-18",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q60367185": {
+   "nome": "Charles Neville Buck",
+   "nascita": "1879-01-01",
+   "morte": "1957-08-10",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q6101330": {
+   "nome": "Mithat Cemal Kuntay",
+   "nascita": "1885-01-01",
+   "morte": "1956-03-30",
+   "p268_oggi": [
+    "15552471v"
+   ],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q6122090": {
+   "nome": "Jagadish Chandra Gupta",
+   "nascita": "1886-07-01",
+   "morte": "1957-04-15",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q61653709": {
+   "nome": "Albert Flament",
+   "nascita": "1875-05-08",
+   "morte": "1956-12-13",
+   "p268_oggi": [
+    "12125270z"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 79,
+    "dal_2000": 1,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q6169722": {
+   "nome": "Yamandú Rodríguez",
+   "nascita": "1891-05-25",
+   "morte": "1957-03-15",
+   "p268_oggi": [
+    "14864454b"
+   ],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q6171046": {
+   "nome": "Jean Louis De Esque",
+   "nascita": "1879-01-01",
+   "morte": "1956-01-01",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q61968643": {
+   "nome": "Paul Leclercq",
+   "nascita": "1871-02-22",
+   "morte": "1956-02-24",
+   "p268_oggi": [
+    "127288397"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 15,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q6217845": {
+   "nome": "John A. Moroso",
+   "nascita": "1874-08-17",
+   "morte": "1957-06-06",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q625336": {
+   "nome": "Kim Nae-sung",
+   "nascita": "1909-05-29",
+   "morte": "1957-02-19",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q6288424": {
+   "nome": "Josephine Pinckney",
+   "nascita": "1895-01-25",
+   "morte": "1957-10-04",
+   "p268_oggi": [
+    "14425643z"
+   ],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q638843": {
+   "nome": "Paul la Cour",
+   "nascita": "1902-11-09",
+   "morte": "1956-09-20",
+   "p268_oggi": [
+    "125014041"
+   ],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q64685698": {
+   "nome": "Frances Forbes-Robertson",
+   "nascita": "1866-12-15",
+   "morte": "1956-01-01",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q6513844": {
+   "nome": "Lee Hawkins Garby",
+   "nascita": "1890-02-20",
+   "morte": "1957-05-10",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q65246944": {
+   "nome": "Emanuel Havelka",
+   "nascita": "1873-03-08",
+   "morte": "1956-03-03",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q6547722": {
+   "nome": "Lilian Wooster Greaves",
+   "nascita": "1869-12-21",
+   "morte": "1956-01-28",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q6727922": {
+   "nome": "Madison Cooper",
+   "nascita": "1894-06-03",
+   "morte": "1956-09-28",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q6796494": {
+   "nome": "May Edginton",
+   "nascita": "1883-12-20",
+   "morte": "1957-06-17",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q6834101": {
+   "nome": "Michael Sadleir",
+   "nascita": "1888-12-25",
+   "morte": "1957-12-13",
+   "p268_oggi": [
+    "12311786w"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 3,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q6963402": {
+   "nome": "Naṇḍūri Veṅkaṭa Subbārāvu",
+   "nascita": "1884-01-01",
+   "morte": "1957-01-01",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q7159888": {
+   "nome": "Pedro Pérez Fernández",
+   "nascita": "1884-01-01",
+   "morte": "1956-01-01",
+   "p268_oggi": [
+    "105745793"
+   ],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q7167474": {
+   "nome": "Percy Marks",
+   "nascita": "1891-09-09",
+   "morte": "1956-12-27",
+   "p268_oggi": [
+    "10866987m"
+   ],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q7182457": {
+   "nome": "Phil Stong",
+   "nascita": "1899-01-27",
+   "morte": "1957-04-26",
+   "p268_oggi": [
+    "10227853d"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 3,
+    "dal_2000": 3,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q7274124": {
+   "nome": "R. Williams Parry",
+   "nascita": "1884-03-06",
+   "morte": "1956-01-04",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q76075397": {
+   "nome": "Winston Clewes",
+   "nascita": "1906-03-20",
+   "morte": "1957-07-26",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q7660316": {
+   "nome": "Syed Emdad Ali",
+   "nascita": "1880-01-01",
+   "morte": "1956-12-03",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q77491": {
+   "nome": "Hans Carossa",
+   "nascita": "1878-12-15",
+   "morte": "1956-09-12",
+   "p268_oggi": [
+    "12102324x"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 13,
+    "dal_2000": 2,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q780102": {
+   "nome": "Wyndham Lewis",
+   "nascita": "1882-11-18",
+   "morte": "1957-03-07",
+   "p268_oggi": [
+    "119129001"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 12,
+    "dal_2000": 3,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q78437": {
+   "nome": "Ernst Bertram",
+   "nascita": "1884-07-27",
+   "morte": "1957-05-03",
+   "p268_oggi": [
+    "12027965m"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 5,
+    "dal_2000": 1,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q7901271": {
+   "nome": "Ursula Parrott",
+   "nascita": "1900-03-26",
+   "morte": "1957-09-01",
+   "p268_oggi": [
+    "158756774"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 11,
+    "dal_2000": 9,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q79351531": {
+   "nome": "Rashīd ʻAṭīyah",
+   "nascita": "1881-12-31",
+   "morte": "1956-01-01",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q80871": {
+   "nome": "Gabriela Mistral",
+   "nascita": "1889-04-07",
+   "morte": "1957-01-10",
+   "p268_oggi": [
+    "12020618k"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 14,
+    "dal_2000": 5,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q8345656": {
+   "nome": "Christofredo Jakob",
+   "nascita": "1866-12-25",
+   "morte": "1956-05-06",
+   "p268_oggi": [
+    "125664990"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 6,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q853226": {
+   "nome": "Jenő Heltai",
+   "nascita": "1871-08-11",
+   "morte": "1957-09-03",
+   "p268_oggi": [
+    "120276006"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 5,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q857714": {
+   "nome": "Camil Petrescu",
+   "nascita": "1894-04-21",
+   "morte": "1957-05-14",
+   "p268_oggi": [
+    "120591823"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 7,
+    "dal_2000": 2,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q86629526": {
+   "nome": "Kaj Gynt",
+   "nascita": "1885-10-24",
+   "morte": "1956-01-01",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q8962216": {
+   "nome": "Francesc Trabal i Benessat",
+   "nascita": "1899-05-05",
+   "morte": "1957-11-08",
+   "p268_oggi": [
+    "12074944z"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 2,
+    "dal_2000": 1,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q9012032": {
+   "nome": "Joan Puig i Ferreter",
+   "nascita": "1882-02-05",
+   "morte": "1956-02-02",
+   "p268_oggi": [
+    "12055171g"
+   ],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q90156741": {
+   "nome": "Clotilde Chivas-Baron",
+   "nascita": "1876-09-05",
+   "morte": "1956-12-23",
+   "p268_oggi": [
+    "12734576v"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 10,
+    "dal_2000": 1,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q923614": {
+   "nome": "Nicolae Labiș",
+   "nascita": "1935-12-02",
+   "morte": "1956-12-22",
+   "p268_oggi": [
+    "120995198"
+   ],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q931105": {
+   "nome": "Christopher Morley",
+   "nascita": "1890-05-05",
+   "morte": "1957-03-28",
+   "p268_oggi": [
+    "12686085s"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 8,
+    "dal_2000": 4,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q93450": {
+   "nome": "Leo Perutz",
+   "nascita": "1882-11-02",
+   "morte": "1957-08-25",
+   "p268_oggi": [
+    "119193242"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 52,
+    "dal_2000": 14,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q943909": {
+   "nome": "Frank L. Pollack",
+   "nascita": "1876-02-04",
+   "morte": "1957-01-01",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q94405664": {
+   "nome": "N.-P. Landry",
+   "nascita": "1884-01-01",
+   "morte": "1956-01-01",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q94917876": {
+   "nome": "Hans Mahner-Mons",
+   "nascita": "1883-04-19",
+   "morte": "1956-10-11",
+   "p268_oggi": [
+    "16985479s"
+   ],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q95072057": {
+   "nome": "Jaroslav Arséne La Motte",
+   "nascita": "1886-03-29",
+   "morte": "1957-02-22",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q95073899": {
+   "nome": "Zikmund Skyba",
+   "nascita": "1909-03-03",
+   "morte": "1957-07-23",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q95126535": {
+   "nome": "Alexandra Urbanová",
+   "nascita": "1921-04-27",
+   "morte": "1956-11-24",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q95165859": {
+   "nome": "Karel Polák",
+   "nascita": "1903-09-26",
+   "morte": "1956-08-24",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q95175282": {
+   "nome": "Viktor Kripner",
+   "nascita": "1906-05-13",
+   "morte": "1956-04-22",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q95183293": {
+   "nome": "Jaroslav Hloušek",
+   "nascita": "1875-07-18",
+   "morte": "1957-01-03",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q95387414": {
+   "nome": "Alois Čáp",
+   "nascita": "1892-05-08",
+   "morte": "1957-06-09",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q95403123": {
+   "nome": "Eduard Kučera",
+   "nascita": "1884-06-14",
+   "morte": "1956-12-21",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q95435084": {
+   "nome": "Jindřich Bedřich Heller",
+   "nascita": "1891-10-20",
+   "morte": "1957-08-04",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q95471631": {
+   "nome": "Vilém Peřina",
+   "nascita": "1891-03-01",
+   "morte": "1956-05-31",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q960018": {
+   "nome": "Paul Léautaud",
+   "nascita": "1872-01-18",
+   "morte": "1956-02-22",
+   "p268_oggi": [
+    "14297664h",
+    "11911833g"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 220,
+    "dal_2000": 18,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q967039": {
+   "nome": "Félix Gandéra",
+   "nascita": "1885-02-17",
+   "morte": "1957-12-15",
+   "p268_oggi": [
+    "14099928m"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 50,
+    "dal_2000": 4,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q981086": {
+   "nome": "Walter de la Mare",
+   "nascita": "1873-04-25",
+   "morte": "1956-06-22",
+   "p268_oggi": [
+    "12109977v"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 13,
+    "dal_2000": 1,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q983356": {
+   "nome": "Charles MacArthur",
+   "nascita": "1895-11-05",
+   "morte": "1956-04-21",
+   "p268_oggi": [
+    "13985957f"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 30,
+    "dal_2000": 14,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q983507": {
+   "nome": "Səməd Vurğun",
+   "nascita": "1906-03-21",
+   "morte": "1956-05-27",
+   "p268_oggi": [],
+   "cache": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "metodo": null,
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  },
+  "Q98497295": {
+   "nome": "A. Lutzky",
+   "nascita": "1894-01-01",
+   "morte": "1957-09-16",
+   "p268_oggi": [
+    "141172590"
+   ],
+   "cache": {
+    "trovato": true,
+    "edizioni": 2,
+    "dal_2000": 1,
+    "metodo": "codice_bnf",
+    "fonte": "BnF",
+    "ts": "2026-11-17",
+    "v": 1
+   }
+  }
+ }
+}
