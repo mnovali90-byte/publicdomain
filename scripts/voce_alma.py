@@ -84,12 +84,37 @@ def notizie(base, query):
     return tot, out
 
 
-def sua(voci, cogn, nato, morto):
-    """La notizia è dell'autore se una stessa voce contiene uno dei cognomi e tutti e due gli anni."""
+def iniziali(nome, alias=()):
+    """Iniziali dei nomi di battesimo (tutte le parole tranne il cognome), anche da pseudonimi e nomi alternativi."""
+    out = set()
+    for n in [nome] + list(alias or []):
+        for w in (n or "").split()[:-1]:
+            w = sa(re.sub(r"[^\w]", "", w))
+            if w and w not in PARTICELLE:
+                out.add(w[0])
+    return out
+
+
+def sua(voci, cogn, nato, morto, iniz=None):
+    """La notizia è dell'autore se una stessa voce d'autore:
+    - ha il cognome nella parte prima della virgola (dove i cataloghi scrivono il cognome) o, per i nomi senza
+      virgola, in una parola che comincia con il cognome (Wīra Siṅgha per Singh);
+    - e ha tutti e due gli anni, OPPURE non ha nessun anno e il nome di battesimo comincia con la stessa iniziale
+      (la British Library scrive spesso «Cummings, Ray.» senza anni: versione 2, 18/11/2026).
+    Una voce con anni diversi è di un'altra persona."""
     for v in voci:
         w = sa(v)
-        if nato in w and morto in w and any(re.search(rf"\b{re.escape(c)}\b", w) for c in cogn):
+        cogn_parte, _, resto = w.partition(",")
+        parole = re.findall(r"\w+", cogn_parte)
+        if not any(c in parole or any(p.startswith(c) and len(c) >= 4 for p in parole) for c in cogn):
+            continue
+        anni = re.findall(r"\d{4}", w)
+        if nato in anni and morto in anni:
             return True
+        if not anni and iniz:
+            nomi = re.findall(r"[a-z]\w*", resto)
+            if nomi and nomi[0][0] in iniz:
+                return True
     return False
 
 
@@ -97,9 +122,9 @@ def conta_verificato(base, query, nome, alias, nascita, morte, anno_oggi):
     nato, morto = str(nascita or "")[:4], str(morte or "")[:4]
     if not (nato.isdigit() and morto.isdigit()):
         return {"trovato": False, "edizioni": 0, "dal_2000": 0}
-    cogn = cognomi(nome, alias)
+    cogn, iniz = cognomi(nome, alias), iniziali(nome, alias)
     tot, recs = notizie(base, query)
-    sue = [r for r in recs if sua(r["voci"], cogn, nato, morto)]
+    sue = [r for r in recs if sua(r["voci"], cogn, nato, morto, iniz)]
     d = sum(1 for r in sue if r["anno"].isdigit() and 2000 <= int(r["anno"]) <= anno_oggi)
     out = {"trovato": len(sue) > 0, "edizioni": len(sue), "dal_2000": d, "trovate_dalla_ricerca": tot, "scartate": len(recs) - len(sue)}
     if tot > MASSIMO:

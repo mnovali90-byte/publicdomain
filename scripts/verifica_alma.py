@@ -13,8 +13,9 @@ import voce_alma  # noqa: E402
 from arricchisci import sparql  # noqa: E402
 
 RADICE = pathlib.Path(__file__).resolve().parent.parent
-D = RADICE / "docs" / "verifica-alma"
-SEME = 20261120
+import os
+D = RADICE / "docs" / os.environ.get("VERIFICA_DIR", "verifica-alma")
+SEME = int(os.environ.get("VERIFICA_SEME", "20261120"))
 CONGELATI = ["scripts/voce_alma.py"]
 
 
@@ -23,6 +24,8 @@ def impronte():
 
 
 def congela():
+    """Nota: la prima verifica (docs/verifica-alma) ha trovato 41 notizie giuste scartate (voci senza anni): con la
+    versione 2 di voce_alma.py quel campione è diventato di sviluppo e la verifica si rifà in docs/verifica-alma2."""
     D.mkdir(parents=True, exist_ok=True)
     c = subprocess.run(["git", "rev-parse", "HEAD"], cwd=RADICE, capture_output=True, text=True).stdout.strip()
     (D / "regole-congelate.json").write_text(json.dumps({"commit": c, "sha256": impronte()}, indent=1), encoding="utf-8")
@@ -49,6 +52,8 @@ def prove():
             for a in json.loads(f.read_text(encoding="utf-8")).get("autori", []):
                 autori.setdefault(a["wikidata"], a)
     usati = {r["qid"] for r in json.loads((RADICE / "docs" / "campione-bl" / "prove.json").read_text(encoding="utf-8"))["autori"]}
+    if D.name != "verifica-alma":       # le verifiche successive escludono anche gli autori della prima
+        usati |= {r["qid"] for r in json.loads((RADICE / "docs" / "verifica-alma" / "campione.json").read_text(encoding="utf-8"))["autori"]}
     con = sorted(q for q, v in cache.items() if q in autori and q not in usati and (v.get("bl_en") or {}).get("trovato"))
     scelti = random.Random(SEME).sample(con, 40)
     al = alias(scelti)
@@ -93,7 +98,7 @@ def misura():
         cc = collections.Counter()
         for x in a.get("notizie", []):
             vera = any(v in mie for v in x["voci"]) or x["titolo"] in esiti[a["qid"]].get("titoli_suoi", [])
-            tenuta = voce_alma.sua(x["voci"], cogn, nato, morto)
+            tenuta = voce_alma.sua(x["voci"], cogn, nato, morto, voce_alma.iniziali(a["nome"], a["alias"]))
             cc[("sua" if vera else "di altri", "tenuta" if tenuta else "scartata")] += 1
         try:
             nuovo = voce_alma.conta_verificato(c["url"], a["query"], a["nome"], a["alias"], a["nascita"], a["morte"], dt.date.today().year)
