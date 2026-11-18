@@ -4,7 +4,7 @@
  "paese": "ue",
  "regola": "UE: morte + 70 anni, dal 1 gennaio dell'anno successivo",
  "fonte": "Wikidata (CC0)",
- "aggiornato": "2026-11-17",
+ "aggiornato": "2026-11-18",
  "totale": 1426,
  "autori": [
   {
@@ -18550,7 +18550,7 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 62,
-   "indice": 79,
+   "indice": 78,
    "traduzioni": {
     "opere": 52,
     "con_lingua": 48,
@@ -20877,6 +20877,52 @@
     "scrittore"
    ],
    "url": "https://www.wikidata.org/wiki/Q3531987"
+  },
+  {
+   "wikidata": "Q111268580",
+   "nome": "Una Nixson Hopkins",
+   "nascita": "1869-01-01",
+   "morte": "1956-01-01",
+   "pagine_wikipedia": 3,
+   "professioni": [
+    "romanziere",
+    "scrittore"
+   ],
+   "url": "https://www.wikidata.org/wiki/Q111268580",
+   "letterario": true,
+   "tipo_catalogo": [
+    "Romanzo"
+   ],
+   "bio": "Una Nixson Hopkins was an American writer and designer, and an art director who worked in silent films.",
+   "bio_url": "https://en.wikipedia.org/wiki/Una_Nixson_Hopkins",
+   "bio_lingua": "en",
+   "bios": {
+    "en": {
+     "testo": "Una Nixson Hopkins was an American writer and designer, and an art director who worked in silent films.",
+     "url": "https://en.wikipedia.org/wiki/Una_Nixson_Hopkins"
+    }
+   },
+   "n_opere": 0,
+   "visite_12m": 339,
+   "visite_it": 0,
+   "visite_en": 339,
+   "visite_es": 0,
+   "visite_de": 0,
+   "visite_fr": 0,
+   "indice_it": 0,
+   "indice_en": 68,
+   "indice_es": 0,
+   "indice_de": 0,
+   "indice_fr": 0,
+   "indice_int": 62,
+   "indice": 65,
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1956,
+     "gnd": 1956
+    }
+   }
   },
   {
    "wikidata": "Q22246773",
@@ -26611,52 +26657,6 @@
    "url": "https://www.wikidata.org/wiki/Q11596072"
   },
   {
-   "wikidata": "Q111268580",
-   "nome": "Una Nixson Hopkins",
-   "nascita": "1869-01-01",
-   "morte": "1956-01-01",
-   "pagine_wikipedia": 2,
-   "professioni": [
-    "romanziere",
-    "scrittore"
-   ],
-   "url": "https://www.wikidata.org/wiki/Q111268580",
-   "letterario": true,
-   "tipo_catalogo": [
-    "Romanzo"
-   ],
-   "bio": "Una Nixson Hopkins was an American writer and designer, and an art director who worked in silent films.",
-   "bio_url": "https://en.wikipedia.org/wiki/Una_Nixson_Hopkins",
-   "bio_lingua": "en",
-   "bios": {
-    "en": {
-     "testo": "Una Nixson Hopkins was an American writer and designer, and an art director who worked in silent films.",
-     "url": "https://en.wikipedia.org/wiki/Una_Nixson_Hopkins"
-    }
-   },
-   "n_opere": 0,
-   "visite_12m": 339,
-   "visite_it": 0,
-   "visite_en": 339,
-   "visite_es": 0,
-   "visite_de": 0,
-   "visite_fr": 0,
-   "indice_it": 0,
-   "indice_en": 68,
-   "indice_es": 0,
-   "indice_de": 0,
-   "indice_fr": 0,
-   "indice_int": 48,
-   "indice": 62,
-   "verifica": {
-    "esito": "verificato",
-    "fonti": {
-     "wikidata": 1956,
-     "gnd": 1956
-    }
-   }
-  },
-  {
    "wikidata": "Q3553634",
    "nome": "Valentine Benoît d'Entrevaux",
    "nascita": "1889-09-12",
@@ -27818,10 +27818,10 @@
      "loc": 1956
     },
     "citate": {
+     "Czech National Authority Database": 1956,
      "Theaterlexikon der Schweiz": 1956,
      "Historical Dictionary of Switzerland": 1956,
-     "Brockhaus Enzyklopädie": 1956,
-     "Czech National Authority Database": 1956
+     "Brockhaus Enzyklopädie": 1956
     }
    }
   },
@@ -42999,7 +42999,7 @@
    "n": 1
   }
  ],
- "arricchito": "2026-11-17",
+ "arricchito": "2026-11-18",
  "indice_formula": "tre misure separate: visite Wikipedia it, visite Wikipedia en, numero di lingue con una pagina; ciascuna 0-100 rispetto alla lista dell'anno",
- "traduzioni_aggiornato": "2026-11-17"
+ "traduzioni_aggiornato": "2026-11-18"
 }

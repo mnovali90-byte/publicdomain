@@ -1,7 +1,7 @@
 {
  "anno": 2028,
  "anno_pubblicazione": 1932,
- "aggiornato": "2026-11-17",
+ "aggiornato": "2026-11-18",
  "fonte": "Wikidata (CC0), Wikipedia, Wikimedia Commons",
  "opere": [
   {
@@ -23,7 +23,7 @@
    "generi": [
     "fantasy_sf"
    ],
-   "visite_en": 932244,
+   "visite_en": 932247,
    "copertina": {
     "file": "Giveaway von Pinguin Books für Brave New World (cropped).jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Giveaway_von_Pinguin_Books_f%C3%BCr_Brave_New_World_%28cropped%29.jpg/500px-Giveaway_von_Pinguin_Books_f%C3%BCr_Brave_New_World_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -51,7 +51,7 @@
    "generi": [
     "ragazzi"
    ],
-   "visite_en": 109219
+   "visite_en": 109189
   },
   {
    "qid": "Q774233",
@@ -72,7 +72,7 @@
    "generi": [
     "memorie"
    ],
-   "visite_en": 84930,
+   "visite_en": 84915,
    "copertina": {
     "file": "Journey to the End of the Night 1932.jpg",
     "url": "https://upload.wikimedia.org/wikipedia/commons/5/59/Journey_to_the_End_of_the_Night_1932.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -100,7 +100,7 @@
    "generi": [
     "storico"
    ],
-   "visite_en": 78810,
+   "visite_en": 78777,
    "copertina": {
     "file": "Robert Musil - Der Mann ohne Eigenschaften, 1930.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Robert_Musil_-_Der_Mann_ohne_Eigenschaften%2C_1930.jpg/500px-Robert_Musil_-_Der_Mann_ohne_Eigenschaften%2C_1930.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -128,7 +128,7 @@
    "generi": [
     "horror"
    ],
-   "visite_en": 60911,
+   "visite_en": 60832,
    "copertina": {
     "file": "Light in August (1932 dust jacket cover).jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Light_in_August_%281932_dust_jacket_cover%29.jpg/500px-Light_in_August_%281932_dust_jacket_cover%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -156,7 +156,7 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 56398
+   "visite_en": 56365
   },
   {
    "qid": "Q5142221",
@@ -177,26 +177,7 @@
    "generi": [
     "satira"
    ],
-   "visite_en": 47268
-  },
-  {
-   "qid": "Q934396",
-   "titolo": "The Thirteen Problems",
-   "titolo_it": "Miss Marple e i tredici problemi",
-   "autori": [
-    {
-     "qid": "Q35064",
-     "nome": "Agatha Christie"
-    }
-   ],
-   "pagine": 26,
-   "wiki_en": "https://en.wikipedia.org/wiki/The_Thirteen_Problems",
-   "lingua": {
-    "en": "English",
-    "it": "inglese"
-   },
-   "generi": [],
-   "visite_en": 40492
+   "visite_en": 47267
   },
   {
    "qid": "Q7727278",
@@ -215,7 +196,26 @@
     "it": "tedesco"
    },
    "generi": [],
-   "visite_en": 40424
+   "visite_en": 40406
+  },
+  {
+   "qid": "Q934396",
+   "titolo": "The Thirteen Problems",
+   "titolo_it": "Miss Marple e i tredici problemi",
+   "autori": [
+    {
+     "qid": "Q35064",
+     "nome": "Agatha Christie"
+    }
+   ],
+   "pagine": 26,
+   "wiki_en": "https://en.wikipedia.org/wiki/The_Thirteen_Problems",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [],
+   "visite_en": 40316
   },
   {
    "qid": "Q610428",
@@ -236,7 +236,7 @@
    "generi": [
     "storico"
    ],
-   "visite_en": 39571,
+   "visite_en": 39498,
    "copertina": {
     "file": "Joseph Roth Radetzkymarsch 1932.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Joseph_Roth_Radetzkymarsch_1932.jpg/500px-Joseph_Roth_Radetzkymarsch_1932.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -262,7 +262,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 36588,
+   "visite_en": 36570,
    "copertina": {
     "file": "Heming Way.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Heming_Way.jpg/500px-Heming_Way.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -288,7 +288,7 @@
     "it": "russo"
    },
    "generi": [],
-   "visite_en": 36120,
+   "visite_en": 36025,
    "copertina": {
     "file": "RUB 95 (Leipzig, 1984, 23.Auflage) - Ostrowski, Wie der Stahl.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/RUB_95_%28Leipzig%2C_1984%2C_23.Auflage%29_-_Ostrowski%2C_Wie_der_Stahl.jpg/500px-RUB_95_%28Leipzig%2C_1984%2C_23.Auflage%29_-_Ostrowski%2C_Wie_der_Stahl.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -314,7 +314,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 23710
+   "visite_en": 23693
   },
   {
    "qid": "Q1955781",
@@ -335,7 +335,7 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 22554
+   "visite_en": 22537
   },
   {
    "qid": "Q2512207",
@@ -356,7 +356,7 @@
    "generi": [
     "fantasy_sf"
    ],
-   "visite_en": 22508
+   "visite_en": 22481
   },
   {
    "qid": "Q1900478",
@@ -381,7 +381,7 @@
    "generi": [
     "storico"
    ],
-   "visite_en": 20550
+   "visite_en": 20534
   },
   {
    "qid": "Q5264340",
@@ -400,7 +400,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 18656
+   "visite_en": 18649
   },
   {
    "qid": "Q17036247",
@@ -419,7 +419,7 @@
     "it": "sanscrito"
    },
    "generi": [],
-   "visite_en": 18178
+   "visite_en": 18161
   },
   {
    "qid": "Q3655833",
@@ -438,7 +438,7 @@
     "it": "lingua scots"
    },
    "generi": [],
-   "visite_en": 17371
+   "visite_en": 17360
   },
   {
    "qid": "Q370698",
@@ -457,7 +457,7 @@
     "it": "tedesco"
    },
    "generi": [],
-   "visite_en": 16272
+   "visite_en": 16261
   },
   {
    "qid": "Q751574",
@@ -478,7 +478,7 @@
    "generi": [
     "ragazzi"
    ],
-   "visite_en": 15316
+   "visite_en": 15304
   },
   {
    "qid": "Q257144",
@@ -497,7 +497,7 @@
     "it": "inglese americano"
    },
    "generi": [],
-   "visite_en": 12349
+   "visite_en": 12308
   },
   {
    "qid": "Q2182784",
@@ -518,7 +518,7 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 11476
+   "visite_en": 11440
   },
   {
    "qid": "Q1529809",
@@ -537,7 +537,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 9999
+   "visite_en": 9983
   },
   {
    "qid": "Q20657367",
@@ -556,7 +556,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 9188
+   "visite_en": 9180
   },
   {
    "qid": "Q6372683",
@@ -575,7 +575,7 @@
     "it": "hindī"
    },
    "generi": [],
-   "visite_en": 8759
+   "visite_en": 8735
   },
   {
    "qid": "Q1746652",
@@ -594,7 +594,7 @@
     "it": "tedesco"
    },
    "generi": [],
-   "visite_en": 8610
+   "visite_en": 8591
   },
   {
    "qid": "Q2614387",
@@ -613,7 +613,7 @@
     "it": "polacco"
    },
    "generi": [],
-   "visite_en": 8286,
+   "visite_en": 8261,
    "copertina": {
     "file": "Tadeusz Dolega-Mostowicz.jpg",
     "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Tadeusz_Dolega-Mostowicz.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -639,7 +639,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 8212
+   "visite_en": 8196
   },
   {
    "qid": "Q357328",
@@ -658,7 +658,7 @@
     "it": "tedesco"
    },
    "generi": [],
-   "visite_en": 8206,
+   "visite_en": 8189,
    "copertina": {
     "file": "Carola Neher als 'Johanna' - Karl Schrecker, 1930.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Carola_Neher_als_%27Johanna%27_-_Karl_Schrecker%2C_1930.jpg/500px-Carola_Neher_als_%27Johanna%27_-_Karl_Schrecker%2C_1930.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -686,7 +686,7 @@
    "generi": [
     "saggio"
    ],
-   "visite_en": 7691
+   "visite_en": 7672
   },
   {
    "qid": "Q5216075",
@@ -727,7 +727,7 @@
     "fantasy_sf",
     "sentimentale"
    ],
-   "visite_en": 7107
+   "visite_en": 7099
   },
   {
    "qid": "Q1706363",
@@ -748,7 +748,7 @@
    "generi": [
     "memorie"
    ],
-   "visite_en": 7025,
+   "visite_en": 6992,
    "copertina": {
     "file": "Louise Elisabeth Vigée-Lebrun - Marie-Antoinette dit « à la Rose » - Google Art Project.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Louise_Elisabeth_Vig%C3%A9e-Lebrun_-_Marie-Antoinette_dit_%C2%AB_%C3%A0_la_Rose_%C2%BB_-_Google_Art_Project.jpg/500px-Louise_Elisabeth_Vig%C3%A9e-Lebrun_-_Marie-Antoinette_dit_%C2%AB_%C3%A0_la_Rose_%C2%BB_-_Google_Art_Project.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -796,7 +796,7 @@
     "it": "tedesco"
    },
    "generi": [],
-   "visite_en": 5969
+   "visite_en": 5932
   },
   {
    "qid": "Q7745219",
@@ -815,7 +815,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 5638,
+   "visite_en": 5620,
    "copertina": {
     "file": "W. J. Linton (1812-1897) design for The Cornhill Magazine front, on a copy dated December 1945.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/W._J._Linton_%281812-1897%29_design_for_The_Cornhill_Magazine_front%2C_on_a_copy_dated_December_1945.jpg/500px-W._J._Linton_%281812-1897%29_design_for_The_Cornhill_Magazine_front%2C_on_a_copy_dated_December_1945.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -823,6 +823,21 @@
     "licenza": "Public domain",
     "autore": "W. J. Linton\n\n(Life time: (1812-1897))"
    }
+  },
+  {
+   "qid": "Q7718329",
+   "titolo": "The Black Girl in Search of God",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q19185",
+     "nome": "George Bernard Shaw"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/The_Adventures_of_the_Black_Girl_in_Her_Search_for_God",
+   "generi": [],
+   "visite_en": 5532
   },
   {
    "qid": "Q1075805",
@@ -843,22 +858,7 @@
    "generi": [
     "fantasy_sf"
    ],
-   "visite_en": 5555
-  },
-  {
-   "qid": "Q7718329",
-   "titolo": "The Black Girl in Search of God",
-   "titolo_it": null,
-   "autori": [
-    {
-     "qid": "Q19185",
-     "nome": "George Bernard Shaw"
-    }
-   ],
-   "pagine": 2,
-   "wiki_en": "https://en.wikipedia.org/wiki/The_Adventures_of_the_Black_Girl_in_Her_Search_for_God",
-   "generi": [],
-   "visite_en": 5549
+   "visite_en": 5522
   },
   {
    "qid": "Q8036886",
@@ -877,7 +877,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 5431
+   "visite_en": 5425
   },
   {
    "qid": "Q5278419",
@@ -900,7 +900,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 5345,
+   "visite_en": 5334,
    "copertina": {
     "file": "Dinner-at-Eight-FE.jpg",
     "url": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Dinner-at-Eight-FE.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -926,7 +926,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 5304
+   "visite_en": 5300
   },
   {
    "qid": "Q6165398",
@@ -947,7 +947,7 @@
    "generi": [
     "poesia"
    ],
-   "visite_en": 5249
+   "visite_en": 5246
   },
   {
    "qid": "Q3791139",
@@ -996,7 +996,7 @@
    "generi": [
     "storico"
    ],
-   "visite_en": 5122
+   "visite_en": 5113
   },
   {
    "qid": "Q7173756",
@@ -1015,7 +1015,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 4450,
+   "visite_en": 4441,
    "copertina": {
     "file": "Swallows and Amazons 03.png",
     "url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Swallows_and_Amazons_03.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -1068,7 +1068,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 4286
+   "visite_en": 4273
   },
   {
    "qid": "Q104856374",
@@ -1087,7 +1087,7 @@
     "it": "russo"
    },
    "generi": [],
-   "visite_en": 3967,
+   "visite_en": 3959,
    "copertina": {
     "file": "Trotsky - The Stalin school of falsification (cover, 1930).jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Trotsky_-_The_Stalin_school_of_falsification_%28cover%2C_1930%29.jpg/500px-Trotsky_-_The_Stalin_school_of_falsification_%28cover%2C_1930%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -1134,7 +1134,7 @@
     "it": "francese"
    },
    "generi": [],
-   "visite_en": 3911
+   "visite_en": 3888
   },
   {
    "qid": "Q5872036",
@@ -1148,7 +1148,7 @@
     "it": "tedesco"
    },
    "generi": [],
-   "visite_en": 3478
+   "visite_en": 3460
   },
   {
    "qid": "Q21162245",
@@ -1167,7 +1167,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 3465
+   "visite_en": 3454
   },
   {
    "qid": "Q5318076",
@@ -1188,39 +1188,13 @@
    "generi": [
     "fantasy_sf"
    ],
-   "visite_en": 3181,
+   "visite_en": 3160,
    "copertina": {
     "file": "Fantastic Novels cover September 1949.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Fantastic_Novels_cover_September_1949.jpg/500px-Fantastic_Novels_cover_September_1949.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "pagina": "https://commons.wikimedia.org/wiki/File:Fantastic_Novels_cover_September_1949.jpg",
     "licenza": "Public domain",
     "autore": "Fantastic Novels"
-   }
-  },
-  {
-   "qid": "Q1979886",
-   "titolo": "Glory",
-   "titolo_it": "Gloria",
-   "autori": [
-    {
-     "qid": "Q36591",
-     "nome": "Vladimir Nabokov"
-    }
-   ],
-   "pagine": 9,
-   "wiki_en": "https://en.wikipedia.org/wiki/Glory_(Vladimir_Nabokov_novel)",
-   "lingua": {
-    "en": "Russian",
-    "it": "russo"
-   },
-   "generi": [],
-   "visite_en": 3151,
-   "copertina": {
-    "file": "Podvig.jpg",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Podvig.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Podvig.jpg",
-    "licenza": "Public domain",
-    "autore": "Издательство журнала Современные записки (1920-1940)"
    }
   },
   {
@@ -1242,13 +1216,39 @@
    "generi": [
     "ragazzi"
    ],
-   "visite_en": 3151,
+   "visite_en": 3140,
    "copertina": {
     "file": "The Clue in the Diary (1932) front cover, 1945 printing.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/The_Clue_in_the_Diary_%281932%29_front_cover%2C_1945_printing.jpg/500px-The_Clue_in_the_Diary_%281932%29_front_cover%2C_1945_printing.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "pagina": "https://commons.wikimedia.org/wiki/File:The_Clue_in_the_Diary_%281932%29_front_cover%2C_1945_printing.jpg",
     "licenza": "Public domain",
     "autore": "Cover art by Russell H. Tandy"
+   }
+  },
+  {
+   "qid": "Q1979886",
+   "titolo": "Glory",
+   "titolo_it": "Gloria",
+   "autori": [
+    {
+     "qid": "Q36591",
+     "nome": "Vladimir Nabokov"
+    }
+   ],
+   "pagine": 9,
+   "wiki_en": "https://en.wikipedia.org/wiki/Glory_(Vladimir_Nabokov_novel)",
+   "lingua": {
+    "en": "Russian",
+    "it": "russo"
+   },
+   "generi": [],
+   "visite_en": 3135,
+   "copertina": {
+    "file": "Podvig.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Podvig.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Podvig.jpg",
+    "licenza": "Public domain",
+    "autore": "Издательство журнала Современные записки (1920-1940)"
    }
   },
   {
@@ -1268,7 +1268,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 3128
+   "visite_en": 3121
   },
   {
    "qid": "Q3412860",
@@ -1289,7 +1289,7 @@
    "generi": [
     "ragazzi"
    ],
-   "visite_en": 2737,
+   "visite_en": 2731,
    "copertina": {
     "file": "Nancy's Mysterious Letter (1932) front cover, first edition.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Nancy%27s_Mysterious_Letter_%281932%29_front_cover%2C_first_edition.jpg/500px-Nancy%27s_Mysterious_Letter_%281932%29_front_cover%2C_first_edition.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -1315,7 +1315,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 2645
+   "visite_en": 2626
   },
   {
    "qid": "Q6383214",
@@ -1334,7 +1334,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 2627
+   "visite_en": 2605
   },
   {
    "qid": "Q7735448",
@@ -1355,7 +1355,7 @@
    "generi": [
     "memorie"
    ],
-   "visite_en": 2431
+   "visite_en": 2428
   },
   {
    "qid": "Q8000821",
@@ -1374,7 +1374,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 2402
+   "visite_en": 2393
   },
   {
    "qid": "Q3818205",
@@ -1395,7 +1395,7 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 2394
+   "visite_en": 2373
   },
   {
    "qid": "Q15032732",
@@ -1416,7 +1416,7 @@
    "generi": [
     "fantasy_sf"
    ],
-   "visite_en": 2372
+   "visite_en": 2365
   },
   {
    "qid": "Q5677810",
@@ -1435,7 +1435,7 @@
     "it": "persiano"
    },
    "generi": [],
-   "visite_en": 2356
+   "visite_en": 2340
   },
   {
    "qid": "Q3772100",
@@ -1454,7 +1454,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 2235,
+   "visite_en": 2222,
    "copertina": {
     "file": "Joseph Conrad.PNG",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Joseph_Conrad.PNG/500px-Joseph_Conrad.PNG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -1480,7 +1480,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 2155
+   "visite_en": 2145
   },
   {
    "qid": "Q5614417",
@@ -1499,7 +1499,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 2080
+   "visite_en": 2071
   },
   {
    "qid": "Q8058128",
@@ -1520,7 +1520,7 @@
    "generi": [
     "ragazzi"
    ],
-   "visite_en": 1933
+   "visite_en": 1925
   },
   {
    "qid": "Q7797601",
@@ -1539,7 +1539,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 1928
+   "visite_en": 1904
   },
   {
    "qid": "Q7804791",
@@ -1558,7 +1558,7 @@
     "it": "russo"
    },
    "generi": [],
-   "visite_en": 1858
+   "visite_en": 1851
   },
   {
    "qid": "Q5910588",
@@ -1577,7 +1577,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 1843
+   "visite_en": 1837
   },
   {
    "qid": "Q8046351",
@@ -1596,7 +1596,7 @@
     "it": "turco"
    },
    "generi": [],
-   "visite_en": 1816
+   "visite_en": 1809
   },
   {
    "qid": "Q7090080",
@@ -1615,7 +1615,7 @@
     "it": "igbo"
    },
    "generi": [],
-   "visite_en": 1673
+   "visite_en": 1668
   },
   {
    "qid": "Q3794795",
@@ -1636,7 +1636,7 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 1667
+   "visite_en": 1617
   },
   {
    "qid": "Q7765614",
@@ -1658,7 +1658,7 @@
     "avventura",
     "storico"
    ],
-   "visite_en": 1414,
+   "visite_en": 1412,
    "copertina": {
     "file": "Oriental stories 1932win.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Oriental_stories_1932win.jpg/500px-Oriental_stories_1932win.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -1684,28 +1684,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 1372
-  },
-  {
-   "qid": "Q1112060",
-   "titolo": "The Madman of Bergerac",
-   "titolo_it": "Il pazzo di Bergerac",
-   "autori": [
-    {
-     "qid": "Q128790",
-     "nome": "Georges Simenon"
-    }
-   ],
-   "pagine": 6,
-   "wiki_en": "https://en.wikipedia.org/wiki/The_Madman_of_Bergerac",
-   "lingua": {
-    "en": "French",
-    "it": "francese"
-   },
-   "generi": [
-    "giallo"
-   ],
-   "visite_en": 1344
+   "visite_en": 1367
   },
   {
    "qid": "Q7773771",
@@ -1726,7 +1705,28 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 1344
+   "visite_en": 1331
+  },
+  {
+   "qid": "Q1112060",
+   "titolo": "The Madman of Bergerac",
+   "titolo_it": "Il pazzo di Bergerac",
+   "autori": [
+    {
+     "qid": "Q128790",
+     "nome": "Georges Simenon"
+    }
+   ],
+   "pagine": 6,
+   "wiki_en": "https://en.wikipedia.org/wiki/The_Madman_of_Bergerac",
+   "lingua": {
+    "en": "French",
+    "it": "francese"
+   },
+   "generi": [
+    "giallo"
+   ],
+   "visite_en": 1290
   },
   {
    "qid": "Q7768564",
@@ -1748,7 +1748,7 @@
     "fantasy_sf",
     "horror"
    ],
-   "visite_en": 1258
+   "visite_en": 1257
   },
   {
    "qid": "Q7759037",
@@ -1767,7 +1767,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 1206
+   "visite_en": 1201
   },
   {
    "qid": "Q13017091",
@@ -1786,7 +1786,7 @@
     "it": "thailandese"
    },
    "generi": [],
-   "visite_en": 1144
+   "visite_en": 1138
   },
   {
    "qid": "Q6925288",
@@ -1805,7 +1805,7 @@
     "it": "inglese americano"
    },
    "generi": [],
-   "visite_en": 1078
+   "visite_en": 1072
   },
   {
    "qid": "Q17151836",
@@ -1820,7 +1820,7 @@
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Wild_Pilgrimage",
    "generi": [],
-   "visite_en": 1034
+   "visite_en": 1031
   },
   {
    "qid": "Q7208469",
@@ -1841,7 +1841,7 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 776
+   "visite_en": 757
   },
   {
    "qid": "Q5058034",
@@ -1860,7 +1860,7 @@
     "it": "spagnolo"
    },
    "generi": [],
-   "visite_en": 722
+   "visite_en": 705
   },
   {
    "qid": "Q1325013",
@@ -1881,7 +1881,7 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 711,
+   "visite_en": 685,
    "copertina": {
     "file": "Paray-le-Frésil.JPG",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Paray-le-Fr%C3%A9sil.JPG/500px-Paray-le-Fr%C3%A9sil.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -1903,7 +1903,7 @@
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/Ursonate",
    "generi": [],
-   "visite_en": 672
+   "visite_en": 669
   },
   {
    "qid": "Q110732464",
@@ -1922,7 +1922,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 588
+   "visite_en": 583
   },
   {
    "qid": "Q16387178",
@@ -1941,7 +1941,7 @@
     "it": "russo"
    },
    "generi": [],
-   "visite_en": 556
+   "visite_en": 550
   },
   {
    "qid": "Q17173648",
@@ -1962,7 +1962,7 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 550
+   "visite_en": 543
   },
   {
    "qid": "Q6817094",
@@ -1981,28 +1981,7 @@
     "it": "portoghese"
    },
    "generi": [],
-   "visite_en": 534
-  },
-  {
-   "qid": "Q7656082",
-   "titolo": "Swift Rivers",
-   "titolo_it": null,
-   "autori": [
-    {
-     "qid": "Q5171168",
-     "nome": "Cornelia Meigs"
-    }
-   ],
-   "pagine": 2,
-   "wiki_en": "https://en.wikipedia.org/wiki/Swift_Rivers",
-   "lingua": {
-    "en": "English",
-    "it": "inglese"
-   },
-   "generi": [
-    "storico"
-   ],
-   "visite_en": 488
+   "visite_en": 524
   },
   {
    "qid": "Q23035603",
@@ -2023,7 +2002,7 @@
    "generi": [
     "memorie"
    ],
-   "visite_en": 478,
+   "visite_en": 472,
    "copertina": {
     "file": "Adamic.JPG",
     "url": "https://upload.wikimedia.org/wikipedia/commons/d/df/Adamic.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -2031,6 +2010,27 @@
     "licenza": "CC BY-SA 4.0",
     "autore": "Ribashevina"
    }
+  },
+  {
+   "qid": "Q7656082",
+   "titolo": "Swift Rivers",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q5171168",
+     "nome": "Cornelia Meigs"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/Swift_Rivers",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "storico"
+   ],
+   "visite_en": 469
   },
   {
    "qid": "Q16677418",
@@ -2049,7 +2049,7 @@
     "it": "francese"
    },
    "generi": [],
-   "visite_en": 473
+   "visite_en": 465
   },
   {
    "qid": "Q7759291",
@@ -2064,7 +2064,7 @@
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Railroad_to_Freedom",
    "generi": [],
-   "visite_en": 469
+   "visite_en": 465
   },
   {
    "qid": "Q5271049",
@@ -2083,7 +2083,7 @@
     "it": "indonesiano"
    },
    "generi": [],
-   "visite_en": 468
+   "visite_en": 458
   },
   {
    "qid": "Q60785449",
@@ -2102,7 +2102,26 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 424
+   "visite_en": 421
+  },
+  {
+   "qid": "Q16385501",
+   "titolo": "Distant Lands",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q202537",
+     "nome": "Arkady Gaidar"
+    }
+   ],
+   "pagine": 4,
+   "wiki_en": "https://en.wikipedia.org/wiki/Distant_Lands",
+   "lingua": {
+    "en": "Russian",
+    "it": "russo"
+   },
+   "generi": [],
+   "visite_en": 419
   },
   {
    "qid": "Q8025166",
@@ -2123,26 +2142,7 @@
    "generi": [
     "storico"
    ],
-   "visite_en": 423
-  },
-  {
-   "qid": "Q16385501",
-   "titolo": "Distant Lands",
-   "titolo_it": null,
-   "autori": [
-    {
-     "qid": "Q202537",
-     "nome": "Arkady Gaidar"
-    }
-   ],
-   "pagine": 4,
-   "wiki_en": "https://en.wikipedia.org/wiki/Distant_Lands",
-   "lingua": {
-    "en": "Russian",
-    "it": "russo"
-   },
-   "generi": [],
-   "visite_en": 420
+   "visite_en": 419
   },
   {
    "qid": "Q5352372",
@@ -2161,7 +2161,7 @@
     "it": "spagnolo"
    },
    "generi": [],
-   "visite_en": 420,
+   "visite_en": 416,
    "copertina": {
     "file": "El amor brujo portada 1932.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/El_amor_brujo_portada_1932.jpg/500px-El_amor_brujo_portada_1932.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -2187,7 +2187,24 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 363
+   "visite_en": 355
+  },
+  {
+   "qid": "Q5098569",
+   "titolo": "Children of the Soil",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q19974442",
+     "nome": "Nora Burglon"
+    }
+   ],
+   "pagine": 3,
+   "wiki_en": "https://en.wikipedia.org/wiki/Children_of_the_Soil",
+   "generi": [
+    "storico"
+   ],
+   "visite_en": 348
   },
   {
    "qid": "Q3210349",
@@ -2206,62 +2223,7 @@
     "it": "francese"
    },
    "generi": [],
-   "visite_en": 347
-  },
-  {
-   "qid": "Q5098569",
-   "titolo": "Children of the Soil",
-   "titolo_it": null,
-   "autori": [
-    {
-     "qid": "Q19974442",
-     "nome": "Nora Burglon"
-    }
-   ],
-   "pagine": 3,
-   "wiki_en": "https://en.wikipedia.org/wiki/Children_of_the_Soil",
-   "generi": [
-    "storico"
-   ],
-   "visite_en": 346
-  },
-  {
-   "qid": "Q96373014",
-   "titolo": "Ballerina",
-   "titolo_it": null,
-   "autori": [
-    {
-     "qid": "Q5354389",
-     "nome": "Eleanor Smith"
-    }
-   ],
-   "pagine": 2,
-   "wiki_en": "https://en.wikipedia.org/wiki/Ballerina_(novel)",
-   "lingua": {
-    "en": "English",
-    "it": "inglese"
-   },
-   "generi": [],
-   "visite_en": 345
-  },
-  {
-   "qid": "Q18351196",
-   "titolo": "Alicia Deane",
-   "titolo_it": null,
-   "autori": [
-    {
-     "qid": "Q5321676",
-     "nome": "E. V. Timms"
-    }
-   ],
-   "pagine": 2,
-   "wiki_en": "https://en.wikipedia.org/wiki/Alicia_Deane",
-   "lingua": {
-    "en": "English",
-    "it": "inglese"
-   },
-   "generi": [],
-   "visite_en": 343
+   "visite_en": 341
   },
   {
    "qid": "Q7099218",
@@ -2280,7 +2242,45 @@
     "it": "russo"
    },
    "generi": [],
-   "visite_en": 336
+   "visite_en": 333
+  },
+  {
+   "qid": "Q96373014",
+   "titolo": "Ballerina",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q5354389",
+     "nome": "Eleanor Smith"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/Ballerina_(novel)",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [],
+   "visite_en": 331
+  },
+  {
+   "qid": "Q18351196",
+   "titolo": "Alicia Deane",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q5321676",
+     "nome": "E. V. Timms"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/Alicia_Deane",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [],
+   "visite_en": 329
   },
   {
    "qid": "Q86753954",
@@ -2297,25 +2297,6 @@
    "lingua": {
     "en": "English",
     "it": "inglese"
-   },
-   "generi": [],
-   "visite_en": 322
-  },
-  {
-   "qid": "Q7170795",
-   "titolo": "Pertemuan Jodoh",
-   "titolo_it": null,
-   "autori": [
-    {
-     "qid": "Q1401053",
-     "nome": "Abdul Muis"
-    }
-   ],
-   "pagine": 2,
-   "wiki_en": "https://en.wikipedia.org/wiki/Pertemuan_Jodoh",
-   "lingua": {
-    "en": "Indonesian",
-    "it": "indonesiano"
    },
    "generi": [],
    "visite_en": 322
@@ -2339,7 +2320,26 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 318
+   "visite_en": 317
+  },
+  {
+   "qid": "Q7170795",
+   "titolo": "Pertemuan Jodoh",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q1401053",
+     "nome": "Abdul Muis"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/Pertemuan_Jodoh",
+   "lingua": {
+    "en": "Indonesian",
+    "it": "indonesiano"
+   },
+   "generi": [],
+   "visite_en": 312
   },
   {
    "qid": "Q23035584",
@@ -2358,7 +2358,26 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 286
+   "visite_en": 284
+  },
+  {
+   "qid": "Q29379121",
+   "titolo": "The Soldier and the Gentlewoman",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q5761498",
+     "nome": "Hilda Vaughan"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/The_Soldier_and_the_Gentlewoman",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [],
+   "visite_en": 258
   },
   {
    "qid": "Q1885256",
@@ -2379,26 +2398,7 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 274
-  },
-  {
-   "qid": "Q29379121",
-   "titolo": "The Soldier and the Gentlewoman",
-   "titolo_it": null,
-   "autori": [
-    {
-     "qid": "Q5761498",
-     "nome": "Hilda Vaughan"
-    }
-   ],
-   "pagine": 2,
-   "wiki_en": "https://en.wikipedia.org/wiki/The_Soldier_and_the_Gentlewoman",
-   "lingua": {
-    "en": "English",
-    "it": "inglese"
-   },
-   "generi": [],
-   "visite_en": 264
+   "visite_en": 237
   },
   {
    "qid": "Q17633276",
@@ -2413,7 +2413,7 @@
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Multiple_States_of_Being",
    "generi": [],
-   "visite_en": 227
+   "visite_en": 225
   },
   {
    "qid": "Q18392587",
@@ -2432,7 +2432,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 205
+   "visite_en": 204
   },
   {
    "qid": "Q3204486",
@@ -2453,7 +2453,7 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 202
+   "visite_en": 201
   },
   {
    "qid": "Q5223407",
@@ -2472,7 +2472,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 195
+   "visite_en": 194
   },
   {
    "qid": "Q16999020",
@@ -2494,34 +2494,6 @@
    "visite_en": 190
   },
   {
-   "qid": "Q691326",
-   "titolo": "Querelles de famille",
-   "titolo_it": null,
-   "autori": [
-    {
-     "qid": "Q20733",
-     "nome": "Georges Duhamel"
-    }
-   ],
-   "pagine": 2,
-   "wiki_en": "https://en.wikipedia.org/wiki/Querelles_de_famille",
-   "lingua": {
-    "en": "French",
-    "it": "francese"
-   },
-   "generi": [
-    "storico"
-   ],
-   "visite_en": 159,
-   "copertina": {
-    "file": "Woman, with large bow in her hair, putting needle on record on phonograph.png",
-    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Woman%2C_with_large_bow_in_her_hair%2C_putting_needle_on_record_on_phonograph.png/500px-Woman%2C_with_large_bow_in_her_hair%2C_putting_needle_on_record_on_phonograph.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Woman%2C_with_large_bow_in_her_hair%2C_putting_needle_on_record_on_phonograph.png",
-    "licenza": "Public domain",
-    "autore": "Photographer not named"
-   }
-  },
-  {
    "qid": "Q7929510",
    "titolo": "Vikings of the Gloves",
    "titolo_it": null,
@@ -2541,6 +2513,34 @@
    "visite_en": 156
   },
   {
+   "qid": "Q691326",
+   "titolo": "Querelles de famille",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q20733",
+     "nome": "Georges Duhamel"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/Querelles_de_famille",
+   "lingua": {
+    "en": "French",
+    "it": "francese"
+   },
+   "generi": [
+    "storico"
+   ],
+   "visite_en": 155,
+   "copertina": {
+    "file": "Woman, with large bow in her hair, putting needle on record on phonograph.png",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Woman%2C_with_large_bow_in_her_hair%2C_putting_needle_on_record_on_phonograph.png/500px-Woman%2C_with_large_bow_in_her_hair%2C_putting_needle_on_record_on_phonograph.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Woman%2C_with_large_bow_in_her_hair%2C_putting_needle_on_record_on_phonograph.png",
+    "licenza": "Public domain",
+    "autore": "Photographer not named"
+   }
+  },
+  {
    "qid": "Q7562673",
    "titolo": "Soomustüdruk",
    "titolo_it": null,
@@ -2557,7 +2557,7 @@
     "it": "estone"
    },
    "generi": [],
-   "visite_en": 86
+   "visite_en": 87
   },
   {
    "qid": "Q685630",
