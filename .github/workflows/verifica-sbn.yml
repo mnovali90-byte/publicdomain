@@ -1,12 +1,11 @@
 name: Verifica SBN su campione nuovo
 
+# Il passo da fare si scrive in docs/verifica-sbn/passo.txt: «prove» (raccoglie le prove senza il nuovo sistema)
+# oppure «misura» (dopo gli esiti a mano). Parte a ogni modifica di quel file.
 on:
-  workflow_dispatch:
-    inputs:
-      passo:
-        description: "prove (raccoglie le prove, non usa il nuovo sistema) oppure misura (dopo gli esiti a mano)"
-        required: true
-        default: prove
+  push:
+    paths:
+      - "docs/verifica-sbn/passo.txt"
 
 permissions:
   contents: write
@@ -20,10 +19,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Passo ${{ inputs.passo }}
+      - name: Passo indicato in passo.txt
         env:
           BUDGET_MINUTI_SBN: "100"
-        run: python scripts/verifica_sbn.py ${{ inputs.passo }}
+        run: python scripts/verifica_sbn.py "$(tr -d '[:space:]' < docs/verifica-sbn/passo.txt)"
       - name: Salva
         if: always()
         run: |
@@ -31,6 +30,6 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add docs/verifica-sbn
           if ! git diff --cached --quiet; then
-            git commit -m "Verifica SBN: passo ${{ inputs.passo }}"
+            git commit -m "Verifica SBN: passo $(cat docs/verifica-sbn/passo.txt)"
             for i in 1 2 3 4 5; do git pull --rebase --autostash -X theirs origin main && git push && break; sleep $((i*20)); done
           fi
