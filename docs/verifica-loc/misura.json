@@ -1,0 +1,358 @@
+{
+ "regole": {
+  "commit": "86a3957219bdd7edc76f5271fb0fe16a6161a8e7",
+  "sha256": {
+   "scripts/loc.py": "4b14e9b0827640b002d53a22e8750cf7d48a1dd2012bd4acc6ac808395e18550"
+  }
+ },
+ "totale": {
+  "sua in inglese, contata": 1131,
+  "non sua o non in inglese, non contata": 694,
+  "sua in inglese, non contata": 54,
+  "non sua o non in inglese, contata": 4
+ },
+ "autori": [
+  {
+   "n": 1,
+   "nome": "Michael Sadleir",
+   "notizie": {
+    "sua in inglese, contata": 78,
+    "non sua o non in inglese, non contata": 1
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 2,
+   "nome": "Edward Alden Jewell",
+   "notizie": {
+    "sua in inglese, contata": 11,
+    "non sua o non in inglese, non contata": 1
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 3,
+   "nome": "Judith Blunt-Lytton",
+   "notizie": {
+    "sua in inglese, contata": 1
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 4,
+   "nome": "Jenő Heltai",
+   "notizie": {
+    "non sua o non in inglese, non contata": 19,
+    "sua in inglese, non contata": 2
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 5,
+   "nome": "Umberto Saba",
+   "notizie": {
+    "non sua o non in inglese, non contata": 57,
+    "sua in inglese, contata": 9
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 6,
+   "nome": "Walter de la Mare",
+   "notizie": {
+    "sua in inglese, contata": 296,
+    "non sua o non in inglese, non contata": 3
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 7,
+   "nome": "Ursula Parrott",
+   "notizie": {
+    "sua in inglese, contata": 24,
+    "non sua o non in inglese, non contata": 1
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 8,
+   "nome": "Ibn Zaydan",
+   "notizie": {},
+   "errore_tecnico": null
+  },
+  {
+   "n": 9,
+   "nome": "Václav Štech",
+   "notizie": {
+    "non sua o non in inglese, non contata": 3
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 10,
+   "nome": "Camil Petrescu",
+   "notizie": {
+    "non sua o non in inglese, non contata": 41,
+    "sua in inglese, contata": 4
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 11,
+   "nome": "Arturo Barea",
+   "notizie": {
+    "sua in inglese, contata": 19,
+    "non sua o non in inglese, non contata": 18
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 12,
+   "nome": "Gregorio Martínez Sierra",
+   "notizie": {
+    "non sua o non in inglese, non contata": 123,
+    "sua in inglese, non contata": 13,
+    "sua in inglese, contata": 1
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 13,
+   "nome": "Yone Noguchi",
+   "notizie": {
+    "non sua o non in inglese, non contata": 25,
+    "sua in inglese, non contata": 34
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 14,
+   "nome": "Ernest Thompson Seton",
+   "notizie": {
+    "sua in inglese, contata": 139,
+    "non sua o non in inglese, non contata": 29
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 15,
+   "nome": "Wolfgang Borchert",
+   "notizie": {
+    "sua in inglese, contata": 7,
+    "non sua o non in inglese, non contata": 22
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 16,
+   "nome": "Daniel García-Mansilla",
+   "notizie": {
+    "non sua o non in inglese, non contata": 3
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 17,
+   "nome": "John William Van Druten",
+   "notizie": {
+    "sua in inglese, contata": 115
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 18,
+   "nome": "Joan Puig i Ferreter",
+   "notizie": {
+    "non sua o non in inglese, non contata": 17
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 19,
+   "nome": "Marie Belloc Lowndes",
+   "notizie": {
+    "sua in inglese, contata": 93,
+    "non sua o non in inglese, non contata": 1
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 20,
+   "nome": "Jiří Dréman",
+   "notizie": {},
+   "errore_tecnico": null
+  },
+  {
+   "n": 21,
+   "nome": "Sunirmal Basu",
+   "notizie": {},
+   "errore_tecnico": null
+  },
+  {
+   "n": 22,
+   "nome": "Joaquín Pasos",
+   "notizie": {
+    "non sua o non in inglese, non contata": 12
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 23,
+   "nome": "Roy Campbell",
+   "notizie": {
+    "sua in inglese, contata": 62,
+    "non sua o non in inglese, non contata": 1
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 24,
+   "nome": "Jagadish Chandra Gupta",
+   "notizie": {
+    "non sua o non in inglese, non contata": 4,
+    "sua in inglese, non contata": 1
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 25,
+   "nome": "Ella MacMahon",
+   "notizie": {
+    "sua in inglese, contata": 2
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 26,
+   "nome": "Manik Bandyopadhyay",
+   "notizie": {
+    "non sua o non in inglese, non contata": 35,
+    "sua in inglese, contata": 12
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 27,
+   "nome": "Qi Baishi",
+   "notizie": {
+    "non sua o non in inglese, non contata": 85,
+    "sua in inglese, contata": 2
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 28,
+   "nome": "Zdeněk Němeček",
+   "notizie": {
+    "non sua o non in inglese, non contata": 10
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 29,
+   "nome": "A. E. Coppard",
+   "notizie": {
+    "sua in inglese, contata": 57,
+    "non sua o non in inglese, non contata": 1
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 30,
+   "nome": "Albert Flament",
+   "notizie": {
+    "non sua o non in inglese, non contata": 15,
+    "non sua o non in inglese, contata": 2
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 31,
+   "nome": "Ward Greene",
+   "notizie": {
+    "sua in inglese, contata": 20,
+    "non sua o non in inglese, non contata": 2
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 32,
+   "nome": "Ernst Hardt",
+   "notizie": {
+    "non sua o non in inglese, non contata": 23,
+    "sua in inglese, contata": 1
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 33,
+   "nome": "René Bizet",
+   "notizie": {
+    "non sua o non in inglese, non contata": 1
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 34,
+   "nome": "Ray Cummings",
+   "notizie": {
+    "sua in inglese, contata": 11,
+    "non sua o non in inglese, contata": 2,
+    "non sua o non in inglese, non contata": 28
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 35,
+   "nome": "Clotilde Chivas-Baron",
+   "notizie": {
+    "non sua o non in inglese, non contata": 3,
+    "sua in inglese, contata": 3
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 36,
+   "nome": "Helen Prothero Lewis",
+   "notizie": {
+    "sua in inglese, contata": 1
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 37,
+   "nome": "Genjirō Yoshida",
+   "notizie": {
+    "non sua o non in inglese, non contata": 28,
+    "sua in inglese, non contata": 4
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 38,
+   "nome": "Felix Timmermans",
+   "notizie": {
+    "sua in inglese, contata": 9,
+    "non sua o non in inglese, non contata": 49
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 39,
+   "nome": "Arvid Mörne",
+   "notizie": {
+    "non sua o non in inglese, non contata": 20
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 40,
+   "nome": "Laura Ingalls Wilder",
+   "notizie": {
+    "non sua o non in inglese, non contata": 13,
+    "sua in inglese, contata": 154
+   },
+   "errore_tecnico": null
+  }
+ ]
+}
