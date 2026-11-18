@@ -522,7 +522,8 @@ it: {
   edizBl: "Registrazioni bibliografiche in inglese collegate all'autore nel catalogo della British Library, cercato per cognome e anni di nascita e morte; si conta una registrazione solo se cognome e anni sono della stessa persona. Qualche registrazione schedata in altro modo può sfuggire. Comprendono tutte le pubblicazioni collegate alla persona, anche quelle in cui ha collaborato (traduzioni, curatele, prefazioni), non solo i libri scritti da lei: è una misura di quanto è presente nel catalogo.",
   edizNonTrovato: "Autore non trovato nel catalogo: non vuol dire che non sia tradotto, può essere schedato con un altro nome.",
   edizInedito: "Nessuna registrazione in {l} collegata all'autore",
-  edizCatSbn: "Il catalogo SBN", edizCatBnf: "La BnF", edizCatBne: "La BNE",
+  edizCatSbn: "Il catalogo SBN", edizCatBnf: "La BnF", edizCatBne: "La BNE", edizCatLoc: "La Library of Congress",
+  edizLoc: "Registrazioni bibliografiche in inglese collegate all'autore nel catalogo della Library of Congress (USA), cercato con il codice dell'autore. Comprendono tutte le pubblicazioni collegate alla persona, anche quelle in cui ha collaborato (traduzioni, curatele, prefazioni), non i libri che parlano di lei. Alcune notizie più vecchie, schedate con una forma diversa del nome, possono sfuggire.",
   sbnConProva: "Autore riconosciuto dal nome con una prova in più (anni di nascita e morte, un titolo o un cognome unico nel catalogo), non da un codice.",
   edizIneditoNota: "{b} riconosce questo autore dal suo codice, ma non ha nessuna registrazione in {l} collegata a lui. Non basta per dire che sia inedito: un'edizione può essere collegata a un'altra scheda o mancare dal catalogo.",
   edizSospesoColl: "Dati in verifica: non è ancora dimostrato che la scheda del catalogo collegata a questo autore sia davvero sua, quindi non mostriamo i numeri finché non è chiarito.",
@@ -637,7 +638,8 @@ en: {
   edizBl: "Bibliographic records in English linked to the author in the British Library catalogue, searched by surname and years of birth and death; a record counts only if surname and years belong to the same person. Some records catalogued differently may be missed. They include every publication linked to the person, including those they contributed to (translations, editing, prefaces), not only books they wrote: it measures how present they are in the catalogue.",
   edizNonTrovato: "Author not found in the catalogue: it does not mean they are untranslated, they may be catalogued under another name.",
   edizInedito: "No records in {l} linked to the author",
-  edizCatSbn: "The SBN catalogue", edizCatBnf: "The BnF", edizCatBne: "The BNE",
+  edizCatSbn: "The SBN catalogue", edizCatBnf: "The BnF", edizCatBne: "The BNE", edizCatLoc: "The Library of Congress",
+  edizLoc: "Bibliographic records in English linked to the author in the Library of Congress catalogue (USA), searched by the author's identifier. They include every publication linked to the person, including those they contributed to (translations, editing, prefaces), not books about them. Some older records catalogued under a different form of the name may be missed.",
   sbnConProva: "Author matched by name with one more piece of evidence (years of birth and death, a title or a surname unique in the catalogue), not by an identifier.",
   edizIneditoNota: "{b} identifies this author by their authority code, but holds no record in {l} linked to them. That is not enough to say they are unpublished: an edition may be linked to another record or be missing from the catalogue.",
   edizSospesoColl: "Data under review: it is not yet shown that the catalogue record linked to this author is really theirs, so we do not show the figures until this is cleared up.",
@@ -1467,7 +1469,7 @@ function bloccoTraduzioni(a) {
     h("div", { class: "sotto", style: "margin-top:8px" }, tr("tradNota")));
 }
 const nomeLingua = (l) => { const x = tr("nomiLingua")[l] || l; return LING === "it" ? x.toLowerCase() : x; };
-const LINGUA_PAESE = { it: "it", fr: "fr", de: "de", es: "es", uk: "en" };
+const LINGUA_PAESE = { it: "it", fr: "fr", de: "de", es: "es", uk: "en", us: "en" };
 const AMAZON = { it: "amazon.it", fr: "amazon.fr", de: "amazon.de", uk: "amazon.co.uk", es: "amazon.es" };
 const paeseScheda = () => (["it", "fr", "de", "uk", "es"].includes(stato.opz) ? stato.opz : (LING === "it" ? "it" : "uk"));
 function dataLibera(a, c) {
@@ -1515,20 +1517,20 @@ function conteggioSospeso(g) {
 function bloccoEdizioni(a, c) {
   const l = nomeLingua(LINGUA_PAESE[c]);
   const x = a.traduzioni || {};
-  const g = { it: x.sbn_it, fr: x.bnf_fr, es: x.bne_es, uk: x.bl_en }[c] || null;
+  const g = { it: x.sbn_it, fr: x.bnf_fr, es: x.bne_es, uk: x.bl_en, us: x.loc_en }[c] || null;
   const tit = h("h4", {}, tr("edizTit", { l }));
   const sez = (...f) => h("section", { class: "sa-sez" }, ...f);
-  if (!g) return sez(tit, h("p", { class: "sa-nota" }, c === "fr" || c === "es" ? tr("edizSenzaCodice", { b: c === "fr" ? "BnF" : "BNE" }) : tr("edizNd")));
+  if (!g) return sez(tit, h("p", { class: "sa-nota" }, c === "fr" || c === "es" || c === "us" ? tr("edizSenzaCodice", { b: { fr: "BnF", es: "BNE", us: "Library of Congress" }[c] }) : tr("edizNd")));
   if (conteggioSospeso(g)) return sez(tit, h("p", { class: "sa-nota" }, tr(g.sospeso_manuale ? "edizSospesoColl" : "edizSospeso")));
   if (!g.trovato && /^codice/.test(g.metodo || "")) {
-    const b = tr({ it: "edizCatSbn", fr: "edizCatBnf", es: "edizCatBne" }[c] || "edizCatBne");
+    const b = tr({ it: "edizCatSbn", fr: "edizCatBnf", es: "edizCatBne", us: "edizCatLoc" }[c] || "edizCatBne");
     return sez(tit, h("p", { class: "sa-inedito" }, tr("edizInedito", { l })), h("p", { class: "sa-nota" }, tr("edizIneditoNota", { b, l })));
   }
   if (!g.trovato) return sez(tit, h("p", { class: "sa-nota" }, tr("edizNonTrovato")));
   const box = (num, et) => h("div", { class: "ed-box" }, h("b", {}, n(num)), h("span", {}, et));
   return sez(tit,
     h("div", { class: "ed-boxes" }, box(g.edizioni, tr("edizLibri", { l })), box(g.dal_2000 || 0, tr("edizDal2000") + (g.ultimo ? " · " + tr("edizUltimo", { a: g.ultimo }) : ""))),
-    h("p", { class: "sa-nota" }, tr({ it: "edizSbn", fr: "edizBnf", es: "edizBne", uk: "edizBl" }[c])),
+    h("p", { class: "sa-nota" }, tr({ it: "edizSbn", fr: "edizBnf", es: "edizBne", uk: "edizBl", us: "edizLoc" }[c])),
     c === "it" && g.metodo === "nome" ? h("p", { class: "sa-nota" }, tr("sbnPerNome")) : null,
     c === "it" && g.metodo === "nome_con_prova" ? h("p", { class: "sa-nota" }, tr("sbnConProva")) : null);
 }
