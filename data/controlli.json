@@ -18,25 +18,16 @@
   },
   "bl_en": {
    "controllati": 158,
-   "ok": 157,
-   "sospesi": 1
+   "ok": 158,
+   "sospesi": 0
   },
   "loc_en": {
-   "controllati": 168,
-   "ok": 168,
+   "controllati": 251,
+   "ok": 251,
    "sospesi": 0
   }
  },
  "sospesi": [
-  {
-   "wikidata": "Q5424072",
-   "nome": "F. W. Harvey",
-   "catalogo": "bl_en",
-   "motivo": "collegamento non dimostrato: su 142 notizie British Library ne risultano sue solo una parte (5 su 50 lette): le altre sono di Michael Sadleir (1888-1957) e altri, trovate perché cognome e anni stanno in voci diverse",
-   "edizioni": 27,
-   "dal_2000": 7,
-   "ultimo": null
-  },
   {
    "wikidata": "Q265792",
    "nome": "Ray Cummings",

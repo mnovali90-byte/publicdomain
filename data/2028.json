@@ -6040,14 +6040,14 @@
      "loc": 1957
     },
     "citate": {
-     "Czech National Authority Database": 1957,
-     "regional database of the Regional Library of Highlands": 1957,
      "The Fine Art Archive Db": 1957,
      "Great Norwegian Encyclopedia": 1957,
      "IMDb": 1957,
      "REGO": 1957,
      "Integrated Authority File": 1957,
-     "Discogs": 1957
+     "Discogs": 1957,
+     "Czech National Authority Database": 1957,
+     "regional database of the Regional Library of Highlands": 1957
     }
    },
    "pagina": "ralph-benatzky",
@@ -17074,10 +17074,7 @@
      "dal_2000": 7,
      "fonte": "British Library",
      "scartate": 115,
-     "metodo": "nome_anni",
-     "stato": "da_verificare",
-     "motivo": "collegamento non dimostrato: su 142 notizie British Library ne risultano sue solo una parte (5 su 50 lette): le altre sono di Michael Sadleir (1888-1957) e altri, trovate perché cognome e anni stanno in voci diverse",
-     "sospeso_manuale": true
+     "metodo": "nome_anni"
     },
     "loc_en": {
      "trovato": true,
