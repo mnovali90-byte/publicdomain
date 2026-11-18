@@ -1,0 +1,774 @@
+{
+ "_come": "Decisione a mano di Claude il 18/11/2026 sulle prove di campione.json, prima della misura. esito C presente in BnF, A nessuna scheda d'autore BnF (elenco completo delle schede con quel cognome), I irrisolto. schede: G giusta, X altra persona, ? non dimostrabile (le non elencate contano come non dimostrabili).",
+ "Q101529": {
+  "n": 1,
+  "nome": "Karl M. Baer",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda d'autore BnF con quel nome tra tutte quelle col cognome"
+ },
+ "Q106765089": {
+  "n": 2,
+  "nome": "František Zeman",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda d'autore BnF con quel nome tra tutte quelle col cognome"
+ },
+ "Q108405815": {
+  "n": 3,
+  "nome": "Annapurna Goswami",
+  "esito": "I",
+  "schede": {
+   "11441571z": "?",
+   "160835133": "?"
+  },
+  "nota": "«Goswami A.» senza anni: non dimostrabile"
+ },
+ "Q10856213": {
+  "n": 4,
+  "nome": "Noh Cheon-myeong",
+  "esito": "I",
+  "schede": {},
+  "nota": "cognome coreano Noh non cercato nelle prove: ricerca incompleta"
+ },
+ "Q108616921": {
+  "n": 5,
+  "nome": "Muḥammad ʻAlī Unsī",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda d'autore BnF con quel nome tra tutte quelle col cognome"
+ },
+ "Q108983658": {
+  "n": 6,
+  "nome": "Dragutin J. Ranković",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda d'autore BnF con quel nome tra tutte quelle col cognome"
+ },
+ "Q11912944": {
+  "n": 7,
+  "nome": "Casimir Giralt i Bullich",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda d'autore BnF con quel nome tra tutte quelle col cognome"
+ },
+ "Q12017814": {
+  "n": 8,
+  "nome": "František Salesius Frabša",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda d'autore BnF con quel nome tra tutte quelle col cognome"
+ },
+ "Q12021431": {
+  "n": 9,
+  "nome": "Ignác Grebáč-Orlov",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda d'autore BnF con quel nome tra tutte quelle col cognome"
+ },
+ "Q12035492": {
+  "n": 10,
+  "nome": "Marie Votrubová-Haunerová",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda d'autore BnF con quel nome tra tutte quelle col cognome"
+ },
+ "Q12357525": {
+  "n": 11,
+  "nome": "Baishnaba Pani",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda d'autore BnF con quel nome tra tutte quelle col cognome"
+ },
+ "Q125412": {
+  "n": 12,
+  "nome": "Josef Reinhart",
+  "esito": "A",
+  "schede": {
+   "17965248p": "X"
+  },
+  "nota": "nessuna scheda d'autore BnF con quel nome tra tutte quelle col cognome"
+ },
+ "Q129256623": {
+  "n": 13,
+  "nome": "Leonardo F. Napolitano",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda d'autore BnF con quel nome tra tutte quelle col cognome"
+ },
+ "Q13129341": {
+  "n": 14,
+  "nome": "John Lloyd-Jones",
+  "esito": "I",
+  "schede": {
+   "122773838": "?"
+  },
+  "nota": "«Lloyd-Jones J. G.» senza anni: non dimostrabile"
+ },
+ "Q131522682": {
+  "n": 15,
+  "nome": "Enrique Vázquez de Aldana",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda d'autore BnF con quel nome tra tutte quelle col cognome"
+ },
+ "Q1398493": {
+  "n": 16,
+  "nome": "Hans Müller-Schlösser",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda d'autore BnF con quel nome tra tutte quelle col cognome"
+ },
+ "Q1470667": {
+  "n": 17,
+  "nome": "Hans Ganz",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda d'autore BnF con quel nome tra tutte quelle col cognome"
+ },
+ "Q14946693": {
+  "n": 18,
+  "nome": "Minnie Louise Haskins",
+  "esito": "A",
+  "schede": {
+   "165821515": "X"
+  },
+  "nota": "nessuna scheda d'autore BnF con quel nome tra tutte quelle col cognome"
+ },
+ "Q15090962": {
+  "n": 19,
+  "nome": "Sergei Rozanov",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda d'autore BnF con quel nome tra tutte quelle col cognome"
+ },
+ "Q15485418": {
+  "n": 20,
+  "nome": "Louie Bennett",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda d'autore BnF con quel nome tra tutte quelle col cognome"
+ },
+ "Q15689600": {
+  "n": 21,
+  "nome": "Amelia Beers Warnock",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda d'autore BnF con quel nome tra tutte quelle col cognome"
+ },
+ "Q15987617": {
+  "n": 22,
+  "nome": "Julia Green (efternamn)",
+  "esito": "I",
+  "schede": {},
+  "nota": "nome in Wikidata rovinato («Julia Green (efternamn)»): ricerca incompleta"
+ },
+ "Q16831409": {
+  "n": 23,
+  "nome": "František Dohnal",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda d'autore BnF con quel nome tra tutte quelle col cognome"
+ },
+ "Q16899719": {
+  "n": 24,
+  "nome": "Carl Keilhau",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda d'autore BnF con quel nome tra tutte quelle col cognome"
+ },
+ "Q16901261": {
+  "n": 25,
+  "nome": "Noel Everingham Sainsbury",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda d'autore BnF con quel nome tra tutte quelle col cognome"
+ },
+ "Q1753084": {
+  "n": 26,
+  "nome": "Czesław Jastrzębiec-Kozłowski",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda d'autore BnF con quel nome tra tutte quelle col cognome"
+ },
+ "Q18535612": {
+  "n": 27,
+  "nome": "Robert Evans",
+  "esito": "I",
+  "schede": {},
+  "nota": "Evans: troppe schede, elenco incompleto"
+ },
+ "Q18576661": {
+  "n": 28,
+  "nome": "Frances Mabel Robinson",
+  "esito": "I",
+  "schede": {},
+  "nota": "Robinson: troppe schede, elenco incompleto"
+ },
+ "Q18911624": {
+  "n": 29,
+  "nome": "Robert Mitchell",
+  "esito": "I",
+  "schede": {},
+  "nota": "Mitchell: troppe schede, elenco incompleto"
+ },
+ "Q19667016": {
+  "n": 30,
+  "nome": "Lilian Turner",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda d'autore BnF con quel nome tra tutte quelle col cognome"
+ },
+ "Q20755702": {
+  "n": 31,
+  "nome": "Josef Jirsík",
+  "esito": "C",
+  "schede": {
+   "10906609x": "G"
+  },
+  "nota": "«Jirsík Josef 1898-1956»: nome e anni identici"
+ },
+ "Q2614668": {
+  "n": 32,
+  "nome": "Caroline van Dommelen",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda d'autore BnF con quel nome tra tutte quelle col cognome"
+ },
+ "Q276464": {
+  "n": 33,
+  "nome": "Judith Blunt-Lytton",
+  "esito": "C",
+  "schede": {
+   "17976958c": "G"
+  },
+  "nota": "«Blunt-Lytton Judith 1879-1957»: nome identico e anno di morte uguale; la BnF scrive 1879 come nascita, Wikidata 1873"
+ },
+ "Q291016": {
+  "n": 34,
+  "nome": "Marija Jurić Zagorka",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda d'autore BnF con quel nome tra tutte quelle col cognome"
+ },
+ "Q2930497": {
+  "n": 35,
+  "nome": "C. M. van den Heever",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda d'autore BnF con quel nome tra tutte quelle col cognome"
+ },
+ "Q3157322": {
+  "n": 36,
+  "nome": "Jack Snow",
+  "esito": "A",
+  "schede": {
+   "12791877j": "X"
+  },
+  "nota": "nessuna scheda d'autore BnF con quel nome tra tutte quelle col cognome"
+ },
+ "Q33110662": {
+  "n": 37,
+  "nome": "Juan María Oliver",
+  "esito": "I",
+  "schede": {},
+  "nota": "Oliver: troppe schede, elenco incompleto"
+ },
+ "Q3438314": {
+  "n": 38,
+  "nome": "Rodolphe Girard",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda d'autore BnF con quel nome tra tutte quelle col cognome"
+ },
+ "Q4018179": {
+  "n": 39,
+  "nome": "Ward Greene",
+  "esito": "I",
+  "schede": {},
+  "nota": "Greene: troppe schede, elenco incompleto"
+ },
+ "Q4583273": {
+  "n": 40,
+  "nome": "Halvor Floden",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda d'autore BnF con quel nome tra tutte quelle col cognome"
+ },
+ "Q4767044": {
+  "n": 41,
+  "nome": "Anna Gordon Keown",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda d'autore BnF con quel nome tra tutte quelle col cognome"
+ },
+ "Q4834199": {
+  "n": 42,
+  "nome": "B. S. Mardhekar",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda d'autore BnF con quel nome tra tutte quelle col cognome"
+ },
+ "Q4933556": {
+  "n": 43,
+  "nome": "Bob Olsen",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda d'autore BnF con quel nome tra tutte quelle col cognome"
+ },
+ "Q50298099": {
+  "n": 44,
+  "nome": "Islwyn Williams",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda d'autore BnF con quel nome tra tutte quelle col cognome"
+ },
+ "Q5040265": {
+  "n": 45,
+  "nome": "Carl H. Claudy",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda d'autore BnF con quel nome tra tutte quelle col cognome"
+ },
+ "Q5045036": {
+  "n": 46,
+  "nome": "Caroline Dale Snedeker",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda d'autore BnF con quel nome tra tutte quelle col cognome"
+ },
+ "Q5298362": {
+  "n": 47,
+  "nome": "Dorothy Cottrell",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda d'autore BnF con quel nome tra tutte quelle col cognome"
+ },
+ "Q55979103": {
+  "n": 48,
+  "nome": "Ella MacMahon",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda d'autore BnF con quel nome tra tutte quelle col cognome"
+ },
+ "Q56051696": {
+  "n": 49,
+  "nome": "Mulshankar Mulani",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda d'autore BnF con quel nome tra tutte quelle col cognome"
+ },
+ "Q56064825": {
+  "n": 50,
+  "nome": "V. T. Murray",
+  "esito": "I",
+  "schede": {},
+  "nota": "Murray: troppe schede e niente nome di battesimo per restringere"
+ },
+ "Q565684": {
+  "n": 51,
+  "nome": "Anne Parrish",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda d'autore BnF con quel nome tra tutte quelle col cognome"
+ },
+ "Q5921198": {
+  "n": 52,
+  "nome": "Howard Wandrei",
+  "esito": "I",
+  "schede": {},
+  "nota": "una scheda col cognome Wandrei non letta"
+ },
+ "Q5993001": {
+  "n": 53,
+  "nome": "Manuel Fontdevila",
+  "esito": "I",
+  "schede": {
+   "125182360": "?"
+  },
+  "nota": "«Fontdevila Manel» senza anni (Une vie de saint, 1996): non dimostrabile"
+ },
+ "Q60367185": {
+  "n": 54,
+  "nome": "Charles Neville Buck",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda d'autore BnF con quel nome tra tutte quelle col cognome"
+ },
+ "Q6122090": {
+  "n": 55,
+  "nome": "Jagadish Chandra Gupta",
+  "esito": "I",
+  "schede": {},
+  "nota": "Gupta: troppe schede, elenco incompleto"
+ },
+ "Q6171046": {
+  "n": 56,
+  "nome": "Jean Louis De Esque",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda d'autore BnF con quel nome tra tutte quelle col cognome"
+ },
+ "Q6217845": {
+  "n": 57,
+  "nome": "John A. Moroso",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda d'autore BnF con quel nome tra tutte quelle col cognome"
+ },
+ "Q625336": {
+  "n": 58,
+  "nome": "Kim Nae-sung",
+  "esito": "I",
+  "schede": {},
+  "nota": "cognome coreano Kim: ricerca incompleta"
+ },
+ "Q6513844": {
+  "n": 59,
+  "nome": "Lee Hawkins Garby",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda d'autore BnF con quel nome tra tutte quelle col cognome"
+ },
+ "Q65246944": {
+  "n": 60,
+  "nome": "Emanuel Havelka",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda d'autore BnF con quel nome tra tutte quelle col cognome"
+ },
+ "Q6547722": {
+  "n": 61,
+  "nome": "Lilian Wooster Greaves",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda d'autore BnF con quel nome tra tutte quelle col cognome"
+ },
+ "Q6727922": {
+  "n": 62,
+  "nome": "Madison Cooper",
+  "esito": "I",
+  "schede": {},
+  "nota": "Cooper: troppe schede, una col nome non letta"
+ },
+ "Q6963402": {
+  "n": 63,
+  "nome": "Naṇḍūri Veṅkaṭa Subbārāvu",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda d'autore BnF con quel nome tra tutte quelle col cognome"
+ },
+ "Q7274124": {
+  "n": 64,
+  "nome": "R. Williams Parry",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda d'autore BnF con quel nome tra tutte quelle col cognome"
+ },
+ "Q7660316": {
+  "n": 65,
+  "nome": "Syed Emdad Ali",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda d'autore BnF con quel nome tra tutte quelle col cognome"
+ },
+ "Q79351531": {
+  "n": 66,
+  "nome": "Rashīd ʻAṭīyah",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda d'autore BnF con quel nome tra tutte quelle col cognome"
+ },
+ "Q943909": {
+  "n": 67,
+  "nome": "Frank L. Pollack",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda d'autore BnF con quel nome tra tutte quelle col cognome"
+ },
+ "Q94405664": {
+  "n": 68,
+  "nome": "N.-P. Landry",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda d'autore BnF con quel nome tra tutte quelle col cognome"
+ },
+ "Q95126535": {
+  "n": 69,
+  "nome": "Alexandra Urbanová",
+  "esito": "C",
+  "schede": {
+   "18253851g": "G"
+  },
+  "nota": "«Urbanová Alexandra 1921-1956»: nome e anni identici"
+ },
+ "Q95165859": {
+  "n": 70,
+  "nome": "Karel Polák",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda d'autore BnF con quel nome tra tutte quelle col cognome"
+ },
+ "Q95175282": {
+  "n": 71,
+  "nome": "Viktor Kripner",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda d'autore BnF con quel nome tra tutte quelle col cognome"
+ },
+ "Q95183293": {
+  "n": 72,
+  "nome": "Jaroslav Hloušek",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda d'autore BnF con quel nome tra tutte quelle col cognome"
+ },
+ "Q95387414": {
+  "n": 73,
+  "nome": "Alois Čáp",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda d'autore BnF con quel nome tra tutte quelle col cognome"
+ },
+ "Q95435084": {
+  "n": 74,
+  "nome": "Jindřich Bedřich Heller",
+  "esito": "I",
+  "schede": {},
+  "nota": "Heller: troppe schede; forma «Bedřich» non cercata"
+ },
+ "Q95471631": {
+  "n": 75,
+  "nome": "Vilém Peřina",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda d'autore BnF con quel nome tra tutte quelle col cognome"
+ },
+ "Q983507": {
+  "n": 76,
+  "nome": "Səməd Vurğun",
+  "esito": "C",
+  "schede": {
+   "14391912t": "G"
+  },
+  "nota": "«Vurğun Sămăd 1906-1956»: stessi anni; il nome è la stessa persona in un'altra traslitterazione"
+ },
+ "Q4647724": {
+  "n": 77,
+  "nome": "A. E. Coppard",
+  "esito": "C",
+  "schede": {
+   "108909644": "G"
+  },
+  "nota": "codici di Wikidata: nome e anni della scheda BnF coincidono"
+ },
+ "Q8962216": {
+  "n": 78,
+  "nome": "Francesc Trabal i Benessat",
+  "esito": "C",
+  "schede": {
+   "12074944z": "G"
+  },
+  "nota": "codici di Wikidata: nome e anni della scheda BnF coincidono"
+ },
+ "Q500042": {
+  "n": 79,
+  "nome": "Louis Bromfield",
+  "esito": "C",
+  "schede": {
+   "118941374": "G"
+  },
+  "nota": "codici di Wikidata: nome e anni della scheda BnF coincidono"
+ },
+ "Q9012032": {
+  "n": 80,
+  "nome": "Joan Puig i Ferreter",
+  "esito": "C",
+  "schede": {
+   "12055171g": "G"
+  },
+  "nota": "codici di Wikidata: nome e anni della scheda BnF coincidono"
+ },
+ "Q5857770": {
+  "n": 81,
+  "nome": "Federico Oliver Crespo",
+  "esito": "C",
+  "schede": {
+   "13550281v": "G"
+  },
+  "nota": "codici di Wikidata: nome e anni della scheda BnF coincidono"
+ },
+ "Q2782998": {
+  "n": 82,
+  "nome": "Peter B. Kyne",
+  "esito": "C",
+  "schede": {
+   "13171545s": "G"
+  },
+  "nota": "codici di Wikidata: nome e anni della scheda BnF coincidono"
+ },
+ "Q12208643": {
+  "n": 83,
+  "nome": "Ḥalīm Dammūs",
+  "esito": "C",
+  "schede": {
+   "17738763q": "G"
+  },
+  "nota": "codici di Wikidata: nome e anni della scheda BnF coincidono"
+ },
+ "Q3010499": {
+  "n": 84,
+  "nome": "César Moro",
+  "esito": "C",
+  "schede": {
+   "121024099": "G"
+  },
+  "nota": "codici di Wikidata: nome e anni della scheda BnF coincidono"
+ },
+ "Q5591308": {
+  "n": 85,
+  "nome": "Grace Miller White",
+  "esito": "C",
+  "schede": {
+   "10517928s": "G"
+  },
+  "nota": "codici di Wikidata: nome e anni della scheda BnF coincidono"
+ },
+ "Q8345656": {
+  "n": 86,
+  "nome": "Christofredo Jakob",
+  "esito": "C",
+  "schede": {
+   "125664990": "G"
+  },
+  "nota": "codici di Wikidata: nome e anni della scheda BnF coincidono"
+ },
+ "Q439204": {
+  "n": 87,
+  "nome": "Henry Louis Mencken",
+  "esito": "C",
+  "schede": {
+   "120271809": "G"
+  },
+  "nota": "codici di Wikidata: nome e anni della scheda BnF coincidono"
+ },
+ "Q3623504": {
+  "n": 88,
+  "nome": "Arnaldo Fraccaroli",
+  "esito": "C",
+  "schede": {
+   "124627583": "G"
+  },
+  "nota": "codici di Wikidata: nome e anni della scheda BnF coincidono"
+ },
+ "Q1578424": {
+  "n": 89,
+  "nome": "Hans Adler",
+  "esito": "C",
+  "schede": {
+   "155546758": "G"
+  },
+  "nota": "codici di Wikidata: nome e anni della scheda BnF coincidono"
+ },
+ "Q3072893": {
+  "n": 90,
+  "nome": "Firmin Roz",
+  "esito": "C",
+  "schede": {
+   "12122686q": "G"
+  },
+  "nota": "codici di Wikidata: nome e anni della scheda BnF coincidono"
+ },
+ "Q57389": {
+  "n": 91,
+  "nome": "Alfred Döblin",
+  "esito": "C",
+  "schede": {
+   "170357090": "G",
+   "11898864x": "G"
+  },
+  "nota": "codici di Wikidata: nome e anni della scheda BnF coincidono"
+ },
+ "Q1392550": {
+  "n": 92,
+  "nome": "Gustav Suits",
+  "esito": "C",
+  "schede": {
+   "10292324p": "G"
+  },
+  "nota": "codici di Wikidata: nome e anni della scheda BnF coincidono"
+ },
+ "Q2295334": {
+  "n": 93,
+  "nome": "Patrick Abercrombie",
+  "esito": "C",
+  "schede": {
+   "11273420j": "G"
+  },
+  "nota": "codici di Wikidata: nome e anni della scheda BnF coincidono"
+ },
+ "Q3100750": {
+  "n": 94,
+  "nome": "Genjirō Yoshida",
+  "esito": "C",
+  "schede": {
+   "15524627s": "G"
+  },
+  "nota": "codici di Wikidata: nome e anni della scheda BnF coincidono"
+ },
+ "Q123075": {
+  "n": 95,
+  "nome": "Robert Walser",
+  "esito": "C",
+  "schede": {
+   "119288383": "G"
+  },
+  "nota": "codici di Wikidata: nome e anni della scheda BnF coincidono"
+ },
+ "Q78437": {
+  "n": 96,
+  "nome": "Ernst Bertram",
+  "esito": "C",
+  "schede": {
+   "12027965m": "G"
+  },
+  "nota": "codici di Wikidata: nome e anni della scheda BnF coincidono"
+ },
+ "Q468708": {
+  "n": 97,
+  "nome": "Anna Haava",
+  "esito": "C",
+  "schede": {
+   "12559787b": "G"
+  },
+  "nota": "codici di Wikidata: nome e anni della scheda BnF coincidono"
+ },
+ "Q48889747": {
+  "n": 98,
+  "nome": "Charles Foleÿ",
+  "esito": "C",
+  "schede": {
+   "12091284z": "G"
+  },
+  "nota": "codici di Wikidata: nome e anni della scheda BnF coincidono"
+ },
+ "Q3387299": {
+  "n": 99,
+  "nome": "Pierre Villetard",
+  "esito": "C",
+  "schede": {
+   "12110875x": "G"
+  },
+  "nota": "codici di Wikidata: nome e anni della scheda BnF coincidono"
+ },
+ "Q312637": {
+  "n": 100,
+  "nome": "Curzio Malaparte",
+  "esito": "C",
+  "schede": {
+   "11038928q": "G",
+   "11914063x": "G"
+  },
+  "nota": "codici di Wikidata: nome e anni della scheda BnF coincidono"
+ }
+}
