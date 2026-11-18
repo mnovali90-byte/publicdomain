@@ -4312,6 +4312,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 8,
+     "dal_2000": 1,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Carossa, Hans, 1878-1956"
     }
    },
    "verifica": {
@@ -5659,6 +5667,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 16,
+     "dal_2000": 1,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Emerson, John, 1874-1956"
     }
    },
    "verifica": {
@@ -5965,6 +5981,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Shimoni, David, 1886-1956"
     }
    },
    "verifica": {
@@ -6166,6 +6190,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 15,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Speyer, Leonora, 1872-1956"
     }
    },
    "verifica": {
@@ -6723,6 +6755,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Erdős, Renée, 1879-1956"
     }
    },
    "verifica": {
@@ -8648,7 +8688,6 @@
      "loc": 1956
     },
     "citate": {
-     "Integrated Authority File": 1956,
      "Faceted Application of Subject Terminology": 1956,
      "BnF authorities": 1956,
      "Autoritats UB": 1956,
@@ -8656,7 +8695,8 @@
      "Spanish Biographical Dictionary": 1956,
      "datos.bne.es": 1956,
      "Bibliography of the History of the Czech Lands": 1956,
-     "Gran Enciclopèdia Catalana": 1956
+     "Gran Enciclopèdia Catalana": 1956,
+     "Integrated Authority File": 1956
     }
    }
   },
@@ -10101,6 +10141,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Foleÿ, Charles, 1861-1956"
     }
    },
    "verifica": {
@@ -10819,6 +10867,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "La Cour, Paul, 1902-1956"
     }
    },
    "verifica": {
@@ -11513,6 +11569,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 6,
+     "dal_2000": 1,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Kelley, Edith Summers"
     }
    },
    "verifica": {
@@ -11670,6 +11734,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 3,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Kreidolf, Ernst, 1863-1956"
     }
    },
    "verifica": {
@@ -12137,6 +12209,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Puig i Ferreter, Joan, 1882-1956"
     }
    },
    "verifica": {
@@ -13043,6 +13123,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Olsen, Bob, 1884-1956"
     }
    },
    "verifica": {
@@ -13172,6 +13260,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Jastrzębiec-Kozłowski, Czesław"
     }
    },
    "verifica": {
@@ -13429,6 +13525,14 @@
      "fonte": "British Library",
      "scartate": 1,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 10,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Robinson, F. Mabel (Frances Mabel)"
     }
    },
    "verifica": {
@@ -13692,6 +13796,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 21,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Long, Haniel, 1888-1956"
     }
    },
    "verifica": {
@@ -14243,6 +14355,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 23,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Marks, Percy, 1891-1956"
     }
    },
    "verifica": {
@@ -14408,6 +14528,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 2,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Parry, Robert Williams"
     }
    },
    "verifica": {
@@ -15350,6 +15478,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 20,
+     "dal_2000": 2,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Snedeker, Caroline Dale, 1871-1956"
     }
    },
    "verifica": {
@@ -15930,6 +16066,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 3,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Dhlomo, H. I. E. (Herbert I. E.), 1903-1956"
     }
    },
    "verifica": {
@@ -16375,6 +16519,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Scheu, Just"
     }
    },
    "verifica": {
@@ -16654,6 +16806,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 2,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Cooper, Madison (Madison A.)"
     }
    },
    "verifica": {
@@ -16808,6 +16968,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Bū Ruqaybah, Maḥmūd, 1909-1956"
     }
    },
    "verifica": {
@@ -17040,6 +17208,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Kuntay, Mithat Cemal, 1885-1956"
     }
    },
    "verifica": {
@@ -17302,6 +17478,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Pérez Fernández, Pedro, 1885-"
     }
    },
    "verifica": {
@@ -17894,6 +18078,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 8,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Hale, Katherine, 1878-1956"
     }
    },
    "verifica": {
@@ -18496,6 +18688,14 @@
      "fonte": "British Library",
      "scartate": 1,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Jakob, Christfried, 1866-1956"
     }
    },
    "verifica": {
@@ -18674,6 +18874,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 3,
+     "dal_2000": 2,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Chivas-Baron, Clotilde"
     }
    },
    "verifica": {
@@ -18915,6 +19123,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 2,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "MacMahon, Ella, -1956"
     }
    },
    "verifica": {
@@ -19092,6 +19308,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 7,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Harrod, Frances Forbes-Robertson"
     }
    },
    "verifica": {
@@ -19269,6 +19493,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 2,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Rives, Hallie Erminie, 1874-1956"
     }
    },
    "verifica": {
@@ -19384,6 +19616,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Müller-Schlösser, Hans, 1884-"
     }
    },
    "verifica": {
@@ -19702,6 +19942,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 2,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Wandrei, Howard, 1909-1956"
     }
    },
    "verifica": {
@@ -19970,6 +20218,14 @@
      "fonte": "British Library",
      "scartate": 3,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Dyfnallt, 1873-1956"
     }
    },
    "verifica": {
@@ -20086,6 +20342,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Lloyd-Jones, J. (John), 1885-1956"
     }
    },
    "verifica": {
@@ -20335,6 +20599,14 @@
      "fonte": "British Library",
      "scartate": 1,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 2,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Turner, Lilian"
     }
    },
    "verifica": {
@@ -21022,6 +21294,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Villetard, Pierre"
     }
    },
    "verifica": {
@@ -21031,11 +21311,11 @@
      "gnd": 1956
     },
     "citate": {
-     "Integrated Authority File": 1956,
      "MAK": 1956,
      "BnF authorities": 1956,
      "NUKAT": 1956,
-     "academie-francaise.fr": 1956
+     "academie-francaise.fr": 1956,
+     "Integrated Authority File": 1956
     }
    }
   },
@@ -21168,6 +21448,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Perés, Ramón D. (Ramón Domingo), 1863-"
     }
    },
    "verifica": {
@@ -21378,6 +21666,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Girard, Rodolphe, 1879-1956"
     }
    },
    "verifica": {
@@ -22128,6 +22424,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 2,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Karig, Walter, 1898-1956"
     }
    },
    "verifica": {
@@ -22920,6 +23224,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 1,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Baishṇabapāṇi, 1882-1956"
     }
    },
    "verifica": {
@@ -24096,6 +24408,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 4,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Yoshida, Genjirō, 1886-1956"
     }
    },
    "verifica": {
@@ -24735,6 +25055,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Ortner, Hermann Heinz, 1895-1956"
     }
    },
    "verifica": {
@@ -25123,6 +25451,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "DÉsque, Jean, 1879-1956"
     }
    },
    "verifica": {
@@ -26557,6 +26893,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Sainsbury, Noel, 1884-1955"
     }
    },
    "verifica": {
@@ -26923,6 +27267,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "ʻAṭīyah, Rashīd"
     }
    },
    "verifica": {
@@ -28059,6 +28411,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Augustin-Thierry, A."
     }
    },
    "verifica": {
@@ -28508,6 +28868,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Flament, Albert"
     }
    },
    "verifica": {
@@ -31494,6 +31862,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Possendorf, Hans, 1883-1956"
     }
    },
    "verifica": {
@@ -35018,6 +35394,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Blanchon, Pierre, 1867-"
     }
    },
    "verifica": {
@@ -35364,6 +35748,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Cybi, 1871-1956"
     }
    },
    "verifica": {
@@ -36047,6 +36439,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Briant, Théophile"
     }
    },
    "verifica": {
@@ -38753,6 +39153,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Havelka, Emanuel, 1873-1956"
     }
    },
    "verifica": {
@@ -40662,6 +41070,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Polák, Karel, 1903-1956"
     }
    },
    "verifica": {
@@ -41466,6 +41882,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Unsī, Muḥammad ʻAlī"
     }
    },
    "verifica": {
@@ -41544,6 +41968,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Landry, N.-P. (Napoléon-P.), 1884-1956"
     }
    },
    "verifica": {
