@@ -5,7 +5,8 @@ Per ogni autore si rifà il riconoscimento (stesse regole di produzione, solo pe
 e si raccolgono titoli da fonti la cui identità è GIÀ verificata, cioè collegate all'autore da un codice in
 Wikidata, mai da una ricerca per nome:
   - Wikidata: opere con autore = lui (P50);
-  - Wikipedia: le pagine collegate all'elemento Wikidata (testo della voce);
+  - Wikipedia: le pagine collegate all'elemento Wikidata, SOLO come lettura a mano: i titoli menzionati nella voce
+    non entrano nel confronto automatico (possono essere di altre persone: caso Karl M. Baer, 18/11/2026);
   - BnF: notizie collegate al codice BnF (P268), SRU author2bib;
   - BNE: notizie collegate al codice BNE (P950), SRU authority_id;
   - GND/DNB: notizie collegate al codice GND (P227), tramite lobid.org;
@@ -177,6 +178,8 @@ def main():
             s = scheda_sbn(u)
             confronti = {}
             for nome_f, v in fonti.items():
+                if nome_f == "wikipedia":   # titoli solo menzionati nella voce: possono essere di altre persone (Baer)
+                    continue
                 lista = v if isinstance(v, list) else [t for x in v.values() for t in x]
                 t = riconosci_sbn.titolo_torna(list(s), lista)
                 if t:

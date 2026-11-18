@@ -2,9 +2,9 @@
  "prova": "fase3",
  "conteggi": {
   "trovato": 64,
-  "irrisolto": 11,
+  "irrisolto": 12,
   "mancato": 11,
-  "giusto (assente)": 54
+  "giusto (assente)": 53
  },
  "autori": [
   {
@@ -1457,9 +1457,9 @@
    "n": 80,
    "qid": "Q4707865",
    "nome": "Alan Sullivan",
-   "manuale": "A",
+   "manuale": "I",
    "prima": "GA",
-   "dopo": "giusto (assente)",
+   "dopo": "irrisolto: niente",
    "stato": "ambiguo",
    "metodo": null,
    "schede": [],
@@ -2521,5 +2521,6 @@
    "ambigue": {},
    "secondi": 3.2
   }
- ]
+ ],
+ "nota": "18/11: Alan Sullivan (n. 80) passato da assente a irrisolto dopo revisione"
 }
