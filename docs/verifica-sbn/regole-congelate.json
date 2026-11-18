@@ -1,0 +1,8 @@
+{
+ "commit": "8063d7cd3ca255676572d583882f369b0e9aa973",
+ "sha256": {
+  "scripts/riconosci_sbn.py": "c0f770f15fe1f84bd30e6439fa0eb5a5044d464c6ddc1352e54e0bed5d941905",
+  "scripts/sbn.py": "77f610f9201aa5cbbec9ace9230407899f0f4c376399dff9056568ef97df8c87"
+ },
+ "nota": "regole del riconoscimento congelate prima della verifica; non modificarle fino alla fine della misura"
+}
