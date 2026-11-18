@@ -1,0 +1,36 @@
+name: Verifica SBN su campione nuovo
+
+on:
+  workflow_dispatch:
+    inputs:
+      passo:
+        description: "prove (raccoglie le prove, non usa il nuovo sistema) oppure misura (dopo gli esiti a mano)"
+        required: true
+        default: prove
+
+permissions:
+  contents: write
+
+jobs:
+  verifica:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Passo ${{ inputs.passo }}
+        env:
+          BUDGET_MINUTI_SBN: "100"
+        run: python scripts/verifica_sbn.py ${{ inputs.passo }}
+      - name: Salva
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/verifica-sbn
+          if ! git diff --cached --quiet; then
+            git commit -m "Verifica SBN: passo ${{ inputs.passo }}"
+            for i in 1 2 3 4 5; do git pull --rebase --autostash -X theirs origin main && git push && break; sleep $((i*20)); done
+          fi
