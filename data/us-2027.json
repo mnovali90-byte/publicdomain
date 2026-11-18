@@ -242,7 +242,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 20509,
+   "visite_en": 20510,
    "copertina": {
     "file": "Green-Grow-the-Lilacs-1931.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Green-Grow-the-Lilacs-1931.jpg/500px-Green-Grow-the-Lilacs-1931.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -268,7 +268,7 @@
     "it": "francese"
    },
    "generi": [],
-   "visite_en": 15485
+   "visite_en": 15483
   },
   {
    "qid": "Q887062",
@@ -379,7 +379,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 10555
+   "visite_en": 10552
   },
   {
    "qid": "Q8039491",
@@ -455,7 +455,7 @@
    "generi": [
     "fantasy_sf"
    ],
-   "visite_en": 9326
+   "visite_en": 9318
   },
   {
    "qid": "Q1171231",
@@ -545,7 +545,7 @@
     "it": "tedesco"
    },
    "generi": [],
-   "visite_en": 8526
+   "visite_en": 8518
   },
   {
    "qid": "Q7718449",
@@ -566,7 +566,7 @@
    "generi": [
     "horror"
    ],
-   "visite_en": 8413
+   "visite_en": 8411
   },
   {
    "qid": "Q3290152",
@@ -691,7 +691,7 @@
     "it": "russo"
    },
    "generi": [],
-   "visite_en": 6656,
+   "visite_en": 6654,
    "copertina": {
     "file": "Odesskie rasskazy - I. Babel, 1931.JPG",
     "url": "https://upload.wikimedia.org/wikipedia/commons/7/75/Odesskie_rasskazy_-_I._Babel%2C_1931.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -757,7 +757,7 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 5659
+   "visite_en": 5656
   },
   {
    "qid": "Q6663021",
@@ -795,7 +795,7 @@
     "it": "tedesco"
    },
    "generi": [],
-   "visite_en": 5305
+   "visite_en": 5303
   },
   {
    "qid": "Q1746433",
@@ -904,7 +904,7 @@
     "it": "giapponese"
    },
    "generi": [],
-   "visite_en": 4722
+   "visite_en": 4719
   },
   {
    "qid": "Q4659979",
@@ -1008,7 +1008,7 @@
     "it": "greco"
    },
    "generi": [],
-   "visite_en": 3934
+   "visite_en": 3937
   },
   {
    "qid": "Q874809",
@@ -1165,7 +1165,7 @@
    "generi": [
     "horror"
    ],
-   "visite_en": 3562
+   "visite_en": 3559
   },
   {
    "qid": "Q1214380",
@@ -1184,7 +1184,7 @@
     "it": "tedesco"
    },
    "generi": [],
-   "visite_en": 3557
+   "visite_en": 3555
   },
   {
    "qid": "Q1170330",
@@ -1379,7 +1379,7 @@
    "generi": [
     "poesia"
    ],
-   "visite_en": 2627,
+   "visite_en": 2626,
    "copertina": {
     "file": "Altazor - Poema.JPG",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Altazor_-_Poema.JPG/500px-Altazor_-_Poema.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -1577,7 +1577,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 1936
+   "visite_en": 1934
   },
   {
    "qid": "Q1696432",
@@ -1657,7 +1657,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 1684
+   "visite_en": 1683
   },
   {
    "qid": "Q3220209",
@@ -1740,25 +1740,6 @@
    "visite_en": 1428
   },
   {
-   "qid": "Q5437626",
-   "titolo": "Father Malachy's Miracle",
-   "titolo_it": "Il miracolo di padre Malachia",
-   "autori": [
-    {
-     "qid": "Q991736",
-     "nome": "Bruce Marshall"
-    }
-   ],
-   "pagine": 3,
-   "wiki_en": "https://en.wikipedia.org/wiki/Father_Malachy%27s_Miracle",
-   "lingua": {
-    "en": "English",
-    "it": "inglese"
-   },
-   "generi": [],
-   "visite_en": 1396
-  },
-  {
    "qid": "Q56308426",
    "titolo": "My Experiences in the World War",
    "titolo_it": null,
@@ -1781,6 +1762,25 @@
    }
   },
   {
+   "qid": "Q5437626",
+   "titolo": "Father Malachy's Miracle",
+   "titolo_it": "Il miracolo di padre Malachia",
+   "autori": [
+    {
+     "qid": "Q991736",
+     "nome": "Bruce Marshall"
+    }
+   ],
+   "pagine": 3,
+   "wiki_en": "https://en.wikipedia.org/wiki/Father_Malachy%27s_Miracle",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [],
+   "visite_en": 1392
+  },
+  {
    "qid": "Q7720011",
    "titolo": "The Bridal Canopy",
    "titolo_it": null,
@@ -1798,27 +1798,6 @@
    },
    "generi": [],
    "visite_en": 1322
-  },
-  {
-   "qid": "Q16210839",
-   "titolo": "The London Scene",
-   "titolo_it": "Scene di Londra",
-   "autori": [
-    {
-     "qid": "Q40909",
-     "nome": "Virginia Woolf"
-    }
-   ],
-   "pagine": 2,
-   "wiki_en": "https://en.wikipedia.org/wiki/The_London_Scene",
-   "lingua": {
-    "en": "English",
-    "it": "inglese"
-   },
-   "generi": [
-    "saggio"
-   ],
-   "visite_en": 1306
   },
   {
    "qid": "Q3817893",
@@ -1847,6 +1826,27 @@
    }
   },
   {
+   "qid": "Q16210839",
+   "titolo": "The London Scene",
+   "titolo_it": "Scene di Londra",
+   "autori": [
+    {
+     "qid": "Q40909",
+     "nome": "Virginia Woolf"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/The_London_Scene",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "saggio"
+   ],
+   "visite_en": 1304
+  },
+  {
    "qid": "Q811229",
    "titolo": "A Small Circus",
    "titolo_it": null,
@@ -1863,7 +1863,7 @@
     "it": "tedesco"
    },
    "generi": [],
-   "visite_en": 1275
+   "visite_en": 1274
   },
   {
    "qid": "Q7974168",
@@ -1995,7 +1995,7 @@
     "it": "russo"
    },
    "generi": [],
-   "visite_en": 1042
+   "visite_en": 1040
   },
   {
    "qid": "Q6929263",
@@ -2016,7 +2016,7 @@
    "generi": [
     "fantasy_sf"
    ],
-   "visite_en": 1038
+   "visite_en": 1037
   },
   {
    "qid": "Q154783",
@@ -2122,7 +2122,7 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 846
+   "visite_en": 843
   },
   {
    "qid": "Q3209740",
@@ -2261,7 +2261,7 @@
     "it": "russo"
    },
    "generi": [],
-   "visite_en": 580
+   "visite_en": 579
   },
   {
    "qid": "Q1355242",
@@ -2292,25 +2292,6 @@
    }
   },
   {
-   "qid": "Q7625506",
-   "titolo": "Strychnine in the Soup",
-   "titolo_it": "Stricnina nella minestra",
-   "autori": [
-    {
-     "qid": "Q207515",
-     "nome": "P. G. Wodehouse"
-    }
-   ],
-   "pagine": 2,
-   "wiki_en": "https://en.wikipedia.org/wiki/Strychnine_in_the_Soup",
-   "lingua": {
-    "en": "English",
-    "it": "inglese"
-   },
-   "generi": [],
-   "visite_en": 529
-  },
-  {
    "qid": "Q7736867",
    "titolo": "The Go-getter",
    "titolo_it": "Un uomo di successo",
@@ -2322,6 +2303,25 @@
    ],
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Go-Getter_(short_story)",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [],
+   "visite_en": 528
+  },
+  {
+   "qid": "Q7625506",
+   "titolo": "Strychnine in the Soup",
+   "titolo_it": "Stricnina nella minestra",
+   "autori": [
+    {
+     "qid": "Q207515",
+     "nome": "P. G. Wodehouse"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/Strychnine_in_the_Soup",
    "lingua": {
     "en": "English",
     "it": "inglese"
@@ -2441,7 +2441,7 @@
     "it": "catalano"
    },
    "generi": [],
-   "visite_en": 382,
+   "visite_en": 380,
    "copertina": {
     "file": "'Mort de dama', 9a edició.JPG",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/%27Mort_de_dama%27%2C_9a_edici%C3%B3.JPG/500px-%27Mort_de_dama%27%2C_9a_edici%C3%B3.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -2518,7 +2518,7 @@
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/M%C3%A9lo_(play)",
    "generi": [],
-   "visite_en": 348
+   "visite_en": 347
   },
   {
    "qid": "Q4928550",
@@ -2577,7 +2577,7 @@
     "it": "norvegese"
    },
    "generi": [],
-   "visite_en": 279
+   "visite_en": 276
   },
   {
    "qid": "Q4732223",
@@ -2596,7 +2596,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 274
+   "visite_en": 273
   },
   {
    "qid": "Q972066",
