@@ -245,11 +245,6 @@
      "morte": 1939
     },
     {
-     "opera": "The Story of the Late Mr. Elvesham",
-     "nome": "Max Cowper",
-     "morte": 1911
-    },
-    {
      "opera": "The Soul of a Bishop",
      "nome": "Charles Allan Gilbert",
      "morte": 1929
@@ -258,6 +253,11 @@
      "opera": "The First Men in the Moon",
      "nome": "Claude Allin Shepperson",
      "morte": 1921
+    },
+    {
+     "opera": "The Story of the Late Mr. Elvesham",
+     "nome": "Max Cowper",
+     "morte": 1911
     }
    ],
    "pagina": "h-g-wells",
@@ -12901,8 +12901,8 @@
      "gnd": 1946
     },
     "citate": {
-     "Archivio Storico Ricordi": 1946,
-     "Dizionario degli scrittori italiani contemporanei pseudonimi: 1900-1975": 1946
+     "Dizionario degli scrittori italiani contemporanei pseudonimi: 1900-1975": 1946,
+     "Archivio Storico Ricordi": 1946
     }
    }
   },
