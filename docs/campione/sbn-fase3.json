@@ -1,0 +1,2740 @@
+{
+ "prova": "fase3",
+ "conteggi": {
+  "trovato": 63,
+  "irrisolto": 11,
+  "mancato": 10,
+  "scheda diversa": 1,
+  "giusto (assente)": 53,
+  "trovato con schede in più": 1,
+  "falso positivo": 1
+ },
+ "autori": [
+  {
+   "n": 1,
+   "qid": "Q2160344",
+   "nome": "Virgilio Giotti",
+   "manuale": "C",
+   "prima": "G",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_sbn",
+   "schede": [
+    "CFIV017925"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CFIV-017925": "codice SBN di Wikidata (P396): Giotti, Virgilio"
+   },
+   "ambigue": {},
+   "secondi": 1.5
+  },
+  {
+   "n": 2,
+   "qid": "Q15143064",
+   "nome": "Maria Freschi",
+   "manuale": "C",
+   "prima": "M",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_sbn",
+   "schede": [
+    "RAVV036725"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-RAVV-036725": "codice SBN di Wikidata (P396): Borgese, Maria"
+   },
+   "ambigue": {},
+   "secondi": 1.2
+  },
+  {
+   "n": 3,
+   "qid": "Q312637",
+   "nome": "Curzio Malaparte",
+   "manuale": "C",
+   "prima": "G",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_sbn",
+   "schede": [
+    "CFIV002364"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CFIV-002364": "codice SBN di Wikidata (P396): Malaparte, Curzio"
+   },
+   "ambigue": {},
+   "secondi": 0.9
+  },
+  {
+   "n": 4,
+   "qid": "Q2782998",
+   "nome": "Peter B. Kyne",
+   "manuale": "C",
+   "prima": "G",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_sbn",
+   "schede": [
+    "CUBV086679"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CUBV-086679": "codice SBN di Wikidata (P396): Kyne, Peter Bernard"
+   },
+   "ambigue": {},
+   "secondi": 1.0
+  },
+  {
+   "n": 5,
+   "qid": "Q3122298",
+   "nome": "Guy de Téramond",
+   "manuale": "C",
+   "prima": "G",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_sbn",
+   "schede": [
+    "TO0V166324"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-TO0V-166324": "codice SBN di Wikidata (P396): Teramond, Guy : de"
+   },
+   "ambigue": {},
+   "secondi": 1.2
+  },
+  {
+   "n": 6,
+   "qid": "Q389375",
+   "nome": "Marie Belloc Lowndes",
+   "manuale": "C",
+   "prima": "G",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_sbn",
+   "schede": [
+    "SBLV104590"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-SBLV-104590": "codice SBN di Wikidata (P396): Lowndes, Marie Belloc"
+   },
+   "ambigue": {},
+   "secondi": 1.2
+  },
+  {
+   "n": 7,
+   "qid": "Q3839493",
+   "nome": "Luigi Chiarelli",
+   "manuale": "C",
+   "prima": "G",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_sbn",
+   "schede": [
+    "CFIV092515"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CFIV-092515": "codice SBN di Wikidata (P396): Chiarelli, Luigi <1880-1947>"
+   },
+   "ambigue": {},
+   "secondi": 1.2
+  },
+  {
+   "n": 8,
+   "qid": "Q80871",
+   "nome": "Gabriela Mistral",
+   "manuale": "C",
+   "prima": "G",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_sbn",
+   "schede": [
+    "VEAV022837"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-VEAV-022837": "codice SBN di Wikidata (P396): Mistral, Gabriela"
+   },
+   "ambigue": {},
+   "secondi": 1.2
+  },
+  {
+   "n": 9,
+   "qid": "Q3902928",
+   "nome": "Pier Maria Rosso di San Secondo",
+   "manuale": "C",
+   "prima": "G",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_sbn",
+   "schede": [
+    "CFIV013733"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CFIV-013733": "codice SBN di Wikidata (P396): Rosso di San Secondo, Pier Maria"
+   },
+   "ambigue": {},
+   "secondi": 1.2
+  },
+  {
+   "n": 10,
+   "qid": "Q93450",
+   "nome": "Leo Perutz",
+   "manuale": "C",
+   "prima": "G",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_sbn",
+   "schede": [
+    "CFIV020157"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CFIV-020157": "codice SBN di Wikidata (P396): Perutz, Leo"
+   },
+   "ambigue": {},
+   "secondi": 1.2
+  },
+  {
+   "n": 11,
+   "qid": "Q94917876",
+   "nome": "Hans Mahner-Mons",
+   "manuale": "C",
+   "prima": "M",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_sbn",
+   "schede": [
+    "CUBV127652"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CUBV-127652": "codice SBN di Wikidata (P396): Possendorf, Hans"
+   },
+   "ambigue": {},
+   "secondi": 1.2
+  },
+  {
+   "n": 12,
+   "qid": "Q1137438",
+   "nome": "Gregorio Martínez Sierra",
+   "manuale": "C",
+   "prima": "G",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_sbn",
+   "schede": [
+    "CUBV100281"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CUBV-100281": "codice SBN di Wikidata (P396): Martínez Sierra, Gregorio"
+   },
+   "ambigue": {},
+   "secondi": 0.9
+  },
+  {
+   "n": 13,
+   "qid": "Q42511",
+   "nome": "H. G. Wells",
+   "manuale": "C",
+   "prima": "G",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_sbn",
+   "schede": [
+    "CFIV010461"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CFIV-010461": "codice SBN di Wikidata (P396): Wells, H. G."
+   },
+   "ambigue": {},
+   "secondi": 1.1
+  },
+  {
+   "n": 14,
+   "qid": "Q229480",
+   "nome": "Willa Cather",
+   "manuale": "C",
+   "prima": "G",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_sbn",
+   "schede": [
+    "CFIV009365"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CFIV-009365": "codice SBN di Wikidata (P396): Cather, Willa"
+   },
+   "ambigue": {},
+   "secondi": 0.9
+  },
+  {
+   "n": 15,
+   "qid": "Q983356",
+   "nome": "Charles MacArthur",
+   "manuale": "C",
+   "prima": "G",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_sbn",
+   "schede": [
+    "CUBV165725"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CUBV-165725": "codice SBN di Wikidata (P396): MacArthur, Charles"
+   },
+   "ambigue": {},
+   "secondi": 1.2
+  },
+  {
+   "n": 16,
+   "qid": "Q451312",
+   "nome": "Umberto Saba",
+   "manuale": "C",
+   "prima": "G",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_sbn",
+   "schede": [
+    "CFIV005845"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CFIV-005845": "codice SBN di Wikidata (P396): Saba, Umberto"
+   },
+   "ambigue": {},
+   "secondi": 1.0
+  },
+  {
+   "n": 17,
+   "qid": "Q3623504",
+   "nome": "Arnaldo Fraccaroli",
+   "manuale": "C",
+   "prima": "G",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_sbn",
+   "schede": [
+    "RAVV036522"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-RAVV-036522": "codice SBN di Wikidata (P396): Fraccaroli, Arnaldo"
+   },
+   "ambigue": {},
+   "secondi": 1.0
+  },
+  {
+   "n": 18,
+   "qid": "Q6818964",
+   "nome": "Meredith Nicholson",
+   "manuale": "C",
+   "prima": "G",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_sbn",
+   "schede": [
+    "CUBV119389"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CUBV-119389": "codice SBN di Wikidata (P396): Nicholson, Meredith"
+   },
+   "ambigue": {},
+   "secondi": 1.2
+  },
+  {
+   "n": 19,
+   "qid": "Q193283",
+   "nome": "Manuel de Falla",
+   "manuale": "C",
+   "prima": "G",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_sbn",
+   "schede": [
+    "CFIV076192"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CFIV-076192": "codice SBN di Wikidata (P396): Falla, Manuel : de"
+   },
+   "ambigue": {},
+   "secondi": 1.2
+  },
+  {
+   "n": 20,
+   "qid": "Q3713064",
+   "nome": "Domenico Giuliotti",
+   "manuale": "C",
+   "prima": "G",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_sbn",
+   "schede": [
+    "CFIV021464"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CFIV-021464": "codice SBN di Wikidata (P396): Giuliotti, Domenico"
+   },
+   "ambigue": {},
+   "secondi": 0.9
+  },
+  {
+   "n": 21,
+   "qid": "Q48889747",
+   "nome": "Charles Foleÿ",
+   "manuale": "C",
+   "prima": "G",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_sbn",
+   "schede": [
+    "RAVV036527"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-RAVV-036527": "codice SBN di Wikidata (P396): Foleÿ, Charles <1861-1956>"
+   },
+   "ambigue": {},
+   "secondi": 1.2
+  },
+  {
+   "n": 22,
+   "qid": "Q560015",
+   "nome": "Hugh Lofting",
+   "manuale": "C",
+   "prima": "G",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_sbn",
+   "schede": [
+    "SBLV003035"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-SBLV-003035": "codice SBN di Wikidata (P396): Lofting, Hugh"
+   },
+   "ambigue": {},
+   "secondi": 1.2
+  },
+  {
+   "n": 23,
+   "qid": "Q2295334",
+   "nome": "Patrick Abercrombie",
+   "manuale": "C",
+   "prima": "G",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "nome_con_prova",
+   "schede": [
+    "SBLV301743"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-SBLV-301743": "nome compatibile e titolo che torna («County of London plan»): Abercrombie, Patrick"
+   },
+   "ambigue": {},
+   "secondi": 4.5
+  },
+  {
+   "n": 24,
+   "qid": "Q18535891",
+   "nome": "Richard Griffith",
+   "manuale": "I",
+   "prima": "S",
+   "dopo": "irrisolto: niente",
+   "stato": "ambiguo",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-PUVV-187754": "Griffith, John R.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-RAVV-045554": "Griffith, Richard"
+   },
+   "secondi": 5.3
+  },
+  {
+   "n": 25,
+   "qid": "Q3611305",
+   "nome": "Alfred Walter Stewart",
+   "manuale": "C",
+   "prima": "G",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_sbn",
+   "schede": [
+    "PALV039292"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-PALV-039292": "codice SBN di Wikidata (P396): Stewart, Alfred Walter"
+   },
+   "ambigue": {},
+   "secondi": 1.2
+  },
+  {
+   "n": 26,
+   "qid": "Q61968643",
+   "nome": "Paul Leclercq",
+   "manuale": "C",
+   "prima": "G",
+   "dopo": "mancato",
+   "stato": "ambiguo",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-FERV-036377": "Leclercq, Paul"
+   },
+   "secondi": 3.1
+  },
+  {
+   "n": 27,
+   "qid": "Q77491",
+   "nome": "Hans Carossa",
+   "manuale": "C",
+   "prima": "G",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_sbn",
+   "schede": [
+    "RAVV030737"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-RAVV-030737": "codice SBN di Wikidata (P396): Carossa, Hans"
+   },
+   "ambigue": {},
+   "secondi": 1.2
+  },
+  {
+   "n": 28,
+   "qid": "Q6288424",
+   "nome": "Josephine Pinckney",
+   "manuale": "C",
+   "prima": "G",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_sbn",
+   "schede": [
+    "RAVV026009"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-RAVV-026009": "codice SBN di Wikidata (P396): Pinckney, Josephine"
+   },
+   "ambigue": {},
+   "secondi": 1.2
+  },
+  {
+   "n": 29,
+   "qid": "Q188385",
+   "nome": "Gertrude Stein",
+   "manuale": "C",
+   "prima": "G",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_sbn",
+   "schede": [
+    "CFIV060098"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CFIV-060098": "codice SBN di Wikidata (P396): Stein, Gertrude"
+   },
+   "ambigue": {},
+   "secondi": 1.2
+  },
+  {
+   "n": 30,
+   "qid": "Q3130391",
+   "nome": "Henri-Georges Jeanne",
+   "manuale": "C",
+   "prima": "N",
+   "dopo": "scheda diversa",
+   "stato": "riconosciuto",
+   "metodo": "nome_con_prova",
+   "schede": [
+    "BVEV091761"
+   ],
+   "in_piu": [
+    "BVEV091761"
+   ],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-BVEV-091761": "nome intero e cognome raro in SBN (1 schede): Laon, Jean : de <sec. 17.>"
+   },
+   "ambigue": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-PALV-039485": "Magog, Henri Jeanne",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-USMV-940091": "Jeanne, Henri"
+   },
+   "secondi": 13.8
+  },
+  {
+   "n": 31,
+   "qid": "Q713284",
+   "nome": "Felix Timmermans",
+   "manuale": "C",
+   "prima": "S",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_sbn",
+   "schede": [
+    "CFIV031303"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CFIV-031303": "codice SBN di Wikidata (P396): Timmermans, Felix"
+   },
+   "ambigue": {},
+   "secondi": 0.9
+  },
+  {
+   "n": 32,
+   "qid": "Q215606",
+   "nome": "Ludwig Winder",
+   "manuale": "C",
+   "prima": "G",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_sbn",
+   "schede": [
+    "LO1V131860"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-131860": "codice SBN di Wikidata (P396): Winder, Ludwig"
+   },
+   "ambigue": {},
+   "secondi": 1.0
+  },
+  {
+   "n": 33,
+   "qid": "Q237514",
+   "nome": "Laura Ingalls Wilder",
+   "manuale": "C",
+   "prima": "G",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_sbn",
+   "schede": [
+    "CFIV116004"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CFIV-116004": "codice SBN di Wikidata (P396): Wilder, Laura Ingalls"
+   },
+   "ambigue": {},
+   "secondi": 0.9
+  },
+  {
+   "n": 34,
+   "qid": "Q857714",
+   "nome": "Camil Petrescu",
+   "manuale": "C",
+   "prima": "S",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_sbn",
+   "schede": [
+    "SBLV034318"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-SBLV-034318": "codice SBN di Wikidata (P396): Petrescu, Camil"
+   },
+   "ambigue": {},
+   "secondi": 1.2
+  },
+  {
+   "n": 35,
+   "qid": "Q1578424",
+   "nome": "Hans Adler",
+   "manuale": "C",
+   "prima": "S",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_sbn",
+   "schede": [
+    "DDSV394231"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-DDSV-394231": "codice SBN di Wikidata (P396): Adler, Hans <1880-1957>"
+   },
+   "ambigue": {},
+   "secondi": 1.0
+  },
+  {
+   "n": 36,
+   "qid": "Q1547340",
+   "nome": "Leonora Speyer",
+   "manuale": "A",
+   "prima": "GA",
+   "dopo": "giusto (assente)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {},
+   "secondi": 3.1
+  },
+  {
+   "n": 37,
+   "qid": "Q121008",
+   "nome": "Ernst Kreidolf",
+   "manuale": "C",
+   "prima": "M",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_sbn",
+   "schede": [
+    "PALV057259"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-PALV-057259": "codice SBN di Wikidata (P396): Kreidolf, Ernst <1863-1956>"
+   },
+   "ambigue": {},
+   "secondi": 1.2
+  },
+  {
+   "n": 38,
+   "qid": "Q95123746",
+   "nome": "Fráňa Kopeček",
+   "manuale": "A",
+   "prima": "GA",
+   "dopo": "giusto (assente)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {},
+   "secondi": 4.3
+  },
+  {
+   "n": 39,
+   "qid": "Q12357525",
+   "nome": "Baishnaba Pani",
+   "manuale": "A",
+   "prima": "GA",
+   "dopo": "giusto (assente)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {},
+   "secondi": 6.2
+  },
+  {
+   "n": 40,
+   "qid": "Q13123001",
+   "nome": "Herbert Isaac Ernest Dhlomo",
+   "manuale": "A",
+   "prima": "GA",
+   "dopo": "giusto (assente)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {},
+   "secondi": 1.9
+  },
+  {
+   "n": 41,
+   "qid": "Q140911057",
+   "nome": "Rachel Swete Macnamara",
+   "manuale": "A",
+   "prima": "GA",
+   "dopo": "giusto (assente)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {},
+   "secondi": 0.9
+  },
+  {
+   "n": 42,
+   "qid": "Q15521717",
+   "nome": "Mary Ellen Bamford",
+   "manuale": "A",
+   "prima": "GA",
+   "dopo": "giusto (assente)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {},
+   "secondi": 1.9
+  },
+  {
+   "n": 43,
+   "qid": "Q64685698",
+   "nome": "Frances Forbes-Robertson",
+   "manuale": "A",
+   "prima": "GA",
+   "dopo": "giusto (assente)",
+   "stato": "ambiguo",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CAMV-003181": "Forbes, I. H.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-PUVV-045603": "Harrod, John F.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-DDSV-021444": "Robertson, F.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-GEAV-011378": "Robertson, Alastair H. F.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-290062": "Robertson, H. E.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-PUVV-086408": "Robertson, Ian H.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-UFIV-080772": "Robertson, Edmund F."
+   },
+   "secondi": 13.4
+  },
+  {
+   "n": 44,
+   "qid": "Q16947489",
+   "nome": "Xavier Viura i Rius",
+   "manuale": "A",
+   "prima": "GA",
+   "dopo": "giusto (assente)",
+   "stato": "ambiguo",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-PUVV-212789": "Rius, Xavier"
+   },
+   "secondi": 3.1
+  },
+  {
+   "n": 45,
+   "qid": "Q1470667",
+   "nome": "Hans Ganz",
+   "manuale": "A",
+   "prima": "GA",
+   "dopo": "giusto (assente)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {},
+   "secondi": 1.9
+  },
+  {
+   "n": 46,
+   "qid": "Q75945",
+   "nome": "Ernst Hardt",
+   "manuale": "C",
+   "prima": "M",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "nome_con_prova",
+   "schede": [
+    "NAPV078426"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-NAPV-078426": "nome compatibile e titolo che torna («Tantris der Narr»): Hardt, Ernst"
+   },
+   "ambigue": {},
+   "secondi": 4.8
+  },
+  {
+   "n": 47,
+   "qid": "Q30337036",
+   "nome": "František Heřmánek",
+   "manuale": "A",
+   "prima": "GA",
+   "dopo": "giusto (assente)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {},
+   "secondi": 3.1
+  },
+  {
+   "n": 48,
+   "qid": "Q7273942",
+   "nome": "R. Raghava Iyengar",
+   "manuale": "A",
+   "prima": "GA",
+   "dopo": "giusto (assente)",
+   "stato": "ambiguo",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-128917": "Iyengar, Ravi",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-483352": "Iyer, Gopalkrishnan R."
+   },
+   "secondi": 4.8
+  },
+  {
+   "n": 49,
+   "qid": "Q1681453",
+   "nome": "Josef Wenter",
+   "manuale": "C",
+   "prima": "M",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_sbn",
+   "schede": [
+    "SBLV269225"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-SBLV-269225": "codice SBN di Wikidata (P396): Wenter, Josef"
+   },
+   "ambigue": {},
+   "secondi": 1.0
+  },
+  {
+   "n": 50,
+   "qid": "Q3072893",
+   "nome": "Firmin Roz",
+   "manuale": "C",
+   "prima": "M",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_sbn",
+   "schede": [
+    "RAVV057304"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-RAVV-057304": "codice SBN di Wikidata (P396): Roz, Firmin"
+   },
+   "ambigue": {},
+   "secondi": 0.9
+  },
+  {
+   "n": 51,
+   "qid": "Q3302224",
+   "nome": "Max Maurey",
+   "manuale": "C",
+   "prima": "M",
+   "dopo": "mancato",
+   "stato": "ambiguo",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-RAVV-028610": "Maurey, Max"
+   },
+   "secondi": 2.8
+  },
+  {
+   "n": 52,
+   "qid": "Q12346784",
+   "nome": "Edith Alleyne Sinnotte",
+   "manuale": "A",
+   "prima": "GA",
+   "dopo": "giusto (assente)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {},
+   "secondi": 1.9
+  },
+  {
+   "n": 53,
+   "qid": "Q12208643",
+   "nome": "Ḥalīm Dammūs",
+   "manuale": "C",
+   "prima": "M",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "nome_con_prova",
+   "schede": [
+    "IEIV216261"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-IEIV-216261": "nome intero e cognome raro in SBN (1 schede): Dammūs, Ḥalīm"
+   },
+   "ambigue": {},
+   "secondi": 4.9
+  },
+  {
+   "n": 54,
+   "qid": "Q7653259",
+   "nome": "Swami Vipulananda",
+   "manuale": "A",
+   "prima": "GA",
+   "dopo": "giusto (assente)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {},
+   "secondi": 4.8
+  },
+  {
+   "n": 55,
+   "qid": "Q16831409",
+   "nome": "František Dohnal",
+   "manuale": "A",
+   "prima": "GA",
+   "dopo": "giusto (assente)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {},
+   "secondi": 3.8
+  },
+  {
+   "n": 56,
+   "qid": "Q366715",
+   "nome": "David Shimoni",
+   "manuale": "C",
+   "prima": "M",
+   "dopo": "mancato",
+   "stato": "ambiguo",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-312466": "Shimoni, David"
+   },
+   "secondi": 2.8
+  },
+  {
+   "n": 57,
+   "qid": "Q95387414",
+   "nome": "Alois Čáp",
+   "manuale": "A",
+   "prima": "GA",
+   "dopo": "giusto (assente)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {},
+   "secondi": 3.0
+  },
+  {
+   "n": 58,
+   "qid": "Q3631340",
+   "nome": "Bhai Vir Singh",
+   "manuale": "A",
+   "prima": "GA",
+   "dopo": "giusto (assente)",
+   "stato": "ambiguo",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-GEAV-016972": "Singh, J.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-AQ1V-003492": "Singh, B.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-GEAV-022584": "Singh, I. B.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-IEIV-044627": "Singh, Vir",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LIGV-026413": "Singh, Raja J.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-316403": "Singh, Bhai Maya",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-SBLV-308543": "Singh, V. B.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-478850": "Singh, Jang B.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-036198": "Singh, Jitendra V.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-324246": "Singh, Sharmila J.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-329180": "Singh, Prakash J.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MODV-664126": "Singh, B. B."
+   },
+   "secondi": 13.5
+  },
+  {
+   "n": 59,
+   "qid": "Q16056070",
+   "nome": "Godfrey Fox Bradby",
+   "manuale": "C",
+   "prima": "M",
+   "dopo": "mancato",
+   "stato": "ambiguo",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-IEIV-063243": "Bradby, G. F."
+   },
+   "secondi": 2.9
+  },
+  {
+   "n": 60,
+   "qid": "Q2695518",
+   "nome": "John William Van Druten",
+   "manuale": "C",
+   "prima": "M",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_sbn",
+   "schede": [
+    "SBLV135037"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-SBLV-135037": "codice SBN di Wikidata (P396): Van Druten, John"
+   },
+   "ambigue": {},
+   "secondi": 0.9
+  },
+  {
+   "n": 61,
+   "qid": "Q95072057",
+   "nome": "Jaroslav Arséne La Motte",
+   "manuale": "A",
+   "prima": "GA",
+   "dopo": "giusto (assente)",
+   "stato": "ambiguo",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LIGV-049619": "Motte, A."
+   },
+   "secondi": 2.9
+  },
+  {
+   "n": 62,
+   "qid": "Q5798363",
+   "nome": "Daniel García-Mansilla",
+   "manuale": "C",
+   "prima": "M",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_sbn",
+   "schede": [
+    "RAVV101070"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-RAVV-101070": "codice SBN di Wikidata (P396): Lujan, André : de"
+   },
+   "ambigue": {},
+   "secondi": 1.0
+  },
+  {
+   "n": 63,
+   "qid": "Q1334812",
+   "nome": "Emanuel von Bodman",
+   "manuale": "C",
+   "prima": "M",
+   "dopo": "mancato",
+   "stato": "ambiguo",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-PUVV-227385": "Bodman, Emanuel : von"
+   },
+   "secondi": 9.1
+  },
+  {
+   "n": 64,
+   "qid": "Q545544",
+   "nome": "Richard Le Gallienne",
+   "manuale": "C",
+   "prima": "M",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "nome_con_prova",
+   "schede": [
+    "PUVV225298"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-PUVV-225298": "nome compatibile e titolo che torna («<<The >>quest of the golden girl»): Le Gallienne, Richard"
+   },
+   "ambigue": {},
+   "secondi": 4.8
+  },
+  {
+   "n": 65,
+   "qid": "Q13129341",
+   "nome": "John Lloyd-Jones",
+   "manuale": "A",
+   "prima": "GA",
+   "dopo": "giusto (assente)",
+   "stato": "ambiguo",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-VEAV-046534": "Jones, Bradley L.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CAGV-687007": "Jones, E. L. <ingegnere minerario>",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-AQ1V-011169": "Jones, John Bush",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-069329": "Jones, David J.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CFIV-307492": "Jones, J. <fl.1851>",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-VEAV-031023": "Jones, Christopher J.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CUBV-028327": "Jones, Chester Lloyd",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-378704": "Jones, John Paul",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-DDSV-021162": "Jones, J.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-TSAV-021886": "Jones, J.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/CNMN-0000155995": "Jones, J.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-DDSV-086562": "Jones, L.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-GEAV-012499": "Jones, L.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-DDSV-137035": "Jones, John",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-UBOV-007927": "Jones, John",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-DDSV-233227": "Jones, John Henry <musicista>",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-UBOV-682970": "Jones, Sam J.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-DDSV-204150": "Lloyd, Jones David",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-DDSV-277601": "Jones, Herry L.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-DDSV-384360": "Jones, J. <autore musicale>",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-TO0V-051728": "Jones, John Walter",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-GEAV-087542": "Jones, Christopher J",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-GEAV-087923": "Jones, Peter J.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-GEAV-090432": "Jones, Martin J.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-GEAV-094373": "Jones, J. <geologo>",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-IEIV-013107": "Jones, Patrick Lloyd",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-IEIV-054460": "Jones, Lloyd",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-NAPV-110650": "Lloyd, Karen J.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-RAVV-692149": "Lloyd, Matthew J.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-DDSV-211303": "Lloyd, John",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-TO0V-086094": "Lloyd, John",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-UBOV-504860": "Lloyd, John",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MODV-321618": "Lloyd, John",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-TO0V-158015": "Lloyd, John Edward",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CUBV-092070": "Lloyd, John William",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-DDSV-093567": "Lloyd, John Bedford",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-DDSV-174082": "Lloyd, J.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-UFIV-130676": "Jones, David Lloyd",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-343493": "Jones, Rob Lloyd",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-117514": "Lloyd Jones, John Gareth",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-130927": "Lloyd, Ian J.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-199153": "Lloyd, William J.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-PUVV-085557": "Lloyd, Peter J.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MODV-679726": "Jones, Lloyd <19. sec.>"
+   },
+   "secondi": 46.5
+  },
+  {
+   "n": 66,
+   "qid": "Q18117863",
+   "nome": "Albert Saint-Paul",
+   "manuale": "C",
+   "prima": "M",
+   "dopo": "mancato",
+   "stato": "ambiguo",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MUSV-050221": "Paul, A.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-PUVV-181149": "Paul, A.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-PUVV-289756": "Saint-Paul, Albert",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-SBLV-133054": "Le Saint, William P."
+   },
+   "secondi": 8.7
+  },
+  {
+   "n": 67,
+   "qid": "Q276464",
+   "nome": "Judith Blunt-Lytton",
+   "manuale": "C",
+   "prima": "M",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_sbn",
+   "schede": [
+    "MODV160786"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MODV-160786": "codice SBN di Wikidata (P396): Lytton, Judith Anne Dorothea Blunt <baroness Wentworth>"
+   },
+   "ambigue": {},
+   "secondi": 0.9
+  },
+  {
+   "n": 68,
+   "qid": "Q213482",
+   "nome": "Giuseppe Tomasi di Lampedusa",
+   "manuale": "C",
+   "prima": "G",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_sbn",
+   "schede": [
+    "CFIV055692"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CFIV-055692": "codice SBN di Wikidata (P396): Tomasi di Lampedusa, Giuseppe"
+   },
+   "ambigue": {},
+   "secondi": 1.0
+  },
+  {
+   "n": 69,
+   "qid": "Q4958416",
+   "nome": "Sheila Kaye-Smith",
+   "manuale": "C",
+   "prima": "M",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_sbn",
+   "schede": [
+    "CUBV085881"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CUBV-085881": "codice SBN di Wikidata (P396): Kaye-Smith, Sheila"
+   },
+   "ambigue": {},
+   "secondi": 0.9
+  },
+  {
+   "n": 70,
+   "qid": "Q16337108",
+   "nome": "Catulo da Paixão Cearense",
+   "manuale": "C",
+   "prima": "M",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_sbn",
+   "schede": [
+    "PUVV409370"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-PUVV-409370": "codice SBN di Wikidata (P396): Cearense, Catullo da Paixao <1863-1946>"
+   },
+   "ambigue": {},
+   "secondi": 1.0
+  },
+  {
+   "n": 71,
+   "qid": "Q2043891",
+   "nome": "Harley Granville-Barker",
+   "manuale": "C",
+   "prima": "M",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_sbn",
+   "schede": [
+    "MILV079648"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-079648": "codice SBN di Wikidata (P396): Granville-Barker, Harley"
+   },
+   "ambigue": {},
+   "secondi": 0.9
+  },
+  {
+   "n": 72,
+   "qid": "Q131522682",
+   "nome": "Enrique Vázquez de Aldana",
+   "manuale": "A",
+   "prima": "GA",
+   "dopo": "giusto (assente)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {},
+   "secondi": 1.0
+  },
+  {
+   "n": 73,
+   "qid": "Q1753084",
+   "nome": "Czesław Jastrzębiec-Kozłowski",
+   "manuale": "A",
+   "prima": "GA",
+   "dopo": "giusto (assente)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {},
+   "secondi": 6.7
+  },
+  {
+   "n": 74,
+   "qid": "Q2614668",
+   "nome": "Caroline van Dommelen",
+   "manuale": "A",
+   "prima": "GA",
+   "dopo": "giusto (assente)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {},
+   "secondi": 1.9
+  },
+  {
+   "n": 75,
+   "qid": "Q26788602",
+   "nome": "Jules Jehin-Prume",
+   "manuale": "A",
+   "prima": "GA",
+   "dopo": "giusto (assente)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {},
+   "secondi": 3.8
+  },
+  {
+   "n": 76,
+   "qid": "Q100276525",
+   "nome": "Genevieve Le Lasseur de Ransay",
+   "manuale": "A",
+   "prima": "GA",
+   "dopo": "giusto (assente)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {},
+   "secondi": 1.9
+  },
+  {
+   "n": 77,
+   "qid": "Q3579710",
+   "nome": "Édouard-Zotique Massicotte",
+   "manuale": "I",
+   "prima": "V",
+   "dopo": "irrisolto: niente",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {},
+   "secondi": 3.8
+  },
+  {
+   "n": 78,
+   "qid": "Q3398467",
+   "nome": "John Dyfnallt Owen",
+   "manuale": "A",
+   "prima": "S",
+   "dopo": "giusto (assente)",
+   "stato": "ambiguo",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-150769": "Owen, Geraint Dyfnallt",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-050023": "Owen, John Bryn",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CFIV-033617": "Owen, Jennifer",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CFIV-214444": "Owen, J. Arthur",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-UFIV-175667": "Owen, Jo",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-TO0V-404946": "Owen, John",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-RMSV-584222": "Owen, John",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-064723": "Owen, Michael J.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-DDSV-185234": "Owen, Jonathon",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-DDSV-281976": "Owen, Sarah Jane",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-DDSV-308864": "Owen, Jack <chitarrista>",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-DDSV-316424": "Owen, Jake",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-IEIV-077134": "Owen, Jack <fl. 1944>",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-IEIV-092215": "Owen, Huw D.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-IEIV-224314": "Owen, John Hely",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-136772": "Owen, Joseph Karlton",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-146646": "Owen, David John",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-265876": "Owen, John E.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-338603": "Owen, Jeremy",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-360554": "Owen, Henry D.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-UFIV-026998": "Owen, David Roger Jones",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-PUVV-149341": "Owen, John Michael",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-253704": "Owen, John Edward",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-TO0V-042683": "Owen, John D.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-RMSV-024216": "Owen, John Beresford",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CFIV-296893": "Owen, J. Victor",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LIGV-054435": "Owen, Jan"
+   },
+   "secondi": 29.3
+  },
+  {
+   "n": 79,
+   "qid": "Q17393095",
+   "nome": "Marija Ljudvigovna Moravskaja",
+   "manuale": "A",
+   "prima": "GA",
+   "dopo": "giusto (assente)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {},
+   "secondi": 5.6
+  },
+  {
+   "n": 80,
+   "qid": "Q4707865",
+   "nome": "Alan Sullivan",
+   "manuale": "A",
+   "prima": "GA",
+   "dopo": "giusto (assente)",
+   "stato": "ambiguo",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CFIV-218415": "Murray, Alexander S.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-212039": "Murray, John S.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-349552": "Murray, William S.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-USMV-661761": "Murray, Alan S.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CFIV-020735": "Sullivan, Francis A.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-IEIV-076461": "Sullivan, Alan",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-PUVV-200019": "Sullivan, Garrett A. <Jr>",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-SBLV-303283": "Sullivan, Edward Daniel",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-105830": "Sullivan, Thomas Edward",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-048987": "Sullivan, Teresa A.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-162535": "Sullivan, Maureen A.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-TO0V-093079": "Sullivan, Joseph A.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-266618": "Sullivan, Lawrence A.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-354144": "Sullivan, John A."
+   },
+   "secondi": 19.2
+  },
+  {
+   "n": 81,
+   "qid": "Q337276",
+   "nome": "Sacha Guitry",
+   "manuale": "C",
+   "prima": "G",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_sbn",
+   "schede": [
+    "RAVV046387"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-RAVV-046387": "codice SBN di Wikidata (P396): Guitry, Sacha"
+   },
+   "ambigue": {},
+   "secondi": 0.9
+  },
+  {
+   "n": 82,
+   "qid": "Q458658",
+   "nome": "Edward Plunkett, XVIII barone Dunsany",
+   "manuale": "C",
+   "prima": "G",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_sbn",
+   "schede": [
+    "CFIV096303"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CFIV-096303": "codice SBN di Wikidata (P396): Dunsany, Edward Plunkett"
+   },
+   "ambigue": {},
+   "secondi": 0.9
+  },
+  {
+   "n": 83,
+   "qid": "Q483709",
+   "nome": "Jakub Kolas",
+   "manuale": "C",
+   "prima": "M",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_sbn",
+   "schede": [
+    "PUVV295400"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-PUVV-295400": "codice SBN di Wikidata (P396): Kolas, Jakub"
+   },
+   "ambigue": {},
+   "secondi": 1.0
+  },
+  {
+   "n": 84,
+   "qid": "Q101529",
+   "nome": "Karl M. Baer",
+   "manuale": "A",
+   "prima": "GA",
+   "dopo": "giusto (assente)",
+   "stato": "ambiguo",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CFIV-050634": "Baer, Donald M.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CUBV-011006": "Baer, Marco",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-DDSV-334110": "Baer, Matthew",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-SBLV-070364": "Baer, Karl Ernst",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-260260": "Baer, Gertrud Mackprang",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-288537": "Baer, Monica",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-476194": "Baer, Morley"
+   },
+   "secondi": 10.4
+  },
+  {
+   "n": 85,
+   "qid": "Q208993",
+   "nome": "Nikolaj Konstantinovič Rerich",
+   "manuale": "C",
+   "prima": "M",
+   "dopo": "trovato con schede in più",
+   "stato": "riconosciuto",
+   "metodo": "nome_con_prova",
+   "schede": [
+    "MILV083699",
+    "VEAV033732"
+   ],
+   "in_piu": [
+    "VEAV033732"
+   ],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-083699": "nome intero e cognome raro in SBN (2 schede): Rerich, Nikolaj Konstantinovic",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-VEAV-033732": "nome intero e cognome raro in SBN (1 schede): Roerič, Nikolaj Konstantinovič"
+   },
+   "ambigue": {},
+   "secondi": 12.8
+  },
+  {
+   "n": 86,
+   "qid": "Q2758776",
+   "nome": "Jhaverchand Meghani",
+   "manuale": "C",
+   "prima": "M",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "nome_con_prova",
+   "schede": [
+    "IEIV112267"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-IEIV-112267": "nome intero e cognome raro in SBN (2 schede): Meghani, Jhaverchand"
+   },
+   "ambigue": {},
+   "secondi": 4.8
+  },
+  {
+   "n": 87,
+   "qid": "Q2644343",
+   "nome": "Alfons Breska",
+   "manuale": "A",
+   "prima": "GA",
+   "dopo": "giusto (assente)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {},
+   "secondi": 3.1
+  },
+  {
+   "n": 88,
+   "qid": "Q16901261",
+   "nome": "Noel Everingham Sainsbury",
+   "manuale": "C",
+   "prima": "M",
+   "dopo": "mancato",
+   "stato": "ambiguo",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-298894": "Lawton, Charles <jr.>",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-RAVV-092402": "Richards, Dick",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-UBOV-812246": "Richards, Denise",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-349836": "Richards, Dakota Blue",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MOLV-103715": "Richards, Michael D.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-UBOV-562239": "Richards, Deborah",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-DDSV-032321": "Richards, D.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-DDSV-019312": "Richards, Deke",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-137182": "Richards, David",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-DDSV-237842": "Richards, Donald",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-DDSV-253744": "Richards, Devin",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-DDSV-219334": "Richards, Daniel",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-181545": "Richards, Daniel",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-399997": "Richards, Daniel",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MODV-275481": "Richards, David <produttore discografico>",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-IEIV-145066": "Richards, Novelle H.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LIGV-026303": "Richards, Dona <antropologa>",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-153522": "Richards, Denby",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-169652": "Richards, Denis",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-169937": "Richards, Charles H.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-436903": "Richards, Douglas E.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-051269": "Richards, David John",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-PUVV-058404": "Richards, Jeffrey H.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-UBOV-117771": "Richards, Max D.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-255642": "Richards, Donald E.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MODV-654769": "Richards, Derek <medico>",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-VEAV-495335": "Richards, Marc D.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-DDSV-397368": "Richards, Dave <autore musicale>",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-435324": "Sainsbury, Noel",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-DDSV-268342": "Wayne, D."
+   },
+   "secondi": 35.6
+  },
+  {
+   "n": 89,
+   "qid": "Q596925",
+   "nome": "Edmund Clerihew Bentley",
+   "manuale": "C",
+   "prima": "G",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_sbn",
+   "schede": [
+    "SBLV011865"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-SBLV-011865": "codice SBN di Wikidata (P396): Bentley, Edmund Clerihew"
+   },
+   "ambigue": {},
+   "secondi": 1.0
+  },
+  {
+   "n": 90,
+   "qid": "Q8962216",
+   "nome": "Francesc Trabal i Benessat",
+   "manuale": "C",
+   "prima": "M",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "nome_con_prova",
+   "schede": [
+    "CAGV439405"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CAGV-439405": "nome compatibile e titolo che torna («<<L' >>home que es va perdre»): Trabal, Francesc"
+   },
+   "ambigue": {},
+   "secondi": 5.0
+  },
+  {
+   "n": 91,
+   "qid": "Q15689600",
+   "nome": "Amelia Beers Warnock",
+   "manuale": "I",
+   "prima": "V",
+   "dopo": "irrisolto: niente",
+   "stato": "ambiguo",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-UBOV-371477": "Garvin, John",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-280989": "Garvin, John W.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-017388": "Hale, Jack K.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-PUVV-174144": "Hale, John K."
+   },
+   "secondi": 8.8
+  },
+  {
+   "n": 92,
+   "qid": "Q60785",
+   "nome": "Ricarda Huch",
+   "manuale": "C",
+   "prima": "G",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_sbn",
+   "schede": [
+    "RAVV037230"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-RAVV-037230": "codice SBN di Wikidata (P396): Huch, Ricarda"
+   },
+   "ambigue": {},
+   "secondi": 0.9
+  },
+  {
+   "n": 93,
+   "qid": "Q3646436",
+   "nome": "Derenik Demirchian",
+   "manuale": "I",
+   "prima": "V",
+   "dopo": "irrisolto: niente",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {},
+   "secondi": 5.7
+  },
+  {
+   "n": 94,
+   "qid": "Q2358343",
+   "nome": "Moishe Broderzon",
+   "manuale": "C",
+   "prima": "M",
+   "dopo": "mancato",
+   "stato": "ambiguo",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-DDSV-051423": "Broderzon, M."
+   },
+   "secondi": 2.8
+  },
+  {
+   "n": 95,
+   "qid": "Q2312843",
+   "nome": "Elia Abu Madi",
+   "manuale": "C",
+   "prima": "M",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "nome_con_prova",
+   "schede": [
+    "MODV089445"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MODV-089445": "nome intero e cognome raro in SBN (2 schede): Abu-Madi, Elia"
+   },
+   "ambigue": {},
+   "secondi": 4.8
+  },
+  {
+   "n": 96,
+   "qid": "Q11794223",
+   "nome": "Nurullah Ataç",
+   "manuale": "A",
+   "prima": "GA",
+   "dopo": "giusto (assente)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {},
+   "secondi": 2.8
+  },
+  {
+   "n": 97,
+   "qid": "Q231690",
+   "nome": "B. R. Ambedkar",
+   "manuale": "C",
+   "prima": "G",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_sbn",
+   "schede": [
+    "TO0V670314"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-TO0V-670314": "codice SBN di Wikidata (P396): Ambedkar, B. R."
+   },
+   "ambigue": {},
+   "secondi": 0.9
+  },
+  {
+   "n": 98,
+   "qid": "Q56051696",
+   "nome": "Mulshankar Mulani",
+   "manuale": "A",
+   "prima": "GA",
+   "dopo": "giusto (assente)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {},
+   "secondi": 1.9
+  },
+  {
+   "n": 99,
+   "qid": "Q4834199",
+   "nome": "B. S. Mardhekar",
+   "manuale": "A",
+   "prima": "GA",
+   "dopo": "giusto (assente)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {},
+   "secondi": 1.9
+  },
+  {
+   "n": 100,
+   "qid": "Q6101330",
+   "nome": "Mithat Cemal Kuntay",
+   "manuale": "A",
+   "prima": "GA",
+   "dopo": "giusto (assente)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {},
+   "secondi": 2.9
+  },
+  {
+   "n": 101,
+   "qid": "Q116230289",
+   "nome": "K. Sukumaran",
+   "manuale": "A",
+   "prima": "GA",
+   "dopo": "giusto (assente)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {},
+   "secondi": 0.9
+  },
+  {
+   "n": 102,
+   "qid": "Q1646239",
+   "nome": "Kōtarō Takamura",
+   "manuale": "C",
+   "prima": "M",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_sbn",
+   "schede": [
+    "IEIV044448"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-IEIV-044448": "codice SBN di Wikidata (P396): Takamura, Kōtarō"
+   },
+   "ambigue": {},
+   "secondi": 1.0
+  },
+  {
+   "n": 103,
+   "qid": "Q6821893",
+   "nome": "Ahmed Galal",
+   "manuale": "A",
+   "prima": "GA",
+   "dopo": "giusto (assente)",
+   "stato": "ambiguo",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-UBOV-053938": "Galal, Ahmed"
+   },
+   "secondi": 1.9
+  },
+  {
+   "n": 104,
+   "qid": "Q3100750",
+   "nome": "Genjirō Yoshida",
+   "manuale": "A",
+   "prima": "GA",
+   "dopo": "giusto (assente)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {},
+   "secondi": 5.7
+  },
+  {
+   "n": 105,
+   "qid": "Q6963402",
+   "nome": "Naṇḍūri Veṅkaṭa Subbārāvu",
+   "manuale": "A",
+   "prima": "GA",
+   "dopo": "falso positivo",
+   "stato": "riconosciuto",
+   "metodo": "nome_con_prova",
+   "schede": [
+    "MILV009131"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-009131": "nome intero e cognome raro in SBN (3 schede): Subbarao, Karumuri Venkata"
+   },
+   "ambigue": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CFIV-210232": "Subba Rao, Ghandikota V.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-GEAV-095852": "Rao, S. <geografo>",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-183171": "Subba Rao, N. V.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-374919": "Rao, Srikumar S.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-067391": "Rao, S. S.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-RAVV-072669": "Rao, Natti S.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-321921": "Rao, Anil V."
+   },
+   "secondi": 13.5
+  },
+  {
+   "n": 106,
+   "qid": "Q6959985",
+   "nome": "Najib Nassar",
+   "manuale": "A",
+   "prima": "GA",
+   "dopo": "giusto (assente)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {},
+   "secondi": 2.9
+  },
+  {
+   "n": 107,
+   "qid": "Q908573",
+   "nome": "Yokomitsu Riichi",
+   "manuale": "I",
+   "prima": "V",
+   "dopo": "irrisolto: niente",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {},
+   "secondi": 3.8
+  },
+  {
+   "n": 108,
+   "qid": "Q6122090",
+   "nome": "Jagadish Chandra Gupta",
+   "manuale": "A",
+   "prima": "GA",
+   "dopo": "giusto (assente)",
+   "stato": "ambiguo",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-UBOV-349647": "Gupta, Umesh C.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-RMSV-487053": "Gupta, Harish Chandra",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-UBOV-822150": "Gupta, Pratul Chandra",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-RMSV-052627": "Gupta, Someshwar C.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MODV-120239": "Gupta, Dinesh C.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-TO0V-483097": "Gupta, Sulekh Chandra"
+   },
+   "secondi": 7.7
+  },
+  {
+   "n": 109,
+   "qid": "Q2474371",
+   "nome": "Shekib Arslan",
+   "manuale": "I",
+   "prima": "V",
+   "dopo": "irrisolto: niente",
+   "stato": "ambiguo",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CFIV-007002": "Arslan, Ermanno A."
+   },
+   "secondi": 10.6
+  },
+  {
+   "n": 110,
+   "qid": "Q4170627",
+   "nome": "Godabarish Mishra",
+   "manuale": "A",
+   "prima": "GA",
+   "dopo": "giusto (assente)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {},
+   "secondi": 1.9
+  },
+  {
+   "n": 111,
+   "qid": "Q207036",
+   "nome": "A. A. Milne",
+   "manuale": "C",
+   "prima": "G",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_sbn",
+   "schede": [
+    "LO1V308889"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-308889": "codice SBN di Wikidata (P396): Milne, A. A. <1882-1956>"
+   },
+   "ambigue": {},
+   "secondi": 0.9
+  },
+  {
+   "n": 112,
+   "qid": "Q4468433",
+   "nome": "Stewart White",
+   "manuale": "C",
+   "prima": "S",
+   "dopo": "mancato",
+   "stato": "ambiguo",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CUBV-163130": "White, Stephan S.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CFIV-083666": "White, Herbert S.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CFIV-202546": "White, Horatio S.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-RAVV-105080": "White, Stewart Edward",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-DDSV-099013": "White, S.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-TO0V-065607": "White, Dan S.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-RMGV-009742": "White, William S.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-472009": "White, Marshall S.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-TO0V-152463": "White, Stewart"
+   },
+   "secondi": 11.0
+  },
+  {
+   "n": 113,
+   "qid": "Q926338",
+   "nome": "E. C. Vivian",
+   "manuale": "I",
+   "prima": "V",
+   "dopo": "irrisolto: niente",
+   "stato": "ambiguo",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-408642": "Mann, J. J.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-UBOV-813125": "Mann, William J.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MODV-598563": "Mann, J. I.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MODV-642378": "Mann, Ronald J. <medico>",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MODV-656130": "Mann, Ruth J.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CUBV-162282": "Vivian, Charles E.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-DDSV-364699": "Vivian, Chris",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MUSV-067932": "Vivian, Arthur H.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-261254": "Vivian, Claudia",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-RMSV-057988": "Vivian, Archibald Comley",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-GEAV-022973": "Walton, E. K.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CUBV-162800": "Walton, Amy",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-DDSV-294365": "Walton, A.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-DDSV-307621": "Walton, Khalil",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-DDSV-387384": "Walton, Alex",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-UFIV-050449": "Walton, John K.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LIGV-052252": "Walton, Anne <autrice di testi per l’infanzia>",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-210079": "Walton, Kaye",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-369937": "Walton, Araba",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-036215": "Walton, Anthony",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-248626": "Walton, Ken",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-282554": "Walton, Albert",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-284852": "Walton, Kevin",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-TO0V-521503": "Walton, Robert A.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MODV-640873": "Walton, Arthur",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-PIAV-000977": "Walton, Karen"
+   },
+   "secondi": 32.0
+  },
+  {
+   "n": 114,
+   "qid": "Q94136022",
+   "nome": "A. E. Thomas",
+   "manuale": "I",
+   "prima": "V",
+   "dopo": "irrisolto: niente",
+   "stato": "ambiguo",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-RAVV-037745": "Thomas, Adrienne",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CUBV-153014": "Thomas, Ambroise",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-156251": "Thomas, David A.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-FERV-049041": "Thomas, Joseph Anthony Charles",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-AQ1V-003698": "Thomas, Barry A.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-UFIV-035122": "Thomas, William Arthur",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-RAVV-688056": "Thomas, Angie",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CFIV-116546": "Thomas, Alexander",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CFIV-151762": "Thomas, Anabel",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CFIV-166508": "Thomas, Ann <curatrice di mostre fotografiche>",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MUSV-064195": "Thomas, Arthur Goring",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CFIV-209649": "Thomas, Amanda",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-IEIV-053341": "Thomas, Annie",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-RAVV-060315": "Thomas, Albert"
+   },
+   "secondi": 16.5
+  },
+  {
+   "n": 115,
+   "qid": "Q11912944",
+   "nome": "Casimir Giralt i Bullich",
+   "manuale": "A",
+   "prima": "GA",
+   "dopo": "giusto (assente)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {},
+   "secondi": 2.0
+  },
+  {
+   "n": 116,
+   "qid": "Q4647724",
+   "nome": "A. E. Coppard",
+   "manuale": "C",
+   "prima": "M",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "nome_con_prova",
+   "schede": [
+    "SBLV282816"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-SBLV-282816": "nome intero e cognome raro in SBN (2 schede): Coppard, Alfred Edgar"
+   },
+   "ambigue": {},
+   "secondi": 3.1
+  },
+  {
+   "n": 117,
+   "qid": "Q4834111",
+   "nome": "B. M. Srikantaiah",
+   "manuale": "A",
+   "prima": "GA",
+   "dopo": "giusto (assente)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {},
+   "secondi": 4.0
+  },
+  {
+   "n": 118,
+   "qid": "Q1402018",
+   "nome": "Walter J. Turner",
+   "manuale": "C",
+   "prima": "M",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_sbn",
+   "schede": [
+    "SBLV134669"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-SBLV-134669": "codice SBN di Wikidata (P396): Turner, Walter James"
+   },
+   "ambigue": {},
+   "secondi": 1.2
+  },
+  {
+   "n": 119,
+   "qid": "Q129256623",
+   "nome": "Leonardo F. Napolitano",
+   "manuale": "A",
+   "prima": "GA",
+   "dopo": "giusto (assente)",
+   "stato": "ambiguo",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-SBLV-047573": "Napolitano, Franco Michele",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-NAPV-059179": "Napolitano, Felice",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CFIV-040275": "Napolitano, Francesco",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-DDSV-256610": "Napolitano, Francesco",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CFIV-163194": "Napolitano, Francesco Saverio",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CSAV-029761": "NAPOLITANO, Franca",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-DDSV-235997": "Napolitano, Fisietta",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-DDSV-366551": "Napolitano, L.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-GEAV-094762": "Napolitano, Francesco <ingegnere>",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-373462": "Napolitano, Fernando Flavio",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-310181": "Napolitano, Fernando",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MUSV-046958": "Napolitano, Ferdinando",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MUSV-046957": "Napolitano, Francesco <compositore ; sec. 18.-19.>"
+   },
+   "secondi": 14.9
+  },
+  {
+   "n": 120,
+   "qid": "Q6217845",
+   "nome": "John A. Moroso",
+   "manuale": "A",
+   "prima": "GA",
+   "dopo": "giusto (assente)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {},
+   "secondi": 1.9
+  },
+  {
+   "n": 121,
+   "qid": "Q16976846",
+   "nome": "Ramon Domènec Perés i Perés",
+   "manuale": "A",
+   "prima": "GA",
+   "dopo": "giusto (assente)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {},
+   "secondi": 2.9
+  },
+  {
+   "n": 122,
+   "qid": "Q9012032",
+   "nome": "Joan Puig i Ferreter",
+   "manuale": "A",
+   "prima": "GA",
+   "dopo": "giusto (assente)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {},
+   "secondi": 3.1
+  },
+  {
+   "n": 123,
+   "qid": "Q7159888",
+   "nome": "Pedro Pérez Fernández",
+   "manuale": "A",
+   "prima": "GA",
+   "dopo": "giusto (assente)",
+   "stato": "ambiguo",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-PUVV-229580": "Perez Fernandez, Pedro",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CUBV-063236": "Fernandez, P.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-DDSV-195888": "Fernandez, P.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-DDSV-024556": "Fernandez, Pedro",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-114284": "Fernandez, John P.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-232407": "Fernandez, Pedro Carlos",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CFIV-194671": "Fernández, Pedro Jesús"
+   },
+   "secondi": 13.3
+  },
+  {
+   "n": 124,
+   "qid": "Q5857770",
+   "nome": "Federico Oliver Crespo",
+   "manuale": "I",
+   "prima": "V",
+   "dopo": "irrisolto: niente",
+   "stato": "ambiguo",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MODV-652261": "Crespo, Ricardo F.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-421255": "Oliver, Leslie C.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-075685": "Oliver, Mary C.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-227961": "Oliver, Federico"
+   },
+   "secondi": 7.3
+  },
+  {
+   "n": 125,
+   "qid": "Q383450",
+   "nome": "Afonso Lopes Vieira",
+   "manuale": "C",
+   "prima": "S",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_sbn",
+   "schede": [
+    "PUVV317708"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-PUVV-317708": "codice SBN di Wikidata (P396): Vieira, Afonso Lopes"
+   },
+   "ambigue": {},
+   "secondi": 0.9
+  },
+  {
+   "n": 126,
+   "qid": "Q20133096",
+   "nome": "José Juan Cadenas",
+   "manuale": "C",
+   "prima": "G",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_sbn",
+   "schede": [
+    "USMV797844"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-USMV-797844": "codice SBN di Wikidata (P396): Cadenas, José Juan"
+   },
+   "ambigue": {},
+   "secondi": 0.9
+  },
+  {
+   "n": 127,
+   "qid": "Q6174758",
+   "nome": "Óscar Nicolás Castro",
+   "manuale": "A",
+   "prima": "GA",
+   "dopo": "giusto (assente)",
+   "stato": "ambiguo",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-IEIV-223429": "De Castro, N.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-IEIV-232593": "Castro, Oscar Oliveira"
+   },
+   "secondi": 4.4
+  },
+  {
+   "n": 128,
+   "qid": "Q1709632",
+   "nome": "José Antonio Saldías",
+   "manuale": "C",
+   "prima": "M",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "nome_con_prova",
+   "schede": [
+    "RMBV287140"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-RMBV-287140": "nome intero e cognome raro in SBN (3 schede): Saldias, José Antonio"
+   },
+   "ambigue": {},
+   "secondi": 4.8
+  },
+  {
+   "n": 129,
+   "qid": "Q11871501",
+   "nome": "Edmond Konrád",
+   "manuale": "A",
+   "prima": "GA",
+   "dopo": "giusto (assente)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {},
+   "secondi": 5.4
+  },
+  {
+   "n": 130,
+   "qid": "Q468708",
+   "nome": "Anna Haava",
+   "manuale": "C",
+   "prima": "M",
+   "dopo": "mancato",
+   "stato": "ambiguo",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-DDSV-213115": "Haava, A."
+   },
+   "secondi": 2.8
+  },
+  {
+   "n": 131,
+   "qid": "Q10856213",
+   "nome": "Noh Cheon-myeong",
+   "manuale": "A",
+   "prima": "GA",
+   "dopo": "giusto (assente)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {},
+   "secondi": 5.8
+  },
+  {
+   "n": 132,
+   "qid": "Q98497295",
+   "nome": "A. Lutzky",
+   "manuale": "A",
+   "prima": "GA",
+   "dopo": "giusto (assente)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {},
+   "secondi": 3.8
+  },
+  {
+   "n": 133,
+   "qid": "Q95247283",
+   "nome": "Jar. B. Zyka",
+   "manuale": "A",
+   "prima": "GA",
+   "dopo": "giusto (assente)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {},
+   "secondi": 1.9
+  },
+  {
+   "n": 134,
+   "qid": "Q5424072",
+   "nome": "F. W. Harvey",
+   "manuale": "I",
+   "prima": "V",
+   "dopo": "irrisolto: collegato",
+   "stato": "riconosciuto",
+   "metodo": "nome_con_prova",
+   "schede": [
+    "MILV188227"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-188227": "nome compatibile e anni che coincidono: Harvey, John Wilfred <1889-tr>"
+   },
+   "ambigue": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CUBV-172125": "Harvey, William",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CFIV-056127": "Harvey, Barbara F.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CUBV-093176": "Harvey, W. Proctor",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-289168": "Harvey, Forrester",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-DDSV-138901": "Harvey, Frederick",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-SBLV-306448": "Harvey, Frank",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-403759": "Harvey, Walter",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-TO0V-048784": "Harvey, Brian W.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-FOGV-130322": "Harvey, Charles W.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-IEIV-031972": "Harvey, William Burnett",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-IEIV-054637": "Harvey, W. F.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-PUVV-173215": "Harvey, Warren Zev",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-194935": "Harvey, John W.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-PALV-039727": "Harvey, William Henry",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-TO0V-031118": "Harvey, William Hope",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-388753": "Harvey, Franziska",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-RMSV-009397": "Harvey, Arthur Frank",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-SBLV-275296": "Harvey, W.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-169669": "Harvey, Glenn F.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-196881": "Harvey, F. Reese",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-245688": "Harvey, Philip W.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MODV-663780": "Harvey, Jean-François",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MODV-667317": "Harvey, William <illustratore>"
+   },
+   "secondi": 24.5
+  },
+  {
+   "n": 135,
+   "qid": "Q95149835",
+   "nome": "Josef Házr Písecký",
+   "manuale": "A",
+   "prima": "GA",
+   "dopo": "giusto (assente)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {},
+   "secondi": 2.9
+  },
+  {
+   "n": 136,
+   "qid": "Q19667016",
+   "nome": "Lilian Turner",
+   "manuale": "I",
+   "prima": "V",
+   "dopo": "irrisolto: niente",
+   "stato": "ambiguo",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-UFIV-096443": "Thompson, Richard L.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-017380": "Thompson, Kenneth W.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-UBOV-004335": "Thompson, Joseph W.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-GEAV-003535": "Thompson, Thomas L.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CFIV-055083": "Thompson, Clem W.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-RMSV-903380": "Thompson, W. <ingegnere>",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-SBNV-047983": "Thompson, David L. <attore>",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-DDSV-216516": "Thompson, Byron W.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-UR1V-001178": "Thompson, Dennis L.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-TO0V-066343": "Thompson, Leonard L.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-TO0V-574864": "Thompson, Michael E. W.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-PUVV-281715": "Thompson, L.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-TO0V-470235": "Thompson, Jerry L.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-RAVV-014135": "Thompson, Margaret W.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-UFIV-089594": "Thompson, Gerald L.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-347747": "Thompson, W. Marmaduke",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-010632": "Thompson, W.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-133438": "Thompson, Jane L.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-PUVV-174218": "Thompson, Robert L.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-339253": "Thompson, Tommy L.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-071158": "Thompson, W. W. <jr>",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-291936": "Thompson, Jennifer L.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-328437": "Thompson, Charles L.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-348657": "Thompson, Elizabeth L.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MODV-439169": "Thompson, Norman W.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-PUVV-218437": "Thompson, Leigh L.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MODV-679633": "Thompson, Rona L.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-020234": "Turner, Gerard L'Estrange",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CFIV-208519": "Turner, L.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-272141": "Turner, Gerald L'Estrange",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-REAV-167381": "Turner, L. <cantante>",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-DDSV-365023": "Turner, Archie L.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LIGV-050547": "Turner, Robin L.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-392559": "Turner, Charles L.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MODV-640655": "Turner, Michael L."
+   },
+   "secondi": 38.3
+  },
+  {
+   "n": 137,
+   "qid": "Q95101994",
+   "nome": "Emil Pisinger",
+   "manuale": "A",
+   "prima": "GA",
+   "dopo": "giusto (assente)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {},
+   "secondi": 3.8
+  },
+  {
+   "n": 138,
+   "qid": "Q43166",
+   "nome": "Paul Zech",
+   "manuale": "C",
+   "prima": "M",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "nome_con_prova",
+   "schede": [
+    "PUVV049935"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-PUVV-049935": "nome compatibile e titolo che torna («<<Die >>Balladen und lasterhaften Lieder des Herrn François Villon in deutscher »): Zech, Paul"
+   },
+   "ambigue": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CFIV-019999": "Robert, Paul",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-UM1V-006108": "Robert, Paul-Aurèle",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-MILV-271342": "Sachs, Jerome M.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-LO1V-176431": "Zech, P.",
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-TSAV-340722": "Zech, Paul Heinrich : von"
+   },
+   "secondi": 14.5
+  },
+  {
+   "n": 139,
+   "qid": "Q1351464",
+   "nome": "Fletcher Pratt",
+   "manuale": "C",
+   "prima": "G",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_sbn",
+   "schede": [
+    "CFIV112375"
+   ],
+   "in_piu": [],
+   "prove": {
+    "http://triplestore.iccu.sbn.it/resource/Agent/IT-ICCU-CFIV-112375": "codice SBN di Wikidata (P396): Pratt, Fletcher"
+   },
+   "ambigue": {},
+   "secondi": 1.0
+  },
+  {
+   "n": 140,
+   "qid": "Q16899719",
+   "nome": "Carl Keilhau",
+   "manuale": "A",
+   "prima": "GA",
+   "dopo": "giusto (assente)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "in_piu": [],
+   "prove": {},
+   "ambigue": {},
+   "secondi": 2.9
+  }
+ ]
+}
