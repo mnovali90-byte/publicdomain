@@ -1,0 +1,6504 @@
+{
+ "seme": 20261120,
+ "autori": [
+  {
+   "n": 1,
+   "qid": "Q7167474",
+   "nome": "Percy Marks",
+   "nascita": "1891-09-09",
+   "morte": "1956-12-27",
+   "alias": [],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 7,
+    "dal_2000": 0,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Marks 1891-1956\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "A Dead Man Dies.",
+     "voci": [
+      "Marks, Percy, 1891-1956."
+     ]
+    },
+    {
+     "titolo": "Lord of Himself.",
+     "voci": [
+      "Marks, Percy, 1891-1956."
+     ]
+    },
+    {
+     "titolo": "Lord of Himself.",
+     "voci": [
+      "Marks, Percy, 1891-1956."
+     ]
+    },
+    {
+     "titolo": "Martha.",
+     "voci": [
+      "Marks, Percy, 1891-1956."
+     ]
+    },
+    {
+     "titolo": "The Plastic Age.",
+     "voci": [
+      "Marks, Percy, 1891-1956."
+     ]
+    },
+    {
+     "titolo": "The Plastic Age. [A novel.]",
+     "voci": [
+      "Marks, Percy, 1891-1956."
+     ]
+    },
+    {
+     "titolo": "The plastic age :",
+     "voci": [
+      "Marks, Percy, 1891-1956."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "qid": "Q57389",
+   "nome": "Alfred Döblin",
+   "nascita": "1878-08-10",
+   "morte": "1957-06-24",
+   "alias": [
+    "Hans Fiedeler",
+    "Knaas Pieth",
+    "Linke Poot",
+    "Bruno Alfred Döblin",
+    "Alfred Doblin"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 25,
+    "dal_2000": 17,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Doblin 1878-1957\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "Alexanderplatz :",
+     "voci": [
+      "Döblin, Alfred, 1878-1957.",
+      "Jolas, Eugene."
+     ]
+    },
+    {
+     "titolo": "Berlin Alexanderplatz /",
+     "voci": [
+      "Döblin, Alfred, 1878-1957,",
+      "Hofmann, Michael,"
+     ]
+    },
+    {
+     "titolo": "Berlin Alexanderplatz /",
+     "voci": [
+      "Döblin, Alfred, 1878-1957,",
+      "Hofmann, Michael, 1957 August 25-"
+     ]
+    },
+    {
+     "titolo": "Berlin Alexanderplatz /",
+     "voci": [
+      "Döblin, Alfred, 1878-1957,",
+      "Hofmann, Michael, 1957 August 25-"
+     ]
+    },
+    {
+     "titolo": "Berlin Alexanderplatz /",
+     "voci": [
+      "Döblin, Alfred, 1878-1957,",
+      "Hofmann, Michael, 1957 August 25-"
+     ]
+    },
+    {
+     "titolo": "Berlin Alexanderplatz :",
+     "voci": [
+      "Döblin, Alfred, 1878-1957.",
+      "Döblin, Alfred, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "Berlin Alexanderplatz :",
+     "voci": [
+      "Döblin, Alfred, 1878-1957.",
+      "Jolas, Eugène, 1894-1952."
+     ]
+    },
+    {
+     "titolo": "Berlin Alexanderplatz :",
+     "voci": [
+      "Döblin, Alfred, 1878-1957.",
+      "Jolas, Eugène, 1894-1952."
+     ]
+    },
+    {
+     "titolo": "Bright magic :",
+     "voci": [
+      "Döblin, Alfred, 1878-1957,",
+      "Searls, Damion,"
+     ]
+    },
+    {
+     "titolo": "Citizens and soldiers /",
+     "voci": [
+      "Döblin, Alfred, 1878-1957,",
+      "Godwin, C. D.,"
+     ]
+    },
+    {
+     "titolo": "Destiny's journey /",
+     "voci": [
+      "Döblin, Alfred, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "Early 20th century German fiction /",
+     "voci": [
+      "Döblin, Alfred, 1878-1957.",
+      "Stephan, Alexander, 1946-2009."
+     ]
+    },
+    {
+     "titolo": "The epic worlds of Alfred Doblin :",
+     "voci": [
+      "Döblin, Alfred, 1878-1957,",
+      "Godwin, Chris,"
+     ]
+    },
+    {
+     "titolo": "Expect no mercy /",
+     "voci": [
+      "Döblin, Alfred, 1878-1957,",
+      "Godwin, C. D.,"
+     ]
+    },
+    {
+     "titolo": "Journey to Poland /",
+     "voci": [
+      "Döblin, Alfred, 1878-1957.",
+      "Graber, Heinz."
+     ]
+    },
+    {
+     "titolo": "Karl and Rosa :",
+     "voci": [
+      "Döblin, Alfred, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "The land without death /",
+     "voci": [
+      "Döblin, Alfred, 1878-1957,",
+      "Döblin, Alfred, 1878-1957.",
+      "Döblin, Alfred, 1878-1957.",
+      "Döblin, Alfred, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "The land without death /",
+     "voci": [
+      "Döblin, Alfred, 1878-1957,",
+      "Döblin, Alfred, 1878-1957.",
+      "Döblin, Alfred, 1878-1957.",
+      "Döblin, Alfred, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "The living thoughts of Confucius /",
+     "voci": [
+      "Confucius.",
+      "Döblin, Alfred, 1878-1957.",
+      "Infield, Doris A.",
+      "Legge, James, 1815-1897."
+     ]
+    },
+    {
+     "titolo": "Manas /",
+     "voci": [
+      "Döblin, Alfred, 1878-1957,",
+      "Godwin, C. D.,"
+     ]
+    },
+    {
+     "titolo": "Mountains oceans giants :",
+     "voci": [
+      "Döblin, Alfred, 1878-1957,",
+      "Godwin, C. D.,"
+     ]
+    },
+    {
+     "titolo": "A people betrayed :",
+     "voci": [
+      "Döblin, Alfred, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "The three leaps of Wang Lun :",
+     "voci": [
+      "Döblin, Alfred, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "The three leaps of Wang Lun :",
+     "voci": [
+      "Döblin, Alfred, 1878-1957,",
+      "Godwin, C. D.,"
+     ]
+    },
+    {
+     "titolo": "Two women and a poisoning /",
+     "voci": [
+      "Döblin, Alfred, 1878-1957,",
+      "Taylor, Imogen (Translator)"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "qid": "Q458658",
+   "nome": "Edward Plunkett, XVIII barone Dunsany",
+   "nascita": "1878-07-24",
+   "morte": "1957-10-25",
+   "alias": [
+    "Lord Dunsany",
+    "Edward Plunkett",
+    "Edward Plunkett, 18. Baron Dunsany",
+    "Edward J Moreton Drax Plunkett Dunsany",
+    "Edward Dunsany"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 228,
+    "dal_2000": 43,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Dunsany 1878-1957\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "Alexander, &amp; three small plays.",
+     "voci": [
+      "Dunsany, Lord, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "The Amusements of Khan Kharuda. (From Alexander, and three small plays.).",
+     "voci": [
+      "Dunsany, Lord, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "Arthur C. Clarke &amp; Lord Dunsany :",
+     "voci": [
+      "Clarke, Arthur C. (Arthur Charles), 1917-2008.",
+      "Dunsany, Lord, 1878-1957.",
+      "Daniels, Keith Allen, 1956-2001."
+     ]
+    },
+    {
+     "titolo": "At the edge of the world ... Edited, with an introduction and notes by Lin Carter.",
+     "voci": [
+      "Dunsany, Lord, 1878-1957.",
+      "Carter, Lin."
+     ]
+    },
+    {
+     "titolo": "Atalanta in Wimbledon /",
+     "voci": [
+      "Dunsany, Lord, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "Beyond the fields we know. Edited, with an introduction and notes, by Lin Carter.",
+     "voci": [
+      "Dunsany, Lord, 1878-1957.",
+      "Carter, Lin."
+     ]
+    },
+    {
+     "titolo": "Beyond the fields we know /",
+     "voci": [
+      "Dunsany, Lord, 1878-1957.",
+      "Carter, Lin."
+     ]
+    },
+    {
+     "titolo": "Biography of Lord Dunsany.",
+     "voci": [
+      "Amory, Mark, 1941-",
+      "Dunsany, Lord, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "The Blessing of Pan.",
+     "voci": [
+      "Dunsany, Lord, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "The book of wonder :",
+     "voci": [
+      "Dunsany, Lord, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "The Book of Wonder. A chronicle of little adventures at the edge of the world ... With illustrations",
+     "voci": [
+      "Dunsany, Lord, 1878-1957.",
+      "Sime, Sidney Herbert, 1867-1941."
+     ]
+    },
+    {
+     "titolo": "The book of wonder /",
+     "voci": [
+      "Dunsany, Lord, 1878-1957,"
+     ]
+    },
+    {
+     "titolo": "The Charwoman's Shadow.",
+     "voci": [
+      "Dunsany, Lord, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "The charwoman's shadow /",
+     "voci": [
+      "Dunsany, Lord, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "The charwoman's shadow /",
+     "voci": [
+      "Dunsany, Lord, 1878-1957,"
+     ]
+    },
+    {
+     "titolo": "The Chronicles of Rodriguez. (Second edition.).",
+     "voci": [
+      "Dunsany, Lord, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "The Chronicles of Rodriguez ... With frontispiece ... by S. H. Sime.",
+     "voci": [
+      "Dunsany, Lord, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "The Collected Works of Horace. Translated by Lord Dunsany and Michael Oakley. Introduction by Michae",
+     "voci": [
+      "Horace.",
+      "OAKLEY, Michael J.",
+      "Dunsany, Lord, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "The Complete Poems of Francis Ledwidge. With introductions by Lord Dunsany. [With a portrait.]",
+     "voci": [
+      "Ledwidge, Francis.",
+      "Dunsany, Lord, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "The compromise of the King of the Golden Isles.",
+     "voci": [
+      "Grolier Club (NEW YORK). Plunkett (Edward John Moreton Drax) 18th Baron Dunsany.",
+      "Dunsany, Lord, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "The compromise of the King of the Golden Isles.",
+     "voci": [
+      "Dunsany, Lord, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "The Curse of the Wise Woman.",
+     "voci": [
+      "Dunsany, Lord, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "The Curse of the Wise Woman.",
+     "voci": [
+      "Dunsany, Lord, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "The curse of the Wise Woman.",
+     "voci": [
+      "Dunsany, Lord, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "The curse of the Wise Woman /",
+     "voci": [
+      "Dunsany, Lord, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "The curse of the wise woman /",
+     "voci": [
+      "Dunsany, Lord, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "The curse of the wise woman /",
+     "voci": [
+      "Dunsany, Lord, 1878-1957,"
+     ]
+    },
+    {
+     "titolo": "Dean Spanley.",
+     "voci": [
+      "Dunsany, Lord, 1878-1957.",
+      "Sharp, Alan, 1934-2013."
+     ]
+    },
+    {
+     "titolo": "Dean Spanley /",
+     "voci": [
+      "Dunsany, Lord, 1878-1957.",
+      "Sharp, Alan, 1934-2013.",
+      "Metcalfe, Matthew.",
+      "Smith, Chris, 1970-"
+     ]
+    },
+    {
+     "titolo": "Don Rodriguez :",
+     "voci": [
+      "Dunsany, Lord, 1878-1957,"
+     ]
+    },
+    {
+     "titolo": "Don Rodriguez :",
+     "voci": [
+      "Dunsany, Lord, 1878-1957,"
+     ]
+    },
+    {
+     "titolo": "Don Rodriguez :",
+     "voci": [
+      "Dunsany, Lord, 1878-1957,"
+     ]
+    },
+    {
+     "titolo": "Don Rodriguez :",
+     "voci": [
+      "Dunsany, Lord, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "The Donnellan Lectures, 1943. (Three of the Arts. I. Prose. II. Poetry. III. Drama.) Delivered at Tr",
+     "voci": [
+      "Dunsany, Lord, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "A dreamer's tales /",
+     "voci": [
+      "Dunsany, Lord, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "A dreamer's tales /",
+     "voci": [
+      "Dunsany, Lord, 1878-1957,"
+     ]
+    },
+    {
+     "titolo": "A Dreamer's Tales. [With illustrations.]",
+     "voci": [
+      "Dunsany, Lord, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "Dunsany the Dramatist ... With illustrations.",
+     "voci": [
+      "BIERSTADT, Edward Hale.",
+      "Dunsany, Lord, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "[Dunsany the Dramatist ... With illustrations.]",
+     "voci": [
+      "BIERSTADT, Edward Hale.",
+      "Dunsany, Lord, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "The Egoist. A comedy in narrative ... With an introduction by Lord Dunsany.",
+     "voci": [
+      "Meredith, George, 1828-1909.",
+      "Dunsany, Lord, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "The Evil Kettle. (From Alexander, and three small plays.).",
+     "voci": [
+      "Dunsany, Lord, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "Fame and the poet /",
+     "voci": [
+      "Dunsany, Lord, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "Fame and the Poet /",
+     "voci": [
+      "Dunsany, Lord, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "Fifty-one tales /",
+     "voci": [
+      "Dunsany, Lord, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "Fifty-one Tales. [With a portrait.]",
+     "voci": [
+      "Dunsany, Lord, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "Fifty Poems.",
+     "voci": [
+      "Dunsany, Lord, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "Fifty poems /",
+     "voci": [
+      "Dunsany, Lord, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "Five Plays.",
+     "voci": [
+      "Dunsany, Lord, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "Five plays /",
+     "voci": [
+      "Dunsany, Lord, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "Five Plays. (Reprinted.).",
+     "voci": [
+      "Dunsany, Lord, 1878-1957."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "qid": "Q5415043",
+   "nome": "Eva Emery Dye",
+   "nascita": "1855-01-01",
+   "morte": "1947-01-01",
+   "alias": [],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 10,
+    "dal_2000": 0,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Dye 1855-1947\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "The Conquest: the true story of Lewis and Clark.",
+     "voci": [
+      "Dye, Eva Emery, 1855-1947."
+     ]
+    },
+    {
+     "titolo": "The conquest :",
+     "voci": [
+      "Dye, Eva Emery, 1855-1947."
+     ]
+    },
+    {
+     "titolo": "Eigaku no so :",
+     "voci": [
+      "Dye, Eva Emery, 1855-1947."
+     ]
+    },
+    {
+     "titolo": "Explorations northwestward /",
+     "voci": [
+      "Young, Frederic G.",
+      "Dye, Eva Emery, 1855-1947."
+     ]
+    },
+    {
+     "titolo": "Explorations northwestward /",
+     "voci": [
+      "Young, Frederic G.",
+      "Dye, Eva Emery, 1855-1947."
+     ]
+    },
+    {
+     "titolo": "McDonald of Oregon: a tale of two shores, etc.",
+     "voci": [
+      "Dye, Eva Emery, 1855-1947."
+     ]
+    },
+    {
+     "titolo": "McLoughlin and old Oregon.",
+     "voci": [
+      "Dye, Eva Emery, 1855-1947."
+     ]
+    },
+    {
+     "titolo": "McLoughlin and Old Oregon :",
+     "voci": [
+      "Dye, Eva Emery, 1855-1947."
+     ]
+    },
+    {
+     "titolo": "McLoughlin and old Oregon :",
+     "voci": [
+      "Dye, Eva Emery, 1855-1947."
+     ]
+    },
+    {
+     "titolo": "The soul of America :",
+     "voci": [
+      "Dye, Eva Emery, 1855-1947."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "qid": "Q19667016",
+   "nome": "Lilian Turner",
+   "nascita": "1867-08-21",
+   "morte": "1956-08-25",
+   "alias": [
+    "Lil Thompson",
+    "Lil Turner",
+    "Lilian Thompson",
+    "Lilian Wattnall Burwell",
+    "Lilian Wattnall Thompson"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 18,
+    "dal_2000": 0,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Turner 1867-1956\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "Ann Chooses Glory.",
+     "voci": [
+      "Turner, Lilian."
+     ]
+    },
+    {
+     "titolo": "April Girls ... Illustrated by J. Macfarlane.",
+     "voci": [
+      "Turner, Lilian."
+     ]
+    },
+    {
+     "titolo": "An Australian Lassie ... Illustrations, etc.",
+     "voci": [
+      "Turner, Lilian."
+     ]
+    },
+    {
+     "titolo": "Betty the Scribe ... Illustrated by J. Johnson.",
+     "voci": [
+      "Turner, Lilian."
+     ]
+    },
+    {
+     "titolo": "George Abraham Grierson, 1851-1941. From the Proceedings of the British Academy, etc. [With a portra",
+     "voci": [
+      "Thomas, Frederick William, 1867-1956.",
+      "Grierson, George Abraham, Sir, 1851-1941.",
+      "Turner, R. L. (Ralph Lilley), Sir, 1888-1983."
+     ]
+    },
+    {
+     "titolo": "The Girl from the Back-Blocks.",
+     "voci": [
+      "Turner, Lilian."
+     ]
+    },
+    {
+     "titolo": "The Happy Heriots.",
+     "voci": [
+      "Turner, Lilian."
+     ]
+    },
+    {
+     "titolo": "Jill of the Fourth Form.",
+     "voci": [
+      "Turner, Lilian."
+     ]
+    },
+    {
+     "titolo": "Lady Billie.",
+     "voci": [
+      "Turner, Lilian."
+     ]
+    },
+    {
+     "titolo": "The Lights of Sydney; or, No Past is Dead, etc.",
+     "voci": [
+      "Turner, Lilian."
+     ]
+    },
+    {
+     "titolo": "The Lights of Sydney; or, No Past is Dead, etc.",
+     "voci": [
+      "Turner, Lilian."
+     ]
+    },
+    {
+     "titolo": "Nina Comes Home.",
+     "voci": [
+      "Turner, Lilian."
+     ]
+    },
+    {
+     "titolo": "The Noughts and Crosses.",
+     "voci": [
+      "Turner, Lilian."
+     ]
+    },
+    {
+     "titolo": "Paradise and the Perrys ... Illustrated by J. Macfarlane.",
+     "voci": [
+      "Turner, Lilian."
+     ]
+    },
+    {
+     "titolo": "Peggy the Pilot.",
+     "voci": [
+      "Turner, Lilian."
+     ]
+    },
+    {
+     "titolo": "The Perry Girls ... Illustrated by J. Macfarlane.",
+     "voci": [
+      "Turner, Lilian."
+     ]
+    },
+    {
+     "titolo": "Rachel. [A novel.]",
+     "voci": [
+      "Turner, Lilian."
+     ]
+    },
+    {
+     "titolo": "War's Hearth Throbs. [A novel.]",
+     "voci": [
+      "Turner, Lilian."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "qid": "Q540166",
+   "nome": "Arthur Machen",
+   "nascita": "1863-03-03",
+   "morte": "1947-12-15",
+   "alias": [
+    "Arthur Llewelyn Jones-Machen",
+    "Arthur Llewelyn Jones"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 214,
+    "dal_2000": 50,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Machen 1863-1947\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "Afterglow. Pastels of Greek Egypt 69 B.C.-With a preface by Arthur Machen.",
+     "voci": [
+      "BUCK, Mitchell Starrett.",
+      "Machen, Arthur, 1863-1947."
+     ]
+    },
+    {
+     "titolo": "The Anatomy of Tobacco.",
+     "voci": [
+      "Machen, Arthur, 1863-1947."
+     ]
+    },
+    {
+     "titolo": "The Anatomy of tobacco /",
+     "voci": [
+      "Machen, Arthur, 1863-1947."
+     ]
+    },
+    {
+     "titolo": "The Anatomy of Tobacco: or, Smoking methodised, divided, and considered after a new fashion. By Leol",
+     "voci": [
+      "Siluriensis, Leolinus, 1863-1947.",
+      "Machen, Arthur, 1863-1947."
+     ]
+    },
+    {
+     "titolo": "The Angels of Mons. The Bowmen and other legends of the war, etc.",
+     "voci": [
+      "Machen, Arthur, 1863-1947."
+     ]
+    },
+    {
+     "titolo": "The Angels of Mons. The Bowmen and other legends of the War ... Second edition. With an introduction",
+     "voci": [
+      "Machen, Arthur, 1863-1947."
+     ]
+    },
+    {
+     "titolo": "Angels, Saints and Bowmen of Mons. An answer to Mr. Arthur Machen and Mr. Harold Begbie.",
+     "voci": [
+      "Taylor, I. E. Stilwell.",
+      "BEGBIE, Edward Harold.",
+      "Machen, Arthur, 1863-1947."
+     ]
+    },
+    {
+     "titolo": "Arthur Machen.",
+     "voci": [
+      "MICHAEL, David Parry Martin.",
+      "Machen, Arthur, 1863-1947."
+     ]
+    },
+    {
+     "titolo": "Arthur Machen.",
+     "voci": [
+      "SWEETSER, Wesley Duaine.",
+      "Machen, Arthur, 1863-1947."
+     ]
+    },
+    {
+     "titolo": "Arthur Machen. A bibliography ... With notes, biographical and critical, by A. Machen and an introdu",
+     "voci": [
+      "Danielson, Henry.",
+      "Machen, Arthur, 1863-1947."
+     ]
+    },
+    {
+     "titolo": "Arthur Machen :",
+     "voci": [
+      "Starrett, Vincent, 1886-1974.",
+      "Machen, Arthur, 1863-1947.",
+      "Arthur Machen Society."
+     ]
+    },
+    {
+     "titolo": "Arthur Machen. A short account of his life and work, etc. [With plates, including portraits.]",
+     "voci": [
+      "REYNOLDS, S. Aidan, and CHARLTON (William Edward Walmesley St. George)",
+      "Charlton, William, 1935-",
+      "Machen, Arthur, 1863-1947."
+     ]
+    },
+    {
+     "titolo": "The Arthur Machen Collection /",
+     "voci": [
+      "Machen, Arthur, 1863-1947."
+     ]
+    },
+    {
+     "titolo": "Arthur Machen. Essays by Adrian Goldstone [and others] ... Edited by Father Brocard Sewell, etc.",
+     "voci": [
+      "Machen, Arthur, 1863-1947."
+     ]
+    },
+    {
+     "titolo": "Arthur Machen horror stories :",
+     "voci": [
+      "Machen, Arthur, 1863-1947,",
+      "Prizeman, Steven,",
+      "Machen, Arthur, 1863-1947."
+     ]
+    },
+    {
+     "titolo": "The Arthur Machen Journal. A quarterly publication of the Arthur Machen Society.",
+     "voci": [
+      "Arthur Machen Society (NEW YORK)",
+      "Machen, Arthur, 1863-1947."
+     ]
+    },
+    {
+     "titolo": "Arthur Machen &amp; Montgomery Evans :",
+     "voci": [
+      "Machen, Arthur, 1863-1947.",
+      "Evans, Montgomery, 1863-1947.",
+      "Hassler, Sue Strong, 1938-",
+      "Hassler, Donald M."
+     ]
+    },
+    {
+     "titolo": "Arthur Machen's 1890s Notebook /",
+     "voci": [
+      "Machen, Arthur, 1863-1947."
+     ]
+    },
+    {
+     "titolo": "Arthur Machen's 1890s notebook /",
+     "voci": [
+      "Machen, Arthur, 1863-1947,",
+      "Friends of Arthur Machen,"
+     ]
+    },
+    {
+     "titolo": "Arthur Machen's occult catalogues /",
+     "voci": [
+      "Machen, Arthur, 1863-1947,",
+      "Gilbert, R. A.,",
+      "Friends of Arthur Machen,",
+      "Tartarus Press,"
+     ]
+    },
+    {
+     "titolo": "Arthur Machen: weaver of fantasy. [With plates, including portraits.]",
+     "voci": [
+      "Gekle, William F. (William Francis)",
+      "Machen, Arthur, 1863-1947."
+     ]
+    },
+    {
+     "titolo": "The autobiography of Arthur Machen.",
+     "voci": [
+      "Machen, Arthur, 1863-1947."
+     ]
+    },
+    {
+     "titolo": "The autobiography of Arthur Machen /",
+     "voci": [
+      "Machen, Arthur, 1863-1947."
+     ]
+    },
+    {
+     "titolo": "The autobiography of Arthur Machen /",
+     "voci": [
+      "Machen, Arthur, 1863-1947.",
+      "Machen, Arthur, 1863-1947.",
+      "Machen, Arthur, 1863-1947."
+     ]
+    },
+    {
+     "titolo": "The autobiography of Arthur Machen. With an introduction by Morchard Bishop and with three portraits",
+     "voci": [
+      "Machen, Arthur, 1863-1947."
+     ]
+    },
+    {
+     "titolo": "The autobiography of Arthur Machen /",
+     "voci": [
+      "Machen, Arthur, 1863-1947,",
+      "Machen, Arthur, 1863-1947.",
+      "Machen, Arthur, 1863-1947."
+     ]
+    },
+    {
+     "titolo": "Beneath the Barley. A note on the origins of Eleusinia. [With a portrait.]",
+     "voci": [
+      "Machen, Arthur, 1863-1947."
+     ]
+    },
+    {
+     "titolo": "Between two worlds :",
+     "voci": [
+      "Machen, Arthur, 1863-1947,"
+     ]
+    },
+    {
+     "titolo": "A Bibliography of Arthur Machen. [With plates, including portraits and facsimiles.]",
+     "voci": [
+      "GOLDSTONE, Adrian H., and SWEETSER (Wesley)",
+      "Machen, Arthur, 1863-1947.",
+      "SWEETSER, Wesley Duaine."
+     ]
+    },
+    {
+     "titolo": "Black Crusade.",
+     "voci": [
+      "Machen, Arthur, 1863-1947."
+     ]
+    },
+    {
+     "titolo": "The black seal and other stories /",
+     "voci": [
+      "Machen, Arthur, 1863-1947,"
+     ]
+    },
+    {
+     "titolo": "The bowmen, and other legends of the war /",
+     "voci": [
+      "Machen, Arthur, 1863-1947."
+     ]
+    },
+    {
+     "titolo": "Bridles &amp; Spurs ... With a preface by Nathan van Patten. [With a portrait.]",
+     "voci": [
+      "Machen, Arthur, 1863-1947.",
+      "VAN PATTEN, Nathan."
+     ]
+    },
+    {
+     "titolo": "The Cærleon edition of the Works of Arthur Machen. [With portrait.]",
+     "voci": [
+      "Machen, Arthur, 1863-1947."
+     ]
+    },
+    {
+     "titolo": "The Canning Wonder. (The case of Elizabeth Canning.) [With plates.]",
+     "voci": [
+      "Machen, Arthur, 1863-1947.",
+      "CANNING, Elizabeth."
+     ]
+    },
+    {
+     "titolo": "Casanova's Escape from the Leads: being his own account, as translated with an introduction by Arthu",
+     "voci": [
+      "Casanova, Giacomo, 1725-1798.",
+      "Machen, Arthur, 1863-1947."
+     ]
+    },
+    {
+     "titolo": "A Chapter from the book called The Ingenious Gentleman Don Quijote de la Mancha, which by some misch",
+     "voci": [
+      "Cervantes Saavedra, Miguel de, 1547-1616.",
+      "Machen, Arthur, 1863-1947.",
+      "Redway, G. W. (George William)"
+     ]
+    },
+    {
+     "titolo": "Chapters five and six of The Secret glory /",
+     "voci": [
+      "Machen, Arthur, 1863-1947."
+     ]
+    },
+    {
+     "titolo": "The Children of the Pool and other stories.",
+     "voci": [
+      "Machen, Arthur, 1863-1947."
+     ]
+    },
+    {
+     "titolo": "The children of the pool /",
+     "voci": [
+      "Machen, Arthur, 1863-1947,"
+     ]
+    },
+    {
+     "titolo": "The Chronicle of Clemendy.",
+     "voci": [
+      "Machen, Arthur, 1863-1947."
+     ]
+    },
+    {
+     "titolo": "The chronicle of clemendy /",
+     "voci": [
+      "Machen, Arthur, 1863-1947."
+     ]
+    },
+    {
+     "titolo": "The Chronicle of Clemendy ... done into English [or rather written] by A. Machen.",
+     "voci": [
+      "Machen, Arthur, 1863-1947."
+     ]
+    },
+    {
+     "titolo": "The chronicle of Clemendy ;",
+     "voci": [
+      "Machen, Arthur, 1863-1947."
+     ]
+    },
+    {
+     "titolo": "The collected Arthur Machen /",
+     "voci": [
+      "Machen, Arthur, 1863-1947.",
+      "Palmer, Christopher."
+     ]
+    },
+    {
+     "titolo": "The Collector's Craft.",
+     "voci": [
+      "Machen, Arthur, 1863-1947."
+     ]
+    },
+    {
+     "titolo": "The Cosy Room and Other Stories.",
+     "voci": [
+      "Machen, Arthur, 1863-1947."
+     ]
+    },
+    {
+     "titolo": "The cosy room and other stories /",
+     "voci": [
+      "Machen, Arthur, 1863-1947,"
+     ]
+    },
+    {
+     "titolo": "The day's portion :",
+     "voci": [
+      "Machen, Arthur, 1863-1947.",
+      "Brangham, Godfrey.",
+      "Jarrett, Nigel."
+     ]
+    },
+    {
+     "titolo": "Decadent and occult works /",
+     "voci": [
+      "Machen, Arthur, 1863-1947,",
+      "Denisoff, Dennis, 1961-",
+      "Modern Humanities Research Association."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "qid": "Q15689600",
+   "nome": "Amelia Beers Warnock",
+   "nascita": "1878-01-01",
+   "morte": "1956-01-01",
+   "alias": [
+    "Katherine Hale",
+    "Mrs. John W. Garvin"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 11,
+    "dal_2000": 0,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Warnock 1878-1956\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "Canadian cities of romance /",
+     "voci": [
+      "Hale, Katherine, 1878-1956.",
+      "Stevens, Dorothy.",
+      "Simpson, Charles W."
+     ]
+    },
+    {
+     "titolo": "Canadian cities of romance ... Drawings by Dorothy Stevens.",
+     "voci": [
+      "Hale, Katherine, 1878-1956."
+     ]
+    },
+    {
+     "titolo": "Canadian cities of romance ... Drawings by Dorothy Stevens. (Third impression.).",
+     "voci": [
+      "Hale, Katherine, 1878-1956."
+     ]
+    },
+    {
+     "titolo": "Canadian Houses of Romance ... With drawings by Dorothy Stevens.",
+     "voci": [
+      "Hale, Katherine, 1878-1956."
+     ]
+    },
+    {
+     "titolo": "The flute and other poems.",
+     "voci": [
+      "Hale, Katherine, 1878-1956."
+     ]
+    },
+    {
+     "titolo": "Grey Knitting, and other poems.",
+     "voci": [
+      "Hale, Katherine, 1878-1956."
+     ]
+    },
+    {
+     "titolo": "The island and other poems. (Second impression.).",
+     "voci": [
+      "Hale, Katherine, 1878-1956."
+     ]
+    },
+    {
+     "titolo": "Morning in the West. A book of verse.",
+     "voci": [
+      "Hale, Katherine, 1878-1956."
+     ]
+    },
+    {
+     "titolo": "The New Joan, and other poems.",
+     "voci": [
+      "Hale, Katherine, 1878-1956."
+     ]
+    },
+    {
+     "titolo": "This is Ontario. With photographic illustrations by “Jay”, etc.",
+     "voci": [
+      "Hale, Katherine, 1878-1956."
+     ]
+    },
+    {
+     "titolo": "The White Comrade, and other poems, etc.",
+     "voci": [
+      "Hale, Katherine, 1878-1956."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "qid": "Q33110662",
+   "nome": "Juan María Oliver",
+   "nascita": "1881-01-01",
+   "morte": "1957-01-01",
+   "alias": [
+    "Juan Solito"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 2,
+    "dal_2000": 2,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Oliver 1881-1957\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "Stefan and Lotte Zweig's South American letters :",
+     "voci": [
+      "Zweig, Stefan, 1881-1942.",
+      "Zweig, Lotte.",
+      "Davis, Darién J., 1964-",
+      "Marshall, Oliver, 1957-"
+     ]
+    },
+    {
+     "titolo": "Stefan and Lotte Zweig's South American letters :",
+     "voci": [
+      "Zweig, Stefan, 1881-1942.",
+      "Zweig, Lotte, 1908-1942.",
+      "Davis, Darién J., 1964-",
+      "Marshall, Oliver, 1957-"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "qid": "Q1388518",
+   "nome": "Oliver St. John Gogarty",
+   "nascita": "1878-08-17",
+   "morte": "1957-09-22",
+   "alias": [],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 65,
+    "dal_2000": 1,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Gogarty 1878-1957\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "As I was going down Sackville Street.",
+     "voci": [
+      "Gogarty, Oliver St. John, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "As I was going down Sackville Street :",
+     "voci": [
+      "Gogarty, Oliver St. John, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "As I was going down Sackville Street :",
+     "voci": [
+      "Gogarty, Oliver St. John, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "As I was going down Sackville Street. A phantasy in fact. [Reminiscences. With a portrait.]",
+     "voci": [
+      "Gogarty, Oliver St. John, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "As I was going down Sackville Street, etc.",
+     "voci": [
+      "Gogarty, Oliver St. John, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "As I was going down Sackville Street, etc.",
+     "voci": [
+      "Gogarty, Oliver St. John, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "As I was going down Sackville Street ... Illustrated. (A phantasy in fact.- Second printing.).",
+     "voci": [
+      "Gogarty, Oliver St. John, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "As I was going down Sackville Street /",
+     "voci": [
+      "Gogarty, Oliver St. John, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "As Iwas going down Sackville Street /",
+     "voci": [
+      "Gogarty, Oliver St. John, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "Cervantes: tercentenary of Don Quixote. Vice-Chancellor's English Verse Prize, Trinity College, Dubl",
+     "voci": [
+      "Gogarty, Oliver St. John, 1878-1957.",
+      "Cervantes Saavedra, Miguel de, 1547-1616."
+     ]
+    },
+    {
+     "titolo": "The collected poems.",
+     "voci": [
+      "Gogarty, Oliver St. John, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "The Collected Poems of Oliver St. John Gogarty. [With a portrait.]",
+     "voci": [
+      "Gogarty, Oliver St. John, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "Elbow Room.",
+     "voci": [
+      "Gogarty, Oliver St. John, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "Elbow room /",
+     "voci": [
+      "Gogarty, Oliver St. John, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "Elbow room /",
+     "voci": [
+      "Gogarty, Oliver St. John, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "[The Fortunes and Misfortunes of the Famous Moll Flanders. [With a prefatory note signed: A. H., i.e",
+     "voci": [
+      "Defoe, Daniel, 1661?-1731.",
+      "Gogarty, Oliver St. John, 1878-1957.",
+      "Wragg, Arthur, 1903-1976."
+     ]
+    },
+    {
+     "titolo": "Going Native.",
+     "voci": [
+      "Gogarty, Oliver St. John, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "Going native /",
+     "voci": [
+      "Gogarty, Oliver St. John, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "I follow Saint Patrick.",
+     "voci": [
+      "Gogarty, Oliver St. John, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "I follow Saint Patrick.",
+     "voci": [
+      "Gogarty, Oliver St. John, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "I follow Saint Patrick /",
+     "voci": [
+      "Gogarty, Oliver St. John, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "I follow Saint Patrick /",
+     "voci": [
+      "Gogarty, Oliver St. John, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "I Follow Saint Patrick. [On the journeys of St. Patrick. With plates and maps.]",
+     "voci": [
+      "Gogarty, Oliver St. John, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "Intimations.",
+     "voci": [
+      "Gogarty, Oliver St. John, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "Intimations /",
+     "voci": [
+      "Gogarty, Oliver St. John, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "Irish literary portraits. W. B. Yeats, James Joyce, George Moore, George Bernard Shaw, Oliver St Joh",
+     "voci": [
+      "Rodgers, W. R. (William Robert), 1909-1969.",
+      "Gogarty, Oliver St. John, 1878-1957.",
+      "Higgins, F. R. (Frederick Robert)",
+      "Joyce, James, 1882-1941.",
+      "Moore, George, 1852-1933.",
+      "Shaw, Bernard, 1856-1950.",
+      "Yeats, W. B. (William Butler), 1865-1939."
+     ]
+    },
+    {
+     "titolo": "It isn't this Time of Year at all! An unpremeditated autobiography.",
+     "voci": [
+      "Gogarty, Oliver St. John, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "It isn't this time of year at all An unpremeditated autobiography.",
+     "voci": [
+      "Gogarty, Oliver St. John, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "It isn't this time of year at all! :",
+     "voci": [
+      "Gogarty, Oliver St. John, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "James Augustine Joyce. (First printed in the Times Herald, Dallas.).",
+     "voci": [
+      "Gogarty, Oliver St. John, 1878-1957.",
+      "Joyce, James, 1882-1941."
+     ]
+    },
+    {
+     "titolo": "Mad Grandeur. A novel.",
+     "voci": [
+      "Gogarty, Oliver St. John, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "Mad grandeur, etc.",
+     "voci": [
+      "Gogarty, Oliver St. John, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "Many lines to thee. Letters to G. K. A. Bell from the Martello Tower at Sandycove, Rutland Square an",
+     "voci": [
+      "Gogarty, Oliver St. John, 1878-1957.",
+      "Carens, James F. (James Francis), 1927-"
+     ]
+    },
+    {
+     "titolo": "Many lines to thee :",
+     "voci": [
+      "Gogarty, Oliver St. John, 1878-1957.",
+      "Bell, George Kennedy Allen.",
+      "Carens, James F. (James Francis), 1927-"
+     ]
+    },
+    {
+     "titolo": "Mourning became Mrs. Spendlove, and other portraits, grave and gay.",
+     "voci": [
+      "Gogarty, Oliver St. John, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "Mr. Petunia.",
+     "voci": [
+      "Gogarty, Oliver St. John, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "An offering of swans /",
+     "voci": [
+      "Gogarty, Oliver St. John, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "An offering of swans /",
+     "voci": [
+      "Gogarty, Oliver St. John, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "An Offering of Swans. [Poems.]",
+     "voci": [
+      "Gogarty, Oliver St. John, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "Oliver St. John Gogarty. A poet and his times. [With a portrait.]",
+     "voci": [
+      "O'Connor, Ulick.",
+      "Gogarty, Oliver St. John, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "Oliver St. John Gogarty, etc.",
+     "voci": [
+      "O'Connor, Ulick.",
+      "Gogarty, Oliver St. John, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "Others is Adorn /",
+     "voci": [
+      "Gogarty, Oliver St. John, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "Others to Adorn, etc. [Poems.]",
+     "voci": [
+      "Gogarty, Oliver St. John, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "Others to adorn /",
+     "voci": [
+      "Gogarty, Oliver St. John, 1878-1957.",
+      "Yeats, W. B. (William Butler), 1865-1939.",
+      "George Russell, A. E.",
+      "Reynolds, Horace."
+     ]
+    },
+    {
+     "titolo": "Perennial /",
+     "voci": [
+      "Gogarty, Oliver St. John, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "Perennial. (Poems.).",
+     "voci": [
+      "Gogarty, Oliver St. John, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "Perennial. [Poems.]",
+     "voci": [
+      "Gogarty, Oliver St. John, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "Perennial. [Poems. With a portrait.]",
+     "voci": [
+      "Gogarty, Oliver St. John, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "The plays of Oliver St. John Gogarty, etc.",
+     "voci": [
+      "Gogarty, Oliver St. John, 1878-1957."
+     ]
+    },
+    {
+     "titolo": "The poems &amp; plays of Oliver St John Gogarty /",
+     "voci": [
+      "Gogarty, Oliver St. John, 1878-1957.",
+      "Jeffares, A. Norman (Alexander Norman), 1920-2005."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "qid": "Q780102",
+   "nome": "Wyndham Lewis",
+   "nascita": "1882-11-18",
+   "morte": "1957-03-07",
+   "alias": [
+    "Percy Lewis",
+    "Percy Wyndham Lewis",
+    "Percy William Lewis",
+    "Wyndham Percy Lewis"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 219,
+    "dal_2000": 24,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Lewis 1882-1957\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "America and Cosmic Man.",
+     "voci": [
+      "Lewis, Wyndham, 1882-1957."
+     ]
+    },
+    {
+     "titolo": "America and Cosmic Man.",
+     "voci": [
+      "Lewis, Wyndham, 1882-1957."
+     ]
+    },
+    {
+     "titolo": "America and cosmic man /",
+     "voci": [
+      "Lewis, Wyndham, 1882-1957."
+     ]
+    },
+    {
+     "titolo": "America, I presume.",
+     "voci": [
+      "Lewis, Wyndham, 1882-1957."
+     ]
+    },
+    {
+     "titolo": "America, I presume.",
+     "voci": [
+      "Lewis, Wyndham, 1882-1957."
+     ]
+    },
+    {
+     "titolo": "Anglosaxony :",
+     "voci": [
+      "Lewis, Wyndham, 1882-1957."
+     ]
+    },
+    {
+     "titolo": "An Anthology of his Prose.",
+     "voci": [
+      "Lewis, Wyndham, 1882-1957."
+     ]
+    },
+    {
+     "titolo": "Apes, Japes and Hitlerism. A study and bibliography of Wyndham Lewis ... Prefatory letter by Frederi",
+     "voci": [
+      "GAWSWORTH, John, pseud. [i.e. Terence Ian Fytton Armstrong.]",
+      "Carter, Frederick.",
+      "Lewis, Wyndham, 1882-1957."
+     ]
+    },
+    {
+     "titolo": "The Apes of God.",
+     "voci": [
+      "Lewis, Wyndham, 1882-1957."
+     ]
+    },
+    {
+     "titolo": "The Apes of God.",
+     "voci": [
+      "Lewis, Wyndham, 1882-1957."
+     ]
+    },
+    {
+     "titolo": "The Apes of God.",
+     "voci": [
+      "Lewis, Wyndham, 1882-1957."
+     ]
+    },
+    {
+     "titolo": "The apes of God.",
+     "voci": [
+      "Lewis, Wyndham, 1882-1957."
+     ]
+    },
+    {
+     "titolo": "The apes of God.",
+     "voci": [
+      "Lewis, Wyndham, 1882-1957."
+     ]
+    },
+    {
+     "titolo": "The apes of God /",
+     "voci": [
+      "Lewis, Wyndham, 1882-1957."
+     ]
+    },
+    {
+     "titolo": "The Apes of God. (Twenty-fifth anniversary edition.).",
+     "voci": [
+      "Lewis, Wyndham, 1882-1957."
+     ]
+    },
+    {
+     "titolo": "The apes of God /",
+     "voci": [
+      "Lewis, Wyndham, 1882-1957."
+     ]
+    },
+    {
+     "titolo": "The Art of Being Ruled.",
+     "voci": [
+      "Lewis, Wyndham, 1882-1957."
+     ]
+    },
+    {
+     "titolo": "The art of being ruled.",
+     "voci": [
+      "Lewis, Wyndham, 1882-1957."
+     ]
+    },
+    {
+     "titolo": "The Art of Being Ruled /",
+     "voci": [
+      "Lewis, Wyndham, 1882-1957."
+     ]
+    },
+    {
+     "titolo": "The art of being ruled /",
+     "voci": [
+      "Lewis, Wyndham, 1882-1957.",
+      "Dasenbrock, Reed Way."
+     ]
+    },
+    {
+     "titolo": "The Art of Wyndham Lewis. Edited by C. Handley-Read, with an essay on detail in the artist's style, ",
+     "voci": [
+      "Handley-Read, Charles.",
+      "Lewis, Wyndham, 1882-1957.",
+      "Newton, Eric, 1893-1965."
+     ]
+    },
+    {
+     "titolo": "Beyond this Limit. Pictures by Wyndham Lewis and words by N. Mitchison.",
+     "voci": [
+      "Mitchison, Naomi, 1897-1999.",
+      "Lewis, Wyndham, 1882-1957."
+     ]
+    },
+    {
+     "titolo": "Blast.",
+     "voci": [
+      "Lewis, Wyndham, 1882-1957."
+     ]
+    },
+    {
+     "titolo": "Blast 1 /",
+     "voci": [
+      "Lewis, Wyndham, 1882-1957."
+     ]
+    },
+    {
+     "titolo": "Blast '1914-1915' /",
+     "voci": [
+      "Lewis, Wyndham, 1882-1957."
+     ]
+    },
+    {
+     "titolo": "Blast 3 /",
+     "voci": [
+      "Lewis, Wyndham, 1882-1957.",
+      "Cooney, Seamus.",
+      "Morrow, Bradford, 1951-",
+      "Lafourcade, Bernard, 1934-",
+      "Kenner, Hugh."
+     ]
+    },
+    {
+     "titolo": "Blasting and Bombardiering.",
+     "voci": [
+      "Lewis, Wyndham, 1882-1957."
+     ]
+    },
+    {
+     "titolo": "Blasting and bombardiering :",
+     "voci": [
+      "Lewis, Wyndham, 1882-1957.",
+      "Imperial War Museum (Great Britain). Department of Printed Books."
+     ]
+    },
+    {
+     "titolo": "Blasting and bombardiering /",
+     "voci": [
+      "Lewis, Wyndham, 1882-1957."
+     ]
+    },
+    {
+     "titolo": "Blasting and bombardiering /",
+     "voci": [
+      "Lewis, Wyndham, 1882-1957."
+     ]
+    },
+    {
+     "titolo": "Blasting &amp; bombardiering.",
+     "voci": [
+      "Lewis, Wyndham, 1882-1957."
+     ]
+    },
+    {
+     "titolo": "Blasting &amp; bombardiering.",
+     "voci": [
+      "Lewis, Wyndham, 1882-1957."
+     ]
+    },
+    {
+     "titolo": "Blasting &amp; bombardiering /",
+     "voci": [
+      "Lewis, Wyndham, 1882-1957."
+     ]
+    },
+    {
+     "titolo": "Blasting &amp; Bombardiering. [With plates, including portraits.]",
+     "voci": [
+      "Lewis, Wyndham, 1882-1957."
+     ]
+    },
+    {
+     "titolo": "Blasting &amp; bombardiering. [With plates, including portraits.]",
+     "voci": [
+      "Lewis, Wyndham, 1882-1957."
+     ]
+    },
+    {
+     "titolo": "The caliph's design :",
+     "voci": [
+      "Lewis, Wyndham, 1882-1957.",
+      "Edwards, Paul, 1950-"
+     ]
+    },
+    {
+     "titolo": "The caliph's design :",
+     "voci": [
+      "Lewis, Wyndham, 1882-1957.",
+      "Edwards, Paul, 1950-"
+     ]
+    },
+    {
+     "titolo": "The Caliph's Design, etc.",
+     "voci": [
+      "Lewis, Wyndham, 1882-1957."
+     ]
+    },
+    {
+     "titolo": "Cantleman's spring mate. Code of a herdsman. Cantleman et la saison des amours. Le code d'un bouvier",
+     "voci": [
+      "Lewis, Wyndham, 1882-1957.",
+      "Lafourcade, Bernard."
+     ]
+    },
+    {
+     "titolo": "The Childermass. Section 1. F. P.",
+     "voci": [
+      "Lewis, Wyndham, 1882-1957."
+     ]
+    },
+    {
+     "titolo": "Childermass /",
+     "voci": [
+      "Lewis, Wyndham, 1882-1957."
+     ]
+    },
+    {
+     "titolo": "The code of a herdsman /",
+     "voci": [
+      "Lewis, Wyndham, 1882-1957.",
+      "Wyndham Lewis Society."
+     ]
+    },
+    {
+     "titolo": "Collected poems and plays [of] Wyndham Lewis /",
+     "voci": [
+      "Lewis, Wyndham, 1882-1957.",
+      "Munton, Alan."
+     ]
+    },
+    {
+     "titolo": "Collected poems &amp; plays /",
+     "voci": [
+      "Lewis, Wyndham, 1882-1957.",
+      "Munton, Alan."
+     ]
+    },
+    {
+     "titolo": "The collected works of Wyndham Lewis.",
+     "voci": [
+      "Lewis, Wyndham, 1882-1957,",
+      "Edwards, Paul, 1950-"
+     ]
+    },
+    {
+     "titolo": "The complete Wild body /",
+     "voci": [
+      "Lewis, Wyndham, 1882-1957.",
+      "Lafourcade, Bernard, 1934-"
+     ]
+    },
+    {
+     "titolo": "Count Your Dead: they are alive! or, a new war in the making.",
+     "voci": [
+      "Lewis, Wyndham, 1882-1957."
+     ]
+    },
+    {
+     "titolo": "Count your dead: they are alive! :",
+     "voci": [
+      "Lewis, Wyndham, 1882-1957."
+     ]
+    },
+    {
+     "titolo": "Creatures of habit and creatures of change :",
+     "voci": [
+      "Lewis, Wyndham, 1882-1957.",
+      "Edwards, Paul, 1950-"
+     ]
+    },
+    {
+     "titolo": "Creatures of habit and creatures of change :",
+     "voci": [
+      "Lewis, Wyndham, 1882-1957.",
+      "Edwards, Paul, 1950-"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 11,
+   "qid": "Q337276",
+   "nome": "Sacha Guitry",
+   "nascita": "1885-02-21",
+   "morte": "1957-07-24",
+   "alias": [
+    "Jacques Lorcey",
+    "s. guitry",
+    "Alexandre Guitry",
+    "Alexandre-Georges-Pierre Guitry"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 16,
+    "dal_2000": 0,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Guitry 1885-1957\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "Deburau ... In an English version by Harley Granville-Barker.",
+     "voci": [
+      "Guitry, Sacha, 1885-1957.",
+      "Granville-Barker, Harley, 1877-1946."
+     ]
+    },
+    {
+     "titolo": "Don't listen, Ladies. A comedy in three acts. By Stephen Powys and Guy Bolton. From the French of Sa",
+     "voci": [
+      "Guitry, Sacha, 1885-1957.",
+      "Bolton, Guy, 1882-1979.",
+      "Powys, Stephen."
+     ]
+    },
+    {
+     "titolo": "Don't listen, ladies :",
+     "voci": [
+      "Guitry, Sacha, 1885-1957."
+     ]
+    },
+    {
+     "titolo": "If I remember right :",
+     "voci": [
+      "Guitry, Sacha, 1885-1957."
+     ]
+    },
+    {
+     "titolo": "If I Remember Right. Memoirs ... Translated ... by Lewis Galantière, etc. [With portraits.]",
+     "voci": [
+      "Guitry, Sacha, 1885-1957.",
+      "GALANTIÈRE, Lewis."
+     ]
+    },
+    {
+     "titolo": "If memory serves :",
+     "voci": [
+      "Guitry, Sacha, 1885-1957."
+     ]
+    },
+    {
+     "titolo": "[Le nouveau testament.] The New Will. A play in four acts. Translated by Edward Stirling.",
+     "voci": [
+      "Guitry, Sacha, 1885-1957.",
+      "STIRLING, W. Edward."
+     ]
+    },
+    {
+     "titolo": "[Les Mémoires d'un tricheur.] Memoirs of a Cheat ... Illustrated by the author.",
+     "voci": [
+      "Guitry, Sacha, 1885-1957."
+     ]
+    },
+    {
+     "titolo": "New will :",
+     "voci": [
+      "Guitry, Sacha, 1885-1957."
+     ]
+    },
+    {
+     "titolo": "Remembering the Champs-Elysees /",
+     "voci": [
+      "Guitry, Sacha, 1885-1957."
+     ]
+    },
+    {
+     "titolo": "Remembering the Champs-Elysees /",
+     "voci": [
+      "Guitry, Sacha, 1885-1957."
+     ]
+    },
+    {
+     "titolo": "[Remontons les Champs-Elysées.] Remembering the Champs Elysées. (Translated by John Marks.).",
+     "voci": [
+      "Guitry, Sacha, 1885-1957.",
+      "Marks, John H. P. (John Hugo Puempin), 1908-1967."
+     ]
+    },
+    {
+     "titolo": "Sacha Guitry. The last boulevardier. [With plates, including portraits.]",
+     "voci": [
+      "Harding, James, 1929-2007.",
+      "Guitry, Sacha, 1885-1957."
+     ]
+    },
+    {
+     "titolo": "Theatre.",
+     "voci": [
+      "Guitry, Sacha, 1885-1957."
+     ]
+    },
+    {
+     "titolo": "Theatre.",
+     "voci": [
+      "Guitry, Sacha, 1885-1957."
+     ]
+    },
+    {
+     "titolo": "Villa for Sale. From “Villa à vendre” ... A one act play translated ... by Virginia and Frank Verno",
+     "voci": [
+      "Guitry, Sacha, 1885-1957.",
+      "VERNON, Frank.",
+      "Vernon, Virginia."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 12,
+   "qid": "Q926338",
+   "nome": "E. C. Vivian",
+   "nascita": "1882-10-19",
+   "morte": "1947-05-21",
+   "alias": [
+    "Jack Mann",
+    "A.K. Walton",
+    "Charles Henry Cannell",
+    "Evelyn Charles Henry Vivian",
+    "Sydney Bingdom"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 80,
+    "dal_2000": 1,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Vivian 1882-1947\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "38 Automatic.",
+     "voci": [
+      "Vivian, Evelyn Charles, 1882-1947."
+     ]
+    },
+    {
+     "titolo": "Accessory After.",
+     "voci": [
+      "Vivian, Evelyn Charles, 1882-1947."
+     ]
+    },
+    {
+     "titolo": "And the Devil.",
+     "voci": [
+      "Vivian, Evelyn Charles, 1882-1947."
+     ]
+    },
+    {
+     "titolo": "And Then There Was One.",
+     "voci": [
+      "Vivian, Evelyn Charles, 1882-1947."
+     ]
+    },
+    {
+     "titolo": "Arrested.",
+     "voci": [
+      "Vivian, Evelyn Charles, 1882-1947."
+     ]
+    },
+    {
+     "titolo": "Ash.",
+     "voci": [
+      "Vivian, Evelyn Charles, 1882-1947."
+     ]
+    },
+    {
+     "titolo": "Barker's Drift.",
+     "voci": [
+      "Vivian, Evelyn Charles, 1882-1947."
+     ]
+    },
+    {
+     "titolo": "Barker's Drift ... Originally published as by Charles Cannell.",
+     "voci": [
+      "Vivian, Evelyn Charles, 1882-1947."
+     ]
+    },
+    {
+     "titolo": "The Black Prince.",
+     "voci": [
+      "Vivian, Evelyn Charles, 1882-1947."
+     ]
+    },
+    {
+     "titolo": "The British Army from Within.",
+     "voci": [
+      "Vivian, Evelyn Charles, 1882-1947."
+     ]
+    },
+    {
+     "titolo": "The British Army from Within.",
+     "voci": [
+      "Vivian, Evelyn Charles, 1882-1947."
+     ]
+    },
+    {
+     "titolo": "Broken Couplings.",
+     "voci": [
+      "Vivian, Evelyn Charles, 1882-1947."
+     ]
+    },
+    {
+     "titolo": "The Capsule Mystery.",
+     "voci": [
+      "Vivian, Evelyn Charles, 1882-1947."
+     ]
+    },
+    {
+     "titolo": "Cigar for Inspector Head.",
+     "voci": [
+      "Vivian, Evelyn Charles, 1882-1947."
+     ]
+    },
+    {
+     "titolo": "City of Wonder. [A novel.]",
+     "voci": [
+      "Vivian, Evelyn Charles, 1882-1947."
+     ]
+    },
+    {
+     "titolo": "Curses Come Home.",
+     "voci": [
+      "Vivian, Evelyn Charles, 1882-1947."
+     ]
+    },
+    {
+     "titolo": "Dangerous Guide.",
+     "voci": [
+      "Vivian, Evelyn Charles, 1882-1947."
+     ]
+    },
+    {
+     "titolo": "Delicate Fiend.",
+     "voci": [
+      "Vivian, Evelyn Charles, 1882-1947."
+     ]
+    },
+    {
+     "titolo": "Divided Ways.",
+     "voci": [
+      "Vivian, Evelyn Charles, 1882-1947."
+     ]
+    },
+    {
+     "titolo": "Double or Quit.",
+     "voci": [
+      "Vivian, Evelyn Charles, 1882-1947."
+     ]
+    },
+    {
+     "titolo": "Evidence in Blue.",
+     "voci": [
+      "Vivian, Evelyn Charles, 1882-1947."
+     ]
+    },
+    {
+     "titolo": "False Truth.",
+     "voci": [
+      "Vivian, Evelyn Charles, 1882-1947."
+     ]
+    },
+    {
+     "titolo": "Fields of Sleep.",
+     "voci": [
+      "Vivian, Evelyn Charles, 1882-1947."
+     ]
+    },
+    {
+     "titolo": "Following Feet.",
+     "voci": [
+      "Vivian, Evelyn Charles, 1882-1947."
+     ]
+    },
+    {
+     "titolo": "The Forbidden Door.",
+     "voci": [
+      "Vivian, Evelyn Charles, 1882-1947."
+     ]
+    },
+    {
+     "titolo": "The Forbidden Door.",
+     "voci": [
+      "Vivian, Evelyn Charles, 1882-1947."
+     ]
+    },
+    {
+     "titolo": "Girl in the Dark.",
+     "voci": [
+      "Vivian, Evelyn Charles, 1882-1947."
+     ]
+    },
+    {
+     "titolo": "Girl in the Dark.",
+     "voci": [
+      "Vivian, Evelyn Charles, 1882-1947."
+     ]
+    },
+    {
+     "titolo": "The Guarded Woman. A novel.",
+     "voci": [
+      "Vivian, Evelyn Charles, 1882-1947."
+     ]
+    },
+    {
+     "titolo": "The Guardian of the Cup.",
+     "voci": [
+      "Vivian, Evelyn Charles, 1882-1947."
+     ]
+    },
+    {
+     "titolo": "The Guardian of the Cup ... Previously published as by Charles Cannell.",
+     "voci": [
+      "Vivian, Evelyn Charles, 1882-1947."
+     ]
+    },
+    {
+     "titolo": "A history of aeronautics /",
+     "voci": [
+      "Vivian, Evelyn Charles, 1882-1947."
+     ]
+    },
+    {
+     "titolo": "A History of Aeronautics ... With a section on Progress in Aeroplane Design by Lieut.-Col. W. L. Mar",
+     "voci": [
+      "Vivian, Evelyn Charles, 1882-1947.",
+      "MARSH, William Lockwood."
+     ]
+    },
+    {
+     "titolo": "A history of aeronautics :",
+     "voci": [
+      "Vivian, Evelyn Charles, 1882-1947.",
+      "Marsh, W. L."
+     ]
+    },
+    {
+     "titolo": "House for Sale.",
+     "voci": [
+      "Vivian, Evelyn Charles, 1882-1947."
+     ]
+    },
+    {
+     "titolo": "The Impossible Crime.",
+     "voci": [
+      "Vivian, Evelyn Charles, 1882-1947."
+     ]
+    },
+    {
+     "titolo": "Infamous Fame.",
+     "voci": [
+      "Vivian, Evelyn Charles, 1882-1947."
+     ]
+    },
+    {
+     "titolo": "Innocent Guilt.",
+     "voci": [
+      "Vivian, Evelyn Charles, 1882-1947."
+     ]
+    },
+    {
+     "titolo": "Jewels Go Back.",
+     "voci": [
+      "Vivian, Evelyn Charles, 1882-1947."
+     ]
+    },
+    {
+     "titolo": "The Keys of the Flat.",
+     "voci": [
+      "Vivian, Evelyn Charles, 1882-1947."
+     ]
+    },
+    {
+     "titolo": "A King there was--.",
+     "voci": [
+      "Vivian, Evelyn Charles, 1882-1947."
+     ]
+    },
+    {
+     "titolo": "Ladies in the Case.",
+     "voci": [
+      "Vivian, Evelyn Charles, 1882-1947."
+     ]
+    },
+    {
+     "titolo": "The Lady of the Terraces.",
+     "voci": [
+      "Vivian, Evelyn Charles, 1882-1947."
+     ]
+    },
+    {
+     "titolo": "Lone Isle.",
+     "voci": [
+      "Vivian, Evelyn Charles, 1882-1947."
+     ]
+    },
+    {
+     "titolo": "Man Alone.",
+     "voci": [
+      "Vivian, Evelyn Charles, 1882-1947."
+     ]
+    },
+    {
+     "titolo": "Man Alone.",
+     "voci": [
+      "Vivian, Evelyn Charles, 1882-1947."
+     ]
+    },
+    {
+     "titolo": "The Man with a Scar.",
+     "voci": [
+      "Vivian, Evelyn Charles, 1882-1947."
+     ]
+    },
+    {
+     "titolo": "The Moon and Chelsea.",
+     "voci": [
+      "Vivian, Evelyn Charles, 1882-1947."
+     ]
+    },
+    {
+     "titolo": "Nine Days.",
+     "voci": [
+      "Vivian, Evelyn Charles, 1882-1947."
+     ]
+    },
+    {
+     "titolo": "Nine Days.",
+     "voci": [
+      "Vivian, Evelyn Charles, 1882-1947."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 13,
+   "qid": "Q713284",
+   "nome": "Felix Timmermans",
+   "nascita": "1886-07-05",
+   "morte": "1947-01-24",
+   "alias": [
+    "Koldys/Polleke v Mehr/Stelijn",
+    "Felix-BE Timmermans",
+    "Leopoldus Maximilianus Felix Timmermans"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 1,
+    "dal_2000": 1,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Timmermans 1886-1947\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "Intimations of death /",
+     "voci": [
+      "Timmermans, Felix, 1886-1947,",
+      "Vincent, Paul (Paul F.),",
+      "Howard, John, 1961-",
+      "Timmermans, Felix, 1886-1947."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 14,
+   "qid": "Q15516791",
+   "nome": "Herbert Asquith",
+   "nascita": "1881-03-11",
+   "morte": "1947-08-05",
+   "alias": [
+    "Herbert Dixon Asquith",
+    "Hon. Herbert Asquith"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 18,
+    "dal_2000": 0,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Asquith 1881-1947\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "Epitaph : The Clerk /",
+     "voci": [
+      "Britten, Benjamin, 1913-1976,",
+      "Asquith, Herbert, 1881-1947,"
+     ]
+    },
+    {
+     "titolo": "Mary Dallon.",
+     "voci": [
+      "Asquith, Herbert, 1881-1947."
+     ]
+    },
+    {
+     "titolo": "Moments of Memory. Recollections and impressions, etc. [Concerning the author's father, H. H. Asquit",
+     "voci": [
+      "Asquith, Herbert, 1881-1947.",
+      "Asquith, H. H. (Herbert Henry), 1852-1928."
+     ]
+    },
+    {
+     "titolo": "Pillicock Hill /",
+     "voci": [
+      "Asquith, Herbert, 1881-1947."
+     ]
+    },
+    {
+     "titolo": "Pillicock Hill ... With illustrations by A. H. Watson. [Poems.]",
+     "voci": [
+      "Asquith, Herbert, 1881-1947.",
+      "Watson, A. H."
+     ]
+    },
+    {
+     "titolo": "Pillicock Hill ... With illustrations by A. H. Watson. [Poems.]",
+     "voci": [
+      "Asquith, Herbert, 1881-1947.",
+      "Watson, A. H."
+     ]
+    },
+    {
+     "titolo": "Poems, 1912-1933.",
+     "voci": [
+      "Asquith, Herbert, 1881-1947."
+     ]
+    },
+    {
+     "titolo": "Roon.",
+     "voci": [
+      "Asquith, Herbert, 1881-1947."
+     ]
+    },
+    {
+     "titolo": "[The Volunteer, and other poems. (Second impression.)]",
+     "voci": [
+      "Asquith, Herbert, 1881-1947."
+     ]
+    },
+    {
+     "titolo": "A Village Sermon, and other poems.",
+     "voci": [
+      "Asquith, Herbert, 1881-1947."
+     ]
+    },
+    {
+     "titolo": "A village sermon and other poems /",
+     "voci": [
+      "Asquith, Herbert, 1881-1947."
+     ]
+    },
+    {
+     "titolo": "The volunteer and other poems.",
+     "voci": [
+      "Asquith, Herbert, 1881-1947."
+     ]
+    },
+    {
+     "titolo": "The volunteer and other poems /",
+     "voci": [
+      "Asquith, Herbert, 1881-1947."
+     ]
+    },
+    {
+     "titolo": "The Volunteer and Other Poems /",
+     "voci": [
+      "Asquith, Herbert, 1881-1947."
+     ]
+    },
+    {
+     "titolo": "The Volunteer, and other poems. (Second impression.).",
+     "voci": [
+      "Asquith, Herbert, 1881-1947."
+     ]
+    },
+    {
+     "titolo": "[The Volunteer, and other poems. (Second impression.)]",
+     "voci": [
+      "Asquith, Herbert, 1881-1947."
+     ]
+    },
+    {
+     "titolo": "Youth in the Skies, and other poems.",
+     "voci": [
+      "Asquith, Herbert, 1881-1947."
+     ]
+    },
+    {
+     "titolo": "Youth in the skies /",
+     "voci": [
+      "Asquith, Herbert, 1881-1947."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 15,
+   "qid": "Q265792",
+   "nome": "Ray Cummings",
+   "nascita": "1887-08-30",
+   "morte": "1957-01-23",
+   "alias": [
+    "Raymond King Cummings",
+    "Джон Кемпбелл",
+    "Емерсон Грейвз",
+    "Рей Кінг",
+    "Рей П. Шотвелл",
+    "Реймонд Кінг Каммінгс",
+    "Роберт Воллес"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 22,
+    "dal_2000": 11,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Cummings 1887-1957\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "Beyond the Vanishing Point /",
+     "voci": [
+      "Cummings, Ray,"
+     ]
+    },
+    {
+     "titolo": "Brigands of the Moon.",
+     "voci": [
+      "Cummings, Ray."
+     ]
+    },
+    {
+     "titolo": "Brigands of the moon.",
+     "voci": [
+      "Cummings, Ray."
+     ]
+    },
+    {
+     "titolo": "Brigands of the moon.",
+     "voci": [
+      "Cummings, Ray."
+     ]
+    },
+    {
+     "titolo": "Brigands of the moon /",
+     "voci": [
+      "Cummings, Ray,"
+     ]
+    },
+    {
+     "titolo": "The Fire People /",
+     "voci": [
+      "Cummings, Ray,"
+     ]
+    },
+    {
+     "titolo": "The Girl in the Golden Atom.",
+     "voci": [
+      "Cummings, Ray."
+     ]
+    },
+    {
+     "titolo": "The Girl in the Golden Atom /",
+     "voci": [
+      "Cummings, Ray,"
+     ]
+    },
+    {
+     "titolo": "The girl in the golden atom /",
+     "voci": [
+      "Cummings, Ray."
+     ]
+    },
+    {
+     "titolo": "Into the Fourth Dimension ... and other stories.",
+     "voci": [
+      "Cummings, Ray."
+     ]
+    },
+    {
+     "titolo": "Jesus among us :",
+     "voci": [
+      "Stanford, Shane, 1970-",
+      "Kent, Ronnie,",
+      "Cummings, Ray,",
+      "Thaxton, Anthony,",
+      "MacGregor, Keelin,",
+      "JourneyWise (Association)"
+     ]
+    },
+    {
+     "titolo": "Jesus among us :",
+     "voci": [
+      "Stanford, Shane, 1970-",
+      "Kent, Ronnie,",
+      "Cummings, Ray,",
+      "Thaxton, Anthony,",
+      "MacGregor, Keelin,",
+      "JourneyWise (Association)"
+     ]
+    },
+    {
+     "titolo": "The Man who mastered Time.",
+     "voci": [
+      "Cummings, Ray."
+     ]
+    },
+    {
+     "titolo": "The Princess of the Atom.",
+     "voci": [
+      "Cummings, Ray."
+     ]
+    },
+    {
+     "titolo": "The princess of the atom.",
+     "voci": [
+      "Cummings, Ray."
+     ]
+    },
+    {
+     "titolo": "The Sea Girl.",
+     "voci": [
+      "Cummings, Ray."
+     ]
+    },
+    {
+     "titolo": "The Shadow Girl.",
+     "voci": [
+      "Cummings, Ray."
+     ]
+    },
+    {
+     "titolo": "Tarrano the Conqueror.",
+     "voci": [
+      "Cummings, Ray."
+     ]
+    },
+    {
+     "titolo": "Tarrano the Conqueror /",
+     "voci": [
+      "Cummings, Ray,"
+     ]
+    },
+    {
+     "titolo": "Wandl the Invader /",
+     "voci": [
+      "Cummings, Ray,"
+     ]
+    },
+    {
+     "titolo": "The White Invaders /",
+     "voci": [
+      "Cummings, Ray,"
+     ]
+    },
+    {
+     "titolo": "The World Beyond /",
+     "voci": [
+      "Cummings, Ray,"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 16,
+   "qid": "Q949281",
+   "nome": "Jean-Richard Bloch",
+   "nascita": "1884-05-25",
+   "morte": "1947-03-15",
+   "alias": [
+    "Jean Richard Bloch"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 4,
+    "dal_2000": 0,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Bloch 1884-1947\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "... And Co. /",
+     "voci": [
+      "Bloch, Jean-Richard, 1884-1947."
+     ]
+    },
+    {
+     "titolo": "“- &amp; Co.” Translated by C. K. Scott-Moncrieff.",
+     "voci": [
+      "Bloch, Jean-Richard, 1884-1947.",
+      "Scott-Moncrieff, C. K. (Charles Kenneth), 1889-1930."
+     ]
+    },
+    {
+     "titolo": "A Night in Kurdistan. (Translated by Stephen Haden Guest.).",
+     "voci": [
+      "Bloch, Jean-Richard, 1884-1947.",
+      "Guest, Stephen Haden."
+     ]
+    },
+    {
+     "titolo": "Simler &amp; Co /",
+     "voci": [
+      "Bloch, Jean-Richard, 1884-1947."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 17,
+   "qid": "Q3631340",
+   "nome": "Bhai Vir Singh",
+   "nascita": "1872-12-05",
+   "morte": "1957-06-10",
+   "alias": [
+    "Bhai Vir Singh ji"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 4,
+    "dal_2000": 1,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Singh 1872-1957\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "Bhai Vir Singh :",
+     "voci": [
+      "Vir Singh, Bhai, 1872-1957."
+     ]
+    },
+    {
+     "titolo": "Bhai Vir Singh :",
+     "voci": [
+      "Wīra Siṅgh, Bhāī, 1872-1957.",
+      "Talib, Gurbachan Singh, 1911-1986.",
+      "Lovelock, Yann, 1939-"
+     ]
+    },
+    {
+     "titolo": "Bhai Vir Singh :",
+     "voci": [
+      "Wīra Siṅgha, 1872-1957.",
+      "Talib, Gurbachan Singh, 1911-1986.",
+      "Harbans Singh, 1921-1998.",
+      "Lovelock, Yann, 1939-"
+     ]
+    },
+    {
+     "titolo": "Puratan Janam Sakhi :",
+     "voci": [
+      "Wīra Siṅgha, 1872-1957,"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 18,
+   "qid": "Q3010499",
+   "nome": "César Moro",
+   "nascita": "1903-08-19",
+   "morte": "1956-01-10",
+   "alias": [
+    "Cesar Moro",
+    "Alfredo Quíspez-Asín",
+    "Alfredo Quispez-Asin Mas",
+    "Alfredo Quíspez Asín"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 3,
+    "dal_2000": 2,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Moro 1903-1956\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "El ojo envenenado :",
+     "voci": [
+      "Domínguez Rohan, Miguel,",
+      "Moro, César, 1903-1956."
+     ]
+    },
+    {
+     "titolo": "The equestrian turtle and other poems =",
+     "voci": [
+      "Moro, César, 1903-1956,",
+      "Moro, César, 1903-1956.",
+      "Moro, César, 1903-1956."
+     ]
+    },
+    {
+     "titolo": "The scandalous life of César Moro in his own words /",
+     "voci": [
+      "Moro, César, 1903-1956.",
+      "Ward, Philip, 1938-"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 19,
+   "qid": "Q6834101",
+   "nome": "Michael Sadleir",
+   "nascita": "1888-12-25",
+   "morte": "1957-12-13",
+   "alias": [],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 115,
+    "dal_2000": 6,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Sadleir 1888-1957\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "The Anchor: a love story.",
+     "voci": [
+      "Sadleir, Michael, 1888-1957."
+     ]
+    },
+    {
+     "titolo": "Anthony Trollope :",
+     "voci": [
+      "Smith, Walter E., 1930-",
+      "Sadleir, Michael, 1888-1957.",
+      "Heritage Book Shop (Los Angeles, Calif.)"
+     ]
+    },
+    {
+     "titolo": "Archdeacon Francis Wrangham, 1769-1842 /",
+     "voci": [
+      "Sadleir, Michael, 1888-1957."
+     ]
+    },
+    {
+     "titolo": "The Art of Spiritual Harmony ... Translated with an introduction by M. T. H. Sadler. Illustrated.",
+     "voci": [
+      "Kandinsky, Wassily, 1866-1944.",
+      "Sadleir, Michael, 1888-1957."
+     ]
+    },
+    {
+     "titolo": "Authors and publishers :",
+     "voci": [
+      "Sadleir, Michael, 1888-1957.",
+      "Rogers, Bruce, 1870-1957,",
+      "Pforzheimer Bruce Rogers Collection (Library of Congress)"
+     ]
+    },
+    {
+     "titolo": "Authors and Publishers. A study in mutual esteem. (Second of the J. M. Dent Memorial Lectures.).",
+     "voci": [
+      "Sadleir, Michael, 1888-1957."
+     ]
+    },
+    {
+     "titolo": "An autobiography /",
+     "voci": [
+      "Trollope, Anthony, 1815-1882.",
+      "Sadleir, Michael, 1888-1957.",
+      "Page, Frederick, 1879-1962."
+     ]
+    },
+    {
+     "titolo": "An autobiography /",
+     "voci": [
+      "Trollope, Anthony, 1815-1882.",
+      "Sadleir, Michael, 1888-1957.",
+      "Page, Frederick, 1879-1962."
+     ]
+    },
+    {
+     "titolo": "An Autobiography. [Edited by H. M. Trollope.] ... With an introduction by Michael Sadleir.",
+     "voci": [
+      "Trollope, Anthony, 1815-1882.",
+      "Sadleir, Michael, 1888-1957."
+     ]
+    },
+    {
+     "titolo": "An Autobiography ... With an introduction by Michael Sadleir. (Revised edition.) [With a portrait.]",
+     "voci": [
+      "Trollope, Anthony, 1815-1882.",
+      "Sadleir, Michael, 1888-1957."
+     ]
+    },
+    {
+     "titolo": "Barcester Towers /",
+     "voci": [
+      "Trollope, Anthony, 1815-1882.",
+      "Sadleir, Michael, 1888-1957.",
+      "Page, Frederick, 1879-1962."
+     ]
+    },
+    {
+     "titolo": "Barchester Towers /",
+     "voci": [
+      "Trollope, Anthony, 1815-1882.",
+      "Sadleir, Michael, 1888-1957.",
+      "Page, Frederick, 1879-1962.",
+      "Ardizzone, Edward, 1900-1979."
+     ]
+    },
+    {
+     "titolo": "Barchester Towers /",
+     "voci": [
+      "Trollope, Anthony, 1815-1882.",
+      "Sadleir, Michael, 1888-1957.",
+      "Page, Frederick, 1879-1962.",
+      "Ardizzone, Edward, 1900-1979."
+     ]
+    },
+    {
+     "titolo": "Barchester towers /",
+     "voci": [
+      "Trollope, Anthony, 1815-1882.",
+      "Sadleir, Michael, 1888-1957.",
+      "Page, Frederick, 1879-1962.",
+      "Ardizzone, Edward, 1900-1979."
+     ]
+    },
+    {
+     "titolo": "Barchester Towers /",
+     "voci": [
+      "Trollope, Anthony, 1815-1882.",
+      "Sadleir, Michael, 1888-1957.",
+      "Page, Frederick, 1879-1962.",
+      "Ardizzone, Edward, 1900-1979."
+     ]
+    },
+    {
+     "titolo": "Belgium's Agony. (Translation and introduction by M. T. H. Sadler.).",
+     "voci": [
+      "Verhaeren, Emile, 1855-1916.",
+      "Sadleir, Michael, 1888-1957."
+     ]
+    },
+    {
+     "titolo": "Bentley's standard novel series :",
+     "voci": [
+      "Sadleir, Michael, 1888-1957."
+     ]
+    },
+    {
+     "titolo": "Bibliographia. Studies in book history and book structure, 1750-1900. Edited by M. Sadleir.",
+     "voci": [
+      "Sadleir, Michael, 1888-1957."
+     ]
+    },
+    {
+     "titolo": "Bibliographical Aspects of the Victorian Novel. Sandars lectures ... 1937.",
+     "voci": [
+      "Sadleir, Michael, 1888-1957."
+     ]
+    },
+    {
+     "titolo": "Blessington - D'Orsay. [A biography of Marguerite, Countess Blessington and Alfred, Count d'Orsay.] ",
+     "voci": [
+      "Sadleir, Michael, 1888-1957.",
+      "Blessington, Marguerite Gardiner, Countess of, 1789-1849.",
+      "ORSAY, Alfred Guillaume Gabriel d', Count."
+     ]
+    },
+    {
+     "titolo": "Blessington-D'Orsay :",
+     "voci": [
+      "Sadleir, Michael, 1888-1957."
+     ]
+    },
+    {
+     "titolo": "Blessington-d'Orsay :",
+     "voci": [
+      "Sadleir, Michael, 1888-1957."
+     ]
+    },
+    {
+     "titolo": "Blessington-d'Orsay :",
+     "voci": [
+      "Sadleir, Michael, 1888-1957."
+     ]
+    },
+    {
+     "titolo": "Blessington-d'Orsay :",
+     "voci": [
+      "Sadleir, Michael, 1888-1957."
+     ]
+    },
+    {
+     "titolo": "Blessington - d'Orsay, etc. (New edition, revised and enlarged.).",
+     "voci": [
+      "Sadleir, Michael, 1888-1957.",
+      "Blessington, Marguerite Gardiner, Countess of, 1789-1849.",
+      "ORSAY, Alfred Guillaume Gabriel d', Count."
+     ]
+    },
+    {
+     "titolo": "Book Collecting. A reader's guide.",
+     "voci": [
+      "Sadleir, Michael, 1888-1957."
+     ]
+    },
+    {
+     "titolo": "Book collecting :",
+     "voci": [
+      "Sadleir, Michael, 1888-1957."
+     ]
+    },
+    {
+     "titolo": "Book collecting :",
+     "voci": [
+      "Chapman, R. W. (Robert William), 1881-1960.",
+      "Hayward, John.",
+      "Carter, John, 1905-1975.",
+      "Sadleir, Michael, 1888-1957."
+     ]
+    },
+    {
+     "titolo": "Breviary of Love. Being the private journal written at Lyon and Cherbourg during the years 1802-3 of",
+     "voci": [
+      "GRIVOLIN, Jeanne Aurélie.",
+      "Pillet, Roger.",
+      "Sadleir, Michael, 1888-1957."
+     ]
+    },
+    {
+     "titolo": "Bulwer :",
+     "voci": [
+      "Sadleir, Michael, 1888-1957."
+     ]
+    },
+    {
+     "titolo": "Bulwer: A Panorama. Edward &amp; Rosina, 1803-1836. [With portraits.]",
+     "voci": [
+      "Sadleir, Michael, 1888-1957.",
+      "Lytton, Edward Bulwer Lytton, Baron, 1803-1873.",
+      "BULWER, afterwards BULWER LYTTON, Rosina Doyle, Baroness Lytton."
+     ]
+    },
+    {
+     "titolo": "Bulwer and his Wife :",
+     "voci": [
+      "Sadleir, Michael, 1888-1957."
+     ]
+    },
+    {
+     "titolo": "Bulwer and his Wife: a Panorama, etc.",
+     "voci": [
+      "Sadleir, Michael, 1888-1957.",
+      "Lytton, Edward Bulwer Lytton, Baron, 1803-1873."
+     ]
+    },
+    {
+     "titolo": "[A collection of reports on the economic situation in Germany during the European War 1914-18.] (By ",
+     "voci": [
+      "Great Britain. Foreign Office.",
+      "MUELLER, William Grenfell, Sir.",
+      "Sadleir, Michael, 1888-1957."
+     ]
+    },
+    {
+     "titolo": "Concerning the spiritual in art /",
+     "voci": [
+      "Kandinsky, Wassily, 1866-1944,",
+      "Sadleir, Michael, 1888-1957,"
+     ]
+    },
+    {
+     "titolo": "Concerning the spiritual in art /",
+     "voci": [
+      "Kandinsky, Wassily, 1866-1944.",
+      "Sadleir, Michael, 1888-1957."
+     ]
+    },
+    {
+     "titolo": "Concerning the spiritual in art /",
+     "voci": [
+      "Kandinsky, Wassily, 1866-1944.",
+      "Sadleir, Michael, 1888-1957."
+     ]
+    },
+    {
+     "titolo": "[Das Schiff des Todes.] The Ship of Death a novel of the war. (Authorised translation. [By Michael T",
+     "voci": [
+      "Stilgebauer, Edward, 1868-1936.",
+      "Sadleir, Michael, 1888-1957."
+     ]
+    },
+    {
+     "titolo": "Daumier: the man and the artist.",
+     "voci": [
+      "Sadleir, Michael, 1888-1957.",
+      "Daumier, Honoré, 1808-1879."
+     ]
+    },
+    {
+     "titolo": "Desolate Splendour.",
+     "voci": [
+      "Sadleir, Michael, 1888-1957."
+     ]
+    },
+    {
+     "titolo": "Desolate Splendour.",
+     "voci": [
+      "Sadleir, Michael, 1888-1957."
+     ]
+    },
+    {
+     "titolo": "Desolate Splendour. (New edition, rewritten.).",
+     "voci": [
+      "Sadleir, Michael, 1888-1957."
+     ]
+    },
+    {
+     "titolo": "Desolate Splendour. (Popular edition.).",
+     "voci": [
+      "Sadleir, Michael, 1888-1957."
+     ]
+    },
+    {
+     "titolo": "The Development during the last 50 Years of Bibliographical Study of Books of the XIXth Century.",
+     "voci": [
+      "Sadleir, Michael, 1888-1957."
+     ]
+    },
+    {
+     "titolo": "Domestic Manners of the Americans ... With an introduction by Michael Sadleir. [With a portrait.]",
+     "voci": [
+      "Trollope, Frances Milton, 1780-1863.",
+      "Sadleir, Michael, 1888-1957."
+     ]
+    },
+    {
+     "titolo": "Dublin University Magazine, its history, contents and bibliography ... A paper, etc.",
+     "voci": [
+      "Sadleir, Michael, 1888-1957.",
+      "Trinity College (Dublin, Ireland)"
+     ]
+    },
+    {
+     "titolo": "The Dunciad of to-day: a satire; and, The modern Æsop. (First published in “The Star Chamber”.) With",
+     "voci": [
+      "Disraeli, Benjamin, 1804-1881.",
+      "Sadleir, Michael, 1888-1957."
+     ]
+    },
+    {
+     "titolo": "The evolution of publishers' binding styles, 1770-1900 /",
+     "voci": [
+      "Sadleir, Michael, 1888-1957."
+     ]
+    },
+    {
+     "titolo": "The Evolution of Publishers' Binding Styles, 1770-1900, etc.",
+     "voci": [
+      "Sadleir, Michael, 1888-1957."
+     ]
+    },
+    {
+     "titolo": "The evolution of publishers' binding styles 1770-1900 /",
+     "voci": [
+      "Sadleir, Michael, 1888-1957."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 20,
+   "qid": "Q276615",
+   "nome": "Gabriela Preissová",
+   "nascita": "1862-03-23",
+   "morte": "1946-03-27",
+   "alias": [
+    "Preissová",
+    "Gabriela Preissova",
+    "Gabriela Sekerová",
+    "Matylda Dumontová"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 5,
+    "dal_2000": 5,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Preissova 1862-1946\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "Jenufa /",
+     "voci": [
+      "Wertenbaker, Timberlake.",
+      "Preissová, Gabriela Sekerová, 1862-1946.",
+      "Short, David, 1943-"
+     ]
+    },
+    {
+     "titolo": "Jenufa /",
+     "voci": [
+      "Preissová, Gabriela Sekerová, 1862-1946.",
+      "Wertenbaker, Timberlake.",
+      "Short, David, 1943-"
+     ]
+    },
+    {
+     "titolo": "Jenůfa :",
+     "voci": [
+      "Janáček, Leoš, 1854-1928.",
+      "Mackerras, Charles, 1925-2010.",
+      "Tyrrell, John, 1942-2018.",
+      "Brod, Max, 1884-1968",
+      "Kraus, Otakar, 1909-1980",
+      "Downes, Edward, 1911-2001",
+      "Preissová, Gabriela Sekerová, 1862-1946."
+     ]
+    },
+    {
+     "titolo": "Jenůfa, opera in three acts ...",
+     "voci": [
+      "Janáček, Leoš, 1854-1928,",
+      "Nánási, Henrik,",
+      "Guth, Claus, 1964-",
+      "Preissová, Gabriela Sekerová, 1862-1946.",
+      "Simeone, Nigel, 1956-",
+      "Gebauer, Yvonne,",
+      "Nice, David, 1962-",
+      "Marshall, Melanie, 1980-",
+      "Merwin, W. S. (William Stanley), 1927-2019.",
+      "Royal Opera House (London, England),"
+     ]
+    },
+    {
+     "titolo": "Sestup ke kořenům :",
+     "voci": [
+      "Rychlík, Břetislav, 1958-",
+      "Preissová, Gabriela Sekerová, 1862-1946."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 21,
+   "qid": "Q1650288",
+   "nome": "Percy MacKaye",
+   "nascita": "1875-03-16",
+   "morte": "1956-08-31",
+   "alias": [
+    "Percy Wallace Loring MacKaye"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 68,
+    "dal_2000": 1,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"MacKaye 1875-1956\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "American consecration hymn. /",
+     "voci": [
+      "MacMillen, Francis, 1885-1973.",
+      "MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Annals of an Era. Percy MacKaye and the Mackaye family, 1826-1932 ... (Percy MacKaye, his career. [W",
+     "voci": [
+      "GROVER, Edwin Osgood.",
+      "MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Anti-matrimony :",
+     "voci": [
+      "MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "An Arrant Knave, &amp; other plays ... Edited, with introduction, by his son Percy Mackaye. [With a ",
+     "voci": [
+      "MACKAYE, James Steele.",
+      "MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Book of music of The Evergreen Tree :",
+     "voci": [
+      "Farwell, Arthur, 1872-1952.",
+      "MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "The book of words of the pageant and masque of Saint Louis.",
+     "voci": [
+      "Stevens, Thomas Wood.",
+      "MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "The Book of Words of the Pageant and Masque of Saint Louis /",
+     "voci": [
+      "Stevens, Thomas Wood.",
+      "MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Caliban by the Yellow Sands.",
+     "voci": [
+      "MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Caliban by the yellow sands /",
+     "voci": [
+      "MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "The Canterbury Pilgrims. A comedy [in verse].",
+     "voci": [
+      "MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "The Canterbury pilgrims :",
+     "voci": [
+      "De Koven, Reginald, 1859-1920.",
+      "MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "The Canterbury Tales of Geoffrey Chaucer. A modern rendering into prose of the Prologue and ten Tale",
+     "voci": [
+      "Chaucer, Geoffrey, -1400.",
+      "CLARK, Walter Appleton.",
+      "MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "The Canterbury Tales of Geoffrey Chaucer. A modern rendering into prose of the Prologue and ten Tale",
+     "voci": [
+      "Chaucer, Geoffrey, -1400.",
+      "CLARK, Walter Appleton.",
+      "MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "The civic theatre in relation to the redemption of leisure :",
+     "voci": [
+      "MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Community drama :",
+     "voci": [
+      "MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Dogtown Common. [A poem.]",
+     "voci": [
+      "MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Epoch. The life of Steele Mackaye ... Illustrated, etc. [Written in collaboration with Marion Morse ",
+     "voci": [
+      "MacKaye, Percy, 1875-1956.",
+      "MACKAYE, James Steele.",
+      "MACKAYE, Marion Morse."
+     ]
+    },
+    {
+     "titolo": "The Evergreen Tree. [With plates.]",
+     "voci": [
+      "MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "The Far Familiar. Fifty new poems, etc.",
+     "voci": [
+      "MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "The Far Familiar :",
+     "voci": [
+      "MacKaye, Percy, 1875-1956.",
+      "Rackham, Arthur, 1867-1939."
+     ]
+    },
+    {
+     "titolo": "Fenris, the Wolf: a tragedy.",
+     "voci": [
+      "MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "A Garland to Sylvia: a dramatic reverie with a prologue.",
+     "voci": [
+      "MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "The Gobbler of God. A poem of the Southern Appalachians, etc.",
+     "voci": [
+      "MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "The Immigrants: a lyric drama, etc.",
+     "voci": [
+      "MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "In Another Land. Poems inter-translated by Percy Mackaye and Albert Steffen. (Im andern Land. Gedich",
+     "voci": [
+      "MacKaye, Percy, 1875-1956.",
+      "STEFFEN, Albert, Poet and Novelist."
+     ]
+    },
+    {
+     "titolo": "Johnny Crimson :",
+     "voci": [
+      "MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Kentucky Mountain Fantasies. Three short plays, etc.",
+     "voci": [
+      "MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Kinfolk of Robin Hood. A play in four acts, etc.",
+     "voci": [
+      "MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "The lads of Liège.",
+     "voci": [
+      "Wood, Carl Paige.",
+      "MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Letters to Harriet ... Edited, with introduction and conclusion, by Percy MacKaye. [With a portrait.",
+     "voci": [
+      "Moody, William Vaughn, 1869-1910.",
+      "MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Mater: an American study in comedy.",
+     "voci": [
+      "MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "The modern reader's Chaucer: the complete poetical works of Geoffrey Chaucer: now first put into mod",
+     "voci": [
+      "Chaucer, Geoffrey, -1400.",
+      "MacKaye, Percy, 1875-1956.",
+      "Tatlock, John S. P. (John Strong Perry), 1876-1948."
+     ]
+    },
+    {
+     "titolo": "The Modern Reader's Chaucer. The complete poetical works of Geoffrey Chaucer, now first put into mod",
+     "voci": [
+      "Chaucer, Geoffrey, -1400.",
+      "Goble, Warwick.",
+      "MacKaye, Percy, 1875-1956.",
+      "Tatlock, John S. P. (John Strong Perry), 1876-1948."
+     ]
+    },
+    {
+     "titolo": "[The Modern Reader's Chaucer. The complete poetical works of Geoffrey Chaucer, now first put into mo",
+     "voci": [
+      "Chaucer, Geoffrey, -1400.",
+      "MacKaye, Percy, 1875-1956.",
+      "Tatlock, John S. P. (John Strong Perry), 1876-1948."
+     ]
+    },
+    {
+     "titolo": "The mystery of Hamlet, King of Denmark :",
+     "voci": [
+      "MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "The mystery of Hamlet, King of Denmark;",
+     "voci": [
+      "MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "The mystery of Hamlet, King of Denmark, or. What we will :",
+     "voci": [
+      "MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "The New Citizenship: a civic ritual devised for places of public meeting in America.",
+     "voci": [
+      "MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Ode on the Centenary of Abraham Lincoln.",
+     "voci": [
+      "MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Percy Mackaye: a sketch of his life, with bibliography of his works. Reprinted from the twenty-fifth",
+     "voci": [
+      "MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "The Pilgrim and the Book. (A dramatic service of the Bible.).",
+     "voci": [
+      "MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "The Playhouse and the Play, and other addresses concerning the theatre and democracy in America.",
+     "voci": [
+      "MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Po' White Trash and other one act dramas ... Certain of the plays being written in collaboration wit",
+     "voci": [
+      "SUTHERLAND, Evelyn Greenleaf.",
+      "Fry, Emma Sheridan.",
+      "MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Poems.",
+     "voci": [
+      "MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Poems and Plays.",
+     "voci": [
+      "MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "The Present Hour: a book of poems.",
+     "voci": [
+      "MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Pride and prejudice :",
+     "voci": [
+      "MacKaye, Steele, Mrs., 1845-1924,",
+      "Austen, Jane, 1775-1817.",
+      "MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Rip Van Winkle: folk-opera in three acts, etc.",
+     "voci": [
+      "MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "[Rip Van Winkle: folk-opera in three acts, etc.]",
+     "voci": [
+      "MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Saint Louis. A civic masque.",
+     "voci": [
+      "MacKaye, Percy, 1875-1956."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 22,
+   "qid": "Q451312",
+   "nome": "Umberto Saba",
+   "nascita": "1883-03-09",
+   "morte": "1957-08-25",
+   "alias": [
+    "Giuseppe Carimandrei",
+    "Umberto da Montereale",
+    "Umberto Saba",
+    "Umberto Chopin Poli"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 14,
+    "dal_2000": 9,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Saba 1883-1957\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "100 poems /",
+     "voci": [
+      "Saba, Umberto, 1883-1957,",
+      "Worsnip, Patrick,"
+     ]
+    },
+    {
+     "titolo": "100 poems /",
+     "voci": [
+      "Saba, Umberto, 1883-1957,",
+      "Worsnip, Patrick,"
+     ]
+    },
+    {
+     "titolo": "The dark of the sun :",
+     "voci": [
+      "Saba, Umberto, 1883-1957.",
+      "Millis, Christopher."
+     ]
+    },
+    {
+     "titolo": "Ernesto /",
+     "voci": [
+      "Saba, Umberto, 1883-1957."
+     ]
+    },
+    {
+     "titolo": "Ernesto /",
+     "voci": [
+      "Saba, Umberto, 1883-1957,",
+      "Schmidt, Michael, 1947-"
+     ]
+    },
+    {
+     "titolo": "Ernesto /",
+     "voci": [
+      "Saba, Umberto, 1883-1957."
+     ]
+    },
+    {
+     "titolo": "Ernesto /",
+     "voci": [
+      "Saba, Umberto, 1883-1957,",
+      "Thompson, Mark, 1959-"
+     ]
+    },
+    {
+     "titolo": "History and chronicle of the Songbook /",
+     "voci": [
+      "Saba, Umberto, 1883-1957."
+     ]
+    },
+    {
+     "titolo": "Poetry and prose /",
+     "voci": [
+      "Saba, Umberto, 1883-1957.",
+      "Moleta, Vincent."
+     ]
+    },
+    {
+     "titolo": "Songbook :",
+     "voci": [
+      "Saba, Umberto, 1883-1957.",
+      "Hochfield, George.",
+      "Nathan, Leonard, 1924-2007."
+     ]
+    },
+    {
+     "titolo": "Songbook :",
+     "voci": [
+      "Saba, Umberto, 1883-1957.",
+      "Hochfield, George."
+     ]
+    },
+    {
+     "titolo": "The stories and recollections of Umberto Saba /",
+     "voci": [
+      "Saba, Umberto, 1883-1957."
+     ]
+    },
+    {
+     "titolo": "Stories and recollections /",
+     "voci": [
+      "Saba, Umberto, 1883-1957."
+     ]
+    },
+    {
+     "titolo": "Umberto Saba, thirty-one poems /",
+     "voci": [
+      "Saba, Umberto, 1883-1957.",
+      "Stefanile, Felix."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 23,
+   "qid": "Q5040265",
+   "nome": "Carl H. Claudy",
+   "nascita": "1879-01-13",
+   "morte": "1957-05-27",
+   "alias": [
+    "C. H. Claudy",
+    "Carl Claudy",
+    "Carl Harry Claudy"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 4,
+    "dal_2000": 2,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Claudy 1879-1957\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "The battle of base-ball /",
+     "voci": [
+      "Claudy, C. H. (Carl Harry), 1879-1957.",
+      "Mathewson, Christy, 1880-1925."
+     ]
+    },
+    {
+     "titolo": "My story /",
+     "voci": [
+      "Mills, Anson, 1834-1924.",
+      "Claudy, C. H. (Carl Harry), 1879-1957."
+     ]
+    },
+    {
+     "titolo": "My story /",
+     "voci": [
+      "Mills, Anson, 1834-1924.",
+      "Claudy, C. H. (Carl Harry), 1879-1957."
+     ]
+    },
+    {
+     "titolo": "My story,",
+     "voci": [
+      "Mills, Anson, 1834-1924.",
+      "Claudy, C. H. (Carl Harry), 1879-1957,"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 24,
+   "qid": "Q43249272",
+   "nome": "Paul Gsell",
+   "nascita": "1870-01-24",
+   "morte": "1947-04-19",
+   "alias": [
+    "Paul Valentin Gsell"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 2,
+    "dal_2000": 1,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Gsell 1870-1947\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "Art :",
+     "voci": [
+      "Rodin, Auguste, 1840-1917,",
+      "Gsell, Paul, 1870-1947,",
+      "De Caso, Jacques,",
+      "Sanders, Patricia B.,"
+     ]
+    },
+    {
+     "titolo": "Art :",
+     "voci": [
+      "Rodin, Auguste, 1840-1917.",
+      "Gsell, Paul, 1870-1947.",
+      "De Caso, Jacques.",
+      "Sanders, Patricia B."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 25,
+   "qid": "Q2362588",
+   "nome": "Muhammad Husayn Haykal",
+   "nascita": "1888-08-20",
+   "morte": "1956-12-08",
+   "alias": [
+    "Muḥammad Ḥusain Haikal",
+    "Muhammad Hussain Haikal",
+    "Mohammed Hussein Heikal",
+    "Muhammad Husajn Hajkal",
+    "Muḥammad Husayn Haykal",
+    "محمد حسين هيكل",
+    "Muhammad Hussein Haykal",
+    "Muhammad Hasanayn Haykal"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 5,
+    "dal_2000": 1,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Haykal 1888-1956\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "The life of Muḥammad /",
+     "voci": [
+      "Haykal, Muḥammad Ḥusayn, 1888-1956.",
+      "Al-Faruqi, Ismaʼil R., 1921-1986."
+     ]
+    },
+    {
+     "titolo": "The life of Muḥammad /",
+     "voci": [
+      "Haykal, Muḥammad Ḥusayn, 1888-1956."
+     ]
+    },
+    {
+     "titolo": "Mohammed Hussein Haikal's Zainab /",
+     "voci": [
+      "Haykal, Muḥammad Ḥusayn, 1888-1956."
+     ]
+    },
+    {
+     "titolo": "Mohammed Hussein Haikal's Zainab :",
+     "voci": [
+      "Haykal, Muḥammad Ḥusayn, 1888-1956.",
+      "Grinsted, John Mohammed."
+     ]
+    },
+    {
+     "titolo": "Zainab /",
+     "voci": [
+      "Haykal, Muḥammad Ḥusayn, 1888-1956,"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 26,
+   "qid": "Q135640",
+   "nome": "Valery Larbaud",
+   "nascita": "1881-08-29",
+   "morte": "1957-02-02",
+   "alias": [
+    "Valéry Larbaud",
+    "Larbaud",
+    "A.O. Barnabooth",
+    "A.-O. Barnabooth",
+    "L. Hagiosy",
+    "X. M. Tourmier de Zamble"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 13,
+    "dal_2000": 2,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Larbaud 1881-1957\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "A. O. Barnabooth, his Diary ... Translated by Gilbert Cannan.",
+     "voci": [
+      "Larbaud, Valéry, 1881-1957.",
+      "Cannan, Gilbert, 1884-1955."
+     ]
+    },
+    {
+     "titolo": "A. O. Barnabooth: his diary /",
+     "voci": [
+      "Larbaud, Valéry, 1881-1957."
+     ]
+    },
+    {
+     "titolo": "La chanson du vieux marin. Traduction et notice de Valery Larbaud. Illustrations originales de J.-G.",
+     "voci": [
+      "Coleridge, Samuel Taylor, 1772-1834.",
+      "Larbaud, Valéry, 1881-1957.",
+      "Daragnès, Jean Gabriel.",
+      "Galanis, Démétrius Emmanuel."
+     ]
+    },
+    {
+     "titolo": "Correspondance Valery Larbaud - Henri Buriot-Darsiles (1908-1944) /",
+     "voci": [
+      "Larbaud, Valéry, 1881-1957,",
+      "Moron, Paule,",
+      "Sarazin, Maurice,",
+      "Buriot-Darsiles, H. (Henri), 1875-"
+     ]
+    },
+    {
+     "titolo": "English interludes :",
+     "voci": [
+      "Mackworth, Cecily.",
+      "Larbaud, Valéry, 1881-1957.",
+      "Mallarmé, Stéphane, 1842-1898.",
+      "Valéry, Paul, 1871-1945.",
+      "Verlaine, Paul, 1844_1896."
+     ]
+    },
+    {
+     "titolo": "Fermina Márquez /",
+     "voci": [
+      "Larbaud, Valéry, 1881-1957."
+     ]
+    },
+    {
+     "titolo": "An homage to Jerome :",
+     "voci": [
+      "Larbaud, Valéry, 1881-1957."
+     ]
+    },
+    {
+     "titolo": "Journal /",
+     "voci": [
+      "Larbaud, Valéry, 1881-1957.",
+      "Moron, Paule.",
+      "Centre national du livre (France)"
+     ]
+    },
+    {
+     "titolo": "Les Sonnets. Traduction de Émile Le Brun, introduction de Valéry Larbaud, etc.",
+     "voci": [
+      "Shakespeare, William, 1564-1616.",
+      "Larbaud, Valéry, 1881-1957.",
+      "Le Brun, E. (Émile)"
+     ]
+    },
+    {
+     "titolo": "[Letters to Francis Jammes.]",
+     "voci": [
+      "Larbaud, Valéry, 1881-1957."
+     ]
+    },
+    {
+     "titolo": "Lettres à André Gide /",
+     "voci": [
+      "Larbaud, Valéry, 1881-1957.",
+      "Gide, André, 1869-1951.",
+      "Jean-Aubry, G."
+     ]
+    },
+    {
+     "titolo": "Poèmes. Traduction de Paul Claudel, précédée d'une étude de Valery Larbaud.",
+     "voci": [
+      "Patmore, Coventry, 1823-1896.",
+      "Claudel, Paul, 1868-1955.",
+      "Larbaud, Valéry, 1881-1957."
+     ]
+    },
+    {
+     "titolo": "Poèmes. Traduction de Paul Claudel, précédée d'une étude de Valery Larbaud.",
+     "voci": [
+      "Patmore, Coventry, 1823-1896.",
+      "CLAUDEL, Paul Louis Charles Marie.",
+      "Larbaud, Valéry, 1881-1957."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 27,
+   "qid": "Q6226774",
+   "nome": "John Colton",
+   "nascita": "1887-12-31",
+   "morte": "1946-12-26",
+   "alias": [],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 1,
+    "dal_2000": 0,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Colton 1887-1946\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "The classic library of horror omnibus /",
+     "voci": [
+      "Dreadstone, Carl.",
+      "Dreadstone, Carl",
+      "Balderston, John L. (John Lloyd), 1889-1954.",
+      "Dreadstone, Carl",
+      "Colton, John, 1887-1946."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 28,
+   "qid": "Q123075",
+   "nome": "Robert Walser",
+   "nascita": "1878-04-15",
+   "morte": "1956-12-25",
+   "alias": [
+    "Robert Otto Walser"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 36,
+    "dal_2000": 22,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Walser 1878-1956\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "Answer to an inquiry /",
+     "voci": [
+      "Walser, Robert, 1878-1956.",
+      "North, Paul, 1971-",
+      "Undine, Friese,"
+     ]
+    },
+    {
+     "titolo": "The assistant /",
+     "voci": [
+      "Walser, Robert, 1878-1956."
+     ]
+    },
+    {
+     "titolo": "The assistant /",
+     "voci": [
+      "Walser, Robert, 1878-1956,"
+     ]
+    },
+    {
+     "titolo": "Berlin stories /",
+     "voci": [
+      "Walser, Robert, 1878-1956,",
+      "Greven, Jochen,",
+      "Bernofsky, Susan,"
+     ]
+    },
+    {
+     "titolo": "A Bibliography of four contemporary German-Swiss authors: Friedrich Dürrenmatt, Max Frisch, Robert ",
+     "voci": [
+      "Wilbert-Collins, Elly.",
+      "Dürrenmatt, Friedrich.",
+      "Frisch, Max, 1911-1991.",
+      "Walser, Robert, 1878-1956.",
+      "ZOLLINGER, Albin."
+     ]
+    },
+    {
+     "titolo": "Comedies /",
+     "voci": [
+      "Walser, Robert, 1878-1956,"
+     ]
+    },
+    {
+     "titolo": "Comedies /",
+     "voci": [
+      "Walser, Robert, 1878-1956,"
+     ]
+    },
+    {
+     "titolo": "Comedies /",
+     "voci": [
+      "Walser, Robert, 1878-1956,",
+      "Pantano, Daniele,",
+      "Reidel, James,"
+     ]
+    },
+    {
+     "titolo": "Euan Macdonald :",
+     "voci": [
+      "Macdonald, Euan, 1965-",
+      "Walser, Robert, 1878-1956,",
+      "Lucas, Willem Henri,"
+     ]
+    },
+    {
+     "titolo": "Fairy tales :",
+     "voci": [
+      "Walser, Robert, 1878-1956,",
+      "Pantano, Daniele,",
+      "Reidel, James,"
+     ]
+    },
+    {
+     "titolo": "Girlfriends, ghosts, and other stories /",
+     "voci": [
+      "Walser, Robert, 1878-1956,",
+      "Whalen, Tom,",
+      "Köngeter, Nicole,",
+      "Wiesner, Annette,"
+     ]
+    },
+    {
+     "titolo": "Good morning – midnight : for voice and piano (2002) /",
+     "voci": [
+      "Woolrich, John.",
+      "Fournier, Alain, 1886-1914.",
+      "Nerval, Gérard de, 1808-1855.",
+      "Wölfli, Adolf, 1864-1930.",
+      "Walser, Robert, 1878-1956.",
+      "Dickinson, Emily, 1830-1886."
+     ]
+    },
+    {
+     "titolo": "Institute Benjamenta /",
+     "voci": [
+      "Walser, Robert, 1878-1956."
+     ]
+    },
+    {
+     "titolo": "Jakob von Gunten :",
+     "voci": [
+      "Walser, Robert, 1878-1956.",
+      "Middleton, Christopher, 1926-2015."
+     ]
+    },
+    {
+     "titolo": "Jakob von Gunten. A novel ... Translated and with an introduction by Christopher Middleton.",
+     "voci": [
+      "Walser, Robert, 1878-1956.",
+      "Middleton, Christopher, 1926-2015."
+     ]
+    },
+    {
+     "titolo": "Jakob von Gunten /",
+     "voci": [
+      "Walser, Robert, 1878-1956,",
+      "Middleton, Christopher, 1926-2015,",
+      "Coetzee, J. M., 1940-"
+     ]
+    },
+    {
+     "titolo": "Little Walserings : for SATB chorus and strings (1999) /",
+     "voci": [
+      "Woolrich, John.",
+      "Walser, Robert, 1878-1956."
+     ]
+    },
+    {
+     "titolo": "Masquerade and other stories /",
+     "voci": [
+      "Walser, Robert, 1878-1956."
+     ]
+    },
+    {
+     "titolo": "The microscripts /",
+     "voci": [
+      "Walser, Robert, 1878-1956."
+     ]
+    },
+    {
+     "titolo": "Microscripts /",
+     "voci": [
+      "Walser, Robert, 1878-1956.",
+      "Bernofsky, Susan.",
+      "Kalman, Maira."
+     ]
+    },
+    {
+     "titolo": "Ohne Achtsamkeit beachte ich alles :",
+     "voci": [
+      "Walser, Robert, 1878-1956.",
+      "Schuppli, Madeleine,",
+      "Schmutz, Thomas, 1968-",
+      "Sorg, Reto,",
+      "Aargauer Kunsthaus,"
+     ]
+    },
+    {
+     "titolo": "The poems /",
+     "voci": [
+      "Walser, Robert, 1878-1956,",
+      "Pantano, Daniele,"
+     ]
+    },
+    {
+     "titolo": "Prosa.",
+     "voci": [
+      "Walser, Robert, 1878-1956."
+     ]
+    },
+    {
+     "titolo": "Robert Walser rediscovered :",
+     "voci": [
+      "Walser, Robert, 1878-1956.",
+      "Harman, Mark.",
+      "Dartmouth College."
+     ]
+    },
+    {
+     "titolo": "Robert Walser rediscovered :",
+     "voci": [
+      "Walser, Robert, 1878-1956.",
+      "Harman, Mark.",
+      "Dartmouth College."
+     ]
+    },
+    {
+     "titolo": "Robert Walser :",
+     "voci": [
+      "Walser, Robert, 1878-1956.",
+      "Middleton, Christopher, 1926-2015.",
+      "Christine Burgin Gallery."
+     ]
+    },
+    {
+     "titolo": "A schoolboy's diary :",
+     "voci": [
+      "Walser, Robert, 1878-1956.",
+      "Walser, Karl, 1877-1943,",
+      "Searls, Damion,"
+     ]
+    },
+    {
+     "titolo": "Selected stories /",
+     "voci": [
+      "Walser, Robert, 1878-1956."
+     ]
+    },
+    {
+     "titolo": "Selected stories /",
+     "voci": [
+      "Walser, Robert, 1878-1956."
+     ]
+    },
+    {
+     "titolo": "Speaking to the rose :",
+     "voci": [
+      "Walser, Robert, 1878-1956."
+     ]
+    },
+    {
+     "titolo": "Twisting that lock : three songs for soprano, alto and piano (1997) /",
+     "voci": [
+      "Woolrich, John.",
+      "Walser, Robert, 1878-1956.",
+      "Sterne, Laurence, 1713-1768."
+     ]
+    },
+    {
+     "titolo": "The Walk, and other stories ... Translated by Christopher Middleton.",
+     "voci": [
+      "Walser, Robert, 1878-1956.",
+      "Middleton, Christopher, 1926-2015."
+     ]
+    },
+    {
+     "titolo": "The walk and other stories /",
+     "voci": [
+      "Walser, Robert, 1878-1956."
+     ]
+    },
+    {
+     "titolo": "The walk /",
+     "voci": [
+      "Walser, Robert, 1878-1956,",
+      "Middleton, Christopher, 1926-2015,"
+     ]
+    },
+    {
+     "titolo": "The walk /",
+     "voci": [
+      "Walser, Robert, 1878-1956.",
+      "Middleton, Christopher, 1926-2015."
+     ]
+    },
+    {
+     "titolo": "The walk /",
+     "voci": [
+      "Walser, Robert, 1878-1956."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 29,
+   "qid": "Q14946693",
+   "nome": "Minnie Louise Haskins",
+   "nascita": "1875-05-12",
+   "morte": "1957-01-01",
+   "alias": [],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 1,
+    "dal_2000": 1,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Haskins 1875-1957\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "December :",
+     "voci": [
+      "Hough, Stephen, 1961-",
+      "Williams, Rowan, 1950-",
+      "Wesley, Charles, 1707-1788.",
+      "Mohr, Joseph, 1792-1848.",
+      "Haskins, M. Louise (Minnie Louise), 1875-1957."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 30,
+   "qid": "Q931105",
+   "nome": "Christopher Morley",
+   "nascita": "1890-05-05",
+   "morte": "1957-03-28",
+   "alias": [
+    "Christopher Darlington Morley"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 134,
+    "dal_2000": 6,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Morley 1890-1957\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "The Adventure of the Blue Carbuncle ... [Extracted from “The Adventure of Sherlock Holmes.”] With an",
+     "voci": [
+      "Doyle, Arthur Conan, 1859-1930.",
+      "Morley, Christopher, 1890-1957.",
+      "SMITH, Edgar Wadsworth."
+     ]
+    },
+    {
+     "titolo": "The adventure of the notorious forger /",
+     "voci": [
+      "Randall, David A. (David Anton), 1905-1975.",
+      "Morley, Christopher, 1890-1957."
+     ]
+    },
+    {
+     "titolo": "The Arrow. [A tale.]",
+     "voci": [
+      "Morley, Christopher, 1890-1957."
+     ]
+    },
+    {
+     "titolo": "The Arrow, and two other stories.",
+     "voci": [
+      "Morley, Christopher, 1890-1957."
+     ]
+    },
+    {
+     "titolo": "The ballad of New York, New York :",
+     "voci": [
+      "Morley, Christopher, 1890-1957."
+     ]
+    },
+    {
+     "titolo": "The Best of Don Marquis. With an introduction by Christopher Marley, and with illustrations by Georg",
+     "voci": [
+      "MARQUIS, Donald Robert Perry.",
+      "Morley, Christopher, 1890-1957."
+     ]
+    },
+    {
+     "titolo": "A Bibliography of Christopher Morley. [With a portrait.]",
+     "voci": [
+      "Lyle, Guy Redvers, 1907-1994.",
+      "BROWN, Henry Tatnall.",
+      "Morley, Christopher, 1890-1957."
+     ]
+    },
+    {
+     "titolo": "A Bibliography of Christopher Morley. [With plates.]",
+     "voci": [
+      "LEE, Alfred P.",
+      "Morley, Christopher, 1890-1957."
+     ]
+    },
+    {
+     "titolo": "A Book of Great Autobiography /",
+     "voci": [
+      "Morley, Christopher, 1890-1957."
+     ]
+    },
+    {
+     "titolo": "Born in a Beer Garden; or, She troupes to conquer /",
+     "voci": [
+      "Morley, Christopher, 1890-1957.",
+      "Throckmorton, Cleon, 1897-1965.",
+      "Nash, Ogden, 1902-1971.",
+      "Calkins, Earnest Elmo, 1868-1964."
+     ]
+    },
+    {
+     "titolo": "The Bowling Green. An anthology of verse. Selected by C. Morley.",
+     "voci": [
+      "Morley, Christopher, 1890-1957."
+     ]
+    },
+    {
+     "titolo": "Bright cages :",
+     "voci": [
+      "Morley, Christopher, 1890-1957."
+     ]
+    },
+    {
+     "titolo": "Bright Cages. Selected poems, and translations from the Chinese [or rather, original poems] ... Edit",
+     "voci": [
+      "Morley, Christopher, 1890-1957.",
+      "BRACKER, Jon."
+     ]
+    },
+    {
+     "titolo": "Chimneysmoke. (Poems) ... Illustrated by Thomas Fogarty.",
+     "voci": [
+      "Morley, Christopher, 1890-1957.",
+      "FOGARTY, Thomas."
+     ]
+    },
+    {
+     "titolo": "Christopher Morley. Multi ex uno.",
+     "voci": [
+      "Hughes, Babette, 1905-1982.",
+      "Morley, Christopher, 1890-1957."
+     ]
+    },
+    {
+     "titolo": "Christopher Morley's Briefcase.",
+     "voci": [
+      "Morley, Christopher, 1890-1957."
+     ]
+    },
+    {
+     "titolo": "Christopher Morley's New York /",
+     "voci": [
+      "Morley, Christopher, 1890-1957."
+     ]
+    },
+    {
+     "titolo": "Christopher Morley's Philadelphia /",
+     "voci": [
+      "Morley, Christopher, 1890-1957.",
+      "Kalfus, Ken."
+     ]
+    },
+    {
+     "titolo": "Christopher Morley :",
+     "voci": [
+      "Morley, Christopher, 1890-1957,",
+      "Morley, Christopher, 1890-1957.",
+      "Morley, Christopher, 1890-1957."
+     ]
+    },
+    {
+     "titolo": "The Delaware Bibliophiles tenth anniversary dinner at the Rodney Square Club, March 20, 1987.",
+     "voci": [
+      "Heaney, Howell J.",
+      "Bird &amp; Bull Press.",
+      "Morley, Christopher, 1890-1957.",
+      "Delaware Bibliophiles."
+     ]
+    },
+    {
+     "titolo": "The eighth sin.",
+     "voci": [
+      "Morley, Christopher, 1890-1957."
+     ]
+    },
+    {
+     "titolo": "The eighth sin. Thirty-four poems with an essay ... about the first edition of this book, and a pref",
+     "voci": [
+      "Morley, Christopher, 1890-1957.",
+      "Cochrane, Louise, 1918-2012."
+     ]
+    },
+    {
+     "titolo": "The Eighth Sin. [Verses.]",
+     "voci": [
+      "Morley, Christopher, 1890-1957."
+     ]
+    },
+    {
+     "titolo": "The essayes or Counsels civill &amp; morall of Francis Bacon. [With an introduction signed by Christ",
+     "voci": [
+      "Bacon, Francis, 1561-1626.",
+      "Morley, Christopher, 1890-1957.",
+      "Rosenbach, A. S. W. (Abraham Simon Wolf), 1876-1952."
+     ]
+    },
+    {
+     "titolo": "Ex Libris ... A small anthology, etc.",
+     "voci": [
+      "Morley, Christopher, 1890-1957."
+     ]
+    },
+    {
+     "titolo": "An exhibition of C.D.M. manuscripts and first editions.",
+     "voci": [
+      "University of Texas. Humanities Research Center.",
+      "Morley, Christopher, 1890-1957."
+     ]
+    },
+    {
+     "titolo": "An exhibition of COM - manuscripts and first editions ..",
+     "voci": [
+      "University of Texas at Austin. Humanities Research Center.",
+      "Morley, Christopher, 1890-1957."
+     ]
+    },
+    {
+     "titolo": "Familiar quotations",
+     "voci": [
+      "BARTLETT, John, of Cambridge, Mass.",
+      "Everett, Louella D.",
+      "Morley, Christopher, 1890-1957."
+     ]
+    },
+    {
+     "titolo": "Familiar quotations :",
+     "voci": [
+      "Bartlett, John, 1820-1905,",
+      "Morley, Christopher, 1890-1957.",
+      "Everett, Louella D."
+     ]
+    },
+    {
+     "titolo": "Familiar quotations :",
+     "voci": [
+      "Bartlett, John.",
+      "Morley, Christopher, 1890-1957.",
+      "Everett, Louella D."
+     ]
+    },
+    {
+     "titolo": "Familiar quotations ... /",
+     "voci": [
+      "Bartlett, John.",
+      "Morley, Christopher, 1890-1957.",
+      "Everett, Louella D."
+     ]
+    },
+    {
+     "titolo": "Familiar Quotations ... /",
+     "voci": [
+      "Bartlett, John.",
+      "Morley, Christopher, 1890-1957.",
+      "Everett, Louella D."
+     ]
+    },
+    {
+     "titolo": "Fifth Avenue Bus. An excursion among the books of C. Morley, with a note by the conductor. [Extracts",
+     "voci": [
+      "Morley, Christopher, 1890-1957."
+     ]
+    },
+    {
+     "titolo": "Friends of the Library. A soliloquy. Uttered by Christopher Morley at a meeting of the Friends of th",
+     "voci": [
+      "Morley, Christopher, 1890-1957."
+     ]
+    },
+    {
+     "titolo": "Gentlemen's Relish. [Poems.]",
+     "voci": [
+      "Morley, Christopher, 1890-1957."
+     ]
+    },
+    {
+     "titolo": "The Goldfish under the Ice.",
+     "voci": [
+      "Morley, Christopher, 1890-1957."
+     ]
+    },
+    {
+     "titolo": "The Goldfish under the Ice ... Illustrated by Kurt Wiese.",
+     "voci": [
+      "Morley, Christopher, 1890-1957.",
+      "Wiese, Kurt, 1887-1974."
+     ]
+    },
+    {
+     "titolo": "Hasta la Vista; or, a Postcard from Peru.",
+     "voci": [
+      "Morley, Christopher, 1890-1957."
+     ]
+    },
+    {
+     "titolo": "The Haunted Bookshop.",
+     "voci": [
+      "Morley, Christopher, 1890-1957."
+     ]
+    },
+    {
+     "titolo": "The haunted bookshop :",
+     "voci": [
+      "Brittney, Lynn.",
+      "Morley, Christopher, 1890-1957."
+     ]
+    },
+    {
+     "titolo": "The haunted bookshop /",
+     "voci": [
+      "Morley, Christopher, 1890-1957,"
+     ]
+    },
+    {
+     "titolo": "The haunted bookshop /",
+     "voci": [
+      "Morley, Christopher, 1890-1957,"
+     ]
+    },
+    {
+     "titolo": "The Haunted Bookshop. (New edition.).",
+     "voci": [
+      "Morley, Christopher, 1890-1957."
+     ]
+    },
+    {
+     "titolo": "Hide and seek.",
+     "voci": [
+      "Morley, Christopher, 1890-1957."
+     ]
+    },
+    {
+     "titolo": "History of an Autumn. [Reminiscences of the international crisis of September 1938.]",
+     "voci": [
+      "Morley, Christopher, 1890-1957."
+     ]
+    },
+    {
+     "titolo": "Human Being. A story.",
+     "voci": [
+      "Morley, Christopher, 1890-1957."
+     ]
+    },
+    {
+     "titolo": "Human Being. A story.",
+     "voci": [
+      "Morley, Christopher, 1890-1957."
+     ]
+    },
+    {
+     "titolo": "I Know a Secret.",
+     "voci": [
+      "Morley, Christopher, 1890-1957."
+     ]
+    },
+    {
+     "titolo": "I Know a Secret, etc.",
+     "voci": [
+      "Morley, Christopher, 1890-1957."
+     ]
+    },
+    {
+     "titolo": "I Know a Secret, etc. (New edition.).",
+     "voci": [
+      "Morley, Christopher, 1890-1957."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 31,
+   "qid": "Q2930497",
+   "nome": "C. M. van den Heever",
+   "nascita": "1902-01-01",
+   "morte": "1957-01-01",
+   "alias": [
+    "Christiaan Maurits van den Heever"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 1,
+    "dal_2000": 1,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Heever 1902-1957\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "Sinfonia africana : per soprano, coro e orchestra /",
+     "voci": [
+      "Hofmeyr, Hendrik,",
+      "Marais, Eugène N. (Eugène Nielen), 1871-1936,",
+      "Opperman, D. J.,",
+      "Van den Heever, C. M. (Christiaan Maurits), 1902-1957,"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 32,
+   "qid": "Q447268",
+   "nome": "Dorothy Richardson",
+   "nascita": "1873-05-17",
+   "morte": "1957-06-17",
+   "alias": [
+    "Dorothy (Miller) Richardson"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 44,
+    "dal_2000": 3,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Richardson 1873-1957\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "André Gide. His life and his work ... Translated ... by Dorothy M. Richardson. [With a bibliography",
+     "voci": [
+      "PIERRE-QUINT, Léon.",
+      "Gide, André, 1869-1951.",
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957."
+     ]
+    },
+    {
+     "titolo": "Backwater.",
+     "voci": [
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957."
+     ]
+    },
+    {
+     "titolo": "Backwater. (Third impression.).",
+     "voci": [
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957."
+     ]
+    },
+    {
+     "titolo": "Beginnings. A brief sketch. [With a bibliography.]",
+     "voci": [
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957."
+     ]
+    },
+    {
+     "titolo": "Clear Horizon.",
+     "voci": [
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957."
+     ]
+    },
+    {
+     "titolo": "Dawn's Left Hand.",
+     "voci": [
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957."
+     ]
+    },
+    {
+     "titolo": "Deadlock.",
+     "voci": [
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957."
+     ]
+    },
+    {
+     "titolo": "[Die Macht.] Mammon ... Translated by Dorothy M. Richardson.",
+     "voci": [
+      "Neumann, Robert, 1897-1975.",
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957."
+     ]
+    },
+    {
+     "titolo": "Dorothy M. Richardson.",
+     "voci": [
+      "Powys, John Cowper, 1872-1963.",
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957."
+     ]
+    },
+    {
+     "titolo": "Dorothy Richardson, etc. [A study of “Pilgrimage.”]",
+     "voci": [
+      "BLAKE, Caesar Robert.",
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957."
+     ]
+    },
+    {
+     "titolo": "Dorothy Richardson, the genius they forgot. A critical biography.",
+     "voci": [
+      "Rosenberg, John.",
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957."
+     ]
+    },
+    {
+     "titolo": "The Du Barry ... Translated by D. M. Richardson. [With plates, including portraits and facsimiles.]",
+     "voci": [
+      "SCHUMACHER, Carl von.",
+      "Du Barry, Jeanne Bécu, comtesse, 1743-1793.",
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957."
+     ]
+    },
+    {
+     "titolo": "Gleanings from the Works of George Fox. By Dorothy M. Richardson.",
+     "voci": [
+      "Fox, George, 1624-1691.",
+      "JONES, Rufus Matthew.",
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957."
+     ]
+    },
+    {
+     "titolo": "Honeycomb.",
+     "voci": [
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957."
+     ]
+    },
+    {
+     "titolo": "Interim.",
+     "voci": [
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957."
+     ]
+    },
+    {
+     "titolo": "Jews in Germany. Translated ... by Dorothy Richardson. With a preface by James Stephens.",
+     "voci": [
+      "Kastein, Josef, 1890-1946.",
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957.",
+      "Stephens, James, 1882-1950."
+     ]
+    },
+    {
+     "titolo": "John Austen and the Inseparables ... With a foreword and decorations by John Austen. [With “A Hand-L",
+     "voci": [
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957.",
+      "Austen, John."
+     ]
+    },
+    {
+     "titolo": "Journey to paradise :",
+     "voci": [
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957.",
+      "Tate, Trudi."
+     ]
+    },
+    {
+     "titolo": "Pilgrimage.",
+     "voci": [
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957."
+     ]
+    },
+    {
+     "titolo": "Pilgrimage 1 &amp; 2 :",
+     "voci": [
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957,",
+      "McCracken, Scott,",
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957.",
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957."
+     ]
+    },
+    {
+     "titolo": "Pilgrimage 1 &amp; 2 :",
+     "voci": [
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957,",
+      "McCracken, Scott,",
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957.",
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957."
+     ]
+    },
+    {
+     "titolo": "Pilgrimage.",
+     "voci": [
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957."
+     ]
+    },
+    {
+     "titolo": "Pilgrimage.",
+     "voci": [
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957."
+     ]
+    },
+    {
+     "titolo": "Pilgrimage.",
+     "voci": [
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957."
+     ]
+    },
+    {
+     "titolo": "Pilgrimage.",
+     "voci": [
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957."
+     ]
+    },
+    {
+     "titolo": "Pilgrimage /",
+     "voci": [
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957.",
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957.",
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957.",
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957."
+     ]
+    },
+    {
+     "titolo": "Pilgrimage /",
+     "voci": [
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957.",
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957.",
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957."
+     ]
+    },
+    {
+     "titolo": "Pilgrimage /",
+     "voci": [
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957.",
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957.",
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957.",
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957."
+     ]
+    },
+    {
+     "titolo": "Pilgrimage /",
+     "voci": [
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957.",
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957.",
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957.",
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957."
+     ]
+    },
+    {
+     "titolo": "Pilgrimage /",
+     "voci": [
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957."
+     ]
+    },
+    {
+     "titolo": "Pilgrimage /",
+     "voci": [
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957.",
+      "Jaques, Faith."
+     ]
+    },
+    {
+     "titolo": "Pilgrimage.",
+     "voci": [
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957."
+     ]
+    },
+    {
+     "titolo": "Pilgrimage.",
+     "voci": [
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957."
+     ]
+    },
+    {
+     "titolo": "Pilgrimage.",
+     "voci": [
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957."
+     ]
+    },
+    {
+     "titolo": "Pilgrimage.",
+     "voci": [
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957."
+     ]
+    },
+    {
+     "titolo": "Pilgrimage. The life work of Dorothy Richardson. Announcement of the new edition, etc. [Consisting m",
+     "voci": [
+      "Church, Richard, 1893-1972.",
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957."
+     ]
+    },
+    {
+     "titolo": "Pilgrimages: the journal of Dorothy Richardson studies.",
+     "voci": [
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957.",
+      "Dorothy Richardson Society,"
+     ]
+    },
+    {
+     "titolo": "Pointed Roofs. Pilgrimage. [A novel.]",
+     "voci": [
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957."
+     ]
+    },
+    {
+     "titolo": "The Quakers, past and present.",
+     "voci": [
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957."
+     ]
+    },
+    {
+     "titolo": "Revolving Lights.",
+     "voci": [
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957."
+     ]
+    },
+    {
+     "titolo": "Silent Hours ... Translated by Dorothy M. Richardson.",
+     "voci": [
+      "TRAZ, Robert de.",
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957."
+     ]
+    },
+    {
+     "titolo": "The Trap.",
+     "voci": [
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957."
+     ]
+    },
+    {
+     "titolo": "The Tunnel.",
+     "voci": [
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957."
+     ]
+    },
+    {
+     "titolo": "Windows on modernism :",
+     "voci": [
+      "Richardson, Dorothy M. (Dorothy Miller), 1873-1957.",
+      "Fromm, Gloria G."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 33,
+   "qid": "Q312637",
+   "nome": "Curzio Malaparte",
+   "nascita": "1898-06-09",
+   "morte": "1957-07-19",
+   "alias": [
+    "Candido",
+    "Suckert",
+    "Malaparte",
+    "Kurt Erich Suckert",
+    "Curzio Suckert",
+    "Ḳurts'yo Malaparṭeh",
+    "Kurt-Erich Suckert",
+    "Kurt Erik Suckert",
+    "Kurt Suckert",
+    "Curzio Malaparte",
+    "for Kurt Erich Suckert"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 8,
+    "dal_2000": 7,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Malaparte 1898-1957\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "Coup d'état :",
+     "voci": [
+      "Malaparte, Curzio, 1898-1957,"
+     ]
+    },
+    {
+     "titolo": "Diary of a foreigner in Paris /",
+     "voci": [
+      "Malaparte, Curzio, 1898-1957,",
+      "Twilley, Stephen,"
+     ]
+    },
+    {
+     "titolo": "Kaputt /",
+     "voci": [
+      "Malaparte, Curzio, 1898-1957."
+     ]
+    },
+    {
+     "titolo": "The Kremlin ball :",
+     "voci": [
+      "Malaparte, Curzio, 1898-1957,",
+      "McPhee, Jenny,"
+     ]
+    },
+    {
+     "titolo": "The skin /",
+     "voci": [
+      "Malaparte, Curzio, 1898-1957,",
+      "Moore, David (Translator)"
+     ]
+    },
+    {
+     "titolo": "Those cursed Tuscans.",
+     "voci": [
+      "Malaparte, Curzio, 1898-1957."
+     ]
+    },
+    {
+     "titolo": "The Volga rises in Europe /",
+     "voci": [
+      "Malaparte, Curzio, 1898-1957."
+     ]
+    },
+    {
+     "titolo": "Woman like me /",
+     "voci": [
+      "Malaparte, Curzio, 1898-1957."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 34,
+   "qid": "Q715814",
+   "nome": "Winston Churchill",
+   "nascita": "1871-11-10",
+   "morte": "1947-03-12",
+   "alias": [],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 39,
+    "dal_2000": 2,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Churchill 1871-1947\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "The Celebrity. An episode.",
+     "voci": [
+      "Churchill, Winston, 1871-1947."
+     ]
+    },
+    {
+     "titolo": "The celebrity :",
+     "voci": [
+      "Churchill, Winston, 1871-1947."
+     ]
+    },
+    {
+     "titolo": "Coniston ... With illustrations by Florence Scovel Shinn.",
+     "voci": [
+      "Churchill, Winston, 1871-1947.",
+      "SHINN, Florence Scovel."
+     ]
+    },
+    {
+     "titolo": "Coniston /",
+     "voci": [
+      "Churchill, Winston, 1871-1947."
+     ]
+    },
+    {
+     "titolo": "The Crisis. A play in four acts. A dramatization of the novel of the same name, etc.",
+     "voci": [
+      "Churchill, Winston, 1871-1947."
+     ]
+    },
+    {
+     "titolo": "The crisis /",
+     "voci": [
+      "Churchill, Winston, 1871-1947.",
+      "Christy, Howard Chandler."
+     ]
+    },
+    {
+     "titolo": "The crisis ... /",
+     "voci": [
+      "Churchill, Winston, 1871-1947."
+     ]
+    },
+    {
+     "titolo": "The Crisis ... With illustrations by Howard Chandler Christy.",
+     "voci": [
+      "Churchill, Winston, 1871-1947."
+     ]
+    },
+    {
+     "titolo": "[The Crisis ... With illustrations by Howard Chandler Christy.]",
+     "voci": [
+      "Churchill, Winston, 1871-1947.",
+      "BARNES, Walter."
+     ]
+    },
+    {
+     "titolo": "The crossing /",
+     "voci": [
+      "Churchill, Winston, 1871-1947.",
+      "Adamson, Sydney.",
+      "Bayliss, Lilian"
+     ]
+    },
+    {
+     "titolo": "The Crossing /",
+     "voci": [
+      "Churchill, Winston, 1871-1947."
+     ]
+    },
+    {
+     "titolo": "The Crossing ... With illustrations by Sydney Adamson and Lilian Bayliss.",
+     "voci": [
+      "Churchill, Winston, 1871-1947."
+     ]
+    },
+    {
+     "titolo": "[The Crossing ... With illustrations by Sydney Adamson and Lilian Bayliss.]",
+     "voci": [
+      "Churchill, Winston, 1871-1947."
+     ]
+    },
+    {
+     "titolo": "Dr. Jonathan. A play in three acts.",
+     "voci": [
+      "Churchill, Winston, 1871-1947."
+     ]
+    },
+    {
+     "titolo": "The Dwelling-Place of Light.",
+     "voci": [
+      "Churchill, Winston, 1871-1947."
+     ]
+    },
+    {
+     "titolo": "A Far Country ... Illustrated by Herman Pfeifer.",
+     "voci": [
+      "Churchill, Winston, 1871-1947."
+     ]
+    },
+    {
+     "titolo": "A far country /",
+     "voci": [
+      "Churchill, Winston, 1871-1947."
+     ]
+    },
+    {
+     "titolo": "Golden Sayings from Winston Churchill.",
+     "voci": [
+      "Churchill, Winston, 1871-1947."
+     ]
+    },
+    {
+     "titolo": "Greatest war speeches 1939-1945 /",
+     "voci": [
+      "Churchill, Winston, 1871-1947,",
+      "Soames, Nicholas, 1948-",
+      "Folio Society (London, England)"
+     ]
+    },
+    {
+     "titolo": "The Inside of the Cup ... With illustrations by Howard Giles.",
+     "voci": [
+      "Churchill, Winston, 1871-1947."
+     ]
+    },
+    {
+     "titolo": "A Modern Chronicle ... Illustrated by J. H. Gardner Soper.",
+     "voci": [
+      "Churchill, Winston, 1871-1947."
+     ]
+    },
+    {
+     "titolo": "A modern chronicle /",
+     "voci": [
+      "Churchill, Winston, 1871-1947."
+     ]
+    },
+    {
+     "titolo": "Mr Crew's career /",
+     "voci": [
+      "Churchill, Winston, 1871-1947."
+     ]
+    },
+    {
+     "titolo": "Mr. Crewe's career /",
+     "voci": [
+      "Churchill, Winston, 1871-1947."
+     ]
+    },
+    {
+     "titolo": "Mr. Crewe's career /",
+     "voci": [
+      "Churchill, Winston, 1871-1947.",
+      "Keller, Arthur Ignatius, 1866-1924."
+     ]
+    },
+    {
+     "titolo": "Mr.Keegan's elopement /",
+     "voci": [
+      "Churchill, Winston, 1871-1947."
+     ]
+    },
+    {
+     "titolo": "Mr. Keegan's Elopement. [With a portrait.]",
+     "voci": [
+      "Churchill, Winston, 1871-1947."
+     ]
+    },
+    {
+     "titolo": "Richard Carvel /",
+     "voci": [
+      "Churchill, Winston, 1871-1947."
+     ]
+    },
+    {
+     "titolo": "Richard Carvel /",
+     "voci": [
+      "Churchill, Winston, 1871-1947."
+     ]
+    },
+    {
+     "titolo": "Richard Carvel /",
+     "voci": [
+      "Churchill, Winston, 1871-1947."
+     ]
+    },
+    {
+     "titolo": "Richard Carvel /",
+     "voci": [
+      "Churchill, Winston, 1871-1947."
+     ]
+    },
+    {
+     "titolo": "Richard Carvel ... With illustrations by Carlton T. Chapman and Malcolm Fraser.",
+     "voci": [
+      "Churchill, Winston, 1871-1947."
+     ]
+    },
+    {
+     "titolo": "[Richard Carvel ... With illustrations by Carlton T. Chapman and Malcolm Fraser.]",
+     "voci": [
+      "Churchill, Winston, 1871-1947.",
+      "PAUL, Harry Gilbert."
+     ]
+    },
+    {
+     "titolo": "[Richard Carvel ... With illustrations by Carlton T. Chapman and Malcolm Fraser.]",
+     "voci": [
+      "Churchill, Winston, 1871-1947."
+     ]
+    },
+    {
+     "titolo": "The Romantic Compromise in the Novels of Winston Churchill.",
+     "voci": [
+      "Walcutt, Charles Child.",
+      "Churchill, Winston, 1871-1947."
+     ]
+    },
+    {
+     "titolo": "Serve to lead :",
+     "voci": [
+      "Churchill, Winston, 1871-1947.",
+      "Fraser, Edward.",
+      "Fortescue, John, Sir.",
+      "Matthews, Robin."
+     ]
+    },
+    {
+     "titolo": "The Tile-Mart. A comedy in three acts.",
+     "voci": [
+      "Churchill, Winston, 1871-1947."
+     ]
+    },
+    {
+     "titolo": "The Title-Mart :",
+     "voci": [
+      "Churchill, Winston, 1871-1947."
+     ]
+    },
+    {
+     "titolo": "Winston Churchill.",
+     "voci": [
+      "Titus, Warren Irving.",
+      "Churchill, Winston, 1871-1947."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 35,
+   "qid": "Q2758776",
+   "nome": "Jhaverchand Meghani",
+   "nascita": "1896-08-28",
+   "morte": "1947-03-09",
+   "alias": [
+    "rastriya shayar",
+    "alina imran master"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 2,
+    "dal_2000": 0,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Meghani 1896-1947\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "Earthen lamps /",
+     "voci": [
+      "Meghāṇī, Jhaveracanda Kālīdāsa, 1896-1947.",
+      "Meghāṇī, Vinod."
+     ]
+    },
+    {
+     "titolo": "Lokasāhitya :",
+     "voci": [
+      "Meghāṇī, Jhaveracanda Kālīdāsa, 1896-1947."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 36,
+   "qid": "Q301391",
+   "nome": "George Bacovia",
+   "nascita": "1881-09-17",
+   "morte": "1957-05-22",
+   "alias": [
+    "for George Andone Vasiliu"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 1,
+    "dal_2000": 1,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Bacovia 1881-1957\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "The complete poetical works and selected prose of George Bacovia /",
+     "voci": [
+      "Bacovia, George, 1881-1957."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 37,
+   "qid": "Q5345299",
+   "nome": "Edward Sheldon",
+   "nascita": "1886-02-04",
+   "morte": "1946-04-01",
+   "alias": [
+    "Edward Brewster Sheldon"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 2,
+    "dal_2000": 2,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Sheldon 1886-1946\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "Grade 08 singing :",
+     "voci": [
+      "Trinity College London (approximately 1980- ),",
+      "Calzabigi, Ranieri de, 1714-1795.",
+      "Bussine, Romain.",
+      "Rückert, Friedrich, 1788-1866.",
+      "Rossetti, Dante Gabriel, 1828-1882.",
+      "Dickinson, Emily, 1830-1886.",
+      "Harnick, Sheldon,",
+      "Bock, Jerry.",
+      "Brown, Jason Robert.",
+      "Lopez, Robert, 1975-",
+      "Marx, Jeff,",
+      "Pasek, Benj.",
+      "Dowland, John, 1563?-1626.",
+      "Jarman-Pinto, Ella, 1989-",
+      "Vaughan Williams, Ralph, 1872-1958.",
+      "Witter-Johnson, Ayanna.",
+      "Schubert, Franz, 1797-1828.",
+      "Fauré, Gabriel, 1845-1924.",
+      "Gluck, Christoph Willibald, Ritter von, 1714-1787.",
+      "Falla, Manuel de, 1876-1946."
+     ]
+    },
+    {
+     "titolo": "Grade 08 singing :",
+     "voci": [
+      "Trinity College London (approximately 1980- ),",
+      "Calzabigi, Ranieri de, 1714-1795.",
+      "Bussine, Romain.",
+      "Rückert, Friedrich, 1788-1866.",
+      "Rossetti, Dante Gabriel, 1828-1882.",
+      "Dickinson, Emily, 1830-1886.",
+      "Harnick, Sheldon,",
+      "Bock, Jerry.",
+      "Brown, Jason Robert.",
+      "Lopez, Robert, 1975-",
+      "Marx, Jeff,",
+      "Pasek, Benj.",
+      "Dowland, John, 1563?-1626.",
+      "Jarman-Pinto, Ella, 1989-",
+      "Vaughan Williams, Ralph, 1872-1958.",
+      "Witter-Johnson, Ayanna.",
+      "Schubert, Franz, 1797-1828.",
+      "Fauré, Gabriel, 1845-1924.",
+      "Gluck, Christoph Willibald, Ritter von, 1714-1787.",
+      "Falla, Manuel de, 1876-1946."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 38,
+   "qid": "Q2987397",
+   "nome": "Roy Campbell",
+   "nascita": "1901-10-02",
+   "morte": "1957-04-23",
+   "alias": [
+    "Ignatius Royston Dunnachie Campbell"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 66,
+    "dal_2000": 7,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Campbell 1901-1957\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "Adamastor.",
+     "voci": [
+      "Campbell, Roy, 1901-1957."
+     ]
+    },
+    {
+     "titolo": "Adamastor :",
+     "voci": [
+      "Campbell, Roy, 1901-1957."
+     ]
+    },
+    {
+     "titolo": "Adamastor :",
+     "voci": [
+      "Campbell, Roy, 1901-1957."
+     ]
+    },
+    {
+     "titolo": "Adamastor with a preface and seven drawings.",
+     "voci": [
+      "Campbell, Roy, 1901-1957."
+     ]
+    },
+    {
+     "titolo": "Arabic Andalusian Casidas /",
+     "voci": [
+      "Campbell, Roy, 1901-1957,",
+      "Cope, Joan Penelope, 1926-"
+     ]
+    },
+    {
+     "titolo": "Broken record :",
+     "voci": [
+      "Campbell, Roy, 1901-1957."
+     ]
+    },
+    {
+     "titolo": "But have been found again :",
+     "voci": [
+      "Burgon, Geoffrey.",
+      "John of the Cross, Saint, 1542-1591.",
+      "Campbell, Roy, 1901-1957."
+     ]
+    },
+    {
+     "titolo": "Canciones del alma :",
+     "voci": [
+      "Burgon, Geoffrey.",
+      "John of the Cross, Saint, 1542-1591.",
+      "Campbell, Roy, 1901-1957."
+     ]
+    },
+    {
+     "titolo": "Collected poems of Roy Campbell.",
+     "voci": [
+      "Campbell, Roy, 1901-1957."
+     ]
+    },
+    {
+     "titolo": "The collected poems of Roy Campbell.",
+     "voci": [
+      "Campbell, Roy, 1901-1957."
+     ]
+    },
+    {
+     "titolo": "THe collected poems of Roy Campbell.",
+     "voci": [
+      "Campbell, Roy, 1901-1957."
+     ]
+    },
+    {
+     "titolo": "The collected poems of Roy Campbell.",
+     "voci": [
+      "Campbell, Roy, 1901-1957."
+     ]
+    },
+    {
+     "titolo": "The collected poems of Roy Campbell /",
+     "voci": [
+      "Campbell, Roy, 1901-1957."
+     ]
+    },
+    {
+     "titolo": "The Collected Poems of Roy Campbell Volume 1.",
+     "voci": [
+      "Campbell, Roy, 1901-1957."
+     ]
+    },
+    {
+     "titolo": "Collected poems /",
+     "voci": [
+      "Campbell, Roy, 1901-1957."
+     ]
+    },
+    {
+     "titolo": "The collected poems.",
+     "voci": [
+      "Campbell, Roy, 1901-1957."
+     ]
+    },
+    {
+     "titolo": "The collected poems.",
+     "voci": [
+      "Campbell, Roy, 1901-1957."
+     ]
+    },
+    {
+     "titolo": "The collected poems.",
+     "voci": [
+      "Campbell, Roy, 1901-1957."
+     ]
+    },
+    {
+     "titolo": "Collected works /",
+     "voci": [
+      "Campbell, Roy, 1901-1957.",
+      "Alexander, Peter, 1917-2006.",
+      "Chapman, Michael (Michael J. F.)",
+      "Leveson, Marcia."
+     ]
+    },
+    {
+     "titolo": "The flaming Terrapin /",
+     "voci": [
+      "Campbell, Roy, 1901-1957."
+     ]
+    },
+    {
+     "titolo": "Flowering reeds :",
+     "voci": [
+      "Campbell, Roy, 1901-1957."
+     ]
+    },
+    {
+     "titolo": "Flowering Rifle :",
+     "voci": [
+      "Campbell, Roy, 1901-1957."
+     ]
+    },
+    {
+     "titolo": "The Georgiad :",
+     "voci": [
+      "Campbell, Roy, 1901-1957."
+     ]
+    },
+    {
+     "titolo": "Il Paradiso /",
+     "voci": [
+      "Dante Alighieri, 1265-1321.",
+      "Ramsey, T. W.",
+      "Campbell, Roy, 1901-1957."
+     ]
+    },
+    {
+     "titolo": "Life is a dream and other Spanish classics /",
+     "voci": [
+      "Bentley, Eric, 1916-2020.",
+      "Campbell, Roy, 1901-1957."
+     ]
+    },
+    {
+     "titolo": "Light on a dark horse :",
+     "voci": [
+      "Campbell, Roy, 1901-1957."
+     ]
+    },
+    {
+     "titolo": "Light on a dark horse :",
+     "voci": [
+      "Campbell, Roy, 1901-1957."
+     ]
+    },
+    {
+     "titolo": "Light on a dark horse :",
+     "voci": [
+      "Campbell, Roy, 1901-1957."
+     ]
+    },
+    {
+     "titolo": "Light on a dark horse :",
+     "voci": [
+      "Campbell, Roy, 1901-1957."
+     ]
+    },
+    {
+     "titolo": "Lorca :",
+     "voci": [
+      "Campbell, Roy, 1901-1957."
+     ]
+    },
+    {
+     "titolo": "Lorca :",
+     "voci": [
+      "Campbell, Roy, 1901-1957."
+     ]
+    },
+    {
+     "titolo": "Lorca :",
+     "voci": [
+      "Campbell, Roy, 1901-1957."
+     ]
+    },
+    {
+     "titolo": "Lorca :",
+     "voci": [
+      "Campbell, Roy, 1901-1957."
+     ]
+    },
+    {
+     "titolo": "The mamba's precipice /",
+     "voci": [
+      "Campbell, Roy, 1901-1957."
+     ]
+    },
+    {
+     "titolo": "Mithraic emblems :",
+     "voci": [
+      "Campbell, Roy, 1901-1957."
+     ]
+    },
+    {
+     "titolo": "Nativity /",
+     "voci": [
+      "Campbell, Roy, 1901-1957."
+     ]
+    },
+    {
+     "titolo": "Now, as she long aspired : from Songs between the soul and the bridegroom (canciones entre el alma y",
+     "voci": [
+      "Burgon, Geoffrey.",
+      "John of the Cross, Saint, 1542-1591.",
+      "Campbell, Roy, 1901-1957."
+     ]
+    },
+    {
+     "titolo": "Of flowers and emeralds sheen /",
+     "voci": [
+      "Burgon, Geoffrey.",
+      "John of the Cross, Saint, 1542-1591.",
+      "Campbell, Roy, 1901-1957."
+     ]
+    },
+    {
+     "titolo": "Poems /",
+     "voci": [
+      "Baudelaire, Charles, 1821-1867.",
+      "Astbury, Anthony.",
+      "Campbell, Roy, 1901-1957."
+     ]
+    },
+    {
+     "titolo": "Poems of Roy Campbell /",
+     "voci": [
+      "Campbell, Roy, 1901-1957.",
+      "Krige, Uys, 1910-1987."
+     ]
+    },
+    {
+     "titolo": "The poems of St John of the Cross :",
+     "voci": [
+      "John of the Cross, Saint, 1542-1591.",
+      "Campbell, Roy, 1901-1957."
+     ]
+    },
+    {
+     "titolo": "The poems of St. John of the Cross :",
+     "voci": [
+      "John of the Cross, Saint, 1542-1591.",
+      "Campbell, Roy, 1901-1957.",
+      "'Arcy, M. C. D."
+     ]
+    },
+    {
+     "titolo": "The poems /",
+     "voci": [
+      "John of the Cross, Saint, 1542-1591.",
+      "Campbell, Roy, 1901-1957."
+     ]
+    },
+    {
+     "titolo": "Poems /",
+     "voci": [
+      "John of the Cross, Saint, 1542-1591.",
+      "Campbell, Roy, 1901-1957."
+     ]
+    },
+    {
+     "titolo": "Portugal.",
+     "voci": [
+      "Campbell, Roy, 1901-1957."
+     ]
+    },
+    {
+     "titolo": "Portugal.",
+     "voci": [
+      "Campbell, Roy, 1901-1957."
+     ]
+    },
+    {
+     "titolo": "Portugal.",
+     "voci": [
+      "Campbell, Roy, 1901-1957."
+     ]
+    },
+    {
+     "titolo": "Roy Campbell /",
+     "voci": [
+      "Campbell, Roy, 1901-1957."
+     ]
+    },
+    {
+     "titolo": "Roy Campbell :",
+     "voci": [
+      "Campbell, Roy, 1901-1957.",
+      "Pearce, Joseph, 1961-"
+     ]
+    },
+    {
+     "titolo": "Selected poems of Roy Campbell.",
+     "voci": [
+      "Campbell, Roy, 1901-1957."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 39,
+   "qid": "Q560015",
+   "nome": "Hugh Lofting",
+   "nascita": "1886-01-14",
+   "morte": "1947-09-26",
+   "alias": [
+    "Hugh John Lofting"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 100,
+    "dal_2000": 42,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Lofting 1886-1947\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "Animal talk /",
+     "voci": [
+      "Namm, Diane.",
+      "Kanzler, John, 1963-",
+      "Lofting, Hugh, 1886-1947."
+     ]
+    },
+    {
+     "titolo": "The bravest man in the world /",
+     "voci": [
+      "Lofting, Hugh, 1886-1947.",
+      "Sheppard, Charlie."
+     ]
+    },
+    {
+     "titolo": "A children's treasury /",
+     "voci": [
+      "Baum, L. Frank (Lyman Frank), 1856-1919.",
+      "Sewell, Anna, 1820-1878.",
+      "Grahame, Kenneth, 1859-1932.",
+      "Collodi, Carlo, 1826-1890.",
+      "Lofting, Hugh, 1886-1947.",
+      "Longfellow, Henry Wadsworth, 1807-1882.",
+      "Spyri, Johanna, 1827-1901.",
+      "Carroll, Lewis, 1832-1898."
+     ]
+    },
+    {
+     "titolo": "The circus crocodile /",
+     "voci": [
+      "Namm, Diane.",
+      "Kanzler, John, 1963-",
+      "Lofting, Hugh, 1886-1947."
+     ]
+    },
+    {
+     "titolo": "Doctor Dolittle.",
+     "voci": [
+      "Lofting, Hugh, 1886-1947.",
+      "Fricker, Olga."
+     ]
+    },
+    {
+     "titolo": "Doctor Dolittle :",
+     "voci": [
+      "Lofting, Hugh, 1886-1947."
+     ]
+    },
+    {
+     "titolo": "Doctor Dolittle and the green canary /",
+     "voci": [
+      "Lofting, Hugh, 1886-1947."
+     ]
+    },
+    {
+     "titolo": "Doctor Dolittle and the green canary /",
+     "voci": [
+      "Lofting, Hugh, 1886-1947."
+     ]
+    },
+    {
+     "titolo": "Doctor Dolittle and the green canary /",
+     "voci": [
+      "Lofting, Hugh, 1886-1947."
+     ]
+    },
+    {
+     "titolo": "Doctor Dolittle and the lighthouse /",
+     "voci": [
+      "Sage, Alison.",
+      "Lofting, Hugh, 1886-1947."
+     ]
+    },
+    {
+     "titolo": "Doctor Dolittle and the secret lake.",
+     "voci": [
+      "Lofting, Hugh, 1886-1947."
+     ]
+    },
+    {
+     "titolo": "Doctor Dolittle and the secret lake /",
+     "voci": [
+      "Lofting, Hugh, 1886-1947."
+     ]
+    },
+    {
+     "titolo": "Doctor Dolittle and the secret lake /",
+     "voci": [
+      "Lofting, Hugh, 1886-1947."
+     ]
+    },
+    {
+     "titolo": "Doctor Dolittle in the moon.",
+     "voci": [
+      "Lofting, Hugh, 1886-1947."
+     ]
+    },
+    {
+     "titolo": "Doctor Dolittle in the Moon /",
+     "voci": [
+      "Lofting, Hugh, 1886-1947."
+     ]
+    },
+    {
+     "titolo": "Doctor Dolittle in the moon /",
+     "voci": [
+      "Lofting, Hugh, 1886-1947."
+     ]
+    },
+    {
+     "titolo": "Doctor Dolittle in the moon /",
+     "voci": [
+      "Lofting, Hugh, 1886-1947."
+     ]
+    },
+    {
+     "titolo": "Doctor Dolittle in trouble /",
+     "voci": [
+      "Lofting, Hugh, 1886-1947.",
+      "Sheppard, Charlie."
+     ]
+    },
+    {
+     "titolo": "Doctor Dolittle's ambulance /",
+     "voci": [
+      "Sheppard, Charlie.",
+      "Lofting, Hugh, 1886-1947."
+     ]
+    },
+    {
+     "titolo": "Doctor Dolittle's caravan.",
+     "voci": [
+      "Lofting, Hugh, 1886-1947."
+     ]
+    },
+    {
+     "titolo": "Doctor Dolittle's caravan /",
+     "voci": [
+      "Lofting, Hugh, 1886-1947."
+     ]
+    },
+    {
+     "titolo": "Doctor Dolittle's caravan /",
+     "voci": [
+      "Lofting, Hugh, 1886-1947."
+     ]
+    },
+    {
+     "titolo": "Doctor Dolittle's caravan /",
+     "voci": [
+      "Lofting, Hugh, 1886-1947."
+     ]
+    },
+    {
+     "titolo": "Doctor Dolittle's circus.",
+     "voci": [
+      "Lofting, Hugh, 1886-1947."
+     ]
+    },
+    {
+     "titolo": "Doctor Dolittle's circus /",
+     "voci": [
+      "Lofting, Hugh, 1886-1947,"
+     ]
+    },
+    {
+     "titolo": "Doctor Dolittle's circus /",
+     "voci": [
+      "Lofting, Hugh, 1886-1947,"
+     ]
+    },
+    {
+     "titolo": "Doctor Dolittle's circus /",
+     "voci": [
+      "Lofting, Hugh, 1886-1947,"
+     ]
+    },
+    {
+     "titolo": "Doctor Dolittle's circus /",
+     "voci": [
+      "Lofting, Hugh, 1886-1947."
+     ]
+    },
+    {
+     "titolo": "Doctor Dolittle's circus /",
+     "voci": [
+      "Lofting, Hugh, 1886-1947."
+     ]
+    },
+    {
+     "titolo": "Doctor Dolittle's first adventure /",
+     "voci": [
+      "Sage, Alison.",
+      "Lofting, Hugh, 1886-1947."
+     ]
+    },
+    {
+     "titolo": "Doctor Dolittle's garden.",
+     "voci": [
+      "Lofting, Hugh, 1886-1947."
+     ]
+    },
+    {
+     "titolo": "Doctor Dolittle's Garden /",
+     "voci": [
+      "Lofting, Hugh, 1886-1947."
+     ]
+    },
+    {
+     "titolo": "Doctor Dolittle's garden /",
+     "voci": [
+      "Lofting, Hugh, 1886-1947."
+     ]
+    },
+    {
+     "titolo": "Doctor Dolittle's garden /",
+     "voci": [
+      "Lofting, Hugh, 1886-1947."
+     ]
+    },
+    {
+     "titolo": "Doctor Dolittle's garden /",
+     "voci": [
+      "Lofting, Hugh, 1886-1947."
+     ]
+    },
+    {
+     "titolo": "Doctor Dolittle's great adventure /",
+     "voci": [
+      "Namm, Diane.",
+      "Kanzler, John, 1963-",
+      "Lofting, Hugh, 1886-1947."
+     ]
+    },
+    {
+     "titolo": "Doctor Dolittle's magical cure /",
+     "voci": [
+      "Namm, Diane.",
+      "Kanzler, John, 1963-",
+      "Lofting, Hugh, 1886-1947."
+     ]
+    },
+    {
+     "titolo": "Doctor Dolittle's post office.",
+     "voci": [
+      "Lofting, Hugh, 1886-1947."
+     ]
+    },
+    {
+     "titolo": "Doctor Dolittle's post office /",
+     "voci": [
+      "Lofting, Hugh, 1886-1947,"
+     ]
+    },
+    {
+     "titolo": "Doctor Dolittle's post office /",
+     "voci": [
+      "Lofting, Hugh, 1886-1947,"
+     ]
+    },
+    {
+     "titolo": "Doctor Dolittle's post office /",
+     "voci": [
+      "Lofting, Hugh, 1886-1947."
+     ]
+    },
+    {
+     "titolo": "Doctor Dolittle's Puddeby adventures /",
+     "voci": [
+      "Lofting, Hugh, 1886-1947."
+     ]
+    },
+    {
+     "titolo": "Doctor Dolittle's Puddleby adventures /",
+     "voci": [
+      "Lofting, Hugh, 1886-1947."
+     ]
+    },
+    {
+     "titolo": "Doctor Dolittle's Puddleby adventures /",
+     "voci": [
+      "Lofting, Hugh, 1886-1947."
+     ]
+    },
+    {
+     "titolo": "Doctor Dolittle's Puddleby adventures /",
+     "voci": [
+      "Lofting, Hugh, 1886-1947."
+     ]
+    },
+    {
+     "titolo": "Doctor Dolittle's return.",
+     "voci": [
+      "Lofting, Hugh, 1886-1947."
+     ]
+    },
+    {
+     "titolo": "Doctor Dolittle's return /",
+     "voci": [
+      "Lofting, Hugh, 1886-1947."
+     ]
+    },
+    {
+     "titolo": "Doctor Dolittle's return /",
+     "voci": [
+      "Lofting, Hugh, 1886-1947."
+     ]
+    },
+    {
+     "titolo": "Doctor Dolittle's return /",
+     "voci": [
+      "Lofting, Hugh, 1886-1947."
+     ]
+    },
+    {
+     "titolo": "Doctor Dolittle's zoo /",
+     "voci": [
+      "Lofting, Hugh, 1886-1947."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 40,
+   "qid": "Q1137066",
+   "nome": "Countee Cullen",
+   "nascita": "1903-05-30",
+   "morte": "1946-01-09",
+   "alias": [
+    "Countée Cullen",
+    "Countee LeRoy Porter",
+    "Countee Leroy Porter Cullen"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 25,
+    "dal_2000": 5,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Cullen 1903-1946\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "Anthology of Negro poetry.",
+     "voci": [
+      "Bontemps, Arna Wendell, 1902-1973.",
+      "Brooks, Gwendolyn, 1917-2000.",
+      "Brown, Sterling Allen, 1901-1989.",
+      "Cullen, Countee, 1903-1946.",
+      "Hughes, Langston, 1902-1967.",
+      "McKay, Claude, 1890-1948.",
+      "Walker, Margaret, 1915-1998."
+     ]
+    },
+    {
+     "titolo": "The Ballad of the Brown Girls. An old ballad retold ... With illustrations, etc.",
+     "voci": [
+      "Cullen, Countee, 1903-1946."
+     ]
+    },
+    {
+     "titolo": "A bio-bibliography of Countée P. Cullen, 1903-1946 ... Foreword by Don M. Wolfe.",
+     "voci": [
+      "Perry, Margaret, 1933-",
+      "Cullen, Countee, 1903-1946."
+     ]
+    },
+    {
+     "titolo": "The Black Christ, and other poems.",
+     "voci": [
+      "Cullen, Countee, 1903-1946."
+     ]
+    },
+    {
+     "titolo": "Caroling Dusk :",
+     "voci": [
+      "Cullen, Countee, 1903-1946."
+     ]
+    },
+    {
+     "titolo": "Caroling Dusk. An anthology of verse by negro poets. Edited by C. Cullen, etc.",
+     "voci": [
+      "Cullen, Countee, 1903-1946."
+     ]
+    },
+    {
+     "titolo": "Caroling dusk :",
+     "voci": [
+      "Cullen, Countee, 1903-1946."
+     ]
+    },
+    {
+     "titolo": "Color.",
+     "voci": [
+      "Cullen, Countee, 1903-1946."
+     ]
+    },
+    {
+     "titolo": "Color /",
+     "voci": [
+      "Cullen, Countee, 1903-1946,"
+     ]
+    },
+    {
+     "titolo": "Color /",
+     "voci": [
+      "Cullen, Countee, 1903-1946,"
+     ]
+    },
+    {
+     "titolo": "Color /",
+     "voci": [
+      "Cullen, Countee, 1903-1946,"
+     ]
+    },
+    {
+     "titolo": "Color. (Poems.).",
+     "voci": [
+      "Cullen, Countee, 1903-1946."
+     ]
+    },
+    {
+     "titolo": "Copper Sun, etc. (Poems.).",
+     "voci": [
+      "Cullen, Countee, 1903-1946."
+     ]
+    },
+    {
+     "titolo": "From the dark tower :",
+     "voci": [
+      "Moore, Dorothy Rudd, 1940-2022,",
+      "Ippolito, Michael, 1985-",
+      "Johnson, James Weldon, 1871-1938,",
+      "Bontemps, Arna, 1902-1973,",
+      "Johnson, Herbert Clark,",
+      "Johnson, Georgia Douglas, 1886-1966,",
+      "Cuney, William Waring, 1906-1976,",
+      "Hughes, Langston, 1902-1967,",
+      "Cullen, Countee, 1903-1946,"
+     ]
+    },
+    {
+     "titolo": "In a minor chord. Three Afro-American writers and their search for identity, etc.",
+     "voci": [
+      "Turner, Darwin T., 1931-1991.",
+      "Cullen, Countee, 1903-1946.",
+      "Hurston, Zora Neale.",
+      "Toomer, Jean, 1894-1967."
+     ]
+    },
+    {
+     "titolo": "The Lost Zoo, a rhyme for the young, but not too young. By Christopher Cat and Countee Cullen. With ",
+     "voci": [
+      "Cullen, Countee, 1903-1946."
+     ]
+    },
+    {
+     "titolo": "The Medea, and Some Poems by Countee Cullen. [“The Medea of Euripides. A new version by Countee Cull",
+     "voci": [
+      "Euripides.",
+      "Cullen, Countee, 1903-1946."
+     ]
+    },
+    {
+     "titolo": "My Lives and how I lost them. By Christopher Cat in collaboration with Countee Cullen. With drawings",
+     "voci": [
+      "Cullen, Countee, 1903-1946."
+     ]
+    },
+    {
+     "titolo": "My soul's high song :",
+     "voci": [
+      "Cullen, Countee, 1903-1946.",
+      "Early, Gerald Lyn."
+     ]
+    },
+    {
+     "titolo": "My soul's high song :",
+     "voci": [
+      "Cullen, Countee, 1903-1946."
+     ]
+    },
+    {
+     "titolo": "On These I stand. An anthology of the best poems of Countee Cullen. Selected by himself and includin",
+     "voci": [
+      "Cullen, Countee, 1903-1946."
+     ]
+    },
+    {
+     "titolo": "One Way to Heaven.",
+     "voci": [
+      "Cullen, Countee, 1903-1946."
+     ]
+    },
+    {
+     "titolo": "OWENS, R.L.: Fields of Wonder / 4 Motivations / Stanzas for Music / 3 Countee Cullen Songs (Taylor)",
+     "voci": [
+      "Owens, Robert Lee",
+      "Millay, Edna St. Vincent, 1892-1950,",
+      "Anonymous,",
+      "Hughes, Langston",
+      "Cullen, Countee, 1903-1946,",
+      "Wordsworth, William, 1770-1850,",
+      "Dickinson, Emily, 1830-1886,",
+      "Cuney, William Waring",
+      "Wordsworth, Dorothy, 1771-1855,",
+      "Naxos Digital Services US"
+     ]
+    },
+    {
+     "titolo": "Roots of negro racial consciousness. The 1920's: three Harlem Renaissance authors. (J. W. Johnson, C",
+     "voci": [
+      "Bronz, Stephen H.",
+      "Cullen, Countee, 1903-1946.",
+      "Johnson, James Weldon, 1871-1938.",
+      "Mackay, Claude, 1890-1948."
+     ]
+    },
+    {
+     "titolo": "Voices from the light :",
+     "voci": [
+      "Moore, Dorothy Rudd, 1940-2022,",
+      "Bontemps, Arna, 1902-1973,",
+      "Hughes, Langston, 1902-1967,",
+      "Angelou, Maya,",
+      "Cullen, Countee, 1903-1946,"
+     ]
+    }
+   ]
+  }
+ ]
+}
