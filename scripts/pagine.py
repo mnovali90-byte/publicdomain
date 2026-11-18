@@ -431,6 +431,8 @@ def scheda_statica(a, lang, bd):
                 if it else "Bibliographic records in English linked to the author in the British Library catalogue, searched by surname and years of birth and death: some records catalogued differently may be missed. For now they also include other contributions (translations, editing, prefaces).")
         if it and g.get("metodo") == "nome":
             nota += " Autore riconosciuto solo dal nome: il conteggio può essere impreciso."
+        elif it and g.get("metodo") == "nome_con_prova":
+            nota += " Autore riconosciuto dal nome con una prova in più (anni di nascita e morte, un titolo o un cognome unico nel catalogo), non da un codice."
         o.append(sez(T("Registrazioni in italiano", "Records in English"),
                      f'<div class="ed-boxes">{box(g["edizioni"], T("registrazioni in italiano", "records in English"))}{box(g.get("dal_2000", 0), T("con anno dal 2000", "dated 2000 or later") + ult)}</div>\n<p class="sa-nota">{esc(nota)}</p>\n'))
     barre = []

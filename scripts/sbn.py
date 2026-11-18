@@ -7,12 +7,11 @@ Fonte: l'archivio SPARQL pubblico di SBN (https://triplestore.iccu.sbn.it/sparql
 contiene le registrazioni dell'OPAC SBN in formato BIBFRAME. È lo stesso archivio che
 Wikidata ha autorizzato per le sue interrogazioni federate.
 
-Come si riconosce l'autore:
-  1) dal codice VIAF che Wikidata indica per lui (proprietà P214): sicuro;
-  2) se SBN non ha quell'autore collegato al VIAF, dal nome «Cognome, Nome» (cognome uguale,
-     nome per intero o per iniziale; se SBN indica gli anni e non coincidono con Wikidata la
-     scheda è un omonimo e si scarta; se i candidati sono troppi si lascia perdere). Può
-     confondere gli omonimi: in quel caso si scrive "metodo": "nome".
+Come si riconosce l'autore (dal 18/11/2026, scripts/riconosci_sbn.py; prove in docs/registro-prove.md):
+  1) codice SBN che Wikidata indica per lui (P396); 2) VIAF (P214); 3) nome normalizzato da tutte e due le
+  parti, accettato solo con una prova (anni, titolo che torna, cognome raro con nome intero). Senza prova
+  la scheda resta ambigua e non si conta: «stato» = riconosciuto / ambiguo / non_trovato.
+  La vecchia ricerca (edizioni_italiane) resta solo per anniversari.py.
 
 Cosa si conta: le registrazioni (opere) il cui autore o collaboratore è quella persona e
 la cui lingua è l'italiano, con l'anno di pubblicazione più recente e quante sono dal 2000.
@@ -20,7 +19,7 @@ Non dice se l'edizione è ancora in commercio, né quanto è buona la traduzione
 
 Scrive, per ogni autore, "traduzioni": {"sbn_it": {...}} nei file data/<anno>.json:
   {"trovato": bool, "edizioni": N, "ultimo": anno|None, "dal_2000": N,
-   "metodo": "viaf"|"nome", "fonte": "SBN"}
+   "metodo": "codice_sbn"|"viaf"|"nome_con_prova"|None, "stato": ..., "ambigue": N, "fonte": "SBN"}
 Cache in data/cache_sbn.json (45 giorni). Gentile con il server: una richiesta alla volta.
 """
 import datetime as dt
@@ -191,6 +190,53 @@ def edizioni_italiane(nome, viaf, nascita=None, morte=None, interroga_fn=interro
             "metodo": metodo if n else None, "fonte": "SBN"}
 
 
+VERSIONE = 7   # 7 = riconoscimento della fase 3 (riconosci_sbn.py), verificato su un campione nuovo il 18/11/2026
+
+
+def dati_wikidata(qids):
+    """Per il riconoscimento: codice SBN (P396), VIAF (P214), pseudonimi (P742), nomi alternativi it/en e titoli
+    delle opere (P50, presi autore per autore). Gli stessi dati usati nella verifica del 18/11/2026."""
+    out = {q: {"p396": [], "viaf": [], "alias": []} for q in qids}
+    for i in range(0, len(qids), 50):
+        v = " ".join("wd:" + q for q in qids[i:i + 50])
+        for b in sparql(f"""SELECT ?a ?p396 ?viaf ?ps ?al WHERE {{ VALUES ?a {{ {v} }}
+              OPTIONAL {{ ?a wdt:P396 ?p396 }} OPTIONAL {{ ?a wdt:P214 ?viaf }} OPTIONAL {{ ?a wdt:P742 ?ps }}
+              OPTIONAL {{ ?a skos:altLabel ?al FILTER(LANG(?al) IN ("it", "en")) }} }}"""):
+            k = b["a"]["value"].rsplit("/", 1)[-1]
+            for campo, chiave in (("p396", "p396"), ("viaf", "viaf"), ("ps", "alias"), ("al", "alias")):
+                if campo in b and b[campo]["value"] not in out[k][chiave]:
+                    out[k][chiave].append(b[campo]["value"])
+        time.sleep(2)
+    return out
+
+
+def opere_wikidata(q):
+    """Titoli delle opere dell'autore (P50), per la prova del titolo. Uno per autore, dentro il giro."""
+    try:
+        r = sparql(f"""SELECT DISTINCT ?l WHERE {{ ?w wdt:P50 wd:{q} . ?w rdfs:label ?l .
+          FILTER(LANG(?l) IN ("it","en","fr","de","es","cs","ca","pl","pt","mul")) }} LIMIT 300""")
+        time.sleep(1)
+        return sorted({x["l"]["value"] for x in r})
+    except Exception:
+        return []
+
+
+def edizioni_riconosciute(autore, wd, interroga_fn=interroga):
+    """Produzione dal 18/11/2026: l'autore si riconosce con riconosci_sbn (codice SBN, poi VIAF, poi nome con una
+    prova: anni, titolo o cognome raro). Se non c'è una prova la scheda resta ambigua e non si conta nulla."""
+    import riconosci_sbn
+    if "opere" not in wd:
+        wd = {**wd, "opere": opere_wikidata(autore["wikidata"])}
+    r = riconosci_sbn.riconosci({"nome": autore["nome"], "nascita": autore.get("nascita"), "morte": autore.get("morte"),
+                                 "paesi": autore.get("paesi") or [], **wd}, interroga_fn)
+    n, ultimo, dal_2000 = 0, None, 0
+    if r["schede"]:
+        n, ultimo, dal_2000 = conta("VALUES ?a { " + " ".join(f"<{u}>" for u in r["schede"]) + " }", interroga_fn)
+    return {"trovato": n > 0, "edizioni": n, "ultimo": ultimo, "dal_2000": dal_2000,
+            "metodo": r.get("metodo"), "stato": r["stato"], "fonte": "SBN",
+            "schede": [u.rsplit("/", 1)[-1] for u in r["schede"]], "ambigue": len(r.get("ambigue") or {})}
+
+
 def codici_viaf(qids):
     """Il codice VIAF che Wikidata indica per ogni autore (proprietà P214)."""
     out = {}
@@ -204,7 +250,7 @@ def codici_viaf(qids):
 
 def e_recente(voce, oggi):
     try:
-        if voce.get("v") != 6:      # 6 = anni trasformati in numero (17/11/2026): le voci precedenti si rifanno
+        if voce.get("v") != VERSIONE:   # 6 = anni in numero (17/11); 7 = nuovo riconoscimento (18/11): le voci vecchie si rifanno
             return False
         return (oggi - dt.date.fromisoformat(voce["ts"])).days < VALIDITA_GIORNI
     except Exception:
@@ -217,7 +263,7 @@ def candidati(pacchetto):
     return lista[:PER_ANNO]
 
 
-def elabora(oggi, conta_fn=edizioni_italiane, viaf_fn=codici_viaf):
+def elabora(oggi, conta_fn=edizioni_riconosciute, wd_fn=dati_wikidata):
     cache = json.loads(CACHE.read_text(encoding="utf-8")) if CACHE.exists() else {}
     file = [f for f in sorted(DATA_DIR.glob("*[0-9][0-9][0-9][0-9].json")) if not f.name.startswith(("us-", "anniversari-"))]
     pacchetti = [(f, json.loads(f.read_text(encoding="utf-8"))) for f in file]
@@ -225,16 +271,17 @@ def elabora(oggi, conta_fn=edizioni_italiane, viaf_fn=codici_viaf):
     for _, p in pacchetti:
         da_fare += [a for a in candidati(p) if not e_recente(cache.get(a["wikidata"]), oggi)]
     print(f"sbn: {len(da_fare)} autori da controllare", file=sys.stderr)
-    viaf = viaf_fn([a["wikidata"] for a in da_fare]) if da_fare else {}
+    wd = wd_fn([a["wikidata"] for a in da_fare]) if da_fare else {}
     fatti = errori = 0
     for i, a in enumerate(da_fare):
         if time.time() > FINE_LAVORO:
             print("  tempo finito: il resto al prossimo giro", file=sys.stderr)
+            pathlib.Path(".incompleto").touch()      # il flusso di lavoro riparte da solo
             break
         try:
-            voce = conta_fn(a["nome"], viaf.get(a["wikidata"]), a.get("nascita"), a.get("morte"))
+            voce = conta_fn(a, wd.get(a["wikidata"]) or {})
             voce["ts"] = oggi.isoformat()
-            voce["v"] = 6
+            voce["v"] = VERSIONE
             cache[a["wikidata"]] = voce
             fatti += 1
         except Exception as e:
@@ -253,7 +300,7 @@ def elabora(oggi, conta_fn=edizioni_italiane, viaf_fn=codici_viaf):
         for a in p["autori"]:
             voce = cache.get(a["wikidata"])
             if voce:
-                dati = {k: v for k, v in voce.items() if k not in ("ts", "v")}
+                dati = {k: v for k, v in voce.items() if k not in ("ts", "v", "schede")}
                 if a.get("pagine_wikipedia", 0) >= SOGLIA_NOTO and dati["edizioni"] <= SOGLIA_POCHE:
                     dati["sospetto"] = True
                     sospetti.append({"wikidata": a["wikidata"], "nome": a["nome"], "pagine": a["pagine_wikipedia"],
