@@ -12,8 +12,9 @@ import alma  # noqa: E402
 import loc  # noqa: E402
 
 RADICE = pathlib.Path(__file__).resolve().parent.parent
-D = RADICE / "docs" / "verifica-loc"
-SEME = 20261122
+import os
+D = RADICE / "docs" / os.environ.get("VERIFICA_DIR", "verifica-loc")
+SEME = int(os.environ.get("VERIFICA_SEME", "20261122"))
 
 
 def impronte():
@@ -49,6 +50,8 @@ def prove():
             for a in alma.candidati(json.loads(f.read_text(encoding="utf-8"))):
                 autori.setdefault(a["wikidata"], a)
     usati = {r["qid"] for r in json.loads((RADICE / "docs" / "campione-loc" / "prove.json").read_text(encoding="utf-8"))["autori"]}
+    if D.name != "verifica-loc":       # le verifiche successive escludono anche la prima (diventata di sviluppo)
+        usati |= {r["qid"] for r in json.loads((RADICE / "docs" / "verifica-loc" / "campione.json").read_text(encoding="utf-8"))["autori"]}
     cod = loc.codici_lc(sorted(autori))
     scelti = random.Random(SEME).sample(sorted(q for q in cod if q not in usati), 40)
     out = []
@@ -82,7 +85,7 @@ def misura():
         for lab, blocco in a.get("notizie", {}).items():
             for x in blocco["notizie"]:
                 vera = x["lingua"] == "eng" and any(v.split(": ", 1)[0] in ("100", "700", "800") and v.split(": ", 1)[1] in sue for v in x["voci"])
-                contata = x["lingua"] == "eng" and any(v.split(": ", 1)[0] in ("100", "700", "800") and loc.chiave(v.split(": ", 1)[1]).startswith(loc.chiave(lab)) for v in x["voci"])
+                contata = x["lingua"] == "eng" and any(v.split(": ", 1)[0] in ("100", "700", "800") and loc.chiave(v.split(": ", 1)[1]) == loc.chiave(lab) for v in x["voci"])
                 cc[("sua in inglese" if vera else "non sua o non in inglese", "contata" if contata else "non contata")] += 1
         tot.update(cc)
         righe.append({"n": a["n"], "nome": a["nome"], "notizie": {f"{k[0]}, {k[1]}": v for k, v in cc.items()}, "errore_tecnico": a.get("errore_tecnico")})

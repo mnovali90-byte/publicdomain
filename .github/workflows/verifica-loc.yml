@@ -22,13 +22,15 @@ jobs:
       - name: Passo indicato in passo.txt
         env:
           BUDGET_MINUTI_SBN: "100"
-        run: python scripts/verifica_loc.py "$(tr -d '[:space:]' < docs/verifica-loc/passo.txt)"
+        run: |
+          read passo cartella seme < docs/verifica-loc/passo.txt
+          VERIFICA_DIR="${cartella:-verifica-loc}" VERIFICA_SEME="${seme:-20261122}" python scripts/verifica_loc.py "$passo"
       - name: Salva
         if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/verifica-loc
+          git add docs/verifica-loc*
           if ! git diff --cached --quiet; then
             git commit -m "Verifica LoC: passo $(cat docs/verifica-loc/passo.txt)"
             for i in 1 2 3 4 5; do git pull --rebase --autostash -X theirs origin main && git push && break; sleep $((i*20)); done

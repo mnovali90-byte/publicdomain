@@ -17,6 +17,7 @@ Cache in data/cache_loc.json (45 giorni). Una richiesta alla volta, con pause: i
 se si va troppo veloci.
 """
 import datetime as dt
+import html
 import json
 import os
 import pathlib
@@ -36,7 +37,7 @@ CACHE = DATA_DIR / "cache_loc.json"
 VALIDITA_GIORNI = 45
 BUDGET_MINUTI = float(os.environ.get("BUDGET_MINUTI_LOC", "30"))
 FINE_LAVORO = time.time() + BUDGET_MINUTI * 60
-VERSIONE = 1
+VERSIONE = 2   # 2 = caratteri decodificati e intestazione identica (18/11/2026)
 SRU = "http://lx2.loc.gov:210/LCDB"
 UA = "publicdomain-radar/1.0 (https://github.com/mnovali90-byte/publicdomain)"
 PAUSA = 2.5
@@ -53,7 +54,10 @@ def sa(t):
 
 
 def chiave(t):
-    return re.sub(r"[^a-z0-9]+", " ", sa(t).lower()).strip()
+    """Forma confrontabile di un'intestazione: si decodificano i caratteri scritti come codici («Heltai, Jeno&#x30B;»:
+    senza decodifica 54 notizie giuste su 1185 andavano perse, verifica del 18/11/2026), si tolgono accenti e
+    punteggiatura."""
+    return re.sub(r"[^a-z0-9]+", " ", sa(html.unescape(t or "")).lower()).strip()
 
 
 def get(url, tentativi=5):
@@ -105,7 +109,7 @@ def notizie(lab):
             ruoli = set()
             for tag, corpo in re.findall(r'tag="(100|700|800|600)"[^>]*>(.*?)</datafield>', rec, re.S):
                 testo = " ".join(v for c, v in re.findall(r'code="(\w)">([^<]*)<', corpo) if c in "abcdq")
-                if chiave(testo).startswith(chiave(lab)):
+                if chiave(testo) == chiave(lab):     # la stessa intestazione: «Cummings, Ray, 1970-» non è «Cummings, Ray»
                     ruoli.add("soggetto" if tag == "600" else "autore o collaboratore")
             f008 = (re.findall(r'tag="008">([^<]*)<', rec) or [""])[0]
             out.append({"ruoli": sorted(ruoli), "lingua": f008[35:38], "anno": f008[7:11]})
