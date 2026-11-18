@@ -376,7 +376,7 @@ RANGHI = {}   # (wikidata, misura) -> (posizione, totale): calcolati in main() c
 
 
 def calcola_ranghi(pacchetto):
-    lett = [x for x in pacchetto["autori"] if x.get("letterario") and x.get("n_opere", 1) > 0 and not re.fullmatch(r"Q\d+", x["nome"])]
+    lett = [x for x in pacchetto["autori"] if x.get("letterario") and not re.fullmatch(r"Q\d+", x["nome"])]
     for m, campo in (("it", "visite_it"), ("en", "visite_en"), ("int", "pagine_wikipedia")):
         ordine = sorted(lett, key=lambda x: (-(x.get("indice_" + m) if x.get("indice_" + m) is not None else -1), -(x.get(campo) or 0),
                                              -(x.get("pagine_wikipedia") or 0), x["nome"]))

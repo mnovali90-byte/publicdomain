@@ -31,6 +31,8 @@ import time
 import urllib.error
 import urllib.parse
 import urllib.request
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+import regola_lista  # noqa: E402  regola su chi è uno scrittore (18/11/2026)
 
 USER_AGENT = "PublicDomainTool/0.1 (https://github.com/mnovali90-byte/publicdomain)"
 DATA_DIR = pathlib.Path(__file__).resolve().parent.parent / "data"
@@ -458,7 +460,9 @@ def salva_cache(cache):
 
 def elabora_anno(percorso, cache, oggi):
     pacchetto = json.loads(percorso.read_text(encoding="utf-8"))
-    letterari = [a for a in pacchetto["autori"] if LETTERARI & set(a["professioni"])]
+    # regola della lista (18/11/2026, scripts/regola_lista.py): si arricchisce chi PUÒ essere uno scrittore
+    # (descrizione con un mestiere letterario o professione letteraria); il verdetto arriva dopo, con il numero di opere
+    letterari = [a for a in pacchetto["autori"] if regola_lista.candidato(a, a.get("descrizione"))]
     da_fare = [a for a in letterari if da_aggiornare(cache.get(a["wikidata"]), oggi)]
     print(f"{percorso.name}: {len(letterari)} letterari, {len(da_fare)} da scaricare", file=sys.stderr)
     da_fare.sort(key=lambda a: -a.get("pagine_wikipedia", 0))   # i più noti per primi
@@ -473,6 +477,7 @@ def elabora_anno(percorso, cache, oggi):
         salva_cache(cache)
     id_letterari = {x["wikidata"] for x in letterari}
     for a in pacchetto["autori"]:
+        a.pop("letterario", None)
         if a["wikidata"] in id_letterari:
             a["letterario"] = True
             a["tipo_catalogo"] = [TIPO_CATALOGO[p] for p in a["professioni"] if p in TIPO_CATALOGO]
@@ -483,6 +488,9 @@ def elabora_anno(percorso, cache, oggi):
                     a[k] = voce[k]
             if voce:
                 a.setdefault("n_opere", 0)
+    for a in pacchetto["autori"]:
+        if a.get("letterario") and "n_opere" in a and not regola_lista.scrittore(a, a.get("descrizione")):
+            a["letterario"] = False      # soprattutto altro (pittore, scacchista...): resta solo in «Tutti»
     calcola_indici([a for a in pacchetto["autori"] if a.get("letterario") and "n_opere" in a])
     pacchetto["letterari"] = len(letterari)
     for chiave, campo in (("paesi", "paesi"), ("lingue", "lingue")):

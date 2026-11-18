@@ -105,7 +105,7 @@ def salva_cache(cache):
 
 def candidati(pacchetto):
     """I più noti dell'anno: prima per indice di popolarità (se c'è), poi per pagine Wikimedia."""
-    lista = [a for a in pacchetto["autori"] if a.get("letterario") and a.get("n_opere", 1) > 0 and not re.fullmatch(r"Q\d+", a["nome"])]
+    lista = [a for a in pacchetto["autori"] if a.get("letterario") and not re.fullmatch(r"Q\d+", a["nome"])]
     lista.sort(key=lambda a: (-(a.get("indice") if a.get("indice") is not None else -1), -a.get("pagine_wikipedia", 0)))
     return lista[:PER_ANNO]
 

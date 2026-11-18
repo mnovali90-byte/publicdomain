@@ -38,6 +38,12 @@ def _primo(desc):
     return trovati[0][1], trovati[0][2]
 
 
+def candidato(a, desc):
+    """Chi va arricchito (opere, biografia...) perché potrebbe essere uno scrittore: il verdetto lo dà scrittore()."""
+    d = (desc or "").lower()
+    return bool(PROF_LETTERARIE & set(a.get("professioni") or [])) or bool(re.search(r"\b(" + LETTERARI + r")", d))
+
+
 def scrittore(a, desc):
     d = re.sub(r"editorial writer", "journalist", (desc or "").lower())
     prof = PROF_LETTERARIE & set(a.get("professioni") or [])

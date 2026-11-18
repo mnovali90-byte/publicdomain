@@ -35,7 +35,7 @@ OCCUPAZIONI = [
 ]
 
 QUERY = """
-SELECT ?autore ?autoreLabel ?nascita ?morte ?sl ?professioneLabel WHERE {{
+SELECT ?autore ?autoreLabel ?nascita ?morte ?sl ?professioneLabel ?descrizione WHERE {{
   ?autore wdt:P570 ?morte .
   hint:Prior hint:rangeSafe true .
   FILTER(?morte >= "{da}T00:00:00Z"^^xsd:dateTime && ?morte < "{a}T00:00:00Z"^^xsd:dateTime)
@@ -44,6 +44,7 @@ SELECT ?autore ?autoreLabel ?nascita ?morte ?sl ?professioneLabel WHERE {{
           wikibase:sitelinks ?sl .
   VALUES ?professione {{ {occ} }}
   OPTIONAL {{ ?autore wdt:P569 ?nascita }}
+  OPTIONAL {{ ?autore schema:description ?descrizione FILTER(LANG(?descrizione) = "en") }}   # per la regola della lista (regola_lista.py)
   SERVICE wikibase:label {{ bd:serviceParam wikibase:language "it,en,mul,de,fr,es,ru,pl,pt,nl,sv,no,da,fi,cs,tr,ja,zh". }}
 }}
 """
@@ -92,6 +93,7 @@ def scarica_anno(anno_morte, pausa=2):
                     "morte": morte,
                     "pagine_wikipedia": int(r["sl"]["value"]),
                     "professioni": [],
+                    "descrizione": r.get("descrizione", {}).get("value"),
                 }
             else:
                 if morte < d["morte"]:  # più date di morte: tieni la più antica
