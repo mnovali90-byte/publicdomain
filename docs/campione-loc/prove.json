@@ -1,0 +1,6248 @@
+{
+ "autori_sito": 449,
+ "con_codice_lc": 386,
+ "senza_codice": 63,
+ "autori": [
+  {
+   "n": 1,
+   "qid": "Q7159888",
+   "nome": "Pedro Pérez Fernández",
+   "anni": "1884-1956",
+   "codici": [
+    "nr89004023"
+   ],
+   "intestazioni": {
+    "nr89004023": "Pérez Fernández, Pedro, 1885-"
+   },
+   "totale": 0,
+   "lette": 0,
+   "inglese": 0,
+   "inglese_dal_2000": 0,
+   "notizie": []
+  },
+  {
+   "n": 2,
+   "qid": "Q19974953",
+   "nome": "Grace Purdie Moon",
+   "anni": "1877-1947",
+   "codici": [
+    "nr98000095"
+   ],
+   "intestazioni": {
+    "nr98000095": "Moon, Grace, 1877-1947"
+   },
+   "totale": 27,
+   "lette": 27,
+   "inglese": 27,
+   "inglese_dal_2000": 1,
+   "notizie": [
+    {
+     "titolo": "Singing sands /",
+     "lingua": "eng",
+     "anno": "1946",
+     "voci": [
+      "100: Moon, Grace, 1877-1947."
+     ]
+    },
+    {
+     "titolo": "The missing Katchina,",
+     "lingua": "eng",
+     "anno": "1939",
+     "voci": [
+      "100: Moon, Grace, 1877-1947."
+     ]
+    },
+    {
+     "titolo": "The arrow of Tee-May,",
+     "lingua": "eng",
+     "anno": "1931",
+     "voci": [
+      "100: Moon, Grace, 1877-1947."
+     ]
+    },
+    {
+     "titolo": "The Magic trail,",
+     "lingua": "eng",
+     "anno": "1929",
+     "voci": [
+      "100: Moon, Grace, 1877-1947."
+     ]
+    },
+    {
+     "titolo": "Chi-Wee&#x301; and Loki of the desert,",
+     "lingua": "eng",
+     "anno": "1926",
+     "voci": [
+      "100: Moon, Grace, 1877-1947."
+     ]
+    },
+    {
+     "titolo": "Chi-Wee&#x301; and Loki of the desert,",
+     "lingua": "eng",
+     "anno": "1926",
+     "voci": [
+      "100: Moon, Grace, 1877-1947."
+     ]
+    },
+    {
+     "titolo": "The runaway papoose,",
+     "lingua": "eng",
+     "anno": "1928",
+     "voci": [
+      "100: Moon, Grace, 1877-1947."
+     ]
+    },
+    {
+     "titolo": "Nadita (Little Nothing)",
+     "lingua": "eng",
+     "anno": "1927",
+     "voci": [
+      "100: Moon, Grace, 1877-1947."
+     ]
+    },
+    {
+     "titolo": "White Indian.",
+     "lingua": "eng",
+     "anno": "1937",
+     "voci": [
+      "100: Moon, Grace, 1877-1947."
+     ]
+    },
+    {
+     "titolo": "The Magic trail,",
+     "lingua": "eng",
+     "anno": "1938",
+     "voci": [
+      "100: Moon, Grace, 1877-1947."
+     ]
+    },
+    {
+     "titolo": "Chi-Wee&#x301;;",
+     "lingua": "eng",
+     "anno": "1925",
+     "voci": [
+      "100: Moon, Grace, 1877-1947."
+     ]
+    },
+    {
+     "titolo": "Indian legends in rhyme,",
+     "lingua": "eng",
+     "anno": "1917",
+     "voci": [
+      "100: Moon, Grace, 1877-1947."
+     ]
+    },
+    {
+     "titolo": "Far-away desert,",
+     "lingua": "eng",
+     "anno": "1932",
+     "voci": [
+      "100: Moon, Grace, 1877-1947."
+     ]
+    },
+    {
+     "titolo": "Nadita (Little Nothing)",
+     "lingua": "eng",
+     "anno": "1936",
+     "voci": [
+      "100: Moon, Grace, 1877-1947."
+     ]
+    },
+    {
+     "titolo": "The missing Katchina,",
+     "lingua": "eng",
+     "anno": "1930",
+     "voci": [
+      "100: Moon, Grace, 1877-1947."
+     ]
+    },
+    {
+     "titolo": "Nadita (Little Nothing),",
+     "lingua": "eng",
+     "anno": "1937",
+     "voci": [
+      "100: Moon, Grace, 1877-1947."
+     ]
+    },
+    {
+     "titolo": "Daughter of Thunder,",
+     "lingua": "eng",
+     "anno": "1942",
+     "voci": [
+      "100: Moon, Grace, 1877-1947."
+     ]
+    },
+    {
+     "titolo": "Solita /",
+     "lingua": "eng",
+     "anno": "1938",
+     "voci": [
+      "100: Moon, Grace, 1877-1947.",
+      "700: Moon, Carl, 1878-1948,"
+     ]
+    },
+    {
+     "titolo": "One little Indian,",
+     "lingua": "eng",
+     "anno": "1950",
+     "voci": [
+      "100: Moon, Grace, 1877-1947.",
+      "700: Moon, Carl, 1878-1948,"
+     ]
+    },
+    {
+     "titolo": "Shanty Ann,",
+     "lingua": "eng",
+     "anno": "1935",
+     "voci": [
+      "100: Moon, Grace, 1877-1947.",
+      "700: Moon, Carl, 1878-1948,"
+     ]
+    },
+    {
+     "titolo": "Nadita,",
+     "lingua": "eng",
+     "anno": "1946",
+     "voci": [
+      "100: Moon, Grace, 1877-1947.",
+      "700: Moon, Carl, 1878-1948."
+     ]
+    },
+    {
+     "titolo": "Indian legends in rhyme /",
+     "lingua": "eng",
+     "anno": "2000",
+     "voci": [
+      "100: Moon, Grace, 1877-1947.",
+      "700: Moon, Carl, 1878-1948,"
+     ]
+    },
+    {
+     "titolo": "Wongo and the wise old crow,",
+     "lingua": "eng",
+     "anno": "1923",
+     "voci": [
+      "100: Moon, Grace, 1877-1947.",
+      "700: Moon, Carl, 1878-1948,"
+     ]
+    },
+    {
+     "titolo": "The book of Nah-Wee,",
+     "lingua": "eng",
+     "anno": "1932",
+     "voci": [
+      "100: Moon, Grace, 1877-1947.",
+      "700: Moon, Carl, 1878-1948,"
+     ]
+    },
+    {
+     "titolo": "Lost Indian magic;",
+     "lingua": "eng",
+     "anno": "1918",
+     "voci": [
+      "100: Moon, Grace, 1877-1947.",
+      "700: Moon, Carl, 1878-1948,"
+     ]
+    },
+    {
+     "titolo": "In search of the wild Indian :",
+     "lingua": "eng",
+     "anno": "1997",
+     "voci": [
+      "100: Moon, Carl, 1878-1948.",
+      "600: Moon, Carl, 1878-1948.",
+      "600: Moon, Grace, 1877-1947.",
+      "700: Moon, Grace, 1877-1947."
+     ]
+    },
+    {
+     "titolo": "Singing sands /",
+     "lingua": "eng",
+     "anno": "1936",
+     "voci": [
+      "100: Moon, Grace, 1877-1947,",
+      "700: Moon, Carl, 1878-1948,"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "qid": "Q3271300",
+   "nome": "Léon Riotor",
+   "anni": "1865-1946",
+   "codici": [
+    "nr95039753"
+   ],
+   "intestazioni": {
+    "nr95039753": "Riotor, Léon, 1865-1946"
+   },
+   "totale": 0,
+   "lette": 0,
+   "inglese": 0,
+   "inglese_dal_2000": 0,
+   "notizie": []
+  },
+  {
+   "n": 4,
+   "qid": "Q13129341",
+   "nome": "John Lloyd-Jones",
+   "anni": "1885-1956",
+   "codici": [
+    "no2007102452"
+   ],
+   "intestazioni": {
+    "no2007102452": "Lloyd-Jones, J. (John), 1885-1956"
+   },
+   "totale": 4,
+   "lette": 4,
+   "inglese": 1,
+   "inglese_dal_2000": 0,
+   "notizie": [
+    {
+     "titolo": "The court poets of the Welsh princes.",
+     "lingua": "eng",
+     "anno": "1952",
+     "voci": [
+      "100: Lloyd-Jones, J. (John), 1885-1956."
+     ]
+    },
+    {
+     "titolo": "Enwau lleoedd sir Gaernarfon",
+     "lingua": "wel",
+     "anno": "1928",
+     "voci": [
+      "100: Lloyd-Jones, J. (John), 1885-1956."
+     ]
+    },
+    {
+     "titolo": "Caneuon Ceiriog detholiad.",
+     "lingua": "wel",
+     "anno": "1925",
+     "voci": [
+      "700: Lloyd-Jones, J. (John), 1885-1956,"
+     ]
+    },
+    {
+     "titolo": "Coleman Hawkins :",
+     "lingua": "zxx",
+     "anno": "1995",
+     "voci": []
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "qid": "Q12021431",
+   "nome": "Ignác Grebáč-Orlov",
+   "anni": "1888-1957",
+   "codici": [
+    "no90006895"
+   ],
+   "intestazioni": {
+    "no90006895": "Orlov, I. Gr. (Ignác Grebáč), 1888-1957"
+   },
+   "totale": 0,
+   "lette": 0,
+   "inglese": 0,
+   "inglese_dal_2000": 0,
+   "notizie": []
+  },
+  {
+   "n": 6,
+   "qid": "Q98705",
+   "nome": "Max Dreyer",
+   "anni": "1862-1946",
+   "codici": [
+    "no95047810"
+   ],
+   "intestazioni": {
+    "no95047810": "Dreyer, Max, 1862-1946"
+   },
+   "totale": 18,
+   "lette": 18,
+   "inglese": 0,
+   "inglese_dal_2000": 0,
+   "notizie": [
+    {
+     "titolo": "Das Riesenspielzeug.",
+     "lingua": "ger",
+     "anno": "1926",
+     "voci": [
+      "100: Dreyer, Max, 1862-1946."
+     ]
+    },
+    {
+     "titolo": "Die ehepause :",
+     "lingua": "ger",
+     "anno": "1931",
+     "voci": [
+      "100: Dreyer, Max, 1862-1946."
+     ]
+    },
+    {
+     "titolo": "Venus Amathusia;",
+     "lingua": "ger",
+     "anno": "1906",
+     "voci": [
+      "100: Dreyer, Max, 1862-1946."
+     ]
+    },
+    {
+     "titolo": "Das sympathiemittel,",
+     "lingua": "ger",
+     "anno": "1927",
+     "voci": [
+      "100: Dreyer, Max, 1862-1946."
+     ]
+    },
+    {
+     "titolo": "Grossmama :",
+     "lingua": "ger",
+     "anno": "1898",
+     "voci": [
+      "100: Dreyer, Max, 1862-1946."
+     ]
+    },
+    {
+     "titolo": "Mein Drachenhaus und was es sich mit mir Erza&#x308;hlt.",
+     "lingua": "ger",
+     "anno": "1924",
+     "voci": [
+      "100: Dreyer, Max, 1862-1946."
+     ]
+    },
+    {
+     "titolo": "Der Kopf,",
+     "lingua": "ger",
+     "anno": "1940",
+     "voci": [
+      "100: Dreyer, Max, 1862-1946."
+     ]
+    },
+    {
+     "titolo": "Der deutsche Morgen;",
+     "lingua": "ger",
+     "anno": "1915",
+     "voci": [
+      "100: Dreyer, Max, 1862-1946."
+     ]
+    },
+    {
+     "titolo": "Erdkraft; ",
+     "lingua": "ger",
+     "anno": "1941",
+     "voci": [
+      "100: Dreyer, Max, 1862-1946?"
+     ]
+    },
+    {
+     "titolo": "Das gymnasium von St. Ju&#x308;rgen,",
+     "lingua": "ger",
+     "anno": "1925",
+     "voci": [
+      "100: Dreyer, Max, 1862-1946."
+     ]
+    },
+    {
+     "titolo": "Erdkraft, Roman. ",
+     "lingua": "ger",
+     "anno": "1943",
+     "voci": [
+      "100: Dreyer, Max, 1862-1946."
+     ]
+    },
+    {
+     "titolo": "Die Sturmfahne mit dem Greif. ",
+     "lingua": "ger",
+     "anno": "1924",
+     "voci": [
+      "100: Dreyer, Max, 1862-1946."
+     ]
+    },
+    {
+     "titolo": "Das Kentaurengeschlecht,",
+     "lingua": "ger",
+     "anno": "1943",
+     "voci": [
+      "100: Dreyer, Max, 1862-1946."
+     ]
+    },
+    {
+     "titolo": "Das Himmelbett von Hilgenho&#x308;h;",
+     "lingua": "ger",
+     "anno": "1928",
+     "voci": [
+      "100: Dreyer, Max, 1862-1946."
+     ]
+    },
+    {
+     "titolo": "Zwei um Frau Lore,",
+     "lingua": "ger",
+     "anno": "1940",
+     "voci": [
+      "100: Dreyer, Max, 1862-1946?"
+     ]
+    },
+    {
+     "titolo": "Der Probekandidat;",
+     "lingua": "ger",
+     "anno": "1900",
+     "voci": [
+      "100: Dreyer, Max, 1862-1946."
+     ]
+    },
+    {
+     "titolo": "Der weg durchs feuer,",
+     "lingua": "ger",
+     "anno": "1930",
+     "voci": [
+      "100: Dreyer, Max, 1862-1946."
+     ]
+    },
+    {
+     "titolo": "Auf eigener Erde /",
+     "lingua": "ger",
+     "anno": "1911",
+     "voci": [
+      "100: Dreyer, Max, 1862-1946."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "qid": "Q1131497",
+   "nome": "May Sinclair",
+   "anni": "1863-1946",
+   "codici": [
+    "n50023565"
+   ],
+   "intestazioni": {
+    "n50023565": "Sinclair, May"
+   },
+   "totale": 79,
+   "lette": 50,
+   "inglese": 49,
+   "inglese_dal_2000": 2,
+   "notizie": [
+    {
+     "titolo": "Mary Olivier: a life.",
+     "lingua": "eng",
+     "anno": "1972",
+     "voci": [
+      "100: Sinclair, May."
+     ]
+    },
+    {
+     "titolo": "Life and death of Harriett Frean /",
+     "lingua": "eng",
+     "anno": "2020",
+     "voci": [
+      "100: Sinclair, May,"
+     ]
+    },
+    {
+     "titolo": "The three sisters /",
+     "lingua": "eng",
+     "anno": "1982",
+     "voci": [
+      "100: Sinclair, May."
+     ]
+    },
+    {
+     "titolo": "History of Anthony Waring /",
+     "lingua": "eng",
+     "anno": "1927",
+     "voci": [
+      "100: Sinclair, May."
+     ]
+    },
+    {
+     "titolo": "Arnold Waterlow;",
+     "lingua": "eng",
+     "anno": "1924",
+     "voci": [
+      "100: Sinclair, May."
+     ]
+    },
+    {
+     "titolo": "History of Anthony Waring,",
+     "lingua": "eng",
+     "anno": "1927",
+     "voci": [
+      "100: Sinclair, May."
+     ]
+    },
+    {
+     "titolo": "R&#xF8;de valmuer.",
+     "lingua": "nor",
+     "anno": "1948",
+     "voci": [
+      "100: Sinclair, May."
+     ]
+    },
+    {
+     "titolo": "The judgment of Eve, and other stories,",
+     "lingua": "eng",
+     "anno": "1914",
+     "voci": [
+      "100: Sinclair, May."
+     ]
+    },
+    {
+     "titolo": "The rector of Wyck,",
+     "lingua": "eng",
+     "anno": "1925",
+     "voci": [
+      "100: Sinclair, May."
+     ]
+    },
+    {
+     "titolo": "The belfry,",
+     "lingua": "eng",
+     "anno": "1916",
+     "voci": [
+      "100: Sinclair, May."
+     ]
+    },
+    {
+     "titolo": "Tales told by Simpson.",
+     "lingua": "eng",
+     "anno": "1930",
+     "voci": [
+      "100: Sinclair, May."
+     ]
+    },
+    {
+     "titolo": "Feminism /",
+     "lingua": "eng",
+     "anno": "1912",
+     "voci": [
+      "100: Sinclair, May."
+     ]
+    },
+    {
+     "titolo": "Mary Olivier :",
+     "lingua": "eng",
+     "anno": "2002",
+     "voci": [
+      "100: Sinclair, May."
+     ]
+    },
+    {
+     "titolo": "The three sisters /",
+     "lingua": "eng",
+     "anno": "1985",
+     "voci": [
+      "100: Sinclair, May."
+     ]
+    },
+    {
+     "titolo": "The intercessor and other stories,",
+     "lingua": "eng",
+     "anno": "1932",
+     "voci": [
+      "100: Sinclair, May."
+     ]
+    },
+    {
+     "titolo": "The three Bronte&#x308;s,",
+     "lingua": "eng",
+     "anno": "1912",
+     "voci": [
+      "100: Sinclair, May."
+     ]
+    },
+    {
+     "titolo": "Mary Olivier:",
+     "lingua": "eng",
+     "anno": "1919",
+     "voci": [
+      "100: Sinclair, May."
+     ]
+    },
+    {
+     "titolo": "The romantic,",
+     "lingua": "eng",
+     "anno": "1920",
+     "voci": [
+      "100: Sinclair, May."
+     ]
+    },
+    {
+     "titolo": "The tree of heaven,",
+     "lingua": "eng",
+     "anno": "1918",
+     "voci": [
+      "100: Sinclair, May."
+     ]
+    },
+    {
+     "titolo": "Far end,",
+     "lingua": "eng",
+     "anno": "1926",
+     "voci": [
+      "100: Sinclair, May."
+     ]
+    },
+    {
+     "titolo": "The Allinghams,",
+     "lingua": "eng",
+     "anno": "1927",
+     "voci": [
+      "100: Sinclair, May."
+     ]
+    },
+    {
+     "titolo": "The tree of heaven,",
+     "lingua": "eng",
+     "anno": "1917",
+     "voci": [
+      "100: Sinclair, May."
+     ]
+    },
+    {
+     "titolo": "The divine fire,",
+     "lingua": "eng",
+     "anno": "1904",
+     "voci": [
+      "100: Sinclair, May."
+     ]
+    },
+    {
+     "titolo": "The three sisters,",
+     "lingua": "eng",
+     "anno": "1914",
+     "voci": [
+      "100: Sinclair, May"
+     ]
+    },
+    {
+     "titolo": "The dark night /",
+     "lingua": "eng",
+     "anno": "1924",
+     "voci": [
+      "100: Sinclair, May"
+     ]
+    },
+    {
+     "titolo": "The judgment of Eve,",
+     "lingua": "eng",
+     "anno": "1908",
+     "voci": [
+      "100: Sinclair, May."
+     ]
+    },
+    {
+     "titolo": "The creators;",
+     "lingua": "eng",
+     "anno": "1910",
+     "voci": [
+      "100: Sinclair, May."
+     ]
+    },
+    {
+     "titolo": "A journal of impressions in Belgium,",
+     "lingua": "eng",
+     "anno": "1915",
+     "voci": [
+      "100: Sinclair, May."
+     ]
+    },
+    {
+     "titolo": "The three Brontes,",
+     "lingua": "eng",
+     "anno": "1914",
+     "voci": [
+      "100: Sinclair, May."
+     ]
+    },
+    {
+     "titolo": "Anne Severn and the Fieldings,",
+     "lingua": "eng",
+     "anno": "1922",
+     "voci": [
+      "100: Sinclair, May."
+     ]
+    },
+    {
+     "titolo": "The combined maze,",
+     "lingua": "eng",
+     "anno": "1913",
+     "voci": [
+      "100: Sinclair, May."
+     ]
+    },
+    {
+     "titolo": "Tales told by Simpson,",
+     "lingua": "eng",
+     "anno": "1930",
+     "voci": [
+      "100: Sinclair, May"
+     ]
+    },
+    {
+     "titolo": "The helpmate,",
+     "lingua": "eng",
+     "anno": "1907",
+     "voci": [
+      "100: Sinclair, May."
+     ]
+    },
+    {
+     "titolo": "The new idealism,",
+     "lingua": "eng",
+     "anno": "1922",
+     "voci": [
+      "100: Sinclair, May."
+     ]
+    },
+    {
+     "titolo": "Uncanny stories,",
+     "lingua": "eng",
+     "anno": "1923",
+     "voci": [
+      "100: Sinclair, May."
+     ]
+    },
+    {
+     "titolo": "Mary Olivier;",
+     "lingua": "eng",
+     "anno": "1919",
+     "voci": [
+      "100: Sinclair, May."
+     ]
+    },
+    {
+     "titolo": "A journal of impressions in Belgium.",
+     "lingua": "eng",
+     "anno": "1915",
+     "voci": [
+      "100: Sinclair, May."
+     ]
+    },
+    {
+     "titolo": "The intercessor, and other stories.",
+     "lingua": "eng",
+     "anno": "1970",
+     "voci": [
+      "100: Sinclair, May."
+     ]
+    },
+    {
+     "titolo": "Uncanny stories,",
+     "lingua": "eng",
+     "anno": "1923",
+     "voci": [
+      "100: Sinclair, May."
+     ]
+    },
+    {
+     "titolo": "Anne Severn and the Fieldings,",
+     "lingua": "eng",
+     "anno": "1922",
+     "voci": [
+      "100: Sinclair, May."
+     ]
+    },
+    {
+     "titolo": "Tales told by Simpson.",
+     "lingua": "eng",
+     "anno": "1971",
+     "voci": [
+      "100: Sinclair, May."
+     ]
+    },
+    {
+     "titolo": "The Tysons (Mr. and Mrs. Nevill Tyson)",
+     "lingua": "eng",
+     "anno": "1906",
+     "voci": [
+      "100: Sinclair, May."
+     ]
+    },
+    {
+     "titolo": "The flaw in the crystal,",
+     "lingua": "eng",
+     "anno": "1912",
+     "voci": [
+      "100: Sinclair, May."
+     ]
+    },
+    {
+     "titolo": "The return of the prodigal,",
+     "lingua": "eng",
+     "anno": "1914",
+     "voci": [
+      "100: Sinclair, May"
+     ]
+    },
+    {
+     "titolo": "The intercessor, and other stories,",
+     "lingua": "eng",
+     "anno": "1931",
+     "voci": [
+      "100: Sinclair, May."
+     ]
+    },
+    {
+     "titolo": "Mary Olivier, a life /",
+     "lingua": "eng",
+     "anno": "1982",
+     "voci": [
+      "100: Sinclair, May."
+     ]
+    },
+    {
+     "titolo": "Kitty Tailleur /",
+     "lingua": "eng",
+     "anno": "1908",
+     "voci": [
+      "100: Sinclair, May."
+     ]
+    },
+    {
+     "titolo": "Superseded,",
+     "lingua": "eng",
+     "anno": "1906",
+     "voci": [
+      "100: Sinclair, May."
+     ]
+    },
+    {
+     "titolo": "Arnold Waterlow:",
+     "lingua": "eng",
+     "anno": "1924",
+     "voci": [
+      "100: Sinclair, May."
+     ]
+    },
+    {
+     "titolo": "The divine fire.",
+     "lingua": "eng",
+     "anno": "1970",
+     "voci": [
+      "100: Sinclair, May."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "qid": "Q21461959",
+   "nome": "Gennaro D'Amato",
+   "anni": "1857-1947",
+   "codici": [
+    "no2018029998"
+   ],
+   "intestazioni": {
+    "no2018029998": "Amato, Gennaro, 1857-1947"
+   },
+   "totale": 1,
+   "lette": 1,
+   "inglese": 0,
+   "inglese_dal_2000": 0,
+   "notizie": [
+    {
+     "titolo": "Justice in Andorra. Announcement in the Town Square of a Sentencing to Life at Hard Labor.",
+     "lingua": "fre",
+     "anno": "1896",
+     "voci": []
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "qid": "Q3646436",
+   "nome": "Derenik Demirchian",
+   "anni": "1877-1956",
+   "codici": [
+    "n85007656"
+   ],
+   "intestazioni": {
+    "n85007656": "Demirchyan, Derenik, 1877-1956"
+   },
+   "totale": 23,
+   "lette": 23,
+   "inglese": 2,
+   "inglese_dal_2000": 1,
+   "notizie": [
+    {
+     "titolo": "Vardanank&#x2BB;.",
+     "lingua": "arm",
+     "anno": "1943",
+     "voci": [
+      "100: Demirchyan, Derenik, 1877-1956."
+     ]
+    },
+    {
+     "titolo": "Vardanank.",
+     "lingua": "rus",
+     "anno": "1961",
+     "voci": [
+      "100: Demirchyan, Derenik, 1877-1956."
+     ]
+    },
+    {
+     "titolo": "Vardanank&#x2BB; :",
+     "lingua": "arm",
+     "anno": "2007",
+     "voci": [
+      "100: Demirchyan, Derenik, 1877-1956."
+     ]
+    },
+    {
+     "titolo": "Enkernere&#x306;.",
+     "lingua": "arm",
+     "anno": "1968",
+     "voci": [
+      "100: Demirchyan, Derenik, 1877-1956."
+     ]
+    },
+    {
+     "titolo": "",
+     "lingua": "arm",
+     "anno": "2012",
+     "voci": [
+      "100: Demirchyan, Derenik, 1877-1956,"
+     ]
+    },
+    {
+     "titolo": "Puypuy mukike&#x30C; /",
+     "lingua": "arm",
+     "anno": "2001",
+     "voci": [
+      "100: Demirchyan, Derenik, 1877-1956."
+     ]
+    },
+    {
+     "titolo": "Patmvatsk&#x2BB;ner /",
+     "lingua": "arm",
+     "anno": "1986",
+     "voci": [
+      "100: Demirchyan, Derenik, 1877-1956."
+     ]
+    },
+    {
+     "titolo": "Erker.",
+     "lingua": "eng",
+     "anno": "1946",
+     "voci": [
+      "100: Demirchyan, Derenik, 1877-1956."
+     ]
+    },
+    {
+     "titolo": "Patmuatsk&#x2BB;ner /",
+     "lingua": "arm",
+     "anno": "1955",
+     "voci": [
+      "100: Demirchyan, Derenik, 1877-1956."
+     ]
+    },
+    {
+     "titolo": "",
+     "lingua": "arm",
+     "anno": "2012",
+     "voci": [
+      "100: Demirchyan, Derenik, 1877-1956,"
+     ]
+    },
+    {
+     "titolo": "Vardanank&#x2BB; :",
+     "lingua": "arm",
+     "anno": "1956",
+     "voci": [
+      "100: Demirchyan, Derenik, 1877-1956."
+     ]
+    },
+    {
+     "titolo": "Vardanank.",
+     "lingua": "rus",
+     "anno": "1974",
+     "voci": [
+      "100: Demirchyan, Derenik, 1877-1956."
+     ]
+    },
+    {
+     "titolo": "Antsanot&#x2BB; e&#x304;jer /",
+     "lingua": "arm",
+     "anno": "1974",
+     "voci": [
+      "100: Demirchyan, Derenik, 1877-1956.",
+      "600: Demirchyan, Derenik, 1877-1956"
+     ]
+    },
+    {
+     "titolo": "Vardanank&#x2BB; :",
+     "lingua": "arm",
+     "anno": "1985",
+     "voci": [
+      "100: Demirchyan, Derenik, 1877-1956."
+     ]
+    },
+    {
+     "titolo": "Rasskazy, miniati&#xFE20;u&#xFE21;ry.",
+     "lingua": "rus",
+     "anno": "1977",
+     "voci": [
+      "100: Demirchyan, Derenik, 1877-1956."
+     ]
+    },
+    {
+     "titolo": "Vardanank&#x2BB; :",
+     "lingua": "arm",
+     "anno": "1987",
+     "voci": [
+      "100: Demirchyan, Derenik, 1877-1956."
+     ]
+    },
+    {
+     "titolo": "Erkeri zhoghovatsu /",
+     "lingua": "arm",
+     "anno": "1955",
+     "voci": [
+      "100: Demirchyan, Derenik, 1877-1956."
+     ]
+    },
+    {
+     "titolo": "Povesti i rasskazy.",
+     "lingua": "rus",
+     "anno": "1977",
+     "voci": [
+      "100: Demirchyan, Derenik, 1877-1956."
+     ]
+    },
+    {
+     "titolo": "Vardanank&#x2BB; :",
+     "lingua": "arm",
+     "anno": "1951",
+     "voci": [
+      "100: Demirchyan, Derenik, 1877-1956."
+     ]
+    },
+    {
+     "titolo": "The book of flowers /",
+     "lingua": "eng",
+     "anno": "2003",
+     "voci": [
+      "100: Demirchyan, Derenik, 1877-1956.",
+      "700: Demirchyan, Derenik, 1877-1956."
+     ]
+    },
+    {
+     "titolo": "Girk&#x2BB; tsaghkants&#x2BB; /",
+     "lingua": "arm",
+     "anno": "1985",
+     "voci": [
+      "100: Demirchyan, Derenik, 1877-1956."
+     ]
+    },
+    {
+     "titolo": "T&#x2BB;aterkashar :",
+     "lingua": "arm",
+     "anno": "2019",
+     "voci": [
+      "700: Demirchyan, Derenik, 1877-1956,"
+     ]
+    },
+    {
+     "titolo": "Erkeri zhoghovatsu :",
+     "lingua": "arm",
+     "anno": "1976",
+     "voci": [
+      "100: Demirchyan, Derenik, 1877-1956."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "qid": "Q3087522",
+   "nome": "Roger Vercel",
+   "anni": "1894-1957",
+   "codici": [
+    "nr89007808"
+   ],
+   "intestazioni": {
+    "nr89007808": "Vercel, Roger, 1894-1957"
+   },
+   "totale": 52,
+   "lette": 52,
+   "inglese": 15,
+   "inglese_dal_2000": 1,
+   "notizie": [
+    {
+     "titolo": "Vent de terre,",
+     "lingua": "fre",
+     "anno": "1961",
+     "voci": [
+      "100: Vercel, Roger, 1894-1957."
+     ]
+    },
+    {
+     "titolo": "Tides of Mont St.-Michel.",
+     "lingua": "eng",
+     "anno": "1970",
+     "voci": [
+      "100: Vercel, Roger, 1894-1957."
+     ]
+    },
+    {
+     "titolo": "En Bretagne, la Co&#x302;te d'E&#x301;meraude (du Mont-Saint-Michel a&#x300; Paimpol)",
+     "lingua": "fre",
+     "anno": "1952",
+     "voci": [
+      "100: Vercel, Roger, 1894-1957."
+     ]
+    },
+    {
+     "titolo": "Ride out the storm;",
+     "lingua": "eng",
+     "anno": "1953",
+     "voci": [
+      "100: Vercel, Roger, 1894-1957."
+     ]
+    },
+    {
+     "titolo": "Captain Conan /",
+     "lingua": "eng",
+     "anno": "2008",
+     "voci": [
+      "100: Vercel, Roger, 1894-1957."
+     ]
+    },
+    {
+     "titolo": "En de&#x301;rive,",
+     "lingua": "fre",
+     "anno": "1931",
+     "voci": [
+      "100: Vercel, Roger, 1894-1957."
+     ]
+    },
+    {
+     "titolo": "Francis Garnier a&#x300; l'assaut des fleuves.",
+     "lingua": "fre",
+     "anno": "1952",
+     "voci": [
+      "100: Vercel, Roger, 1894-1957."
+     ]
+    },
+    {
+     "titolo": "Visage perdu,",
+     "lingua": "fre",
+     "anno": "1953",
+     "voci": [
+      "100: Vercel, Roger, 1894-1957."
+     ]
+    },
+    {
+     "titolo": "Sous le pied de l'archange,",
+     "lingua": "fre",
+     "anno": "1937",
+     "voci": [
+      "100: Vercel, Roger, 1894-1957."
+     ]
+    },
+    {
+     "titolo": "Goar et l'ombre.",
+     "lingua": "fre",
+     "anno": "1944",
+     "voci": [
+      "100: Vercel, Roger, 1894-1957."
+     ]
+    },
+    {
+     "titolo": "Du Guesclin,",
+     "lingua": "fre",
+     "anno": "1932",
+     "voci": [
+      "100: Vercel, Roger, 1894-1957."
+     ]
+    },
+    {
+     "titolo": "La caravane de Pa&#x302;ques,",
+     "lingua": "fre",
+     "anno": "1948",
+     "voci": [
+      "100: Vercel, Roger, 1894-1957."
+     ]
+    },
+    {
+     "titolo": "Rafales /",
+     "lingua": "fre",
+     "anno": "1946",
+     "voci": [
+      "100: Vercel, Roger, 1894-1957."
+     ]
+    },
+    {
+     "titolo": "La Rance.",
+     "lingua": "fre",
+     "anno": "1945",
+     "voci": [
+      "100: Vercel, Roger, 1894-1957."
+     ]
+    },
+    {
+     "titolo": "Aurore bore&#x301;ale,",
+     "lingua": "fre",
+     "anno": "1947",
+     "voci": [
+      "100: Vercel, Roger, 1894-1957."
+     ]
+    },
+    {
+     "titolo": "Capitaine Conan.",
+     "lingua": "fre",
+     "anno": "1947",
+     "voci": [
+      "100: Vercel, Roger, 1894-1957."
+     ]
+    },
+    {
+     "titolo": "Au large de l'E&#x301;den,",
+     "lingua": "fre",
+     "anno": "1932",
+     "voci": [
+      "100: Vercel, Roger, 1894-1957."
+     ]
+    },
+    {
+     "titolo": "Notre pe&#x300;re Trajan  :",
+     "lingua": "fre",
+     "anno": "1930",
+     "voci": [
+      "100: Vercel, Roger, 1894-1957"
+     ]
+    },
+    {
+     "titolo": "Saint-Malo et l'a&#x302;me malouine.",
+     "lingua": "fre",
+     "anno": "1948",
+     "voci": [
+      "100: Vercel, Roger, 1894-1957."
+     ]
+    },
+    {
+     "titolo": "Le&#x301;na,",
+     "lingua": "fre",
+     "anno": "1936",
+     "voci": [
+      "100: Vercel, Roger, 1894-1957."
+     ]
+    },
+    {
+     "titolo": "Po&#x302;le Nord; deuxie&#x300;me partie de A l'assaut des po&#x302;les. ",
+     "lingua": "fre",
+     "anno": "1947",
+     "voci": [
+      "100: Vercel, Roger, 1894-1957."
+     ]
+    },
+    {
+     "titolo": "Saint-Malo et l'a&#x302;me malouine.",
+     "lingua": "fre",
+     "anno": "1961",
+     "voci": [
+      "100: Vercel, Roger, 1894-1957."
+     ]
+    },
+    {
+     "titolo": "Au bout du mo&#x302;le;",
+     "lingua": "fre",
+     "anno": "1960",
+     "voci": [
+      "100: Vercel, Roger, 1894-1957."
+     ]
+    },
+    {
+     "titolo": "Remorques, roman /",
+     "lingua": "fre",
+     "anno": "1935",
+     "voci": [
+      "100: Vercel, Roger, 1894-1957."
+     ]
+    },
+    {
+     "titolo": "Tug-boat,",
+     "lingua": "eng",
+     "anno": "1936",
+     "voci": [
+      "100: Vercel, Roger, 1894-1957."
+     ]
+    },
+    {
+     "titolo": "Visages de corsaires;",
+     "lingua": "fre",
+     "anno": "1943",
+     "voci": [
+      "100: Vercel, Roger, 1894-1957."
+     ]
+    },
+    {
+     "titolo": "Goar et l'ombre :",
+     "lingua": "fre",
+     "anno": "1962",
+     "voci": [
+      "100: Vercel, Roger, 1894-1957."
+     ]
+    },
+    {
+     "titolo": "The Easter fleet;",
+     "lingua": "eng",
+     "anno": "1950",
+     "voci": [
+      "100: Vercel, Roger, 1894-1957."
+     ]
+    },
+    {
+     "titolo": "La fosse aux vents,",
+     "lingua": "fre",
+     "anno": "1949",
+     "voci": [
+      "100: Vercel, Roger, 1894-1957."
+     ]
+    },
+    {
+     "titolo": "Croisie&#x300;re blanche;",
+     "lingua": "fre",
+     "anno": "1938",
+     "voci": [
+      "100: Vercel, Roger, 1894-1957."
+     ]
+    },
+    {
+     "titolo": "Bretagne aux cent visages.",
+     "lingua": "fre",
+     "anno": "1959",
+     "voci": [
+      "100: Vercel, Roger, 1894-1957."
+     ]
+    },
+    {
+     "titolo": "Le bienheureux Charles de Blois",
+     "lingua": "fre",
+     "anno": "1942",
+     "voci": [
+      "100: Vercel, Roger, 1894-1957."
+     ]
+    },
+    {
+     "titolo": "L'ile des revenantz,",
+     "lingua": "fre",
+     "anno": "1954",
+     "voci": [
+      "100: Vercel, Roger, 1894-1957."
+     ]
+    },
+    {
+     "titolo": "Capitaine Conan,",
+     "lingua": "fre",
+     "anno": "1934",
+     "voci": [
+      "100: Vercel, Roger, 1894-1957."
+     ]
+    },
+    {
+     "titolo": "Le fleuve,",
+     "lingua": "fre",
+     "anno": "1946",
+     "voci": [
+      "100: Vercel, Roger, 1894-1957."
+     ]
+    },
+    {
+     "titolo": "E&#x301;te&#x301; indien,",
+     "lingua": "fre",
+     "anno": "1956",
+     "voci": [
+      "100: Vercel, Roger, 1894-1957."
+     ]
+    },
+    {
+     "titolo": "Le mai&#x302;tre du re&#x302;ve;",
+     "lingua": "fre",
+     "anno": "1933",
+     "voci": [
+      "100: Vercel, Roger, 1894-1957."
+     ]
+    },
+    {
+     "titolo": "Jean Villemeur, roman.",
+     "lingua": "fre",
+     "anno": "1939",
+     "voci": [
+      "100: Vercel, Roger, 1894-1957."
+     ]
+    },
+    {
+     "titolo": "Le roman d'Agrippine.",
+     "lingua": "fre",
+     "anno": "1965",
+     "voci": [
+      "100: Vercel, Roger, 1894-1957."
+     ]
+    },
+    {
+     "titolo": "Bretagne aux cent visages /",
+     "lingua": "fre",
+     "anno": "1994",
+     "voci": [
+      "100: Vercel, Roger, 1894-1957."
+     ]
+    },
+    {
+     "titolo": "Bertrand of Brittany;",
+     "lingua": "eng",
+     "anno": "1934",
+     "voci": [
+      "100: Vercel, Roger, 1894-1957."
+     ]
+    },
+    {
+     "titolo": "Salvage,",
+     "lingua": "eng",
+     "anno": "1936",
+     "voci": [
+      "100: Vercel, Roger, 1894-1957."
+     ]
+    },
+    {
+     "titolo": "Lena.",
+     "lingua": "eng",
+     "anno": "1937",
+     "voci": [
+      "100: Vercel, Roger, 1894-1957."
+     ]
+    },
+    {
+     "titolo": "Madman's memory,",
+     "lingua": "eng",
+     "anno": "1947",
+     "voci": [
+      "100: Vercel, Roger, 1894-1957."
+     ]
+    },
+    {
+     "titolo": "Captain Conan,",
+     "lingua": "eng",
+     "anno": "1935",
+     "voci": [
+      "100: Vercel, Roger, 1894-1957."
+     ]
+    },
+    {
+     "titolo": "Troubled waters,",
+     "lingua": "eng",
+     "anno": "1940",
+     "voci": [
+      "100: Vercel, Roger, 1894-1957."
+     ]
+    },
+    {
+     "titolo": "Captain Conan,",
+     "lingua": "eng",
+     "anno": "1935",
+     "voci": [
+      "100: Vercel, Roger, 1894-1957."
+     ]
+    },
+    {
+     "titolo": "Tides of Mont St.-Michel.",
+     "lingua": "eng",
+     "anno": "1938",
+     "voci": [
+      "100: Vercel, Roger, 1894-1957."
+     ]
+    },
+    {
+     "titolo": "Le Mont Saint Michel au pe&#x301;ril de la mer.",
+     "lingua": "fre",
+     "anno": "1953",
+     "voci": [
+      "700: Vercel, Roger, 1894-1957."
+     ]
+    },
+    {
+     "titolo": "Northern lights;",
+     "lingua": "eng",
+     "anno": "1948",
+     "voci": [
+      "100: Vercel, Roger, 1894-1957."
+     ]
+    },
+    {
+     "titolo": "In sight of Eden;",
+     "lingua": "eng",
+     "anno": "1934",
+     "voci": [
+      "100: Vercel, Roger, 1894-1957."
+     ]
+    },
+    {
+     "titolo": "Louis Malbert et les journaux de bord du remorqueur Iroise /",
+     "lingua": "fre",
+     "anno": "2004",
+     "voci": [
+      "700: Vercel, Roger, 1894-1957."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 11,
+   "qid": "Q5298362",
+   "nome": "Dorothy Cottrell",
+   "anni": "1902-1957",
+   "codici": [
+    "nr2002036659"
+   ],
+   "intestazioni": {
+    "nr2002036659": "Cottrell, Dorothy, 1902-1957"
+   },
+   "totale": 5,
+   "lette": 5,
+   "inglese": 5,
+   "inglese_dal_2000": 0,
+   "notizie": [
+    {
+     "titolo": "Tharlane,",
+     "lingua": "eng",
+     "anno": "1930",
+     "voci": [
+      "100: Cottrell, Dorothy, 1902-1957."
+     ]
+    },
+    {
+     "titolo": "The silent reefs.",
+     "lingua": "eng",
+     "anno": "1953",
+     "voci": [
+      "100: Cottrell, Dorothy, 1902-1957."
+     ]
+    },
+    {
+     "titolo": "Wilderness orphan,",
+     "lingua": "eng",
+     "anno": "1940",
+     "voci": [
+      "100: Cottrell, Dorothy, 1902-1957."
+     ]
+    },
+    {
+     "titolo": "The singing gold,",
+     "lingua": "eng",
+     "anno": "1929",
+     "voci": [
+      "100: Cottrell, Dorothy, 1902-1957."
+     ]
+    },
+    {
+     "titolo": "'Winks, his book,",
+     "lingua": "eng",
+     "anno": "1932",
+     "voci": [
+      "100: Cottrell, Dorothy, 1902-1957."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 12,
+   "qid": "Q900169",
+   "nome": "Minka Czóbel",
+   "anni": "1855-1947",
+   "codici": [
+    "n81149594"
+   ],
+   "intestazioni": {
+    "n81149594": "Czóbel, Minka, 1854-1947"
+   },
+   "totale": 0,
+   "lette": 0,
+   "inglese": 0,
+   "inglese_dal_2000": 0,
+   "notizie": []
+  },
+  {
+   "n": 13,
+   "qid": "Q42511",
+   "nome": "H. G. Wells",
+   "anni": "1866-1946",
+   "codici": [
+    "n79063613"
+   ],
+   "intestazioni": {
+    "n79063613": "Wells, H. G. (Herbert George), 1866-1946"
+   },
+   "totale": 834,
+   "lette": 650,
+   "inglese": 572,
+   "inglese_dal_2000": 162,
+   "notizie": [
+    {
+     "titolo": "The wheels of chance;",
+     "lingua": "eng",
+     "anno": "1935",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946.",
+      "700: Wells, H. G. (Herbert George), 1866-1946."
+     ]
+    },
+    {
+     "titolo": "The war of the worlds and other novels /",
+     "lingua": "eng",
+     "anno": "2012",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946.",
+      "700: Wells, H. G. (Herbert George), 1866-1946"
+     ]
+    },
+    {
+     "titolo": "The war of the worlds and other science fiction classics /",
+     "lingua": "eng",
+     "anno": "2012",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946.",
+      "700: Wells, H. G. (Herbert George), 1866-1946."
+     ]
+    },
+    {
+     "titolo": "Mind at the end of its tether,",
+     "lingua": "eng",
+     "anno": "1946",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946.",
+      "700: Wells, H. G. (Herbert George), 1866-1946."
+     ]
+    },
+    {
+     "titolo": "The war in the air,",
+     "lingua": "eng",
+     "anno": "1908",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946."
+     ]
+    },
+    {
+     "titolo": "Hoffnung auf Frieden.",
+     "lingua": "ger",
+     "anno": "1922",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946."
+     ]
+    },
+    {
+     "titolo": "The Rights of man :",
+     "lingua": "eng",
+     "anno": "1943",
+     "voci": [
+      "700: Wells, H. G. (Herbert George), 1866-1946."
+     ]
+    },
+    {
+     "titolo": "The complete short stories of H.G. Wells.",
+     "lingua": "eng",
+     "anno": "1987",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946."
+     ]
+    },
+    {
+     "titolo": "The island of Dr. Moreau /",
+     "lingua": "eng",
+     "anno": "1996",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946."
+     ]
+    },
+    {
+     "titolo": "Pur asra&#x304;r jazi&#x304;rah.",
+     "lingua": "urd",
+     "anno": "1963",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946."
+     ]
+    },
+    {
+     "titolo": "The conquest of time /",
+     "lingua": "eng",
+     "anno": "1995",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946."
+     ]
+    },
+    {
+     "titolo": "The island of Doctor Moreau /",
+     "lingua": "eng",
+     "anno": "2010",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946."
+     ]
+    },
+    {
+     "titolo": "Floor games /",
+     "lingua": "eng",
+     "anno": "1976",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946."
+     ]
+    },
+    {
+     "titolo": "The war of the worlds, The time machine, and selected short stories.",
+     "lingua": "eng",
+     "anno": "1963",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946."
+     ]
+    },
+    {
+     "titolo": "The island of Doctor Moreau,",
+     "lingua": "eng",
+     "anno": "1933",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946."
+     ]
+    },
+    {
+     "titolo": "A story of the days to come /",
+     "lingua": "eng",
+     "anno": "1976",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946."
+     ]
+    },
+    {
+     "titolo": "Little wars :",
+     "lingua": "eng",
+     "anno": "1977",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946."
+     ]
+    },
+    {
+     "titolo": "The war in the air :",
+     "lingua": "eng",
+     "anno": "1907",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946,"
+     ]
+    },
+    {
+     "titolo": "The fate of man:",
+     "lingua": "eng",
+     "anno": "1970",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946."
+     ]
+    },
+    {
+     "titolo": "The end of the armament rings,",
+     "lingua": "eng",
+     "anno": "1914",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946."
+     ]
+    },
+    {
+     "titolo": "Mankind in the making, by H. G. Wells.",
+     "lingua": "eng",
+     "anno": "1903",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946."
+     ]
+    },
+    {
+     "titolo": "The wealth of Mr. Waddy;",
+     "lingua": "eng",
+     "anno": "1969",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946."
+     ]
+    },
+    {
+     "titolo": "The time machine.",
+     "lingua": "eng",
+     "anno": "1964",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946."
+     ]
+    },
+    {
+     "titolo": "Twelve stories and a dream,",
+     "lingua": "eng",
+     "anno": "1905",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946."
+     ]
+    },
+    {
+     "titolo": "A modern Utopia /",
+     "lingua": "eng",
+     "anno": "1905",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946."
+     ]
+    },
+    {
+     "titolo": "Jagatano san&#x307;kshipta itiha&#x304;sa",
+     "lingua": "guj",
+     "anno": "1930",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946."
+     ]
+    },
+    {
+     "titolo": "The time machine /",
+     "lingua": "eng",
+     "anno": "2018",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946"
+     ]
+    },
+    {
+     "titolo": "Rossii&#xFE20;a&#xFE21; vo mgle.",
+     "lingua": "rus",
+     "anno": "1922",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946."
+     ]
+    },
+    {
+     "titolo": "Mr. Blettsworthy on Rampole Island,",
+     "lingua": "eng",
+     "anno": "1928",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946."
+     ]
+    },
+    {
+     "titolo": "Kipps;",
+     "lingua": "eng",
+     "anno": "1924",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946."
+     ]
+    },
+    {
+     "titolo": "The outlook for Homo sapiens;",
+     "lingua": "eng",
+     "anno": "1942",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946."
+     ]
+    },
+    {
+     "titolo": "What are we to do with our lives?",
+     "lingua": "eng",
+     "anno": "1931",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946."
+     ]
+    },
+    {
+     "titolo": "Les enfants dans la fore&#x302;t, roman.",
+     "lingua": "fre",
+     "anno": "1947",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946."
+     ]
+    },
+    {
+     "titolo": "H. G. Wells :",
+     "lingua": "eng",
+     "anno": "1975",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946."
+     ]
+    },
+    {
+     "titolo": "A year of prophesying,",
+     "lingua": "eng",
+     "anno": "1924",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946."
+     ]
+    },
+    {
+     "titolo": "Love and Mr Lewisham :",
+     "lingua": "eng",
+     "anno": "2010",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946."
+     ]
+    },
+    {
+     "titolo": "The war in the air /",
+     "lingua": "eng",
+     "anno": "2002",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946."
+     ]
+    },
+    {
+     "titolo": "All aboard for Ararat",
+     "lingua": "eng",
+     "anno": "1940",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946."
+     ]
+    },
+    {
+     "titolo": "All aboard for Ararat",
+     "lingua": "eng",
+     "anno": "1941",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946."
+     ]
+    },
+    {
+     "titolo": "Tales of space and time /",
+     "lingua": "eng",
+     "anno": "2008",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946."
+     ]
+    },
+    {
+     "titolo": "The famous short stories of H. G. Wells.",
+     "lingua": "eng",
+     "anno": "1938",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946."
+     ]
+    },
+    {
+     "titolo": "The war of the worlds,",
+     "lingua": "eng",
+     "anno": "1922",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946."
+     ]
+    },
+    {
+     "titolo": "The invisible man;",
+     "lingua": "eng",
+     "anno": "1897",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946."
+     ]
+    },
+    {
+     "titolo": "The wheels of chance;",
+     "lingua": "eng",
+     "anno": "1969",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946."
+     ]
+    },
+    {
+     "titolo": "The war that will end war,",
+     "lingua": "eng",
+     "anno": "1914",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946."
+     ]
+    },
+    {
+     "titolo": "The invisible man /",
+     "lingua": "eng",
+     "anno": "2017",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946,"
+     ]
+    },
+    {
+     "titolo": "Sokrovishche v lesu /",
+     "lingua": "rus",
+     "anno": "1924",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946."
+     ]
+    },
+    {
+     "titolo": "The new Machiavelli.",
+     "lingua": "eng",
+     "anno": "1968",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946."
+     ]
+    },
+    {
+     "titolo": "Guide to the new world;",
+     "lingua": "eng",
+     "anno": "1941",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946."
+     ]
+    },
+    {
+     "titolo": "The outline of history,",
+     "lingua": "eng",
+     "anno": "1919",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946."
+     ]
+    },
+    {
+     "titolo": "The new world order;",
+     "lingua": "eng",
+     "anno": "1940",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946."
+     ]
+    },
+    {
+     "titolo": "H. G. Wells correspondence,",
+     "lingua": "eng",
+     "anno": "||||",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946."
+     ]
+    },
+    {
+     "titolo": "An Englishman looks at the world.",
+     "lingua": "eng",
+     "anno": "1914",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946."
+     ]
+    },
+    {
+     "titolo": "The time machine :",
+     "lingua": "eng",
+     "anno": "2002",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946."
+     ]
+    },
+    {
+     "titolo": "World encyclopaedia.",
+     "lingua": "eng",
+     "anno": "1973",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946."
+     ]
+    },
+    {
+     "titolo": "Tono-Bungay /",
+     "lingua": "eng",
+     "anno": "1959",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946."
+     ]
+    },
+    {
+     "titolo": "Kipps /",
+     "lingua": "eng",
+     "anno": "1984",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946."
+     ]
+    },
+    {
+     "titolo": "The holy terror.",
+     "lingua": "eng",
+     "anno": "1939",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946."
+     ]
+    },
+    {
+     "titolo": "Tono-Bungay /",
+     "lingua": "eng",
+     "anno": "2003",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946."
+     ]
+    },
+    {
+     "titolo": "Travels of a republican radical in search of hot water,",
+     "lingua": "eng",
+     "anno": "1939",
+     "voci": [
+      "100: Wells, H. G. (Herbert George), 1866-1946."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 14,
+   "qid": "Q8962216",
+   "nome": "Francesc Trabal i Benessat",
+   "anni": "1899-1957",
+   "codici": [
+    "n83180714"
+   ],
+   "intestazioni": {
+    "n83180714": "Trabal, Francesc, 1899-1957"
+   },
+   "totale": 19,
+   "lette": 19,
+   "inglese": 1,
+   "inglese_dal_2000": 1,
+   "notizie": [
+    {
+     "titolo": "Vals /",
+     "lingua": "cat",
+     "anno": "1980",
+     "voci": [
+      "100: Trabal, Francesc, 1899-1957."
+     ]
+    },
+    {
+     "titolo": "Quo vadis, Sa&#x300;nchez?",
+     "lingua": "spa",
+     "anno": "1931",
+     "voci": [
+      "100: Trabal, Francesc, 1899-1957."
+     ]
+    },
+    {
+     "titolo": "Quo vadis, Sa&#x300;nchez? /",
+     "lingua": "cat",
+     "anno": "1988",
+     "voci": [
+      "100: Trabal, Francesc, 1899-1957."
+     ]
+    },
+    {
+     "titolo": "Judita.",
+     "lingua": "spa",
+     "anno": "1972",
+     "voci": [
+      "100: Trabal, Francesc, 1899-1957."
+     ]
+    },
+    {
+     "titolo": "Vals,",
+     "lingua": "spa",
+     "anno": "1945",
+     "voci": [
+      "100: Trabal, Francesc, 1899-1957."
+     ]
+    },
+    {
+     "titolo": "Temperatura /",
+     "lingua": "cat",
+     "anno": "1986",
+     "voci": [
+      "100: Trabal, Francesc, 1899-1957."
+     ]
+    },
+    {
+     "titolo": "Novel&#xB7;les (II) /",
+     "lingua": "cat",
+     "anno": "2018",
+     "voci": [
+      "100: Trabal, Francesc, 1899-1957."
+     ]
+    },
+    {
+     "titolo": "Vals /",
+     "lingua": "cat",
+     "anno": "1998",
+     "voci": [
+      "100: Trabal, Francesc, 1899-1957."
+     ]
+    },
+    {
+     "titolo": "Era una dona com les altres ; Quo vadis, Sa&#x300;nchez? /",
+     "lingua": "cat",
+     "anno": "1984",
+     "voci": [
+      "100: Trabal, Francesc, 1899-1957."
+     ]
+    },
+    {
+     "titolo": "De cara a la paret /",
+     "lingua": "cat",
+     "anno": "1985",
+     "voci": [
+      "100: Trabal, Francesc, 1899-1957."
+     ]
+    },
+    {
+     "titolo": "L'any que ve /",
+     "lingua": "cat",
+     "anno": "1983",
+     "voci": [
+      "100: Trabal, Francesc, 1899-1957."
+     ]
+    },
+    {
+     "titolo": "Waltz /",
+     "lingua": "eng",
+     "anno": "2013",
+     "voci": [
+      "100: Trabal, Francesc, 1899-1957."
+     ]
+    },
+    {
+     "titolo": "Judita /",
+     "lingua": "cat",
+     "anno": "1977",
+     "voci": [
+      "100: Trabal, Francesc, 1899-1957."
+     ]
+    },
+    {
+     "titolo": "L'home que es va perdre /",
+     "lingua": "cat",
+     "anno": "1982",
+     "voci": [
+      "100: Trabal, Francesc, 1899-1957."
+     ]
+    },
+    {
+     "titolo": "Hi ha homes que ploren perque&#x300; el sol es pon /",
+     "lingua": "cat",
+     "anno": "1987",
+     "voci": [
+      "100: Trabal, Francesc, 1899-1957."
+     ]
+    },
+    {
+     "titolo": "Novel&#xB7;les /",
+     "lingua": "cat",
+     "anno": "2017",
+     "voci": [
+      "100: Trabal, Francesc, 1899-1957,",
+      "700: Trabal, Francesc, 1899-1957."
+     ]
+    },
+    {
+     "titolo": "Els contracops de l'enyoranc&#x327;a :",
+     "lingua": "cat",
+     "anno": "2011",
+     "voci": [
+      "100: Trabal, Francesc, 1899-1957."
+     ]
+    },
+    {
+     "titolo": "Contes, arguments i estirabots /",
+     "lingua": "cat",
+     "anno": "2003",
+     "voci": [
+      "100: Trabal, Francesc, 1899-1957."
+     ]
+    },
+    {
+     "titolo": "Centenari Francesc Trabal (1899-1999) /",
+     "lingua": "cat",
+     "anno": "2001",
+     "voci": [
+      "600: Trabal, Francesc, 1899-1957.",
+      "700: Trabal, Francesc, 1899-1957."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 15,
+   "qid": "Q1714111",
+   "nome": "Just Scheu",
+   "anni": "1903-1956",
+   "codici": [
+    "n2009026807"
+   ],
+   "intestazioni": {
+    "n2009026807": "Scheu, Just"
+   },
+   "totale": 5,
+   "lette": 5,
+   "inglese": 0,
+   "inglese_dal_2000": 0,
+   "notizie": [
+    {
+     "titolo": "Ein mann durchbricht die blockade;",
+     "lingua": "ger",
+     "anno": "1940",
+     "voci": [
+      "100: Scheu, Just."
+     ]
+    },
+    {
+     "titolo": "Die Stunde X;",
+     "lingua": "ger",
+     "anno": "1941",
+     "voci": [
+      "100: Scheu, Just."
+     ]
+    },
+    {
+     "titolo": "Dreizehn Hufeisen,",
+     "lingua": "ger",
+     "anno": "1942",
+     "voci": [
+      "100: Scheu, Just."
+     ]
+    },
+    {
+     "titolo": "Ein unverwu&#x308;stlicher bursche;",
+     "lingua": "ger",
+     "anno": "1938",
+     "voci": [
+      "700: Scheu, Just, "
+     ]
+    },
+    {
+     "titolo": "Nocturno,",
+     "lingua": "ger",
+     "anno": "1939",
+     "voci": [
+      "700: Scheu, Just, "
+     ]
+    }
+   ]
+  },
+  {
+   "n": 16,
+   "qid": "Q211551",
+   "nome": "Nikolaj Aleksandrovič Morozov",
+   "anni": "1854-1946",
+   "codici": [
+    "n82070426"
+   ],
+   "intestazioni": {
+    "n82070426": "Morozov, N. A. (Nikolaĭ Aleksandrovich), 1854-1946"
+   },
+   "totale": 0,
+   "lette": 0,
+   "inglese": 0,
+   "inglese_dal_2000": 0,
+   "notizie": []
+  },
+  {
+   "n": 17,
+   "qid": "Q7653259",
+   "nome": "Swami Vipulananda",
+   "anni": "1892-1947",
+   "codici": [
+    "n84109508"
+   ],
+   "intestazioni": {
+    "n84109508": "Vipulānanta, 1892-1947"
+   },
+   "totale": 0,
+   "lette": 0,
+   "inglese": 0,
+   "inglese_dal_2000": 0,
+   "notizie": []
+  },
+  {
+   "n": 18,
+   "qid": "Q1038466",
+   "nome": "Kōda Rohan",
+   "anni": "1867-1947",
+   "codici": [
+    "n82149071"
+   ],
+   "intestazioni": {
+    "n82149071": "Kōda, Rohan, 1867-1947"
+   },
+   "totale": 0,
+   "lette": 0,
+   "inglese": 0,
+   "inglese_dal_2000": 0,
+   "notizie": []
+  },
+  {
+   "n": 19,
+   "qid": "Q215606",
+   "nome": "Ludwig Winder",
+   "anni": "1889-1946",
+   "codici": [
+    "n86055048"
+   ],
+   "intestazioni": {
+    "n86055048": "Winder, Ludwig, 1889-1946"
+   },
+   "totale": 14,
+   "lette": 14,
+   "inglese": 0,
+   "inglese_dal_2000": 0,
+   "notizie": [
+    {
+     "titolo": "Die nachgeholten freuden, roman",
+     "lingua": "ger",
+     "anno": "1927",
+     "voci": [
+      "100: Winder, Ludwig, 1889-1946"
+     ]
+    },
+    {
+     "titolo": "Steffi;",
+     "lingua": "ger",
+     "anno": "1935",
+     "voci": [
+      "100: Winder, Ludwig, 1889-1946"
+     ]
+    },
+    {
+     "titolo": "Die reitpeitsche,",
+     "lingua": "ger",
+     "anno": "1928",
+     "voci": [
+      "100: Winder, Ludwig, 1889-1946"
+     ]
+    },
+    {
+     "titolo": "Die nachgeholten Freuden :",
+     "lingua": "ger",
+     "anno": "1987",
+     "voci": [
+      "100: Winder, Ludwig, 1889-1946."
+     ]
+    },
+    {
+     "titolo": "Dr. Muff :",
+     "lingua": "ger",
+     "anno": "1990",
+     "voci": [
+      "100: Winder, Ludwig, 1889-1946."
+     ]
+    },
+    {
+     "titolo": "Doktor Guillotin,",
+     "lingua": "ger",
+     "anno": "1924",
+     "voci": [
+      "100: Winder, Ludwig, 1889-1946"
+     ]
+    },
+    {
+     "titolo": "Der Kammerdiener :",
+     "lingua": "ger",
+     "anno": "1988",
+     "voci": [
+      "100: Winder, Ludwig, 1889-1946."
+     ]
+    },
+    {
+     "titolo": "Dr. Muff,",
+     "lingua": "ger",
+     "anno": "1931",
+     "voci": [
+      "100: Winder, Ludwig, 1889-1946."
+     ]
+    },
+    {
+     "titolo": "Die ju&#x308;dische Orgel;",
+     "lingua": "ger",
+     "anno": "1922",
+     "voci": [
+      "100: Winder, Ludwig, 1889-1946."
+     ]
+    },
+    {
+     "titolo": "S&#x30C;tefka ali kako je druz&#x30C;ina sus&#x30C;a premagala krizo /",
+     "lingua": "slv",
+     "anno": "1937",
+     "voci": [
+      "100: Winder, Ludwig, 1889-1946,"
+     ]
+    },
+    {
+     "titolo": "Geschichte meines Vaters /",
+     "lingua": "ger",
+     "anno": "2000",
+     "voci": [
+      "100: Winder, Ludwig, 1889-1946."
+     ]
+    },
+    {
+     "titolo": "Der Thronfolger,",
+     "lingua": "ger",
+     "anno": "1938",
+     "voci": [
+      "100: Winder, Ludwig, 1889-1946."
+     ]
+    },
+    {
+     "titolo": "Die Novemberwolke :",
+     "lingua": "ger",
+     "anno": "1996",
+     "voci": [
+      "100: Winder, Ludwig, 1889-1946."
+     ]
+    },
+    {
+     "titolo": "Hugo :",
+     "lingua": "ger",
+     "anno": "1995",
+     "voci": [
+      "100: Winder, Ludwig, 1889-1946."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 20,
+   "qid": "Q566764",
+   "nome": "Nikolaj Velimirović",
+   "anni": "1881-1956",
+   "codici": [
+    "n86136455"
+   ],
+   "intestazioni": {
+    "n86136455": "Velimirović, Nikolaj, 1880-1956"
+   },
+   "totale": 0,
+   "lette": 0,
+   "inglese": 0,
+   "inglese_dal_2000": 0,
+   "notizie": []
+  },
+  {
+   "n": 21,
+   "qid": "Q121008",
+   "nome": "Ernst Kreidolf",
+   "anni": "1863-1956",
+   "codici": [
+    "n80070488"
+   ],
+   "intestazioni": {
+    "n80070488": "Kreidolf, Ernst, 1863-1956"
+   },
+   "totale": 26,
+   "lette": 26,
+   "inglese": 3,
+   "inglese_dal_2000": 0,
+   "notizie": [
+    {
+     "titolo": "Lebenserinnerungen.",
+     "lingua": "ger",
+     "anno": "1957",
+     "voci": [
+      "100: Kreidolf, Ernst, 1863-1956."
+     ]
+    },
+    {
+     "titolo": "Lenzgesind /",
+     "lingua": "ger",
+     "anno": "1926",
+     "voci": [
+      "100: Kreidolf, Ernst, 1863-1956,"
+     ]
+    },
+    {
+     "titolo": "Die Wiesenzwerge :",
+     "lingua": "ger",
+     "anno": "1977",
+     "voci": [
+      "100: Kreidolf, Ernst, 1863-1956."
+     ]
+    },
+    {
+     "titolo": "Grashu&#x308;pfer und Falterfee /",
+     "lingua": "ger",
+     "anno": "1980",
+     "voci": [
+      "100: Kreidolf, Ernst, 1863-1956."
+     ]
+    },
+    {
+     "titolo": "Ernst Kreidolf :",
+     "lingua": "ger",
+     "anno": "1996",
+     "voci": [
+      "100: Kreidolf, Ernst, 1863-1956.",
+      "600: Kreidolf, Ernst, 1863-1956."
+     ]
+    },
+    {
+     "titolo": "Ein wintermarchen,",
+     "lingua": "ger",
+     "anno": "1924",
+     "voci": [
+      "100: Kreidolf, Ernst, 1863-1956."
+     ]
+    },
+    {
+     "titolo": "Blumen-Ma&#x308;rchen /",
+     "lingua": "ger",
+     "anno": "1974",
+     "voci": [
+      "100: Kreidolf, Ernst, 1863-1956."
+     ]
+    },
+    {
+     "titolo": "Bei den Gnomen und Elfen /",
+     "lingua": "ger",
+     "anno": "1978",
+     "voci": [
+      "100: Kreidolf, Ernst, 1863-1956."
+     ]
+    },
+    {
+     "titolo": "Der Traumgarten :",
+     "lingua": "ger",
+     "anno": "1976",
+     "voci": [
+      "100: Kreidolf, Ernst, 1863-1956."
+     ]
+    },
+    {
+     "titolo": "Der Traumgarten; Ma&#x308;rchen von Blumen und Sommervo&#x308;geln.",
+     "lingua": "ger",
+     "anno": "1968",
+     "voci": [
+      "100: Kreidolf, Ernst, 1863-1956."
+     ]
+    },
+    {
+     "titolo": "Die Wiesenzwerge.",
+     "lingua": "ger",
+     "anno": "1972",
+     "voci": [
+      "100: Kreidolf, Ernst, 1863-1956."
+     ]
+    },
+    {
+     "titolo": "Die schlafenden Ba&#x308;ume :",
+     "lingua": "ger",
+     "anno": "1979",
+     "voci": [
+      "100: Kreidolf, Ernst, 1863-1956."
+     ]
+    },
+    {
+     "titolo": "Kinderzeit",
+     "lingua": "ger",
+     "anno": "1930",
+     "voci": [
+      "100: Kreidolf, Ernst, 1863-1956"
+     ]
+    },
+    {
+     "titolo": "Das hundefest,",
+     "lingua": "ger",
+     "anno": "1928",
+     "voci": [
+      "100: Kreidolf, Ernst, 1863-1956."
+     ]
+    },
+    {
+     "titolo": "Servants of the spring /",
+     "lingua": "eng",
+     "anno": "1979",
+     "voci": [
+      "100: Kreidolf, Ernst, 1863-1956."
+     ]
+    },
+    {
+     "titolo": "Grashupfer /",
+     "lingua": "ger",
+     "anno": "1963",
+     "voci": [
+      "100: Kreidolf, Ernst, 1863-1956."
+     ]
+    },
+    {
+     "titolo": "Lenzgesind.",
+     "lingua": "ger",
+     "anno": "1956",
+     "voci": [
+      "100: Kreidolf, Ernst, 1863-1956."
+     ]
+    },
+    {
+     "titolo": "Das Hundefest /",
+     "lingua": "ger",
+     "anno": "1959",
+     "voci": [
+      "100: Kreidolf, Ernst, 1863-1956."
+     ]
+    },
+    {
+     "titolo": "Die Wiesenzwerge :",
+     "lingua": "ger",
+     "anno": "1983",
+     "voci": [
+      "100: Kreidolf, Ernst, 1863-1956."
+     ]
+    },
+    {
+     "titolo": "Das schmetterlingswunder;",
+     "lingua": "ger",
+     "anno": "1931",
+     "voci": [
+      "700: Kreidolf, Ernst, 1863-1956,"
+     ]
+    },
+    {
+     "titolo": "Ernst Kreidolf :",
+     "lingua": "ger",
+     "anno": "1982",
+     "voci": [
+      "600: Kreidolf, Ernst, 1863-1956.",
+      "700: Kreidolf, Ernst, 1863-1956."
+     ]
+    },
+    {
+     "titolo": "Der Gartentraum :",
+     "lingua": "ger",
+     "anno": "1930",
+     "voci": [
+      "100: Kreidolf, Ernst, 1863-1956."
+     ]
+    },
+    {
+     "titolo": "Ernst Kreidolf und die Kunstgeschichte :",
+     "lingua": "ger",
+     "anno": "2002",
+     "voci": [
+      "100: Kreidolf, Ernst, 1863-1956.",
+      "600: Kreidolf, Ernst, 1863-1956"
+     ]
+    },
+    {
+     "titolo": "Fitzebutze /",
+     "lingua": "ger",
+     "anno": "1968",
+     "voci": [
+      "700: Kreidolf, Ernst, 1863-1956,"
+     ]
+    },
+    {
+     "titolo": "Dream garden :",
+     "lingua": "eng",
+     "anno": "1979",
+     "voci": [
+      "100: Kreidolf, Ernst, 1863-1956."
+     ]
+    },
+    {
+     "titolo": "Flower fairy tales /",
+     "lingua": "eng",
+     "anno": "1979",
+     "voci": [
+      "100: Kreidolf, Ernst, 1863-1956."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 22,
+   "qid": "Q3564883",
+   "nome": "Ferenc Futurista",
+   "anni": "1891-1947",
+   "codici": [
+    "nr93023107"
+   ],
+   "intestazioni": {
+    "nr93023107": "Futurista, Ferenc, 1891-1947"
+   },
+   "totale": 0,
+   "lette": 0,
+   "inglese": 0,
+   "inglese_dal_2000": 0,
+   "notizie": []
+  },
+  {
+   "n": 23,
+   "qid": "Q10539526",
+   "nome": "Jan Voborník",
+   "anni": "1854-1946",
+   "codici": [
+    "n85330485"
+   ],
+   "intestazioni": {
+    "n85330485": "Voborník, Jan"
+   },
+   "totale": 0,
+   "lette": 0,
+   "inglese": 0,
+   "inglese_dal_2000": 0,
+   "notizie": []
+  },
+  {
+   "n": 24,
+   "qid": "Q20133096",
+   "nome": "José Juan Cadenas",
+   "anni": "1872-1947",
+   "codici": [
+    "no2010078968"
+   ],
+   "intestazioni": {
+    "no2010078968": "Cadenas, José Juan, 1872-1947"
+   },
+   "totale": 0,
+   "lette": 0,
+   "inglese": 0,
+   "inglese_dal_2000": 0,
+   "notizie": []
+  },
+  {
+   "n": 25,
+   "qid": "Q276615",
+   "nome": "Gabriela Preissová",
+   "anni": "1862-1946",
+   "codici": [
+    "n83140888"
+   ],
+   "intestazioni": {
+    "n83140888": "Preissová, Gabriela Sekerová, 1862-1946"
+   },
+   "totale": 26,
+   "lette": 26,
+   "inglese": 1,
+   "inglese_dal_2000": 0,
+   "notizie": [
+    {
+     "titolo": "Bour&#x30C;e a jine&#x301; povidky /",
+     "lingua": "cze",
+     "anno": "1920",
+     "voci": []
+    },
+    {
+     "titolo": "Miniaturky,",
+     "lingua": "cze",
+     "anno": "1911",
+     "voci": []
+    },
+    {
+     "titolo": "Jeji&#x301; pastorkyn&#x30C;a /",
+     "lingua": "cze",
+     "anno": "1978",
+     "voci": []
+    },
+    {
+     "titolo": "Povi&#x301;dky Gabriely Preissove&#x301;.",
+     "lingua": "cze",
+     "anno": "1890",
+     "voci": []
+    },
+    {
+     "titolo": "Jeji&#x301; pastorkyn&#x30C;a",
+     "lingua": "cze",
+     "anno": "1957",
+     "voci": []
+    },
+    {
+     "titolo": "Trinetta a jine&#x301; povi&#x301;dky.",
+     "lingua": "cze",
+     "anno": "1920",
+     "voci": []
+    },
+    {
+     "titolo": "Svaty&#x301; Va&#x301;clav :",
+     "lingua": "cze",
+     "anno": "1929",
+     "voci": []
+    },
+    {
+     "titolo": "Obra&#x301;zky bez ra&#x301;mu&#x30A; /",
+     "lingua": "cze",
+     "anno": "1890",
+     "voci": []
+    },
+    {
+     "titolo": "Jerla, povi&#x302;dka x Korutan.",
+     "lingua": "cze",
+     "anno": "1901",
+     "voci": []
+    },
+    {
+     "titolo": "Zahrady.",
+     "lingua": "cze",
+     "anno": "1918",
+     "voci": []
+    },
+    {
+     "titolo": "Gabriela Preissova&#x301; :",
+     "lingua": "cze",
+     "anno": "2015",
+     "voci": []
+    },
+    {
+     "titolo": "Jir&#x30C;i&#x301; Sumi&#x301;n (Amalie Vrbova&#x301;)",
+     "lingua": "cze",
+     "anno": "1937",
+     "voci": []
+    },
+    {
+     "titolo": "Jenufa.",
+     "lingua": "cze",
+     "anno": "1917",
+     "voci": []
+    },
+    {
+     "titolo": "Jenufa :",
+     "lingua": "ger",
+     "anno": "1918",
+     "voci": []
+    },
+    {
+     "titolo": "Jenufa; Oper aus dem ma&#x308;hrischen Bauernleben in 3 Akten von Gabriele Preiss.",
+     "lingua": "ger",
+     "anno": "1944",
+     "voci": []
+    },
+    {
+     "titolo": "Jenu&#x30A;fa; Jeji&#x301; pastorkyna.",
+     "lingua": "cze",
+     "anno": "1969",
+     "voci": []
+    },
+    {
+     "titolo": "Jenu&#x30A;fa :",
+     "lingua": "cze",
+     "anno": "1993",
+     "voci": []
+    },
+    {
+     "titolo": "Jenu&#x30A;fa",
+     "lingua": "cze",
+     "anno": "1989",
+     "voci": []
+    },
+    {
+     "titolo": "Jenu&#x30A;fa ; Katya Kabanova /",
+     "lingua": "eng",
+     "anno": "1985",
+     "voci": []
+    },
+    {
+     "titolo": "Eva",
+     "lingua": "cze",
+     "anno": "2005",
+     "voci": []
+    },
+    {
+     "titolo": "Jenu&#x30A;fa",
+     "lingua": "cze",
+     "anno": "1980",
+     "voci": []
+    },
+    {
+     "titolo": "Jeji&#x301; pastorkyn&#x30C;a :",
+     "lingua": "cze",
+     "anno": "1993",
+     "voci": []
+    },
+    {
+     "titolo": "Poc&#x30C;a&#x301;tek roma&#x301;nu",
+     "lingua": "cze",
+     "anno": "1970",
+     "voci": []
+    },
+    {
+     "titolo": "Eva",
+     "lingua": "cze",
+     "anno": "1984",
+     "voci": []
+    },
+    {
+     "titolo": "Jenu&#x30A;fa /",
+     "lingua": "cze",
+     "anno": "1983",
+     "voci": []
+    },
+    {
+     "titolo": "Jenu&#x30A;fa :",
+     "lingua": "cze",
+     "anno": "1997",
+     "voci": []
+    }
+   ]
+  },
+  {
+   "n": 26,
+   "qid": "Q3398467",
+   "nome": "John Dyfnallt Owen",
+   "anni": "1873-1956",
+   "codici": [
+    "no2007009610"
+   ],
+   "intestazioni": {
+    "no2007009610": "Dyfnallt, 1873-1956"
+   },
+   "totale": 0,
+   "lette": 0,
+   "inglese": 0,
+   "inglese_dal_2000": 0,
+   "notizie": []
+  },
+  {
+   "n": 27,
+   "qid": "Q978324",
+   "nome": "Salomo Friedlaender",
+   "anni": "1871-1946",
+   "codici": [
+    "n85185822",
+    "n80160218"
+   ],
+   "intestazioni": {
+    "n85185822": "Mynona, 1871-1946",
+    "n80160218": "Friedlaender, Salomo, 1871-1946"
+   },
+   "totale": 11,
+   "lette": 11,
+   "inglese": 3,
+   "inglese_dal_2000": 3,
+   "notizie": [
+    {
+     "titolo": "Unterm Leichentuch;",
+     "lingua": "ger",
+     "anno": "1920",
+     "voci": [
+      "100: Mynona, 1871-1946."
+     ]
+    },
+    {
+     "titolo": "Der lachende Hiob und andere Grotesken,",
+     "lingua": "ger",
+     "anno": "1935",
+     "voci": [
+      "100: Mynona, 1871-1946."
+     ]
+    },
+    {
+     "titolo": "Rosa die scho&#x308;ne Schutzmannsfrau,",
+     "lingua": "ger",
+     "anno": "1913",
+     "voci": [
+      "100: Mynona, 1871-1946."
+     ]
+    },
+    {
+     "titolo": "Das Nachthemd am Wegweiser und andere ho&#x308;chst merkwu&#x308;rdige Geschichten des Dr.",
+     "lingua": "ger",
+     "anno": "1980",
+     "voci": [
+      "100: Mynona, 1871-1946."
+     ]
+    },
+    {
+     "titolo": "Der Einzige.",
+     "lingua": "ger",
+     "anno": "1919",
+     "voci": [
+      "700: Mynona, 1871-1946."
+     ]
+    },
+    {
+     "titolo": "Unterm Leichentuch :",
+     "lingua": "ger",
+     "anno": "1974",
+     "voci": [
+      "100: Mynona, 1871-1946."
+     ]
+    },
+    {
+     "titolo": "The unruly bridal bed :",
+     "lingua": "eng",
+     "anno": "2017",
+     "voci": [
+      "100: Mynona, 1871-1946,",
+      "600: Mynona, 1871-1946,"
+     ]
+    },
+    {
+     "titolo": "My papa and the maid of Orle&#x301;ans :",
+     "lingua": "eng",
+     "anno": "2017",
+     "voci": [
+      "100: Mynona, 1871-1946,",
+      "600: Mynona, 1871-1946"
+     ]
+    },
+    {
+     "titolo": "Mynona u&#x308;ber George Grosz.",
+     "lingua": "ger",
+     "anno": "1975",
+     "voci": [
+      "100: Mynona, 1871-1946."
+     ]
+    },
+    {
+     "titolo": "The creator :",
+     "lingua": "eng",
+     "anno": "2014",
+     "voci": [
+      "100: Mynona, 1871-1946,"
+     ]
+    },
+    {
+     "titolo": "Das Eisenbahnglu&#x308;ck, oder, Der Anti-Freud /",
+     "lingua": "ger",
+     "anno": "1925",
+     "voci": [
+      "100: Mynona, 1871-1946."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 28,
+   "qid": "Q1398181",
+   "nome": "Karel Toman",
+   "anni": "1877-1946",
+   "codici": [
+    "n85083944"
+   ],
+   "intestazioni": {
+    "n85083944": "Toman, Karel, 1877-1946"
+   },
+   "totale": 21,
+   "lette": 21,
+   "inglese": 0,
+   "inglese_dal_2000": 0,
+   "notizie": [
+    {
+     "titolo": "Stolety&#x301; kalenda&#x301;r&#x30C; :",
+     "lingua": "cze",
+     "anno": "1926",
+     "voci": [
+      "100: Toman, Karel, 1877-1946."
+     ]
+    },
+    {
+     "titolo": "Poha&#x301;dky krve /",
+     "lingua": "cze",
+     "anno": "1928",
+     "voci": [
+      "100: Toman, Karel, 1877-1946.",
+      "800: Toman, Karel, 1877-1946."
+     ]
+    },
+    {
+     "titolo": "Ba&#x301;sne&#x30C; /",
+     "lingua": "cze",
+     "anno": "1977",
+     "voci": [
+      "100: Toman, Karel, 1877-1946."
+     ]
+    },
+    {
+     "titolo": "Vlastni&#x301; podobizna /",
+     "lingua": "cze",
+     "anno": "1975",
+     "voci": [
+      "100: Toman, Karel, 1877-1946."
+     ]
+    },
+    {
+     "titolo": "Me&#x30C;si&#x301;ce.",
+     "lingua": "cze",
+     "anno": "1970",
+     "voci": [
+      "100: Toman, Karel, 1877-1946."
+     ]
+    },
+    {
+     "titolo": "Hlas hlubin /",
+     "lingua": "cze",
+     "anno": "1982",
+     "voci": [
+      "100: Toman, Karel, 1877-1946."
+     ]
+    },
+    {
+     "titolo": "Soubor vers&#x30C;u&#x30A;.",
+     "lingua": "cze",
+     "anno": "1900",
+     "voci": [
+      "100: Toman, Karel, 1877-1946."
+     ]
+    },
+    {
+     "titolo": "Ba&#x301;sne&#x30C;.",
+     "lingua": "cze",
+     "anno": "1962",
+     "voci": [
+      "100: Toman, Karel, 1877-1946"
+     ]
+    },
+    {
+     "titolo": "Rostlo stranou;",
+     "lingua": "cze",
+     "anno": "1947",
+     "voci": [
+      "100: Toman, Karel, 1877-1946."
+     ]
+    },
+    {
+     "titolo": "Melancholicka pout /",
+     "lingua": "cze",
+     "anno": "1930",
+     "voci": [
+      "100: Toman, Karel, 1877-1946.",
+      "800: Toman, Karel, 1877-1946."
+     ]
+    },
+    {
+     "titolo": "Di&#x301;lo.",
+     "lingua": "cze",
+     "anno": "1956",
+     "voci": [
+      "100: Toman, Karel, 1877-1946"
+     ]
+    },
+    {
+     "titolo": "Melancholicka&#x301; pout; ba&#x301;sne&#x30C;.",
+     "lingua": "cze",
+     "anno": "1906",
+     "voci": [
+      "100: Toman, Karel, 1877-1946."
+     ]
+    },
+    {
+     "titolo": "Ba&#x301;sne&#x30C;.",
+     "lingua": "cze",
+     "anno": "1971",
+     "voci": [
+      "100: Toman, Karel, 1877-1946"
+     ]
+    },
+    {
+     "titolo": "Ba&#x301;sne&#x300;.",
+     "lingua": "cze",
+     "anno": "1949",
+     "voci": [
+      "100: Toman, Karel, 1877-1946."
+     ]
+    },
+    {
+     "titolo": "Slunec&#x30C;ni&#x301; hodiny /",
+     "lingua": "cze",
+     "anno": "1913",
+     "voci": [
+      "100: Toman, Karel, 1877-1946."
+     ]
+    },
+    {
+     "titolo": "Ba&#x301;sne&#x30C;.",
+     "lingua": "cze",
+     "anno": "1946",
+     "voci": [
+      "100: Toman, Karel, 1877-1946."
+     ]
+    },
+    {
+     "titolo": "Ba&#x301;sne&#x30C; /",
+     "lingua": "cze",
+     "anno": "1997",
+     "voci": [
+      "100: Toman, Karel, 1877-1946."
+     ]
+    },
+    {
+     "titolo": "Addio Mecena&#x301;s&#x30C;i.",
+     "lingua": "cze",
+     "anno": "1970",
+     "voci": [
+      "100: Toman, Karel, 1877-1946."
+     ]
+    },
+    {
+     "titolo": "Torso z&#x306;ivota /",
+     "lingua": "cze",
+     "anno": "1929",
+     "voci": [
+      "100: Toman, Karel, 1877-1946.",
+      "800: Toman, Karel, 1877-1946."
+     ]
+    },
+    {
+     "titolo": "Me&#x30C;si&#x301;ce /",
+     "lingua": "cze",
+     "anno": "1976",
+     "voci": [
+      "100: Toman, Karel, 1877-1946."
+     ]
+    },
+    {
+     "titolo": "Karel Toman, c&#x30C;love&#x30C;k a ba&#x301;sni&#x301;k.",
+     "lingua": "cze",
+     "anno": "1947",
+     "voci": [
+      "100: Toman, Karel, 1877-1946."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 29,
+   "qid": "Q596925",
+   "nome": "Edmund Clerihew Bentley",
+   "anni": "1875-1956",
+   "codici": [
+    "n50007417"
+   ],
+   "intestazioni": {
+    "n50007417": "Bentley, E. C. (Edmund Clerihew), 1875-1956"
+   },
+   "totale": 38,
+   "lette": 38,
+   "inglese": 37,
+   "inglese_dal_2000": 1,
+   "notizie": [
+    {
+     "titolo": "Elephant's work,",
+     "lingua": "eng",
+     "anno": "1950",
+     "voci": [
+      "100: Bentley, E. C. (Edmund Clerihew), 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Trent intervenes,",
+     "lingua": "eng",
+     "anno": "1938",
+     "voci": [
+      "100: Bentley, E. C. (Edmund Clerihew), 1875-1956"
+     ]
+    },
+    {
+     "titolo": "Trent intervenes,",
+     "lingua": "eng",
+     "anno": "1938",
+     "voci": [
+      "100: Bentley, E. C. (Edmund Clerihew), 1875-1956."
+     ]
+    },
+    {
+     "titolo": "More biography,",
+     "lingua": "eng",
+     "anno": "1929",
+     "voci": [
+      "100: Bentley, E. C. (Edmund Clerihew), 1875-1956"
+     ]
+    },
+    {
+     "titolo": "Trent's last case /",
+     "lingua": "eng",
+     "anno": "1977",
+     "voci": [
+      "100: Bentley, E. C. (Edmund Clerihew), 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Elephant's work,",
+     "lingua": "eng",
+     "anno": "1950",
+     "voci": [
+      "100: Bentley, E. C. (Edmund Clerihew), 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Trent's last case,",
+     "lingua": "eng",
+     "anno": "1929",
+     "voci": [
+      "100: Bentley, E. C. (Edmund Clerihew), 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Trent's last case /",
+     "lingua": "eng",
+     "anno": "1976",
+     "voci": [
+      "100: Bentley, E. C. (Edmund Clerihew), 1875-1956."
+     ]
+    },
+    {
+     "titolo": "The woman in black,",
+     "lingua": "eng",
+     "anno": "1913",
+     "voci": [
+      "100: Bentley, E. C. (Edmund Clerihew), 1875-1956"
+     ]
+    },
+    {
+     "titolo": "Those days,",
+     "lingua": "eng",
+     "anno": "1940",
+     "voci": [
+      "100: Bentley, E. C. (Edmund Clerihew), 1875-1956",
+      "600: Bentley, E. C. (Edmund Clerihew), 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Trent's case book",
+     "lingua": "eng",
+     "anno": "1953",
+     "voci": [
+      "100: Bentley, E. C. (Edmund Clerihew), 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Trent's last case /",
+     "lingua": "eng",
+     "anno": "1997",
+     "voci": [
+      "100: Bentley, E. C. (Edmund Clerihew), 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Trent's last case ...",
+     "lingua": "eng",
+     "anno": "1944",
+     "voci": [
+      "100: Bentley, E. C. (Edmund Clerihew), 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Far horizon;",
+     "lingua": "eng",
+     "anno": "1951",
+     "voci": [
+      "100: Bentley, E. C. (Edmund Clerihew), 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Trent's last case",
+     "lingua": "eng",
+     "anno": "1930",
+     "voci": [
+      "100: Bentley, E. C. (Edmund Clerihew), 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Trent intervenes /",
+     "lingua": "eng",
+     "anno": "1981",
+     "voci": [
+      "100: Bentley, E. C. (Edmund Clerihew), 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Baseless biography.",
+     "lingua": "eng",
+     "anno": "1939",
+     "voci": [
+      "100: Bentley, E. C. (Edmund Clerihew), 1875-1956.",
+      "700: Bentley, Nicolas, 1907-1978."
+     ]
+    },
+    {
+     "titolo": "Parody party",
+     "lingua": "eng",
+     "anno": "1970",
+     "voci": [
+      "700: Bentley, E. C. (Edmund Clerihew), 1875-1956."
+     ]
+    },
+    {
+     "titolo": "The best of Runyon;",
+     "lingua": "eng",
+     "anno": "1940",
+     "voci": [
+      "700: Bentley, E. C. (Edmund Clerihew), 1875-1956."
+     ]
+    },
+    {
+     "titolo": "The best of Runyon;",
+     "lingua": "eng",
+     "anno": "1938",
+     "voci": [
+      "700: Bentley, E. C. (Edmund Clerihew), 1875-1956,"
+     ]
+    },
+    {
+     "titolo": "Ca&#x301;s deireannach Trent.",
+     "lingua": "gle",
+     "anno": "1934",
+     "voci": [
+      "100: Bentley, E. C. (Edmund Clerihew), 1875-1956."
+     ]
+    },
+    {
+     "titolo": "More than somewhat ...",
+     "lingua": "eng",
+     "anno": "1937",
+     "voci": [
+      "700: Bentley, E. C. (Edmund Clerihew), 1875-1956,",
+      "700: Bentley, Nicolas, 1907-1978."
+     ]
+    },
+    {
+     "titolo": "Trent's last case /",
+     "lingua": "eng",
+     "anno": "1978",
+     "voci": [
+      "100: Bentley, E. C. (Edmund Clerihew), 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Trent's own case,",
+     "lingua": "eng",
+     "anno": "1936",
+     "voci": [
+      "100: Bentley, E. C. (Edmund Clerihew), 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Trent's last case",
+     "lingua": "eng",
+     "anno": "1913",
+     "voci": [
+      "100: Bentley, E. C. (Edmund Clerihew), 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Trent's own case,",
+     "lingua": "eng",
+     "anno": "1936",
+     "voci": [
+      "100: Bentley, E. C. (Edmund Clerihew), 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Peace Year in the city, 1918-1919. An account of the outstanding events in the city of Lon",
+     "lingua": "eng",
+     "anno": "1920",
+     "voci": [
+      "100: Bentley, E. C. (Edmund Clerihew), 1875-1956"
+     ]
+    },
+    {
+     "titolo": "[Trent's last case]",
+     "lingua": "eng",
+     "anno": "1976",
+     "voci": [
+      "700: Bentley, E. C. (Edmund Clerihew), 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Biography for beginners,",
+     "lingua": "eng",
+     "anno": "1925",
+     "voci": [
+      "100: Bentley, E. C. (Edmund Clerihew), 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Biography for beginners /",
+     "lingua": "eng",
+     "anno": "2014",
+     "voci": [
+      "100: Bentley, E. C. (Edmund Clerihew), 1875-1956,"
+     ]
+    },
+    {
+     "titolo": "The first clerihews /",
+     "lingua": "eng",
+     "anno": "1982",
+     "voci": [
+      "100: Bentley, E. C. (Edmund Clerihew), 1875-1956.",
+      "600: Bentley, E. C. (Edmund Clerihew), 1875-1956"
+     ]
+    },
+    {
+     "titolo": "Biography for beginners,",
+     "lingua": "eng",
+     "anno": "1905",
+     "voci": [
+      "100: Bentley, E. C. (Edmund Clerihew), 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Trent's last case [Motion picture]",
+     "lingua": "eng",
+     "anno": "    ",
+     "voci": [
+      "700: Bentley, E. C. (Edmund Clerihew), 1875-1956."
+     ]
+    },
+    {
+     "titolo": "The complete clerihews of E. Clerihew Bentley /",
+     "lingua": "eng",
+     "anno": "1981",
+     "voci": [
+      "100: Bentley, E. C. (Edmund Clerihew), 1875-1956.",
+      "700: Bentley, Nicolas, 1907-1978."
+     ]
+    },
+    {
+     "titolo": "Clerihews complete;",
+     "lingua": "eng",
+     "anno": "1951",
+     "voci": [
+      "100: Bentley, E. C. (Edmund Clerihew), 1875-1956.",
+      "700: Bentley, Nicolas, 1907-1978."
+     ]
+    },
+    {
+     "titolo": "Parody party",
+     "lingua": "eng",
+     "anno": "1936",
+     "voci": [
+      "700: Bentley, E. C. (Edmund Clerihew), 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Three famous murder novels,",
+     "lingua": "eng",
+     "anno": "1941",
+     "voci": [
+      "700: Bentley, E. C. (Edmund Clerihew), 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Three famous murder novels /",
+     "lingua": "eng",
+     "anno": "1945",
+     "voci": [
+      "700: Bentley, E. C. (Edmund Clerihew), 1875-1956."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 30,
+   "qid": "Q545544",
+   "nome": "Richard Le Gallienne",
+   "anni": "1866-1947",
+   "codici": [
+    "n80057179"
+   ],
+   "intestazioni": {
+    "n80057179": "Le Gallienne, Richard, 1866-1947"
+   },
+   "totale": 114,
+   "lette": 64,
+   "inglese": 64,
+   "inglese_dal_2000": 0,
+   "notizie": [
+    {
+     "titolo": "The maker of rainbows,",
+     "lingua": "eng",
+     "anno": "1971",
+     "voci": [
+      "100: Le Gallienne, Richard, 1866-1947."
+     ]
+    },
+    {
+     "titolo": "English poems /",
+     "lingua": "eng",
+     "anno": "1982",
+     "voci": [
+      "100: Le Gallienne, Richard, 1866-1947."
+     ]
+    },
+    {
+     "titolo": "A catalogue of select books,",
+     "lingua": "eng",
+     "anno": "1905",
+     "voci": [
+      "100: Le Gallienne, Richard, 1866-1947.",
+      "600: Le Gallienne, Richard, 1866-1947"
+     ]
+    },
+    {
+     "titolo": "Little dinners with the sphinx, and other prose fancies,",
+     "lingua": "eng",
+     "anno": "1907",
+     "voci": [
+      "100: Le Gallienne, Richard, 1866-1947."
+     ]
+    },
+    {
+     "titolo": "The bvrial of Romeo and Jvliet;",
+     "lingua": "eng",
+     "anno": "1904",
+     "voci": [
+      "100: Le Gallienne, Richard, 1866-1947."
+     ]
+    },
+    {
+     "titolo": "From a Paris garret,",
+     "lingua": "eng",
+     "anno": "1936",
+     "voci": [
+      "100: Le Gallienne, Richard, 1866-1947."
+     ]
+    },
+    {
+     "titolo": "The romance of Zion chapel,",
+     "lingua": "eng",
+     "anno": "1898",
+     "voci": [
+      "100: Le Gallienne, Richard, 1866-1947."
+     ]
+    },
+    {
+     "titolo": "Orestes :",
+     "lingua": "eng",
+     "anno": "1910",
+     "voci": [
+      "100: Le Gallienne, Richard, 1866-1947."
+     ]
+    },
+    {
+     "titolo": "An old country house,",
+     "lingua": "eng",
+     "anno": "1902",
+     "voci": [
+      "100: Le Gallienne, Richard, 1866-1947."
+     ]
+    },
+    {
+     "titolo": "The life romantic :",
+     "lingua": "eng",
+     "anno": "1901",
+     "voci": [
+      "100: Le Gallienne, Richard, 1866-1947."
+     ]
+    },
+    {
+     "titolo": "Mr. Sun and Mrs. Moon,",
+     "lingua": "eng",
+     "anno": "1902",
+     "voci": [
+      "100: Le Gallienne, Richard, 1866-1947."
+     ]
+    },
+    {
+     "titolo": "How to get the best out of books /",
+     "lingua": "eng",
+     "anno": "1904",
+     "voci": [
+      "100: Le Gallienne, Richard, 1866-1947."
+     ]
+    },
+    {
+     "titolo": "The worshipper of the image [microform] /",
+     "lingua": "eng",
+     "anno": "1900",
+     "voci": [
+      "100: Le Gallienne, Richard, 1866-1947."
+     ]
+    },
+    {
+     "titolo": "The Le Gallienne book of American verse,",
+     "lingua": "eng",
+     "anno": "1925",
+     "voci": [
+      "100: Le Gallienne, Richard, 1866-1947,"
+     ]
+    },
+    {
+     "titolo": "Old love stories retold,",
+     "lingua": "eng",
+     "anno": "1924",
+     "voci": [
+      "100: Le Gallienne, Richard, 1866-1947."
+     ]
+    },
+    {
+     "titolo": "The maker of rainbows,",
+     "lingua": "eng",
+     "anno": "1912",
+     "voci": [
+      "100: Le Gallienne, Richard, 1866-1947."
+     ]
+    },
+    {
+     "titolo": "Romances of old France.",
+     "lingua": "eng",
+     "anno": "1969",
+     "voci": [
+      "100: Le Gallienne, Richard, 1866-1947."
+     ]
+    },
+    {
+     "titolo": "Prose fancies,",
+     "lingua": "eng",
+     "anno": "1894",
+     "voci": [
+      "100: Le Gallienne, Richard, 1866-1947."
+     ]
+    },
+    {
+     "titolo": "The love-letters of the king: or The life romantic",
+     "lingua": "eng",
+     "anno": "1901",
+     "voci": [
+      "100: Le Gallienne, Richard, 1866-1947."
+     ]
+    },
+    {
+     "titolo": "Travels in England /",
+     "lingua": "eng",
+     "anno": "1900",
+     "voci": [
+      "100: Le Gallienne, Richard, 1866-1947."
+     ]
+    },
+    {
+     "titolo": "Old love stories retold,",
+     "lingua": "eng",
+     "anno": "1925",
+     "voci": [
+      "100: Le Gallienne, Richard, 1866-1947."
+     ]
+    },
+    {
+     "titolo": "Attitudes and avowals, with some retrospective reviews.",
+     "lingua": "eng",
+     "anno": "1969",
+     "voci": [
+      "100: Le Gallienne, Richard, 1866-1947."
+     ]
+    },
+    {
+     "titolo": "Robert Louis Stevenson;",
+     "lingua": "eng",
+     "anno": "1895",
+     "voci": [
+      "100: Le Gallienne, Richard, 1866-1947."
+     ]
+    },
+    {
+     "titolo": "Prose fancies,",
+     "lingua": "eng",
+     "anno": "1899",
+     "voci": [
+      "100: Le Gallienne, Richard, 1866-1947."
+     ]
+    },
+    {
+     "titolo": "Little dinners with the sphinx, and other prose fancies.",
+     "lingua": "eng",
+     "anno": "1976",
+     "voci": [
+      "100: Le Gallienne, Richard, 1866-1947."
+     ]
+    },
+    {
+     "titolo": "Old love stories retold /",
+     "lingua": "eng",
+     "anno": "1904",
+     "voci": [
+      "100: Le Gallienne, Richard, 1866-1947."
+     ]
+    },
+    {
+     "titolo": "If I were God /",
+     "lingua": "eng",
+     "anno": "1897",
+     "voci": [
+      "100: Le Gallienne, Richard, 1866-1947."
+     ]
+    },
+    {
+     "titolo": "Painted shadows.",
+     "lingua": "eng",
+     "anno": "1969",
+     "voci": [
+      "100: Le Gallienne, Richard, 1866-1947."
+     ]
+    },
+    {
+     "titolo": "Sleeping beauty, and other prose fancies,",
+     "lingua": "eng",
+     "anno": "1900",
+     "voci": [
+      "100: Le Gallienne, Richard, 1866-1947."
+     ]
+    },
+    {
+     "titolo": "Volumes in folio /",
+     "lingua": "eng",
+     "anno": "1889",
+     "voci": [
+      "100: Le Gallienne, Richard, 1866-1947."
+     ]
+    },
+    {
+     "titolo": "The Le Gallienne book of American verse.",
+     "lingua": "eng",
+     "anno": "    ",
+     "voci": [
+      "100: Le Gallienne, Richard, 1866-1947."
+     ]
+    },
+    {
+     "titolo": "Pieces of eight;",
+     "lingua": "eng",
+     "anno": "1918",
+     "voci": [
+      "100: Le Gallienne, Richard, 1866-1947."
+     ]
+    },
+    {
+     "titolo": "The loves of the poets,",
+     "lingua": "eng",
+     "anno": "1911",
+     "voci": [
+      "100: Le Gallienne, Richard, 1866-1947."
+     ]
+    },
+    {
+     "titolo": "The Le Gallienne book of English verse,",
+     "lingua": "eng",
+     "anno": "1922",
+     "voci": [
+      "100: Le Gallienne, Richard, 1866-1947,"
+     ]
+    },
+    {
+     "titolo": "The highway to happiness,",
+     "lingua": "eng",
+     "anno": "1913",
+     "voci": [
+      "100: Le Gallienne, Richard, 1866-1947."
+     ]
+    },
+    {
+     "titolo": "A jongleur strayed,",
+     "lingua": "eng",
+     "anno": "1922",
+     "voci": [
+      "100: Le Gallienne, Richard, 1866-1947."
+     ]
+    },
+    {
+     "titolo": "Retrospective reviews;",
+     "lingua": "eng",
+     "anno": "1896",
+     "voci": [
+      "100: Le Gallienne, Richard, 1866-1947."
+     ]
+    },
+    {
+     "titolo": "The silk-hat soldier,",
+     "lingua": "eng",
+     "anno": "1915",
+     "voci": [
+      "100: Le Gallienne, Richard, 1866-1947."
+     ]
+    },
+    {
+     "titolo": "Young lives,",
+     "lingua": "eng",
+     "anno": "1899",
+     "voci": [
+      "100: Le Gallienne, Richard, 1866-1947."
+     ]
+    },
+    {
+     "titolo": "The book-bills of Narcissus :",
+     "lingua": "eng",
+     "anno": "    ",
+     "voci": [
+      "100: Le Gallienne, Richard, 1866-1947."
+     ]
+    },
+    {
+     "titolo": "Vanishing roads, and other essays,",
+     "lingua": "eng",
+     "anno": "1915",
+     "voci": [
+      "100: Le Gallienne, Richard, 1866-1947."
+     ]
+    },
+    {
+     "titolo": "The Le Gallienne book of English &amp; American poetry,",
+     "lingua": "eng",
+     "anno": "1935",
+     "voci": [
+      "100: Le Gallienne, Richard, 1866-1947,"
+     ]
+    },
+    {
+     "titolo": "The modern book of English verse;",
+     "lingua": "eng",
+     "anno": "1939",
+     "voci": [
+      "100: Le Gallienne, Richard, 1866-1947."
+     ]
+    },
+    {
+     "titolo": "The book-bills of Narcissus,",
+     "lingua": "eng",
+     "anno": "1891",
+     "voci": [
+      "100: Le Gallienne, Richard, 1866-1947."
+     ]
+    },
+    {
+     "titolo": "The modern book of American verse,",
+     "lingua": "eng",
+     "anno": "1939",
+     "voci": [
+      "100: Le Gallienne, Richard, 1866-1947."
+     ]
+    },
+    {
+     "titolo": "The philosophy of limited editions /",
+     "lingua": "eng",
+     "anno": "1929",
+     "voci": [
+      "100: Le Gallienne, Richard, 1866-1947."
+     ]
+    },
+    {
+     "titolo": "Rudyard Kipling;",
+     "lingua": "eng",
+     "anno": "1974",
+     "voci": [
+      "100: Le Gallienne, Richard, 1866-1947."
+     ]
+    },
+    {
+     "titolo": "The quest of the golden girl;",
+     "lingua": "eng",
+     "anno": "1896",
+     "voci": [
+      "100: Le Gallienne, Richard, 1866-1947."
+     ]
+    },
+    {
+     "titolo": "English poems [microform] /",
+     "lingua": "eng",
+     "anno": "1895",
+     "voci": [
+      "100: Le Gallienne, Richard, 1866-1947."
+     ]
+    },
+    {
+     "titolo": "Pieces of eight :",
+     "lingua": "eng",
+     "anno": "1932",
+     "voci": [
+      "100: Le Gallienne, Richard, 1866-1947."
+     ]
+    },
+    {
+     "titolo": "Thomas Bird Mosher :",
+     "lingua": "eng",
+     "anno": "1914",
+     "voci": [
+      "100: Le Gallienne, Richard, 1866-1947."
+     ]
+    },
+    {
+     "titolo": "The International;",
+     "lingua": "eng",
+     "anno": "1908",
+     "voci": [
+      "700: Le Gallienne, Richard, 1866-1947,"
+     ]
+    },
+    {
+     "titolo": "The philosophy of limited editions /",
+     "lingua": "eng",
+     "anno": "1933",
+     "voci": [
+      "100: Le Gallienne, Richard, 1866-1947."
+     ]
+    },
+    {
+     "titolo": "[Readings by Blanche Yurka and A. Winfield Hoeney]",
+     "lingua": "eng",
+     "anno": "1935",
+     "voci": [
+      "700: Le Gallienne, Richard, 1866-1947."
+     ]
+    },
+    {
+     "titolo": "Modern love /",
+     "lingua": "eng",
+     "anno": "1909",
+     "voci": [
+      "700: Le Gallienne, Richard, 1866-1947,"
+     ]
+    },
+    {
+     "titolo": "Modern love /",
+     "lingua": "eng",
+     "anno": "1909",
+     "voci": [
+      "700: Le Gallienne, Richard, 1866-1947,"
+     ]
+    },
+    {
+     "titolo": "Selected works of Edward Fitzgerald, Richard Le Gallienne, Sir Richard Francis Burton, Jus",
+     "lingua": "eng",
+     "anno": "1913",
+     "voci": [
+      "700: Le Gallienne, Richard, 1866-1947,"
+     ]
+    },
+    {
+     "titolo": "An open letter from Richard Le Gallienne to Laurence J. Gomme :",
+     "lingua": "eng",
+     "anno": "1915",
+     "voci": [
+      "100: Le Gallienne, Richard, 1866-1947."
+     ]
+    },
+    {
+     "titolo": "Rudyard Kipling :",
+     "lingua": "eng",
+     "anno": "1900",
+     "voci": [
+      "100: Le Gallienne, Richard, 1866-1947."
+     ]
+    },
+    {
+     "titolo": "Fulton Oursler :",
+     "lingua": "eng",
+     "anno": "1930",
+     "voci": [
+      "700: Le Gallienne, Richard, 1866-1947"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 31,
+   "qid": "Q371854",
+   "nome": "Antonín Zápotocký",
+   "anni": "1884-1957",
+   "codici": [
+    "n84192294"
+   ],
+   "intestazioni": {
+    "n84192294": "Zápotocký, Antonín, 1884-1957"
+   },
+   "totale": 0,
+   "lette": 0,
+   "inglese": 0,
+   "inglese_dal_2000": 0,
+   "notizie": []
+  },
+  {
+   "n": 32,
+   "qid": "Q1650288",
+   "nome": "Percy MacKaye",
+   "anni": "1875-1956",
+   "codici": [
+    "n50041470"
+   ],
+   "intestazioni": {
+    "n50041470": "MacKaye, Percy, 1875-1956"
+   },
+   "totale": 115,
+   "lette": 65,
+   "inglese": 54,
+   "inglese_dal_2000": 0,
+   "notizie": [
+    {
+     "titolo": "Poem-leaflets in remembrance of Marion Morse MacKaye (Mrs. Percy MacKaye)",
+     "lingua": "eng",
+     "anno": "1939",
+     "voci": [
+      "100: MacKaye, Percy, 1875-1956.",
+      "600: MacKaye, Marion, -1939."
+     ]
+    },
+    {
+     "titolo": "Fighter would a-fiddling go.",
+     "lingua": "|||",
+     "anno": "1920",
+     "voci": [
+      "100: MacKaye, Percy, 1875-1956"
+     ]
+    },
+    {
+     "titolo": "Percy MacKaye,",
+     "lingua": "eng",
+     "anno": "1922",
+     "voci": [
+      "100: MacKaye, Percy, 1875-1956.",
+      "600: MacKaye, Percy, 1875-1956"
+     ]
+    },
+    {
+     "titolo": "Her pilgrim :",
+     "lingua": "eng",
+     "anno": "1939",
+     "voci": [
+      "100: MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Sinbad,",
+     "lingua": "eng",
+     "anno": "1917",
+     "voci": [
+      "100: MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Lu&#x308;gengeschichten aus den Bergen Kentuckys.",
+     "lingua": "ger",
+     "anno": "1946",
+     "voci": [
+      "100: MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Gipsy Davy :",
+     "lingua": "|||",
+     "anno": "1919",
+     "voci": [
+      "100: MacKaye, Percy, 1875-1956"
+     ]
+    },
+    {
+     "titolo": "Axes to grind.",
+     "lingua": "|||",
+     "anno": "1920",
+     "voci": [
+      "100: MacKaye, Percy, 1875-1956"
+     ]
+    },
+    {
+     "titolo": "Bands and rebels.",
+     "lingua": "|||",
+     "anno": "1920",
+     "voci": [
+      "100: MacKaye, Percy, 1875-1956"
+     ]
+    },
+    {
+     "titolo": "Down by the cold hill-sidey :",
+     "lingua": "|||",
+     "anno": "1919",
+     "voci": [
+      "100: MacKaye, Percy, 1875-1956"
+     ]
+    },
+    {
+     "titolo": "Tall tales of the Kentucky mountains,",
+     "lingua": "eng",
+     "anno": "1926",
+     "voci": [
+      "100: MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Rememberings, 1895-1945;",
+     "lingua": "eng",
+     "anno": "1945",
+     "voci": [
+      "100: MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Poog's pasture;",
+     "lingua": "eng",
+     "anno": "1951",
+     "voci": [
+      "100: MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Poog and the caboose man;",
+     "lingua": "eng",
+     "anno": "1952",
+     "voci": [
+      "100: MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "The gobbler of God,",
+     "lingua": "eng",
+     "anno": "1928",
+     "voci": [
+      "100: MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Anti-matrimony;",
+     "lingua": "eng",
+     "anno": "1910",
+     "voci": [
+      "100: MacKaye, Percy, 1875-1956"
+     ]
+    },
+    {
+     "titolo": "Sappho and Phaon;",
+     "lingua": "eng",
+     "anno": "1907",
+     "voci": [
+      "100: MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Yankee fantasies;",
+     "lingua": "eng",
+     "anno": "1912",
+     "voci": [
+      "100: MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "The faith of poetry;",
+     "lingua": "eng",
+     "anno": "1934",
+     "voci": [
+      "100: MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Adam and Eba.",
+     "lingua": "|||",
+     "anno": "1920",
+     "voci": [
+      "100: MacKaye, Percy, 1875-1956"
+     ]
+    },
+    {
+     "titolo": "[Photographs related to Percy MacKaye]",
+     "lingua": "   ",
+     "anno": "1915",
+     "voci": [
+      "700: MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "The mystery of Hamlet, King of Denmark;",
+     "lingua": "eng",
+     "anno": "1950",
+     "voci": [
+      "100: MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "My lady dear, arise!",
+     "lingua": "eng",
+     "anno": "1939",
+     "voci": [
+      "100: MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Camerado!",
+     "lingua": "eng",
+     "anno": "1939",
+     "voci": [
+      "100: MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Moments en voyage ;",
+     "lingua": "eng",
+     "anno": "1932",
+     "voci": [
+      "100: MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Bangry, rewy.",
+     "lingua": "|||",
+     "anno": "1920",
+     "voci": [
+      "100: MacKaye, Percy, 1875-1956"
+     ]
+    },
+    {
+     "titolo": "This fine-pretty world;",
+     "lingua": "eng",
+     "anno": "1924",
+     "voci": [
+      "100: MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Weathergoose-woo!",
+     "lingua": "eng",
+     "anno": "1929",
+     "voci": [
+      "100: MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Yankee fantasies;",
+     "lingua": "eng",
+     "anno": "1928",
+     "voci": [
+      "100: MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Young Washington at Mt. Vernon;",
+     "lingua": "eng",
+     "anno": "1927",
+     "voci": [
+      "100: MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "The immigrants;",
+     "lingua": "eng",
+     "anno": "1915",
+     "voci": [
+      "100: MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "A garland to Sylvia;",
+     "lingua": "eng",
+     "anno": "1910",
+     "voci": [
+      "100: MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Epoch :",
+     "lingua": "eng",
+     "anno": "1927",
+     "voci": [
+      "100: MacKaye, Percy, 1875-1956.",
+      "600: MacKaye, Steele, 1842-1894."
+     ]
+    },
+    {
+     "titolo": "Saint Louis;",
+     "lingua": "eng",
+     "anno": "1914",
+     "voci": [
+      "100: MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Dogtown common,",
+     "lingua": "eng",
+     "anno": "1921",
+     "voci": [
+      "100: MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Discoveries and inventions:",
+     "lingua": "eng",
+     "anno": "1950",
+     "voci": [
+      "100: MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Ballad of Betsy Ross.",
+     "lingua": "|||",
+     "anno": "1920",
+     "voci": [
+      "100: MacKaye, Percy, 1875-1956"
+     ]
+    },
+    {
+     "titolo": "The far familiar;",
+     "lingua": "eng",
+     "anno": "1938",
+     "voci": [
+      "100: MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Johnny Crimson,",
+     "lingua": "eng",
+     "anno": "1895",
+     "voci": [
+      "100: MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Wedding song.",
+     "lingua": "eng",
+     "anno": "1939",
+     "voci": [
+      "100: MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "What is she?",
+     "lingua": "eng",
+     "anno": "1943",
+     "voci": [
+      "100: MacKaye, Percy, 1875-1956.",
+      "600: MacKaye, Marion, -1939."
+     ]
+    },
+    {
+     "titolo": "Washington and Betsy Ross;",
+     "lingua": "eng",
+     "anno": "1927",
+     "voci": [
+      "100: MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Poems and plays /",
+     "lingua": "eng",
+     "anno": "1916",
+     "voci": [
+      "100: MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "The ride to Reims.",
+     "lingua": "eng",
+     "anno": "1939",
+     "voci": [
+      "100: MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Kinfolk of Robin Hood,",
+     "lingua": "eng",
+     "anno": "1926",
+     "voci": [
+      "100: MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Uriel,",
+     "lingua": "eng",
+     "anno": "1912",
+     "voci": [
+      "100: MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "The scarecrow;",
+     "lingua": "eng",
+     "anno": "1908",
+     "voci": [
+      "100: MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Sanctuary;",
+     "lingua": "eng",
+     "anno": "1914",
+     "voci": [
+      "100: MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Fenris,",
+     "lingua": "eng",
+     "anno": "1905",
+     "voci": [
+      "100: MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "The Canterbury pilgrims;",
+     "lingua": "eng",
+     "anno": "1916",
+     "voci": [
+      "100: MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "The complete poetical works of Geoffrey Chaucer, now first put into modern English,",
+     "lingua": "eng",
+     "anno": "1938",
+     "voci": [
+      "700: MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Po' white trash and other one-act dramas /",
+     "lingua": "eng",
+     "anno": "1977",
+     "voci": [
+      "700: MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Chaucer's Canterbury tales;",
+     "lingua": "eng",
+     "anno": "1923",
+     "voci": [
+      "700: MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Poesia religio :",
+     "lingua": "spa",
+     "anno": "1939",
+     "voci": [
+      "100: MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Wakefield,",
+     "lingua": "eng",
+     "anno": "1932",
+     "voci": [
+      "100: MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Proceedings &amp; addresses commemorative of the two hundredth anniversary of the incorpor",
+     "lingua": "eng",
+     "anno": "1914",
+     "voci": [
+      "700: MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "The complete poetical works of Geoffrey Chaucer,",
+     "lingua": "eng",
+     "anno": "1912",
+     "voci": [
+      "700: MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "A mosaic of muses of the MacDowell club of New York city,",
+     "lingua": "eng",
+     "anno": "1930",
+     "voci": [
+      "700: MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "A substitute for war /",
+     "lingua": "eng",
+     "anno": "1915",
+     "voci": [
+      "100: MacKaye, Percy, 1875-1956."
+     ]
+    },
+    {
+     "titolo": "The civic theatre in relation to the redemption of leisure :",
+     "lingua": "eng",
+     "anno": "1912",
+     "voci": [
+      "100: MacKaye, Percy, 1875-1956,"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 33,
+   "qid": "Q207036",
+   "nome": "A. A. Milne",
+   "anni": "1882-1956",
+   "codici": [
+    "n80067053"
+   ],
+   "intestazioni": {
+    "n80067053": "Milne, A. A. (Alan Alexander), 1882-1956"
+   },
+   "totale": 643,
+   "lette": 593,
+   "inglese": 569,
+   "inglese_dal_2000": 210,
+   "notizie": [
+    {
+     "titolo": "Two people /",
+     "lingua": "eng",
+     "anno": "2009",
+     "voci": [
+      "100: Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "The ugly duckling,",
+     "lingua": "eng",
+     "anno": "1941",
+     "voci": [
+      "100: Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "Pooh's birthday book.",
+     "lingua": "eng",
+     "anno": "1963",
+     "voci": [
+      "100: Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "Other people's lives;",
+     "lingua": "eng",
+     "anno": "1935",
+     "voci": [
+      "100: Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "Chloe Marr.",
+     "lingua": "eng",
+     "anno": "1946",
+     "voci": [
+      "100: Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "A. A. Milne.",
+     "lingua": "eng",
+     "anno": "1933",
+     "voci": [
+      "100: Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "The Christopher Robin reader;",
+     "lingua": "eng",
+     "anno": "1929",
+     "voci": [
+      "100: Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "The old sailor,",
+     "lingua": "eng",
+     "anno": "1947",
+     "voci": [
+      "100: Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "Two people,",
+     "lingua": "eng",
+     "anno": "1931",
+     "voci": [
+      "100: Milne, A. A. (Alan Alexander), 1882-1956"
+     ]
+    },
+    {
+     "titolo": "The Christopher Robin birthday book,",
+     "lingua": "eng",
+     "anno": "1931",
+     "voci": [
+      "100: Milne, A. A. (Alan Alexander), 1882-1956"
+     ]
+    },
+    {
+     "titolo": "Once a week /",
+     "lingua": "eng",
+     "anno": "1978",
+     "voci": [
+      "100: Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "Winnie-the-Pooh visitor's book /",
+     "lingua": "eng",
+     "anno": "1994",
+     "voci": [
+      "100: Milne, A. A. (Alan Alexander), 1882-1956.",
+      "600: Milne, A. A. (Alan Alexander), 1882-1956"
+     ]
+    },
+    {
+     "titolo": "Disney's Christmas friendly tales.",
+     "lingua": "eng",
+     "anno": "1998",
+     "voci": [
+      "700: Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "Pooh friendly tales.",
+     "lingua": "eng",
+     "anno": "1997",
+     "voci": [
+      "700: Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "A trick or treat surprise /",
+     "lingua": "eng",
+     "anno": "1996",
+     "voci": [
+      "700: Milne, A.A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "The Camberley triangle;",
+     "lingua": "eng",
+     "anno": "1925",
+     "voci": [
+      "100: Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "Disney's Winnie the Pooh :",
+     "lingua": "eng",
+     "anno": "2000",
+     "voci": [
+      "700: Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "It's too late now;",
+     "lingua": "eng",
+     "anno": "1939",
+     "voci": [
+      "100: Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "Leave it to Pooh.",
+     "lingua": "eng",
+     "anno": "1996",
+     "voci": [
+      "700: Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "Four plays,",
+     "lingua": "eng",
+     "anno": "1926",
+     "voci": [
+      "100: Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "Pooh's house /",
+     "lingua": "eng",
+     "anno": "2002",
+     "voci": [
+      "100: Milne, A. A. (Alan Alexander), 1882-1956"
+     ]
+    },
+    {
+     "titolo": "Portrait of a gentleman in slippers;",
+     "lingua": "eng",
+     "anno": "1926",
+     "voci": [
+      "100: Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "Four days' wonder /",
+     "lingua": "eng",
+     "anno": "1933",
+     "voci": [
+      "100: Milne, A. A. (Alan Alexander), 1882-1956"
+     ]
+    },
+    {
+     "titolo": "Walt Disney's Winnie the Pooh treasury.",
+     "lingua": "eng",
+     "anno": "1995",
+     "voci": [
+      "700: Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "The acting edition of Mr. Pim passes by,",
+     "lingua": "eng",
+     "anno": "1921",
+     "voci": [
+      "100: Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "The red house mystery.",
+     "lingua": "eng",
+     "anno": "1922",
+     "voci": [
+      "100: Milne, A. A. (Alan Alexander), 1882-1956"
+     ]
+    },
+    {
+     "titolo": "The Christopher Robin verses:",
+     "lingua": "eng",
+     "anno": "1932",
+     "voci": [
+      "100: Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "The sunny side :",
+     "lingua": "eng",
+     "anno": "2006",
+     "voci": [
+      "100: Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "Once on a time",
+     "lingua": "eng",
+     "anno": "1968",
+     "voci": [
+      "100: Milne, A. A. (Alan Alexander), 1882-1956"
+     ]
+    },
+    {
+     "titolo": "The stepmother;",
+     "lingua": "eng",
+     "anno": "1921",
+     "voci": [
+      "100: Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "The red house mystery,",
+     "lingua": "eng",
+     "anno": "1936",
+     "voci": [
+      "100: Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "For the luncheon interval;",
+     "lingua": "eng",
+     "anno": "1925",
+     "voci": [
+      "100: Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "Not that it matters /",
+     "lingua": "eng",
+     "anno": "1919",
+     "voci": [
+      "100: Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "The Christopher Robin birthday book,",
+     "lingua": "eng",
+     "anno": "1930",
+     "voci": [
+      "100: Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "The artist ;",
+     "lingua": "eng",
+     "anno": "1923",
+     "voci": [
+      "100: Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "Chloe Marr,",
+     "lingua": "eng",
+     "anno": "1946",
+     "voci": [
+      "100: Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "The pocket Milne,",
+     "lingua": "eng",
+     "anno": "1941",
+     "voci": [
+      "100: Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "Success;",
+     "lingua": "eng",
+     "anno": "1926",
+     "voci": [
+      "100: Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "Peace with honour;",
+     "lingua": "eng",
+     "anno": "1972",
+     "voci": [
+      "100: Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "Winnie l'Ourson",
+     "lingua": "fre",
+     "anno": "1967",
+     "voci": [
+      "100: Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "Wurzel-Flummery:",
+     "lingua": "eng",
+     "anno": "1922",
+     "voci": [
+      "100: Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "Winnie-the-Pooh and Eeyore's tail.",
+     "lingua": "eng",
+     "anno": "1952",
+     "voci": [
+      "100: Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "Sarah Simple;",
+     "lingua": "eng",
+     "anno": "1939",
+     "voci": [
+      "100: Milne, A. A. (Alan Alexander), 1882-1956"
+     ]
+    },
+    {
+     "titolo": "Ole Brumm og vennene hans;",
+     "lingua": "nor",
+     "anno": "1947",
+     "voci": [
+      "100: Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "The day's play,",
+     "lingua": "eng",
+     "anno": "1921",
+     "voci": [
+      "100: Milne, A. A. (Alan Alexander), 1882-1956"
+     ]
+    },
+    {
+     "titolo": "Winnie ille Pu;",
+     "lingua": "lat",
+     "anno": "1962",
+     "voci": [
+      "100: Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "Sneezles,",
+     "lingua": "eng",
+     "anno": "1947",
+     "voci": [
+      "100: Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "Miss Marlow at play;",
+     "lingua": "eng",
+     "anno": "1936",
+     "voci": [
+      "100: Milne, A. A. (Alan Alexander), 1882-1956"
+     ]
+    },
+    {
+     "titolo": "Success,",
+     "lingua": "eng",
+     "anno": "1923",
+     "voci": [
+      "100: Milne, A. A. (Alan Alexander), 1882-1956"
+     ]
+    },
+    {
+     "titolo": "War with honour /",
+     "lingua": "eng",
+     "anno": "1940",
+     "voci": [
+      "100: Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "First plays,",
+     "lingua": "eng",
+     "anno": "1930",
+     "voci": [
+      "100: Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "The acting edition of Belinda;",
+     "lingua": "eng",
+     "anno": "1922",
+     "voci": [
+      "100: Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "Prince Rabbit /",
+     "lingua": "eng",
+     "anno": "1991",
+     "voci": [
+      "100: Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "A table near the band.",
+     "lingua": "eng",
+     "anno": "1950",
+     "voci": [
+      "100: Milne, A. A. (Alan Alexander), 1882-1956"
+     ]
+    },
+    {
+     "titolo": "Before the flood,",
+     "lingua": "eng",
+     "anno": "    ",
+     "voci": [
+      "100: Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "The house at Pooh Corner.",
+     "lingua": "eng",
+     "anno": "1974",
+     "voci": [
+      "100: Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "Winnie-the-Pooh's birthday book /",
+     "lingua": "eng",
+     "anno": "1993",
+     "voci": [
+      "100: Milne, A. A. (Alan Alexander), 1882-1956.",
+      "600: Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "The Norman church.",
+     "lingua": "eng",
+     "anno": "1948",
+     "voci": [
+      "100: Milne, A. A. (Alan Alexander), 1882-1956"
+     ]
+    },
+    {
+     "titolo": "Year in, year out;",
+     "lingua": "eng",
+     "anno": "1952",
+     "voci": [
+      "100: Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "Winnie-de-Poeh.",
+     "lingua": "dut",
+     "anno": "1967",
+     "voci": [
+      "100: Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 34,
+   "qid": "Q6152225",
+   "nome": "Jane Findlater",
+   "anni": "1866-1946",
+   "codici": [
+    "n86806787"
+   ],
+   "intestazioni": {
+    "n86806787": "Findlater, Jane Helen, 1866-1946"
+   },
+   "totale": 12,
+   "lette": 12,
+   "inglese": 12,
+   "inglese_dal_2000": 0,
+   "notizie": [
+    {
+     "titolo": "A daughter of strife,",
+     "lingua": "eng",
+     "anno": "1897",
+     "voci": [
+      "100: Findlater, Jane Helen, 1866-1946."
+     ]
+    },
+    {
+     "titolo": "A green-grass widow, and other stories,",
+     "lingua": "eng",
+     "anno": "1921",
+     "voci": [
+      "100: Findlater, Jane Helen, 1866-1946."
+     ]
+    },
+    {
+     "titolo": "Seven Scots stories.",
+     "lingua": "eng",
+     "anno": "1970",
+     "voci": [
+      "100: Findlater, Jane Helen, 1866-1946."
+     ]
+    },
+    {
+     "titolo": "The story of a mother,",
+     "lingua": "eng",
+     "anno": "1902",
+     "voci": [
+      "100: Findlater, Jane Helen, 1866-1946."
+     ]
+    },
+    {
+     "titolo": "The green graves of Balgowrie.",
+     "lingua": "eng",
+     "anno": "1896",
+     "voci": [
+      "100: Findlater, Jane Helen, 1866-1946."
+     ]
+    },
+    {
+     "titolo": "The ladder to the stars,",
+     "lingua": "eng",
+     "anno": "1906",
+     "voci": [
+      "100: Findlater, Jane Helen, 1866-1946."
+     ]
+    },
+    {
+     "titolo": "Rachel,",
+     "lingua": "eng",
+     "anno": "1899",
+     "voci": [
+      "100: Findlater, Jane Helen, 1866-1946."
+     ]
+    },
+    {
+     "titolo": "Seen and heard before and after 1914,",
+     "lingua": "eng",
+     "anno": "1916",
+     "voci": [
+      "100: Findlater, Mary, 1865-",
+      "700: Findlater, Jane Helen, 1866-1946."
+     ]
+    },
+    {
+     "titolo": "Crossriggs /",
+     "lingua": "eng",
+     "anno": "1986",
+     "voci": [
+      "100: Findlater, Mary, 1865- ",
+      "700: Findlater, Jane Helen, 1866-1946."
+     ]
+    },
+    {
+     "titolo": "Beneath the visting moon:",
+     "lingua": "eng",
+     "anno": "1923",
+     "voci": [
+      "100: Findlater, Mary, 1865-",
+      "700: Findlater, Jane Helen, 1866-1946,"
+     ]
+    },
+    {
+     "titolo": "Robinetta,",
+     "lingua": "eng",
+     "anno": "1911",
+     "voci": [
+      "700: Findlater, Mary, 1865-",
+      "700: Findlater, Jane Helen, 1866-1946,"
+     ]
+    },
+    {
+     "titolo": "The affair at the inn,",
+     "lingua": "eng",
+     "anno": "1904",
+     "voci": [
+      "700: Findlater, Mary, 1865-",
+      "700: Findlater, Jane Helen, 1866-1946."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 35,
+   "qid": "Q2160344",
+   "nome": "Virgilio Giotti",
+   "anni": "1885-1957",
+   "codici": [
+    "n87898567"
+   ],
+   "intestazioni": {
+    "n87898567": "Giotti, Virgilio, 1885-1957"
+   },
+   "totale": 4,
+   "lette": 4,
+   "inglese": 0,
+   "inglese_dal_2000": 0,
+   "notizie": [
+    {
+     "titolo": "Colori ...",
+     "lingua": "ita",
+     "anno": "1972",
+     "voci": [
+      "100: Giotti, Virgilio, 1885-1957."
+     ]
+    },
+    {
+     "titolo": "Colori /",
+     "lingua": "ita",
+     "anno": "1997",
+     "voci": [
+      "100: Giotti, Virgilio, 1885-1957."
+     ]
+    },
+    {
+     "titolo": "Leopardi a Trieste con Virgilio Giotti /",
+     "lingua": "ita",
+     "anno": "2015",
+     "voci": [
+      "600: Giotti, Virgilio, 1885-1957",
+      "700: Giotti, Virgilio, 1885-1957."
+     ]
+    },
+    {
+     "titolo": "Lettere al padre :",
+     "lingua": "ita",
+     "anno": "2005",
+     "voci": [
+      "100: Belli Giotti, Paolo, 1915-1943.",
+      "600: Belli Giotti, Paolo, 1915-1943",
+      "600: Belli Giotti, Franco, 1919-1943",
+      "600: Giotti, Virgilio, 1885-1957",
+      "700: Belli Giotti, Franco, 1919-1943.",
+      "700: Giotti, Virgilio, 1885-1957."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 36,
+   "qid": "Q15090962",
+   "nome": "Sergei Rozanov",
+   "anni": "1894-1957",
+   "codici": [
+    "n97865552"
+   ],
+   "intestazioni": {
+    "n97865552": "Rozanov, Sergeĭ Grigor'evich, 1894-1957"
+   },
+   "totale": 0,
+   "lette": 0,
+   "inglese": 0,
+   "inglese_dal_2000": 0,
+   "notizie": []
+  },
+  {
+   "n": 37,
+   "qid": "Q52150387",
+   "nome": "William Murray Graydon",
+   "anni": "1864-1946",
+   "codici": [
+    "no2003058543"
+   ],
+   "intestazioni": {
+    "no2003058543": "Graydon, William Murray, 1864-1946"
+   },
+   "totale": 4,
+   "lette": 4,
+   "inglese": 4,
+   "inglese_dal_2000": 0,
+   "notizie": [
+    {
+     "titolo": "Canoe boys and campfires;",
+     "lingua": "eng",
+     "anno": "1907",
+     "voci": [
+      "100: Graydon, William Murray, 1864-1946."
+     ]
+    },
+    {
+     "titolo": "In the days of Washington;",
+     "lingua": "eng",
+     "anno": "1896",
+     "voci": [
+      "100: Graydon, William Murray, 1864-1946."
+     ]
+    },
+    {
+     "titolo": "The princess of the purple palace /",
+     "lingua": "eng",
+     "anno": "1901",
+     "voci": [
+      "100: Graydon, William Murray, 1864-1946."
+     ]
+    },
+    {
+     "titolo": "Vignettes:",
+     "lingua": "eng",
+     "anno": "1890",
+     "voci": [
+      "700: Graydon, William Murray, 1864-1946."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 38,
+   "qid": "Q43249272",
+   "nome": "Paul Gsell",
+   "anni": "1870-1947",
+   "codici": [
+    "n82159063"
+   ],
+   "intestazioni": {
+    "n82159063": "Gsell, Paul, 1870-1947"
+   },
+   "totale": 29,
+   "lette": 29,
+   "inglese": 10,
+   "inglese_dal_2000": 0,
+   "notizie": [
+    {
+     "titolo": "Firmin Ge&#x301;mier :",
+     "lingua": "fre",
+     "anno": "1921",
+     "voci": [
+      "100: Gsell, Paul, 1870-1947."
+     ]
+    },
+    {
+     "titolo": "Le monde a l'endroit :",
+     "lingua": "fre",
+     "anno": "1936",
+     "voci": [
+      "100: Gsell, Paul, 1870-1947."
+     ]
+    },
+    {
+     "titolo": "Millet,",
+     "lingua": "fre",
+     "anno": "1928",
+     "voci": [
+      "100: Gsell, Paul, 1870-1947."
+     ]
+    },
+    {
+     "titolo": "T. s. f. avec les e&#x301;toiles.",
+     "lingua": "fre",
+     "anno": "1930",
+     "voci": [
+      "100: Gsell, Paul, 1870-1947."
+     ]
+    },
+    {
+     "titolo": "L'U. R. S. S. et sa foi nouvelle ...",
+     "lingua": "fre",
+     "anno": "1934",
+     "voci": [
+      "100: Gsell, Paul, 1870-1947."
+     ]
+    },
+    {
+     "titolo": "L'homme qui lit dans les a&#x302;mes.",
+     "lingua": "fre",
+     "anno": "1928",
+     "voci": [
+      "100: Gsell, Paul, 1870-1947."
+     ]
+    },
+    {
+     "titolo": "Les clefs d'or;",
+     "lingua": "fre",
+     "anno": "1933",
+     "voci": [
+      "100: Gsell, Paul, 1870-1947."
+     ]
+    },
+    {
+     "titolo": "L'Art;",
+     "lingua": "fre",
+     "anno": "1911",
+     "voci": [
+      "700: Gsell, Paul, 1870-1947."
+     ]
+    },
+    {
+     "titolo": "On art and artists.",
+     "lingua": "eng",
+     "anno": "1957",
+     "voci": [
+      "700: Gsell, Paul, 1870-1947."
+     ]
+    },
+    {
+     "titolo": "Art :",
+     "lingua": "eng",
+     "anno": "1984",
+     "voci": [
+      "700: Gsell, Paul, 1870-1947."
+     ]
+    },
+    {
+     "titolo": "L'Art,",
+     "lingua": "fre",
+     "anno": "1967",
+     "voci": [
+      "700: Gsell, Paul, 1870-1947,"
+     ]
+    },
+    {
+     "titolo": "The opinions of Anatole France,",
+     "lingua": "eng",
+     "anno": "1922",
+     "voci": [
+      "700: Gsell, Paul, 1870-1947,"
+     ]
+    },
+    {
+     "titolo": "Le the&#x301;a&#x302;tre,",
+     "lingua": "fre",
+     "anno": "1925",
+     "voci": [
+      "700: Gsell, Paul, 1870-1947."
+     ]
+    },
+    {
+     "titolo": "Les matine&#x301;es de la Villa Sai&#x308;d;",
+     "lingua": "fre",
+     "anno": "1921",
+     "voci": [
+      "700: Gsell, Paul, 1870-1947."
+     ]
+    },
+    {
+     "titolo": "Rodin on art and artists :",
+     "lingua": "eng",
+     "anno": "1983",
+     "voci": [
+      "700: Gsell, Paul, 1870-1947."
+     ]
+    },
+    {
+     "titolo": "Die Kunst; Gespra&#x308;che des Meisters,",
+     "lingua": "ger",
+     "anno": "1916",
+     "voci": [
+      "700: Gsell, Paul, 1870-1947."
+     ]
+    },
+    {
+     "titolo": "Art :",
+     "lingua": "eng",
+     "anno": "1984",
+     "voci": [
+      "700: Gsell, Paul, 1870-1947."
+     ]
+    },
+    {
+     "titolo": "L'Art; entretiens re&#x301;unis par Paul Gsell.",
+     "lingua": "fre",
+     "anno": "1924",
+     "voci": [
+      "700: Gsell, Paul, 1870-1947,"
+     ]
+    },
+    {
+     "titolo": "Art.",
+     "lingua": "eng",
+     "anno": "1912",
+     "voci": [
+      "700: Gsell, Paul, 1870-1947."
+     ]
+    },
+    {
+     "titolo": "Rodin on art.",
+     "lingua": "eng",
+     "anno": "1971",
+     "voci": [
+      "700: Gsell, Paul, 1870-1947."
+     ]
+    },
+    {
+     "titolo": "La vie d'une grande come&#x301;dienne;",
+     "lingua": "fre",
+     "anno": "1911",
+     "voci": [
+      "700: Gsell, Paul, 1870-1947,"
+     ]
+    },
+    {
+     "titolo": "El arte,",
+     "lingua": "spa",
+     "anno": "1944",
+     "voci": [
+      "700: Gsell, Paul, 1870-1947."
+     ]
+    },
+    {
+     "titolo": "Anatole France and his circle;",
+     "lingua": "eng",
+     "anno": "1922",
+     "voci": [
+      "700: Gsell, Paul, 1870-1947."
+     ]
+    },
+    {
+     "titolo": "Millet,",
+     "lingua": "eng",
+     "anno": "1928",
+     "voci": [
+      "100: Gsell, Paul, 1870-1947."
+     ]
+    },
+    {
+     "titolo": "Om Kunst;",
+     "lingua": "dan",
+     "anno": "1947",
+     "voci": [
+      "700: Gsell, Paul, 1870-1947."
+     ]
+    },
+    {
+     "titolo": "Die vormittage der Villa Said,",
+     "lingua": "ger",
+     "anno": "1925",
+     "voci": [
+      "700: Gsell, Paul, 1870-1947,"
+     ]
+    },
+    {
+     "titolo": "",
+     "lingua": "chi",
+     "anno": "2012",
+     "voci": [
+      "700: Gsell, Paul, 1870-1947,"
+     ]
+    },
+    {
+     "titolo": "My autobiography,",
+     "lingua": "eng",
+     "anno": "1913",
+     "voci": [
+      "700: Gsell, Paul, 1870-1947,"
+     ]
+    },
+    {
+     "titolo": "L'art :",
+     "lingua": "fre",
+     "anno": "1912",
+     "voci": [
+      "700: Gsell, Paul, 1870-1947."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 39,
+   "qid": "Q208993",
+   "nome": "Nikolaj Konstantinovič Rerich",
+   "anni": "1874-1947",
+   "codici": [
+    "n50049053"
+   ],
+   "intestazioni": {
+    "n50049053": "Roerich, Nicholas, 1874-1947"
+   },
+   "totale": 136,
+   "lette": 86,
+   "inglese": 27,
+   "inglese_dal_2000": 7,
+   "notizie": [
+    {
+     "titolo": "T&#xFE20;S&#xFE21;vety Morii /",
+     "lingua": "rus",
+     "anno": "1995",
+     "voci": [
+      "100: Roerich, Nicholas, 1874-1947."
+     ]
+    },
+    {
+     "titolo": "Shambhala :",
+     "lingua": "eng",
+     "anno": "1990",
+     "voci": [
+      "100: Roerich, Nicholas, 1874-1947."
+     ]
+    },
+    {
+     "titolo": "Beregite starinu /",
+     "lingua": "rus",
+     "anno": "1993",
+     "voci": [
+      "100: Roerich, Nicholas, 1874-1947."
+     ]
+    },
+    {
+     "titolo": "Altai--Himalaya;",
+     "lingua": "eng",
+     "anno": "1929",
+     "voci": [
+      "100: Roerich, Nicholas, 1874-1947."
+     ]
+    },
+    {
+     "titolo": "Himavat,",
+     "lingua": "eng",
+     "anno": "1946",
+     "voci": [
+      "100: Roerich, Nicholas, 1874-1947."
+     ]
+    },
+    {
+     "titolo": "Kul&#x2B9;tura i t&#xFE20;s&#xFE21;ivilizat&#xFE20;s&#xFE21;ii&#xFE20;a&#xFE21; /",
+     "lingua": "rus",
+     "anno": "1997",
+     "voci": [
+      "100: Roerich, Nicholas, 1874-1947."
+     ]
+    },
+    {
+     "titolo": "Joy of art.",
+     "lingua": "eng",
+     "anno": "1942",
+     "voci": [
+      "100: Roerich, Nicholas, 1874-1947."
+     ]
+    },
+    {
+     "titolo": "Le Pacte Roerich, bannie&#x300;re de paix.",
+     "lingua": "fre",
+     "anno": "1931",
+     "voci": [
+      "700: Roerich, Nicholas, 1874-1947."
+     ]
+    },
+    {
+     "titolo": "Heart of Asia /",
+     "lingua": "eng",
+     "anno": "2009",
+     "voci": [
+      "100: Roerich, Nicholas, 1874-1947."
+     ]
+    },
+    {
+     "titolo": "Shambhala /",
+     "lingua": "eng",
+     "anno": "2009",
+     "voci": [
+      "100: Roerich, Nicholas, 1874-1947,"
+     ]
+    },
+    {
+     "titolo": "",
+     "lingua": "rus",
+     "anno": "2013",
+     "voci": [
+      "100: Roerich, Nicholas, 1874-1947,"
+     ]
+    },
+    {
+     "titolo": "Serdt&#xFE20;s&#xFE21;e Azii.",
+     "lingua": "rus",
+     "anno": "1929",
+     "voci": [
+      "100: Roerich, Nicholas, 1874-1947."
+     ]
+    },
+    {
+     "titolo": "Himalayas :",
+     "lingua": "eng",
+     "anno": "1947",
+     "voci": [
+      "100: Roerich, Nicholas, 1874-1947."
+     ]
+    },
+    {
+     "titolo": "Altai&#x306;--Gimalai.",
+     "lingua": "rus",
+     "anno": "1974",
+     "voci": [
+      "100: Roerich, Nicholas, 1874-1947."
+     ]
+    },
+    {
+     "titolo": "Derzhava sveta /",
+     "lingua": "rus",
+     "anno": "1931",
+     "voci": [
+      "100: Roerich, Nicholas, 1874-1947."
+     ]
+    },
+    {
+     "titolo": "... Shambhala,",
+     "lingua": "eng",
+     "anno": "1930",
+     "voci": [
+      "100: Roerich, Nicholas, 1874-1947."
+     ]
+    },
+    {
+     "titolo": "Fiery stronghold,",
+     "lingua": "eng",
+     "anno": "1933",
+     "voci": [
+      "100: Roerich, Nicholas, 1874-1947."
+     ]
+    },
+    {
+     "titolo": "Himalayas abode of light",
+     "lingua": "eng",
+     "anno": "1947",
+     "voci": [
+      "100: Roerich, Nicholas, 1874-1947."
+     ]
+    },
+    {
+     "titolo": "Banner of peace.",
+     "lingua": "eng",
+     "anno": "1931",
+     "voci": [
+      "100: Roerich, Nicholas, 1874-1947."
+     ]
+    },
+    {
+     "titolo": "Violators of art...",
+     "lingua": "eng",
+     "anno": "1919",
+     "voci": [
+      "100: Roerich, Nicholas, 1874-1947."
+     ]
+    },
+    {
+     "titolo": "Chelovek i priroda /",
+     "lingua": "rus",
+     "anno": "1994",
+     "voci": [
+      "100: Roerich, Nicholas, 1874-1947."
+     ]
+    },
+    {
+     "titolo": "Realm of light,",
+     "lingua": "eng",
+     "anno": "1931",
+     "voci": [
+      "100: Roerich, Nicholas, 1874-1947."
+     ]
+    },
+    {
+     "titolo": "Altai&#x306;-Gimalai /",
+     "lingua": "rus",
+     "anno": "1999",
+     "voci": [
+      "100: Roerich, Nicholas, 1874-1947.",
+      "600: Roerich, Nicholas, 1874-1947"
+     ]
+    },
+    {
+     "titolo": "Listy dnevnika /",
+     "lingua": "rus",
+     "anno": "1995",
+     "voci": [
+      "100: Roerich, Nicholas, 1874-1947.",
+      "600: Roerich, Nicholas, 1874-1947",
+      "600: Roerich, Nicholas, 1874-1947"
+     ]
+    },
+    {
+     "titolo": "Shambala /",
+     "lingua": "rus",
+     "anno": "1994",
+     "voci": [
+      "100: Roerich, Nicholas, 1874-1947."
+     ]
+    },
+    {
+     "titolo": "",
+     "lingua": "rus",
+     "anno": "2011",
+     "voci": [
+      "100: Roerich, Nicholas, 1874-1947.",
+      "600: Roerich, Nicholas, 1874-1947"
+     ]
+    },
+    {
+     "titolo": "Pis&#x2B9;ma v Ameriku, 1923-1947 /",
+     "lingua": "rus",
+     "anno": "1998",
+     "voci": [
+      "100: Roerich, Nicholas, 1874-1947.",
+      "600: Roerich, Nicholas, 1874-1947",
+      "600: Roerich, Nicholas, 1874-1947"
+     ]
+    },
+    {
+     "titolo": "Beautiful unity.",
+     "lingua": "eng",
+     "anno": "1946",
+     "voci": [
+      "100: Roerich, Nicholas, 1874-1947."
+     ]
+    },
+    {
+     "titolo": "The Nicolas Roerich exhibition /",
+     "lingua": "eng",
+     "anno": "1920",
+     "voci": [
+      "100: Roerich, Nicholas, 1874-1947."
+     ]
+    },
+    {
+     "titolo": "Heart of Asia :",
+     "lingua": "eng",
+     "anno": "1990",
+     "voci": [
+      "100: Roerich, Nicholas, 1874-1947."
+     ]
+    },
+    {
+     "titolo": "",
+     "lingua": "rus",
+     "anno": "2015",
+     "voci": [
+      "100: Roerich, Nicholas, 1874-1947,",
+      "600: Roerich, Nicholas, 1874-1947",
+      "600: Roerich, Nicholas, 1874-1947",
+      "600: Roerich, Nicholas, 1874-1947",
+      "600: Roerich, Nicholas, 1874-1947"
+     ]
+    },
+    {
+     "titolo": "Pis&#x2B9;mena :",
+     "lingua": "rus",
+     "anno": "1974",
+     "voci": [
+      "100: Roerich, Nicholas, 1874-1947."
+     ]
+    },
+    {
+     "titolo": "Listy dnevnika /",
+     "lingua": "rus",
+     "anno": "1999",
+     "voci": [
+      "100: Roerich, Nicholas, 1874-1947.",
+      "600: Roerich, Nicholas, 1874-1947",
+      "600: Roerich, Nicholas, 1874-1947"
+     ]
+    },
+    {
+     "titolo": "Nikolai&#x306; Rerikh :",
+     "lingua": "rus",
+     "anno": "1970",
+     "voci": [
+      "100: Roerich, Nicholas, 1874-1947."
+     ]
+    },
+    {
+     "titolo": "",
+     "lingua": "rus",
+     "anno": "1921",
+     "voci": [
+      "100: Roerich, Nicholas, 1874-1947,"
+     ]
+    },
+    {
+     "titolo": "Nikolai&#x306; Rerikh.",
+     "lingua": "rus",
+     "anno": "1998",
+     "voci": [
+      "100: Roerich, Nicholas, 1874-1947.",
+      "600: Roerich, Nicholas, 1874-1947."
+     ]
+    },
+    {
+     "titolo": "Svi&#xFE20;a&#xFE21;shchennyi&#x306; dozor.",
+     "lingua": "rus",
+     "anno": "1934",
+     "voci": [
+      "100: Roerich, Nicholas, 1874-1947."
+     ]
+    },
+    {
+     "titolo": "Dusha narodov /",
+     "lingua": "rus",
+     "anno": "1995",
+     "voci": [
+      "100: Roerich, Nicholas, 1874-1947."
+     ]
+    },
+    {
+     "titolo": "Svi&#xFE20;a&#xFE21;shchennyi&#x306; dozor /",
+     "lingua": "rus",
+     "anno": "1992",
+     "voci": [
+      "100: Roerich, Nicholas, 1874-1947."
+     ]
+    },
+    {
+     "titolo": "The invincible /",
+     "lingua": "eng",
+     "anno": "1974",
+     "voci": [
+      "100: Roerich, Nicholas, 1874-1947."
+     ]
+    },
+    {
+     "titolo": "T&#xFE20;S&#xFE21;vety morii :",
+     "lingua": "rus",
+     "anno": "1988",
+     "voci": [
+      "100: Roerich, Nicholas, 1874-1947."
+     ]
+    },
+    {
+     "titolo": "Serii&#xFE20;a&#xFE21; Pis&#x2B9;ma N.K. Rerikha /",
+     "lingua": "rus",
+     "anno": "1900",
+     "voci": [
+      "100: Roerich, Nicholas, 1874-1947.",
+      "600: Roerich, Nicholas, 1874-1947"
+     ]
+    },
+    {
+     "titolo": "Sem&#x2B9; velikikh tai&#x306;n kosmosa /",
+     "lingua": "rus",
+     "anno": "1999",
+     "voci": [
+      "100: Roerich, Nicholas, 1874-1947."
+     ]
+    },
+    {
+     "titolo": "",
+     "lingua": "bul",
+     "anno": "2015",
+     "voci": [
+      "100: Roerich, Nicholas, 1874-1947,",
+      "600: Roerich, Nicholas, 1874-1947"
+     ]
+    },
+    {
+     "titolo": "Violators of art",
+     "lingua": "eng",
+     "anno": "1919",
+     "voci": [
+      "100: Roerich, Nicholas, 1874-1947."
+     ]
+    },
+    {
+     "titolo": "The invincible /",
+     "lingua": "eng",
+     "anno": "2011",
+     "voci": [
+      "100: Roerich, Nicholas, 1874-1947."
+     ]
+    },
+    {
+     "titolo": "Nicholas Roerich in Indian journals, 1933-1946 /",
+     "lingua": "eng",
+     "anno": "2000",
+     "voci": [
+      "100: Roerich, Nicholas, 1874-1947."
+     ]
+    },
+    {
+     "titolo": "Flame in chalice.",
+     "lingua": "eng",
+     "anno": "1930",
+     "voci": [
+      "100: Roerich, Nicholas, 1874-1947."
+     ]
+    },
+    {
+     "titolo": "Tvorcheskii&#x306; put&#x2B9; Nikolai&#xFE20;a&#xFE21; Rerikha /",
+     "lingua": "rus",
+     "anno": "2001",
+     "voci": [
+      "600: Roerich, Nicholas, 1874-1947",
+      "700: Roerich, Nicholas, 1874-1947."
+     ]
+    },
+    {
+     "titolo": "Nikolai&#x306; Konstantinovich Rerikh.",
+     "lingua": "rus",
+     "anno": "1959",
+     "voci": [
+      "100: Roerich, Nicholas, 1874-1947."
+     ]
+    },
+    {
+     "titolo": "Kul&#x2B9;tura i t&#xFE20;s&#xFE21;ivilizat&#xFE20;s&#xFE21;ii&#xFE20;a&#xFE21; /",
+     "lingua": "rus",
+     "anno": "1994",
+     "voci": [
+      "100: Roerich, Nicholas, 1874-1947."
+     ]
+    },
+    {
+     "titolo": "Nikolai&#x306; Rerikh v russkoi&#x306; periodike, 1891-1918 /",
+     "lingua": "rus",
+     "anno": "2004",
+     "voci": [
+      "600: Roerich, Nicholas, 1874-1947",
+      "600: Roerich, Nicholas, 1874-1947",
+      "600: Roerich, Nicholas, 1874-1947",
+      "700: Roerich, Nicholas, 1874-1947."
+     ]
+    },
+    {
+     "titolo": "The Roerich pact and the military :",
+     "lingua": "eng",
+     "anno": "2010",
+     "voci": [
+      "600: Roerich, Nicholas, 1874-1947.",
+      "700: Roerich, Nicholas, 1874-1947."
+     ]
+    },
+    {
+     "titolo": "Nicholas Roerich :",
+     "lingua": "eng",
+     "anno": "1992",
+     "voci": [
+      "100: Roerich, Nicholas, 1874-1947.",
+      "600: Roerich, Nicholas, 1874-1947"
+     ]
+    },
+    {
+     "titolo": "Znami&#xFE20;a&#xFE21; mira /",
+     "lingua": "rus",
+     "anno": "2005",
+     "voci": [
+      "100: Roerich, Nicholas, 1874-1947.",
+      "600: Roerich, Nicholas, 1874-1947"
+     ]
+    },
+    {
+     "titolo": "E&#x307;pistoli&#xFE20;a&#xFE21;rnoe nasledie Nikolai&#xFE20;a&#xFE21; Konstantinovicha Re",
+     "lingua": "rus",
+     "anno": "2006",
+     "voci": [
+      "100: Roerich, Nicholas, 1874-1947.",
+      "600: Roerich, Nicholas, 1874-1947"
+     ]
+    },
+    {
+     "titolo": "Nikolaja Re&#x304;riha gleznas Latvija&#x304; /",
+     "lingua": "lav",
+     "anno": "2011",
+     "voci": [
+      "100: Roerich, Nicholas, 1874-1947.",
+      "600: Roerich, Nicholas, 1874-1947"
+     ]
+    },
+    {
+     "titolo": "Himalaya, a monograph;",
+     "lingua": "eng",
+     "anno": "1926",
+     "voci": [
+      "100: Roerich, Nicholas, 1874-1947."
+     ]
+    },
+    {
+     "titolo": "",
+     "lingua": "rus",
+     "anno": "2018",
+     "voci": [
+      "100: Roerich, Nicholas, 1874-1947,",
+      "600: Roerich, Nicholas, 1874-1947"
+     ]
+    },
+    {
+     "titolo": "",
+     "lingua": "rus",
+     "anno": "2020",
+     "voci": [
+      "600: Roerich, Nicholas, 1874-1947",
+      "700: Roerich, Nicholas, 1874-1947."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 40,
+   "qid": "Q12032573",
+   "nome": "Ladislav Novák",
+   "anni": "1872-1946",
+   "codici": [
+    "n2001066432"
+   ],
+   "intestazioni": {
+    "n2001066432": "Novák, Ladislav, 1872-1946"
+   },
+   "totale": 0,
+   "lette": 0,
+   "inglese": 0,
+   "inglese_dal_2000": 0,
+   "notizie": []
+  }
+ ]
+}
