@@ -242,7 +242,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 20510,
+   "visite_en": 20509,
    "copertina": {
     "file": "Green-Grow-the-Lilacs-1931.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Green-Grow-the-Lilacs-1931.jpg/500px-Green-Grow-the-Lilacs-1931.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -268,7 +268,7 @@
     "it": "francese"
    },
    "generi": [],
-   "visite_en": 15484
+   "visite_en": 15485
   },
   {
    "qid": "Q887062",
@@ -397,7 +397,7 @@
     "memorie",
     "storico"
    ],
-   "visite_en": 10339
+   "visite_en": 10338
   },
   {
    "qid": "Q265042",
@@ -566,7 +566,7 @@
    "generi": [
     "horror"
    ],
-   "visite_en": 8412
+   "visite_en": 8410
   },
   {
    "qid": "Q3290152",
@@ -736,7 +736,7 @@
     "it": "inglese americano"
    },
    "generi": [],
-   "visite_en": 5745
+   "visite_en": 5743
   },
   {
    "qid": "Q6743438",
@@ -836,7 +836,7 @@
     "giallo",
     "ragazzi"
    ],
-   "visite_en": 4999,
+   "visite_en": 4998,
    "copertina": {
     "file": "The Secret at Shadow Ranch (1931) front cover, 1933B-9 printing.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/The_Secret_at_Shadow_Ranch_%281931%29_front_cover%2C_1933B-9_printing.jpg/500px-The_Secret_at_Shadow_Ranch_%281931%29_front_cover%2C_1933B-9_printing.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -864,7 +864,7 @@
    "generi": [
     "horror"
    ],
-   "visite_en": 4891
+   "visite_en": 4889
   },
   {
    "qid": "Q7460836",
@@ -971,6 +971,25 @@
    }
   },
   {
+   "qid": "Q7069500",
+   "titolo": "Number 31328",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q5360627",
+     "nome": "Ilias Venezis"
+    }
+   ],
+   "pagine": 8,
+   "wiki_en": "https://en.wikipedia.org/wiki/Number_31328",
+   "lingua": {
+    "en": "Greek",
+    "it": "greco"
+   },
+   "generi": [],
+   "visite_en": 3931
+  },
+  {
    "qid": "Q119144545",
    "titolo": "The Sands of Windee",
    "titolo_it": null,
@@ -989,26 +1008,7 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 3938
-  },
-  {
-   "qid": "Q7069500",
-   "titolo": "Number 31328",
-   "titolo_it": null,
-   "autori": [
-    {
-     "qid": "Q5360627",
-     "nome": "Ilias Venezis"
-    }
-   ],
-   "pagine": 8,
-   "wiki_en": "https://en.wikipedia.org/wiki/Number_31328",
-   "lingua": {
-    "en": "Greek",
-    "it": "greco"
-   },
-   "generi": [],
-   "visite_en": 3934
+   "visite_en": 3926
   },
   {
    "qid": "Q874809",
@@ -1339,7 +1339,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 2662
+   "visite_en": 2664
   },
   {
    "qid": "Q5047445",
@@ -1358,7 +1358,7 @@
     "it": "spagnolo"
    },
    "generi": [],
-   "visite_en": 2651
+   "visite_en": 2650
   },
   {
    "qid": "Q5670870",
@@ -1379,7 +1379,7 @@
    "generi": [
     "poesia"
    ],
-   "visite_en": 2625,
+   "visite_en": 2624,
    "copertina": {
     "file": "Altazor - Poema.JPG",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Altazor_-_Poema.JPG/500px-Altazor_-_Poema.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -1445,7 +1445,7 @@
    "generi": [
     "ragazzi"
    ],
-   "visite_en": 2500,
+   "visite_en": 2497,
    "copertina": {
     "file": "Buchdeckel des Kinderbuchs \"Der 35. Mai\" (33.-43 Aufl. 1948).jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Buchdeckel_des_Kinderbuchs_%22Der_35._Mai%22_%2833.-43_Aufl._1948%29.jpg/500px-Buchdeckel_des_Kinderbuchs_%22Der_35._Mai%22_%2833.-43_Aufl._1948%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -1490,7 +1490,7 @@
     "it": "tedesco"
    },
    "generi": [],
-   "visite_en": 2019
+   "visite_en": 2020
   },
   {
    "qid": "Q7687019",
@@ -1697,7 +1697,7 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 1457
+   "visite_en": 1451
   },
   {
    "qid": "Q328061",
@@ -1737,26 +1737,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 1428
-  },
-  {
-   "qid": "Q5437626",
-   "titolo": "Father Malachy's Miracle",
-   "titolo_it": "Il miracolo di padre Malachia",
-   "autori": [
-    {
-     "qid": "Q991736",
-     "nome": "Bruce Marshall"
-    }
-   ],
-   "pagine": 3,
-   "wiki_en": "https://en.wikipedia.org/wiki/Father_Malachy%27s_Miracle",
-   "lingua": {
-    "en": "English",
-    "it": "inglese"
-   },
-   "generi": [],
-   "visite_en": 1388
+   "visite_en": 1426
   },
   {
    "qid": "Q56308426",
@@ -1779,6 +1760,25 @@
     "licenza": "Public domain",
     "autore": "2d Lt. L J. Rode."
    }
+  },
+  {
+   "qid": "Q5437626",
+   "titolo": "Father Malachy's Miracle",
+   "titolo_it": "Il miracolo di padre Malachia",
+   "autori": [
+    {
+     "qid": "Q991736",
+     "nome": "Bruce Marshall"
+    }
+   ],
+   "pagine": 3,
+   "wiki_en": "https://en.wikipedia.org/wiki/Father_Malachy%27s_Miracle",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [],
+   "visite_en": 1386
   },
   {
    "qid": "Q7720011",
@@ -1884,7 +1884,7 @@
    "generi": [
     "saggio"
    ],
-   "visite_en": 1270,
+   "visite_en": 1272,
    "copertina": {
     "file": "Троцкий - Перманентная революция (1930, обложка).jpg",
     "url": "https://upload.wikimedia.org/wikipedia/commons/d/d7/%D0%A2%D1%80%D0%BE%D1%86%D0%BA%D0%B8%D0%B9_-_%D0%9F%D0%B5%D1%80%D0%BC%D0%B0%D0%BD%D0%B5%D0%BD%D1%82%D0%BD%D0%B0%D1%8F_%D1%80%D0%B5%D0%B2%D0%BE%D0%BB%D1%8E%D1%86%D0%B8%D1%8F_%281930%2C_%D0%BE%D0%B1%D0%BB%D0%BE%D0%B6%D0%BA%D0%B0%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -2035,7 +2035,7 @@
     "it": "portoghese"
    },
    "generi": [],
-   "visite_en": 1021
+   "visite_en": 1020
   },
   {
    "qid": "Q1404733",
@@ -2122,7 +2122,7 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 840
+   "visite_en": 836
   },
   {
    "qid": "Q3209740",
@@ -2174,7 +2174,7 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 748,
+   "visite_en": 747,
    "copertina": {
     "file": "Ecluse du grand carré Canal de Deule Péniche.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Ecluse_du_grand_carr%C3%A9_Canal_de_Deule_P%C3%A9niche.jpg/500px-Ecluse_du_grand_carr%C3%A9_Canal_de_Deule_P%C3%A9niche.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -2401,7 +2401,7 @@
     "it": "catalano"
    },
    "generi": [],
-   "visite_en": 429
+   "visite_en": 431
   },
   {
    "qid": "Q523506",
@@ -2441,7 +2441,7 @@
     "it": "catalano"
    },
    "generi": [],
-   "visite_en": 379,
+   "visite_en": 377,
    "copertina": {
     "file": "'Mort de dama', 9a edició.JPG",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/%27Mort_de_dama%27%2C_9a_edici%C3%B3.JPG/500px-%27Mort_de_dama%27%2C_9a_edici%C3%B3.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
