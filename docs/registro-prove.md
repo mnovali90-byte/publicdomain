@@ -179,3 +179,12 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - **Seconda verifica** (`docs/verifica-loc2/`, 40 autori nuovi, seme 20261123, regole versione 2 congelate prima, esiti a mano prima della misura guardando tutte le intestazioni col cognome): **1181 notizie giuste in inglese contate, 0 perse, 0 di altre persone contate**; 801 notizie non sue o non in inglese correttamente escluse; 0 errori tecnici. Due intestazioni sue con anni scritti in più (Suits, Villetard) non sono contate, ma nessuna era in inglese.
 - **Limite:** 7 autori su 40 hanno il codice ma il catalogo non trova nulla con l'intestazione ufficiale (tra questi E. C. Vivian e Bob Olsen, che quasi certamente hanno libri in inglese): notizie vecchie schedate con un'altra forma del nome. Il sito dice «nessuna registrazione collegata», non «inedito».
 - **Rilascio:** `loc.py` nel flusso di aggiornamento (30 minuti per giro, riparte da solo); sul sito, Paese «USA»: numeri della Library of Congress; senza codice LC: «Wikidata non indica il codice Library of Congress di questo autore».
+
+### 18/11/2026 — Revisione di cosa dice il sito
+- **Cosa si è controllato:** tutti i testi del sito, delle pagine autore e dei README, confrontati con quello che il sistema fa davvero oggi.
+- **Corretto:**
+  - l'esportazione per Excel (CSV) aveva ancora le colonne di Open Library e solo quelle di SBN: ora ha le colonne del catalogo del paese scelto (SBN, BnF, BNE, British Library, Library of Congress), con «dato non disponibile» e «in verifica» al posto dei vuoti;
+  - testi di presentazione, fonti in fondo al sito e descrizioni per Google citavano solo SBN o Open Library: ora citano i cataloghi nazionali e il Regno Unito e gli USA;
+  - tolte parti morte del codice (vecchio blocco SBN, testi di Open Library mai mostrati);
+  - README italiano e inglese riscritti: metodi attuali di ogni catalogo, USA coperti, Germania non collegata, come si evitano gli errori.
+- **Proroga italiana di 6 anni (D.Lgs.Lgt. 440/1945):** verificata sul testo della L. 52/1996 art. 17 riportato da WIPO Lex. Il comma 1 abroga la proroga dei termini; i commi 3 e 5 richiamano solo le procedure degli articoli 2-5 del decreto (accordi tra autori, eredi ed editori; compenso per il cinema). Quindi la frase del sito «abrogata dalla legge 52/1996, art. 17» è corretta e resta.
