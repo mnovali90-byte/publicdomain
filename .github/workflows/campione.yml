@@ -6,6 +6,8 @@ on:
       - "scripts/campione_sbn.py"
       - "scripts/campione_prove.py"
       - "scripts/campione_titoli.py"
+      - "scripts/campione_valuta.py"
+      - "scripts/riconosci_sbn.py"
       - ".github/workflows/campione.yml"
   workflow_dispatch:
 
@@ -24,7 +26,7 @@ jobs:
       - name: Sceglie il campione, congela il risultato attuale e raccoglie le prove (non cambia il sito)
         env:
           BUDGET_MINUTI_SBN: "80"
-        run: python scripts/campione_titoli.py
+        run: python scripts/campione_valuta.py fase3
       - name: Salva il campione
         if: always()
         run: |
@@ -32,6 +34,6 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add docs/campione
           if ! git diff --cached --quiet; then
-            git commit -m "Campione SBN: prova con i titoli"
+            git commit -m "Campione SBN: misura della fase 3"
             for i in 1 2 3 4 5; do git pull --rebase --autostash -X theirs origin main && git push && break; sleep $((i*20)); done
           fi
