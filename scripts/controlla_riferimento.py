@@ -8,7 +8,7 @@ def get(u):
         return urllib.request.urlopen(r, timeout=40).read().decode("utf-8", "replace")
     except Exception as e:
         return "ERRORE " + str(e)[:80]
-righe = list(csv.DictReader(open("docs/stima-sito/riferimento-1956-chatgpt.csv", encoding="utf-8"), delimiter=";"))
+righe = list(csv.DictReader(open("docs/stima-sito/riferimento-1956-chatgpt.csv", encoding="utf-8-sig"), delimiter=";"))
 out = []
 for r in righe:
     if not r.get("nome"): continue
