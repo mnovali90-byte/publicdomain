@@ -3050,15 +3050,15 @@
      "loc": 1947
     },
     "citate": {
-     "Brockhaus Enzyklopädie": 1947,
-     "Spanish Biographical Dictionary": 1947,
-     "Discogs": 1947,
      "Find a Grave": 1947,
      "Manuel Machado y el catolicismo": 1947,
      "Integrated Authority File": 1947,
      "Great Norwegian Encyclopedia": 1947,
      "Gran Enciclopèdia Catalana": 1947,
-     "Encyclopædia Britannica Online": 1947
+     "Encyclopædia Britannica Online": 1947,
+     "Brockhaus Enzyklopädie": 1947,
+     "Spanish Biographical Dictionary": 1947,
+     "Discogs": 1947
     }
    },
    "pagina": "manuel-machado",
@@ -6524,10 +6524,10 @@
      "gnd": 1931
     },
     "citate": {
-     "Integrated Authority File": 1931,
      "Digitale Bibliotheek voor de Nederlandse Letteren": 1947,
      "MAK": 1947,
-     "WeChangEd": 1947
+     "WeChangEd": 1947,
+     "Integrated Authority File": 1931
     }
    }
   },
@@ -26584,7 +26584,10 @@
      "edizioni": 1,
      "dal_2000": 0,
      "fonte": "BNE",
-     "metodo": "nome_anni"
+     "metodo": "nome_anni",
+     "stato": "da_verificare",
+     "motivo": "collegamento non dimostrato: l'unica notizia BNE trovata per nome è un Don Quijote: cognome e anni in voci diverse",
+     "sospeso_manuale": true
     },
     "bl_en": {
      "trovato": true,
