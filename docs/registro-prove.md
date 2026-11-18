@@ -126,3 +126,17 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - **Scott e Rodríguez:** altri elementi coerenti in SBN (Scott: Toronto, Morang 1900, «with a memoir by Duncan Campbell Scott»; Rodríguez: spartito di El matrero di Felipe Boero, Buenos Aires 1937, lui librettista).
 - **Wikipedia esclusa dal confronto automatico:** i titoli solo menzionati in una voce possono essere di altre persone (Karl M. Baer). Resta come lettura a mano. In produzione Wikipedia non è mai stata usata: `riconosci_sbn.py` confronta solo le opere di Wikidata (P50). Conteggio per fonte senza Wikipedia: Open Library 2, BnF 1, DNB 1, BNE 1; autori identificati sempre 3 su 20.
 - **Prudenza sui numeri:** 3 su 20 è il risultato di questo piccolo campione, non una stima affidabile per i 90. I 17 non risolti restano irrisolti, non assenti.
+
+### 18/11/2026 — BnF, punto 1: risultato congelato e campione di sviluppo
+- **Perché 236 autori e non 459 come SBN:** bnf.py lavora sugli elenchi UE (`2027.json`, `2028.json`) e salta di proposito gli elenchi della Spagna (`es-*.json`): la pagina Francia non li mostra. SBN invece li interroga tutti. Differenza: 213 autori presenti solo negli elenchi spagnoli. Tra i 236 candidati BnF **nessuno è rimasto non elaborato**: 106 trovati, 34 con codice e zero notizie in francese, 96 senza codice BnF in Wikidata (quindi nessun dato).
+- **Risultato attuale congelato** prima di ogni modifica: `docs/campione-bnf/bnf-base-2026-11-18.json` (cache e codici BnF di Wikidata per i 236).
+- **Campione di sviluppo** (`scripts/bnf_campione.py`, `bnf_campione2.py`, seme 20261118): 20 trovati, 20 con codice e zero, 20 senza codice. Prove: scheda d'autore BnF (nome, anni, varianti, fonti), notizie collegate in tutte le lingue e in francese, come è collegato l'autore (autore, collaboratore, soggetto), notizie in francese col suo nome ma non collegate, schede d'autore con lo stesso cognome. Esiti in `esiti.json`.
+- **Esiti, categorie distinte:**
+  - riconosciuto, con notizie in francese: 20 su 20 (identità verificata: nome e anni coincidono);
+  - riconosciuto senza risultati in francese: 19 su 20 (identità verificata; nessuna notizia nemmeno cercando il nome);
+  - riconosciuto ma con una notizia francese non collegata: 1 (Hans Mahner-Mons: il codice porta a «Possendorf Hans», suo pseudonimo; «Monsieur de Paris / H.-M. Mons», 1955, è collegato a un'altra forma del nome). Quindi «zero» non è sempre zero;
+  - identità irrisolta: 20 su 20 senza codice. Per 12 la BnF non ha nessuna scheda d'autore con quel cognome e nome (elenco completo); per 8 il cognome ha troppe schede e la ricerca è incompleta;
+  - errori tecnici: 0.
+- **Codici:** 40 su 40 portano alla persona giusta. Roger Vercel ha due codici in Wikidata (anche «Crétin Roger», il vero nome): oggi se ne conta uno.
+- **Cosa si conta:** nelle notizie lette (fino a 100 per autore) nessuna è collegata all'autore solo come soggetto (libri su di lui): sono tutte da autore o collaboratore, come deciso. Le collaborazioni pesano in modo diverso: Van Druten 11 su 12 (adattamenti), Ingalls Wilder 23 su 88.
+- **Da verificare nel punto successivo:** per alcuni autori la ricerca per nome trova più notizie in francese di quelle collegate al codice (Arlen 41 contro 5, Cummings 31 contro 4, Lewis 53 contro 12, Leclercq 123 contro 15). Potrebbero essere omonimi (Michael J. Arlen, il figlio) o notizie non collegate: non si sa ancora.

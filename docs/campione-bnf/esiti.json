@@ -1,0 +1,953 @@
+{
+ "nota": "Esiti a mano del 18/11/2026 sul campione di sviluppo BnF. Categorie tenute distinte: riconosciuto con notizie in francese / riconosciuto senza risultati in francese / identità irrisolta / errore tecnico.",
+ "autori": [
+  {
+   "n": 1,
+   "qid": "Q5798363",
+   "nome": "Daniel García-Mansilla",
+   "gruppo": "trovato",
+   "esito": "riconosciuto, con notizie in francese",
+   "errore_tecnico": null,
+   "nota": "nome e anni della scheda BnF coincidono con Wikidata",
+   "collegamenti_fr": {
+    "16355376t": [
+     1,
+     {
+      "autore": 1
+     }
+    ]
+   },
+   "notizie_fr_col_nome": {
+    "García-Mansilla": 1,
+    "Garcia-Mansilla": 1
+   }
+  },
+  {
+   "n": 2,
+   "qid": "Q237514",
+   "nome": "Laura Ingalls Wilder",
+   "gruppo": "trovato",
+   "esito": "riconosciuto, con notizie in francese",
+   "errore_tecnico": null,
+   "nota": "nome e anni della scheda BnF coincidono con Wikidata",
+   "collegamenti_fr": {
+    "11929193j": [
+     88,
+     {
+      "autore": 65,
+      "collaboratore": 23
+     }
+    ]
+   },
+   "notizie_fr_col_nome": {
+    "Wilder": 93
+   }
+  },
+  {
+   "n": 3,
+   "qid": "Q3122298",
+   "nome": "Guy de Téramond",
+   "gruppo": "trovato",
+   "esito": "riconosciuto, con notizie in francese",
+   "errore_tecnico": null,
+   "nota": "nome e anni della scheda BnF coincidono con Wikidata",
+   "collegamenti_fr": {
+    "12102847z": [
+     100,
+     {
+      "autore": 69,
+      "collaboratore": 31
+     }
+    ]
+   },
+   "notizie_fr_col_nome": {
+    "Téramond": 246,
+    "Teramond": 246
+   }
+  },
+  {
+   "n": 4,
+   "qid": "Q1639201",
+   "nome": "Craig Rice",
+   "gruppo": "trovato",
+   "esito": "riconosciuto, con notizie in francese",
+   "errore_tecnico": null,
+   "nota": "nome e anni della scheda BnF coincidono con Wikidata",
+   "collegamenti_fr": {
+    "120508867": [
+     32,
+     {
+      "autore": 32
+     }
+    ]
+   },
+   "notizie_fr_col_nome": {
+    "Rice": 40
+   }
+  },
+  {
+   "n": 5,
+   "qid": "Q1351464",
+   "nome": "Fletcher Pratt",
+   "gruppo": "trovato",
+   "esito": "riconosciuto, con notizie in francese",
+   "errore_tecnico": null,
+   "nota": "nome e anni della scheda BnF coincidono con Wikidata",
+   "collegamenti_fr": {
+    "12632874b": [
+     7,
+     {
+      "autore": 6,
+      "collaboratore": 1
+     }
+    ]
+   },
+   "notizie_fr_col_nome": {
+    "Pratt": 7
+   }
+  },
+  {
+   "n": 6,
+   "qid": "Q857714",
+   "nome": "Camil Petrescu",
+   "gruppo": "trovato",
+   "esito": "riconosciuto, con notizie in francese",
+   "errore_tecnico": null,
+   "nota": "nome e anni della scheda BnF coincidono con Wikidata",
+   "collegamenti_fr": {
+    "120591823": [
+     7,
+     {
+      "autore": 7
+     }
+    ]
+   },
+   "notizie_fr_col_nome": {
+    "Petrescu": 7
+   }
+  },
+  {
+   "n": 7,
+   "qid": "Q115683",
+   "nome": "Michael Arlen",
+   "gruppo": "trovato",
+   "esito": "riconosciuto, con notizie in francese",
+   "errore_tecnico": null,
+   "nota": "nome e anni della scheda BnF coincidono con Wikidata",
+   "collegamenti_fr": {
+    "121525742": [
+     5,
+     {
+      "autore": 5
+     }
+    ]
+   },
+   "notizie_fr_col_nome": {
+    "Arlen": 41
+   }
+  },
+  {
+   "n": 8,
+   "qid": "Q2695518",
+   "nome": "John William Van Druten",
+   "gruppo": "trovato",
+   "esito": "riconosciuto, con notizie in francese",
+   "errore_tecnico": null,
+   "nota": "nome e anni della scheda BnF coincidono con Wikidata",
+   "collegamenti_fr": {
+    "141429329": [
+     12,
+     {
+      "non letto": 1,
+      "collaboratore": 11
+     }
+    ]
+   },
+   "notizie_fr_col_nome": {
+    "Druten": 13
+   }
+  },
+  {
+   "n": 9,
+   "qid": "Q3453278",
+   "nome": "Rupert Hughes",
+   "gruppo": "trovato",
+   "esito": "riconosciuto, con notizie in francese",
+   "errore_tecnico": null,
+   "nota": "nome e anni della scheda BnF coincidono con Wikidata",
+   "collegamenti_fr": {
+    "10959075t": [
+     1,
+     {
+      "autore": 1
+     }
+    ]
+   },
+   "notizie_fr_col_nome": {
+    "Hughes": 8
+   }
+  },
+  {
+   "n": 10,
+   "qid": "Q3087522",
+   "nome": "Roger Vercel",
+   "gruppo": "trovato",
+   "esito": "riconosciuto, con notizie in francese",
+   "errore_tecnico": null,
+   "nota": "nome e anni della scheda BnF coincidono con Wikidata; Wikidata ha due codici: «Crétin Roger» (vero nome, tesi del 1927) e «Vercel Roger»; oggi se ne conta uno solo",
+   "collegamenti_fr": {
+    "16178881k": [
+     3,
+     {
+      "autore": 3
+     }
+    ],
+    "119279086": [
+     100,
+     {
+      "non letto": 5,
+      "autore": 87,
+      "collaboratore": 8
+     }
+    ]
+   },
+   "notizie_fr_col_nome": {
+    "Vercel": 273
+   }
+  },
+  {
+   "n": 11,
+   "qid": "Q3902928",
+   "nome": "Pier Maria Rosso di San Secondo",
+   "gruppo": "trovato",
+   "esito": "riconosciuto, con notizie in francese",
+   "errore_tecnico": null,
+   "nota": "nome e anni della scheda BnF coincidono con Wikidata",
+   "collegamenti_fr": {
+    "121993203": [
+     3,
+     {
+      "autore": 2,
+      "collaboratore": 1
+     }
+    ]
+   },
+   "notizie_fr_col_nome": {
+    "Secondo": 3
+   }
+  },
+  {
+   "n": 12,
+   "qid": "Q780102",
+   "nome": "Wyndham Lewis",
+   "gruppo": "trovato",
+   "esito": "riconosciuto, con notizie in francese",
+   "errore_tecnico": null,
+   "nota": "nome e anni della scheda BnF coincidono con Wikidata",
+   "collegamenti_fr": {
+    "119129001": [
+     12,
+     {
+      "non letto": 2,
+      "collaboratore": 1,
+      "autore": 9
+     }
+    ]
+   },
+   "notizie_fr_col_nome": {
+    "Lewis": 53
+   }
+  },
+  {
+   "n": 13,
+   "qid": "Q3646436",
+   "nome": "Derenik Demirchian",
+   "gruppo": "trovato",
+   "esito": "riconosciuto, con notizie in francese",
+   "errore_tecnico": null,
+   "nota": "nome e anni della scheda BnF coincidono con Wikidata",
+   "collegamenti_fr": {
+    "15618257j": [
+     2,
+     {
+      "autore": 2
+     }
+    ]
+   },
+   "notizie_fr_col_nome": {
+    "Demirchian": 0
+   }
+  },
+  {
+   "n": 14,
+   "qid": "Q77491",
+   "nome": "Hans Carossa",
+   "gruppo": "trovato",
+   "esito": "riconosciuto, con notizie in francese",
+   "errore_tecnico": null,
+   "nota": "nome e anni della scheda BnF coincidono con Wikidata",
+   "collegamenti_fr": {
+    "12102324x": [
+     13,
+     {
+      "autore": 12,
+      "collaboratore": 1
+     }
+    ]
+   },
+   "notizie_fr_col_nome": {
+    "Carossa": 13
+   }
+  },
+  {
+   "n": 15,
+   "qid": "Q2160344",
+   "nome": "Virgilio Giotti",
+   "gruppo": "trovato",
+   "esito": "riconosciuto, con notizie in francese",
+   "errore_tecnico": null,
+   "nota": "nome e anni della scheda BnF coincidono con Wikidata",
+   "collegamenti_fr": {
+    "12367880k": [
+     3,
+     {
+      "autore": 3
+     }
+    ]
+   },
+   "notizie_fr_col_nome": {
+    "Giotti": 3
+   }
+  },
+  {
+   "n": 16,
+   "qid": "Q265792",
+   "nome": "Ray Cummings",
+   "gruppo": "trovato",
+   "esito": "riconosciuto, con notizie in francese",
+   "errore_tecnico": null,
+   "nota": "nome e anni della scheda BnF coincidono con Wikidata",
+   "collegamenti_fr": {
+    "12781478k": [
+     4,
+     {
+      "autore": 4
+     }
+    ]
+   },
+   "notizie_fr_col_nome": {
+    "Cummings": 31
+   }
+  },
+  {
+   "n": 17,
+   "qid": "Q61968643",
+   "nome": "Paul Leclercq",
+   "gruppo": "trovato",
+   "esito": "riconosciuto, con notizie in francese",
+   "errore_tecnico": null,
+   "nota": "nome e anni della scheda BnF coincidono con Wikidata; la scheda BnF sembra mescolare anche un'altra persona (libri di storia fiscale e su Chopin), come in SBN",
+   "collegamenti_fr": {
+    "127288397": [
+     15,
+     {
+      "autore": 13,
+      "collaboratore": 2
+     }
+    ]
+   },
+   "notizie_fr_col_nome": {
+    "Leclercq": 123
+   }
+  },
+  {
+   "n": 18,
+   "qid": "Q106740",
+   "nome": "Dorothy L. Sayers",
+   "gruppo": "trovato",
+   "esito": "riconosciuto, con notizie in francese",
+   "errore_tecnico": null,
+   "nota": "nome e anni della scheda BnF coincidono con Wikidata",
+   "collegamenti_fr": {
+    "119238811": [
+     46,
+     {
+      "autore": 42,
+      "collaboratore": 3,
+      "non letto": 1
+     }
+    ]
+   },
+   "notizie_fr_col_nome": {
+    "Sayers": 47
+   }
+  },
+  {
+   "n": 19,
+   "qid": "Q2712435",
+   "nome": "José Lins do Rego",
+   "gruppo": "trovato",
+   "esito": "riconosciuto, con notizie in francese",
+   "errore_tecnico": null,
+   "nota": "nome e anni della scheda BnF coincidono con Wikidata",
+   "collegamenti_fr": {
+    "12026323s": [
+     3,
+     {
+      "autore": 3
+     }
+    ]
+   },
+   "notizie_fr_col_nome": {
+    "Rego": 8
+   }
+  },
+  {
+   "n": 20,
+   "qid": "Q472071",
+   "nome": "Max Beerbohm",
+   "gruppo": "trovato",
+   "esito": "riconosciuto, con notizie in francese",
+   "errore_tecnico": null,
+   "nota": "nome e anni della scheda BnF coincidono con Wikidata",
+   "collegamenti_fr": {
+    "12015477j": [
+     9,
+     {
+      "autore": 8,
+      "collaboratore": 1
+     }
+    ]
+   },
+   "notizie_fr_col_nome": {
+    "Beerbohm": 9
+   }
+  },
+  {
+   "n": 21,
+   "qid": "Q13123001",
+   "nome": "Herbert Isaac Ernest Dhlomo",
+   "gruppo": "codice, zero in francese",
+   "esito": "riconosciuto senza risultati in francese",
+   "errore_tecnico": null,
+   "nota": "nome e anni della scheda BnF coincidono con Wikidata; nessuna notizia in francese collegata e nessuna col nome",
+   "collegamenti_fr": {},
+   "notizie_fr_col_nome": {
+    "Dhlomo": 0
+   }
+  },
+  {
+   "n": 22,
+   "qid": "Q5642970",
+   "nome": "Hallie Erminie Rives",
+   "gruppo": "codice, zero in francese",
+   "esito": "riconosciuto senza risultati in francese",
+   "errore_tecnico": null,
+   "nota": "nome e anni della scheda BnF coincidono con Wikidata; nessuna notizia in francese collegata e nessuna col nome",
+   "collegamenti_fr": {},
+   "notizie_fr_col_nome": {
+    "Rives": 0
+   }
+  },
+  {
+   "n": 23,
+   "qid": "Q121008",
+   "nome": "Ernst Kreidolf",
+   "gruppo": "codice, zero in francese",
+   "esito": "riconosciuto senza risultati in francese",
+   "errore_tecnico": null,
+   "nota": "nome e anni della scheda BnF coincidono con Wikidata; nessuna notizia in francese collegata e nessuna col nome",
+   "collegamenti_fr": {},
+   "notizie_fr_col_nome": {
+    "Kreidolf": 0
+   }
+  },
+  {
+   "n": 24,
+   "qid": "Q1611440",
+   "nome": "Hermann Heinz Ortner",
+   "gruppo": "codice, zero in francese",
+   "esito": "riconosciuto senza risultati in francese",
+   "errore_tecnico": null,
+   "nota": "nome e anni della scheda BnF coincidono con Wikidata; nessuna notizia in francese collegata e nessuna col nome",
+   "collegamenti_fr": {},
+   "notizie_fr_col_nome": {
+    "Ortner": 0
+   }
+  },
+  {
+   "n": 25,
+   "qid": "Q169036",
+   "nome": "Zdeněk Němeček",
+   "gruppo": "codice, zero in francese",
+   "esito": "riconosciuto senza risultati in francese",
+   "errore_tecnico": null,
+   "nota": "nome e anni della scheda BnF coincidono con Wikidata; nessuna notizia in francese collegata e nessuna col nome",
+   "collegamenti_fr": {},
+   "notizie_fr_col_nome": {
+    "Němeček": 2,
+    "Nemecek": 2
+   }
+  },
+  {
+   "n": 26,
+   "qid": "Q2312843",
+   "nome": "Elia Abu Madi",
+   "gruppo": "codice, zero in francese",
+   "esito": "riconosciuto senza risultati in francese",
+   "errore_tecnico": null,
+   "nota": "nome e anni della scheda BnF coincidono con Wikidata; nessuna notizia in francese collegata e nessuna col nome",
+   "collegamenti_fr": {},
+   "notizie_fr_col_nome": {
+    "Madi": 0
+   }
+  },
+  {
+   "n": 27,
+   "qid": "Q923614",
+   "nome": "Nicolae Labiș",
+   "gruppo": "codice, zero in francese",
+   "esito": "riconosciuto senza risultati in francese",
+   "errore_tecnico": null,
+   "nota": "nome e anni della scheda BnF coincidono con Wikidata; nessuna notizia in francese collegata e nessuna col nome",
+   "collegamenti_fr": {},
+   "notizie_fr_col_nome": {
+    "Labiș": 0,
+    "Labis": 0
+   }
+  },
+  {
+   "n": 28,
+   "qid": "Q94917876",
+   "nome": "Hans Mahner-Mons",
+   "gruppo": "codice, zero in francese",
+   "esito": "riconosciuto, ma una notizia in francese non è collegata alla sua scheda",
+   "errore_tecnico": null,
+   "nota": "il codice porta alla scheda «Possendorf Hans» (suo pseudonimo, stessi anni); in BnF c'è «Monsieur de Paris / H.-M. Mons» (1955) collegato a un'altra forma del nome («Mons, Hans Mahner»): il conteggio dice 0 ma una traduzione francese esiste",
+   "collegamenti_fr": {},
+   "notizie_fr_col_nome": {
+    "Mahner-Mons": 1
+   }
+  },
+  {
+   "n": 29,
+   "qid": "Q3719585",
+   "nome": "Edoardo Firpo",
+   "gruppo": "codice, zero in francese",
+   "esito": "riconosciuto senza risultati in francese",
+   "errore_tecnico": null,
+   "nota": "nome e anni della scheda BnF coincidono con Wikidata; nessuna notizia in francese collegata e nessuna col nome",
+   "collegamenti_fr": {},
+   "notizie_fr_col_nome": {
+    "Firpo": 0
+   }
+  },
+  {
+   "n": 30,
+   "qid": "Q366715",
+   "nome": "David Shimoni",
+   "gruppo": "codice, zero in francese",
+   "esito": "riconosciuto senza risultati in francese",
+   "errore_tecnico": null,
+   "nota": "nome e anni della scheda BnF coincidono con Wikidata; nessuna notizia in francese collegata e nessuna col nome",
+   "collegamenti_fr": {},
+   "notizie_fr_col_nome": {
+    "Shimoni": 0
+   }
+  },
+  {
+   "n": 31,
+   "qid": "Q7167474",
+   "nome": "Percy Marks",
+   "gruppo": "codice, zero in francese",
+   "esito": "riconosciuto senza risultati in francese",
+   "errore_tecnico": null,
+   "nota": "nome e anni della scheda BnF coincidono con Wikidata; nessuna notizia in francese collegata e nessuna col nome",
+   "collegamenti_fr": {},
+   "notizie_fr_col_nome": {
+    "Marks": 0
+   }
+  },
+  {
+   "n": 32,
+   "qid": "Q2358343",
+   "nome": "Moishe Broderzon",
+   "gruppo": "codice, zero in francese",
+   "esito": "riconosciuto senza risultati in francese",
+   "errore_tecnico": null,
+   "nota": "nome e anni della scheda BnF coincidono con Wikidata; nessuna notizia in francese collegata e nessuna col nome",
+   "collegamenti_fr": {},
+   "notizie_fr_col_nome": {
+    "Broderzon": 0
+   }
+  },
+  {
+   "n": 33,
+   "qid": "Q1388518",
+   "nome": "Oliver St. John Gogarty",
+   "gruppo": "codice, zero in francese",
+   "esito": "riconosciuto senza risultati in francese",
+   "errore_tecnico": null,
+   "nota": "nome e anni della scheda BnF coincidono con Wikidata; nessuna notizia in francese collegata e nessuna col nome",
+   "collegamenti_fr": {},
+   "notizie_fr_col_nome": {
+    "Gogarty": 0
+   }
+  },
+  {
+   "n": 34,
+   "qid": "Q6288424",
+   "nome": "Josephine Pinckney",
+   "gruppo": "codice, zero in francese",
+   "esito": "riconosciuto senza risultati in francese",
+   "errore_tecnico": null,
+   "nota": "nome e anni della scheda BnF coincidono con Wikidata; nessuna notizia in francese collegata e nessuna col nome",
+   "collegamenti_fr": {},
+   "notizie_fr_col_nome": {
+    "Pinckney": 0
+   }
+  },
+  {
+   "n": 35,
+   "qid": "Q6101330",
+   "nome": "Mithat Cemal Kuntay",
+   "gruppo": "codice, zero in francese",
+   "esito": "riconosciuto senza risultati in francese",
+   "errore_tecnico": null,
+   "nota": "nome e anni della scheda BnF coincidono con Wikidata; nessuna notizia in francese collegata e nessuna col nome",
+   "collegamenti_fr": {},
+   "notizie_fr_col_nome": {
+    "Kuntay": 0
+   }
+  },
+  {
+   "n": 36,
+   "qid": "Q1650288",
+   "nome": "Percy MacKaye",
+   "gruppo": "codice, zero in francese",
+   "esito": "riconosciuto senza risultati in francese",
+   "errore_tecnico": null,
+   "nota": "nome e anni della scheda BnF coincidono con Wikidata; nessuna notizia in francese collegata e nessuna col nome",
+   "collegamenti_fr": {},
+   "notizie_fr_col_nome": {
+    "MacKaye": 0
+   }
+  },
+  {
+   "n": 37,
+   "qid": "Q6169722",
+   "nome": "Yamandú Rodríguez",
+   "gruppo": "codice, zero in francese",
+   "esito": "riconosciuto senza risultati in francese",
+   "errore_tecnico": null,
+   "nota": "nome e anni della scheda BnF coincidono con Wikidata; nessuna notizia in francese collegata e nessuna col nome",
+   "collegamenti_fr": {},
+   "notizie_fr_col_nome": {
+    "Rodríguez": 0,
+    "Rodriguez": 0
+   }
+  },
+  {
+   "n": 38,
+   "qid": "Q347832",
+   "nome": "Ricardo Rojas",
+   "gruppo": "codice, zero in francese",
+   "esito": "riconosciuto senza risultati in francese",
+   "errore_tecnico": null,
+   "nota": "nome e anni della scheda BnF coincidono con Wikidata; nessuna notizia in francese collegata e nessuna col nome",
+   "collegamenti_fr": {},
+   "notizie_fr_col_nome": {
+    "Rojas": 1
+   }
+  },
+  {
+   "n": 39,
+   "qid": "Q2933169",
+   "nome": "Cahit Sıtkı Tarancı",
+   "gruppo": "codice, zero in francese",
+   "esito": "riconosciuto senza risultati in francese",
+   "errore_tecnico": null,
+   "nota": "nome e anni della scheda BnF coincidono con Wikidata; nessuna notizia in francese collegata e nessuna col nome",
+   "collegamenti_fr": {},
+   "notizie_fr_col_nome": {
+    "Tarancı": 0
+   }
+  },
+  {
+   "n": 40,
+   "qid": "Q3713064",
+   "nome": "Domenico Giuliotti",
+   "gruppo": "codice, zero in francese",
+   "esito": "riconosciuto senza risultati in francese",
+   "errore_tecnico": null,
+   "nota": "nome e anni della scheda BnF coincidono con Wikidata; nessuna notizia in francese collegata e nessuna col nome",
+   "collegamenti_fr": {},
+   "notizie_fr_col_nome": {
+    "Giuliotti": 0
+   }
+  },
+  {
+   "n": 41,
+   "qid": "Q116230289",
+   "nome": "K. Sukumaran",
+   "gruppo": "senza codice",
+   "esito": "identità irrisolta",
+   "errore_tecnico": null,
+   "nota": "nessuna scheda d'autore BnF con lo stesso cognome e nome (elenco completo delle schede con quel cognome)",
+   "collegamenti_fr": null,
+   "notizie_fr_col_nome": {
+    "Sukumaran": 0
+   }
+  },
+  {
+   "n": 42,
+   "qid": "Q5495431",
+   "nome": "Fred Henderson",
+   "gruppo": "senza codice",
+   "esito": "identità irrisolta",
+   "errore_tecnico": null,
+   "nota": "ricerca incompleta: il cognome ha troppe schede in BnF ({'Henderson': 447})",
+   "collegamenti_fr": null,
+   "notizie_fr_col_nome": {
+    "Henderson": 15
+   }
+  },
+  {
+   "n": 43,
+   "qid": "Q1547340",
+   "nome": "Leonora Speyer",
+   "gruppo": "senza codice",
+   "esito": "identità irrisolta",
+   "errore_tecnico": null,
+   "nota": "ricerca incompleta: il cognome ha troppe schede in BnF ({'Speyer': 50})",
+   "collegamenti_fr": null,
+   "notizie_fr_col_nome": {
+    "Speyer": 0
+   }
+  },
+  {
+   "n": 44,
+   "qid": "Q64685698",
+   "nome": "Frances Forbes-Robertson",
+   "gruppo": "senza codice",
+   "esito": "identità irrisolta",
+   "errore_tecnico": null,
+   "nota": "nessuna scheda d'autore BnF con lo stesso cognome e nome (elenco completo delle schede con quel cognome)",
+   "collegamenti_fr": null,
+   "notizie_fr_col_nome": {
+    "Forbes-Robertson": 0
+   }
+  },
+  {
+   "n": 45,
+   "qid": "Q18535623",
+   "nome": "J. O. Francis",
+   "gruppo": "senza codice",
+   "esito": "identità irrisolta",
+   "errore_tecnico": null,
+   "nota": "ricerca incompleta: il cognome ha troppe schede in BnF ({'Francis': 6153})",
+   "collegamenti_fr": null,
+   "notizie_fr_col_nome": {
+    "Francis": 42110
+   }
+  },
+  {
+   "n": 46,
+   "qid": "Q76075397",
+   "nome": "Winston Clewes",
+   "gruppo": "senza codice",
+   "esito": "identità irrisolta",
+   "errore_tecnico": null,
+   "nota": "nessuna scheda d'autore BnF con lo stesso cognome e nome (elenco completo delle schede con quel cognome)",
+   "collegamenti_fr": null,
+   "notizie_fr_col_nome": {
+    "Clewes": 0
+   }
+  },
+  {
+   "n": 47,
+   "qid": "Q140088299",
+   "nome": "E.V. Raman Nampoothiri",
+   "gruppo": "senza codice",
+   "esito": "identità irrisolta",
+   "errore_tecnico": null,
+   "nota": "nessuna scheda d'autore BnF con lo stesso cognome e nome (elenco completo delle schede con quel cognome)",
+   "collegamenti_fr": null,
+   "notizie_fr_col_nome": {
+    "Nampoothiri": 0
+   }
+  },
+  {
+   "n": 48,
+   "qid": "Q47008374",
+   "nome": "Sunirmal Basu",
+   "gruppo": "senza codice",
+   "esito": "identità irrisolta",
+   "errore_tecnico": null,
+   "nota": "ricerca incompleta: il cognome ha troppe schede in BnF ({'Basu': 115})",
+   "collegamenti_fr": null,
+   "notizie_fr_col_nome": {
+    "Basu": 0
+   }
+  },
+  {
+   "n": 49,
+   "qid": "Q4170627",
+   "nome": "Godabarish Mishra",
+   "gruppo": "senza codice",
+   "esito": "identità irrisolta",
+   "errore_tecnico": null,
+   "nota": "ricerca incompleta: il cognome ha troppe schede in BnF ({'Mishra': 280})",
+   "collegamenti_fr": null,
+   "notizie_fr_col_nome": {
+    "Mishra": 0
+   }
+  },
+  {
+   "n": 50,
+   "qid": "Q95403123",
+   "nome": "Eduard Kučera",
+   "gruppo": "senza codice",
+   "esito": "identità irrisolta",
+   "errore_tecnico": null,
+   "nota": "nessuna scheda d'autore BnF con lo stesso cognome e nome (elenco completo delle schede con quel cognome)",
+   "collegamenti_fr": null,
+   "notizie_fr_col_nome": {
+    "Kučera": 0,
+    "Kucera": 0
+   }
+  },
+  {
+   "n": 51,
+   "qid": "Q3398467",
+   "nome": "John Dyfnallt Owen",
+   "gruppo": "senza codice",
+   "esito": "identità irrisolta",
+   "errore_tecnico": null,
+   "nota": "ricerca incompleta: il cognome ha troppe schede in BnF ({'Owen': 625})",
+   "collegamenti_fr": null,
+   "notizie_fr_col_nome": {
+    "Owen": 358
+   }
+  },
+  {
+   "n": 52,
+   "qid": "Q11871501",
+   "nome": "Edmond Konrád",
+   "gruppo": "senza codice",
+   "esito": "identità irrisolta",
+   "errore_tecnico": null,
+   "nota": "ricerca incompleta: il cognome ha troppe schede in BnF ({'Konrád': 740, 'Konrad': 740})",
+   "collegamenti_fr": null,
+   "notizie_fr_col_nome": {
+    "Konrád": 2,
+    "Konrad": 2
+   }
+  },
+  {
+   "n": 53,
+   "qid": "Q11878769",
+   "nome": "Emmerich Alois Hruška",
+   "gruppo": "senza codice",
+   "esito": "identità irrisolta",
+   "errore_tecnico": null,
+   "nota": "nessuna scheda d'autore BnF con lo stesso cognome e nome (elenco completo delle schede con quel cognome)",
+   "collegamenti_fr": null,
+   "notizie_fr_col_nome": {
+    "Hruška": 0,
+    "Hruska": 0
+   }
+  },
+  {
+   "n": 54,
+   "qid": "Q2545012",
+   "nome": "Walter Karig",
+   "gruppo": "senza codice",
+   "esito": "identità irrisolta",
+   "errore_tecnico": null,
+   "nota": "nessuna scheda d'autore BnF con lo stesso cognome e nome (elenco completo delle schede con quel cognome)",
+   "collegamenti_fr": null,
+   "notizie_fr_col_nome": {
+    "Karig": 0
+   }
+  },
+  {
+   "n": 55,
+   "qid": "Q3277794",
+   "nome": "Mahmoud Bourguiba",
+   "gruppo": "senza codice",
+   "esito": "identità irrisolta",
+   "errore_tecnico": null,
+   "nota": "nessuna scheda d'autore BnF con lo stesso cognome e nome (elenco completo delle schede con quel cognome); una notizia col nome («La chanson du pays») non è collegata a nessuna scheda sua: da guardare",
+   "collegamenti_fr": null,
+   "notizie_fr_col_nome": {
+    "Bourguiba": 1
+   }
+  },
+  {
+   "n": 56,
+   "qid": "Q6796494",
+   "nome": "May Edginton",
+   "gruppo": "senza codice",
+   "esito": "identità irrisolta",
+   "errore_tecnico": null,
+   "nota": "nessuna scheda d'autore BnF con lo stesso cognome e nome (elenco completo delle schede con quel cognome)",
+   "collegamenti_fr": null,
+   "notizie_fr_col_nome": {
+    "Edginton": 0
+   }
+  },
+  {
+   "n": 57,
+   "qid": "Q95073899",
+   "nome": "Zikmund Skyba",
+   "gruppo": "senza codice",
+   "esito": "identità irrisolta",
+   "errore_tecnico": null,
+   "nota": "nessuna scheda d'autore BnF con lo stesso cognome e nome (elenco completo delle schede con quel cognome)",
+   "collegamenti_fr": null,
+   "notizie_fr_col_nome": {
+    "Skyba": 0
+   }
+  },
+  {
+   "n": 58,
+   "qid": "Q86629526",
+   "nome": "Kaj Gynt",
+   "gruppo": "senza codice",
+   "esito": "identità irrisolta",
+   "errore_tecnico": null,
+   "nota": "nessuna scheda d'autore BnF con lo stesso cognome e nome (elenco completo delle schede con quel cognome)",
+   "collegamenti_fr": null,
+   "notizie_fr_col_nome": {
+    "Gynt": 0
+   }
+  },
+  {
+   "n": 59,
+   "qid": "Q95072057",
+   "nome": "Jaroslav Arséne La Motte",
+   "gruppo": "senza codice",
+   "esito": "identità irrisolta",
+   "errore_tecnico": null,
+   "nota": "ricerca incompleta: il cognome ha troppe schede in BnF ({'Motte': 410})",
+   "collegamenti_fr": null,
+   "notizie_fr_col_nome": {
+    "Motte": 0
+   }
+  },
+  {
+   "n": 60,
+   "qid": "Q4648282",
+   "nome": "A. R. D. Fairburn",
+   "gruppo": "senza codice",
+   "esito": "identità irrisolta",
+   "errore_tecnico": null,
+   "nota": "nessuna scheda d'autore BnF con lo stesso cognome e nome (elenco completo delle schede con quel cognome)",
+   "collegamenti_fr": null,
+   "notizie_fr_col_nome": {
+    "Fairburn": 0
+   }
+  }
+ ]
+}
