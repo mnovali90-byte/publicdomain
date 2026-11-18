@@ -527,8 +527,8 @@
     },
     "loc_en": {
      "trovato": true,
-     "edizioni": 247,
-     "dal_2000": 75,
+     "edizioni": 203,
+     "dal_2000": 66,
      "metodo": "codice_lc",
      "fonte": "Library of Congress",
      "intestazione": "Cather, Willa, 1873-1947"
@@ -4418,7 +4418,7 @@
     },
     "loc_en": {
      "trovato": true,
-     "edizioni": 2,
+     "edizioni": 1,
      "dal_2000": 1,
      "metodo": "codice_lc",
      "fonte": "Library of Congress",
@@ -6791,7 +6791,8 @@
     "esito": "discorde",
     "fonti": {
      "wikidata": 1947,
-     "gnd": 1931
+     "gnd": 1931,
+     "wikidata_altra": 1931
     },
     "citate": {
      "Integrated Authority File": 1931,
@@ -14795,9 +14796,10 @@
    "indice_int": 73,
    "indice": 65,
    "verifica": {
-    "esito": "una_fonte",
+    "esito": "discorde",
     "fonti": {
-     "wikidata": 1947
+     "wikidata": 1947,
+     "wikidata_altra": 1946
     }
    }
   },
@@ -15310,7 +15312,8 @@
     "fonti": {
      "wikidata": 1947,
      "gnd": 1948,
-     "loc": 1948
+     "loc": 1948,
+     "wikidata_altra": 1948
     },
     "citate": {
      "al-Aʻlām (Dār al-ʻIlm, 2002)": 1948
@@ -16667,10 +16670,11 @@
    "indice_int": 68,
    "indice": 80,
    "verifica": {
-    "esito": "verificato",
+    "esito": "discorde",
     "fonti": {
      "wikidata": 1947,
-     "loc": 1947
+     "loc": 1947,
+     "wikidata_altra": 1946
     },
     "citate": {
      "Library of Congress Authorities": 1947
@@ -17836,7 +17840,8 @@
    "verifica": {
     "esito": "discorde",
     "fonti": {
-     "wikidata": 1947
+     "wikidata": 1947,
+     "wikidata_altra": 1957
     },
     "citate": {
      "IdRef": 1957
@@ -25096,9 +25101,10 @@
    "indice_int": 48,
    "indice": 33,
    "verifica": {
-    "esito": "documentato",
+    "esito": "discorde",
     "fonti": {
-     "wikidata": 1947
+     "wikidata": 1947,
+     "wikidata_altra": 1942
     },
     "citate": {
      "Biographical Dictionary of Georgia": 1947
@@ -27589,10 +27595,11 @@
    "indice_int": 28,
    "indice": 28,
    "verifica": {
-    "esito": "verificato",
+    "esito": "discorde",
     "fonti": {
      "wikidata": 1947,
-     "loc": 1947
+     "loc": 1947,
+     "wikidata_altra": 1945
     },
     "citate": {
      "BNE authority file": 1947
@@ -30222,7 +30229,8 @@
     "esito": "discorde",
     "fonti": {
      "wikidata": 1947,
-     "gnd": 1951
+     "gnd": 1951,
+     "wikidata_altra": 1951
     },
     "citate": {
      "Integrated Authority File": 1951
@@ -34324,7 +34332,8 @@
     "fonti": {
      "wikidata": 1947,
      "gnd": 1947,
-     "loc": 1944
+     "loc": 1944,
+     "wikidata_altra": 1944
     },
     "citate": {
      "Integrated Authority File": 1944,
@@ -35249,9 +35258,10 @@
    "indice_int": 28,
    "indice": 28,
    "verifica": {
-    "esito": "una_fonte",
+    "esito": "discorde",
     "fonti": {
-     "wikidata": 1947
+     "wikidata": 1947,
+     "wikidata_altra": 1962
     }
    }
   },
@@ -37805,9 +37815,10 @@
    "indice_int": 0,
    "indice": 23,
    "verifica": {
-    "esito": "una_fonte",
+    "esito": "discorde",
     "fonti": {
-     "wikidata": 1947
+     "wikidata": 1947,
+     "wikidata_altra": 1948
     }
    }
   },

@@ -13536,9 +13536,10 @@
     }
    },
    "verifica": {
-    "esito": "una_fonte",
+    "esito": "discorde",
     "fonti": {
-     "wikidata": 1956
+     "wikidata": 1956,
+     "wikidata_altra": 1954
     }
    },
    "pagina": "frances-mabel-robinson",
@@ -15331,7 +15332,8 @@
     "esito": "discorde",
     "fonti": {
      "wikidata": 1956,
-     "gnd": 1953
+     "gnd": 1953,
+     "wikidata_altra": 1953
     }
    }
   },
@@ -21534,7 +21536,8 @@
     "fonti": {
      "wikidata": 1956,
      "gnd": 1956,
-     "loc": 1956
+     "loc": 1956,
+     "wikidata_altra": 1959
     },
     "citate": {
      "Spanish Biographical Dictionary": 1959,
@@ -32439,7 +32442,8 @@
     "fonti": {
      "wikidata": 1956,
      "gnd": 1950,
-     "loc": 1950
+     "loc": 1950,
+     "wikidata_altra": 1950
     },
     "citate": {
      "Society for the Promotion of Literacy among Georgians Members": 1950,
@@ -35291,9 +35295,10 @@
    "indice_int": 28,
    "indice": 28,
    "verifica": {
-    "esito": "documentato",
+    "esito": "discorde",
     "fonti": {
-     "wikidata": 1956
+     "wikidata": 1956,
+     "wikidata_altra": 1932
     },
     "citate": {
      "Catalan Literature Dictionary": 1956

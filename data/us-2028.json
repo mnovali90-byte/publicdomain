@@ -51,7 +51,7 @@
    "generi": [
     "ragazzi"
    ],
-   "visite_en": 109156
+   "visite_en": 109153
   },
   {
    "qid": "Q774233",
@@ -288,7 +288,7 @@
     "it": "russo"
    },
    "generi": [],
-   "visite_en": 35989,
+   "visite_en": 36001,
    "copertina": {
     "file": "RUB 95 (Leipzig, 1984, 23.Auflage) - Ostrowski, Wie der Stahl.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/RUB_95_%28Leipzig%2C_1984%2C_23.Auflage%29_-_Ostrowski%2C_Wie_der_Stahl.jpg/500px-RUB_95_%28Leipzig%2C_1984%2C_23.Auflage%29_-_Ostrowski%2C_Wie_der_Stahl.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -400,7 +400,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 18645
+   "visite_en": 18647
   },
   {
    "qid": "Q17036247",
@@ -1167,7 +1167,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 3440
+   "visite_en": 3435
   },
   {
    "qid": "Q5318076",
@@ -1188,7 +1188,7 @@
    "generi": [
     "fantasy_sf"
    ],
-   "visite_en": 3152,
+   "visite_en": 3149,
    "copertina": {
     "file": "Fantastic Novels cover September 1949.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Fantastic_Novels_cover_September_1949.jpg/500px-Fantastic_Novels_cover_September_1949.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -1539,7 +1539,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 1883
+   "visite_en": 1878
   },
   {
    "qid": "Q7804791",
@@ -1726,7 +1726,7 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 1278
+   "visite_en": 1276
   },
   {
    "qid": "Q7768564",
@@ -2302,6 +2302,25 @@
    "visite_en": 321
   },
   {
+   "qid": "Q18351196",
+   "titolo": "Alicia Deane",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q5321676",
+     "nome": "E. V. Timms"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/Alicia_Deane",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [],
+   "visite_en": 321
+  },
+  {
    "qid": "Q3237799",
    "titolo": "Maigret on the Riviera",
    "titolo_it": "Liberty Bar",
@@ -2494,25 +2513,6 @@
    "visite_en": 189
   },
   {
-   "qid": "Q7929510",
-   "titolo": "Vikings of the Gloves",
-   "titolo_it": null,
-   "autori": [
-    {
-     "qid": "Q207640",
-     "nome": "Robert E. Howard"
-    }
-   ],
-   "pagine": 2,
-   "wiki_en": "https://en.wikipedia.org/wiki/Vikings_of_the_Gloves",
-   "lingua": {
-    "en": "English",
-    "it": "inglese"
-   },
-   "generi": [],
-   "visite_en": 154
-  },
-  {
    "qid": "Q691326",
    "titolo": "Querelles de famille",
    "titolo_it": null,
@@ -2539,6 +2539,25 @@
     "licenza": "Public domain",
     "autore": "Photographer not named"
    }
+  },
+  {
+   "qid": "Q7929510",
+   "titolo": "Vikings of the Gloves",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q207640",
+     "nome": "Robert E. Howard"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/Vikings_of_the_Gloves",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [],
+   "visite_en": 154
   },
   {
    "qid": "Q7562673",
@@ -3388,25 +3407,6 @@
    "generi": [
     "memorie"
    ],
-   "visite_en": null
-  },
-  {
-   "qid": "Q136086965",
-   "titolo": "Wise Parenthood",
-   "titolo_it": null,
-   "autori": [
-    {
-     "qid": "Q442231",
-     "nome": "Marie Stopes"
-    }
-   ],
-   "pagine": 2,
-   "wiki_en": null,
-   "lingua": {
-    "en": "English",
-    "it": "inglese"
-   },
-   "generi": [],
    "visite_en": null
   }
  ]

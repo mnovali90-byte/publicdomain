@@ -18296,9 +18296,10 @@
    "indice_int": 72,
    "indice": 39,
    "verifica": {
-    "esito": "documentato",
+    "esito": "discorde",
     "fonti": {
-     "wikidata": 1957
+     "wikidata": 1957,
+     "wikidata_altra": 1947
     },
     "citate": {
      "IdRef": 1957
@@ -18788,9 +18789,10 @@
    "indice_int": 64,
    "indice": 37,
    "verifica": {
-    "esito": "una_fonte",
+    "esito": "discorde",
     "fonti": {
-     "wikidata": 1957
+     "wikidata": 1957,
+     "wikidata_altra": 1958
     }
    }
   },
@@ -19477,15 +19479,15 @@
      "loc": 1957
     },
     "citate": {
+     "CONOR.BG": 1957,
+     "MAK": 1957,
+     "Faceted Application of Subject Terminology": 1957,
      "Trove": 1957,
      "Internet Speculative Fiction Database": 1957,
      "The Encyclopedia of Science Fiction": 1957,
      "Integrated Authority File": 1957,
      "SNAC": 1957,
-     "NUKAT": 1957,
-     "CONOR.BG": 1957,
-     "MAK": 1957,
-     "Faceted Application of Subject Terminology": 1957
+     "NUKAT": 1957
     }
    },
    "pagina": "carl-h-claudy",
@@ -29637,9 +29639,10 @@
    "indice_int": 28,
    "indice": 28,
    "verifica": {
-    "esito": "una_fonte",
+    "esito": "discorde",
     "fonti": {
-     "wikidata": 1957
+     "wikidata": 1957,
+     "wikidata_altra": 1955
     }
    }
   },
@@ -33350,10 +33353,11 @@
    "indice_int": 28,
    "indice": 56,
    "verifica": {
-    "esito": "verificato",
+    "esito": "discorde",
     "fonti": {
      "wikidata": 1957,
-     "loc": 1957
+     "loc": 1957,
+     "wikidata_altra": 1955
     },
     "citate": {
      "Collective Biographies of Women": 1957

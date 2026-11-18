@@ -776,26 +776,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 5632
-  },
-  {
-   "qid": "Q318208",
-   "titolo": "The Decision",
-   "titolo_it": "La linea di condotta",
-   "autori": [
-    {
-     "qid": "Q38757",
-     "nome": "Bertolt Brecht"
-    }
-   ],
-   "pagine": 5,
-   "wiki_en": "https://en.wikipedia.org/wiki/The_Decision_(play)",
-   "lingua": {
-    "en": "German",
-    "it": "tedesco"
-   },
-   "generi": [],
-   "visite_en": 5270
+   "visite_en": 5631
   },
   {
    "qid": "Q1746433",
@@ -888,25 +869,6 @@
    "visite_en": 4831
   },
   {
-   "qid": "Q11544643",
-   "titolo": "Lemon",
-   "titolo_it": null,
-   "autori": [
-    {
-     "qid": "Q519158",
-     "nome": "Motojirō Kajii"
-    }
-   ],
-   "pagine": 8,
-   "wiki_en": "https://en.wikipedia.org/wiki/Lemon_(short_story)",
-   "lingua": {
-    "en": "Japanese",
-    "it": "giapponese"
-   },
-   "generi": [],
-   "visite_en": 4704
-  },
-  {
    "qid": "Q4659979",
    "titolo": "A Tangled Web",
    "titolo_it": "Matassa ingarbugliata",
@@ -923,7 +885,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 4663
+   "visite_en": 4662
   },
   {
    "qid": "Q573765",
@@ -961,7 +923,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 4198,
+   "visite_en": 4197,
    "copertina": {
     "file": "Swallows and Amazons 02.png",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Swallows_and_Amazons_02.png/500px-Swallows_and_Amazons_02.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -1292,7 +1254,7 @@
     "it": "croato"
    },
    "generi": [],
-   "visite_en": 2976
+   "visite_en": 2973
   },
   {
    "qid": "Q3109849",
@@ -1339,7 +1301,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 2665
+   "visite_en": 2664
   },
   {
    "qid": "Q5047445",
@@ -1424,7 +1386,7 @@
     "it": "ceco"
    },
    "generi": [],
-   "visite_en": 2508
+   "visite_en": 2506
   },
   {
    "qid": "Q1192045",
@@ -1886,7 +1848,7 @@
    "generi": [
     "ragazzi"
    ],
-   "visite_en": 1270,
+   "visite_en": 1269,
    "copertina": {
     "file": "A 'Yebichai Sweat' Navajo medicine ceremony; three Navajos Wellcome V0038480.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/A_%27Yebichai_Sweat%27_Navajo_medicine_ceremony%3B_three_Navajos_Wellcome_V0038480.jpg/500px-A_%27Yebichai_Sweat%27_Navajo_medicine_ceremony%3B_three_Navajos_Wellcome_V0038480.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -1950,7 +1912,26 @@
     "it": "giapponese"
    },
    "generi": [],
-   "visite_en": 1073
+   "visite_en": 1072
+  },
+  {
+   "qid": "Q4050857",
+   "titolo": "Terra Incognita",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q36591",
+     "nome": "Vladimir Nabokov"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/Terra_Incognita_(short_story)",
+   "lingua": {
+    "en": "Russian",
+    "it": "russo"
+   },
+   "generi": [],
+   "visite_en": 1038
   },
   {
    "qid": "Q6929263",
@@ -1971,25 +1952,6 @@
    "generi": [
     "fantasy_sf"
    ],
-   "visite_en": 1036
-  },
-  {
-   "qid": "Q4050857",
-   "titolo": "Terra Incognita",
-   "titolo_it": null,
-   "autori": [
-    {
-     "qid": "Q36591",
-     "nome": "Vladimir Nabokov"
-    }
-   ],
-   "pagine": 2,
-   "wiki_en": "https://en.wikipedia.org/wiki/Terra_Incognita_(short_story)",
-   "lingua": {
-    "en": "Russian",
-    "it": "russo"
-   },
-   "generi": [],
    "visite_en": 1036
   },
   {
@@ -2049,7 +2011,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 892
+   "visite_en": 889
   },
   {
    "qid": "Q6683419",
@@ -2763,25 +2725,6 @@
    },
    "generi": [],
    "visite_en": 124
-  },
-  {
-   "qid": "Q3321503",
-   "titolo": "Monsieur des Lourdines",
-   "titolo_it": null,
-   "autori": [
-    {
-     "qid": "Q373251",
-     "nome": "Alphonse de Châteaubriant"
-    }
-   ],
-   "pagine": 2,
-   "wiki_en": "https://en.wikipedia.org/wiki/The_Keynote",
-   "lingua": {
-    "en": "French",
-    "it": "francese"
-   },
-   "generi": [],
-   "visite_en": 59
   },
   {
    "qid": "Q9369134",

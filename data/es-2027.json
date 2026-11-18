@@ -12965,9 +12965,10 @@
    "indice_int": 76,
    "indice": 70,
    "verifica": {
-    "esito": "una_fonte",
+    "esito": "discorde",
     "fonti": {
-     "wikidata": 1946
+     "wikidata": 1946,
+     "wikidata_altra": 1947
     }
    }
   },
@@ -15088,7 +15089,8 @@
     "esito": "discorde",
     "fonti": {
      "wikidata": 1946,
-     "loc": 1947
+     "loc": 1947,
+     "wikidata_altra": 1947
     },
     "citate": {
      "Library of Congress Authorities": 1947
@@ -15354,9 +15356,10 @@
    "indice_int": 71,
    "indice": 41,
    "verifica": {
-    "esito": "una_fonte",
+    "esito": "discorde",
     "fonti": {
-     "wikidata": 1946
+     "wikidata": 1946,
+     "wikidata_altra": 1942
     }
    }
   },
@@ -15655,7 +15658,8 @@
     "fonti": {
      "wikidata": 1946,
      "gnd": 1949,
-     "loc": 1949
+     "loc": 1949,
+     "wikidata_altra": 1949
     },
     "citate": {
      "Faceted Application of Subject Terminology": 1949,
@@ -16331,7 +16335,8 @@
     "fonti": {
      "wikidata": 1946,
      "gnd": 1948,
-     "loc": 1948
+     "loc": 1948,
+     "wikidata_altra": 1948
     },
     "citate": {
      "filmportal.de": 1946,
@@ -30087,7 +30092,8 @@
     "esito": "discorde",
     "fonti": {
      "wikidata": 1946,
-     "loc": 1949
+     "loc": 1949,
+     "wikidata_altra": 1949
     },
     "citate": {
      "Library of Congress Authorities": 1949
@@ -36596,7 +36602,8 @@
    "verifica": {
     "esito": "discorde",
     "fonti": {
-     "wikidata": 1946
+     "wikidata": 1946,
+     "wikidata_altra": 1945
     },
     "citate": {
      "Encyclopedia of Plzeň History": 1946,
