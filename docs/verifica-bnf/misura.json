@@ -1,0 +1,1581 @@
+{
+ "regole": {
+  "commit": "004182a074b681c71c0ad58568b40a701411c3e7",
+  "sha256": {
+   "scripts/riconosci_bnf.py": "a0818fd897eb5657a244fbfb921d8f886d9cf2b05d43999df67c4ace22933bd4",
+   "scripts/riconosci_sbn.py": "c0f770f15fe1f84bd30e6439fa0eb5a5044d464c6ddc1352e54e0bed5d941905"
+  }
+ },
+ "conteggi": {
+  "giusto (nessuna scheda)": 55,
+  "irrisolto, non collegato": 15,
+  "senza prove sufficienti": 2,
+  "trovato senza notizie in francese": 9,
+  "mancato": 1,
+  "trovato": 18
+ },
+ "autori": [
+  {
+   "n": 1,
+   "qid": "Q101529",
+   "nome": "Karl M. Baer",
+   "manuale": "A",
+   "dopo": "giusto (nessuna scheda)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": null
+  },
+  {
+   "n": 2,
+   "qid": "Q106765089",
+   "nome": "František Zeman",
+   "manuale": "A",
+   "dopo": "giusto (nessuna scheda)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": null
+  },
+  {
+   "n": 3,
+   "qid": "Q108405815",
+   "nome": "Annapurna Goswami",
+   "manuale": "I",
+   "dopo": "irrisolto, non collegato",
+   "stato": "ambiguo",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": {
+    "11441571z": "Goswami, A."
+   }
+  },
+  {
+   "n": 4,
+   "qid": "Q10856213",
+   "nome": "Noh Cheon-myeong",
+   "manuale": "I",
+   "dopo": "irrisolto, non collegato",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": null
+  },
+  {
+   "n": 5,
+   "qid": "Q108616921",
+   "nome": "Muḥammad ʻAlī Unsī",
+   "manuale": "A",
+   "dopo": "giusto (nessuna scheda)",
+   "stato": "ambiguo",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": {
+    "145669989": "Muḥammad, ʿAlī Ǧumʿaẗ",
+    "13181748k": "Ali, Muhammad Mohar",
+    "15109452j": "ʿAlī, Muḥammad Muḥammad Yūnus",
+    "170962151": "ʿAlī, Muḥammad Munāziʿ",
+    "145272425": "Bin Muḥammad, ʿAlī",
+    "150756512": "Muḥammad, ʿAlī Sabtī",
+    "873787371": "ʿAlī, Muḥammad ʿAbbās",
+    "150934894": "Ṣāyim, Muḥammad",
+    "15595639g": "ʿAlī, Muḥammad Šarīf",
+    "14556167m": "ʿIzz al-Dīn ʿAlī, Muḥammad Kamāl al-Dīn",
+    "169663153": "ʿAlī, Muḥ̣ammad ʿUṯmān",
+    "167182435": "Ali, Mir M."
+   }
+  },
+  {
+   "n": 6,
+   "qid": "Q108983658",
+   "nome": "Dragutin J. Ranković",
+   "manuale": "A",
+   "dopo": "giusto (nessuna scheda)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": null
+  },
+  {
+   "n": 7,
+   "qid": "Q11912944",
+   "nome": "Casimir Giralt i Bullich",
+   "manuale": "A",
+   "dopo": "giusto (nessuna scheda)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": null
+  },
+  {
+   "n": 8,
+   "qid": "Q12017814",
+   "nome": "František Salesius Frabša",
+   "manuale": "A",
+   "dopo": "giusto (nessuna scheda)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": null
+  },
+  {
+   "n": 9,
+   "qid": "Q12021431",
+   "nome": "Ignác Grebáč-Orlov",
+   "manuale": "A",
+   "dopo": "giusto (nessuna scheda)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": null
+  },
+  {
+   "n": 10,
+   "qid": "Q12035492",
+   "nome": "Marie Votrubová-Haunerová",
+   "manuale": "A",
+   "dopo": "giusto (nessuna scheda)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": null
+  },
+  {
+   "n": 11,
+   "qid": "Q12357525",
+   "nome": "Baishnaba Pani",
+   "manuale": "A",
+   "dopo": "giusto (nessuna scheda)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": null
+  },
+  {
+   "n": 12,
+   "qid": "Q125412",
+   "nome": "Josef Reinhart",
+   "manuale": "A",
+   "dopo": "giusto (nessuna scheda)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": null
+  },
+  {
+   "n": 13,
+   "qid": "Q129256623",
+   "nome": "Leonardo F. Napolitano",
+   "manuale": "A",
+   "dopo": "giusto (nessuna scheda)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": null
+  },
+  {
+   "n": 14,
+   "qid": "Q13129341",
+   "nome": "John Lloyd-Jones",
+   "manuale": "I",
+   "dopo": "irrisolto, non collegato",
+   "stato": "ambiguo",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": {
+    "11541319g": "Hamilton-Jones, John Walter",
+    "12455762v": "Jones, John Vann",
+    "13622287z": "Jones, John Lawrence",
+    "12016257m": "Jones, John Ellis",
+    "162114377": "Jones, John 19..-....",
+    "132647482": "Jones, John 17..-18..",
+    "150121255": "Jones, John 19..-....",
+    "17719424t": "Jones, John 16..-17..",
+    "12229668n": "Jones, John 17..-18..",
+    "124884104": "Jones, John Henry 19..-....",
+    "173556356": "Jones, J.",
+    "15058081n": "Jones, J. Barrie",
+    "14116374x": "Lloyd, John 19..-....",
+    "15107665z": "Lloyd, John 19..-...."
+   }
+  },
+  {
+   "n": 15,
+   "qid": "Q131522682",
+   "nome": "Enrique Vázquez de Aldana",
+   "manuale": "A",
+   "dopo": "giusto (nessuna scheda)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": null
+  },
+  {
+   "n": 16,
+   "qid": "Q1398493",
+   "nome": "Hans Müller-Schlösser",
+   "manuale": "A",
+   "dopo": "senza prove sufficienti",
+   "stato": "riconosciuto",
+   "metodo": "nome_anni_bnf",
+   "schede": [
+    "18030778r",
+    "18035395f"
+   ],
+   "notizie_fr": 0,
+   "prove": {
+    "18030778r": "nome compatibile e anni che coincidono: Müller, Hans 1885-19..",
+    "18035395f": "nome compatibile e anni che coincidono: Müller, Hans 1885-19.."
+   },
+   "ambigue": {
+    "179527395": "Müller, Hans Richard 19..-....",
+    "16765808m": "Muller, Hans D.",
+    "18039153x": "Müller, Hans 192.-....",
+    "133182928": "Müller, Hans Rudolf",
+    "138977907": "Müller, Hans Udo",
+    "12404374g": "Müller, Hans-Ulrich",
+    "18039072x": "Müller, Hans 190.-19..",
+    "18039032p": "Müller, Hans 189.-19..",
+    "18150391f": "Müller, Hans 19..-....",
+    "12472200m": "Müller, Hans Rudolf Mattias",
+    "18039026r": "Müller, Hans 19..-....",
+    "18039083k": "Müller, Hans 190.-19..",
+    "120383940": "Müller, Hans-Peter 19..-....",
+    "12722300c": "Müller, Hans-Georg 19..-....",
+    "122913101": "Müller, Hans-Georg 19..-....",
+    "12469637j": "Müller, Hans Jürgen 19..-....",
+    "12171659m": "Müller, Hans-Peter 19..-....",
+    "13578889m": "Müller, Hans-Peter 19..-....",
+    "14209996k": "Müller, Hans 19..-....",
+    "15020035x": "Müller, Hans 19..-....",
+    "18039120z": "Müller, Hans 190.-19..",
+    "12370344v": "Müller, Hans-Jürgen 19..-....",
+    "11157353m": "Müller, Hans Peter 19..-....",
+    "133193291": "Müller, Hans 19..-....",
+    "12271829d": "Müller, Hans-Peter 19..-....",
+    "180391052": "Müller, Hans 190.-19..",
+    "16119457m": "Müller, Hans Werner 19..-....",
+    "18039043b": "Müller, Hans 189.-19..",
+    "13945846p": "Muller, Hans 19..-....",
+    "180479546": "Müller, Hans Peter 19..-....",
+    "18047955j": "Müller, Hans Peter 19..-...."
+   }
+  },
+  {
+   "n": 17,
+   "qid": "Q1470667",
+   "nome": "Hans Ganz",
+   "manuale": "A",
+   "dopo": "giusto (nessuna scheda)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": null
+  },
+  {
+   "n": 18,
+   "qid": "Q14946693",
+   "nome": "Minnie Louise Haskins",
+   "manuale": "A",
+   "dopo": "giusto (nessuna scheda)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": null
+  },
+  {
+   "n": 19,
+   "qid": "Q15090962",
+   "nome": "Sergei Rozanov",
+   "manuale": "A",
+   "dopo": "giusto (nessuna scheda)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": null
+  },
+  {
+   "n": 20,
+   "qid": "Q15485418",
+   "nome": "Louie Bennett",
+   "manuale": "A",
+   "dopo": "giusto (nessuna scheda)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": null
+  },
+  {
+   "n": 21,
+   "qid": "Q15689600",
+   "nome": "Amelia Beers Warnock",
+   "manuale": "A",
+   "dopo": "giusto (nessuna scheda)",
+   "stato": "ambiguo",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": {
+    "181981742": "McHale, Katherine Jean"
+   }
+  },
+  {
+   "n": 22,
+   "qid": "Q15987617",
+   "nome": "Julia Green (efternamn)",
+   "manuale": "I",
+   "dopo": "irrisolto, non collegato",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": null
+  },
+  {
+   "n": 23,
+   "qid": "Q16831409",
+   "nome": "František Dohnal",
+   "manuale": "A",
+   "dopo": "giusto (nessuna scheda)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": null
+  },
+  {
+   "n": 24,
+   "qid": "Q16899719",
+   "nome": "Carl Keilhau",
+   "manuale": "A",
+   "dopo": "giusto (nessuna scheda)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": null
+  },
+  {
+   "n": 25,
+   "qid": "Q16901261",
+   "nome": "Noel Everingham Sainsbury",
+   "manuale": "A",
+   "dopo": "giusto (nessuna scheda)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": null
+  },
+  {
+   "n": 26,
+   "qid": "Q1753084",
+   "nome": "Czesław Jastrzębiec-Kozłowski",
+   "manuale": "A",
+   "dopo": "giusto (nessuna scheda)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": null
+  },
+  {
+   "n": 27,
+   "qid": "Q18535612",
+   "nome": "Robert Evans",
+   "manuale": "I",
+   "dopo": "irrisolto, non collegato",
+   "stato": "ambiguo",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": {
+    "12210882c": "Evans, Robert 19..-....",
+    "12571769w": "Evans, Robert 19..-...."
+   }
+  },
+  {
+   "n": 28,
+   "qid": "Q18576661",
+   "nome": "Frances Mabel Robinson",
+   "manuale": "I",
+   "dopo": "irrisolto, non collegato",
+   "stato": "ambiguo",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": {
+    "18272229t": "Robinson, Frances",
+    "14491204f": "Robinson, Frankie",
+    "14506263g": "Robinson, Fay",
+    "12391840h": "Robinson, Franklin",
+    "12464963q": "Robinson, Florett",
+    "14927950d": "Robinson, Flavia"
+   }
+  },
+  {
+   "n": 29,
+   "qid": "Q18911624",
+   "nome": "Robert Mitchell",
+   "manuale": "I",
+   "dopo": "irrisolto, non collegato",
+   "stato": "ambiguo",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": {
+    "12135676b": "Mitchell, Robert Lloyd",
+    "16959125c": "Mitchell, Robert Edward",
+    "18154274j": "Mitchell, Robert 19..-....",
+    "167716058": "Mitchell, S. Ian",
+    "14412004g": "Mitchell, Roberta",
+    "13614411j": "Mitchell, Rosemary",
+    "12092594b": "Mitchell, Richard",
+    "18226655d": "Mitchell, Ryan"
+   }
+  },
+  {
+   "n": 30,
+   "qid": "Q19667016",
+   "nome": "Lilian Turner",
+   "manuale": "A",
+   "dopo": "giusto (nessuna scheda)",
+   "stato": "ambiguo",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": {
+    "123163175": "Turner, L."
+   }
+  },
+  {
+   "n": 31,
+   "qid": "Q20755702",
+   "nome": "Josef Jirsík",
+   "manuale": "C",
+   "dopo": "trovato senza notizie in francese",
+   "stato": "riconosciuto",
+   "metodo": "nome_anni_bnf",
+   "schede": [
+    "10906609x"
+   ],
+   "notizie_fr": 0,
+   "prove": {
+    "10906609x": "nome compatibile e anni che coincidono: Jirsík, Josef 1898-1956"
+   },
+   "ambigue": {}
+  },
+  {
+   "n": 32,
+   "qid": "Q2614668",
+   "nome": "Caroline van Dommelen",
+   "manuale": "A",
+   "dopo": "giusto (nessuna scheda)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": null
+  },
+  {
+   "n": 33,
+   "qid": "Q276464",
+   "nome": "Judith Blunt-Lytton",
+   "manuale": "C",
+   "dopo": "mancato",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": null
+  },
+  {
+   "n": 34,
+   "qid": "Q291016",
+   "nome": "Marija Jurić Zagorka",
+   "manuale": "A",
+   "dopo": "giusto (nessuna scheda)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": null
+  },
+  {
+   "n": 35,
+   "qid": "Q2930497",
+   "nome": "C. M. van den Heever",
+   "manuale": "A",
+   "dopo": "giusto (nessuna scheda)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": null
+  },
+  {
+   "n": 36,
+   "qid": "Q3157322",
+   "nome": "Jack Snow",
+   "manuale": "A",
+   "dopo": "giusto (nessuna scheda)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": null
+  },
+  {
+   "n": 37,
+   "qid": "Q33110662",
+   "nome": "Juan María Oliver",
+   "manuale": "I",
+   "dopo": "irrisolto, non collegato",
+   "stato": "ambiguo",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": {
+    "16119357b": "Oliver Frade, José Manuel"
+   }
+  },
+  {
+   "n": 38,
+   "qid": "Q3438314",
+   "nome": "Rodolphe Girard",
+   "manuale": "A",
+   "dopo": "giusto (nessuna scheda)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": null
+  },
+  {
+   "n": 39,
+   "qid": "Q4018179",
+   "nome": "Ward Greene",
+   "manuale": "I",
+   "dopo": "irrisolto, non collegato",
+   "stato": "ambiguo",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": {
+    "12178434d": "Greene, J. Edward",
+    "12431237w": "Greene, J. Patrick"
+   }
+  },
+  {
+   "n": 40,
+   "qid": "Q4583273",
+   "nome": "Halvor Floden",
+   "manuale": "A",
+   "dopo": "giusto (nessuna scheda)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": null
+  },
+  {
+   "n": 41,
+   "qid": "Q4767044",
+   "nome": "Anna Gordon Keown",
+   "manuale": "A",
+   "dopo": "giusto (nessuna scheda)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": null
+  },
+  {
+   "n": 42,
+   "qid": "Q4834199",
+   "nome": "B. S. Mardhekar",
+   "manuale": "A",
+   "dopo": "giusto (nessuna scheda)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": null
+  },
+  {
+   "n": 43,
+   "qid": "Q4933556",
+   "nome": "Bob Olsen",
+   "manuale": "A",
+   "dopo": "giusto (nessuna scheda)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": null
+  },
+  {
+   "n": 44,
+   "qid": "Q50298099",
+   "nome": "Islwyn Williams",
+   "manuale": "A",
+   "dopo": "giusto (nessuna scheda)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": null
+  },
+  {
+   "n": 45,
+   "qid": "Q5040265",
+   "nome": "Carl H. Claudy",
+   "manuale": "A",
+   "dopo": "giusto (nessuna scheda)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": null
+  },
+  {
+   "n": 46,
+   "qid": "Q5045036",
+   "nome": "Caroline Dale Snedeker",
+   "manuale": "A",
+   "dopo": "giusto (nessuna scheda)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": null
+  },
+  {
+   "n": 47,
+   "qid": "Q5298362",
+   "nome": "Dorothy Cottrell",
+   "manuale": "A",
+   "dopo": "giusto (nessuna scheda)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": null
+  },
+  {
+   "n": 48,
+   "qid": "Q55979103",
+   "nome": "Ella MacMahon",
+   "manuale": "A",
+   "dopo": "giusto (nessuna scheda)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": null
+  },
+  {
+   "n": 49,
+   "qid": "Q56051696",
+   "nome": "Mulshankar Mulani",
+   "manuale": "A",
+   "dopo": "giusto (nessuna scheda)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": null
+  },
+  {
+   "n": 50,
+   "qid": "Q56064825",
+   "nome": "V. T. Murray",
+   "manuale": "I",
+   "dopo": "irrisolto, non collegato",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": null
+  },
+  {
+   "n": 51,
+   "qid": "Q565684",
+   "nome": "Anne Parrish",
+   "manuale": "A",
+   "dopo": "giusto (nessuna scheda)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": null
+  },
+  {
+   "n": 52,
+   "qid": "Q5921198",
+   "nome": "Howard Wandrei",
+   "manuale": "I",
+   "dopo": "irrisolto, non collegato",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": null
+  },
+  {
+   "n": 53,
+   "qid": "Q5993001",
+   "nome": "Manuel Fontdevila",
+   "manuale": "I",
+   "dopo": "irrisolto, non collegato",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": null
+  },
+  {
+   "n": 54,
+   "qid": "Q60367185",
+   "nome": "Charles Neville Buck",
+   "manuale": "A",
+   "dopo": "giusto (nessuna scheda)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": null
+  },
+  {
+   "n": 55,
+   "qid": "Q6122090",
+   "nome": "Jagadish Chandra Gupta",
+   "manuale": "I",
+   "dopo": "irrisolto, non collegato",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": null
+  },
+  {
+   "n": 56,
+   "qid": "Q6171046",
+   "nome": "Jean Louis De Esque",
+   "manuale": "A",
+   "dopo": "giusto (nessuna scheda)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": null
+  },
+  {
+   "n": 57,
+   "qid": "Q6217845",
+   "nome": "John A. Moroso",
+   "manuale": "A",
+   "dopo": "giusto (nessuna scheda)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": null
+  },
+  {
+   "n": 58,
+   "qid": "Q625336",
+   "nome": "Kim Nae-sung",
+   "manuale": "I",
+   "dopo": "senza prove sufficienti",
+   "stato": "riconosciuto",
+   "metodo": "nome_anni_bnf",
+   "schede": [
+    "16572129s"
+   ],
+   "notizie_fr": 0,
+   "prove": {
+    "16572129s": "nome compatibile e anni che coincidono: Kim, Seong-tae 1910-...."
+   },
+   "ambigue": {
+    "133303654": "Kim, Sung",
+    "145015006": "Kim, Song-Jae",
+    "14591408j": "Kim, Sōñ-Lye",
+    "17885057b": "Kim, Sung kyu",
+    "13594202h": "Kim, Sūñ-Čʹan",
+    "161768306": "Kim, Seungduk",
+    "156132053": "Kim, Seounghee",
+    "169978965": "Kim, Jung S",
+    "16738671x": "Kim, Seong-dae",
+    "18186557w": "Kim, Seong Uk",
+    "169734584": "Kim, Seong-jun",
+    "17908569z": "Kim, Seong-ok",
+    "17847855h": "Kim, Seong-June",
+    "16704029w": "Kim, Marie Seong-Hak",
+    "16662187x": "Kim, Seong-eun",
+    "180722013": "Kim, Min-sung",
+    "15575536r": "Kim, Jun-seong",
+    "160776223": "Kim, Sung-Woo",
+    "150803935": "Kim, Dong-Sung",
+    "15555799s": "Kim, Sungmo",
+    "16168492x": "Kim, Sōñ-Kūn",
+    "156163173": "Kim, Sōñ-Ho",
+    "15532430v": "Kim, Sōñ-Nam",
+    "140011069": "Kim, Sung Kil",
+    "146012325": "Kim, Hyun-Sung",
+    "14045772j": "Kim, Sung-Nyu",
+    "18162418b": "Kim, Sung-Do",
+    "150793260": "Kim, Sung-Hoon",
+    "165691921": "Kim, Sung Ah",
+    "179119416": "Kim, Sung-Hee",
+    "181858057": "Kim, Sung-Eun Thomas",
+    "161763822": "Kim, Sung-Min",
+    "150833858": "Kim, Sung-su 19..-....",
+    "156126785": "Kim, Mi-Sung 19..-...."
+   }
+  },
+  {
+   "n": 59,
+   "qid": "Q6513844",
+   "nome": "Lee Hawkins Garby",
+   "manuale": "A",
+   "dopo": "giusto (nessuna scheda)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": null
+  },
+  {
+   "n": 60,
+   "qid": "Q65246944",
+   "nome": "Emanuel Havelka",
+   "manuale": "A",
+   "dopo": "giusto (nessuna scheda)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": null
+  },
+  {
+   "n": 61,
+   "qid": "Q6547722",
+   "nome": "Lilian Wooster Greaves",
+   "manuale": "A",
+   "dopo": "giusto (nessuna scheda)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": null
+  },
+  {
+   "n": 62,
+   "qid": "Q6727922",
+   "nome": "Madison Cooper",
+   "manuale": "I",
+   "dopo": "irrisolto, non collegato",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": null
+  },
+  {
+   "n": 63,
+   "qid": "Q6963402",
+   "nome": "Naṇḍūri Veṅkaṭa Subbārāvu",
+   "manuale": "A",
+   "dopo": "giusto (nessuna scheda)",
+   "stato": "ambiguo",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": {
+    "156166099": "Neelakanteswara Rao, N.",
+    "12447656x": "Venkat Rao, N.",
+    "14532519g": "Rao, N. V. Kameswara"
+   }
+  },
+  {
+   "n": 64,
+   "qid": "Q7274124",
+   "nome": "R. Williams Parry",
+   "manuale": "A",
+   "dopo": "giusto (nessuna scheda)",
+   "stato": "ambiguo",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": {
+    "18243065r": "Parry, Ross",
+    "135837671": "Parry, Robert 19..-...."
+   }
+  },
+  {
+   "n": 65,
+   "qid": "Q7660316",
+   "nome": "Syed Emdad Ali",
+   "manuale": "A",
+   "dopo": "giusto (nessuna scheda)",
+   "stato": "ambiguo",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": {
+    "12025522r": "Husin Ali, Syed",
+    "15811653x": "Ali, Syed Mohammad",
+    "12027875n": "Ali, Syed Mohammed",
+    "16565452n": "Ali, Syed Faiz 19..-....",
+    "165319544": "Ali, Syed Sadaqat"
+   }
+  },
+  {
+   "n": 66,
+   "qid": "Q79351531",
+   "nome": "Rashīd ʻAṭīyah",
+   "manuale": "A",
+   "dopo": "giusto (nessuna scheda)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": null
+  },
+  {
+   "n": 67,
+   "qid": "Q943909",
+   "nome": "Frank L. Pollack",
+   "manuale": "A",
+   "dopo": "giusto (nessuna scheda)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": null
+  },
+  {
+   "n": 68,
+   "qid": "Q94405664",
+   "nome": "N.-P. Landry",
+   "manuale": "A",
+   "dopo": "giusto (nessuna scheda)",
+   "stato": "ambiguo",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": {
+    "16633010p": "Landry, Normand"
+   }
+  },
+  {
+   "n": 69,
+   "qid": "Q95126535",
+   "nome": "Alexandra Urbanová",
+   "manuale": "C",
+   "dopo": "trovato senza notizie in francese",
+   "stato": "riconosciuto",
+   "metodo": "nome_anni_bnf",
+   "schede": [
+    "18253851g"
+   ],
+   "notizie_fr": 0,
+   "prove": {
+    "18253851g": "nome compatibile e anni che coincidono: Urbanová, Alexandra 1921-1956"
+   },
+   "ambigue": {}
+  },
+  {
+   "n": 70,
+   "qid": "Q95165859",
+   "nome": "Karel Polák",
+   "manuale": "A",
+   "dopo": "giusto (nessuna scheda)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": null
+  },
+  {
+   "n": 71,
+   "qid": "Q95175282",
+   "nome": "Viktor Kripner",
+   "manuale": "A",
+   "dopo": "giusto (nessuna scheda)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": null
+  },
+  {
+   "n": 72,
+   "qid": "Q95183293",
+   "nome": "Jaroslav Hloušek",
+   "manuale": "A",
+   "dopo": "giusto (nessuna scheda)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": null
+  },
+  {
+   "n": 73,
+   "qid": "Q95387414",
+   "nome": "Alois Čáp",
+   "manuale": "A",
+   "dopo": "giusto (nessuna scheda)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": null
+  },
+  {
+   "n": 74,
+   "qid": "Q95435084",
+   "nome": "Jindřich Bedřich Heller",
+   "manuale": "I",
+   "dopo": "irrisolto, non collegato",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": null
+  },
+  {
+   "n": 75,
+   "qid": "Q95471631",
+   "nome": "Vilém Peřina",
+   "manuale": "A",
+   "dopo": "giusto (nessuna scheda)",
+   "stato": "non_trovato",
+   "metodo": null,
+   "schede": [],
+   "notizie_fr": 0,
+   "prove": {},
+   "ambigue": null
+  },
+  {
+   "n": 76,
+   "qid": "Q983507",
+   "nome": "Səməd Vurğun",
+   "manuale": "C",
+   "dopo": "trovato senza notizie in francese",
+   "stato": "riconosciuto",
+   "metodo": "nome_anni_bnf",
+   "schede": [
+    "14391912t"
+   ],
+   "notizie_fr": 0,
+   "prove": {
+    "14391912t": "nome compatibile e anni che coincidono: Vurğun, Sămăd 1906-1956"
+   },
+   "ambigue": {}
+  },
+  {
+   "n": 77,
+   "qid": "Q4647724",
+   "nome": "A. E. Coppard",
+   "manuale": "C",
+   "dopo": "trovato senza notizie in francese",
+   "stato": "riconosciuto",
+   "metodo": "codice_bnf",
+   "schede": [
+    "108909644"
+   ],
+   "notizie_fr": 0,
+   "prove": {
+    "108909644": "codice BnF di Wikidata (P268): Coppard, Alfred Edgar 1878-1957"
+   },
+   "ambigue": null
+  },
+  {
+   "n": 78,
+   "qid": "Q8962216",
+   "nome": "Francesc Trabal i Benessat",
+   "manuale": "C",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_bnf",
+   "schede": [
+    "12074944z"
+   ],
+   "notizie_fr": 2,
+   "prove": {
+    "12074944z": "codice BnF di Wikidata (P268): Trabal, Francesc 1899-1957"
+   },
+   "ambigue": null
+  },
+  {
+   "n": 79,
+   "qid": "Q500042",
+   "nome": "Louis Bromfield",
+   "manuale": "C",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_bnf",
+   "schede": [
+    "118941374"
+   ],
+   "notizie_fr": 138,
+   "prove": {
+    "118941374": "codice BnF di Wikidata (P268): Bromfield, Louis 1896-1956"
+   },
+   "ambigue": null
+  },
+  {
+   "n": 80,
+   "qid": "Q9012032",
+   "nome": "Joan Puig i Ferreter",
+   "manuale": "C",
+   "dopo": "trovato senza notizie in francese",
+   "stato": "riconosciuto",
+   "metodo": "codice_bnf",
+   "schede": [
+    "12055171g"
+   ],
+   "notizie_fr": 0,
+   "prove": {
+    "12055171g": "codice BnF di Wikidata (P268): Puig i Ferreter, Joan 1882-1956"
+   },
+   "ambigue": null
+  },
+  {
+   "n": 81,
+   "qid": "Q5857770",
+   "nome": "Federico Oliver Crespo",
+   "manuale": "C",
+   "dopo": "trovato senza notizie in francese",
+   "stato": "riconosciuto",
+   "metodo": "codice_bnf",
+   "schede": [
+    "13550281v"
+   ],
+   "notizie_fr": 0,
+   "prove": {
+    "13550281v": "codice BnF di Wikidata (P268): Oliver, Federico 1873-1957"
+   },
+   "ambigue": null
+  },
+  {
+   "n": 82,
+   "qid": "Q2782998",
+   "nome": "Peter B. Kyne",
+   "manuale": "C",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_bnf",
+   "schede": [
+    "13171545s"
+   ],
+   "notizie_fr": 6,
+   "prove": {
+    "13171545s": "codice BnF di Wikidata (P268): Kyne, Peter B. 1880-1957"
+   },
+   "ambigue": null
+  },
+  {
+   "n": 83,
+   "qid": "Q12208643",
+   "nome": "Ḥalīm Dammūs",
+   "manuale": "C",
+   "dopo": "trovato senza notizie in francese",
+   "stato": "riconosciuto",
+   "metodo": "codice_bnf",
+   "schede": [
+    "17738763q"
+   ],
+   "notizie_fr": 0,
+   "prove": {
+    "17738763q": "codice BnF di Wikidata (P268): Dammūs, Ḥalīm 1888-1957"
+   },
+   "ambigue": null
+  },
+  {
+   "n": 84,
+   "qid": "Q3010499",
+   "nome": "César Moro",
+   "manuale": "C",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_bnf",
+   "schede": [
+    "121024099"
+   ],
+   "notizie_fr": 6,
+   "prove": {
+    "121024099": "codice BnF di Wikidata (P268): Moro, César 1903-1956"
+   },
+   "ambigue": null
+  },
+  {
+   "n": 85,
+   "qid": "Q5591308",
+   "nome": "Grace Miller White",
+   "manuale": "C",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_bnf",
+   "schede": [
+    "10517928s"
+   ],
+   "notizie_fr": 1,
+   "prove": {
+    "10517928s": "codice BnF di Wikidata (P268): White, Grace Miller 1868-1957"
+   },
+   "ambigue": null
+  },
+  {
+   "n": 86,
+   "qid": "Q8345656",
+   "nome": "Christofredo Jakob",
+   "manuale": "C",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_bnf",
+   "schede": [
+    "125664990"
+   ],
+   "notizie_fr": 6,
+   "prove": {
+    "125664990": "codice BnF di Wikidata (P268): Jakob, Christfried 1866-1956"
+   },
+   "ambigue": null
+  },
+  {
+   "n": 87,
+   "qid": "Q439204",
+   "nome": "Henry Louis Mencken",
+   "manuale": "C",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_bnf",
+   "schede": [
+    "120271809"
+   ],
+   "notizie_fr": 8,
+   "prove": {
+    "120271809": "codice BnF di Wikidata (P268): Mencken, Henry Louis 1880-1956"
+   },
+   "ambigue": null
+  },
+  {
+   "n": 88,
+   "qid": "Q3623504",
+   "nome": "Arnaldo Fraccaroli",
+   "manuale": "C",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_bnf",
+   "schede": [
+    "124627583"
+   ],
+   "notizie_fr": 2,
+   "prove": {
+    "124627583": "codice BnF di Wikidata (P268): Fraccaroli, Arnaldo 1882-1956"
+   },
+   "ambigue": null
+  },
+  {
+   "n": 89,
+   "qid": "Q1578424",
+   "nome": "Hans Adler",
+   "manuale": "C",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_bnf",
+   "schede": [
+    "155546758"
+   ],
+   "notizie_fr": 2,
+   "prove": {
+    "155546758": "codice BnF di Wikidata (P268): Adler, Hans 1880-1957"
+   },
+   "ambigue": null
+  },
+  {
+   "n": 90,
+   "qid": "Q3072893",
+   "nome": "Firmin Roz",
+   "manuale": "C",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_bnf",
+   "schede": [
+    "12122686q"
+   ],
+   "notizie_fr": 254,
+   "prove": {
+    "12122686q": "codice BnF di Wikidata (P268): Roz, Firmin 1866-1957"
+   },
+   "ambigue": null
+  },
+  {
+   "n": 91,
+   "qid": "Q57389",
+   "nome": "Alfred Döblin",
+   "manuale": "C",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_bnf",
+   "schede": [
+    "170357090",
+    "11898864x"
+   ],
+   "notizie_fr": 55,
+   "prove": {
+    "170357090": "codice BnF di Wikidata (P268): Poot, Linke 1878-1957",
+    "11898864x": "codice BnF di Wikidata (P268): Döblin, Alfred 1878-1957"
+   },
+   "ambigue": null
+  },
+  {
+   "n": 92,
+   "qid": "Q1392550",
+   "nome": "Gustav Suits",
+   "manuale": "C",
+   "dopo": "trovato senza notizie in francese",
+   "stato": "riconosciuto",
+   "metodo": "codice_bnf",
+   "schede": [
+    "10292324p"
+   ],
+   "notizie_fr": 0,
+   "prove": {
+    "10292324p": "codice BnF di Wikidata (P268): Suits, Gustav 1883-1956"
+   },
+   "ambigue": null
+  },
+  {
+   "n": 93,
+   "qid": "Q2295334",
+   "nome": "Patrick Abercrombie",
+   "manuale": "C",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_bnf",
+   "schede": [
+    "11273420j"
+   ],
+   "notizie_fr": 2,
+   "prove": {
+    "11273420j": "codice BnF di Wikidata (P268): Abercrombie, Patrick 1879-1957"
+   },
+   "ambigue": null
+  },
+  {
+   "n": 94,
+   "qid": "Q3100750",
+   "nome": "Genjirō Yoshida",
+   "manuale": "C",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_bnf",
+   "schede": [
+    "15524627s"
+   ],
+   "notizie_fr": 4,
+   "prove": {
+    "15524627s": "codice BnF di Wikidata (P268): Yoshida, Genjirō 1886-1956"
+   },
+   "ambigue": null
+  },
+  {
+   "n": 95,
+   "qid": "Q123075",
+   "nome": "Robert Walser",
+   "manuale": "C",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_bnf",
+   "schede": [
+    "119288383"
+   ],
+   "notizie_fr": 79,
+   "prove": {
+    "119288383": "codice BnF di Wikidata (P268): Walser, Robert 1878-1956"
+   },
+   "ambigue": null
+  },
+  {
+   "n": 96,
+   "qid": "Q78437",
+   "nome": "Ernst Bertram",
+   "manuale": "C",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_bnf",
+   "schede": [
+    "12027965m"
+   ],
+   "notizie_fr": 5,
+   "prove": {
+    "12027965m": "codice BnF di Wikidata (P268): Bertram, Ernst 1884-1957"
+   },
+   "ambigue": null
+  },
+  {
+   "n": 97,
+   "qid": "Q468708",
+   "nome": "Anna Haava",
+   "manuale": "C",
+   "dopo": "trovato senza notizie in francese",
+   "stato": "riconosciuto",
+   "metodo": "codice_bnf",
+   "schede": [
+    "12559787b"
+   ],
+   "notizie_fr": 0,
+   "prove": {
+    "12559787b": "codice BnF di Wikidata (P268): Haava, Anna 1864-1957"
+   },
+   "ambigue": null
+  },
+  {
+   "n": 98,
+   "qid": "Q48889747",
+   "nome": "Charles Foleÿ",
+   "manuale": "C",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_bnf",
+   "schede": [
+    "12091284z"
+   ],
+   "notizie_fr": 283,
+   "prove": {
+    "12091284z": "codice BnF di Wikidata (P268): Foleÿ, Charles 1861-1956"
+   },
+   "ambigue": null
+  },
+  {
+   "n": 99,
+   "qid": "Q3387299",
+   "nome": "Pierre Villetard",
+   "manuale": "C",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_bnf",
+   "schede": [
+    "12110875x"
+   ],
+   "notizie_fr": 54,
+   "prove": {
+    "12110875x": "codice BnF di Wikidata (P268): Villetard, Pierre 1874-1956"
+   },
+   "ambigue": null
+  },
+  {
+   "n": 100,
+   "qid": "Q312637",
+   "nome": "Curzio Malaparte",
+   "manuale": "C",
+   "dopo": "trovato",
+   "stato": "riconosciuto",
+   "metodo": "codice_bnf",
+   "schede": [
+    "11038928q",
+    "11914063x"
+   ],
+   "notizie_fr": 108,
+   "prove": {
+    "11038928q": "codice BnF di Wikidata (P268): Suckert, Curzio 1898-1957",
+    "11914063x": "codice BnF di Wikidata (P268): Malaparte, Curzio 1898-1957"
+   },
+   "ambigue": null
+  }
+ ]
+}
