@@ -6239,6 +6239,55 @@
    }
   },
   {
+   "tipo": "nascita",
+   "qid": "Q28494",
+   "nome": "Heinrich von Kleist",
+   "it": null,
+   "desc": "German poet, dramatist, novelist and short story writer (1777–1811)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1777,
+   "anni": 250,
+   "pagine": 86,
+   "mese": 10,
+   "giorno": 18,
+   "fonte_data": "verifica: Wikidata e Britannica (18 ottobre 1777); il Kleist-Museum indica il 10 o il 18 ottobre",
+   "scheda": {
+    "it": {
+     "desc": "drammaturgo, poeta e scrittore tedesco",
+     "paesi": [
+      "Regno di Prussia",
+      "Germania"
+     ],
+     "opere": [
+      "About the Puppet Theatre",
+      "Penthesilea",
+      "La brocca rotta"
+     ],
+     "nato": 1777,
+     "morto": 1811,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Heinrich_von_Kleist"
+    },
+    "en": {
+     "desc": "German poet, dramatist, novelist and short story writer (1777–1811)",
+     "paesi": [
+      "Kingdom of Prussia",
+      "Germany"
+     ],
+     "opere": [
+      "About the Puppet Theatre",
+      "Penthesilea",
+      "The Broken Jug"
+     ],
+     "nato": 1777,
+     "morto": 1811,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Heinrich_von_Kleist"
+    }
+   }
+  },
+  {
    "tipo": "morte",
    "qid": "Q502983",
    "nome": "Michael Rostovtzeff",
