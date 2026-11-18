@@ -129,7 +129,7 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 55921
+   "visite_en": 55922
   },
   {
    "qid": "Q1212765",
@@ -223,7 +223,7 @@
     "it": "hindī"
    },
    "generi": [],
-   "visite_en": 21554
+   "visite_en": 21558
   },
   {
    "qid": "Q4190252",
@@ -500,7 +500,7 @@
     "it": "spagnolo"
    },
    "generi": [],
-   "visite_en": 8954,
+   "visite_en": 8964,
    "copertina": {
     "file": "San Manuel Bueno mártir 1933.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/San_Manuel_Bueno_m%C3%A1rtir_1933.jpg/500px-San_Manuel_Bueno_m%C3%A1rtir_1933.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -757,7 +757,7 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 5654
+   "visite_en": 5655
   },
   {
    "qid": "Q6663021",
@@ -814,7 +814,7 @@
     "it": "tedesco"
    },
    "generi": [],
-   "visite_en": 5244
+   "visite_en": 5245
   },
   {
    "qid": "Q2836696",
@@ -1008,7 +1008,7 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 3910
+   "visite_en": 3926
   },
   {
    "qid": "Q874809",
@@ -1027,7 +1027,7 @@
     "it": "tedesco"
    },
    "generi": [],
-   "visite_en": 3870
+   "visite_en": 3877
   },
   {
    "qid": "Q2836721",
@@ -1123,7 +1123,7 @@
    "generi": [
     "saggio"
    ],
-   "visite_en": 3699
+   "visite_en": 3700
   },
   {
    "qid": "Q1885291",
@@ -1558,7 +1558,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 1957
+   "visite_en": 1959
   },
   {
    "qid": "Q96387336",
@@ -1638,7 +1638,7 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 1717
+   "visite_en": 1724
   },
   {
    "qid": "Q17031427",
@@ -1697,7 +1697,7 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 1449
+   "visite_en": 1451
   },
   {
    "qid": "Q328061",
@@ -1844,7 +1844,7 @@
    "generi": [
     "saggio"
    ],
-   "visite_en": 1299
+   "visite_en": 1300
   },
   {
    "qid": "Q811229",
@@ -1863,7 +1863,7 @@
     "it": "tedesco"
    },
    "generi": [],
-   "visite_en": 1274
+   "visite_en": 1275
   },
   {
    "qid": "Q7756737",
@@ -2264,6 +2264,25 @@
    "visite_en": 577
   },
   {
+   "qid": "Q7736867",
+   "titolo": "The Go-getter",
+   "titolo_it": "Un uomo di successo",
+   "autori": [
+    {
+     "qid": "Q207515",
+     "nome": "P. G. Wodehouse"
+    }
+   ],
+   "pagine": 3,
+   "wiki_en": "https://en.wikipedia.org/wiki/The_Go-Getter_(short_story)",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [],
+   "visite_en": 528
+  },
+  {
    "qid": "Q1355242",
    "titolo": "The Life of Zamenhof",
    "titolo_it": null,
@@ -2282,7 +2301,7 @@
    "generi": [
     "memorie"
    ],
-   "visite_en": 528,
+   "visite_en": 527,
    "copertina": {
     "file": "1920 Vivo de Zamenhof (unua eldono.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/1920_Vivo_de_Zamenhof_%28unua_eldono.jpg/500px-1920_Vivo_de_Zamenhof_%28unua_eldono.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -2290,25 +2309,6 @@
     "licenza": "Public domain",
     "autore": "AnonymousUnknown author"
    }
-  },
-  {
-   "qid": "Q7736867",
-   "titolo": "The Go-getter",
-   "titolo_it": "Un uomo di successo",
-   "autori": [
-    {
-     "qid": "Q207515",
-     "nome": "P. G. Wodehouse"
-    }
-   ],
-   "pagine": 3,
-   "wiki_en": "https://en.wikipedia.org/wiki/The_Go-Getter_(short_story)",
-   "lingua": {
-    "en": "English",
-    "it": "inglese"
-   },
-   "generi": [],
-   "visite_en": 528
   },
   {
    "qid": "Q7625506",
@@ -2617,7 +2617,7 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 263
+   "visite_en": 264
   },
   {
    "qid": "Q21657640",
@@ -2636,7 +2636,7 @@
     "it": "russo"
    },
    "generi": [],
-   "visite_en": 241
+   "visite_en": 242
   },
   {
    "qid": "Q3887314",
