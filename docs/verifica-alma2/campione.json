@@ -1,0 +1,6982 @@
+{
+ "seme": 20261121,
+ "autori": [
+  {
+   "n": 1,
+   "qid": "Q5642970",
+   "nome": "Hallie Erminie Rives",
+   "nascita": "1874-05-02",
+   "morte": "1956-08-16",
+   "alias": [
+    "Hallie Erminie Rives-Wheeler"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 4,
+    "dal_2000": 0,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Rives 1874-1956\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "A fool in spots ... /",
+     "voci": [
+      "Rives, Hallie Erminie, 1874-1956."
+     ]
+    },
+    {
+     "titolo": "A furnace of earth /",
+     "voci": [
+      "Rives, Hallie Erminie, 1874-1956."
+     ]
+    },
+    {
+     "titolo": "The singing wire, and other stories ... /",
+     "voci": [
+      "Rives, Hallie Erminie, 1874-1956."
+     ]
+    },
+    {
+     "titolo": "Tales from Dickens /",
+     "voci": [
+      "Rives, Hallie Erminie, 1874-1956,",
+      "Birch, Reginald B., 1856-1943,",
+      "Dickens, Charles, 1812-1870."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "qid": "Q213482",
+   "nome": "Giuseppe Tomasi di Lampedusa",
+   "nascita": "1896-12-23",
+   "morte": "1957-07-23",
+   "alias": [
+    "Lampedusa",
+    "Tomasi di Lampedusa",
+    "Giuseppe Tomasi, 11th Prince of Lampedusa",
+    "Giuseppe Tomasi",
+    "Lampedusiana",
+    "Lampedusiano",
+    "Giuseppe Tomasi, XI prince de Lampedusa",
+    "Guiseppe Tomasi di Lampedusa",
+    "Giuseppe Tomasi, XI principe di Lampedusa"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 32,
+    "dal_2000": 16,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Lampedusa 1896-1957\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "Childhood memories and other stories /",
+     "voci": [
+      "Tomasi di Lampedusa, Giuseppe, 1896-1957,",
+      "Parkin, Stephen,"
+     ]
+    },
+    {
+     "titolo": "Childhood memories and other stories /",
+     "voci": [
+      "Tomasi di Lampedusa, Giuseppe, 1896-1957,",
+      "Parkin, Stephen,",
+      "Lanza Tomasi, Gioacchino,",
+      "Gallenzi, Alessandro,",
+      "Tomasi di Lampedusa, Giuseppe, 1896-1957.",
+      "Tomasi di Lampedusa, Giuseppe, 1896-1957.",
+      "Tomasi di Lampedusa, Giuseppe, 1896-1957.",
+      "Tomasi di Lampedusa, Giuseppe, 1896-1957."
+     ]
+    },
+    {
+     "titolo": "Death of a prince /",
+     "voci": [
+      "Tomasi di Lampedusa, Giuseppe, 1896-1957,",
+      "Colquhoun, Archibald,"
+     ]
+    },
+    {
+     "titolo": "Il gattopardo /",
+     "voci": [
+      "Tomasi di Lampedusa, Giuseppe, 1896-1957.",
+      "O'Neill, Tom, 1942-2001.",
+      "Glennan, Patrick.",
+      "University College, Dublin. Foundation for Italian Studies."
+     ]
+    },
+    {
+     "titolo": "The Leopard.",
+     "voci": [
+      "Tomasi di Lampedusa, Giuseppe, 1896-1957."
+     ]
+    },
+    {
+     "titolo": "The leopard /",
+     "voci": [
+      "Tomasi di Lampedusa, Giuseppe, 1896-1957."
+     ]
+    },
+    {
+     "titolo": "The leopard /",
+     "voci": [
+      "Tomasi di Lampedusa, Giuseppe, 1896-1957."
+     ]
+    },
+    {
+     "titolo": "The leopard /",
+     "voci": [
+      "Tomasi di Lampedusa, Giuseppe, 1896-1957."
+     ]
+    },
+    {
+     "titolo": "The leopard /",
+     "voci": [
+      "Tomasi di Lampedusa, Giuseppe, 1896-1957."
+     ]
+    },
+    {
+     "titolo": "The leopard /",
+     "voci": [
+      "Tomasi di Lampedusa, Giuseppe, 1896-1957."
+     ]
+    },
+    {
+     "titolo": "The leopard /",
+     "voci": [
+      "Tomasi di Lampedusa, Giuseppe, 1896-1957."
+     ]
+    },
+    {
+     "titolo": "The Leopard /",
+     "voci": [
+      "Tomasi di Lampedusa, Giuseppe, 1896-1957.",
+      "Colquhoun, Archibald."
+     ]
+    },
+    {
+     "titolo": "The leopard /",
+     "voci": [
+      "Tomasi di Lampedusa, Giuseppe, 1896-1957.",
+      "Colquhoun, Archibald."
+     ]
+    },
+    {
+     "titolo": "The leopard /",
+     "voci": [
+      "Tomasi di Lampedusa, Giuseppe, 1896-1957."
+     ]
+    },
+    {
+     "titolo": "The leopard /",
+     "voci": [
+      "Tomasi di Lampedusa, Giuseppe, 1896-1957."
+     ]
+    },
+    {
+     "titolo": "The leopard /",
+     "voci": [
+      "Tomasi di Lampedusa, Giuseppe, 1896-1957,",
+      "Colquhoun, Archibald,"
+     ]
+    },
+    {
+     "titolo": "The leopard /",
+     "voci": [
+      "Tomasi di Lampedusa, Giuseppe, 1896-1957,",
+      "Colquhoun, Archibald,"
+     ]
+    },
+    {
+     "titolo": "The leopard /",
+     "voci": [
+      "Tomasi di Lampedusa, Giuseppe, 1896-1957.",
+      "Colquhoun, Archibald,",
+      "Lanza Tomasi, Gioacchino,",
+      "Waldman, Guido,",
+      "Poletto, G. B., 1915-1988,",
+      "Hoyem, Andrew,",
+      "Schaefer, Susan, 1957-",
+      "Arion Press,",
+      "Mohawk Fine Papers, Inc.,",
+      "Arion Press"
+     ]
+    },
+    {
+     "titolo": "The Leopard /",
+     "voci": [
+      "Tomasi di Lampedusa, Giuseppe, 1896-1957."
+     ]
+    },
+    {
+     "titolo": "The Leopard /",
+     "voci": [
+      "Tomasi di Lampedusa, Giuseppe, 1896-1957."
+     ]
+    },
+    {
+     "titolo": "The leopard ;",
+     "voci": [
+      "Tomasi di Lampedusa, Giuseppe, 1896-1957.",
+      "Tomasi di Lampedusa, Giuseppe, 1896-1957."
+     ]
+    },
+    {
+     "titolo": "The leopard :",
+     "voci": [
+      "Tomasi di Lampedusa, Giuseppe, 1896-1957.",
+      "Tomasi di Lampedusa, Giuseppe, 1896-1957."
+     ]
+    },
+    {
+     "titolo": "The leopard :",
+     "voci": [
+      "Tomasi di Lampedusa, Giuseppe, 1896-1957.",
+      "Tomasi di Lampedusa, Giuseppe, 1896-1957."
+     ]
+    },
+    {
+     "titolo": "Letters from London and Europe (1925-30) /",
+     "voci": [
+      "Tomasi di Lampedusa, Giuseppe, 1896-1957."
+     ]
+    },
+    {
+     "titolo": "Letters from London and Europe :",
+     "voci": [
+      "Tomasi di Lampedusa, Giuseppe, 1896-1957.",
+      "Lanza Tomasi, Gioacchino."
+     ]
+    },
+    {
+     "titolo": "Letters of love and loss :",
+     "voci": [
+      "Tomasi di Lampedusa, Giuseppe, 1896-1957,",
+      "Wolff-Stomersee, Alexandra,"
+     ]
+    },
+    {
+     "titolo": "Letters of love and loss :",
+     "voci": [
+      "Tomasi di Lampedusa, Giuseppe, 1896-1957,",
+      "Wolff-Stomersee, Alexandra,"
+     ]
+    },
+    {
+     "titolo": "The siren and selected writings /",
+     "voci": [
+      "Tomasi di Lampedusa, Giuseppe, 1896-1957."
+     ]
+    },
+    {
+     "titolo": "The siren /",
+     "voci": [
+      "Tomasi di Lampedusa, Giuseppe, 1896-1957."
+     ]
+    },
+    {
+     "titolo": "Study guide to Il gattopardo /",
+     "voci": [
+      "Cainen, Brian.",
+      "Tomasi di Lampedusa, Giuseppe, 1896-1957."
+     ]
+    },
+    {
+     "titolo": "Two stories and a memory /",
+     "voci": [
+      "Tomasi di Lampedusa, Giuseppe, 1896-1957."
+     ]
+    },
+    {
+     "titolo": "Two stories and a memory /",
+     "voci": [
+      "Tomasi di Lampedusa, Giuseppe, 1896-1957."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "qid": "Q3398467",
+   "nome": "John Dyfnallt Owen",
+   "nascita": "1873-04-07",
+   "morte": "1956-12-28",
+   "alias": [
+    "Dyfnallt",
+    "Dyfnallt Dyfnallt",
+    "J. Dyfnallt Owen"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 3,
+    "dal_2000": 1,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Owen 1873-1956\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "A Chesterton Catholic Anthology /",
+     "voci": [
+      "Chesterton, G. K. (Gilbert Keith), 1874-1936.",
+      "Braybrooke, Patrick, 1894-1956.",
+      "Dudley, Owen Francis, 1882-1952."
+     ]
+    },
+    {
+     "titolo": "England :",
+     "voci": [
+      "Mase, Owen, 1892-1973.",
+      "De la Mare, Walter, 1873-1956"
+     ]
+    },
+    {
+     "titolo": "Three songs to children :",
+     "voci": [
+      "Berkeley, Michael.",
+      "De la Mare, Walter, 1873-1956.",
+      "Owen, Wilfred, 1893-1918.",
+      "Yeats, W. B. (William Butler), 1865-1939."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "qid": "Q379949",
+   "nome": "Tristan Bernard",
+   "nascita": "1866-09-07",
+   "morte": "1947-12-07",
+   "alias": [],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 13,
+    "dal_2000": 0,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Bernard 1866-1947\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "Cast thy burden. /",
+     "voci": [
+      "Hamblen, Bernard.",
+      "Lucas, Clarence, 1866-1947."
+     ]
+    },
+    {
+     "titolo": "The Diary of a Murderer ... Adapted (by Virginia and Frank Vernon) from “Aux abois.”.",
+     "voci": [
+      "Bernard, Tristan, 1866-1947.",
+      "VERNON, Frank.",
+      "Vernon, Virginia."
+     ]
+    },
+    {
+     "titolo": "French as he is Spoke. A comedy in one act. Adapted from the French ... by Gaston Mayer.",
+     "voci": [
+      "Bernard, Tristan, 1866-1947.",
+      "Mayer, Gaston."
+     ]
+    },
+    {
+     "titolo": "French without a Master: a farce in one act ... Translated by Barrett H. Clark.",
+     "voci": [
+      "Bernard, Tristan, 1866-1947."
+     ]
+    },
+    {
+     "titolo": "[Je vais m'en aller.] I'm Going!: a comedy in one act ... Translated by Barrett H. Clark.",
+     "voci": [
+      "Bernard, Tristan, 1866-1947."
+     ]
+    },
+    {
+     "titolo": "[L'Affaire Larcier. Roman ... Illustrations de Simont.]",
+     "voci": [
+      "Bernard, Tristan, 1866-1947."
+     ]
+    },
+    {
+     "titolo": "[L'Anglais tel qu'on le parle.] Labhartar Béarla annseo, etc. [Adapted by Léon Ó Broin.]",
+     "voci": [
+      "Bernard, Tristan, 1866-1947.",
+      "Ó Broin, León, 1902-1990."
+     ]
+    },
+    {
+     "titolo": "L'Anglais tel qu'on le parle. Par Tristan Bernard. Et quelques anecdotes. Adapted and edited by Otto",
+     "voci": [
+      "Bernard, Tristan, 1866-1947."
+     ]
+    },
+    {
+     "titolo": "L'Anglais tel qu'on le parle. Par Tristan Bernard. Et quelques anecdotes. Adapted and edited by Otto",
+     "voci": [
+      "Bernard, Tristan, 1866-1947."
+     ]
+    },
+    {
+     "titolo": "[L'Anglais tel qu'on le parle. Vaudeville en un acte.]",
+     "voci": [
+      "Bernard, Tristan, 1866-1947.",
+      "HOLLARD, Pierre."
+     ]
+    },
+    {
+     "titolo": "The Little Café. Musical comedy in three acts. Founded on the French farce, “Le Petite [sic] Café,",
+     "voci": [
+      "MACLELLAN, C. M. S.",
+      "Bernard, Tristan, 1866-1947."
+     ]
+    },
+    {
+     "titolo": "[Mathilde et ses mitaines.] The Woman on the Trail ... Adapted from the French by Edgar Jepson.",
+     "voci": [
+      "Bernard, Tristan, 1866-1947.",
+      "Jepson, Edgar, 1863-1938."
+     ]
+    },
+    {
+     "titolo": "The still, small voice. /",
+     "voci": [
+      "Hamblen, Bernard.",
+      "Lucas, Clarence, 1866-1947."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "qid": "Q713502",
+   "nome": "Wen Yiduo",
+   "nascita": "1899-11-02",
+   "morte": "1946-07-15",
+   "alias": [
+    "Yousan",
+    "Youshan",
+    "Wen Yiduo o Wen Yi-to",
+    "Wen Yi-to",
+    "Wen Yidou"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 1,
+    "dal_2000": 0,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Yiduo 1899-1946\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "Red candle:",
+     "voci": [
+      "Wen, Yiduo, 1899-1946."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "qid": "Q1547340",
+   "nome": "Leonora Speyer",
+   "nascita": "1872-11-07",
+   "morte": "1956-02-10",
+   "alias": [
+    "Leonora Speyer, Lady Speyer",
+    "Leonora von Stosch",
+    "Leonora von Stosch Speyer",
+    "Mrs. Edgar Speyer"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 1,
+    "dal_2000": 1,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Speyer 1872-1956\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "Rendezvous :",
+     "voci": [
+      "Beach, Amy, 1867-1944,",
+      "Speyer, Leonora, 1872-1956,",
+      "Gbur, Bruce,"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "qid": "Q379727",
+   "nome": "Benedict Wallet Vilakazi",
+   "nascita": "1906-01-06",
+   "morte": "1947-10-26",
+   "alias": [
+    "B.W. Vilakazi",
+    "Vilakazi Street",
+    "Bambatha KaMshini"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 5,
+    "dal_2000": 4,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Vilakazi 1906-1947\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "Amal'ezulu /",
+     "voci": [
+      "Vilakazi, B. Wallet (Benedict Wallet), 1906-1947,",
+      "Khumalo, Langa,"
+     ]
+    },
+    {
+     "titolo": "Amal'ezulu /",
+     "voci": [
+      "Vilakazi, B. Wallet (Benedict Wallet), 1906-1947,",
+      "Khumalo, Langa,"
+     ]
+    },
+    {
+     "titolo": "No matter when /",
+     "voci": [
+      "Vilakazi, B. Wallet (Benedict Wallet), 1906-1947,",
+      "Sithole, Nkosinathi,"
+     ]
+    },
+    {
+     "titolo": "Two Zulu poets :",
+     "voci": [
+      "Kunene, Mazisi",
+      "Kunene, Mazisi",
+      "Vilakazi, B. Wallet (Benedict Wallet), 1906-1947.",
+      "Vilakazi, B. Wallet (Benedict Wallet), 1906-1947.",
+      "Okoro, Dike,",
+      "Mphande, Lupenga,"
+     ]
+    },
+    {
+     "titolo": "Zulu-English dictionary /",
+     "voci": [
+      "Doke, C. M. (Clement Martyn), 1893-1980.",
+      "Vilakazi, B. Wallet (Benedict Wallet), 1906-1947."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "qid": "Q1387643",
+   "nome": "Lloyd Osbourne",
+   "nascita": "1868-04-07",
+   "morte": "1947-05-22",
+   "alias": [
+    "Lloyd Osborne",
+    "Samuel Lloyd Osbourne"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 70,
+    "dal_2000": 13,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Osbourne 1868-1947\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "Baby Bullet :",
+     "voci": [
+      "Osbourne, Lloyd, 1868-1947."
+     ]
+    },
+    {
+     "titolo": "Black Canyon, or Wild adventures in the far west :",
+     "voci": [
+      "Osbourne, Lloyd, 1868-1947,",
+      "Stevenson, Robert Louis, 1850-1894.",
+      "Wise, Thomas James, 1859-1937,"
+     ]
+    },
+    {
+     "titolo": "The Ebb-Tide.",
+     "voci": [
+      "Stevenson, Robert Louis, 1850-1894,",
+      "Osbourne, Lloyd, 1868-1947,"
+     ]
+    },
+    {
+     "titolo": "The ebb-tide :",
+     "voci": [
+      "Stevenson, Robert Louis, 1850-1894,",
+      "Osbourne, Lloyd, 1868-1947,"
+     ]
+    },
+    {
+     "titolo": "The Ebb-Tide :",
+     "voci": [
+      "Stevenson, Robert Louis, 1850-1894,",
+      "Osbourne, Lloyd, 1868-1947,"
+     ]
+    },
+    {
+     "titolo": "The Ebb-Tide :",
+     "voci": [
+      "Stevenson, Robert Louis, 1850-1894,",
+      "Osbourne, Lloyd, 1868-1947,"
+     ]
+    },
+    {
+     "titolo": "The ebb-tide :",
+     "voci": [
+      "Stevenson, Robert Louis, 1850-1894,",
+      "Osbourne, Lloyd, 1868-1947,",
+      "Hinchcliffe, Peter,",
+      "Kerrigan, Catherine,"
+     ]
+    },
+    {
+     "titolo": "The ebb-tide :",
+     "voci": [
+      "Stevenson, Robert Louis, 1850-1894,",
+      "Osbourne, Lloyd, 1868-1947,",
+      "Daiches, David, 1912-2005,"
+     ]
+    },
+    {
+     "titolo": "The Ebb Tide :",
+     "voci": [
+      "Stevenson, Robert Louis, 1850-1894,",
+      "Osbourne, Lloyd, 1868-1947,"
+     ]
+    },
+    {
+     "titolo": "The ebb tide :",
+     "voci": [
+      "Stevenson, Robert Louis, 1850-1894,",
+      "Osbourne, Lloyd, 1868-1947,"
+     ]
+    },
+    {
+     "titolo": "The ebb-tide, etc.",
+     "voci": [
+      "Stevenson, Robert Louis, 1850-1894,",
+      "Osbourne, Lloyd, 1868-1947,"
+     ]
+    },
+    {
+     "titolo": "The Ebb-Tide, etc.",
+     "voci": [
+      "Stevenson, Robert Louis, 1850-1894,",
+      "Osbourne, Lloyd, 1868-1947,"
+     ]
+    },
+    {
+     "titolo": "The ebb-tide /",
+     "voci": [
+      "Stevenson, Robert Louis, 1850-1894,",
+      "Osbourne, Lloyd, 1868-1947,"
+     ]
+    },
+    {
+     "titolo": "Harm's way /",
+     "voci": [
+      "Osbourne, Lloyd, 1868-1947."
+     ]
+    },
+    {
+     "titolo": "An intimate portrait of R. L. S.",
+     "voci": [
+      "Osbourne, Lloyd, 1868-1947,"
+     ]
+    },
+    {
+     "titolo": "The kingdoms of the world /",
+     "voci": [
+      "Osbourne, Lloyd, 1868-1947."
+     ]
+    },
+    {
+     "titolo": "A letter to Mr. Stevenson's friends.",
+     "voci": [
+      "Osbourne, Lloyd, 1868-1947,"
+     ]
+    },
+    {
+     "titolo": "Lord Nelson and the tar.",
+     "voci": [
+      "Stevenson, Robert Louis, 1850-1894,",
+      "Osbourne, Lloyd, 1868-1947.",
+      "Wise, Thomas James, 1859-1937,"
+     ]
+    },
+    {
+     "titolo": "Love, the fiddler /",
+     "voci": [
+      "Osbourne, Lloyd, 1868-1947."
+     ]
+    },
+    {
+     "titolo": "A Silvan Tomkins Handbook",
+     "voci": [
+      "Stevenson, Robert Louis, 1850-1894.",
+      "Balfour, Graham, Sir, 1859-1929.",
+      "Henley, William Ernest, 1849-1903.",
+      "Colvin, Sidney, 1845-1927.",
+      "Stevenson, Fanny Van de Grift, 1840-1914.",
+      "Osbourne, Lloyd, 1868-1947."
+     ]
+    },
+    {
+     "titolo": "Memories of Vailima /",
+     "voci": [
+      "Field, Isobel, 1858-1953,",
+      "Osbourne, Lloyd, 1868-1947,"
+     ]
+    },
+    {
+     "titolo": "The motormaniacs /",
+     "voci": [
+      "Osbourne, Lloyd, 1868-1947."
+     ]
+    },
+    {
+     "titolo": "Notice. Today is published by S.L. Osbourne &amp; Co. illustrated Black canyon, or, Wild adventures ",
+     "voci": [
+      "Osbourne, Lloyd, 1868-1947,",
+      "Stevenson, Robert Louis, 1850-1894.",
+      "Wise, Thomas James, 1859-1937,"
+     ]
+    },
+    {
+     "titolo": "The queen versus Billy, and other stories /",
+     "voci": [
+      "Osbourne, Lloyd, 1868-1947."
+     ]
+    },
+    {
+     "titolo": "Some letters of R. L. Stevenson.",
+     "voci": [
+      "Stevenson, Robert Louis, 1850-1894,",
+      "Osbourne, Lloyd, 1868-1947,"
+     ]
+    },
+    {
+     "titolo": "The Stevenson reader :",
+     "voci": [
+      "Stevenson, Robert Louis, 1850-1894,",
+      "Osbourne, Lloyd, 1868-1947,"
+     ]
+    },
+    {
+     "titolo": "The Stevenson reader :",
+     "voci": [
+      "Stevenson, Robert Louis, 1850-1894,",
+      "Osbourne, Lloyd, 1868-1947,"
+     ]
+    },
+    {
+     "titolo": "The strange case of Dr Jekyll and Mr Hyde, and other stories /",
+     "voci": [
+      "Stevenson, Robert Louis, 1850-1894,",
+      "Calder, Jenni,",
+      "Stevenson, Robert Louis, 1850-1894.",
+      "Stevenson, Robert Louis, 1850-1894."
+     ]
+    },
+    {
+     "titolo": "Tales of the South Seas /",
+     "voci": [
+      "Stevenson, Robert Louis, 1850-1894,",
+      "Calder, Jenni,",
+      "Stevenson, Robert Louis, 1850-1894.",
+      "Stevenson, Robert Louis, 1850-1894.",
+      "Stevenson, Robert Louis, 1850-1894.",
+      "Osbourne, Lloyd, 1868-1947."
+     ]
+    },
+    {
+     "titolo": "Tales of the South Seas /",
+     "voci": [
+      "Stevenson, Robert Louis, 1850-1894.",
+      "Calder, Jenni.",
+      "Osbourne, Lloyd, 1868-1947.",
+      "Stevenson, Robert Louis, 1850-1894.",
+      "Stevenson, Robert Louis, 1850-1894.",
+      "Stevenson, Robert Louis, 1850-1894."
+     ]
+    },
+    {
+     "titolo": "Treasure Island ;",
+     "voci": [
+      "Stevenson, Robert Louis, 1850-1894,",
+      "Stevenson, Robert Louis, 1850-1894.",
+      "Stevenson, Robert Louis, 1850-1894."
+     ]
+    },
+    {
+     "titolo": "Treasure Island ;",
+     "voci": [
+      "Stevenson, Robert Louis, 1850-1894,",
+      "Stevenson, Robert Louis, 1850-1894.",
+      "Stevenson, Robert Louis, 1850-1894."
+     ]
+    },
+    {
+     "titolo": "Treasure Island ;",
+     "voci": [
+      "Stevenson, Robert Louis, 1850-1894,",
+      "Stevenson, Robert Louis, 1850-1894.",
+      "Stevenson, Robert Louis, 1850-1894."
+     ]
+    },
+    {
+     "titolo": "Wild justice /",
+     "voci": [
+      "Osbourne, Lloyd, 1868-1947."
+     ]
+    },
+    {
+     "titolo": "The Wrecker.",
+     "voci": [
+      "Stevenson, Robert Louis, 1850-1894,",
+      "Osbourne, Lloyd, 1868-1947,"
+     ]
+    },
+    {
+     "titolo": "The Wrecker.",
+     "voci": [
+      "Stevenson, Robert Louis, 1850-1894,",
+      "Osbourne, Lloyd, 1868-1947,"
+     ]
+    },
+    {
+     "titolo": "The Wrecker.",
+     "voci": [
+      "Stevenson, Robert Louis, 1850-1894,",
+      "Osbourne, Lloyd, 1868-1947,"
+     ]
+    },
+    {
+     "titolo": "The Wrecker.",
+     "voci": [
+      "Stevenson, Robert Louis, 1850-1894,",
+      "Osbourne, Lloyd, 1868-1947,"
+     ]
+    },
+    {
+     "titolo": "The Wrecker.",
+     "voci": [
+      "Stevenson, Robert Louis, 1850-1894,",
+      "Osbourne, Lloyd, 1868-1947,"
+     ]
+    },
+    {
+     "titolo": "The wrecker.",
+     "voci": [
+      "Stevenson, Robert Louis, 1850-1894,",
+      "Osbourne, Lloyd, 1868-1947,"
+     ]
+    },
+    {
+     "titolo": "The Wrecker.",
+     "voci": [
+      "Stevenson, Robert Louis, 1850-1894,",
+      "Osbourne, Lloyd, 1868-1947,"
+     ]
+    },
+    {
+     "titolo": "The Wrecker.",
+     "voci": [
+      "Stevenson, Robert Louis, 1850-1894,",
+      "Osbourne, Lloyd, 1868-1947,"
+     ]
+    },
+    {
+     "titolo": "The wrecker /",
+     "voci": [
+      "Stevenson, Robert Louis, 1850-1894,",
+      "Osbourne, Lloyd, 1868-1947,"
+     ]
+    },
+    {
+     "titolo": "The wrecker /",
+     "voci": [
+      "Stevenson, Robert Louis, 1850-1894,",
+      "Osbourne, Lloyd, 1868-1947."
+     ]
+    },
+    {
+     "titolo": "The wrecker /",
+     "voci": [
+      "Stevenson, Robert Louis, 1850-1894,",
+      "Osbourne, Lloyd, 1868-1947."
+     ]
+    },
+    {
+     "titolo": "The wrecker /",
+     "voci": [
+      "Stevenson, Robert Louis, 1850-1894,",
+      "Osbourne, Lloyd, 1868-1947,",
+      "Hole, William, 1846-1917,",
+      "Metcalf, Willard Leroy, 1858-1925,"
+     ]
+    },
+    {
+     "titolo": "The wrecker /",
+     "voci": [
+      "Stevenson, Robert Louis, 1850-1894,",
+      "Osbourne, Lloyd, 1868-1947,"
+     ]
+    },
+    {
+     "titolo": "The wrecker /",
+     "voci": [
+      "Stevenson, Robert Louis, 1850-1894,",
+      "Osbourne, Lloyd, 1868-1947,",
+      "Hole, William, 1846-1917,",
+      "Metcalf, Willard Leroy, 1858-1925,",
+      "Wise, Thomas James, 1859-1937,"
+     ]
+    },
+    {
+     "titolo": "The Wrong Box.",
+     "voci": [
+      "Stevenson, Robert Louis, 1850-1894,",
+      "Osbourne, Lloyd, 1868-1947,"
+     ]
+    },
+    {
+     "titolo": "The Wrong Box.",
+     "voci": [
+      "Stevenson, Robert Louis, 1850-1894,",
+      "Osbourne, Lloyd, 1868-1947,"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "qid": "Q107504129",
+   "nome": "Frederick Ferdinand Moore",
+   "nascita": "1881-01-01",
+   "morte": "1947-01-16",
+   "alias": [
+    "F. F. Moore",
+    "Frederick F. Moore"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 1,
+    "dal_2000": 1,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Moore 1881-1947\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "Carols for choirs 6 :",
+     "voci": [
+      "Moore, Philip, 1943-",
+      "McGlade, Becky, 1974-",
+      "Burk, Margaret, 1990-",
+      "Taberner, Fernando, 1966-",
+      "Kilmer, Joyce, 1886-1918.",
+      "Wright, Reginal,",
+      "Walker, Lucy, 1998-",
+      "Howell, Rebecca Gayle,",
+      "Esmail, Reena, 1983-",
+      "Garrett, Marques L. A., 1984-",
+      "Thompson, Joel, 1988-",
+      "Hardy, Thomas, 1840-1928.",
+      "French, Jessica, 1984-",
+      "Thorp, Jennifer, 1988-",
+      "Hawley, Laura, 1982-",
+      "Shaw, Caroline (Caroline Adelaide),",
+      "Stevenson, Robert Louis, 1850-1894.",
+      "Wallen, Errollyn,",
+      "Dunbar, Paul Laurence, 1872-1906.",
+      "Allan, Kathleen, 1989-",
+      "Beaumont, Joseph, 1616-1699.",
+      "Whitbourn, James,",
+      "Young, Toby, 1990-",
+      "Robles, Zanaida,",
+      "Morris, William, 1834-1896.",
+      "Marais, Marin, 1656-1728,",
+      "Cavagnaro, Jerrick,",
+      "Ballet, William.",
+      "Allain, Richard,",
+      "Morris, R. O. (Reginald Owen), 1886-1948,",
+      "Jackson, Stephen (Conductor)",
+      "Capers, Valerie,",
+      "Pearsall, R. L. (Robert Lucas), 1795-1856.",
+      "McDowall, Cecilia,",
+      "Parry, Ben,",
+      "Hess, Nigel,",
+      "Roberts, Elizabeth Madox, 1881-1941.",
+      "Nicholson, Stuart,",
+      "Olson, Tawnie,",
+      "Coleridge, Mary E. (Mary Elizabeth), 1861-1907.",
+      "Watts, Isaac, 1674-1748.",
+      "Hailstork, Adolphus C.,",
+      "Chavarria, Vicente, 1988-",
+      "Vango, Suzzie, 1982-",
+      "Reece-Trapp, Ghislaine, 1992-",
+      "Boykin, B. E., 1989-",
+      "Rossetti, Christina Georgina, 1830-1894.",
+      "Porter, Kim (Singer)",
+      "Bullard, Alan, 1947-",
+      "Tennyson, Alfred Tennyson, Baron, 1809-1892.",
+      "Barnett, Carol, 1949-",
+      "Teasdale, Sara, 1884-1933.",
+      "Quartel, Sarah,",
+      "Arakelyan, Kristina, 1994-",
+      "Muhly, Nico,",
+      "Chesterton, G. K. (Gilbert Keith), 1874-1936.",
+      "Dix, W. Chatterton (William Chatterton), 1837-1898.",
+      "Sears, Edmund H. (Edmund Hamilton), 1810-1876.",
+      "Morrison, John, 1750-1798.",
+      "Chilcott, Bob,",
+      "Hill, David, 1957-",
+      "Park, Owain, 1993-",
+      "Murphy, Ryan (Ryan T.),",
+      "Assersohn, Ian, 1958-",
+      "Forbes L'Estrange, Joanna,",
+      "Leontovych, M. (Mykola), 1877-1921,",
+      "Rutter, John, 1945-"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "qid": "Q213592",
+   "nome": "Ralph Benatzky",
+   "nascita": "1884-06-05",
+   "morte": "1957-10-16",
+   "alias": [
+    "Benatzky"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 39,
+    "dal_2000": 0,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Benatzky 1884-1957\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "5 Love Epigrams.",
+     "voci": [
+      "Benatzky, Ralph, 1884-1957."
+     ]
+    },
+    {
+     "titolo": "Antoinette :",
+     "voci": [
+      "Benatzky, Ralph, 1884-1957."
+     ]
+    },
+    {
+     "titolo": "A Baby in love :",
+     "voci": [
+      "Goodman, Al, 1890-1972.",
+      "Benatzky, Ralph, 1884-1957."
+     ]
+    },
+    {
+     "titolo": "Beneath the Southern Moon.",
+     "voci": [
+      "Benatzky, Ralph, 1884-1957."
+     ]
+    },
+    {
+     "titolo": "Fairies :",
+     "voci": [
+      "Benatzky, Ralph, 1884-1957.",
+      "Stolz, Robert, 1880-1975."
+     ]
+    },
+    {
+     "titolo": "The famous Nun's Chorus, from Casanova /",
+     "voci": [
+      "Benatzky, Ralph, 1884-1957.",
+      "Graham, Harry, 1874-1936.",
+      "Strauss, Johann, 1825-1899."
+     ]
+    },
+    {
+     "titolo": "The Famous Nun's Chorus from Casanova /",
+     "voci": [
+      "Benatzky, Ralph, 1884-1957.",
+      "Strauss, Johann, 1825-1899."
+     ]
+    },
+    {
+     "titolo": "The Famous Nun's Chorus from Casanova /",
+     "voci": [
+      "Benatzky, Ralph, 1884-1957.",
+      "Strauss, Johann, 1825-1899."
+     ]
+    },
+    {
+     "titolo": "The Famous Nun's Chorus ... Words by Harry Graham from the German of R. Schanzer &amp; E. Welisch ..",
+     "voci": [
+      "Benatzky, Ralph, 1884-1957.",
+      "Benatzky, Ralph, 1884-1957.",
+      "Strauss, Johann, 1825-1899.",
+      "Westbrook, Francis B."
+     ]
+    },
+    {
+     "titolo": "The Famous Nuns' Chorus ... Arr. by Ralph Benatsky. &lt;Arr. for two-part female chorus (S. A.) by F",
+     "voci": [
+      "Benatzky, Ralph, 1884-1957.",
+      "Benatzky, Ralph, 1884-1957.",
+      "Rapley, Felton.",
+      "Strauss, Johann, 1825-1899."
+     ]
+    },
+    {
+     "titolo": "Forever and a day :",
+     "voci": [
+      "Benatzky, Ralph, 1884-1957."
+     ]
+    },
+    {
+     "titolo": "Good-bye :",
+     "voci": [
+      "Benatzky, Ralph, 1884-1957."
+     ]
+    },
+    {
+     "titolo": "Grinzing :",
+     "voci": [
+      "Benatzky, Ralph, 1884-1957."
+     ]
+    },
+    {
+     "titolo": "I'd be lost without you :",
+     "voci": [
+      "Benatzky, Ralph, 1884-1957."
+     ]
+    },
+    {
+     "titolo": "I'll always be true.",
+     "voci": [
+      "Benatzky, Ralph, 1884-1957."
+     ]
+    },
+    {
+     "titolo": "I love you.",
+     "voci": [
+      "Benatzky, Ralph, 1884-1957."
+     ]
+    },
+    {
+     "titolo": "It's always raining since I lost you.",
+     "voci": [
+      "Benatzky, Ralph, 1884-1957."
+     ]
+    },
+    {
+     "titolo": "It would be wonderful :",
+     "voci": [
+      "Benatzky, Ralph, 1884-1957.",
+      "Stolz, Robert, 1880-1975."
+     ]
+    },
+    {
+     "titolo": "Just for to-day.",
+     "voci": [
+      "Benatzky, Ralph, 1884-1957."
+     ]
+    },
+    {
+     "titolo": "Little White Love :",
+     "voci": [
+      "Benatzky, Ralph, 1884-1957."
+     ]
+    },
+    {
+     "titolo": "Love is such a gamble :",
+     "voci": [
+      "Benatzky, Ralph, 1884-1957."
+     ]
+    },
+    {
+     "titolo": "Love's last day.",
+     "voci": [
+      "Benatzky, Ralph, 1884-1957."
+     ]
+    },
+    {
+     "titolo": "Love song :",
+     "voci": [
+      "Benatzky, Ralph, 1884-1957."
+     ]
+    },
+    {
+     "titolo": "My Philosophy. The Emperor's Song, words by H. Graham, etc.",
+     "voci": [
+      "Benatzky, Ralph, 1884-1957.",
+      "Stolz, Robert, 1880-1975."
+     ]
+    },
+    {
+     "titolo": "My song of love :",
+     "voci": [
+      "Benatzky, Ralph, 1884-1957.",
+      "Stolz, Robert, 1880-1975."
+     ]
+    },
+    {
+     "titolo": "Ninon de Lenclos :",
+     "voci": [
+      "Benatzky, Ralph, 1884-1957."
+     ]
+    },
+    {
+     "titolo": "Oh! for the thrills never ending, automobile song :",
+     "voci": [
+      "Benatzky, Ralph, 1884-1957."
+     ]
+    },
+    {
+     "titolo": "Oh, let me be merry :",
+     "voci": [
+      "Benatzky, Ralph, 1884-1957."
+     ]
+    },
+    {
+     "titolo": "There's always one girl (I am in love) :",
+     "voci": [
+      "Benatzky, Ralph, 1884-1957."
+     ]
+    },
+    {
+     "titolo": "Threnody :",
+     "voci": [
+      "Benatzky, Ralph, 1884-1957."
+     ]
+    },
+    {
+     "titolo": "White Horse Inn ... Adapted for production by amateur societies by Eric Maschwitz and Bernard Grun. ",
+     "voci": [
+      "Benatzky, Ralph, 1884-1957.",
+      "Stolz, Robert, 1880-1975.",
+      "Grun, Bernard, 1901-1972."
+     ]
+    },
+    {
+     "titolo": "White Horse Inn. Musical Play in Three Acts, freely adapted from Blumenthal and Kadelburg's Play by ",
+     "voci": [
+      "Benatzky, Ralph, 1884-1957.",
+      "Stolz, Robert, 1880-1975."
+     ]
+    },
+    {
+     "titolo": "White Horse Inn :",
+     "voci": [
+      "Benatzky, Ralph, 1884-1957.",
+      "Stolz, Robert, 1880-1975.",
+      "Graham, Harry, 1874-1936."
+     ]
+    },
+    {
+     "titolo": "White Horse Inn :",
+     "voci": [
+      "Müller, Hans, 1882-1950.",
+      "Charell, Erik.",
+      "Benatzky, Ralph, 1884-1957,",
+      "Gilbert, Robert, 1899-1978,",
+      "Granichstaedten, Bruno, 1879-1944,",
+      "Grant, Pauline, 1915-1986,",
+      "Thomas, Basil, 1912-1957,",
+      "Graham, Harry, 1874-1936,",
+      "Empress Hall (London, England),"
+     ]
+    },
+    {
+     "titolo": "Who knows?.",
+     "voci": [
+      "Benatzky, Ralph, 1884-1957."
+     ]
+    },
+    {
+     "titolo": "Why? /",
+     "voci": [
+      "Benatzky, Ralph, 1884-1957.",
+      "Van Straten, L."
+     ]
+    },
+    {
+     "titolo": "Wisdom :",
+     "voci": [
+      "Benatzky, Ralph, 1884-1957."
+     ]
+    },
+    {
+     "titolo": "You too :",
+     "voci": [
+      "Benatzky, Ralph, 1884-1957.",
+      "Stolz, Robert, 1880-1975."
+     ]
+    },
+    {
+     "titolo": "Your eyes :",
+     "voci": [
+      "Benatzky, Ralph, 1884-1957.",
+      "Stolz, Robert, 1880-1975."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 11,
+   "qid": "Q2043891",
+   "nome": "Harley Granville-Barker",
+   "nascita": "1877-11-25",
+   "morte": "1946-08-31",
+   "alias": [
+    "Granville Barker",
+    "H. Granville-Barker"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 175,
+    "dal_2000": 18,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Granville-Barker 1877-1946\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "Agnes Colander :",
+     "voci": [
+      "Granville-Barker, Harley, 1877-1946,"
+     ]
+    },
+    {
+     "titolo": "Agnes Colander /",
+     "voci": [
+      "Granville-Barker, Harley, 1877-1946,"
+     ]
+    },
+    {
+     "titolo": "Agnes Colander. Play in three acts.",
+     "voci": [
+      "Granville-Barker, Harley, 1877-1946."
+     ]
+    },
+    {
+     "titolo": "[Amédée et les messieurs en rang.] Six Gentlemen in a Row ... In an English version by Harley Gran",
+     "voci": [
+      "Romains, Jules, 1885-1972.",
+      "Granville-Barker, Harley, 1877-1946."
+     ]
+    },
+    {
+     "titolo": "Anatol. A sequence of dialogues ... Paraphrased for the English stage by Granville Barker.",
+     "voci": [
+      "Schnitzler, Arthur, 1862-1931.",
+      "Granville-Barker, Harley, 1877-1946."
+     ]
+    },
+    {
+     "titolo": "Anatol ... English version by Harley Granville-Barker.",
+     "voci": [
+      "Schnitzler, Arthur, 1862-1931.",
+      "Granville-Barker, Harley, 1877-1946."
+     ]
+    },
+    {
+     "titolo": "Antony and Cleopatra /",
+     "voci": [
+      "Granville-Barker, Harley, 1877-1946.",
+      "National Theatre (Great Britain)"
+     ]
+    },
+    {
+     "titolo": "Antony and Cleopatra /",
+     "voci": [
+      "Granville-Barker, Harley, 1877-1946."
+     ]
+    },
+    {
+     "titolo": "Associating with Shakespeare. By Harley Granville-Barker. An address, etc.",
+     "voci": [
+      "Shakespeare Association (Great Britain)",
+      "Granville-Barker, Harley, 1877-1946."
+     ]
+    },
+    {
+     "titolo": "Bernard Shaw's Letters to Granville Barker. Edited by C. B. Purdom, with commentary and notes.",
+     "voci": [
+      "Shaw, Bernard, 1856-1950.",
+      "Granville-Barker, Harley, 1877-1946.",
+      "Purdom, C. B. (Charles Benjamin), 1883-1965."
+     ]
+    },
+    {
+     "titolo": "The collected plays of Harley Granville-Barker.",
+     "voci": [
+      "Granville-Barker, Harley, 1877-1946."
+     ]
+    },
+    {
+     "titolo": "The collected plays of Harley Granville-Barker /",
+     "voci": [
+      "Granville-Barker, Harley, 1877-1946."
+     ]
+    },
+    {
+     "titolo": "The collected plays of Harley Granville-Barker /",
+     "voci": [
+      "Granville-Barker, Harley, 1877-1946."
+     ]
+    },
+    {
+     "titolo": "Companion to Shakespeare studies /",
+     "voci": [
+      "Granville-Barker, Harley, 1877-1946.",
+      "Harrison, G. B. (George Bagshawe), 1894-1991."
+     ]
+    },
+    {
+     "titolo": "A companion to Shakespeare Studies /",
+     "voci": [
+      "Granville-Barker, Harley, 1877-1946."
+     ]
+    },
+    {
+     "titolo": "A companion to Shakespeare studies /",
+     "voci": [
+      "Granville-Barker, Harley, 1877-1946.",
+      "Harrison, G. B. (George Bagshawe), 1894-1991."
+     ]
+    },
+    {
+     "titolo": "Complimentary Dinner to Mr. J. E. Vedrenne and Mr. H. Granville Barker. At the Criterion Restaurant,",
+     "voci": [
+      "VEDRENNE, John E.",
+      "Granville-Barker, Harley, 1877-1946."
+     ]
+    },
+    {
+     "titolo": "Coriolanus /",
+     "voci": [
+      "Granville-Barker, Harley, 1877-1946.",
+      "Royal National Theatre (Great Britain)"
+     ]
+    },
+    {
+     "titolo": "Cymbeline /",
+     "voci": [
+      "Granville-Barker, Harley, 1877-1946.",
+      "National Theatre (Great Britain)"
+     ]
+    },
+    {
+     "titolo": "Cymbeline /",
+     "voci": [
+      "Granville-Barker, Harley, 1877-1946."
+     ]
+    },
+    {
+     "titolo": "Deburau ... In an English version by Harley Granville-Barker.",
+     "voci": [
+      "Guitry, Sacha, 1885-1957.",
+      "Granville-Barker, Harley, 1877-1946."
+     ]
+    },
+    {
+     "titolo": "Doctor Knock. A comedy in three acts ... In an English version by Harley Granville-Barker.",
+     "voci": [
+      "Romains, Jules, 1885-1972.",
+      "Granville-Barker, Harley, 1877-1946."
+     ]
+    },
+    {
+     "titolo": "Doctor Knock ... In an English version by Harley Granville-Barker.",
+     "voci": [
+      "Romains, Jules, 1885-1972.",
+      "Granville-Barker, Harley, 1877-1946."
+     ]
+    },
+    {
+     "titolo": "Dr. Knock ... English version by Harley Granville-Barker.",
+     "voci": [
+      "Romains, Jules, 1885-1972.",
+      "Granville-Barker, Harley, 1877-1946."
+     ]
+    },
+    {
+     "titolo": "A Drama of Political Man. A study in the plays of Harley Granville Barker. [With a portrait.]",
+     "voci": [
+      "MORGAN, Margery Mary.",
+      "Granville-Barker, Harley, 1877-1946."
+     ]
+    },
+    {
+     "titolo": "The dynasts.",
+     "voci": [
+      "Hardy, Thomas, 1840-1928,",
+      "Granville-Barker, Harley, 1877-1946,"
+     ]
+    },
+    {
+     "titolo": "The dynasts ... The prologue and epilogue.",
+     "voci": [
+      "Hardy, Thomas, 1840-1928,",
+      "Granville-Barker, Harley, 1877-1946."
+     ]
+    },
+    {
+     "titolo": "Eight letters from T. E. L. [The prefatory note signed: H. G.-B., i.e. Harley Granville-Barker.]",
+     "voci": [
+      "Lawrence, T. E. (Thomas Edward), 1888-1935.",
+      "B., H. G.",
+      "Granville-Barker, Harley, 1877-1946."
+     ]
+    },
+    {
+     "titolo": "The Eighteen-Seventies. Essays by Fellows of the Royal Society of Literature. Edited by H. Granville",
+     "voci": [
+      "Granville-Barker, Harley, 1877-1946."
+     ]
+    },
+    {
+     "titolo": "The eighteen-seventies :",
+     "voci": [
+      "Royal Society of Literature (Great Britain)",
+      "Granville-Barker, Harley, 1877-1946."
+     ]
+    },
+    {
+     "titolo": "The eighteen-seventies :",
+     "voci": [
+      "Granville-Barker, Harley, 1877-1946.",
+      "Royal Society of Literature (Great Britain)"
+     ]
+    },
+    {
+     "titolo": "The Eighteen-Seventies :",
+     "voci": [
+      "Granville-Barker, Harley, 1877-1946."
+     ]
+    },
+    {
+     "titolo": "[El Sueño de una noche de Agusto.] The Romantic Young Lady. A play in three acts, in an English ver",
+     "voci": [
+      "Martínez Sierra, Gregorio, 1881-1947.",
+      "Granville-Barker, Harley, 1877-1946.",
+      "BARKER, Helen Manchester Granville."
+     ]
+    },
+    {
+     "titolo": "The Exemplary Theatre.",
+     "voci": [
+      "Granville-Barker, Harley, 1877-1946."
+     ]
+    },
+    {
+     "titolo": "The exemplary theatre /",
+     "voci": [
+      "Granville-Barker, Harley, 1877-1946."
+     ]
+    },
+    {
+     "titolo": "The exemplary theatre /",
+     "voci": [
+      "Granville-Barker, Harley, 1877-1946."
+     ]
+    },
+    {
+     "titolo": "Exit Planché-Enter Gilbert. [Extracted from “The London Mercury.”]",
+     "voci": [
+      "Granville-Barker, Harley, 1877-1946.",
+      "Gilbert, W. S. (William Schwenck), 1836-1911.",
+      "Planché, J. R. (James Robinson), 1796-1880."
+     ]
+    },
+    {
+     "titolo": "The Fabian Society :",
+     "voci": [
+      "Granville-Barker, Harley, 1877-1946.",
+      "Fabian Society (Great Britain)"
+     ]
+    },
+    {
+     "titolo": "The Family of the Oldroyds. A play in four acts. MS. corrections.",
+     "voci": [
+      "Thomas, Berte, 1867-",
+      "Granville-Barker, Harley, 1877-1946."
+     ]
+    },
+    {
+     "titolo": "Four Comedies by Serafín and Joaquín Álvarez Quintero in English versions by Helen and Harley Gra",
+     "voci": [
+      "Álvarez Quintero, Serafín, 1871-1938.",
+      "Álvarez Quintero, Joaquín, 1873-1944.",
+      "Granville-Barker, Harley, 1877-1946.",
+      "BARKER, Helen Manchester Granville."
+     ]
+    },
+    {
+     "titolo": "Four Plays ... In English versions by Helen and Harley Granville-Barker. The Women have their Way (P",
+     "voci": [
+      "Álvarez Quintero, Serafín, 1871-1938.",
+      "Álvarez Quintero, Joaquín, 1873-1944.",
+      "Granville-Barker, Harley, 1877-1946.",
+      "BARKER, Helen Manchester Granville."
+     ]
+    },
+    {
+     "titolo": "From Henry V to Hamlet.",
+     "voci": [
+      "Granville-Barker, Harley, 1877-1946.",
+      "Shakespeare, William, 1564-1616."
+     ]
+    },
+    {
+     "titolo": "From Henry V to Hamlet /",
+     "voci": [
+      "Granville-Barker, Harley, 1877-1946."
+     ]
+    },
+    {
+     "titolo": "Granville Barker and his correspondents :",
+     "voci": [
+      "Granville-Barker, Harley, 1877-1946.",
+      "Salmon, Eric."
+     ]
+    },
+    {
+     "titolo": "Granville Barker on theatre :",
+     "voci": [
+      "Granville-Barker, Harley, 1877-1946,",
+      "Chambers, C. (Colin), 1938-",
+      "Nelson, Richard, 1950-"
+     ]
+    },
+    {
+     "titolo": "Hamlet /",
+     "voci": [
+      "Granville-Barker, Harley, 1877-1946."
+     ]
+    },
+    {
+     "titolo": "Hamlet /",
+     "voci": [
+      "Granville-Barker, Harley, 1877-1946.",
+      "National Theatre (Great Britain)"
+     ]
+    },
+    {
+     "titolo": "The Harlequinade :",
+     "voci": [
+      "Calthrop, Dion Clayton.",
+      "Granville-Barker, Harley, 1877-1946."
+     ]
+    },
+    {
+     "titolo": "The Harlequinade :",
+     "voci": [
+      "Calthrop, Dion Clayton, 1878-1937.",
+      "Granville-Barker, Harley, 1877-1946.",
+      "Baumer, Lewis Christopher Edward, 1870-1963."
+     ]
+    },
+    {
+     "titolo": "The harlequinade, contrived by Dion Clayton Calthrop and Granville Barker, music by Morton Stephenso",
+     "voci": [
+      "Granville-Barker, Harley, 1877-1946."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 12,
+   "qid": "Q38757",
+   "nome": "Bertolt Brecht",
+   "nascita": "1898-02-10",
+   "morte": "1956-08-14",
+   "alias": [
+    "Bertolt Brecht",
+    "Berthold Larsen",
+    "Bidi",
+    "Brecht",
+    "Bert Brecht",
+    "Berthold Friedrich Brecht",
+    "Berthold Brecht",
+    "Eugen Berthold Friedrich Brecht",
+    "Bertholt Brecht",
+    "Bertolʹd Brekht",
+    "Bertolʹt Brekht",
+    "Bertold Brecht",
+    "Bertolt Breht",
+    "Berŭtʻoltʻŭ Bŭrehitʻŭ",
+    "Bŭrehitʻŭ",
+    "Mpertolt Mprecht",
+    "Pei-tʻo-erh-tʻe Pu-lai-hsi-tʻe",
+    "Pertōl Pirekcṭ",
+    "Pertōlṭ Pirekcṭ",
+    "Perṭōlṭ Pireṣṭ",
+    "Pu-lai-hsi-tʻe",
+    "Eugen Berthold Brecht",
+    "Eugen Bertold Brecht",
+    "Eugen Bertolt Brecht"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 403,
+    "dal_2000": 156,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Brecht 1898-1956\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "10 Songs from the incidental music to The Round Heads and the Pointed Heads on texts /",
+     "voci": [
+      "Eisler, Hanns, 1898-1962.",
+      "Brecht, Bertolt, 1898-1956."
+     ]
+    },
+    {
+     "titolo": "12 Songs from the Incidental music to Schweyk in World War II on texts /",
+     "voci": [
+      "Eisler, Hanns, 1898-1962.",
+      "Brecht, Bertolt, 1898-1956."
+     ]
+    },
+    {
+     "titolo": "A-cappella-Chöre, 1925-1932 =",
+     "voci": [
+      "Eisler, Hanns, 1898-1962,",
+      "Gall, Johannes C.,",
+      "Heine, Heinrich, 1797-1856.",
+      "Vallentin, Maxim, 1904-1987.",
+      "Gilbert, Robert, 1899-1978.",
+      "Kraus, Karl, 1874-1936.",
+      "Weber, David, 1899-1978.",
+      "Hill, Joe, 1879-1915.",
+      "Brecht, Bertolt, 1898-1956.",
+      "Barea, Ilsa,",
+      "Eisler, Hanns, 1898-1962.",
+      "Eisler, Hanns, 1898-1962.",
+      "Eisler, Hanns, 1898-1962.",
+      "Eisler, Hanns, 1898-1962.",
+      "Eisler, Hanns, 1898-1962.",
+      "Eisler, Hanns, 1898-1962.",
+      "Eisler, Hanns, 1898-1962.",
+      "Eisler, Hanns, 1898-1962.",
+      "Eisler, Hanns, 1898-1962.",
+      "Eisler, Hanns, 1898-1962.",
+      "Eisler, Hanns, 1898-1962.",
+      "Eisler, Hanns, 1898-1962.",
+      "Eisler, Hanns, 1898-1962.",
+      "Eisler, Hanns, 1898-1962.",
+      "Eisler, Hanns, 1898-1962.",
+      "Eisler, Hanns, 1898-1962.",
+      "Eisler, Hanns, 1898-1962."
+     ]
+    },
+    {
+     "titolo": "Aesthetics and politics /",
+     "voci": [
+      "Adorno, Theodor W., 1903-1969,",
+      "Benjamin, Walter, 1892-1940,",
+      "Bloch, Ernest, 1880-1959,",
+      "Brecht, Bertolt, 1898-1956,",
+      "Lukács, György, 1885-1971,"
+     ]
+    },
+    {
+     "titolo": "The Art of Bertolt Brecht ... English version by Daniel Russell.",
+     "voci": [
+      "WEIDELI, Walter.",
+      "Brecht, Bertolt, 1898-1956.",
+      "Russell, Daniel S."
+     ]
+    },
+    {
+     "titolo": "Der Aufhaltsame Aufstieg des Arturo Ui /",
+     "voci": [
+      "Brecht, Bertolt, 1898-1956.",
+      "Matthews, D. G.",
+      "Matthews, S. M."
+     ]
+    },
+    {
+     "titolo": "Baal A man's a man and The elephant calf :",
+     "voci": [
+      "Brecht, Bertolt, 1898-1956."
+     ]
+    },
+    {
+     "titolo": "Baal /",
+     "voci": [
+      "Brecht, Bertolt, 1898-1956."
+     ]
+    },
+    {
+     "titolo": "The Bänkelsang and the work of Bertolt Brecht.",
+     "voci": [
+      "MACLEAN, Sammy Kay.",
+      "Brecht, Bertolt, 1898-1956."
+     ]
+    },
+    {
+     "titolo": "[Bart Brecht.] Bert Brecht ... Translated by Max Knight and Joseph Fabry.",
+     "voci": [
+      "Haas, Willy, 1891-1973.",
+      "Brecht, Bertolt, 1898-1956.",
+      "Fabry, Joseph B.",
+      "KNIGHT, Maxwell Eugene."
+     ]
+    },
+    {
+     "titolo": "Bentley on Brecht.",
+     "voci": [
+      "Brecht, Bertolt, 1898-1956.",
+      "Bentley, Eric, 1916-"
+     ]
+    },
+    {
+     "titolo": "Berliner Ensemble adaptations /",
+     "voci": [
+      "Brecht, Bertolt, 1898-1956,",
+      "Barnett, David, 1968-",
+      "Willett, John, 1917-2002,",
+      "Sauerländer, Wolfgang,",
+      "Manheim, Ralph, 1907-1992,",
+      "Kastner, Rose,",
+      "Kastner, Martin,",
+      "Brecht, Bertolt, 1898-1956.",
+      "Brecht, Bertolt, 1898-1956.",
+      "Brecht, Bertolt, 1898-1956.",
+      "Brecht, Bertolt, 1898-1956.",
+      "Brecht, Bertolt, 1898-1956.",
+      "Farquhar, George, 1677?-1707.",
+      "Seghers, Anna, 1900-1983.",
+      "Shakespeare, William, 1564-1616.",
+      "Molière, 1622-1673.",
+      "Lenz, Jakob Michael Reinhold, 1751-1792."
+     ]
+    },
+    {
+     "titolo": "Berliner Ensemble adaptations /",
+     "voci": [
+      "Brecht, Bertolt, 1898-1956,",
+      "Barnett, David, 1968-",
+      "Willett, John, 1917-2002,",
+      "Sauerländer, Wolfgang,",
+      "Manheim, Ralph, 1907-1992,",
+      "Kastner, Rose,",
+      "Kastner, Martin,",
+      "Brecht, Bertolt, 1898-1956.",
+      "Brecht, Bertolt, 1898-1956.",
+      "Brecht, Bertolt, 1898-1956.",
+      "Brecht, Bertolt, 1898-1956.",
+      "Brecht, Bertolt, 1898-1956.",
+      "Farquhar, George, 1677?-1707.",
+      "Seghers, Anna, 1900-1983.",
+      "Shakespeare, William, 1564-1616.",
+      "Molière, 1622-1673.",
+      "Lenz, Jakob Michael Reinhold, 1751-1792."
+     ]
+    },
+    {
+     "titolo": "The Berliner Ensemble at the Palace Theatre, London, August 27-September 15, 1956, etc. [Programme n",
+     "voci": [
+      "Berliner Ensemble (BERLIN)",
+      "Brecht, Bertolt, 1898-1956."
+     ]
+    },
+    {
+     "titolo": "Berolt Brecht.",
+     "voci": [
+      "Hill, Claude.",
+      "Brecht, Bertolt, 1898-1956."
+     ]
+    },
+    {
+     "titolo": "Bertholt Brecht :",
+     "voci": [
+      "Brecht, Bertolt, 1898-1956.",
+      "Kuhn, Tom.",
+      "Constantine, David, 1944-"
+     ]
+    },
+    {
+     "titolo": "Bertolt Brecht and Rudyard Kipling. A Marxist's imperialist mentor.",
+     "voci": [
+      "LYON, James Karl.",
+      "Brecht, Bertolt, 1898-1956.",
+      "Kipling, Rudyard, 1865-1936."
+     ]
+    },
+    {
+     "titolo": "Bertolt Brecht: bad time for poetry :",
+     "voci": [
+      "Brecht, Bertolt, 1898-1956.",
+      "Willett, John, 1917-2002."
+     ]
+    },
+    {
+     "titolo": "Bertolt Brecht collected plays /",
+     "voci": [
+      "Brecht, Bertolt, 1898-1956.",
+      "Manheim, Ralph, 1907-1992.",
+      "Willett, John."
+     ]
+    },
+    {
+     "titolo": "Bertolt Brecht collected plays /",
+     "voci": [
+      "Brecht, Bertolt, 1898-1956,",
+      "Willett, John, 1917-2002,",
+      "Manheim, Ralph, 1907-1992,",
+      "Stern, James, 1904-1993,",
+      "Stern, Tania,",
+      "Auden, W. H. (Wystan Hugh), 1907-1973,"
+     ]
+    },
+    {
+     "titolo": "Bertolt Brecht collected plays.",
+     "voci": [
+      "Brecht, Bertolt, 1898-1956.",
+      "Willett, John, 1917-2002."
+     ]
+    },
+    {
+     "titolo": "Bertolt Brecht collected plays.",
+     "voci": [
+      "Brecht, Bertolt, 1898-1956.",
+      "Kuhn, Tom.",
+      "Constantine, David, 1944-"
+     ]
+    },
+    {
+     "titolo": "Bertolt Brecht collected plays.",
+     "voci": [
+      "Brecht, Bertolt, 1898-1956.",
+      "Kuhn, Tom.",
+      "Willett, John, 1917-2002."
+     ]
+    },
+    {
+     "titolo": "Bertolt Brecht collected plays. Vol. 3, pt. 2",
+     "voci": [
+      "Brecht, Bertolt, 1898-1956.",
+      "Willett, John, 1917-2002."
+     ]
+    },
+    {
+     "titolo": "Bertolt Brecht :",
+     "voci": [
+      "Brecht, Bertolt, 1898-1956.",
+      "Willett, John, 1917-2002.",
+      "Manheim, Ralph, 1907-1992."
+     ]
+    },
+    {
+     "titolo": "Bertolt Brecht diaries 1920-1922 /",
+     "voci": [
+      "Brecht, Bertolt, 1898-1956.",
+      "Ramthun, Herta.",
+      "Willett, John, 1917-2002."
+     ]
+    },
+    {
+     "titolo": "Bertolt Brecht diaries 1920-1922 /",
+     "voci": [
+      "Brecht, Bertolt, 1898-1956.",
+      "Ramthun, Herta.",
+      "Willett, John, 1917-2002."
+     ]
+    },
+    {
+     "titolo": "Bertolt Brecht: his life, his art and his times.",
+     "voci": [
+      "EWEN, Frederic.",
+      "Brecht, Bertolt, 1898-1956."
+     ]
+    },
+    {
+     "titolo": "Bertolt Brecht: his life, his art and his times.",
+     "voci": [
+      "EWEN, Frederic.",
+      "Brecht, Bertolt, 1898-1956."
+     ]
+    },
+    {
+     "titolo": "Bertolt Brecht :",
+     "voci": [
+      "Brecht, Bertolt, 1898-1956,",
+      "Rorrison, Hugh,",
+      "Willett, John, 1917-2002,"
+     ]
+    },
+    {
+     "titolo": "Bertolt Brecht journals /",
+     "voci": [
+      "Brecht, Bertolt, 1898-1956.",
+      "Willett, John, 1917-2002."
+     ]
+    },
+    {
+     "titolo": "Bertolt Brecht journals /",
+     "voci": [
+      "Brecht, Bertolt, 1898-1956.",
+      "Willett, John, 1917-2002."
+     ]
+    },
+    {
+     "titolo": "Bertolt Brecht journals /",
+     "voci": [
+      "Brecht, Bertolt, 1898-1956.",
+      "Willett, John, 1917-2002."
+     ]
+    },
+    {
+     "titolo": "Bertolt Brecht :",
+     "voci": [
+      "Brecht, Bertolt, 1898-1956.",
+      "Willett, John, 1917-2002."
+     ]
+    },
+    {
+     "titolo": "Bertolt Brecht letters /",
+     "voci": [
+      "Brecht, Bertolt, 1898-1956.",
+      "Willett, John, 1917-2002."
+     ]
+    },
+    {
+     "titolo": "Bertolt Brecht on stage :",
+     "voci": [
+      "Brecht, Bertolt, 1898-1956."
+     ]
+    },
+    {
+     "titolo": "Bertolt Brecht on stage. Exhibition by Inter Nationes, Bad Godesberg, 1968.",
+     "voci": [
+      "Inter Nationes (BONN)",
+      "Brecht, Bertolt, 1898-1956."
+     ]
+    },
+    {
+     "titolo": "Bertolt Brecht :",
+     "voci": [
+      "Brecht, Bertolt, 1898-1956.",
+      "Fried, Erich.",
+      "Manheim, Ralph, 1907-1992.",
+      "Willett, John, 1917-2002."
+     ]
+    },
+    {
+     "titolo": "Bertolt Brecht poems /",
+     "voci": [
+      "Brecht, Bertolt, 1898-1956.",
+      "Fried, Erich.",
+      "Manheim, Ralph, 1907-1992.",
+      "Willett, John, 1917-2002."
+     ]
+    },
+    {
+     "titolo": "Bertolt Brecht poems /",
+     "voci": [
+      "Brecht, Bertolt, 1898-1956.",
+      "Willett, John, 1917-2002.",
+      "Manheim, Ralph, 1907-1992.",
+      "Fried, Erich."
+     ]
+    },
+    {
+     "titolo": "Bertolt Brecht poems /",
+     "voci": [
+      "Brecht, Bertolt, 1898-1956.",
+      "Willett, John, 1917-2002.",
+      "Manheim, Ralph, 1907-1992.",
+      "Fried, Erich."
+     ]
+    },
+    {
+     "titolo": "Bertolt Brecht poems /",
+     "voci": [
+      "Brecht, Bertolt, 1898-1956.",
+      "Fried, Erich.",
+      "Manheim, Ralph, 1907-1992.",
+      "Willett, John, 1917-2002."
+     ]
+    },
+    {
+     "titolo": "Bertolt Brecht poems /",
+     "voci": [
+      "Brecht, Bertolt, 1898-1956.",
+      "Willett, John, 1917-2002.",
+      "Manheim, Ralph, 1907-1992.",
+      "Fried, Erich."
+     ]
+    },
+    {
+     "titolo": "Bertolt Brecht poems /",
+     "voci": [
+      "Brecht, Bertolt, 1898-1956.",
+      "Fried, Erich.",
+      "Manheim, Ralph, 1907-1992.",
+      "Willett, John, 1917-2002."
+     ]
+    },
+    {
+     "titolo": "Bertolt Brecht poems /",
+     "voci": [
+      "Brecht, Bertolt, 1898-1956.",
+      "Willett, John, 1917-2002.",
+      "Manheim, Ralph, 1907-1992.",
+      "Fried, Erich."
+     ]
+    },
+    {
+     "titolo": "Bertolt Brecht poems /",
+     "voci": [
+      "Brecht, Bertolt, 1898-1956.",
+      "Fried, Erich.",
+      "Manheim, Ralph, 1907-1992.",
+      "Willett, John, 1917-2002."
+     ]
+    },
+    {
+     "titolo": "Bertolt Brecht poems /",
+     "voci": [
+      "Brecht, Bertolt, 1898-1956.",
+      "Willett, John, 1917-2002.",
+      "Manheim, Ralph, 1907-1992.",
+      "Fried, Erich."
+     ]
+    },
+    {
+     "titolo": "Bertolt Brecht : practice pieces.",
+     "voci": [
+      "Browne, Roscoe Lee.",
+      "Chodorov, Stephan.",
+      "Havinga, Nick.",
+      "Lenya, Lotte.",
+      "Moglen, Sig.",
+      "Rounds, David, 1930-",
+      "Brecht, Bertolt, 1898-1956.",
+      "Creative Arts Television Archive Collection (Library of Congress)",
+      "Camera Three Productions."
+     ]
+    },
+    {
+     "titolo": "Bertolt Brecht's American cicerone /",
+     "voci": [
+      "Lyon, James K.",
+      "Brecht, Bertolt, 1898-1956",
+      "Reyher, Ferdinand."
+     ]
+    },
+    {
+     "titolo": "Bertolt Brecht's Me-ti :",
+     "voci": [
+      "Brecht, Bertolt, 1898-1956,",
+      "Tatlow, Antony,"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 13,
+   "qid": "Q95435084",
+   "nome": "Jindřich Bedřich Heller",
+   "nascita": "1891-10-20",
+   "morte": "1957-08-04",
+   "alias": [
+    "B. H. Jindřich"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 1,
+    "dal_2000": 0,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Heller 1891-1957\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "Still more distant journeys :",
+     "voci": [
+      "D'Alessandro, Stephanie.",
+      "Segall, Lasar, 1891-1957.",
+      "Heller, Reinhold, 1940-",
+      "Beccari, Vera d'Horta, 1944-",
+      "David and Alfred Smart Museum of Art.",
+      "Jewish Museum (New York, N.Y.)"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 14,
+   "qid": "Q207036",
+   "nome": "A. A. Milne",
+   "nascita": "1882-01-18",
+   "morte": "1956-01-31",
+   "alias": [
+    "A A Milne"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 938,
+    "dal_2000": 425,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Milne 1882-1956\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "123 with Winnie-the-Pooh /",
+     "voci": [
+      "Milne, A. A. (Alan Alexander), 1882-1956.",
+      "Shepard, Ernest H. (Ernest Howard), 1879-1976."
+     ]
+    },
+    {
+     "titolo": "365 days with Winnie-the-Pooh /",
+     "voci": [
+      "Milne, A. A. (Alan Alexander), 1882-1956.",
+      "Shepard, Ernest H. (Ernest Howard), 1879-1976."
+     ]
+    },
+    {
+     "titolo": "A. A. Milne.",
+     "voci": [
+      "Swann, Thomas Burnett.",
+      "Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "A. A. Milne /",
+     "voci": [
+      "Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "A. A. Milne. [An anthology of his humorous work.]",
+     "voci": [
+      "Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "ABC with Winnie-the-Pooh /",
+     "voci": [
+      "Milne, A. A. (Alan Alexander), 1882-1956.",
+      "Shepard, Ernest H. (Ernest Howard), 1879-1976."
+     ]
+    },
+    {
+     "titolo": "The Acting Edition of Ariadne, or Business First. A comedy in three acts.",
+     "voci": [
+      "Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "The acting edition of Belinda :",
+     "voci": [
+      "Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "The Acting edition of Mr. Pim Passes By. A comedy in three acts.",
+     "voci": [
+      "Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "The Acting edition of The Dover Road. A comedy in three acts.",
+     "voci": [
+      "Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "The acting edition of The Romatic Age. A comedy in three acts. [With plates.]",
+     "voci": [
+      "Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "The Acting Edition of To have the Honour, a comedy in three acts.",
+     "voci": [
+      "Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "The adventure begins :",
+     "voci": [
+      "Milne, A. A. (Alan Alexander), 1882-1956,",
+      "Shepard, Ernest H. (Ernest Howard), 1879-1976,"
+     ]
+    },
+    {
+     "titolo": "The adventures of Tigger.",
+     "voci": [
+      "Milne, A. A. (Alan Alexander), 1882-1956.",
+      "Shepard, Ernest H. (Ernest Howard), 1879-1976.",
+      "Disney Enterprises (1996- )"
+     ]
+    },
+    {
+     "titolo": "All about Christopher Robin /",
+     "voci": [
+      "Grey, Andrew.",
+      "Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "All about Eeyore /",
+     "voci": [
+      "Grey, Andrew.",
+      "Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "All about Eeyore /",
+     "voci": [
+      "Dollin, Laura.",
+      "Grey, Andrew.",
+      "Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "All about Kanga and Roo /",
+     "voci": [
+      "Dollin, Laura.",
+      "Grey, Andrew.",
+      "Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "All about Owl /",
+     "voci": [
+      "Grey, Andrew.",
+      "Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "All about Piglet /",
+     "voci": [
+      "Grey, Andrew.",
+      "Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "All about Piglet /",
+     "voci": [
+      "Dollin, Laura.",
+      "Grey, Andrew.",
+      "Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "All about Pooh /",
+     "voci": [
+      "Grey, Andrew.",
+      "Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "All about Pooh /",
+     "voci": [
+      "Grey, Andrew.",
+      "Exley, Jude.",
+      "Milne, A. A. (Alan Alexander), 1882-1956.",
+      "Shepard, Ernest H. (Ernest Howard), 1879-1976."
+     ]
+    },
+    {
+     "titolo": "All about Rabbit /",
+     "voci": [
+      "Grey, Andrew.",
+      "Stead, Emily.",
+      "Milne, A. A. (Alan Alexander), 1882-1956.",
+      "Shepard, Ernest H. (Ernest Howard), 1879-1976."
+     ]
+    },
+    {
+     "titolo": "All about Tigger /",
+     "voci": [
+      "Exley, Jude.",
+      "Grey, Andrew.",
+      "Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "All about Tigger /",
+     "voci": [
+      "Exley, Jude.",
+      "Grey, Andrew.",
+      "Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "Always Pooh and me :",
+     "voci": [
+      "Milne, A. A. (Alan Alexander), 1882-1956,",
+      "Shepard, Ernest H. (Ernest Howard), 1879-1976,",
+      "Milne, A. A. (Alan Alexander), 1882-1956.",
+      "Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "Are you happy Piglet? /",
+     "voci": [
+      "Milne, A. A. (Alan Alexander), 1882-1956.",
+      "Shepard, Ernest H. (Ernest Howard), 1879-1976."
+     ]
+    },
+    {
+     "titolo": "The Artist. A duologue.",
+     "voci": [
+      "Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "The Ascent of Man.",
+     "voci": [
+      "Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "The Babar collection /",
+     "voci": [
+      "Brunhoff, Jean de, 1899-1937,",
+      "Brunhoff, Jean de, 1899-1937.",
+      "Brunhoff, Jean de, 1899-1937.",
+      "Brunhoff, Jean de, 1899-1937.",
+      "Brunhoff, Jean de, 1899-1937.",
+      "Milne, A. A. (Alan Alexander), 1882-1956,"
+     ]
+    },
+    {
+     "titolo": "Bad Sir Brian Botany, and other Rhymes, from \"When we were very young\" /",
+     "voci": [
+      "Davies, Walford, 1869-1941.",
+      "Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "Bedtime stories from Winnie-the-Pooh /",
+     "voci": [
+      "Grey, Andrew.",
+      "Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "Before the flood :",
+     "voci": [
+      "Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "Before the Flood, etc.",
+     "voci": [
+      "Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "Behind the Lines /",
+     "voci": [
+      "Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "Behind the Lines. [Verses.]",
+     "voci": [
+      "Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "Belinda. An April folly in three acts. [With plates.]",
+     "voci": [
+      "Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "The best bear in all the world /",
+     "voci": [
+      "Bright, Paul, 1949-",
+      "Sibley, Brian,",
+      "Willis, Jeanne,",
+      "Saunders, Kate, 1960-2023,",
+      "Burgess, Mark,",
+      "Milne, A. A. (Alan Alexander), 1882-1956.",
+      "Shepard, Ernest H. (Ernest Howard), 1879-1976."
+     ]
+    },
+    {
+     "titolo": "The best bear in all the world /",
+     "voci": [
+      "Burgess, Mark,",
+      "Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "The best bear in all the world :",
+     "voci": [
+      "Bright, Paul, 1949-",
+      "Sibley, Brian,",
+      "Willis, Jeanne,",
+      "Saunders, Kate, 1960-2023,",
+      "Burgess, Mark,",
+      "Milne, A. A. (Alan Alexander), 1882-1956.",
+      "Shepard, Ernest H. (Ernest Howard), 1879-1976."
+     ]
+    },
+    {
+     "titolo": "The best bear in all the world /",
+     "voci": [
+      "Bright, Paul, 1949-",
+      "Sibley, Brian,",
+      "Willis, Jeanne,",
+      "Saunders, Kate, 1960-2023,",
+      "Burgess, Mark,",
+      "Milne, A. A. (Alan Alexander), 1882-1956",
+      "Shepard, Ernest H. (Ernest Howard), 1879-1976"
+     ]
+    },
+    {
+     "titolo": "The best bear in all the world /",
+     "voci": [
+      "Bright, Paul, 1949-",
+      "Sibley, Brian,",
+      "Willis, Jeanne,",
+      "Saunders, Kate, 1960-2023,",
+      "Burgess, Mark,",
+      "Milne, A. A. (Alan Alexander), 1882-1956",
+      "Shepard, Ernest H. (Ernest Howard), 1879-1976"
+     ]
+    },
+    {
+     "titolo": "Big, bigger, biggest! :",
+     "voci": [
+      "Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "Birthday Party, and other stories.",
+     "voci": [
+      "Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "Birthday Party and other stories /",
+     "voci": [
+      "Milne, A. A. (Alan Alexander), 1882-1956."
+     ]
+    },
+    {
+     "titolo": "The birthday party and other stories /",
+     "voci": [
+      "Milne, A. A. (Alan Alexander), 1882-1956,"
+     ]
+    },
+    {
+     "titolo": "The birthday party and other stories /",
+     "voci": [
+      "Milne, A. A. (Alan Alexander), 1882-1956,"
+     ]
+    },
+    {
+     "titolo": "A book for bothersome days /",
+     "voci": [
+      "Milne, A. A. (Alan Alexander), 1882-1956.",
+      "Shepard, Ernest H. (Ernest Howard), 1879-1976."
+     ]
+    },
+    {
+     "titolo": "A book for students of all ages /",
+     "voci": [
+      "Milne, A. A. (Alan Alexander), 1882-1956.",
+      "Shepard, Ernest H. (Ernest Howard), 1879-1976."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 15,
+   "qid": "Q67943",
+   "nome": "Hans Bethge",
+   "nascita": "1876-01-09",
+   "morte": "1946-02-01",
+   "alias": [],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 12,
+    "dal_2000": 5,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Bethge 1876-1946\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "Gesänge des Orients. Nr. 1 :",
+     "voci": [
+      "Strauss, Richard, 1864-1949,",
+      "Bethge, Hans, 1876-1946"
+     ]
+    },
+    {
+     "titolo": "Gesänge des Orients. Nr. 1 :",
+     "voci": [
+      "Strauss, Richard, 1864-1949,",
+      "Bethge, Hans, 1876-1946"
+     ]
+    },
+    {
+     "titolo": "Gesänge des Orients. Nr. 4 :",
+     "voci": [
+      "Strauss, Richard, 1864-1949,",
+      "Bethge, Hans, 1876-1946"
+     ]
+    },
+    {
+     "titolo": "Gesänge des Orients. Nr. 4 :",
+     "voci": [
+      "Strauss, Richard, 1864-1949,",
+      "Bethge, Hans, 1876-1946"
+     ]
+    },
+    {
+     "titolo": "Des Hafis Liebeslieder :",
+     "voci": [
+      "Szymanowski, Karol, 1882-1937,",
+      "Bethge, Hans, 1876-1946,",
+      "Ḥāfiẓ, active 14th century,",
+      "Barącz, Stanisław,",
+      "Marx, Joseph, 1882-1964,",
+      "Szymanowski, Karol, 1882-1937.",
+      "Szymanowski, Karol, 1882-1937."
+     ]
+    },
+    {
+     "titolo": "III Symfonia :",
+     "voci": [
+      "Szymanowski, Karol, 1882-1937.",
+      "Jalāl al-Dīn Rūmī, Maulana, 1207-1273.",
+      "Chylińska, Teresa.",
+      "Miciński, Tadeusz, 1873-1918.",
+      "Bethge, Hans, 1876-1946.",
+      "Czerniawski, Ann.",
+      "Czerniawski, Adam, 1934-"
+     ]
+    },
+    {
+     "titolo": "Das Lied von der Erde :",
+     "voci": [
+      "Mahler, Gustav, 1860-1911.",
+      "Bethge, Hans, 1876-1946.",
+      "Reilly, Edward R."
+     ]
+    },
+    {
+     "titolo": "Das Lied von der Erde :",
+     "voci": [
+      "Mahler, Gustav, 1860-1911,",
+      "Hefling, Stephen E.,",
+      "Bethge, Hans, 1876-1946,",
+      "Li, Bai, 701-762,",
+      "Qian, Qi, 722-780,",
+      "Meng, Haoran, 689-740,",
+      "Wang, Wei, 701-761,",
+      "Internationale Gustav Mahler Gesellschaft."
+     ]
+    },
+    {
+     "titolo": "Das Lied von der Erde.",
+     "voci": [
+      "Mahler, Gustav, 1860-1911,",
+      "Meng, Haoran, 689-740.",
+      "Wang, Wei, 701-761.",
+      "Bethge, Hans, 1876-1946.",
+      "Zwart, Frits, 1954-",
+      "Nikkels, Everdina Agnes, 1944-",
+      "Reilly, Edward R.,",
+      "Mahler, Gustav, 1860-1911.",
+      "Mahler, Gustav, 1860-1911.",
+      "Hague (Netherlands). Gemeentearchief.",
+      "Gustav Mahler Stichting Nederland."
+     ]
+    },
+    {
+     "titolo": "Das Lied von der Erde =",
+     "voci": [
+      "Mahler, Gustav, 1860-1911,",
+      "Schubert, Giselher,",
+      "Bethge, Hans, 1876-1946,",
+      "Li, Bai, 701-762,",
+      "Qian, Qi, 722-780,",
+      "Meng, Haoran, 689-740,",
+      "Wang, Wei, 701-761,"
+     ]
+    },
+    {
+     "titolo": "Vier Lieder : für Gesang und Orchester op. 13 (1914, 1918) /",
+     "voci": [
+      "Webern, Anton, 1883-1945,",
+      "Bethge, Hans, 1876-1946,",
+      "Kraus, Karl, 1874-1936,",
+      "Trakl, Georg, 1887-1914,",
+      "Smith, Eric,"
+     ]
+    },
+    {
+     "titolo": "Vier Lieder : für Gesang und Orchester op. 13 (1914, 1918) /",
+     "voci": [
+      "Webern, Anton, 1883-1945,",
+      "Bethge, Hans, 1876-1946,",
+      "Kraus, Karl, 1874-1936,",
+      "Trakl, Georg, 1887-1914,",
+      "Smith, Eric,"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 16,
+   "qid": "Q7182457",
+   "nome": "Phil Stong",
+   "nascita": "1899-01-27",
+   "morte": "1957-04-26",
+   "alias": [
+    "Philip Duffield Stong"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 2,
+    "dal_2000": 1,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Stong 1899-1957\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "The iron mountain /",
+     "voci": [
+      "Stong, Phil, 1899-1957."
+     ]
+    },
+    {
+     "titolo": "Rodgers &amp; Hammerstein's State fair /",
+     "voci": [
+      "Briggs, Tom, 1952-",
+      "Rodgers, Richard, 1902-1979.",
+      "Mattioli, Louis,",
+      "Hammerstein, Oscar, II, 1895-1960,",
+      "Stong, Phil, 1899-1957."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 17,
+   "qid": "Q443398",
+   "nome": "Henry Handel Richardson",
+   "nascita": "1870-01-03",
+   "morte": "1946-03-20",
+   "alias": [
+    "Henry Richardson",
+    "Ethel Robertson",
+    "Ethel F L Robertson",
+    "Ethel F. L. Robertson",
+    "Ethel F.L. Robertson",
+    "Ethel FL Robertson",
+    "Ethel Florence Lindesay Richardson",
+    "Ethel Florence Lindesay Robertson",
+    "Henry Handel Richardson",
+    "for Ethel Florence Lindesay Robertson"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 70,
+    "dal_2000": 17,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Richardson 1870-1946\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "The adventures of Cuffy Mahony :",
+     "voci": [
+      "Richardson, Henry Handel, 1870-1946"
+     ]
+    },
+    {
+     "titolo": "Australia felix.",
+     "voci": [
+      "Richardson, Henry Handel, 1870-1946."
+     ]
+    },
+    {
+     "titolo": "Australia Felix /",
+     "voci": [
+      "Richardson, Henry Handel, 1870-1946,"
+     ]
+    },
+    {
+     "titolo": "Australia Felix /",
+     "voci": [
+      "Probyn, Clive T.,",
+      "Steele, Bruce,",
+      "Richardson, Henry Handel, 1870-1946."
+     ]
+    },
+    {
+     "titolo": "Australia Felix /",
+     "voci": [
+      "Richardson, Henry Handel, 1870-1946"
+     ]
+    },
+    {
+     "titolo": "Ballarat and The Great Gold Rush, according to the Richard Mahony trilogy [by Henry Handel Richardso",
+     "voci": [
+      "LILJEGREN, Sten Bodvar.",
+      "Richardson, Henry Handel, 1870-1946."
+     ]
+    },
+    {
+     "titolo": "The End of a Childhood, and other stories.",
+     "voci": [
+      "Richardson, Henry Handel, 1870-1946."
+     ]
+    },
+    {
+     "titolo": "The fortunes of Richard Mahoney, comprising :",
+     "voci": [
+      "Richardson, Henry Handel, 1870-1946."
+     ]
+    },
+    {
+     "titolo": "The Fortunes of Richard Mahony.",
+     "voci": [
+      "Richardson, Henry Handel, 1870-1946."
+     ]
+    },
+    {
+     "titolo": "The fortunes of Richard Mahony :",
+     "voci": [
+      "Gow, Michael, 1955-",
+      "Richardson, Henry Handel, 1870-1946",
+      "Playbox Theatre Company."
+     ]
+    },
+    {
+     "titolo": "The Fortunes of Richard Mahony. Comprising Australia Felix, The Way Home, Ultima Thule.",
+     "voci": [
+      "Richardson, Henry Handel, 1870-1946."
+     ]
+    },
+    {
+     "titolo": "The Fortunes of Richard Mahony. Comprising Australia Felix. The Way home, Ultima Thule.",
+     "voci": [
+      "Richardson, Henry Handel, 1870-1946."
+     ]
+    },
+    {
+     "titolo": "The fortunes of Richard Mahony /",
+     "voci": [
+      "Richardson, Henry Handel, 1870-1946",
+      "Richardson, Henry Handel, 1870-1946",
+      "Richardson, Henry Handel, 1870-1946",
+      "Richardson, Henry Handel, 1870-1946"
+     ]
+    },
+    {
+     "titolo": "The fortunes of Richard Mahony /",
+     "voci": [
+      "Richardson, Henry Handel, 1870-1946",
+      "Richardson, Henry Handel, 1870-1946",
+      "Richardson, Henry Handel, 1870-1946",
+      "Richardson, Henry Handel, 1870-1946"
+     ]
+    },
+    {
+     "titolo": "The fortunes of Richard Mahony /",
+     "voci": [
+      "Richardson, Henry Handel, 1870-1946"
+     ]
+    },
+    {
+     "titolo": "The fortunes of Richard Mahony /",
+     "voci": [
+      "Richardson, Henry Handel, 1870-1946",
+      "Richardson, Henry Handel, 1870-1946",
+      "Richardson, Henry Handel, 1870-1946",
+      "Richardson, Henry Handel, 1870-1946"
+     ]
+    },
+    {
+     "titolo": "The fortunes of Richard Mahony /",
+     "voci": [
+      "Richardson, Henry Handel, 1870-1946."
+     ]
+    },
+    {
+     "titolo": "[The Fortunes of Richard Mahony. pt. 1.] Australia Felix.",
+     "voci": [
+      "Richardson, Henry Handel, 1870-1946."
+     ]
+    },
+    {
+     "titolo": "The fortunes of Richard Mahony :",
+     "voci": [
+      "Richardson, Henry Handel, 1870-1946."
+     ]
+    },
+    {
+     "titolo": "The fortunes of Richard Mahony :",
+     "voci": [
+      "Richardson, Henry Handel, 1870-1946."
+     ]
+    },
+    {
+     "titolo": "The fortunes of Richard Mahony :",
+     "voci": [
+      "Richardson, Henry Handel, 1870-1946."
+     ]
+    },
+    {
+     "titolo": "The Getting of Wisdom.",
+     "voci": [
+      "Richardson, Henry Handel, 1870-1946."
+     ]
+    },
+    {
+     "titolo": "The getting of wisdom /",
+     "voci": [
+      "Richardson, Henry Handel, 1870-1946"
+     ]
+    },
+    {
+     "titolo": "The getting of wisdom /",
+     "voci": [
+      "Richardson, Henry Handel, 1870-1946,"
+     ]
+    },
+    {
+     "titolo": "The getting of wisdom /",
+     "voci": [
+      "Richardson, Henry Handel, 1870-1946,"
+     ]
+    },
+    {
+     "titolo": "The getting of wisdom /",
+     "voci": [
+      "Richardson, Henry Handel, 1870-1946",
+      "Probyn, Clive T.",
+      "Steele, Bruce."
+     ]
+    },
+    {
+     "titolo": "The getting of wisdom /",
+     "voci": [
+      "Richardson, Henry Handel, 1870-1946"
+     ]
+    },
+    {
+     "titolo": "The getting of wisdom /",
+     "voci": [
+      "Richardson, Henry Handel, 1870-1946"
+     ]
+    },
+    {
+     "titolo": "The Getting of Wisdom. Illustrated by Kay Dattner.",
+     "voci": [
+      "Richardson, Henry Handel, 1870-1946."
+     ]
+    },
+    {
+     "titolo": "The Getting of Wisdom. Illustrated by Kay Dattner.",
+     "voci": [
+      "Richardson, Henry Handel, 1870-1946."
+     ]
+    },
+    {
+     "titolo": "The getting of wisdom /",
+     "voci": [
+      "Richardson, Henry Handel, 1870-1946."
+     ]
+    },
+    {
+     "titolo": "The getting of wisdom /",
+     "voci": [
+      "Richardson, Henry Handel, 1870-1946."
+     ]
+    },
+    {
+     "titolo": "The Getting of Wisdom. (New edition.).",
+     "voci": [
+      "Richardson, Henry Handel, 1870-1946."
+     ]
+    },
+    {
+     "titolo": "Henry Handel Richardson 1870-1946 :",
+     "voci": [
+      "Howells, Gay.",
+      "Richardson, Henry Handel, 1870-1946",
+      "National Library of Australia."
+     ]
+    },
+    {
+     "titolo": "Henry Handel Richardson (1870-1946) :",
+     "voci": [
+      "Richardson, Henry Handel, 1870-1946.",
+      "Steele, Bruce.",
+      "Divall, Richard.",
+      "Marshall-Hall Trust."
+     ]
+    },
+    {
+     "titolo": "Henry Handel Richardson. A study. [With plates, including portraits.]",
+     "voci": [
+      "PALMER, Nettie.",
+      "Richardson, Henry Handel, 1870-1946."
+     ]
+    },
+    {
+     "titolo": "Henry Handel Richardson and some of her Sources.",
+     "voci": [
+      "GIBSON, afterwards KRAMER, Leonie Judith.",
+      "Richardson, Henry Handel, 1870-1946."
+     ]
+    },
+    {
+     "titolo": "Henry Handel Richardson /",
+     "voci": [
+      "Richardson, Henry Handel, 1870-1946.",
+      "Buckley, Vincent."
+     ]
+    },
+    {
+     "titolo": "Henry Handel Richardson. (Ethel Florence Lindesay Richardson).",
+     "voci": [
+      "Elliott, William D.",
+      "Richardson, Henry Handel, 1870-1946."
+     ]
+    },
+    {
+     "titolo": "Henry Handel Richardson: some personal impressions. Edited by E. Purdie and O. M. Roncoroni. [With p",
+     "voci": [
+      "Purdie, Edna, 1894-",
+      "Richardson, Henry Handel, 1870-1946.",
+      "RONCORONI, Olga Maria."
+     ]
+    },
+    {
+     "titolo": "Henry Handel Richardson :",
+     "voci": [
+      "Richardson, Henry Handel, 1870-1946",
+      "Lever, Susan, 1950-",
+      "Pratt, Catherine."
+     ]
+    },
+    {
+     "titolo": "Henry Handel Richardson :",
+     "voci": [
+      "Richardson, Henry Handel, 1870-1946.",
+      "Probyn, Clive T.",
+      "Steele, Bruce.",
+      "Solomon, Rachel, 1971-",
+      "O'Neill, Patrick (Patrick Nathaniel), 1962-"
+     ]
+    },
+    {
+     "titolo": "Henry Handel Richardson :",
+     "voci": [
+      "Richardson, Henry Handel, 1870-1946",
+      "Probyn, Clive T.",
+      "Steele, Bruce."
+     ]
+    },
+    {
+     "titolo": "Henry Handel Richardson :",
+     "voci": [
+      "Richardson, Henry Handel, 1870-1946",
+      "Probyn, Clive T.",
+      "Steele, Bruce."
+     ]
+    },
+    {
+     "titolo": "Henry Handel Richardson :",
+     "voci": [
+      "Richardson, Henry Handel, 1870-1946",
+      "Probyn, Clive T.",
+      "Steele, Bruce."
+     ]
+    },
+    {
+     "titolo": "Henry Handel Richardson :",
+     "voci": [
+      "Richardson, Henry Handel, 1870-1946",
+      "Probyn, Clive T.",
+      "Steele, Bruce."
+     ]
+    },
+    {
+     "titolo": "Henry Handel Richardson. [With a portrait.]",
+     "voci": [
+      "Buckley, Vincent.",
+      "Richardson, Henry Handel, 1870-1946."
+     ]
+    },
+    {
+     "titolo": "Letters of Henry Handel Richardson to Nettie Palmer. Ed. by Karl-Johan Rossing.",
+     "voci": [
+      "Richardson, Henry Handel, 1870-1946.",
+      "ROSSING, Karl Johan."
+     ]
+    },
+    {
+     "titolo": "Maurice Guest :",
+     "voci": [
+      "Richardson, Henry Handel, 1870-1946,"
+     ]
+    },
+    {
+     "titolo": "Maurice Guest /",
+     "voci": [
+      "Richardson, Henry Handel, 1870-1946,"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 18,
+   "qid": "Q8962216",
+   "nome": "Francesc Trabal i Benessat",
+   "nascita": "1899-05-05",
+   "morte": "1957-11-08",
+   "alias": [
+    "Sr. Banyeta",
+    "Francesc Trabal",
+    "Francesc Trabal i Benessat",
+    "Francisco Trabal"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 1,
+    "dal_2000": 1,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Benessat 1899-1957\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "Waltz /",
+     "voci": [
+      "Trabal, Francesc, 1899-1957,",
+      "Tennent, Martha,"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 19,
+   "qid": "Q60785",
+   "nome": "Ricarda Huch",
+   "nascita": "1864-07-18",
+   "morte": "1947-11-17",
+   "alias": [
+    "Richard Hugo",
+    "Ռիչարդ Հյուգո"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 13,
+    "dal_2000": 2,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Huch 1864-1947\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "Der letzte Sommer ... Edited with an introduction, notes and a select vocabulary by Robert Weil.",
+     "voci": [
+      "Huch, Ricarda, 1864-1947.",
+      "WEIL, Robert William Eugen."
+     ]
+    },
+    {
+     "titolo": "The Deruga Trial. (Translated by Lorna Dietz.).",
+     "voci": [
+      "Huch, Ricarda, 1864-1947.",
+      "DIETZ, Lorna."
+     ]
+    },
+    {
+     "titolo": "[Die Geschichten von Garibaldi.] Garibaldi and the New Italy (Translated ... by Catherine Alison Phi",
+     "voci": [
+      "Huch, Ricarda, 1864-1947.",
+      "PHILLIPS, Catherine Alison."
+     ]
+    },
+    {
+     "titolo": "[Die Geschichten von Garibaldi.] Garibaldi and the New Italy (Translated ... by Catherine Alison Phi",
+     "voci": [
+      "Huch, Ricarda, 1864-1947.",
+      "PHILLIPS, Catherine Alison."
+     ]
+    },
+    {
+     "titolo": "[Die Geschichten von Garibaldi.] Garibaldi and the New Italy (Translated ... by Catherine Alison Phi",
+     "voci": [
+      "Huch, Ricarda, 1864-1947.",
+      "PHILLIPS, Catherine Alison."
+     ]
+    },
+    {
+     "titolo": "Early Christian Mosaics from the fourth to the seventh centuries ... Fourteen plates in colour. Pref",
+     "voci": [
+      "Volbach, Wolfgang Fritz, 1892-1988.",
+      "Huch, Ricarda, 1864-1947."
+     ]
+    },
+    {
+     "titolo": "[Erinnerungen von Ludolf Ursleu dem Jüngeren.] Unconquered Love ... Translated by William A. Drake.",
+     "voci": [
+      "Huch, Ricarda, 1864-1947.",
+      "Drake, William A., 1899-1965."
+     ]
+    },
+    {
+     "titolo": "The last summer /",
+     "voci": [
+      "Huch, Ricarda, 1864-1947,",
+      "Bulloch, Jamie,"
+     ]
+    },
+    {
+     "titolo": "The last summer /",
+     "voci": [
+      "Huch, Ricarda, 1864-1947,",
+      "Bulloch, Jamie,"
+     ]
+    },
+    {
+     "titolo": "Der letze sommer /",
+     "voci": [
+      "Huch, Ricarda, 1864-1947.",
+      "Weil, Robert."
+     ]
+    },
+    {
+     "titolo": "Der Letzte Sommer :",
+     "voci": [
+      "Huch, Ricarda, 1864-1947.",
+      "Weil, Robert."
+     ]
+    },
+    {
+     "titolo": "Ricarda Huch's Weltanschauung as expressed in her philosophical works and her novels. A dissertation",
+     "voci": [
+      "FLANDREAU, Audrey.",
+      "Huch, Ricarda, 1864-1947."
+     ]
+    },
+    {
+     "titolo": "Untergang Des Romischen Reiches Deutscher Nation.",
+     "voci": [
+      "Huch, Ricarda, 1864-1947."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 20,
+   "qid": "Q172684",
+   "nome": "Aleister Crowley",
+   "nascita": "1875-10-12",
+   "morte": "1947-12-01",
+   "alias": [
+    "Therion",
+    "Edward Alexander Crowley",
+    "Oliver Haddo",
+    "H.D. Carr",
+    "Master Therion",
+    "Aleister",
+    "H. D. Carr"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 250,
+    "dal_2000": 36,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Crowley 1875-1947\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "777 /",
+     "voci": [
+      "Crowley, Aleister, 1875-1947."
+     ]
+    },
+    {
+     "titolo": "777 revised, vel Prolegomena symbolica ad systemam sceptico-mysticae viae explicandae, fundamentum h",
+     "voci": [
+      "Crowley, Aleister, 1875-1947."
+     ]
+    },
+    {
+     "titolo": "777 :",
+     "voci": [
+      "Crowley, Aleister, 1875-1947.",
+      "Metaphysical Research Group."
+     ]
+    },
+    {
+     "titolo": "777. Vel, Prolegomena symbolica ad systemam scepticomysticae viae explicandae, fundamentum hieroglyp",
+     "voci": [
+      "Crowley, Aleister, 1875-1947."
+     ]
+    },
+    {
+     "titolo": "777;",
+     "voci": [
+      "Crowley, Aleister, 1875-1947."
+     ]
+    },
+    {
+     "titolo": "Aceldama ... A philosophical poem by a gentleman of the University of Cambridge [i.e. Edward Alexand",
+     "voci": [
+      "Crowley, Aleister, 1875-1947."
+     ]
+    },
+    {
+     "titolo": "Ahab and other poems ... With an introduction and epilogue by Count Vladimir Svareff [i.e. E. A. Cro",
+     "voci": [
+      "Crowley, Aleister, 1875-1947."
+     ]
+    },
+    {
+     "titolo": "Aleister Crowley.",
+     "voci": [
+      "Cammell, Charles Richard.",
+      "Crowley, Aleister, 1875-1947."
+     ]
+    },
+    {
+     "titolo": "Aleister Crowley :",
+     "voci": [
+      "Burnett-Rae, Alan.",
+      "Hall, Victor.",
+      "Crowley, Aleister, 1875-1947."
+     ]
+    },
+    {
+     "titolo": "Aleister Crowley. A memoir of 666 ... Edited by Victor Hall, with four poems by Aleister Crowley.",
+     "voci": [
+      "RAE, Alan Burnett.",
+      "Crowley, Aleister, 1875-1947.",
+      "HALL, Victor."
+     ]
+    },
+    {
+     "titolo": "Aleister Crowley and the practice of the magical diary :",
+     "voci": [
+      "Crowley, Aleister, 1875-1947.",
+      "Wasserman, James, 1948-"
+     ]
+    },
+    {
+     "titolo": "The Aleister Crowley collection /",
+     "voci": [
+      "Crowley, Aleister, 1875-1947,"
+     ]
+    },
+    {
+     "titolo": "The Aleister Crowley collection /",
+     "voci": [
+      "Crowley, Aleister, 1875-1947,",
+      "Crowley, Aleister, 1875-1947.",
+      "Crowley, Aleister, 1875-1947.",
+      "Crowley, Aleister, 1875-1947."
+     ]
+    },
+    {
+     "titolo": "Aleister Crowley, October 18th, 1875-December 1st, 1947. The last ritual, read from his own works, a",
+     "voci": [
+      "Crowley, Aleister, 1875-1947."
+     ]
+    },
+    {
+     "titolo": "Aleister Crowley's astrology :",
+     "voci": [
+      "Crowley, Aleister, 1875-1947.",
+      "Skinner, Stephen, 1948-"
+     ]
+    },
+    {
+     "titolo": "Aleister Crowley's astrology: with a study of Neptune and Uranus. Edited by Stephen Skinner.",
+     "voci": [
+      "Crowley, Aleister, 1875-1947.",
+      "SKINNER, Stephen, Graduate of Sydney University."
+     ]
+    },
+    {
+     "titolo": "Aleister Crowley's four books of magick :",
+     "voci": [
+      "Crowley, Aleister, 1875-1947,"
+     ]
+    },
+    {
+     "titolo": "Aleister Crowley's Tao Teh King [translated from the Chinese] :",
+     "voci": [
+      "Laozi.",
+      "Crowley, Aleister, 1875-1947.",
+      "Skinner, Stephen, 1948-"
+     ]
+    },
+    {
+     "titolo": "Aleister Crowley &amp; the hidden god.",
+     "voci": [
+      "Grant, Kenneth, 1924-2011.",
+      "Crowley, Aleister, 1875-1947."
+     ]
+    },
+    {
+     "titolo": "Aleister Crowley, the man: the mage: the poet. [With plates, including portraits, and a bibliography",
+     "voci": [
+      "Cammell, Charles Richard.",
+      "Crowley, Aleister, 1875-1947."
+     ]
+    },
+    {
+     "titolo": "Aleister Crowley &amp; the treasure house of images /",
+     "voci": [
+      "Crowley, Aleister, 1875-1947."
+     ]
+    },
+    {
+     "titolo": "Alexandra /",
+     "voci": [
+      "Crowley, Aleister, 1875-1947.",
+      "Naylor, Anthony."
+     ]
+    },
+    {
+     "titolo": "Alice, an adultery. [By Edward Alexander Crowley.]",
+     "voci": [
+      "Crowley, Aleister, 1875-1947."
+     ]
+    },
+    {
+     "titolo": "Alice: an adultery. [With other poems by Edward Alexander Crowley. With a critical essay signed: G. ",
+     "voci": [
+      "Crowley, Aleister, 1875-1947.",
+      "K., G.",
+      "Kelly, Gerald, 1879-1972."
+     ]
+    },
+    {
+     "titolo": "Ambergris: a selection from the poems of Aleister Crowley. [With a portrait.]",
+     "voci": [
+      "Crowley, Aleister, 1875-1947."
+     ]
+    },
+    {
+     "titolo": "Ambergris /",
+     "voci": [
+      "Crowley, Aleister, 1875-1947."
+     ]
+    },
+    {
+     "titolo": "Amphora. [Poems. By Edward Alexander Crowley.]",
+     "voci": [
+      "Crowley, Aleister, 1875-1947."
+     ]
+    },
+    {
+     "titolo": "[Amphora. [Poems. By Edward Alexander Crowley.]]",
+     "voci": [
+      "Crowley, Aleister, 1875-1947."
+     ]
+    },
+    {
+     "titolo": "An Appeal to the American Republic. [In verse.]",
+     "voci": [
+      "Crowley, Aleister, 1875-1947."
+     ]
+    },
+    {
+     "titolo": "The Argonauts. [A drama, in verse.]",
+     "voci": [
+      "Crowley, Aleister, 1875-1947."
+     ]
+    },
+    {
+     "titolo": "Art in America.",
+     "voci": [
+      "Crowley, Aleister, 1875-1947."
+     ]
+    },
+    {
+     "titolo": "Atlantis.",
+     "voci": [
+      "Crowley, Aleister, 1875-1947."
+     ]
+    },
+    {
+     "titolo": "The Banned Lecture-Gilles de Rais-to have been delivered before the Oxford University Poetry Society",
+     "voci": [
+      "Crowley, Aleister, 1875-1947.",
+      "Rais, Gilles de, 1404-1440."
+     ]
+    },
+    {
+     "titolo": "The banned lecture :",
+     "voci": [
+      "Crowley, Aleister, 1875-1947."
+     ]
+    },
+    {
+     "titolo": "The banned lecture :",
+     "voci": [
+      "Crowley, Aleister, 1875-1947."
+     ]
+    },
+    {
+     "titolo": "Begin. Your interest in Magick should be the Dawn of a New Life. [An advertisement.]",
+     "voci": [
+      "Crowley, Aleister, 1875-1947."
+     ]
+    },
+    {
+     "titolo": "Best of the Equinox.",
+     "voci": [
+      "Crowley, Aleister, 1875-1947."
+     ]
+    },
+    {
+     "titolo": "Book 4.",
+     "voci": [
+      "Crowley, Aleister, 1875-1947."
+     ]
+    },
+    {
+     "titolo": "Book Four. By Frater Perdurabo and Soror Virakam (Mary d'Este Sturges).",
+     "voci": [
+      "Crowley, Aleister, 1875-1947.",
+      "Virakam, Soror"
+     ]
+    },
+    {
+     "titolo": "The Book of Lies.",
+     "voci": [
+      "Crowley, Aleister, 1875-1947."
+     ]
+    },
+    {
+     "titolo": "The book of lies, which is also falsely called Breaks;",
+     "voci": [
+      "Crowley, Aleister, 1875-1947."
+     ]
+    },
+    {
+     "titolo": "The Book of Lies, which is also falsely called Breaks. The wanderings or falsifications of the one t",
+     "voci": [
+      "Crowley, Aleister, 1875-1947."
+     ]
+    },
+    {
+     "titolo": "The book of lies which is also falsely called Breaks :",
+     "voci": [
+      "Crowley, Aleister, 1875-1947."
+     ]
+    },
+    {
+     "titolo": "The book of the Goetia of Solomon The King ... /",
+     "voci": [
+      "Solomon, King of Israel",
+      "Crowley, Aleister, 1875-1947."
+     ]
+    },
+    {
+     "titolo": "The book of the Goetia of Solomon the king /",
+     "voci": [
+      "Crowley, Aleister, 1875-1947."
+     ]
+    },
+    {
+     "titolo": "The Book of the Goetia of Solomon the King. Translated into the English tongue by a dead hand ... Th",
+     "voci": [
+      "Crowley, Aleister, 1875-1947."
+     ]
+    },
+    {
+     "titolo": "The Book of the Law.",
+     "voci": [
+      "Crowley, Aleister, 1875-1947."
+     ]
+    },
+    {
+     "titolo": "The Book of the Law.",
+     "voci": [
+      "Crowley, Aleister, 1875-1947."
+     ]
+    },
+    {
+     "titolo": "The book of the law ;",
+     "voci": [
+      "Crowley, Aleister, 1875-1947,",
+      "Crowley, Aleister, 1875-1947."
+     ]
+    },
+    {
+     "titolo": "The Book of the Law, etc. [By Edward Alexander Crowley.]",
+     "voci": [
+      "Crowley, Aleister, 1875-1947."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 21,
+   "qid": "Q2956128",
+   "nome": "Channing Pollock",
+   "nascita": "1880-03-04",
+   "morte": "1946-08-17",
+   "alias": [],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 13,
+    "dal_2000": 0,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Pollock 1880-1946\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "Behold the man :",
+     "voci": [
+      "Pollock, Channing, 1880-1946."
+     ]
+    },
+    {
+     "titolo": "The Enemy. A play in four acts.",
+     "voci": [
+      "Pollock, Channing, 1880-1946."
+     ]
+    },
+    {
+     "titolo": "The Enemy ... An adaptation of the original professional production, by Nathaniel Edward Reeid, etc.",
+     "voci": [
+      "Pollock, Channing, 1880-1946.",
+      "Reeid, Nathaniel Edward."
+     ]
+    },
+    {
+     "titolo": "The Enemy, etc.",
+     "voci": [
+      "Pollock, Channing, 1880-1946."
+     ]
+    },
+    {
+     "titolo": "The Fool. A play in four acts.",
+     "voci": [
+      "Pollock, Channing, 1880-1946."
+     ]
+    },
+    {
+     "titolo": "The fool :",
+     "voci": [
+      "Pollock, Channing, 1880-1946."
+     ]
+    },
+    {
+     "titolo": "The fool :",
+     "voci": [
+      "Pollock, Channing, 1880-1946."
+     ]
+    },
+    {
+     "titolo": "The footlights, fore and aft /",
+     "voci": [
+      "Pollock, Channing, 1880-1946."
+     ]
+    },
+    {
+     "titolo": "Harvest of my Years. An autobiography. [With plates, including portraits.]",
+     "voci": [
+      "Pollock, Channing, 1880-1946."
+     ]
+    },
+    {
+     "titolo": "The House Beautiful. A play in three acts.",
+     "voci": [
+      "Pollock, Channing, 1880-1946."
+     ]
+    },
+    {
+     "titolo": "The House Beautiful. A play in three acts. [With plates.]",
+     "voci": [
+      "Pollock, Channing, 1880-1946."
+     ]
+    },
+    {
+     "titolo": "My best Girl. &lt;Musical play.&gt; Book and lyrics by Channing Pollock and Rennold Wolf. Music by C",
+     "voci": [
+      "Crawford, Clifton.",
+      "Barratt, Augustus.",
+      "Pollock, Channing, 1880-1946.",
+      "Wolf, Rennold, 1872-1922."
+     ]
+    },
+    {
+     "titolo": "The Sign on the Door. A play in a prologue and three acts.",
+     "voci": [
+      "Pollock, Channing, 1880-1946."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 22,
+   "qid": "Q460952",
+   "nome": "Charles Nordhoff",
+   "nascita": "1887-02-01",
+   "morte": "1947-04-10",
+   "alias": [
+    "Charles B. Nordhoff",
+    "Charles Nordhoff",
+    "Charles Bernard Nordhoff"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 48,
+    "dal_2000": 1,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Nordhoff 1887-1947\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "Botany Bay.",
+     "voci": [
+      "Nordhoff, Charles, 1887-1947."
+     ]
+    },
+    {
+     "titolo": "Botany Bay.",
+     "voci": [
+      "Nordhoff, Charles, 1887-1947.",
+      "Hall, James Norman."
+     ]
+    },
+    {
+     "titolo": "Botany Bay.",
+     "voci": [
+      "Nordhoff, Charles, 1887-1947.",
+      "Hall, James Norman."
+     ]
+    },
+    {
+     "titolo": "Botany Bay /",
+     "voci": [
+      "Nordhoff, Charles, 1887-1947.",
+      "Hall, James Norman."
+     ]
+    },
+    {
+     "titolo": "The Bounty trilogy :",
+     "voci": [
+      "Nordhoff, Charles, 1887-1947.",
+      "Hall, James Norman.",
+      "Nordhoff, Charles.",
+      "Nordhoff, Charles.",
+      "Nordhoff, Charles."
+     ]
+    },
+    {
+     "titolo": "The Dark River.",
+     "voci": [
+      "Nordhoff, Charles, 1887-1947."
+     ]
+    },
+    {
+     "titolo": "The Derelict, etc.",
+     "voci": [
+      "Nordhoff, Charles, 1887-1947."
+     ]
+    },
+    {
+     "titolo": "Faery Lands of the South Seas ... With illustrations by George A. Picken.",
+     "voci": [
+      "Hall, James Norman.",
+      "Nordhoff, Charles, 1887-1947.",
+      "PICKEN, George A."
+     ]
+    },
+    {
+     "titolo": "Falcons of France.",
+     "voci": [
+      "Nordhoff, Charles, 1887-1947."
+     ]
+    },
+    {
+     "titolo": "Falcons of France: a tale of youth and the air.",
+     "voci": [
+      "Nordhoff, Charles, 1887-1947.",
+      "Hall, James Norman."
+     ]
+    },
+    {
+     "titolo": "Falcons of France :",
+     "voci": [
+      "Nordhoff, Charles, 1887-1947.",
+      "Hall, James Norman."
+     ]
+    },
+    {
+     "titolo": "Falcons of France. A tale of youth and the air ... With illustrations, etc.",
+     "voci": [
+      "Nordhoff, Charles, 1887-1947."
+     ]
+    },
+    {
+     "titolo": "The High Barbaree.",
+     "voci": [
+      "Nordhoff, Charles, 1887-1947."
+     ]
+    },
+    {
+     "titolo": "The High Barbaree.",
+     "voci": [
+      "Nordhoff, Charles, 1887-1947."
+     ]
+    },
+    {
+     "titolo": "The \"High Barbaree\".",
+     "voci": [
+      "Nordhoff, Charles, 1887-1947.",
+      "Hall, James Norman."
+     ]
+    },
+    {
+     "titolo": "Hurricane.",
+     "voci": [
+      "Nordhoff, Charles, 1887-1947."
+     ]
+    },
+    {
+     "titolo": "Hurricane.",
+     "voci": [
+      "Nordhoff, Charles, 1887-1947."
+     ]
+    },
+    {
+     "titolo": "Hurricane.",
+     "voci": [
+      "Nordhoff, Charles, 1887-1947.",
+      "Hall, James Norman."
+     ]
+    },
+    {
+     "titolo": "Hurricane /",
+     "voci": [
+      "Nordhoff, Charles, 1887-1947.",
+      "Hall, James Norman."
+     ]
+    },
+    {
+     "titolo": "The Hurricane ... With 16 illustrations from the great Samuel Goldwyn production.",
+     "voci": [
+      "Nordhoff, Charles, 1887-1947."
+     ]
+    },
+    {
+     "titolo": "I Served with Windjammers. [Selections from “Man of War Life,” “The Merchant Vessel,” “Whaling and F",
+     "voci": [
+      "Nordhoff, Charles, 1830-1901.",
+      "Nordhoff, Charles, 1887-1947."
+     ]
+    },
+    {
+     "titolo": "The Island Wreck.",
+     "voci": [
+      "Nordhoff, Charles, 1887-1947."
+     ]
+    },
+    {
+     "titolo": "Men against the Sea.",
+     "voci": [
+      "Nordhoff, Charles, 1887-1947."
+     ]
+    },
+    {
+     "titolo": "Men against the Sea.",
+     "voci": [
+      "Nordhoff, Charles, 1887-1947."
+     ]
+    },
+    {
+     "titolo": "Men against the Sea ... With illustrations by Nigel Lambourne.",
+     "voci": [
+      "Nordhoff, Charles, 1887-1947."
+     ]
+    },
+    {
+     "titolo": "Men against the sea /",
+     "voci": [
+      "Nordhoff, Charles, 1887-1947.",
+      "Hall, James Norman."
+     ]
+    },
+    {
+     "titolo": "Men without Country.",
+     "voci": [
+      "Nordhoff, Charles, 1887-1947."
+     ]
+    },
+    {
+     "titolo": "Mutiny! /",
+     "voci": [
+      "Nordhoff, Charles, 1887-1947.",
+      "Hall, J. N."
+     ]
+    },
+    {
+     "titolo": "Mutiny on the Bounty.",
+     "voci": [
+      "Nordhoff, Charles, 1887-1947."
+     ]
+    },
+    {
+     "titolo": "[Mutiny on the Bounty.]",
+     "voci": [
+      "Nordhoff, Charles, 1887-1947."
+     ]
+    },
+    {
+     "titolo": "Mutiny on the Bounty.",
+     "voci": [
+      "Nordhoff, Charles, 1887-1947."
+     ]
+    },
+    {
+     "titolo": "Mutiny on the Bounty.",
+     "voci": [
+      "Nordhoff, Charles, 1887-1947."
+     ]
+    },
+    {
+     "titolo": "Mutiny on the Bounty.",
+     "voci": [
+      "Nordhoff, Charles, 1887-1947."
+     ]
+    },
+    {
+     "titolo": "Mutiny on the \"Bounty\".",
+     "voci": [
+      "Nordhoff, Charles, 1887-1947.",
+      "Hall, James Norman."
+     ]
+    },
+    {
+     "titolo": "Mutiny on the 'Bounty' ... Abridged ed. [edited by Dorothy Ward].",
+     "voci": [
+      "Nordhoff, Charles, 1887-1947.",
+      "Hall, James Norman.",
+      "Ward, Dorothy."
+     ]
+    },
+    {
+     "titolo": "Mutiny on the Bounty ... Abridged. Illustrated by Logan McFarland.",
+     "voci": [
+      "Nordhoff, Charles, 1887-1947."
+     ]
+    },
+    {
+     "titolo": "Mutiny on the 'Bounty' /",
+     "voci": [
+      "Nordhoff, Charles, 1887-1947.",
+      "Hall, James Norman.",
+      "Ward, Dorothy."
+     ]
+    },
+    {
+     "titolo": "Mutiny on the bounty /",
+     "voci": [
+      "Nordhoff, Charles, 1887-1947.",
+      "Hall, James Norman."
+     ]
+    },
+    {
+     "titolo": "Mutiny on the Bounty /",
+     "voci": [
+      "Fitch, Kenneth W.",
+      "Nordhoff, Charles, 1887-1947.",
+      "Waldinger, Morris.",
+      "Brooks, Jon (Editor)"
+     ]
+    },
+    {
+     "titolo": "Mutiny on the Bounty. With illustrations by Phil Gascoine.",
+     "voci": [
+      "Nordhoff, Charles, 1887-1947."
+     ]
+    },
+    {
+     "titolo": "Mutiny on the 'Bounty' /",
+     "voci": [
+      "Nordhoff, Charles, 1887-1947.",
+      "Hall, James Norman."
+     ]
+    },
+    {
+     "titolo": "No More Gas.",
+     "voci": [
+      "Nordhoff, Charles, 1887-1947."
+     ]
+    },
+    {
+     "titolo": "The Pearl Lagoon, etc.",
+     "voci": [
+      "Nordhoff, Charles, 1887-1947."
+     ]
+    },
+    {
+     "titolo": "Pitcairn's Island.",
+     "voci": [
+      "Nordhoff, Charles, 1887-1947."
+     ]
+    },
+    {
+     "titolo": "Pitcairn's Island.",
+     "voci": [
+      "Nordhoff, Charles, 1887-1947."
+     ]
+    },
+    {
+     "titolo": "Pitcairn's Island.",
+     "voci": [
+      "Nordhoff, Charles, 1887-1947."
+     ]
+    },
+    {
+     "titolo": "Pitcairn's Island.",
+     "voci": [
+      "Nordhoff, Charles, 1887-1947.",
+      "Hall, James Norman."
+     ]
+    },
+    {
+     "titolo": "Pitcairn's island /",
+     "voci": [
+      "Nordhoff, Charles, 1887-1947.",
+      "Hall, James Norman."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 23,
+   "qid": "Q8345656",
+   "nome": "Christofredo Jakob",
+   "nascita": "1866-12-25",
+   "morte": "1956-05-06",
+   "alias": [
+    "Christfried Jakob",
+    "Cristofredo Jakob"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 3,
+    "dal_2000": 0,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Jakob 1866-1956\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "Atlas of the nervous system",
+     "voci": [
+      "Jakob, Christfried, 1866-1956.",
+      "Strümpell, Adolf von, 1853-1925.",
+      "Fisher, Edward D."
+     ]
+    },
+    {
+     "titolo": "Atlas of the nervous system",
+     "voci": [
+      "Jakob, Christfried, 1866-1956.",
+      "Strümpell, Adolf von, 1853-1925.",
+      "Fisher, Edward D."
+     ]
+    },
+    {
+     "titolo": "Creation's praise [and ten others] /",
+     "voci": [
+      "Mendelssohn-Bartholdy, Felix, 1809-1847,",
+      "Geibel, Adam, 1855-1933,",
+      "Yale, Elsie Duncan, 1873-1956,",
+      "Gounod, Charles, 1818-1893",
+      "Thomas, Ambroise, 1811-1896,",
+      "Dvořák, Antonín, 1841-1904.",
+      "Hall, J. Lincoln (Joseph Lincoln), 1866-1930,"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 24,
+   "qid": "Q505017",
+   "nome": "Ernest Thompson Seton",
+   "nascita": "1860-08-14",
+   "morte": "1946-10-23",
+   "alias": [
+    "Ernest Thompson",
+    "Ernest Seton Thompson",
+    "Ernest E. Thompson",
+    "E. T. Seton",
+    "Ernest T. Seton",
+    "Thompson-Seton"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 141,
+    "dal_2000": 23,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Seton 1860-1946\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "Animal heroes :",
+     "voci": [
+      "Seton, Ernest Thompson, 1860-1946."
+     ]
+    },
+    {
+     "titolo": "Animal Heroes, being the Histories of a Cat, a Dog, a Pigeon, a Lynx, Two Wolves and a Reindeer, and",
+     "voci": [
+      "Seton, Ernest Thompson, 1860-1946."
+     ]
+    },
+    {
+     "titolo": "Animal Heroes, etc. (Fourth impression.).",
+     "voci": [
+      "Seton, Ernest Thompson, 1860-1946."
+     ]
+    },
+    {
+     "titolo": "Animal tracks and hunter signs /",
+     "voci": [
+      "Seton, Ernest Thompson, 1860-1946."
+     ]
+    },
+    {
+     "titolo": "Animal tracks and hunter signs /",
+     "voci": [
+      "Seton, Ernest Thompson, 1860-1946."
+     ]
+    },
+    {
+     "titolo": "Animal Tracks and Hunter Signs. [With illustrations.]",
+     "voci": [
+      "Seton, Ernest Thompson, 1860-1946."
+     ]
+    },
+    {
+     "titolo": "Animal Tracks &amp; Hunter Signs. [A reduced photographic reprint of the edition of 1958.]",
+     "voci": [
+      "Seton, Ernest Thompson, 1860-1946."
+     ]
+    },
+    {
+     "titolo": "The Arctic Prairies. A canoe-journey of 2,000 miles in search of the caribon; being the account of a",
+     "voci": [
+      "Seton, Ernest Thompson, 1860-1946."
+     ]
+    },
+    {
+     "titolo": "The arctic prairies :",
+     "voci": [
+      "Seton, Ernest Thompson, 1860-1946,"
+     ]
+    },
+    {
+     "titolo": "The Arctic Prairies /",
+     "voci": [
+      "Seton, Ernest Thompson, 1860-1946."
+     ]
+    },
+    {
+     "titolo": "The arctic prairies ... /",
+     "voci": [
+      "Seton, Ernest Thompson, 1860-1946."
+     ]
+    },
+    {
+     "titolo": "Arctic prairies /",
+     "voci": [
+      "Seton, Ernest Thompson, 1860-1946."
+     ]
+    },
+    {
+     "titolo": "The Arctic Prairies, etc. (New revised edition.) [With plates.]",
+     "voci": [
+      "Seton, Ernest Thompson, 1860-1946."
+     ]
+    },
+    {
+     "titolo": "Art anatomy of animals /",
+     "voci": [
+      "Seton, Ernest Thompson, 1860-1946."
+     ]
+    },
+    {
+     "titolo": "Bannertail. The story of a gray squirrel. With 100 drawings.",
+     "voci": [
+      "Seton, Ernest Thompson, 1860-1946."
+     ]
+    },
+    {
+     "titolo": "Bannertail :",
+     "voci": [
+      "Seton, Ernest Thompson, 1860-1946."
+     ]
+    },
+    {
+     "titolo": "The best of Ernest Thompson Seton /",
+     "voci": [
+      "Seton, Ernest Thompson, 1860-1946.",
+      "Adams, Richard, 1920-2016."
+     ]
+    },
+    {
+     "titolo": "The Best of Ernest Thompson Seton. (Stories selected by W. Kay Robinson.) [With illustrations.]",
+     "voci": [
+      "Seton, Ernest Thompson, 1860-1946.",
+      "ROBINSON, W. Kay."
+     ]
+    },
+    {
+     "titolo": "[The Best of Ernest Thompson Seton.] The Trail of the Sandhill Stag [and other stories].",
+     "voci": [
+      "Seton, Ernest Thompson, 1860-1946."
+     ]
+    },
+    {
+     "titolo": "The big book of country living /",
+     "voci": [
+      "Seton, Ernest Thompson, 1860-1946,"
+     ]
+    },
+    {
+     "titolo": "The big book of country living /",
+     "voci": [
+      "Seton, Ernest Thompson, 1860-1946,"
+     ]
+    },
+    {
+     "titolo": "Billy, and other stories from Wild Animal Ways, etc. [With plates.]",
+     "voci": [
+      "Seton, Ernest Thompson, 1860-1946."
+     ]
+    },
+    {
+     "titolo": "The biography of a grizzly",
+     "voci": [
+      "Seton, Ernest Thompson, 1860-1946,"
+     ]
+    },
+    {
+     "titolo": "The Biography of a Grizzly and 75 drawings. By E. Seton-Thompson.",
+     "voci": [
+      "Seton, Ernest Thompson, 1860-1946."
+     ]
+    },
+    {
+     "titolo": "The biography of a grizzly and 75 drawings /",
+     "voci": [
+      "Seton, Ernest Thompson, 1860-1946."
+     ]
+    },
+    {
+     "titolo": "The Biography of a Grizzly. [With plates.]",
+     "voci": [
+      "Seton, Ernest Thompson, 1860-1946."
+     ]
+    },
+    {
+     "titolo": "The Biography of a Silver-Fox or Domino Reynard of Goldur Town /",
+     "voci": [
+      "Seton, Ernest Thompson, 1860-1946."
+     ]
+    },
+    {
+     "titolo": "The Biography of a Silver-Fox; or, Domino Reynard of Goldur Town. With over 100 drawings by E. T. Se",
+     "voci": [
+      "Seton, Ernest Thompson, 1860-1946."
+     ]
+    },
+    {
+     "titolo": "The Birch-Bark Roll of the Woodcraft Indians, containing their constitution, laws, games and deeds.",
+     "voci": [
+      "Seton, Ernest Thompson, 1860-1946."
+     ]
+    },
+    {
+     "titolo": "The Birch Bark Roll of Woodcraft. The twentieth edition, etc.",
+     "voci": [
+      "Seton, Ernest Thompson, 1860-1946."
+     ]
+    },
+    {
+     "titolo": "Bird-Life. A guide to the study of our common birds ... With seventy-five full-page plates and numer",
+     "voci": [
+      "Chapman, Frank M. (Frank Michler), 1864-1945.",
+      "Seton, Ernest Thompson, 1860-1946."
+     ]
+    },
+    {
+     "titolo": "Bird-life :",
+     "voci": [
+      "Chapman, Frank M. (Frank Michler), 1864-1945.",
+      "Seton, Ernest Thompson, 1860-1946."
+     ]
+    },
+    {
+     "titolo": "The birds of Manitoba",
+     "voci": [
+      "Seton, Ernest Thompson, 1860-1946,",
+      "United States National Museum.",
+      "United States National Museum."
+     ]
+    },
+    {
+     "titolo": "The birds of Manitoba /",
+     "voci": [
+      "Seton, Ernest Thompson, 1860-1946.",
+      "United States National Museum."
+     ]
+    },
+    {
+     "titolo": "The book of woodcraft and Indian lore /",
+     "voci": [
+      "Seton, Ernest Thompson, 1860-1946."
+     ]
+    },
+    {
+     "titolo": "The book of woodcraft and Indian Lore /",
+     "voci": [
+      "Seton, Ernest Thompson, 1860-1946."
+     ]
+    },
+    {
+     "titolo": "Book of woodcraft and Indian lore /",
+     "voci": [
+      "Seton, Ernest Thompson, 1860-1946."
+     ]
+    },
+    {
+     "titolo": "The Book of Woodcraft and Indian Lore. With over 500 drawings by the author.",
+     "voci": [
+      "Seton, Ernest Thompson, 1860-1946."
+     ]
+    },
+    {
+     "titolo": "The book of woodcraft /",
+     "voci": [
+      "Seton, Ernest Thompson, 1860-1946,"
+     ]
+    },
+    {
+     "titolo": "Chink ... and other stories from “Lives of the Hunted” and “Wild Animals at Home,” etc.",
+     "voci": [
+      "Seton, Ernest Thompson, 1860-1946."
+     ]
+    },
+    {
+     "titolo": "The Cute Coyote, and other animal stories ... taken from Wild Animals at Home, Wild Animal Ways, Liv",
+     "voci": [
+      "Seton, Ernest Thompson, 1860-1946."
+     ]
+    },
+    {
+     "titolo": "Edible wild plants /",
+     "voci": [
+      "Medsger, Oliver Perry.",
+      "Seton, Ernest Thompson, 1860-1946."
+     ]
+    },
+    {
+     "titolo": "Ernest T. Seton to George Vaughan expressing his hope for the future.",
+     "voci": [
+      "Seton, Ernest Thompson, 1860-1946,",
+      "Gilder Lehrman Institute of American History,"
+     ]
+    },
+    {
+     "titolo": "Ernest Thompson Seton's America. Selections from the writings of the artist-naturalist. Edited with ",
+     "voci": [
+      "Seton, Ernest Thompson, 1860-1946.",
+      "SETON, Julia Moss.",
+      "WILEY, Farida Anna."
+     ]
+    },
+    {
+     "titolo": "Ernest Thompson Seton :",
+     "voci": [
+      "Witt, David L., 1951-",
+      "Seton, Ernest Thompson, 1860-1946."
+     ]
+    },
+    {
+     "titolo": "Famous Animal Stories. Animal myths, fables, fairy tales, stories of real animals. Edited by E. T. S",
+     "voci": [
+      "Seton, Ernest Thompson, 1860-1946."
+     ]
+    },
+    {
+     "titolo": "Famous animal stories :",
+     "voci": [
+      "Seton, Ernest Thompson, 1860-1946."
+     ]
+    },
+    {
+     "titolo": "Famous Animal Stories ... Edited by E. T. Seton.",
+     "voci": [
+      "Seton, Ernest Thompson, 1860-1946."
+     ]
+    },
+    {
+     "titolo": "Fauna of Manitoba",
+     "voci": [
+      "Seton, Ernest Thompson, 1860-1946,"
+     ]
+    },
+    {
+     "titolo": "Foam Razorback ... and other stories from “Wild Animal Ways,” etc.",
+     "voci": [
+      "Seton, Ernest Thompson, 1860-1946."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 25,
+   "qid": "Q893138",
+   "nome": "Booth Tarkington",
+   "nascita": "1869-07-29",
+   "morte": "1946-05-19",
+   "alias": [
+    "Tarkington",
+    "Newton Booth Tarkington",
+    "Van Loot, Cornelius Obenchain"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 133,
+    "dal_2000": 6,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Tarkington 1869-1946\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "Alice Adams.",
+     "voci": [
+      "Tarkington, Booth, 1869-1946."
+     ]
+    },
+    {
+     "titolo": "Alice Adams :",
+     "voci": [
+      "Tarkington, Booth, 1869-1946,"
+     ]
+    },
+    {
+     "titolo": "Alice Adams. With an afterword by Gerard Previn Meyer. (Second printing.).",
+     "voci": [
+      "Tarkington, Booth, 1869-1946.",
+      "Meyer, Gerard Previn."
+     ]
+    },
+    {
+     "titolo": "Antiquamania ... With ... illustrations ... by Booth Tarkington.",
+     "voci": [
+      "ROBERTS, Kenneth Lewis.",
+      "Tarkington, Booth, 1869-1946."
+     ]
+    },
+    {
+     "titolo": "Beasley's Christmas party /",
+     "voci": [
+      "Munger, C. W.",
+      "Tarkington, Booth, 1869-1946."
+     ]
+    },
+    {
+     "titolo": "Beasley's Christmas Party ... Illustrated by Ruth Sypherd Clements.",
+     "voci": [
+      "Tarkington, Booth, 1869-1946."
+     ]
+    },
+    {
+     "titolo": "The Beautiful Lady.",
+     "voci": [
+      "Tarkington, Booth, 1869-1946."
+     ]
+    },
+    {
+     "titolo": "The beautiful lady /",
+     "voci": [
+      "Tarkington, Booth, 1869-1946."
+     ]
+    },
+    {
+     "titolo": "Beauty and the Jacobin. An interlude of the French Revolution.",
+     "voci": [
+      "Tarkington, Booth, 1869-1946."
+     ]
+    },
+    {
+     "titolo": "A Bibliography of Booth Tarkington, 1869-1946. [With plates, including a portrait.]",
+     "voci": [
+      "RUSSO, Dorothy Ritter, and SULLIVAN (Thelma Lois)",
+      "Sullivan, Thelma Lois.",
+      "Tarkington, Booth, 1869-1946."
+     ]
+    },
+    {
+     "titolo": "Bimbo, the Pirate.",
+     "voci": [
+      "Tarkington, Booth, 1869-1946."
+     ]
+    },
+    {
+     "titolo": "Bimbo, the Pirate, etc.",
+     "voci": [
+      "Tarkington, Booth, 1869-1946."
+     ]
+    },
+    {
+     "titolo": "Booth Tarkington.",
+     "voci": [
+      "FENNIMORE, Keith John.",
+      "Tarkington, Booth, 1869-1946."
+     ]
+    },
+    {
+     "titolo": "Booth Tarkington. A bibliography. [With plates, including a portrait.]",
+     "voci": [
+      "CURRIE, Barton Wood.",
+      "Tarkington, Booth, 1869-1946."
+     ]
+    },
+    {
+     "titolo": "Booth Tarkington, gentleman from Indiana. [A biography. With plates, including portraits.]",
+     "voci": [
+      "Woodress, James Leslie.",
+      "Tarkington, Booth, 1869-1946."
+     ]
+    },
+    {
+     "titolo": "Booth Tarkington :",
+     "voci": [
+      "Tarkington, Booth, 1869-1946,",
+      "Mallon, Thomas, 1951-",
+      "Tarkington, Booth, 1869-1946.",
+      "Tarkington, Booth, 1869-1946.",
+      "Tarkington, Booth, 1869-1946."
+     ]
+    },
+    {
+     "titolo": "Booth Tarkington on Dogs.",
+     "voci": [
+      "Tarkington, Booth, 1869-1946."
+     ]
+    },
+    {
+     "titolo": "Booth Tarkington's Seventeen. A play ... in four acts. By H. S. Stange and S. Mears, in collaboratio",
+     "voci": [
+      "STANGE, Hugh Stanislaus, and MEARS (Stannard)",
+      "Mears, Stannard.",
+      "Tarkington, Booth, 1869-1946.",
+      "Walker, Stuart."
+     ]
+    },
+    {
+     "titolo": "Cherry. [A novel.] ... Illustrated.",
+     "voci": [
+      "Tarkington, Booth, 1869-1946."
+     ]
+    },
+    {
+     "titolo": "Cherry /",
+     "voci": [
+      "Tarkington, Booth, 1869-1946."
+     ]
+    },
+    {
+     "titolo": "Claire Ambler.",
+     "voci": [
+      "Tarkington, Booth, 1869-1946."
+     ]
+    },
+    {
+     "titolo": "[Claire Ambler.]",
+     "voci": [
+      "Tarkington, Booth, 1869-1946."
+     ]
+    },
+    {
+     "titolo": "Claire Ambler /",
+     "voci": [
+      "Tarkington, Booth, 1869-1946."
+     ]
+    },
+    {
+     "titolo": "Clarence. A comedy in four acts.",
+     "voci": [
+      "Tarkington, Booth, 1869-1946.",
+      "HYMER, John B."
+     ]
+    },
+    {
+     "titolo": "Clarence. A comedy in four acts.",
+     "voci": [
+      "Tarkington, Booth, 1869-1946."
+     ]
+    },
+    {
+     "titolo": "The conquest of Canaan :",
+     "voci": [
+      "Tarkington, Booth, 1869-1946.",
+      "Hitchcock, Lucius W."
+     ]
+    },
+    {
+     "titolo": "The Conquest of Canaan: a novel. Illustrations by L. W. Hitchcock.",
+     "voci": [
+      "Tarkington, Booth, 1869-1946."
+     ]
+    },
+    {
+     "titolo": "The Conquest of Canaan: a novel ... Illustrations by L. W. Hitchcock.",
+     "voci": [
+      "Tarkington, Booth, 1869-1946."
+     ]
+    },
+    {
+     "titolo": "The Conquest of Canaan, etc.",
+     "voci": [
+      "Tarkington, Booth, 1869-1946."
+     ]
+    },
+    {
+     "titolo": "The Country Cousin. A comedy in four acts.",
+     "voci": [
+      "Tarkington, Booth, 1869-1946.",
+      "STREET, Julian Leonard."
+     ]
+    },
+    {
+     "titolo": "The Country Cousin, etc.",
+     "voci": [
+      "Tarkington, Booth, 1869-1946.",
+      "STREET, Julian Leonard."
+     ]
+    },
+    {
+     "titolo": "Dr. Panofsky &amp; Mr. Tarkington :",
+     "voci": [
+      "Panofsky, Erwin, 1892-1968.",
+      "Tarkington, Booth, 1869-1946.",
+      "Ludwig, R. M."
+     ]
+    },
+    {
+     "titolo": "The Fascinating Stranger, and other stories.",
+     "voci": [
+      "Tarkington, Booth, 1869-1946."
+     ]
+    },
+    {
+     "titolo": "The Fighting Littles.",
+     "voci": [
+      "Tarkington, Booth, 1869-1946."
+     ]
+    },
+    {
+     "titolo": "The Fighting Littles. A play in three acts ... Adapted from the novel ... by Booth Tarkington.",
+     "voci": [
+      "Francke, Caroline.",
+      "Tarkington, Booth, 1869-1946."
+     ]
+    },
+    {
+     "titolo": "The Flirt ... Illustrations by Clarence F. Underwood.",
+     "voci": [
+      "Tarkington, Booth, 1869-1946."
+     ]
+    },
+    {
+     "titolo": "Gentle Julia.",
+     "voci": [
+      "Tarkington, Booth, 1869-1946."
+     ]
+    },
+    {
+     "titolo": "Gentle Julia.",
+     "voci": [
+      "Tarkington, Booth, 1869-1946."
+     ]
+    },
+    {
+     "titolo": "The Gentleman from Indiana.",
+     "voci": [
+      "Tarkington, Booth, 1869-1946."
+     ]
+    },
+    {
+     "titolo": "The Gentleman from Indiana.",
+     "voci": [
+      "Tarkington, Booth, 1869-1946."
+     ]
+    },
+    {
+     "titolo": "The Gentleman from Indiana.",
+     "voci": [
+      "Tarkington, Booth, 1869-1946."
+     ]
+    },
+    {
+     "titolo": "The Gentleman from Indiana. [A novel.]",
+     "voci": [
+      "Tarkington, Booth, 1869-1946."
+     ]
+    },
+    {
+     "titolo": "The gentleman from Indiana",
+     "voci": [
+      "Tarkington, Booth, 1869-1946."
+     ]
+    },
+    {
+     "titolo": "The Gentleman from Indiana /",
+     "voci": [
+      "Tarkington, Booth, 1869-1946."
+     ]
+    },
+    {
+     "titolo": "The gentleman from Indians /",
+     "voci": [
+      "Tarkington, Booth, 1869-1946."
+     ]
+    },
+    {
+     "titolo": "The ghost story :",
+     "voci": [
+      "Tarkington, Booth, 1869-1946."
+     ]
+    },
+    {
+     "titolo": "The Gibson Upright. [A play.]",
+     "voci": [
+      "Tarkington, Booth, 1869-1946.",
+      "Wilson, Harry Leon, 1867-1939."
+     ]
+    },
+    {
+     "titolo": "Growth.",
+     "voci": [
+      "Tarkington, Booth, 1869-1946."
+     ]
+    },
+    {
+     "titolo": "The Guest of Quesnay.",
+     "voci": [
+      "Tarkington, Booth, 1869-1946."
+     ]
+    },
+    {
+     "titolo": "The Guest of Quesnay.",
+     "voci": [
+      "Tarkington, Booth, 1869-1946."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 26,
+   "qid": "Q369608",
+   "nome": "Qi Baishi",
+   "nascita": "1864-01-01",
+   "morte": "1957-09-16",
+   "alias": [
+    "Qi Huang",
+    "Lanting",
+    "Mujushi",
+    "Huang Qi",
+    "Baishi",
+    "Ch'i Pai-shih",
+    "Bai Shi Qi",
+    "Baĭ-shi T︠S︡i",
+    "Baishi Qi",
+    "Baishi Shanweng",
+    "Baishi Shanweng hao Baishi Laoren",
+    "Baishilaoren",
+    "Baishishanren",
+    "Binsheng Qi",
+    "Boshi Qi",
+    "Čchi paj-š",
+    "Chʻun-chih Chʻi",
+    "Chi Pai Shih",
+    "Chunzhi Qi",
+    "Hakuseki Sai",
+    "Hakuseki Sei",
+    "Huang Chʻi",
+    "Jieshanyinguanzhuzhe",
+    "Jipinglaoren",
+    "Lanting Qi",
+    "Mu-chü-shih",
+    "Paek-sŏk Chae",
+    "Pai-schi Tschi",
+    "Pai-shih Chʻi",
+    "Pai-shih-lao-jen",
+    "Pai-shih-shan-jen",
+    "Paj-si Csi",
+    "Pin-sheng Chʻi",
+    "Po-shih Chʻi",
+    "Tsʻi-Pai-Shi",
+    "Wei-chʻing Chʻi",
+    "Weiqing Qi",
+    "zi Huang",
+    "Chi Po-shih",
+    "Tschi Pai-schi"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 2,
+    "dal_2000": 1,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Baishi 1864-1957\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "Chʿi Pai Shih /",
+     "voci": [
+      "Lai, T. C. (T'ien-ch'ang)",
+      "Qi, Baishi, 1864-1957."
+     ]
+    },
+    {
+     "titolo": "",
+     "voci": [
+      "Qi, Baishi, 1864-1957.",
+      "Ba, Dong.",
+      "Chen, Yongcheng.",
+      "Guo, Huimiao.",
+      "Ma, Baojie, 1965-",
+      "Guo li li shi bo wu guan (China). Bian ji wei yuan hui.",
+      "Guo li li shi bo wu guan (China)"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 27,
+   "qid": "Q19974953",
+   "nome": "Grace Purdie Moon",
+   "nascita": "1877-01-01",
+   "morte": "1947-09-06",
+   "alias": [
+    "Grace Purdie Moon"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 2,
+    "dal_2000": 0,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Moon 1877-1947\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "Indian legends in rhyme,",
+     "voci": [
+      "Moon, Grace, 1877-1947."
+     ]
+    },
+    {
+     "titolo": "Indian legends in rhyme /",
+     "voci": [
+      "Moon, Grace, 1877-1947,",
+      "Moon, Carl, 1878-1948,"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 28,
+   "qid": "Q123635",
+   "nome": "Charles-Ferdinand Ramuz",
+   "nascita": "1878-09-24",
+   "morte": "1947-05-23",
+   "alias": [
+    "C.F. Ramuz",
+    "Charles-Ferdinand Ramuz",
+    "Ramuz",
+    "Charles Ferdinand Ramuz",
+    "C. F. Ramuz",
+    "Sh Rami︠u︡z",
+    "Sharlʹ-Ferdinan Rami︠u︡",
+    "C.-F. Ramuz"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 23,
+    "dal_2000": 8,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Ramuz 1878-1947\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "Beauty on Earth. Translated, etc.",
+     "voci": [
+      "Ramuz, C. F. (Charles Ferdinand), 1878-1947."
+     ]
+    },
+    {
+     "titolo": "[Derborence.] When the Mountain fell. (English translation by Sarah Fisher Scott.).",
+     "voci": [
+      "Ramuz, C. F. (Charles Ferdinand), 1878-1947.",
+      "SCOTT, Sarah Fisher."
+     ]
+    },
+    {
+     "titolo": "Die Geschichte vom soldaten :",
+     "voci": [
+      "Merazzi-Jacobson, Karin,",
+      "Ramuz, C. F. (Charles Ferdinand), 1878-1947."
+     ]
+    },
+    {
+     "titolo": "Histoire du soldat : lue, jouée et dansée en deux parties =The soldier's tale : to be read, played",
+     "voci": [
+      "Stravinsky, Igor, 1882-1971,",
+      "Ramuz, C. F. (Charles Ferdinand), 1878-1947,"
+     ]
+    },
+    {
+     "titolo": "Jean-Luc persecuted /",
+     "voci": [
+      "Ramuz, C. F. (Charles Ferdinand), 1878-1947,",
+      "Baes, Olivia,"
+     ]
+    },
+    {
+     "titolo": "Journal, 1896-1942 /",
+     "voci": [
+      "Ramuz, C. F. (Charles Ferdinand), 1878-1947."
+     ]
+    },
+    {
+     "titolo": "The life of Samuel Belet.",
+     "voci": [
+      "Ramuz, C. F. (Charles Ferdinand), 1878-1947."
+     ]
+    },
+    {
+     "titolo": "The life of Samuel Belet /",
+     "voci": [
+      "Ramuz, C. F. (Charles Ferdinand), 1878-1947."
+     ]
+    },
+    {
+     "titolo": "Lost in fog /",
+     "voci": [
+      "Berthod, Matthieu.",
+      "Ramuz, C. F. (Charles Ferdinand), 1878-1947."
+     ]
+    },
+    {
+     "titolo": "Les noces = (Svadebka) /",
+     "voci": [
+      "Stravinsky, Igor, 1882-1971,",
+      "Ramuz, C. F. (Charles Ferdinand), 1878-1947,"
+     ]
+    },
+    {
+     "titolo": "Les noces =",
+     "voci": [
+      "Stravinsky, Igor, 1882-1971.",
+      "Jordan, Stephanie.",
+      "Mazo, Margarita.",
+      "Ramuz, C. F. (Charles Ferdinand), 1878-1947.",
+      "Sachania, Millan."
+     ]
+    },
+    {
+     "titolo": "Les noces =",
+     "voci": [
+      "Stravinsky, Igor, 1882-1971.",
+      "Mazo, Margarita.",
+      "Ramuz, C. F. (Charles Ferdinand), 1878-1947.",
+      "Sachania, Millan."
+     ]
+    },
+    {
+     "titolo": "[Presénce de la mort.] The Triumph of Death. (Rendered into English by Allan Ross Macdougall and Al",
+     "voci": [
+      "Ramuz, C. F. (Charles Ferdinand), 1878-1947.",
+      "Comfort, Alex, 1920-2000.",
+      "MACDOUGALL, Allan Ross."
+     ]
+    },
+    {
+     "titolo": "Renard : a burlesque for the stage to be sung and acted based on popular Russian folk-tales /",
+     "voci": [
+      "Stravinsky, Igor, 1882-1971,",
+      "Ramuz, C. F. (Charles Ferdinand), 1878-1947,",
+      "Myers, Rollo H.,"
+     ]
+    },
+    {
+     "titolo": "Renard :",
+     "voci": [
+      "Stravinsky, Igor, 1882-1971,",
+      "Stravinsky, Igor, 1882-1971.",
+      "Stravinsky, Igor, 1882-1971.",
+      "Ramuz, C. F. (Charles Ferdinand), 1878-1947,",
+      "Sachania, Millan,"
+     ]
+    },
+    {
+     "titolo": "The soldier's tale /",
+     "voci": [
+      "Stravinsky, Igor, 1882-1971.",
+      "Ramuz, C. F. (Charles Ferdinand), 1878-1947.",
+      "Pratt, Stephen, 1947-",
+      "Arts University College at Bournemouth.",
+      "Kokoro BSO New Music Ensemble.",
+      "Ocean Room Theatre (Bournemouth, England)"
+     ]
+    },
+    {
+     "titolo": "The Soldier's Tale ... English version by Michael Flanders and Kitty Black.",
+     "voci": [
+      "Ramuz, C. F. (Charles Ferdinand), 1878-1947.",
+      "Black, Kitty, 1914-2006.",
+      "Flanders, Michael."
+     ]
+    },
+    {
+     "titolo": "The Soldier's Tale ... English version by Rosa Newmarch.",
+     "voci": [
+      "Ramuz, C. F. (Charles Ferdinand), 1878-1947.",
+      "Newmarch, Rosa, 1857-1940."
+     ]
+    },
+    {
+     "titolo": "The soldier's tale : to be read, played, and danced : in two parts = Histoire du soldat : lue, joué",
+     "voci": [
+      "Stravinsky, Igor, 1882-1971,",
+      "Ramuz, C. F. (Charles Ferdinand), 1878-1947,"
+     ]
+    },
+    {
+     "titolo": "The soldier's tale :",
+     "voci": [
+      "Ramuz, C. F. (Charles Ferdinand), 1878-1947."
+     ]
+    },
+    {
+     "titolo": "La taille de l'homme : concert inachevé for soprano and 12 instruments /",
+     "voci": [
+      "Markevitch, Igor, 1912-1983.",
+      "Ramuz, C. F. (Charles Ferdinand), 1878-1947."
+     ]
+    },
+    {
+     "titolo": "La taille de l'homme :",
+     "voci": [
+      "Markevitch, Igor, 1912-1983.",
+      "Ramuz, C. F. (Charles Ferdinand), 1878-1947."
+     ]
+    },
+    {
+     "titolo": "[Vie de Samuel Belet.] The Life of Samuel Belet ... Translated ... by Mervyn Savill.",
+     "voci": [
+      "Ramuz, C. F. (Charles Ferdinand), 1878-1947.",
+      "Savill, Mervyn."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 29,
+   "qid": "Q596925",
+   "nome": "Edmund Clerihew Bentley",
+   "nascita": "1875-07-10",
+   "morte": "1956-03-30",
+   "alias": [
+    "Edmund Clerihew Bentley",
+    "E. C. Bentley",
+    "E. Clerihew Bentley",
+    "E.C. Bentley",
+    "E.(Edmund) Clerihew"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 85,
+    "dal_2000": 20,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Bentley 1875-1956\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "Baseless biography /",
+     "voci": [
+      "Bentley, E. C. (Edmund Clerihew), 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Baseless Biography. [Humorous verses.] Nicolas Bentley drew the pictures.",
+     "voci": [
+      "Bentley, E. C. (Edmund Clerihew), 1875-1956.",
+      "BENTLEY, Nicolas."
+     ]
+    },
+    {
+     "titolo": "Biography for beginners :",
+     "voci": [
+      "Bentley, E. C. (Edmund Clerihew), 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Biography for Beginners. Being a collection of miscellaneous examples for the use of upper forms ...",
+     "voci": [
+      "Bentley, E. C. (Edmund Clerihew), 1875-1956.",
+      "Chesterton, G. K. (Gilbert Keith), 1874-1936."
+     ]
+    },
+    {
+     "titolo": "[Biography for Beginners. Being a collection of miscellaneous examples for the use of upper forms ..",
+     "voci": [
+      "Bentley, E. C. (Edmund Clerihew), 1875-1956.",
+      "Chesterton, G. K. (Gilbert Keith), 1874-1936."
+     ]
+    },
+    {
+     "titolo": "[Biography for Beginners. Being a collection of miscellaneous examples for the use of upper forms ..",
+     "voci": [
+      "Bentley, E. C. (Edmund Clerihew), 1875-1956.",
+      "Chesterton, G. K. (Gilbert Keith), 1874-1936."
+     ]
+    },
+    {
+     "titolo": "Biography for beginners /",
+     "voci": [
+      "Bentley, E. C. (Edmund Clerihew), 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Biography for beginners /",
+     "voci": [
+      "Bentley, E. C. (Edmund Clerihew), 1875-1956,",
+      "Chesterton, G. K. (Gilbert Keith), 1874-1936,"
+     ]
+    },
+    {
+     "titolo": "Biography for Beginners ... With 40 diagrams by G. K. Chesterton. (Third edition.).",
+     "voci": [
+      "Bentley, E. C. (Edmund Clerihew), 1875-1956.",
+      "Chesterton, G. K. (Gilbert Keith), 1874-1936."
+     ]
+    },
+    {
+     "titolo": "[Biography for Beginners ... With 40 diagrams by G. K. Chesterton. (Third edition.)]",
+     "voci": [
+      "Bentley, E. C. (Edmund Clerihew), 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Clerihews. An unofficial supplement to “Biography for beginners” [by E. C. Bentley]. [The editor's n",
+     "voci": [
+      "Carter, John, 1905-1975.",
+      "Bentley, E. C. (Edmund Clerihew), 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Clerihews complete.",
+     "voci": [
+      "Bentley, E. C. (Edmund Clerihew), 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Clerihews Complete ... Illustrated by G. K. Chesterton, Victor Reinganum, Nicolas Bentley.",
+     "voci": [
+      "Bentley, E. C. (Edmund Clerihew), 1875-1956.",
+      "Chesterton, G. K. (Gilbert Keith), 1874-1936."
+     ]
+    },
+    {
+     "titolo": "Clerihews complete /",
+     "voci": [
+      "Bentley, E. C. (Edmund Clerihew), 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Clerihews complete /",
+     "voci": [
+      "Bentley, E. C. (Edmund Clerihew), 1875-1956."
+     ]
+    },
+    {
+     "titolo": "The complete clerihews of E. Clerihew Bentley /",
+     "voci": [
+      "Bentley, E. C. (Edmund Clerihew), 1875-1956.",
+      "Bentley, Nicolas, 1907-1978."
+     ]
+    },
+    {
+     "titolo": "The complete clerihews of E. Clerihew Bentley /",
+     "voci": [
+      "Bentley, E. C. (Edmund Clerihew), 1875-1956.",
+      "Bentley, Nicolas, 1907-1978."
+     ]
+    },
+    {
+     "titolo": "The complete Clerihews of E.Clerihews [i.e. Clerihew] Bentley /",
+     "voci": [
+      "Bentley, E. C. (Edmund Clerihew), 1875-1956.",
+      "Bentley, Nicolas, 1907-1978."
+     ]
+    },
+    {
+     "titolo": "Damon Runyon presents Furthermore ... E. C. Bentley selects and introduces the stories. Nicolas Bent",
+     "voci": [
+      "Runyon, Damon, 1880-1946.",
+      "Bentley, E. C. (Edmund Clerihew), 1875-1956.",
+      "BENTLEY, Nicolas."
+     ]
+    },
+    {
+     "titolo": "E.C. Bentley: Trent's Last Case.",
+     "voci": [
+      "Baker, I. L.",
+      "Bentley, E. C. (Edmund Clerihew), 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Elephant's Work. An enigma.",
+     "voci": [
+      "Bentley, E. C. (Edmund Clerihew), 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Elephant's work :",
+     "voci": [
+      "Bentley, E. C. (Edmund Clerihew), 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Elephant's work :",
+     "voci": [
+      "Bentley, E. C. (Edmund Clerihew), 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Far horizon :",
+     "voci": [
+      "Bentley, E. C. (Edmund Clerihew), 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Far horizon :",
+     "voci": [
+      "Bentley, E. C. (Edmund Clerihew), 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Far Horizon. A biography of Hester Dowden, medium and psychic investigator. [With a portrait.]",
+     "voci": [
+      "Bentley, E. C. (Edmund Clerihew), 1875-1956.",
+      "DOWDEN, Hester."
+     ]
+    },
+    {
+     "titolo": "The first clerihews /",
+     "voci": [
+      "Bentley, E. C. (Edmund Clerihew), 1875-1956.",
+      "Chesterton, G. K. (Gilbert Keith), 1874-1936."
+     ]
+    },
+    {
+     "titolo": "A Guide to E. C. Bentley's Trent's Last Case.",
+     "voci": [
+      "Menon, K. R.",
+      "Bentley, E. C. (Edmund Clerihew), 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Letters from mother :",
+     "voci": [
+      "McLean, Ethel Grace, -1956 (Spirit)",
+      "Bentley, E. C. (Edmund Clerihew), 1875-1956.",
+      "May, Lesley."
+     ]
+    },
+    {
+     "titolo": "Letters from Mother. A family biography in two worlds. Edited by Edmund Bentley. [Spirit messages fr",
+     "voci": [
+      "MACLEAN, Ethel Grace.",
+      "Bentley, E. C. (Edmund Clerihew), 1875-1956.",
+      "May, Lesley."
+     ]
+    },
+    {
+     "titolo": "Lord Peter: a collection of all the Lord Peter Wimsey stories ... Compiled and with an introduction ",
+     "voci": [
+      "Sayers, Dorothy L. (Dorothy Leigh), 1893-1957.",
+      "Bentley, E. C. (Edmund Clerihew), 1875-1956.",
+      "Heilbrun, Carolyn G., 1926-2003.",
+      "Sandoe, James."
+     ]
+    },
+    {
+     "titolo": "More Biography /",
+     "voci": [
+      "Bentley, E. C. (Edmund Clerihew), 1875-1956."
+     ]
+    },
+    {
+     "titolo": "More Biography ... With illustrations by G. K. Chesterton, Victor Reinganum, Nicolas Bentley and the",
+     "voci": [
+      "Bentley, E. C. (Edmund Clerihew), 1875-1956.",
+      "BENTLEY, Nicolas.",
+      "Chesterton, G. K. (Gilbert Keith), 1874-1936.",
+      "Reinganum, Victor."
+     ]
+    },
+    {
+     "titolo": "More than somewhat. E. C. Bentley selected these stories ... and wrote the introduction. Nicolas Ben",
+     "voci": [
+      "Runyon, Damon, 1880-1946.",
+      "Bentley, E. C. (Edmund Clerihew), 1875-1956.",
+      "BENTLEY, Nicolas."
+     ]
+    },
+    {
+     "titolo": "Parody Party /",
+     "voci": [
+      "Russell, Leonard.",
+      "Bentley, E. C. (Edmund Clerihew), 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Peace Year in the City, 1918-1919. An account of the outstanding events in the City of London, etc.",
+     "voci": [
+      "Bentley, E. C. (Edmund Clerihew), 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Peace year in the city, 1918-1919 ... /",
+     "voci": [
+      "Bentley, E. C. (Edmund Clerihew), 1875-1956."
+     ]
+    },
+    {
+     "titolo": "The Second Century of Detective Stories. Edited by E. C. Bentley.",
+     "voci": [
+      "Bentley, E. C. (Edmund Clerihew), 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Selected essays /",
+     "voci": [
+      "Chesterton, G. K. (Gilbert Keith), 1874-1936.",
+      "Collins, Dorothy.",
+      "Bentley, E. C. (Edmund Clerihew), 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Six Clerihew songs :",
+     "voci": [
+      "Harris, Paul, 1956-",
+      "Bentley, E. C. (Edmund Clerihew), 1875-1956."
+     ]
+    },
+    {
+     "titolo": "These Chariots of Fire. The autobiography of a seeker.",
+     "voci": [
+      "Bentley, E. C. (Edmund Clerihew), 1875-1956."
+     ]
+    },
+    {
+     "titolo": "These chariots of fire :",
+     "voci": [
+      "Bentley, E. C. (Edmund Clerihew), 1875-1956."
+     ]
+    },
+    {
+     "titolo": "These chariots of fire :",
+     "voci": [
+      "Bentley, E. C. (Edmund Clerihew), 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Those days /",
+     "voci": [
+      "Bentley, E. C. (Edmund Clerihew), 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Trent intervenes.",
+     "voci": [
+      "Bentley, E. C. (Edmund Clerihew), 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Trent intervenes.",
+     "voci": [
+      "Bentley, E. C. (Edmund Clerihew), 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Trent intervenes.",
+     "voci": [
+      "Bentley, E. C. (Edmund Clerihew), 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Trent intervenes /",
+     "voci": [
+      "Bentley, E. C. (Edmund Clerihew), 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Trent intervenes /",
+     "voci": [
+      "Bentley, E. C. (Edmund Clerihew), 1875-1956."
+     ]
+    },
+    {
+     "titolo": "Trent intervenes /",
+     "voci": [
+      "Bentley, E. C. (Edmund Clerihew), 1875-1956,"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 30,
+   "qid": "Q84676",
+   "nome": "Karl Hans Strobl",
+   "nascita": "1877-01-18",
+   "morte": "1946-03-10",
+   "alias": [
+    "K. H. Strobl"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 1,
+    "dal_2000": 0,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Strobl 1877-1946\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "The Shadow Husband ... Translated from the German.",
+     "voci": [
+      "Strobl, Karl Hans, 1877-1946."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 31,
+   "qid": "Q1700787",
+   "nome": "John Langalibalele Dube",
+   "nascita": "1871-02-22",
+   "morte": "1946-02-11",
+   "alias": [
+    "John Langalibalele Mafukuzela Dube",
+    "Doctor John Dube",
+    "Doctor John L. Dube",
+    "Dr. John Dube",
+    "Dr. John L. Dube",
+    "John L. Dube"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 6,
+    "dal_2000": 2,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Dube 1871-1946\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "Insila :",
+     "voci": [
+      "Dube, John Langalibalele, 1871-1946.",
+      "Nene, Thembani Ndiya,",
+      "Kavanagh, Robert,"
+     ]
+    },
+    {
+     "titolo": "Jeqe, the body-servant of King Shaka /",
+     "voci": [
+      "Dube, John Langalibalele, 1871-1946."
+     ]
+    },
+    {
+     "titolo": "Jeqe, the bodyservant of King Tshaka :",
+     "voci": [
+      "Dube, John Langalibalele, 1871-1946,",
+      "Boxwell, J. (John),",
+      "British Library,",
+      "AM (Publisher),"
+     ]
+    },
+    {
+     "titolo": "Jeqe the Bodyservant of King Tshaka ... Translated from the Zulu by ... J. Boxwell. [With plates.]",
+     "voci": [
+      "Dube, John Langalibalele, 1871-1946.",
+      "BOXWELL, J."
+     ]
+    },
+    {
+     "titolo": "The Zulu's Appeal for Light and England's Duty. [With illustrations, including a portrait.]",
+     "voci": [
+      "Dube, John Langalibalele, 1871-1946."
+     ]
+    },
+    {
+     "titolo": "A Zulu song book /",
+     "voci": [
+      "Dube, John Langalibalele, 1871-1946.",
+      "Dube, Nokutela.",
+      "Rycroft, D. K. (David K.)",
+      "Killie Campbell Africana Library."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 32,
+   "qid": "Q7653259",
+   "nome": "Swami Vipulananda",
+   "nascita": "1892-03-27",
+   "morte": "1947-07-19",
+   "alias": [
+    "Vipulānanta"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 1,
+    "dal_2000": 0,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Vipulananda 1892-1947\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "Cuvāmi Vipulānantariṉ ākkaṅkaḷ /",
+     "voci": [
+      "Vipulānanta, 1892-1947."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 33,
+   "qid": "Q77491",
+   "nome": "Hans Carossa",
+   "nascita": "1878-12-15",
+   "morte": "1956-09-12",
+   "alias": [
+    "Carossa"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 12,
+    "dal_2000": 0,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Carossa 1878-1956\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "A childhood /",
+     "voci": [
+      "Carossa, Hans, 1878-1956."
+     ]
+    },
+    {
+     "titolo": "A Childhood /",
+     "voci": [
+      "Carossa, Hans, 1878-1956."
+     ]
+    },
+    {
+     "titolo": "Eine kindheit /",
+     "voci": [
+      "Carossa, Hans, 1878-1956.",
+      "Bithell, Jethro, 1878-1962."
+     ]
+    },
+    {
+     "titolo": "Eine kindheit /",
+     "voci": [
+      "Carossa, Hans, 1878-1956.",
+      "Bithell, Jethro, 1878-1962."
+     ]
+    },
+    {
+     "titolo": "Eine Kindheit /",
+     "voci": [
+      "Carossa, Hans, 1878-1956.",
+      "Bithell, Jethro."
+     ]
+    },
+    {
+     "titolo": "A Roumanian diary.",
+     "voci": [
+      "Carossa, Hans, 1878-1956.",
+      "Scott, Agnes Neill."
+     ]
+    },
+    {
+     "titolo": "Rumanisches Tagebuch /",
+     "voci": [
+      "Carossa, Hans, 1878-1956."
+     ]
+    },
+    {
+     "titolo": "Selections /",
+     "voci": [
+      "Carossa, Hans, 1878-1956."
+     ]
+    },
+    {
+     "titolo": "Selections from Ungleiche Welten :",
+     "voci": [
+      "Carossa, Hans, 1878-1956.",
+      "Pollak, Hans Wolfgang."
+     ]
+    },
+    {
+     "titolo": "Ungleiche Welten!. Selections from Ungleiche Welten /",
+     "voci": [
+      "Carossa, Hans, 1878-1956."
+     ]
+    },
+    {
+     "titolo": "The year of sweet illusions /",
+     "voci": [
+      "Carossa, Hans, 1878-1956."
+     ]
+    },
+    {
+     "titolo": "The year of sweet illusions /",
+     "voci": [
+      "Carossa, Hans, 1878-1956."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 34,
+   "qid": "Q981086",
+   "nome": "Walter de la Mare",
+   "nascita": "1873-04-25",
+   "morte": "1956-06-22",
+   "alias": [
+    "Walter Ramal",
+    "Walter John de la Mare",
+    "Walter John De la Mare"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 495,
+    "dal_2000": 72,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Mare 1873-1956\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "A-apple pie :",
+     "voci": [
+      "Gibbs, C. Armstrong.",
+      "De la Mare, Walter, 1873-1956"
+     ]
+    },
+    {
+     "titolo": "All that's past :",
+     "voci": [
+      "Elwyn-Edwards, Dilys, 1918-2012.",
+      "De la Mare, Walter, 1873-1956.",
+      "Wil Ifan, 1882-1968."
+     ]
+    },
+    {
+     "titolo": "The Almond Tree.",
+     "voci": [
+      "De la Mare, Walter, 1873-1956."
+     ]
+    },
+    {
+     "titolo": "Alone.",
+     "voci": [
+      "De la Mare, Walter, 1873-1956."
+     ]
+    },
+    {
+     "titolo": "Alone ... Wood engravings by Blair Hughes-Stanton.",
+     "voci": [
+      "De la Mare, Walter, 1873-1956.",
+      "Hughes-Stanton, Blair."
+     ]
+    },
+    {
+     "titolo": "Animal Stories. Chosen, arranged, and in some part rewritten by W. de la Mare.",
+     "voci": [
+      "De la Mare, Walter, 1873-1956."
+     ]
+    },
+    {
+     "titolo": "Animal Stories chosen, arranged and in some part rewritten /",
+     "voci": [
+      "De la Mare, Walter, 1873-1956."
+     ]
+    },
+    {
+     "titolo": "Ann's cradle song : Sallie's song from the play Crossings /",
+     "voci": [
+      "Gibbs, C. Armstrong.",
+      "De la Mare, Walter, 1873-1956."
+     ]
+    },
+    {
+     "titolo": "Another spring : Op. 93 : three songs to poems by Walter de la Mare /",
+     "voci": [
+      "Berkeley, Lennox, 1903-1989.",
+      "De la Mare, Walter, 1873-1956."
+     ]
+    },
+    {
+     "titolo": "Arabia /",
+     "voci": [
+      "De la Mare, Walter, 1873-1956."
+     ]
+    },
+    {
+     "titolo": "As Lucy went a-walking : for two-part chorus of equal voices /",
+     "voci": [
+      "Gibbs, C. Armstrong.",
+      "De la Mare, Walter, 1873-1956."
+     ]
+    },
+    {
+     "titolo": "At First Sight. A novel.",
+     "voci": [
+      "De la Mare, Walter, 1873-1956."
+     ]
+    },
+    {
+     "titolo": "Atishoo : two-part song for S.C. with pianoforte accompaniment /",
+     "voci": [
+      "Gibbs, C. Armstrong.",
+      "De la Mare, Walter, 1873-1956."
+     ]
+    },
+    {
+     "titolo": "Autumn /",
+     "voci": [
+      "Herbert, Muriel, 1897-1984,",
+      "De la Mare, Walter, 1873-1956."
+     ]
+    },
+    {
+     "titolo": "Autumn :",
+     "voci": [
+      "Chydenius, Jussi.",
+      "De la Mare, Walter, 1873-1956."
+     ]
+    },
+    {
+     "titolo": "A Ballad of Christmas ... Decorated by Alec Buckels. F.P.",
+     "voci": [
+      "De la Mare, Walter, 1873-1956."
+     ]
+    },
+    {
+     "titolo": "The bees' song : three-part chorus for female voices (S.S.C.) with pianoforte accompaniment /",
+     "voci": [
+      "Gibbs, C. Armstrong.",
+      "De la Mare, Walter, 1873-1956."
+     ]
+    },
+    {
+     "titolo": "BEESON, J.: Songs (Brown)",
+     "voci": [
+      "Harnick, Sheldon,",
+      "Beeson, Jack",
+      "Millay, Edna St. Vincent, 1892-1950,",
+      "Beddoes, Thomas Lovell, 1803-1849,",
+      "Melville, Herman, 1819-1891,",
+      "Raleigh, Walter,",
+      "Shelley, Percy Bysshe, 1792-1822,",
+      "Mayne, Jasper",
+      "Peele, George",
+      "Keats, John",
+      "Hughes, Richard,",
+      "Viereck, Peter",
+      "Poe, Edgar Allan, 1809-1849,",
+      "De la Mare, Walter, 1873-1956,",
+      "Auden, W. H. (Wystan Hugh), 1907-1973,",
+      "Wordsworth, William, 1770-1850,",
+      "Hopkins, Gerard Manley, 1844-1889,",
+      "Blake, William, 1757-1827,",
+      "Quarles, Francis, 1592-1644,",
+      "Naxos Digital Services US"
+     ]
+    },
+    {
+     "titolo": "Before Dawn ... Decorated by Alec Buckels. F.P.",
+     "voci": [
+      "De la Mare, Walter, 1873-1956."
+     ]
+    },
+    {
+     "titolo": "A Beginning, and other stories.",
+     "voci": [
+      "De la Mare, Walter, 1873-1956."
+     ]
+    },
+    {
+     "titolo": "Behold this dreamer /",
+     "voci": [
+      "De la Mare, Walter, 1873-1956."
+     ]
+    },
+    {
+     "titolo": "Behold, this dreamer :",
+     "voci": [
+      "De la Mare, Walter, 1873-1956."
+     ]
+    },
+    {
+     "titolo": "Behold, this dreamer :",
+     "voci": [
+      "De la Mare, Walter, 1873-1956."
+     ]
+    },
+    {
+     "titolo": "Behold, this Dreamer! Of reverie, night, sleep, dream, love-dreams, nightmare, death, the unconsciou",
+     "voci": [
+      "De la Mare, Walter, 1873-1956."
+     ]
+    },
+    {
+     "titolo": "Behold, this dreamer! :",
+     "voci": [
+      "De la Mare, Walter, 1873-1956."
+     ]
+    },
+    {
+     "titolo": "Behold, this dreamer :",
+     "voci": [
+      "De la Mare, Walter, 1873-1956."
+     ]
+    },
+    {
+     "titolo": "Behold, this dreamer /",
+     "voci": [
+      "De la Mare, Walter, 1873-1956."
+     ]
+    },
+    {
+     "titolo": "Behold, this dreamer /",
+     "voci": [
+      "De la Mare, Walter, 1873-1956."
+     ]
+    },
+    {
+     "titolo": "Bells and grass :",
+     "voci": [
+      "Hall, Juliana, 1958-",
+      "De la Mare, Walter, 1873-1956,"
+     ]
+    },
+    {
+     "titolo": "Bells and grass :",
+     "voci": [
+      "De la Mare, Walter, 1873-1956."
+     ]
+    },
+    {
+     "titolo": "Bells and Grass. A book of rhymes ... With illustrations by F. Rowland Emett.",
+     "voci": [
+      "De la Mare, Walter, 1873-1956."
+     ]
+    },
+    {
+     "titolo": "Best Stories of Walter de la Mare.",
+     "voci": [
+      "De la Mare, Walter, 1873-1956."
+     ]
+    },
+    {
+     "titolo": "Best stories of Walter de la Mare.",
+     "voci": [
+      "De la Mare, Walter, 1873-1956."
+     ]
+    },
+    {
+     "titolo": "Blackbirds : SSA accompanied /",
+     "voci": [
+      "Bruce, M. Campbell,",
+      "De la Mare, Walter, 1873-1956."
+     ]
+    },
+    {
+     "titolo": "Broomsticks and other tales ... /",
+     "voci": [
+      "De la Mare, Walter, 1873-1956."
+     ]
+    },
+    {
+     "titolo": "Broomsticks and other Tales ... With designs by Bold.",
+     "voci": [
+      "De la Mare, Walter, 1873-1956."
+     ]
+    },
+    {
+     "titolo": "Broomsticks &amp; other tales ... With designs by Bold. F.P.",
+     "voci": [
+      "De la Mare, Walter, 1873-1956."
+     ]
+    },
+    {
+     "titolo": "Bunches of grapes : unison song /",
+     "voci": [
+      "Howells, Herbert, 1892-1983,",
+      "De la Mare, Walter, 1873-1956,"
+     ]
+    },
+    {
+     "titolo": "The Burning-Glass, and other poems.",
+     "voci": [
+      "De la Mare, Walter, 1873-1956."
+     ]
+    },
+    {
+     "titolo": "The burning glass and other poems.",
+     "voci": [
+      "De la Mare, Walter, 1873-1956."
+     ]
+    },
+    {
+     "titolo": "The Burning-Glass and other poems, including the Traveller.",
+     "voci": [
+      "De la Mare, Walter, 1873-1956."
+     ]
+    },
+    {
+     "titolo": "The burning-glass and other poems /",
+     "voci": [
+      "De la Mare, Walter, 1873-1956."
+     ]
+    },
+    {
+     "titolo": "The burning glass, and other poems ... /",
+     "voci": [
+      "De la Mare, Walter, 1873-1956."
+     ]
+    },
+    {
+     "titolo": "The Captive and other Poems.",
+     "voci": [
+      "De la Mare, Walter, 1873-1956."
+     ]
+    },
+    {
+     "titolo": "A century of English song :",
+     "voci": [
+      "German, Edward, 1862-1936.",
+      "Kipling, Rudyard, 1865-1936.",
+      "Shaw, Martin, 1875-1958.",
+      "Masefield, John, 1878-1967.",
+      "Scott, Francis George.",
+      "Luther, Martin, 1483-1546.",
+      "Wedderburn, James, approximately 1495-1553,",
+      "Wedderburn, John, approximately 1500-1556,",
+      "Wedderburn, Robert, approximately 1510-approximately 1557,",
+      "Head, Michael, 1900-1976.",
+      "D'Avenant, William, 1606-1668.",
+      "Rubbra, Edmund, 1901-1986.",
+      "De la Mare, Walter, 1873-1956.",
+      "Lambert, Constant, 1905-1951.",
+      "Li, Bai, 701-762.",
+      "Obata, Shigeyoshi,",
+      "Sykes, John, 1909-1962.",
+      "Blake, William, 1757-1827.",
+      "Cooke, Deryck",
+      "Joyce, James, 1882-1941.",
+      "Roe, Betty.",
+      "Lines, Marian, 1933-",
+      "Williams, Patricia, 1950-",
+      "Daniel, Samuel, 1562-1619.",
+      "Muldowney, Dominic.",
+      "Brecht, Bertolt, 1898-1956.",
+      "Hofmann, Michael, 1957 August 25-",
+      "Pollard, Clive",
+      "Davies, W. H. (William Henry), 1871-1940.",
+      "Williams, Roderick.",
+      "Sherrin, Ned.",
+      "Hall, Rose Miranda, 1991-",
+      "Humphreys, Garry,",
+      "Association of English Singers and Speakers."
+     ]
+    },
+    {
+     "titolo": "A century of English song :",
+     "voci": [
+      "Somervell, Arthur, 1863-1937.",
+      "Arnold, Matthew, 1822-1888.",
+      "Bantock, Granville, Sir, 1868-1946.",
+      "Bantock, Helen F. (Helen Francesca), 1868-1961.",
+      "Coleridge-Taylor, Samuel, 1875-1912.",
+      "Shakespeare, William, 1564-1616.",
+      "Shaw, Martin, 1875-1958.",
+      "Kipling, Rudyard, 1865-1936.",
+      "Peel, Graham, 1878-1937.",
+      "Belloc, Hilaire, 1870-1953.",
+      "Quilter, Roger, 1877-1953.",
+      "Irvine, John, 1903-1964.",
+      "Scott, Cyril, 1879-1970.",
+      "Rossetti, Christina Georgina, 1830-1894.",
+      "Gibbs, C. Armstrong.",
+      "Ephelia, active 1679.",
+      "Gurney, Ivor, 1890-1937.",
+      "Blunden, Edmund, 1896-1974.",
+      "Milford, Robin, 1903-1959.",
+      "Bridges, Robert, 1844-1930.",
+      "Cooke, Deryck",
+      "Prokosch, Frederic, 1908-1989.",
+      "Hugh-Jones, Elaine, 1927-",
+      "De la Mare, Walter, 1873-1956.",
+      "Corp, Ronald",
+      "Blake, William, 1757-1827.",
+      "Humphreys, Garry,",
+      "Association of English Singers and Speakers."
+     ]
+    },
+    {
+     "titolo": "Chardin (1699-1779) /",
+     "voci": [
+      "Chardin, Jean Baptiste Siméon, 1699-1779.",
+      "De la Mare, Walter, 1873-1956."
+     ]
+    },
+    {
+     "titolo": "Chardin (1699-1779) /",
+     "voci": [
+      "Chardin, Jean Baptiste Siméon, 1699-1779.",
+      "De la Mare, Walter, 1873-1956."
+     ]
+    },
+    {
+     "titolo": "Chardin, 1699-1779. With an introduction and notes by Walter de la Mare. [With reproductions.]",
+     "voci": [
+      "Chardin, Jean Baptiste Siméon, 1699-1779.",
+      "De la Mare, Walter, 1873-1956."
+     ]
+    },
+    {
+     "titolo": "A Child's Day. A book of rhymes by Walter de la Mare to pictures by Carine and Will Cadby.",
+     "voci": [
+      "De la Mare, Walter, 1873-1956."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 35,
+   "qid": "Q3115772",
+   "nome": "Manik Bandyopadhyay",
+   "nascita": "1908-05-19",
+   "morte": "1956-12-03",
+   "alias": [
+    "মানিক বন্দ্যোপাধ্যায়",
+    "Manik Bandyopadhyay"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 6,
+    "dal_2000": 0,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Bandyopadhyay 1908-1956\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "Boatman of the Padma /",
+     "voci": [
+      "Bandyopadhyay, Manik, 1908-1956.",
+      "Mukerjee, Hiren, 1907-"
+     ]
+    },
+    {
+     "titolo": "Padma river boatman.",
+     "voci": [
+      "Bandyopadhyay, Manik, 1908-1956."
+     ]
+    },
+    {
+     "titolo": "The puppets' tale :",
+     "voci": [
+      "Bandyopadhyay, Manik, 1908-1956.",
+      "Ghosh, Sachindralal,",
+      "Isenberg, Artur,"
+     ]
+    },
+    {
+     "titolo": "The puppets' tale. A novel ... Translated from the Bengali by Sachindralal Ghosh. Edited by Artur Is",
+     "voci": [
+      "Bandyopadhyay, Manik, 1908-1956.",
+      "Ghosh, Sachindralal.",
+      "Isenberg, Artur."
+     ]
+    },
+    {
+     "titolo": "The puppets tale /",
+     "voci": [
+      "Bandyopadhyay, Manik, 1908-1956.",
+      "Ghosh, Sachindralal.",
+      "Isenberg, Arthur."
+     ]
+    },
+    {
+     "titolo": "Reptile ways ... Translated by Jugantar Chakravarty.",
+     "voci": [
+      "Bandyopadhyay, Manik, 1908-1956.",
+      "CHAKRAVARTY, Jugantar."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 36,
+   "qid": "Q4170627",
+   "nome": "Godabarish Mishra",
+   "nascita": "1886-10-26",
+   "morte": "1956-07-26",
+   "alias": [
+    "Godavaris Mishra"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 1,
+    "dal_2000": 1,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Mishra 1886-1956\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "Half a century of Odisha and my place there /",
+     "voci": [
+      "Miśra, Godābarīśa, 1886-1956,",
+      "Nayak, Lipipuspa,"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 37,
+   "qid": "Q542835",
+   "nome": "Flora Thompson",
+   "nascita": "1876-12-05",
+   "morte": "1947-05-21",
+   "alias": [
+    "Flora Jane Thompson",
+    "Flora (June) Thompson",
+    "Flora Jane Timms"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 2,
+    "dal_2000": 2,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Thompson 1876-1947\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "Carols for choirs 6 :",
+     "voci": [
+      "Moore, Philip, 1943-",
+      "McGlade, Becky, 1974-",
+      "Burk, Margaret, 1990-",
+      "Taberner, Fernando, 1966-",
+      "Kilmer, Joyce, 1886-1918.",
+      "Wright, Reginal,",
+      "Walker, Lucy, 1998-",
+      "Howell, Rebecca Gayle,",
+      "Esmail, Reena, 1983-",
+      "Garrett, Marques L. A., 1984-",
+      "Thompson, Joel, 1988-",
+      "Hardy, Thomas, 1840-1928.",
+      "French, Jessica, 1984-",
+      "Thorp, Jennifer, 1988-",
+      "Hawley, Laura, 1982-",
+      "Shaw, Caroline (Caroline Adelaide),",
+      "Stevenson, Robert Louis, 1850-1894.",
+      "Wallen, Errollyn,",
+      "Dunbar, Paul Laurence, 1872-1906.",
+      "Allan, Kathleen, 1989-",
+      "Beaumont, Joseph, 1616-1699.",
+      "Whitbourn, James,",
+      "Young, Toby, 1990-",
+      "Robles, Zanaida,",
+      "Morris, William, 1834-1896.",
+      "Marais, Marin, 1656-1728,",
+      "Cavagnaro, Jerrick,",
+      "Ballet, William.",
+      "Allain, Richard,",
+      "Morris, R. O. (Reginald Owen), 1886-1948,",
+      "Jackson, Stephen (Conductor)",
+      "Capers, Valerie,",
+      "Pearsall, R. L. (Robert Lucas), 1795-1856.",
+      "McDowall, Cecilia,",
+      "Parry, Ben,",
+      "Hess, Nigel,",
+      "Roberts, Elizabeth Madox, 1881-1941.",
+      "Nicholson, Stuart,",
+      "Olson, Tawnie,",
+      "Coleridge, Mary E. (Mary Elizabeth), 1861-1907.",
+      "Watts, Isaac, 1674-1748.",
+      "Hailstork, Adolphus C.,",
+      "Chavarria, Vicente, 1988-",
+      "Vango, Suzzie, 1982-",
+      "Reece-Trapp, Ghislaine, 1992-",
+      "Boykin, B. E., 1989-",
+      "Rossetti, Christina Georgina, 1830-1894.",
+      "Porter, Kim (Singer)",
+      "Bullard, Alan, 1947-",
+      "Tennyson, Alfred Tennyson, Baron, 1809-1892.",
+      "Barnett, Carol, 1949-",
+      "Teasdale, Sara, 1884-1933.",
+      "Quartel, Sarah,",
+      "Arakelyan, Kristina, 1994-",
+      "Muhly, Nico,",
+      "Chesterton, G. K. (Gilbert Keith), 1874-1936.",
+      "Dix, W. Chatterton (William Chatterton), 1837-1898.",
+      "Sears, Edmund H. (Edmund Hamilton), 1810-1876.",
+      "Morrison, John, 1750-1798.",
+      "Chilcott, Bob,",
+      "Hill, David, 1957-",
+      "Park, Owain, 1993-",
+      "Murphy, Ryan (Ryan T.),",
+      "Assersohn, Ian, 1958-",
+      "Forbes L'Estrange, Joanna,",
+      "Leontovych, M. (Mykola), 1877-1921,",
+      "Rutter, John, 1945-"
+     ]
+    },
+    {
+     "titolo": "An English translation of Léon-Paul Fargue's Poëmes /",
+     "voci": [
+      "Fargue, Léon-Paul, 1876-1947.",
+      "Thompson, Peter (Peter Simis), 1948-"
+     ]
+    }
+   ]
+  },
+  {
+   "n": 38,
+   "qid": "Q231690",
+   "nome": "B. R. Ambedkar",
+   "nascita": "1891-04-14",
+   "morte": "1956-12-06",
+   "alias": [],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 83,
+    "dal_2000": 24,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Ambedkar 1891-1956\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "Against the madness of Manu :",
+     "voci": [
+      "Ambedkar, B. R. (Bhimrao Ramji), 1891-1956.",
+      "Rege, Sharmila."
+     ]
+    },
+    {
+     "titolo": "Agricultural cooperative banks and farmers of SC, ST, and other castes /",
+     "voci": [
+      "Ambewadikar, R. M., 1939-",
+      "Ambedkar, B. R. (Bhimrao Ramji), 1891-1956."
+     ]
+    },
+    {
+     "titolo": "Ambedkar :",
+     "voci": [
+      "Ambedkar, B. R. (Bhimrao Ramji), 1891-1956,"
+     ]
+    },
+    {
+     "titolo": "Ambedkar, dalits, and Buddhism :",
+     "voci": [
+      "Ram, Nandu, 1946-",
+      "Ambedkar, B. R. (Bhimrao Ramji), 1891-1956."
+     ]
+    },
+    {
+     "titolo": "Ambedkar :",
+     "voci": [
+      "Ambedkar, B. R. (Bhimrao Ramji), 1891-1956.",
+      "Jadhav, Narendra, 1953-"
+     ]
+    },
+    {
+     "titolo": "Annihilation of caste /",
+     "voci": [
+      "Ambedkar, B. R. (Bhimrao Ramji), 1891-1956,"
+     ]
+    },
+    {
+     "titolo": "Annihilation of caste /",
+     "voci": [
+      "Ambedkar, B. R. (Bhimrao Ramji), 1891-1956."
+     ]
+    },
+    {
+     "titolo": "Annihilation of caste /",
+     "voci": [
+      "Ambedkar, B. R. (Bhimrao Ramji), 1891-1956,",
+      "Anand, S. (Journalist)",
+      "Roy, Arundhati, 1946-"
+     ]
+    },
+    {
+     "titolo": "Annihilation of caste /",
+     "voci": [
+      "Ambedkar, B. R. (Bhimrao Ramji), 1891-1956,",
+      "Anand, S. (Journalist)",
+      "Roy, Arundhati, 1946-"
+     ]
+    },
+    {
+     "titolo": "Annihilation of caste :",
+     "voci": [
+      "Ambedkar, B. R. (Bhimrao Ramji), 1891-1956."
+     ]
+    },
+    {
+     "titolo": "Annihilation of caste :",
+     "voci": [
+      "Ambedkar, B. R. (Bhimrao Ramji), 1891-1956.",
+      "Anand, S. (Graphic novelist)",
+      "Roy, Arundhati."
+     ]
+    },
+    {
+     "titolo": "Annihilation of caste with a reply to Mahatma Gandhi :",
+     "voci": [
+      "Ambedkar, B. R. (Bhimrao Ramji), 1891-1956."
+     ]
+    },
+    {
+     "titolo": "Annihilation of Caste with a reply to Mahatma Gandhi /",
+     "voci": [
+      "Ambedkar, B. R. (Bhimrao Ramji), 1891-1956."
+     ]
+    },
+    {
+     "titolo": "Annihilation of caste with a reply to Mahatma Gandhi /",
+     "voci": [
+      "Ambedkar, B. R. (Bhimrao Ramji), 1891-1956."
+     ]
+    },
+    {
+     "titolo": "B.R. Ambedkar /",
+     "voci": [
+      "Ambedkar, B. R. (Bhimrao Ramji), 1891-1956.",
+      "Bakshi, S. R. (Shiri Ram), 1935-"
+     ]
+    },
+    {
+     "titolo": "Beef, Brahmins, and broken men :",
+     "voci": [
+      "Ambedkar, B. R. (Bhimrao Ramji), 1891-1956,",
+      "George, Alex,",
+      "Anand, S. (Journalist)",
+      "Ilaiah, K. (Kancha), 1952-"
+     ]
+    },
+    {
+     "titolo": "The Buddha and his dhamma.",
+     "voci": [
+      "Ambedkar, B. R. (Bhimrao Ramji), 1891-1956."
+     ]
+    },
+    {
+     "titolo": "The Buddha and his dhamma.",
+     "voci": [
+      "Ambedkar, B. R. (Bhimrao Ramji), 1891-1956."
+     ]
+    },
+    {
+     "titolo": "The Buddha and his dhamma :",
+     "voci": [
+      "Ambedkar, B. R. (Bhimrao Ramji), 1891-1956.",
+      "Rathore, Aakash Singh.",
+      "Verma, Ajay."
+     ]
+    },
+    {
+     "titolo": "The Buddha and his dhamma /",
+     "voci": [
+      "Ambedkar, B. R. (Bhimrao Ramji), 1891-1956."
+     ]
+    },
+    {
+     "titolo": "Castes in India ... Reprinted from the “Indian Antiquary,” etc.",
+     "voci": [
+      "Ambedkar, B. R. (Bhimrao Ramji), 1891-1956."
+     ]
+    },
+    {
+     "titolo": "Communal deadlock &amp; a way to solve it :",
+     "voci": [
+      "Ambedkar, B. R. (Bhimrao Ramji), 1891-1956."
+     ]
+    },
+    {
+     "titolo": "Communal deadlock &amp; a way to solve it /",
+     "voci": [
+      "Ambedkar, B. R. (Bhimrao Ramji), 1891-1956,",
+      "All India Scheduled Castes Federation."
+     ]
+    },
+    {
+     "titolo": "Conversion as emancipation /",
+     "voci": [
+      "Ambedkar, B. R. (Bhimrao Ramji), 1891-1956."
+     ]
+    },
+    {
+     "titolo": "Dalit literature :",
+     "voci": [
+      "Dewanji, Malay.",
+      "Ambedkar, B. R. (Bhimrao Ramji), 1891-1956.",
+      "Uiliyāma Kerī Sṭāḍi eyāṇḍa Risārca Seṇṭāra.",
+      "Bharatiya Dalit Sahitya Academy."
+     ]
+    },
+    {
+     "titolo": "Ḍô. Bābāsāheba Āmbeḍakarāñce Bahishkr̥ta Bhārata, 1927-1929, āṇi Mūkanāyaka, 1920 /",
+     "voci": [
+      "Ambedkar, B. R. (Bhimrao Ramji), 1891-1956.",
+      "Mūn, Vasant.",
+      "Maharashtra (India). Department of Education."
+     ]
+    },
+    {
+     "titolo": "The downtrodden and we :",
+     "voci": [
+      "Ambedkar, B. R. (Bhimrao Ramji), 1891-1956.",
+      "Lalit Kala Akademi."
+     ]
+    },
+    {
+     "titolo": "Dr Ambedkar and democracy :",
+     "voci": [
+      "Ambedkar, B. R. (Bhimrao Ramji), 1891-1956,",
+      "Jaffrelot, Christophe,",
+      "Kumar, Narender,",
+      "Indian Institute of Dalit Studies."
+     ]
+    },
+    {
+     "titolo": "Dr Ambedkar birth centenary souvenir.",
+     "voci": [
+      "Gautam, C.",
+      "Ambedkar, B. R. (Bhimrao Ramji), 1891-1956.",
+      "Ambedkar Centenary Committee."
+     ]
+    },
+    {
+     "titolo": "Dr. Ambedkar :",
+     "voci": [
+      "Ambedkar, B. R. (Bhimrao Ramji), 1891-1956.",
+      "Rattu, Nanak Chand, 1922-"
+     ]
+    },
+    {
+     "titolo": "Dr. Ambedkar on minorities /",
+     "voci": [
+      "Singh, Shriprakash.",
+      "Ambedkar, B. R. (Bhimrao Ramji), 1891-1956."
+     ]
+    },
+    {
+     "titolo": "Dr. Ambedkar on the British Raj",
+     "voci": [
+      "Ambedkar, B. R. (Bhimrao Ramji), 1891-1956."
+     ]
+    },
+    {
+     "titolo": "Dr. Ambedkar on the British raj /",
+     "voci": [
+      "Ambedkar, B. R. (Bhimrao Ramji), 1891-1956.",
+      "Ahir, D. C. (Diwan Chand), 1928-"
+     ]
+    },
+    {
+     "titolo": "Dr. Ambedkar's thought /",
+     "voci": [
+      "Ambedkar, B. R. (Bhimrao Ramji), 1891-1956.",
+      "Ghatak, B. K. (Biplop Kumar), 1958-"
+     ]
+    },
+    {
+     "titolo": "Dr B.R. Ambedkar, 1891-1991 :",
+     "voci": [
+      "Ambedkar, B. R. (Bhimrao Ramji), 1891-1956.",
+      "Chanchreek, K. L. (Kanhaiyalal), 1933-",
+      "Kumar, Rakesh, 1960-",
+      "Prasad, Saroj."
+     ]
+    },
+    {
+     "titolo": "Dr. B.R. Ambedkar, a centenary tribute :",
+     "voci": [
+      "Ambedkar, B. R. (Bhimrao Ramji), 1891-1956.",
+      "West Bengal (India). Department of Information and Cultural Affairs."
+     ]
+    },
+    {
+     "titolo": "Dr. B.R. Ambedkar, the man and his message :",
+     "voci": [
+      "Ambedkar, B. R. (Bhimrao Ramji), 1891-1956.",
+      "Agarwal, Sudarshan, 1931-"
+     ]
+    },
+    {
+     "titolo": "Dr. Babasaheb Ambedkar, writings and speeches /",
+     "voci": [
+      "Ambedkar, B. R. (Bhimrao Ramji), 1891-1956.",
+      "Moon, Vasant.",
+      "Maharashtra (India). Department of Education."
+     ]
+    },
+    {
+     "titolo": "Economic thought and policy of Dr. Ambedkar /",
+     "voci": [
+      "Nagar, V. D. (Visnu Datta), 1929-",
+      "Nagar, K. P.",
+      "Ambedkar, B. R. (Bhimrao Ramji), 1891-1956."
+     ]
+    },
+    {
+     "titolo": "Economic thoughts of Dr. B.R. Ambedkar /",
+     "voci": [
+      "Ambedkar, B. R. (Bhimrao Ramji), 1891-1956,",
+      "Chanchreek, K. L.,",
+      "Sarojaprasāda,",
+      "Aśoka, Devīsiṃha, 1946-"
+     ]
+    },
+    {
+     "titolo": "Emancipation of the untouchables /",
+     "voci": [
+      "Ambedkar, B. R. (Bhimrao Ramji), 1891-1956."
+     ]
+    },
+    {
+     "titolo": "Encyclopaedia on Ambedkar /",
+     "voci": [
+      "Tripāṭhī, Śrīdhara.",
+      "Ambedkar, B. R. (Bhimrao Ramji), 1891-1956."
+     ]
+    },
+    {
+     "titolo": "The essential Ambedkar /",
+     "voci": [
+      "Ambedkar, B. R. (Bhimrao Ramji), 1891-1956,",
+      "Mungekar, Bhalchandra,"
+     ]
+    },
+    {
+     "titolo": "The essential writings of B.R. Ambedkar /",
+     "voci": [
+      "Ambedkar, B. R. (Bhimrao Ramji), 1891-1956.",
+      "Rodrigues, Valerian."
+     ]
+    },
+    {
+     "titolo": "The essential writings of B.R. Ambedkar /",
+     "voci": [
+      "Ambedkar, B. R. (Bhimrao Ramji), 1891-1956.",
+      "Rodrigues, Valerian."
+     ]
+    },
+    {
+     "titolo": "Federation versus freedom /",
+     "voci": [
+      "Ambedkar, B. R. (Bhimrao Ramji), 1891-1956."
+     ]
+    },
+    {
+     "titolo": "Federation versus Freedom ... Kale Memorial Lecture, 1939. (A critical study of the scheme for the A",
+     "voci": [
+      "Ambedkar, B. R. (Bhimrao Ramji), 1891-1956."
+     ]
+    },
+    {
+     "titolo": "Gandhi and Gandhism /",
+     "voci": [
+      "Ambedkar, B. R. (Bhimrao Ramji), 1891-1956."
+     ]
+    },
+    {
+     "titolo": "Gandhi and Gandhism. [The editor's introduction signed: Bhagwan Das.]",
+     "voci": [
+      "Ambedkar, B. R. (Bhimrao Ramji), 1891-1956.",
+      "Das, Bhagwan, 1927-2010.",
+      "Gandhi, Mahatma, 1869-1948."
+     ]
+    },
+    {
+     "titolo": "History of Indian currency &amp; banking /",
+     "voci": [
+      "Ambedkar, B. R. (Bhimrao Ramji), 1891-1956."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 39,
+   "qid": "Q1153256",
+   "nome": "Robert Lawson",
+   "nascita": "1892-10-04",
+   "morte": "1957-05-26",
+   "alias": [],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 37,
+    "dal_2000": 8,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Lawson 1892-1957\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "Aesop's fables :",
+     "voci": [
+      "Aesop.",
+      "Leaf, Munro, 1905-1976.",
+      "Lawson, Robert, 1892-1957."
+     ]
+    },
+    {
+     "titolo": "At that Time ... [Reminiscences of boyhood.] With decorations by the author.",
+     "voci": [
+      "Lawson, Robert, 1892-1957."
+     ]
+    },
+    {
+     "titolo": "At that Time /",
+     "voci": [
+      "Lawson, Robert, 1892-1957."
+     ]
+    },
+    {
+     "titolo": "Ben and me :",
+     "voci": [
+      "Lawson, Robert, 1892-1957."
+     ]
+    },
+    {
+     "titolo": "Captain Kidd's cat :",
+     "voci": [
+      "Lawson, Robert, 1892-1957."
+     ]
+    },
+    {
+     "titolo": "Captain Kidd's Cat ... Set down and illuminated by R. Lawson. [A tale for children.]",
+     "voci": [
+      "Lawson, Robert, 1892-1957."
+     ]
+    },
+    {
+     "titolo": "Ferdinandus Taurus /",
+     "voci": [
+      "Leaf, Munro, 1905-1976.",
+      "Lawson, Robert, 1892-1957."
+     ]
+    },
+    {
+     "titolo": "Four and Twenty Blackbirds. Nursery rhymes of yesterday recalled for children of to-day. Collected b",
+     "voci": [
+      "Fish, Helen Dean.",
+      "Lawson, Robert, 1892-1957."
+     ]
+    },
+    {
+     "titolo": "From the Horn of the Moon ... Illustrated by Robert Lawson.",
+     "voci": [
+      "Mason, Arthur.",
+      "Lawson, Robert, 1892-1957."
+     ]
+    },
+    {
+     "titolo": "The golden horseshoe /",
+     "voci": [
+      "Coatsworth, Elizabeth, 1893-1986.",
+      "Lawson, Robert, 1892-1957."
+     ]
+    },
+    {
+     "titolo": "The Great wheel. Written and illustrated by Robert Lawson.",
+     "voci": [
+      "Lawson, Robert, 1892-1957."
+     ]
+    },
+    {
+     "titolo": "The great wheel /",
+     "voci": [
+      "Lawson, Robert, 1892-1957."
+     ]
+    },
+    {
+     "titolo": "I discover Columbus.",
+     "voci": [
+      "Lawson, Robert, 1892-1957."
+     ]
+    },
+    {
+     "titolo": "I discover Columbus. A true chronicle of the great admiral &amp; his finding of the New World, narra",
+     "voci": [
+      "Lawson, Robert, 1892-1957."
+     ]
+    },
+    {
+     "titolo": "Just for Fun. A collection of stories and verses illustrated by Robert Lawson.",
+     "voci": [
+      "Lawson, Robert, 1892-1957."
+     ]
+    },
+    {
+     "titolo": "The little woman wanted noise /",
+     "voci": [
+      "Teal, Val.",
+      "Lawson, Robert, 1892-1957,"
+     ]
+    },
+    {
+     "titolo": "The Little Woman wanted Noise ... Pictures by Robert Lawson.",
+     "voci": [
+      "Teal, Val.",
+      "Lawson, Robert, 1892-1957."
+     ]
+    },
+    {
+     "titolo": "Mr. Popper's penguins /",
+     "voci": [
+      "Atwater, Richard.",
+      "Atwater, Florence.",
+      "Lawson, Robert, 1892-1957."
+     ]
+    },
+    {
+     "titolo": "Mr. Revere and I :",
+     "voci": [
+      "Lawson, Robert, 1892-1957."
+     ]
+    },
+    {
+     "titolo": "Mr. Wilmer ... Illustrated by the author.",
+     "voci": [
+      "Lawson, Robert, 1892-1957."
+     ]
+    },
+    {
+     "titolo": "Mr. Wilmer /",
+     "voci": [
+      "Lawson, Robert, 1892-1957."
+     ]
+    },
+    {
+     "titolo": "My Animal A.B.C. Picture Book. Verses by E. Close.",
+     "voci": [
+      "Close, Eunice.",
+      "Lawson, Robert, 1892-1957."
+     ]
+    },
+    {
+     "titolo": "Rabbit hill /",
+     "voci": [
+      "Lawson, Robert, 1892-1957."
+     ]
+    },
+    {
+     "titolo": "Rabbit Hill ... Illustrated by the author.",
+     "voci": [
+      "Lawson, Robert, 1892-1957."
+     ]
+    },
+    {
+     "titolo": "Robbut. A tale of tails. [With illustrations by the author.]",
+     "voci": [
+      "Lawson, Robert, 1892-1957."
+     ]
+    },
+    {
+     "titolo": "Robert Lawson, illustrator. A selection of his characteristic illustrations. With introduction and c",
+     "voci": [
+      "Lawson, Robert, 1892-1957.",
+      "JONES, Helen L., Literary Editor."
+     ]
+    },
+    {
+     "titolo": "The story of Ferdinand /",
+     "voci": [
+      "Leaf, Munro, 1905-1976.",
+      "Lawson, Robert, 1892-1957."
+     ]
+    },
+    {
+     "titolo": "The story of Ferdinand /",
+     "voci": [
+      "Leaf, Munro, 1905-1976.",
+      "Lawson, Robert, 1892-1957."
+     ]
+    },
+    {
+     "titolo": "The Story of Ferdinand ... Illustrated by Robert Lawson.",
+     "voci": [
+      "Leaf, Munro, 1905-1976.",
+      "Lawson, Robert, 1892-1957."
+     ]
+    },
+    {
+     "titolo": "The story of Ferdinand /",
+     "voci": [
+      "Leaf, Munro, 1905-1976.",
+      "Lawson, Robert, 1892-1957."
+     ]
+    },
+    {
+     "titolo": "The story of Ferdinand /",
+     "voci": [
+      "Leaf, Munro, 1905-1976.",
+      "Lawson, Robert, 1892-1957."
+     ]
+    },
+    {
+     "titolo": "The story of Ferdinand /",
+     "voci": [
+      "Leaf, Munro, 1905-1976,",
+      "Lawson, Robert, 1892-1957,"
+     ]
+    },
+    {
+     "titolo": "The story of Ferdinand /",
+     "voci": [
+      "Leaf, Munro, 1905-1976,",
+      "Lawson, Robert, 1892-1957,"
+     ]
+    },
+    {
+     "titolo": "The story of Ferdinand /",
+     "voci": [
+      "Leaf, Munro, 1905-1976,",
+      "Lawson, Robert, 1892-1957,"
+     ]
+    },
+    {
+     "titolo": "The Story of Simpson and Sampson ... Illustrated by Robert Lawson.",
+     "voci": [
+      "Leaf, Munro, 1905-1976.",
+      "Lawson, Robert, 1892-1957."
+     ]
+    },
+    {
+     "titolo": "The Unicorn with Silver Shoes ... Illustrated by Robert Lawson.",
+     "voci": [
+      "Young, Ella.",
+      "Lawson, Robert, 1892-1957."
+     ]
+    },
+    {
+     "titolo": "Wee Gillis ... Pictures by Robert Lawson.",
+     "voci": [
+      "Leaf, Munro, 1905-1976.",
+      "Lawson, Robert, 1892-1957."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 40,
+   "qid": "Q5045036",
+   "nome": "Caroline Dale Snedeker",
+   "nascita": "1871-03-03",
+   "morte": "1956-01-22",
+   "alias": [
+    "Caroline Dale Owen",
+    "Caroline Dale Parke Snedeker",
+    "Caroline Snedeker",
+    "Mrs. Charles Henry Snedeker"
+   ],
+   "oggi": {
+    "trovato": true,
+    "edizioni": 1,
+    "dal_2000": 0,
+    "fonte": "British Library",
+    "metodo": "nome_anni"
+   },
+   "query": "alma.creator all \"Snedeker 1871-1956\" and alma.language=eng",
+   "notizie": [
+    {
+     "titolo": "The diaries of Donald Macdonald, 1824-1826 /",
+     "voci": [
+      "Macdonald, Donald, 1791-1872.",
+      "Snedeker, Caroline Dale, 1871-1956."
+     ]
+    }
+   ]
+  }
+ ]
+}
