@@ -1,0 +1,863 @@
+{
+ "_come": "Decisione a mano di Claude sulle prove di prove.json, prima di far girare il nuovo sistema. esito: C presente in SBN, A assente, I irrisolto. schede: G giusta, X altra persona, ? non dimostrabile (le schede non elencate contano come non dimostrabili). Fatto il 18/11/2026.",
+ "Q2585507": {
+  "n": 1,
+  "nome": "Arvid Mörne",
+  "esito": "C",
+  "schede": {
+   "MILV239559": "G"
+  },
+  "nota": "P396 e titoli (Den svenska jorden)"
+ },
+ "Q459293": {
+  "n": 2,
+  "nome": "Arturo Barea",
+  "esito": "C",
+  "schede": {
+   "SBLV030645": "G"
+  },
+  "nota": "P396 non nel triplestore; «Barea, Arturo» con La forja de un rebelde"
+ },
+ "Q1265363": {
+  "n": 3,
+  "nome": "Duncan Campbell Scott",
+  "esito": "C",
+  "schede": {
+   "TO0V080789": "G",
+   "DDSV330471": "?",
+   "RAVV092897": "X"
+  },
+  "nota": "«Scott, Duncan Campbell» curatore di The poems of Archibald Lampman (era suo amico e curatore); «Scott, Campbell» è l'attore"
+ },
+ "Q11878769": {
+  "n": 4,
+  "nome": "Emmerich Alois Hruška",
+  "esito": "A",
+  "schede": {
+   "CUBV083632": "X",
+   "CNMN0000111497": "X"
+  },
+  "nota": "solo «Hruska, Arturo», dentista"
+ },
+ "Q108755956": {
+  "n": 5,
+  "nome": "Pierre Lafenestre",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda col cognome"
+ },
+ "Q2847789": {
+  "n": 6,
+  "nome": "André Frédérique",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda col nome"
+ },
+ "Q52150387": {
+  "n": 7,
+  "nome": "William Murray Graydon",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda Graydon"
+ },
+ "Q379595": {
+  "n": 8,
+  "nome": "Reşat Nuri Güntekin",
+  "esito": "A",
+  "schede": {},
+  "nota": "P396 (RMSV076548, TO0V513269) non presenti nel triplestore; nessuna scheda col nome"
+ },
+ "Q6547722": {
+  "n": 9,
+  "nome": "Lilian Wooster Greaves",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda col nome"
+ },
+ "Q5642970": {
+  "n": 10,
+  "nome": "Hallie Erminie Rives",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda col nome"
+ },
+ "Q18911624": {
+  "n": 11,
+  "nome": "Robert Mitchell",
+  "esito": "A",
+  "schede": {
+   "DDSV376346": "X",
+   "IEIV112214": "X",
+   "PALV031507": "X"
+  },
+  "nota": "nessuna «Mitchell, Robert/Stewart» con i suoi titoli; le Robert Mitchell sono un musicista e un filosofo"
+ },
+ "Q2745779": {
+  "n": 12,
+  "nome": "Curnonsky",
+  "esito": "C",
+  "schede": {
+   "RMLV034140": "G"
+  },
+  "nota": "P396"
+ },
+ "Q1040341": {
+  "n": 13,
+  "nome": "Carl Rössler",
+  "esito": "C",
+  "schede": {
+   "TO0V421223": "G"
+  },
+  "nota": "«Rössler, Carl» con Die fünf Frankfurter"
+ },
+ "Q291016": {
+  "n": 14,
+  "nome": "Marija Jurić Zagorka",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda Zagorka/Jurić"
+ },
+ "Q780102": {
+  "n": 15,
+  "nome": "Wyndham Lewis",
+  "esito": "C",
+  "schede": {
+   "CUBV091373": "G",
+   "NAPV078962": "X",
+   "LO1V458574": "X"
+  },
+  "nota": "P396; «Wyndham Lewis, D. B.» è un'altra persona (D. B. Wyndham Lewis)"
+ },
+ "Q12021431": {
+  "n": 16,
+  "nome": "Ignác Grebáč-Orlov",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda Grebáč"
+ },
+ "Q500042": {
+  "n": 17,
+  "nome": "Louis Bromfield",
+  "esito": "C",
+  "schede": {
+   "RAVV036909": "G"
+  },
+  "nota": "P396 (l'altro P396 non è nel triplestore)"
+ },
+ "Q106740": {
+  "n": 18,
+  "nome": "Dorothy L. Sayers",
+  "esito": "C",
+  "schede": {
+   "RAVV005038": "G",
+   "LO1V041887": "X"
+  },
+  "nota": "P396"
+ },
+ "Q265792": {
+  "n": 19,
+  "nome": "Ray Cummings",
+  "esito": "I",
+  "schede": {
+   "RAVV030671": "?"
+  },
+  "nota": "P396 indica «Cummings, Ray», ma l'unico titolo è il film «Sabotatori» (Saboteur, 1942), che non è suo: la scheda potrebbe mescolare un'altra persona"
+ },
+ "Q3271300": {
+  "n": 20,
+  "nome": "Léon Riotor",
+  "esito": "C",
+  "schede": {
+   "LO1V135919": "G"
+  },
+  "nota": "P396"
+ },
+ "Q47291754": {
+  "n": 21,
+  "nome": "Richard Schneiter",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda Schneiter"
+ },
+ "Q1395155": {
+  "n": 22,
+  "nome": "Alcides Arguedas",
+  "esito": "C",
+  "schede": {
+   "MILV054254": "G",
+   "CFIV000726": "X"
+  },
+  "nota": "«Arguedas, Alcides» con Raza de bronce"
+ },
+ "Q931105": {
+  "n": 23,
+  "nome": "Christopher Morley",
+  "esito": "C",
+  "schede": {
+   "BVEV010983": "G",
+   "MILV299926": "X"
+  },
+  "nota": "P396; «Morley, Christopher Love» è un medico del Settecento"
+ },
+ "Q715814": {
+  "n": 24,
+  "nome": "Winston Churchill",
+  "esito": "A",
+  "schede": {
+   "RAVV003813": "X",
+   "CNMN0000314544": "X",
+   "LO1V303944": "X",
+   "MILV203216": "X"
+  },
+  "nota": "lo scrittore americano non c'è; P396 non nel triplestore; «Churchill, Winston S.» è lo statista inglese"
+ },
+ "Q95150216": {
+  "n": 25,
+  "nome": "Vilém Kirchner",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda Kirchner, Vilém"
+ },
+ "Q5345299": {
+  "n": 26,
+  "nome": "Edward Sheldon",
+  "esito": "C",
+  "schede": {
+   "LO1V361694": "G",
+   "IEIV038628": "X",
+   "LO1V347062": "X"
+  },
+  "nota": "«Sheldon, Edward» con The garden of paradise (sua commedia, 1914); Edward Stevens Sheldon è il dantista"
+ },
+ "Q1700787": {
+  "n": 27,
+  "nome": "John Langalibalele Dube",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda Dube"
+ },
+ "Q27183960": {
+  "n": 28,
+  "nome": "Priyanath Mukhopadhyay",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda Mukhopadhyay, Priyanath"
+ },
+ "Q29209751": {
+  "n": 29,
+  "nome": "Jindřich Hradecký",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda Hradecký né pseudonimi"
+ },
+ "Q14946693": {
+  "n": 30,
+  "nome": "Minnie Louise Haskins",
+  "esito": "C",
+  "schede": {
+   "MILV369073": "G"
+  },
+  "nota": "SBN scrive «Harkins, Minnie Louise», ma il titolo «Una luce per l'anno nuovo» è la sua poesia The Gate of the Year: errore di ortografia nel catalogo"
+ },
+ "Q65246944": {
+  "n": 31,
+  "nome": "Emanuel Havelka",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda Havelka, Emanuel"
+ },
+ "Q566764": {
+  "n": 32,
+  "nome": "Nikolaj Velimirović",
+  "esito": "C",
+  "schede": {
+   "IEIV060137": "G"
+  },
+  "nota": "P396; Religion and nationality in Serbia è suo"
+ },
+ "Q2721496": {
+  "n": 33,
+  "nome": "Madan Mohan Malaviya",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda Malaviya"
+ },
+ "Q12017814": {
+  "n": 34,
+  "nome": "František Salesius Frabša",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda Frabša né Pravda"
+ },
+ "Q6206463": {
+  "n": 35,
+  "nome": "Joaquín Gallegos Lara",
+  "esito": "C",
+  "schede": {
+   "LO1V175294": "G"
+  },
+  "nota": "P396; Le croci sull'acqua"
+ },
+ "Q20755702": {
+  "n": 36,
+  "nome": "Josef Jirsík",
+  "esito": "C",
+  "schede": {
+   "RMSV940108": "G"
+  },
+  "nota": "P396"
+ },
+ "Q3057547": {
+  "n": 37,
+  "nome": "Erwan ar Moal",
+  "esito": "A",
+  "schede": {
+   "RMSV800431": "X",
+   "CAGV383244": "X"
+  },
+  "nota": "nessuna scheda ar Moal / Dir-na-dor; i Le Moal sono altri"
+ },
+ "Q18011968": {
+  "n": 38,
+  "nome": "Pierre Blanchon",
+  "esito": "C",
+  "schede": {
+   "VEAV051458": "G"
+  },
+  "nota": "«Blanchon, Pierre» curatore delle Lettres de jeunesse di Fromentin (Wikidata: Lettres et fragments inédits di Fromentin)"
+ },
+ "Q5415043": {
+  "n": 39,
+  "nome": "Eva Emery Dye",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda Dye"
+ },
+ "Q5041871": {
+  "n": 40,
+  "nome": "Carlos Bulosan",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda Bulosan"
+ },
+ "Q4762392": {
+  "n": 41,
+  "nome": "Angela Brazil",
+  "esito": "C",
+  "schede": {
+   "SBLV149609": "G"
+  },
+  "nota": "P396"
+ },
+ "Q12024899": {
+  "n": 42,
+  "nome": "Jindřiška Konopásková",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda"
+ },
+ "Q12035492": {
+  "n": 43,
+  "nome": "Marie Votrubová-Haunerová",
+  "esito": "C",
+  "schede": {
+   "LO1V184069": "G"
+  },
+  "nota": "«Votrubova Haunerova, Marie», traduttrice (Faidra, Korab)"
+ },
+ "Q346729": {
+  "n": 44,
+  "nome": "Kenneth Roberts",
+  "esito": "C",
+  "schede": {
+   "SBLV273665": "G",
+   "RAVV037619": "G",
+   "PUVV223660": "X",
+   "UBOV405026": "X",
+   "MILV187748": "X"
+  },
+  "nota": "P396 (due schede); Kenneth M., Kenneth J. e il nato nel 1940 sono altri"
+ },
+ "Q983507": {
+  "n": 45,
+  "nome": "Səməd Vurğun",
+  "esito": "C",
+  "schede": {
+   "BVEV043852": "G"
+  },
+  "nota": "«Vurgun, Samed» con Slovo poeta (unica scheda col cognome)"
+ },
+ "Q78437": {
+  "n": 46,
+  "nome": "Ernst Bertram",
+  "esito": "C",
+  "schede": {
+   "CFIV084472": "G"
+  },
+  "nota": "P396"
+ },
+ "Q18535612": {
+  "n": 47,
+  "nome": "Robert Evans",
+  "esito": "A",
+  "schede": {
+   "PUVV001580": "X",
+   "TO0V526699": "X",
+   "MILV372632": "X"
+  },
+  "nota": "nessuna scheda del poeta gallese (Cybi); i Robert Evans in SBN sono altri"
+ },
+ "Q540166": {
+  "n": 48,
+  "nome": "Arthur Machen",
+  "esito": "C",
+  "schede": {
+   "CFIV071887": "G"
+  },
+  "nota": "P396"
+ },
+ "Q3170295": {
+  "n": 49,
+  "nome": "Jean Ajalbert",
+  "esito": "C",
+  "schede": {
+   "RAVV058456": "G"
+  },
+  "nota": "P396"
+ },
+ "Q443398": {
+  "n": 50,
+  "nome": "Henry Handel Richardson",
+  "esito": "A",
+  "schede": {},
+  "nota": "P396 non nel triplestore; nessuna scheda Richardson, Henry Handel o Robertson, Ethel"
+ },
+ "Q15485418": {
+  "n": 51,
+  "nome": "Louie Bennett",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda Bennett, Louie"
+ },
+ "Q234530": {
+  "n": 52,
+  "nome": "Emma Orczy",
+  "esito": "C",
+  "schede": {
+   "RAVV036196": "G"
+  },
+  "nota": "P396 («Orczy, Emmuska»)"
+ },
+ "Q95126535": {
+  "n": 53,
+  "nome": "Alexandra Urbanová",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda Urbanová"
+ },
+ "Q57389": {
+  "n": 54,
+  "nome": "Alfred Döblin",
+  "esito": "C",
+  "schede": {
+   "CFIV044108": "G"
+  },
+  "nota": "P396"
+ },
+ "Q62514122": {
+  "n": 55,
+  "nome": "Frederic Hatton",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda Hatton, Frederic"
+ },
+ "Q1725105": {
+  "n": 56,
+  "nome": "Otakar Levý",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda Levý, Otakar"
+ },
+ "Q18002932": {
+  "n": 57,
+  "nome": "A. Augustin-Thierry",
+  "esito": "C",
+  "schede": {
+   "RT1V027732": "G",
+   "LO1V189807": "?",
+   "LO1V271550": "X",
+   "CFIV017411": "X",
+   "BA1V002187": "X",
+   "IEIV017147": "X"
+  },
+  "nota": "P396 (anni 1870-1956 nella scheda, Wikidata 1868); «Thierry, Augustin A.» mescola Mademoiselle George (sua) e i Récits mérovingiens dell'Augustin Thierry dell'Ottocento"
+ },
+ "Q12043213": {
+  "n": 58,
+  "nome": "Otakar Wünsch",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda Wünsch"
+ },
+ "Q2956128": {
+  "n": 59,
+  "nome": "Channing Pollock",
+  "esito": "C",
+  "schede": {
+   "LO1V154189": "G",
+   "DDSV054000": "G",
+   "DDSV345626": "G",
+   "SBNV093142": "X"
+  },
+  "nota": "«Pollock, Channing» con The fool (sua commedia) e My man (suo testo inglese); «Pollock, C.» e «Pollak, Channing» hanno solo My man; il nato nel 1926 è il prestigiatore"
+ },
+ "Q5045036": {
+  "n": 60,
+  "nome": "Caroline Dale Snedeker",
+  "esito": "C",
+  "schede": {
+   "LO1V180782": "G"
+  },
+  "nota": "«Snedeker, Caroline Dale» con Downright Dencey"
+ },
+ "Q853226": {
+  "n": 61,
+  "nome": "Jenő Heltai",
+  "esito": "C",
+  "schede": {
+   "UBOV022716": "G"
+  },
+  "nota": "P396"
+ },
+ "Q5591308": {
+  "n": 62,
+  "nome": "Grace Miller White",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda White, Grace Miller"
+ },
+ "Q1131497": {
+  "n": 63,
+  "nome": "May Sinclair",
+  "esito": "C",
+  "schede": {
+   "BVEV010470": "G",
+   "DDSV171783": "X"
+  },
+  "nota": "P396; «Sinclair, M.» canta arie di Händel: altra persona"
+ },
+ "Q3277794": {
+  "n": 64,
+  "nome": "Mahmoud Bourguiba",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda Bourguiba, Mahmoud"
+ },
+ "Q571888": {
+  "n": 65,
+  "nome": "Balys Sruoga",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda Sruoga"
+ },
+ "Q6271965": {
+  "n": 66,
+  "nome": "Max Jiménez",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda Jiménez, Max"
+ },
+ "Q7182457": {
+  "n": 67,
+  "nome": "Phil Stong",
+  "esito": "C",
+  "schede": {
+   "LO1V183728": "G"
+  },
+  "nota": "«Stong, Philip» con State Fair e Honk the Moose"
+ },
+ "Q978324": {
+  "n": 68,
+  "nome": "Salomo Friedlaender",
+  "esito": "C",
+  "schede": {
+   "PUVV022787": "G"
+  },
+  "nota": "P396 (pseudonimo Mynona); i Friedlaender trovati sono altri"
+ },
+ "Q8345656": {
+  "n": 69,
+  "nome": "Christofredo Jakob",
+  "esito": "C",
+  "schede": {
+   "LO1V148443": "G"
+  },
+  "nota": "P396 («Jakob, Christfried», atlanti del sistema nervoso)"
+ },
+ "Q1392550": {
+  "n": 70,
+  "nome": "Gustav Suits",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda Suits"
+ },
+ "Q57277": {
+  "n": 71,
+  "nome": "Gottfried Benn",
+  "esito": "C",
+  "schede": {
+   "CFIV056642": "G"
+  },
+  "nota": "P396"
+ },
+ "Q6782093": {
+  "n": 72,
+  "nome": "María Nieves y Bustamante",
+  "esito": "C",
+  "schede": {
+   "LO1V445528": "G"
+  },
+  "nota": "«Nieves Y Bustamante, Maria» con Jorge el hijo del pueblo"
+ },
+ "Q19839444": {
+  "n": 73,
+  "nome": "Margaret Cameron",
+  "esito": "I",
+  "schede": {
+   "MILV244056": "?",
+   "CUBV091368": "?",
+   "DDSV317268": "X",
+   "UBOV109002": "X",
+   "MILV103845": "X"
+  },
+  "nota": "«Cameron, Margaret» ha solo The women in green, che non so attribuire; «Lewis, Margaret C.» ha libri di astrologia biblica, probabilmente un'altra"
+ },
+ "Q1088881": {
+  "n": 74,
+  "nome": "Nanalal Dalpatram Kavi",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda Nanalal"
+ },
+ "Q86629526": {
+  "n": 75,
+  "nome": "Kaj Gynt",
+  "esito": "A",
+  "schede": {
+   "DDSV332261": "X"
+  },
+  "nota": "nessuna scheda Gynt, Kaj o Cederstrand; Greta Gynt è l'attrice"
+ },
+ "Q2930497": {
+  "n": 76,
+  "nome": "C. M. van den Heever",
+  "esito": "C",
+  "schede": {
+   "LO1V210358": "G"
+  },
+  "nota": "«Heever, Christiaan Maurits : van den», nome intero e unico; The achievement of Afrikaans"
+ },
+ "Q1650288": {
+  "n": 77,
+  "nome": "Percy MacKaye",
+  "esito": "A",
+  "schede": {
+   "DDSV280424": "X",
+   "UBOV900142": "X"
+  },
+  "nota": "nessuna scheda MacKaye"
+ },
+ "Q379949": {
+  "n": 78,
+  "nome": "Tristan Bernard",
+  "esito": "C",
+  "schede": {
+   "UBOV076572": "G",
+   "DDSV049194": "?",
+   "LO1V337110": "?"
+  },
+  "nota": "P396; «Bernard, Tristan» (Marquise, musica) e «Tristan, Bernard» (Féerie bourgeoise) probabilmente lui, ma senza prova sicura"
+ },
+ "Q3187690": {
+  "n": 79,
+  "nome": "Juan José Morosoli",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda Morosoli"
+ },
+ "Q90156741": {
+  "n": 80,
+  "nome": "Clotilde Chivas-Baron",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda Chivas-Baron"
+ },
+ "Q214622": {
+  "n": 81,
+  "nome": "Nikos Kazantzakis",
+  "esito": "C",
+  "schede": {
+   "CFIV069227": "G",
+   "DDSV059962": "G"
+  },
+  "nota": "P396; «Kazantsakis, Nikos <1883-1957>» è lui (Zorba)"
+ },
+ "Q95165041": {
+  "n": 82,
+  "nome": "František Chramosta",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda Chramosta né pseudonimi"
+ },
+ "Q4690359": {
+  "n": 83,
+  "nome": "Afrânio Peixoto",
+  "esito": "C",
+  "schede": {
+   "UMCV015063": "G"
+  },
+  "nota": "P396"
+ },
+ "Q50298099": {
+  "n": 84,
+  "nome": "Islwyn Williams",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda Williams, Islwyn"
+ },
+ "Q1398181": {
+  "n": 85,
+  "nome": "Karel Toman",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda Toman, Karel"
+ },
+ "Q11926354": {
+  "n": 86,
+  "nome": "Ibn Zaydan",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda Ibn Zaydan"
+ },
+ "Q7901271": {
+  "n": 87,
+  "nome": "Ursula Parrott",
+  "esito": "C",
+  "schede": {
+   "AQ1V018496": "G"
+  },
+  "nota": "P396"
+ },
+ "Q55948066": {
+  "n": 88,
+  "nome": "Augustus Goetz",
+  "esito": "C",
+  "schede": {
+   "RLZV018817": "G",
+   "GEAV080983": "X"
+  },
+  "nota": "«Goetz, Augustus» con The heiress"
+ },
+ "Q965359": {
+  "n": 89,
+  "nome": "Saint-Georges de Bouhélier",
+  "esito": "C",
+  "schede": {
+   "TO0V493196": "G",
+   "LO1V389595": "G",
+   "LIGV008025": "G",
+   "NAPV073393": "G"
+  },
+  "nota": "quattro schede, tutte sue (L'hiver en méditation, Oedipe)"
+ },
+ "Q135640": {
+  "n": 90,
+  "nome": "Valery Larbaud",
+  "esito": "C",
+  "schede": {
+   "CFIV108418": "G",
+   "CNMN0000015889": "G"
+  },
+  "nota": "P396; la scheda CNMN con lettere è lui"
+ },
+ "Q106765089": {
+  "n": 91,
+  "nome": "František Zeman",
+  "esito": "A",
+  "schede": {
+   "MILV061671": "X"
+  },
+  "nota": "nessuna scheda Zeman, František; «Zeman, Frances J.» è una nutrizionista"
+ },
+ "Q549496": {
+  "n": 92,
+  "nome": "Renée Erdős",
+  "esito": "C",
+  "schede": {
+   "IEIV005400": "G",
+   "SBLV111814": "X",
+   "CNMN0000220018": "?"
+  },
+  "nota": "P396 non nel triplestore; «Erdös, Renée» con Il grido dell'amore e Il mercenario d'Assisi; «Erdos, Renée F.» (insegnamento per corrispondenza) è un'altra; «Erdos, Renata <1879->» una lettera, forse lei"
+ },
+ "Q32041639": {
+  "n": 93,
+  "nome": "Jiří Dréman",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda Dréman"
+ },
+ "Q95557826": {
+  "n": 94,
+  "nome": "Bedřich Wunderlich",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda Wunderlich, Bedřich"
+ },
+ "Q294321": {
+  "n": 95,
+  "nome": "James Connolly",
+  "esito": "C",
+  "schede": {
+   "LIGV015562": "G",
+   "RAVV056967": "X",
+   "IEIV091228": "X"
+  },
+  "nota": "P396 («Connolly, James Brendan»); «Connolly, James» è il socialista irlandese"
+ },
+ "Q6457087": {
+  "n": 96,
+  "nome": "Sukanta Bhattacharya",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda Sukanta"
+ },
+ "Q134119918": {
+  "n": 97,
+  "nome": "Elias Gewurz",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda Gewurz"
+ },
+ "Q125412": {
+  "n": 98,
+  "nome": "Josef Reinhart",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda Reinhart, Josef"
+ },
+ "Q138829252": {
+  "n": 99,
+  "nome": "Sophie Gaby",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda Gaby, Sophie né Edelheit"
+ },
+ "Q5993001": {
+  "n": 100,
+  "nome": "Manuel Fontdevila",
+  "esito": "A",
+  "schede": {},
+  "nota": "nessuna scheda Fontdevila"
+ }
+}
