@@ -16,8 +16,14 @@
    ],
    "pagine": 74,
    "wiki_en": "https://en.wikipedia.org/wiki/Brave_New_World",
-   "generi": [],
-   "visite_en": 932207,
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "fantasy_sf"
+   ],
+   "visite_en": 932197,
    "copertina": {
     "file": "Giveaway von Pinguin Books für Brave New World (cropped).jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Giveaway_von_Pinguin_Books_f%C3%BCr_Brave_New_World_%28cropped%29.jpg/500px-Giveaway_von_Pinguin_Books_f%C3%BCr_Brave_New_World_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -38,8 +44,14 @@
    ],
    "pagine": 11,
    "wiki_en": "https://en.wikipedia.org/wiki/Little_House_in_the_Big_Woods",
-   "generi": [],
-   "visite_en": 109153
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "ragazzi"
+   ],
+   "visite_en": 109169
   },
   {
    "qid": "Q774233",
@@ -53,8 +65,14 @@
    ],
    "pagine": 48,
    "wiki_en": "https://en.wikipedia.org/wiki/Journey_to_the_End_of_the_Night",
-   "generi": [],
-   "visite_en": 84908,
+   "lingua": {
+    "en": "French",
+    "it": "francese"
+   },
+   "generi": [
+    "memorie"
+   ],
+   "visite_en": 84906,
    "copertina": {
     "file": "Journey to the End of the Night 1932.jpg",
     "url": "https://upload.wikimedia.org/wikipedia/commons/5/59/Journey_to_the_End_of_the_Night_1932.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -75,8 +93,14 @@
    ],
    "pagine": 34,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Man_Without_Qualities",
-   "generi": [],
-   "visite_en": 78770,
+   "lingua": {
+    "en": "German",
+    "it": "tedesco"
+   },
+   "generi": [
+    "storico"
+   ],
+   "visite_en": 78778,
    "copertina": {
     "file": "Robert Musil - Der Mann ohne Eigenschaften, 1930.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Robert_Musil_-_Der_Mann_ohne_Eigenschaften%2C_1930.jpg/500px-Robert_Musil_-_Der_Mann_ohne_Eigenschaften%2C_1930.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -97,8 +121,14 @@
    ],
    "pagine": 27,
    "wiki_en": "https://en.wikipedia.org/wiki/Light_in_August",
-   "generi": [],
-   "visite_en": 60772,
+   "lingua": {
+    "en": "English",
+    "it": "inglese americano"
+   },
+   "generi": [
+    "horror"
+   ],
+   "visite_en": 60818,
    "copertina": {
     "file": "Light in August (1932 dust jacket cover).jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Light_in_August_%281932_dust_jacket_cover%29.jpg/500px-Light_in_August_%281932_dust_jacket_cover%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -119,8 +149,14 @@
    ],
    "pagine": 28,
    "wiki_en": "https://en.wikipedia.org/wiki/Peril_at_End_House",
-   "generi": [],
-   "visite_en": 56338
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "giallo"
+   ],
+   "visite_en": 56362
   },
   {
    "qid": "Q5142221",
@@ -134,8 +170,14 @@
    ],
    "pagine": 5,
    "wiki_en": "https://en.wikipedia.org/wiki/Cold_Comfort_Farm",
-   "generi": [],
-   "visite_en": 47260
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "satira"
+   ],
+   "visite_en": 47264
   },
   {
    "qid": "Q7727278",
@@ -150,7 +192,7 @@
    "pagine": 11,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Concept_of_the_Political",
    "generi": [],
-   "visite_en": 40391
+   "visite_en": 40400
   },
   {
    "qid": "Q934396",
@@ -165,7 +207,7 @@
    "pagine": 26,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Thirteen_Problems",
    "generi": [],
-   "visite_en": 40238
+   "visite_en": 40293
   },
   {
    "qid": "Q610428",
@@ -179,8 +221,14 @@
    ],
    "pagine": 21,
    "wiki_en": "https://en.wikipedia.org/wiki/Radetzky_March_(novel)",
-   "generi": [],
-   "visite_en": 39414,
+   "lingua": {
+    "en": "German",
+    "it": "tedesco"
+   },
+   "generi": [
+    "storico"
+   ],
+   "visite_en": 39491,
    "copertina": {
     "file": "Joseph Roth Radetzkymarsch 1932.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Joseph_Roth_Radetzkymarsch_1932.jpg/500px-Joseph_Roth_Radetzkymarsch_1932.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -202,7 +250,7 @@
    "pagine": 18,
    "wiki_en": "https://en.wikipedia.org/wiki/Death_in_the_Afternoon",
    "generi": [],
-   "visite_en": 36561,
+   "visite_en": 36572,
    "copertina": {
     "file": "Heming Way.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Heming_Way.jpg/500px-Heming_Way.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -224,7 +272,7 @@
    "pagine": 33,
    "wiki_en": "https://en.wikipedia.org/wiki/How_the_Steel_Was_Tempered",
    "generi": [],
-   "visite_en": 36001,
+   "visite_en": 36005,
    "copertina": {
     "file": "RUB 95 (Leipzig, 1984, 23.Auflage) - Ostrowski, Wie der Stahl.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/RUB_95_%28Leipzig%2C_1984%2C_23.Auflage%29_-_Ostrowski%2C_Wie_der_Stahl.jpg/500px-RUB_95_%28Leipzig%2C_1984%2C_23.Auflage%29_-_Ostrowski%2C_Wie_der_Stahl.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -246,7 +294,7 @@
    "pagine": 9,
    "wiki_en": "https://en.wikipedia.org/wiki/Tobacco_Road_(novel)",
    "generi": [],
-   "visite_en": 23681
+   "visite_en": 23683
   },
   {
    "qid": "Q1955781",
@@ -260,8 +308,14 @@
    ],
    "pagine": 6,
    "wiki_en": "https://en.wikipedia.org/wiki/Stamboul_Train",
-   "generi": [],
-   "visite_en": 22521
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "giallo"
+   ],
+   "visite_en": 22530
   },
   {
    "qid": "Q2512207",
@@ -275,8 +329,14 @@
    ],
    "pagine": 13,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Phoenix_on_the_Sword",
-   "generi": [],
-   "visite_en": 22458
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "fantasy_sf"
+   ],
+   "visite_en": 22472
   },
   {
    "qid": "Q1900478",
@@ -294,8 +354,14 @@
    ],
    "pagine": 9,
    "wiki_en": "https://en.wikipedia.org/wiki/Mutiny_on_the_Bounty_(novel)",
-   "generi": [],
-   "visite_en": 20521
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "storico"
+   ],
+   "visite_en": 20525
   },
   {
    "qid": "Q5264340",
@@ -310,7 +376,7 @@
    "pagine": 4,
    "wiki_en": "https://en.wikipedia.org/wiki/Design_for_Living",
    "generi": [],
-   "visite_en": 18647
+   "visite_en": 18652
   },
   {
    "qid": "Q17036247",
@@ -325,7 +391,7 @@
    "pagine": 8,
    "wiki_en": "https://en.wikipedia.org/wiki/Tripura_Rahasya",
    "generi": [],
-   "visite_en": 18169
+   "visite_en": 18160
   },
   {
    "qid": "Q3655833",
@@ -340,7 +406,7 @@
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/Sunset_Song",
    "generi": [],
-   "visite_en": 17345
+   "visite_en": 17358
   },
   {
    "qid": "Q370698",
@@ -355,7 +421,7 @@
    "pagine": 14,
    "wiki_en": "https://en.wikipedia.org/wiki/Journey_to_the_East",
    "generi": [],
-   "visite_en": 16246
+   "visite_en": 16261
   },
   {
    "qid": "Q751574",
@@ -369,8 +435,14 @@
    ],
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/My_Friend_Flicka",
-   "generi": [],
-   "visite_en": 15303
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "ragazzi"
+   ],
+   "visite_en": 15302
   },
   {
    "qid": "Q257144",
@@ -385,7 +457,7 @@
    "pagine": 10,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Pastures_of_Heaven",
    "generi": [],
-   "visite_en": 12269
+   "visite_en": 12296
   },
   {
    "qid": "Q2182784",
@@ -399,8 +471,14 @@
    ],
    "pagine": 4,
    "wiki_en": "https://en.wikipedia.org/wiki/Have_His_Carcase",
-   "generi": [],
-   "visite_en": 11398
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "giallo"
+   ],
+   "visite_en": 11431
   },
   {
    "qid": "Q1529809",
@@ -415,7 +493,7 @@
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/A_Glastonbury_Romance",
    "generi": [],
-   "visite_en": 9980
+   "visite_en": 9983
   },
   {
    "qid": "Q20657367",
@@ -430,7 +508,7 @@
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Moral_Man_and_Immoral_Society",
    "generi": [],
-   "visite_en": 9176
+   "visite_en": 9179
   },
   {
    "qid": "Q6372683",
@@ -445,7 +523,7 @@
    "pagine": 5,
    "wiki_en": "https://en.wikipedia.org/wiki/Karmabhoomi",
    "generi": [],
-   "visite_en": 8733
+   "visite_en": 8734
   },
   {
    "qid": "Q1746652",
@@ -460,7 +538,7 @@
    "pagine": 16,
    "wiki_en": "https://en.wikipedia.org/wiki/Little_Man,_What_Now%3F_(novel)",
    "generi": [],
-   "visite_en": 8565
+   "visite_en": 8583
   },
   {
    "qid": "Q2614387",
@@ -475,7 +553,7 @@
    "pagine": 9,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Career_of_Nicodemus_Dyzma",
    "generi": [],
-   "visite_en": 8253,
+   "visite_en": 8260,
    "copertina": {
     "file": "Tadeusz Dolega-Mostowicz.jpg",
     "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Tadeusz_Dolega-Mostowicz.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -497,7 +575,7 @@
    "pagine": 5,
    "wiki_en": "https://en.wikipedia.org/wiki/Sons_(novel)",
    "generi": [],
-   "visite_en": 8184
+   "visite_en": 8191
   },
   {
    "qid": "Q357328",
@@ -512,7 +590,7 @@
    "pagine": 10,
    "wiki_en": "https://en.wikipedia.org/wiki/Saint_Joan_of_the_Stockyards",
    "generi": [],
-   "visite_en": 8183,
+   "visite_en": 8185,
    "copertina": {
     "file": "Carola Neher als 'Johanna' - Karl Schrecker, 1930.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Carola_Neher_als_%27Johanna%27_-_Karl_Schrecker%2C_1930.jpg/500px-Carola_Neher_als_%27Johanna%27_-_Karl_Schrecker%2C_1930.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -533,8 +611,14 @@
    ],
    "pagine": 4,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Worker:_Dominion_and_Form",
-   "generi": [],
-   "visite_en": 7644
+   "lingua": {
+    "en": "German",
+    "it": "tedesco"
+   },
+   "generi": [
+    "saggio"
+   ],
+   "visite_en": 7667
   },
   {
    "qid": "Q5216075",
@@ -549,7 +633,7 @@
    "pagine": 4,
    "wiki_en": "https://en.wikipedia.org/wiki/Dangerous_Corner",
    "generi": [],
-   "visite_en": 7195
+   "visite_en": 7197
   },
   {
    "qid": "Q17060239",
@@ -563,8 +647,15 @@
    ],
    "pagine": 5,
    "wiki_en": "https://en.wikipedia.org/wiki/Legend_of_the_Swordsmen_of_the_Mountains_of_Shu",
-   "generi": [],
-   "visite_en": 7104
+   "lingua": {
+    "en": "Chinese",
+    "it": "cinese"
+   },
+   "generi": [
+    "fantasy_sf",
+    "sentimentale"
+   ],
+   "visite_en": 7100
   },
   {
    "qid": "Q1706363",
@@ -578,8 +669,14 @@
    ],
    "pagine": 8,
    "wiki_en": "https://en.wikipedia.org/wiki/Marie_Antoinette:_The_Portrait_of_an_Average_Woman",
-   "generi": [],
-   "visite_en": 6988,
+   "lingua": {
+    "en": "German",
+    "it": "tedesco"
+   },
+   "generi": [
+    "memorie"
+   ],
+   "visite_en": 6992,
    "copertina": {
     "file": "Louise Elisabeth Vigée-Lebrun - Marie-Antoinette dit « à la Rose » - Google Art Project.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Louise_Elisabeth_Vig%C3%A9e-Lebrun_-_Marie-Antoinette_dit_%C2%AB_%C3%A0_la_Rose_%C2%BB_-_Google_Art_Project.jpg/500px-Louise_Elisabeth_Vig%C3%A9e-Lebrun_-_Marie-Antoinette_dit_%C2%AB_%C3%A0_la_Rose_%C2%BB_-_Google_Art_Project.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -616,7 +713,7 @@
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Artificial_Silk_Girl",
    "generi": [],
-   "visite_en": 5915
+   "visite_en": 5923
   },
   {
    "qid": "Q7745219",
@@ -631,7 +728,7 @@
    "pagine": 4,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Lagoon",
    "generi": [],
-   "visite_en": 5612,
+   "visite_en": 5616,
    "copertina": {
     "file": "W. J. Linton (1812-1897) design for The Cornhill Magazine front, on a copy dated December 1945.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/W._J._Linton_%281812-1897%29_design_for_The_Cornhill_Magazine_front%2C_on_a_copy_dated_December_1945.jpg/500px-W._J._Linton_%281812-1897%29_design_for_The_Cornhill_Magazine_front%2C_on_a_copy_dated_December_1945.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -653,7 +750,7 @@
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Adventures_of_the_Black_Girl_in_Her_Search_for_God",
    "generi": [],
-   "visite_en": 5515
+   "visite_en": 5525
   },
   {
    "qid": "Q1075805",
@@ -667,8 +764,14 @@
    ],
    "pagine": 13,
    "wiki_en": "https://en.wikipedia.org/wiki/Cat_Country",
-   "generi": [],
-   "visite_en": 5511
+   "lingua": {
+    "en": "Mandarin",
+    "it": "cinese mandarino"
+   },
+   "generi": [
+    "fantasy_sf"
+   ],
+   "visite_en": 5520
   },
   {
    "qid": "Q8036886",
@@ -683,7 +786,7 @@
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/Worms_of_the_Earth",
    "generi": [],
-   "visite_en": 5415
+   "visite_en": 5423
   },
   {
    "qid": "Q5278419",
@@ -702,7 +805,7 @@
    "pagine": 5,
    "wiki_en": "https://en.wikipedia.org/wiki/Dinner_at_Eight_(play)",
    "generi": [],
-   "visite_en": 5331,
+   "visite_en": 5334,
    "copertina": {
     "file": "Dinner-at-Eight-FE.jpg",
     "url": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Dinner-at-Eight-FE.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -738,8 +841,14 @@
    ],
    "pagine": 5,
    "wiki_en": "https://en.wikipedia.org/wiki/Javid_Nama",
-   "generi": [],
-   "visite_en": 5245
+   "lingua": {
+    "en": "Persian",
+    "it": "persiano"
+   },
+   "generi": [
+    "poesia"
+   ],
+   "visite_en": 5243
   },
   {
    "qid": "Q3791139",
@@ -753,8 +862,14 @@
    ],
    "pagine": 5,
    "wiki_en": "https://en.wikipedia.org/wiki/Pirates_of_Venus",
-   "generi": [],
-   "visite_en": 5189,
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "fantasy_sf"
+   ],
+   "visite_en": 5191,
    "copertina": {
     "file": "Pirates of Venus frontispiece.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Pirates_of_Venus_frontispiece.jpg/500px-Pirates_of_Venus_frontispiece.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -821,7 +936,7 @@
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Angarey",
    "generi": [],
-   "visite_en": 4375
+   "visite_en": 4364
   },
   {
    "qid": "Q5267101",
@@ -836,7 +951,7 @@
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Devil%27s_Cub",
    "generi": [],
-   "visite_en": 4269
+   "visite_en": 4271
   },
   {
    "qid": "Q104856374",
@@ -851,7 +966,7 @@
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Stalin_School_of_Falsification",
    "generi": [],
-   "visite_en": 3953,
+   "visite_en": 3952,
    "copertina": {
     "file": "Trotsky - The Stalin school of falsification (cover, 1930).jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Trotsky_-_The_Stalin_school_of_falsification_%28cover%2C_1930%29.jpg/500px-Trotsky_-_The_Stalin_school_of_falsification_%28cover%2C_1930%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -872,8 +987,14 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Pother_Kanta",
-   "generi": [],
-   "visite_en": 3914
+   "lingua": {
+    "en": "Bangla",
+    "it": "bengali"
+   },
+   "generi": [
+    "giallo"
+   ],
+   "visite_en": 3916
   },
   {
    "qid": "Q7758787",
@@ -888,7 +1009,7 @@
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Pure_and_the_Impure",
    "generi": [],
-   "visite_en": 3858
+   "visite_en": 3884
   },
   {
    "qid": "Q5872036",
@@ -898,7 +1019,7 @@
    "pagine": 5,
    "wiki_en": "https://en.wikipedia.org/wiki/Der_Hitlerjunge_Quex",
    "generi": [],
-   "visite_en": 3454
+   "visite_en": 3459
   },
   {
    "qid": "Q21162245",
@@ -913,7 +1034,7 @@
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Narrow_Corner",
    "generi": [],
-   "visite_en": 3435
+   "visite_en": 3448
   },
   {
    "qid": "Q5318076",
@@ -927,8 +1048,14 @@
    ],
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/Dwellers_in_the_Mirage",
-   "generi": [],
-   "visite_en": 3149,
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "fantasy_sf"
+   ],
+   "visite_en": 3156,
    "copertina": {
     "file": "Fantastic Novels cover September 1949.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Fantastic_Novels_cover_September_1949.jpg/500px-Fantastic_Novels_cover_September_1949.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -949,8 +1076,14 @@
    ],
    "pagine": 5,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Clue_in_the_Diary",
-   "generi": [],
-   "visite_en": 3137,
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "ragazzi"
+   ],
+   "visite_en": 3136,
    "copertina": {
     "file": "The Clue in the Diary (1932) front cover, 1945 printing.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/The_Clue_in_the_Diary_%281932%29_front_cover%2C_1945_printing.jpg/500px-The_Clue_in_the_Diary_%281932%29_front_cover%2C_1945_printing.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -972,7 +1105,7 @@
    "pagine": 9,
    "wiki_en": "https://en.wikipedia.org/wiki/Glory_(Vladimir_Nabokov_novel)",
    "generi": [],
-   "visite_en": 3124,
+   "visite_en": 3130,
    "copertina": {
     "file": "Podvig.jpg",
     "url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Podvig.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -994,7 +1127,7 @@
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Christmas_Pudding_(novel)",
    "generi": [],
-   "visite_en": 3116
+   "visite_en": 3120
   },
   {
    "qid": "Q3412860",
@@ -1008,8 +1141,14 @@
    ],
    "pagine": 6,
    "wiki_en": "https://en.wikipedia.org/wiki/Nancy%27s_Mysterious_Letter",
-   "generi": [],
-   "visite_en": 2728,
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "ragazzi"
+   ],
+   "visite_en": 2730,
    "copertina": {
     "file": "Nancy's Mysterious Letter (1932) front cover, first edition.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Nancy%27s_Mysterious_Letter_%281932%29_front_cover%2C_first_edition.jpg/500px-Nancy%27s_Mysterious_Letter_%281932%29_front_cover%2C_first_edition.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -1031,7 +1170,7 @@
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Black_Swan_(Sabatini_novel)",
    "generi": [],
-   "visite_en": 2622
+   "visite_en": 2624
   },
   {
    "qid": "Q6383214",
@@ -1046,7 +1185,7 @@
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Keeper_of_the_Keys",
    "generi": [],
-   "visite_en": 2597
+   "visite_en": 2601
   },
   {
    "qid": "Q7735448",
@@ -1060,8 +1199,14 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Fun_of_It",
-   "generi": [],
-   "visite_en": 2434
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "memorie"
+   ],
+   "visite_en": 2428
   },
   {
    "qid": "Q8000821",
@@ -1090,8 +1235,14 @@
    ],
    "pagine": 4,
    "wiki_en": "https://en.wikipedia.org/wiki/Tarzan_and_the_City_of_Gold",
-   "generi": [],
-   "visite_en": 2357
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "fantasy_sf"
+   ],
+   "visite_en": 2362
   },
   {
    "qid": "Q3818205",
@@ -1105,8 +1256,14 @@
    ],
    "pagine": 6,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Greek_Coffin_Mystery",
-   "generi": [],
-   "visite_en": 2352
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "giallo"
+   ],
+   "visite_en": 2359
   },
   {
    "qid": "Q5677810",
@@ -1121,7 +1278,7 @@
    "pagine": 6,
    "wiki_en": "https://en.wikipedia.org/wiki/Three_Drops_of_Blood",
    "generi": [],
-   "visite_en": 2339
+   "visite_en": 2340
   },
   {
    "qid": "Q3772100",
@@ -1136,7 +1293,7 @@
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Idiots_(short_story)",
    "generi": [],
-   "visite_en": 2211,
+   "visite_en": 2216,
    "copertina": {
     "file": "Joseph Conrad.PNG",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Joseph_Conrad.PNG/500px-Joseph_Conrad.PNG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -1158,7 +1315,7 @@
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Invitation_to_the_Waltz_(novel)",
    "generi": [],
-   "visite_en": 2133
+   "visite_en": 2141
   },
   {
    "qid": "Q5614417",
@@ -1173,7 +1330,7 @@
    "pagine": 4,
    "wiki_en": "https://en.wikipedia.org/wiki/Gub_Gub%27s_Book",
    "generi": [],
-   "visite_en": 2068
+   "visite_en": 2070
   },
   {
    "qid": "Q8058128",
@@ -1187,8 +1344,14 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Young_Fu_of_the_Upper_Yangtze",
-   "generi": [],
-   "visite_en": 1923
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "ragazzi"
+   ],
+   "visite_en": 1924
   },
   {
    "qid": "Q7797601",
@@ -1203,7 +1366,7 @@
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/Three_Loves",
    "generi": [],
-   "visite_en": 1878
+   "visite_en": 1894
   },
   {
    "qid": "Q7804791",
@@ -1218,7 +1381,7 @@
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Time,_Forward!_(novel)",
    "generi": [],
-   "visite_en": 1845
+   "visite_en": 1848
   },
   {
    "qid": "Q5910588",
@@ -1233,7 +1396,7 @@
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Hot_Water_(novel)",
    "generi": [],
-   "visite_en": 1832
+   "visite_en": 1836
   },
   {
    "qid": "Q8046351",
@@ -1248,7 +1411,7 @@
    "pagine": 4,
    "wiki_en": "https://en.wikipedia.org/wiki/Yaban",
    "generi": [],
-   "visite_en": 1802
+   "visite_en": 1805
   },
   {
    "qid": "Q7090080",
@@ -1263,7 +1426,7 @@
    "pagine": 4,
    "wiki_en": "https://en.wikipedia.org/wiki/Omenuko",
    "generi": [],
-   "visite_en": 1671
+   "visite_en": 1667
   },
   {
    "qid": "Q3794795",
@@ -1277,8 +1440,14 @@
    ],
    "pagine": 5,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Egyptian_Cross_Mystery",
-   "generi": [],
-   "visite_en": 1598
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "giallo"
+   ],
+   "visite_en": 1611
   },
   {
    "qid": "Q7765614",
@@ -1292,8 +1461,15 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Sowers_of_the_Thunder",
-   "generi": [],
-   "visite_en": 1410,
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "avventura",
+    "storico"
+   ],
+   "visite_en": 1412,
    "copertina": {
     "file": "Oriental stories 1932win.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Oriental_stories_1932win.jpg/500px-Oriental_stories_1932win.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -1315,7 +1491,7 @@
    "pagine": 4,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Return_(Conrad_short_story)",
    "generi": [],
-   "visite_en": 1357
+   "visite_en": 1361
   },
   {
    "qid": "Q7773771",
@@ -1329,8 +1505,14 @@
    ],
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Waxworks_Murder",
-   "generi": [],
-   "visite_en": 1309
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "giallo"
+   ],
+   "visite_en": 1327
   },
   {
    "qid": "Q1112060",
@@ -1344,8 +1526,14 @@
    ],
    "pagine": 6,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Madman_of_Bergerac",
-   "generi": [],
-   "visite_en": 1276
+   "lingua": {
+    "en": "French",
+    "it": "francese"
+   },
+   "generi": [
+    "giallo"
+   ],
+   "visite_en": 1280
   },
   {
    "qid": "Q7768564",
@@ -1359,8 +1547,15 @@
    ],
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Testament_of_Athammaus",
-   "generi": [],
-   "visite_en": 1256
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "fantasy_sf",
+    "horror"
+   ],
+   "visite_en": 1257
   },
   {
    "qid": "Q7759037",
@@ -1375,7 +1570,7 @@
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Queer_Story_of_Brownlow%27s_Newspaper",
    "generi": [],
-   "visite_en": 1200
+   "visite_en": 1201
   },
   {
    "qid": "Q13017091",
@@ -1420,7 +1615,7 @@
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Wild_Pilgrimage",
    "generi": [],
-   "visite_en": 1030
+   "visite_en": 1031
   },
   {
    "qid": "Q7208469",
@@ -1434,8 +1629,33 @@
    ],
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/Poison_in_Jest",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "giallo"
+   ],
+   "visite_en": 743
+  },
+  {
+   "qid": "Q5058034",
+   "titolo": "Celia en el colegio",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q5359012",
+     "nome": "Elena Fortún"
+    }
+   ],
+   "pagine": 3,
+   "wiki_en": "https://en.wikipedia.org/wiki/Celia_en_el_colegio",
+   "lingua": {
+    "en": "Spanish",
+    "it": "spagnolo"
+   },
    "generi": [],
-   "visite_en": 730
+   "visite_en": 700
   },
   {
    "qid": "Q1325013",
@@ -1449,8 +1669,14 @@
    ],
    "pagine": 8,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Saint-Fiacre_Affair",
-   "generi": [],
-   "visite_en": 666,
+   "lingua": {
+    "en": "French",
+    "it": "francese"
+   },
+   "generi": [
+    "giallo"
+   ],
+   "visite_en": 676,
    "copertina": {
     "file": "Paray-le-Frésil.JPG",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Paray-le-Fr%C3%A9sil.JPG/500px-Paray-le-Fr%C3%A9sil.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -1472,22 +1698,7 @@
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/Ursonate",
    "generi": [],
-   "visite_en": 664
-  },
-  {
-   "qid": "Q5058034",
-   "titolo": "Celia en el colegio",
-   "titolo_it": null,
-   "autori": [
-    {
-     "qid": "Q5359012",
-     "nome": "Elena Fortún"
-    }
-   ],
-   "pagine": 3,
-   "wiki_en": "https://en.wikipedia.org/wiki/Celia_en_el_colegio",
-   "generi": [],
-   "visite_en": 657
+   "visite_en": 668
   },
   {
    "qid": "Q110732464",
@@ -1502,7 +1713,7 @@
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Sudden_Death_(novel)",
    "generi": [],
-   "visite_en": 579
+   "visite_en": 581
   },
   {
    "qid": "Q16387178",
@@ -1517,7 +1728,7 @@
    "pagine": 4,
    "wiki_en": "https://en.wikipedia.org/wiki/Music_(short_story)",
    "generi": [],
-   "visite_en": 544
+   "visite_en": 547
   },
   {
    "qid": "Q17173648",
@@ -1547,22 +1758,7 @@
    "pagine": 4,
    "wiki_en": "https://en.wikipedia.org/wiki/Menino_de_engenho",
    "generi": [],
-   "visite_en": 521
-  },
-  {
-   "qid": "Q7656082",
-   "titolo": "Swift Rivers",
-   "titolo_it": null,
-   "autori": [
-    {
-     "qid": "Q5171168",
-     "nome": "Cornelia Meigs"
-    }
-   ],
-   "pagine": 2,
-   "wiki_en": "https://en.wikipedia.org/wiki/Swift_Rivers",
-   "generi": [],
-   "visite_en": 506
+   "visite_en": 524
   },
   {
    "qid": "Q23035603",
@@ -1576,8 +1772,14 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Laughing_in_the_Jungle",
-   "generi": [],
-   "visite_en": 466,
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "memorie"
+   ],
+   "visite_en": 470,
    "copertina": {
     "file": "Adamic.JPG",
     "url": "https://upload.wikimedia.org/wikipedia/commons/d/df/Adamic.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -1585,6 +1787,27 @@
     "licenza": "CC BY-SA 4.0",
     "autore": "Ribashevina"
    }
+  },
+  {
+   "qid": "Q7656082",
+   "titolo": "Swift Rivers",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q5171168",
+     "nome": "Cornelia Meigs"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/Swift_Rivers",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "storico"
+   ],
+   "visite_en": 468
   },
   {
    "qid": "Q16677418",
@@ -1614,7 +1837,7 @@
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Railroad_to_Freedom",
    "generi": [],
-   "visite_en": 455
+   "visite_en": 460
   },
   {
    "qid": "Q5271049",
@@ -1629,22 +1852,7 @@
    "pagine": 5,
    "wiki_en": "https://en.wikipedia.org/wiki/Dian_yang_Tak_Kunjung_Padam",
    "generi": [],
-   "visite_en": 454
-  },
-  {
-   "qid": "Q16385501",
-   "titolo": "Distant Lands",
-   "titolo_it": null,
-   "autori": [
-    {
-     "qid": "Q202537",
-     "nome": "Arkady Gaidar"
-    }
-   ],
-   "pagine": 4,
-   "wiki_en": "https://en.wikipedia.org/wiki/Distant_Lands",
-   "generi": [],
-   "visite_en": 418
+   "visite_en": 457
   },
   {
    "qid": "Q60785449",
@@ -1659,7 +1867,26 @@
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Christopher_Strong_(novel)",
    "generi": [],
-   "visite_en": 418
+   "visite_en": 420
+  },
+  {
+   "qid": "Q16385501",
+   "titolo": "Distant Lands",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q202537",
+     "nome": "Arkady Gaidar"
+    }
+   ],
+   "pagine": 4,
+   "wiki_en": "https://en.wikipedia.org/wiki/Distant_Lands",
+   "lingua": {
+    "en": "Russian",
+    "it": "russo"
+   },
+   "generi": [],
+   "visite_en": 419
   },
   {
    "qid": "Q8025166",
@@ -1711,7 +1938,7 @@
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Murder_by_an_Aristocrat_(novel)",
    "generi": [],
-   "visite_en": 352
+   "visite_en": 354
   },
   {
    "qid": "Q5098569",
@@ -1725,8 +1952,10 @@
    ],
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/Children_of_the_Soil",
-   "generi": [],
-   "visite_en": 348
+   "generi": [
+    "storico"
+   ],
+   "visite_en": 347
   },
   {
    "qid": "Q3210349",
@@ -1741,7 +1970,7 @@
    "pagine": 4,
    "wiki_en": "https://en.wikipedia.org/wiki/The_House_on_the_Dune_(novel)",
    "generi": [],
-   "visite_en": 336
+   "visite_en": 337
   },
   {
    "qid": "Q7099218",
@@ -1756,7 +1985,7 @@
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Orache_(short_story)",
    "generi": [],
-   "visite_en": 332
+   "visite_en": 333
   },
   {
    "qid": "Q96373014",
@@ -1771,22 +2000,7 @@
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Ballerina_(novel)",
    "generi": [],
-   "visite_en": 325
-  },
-  {
-   "qid": "Q86753954",
-   "titolo": "Evensong",
-   "titolo_it": null,
-   "autori": [
-    {
-     "qid": "Q4899427",
-     "nome": "Beverley Nichols"
-    }
-   ],
-   "pagine": 2,
-   "wiki_en": "https://en.wikipedia.org/wiki/Evensong_(novel)",
-   "generi": [],
-   "visite_en": 321
+   "visite_en": 330
   },
   {
    "qid": "Q18351196",
@@ -1800,6 +2014,25 @@
    ],
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Alicia_Deane",
+   "generi": [],
+   "visite_en": 327
+  },
+  {
+   "qid": "Q86753954",
+   "titolo": "Evensong",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q4899427",
+     "nome": "Beverley Nichols"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/Evensong_(novel)",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
    "generi": [],
    "visite_en": 321
   },
@@ -1831,7 +2064,7 @@
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Pertemuan_Jodoh",
    "generi": [],
-   "visite_en": 308
+   "visite_en": 311
   },
   {
    "qid": "Q23035584",
@@ -1861,7 +2094,28 @@
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Soldier_and_the_Gentlewoman",
    "generi": [],
-   "visite_en": 251
+   "visite_en": 253
+  },
+  {
+   "qid": "Q1885256",
+   "titolo": "The Flemish House",
+   "titolo_it": "La casa dei fiamminghi",
+   "autori": [
+    {
+     "qid": "Q128790",
+     "nome": "Georges Simenon"
+    }
+   ],
+   "pagine": 6,
+   "wiki_en": "https://en.wikipedia.org/wiki/The_Flemish_House",
+   "lingua": {
+    "en": "French",
+    "it": "francese"
+   },
+   "generi": [
+    "giallo"
+   ],
+   "visite_en": 232
   },
   {
    "qid": "Q17633276",
@@ -1879,21 +2133,6 @@
    "visite_en": 225
   },
   {
-   "qid": "Q1885256",
-   "titolo": "The Flemish House",
-   "titolo_it": "La casa dei fiamminghi",
-   "autori": [
-    {
-     "qid": "Q128790",
-     "nome": "Georges Simenon"
-    }
-   ],
-   "pagine": 6,
-   "wiki_en": "https://en.wikipedia.org/wiki/The_Flemish_House",
-   "generi": [],
-   "visite_en": 217
-  },
-  {
    "qid": "Q18392587",
    "titolo": "Hell's Doorway",
    "titolo_it": null,
@@ -1906,7 +2145,7 @@
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Hell%27s_Doorway",
    "generi": [],
-   "visite_en": 201
+   "visite_en": 204
   },
   {
    "qid": "Q3204486",
@@ -1920,8 +2159,14 @@
    ],
    "pagine": 6,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Shadow_Puppet",
-   "generi": [],
-   "visite_en": 200
+   "lingua": {
+    "en": "French",
+    "it": "francese"
+   },
+   "generi": [
+    "giallo"
+   ],
+   "visite_en": 202
   },
   {
    "qid": "Q5223407",
@@ -1936,7 +2181,7 @@
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Dark_Shanghai",
    "generi": [],
-   "visite_en": 191
+   "visite_en": 192
   },
   {
    "qid": "Q16999020",
@@ -1951,7 +2196,26 @@
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Night_of_Battle",
    "generi": [],
-   "visite_en": 190
+   "visite_en": 191
+  },
+  {
+   "qid": "Q7929510",
+   "titolo": "Vikings of the Gloves",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q207640",
+     "nome": "Robert E. Howard"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/Vikings_of_the_Gloves",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [],
+   "visite_en": 155
   },
   {
    "qid": "Q691326",
@@ -1974,21 +2238,6 @@
     "licenza": "Public domain",
     "autore": "Photographer not named"
    }
-  },
-  {
-   "qid": "Q7929510",
-   "titolo": "Vikings of the Gloves",
-   "titolo_it": null,
-   "autori": [
-    {
-     "qid": "Q207640",
-     "nome": "Robert E. Howard"
-    }
-   ],
-   "pagine": 2,
-   "wiki_en": "https://en.wikipedia.org/wiki/Vikings_of_the_Gloves",
-   "generi": [],
-   "visite_en": 154
   },
   {
    "qid": "Q7562673",
