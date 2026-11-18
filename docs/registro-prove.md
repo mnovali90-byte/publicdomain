@@ -232,3 +232,10 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - **Confronto con il sito** (170 righe con codice Wikidata ricavato dalla pagina Wikipedia): 65 nella lista principale (38%), 28 tra i «senza opere», 65 solo in «Tutti», 12 assenti (studiosi e saggisti che Wikidata non chiama scrittori: Klages, Febvre, Calamandrei, Soddy, Griaule…; Dakshinaranjan Mitra Majumder ha l'anno conteso 1956/1957).
 - **Al contrario:** dei 120 autori principali del sito, 77 sono nella lista di ChatGPT; tra i 30 più noti ne mancano solo 3 (Tartakower, Velimirović, John Emerson), che non sono soprattutto scrittori. La lista di riferimento prende bene i nomi importanti e meno bene i minori.
 - **Giudizio:** il sito ha quasi tutti (93% delle righe con codice), ma ne mostra nella lista principale poco più di un terzo; e la lista principale contiene anche chi non è uno scrittore (Tartakower, scacchista; Marie Laurencin, pittrice).
+
+### 18/11/2026 — Storico: logica dei dati allineata alle correzioni del sito
+- **Prima pubblicazione:** nella ricerca per periodo un'opera si prende solo con la sua data di pubblicazione più vecchia (stesso errore trovato sulle opere USA). Nella ricerca per autore era già così (la più vecchia tra le date).
+- **Più anni di morte:** si tiene il più tardo (prudente) e l'autore è segnato «morte incerta»; prima, nella ricerca per periodo, si teneva il primo trovato.
+- **Paesi alleati:** per gli autori morti dal 1900 si legge la cittadinanza; chi è di un paese alleato del Trattato di pace del 1947 è segnato, perché in Italia la protezione può durare di più.
+- **Effetto:** un'opera che con l'anno di morte più tardo non è libera da nessuna parte esce dallo Storico. I due segni nuovi entrano nei file della ricerca, per gli avvisi della pagina.
+- **Regole che la pagina dovrà applicare** (dai dati: anno della prima pubblicazione, anni di morte, segni): Spagna 80 anni per i morti prima del 1987; Regno Unito, regola del 2039 per le opere pubblicate dopo il 1989 di autori morti prima del 1969; avviso per «morte incerta» e, con l'Italia, per gli autori di paesi alleati.

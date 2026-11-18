@@ -24,7 +24,7 @@ from datetime import date, datetime, timedelta, timezone
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "scripts"))
 from opere import CLASSI, GENERI, get, qid, sparql, val  # noqa: E402
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from per_autore import semi, opere_per_autore, opere_anonime, libera_ue, libera_usa  # noqa: E402
+from per_autore import semi, opere_per_autore, opere_anonime, libera_ue, libera_usa, libera, info_autori  # noqa: E402
 
 UA = {"User-Agent": "PublicDomainRadar/1.0 (https://publicdomainradar.com; open data project)"}
 ANNO_A = int(os.environ.get("STORICO_ANNO_A", date.today().year - 96))   # 2026 -> 1930
@@ -73,6 +73,7 @@ def opere_periodo(da, a):
       VALUES ?c {{ {classi} }}
       {{ ?w wdt:P31 ?c }} UNION {{ ?w wdt:P31 wd:Q47461344; wdt:P7937 ?c }}
       ?w wdt:P577 ?d. FILTER(YEAR(?d)>={da} && YEAR(?d)<={a})
+      FILTER NOT EXISTS {{ ?w wdt:P577 ?d0 FILTER(?d0 < ?d) }}   # conta la PRIMA pubblicazione (18/11/2026)
       ?w wikibase:sitelinks ?sl. FILTER(?sl>=1)
       OPTIONAL {{ ?w wdt:P50 ?a. OPTIONAL {{ ?a wdt:P570 ?morte }} }}
       OPTIONAL {{ ?w rdfs:label ?wit FILTER(LANG(?wit)="it") }}
@@ -87,9 +88,10 @@ def opere_periodo(da, a):
                                "wiki_en": None, "wiki_it": None})
         if val(r, "a"):
             x = o["autori"].setdefault(qid(val(r, "a")), {"nome": val(r, "aLabel"), "morte": None})
-            if val(r, "morte") and not x["morte"]:
+            if val(r, "morte"):
                 m = re.match(r"-?(\d{4})", val(r, "morte"))
-                x["morte"] = int(m.group(1)) if m else None
+                if m and (x["morte"] is None or int(m.group(1)) > x["morte"]):
+                    x["morte"] = int(m.group(1))   # più anni di morte: si tiene il più tardo (prudente)
         if val(r, "en") and not o["wiki_en"]: o["wiki_en"] = val(r, "en")
         if val(r, "itw") and not o["wiki_it"]: o["wiki_it"] = val(r, "itw")
     res = []
@@ -226,16 +228,18 @@ def scrivi_ricerca(ops):
     autori = {}
     for o in ops:
         riga = [o["qid"], o["titolo"], o["titolo_it"] or "", o["anno"], o["pagine"],
-                [[a["qid"], a["nome"], a["morte"], 1 if a.get("antico") else 0] for a in o["autori"]]]
+                [[a["qid"], a["nome"], a["morte"], 1 if a.get("antico") else 0, a.get("morte_incerta", 0), a.get("alleato", 0)]
+                 for a in o["autori"]]]
         for k in chiavi_ricerca(o["titolo"]) | chiavi_ricerca(o["titolo_it"] or ""):
             lettere.setdefault(k, {"opere": [], "autori": []})["opere"].append(riga)
         for a in o["autori"]:
             x = autori.setdefault(a["qid"], {"qid": a["qid"], "nome": a["nome"], "morte": a["morte"], "n": 0,
-                                             "antico": 1 if a.get("antico") else 0})
+                                             "antico": 1 if a.get("antico") else 0,
+                                             "incerta": a.get("morte_incerta", 0), "alleato": a.get("alleato", 0)})
             x["n"] += 1
     for a in autori.values():
         for k in chiavi_ricerca(a["nome"], autore=True):
-            lettere.setdefault(k, {"opere": [], "autori": []})["autori"].append([a["qid"], a["nome"], a["morte"], a["n"], a["antico"]])
+            lettere.setdefault(k, {"opere": [], "autori": []})["autori"].append([a["qid"], a["nome"], a["morte"], a["n"], a["antico"], a["incerta"], a["alleato"]])
     peso = 0
     for k, d in lettere.items():
         d["opere"].sort(key=lambda r: -r[4])
@@ -314,6 +318,24 @@ def main():
     if mancanti:
         print(f"periodi ancora da scaricare ({len(mancanti)}): il prossimo giro riparte da qui")
         open(".storico_incompleto", "w").write(" ".join(mancanti))
+    # 1c) CONTROLLO SUGLI AUTORI (18/11/2026): tutti gli anni di morte e la cittadinanza, per gli autori morti dal 1900.
+    #     Più anni di morte: vale il più tardo e l'autore è segnato «morte_incerta»; cittadinanza di un paese alleato
+    #     (Trattato di pace con l'Italia, 1947): segnato «alleato», perché in Italia la protezione può durare di più.
+    #     Un'opera che con l'anno di morte più tardo non è più libera da nessuna parte esce dallo Storico.
+    da_controllare = sorted({a["qid"] for o in tutte.values() for a in o["autori"] if (a.get("morte") or 0) >= 1900})
+    info = info_autori(da_controllare, fine_budget + 15 * 60)
+    for o in tutte.values():
+        for a in o["autori"]:
+            x = info.get(a["qid"])
+            if not x:
+                continue
+            if x["morti"]:
+                a["morte"] = max(x["morti"])
+            a["morte_incerta"] = 1 if len(set(x["morti"])) > 1 else 0
+            a["alleato"] = x["alleato"]
+    prima_controllo = len(tutte)
+    tutte = {k: o for k, o in tutte.items() if libera(o)}
+    print(f"controllo autori: {len(info)} letti su {len(da_controllare)}; opere uscite perché non più libere: {prima_controllo - len(tutte)}")
     ops = sorted(tutte.values(), key=lambda o: (-o["pagine"], o["qid"]))
     if len(ops) < SOGLIA:
         print("ancora poche opere (%d): salvo i periodi scaricati, non scrivo la pagina" % len(ops)); return

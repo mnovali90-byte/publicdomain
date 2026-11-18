@@ -20,6 +20,10 @@ Come funziona:
    - Europa: tutti gli autori morti entro il 1955 (70 anni dopo la morte);
    - autori senza data di morte ma nati, o attivi, prima del 1800 (antichi).
    Il verdetto per ogni paese lo calcola la pagina da anno e morti, così resta giusto anche l'anno dopo.
+4. CONTROLLO SUGLI AUTORI (18/11/2026, stesse correzioni del resto del sito): per chi è morto dal 1900 si leggono tutti
+   gli anni di morte e la cittadinanza. Più anni di morte: vale il più tardo e l'autore è «morte_incerta»; cittadinanza
+   di un paese alleato del Trattato di pace del 1947: «alleato» (in Italia la protezione può durare di più).
+   L'anno di un'opera è sempre la PRIMA pubblicazione registrata.
 """
 import json, os, re, sys, time, urllib.parse
 from datetime import date
@@ -149,6 +153,52 @@ def opere_di(autori):
         o["autori"] = [a for a in o["autori"].values() if not re.fullmatch(r"Q\d+", a["nome"] or "")]
         res.append(o)
     return res
+
+
+# Potenze alleate e associate del Trattato di pace con l'Italia (1947, preambolo; Albania per adesione), con i nomi inglesi
+# che Wikidata dà alla cittadinanza (P27). Stessa lista di ALLEATI_1947 in index.html e scripts/pagine.py.
+ALLEATI_EN = {"United Kingdom", "United Kingdom of Great Britain and Ireland", "Kingdom of England", "Wales", "Scotland",
+              "United States", "United States of America", "Soviet Union", "Russian Empire", "Russian Soviet Federative Socialist Republic",
+              "Ukrainian Soviet Socialist Republic", "Byelorussian Soviet Socialist Republic", "Georgian Soviet Socialist Republic",
+              "Armenian Soviet Socialist Republic", "Azerbaijan Soviet Socialist Republic", "China", "Republic of China (1912–1949)",
+              "Republic of China", "France", "French Third Republic", "Australia", "Belgium", "Brazil", "Canada", "Czechoslovakia",
+              "First Czechoslovak Republic", "Ethiopia", "Ethiopian Empire", "Greece", "Kingdom of Greece", "India", "British Raj",
+              "Dominion of India", "Pakistan", "Netherlands", "Kingdom of the Netherlands", "New Zealand", "Poland",
+              "Second Polish Republic", "Polish People's Republic", "South Africa", "Union of South Africa", "Yugoslavia",
+              "Kingdom of Yugoslavia", "Kingdom of Serbs, Croats and Slovenes", "Federal People's Republic of Yugoslavia",
+              "Socialist Federal Republic of Yugoslavia", "Serbia", "Albania"}
+RINFRESCA_INFO = 30
+
+
+def info_autori(qids, budget_fine):
+    """Per ogni autore: tutti gli anni di morte (P570) e se ha la cittadinanza di un paese alleato (18/11/2026).
+    Cache in data/storico/autori_info.json (rifatta dopo 30 giorni). Se Wikidata non risponde, resta il dato vecchio."""
+    f = f"{CARTELLA}/autori_info.json"
+    try:
+        cache = json.load(open(f, encoding="utf8"))
+    except Exception:
+        cache = {}
+    oggi = date.today()
+    da_fare = [q for q in qids if q not in cache or (oggi - date.fromisoformat(cache[q]["d"])).days >= RINFRESCA_INFO]
+    for i in range(0, len(da_fare), 150):
+        if time.time() > budget_fine:
+            print(f"info autori: tempo finito, {len(da_fare) - i} da fare al prossimo giro")
+            break
+        v = " ".join("wd:" + q for q in da_fare[i:i + 150])
+        r = sparql_o_errore(f"""SELECT ?a (GROUP_CONCAT(DISTINCT STR(YEAR(?m)); separator="|") AS ?morti)
+          (GROUP_CONCAT(DISTINCT ?cl; separator="|") AS ?cit) WHERE {{ VALUES ?a {{ {v} }}
+          OPTIONAL {{ ?a wdt:P570 ?m }} OPTIONAL {{ ?a wdt:P27 ?c. ?c rdfs:label ?cl FILTER(LANG(?cl)="en") }} }} GROUP BY ?a""")
+        if r is None:
+            time.sleep(10)
+            continue
+        for x in r:
+            k = qid(val(x, "a"))
+            morti = sorted({int(y) for y in (val(x, "morti") or "").split("|") if re.fullmatch(r"-?\d+", y)})
+            cit = {c for c in (val(x, "cit") or "").split("|") if c}
+            cache[k] = {"d": oggi.isoformat(), "morti": morti, "alleato": 1 if cit & ALLEATI_EN else 0}
+        time.sleep(1)
+    json.dump(cache, open(f, "w", encoding="utf8"), separators=(",", ":"))
+    return {q: cache[q] for q in qids if q in cache}
 
 
 def libera_ue(o):
