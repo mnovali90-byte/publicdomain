@@ -276,7 +276,8 @@ def main():
             vecchio = json.load(open(f, encoding="utf8"))
         except Exception:
             pass
-        fresco = vecchio and (oggi - date.fromisoformat(vecchio["scaricato"])).days < RINFRESCA_GIORNI
+        # v2 (18/11/2026): l'anno è la PRIMA pubblicazione; i periodi scaricati prima si riscaricano
+        fresco = vecchio and vecchio.get("v") == 2 and (oggi - date.fromisoformat(vecchio["scaricato"])).days < RINFRESCA_GIORNI
         if not fresco and time.time() - inizio_wd < BUDGET_WIKIDATA * 60:
             lista = []
             for tentativo in range(3):          # Wikidata ogni tanto va in timeout: si riprova
@@ -286,7 +287,7 @@ def main():
                 time.sleep(20 * (tentativo + 1))
             print(nome, "opere:", len(lista), flush=True)
             if lista:
-                json.dump({"scaricato": oggi.isoformat(), "opere": lista}, open(f, "w", encoding="utf8"),
+                json.dump({"v": 2, "scaricato": oggi.isoformat(), "opere": lista}, open(f, "w", encoding="utf8"),
                           ensure_ascii=False, separators=(",", ":"))
                 vecchio = {"opere": lista}
             else:
