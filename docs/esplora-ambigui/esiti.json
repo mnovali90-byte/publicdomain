@@ -1,0 +1,165 @@
+{
+ "nota": "Giudizio a mano sulle prove di prove.json. Analisi esplorativa: le regole in produzione non cambiano.",
+ "autori": [
+  {
+   "n": 1,
+   "qid": "Q7274124",
+   "nome": "R. Williams Parry",
+   "esito": "irrisolto",
+   "scheda": null,
+   "prova": "due candidati («Parry, Richard Reed», «Parry, Rosanne»): nessuna fonte collegata per codice ha i loro titoli"
+  },
+  {
+   "n": 2,
+   "qid": "Q18535612",
+   "nome": "Robert Evans",
+   "esito": "irrisolto",
+   "scheda": null,
+   "prova": "7 candidati «Evans, R./Robert …»: nessun titolo torna; l'unica fonte è la Wikipedia gallese"
+  },
+  {
+   "n": 3,
+   "qid": "Q33110662",
+   "nome": "Juan María Oliver",
+   "esito": "irrisolto",
+   "scheda": null,
+   "prova": "unico candidato «Oliver, J. <omonimi non identificati>»: è SBN stesso a dire che la scheda raccoglie omonimi"
+  },
+  {
+   "n": 4,
+   "qid": "Q1265363",
+   "nome": "Duncan Campbell Scott",
+   "esito": "identificato",
+   "scheda": "TO0V080789",
+   "prova": "«The poems of Archibald Lampman» (1900) compare nella BnF (codice P268), nella DNB (GND P227), in Open Library (P648) e nella sua voce di Wikipedia"
+  },
+  {
+   "n": 5,
+   "qid": "Q11287168",
+   "nome": "Hong Sa-yong",
+   "esito": "irrisolto",
+   "scheda": null,
+   "prova": "candidati «Hong, David S.» e «Yong, S.»: nessun titolo torna"
+  },
+  {
+   "n": 6,
+   "qid": "Q10539526",
+   "nome": "Jan Voborník",
+   "esito": "irrisolto",
+   "scheda": null,
+   "prova": "unico candidato «Pasquin, John» (regista): arriva da un nome alternativo di Wikidata, nessun titolo torna"
+  },
+  {
+   "n": 7,
+   "qid": "Q18535891",
+   "nome": "Richard Griffith",
+   "esito": "irrisolto",
+   "scheda": null,
+   "prova": "«Griffith, Richard» (The movie stars, The film library): nessuna fonte collegata per codice ha questi titoli"
+  },
+  {
+   "n": 8,
+   "qid": "Q366715",
+   "nome": "David Shimoni",
+   "esito": "identificato",
+   "scheda": "LO1V312466",
+   "prova": "«Idylls» (1957) è tra le opere collegate al suo codice Open Library (P648)"
+  },
+  {
+   "n": 9,
+   "qid": "Q3157322",
+   "nome": "Jack Snow",
+   "esito": "irrisolto",
+   "scheda": null,
+   "prova": "tre «Snow, John …»: nessun titolo torna"
+  },
+  {
+   "n": 10,
+   "qid": "Q5642970",
+   "nome": "Hallie Erminie Rives",
+   "esito": "irrisolto",
+   "scheda": null,
+   "prova": "unico candidato «Wheeler, H. Brownell» (atlante medico), arrivato dal nome da sposata: nessun titolo torna"
+  },
+  {
+   "n": 11,
+   "qid": "Q4707865",
+   "nome": "Alan Sullivan",
+   "esito": "irrisolto",
+   "scheda": null,
+   "prova": "«Sullivan, Alan» (John Melly of Ethiopia, 1937): nessuna fonte collegata per codice ha il titolo; nel campione di sviluppo l'avevo segnato «altra persona» senza una fonte, da rivedere"
+  },
+  {
+   "n": 12,
+   "qid": "Q95435084",
+   "nome": "Jindřich Bedřich Heller",
+   "esito": "irrisolto",
+   "scheda": null,
+   "prova": "«Heller, J.» con Dejanice (anni 1880, prima della sua nascita nel 1891): data solo segnalata; nessun titolo torna"
+  },
+  {
+   "n": 13,
+   "qid": "Q16947489",
+   "nome": "Xavier Viura i Rius",
+   "esito": "irrisolto",
+   "scheda": null,
+   "prova": "«Rius, Xavier» (2008): nessun titolo torna"
+  },
+  {
+   "n": 14,
+   "qid": "Q18535623",
+   "nome": "J. O. Francis",
+   "esito": "irrisolto",
+   "scheda": null,
+   "prova": "5 «Francis, J…»: nessun titolo torna"
+  },
+  {
+   "n": 15,
+   "qid": "Q926338",
+   "nome": "E. C. Vivian",
+   "esito": "irrisolto",
+   "scheda": null,
+   "prova": "candidati dai suoi pseudonimi («Mann, J.», «Walton, A.»): nessun titolo torna con le 14 opere BnF né con le 17 di Wikidata"
+  },
+  {
+   "n": 16,
+   "qid": "Q101529",
+   "nome": "Karl M. Baer",
+   "esito": "irrisolto",
+   "scheda": null,
+   "prova": "«Baer, Karl Ernst»: il confronto automatico con Wikipedia dà un titolo che torna, ma è FALSO: la voce cita Karl Ernst von Baer (1792-1876); le opere del 1835-37 sono prima della sua nascita"
+  },
+  {
+   "n": 17,
+   "qid": "Q18576661",
+   "nome": "Frances Mabel Robinson",
+   "esito": "irrisolto",
+   "scheda": null,
+   "prova": "20 candidati «Robinson, F…»: nessun titolo torna"
+  },
+  {
+   "n": 18,
+   "qid": "Q6169722",
+   "nome": "Yamandú Rodríguez",
+   "esito": "identificato",
+   "scheda": "CSAV033853",
+   "prova": "«El matrero» compare tra le notizie collegate al suo codice BNE (P950) e nella sua voce di Wikipedia"
+  },
+  {
+   "n": 19,
+   "qid": "Q1137066",
+   "nome": "Countee Cullen",
+   "esito": "irrisolto",
+   "scheda": null,
+   "prova": "«Cullen, Countee» (Sette poeti negri, 1946, antologia): nome rarissimo, ma nessuna fonte collegata per codice ha il titolo dell'antologia italiana"
+  },
+  {
+   "n": 20,
+   "qid": "Q3631340",
+   "nome": "Bhai Vir Singh",
+   "esito": "irrisolto",
+   "scheda": null,
+   "prova": "4 «Singh, B…»: nessun titolo torna"
+  }
+ ]
+}
