@@ -22,7 +22,7 @@ import pathlib
 import sys
 
 DATA = pathlib.Path(__file__).resolve().parent.parent / "data"
-CATALOGHI = ("sbn_it", "bnf_fr", "bne_es", "bl_en")
+CATALOGHI = ("sbn_it", "bnf_fr", "bne_es", "bl_en", "loc_en")
 
 
 def problemi(v, anno_oggi):

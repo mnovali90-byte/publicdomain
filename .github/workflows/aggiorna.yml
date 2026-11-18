@@ -59,6 +59,12 @@ jobs:
         env:
           BUDGET_MINUTI_ALMA: "30"
         run: python scripts/alma.py
+      - name: Conta le edizioni in inglese negli USA (Library of Congress)
+        # dato accessorio: se fallisce, il resto viene salvato comunque
+        continue-on-error: true
+        env:
+          BUDGET_MINUTI_LOC: "30"
+        run: python scripts/loc.py
       - name: Opere in pubblico dominio negli USA (Wikidata, Wikipedia, Commons)
         # dato accessorio: se fallisce, il resto viene salvato comunque
         continue-on-error: true
