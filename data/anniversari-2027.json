@@ -1406,41 +1406,6 @@
    }
   },
   {
-   "tipo": "prima edizione",
-   "qid": "Q2222",
-   "nome": "Uncle Tom's Cabin",
-   "it": "La capanna dello zio Tom",
-   "desc": "1852 novel by Harriet Beecher Stowe",
-   "autore": "Harriet Beecher Stowe",
-   "autore_qid": "Q102513",
-   "anno": 1852,
-   "anni": 175,
-   "pagine": 71,
-   "mese": 3,
-   "giorno": 20,
-   "fonte_data": "wikidata",
-   "scheda": {
-    "it": {
-     "desc": "romanzo di Harriet Beecher Stowe",
-     "generi": [
-      "romanzo d'appendice"
-     ],
-     "lingua": "inglese",
-     "titolo_orig": "Uncle Tom's Cabin; or, Life Among the Lowly",
-     "wiki": "https://it.wikipedia.org/wiki/La_capanna_dello_zio_Tom"
-    },
-    "en": {
-     "desc": "1852 novel by Harriet Beecher Stowe",
-     "generi": [
-      "serialized fiction"
-     ],
-     "lingua": "English",
-     "titolo_orig": "Uncle Tom's Cabin; or, Life Among the Lowly",
-     "wiki": "https://en.wikipedia.org/wiki/Uncle_Tom%27s_Cabin"
-    }
-   }
-  },
-  {
    "tipo": "nascita",
    "qid": "Q130779",
    "nome": "Kim Stanley Robinson",
