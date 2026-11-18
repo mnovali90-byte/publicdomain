@@ -430,8 +430,8 @@ def scheda_statica(a, lang, bd):
     elif g and g.get("trovato"):
         box = lambda num, et: f'<div class="ed-box"><b>{migliaia(num, lang)}</b><span>{esc(et)}</span></div>'
         ult = f" · {T('più recente con anno certo:', 'latest with a certain year:')} {g['ultimo']}" if g.get("ultimo") else ""
-        nota = (T("Registrazioni bibliografiche in italiano collegate all'autore nel catalogo SBN, comprese ristampe e antologie. Per ora comprendono anche altre collaborazioni (traduzioni, curatele, prefazioni), non solo i testi di cui è autore.", "")
-                if it else "Bibliographic records in English linked to the author in the British Library catalogue, searched by surname and years of birth and death: some records catalogued differently may be missed. For now they also include other contributions (translations, editing, prefaces).")
+        nota = (T("Registrazioni bibliografiche in italiano collegate all'autore nel catalogo SBN, comprese ristampe e antologie. Comprendono tutte le pubblicazioni collegate alla persona, anche quelle in cui ha collaborato (traduzioni, curatele, prefazioni), non solo i libri scritti da lei: è una misura di quanto è presente nel catalogo.", "")
+                if it else "Bibliographic records in English linked to the author in the British Library catalogue, searched by surname and years of birth and death: some records catalogued differently may be missed. They include every publication linked to the person, including those they contributed to (translations, editing, prefaces), not only books they wrote: it measures how present they are in the catalogue.")
         if it and g.get("metodo") == "nome":
             nota += " Autore riconosciuto solo dal nome: il conteggio può essere impreciso."
         elif it and g.get("metodo") == "nome_con_prova":
