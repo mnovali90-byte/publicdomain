@@ -5,34 +5,6 @@
  "fonte": "Wikidata (CC0), Wikipedia, Wikimedia Commons",
  "opere": [
   {
-   "qid": "Q191949",
-   "titolo": "Brave New World",
-   "titolo_it": "Il mondo nuovo",
-   "autori": [
-    {
-     "qid": "Q81447",
-     "nome": "Aldous Huxley"
-    }
-   ],
-   "pagine": 74,
-   "wiki_en": "https://en.wikipedia.org/wiki/Brave_New_World",
-   "lingua": {
-    "en": "English",
-    "it": "inglese"
-   },
-   "generi": [
-    "fantasy_sf"
-   ],
-   "visite_en": 932205,
-   "copertina": {
-    "file": "Giveaway von Pinguin Books für Brave New World (cropped).jpg",
-    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Giveaway_von_Pinguin_Books_f%C3%BCr_Brave_New_World_%28cropped%29.jpg/500px-Giveaway_von_Pinguin_Books_f%C3%BCr_Brave_New_World_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Giveaway_von_Pinguin_Books_f%C3%BCr_Brave_New_World_%28cropped%29.jpg",
-    "licenza": "CC BY-SA 4.0",
-    "autore": "Wöcki"
-   }
-  },
-  {
    "qid": "Q7173181",
    "titolo": "Little House in the Big Woods",
    "titolo_it": null,
@@ -51,7 +23,7 @@
    "generi": [
     "ragazzi"
    ],
-   "visite_en": 109153
+   "visite_en": 109134
   },
   {
    "qid": "Q774233",
@@ -72,7 +44,7 @@
    "generi": [
     "memorie"
    ],
-   "visite_en": 84908,
+   "visite_en": 84898,
    "copertina": {
     "file": "Journey to the End of the Night 1932.jpg",
     "url": "https://upload.wikimedia.org/wikipedia/commons/5/59/Journey_to_the_End_of_the_Night_1932.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -100,7 +72,7 @@
    "generi": [
     "storico"
    ],
-   "visite_en": 78770,
+   "visite_en": 78758,
    "copertina": {
     "file": "Robert Musil - Der Mann ohne Eigenschaften, 1930.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Robert_Musil_-_Der_Mann_ohne_Eigenschaften%2C_1930.jpg/500px-Robert_Musil_-_Der_Mann_ohne_Eigenschaften%2C_1930.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -128,7 +100,7 @@
    "generi": [
     "horror"
    ],
-   "visite_en": 60784,
+   "visite_en": 60757,
    "copertina": {
     "file": "Light in August (1932 dust jacket cover).jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Light_in_August_%281932_dust_jacket_cover%29.jpg/500px-Light_in_August_%281932_dust_jacket_cover%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -156,7 +128,7 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 56338
+   "visite_en": 56330
   },
   {
    "qid": "Q5142221",
@@ -177,7 +149,7 @@
    "generi": [
     "satira"
    ],
-   "visite_en": 47260
+   "visite_en": 47252
   },
   {
    "qid": "Q7727278",
@@ -196,7 +168,7 @@
     "it": "tedesco"
    },
    "generi": [],
-   "visite_en": 40392
+   "visite_en": 40395
   },
   {
    "qid": "Q934396",
@@ -215,7 +187,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 40238
+   "visite_en": 40220
   },
   {
    "qid": "Q610428",
@@ -236,7 +208,7 @@
    "generi": [
     "storico"
    ],
-   "visite_en": 39414,
+   "visite_en": 39410,
    "copertina": {
     "file": "Joseph Roth Radetzkymarsch 1932.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Joseph_Roth_Radetzkymarsch_1932.jpg/500px-Joseph_Roth_Radetzkymarsch_1932.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -262,7 +234,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 36561,
+   "visite_en": 36556,
    "copertina": {
     "file": "Heming Way.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Heming_Way.jpg/500px-Heming_Way.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -288,7 +260,7 @@
     "it": "russo"
    },
    "generi": [],
-   "visite_en": 36001,
+   "visite_en": 35995,
    "copertina": {
     "file": "RUB 95 (Leipzig, 1984, 23.Auflage) - Ostrowski, Wie der Stahl.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/RUB_95_%28Leipzig%2C_1984%2C_23.Auflage%29_-_Ostrowski%2C_Wie_der_Stahl.jpg/500px-RUB_95_%28Leipzig%2C_1984%2C_23.Auflage%29_-_Ostrowski%2C_Wie_der_Stahl.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -314,7 +286,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 23681
+   "visite_en": 23669
   },
   {
    "qid": "Q1955781",
@@ -335,7 +307,7 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 22520
+   "visite_en": 22525
   },
   {
    "qid": "Q2512207",
@@ -356,7 +328,7 @@
    "generi": [
     "fantasy_sf"
    ],
-   "visite_en": 22458
+   "visite_en": 22453
   },
   {
    "qid": "Q1900478",
@@ -381,7 +353,7 @@
    "generi": [
     "storico"
    ],
-   "visite_en": 20522
+   "visite_en": 20518
   },
   {
    "qid": "Q5264340",
@@ -400,7 +372,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 18647
+   "visite_en": 18646
   },
   {
    "qid": "Q17036247",
@@ -419,7 +391,7 @@
     "it": "sanscrito"
    },
    "generi": [],
-   "visite_en": 18169
+   "visite_en": 18165
   },
   {
    "qid": "Q3655833",
@@ -438,7 +410,7 @@
     "it": "lingua scots"
    },
    "generi": [],
-   "visite_en": 17345
+   "visite_en": 17342
   },
   {
    "qid": "Q370698",
@@ -457,7 +429,7 @@
     "it": "tedesco"
    },
    "generi": [],
-   "visite_en": 16247
+   "visite_en": 16240
   },
   {
    "qid": "Q751574",
@@ -478,7 +450,7 @@
    "generi": [
     "ragazzi"
    ],
-   "visite_en": 15303
+   "visite_en": 15304
   },
   {
    "qid": "Q257144",
@@ -497,7 +469,7 @@
     "it": "inglese americano"
    },
    "generi": [],
-   "visite_en": 12269
+   "visite_en": 12249
   },
   {
    "qid": "Q2182784",
@@ -518,7 +490,7 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 11398
+   "visite_en": 11368
   },
   {
    "qid": "Q1529809",
@@ -537,7 +509,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 9981
+   "visite_en": 9974
   },
   {
    "qid": "Q20657367",
@@ -556,7 +528,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 9176
+   "visite_en": 9175
   },
   {
    "qid": "Q6372683",
@@ -594,7 +566,7 @@
     "it": "tedesco"
    },
    "generi": [],
-   "visite_en": 8566
+   "visite_en": 8562
   },
   {
    "qid": "Q2614387",
@@ -623,25 +595,6 @@
    }
   },
   {
-   "qid": "Q7562273",
-   "titolo": "Sons",
-   "titolo_it": null,
-   "autori": [
-    {
-     "qid": "Q80900",
-     "nome": "Pearl S. Buck"
-    }
-   ],
-   "pagine": 5,
-   "wiki_en": "https://en.wikipedia.org/wiki/Sons_(novel)",
-   "lingua": {
-    "en": "English",
-    "it": "inglese"
-   },
-   "generi": [],
-   "visite_en": 8184
-  },
-  {
    "qid": "Q357328",
    "titolo": "Saint Joan of the Stockyards",
    "titolo_it": "Santa Giovanna dei Macelli",
@@ -658,7 +611,7 @@
     "it": "tedesco"
    },
    "generi": [],
-   "visite_en": 8183,
+   "visite_en": 8182,
    "copertina": {
     "file": "Carola Neher als 'Johanna' - Karl Schrecker, 1930.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Carola_Neher_als_%27Johanna%27_-_Karl_Schrecker%2C_1930.jpg/500px-Carola_Neher_als_%27Johanna%27_-_Karl_Schrecker%2C_1930.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -666,6 +619,25 @@
     "licenza": "Public domain",
     "autore": "Karl Schrecker (1885-1935)"
    }
+  },
+  {
+   "qid": "Q7562273",
+   "titolo": "Sons",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q80900",
+     "nome": "Pearl S. Buck"
+    }
+   ],
+   "pagine": 5,
+   "wiki_en": "https://en.wikipedia.org/wiki/Sons_(novel)",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [],
+   "visite_en": 8180
   },
   {
    "qid": "Q1192235",
@@ -686,7 +658,7 @@
    "generi": [
     "saggio"
    ],
-   "visite_en": 7644
+   "visite_en": 7641
   },
   {
    "qid": "Q5216075",
@@ -705,7 +677,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 7195
+   "visite_en": 7200
   },
   {
    "qid": "Q17060239",
@@ -748,7 +720,7 @@
    "generi": [
     "memorie"
    ],
-   "visite_en": 6988,
+   "visite_en": 6985,
    "copertina": {
     "file": "Louise Elisabeth Vigée-Lebrun - Marie-Antoinette dit « à la Rose » - Google Art Project.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Louise_Elisabeth_Vig%C3%A9e-Lebrun_-_Marie-Antoinette_dit_%C2%AB_%C3%A0_la_Rose_%C2%BB_-_Google_Art_Project.jpg/500px-Louise_Elisabeth_Vig%C3%A9e-Lebrun_-_Marie-Antoinette_dit_%C2%AB_%C3%A0_la_Rose_%C2%BB_-_Google_Art_Project.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -777,7 +749,7 @@
     "fantasy_sf",
     "horror"
    ],
-   "visite_en": 6962
+   "visite_en": 6963
   },
   {
    "qid": "Q1171410",
@@ -796,7 +768,7 @@
     "it": "tedesco"
    },
    "generi": [],
-   "visite_en": 5918
+   "visite_en": 5913
   },
   {
    "qid": "Q7745219",
@@ -858,7 +830,7 @@
    "generi": [
     "fantasy_sf"
    ],
-   "visite_en": 5512
+   "visite_en": 5497
   },
   {
    "qid": "Q8036886",
@@ -877,7 +849,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 5416
+   "visite_en": 5417
   },
   {
    "qid": "Q5278419",
@@ -900,7 +872,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 5330,
+   "visite_en": 5327,
    "copertina": {
     "file": "Dinner-at-Eight-FE.jpg",
     "url": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Dinner-at-Eight-FE.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -926,7 +898,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 5298
+   "visite_en": 5300
   },
   {
    "qid": "Q6165398",
@@ -947,7 +919,7 @@
    "generi": [
     "poesia"
    ],
-   "visite_en": 5245
+   "visite_en": 5240
   },
   {
    "qid": "Q3791139",
@@ -968,7 +940,7 @@
    "generi": [
     "fantasy_sf"
    ],
-   "visite_en": 5189,
+   "visite_en": 5186,
    "copertina": {
     "file": "Pirates of Venus frontispiece.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Pirates_of_Venus_frontispiece.jpg/500px-Pirates_of_Venus_frontispiece.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -996,7 +968,7 @@
    "generi": [
     "storico"
    ],
-   "visite_en": 5110
+   "visite_en": 5109
   },
   {
    "qid": "Q7173756",
@@ -1115,7 +1087,7 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 3914
+   "visite_en": 3917
   },
   {
    "qid": "Q7758787",
@@ -1134,7 +1106,7 @@
     "it": "francese"
    },
    "generi": [],
-   "visite_en": 3863
+   "visite_en": 3853
   },
   {
    "qid": "Q5872036",
@@ -1148,7 +1120,7 @@
     "it": "tedesco"
    },
    "generi": [],
-   "visite_en": 3454
+   "visite_en": 3452
   },
   {
    "qid": "Q21162245",
@@ -1167,7 +1139,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 3435
+   "visite_en": 3428
   },
   {
    "qid": "Q5318076",
@@ -1188,7 +1160,7 @@
    "generi": [
     "fantasy_sf"
    ],
-   "visite_en": 3149,
+   "visite_en": 3145,
    "copertina": {
     "file": "Fantastic Novels cover September 1949.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Fantastic_Novels_cover_September_1949.jpg/500px-Fantastic_Novels_cover_September_1949.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -1216,7 +1188,7 @@
    "generi": [
     "ragazzi"
    ],
-   "visite_en": 3134,
+   "visite_en": 3135,
    "copertina": {
     "file": "The Clue in the Diary (1932) front cover, 1945 printing.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/The_Clue_in_the_Diary_%281932%29_front_cover%2C_1945_printing.jpg/500px-The_Clue_in_the_Diary_%281932%29_front_cover%2C_1945_printing.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -1242,7 +1214,7 @@
     "it": "russo"
    },
    "generi": [],
-   "visite_en": 3124,
+   "visite_en": 3116,
    "copertina": {
     "file": "Podvig.jpg",
     "url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Podvig.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -1268,7 +1240,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 3118
+   "visite_en": 3115
   },
   {
    "qid": "Q3412860",
@@ -1289,7 +1261,7 @@
    "generi": [
     "ragazzi"
    ],
-   "visite_en": 2728,
+   "visite_en": 2727,
    "copertina": {
     "file": "Nancy's Mysterious Letter (1932) front cover, first edition.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Nancy%27s_Mysterious_Letter_%281932%29_front_cover%2C_first_edition.jpg/500px-Nancy%27s_Mysterious_Letter_%281932%29_front_cover%2C_first_edition.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -1315,7 +1287,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 2622
+   "visite_en": 2614
   },
   {
    "qid": "Q6383214",
@@ -1334,7 +1306,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 2597
+   "visite_en": 2591
   },
   {
    "qid": "Q7735448",
@@ -1355,7 +1327,7 @@
    "generi": [
     "memorie"
    ],
-   "visite_en": 2434
+   "visite_en": 2432
   },
   {
    "qid": "Q8000821",
@@ -1374,7 +1346,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 2391
+   "visite_en": 2390
   },
   {
    "qid": "Q15032732",
@@ -1395,7 +1367,7 @@
    "generi": [
     "fantasy_sf"
    ],
-   "visite_en": 2359
+   "visite_en": 2356
   },
   {
    "qid": "Q3818205",
@@ -1416,7 +1388,7 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 2353
+   "visite_en": 2354
   },
   {
    "qid": "Q5677810",
@@ -1435,7 +1407,7 @@
     "it": "persiano"
    },
    "generi": [],
-   "visite_en": 2339
+   "visite_en": 2337
   },
   {
    "qid": "Q3772100",
@@ -1480,7 +1452,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 2133
+   "visite_en": 2123
   },
   {
    "qid": "Q5614417",
@@ -1499,7 +1471,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 2068
+   "visite_en": 2065
   },
   {
    "qid": "Q8058128",
@@ -1539,7 +1511,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 1878
+   "visite_en": 1873
   },
   {
    "qid": "Q7804791",
@@ -1558,7 +1530,7 @@
     "it": "russo"
    },
    "generi": [],
-   "visite_en": 1845
+   "visite_en": 1844
   },
   {
    "qid": "Q5910588",
@@ -1577,7 +1549,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 1832
+   "visite_en": 1831
   },
   {
    "qid": "Q8046351",
@@ -1596,7 +1568,7 @@
     "it": "turco"
    },
    "generi": [],
-   "visite_en": 1802
+   "visite_en": 1801
   },
   {
    "qid": "Q7090080",
@@ -1615,7 +1587,7 @@
     "it": "igbo"
    },
    "generi": [],
-   "visite_en": 1671
+   "visite_en": 1672
   },
   {
    "qid": "Q3794795",
@@ -1636,7 +1608,7 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 1600
+   "visite_en": 1594
   },
   {
    "qid": "Q7765614",
@@ -1684,7 +1656,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 1357
+   "visite_en": 1353
   },
   {
    "qid": "Q7773771",
@@ -1705,7 +1677,7 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 1309
+   "visite_en": 1301
   },
   {
    "qid": "Q1112060",
@@ -1726,7 +1698,7 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 1276
+   "visite_en": 1274
   },
   {
    "qid": "Q7768564",
@@ -1748,7 +1720,7 @@
     "fantasy_sf",
     "horror"
    ],
-   "visite_en": 1255
+   "visite_en": 1256
   },
   {
    "qid": "Q7759037",
@@ -1767,7 +1739,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 1199
+   "visite_en": 1200
   },
   {
    "qid": "Q13017091",
@@ -1786,7 +1758,7 @@
     "it": "thailandese"
    },
    "generi": [],
-   "visite_en": 1139
+   "visite_en": 1137
   },
   {
    "qid": "Q6925288",
@@ -1805,7 +1777,7 @@
     "it": "inglese americano"
    },
    "generi": [],
-   "visite_en": 1071
+   "visite_en": 1070
   },
   {
    "qid": "Q17151836",
@@ -1841,7 +1813,7 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 730
+   "visite_en": 720
   },
   {
    "qid": "Q735269",
@@ -1856,7 +1828,7 @@
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/Ursonate",
    "generi": [],
-   "visite_en": 668
+   "visite_en": 663
   },
   {
    "qid": "Q1325013",
@@ -1877,7 +1849,7 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 666,
+   "visite_en": 658,
    "copertina": {
     "file": "Paray-le-Frésil.JPG",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Paray-le-Fr%C3%A9sil.JPG/500px-Paray-le-Fr%C3%A9sil.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -1903,7 +1875,7 @@
     "it": "spagnolo"
    },
    "generi": [],
-   "visite_en": 657
+   "visite_en": 612
   },
   {
    "qid": "Q110732464",
@@ -1922,26 +1894,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 579
-  },
-  {
-   "qid": "Q16387178",
-   "titolo": "Music",
-   "titolo_it": null,
-   "autori": [
-    {
-     "qid": "Q36591",
-     "nome": "Vladimir Nabokov"
-    }
-   ],
-   "pagine": 4,
-   "wiki_en": "https://en.wikipedia.org/wiki/Music_(short_story)",
-   "lingua": {
-    "en": "Russian",
-    "it": "russo"
-   },
-   "generi": [],
-   "visite_en": 544
+   "visite_en": 576
   },
   {
    "qid": "Q17173648",
@@ -1962,7 +1915,7 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 540
+   "visite_en": 539
   },
   {
    "qid": "Q6817094",
@@ -1981,7 +1934,7 @@
     "it": "portoghese"
    },
    "generi": [],
-   "visite_en": 522
+   "visite_en": 520
   },
   {
    "qid": "Q7656082",
@@ -2002,7 +1955,26 @@
    "generi": [
     "storico"
    ],
-   "visite_en": 507
+   "visite_en": 506
+  },
+  {
+   "qid": "Q16677418",
+   "titolo": "The Solitude of Compassion",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q177411",
+     "nome": "Jean Giono"
+    }
+   ],
+   "pagine": 3,
+   "wiki_en": "https://en.wikipedia.org/wiki/The_Solitude_of_Compassion",
+   "lingua": {
+    "en": "French",
+    "it": "francese"
+   },
+   "generi": [],
+   "visite_en": 461
   },
   {
    "qid": "Q23035603",
@@ -2023,7 +1995,7 @@
    "generi": [
     "memorie"
    ],
-   "visite_en": 466,
+   "visite_en": 460,
    "copertina": {
     "file": "Adamic.JPG",
     "url": "https://upload.wikimedia.org/wikipedia/commons/d/df/Adamic.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -2031,25 +2003,6 @@
     "licenza": "CC BY-SA 4.0",
     "autore": "Ribashevina"
    }
-  },
-  {
-   "qid": "Q16677418",
-   "titolo": "The Solitude of Compassion",
-   "titolo_it": null,
-   "autori": [
-    {
-     "qid": "Q177411",
-     "nome": "Jean Giono"
-    }
-   ],
-   "pagine": 3,
-   "wiki_en": "https://en.wikipedia.org/wiki/The_Solitude_of_Compassion",
-   "lingua": {
-    "en": "French",
-    "it": "francese"
-   },
-   "generi": [],
-   "visite_en": 462
   },
   {
    "qid": "Q7759291",
@@ -2083,26 +2036,7 @@
     "it": "indonesiano"
    },
    "generi": [],
-   "visite_en": 454
-  },
-  {
-   "qid": "Q16385501",
-   "titolo": "Distant Lands",
-   "titolo_it": null,
-   "autori": [
-    {
-     "qid": "Q202537",
-     "nome": "Arkady Gaidar"
-    }
-   ],
-   "pagine": 4,
-   "wiki_en": "https://en.wikipedia.org/wiki/Distant_Lands",
-   "lingua": {
-    "en": "Russian",
-    "it": "russo"
-   },
-   "generi": [],
-   "visite_en": 419
+   "visite_en": 452
   },
   {
    "qid": "Q60785449",
@@ -2161,7 +2095,7 @@
     "it": "spagnolo"
    },
    "generi": [],
-   "visite_en": 415,
+   "visite_en": 413,
    "copertina": {
     "file": "El amor brujo portada 1932.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/El_amor_brujo_portada_1932.jpg/500px-El_amor_brujo_portada_1932.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -2187,7 +2121,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 352
+   "visite_en": 351
   },
   {
    "qid": "Q5098569",
@@ -2204,7 +2138,7 @@
    "generi": [
     "storico"
    ],
-   "visite_en": 348
+   "visite_en": 346
   },
   {
    "qid": "Q3210349",
@@ -2242,7 +2176,7 @@
     "it": "russo"
    },
    "generi": [],
-   "visite_en": 332
+   "visite_en": 328
   },
   {
    "qid": "Q96373014",
@@ -2262,25 +2196,6 @@
    },
    "generi": [],
    "visite_en": 325
-  },
-  {
-   "qid": "Q18351196",
-   "titolo": "Alicia Deane",
-   "titolo_it": null,
-   "autori": [
-    {
-     "qid": "Q5321676",
-     "nome": "E. V. Timms"
-    }
-   ],
-   "pagine": 2,
-   "wiki_en": "https://en.wikipedia.org/wiki/Alicia_Deane",
-   "lingua": {
-    "en": "English",
-    "it": "inglese"
-   },
-   "generi": [],
-   "visite_en": 321
   },
   {
    "qid": "Q86753954",
@@ -2318,7 +2233,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 321
+   "visite_en": 320
   },
   {
    "qid": "Q3237799",
@@ -2339,7 +2254,7 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 315
+   "visite_en": 313
   },
   {
    "qid": "Q7170795",
@@ -2377,7 +2292,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 283
+   "visite_en": 280
   },
   {
    "qid": "Q29379121",
@@ -2396,7 +2311,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 251
+   "visite_en": 249
   },
   {
    "qid": "Q17633276",
@@ -2411,7 +2326,7 @@
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Multiple_States_of_Being",
    "generi": [],
-   "visite_en": 225
+   "visite_en": 224
   },
   {
    "qid": "Q1885256",
@@ -2432,7 +2347,7 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 217
+   "visite_en": 210
   },
   {
    "qid": "Q18392587",
@@ -2451,7 +2366,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 201
+   "visite_en": 200
   },
   {
    "qid": "Q3204486",
@@ -2472,7 +2387,7 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 200
+   "visite_en": 198
   },
   {
    "qid": "Q5223407",
@@ -2491,7 +2406,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 191
+   "visite_en": 192
   },
   {
    "qid": "Q16999020",
@@ -2510,7 +2425,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 189
+   "visite_en": 190
   },
   {
    "qid": "Q691326",
@@ -2557,7 +2472,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 154
+   "visite_en": 153
   },
   {
    "qid": "Q7562673",
@@ -2605,6 +2520,28 @@
     "licenza": "Public domain",
     "autore": "André Mare"
    }
+  },
+  {
+   "qid": "Q191949",
+   "titolo": "Brave New World",
+   "titolo_it": "Il mondo nuovo",
+   "autori": [
+    {
+     "qid": "Q81447",
+     "nome": "Aldous Huxley"
+    }
+   ],
+   "pagine": 74,
+   "wiki_en": "https://en.wikipedia.org/wiki/Brave_New_World",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "fantasy_sf"
+   ],
+   "visite_en": null,
+   "copertina": null
   },
   {
    "qid": "Q4367932",
@@ -2676,6 +2613,44 @@
     "licenza": "CC BY 4.0",
     "autore": "Jakob Khalip"
    }
+  },
+  {
+   "qid": "Q16385501",
+   "titolo": "Distant Lands",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q202537",
+     "nome": "Arkady Gaidar"
+    }
+   ],
+   "pagine": 4,
+   "wiki_en": "https://en.wikipedia.org/wiki/Distant_Lands",
+   "lingua": {
+    "en": "Russian",
+    "it": "russo"
+   },
+   "generi": [],
+   "visite_en": null
+  },
+  {
+   "qid": "Q16387178",
+   "titolo": "Music",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q36591",
+     "nome": "Vladimir Nabokov"
+    }
+   ],
+   "pagine": 4,
+   "wiki_en": "https://en.wikipedia.org/wiki/Music_(short_story)",
+   "lingua": {
+    "en": "Russian",
+    "it": "russo"
+   },
+   "generi": [],
+   "visite_en": null
   },
   {
    "qid": "Q3824666",
@@ -2844,13 +2819,7 @@
    },
    "generi": [],
    "visite_en": null,
-   "copertina": {
-    "file": "Joseph Conrad.PNG",
-    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Joseph_Conrad.PNG/500px-Joseph_Conrad.PNG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Joseph_Conrad.PNG",
-    "licenza": "Public domain",
-    "autore": "George Charles Beresford"
-   }
+   "copertina": null
   },
   {
    "qid": "Q21651654",
