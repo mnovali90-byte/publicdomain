@@ -5,36 +5,6 @@
  "fonte": "Wikidata (CC0), Wikipedia, Wikimedia Commons",
  "opere": [
   {
-   "qid": "Q212495",
-   "titolo": "The Threepenny Opera",
-   "titolo_it": "L'opera da tre soldi",
-   "autori": [
-    {
-     "qid": "Q38757",
-     "nome": "Bertolt Brecht"
-    },
-    {
-     "qid": "Q73781",
-     "nome": "Elisabeth Hauptmann"
-    }
-   ],
-   "pagine": 46,
-   "wiki_en": "https://en.wikipedia.org/wiki/The_Threepenny_Opera",
-   "lingua": {
-    "en": "German",
-    "it": "tedesco"
-   },
-   "generi": [],
-   "visite_en": 147756,
-   "copertina": {
-    "file": "(1928) Brecht Dreigroschenoper.jpg",
-    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/%281928%29_Brecht_Dreigroschenoper.jpg/500px-%281928%29_Brecht_Dreigroschenoper.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "pagina": "https://commons.wikimedia.org/wiki/File:%281928%29_Brecht_Dreigroschenoper.jpg",
-    "licenza": "CC BY 3.0",
-    "autore": "© Foto H.-P.Haack"
-   }
-  },
-  {
    "qid": "Q1218608",
    "titolo": "The Good Earth",
    "titolo_it": "La buona terra",
@@ -779,25 +749,6 @@
    "visite_en": 5630
   },
   {
-   "qid": "Q318208",
-   "titolo": "The Decision",
-   "titolo_it": "La linea di condotta",
-   "autori": [
-    {
-     "qid": "Q38757",
-     "nome": "Bertolt Brecht"
-    }
-   ],
-   "pagine": 5,
-   "wiki_en": "https://en.wikipedia.org/wiki/The_Decision_(play)",
-   "lingua": {
-    "en": "German",
-    "it": "tedesco"
-   },
-   "generi": [],
-   "visite_en": 5274
-  },
-  {
    "qid": "Q1746433",
    "titolo": "A Little Fable",
    "titolo_it": null,
@@ -886,25 +837,6 @@
     "storico"
    ],
    "visite_en": 4828
-  },
-  {
-   "qid": "Q11544643",
-   "titolo": "Lemon",
-   "titolo_it": null,
-   "autori": [
-    {
-     "qid": "Q519158",
-     "nome": "Motojirō Kajii"
-    }
-   ],
-   "pagine": 8,
-   "wiki_en": "https://en.wikipedia.org/wiki/Lemon_(short_story)",
-   "lingua": {
-    "en": "Japanese",
-    "it": "giapponese"
-   },
-   "generi": [],
-   "visite_en": 4705
   },
   {
    "qid": "Q4659979",
@@ -1252,28 +1184,6 @@
     "licenza": "Public domain",
     "autore": "Franz Kafka"
    }
-  },
-  {
-   "qid": "Q3981235",
-   "titolo": "Tarzan the Invincible",
-   "titolo_it": "Tarzan the Invincible",
-   "autori": [
-    {
-     "qid": "Q148234",
-     "nome": "Edgar Rice Burroughs"
-    }
-   ],
-   "pagine": 8,
-   "wiki_en": "https://en.wikipedia.org/wiki/Tarzan_the_Invincible",
-   "lingua": {
-    "en": "English",
-    "it": "inglese"
-   },
-   "generi": [
-    "avventura",
-    "fantasy_sf"
-   ],
-   "visite_en": 3049
   },
   {
    "qid": "Q7939007",
@@ -1800,32 +1710,6 @@
    "visite_en": 1317
   },
   {
-   "qid": "Q3817893",
-   "titolo": "L'allegria",
-   "titolo_it": "L'allegria",
-   "autori": [
-    {
-     "qid": "Q311802",
-     "nome": "Giuseppe Ungaretti"
-    }
-   ],
-   "pagine": 3,
-   "wiki_en": "https://en.wikipedia.org/wiki/L%27allegria",
-   "lingua": {
-    "en": "Italian",
-    "it": "italiano"
-   },
-   "generi": [],
-   "visite_en": 1301,
-   "copertina": {
-    "file": "Giuseppe Ungaretti (basco).jpg",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Giuseppe_Ungaretti_%28basco%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Giuseppe_Ungaretti_%28basco%29.jpg",
-    "licenza": "Public domain",
-    "autore": "Unknown authorUnknown author"
-   }
-  },
-  {
    "qid": "Q16210839",
    "titolo": "The London Scene",
    "titolo_it": "Scene di Londra",
@@ -2184,27 +2068,6 @@
    }
   },
   {
-   "qid": "Q25569091",
-   "titolo": "Haravilāsamu",
-   "titolo_it": null,
-   "autori": [
-    {
-     "qid": "Q5278576",
-     "nome": "Srinatha"
-    }
-   ],
-   "pagine": 5,
-   "wiki_en": "https://en.wikipedia.org/wiki/Haravil%C4%81samu",
-   "lingua": {
-    "en": "Telugu",
-    "it": "telugu"
-   },
-   "generi": [
-    "poesia"
-   ],
-   "visite_en": 642
-  },
-  {
    "qid": "Q7286666",
    "titolo": "Rakhine Razawin Thit",
    "titolo_it": null,
@@ -2300,34 +2163,6 @@
    },
    "generi": [],
    "visite_en": 526
-  },
-  {
-   "qid": "Q1355242",
-   "titolo": "The Life of Zamenhof",
-   "titolo_it": null,
-   "autori": [
-    {
-     "qid": "Q12571",
-     "nome": "Edmond Privat"
-    }
-   ],
-   "pagine": 7,
-   "wiki_en": "https://en.wikipedia.org/wiki/The_Life_of_Zamenhof",
-   "lingua": {
-    "en": "Esperanto",
-    "it": "esperanto"
-   },
-   "generi": [
-    "memorie"
-   ],
-   "visite_en": 524,
-   "copertina": {
-    "file": "1920 Vivo de Zamenhof (unua eldono.jpg",
-    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/1920_Vivo_de_Zamenhof_%28unua_eldono.jpg/500px-1920_Vivo_de_Zamenhof_%28unua_eldono.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "pagina": "https://commons.wikimedia.org/wiki/File:1920_Vivo_de_Zamenhof_%28unua_eldono.jpg",
-    "licenza": "Public domain",
-    "autore": "AnonymousUnknown author"
-   }
   },
   {
    "qid": "Q16385287",
@@ -2789,25 +2624,6 @@
    },
    "generi": [],
    "visite_en": 123
-  },
-  {
-   "qid": "Q3321503",
-   "titolo": "Monsieur des Lourdines",
-   "titolo_it": null,
-   "autori": [
-    {
-     "qid": "Q373251",
-     "nome": "Alphonse de Châteaubriant"
-    }
-   ],
-   "pagine": 2,
-   "wiki_en": "https://en.wikipedia.org/wiki/The_Keynote",
-   "lingua": {
-    "en": "French",
-    "it": "francese"
-   },
-   "generi": [],
-   "visite_en": 64
   },
   {
    "qid": "Q9369134",
@@ -3430,25 +3246,6 @@
    "lingua": {
     "en": "Telugu",
     "it": "telugu"
-   },
-   "generi": [],
-   "visite_en": null
-  },
-  {
-   "qid": "Q136086965",
-   "titolo": "Wise Parenthood",
-   "titolo_it": null,
-   "autori": [
-    {
-     "qid": "Q442231",
-     "nome": "Marie Stopes"
-    }
-   ],
-   "pagine": 2,
-   "wiki_en": null,
-   "lingua": {
-    "en": "English",
-    "it": "inglese"
    },
    "generi": [],
    "visite_en": null

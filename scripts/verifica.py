@@ -119,6 +119,18 @@ def citazioni(qids):
     return out
 
 
+def anni_wikidata(qids):
+    """Tutti gli anni di morte (P570) che Wikidata dà per ogni autore: se sono più d'uno l'anno è incerto."""
+    out = {}
+    for i in range(0, len(qids), 100):
+        valori = " ".join("wd:" + q for q in qids[i:i + 100])
+        for r in sparql(f"SELECT ?a (YEAR(?m) AS ?anno) WHERE {{ VALUES ?a {{ {valori} }} ?a wdt:P570 ?m }}"):
+            if val(r, "anno"):
+                out.setdefault(val(r, "a").rsplit("/", 1)[-1], set()).add(int(val(r, "anno")))
+        time.sleep(1)
+    return out
+
+
 def morte_gnd(codice):
     t = get("https://lobid.org/gnd/" + urllib.parse.quote(codice) + ".json")
     if t is None:
@@ -164,6 +176,11 @@ def main():
     except Exception as e:      # se Wikidata non risponde si va avanti senza: restano GND e LoC
         print("fonti citate non lette:", e)
         cit = None
+    try:
+        anni_wd = anni_wikidata(qids)
+    except Exception as e:      # come per le citazioni: senza risposta si va avanti
+        print("anni di morte multipli non letti:", e)
+        anni_wd = None
 
     fonti = {"gnd": morte_gnd, "loc": morte_loc}
     esauriti = False
@@ -219,6 +236,12 @@ def main():
                 y = (cache[nome_f].get(c) or {}).get("morte") if c else None
                 if y:
                     fv[nome_f] = y
+            if anni_wd is None:     # giro senza risposta: si tiene l'altra data trovata il giro prima
+                altra = ((a.get("verifica") or {}).get("fonti") or {}).get("wikidata_altra")
+            else:
+                altra = next(iter(sorted(anni_wd.get(q, set()) - {fv["wikidata"]})), None)
+            if altra:
+                fv["wikidata_altra"] = altra     # Wikidata stessa dà un altro anno di morte
             altre = [y for k, y in fv.items() if k != "wikidata"]
             if cit is None:     # giro senza citazioni: si tengono quelle del giro prima
                 citate = (a.get("verifica") or {}).get("citate") or {}

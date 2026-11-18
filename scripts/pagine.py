@@ -83,14 +83,14 @@ def paese_per_paese(D, lang="it"):
     d = lambda y: data_l(lang, y)
     if lang == "en":
         return [
-            f"EU (base rule), Germany and the United Kingdom: from {d(D + 71)}.",
+            f"EU (base rule), Germany and the United Kingdom: from {d(D + 71)}. In the UK, works still unpublished in 1989 stay protected until 31 December 2039.",
             f"France: from {d(D + 71)}. Wartime extensions are not added to the 70 years (French Court of Cassation, 2007). Exception: authors who «died for France» get 30 more years.",
             f"Italy: from {d(D + 71)}. The 6-year wartime extension was repealed in 1996. For authors from Allied countries in the Second World War the term can be longer (1947 Peace Treaty): check case by case.",
             (f"Spain: not before {d(D + 81)} (80 years after death, because the author died before 1987; the law does not say how the year is counted)."
              if D < 1987 else f"Spain: from {d(D + 71)}."),
         ]
     return [
-        f"UE (base), Germania e Regno Unito: dal {d(D + 71)}.",
+        f"UE (base), Germania e Regno Unito: dal {d(D + 71)}. Nel Regno Unito le opere rimaste inedite fino al 1989 restano protette fino al 31 dicembre 2039.",
         f"Francia: dal {d(D + 71)}. Le proroghe di guerra non si sommano ai 70 anni (Cassazione francese, 2007). Eccezione: gli autori «morti per la Francia» hanno 30 anni in più.",
         f"Italia: dal {d(D + 71)}. La proroga di guerra di 6 anni è stata abrogata nel 1996. Per gli autori di paesi alleati nella Seconda guerra mondiale la durata può essere più lunga (Trattato di pace del 1947): va verificato caso per caso.",
         (f"Spagna: non prima del {d(D + 81)} (80 anni dalla morte, perché è morto prima del 1987; la legge non dice come si conta l'anno)."
@@ -235,8 +235,30 @@ def alterne(lang, slug):
             f'<link rel="alternate" hreflang="en" href="{url_pagina("en", slug)}">\n')
 
 
-NOMI_FONTE = {"it": {"wikidata": "Wikidata", "gnd": "Biblioteca nazionale tedesca (GND)", "loc": "Library of Congress"},
-              "en": {"wikidata": "Wikidata", "gnd": "German National Library (GND)", "loc": "Library of Congress"}}
+NOMI_FONTE = {"it": {"wikidata": "Wikidata", "wikidata_altra": "Wikidata (altra data)", "gnd": "Biblioteca nazionale tedesca (GND)", "loc": "Library of Congress"},
+              "en": {"wikidata": "Wikidata", "wikidata_altra": "Wikidata (another date)", "gnd": "German National Library (GND)", "loc": "Library of Congress"}}
+
+# Potenze alleate e associate del Trattato di pace con l'Italia del 1947 (preambolo; Albania per adesione), con i nomi
+# che Wikidata dà alla cittadinanza: stessa lista di ALLEATI_1947 in index.html (lì con i nomi attuali). È un indizio.
+ALLEATI_1947 = {"Regno Unito", "Regno Unito di Gran Bretagna e Irlanda", "Regno d'Inghilterra", "Galles", "Stati Uniti",
+                "Unione Sovietica", "Impero russo", "Repubblica Socialista Federativa Sovietica Russa", "Russia sovietica", "RSS Ucraina",
+                "RSS Bielorussa", "Repubblica Socialista Sovietica Georgiana", "Kazakistan", "Cina", "Repubblica di Cina", "Francia",
+                "Australia", "Belgio", "Brasile", "Canada", "Cecoslovacchia", "Prima Repubblica cecoslovacca", "Repubblica Socialista Cecoslovacca",
+                "Grecia", "India", "Impero anglo-indiano", "Dominion dell'India", "Pakistan", "Regno dei Paesi Bassi", "Nuova Zelanda",
+                "Polonia", "Seconda Repubblica di Polonia", "Repubblica Popolare di Polonia", "Sudafrica", "Jugoslavia", "Regno di Jugoslavia",
+                "Repubblica federale popolare di Jugoslavia", "Repubblica Socialista Federale di Jugoslavia", "Regno dei Serbi, Croati e Sloveni",
+                "Serbia", "Albania"}
+
+
+def avviso_alleato(a, lang):
+    p = [x for x in a.get("paesi", []) if x in ALLEATI_1947]
+    if not p:
+        return ""
+    t = (f"Autore di un paese alleato nella Seconda guerra mondiale ({', '.join(p)}): in Italia la protezione può durare di più "
+         "(Trattato di pace del 1947, allegato XV). La data qui sopra non ne tiene conto: va verificata caso per caso." if lang == "it" else
+         f"Author from an Allied country in the Second World War ({', '.join(p)}): in Italy protection may last longer "
+         "(1947 Peace Treaty, Annex XV). The date above does not take this into account: check case by case.")
+    return f'<p><strong>{esc(t)}</strong></p>\n'
 
 
 def blocco_verifica(a, lang):
@@ -405,6 +427,7 @@ def scheda_statica(a, lang, bd):
                  + "</span></p>\n")
     else:
         o += [x.replace('<p class="sotto">', '<p class="lb-ver">') for x in blocco_verifica(a, lang)]
+    o.append(avviso_alleato(a, lang))
     o.append(f'<details class="lb-altri"><summary>{T("Negli altri paesi", "In other countries")}</summary>\n<ul>\n')
     o += [f"<li>{esc(r)}</li>\n" for r in paese_per_paese(D, lang)]
     o.append(f"<li>{esc(T('USA: dipende dall’anno di pubblicazione di ogni opera (95 anni).', 'USA: depends on the publication year of each work (95 years).'))}</li>\n")
