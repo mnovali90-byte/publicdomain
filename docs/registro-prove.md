@@ -194,3 +194,7 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - **J. O. Francis, Robert Mitchell, A. E. Thomas, BNE:** con la regola nuova nessuna notizia per nome è loro, quindi il sito non mostra più un numero ma «Wikidata non indica il codice BNE di questo autore». Sospensioni tolte perché non c'è più un numero da sospendere.
 - **Ray Cummings, SBN:** resta sospeso (il codice porta al film «Sabotatori»).
 - **Limite:** di Harvey sono controllate a mano 50 notizie su 142; le altre 92 sono state giudicate solo dalla regola.
+
+### 18/11/2026 — Spiegato sul sito cosa vuol dire «registrazione»
+- Sopra la nota di ogni catalogo (sito e pagine autore, italiano e inglese) c'è ora una riga: una registrazione è la scheda con cui la biblioteca descrive una pubblicazione; di solito una per ogni edizione o ristampa, quindi un libro uscito cinque volte conta cinque; non sono copie vendute né titoli diversi.
+- Corrette anche le descrizioni per Google delle pagine autore: citavano 4 paesi (italiano) o 5 (inglese), ora tutti e 6.

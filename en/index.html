@@ -513,6 +513,7 @@ it: {
   discorde: "Da verificare: le fonti non concordano sull'anno di morte ({f}). La data qui sopra usa Wikidata.", fontiNomi: { wikidata: "Wikidata", gnd: "Biblioteca nazionale tedesca", loc: "Library of Congress" },
   altriPaesi: "Negli altri paesi", nomiPaesi: { it: "Italia", fr: "Francia", de: "Germania", uk: "Regno Unito", es: "Spagna" }, usaRiga: "dipende dall'anno di pubblicazione di ogni opera",
   chiEra: "Chi era", quantoNoto: "Quanto è conosciuto", curiosita: "Misura la curiosità per l'autore (visite alle pagine Wikipedia), non le vendite dei suoi libri.",
+  edizCosa: "Che cos'è una registrazione: la scheda con cui la biblioteca descrive una pubblicazione. Di solito ce n'è una per ogni edizione o ristampa, quindi un libro uscito cinque volte conta cinque. Non sono copie vendute né titoli diversi.",
   edizTit: "Registrazioni in {l}", edizLibri: "registrazioni in {l}", edizDal2000: "con anno dal 2000", edizUltimo: "più recente con anno certo: {a}",
   edizSospeso: "Dati in verifica: per questo autore i numeri del catalogo si contraddicono, quindi non li mostriamo finché non sono corretti.",
   edizSbn: "Registrazioni bibliografiche in italiano collegate all'autore nel catalogo SBN, comprese ristampe e antologie. Comprendono tutte le pubblicazioni collegate alla persona, anche quelle in cui ha collaborato (traduzioni, curatele, prefazioni), non solo i libri scritti da lei: è una misura di quanto è presente nel catalogo.", edizBnf: "Registrazioni bibliografiche in francese collegate all'autore nel catalogo della Biblioteca nazionale di Francia (BnF), cercato con il codice dell'autore. Comprendono tutte le pubblicazioni collegate alla persona, anche quelle in cui ha collaborato (traduzioni, curatele, prefazioni), non solo i libri scritti da lei: è una misura di quanto è presente nel catalogo.",
@@ -627,6 +628,7 @@ en: {
   discorde: "To verify: the sources disagree on the year of death ({f}). The date above uses Wikidata.", fontiNomi: { wikidata: "Wikidata", gnd: "German National Library", loc: "Library of Congress" },
   altriPaesi: "In other countries", nomiPaesi: { it: "Italy", fr: "France", de: "Germany", uk: "United Kingdom", es: "Spain" }, usaRiga: "depends on the publication year of each work",
   chiEra: "Who they were", quantoNoto: "How well known", curiosita: "Measures curiosity about the author (Wikipedia page views), not sales of their books.",
+  edizCosa: "What a record is: the entry a library uses to describe a publication. There is usually one for each edition or reprint, so a book published five times counts five. Records are not copies sold, nor different titles.",
   edizTit: "Records in {l}", edizLibri: "records in {l}", edizDal2000: "dated 2000 or later", edizUltimo: "latest with a certain year: {a}",
   edizSospeso: "Data under review: for this author the catalogue figures contradict each other, so we do not show them until they are fixed.",
   edizSbn: "Bibliographic records in Italian linked to the author in the SBN catalogue, including reprints and anthologies. They include every publication linked to the person, including those they contributed to (translations, editing, prefaces), not only books they wrote: it measures how present they are in the catalogue.", edizBnf: "Bibliographic records in French linked to the author in the catalogue of the National Library of France (BnF), searched by the author's identifier. They include every publication linked to the person, including those they contributed to (translations, editing, prefaces), not only books they wrote: it measures how present they are in the catalogue.",
@@ -714,8 +716,8 @@ en: {
     "Each one compares the author with the others on the {anno} list, not with every writer: 100 is the highest on this list, 0 means no page exists in that language.",
     "Careful: views also depend on how many readers a language has (English is read all over the world, India included) and on what happens outside books: an anniversary or a news story lifts a name even if it is little read as a writer. None of the three numbers says how good the author is or how well a new translation would sell."
   ],
-  tradNota: "Very incomplete coverage, especially for Italian: authors widely translated in Italy can show one edition or none. Do not conclude that an author is untranslated from this: use it to compare languages, and check an Italian catalogue.",
-  tradParz: "Checked the {n} most published works.",
+  catalogo: "Type of catalogue", opereP: "Main works", opereSu: " · {x} of {y}", lingue: "Languages",
+  avviso: "Before retranslating: check whether a recent translation already exists in your market, and verify your country's rules. In Italy the term can be longer for authors from Allied countries in the Second World War.",
   librI: "Books in Italian", amazon: "Search Amazon.it", sbn: "SBN catalogue", wikipedia: "Wikipedia", wikidata: "Wikidata",
   nato: "born", scrittore: "Writer",
   regola: "Basic EU rule: works become free on 1 January of the year after the 70th anniversary of the author's death. Some countries have different rules (Spain 80 years for authors who died before 1987, France 30 more years for those who «died for France»): check national rules before publishing. An existing translation has its own rights: this site only covers original works.",
@@ -1327,7 +1329,7 @@ const CATALOGO_CSV = { it: ["sbn_it", "SBN"], fr: ["bnf_fr", "BnF"], es: ["bne_e
 function righeCsv(autori) {
   const cat = CATALOGO_CSV[stato.opz] || null;
   const base = tr("csv");
-  const testa = base.slice(0, -1).concat(cat ? tr("csvCat").map((t) => t.replace("{l}", nomeLingua(LINGUA_PAESE[stato.opz]).toLowerCase()).replace("{c}", cat[1])) : [], base.slice(-1));
+  const testa = base.slice(0, -1).concat(cat ? tr("csvCat").map((t) => t.replace("{l}", nomeLingua(LINGUA_PAESE[stato.opz])).replace("{c}", cat[1])) : [], base.slice(-1));
   const righe = [testa];
   for (const { a, anno, giur } of autori) {
     const d = (stato.perGiur[giur] || stato.dati)[anno] || {};
@@ -1505,6 +1507,7 @@ function bloccoEdizioni(a, c) {
   const box = (num, et) => h("div", { class: "ed-box" }, h("b", {}, n(num)), h("span", {}, et));
   return sez(tit,
     h("div", { class: "ed-boxes" }, box(g.edizioni, tr("edizLibri", { l })), box(g.dal_2000 || 0, tr("edizDal2000") + (g.ultimo ? " · " + tr("edizUltimo", { a: g.ultimo }) : ""))),
+    h("p", { class: "sa-nota" }, tr("edizCosa")),
     h("p", { class: "sa-nota" }, tr({ it: "edizSbn", fr: "edizBnf", es: "edizBne", uk: "edizBl", us: "edizLoc" }[c])),
     c === "it" && g.metodo === "nome" ? h("p", { class: "sa-nota" }, tr("sbnPerNome")) : null,
     c === "it" && g.metodo === "nome_con_prova" ? h("p", { class: "sa-nota" }, tr("sbnConProva")) : null);

@@ -436,8 +436,9 @@ def scheda_statica(a, lang, bd):
             nota += " Autore riconosciuto solo dal nome: il conteggio può essere impreciso."
         elif it and g.get("metodo") == "nome_con_prova":
             nota += " Autore riconosciuto dal nome con una prova in più (anni di nascita e morte, un titolo o un cognome unico nel catalogo), non da un codice."
+        cosa = T("Che cos'è una registrazione: la scheda con cui la biblioteca descrive una pubblicazione. Di solito ce n'è una per ogni edizione o ristampa, quindi un libro uscito cinque volte conta cinque. Non sono copie vendute né titoli diversi.", "What a record is: the entry a library uses to describe a publication. There is usually one for each edition or reprint, so a book published five times counts five. Records are not copies sold, nor different titles.")
         o.append(sez(T("Registrazioni in italiano", "Records in English"),
-                     f'<div class="ed-boxes">{box(g["edizioni"], T("registrazioni in italiano", "records in English"))}{box(g.get("dal_2000", 0), T("con anno dal 2000", "dated 2000 or later") + ult)}</div>\n<p class="sa-nota">{esc(nota)}</p>\n'))
+                     f'<div class="ed-boxes">{box(g["edizioni"], T("registrazioni in italiano", "records in English"))}{box(g.get("dal_2000", 0), T("con anno dal 2000", "dated 2000 or later") + ult)}</div>\n<p class="sa-nota">{esc(cosa)}</p>\n<p class="sa-nota">{esc(nota)}</p>\n'))
     barre = []
     for m, campo, etich in ((("it", "visite_it", T("In Italia", "")),) if it else (("en", "visite_en", "In the English-speaking world"),)) + (("int", "pagine_wikipedia", T("Nel mondo", "Worldwide")),):
         idx = a.get("indice_" + m)
@@ -471,11 +472,11 @@ def pagina_autore(a, slug, lang, ha_altra):
     if it:
         titolo = f"{nome} ({anni}): quando entra in pubblico dominio · Public Domain Radar"
         descr = (f"{nome} è morto nel {D}: nell'UE le sue opere sono libere dal {data_l(lang, D + 71)}. "
-                 f"Date per Italia, Francia, Germania e Spagna, registrazioni nei cataloghi nazionali e opere principali, da dati aperti.")
+                 f"Date per Italia, Francia, Germania, Spagna, Regno Unito e USA, registrazioni nei cataloghi nazionali e opere principali, da dati aperti.")
     else:
         titolo = f"{nome} ({anni}): when the works enter the public domain · Public Domain Radar"
         descr = (f"{nome} died in {D}: in the EU the works are free from {data_l(lang, D + 71)}. "
-                 f"Dates for the UK, Italy, France, Germany and Spain, and online interest, from open data.")
+                 f"Dates for Italy, France, Germany, Spain, the UK and the USA, records in national catalogues and main works, from open data.")
     persona = {"@context": "https://schema.org", "@type": "Person", "name": nome, "url": url,
                "sameAs": [u for u in (bd.get("url") if bd else None, a.get("url")) if u]}
     if iso_valida(a.get("nascita")):
