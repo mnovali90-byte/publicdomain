@@ -39,7 +39,7 @@ PER_ANNO = int(os.environ.get("ALMA_PER_ANNO", "300"))
 BUDGET_MINUTI = float(os.environ.get("BUDGET_MINUTI_ALMA", "30"))
 FINE_LAVORO = time.time() + BUDGET_MINUTI * 60
 PAUSA = 0.6
-VERSIONE = 1
+VERSIONE = 2   # 2 = conteggio verificato con voce_alma.py (cognome e anni nella stessa voce d'autore), 18/11/2026
 UA = "publicdomain-radar/1.0 (https://github.com/mnovali90-byte/publicdomain)"
 CATALOGHI = {
     "bne_es": {"url": "https://catalogo.bne.es/view/sru/34BNE_INST", "lingua": "spa", "fonte": "BNE"},
@@ -135,17 +135,45 @@ def bne_per_nome(a, quanti_fn=quanti):
     return v if v["trovato"] else None
 
 
-def voce_autore(a, codice_bne, quanti_fn=quanti):
+def verificato(cat, filtro, a, alias):
+    """Conteggio verificato (voce_alma.py): si contano solo le notizie in cui cognome e anni stanno nella stessa voce
+    d'autore. Verificato il 18/11/2026 su 40 autori British Library nuovi: 818 notizie giuste tenute, 14 di altre
+    persone tolte, nessuna di altri tenuta, 4 giuste perse (nomi cinesi, traslitterazioni) — docs/registro-prove.md."""
+    import voce_alma
+    c = CATALOGHI[cat]
+    v = voce_alma.conta_verificato(c["url"], f'{filtro} and alma.language={c["lingua"]}', a["nome"], alias,
+                                   a.get("nascita"), a.get("morte"), dt.date.today().year)
+    return {"trovato": v["trovato"], "edizioni": v["edizioni"], "dal_2000": v["dal_2000"], "fonte": c["fonte"],
+            "scartate": v.get("scartate", 0), **({"parziale": True} if v.get("parziale") else {})}
+
+
+def voce_autore(a, codice_bne, quanti_fn=quanti, alias=()):
     out = {"bne_nome": 1}
     if codice_bne and re.fullmatch(r"[A-Za-z0-9]+", codice_bne):
         out["bne_es"] = dict(conta("bne_es", f"alma.authority_id={codice_bne}", quanti_fn), metodo="codice_bne")
     else:
-        v = bne_per_nome(a, quanti_fn)
-        if v:
-            out["bne_es"] = v
+        k = chiave_nome_intero(a)
+        if k:
+            v = dict(verificato("bne_es", f'alma.creator all "{k}"', a, alias), metodo="nome_anni")
+            if v["trovato"]:
+                out["bne_es"] = v
     k = chiave_nome(a)
     if k:
-        out["bl_en"] = dict(conta("bl_en", f'alma.creator all "{_ascii(k)}"', quanti_fn), metodo="nome_anni")
+        out["bl_en"] = dict(verificato("bl_en", f'alma.creator all "{_ascii(k)}"', a, alias), metodo="nome_anni")
+    return out
+
+
+def alias_wikidata(qids):
+    """Pseudonimi (P742) e nomi alternativi: servono a riconoscere le voci col vero nome o lo pseudonimo."""
+    out = {q: [] for q in qids}
+    for i in range(0, len(qids), 50):
+        v = " ".join("wd:" + q for q in qids[i:i + 50])
+        for b in sparql(f"""SELECT ?a ?x WHERE {{ VALUES ?a {{ {v} }} {{ ?a wdt:P742 ?x }} UNION
+              {{ ?a skos:altLabel ?x FILTER(LANG(?x) IN ("en","it","fr","es","de")) }} }}"""):
+            k = b["a"]["value"].rsplit("/", 1)[-1]
+            if b["x"]["value"] not in out[k]:
+                out[k].append(b["x"]["value"])
+        time.sleep(2)
     return out
 
 
@@ -168,20 +196,23 @@ def elabora(oggi, quanti_fn=quanti, codici_fn=codici_bne):
         if time.time() > FINE_LAVORO:
             break
         try:
-            v = bne_per_nome(a, quanti_fn)
-            if v:
+            k = chiave_nome_intero(a)
+            v = dict(verificato("bne_es", f'alma.creator all "{k}"', a, []), metodo="nome_anni") if k else None
+            if v and v["trovato"]:
                 cache[a["wikidata"]]["bne_es"] = v
             cache[a["wikidata"]]["bne_nome"] = 1
         except Exception as e:
             print(f"  {a['nome']}: {e}", file=sys.stderr)
     codici = codici_fn([a["wikidata"] for a in da_fare]) if da_fare else {}
+    alias = alias_wikidata([a["wikidata"] for a in da_fare]) if da_fare else {}
     fatti = errori = 0
     for a in da_fare:
         if time.time() > FINE_LAVORO:
             print("  tempo finito: il resto al prossimo giro", file=sys.stderr)
+            pathlib.Path(".incompleto").touch()      # il flusso di lavoro riparte da solo
             break
         try:
-            voce = voce_autore(a, codici.get(a["wikidata"]), quanti_fn)
+            voce = voce_autore(a, codici.get(a["wikidata"]), quanti_fn, alias.get(a["wikidata"], []))
             voce["ts"], voce["v"] = oggi.isoformat(), VERSIONE
             cache[a["wikidata"]] = voce
             fatti += 1
