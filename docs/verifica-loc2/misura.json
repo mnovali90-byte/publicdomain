@@ -1,0 +1,335 @@
+{
+ "regole": {
+  "commit": "554b64a0a7a7f6ce7461012219b930b50d2a3766",
+  "sha256": {
+   "scripts/loc.py": "9e3065bd81d2ee5c3a69169b44809531d2dd00cf02751d36de48e0076bd5854c"
+  }
+ },
+ "totale": {
+  "non sua o non in inglese, non contata": 801,
+  "sua in inglese, contata": 1181
+ },
+ "autori": [
+  {
+   "n": 1,
+   "nome": "N.-P. Landry",
+   "notizie": {
+    "non sua o non in inglese, non contata": 1
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 2,
+   "nome": "Frances Forbes-Robertson",
+   "notizie": {
+    "sua in inglese, contata": 7
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 3,
+   "nome": "Gertrude Stein",
+   "notizie": {
+    "sua in inglese, contata": 245,
+    "non sua o non in inglese, non contata": 20
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 4,
+   "nome": "Hafiz Mehmood Khan Shirani",
+   "notizie": {
+    "non sua o non in inglese, non contata": 14
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 5,
+   "nome": "Yokomitsu Riichi",
+   "notizie": {
+    "non sua o non in inglese, non contata": 41,
+    "sua in inglese, contata": 2
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 6,
+   "nome": "Louie Bennett",
+   "notizie": {},
+   "errore_tecnico": null
+  },
+  {
+   "n": 7,
+   "nome": "Winston Clewes",
+   "notizie": {
+    "sua in inglese, contata": 14
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 8,
+   "nome": "Bob Olsen",
+   "notizie": {},
+   "errore_tecnico": null
+  },
+  {
+   "n": 9,
+   "nome": "Islwyn Williams",
+   "notizie": {},
+   "errore_tecnico": null
+  },
+  {
+   "n": 10,
+   "nome": "Pío Baroja",
+   "notizie": {
+    "non sua o non in inglese, non contata": 305,
+    "sua in inglese, contata": 17
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 11,
+   "nome": "Edmond Konrád",
+   "notizie": {
+    "non sua o non in inglese, non contata": 3,
+    "sua in inglese, contata": 1
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 12,
+   "nome": "Gustav Suits",
+   "notizie": {
+    "non sua o non in inglese, non contata": 21,
+    "sua in inglese, contata": 1
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 13,
+   "nome": "Julia Green (efternamn)",
+   "notizie": {},
+   "errore_tecnico": null
+  },
+  {
+   "n": 14,
+   "nome": "Grace Miller White",
+   "notizie": {
+    "sua in inglese, contata": 21,
+    "non sua o non in inglese, non contata": 1
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 15,
+   "nome": "Juan José Morosoli",
+   "notizie": {
+    "non sua o non in inglese, non contata": 19
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 16,
+   "nome": "E. Phillips Oppenheim",
+   "notizie": {
+    "sua in inglese, contata": 214,
+    "non sua o non in inglese, non contata": 22
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 17,
+   "nome": "Edith Summers Kelley",
+   "notizie": {
+    "sua in inglese, contata": 6
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 18,
+   "nome": "Pierre Villetard",
+   "notizie": {
+    "non sua o non in inglese, non contata": 19
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 19,
+   "nome": "Henry Louis Mencken",
+   "notizie": {
+    "sua in inglese, contata": 222,
+    "non sua o non in inglese, non contata": 6
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 20,
+   "nome": "Yamandú Rodríguez",
+   "notizie": {},
+   "errore_tecnico": null
+  },
+  {
+   "n": 21,
+   "nome": "Afonso Lopes Vieira",
+   "notizie": {
+    "non sua o non in inglese, non contata": 32
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 22,
+   "nome": "Baishnaba Pani",
+   "notizie": {
+    "non sua o non in inglese, non contata": 3,
+    "sua in inglese, contata": 1
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 23,
+   "nome": "Fletcher Pratt",
+   "notizie": {
+    "sua in inglese, contata": 95,
+    "non sua o non in inglese, non contata": 7
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 24,
+   "nome": "Josef Reinhart",
+   "notizie": {
+    "non sua o non in inglese, non contata": 3
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 25,
+   "nome": "Joaquín Gallegos Lara",
+   "notizie": {
+    "non sua o non in inglese, non contata": 18
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 26,
+   "nome": "E. C. Vivian",
+   "notizie": {},
+   "errore_tecnico": null
+  },
+  {
+   "n": 27,
+   "nome": "Cahit Sıtkı Tarancı",
+   "notizie": {},
+   "errore_tecnico": null
+  },
+  {
+   "n": 28,
+   "nome": "Emma Orczy",
+   "notizie": {
+    "sua in inglese, contata": 124,
+    "non sua o non in inglese, non contata": 9
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 29,
+   "nome": "Frederic Hatton",
+   "notizie": {
+    "sua in inglese, contata": 8
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 30,
+   "nome": "Saint-Georges de Bouhélier",
+   "notizie": {
+    "non sua o non in inglese, non contata": 16
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 31,
+   "nome": "Craig Rice",
+   "notizie": {
+    "sua in inglese, contata": 46,
+    "non sua o non in inglese, non contata": 2
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 32,
+   "nome": "Tristan Bernard",
+   "notizie": {
+    "non sua o non in inglese, non contata": 67,
+    "sua in inglese, contata": 3
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 33,
+   "nome": "Romildo Risso",
+   "notizie": {
+    "non sua o non in inglese, non contata": 10
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 34,
+   "nome": "Ernest Rhys",
+   "notizie": {
+    "sua in inglese, contata": 90
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 35,
+   "nome": "Otis Kline",
+   "notizie": {
+    "sua in inglese, contata": 8
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 36,
+   "nome": "B. S. Mardhekar",
+   "notizie": {
+    "non sua o non in inglese, non contata": 17,
+    "sua in inglese, contata": 3
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 37,
+   "nome": "Jaroslav Hloušek",
+   "notizie": {
+    "non sua o non in inglese, non contata": 4
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 38,
+   "nome": "Fred Henderson",
+   "notizie": {
+    "sua in inglese, contata": 6
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 39,
+   "nome": "Caroline Dale Snedeker",
+   "notizie": {
+    "sua in inglese, contata": 20
+   },
+   "errore_tecnico": null
+  },
+  {
+   "n": 40,
+   "nome": "Charles-Ferdinand Ramuz",
+   "notizie": {
+    "non sua o non in inglese, non contata": 141,
+    "sua in inglese, contata": 27
+   },
+   "errore_tecnico": null
+  }
+ ]
+}
