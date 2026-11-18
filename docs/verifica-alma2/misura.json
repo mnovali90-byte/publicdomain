@@ -1,0 +1,618 @@
+{
+ "regole": {
+  "commit": "98c543ccace0e7bb37f2c279663e76dacf54de38",
+  "sha256": {
+   "scripts/voce_alma.py": "9dbbf22d5fefafa2909229aa6940297d9023764b5cb810356ede0936febdbf07"
+  }
+ },
+ "totale_notizie": {
+  "sua, tenuta": 818,
+  "di altri, scartata": 14,
+  "sua, scartata": 4
+ },
+ "autori": [
+  {
+   "n": 1,
+   "nome": "Hallie Erminie Rives",
+   "oggi": 4,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 4,
+    "dal_2000": 0,
+    "trovate_dalla_ricerca": 4,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 4
+   }
+  },
+  {
+   "n": 2,
+   "nome": "Giuseppe Tomasi di Lampedusa",
+   "oggi": 32,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 32,
+    "dal_2000": 16,
+    "trovate_dalla_ricerca": 32,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 32
+   }
+  },
+  {
+   "n": 3,
+   "nome": "John Dyfnallt Owen",
+   "oggi": 3,
+   "nuovo": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "trovate_dalla_ricerca": 3,
+    "scartate": 3
+   },
+   "notizie": {
+    "di altri, scartata": 3
+   }
+  },
+  {
+   "n": 4,
+   "nome": "Tristan Bernard",
+   "oggi": 13,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 11,
+    "dal_2000": 0,
+    "trovate_dalla_ricerca": 13,
+    "scartate": 2
+   },
+   "notizie": {
+    "di altri, scartata": 2,
+    "sua, tenuta": 11
+   }
+  },
+  {
+   "n": 5,
+   "nome": "Wen Yiduo",
+   "oggi": 1,
+   "nuovo": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "trovate_dalla_ricerca": 1,
+    "scartate": 1
+   },
+   "notizie": {
+    "sua, scartata": 1
+   }
+  },
+  {
+   "n": 6,
+   "nome": "Leonora Speyer",
+   "oggi": 1,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 1,
+    "dal_2000": 1,
+    "trovate_dalla_ricerca": 1,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 1
+   }
+  },
+  {
+   "n": 7,
+   "nome": "Benedict Wallet Vilakazi",
+   "oggi": 5,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 5,
+    "dal_2000": 4,
+    "trovate_dalla_ricerca": 5,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 5
+   }
+  },
+  {
+   "n": 8,
+   "nome": "Lloyd Osbourne",
+   "oggi": 70,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 65,
+    "dal_2000": 10,
+    "trovate_dalla_ricerca": 70,
+    "scartate": 5
+   },
+   "notizie": {
+    "sua, tenuta": 46,
+    "di altri, scartata": 4
+   }
+  },
+  {
+   "n": 9,
+   "nome": "Frederick Ferdinand Moore",
+   "oggi": 1,
+   "nuovo": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "trovate_dalla_ricerca": 1,
+    "scartate": 1
+   },
+   "notizie": {
+    "di altri, scartata": 1
+   }
+  },
+  {
+   "n": 10,
+   "nome": "Ralph Benatzky",
+   "oggi": 39,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 39,
+    "dal_2000": 0,
+    "trovate_dalla_ricerca": 39,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 39
+   }
+  },
+  {
+   "n": 11,
+   "nome": "Harley Granville-Barker",
+   "oggi": 175,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 175,
+    "dal_2000": 18,
+    "trovate_dalla_ricerca": 175,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 50
+   }
+  },
+  {
+   "n": 12,
+   "nome": "Bertolt Brecht",
+   "oggi": 403,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 403,
+    "dal_2000": 156,
+    "trovate_dalla_ricerca": 403,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 50
+   }
+  },
+  {
+   "n": 13,
+   "nome": "Jindřich Bedřich Heller",
+   "oggi": 1,
+   "nuovo": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "trovate_dalla_ricerca": 1,
+    "scartate": 1
+   },
+   "notizie": {
+    "di altri, scartata": 1
+   }
+  },
+  {
+   "n": 14,
+   "nome": "A. A. Milne",
+   "oggi": 938,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 938,
+    "dal_2000": 425,
+    "trovate_dalla_ricerca": 938,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 50
+   }
+  },
+  {
+   "n": 15,
+   "nome": "Hans Bethge",
+   "oggi": 12,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 12,
+    "dal_2000": 5,
+    "trovate_dalla_ricerca": 12,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 12
+   }
+  },
+  {
+   "n": 16,
+   "nome": "Phil Stong",
+   "oggi": 2,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 2,
+    "dal_2000": 1,
+    "trovate_dalla_ricerca": 2,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 2
+   }
+  },
+  {
+   "n": 17,
+   "nome": "Henry Handel Richardson",
+   "oggi": 70,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 70,
+    "dal_2000": 17,
+    "trovate_dalla_ricerca": 70,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 50
+   }
+  },
+  {
+   "n": 18,
+   "nome": "Francesc Trabal i Benessat",
+   "oggi": 1,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 1,
+    "dal_2000": 1,
+    "trovate_dalla_ricerca": 1,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 1
+   }
+  },
+  {
+   "n": 19,
+   "nome": "Ricarda Huch",
+   "oggi": 13,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 13,
+    "dal_2000": 2,
+    "trovate_dalla_ricerca": 13,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 13
+   }
+  },
+  {
+   "n": 20,
+   "nome": "Aleister Crowley",
+   "oggi": 250,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 250,
+    "dal_2000": 36,
+    "trovate_dalla_ricerca": 250,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 50
+   }
+  },
+  {
+   "n": 21,
+   "nome": "Channing Pollock",
+   "oggi": 13,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 13,
+    "dal_2000": 0,
+    "trovate_dalla_ricerca": 13,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 13
+   }
+  },
+  {
+   "n": 22,
+   "nome": "Charles Nordhoff",
+   "oggi": 48,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 48,
+    "dal_2000": 1,
+    "trovate_dalla_ricerca": 48,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 48
+   }
+  },
+  {
+   "n": 23,
+   "nome": "Christofredo Jakob",
+   "oggi": 3,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 2,
+    "dal_2000": 0,
+    "trovate_dalla_ricerca": 3,
+    "scartate": 1
+   },
+   "notizie": {
+    "sua, tenuta": 2,
+    "di altri, scartata": 1
+   }
+  },
+  {
+   "n": 24,
+   "nome": "Ernest Thompson Seton",
+   "oggi": 141,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 141,
+    "dal_2000": 23,
+    "trovate_dalla_ricerca": 141,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 50
+   }
+  },
+  {
+   "n": 25,
+   "nome": "Booth Tarkington",
+   "oggi": 133,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 133,
+    "dal_2000": 6,
+    "trovate_dalla_ricerca": 133,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 50
+   }
+  },
+  {
+   "n": 26,
+   "nome": "Qi Baishi",
+   "oggi": 2,
+   "nuovo": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "trovate_dalla_ricerca": 2,
+    "scartate": 2
+   },
+   "notizie": {
+    "sua, scartata": 2
+   }
+  },
+  {
+   "n": 27,
+   "nome": "Grace Purdie Moon",
+   "oggi": 2,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 2,
+    "dal_2000": 0,
+    "trovate_dalla_ricerca": 2,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 2
+   }
+  },
+  {
+   "n": 28,
+   "nome": "Charles-Ferdinand Ramuz",
+   "oggi": 23,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 23,
+    "dal_2000": 8,
+    "trovate_dalla_ricerca": 23,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 23
+   }
+  },
+  {
+   "n": 29,
+   "nome": "Edmund Clerihew Bentley",
+   "oggi": 85,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 85,
+    "dal_2000": 20,
+    "trovate_dalla_ricerca": 85,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 50
+   }
+  },
+  {
+   "n": 30,
+   "nome": "Karl Hans Strobl",
+   "oggi": 1,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 1,
+    "dal_2000": 0,
+    "trovate_dalla_ricerca": 1,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 1
+   }
+  },
+  {
+   "n": 31,
+   "nome": "John Langalibalele Dube",
+   "oggi": 6,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 6,
+    "dal_2000": 2,
+    "trovate_dalla_ricerca": 6,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 6
+   }
+  },
+  {
+   "n": 32,
+   "nome": "Swami Vipulananda",
+   "oggi": 1,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 1,
+    "dal_2000": 0,
+    "trovate_dalla_ricerca": 1,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 1
+   }
+  },
+  {
+   "n": 33,
+   "nome": "Hans Carossa",
+   "oggi": 12,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 12,
+    "dal_2000": 0,
+    "trovate_dalla_ricerca": 12,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 12
+   }
+  },
+  {
+   "n": 34,
+   "nome": "Walter de la Mare",
+   "oggi": 495,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 495,
+    "dal_2000": 72,
+    "trovate_dalla_ricerca": 495,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 50
+   }
+  },
+  {
+   "n": 35,
+   "nome": "Manik Bandyopadhyay",
+   "oggi": 6,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 6,
+    "dal_2000": 0,
+    "trovate_dalla_ricerca": 6,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 6
+   }
+  },
+  {
+   "n": 36,
+   "nome": "Godabarish Mishra",
+   "oggi": 1,
+   "nuovo": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "trovate_dalla_ricerca": 1,
+    "scartate": 1
+   },
+   "notizie": {
+    "sua, scartata": 1
+   }
+  },
+  {
+   "n": 37,
+   "nome": "Flora Thompson",
+   "oggi": 2,
+   "nuovo": {
+    "trovato": false,
+    "edizioni": 0,
+    "dal_2000": 0,
+    "trovate_dalla_ricerca": 2,
+    "scartate": 2
+   },
+   "notizie": {
+    "di altri, scartata": 2
+   }
+  },
+  {
+   "n": 38,
+   "nome": "B. R. Ambedkar",
+   "oggi": 83,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 83,
+    "dal_2000": 24,
+    "trovate_dalla_ricerca": 83,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 50
+   }
+  },
+  {
+   "n": 39,
+   "nome": "Robert Lawson",
+   "oggi": 37,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 37,
+    "dal_2000": 8,
+    "trovate_dalla_ricerca": 37,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 37
+   }
+  },
+  {
+   "n": 40,
+   "nome": "Caroline Dale Snedeker",
+   "oggi": 1,
+   "nuovo": {
+    "trovato": true,
+    "edizioni": 1,
+    "dal_2000": 0,
+    "trovate_dalla_ricerca": 1,
+    "scartate": 0
+   },
+   "notizie": {
+    "sua, tenuta": 1
+   }
+  }
+ ]
+}
