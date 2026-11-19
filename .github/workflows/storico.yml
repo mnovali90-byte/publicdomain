@@ -6,6 +6,9 @@ on:
   push:                     # parte da solo quando cambia lo script
     paths:
       - "storico/**"
+      - "!storico/pagina.py"      # la pagina e i ritratti hanno un loro lavoro leggero (gia-pubblici.yml)
+      - "!storico/pagina.html"
+      - "!storico/ritratti.py"
       - ".github/workflows/storico.yml"
   workflow_dispatch:        # pulsante "Run workflow" per lanciarlo a mano
 

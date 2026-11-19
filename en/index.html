@@ -1038,6 +1038,7 @@ function disegnaNavigazione() {
   }
   // il calendario è la pagina più visitata da Google: viene subito dopo gli anni ed è in evidenza; la lista personale è secondaria
   nav.append(h("a", { class: "nav-forte", href: LING === "en" ? `/en/calendar/${stato.anni[0]}/` : `/calendario/${stato.anni[0]}/` }, LING === "en" ? "Calendar" : "Calendario"));
+  nav.append(h("a", { class: "nav-forte", href: LING === "en" ? "/en/already-public/" : "/gia-pubblici/" }, LING === "en" ? "Already public" : "Già pubblici"));
   nav.append(h("button", { type: "button", class: "nav-lieve", onclick: () => scorri("miei") }, tr("miei", { n: stato.preferiti.length })));
   nav.append(h("span", { role: "group", "aria-label": tr("tastoLingua"), style: "display:inline-flex;gap:0;margin-left:8px" },
     ...["it", "en"].map((l) => h("button", { type: "button", lang: l, class: l === LING ? "attivo" : "", "aria-pressed": l === LING ? "true" : "false", style: "padding:12px 8px", onclick: () => impostaLingua(l) }, l.toUpperCase()))));

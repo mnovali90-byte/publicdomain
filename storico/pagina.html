@@ -1,0 +1,673 @@
+<!doctype html>
+<html lang="__LANG__">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<title>__TITLE__</title>
+<meta name="description" content="__DESC__">
+<link rel="canonical" href="__CANON__">
+<link rel="alternate" hreflang="it" href="https://publicdomainradar.com/gia-pubblici/">
+<link rel="alternate" hreflang="en" href="https://publicdomainradar.com/en/already-public/">
+<link rel="alternate" hreflang="x-default" href="https://publicdomainradar.com/gia-pubblici/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Public Domain Radar">
+<meta property="og:url" content="__CANON__">
+<meta property="og:title" content="__TITLE__">
+<meta property="og:description" content="__DESC__">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Instrument+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0C0C10;--carta:#F7F7F4;--vermiglio:#FF4326;--vermiglio-testo:#C2301A;--muto:#5C5C66;--muto-chiaro:#B9B9C6;
+--notte:#1C1C24;--bordo-notte:#2E2E3A;--verde:#0E3B2E;--crema:#E9E6DD;
+--display:'Big Shoulders Display',Impact,'Arial Narrow',sans-serif;--testo:'Instrument Sans',system-ui,sans-serif;--mono:'DM Mono',ui-monospace,Menlo,monospace;--lato:clamp(20px,4vw,48px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--carta);color:var(--ink);font-family:var(--testo);-webkit-text-size-adjust:100%}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--vermiglio);outline-offset:3px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.cont{max-width:1280px;margin:0 auto;padding-left:var(--lato);padding-right:var(--lato)}
+.scuro{background:var(--ink);color:var(--carta)}
+.mono{font-family:var(--mono);font-weight:500;letter-spacing:.12em;text-transform:uppercase}
+.barra{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 28px;padding-top:24px}
+.barra>a{text-decoration:none}
+nav.nav{display:flex;flex-wrap:wrap;align-items:center;gap:4px 24px;font-family:var(--mono);font-weight:500;font-size:14px}
+nav.nav a{text-decoration:none;color:#A9A9B6;padding:12px 0;border-bottom:2px solid transparent;min-height:44px;display:inline-flex;align-items:center}
+nav.nav a:hover{color:var(--carta)}
+nav.nav a.forte{color:var(--carta)}
+nav.nav a.on{color:var(--carta);border-bottom-color:var(--vermiglio)}
+nav.nav .lingue{display:inline-flex;gap:12px}
+.occ{margin:56px 0 0;font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--vermiglio)}
+h1{margin:14px 0 0;font-family:var(--display);font-weight:900;font-size:clamp(56px,11vw,140px);line-height:.86;text-transform:uppercase}
+h1 em{font-style:normal;color:var(--vermiglio)}
+.lead{margin:20px 0 0;max-width:640px;font-size:clamp(17px,2vw,20px);line-height:1.45}
+.cerca{margin-top:32px;display:flex;max-width:760px}
+.cerca input{flex:1;min-width:0;min-height:60px;padding:0 20px;border:2px solid var(--carta);background:var(--carta);color:var(--ink);font:500 18px var(--testo);border-radius:0}
+.cerca input::placeholder{color:var(--muto)}
+.paesi{margin-top:20px;display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.paesi .et{font-family:var(--mono);font-size:12px;letter-spacing:.12em;color:#A9A9B6;margin-right:6px}
+.paesi button{min-height:44px;padding:0 16px;border:1.5px solid var(--carta);background:transparent;color:var(--carta);font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+.paesi button[aria-pressed="true"]{background:var(--carta);color:var(--ink)}
+.conti{margin:20px 0 0;max-width:760px;font-size:13px;line-height:1.5;color:var(--muto-chiaro)}
+#risultati{padding-top:48px}
+#risultati:empty{display:none}
+.r-tit{margin:0;font-family:var(--display);font-weight:800;font-size:clamp(32px,4vw,48px);line-height:.95;text-transform:uppercase}
+.r-sotto{margin:8px 0 0;font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--muto)}
+.aut-card{margin-top:24px;display:flex;flex-wrap:wrap;gap:20px;align-items:flex-start;padding:24px;background:#fff;border:1px solid #E4E2DA}
+.aut-card .nome{font-family:var(--display);font-weight:900;font-size:36px;line-height:.95;text-transform:uppercase}
+.aut-card .det{margin-top:6px;font-size:15px;line-height:1.5}
+.aut-card .det b{font-weight:600}
+.link-forte{display:inline-flex;align-items:center;min-height:44px;margin-top:8px;font-weight:600;color:var(--vermiglio-testo)}
+.righe{margin:24px 0 0;padding:0;list-style:none;border-top:1px solid #E4E2DA}
+.riga{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 24px;align-items:center;padding:14px 0;border-bottom:1px solid #E4E2DA}
+.riga button.tit{all:unset;cursor:pointer;display:block}
+.riga button.tit:focus-visible{outline:3px solid var(--vermiglio)}
+.riga .t{font-weight:600;font-size:17px;line-height:1.3}
+.riga .o{color:var(--muto);font-weight:400}
+.riga .a{display:block;margin-top:2px;font-size:13px;color:var(--muto)}
+.badge{display:flex;flex-wrap:wrap;gap:6px;justify-content:flex-end}
+.b{display:inline-flex;gap:6px;align-items:center;min-height:28px;padding:0 8px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;border:1px solid #CFCCC2;background:#fff;color:var(--muto)}
+.b.si{background:var(--verde);border-color:var(--verde);color:var(--carta)}
+.b.ver{background:#F2B705;border-color:#F2B705;color:var(--ink)}
+.b.attivo{outline:2px solid var(--vermiglio);outline-offset:1px}
+.nota{margin:20px 0 0;max-width:860px;font-size:13px;line-height:1.55;color:var(--muto)}
+.box-no{margin-top:24px;padding:24px;background:var(--crema);font-size:16px;line-height:1.5;max-width:860px}
+.box-no .k{font-family:var(--display);font-weight:900;font-size:30px;text-transform:uppercase;line-height:1;display:block;margin-bottom:8px}
+.bottone{display:inline-flex;align-items:center;min-height:44px;padding:0 20px;background:var(--vermiglio);color:var(--ink);text-decoration:none;font-weight:600;border:0;margin-top:12px}
+.altro{margin-top:16px;min-height:44px;padding:0 18px;border:1.5px solid var(--ink);background:transparent;font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+#scaffali{margin-top:0}
+#risultati:not(:empty){padding-bottom:56px}
+#scaffali .dentro{padding-top:64px;padding-bottom:88px}
+.h2{margin:12px 0 0;font-family:var(--display);font-weight:900;font-size:clamp(48px,8vw,104px);line-height:.88;text-transform:uppercase}
+.intro{margin:16px 0 0;max-width:680px;font-size:16px;line-height:1.5}
+.scaffale{margin-top:56px}
+.s-testa{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 16px}
+.s-testa h3{margin:0;font-family:var(--display);font-weight:800;font-size:clamp(30px,3.4vw,44px);line-height:.95;text-transform:uppercase}
+.s-testa p{margin:8px 0 0;max-width:640px;font-size:14px;line-height:1.5;color:var(--muto-chiaro)}
+.s-testa button{background:none;border:0;min-height:44px;font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muto-chiaro);text-decoration:underline}
+.fila{margin-top:20px;display:flex;gap:16px;overflow-x:auto;padding-bottom:12px;scroll-snap-type:x proximity}
+.fila.tutta{flex-wrap:wrap;overflow:visible}
+.copertina{flex:none;width:184px;height:276px;padding:0;text-align:left;display:flex;flex-direction:column;justify-content:flex-end;border:0;position:relative;overflow:hidden;scroll-snap-align:start;transition:transform .15s}
+.copertina:hover{transform:translateY(-4px)}
+.copertina .trama{position:absolute;inset:0;background-repeat:repeat;background-size:58px 58px;background-position:-6px -4px}
+.copertina .fascia{position:relative;background:inherit;padding:16px 20px 20px;display:flex;flex-direction:column;gap:10px}
+.copertina .t{font-family:var(--display);font-weight:900;line-height:.92;text-transform:uppercase;overflow-wrap:normal;word-break:normal;hyphens:none}
+.copertina .a{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;line-height:1.4}
+.c0{background:var(--vermiglio);color:var(--ink)}.c1{background:var(--crema);color:var(--ink)}.c2{background:var(--verde);color:var(--carta)}.c3{background:var(--notte);color:var(--carta);border:1px solid var(--bordo-notte)}
+.quadro{flex:none;width:184px;padding:0;border:0;background:none;text-align:left;color:var(--carta)}
+.quadro .q{position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;width:184px;height:184px}
+.quadro .q .trama{position:absolute;inset:0;background-repeat:repeat;background-size:58px 58px;background-position:-6px -4px}
+.quadro .q .f{position:relative;background:inherit;padding:12px 16px 14px;display:flex;flex-direction:column;gap:4px}
+.quadro .k{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase}
+.quadro .n{font-family:var(--display);font-weight:900;font-size:28px;line-height:.92;text-transform:uppercase;overflow-wrap:normal;word-break:normal;hyphens:none}
+.quadro .c{display:block;margin-top:10px;font-size:13px;line-height:1.35;color:var(--muto-chiaro)}
+.classifica{list-style:none;margin:24px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:24px 32px}
+.classifica button{all:unset;cursor:pointer;display:flex;align-items:center;gap:16px;min-height:120px;color:var(--carta)}
+.classifica button:focus-visible{outline:3px solid var(--vermiglio)}
+.classifica .pos{flex:none;width:76px;text-align:right;font-family:var(--display);font-weight:900;font-size:80px;line-height:.8;color:var(--vermiglio)}
+.classifica .foto{flex:none;position:relative;width:120px;height:120px;overflow:hidden;background:var(--notte)}
+.classifica .foto img{display:block;width:120px;height:120px;object-fit:cover;object-position:center 20%}
+.classifica .foto .ini{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding-bottom:22px;font-family:var(--display);font-weight:900;font-size:56px;color:#3A3A46}
+.classifica .foto .cog{position:absolute;left:0;right:0;bottom:0;padding:6px 8px;background:var(--ink);color:var(--carta);font-family:var(--display);font-weight:900;font-size:18px;line-height:1;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.classifica .nm{font-weight:600;font-size:17px;line-height:1.25}
+.classifica .nn{display:block;margin-top:4px;font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--muto-chiaro)}
+.crediti{margin:20px 0 0;font-size:12px;line-height:1.5;color:#8A8A96;max-width:900px}
+.crediti a{color:#A9A9B6}
+.vuoto{margin-top:16px;color:var(--muto-chiaro);font-size:14px}
+footer{padding:48px 0 64px;font-size:13px;line-height:1.6;color:var(--muto)}
+footer p{max-width:860px}
+#finestra{position:fixed;inset:0;z-index:20;background:rgba(12,12,16,.7);display:flex;justify-content:center;align-items:flex-start;overflow-y:auto;padding:24px 12px}
+#finestra[hidden]{display:none}
+#finestra .pan{position:relative;width:100%;max-width:980px;background:var(--carta);color:var(--ink);padding:32px clamp(20px,4vw,40px) 40px}
+#finestra .chiudi{position:absolute;top:12px;right:12px;width:44px;height:44px;border:0;background:var(--ink);color:var(--carta);font-size:22px}
+#finestra h2{margin:0 48px 0 0;font-family:var(--display);font-weight:900;font-size:clamp(34px,5vw,56px);line-height:.92;text-transform:uppercase}
+.griglia{margin-top:24px;display:flex;flex-wrap:wrap;gap:16px}
+.griglia .copertina{width:calc(25% - 12px);min-width:150px;height:230px}
+.stati{margin:20px 0 0;padding:0;list-style:none}
+.stati li{display:grid;grid-template-columns:110px 1fr;gap:12px;padding:10px 0;border-bottom:1px solid #E4E2DA;font-size:15px;line-height:1.45}
+.stati .p{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+@media (max-width:640px){.riga{grid-template-columns:1fr}.badge{justify-content:flex-start}.copertina{width:156px;height:240px}.griglia .copertina{width:calc(50% - 8px);min-width:0;height:210px}.classifica{grid-template-columns:1fr}.classifica .pos{width:52px;font-size:56px}.classifica .foto,.classifica .foto img{width:96px;height:96px}.stati li{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.copertina{transition:none}}
+__CSS_MARCHIO__
+</style>
+<script data-goatcounter="https://pdr.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+<section class="scuro">
+<div class="cont" style="padding-bottom:64px">
+<header class="barra">
+<a href="__HOME__" aria-label="Public Domain Radar">__MARCHIO__</a>
+<nav class="nav" aria-label="__NAV_ARIA__">__NAV__</nav>
+</header>
+<p class="occ" id="occ"></p>
+<h1 id="h1"></h1>
+<p class="lead" id="lead"></p>
+<form class="cerca" role="search" onsubmit="return false">
+<label class="sr" for="q" id="q-et"></label>
+<input id="q" type="search" autocomplete="off" spellcheck="false">
+</form>
+<div class="paesi" role="group" id="paesi"></div>
+<p class="conti" id="conti"></p>
+<noscript><p class="conti">JavaScript is needed for the search. / Per la ricerca serve JavaScript.</p></noscript>
+</div>
+</section>
+<main>
+<section class="cont" id="risultati" aria-live="polite"></section>
+<section class="scuro" id="scaffali"><div class="cont dentro" id="scaffali-corpo"></div></section>
+</main>
+<footer><div class="cont" id="piede"></div></footer>
+<div id="finestra" hidden><div class="pan" role="dialog" aria-modal="true" aria-labelledby="fin-tit"><button class="chiudi" type="button" id="fin-chiudi">×</button><div id="fin-corpo"></div></div></div>
+<script>
+"use strict";
+const LING = document.documentElement.lang === "en" ? "en" : "it";
+const SIMBOLI = __SIMBOLI__;
+const T = {
+it: {
+  occ: "Storico del pubblico dominio", h1a: "È già ", h1b: "libero", h1c: "?",
+  lead: "Scrivi un titolo o un autore. Ti diciamo se si può già pubblicare e da quando, paese per paese.",
+  cerca: "Cerca un titolo o un autore", paese: "Paese",
+  paesi: { it: "Italia", fr: "Francia", de: "Germania", es: "Spagna", us: "USA" },
+  inPaese: { it: "in Italia", fr: "in Francia", de: "in Germania", es: "in Spagna", us: "negli USA" },
+  conti: "{o} opere e {a} autori da Wikidata, con l'anno di uscita e l'anno di morte degli autori. Le visite si aggiornano ogni lunedì (ultima settimana: {s}).",
+  caricamento: "Caricamento…", errore: "Non riesco a leggere i dati. Riprova tra poco.",
+  risPer: "Risultati per «{q}»", nAut: "{n} autore", nAutP: "{n} autori", nOp: "{n} opera", nOpP: "{n} opere",
+  autore: "Autore", mortoNel: "morto nel {m}", mortoNelInc: "morto nel {m} (le fonti danno anni diversi: si usa il più tardo)", antico: "autore antico", morteNd: "anno di morte non noto",
+  operaN: "{n} opere nell'elenco", tutteOpere: "Tutte le opere dell'autore →",
+  ueLibero: "Italia, Francia, Germania: libero dal {y}", ueDal: "Italia, Francia, Germania: dal 1° gennaio {y}",
+  esLibero: "Spagna: libero dal {y}", esDal: "Spagna: dal 1° gennaio {y}",
+  usRegola: "USA: ogni opera 95 anni dopo l'uscita",
+  anticoTutto: "Opere libere in tutti i paesi dell'elenco (autore antico).",
+  libero: "libero", dal: "dal {y}", nd: "non noto", verifica: "da verificare",
+  notaRis: "Ogni titolo mostra tutti i paesi: in Europa contano 70 anni dalla morte dell'autore (80 in Spagna per chi è morto prima del 1987), negli USA 95 anni dall'uscita. Calcolo indicativo, non è consulenza legale; traduzioni e illustrazioni hanno diritti propri.",
+  nessuno: "Nessun titolo o autore trovato in questo elenco.",
+  nessunoSpieg: "L'elenco contiene le opere che hanno una pagina Wikipedia e un anno su Wikidata, più le opere degli scrittori già liberi. Se un titolo non c'è, non vuol dire per forza che sia protetto: controlla l'anno di uscita e l'anno di morte dell'autore.",
+  prossimoK: "Non è ancora libero",
+  prossimo: "{nome} non è in questo elenco: è morto nel {m}, quindi in Italia, Francia e Germania diventa libero il 1° gennaio {ue} (in Spagna nel {es}). Lo trovi nel radar con la sua scheda.",
+  apriRadar: "Apri la scheda nel radar", altriRis: "Mostra altri risultati",
+  giaIn: "Già pubblici {p}", sfoglia: "Sfoglia gli scaffali",
+  introS: "Tutto quello che vedi qui sotto è <b>libero {p}</b>, il paese scelto in alto. Cambia paese e cambiano gli scaffali.",
+  piuLetti: "I più letti questa settimana", piuLettiSub: "Solo titoli già liberi {p}. Visite alle pagine Wikipedia in inglese e in italiano, {s}.",
+  nuovi: "Liberi dal 1° gennaio {y}", nuoviUe: "Autori morti nel {m}: {p} contano 70 anni dalla morte.", nuoviEs: "Autori morti nel {m}: in Spagna contano 80 anni dalla morte.", nuoviUs: "Opere uscite nel {m}: negli USA contano 95 anni dall'uscita.",
+  autori: "Autori", autoriSub: "Classifica della settimana: gli autori con almeno tre titoli liberi {p}, dal più letto. In tutto {n}.",
+  vediTutti: "Vedi tutti i {n} →", vediMeno: "Mostra meno", vediTutto: "Vedi tutto →",
+  titoliLiberi: "{n} titoli liberi", titoli: "{n} titoli",
+  generi: "Per genere", generiSub: "Solo le opere che su Wikidata hanno un genere.", genere: "Genere",
+  lingue: "Per lingua originale", lingueSub: "La lingua in cui l'opera è stata scritta, secondo Wikidata.", lingua: "Lingua",
+  ritratti: "Ritratti da Wikimedia Commons", ritrattiPd: "in pubblico dominio", ritrattiTranne: "tranne", fotoDi: "foto di",
+  vuotoS: "Nessun titolo in questo scaffale.",
+  chiudi: "Chiudi", stati: "Paese per paese", wikidata: "Scheda su Wikidata →", uscita: "uscita nel {y}", uscitaNd: "anno di uscita non noto",
+  sUeSi: "Libero: tutti gli autori sono morti da più di 70 anni.", sUeDal: "Libero dal 1° gennaio {y} (70 anni dalla morte dell'autore).",
+  sEsSi: "Libero: in Spagna contano 80 anni dalla morte per chi è morto prima del 1987.", sEsDal: "Libero dal 1° gennaio {y} (in Spagna 80 anni dalla morte per chi è morto prima del 1987).",
+  sUsSi: "Libero: uscito più di 95 anni fa.", sUsDal: "Libero dal 1° gennaio {y} (95 anni dall'uscita).", sUsSenza: "Libero: l'anno di uscita non è noto, ma l'autore è antico o morto da oltre 170 anni.",
+  sNd: "Non lo sappiamo: manca l'anno di morte o di uscita.",
+  sAlleato: "Per la legge italiana sarebbe libero, ma l'autore era di un paese alleato nella Seconda guerra mondiale: in Italia la protezione può durare di più (Trattato di pace del 1947, allegato XV). Va verificato caso per caso.",
+  sAlleatoBreve: "Italia: per le opere uscite fino al 1947 è da verificare, perché l'autore era di un paese alleato nella Seconda guerra mondiale (Trattato di pace del 1947).",
+  sFr: "In Francia gli autori «morti per la Francia» hanno 30 anni in più: non lo controlliamo.",
+  sDuke: "Anno preso dagli elenchi del Public Domain Day della Duke University, non da Wikidata: da verificare.",
+  sUsPrima: "Conta la prima data di pubblicazione registrata su Wikidata: per le opere uscite prima a puntate o in rivista può essere diversa.",
+  sInc: "Le fonti danno anni di morte diversi: si usa il più tardo, per prudenza.",
+  piede1: "Calcolo indicativo, non è consulenza legale. È libero il testo originale, non l'edizione né la traduzione: traduzioni, illustrazioni e curatele recenti hanno diritti propri. Prima di pubblicare controlla la legge del paese.",
+  piede2: "Regole usate: Italia, Francia, Germania 70 anni dalla morte dell'autore; Spagna 80 anni per gli autori morti prima del 7 dicembre 1987; USA 95 anni dalla prima pubblicazione (si guarda la prima data registrata). In Italia gli autori di paesi alleati nella Seconda guerra mondiale sono segnalati da verificare e restano fuori dagli scaffali italiani.",
+  piede3: "Fonti: Wikidata (CC0) per opere, autori e anni; Wikipedia per le visite della settimana; elenchi del Public Domain Day della Duke University (CC BY 4.0) come seconda fonte per gli USA; Wikimedia Commons per i ritratti, ciascuno con la sua licenza. Dati aggiornati ogni lunedì in automatico: possono contenere errori.",
+  piede4: "Un progetto di Marco Novali.", segnala: "Hai trovato un errore? Segnalalo",
+  dateFmt: (a, b) => `${a.getDate()}–${b.getDate()} ${MESI_IT[b.getMonth()]} ${b.getFullYear()}`,
+},
+en: {
+  occ: "Public domain archive", h1a: "Is it ", h1b: "free", h1c: " yet?",
+  lead: "Type a title or an author. We tell you whether it can already be published, and since when, country by country.",
+  cerca: "Search a title or an author", paese: "Country",
+  paesi: { it: "Italy", fr: "France", de: "Germany", es: "Spain", us: "USA" },
+  inPaese: { it: "in Italy", fr: "in France", de: "in Germany", es: "in Spain", us: "in the USA" },
+  conti: "{o} works and {a} authors from Wikidata, with the year of publication and the authors' year of death. Page views are updated every Monday (last week: {s}).",
+  caricamento: "Loading…", errore: "I can't read the data. Please try again shortly.",
+  risPer: "Results for “{q}”", nAut: "{n} author", nAutP: "{n} authors", nOp: "{n} work", nOpP: "{n} works",
+  autore: "Author", mortoNel: "died in {m}", mortoNelInc: "died in {m} (sources give different years: the latest is used)", antico: "ancient author", morteNd: "year of death unknown",
+  operaN: "{n} works in the list", tutteOpere: "All works by this author →",
+  ueLibero: "Italy, France, Germany: free since {y}", ueDal: "Italy, France, Germany: from 1 January {y}",
+  esLibero: "Spain: free since {y}", esDal: "Spain: from 1 January {y}",
+  usRegola: "USA: each work 95 years after publication",
+  anticoTutto: "Works free in every country of the list (ancient author).",
+  libero: "free", dal: "from {y}", nd: "unknown", verifica: "check",
+  notaRis: "Each title shows every country: in Europe what counts is 70 years from the author's death (80 in Spain for authors who died before 1987), in the USA 95 years from publication. An indicative calculation, not legal advice; translations and illustrations have their own rights.",
+  nessuno: "No title or author found in this list.",
+  nessunoSpieg: "The list holds the works that have a Wikipedia page and a year on Wikidata, plus the works of writers who are already free. If a title is missing, it is not necessarily protected: check the year of publication and the author's year of death.",
+  prossimoK: "Not free yet",
+  prossimo: "{nome} is not in this list: they died in {m}, so in Italy, France and Germany their works become free on 1 January {ue} (in Spain in {es}). You'll find them in the radar with their own page.",
+  apriRadar: "Open their page in the radar", altriRis: "Show more results",
+  giaIn: "Already public {p}", sfoglia: "Browse the shelves",
+  introS: "Everything you see below is <b>free {p}</b>, the country chosen above. Change the country and the shelves change.",
+  piuLetti: "Most read this week", piuLettiSub: "Only titles already free {p}. Views of the English and Italian Wikipedia pages, {s}.",
+  nuovi: "Free since 1 January {y}", nuoviUe: "Authors who died in {m}: {p} the term is 70 years from death.", nuoviEs: "Authors who died in {m}: in Spain the term is 80 years from death.", nuoviUs: "Works published in {m}: in the USA the term is 95 years from publication.",
+  autori: "Authors", autoriSub: "This week's ranking: authors with at least three titles free {p}, most read first. {n} in all.",
+  vediTutti: "See all {n} →", vediMeno: "Show less", vediTutto: "See all →",
+  titoliLiberi: "{n} free titles", titoli: "{n} titles",
+  generi: "By genre", generiSub: "Only works that have a genre on Wikidata.", genere: "Genre",
+  lingue: "By original language", lingueSub: "The language the work was written in, according to Wikidata.", lingua: "Language",
+  ritratti: "Portraits from Wikimedia Commons", ritrattiPd: "in the public domain", ritrattiTranne: "except", fotoDi: "photo by",
+  vuotoS: "No titles on this shelf.",
+  chiudi: "Close", stati: "Country by country", wikidata: "Wikidata entry →", uscita: "published in {y}", uscitaNd: "year of publication unknown",
+  sUeSi: "Free: all authors died more than 70 years ago.", sUeDal: "Free from 1 January {y} (70 years from the author's death).",
+  sEsSi: "Free: in Spain the term is 80 years from death for authors who died before 1987.", sEsDal: "Free from 1 January {y} (in Spain 80 years from death for authors who died before 1987).",
+  sUsSi: "Free: published more than 95 years ago.", sUsDal: "Free from 1 January {y} (95 years from publication).", sUsSenza: "Free: the year of publication is unknown, but the author is ancient or died more than 170 years ago.",
+  sNd: "We don't know: the year of death or of publication is missing.",
+  sAlleato: "Under Italian law it would be free, but the author was from an Allied country in the Second World War: in Italy protection may last longer (1947 Peace Treaty, Annex XV). Check case by case.",
+  sAlleatoBreve: "Italy: works published up to 1947 need checking, because the author was from an Allied country in the Second World War (1947 Peace Treaty).",
+  sFr: "In France authors who «died for France» get 30 more years: we don't check this.",
+  sDuke: "Year taken from Duke University's Public Domain Day lists, not from Wikidata: to be checked.",
+  sUsPrima: "What counts is the first publication date recorded on Wikidata: for works first published in instalments or in a magazine it may differ.",
+  sInc: "Sources give different years of death: the latest is used, to be safe.",
+  piede1: "An indicative calculation, not legal advice. What is free is the original text, not the edition or the translation: recent translations, illustrations and editions have their own rights. Check the law of the country before publishing.",
+  piede2: "Rules used: Italy, France, Germany 70 years from the author's death; Spain 80 years for authors who died before 7 December 1987; USA 95 years from first publication (the first recorded date is used). In Italy, authors from Allied countries in the Second World War are flagged to be checked and kept off the Italian shelves.",
+  piede3: "Sources: Wikidata (CC0) for works, authors and years; Wikipedia for this week's page views; Duke University's Public Domain Day lists (CC BY 4.0) as a second source for the USA; Wikimedia Commons for portraits, each with its own licence. Data updated automatically every Monday: it may contain errors.",
+  piede4: "A project by Marco Novali.", segnala: "Found a mistake? Report it",
+  dateFmt: (a, b) => `${a.getDate()}–${b.getDate()} ${MESI_EN[b.getMonth()]} ${b.getFullYear()}`,
+}};
+const MESI_IT = ["gennaio","febbraio","marzo","aprile","maggio","giugno","luglio","agosto","settembre","ottobre","novembre","dicembre"];
+const MESI_EN = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+const L = T[LING];
+const GENERI = { it: { giallo: "Giallo e mistero", horror: "Horror e fantastico", fantasy_sf: "Fantasy e fantascienza", storico: "Romanzo storico", ragazzi: "Per ragazzi", poesia: "Poesia", saggio: "Saggi", memorie: "Memorie e biografie", satira: "Satira", avventura: "Avventura", sentimentale: "Romanzo sentimentale", guerra: "Guerra" },
+  en: { giallo: "Crime & mystery", horror: "Horror & weird fiction", fantasy_sf: "Fantasy & science fiction", storico: "Historical fiction", ragazzi: "Children's", poesia: "Poetry", saggio: "Essays", memorie: "Memoir & biography", satira: "Satire", avventura: "Adventure", sentimentale: "Romance", guerra: "War" } }[LING];
+const SIMBOLO_GENERE = { giallo: "giallo", fantasy_sf: "fantascienza", storico: "storico", horror: "horror", ragazzi: "ragazzi", memorie: "memorie", saggio: "saggistica", poesia: "poesia", avventura: "avventura", satira: "satira", sentimentale: "sentimentale", guerra: "guerra" };
+const SIMBOLI_NEUTRI = ["libro", "calamaio", "lampada"];
+const COLORI_TRAMA = [["#FF4326", "#0C0C10"], ["#E9E6DD", "#FF4326"], ["#0E3B2E", "#FF4326"], ["#1C1C24", "#FF4326"]];
+// lingue: solo colore piatto, nessun simbolo (regola di Marco: i simboli vanno solo su generi e copertine)
+const PIATTI = [["#FF4326", "#0C0C10"], ["#0E3B2E", "#F7F7F4"], ["#E9E6DD", "#0C0C10"], ["#2B3A8C", "#F7F7F4"], ["#F2B705", "#0C0C10"], ["#5B2A4E", "#F7F7F4"], ["#1C1C24", "#F7F7F4"], ["#7FB3A8", "#0C0C10"], ["#B5543A", "#F7F7F4"], ["#C9C3E6", "#0C0C10"]];
+const ARTICOLI = new Set(["the","a","an","il","lo","la","l","le","i","gli","un","una","uno","der","die","das","den","ein","eine","les","el","los","las","de","het"]);
+const UE = ["it", "fr", "de"];
+const NON_AUTORI = /^(various authors|group of authors|anonymous|anonimo|autori vari|unknown)/i;   // non sono persone: fuori dalla classifica
+
+/* ---------- strumenti ---------- */
+function h(tag, attrs, ...figli) {
+  const e = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs || {})) {
+    if (v === null || v === undefined || v === false) continue;
+    if (k.startsWith("on") && typeof v === "function") e.addEventListener(k.slice(2), v);
+    else if (k === "html") e.innerHTML = v;
+    else e.setAttribute(k, v === true ? "" : v);
+  }
+  for (const f of figli.flat()) { if (f === null || f === undefined || f === false) continue; e.append(f.nodeType ? f : document.createTextNode(String(f))); }
+  return e;
+}
+const $ = (s) => document.querySelector(s);
+const num = (x) => Number(x).toLocaleString(LING === "it" ? "it-IT" : "en-GB");
+const tr = (k, p) => String(L[k]).replace(/\{(\w+)\}/g, (_, x) => (p && p[x] !== undefined ? p[x] : ""));
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+function hashNumero(s) { let x = 0; for (const c of s) x = (x * 31 + c.charCodeAt(0)) >>> 0; return x; }
+function parole(t) { return String(t || "").normalize("NFKD").replace(/[̀-ͯ]/g, "").toLowerCase().match(/[a-z0-9]+/g) || []; }
+const lettera = (p) => (p && /[a-z]/.test(p[0]) ? p.slice(0, 2) : "_");
+async function leggi(url) { const r = await fetch(url, { cache: "no-cache" }); if (!r.ok) throw new Error(url + " " + r.status); return r.json(); }
+function iniziali(nome) { const p = nome.replace(/[().,]/g, " ").split(/\s+/).filter(Boolean); return p.length ? (p[0][0] + (p.length > 1 ? p[p.length - 1][0] : "")).toUpperCase() : "?"; }
+function cognome(nome) { const p = nome.split(/\s+/).filter(Boolean); return p.length ? p[p.length - 1] : nome; }
+
+/* ---------- dati ---------- */
+const D = { anno: new Date().getFullYear(), opere: [], aut: new Map(), foto: {}, prossimi: [], file: new Map(), perAutore: new Map(), paese: "it" };
+// opera normalizzata: { q, t, ti, y, yd, au:[{q,n,m,an,inc,al}], v, g:[], l, pg }
+function daRiga(r) {   // riga dei file di ricerca: [qid, titolo, titolo_it, anno, pagine, autori, anno_duke]
+  return pulisciAnno({ q: r[0], t: r[1], ti: r[2] || "", y: r[3] === null || r[3] === undefined ? null : r[3], pg: r[4] || 0, yd: r[6] || 0,
+    au: (r[5] || []).map((a) => ({ q: a[0], n: a[1], m: a[2], an: !!a[3], inc: !!a[4], al: !!a[5] })), v: 0, g: [], l: null });
+}
+function pulisciAnno(o) {
+  // un anno di uscita molto più vecchio della morte di tutti gli autori è un errore dei dati (es. 1562 per un autore morto nel 1944): non si usa
+  const morti = o.au.filter((a) => !a.an && a.m !== null && a.m !== undefined).map((a) => a.m);
+  if (o.y !== null && morti.length === o.au.length && morti.length && o.y < Math.min(...morti) - 90) o.y = null;
+  return o;
+}
+
+/* ---------- regole per paese ---------- */
+// restituisce { s: "si" | "dal" | "nd" | "ver", y, note: [] }
+function stato(o, c) {
+  const Y = D.anno, note = [];
+  if (o.au.some((a) => a.inc)) note.push("sInc");
+  if (c === "us") {
+    if (o.yd) note.push("sDuke");
+    if (o.y !== null) {
+      if (o.y + 96 <= Y) { if (o.y >= Y - 106) note.push("sUsPrima"); return { s: "si", note }; }
+      return { s: "dal", y: o.y + 96, note };
+    }
+    if (o.au.length && o.au.every((a) => a.an || (a.m !== null && a.m <= Y - 171))) return { s: "si", senza: true, note };
+    return { s: "nd", note };
+  }
+  const durata = (a) => (c === "es" && a.m < 1987 ? 80 : 70);
+  if (o.y !== null && o.y <= Y - (c === "es" ? 181 : 171)) return { s: "si", note };
+  if (!o.au.length) return { s: "nd", note };
+  let fine = 0;
+  for (const a of o.au) {
+    if (a.an) continue;
+    if (a.m === null || a.m === undefined) return { s: "nd", note };
+    fine = Math.max(fine, a.m + durata(a) + 1);
+  }
+  if (fine > Y) return { s: "dal", y: fine, note };
+  if (c === "it" && o.au.some((a) => a.al && !a.an && a.m >= Y - 79) && (o.y === null || o.y <= 1947)) return { s: "ver", note: note.concat(["sAlleato"]) };
+  // «morts pour la France»: +30 anni; conta solo per chi è morto nella Seconda guerra mondiale (per la Prima i 100 anni sono già passati)
+  if (c === "fr" && o.au.some((a) => !a.an && a.m >= 1939 && a.m <= 1945 && a.m + 101 > Y)) note.push("sFr");
+  return { s: "si", note };
+}
+const libera = (o, c) => stato(o, c).s === "si";
+
+/* ---------- copertine ---------- */
+const _trame = new Map();
+function trama(generi, seme, c) {
+  let nome = null;
+  for (const g of generi || []) { if (SIMBOLO_GENERE[g]) { nome = SIMBOLO_GENERE[g]; break; } }
+  if (!nome) nome = SIMBOLI_NEUTRI[hashNumero(seme) % 3];
+  const id = nome + c;
+  if (!_trame.has(id)) {
+    const [fondo, dis] = COLORI_TRAMA[c];
+    const g = (x, y) => `<g transform="translate(${x} ${y}) scale(.5)">${SIMBOLI[nome].split('"A"').join(`"${dis}"`).split('"B"').join(`"${fondo}"`)}</g>`;
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="58" height="58">${g(6, 6)}${g(35, 35)}<circle cx="46" cy="16" r="1.6" fill="${dis}"/><circle cx="17" cy="45" r="1.6" fill="${dis}"/></svg>`;
+    _trame.set(id, `url("data:image/svg+xml,${encodeURIComponent(svg)}")`);
+  }
+  return h("span", { class: "trama", "aria-hidden": "true", style: `background-image:${_trame.get(id)}` });
+}
+const titolo = (o) => (LING === "it" && o.ti) || o.t || o.ti;
+const autoriTxt = (o) => o.au.slice(0, 2).map((a) => a.n).join(", ");
+const annoTxt = (y) => (y === null ? "" : y < 0 ? (LING === "it" ? `${-y} a.C.` : `${-y} BC`) : String(y));
+function copertina(o) {
+  const t = titolo(o), c = hashNumero(t + autoriTxt(o)) % 4;
+  let dim = t.length <= 12 ? 34 : t.length <= 24 ? 28 : t.length <= 40 ? 22 : 18;
+  const lunga = Math.max(...t.split(/\s+/).map((w) => w.length));
+  dim = Math.max(14, Math.min(dim, Math.floor(106 / (0.5 * lunga))));
+  const sotto = [autoriTxt(o), annoTxt(o.y)].filter(Boolean).join(" · ");
+  return h("button", { class: `copertina c${c}`, type: "button", "aria-label": [t, sotto].filter(Boolean).join(", "), onclick: () => apriOpera(o) },
+    trama(o.g, t, c), h("span", { class: "fascia" }, h("span", { class: "t", style: `font-size:${dim}px` }, t), sotto ? h("span", { class: "a" }, sotto) : null));
+}
+
+/* ---------- finestra ---------- */
+let _prima = null;
+function finestra(...contenuto) {
+  _prima = document.activeElement;
+  $("#fin-corpo").replaceChildren(...contenuto);
+  $("#finestra").hidden = false;
+  document.body.style.overflow = "hidden";
+  $("#fin-chiudi").focus();
+}
+function chiudi() { $("#finestra").hidden = true; document.body.style.overflow = ""; if (_prima && _prima.focus) _prima.focus(); }
+$("#fin-chiudi").addEventListener("click", chiudi);
+$("#fin-chiudi").setAttribute("aria-label", L.chiudi);
+$("#finestra").addEventListener("click", (e) => { if (e.target.id === "finestra") chiudi(); });
+addEventListener("keydown", (e) => { if (e.key === "Escape" && !$("#finestra").hidden) chiudi(); });
+
+function testoStato(o, c) {
+  const st = stato(o, c);
+  if (st.s === "ver") return L.sAlleato;
+  if (st.s === "nd") return L.sNd;
+  if (c === "us") return st.s === "si" ? (st.senza ? L.sUsSenza : L.sUsSi) : tr("sUsDal", { y: st.y });
+  if (c === "es") return st.s === "si" ? L.sEsSi : tr("sEsDal", { y: st.y });
+  return st.s === "si" ? L.sUeSi : tr("sUeDal", { y: st.y });
+}
+function apriOpera(o) {
+  const righe = ["it", "fr", "de", "es", "us"].map((c) => {
+    const st = stato(o, c);
+    const extra = st.note.filter((k) => k !== "sAlleato").map((k) => h("span", { style: "display:block;margin-top:4px;font-size:13px;color:#5C5C66" }, L[k]));
+    return h("li", {}, h("span", { class: "p" }, L.paesi[c], " ", badge(st)), h("span", {}, testoStato(o, c), extra));
+  });
+  const orig = LING === "it" && o.ti && o.t && o.ti !== o.t ? o.t : null;
+  finestra(h("h2", { id: "fin-tit" }, titolo(o)),
+    orig ? h("p", { style: "margin:8px 0 0;color:#5C5C66" }, orig) : null,
+    h("p", { style: "margin:12px 0 0;font-size:16px" }, [autoriTxt(o), o.y !== null ? tr("uscita", { y: annoTxt(o.y) }) : L.uscitaNd].filter(Boolean).join(" · ")),
+    h("h3", { class: "mono", style: "margin:24px 0 0;font-size:12px;color:#C2301A" }, L.stati),
+    h("ul", { class: "stati" }, righe),
+    h("p", {}, h("a", { class: "link-forte", href: `https://www.wikidata.org/wiki/${o.q}`, rel: "noopener", target: "_blank" }, L.wikidata)),
+    h("p", { class: "nota" }, L.piede1));
+}
+function badge(st) {
+  if (st.s === "si") return h("span", { class: "b si" }, L.libero);
+  if (st.s === "ver") return h("span", { class: "b ver" }, L.verifica);
+  if (st.s === "dal") return h("span", { class: "b" }, tr("dal", { y: st.y }));
+  return h("span", { class: "b" }, L.nd);
+}
+function griglia(tit, sotto, opere) {
+  finestra(h("h2", { id: "fin-tit" }, tit), sotto ? h("p", { style: "margin:10px 0 0;color:#5C5C66" }, sotto) : null,
+    opere.length ? h("div", { class: "griglia" }, opere.map(copertina)) : h("p", {}, L.vuotoS));
+}
+
+/* ---------- ricerca ---------- */
+async function fileRicerca(k) {
+  if (!D.file.has(k)) D.file.set(k, leggi(`/data/storico/ricerca/${k}.json`).catch(() => ({ opere: [], autori: [] })));
+  return D.file.get(k);
+}
+function chiavi(q) {
+  const p = parole(q); if (!p.length) return [];
+  const ks = new Set([lettera(p[0]), lettera(p[p.length - 1])]);
+  const piena = p.find((w) => !ARTICOLI.has(w)); if (piena) ks.add(lettera(piena));
+  return [...ks];
+}
+function contiene(testo, tok) { const w = parole(testo); return tok.every((t) => w.some((x) => x.startsWith(t))); }
+function statoAutore(a) {
+  if (a.an) return [L.anticoTutto];
+  if (a.m === null || a.m === undefined) return [L.morteNd];
+  const Y = D.anno, ue = a.m + 71, es = a.m + (a.m < 1987 ? 81 : 71);
+  const r = [tr(ue <= Y ? "ueLibero" : "ueDal", { y: ue }), tr(es <= Y ? "esLibero" : "esDal", { y: es }) + " · " + L.usRegola];
+  if (a.al && a.m >= Y - 79) r.push(L.sAlleatoBreve);
+  return r;
+}
+function rigaOpera(o) {
+  const orig = LING === "it" && o.ti && o.t && o.ti !== o.t ? o.t : null;
+  return h("li", { class: "riga" },
+    h("button", { class: "tit", type: "button", onclick: () => apriOpera(o) },
+      h("span", { class: "t" }, titolo(o), orig ? h("span", { class: "o" }, " · " + orig) : null),
+      h("span", { class: "a" }, [autoriTxt(o), annoTxt(o.y)].filter(Boolean).join(" · "))),
+    h("span", { class: "badge" }, ["it", "fr", "de", "es", "us"].map((c) => {
+      const st = stato(o, c), b = badge(st);
+      b.prepend(h("span", { style: "opacity:.75" }, c.toUpperCase()));
+      if (c === D.paese) b.classList.add("attivo");
+      b.setAttribute("title", L.paesi[c]);
+      return b;
+    })));
+}
+async function opereDiAutore(qid) {
+  const k = String(Number(qid.slice(1)) % 100).padStart(2, "0");
+  if (!D.perAutore.has(k)) D.perAutore.set(k, leggi(`/data/storico/per_autore/${k}.json`).catch(() => ({})));
+  const d = await D.perAutore.get(k);
+  return (d[qid] || []).map(daRiga);
+}
+function arricchisci(o) { const x = D.indice.get(o.q); if (x) { o.v = x.v; o.g = x.g; o.l = x.l; } return o; }
+function schedaAutore(a, n, subito) {
+  const morte = a.an ? L.antico : a.m === null || a.m === undefined ? L.morteNd : tr(a.inc ? "mortoNelInc" : "mortoNel", { m: a.m });
+  const lista = h("ul", { class: "righe" });
+  const bott = h("button", { class: "altro", type: "button", onclick: async () => {
+    bott.disabled = true;
+    const opere = (await opereDiAutore(a.q)).map(arricchisci).sort((x, y) => y.pg - x.pg);
+    lista.replaceChildren(...opere.map(rigaOpera)); bott.remove();
+  } }, L.tutteOpere);
+  if (subito) setTimeout(() => bott.click(), 0);   // un solo autore trovato: le sue opere si mostrano subito
+  return h("div", {}, h("div", { class: "aut-card" }, h("div", {},
+      h("div", { class: "mono", style: "font-size:11px;color:#5C5C66" }, L.autore),
+      h("div", { class: "nome" }, a.n),
+      h("div", { class: "det" }, morte, " · ", tr("operaN", { n: num(n) })),
+      statoAutore(a).map((t) => h("div", { class: "det" }, h("b", {}, t))),
+      bott, linkRadar(a.q))), lista);
+}
+function linkRadar(qid) {
+  const p = D.prossimi.find((x) => x.w === qid);
+  if (!p) return null;
+  return h("div", {}, h("a", { class: "link-forte", href: LING === "en" ? (p.pe ? `/en/author/${p.pe}/` : "/en/") : `/autore/${p.p}/` }, L.apriRadar + " →"));
+}
+function prossimo(q) {
+  const tok = parole(q); if (!tok.length) return null;
+  return D.prossimi.find((p) => contiene(p.n, tok)) || null;
+}
+let _cerca = 0;
+async function cerca(q) {
+  const box = $("#risultati");
+  const tok = parole(q);
+  if (tok.join("").length < 2) { box.replaceChildren(); return; }
+  const mio = ++_cerca;
+  const files = await Promise.all(chiavi(q).map(fileRicerca));
+  if (mio !== _cerca) return;
+  const autori = new Map(), opere = new Map();
+  for (const f of files) {
+    for (const r of f.autori) if (contiene(r[1], tok) && !autori.has(r[0])) autori.set(r[0], { a: { q: r[0], n: r[1], m: r[2], an: !!r[4], inc: !!r[5], al: !!r[6] }, n: r[3] });
+    for (const r of f.opere) if (!opere.has(r[0]) && (contiene(r[1], tok) || contiene(r[2], tok))) opere.set(r[0], arricchisci(daRiga(r)));
+  }
+  const qn = tok.join(" ");
+  const la = [...autori.values()].sort((x, y) => y.n - x.n).slice(0, 3);
+  const lo = [...opere.values()].sort((x, y) => (parole(titolo(y)).join(" ") === qn) - (parole(titolo(x)).join(" ") === qn) || y.pg - x.pg);
+  const parti = [h("h2", { class: "r-tit" }, tr("risPer", { q: q.trim() })),
+    h("p", { class: "r-sotto" }, [autori.size ? tr(autori.size === 1 ? "nAut" : "nAutP", { n: num(autori.size) }) : "", lo.length ? tr(lo.length === 1 ? "nOp" : "nOpP", { n: num(lo.length) }) : ""].filter(Boolean).join(" · "))];
+  for (const x of la) parti.push(schedaAutore(x.a, x.n, la.length === 1));
+  if (lo.length) {
+    const lista = h("ul", { class: "righe" }, lo.slice(0, 20).map(rigaOpera));
+    parti.push(lista);
+    if (lo.length > 20) { const b = h("button", { class: "altro", type: "button", onclick: () => { lista.replaceChildren(...lo.map(rigaOpera)); b.remove(); } }, L.altriRis); parti.push(b); }
+  }
+  if (!la.length) {
+    const p = prossimo(q);
+    if (p) {
+      const es = p.m + (p.m < 1987 ? 81 : 71);
+      parti.push(h("div", { class: "box-no" }, h("span", { class: "k" }, L.prossimoK),
+        tr("prossimo", { nome: p.n, m: p.m, ue: p.m + 71, es }),
+        h("div", {}, h("a", { class: "bottone", href: LING === "en" ? (p.pe ? `/en/author/${p.pe}/` : `/en/`) : `/autore/${p.p}/` }, L.apriRadar))));
+    }
+  }
+  if (!la.length && !lo.length && !parti.some((x) => x.classList && x.classList.contains("box-no"))) parti.push(h("div", { class: "box-no" }, h("span", { class: "k" }, L.nessuno), L.nessunoSpieg));
+  if (la.length || lo.length) parti.push(h("p", { class: "nota" }, L.notaRis));
+  box.replaceChildren(...parti);
+}
+
+/* ---------- scaffali ---------- */
+function primi(lista, n) { return lista.slice().sort((a, b) => b.v - a.v || b.pg - a.pg).slice(0, n); }
+function scaffale(tit, sotto, elementi, opzioni) {
+  const fila = h("div", { class: "fila", role: "list" }, elementi.length ? elementi.slice(0, 12) : h("p", { class: "vuoto" }, L.vuotoS));
+  const testa = h("div", { class: "s-testa" }, h("div", {}, h("h3", {}, tit), sotto ? h("p", {}, sotto) : null));
+  if (elementi.length > 12 || (opzioni && opzioni.tutto)) {
+    testa.append(h("button", { type: "button", onclick: opzioni && opzioni.tutto ? opzioni.tutto : (e) => {
+      const aperto = fila.classList.toggle("tutta");
+      fila.replaceChildren(...(aperto ? elementi : elementi.slice(0, 12)));
+      e.currentTarget.textContent = aperto ? L.vediMeno : L.vediTutto;
+    } }, L.vediTutto));
+  }
+  return h("div", { class: "scaffale" }, testa, fila);
+}
+function quadro(k, nome, n, colori, conTrama, onclick) {
+  const q = h("span", { class: "q", style: `background:${colori[0]};color:${colori[1]}` });
+  if (conTrama) q.append(conTrama);
+  // la parola più lunga deve stare intera nel quadrato: si rimpicciolisce, non si spezza
+  const lunga = Math.max(...String(nome).split(/\s+/).map((w) => w.length));
+  const dim = Math.max(16, Math.min(28, Math.floor(130 / (0.5 * lunga))));
+  q.append(h("span", { class: "f", style: `background:${colori[0]}` }, h("span", { class: "k" }, k), h("span", { class: "n", style: `font-size:${dim}px` }, nome)));
+  return h("button", { class: "quadro", type: "button", onclick }, q, h("span", { class: "c" }, tr("titoli", { n: num(n) })));
+}
+function classificaAutori(liberi) {
+  const per = new Map();
+  for (const o of liberi) for (const a of o.au) {
+    if (!per.has(a.q)) per.set(a.q, { a, opere: [], v: 0 });
+    const x = per.get(a.q); x.opere.push(o); x.v += o.v;
+  }
+  const tutti = [...per.values()].filter((x) => x.opere.length >= 3 && !NON_AUTORI.test(x.a.n)).sort((a, b) => b.v - a.v);
+  const unici = [], visti = [];
+  for (const x of tutti) {   // chi ha quasi le stesse opere di uno già in lista (Jacob e Wilhelm dopo «Fratelli Grimm») si salta
+    const s = new Set(x.opere.map((o) => o.q));
+    if (visti.some((v) => [...s].filter((q) => v.has(q)).length >= 0.6 * s.size)) continue;
+    visti.push(s); unici.push(x);
+    if (unici.length === 40) break;
+  }
+  return unici;
+}
+function voceClassifica(x, i, p) {
+  const f = D.foto[x.a.q];
+  const foto = h("span", { class: "foto" }, f ? h("img", { src: f.u, alt: (LING === "it" ? "Ritratto di " : "Portrait of ") + x.a.n, loading: "lazy", decoding: "async", referrerpolicy: "no-referrer" }) : h("span", { class: "ini", "aria-hidden": "true" }, iniziali(x.a.n)),
+    h("span", { class: "cog", "aria-hidden": "true" }, cognome(x.a.n)));
+  return h("li", {}, h("button", { type: "button", onclick: () => griglia(x.a.n, tr("titoliLiberi", { n: num(x.opere.length) }) + " " + L.inPaese[p], primi(x.opere, 60)) },
+    h("span", { class: "pos" }, String(i + 1)), foto, h("span", {}, h("span", { class: "nm" }, x.a.n), h("span", { class: "nn" }, tr("titoliLiberi", { n: num(x.opere.length) })))));
+}
+function creditiRitratti(lista) {
+  const conFoto = lista.filter((x) => D.foto[x.a.q]);
+  if (!conFoto.length) return null;
+  const pd = (l) => /^(public domain|pd|cc0)/i.test(l || "") || /pubblico dominio/i.test(l || "");
+  const altri = conFoto.filter((x) => !pd(D.foto[x.a.q].l));
+  const p = h("p", { class: "crediti" }, L.ritratti + ", " + L.ritrattiPd + (altri.length ? " " + L.ritrattiTranne + " " : "."));
+  altri.forEach((x, i) => {
+    const f = D.foto[x.a.q];
+    p.append(x.a.n + " (", h("a", { href: f.p, rel: "noopener", target: "_blank" }, [f.a ? L.fotoDi + " " + f.a : "foto", f.l].filter(Boolean).join(", ")), ")" + (i < altri.length - 1 ? ", " : "."));
+  });
+  return p;
+}
+function disegnaScaffali() {
+  const p = D.paese, Y = D.anno, inP = L.inPaese[p];
+  const opere = D.opere.filter((o) => !o.escl);
+  const liberi = opere.filter((o) => libera(o, p));
+  const corpo = $("#scaffali-corpo");
+  const s = [h("p", { class: "occ", style: "margin:0" }, tr("giaIn", { p: inP })), h("h2", { class: "h2" }, L.sfoglia), h("p", { class: "intro", html: tr("introS", { p: esc(inP) }) })];
+  s.push(scaffale(L.piuLetti, tr("piuLettiSub", { p: inP, s: D.sett }), primi(liberi, 30).map(copertina)));
+  let nuovi, sotto;
+  if (p === "us") { nuovi = liberi.filter((o) => o.y === Y - 96); sotto = tr("nuoviUs", { m: Y - 96 }); }
+  else {
+    const m = p === "es" ? Y - 81 : Y - 71;
+    nuovi = liberi.filter((o) => { const mm = o.au.filter((a) => !a.an && a.m !== null).map((a) => a.m); return mm.length && Math.max(...mm) === m; });
+    sotto = p === "es" ? tr("nuoviEs", { m }) : tr("nuoviUe", { m, p: inP.charAt(0).toUpperCase() + inP.slice(1) });
+  }
+  s.push(scaffale(tr("nuovi", { y: Y }), sotto, primi(nuovi, 30).map(copertina)));
+  // autori
+  const cl = classificaAutori(liberi);
+  const ol = h("ol", { class: "classifica" }, cl.slice(0, 10).map((x, i) => voceClassifica(x, i, p)));
+  const testa = h("div", { class: "s-testa" }, h("div", {}, h("h3", {}, L.autori), h("p", {}, tr("autoriSub", { p: inP, n: cl.length }))));
+  if (cl.length > 10) testa.append(h("button", { type: "button", onclick: (e) => {
+    const aperto = ol.children.length <= 10;
+    ol.replaceChildren(...cl.slice(0, aperto ? cl.length : 10).map((x, i) => voceClassifica(x, i, p)));
+    e.currentTarget.textContent = aperto ? L.vediMeno : tr("vediTutti", { n: cl.length });
+  } }, tr("vediTutti", { n: cl.length })));
+  s.push(h("div", { class: "scaffale" }, testa, cl.length ? ol : h("p", { class: "vuoto" }, L.vuotoS), creditiRitratti(cl)));
+  // generi (con simbolo) e lingue (colore piatto)
+  const perG = new Map(), perL = new Map();
+  for (const o of liberi) {
+    for (const g of o.g) if (GENERI[g]) { if (!perG.has(g)) perG.set(g, []); perG.get(g).push(o); }
+    if (o.l) { if (!perL.has(o.l)) perL.set(o.l, []); perL.get(o.l).push(o); }
+  }
+  const gg = [...perG.entries()].sort((a, b) => b[1].length - a[1].length);
+  s.push(scaffale(L.generi, L.generiSub, gg.map(([g, lista], i) => {
+    const c = i % 4;
+    return quadro(L.genere, GENERI[g], lista.length, COLORI_TRAMA[c].map((x, j) => (j === 1 ? (c === 2 || c === 3 ? "#F7F7F4" : "#0C0C10") : x)), trama([g], g, c),
+      () => griglia(GENERI[g], tr("titoli", { n: num(lista.length) }) + " · " + inP, primi(lista, 60)));
+  })));
+  const ll = [...perL.entries()].filter(([, v]) => v.length >= 3).sort((a, b) => b[1].length - a[1].length);
+  s.push(scaffale(L.lingue, L.lingueSub, ll.map(([k, lista], i) => {
+    const nome = (D.lingue[k] && D.lingue[k][LING === "it" ? 1 : 0]) || k;
+    return quadro(L.lingua, nome, lista.length, PIATTI[i % PIATTI.length], null, () => griglia(nome, tr("titoli", { n: num(lista.length) }) + " · " + inP, primi(lista, 60)));
+  })));
+  corpo.replaceChildren(...s);
+}
+
+/* ---------- testata e avvio ---------- */
+function disegnaPaesi() {
+  const box = $("#paesi");
+  box.setAttribute("aria-label", L.paese);
+  box.replaceChildren(h("span", { class: "et" }, L.paese.toUpperCase()), ...Object.keys(L.paesi).map((c) => h("button", { type: "button", "aria-pressed": c === D.paese ? "true" : "false", onclick: () => {
+    D.paese = c; try { localStorage.setItem("pdr-storico-paese", c); } catch (e) { /* ok */ }
+    disegnaPaesi(); disegnaScaffali(); cerca($("#q").value);
+  } }, L.paesi[c])));
+}
+async function avvia() {
+  $("#occ").textContent = L.occ;
+  $("#h1").replaceChildren(L.h1a, h("em", {}, L.h1b), L.h1c);
+  $("#lead").textContent = L.lead;
+  $("#q-et").textContent = L.cerca; $("#q").placeholder = L.cerca;
+  $("#piede").replaceChildren(h("p", {}, L.piede1), h("p", {}, L.piede2), h("p", {}, L.piede3),
+    h("p", {}, L.piede4 + " ", h("a", { href: "https://www.linkedin.com/in/marconovali", rel: "me noopener", target: "_blank" }, "LinkedIn"), " · ",
+      h("a", { href: "https://github.com/mnovali90-byte/publicdomain/issues" }, L.segnala)));
+  try { const c = localStorage.getItem("pdr-storico-paese"); if (c && L.paesi[c]) D.paese = c; else if (LING === "en") D.paese = "us"; } catch (e) { if (LING === "en") D.paese = "us"; }
+  disegnaPaesi();
+  $("#scaffali-corpo").replaceChildren(h("p", {}, L.caricamento));
+  let P;
+  try { P = await leggi("/data/storico/pagina.json"); } catch (e) { $("#scaffali-corpo").replaceChildren(h("p", {}, L.errore)); return; }
+  D.anno = Number(String(P.aggiornato).slice(0, 4)) || D.anno;
+  D.lingue = P.lingue || {}; D.foto = P.foto || {}; D.prossimi = P.prossimi || [];
+  const au = P.autori.map((a) => ({ q: a[0], n: a[1], m: a[2], an: !!a[3], inc: !!a[4], al: !!a[5] }));
+  D.opere = P.opere.map((r) => pulisciAnno({ q: r[0], t: r[1], ti: r[2], y: r[3], yd: r[4], au: r[5].map((i) => au[i]), v: r[6], g: r[7], l: r[8], pg: r[9], escl: !!r[10] }));
+  D.indice = new Map(D.opere.map((o) => [o.q, o]));
+  const [a, b] = P.settimana.map((d) => new Date(d + "T12:00:00"));
+  D.sett = L.dateFmt(a, b);
+  $("#conti").textContent = tr("conti", { o: num(P.n_opere), a: num(P.n_autori), s: D.sett });
+  disegnaScaffali();
+  let t = null;
+  $("#q").addEventListener("input", (e) => { clearTimeout(t); const v = e.target.value; t = setTimeout(() => { cerca(v); history.replaceState(null, "", v.trim() ? "#" + encodeURIComponent(v.trim()) : location.pathname); }, 250); });
+  const iniz = decodeURIComponent(location.hash.slice(1) || "");
+  if (iniz) { $("#q").value = iniz; cerca(iniz); }
+}
+avvia();
+</script>
+</body>
+</html>
