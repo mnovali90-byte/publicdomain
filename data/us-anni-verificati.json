@@ -140,19 +140,16 @@
 }
 ],
 "Q1216006": [
-"nd",
-1932,
-"loc",
+"ok",
+1931,
+"k10plus",
 "2026-11-19",
 [
 "cce",
-"dnb",
-"openlibrary",
-"loc"
+"k10plus"
 ],
 {
-"openlibrary": 1932,
-"loc": 1932
+"k10plus": 1931
 }
 ],
 "Q1070729": [
@@ -281,7 +278,7 @@
 "2026-11-19",
 [
 "cce",
-"dnb",
+"k10plus",
 "openlibrary",
 "loc"
 ],
@@ -297,7 +294,6 @@
 "2026-11-19",
 [
 "cce",
-"bnf",
 "openlibrary",
 "loc"
 ],
@@ -312,7 +308,7 @@
 "2026-11-19",
 [
 "cce",
-"dnb",
+"k10plus",
 "openlibrary",
 "loc"
 ],
@@ -438,7 +434,7 @@ null,
 "2026-11-19",
 [
 "cce",
-"dnb",
+"k10plus",
 "openlibrary",
 "loc"
 ],
@@ -535,7 +531,7 @@ null,
 "2026-11-19",
 [
 "cce",
-"dnb",
+"k10plus",
 "openlibrary",
 "loc"
 ],
@@ -574,7 +570,7 @@ null,
 "2026-11-19",
 [
 "cce",
-"dnb",
+"k10plus",
 "openlibrary",
 "loc"
 ],
@@ -638,17 +634,17 @@ null,
 }
 ],
 "Q1214380": [
-"nd",
-null,
-null,
+"ok",
+1931,
+"k10plus",
 "2026-11-19",
 [
 "cce",
-"dnb",
-"openlibrary",
-"loc"
+"k10plus"
 ],
-{}
+{
+"k10plus": 1931
+}
 ],
 "Q1170330": [
 "nd",
@@ -657,7 +653,7 @@ null,
 "2026-11-19",
 [
 "cce",
-"dnb",
+"k10plus",
 "openlibrary",
 "loc"
 ],
@@ -670,7 +666,6 @@ null,
 "2026-11-19",
 [
 "cce",
-"bnf",
 "openlibrary",
 "loc"
 ],
@@ -679,19 +674,16 @@ null,
 }
 ],
 "Q1306780": [
-"nd",
-1933,
-"loc",
+"ok",
+1931,
+"k10plus",
 "2026-11-19",
 [
 "cce",
-"dnb",
-"openlibrary",
-"loc"
+"k10plus"
 ],
 {
-"openlibrary": 1933,
-"loc": 1933
+"k10plus": 1931
 }
 ],
 "Q7939007": [
@@ -773,19 +765,16 @@ null,
 }
 ],
 "Q11247830": [
-"nd",
-1977,
-"loc",
+"ok",
+1931,
+"k10plus",
 "2026-11-19",
 [
 "cce",
-"dnb",
-"openlibrary",
-"loc"
+"k10plus"
 ],
 {
-"openlibrary": 1977,
-"loc": 1977
+"k10plus": 1931
 }
 ],
 "Q1192045": [
@@ -795,7 +784,7 @@ null,
 "2026-11-19",
 [
 "cce",
-"dnb",
+"k10plus",
 "openlibrary",
 "loc"
 ],
@@ -811,7 +800,7 @@ null,
 "2026-11-19",
 [
 "cce",
-"dnb",
+"k10plus",
 "openlibrary",
 "loc"
 ],
@@ -824,7 +813,7 @@ null,
 "2026-11-19",
 [
 "cce",
-"dnb",
+"k10plus",
 "openlibrary",
 "loc"
 ],
@@ -884,19 +873,16 @@ null,
 }
 ],
 "Q1696432": [
-"nd",
-1985,
-"loc",
+"ok",
+1931,
+"k10plus",
 "2026-11-19",
 [
 "cce",
-"dnb",
-"openlibrary",
-"loc"
+"k10plus"
 ],
 {
-"openlibrary": 2019,
-"loc": 1985
+"k10plus": 1931
 }
 ],
 "Q1885266": [
@@ -1062,19 +1048,16 @@ null,
 }
 ],
 "Q811229": [
-"nd",
-2012,
-"loc",
+"ok",
+1931,
+"k10plus",
 "2026-11-19",
 [
 "cce",
-"dnb",
-"openlibrary",
-"loc"
+"k10plus"
 ],
 {
-"openlibrary": 2012,
-"loc": 2012
+"k10plus": 1931
 }
 ],
 "Q7974168": [
@@ -1108,7 +1091,7 @@ null,
 "2026-11-19",
 [
 "cce",
-"dnb",
+"k10plus",
 "openlibrary",
 "loc"
 ],
@@ -1431,18 +1414,16 @@ null,
 }
 ],
 "Q20726178": [
-"prima",
-1930,
-"bnf",
+"nd",
+1933,
+"loc",
 "2026-11-19",
 [
 "cce",
-"bnf",
 "openlibrary",
 "loc"
 ],
 {
-"bnf": 1930,
 "openlibrary": 1933,
 "loc": 1933
 }
@@ -1690,17 +1671,17 @@ null,
 }
 ],
 "Q1213323": [
-"nd",
-null,
-null,
+"ok",
+1931,
+"k10plus",
 "2026-11-19",
 [
 "cce",
-"dnb",
-"openlibrary",
-"loc"
+"k10plus"
 ],
-{}
+{
+"k10plus": 1931
+}
 ],
 "Q1430492": [
 "ok",
@@ -1848,23 +1829,20 @@ null,
 "loc"
 ],
 {
-"openlibrary": 2002,
 "loc": 2002
 }
 ],
 "Q10472591": [
-"nd",
-1971,
-"loc",
+"ok",
+1931,
+"k10plus",
 "2026-11-19",
 [
 "cce",
-"dnb",
-"openlibrary",
-"loc"
+"k10plus"
 ],
 {
-"loc": 1971
+"k10plus": 1931
 }
 ],
 "Q11792659": [
@@ -2059,17 +2037,18 @@ null,
 }
 ],
 "Q1195668": [
-"nd",
-1953,
-"loc",
+"prima",
+1930,
+"k10plus",
 "2026-11-19",
 [
 "cce",
-"dnb",
+"k10plus",
 "openlibrary",
 "loc"
 ],
 {
+"k10plus": 1930,
 "openlibrary": 1960,
 "loc": 1953
 }
@@ -2111,19 +2090,16 @@ null,
 }
 ],
 "Q7727278": [
-"nd",
-1976,
-"loc",
+"ok",
+1932,
+"k10plus",
 "2026-11-19",
 [
 "cce",
-"dnb",
-"openlibrary",
-"loc"
+"k10plus"
 ],
 {
-"openlibrary": 2005,
-"loc": 1976
+"k10plus": 1932
 }
 ],
 "Q934396": [
@@ -2139,20 +2115,17 @@ null,
 }
 ],
 "Q610428": [
-"nd",
-1933,
-"cce",
+"ok",
+1932,
+"k10plus",
 "2026-11-19",
 [
 "cce",
-"dnb",
-"openlibrary",
-"loc"
+"k10plus"
 ],
 {
 "cce": 1933,
-"openlibrary": 1933,
-"loc": 1933
+"k10plus": 1932
 }
 ],
 "Q1970223": [
@@ -2174,7 +2147,6 @@ null,
 "2026-11-19",
 [
 "cce",
-"dnb",
 "openlibrary",
 "loc"
 ],
@@ -2273,17 +2245,18 @@ null,
 }
 ],
 "Q370698": [
-"nd",
-1956,
-"openlibrary",
+"prima",
+1931,
+"k10plus",
 "2026-11-19",
 [
 "cce",
-"dnb",
+"k10plus",
 "openlibrary",
 "loc"
 ],
 {
+"k10plus": 1931,
 "openlibrary": 1956
 }
 ],
@@ -2365,18 +2338,16 @@ null,
 }
 ],
 "Q1746652": [
-"nd",
-1933,
-"openlibrary",
+"ok",
+1932,
+"k10plus",
 "2026-11-19",
 [
 "cce",
-"dnb",
-"openlibrary",
-"loc"
+"k10plus"
 ],
 {
-"openlibrary": 1933
+"k10plus": 1932
 }
 ],
 "Q2614387": [
@@ -2406,35 +2377,33 @@ null,
 }
 ],
 "Q357328": [
-"nd",
-1970,
-"loc",
+"prima",
+1930,
+"k10plus",
 "2026-11-19",
 [
 "cce",
-"dnb",
+"k10plus",
 "openlibrary",
 "loc"
 ],
 {
+"k10plus": 1930,
 "openlibrary": 1970,
 "loc": 1970
 }
 ],
 "Q1192235": [
-"nd",
-2017,
-"loc",
+"ok",
+1932,
+"k10plus",
 "2026-11-19",
 [
 "cce",
-"dnb",
-"openlibrary",
-"loc"
+"k10plus"
 ],
 {
-"openlibrary": 2017,
-"loc": 2017
+"k10plus": 1932
 }
 ],
 "Q5216075": [
@@ -2463,49 +2432,42 @@ null,
 {}
 ],
 "Q1706363": [
-"nd",
-1930,
-"loc",
+"ok",
+1932,
+"k10plus",
 "2026-11-19",
 [
 "cce",
-"dnb",
-"openlibrary",
-"loc"
+"k10plus"
 ],
 {
 "cce": 1933,
-"openlibrary": 1933,
-"loc": 1930
+"k10plus": 1932
 }
 ],
 "Q104829995": [
 "nd",
-2009,
-"openlibrary",
+null,
+null,
 "2026-11-19",
 [
 "cce",
 "openlibrary",
 "loc"
 ],
-{
-"openlibrary": 2009
-}
+{}
 ],
 "Q1171410": [
-"nd",
-2002,
-"loc",
+"ok",
+1932,
+"k10plus",
 "2026-11-19",
 [
 "cce",
-"dnb",
-"openlibrary",
-"loc"
+"k10plus"
 ],
 {
-"loc": 2002
+"k10plus": 1932
 }
 ],
 "Q7745219": [
@@ -3058,18 +3020,16 @@ null,
 {}
 ],
 "Q1112060": [
-"nd",
-2007,
-"loc",
+"ok",
+1932,
+"bnf",
 "2026-11-19",
 [
 "cce",
-"bnf",
-"openlibrary",
-"loc"
+"bnf"
 ],
 {
-"loc": 2007
+"bnf": 1932
 }
 ],
 "Q7768564": [
@@ -4032,9 +3992,13 @@ null,
 "openlibrary",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 2018
+}
 ],
 "Q29405101": [
 "nd",
@@ -4042,19 +4006,23 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q89784584": [
 "ok",
 1932,
-"loc",
+"cce",
 "2026-11-19",
 [
-"openlibrary",
-"loc"
-]
+"cce"
+],
+{
+"cce": 1932
+}
 ],
 "Q102229104": [
 "nd",
@@ -4062,9 +4030,11 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q107359351": [
 "nd",
@@ -4072,9 +4042,11 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ]
 }
 }

@@ -3,20 +3,22 @@
   "libri": 154,
   "controllati": 154,
   "esiti": {
-   "ok": 70,
-   "nd": 81,
-   "prima": 3
+   "ok": 78,
+   "nd": 74,
+   "prima": 2
   },
   "confermati_per_fonte": {
    "cce": 38,
    "openlibrary": 15,
    "bnf": 15,
+   "k10plus": 8,
    "loc": 2
   },
   "conferme_per_fonte_anche_doppie": {
    "cce": 38,
    "openlibrary": 15,
    "bnf": 15,
+   "k10plus": 8,
    "loc": 2
   },
   "piu_vecchi": [
@@ -29,11 +31,6 @@
     "Le Bal",
     1930,
     "cce"
-   ],
-   [
-    "Mélo",
-    1930,
-    "bnf"
    ]
   ],
   "non_confermati": [
@@ -50,14 +47,6 @@
     null,
     {
      "openlibrary": 1980
-    }
-   ],
-   [
-    "The Sleepwalkers",
-    "Les somnambules",
-    {
-     "openlibrary": 1932,
-     "loc": 1932
     }
    ],
    [
@@ -85,7 +74,7 @@
    ],
    [
     "The Zürau Aphorisms",
-    "Réflexions sur le péché, la souffrance, l'espérance et le vrai chemin",
+    "Die Zürauer Aphorismen",
     {
      "openlibrary": 2006,
      "loc": 2006
@@ -93,14 +82,14 @@
    ],
    [
     "The Black Stone",
-    "La Pierre noire",
+    null,
     {
      "loc": 2022
     }
    ],
    [
     "Investigations of a Dog",
-    "Les recherches d'un chien",
+    "Investigations of a dog",
     {
      "openlibrary": 2016,
      "loc": 2017
@@ -171,28 +160,15 @@
     }
    ],
    [
-    "The last one at the scaffold",
-    "La Dernière à l'échafaud",
-    {}
-   ],
-   [
     "The Silence of the Sirens",
     "Das Schweigen der Sirenen",
     {}
    ],
    [
     "The Return of the Sorcerer",
-    "Talion",
+    null,
     {
      "openlibrary": 2007
-    }
-   ],
-   [
-    "The Great Wall of China",
-    "La muraille de Chine",
-    {
-     "openlibrary": 1933,
-     "loc": 1933
     }
    ],
    [
@@ -217,16 +193,8 @@
     }
    ],
    [
-    "Tales from the Vienna Woods",
-    "Légendes de la forêt viennoise",
-    {
-     "openlibrary": 1977,
-     "loc": 1977
-    }
-   ],
-   [
     "The 35th of May, or Conrad's Ride to the South Seas",
-    "Le 35 Mai",
+    "Der 35. Mai oder Konrad reitet in die Südsee",
     {
      "openlibrary": 1933,
      "loc": 1933
@@ -241,14 +209,6 @@
     "The Truth about Sancho Panza",
     "Die Wahrheit über Sancho Pansa",
     {}
-   ],
-   [
-    "Castle Gripsholm",
-    "Été en Suède",
-    {
-     "openlibrary": 2019,
-     "loc": 1985
-    }
    ],
    [
     "Maigret and the Yellow Dog",
@@ -272,14 +232,6 @@
     {
      "openlibrary": 1975,
      "loc": 1975
-    }
-   ],
-   [
-    "A Small Circus",
-    "Levée de fourches",
-    {
-     "openlibrary": 2012,
-     "loc": 2012
     }
    ],
    [
@@ -318,7 +270,7 @@
    ],
    [
     "A Hundred Authors Against Einstein",
-    "Hundert Autoren Gegen Einstein",
+    null,
     {}
    ],
    [
@@ -360,6 +312,14 @@
     {
      "openlibrary": 1954,
      "loc": 1954
+    }
+   ],
+   [
+    "Mélo",
+    null,
+    {
+     "openlibrary": 1933,
+     "loc": 1933
     }
    ],
    [
@@ -429,11 +389,6 @@
     {}
    ],
    [
-    "Cure through the spirit.",
-    "Die Heilung durch den Geist",
-    {}
-   ],
-   [
     "Black Monastery",
     null,
     {
@@ -480,15 +435,7 @@
     "Los placeres prohibidos",
     null,
     {
-     "openlibrary": 2002,
      "loc": 2002
-    }
-   ],
-   [
-    "Government",
-    "Indios",
-    {
-     "loc": 1971
     }
    ],
    [
@@ -560,23 +507,40 @@
   "libri": 159,
   "controllati": 159,
   "esiti": {
-   "ok": 69,
-   "nd": 89,
-   "prima": 1
+   "ok": 76,
+   "prima": 4,
+   "nd": 79
   },
   "confermati_per_fonte": {
-   "cce": 47,
-   "bnf": 10,
+   "cce": 48,
+   "bnf": 11,
    "openlibrary": 9,
-   "loc": 3
+   "k10plus": 6,
+   "loc": 2
   },
   "conferme_per_fonte_anche_doppie": {
-   "cce": 47,
-   "bnf": 10,
+   "cce": 48,
+   "bnf": 11,
    "openlibrary": 9,
+   "k10plus": 6,
    "loc": 2
   },
   "piu_vecchi": [
+   [
+    "The Man Without Qualities",
+    1930,
+    "k10plus"
+   ],
+   [
+    "Journey to the East",
+    1931,
+    "k10plus"
+   ],
+   [
+    "Saint Joan of the Stockyards",
+    1930,
+    "k10plus"
+   ],
    [
     "The Solitude of Compassion",
     1930,
@@ -585,33 +549,8 @@
   ],
   "non_confermati": [
    [
-    "The Man Without Qualities",
-    "L'homme sans qualités",
-    {
-     "openlibrary": 1960,
-     "loc": 1953
-    }
-   ],
-   [
-    "The Concept of the Political",
-    "La notion de politique",
-    {
-     "openlibrary": 2005,
-     "loc": 1976
-    }
-   ],
-   [
-    "Radetzky March",
-    "La marche de Radetzky",
-    {
-     "cce": 1933,
-     "openlibrary": 1933,
-     "loc": 1933
-    }
-   ],
-   [
     "How the Steel Was Tempered",
-    "Et l’acier fut trempé",
+    null,
     {
      "openlibrary": 1970,
      "loc": 1952
@@ -643,13 +582,6 @@
     }
    ],
    [
-    "Journey to the East",
-    "Le voyage en Orient",
-    {
-     "openlibrary": 1956
-    }
-   ],
-   [
     "My Friend Flicka",
     null,
     {
@@ -665,33 +597,10 @@
     }
    ],
    [
-    "Little Man, What Now?",
-    "Quoi de neuf, petit homme?",
-    {
-     "openlibrary": 1933
-    }
-   ],
-   [
     "The Career of Nicodemus Dyzma",
     null,
     {
      "loc": 2020
-    }
-   ],
-   [
-    "Saint Joan of the Stockyards",
-    "Sainte Jeanne des abattoirs",
-    {
-     "openlibrary": 1970,
-     "loc": 1970
-    }
-   ],
-   [
-    "The worker",
-    "Le travailleur",
-    {
-     "openlibrary": 2017,
-     "loc": 2017
     }
    ],
    [
@@ -700,27 +609,9 @@
     {}
    ],
    [
-    "Marie Antoinette: The Portrait of an Average Woman",
-    "Marie Antoinette",
-    {
-     "cce": 1933,
-     "openlibrary": 1933,
-     "loc": 1930
-    }
-   ],
-   [
     "The Empire of the Necromancers",
     null,
-    {
-     "openlibrary": 2009
-    }
-   ],
-   [
-    "The Artificial Silk Girl",
-    "La jeune fille en soie artificielle",
-    {
-     "loc": 2002
-    }
+    {}
    ],
    [
     "The Lagoon",
@@ -864,13 +755,6 @@
     "The Waxworks Murder",
     null,
     {}
-   ],
-   [
-    "The Madman of Bergerac",
-    "Maigret und der Verrückte",
-    {
-     "loc": 2007
-    }
    ],
    [
     "The Testament of Athammaus",
@@ -1138,7 +1022,9 @@
    [
     "The Thing on the Roof",
     null,
-    {}
+    {
+     "openlibrary": 2018
+    }
    ],
    [
     "The Broken Mirror",
@@ -1159,8 +1045,8 @@
  },
  "biblioteche_nazionali": {
   "bnf | risposte | anno trovato": 31,
-  "dnb | nessun record | -": 31,
-  "bnf | risposte | -": 2,
-  "bnf | nessun record | -": 3
+  "k10plus | risposte | anno trovato": 17,
+  "k10plus | nessun record | -": 10,
+  "bnf | nessun record | -": 2
  }
 }
