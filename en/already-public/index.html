@@ -177,14 +177,14 @@ it: {
   occ: "Storico del pubblico dominio", h1a: "È già ", h1b: "libero", h1c: "?",
   lead: "Scrivi un titolo o un autore. Ti diciamo se si può già pubblicare e da quando, paese per paese.",
   cerca: "Cerca un titolo o un autore", paese: "Paese",
-  paesi: { it: "Italia", fr: "Francia", de: "Germania", es: "Spagna", us: "USA" },
-  inPaese: { it: "in Italia", fr: "in Francia", de: "in Germania", es: "in Spagna", us: "negli USA" },
+  paesi: { it: "Italia", fr: "Francia", de: "Germania", es: "Spagna", uk: "Regno Unito", us: "USA" },
+  inPaese: { it: "in Italia", fr: "in Francia", de: "in Germania", es: "in Spagna", uk: "nel Regno Unito", us: "negli USA" },
   conti: "{o} opere e {a} autori da Wikidata, con l'anno di uscita e l'anno di morte degli autori. Le visite si aggiornano ogni lunedì (ultima settimana: {s}).",
   caricamento: "Caricamento…", errore: "Non riesco a leggere i dati. Riprova tra poco.",
   risPer: "Risultati per «{q}»", nAut: "{n} autore", nAutP: "{n} autori", nOp: "{n} opera", nOpP: "{n} opere",
   autore: "Autore", mortoNel: "morto nel {m}", mortoNelInc: "morto nel {m} (le fonti danno anni diversi: si usa il più tardo)", antico: "autore antico", morteNd: "anno di morte non noto",
   operaN: "{n} opere nell'elenco", tutteOpere: "Tutte le opere dell'autore →",
-  ueLibero: "Italia, Francia, Germania: libero dal {y}", ueDal: "Italia, Francia, Germania: dal 1° gennaio {y}",
+  ueLibero: "Italia, Francia, Germania, Regno Unito: libero dal {y}", ueDal: "Italia, Francia, Germania, Regno Unito: dal 1° gennaio {y}",
   esLibero: "Spagna: libero dal {y}", esDal: "Spagna: dal 1° gennaio {y}",
   usRegola: "USA: ogni opera 95 anni dopo l'uscita",
   anticoTutto: "Opere libere in tutti i paesi dell'elenco (autore antico).",
@@ -195,6 +195,9 @@ it: {
   prossimoK: "Non è ancora libero",
   prossimo: "{nome} non è in questo elenco: è morto nel {m}, quindi in Italia, Francia e Germania diventa libero il 1° gennaio {ue} (in Spagna nel {es}). Lo trovi nel radar con la sua scheda.",
   apriRadar: "Apri la scheda nel radar", altriRis: "Mostra altri risultati",
+  soloQui: "Liberi {p}, non ancora altrove", soloQuiSub: "Opere già libere {p} che in almeno uno degli altri paesi sono ancora protette: è qui che i paesi si distinguono.",
+  soloQuiUe: "Italia, Francia, Germania e Regno Unito hanno la stessa regola (70 anni dalla morte): questi scaffali cambiano poco tra loro. Cambiano molto con Spagna e USA.",
+  contaLiberi: "{n} delle {t} opere più lette sono libere {p}.",
   giaIn: "Già pubblici {p}", sfoglia: "Sfoglia gli scaffali",
   introS: "Tutto quello che vedi qui sotto è <b>libero {p}</b>, il paese scelto in alto. Cambia paese e cambiano gli scaffali.",
   piuLetti: "I più letti questa settimana", piuLettiSub: "Solo titoli già liberi {p}. Visite alle pagine Wikipedia in inglese e in italiano, {s}.",
@@ -213,12 +216,15 @@ it: {
   sNd: "Non lo sappiamo: manca l'anno di morte o di uscita.",
   sAlleato: "Per la legge italiana sarebbe libero, ma l'autore era di un paese alleato nella Seconda guerra mondiale: in Italia la protezione può durare di più (Trattato di pace del 1947, allegato XV). Va verificato caso per caso.",
   sAlleatoBreve: "Italia: per le opere uscite fino al 1947 è da verificare, perché l'autore era di un paese alleato nella Seconda guerra mondiale (Trattato di pace del 1947).",
+  sUk2039: "Nel Regno Unito: opera uscita per la prima volta dopo il 1988, di un autore morto prima del 1969: protetta fino al 31 dicembre 2039 (Copyright, Designs and Patents Act 1988, allegato 1, paragrafo 12).",
+  sUkPostumo: "Nel Regno Unito: opera uscita dopo la morte dell'autore e prima del 1989. Per le opere postume la durata può contare dalla pubblicazione: da verificare.",
+  sUkNd: "Nel Regno Unito: se l'opera è uscita per la prima volta dopo il 1988 e l'autore è morto prima del 1969, è protetta fino al 31 dicembre 2039.",
   sFr: "In Francia gli autori «morti per la Francia» hanno 30 anni in più: non lo controlliamo.",
   sDuke: "Anno preso dagli elenchi del Public Domain Day della Duke University, non da Wikidata: da verificare.",
   sUsPrima: "Conta la prima data di pubblicazione registrata su Wikidata: per le opere uscite prima a puntate o in rivista può essere diversa.",
   sInc: "Le fonti danno anni di morte diversi: si usa il più tardo, per prudenza.",
   piede1: "Calcolo indicativo, non è consulenza legale. È libero il testo originale, non l'edizione né la traduzione: traduzioni, illustrazioni e curatele recenti hanno diritti propri. Prima di pubblicare controlla la legge del paese.",
-  piede2: "Regole usate: Italia, Francia, Germania 70 anni dalla morte dell'autore; Spagna 80 anni per gli autori morti prima del 7 dicembre 1987; USA 95 anni dalla prima pubblicazione (si guarda la prima data registrata). In Italia gli autori di paesi alleati nella Seconda guerra mondiale sono segnalati da verificare e restano fuori dagli scaffali italiani.",
+  piede2: "Regole usate: Italia, Francia, Germania, Regno Unito 70 anni dalla morte dell'autore (nel Regno Unito le opere uscite per la prima volta dopo il 1988 di autori morti prima del 1969 sono protette fino al 2039); Spagna 80 anni per gli autori morti prima del 7 dicembre 1987; USA 95 anni dalla prima pubblicazione (si guarda la prima data registrata). In Italia gli autori di paesi alleati nella Seconda guerra mondiale sono segnalati da verificare e restano fuori dagli scaffali italiani.",
   piede3: "Fonti: Wikidata (CC0) per opere, autori e anni; Wikipedia per le visite della settimana; elenchi del Public Domain Day della Duke University (CC BY 4.0) come seconda fonte per gli USA; Wikimedia Commons per i ritratti, ciascuno con la sua licenza. Dati aggiornati ogni lunedì in automatico: possono contenere errori.",
   piede4: "Un progetto di Marco Novali.", segnala: "Hai trovato un errore? Segnalalo",
   dateFmt: (a, b) => `${a.getDate()}–${b.getDate()} ${MESI_IT[b.getMonth()]} ${b.getFullYear()}`,
@@ -227,14 +233,14 @@ en: {
   occ: "Public domain archive", h1a: "Is it ", h1b: "free", h1c: " yet?",
   lead: "Type a title or an author. We tell you whether it can already be published, and since when, country by country.",
   cerca: "Search a title or an author", paese: "Country",
-  paesi: { it: "Italy", fr: "France", de: "Germany", es: "Spain", us: "USA" },
-  inPaese: { it: "in Italy", fr: "in France", de: "in Germany", es: "in Spain", us: "in the USA" },
+  paesi: { it: "Italy", fr: "France", de: "Germany", es: "Spain", uk: "United Kingdom", us: "USA" },
+  inPaese: { it: "in Italy", fr: "in France", de: "in Germany", es: "in Spain", uk: "in the United Kingdom", us: "in the USA" },
   conti: "{o} works and {a} authors from Wikidata, with the year of publication and the authors' year of death. Page views are updated every Monday (last week: {s}).",
   caricamento: "Loading…", errore: "I can't read the data. Please try again shortly.",
   risPer: "Results for “{q}”", nAut: "{n} author", nAutP: "{n} authors", nOp: "{n} work", nOpP: "{n} works",
   autore: "Author", mortoNel: "died in {m}", mortoNelInc: "died in {m} (sources give different years: the latest is used)", antico: "ancient author", morteNd: "year of death unknown",
   operaN: "{n} works in the list", tutteOpere: "All works by this author →",
-  ueLibero: "Italy, France, Germany: free since {y}", ueDal: "Italy, France, Germany: from 1 January {y}",
+  ueLibero: "Italy, France, Germany, United Kingdom: free since {y}", ueDal: "Italy, France, Germany, United Kingdom: from 1 January {y}",
   esLibero: "Spain: free since {y}", esDal: "Spain: from 1 January {y}",
   usRegola: "USA: each work 95 years after publication",
   anticoTutto: "Works free in every country of the list (ancient author).",
@@ -245,6 +251,9 @@ en: {
   prossimoK: "Not free yet",
   prossimo: "{nome} is not in this list: they died in {m}, so in Italy, France and Germany their works become free on 1 January {ue} (in Spain in {es}). You'll find them in the radar with their own page.",
   apriRadar: "Open their page in the radar", altriRis: "Show more results",
+  soloQui: "Free {p}, not yet elsewhere", soloQuiSub: "Works already free {p} that are still protected in at least one of the other countries: this is where the countries differ.",
+  soloQuiUe: "Italy, France, Germany and the United Kingdom share the same rule (70 years from death): these shelves change little between them. They change a lot with Spain and the USA.",
+  contaLiberi: "{n} of the {t} most read works are free {p}.",
   giaIn: "Already public {p}", sfoglia: "Browse the shelves",
   introS: "Everything you see below is <b>free {p}</b>, the country chosen above. Change the country and the shelves change.",
   piuLetti: "Most read this week", piuLettiSub: "Only titles already free {p}. Views of the English and Italian Wikipedia pages, {s}.",
@@ -263,12 +272,15 @@ en: {
   sNd: "We don't know: the year of death or of publication is missing.",
   sAlleato: "Under Italian law it would be free, but the author was from an Allied country in the Second World War: in Italy protection may last longer (1947 Peace Treaty, Annex XV). Check case by case.",
   sAlleatoBreve: "Italy: works published up to 1947 need checking, because the author was from an Allied country in the Second World War (1947 Peace Treaty).",
+  sUk2039: "In the United Kingdom: work first published after 1988, by an author who died before 1969: protected until 31 December 2039 (Copyright, Designs and Patents Act 1988, Schedule 1, paragraph 12).",
+  sUkPostumo: "In the United Kingdom: work published after the author's death and before 1989. For posthumous works the term may run from publication: to be checked.",
+  sUkNd: "In the United Kingdom: if the work was first published after 1988 and the author died before 1969, it is protected until 31 December 2039.",
   sFr: "In France authors who «died for France» get 30 more years: we don't check this.",
   sDuke: "Year taken from Duke University's Public Domain Day lists, not from Wikidata: to be checked.",
   sUsPrima: "What counts is the first publication date recorded on Wikidata: for works first published in instalments or in a magazine it may differ.",
   sInc: "Sources give different years of death: the latest is used, to be safe.",
   piede1: "An indicative calculation, not legal advice. What is free is the original text, not the edition or the translation: recent translations, illustrations and editions have their own rights. Check the law of the country before publishing.",
-  piede2: "Rules used: Italy, France, Germany 70 years from the author's death; Spain 80 years for authors who died before 7 December 1987; USA 95 years from first publication (the first recorded date is used). In Italy, authors from Allied countries in the Second World War are flagged to be checked and kept off the Italian shelves.",
+  piede2: "Rules used: Italy, France, Germany, United Kingdom 70 years from the author's death (in the UK, works first published after 1988 by authors who died before 1969 are protected until 2039); Spain 80 years for authors who died before 7 December 1987; USA 95 years from first publication (the first recorded date is used). In Italy, authors from Allied countries in the Second World War are flagged to be checked and kept off the Italian shelves.",
   piede3: "Sources: Wikidata (CC0) for works, authors and years; Wikipedia for this week's page views; Duke University's Public Domain Day lists (CC BY 4.0) as a second source for the USA; Wikimedia Commons for portraits, each with its own licence. Data updated automatically every Monday: it may contain errors.",
   piede4: "A project by Marco Novali.", segnala: "Found a mistake? Report it",
   dateFmt: (a, b) => `${a.getDate()}–${b.getDate()} ${MESI_EN[b.getMonth()]} ${b.getFullYear()}`,
@@ -321,6 +333,8 @@ function pulisciAnno(o) {
   // un anno di uscita molto più vecchio della morte di tutti gli autori è un errore dei dati (es. 1562 per un autore morto nel 1944): non si usa
   const morti = o.au.filter((a) => !a.an && a.m !== null && a.m !== undefined).map((a) => a.m);
   if (o.y !== null && morti.length === o.au.length && morti.length && o.y < Math.min(...morti) - 90) o.y = null;
+  // e un anno di più di 150 anni dopo la morte di tutti gli autori è quasi sempre un'edizione moderna (la «Repubblica» di Platone, 1963)
+  if (o.y !== null && morti.length && o.au.every((a) => a.an || (a.m !== null && a.m !== undefined && o.y > a.m + 150))) o.y = null;
   return o;
 }
 
@@ -348,12 +362,24 @@ function stato(o, c) {
     fine = Math.max(fine, a.m + durata(a) + 1);
   }
   if (fine > Y) return { s: "dal", y: fine, note };
+  if (c === "uk") {   // regola del 2039 e opere postume (CDPA 1988, allegato 1, par. 12)
+    const morti = o.au.filter((a) => !a.an).map((a) => a.m);
+    if (morti.length) {
+      const ultima = Math.max(...morti);
+      if (o.y !== null && o.y > ultima) {
+        if (o.y >= 1989 && ultima < 1969) return { s: "dal", y: 2040, note: note.concat(["sUk2039"]) };
+        if (o.y < 1989 && o.y + 51 > Y) return { s: "ver", note: note.concat(["sUkPostumo"]) };
+      }
+      if (o.y === null && ultima < 1969) note.push("sUkNd");
+    }
+  }
   if (c === "it" && o.au.some((a) => a.al && !a.an && a.m >= Y - 79) && (o.y === null || o.y <= 1947)) return { s: "ver", note: note.concat(["sAlleato"]) };
   // «morts pour la France»: +30 anni; conta solo per chi è morto nella Seconda guerra mondiale (per la Prima i 100 anni sono già passati)
   if (c === "fr" && o.au.some((a) => !a.an && a.m >= 1939 && a.m <= 1945 && a.m + 101 > Y)) note.push("sFr");
   return { s: "si", note };
 }
-const libera = (o, c) => stato(o, c).s === "si";
+const _lib = new Map();
+const libera = (o, c) => { const k = o.q + c; if (!_lib.has(k)) _lib.set(k, stato(o, c).s === "si"); return _lib.get(k); };
 
 /* ---------- copertine ---------- */
 const _trame = new Map();
@@ -400,16 +426,16 @@ addEventListener("keydown", (e) => { if (e.key === "Escape" && !$("#finestra").h
 
 function testoStato(o, c) {
   const st = stato(o, c);
-  if (st.s === "ver") return L.sAlleato;
+  if (st.s === "ver") return c === "uk" ? L.sUkPostumo : L.sAlleato;
   if (st.s === "nd") return L.sNd;
   if (c === "us") return st.s === "si" ? (st.senza ? L.sUsSenza : L.sUsSi) : tr("sUsDal", { y: st.y });
   if (c === "es") return st.s === "si" ? L.sEsSi : tr("sEsDal", { y: st.y });
   return st.s === "si" ? L.sUeSi : tr("sUeDal", { y: st.y });
 }
 function apriOpera(o) {
-  const righe = ["it", "fr", "de", "es", "us"].map((c) => {
+  const righe = ["it", "fr", "de", "es", "uk", "us"].map((c) => {
     const st = stato(o, c);
-    const extra = st.note.filter((k) => k !== "sAlleato").map((k) => h("span", { style: "display:block;margin-top:4px;font-size:13px;color:#5C5C66" }, L[k]));
+    const extra = st.note.filter((k) => k !== "sAlleato" && !(st.s === "ver" && k === "sUkPostumo")).map((k) => h("span", { style: "display:block;margin-top:4px;font-size:13px;color:#5C5C66" }, L[k]));
     return h("li", {}, h("span", { class: "p" }, L.paesi[c], " ", badge(st)), h("span", {}, testoStato(o, c), extra));
   });
   const orig = LING === "it" && o.ti && o.t && o.ti !== o.t ? o.t : null;
@@ -458,7 +484,7 @@ function rigaOpera(o) {
     h("button", { class: "tit", type: "button", onclick: () => apriOpera(o) },
       h("span", { class: "t" }, titolo(o), orig ? h("span", { class: "o" }, " · " + orig) : null),
       h("span", { class: "a" }, [autoriTxt(o), annoTxt(o.y)].filter(Boolean).join(" · "))),
-    h("span", { class: "badge" }, ["it", "fr", "de", "es", "us"].map((c) => {
+    h("span", { class: "badge" }, ["it", "fr", "de", "es", "uk", "us"].map((c) => {
       const st = stato(o, c), b = badge(st);
       b.prepend(h("span", { style: "opacity:.75" }, c.toUpperCase()));
       if (c === D.paese) b.classList.add("attivo");
@@ -600,7 +626,10 @@ function disegnaScaffali() {
   const liberi = opere.filter((o) => libera(o, p));
   const corpo = $("#scaffali-corpo");
   const s = [h("p", { class: "occ", style: "margin:0" }, tr("giaIn", { p: inP })), h("h2", { class: "h2" }, L.sfoglia), h("p", { class: "intro", html: tr("introS", { p: esc(inP) }) })];
-  s.push(scaffale(L.piuLetti, tr("piuLettiSub", { p: inP, s: D.sett }), primi(liberi, 30).map(copertina)));
+  s.splice(2, 1, h("p", { class: "intro", html: tr("introS", { p: esc(inP) }) + " " + esc(tr("contaLiberi", { n: num(liberi.length), t: num(opere.length), p: inP })) }));
+  const altri = Object.keys(L.paesi).filter((c) => c !== p);
+  const soloQui = liberi.filter((o) => altri.some((c) => !libera(o, c)));
+  s.push(scaffale(tr("soloQui", { p: inP }), tr("soloQuiSub", { p: inP }) + (["it", "fr", "de", "uk"].includes(p) ? " " + L.soloQuiUe : ""), primi(soloQui, 30).map(copertina)));
   let nuovi, sotto;
   if (p === "us") { nuovi = liberi.filter((o) => o.y === Y - 96); sotto = tr("nuoviUs", { m: Y - 96 }); }
   else {
@@ -609,6 +638,7 @@ function disegnaScaffali() {
     sotto = p === "es" ? tr("nuoviEs", { m }) : tr("nuoviUe", { m, p: inP.charAt(0).toUpperCase() + inP.slice(1) });
   }
   s.push(scaffale(tr("nuovi", { y: Y }), sotto, primi(nuovi, 30).map(copertina)));
+  s.push(scaffale(L.piuLetti, tr("piuLettiSub", { p: inP, s: D.sett }), primi(liberi, 30).map(copertina)));
   // autori
   const cl = classificaAutori(liberi);
   const ol = h("ol", { class: "classifica" }, cl.slice(0, 10).map((x, i) => voceClassifica(x, i, p)));
