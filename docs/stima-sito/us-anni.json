@@ -1,0 +1,326 @@
+{
+ "2027": {
+  "libri": 154,
+  "controllati": 154,
+  "esiti": {
+   "ok": 54,
+   "nd": 97,
+   "prima": 3
+  },
+  "confermati_per_fonte": {
+   "openlibrary": 47,
+   "loc": 7
+  },
+  "piu_vecchi": [
+   [
+    "Fabian",
+    1930,
+    "openlibrary"
+   ],
+   [
+    "Charlie Chan Carries On",
+    1930,
+    "loc"
+   ],
+   [
+    "Le Bal",
+    1930,
+    "loc"
+   ]
+  ],
+  "primi_20_per_visite": [
+   [
+    "The Good Earth",
+    114915,
+    "ok",
+    1931
+   ],
+   [
+    "The Waves",
+    66117,
+    "ok",
+    1931
+   ],
+   [
+    "The Whisperer in Darkness",
+    63094,
+    "nd",
+    2016
+   ],
+   [
+    "The Sittaford Mystery",
+    55885,
+    "ok",
+    1931
+   ],
+   [
+    "Sanctuary",
+    48963,
+    "ok",
+    1931
+   ],
+   [
+    "The Road Back",
+    31442,
+    "ok",
+    1931
+   ],
+   [
+    "The Glass Key",
+    24559,
+    "ok",
+    1931
+   ],
+   [
+    "Gaban",
+    21546,
+    "nd",
+    1980
+   ],
+   [
+    "Green Grow the Lilacs",
+    20520,
+    "ok",
+    1931
+   ],
+   [
+    "The Solar Anus",
+    15474,
+    "nd",
+    null
+   ],
+   [
+    "Will O' the Wisp",
+    14627,
+    "nd",
+    1966
+   ],
+   [
+    "The Sleepwalkers",
+    13919,
+    "nd",
+    1932
+   ],
+   [
+    "Night Flight",
+    13868,
+    "nd",
+    1932
+   ],
+   [
+    "Five Red Herrings",
+    10656,
+    "nd",
+    1986
+   ],
+   [
+    "If It Had Happened Otherwise",
+    10530,
+    "ok",
+    1931
+   ],
+   [
+    "Wyatt Earp: Frontier Marshal",
+    10305,
+    "ok",
+    1931
+   ],
+   [
+    "The Floating Admiral",
+    9814,
+    "ok",
+    1931
+   ],
+   [
+    "The Face in the Abyss",
+    9276,
+    "ok",
+    1931
+   ],
+   [
+    "The Little Golden Calf",
+    8987,
+    "nd",
+    1932
+   ],
+   [
+    "San Manuel Bueno, Mártir",
+    8896,
+    "nd",
+    1933
+   ]
+  ]
+ },
+ "2028": {
+  "libri": 159,
+  "controllati": 159,
+  "esiti": {
+   "ok": 56,
+   "nd": 96,
+   "prima": 7
+  },
+  "confermati_per_fonte": {
+   "openlibrary": 49,
+   "loc": 7
+  },
+  "piu_vecchi": [
+   [
+    "Light in August",
+    1931,
+    "openlibrary"
+   ],
+   [
+    "Death in the Afternoon",
+    1920,
+    "openlibrary"
+   ],
+   [
+    "Marie Antoinette: The Portrait of an Average Woman",
+    1930,
+    "loc"
+   ],
+   [
+    "The Lagoon",
+    1896,
+    "loc"
+   ],
+   [
+    "Peter Duck",
+    1800,
+    "openlibrary"
+   ],
+   [
+    "The Fun of It",
+    1923,
+    "openlibrary"
+   ],
+   [
+    "The Idiots",
+    1896,
+    "loc"
+   ]
+  ],
+  "primi_20_per_visite": [
+   [
+    "Brave New World",
+    932373,
+    "ok",
+    1932
+   ],
+   [
+    "Little House in the Big Woods",
+    109113,
+    "ok",
+    1932
+   ],
+   [
+    "Journey to the End of the Night",
+    84886,
+    "nd",
+    1934
+   ],
+   [
+    "The Man Without Qualities",
+    78756,
+    "nd",
+    1953
+   ],
+   [
+    "Light in August",
+    60639,
+    "prima",
+    1931
+   ],
+   [
+    "Peril at End House",
+    56315,
+    "ok",
+    1932
+   ],
+   [
+    "Cold Comfort Farm",
+    47251,
+    "ok",
+    1932
+   ],
+   [
+    "The Concept of the Political",
+    40393,
+    "nd",
+    1976
+   ],
+   [
+    "The Thirteen Problems",
+    40127,
+    "ok",
+    1932
+   ],
+   [
+    "Radetzky March",
+    39404,
+    "nd",
+    1933
+   ],
+   [
+    "Death in the Afternoon",
+    36540,
+    "prima",
+    1920
+   ],
+   [
+    "How the Steel Was Tempered",
+    35991,
+    "nd",
+    1952
+   ],
+   [
+    "Tobacco Road",
+    23666,
+    "ok",
+    1932
+   ],
+   [
+    "Stamboul Train",
+    22527,
+    "ok",
+    1932
+   ],
+   [
+    "The Phoenix on the Sword",
+    22446,
+    "nd",
+    null
+   ],
+   [
+    "Mutiny on the Bounty",
+    20512,
+    "ok",
+    1932
+   ],
+   [
+    "Design for Living",
+    18643,
+    "nd",
+    1933
+   ],
+   [
+    "Tripura Rahasya",
+    18158,
+    "nd",
+    null
+   ],
+   [
+    "Sunset Song",
+    17350,
+    "nd",
+    1933
+   ],
+   [
+    "Journey to the East",
+    16229,
+    "nd",
+    1956
+   ]
+  ]
+ }
+}
