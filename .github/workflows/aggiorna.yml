@@ -6,10 +6,8 @@ on:
     # Non parte più da solo quando cambia uno script: si lancia a mano col pulsante "Run workflow" quando serve.
     - cron: "17 5 1 1,4,7,10,12 *"
   workflow_dispatch:        # pulsante "Run workflow" per lanciarlo a mano
-    inputs:
-      giro:
-        description: "Giro di seguito (lo imposta il lavoro stesso quando riparte; a mano lascia 1)"
-        default: "1"
+  # NIENTE ripartenze automatiche (decisione di Marco, 19/11/2026): se un giro non finisce, il resto lo fa il giro
+  # previsto dopo, e docs/da-decidere.md lo segnala.
 
 permissions:
   contents: write
@@ -113,20 +111,4 @@ jobs:
               [ "$i" = 5 ] && exit 1
               sleep $((i*20))
             done
-          fi
-      - name: Se non ha fatto in tempo, riparte da solo
-        # i dati già scaricati restano in cache: il giro dopo continua da dove si è fermato
-        if: always()
-        env:
-          GH_TOKEN: ${{ github.token }}
-        # al massimo 3 giri di seguito (decisione del 19/11/2026: prima ripartiva tutto il giorno, 8 volte il 19/11,
-        # e la classifica cambiava a ogni giro). Se dopo 3 giri non ha finito, lo dice docs/da-decidere.md.
-        run: |
-          GIRO="${{ github.event.inputs.giro || '1' }}"
-          if [ -f .incompleto ]; then
-            if [ "$GIRO" -lt 3 ]; then
-              gh workflow run aggiorna.yml --ref main -f giro=$((GIRO+1))
-            else
-              echo "Dopo 3 giri l'aggiornamento non ha finito: riprende al prossimo giro previsto."
-            fi
           fi

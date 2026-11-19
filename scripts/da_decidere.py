@@ -37,8 +37,8 @@ def main():
     # 0. aggiornamento non finito dopo 3 giri
     if (R / ".incompleto").exists():
         righe += ["## 0. Aggiornamento non finito",
-                  "- **L'aggiornamento non ha finito in questo giro.** Riparte da solo al massimo 3 volte di seguito; "
-                  "se resta incompleto, i dati mancanti arrivano al prossimo giro previsto.", ""]
+                  "- **L'aggiornamento non ha finito in questo giro.** Non riparte da solo (decisione del 19/11/2026): "
+                  "i dati mancanti arrivano al prossimo giro previsto, oppure si lancia a mano.", ""]
         n += 1
 
     # 1. fonti

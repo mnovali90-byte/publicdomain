@@ -47,11 +47,3 @@ jobs:
               sleep $((i*20))
             done
           fi
-      - name: Se mancano periodi, riparte da solo
-        if: always()
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          if [ -f .storico_incompleto ]; then
-            gh workflow run storico.yml --ref main
-          fi
