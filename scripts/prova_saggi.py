@@ -2,7 +2,7 @@
 Prende la voce Wikidata dalla pagina della Wikipedia inglese (collegamento sicuro, niente ricerca per titolo) e ne legge
 tipo (P31), forma (P7937), genere (P136), date (P577), numero di Wikipedia, etichette. Stesso controllo per altri
 saggi e libri non romanzo del 1929-1932. Scrive docs/stima-sito/prova-saggi.json."""
-import json, sys, urllib.parse
+import json, sys, time, urllib.parse
 from pathlib import Path
 R = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(R / "scripts"))
@@ -13,8 +13,17 @@ PAGINE = ["A Room of One's Own", "A Preface to Morals", "Civilization and Its Di
 CLASSI = set(opere.CLASSI)
 
 
+def get(u):
+    for t in range(5):
+        d = opere.get(u, tentativi=1)
+        if d:
+            return d
+        time.sleep(60)   # Wikidata risponde 429 (troppe richieste): si aspetta un minuto (prova del 19/11/2026)
+    return None
+
+
 def main():
-    d = opere.get("https://www.wikidata.org/w/api.php?" + urllib.parse.urlencode(
+    d = get("https://www.wikidata.org/w/api.php?" + urllib.parse.urlencode(
         {"action": "wbgetentities", "sites": "enwiki", "titles": "|".join(PAGINE), "props": "claims|sitelinks|labels",
          "languages": "en|it", "format": "json"}))
     out = {}
@@ -31,7 +40,7 @@ def main():
         print(json.dumps(r, ensure_ascii=False))
     # nomi leggibili dei tipi
     tutti = sorted({x for r in out.values() for k in ("P31_tipo", "P7937_forma", "P136_genere") for x in r[k] if x})
-    n = opere.get("https://www.wikidata.org/w/api.php?" + urllib.parse.urlencode(
+    n = get("https://www.wikidata.org/w/api.php?" + urllib.parse.urlencode(
         {"action": "wbgetentities", "ids": "|".join(tutti[:50]), "props": "labels", "languages": "it|en", "format": "json"}))
     nomi = {q: (e.get("labels", {}).get("it") or e.get("labels", {}).get("en") or {}).get("value") for q, e in (n or {}).get("entities", {}).items()}
     print("nomi dei tipi:", json.dumps(nomi, ensure_ascii=False))
