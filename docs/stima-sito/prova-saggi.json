@@ -1,6 +1,174 @@
 {
- "opere": {},
- "nomi_tipi": {},
+ "opere": {
+  "-1": {
+   "qid": "-1",
+   "etichetta_en": null,
+   "P31_tipo": [],
+   "P7937_forma": [],
+   "P136_genere": [],
+   "P577_date": [],
+   "wikipedia": 0,
+   "la_nostra_domanda_lo_prende": false
+  },
+  "A Room of One's Own": {
+   "qid": "Q1204366",
+   "etichetta_en": "A Room of One's Own",
+   "P31_tipo": [
+    "Q47461344"
+   ],
+   "P7937_forma": [],
+   "P136_genere": [
+    "Q35760"
+   ],
+   "P577_date": [
+    "+1929-09-00T00:00:00Z"
+   ],
+   "wikipedia": 37,
+   "la_nostra_domanda_lo_prende": false
+  },
+  "Civilization and Its Discontents": {
+   "qid": "Q1170621",
+   "etichetta_en": "Civilization and Its Discontents",
+   "P31_tipo": [
+    "Q561071",
+    "Q47461344"
+   ],
+   "P7937_forma": [],
+   "P136_genere": [
+    "Q35760"
+   ],
+   "P577_date": [
+    "+1930-00-00T00:00:00Z"
+   ],
+   "wikipedia": 23,
+   "la_nostra_domanda_lo_prende": false
+  },
+  "The Revolt of the Masses": {
+   "qid": "Q968914",
+   "etichetta_en": "The Revolt of the Masses",
+   "P31_tipo": [
+    "Q5707594",
+    "Q7725634",
+    "Q7725310"
+   ],
+   "P7937_forma": [],
+   "P136_genere": [
+    "Q35760"
+   ],
+   "P577_date": [
+    "+1929-00-00T00:00:00Z"
+   ],
+   "wikipedia": 24,
+   "la_nostra_domanda_lo_prende": true
+  },
+  "Coming of Age in Samoa": {
+   "qid": "Q5151979",
+   "etichetta_en": "Coming of Age in Samoa",
+   "P31_tipo": [
+    "Q7725634"
+   ],
+   "P7937_forma": [],
+   "P136_genere": [
+    "Q132151"
+   ],
+   "P577_date": [
+    "+1928-00-00T00:00:00Z"
+   ],
+   "wikipedia": 9,
+   "la_nostra_domanda_lo_prende": true
+  },
+  "Good-Bye to All That": {
+   "qid": "Q2356106",
+   "etichetta_en": "Good-Bye to All That",
+   "P31_tipo": [
+    "Q7725634"
+   ],
+   "P7937_forma": [],
+   "P136_genere": [
+    "Q4184",
+    "Q111541985"
+   ],
+   "P577_date": [
+    "+1929-00-00T00:00:00Z"
+   ],
+   "wikipedia": 9,
+   "la_nostra_domanda_lo_prende": true
+  },
+  "Letters to a Young Poet": {
+   "qid": "Q914162",
+   "etichetta_en": "Letters to a Young Poet",
+   "P31_tipo": [
+    "Q7725634"
+   ],
+   "P7937_forma": [],
+   "P136_genere": [],
+   "P577_date": [
+    "+1929-00-00T00:00:00Z"
+   ],
+   "wikipedia": 12,
+   "la_nostra_domanda_lo_prende": true
+  },
+  "Brave New World": {
+   "qid": "Q191949",
+   "etichetta_en": "Brave New World",
+   "P31_tipo": [
+    "Q7725634"
+   ],
+   "P7937_forma": [
+    "Q8261"
+   ],
+   "P136_genere": [
+    "Q170539",
+    "Q2254211",
+    "Q24925",
+    "Q20737414",
+    "Q15062348"
+   ],
+   "P577_date": [
+    "+1932-00-00T00:00:00Z"
+   ],
+   "wikipedia": 74,
+   "la_nostra_domanda_lo_prende": true
+  },
+  "Rope": {
+   "qid": "Q7366709",
+   "etichetta_en": "Rope",
+   "P31_tipo": [
+    "Q116476516"
+   ],
+   "P7937_forma": [
+    "Q25379"
+   ],
+   "P136_genere": [
+    "Q182015"
+   ],
+   "P577_date": [
+    "+1929-00-00T00:00:00Z"
+   ],
+   "wikipedia": 3,
+   "la_nostra_domanda_lo_prende": false
+  }
+ },
+ "nomi_tipi": {
+  "Q111541985": "quit lit",
+  "Q116476516": "opera drammatica",
+  "Q132151": "etnografia",
+  "Q15062348": "dystopian fiction",
+  "Q170539": "parodia",
+  "Q182015": "thriller",
+  "Q20737414": "fiction filosofica",
+  "Q2254211": "fantapolitica",
+  "Q24925": "fantascienza",
+  "Q25379": "opera teatrale",
+  "Q35760": "saggio",
+  "Q4184": "autobiografia",
+  "Q47461344": "opera scritta",
+  "Q561071": "literary redaction",
+  "Q5707594": "articolo di giornale",
+  "Q7725310": "serie di opere",
+  "Q7725634": "opera letteraria",
+  "Q8261": "romanzo"
+ },
  "classi_cercate": [
   "Q149537",
   "Q25379",
