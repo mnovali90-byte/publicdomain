@@ -34,6 +34,13 @@ def main():
     anni = sorted(int(p.stem) for p in D.glob("[0-9][0-9][0-9][0-9].json") if int(p.stem) > Y)
     us = leggi(R / "docs" / "stima-sito" / "us-anni.json", {})
 
+    # 0. aggiornamento non finito dopo 3 giri
+    if (R / ".incompleto").exists():
+        righe += ["## 0. Aggiornamento non finito",
+                  "- **L'aggiornamento non ha finito in questo giro.** Riparte da solo al massimo 3 volte di seguito; "
+                  "se resta incompleto, i dati mancanti arrivano al prossimo giro previsto.", ""]
+        n += 1
+
     # 1. fonti
     ko = {k: v for k, v in (us.get("fonti_non_raggiunte") or {}).items() if v}
     righe.append("## 1. Fonti che non hanno risposto")
