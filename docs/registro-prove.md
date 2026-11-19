@@ -421,3 +421,13 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - **Errori nella lista 2028:** The Lagoon (1897), The Idiots (1896) e The Return (1898) sono racconti di Conrad dell'Ottocento, non del 1932: sono già liberi. Wikipedia e ISFDB concordano.
 - **Non coperti:** racconti di Faulkner e testi teatrali di Coward. Per Wodehouse e Woolf a volte risponde Wikipedia.
 - **Giudizio:** ISFDB va bene per il genere (fantascienza, fantasy, horror, avventura), la Wikipedia inglese per i romanzi famosi. Vanno usate tutte e due.
+
+## 19/11/2026 (notte) — Incidente: giro annullato che ha salvato dati a metà
+- **Cosa è successo:** il lavoro «Aggiorna autori», ripartito da solo, è stato annullato a mano dopo il primo passo. I passi «Crea le pagine» e «Salva» avevano `if: always()`, quindi hanno girato lo stesso. Il commit eb6cc42a ha salvato autori senza biografie, visite e opere, e ha cancellato quasi tutte le schede autore.
+- **Ripristino:** commit 742caae4 (revert di eb6cc42a): 410 schede in italiano e 397 in inglese, dati com'erano prima.
+- **Blindatura:**
+  - `if: ${{ !cancelled() }}` al posto di `if: always()` in aggiorna.yml e storico.yml;
+  - pagine.py non cancella le schede se ci sono meno di 100 autori con biografia e opere;
+  - tolte tutte le ripartenze automatiche (aggiorna, storico, gia-pubblici);
+  - l'elenco «fuori classifica» si legge da data/fuori_classifica.json e non dipende più dai file dei dati.
+- **Limite che resta:** se l'arricchimento fallisce senza annullamento, «Salva» salva comunque l'elenco grezzo. Da blindare: non salvare i file degli autori se mancano biografie e visite.
