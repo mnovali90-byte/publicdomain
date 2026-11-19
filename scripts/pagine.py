@@ -162,6 +162,31 @@ main:has(.sa){max-width:720px;padding:20px 0 72px}
 .cat li{margin:0;display:grid;grid-template-columns:minmax(0,190px) 1fr auto;gap:12px;align-items:center;font-size:15px}
 .cat .b{height:10px;background:var(--riquadro)}.cat .b i{display:block;height:10px;background:var(--ink)}
 .cat .n{font-family:var(--mono);font-size:13px;white-space:nowrap}
+/* scheda autore come nel mockup del 19/11/2026: testata scura larga, risposta in rosso, paesi in riquadri, sezioni con titoli grandi */
+main:has(.sa){max-width:none;padding:0 0 72px}
+.sa-in{max-width:1180px;margin:0 auto;padding:0 clamp(20px,4vw,48px)}
+.sa-top{background:var(--ink);color:var(--carta);padding:28px 0 48px}
+.sa-top .sa-et{padding:0;color:var(--vermiglio)}
+.sa-top .sa-head{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:32px;align-items:end;padding:14px 0 0}
+.sa-top .sa-head>div:not(.sa-foto){order:1}.sa-top .sa-foto{order:2;width:200px;height:240px;background:var(--notte)}
+.sa-top .sa-ini{color:#3A3A46;font-size:96px;align-items:center;justify-content:center}
+.sa-top h1{font-size:clamp(56px,9vw,120px);line-height:.86;color:var(--carta);overflow-wrap:anywhere;min-width:0}
+.sa-top .sa-desc{color:#B9B9C6;font-size:17px}
+.sa-top .sa-credito{padding:8px 0 0;text-align:right;color:#8A8A96}.sa-top .sa-credito a{color:#A9A9B6}
+.sa-top .sa-libero{padding:28px 0 0}
+.sa-top .libero-blocco{padding:26px 30px}.sa-top .lb-data{font-size:clamp(48px,7vw,88px);line-height:.9}
+.sa-top .lb-ver,.sa-top .sa-nota{color:#B9B9C6}.sa-top .lb-ver svg{color:var(--carta)}.sa-top a{color:var(--carta)}
+.sa-top .pg{grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px}
+.sa-top .pg li{background:var(--riquadro);color:var(--ink);min-height:140px;padding:16px 18px 18px;gap:6px}
+.sa-top .pg .p{color:var(--ink)}.sa-top .pg .d{font-size:30px}.sa-top .pg .r{margin-top:auto;color:var(--ink)}
+.sa-top .pg .primo{background:var(--vermiglio)}
+.sa-top .pg .usa,.sa-top .pg .ok{background:#0E3B2E;color:var(--carta)}.sa-top .pg .usa .p,.sa-top .pg .usa .r,.sa-top .pg .ok .p,.sa-top .pg .ok .r{color:var(--carta)}
+.sa-resto .sa-sez{padding:56px 0 0;border-top:0}
+.sa-resto .sa-sez>*{max-width:900px}
+.sa-occ{margin:0;font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--vermiglio-testo)}
+.sa-resto .sa-sez h2{font-family:var(--display);font-weight:900;font-size:clamp(36px,5vw,60px);line-height:.92;text-transform:uppercase;letter-spacing:0;color:var(--ink);margin:8px 0 18px;border:0;padding:0}
+main:has(.sa) .sa-azioni{max-width:1180px;margin:40px auto 0;padding:0 clamp(20px,4vw,48px)}
+@media (max-width:640px){.sa-top .sa-head{grid-template-columns:1fr}.sa-top .sa-foto{order:0;width:120px;height:144px}.sa-top .sa-credito{text-align:left}.sa-top .pg{grid-template-columns:1fr 1fr}}
 @media (max-width:560px){.cat li{grid-template-columns:1fr auto}.cat .b{grid-column:1/-1;order:3}}
 .sa-salva{display:flex;align-items:center;justify-content:center;height:56px;background:var(--ink);color:var(--carta);text-decoration:none;font-family:var(--mono);font-size:13px;letter-spacing:.12em;text-transform:uppercase}
 footer{background:var(--ink);color:#B9B9C6;font-size:13px;padding:32px 20px}footer p{max-width:780px;margin:0 auto 10px}footer a{color:#fff}
@@ -534,7 +559,9 @@ def scheda_statica(a, lang, bd):
     nome = pulisci(a["nome"])
     nasc, D = anno_di(a.get("nascita")), anno_di(a.get("morte"))
     T = (lambda x, y: x) if it else (lambda x, y: y)
-    o = ['<div class="sa">\n', f'<p class="sa-et">{T("Scheda autore", "Author card")}</p>\n<header class="sa-head">\n']
+    prof = ", ".join((a.get("professioni") or [])[:2]) if it else ""
+    o = ['<div class="sa">\n<section class="sa-top"><div class="sa-in">\n',
+         f'<p class="sa-et">{T("Scheda autore", "Author card")}{(" · " + esc(prof)) if prof else ""}</p>\n<header class="sa-head">\n']
     foto = a.get("foto") or {}
     if foto.get("url"):
         o.append(f'<div class="sa-foto"><img src="{esc(foto["url"])}" alt="{T("Ritratto di", "Portrait of")} {esc(nome)}" loading="lazy"></div>\n')
@@ -545,7 +572,9 @@ def scheda_statica(a, lang, bd):
         desc.append(", ".join(a["professioni"][:2]))
     if it and a.get("paesi"):
         desc.append(", ".join(paesi_moderni(a["paesi"])[:2]))
-    o.append(f'<div><h1>{esc(nome)}</h1>\n<p class="sa-desc">{esc(" · ".join(desc))}</p></div>\n</header>\n')
+    lunga = max((len(w) for w in nome.split()), default=0)   # la parola più lunga deve stare intera accanto al ritratto
+    dim = ' style="font-size:clamp(36px,6vw,80px)"' if lunga >= 11 else (' style="font-size:clamp(44px,7.5vw,100px)"' if lunga >= 9 else "")
+    o.append(f'<div><h1{dim}>{esc(nome)}</h1>\n<p class="sa-desc">{esc(" · ".join(desc))}</p></div>\n</header>\n')
     if foto.get("url"):
         cap = " · ".join(x for x in (pulisci(foto.get("autore")), pulisci(foto.get("licenza"))) if x)
         pag = f' <a href="{esc(foto["pagina"])}" rel="noopener">Wikimedia Commons</a>' if foto.get("pagina") else ""
@@ -569,9 +598,10 @@ def scheda_statica(a, lang, bd):
     o.append(avviso_alleato(a, lang))
     # le date paese per paese, visibili e brevi: le regole spiegate stanno in un posto solo (riquadro delle regole)
     oggi_a = datetime.date.today().year
-    def tessera(paese, anno, regola):
-        stato = "ok" if anno and anno <= oggi_a else ""
-        d = (T("libero", "free") + f" {T('dal', 'since')} {anno}") if stato else (data_l(lang, anno).replace("1° gennaio", "1° gen").replace("1 January", "1 Jan") if anno else T("opera per opera", "work by work"))
+    def tessera(paese, anno, regola, cl=""):
+        libero = bool(anno and anno <= oggi_a)
+        stato = "ok" if libero else cl
+        d = (T("libero", "free") + f" {T('dal', 'since')} {anno}") if libero else (data_l(lang, anno).replace("1° gennaio", "1° gen").replace("1 January", "1 Jan") if anno else T("opera per opera", "work by work"))
         return f'<li class="{stato}"><span class="p">{esc(paese)}</span><span class="d">{esc(d)}</span><span class="r">{esc(regola)}</span></li>'
     ue = T("70 anni dalla morte", "70 years after death")
     fr = ue + (T("; +30 anni se «morto per la Francia»", "; +30 years if «died for France»") if 1939 <= D <= 1945 else "")
@@ -583,16 +613,18 @@ def scheda_statica(a, lang, bd):
                (T("Spagna", "Spain"), es_y, es_r), ("USA", None, T("95 anni dall'uscita di ogni opera", "95 years from each work's publication"))]
     if not it:   # in inglese prima i paesi di lingua inglese
         righe_p = [righe_p[3], righe_p[5]] + [righe_p[i] for i in (0, 1, 2, 4)]
-    o.append(f'<ul class="pg" aria-label="{T("Paese per paese", "Country by country")}">' + "".join(tessera(*x) for x in righe_p) + "</ul>\n")
+    o.append(f'<ul class="pg" aria-label="{T("Paese per paese", "Country by country")}">' + "".join(
+        tessera(*x, cl=("primo" if i == 0 else "usa" if x[0] == "USA" else "")) for i, x in enumerate(righe_p)) + "</ul>\n")
     o.append(f'<p class="sa-nota">{T("Calcolo indicativo, non è consulenza legale.", "Indicative calculation, not legal advice.")} '
-             f'<a href="{"/" if it else "/en/"}#regole-paesi">{T("Le regole, paese per paese", "The rules, country by country")}</a></p>\n</div>\n')
-    sez = lambda tit, corpo: f'<section class="sa-sez">\n<h2>{tit}</h2>\n{corpo}</section>\n'
+             f'<a href="{"/" if it else "/en/"}#regole-paesi">{T("Le regole, paese per paese", "The rules, country by country")}</a></p>\n</div>\n'
+             '</div></section>\n<div class="sa-in sa-resto">\n')
+    sez = lambda tit, corpo, occ=None: (f'<section class="sa-sez">\n' + (f'<p class="sa-occ">{occ}</p>\n' if occ else "") + f'<h2>{tit}</h2>\n{corpo}</section>\n')
     corpo_usa, liberi_usa = opere_usa(a, lang)
     a["_liberi_usa"] = liberi_usa
     if corpo_usa:
         extra = (f'<p class="sa-nota">{T(f"Su {migliaia(a["n_opere"])} opere registrate in Wikidata, qui le più note.", f"Of {migliaia(a["n_opere"], lang)} works recorded in Wikidata, the best known.")}</p>\n'
                  if a.get("n_opere", 0) > 10 else "")
-        o.append(sez(T("Opere principali · negli USA opera per opera", "Main works · in the USA work by work"), corpo_usa + extra))
+        o.append(sez(T("Opere principali", "Main works"), corpo_usa + extra, T("Negli USA, opera per opera", "In the USA, work by work")))
     g = ((a.get("traduzioni") or {}).get("sbn_it") if it else (a.get("traduzioni") or {}).get("bl_en"))
     if g and g.get("sospeso_manuale"):
         o.append(sez(T("Registrazioni in italiano", "Records in English"),
@@ -614,7 +646,7 @@ def scheda_statica(a, lang, bd):
                      f'<div class="ed-boxes">{box(g["edizioni"], T("registrazioni in italiano", "records in English"))}{box(g.get("dal_2000", 0), T("con anno dal 2000", "dated 2000 or later") + ult)}</div>\n<p class="sa-nota">{esc(cosa)}</p>\n<p class="sa-nota">{esc(nota)}</p>\n'))
     cat = catalogi_a_confronto(a, lang)
     if cat:
-        o.append(sez(T("Nei cataloghi nazionali", "In national catalogues"), cat))
+        o.append(sez(T("Quanto è già pubblicato", "How much is already published"), cat, T("Nei cataloghi nazionali", "In national catalogues")))
     barre = []
     for m, campo, etich in ((("it", "visite_it", T("In Italia", "")),) if it else (("en", "visite_en", "In the English-speaking world"),)) + (("int", "pagine_wikipedia", T("Nel mondo", "Worldwide")),):
         idx = a.get("indice_" + m)
@@ -633,8 +665,8 @@ def scheda_statica(a, lang, bd):
                      + f'<p class="sa-nota">{T("Misura la curiosità per l’autore (visite alle pagine Wikipedia), non le vendite dei suoi libri.", "Measures curiosity about the author (Wikipedia page views), not sales of their books.")}</p>\n'))
     faq = domande(a, lang)
     if faq:
-        o.append(sez(T("Domande", "Questions"), '<div class="faq">' + "".join(
-            f'<details{" open" if i == 0 else ""}><summary>{esc(q)}</summary><p>{esc(r_)}</p></details>' for i, (q, r_) in enumerate(faq)) + "</div>\n"))
+        o.append(sez(T("Le risposte brevi", "Short answers"), '<div class="faq">' + "".join(
+            f'<details{" open" if i == 0 else ""}><summary>{esc(q)}</summary><p>{esc(r_)}</p></details>' for i, (q, r_) in enumerate(faq)) + "</div>\n", T("Domande", "Questions")))
         fq = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
             {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": r_}} for q, r_ in faq]}
         o.append('<script type="application/ld+json">' + json.dumps(fq, ensure_ascii=False).replace("</", "<\\/") + "</script>\n")
@@ -643,7 +675,7 @@ def scheda_statica(a, lang, bd):
         o.append(sez(T("Chi era", "Who they were"), f'<p class="sa-bio">{esc(bd["testo"])}</p>\n{ln}\n<p class="sa-nota">{T("Testo da Wikipedia, licenza CC BY-SA.", "Text from Wikipedia, licence CC BY-SA.")}</p>\n'))
     ill = "".join(blocco_illustrazioni(a, lang)[1:]).replace('<p class="sotto">', '<p class="sa-testo">')
     o.append(sez(T("Prima di pubblicare", "Before publishing"), ill + f'<p class="sa-nota">{T("Calcolo indicativo, non consulenza legale.", "Indicative calculation, not legal advice.")}</p>\n'))
-    o.append("</div>\n")
+    o.append("</div>\n</div>\n")   # chiude sa-resto e sa
     return "".join(o)
 
 
