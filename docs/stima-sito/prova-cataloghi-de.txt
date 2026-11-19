@@ -1,0 +1,4 @@
+dnb: ERRORE HTTP Error 429: Too Many Requests b'<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">\n<html><head>\n<title>429 Too Many Requests</title>\n</head><body>\n<h1>Too Many Requests</h1>\n<p>The user has sent too many requests\nin a given amount of time.</p>\n<hr>\n<address>Apache Server at services.dnb.de P'
+dnb_token_free_cql: ERRORE HTTP Error 403: Forbidden b'<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">\n<html><head>\n<title>403 Forbidden</title>\n</head><body>\n<h1>Forbidden</h1>\n<p>You don\'t have permission to access this resource.</p>\n<hr>\n<address>Apache Server at services.dnb.de Port 443</address>\n</body></h'
+k10plus: OK 19512 byte, record=['119'], 008=['260409s2022    xx |||||      00| ||gre c', '220622s2022    xx |||||      00| ||tur c', '220622s2022    xx |||||      00| ||tur c']
+obvsg_at: OK 12428 byte, record=['59'], 008=[]
