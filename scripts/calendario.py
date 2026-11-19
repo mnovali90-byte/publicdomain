@@ -21,8 +21,8 @@ BREVI = {"it": ["gen", "feb", "mar", "apr", "mag", "giu", "lug", "ago", "set", "
 
 T = {
     "it": {
-        "html": "it", "titolo": "Calendario degli anniversari letterari {a}: nascite, morti e prime edizioni · Public Domain Radar",
-        "descr": "Gli anniversari letterari del {a}: nascite, morti e prime edizioni con anniversario tondo, giorno per giorno. Dati aperti, con calendario .ics e tabella CSV.",
+        "html": "it", "titolo": "Anniversari letterari {a}: scrittori, libri e ricorrenze giorno per giorno · Public Domain Radar",
+        "descr": "Le ricorrenze letterarie del {a}, mese per mese: scrittori nati e morti 50, 100, 150 anni fa e libri usciti per la prima volta. Con calendario .ics e tabella CSV, da dati aperti.",
         "occ": "Anniversari letterari · {a}", "h1a": "Cosa ricordare nel ", "lead": "Le ricorrenze letterarie da ricordare: nascite, morti e prime edizioni con anniversario tondo, giorno per giorno. Ogni voce ha una scheda da condividere.",
         "ics": "Aggiungi al tuo calendario (.ics)", "csv": "Scarica la tabella (CSV)",
         "mese": "Mese", "tipo": "Tipo", "tutti": "Tutti", "tutte": "Tutte", "eta": "Anniversario", "piu": "oltre 200", "filtri": "Filtri", "attivi": "attivi",
@@ -43,8 +43,8 @@ T = {
         "csv_cols": ["tipo", "nome", "autore", "anni", "anno_evento", "data", "wikidata"],
     },
     "en": {
-        "html": "en", "titolo": "Literary anniversaries {a}: births, deaths and first editions calendar · Public Domain Radar",
-        "descr": "Literary anniversaries of {a}: births, deaths and first editions with a round anniversary, day by day. Open data, with .ics calendar and CSV table.",
+        "html": "en", "titolo": "Literary and book anniversaries {a}: authors and books, month by month · Public Domain Radar",
+        "descr": "Literary and book anniversaries of {a}, month by month: authors born and died 50, 100, 150 years ago and books first published. With .ics calendar and CSV table, from open data.",
         "occ": "Literary anniversaries · {a}", "h1a": "What to remember in ", "lead": "Literary anniversaries worth remembering: births, deaths and first editions with a round anniversary, day by day. Every entry has a short profile and a card to share.",
         "ics": "Add to your calendar (.ics)", "csv": "Download the table (CSV)",
         "mese": "Month", "tipo": "Type", "tutti": "All", "tutte": "All", "eta": "Anniversary", "piu": "over 200", "filtri": "Filters", "attivi": "active",
@@ -287,7 +287,7 @@ def pagina(dati, lang):
         n = len(elenco)
         sotto = f"{n} {t['voce'] if n == 1 else t['voci']}" + (f" · {t['nd']}" if m == 0 else "")
         elenco.sort(key=lambda v: ((v.get("giorno") or 99), -v["pagine"]))
-        corpo.append(f'<section class="mese" data-mese="{m}"><h2>{esc(titolo.capitalize() if m else titolo)} <small>{esc(sotto)}</small></h2>{extra}'
+        corpo.append(f'<section class="mese" data-mese="{m}" id="{("mese-" if lang == "it" else "month-") + str(m) if m else "anno"}"><h2>{esc((titolo.capitalize() + " " + str(anno)) if m else titolo)} <small>{esc(sotto)}</small></h2>{extra}'
                      + "".join(scheda(v, lang, anno) for v in elenco) + "</section>")
     mesi_btn = "".join(f'<button type="button" class="ch" data-mese="{m}" aria-pressed="false">{BREVI[lang][m - 1]}</button>' for m in range(1, 13))
     eta_btn = "".join(f'<button type="button" class="ch" data-eta="{e}" aria-pressed="false">{e}</button>' for e in (50, 75, 100, 125, 150, 175, 200)) + f'<button type="button" class="ch" data-eta="piu" aria-pressed="false">{esc(t["piu"])}</button>'
