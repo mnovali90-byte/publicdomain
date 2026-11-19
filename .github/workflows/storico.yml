@@ -4,6 +4,9 @@ on:
   schedule:
     - cron: "23 4 2 * *"   # una volta al mese, il 2 (decisione di Marco, 19/11/2026); non parte più da solo quando cambia lo script
   workflow_dispatch:        # pulsante "Run workflow" per lanciarlo a mano
+  push:                     # lancio a mano anche da qui: si cambia la data in storico/avvia.txt
+    paths:
+      - "storico/avvia.txt"
 
 permissions:
   contents: write
