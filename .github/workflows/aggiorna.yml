@@ -98,6 +98,13 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # se i dati degli autori sono incompleti (biografie o visite calate di oltre il 20%) si rimettono quelli di prima
+          if ! python scripts/controlla_salvataggio.py; then
+            git checkout -- data/[0-9]*.json data/es-[0-9]*.json autore en/author index.html en/index.html sitemap.xml 2>/dev/null || true
+            git clean -fdq autore en/author 2>/dev/null || true
+            python scripts/da_decidere.py || true   # così l'elenco «da decidere» lo dice
+            rm -f .salvataggio_rifiutato
+          fi
           git add -A
           if git diff --cached --quiet; then
             echo "Nessun cambiamento"

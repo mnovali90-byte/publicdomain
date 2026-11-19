@@ -41,6 +41,12 @@ def main():
                   "i dati mancanti arrivano al prossimo giro previsto, oppure si lancia a mano.", ""]
         n += 1
 
+    if (R / ".salvataggio_rifiutato").exists():
+        righe += ["## 0b. Dati degli autori non salvati",
+                  "- **L'ultimo aggiornamento ha prodotto dati incompleti e non sono stati salvati:** "
+                  + "; ".join((R / ".salvataggio_rifiutato").read_text(encoding="utf-8").split("\n")).strip("; "), ""]
+        n += 1
+
     # 1. fonti
     ko = {k: v for k, v in (us.get("fonti_non_raggiunte") or {}).items() if v}
     righe.append("## 1. Fonti che non hanno risposto")
