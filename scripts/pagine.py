@@ -945,88 +945,218 @@ def url_landing(lang, anno):
     return f"{SITO}/en/public-domain-{anno}/" if lang == "en" else f"{SITO}/pubblico-dominio-{anno}/"
 
 
-def pagina_landing(anno, pacchetto_ue, opere_us, lang="en"):
-    """Pagina «Public domain <anno>» / «Pubblico dominio <anno>»: dati e regole già verificati nel sito."""
+CSS_PDD = """
+main:has(.pd-sez){max-width:none;margin:0;padding:0}
+.pd-in{max-width:1180px;margin:0 auto;padding:0 clamp(20px,4vw,48px)}
+.pd-hero{background:var(--ink);color:var(--carta);padding:clamp(40px,7vw,80px) 0 clamp(48px,7vw,88px)}
+.pd-occ{margin:0;font-family:var(--mono);font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--vermiglio)}
+.pd-hero h1{margin:18px 0 0;font-family:var(--display);font-weight:900;font-size:clamp(64px,12vw,168px);line-height:.84;text-transform:uppercase;color:var(--carta);letter-spacing:0;border:0;padding:0}
+.pd-hero h1 em{font-style:normal;color:var(--vermiglio)}
+.pd-hero .lead{margin:24px 0 0;max-width:640px;font-size:clamp(17px,2vw,20px);line-height:1.5;color:#D2CFC4}
+.pd-num{list-style:none;margin:44px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px}
+.pd-num li{margin:0;background:var(--notte);padding:22px 24px 24px}
+.pd-num li:first-child{background:var(--vermiglio);color:var(--ink)}
+.pd-num b{display:block;font-family:var(--display);font-weight:900;font-size:clamp(56px,7vw,96px);line-height:.9}
+.pd-num span{display:block;margin-top:10px;font-size:15px;line-height:1.4}
+.pd-num li:not(:first-child) span{color:#D2CFC4}
+.pd-sez{padding:clamp(56px,7vw,80px) 0 0}
+.pd-sez.ultima{padding-bottom:clamp(56px,7vw,80px)}
+.pd-et{margin:0;font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--vermiglio-testo)}
+.pd-sez h2{margin:10px 0 0;font-family:var(--display);font-weight:900;font-size:clamp(40px,6vw,72px);line-height:.9;text-transform:uppercase;color:var(--ink);letter-spacing:0;border:0;padding:0}
+.pd-sez .lead{margin:14px 0 0;max-width:680px;font-size:16px;line-height:1.5}
+.pd-aut{list-style:none;margin:28px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+.pd-aut li{margin:0}
+.pd-aut a{display:flex;gap:14px;align-items:center;text-decoration:none;color:var(--ink);background:#fff;padding:12px;border:1px solid #E4E2DA}
+.pd-aut a:hover{border-color:var(--ink)}
+.pd-ft{flex:none;width:64px;height:80px;background:var(--riquadro);overflow:hidden;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:900;font-size:26px;color:#9A978C}
+.pd-ft img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block}
+.pd-aut b{display:block;font-family:var(--display);font-weight:900;font-size:24px;line-height:.95;text-transform:uppercase}
+.pd-aut span{display:block;margin-top:6px;font-size:13px;line-height:1.35;color:var(--muto)}
+.pd-cop{list-style:none;margin:28px 0 0;padding:0 0 12px;display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:16px}
+.pd-cop li{margin:0}
+.pd-cop a{display:flex;flex-direction:column;justify-content:flex-end;aspect-ratio:7/10;padding:16px;text-decoration:none;overflow:hidden}
+.pd-cop .t{font-family:var(--display);font-weight:900;line-height:.92;text-transform:uppercase}
+.pd-cop .a{margin-top:8px;font-family:var(--mono);font-size:11px;text-transform:uppercase;line-height:1.4}
+.pd-bd{display:inline-block;margin-top:8px;padding:3px 8px;font-family:var(--mono);font-size:11px}
+.pd-bd.ok{background:#0E3B2E;color:var(--carta)}.pd-bd.ver{background:#F2B705;color:var(--ink)}
+.pd-piu{margin:16px 0 0}.pd-piu a{font-weight:600}
+.pd-tab{list-style:none;margin:28px 0 0;padding:0;border-top:2px solid var(--ink)}
+.pd-tab li{margin:0;display:grid;grid-template-columns:minmax(0,180px) minmax(0,220px) 1fr auto;gap:20px;align-items:baseline;padding:16px 0;border-bottom:1px solid #D9D6CC}
+.pd-tab .p{font-family:var(--display);font-weight:900;font-size:28px;line-height:1;text-transform:uppercase}
+.pd-tab .c{font-family:var(--mono);font-size:12px;text-transform:uppercase;color:var(--muto)}
+.pd-tab .r{font-size:15px;line-height:1.45}
+.pd-tab a{font-family:var(--mono);font-size:13px;white-space:nowrap}
+.pd-tre{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:28px 0 0}
+.pd-tre div{background:#fff;border-top:4px solid var(--ink);padding:20px 22px 24px}
+.pd-tre div:first-child{border-top-color:var(--vermiglio)}
+.pd-tre h3{margin:0;font-family:var(--display);font-weight:900;font-size:28px;line-height:.95;text-transform:uppercase}
+.pd-tre p{margin:12px 0 0;font-size:15px;line-height:1.5}
+.pd-faq{margin:24px 0 0;max-width:820px}
+.pd-faq details{border-top:1px solid #D9D6CC;padding:14px 0}.pd-faq details:last-child{border-bottom:1px solid #D9D6CC}
+.pd-faq summary{cursor:pointer;font-weight:600;font-size:17px}
+.pd-faq p{margin:10px 0 0;font-size:16px;line-height:1.55}
+.pd-fondo{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px}
+.pd-fondo p{margin:12px 0 0;font-size:15px;line-height:1.6}.pd-fondo .m{font-size:14px;color:var(--muto)}
+.pd-cred{margin:14px 0 0;font-size:12px;line-height:1.5;color:var(--muto)}.pd-cred a{color:var(--muto)}
+@media (max-width:760px){.pd-num{grid-template-columns:1fr}.pd-tre{grid-template-columns:1fr}
+.pd-tab li{grid-template-columns:1fr;gap:4px}.pd-cop{grid-template-columns:repeat(2,minmax(0,1fr))}}
+"""
+
+LETTERARI = {"scrittore", "scrittrice", "poeta", "poetessa", "romanziere", "romanziera", "drammaturgo", "drammaturga",
+             "saggista", "novellista", "autore", "autrice"}
+COLORI_COP = [("#E9E6DD", "#0C0C10"), ("#FF4326", "#0C0C10"), ("#0E3B2E", "#F7F7F4"), ("#1C1C24", "#F7F7F4")]
+
+
+def _visite(a):
+    return sum((a.get("visite_" + l) or 0) for l in ("it", "en", "fr", "de", "es"))
+
+
+def _letterari(pacchetto, lang):
+    """Scrittori della lista con la loro pagina, in ordine di visite su Wikipedia in 5 lingue (come il resto del sito)."""
+    pag = "pagina" if lang == "it" else "pagina_en"
+    out = [a for a in pacchetto.get("autori", []) if a.get("letterario") and a.get("morte") and a.get(pag)
+           and LETTERARI & set(a.get("professioni") or [])]
+    return sorted(out, key=lambda a: -_visite(a))
+
+
+def _data_lunga(iso, lang):
+    m = re.match(r"^(\d{4})-(\d{2})-(\d{2})$", str(iso or ""))
+    if not m:
+        return str(anno_di(iso) or "")
+    y, mm, d = int(m.group(1)), int(m.group(2)), int(m.group(3))
+    return f"{d} {MESI[mm - 1]} {y}" if lang == "it" else f"{d} {MESI_EN[mm - 1]} {y}"
+
+
+def parole_t(t):
+    return re.sub(r"[^a-z0-9]+", " ", unicodedata.normalize("NFKD", str(t or "")).encode("ascii", "ignore").decode().lower()).strip()
+
+
+def _esempio_duke(anno, ue):
+    """Un libro già libero negli USA (lista Duke di un anno passato) il cui autore entra in Europa quest'anno."""
+    try:
+        dk = json.loads((RADICE / "data" / "storico" / "duke.json").read_text(encoding="utf-8"))
+    except Exception:
+        return None
+    aut = {a["wikidata"]: a for a in ue.get("autori", [])}
+    # niente opere teatrali: spesso hanno coautori (es. «L'opera da tre soldi» con Elisabeth Hauptmann), e allora in
+    # Europa la data dipende anche da loro
+    TEATRO = {"commedia", "dramma", "teatro", "tragedia", "opera", "libretto", "musical"}
+    def teatrale(w):
+        for a in w.get("autori", []):
+            for o in (aut.get(a.get("qid")) or {}).get("opere", []):
+                if parole_t(o.get("titolo")) in (parole_t(w.get("titolo_it")), parole_t(w.get("titolo"))) or \
+                   parole_t(o.get("titolo_en")) == parole_t(w.get("titolo")):
+                    if TEATRO & set(o.get("generi") or []):
+                        return True
+        return False
+    cand = []
+    for y, v in dk.items():
+        for l in v.get("libri", []):
+            w = l.get("wd") or {}
+            if int(y) < anno and len(w.get("autori", [])) == 1 and w["autori"][0].get("qid") in aut and not teatrale(w):
+                cand.append(((w.get("pagine") or 0), int(y), l["titolo"], w.get("titolo_it")))
+    if not cand:
+        return None
+    _, y, t, t_it = max(cand)
+    return y, t, (t_it or t)
+
+
+def _cop_pdd(href, titolo, sotto, badge):
+    c = sum(ord(ch) * (i + 1) for i, ch in enumerate(titolo + sotto)) % 4
+    sf, tx = COLORI_COP[c]
+    return (f'<li><a href="{href}" style="background:{sf};color:{tx}"><span class="t" style="font-size:{_dim_titolo(titolo, 26)}px">{esc(titolo)}</span>'
+            f'<span class="a">{esc(sotto)}</span></a>{badge}</li>\n')
+
+
+def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, verificati=None):
+    """Pagina del Public Domain Day di <anno> (mockup approvato il 19/11/2026). Solo dati dei file, con le fonti."""
     oggi = datetime.date.today()
     url = url_landing(lang, anno)
+    it = lang == "it"
+    T = (lambda a, b: a) if it else (lambda a, b: b)
+    app = "/" if it else "/en/"
     pub = opere_us["anno_pubblicazione"] if opere_us else anno - 96
     morti = anno - 71
+    morti_es = anno - 81
     libero = pacchetto_ue.get("libero_dal") or f"{anno}-01-01"
-    it = lang == "it"
-    app = "/" if it else "/en/"
-    # Nomi più cercati, per il titolo e la descrizione che si vedono su Google: chi cerca vuole sapere QUALI libri.
-    _aut = [x for x in pacchetto_ue.get("autori", []) if x.get("letterario") and x.get("morte")]
-    _aut.sort(key=lambda x: -((x.get("visite_it") or 0) if it else (x.get("indice_int") or x.get("indice") or 0)))
-    _cogn = lambda nome: nome.split()[-1] if nome else ""
-    _au = [_cogn(x["nome"]) for x in _aut[:3]]
+    verificati = verificati or {}
+    aut = _letterari(pacchetto_ue, lang)
+    n_ue = sum(1 for a in pacchetto_ue.get("autori", []) if a.get("letterario") and a.get("morte"))
+    n_es = sum(1 for a in (pacchetto_es or {}).get("autori", []) if a.get("letterario") and a.get("morte"))
+    es_nomi = [pulisci(a["nome"]) for a in _letterari(pacchetto_es or {}, "it")[:3]]
+    opere = (opere_us or {}).get("opere", [])
+    n_us = len(opere)
+    n_us_ok = sum(1 for o in opere if (verificati.get(o["qid"]) or ["nd"])[0] == "ok")
+    cogn = lambda nome: pulisci(nome).split()[-1] if nome else ""
+
+    # titolo e descrizione per Google: i nomi più cercati
+    _au = [cogn(a["nome"]) for a in aut[:3]]
     _op = []
-    for o in (opere_us or {}).get("opere", []):
-        chi = _cogn(o["autori"][0]["nome"]) if o.get("autori") else ""
-        if chi in _au:  # niente nomi ripetuti (es. Brecht autore e Brecht opera)
+    for o in opere:
+        chi = cogn(o["autori"][0]["nome"]) if o.get("autori") else ""
+        if chi in _au:
             continue
-        t = (o.get("titolo_it") or o["titolo"]) if it else o["titolo"]
-        _op.append((t, chi))
+        _op.append(((o.get("titolo_it") or o["titolo"]) if it else o["titolo"], chi))
         if len(_op) == 2:
             break
-    _n_us = len((opere_us or {}).get("opere", [])); _n_ue = len(_aut)
     if it:
         titolo = f"Pubblico dominio {anno}: cosa diventa libero il 1° gennaio · Public Domain Radar"
-        descr = (f"Le opere (USA) e gli autori (Europa) che entrano in pubblico dominio il 1° gennaio {anno}, dai dati aperti. "
-                 f"Due regole spiegate in parole semplici, con le fonti.")
+        descr = f"Gli scrittori e i libri che entrano in pubblico dominio il 1° gennaio {anno}, paese per paese, da dati aperti e con le fonti."
         if len(_au) >= 3 and len(_op) >= 2:
             titolo = f"Pubblico dominio {anno}: {_au[0]}, {_au[1]}, {_op[0][0]} e cosa diventa libero"
-            descr = (f"Dal 1° gennaio {anno} in Europa diventano liberi {_au[0]}, {_au[1]}, {_au[2]} e altri {_n_ue - 3} autori; "
-                     f"negli USA {_op[0][0]} ({_op[0][1]}), {_op[1][0]} ({_op[1][1]}) e altre {_n_us - 2} opere. Dati aperti, con le fonti.")
-        faq = [
-            (f"Cosa entra in pubblico dominio nel {anno}?",
-             f"Dipende dal paese. Negli USA le opere pubblicate nel {pub} (95 anni dalla pubblicazione, 17 U.S.C. § 304). "
-             f"Nell'Unione europea le opere degli autori morti nel {morti} (vita dell'autore + 70 anni, direttiva 2006/116/CE, art. 1)."),
-            ("Perché USA ed Europa sono diversi?",
-             "Usano regole diverse. Gli USA contano dall'anno in cui l'opera è stata pubblicata, l'Europa dall'anno in cui è morto l'autore. "
-             "Così un libro può essere libero in un posto e ancora protetto nell'altro."),
-            (f"Posso pubblicare in Italia un libro uscito nel {pub}?",
-             f"Non automaticamente. In Italia conta quando è morto l'autore, anche per gli autori americani: la Cassazione ha applicato i 70 anni dalla morte "
-             f"a un autore statunitense anche se negli USA l'opera era già libera (caso Zorro). Un libro del {pub} di Virginia Woolf (morta nel 1941) è già libero, "
-             f"uno di Dashiell Hammett (morto nel 1961) lo sarà solo dal 2032. Alcuni paesi hanno regole proprie (la Spagna 80 anni per chi è morto prima del 1987): va verificato caso per caso."),
-            ("Una traduzione italiana di un'opera libera è libera anche lei?",
-             "No. La traduzione ha diritti propri, che durano 70 anni dalla morte del traduttore. Libero è il testo originale: per pubblicarlo in italiano serve una traduzione nuova o una già libera."),
-            ("È consulenza legale?",
-             "No. Sono informazioni generali costruite da dati aperti e possono contenere errori. Prima di pubblicare controlla la legge e i fatti per il tuo paese e la tua edizione."),
-            ("Da dove vengono i dati?",
-             "Wikidata (CC0), Wikipedia (testi CC BY-SA, sempre con il link alla pagina) e Wikimedia Commons (ogni immagine con la sua licenza). "
-             "Le leggi sono lette sui testi ufficiali. Il sito si aggiorna da solo ogni mese."),
-        ]
+            descr = (f"Dal 1° gennaio {anno} in Europa diventano liberi {_au[0]}, {_au[1]}, {_au[2]} e altri scrittori; "
+                     f"negli USA {_op[0][0]} ({_op[0][1]}), {_op[1][0]} ({_op[1][1]}) e altri libri del {pub}. Dati aperti, con le fonti.")
     else:
-        titolo = f"Public Domain {anno}: books and authors that become free on 1 January · Public Domain Radar"
-        descr = (f"The works (USA) and authors (Europe) entering the public domain on 1 January {anno}, from open data. "
-                 f"Two rules explained in plain words, with sources.")
+        titolo = f"Public Domain Day {anno}: books and authors that become free on 1 January · Public Domain Radar"
+        descr = f"The writers and books entering the public domain on 1 January {anno}, country by country, from open data with sources."
         if len(_au) >= 3 and len(_op) >= 2:
-            titolo = f"Public Domain {anno}: {_op[0][0]}, {_op[1][0]}, {_au[0]}, {_au[1]} and more"
-            descr = (f"Free on 1 January {anno}: {_op[0][0]} ({_op[0][1]}), {_op[1][0]} ({_op[1][1]}) and {_n_us - 2} more US books; "
-                     f"{_au[0]}, {_au[1]}, {_au[2]} and {_n_ue - 3} more authors in Europe and the UK. Open data, with sources.")
-        faq = [
-            (f"What enters the public domain in {anno}?",
-             f"It depends on the country. In the USA, works published in {pub} (95 years after publication, 17 U.S.C. § 304). "
-             f"In the European Union, the works of authors who died in {morti} (author's life + 70 years, Directive 2006/116/EC, Art. 1)."),
-            ("Why are the USA and Europe different?",
-             "They use different rules. The USA counts from the year a work was published. Europe counts from the year the author died. "
-             "So a book can be free in one place and still protected in the other."),
-            (f"Can I publish a book from {pub} in Europe or the UK?",
-             f"Not automatically. In Europe what matters is when the author died: a book from {pub} by Virginia Woolf (died 1941) is already free, while one by "
-             f"Dashiell Hammett (died 1961) is protected until 2031 under the 70-year rule. The EU directive lets protection end earlier for non-EU works (Art. 7), "
-             f"but countries apply it differently: in Italy the Court of Cassation applied 70 years even to a US author. The UK applies the shorter term of the "
-             f"country of origin (section 12(6)), unless the book was also published in the UK at the same time, as many American novels were. "
-             f"Some countries have their own rules (Spain gives 80 years to authors who died before 1987): check case by case."),
-            (f"Is every work published in {pub} really free in the USA?",
-             "Not always. Works first published in the USA whose copyright was not renewed after 28 years were already free earlier. Foreign works that regained protection in 1996 (17 U.S.C. § 104A) "
-             "last 95 years from publication, but only if they were still protected in their country of origin and the author was from a member country. "
-             "Our list shows works that probably become free; it is not a legal clearance."),
-            ("Is this legal advice?",
-             "No. It is general information built from open data, and it may contain errors. Before publishing, check the law and the facts for your country and your edition."),
-            ("Where does the data come from?",
-             "Wikidata (CC0), Wikipedia (text CC BY-SA, always linked to the page) and Wikimedia Commons (each image with its own licence). "
-             "The laws are read from the official texts. The site updates itself every month."),
-        ]
+            titolo = f"Public Domain Day {anno}: {_op[0][0]}, {_op[1][0]}, {_au[0]}, {_au[1]} and more"
+            descr = (f"Free on 1 January {anno}: {_op[0][0]} ({_op[0][1]}), {_op[1][0]} ({_op[1][1]}) and more US books from {pub}; "
+                     f"{_au[0]}, {_au[1]}, {_au[2]} and more writers in Europe and the UK. Open data, with sources.")
+
+    # esempio per «dipende da dove pubblichi» e per le domande
+    duke = _esempio_duke(anno, pacchetto_ue)
+    non_alleati = [a for a in aut if not set(a.get("paesi") or []) & ALLEATI_1947]
+    primo = non_alleati[0] if non_alleati else None
+
+    faq = []
+    if it:
+        faq.append(("Cos'è il Public Domain Day?",
+                    "È il 1° gennaio di ogni anno, il giorno in cui scadono i diritti d'autore delle opere che hanno raggiunto il limite di legge: "
+                    "nell'Unione europea e nel Regno Unito 70 anni dalla morte dell'autore (direttiva 2006/116/CE, art. 1), negli USA 95 anni dalla pubblicazione (17 U.S.C. § 304)."))
+        faq.append((f"Cosa entra in pubblico dominio nel {anno}?",
+                    f"In Italia, Francia, Germania e Regno Unito le opere degli scrittori morti nel {morti}. In Spagna quelle degli scrittori morti nel {morti_es}. "
+                    f"Negli USA i libri pubblicati nel {pub}."))
+        if n_es and morti_es < 1987:
+            faq.append((f"Perché in Spagna entrano gli autori morti nel {morti_es}?",
+                        "Per chi è morto prima del 7 dicembre 1987 la legge spagnola applica ancora gli 80 anni della legge del 1879 "
+                        "(Ley de Propiedad Intelectual, disposizione transitoria quarta)."))
+        if primo:
+            faq.append((f"{pulisci(primo['nome'])} si può pubblicare in Italia dal 1° gennaio {anno}?",
+                        f"Il testo originale sì: {pulisci(primo['nome'])} è morto nel {anno_di(primo['morte'])}. "
+                        "Le traduzioni italiane già pubblicate no, finché non sono libere anche loro: hanno diritti propri, che durano 70 anni dalla morte del traduttore."))
+        faq.append((f"Posso pubblicare in Italia un libro uscito negli USA nel {pub}?",
+                    f"Non automaticamente. In Italia conta quando è morto l'autore, anche per gli autori americani: la Cassazione ha applicato i 70 anni dalla morte "
+                    f"a un autore statunitense anche se negli USA l'opera era già libera (caso Zorro)."))
+        faq.append(("È consulenza legale?",
+                    "No. Sono informazioni generali costruite da dati aperti e possono contenere errori. Prima di pubblicare controlla la legge e i fatti per il tuo paese e la tua edizione."))
+    else:
+        faq.append(("What is Public Domain Day?",
+                    "It is 1 January of every year, the day copyright expires for works that have reached the legal limit: in the European Union and the UK "
+                    "70 years after the author's death (Directive 2006/116/EC, Art. 1), in the USA 95 years after publication (17 U.S.C. § 304)."))
+        faq.append((f"What enters the public domain in {anno}?",
+                    f"In Italy, France, Germany and the UK, the works of writers who died in {morti}. In Spain, those of writers who died in {morti_es}. "
+                    f"In the USA, books published in {pub}."))
+        if n_es and morti_es < 1987:
+            faq.append((f"Why do authors who died in {morti_es} enter in Spain?",
+                        "For authors who died before 7 December 1987, Spanish law still applies the 80 years of the 1879 law "
+                        "(Ley de Propiedad Intelectual, fourth transitional provision)."))
+        faq.append((f"Is every book published in {pub} really free in the USA?",
+                    "Not always. Works first published in the USA whose copyright was not renewed after 28 years were already free earlier. Foreign works that regained "
+                    "protection in 1996 (17 U.S.C. § 104A) last 95 years from publication. We call a book free only when a second source confirms the year it came out."))
+        faq.append(("Is this legal advice?",
+                    "No. It is general information built from open data, and it may contain errors. Before publishing, check the law and the facts for your country and your edition."))
+
     jl = {"@context": "https://schema.org", "@graph": [
         {"@type": "WebPage", "@id": url, "url": url, "name": titolo, "description": descr, "inLanguage": lang,
          "dateModified": str(oggi), "isPartOf": {"@type": "WebSite", "name": "Public Domain Radar", "url": SITO + app}},
@@ -1037,67 +1167,137 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en"):
            f'<link rel="alternate" hreflang="en" href="{url_landing("en", anno)}">\n')
     altra = (f'<a href="/en/public-domain-{anno}/">English</a>' if it else f'<a href="/pubblico-dominio-{anno}/">Italiano</a>')
     out = [TESTA.format(lang=lang, titolo=esc(titolo), descr=esc(descr), url=url, alterne=alt, og_tipo="website", jsonld=jsonld,
-                        css=CSS + CSS_LANDING, home=app, altra_lingua=altra)]
-    T = (lambda a, b: a) if it else (lambda a, b: b)
-    out.append(f"""<header class="lp-hero"><div class="lp-in">
-<p class="lp-occ"><i></i>{T("Public Domain Day · 1° gennaio", "Public Domain Day · 1 January")} {anno}</p>
-<h1>{T("Cosa diventa libero nel", "What becomes free in")} <em>{anno}</em></h1>
-<p class="lead">{T(f"Le opere e gli autori che entrano in pubblico dominio il 1° gennaio {anno}, negli USA e in Europa. Dati aperti, spiegati in parole semplici, aggiornati ogni mese.", f"The works and authors that enter the public domain on 1 January {anno}, in the USA and in Europe. Open data, explained in plain words, updated every month.")}</p>
-<div class="lp-cont" id="cont"><b id="giorni">{anno}</b><span id="giorni-et">{T("1° gennaio", "1 January")}</span></div>
-<div class="lp-bott"><a class="lp-b lp-b1" href="{app}#/us/{anno}">{T("Le opere (USA)", "See the works (USA)")}</a><a class="lp-b lp-b2" href="{app}#/{anno}">{T("Gli autori (Europa)", "See the authors (Europe)")}</a></div>
+                        css=CSS + CSS_PDD, home=app, altra_lingua=altra)]
+
+    # 1. apertura
+    n_ = lambda x: migliaia(x, lang)
+    nums = [(n_ue, T(f"scrittori liberi in Italia, Francia, Germania e Regno Unito: morti nel {morti}",
+                     f"writers free in Italy, France, Germany and the UK: died in {morti}"))]
+    if n_es:
+        nums.append((n_es, T(f"scrittori liberi in Spagna: morti nel {morti_es}", f"writers free in Spain: died in {morti_es}")))
+    if n_us:
+        nums.append((n_us, T(f"libri liberi negli USA: pubblicati nel {pub}, {n_us_ok} con l'anno confermato",
+                             f"books free in the USA: published in {pub}, {n_us_ok} with the year confirmed")))
+    out.append(f"""<header class="pd-hero"><div class="pd-in">
+<p class="pd-occ">Public Domain Day · {T("1° gennaio", "1 January")} {anno}<span id="pd-giorni"></span></p>
+<h1>{T("Cosa diventa", "What becomes")} <em>{T("libero", "free")}</em> {T("nel", "in")} {anno}</h1>
+<p class="lead">{T(f"Il 1° gennaio {anno} scadono i diritti di centinaia di scrittori e libri. Chi, dove e con quali cautele, da dati aperti e con le fonti.",
+                   f"On 1 January {anno} copyright expires for hundreds of writers and books. Who, where and with what caveats, from open data with sources.")}</p>
+<ul class="pd-num">{"".join(f'<li><b>{n_(x)}</b><span>{esc(t)}</span></li>' for x, t in nums)}</ul>
 </div></header>
+<main>
 """)
-    out.append(f"""<section class="lp-sez"><div class="lp-in">
-<p class="lp-occh">{T("Due regole, due elenchi", "Two rules, two lists")}</p>
-<h2>{T("Dipende da dove pubblichi", "It depends where you publish")}</h2>
-<p class="lead">{T("Gli USA guardano quando è uscita l'opera. L'Europa guarda quando è morto l'autore. Per questo gli elenchi sono due.", "The USA looks at when a work was published. Europe looks at when the author died. That is why there are two lists.")}</p>
-<div class="lp-due">
-<div class="lp-card us"><div class="lp-num">95</div><h3>{T("USA · opere", "USA · works")}</h3><p class="gr">{T("Anni dalla pubblicazione", "Years after publication")}</p>
-<p>{T(f"Le opere pubblicate nel <b>{pub}</b> ancora protette diventano libere il 1° gennaio {anno}. Regola: 17 U.S.C. § 304.", f"Works published in <b>{pub}</b> that were still protected become free on 1 January {anno}. Rule: 17 U.S.C. § 304.")}</p><a href="{app}#/us/{anno}">{T("Sfoglia le opere →", "Browse the works →")}</a></div>
-<div class="lp-card"><div class="lp-num">70</div><h3>{T("Europa e Regno Unito · autori", "Europe and UK · authors")}</h3><p class="gr">{T("Anni dalla morte dell'autore", "Years after the author's death")}</p>
-<p>{T(f"Gli autori morti nel <b>{morti}</b> diventano liberi il 1° gennaio {anno}. Alcuni paesi hanno regole proprie: ogni scheda autore mostra la data paese per paese.", f"Authors who died in <b>{morti}</b> become free on 1 January {anno}. Some countries have their own rules, so each author page shows the date country by country.")}</p><a href="{app}#/{anno}">{T("Sfoglia gli autori →", "Browse the authors →")}</a></div>
-</div></div></section>
-""")
-    if opere_us and opere_us.get("opere"):
-        out.append(f'<section class="lp-sez" style="padding-top:0"><div class="lp-in">\n<p class="lp-occh">{T("USA · pubblicate nel", "USA · published in")} {pub}</p>\n'
-                   f'<h2>{T(f"Le opere più lette che si liberano nel {anno}", f"The most read works entering in {anno}")}</h2>\n'
-                   f'<p class="lead">{T("In ordine di quanto se ne legge su Wikipedia in inglese.", "Ranked by how much people read about them on English Wikipedia.")}</p>\n<div class="lp-gr">\n')
-        for o in opere_us["opere"][:12]:
-            aut = ", ".join(a["nome"] for a in o.get("autori", [])) or "—"
-            out.append(_cop(f"{app}#/opera/{o['qid']}", o["titolo"], f"{aut} · {pub}"))
-        out.append(f'</div>\n<p class="lp-piu"><a href="{app}#/us/{anno}">{T("Tutte le", "All")} {len(opere_us["opere"])} {T("opere", "works")} →</a></p>\n</div></section>\n')
-    aut = [a for a in pacchetto_ue.get("autori", []) if a.get("letterario") and a.get("morte")]
-    aut.sort(key=lambda a: -((a.get("visite_it") or 0) if it else (a.get("indice_int") or a.get("indice") or 0)))
+
+    # 2. i nomi più attesi
     if aut:
-        out.append(f'<section class="lp-sez lp-scuro"><div class="lp-in">\n<p class="lp-occh">{T("Europa · morti nel", "Europe · died in")} {morti}</p>\n'
-                   f'<h2>{T(f"Gli autori che entrano nel {anno}", f"The authors entering in {anno}")}</h2>\n<p class="lead">{T(f"Scrittori morti nel {morti}, in ordine di interesse in Italia.", f"Writers who died in {morti}, ranked by international interest.")}</p>\n<div class="lp-aut">\n')
-        for a in aut[:12]:
-            pag = a.get("pagina") if it else a.get("pagina_en")
-            href = (f"/autore/{pag}/" if it else f"/en/author/{pag}/") if pag else f"{app}#/autore/{a['wikidata']}"
-            anni = f"{anno_di(a.get('nascita')) or '?'} – {anno_di(a['morte'])}"
-            out.append(f'<a href="{href}"><b>{esc(pulisci(a["nome"]))}</b><span>{esc(anni)}</span></a>\n')
-        out.append(f'</div>\n<p class="lp-piu"><a href="{app}#/{anno}" style="color:#fff">{T("Tutti gli autori →", "All authors →")}</a></p>\n</div></section>\n')
-    out.append(f"""<section class="lp-sez"><div class="lp-in">
-<p class="lp-occh">{T("Come funziona", "How it works")}</p>
-<h2>{T("Dati aperti, niente a occhio", "Open data, no guesswork")}</h2>
-<div class="lp-pass">
-<div><b>01</b><h3>{T("Letto da fonti aperte", "Read from open sources")}</h3><p>{T("Autori e opere vengono da Wikidata, l'interesse dalle visite a Wikipedia. Niente è scritto a mano.", "Authors and works come from Wikidata, interest from Wikipedia page views. Nothing is typed by hand.")}</p></div>
-<div><b>02</b><h3>{T("Regole dalla legge", "Rules from the law")}</h3><p>{T("Le regole sulla durata sono lette sui testi di legge ufficiali. Quello che non abbiamo potuto verificare è dichiarato nel sito.", "The term rules are read from the official legal texts. What we could not verify is declared on the site.")}</p></div>
-<div><b>03</b><h3>{T("Si aggiorna da solo", "Updated by itself")}</h3><p>{T("Ogni mese l'elenco viene ricostruito da capo. Vedi sempre la data dell'ultimo aggiornamento.", "Every month the whole list is rebuilt. You always see the last update date.")}</p></div>
+        out.append(f'<section class="pd-sez"><div class="pd-in">\n<p class="pd-et">{T("Europa e Regno Unito", "Europe and the UK")}</p>\n'
+                   f'<h2>{T("I nomi più attesi", "The most awaited names")}</h2>\n'
+                   f'<p class="lead">{T(f"Gli scrittori morti nel {morti} più letti su Wikipedia. Dal 1° gennaio i loro testi originali si possono pubblicare senza permesso in Italia, Francia, Germania e Regno Unito.", f"The writers who died in {morti} that are most read on Wikipedia. From 1 January their original texts can be published without permission in Italy, France, Germany and the UK.")}</p>\n<ul class="pd-aut">\n')
+        crediti = []
+        for a in aut[:8]:
+            nome = pulisci(a["nome"])
+            href = f"/autore/{a['pagina']}/" if it else f"/en/author/{a['pagina_en']}/"
+            foto = a.get("foto") or {}
+            if foto.get("url"):
+                img = re.sub(r"width=\d+", "width=240", foto["url"])
+                ft = f'<span class="pd-ft"><img src="{esc(img)}" alt="" loading="lazy"></span>'
+                chi_f = re.sub(r"^(.+?)\1$", r"\1", pulisci(foto.get("autore")))   # Commons a volte ripete il nome due volte
+                chi_f = "" if len(chi_f) > 60 else chi_f
+                crediti.append(f'{esc(nome)}: <a href="{esc(foto.get("pagina", ""))}" rel="noopener">{esc(" · ".join(x for x in (chi_f, pulisci(foto.get("licenza"))) if x) or "Wikimedia Commons")}</a>')
+            else:
+                ft = f'<span class="pd-ft" aria-hidden="true">{esc(iniziali_nome(nome))}</span>'
+            if it:
+                sotto = f"{anno_di(a.get('nascita')) or '?'} – {_data_lunga(a['morte'], 'it')}"
+            else:
+                d = re.sub(r"\s*\([^)]*\)\s*$", "", pulisci(a.get("descrizione")))
+                sotto = (d + " · " if d else "") + f"died {_data_lunga(a['morte'], 'en')}"
+            out.append(f'<li><a href="{href}">{ft}<span><b>{esc(nome)}</b><span>{esc(sotto)}</span></span></a></li>\n')
+        out.append(f'</ul>\n<p class="pd-piu"><a href="{app}#/{anno}">{T(f"Tutti i {n_(n_ue)} scrittori, con le schede →", f"All {n_(n_ue)} writers, with their pages →")}</a></p>\n')
+        if crediti:
+            out.append(f'<p class="pd-cred">{T("Ritratti da Wikimedia Commons", "Portraits from Wikimedia Commons")} — {" · ".join(crediti)}</p>\n')
+        out.append("</div></section>\n")
+
+    # 3. i libri USA
+    if opere:
+        out.append(f'<section class="pd-sez"><div class="pd-in">\n<p class="pd-et">{T("Stati Uniti", "United States")}</p>\n'
+                   f'<h2>{T(f"I libri del {pub}", f"The books of {pub}")}</h2>\n'
+                   f'<p class="lead">{T(f"Negli USA conta l&#39;anno di pubblicazione: il 1° gennaio diventano liberi i libri usciti nel {pub}. Diciamo «confermato» solo quando l&#39;anno è confermato da una fonte diversa da Wikidata (registro del copyright americano, biblioteche nazionali, Open Library, Library of Congress); per gli altri scriviamo «anno da confermare».", f"In the USA what counts is the year of publication: on 1 January books published in {pub} become free. We say «confirmed» only when a source other than Wikidata confirms the year (the US copyright register, national libraries, Open Library, Library of Congress); for the others we say «year to be confirmed».")}</p>\n<ul class="pd-cop">\n')
+        for o in opere[:12]:
+            t = (o.get("titolo_it") or o["titolo"]) if it else o["titolo"]
+            chi = ", ".join(pulisci(a["nome"]) for a in o.get("autori", [])) or "—"
+            ok = (verificati.get(o["qid"]) or ["nd"])[0] == "ok"
+            badge = (f'<span class="pd-bd ok">{T(f"{pub} confermato", f"{pub} confirmed")}</span>' if ok
+                     else f'<span class="pd-bd ver">{T("anno da confermare", "year to be confirmed")}</span>')
+            out.append(_cop_pdd(f"{app}#/opera/{o['qid']}", t, f"{chi} · {pub}", badge))
+        out.append(f'</ul>\n<p class="pd-piu"><a href="{app}#/us/{anno}">{T(f"Tutti i {n_us} libri: {n_us_ok} confermati, {n_us - n_us_ok} da confermare →", f"All {n_us} books: {n_us_ok} confirmed, {n_us - n_us_ok} to be confirmed →")}</a></p>\n</div></section>\n')
+
+    # 4. paese per paese
+    righe = [
+        (T("Italia", "Italy"), T(f"autori morti nel {morti}", f"authors who died in {morti}"),
+         T("70 anni dalla morte. Per gli autori di paesi alleati nella Seconda guerra mondiale va verificato.", "70 years after death. For authors from Allied countries in the Second World War it must be checked."),
+         f"{app}#/{anno}", T(f"{n_(n_ue)} scrittori →", f"{n_(n_ue)} writers →")),
+        (T("Francia", "France"), T(f"autori morti nel {morti}", f"authors who died in {morti}"),
+         T("70 anni; 30 in più per chi è «morto per la Francia».", "70 years; 30 more for authors who «died for France»."),
+         f"{app}#/{anno}", T(f"{n_(n_ue)} scrittori →", f"{n_(n_ue)} writers →")),
+        (T("Germania", "Germany"), T(f"autori morti nel {morti}", f"authors who died in {morti}"),
+         T("70 anni dalla morte.", "70 years after death."), f"{app}#/{anno}", T(f"{n_(n_ue)} scrittori →", f"{n_(n_ue)} writers →")),
+        (T("Regno Unito", "United Kingdom"), T(f"autori morti nel {morti}", f"authors who died in {morti}"),
+         T("70 anni; le opere uscite dopo il 1988 di autori morti prima del 1969 restano protette fino al 2039.", "70 years; works first published after 1988 by authors who died before 1969 stay protected until 2039."),
+         f"{app}#/{anno}", T(f"{n_(n_ue)} scrittori →", f"{n_(n_ue)} writers →")),
+    ]
+    if n_es:
+        nomi = (T(": entrano ", ": in come ") + ", ".join(es_nomi)) if es_nomi else ""
+        righe.append(("Spagna" if it else "Spain", T(f"autori morti nel {morti_es}", f"authors who died in {morti_es}"),
+                      T(f"80 anni per chi è morto prima del 1987{nomi}.", f"80 years for authors who died before 1987{nomi}."),
+                      f"{app}#/{anno}", T(f"{n_(n_es)} scrittori →", f"{n_(n_es)} writers →")))
+    if n_us:
+        righe.append(("USA", T(f"libri pubblicati nel {pub}", f"books published in {pub}"),
+                      T("95 anni dalla pubblicazione, opera per opera.", "95 years after publication, work by work."),
+                      f"{app}#/us/{anno}", T(f"{n_us} libri →", f"{n_us} books →")))
+    out.append(f'<section class="pd-sez"><div class="pd-in">\n<p class="pd-et">{T("Paese per paese", "Country by country")}</p>\n'
+               f'<h2>{T("Chi entra, dove", "Who enters, where")}</h2>\n<ul class="pd-tab">\n')
+    for p, c, r, h, l in righe:
+        out.append(f'<li><span class="p">{esc(p)}</span><span class="c">{esc(c)}</span><span class="r">{esc(r)}</span><a href="{h}">{esc(l)}</a></li>\n')
+    out.append(f'</ul>\n<p class="pd-cred">{T("Regole lette sui testi di legge di ogni paese:", "Rules read from each country&#39;s legal texts:")} <a href="{app}#regole-paesi">{T("il riquadro delle regole", "the rules box")}</a>.</p>\n</div></section>\n')
+
+    # 5. cosa significa davvero
+    if duke:
+        y, t_en, t_it = duke
+        dove = T(f"«{t_it}» è libero negli USA dal {y} e in Europa solo dal {anno}.", f"«{t_en}» has been free in the USA since {y}, and in Europe only from {anno}.")
+    else:
+        dove = ""
+    out.append(f"""<section class="pd-sez"><div class="pd-in">
+<p class="pd-et">{T("Prima di pubblicare", "Before you publish")}</p>
+<h2>{T("Cosa significa davvero", "What it really means")}</h2>
+<div class="pd-tre">
+<div><h3>{T("Il testo, non l'edizione", "The text, not the edition")}</h3><p>{T("È libero il testo originale. Le traduzioni recenti, le illustrazioni e le edizioni curate hanno diritti propri: per tradurre un autore serve una traduzione nuova, o una già libera.", "The original text is free. Recent translations, illustrations and edited editions have their own rights: to publish a translation you need a new one, or one that is already free.")}</p></div>
+<div><h3>{T("Dipende da dove pubblichi", "It depends where you publish")}</h3><p>{T("Il 1° gennaio non scade tutto insieme ovunque. Lo stesso libro può essere libero negli USA e protetto in Europa, o il contrario.", "On 1 January not everything expires everywhere at once. The same book can be free in the USA and protected in Europe, or the other way round.")} {esc(dove)}</p></div>
+<div><h3>{T("Certo e da verificare", "Certain and to be checked")}</h3><p>{T("Segniamo come certo solo ciò che è confermato da più fonti (anni di morte, anni di uscita). Il resto è «da verificare», con il motivo. Le fonti sono elencate in fondo a ogni pagina.", "We mark as certain only what more than one source confirms (years of death, years of publication). The rest is «to be checked», with the reason. Sources are listed at the bottom of every page.")}</p></div>
 </div></div></section>
 """)
-    out.append(f'<section class="lp-sez" style="padding-top:0"><div class="lp-in">\n<p class="lp-occh">{T("Domande", "Questions")}</p>\n<h2>{T("Il pubblico dominio, in parole semplici", "Public domain, in plain words")}</h2>\n<div class="lp-faq">\n')
+
+    # 6. domande
+    out.append(f'<section class="pd-sez"><div class="pd-in">\n<p class="pd-et">{T("Domande", "Questions")}</p>\n<h2>{T("Le risposte brevi", "The short answers")}</h2>\n<div class="pd-faq">\n')
     for q, r in faq:
         out.append(f"<details><summary>{esc(q)}</summary><p>{esc(r)}</p></details>\n")
-    out.append(f'</div>\n<p class="lp-nota">{T("Informazioni generali, non consulenza legale. I dati vengono da fonti aperte e possono contenere errori: prima di pubblicare controlla la legge del tuo paese.", "General information, not legal advice. The data comes from open sources and may contain errors: before publishing, check the law for your country.")}</p>\n</div></section>\n')
-    giorni_et = ('d===1?"giorno":"giorni"', '"Libero"', f'"dal 1° gennaio {anno}"') if it else ('d===1?"day to go":"days to go"', '"Free"', f'"since 1 January {anno}"')
-    out.append(f"""<section class="lp-fin"><div class="lp-in">
-<h2>{T("Stai scegliendo cosa ripubblicare?", "Choosing what to republish?")}</h2>
-<p>{T("Pensato per editori, traduttori e agenti: chi diventa libero, quanto è letto e la data paese per paese.", "Built for editors, translators and agents: see who becomes free, how much they are read, and the date country by country.")}</p>
-<a class="lp-b" href="{app}">{T("Apri lo strumento completo", "Open the full tool")}</a>
-</div></section>
-<script>(function(){{var t=new Date("{libero}T00:00:00"),d=Math.ceil((t-new Date())/864e5),b=document.getElementById("giorni"),l=document.getElementById("giorni-et");if(!b||!l)return;if(d>0){{b.textContent=d;l.textContent={giorni_et[0]}}}else{{b.textContent={giorni_et[1]};l.textContent={giorni_et[2]}}}}})();</script>
+    out.append("</div></div></section>\n")
+
+    # 7. calendario, fonti e metodo
+    cal = ""
+    if CALENDARIO_ON and anno == _cal:
+        href = f"/calendario/{anno}/" if it else f"/en/calendar/{anno}/"
+        cal = (f'<div><p class="pd-et">{T("Il 1° gennaio, nel calendario", "1 January, in the calendar")}</p><p>'
+               f'{T("Il Public Domain Day è la prima voce del", "Public Domain Day is the first entry of the")} <a href="{href}">{T(f"calendario degli anniversari letterari {anno}", f"{anno} literary anniversaries calendar")}</a>.</p></div>')
+    metodo = "https://github.com/mnovali90-byte/publicdomain/blob/main/docs/metodo-anni-opere.md"
+    out.append(f"""<section class="pd-sez ultima"><div class="pd-in"><div class="pd-fondo">{cal}
+<div><p class="pd-et">{T("Fonti e metodo", "Sources and method")}</p><p class="m">{T(
+        "Wikidata (CC0) per autori, opere e anni; biblioteche nazionali per confermare gli anni di morte. Per gli anni di uscita dei libri USA: registro del copyright americano (Catalog of Copyright Entries, trascritto dalla New York Public Library, CC0), Duke University (CC BY 4.0), Open Library, Library of Congress, BnF e il catalogo collettivo tedesco K10plus. Visite: Wikipedia in 5 lingue.",
+        "Wikidata (CC0) for authors, works and years; national libraries to confirm years of death. For the publication years of US books: the US copyright register (Catalog of Copyright Entries, transcribed by the New York Public Library, CC0), Duke University (CC BY 4.0), Open Library, Library of Congress, BnF and the German union catalogue K10plus. Page views: Wikipedia in 5 languages.")} <a href="{metodo}" rel="noopener">{T("Come confermiamo gli anni", "How we confirm the years")}</a>. {T("Non è consulenza legale.", "Not legal advice.")}</p></div>
+</div></div></section>
+</main>
 """)
+    gg = ('d===1?" · domani":" · tra "+d+" giorni"' if it else 'd===1?" · tomorrow":" · in "+d+" days"')
+    out.append(f'<script>(function(){{var d=Math.ceil((new Date("{libero}T00:00:00")-new Date())/864e5),e=document.getElementById("pd-giorni");if(e&&d>0)e.textContent={gg}}})();</script>\n')
     out.append(PIEDE[lang])
     return "".join(out), url
 
@@ -1105,13 +1305,19 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en"):
 def crea_landing():
     """Per ogni anno disponibile: en/public-domain-<anno>/ e pubblico-dominio-<anno>/. Restituisce gli indirizzi."""
     urls = []
+    try:
+        ver = json.loads((RADICE / "data" / "us-anni-verificati.json").read_text(encoding="utf-8"))
+    except Exception:
+        ver = {}
     for f in sorted(glob.glob(str(RADICE / "data" / "[0-9][0-9][0-9][0-9].json"))):
         anno = int(Path(f).stem)
         ue = json.load(open(f, encoding="utf-8"))
         fus = RADICE / "data" / f"us-{anno}.json"
         us = json.load(open(fus, encoding="utf-8")) if fus.exists() else None
+        fes = RADICE / "data" / f"es-{anno}.json"
+        es = json.load(open(fes, encoding="utf-8")) if fes.exists() else None
         for lang, d in (("en", RADICE / "en" / f"public-domain-{anno}"), ("it", RADICE / f"pubblico-dominio-{anno}")):
-            html_, url = pagina_landing(anno, ue, us, lang)
+            html_, url = pagina_landing(anno, ue, us, lang, es, ver.get(str(anno)))
             d.mkdir(parents=True, exist_ok=True)
             (d / "index.html").write_text(html_, encoding="utf-8")
             urls.append(url)
