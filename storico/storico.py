@@ -25,6 +25,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."
 from opere import CLASSI, GENERI, get, qid, sparql, val  # noqa: E402
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from per_autore import semi, opere_per_autore, opere_anonime, libera_ue, libera_usa, libera, info_autori  # noqa: E402
+import duke  # noqa: E402  seconda fonte per gli USA (19/11/2026)
 
 UA = {"User-Agent": "PublicDomainRadar/1.0 (https://publicdomainradar.com; open data project)"}
 ANNO_A = int(os.environ.get("STORICO_ANNO_A", date.today().year - 96))   # 2026 -> 1930
@@ -70,10 +71,14 @@ def opere_periodo(da, a):
     """Opere con anno di prima pubblicazione tra da e a (inclusi), almeno una pagina Wikipedia."""
     classi = " ".join("wd:" + c for c in CLASSI)
     q = f'''SELECT ?w ?wLabel ?wit ?a ?aLabel ?morte ?sl ?en ?itw (YEAR(?d) AS ?anno) WHERE {{
-      VALUES ?c {{ {classi} }}
-      {{ ?w wdt:P31 ?c }} UNION {{ ?w wdt:P31 wd:Q47461344; wdt:P7937 ?c }}
-      ?w wdt:P577 ?d. FILTER(YEAR(?d)>={da} && YEAR(?d)<={a})
+      # v3 (19/11/2026, dopo il confronto con la Duke): entra anche un'opera senza tipo ma con un autore (P50), come
+      # «Now We Are Six»; la data può venire anche da un'edizione dell'opera (P629), come «New Hampshire» di Frost
+      {{ VALUES ?c {{ {classi} }} ?w wdt:P31 ?c }} UNION {{ VALUES ?c {{ {classi} }} ?w wdt:P31 wd:Q47461344; wdt:P7937 ?c }}
+        UNION {{ ?w wdt:P50 [] FILTER NOT EXISTS {{ ?w wdt:P31 wd:Q13442814 }} }}
+      {{ ?w wdt:P577 ?d }} UNION {{ ?ed wdt:P629 ?w; wdt:P577 ?d }}
+      FILTER(YEAR(?d)>={da} && YEAR(?d)<={a})
       FILTER NOT EXISTS {{ ?w wdt:P577 ?d0 FILTER(?d0 < ?d) }}   # conta la PRIMA pubblicazione (18/11/2026)
+      FILTER NOT EXISTS {{ ?ed0 wdt:P629 ?w; wdt:P577 ?d1 FILTER(?d1 < ?d) }}
       ?w wikibase:sitelinks ?sl. FILTER(?sl>=1)
       OPTIONAL {{ ?w wdt:P50 ?a. OPTIONAL {{ ?a wdt:P570 ?morte }} }}
       OPTIONAL {{ ?w rdfs:label ?wit FILTER(LANG(?wit)="it") }}
@@ -229,7 +234,7 @@ def scrivi_ricerca(ops):
     for o in ops:
         riga = [o["qid"], o["titolo"], o["titolo_it"] or "", o["anno"], o["pagine"],
                 [[a["qid"], a["nome"], a["morte"], 1 if a.get("antico") else 0, a.get("morte_incerta", 0), a.get("alleato", 0)]
-                 for a in o["autori"]]]
+                 for a in o["autori"]], o.get("anno_duke") or 0]   # anno della Duke se diverso dalla prima data di Wikidata
         for k in chiavi_ricerca(o["titolo"]) | chiavi_ricerca(o["titolo_it"] or ""):
             lettere.setdefault(k, {"opere": [], "autori": []})["opere"].append(riga)
         for a in o["autori"]:
@@ -276,8 +281,8 @@ def main():
             vecchio = json.load(open(f, encoding="utf8"))
         except Exception:
             pass
-        # v2 (18/11/2026): l'anno è la PRIMA pubblicazione; i periodi scaricati prima si riscaricano
-        fresco = vecchio and vecchio.get("v") == 2 and (oggi - date.fromisoformat(vecchio["scaricato"])).days < RINFRESCA_GIORNI
+        # v2 (18/11/2026): l'anno è la PRIMA pubblicazione; v3 (19/11/2026): edizioni e opere senza tipo. Si riscarica
+        fresco = vecchio and vecchio.get("v") == 3 and (oggi - date.fromisoformat(vecchio["scaricato"])).days < RINFRESCA_GIORNI
         if not fresco and time.time() - inizio_wd < BUDGET_WIKIDATA * 60:
             lista = []
             for tentativo in range(3):          # Wikidata ogni tanto va in timeout: si riprova
@@ -287,7 +292,7 @@ def main():
                 time.sleep(20 * (tentativo + 1))
             print(nome, "opere:", len(lista), flush=True)
             if lista:
-                json.dump({"v": 2, "scaricato": oggi.isoformat(), "opere": lista}, open(f, "w", encoding="utf8"),
+                json.dump({"v": 3, "scaricato": oggi.isoformat(), "opere": lista}, open(f, "w", encoding="utf8"),
                           ensure_ascii=False, separators=(",", ":"))
                 vecchio = {"opere": lista}
             else:
@@ -319,11 +324,17 @@ def main():
     if mancanti:
         print(f"periodi ancora da scaricare ({len(mancanti)}): il prossimo giro riparte da qui")
         open(".storico_incompleto", "w").write(" ".join(mancanti))
+    # 1b-bis) SECONDA FONTE PER GLI USA (19/11/2026): i libri delle pagine Public Domain Day della Duke (storico/duke.py)
+    try:
+        duke.integra(tutte, duke.carica(ANNO_A + 96))
+    except Exception as e:      # se la Duke non risponde lo Storico si fa lo stesso
+        print("Duke non letta:", e)
     # 1c) CONTROLLO SUGLI AUTORI (18/11/2026): tutti gli anni di morte e la cittadinanza, per gli autori morti dal 1900.
     #     Più anni di morte: vale il più tardo e l'autore è segnato «morte_incerta»; cittadinanza di un paese alleato
     #     (Trattato di pace con l'Italia, 1947): segnato «alleato», perché in Italia la protezione può durare di più.
     #     Un'opera che con l'anno di morte più tardo non è più libera da nessuna parte esce dallo Storico.
-    da_controllare = sorted({a["qid"] for o in tutte.values() for a in o["autori"] if (a.get("morte") or 0) >= 1900})
+    da_controllare = sorted({a["qid"] for o in tutte.values() for a in o["autori"]
+                             if (a.get("morte") or 0) >= 1900 and re.fullmatch(r"Q\d+", a["qid"] or "")})
     info = info_autori(da_controllare, fine_budget + 15 * 60)
     for o in tutte.values():
         for a in o["autori"]:
@@ -347,7 +358,7 @@ def main():
         det = json.load(open(f_det, encoding="utf8"))
     except Exception:
         det = {}
-    da_chiedere = [o["qid"] for o in ops[:MAX_VISITE] if o["qid"] not in det]
+    da_chiedere = [o["qid"] for o in ops[:MAX_VISITE] if o["qid"] not in det and re.fullmatch(r"Q\d+", o["qid"])]
     if da_chiedere:
         try:
             for k, v in lingua_genere_qid(da_chiedere).items():
