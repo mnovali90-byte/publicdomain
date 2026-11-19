@@ -1233,9 +1233,13 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
         for o in opere[:12]:
             t = (o.get("titolo_it") or o["titolo"]) if it else o["titolo"]
             chi = ", ".join(pulisci(a["nome"]) for a in o.get("autori", [])) or "—"
-            ok = (verificati.get(o["qid"]) or ["nd"])[0] == "ok"
-            badge = (f'<span class="pd-bd ok">{T(f"{pub} confermato", f"{pub} confirmed")}</span>' if ok
-                     else f'<span class="pd-bd ver">{T("anno da confermare", "year to be confirmed")}</span>')
+            v_ = verificati.get(o["qid"]) or ["nd"]
+            if v_[0] == "ok":
+                badge = f'<span class="pd-bd ok">{T(f"{pub} confermato", f"{pub} confirmed")}</span>'
+            elif v_[0] == "parziale":   # uscito a puntate fino a un anno dopo: libero per intero più tardi
+                badge = f'<span class="pd-bd ver">{T(f"a puntate fino al {v_[1]}", f"serialized until {v_[1]}")}</span>'
+            else:
+                badge = f'<span class="pd-bd ver">{T("anno da confermare", "year to be confirmed")}</span>'
             out.append(_cop_pdd(f"{app}#/opera/{o['qid']}", t, f"{chi} · {pub}", badge))
         out.append(f'</ul>\n<p class="pd-piu"><a href="{app}#/us/{anno}">{T(f"Tutti i {n_us} libri: {n_us_ok} confermati, {n_us - n_us_ok} da confermare →", f"All {n_us} books: {n_us_ok} confirmed, {n_us - n_us_ok} to be confirmed →")}</a></p>\n</div></section>\n')
 

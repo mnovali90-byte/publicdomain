@@ -29,7 +29,7 @@ parole, UA = va.parole, va.UA
 BUDGET = float(os.environ.get("BUDGET_MINUTI_USA", "50")) * 60
 RICONTROLLA = 30   # giorni: un libro non confermato si ricontrolla dopo un mese, non a ogni giro
 OGGI = date.today().isoformat()
-AUTOREVOLI = ("duke", "cce", "bnf", "k10plus")
+AUTOREVOLI = ("duke", "cce", "bnf", "k10plus", "isfdb", "wikipedia")
 CCE_RAW = "https://raw.githubusercontent.com/NYPL/catalog_of_copyright_entries_project/master/xml/"
 CCE_FILE = {}   # anno -> file del volume: si legge dall'elenco del repository NYPL (i nomi dei file non seguono una regola)
 CCE_API = "https://api.github.com/repos/NYPL/catalog_of_copyright_entries_project/contents/xml/"
@@ -190,12 +190,88 @@ def k10plus(titolo, cognome, p):
     return (min(anni) if anni else None), len(recs)
 
 
-def decidi(trovati, p):
+MESI_EN = "January|February|March|April|May|June|July|August|September|October|November|December"
+
+
+def _anni(testo, p):
+    return [int(y) for y in re.findall(r"\b(1[6-9]\d\d|20[0-2]\d)\b", testo) if 1600 <= int(y) <= p + 10]
+
+
+def puntate_wikipedia(o, p):
+    """Prima e ultima uscita su rivista dal testo della Wikipedia inglese (pagina collegata da Wikidata, non cercata per
+    titolo). Riconosce: «Part 1: …, Black Mask, November 1927», «serialized … from October 1931 through March 1932»,
+    «first published in the November 1931 issue of Weird Tales». Restituisce (prima, ultima) o None."""
+    url = o.get("wiki_en")
+    if not url:
+        return None
+    titolo = urllib.parse.unquote(url.rsplit("/wiki/", 1)[-1]).replace("_", " ")
+    x = scarica("https://en.wikipedia.org/w/api.php?" + urllib.parse.urlencode(
+        {"action": "query", "prop": "extracts", "explaintext": 1, "redirects": 1, "titles": titolo, "format": "json"}))
+    if not x:
+        return None
+    pag = next(iter((json.loads(x).get("query") or {}).get("pages", {}).values()), {})
+    t = pag.get("extract") or ""
+    parti = re.findall(r"Part \d+[^\n]*?((?:%s)?\s*\d{4})" % MESI_EN, t)
+    if len(parti) >= 2:
+        a = [y for v in parti for y in _anni(v, p)]
+        if a:
+            return min(a), max(a)
+    m = re.search(r"serial(?:ized|ised)[^.\n]*?(?:from|between)\s+(?:(?:%s),?\s+)?(\d{4})[^.\n]*?(?:to|through|until|and)\s+(?:(?:%s),?\s+)?(\d{4})" % (MESI_EN, MESI_EN), t, re.I)
+    if m:
+        return int(m.group(1)), int(m.group(2))
+    m = re.search(r"(?:first (?:published|printed|appeared)|originally published)[^.\n]{0,120}?\b(1[6-9]\d\d)\b", t, re.I)
+    if m and int(m.group(1)) <= p + 10:
+        return int(m.group(1)), int(m.group(1))
+    m = re.search(r"serial(?:ized|ised)[^.\n]{0,80}?\b(1[6-9]\d\d)\b", t, re.I)
+    if m and int(m.group(1)) <= p + 10:
+        return int(m.group(1)), int(m.group(1))
+    return None
+
+
+def puntate_isfdb(o, cognomi, p):
+    """ISFDB (CC BY): uscite su rivista con la data del numero. SERIAL = puntate (prima e ultima), SHORTFICTION = racconto
+    (prima uscita). Solo righe con lo stesso titolo e il cognome dell'autore. Restituisce (prima, ultima) o None."""
+    if not cognomi:
+        return None
+    x = scarica("https://www.isfdb.org/cgi-bin/se.cgi?" + urllib.parse.urlencode({"arg": o["titolo"], "type": "All Titles"}), timeout=60, prove=2)
+    time.sleep(1.5)
+    if not x:
+        return None
+    h = x.decode("utf-8", "replace")
+    serial, brevi = [], []
+    for r in re.findall(r"<tr[^>]*>(.*?)</tr>", h, re.S):
+        c = [re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", "", v))).strip() for v in re.findall(r"<td[^>]*>(.*?)</td>", r, re.S)]
+        if len(c) < 5 or not any(k in parole(c[4]) for k in cognomi):
+            continue
+        tit = re.sub(r"\s*\(Part \d+ of \d+\)\s*$", "", c[3])
+        if not stesso_titolo(tit, o["titolo"]) or not re.match(r"^\d{4}", c[0]) or c[0].startswith("0000"):
+            continue
+        y = int(c[0][:4])
+        if c[1] == "SERIAL":
+            serial.append(y)
+        elif c[1] in ("SHORTFICTION",):
+            brevi.append(y)
+    if serial:
+        return min(serial), max(serial)
+    if brevi:
+        return min(brevi), min(brevi)
+    return None
+
+
+def decidi(trovati, p, puntate=None):
+    """Esito per la lista dell'anno p. puntate = (prima, ultima, fonte) dalle riviste, se note."""
     giusti = [f for f, a in trovati.items() if a == p]
+    ordine = ("duke", "cce", "bnf", "k10plus", "isfdb", "wikipedia", "openlibrary", "loc")
+    if puntate:
+        a, b, fp = puntate
+        if a <= p < b:
+            return "parziale", b, fp           # uscito a puntate fino a un anno DOPO: libero per intero solo più tardi
+        if a == p and b == p and not giusti:
+            return "ok", p, fp                 # racconto o puntate tutte nell'anno: confermato dalla rivista
+        if b < p and not giusti:
+            return "prima", a, fp              # tutte le uscite prima dell'anno, e nessuna fonte conferma p
     if giusti:
-        ordine = ("duke", "cce", "bnf", "k10plus", "openlibrary", "loc")
-        f = min(giusti, key=ordine.index)
-        return "ok", p, f
+        return "ok", p, min(giusti, key=ordine.index)
     prima = [(a, f) for f, a in trovati.items() if a is not None and a < p and f in AUTOREVOLI]
     if prima:
         a, f = min(prima)
@@ -203,6 +279,56 @@ def decidi(trovati, p):
     altri = [(a, f) for f, a in trovati.items() if a is not None]
     a, f = min(altri) if altri else (None, None)
     return "nd", a, f
+
+
+def verifica_opera(o, p, dk, idx, orig, vecchio=None, prove_naz=None):
+    """Una voce di data/us-anni-verificati.json: [esito, anno, fonte, data, fonti_provate, {fonte: anno}, extra]."""
+    q = o["qid"]
+    cognomi = [parole(a["nome"])[-1] for a in o.get("autori", []) if parole(a["nome"])]
+    trovati, provate = {}, []
+    if q in dk:
+        trovati["duke"] = dk[q]
+    provate.append("cce")
+    trovati["cce"] = cce(idx, o, cognomi)
+    if q in orig and cognomi and p not in trovati.values():
+        lg, titolo = orig[q]
+        fonte = "bnf" if lg == "fr" else "k10plus"
+        anno, n = bnf(titolo, cognomi[0]) if lg == "fr" else k10plus(titolo, cognomi[0], p)
+        provate.append(fonte)
+        trovati[fonte] = anno
+        if prove_naz is not None:
+            prove_naz[(fonte, "risposte" if n else "nessun record", "anno trovato" if anno else "-")] += 1
+    # riviste e puntate: ISFDB e testo della Wikipedia inglese (19/11/2026)
+    punt = None
+    w = puntate_wikipedia(o, p)
+    provate.append("wikipedia")
+    if w:
+        punt = (w[0], w[1], "wikipedia")
+    if not punt or punt[0] == punt[1]:
+        i_ = puntate_isfdb(o, cognomi, p)
+        provate.append("isfdb")
+        if i_ and (not punt or i_[0] != i_[1]):
+            punt = (i_[0], i_[1], "isfdb")
+    if punt:
+        trovati[punt[2]] = punt[0] if punt[0] == punt[1] else None
+    if p not in trovati.values():
+        if vecchio and vecchio[0] == "ok" and vecchio[2] in ("openlibrary", "loc"):
+            trovati[vecchio[2]] = vecchio[1]
+        else:
+            _, a = va.open_library(va_riga(o))
+            provate.append("openlibrary")
+            trovati["openlibrary"] = a
+            if a != p:
+                _, a = va.library_of_congress(va_riga(o))
+                provate.append("loc")
+                trovati["loc"] = a
+    esito, anno, fonte = decidi(trovati, p, punt)
+    extra = {}
+    if punt:
+        extra["puntate"] = list(punt)
+    if o.get("date_wikidata"):
+        extra["date_wikidata"] = o["date_wikidata"]
+    return [esito, anno, fonte, OGGI, provate, {k: v for k, v in trovati.items() if v}, extra]
 
 
 def main():
@@ -231,39 +357,14 @@ def main():
         for o in d["opere"]:
             q = o["qid"]
             vecchio = fatto.get(q)
-            if vecchio and vecchio[0] == "ok" and len(vecchio) > 5 and vecchio[2] != "bnf":   # bnf: si rifà con la lingua giusta
+            if vecchio and vecchio[0] == "ok" and len(vecchio) > 6:   # già verificato col metodo completo (anche riviste e puntate)
                 continue
-            if vecchio and len(vecchio) > 5 and vecchio[3] >= (date.today() - timedelta(days=RICONTROLLA)).isoformat() \
+            if vecchio and len(vecchio) > 6 and vecchio[3] >= (date.today() - timedelta(days=RICONTROLLA)).isoformat() \
                     and not os.environ.get("RIFAI_TUTTO"):
                 continue
             if time.time() - inizio > BUDGET:
                 break
-            cognomi = [parole(a["nome"])[-1] for a in o.get("autori", []) if parole(a["nome"])]
-            trovati, provate = {}, []
-            if q in dk:
-                trovati["duke"] = dk[q]
-            provate.append("cce")
-            trovati["cce"] = cce(idx, o, cognomi)
-            if q in orig and cognomi and p not in trovati.values():
-                lg, titolo = orig[q]
-                fonte = "bnf" if lg == "fr" else "k10plus"
-                anno, n = bnf(titolo, cognomi[0]) if lg == "fr" else k10plus(titolo, cognomi[0], p)
-                provate.append(fonte)
-                trovati[fonte] = anno
-                prove_naz[(fonte, "risposte" if n else "nessun record", "anno trovato" if anno else "-")] += 1
-            if p not in trovati.values():
-                if vecchio and vecchio[0] == "ok" and vecchio[2] in ("openlibrary", "loc"):   # già confermato dal giro di prima (Open Library o LC)
-                    trovati[vecchio[2]] = vecchio[1]
-                else:
-                    _, a = va.open_library(va_riga(o))
-                    provate.append("openlibrary")
-                    trovati["openlibrary"] = a
-                    if a != p:
-                        _, a = va.library_of_congress(va_riga(o))
-                        provate.append("loc")
-                        trovati["loc"] = a
-            esito, anno, fonte = decidi(trovati, p)
-            fatto[q] = [esito, anno, fonte, OGGI, provate, {k: v for k, v in trovati.items() if v}]
+            fatto[q] = verifica_opera(o, p, dk, idx, orig, vecchio, prove_naz)
             time.sleep(0.3)
         f.write_text(json.dumps(tutto, ensure_ascii=False, indent=0), encoding="utf-8")
         voci = [fatto[o["qid"]] for o in d["opere"] if o["qid"] in fatto]
@@ -272,6 +373,8 @@ def main():
             "esiti": dict(Counter(v[0] for v in voci)),
             "confermati_per_fonte": dict(Counter(v[2] for v in voci if v[0] == "ok")),
             "conferme_per_fonte_anche_doppie": dict(Counter(k for v in voci if len(v) > 5 for k, a in v[5].items() if a == d["anno_pubblicazione"])),
+            "parziali": [[o["titolo"], fatto[o["qid"]][1], fatto[o["qid"]][2]] for o in d["opere"]
+                         if o["qid"] in fatto and fatto[o["qid"]][0] == "parziale"],
             "piu_vecchi": [[o["titolo"], fatto[o["qid"]][1], fatto[o["qid"]][2]] for o in d["opere"]
                            if o["qid"] in fatto and fatto[o["qid"]][0] == "prima"],
             "non_confermati": [[o["titolo"], orig.get(o["qid"], [None, None])[1], fatto[o["qid"]][5] if len(fatto[o["qid"]]) > 5 else {}]

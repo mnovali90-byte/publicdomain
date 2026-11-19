@@ -31,13 +31,30 @@ def val(x, k):
 def qid(u):
     return u.rsplit("/", 1)[-1] if u else None
 
-def opere_anno(anno_pub):
-    classi = " ".join("wd:" + c for c in CLASSI)
-    q = f'''SELECT ?w ?wLabel ?wit ?a ?aLabel ?sl ?img ?en WHERE {{
-      VALUES ?c {{ {classi} }}
-      {{ ?w wdt:P31 ?c }} UNION {{ ?w wdt:P31 wd:Q47461344; wdt:P7937 ?c }}
-      ?w wdt:P577 ?d. FILTER(YEAR(?d)={anno_pub})
-      FILTER NOT EXISTS {{ ?w wdt:P577 ?d0 FILTER(YEAR(?d0) < {anno_pub}) }}  # conta la PRIMA pubblicazione: se c'è una data più vecchia l'opera è già libera
+# Tipi in più per le liste USA (19/11/2026, prova alla cieca contro la Duke): saggio e opera drammatica. Le «opere scritte»
+# (Q47461344) entrano anche senza forma, purché abbiano un autore (P50): «A Room of One's Own» e «Civilization and Its
+# Discontents» erano fuori per questo. Lo Storico continua a usare CLASSI.
+CLASSI_USA = CLASSI + ["Q35760", "Q116476516"]
+SPAN_PUNTATE = 5   # anni massimi tra prima e ultima data per considerarle puntate o prima edizione + libro
+
+
+def opere_anno(anno_pub, classi=None, scritte=True):
+    """Opere il cui anno per gli USA è anno_pub. Per un'opera uscita a puntate o con più date di pubblicazione conta
+    la data PIÙ RECENTE (l'opera è libera per intero solo quando lo è l'ultima parte: Compendium III, 1909.3), purché
+    le date stiano entro SPAN_PUNTATE anni; oltre, conta la più vecchia e l'opera è segnata «date lontane»."""
+    classi = CLASSI_USA if classi is None else classi
+    rami = []
+    if classi:
+        v = " ".join("wd:" + c for c in classi)
+        rami += [f"{{ VALUES ?c {{ {v} }} ?w wdt:P31 ?c }}", f"{{ VALUES ?c2 {{ {v} }} ?w wdt:P31 wd:Q47461344; wdt:P7937 ?c2 }}"]
+    if scritte:
+        rami.append("{ ?w wdt:P31 wd:Q47461344; wdt:P50 [] }")
+    if not rami:
+        return []
+    q = f'''SELECT ?w ?wLabel ?wit ?a ?aLabel ?sl ?img ?en ?dt WHERE {{
+      {" UNION ".join(rami)}
+      ?w wdt:P577 ?d. FILTER(YEAR(?d)={anno_pub})   # almeno una data in quell'anno; tutte le date in ?dt
+      ?w wdt:P577 ?dt.
       ?w wikibase:sitelinks ?sl. FILTER(?sl>={MIN_PAGINE})
       OPTIONAL {{ ?w wdt:P50 ?a }} OPTIONAL {{ ?w wdt:P18 ?img }}
       OPTIONAL {{ ?w rdfs:label ?wit FILTER(LANG(?wit)="it") }}
@@ -48,16 +65,44 @@ def opere_anno(anno_pub):
     for r in righe:
         k = qid(val(r, "w"))
         o = out.setdefault(k, {"qid": k, "titolo": val(r, "wLabel"), "titolo_it": val(r, "wit"),
-                               "autori": {}, "pagine": int(val(r, "sl")), "immagine": None, "wiki_en": None})
+                               "autori": {}, "pagine": int(val(r, "sl")), "immagine": None, "wiki_en": None, "_anni": set()})
         if val(r, "a"): o["autori"][qid(val(r, "a"))] = val(r, "aLabel")
         if val(r, "img") and not o["immagine"]: o["immagine"] = urllib.parse.unquote(val(r, "img").rsplit("/", 1)[-1])
         if val(r, "en") and not o["wiki_en"]: o["wiki_en"] = val(r, "en")
+        m = re.match(r"^-?(\d{4})", val(r, "dt") or "")
+        if m: o["_anni"].add(int(m.group(1)))
     res = []
     for o in out.values():
         if re.fullmatch(r"Q\d+", o["titolo"] or ""): continue  # senza etichetta leggibile
+        anni = sorted(o.pop("_anni"))
+        if not anni:
+            continue
+        lontane = anni[-1] - anni[0] > SPAN_PUNTATE
+        anno = anni[0] if lontane else anni[-1]
+        if anno != anno_pub:
+            continue   # appartiene alla lista di un altro anno
+        if len(anni) > 1:
+            o["date_wikidata"] = anni
+            o["date_nota"] = "lontane" if lontane else "puntate_o_edizioni"
         o["autori"] = [{"qid": a, "nome": n} for a, n in o["autori"].items() if not re.fullmatch(r"Q\d+", n or "")]
         res.append(o)
     return res
+
+def opere_anno_sicuro(anno_pub):
+    """Come opere_anno, ma un tipo alla volta: la domanda unica a Wikidata va a volte in timeout (19/11/2026)."""
+    tutte = {}
+    gruppi = [([c], False) for c in CLASSI_USA] + [([], True)]
+    for classi, scritte in gruppi:
+        r = []
+        for t in range(3):
+            r = opere_anno(anno_pub, classi, scritte)
+            if r:
+                break
+            time.sleep(20)
+        for o in r:
+            tutte.setdefault(o["qid"], o)
+    return list(tutte.values())
+
 
 GENERI = [  # (parola cercata nell'etichetta inglese, chiave)
     ("crime", "giallo"), ("detective", "giallo"), ("mystery", "giallo"), ("thriller", "giallo"),
@@ -125,7 +170,7 @@ def main():
     for anno in ANNI:
         pub = anno - 96
         print("Anno", anno, "-> opere pubblicate nel", pub)
-        ops = opere_anno(pub)
+        ops = opere_anno_sicuro(pub)
         print(" trovate", len(ops))
         if len(ops) < 20:
             print(" troppo poche: lascio il file com'è"); continue
