@@ -72,6 +72,17 @@ main:has(.sa){max-width:720px;padding:20px 0 72px}
 .sa-asta{height:10px;background:var(--riquadro)}.sa-asta i{display:block;height:10px;background:var(--vermiglio)}
 .sa-val{font-size:14px;color:var(--muto)}.sa-val b{color:var(--ink)}
 .sa-azioni{padding:8px 24px 0}
+.pg{list-style:none;margin:16px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
+.pg li{margin:0;background:var(--riquadro);padding:12px 14px;display:flex;flex-direction:column;gap:2px}
+.pg .p{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muto)}
+.pg .d{font-family:var(--display);font-weight:900;font-size:24px;line-height:1;text-transform:uppercase}
+.pg .r{font-size:13px;line-height:1.35;color:var(--muto)}
+.pg .ok{background:#0E3B2E;color:var(--carta)}.pg .ok .p,.pg .ok .r{color:#C9D6CF}
+.cat{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.cat li{margin:0;display:grid;grid-template-columns:minmax(0,190px) 1fr auto;gap:12px;align-items:center;font-size:15px}
+.cat .b{height:10px;background:var(--riquadro)}.cat .b i{display:block;height:10px;background:var(--ink)}
+.cat .n{font-family:var(--mono);font-size:13px;white-space:nowrap}
+@media (max-width:560px){.cat li{grid-template-columns:1fr auto}.cat .b{grid-column:1/-1;order:3}}
 .sa-salva{display:flex;align-items:center;justify-content:center;height:56px;background:var(--ink);color:var(--carta);text-decoration:none;font-family:var(--mono);font-size:13px;letter-spacing:.12em;text-transform:uppercase}
 footer{background:var(--ink);color:#B9B9C6;font-size:13px;padding:32px 20px}footer p{max-width:780px;margin:0 auto 10px}footer a{color:#fff}
 
@@ -100,22 +111,9 @@ footer{background:var(--ink);color:#B9B9C6;font-size:13px;padding:32px 20px}foot
 <div class="sa-libero">
 <div class="libero-blocco"><div class="lb-et">Libero in Italia dal</div><div class="lb-data">1° gennaio 2017</div><div class="lb-sotto">già libero · anno di morte 1946</div></div>
 <p class="lb-ver"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg><span>Anno di morte confermato da 3 fonti: Wikidata, Biblioteca nazionale tedesca (GND), Library of Congress.</span></p>
-<details class="lb-altri"><summary>Negli altri paesi</summary>
-<ul>
-<li>UE (base), Germania e Regno Unito: dal 1° gennaio 2017. Nel Regno Unito le opere rimaste inedite fino al 1989 restano protette fino al 31 dicembre 2039.</li>
-<li>Francia: dal 1° gennaio 2017. Le proroghe di guerra non si sommano ai 70 anni (Cassazione francese, 2007). Eccezione: gli autori «morti per la Francia» hanno 30 anni in più.</li>
-<li>Italia: dal 1° gennaio 2017. La proroga di guerra di 6 anni è stata abrogata nel 1996. Per gli autori di paesi alleati nella Seconda guerra mondiale la durata può essere più lunga (Trattato di pace del 1947): va verificato caso per caso.</li>
-<li>Spagna: non prima del 1° gennaio 2027 (80 anni dalla morte, perché è morto prima del 1987; la legge non dice come si conta l&#x27;anno).</li>
-<li>USA: dipende dall’anno di pubblicazione di ogni opera (95 anni).</li>
-</ul>
-<p class="sa-nota">Calcolo indicativo, dalle norme del sito. Non è consulenza legale.</p></details>
+<ul class="pg" aria-label="Paese per paese"><li class="ok"><span class="p">Italia</span><span class="d">libero dal 2017</span><span class="r">70 anni dalla morte</span></li><li class="ok"><span class="p">Francia</span><span class="d">libero dal 2017</span><span class="r">70 anni dalla morte</span></li><li class="ok"><span class="p">Germania</span><span class="d">libero dal 2017</span><span class="r">70 anni dalla morte</span></li><li class="ok"><span class="p">Regno Unito</span><span class="d">libero dal 2017</span><span class="r">70 anni dalla morte; inediti fino al 2039</span></li><li class=""><span class="p">Spagna</span><span class="d">1° gen 2027</span><span class="r">80 anni: è morto prima del 1987</span></li><li class=""><span class="p">USA</span><span class="d">opera per opera</span><span class="r">95 anni dall&#x27;uscita di ogni opera</span></li></ul>
+<p class="sa-nota">Calcolo indicativo, non è consulenza legale. <a href="/#regole-paesi">Le regole, paese per paese</a></p>
 </div>
-<section class="sa-sez">
-<h2>Chi era</h2>
-<p class="sa-bio">Salomo Friedlaender was a German-Jewish philosopher, poet, satirist and author of grotesque and fantastic literature. He published his literary work under the pseudonym Mynona, which is &quot;anonym&quot;, the German word for &quot;anonymous&quot;, spelled backward. He is known for his philosophical ideas on dualism drawing on Immanuel Kant, and his avant-garde poetry and fiction. Almost none of his work has been translated into English.</p>
-<a href="https://en.wikipedia.org/wiki/Salomo_Friedlaender" rel="noopener">Continua su Wikipedia</a>
-<p class="sa-nota">Testo da Wikipedia, licenza CC BY-SA.</p>
-</section>
 <section class="sa-sez">
 <h2>Opere principali</h2>
 <ul class="sa-opere">
@@ -124,10 +122,21 @@ footer{background:var(--ink);color:#B9B9C6;font-size:13px;padding:32px 20px}foot
 </ul>
 </section>
 <section class="sa-sez">
+<h2>Nei cataloghi nazionali</h2>
+<ul class="cat"><li><span>USA · Library of Congress</span><span class="b"><i style="width:100%"></i></span><span class="n">7 · 6 dal 2000</span></li><li><span>Regno Unito · British Library</span><span class="b"><i style="width:86%"></i></span><span class="n">6 · 5 dal 2000</span></li></ul>
+<p class="sa-nota">Registrazioni collegate all&#x27;autore in ogni catalogo: ogni edizione o ristampa conta una volta, comprese le collaborazioni. Dicono quanto un autore è già pubblicato in ogni paese.</p>
+</section>
+<section class="sa-sez">
 <h2>Quanto è conosciuto</h2>
 <div class="sa-barra"><div class="sa-bn">In Italia</div><div class="sa-asta"><i style="width:0%"></i></div><div class="sa-val">nessuna pagina in italiano · <b>72° su 791</b></div></div>
 <div class="sa-barra"><div class="sa-bn">Nel mondo</div><div class="sa-asta"><i style="width:86%"></i></div><div class="sa-val">pagina Wikipedia in 8 lingue · <b>59° su 791</b></div></div>
 <p class="sa-nota">Misura la curiosità per l’autore (visite alle pagine Wikipedia), non le vendite dei suoi libri.</p>
+</section>
+<section class="sa-sez">
+<h2>Chi era</h2>
+<p class="sa-bio">Salomo Friedlaender was a German-Jewish philosopher, poet, satirist and author of grotesque and fantastic literature. He published his literary work under the pseudonym Mynona, which is &quot;anonym&quot;, the German word for &quot;anonymous&quot;, spelled backward. He is known for his philosophical ideas on dualism drawing on Immanuel Kant, and his avant-garde poetry and fiction. Almost none of his work has been translated into English.</p>
+<a href="https://en.wikipedia.org/wiki/Salomo_Friedlaender" rel="noopener">Continua su Wikipedia</a>
+<p class="sa-nota">Testo da Wikipedia, licenza CC BY-SA.</p>
 </section>
 <section class="sa-sez">
 <h2>Prima di pubblicare</h2>

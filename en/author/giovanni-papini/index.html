@@ -72,6 +72,17 @@ main:has(.sa){max-width:720px;padding:20px 0 72px}
 .sa-asta{height:10px;background:var(--riquadro)}.sa-asta i{display:block;height:10px;background:var(--vermiglio)}
 .sa-val{font-size:14px;color:var(--muto)}.sa-val b{color:var(--ink)}
 .sa-azioni{padding:8px 24px 0}
+.pg{list-style:none;margin:16px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
+.pg li{margin:0;background:var(--riquadro);padding:12px 14px;display:flex;flex-direction:column;gap:2px}
+.pg .p{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muto)}
+.pg .d{font-family:var(--display);font-weight:900;font-size:24px;line-height:1;text-transform:uppercase}
+.pg .r{font-size:13px;line-height:1.35;color:var(--muto)}
+.pg .ok{background:#0E3B2E;color:var(--carta)}.pg .ok .p,.pg .ok .r{color:#C9D6CF}
+.cat{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.cat li{margin:0;display:grid;grid-template-columns:minmax(0,190px) 1fr auto;gap:12px;align-items:center;font-size:15px}
+.cat .b{height:10px;background:var(--riquadro)}.cat .b i{display:block;height:10px;background:var(--ink)}
+.cat .n{font-family:var(--mono);font-size:13px;white-space:nowrap}
+@media (max-width:560px){.cat li{grid-template-columns:1fr auto}.cat .b{grid-column:1/-1;order:3}}
 .sa-salva{display:flex;align-items:center;justify-content:center;height:56px;background:var(--ink);color:var(--carta);text-decoration:none;font-family:var(--mono);font-size:13px;letter-spacing:.12em;text-transform:uppercase}
 footer{background:var(--ink);color:#B9B9C6;font-size:13px;padding:32px 20px}footer p{max-width:780px;margin:0 auto 10px}footer a{color:#fff}
 
@@ -100,22 +111,9 @@ footer{background:var(--ink);color:#B9B9C6;font-size:13px;padding:32px 20px}foot
 <div class="sa-libero">
 <div class="libero-blocco"><div class="lb-et">Free in the UK and the EU from</div><div class="lb-data">1 January 2027</div><div class="lb-sotto">in 43 days · died in 1956</div></div>
 <p class="lb-ver"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg><span>Year of death confirmed by 3 sources: Wikidata, German National Library (GND), Library of Congress.</span></p>
-<details class="lb-altri"><summary>In other countries</summary>
-<ul>
-<li>EU (base rule), Germany and the United Kingdom: from 1 January 2027. In the UK, works still unpublished in 1989 stay protected until 31 December 2039.</li>
-<li>France: from 1 January 2027. Wartime extensions are not added to the 70 years (French Court of Cassation, 2007). Exception: authors who «died for France» get 30 more years.</li>
-<li>Italy: from 1 January 2027. The 6-year wartime extension was repealed in 1996. For authors from Allied countries in the Second World War the term can be longer (1947 Peace Treaty): check case by case.</li>
-<li>Spain: not before 1 January 2037 (80 years after death, because the author died before 1987; the law does not say how the year is counted).</li>
-<li>USA: depends on the publication year of each work (95 years).</li>
-</ul>
-<p class="sa-nota">Indicative calculation, based on the rules on the site. Not legal advice.</p></details>
+<ul class="pg" aria-label="Country by country"><li class=""><span class="p">United Kingdom</span><span class="d">1 Jan 2027</span><span class="r">70 years after death; unpublished works until 2039</span></li><li class=""><span class="p">USA</span><span class="d">work by work</span><span class="r">95 years from each work&#x27;s publication</span></li><li class=""><span class="p">Italy</span><span class="d">1 Jan 2027</span><span class="r">70 years after death</span></li><li class=""><span class="p">France</span><span class="d">1 Jan 2027</span><span class="r">70 years after death</span></li><li class=""><span class="p">Germany</span><span class="d">1 Jan 2027</span><span class="r">70 years after death</span></li><li class=""><span class="p">Spain</span><span class="d">1 Jan 2037</span><span class="r">80 years: died before 1987</span></li></ul>
+<p class="sa-nota">Indicative calculation, not legal advice. <a href="/en/#regole-paesi">The rules, country by country</a></p>
 </div>
-<section class="sa-sez">
-<h2>Who they were</h2>
-<p class="sa-bio">Giovanni Papini was an Italian journalist, essayist, novelist, short story writer, poet, literary critic, and philosopher. A controversial literary figure of the early and mid-twentieth century, he was the earliest and most enthusiastic representative and promoter of Italian pragmatism. Papini was admired for his writing style and engaged in heated polemics.</p>
-<a href="https://en.wikipedia.org/wiki/Giovanni_Papini" rel="noopener">Continue on Wikipedia</a>
-<p class="sa-nota">Text from Wikipedia, licence CC BY-SA.</p>
-</section>
 <section class="sa-sez">
 <h2>Main works</h2>
 <ul class="sa-opere">
@@ -135,10 +133,21 @@ footer{background:var(--ink);color:#B9B9C6;font-size:13px;padding:32px 20px}foot
 <p class="sa-nota">Bibliographic records in English linked to the author in the British Library catalogue, searched by surname and years of birth and death; a record counts only if surname and years belong to the same person. Some records catalogued differently may be missed. They include every publication linked to the person, including those they contributed to (translations, editing, prefaces), not only books they wrote: it measures how present they are in the catalogue.</p>
 </section>
 <section class="sa-sez">
+<h2>In national catalogues</h2>
+<ul class="cat"><li><span>Italy · SBN</span><span class="b"><i style="width:100%"></i></span><span class="n">356 · 26 since 2000</span></li><li><span>Spain · BNE</span><span class="b"><i style="width:49%"></i></span><span class="n">173 · 14 since 2000</span></li><li><span>France · BnF</span><span class="b"><i style="width:10%"></i></span><span class="n">37 · 11 since 2000</span></li><li><span>United Kingdom · British Library</span><span class="b"><i style="width:10%"></i></span><span class="n">37 · 0 since 2000</span></li><li><span>USA · Library of Congress</span><span class="b"><i style="width:6%"></i></span><span class="n">20 · 0 since 2000</span></li></ul>
+<p class="sa-nota">Records linked to the author in each catalogue: each edition or reprint counts once, collaborations included. They show how much an author is already published in each country.</p>
+</section>
+<section class="sa-sez">
 <h2>How well known</h2>
 <div class="sa-barra"><div class="sa-bn">In the English-speaking world</div><div class="sa-asta"><i style="width:98%"></i></div><div class="sa-val">15,940 Wikipedia views in 12 months · <b>#20 of 825</b></div></div>
 <div class="sa-barra"><div class="sa-bn">Worldwide</div><div class="sa-asta"><i style="width:99%"></i></div><div class="sa-val">Wikipedia page in 45 languages · <b>#10 of 825</b></div></div>
 <p class="sa-nota">Measures curiosity about the author (Wikipedia page views), not sales of their books.</p>
+</section>
+<section class="sa-sez">
+<h2>Who they were</h2>
+<p class="sa-bio">Giovanni Papini was an Italian journalist, essayist, novelist, short story writer, poet, literary critic, and philosopher. A controversial literary figure of the early and mid-twentieth century, he was the earliest and most enthusiastic representative and promoter of Italian pragmatism. Papini was admired for his writing style and engaged in heated polemics.</p>
+<a href="https://en.wikipedia.org/wiki/Giovanni_Papini" rel="noopener">Continue on Wikipedia</a>
+<p class="sa-nota">Text from Wikipedia, licence CC BY-SA.</p>
 </section>
 <section class="sa-sez">
 <h2>Before publishing</h2>

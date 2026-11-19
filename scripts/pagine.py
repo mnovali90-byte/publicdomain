@@ -149,6 +149,17 @@ main:has(.sa){max-width:720px;padding:20px 0 72px}
 .sa-asta{height:10px;background:var(--riquadro)}.sa-asta i{display:block;height:10px;background:var(--vermiglio)}
 .sa-val{font-size:14px;color:var(--muto)}.sa-val b{color:var(--ink)}
 .sa-azioni{padding:8px 24px 0}
+.pg{list-style:none;margin:16px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
+.pg li{margin:0;background:var(--riquadro);padding:12px 14px;display:flex;flex-direction:column;gap:2px}
+.pg .p{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muto)}
+.pg .d{font-family:var(--display);font-weight:900;font-size:24px;line-height:1;text-transform:uppercase}
+.pg .r{font-size:13px;line-height:1.35;color:var(--muto)}
+.pg .ok{background:#0E3B2E;color:var(--carta)}.pg .ok .p,.pg .ok .r{color:#C9D6CF}
+.cat{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.cat li{margin:0;display:grid;grid-template-columns:minmax(0,190px) 1fr auto;gap:12px;align-items:center;font-size:15px}
+.cat .b{height:10px;background:var(--riquadro)}.cat .b i{display:block;height:10px;background:var(--ink)}
+.cat .n{font-family:var(--mono);font-size:13px;white-space:nowrap}
+@media (max-width:560px){.cat li{grid-template-columns:1fr auto}.cat .b{grid-column:1/-1;order:3}}
 .sa-salva{display:flex;align-items:center;justify-content:center;height:56px;background:var(--ink);color:var(--carta);text-decoration:none;font-family:var(--mono);font-size:13px;letter-spacing:.12em;text-transform:uppercase}
 footer{background:var(--ink);color:#B9B9C6;font-size:13px;padding:32px 20px}footer p{max-width:780px;margin:0 auto 10px}footer a{color:#fff}
 """
@@ -389,6 +400,34 @@ def iniziali_nome(nome):
     return ((p[0][:1] + p[-1][:1]) if len(p) > 1 else (p[0][:2] if p else "?")).upper()
 
 
+CATALOGHI = [("sbn_it", "Italia · SBN", "Italy · SBN"), ("bnf_fr", "Francia · BnF", "France · BnF"), ("bne_es", "Spagna · BNE", "Spain · BNE"),
+             ("bl_en", "Regno Unito · British Library", "United Kingdom · British Library"), ("loc_en", "USA · Library of Congress", "USA · Library of Congress")]
+
+
+def catalogi_a_confronto(a, lang):
+    """Le registrazioni dell'autore nei cinque cataloghi nazionali, a confronto (stessi controlli del blocco principale)."""
+    it = lang == "it"
+    tr = a.get("traduzioni") or {}
+    righe = []
+    for k, n_it, n_en in CATALOGHI:
+        g = tr.get(k)
+        if not g or not g.get("trovato") or g.get("sospeso_manuale") or g.get("stato") == "da_verificare":
+            continue
+        if problemi_conteggio(g, datetime.date.today().year):
+            continue
+        righe.append((n_it if it else n_en, g.get("edizioni", 0), g.get("dal_2000", 0)))
+    if len(righe) < 2:
+        return ""
+    mx = max(x[1] for x in righe) or 1
+    li = "".join(f'<li><span>{esc(n)}</span><span class="b"><i style="width:{round(e / mx * 100)}%"></i></span>'
+                 f'<span class="n">{migliaia(e, lang)} · {migliaia(d, lang)} {"dal 2000" if it else "since 2000"}</span></li>' for n, e, d in sorted(righe, key=lambda x: -x[1]))
+    nota = ("Registrazioni collegate all'autore in ogni catalogo: ogni edizione o ristampa conta una volta, comprese le collaborazioni. "
+            "Dicono quanto un autore è già pubblicato in ogni paese." if it else
+            "Records linked to the author in each catalogue: each edition or reprint counts once, collaborations included. "
+            "They show how much an author is already published in each country.")
+    return f'<ul class="cat">{li}</ul>\n<p class="sa-nota">{esc(nota)}</p>\n'
+
+
 def scheda_statica(a, lang, bd):
     """Corpo della pagina autore, con lo stesso disegno della scheda del sito (mockup approvato)."""
     it = lang == "it"
@@ -428,14 +467,26 @@ def scheda_statica(a, lang, bd):
     else:
         o += [x.replace('<p class="sotto">', '<p class="lb-ver">') for x in blocco_verifica(a, lang)]
     o.append(avviso_alleato(a, lang))
-    o.append(f'<details class="lb-altri"><summary>{T("Negli altri paesi", "In other countries")}</summary>\n<ul>\n')
-    o += [f"<li>{esc(r)}</li>\n" for r in paese_per_paese(D, lang)]
-    o.append(f"<li>{esc(T('USA: dipende dall’anno di pubblicazione di ogni opera (95 anni).', 'USA: depends on the publication year of each work (95 years).'))}</li>\n")
-    o.append(f'</ul>\n<p class="sa-nota">{T("Calcolo indicativo, dalle norme del sito. Non è consulenza legale.", "Indicative calculation, based on the rules on the site. Not legal advice.")}</p></details>\n</div>\n')
+    # le date paese per paese, visibili e brevi: le regole spiegate stanno in un posto solo (riquadro delle regole)
+    oggi_a = datetime.date.today().year
+    def tessera(paese, anno, regola):
+        stato = "ok" if anno and anno <= oggi_a else ""
+        d = (T("libero", "free") + f" {T('dal', 'since')} {anno}") if stato else (data_l(lang, anno).replace("1° gennaio", "1° gen").replace("1 January", "1 Jan") if anno else T("opera per opera", "work by work"))
+        return f'<li class="{stato}"><span class="p">{esc(paese)}</span><span class="d">{esc(d)}</span><span class="r">{esc(regola)}</span></li>'
+    ue = T("70 anni dalla morte", "70 years after death")
+    fr = ue + (T("; +30 anni se «morto per la Francia»", "; +30 years if «died for France»") if 1939 <= D <= 1945 else "")
+    es_y = D + 81 if D < 1987 else D + 71
+    es_r = T("80 anni: è morto prima del 1987", "80 years: died before 1987") if D < 1987 else ue
+    it_r = ue + (T("; paese alleato: da verificare", "; Allied country: check") if avviso_alleato(a, lang) else "")
+    righe_p = [(T("Italia", "Italy"), D + 71, it_r), (T("Francia", "France"), D + 71, fr), (T("Germania", "Germany"), D + 71, ue),
+               (T("Regno Unito", "United Kingdom"), D + 71, ue + T("; inediti fino al 2039", "; unpublished works until 2039")),
+               (T("Spagna", "Spain"), es_y, es_r), ("USA", None, T("95 anni dall'uscita di ogni opera", "95 years from each work's publication"))]
+    if not it:   # in inglese prima i paesi di lingua inglese
+        righe_p = [righe_p[3], righe_p[5]] + [righe_p[i] for i in (0, 1, 2, 4)]
+    o.append(f'<ul class="pg" aria-label="{T("Paese per paese", "Country by country")}">' + "".join(tessera(*x) for x in righe_p) + "</ul>\n")
+    o.append(f'<p class="sa-nota">{T("Calcolo indicativo, non è consulenza legale.", "Indicative calculation, not legal advice.")} '
+             f'<a href="{"/" if it else "/en/"}#regole-paesi">{T("Le regole, paese per paese", "The rules, country by country")}</a></p>\n</div>\n')
     sez = lambda tit, corpo: f'<section class="sa-sez">\n<h2>{tit}</h2>\n{corpo}</section>\n'
-    if bd:
-        ln = f'<a href="{esc(bd["url"])}" rel="noopener">{T("Continua su Wikipedia", "Continue on Wikipedia")}</a>' if bd.get("url") else ""
-        o.append(sez(T("Chi era", "Who they were"), f'<p class="sa-bio">{esc(bd["testo"])}</p>\n{ln}\n<p class="sa-nota">{T("Testo da Wikipedia, licenza CC BY-SA.", "Text from Wikipedia, licence CC BY-SA.")}</p>\n'))
     opere = [(x.get("titolo") if it else x.get("titolo_en"), x.get("anno")) for x in a.get("opere", [])[:10]]
     opere = [(t, y) for t, y in opere if t]
     if opere:
@@ -462,6 +513,9 @@ def scheda_statica(a, lang, bd):
         cosa = T("Che cos'è una registrazione: la scheda con cui la biblioteca descrive una pubblicazione. Di solito ce n'è una per ogni edizione o ristampa, quindi un libro uscito cinque volte conta cinque. Non sono copie vendute né titoli diversi.", "What a record is: the entry a library uses to describe a publication. There is usually one for each edition or reprint, so a book published five times counts five. Records are not copies sold, nor different titles.")
         o.append(sez(T("Registrazioni in italiano", "Records in English"),
                      f'<div class="ed-boxes">{box(g["edizioni"], T("registrazioni in italiano", "records in English"))}{box(g.get("dal_2000", 0), T("con anno dal 2000", "dated 2000 or later") + ult)}</div>\n<p class="sa-nota">{esc(cosa)}</p>\n<p class="sa-nota">{esc(nota)}</p>\n'))
+    cat = catalogi_a_confronto(a, lang)
+    if cat:
+        o.append(sez(T("Nei cataloghi nazionali", "In national catalogues"), cat))
     barre = []
     for m, campo, etich in ((("it", "visite_it", T("In Italia", "")),) if it else (("en", "visite_en", "In the English-speaking world"),)) + (("int", "pagine_wikipedia", T("Nel mondo", "Worldwide")),):
         idx = a.get("indice_" + m)
@@ -478,6 +532,9 @@ def scheda_statica(a, lang, bd):
     if barre:
         o.append(sez(T("Quanto è conosciuto", "How well known"), "".join(barre)
                      + f'<p class="sa-nota">{T("Misura la curiosità per l’autore (visite alle pagine Wikipedia), non le vendite dei suoi libri.", "Measures curiosity about the author (Wikipedia page views), not sales of their books.")}</p>\n'))
+    if bd:
+        ln = f'<a href="{esc(bd["url"])}" rel="noopener">{T("Continua su Wikipedia", "Continue on Wikipedia")}</a>' if bd.get("url") else ""
+        o.append(sez(T("Chi era", "Who they were"), f'<p class="sa-bio">{esc(bd["testo"])}</p>\n{ln}\n<p class="sa-nota">{T("Testo da Wikipedia, licenza CC BY-SA.", "Text from Wikipedia, licence CC BY-SA.")}</p>\n'))
     ill = "".join(blocco_illustrazioni(a, lang)[1:]).replace('<p class="sotto">', '<p class="sa-testo">')
     o.append(sez(T("Prima di pubblicare", "Before publishing"), ill + f'<p class="sa-nota">{T("Calcolo indicativo, non consulenza legale.", "Indicative calculation, not legal advice.")}</p>\n'))
     o.append("</div>\n")
