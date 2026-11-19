@@ -12,6 +12,7 @@ I ritratti arrivano da data/storico/ritratti.json, scritto da storico/ritratti.p
 """
 import json, os, re, sys
 from pathlib import Path
+from datetime import date
 
 RADICE = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(RADICE / "scripts"))
@@ -84,7 +85,7 @@ def dati():
 
     # autori che non sono ancora liberi ma hanno la scheda nel radar
     prossimi, visti = [], set()
-    for anno in (2027, 2028, 2029):
+    for anno in range(date.today().year + 1, date.today().year + 4):
         d = leggi(RADICE / "data" / f"{anno}.json")
         if not d:
             continue
@@ -114,7 +115,7 @@ def simboli():
 
 
 def nav(lang):
-    ind = leggi(RADICE / "data" / "indice.json", {"anni": [2027, 2028]})
+    ind = leggi(RADICE / "data" / "indice.json", {"anni": [date.today().year + 1, date.today().year + 2]})
     try:
         cal = max(leggi(RADICE / "data" / "calendari_approvati.json")["anni"])
     except Exception:

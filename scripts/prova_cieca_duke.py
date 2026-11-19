@@ -29,8 +29,7 @@ def main():
     ops = ops[:opere.MAX_OPERE]
     print("opere del 1929 da Wikidata:", len(ops))
     # 2. la verifica, senza Duke
-    vu.CCE_FILE = {1928: "1928/1928_v25.xml", 1929: "1929/1929_v26.xml", 1930: "1930/cc271libr_001-2321.xml"}
-    idx = vu.indice_cce()
+    idx = vu.indice_cce(range(P - 1, P + 2))
     orig = vu.originali([o["qid"] for o in ops])
     esiti = {}
     for o in ops:

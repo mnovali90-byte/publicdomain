@@ -16,9 +16,9 @@ Esiti per la lista del 2027 (libri del 1931):
 Scrive data/us-anni-verificati.json {anno_lista: {qid: [esito, anno, fonte, data, fonti_provate, {fonte: anno}]}}
 e il riepilogo in docs/stima-sito/us-anni.json. Gira con stima.yml (passo.txt = verifica_anni_usa).
 """
-import html, json, re, sys, time, urllib.parse, urllib.request
+import html, json, os, re, sys, time, urllib.parse, urllib.request
 from collections import Counter
-from datetime import date
+from datetime import date, timedelta
 from pathlib import Path
 
 R = Path(__file__).resolve().parent.parent
@@ -26,12 +26,14 @@ sys.path.insert(0, str(R / "storico"))
 import verifica_anni as va   # noqa: E402  (Open Library e Library of Congress, come per lo Storico)
 
 parole, UA = va.parole, va.UA
-BUDGET = 50 * 60
+BUDGET = float(os.environ.get("BUDGET_MINUTI_USA", "50")) * 60
+RICONTROLLA = 30   # giorni: un libro non confermato si ricontrolla dopo un mese, non a ogni giro
 OGGI = date.today().isoformat()
 AUTOREVOLI = ("duke", "cce", "bnf", "k10plus")
 CCE_RAW = "https://raw.githubusercontent.com/NYPL/catalog_of_copyright_entries_project/master/xml/"
-CCE_FILE = {1930: "1930/cc271libr_001-2321.xml", 1931: "1931/1931_v28.xml",
-            1932: "1932/1932_v29.xml", 1933: "1933/1933_v30.xml"}
+CCE_FILE = {}   # anno -> file del volume: si legge dall'elenco del repository NYPL (i nomi dei file non seguono una regola)
+CCE_API = "https://api.github.com/repos/NYPL/catalog_of_copyright_entries_project/contents/xml/"
+FONTI_KO = Counter()   # richieste fallite per fonte: se una fonte non risponde mai, va detto (docs/da-decidere.md)
 LINGUA = {"Q150": "fr", "Q188": "de"}
 ARTICOLI = {"the", "a", "an", "le", "la", "les", "l", "un", "une", "der", "die", "das", "ein", "eine"}
 
@@ -44,7 +46,22 @@ def scarica(u, timeout=60, prove=4):
             ultimo = e
             time.sleep(5 * (t + 1))
     print("non scaricato:", u[:120], ultimo)
+    FONTI_KO[urllib.parse.urlparse(u).netloc] += 1
     return None
+
+
+def file_cce(anni):
+    """Nome del file XML di ogni volume (es. 1931 -> 1931/1931_v28.xml), letto dall'elenco del repository."""
+    for y in anni:
+        if y in CCE_FILE:
+            continue
+        x = scarica(CCE_API + str(y), timeout=60)
+        if not x:
+            continue
+        nomi = [f["name"] for f in json.loads(x) if f.get("type") == "file" and f["name"].endswith(".xml")]
+        if nomi:
+            CCE_FILE[y] = f"{y}/{sorted(nomi)[0]}"
+    return CCE_FILE
 
 
 def senza_articolo(w):
@@ -57,8 +74,10 @@ def stesso_titolo(trovato, cercato):
 
 
 # ---------- registro del copyright USA ----------
-def indice_cce():
+def indice_cce(anni=None):
     idx = {}
+    if anni:
+        file_cce(anni)
     for y, f in CCE_FILE.items():
         x = scarica(CCE_RAW + f, timeout=180)
         if not x:
@@ -188,14 +207,18 @@ def decidi(trovati, p):
 
 def main():
     inizio = time.time()
-    dk, idx = va.duke(), indice_cce()
+    oggi_anno = date.today().year
+    nomi = sorted(x.name for x in (R / "data").glob("us-[0-9][0-9][0-9][0-9].json") if int(x.stem[3:]) > oggi_anno)
+    pubs = [int(n[3:7]) - 96 for n in nomi]
+    # volumi del registro: dall'anno prima della lista più vecchia a due anni dopo la più recente (registrazioni tardive)
+    dk, idx = va.duke(), indice_cce(range(min(pubs) - 3, max(pubs) + 3) if pubs else [])
     f = R / "data" / "us-anni-verificati.json"
     try:
         tutto = json.loads(f.read_text(encoding="utf-8"))
     except Exception:
         tutto = {}
     liste = {}
-    for nome in ("us-2027.json", "us-2028.json"):
+    for nome in nomi:
         d = json.loads((R / "data" / nome).read_text(encoding="utf-8"))
         liste[str(d["anno"])] = d
     orig = originali(sorted({o["qid"] for d in liste.values() for o in d["opere"]}))
@@ -209,6 +232,9 @@ def main():
             q = o["qid"]
             vecchio = fatto.get(q)
             if vecchio and vecchio[0] == "ok" and len(vecchio) > 5 and vecchio[2] != "bnf":   # bnf: si rifà con la lingua giusta
+                continue
+            if vecchio and len(vecchio) > 5 and vecchio[3] >= (date.today() - timedelta(days=RICONTROLLA)).isoformat() \
+                    and not os.environ.get("RIFAI_TUTTO"):
                 continue
             if time.time() - inizio > BUDGET:
                 break
@@ -253,6 +279,8 @@ def main():
         }
         print(chiave, riepilogo[chiave]["esiti"], riepilogo[chiave]["confermati_per_fonte"])
     riepilogo["biblioteche_nazionali"] = {" | ".join(k): v for k, v in prove_naz.items()}
+    riepilogo["fonti_non_raggiunte"] = dict(FONTI_KO)
+    riepilogo["registro_volumi"] = {str(k): v for k, v in CCE_FILE.items()}
     print("biblioteche nazionali:", dict(prove_naz))
     (R / "docs" / "stima-sito" / "us-anni.json").write_text(json.dumps(riepilogo, ensure_ascii=False, indent=1),
                                                             encoding="utf-8")

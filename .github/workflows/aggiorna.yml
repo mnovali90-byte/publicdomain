@@ -66,6 +66,12 @@ jobs:
         # dato accessorio: se fallisce, il resto viene salvato comunque
         continue-on-error: true
         run: python scripts/opere.py
+      - name: Verifica l'anno di uscita dei libri USA (registro del copyright, biblioteche, Open Library, Library of Congress)
+        # metodo in docs/metodo-anni-opere.md; se una fonte non risponde lo scrive in docs/da-decidere.md
+        continue-on-error: true
+        env:
+          BUDGET_MINUTI_USA: "30"
+        run: python scripts/verifica_anni_usa.py
       - name: Nomi inglesi di paesi e lingue (Wikidata)
         continue-on-error: true
         run: python scripts/etichette.py
@@ -80,6 +86,10 @@ jobs:
       - name: Crea le pagine degli autori e la sitemap
         if: always()
         run: python scripts/pagine.py
+      - name: Elenco delle cose da decidere con Marco (docs/da-decidere.md)
+        if: always()
+        continue-on-error: true
+        run: python scripts/da_decidere.py
       - name: Salva i dati nel repository
         # sempre, anche se un passo prima è stato interrotto: così il lavoro fatto non si perde
         if: always()
