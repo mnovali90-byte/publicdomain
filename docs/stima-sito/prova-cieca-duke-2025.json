@@ -1,0 +1,387 @@
+{
+ "anno": 2025,
+ "anno_pubblicazione": 1929,
+ "nostra_lista": 163,
+ "controllate": 163,
+ "nostri_esiti": {
+  "ok": 80,
+  "nd": 80,
+  "prima": 3
+ },
+ "nostre_conferme_per_fonte": {
+  "cce": 51,
+  "openlibrary": 11,
+  "loc": 4,
+  "k10plus": 3,
+  "bnf": 11
+ },
+ "duke_libri": 15,
+ "duke_nella_nostra_lista": 7,
+ "duke_confermati_da_noi": 6,
+ "confronto": [
+  {
+   "duke": "The Sound and the Fury — William Faulkner",
+   "nella_nostra_lista": true,
+   "nostro_esito": "ok",
+   "fonte": "cce",
+   "perche_manca": null
+  },
+  {
+   "duke": "A Farewell to Arms — Ernest Hemingway",
+   "nella_nostra_lista": true,
+   "nostro_esito": "ok",
+   "fonte": "cce",
+   "perche_manca": null
+  },
+  {
+   "duke": "A Room of One’s Own — Virginia Woolf",
+   "nella_nostra_lista": false,
+   "nostro_esito": null,
+   "fonte": null,
+   "perche_manca": "non è in Wikidata come opera del 1929 con almeno 2 Wikipedia"
+  },
+  {
+   "duke": "Red Harvest — Dashiell Hammett",
+   "nella_nostra_lista": false,
+   "nostro_esito": null,
+   "fonte": null,
+   "perche_manca": "non è in Wikidata come opera del 1929 con almeno 2 Wikipedia"
+  },
+  {
+   "duke": "Cup of Gold — John Steinbeck",
+   "nella_nostra_lista": true,
+   "nostro_esito": "nd",
+   "fonte": "loc",
+   "perche_manca": null
+  },
+  {
+   "duke": "A High Wind in Jamaica — Richard Hughes",
+   "nella_nostra_lista": true,
+   "nostro_esito": "ok",
+   "fonte": "openlibrary",
+   "perche_manca": null
+  },
+  {
+   "duke": "Laughing Boy: A Navajo Love Story — Oliver La Farge",
+   "nella_nostra_lista": false,
+   "nostro_esito": null,
+   "fonte": null,
+   "perche_manca": "non è in Wikidata come opera del 1929 con almeno 2 Wikipedia"
+  },
+  {
+   "duke": "Rope — Patrick Hamilton",
+   "nella_nostra_lista": false,
+   "nostro_esito": null,
+   "fonte": null,
+   "perche_manca": "non è in Wikidata come opera del 1929 con almeno 2 Wikipedia"
+  },
+  {
+   "duke": "All Quiet on the Western Front — Arthur Wesley Wheen",
+   "nella_nostra_lista": false,
+   "nostro_esito": null,
+   "fonte": null,
+   "perche_manca": "non è in Wikidata come opera del 1929 con almeno 2 Wikipedia"
+  },
+  {
+   "duke": "Seven Dials Mystery — Agatha Christie",
+   "nella_nostra_lista": false,
+   "nostro_esito": null,
+   "fonte": null,
+   "perche_manca": "non è in Wikidata come opera del 1929 con almeno 2 Wikipedia"
+  },
+  {
+   "duke": "Good-bye to All That — Robert Graves",
+   "nella_nostra_lista": true,
+   "nostro_esito": "ok",
+   "fonte": "cce",
+   "perche_manca": null
+  },
+  {
+   "duke": "Is Sex Necessary? Or, Why You Feel the Way You Do — E. B. White and James Thurber",
+   "nella_nostra_lista": true,
+   "nostro_esito": "ok",
+   "fonte": "cce",
+   "perche_manca": null
+  },
+  {
+   "duke": "Letters to a Young Poet — Rainer Maria Rilke",
+   "nella_nostra_lista": true,
+   "nostro_esito": "ok",
+   "fonte": "k10plus",
+   "perche_manca": null
+  },
+  {
+   "duke": "A Preface to Morals — Walter Lippmann",
+   "nella_nostra_lista": false,
+   "nostro_esito": null,
+   "fonte": null,
+   "perche_manca": "non è in Wikidata come opera del 1929 con almeno 2 Wikipedia"
+  },
+  {
+   "duke": "The Roman Hat Mystery — Ellery Queen",
+   "nella_nostra_lista": false,
+   "nostro_esito": null,
+   "fonte": null,
+   "perche_manca": "non è in Wikidata come opera del 1929 con almeno 2 Wikipedia"
+  }
+ ],
+ "nostri_confermati_non_in_duke_primi_40": [
+  [
+   "The Maltese Falcon",
+   "Dashiell Hammett",
+   30,
+   "openlibrary"
+  ],
+  [
+   "The Seven Dials Mystery",
+   "Agatha Christie",
+   27,
+   "loc"
+  ],
+  [
+   "Berlin Alexanderplatz",
+   "Alfred Döblin",
+   27,
+   "cce"
+  ],
+  [
+   "Partners in Crime",
+   "Agatha Christie",
+   19,
+   "cce"
+  ],
+  [
+   "The Story of San Michele",
+   "Axel Munthe",
+   14,
+   "cce"
+  ],
+  [
+   "Sartoris",
+   "William Faulkner",
+   12,
+   "cce"
+  ],
+  [
+   "Southern Mail",
+   "Antoine de Saint-Exupéry",
+   10,
+   "bnf"
+  ],
+  [
+   "David Golder",
+   "Irène Némirovsky",
+   9,
+   "cce"
+  ],
+  [
+   "The Poisoned Chocolates Case",
+   "Anthony Berkeley Cox",
+   9,
+   "cce"
+  ],
+  [
+   "Good-Bye to All That",
+   "Robert Graves",
+   9,
+   "cce"
+  ],
+  [
+   "Amphitryon 38",
+   "Jean Giraudoux",
+   9,
+   "bnf"
+  ],
+  [
+   "Now and After",
+   "Alexander Berkman",
+   8,
+   "cce"
+  ],
+  [
+   "Les Enfants Terribles",
+   "Jean Cocteau",
+   8,
+   "cce"
+  ],
+  [
+   "Colline",
+   "Jean Giono",
+   8,
+   "cce"
+  ],
+  [
+   "The Bishop Murder Case",
+   "S. S. Van Dine",
+   7,
+   "cce"
+  ],
+  [
+   "Gods' Man",
+   "Lynd Ward",
+   7,
+   "cce"
+  ],
+  [
+   "The Mysterious Mansion",
+   "Maurice Leblanc",
+   7,
+   "bnf"
+  ],
+  [
+   "Alexis",
+   "Marguerite Yourcenar",
+   6,
+   "bnf"
+  ],
+  [
+   "The Dain Curse",
+   "Dashiell Hammett",
+   6,
+   "cce"
+  ],
+  [
+   "The Last September",
+   "Elizabeth Bowen",
+   6,
+   "cce"
+  ],
+  [
+   "Journey's End",
+   "R. C. Sherriff",
+   6,
+   "openlibrary"
+  ],
+  [
+   "Passing",
+   "Nella Larsen",
+   6,
+   "cce"
+  ],
+  [
+   "Look Homeward, Angel",
+   "Thomas Wolfe",
+   6,
+   "cce"
+  ],
+  [
+   "The Man Within",
+   "Graham Greene",
+   5,
+   "cce"
+  ],
+  [
+   "The Escaped Cock",
+   "D. H. Lawrence",
+   5,
+   "loc"
+  ],
+  [
+   "L'École des femmes",
+   "André Gide",
+   4,
+   "bnf"
+  ],
+  [
+   "Fouché",
+   "Stefan Zweig",
+   4,
+   "openlibrary"
+  ],
+  [
+   "Laughing Boy",
+   "Oliver La Farge",
+   4,
+   "cce"
+  ],
+  [
+   "Magic for Marigold",
+   "Lucy Maud Montgomery",
+   4,
+   "cce"
+  ],
+  [
+   "The Black Camel",
+   "Earl Derr Biggers",
+   4,
+   "cce"
+  ],
+  [
+   "Dodsworth",
+   "Sinclair Lewis",
+   4,
+   "cce"
+  ],
+  [
+   "The Crime at Black Dudley",
+   "Margery Allingham",
+   4,
+   "cce"
+  ],
+  [
+   "The Hollow Field",
+   "Marcel Aymé",
+   4,
+   "bnf"
+  ],
+  [
+   "The Patient in Room 18",
+   "Mignon G. Eberhart",
+   4,
+   "cce"
+  ],
+  [
+   "Leviathan",
+   "Julien Green",
+   3,
+   "cce"
+  ],
+  [
+   "L'Hôtel du Nord",
+   "Eugène Dabit",
+   3,
+   "cce"
+  ],
+  [
+   "Medmenneske",
+   "Olav Duun",
+   3,
+   "openlibrary"
+  ],
+  [
+   "The Bridge in the Jungle",
+   "B. Traven",
+   3,
+   "k10plus"
+  ],
+  [
+   "Magnificent Obsession",
+   "Lloyd C. Douglas",
+   3,
+   "cce"
+  ],
+  [
+   "Burnt Offering",
+   "Jeanne Galzy",
+   3,
+   "bnf"
+  ]
+ ],
+ "nostri_prima": [
+  [
+   "The Disintegration Machine",
+   1928,
+   "cce"
+  ],
+  [
+   "The Gunner",
+   1928,
+   "cce"
+  ],
+  [
+   "Plum Bun",
+   1928,
+   "cce"
+  ]
+ ]
+}
