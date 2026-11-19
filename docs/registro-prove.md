@@ -393,3 +393,17 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
   - unire le varianti (italiano medievale e toscano → italiano; le varianti del latino → latino);
   - solo libri e testi letterari;
   - campione con i primi 30 per lingua, prima e dopo.
+
+## 19/11/2026 (notte) — Prova alla cieca contro la Duke 2025 (libri del 1929)
+- **Come:** scripts/prova_cieca_duke.py. Ha ricostruito la lista del 1929 con la stessa domanda a Wikidata delle liste USA, un tipo di opera alla volta; il primo tentativo era fallito per timeout di Wikidata e la lista era vuota. Poi ha verificato gli anni senza usare la Duke (registro del copyright, BnF, K10plus, Open Library, Library of Congress). Solo alla fine ha aperto la lista Duke 2025, che nei nostri dati ha 15 libri.
+- **Risultati:** 163 opere nella nostra lista, di cui 80 con l'anno confermato. Conferme per fonte: registro del copyright 51, BnF 11, Open Library 11, Library of Congress 4, K10plus 3.
+- **Confronto con la Duke:**
+  - 9 libri su 15 sono nella nostra lista, e 8 di questi hanno l'anno confermato. Due li aveva persi il confronto automatico per il titolo diverso: «The Seven Dials Mystery» contro «Seven Dials Mystery», e «Laughing Boy» contro «Laughing Boy: A Navajo Love Story».
+  - Cup of Gold è nella lista, ma non confermato.
+  - 6 libri non risultano tra le nostre opere confermate: A Room of One's Own, Red Harvest, Rope, All Quiet on the Western Front, A Preface to Morals, The Roman Hat Mystery.
+    - All Quiet on the Western Front: la Duke elenca la traduzione inglese del 1929, ma l'originale tedesco è del 1928.
+    - Per gli altri 5 la prova non ha salvato la lista completa, quindi non si sa se sono assenti o non confermati. Da salvare la prossima volta.
+- **In più rispetto alla Duke:** almeno 72 libri confermati che la Duke non elenca, tra cui Berlin Alexanderplatz, Les Enfants terribles, David Golder, Look Homeward Angel, Passing e The Dain Curse.
+- **Problemi trovati:**
+  - The Maltese Falcon risulta confermato 1929 da noi, mentre la Duke lo mette nel 2026 (1930). È uscito a puntate su rivista nel 1929-30. Serve un controllo: conflitto con la Duke di un altro anno = da decidere.
+  - «Good-Bye to All That» compare due volte (due voci Wikidata).
