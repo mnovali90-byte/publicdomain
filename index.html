@@ -918,7 +918,7 @@ const etIdx = (a) => {
   const testo = m === "int" ? tr("vLingue", { n: n(g) }) : g === 0 ? tr("vNoPag", { l: nomeLingua(["it", "es", "de", "fr"].includes(m) ? m : "en") }) : tr("vIt", { n: n(g) });
   return " · " + tr("mNomi")[m] + ": " + testo;
 };
-const punteggio = (a) => [(idx(a) === undefined ? -1 : idx(a)), grezzo(a), a.pagine_wikipedia || 0];
+const punteggio = (a) => a.fuori_classifica ? [-9, 0, 0] : [(idx(a) === undefined ? -1 : idx(a)), grezzo(a), a.pagine_wikipedia || 0];   // fuori_classifica: decisione di Marco (data/fuori_classifica.json), sempre in fondo
 function perPopolarita(x, y) {
   const a = punteggio(x), b = punteggio(y);
   return (b[0] - a[0]) || (b[1] - a[1]) || (b[2] - a[2]) || x.nome.localeCompare(y.nome, "it");

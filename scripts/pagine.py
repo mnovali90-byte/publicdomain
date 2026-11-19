@@ -262,6 +262,13 @@ if CALENDARIO_ON:
     PIEDE["en"] = PIEDE["en"].replace('<a href="/en/author/">', f'<a href="/en/calendar/{_cal}/">Anniversaries calendar</a> · <a href="/en/author/">', 1)
 
 
+# Autori tolti da classifiche e vetrine per decisione di Marco (la scheda resta): data/fuori_classifica.json
+try:
+    FUORI_CLASSIFICA = {x["wikidata"] for x in json.loads((RADICE / "data" / "fuori_classifica.json").read_text(encoding="utf-8"))["autori"]}
+except Exception:
+    FUORI_CLASSIFICA = set()
+
+
 def url_pagina(lang, slug=""):
     return f"{SITO}/{PERCORSO[lang]}/{slug + '/' if slug else ''}"
 
@@ -1015,6 +1022,7 @@ def _letterari(pacchetto, lang):
     """Scrittori della lista con la loro pagina, in ordine di visite su Wikipedia in 5 lingue (come il resto del sito)."""
     pag = "pagina" if lang == "it" else "pagina_en"
     out = [a for a in pacchetto.get("autori", []) if a.get("letterario") and a.get("morte") and a.get(pag)
+           and not a.get("fuori_classifica") and a["wikidata"] not in FUORI_CLASSIFICA
            and LETTERARI & set(a.get("professioni") or [])]
     return sorted(out, key=lambda a: -_visite(a))
 
@@ -1369,6 +1377,10 @@ def main():
         pacchetto = json.load(open(f, encoding="utf-8"))
         for a_ in pacchetto["autori"]:
             q = a_["wikidata"]
+            if q in FUORI_CLASSIFICA:
+                a_["fuori_classifica"] = True
+            else:
+                a_.pop("fuori_classifica", None)
             if q in slug_di:
                 a_["pagina"] = slug_di[q]
             else:
