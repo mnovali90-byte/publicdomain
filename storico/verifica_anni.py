@@ -106,12 +106,12 @@ def library_of_congress(r):
     tw = parole(titolo)
     if not tw:
         return "nd", None
-    q = f'bath.title="{sa(titolo)}"'
+    q = f'dc.title="{sa(titolo)}"'   # «bath.name» non è accettato dal catalogo LC (prova del 19/11/2026)
     cognomi = [parole(a[1])[-1] for a in r[5] if parole(a[1])]
     if cognomi:
-        q += f' and bath.name="{cognomi[0]}"'
+        q += f' and dc.creator="{cognomi[0]}"'
     x = None
-    for domanda in (q, q.replace("bath.title", "dc.title").replace("bath.name", "dc.creator")):   # se un indice non è accettato
+    for domanda in (q,):
         u = SRU + "?" + urllib.parse.urlencode({"version": "1.1", "operation": "searchRetrieve", "query": domanda,
                                                "maximumRecords": "25", "recordSchema": "marcxml"})
         for t in range(4):
