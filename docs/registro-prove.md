@@ -348,3 +348,21 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
   - La conferma funziona sui libri più cercati: La buona terra, Le onde, Santuario, La chiave di vetro, Il mondo nuovo.
   - I non confermati sono soprattutto opere tradotte, che nei cataloghi USA hanno l'anno della traduzione (Volo di notte, I sonnambuli, La marcia di Radetzky), e racconti usciti in rivista (The Whisperer in Darkness).
   - L'esito «prima» NON è affidabile come smentita: Open Library dà Death in the Afternoon al 1920, Peter Duck al 1800 e Light in August al 1931, tutti errori. Quindi non si toglie nessun libro dalla lista: i «prima» restano «da confermare».
+
+## 19/11/2026 (sera) — Liste USA: registro del copyright, BnF, catalogo tedesco
+- **Fonti aggiunte:**
+  - registro del copyright USA (Catalog of Copyright Entries 1930-33, trascrizione NYPL, CC0);
+  - BnF per le opere francesi;
+  - per le opere tedesche, prima DNB e poi K10plus. La DNB risponde 403/429 a tutte le richieste da GitHub (prova con scripts/prova_cataloghi_de.py); K10plus risponde.
+- **Errore corretto:** il titolo originale veniva preso da Wikidata anche in un'altra lingua (Musil cercato come «L'homme sans qualités»). Ora si usa solo il titolo nella lingua dell'opera (P407).
+- **Risultati finali:**
+  - 2027: 78 confermati su 154 (prima 54);
+  - 2028: 76 confermati su 159 (prima 56).
+  - Conferme per fonte nel 2027: registro del copyright 38, Open Library 15, BnF 15, K10plus 8, Library of Congress 2.
+- **Usciti prima (da decidere a mano):**
+  - 2027: Charlie Chan Carries On e Le Bal, 1930 per il registro del copyright: errori veri della lista.
+  - 2028: Der Mann ohne Eigenschaften (K10plus 1930: il primo volume è uscito nel 1930, quindi probabilmente errore vero), Die Morgenlandfahrt (K10plus 1931), Die heilige Johanna der Schlachthöfe (K10plus 1930), Solitude de la pitié (BnF 1930). Gli ultimi tre sono da controllare: possono essere anticipazioni in rivista o schede sbagliate.
+- **Non confermati che restano:**
+  - opere in lingue senza catalogo nella catena (russo, ceco, giapponese…);
+  - racconti usciti in rivista;
+  - racconti postumi di Kafka, usciti dentro la raccolta del 1931 e non come libri a sé.
