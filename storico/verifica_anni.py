@@ -180,8 +180,6 @@ def main():
         if time.time() > fine:
             break
         esito, anno = library_of_congress(lista[q])
-        if esito is None:
-            continue
         provate = (fatto[q][4] if len(fatto[q]) > 4 else [fatto[q][2]]) + ["loc"]
         if esito == "ok":
             fatto[q] = ["ok", anno, "loc", oggi, provate]
