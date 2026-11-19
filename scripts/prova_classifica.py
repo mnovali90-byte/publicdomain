@@ -22,14 +22,14 @@ LETT = {"scrittore", "scrittrice", "poeta", "poetessa", "romanziere", "romanzier
         "saggista", "novellista", "autore", "autrice"}
 
 
-def get(u, prove=3):
+def get(u, prove=6):
     for t in range(prove):
         try:
             return json.load(urllib.request.urlopen(urllib.request.Request(u, headers=UA), timeout=60))
         except urllib.error.HTTPError as e:
             if e.code == 404:
                 return {"items": []}
-            time.sleep(3 * (t + 1))
+            time.sleep(10 * (t + 1) if e.code == 429 else 3 * (t + 1))   # 429: troppe richieste, si aspetta di più
         except Exception:
             time.sleep(3 * (t + 1))
     return None
@@ -87,11 +87,15 @@ def main():
         q, l = x
         time.sleep(0.05)
         return x, mesi(l, tit[q][l])
-    with ThreadPoolExecutor(max_workers=8) as pool:
+    with ThreadPoolExecutor(max_workers=3) as pool:   # con 8 lavori in parallelo 152 letture su 1.521 erano fallite (19/11/2026)
         for (q, l), s in pool.map(uno, lavori):
             serie[(q, l)] = s
+    # seconda passata, una alla volta, per quelle fallite
+    for k in [k for k, s in serie.items() if s is None]:
+        time.sleep(1)
+        serie[k] = mesi(k[1], tit[k[0]][k[1]])
     falliti = sum(1 for s in serie.values() if s is None)
-    print("letture fallite:", falliti)
+    print("letture fallite dopo la seconda passata:", falliti)
     for cod, nome, pref, l in PAESI:
         aut = [a for a in dati[pref]["autori"] if a.get("letterario") and a.get("morte")]
         prima = sorted(aut, key=lambda a: (-(a.get("indice_" + (l if cod != "uk" else "en")) if a.get("indice_" + (l if cod != "uk" else "en")) is not None else -1),
@@ -117,6 +121,7 @@ def main():
         md += ["", f"Picchi in questa lingua: {len(out[cod]['picchi'])}: " +
                ", ".join(f"{n} ({g:,} → {t:,})" for n, g, t, _ in sorted(out[cod]["picchi"], key=lambda x: -x[1])[:15]), ""]
     out["letture_fallite"] = falliti
+    md.insert(2, f"**Letture fallite: {falliti}** (se non è 0, il campione non è completo e non vale).\n")
     (R / "docs" / "stima-sito" / "prova-classifica.json").write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
     (R / "docs" / "stima-sito" / "prova-classifica.md").write_text("\n".join(md) + "\n", encoding="utf-8")
 
