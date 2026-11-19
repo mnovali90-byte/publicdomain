@@ -7,6 +7,51 @@
  ],
  "voci": [
   {
+   "tipo": "morte",
+   "qid": "Q380425",
+   "nome": "Ahad Ha'am",
+   "it": "Ahad Ha'am",
+   "desc": "Russian Hebrew essayist and thinker (1856–1927)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 34,
+   "mese": 1,
+   "giorno": 2,
+   "fonte_data": "wikidata+wikipedia (en,fr,de); aggiunta a mano 19/11/2026",
+   "scheda": {
+    "it": {
+     "desc": "scrittore russo",
+     "paesi": [
+      "Impero russo",
+      "Unione Sovietica"
+     ],
+     "opere": [
+      "Ha-Shiloaḥ"
+     ],
+     "nato": 1856,
+     "morto": 1927,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Ahad_Ha%27am"
+    },
+    "en": {
+     "desc": "Russian Hebrew essayist and thinker (1856–1927)",
+     "paesi": [
+      "Russian Empire",
+      "Soviet Union"
+     ],
+     "opere": [
+      "Ha-Shiloaḥ"
+     ],
+     "nato": 1856,
+     "morto": 1927,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Ahad_Ha%27am"
+    }
+   }
+  },
+  {
    "tipo": "nascita",
    "qid": "Q1252645",
    "nome": "Stella Gibbons",
@@ -225,6 +270,47 @@
   },
   {
    "tipo": "nascita",
+   "qid": "Q184906",
+   "nome": "Nâzım Hikmet",
+   "it": "Nazım Hikmet",
+   "desc": "Turkish communist poet, playwright and novelist (1902–1963)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1902,
+   "anni": 125,
+   "pagine": 80,
+   "mese": 1,
+   "giorno": 15,
+   "fonte_data": "wikidata+wikipedia (en,es); aggiunta a mano 19/11/2026",
+   "scheda": {
+    "it": {
+     "desc": "poeta, drammaturgo e scrittore turco naturalizzato polacco",
+     "paesi": [
+      "Impero ottomano",
+      "Turchia"
+     ],
+     "opere": [],
+     "nato": 1901,
+     "morto": 1963,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Naz%C4%B1m_Hikmet"
+    },
+    "en": {
+     "desc": "Turkish communist poet, playwright and novelist (1902–1963)",
+     "paesi": [
+      "Ottoman Empire",
+      "Turkey"
+     ],
+     "opere": [],
+     "nato": 1901,
+     "morto": 1963,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/N%C3%A2z%C4%B1m_Hikmet"
+    }
+   }
+  },
+  {
+   "tipo": "nascita",
    "qid": "Q311461",
    "nome": "George Ostrogorsky",
    "it": "Georgij Aleksandrovič Ostrogorskij",
@@ -261,6 +347,92 @@
      "morto": 1976,
      "nobel": null,
      "wiki": "https://en.wikipedia.org/wiki/George_Ostrogorsky"
+    }
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q462662",
+   "nome": "Raymond Roussel",
+   "it": "Raymond Roussel",
+   "desc": "French poet, novelist, playwright, musician, and chess enthusiast (1877-1933)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1877,
+   "anni": 150,
+   "pagine": 28,
+   "mese": 1,
+   "giorno": 20,
+   "fonte_data": "wikidata+wikipedia (en,fr,es); aggiunta a mano 19/11/2026",
+   "scheda": {
+    "it": {
+     "desc": "scrittore, drammaturgo e poeta francese",
+     "paesi": [
+      "Francia"
+     ],
+     "opere": [
+      "Impressions of Africa",
+      "Locus Solus",
+      "How I Wrote Certain of my Books"
+     ],
+     "nato": 1877,
+     "morto": 1933,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Raymond_Roussel"
+    },
+    "en": {
+     "desc": "French poet, novelist, playwright, musician, and chess enthusiast (1877-1933)",
+     "paesi": [
+      "France"
+     ],
+     "opere": [
+      "Locus Solus",
+      "Impressions of Africa",
+      "How I Wrote Certain of my Books"
+     ],
+     "nato": 1877,
+     "morto": 1933,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Raymond_Roussel"
+    }
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q220550",
+   "nome": "Ján Kollár",
+   "it": "Ján Kollár",
+   "desc": "Slovak author writing in Czech (1793–1852)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1852,
+   "anni": 175,
+   "pagine": 48,
+   "mese": 1,
+   "giorno": 24,
+   "fonte_data": "wikidata+wikipedia (en,fr,es); aggiunta a mano 19/11/2026",
+   "scheda": {
+    "it": {
+     "desc": "scrittore, archeologo e scienziato slovacco",
+     "paesi": [
+      "Impero austriaco"
+     ],
+     "opere": [],
+     "nato": 1793,
+     "morto": 1852,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/J%C3%A1n_Koll%C3%A1r"
+    },
+    "en": {
+     "desc": "Slovak author writing in Czech (1793–1852)",
+     "paesi": [
+      "Austrian Empire"
+     ],
+     "opere": [],
+     "nato": 1793,
+     "morto": 1852,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/J%C3%A1n_Koll%C3%A1r"
     }
    }
   },
@@ -546,6 +718,94 @@
      "morto": 1843,
      "nobel": null,
      "wiki": "https://en.wikipedia.org/wiki/Friedrich_de_la_Motte_Fouqu%C3%A9"
+    }
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q261521",
+   "nome": "Josephine Tey",
+   "it": "Josephine Tey",
+   "desc": "Scottish author (1896–1952)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1952,
+   "anni": 75,
+   "pagine": 28,
+   "mese": 2,
+   "giorno": 13,
+   "fonte_data": "wikidata+wikipedia (en,de,es); aggiunta a mano 19/11/2026",
+   "scheda": {
+    "it": {
+     "desc": "scrittrice scozzese",
+     "paesi": [
+      "Regno Unito"
+     ],
+     "opere": [
+      "Brat Farrar",
+      "Richard of Bordeaux",
+      "The Franchise Affair"
+     ],
+     "nato": 1896,
+     "morto": 1952,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Josephine_Tey"
+    },
+    "en": {
+     "desc": "Scottish author (1896–1952)",
+     "paesi": [
+      "United Kingdom"
+     ],
+     "opere": [
+      "Brat Farrar",
+      "The Daughter of Time",
+      "Richard of Bordeaux"
+     ],
+     "nato": 1896,
+     "morto": 1952,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Josephine_Tey"
+    }
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q1279865",
+   "nome": "Isidora Sekulić",
+   "it": "Isidora Sekulić",
+   "desc": "Serbian writer (1877–1958)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1877,
+   "anni": 150,
+   "pagine": 35,
+   "mese": 2,
+   "giorno": 16,
+   "fonte_data": "wikidata+wikipedia (en,de); aggiunta a mano 19/11/2026",
+   "scheda": {
+    "it": {
+     "desc": "scrittrice serba",
+     "paesi": [
+      "Repubblica Socialista Federale di Jugoslavia",
+      "Regno di Jugoslavia"
+     ],
+     "opere": [],
+     "nato": 1877,
+     "morto": 1958,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Isidora_Sekuli%C4%87"
+    },
+    "en": {
+     "desc": "Serbian writer (1877–1958)",
+     "paesi": [
+      "Kingdom of Yugoslavia",
+      "Socialist Federal Republic of Yugoslavia"
+     ],
+     "opere": [],
+     "nato": 1877,
+     "morto": 1958,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Isidora_Sekuli%C4%87"
     }
    }
   },
@@ -1071,6 +1331,49 @@
   },
   {
    "tipo": "morte",
+   "qid": "Q355676",
+   "nome": "Mariano Azuela",
+   "it": "Mariano Azuela",
+   "desc": "Mexican author and physician (1873–1952)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1952,
+   "anni": 75,
+   "pagine": 32,
+   "mese": 3,
+   "giorno": 1,
+   "fonte_data": "wikidata+wikipedia (en,it,fr,de,es); aggiunta a mano 19/11/2026",
+   "scheda": {
+    "it": {
+     "desc": "scrittore messicano",
+     "paesi": [
+      "Messico"
+     ],
+     "opere": [
+      "Quelli di sotto"
+     ],
+     "nato": 1873,
+     "morto": 1952,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Mariano_Azuela"
+    },
+    "en": {
+     "desc": "Mexican author and physician (1873–1952)",
+     "paesi": [
+      "Mexico"
+     ],
+     "opere": [
+      "The Underdogs"
+     ],
+     "nato": 1873,
+     "morto": 1952,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Mariano_Azuela"
+    }
+   }
+  },
+  {
+   "tipo": "morte",
    "qid": "Q448143",
    "nome": "Mikhail Artsybashev",
    "it": "Michail Arcybašev",
@@ -1283,6 +1586,49 @@
      "morto": 2014,
      "nobel": 1982,
      "wiki": "https://en.wikipedia.org/wiki/Gabriel_Garc%C3%ADa_M%C3%A1rquez"
+    }
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q722103",
+   "nome": "William Boyd",
+   "it": "William Boyd",
+   "desc": "Scottish novelist, short story writer, and screen writer (born 1952)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1952,
+   "anni": 75,
+   "pagine": 34,
+   "mese": 3,
+   "giorno": 7,
+   "fonte_data": "wikidata+wikipedia (en,es); aggiunta a mano 19/11/2026",
+   "scheda": {
+    "it": {
+     "desc": "scrittore e sceneggiatore britannico",
+     "paesi": [
+      "Regno Unito"
+     ],
+     "opere": [
+      "A Good Man in Africa"
+     ],
+     "nato": 1952,
+     "morto": null,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/William_Boyd"
+    },
+    "en": {
+     "desc": "Scottish novelist, short story writer, and screen writer (born 1952)",
+     "paesi": [
+      "United Kingdom"
+     ],
+     "opere": [
+      "A Good Man in Africa"
+     ],
+     "nato": 1952,
+     "morto": null,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/William_Boyd_(writer)"
     }
    }
   },
@@ -1815,6 +2161,53 @@
   },
   {
    "tipo": "nascita",
+   "qid": "Q3177574",
+   "nome": "Jesmyn Ward",
+   "it": "Jesmyn Ward",
+   "desc": "American writer",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1977,
+   "anni": 50,
+   "pagine": 28,
+   "mese": 4,
+   "giorno": 1,
+   "fonte_data": "wikidata+wikipedia (en,fr,de,es); aggiunta a mano 19/11/2026",
+   "scheda": {
+    "it": {
+     "desc": "scrittrice statunitense",
+     "paesi": [
+      "Stati Uniti"
+     ],
+     "opere": [
+      "Salvage the Bones",
+      "Sing, Unburied, Sing",
+      "Men We Reaped"
+     ],
+     "nato": 1977,
+     "morto": null,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Jesmyn_Ward"
+    },
+    "en": {
+     "desc": "American writer",
+     "paesi": [
+      "United States"
+     ],
+     "opere": [
+      "Men We Reaped",
+      "Salvage the Bones",
+      "Sing, Unburied, Sing"
+     ],
+     "nato": 1977,
+     "morto": null,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Jesmyn_Ward"
+    }
+   }
+  },
+  {
+   "tipo": "nascita",
    "qid": "Q452469",
    "nome": "Dorothea Dix",
    "it": "Dorothea Dix",
@@ -1888,6 +2281,53 @@
      "morto": 1877,
      "nobel": null,
      "wiki": "https://en.wikipedia.org/wiki/Fern%C3%A1n_Caballero"
+    }
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q433800",
+   "nome": "Jim Thompson",
+   "it": "Jim Thompson",
+   "desc": "American writer (1906–1977)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1977,
+   "anni": 50,
+   "pagine": 28,
+   "mese": 4,
+   "giorno": 7,
+   "fonte_data": "wikidata+wikipedia (en,es); aggiunta a mano 19/11/2026",
+   "scheda": {
+    "it": {
+     "desc": "scrittore e sceneggiatore statunitense",
+     "paesi": [
+      "Stati Uniti"
+     ],
+     "opere": [
+      "Now and on Earth",
+      "The Getaway",
+      "The Grifters"
+     ],
+     "nato": 1906,
+     "morto": 1977,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Jim_Thompson_(scrittore)"
+    },
+    "en": {
+     "desc": "American writer (1906–1977)",
+     "paesi": [
+      "United States"
+     ],
+     "opere": [
+      "The Killer Inside Me",
+      "Pop. 1280",
+      "Now and on Earth"
+     ],
+     "nato": 1906,
+     "morto": 1977,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Jim_Thompson_(writer)"
     }
    }
   },
@@ -2019,6 +2459,45 @@
      "morto": 1977,
      "nobel": null,
      "wiki": "https://en.wikipedia.org/wiki/Jacques_Pr%C3%A9vert"
+    }
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q733161",
+   "nome": "Claude Prosper Jolyot de Crébillon",
+   "it": "Claude-Prosper Jolyot de Crébillon",
+   "desc": "French writer (1707-1777)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1777,
+   "anni": 250,
+   "pagine": 27,
+   "mese": 4,
+   "giorno": 12,
+   "fonte_data": "wikidata+wikipedia (en,de); aggiunta a mano 19/11/2026",
+   "scheda": {
+    "it": {
+     "desc": "scrittore francese (1707-1777)",
+     "paesi": [
+      "Francia"
+     ],
+     "opere": [],
+     "nato": 1707,
+     "morto": 1777,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Claude-Prosper_Jolyot_de_Cr%C3%A9billon"
+    },
+    "en": {
+     "desc": "French writer (1707-1777)",
+     "paesi": [
+      "France"
+     ],
+     "opere": [],
+     "nato": 1707,
+     "morto": 1777,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Claude_Prosper_Jolyot_de_Cr%C3%A9billon"
     }
    }
   },
@@ -2304,6 +2783,53 @@
      "morto": 1852,
      "nobel": null,
      "wiki": "https://en.wikipedia.org/wiki/Vasily_Zhukovsky"
+    }
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q206685",
+   "nome": "Albert Uderzo",
+   "it": "Albert Uderzo",
+   "desc": "French comic book artist (1927–2020)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 56,
+   "mese": 4,
+   "giorno": 25,
+   "fonte_data": "wikidata+wikipedia (en,fr); aggiunta a mano 19/11/2026",
+   "scheda": {
+    "it": {
+     "desc": "fumettista francese (1927-2020)",
+     "paesi": [
+      "Francia"
+     ],
+     "opere": [
+      "Asterix",
+      "Tanguy e Laverdure",
+      "Oumpah-Pah"
+     ],
+     "nato": 1927,
+     "morto": 2020,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Albert_Uderzo"
+    },
+    "en": {
+     "desc": "French comic book artist (1927–2020)",
+     "paesi": [
+      "France"
+     ],
+     "opere": [
+      "Asterix",
+      "Tanguy et Laverdure",
+      "Oumpah-pah"
+     ],
+     "nato": 1927,
+     "morto": 2020,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Albert_Uderzo"
     }
    }
   },
@@ -2951,6 +3477,47 @@
      "morto": 2001,
      "nobel": null,
      "wiki": "https://en.wikipedia.org/wiki/Robert_Ludlum"
+    }
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q242834",
+   "nome": "Yevgenia Ginzburg",
+   "it": "Evgenija Solomonovna Ginzburg",
+   "desc": "Russian author of Jewish ancestry",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1977,
+   "anni": 50,
+   "pagine": 35,
+   "mese": 5,
+   "giorno": 25,
+   "fonte_data": "wikidata+wikipedia (en,de,es); aggiunta a mano 19/11/2026",
+   "scheda": {
+    "it": {
+     "desc": "scrittrice russa",
+     "paesi": [
+      "Impero russo",
+      "Unione Sovietica"
+     ],
+     "opere": [],
+     "nato": 1903,
+     "morto": 1977,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Evgenija_Solomonovna_Ginzburg"
+    },
+    "en": {
+     "desc": "Russian author of Jewish ancestry",
+     "paesi": [
+      "Russian Empire",
+      "Soviet Union"
+     ],
+     "opere": [],
+     "nato": 1903,
+     "morto": 1977,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Yevgenia_Ginzburg"
     }
    }
   },
@@ -3847,6 +4414,51 @@
   },
   {
    "tipo": "nascita",
+   "qid": "Q732338",
+   "nome": "Rohinton Mistry",
+   "it": "Rohinton Mistry",
+   "desc": "Indian-born Canadian writer (born 1952)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1952,
+   "anni": 75,
+   "pagine": 26,
+   "mese": 7,
+   "giorno": 3,
+   "fonte_data": "wikidata+wikipedia (de,es); aggiunta a mano 19/11/2026",
+   "scheda": {
+    "it": {
+     "desc": "scrittore canadese",
+     "paesi": [
+      "Canada"
+     ],
+     "opere": [
+      "Un perfetto equilibrio",
+      "Un lungo viaggio"
+     ],
+     "nato": 1952,
+     "morto": null,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Rohinton_Mistry"
+    },
+    "en": {
+     "desc": "Indian-born Canadian writer (born 1952)",
+     "paesi": [
+      "Canada"
+     ],
+     "opere": [
+      "Such a Long Journey",
+      "A Fine Balance"
+     ],
+     "nato": 1952,
+     "morto": null,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Rohinton_Mistry"
+    }
+   }
+  },
+  {
+   "tipo": "nascita",
    "qid": "Q315808",
    "nome": "Neil Simon",
    "it": "Neil Simon",
@@ -4057,6 +4669,84 @@
      "morto": 1977,
      "nobel": null,
      "wiki": "https://en.wikipedia.org/wiki/Alexander_Luria"
+    }
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q343560",
+   "nome": "Salvadore Cammarano",
+   "it": "Salvadore Cammarano",
+   "desc": "Italian librettist and playwright (1801-1852)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1852,
+   "anni": 175,
+   "pagine": 27,
+   "mese": 7,
+   "giorno": 17,
+   "fonte_data": "wikidata+wikipedia (en,fr,de,es); aggiunta a mano 19/11/2026",
+   "scheda": {
+    "it": {
+     "desc": "librettista napoletano",
+     "paesi": [
+      "Regno delle Due Sicilie"
+     ],
+     "opere": [],
+     "nato": 1801,
+     "morto": 1852,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Salvadore_Cammarano"
+    },
+    "en": {
+     "desc": "Italian librettist and playwright (1801-1852)",
+     "paesi": [
+      "Kingdom of the Two Sicilies"
+     ],
+     "opere": [],
+     "nato": 1801,
+     "morto": 1852,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Salvadore_Cammarano"
+    }
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q70155",
+   "nome": "Per Petterson",
+   "it": "Per Petterson",
+   "desc": "Norwegian novelist",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1952,
+   "anni": 75,
+   "pagine": 35,
+   "mese": 7,
+   "giorno": 18,
+   "fonte_data": "wikidata+wikipedia (en,de,es); aggiunta a mano 19/11/2026",
+   "scheda": {
+    "it": {
+     "desc": "scrittore norvegese",
+     "paesi": [
+      "Norvegia"
+     ],
+     "opere": [],
+     "nato": 1952,
+     "morto": null,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Per_Petterson"
+    },
+    "en": {
+     "desc": "Norwegian novelist",
+     "paesi": [
+      "Norway"
+     ],
+     "opere": [],
+     "nato": 1952,
+     "morto": null,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Per_Petterson"
     }
    }
   },
@@ -4276,6 +4966,45 @@
      "morto": 1927,
      "nobel": null,
      "wiki": "https://en.wikipedia.org/wiki/Matilde_Serao"
+    }
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q2641199",
+   "nome": "Federico de Roberto",
+   "it": "Federico de Roberto",
+   "desc": "Italian writer (1861-1927)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 22,
+   "mese": 7,
+   "giorno": 26,
+   "fonte_data": "wikidata+wikipedia (en,es); aggiunta a mano 19/11/2026",
+   "scheda": {
+    "it": {
+     "desc": "scrittore italiano (1861-1927)",
+     "paesi": [
+      "Regno d'Italia"
+     ],
+     "opere": [],
+     "nato": 1861,
+     "morto": 1927,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Federico_De_Roberto"
+    },
+    "en": {
+     "desc": "Italian writer (1861-1927)",
+     "paesi": [
+      "Kingdom of Italy"
+     ],
+     "opere": [],
+     "nato": 1861,
+     "morto": 1927,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Federico_De_Roberto"
     }
    }
   },
@@ -4761,6 +5490,45 @@
    }
   },
   {
+   "tipo": "morte",
+   "qid": "Q72938",
+   "nome": "Tibor Déry",
+   "it": "Tibor Déry",
+   "desc": "Hungarian writer (1894–1977)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1977,
+   "anni": 50,
+   "pagine": 26,
+   "mese": 8,
+   "giorno": 18,
+   "fonte_data": "wikidata+wikipedia (en,de,es); aggiunta a mano 19/11/2026",
+   "scheda": {
+    "it": {
+     "desc": "scrittore ungherese",
+     "paesi": [
+      "Ungheria"
+     ],
+     "opere": [],
+     "nato": 1894,
+     "morto": 1977,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Tibor_D%C3%A9ry"
+    },
+    "en": {
+     "desc": "Hungarian writer (1894–1977)",
+     "paesi": [
+      "Hungary"
+     ],
+     "opere": [],
+     "nato": 1894,
+     "morto": 1977,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Tibor_D%C3%A9ry"
+    }
+   }
+  },
+  {
    "tipo": "prima edizione",
    "qid": "Q649267",
    "nome": "Player Piano",
@@ -5052,6 +5820,53 @@
   },
   {
    "tipo": "nascita",
+   "qid": "Q445740",
+   "nome": "Rita Dove",
+   "it": "Rita Dove",
+   "desc": "American poet, essayist, and university teacher (born 1952)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1952,
+   "anni": 75,
+   "pagine": 29,
+   "mese": 8,
+   "giorno": 28,
+   "fonte_data": "wikidata+wikipedia (en,es); aggiunta a mano 19/11/2026",
+   "scheda": {
+    "it": {
+     "desc": "poetessa e scrittrice statunitense",
+     "paesi": [
+      "Stati Uniti"
+     ],
+     "opere": [
+      "American Smooth",
+      "Thomas and Beulah",
+      "Sonata Mulattica"
+     ],
+     "nato": 1952,
+     "morto": null,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Rita_Dove"
+    },
+    "en": {
+     "desc": "American poet, essayist, and university teacher (born 1952)",
+     "paesi": [
+      "United States"
+     ],
+     "opere": [
+      "American Smooth",
+      "Thomas and Beulah",
+      "Sonata Mulattica"
+     ],
+     "nato": 1952,
+     "morto": null,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Rita_Dove"
+    }
+   }
+  },
+  {
+   "tipo": "nascita",
    "qid": "Q198644",
    "nome": "Paul Bourget",
    "it": "Paul Bourget",
@@ -5180,6 +5995,49 @@
      "morto": 1977,
      "nobel": null,
      "wiki": "https://en.wikipedia.org/wiki/E._F._Schumacher"
+    }
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q721738",
+   "nome": "Goffredo Mameli",
+   "it": "Goffredo Mameli",
+   "desc": "poet, patriot and writer from Italy",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1827,
+   "anni": 200,
+   "pagine": 27,
+   "mese": 9,
+   "giorno": 5,
+   "fonte_data": "wikidata+wikipedia (en,de,es); aggiunta a mano 19/11/2026",
+   "scheda": {
+    "it": {
+     "desc": "poeta e patriota italiano (1827-1849)",
+     "paesi": [
+      "Regno di Sardegna"
+     ],
+     "opere": [
+      "Il Canto degli Italiani"
+     ],
+     "nato": 1827,
+     "morto": 1849,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Goffredo_Mameli"
+    },
+    "en": {
+     "desc": "poet, patriot and writer from Italy",
+     "paesi": [
+      "Kingdom of Sardinia"
+     ],
+     "opere": [
+      "Il Canto degli Italiani"
+     ],
+     "nato": 1827,
+     "morto": 1849,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Goffredo_Mameli"
     }
    }
   },
@@ -5349,6 +6207,51 @@
      "morto": 1952,
      "nobel": null,
      "wiki": "https://en.wikipedia.org/wiki/Ren%C3%A9_Grousset"
+    }
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q520688",
+   "nome": "Alexandre Herculano",
+   "it": "Alexandre Herculano",
+   "desc": "Portuguese writer, poet, journalist (1810-1877)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1877,
+   "anni": 150,
+   "pagine": 32,
+   "mese": 9,
+   "giorno": 13,
+   "fonte_data": "wikidata+wikipedia (en,fr,es); aggiunta a mano 19/11/2026",
+   "scheda": {
+    "it": {
+     "desc": "scrittore e giornalista portoghese",
+     "paesi": [
+      "Regno del Portogallo"
+     ],
+     "opere": [
+      "Eurico, o Presbítero",
+      "History of Portugal by Alexandre Herculano"
+     ],
+     "nato": 1810,
+     "morto": 1877,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Alexandre_Herculano"
+    },
+    "en": {
+     "desc": "Portuguese writer, poet, journalist (1810-1877)",
+     "paesi": [
+      "Kingdom of Portugal"
+     ],
+     "opere": [
+      "Eurico, o Presbítero",
+      "History of Portugal by Alexandre Herculano"
+     ],
+     "nato": 1810,
+     "morto": 1877,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Alexandre_Herculano"
     }
    }
   },
@@ -5620,6 +6523,47 @@
      "morto": 1902,
      "nobel": null,
      "wiki": "https://en.wikipedia.org/wiki/Masaoka_Shiki"
+    }
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q469164",
+   "nome": "Cesare Zavattini",
+   "it": "Cesare Zavattini",
+   "desc": "Italian screenwriter (1902–1989)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1902,
+   "anni": 125,
+   "pagine": 37,
+   "mese": 9,
+   "giorno": 20,
+   "fonte_data": "wikidata+wikipedia (en,de,es); aggiunta a mano 19/11/2026",
+   "scheda": {
+    "it": {
+     "desc": "sceneggiatore, giornalista e commediografo italiano (1902-1989)",
+     "paesi": [
+      "Regno d'Italia",
+      "Italia"
+     ],
+     "opere": [],
+     "nato": 1902,
+     "morto": 1989,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Cesare_Zavattini"
+    },
+    "en": {
+     "desc": "Italian screenwriter (1902–1989)",
+     "paesi": [
+      "Kingdom of Italy",
+      "Italy"
+     ],
+     "opere": [],
+     "nato": 1902,
+     "morto": 1989,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Cesare_Zavattini"
     }
    }
   },
@@ -5927,6 +6871,45 @@
    }
   },
   {
+   "tipo": "nascita",
+   "qid": "Q680368",
+   "nome": "W. S. Merwin",
+   "it": "W.S. Merwin",
+   "desc": "American poet (1927–2019)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 29,
+   "mese": 9,
+   "giorno": 30,
+   "fonte_data": "wikidata+wikipedia (en,it,fr,de,es); aggiunta a mano 19/11/2026",
+   "scheda": {
+    "it": {
+     "desc": "poeta statunitense (1927-2019)",
+     "paesi": [
+      "Stati Uniti"
+     ],
+     "opere": [],
+     "nato": 1927,
+     "morto": 2019,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/W.S._Merwin"
+    },
+    "en": {
+     "desc": "American poet (1927–2019)",
+     "paesi": [
+      "United States"
+     ],
+     "opere": [],
+     "nato": 1927,
+     "morto": 2019,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/W._S._Merwin"
+    }
+   }
+  },
+  {
    "tipo": "prima edizione",
    "qid": "Q1210939",
    "nome": "The Monkey's Paw",
@@ -6000,6 +6983,49 @@
   },
   {
    "tipo": "nascita",
+   "qid": "Q298761",
+   "nome": "Clive Barker",
+   "it": "Clive Barker",
+   "desc": "English author, film director, and visual artist (born 1952) (74 years)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1952,
+   "anni": 75,
+   "pagine": 52,
+   "mese": 10,
+   "giorno": 5,
+   "fonte_data": "wikidata+wikipedia (en,fr,es); aggiunta a mano 19/11/2026",
+   "scheda": {
+    "it": {
+     "desc": "scrittore e regista britannico",
+     "paesi": [
+      "Regno Unito"
+     ],
+     "opere": [
+      "Tapping the vein"
+     ],
+     "nato": 1952,
+     "morto": null,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Clive_Barker"
+    },
+    "en": {
+     "desc": "English author, film director, and visual artist (born 1952) (74 years)",
+     "paesi": [
+      "United Kingdom"
+     ],
+     "opere": [
+      "Tapping the vein"
+     ],
+     "nato": 1952,
+     "morto": null,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Clive_Barker"
+    }
+   }
+  },
+  {
+   "tipo": "nascita",
    "qid": "Q238584",
    "nome": "R. D. Laing",
    "it": "Ronald Laing",
@@ -6040,6 +7066,49 @@
      "morto": 1989,
      "nobel": null,
      "wiki": "https://en.wikipedia.org/wiki/R._D._Laing"
+    }
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q629931",
+   "nome": "Ricardo Güiraldes",
+   "it": "Ricardo Güiraldes",
+   "desc": "Argentine writer (1886-1927)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 26,
+   "mese": 10,
+   "giorno": 8,
+   "fonte_data": "wikidata+wikipedia (en,de,es); aggiunta a mano 19/11/2026",
+   "scheda": {
+    "it": {
+     "desc": "scrittore e poeta argentino",
+     "paesi": [
+      "Argentina"
+     ],
+     "opere": [
+      "Don Segundo Sombra"
+     ],
+     "nato": 1886,
+     "morto": 1927,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Ricardo_G%C3%BCiraldes"
+    },
+    "en": {
+     "desc": "Argentine writer (1886-1927)",
+     "paesi": [
+      "Argentina"
+     ],
+     "opere": [
+      "Don Segundo Sombra"
+     ],
+     "nato": 1886,
+     "morto": 1927,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Ricardo_G%C3%BCiraldes"
     }
    }
   },
@@ -6550,6 +7619,53 @@
    }
   },
   {
+   "tipo": "nascita",
+   "qid": "Q379745",
+   "nome": "Carlos Drummond de Andrade",
+   "it": "Carlos Drummond de Andrade",
+   "desc": "Brazilian poet (1902–1987)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1902,
+   "anni": 125,
+   "pagine": 29,
+   "mese": 10,
+   "giorno": 31,
+   "fonte_data": "wikidata+wikipedia (en,fr,de,es); aggiunta a mano 19/11/2026",
+   "scheda": {
+    "it": {
+     "desc": "poeta, cronista e scrittore brasiliano",
+     "paesi": [
+      "Brasile"
+     ],
+     "opere": [
+      "A Rosa do Povo",
+      "O amor natural",
+      "Sentimento do mundo"
+     ],
+     "nato": 1902,
+     "morto": 1987,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Carlos_Drummond_de_Andrade"
+    },
+    "en": {
+     "desc": "Brazilian poet (1902–1987)",
+     "paesi": [
+      "Brazil"
+     ],
+     "opere": [
+      "O amor natural",
+      "A Rosa do Povo",
+      "Sentimento do mundo"
+     ],
+     "nato": 1902,
+     "morto": 1987,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Carlos_Drummond_de_Andrade"
+    }
+   }
+  },
+  {
    "tipo": "prima edizione",
    "qid": "Q580463",
    "nome": "The Tale of Peter Rabbit",
@@ -6729,6 +7845,45 @@
    }
   },
   {
+   "tipo": "nascita",
+   "qid": "Q381107",
+   "nome": "Gyula Illyés",
+   "it": "Gyula Illyés",
+   "desc": "Hungarian poet (1902–1983)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1902,
+   "anni": 125,
+   "pagine": 28,
+   "mese": 11,
+   "giorno": 2,
+   "fonte_data": "wikidata+wikipedia (en,de,es); aggiunta a mano 19/11/2026",
+   "scheda": {
+    "it": {
+     "desc": "scrittore ungherese",
+     "paesi": [
+      "Ungheria"
+     ],
+     "opere": [],
+     "nato": 1902,
+     "morto": 1983,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Gyula_Illy%C3%A9s"
+    },
+    "en": {
+     "desc": "Hungarian poet (1902–1983)",
+     "paesi": [
+      "Hungary"
+     ],
+     "opere": [],
+     "nato": 1902,
+     "morto": 1983,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Gyula_Illy%C3%A9s"
+    }
+   }
+  },
+  {
    "tipo": "morte",
    "qid": "Q192214",
    "nome": "René Goscinny",
@@ -6811,6 +7966,53 @@
      "morto": null,
      "nobel": null,
      "wiki": "https://en.wikipedia.org/wiki/Michael_Cunningham"
+    }
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q484141",
+   "nome": "Muhammad Iqbal",
+   "it": "Muhammad Iqbal",
+   "desc": "British-Indian Islamic philosopher, poet and politician (1877-1938)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1877,
+   "anni": 150,
+   "pagine": 110,
+   "mese": 11,
+   "giorno": 9,
+   "fonte_data": "wikidata+wikipedia (en,it,de,es); aggiunta a mano 19/11/2026",
+   "scheda": {
+    "it": {
+     "desc": "poeta e filosofo dell'India britannica",
+     "paesi": [
+      "Impero anglo-indiano"
+     ],
+     "opere": [
+      "Gabriel's Wing",
+      "Gift from Hijaz",
+      "Ilm Al-Iqtisad"
+     ],
+     "nato": 1877,
+     "morto": 1938,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Muhammad_Iqbal"
+    },
+    "en": {
+     "desc": "British-Indian Islamic philosopher, poet and politician (1877-1938)",
+     "paesi": [
+      "British Raj"
+     ],
+     "opere": [
+      "Persian Psalms",
+      "Gabriel's Wing",
+      "Gift from Hijaz"
+     ],
+     "nato": 1877,
+     "morto": 1938,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Muhammad_Iqbal"
     }
    }
   },
@@ -6934,6 +8136,49 @@
      "lingua": "English",
      "titolo_orig": "Jogo de Espelhos",
      "wiki": "https://en.wikipedia.org/wiki/They_Do_It_with_Mirrors"
+    }
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q152176",
+   "nome": "Paul Éluard",
+   "it": "Paul Éluard",
+   "desc": "French poet (1895–1952)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1952,
+   "anni": 75,
+   "pagine": 79,
+   "mese": 11,
+   "giorno": 18,
+   "fonte_data": "wikidata+wikipedia (en,fr,de,es); aggiunta a mano 19/11/2026",
+   "scheda": {
+    "it": {
+     "desc": "poeta francese",
+     "paesi": [
+      "Francia"
+     ],
+     "opere": [
+      "Liberté, j'écris ton nom"
+     ],
+     "nato": 1895,
+     "morto": 1952,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Paul_%C3%89luard"
+    },
+    "en": {
+     "desc": "French poet (1895–1952)",
+     "paesi": [
+      "France"
+     ],
+     "opere": [
+      "Liberté, j'écris ton nom"
+     ],
+     "nato": 1895,
+     "morto": 1952,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Paul_%C3%89luard"
     }
    }
   },
@@ -7102,6 +8347,53 @@
    }
   },
   {
+   "tipo": "nascita",
+   "qid": "Q401023",
+   "nome": "Ahmadou Kourouma",
+   "it": "Ahmadou Kourouma",
+   "desc": "Ivorian writer (1927-2003)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 32,
+   "mese": 11,
+   "giorno": 24,
+   "fonte_data": "wikidata+wikipedia (en,de,es); aggiunta a mano 19/11/2026",
+   "scheda": {
+    "it": {
+     "desc": "scrittore ivoriano",
+     "paesi": [
+      "Algeria"
+     ],
+     "opere": [
+      "Le soleil des indépendances",
+      "Monnè, outrages et defis",
+      "Allah Is Not Obliged"
+     ],
+     "nato": 1927,
+     "morto": 2003,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Ahmadou_Kourouma"
+    },
+    "en": {
+     "desc": "Ivorian writer (1927-2003)",
+     "paesi": [
+      "Algeria"
+     ],
+     "opere": [
+      "Allah Is Not Obliged",
+      "Waiting for the Wild Beasts to Vote",
+      "Le soleil des indépendances"
+     ],
+     "nato": 1927,
+     "morto": 2003,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Ahmadou_Kourouma"
+    }
+   }
+  },
+  {
    "tipo": "prima edizione",
    "qid": "Q2642138",
    "nome": "A Daughter's a Daughter",
@@ -7180,6 +8472,53 @@
    }
   },
   {
+   "tipo": "nascita",
+   "qid": "Q312628",
+   "nome": "Carlo Levi",
+   "it": "Carlo Levi",
+   "desc": "Italian painter, writer, politic and anti-fascist (1902-1975)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1902,
+   "anni": 125,
+   "pagine": 42,
+   "mese": 11,
+   "giorno": 29,
+   "fonte_data": "wikidata+wikipedia (en,es); aggiunta a mano 19/11/2026",
+   "scheda": {
+    "it": {
+     "desc": "scrittore, pittore, politico e antifascista italiano (1902-1975)",
+     "paesi": [
+      "Regno d'Italia",
+      "Italia"
+     ],
+     "opere": [
+      "Cristo si è fermato a Eboli",
+      "Lucania '61"
+     ],
+     "nato": 1902,
+     "morto": 1975,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Carlo_Levi"
+    },
+    "en": {
+     "desc": "Italian painter, writer, politic and anti-fascist (1902-1975)",
+     "paesi": [
+      "Kingdom of Italy",
+      "Italy"
+     ],
+     "opere": [
+      "Christ Stopped at Eboli",
+      "Lucania '61"
+     ],
+     "nato": 1902,
+     "morto": 1975,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Carlo_Levi"
+    }
+   }
+  },
+  {
    "tipo": "morte",
    "qid": "Q31215",
    "nome": "Miloš Crnjanski",
@@ -7225,6 +8564,88 @@
      "morto": 1977,
      "nobel": null,
      "wiki": "https://en.wikipedia.org/wiki/Milo%C5%A1_Crnjanski"
+    }
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q544627",
+   "nome": "Terence Rattigan",
+   "it": "Terence Rattigan",
+   "desc": "British playwright, screenwriter (1911-1977)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1977,
+   "anni": 50,
+   "pagine": 26,
+   "mese": 11,
+   "giorno": 30,
+   "fonte_data": "wikidata+wikipedia (en,fr,de,es); aggiunta a mano 19/11/2026",
+   "scheda": {
+    "it": {
+     "desc": "commediografo e sceneggiatore britannico",
+     "paesi": [
+      "Regno Unito"
+     ],
+     "opere": [],
+     "nato": 1911,
+     "morto": 1977,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Terence_Rattigan"
+    },
+    "en": {
+     "desc": "British playwright, screenwriter (1911-1977)",
+     "paesi": [
+      "United Kingdom"
+     ],
+     "opere": [],
+     "nato": 1911,
+     "morto": 1977,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Terence_Rattigan"
+    }
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q505383",
+   "nome": "Rafael Sánchez Ferlosio",
+   "it": "Rafael Sánchez Ferlosio",
+   "desc": "writer from Spain (1927-2019)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1927,
+   "anni": 100,
+   "pagine": 25,
+   "mese": 12,
+   "giorno": 4,
+   "fonte_data": "wikidata+wikipedia (en,de,es); aggiunta a mano 19/11/2026",
+   "scheda": {
+    "it": {
+     "desc": "scrittore spagnolo (1927-2019)",
+     "paesi": [
+      "Spagna"
+     ],
+     "opere": [
+      "El Jarama"
+     ],
+     "nato": 1927,
+     "morto": 2019,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Rafael_S%C3%A1nchez_Ferlosio"
+    },
+    "en": {
+     "desc": "writer from Spain (1927-2019)",
+     "paesi": [
+      "Spain"
+     ],
+     "opere": [
+      "El Jarama"
+     ],
+     "nato": 1927,
+     "morto": 2019,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Rafael_S%C3%A1nchez_Ferlosio"
     }
    }
   },
@@ -7318,6 +8739,102 @@
   },
   {
    "tipo": "morte",
+   "qid": "Q235955",
+   "nome": "Clarice Lispector",
+   "it": "Clarice Lispector",
+   "desc": "Ukrainian-Brazilian writer, poet, and journalist (1920–1977)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1977,
+   "anni": 50,
+   "pagine": 63,
+   "mese": 12,
+   "giorno": 9,
+   "fonte_data": "wikidata+wikipedia (en,fr,de,es); aggiunta a mano 19/11/2026",
+   "scheda": {
+    "it": {
+     "desc": "scrittrice, poetessa e giornalista ucraino-brasiliana (1920–1977)",
+     "paesi": [
+      "RSS Ucraina",
+      "Brasile"
+     ],
+     "opere": [
+      "Near to the Wild Heart",
+      "Family Ties",
+      "The Hour of the Star"
+     ],
+     "nato": 1920,
+     "morto": 1977,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Clarice_Lispector"
+    },
+    "en": {
+     "desc": "Ukrainian-Brazilian writer, poet, and journalist (1920–1977)",
+     "paesi": [
+      "Ukrainian Soviet Socialist Republic",
+      "Brazil"
+     ],
+     "opere": [
+      "Near to the Wild Heart",
+      "Family Ties",
+      "The Hour of the Star"
+     ],
+     "nato": 1920,
+     "morto": 1977,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Clarice_Lispector"
+    }
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q455703",
+   "nome": "José de Alencar",
+   "it": "José de Alencar",
+   "desc": "Brazilian writer (1829–1877)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1877,
+   "anni": 150,
+   "pagine": 40,
+   "mese": 12,
+   "giorno": 12,
+   "fonte_data": "wikidata+wikipedia (en,fr,de,es); aggiunta a mano 19/11/2026",
+   "scheda": {
+    "it": {
+     "desc": "politico e scrittore brasiliano",
+     "paesi": [
+      "Brasile"
+     ],
+     "opere": [
+      "Iracema (romanzo)",
+      "O Guarani",
+      "Ubirajara"
+     ],
+     "nato": 1829,
+     "morto": 1877,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Jos%C3%A9_de_Alencar"
+    },
+    "en": {
+     "desc": "Brazilian writer (1829–1877)",
+     "paesi": [
+      "Brazil"
+     ],
+     "opere": [
+      "Iracema",
+      "The Guarani",
+      "Ubirajara"
+     ],
+     "nato": 1829,
+     "morto": 1877,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Jos%C3%A9_de_Alencar"
+    }
+   }
+  },
+  {
+   "tipo": "morte",
    "qid": "Q311931",
    "nome": "Bedřich Hrozný",
    "it": "Bedřich Hrozný",
@@ -7354,6 +8871,129 @@
      "morto": 1952,
      "nobel": null,
      "wiki": "https://en.wikipedia.org/wiki/Bed%C5%99ich_Hrozn%C3%BD"
+    }
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q982729",
+   "nome": "Oğuz Atay",
+   "it": "Oğuz Atay",
+   "desc": "Turkish novelist (1934–1977)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1977,
+   "anni": 50,
+   "pagine": 18,
+   "mese": 12,
+   "giorno": 13,
+   "fonte_data": "wikidata+wikipedia (en,de,es); aggiunta a mano 19/11/2026",
+   "scheda": {
+    "it": {
+     "desc": "scrittore turco",
+     "paesi": [
+      "Turchia"
+     ],
+     "opere": [
+      "The Disconnected",
+      "Dangerous Games"
+     ],
+     "nato": 1934,
+     "morto": 1977,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/O%C4%9Fuz_Atay"
+    },
+    "en": {
+     "desc": "Turkish novelist (1934–1977)",
+     "paesi": [
+      "Turkey"
+     ],
+     "opere": [
+      "The Disconnected",
+      "Dangerous Games"
+     ],
+     "nato": 1934,
+     "morto": 1977,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/O%C4%9Fuz_Atay"
+    }
+   }
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q2459284",
+   "nome": "Alexander Galich",
+   "it": "Aleksandr Arkad'evič Galič",
+   "desc": "Soviet musician and writer (1918–1977)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1977,
+   "anni": 50,
+   "pagine": 26,
+   "mese": 12,
+   "giorno": 15,
+   "fonte_data": "wikidata+wikipedia (en,de,es); aggiunta a mano 19/11/2026",
+   "scheda": {
+    "it": {
+     "desc": "poeta, drammaturgo e cantante sovietico (1918-1977)",
+     "paesi": [
+      "Unione Sovietica"
+     ],
+     "opere": [],
+     "nato": 1918,
+     "morto": 1977,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Aleksandr_Arkad%27evi%C4%8D_Gali%C4%8D"
+    },
+    "en": {
+     "desc": "Soviet musician and writer (1918–1977)",
+     "paesi": [
+      "Soviet Union"
+     ],
+     "opere": [],
+     "nato": 1918,
+     "morto": 1977,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Alexander_Galich_(writer)"
+    }
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q118936",
+   "nome": "Rafael Alberti",
+   "it": "Rafael Alberti",
+   "desc": "Spanish poet (1902–1999)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1902,
+   "anni": 125,
+   "pagine": 49,
+   "mese": 12,
+   "giorno": 16,
+   "fonte_data": "wikidata+wikipedia (en,fr,de,es); aggiunta a mano 19/11/2026",
+   "scheda": {
+    "it": {
+     "desc": "poeta spagnolo",
+     "paesi": [
+      "Spagna"
+     ],
+     "opere": [],
+     "nato": 1902,
+     "morto": 1999,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Rafael_Alberti"
+    },
+    "en": {
+     "desc": "Spanish poet (1902–1999)",
+     "paesi": [
+      "Spain"
+     ],
+     "opere": [],
+     "nato": 1902,
+     "morto": 1999,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Rafael_Alberti"
     }
    }
   },
@@ -7524,6 +9164,51 @@
      "morto": 2001,
      "nobel": null,
      "wiki": "https://en.wikipedia.org/wiki/Mortimer_J._Adler"
+    }
+   }
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q559264",
+   "nome": "Shen Congwen",
+   "it": "Shen Congwen",
+   "desc": "Chinese writer (1902–1988)",
+   "autore": null,
+   "autore_qid": null,
+   "anno": 1902,
+   "anni": 125,
+   "pagine": 28,
+   "mese": 12,
+   "giorno": 28,
+   "fonte_data": "wikidata+wikipedia (en,es); aggiunta a mano 19/11/2026",
+   "scheda": {
+    "it": {
+     "desc": "scrittore cinese（1902-1988）",
+     "paesi": [
+      "dinastia Qing",
+      "Repubblica di Cina"
+     ],
+     "opere": [
+      "Border Town"
+     ],
+     "nato": 1902,
+     "morto": 1988,
+     "nobel": null,
+     "wiki": "https://it.wikipedia.org/wiki/Shen_Congwen"
+    },
+    "en": {
+     "desc": "Chinese writer (1902–1988)",
+     "paesi": [
+      "Republic of China",
+      "Qing dynasty"
+     ],
+     "opere": [
+      "Border Town"
+     ],
+     "nato": 1902,
+     "morto": 1988,
+     "nobel": null,
+     "wiki": "https://en.wikipedia.org/wiki/Shen_Congwen"
     }
    }
   },
