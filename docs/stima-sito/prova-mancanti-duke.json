@@ -1,0 +1,303 @@
+{
+ "classi_usate": [
+  "Q8261",
+  "Q49084",
+  "Q25379",
+  "Q5185279",
+  "Q571",
+  "Q7725634",
+  "Q149537"
+ ],
+ "opere_trovate_1929": 163,
+ "libri": {
+  "A Room of One's Own": {
+   "duke": {
+    "titolo": "A Room of One’s Own",
+    "autore": "Virginia Woolf"
+   },
+   "qid_dalla_duke": null,
+   "candidati_cercati": [
+    [
+     "Q12614092",
+     "A Room of One's Own",
+     "2011 studio album by Lucia with Epitone Project"
+    ],
+    [
+     "Q139912191",
+     "A Room of One's Own",
+     null
+    ],
+    [
+     "Q139931459",
+     "A Room of One's Own",
+     null
+    ],
+    [
+     "Q1204366",
+     "A Room of One's Own",
+     "1929 essay by Virginia Woolf"
+    ],
+    [
+     "Q114486222",
+     "A Room of One's Own",
+     "episode of Hope & Faith (S2 E22)"
+    ]
+   ],
+   "schede": [
+    {
+     "qid": "Q12614092",
+     "etichetta": "A Room of One's Own",
+     "P31": [
+      "Q482994"
+     ],
+     "P7937_forma": [
+      "Q208569"
+     ],
+     "P577": [
+      "+2011-09-17T00:00:00Z"
+     ],
+     "P50": [],
+     "wikipedia": 1
+    },
+    {
+     "qid": "Q139912191",
+     "etichetta": "A Room of One's Own",
+     "P31": [
+      "Q3331189"
+     ],
+     "P7937_forma": [],
+     "P577": [
+      "+2014-12-12T00:00:00Z"
+     ],
+     "P50": [],
+     "wikipedia": 0
+    },
+    {
+     "qid": "Q139931459",
+     "etichetta": "A Room of One's Own",
+     "P31": [
+      "Q1980247"
+     ],
+     "P7937_forma": [],
+     "P577": [],
+     "P50": [],
+     "wikipedia": 0
+    }
+   ],
+   "nella_nostra_lista": {
+    "Q12614092": null,
+    "Q139912191": null,
+    "Q139931459": null
+   }
+  },
+  "Red Harvest": {
+   "duke": {
+    "titolo": "Red Harvest",
+    "autore": "Dashiell Hammett"
+   },
+   "qid_dalla_duke": "Q1935469",
+   "candidati_cercati": [],
+   "schede": [
+    {
+     "qid": "Q1935469",
+     "etichetta": "Red Harvest",
+     "P31": [
+      "Q7725634"
+     ],
+     "P7937_forma": [
+      "Q8261"
+     ],
+     "P577": [
+      "+1929-00-00T00:00:00Z",
+      "+1927-11-00T00:00:00Z"
+     ],
+     "P50": [
+      "Q186335"
+     ],
+     "wikipedia": 12
+    }
+   ],
+   "nella_nostra_lista": {
+    "Q1935469": null
+   }
+  },
+  "Rope": {
+   "duke": {
+    "titolo": "Rope",
+    "autore": "Patrick Hamilton"
+   },
+   "qid_dalla_duke": "Q7366709",
+   "candidati_cercati": [],
+   "schede": [
+    {
+     "qid": "Q7366709",
+     "etichetta": "Rope",
+     "P31": [
+      "Q116476516"
+     ],
+     "P7937_forma": [
+      "Q25379"
+     ],
+     "P577": [
+      "+1929-00-00T00:00:00Z"
+     ],
+     "P50": [
+      "Q1278407"
+     ],
+     "wikipedia": 3
+    }
+   ],
+   "nella_nostra_lista": {
+    "Q7366709": null
+   }
+  },
+  "A Preface to Morals": {
+   "duke": {
+    "titolo": "A Preface to Morals",
+    "autore": "Walter Lippmann"
+   },
+   "qid_dalla_duke": "Q131299911",
+   "candidati_cercati": [],
+   "schede": [
+    {
+     "qid": "Q131299911",
+     "etichetta": "A Preface to Morals",
+     "P31": [
+      "Q7725634"
+     ],
+     "P7937_forma": [],
+     "P577": [
+      "+1929-00-00T00:00:00Z"
+     ],
+     "P50": [
+      "Q316568"
+     ],
+     "wikipedia": 0
+    }
+   ],
+   "nella_nostra_lista": {
+    "Q131299911": null
+   }
+  },
+  "The Roman Hat Mystery": {
+   "duke": {
+    "titolo": "The Roman Hat Mystery",
+    "autore": "Ellery Queen"
+   },
+   "qid_dalla_duke": null,
+   "candidati_cercati": [
+    [
+     "Q1147884",
+     "The Roman Hat Mystery",
+     "novel by Ellery Queen"
+    ],
+    [
+     "Q130250255",
+     "The Roman Hat Mystery",
+     "1979 Signet edition"
+    ],
+    [
+     "Q130250261",
+     "The Roman Hat Mystery",
+     "1979 Mysterious Press edition"
+    ]
+   ],
+   "schede": [
+    {
+     "qid": "Q1147884",
+     "etichetta": "The Roman Hat Mystery",
+     "P31": [
+      "Q7725634"
+     ],
+     "P7937_forma": [
+      "Q8261"
+     ],
+     "P577": [
+      "+1929-00-00T00:00:00Z",
+      "+1929-08-16T00:00:00Z"
+     ],
+     "P50": [
+      "Q10285740",
+      "Q10323597"
+     ],
+     "wikipedia": 10
+    },
+    {
+     "qid": "Q130250255",
+     "etichetta": "The Roman Hat Mystery",
+     "P31": [
+      "Q3331189"
+     ],
+     "P7937_forma": [],
+     "P577": [
+      "+1979-00-00T00:00:00Z"
+     ],
+     "P50": [],
+     "wikipedia": 0
+    },
+    {
+     "qid": "Q130250261",
+     "etichetta": "The Roman Hat Mystery",
+     "P31": [
+      "Q3331189"
+     ],
+     "P7937_forma": [],
+     "P577": [
+      "+1979-00-00T00:00:00Z"
+     ],
+     "P50": [],
+     "wikipedia": 0
+    }
+   ],
+   "nella_nostra_lista": {
+    "Q1147884": [
+     "Q7725634"
+    ],
+    "Q130250255": null,
+    "Q130250261": null
+   }
+  },
+  "Cup of Gold": {
+   "duke": {
+    "titolo": "Cup of Gold",
+    "autore": "John Steinbeck"
+   },
+   "qid_dalla_duke": "Q3207868",
+   "candidati_cercati": [],
+   "schede": [
+    {
+     "qid": "Q3207868",
+     "etichetta": "Cup of Gold: A Life of Sir Henry Morgan, Buccaneer, with Occasional Reference to History",
+     "P31": [
+      "Q7725634"
+     ],
+     "P7937_forma": [
+      "Q8261"
+     ],
+     "P577": [
+      "+1929-00-00T00:00:00Z"
+     ],
+     "P50": [
+      "Q39212"
+     ],
+     "wikipedia": 10
+    }
+   ],
+   "nella_nostra_lista": {
+    "Q3207868": [
+     "Q7725634"
+    ]
+   }
+  },
+  "All Quiet on the Western Front": {
+   "duke": {
+    "titolo": "All Quiet on the Western Front",
+    "autore": "Arthur Wesley Wheen"
+   },
+   "qid_dalla_duke": null,
+   "candidati_cercati": [],
+   "schede": [],
+   "nella_nostra_lista": {}
+  }
+ }
+}
