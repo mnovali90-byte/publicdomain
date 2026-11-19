@@ -1,5 +1,7 @@
 # Campione della nuova classifica — 2026-11-19
 
+**Letture fallite: 0** (se non è 0, il campione non è completo e non vale).
+
 Visite da persone, 11/2025–10/2026 (12 mesi chiusi). **Prima** = ordine del sito oggi (voto 0-100, poi visite grezze). **Dopo** = visite tipiche (ogni mese al massimo 3 volte il mese tipico). ⚡ = picco.
 
 ## Italia (Wikipedia in it)
@@ -13,29 +15,29 @@ Visite da persone, 11/2025–10/2026 (12 mesi chiusi). **Prima** = ordine del si
 | 5 | Robert Walser | Asvero Gravelli ⚡ | 9,848 (19,434) | 4 |
 | 6 | A. A. Milne | A. A. Milne | 7,077 (7,077) | 6 |
 | 7 | Gottfried Benn | Gottfried Benn | 4,295 (4,295) | 7 |
-| 8 | Pier Maria Rosso di San Secondo | Arnaldo Fraccaroli | 3,283 (3,283) | 9 |
+| 8 | Pier Maria Rosso di San Secondo | Arnaldo Fraccaroli | 3,284 (3,284) | 9 |
 | 9 | Arnaldo Fraccaroli | Julien Benda | 3,135 (3,135) | 10 |
-| 10 | Julien Benda | B. R. Ambedkar | 2,463 (2,463) | 12 |
-| 11 | Evelyn Beatrice Hall | Paolo Buzzi | 2,078 (2,078) | 13 |
-| 12 | B. R. Ambedkar | Henry Louis Mencken | 1,981 (1,981) | 14 |
-| 13 | Paolo Buzzi | Rigoberto López Pérez | 1,713 (1,713) | 15 |
-| 14 | Henry Louis Mencken | Pío Baroja | 1,689 (1,689) | 16 |
-| 15 | Rigoberto López Pérez | Domenico Giuliotti | 1,688 (1,688) | 17 |
-| 16 | Pío Baroja | Marie Laurencin | 1,369 (1,369) | 18 |
-| 17 | Domenico Giuliotti | Max Beerbohm | 1,119 (1,119) | 20 |
-| 18 | Marie Laurencin | Aleksandr Aleksandrovič Fadeev | 1,069 (1,069) | 21 |
-| 19 | Daniele Varè | Walter de la Mare | 960 (960) | 22 |
-| 20 | Max Beerbohm | Paul Léautaud | 894 (894) | 24 |
-| 21 | Aleksandr Aleksandrovič Fadeev | Lina Pietravalle | 865 (865) | 25 |
-| 22 | Walter de la Mare | Hans Carossa | 792 (792) | 26 |
-| 23 | Johannes Jørgensen | Charles MacArthur | 752 (752) | 27 |
-| 24 | Paul Léautaud | Guido Milanesi | 719 (719) | 29 |
-| 25 | Lina Pietravalle | Vittorio Calvino | 717 (717) | 28 |
-| 26 | Hans Carossa | Louis Bromfield | 658 (658) | 30 |
-| 27 | Charles MacArthur | Ezio Taddei | 603 (603) | 31 |
-| 28 | Vittorio Calvino | Nedda Falzolgher | 524 (524) | 32 |
-| 29 | Guido Milanesi | Francesco Guglielmino | 481 (481) | 33 |
-| 30 | Louis Bromfield | Edmund Clerihew Bentley | 444 (444) | 35 |
+| 10 | Julien Benda | Evelyn Beatrice Hall | 2,678 (2,678) | 11 |
+| 11 | Evelyn Beatrice Hall | B. R. Ambedkar | 2,463 (2,463) | 12 |
+| 12 | B. R. Ambedkar | Paolo Buzzi | 2,078 (2,078) | 13 |
+| 13 | Paolo Buzzi | Henry Louis Mencken | 1,981 (1,981) | 14 |
+| 14 | Henry Louis Mencken | Rigoberto López Pérez | 1,713 (1,713) | 15 |
+| 15 | Rigoberto López Pérez | Pío Baroja | 1,689 (1,689) | 16 |
+| 16 | Pío Baroja | Domenico Giuliotti | 1,688 (1,688) | 17 |
+| 17 | Domenico Giuliotti | Marie Laurencin | 1,369 (1,369) | 18 |
+| 18 | Marie Laurencin | Max Beerbohm | 1,119 (1,119) | 20 |
+| 19 | Daniele Varè | Aleksandr Aleksandrovič Fadeev | 1,069 (1,069) | 21 |
+| 20 | Max Beerbohm | Walter de la Mare | 960 (960) | 22 |
+| 21 | Aleksandr Aleksandrovič Fadeev | Daniele Varè | 955 (1,316) | 19 |
+| 22 | Walter de la Mare | Johannes Jørgensen | 914 (914) | 23 |
+| 23 | Johannes Jørgensen | Paul Léautaud | 894 (894) | 24 |
+| 24 | Paul Léautaud | Lina Pietravalle | 865 (865) | 25 |
+| 25 | Lina Pietravalle | Hans Carossa | 791 (791) | 26 |
+| 26 | Hans Carossa | Charles MacArthur | 752 (752) | 27 |
+| 27 | Charles MacArthur | Guido Milanesi | 719 (719) | 29 |
+| 28 | Vittorio Calvino | Vittorio Calvino | 717 (717) | 28 |
+| 29 | Guido Milanesi | Louis Bromfield | 658 (658) | 30 |
+| 30 | Louis Bromfield | Ezio Taddei | 603 (603) | 31 |
 
 Picchi in questa lingua: 1: Asvero Gravelli (19,434 → 9,848)
 
@@ -44,37 +46,37 @@ Picchi in questa lingua: 1: Asvero Gravelli (19,434 → 9,848)
 | # | Prima | Dopo | visite tipiche (grezze) | prima era |
 |---|---|---|---|---|
 | 1 | Bertolt Brecht | Bertolt Brecht | 77,858 (77,858) | 1 |
-| 2 | Marie Laurencin | Marie Laurencin | 41,994 (41,994) | 2 |
-| 3 | Paul Léautaud | Paul Léautaud | 34,789 (34,789) | 3 |
+| 2 | Marie Laurencin | Marie Laurencin | 41,995 (41,995) | 2 |
+| 3 | Paul Léautaud | Paul Léautaud | 34,787 (34,787) | 3 |
 | 4 | Curnonsky | Curnonsky | 13,793 (13,793) | 4 |
-| 5 | Robert Walser | Robert Walser | 10,232 (10,232) | 5 |
+| 5 | Robert Walser | Robert Walser | 10,226 (10,226) | 5 |
 | 6 | Julien Benda | Julien Benda | 9,554 (9,554) | 6 |
-| 7 | A. A. Milne | A. A. Milne | 8,066 (8,066) | 7 |
+| 7 | A. A. Milne | A. A. Milne | 8,055 (8,055) | 7 |
 | 8 | Paul Gadenne | Paul Gadenne | 6,508 (6,508) | 8 |
-| 9 | B. R. Ambedkar | B. R. Ambedkar | 5,775 (5,775) | 9 |
+| 9 | B. R. Ambedkar | B. R. Ambedkar | 5,772 (5,772) | 9 |
 | 10 | Adolphe d'Espie | Henry Louis Mencken | 4,437 (4,437) | 11 |
-| 11 | Henry Louis Mencken | Louis Bromfield | 3,649 (3,649) | 13 |
-| 12 | Evelyn Beatrice Hall | Giovanni Papini | 3,354 (3,354) | 14 |
-| 13 | Louis Bromfield | Gottfried Benn | 3,343 (3,343) | 15 |
-| 14 | Giovanni Papini | Adolphe d'Espie ⚡ | 2,930 (5,068) | 10 |
-| 15 | Gottfried Benn | Pío Baroja | 2,416 (2,416) | 16 |
-| 16 | Pío Baroja | Frieda von Richthofen | 2,351 (2,351) | 18 |
-| 17 | François Jaffrennou | Rupert Hughes | 1,486 (2,331) | 19 |
-| 18 | Frieda von Richthofen | Nikolaj Velimirović | 1,394 (1,394) | 21 |
-| 19 | Rupert Hughes | André Demaison | 1,368 (1,368) | 22 |
-| 20 | Karl M. Baer | Guy-Charles Cros | 1,303 (1,303) | 23 |
-| 21 | Nikolaj Velimirović | Aleksandr Aleksandrovič Fadeev | 1,080 (1,080) | 25 |
-| 22 | André Demaison | Ahmed Reda Houhou | 1,056 (1,056) | 26 |
-| 23 | Guy-Charles Cros | Karl M. Baer | 1,053 (1,687) | 20 |
-| 24 | Walter de la Mare | Jean-Pierre Maxence | 1,039 (1,039) | 27 |
-| 25 | Aleksandr Aleksandrovič Fadeev | Zenobia Camprubí | 953 (990) | 28 |
-| 26 | Ahmed Reda Houhou | Walter de la Mare | 918 (918) | 24 |
-| 27 | Jean-Pierre Maxence | Max Beerbohm | 879 (879) | 29 |
-| 28 | Zenobia Camprubí | Jean Boulnois | 857 (857) | 32 |
-| 29 | Max Beerbohm | Emma Müller | 853 (932) | 30 |
-| 30 | Emma Müller | Émile Gaudissard | 832 (832) | 33 |
+| 11 | Henry Louis Mencken | Evelyn Beatrice Hall | 4,005 (4,005) | 12 |
+| 12 | Evelyn Beatrice Hall | Louis Bromfield | 3,647 (3,647) | 13 |
+| 13 | Louis Bromfield | Giovanni Papini | 3,354 (3,354) | 14 |
+| 14 | Giovanni Papini | Gottfried Benn | 3,339 (3,339) | 15 |
+| 15 | Gottfried Benn | Adolphe d'Espie ⚡ | 2,928 (5,066) | 10 |
+| 16 | Pío Baroja | François Jaffrennou | 2,522 (2,522) | 17 |
+| 17 | François Jaffrennou | Pío Baroja | 2,416 (2,416) | 16 |
+| 18 | Frieda von Richthofen | Frieda von Richthofen | 2,351 (2,351) | 18 |
+| 19 | Rupert Hughes | Rupert Hughes | 1,486 (2,331) | 19 |
+| 20 | Karl M. Baer | Nikolaj Velimirović | 1,392 (1,392) | 21 |
+| 21 | Nikolaj Velimirović | André Demaison | 1,368 (1,368) | 22 |
+| 22 | André Demaison | Guy-Charles Cros | 1,303 (1,303) | 23 |
+| 23 | Guy-Charles Cros | Aleksandr Aleksandrovič Fadeev | 1,080 (1,080) | 25 |
+| 24 | Walter de la Mare | Ahmed Reda Houhou | 1,056 (1,056) | 26 |
+| 25 | Aleksandr Aleksandrovič Fadeev | Karl M. Baer | 1,053 (1,687) | 20 |
+| 26 | Ahmed Reda Houhou | Jean-Pierre Maxence | 1,039 (1,039) | 27 |
+| 27 | Jean-Pierre Maxence | Zenobia Camprubí | 952 (989) | 28 |
+| 28 | Zenobia Camprubí | Walter de la Mare | 918 (918) | 24 |
+| 29 | Max Beerbohm | Max Beerbohm | 879 (879) | 29 |
+| 30 | Emma Müller | Jean Boulnois | 857 (857) | 32 |
 
-Picchi in questa lingua: 1: Adolphe d'Espie (5,068 → 2,930)
+Picchi in questa lingua: 1: Adolphe d'Espie (5,066 → 2,928)
 
 ## Germania (Wikipedia in de)
 
@@ -91,25 +93,25 @@ Picchi in questa lingua: 1: Adolphe d'Espie (5,068 → 2,930)
 | 9 | Nikolaj Velimirović | Nikolaj Velimirović | 4,617 (4,617) | 9 |
 | 10 | Marie Laurencin | Marie Laurencin | 4,594 (4,594) | 10 |
 | 11 | Lulu von Strauß und Torney | Lulu von Strauß und Torney | 4,497 (4,497) | 11 |
-| 12 | Evelyn Beatrice Hall | Louis Bromfield | 3,295 (3,295) | 13 |
-| 13 | Louis Bromfield | Arno Pötzsch | 3,254 (3,254) | 14 |
-| 14 | Arno Pötzsch | Max Beerbohm | 2,564 (2,564) | 16 |
-| 15 | Makbule Atadan | August Hinrichs | 2,302 (2,302) | 17 |
-| 16 | Max Beerbohm | Aleksandr Aleksandrovič Fadeev | 1,797 (1,797) | 18 |
-| 17 | August Hinrichs | Giovanni Papini | 1,588 (1,588) | 19 |
-| 18 | Aleksandr Aleksandrovič Fadeev | Burghard Breitner | 1,461 (1,461) | 20 |
-| 19 | Giovanni Papini | Reşat Nuri Güntekin | 1,335 (1,335) | 21 |
-| 20 | Burghard Breitner | Karl M. Baer | 1,306 (1,306) | 22 |
-| 21 | Reşat Nuri Güntekin | Hans Müller-Schlösser | 1,294 (1,294) | 23 |
-| 22 | Karl M. Baer | Julien Benda | 1,280 (1,280) | 25 |
-| 23 | Hans Müller-Schlösser | Nikolaus Fey | 1,278 (1,302) | 24 |
-| 24 | Nikolaus Fey | Pío Baroja | 1,144 (1,144) | 26 |
-| 25 | Julien Benda | Corrado Alvaro | 1,136 (1,136) | 28 |
-| 26 | Pío Baroja | Paul Léautaud | 1,094 (1,094) | 27 |
-| 27 | Paul Léautaud | Hermann von Wedderkop | 1,086 (1,086) | 29 |
-| 28 | Corrado Alvaro | Werner Riegel | 995 (995) | 30 |
-| 29 | Hermann von Wedderkop | Ernst Fuhrmann | 954 (954) | 32 |
-| 30 | Werner Riegel | Walter de la Mare | 951 (951) | 31 |
+| 12 | Evelyn Beatrice Hall | Evelyn Beatrice Hall | 3,549 (3,549) | 12 |
+| 13 | Louis Bromfield | Louis Bromfield | 3,295 (3,295) | 13 |
+| 14 | Arno Pötzsch | Arno Pötzsch | 3,254 (3,254) | 14 |
+| 15 | Makbule Atadan | Makbule Atadan | 3,198 (3,198) | 15 |
+| 16 | Max Beerbohm | Max Beerbohm | 2,564 (2,564) | 16 |
+| 17 | August Hinrichs | August Hinrichs | 2,302 (2,302) | 17 |
+| 18 | Aleksandr Aleksandrovič Fadeev | Aleksandr Aleksandrovič Fadeev | 1,797 (1,797) | 18 |
+| 19 | Giovanni Papini | Giovanni Papini | 1,588 (1,588) | 19 |
+| 20 | Burghard Breitner | Burghard Breitner | 1,461 (1,461) | 20 |
+| 21 | Reşat Nuri Güntekin | Reşat Nuri Güntekin | 1,335 (1,335) | 21 |
+| 22 | Karl M. Baer | Karl M. Baer | 1,306 (1,306) | 22 |
+| 23 | Hans Müller-Schlösser | Hans Müller-Schlösser | 1,294 (1,294) | 23 |
+| 24 | Nikolaus Fey | Julien Benda | 1,280 (1,280) | 25 |
+| 25 | Julien Benda | Nikolaus Fey | 1,278 (1,302) | 24 |
+| 26 | Pío Baroja | Pío Baroja | 1,144 (1,144) | 26 |
+| 27 | Paul Léautaud | Corrado Alvaro | 1,136 (1,136) | 28 |
+| 28 | Corrado Alvaro | Paul Léautaud | 1,094 (1,094) | 27 |
+| 29 | Hermann von Wedderkop | Hermann von Wedderkop | 1,086 (1,086) | 29 |
+| 30 | Werner Riegel | Werner Riegel | 995 (995) | 30 |
 
 Picchi in questa lingua: 2: A. A. Milne (30,717 → 28,586), Hans Carossa (27,951 → 22,551)
 
@@ -119,34 +121,34 @@ Picchi in questa lingua: 2: A. A. Milne (30,717 → 28,586), Hans Carossa (27,95
 |---|---|---|---|---|
 | 1 | B. R. Ambedkar | B. R. Ambedkar ⚡ | 1,536,532 (1,615,871) | 1 |
 | 2 | A. A. Milne | A. A. Milne | 425,078 (425,078) | 2 |
-| 3 | Bertolt Brecht | Bertolt Brecht | 368,291 (368,291) | 3 |
-| 4 | Henry Louis Mencken | Henry Louis Mencken | 184,556 (184,556) | 4 |
-| 5 | Charles MacArthur | Charles MacArthur | 65,830 (65,830) | 5 |
+| 3 | Bertolt Brecht | Bertolt Brecht | 368,228 (368,228) | 3 |
+| 4 | Henry Louis Mencken | Henry Louis Mencken | 184,533 (184,533) | 4 |
+| 5 | Charles MacArthur | Charles MacArthur | 65,834 (65,834) | 5 |
 | 6 | Walter de la Mare | Walter de la Mare | 43,930 (43,930) | 6 |
 | 7 | Frieda von Richthofen | Frieda von Richthofen | 38,362 (38,362) | 7 |
-| 8 | Nikolaj Velimirović | Nikolaj Velimirović | 37,523 (37,523) | 8 |
+| 8 | Nikolaj Velimirović | Nikolaj Velimirović | 37,527 (37,527) | 8 |
 | 9 | Robert Walser | Robert Walser | 36,201 (36,201) | 9 |
-| 10 | Louis Bromfield | Rupert Hughes | 31,961 (31,961) | 11 |
+| 10 | Louis Bromfield | Rupert Hughes | 31,963 (31,963) | 11 |
 | 11 | Rupert Hughes | Max Beerbohm | 31,187 (31,187) | 12 |
 | 12 | Max Beerbohm | Louis Bromfield | 29,643 (29,643) | 10 |
-| 13 | Marie Laurencin | Marie Laurencin | 23,071 (23,071) | 13 |
+| 13 | Marie Laurencin | Marie Laurencin | 23,067 (23,067) | 13 |
 | 14 | Makbule Atadan | Carlos Bulosan | 21,496 (21,496) | 15 |
-| 15 | Carlos Bulosan | Ada Galsworthy | 18,141 (18,963) | 16 |
-| 16 | Ada Galsworthy | Manik Bandyopadhyay | 17,073 (17,073) | 19 |
-| 17 | Karl M. Baer | Karl M. Baer | 17,040 (17,040) | 17 |
-| 18 | Evelyn Beatrice Hall | Gottfried Benn | 15,270 (15,270) | 21 |
-| 19 | Manik Bandyopadhyay | Giovanni Papini | 14,478 (14,478) | 20 |
-| 20 | Giovanni Papini | Pío Baroja | 12,969 (12,969) | 22 |
-| 21 | Gottfried Benn | Jesús Galíndez | 12,190 (12,190) | 23 |
-| 22 | Pío Baroja | Michael Arlen | 11,483 (11,483) | 25 |
-| 23 | Jesús Galíndez | Edmund Clerihew Bentley | 10,752 (10,752) | 26 |
-| 24 | Curnonsky | Rigoberto López Pérez | 9,713 (9,713) | 28 |
-| 25 | Michael Arlen | Julien Benda | 9,653 (9,653) | 29 |
-| 26 | Edmund Clerihew Bentley | Curnonsky | 9,253 (9,253) | 24 |
-| 27 | Charles R. Codman | Fletcher Pratt | 7,893 (7,893) | 32 |
-| 28 | Rigoberto López Pérez | Aleksandr Aleksandrovič Fadeev | 6,844 (6,844) | 33 |
-| 29 | Julien Benda | Godabarish Mishra | 6,614 (6,614) | 34 |
-| 30 | Corrado Alvaro | Ward Greene | 6,490 (6,490) | 37 |
+| 15 | Carlos Bulosan | Makbule Atadan | 21,431 (21,431) | 14 |
+| 16 | Ada Galsworthy | Ada Galsworthy | 18,141 (18,963) | 16 |
+| 17 | Karl M. Baer | Manik Bandyopadhyay | 17,073 (17,073) | 19 |
+| 18 | Evelyn Beatrice Hall | Karl M. Baer | 17,041 (17,041) | 17 |
+| 19 | Manik Bandyopadhyay | Evelyn Beatrice Hall | 16,639 (16,639) | 18 |
+| 20 | Giovanni Papini | Gottfried Benn | 15,270 (15,270) | 21 |
+| 21 | Gottfried Benn | Giovanni Papini | 14,478 (14,478) | 20 |
+| 22 | Pío Baroja | Pío Baroja | 12,932 (12,932) | 22 |
+| 23 | Jesús Galíndez | Jesús Galíndez | 12,190 (12,190) | 23 |
+| 24 | Curnonsky | Michael Arlen | 11,483 (11,483) | 25 |
+| 25 | Michael Arlen | Edmund Clerihew Bentley | 10,752 (10,752) | 26 |
+| 26 | Edmund Clerihew Bentley | Charles R. Codman | 9,992 (9,992) | 27 |
+| 27 | Charles R. Codman | Rigoberto López Pérez | 9,711 (9,711) | 28 |
+| 28 | Rigoberto López Pérez | Julien Benda | 9,649 (9,649) | 29 |
+| 29 | Julien Benda | Curnonsky | 9,230 (9,230) | 24 |
+| 30 | Corrado Alvaro | Zafar Ali Khan | 9,203 (9,203) | 31 |
 
 Picchi in questa lingua: 1: B. R. Ambedkar (1,615,871 → 1,536,532)
 
@@ -154,36 +156,36 @@ Picchi in questa lingua: 1: B. R. Ambedkar (1,615,871 → 1,536,532)
 
 | # | Prima | Dopo | visite tipiche (grezze) | prima era |
 |---|---|---|---|---|
-| 1 | H. G. Wells | H. G. Wells | 91,304 (91,304) | 1 |
+| 1 | H. G. Wells | H. G. Wells | 91,314 (91,314) | 1 |
 | 2 | Manuel de Falla | Manuel de Falla | 91,063 (91,063) | 2 |
-| 3 | Gertrude Stein | Gertrude Stein | 22,700 (22,700) | 3 |
+| 3 | Gertrude Stein | Gertrude Stein | 22,696 (22,696) | 3 |
 | 4 | Pedro Henríquez Ureña | Pedro Henríquez Ureña | 15,956 (15,956) | 4 |
 | 5 | Eduard Marquina i Angulo | Eduard Marquina i Angulo | 7,048 (7,048) | 5 |
 | 6 | Clemente Palma | Clemente Palma | 6,063 (6,063) | 6 |
-| 7 | W. C. Fields | Gerhart Hauptmann | 3,951 (3,951) | 9 |
-| 8 | Dion Fortune | Jenaro Prieto | 2,531 (2,531) | 10 |
-| 9 | Gerhart Hauptmann | Frederick M. Smith | 2,152 (2,152) | 11 |
-| 10 | Jenaro Prieto | Nikolaj Aleksandrovič Morozov | 1,829 (2,001) | 12 |
-| 11 | Frederick M. Smith | Damon Runyon | 1,664 (1,664) | 13 |
-| 12 | Nikolaj Aleksandrovič Morozov | Romildo Risso | 1,548 (1,548) | 14 |
-| 13 | Damon Runyon | Lluïsa Denís i Reverter | 1,378 (1,378) | 16 |
-| 14 | Romildo Risso | Pelayo Quintero Atauri | 1,293 (1,293) | 572 |
-| 15 | Ernest Thompson Seton | Roberto Mariani | 1,054 (1,054) | 18 |
-| 16 | Lluïsa Denís i Reverter | May Sinclair | 1,043 (1,043) | 17 |
-| 17 | May Sinclair | George Arliss | 1,014 (1,014) | 19 |
-| 18 | Roberto Mariani | Thomas Dixon, Jr. | 951 (951) | 22 |
-| 19 | George Arliss | Pedro Mata y Domínguez | 951 (951) | 21 |
-| 20 | Booth Tarkington | Countee Cullen | 928 (928) | 23 |
-| 21 | Pedro Mata y Domínguez | Toribio Esquivel Obregón | 901 (901) | 579 |
-| 22 | Thomas Dixon, Jr. | E. Phillips Oppenheim | 792 (792) | 24 |
-| 23 | Countee Cullen | Booth Tarkington | 783 (783) | 20 |
-| 24 | E. Phillips Oppenheim | Mushitarō Oguri | 580 (580) | 26 |
-| 25 | Miguel Villalonga | Miguel Villalonga | 578 (578) | 25 |
-| 26 | Mushitarō Oguri | Shekib Arslan | 554 (554) | 27 |
-| 27 | Shekib Arslan | Giuseppe Adami | 524 (524) | 28 |
-| 28 | Giuseppe Adami | Clotilde Catalán de Ocón y Gayolá | 504 (504) | 29 |
-| 29 | Clotilde Catalán de Ocón y Gayolá | Salomo Friedlaender | 477 (477) | 30 |
-| 30 | Salomo Friedlaender | Constance Garnett | 460 (460) | 31 |
+| 7 | W. C. Fields | W. C. Fields | 5,492 (5,492) | 7 |
+| 8 | Dion Fortune | Dion Fortune | 4,319 (4,319) | 8 |
+| 9 | Gerhart Hauptmann | Gerhart Hauptmann | 3,951 (3,951) | 9 |
+| 10 | Jenaro Prieto | Jenaro Prieto | 2,531 (2,531) | 10 |
+| 11 | Frederick M. Smith | Frederick M. Smith | 2,152 (2,152) | 11 |
+| 12 | Nikolaj Aleksandrovič Morozov | Nikolaj Aleksandrovič Morozov | 1,829 (2,001) | 12 |
+| 13 | Damon Runyon | Damon Runyon | 1,664 (1,664) | 13 |
+| 14 | Romildo Risso | Romildo Risso | 1,548 (1,548) | 14 |
+| 15 | Ernest Thompson Seton | Ernest Thompson Seton | 1,388 (1,388) | 15 |
+| 16 | Lluïsa Denís i Reverter | Lluïsa Denís i Reverter | 1,378 (1,378) | 16 |
+| 17 | Pelayo Quintero Atauri | Pelayo Quintero Atauri | 1,293 (1,293) | 17 |
+| 18 | May Sinclair | Roberto Mariani | 1,054 (1,054) | 19 |
+| 19 | Roberto Mariani | May Sinclair | 1,043 (1,043) | 18 |
+| 20 | George Arliss | George Arliss | 1,014 (1,014) | 20 |
+| 21 | Booth Tarkington | Thomas Dixon, Jr. | 951 (951) | 23 |
+| 22 | Pedro Mata y Domínguez | Pedro Mata y Domínguez | 951 (951) | 22 |
+| 23 | Thomas Dixon, Jr. | Countee Cullen | 928 (928) | 24 |
+| 24 | Countee Cullen | Toribio Esquivel Obregón | 901 (901) | 25 |
+| 25 | Toribio Esquivel Obregón | E. Phillips Oppenheim | 792 (792) | 26 |
+| 26 | E. Phillips Oppenheim | Booth Tarkington | 783 (783) | 21 |
+| 27 | Miguel Villalonga | Mushitarō Oguri | 580 (580) | 28 |
+| 28 | Mushitarō Oguri | Miguel Villalonga | 579 (579) | 27 |
+| 29 | Shekib Arslan | Shekib Arslan | 554 (554) | 29 |
+| 30 | Giuseppe Adami | Giuseppe Adami | 524 (524) | 30 |
 
 Picchi in questa lingua: 0: 
 
