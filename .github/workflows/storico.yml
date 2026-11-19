@@ -31,7 +31,7 @@ jobs:
           BUDGET_MINUTI_VISITE: "35"
         run: python storico/storico.py
       - name: Salva i dati nel repository
-        if: always()   # salva comunque quello che è stato prodotto
+        if: ${{ !cancelled() }}   # salva quello che è stato prodotto, ma non se il giro viene annullato
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

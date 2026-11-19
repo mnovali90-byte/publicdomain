@@ -83,18 +83,18 @@ jobs:
         run: python scripts/verifica.py
       - name: Controlli sui conteggi dei cataloghi (i dati che si contraddicono restano sospesi)
         # anche se un passo prima è fallito: i dati vecchi nei file vanno ricontrollati comunque
-        if: always()
+        if: ${{ !cancelled() }}   # se il giro viene annullato non si salva niente (19/11/2026: un giro annullato aveva salvato dati a metà)
         run: python scripts/controlli.py
       - name: Crea le pagine degli autori e la sitemap
-        if: always()
+        if: ${{ !cancelled() }}   # se il giro viene annullato non si salva niente (19/11/2026: un giro annullato aveva salvato dati a metà)
         run: python scripts/pagine.py
       - name: Elenco delle cose da decidere con Marco (docs/da-decidere.md)
-        if: always()
+        if: ${{ !cancelled() }}   # se il giro viene annullato non si salva niente (19/11/2026: un giro annullato aveva salvato dati a metà)
         continue-on-error: true
         run: python scripts/da_decidere.py
       - name: Salva i dati nel repository
         # sempre, anche se un passo prima è stato interrotto: così il lavoro fatto non si perde
-        if: always()
+        if: ${{ !cancelled() }}   # se il giro viene annullato non si salva niente (19/11/2026: un giro annullato aveva salvato dati a metà)
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

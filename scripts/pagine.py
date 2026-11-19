@@ -1355,6 +1355,10 @@ def main():
     for f in file_autori():
         calcola_ranghi(json.load(open(f, encoding="utf-8")))
 
+    # guardia (19/11/2026): se i dati non hanno biografie e opere (giro interrotto a metà) non si tocca niente
+    if len(autori) < 100:
+        print(f"Solo {len(autori)} autori con biografia e opere: dati incompleti, le schede restano come sono.")
+        return 1
     for l in ("it", "en"):
         cartella = RADICE / PERCORSO[l]
         if cartella.exists():
