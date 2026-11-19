@@ -246,6 +246,11 @@
      "morte": 1939
     },
     {
+     "opera": "The Soul of a Bishop",
+     "nome": "Charles Allan Gilbert",
+     "morte": 1929
+    },
+    {
      "opera": "The First Men in the Moon",
      "nome": "Claude Allin Shepperson",
      "morte": 1921
@@ -254,11 +259,6 @@
      "opera": "The Story of the Late Mr. Elvesham",
      "nome": "Max Cowper",
      "morte": 1911
-    },
-    {
-     "opera": "The Soul of a Bishop",
-     "nome": "Charles Allan Gilbert",
-     "morte": 1929
     }
    ],
    "pagina": "h-g-wells",
@@ -452,10 +452,6 @@
      "loc": 1946
     },
     "citate": {
-     "Great Soviet Encyclopedia (1969–1978)": 1946,
-     "The Fine Art Archive Db": 1946,
-     "Roglo": 1946,
-     "SNAC": 1946,
      "Great Norwegian Encyclopedia": 1946,
      "Find a Grave": 1946,
      "International Music Score Library Project": 1946,
@@ -468,7 +464,11 @@
      "Brockhaus Enzyklopädie": 1946,
      "Integrated Authority File": 1946,
      "Discogs": 1946,
-     "Archivio Storico Ricordi": 1946
+     "Archivio Storico Ricordi": 1946,
+     "Great Soviet Encyclopedia (1969–1978)": 1946,
+     "The Fine Art Archive Db": 1946,
+     "Roglo": 1946,
+     "SNAC": 1946
     }
    },
    "pagina": "gerhart-hauptmann",
@@ -4816,6 +4816,7 @@
      "loc": 1946
     },
     "citate": {
+     "REGO": 1946,
      "regional database of the Municipal Library of Jindřichův Hradec": 1946,
      "Czech National Authority Database": 1946,
      "Regional Database of the Central Bohemian Research Library in Kladno": 1946,
@@ -4826,8 +4827,7 @@
      "The Fine Art Archive": 1946,
      "BnF authorities": 1946,
      "Integrated Authority File": 1946,
-     "SNAC": 1946,
-     "REGO": 1946
+     "SNAC": 1946
     }
    },
    "pagina": "gabriela-preissova",
@@ -8670,11 +8670,11 @@
      "loc": 1946
     },
     "citate": {
-     "Find a Grave": 1946,
-     "SNAC": 1946,
      "AlKindi": 1946,
      "Encyclopædia Britannica Online": 1946,
-     "BnF authorities": 1946
+     "BnF authorities": 1946,
+     "Find a Grave": 1946,
+     "SNAC": 1946
     }
    }
   },
@@ -8921,10 +8921,10 @@
      "loc": 1946
     },
     "citate": {
-     "SNAC": 1946,
-     "Find a Grave": 1946,
+     "BnF authorities": 1946,
      "Internet Broadway Database": 1946,
-     "BnF authorities": 1946
+     "SNAC": 1946,
+     "Find a Grave": 1946
     }
    },
    "pagina": "edward-sheldon",
@@ -23527,10 +23527,10 @@
      "loc": 1946
     },
     "citate": {
-     "Médias 19": 1946,
      "BnF authorities": 1946,
      "The Fine Art Archive": 1946,
-     "death certificate": 1946
+     "death certificate": 1946,
+     "Médias 19": 1946
     }
    }
   },

@@ -547,6 +547,7 @@
      "loc": 1947
     },
     "citate": {
+     "GeneaStar": 1947,
      "Encyclopædia Britannica Online": 1947,
      "Library of the World's Best Literature": 1947,
      "Brockhaus Enzyklopädie": 1947,
@@ -560,8 +561,7 @@
      "SNAC": 1947,
      "Gran Enciclopèdia Catalana": 1947,
      "BnF authorities": 1947,
-     "The Fine Art Archive Db": 1947,
-     "GeneaStar": 1947
+     "The Fine Art Archive Db": 1947
     }
    },
    "illustratori": [
@@ -1158,13 +1158,6 @@
      "loc": 1947
     },
     "citate": {
-     "Gran Enciclopèdia Catalana": 1947,
-     "BD Gest'": 1947,
-     "filmportal.de": 1947,
-     "Encyclopædia Britannica Online": 1947,
-     "Internet Speculative Fiction Database": 1947,
-     "Integrated Authority File": 1947,
-     "Brockhaus Enzyklopädie": 1947,
      "SNAC": 1947,
      "BnF authorities": 1947,
      "Munzinger Personen": 1947,
@@ -1173,7 +1166,14 @@
      "Great Norwegian Encyclopedia": 1947,
      "Discogs": 1947,
      "Proleksis Encyclopedia": 1947,
-     "Babelio": 1947
+     "Babelio": 1947,
+     "Gran Enciclopèdia Catalana": 1947,
+     "BD Gest'": 1947,
+     "filmportal.de": 1947,
+     "Encyclopædia Britannica Online": 1947,
+     "Internet Speculative Fiction Database": 1947,
+     "Integrated Authority File": 1947,
+     "Brockhaus Enzyklopädie": 1947
     }
    },
    "pagina": "hans-fallada",
@@ -4836,9 +4836,9 @@
      "loc": 1947
     },
     "citate": {
-     "Encyclopædia Britannica Online": 1947,
      "Encyclopaedia Beliana": 1947,
-     "Find a Grave": 1947
+     "Find a Grave": 1947,
+     "Encyclopædia Britannica Online": 1947
     }
    },
    "illustratori": [
@@ -20500,8 +20500,8 @@
      "loc": 1947
     },
     "citate": {
-     "Virtual International Authority File": 1947,
-     "Project Gutenberg": 1947
+     "Project Gutenberg": 1947,
+     "Virtual International Authority File": 1947
     }
    },
    "illustratori": [
@@ -46137,8 +46137,8 @@
      "gnd": 1947
     },
     "citate": {
-     "Historical Dictionary of Switzerland": 1947,
-     "Integrated Authority File": 1947
+     "Integrated Authority File": 1947,
+     "Historical Dictionary of Switzerland": 1947
     }
    }
   },
@@ -50237,8 +50237,8 @@
      "wikidata": 1947
     },
     "citate": {
-     "Czech National Authority Database": 1947,
-     "REGO": 1947
+     "REGO": 1947,
+     "Czech National Authority Database": 1947
     }
    }
   },
