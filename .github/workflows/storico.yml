@@ -2,14 +2,7 @@ name: Aggiorna lo Storico (opere già libere)
 
 on:
   schedule:
-    - cron: "23 4 * * 1"   # ogni lunedì mattina
-  push:                     # parte da solo quando cambia lo script
-    paths:
-      - "storico/**"
-      - "!storico/pagina.py"      # la pagina e i ritratti hanno un loro lavoro leggero (gia-pubblici.yml)
-      - "!storico/pagina.html"
-      - "!storico/ritratti.py"
-      - ".github/workflows/storico.yml"
+    - cron: "23 4 2 * *"   # una volta al mese, il 2 (decisione di Marco, 19/11/2026); non parte più da solo quando cambia lo script
   workflow_dispatch:        # pulsante "Run workflow" per lanciarlo a mano
 
 permissions:

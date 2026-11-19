@@ -49,7 +49,8 @@ def dati():
             lingue[lk][it] += 1
         escl = o["qid"] in no_o or any(a["qid"] in no_a for a in o["autori"])
         opere.append([o["qid"], o["titolo"], o.get("titolo_it") or "", o.get("anno"), o.get("anno_duke") or 0, ii,
-                      o.get("visite_sett", 0), o.get("generi") or [], lk, o.get("pagine", 0), 1 if escl else 0])
+                      o.get("visite_sett", 0), o.get("generi") or [], lk, o.get("pagine", 0), 1 if escl else 0,
+                      [o.get("visite_" + l) for l in ("it", "en", "fr", "de", "es")]])   # visite per lingua (None = non misurata)
 
     # per ogni lingua il nome italiano più frequente («inglese», non «inglese britannico»)
     lingue = {k: [k, max(v, key=v.get)[:1].upper() + max(v, key=v.get)[1:]] for k, v in lingue.items()}

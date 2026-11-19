@@ -8,7 +8,8 @@ Due insiemi di dati con due scopi diversi, così il lavoro resta leggero:
             Spezzata in un file per lettera (data/storico/ricerca/a.json ...): la pagina scarica
             solo la lettera che serve. Contiene anche gli autori (nome, anno di morte).
   PLAYLIST  solo le prime MAX_VISITE opere per fama (numero di lingue con pagina Wikipedia):
-            per queste si contano le visite della settimana (Wikipedia en + it).
+            per queste si contano le visite della settimana su Wikipedia in italiano, inglese, francese,
+            tedesco e spagnolo (19/11/2026: la pagina ordina per la lingua del paese scelto, come il resto del sito).
             Scrive data/storico/opere.json (quelle misurate) e data/storico/playlist.json.
 
 Regola per il file: prime due lettere (senza accenti) della prima parola e della prima parola
@@ -16,7 +17,7 @@ dopo un eventuale articolo (the, il, la, der, les...). Per gli autori: prima e u
 La pagina deve usare la stessa regola (funzione chiavi_ricerca).
 
 Limite noto: le opere molto antiche spesso non hanno un anno di prima pubblicazione su Wikidata e restano fuori.
-Si lancia a mano o dalla GitHub Action .github/workflows/storico.yml (ogni lunedì).
+Si lancia a mano o dalla GitHub Action .github/workflows/storico.yml (una volta al mese, il 2).
 """
 import json, os, re, sys, time, unicodedata, urllib.error, urllib.parse, urllib.request
 from datetime import date, datetime, timedelta, timezone
@@ -184,6 +185,25 @@ def visite_settimana(wiki, url, ini, fine):
             pass
         time.sleep(3 * (tentativo + 1))
     return None
+
+
+LINGUE_VISITE = ("it", "en", "fr", "de", "es")   # Italia, Regno Unito e USA, Francia, Germania, Spagna
+
+
+def pagine_wiki(qids):
+    """Indirizzo della pagina Wikipedia di ogni opera nelle cinque lingue, a blocchi di 200 (query leggere).
+    Se Wikidata non risponde il blocco resta vuoto e si tengono gli indirizzi già noti."""
+    out, qids = {}, list(qids)
+    siti = " ".join(f"<https://{l}.wikipedia.org/>" for l in LINGUE_VISITE)
+    for i in range(0, len(qids), 200):
+        valori = " ".join("wd:" + k for k in qids[i:i + 200])
+        r = sparql_o_errore(f"SELECT ?w ?art ?sito WHERE {{ VALUES ?w {{ {valori} }} VALUES ?sito {{ {siti} }} "
+                            f"?art schema:about ?w; schema:isPartOf ?sito }}")
+        for x in r or []:
+            l = val(x, "sito").split("//")[1].split(".")[0]
+            out.setdefault(qid(val(x, "w")), {})[l] = val(x, "art")
+        time.sleep(1)
+    return out
 
 
 # ------------------------------------------------------------------ playlist
@@ -398,21 +418,39 @@ def main():
 
     # PLAYLIST: visite solo per le più note
     misurate, esaurito = ops[:MAX_VISITE], False
-    inizio_vis = time.time()
+    try:
+        wiki = pagine_wiki(o["qid"] for o in misurate)
+    except Exception as e:
+        print("pagine Wikipedia non lette:", e); wiki = {}
     for o in misurate:
-        if time.time() - inizio_vis > BUDGET_VISITE * 60:
-            esaurito = True
-        vecchio = precedenti.get(o["qid"], {})
-        if not esaurito:
-            try:
-                o["visite_en"] = visite_settimana("en", o["wiki_en"], ini, fine)
-                o["visite_it"] = visite_settimana("it", o["wiki_it"], ini, fine)
-                time.sleep(0.05)
-            except Exception as e:           # qualunque guaio: si smette di misurare, ma si salva quello che c'è
-                print("misura interrotta:", e); esaurito = True
-        if esaurito:
-            o["visite_en"], o["visite_it"] = vecchio.get("visite_en"), vecchio.get("visite_it")
-        o["visite_sett"] = (o["visite_en"] or 0) + (o["visite_it"] or 0)
+        w = wiki.get(o["qid"], {})
+        w.setdefault("en", o.get("wiki_en")); w.setdefault("it", o.get("wiki_it"))
+        o["_wiki"] = w
+    from concurrent.futures import ThreadPoolExecutor
+    inizio_vis = time.time()
+
+    def misura(o):
+        return {l: visite_settimana(l, o["_wiki"].get(l), ini, fine) for l in LINGUE_VISITE}
+    with ThreadPoolExecutor(max_workers=6) as pool:   # sei pagine alla volta: l'API di Wikimedia lo regge
+        for i in range(0, len(misurate), 60):
+            blocco = misurate[i:i + 60]
+            if not esaurito and time.time() - inizio_vis > BUDGET_VISITE * 60:
+                esaurito = True
+            if not esaurito:
+                try:
+                    for o, v in zip(blocco, pool.map(misura, blocco)):
+                        for l in LINGUE_VISITE:
+                            o["visite_" + l] = v[l]
+                except Exception as e:           # qualunque guaio: si smette di misurare, ma si salva quello che c'è
+                    print("misura interrotta:", e); esaurito = True
+            if esaurito:
+                for o in blocco:
+                    vecchio = precedenti.get(o["qid"], {})
+                    for l in LINGUE_VISITE:
+                        o["visite_" + l] = vecchio.get("visite_" + l)
+    for o in misurate:
+        o.pop("_wiki", None)
+        o["visite_sett"] = sum(o.get("visite_" + l) or 0 for l in LINGUE_VISITE)
     misurate.sort(key=lambda o: (-o["visite_sett"], -o["pagine"]))
 
     meta = {"aggiornato": datetime.now(timezone.utc).strftime("%Y-%m-%d"),

@@ -2,12 +2,9 @@ name: Aggiorna autori in pubblico dominio
 
 on:
   schedule:
-    - cron: "17 5 1 * *"   # il primo di ogni mese
-  push:                     # parte da solo quando cambia uno script
-    paths:
-      - "scripts/**"
-      - "index.html"   # la home inglese (en/index.html) si rigenera da index.html
-      - ".github/workflows/aggiorna.yml"
+    # ogni tre mesi (gennaio, aprile, luglio, ottobre) e a dicembre, prima del 1° gennaio (decisione di Marco, 19/11/2026).
+    # Non parte più da solo quando cambia uno script: si lancia a mano col pulsante "Run workflow" quando serve.
+    - cron: "17 5 1 1,4,7,10,12 *"
   workflow_dispatch:        # pulsante "Run workflow" per lanciarlo a mano
 
 permissions:

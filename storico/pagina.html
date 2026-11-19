@@ -171,7 +171,7 @@ it: {
   cerca: "Cerca un titolo o un autore", paese: "Paese",
   paesi: { it: "Italia", fr: "Francia", de: "Germania", es: "Spagna", uk: "Regno Unito", us: "USA" },
   inPaese: { it: "in Italia", fr: "in Francia", de: "in Germania", es: "in Spagna", uk: "nel Regno Unito", us: "negli USA" },
-  conti: "{o} opere e {a} autori da Wikidata, con l'anno di uscita e l'anno di morte degli autori. Le visite si aggiornano ogni lunedì (ultima settimana: {s}).",
+  conti: "{o} opere e {a} autori da Wikidata, con l'anno di uscita e l'anno di morte degli autori. Le visite si misurano una volta al mese su una settimana (ultima: {s}).",
   caricamento: "Caricamento…", errore: "Non riesco a leggere i dati. Riprova tra poco.",
   risPer: "Risultati per «{q}»", nAut: "{n} autore", nAutP: "{n} autori", nOp: "{n} opera", nOpP: "{n} opere",
   autore: "Autore", mortoNel: "morto nel {m}", mortoNelInc: "morto nel {m} (le fonti danno anni diversi: si usa il più tardo)", antico: "autore antico", morteNd: "anno di morte non noto",
@@ -192,9 +192,10 @@ it: {
   contaLiberi: "{n} delle {t} opere più lette sono libere {p}.",
   giaIn: "Già pubblici {p}", sfoglia: "Sfoglia gli scaffali",
   introS: "Tutto quello che vedi qui sotto è <b>libero {p}</b>, il paese scelto in alto. Cambia paese e cambiano gli scaffali.",
-  piuLetti: "I più letti questa settimana", piuLettiSub: "Solo titoli già liberi {p}. Visite alle pagine Wikipedia in inglese e in italiano, {s}.",
+  piuLetti: "I più letti", piuLettiSub: "Solo titoli già liberi {p}. Ordinati per visite alla Wikipedia {w}, {s}.",
+  wiki: { it: "in italiano", en: "in inglese", fr: "in francese", de: "in tedesco", es: "in spagnolo", tutte: "in inglese e in italiano" },
   nuovi: "Liberi dal 1° gennaio {y}", nuoviUe: "Autori morti nel {m}: {p} contano 70 anni dalla morte.", nuoviEs: "Autori morti nel {m}: in Spagna contano 80 anni dalla morte.", nuoviUs: "Opere uscite nel {m}: negli USA contano 95 anni dall'uscita.",
-  autori: "Autori", autoriSub: "Classifica della settimana: gli autori con almeno tre titoli liberi {p}, dal più letto. In tutto {n}.",
+  autori: "Autori", autoriSub: "Classifica: gli autori con almeno tre titoli liberi {p}, dal più letto sulla Wikipedia {w}. In tutto {n}.",
   vediTutti: "Vedi tutti i {n} →", vediMeno: "Mostra meno", vediTutto: "Vedi tutto →",
   titoliLiberi: "{n} titoli liberi", titoli: "{n} titoli",
   generi: "Per genere", generiSub: "Solo le opere che su Wikidata hanno un genere.", genere: "Genere",
@@ -217,7 +218,7 @@ it: {
   sInc: "Le fonti danno anni di morte diversi: si usa il più tardo, per prudenza.",
   piede1: "Calcolo indicativo, non è consulenza legale. È libero il testo originale, non l'edizione né la traduzione: traduzioni, illustrazioni e curatele recenti hanno diritti propri. Prima di pubblicare controlla la legge del paese.",
   piede2: "Regole usate: Italia, Francia, Germania, Regno Unito 70 anni dalla morte dell'autore (nel Regno Unito le opere uscite per la prima volta dopo il 1988 di autori morti prima del 1969 sono protette fino al 2039); Spagna 80 anni per gli autori morti prima del 7 dicembre 1987; USA 95 anni dalla prima pubblicazione (si guarda la prima data registrata). In Italia gli autori di paesi alleati nella Seconda guerra mondiale sono segnalati da verificare e restano fuori dagli scaffali italiani.",
-  piede3: "Fonti: Wikidata (CC0) per opere, autori e anni; Wikipedia per le visite della settimana; elenchi del Public Domain Day della Duke University (CC BY 4.0) come seconda fonte per gli USA; Wikimedia Commons per i ritratti, ciascuno con la sua licenza. Dati aggiornati ogni lunedì in automatico: possono contenere errori.",
+  piede3: "Fonti: Wikidata (CC0) per opere, autori e anni; Wikipedia per le visite della settimana; elenchi del Public Domain Day della Duke University (CC BY 4.0) come seconda fonte per gli USA; Wikimedia Commons per i ritratti, ciascuno con la sua licenza. Dati aggiornati ogni mese in automatico: possono contenere errori.",
   piede4: "Un progetto di Marco Novali.", segnala: "Hai trovato un errore? Segnalalo",
   dateFmt: (a, b) => `${a.getDate()}–${b.getDate()} ${MESI_IT[b.getMonth()]} ${b.getFullYear()}`,
 },
@@ -227,7 +228,7 @@ en: {
   cerca: "Search a title or an author", paese: "Country",
   paesi: { it: "Italy", fr: "France", de: "Germany", es: "Spain", uk: "United Kingdom", us: "USA" },
   inPaese: { it: "in Italy", fr: "in France", de: "in Germany", es: "in Spain", uk: "in the United Kingdom", us: "in the USA" },
-  conti: "{o} works and {a} authors from Wikidata, with the year of publication and the authors' year of death. Page views are updated every Monday (last week: {s}).",
+  conti: "{o} works and {a} authors from Wikidata, with the year of publication and the authors' year of death. Page views are measured once a month over one week (last: {s}).",
   caricamento: "Loading…", errore: "I can't read the data. Please try again shortly.",
   risPer: "Results for “{q}”", nAut: "{n} author", nAutP: "{n} authors", nOp: "{n} work", nOpP: "{n} works",
   autore: "Author", mortoNel: "died in {m}", mortoNelInc: "died in {m} (sources give different years: the latest is used)", antico: "ancient author", morteNd: "year of death unknown",
@@ -248,9 +249,10 @@ en: {
   contaLiberi: "{n} of the {t} most read works are free {p}.",
   giaIn: "Already public {p}", sfoglia: "Browse the shelves",
   introS: "Everything you see below is <b>free {p}</b>, the country chosen above. Change the country and the shelves change.",
-  piuLetti: "Most read this week", piuLettiSub: "Only titles already free {p}. Views of the English and Italian Wikipedia pages, {s}.",
+  piuLetti: "Most read", piuLettiSub: "Only titles already free {p}. Sorted by views of the {w} Wikipedia, {s}.",
+  wiki: { it: "Italian", en: "English", fr: "French", de: "German", es: "Spanish", tutte: "English and Italian" },
   nuovi: "Free since 1 January {y}", nuoviUe: "Authors who died in {m}: {p} the term is 70 years from death.", nuoviEs: "Authors who died in {m}: in Spain the term is 80 years from death.", nuoviUs: "Works published in {m}: in the USA the term is 95 years from publication.",
-  autori: "Authors", autoriSub: "This week's ranking: authors with at least three titles free {p}, most read first. {n} in all.",
+  autori: "Authors", autoriSub: "Ranking: authors with at least three titles free {p}, most read on the {w} Wikipedia first. {n} in all.",
   vediTutti: "See all {n} →", vediMeno: "Show less", vediTutto: "See all →",
   titoliLiberi: "{n} free titles", titoli: "{n} titles",
   generi: "By genre", generiSub: "Only works that have a genre on Wikidata.", genere: "Genre",
@@ -273,7 +275,7 @@ en: {
   sInc: "Sources give different years of death: the latest is used, to be safe.",
   piede1: "An indicative calculation, not legal advice. What is free is the original text, not the edition or the translation: recent translations, illustrations and editions have their own rights. Check the law of the country before publishing.",
   piede2: "Rules used: Italy, France, Germany, United Kingdom 70 years from the author's death (in the UK, works first published after 1988 by authors who died before 1969 are protected until 2039); Spain 80 years for authors who died before 7 December 1987; USA 95 years from first publication (the first recorded date is used). In Italy, authors from Allied countries in the Second World War are flagged to be checked and kept off the Italian shelves.",
-  piede3: "Sources: Wikidata (CC0) for works, authors and years; Wikipedia for this week's page views; Duke University's Public Domain Day lists (CC BY 4.0) as a second source for the USA; Wikimedia Commons for portraits, each with its own licence. Data updated automatically every Monday: it may contain errors.",
+  piede3: "Sources: Wikidata (CC0) for works, authors and years; Wikipedia for this week's page views; Duke University's Public Domain Day lists (CC BY 4.0) as a second source for the USA; Wikimedia Commons for portraits, each with its own licence. Data updated automatically every month: it may contain errors.",
   piede4: "A project by Marco Novali.", segnala: "Found a mistake? Report it",
   dateFmt: (a, b) => `${a.getDate()}–${b.getDate()} ${MESI_EN[b.getMonth()]} ${b.getFullYear()}`,
 }};
@@ -555,7 +557,12 @@ async function cerca(q) {
 }
 
 /* ---------- scaffali ---------- */
-function primi(lista, n) { return lista.slice().sort((a, b) => b.v - a.v || b.pg - a.pg).slice(0, n); }
+// come nel resto del sito: si ordina per le visite alla Wikipedia nella lingua del paese scelto
+const LINGUA_PAESE = { it: "it", fr: "fr", de: "de", es: "es", uk: "en", us: "en" };
+const POS_LINGUA = { it: 0, en: 1, fr: 2, de: 3, es: 4 };
+function linguaVisite() { const l = LINGUA_PAESE[D.paese]; return D.misurate && D.misurate.has(l) ? l : null; }
+function vis(o) { const l = linguaVisite(); return l ? o.vl[POS_LINGUA[l]] || 0 : o.v; }
+function primi(lista, n) { return lista.slice().sort((a, b) => vis(b) - vis(a) || b.pg - a.pg).slice(0, n); }
 function scaffale(tit, sotto, elementi, opzioni) {
   const fila = h("div", { class: "fila", role: "list" }, elementi.length ? elementi.slice(0, 12) : h("p", { class: "vuoto" }, L.vuotoS));
   const testa = h("div", { class: "s-testa" }, h("div", {}, h("h3", {}, tit), sotto ? h("p", {}, sotto) : null));
@@ -581,7 +588,7 @@ function classificaAutori(liberi) {
   const per = new Map();
   for (const o of liberi) for (const a of o.au) {
     if (!per.has(a.q)) per.set(a.q, { a, opere: [], v: 0 });
-    const x = per.get(a.q); x.opere.push(o); x.v += o.v;
+    const x = per.get(a.q); x.opere.push(o); x.v += vis(o);
   }
   const tutti = [...per.values()].filter((x) => x.opere.length >= 3 && !NON_AUTORI.test(x.a.n)).sort((a, b) => b.v - a.v);
   const unici = [], visti = [];
@@ -630,11 +637,11 @@ function disegnaScaffali() {
     sotto = p === "es" ? tr("nuoviEs", { m }) : tr("nuoviUe", { m, p: inP.charAt(0).toUpperCase() + inP.slice(1) });
   }
   s.push(scaffale(tr("nuovi", { y: Y }), sotto, primi(nuovi, 30).map(copertina)));
-  s.push(scaffale(L.piuLetti, tr("piuLettiSub", { p: inP, s: D.sett }), primi(liberi, 30).map(copertina)));
+  s.push(scaffale(L.piuLetti, tr("piuLettiSub", { p: inP, s: D.sett, w: L.wiki[linguaVisite() || "tutte"] }), primi(liberi, 30).map(copertina)));
   // autori
   const cl = classificaAutori(liberi);
   const ol = h("ol", { class: "classifica" }, cl.slice(0, 10).map((x, i) => voceClassifica(x, i, p)));
-  const testa = h("div", { class: "s-testa" }, h("div", {}, h("h3", {}, L.autori), h("p", {}, tr("autoriSub", { p: inP, n: cl.length }))));
+  const testa = h("div", { class: "s-testa" }, h("div", {}, h("h3", {}, L.autori), h("p", {}, tr("autoriSub", { p: inP, n: cl.length, w: L.wiki[linguaVisite() || "tutte"] }))));
   if (cl.length > 10) testa.append(h("button", { type: "button", onclick: (e) => {
     const aperto = ol.children.length <= 10;
     ol.replaceChildren(...cl.slice(0, aperto ? cl.length : 10).map((x, i) => voceClassifica(x, i, p)));
@@ -686,7 +693,9 @@ async function avvia() {
   D.anno = Number(String(P.aggiornato).slice(0, 4)) || D.anno;
   D.lingue = P.lingue || {}; D.foto = P.foto || {}; D.prossimi = P.prossimi || [];
   const au = P.autori.map((a) => ({ q: a[0], n: a[1], m: a[2], an: !!a[3], inc: !!a[4], al: !!a[5] }));
-  D.opere = P.opere.map((r) => pulisciAnno({ q: r[0], t: r[1], ti: r[2], y: r[3], yd: r[4], au: r[5].map((i) => au[i]), v: r[6], g: r[7], l: r[8], pg: r[9], escl: !!r[10] }));
+  D.opere = P.opere.map((r) => pulisciAnno({ q: r[0], t: r[1], ti: r[2], y: r[3], yd: r[4], au: r[5].map((i) => au[i]), v: r[6], g: r[7], l: r[8], pg: r[9], escl: !!r[10], vl: r[11] || [] }));
+  // lingue di Wikipedia già misurate (le visite in francese, tedesco e spagnolo arrivano con il primo aggiornamento dopo il 19/11/2026)
+  D.misurate = new Set(["it", "en", "fr", "de", "es"].filter((l, i) => D.opere.some((o) => o.vl[i] !== null && o.vl[i] !== undefined)));
   D.indice = new Map(D.opere.map((o) => [o.q, o]));
   const [a, b] = P.settimana.map((d) => new Date(d + "T12:00:00"));
   D.sett = L.dateFmt(a, b);
