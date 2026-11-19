@@ -290,3 +290,11 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - **I nomi segnalati, tre cause diverse:** solo «writer» → Uderzo (56 pagine) e Carlo Levi (42); soglia 30 → Josephine Tey (28), W. S. Merwin (29), Oğuz Atay (18); esclusi perché hanno anche un mestiere non letterario (pittore, politico) e in Wikidata nessun loro libro collegato con almeno 10 pagine → Paul Éluard (79 pagine), Clarice Lispector (63). Hikmet, De Roberto e Drummond de Andrade non trovati per nome inglese nella prova (da rifare per codice).
 - **Giudizio:** «writer» da solo porta circa metà rumore (capi religiosi, imprenditori, una danzatrice). Va filtrato con la regola già verificata per la lista principale (`scripts/regola_lista.py`, mestiere letterario nella descrizione) invece di inventarne una nuova.
 - **Date:** Foscolo morto il 10 settembre 1827 (Britannica; ODNB tramite la Jackson Bibliography dell'Università di Toronto): il sito ha già il 10 settembre, la fonte salvata (Studenti.it) è debole. Góngora 23 maggio 1627 (Britannica; Wikipedia spagnola; Encyclopedia of the Renaissance; prima biografia, Chacón 1628): il sito ha già il 23.
+
+### 19/11/2026 — Anniversari 2027: lista larga da scegliere a mano
+- **Decisione di Marco:** non tutto può essere automatico; i calendari si rifiniscono a mano.
+- **Prova** (`scripts/candidati_anniv.py`, esito `docs/stima-sito/anniv-candidati.json` e `.md`): nascite e morti con anniversario tondo nel 2027 di chi su Wikidata ha un mestiere letterario compreso «writer», almeno 15 pagine Wikipedia, senza l'esclusione per altri mestieri. Per ognuno il verdetto della regola della lista principale (`regola_lista.scrittore`), solo come aiuto.
+- **Risultato:** 1.029 persone, 146 già nel calendario, **883 nuove**, di cui 416 scrittori secondo la regola. Per mese tra 52 e 77 nuove (dicembre 71, di cui 40 con la regola).
+- **Nomi segnalati da Marco:** ora ci sono Tey, Uderzo, Éluard, Carlo Levi, Lispector, Atay, Drummond de Andrade, Merwin. Mancano ancora Nazım Hikmet e Federico De Roberto: da guardare a parte (probabile data di nascita doppia o meno di 15 pagine).
+- **Uderzo:** la regola dice «no» (descrizione «fumettista»): esempio di dove serve la scelta a mano.
+- Lista messa in un foglio con una casella «Entra?» per ogni nome.
