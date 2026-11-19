@@ -209,6 +209,8 @@ it: {
   sNd: "Non lo sappiamo: manca l'anno di morte o di uscita.",
   sAlleato: "Per la legge italiana sarebbe libero, ma l'autore era di un paese alleato nella Seconda guerra mondiale: in Italia la protezione può durare di più (Trattato di pace del 1947, allegato XV). Va verificato caso per caso.",
   sAlleatoBreve: "Italia: per le opere uscite fino al 1947 è da verificare, perché l'autore era di un paese alleato nella Seconda guerra mondiale (Trattato di pace del 1947).",
+  sUsNo: "Da verificare negli USA: secondo Open Library l'opera è uscita nel {y}, non nell'anno che dà Wikidata.",
+  sUsNd: "Da verificare negli USA: l'anno di uscita viene solo da Wikidata e non l'abbiamo ancora confermato con una seconda fonte.",
   sUk2039: "Nel Regno Unito: opera uscita per la prima volta dopo il 1988, di un autore morto prima del 1969: protetta fino al 31 dicembre 2039 (Copyright, Designs and Patents Act 1988, allegato 1, paragrafo 12).",
   sUkPostumo: "Nel Regno Unito: opera uscita dopo la morte dell'autore e prima del 1989. Per le opere postume la durata può contare dalla pubblicazione: da verificare.",
   sUkNd: "Nel Regno Unito: se l'opera è uscita per la prima volta dopo il 1988 e l'autore è morto prima del 1969, è protetta fino al 31 dicembre 2039.",
@@ -266,6 +268,8 @@ en: {
   sNd: "We don't know: the year of death or of publication is missing.",
   sAlleato: "Under Italian law it would be free, but the author was from an Allied country in the Second World War: in Italy protection may last longer (1947 Peace Treaty, Annex XV). Check case by case.",
   sAlleatoBreve: "Italy: works published up to 1947 need checking, because the author was from an Allied country in the Second World War (1947 Peace Treaty).",
+  sUsNo: "To be checked in the USA: according to Open Library the work was published in {y}, not in the year Wikidata gives.",
+  sUsNd: "To be checked in the USA: the year of publication comes from Wikidata only and has not yet been confirmed by a second source.",
   sUk2039: "In the United Kingdom: work first published after 1988, by an author who died before 1969: protected until 31 December 2039 (Copyright, Designs and Patents Act 1988, Schedule 1, paragraph 12).",
   sUkPostumo: "In the United Kingdom: work published after the author's death and before 1989. For posthumous works the term may run from publication: to be checked.",
   sUkNd: "In the United Kingdom: if the work was first published after 1988 and the author died before 1969, it is protected until 31 December 2039.",
@@ -317,7 +321,7 @@ function iniziali(nome) { const p = nome.replace(/[().,]/g, " ").split(/\s+/).fi
 function cognome(nome) { const p = nome.split(/\s+/).filter(Boolean); return p.length ? p[p.length - 1] : nome; }
 
 /* ---------- dati ---------- */
-const D = { anno: new Date().getFullYear(), opere: [], aut: new Map(), foto: {}, prossimi: [], file: new Map(), perAutore: new Map(), paese: "it" };
+const D = { verifiche: {}, anno: new Date().getFullYear(), opere: [], aut: new Map(), foto: {}, prossimi: [], file: new Map(), perAutore: new Map(), paese: "it" };
 // opera normalizzata: { q, t, ti, y, yd, au:[{q,n,m,an,inc,al}], v, g:[], l, pg }
 function daRiga(r) {   // riga dei file di ricerca: [qid, titolo, titolo_it, anno, pagine, autori, anno_duke]
   return pulisciAnno({ q: r[0], t: r[1], ti: r[2] || "", y: r[3] === null || r[3] === undefined ? null : r[3], pg: r[4] || 0, yd: r[6] || 0,
@@ -340,6 +344,11 @@ function stato(o, c) {
   if (c === "us") {
     if (o.yd) note.push("sDuke");
     if (o.y !== null) {
+      // libera solo negli USA e solo per l'anno: serve una seconda fonte (Duke o Open Library), altrimenti «da verificare»
+      if (o.y + 96 <= Y && !liberaUe(o)) {
+        const v = D.verifiche[o.q];
+        if (!v || v[0] !== "ok") return { s: "ver", note: note.concat([v && v[0] === "no" ? "sUsNo" : "sUsNd"]), y2: v && v[1] };
+      }
       if (o.y + 96 <= Y) { if (o.y >= Y - 106) note.push("sUsPrima"); return { s: "si", note }; }
       return { s: "dal", y: o.y + 96, note };
     }
@@ -373,6 +382,11 @@ function stato(o, c) {
   return { s: "si", note };
 }
 const _lib = new Map();
+function liberaUe(o) {   // libera in Europa per la regola dei 70 anni (stessa regola dello Storico)
+  const Y = D.anno;
+  if (o.y !== null && o.y <= Y - 171) return true;
+  return o.au.length > 0 && o.au.every((a) => a.an || (a.m !== null && a.m !== undefined && a.m <= Y - 71));
+}
 const libera = (o, c) => { const k = o.q + c; if (!_lib.has(k)) _lib.set(k, stato(o, c).s === "si"); return _lib.get(k); };
 
 /* ---------- copertine ---------- */
@@ -420,7 +434,7 @@ addEventListener("keydown", (e) => { if (e.key === "Escape" && !$("#finestra").h
 
 function testoStato(o, c) {
   const st = stato(o, c);
-  if (st.s === "ver") return c === "uk" ? L.sUkPostumo : L.sAlleato;
+  if (st.s === "ver") return c === "uk" ? L.sUkPostumo : c === "us" ? (st.note.includes("sUsNo") ? tr("sUsNo", { y: st.y2 }) : L.sUsNd) : L.sAlleato;
   if (st.s === "nd") return L.sNd;
   if (c === "us") return st.s === "si" ? (st.senza ? L.sUsSenza : L.sUsSi) : tr("sUsDal", { y: st.y });
   if (c === "es") return st.s === "si" ? L.sEsSi : tr("sEsDal", { y: st.y });
@@ -429,7 +443,7 @@ function testoStato(o, c) {
 function apriOpera(o) {
   const righe = ["it", "fr", "de", "es", "uk", "us"].map((c) => {
     const st = stato(o, c);
-    const extra = st.note.filter((k) => k !== "sAlleato" && !(st.s === "ver" && k === "sUkPostumo")).map((k) => h("span", { style: "display:block;margin-top:4px;font-size:13px;color:#5C5C66" }, L[k]));
+    const extra = st.note.filter((k) => k !== "sAlleato" && k !== "sUsNo" && k !== "sUsNd" && !(st.s === "ver" && k === "sUkPostumo")).map((k) => h("span", { style: "display:block;margin-top:4px;font-size:13px;color:#5C5C66" }, L[k]));
     return h("li", {}, h("span", { class: "p" }, L.paesi[c], " ", badge(st)), h("span", {}, testoStato(o, c), extra));
   });
   const orig = LING === "it" && o.ti && o.t && o.ti !== o.t ? o.t : null;
@@ -691,7 +705,8 @@ async function avvia() {
   let P;
   try { P = await leggi("/data/storico/pagina.json"); } catch (e) { $("#scaffali-corpo").replaceChildren(h("p", {}, L.errore)); return; }
   D.anno = Number(String(P.aggiornato).slice(0, 4)) || D.anno;
-  D.lingue = P.lingue || {}; D.foto = P.foto || {}; D.prossimi = P.prossimi || [];
+  D.lingue = P.lingue || {};
+  try { D.verifiche = await leggi("/data/storico/anni_verificati.json"); } catch (e) { D.verifiche = {}; } D.foto = P.foto || {}; D.prossimi = P.prossimi || [];
   const au = P.autori.map((a) => ({ q: a[0], n: a[1], m: a[2], an: !!a[3], inc: !!a[4], al: !!a[5] }));
   D.opere = P.opere.map((r) => pulisciAnno({ q: r[0], t: r[1], ti: r[2], y: r[3], yd: r[4], au: r[5].map((i) => au[i]), v: r[6], g: r[7], l: r[8], pg: r[9], escl: !!r[10], vl: r[11] || [] }));
   // lingue di Wikipedia già misurate (le visite in francese, tedesco e spagnolo arrivano con il primo aggiornamento dopo il 19/11/2026)

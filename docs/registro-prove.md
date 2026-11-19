@@ -298,3 +298,10 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - **Nomi segnalati da Marco:** ora ci sono Tey, Uderzo, Éluard, Carlo Levi, Lispector, Atay, Drummond de Andrade, Merwin. Mancano ancora Nazım Hikmet e Federico De Roberto: da guardare a parte (probabile data di nascita doppia o meno di 15 pagine).
 - **Uderzo:** la regola dice «no» (descrizione «fumettista»): esempio di dove serve la scelta a mano.
 - Lista messa in un foglio con una casella «Entra?» per ogni nome.
+
+### 19/11/2026 — Già pubblici: seconda fonte obbligatoria per le opere libere solo negli USA
+- **Errore grave trovato:** «Poesie di Svendborg» (Brecht) risultava del 1926, quindi libera negli USA; è uscita nel 1939 (Malik-Verlag, Londra; fonte: Krabiel, Wallstein/De Gruyter 2017). Il 1926 c'era già prima delle correzioni di oggi: viene da Wikidata, e nessun aggiornamento lo avrebbe corretto.
+- **Il buco:** la Duke riempiva o aggiungeva solo i suoi ~15 libri l'anno; Open Library e Library of Congress erano usate solo per gli autori (traduzioni, edizioni), mai per l'anno di ogni opera.
+- **Regola (fissata prima dei risultati):** un'opera libera solo negli USA e solo per l'anno è «libero» solo se la Duke o Open Library (anno di prima pubblicazione, stesso titolo e stesso autore) confermano un'uscita entro il 1930; altrimenti «da verificare» nella ricerca e fuori dagli scaffali USA. Riguarda 3.458 opere.
+- **Subito:** finché la verifica non le conferma, tutte e 3.458 sono «da verificare» (prudenza). `storico/verifica_anni.py` gira nel lavoro gia-pubblici.yml e scrive `data/storico/anni_verificati.json`.
+- **Da misurare:** quante confermate, quante in disaccordo, quante non trovate; 10 esempi per tipo da controllare a mano prima di fidarsi di Open Library come seconda fonte.

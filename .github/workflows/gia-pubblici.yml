@@ -9,6 +9,7 @@ on:
       - "storico/pagina.py"
       - "storico/pagina.html"
       - "storico/ritratti.py"
+      - "storico/verifica_anni.py"
       - ".github/workflows/gia-pubblici.yml"
   workflow_dispatch:
 
@@ -22,7 +23,7 @@ concurrency:
 jobs:
   pagina:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
         with:
@@ -33,6 +34,9 @@ jobs:
       - name: Ritratti da Wikimedia Commons
         continue-on-error: true   # senza ritratti la pagina mostra le iniziali
         run: python storico/ritratti.py
+      - name: Seconda fonte per gli anni delle opere libere solo negli USA (Duke, Open Library)
+        continue-on-error: true
+        run: python storico/verifica_anni.py 40
       - name: Dati e pagine
         run: python storico/pagina.py
       - name: Salva
