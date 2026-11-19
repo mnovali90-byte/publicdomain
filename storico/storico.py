@@ -24,7 +24,7 @@ from datetime import date, datetime, timedelta, timezone
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "scripts"))
 from opere import CLASSI, GENERI, get, qid, sparql, val  # noqa: E402
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from per_autore import semi, opere_per_autore, opere_anonime, libera_ue, libera_usa, libera, info_autori  # noqa: E402
+from per_autore import semi, opere_per_autore, opere_anonime, libera_ue, libera_usa, libera, info_autori, sparql_o_errore  # noqa: E402
 import duke  # noqa: E402  seconda fonte per gli USA (19/11/2026)
 
 UA = {"User-Agent": "PublicDomainRadar/1.0 (https://publicdomainradar.com; open data project)"}
@@ -68,29 +68,53 @@ def chiavi_ricerca(testo, autore=False):
 
 # ------------------------------------------------------------------ Wikidata
 def opere_periodo(da, a):
-    """Opere con anno di prima pubblicazione tra da e a (inclusi), almeno una pagina Wikipedia."""
+    """Opere con anno di prima pubblicazione tra da e a (inclusi), almeno una pagina Wikipedia.
+    v3 (19/11/2026, dopo il confronto con la Duke), in tre interrogazioni leggere (una sola andava in timeout):
+    1. opere di un tipo letterario con la loro data di pubblicazione più vecchia (come prima);
+    2. opere SENZA tipo ma con un autore (P50), come «Now We Are Six»;
+    3. opere SENZA data propria che hanno la data su un'edizione (P629), come «New Hampshire» di Frost.
+    Se una delle tre non risponde il periodo resta da rifare (None)."""
     classi = " ".join("wd:" + c for c in CLASSI)
-    q = f'''SELECT ?w ?wLabel ?wit ?a ?aLabel ?morte ?sl ?en ?itw (YEAR(?d) AS ?anno) WHERE {{
-      # v3 (19/11/2026, dopo il confronto con la Duke): entra anche un'opera senza tipo ma con un autore (P50), come
-      # «Now We Are Six»; la data può venire anche da un'edizione dell'opera (P629), come «New Hampshire» di Frost
-      {{ VALUES ?c {{ {classi} }} ?w wdt:P31 ?c }} UNION {{ VALUES ?c {{ {classi} }} ?w wdt:P31 wd:Q47461344; wdt:P7937 ?c }}
-        UNION {{ ?w wdt:P50 [] FILTER NOT EXISTS {{ ?w wdt:P31 wd:Q13442814 }} }}
-      {{ ?w wdt:P577 ?d }} UNION {{ ?ed wdt:P629 ?w; wdt:P577 ?d }}
-      FILTER(YEAR(?d)>={da} && YEAR(?d)<={a})
-      FILTER NOT EXISTS {{ ?w wdt:P577 ?d0 FILTER(?d0 < ?d) }}   # conta la PRIMA pubblicazione (18/11/2026)
-      FILTER NOT EXISTS {{ ?ed0 wdt:P629 ?w; wdt:P577 ?d1 FILTER(?d1 < ?d) }}
-      ?w wikibase:sitelinks ?sl. FILTER(?sl>=1)
+    coda = """?w wikibase:sitelinks ?sl. FILTER(?sl>=1)
       OPTIONAL {{ ?w wdt:P50 ?a. OPTIONAL {{ ?a wdt:P570 ?morte }} }}
       OPTIONAL {{ ?w rdfs:label ?wit FILTER(LANG(?wit)="it") }}
       OPTIONAL {{ ?en schema:about ?w; schema:isPartOf <https://en.wikipedia.org/> }}
       OPTIONAL {{ ?itw schema:about ?w; schema:isPartOf <https://it.wikipedia.org/> }}
-      SERVICE wikibase:label {{ bd:serviceParam wikibase:language "en,it,mul". }} }}'''
+      SERVICE wikibase:label {{ bd:serviceParam wikibase:language "en,it,mul". }} }}"""
+    testa = "SELECT ?w ?wLabel ?wit ?a ?aLabel ?morte ?sl ?en ?itw (YEAR(?d) AS ?anno) WHERE {{"
+    domande = [
+        testa + f"""
+      VALUES ?c {{ {classi} }}
+      {{ ?w wdt:P31 ?c }} UNION {{ ?w wdt:P31 wd:Q47461344; wdt:P7937 ?c }}
+      ?w wdt:P577 ?d. FILTER(YEAR(?d)>={da} && YEAR(?d)<={a})
+      FILTER NOT EXISTS {{ ?w wdt:P577 ?d0 FILTER(?d0 < ?d) }}   # conta la PRIMA pubblicazione (18/11/2026)
+      """ + coda.format(),
+        testa + f"""
+      ?w wdt:P577 ?d. FILTER(YEAR(?d)>={da} && YEAR(?d)<={a})
+      ?w wdt:P50 [] . FILTER NOT EXISTS {{ ?w wdt:P31 [] }}
+      FILTER NOT EXISTS {{ ?w wdt:P577 ?d0 FILTER(?d0 < ?d) }}
+      """ + coda.format(),
+        testa + f"""
+      ?ed wdt:P629 ?w; wdt:P577 ?d. FILTER(YEAR(?d)>={da} && YEAR(?d)<={a})
+      FILTER NOT EXISTS {{ ?w wdt:P577 [] }}
+      FILTER NOT EXISTS {{ ?ed0 wdt:P629 ?w; wdt:P577 ?d1 FILTER(?d1 < ?d) }}
+      {{ VALUES ?c {{ {classi} }} ?w wdt:P31 ?c }} UNION {{ ?w wdt:P50 [] }}
+      """ + coda.format(),
+    ]
+    righe = []
+    for q in domande:
+        r = sparql_o_errore(q)
+        if r is None:
+            return None
+        righe += r
     out = {}
-    for r in sparql(q):
+    for r in righe:
         k = qid(val(r, "w"))
         o = out.setdefault(k, {"qid": k, "titolo": val(r, "wLabel"), "titolo_it": val(r, "wit"),
                                "anno": int(val(r, "anno") or 0), "autori": {}, "pagine": int(val(r, "sl")),
                                "wiki_en": None, "wiki_it": None})
+        if val(r, "anno") and (not o["anno"] or int(val(r, "anno")) < o["anno"]):
+            o["anno"] = int(val(r, "anno"))
         if val(r, "a"):
             x = o["autori"].setdefault(qid(val(r, "a")), {"nome": val(r, "aLabel"), "morte": None})
             if val(r, "morte"):
@@ -289,6 +313,7 @@ def main():
                 lista = opere_periodo(da, a)
                 if lista:
                     break
+                lista = lista or []
                 time.sleep(20 * (tentativo + 1))
             print(nome, "opere:", len(lista), flush=True)
             if lista:

@@ -18,7 +18,11 @@ L'anno della Duke vale solo per gli USA: per l'Europa servono gli anni di morte,
 import html, json, re, sys, time, urllib.parse
 from datetime import date
 
-from opere import get, qid, sparql, val
+import urllib.request
+
+from opere import qid, sparql, val
+
+UA = {"User-Agent": "PublicDomainTool/0.1 (https://github.com/mnovali90-byte/publicdomain)"}
 
 CARTELLA = "data/storico"
 PRIMO_ANNO = 2019          # il primo anno con opere nuove dopo il blocco del 1998
@@ -26,8 +30,8 @@ PRIMO_ANNO = 2019          # il primo anno con opere nuove dopo il blocco del 19
 
 def _pagina(anno):
     for u in (f"https://web.law.duke.edu/cspd/publicdomainday/{anno}/", f"https://cspd.law.duke.edu/publicdomainday/{anno}/"):
-        try:
-            return get(u)
+        try:     # la pagina è HTML: opere.get legge solo JSON (primo giro del 19/11 finito vuoto per questo)
+            return urllib.request.urlopen(urllib.request.Request(u, headers=UA), timeout=60).read().decode("utf-8", "replace")
         except Exception as e:
             print(f"Duke {anno}: {u} non letta ({e})", file=sys.stderr)
     return None
