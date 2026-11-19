@@ -407,3 +407,17 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - **Problemi trovati:**
   - The Maltese Falcon risulta confermato 1929 da noi, mentre la Duke lo mette nel 2026 (1930). È uscito a puntate su rivista nel 1929-30. Serve un controllo: conflitto con la Duke di un altro anno = da decidere.
   - «Good-Bye to All That» compare due volte (due voci Wikidata).
+
+## 19/11/2026 (notte) — Date delle puntate: Wikipedia inglese e ISFDB
+- **Come:** scripts/prova_puntate.py. Per 40 opere (4 romanzi noti più i testi inglesi non confermati delle liste 2027 e 2028) ha letto il testo della Wikipedia inglese, cercando le frasi su rivista e puntate, e le voci di ISFDB con la data del numero della rivista.
+- **Romanzi a puntate:**
+  - Red Harvest: 4 puntate su Black Mask, da novembre 1927 a febbraio 1928 (Wikipedia).
+  - The Dain Curse: da novembre 1928 a febbraio 1929.
+  - Tarzan Triumphant: su Blue Book da ottobre 1931 a marzo 1932. **Nella lista 2027 è «1931 confermato», ma per intero è libero solo dal 2028.**
+  - Tarzan and the City of Gold: su Argosy da marzo ad aprile 1932 (ISFDB, puntata per puntata).
+  - Pirates of Venus: su Argosy nel 1932, libro nel 1934.
+  - The Maltese Falcon: né Wikipedia né ISFDB (non è un genere che ISFDB copre).
+- **Racconti in rivista:** ISFDB dà il mese e la rivista per circa 20 testi di Lovecraft, Howard, Clark Ashton Smith e Wells, per esempio The Whisperer in Darkness (Weird Tales, agosto 1931) e The Phoenix on the Sword (dicembre 1932). Con questo diventano confermabili.
+- **Errori nella lista 2028:** The Lagoon (1897), The Idiots (1896) e The Return (1898) sono racconti di Conrad dell'Ottocento, non del 1932: sono già liberi. Wikipedia e ISFDB concordano.
+- **Non coperti:** racconti di Faulkner e testi teatrali di Coward. Per Wodehouse e Woolf a volte risponde Wikipedia.
+- **Giudizio:** ISFDB va bene per il genere (fantascienza, fantasy, horror, avventura), la Wikipedia inglese per i romanzi famosi. Vanno usate tutte e due.
