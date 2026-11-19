@@ -1,14 +1,14 @@
-"""Prova alla cieca (19/11/2026, richiesta di Marco): rifacciamo la lista USA del 2025 (libri del 1929) con il nostro
-metodo, SENZA usare la Duke, e solo dopo la confrontiamo con la lista Duke del 2025.
+"""Prova alla cieca contro la Duke (19/11/2026, rifatta dopo le correzioni del metodo).
 
-Come:
-  1. lista: stessa query Wikidata di scripts/opere.py (opere con prima pubblicazione nel 1929, almeno 2 Wikipedia);
-  2. verifica dell'anno: stesse fonti e stesse regole di scripts/verifica_anni_usa.py, tranne la Duke
-     (registro del copyright, BnF, K10plus, Open Library, Library of Congress);
-  3. solo alla fine si apre data/storico/duke.json e si confronta.
-Scrive docs/stima-sito/prova-cieca-duke-2025.json.
+1. Lista: scripts/opere.py, stessa funzione delle liste USA (opere_anno_sicuro: un tipo alla volta; tipi in più: saggio,
+   opera drammatica, «opera scritta» con autore; per le opere a puntate conta la data più recente).
+2. Verifica: scripts/verifica_anni_usa.py, verifica_opera, SENZA la Duke (registro del copyright, BnF, K10plus,
+   Wikipedia inglese e ISFDB per riviste e puntate, Open Library, Library of Congress).
+3. Solo alla fine si apre la lista Duke e si confronta: per codice Wikidata, oppure per titolo (senza articolo) con lo
+   stesso cognome o con titolo identico (pseudonimi come «Ellery Queen»).
+Salva la lista completa con gli esiti: docs/stima-sito/prova-cieca-duke-<anno>.json.
 """
-import json, re, sys, time
+import json, os, sys, time
 from collections import Counter
 from pathlib import Path
 
@@ -17,89 +17,65 @@ sys.path.insert(0, str(R / "scripts"))
 import opere                     # noqa: E402
 import verifica_anni_usa as vu   # noqa: E402
 
-ANNO, P = 2025, 1929
-BUDGET = 48 * 60
+ANNO = int(os.environ.get("ANNO_PROVA", "2025"))
+P = ANNO - 96
+BUDGET = 50 * 60
+
+
+def norm(t):
+    return vu.senza_articolo(vu.parole(t))
 
 
 def main():
     inizio = time.time()
-    # 1. la lista, come per il 2027
-    # una classe alla volta: la domanda unica a Wikidata è andata in timeout (prova del 19/11/2026, lista vuota)
-    tutte, classi = {}, list(opere.CLASSI)
-    for c in classi:
-        for t in range(3):
-            opere.CLASSI = [c]
-            r = opere.opere_anno(P)
-            if r:
-                break
-            time.sleep(30)
-        for o in r:
-            tutte.setdefault(o["qid"], o)
-        print("classe", c, len(r))
-    opere.CLASSI = classi
-    ops = list(tutte.values())
-    if len(ops) < 20:
-        raise SystemExit("Lista del 1929 vuota o quasi: Wikidata non ha risposto. Prova NON valida, non scrivo risultati.")
+    ops = opere.opere_anno_sicuro(P)
     ops.sort(key=lambda o: -o["pagine"])
-    ops = ops[:opere.MAX_OPERE]
-    print("opere del 1929 da Wikidata:", len(ops))
-    # 2. la verifica, senza Duke
-    idx = vu.indice_cce(range(P - 1, P + 2))
+    print("opere da Wikidata:", len(ops))
+    if len(ops) < 20:
+        raise SystemExit("Lista vuota o quasi: Wikidata non ha risposto. Prova NON valida.")
+    idx = vu.indice_cce(range(P - 3, P + 3))
     orig = vu.originali([o["qid"] for o in ops])
     esiti = {}
     for o in ops:
         if time.time() - inizio > BUDGET:
             break
-        cognomi = [vu.parole(a["nome"])[-1] for a in o.get("autori", []) if vu.parole(a["nome"])]
-        trovati = {"cce": vu.cce(idx, o, cognomi)}
-        if o["qid"] in orig and cognomi and P not in trovati.values():
-            lg, titolo = orig[o["qid"]]
-            if lg == "fr":
-                trovati["bnf"] = vu.bnf(titolo, cognomi[0])[0]
-            else:
-                trovati["k10plus"] = vu.k10plus(titolo, cognomi[0], P)[0]
-        if P not in trovati.values():
-            trovati["openlibrary"] = vu.va.open_library(vu.va_riga(o))[1]
-            if trovati["openlibrary"] != P:
-                trovati["loc"] = vu.va.library_of_congress(vu.va_riga(o))[1]
-        esiti[o["qid"]] = list(vu.decidi(trovati, P)) + [{k: v for k, v in trovati.items() if v}]
-        time.sleep(0.3)
+        esiti[o["qid"]] = vu.verifica_opera(o, P, {}, idx, orig)   # {} = niente Duke
     print("controllate:", len(esiti), Counter(e[0] for e in esiti.values()))
 
-    # 3. solo ora la Duke
     dk = json.loads((R / "data" / "storico" / "duke.json").read_text(encoding="utf-8"))[str(ANNO)]["libri"]
     per_qid = {o["qid"]: o for o in ops}
     confronto = []
     for l in dk:
-        q = (l.get("wd") or {}).get("qid")
-        o = per_qid.get(q)
-        if not o:   # Duke senza Wikidata: si cerca per titolo e cognome
-            tw = vu.parole(l["titolo"])[:3]
-            cg = vu.parole(l["autore"])[-1:]
-            o = next((x for x in ops if vu.parole(x["titolo"])[:3] == tw and
-                      any(cg[0] in vu.parole(a["nome"]) for a in x.get("autori", []))), None) if tw and cg else None
+        o = per_qid.get((l.get("wd") or {}).get("qid"))
+        come = "codice Wikidata" if o else None
+        if not o:
+            tw, cg = norm(l["titolo"]), set(vu.parole(l["autore"]))
+            for x in ops:
+                tx = norm(x["titolo"])
+                n_ = min(len(tw), len(tx), 3)
+                if n_ and tx[:n_] == tw[:n_]:
+                    stesso_autore = any(set(vu.parole(a["nome"])) & cg for a in x.get("autori", []))
+                    if stesso_autore or tx == tw:
+                        o, come = x, ("titolo e autore" if stesso_autore else "titolo identico")
+                        break
         e = esiti.get(o["qid"]) if o else None
-        confronto.append({"duke": f'{l["titolo"]} — {l["autore"]}', "nella_nostra_lista": bool(o),
-                          "nostro_esito": e[0] if e else None, "fonte": e[2] if e else None,
-                          "perche_manca": None if o else "non è in Wikidata come opera del 1929 con almeno 2 Wikipedia"})
-    trovati_duke = sum(1 for c in confronto if c["nella_nostra_lista"])
-    confermati_duke = sum(1 for c in confronto if c["nostro_esito"] == "ok")
-    out = {
-        "anno": ANNO, "anno_pubblicazione": P,
-        "nostra_lista": len(ops), "controllate": len(esiti),
-        "nostri_esiti": dict(Counter(e[0] for e in esiti.values())),
-        "nostre_conferme_per_fonte": dict(Counter(e[2] for e in esiti.values() if e[0] == "ok")),
-        "duke_libri": len(dk), "duke_nella_nostra_lista": trovati_duke, "duke_confermati_da_noi": confermati_duke,
-        "confronto": confronto,
-        "nostri_confermati_non_in_duke_primi_40": [
-            [o["titolo"], ", ".join(a["nome"] for a in o.get("autori", [])), o["pagine"], esiti[o["qid"]][2]]
-            for o in ops if o["qid"] in esiti and esiti[o["qid"]][0] == "ok"
-            and o["qid"] not in {(l.get("wd") or {}).get("qid") for l in dk}][:40],
-        "nostri_prima": [[o["titolo"], esiti[o["qid"]][1], esiti[o["qid"]][2]] for o in ops
-                         if o["qid"] in esiti and esiti[o["qid"]][0] == "prima"],
-    }
-    (R / "docs" / "stima-sito" / "prova-cieca-duke-2025.json").write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
-    print(json.dumps({k: v for k, v in out.items() if k not in ("confronto", "nostri_confermati_non_in_duke_primi_40")}, ensure_ascii=False))
+        confronto.append({"duke": f'{l["titolo"]} — {l["autore"]}', "trovato_come": come,
+                          "nostro_titolo": o["titolo"] if o else None, "nostro_esito": e[0] if e else None,
+                          "fonte": e[2] if e else None, "extra": e[6] if e else None})
+    lista = []
+    for o in ops:
+        e = esiti.get(o["qid"]) or [None] * 7
+        lista.append({"qid": o["qid"], "titolo": o["titolo"], "autori": [a["nome"] for a in o.get("autori", [])],
+                      "wikipedia": o["pagine"], "date_wikidata": o.get("date_wikidata"), "esito": e[0], "anno": e[1],
+                      "fonte": e[2], "trovati": e[5], "extra": e[6]})
+    out = {"anno": ANNO, "anno_pubblicazione": P, "nostra_lista": len(ops), "controllate": len(esiti),
+           "nostri_esiti": dict(Counter(e[0] for e in esiti.values())),
+           "nostre_conferme_per_fonte": dict(Counter(e[2] for e in esiti.values() if e[0] == "ok")),
+           "duke_libri": len(dk), "duke_trovati": sum(1 for c in confronto if c["trovato_come"]),
+           "duke_confermati": sum(1 for c in confronto if c["nostro_esito"] == "ok"),
+           "confronto": confronto, "lista_completa": lista}
+    (R / "docs" / "stima-sito" / f"prova-cieca-duke-{ANNO}.json").write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
+    print(json.dumps({k: v for k, v in out.items() if k not in ("confronto", "lista_completa")}, ensure_ascii=False))
     for c in confronto:
         print(c)
 

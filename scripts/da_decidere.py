@@ -70,6 +70,18 @@ def main():
         righe.append("- Nessuno.")
     righe.append("")
 
+    # 2b. libri usciti a puntate fino a un anno dopo
+    righe.append("## 2b. Libri USA usciti a puntate fino a un anno dopo")
+    trovati = False
+    for a in anni:
+        for titolo, ultima, fonte in (us.get(str(a)) or {}).get("parziali", []):
+            righe.append(f"- Lista {a}: **{titolo}**: a puntate fino al {ultima} ({fonte}). Per intero è libero solo dal {ultima + 96}.")
+            trovati = True
+            n += 1
+    if not trovati:
+        righe.append("- Nessuno.")
+    righe.append("")
+
     # 3. anni di morte discordi
     righe.append("## 3. Autori con l'anno di morte discorde tra le fonti")
     trovati = False
