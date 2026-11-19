@@ -2,8 +2,8 @@
  "controllato": "2026-11-19",
  "per_catalogo": {
   "sbn_it": {
-   "controllati": 237,
-   "ok": 236,
+   "controllati": 248,
+   "ok": 247,
    "sospesi": 1
   },
   "bnf_fr": {
@@ -12,18 +12,18 @@
    "sospesi": 0
   },
   "bne_es": {
-   "controllati": 248,
-   "ok": 248,
+   "controllati": 264,
+   "ok": 264,
    "sospesi": 0
   },
   "bl_en": {
-   "controllati": 292,
-   "ok": 292,
+   "controllati": 312,
+   "ok": 312,
    "sospesi": 0
   },
   "loc_en": {
-   "controllati": 514,
-   "ok": 514,
+   "controllati": 548,
+   "ok": 548,
    "sospesi": 0
   }
  },
