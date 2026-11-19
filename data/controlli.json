@@ -2,30 +2,40 @@
  "controllato": "2026-11-19",
  "per_catalogo": {
   "sbn_it": {
-   "controllati": 0,
-   "ok": 0,
-   "sospesi": 0
+   "controllati": 253,
+   "ok": 252,
+   "sospesi": 1
   },
   "bnf_fr": {
-   "controllati": 0,
-   "ok": 0,
+   "controllati": 220,
+   "ok": 220,
    "sospesi": 0
   },
   "bne_es": {
-   "controllati": 0,
-   "ok": 0,
+   "controllati": 264,
+   "ok": 264,
    "sospesi": 0
   },
   "bl_en": {
-   "controllati": 0,
-   "ok": 0,
+   "controllati": 317,
+   "ok": 317,
    "sospesi": 0
   },
   "loc_en": {
-   "controllati": 0,
-   "ok": 0,
+   "controllati": 560,
+   "ok": 560,
    "sospesi": 0
   }
  },
- "sospesi": []
+ "sospesi": [
+  {
+   "wikidata": "Q265792",
+   "nome": "Ray Cummings",
+   "catalogo": "sbn_it",
+   "motivo": "collegamento non dimostrato: il codice SBN di Wikidata (RAVV030671) porta a una scheda il cui unico titolo è il film «Sabotatori» (Saboteur, 1942), che non è suo",
+   "edizioni": 1,
+   "dal_2000": 0,
+   "ultimo": 1995
+  }
+ ]
 }
