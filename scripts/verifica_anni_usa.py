@@ -4,12 +4,12 @@ Metodo: docs/metodo-anni-opere.md, sezione «Liste USA del Public Domain Day». 
   1. Duke (liste del Public Domain Day degli anni passati)
   2. Registro del copyright USA (Catalog of Copyright Entries, libri, trascritto dalla New York Public Library, CC0)
   3. Open Library   4. Library of Congress
-  5. Biblioteca nazionale della lingua dell'opera, sul titolo originale: BnF (francese), DNB (tedesco)
+  5. Biblioteca nazionale della lingua dell'opera, sul titolo originale: BnF (francese), K10plus, catalogo collettivo tedesco (tedesco)
 Per ogni fonte si prende l'edizione più vecchia con lo stesso titolo (e lo stesso autore).
 
 Esiti per la lista del 2027 (libri del 1931):
   - "ok"    : almeno una fonte ha un'edizione del 1931;
-  - "prima" : una fonte AUTOREVOLE (Duke, registro del copyright, BnF, DNB) ha un'edizione più vecchia e nessuna
+  - "prima" : una fonte AUTOREVOLE (Duke, registro del copyright, BnF, K10plus) ha un'edizione più vecchia e nessuna
               ha il 1931 → la lista mette il libro nell'anno sbagliato; Open Library e Library of Congress da sole
               non bastano (prova del 19/11/2026: Open Library dà «Death in the Afternoon» al 1920);
   - "nd"    : nessuna conferma.
@@ -28,7 +28,7 @@ import verifica_anni as va   # noqa: E402  (Open Library e Library of Congress, 
 parole, UA = va.parole, va.UA
 BUDGET = 50 * 60
 OGGI = date.today().isoformat()
-AUTOREVOLI = ("duke", "cce", "bnf", "dnb")
+AUTOREVOLI = ("duke", "cce", "bnf", "k10plus")
 CCE_RAW = "https://raw.githubusercontent.com/NYPL/catalog_of_copyright_entries_project/master/xml/"
 CCE_FILE = {1930: "1930/cc271libr_001-2321.xml", 1931: "1931/1931_v28.xml",
             1932: "1932/1932_v29.xml", 1933: "1933/1933_v30.xml"}
@@ -100,12 +100,12 @@ def originali(qids):
         for q, e in json.loads(x).get("entities", {}).items():
             cl = e.get("claims", {})
             lingue = [c["mainsnak"].get("datavalue", {}).get("value", {}).get("id") for c in cl.get("P407", [])]
-            lg = next((LINGUA[l] for l in lingue if l in LINGUA), None)
+            lg = next((LINGUA[l] for l in lingue if l in LINGUA), None)   # lingua dell'opera (P407), obbligatoria
             titolo = None
-            for c in cl.get("P1476", []):
+            for c in cl.get("P1476", []):   # titolo nella STESSA lingua dell'opera (prova del 19/11: Musil aveva il titolo francese)
                 v = c["mainsnak"].get("datavalue", {}).get("value", {})
-                if v.get("language") in ("fr", "de"):
-                    titolo, lg = v["text"], lg or v["language"]
+                if lg and v.get("language") == lg:
+                    titolo = v["text"]
             if lg and not titolo:
                 titolo = e.get("labels", {}).get(lg, {}).get("value")
             if lg and titolo:
@@ -149,11 +149,13 @@ def bnf(titolo, cognome):
     return (min(anni) if anni else None), len(recs)
 
 
-def dnb(titolo, cognome):
-    q = f'tit="{titolo}" and per="{cognome}"'
-    u = "https://services.dnb.de/sru/dnb?" + urllib.parse.urlencode(
-        {"version": "1.1", "operation": "searchRetrieve", "query": q, "recordSchema": "MARC21-xml",
-         "maximumRecords": "50"})
+def k10plus(titolo, cognome, p):
+    """Catalogo collettivo tedesco K10plus (GBV/SWB): la DNB blocca le richieste da GitHub (prova del 19/11/2026).
+    Si chiedono solo le edizioni dei 3 anni prima e dell'anno della lista, perché i risultati sono centinaia."""
+    anni_q = " or ".join(f"pica.jhr={a}" for a in range(p - 3, p + 1))
+    q = f'pica.tit="{titolo}" and pica.per="{cognome}" and ({anni_q})'
+    u = "https://sru.k10plus.de/opac-de-627?" + urllib.parse.urlencode(
+        {"version": "1.1", "operation": "searchRetrieve", "query": q, "recordSchema": "marcxml", "maximumRecords": "100"})
     x = scarica(u, timeout=90)
     if not x:
         return None, 0
@@ -163,17 +165,16 @@ def dnb(titolo, cognome):
         if not stesso_titolo(html.unescape(t), titolo):
             continue
         a = controllo(rec, "008")[7:11]
-        a = [int(a)] if a.isdigit() else \
-            [int(m) for f in campi(rec, "264") + campi(rec, "260") for m in re.findall(r"1[5-9]\d\d", f.get("c", ""))]
-        anni += a[:1]
-    time.sleep(1.5)
+        if a.isdigit():
+            anni.append(int(a))
+    time.sleep(1)
     return (min(anni) if anni else None), len(recs)
 
 
 def decidi(trovati, p):
     giusti = [f for f, a in trovati.items() if a == p]
     if giusti:
-        ordine = ("duke", "cce", "bnf", "dnb", "openlibrary", "loc")
+        ordine = ("duke", "cce", "bnf", "k10plus", "openlibrary", "loc")
         f = min(giusti, key=ordine.index)
         return "ok", p, f
     prima = [(a, f) for f, a in trovati.items() if a is not None and a < p and f in AUTOREVOLI]
@@ -207,7 +208,7 @@ def main():
         for o in d["opere"]:
             q = o["qid"]
             vecchio = fatto.get(q)
-            if vecchio and vecchio[0] == "ok" and len(vecchio) > 5:
+            if vecchio and vecchio[0] == "ok" and len(vecchio) > 5 and vecchio[2] != "bnf":   # bnf: si rifà con la lingua giusta
                 continue
             if time.time() - inizio > BUDGET:
                 break
@@ -219,13 +220,13 @@ def main():
             trovati["cce"] = cce(idx, o, cognomi)
             if q in orig and cognomi and p not in trovati.values():
                 lg, titolo = orig[q]
-                fonte = "bnf" if lg == "fr" else "dnb"
-                anno, n = (bnf if lg == "fr" else dnb)(titolo, cognomi[0])
+                fonte = "bnf" if lg == "fr" else "k10plus"
+                anno, n = bnf(titolo, cognomi[0]) if lg == "fr" else k10plus(titolo, cognomi[0], p)
                 provate.append(fonte)
                 trovati[fonte] = anno
                 prove_naz[(fonte, "risposte" if n else "nessun record", "anno trovato" if anno else "-")] += 1
             if p not in trovati.values():
-                if vecchio and vecchio[0] == "ok":   # già confermato dal giro di prima (Open Library o LC)
+                if vecchio and vecchio[0] == "ok" and vecchio[2] in ("openlibrary", "loc"):   # già confermato dal giro di prima (Open Library o LC)
                     trovati[vecchio[2]] = vecchio[1]
                 else:
                     _, a = va.open_library(va_riga(o))

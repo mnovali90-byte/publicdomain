@@ -50,11 +50,13 @@ Fonti, in ordine:
 3. **Open Library**.
 4. **Library of Congress**.
 5. **Biblioteca nazionale della lingua dell'opera**, cercando il titolo originale preso da Wikidata: BnF per le
-   opere in francese, DNB per quelle in tedesco. Per le opere straniere conta la prima uscita nel paese d'origine.
+   opere in francese, K10plus (catalogo collettivo delle biblioteche tedesche) per quelle in tedesco: la DNB blocca
+   le richieste che arrivano da GitHub (prova del 19/11/2026). Lingua e titolo originale: lingua dell'opera (P407) e
+   titolo nella stessa lingua; senza lingua dell'opera la biblioteca nazionale non si interroga. Per le opere straniere conta la prima uscita nel paese d'origine.
 
 Come si leggono:
 - **Confermato («ok»):** almeno una fonte ha un'edizione proprio di quell'anno.
-- **Uscito prima («prima»):** una fonte autorevole (Duke, registro del copyright, BnF o DNB) ha un'edizione più
+- **Uscito prima («prima»):** una fonte autorevole (Duke, registro del copyright, BnF o K10plus) ha un'edizione più
   vecchia e nessuna fonte ha l'anno giusto. Open Library e Library of Congress da sole non bastano per dire «prima»,
   perché danno anni sbagliati: Open Library mette «Death in the Afternoon» nel 1920, e il registro lo dà del 1932.
 - **Non confermato («nd»):** nessuna conferma. La pagina scrive «anno da confermare».
