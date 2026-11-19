@@ -1,387 +1,3442 @@
 {
  "anno": 2025,
  "anno_pubblicazione": 1929,
- "nostra_lista": 163,
- "controllate": 163,
+ "nostra_lista": 185,
+ "controllate": 160,
  "nostri_esiti": {
-  "ok": 80,
-  "nd": 80,
-  "prima": 3
+  "ok": 99,
+  "nd": 54,
+  "parziale": 1,
+  "prima": 6
  },
  "nostre_conferme_per_fonte": {
-  "cce": 51,
-  "openlibrary": 11,
-  "loc": 4,
-  "k10plus": 3,
-  "bnf": 11
+  "wikipedia": 39,
+  "openlibrary": 31,
+  "k10plus": 7,
+  "bnf": 13,
+  "loc": 6,
+  "isfdb": 3
  },
  "duke_libri": 15,
- "duke_nella_nostra_lista": 7,
- "duke_confermati_da_noi": 6,
+ "duke_trovati": 11,
+ "duke_confermati": 9,
  "confronto": [
   {
    "duke": "The Sound and the Fury — William Faulkner",
-   "nella_nostra_lista": true,
+   "trovato_come": "codice Wikidata",
+   "nostro_titolo": "The Sound and the Fury",
    "nostro_esito": "ok",
-   "fonte": "cce",
-   "perche_manca": null
+   "fonte": "openlibrary",
+   "extra": {
+    "puntate": [
+     1910,
+     1928,
+     "wikipedia"
+    ]
+   }
   },
   {
    "duke": "A Farewell to Arms — Ernest Hemingway",
-   "nella_nostra_lista": true,
+   "trovato_come": "codice Wikidata",
+   "nostro_titolo": "A Farewell to Arms",
    "nostro_esito": "ok",
-   "fonte": "cce",
-   "perche_manca": null
+   "fonte": "wikipedia",
+   "extra": {
+    "puntate": [
+     1929,
+     1929,
+     "wikipedia"
+    ]
+   }
   },
   {
    "duke": "A Room of One’s Own — Virginia Woolf",
-   "nella_nostra_lista": false,
+   "trovato_come": null,
+   "nostro_titolo": null,
    "nostro_esito": null,
    "fonte": null,
-   "perche_manca": "non è in Wikidata come opera del 1929 con almeno 2 Wikipedia"
+   "extra": null
   },
   {
    "duke": "Red Harvest — Dashiell Hammett",
-   "nella_nostra_lista": false,
+   "trovato_come": null,
+   "nostro_titolo": null,
    "nostro_esito": null,
    "fonte": null,
-   "perche_manca": "non è in Wikidata come opera del 1929 con almeno 2 Wikipedia"
+   "extra": null
   },
   {
    "duke": "Cup of Gold — John Steinbeck",
-   "nella_nostra_lista": true,
+   "trovato_come": "codice Wikidata",
+   "nostro_titolo": "Cup of Gold: A Life of Sir Henry Morgan, Buccaneer, with Occasional Reference to History",
    "nostro_esito": "nd",
    "fonte": "loc",
-   "perche_manca": null
+   "extra": {}
   },
   {
    "duke": "A High Wind in Jamaica — Richard Hughes",
-   "nella_nostra_lista": true,
+   "trovato_come": "codice Wikidata",
+   "nostro_titolo": "A High Wind in Jamaica",
    "nostro_esito": "ok",
-   "fonte": "openlibrary",
-   "perche_manca": null
+   "fonte": "wikipedia",
+   "extra": {
+    "puntate": [
+     1929,
+     1929,
+     "wikipedia"
+    ]
+   }
   },
   {
    "duke": "Laughing Boy: A Navajo Love Story — Oliver La Farge",
-   "nella_nostra_lista": false,
-   "nostro_esito": null,
-   "fonte": null,
-   "perche_manca": "non è in Wikidata come opera del 1929 con almeno 2 Wikipedia"
+   "trovato_come": "titolo e autore",
+   "nostro_titolo": "Laughing Boy",
+   "nostro_esito": "ok",
+   "fonte": "openlibrary",
+   "extra": {}
   },
   {
    "duke": "Rope — Patrick Hamilton",
-   "nella_nostra_lista": false,
-   "nostro_esito": null,
-   "fonte": null,
-   "perche_manca": "non è in Wikidata come opera del 1929 con almeno 2 Wikipedia"
+   "trovato_come": "codice Wikidata",
+   "nostro_titolo": "Rope",
+   "nostro_esito": "ok",
+   "fonte": "openlibrary",
+   "extra": {}
   },
   {
    "duke": "All Quiet on the Western Front — Arthur Wesley Wheen",
-   "nella_nostra_lista": false,
+   "trovato_come": null,
+   "nostro_titolo": null,
    "nostro_esito": null,
    "fonte": null,
-   "perche_manca": "non è in Wikidata come opera del 1929 con almeno 2 Wikipedia"
+   "extra": null
   },
   {
    "duke": "Seven Dials Mystery — Agatha Christie",
-   "nella_nostra_lista": false,
-   "nostro_esito": null,
-   "fonte": null,
-   "perche_manca": "non è in Wikidata come opera del 1929 con almeno 2 Wikipedia"
+   "trovato_come": "titolo e autore",
+   "nostro_titolo": "The Seven Dials Mystery",
+   "nostro_esito": "ok",
+   "fonte": "wikipedia",
+   "extra": {
+    "puntate": [
+     1929,
+     1929,
+     "wikipedia"
+    ]
+   }
   },
   {
    "duke": "Good-bye to All That — Robert Graves",
-   "nella_nostra_lista": true,
+   "trovato_come": "titolo e autore",
+   "nostro_titolo": "Good-Bye to All That",
    "nostro_esito": "ok",
-   "fonte": "cce",
-   "perche_manca": null
+   "fonte": "wikipedia",
+   "extra": {
+    "puntate": [
+     1929,
+     1929,
+     "wikipedia"
+    ]
+   }
   },
   {
    "duke": "Is Sex Necessary? Or, Why You Feel the Way You Do — E. B. White and James Thurber",
-   "nella_nostra_lista": true,
+   "trovato_come": "codice Wikidata",
+   "nostro_titolo": "Is Sex Necessary? Or, Why You Feel the Way You Do",
    "nostro_esito": "ok",
-   "fonte": "cce",
-   "perche_manca": null
+   "fonte": "wikipedia",
+   "extra": {
+    "puntate": [
+     1929,
+     1929,
+     "wikipedia"
+    ]
+   }
   },
   {
    "duke": "Letters to a Young Poet — Rainer Maria Rilke",
-   "nella_nostra_lista": true,
+   "trovato_come": "codice Wikidata",
+   "nostro_titolo": "Letters to a Young Poet",
    "nostro_esito": "ok",
    "fonte": "k10plus",
-   "perche_manca": null
+   "extra": {}
   },
   {
    "duke": "A Preface to Morals — Walter Lippmann",
-   "nella_nostra_lista": false,
+   "trovato_come": null,
+   "nostro_titolo": null,
    "nostro_esito": null,
    "fonte": null,
-   "perche_manca": "non è in Wikidata come opera del 1929 con almeno 2 Wikipedia"
+   "extra": null
   },
   {
    "duke": "The Roman Hat Mystery — Ellery Queen",
-   "nella_nostra_lista": false,
-   "nostro_esito": null,
+   "trovato_come": "titolo identico",
+   "nostro_titolo": "The Roman Hat Mystery",
+   "nostro_esito": "nd",
    "fonte": null,
-   "perche_manca": "non è in Wikidata come opera del 1929 con almeno 2 Wikipedia"
+   "extra": {}
   }
  ],
- "nostri_confermati_non_in_duke_primi_40": [
-  [
-   "The Maltese Falcon",
-   "Dashiell Hammett",
-   30,
-   "openlibrary"
-  ],
-  [
-   "The Seven Dials Mystery",
-   "Agatha Christie",
-   27,
-   "loc"
-  ],
-  [
-   "Berlin Alexanderplatz",
-   "Alfred Döblin",
-   27,
-   "cce"
-  ],
-  [
-   "Partners in Crime",
-   "Agatha Christie",
-   19,
-   "cce"
-  ],
-  [
-   "The Story of San Michele",
-   "Axel Munthe",
-   14,
-   "cce"
-  ],
-  [
-   "Sartoris",
-   "William Faulkner",
-   12,
-   "cce"
-  ],
-  [
-   "Southern Mail",
-   "Antoine de Saint-Exupéry",
-   10,
-   "bnf"
-  ],
-  [
-   "David Golder",
-   "Irène Némirovsky",
-   9,
-   "cce"
-  ],
-  [
-   "The Poisoned Chocolates Case",
-   "Anthony Berkeley Cox",
-   9,
-   "cce"
-  ],
-  [
-   "Good-Bye to All That",
-   "Robert Graves",
-   9,
-   "cce"
-  ],
-  [
-   "Amphitryon 38",
-   "Jean Giraudoux",
-   9,
-   "bnf"
-  ],
-  [
-   "Now and After",
-   "Alexander Berkman",
-   8,
-   "cce"
-  ],
-  [
-   "Les Enfants Terribles",
-   "Jean Cocteau",
-   8,
-   "cce"
-  ],
-  [
-   "Colline",
-   "Jean Giono",
-   8,
-   "cce"
-  ],
-  [
-   "The Bishop Murder Case",
-   "S. S. Van Dine",
-   7,
-   "cce"
-  ],
-  [
-   "Gods' Man",
-   "Lynd Ward",
-   7,
-   "cce"
-  ],
-  [
-   "The Mysterious Mansion",
-   "Maurice Leblanc",
-   7,
-   "bnf"
-  ],
-  [
-   "Alexis",
-   "Marguerite Yourcenar",
-   6,
-   "bnf"
-  ],
-  [
-   "The Dain Curse",
-   "Dashiell Hammett",
-   6,
-   "cce"
-  ],
-  [
-   "The Last September",
-   "Elizabeth Bowen",
-   6,
-   "cce"
-  ],
-  [
-   "Journey's End",
-   "R. C. Sherriff",
-   6,
-   "openlibrary"
-  ],
-  [
-   "Passing",
-   "Nella Larsen",
-   6,
-   "cce"
-  ],
-  [
-   "Look Homeward, Angel",
-   "Thomas Wolfe",
-   6,
-   "cce"
-  ],
-  [
-   "The Man Within",
-   "Graham Greene",
-   5,
-   "cce"
-  ],
-  [
-   "The Escaped Cock",
-   "D. H. Lawrence",
-   5,
-   "loc"
-  ],
-  [
-   "L'École des femmes",
-   "André Gide",
-   4,
-   "bnf"
-  ],
-  [
-   "Fouché",
-   "Stefan Zweig",
-   4,
-   "openlibrary"
-  ],
-  [
-   "Laughing Boy",
-   "Oliver La Farge",
-   4,
-   "cce"
-  ],
-  [
-   "Magic for Marigold",
-   "Lucy Maud Montgomery",
-   4,
-   "cce"
-  ],
-  [
-   "The Black Camel",
-   "Earl Derr Biggers",
-   4,
-   "cce"
-  ],
-  [
-   "Dodsworth",
-   "Sinclair Lewis",
-   4,
-   "cce"
-  ],
-  [
-   "The Crime at Black Dudley",
-   "Margery Allingham",
-   4,
-   "cce"
-  ],
-  [
-   "The Hollow Field",
-   "Marcel Aymé",
-   4,
-   "bnf"
-  ],
-  [
-   "The Patient in Room 18",
-   "Mignon G. Eberhart",
-   4,
-   "cce"
-  ],
-  [
-   "Leviathan",
-   "Julien Green",
-   3,
-   "cce"
-  ],
-  [
-   "L'Hôtel du Nord",
-   "Eugène Dabit",
-   3,
-   "cce"
-  ],
-  [
-   "Medmenneske",
-   "Olav Duun",
-   3,
-   "openlibrary"
-  ],
-  [
-   "The Bridge in the Jungle",
-   "B. Traven",
-   3,
-   "k10plus"
-  ],
-  [
-   "Magnificent Obsession",
-   "Lloyd C. Douglas",
-   3,
-   "cce"
-  ],
-  [
-   "Burnt Offering",
-   "Jeanne Galzy",
-   3,
-   "bnf"
-  ]
- ],
- "nostri_prima": [
-  [
-   "The Disintegration Machine",
-   1928,
-   "cce"
-  ],
-  [
-   "The Gunner",
-   1928,
-   "cce"
-  ],
-  [
-   "Plum Bun",
-   1928,
-   "cce"
-  ]
+ "lista_completa": [
+  {
+   "qid": "Q235795",
+   "titolo": "A Farewell to Arms",
+   "autori": [
+    "Ernest Hemingway"
+   ],
+   "wikipedia": 57,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "wikipedia",
+   "trovati": {
+    "wikipedia": 1929
+   },
+   "extra": {
+    "puntate": [
+     1929,
+     1929,
+     "wikipedia"
+    ]
+   }
+  },
+  {
+   "qid": "Q135515",
+   "titolo": "The Sound and the Fury",
+   "autori": [
+    "William Faulkner"
+   ],
+   "wikipedia": 44,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "openlibrary",
+   "trovati": {
+    "openlibrary": 1929
+   },
+   "extra": {
+    "puntate": [
+     1910,
+     1928,
+     "wikipedia"
+    ]
+   }
+  },
+  {
+   "qid": "Q1204366",
+   "titolo": "A Room of One's Own",
+   "autori": [
+    "Virginia Woolf"
+   ],
+   "wikipedia": 37,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "wikipedia",
+   "trovati": {
+    "wikipedia": 1929
+   },
+   "extra": {
+    "puntate": [
+     1929,
+     1929,
+     "wikipedia"
+    ]
+   }
+  },
+  {
+   "qid": "Q731361",
+   "titolo": "Enciclopedia Treccani",
+   "autori": [
+    "various authors"
+   ],
+   "wikipedia": 32,
+   "date_wikidata": null,
+   "esito": "nd",
+   "anno": null,
+   "fonte": null,
+   "trovati": {},
+   "extra": {}
+  },
+  {
+   "qid": "Q648304",
+   "titolo": "Tintin in the Land of the Soviets",
+   "autori": [
+    "Hergé"
+   ],
+   "wikipedia": 29,
+   "date_wikidata": null,
+   "esito": "parziale",
+   "anno": 1930,
+   "fonte": "wikipedia",
+   "trovati": {
+    "bnf": 2012
+   },
+   "extra": {
+    "puntate": [
+     1929,
+     1930,
+     "wikipedia"
+    ]
+   }
+  },
+  {
+   "qid": "Q457252",
+   "titolo": "The Seven Dials Mystery",
+   "autori": [
+    "Agatha Christie"
+   ],
+   "wikipedia": 27,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "wikipedia",
+   "trovati": {
+    "wikipedia": 1929
+   },
+   "extra": {
+    "puntate": [
+     1929,
+     1929,
+     "wikipedia"
+    ]
+   }
+  },
+  {
+   "qid": "Q694245",
+   "titolo": "Berlin Alexanderplatz",
+   "autori": [
+    "Alfred Döblin"
+   ],
+   "wikipedia": 27,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "k10plus",
+   "trovati": {
+    "k10plus": 1929
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q968914",
+   "titolo": "The Revolt of the Masses",
+   "autori": [
+    "José Ortega y Gasset"
+   ],
+   "wikipedia": 24,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "wikipedia",
+   "trovati": {
+    "wikipedia": 1929
+   },
+   "extra": {
+    "puntate": [
+     1929,
+     1929,
+     "wikipedia"
+    ]
+   }
+  },
+  {
+   "qid": "Q1211857",
+   "titolo": "Partners in Crime",
+   "autori": [
+    "Agatha Christie"
+   ],
+   "wikipedia": 19,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "wikipedia",
+   "trovati": {
+    "wikipedia": 1929
+   },
+   "extra": {
+    "puntate": [
+     1929,
+     1929,
+     "wikipedia"
+    ]
+   }
+  },
+  {
+   "qid": "Q2468877",
+   "titolo": "The Dunwich Horror",
+   "autori": [
+    "H. P. Lovecraft"
+   ],
+   "wikipedia": 19,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "wikipedia",
+   "trovati": {
+    "wikipedia": 1929
+   },
+   "extra": {
+    "puntate": [
+     1929,
+     1929,
+     "wikipedia"
+    ]
+   }
+  },
+  {
+   "qid": "Q635441",
+   "titolo": "Black Coffee",
+   "autori": [
+    "Agatha Christie"
+   ],
+   "wikipedia": 16,
+   "date_wikidata": null,
+   "esito": "nd",
+   "anno": 1934,
+   "fonte": "loc",
+   "trovati": {
+    "loc": 1934
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q2341013",
+   "titolo": "The Silver Key",
+   "autori": [
+    "H. P. Lovecraft"
+   ],
+   "wikipedia": 15,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "wikipedia",
+   "trovati": {
+    "wikipedia": 1929
+   },
+   "extra": {
+    "puntate": [
+     1929,
+     1929,
+     "wikipedia"
+    ]
+   }
+  },
+  {
+   "qid": "Q1167410",
+   "titolo": "The Story of San Michele",
+   "autori": [
+    "Axel Munthe"
+   ],
+   "wikipedia": 14,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "wikipedia",
+   "trovati": {
+    "wikipedia": 1929
+   },
+   "extra": {
+    "puntate": [
+     1929,
+     1929,
+     "wikipedia"
+    ]
+   }
+  },
+  {
+   "qid": "Q1851314",
+   "titolo": "Sartoris",
+   "autori": [
+    "William Faulkner"
+   ],
+   "wikipedia": 12,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "wikipedia",
+   "trovati": {
+    "wikipedia": 1929
+   },
+   "extra": {
+    "puntate": [
+     1929,
+     1929,
+     "wikipedia"
+    ]
+   }
+  },
+  {
+   "qid": "Q175570",
+   "titolo": "Buchmendel",
+   "autori": [
+    "Stefan Zweig"
+   ],
+   "wikipedia": 12,
+   "date_wikidata": null,
+   "esito": "nd",
+   "anno": 1930,
+   "fonte": "loc",
+   "trovati": {
+    "openlibrary": 1990,
+    "loc": 1930
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q914162",
+   "titolo": "Letters to a Young Poet",
+   "autori": [
+    "Rainer Maria Rilke"
+   ],
+   "wikipedia": 12,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "k10plus",
+   "trovati": {
+    "k10plus": 1929
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q1272527",
+   "titolo": "Santa Bárbara",
+   "autori": [
+    "Rómulo Gallegos"
+   ],
+   "wikipedia": 12,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "wikipedia",
+   "trovati": {
+    "wikipedia": 1929
+   },
+   "extra": {
+    "puntate": [
+     1929,
+     1929,
+     "wikipedia"
+    ]
+   }
+  },
+  {
+   "qid": "Q3182059",
+   "titolo": "Kani Kōsen",
+   "autori": [
+    "Takiji Kobayashi"
+   ],
+   "wikipedia": 12,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "wikipedia",
+   "trovati": {
+    "wikipedia": 1929
+   },
+   "extra": {
+    "puntate": [
+     1929,
+     1929,
+     "wikipedia"
+    ]
+   }
+  },
+  {
+   "qid": "Q522520",
+   "titolo": "Marriage and Morals",
+   "autori": [
+    "Bertrand Russell"
+   ],
+   "wikipedia": 12,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "openlibrary",
+   "trovati": {
+    "openlibrary": 1929
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q377536",
+   "titolo": "The Bedbug",
+   "autori": [
+    "Vladimir Mayakovsky"
+   ],
+   "wikipedia": 11,
+   "date_wikidata": null,
+   "esito": "nd",
+   "anno": 1931,
+   "fonte": "openlibrary",
+   "trovati": {
+    "openlibrary": 1931,
+    "loc": 1960
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q2616873",
+   "titolo": "The Disintegration Machine",
+   "autori": [
+    "Arthur Conan Doyle"
+   ],
+   "wikipedia": 11,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "wikipedia",
+   "trovati": {
+    "wikipedia": 1929
+   },
+   "extra": {
+    "puntate": [
+     1929,
+     1929,
+     "wikipedia"
+    ]
+   }
+  },
+  {
+   "qid": "Q1115707",
+   "titolo": "Southern Mail",
+   "autori": [
+    "Antoine de Saint-Exupéry"
+   ],
+   "wikipedia": 10,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "bnf",
+   "trovati": {
+    "bnf": 1929
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q1147884",
+   "titolo": "The Roman Hat Mystery",
+   "autori": [
+    "Frederic Dannay",
+    "Manfred B. Lee"
+   ],
+   "wikipedia": 10,
+   "date_wikidata": null,
+   "esito": "nd",
+   "anno": null,
+   "fonte": null,
+   "trovati": {},
+   "extra": {}
+  },
+  {
+   "qid": "Q2948187",
+   "titolo": "Pather Panchali",
+   "autori": [
+    "Bibhutibhushan Bandyopadhyay"
+   ],
+   "wikipedia": 10,
+   "date_wikidata": null,
+   "esito": "prima",
+   "anno": 1928,
+   "fonte": "wikipedia",
+   "trovati": {
+    "wikipedia": 1928
+   },
+   "extra": {
+    "puntate": [
+     1928,
+     1928,
+     "wikipedia"
+    ]
+   }
+  },
+  {
+   "qid": "Q3207868",
+   "titolo": "Cup of Gold: A Life of Sir Henry Morgan, Buccaneer, with Occasional Reference to History",
+   "autori": [
+    "John Steinbeck"
+   ],
+   "wikipedia": 10,
+   "date_wikidata": null,
+   "esito": "nd",
+   "anno": 1936,
+   "fonte": "loc",
+   "trovati": {
+    "loc": 1936
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q575813",
+   "titolo": "David Golder",
+   "autori": [
+    "Irène Némirovsky"
+   ],
+   "wikipedia": 9,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "bnf",
+   "trovati": {
+    "bnf": 1929,
+    "wikipedia": 1929
+   },
+   "extra": {
+    "puntate": [
+     1929,
+     1929,
+     "wikipedia"
+    ]
+   }
+  },
+  {
+   "qid": "Q1750535",
+   "titolo": "The Poisoned Chocolates Case",
+   "autori": [
+    "Anthony Berkeley Cox"
+   ],
+   "wikipedia": 9,
+   "date_wikidata": null,
+   "esito": "nd",
+   "anno": null,
+   "fonte": null,
+   "trovati": {},
+   "extra": {}
+  },
+  {
+   "qid": "Q2356106",
+   "titolo": "Good-Bye to All That",
+   "autori": [
+    "Robert Graves"
+   ],
+   "wikipedia": 9,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "wikipedia",
+   "trovati": {
+    "wikipedia": 1929
+   },
+   "extra": {
+    "puntate": [
+     1929,
+     1929,
+     "wikipedia"
+    ]
+   }
+  },
+  {
+   "qid": "Q2844429",
+   "titolo": "Amphitryon 38",
+   "autori": [
+    "Jean Giraudoux"
+   ],
+   "wikipedia": 9,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "bnf",
+   "trovati": {
+    "bnf": 1929
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q455957",
+   "titolo": "Process and Reality",
+   "autori": [
+    "Alfred North Whitehead"
+   ],
+   "wikipedia": 9,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "openlibrary",
+   "trovati": {
+    "openlibrary": 1929
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q2542978",
+   "titolo": "Les Enfants Terribles",
+   "autori": [
+    "Jean Cocteau"
+   ],
+   "wikipedia": 8,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "bnf",
+   "trovati": {
+    "bnf": 1929
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q12631700",
+   "titolo": "Messrs. Glembay",
+   "autori": [
+    "Miroslav Krleža"
+   ],
+   "wikipedia": 8,
+   "date_wikidata": null,
+   "esito": "nd",
+   "anno": null,
+   "fonte": null,
+   "trovati": {},
+   "extra": {}
+  },
+  {
+   "qid": "Q7728471",
+   "titolo": "The Curse of Yig",
+   "autori": [
+    "H. P. Lovecraft",
+    "Zealia Bishop"
+   ],
+   "wikipedia": 8,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "wikipedia",
+   "trovati": {
+    "wikipedia": 1929
+   },
+   "extra": {
+    "puntate": [
+     1929,
+     1929,
+     "wikipedia"
+    ]
+   }
+  },
+  {
+   "qid": "Q7065889",
+   "titolo": "Now and After",
+   "autori": [
+    "Alexander Berkman"
+   ],
+   "wikipedia": 8,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "wikipedia",
+   "trovati": {
+    "wikipedia": 1929
+   },
+   "extra": {
+    "puntate": [
+     1929,
+     1929,
+     "wikipedia"
+    ]
+   }
+  },
+  {
+   "qid": "Q2983413",
+   "titolo": "Colline",
+   "autori": [
+    "Jean Giono"
+   ],
+   "wikipedia": 8,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "bnf",
+   "trovati": {
+    "bnf": 1929
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q3233315",
+   "titolo": "Gli indifferenti",
+   "autori": [
+    "Alberto Moravia"
+   ],
+   "wikipedia": 7,
+   "date_wikidata": null,
+   "esito": "nd",
+   "anno": 1900,
+   "fonte": "openlibrary",
+   "trovati": {
+    "openlibrary": 1900,
+    "loc": 1951
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q1436350",
+   "titolo": "The Bishop Murder Case",
+   "autori": [
+    "S. S. Van Dine"
+   ],
+   "wikipedia": 7,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "loc",
+   "trovati": {
+    "isfdb": 1930,
+    "loc": 1929
+   },
+   "extra": {
+    "puntate": [
+     1930,
+     1930,
+     "isfdb"
+    ]
+   }
+  },
+  {
+   "qid": "Q13753350",
+   "titolo": "Gods' Man",
+   "autori": [
+    "Lynd Ward"
+   ],
+   "wikipedia": 7,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "openlibrary",
+   "trovati": {
+    "openlibrary": 1929
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q4193071",
+   "titolo": "Zoyka's Apartment",
+   "autori": [
+    "Mikhail Bulgakov"
+   ],
+   "wikipedia": 7,
+   "date_wikidata": null,
+   "esito": "nd",
+   "anno": 1996,
+   "fonte": "loc",
+   "trovati": {
+    "loc": 1996
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q3208165",
+   "titolo": "The Mysterious Mansion",
+   "autori": [
+    "Maurice Leblanc"
+   ],
+   "wikipedia": 7,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "bnf",
+   "trovati": {
+    "bnf": 1929
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q7738192",
+   "titolo": "The Green Pastures",
+   "autori": [
+    "Marc Connelly"
+   ],
+   "wikipedia": 7,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "openlibrary",
+   "trovati": {
+    "openlibrary": 1929
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q2834706",
+   "titolo": "Alexis",
+   "autori": [
+    "Marguerite Yourcenar"
+   ],
+   "wikipedia": 6,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "bnf",
+   "trovati": {
+    "bnf": 1929
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q4533448",
+   "titolo": "The Gardener's Year",
+   "autori": [
+    "Karel Čapek"
+   ],
+   "wikipedia": 6,
+   "date_wikidata": null,
+   "esito": "nd",
+   "anno": 1931,
+   "fonte": "loc",
+   "trovati": {
+    "loc": 1931
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q17047702",
+   "titolo": "Gospođa Ministarka",
+   "autori": [
+    "Branislav Nušić"
+   ],
+   "wikipedia": 6,
+   "date_wikidata": null,
+   "esito": "nd",
+   "anno": 1968,
+   "fonte": "openlibrary",
+   "trovati": {
+    "openlibrary": 1968
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q645852",
+   "titolo": "Craii de Curtea-Veche",
+   "autori": [
+    "Mateiu Caragiale"
+   ],
+   "wikipedia": 6,
+   "date_wikidata": null,
+   "esito": "nd",
+   "anno": 1957,
+   "fonte": "loc",
+   "trovati": {
+    "openlibrary": 1968,
+    "loc": 1957
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q1031831",
+   "titolo": "The White Rose",
+   "autori": [
+    "B. Traven"
+   ],
+   "wikipedia": 6,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "wikipedia",
+   "trovati": {
+    "wikipedia": 1929
+   },
+   "extra": {
+    "puntate": [
+     1929,
+     1929,
+     "wikipedia"
+    ]
+   }
+  },
+  {
+   "qid": "Q1193455",
+   "titolo": "The Dain Curse",
+   "autori": [
+    "Dashiell Hammett"
+   ],
+   "wikipedia": 6,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "openlibrary",
+   "trovati": {
+    "openlibrary": 1929
+   },
+   "extra": {
+    "puntate": [
+     1928,
+     1929,
+     "wikipedia"
+    ]
+   }
+  },
+  {
+   "qid": "Q1199395",
+   "titolo": "The Last September",
+   "autori": [
+    "Elizabeth Bowen"
+   ],
+   "wikipedia": 6,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "wikipedia",
+   "trovati": {
+    "wikipedia": 1929
+   },
+   "extra": {
+    "puntate": [
+     1929,
+     1929,
+     "wikipedia"
+    ]
+   }
+  },
+  {
+   "qid": "Q1926728",
+   "titolo": "Michael",
+   "autori": [
+    "Joseph Goebbels"
+   ],
+   "wikipedia": 6,
+   "date_wikidata": null,
+   "esito": "nd",
+   "anno": 1931,
+   "fonte": "loc",
+   "trovati": {
+    "openlibrary": 1931,
+    "loc": 1931
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q12833234",
+   "titolo": "Journey's End",
+   "autori": [
+    "R. C. Sherriff"
+   ],
+   "wikipedia": 6,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "openlibrary",
+   "trovati": {
+    "openlibrary": 1929
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q15052495",
+   "titolo": "Passing",
+   "autori": [
+    "Nella Larsen"
+   ],
+   "wikipedia": 6,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "openlibrary",
+   "trovati": {
+    "openlibrary": 1929
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q7450606",
+   "titolo": "Sengsara Membawa Nikmat",
+   "autori": [
+    "Tulis Sutan Sati"
+   ],
+   "wikipedia": 6,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "wikipedia",
+   "trovati": {
+    "wikipedia": 1929
+   },
+   "extra": {
+    "puntate": [
+     1929,
+     1929,
+     "wikipedia"
+    ]
+   }
+  },
+  {
+   "qid": "Q7495629",
+   "titolo": "Shesher Kabita",
+   "autori": [
+    "Rabindranath Tagore"
+   ],
+   "wikipedia": 6,
+   "date_wikidata": null,
+   "esito": "prima",
+   "anno": 1928,
+   "fonte": "wikipedia",
+   "trovati": {
+    "wikipedia": 1928,
+    "openlibrary": 1990
+   },
+   "extra": {
+    "puntate": [
+     1928,
+     1928,
+     "wikipedia"
+    ]
+   }
+  },
+  {
+   "qid": "Q6675006",
+   "titolo": "Look Homeward, Angel",
+   "autori": [
+    "Thomas Wolfe"
+   ],
+   "wikipedia": 6,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "openlibrary",
+   "trovati": {
+    "openlibrary": 1929
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q2344880",
+   "titolo": "Was ist Metaphysik?",
+   "autori": [
+    "Martin Heidegger"
+   ],
+   "wikipedia": 6,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "k10plus",
+   "trovati": {
+    "k10plus": 1929
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q1195230",
+   "titolo": "Love and Saint Augustine",
+   "autori": [
+    "Hannah Arendt"
+   ],
+   "wikipedia": 5,
+   "date_wikidata": null,
+   "esito": "nd",
+   "anno": 1996,
+   "fonte": "loc",
+   "trovati": {
+    "openlibrary": 1996,
+    "loc": 1996
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q1920758",
+   "titolo": "Grand Hotel",
+   "autori": [
+    "Vicki Baum"
+   ],
+   "wikipedia": 5,
+   "date_wikidata": null,
+   "esito": "nd",
+   "anno": 1930,
+   "fonte": "loc",
+   "trovati": {
+    "openlibrary": 1930,
+    "loc": 1930
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q2680359",
+   "titolo": "The Escaped Cock",
+   "autori": [
+    "D. H. Lawrence"
+   ],
+   "wikipedia": 5,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "wikipedia",
+   "trovati": {
+    "wikipedia": 1929
+   },
+   "extra": {
+    "puntate": [
+     1929,
+     1929,
+     "wikipedia"
+    ]
+   }
+  },
+  {
+   "qid": "Q7763540",
+   "titolo": "The Shadow Kingdom",
+   "autori": [
+    "Robert E. Howard"
+   ],
+   "wikipedia": 5,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "wikipedia",
+   "trovati": {
+    "wikipedia": 1929
+   },
+   "extra": {
+    "puntate": [
+     1929,
+     1929,
+     "wikipedia"
+    ]
+   }
+  },
+  {
+   "qid": "Q11695129",
+   "titolo": "Second Surrealist Manifesto",
+   "autori": [
+    "André Breton"
+   ],
+   "wikipedia": 5,
+   "date_wikidata": null,
+   "esito": "nd",
+   "anno": 1930,
+   "fonte": "bnf",
+   "trovati": {
+    "bnf": 1930
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q5223576",
+   "titolo": "The Man Within",
+   "autori": [
+    "Graham Greene"
+   ],
+   "wikipedia": 5,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "openlibrary",
+   "trovati": {
+    "openlibrary": 1929
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q1721893",
+   "titolo": "Kakteen",
+   "autori": [
+    "Alwin Berger"
+   ],
+   "wikipedia": 5,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "openlibrary",
+   "trovati": {
+    "openlibrary": 1929
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q52911991",
+   "titolo": "Ideology and Utopia. An Introduction to the sociology of knowledge",
+   "autori": [
+    "Karl Mannheim"
+   ],
+   "wikipedia": 5,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "k10plus",
+   "trovati": {
+    "k10plus": 1929,
+    "wikipedia": 1929
+   },
+   "extra": {
+    "puntate": [
+     1929,
+     1929,
+     "wikipedia"
+    ]
+   }
+  },
+  {
+   "qid": "Q1216094",
+   "titolo": "L'École des femmes",
+   "autori": [
+    "André Gide"
+   ],
+   "wikipedia": 4,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "bnf",
+   "trovati": {
+    "bnf": 1929
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q3184958",
+   "titolo": "Fouché",
+   "autori": [
+    "Stefan Zweig"
+   ],
+   "wikipedia": 4,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "openlibrary",
+   "trovati": {
+    "openlibrary": 1929
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q3228257",
+   "titolo": "Journey into the Past",
+   "autori": [
+    "Stefan Zweig"
+   ],
+   "wikipedia": 4,
+   "date_wikidata": null,
+   "esito": "nd",
+   "anno": 2009,
+   "fonte": "loc",
+   "trovati": {
+    "openlibrary": 2009,
+    "loc": 2009
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q4165465",
+   "titolo": "The House of a Thousand Floors",
+   "autori": [
+    "Jan Weiss"
+   ],
+   "wikipedia": 4,
+   "date_wikidata": null,
+   "esito": "nd",
+   "anno": 2016,
+   "fonte": "loc",
+   "trovati": {
+    "loc": 2016
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q4508493",
+   "titolo": "The Man Who Lost His Face",
+   "autori": [
+    "Alexander Belyayev"
+   ],
+   "wikipedia": 4,
+   "date_wikidata": null,
+   "esito": "nd",
+   "anno": null,
+   "fonte": null,
+   "trovati": {},
+   "extra": {}
+  },
+  {
+   "qid": "Q11706823",
+   "titolo": "Migrations",
+   "autori": [
+    "Miloš Crnjanski"
+   ],
+   "wikipedia": 4,
+   "date_wikidata": null,
+   "esito": "nd",
+   "anno": 1986,
+   "fonte": "loc",
+   "trovati": {
+    "openlibrary": 1994,
+    "loc": 1986
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q330157",
+   "titolo": "Ancrene Wisse and Hali Meiðhad",
+   "autori": [
+    "J. R. R. Tolkien"
+   ],
+   "wikipedia": 4,
+   "date_wikidata": null,
+   "esito": "nd",
+   "anno": null,
+   "fonte": null,
+   "trovati": {},
+   "extra": {}
+  },
+  {
+   "qid": "Q2783135",
+   "titolo": "Dodsworth",
+   "autori": [
+    "Sinclair Lewis"
+   ],
+   "wikipedia": 4,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "wikipedia",
+   "trovati": {
+    "wikipedia": 1929
+   },
+   "extra": {
+    "puntate": [
+     1929,
+     1929,
+     "wikipedia"
+    ]
+   }
+  },
+  {
+   "qid": "Q10494588",
+   "titolo": "Fem unga",
+   "autori": [
+    "Harry Martinson",
+    "Artur Lundkvist",
+    "Gustav Sandgren",
+    "Erik Asklund",
+    "Josef Kjellgren"
+   ],
+   "wikipedia": 4,
+   "date_wikidata": null,
+   "esito": "nd",
+   "anno": null,
+   "fonte": null,
+   "trovati": {},
+   "extra": {}
+  },
+  {
+   "qid": "Q10904361",
+   "titolo": "100,000 Whys",
+   "autori": [],
+   "wikipedia": 4,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "wikipedia",
+   "trovati": {
+    "wikipedia": 1929
+   },
+   "extra": {
+    "puntate": [
+     1929,
+     1929,
+     "wikipedia"
+    ]
+   }
+  },
+  {
+   "qid": "Q7559478",
+   "titolo": "Some Prefer Nettles",
+   "autori": [
+    "Jun'ichirō Tanizaki"
+   ],
+   "wikipedia": 4,
+   "date_wikidata": null,
+   "esito": "prima",
+   "anno": 1928,
+   "fonte": "wikipedia",
+   "trovati": {
+    "wikipedia": 1928,
+    "loc": 1955
+   },
+   "extra": {
+    "puntate": [
+     1928,
+     1928,
+     "wikipedia"
+    ]
+   }
+  },
+  {
+   "qid": "Q7718269",
+   "titolo": "The Black Camel",
+   "autori": [
+    "Earl Derr Biggers"
+   ],
+   "wikipedia": 4,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "isfdb",
+   "trovati": {
+    "isfdb": 1929
+   },
+   "extra": {
+    "puntate": [
+     1929,
+     1929,
+     "isfdb"
+    ]
+   }
+  },
+  {
+   "qid": "Q4880345",
+   "titolo": "Before the Dawn",
+   "autori": [
+    "Tōson Shimazaki"
+   ],
+   "wikipedia": 4,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "wikipedia",
+   "trovati": {
+    "wikipedia": 1929
+   },
+   "extra": {
+    "puntate": [
+     1929,
+     1929,
+     "wikipedia"
+    ]
+   }
+  },
+  {
+   "qid": "Q5057969",
+   "titolo": "Celia, lo que dice",
+   "autori": [
+    "Elena Fortún"
+   ],
+   "wikipedia": 4,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "wikipedia",
+   "trovati": {
+    "wikipedia": 1929
+   },
+   "extra": {
+    "puntate": [
+     1929,
+     1929,
+     "wikipedia"
+    ]
+   }
+  },
+  {
+   "qid": "Q5286427",
+   "titolo": "Do prostego człowieka",
+   "autori": [
+    "Julian Tuwim"
+   ],
+   "wikipedia": 4,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "wikipedia",
+   "trovati": {
+    "wikipedia": 1929
+   },
+   "extra": {
+    "puntate": [
+     1929,
+     1929,
+     "wikipedia"
+    ]
+   }
+  },
+  {
+   "qid": "Q6498095",
+   "titolo": "Laughing Boy",
+   "autori": [
+    "Oliver La Farge"
+   ],
+   "wikipedia": 4,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "openlibrary",
+   "trovati": {
+    "openlibrary": 1929
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q6533736",
+   "titolo": "Letters from a Father to His Daughter",
+   "autori": [
+    "Jawaharlal Nehru"
+   ],
+   "wikipedia": 4,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "wikipedia",
+   "trovati": {
+    "wikipedia": 1929
+   },
+   "extra": {
+    "puntate": [
+     1929,
+     1929,
+     "wikipedia"
+    ]
+   }
+  },
+  {
+   "qid": "Q6730919",
+   "titolo": "Magic for Marigold",
+   "autori": [
+    "Lucy Maud Montgomery"
+   ],
+   "wikipedia": 4,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "loc",
+   "trovati": {
+    "wikipedia": 1925,
+    "openlibrary": 1925,
+    "loc": 1929
+   },
+   "extra": {
+    "puntate": [
+     1925,
+     1925,
+     "wikipedia"
+    ]
+   }
+  },
+  {
+   "qid": "Q3002629",
+   "titolo": "The Crime at Black Dudley",
+   "autori": [
+    "Margery Allingham"
+   ],
+   "wikipedia": 4,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "wikipedia",
+   "trovati": {
+    "wikipedia": 1929
+   },
+   "extra": {
+    "puntate": [
+     1929,
+     1929,
+     "wikipedia"
+    ]
+   }
+  },
+  {
+   "qid": "Q3213036",
+   "titolo": "The Hollow Field",
+   "autori": [
+    "Marcel Aymé"
+   ],
+   "wikipedia": 4,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "bnf",
+   "trovati": {
+    "bnf": 1929
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q3401207",
+   "titolo": "A High Wind in Jamaica",
+   "autori": [
+    "Richard Hughes"
+   ],
+   "wikipedia": 4,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "wikipedia",
+   "trovati": {
+    "wikipedia": 1929
+   },
+   "extra": {
+    "puntate": [
+     1929,
+     1929,
+     "wikipedia"
+    ]
+   }
+  },
+  {
+   "qid": "Q24255922",
+   "titolo": "The Patient in Room 18",
+   "autori": [
+    "Mignon G. Eberhart"
+   ],
+   "wikipedia": 4,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "openlibrary",
+   "trovati": {
+    "openlibrary": 1929
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q7622916",
+   "titolo": "Street Scene",
+   "autori": [
+    "Elmer Rice"
+   ],
+   "wikipedia": 4,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "openlibrary",
+   "trovati": {
+    "openlibrary": 1929
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q3213721",
+   "titolo": "The Sexual Life of Savages in North-Western Melanesia",
+   "autori": [
+    "Bronisław Malinowski"
+   ],
+   "wikipedia": 4,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "openlibrary",
+   "trovati": {
+    "openlibrary": 1929
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q3826548",
+   "titolo": "Summer Lightning",
+   "autori": [
+    "P. G. Wodehouse"
+   ],
+   "wikipedia": 4,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "wikipedia",
+   "trovati": {
+    "wikipedia": 1929
+   },
+   "extra": {
+    "puntate": [
+     1929,
+     1929,
+     "wikipedia"
+    ]
+   }
+  },
+  {
+   "qid": "Q12439058",
+   "titolo": "Pratigya",
+   "autori": [
+    "Premchand"
+   ],
+   "wikipedia": 3,
+   "date_wikidata": null,
+   "esito": "prima",
+   "anno": 1925,
+   "fonte": "wikipedia",
+   "trovati": {
+    "openlibrary": 1988
+   },
+   "extra": {
+    "puntate": [
+     1925,
+     1926,
+     "wikipedia"
+    ]
+   }
+  },
+  {
+   "qid": "Q1635049",
+   "titolo": "Leviathan",
+   "autori": [
+    "Julien Green"
+   ],
+   "wikipedia": 3,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "bnf",
+   "trovati": {
+    "bnf": 1929
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q3203957",
+   "titolo": "L'Hôtel du Nord",
+   "autori": [
+    "Eugène Dabit"
+   ],
+   "wikipedia": 3,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "bnf",
+   "trovati": {
+    "bnf": 1929
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q4063989",
+   "titolo": "Amba",
+   "autori": [
+    "Alexander Belyayev"
+   ],
+   "wikipedia": 3,
+   "date_wikidata": null,
+   "esito": "nd",
+   "anno": null,
+   "fonte": null,
+   "trovati": {},
+   "extra": {}
+  },
+  {
+   "qid": "Q11988876",
+   "titolo": "Medmenneske",
+   "autori": [
+    "Olav Duun"
+   ],
+   "wikipedia": 3,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "openlibrary",
+   "trovati": {
+    "openlibrary": 1929
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q12123413",
+   "titolo": "Myna Mazaylo",
+   "autori": [
+    "Mykola Kulish"
+   ],
+   "wikipedia": 3,
+   "date_wikidata": null,
+   "esito": "nd",
+   "anno": null,
+   "fonte": null,
+   "trovati": {},
+   "extra": {}
+  },
+  {
+   "qid": "Q16565148",
+   "titolo": "The Bridge in the Jungle",
+   "autori": [
+    "B. Traven"
+   ],
+   "wikipedia": 3,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "k10plus",
+   "trovati": {
+    "k10plus": 1929
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q18280338",
+   "titolo": "The School",
+   "autori": [
+    "Arkady Gaidar"
+   ],
+   "wikipedia": 3,
+   "date_wikidata": null,
+   "esito": "nd",
+   "anno": null,
+   "fonte": null,
+   "trovati": {},
+   "extra": {}
+  },
+  {
+   "qid": "Q19909550",
+   "titolo": "How to organize a competition?",
+   "autori": [
+    "Vladimir Lenin"
+   ],
+   "wikipedia": 3,
+   "date_wikidata": null,
+   "esito": "nd",
+   "anno": null,
+   "fonte": null,
+   "trovati": {},
+   "extra": {}
+  },
+  {
+   "qid": "Q20509885",
+   "titolo": "Retreat without Song",
+   "autori": [
+    "Shahan Shahnour"
+   ],
+   "wikipedia": 3,
+   "date_wikidata": null,
+   "esito": "nd",
+   "anno": null,
+   "fonte": null,
+   "trovati": {},
+   "extra": {}
+  },
+  {
+   "qid": "Q104119274",
+   "titolo": "The scorpion in the altar",
+   "autori": [
+    "Abdulla Qodiriy"
+   ],
+   "wikipedia": 3,
+   "date_wikidata": null,
+   "esito": "nd",
+   "anno": null,
+   "fonte": null,
+   "trovati": {},
+   "extra": {}
+  },
+  {
+   "qid": "Q111341747",
+   "titolo": "Sur talons rouges, contes",
+   "autori": [
+    "Éric Allatini"
+   ],
+   "wikipedia": 3,
+   "date_wikidata": null,
+   "esito": "nd",
+   "anno": null,
+   "fonte": null,
+   "trovati": {},
+   "extra": {}
+  },
+  {
+   "qid": "Q1170946",
+   "titolo": "The adventurous heart",
+   "autori": [
+    "Ernst Jünger"
+   ],
+   "wikipedia": 3,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "wikipedia",
+   "trovati": {
+    "wikipedia": 1929
+   },
+   "extra": {
+    "puntate": [
+     1929,
+     1929,
+     "wikipedia"
+    ]
+   }
+  },
+  {
+   "qid": "Q12858981",
+   "titolo": "Magnificent Obsession",
+   "autori": [
+    "Lloyd C. Douglas"
+   ],
+   "wikipedia": 3,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "openlibrary",
+   "trovati": {
+    "openlibrary": 1929
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q13474446",
+   "titolo": "Burnt Offering",
+   "autori": [
+    "Jeanne Galzy"
+   ],
+   "wikipedia": 3,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "bnf",
+   "trovati": {
+    "bnf": 1929
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q13479598",
+   "titolo": "Cimarron",
+   "autori": [
+    "Edna Ferber"
+   ],
+   "wikipedia": 3,
+   "date_wikidata": null,
+   "esito": "nd",
+   "anno": 1864,
+   "fonte": "openlibrary",
+   "trovati": {
+    "openlibrary": 1864,
+    "loc": 1930
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q15632333",
+   "titolo": "Drama dari Krakatau",
+   "autori": [
+    "Kwee Tek Hoay"
+   ],
+   "wikipedia": 3,
+   "date_wikidata": [
+    1928,
+    1929
+   ],
+   "esito": "prima",
+   "anno": 1928,
+   "fonte": "wikipedia",
+   "trovati": {
+    "wikipedia": 1928
+   },
+   "extra": {
+    "puntate": [
+     1928,
+     1928,
+     "wikipedia"
+    ],
+    "date_wikidata": [
+     1928,
+     1929
+    ]
+   }
+  },
+  {
+   "qid": "Q16324711",
+   "titolo": "The War of Independence",
+   "autori": [
+    "Claude H. Van Tyne"
+   ],
+   "wikipedia": 3,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "loc",
+   "trovati": {
+    "loc": 1929
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q16386912",
+   "titolo": "Mary of Marion Isle",
+   "autori": [
+    "H. Rider Haggard"
+   ],
+   "wikipedia": 3,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "loc",
+   "trovati": {
+    "openlibrary": 1920,
+    "loc": 1929
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q7751686",
+   "titolo": "The Mirrors of Tuzun Thune",
+   "autori": [
+    "Robert E. Howard"
+   ],
+   "wikipedia": 3,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "isfdb",
+   "trovati": {
+    "isfdb": 1929
+   },
+   "extra": {
+    "puntate": [
+     1929,
+     1929,
+     "isfdb"
+    ]
+   }
+  },
+  {
+   "qid": "Q7752080",
+   "titolo": "The Monster Men",
+   "autori": [
+    "Edgar Rice Burroughs"
+   ],
+   "wikipedia": 3,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "openlibrary",
+   "trovati": {
+    "wikipedia": 1913,
+    "openlibrary": 1929
+   },
+   "extra": {
+    "puntate": [
+     1913,
+     1913,
+     "wikipedia"
+    ]
+   }
+  },
+  {
+   "qid": "Q6075483",
+   "titolo": "Is Sex Necessary? Or, Why You Feel the Way You Do",
+   "autori": [
+    "James Thurber",
+    "E. B. White"
+   ],
+   "wikipedia": 3,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "wikipedia",
+   "trovati": {
+    "wikipedia": 1929
+   },
+   "extra": {
+    "puntate": [
+     1929,
+     1929,
+     "wikipedia"
+    ]
+   }
+  },
+  {
+   "qid": "Q6114693",
+   "titolo": "Jack Pumpkinhead of Oz",
+   "autori": [
+    "Ruth Plumly Thompson"
+   ],
+   "wikipedia": 3,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "openlibrary",
+   "trovati": {
+    "openlibrary": 1929
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q6365294",
+   "titolo": "Kant and the Problem of Metaphysics",
+   "autori": [
+    "Martin Heidegger"
+   ],
+   "wikipedia": 3,
+   "date_wikidata": [
+    1929,
+    1981
+   ],
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "k10plus",
+   "trovati": {
+    "k10plus": 1929
+   },
+   "extra": {
+    "date_wikidata": [
+     1929,
+     1981
+    ]
+   }
+  },
+  {
+   "qid": "Q7317205",
+   "titolo": "Return of the Brute",
+   "autori": [
+    "Liam O'Flaherty"
+   ],
+   "wikipedia": 3,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "loc",
+   "trovati": {
+    "loc": 1929
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q3209877",
+   "titolo": "Joy",
+   "autori": [
+    "Georges Bernanos"
+   ],
+   "wikipedia": 3,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "bnf",
+   "trovati": {
+    "bnf": 1929
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q17035275",
+   "titolo": "Skull-Face",
+   "autori": [
+    "Robert E. Howard"
+   ],
+   "wikipedia": 3,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "isfdb",
+   "trovati": {
+    "isfdb": 1929
+   },
+   "extra": {
+    "puntate": [
+     1929,
+     1929,
+     "isfdb"
+    ]
+   }
+  },
+  {
+   "qid": "Q17109411",
+   "titolo": "Hitty, Her First Hundred Years",
+   "autori": [
+    "Rachel Field"
+   ],
+   "wikipedia": 3,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "openlibrary",
+   "trovati": {
+    "openlibrary": 1929
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q28758411",
+   "titolo": "The Gunner",
+   "autori": [
+    "Edgar Wallace"
+   ],
+   "wikipedia": 3,
+   "date_wikidata": null,
+   "esito": "nd",
+   "anno": 1928,
+   "fonte": "loc",
+   "trovati": {
+    "openlibrary": 1928,
+    "loc": 1928
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q42192546",
+   "titolo": "The Magic Island",
+   "autori": [
+    "William Seabrook"
+   ],
+   "wikipedia": 3,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "wikipedia",
+   "trovati": {
+    "wikipedia": 1929
+   },
+   "extra": {
+    "puntate": [
+     1929,
+     1929,
+     "wikipedia"
+    ]
+   }
+  },
+  {
+   "qid": "Q65073436",
+   "titolo": "The Metropolis of Tomorrow",
+   "autori": [
+    "Hugh Ferriss"
+   ],
+   "wikipedia": 3,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "wikipedia",
+   "trovati": {
+    "wikipedia": 1929
+   },
+   "extra": {
+    "puntate": [
+     1929,
+     1929,
+     "wikipedia"
+    ]
+   }
+  },
+  {
+   "qid": "Q7366709",
+   "titolo": "Rope",
+   "autori": [
+    "Patrick Hamilton"
+   ],
+   "wikipedia": 3,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "openlibrary",
+   "trovati": {
+    "openlibrary": 1929
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q17216982",
+   "titolo": "帝󠄁國主義下の臺灣",
+   "autori": [
+    "Tadao Yanaihara"
+   ],
+   "wikipedia": 3,
+   "date_wikidata": null,
+   "esito": "nd",
+   "anno": null,
+   "fonte": null,
+   "trovati": {},
+   "extra": {}
+  },
+  {
+   "qid": "Q1540561",
+   "titolo": "Wege zur Raumschiffahrt",
+   "autori": [
+    "Hermann Oberth"
+   ],
+   "wikipedia": 3,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "k10plus",
+   "trovati": {
+    "k10plus": 1929
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q3800795",
+   "titolo": "Our Exagmination Round His Factification for Incamination of Work in Progress",
+   "autori": [
+    "Samuel Beckett",
+    "William Carlos Williams",
+    "Robert McAlmon",
+    "Marcel Brion",
+    "various authors",
+    "Thomas MacGreevy",
+    "Elliot Paul"
+   ],
+   "wikipedia": 3,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "openlibrary",
+   "trovati": {
+    "openlibrary": 1929
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q4656278",
+   "titolo": "A Daughter of the Seine",
+   "autori": [
+    "Jeanette Eaton"
+   ],
+   "wikipedia": 3,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "wikipedia",
+   "trovati": {
+    "wikipedia": 1929
+   },
+   "extra": {
+    "puntate": [
+     1929,
+     1929,
+     "wikipedia"
+    ]
+   }
+  },
+  {
+   "qid": "Q868977",
+   "titolo": "Coonardoo",
+   "autori": [
+    "Katharine Susannah Prichard"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "openlibrary",
+   "trovati": {
+    "wikipedia": 1928,
+    "openlibrary": 1929
+   },
+   "extra": {
+    "puntate": [
+     1928,
+     1928,
+     "wikipedia"
+    ]
+   }
+  },
+  {
+   "qid": "Q122972506",
+   "titolo": "Al-Adab Al 'Arabi fi Al Maghrib Al Aqsa",
+   "autori": [
+    "Mohamed Ben al Abbas al Kabbaj"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": "nd",
+   "anno": null,
+   "fonte": null,
+   "trovati": {},
+   "extra": {}
+  },
+  {
+   "qid": "Q2135439",
+   "titolo": "Right and Left: The Legend of the Holy Drinker",
+   "autori": [
+    "Joseph Roth"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": "nd",
+   "anno": 1992,
+   "fonte": "loc",
+   "trovati": {
+    "openlibrary": 1992,
+    "loc": 1992
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q4110169",
+   "titolo": "An Evening with Claire",
+   "autori": [
+    "Gaito Gazdanov"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": "nd",
+   "anno": 1988,
+   "fonte": "loc",
+   "trovati": {
+    "openlibrary": 2014,
+    "loc": 1988
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q4453328",
+   "titolo": "Manufactured Legends and Apocrypha",
+   "autori": [
+    "Alexander Belyayev"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": "nd",
+   "anno": null,
+   "fonte": null,
+   "trovati": {},
+   "extra": {}
+  },
+  {
+   "qid": "Q4518956",
+   "titolo": "Devil's Mill",
+   "autori": [
+    "Alexander Belyayev"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": "nd",
+   "anno": null,
+   "fonte": null,
+   "trovati": {},
+   "extra": {}
+  },
+  {
+   "qid": "Q5981187",
+   "titolo": "The Seven Madmen",
+   "autori": [
+    "Roberto Arlt"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": "nd",
+   "anno": 1984,
+   "fonte": "loc",
+   "trovati": {
+    "openlibrary": 1984,
+    "loc": 1984
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q12353480",
+   "titolo": "Originala Verkaro de L. L. Zamenhbof",
+   "autori": [
+    "L. L. Zamenhof"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": "nd",
+   "anno": null,
+   "fonte": null,
+   "trovati": {},
+   "extra": {}
+  },
+  {
+   "qid": "Q16407461",
+   "titolo": "Truth and Justice II",
+   "autori": [
+    "A. H. Tammsaare"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": "nd",
+   "anno": null,
+   "fonte": null,
+   "trovati": {},
+   "extra": {}
+  },
+  {
+   "qid": "Q17635721",
+   "titolo": "Lo zar non è morto",
+   "autori": [],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": "nd",
+   "anno": 2021,
+   "fonte": "loc",
+   "trovati": {
+    "loc": 2021
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q19153354",
+   "titolo": "Jessie and Morgiana",
+   "autori": [
+    "Alexander Grin"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": "nd",
+   "anno": null,
+   "fonte": null,
+   "trovati": {},
+   "extra": {}
+  },
+  {
+   "qid": "Q19175115",
+   "titolo": "Whom Should I Be?",
+   "autori": [
+    "Vladimir Mayakovsky"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": "nd",
+   "anno": null,
+   "fonte": null,
+   "trovati": {},
+   "extra": {}
+  },
+  {
+   "qid": "Q19239200",
+   "titolo": "Where do the holes in cheese come from?",
+   "autori": [
+    "Kurt Tucholsky"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": [
+    1928,
+    1929
+   ],
+   "esito": "nd",
+   "anno": null,
+   "fonte": null,
+   "trovati": {},
+   "extra": {
+    "date_wikidata": [
+     1928,
+     1929
+    ]
+   }
+  },
+  {
+   "qid": "Q20479048",
+   "titolo": "Prologo",
+   "autori": [
+    "Eŭgeno Miĥalski"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": "nd",
+   "anno": null,
+   "fonte": null,
+   "trovati": {},
+   "extra": {}
+  },
+  {
+   "qid": "Q21559834",
+   "titolo": "Kaviraja Manoranjanamu",
+   "autori": [
+    "Kanuparti Abbayamatya"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": "nd",
+   "anno": null,
+   "fonte": null,
+   "trovati": {},
+   "extra": {}
+  },
+  {
+   "qid": "Q23927589",
+   "titolo": "Zamenhof",
+   "autori": [
+    "Ernest Drezen"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": "nd",
+   "anno": null,
+   "fonte": null,
+   "trovati": {},
+   "extra": {}
+  },
+  {
+   "qid": "Q29054587",
+   "titolo": "Kostel na dědině a v městečku",
+   "autori": [
+    "Bohumil Vavroušek"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "openlibrary",
+   "trovati": {
+    "openlibrary": 1929
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q66737811",
+   "titolo": "The Croxley Master",
+   "autori": [
+    "Arthur Conan Doyle"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": "prima",
+   "anno": 1899,
+   "fonte": "isfdb",
+   "trovati": {
+    "isfdb": 1899,
+    "openlibrary": 1907,
+    "loc": 1907
+   },
+   "extra": {
+    "puntate": [
+     1899,
+     1899,
+     "isfdb"
+    ]
+   }
+  },
+  {
+   "qid": "Q86667021",
+   "titolo": "The Bridge that Broke",
+   "autori": [
+    "Maurice Leblanc"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": "nd",
+   "anno": null,
+   "fonte": null,
+   "trovati": {},
+   "extra": {}
+  },
+  {
+   "qid": "Q106448158",
+   "titolo": "A Lecture on Ethics",
+   "autori": [
+    "Ludwig Wittgenstein"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": "nd",
+   "anno": null,
+   "fonte": null,
+   "trovati": {},
+   "extra": {}
+  },
+  {
+   "qid": "Q111988595",
+   "titolo": "Cuaderno San Martín",
+   "autori": [
+    "Jorge Luis Borges"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "openlibrary",
+   "trovati": {
+    "openlibrary": 1929
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q125620596",
+   "titolo": "Karafuto Ainu Sōwa",
+   "autori": [
+    "Taroji Sentoku"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": "nd",
+   "anno": null,
+   "fonte": null,
+   "trovati": {},
+   "extra": {}
+  },
+  {
+   "qid": "Q131531683",
+   "titolo": "Carmella Commands",
+   "autori": [
+    "Walter Savage Ball"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "openlibrary",
+   "trovati": {
+    "openlibrary": 1929
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q136131750",
+   "titolo": "Bilator Chithi",
+   "autori": [
+    "Jnanadabhiram Barua"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": "nd",
+   "anno": null,
+   "fonte": null,
+   "trovati": {},
+   "extra": {}
+  },
+  {
+   "qid": "Q139575050",
+   "titolo": "Is There a Doctor in the House?",
+   "autori": [
+    "Rube Goldberg"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "openlibrary",
+   "trovati": {
+    "openlibrary": 1929
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q645299",
+   "titolo": "Carine ou la jeune fille folle de son âme",
+   "autori": [
+    "Fernand Crommelynck"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "wikipedia",
+   "trovati": {
+    "wikipedia": 1929
+   },
+   "extra": {
+    "puntate": [
+     1929,
+     1929,
+     "wikipedia"
+    ]
+   }
+  },
+  {
+   "qid": "Q7752885",
+   "titolo": "The Mystery of Cabin Island",
+   "autori": [
+    "Franklin W. Dixon"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "loc",
+   "trovati": {
+    "loc": 1929
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q7757288",
+   "titolo": "The Pit of the Serpent",
+   "autori": [
+    "Robert E. Howard"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": "nd",
+   "anno": 1931,
+   "fonte": "wikipedia",
+   "trovati": {
+    "wikipedia": 1931
+   },
+   "extra": {
+    "puntate": [
+     1931,
+     1931,
+     "wikipedia"
+    ]
+   }
+  },
+  {
+   "qid": "Q7760398",
+   "titolo": "The Return of Chorb",
+   "autori": [
+    "Vladimir Nabokov"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": "nd",
+   "anno": null,
+   "fonte": null,
+   "trovati": {},
+   "extra": {}
+  },
+  {
+   "qid": "Q7762574",
+   "titolo": "The Science of Life",
+   "autori": [
+    "H. G. Wells",
+    "Julian Huxley",
+    "George Philip Wells"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "wikipedia",
+   "trovati": {
+    "wikipedia": 1929
+   },
+   "extra": {
+    "puntate": [
+     1929,
+     1929,
+     "wikipedia"
+    ]
+   }
+  },
+  {
+   "qid": "Q7775943",
+   "titolo": "The World Below",
+   "autori": [
+    "S. Fowler Wright"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "wikipedia",
+   "trovati": {
+    "wikipedia": 1929
+   },
+   "extra": {
+    "puntate": [
+     1929,
+     1929,
+     "wikipedia"
+    ]
+   }
+  },
+  {
+   "qid": "Q7898131",
+   "titolo": "Up to Now",
+   "autori": [
+    "Martin Shaw"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "openlibrary",
+   "trovati": {
+    "openlibrary": 1929
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q16681897",
+   "titolo": "Hotel Acropolis",
+   "autori": [
+    "Pierre Drieu La Rochelle"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "wikipedia",
+   "trovati": {
+    "bnf": 1930,
+    "wikipedia": 1929
+   },
+   "extra": {
+    "puntate": [
+     1929,
+     1929,
+     "wikipedia"
+    ]
+   }
+  },
+  {
+   "qid": "Q16908949",
+   "titolo": "Little Blacknose",
+   "autori": [
+    "Hildegarde Hoyt Swift"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "openlibrary",
+   "trovati": {
+    "openlibrary": 1929
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q7714960",
+   "titolo": "The Autobiography of Calvin Coolidge",
+   "autori": [
+    "Calvin Coolidge"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "wikipedia",
+   "trovati": {
+    "wikipedia": 1929
+   },
+   "extra": {
+    "puntate": [
+     1929,
+     1929,
+     "wikipedia"
+    ]
+   }
+  },
+  {
+   "qid": "Q7718490",
+   "titolo": "The Blacker the Berry",
+   "autori": [
+    "Wallace Thurman"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": "ok",
+   "anno": 1929,
+   "fonte": "openlibrary",
+   "trovati": {
+    "openlibrary": 1929
+   },
+   "extra": {}
+  },
+  {
+   "qid": "Q7737191",
+   "titolo": "The Good Companions",
+   "autori": [
+    "J. B. Priestley"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": null,
+   "anno": null,
+   "fonte": null,
+   "trovati": null,
+   "extra": null
+  },
+  {
+   "qid": "Q6312375",
+   "titolo": "June Moon",
+   "autori": [
+    "George S. Kaufman",
+    "Ring Lardner"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": null,
+   "anno": null,
+   "fonte": null,
+   "trovati": null,
+   "extra": null
+  },
+  {
+   "qid": "Q6624663",
+   "titolo": "The Fairy Caravan",
+   "autori": [
+    "Beatrix Potter"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": null,
+   "anno": null,
+   "fonte": null,
+   "trovati": null,
+   "extra": null
+  },
+  {
+   "qid": "Q6929436",
+   "titolo": "Mr Mulliner Speaking",
+   "autori": [
+    "P. G. Wodehouse"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": null,
+   "anno": null,
+   "fonte": null,
+   "trovati": null,
+   "extra": null
+  },
+  {
+   "qid": "Q7205306",
+   "titolo": "Plum Bun",
+   "autori": [
+    "Jessie Redmon Fauset"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": null,
+   "anno": null,
+   "fonte": null,
+   "trovati": null,
+   "extra": null
+  },
+  {
+   "qid": "Q7238294",
+   "titolo": "Pran of Albania",
+   "autori": [
+    "Elizabeth Cleveland Miller"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": null,
+   "anno": null,
+   "fonte": null,
+   "trovati": null,
+   "extra": null
+  },
+  {
+   "qid": "Q3227146",
+   "titolo": "The Weaker Sex",
+   "autori": [],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": null,
+   "anno": null,
+   "fonte": null,
+   "trovati": null,
+   "extra": null
+  },
+  {
+   "qid": "Q3368623",
+   "titolo": "Patachou, Petit Garçon",
+   "autori": [
+    "Tristan Derème"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": null,
+   "anno": null,
+   "fonte": null,
+   "trovati": null,
+   "extra": null
+  },
+  {
+   "qid": "Q3548527",
+   "titolo": "Lovers Are Never Losers",
+   "autori": [
+    "Jean Giono"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": null,
+   "anno": null,
+   "fonte": null,
+   "trovati": null,
+   "extra": null
+  },
+  {
+   "qid": "Q3822037",
+   "titolo": "The Scarab Murder Case",
+   "autori": [
+    "S. S. Van Dine"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": null,
+   "anno": null,
+   "fonte": null,
+   "trovati": null,
+   "extra": null
+  },
+  {
+   "qid": "Q17636676",
+   "titolo": "The Duke of York’s Steps",
+   "autori": [
+    "Sir Henry Aubrey-Fletcher, 6th Baronet"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": null,
+   "anno": null,
+   "fonte": null,
+   "trovati": null,
+   "extra": null
+  },
+  {
+   "qid": "Q18163234",
+   "titolo": "Wolf Solent",
+   "autori": [
+    "John Cowper Powys"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": null,
+   "anno": null,
+   "fonte": null,
+   "trovati": null,
+   "extra": null
+  },
+  {
+   "qid": "Q23307580",
+   "titolo": "The Planet of Peril",
+   "autori": [
+    "Otis Adelbert Kline"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": null,
+   "anno": null,
+   "fonte": null,
+   "trovati": null,
+   "extra": null
+  },
+  {
+   "qid": "Q42184143",
+   "titolo": "The Barrakee Mystery",
+   "autori": [
+    "Arthur Upfield"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": null,
+   "anno": null,
+   "fonte": null,
+   "trovati": null,
+   "extra": null
+  },
+  {
+   "qid": "Q47089834",
+   "titolo": "Hebdomeros",
+   "autori": [
+    "Giorgio de Chirico"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": [
+    1929,
+    1972
+   ],
+   "esito": null,
+   "anno": null,
+   "fonte": null,
+   "trovati": null,
+   "extra": null
+  },
+  {
+   "qid": "Q98078317",
+   "titolo": "Black Roses",
+   "autori": [
+    "Francis Brett Young"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": null,
+   "anno": null,
+   "fonte": null,
+   "trovati": null,
+   "extra": null
+  },
+  {
+   "qid": "Q104865223",
+   "titolo": "Planetoid 127",
+   "autori": [
+    "Edgar Wallace"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": null,
+   "anno": null,
+   "fonte": null,
+   "trovati": null,
+   "extra": null
+  },
+  {
+   "qid": "Q108525913",
+   "titolo": "Poet's Pub",
+   "autori": [
+    "Eric Linklater"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": null,
+   "anno": null,
+   "fonte": null,
+   "trovati": null,
+   "extra": null
+  },
+  {
+   "qid": "Q109974009",
+   "titolo": "The Piccadilly Murder",
+   "autori": [
+    "Anthony Berkeley Cox"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": null,
+   "anno": null,
+   "fonte": null,
+   "trovati": null,
+   "extra": null
+  },
+  {
+   "qid": "Q123757841",
+   "titolo": "An Affair of Honor",
+   "autori": [
+    "Vladimir Nabokov"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": null,
+   "anno": null,
+   "fonte": null,
+   "trovati": null,
+   "extra": null
+  },
+  {
+   "qid": "Q138548483",
+   "titolo": "Ave Maria",
+   "autori": [
+    "Ivan Bahrianyi"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": null,
+   "anno": null,
+   "fonte": null,
+   "trovati": null,
+   "extra": null
+  },
+  {
+   "qid": "Q16312846",
+   "titolo": "Vemana",
+   "autori": [
+    "Rallapalli Anantha Krishna Sharma"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": null,
+   "anno": null,
+   "fonte": null,
+   "trovati": null,
+   "extra": null
+  },
+  {
+   "qid": "Q16651762",
+   "titolo": "The Hornworm",
+   "autori": [
+    "Edogawa Ranpo"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": null,
+   "anno": null,
+   "fonte": null,
+   "trovati": null,
+   "extra": null
+  },
+  {
+   "qid": "Q18810426",
+   "titolo": "Franz Kampers - Kaiser Friedrich II. Der Wegbereiter der Renaissance",
+   "autori": [
+    "Franz Kampers"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": null,
+   "anno": null,
+   "fonte": null,
+   "trovati": null,
+   "extra": null
+  },
+  {
+   "qid": "Q19889137",
+   "titolo": "An t-Oileánach",
+   "autori": [
+    "Tomas O'Crohan"
+   ],
+   "wikipedia": 2,
+   "date_wikidata": null,
+   "esito": null,
+   "anno": null,
+   "fonte": null,
+   "trovati": null,
+   "extra": null
+  }
  ]
 }
