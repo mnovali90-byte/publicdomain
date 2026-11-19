@@ -4,7 +4,7 @@
  "paese": "es",
  "regola": "Spagna, autori morti prima del 1987: 80 anni dalla morte (Ley de 10 de enero de 1879, art. 6; Ley de Propiedad Intelectual, disp. trans. cuarta). Data prudente: 1 gennaio dell'anno dopo gli 80 anni",
  "fonte": "Wikidata (CC0)",
- "aggiornato": "2026-11-18",
+ "aggiornato": "2026-11-19",
  "totale": 1292,
  "autori": [
   {
@@ -688,6 +688,14 @@
      "fonte": "British Library",
      "scartate": 1,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Shaʻrāwī, Hudá, 1879-1947"
     }
    }
   },
@@ -2240,6 +2248,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Asdren, 1872-1947"
     }
    }
   },
@@ -3143,7 +3159,23 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Kravchenko, Uli︠a︡na, 1860-1947"
+    }
    }
   },
   {
@@ -3913,6 +3945,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 15,
+     "dal_2000": 3,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Perkins, Maxwell E. (Maxwell Evarts), 1884-1947"
     }
    }
   },
@@ -4194,7 +4234,23 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 2,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Abū Shabakah, Ilyās, 1904-1947"
+    }
    }
   },
   {
@@ -4476,6 +4532,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 12,
+     "dal_2000": 2,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Toler, Sidney, 1874-1947"
     }
    }
   },
@@ -4622,6 +4686,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Bacaloglu, Elena, 1878-1947"
     }
    }
   },
@@ -4702,7 +4774,23 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Talvik, Heiti, 1904-1947"
+    }
    }
   },
   {
@@ -4772,7 +4860,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -4857,6 +4953,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 2,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Oda, Sakunosuke, 1913-1947"
     }
    }
   },
@@ -5612,6 +5716,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 2,
+     "dal_2000": 1,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "FitzGerald, Desmond, 1888-1947"
     }
    }
   },
@@ -5847,6 +5959,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Zuylen de Nyevelt, Hélène de"
     }
    }
   },
@@ -6275,7 +6395,23 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": true,
+     "edizioni": 20,
+     "dal_2000": 4,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Leipoldt, C. Louis (Christiaan Louis), 1880-1947"
+    }
    }
   },
   {
@@ -6344,7 +6480,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -6826,7 +6970,23 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Gripenberg, Bertel, 1878-1947"
+    }
    }
   },
   {
@@ -7034,7 +7194,23 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Palaj, Bernardin, 1894-1947"
+    }
    }
   },
   {
@@ -7512,7 +7688,23 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Klen, I︠U︡riĭ, 1891-1947"
+    }
    }
   },
   {
@@ -7887,7 +8079,23 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Aston, Tilly, 1873-"
+    }
    }
   },
   {
@@ -8324,6 +8532,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Rothschild, Henri de, 1872-1947"
     }
    }
   },
@@ -8391,7 +8607,23 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Steinberg, Jacob, 1887-1947"
+    }
    }
   },
   {
@@ -8488,7 +8720,23 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Hāshim, Labībah, 1879 or 1880-1946 or 1947"
+    }
    }
   },
   {
@@ -8693,7 +8941,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -8918,7 +9174,23 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 6,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Beatty, Bessie, 1886-1947"
+    }
    }
   },
   {
@@ -9098,7 +9370,23 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Rodríguez Perozo, Andrea Evangelina, 1879-1947"
+    }
    }
   },
   {
@@ -9779,7 +10067,23 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Wolff, Willi"
+    }
    }
   },
   {
@@ -9844,7 +10148,23 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Qāʼimʹmaqāmī, ʻĀlamtāj, 1883 or 1884-1946 or 1947"
+    }
    }
   },
   {
@@ -10050,7 +10370,23 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Đạm Phương, 1881-1947"
+    }
    }
   },
   {
@@ -10121,7 +10457,30 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bne_es": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "BNE",
+     "metodo": "codice_bne"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 5,
+     "dal_2000": 2,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Wickham, Anna, 1884-1947"
+    }
    }
   },
   {
@@ -10542,7 +10901,23 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 1,
+     "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Evers, Franz, 1871-1947"
+    }
    }
   },
   {
@@ -10620,7 +10995,23 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Romer-Ochenkowska, Helena"
+    }
    }
   },
   {
@@ -11144,7 +11535,23 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 1,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Pert︠s︡ov, Petr, 1868-1947"
+    }
    }
   },
   {
@@ -11771,7 +12178,22 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bne_es": {
+     "trovato": true,
+     "edizioni": 3,
+     "dal_2000": 0,
+     "fonte": "BNE",
+     "metodo": "codice_bne"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -11837,7 +12259,23 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Butkus, Juozas, 1893-1947"
+    }
    }
   },
   {
@@ -11908,7 +12346,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -12130,7 +12576,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -12223,7 +12677,23 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 26,
+     "dal_2000": 5,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Tully, Jim"
+    }
    }
   },
   {
@@ -12500,7 +12970,23 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Ishihara, Jun, 1881-1947"
+    }
    }
   },
   {
@@ -12583,7 +13069,23 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Ėllis, 1874-1947"
+    }
    }
   },
   {
@@ -12649,7 +13151,30 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bne_es": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "BNE",
+     "metodo": "codice_bne"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 1,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Schwarz, Lina, 1876-1947"
+    }
    }
   },
   {
@@ -13334,7 +13859,23 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Smythe, Albert Ernest Stafford, 1861-1947"
+    }
    }
   },
   {
@@ -13412,7 +13953,23 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Poljanski, Branko Ve."
+    }
    }
   },
   {
@@ -13482,7 +14039,22 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bne_es": {
+     "trovato": true,
+     "edizioni": 66,
+     "dal_2000": 4,
+     "fonte": "BNE",
+     "metodo": "codice_bne"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -13845,7 +14417,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -13914,7 +14494,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -14010,6 +14598,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 219,
+     "dal_2000": 31,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Hill, Grace Livingston, 1865-1947"
     }
    }
   },
@@ -14112,6 +14708,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -14184,7 +14790,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -14503,7 +15117,23 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 5,
+     "dal_2000": 4,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Beg, Farḥatullāh, 1883-1948"
+    }
    }
   },
   {
@@ -14778,7 +15408,23 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Impekoven, Toni, 1881-"
+    }
    }
   },
   {
@@ -14845,7 +15491,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -14954,7 +15608,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -15111,7 +15773,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -15372,7 +16042,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -15770,7 +16448,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -15980,6 +16666,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -15987,6 +16683,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Balmaseda, Julian C. (Julian Cruz), 1885-1947"
     }
    }
   },
@@ -16234,7 +16938,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -16291,7 +17003,22 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bne_es": {
+     "trovato": true,
+     "edizioni": 23,
+     "dal_2000": 1,
+     "fonte": "BNE",
+     "metodo": "codice_bne"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -16746,7 +17473,23 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Magdalena, Maria"
+    }
    }
   },
   {
@@ -16944,7 +17687,23 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": true,
+     "edizioni": 3,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 3,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Finnegan, Robert, 1906-1947"
+    }
    }
   },
   {
@@ -17002,7 +17761,22 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bne_es": {
+     "trovato": true,
+     "edizioni": 5,
+     "dal_2000": 0,
+     "fonte": "BNE",
+     "metodo": "codice_bne"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -17064,7 +17838,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -17122,6 +17904,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -17294,7 +18086,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -17501,7 +18301,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -17571,7 +18379,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -17686,7 +18502,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -17758,7 +18582,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -18120,7 +18952,22 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bne_es": {
+     "trovato": true,
+     "edizioni": 30,
+     "dal_2000": 0,
+     "fonte": "BNE",
+     "metodo": "codice_bne"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -18288,7 +19135,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -18335,7 +19190,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -18405,7 +19268,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -18468,7 +19339,22 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bne_es": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "BNE",
+     "metodo": "codice_bne"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -18535,7 +19421,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -18592,7 +19486,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -18641,7 +19543,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -18700,7 +19610,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -18759,7 +19677,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -19176,7 +20102,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -19329,7 +20263,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -19411,7 +20353,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -19487,7 +20437,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -19835,7 +20793,22 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bne_es": {
+     "trovato": true,
+     "edizioni": 22,
+     "dal_2000": 4,
+     "fonte": "BNE",
+     "metodo": "codice_bne"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -19893,7 +20866,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -20028,7 +21009,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -20088,7 +21077,23 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 17,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Anspacher, Louis Kaufman, 1878-1947"
+    }
    }
   },
   {
@@ -20165,7 +21170,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -20224,7 +21237,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -20287,7 +21308,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -20349,7 +21378,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -20419,7 +21456,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -20492,7 +21537,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -20624,7 +21677,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -20765,7 +21826,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -20938,7 +22007,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -21002,7 +22079,30 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bne_es": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "BNE",
+     "metodo": "codice_bne"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Eliot, Vivienne, 1888-1947"
+    }
    }
   },
   {
@@ -21189,7 +22289,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -21256,7 +22364,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -21340,7 +22456,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -21507,7 +22631,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -21605,7 +22737,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -21659,7 +22799,22 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bne_es": {
+     "trovato": true,
+     "edizioni": 146,
+     "dal_2000": 4,
+     "fonte": "BNE",
+     "metodo": "codice_bne"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -21754,7 +22909,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -21993,7 +23156,22 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bne_es": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 0,
+     "fonte": "BNE",
+     "metodo": "codice_bne"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -22149,7 +23327,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -22289,7 +23475,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -22364,7 +23558,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -22435,7 +23637,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -22496,7 +23706,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -22895,7 +24113,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -22994,7 +24220,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -23051,7 +24285,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -23137,7 +24379,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -23274,7 +24524,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -23347,7 +24605,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -23428,7 +24694,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 1,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -23525,7 +24799,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 1,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -23609,7 +24891,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -23661,7 +24951,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -23756,7 +25054,23 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": true,
+     "edizioni": 21,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Snowden, Keighley, 1860-1947"
+    }
    }
   },
   {
@@ -23911,7 +25225,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -24033,7 +25355,23 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Jin, Tianhe"
+    }
    }
   },
   {
@@ -24118,7 +25456,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -24485,7 +25831,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -24543,7 +25897,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -24711,7 +26073,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -24816,7 +26186,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -24940,7 +26318,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -25013,7 +26399,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -25071,7 +26465,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -25152,7 +26554,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -25229,7 +26639,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -25295,7 +26713,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -25363,7 +26789,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -25570,7 +27004,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -25635,7 +27077,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -25743,7 +27193,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -25871,7 +27329,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -25970,7 +27436,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -26025,7 +27499,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -26225,7 +27707,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -26324,7 +27814,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 1,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -26458,7 +27956,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -26514,7 +28020,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -26612,7 +28126,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -26780,7 +28302,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -26959,7 +28489,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -27392,7 +28930,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -27547,7 +29093,22 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bne_es": {
+     "trovato": true,
+     "edizioni": 37,
+     "dal_2000": 0,
+     "fonte": "BNE",
+     "metodo": "codice_bne"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -27591,7 +29152,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -27641,7 +29210,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -27744,7 +29321,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -27799,7 +29384,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -27865,7 +29458,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -27958,7 +29559,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 1,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -28008,7 +29617,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -28062,7 +29679,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -28164,7 +29789,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -28301,7 +29934,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -28380,7 +30021,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -28602,7 +30251,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -28676,7 +30333,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -28767,7 +30432,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -28820,7 +30493,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -28883,7 +30564,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -29155,7 +30844,23 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 1,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 4,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Myers, Elizabeth, 1912-1947"
+    }
    }
   },
   {
@@ -29228,7 +30933,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -29324,7 +31037,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -29403,7 +31124,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -29485,7 +31214,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -29543,7 +31280,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -29681,7 +31426,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -29733,7 +31486,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -29799,7 +31560,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -29917,7 +31686,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -30264,7 +32041,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -30437,7 +32222,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -30490,7 +32283,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -30554,7 +32355,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -30639,7 +32448,15 @@
     },
     "parziale": true,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -30781,7 +32598,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -30872,7 +32697,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -30934,7 +32767,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -31255,7 +33096,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -31344,7 +33193,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -31408,7 +33265,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -31455,7 +33320,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -31524,7 +33397,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -31569,7 +33450,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -31620,7 +33509,22 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bne_es": {
+     "trovato": true,
+     "edizioni": 8,
+     "dal_2000": 0,
+     "fonte": "BNE",
+     "metodo": "codice_bne"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -31761,7 +33665,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 1,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -31954,7 +33866,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -32203,7 +34123,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -32532,7 +34460,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -33017,7 +34953,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -33277,7 +35221,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -33330,7 +35282,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -33402,7 +35362,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -33958,7 +35926,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -34344,7 +36320,15 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    }
    }
   },
   {
@@ -41528,7 +43512,7 @@
    "n": 1
   }
  ],
- "arricchito": "2026-11-18",
+ "arricchito": "2026-11-19",
  "indice_formula": "tre misure separate: visite Wikipedia it, visite Wikipedia en, numero di lingue con una pagina; ciascuna 0-100 rispetto alla lista dell'anno",
  "traduzioni_aggiornato": "2026-11-19"
 }

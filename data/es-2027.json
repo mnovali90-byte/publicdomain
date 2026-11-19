@@ -4,7 +4,7 @@
  "paese": "es",
  "regola": "Spagna, autori morti prima del 1987: 80 anni dalla morte (Ley de 10 de enero de 1879, art. 6; Ley de Propiedad Intelectual, disp. trans. cuarta). Data prudente: 1 gennaio dell'anno dopo gli 80 anni",
  "fonte": "Wikidata (CC0)",
- "aggiornato": "2026-11-18",
+ "aggiornato": "2026-11-19",
  "totale": 1303,
  "autori": [
   {
@@ -12,7 +12,7 @@
    "nome": "H. G. Wells",
    "nascita": "1866-09-21",
    "morte": "1946-08-13",
-   "pagine_wikipedia": 169,
+   "pagine_wikipedia": 170,
    "professioni": [
     "romanziere",
     "scrittore"
@@ -390,7 +390,7 @@
    "nome": "Aleksandr Aleksandrovič Alechin",
    "nascita": "1892-10-31",
    "morte": "1946-03-24",
-   "pagine_wikipedia": 85,
+   "pagine_wikipedia": 86,
    "professioni": [
     "scrittore",
     "traduttore"
@@ -840,6 +840,17 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "ambiguo",
+     "fonte": "SBN",
+     "ambigue": 4,
+     "sospetto": true
+    },
     "bl_en": {
      "trovato": true,
      "edizioni": 1,
@@ -847,6 +858,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 26,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Arliss, George, 1868-1946"
     }
    }
   },
@@ -1938,6 +1957,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": "codice_sbn",
+     "riconoscimento": "riconosciuto",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -1945,6 +1974,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Adamson, Hendrik, 1891-1946"
     }
    }
   },
@@ -2028,6 +2065,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -2035,6 +2082,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Vares-Barbarus, J. (Johannes), 1890-1946"
     }
    }
   },
@@ -2337,6 +2392,16 @@
     "parziale": true,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": true,
+     "edizioni": 162,
+     "ultimo": 2016,
+     "dal_2000": 5,
+     "metodo": "codice_sbn",
+     "riconoscimento": "riconosciuto",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": true,
      "edizioni": 2,
@@ -2344,6 +2409,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Ojetti, Ugo, 1871-1946"
     }
    }
   },
@@ -2614,6 +2687,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": true,
+     "edizioni": 400,
+     "ultimo": 2018,
+     "dal_2000": 119,
+     "metodo": "codice_sbn",
+     "riconoscimento": "riconosciuto",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bne_es": {
      "trovato": true,
      "edizioni": 13,
@@ -2628,6 +2711,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 12,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Adami, Giuseppe, 1878-1946"
     }
    }
   },
@@ -4146,6 +4237,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "ambiguo",
+     "fonte": "SBN",
+     "ambigue": 1
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -4153,6 +4254,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Kawakami, Hajime, 1879-1946"
     }
    }
   },
@@ -4232,6 +4341,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -4239,6 +4358,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "ʻArīḍah, Nasīb"
     }
    }
   },
@@ -4661,6 +4788,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -4668,6 +4805,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Belović-Bernadzikowska, Jelica, 1870-1946"
     }
    }
   },
@@ -4737,6 +4882,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -4744,6 +4899,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 1,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Patursson, Jóannes, 1866-1946"
     }
    }
   },
@@ -5018,6 +5181,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -5025,6 +5198,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Ādamsons, Ēriks, 1907-1946"
     }
    }
   },
@@ -5469,6 +5650,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -5476,6 +5667,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Năzmi, Ăli, 1878-1946"
     }
    }
   },
@@ -5549,6 +5748,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -5556,6 +5765,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Harapi, Anton"
     }
    }
   },
@@ -6221,6 +6438,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": true,
+     "edizioni": 1,
+     "ultimo": 1916,
+     "dal_2000": 0,
+     "metodo": "codice_sbn",
+     "riconoscimento": "riconosciuto",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -6228,6 +6455,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Lasciac, Antonio, 1856-1946"
     }
    }
   },
@@ -6467,6 +6702,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "ambiguo",
+     "fonte": "SBN",
+     "ambigue": 1
+    },
     "bne_es": {
      "trovato": true,
      "edizioni": 6,
@@ -6481,6 +6726,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 2,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Palma, Clemente, 1872-1946"
     }
    }
   },
@@ -6732,6 +6985,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -6739,6 +7002,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Gira, Liudas, 1884-1946"
     }
    }
   },
@@ -7734,6 +8005,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -7741,6 +8022,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 15,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Christie, May"
     }
    }
   },
@@ -8395,6 +8684,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "ambiguo",
+     "fonte": "SBN",
+     "ambigue": 12
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -8402,6 +8701,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Charles-Brun, Jean, 1870-1946"
     }
    }
   },
@@ -9178,6 +9485,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": true,
      "edizioni": 19,
@@ -9185,6 +9502,14 @@
      "fonte": "British Library",
      "scartate": 16,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 11,
+     "dal_2000": 1,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Jacob, Violet, 1863-1946"
     }
    }
   },
@@ -9258,6 +9583,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": true,
+     "edizioni": 9,
+     "ultimo": 2011,
+     "dal_2000": 1,
+     "metodo": "codice_sbn",
+     "riconoscimento": "riconosciuto",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bne_es": {
      "trovato": true,
      "edizioni": 1,
@@ -9272,6 +9607,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Belʹskiĭ, Vladimir Ivanovich"
     }
    }
   },
@@ -9360,6 +9703,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": true,
      "edizioni": 2,
@@ -9367,6 +9720,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 2,
+     "dal_2000": 2,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Pável, Ágoston, 1886-1946"
     }
    }
   },
@@ -9563,6 +9924,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": true,
+     "edizioni": 26,
+     "ultimo": 2006,
+     "dal_2000": 3,
+     "metodo": "codice_sbn",
+     "riconoscimento": "riconosciuto",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -9570,6 +9941,14 @@
      "fonte": "British Library",
      "scartate": 1,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Di Giovanni, Alessio, 1872-1946"
     }
    }
   },
@@ -9759,6 +10138,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -9885,6 +10274,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "ambiguo",
+     "fonte": "SBN",
+     "ambigue": 2
+    },
     "bl_en": {
      "trovato": true,
      "edizioni": 26,
@@ -9892,6 +10291,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Carswell, Catherine, 1879-1946"
     }
    }
   },
@@ -9972,6 +10379,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bne_es": {
      "trovato": true,
      "edizioni": 1,
@@ -10223,6 +10640,16 @@
     "parziale": true,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -10230,6 +10657,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Hulda, 1881-1946"
     }
    }
   },
@@ -10291,6 +10726,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": true,
+     "edizioni": 2,
+     "ultimo": 1935,
+     "dal_2000": 0,
+     "metodo": "codice_sbn",
+     "riconoscimento": "riconosciuto",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": true,
      "edizioni": 5,
@@ -10298,6 +10743,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 3,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Kastein, Josef, 1890-1946"
     }
    }
   },
@@ -10789,6 +11242,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -11239,6 +11702,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -11575,6 +12048,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -11582,6 +12065,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Burrill, Mary, 1884-1946"
     }
    }
   },
@@ -12246,6 +12737,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Chanchikean, K. (Karpis), 1920-1946"
     }
    }
   },
@@ -12496,6 +12995,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -12670,6 +13179,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Leclerc, Marc, 1874-1946"
     }
    }
   },
@@ -12785,6 +13302,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": "codice_sbn",
+     "riconoscimento": "riconosciuto",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": true,
      "edizioni": 5,
@@ -12792,6 +13319,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 27,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Rosenfeld, Paul, 1890-1946"
     }
    }
   },
@@ -12857,6 +13392,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Takeda, Rintarō, 1904-1946"
     }
    }
   },
@@ -13024,6 +13567,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 21,
+     "dal_2000": 1,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Flower, Robin, 1881-1946"
     }
    }
   },
@@ -13091,6 +13642,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -13098,6 +13659,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Irako, Seihaku, 1877-1946"
     }
    }
   },
@@ -13178,6 +13747,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": true,
+     "edizioni": 17,
+     "ultimo": 2002,
+     "dal_2000": 1,
+     "metodo": "codice_sbn",
+     "riconoscimento": "riconosciuto",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -13473,6 +14052,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -13480,6 +14069,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Furlong, Alice, 1866-1946"
     }
    }
   },
@@ -13572,6 +14169,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 19,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Tubbs, Arthur Lewis, 1867-1946"
     }
    }
   },
@@ -13726,6 +14331,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": true,
      "edizioni": 1,
@@ -13733,6 +14348,14 @@
      "fonte": "British Library",
      "scartate": 1,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Schubert, David, 1913-1946"
     }
    }
   },
@@ -13820,6 +14443,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -13960,6 +14593,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Terčelj, Filip, 1892-1946"
     }
    }
   },
@@ -14318,6 +14959,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Baĭzaqov, Isa, 1900-1946"
     }
    }
   },
@@ -14836,6 +15485,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -14843,6 +15502,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Balmaseda, Julian C. (Julian Cruz), 1885-1947"
     }
    }
   },
@@ -14975,6 +15642,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -14982,6 +15659,14 @@
      "fonte": "British Library",
      "scartate": 12,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Angus, Marion, 1865-1946"
     }
    }
   },
@@ -15062,6 +15747,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 1,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Betz, Maurice, 1898-1946"
     }
    }
   },
@@ -15229,6 +15922,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Wöhrle, Oskar, 1890-"
     }
    }
   },
@@ -15300,6 +16001,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": true,
+     "edizioni": 1,
+     "ultimo": 1929,
+     "dal_2000": 0,
+     "metodo": "codice_sbn",
+     "riconoscimento": "riconosciuto",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bne_es": {
      "trovato": true,
      "edizioni": 133,
@@ -15314,6 +16025,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Mata, Pedro, 1875-1946"
     }
    }
   },
@@ -15517,6 +16236,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Sinaĭskiĭ, V. (Vasiliĭ), 1876-1949"
     }
    }
   },
@@ -15614,6 +16341,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 7,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Tracy, Virginia"
     }
    }
   },
@@ -15744,6 +16479,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Castro, Alberto Osório de, 1868-1946"
     }
    }
   },
@@ -15906,6 +16649,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Cortez, Alfredo, 1880-"
     }
    }
   },
@@ -15974,6 +16725,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -15981,6 +16742,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Wrigley, Ammon, 1861-1945"
     }
    }
   },
@@ -16164,6 +16933,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 30,
+     "dal_2000": 4,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Hooker, Brian, 1880-1946"
     }
    }
   },
@@ -16409,6 +17186,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Ălīmbaev, Doskeĭ, 1850-1946"
     }
    }
   },
@@ -16482,6 +17267,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Veterman, Eduard"
     }
    }
   },
@@ -16579,6 +17372,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Bucuța, Emanoil"
     }
    }
   },
@@ -16719,6 +17520,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -16726,6 +17537,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Buyser y Aquino, Fernando, 1879-"
     }
    }
   },
@@ -16804,6 +17623,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": true,
+     "edizioni": 6,
+     "ultimo": 1927,
+     "dal_2000": 0,
+     "metodo": "codice_sbn",
+     "riconoscimento": "riconosciuto",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bne_es": {
      "trovato": true,
      "edizioni": 18,
@@ -17008,6 +17837,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Dobrzhinskiĭ, Gavriil Valerianovich, 1883-1946"
     }
    }
   },
@@ -17083,6 +17920,14 @@
      "fonte": "British Library",
      "scartate": 4,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 15,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Martin, George Madden, 1866-1946"
     }
    }
   },
@@ -17171,6 +18016,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Normandy, Georges (Georges Ch.), 1882-"
     }
    }
   },
@@ -17405,6 +18258,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Isṭifān, Ḥabīb, 1888-1946"
     }
    }
   },
@@ -17685,6 +18546,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -17770,6 +18641,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Richepin, Jacques, 1880-1946"
     }
    }
   },
@@ -17838,6 +18717,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 3,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Dollard, J. B. (James Bernard), 1872-1946"
     }
    }
   },
@@ -18031,6 +18918,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Walch, J. L."
     }
    }
   },
@@ -18256,6 +19151,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Ahven, Kalju, 1921-1946"
     }
    }
   },
@@ -18823,6 +19726,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -19091,6 +20004,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -19200,6 +20123,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Paljug, Mato, 1911-1946"
     }
    }
   },
@@ -19346,6 +20277,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Uslu, Muzaffer Tayyip, 1922-1946"
     }
    }
   },
@@ -20010,6 +20949,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Eklund, Ragnar Rudolf, 1895-1946"
     }
    }
   },
@@ -20222,6 +21169,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Souza, Robert de, 1865-"
     }
    }
   },
@@ -20599,6 +21554,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Kalynet︠s︡ʹ, Sylʹvester, 1886-1945"
     }
    }
   },
@@ -20659,6 +21622,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Rāwī, Ṭāhā"
     }
    }
   },
@@ -20739,6 +21710,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": true,
+     "edizioni": 65,
+     "ultimo": 2016,
+     "dal_2000": 4,
+     "metodo": "codice_sbn",
+     "riconoscimento": "riconosciuto",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -20746,6 +21727,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Monicelli, Tomaso, 1883-1946"
     }
    }
   },
@@ -20916,6 +21905,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Bunikiewicz, Witołd"
     }
    }
   },
@@ -20999,6 +21996,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Kohl, Aage von, 1877-1946"
     }
    }
   },
@@ -21106,6 +22111,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Crozière, Alphonse, 1873-"
     }
    }
   },
@@ -21287,6 +22300,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Ts'emerinsḳi, Barukh, 1889-1946"
     }
    }
   },
@@ -21364,6 +22385,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Vloten, Betsy van, 1862-1946"
     }
    }
   },
@@ -21786,6 +22815,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 2,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Rorie, David, 1867-1946"
     }
    }
   },
@@ -22073,6 +23110,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Rodin, Elisha, 1888-1946"
     }
    }
   },
@@ -22254,6 +23299,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Kamnitzer, Ernst, 1885-1946"
     }
    }
   },
@@ -22325,6 +23378,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Berkīmbaĭūly, Estaĭ, 1868-1946"
     }
    }
   },
@@ -22391,6 +23452,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 12,
+     "dal_2000": 1,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Lewis, Ethelreda"
     }
    }
   },
@@ -22450,6 +23519,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Fininberg, Ezra, 1899-1946"
     }
    }
   },
@@ -22511,6 +23588,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 3,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Newman, Fanny Hodges"
     }
    }
   },
@@ -23094,6 +24179,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": true,
+     "edizioni": 12,
+     "ultimo": 1975,
+     "dal_2000": 0,
+     "metodo": "codice_sbn",
+     "riconoscimento": "riconosciuto",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -23101,6 +24196,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Piva, Gino, 1873-1946"
     }
    }
   },
@@ -23257,6 +24360,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Wulff, Gustav, 1865-1946"
     }
    }
   },
@@ -23450,6 +24561,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 9,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Ashbrook, Harriette, 1898-1946"
     }
    }
   },
@@ -23721,6 +24840,14 @@
      "fonte": "British Library",
      "scartate": 1,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Beck, Henryk, 1896-1946"
     }
    }
   },
@@ -23800,6 +24927,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Umehara, Hokumei"
     }
    }
   },
@@ -24374,6 +25509,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Alcaide de Zafra, Joaquín, 1871-1946"
     }
    }
   },
@@ -24668,6 +25811,14 @@
      "fonte": "British Library",
      "scartate": 2,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Keller, Julius Talbot"
     }
    }
   },
@@ -24971,6 +26122,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Fukushi, Kōjirō, 1889-1946"
     }
    }
   },
@@ -25122,6 +26281,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Perandi, Liisa, 1879-1946"
     }
    }
   },
@@ -25280,6 +26447,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Mayrargue, Lucien"
     }
    }
   },
@@ -25366,6 +26541,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": true,
      "edizioni": 5,
@@ -25373,6 +26558,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 19,
+     "dal_2000": 3,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Saxon, Lyle, 1891-1946"
     }
    }
   },
@@ -25514,6 +26707,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Abric, Léon, 1869-"
     }
    }
   },
@@ -25801,6 +27002,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Villalonga, Miguel, 1899-1946"
     }
    }
   },
@@ -25888,6 +27097,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Rădulescu, Mircea"
     }
    }
   },
@@ -26047,6 +27264,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": true,
      "edizioni": 1,
@@ -26054,6 +27281,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 5,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Johns, Orrick, 1887-1946"
     }
    }
   },
@@ -26226,6 +27461,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Hesse, Otto Ernst, 1891-"
     }
    }
   },
@@ -26314,6 +27557,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Morisse, Paul"
     }
    }
   },
@@ -26538,6 +27789,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Solano y Polanco, Ramón de, 1871-1939"
     }
    }
   },
@@ -26689,6 +27948,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Mariani, Roberto, 1892-1946"
     }
    }
   },
@@ -26942,6 +28209,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 3,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Hensley, Sophia Margaretta, 1866-1946"
     }
    }
   },
@@ -27083,6 +28358,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Cuppiramaṇiya Mutaliyār, V. P., 1857-1946"
     }
    }
   },
@@ -27348,6 +28631,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": true,
+     "edizioni": 2,
+     "ultimo": 1935,
+     "dal_2000": 0,
+     "metodo": "codice_sbn",
+     "riconoscimento": "riconosciuto",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bne_es": {
      "trovato": false,
      "edizioni": 0,
@@ -27362,6 +28655,14 @@
      "fonte": "British Library",
      "scartate": 1,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 45,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Dixon, W. Macneile (William Macneile), 1866-1945"
     }
    }
   },
@@ -27584,6 +28885,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Henmi, Yūkichi, 1907-1946"
     }
    }
   },
@@ -27652,6 +28961,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Vasiljević, Žarko, 1892-1946"
     }
    }
   },
@@ -28083,6 +29400,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Fuchs, Albert, 1905-1946"
     }
    }
   },
@@ -28429,6 +29754,14 @@
      "fonte": "British Library",
      "scartate": 1,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Gómez Jaime, Alfredo, 1878-1946"
     }
    }
   },
@@ -28968,6 +30301,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Llorens, Bartolomé, 1922-1946"
     }
    }
   },
@@ -29027,6 +30368,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Rehse, Bernhart, 1875-"
     }
    }
   },
@@ -29112,6 +30461,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Honda, Bizen, 1868-1946"
     }
    }
   },
@@ -29190,6 +30547,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 6,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Imbs, Bravig, 1904-1946"
     }
    }
   },
@@ -29290,6 +30655,14 @@
      "fonte": "British Library",
      "scartate": 1,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Wilson, Calvin D. (Calvin Dill), 1857-"
     }
    }
   },
@@ -29443,6 +30816,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Amaro, Carlos, 1879-"
     }
    }
   },
@@ -29525,6 +30906,14 @@
      "fonte": "British Library",
      "scartate": 1,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Roland, Claude, 1872-1946"
     }
    }
   },
@@ -29584,6 +30973,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 7,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Savage, Courtenay, 1890-1946"
     }
    }
   },
@@ -29787,6 +31184,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Barboza, Domingos, 1880-1946"
     }
    }
   },
@@ -30705,6 +32110,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 10,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Donisthorpe, G. Sheila (Gladys Sheila), 1898-"
     }
    }
   },
@@ -30901,6 +32314,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "G. V. (George Valentine), 1877-1946"
     }
    }
   },
@@ -31384,6 +32805,14 @@
      "fonte": "British Library",
      "scartate": 2,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Ap Hefin, 1870-1946"
     }
    }
   },
@@ -31678,6 +33107,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Greinz, Hugo, 1873-"
     }
    }
   },
@@ -31833,6 +33270,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Solotorefsky, Isidore, 1873-1946"
     }
    }
   },
@@ -31948,6 +33393,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Camara, Jayme"
     }
    }
   },
@@ -32371,6 +33824,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Donaghy, John Lyle, 1902-1949"
     }
    }
   },
@@ -32520,6 +33981,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Loureiro, João Maria"
     }
    }
   },
@@ -33025,6 +34494,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Nakajima, Kotō, 1881-1946"
     }
    }
   },
@@ -40990,6 +42467,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 8,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Knapp, Shepherd, 1873-1946"
     }
    }
   },
@@ -41872,7 +43357,7 @@
    "n": 1
   }
  ],
- "arricchito": "2026-11-18",
+ "arricchito": "2026-11-19",
  "indice_formula": "tre misure separate: visite Wikipedia it, visite Wikipedia en, numero di lingue con una pagina; ciascuna 0-100 rispetto alla lista dell'anno",
  "traduzioni_aggiornato": "2026-11-19"
 }

@@ -4,7 +4,7 @@
  "paese": "ue",
  "regola": "UE: morte + 70 anni, dal 1 gennaio dell'anno successivo",
  "fonte": "Wikidata (CC0)",
- "aggiornato": "2026-11-18",
+ "aggiornato": "2026-11-19",
  "totale": 1402,
  "autori": [
   {
@@ -2464,6 +2464,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": "nome_con_prova",
+     "riconoscimento": "riconosciuto",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bnf_fr": {
      "trovato": true,
      "edizioni": 5,
@@ -3624,6 +3634,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": "nome_con_prova",
+     "riconoscimento": "riconosciuto",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bnf_fr": {
      "trovato": true,
      "edizioni": 2,
@@ -4302,6 +4322,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": "codice_sbn",
+     "riconoscimento": "riconosciuto",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -4467,6 +4497,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "ambiguo",
+     "fonte": "SBN",
+     "ambigue": 1
+    },
     "bnf_fr": {
      "trovato": true,
      "edizioni": 2,
@@ -4748,6 +4788,16 @@
     "parziale": true,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": true,
+     "edizioni": 14,
+     "ultimo": 1995,
+     "dal_2000": 0,
+     "metodo": "codice_sbn",
+     "riconoscimento": "riconosciuto",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bnf_fr": {
      "trovato": true,
      "edizioni": 24,
@@ -5760,6 +5810,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bnf_fr": {
      "trovato": false,
      "edizioni": 0,
@@ -7340,6 +7400,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bnf_fr": {
      "trovato": false,
      "edizioni": 0,
@@ -7497,6 +7567,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": true,
+     "edizioni": 1,
+     "ultimo": 1945,
+     "dal_2000": 0,
+     "metodo": "codice_sbn",
+     "riconoscimento": "riconosciuto",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bnf_fr": {
      "trovato": false,
      "edizioni": 0,
@@ -7582,6 +7662,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": true,
+     "edizioni": 4,
+     "ultimo": 1997,
+     "dal_2000": 0,
+     "metodo": "codice_sbn",
+     "riconoscimento": "riconosciuto",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bnf_fr": {
      "trovato": false,
      "edizioni": 0,
@@ -7781,6 +7871,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": "codice_sbn",
+     "riconoscimento": "riconosciuto",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bnf_fr": {
      "trovato": true,
      "edizioni": 1,
@@ -8179,6 +8279,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -8186,6 +8296,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Tuktash, Ilʹi︠a︡ Semenovich"
     }
    }
   },
@@ -8619,6 +8737,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bnf_fr": {
      "trovato": true,
      "edizioni": 3,
@@ -9035,6 +9163,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -9122,6 +9260,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bnf_fr": {
      "trovato": false,
      "edizioni": 0,
@@ -9442,6 +9590,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": "codice_sbn",
+     "riconoscimento": "riconosciuto",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bnf_fr": {
      "trovato": false,
      "edizioni": 0,
@@ -9861,6 +10019,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bnf_fr": {
      "trovato": false,
      "edizioni": 0,
@@ -10070,6 +10238,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bnf_fr": {
      "trovato": false,
      "edizioni": 0,
@@ -10169,6 +10347,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -10433,6 +10621,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bnf_fr": {
      "trovato": false,
      "edizioni": 0,
@@ -11052,6 +11250,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": "codice_sbn",
+     "riconoscimento": "riconosciuto",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bnf_fr": {
      "trovato": false,
      "edizioni": 0,
@@ -11227,6 +11435,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": true,
+     "edizioni": 210,
+     "ultimo": 2018,
+     "dal_2000": 19,
+     "metodo": "codice_sbn",
+     "riconoscimento": "riconosciuto",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bnf_fr": {
      "trovato": false,
      "edizioni": 0,
@@ -11337,6 +11555,16 @@
     "parziale": true,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "ambiguo",
+     "fonte": "SBN",
+     "ambigue": 6
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -11436,6 +11664,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -11443,6 +11681,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 2,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Mosašvili, Ilo, 1896-1954"
     }
    }
   },
@@ -11521,6 +11767,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -11610,6 +11866,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bne_es": {
      "trovato": true,
      "edizioni": 7,
@@ -11710,6 +11976,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "ambiguo",
+     "fonte": "SBN",
+     "ambigue": 1
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -11819,6 +12095,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -11914,6 +12200,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "ambiguo",
+     "fonte": "SBN",
+     "ambigue": 1
+    },
     "bnf_fr": {
      "trovato": true,
      "edizioni": 6,
@@ -12396,6 +12692,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "ambiguo",
+     "fonte": "SBN",
+     "ambigue": 9
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -12479,6 +12785,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": true,
+     "edizioni": 49,
+     "ultimo": 2016,
+     "dal_2000": 11,
+     "metodo": "codice_sbn",
+     "riconoscimento": "riconosciuto",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bnf_fr": {
      "trovato": true,
      "edizioni": 1,
@@ -12575,6 +12891,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bnf_fr": {
      "trovato": false,
      "edizioni": 0,
@@ -12802,6 +13128,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bnf_fr": {
      "trovato": false,
      "edizioni": 0,
@@ -12817,6 +13153,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Jinzai, Kiyoshi, 1903-1957"
     }
    }
   },
@@ -12941,6 +13285,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "ambiguo",
+     "fonte": "SBN",
+     "ambigue": 1
+    },
     "bne_es": {
      "trovato": true,
      "edizioni": 2,
@@ -12955,6 +13309,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Bonilla Ruano, José María, 1889-"
     }
    }
   },
@@ -13022,6 +13384,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": true,
+     "edizioni": 1,
+     "ultimo": 2014,
+     "dal_2000": 1,
+     "metodo": "codice_sbn",
+     "riconoscimento": "riconosciuto",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bnf_fr": {
      "trovato": false,
      "edizioni": 0,
@@ -13294,6 +13666,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bnf_fr": {
      "trovato": true,
      "edizioni": 1,
@@ -13375,6 +13757,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -13700,6 +14092,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -13707,6 +14109,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Mūmnah, Salwá Maḥmaṣānī"
     }
    }
   },
@@ -13807,6 +14217,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -14123,6 +14543,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": true,
+     "edizioni": 53,
+     "ultimo": 1991,
+     "dal_2000": 0,
+     "metodo": "codice_sbn",
+     "riconoscimento": "riconosciuto",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -14130,6 +14560,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Meano, Cesare, 1899-1957"
     }
    }
   },
@@ -14252,6 +14690,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "ambiguo",
+     "fonte": "SBN",
+     "ambigue": 1
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -14771,6 +15219,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": "codice_sbn",
+     "riconoscimento": "riconosciuto",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bnf_fr": {
      "trovato": true,
      "edizioni": 20,
@@ -14880,6 +15338,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "ambiguo",
+     "fonte": "SBN",
+     "ambigue": 1
+    },
     "bnf_fr": {
      "trovato": false,
      "edizioni": 0,
@@ -15080,6 +15548,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "ambiguo",
+     "fonte": "SBN",
+     "ambigue": 1
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -15162,6 +15640,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bnf_fr": {
      "trovato": false,
      "edizioni": 0,
@@ -15314,6 +15802,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": "codice_sbn",
+     "riconoscimento": "riconosciuto",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bnf_fr": {
      "trovato": false,
      "edizioni": 0,
@@ -15329,6 +15827,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Scharten-Antink, M. (Margo Sybranda Everdina), 1868-1957"
     }
    }
   },
@@ -15756,6 +16262,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -15821,6 +16337,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -15908,6 +16434,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -15915,6 +16451,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Onoe, Hachirō, 1876-1957"
     }
    }
   },
@@ -15990,6 +16534,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "ambiguo",
+     "fonte": "SBN",
+     "ambigue": 5
+    },
     "bnf_fr": {
      "trovato": true,
      "edizioni": 3,
@@ -16247,6 +16801,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -16254,6 +16818,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Banga, Tija"
     }
    }
   },
@@ -16331,6 +16903,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -16338,6 +16920,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Mitta, Vaśleĭĕ, 1908-1957"
     }
    }
   },
@@ -16543,6 +17133,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bnf_fr": {
      "trovato": false,
      "edizioni": 0,
@@ -16558,6 +17158,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Saba, Ziya Osman"
     }
    }
   },
@@ -16621,6 +17229,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -16703,6 +17321,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bnf_fr": {
      "trovato": false,
      "edizioni": 0,
@@ -16718,6 +17346,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Lippl, Alois Johannes, 1903-1957"
     }
    }
   },
@@ -16801,6 +17437,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -17044,6 +17690,16 @@
     "parziale": true,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -17051,6 +17707,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 21,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Morton, David, 1886-1957"
     }
    }
   },
@@ -17109,6 +17773,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": "nome_con_prova",
+     "riconoscimento": "riconosciuto",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bnf_fr": {
      "trovato": false,
      "edizioni": 0,
@@ -17132,6 +17806,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Korsi, Demetrio"
     }
    }
   },
@@ -17210,6 +17892,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bnf_fr": {
      "trovato": false,
      "edizioni": 0,
@@ -17695,6 +18387,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "ambiguo",
+     "fonte": "SBN",
+     "ambigue": 1
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -17829,6 +18531,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": true,
+     "edizioni": 5,
+     "ultimo": 1986,
+     "dal_2000": 0,
+     "metodo": "codice_sbn",
+     "riconoscimento": "riconosciuto",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bnf_fr": {
      "trovato": true,
      "edizioni": 77,
@@ -17851,6 +18563,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Bédarida, Henri"
     }
    }
   },
@@ -18176,6 +18896,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -18266,6 +18996,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -18445,6 +19185,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "ambiguo",
+     "fonte": "SBN",
+     "ambigue": 1
+    },
     "bnf_fr": {
      "trovato": true,
      "edizioni": 4,
@@ -18518,6 +19268,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bnf_fr": {
      "trovato": false,
      "edizioni": 0,
@@ -18533,6 +19293,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Tigre, Bastos, 1882-1957"
     }
    }
   },
@@ -18725,6 +19493,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bnf_fr": {
      "trovato": true,
      "edizioni": 40,
@@ -18740,6 +19518,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Piéchaud, Martial"
     }
    }
   },
@@ -18840,6 +19626,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -18949,6 +19745,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -19038,6 +19844,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -19168,6 +19984,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": "codice_sbn",
+     "riconoscimento": "riconosciuto",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bnf_fr": {
      "trovato": true,
      "edizioni": 1,
@@ -19190,6 +20016,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Alvarez de Miranda, Angel"
     }
    }
   },
@@ -19288,6 +20122,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bnf_fr": {
      "trovato": true,
      "edizioni": 8,
@@ -19303,6 +20147,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Łada Cybulski, Adam, 1878-1957"
     }
    }
   },
@@ -19361,6 +20213,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": true,
+     "edizioni": 1,
+     "ultimo": 1961,
+     "dal_2000": 0,
+     "metodo": "codice_sbn",
+     "riconoscimento": "riconosciuto",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bnf_fr": {
      "trovato": false,
      "edizioni": 0,
@@ -19383,6 +20245,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Valle, Adriano del, 1895-1957"
     }
    }
   },
@@ -19538,6 +20408,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -19545,6 +20425,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Bomilcar, Alvaro"
     }
    }
   },
@@ -19605,6 +20493,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "ambiguo",
+     "fonte": "SBN",
+     "ambigue": 8
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -19687,6 +20585,16 @@
     "parziale": true,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "ambiguo",
+     "fonte": "SBN",
+     "ambigue": 1
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -19784,6 +20692,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": true,
+     "edizioni": 21,
+     "ultimo": 2010,
+     "dal_2000": 1,
+     "metodo": "codice_sbn",
+     "riconoscimento": "riconosciuto",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bnf_fr": {
      "trovato": false,
      "edizioni": 0,
@@ -19873,6 +20791,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": true,
+     "edizioni": 2,
+     "ultimo": 2008,
+     "dal_2000": 2,
+     "metodo": "codice_sbn",
+     "riconoscimento": "riconosciuto",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -19939,6 +20867,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": true,
+     "edizioni": 2,
+     "ultimo": 1994,
+     "dal_2000": 0,
+     "metodo": "nome_con_prova",
+     "riconoscimento": "riconosciuto",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bnf_fr": {
      "trovato": false,
      "edizioni": 0,
@@ -19961,6 +20899,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Mediz Bolio, Antonio, 1884-1957"
     }
    }
   },
@@ -20015,6 +20961,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -20117,6 +21073,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "ambiguo",
+     "fonte": "SBN",
+     "ambigue": 1
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -20202,6 +21168,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -20654,6 +21630,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -20761,6 +21747,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "ambiguo",
+     "fonte": "SBN",
+     "ambigue": 1
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -20768,6 +21764,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 23,
+     "dal_2000": 2,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Granger, Edith"
     }
    }
   },
@@ -20817,6 +21821,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -20883,6 +21897,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -20951,6 +21975,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -20958,6 +21992,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Shindler, Eliʻezer, 1892-1957"
     }
    }
   },
@@ -21042,6 +22084,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -21109,6 +22161,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": "codice_sbn",
+     "riconoscimento": "riconosciuto",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bnf_fr": {
      "trovato": true,
      "edizioni": 42,
@@ -21124,6 +22186,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Piccard, Eulalie"
     }
    }
   },
@@ -21468,6 +22538,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "ambiguo",
+     "fonte": "SBN",
+     "ambigue": 1
+    },
     "bnf_fr": {
      "trovato": true,
      "edizioni": 1,
@@ -21483,6 +22563,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 10,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Ballard, Frederick, 1884-1957"
     }
    }
   },
@@ -21842,6 +22930,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -22186,6 +23284,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -22293,6 +23401,16 @@
     "parziale": true,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "ambiguo",
+     "fonte": "SBN",
+     "ambigue": 1
+    },
     "bne_es": {
      "trovato": true,
      "edizioni": 19,
@@ -22307,6 +23425,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Gabriel, José, 1896-"
     }
    }
   },
@@ -22395,6 +23521,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bnf_fr": {
      "trovato": false,
      "edizioni": 0,
@@ -22410,6 +23546,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Benešić, Julije, 1883-1957"
     }
    }
   },
@@ -22594,6 +23738,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -22674,6 +23828,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -22681,6 +23845,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Maedagawa, Kōichirō, 1888-1957"
     }
    }
   },
@@ -22744,6 +23916,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -22898,6 +24080,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -23041,6 +24233,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "ambiguo",
+     "fonte": "SBN",
+     "ambigue": 1
+    },
     "bnf_fr": {
      "trovato": true,
      "edizioni": 19,
@@ -23063,6 +24265,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Lyr, René"
     }
    }
   },
@@ -23226,6 +24436,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "ambiguo",
+     "fonte": "SBN",
+     "ambigue": 2
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -23428,6 +24648,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -23435,6 +24665,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 2,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Meissner, Sophie Radford de"
     }
    }
   },
@@ -23516,6 +24754,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -23523,6 +24771,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "I︠A︡zvit︠s︡kiĭ, Valeriĭ, 1884-"
     }
    }
   },
@@ -23654,6 +24910,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "ambiguo",
+     "fonte": "SBN",
+     "ambigue": 4
+    },
     "bl_en": {
      "trovato": true,
      "edizioni": 26,
@@ -23661,6 +24927,14 @@
      "fonte": "British Library",
      "scartate": 2,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 17,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Lawson, Will, 1876-1957"
     }
    }
   },
@@ -23718,6 +24992,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "ambiguo",
+     "fonte": "SBN",
+     "ambigue": 1
+    },
     "bl_en": {
      "trovato": true,
      "edizioni": 1,
@@ -23826,6 +25110,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "ambiguo",
+     "fonte": "SBN",
+     "ambigue": 1
+    },
     "bnf_fr": {
      "trovato": true,
      "edizioni": 1,
@@ -23841,6 +25135,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 2,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Shenhar, Yitzhak, 1902-1957"
     }
    }
   },
@@ -24011,6 +25313,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -24119,7 +25431,17 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    }
    }
   },
   {
@@ -24175,7 +25497,17 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    }
    }
   },
   {
@@ -24233,6 +25565,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -24240,6 +25582,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Barreto, Abílio, 1883-1959"
     }
    }
   },
@@ -24324,6 +25674,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -24419,6 +25779,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bne_es": {
      "trovato": true,
      "edizioni": 2,
@@ -24433,6 +25803,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Alcaraz, Alfonso, 1922-1957"
     }
    }
   },
@@ -24650,6 +26028,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bnf_fr": {
      "trovato": true,
      "edizioni": 6,
@@ -24665,6 +26053,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Brunet, Auguste, 1878-1957"
     }
    }
   },
@@ -24722,6 +26118,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bne_es": {
      "trovato": true,
      "edizioni": 2,
@@ -24736,6 +26142,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Aguirre Morales, Augusto"
     }
    }
   },
@@ -24826,6 +26240,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -24900,6 +26324,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "ambiguo",
+     "fonte": "SBN",
+     "ambigue": 1
+    },
     "bnf_fr": {
      "trovato": false,
      "edizioni": 0,
@@ -24915,6 +26349,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Blunt, Bruce"
     }
    }
   },
@@ -25445,6 +26887,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -25653,6 +27105,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "ambiguo",
+     "fonte": "SBN",
+     "ambigue": 2
+    },
     "bne_es": {
      "trovato": true,
      "edizioni": 30,
@@ -25667,6 +27129,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Maroni, Enrique P. (Enrique Pedro), 1887-1957"
     }
    }
   },
@@ -25981,6 +27451,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": true,
      "edizioni": 4,
@@ -25988,6 +27468,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Nagler, Franciscus, 1873-1957"
     }
    }
   },
@@ -26040,6 +27528,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -26047,6 +27545,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Sędzicki, Franciszek, 1882-1957"
     }
    }
   },
@@ -26224,6 +27730,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": true,
+     "edizioni": 5,
+     "ultimo": 1953,
+     "dal_2000": 0,
+     "metodo": "codice_sbn",
+     "riconoscimento": "riconosciuto",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -26231,6 +27747,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Capriolo, Gino, 1905-1957"
     }
    }
   },
@@ -26418,6 +27942,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -26483,6 +28017,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -26556,6 +28100,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bne_es": {
      "trovato": true,
      "edizioni": 4,
@@ -26570,6 +28124,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Rega Molina, Horacio"
     }
    }
   },
@@ -26767,6 +28329,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bnf_fr": {
      "trovato": false,
      "edizioni": 0,
@@ -26782,6 +28354,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Móra, István, 1864-1957"
     }
    }
   },
@@ -26839,6 +28419,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -26846,6 +28436,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Grozev, Ivan, 1872-1957"
     }
    }
   },
@@ -26928,6 +28526,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -26935,6 +28543,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Zorman, Ivan, 1889-1957"
     }
    }
   },
@@ -27010,6 +28626,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -27111,6 +28737,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -27118,6 +28754,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Southwick, Jessie Eldridge, 1865-1957"
     }
    }
   },
@@ -27176,6 +28820,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bne_es": {
      "trovato": true,
      "edizioni": 28,
@@ -27190,6 +28844,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Montaner, Joaquín, 1892-1957"
     }
    }
   },
@@ -27330,6 +28992,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -27434,6 +29106,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -27587,6 +29269,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "ambiguo",
+     "fonte": "SBN",
+     "ambigue": 1
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -27701,6 +29393,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -27766,6 +29468,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -27773,6 +29485,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Hase, Ken"
     }
    }
   },
@@ -27830,6 +29550,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -27895,6 +29625,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -27902,6 +29642,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Ōizumi, Kokuseki, 1893-1957"
     }
    }
   },
@@ -27996,6 +29744,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -28230,6 +29988,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -28237,6 +30005,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Podhorski-Okołów, Leonard, 1891-1957"
     }
    }
   },
@@ -28390,6 +30166,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bnf_fr": {
      "trovato": true,
      "edizioni": 5,
@@ -28405,6 +30191,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Havrenne, Marcel"
     }
    }
   },
@@ -28470,6 +30264,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": "codice_sbn",
+     "riconoscimento": "riconosciuto",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bnf_fr": {
      "trovato": true,
      "edizioni": 54,
@@ -28634,6 +30438,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": "codice_sbn",
+     "riconoscimento": "riconosciuto",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -28641,6 +30455,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Wied, Martina, 1882-1957"
     }
    }
   },
@@ -28707,6 +30529,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": "nome_con_prova",
+     "riconoscimento": "riconosciuto",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bnf_fr": {
      "trovato": true,
      "edizioni": 30,
@@ -28722,6 +30554,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Gauchez, Maurice, 1885-"
     }
    }
   },
@@ -28774,6 +30614,16 @@
     "parziale": true,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": true,
+     "edizioni": 6,
+     "ultimo": 1950,
+     "dal_2000": 0,
+     "metodo": "codice_sbn",
+     "riconoscimento": "riconosciuto",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bnf_fr": {
      "trovato": true,
      "edizioni": 78,
@@ -28796,6 +30646,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Fischer, Max, 1880-1957"
     }
    }
   },
@@ -28954,6 +30812,16 @@
     "parziale": true,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "ambiguo",
+     "fonte": "SBN",
+     "ambigue": 3
+    },
     "bl_en": {
      "trovato": true,
      "edizioni": 1,
@@ -29044,6 +30912,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "ambiguo",
+     "fonte": "SBN",
+     "ambigue": 1
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -29099,6 +30977,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -29349,6 +31237,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -29516,6 +31414,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bnf_fr": {
      "trovato": false,
      "edizioni": 0,
@@ -29531,6 +31439,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Sink, Peeter, 1902-1957"
     }
    }
   },
@@ -29860,6 +31776,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "ambiguo",
+     "fonte": "SBN",
+     "ambigue": 2
+    },
     "bne_es": {
      "trovato": true,
      "edizioni": 2,
@@ -29936,6 +31862,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bne_es": {
      "trovato": true,
      "edizioni": 2,
@@ -29950,6 +31886,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Ribera Llobet, Ramón, -1957"
     }
    }
   },
@@ -30014,6 +31958,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": true,
+     "edizioni": 4,
+     "ultimo": 1964,
+     "dal_2000": 0,
+     "metodo": "codice_sbn",
+     "riconoscimento": "riconosciuto",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bnf_fr": {
      "trovato": true,
      "edizioni": 58,
@@ -30036,6 +31990,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Chalupt, René"
     }
    }
   },
@@ -30149,6 +32111,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -30230,6 +32202,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -30360,6 +32342,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -30367,6 +32359,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Levitina, Sofʹi︠a︡"
     }
    }
   },
@@ -30420,6 +32420,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "ambiguo",
+     "fonte": "SBN",
+     "ambigue": 1
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -30525,6 +32535,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "ambiguo",
+     "fonte": "SBN",
+     "ambigue": 1
+    },
     "bnf_fr": {
      "trovato": false,
      "edizioni": 0,
@@ -30547,6 +32567,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Wang, Tongzhao, 1897-1957"
     }
    }
   },
@@ -30622,6 +32650,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bne_es": {
      "trovato": true,
      "edizioni": 2,
@@ -30636,6 +32674,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Padilla de Sanz, Trinidad, 1864-1957"
     }
    }
   },
@@ -30738,6 +32784,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -30797,6 +32853,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -30804,6 +32870,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Szalay-Groele, Walerja"
     }
    }
   },
@@ -30868,6 +32942,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -30960,6 +33044,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "ambiguo",
+     "fonte": "SBN",
+     "ambigue": 1
+    },
     "bnf_fr": {
      "trovato": true,
      "edizioni": 12,
@@ -30982,6 +33076,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 10,
+     "dal_2000": 2,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Hurlbut, William J. (William James), 1883-1957"
     }
    }
   },
@@ -31047,6 +33149,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "ambiguo",
+     "fonte": "SBN",
+     "ambigue": 3
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -31054,6 +33166,14 @@
      "fonte": "British Library",
      "scartate": 2,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 3,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Wills, Ridley"
     }
    }
   },
@@ -31108,6 +33228,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -31115,6 +33245,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 2,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Troxell, William S."
     }
    }
   },
@@ -31166,6 +33304,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bnf_fr": {
      "trovato": false,
      "edizioni": 0,
@@ -31341,6 +33489,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -31348,6 +33506,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Makino, Yoshiharu, 1904-1957"
     }
    }
   },
@@ -31436,7 +33602,17 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    }
    }
   },
   {
@@ -31499,7 +33675,17 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    }
    }
   },
   {
@@ -31843,6 +34029,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -31896,6 +34092,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "ambiguo",
+     "fonte": "SBN",
+     "ambigue": 3
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -31955,6 +34161,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "ambiguo",
+     "fonte": "SBN",
+     "ambigue": 1
+    },
     "bnf_fr": {
      "trovato": false,
      "edizioni": 0,
@@ -31970,6 +34186,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Hatzfeld, Adolf von, 1892-1957"
     }
    }
   },
@@ -32018,6 +34242,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": true,
+     "edizioni": 6,
+     "ultimo": 2000,
+     "dal_2000": 1,
+     "metodo": "codice_sbn",
+     "riconoscimento": "riconosciuto",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -32025,6 +34259,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Leghissa, Adolfo"
     }
    }
   },
@@ -32183,6 +34425,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bne_es": {
      "trovato": true,
      "edizioni": 17,
@@ -32262,6 +34514,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bnf_fr": {
      "trovato": false,
      "edizioni": 0,
@@ -32394,6 +34656,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "ambiguo",
+     "fonte": "SBN",
+     "ambigue": 1
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -32462,6 +34734,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -32534,6 +34816,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -32586,6 +34878,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -32663,6 +34965,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -32670,6 +34982,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Rennikov, A."
     }
    }
   },
@@ -32900,6 +35220,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bnf_fr": {
      "trovato": true,
      "edizioni": 1,
@@ -32915,6 +35245,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Dino, Arif, 1893-1957"
     }
    }
   },
@@ -33003,6 +35341,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -33190,6 +35538,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -33197,6 +35555,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Gasymzadă, Bȯi̐u̇kagha"
     }
    }
   },
@@ -33252,6 +35618,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": true,
      "edizioni": 7,
@@ -33259,6 +35635,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 8,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Field, Bradda, 1893-1957"
     }
    }
   },
@@ -33324,6 +35708,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -33331,6 +35725,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Buxiaosheng, 1889-1957"
     }
    }
   },
@@ -33453,6 +35855,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bnf_fr": {
      "trovato": false,
      "edizioni": 0,
@@ -33468,6 +35880,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 9,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "O'Byrne, Cathal"
     }
    }
   },
@@ -34141,6 +36561,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -34295,6 +36725,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -34409,6 +36849,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -34504,6 +36954,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -34747,6 +37207,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": true,
      "edizioni": 70,
@@ -34754,6 +37224,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 25,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Tilsley, Frank, 1904-1957"
     }
    }
   },
@@ -35129,6 +37607,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -35136,6 +37624,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 2,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Agnew, Georgette"
     }
    }
   },
@@ -35197,6 +37693,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": "nome_con_prova",
+     "riconoscimento": "riconosciuto",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -35813,6 +38319,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -36008,6 +38524,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": "codice_sbn",
+     "riconoscimento": "riconosciuto",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -36015,6 +38541,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 25,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Blunt, Hugh Francis, 1877-1957"
     }
    }
   },
@@ -36197,6 +38731,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": true,
      "edizioni": 1,
@@ -36267,6 +38811,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -37675,6 +40229,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "ambiguo",
+     "fonte": "SBN",
+     "ambigue": 1
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -37682,6 +40246,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Rogers, Lettie Hamlett, 1917-1957"
     }
    }
   },
@@ -37849,6 +40421,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -38121,6 +40703,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "ambiguo",
+     "fonte": "SBN",
+     "ambigue": 2
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -38181,7 +40773,17 @@
     },
     "parziale": false,
     "fonte": "Open Library",
-    "ts": "2026-11-19"
+    "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "ambiguo",
+     "fonte": "SBN",
+     "ambigue": 1
+    }
    }
   },
   {
@@ -38327,6 +40929,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -38334,6 +40946,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 7,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Farnham, Mateel Howe"
     }
    }
   },
@@ -38551,6 +41171,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -39907,6 +42537,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": true,
+     "edizioni": 8,
+     "ultimo": 1963,
+     "dal_2000": 0,
+     "metodo": "codice_sbn",
+     "riconoscimento": "riconosciuto",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -40115,6 +42755,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bnf_fr": {
      "trovato": false,
      "edizioni": 0,
@@ -40602,6 +43252,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bl_en": {
      "trovato": false,
      "edizioni": 0,
@@ -40609,6 +43269,14 @@
      "fonte": "British Library",
      "scartate": 0,
      "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 4,
+     "dal_2000": 2,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Cannell, H. Skipwith, 1887-1957"
     }
    }
   },
@@ -40936,6 +43604,16 @@
     "parziale": false,
     "fonte": "Open Library",
     "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": true,
+     "edizioni": 13,
+     "ultimo": 1956,
+     "dal_2000": 0,
+     "metodo": "codice_sbn",
+     "riconoscimento": "riconosciuto",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
     "bne_es": {
      "trovato": false,
      "edizioni": 0,
@@ -47861,7 +50539,7 @@
    "n": 1
   }
  ],
- "arricchito": "2026-11-18",
+ "arricchito": "2026-11-19",
  "indice_formula": "tre misure separate: visite Wikipedia it, visite Wikipedia en, numero di lingue con una pagina; ciascuna 0-100 rispetto alla lista dell'anno",
  "traduzioni_aggiornato": "2026-11-19"
 }
