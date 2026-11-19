@@ -1,0 +1,1066 @@
+{
+ "anno": 2027,
+ "falliti": [],
+ "oggi_n": 160,
+ "oggi_per_mese": {
+  "1": 9,
+  "2": 15,
+  "3": 11,
+  "4": 10,
+  "5": 9,
+  "6": 12,
+  "7": 12,
+  "8": 15,
+  "9": 11,
+  "10": 9,
+  "11": 12,
+  "12": 8,
+  "senza giorno": 27
+ },
+ "piu_writer_soglia30_n": 41,
+ "piu_writer_soglia30_per_mese": {
+  "1": 2,
+  "2": 8,
+  "3": 2,
+  "4": 3,
+  "5": 7,
+  "6": 2,
+  "7": 2,
+  "8": 1,
+  "9": 3,
+  "10": 2,
+  "11": 3,
+  "12": 2,
+  "senza giorno": 4
+ },
+ "piu_writer_soglia20_n": 57,
+ "piu_writer_soglia20_per_mese": {
+  "1": 9,
+  "2": 3,
+  "3": 9,
+  "4": 2,
+  "5": 3,
+  "6": 3,
+  "7": 5,
+  "8": 4,
+  "9": 4,
+  "10": 3,
+  "11": 0,
+  "12": 7,
+  "senza giorno": 5
+ },
+ "piu_mestieri_attuali_soglia20_n": 126,
+ "esempi_soglia30": [
+  {
+   "tipo": "nascita",
+   "qid": "Q1279865",
+   "nome": "Isidora Sekulić",
+   "anni": 150,
+   "anno": 1877,
+   "pagine": 35,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": 2,
+   "giorno": 16,
+   "solo_writer": true
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q313456",
+   "nome": "Charles Taze Russell",
+   "anni": 175,
+   "anno": 1852,
+   "pagine": 50,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": 2,
+   "giorno": 16,
+   "solo_writer": true
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q333620",
+   "nome": "Thomas S. Monson",
+   "anni": 100,
+   "anno": 1927,
+   "pagine": 33,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": 8,
+   "giorno": 21,
+   "solo_writer": true
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q295073",
+   "nome": "Tite Kubo",
+   "anni": 50,
+   "anno": 1977,
+   "pagine": 44,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": null,
+   "giorno": null,
+   "solo_writer": true
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q171485",
+   "nome": "Vilhelm Thomsen",
+   "anni": 100,
+   "anno": 1927,
+   "pagine": 34,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": 5,
+   "giorno": 12,
+   "solo_writer": true
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q483512",
+   "nome": "Isadora Duncana",
+   "anni": 150,
+   "anno": 1877,
+   "pagine": 109,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": 5,
+   "giorno": 26,
+   "solo_writer": true
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q319648",
+   "nome": "Ray Kroc",
+   "anni": 125,
+   "anno": 1902,
+   "pagine": 55,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": 10,
+   "giorno": 5,
+   "solo_writer": true
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q21130661",
+   "nome": "Güzäl Yäxinä",
+   "anni": 50,
+   "anno": 1977,
+   "pagine": 33,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": 6,
+   "giorno": 1,
+   "solo_writer": true
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q380425",
+   "nome": "Ahad Ha'am",
+   "anni": 100,
+   "anno": 1927,
+   "pagine": 34,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": 1,
+   "giorno": 2,
+   "solo_writer": true
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q236442",
+   "nome": "Juliette Récamier",
+   "anni": 250,
+   "anno": 1777,
+   "pagine": 37,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": null,
+   "giorno": null,
+   "solo_writer": true
+  }
+ ],
+ "esempi_soglia20": [
+  {
+   "tipo": "nascita",
+   "qid": "Q1340503",
+   "nome": "Aleksey Remizov",
+   "anni": 150,
+   "anno": 1877,
+   "pagine": 24,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": null,
+   "giorno": null,
+   "solo_writer": true
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q977759",
+   "nome": "Edmond Locard",
+   "anni": 150,
+   "anno": 1877,
+   "pagine": 27,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": 12,
+   "giorno": 13,
+   "solo_writer": true
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q957704",
+   "nome": "Ali Gomaa",
+   "anni": 75,
+   "anno": 1952,
+   "pagine": 21,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": 3,
+   "giorno": 3,
+   "solo_writer": true
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q1275981",
+   "nome": "Simo Matavulj",
+   "anni": 175,
+   "anno": 1852,
+   "pagine": 22,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": 9,
+   "giorno": 14,
+   "solo_writer": true
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q448399",
+   "nome": "Nayantara Sahgal",
+   "anni": 100,
+   "anno": 1927,
+   "pagine": 24,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": 5,
+   "giorno": 10,
+   "solo_writer": true
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q1396156",
+   "nome": "Elena Milashina",
+   "anni": 50,
+   "anno": 1977,
+   "pagine": 28,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": 10,
+   "giorno": 28,
+   "solo_writer": true
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q391323",
+   "nome": "Šatrijos Ragana",
+   "anni": 150,
+   "anno": 1877,
+   "pagine": 21,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": 3,
+   "giorno": 8,
+   "solo_writer": true
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q443904",
+   "nome": "Beryl Clutterbuck Markham",
+   "anni": 125,
+   "anno": 1902,
+   "pagine": 29,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": 10,
+   "giorno": 26,
+   "solo_writer": true
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q559264",
+   "nome": "Shen Congwen",
+   "anni": 125,
+   "anno": 1902,
+   "pagine": 28,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": 12,
+   "giorno": 28,
+   "solo_writer": true
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q982566",
+   "nome": "Giovanni Arpino",
+   "anni": 100,
+   "anno": 1927,
+   "pagine": 23,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": 1,
+   "giorno": 27,
+   "solo_writer": true
+  }
+ ],
+ "dieci_nomi": {
+  "Nazım Hikmet": null,
+  "Josephine Tey": {
+   "qid": "Q261521",
+   "pagine": 28,
+   "mestieri": [
+    "biographer",
+    "crime fiction writer",
+    "novelist",
+    "playwright",
+    "screenwriter",
+    "writer"
+   ],
+   "nascite": [
+    "1896-07-25",
+    "1897-01-01"
+   ],
+   "morti": [
+    "1952-02-13"
+   ],
+   "trovato_qui": [
+    "morte 75 anni, 28 pagine, solo writer: False"
+   ]
+  },
+  "Albert Uderzo": {
+   "qid": "Q206685",
+   "pagine": 56,
+   "mestieri": [
+    "colorist",
+    "comics artist",
+    "comics writer",
+    "draftsperson",
+    "film director",
+    "illustrator",
+    "painter",
+    "screenwriter",
+    "visual artist",
+    "writer"
+   ],
+   "nascite": [
+    "1927-04-25"
+   ],
+   "morti": [
+    "2020-03-24"
+   ],
+   "trovato_qui": [
+    "nascita 100 anni, 56 pagine, solo writer: True"
+   ]
+  },
+  "Federico De Roberto": null,
+  "Paul Éluard": {
+   "qid": "Q152176",
+   "pagine": 79,
+   "mestieri": [
+    "art collector",
+    "artist",
+    "librettist",
+    "painter",
+    "poet",
+    "politician",
+    "writer"
+   ],
+   "nascite": [
+    "1895-12-14"
+   ],
+   "morti": [
+    "1952-11-18"
+   ],
+   "trovato_qui": []
+  },
+  "Carlo Levi": {
+   "qid": "Q312628",
+   "pagine": 42,
+   "mestieri": [
+    "graphic artist",
+    "journalist",
+    "painter",
+    "physician",
+    "physician writer",
+    "politician",
+    "screenwriter",
+    "writer"
+   ],
+   "nascite": [
+    "1902-11-29"
+   ],
+   "morti": [
+    "1975-01-04"
+   ],
+   "trovato_qui": [
+    "nascita 125 anni, 42 pagine, solo writer: True"
+   ]
+  },
+  "Clarice Lispector": {
+   "qid": "Q235955",
+   "pagine": 63,
+   "mestieri": [
+    "children's writer",
+    "journalist",
+    "novelist",
+    "painter",
+    "screenwriter",
+    "translator",
+    "writer"
+   ],
+   "nascite": [
+    "1920-12-10"
+   ],
+   "morti": [
+    "1977-12-09"
+   ],
+   "trovato_qui": []
+  },
+  "Oğuz Atay": {
+   "qid": "Q982729",
+   "pagine": 18,
+   "mestieri": [
+    "civil engineer",
+    "engineer",
+    "playwright",
+    "university teacher",
+    "writer"
+   ],
+   "nascite": [
+    "1934-10-12"
+   ],
+   "morti": [
+    "1977-12-13"
+   ],
+   "trovato_qui": [
+    "morte 50 anni, 18 pagine, solo writer: False"
+   ]
+  },
+  "Carlos Drummond de Andrade": null,
+  "W. S. Merwin": {
+   "qid": "Q680368",
+   "pagine": 29,
+   "mestieri": [
+    "poet",
+    "translator",
+    "writer"
+   ],
+   "nascite": [
+    "1927-09-30"
+   ],
+   "morti": [
+    "2019-03-15"
+   ],
+   "trovato_qui": [
+    "nascita 100 anni, 29 pagine, solo writer: False"
+   ]
+  }
+ },
+ "tutti_writer_soglia30": [
+  {
+   "tipo": "morte",
+   "qid": "Q882",
+   "nome": "Charlie Chaplin",
+   "anni": 50,
+   "anno": 1977,
+   "pagine": 265,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": 12,
+   "giorno": 25,
+   "solo_writer": true
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q483512",
+   "nome": "Isadora Duncana",
+   "anni": 100,
+   "anno": 1927,
+   "pagine": 109,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": 9,
+   "giorno": 14,
+   "solo_writer": true
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q483512",
+   "nome": "Isadora Duncana",
+   "anni": 150,
+   "anno": 1877,
+   "pagine": 109,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": 5,
+   "giorno": 26,
+   "solo_writer": true
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q1618",
+   "nome": "Charles Lindbergh",
+   "anni": 125,
+   "anno": 1902,
+   "pagine": 89,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": 2,
+   "giorno": 4,
+   "solo_writer": true
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q465335",
+   "nome": "Elizabeth Cady Stanton",
+   "anni": 125,
+   "anno": 1902,
+   "pagine": 79,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": 10,
+   "giorno": 26,
+   "solo_writer": true
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q60809",
+   "nome": "Ansel Adams",
+   "anni": 125,
+   "anno": 1902,
+   "pagine": 69,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": 2,
+   "giorno": 20,
+   "solo_writer": true
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q186807",
+   "nome": "Josemaría Escrivá",
+   "anni": 125,
+   "anno": 1902,
+   "pagine": 64,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": 1,
+   "giorno": 9,
+   "solo_writer": true
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q71020",
+   "nome": "Karen Horney",
+   "anni": 75,
+   "anno": 1952,
+   "pagine": 61,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": 12,
+   "giorno": 4,
+   "solo_writer": true
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q206685",
+   "nome": "Albert Uderzo",
+   "anni": 100,
+   "anno": 1927,
+   "pagine": 56,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": 4,
+   "giorno": 25,
+   "solo_writer": true
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q319648",
+   "nome": "Ray Kroc",
+   "anni": 125,
+   "anno": 1902,
+   "pagine": 55,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": 10,
+   "giorno": 5,
+   "solo_writer": true
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q292290",
+   "nome": "Ellen G. White",
+   "anni": 200,
+   "anno": 1827,
+   "pagine": 55,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": 11,
+   "giorno": 26,
+   "solo_writer": true
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q313456",
+   "nome": "Charles Taze Russell",
+   "anni": 175,
+   "anno": 1852,
+   "pagine": 50,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": 2,
+   "giorno": 16,
+   "solo_writer": true
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q204132",
+   "nome": "Gerard Way",
+   "anni": 50,
+   "anno": 1977,
+   "pagine": 49,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": 4,
+   "giorno": 9,
+   "solo_writer": true
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q233660",
+   "nome": "Louisa Adams",
+   "anni": 175,
+   "anno": 1852,
+   "pagine": 49,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": 5,
+   "giorno": 15,
+   "solo_writer": true
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q125084",
+   "nome": "John Hanning Speke",
+   "anni": 200,
+   "anno": 1827,
+   "pagine": 45,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": null,
+   "giorno": null,
+   "solo_writer": true
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q295073",
+   "nome": "Tite Kubo",
+   "anni": 50,
+   "anno": 1977,
+   "pagine": 44,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": null,
+   "giorno": null,
+   "solo_writer": true
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q312628",
+   "nome": "Carlo Levi",
+   "anni": 125,
+   "anno": 1902,
+   "pagine": 42,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": 11,
+   "giorno": 29,
+   "solo_writer": true
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q40319",
+   "nome": "Henry Gray",
+   "anni": 200,
+   "anno": 1827,
+   "pagine": 42,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": null,
+   "giorno": null,
+   "solo_writer": true
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q318497",
+   "nome": "Carlo Maria Martini",
+   "anni": 100,
+   "anno": 1927,
+   "pagine": 41,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": 2,
+   "giorno": 15,
+   "solo_writer": true
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q57781",
+   "nome": "Walter Schellenberg",
+   "anni": 75,
+   "anno": 1952,
+   "pagine": 40,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": 3,
+   "giorno": 31,
+   "solo_writer": true
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q348325",
+   "nome": "John Wesley Powell",
+   "anni": 125,
+   "anno": 1902,
+   "pagine": 39,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": 9,
+   "giorno": 23,
+   "solo_writer": true
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q681012",
+   "nome": "Walter Isaacson",
+   "anni": 75,
+   "anno": 1952,
+   "pagine": 38,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": 5,
+   "giorno": 20,
+   "solo_writer": true
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q236442",
+   "nome": "Juliette Récamier",
+   "anni": 250,
+   "anno": 1777,
+   "pagine": 37,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": null,
+   "giorno": null,
+   "solo_writer": true
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q119329",
+   "nome": "Charles Wilkes",
+   "anni": 150,
+   "anno": 1877,
+   "pagine": 36,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": 2,
+   "giorno": 8,
+   "solo_writer": true
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q242834",
+   "nome": "Yevgenia Ginzburg",
+   "anni": 50,
+   "anno": 1977,
+   "pagine": 35,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": 5,
+   "giorno": 25,
+   "solo_writer": true
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q70155",
+   "nome": "Per Petterson",
+   "anni": 75,
+   "anno": 1952,
+   "pagine": 35,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": 7,
+   "giorno": 18,
+   "solo_writer": true
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q271903",
+   "nome": "Isabelle Eberhardt",
+   "anni": 150,
+   "anno": 1877,
+   "pagine": 35,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": 2,
+   "giorno": 17,
+   "solo_writer": true
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q1279865",
+   "nome": "Isidora Sekulić",
+   "anni": 150,
+   "anno": 1877,
+   "pagine": 35,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": 2,
+   "giorno": 16,
+   "solo_writer": true
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q171485",
+   "nome": "Vilhelm Thomsen",
+   "anni": 100,
+   "anno": 1927,
+   "pagine": 34,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": 5,
+   "giorno": 12,
+   "solo_writer": true
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q380425",
+   "nome": "Ahad Ha'am",
+   "anni": 100,
+   "anno": 1927,
+   "pagine": 34,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": 1,
+   "giorno": 2,
+   "solo_writer": true
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q21130661",
+   "nome": "Güzäl Yäxinä",
+   "anni": 50,
+   "anno": 1977,
+   "pagine": 33,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": 6,
+   "giorno": 1,
+   "solo_writer": true
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q333620",
+   "nome": "Thomas S. Monson",
+   "anni": 100,
+   "anno": 1927,
+   "pagine": 33,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": 8,
+   "giorno": 21,
+   "solo_writer": true
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q531582",
+   "nome": "Matthias Alexander Castrén",
+   "anni": 175,
+   "anno": 1852,
+   "pagine": 33,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": 5,
+   "giorno": 7,
+   "solo_writer": true
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q401023",
+   "nome": "Ahmadou Kourouma",
+   "anni": 100,
+   "anno": 1927,
+   "pagine": 32,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": 11,
+   "giorno": 24,
+   "solo_writer": true
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q179122",
+   "nome": "Alice Babette Toklas",
+   "anni": 150,
+   "anno": 1877,
+   "pagine": 32,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": 4,
+   "giorno": 30,
+   "solo_writer": true
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q58830",
+   "nome": "Wilhelm Filchner",
+   "anni": 150,
+   "anno": 1877,
+   "pagine": 32,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": 9,
+   "giorno": 13,
+   "solo_writer": true
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q231832",
+   "nome": "Anne Marie Louise d'Orléans",
+   "anni": 400,
+   "anno": 1627,
+   "pagine": 32,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": 5,
+   "giorno": 29,
+   "solo_writer": true
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q671985",
+   "nome": "Arkady Babchenko",
+   "anni": 50,
+   "anno": 1977,
+   "pagine": 31,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": 3,
+   "giorno": 18,
+   "solo_writer": true
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q713222",
+   "nome": "Jean-Christophe Rufin",
+   "anni": 75,
+   "anno": 1952,
+   "pagine": 30,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": 6,
+   "giorno": 28,
+   "solo_writer": true
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q455968",
+   "nome": "Erma Bombeck",
+   "anni": 100,
+   "anno": 1927,
+   "pagine": 30,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": 2,
+   "giorno": 21,
+   "solo_writer": true
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q956868",
+   "nome": "William Beebe",
+   "anni": 150,
+   "anno": 1877,
+   "pagine": 30,
+   "occ": [
+    "Q36180"
+   ],
+   "mese": 7,
+   "giorno": 29,
+   "solo_writer": true
+  }
+ ]
+}
