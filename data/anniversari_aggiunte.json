@@ -1,0 +1,256 @@
+{
+ "anno": 2027,
+ "deciso": "2026-11-19",
+ "regola": "Scrittori importanti rimasti fuori dal calendario automatico, scelti a mano dalla lista larga (docs/stima-sito/anniv-candidati.json): niente autori noti per razzismo, nazismo, fascismo o collaborazionismo. Ogni data va confermata da Wikidata e da Wikipedia; se le due fonti non concordano la voce non entra.",
+ "esclusi_di_proposito": {
+  "Charles Maurras": "Action française, antisemitismo",
+  "Alphonse de Chateaubriant": "collaborazionista",
+  "Waldemar Bonsels": "antisemitismo, vicino al nazismo",
+  "Hugo Ball": "passi antisemiti in «Zur Kritik der deutschen Intelligenz» (1919): per prudenza",
+  "Frank Norris": "stereotipi razzisti e antisemiti nei romanzi: per prudenza"
+ },
+ "voci": [
+  {
+   "tipo": "morte",
+   "qid": "Q152176",
+   "anni": 75,
+   "nota": "Paul Éluard"
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q235955",
+   "anni": 50,
+   "nota": "Clarice Lispector"
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q118936",
+   "anni": 125,
+   "nota": "Rafael Alberti"
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q379745",
+   "anni": 125,
+   "nota": "Carlos Drummond de Andrade"
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q312628",
+   "anni": 125,
+   "nota": "Carlo Levi"
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q484141",
+   "anni": 150,
+   "nota": "Muhammad Iqbal"
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q261521",
+   "anni": 75,
+   "nota": "Josephine Tey"
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q680368",
+   "anni": 100,
+   "nota": "W.S. Merwin"
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q982729",
+   "anni": 50,
+   "nota": "Oğuz Atay"
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q206685",
+   "anni": 100,
+   "nota": "Albert Uderzo"
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q462662",
+   "anni": 150,
+   "nota": "Raymond Roussel"
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q220550",
+   "anni": 175,
+   "nota": "Ján Kollár"
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q891324",
+   "anni": 150,
+   "nota": "Bolesław Leśmian"
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q1279865",
+   "anni": 150,
+   "nota": "Isidora Sekulić"
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q355676",
+   "anni": 75,
+   "nota": "Mariano Azuela"
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q433800",
+   "anni": 50,
+   "nota": "Jim Thompson"
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q733161",
+   "anni": 250,
+   "nota": "Claude-Prosper Jolyot de Crébillon"
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q242834",
+   "anni": 50,
+   "nota": "Evgenija Solomonovna Ginzburg"
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q343560",
+   "anni": 175,
+   "nota": "Salvadore Cammarano"
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q72938",
+   "anni": 50,
+   "nota": "Tibor Déry"
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q445740",
+   "anni": 75,
+   "nota": "Rita Dove"
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q721738",
+   "anni": 200,
+   "nota": "Goffredo Mameli"
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q469164",
+   "anni": 125,
+   "nota": "Cesare Zavattini"
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q520688",
+   "anni": 150,
+   "nota": "Alexandre Herculano"
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q629931",
+   "anni": 100,
+   "nota": "Ricardo Güiraldes"
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q381107",
+   "anni": 125,
+   "nota": "Gyula Illyés"
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q401023",
+   "anni": 100,
+   "nota": "Ahmadou Kourouma"
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q544627",
+   "anni": 50,
+   "nota": "Terence Rattigan"
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q505383",
+   "anni": 100,
+   "nota": "Rafael Sánchez Ferlosio"
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q455703",
+   "anni": 150,
+   "nota": "José de Alencar"
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q2459284",
+   "anni": 50,
+   "nota": "Aleksandr Arkad'evič Galič"
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q559264",
+   "anni": 125,
+   "nota": "Shen Congwen"
+  },
+  {
+   "tipo": "morte",
+   "qid": "Q380425",
+   "anni": 100,
+   "nota": "Ahad Ha'am"
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q298761",
+   "anni": 75,
+   "nota": "Clive Barker"
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q722103",
+   "anni": 75,
+   "nota": "William Boyd"
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q70155",
+   "anni": 75,
+   "nota": "Per Petterson"
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q732338",
+   "anni": 75,
+   "nota": "Rohinton Mistry"
+  },
+  {
+   "tipo": "nascita",
+   "qid": "Q3177574",
+   "anni": 50,
+   "nota": "Jesmyn Ward"
+  },
+  {
+   "tipo": "nascita",
+   "cerca": "Nâzım Hikmet",
+   "anno": 1902,
+   "anni": 125,
+   "nota": "Nazım Hikmet, segnalato da Marco"
+  },
+  {
+   "tipo": "morte",
+   "cerca": "Federico De Roberto",
+   "anno": 1927,
+   "anni": 100,
+   "nota": "Federico De Roberto, segnalato da Marco"
+  }
+ ]
+}

@@ -513,6 +513,14 @@ def main():
             for v in uniche:
                 if f'{v["tipo"]}:{v["qid"]}' == k:
                     v["mese"], v["giorno"], v["fonte_data"] = c["mese"], c["giorno"], "verifica: " + c["fonte"]
+    # voci aggiunte a mano (data/anniversari_aggiunte.json, scripts/aggiungi_anniversari.py): restano anche se si rigenera
+    try:
+        agg = json.loads((DATA / "anniversari_aggiunte.json").read_text(encoding="utf-8"))
+        if agg.get("anno") == ANNO:
+            presenti = {(v["tipo"], v["qid"]) for v in uniche}
+            uniche += [v for v in vecchio["voci"] if "aggiunta a mano" in (v.get("fonte_data") or "") and (v["tipo"], v["qid"]) not in presenti]
+    except FileNotFoundError:
+        pass
     uniche.sort(key=lambda v: ((v["mese"] or 13), (v["giorno"] or 99), -v["pagine"]))
     out = {"anno": ANNO, "generato": dt.date.today().isoformat(), "fonti": ["Wikidata", "Wikipedia"], "voci": uniche}
     file.write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
