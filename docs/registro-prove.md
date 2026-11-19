@@ -321,3 +321,9 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - **Controllo di Marco:** il calendario italiano è indicizzato da Google (Controllo URL, 19/11). Le zero impressioni vengono quindi dalle ricerche, non da un blocco.
 - **Cambiato:** titolo e descrizione (inglese: «Literary and book anniversaries 2027…», perché per «book anniversaries 2027» eravamo all'8° posto senza clic; italiano: «Anniversari letterari 2027: scrittori, libri e ricorrenze…»); ogni mese ha il titolo con l'anno («Gennaio 2027») e un'ancora (#mese-1, #month-1). «Literary anniversaries 2027» resta all'inizio del titolo inglese, che oggi è al 3°–4° posto.
 - **Rischio:** cambiare il titolo della pagina che porta più clic può spostarla per qualche giorno. Da guardare nella prossima esportazione.
+
+### 19/11/2026 — Calendario 2027: 39 scrittori aggiunti a mano
+- **Scelta:** dalla lista larga (`anniv-candidati.json`), solo scrittori davvero importanti; esclusi di proposito (in `data/anniversari_aggiunte.json`): Maurras, Chateaubriant, Bonsels, Hugo Ball, Frank Norris (razzismo, antisemitismo, nazismo, collaborazionismo).
+- **Controllo delle date** (`scripts/aggiungi_anniversari.py`): data di Wikidata (con conversione dal calendario giuliano) confermata nel testo o nel riquadro di almeno una Wikipedia (en, it, fr, de, es); in disaccordo la voce non entra. 39 aggiunte su 40, tutte con almeno due Wikipedia d'accordo tranne nessuna (vedi resoconto `docs/stima-sito/anniv-aggiunte.json`). Fuori: Bolesław Leśmian (Wikidata 3 febbraio, Wikipedia 22 gennaio: probabile errore di calendario su Wikidata).
+- **Nota:** Nazım Hikmet entra il 15 gennaio (Wikidata, Wikipedia inglese e spagnola); la lista di Marco diceva 20 gennaio.
+- **Calendario:** da 192 a 231 voci (dicembre da 8 a 15). Le voci aggiunte a mano restano anche se il calendario si rigenera.
