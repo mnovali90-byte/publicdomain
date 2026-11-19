@@ -332,3 +332,19 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - **Schede:** testata scura larga con nome grande e ritratto a destra, risposta in rosso, sei riquadri paese colorati come nel mockup (primo paese rosso, USA verde, già liberi verdi), sezioni con occhiello rosso e titolo grande. Errore trovato nella prova e corretto prima di pubblicare: i riquadri colorati risultavano «libero dal …» anche quando non lo erano («USA: libero dal None»). Nomi lunghi: carattere più piccolo perché la parola più lunga stia intera.
 - **Library of Congress:** provate 2.311 opere. Confermate in tutto 1.340 su 3.493 (Open Library 1.099, Library of Congress 186, Duke 55); 294 con anno più tardo nelle altre fonti, 1.859 non trovate: restano «da verificare».
 - **Errore mio:** 28 opere su cui il catalogo non rispondeva non venivano mai segnate come provate, e il lavoro è ripartito da solo circa 70 volte, ogni 2 minuti, dalle 17:00 alle 19:00 circa. Corretto: un'opera senza risposta conta come provata.
+
+## 19/11/2026 — Verifica degli anni sulle liste USA 2027 e 2028
+- **Perché:** le liste USA (data/us-2027.json, us-2028.json) prendevano l'anno solo da Wikidata.
+- **Come:** script scripts/verifica_anni_usa.py, stesso metodo e stesse fonti dello Storico (Duke → Open Library → Library of Congress). Per ogni libro si cerca l'edizione più vecchia con lo stesso titolo e lo stesso autore. Esiti: «ok» se una fonte ha un'edizione dell'anno giusto; «prima» se ne ha una più vecchia; «nd» negli altri casi.
+- **Risultati 2027 (libri del 1931, 154 in tutto):**
+  - 54 confermati (47 da Open Library, 7 dalla Library of Congress);
+  - 97 non confermati;
+  - 3 «prima».
+- **Risultati 2028 (libri del 1932, 159 in tutto):**
+  - 56 confermati;
+  - 96 non confermati;
+  - 7 «prima».
+- **Giudizio:**
+  - La conferma funziona sui libri più cercati: La buona terra, Le onde, Santuario, La chiave di vetro, Il mondo nuovo.
+  - I non confermati sono soprattutto opere tradotte, che nei cataloghi USA hanno l'anno della traduzione (Volo di notte, I sonnambuli, La marcia di Radetzky), e racconti usciti in rivista (The Whisperer in Darkness).
+  - L'esito «prima» NON è affidabile come smentita: Open Library dà Death in the Afternoon al 1920, Peter Duck al 1800 e Light in August al 1931, tutti errori. Quindi non si toglie nessun libro dalla lista: i «prima» restano «da confermare».
