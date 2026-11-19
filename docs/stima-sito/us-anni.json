@@ -3,151 +3,556 @@
   "libri": 154,
   "controllati": 154,
   "esiti": {
-   "ok": 54,
-   "nd": 97,
+   "ok": 70,
+   "nd": 81,
    "prima": 3
   },
   "confermati_per_fonte": {
-   "openlibrary": 47,
-   "loc": 7
+   "cce": 38,
+   "openlibrary": 15,
+   "bnf": 15,
+   "loc": 2
+  },
+  "conferme_per_fonte_anche_doppie": {
+   "cce": 38,
+   "openlibrary": 15,
+   "bnf": 15,
+   "loc": 2
   },
   "piu_vecchi": [
    [
-    "Fabian",
-    1930,
-    "openlibrary"
-   ],
-   [
     "Charlie Chan Carries On",
     1930,
-    "loc"
+    "cce"
    ],
    [
     "Le Bal",
     1930,
-    "loc"
+    "cce"
+   ],
+   [
+    "Mélo",
+    1930,
+    "bnf"
    ]
   ],
-  "primi_20_per_visite": [
-   [
-    "The Good Earth",
-    114915,
-    "ok",
-    1931
-   ],
-   [
-    "The Waves",
-    66117,
-    "ok",
-    1931
-   ],
+  "non_confermati": [
    [
     "The Whisperer in Darkness",
-    63094,
-    "nd",
-    2016
-   ],
-   [
-    "The Sittaford Mystery",
-    55885,
-    "ok",
-    1931
-   ],
-   [
-    "Sanctuary",
-    48963,
-    "ok",
-    1931
-   ],
-   [
-    "The Road Back",
-    31442,
-    "ok",
-    1931
-   ],
-   [
-    "The Glass Key",
-    24559,
-    "ok",
-    1931
+    null,
+    {
+     "openlibrary": 2016,
+     "loc": 2020
+    }
    ],
    [
     "Gaban",
-    21546,
-    "nd",
-    1980
-   ],
-   [
-    "Green Grow the Lilacs",
-    20520,
-    "ok",
-    1931
-   ],
-   [
-    "The Solar Anus",
-    15474,
-    "nd",
-    null
-   ],
-   [
-    "Will O' the Wisp",
-    14627,
-    "nd",
-    1966
+    null,
+    {
+     "openlibrary": 1980
+    }
    ],
    [
     "The Sleepwalkers",
-    13919,
-    "nd",
-    1932
-   ],
-   [
-    "Night Flight",
-    13868,
-    "nd",
-    1932
-   ],
-   [
-    "Five Red Herrings",
-    10656,
-    "nd",
-    1986
-   ],
-   [
-    "If It Had Happened Otherwise",
-    10530,
-    "ok",
-    1931
-   ],
-   [
-    "Wyatt Earp: Frontier Marshal",
-    10305,
-    "ok",
-    1931
-   ],
-   [
-    "The Floating Admiral",
-    9814,
-    "ok",
-    1931
-   ],
-   [
-    "The Face in the Abyss",
-    9276,
-    "ok",
-    1931
+    "Les somnambules",
+    {
+     "openlibrary": 1932,
+     "loc": 1932
+    }
    ],
    [
     "The Little Golden Calf",
-    8987,
-    "nd",
-    1932
+    null,
+    {
+     "cce": 1932,
+     "loc": 1932
+    }
    ],
    [
     "San Manuel Bueno, Mártir",
-    8896,
-    "nd",
-    1933
+    null,
+    {
+     "openlibrary": 1933,
+     "loc": 1933
+    }
+   ],
+   [
+    "Quicksand",
+    null,
+    {
+     "loc": 1994
+    }
+   ],
+   [
+    "The Zürau Aphorisms",
+    "Réflexions sur le péché, la souffrance, l'espérance et le vrai chemin",
+    {
+     "openlibrary": 2006,
+     "loc": 2006
+    }
+   ],
+   [
+    "The Black Stone",
+    "La Pierre noire",
+    {
+     "loc": 2022
+    }
+   ],
+   [
+    "Investigations of a Dog",
+    "Les recherches d'un chien",
+    {
+     "openlibrary": 2016,
+     "loc": 2017
+    }
+   ],
+   [
+    "The Strange High House in the Mist",
+    null,
+    {}
+   ],
+   [
+    "That Evening Sun",
+    null,
+    {
+     "openlibrary": 2013
+    }
+   ],
+   [
+    "The Odessa Tales",
+    null,
+    {}
+   ],
+   [
+    "Malice Aforethought",
+    null,
+    {}
+   ],
+   [
+    "A Little Fable",
+    "Kleine Fabel",
+    {}
+   ],
+   [
+    "The Children of the Night",
+    null,
+    {}
+   ],
+   [
+    "Number 31328",
+    null,
+    {}
+   ],
+   [
+    "The Mother",
+    "Die Mutter",
+    {
+     "loc": 1965
+    }
+   ],
+   [
+    "The Hunter Gracchus",
+    "Der Jäger Gracchus",
+    {}
+   ],
+   [
+    "Coup d'État: The Technique of Revolution",
+    "La Technique du coup d'État",
+    {
+     "openlibrary": 1932,
+     "loc": 1932
+    }
+   ],
+   [
+    "The Tale of Satampra Zeiros",
+    null,
+    {
+     "openlibrary": 2006
+    }
+   ],
+   [
+    "The last one at the scaffold",
+    "La Dernière à l'échafaud",
+    {}
+   ],
+   [
+    "The Silence of the Sirens",
+    "Das Schweigen der Sirenen",
+    {}
+   ],
+   [
+    "The Return of the Sorcerer",
+    "Talion",
+    {
+     "openlibrary": 2007
+    }
+   ],
+   [
+    "The Great Wall of China",
+    "La muraille de Chine",
+    {
+     "openlibrary": 1933,
+     "loc": 1933
+    }
+   ],
+   [
+    "Vlak u snijegu",
+    null,
+    {
+     "openlibrary": 1964,
+     "loc": 1950
+    }
+   ],
+   [
+    "Altazor",
+    null,
+    {}
+   ],
+   [
+    "Markéta Lazarová",
+    null,
+    {
+     "openlibrary": 1946,
+     "loc": 1957
+    }
+   ],
+   [
+    "Tales from the Vienna Woods",
+    "Légendes de la forêt viennoise",
+    {
+     "openlibrary": 1977,
+     "loc": 1977
+    }
+   ],
+   [
+    "The 35th of May, or Conrad's Ride to the South Seas",
+    "Le 35 Mai",
+    {
+     "openlibrary": 1933,
+     "loc": 1933
+    }
+   ],
+   [
+    "The Village Schoolmaster",
+    "Der Dorfschullehrer",
+    {}
+   ],
+   [
+    "The Truth about Sancho Panza",
+    "Die Wahrheit über Sancho Pansa",
+    {}
+   ],
+   [
+    "Castle Gripsholm",
+    "Été en Suède",
+    {
+     "openlibrary": 2019,
+     "loc": 1985
+    }
+   ],
+   [
+    "Maigret and the Yellow Dog",
+    "Le Chien jaune",
+    {
+     "bnf": 1976,
+     "loc": 1987
+    }
+   ],
+   [
+    "The Bridal Canopy",
+    null,
+    {
+     "openlibrary": 1937,
+     "loc": 1937
+    }
+   ],
+   [
+    "The London Scene",
+    null,
+    {
+     "openlibrary": 1975,
+     "loc": 1975
+    }
+   ],
+   [
+    "A Small Circus",
+    "Levée de fourches",
+    {
+     "openlibrary": 2012,
+     "loc": 2012
+    }
+   ],
+   [
+    "My Neighbor",
+    "Der Nachbar",
+    {}
+   ],
+   [
+    "Machine",
+    null,
+    {}
+   ],
+   [
+    "Terra Incognita",
+    null,
+    {
+     "openlibrary": 1990
+    }
+   ],
+   [
+    "Mr. Tot Aĉetas Mil Okulojn",
+    null,
+    {}
+   ],
+   [
+    "The Country of Carnival",
+    null,
+    {}
+   ],
+   [
+    "What Bird is That?",
+    null,
+    {
+     "openlibrary": 1937
+    }
+   ],
+   [
+    "A Hundred Authors Against Einstein",
+    "Hundert Autoren Gegen Einstein",
+    {}
+   ],
+   [
+    "Bird's Shadow",
+    null,
+    {}
+   ],
+   [
+    "Rakhine Razawin Thit",
+    null,
+    {}
+   ],
+   [
+    "The Go-getter",
+    null,
+    {}
+   ],
+   [
+    "Strychnine in the Soup",
+    null,
+    {}
+   ],
+   [
+    "Laura a la ciutat dels sants",
+    null,
+    {}
+   ],
+   [
+    "The Sailors' Rendezvous",
+    "Au rendez-vous des Terre-Neuvas",
+    {
+     "bnf": 1954,
+     "loc": 1970
+    }
+   ],
+   [
+    "Mort de dama",
+    null,
+    {
+     "openlibrary": 1954,
+     "loc": 1954
+    }
+   ],
+   [
+    "Blow the Chinks Down!",
+    null,
+    {
+     "openlibrary": 2014
+    }
+   ],
+   [
+    "Alleys of Peril",
+    null,
+    {
+     "openlibrary": 2014
+    }
+   ],
+   [
+    "The Wanderers",
+    null,
+    {}
+   ],
+   [
+    "Madah Kelana",
+    null,
+    {
+     "openlibrary": 1978,
+     "loc": 1978
+    }
+   ],
+   [
+    "Breed of Battle",
+    null,
+    {}
+   ],
+   [
+    "Circus Fists",
+    null,
+    {
+     "openlibrary": 2020
+    }
+   ],
+   [
+    "The TNT Punch",
+    null,
+    {}
+   ],
+   [
+    "The Sign of the Snake",
+    null,
+    {}
+   ],
+   [
+    "Texas Fists",
+    null,
+    {
+     "openlibrary": 2014
+    }
+   ],
+   [
+    "Von Dem Alten Kloster",
+    null,
+    {}
+   ],
+   [
+    "Conduit and Shvambrania",
+    null,
+    {}
+   ],
+   [
+    "Cure through the spirit.",
+    "Die Heilung durch den Geist",
+    {}
+   ],
+   [
+    "Black Monastery",
+    null,
+    {
+     "openlibrary": 1934,
+     "loc": 1934
+    }
+   ],
+   [
+    "Do swego Boga",
+    null,
+    {}
+   ],
+   [
+    "The Story of Babar",
+    "L'Histoire de Babar, le petit Elephant",
+    {
+     "cce": 1933,
+     "bnf": 2003,
+     "openlibrary": 1933,
+     "loc": 1933
+    }
+   ],
+   [
+    "Muži v offsidu",
+    null,
+    {
+     "openlibrary": 1948,
+     "loc": 1956
+    }
+   ],
+   [
+    "Approximate man",
+    null,
+    {
+     "loc": 1973
+    }
+   ],
+   [
+    "Blocchi",
+    null,
+    {}
+   ],
+   [
+    "Los placeres prohibidos",
+    null,
+    {
+     "openlibrary": 2002,
+     "loc": 2002
+    }
+   ],
+   [
+    "Government",
+    "Indios",
+    {
+     "loc": 1971
+    }
+   ],
+   [
+    "Noce i dnie",
+    null,
+    {
+     "openlibrary": 1934,
+     "loc": 1947
+    }
+   ],
+   [
+    "Skizoj pri Teorio de Esperanto",
+    null,
+    {}
+   ],
+   [
+    "Truth and Justice III",
+    null,
+    {}
+   ],
+   [
+    "The City of Singing Flame",
+    null,
+    {}
+   ],
+   [
+    "Uni ja kuolema",
+    null,
+    {
+     "loc": 1932
+    }
+   ],
+   [
+    "Greetings of Life",
+    null,
+    {}
+   ],
+   [
+    "The heir",
+    null,
+    {}
+   ],
+   [
+    "Chumbote",
+    null,
+    {}
+   ],
+   [
+    "Siamese Musical Instruments",
+    null,
+    {}
+   ],
+   [
+    "Kubula a Kuba Kubikula",
+    null,
+    {
+     "openlibrary": 1950,
+     "loc": 1962
+    }
+   ],
+   [
+    "Rasabharanamu",
+    null,
+    {}
    ]
   ]
  },
@@ -155,172 +560,607 @@
   "libri": 159,
   "controllati": 159,
   "esiti": {
-   "ok": 56,
-   "nd": 96,
-   "prima": 7
+   "ok": 69,
+   "nd": 89,
+   "prima": 1
   },
   "confermati_per_fonte": {
-   "openlibrary": 49,
-   "loc": 7
+   "cce": 47,
+   "bnf": 10,
+   "openlibrary": 9,
+   "loc": 3
+  },
+  "conferme_per_fonte_anche_doppie": {
+   "cce": 47,
+   "bnf": 10,
+   "openlibrary": 9,
+   "loc": 2
   },
   "piu_vecchi": [
    [
-    "Light in August",
-    1931,
-    "openlibrary"
-   ],
-   [
-    "Death in the Afternoon",
-    1920,
-    "openlibrary"
-   ],
-   [
-    "Marie Antoinette: The Portrait of an Average Woman",
+    "The Solitude of Compassion",
     1930,
-    "loc"
-   ],
-   [
-    "The Lagoon",
-    1896,
-    "loc"
-   ],
-   [
-    "Peter Duck",
-    1800,
-    "openlibrary"
-   ],
-   [
-    "The Fun of It",
-    1923,
-    "openlibrary"
-   ],
-   [
-    "The Idiots",
-    1896,
-    "loc"
+    "bnf"
    ]
   ],
-  "primi_20_per_visite": [
-   [
-    "Brave New World",
-    932373,
-    "ok",
-    1932
-   ],
-   [
-    "Little House in the Big Woods",
-    109113,
-    "ok",
-    1932
-   ],
-   [
-    "Journey to the End of the Night",
-    84886,
-    "nd",
-    1934
-   ],
+  "non_confermati": [
    [
     "The Man Without Qualities",
-    78756,
-    "nd",
-    1953
-   ],
-   [
-    "Light in August",
-    60639,
-    "prima",
-    1931
-   ],
-   [
-    "Peril at End House",
-    56315,
-    "ok",
-    1932
-   ],
-   [
-    "Cold Comfort Farm",
-    47251,
-    "ok",
-    1932
+    "L'homme sans qualités",
+    {
+     "openlibrary": 1960,
+     "loc": 1953
+    }
    ],
    [
     "The Concept of the Political",
-    40393,
-    "nd",
-    1976
-   ],
-   [
-    "The Thirteen Problems",
-    40127,
-    "ok",
-    1932
+    "La notion de politique",
+    {
+     "openlibrary": 2005,
+     "loc": 1976
+    }
    ],
    [
     "Radetzky March",
-    39404,
-    "nd",
-    1933
-   ],
-   [
-    "Death in the Afternoon",
-    36540,
-    "prima",
-    1920
+    "La marche de Radetzky",
+    {
+     "cce": 1933,
+     "openlibrary": 1933,
+     "loc": 1933
+    }
    ],
    [
     "How the Steel Was Tempered",
-    35991,
-    "nd",
-    1952
-   ],
-   [
-    "Tobacco Road",
-    23666,
-    "ok",
-    1932
-   ],
-   [
-    "Stamboul Train",
-    22527,
-    "ok",
-    1932
+    "Et l’acier fut trempé",
+    {
+     "openlibrary": 1970,
+     "loc": 1952
+    }
    ],
    [
     "The Phoenix on the Sword",
-    22446,
-    "nd",
-    null
-   ],
-   [
-    "Mutiny on the Bounty",
-    20512,
-    "ok",
-    1932
+    null,
+    {}
    ],
    [
     "Design for Living",
-    18643,
-    "nd",
-    1933
+    null,
+    {
+     "openlibrary": 1933,
+     "loc": 1933
+    }
    ],
    [
     "Tripura Rahasya",
-    18158,
-    "nd",
-    null
+    null,
+    {}
    ],
    [
     "Sunset Song",
-    17350,
-    "nd",
-    1933
+    null,
+    {
+     "openlibrary": 1933
+    }
    ],
    [
     "Journey to the East",
-    16229,
-    "nd",
-    1956
+    "Le voyage en Orient",
+    {
+     "openlibrary": 1956
+    }
+   ],
+   [
+    "My Friend Flicka",
+    null,
+    {
+     "openlibrary": 1941,
+     "loc": 1941
+    }
+   ],
+   [
+    "Karmabhoomi",
+    null,
+    {
+     "openlibrary": 2019
+    }
+   ],
+   [
+    "Little Man, What Now?",
+    "Quoi de neuf, petit homme?",
+    {
+     "openlibrary": 1933
+    }
+   ],
+   [
+    "The Career of Nicodemus Dyzma",
+    null,
+    {
+     "loc": 2020
+    }
+   ],
+   [
+    "Saint Joan of the Stockyards",
+    "Sainte Jeanne des abattoirs",
+    {
+     "openlibrary": 1970,
+     "loc": 1970
+    }
+   ],
+   [
+    "The worker",
+    "Le travailleur",
+    {
+     "openlibrary": 2017,
+     "loc": 2017
+    }
+   ],
+   [
+    "Legend of the Swordsmen of the Mountains of Shu",
+    null,
+    {}
+   ],
+   [
+    "Marie Antoinette: The Portrait of an Average Woman",
+    "Marie Antoinette",
+    {
+     "cce": 1933,
+     "openlibrary": 1933,
+     "loc": 1930
+    }
+   ],
+   [
+    "The Empire of the Necromancers",
+    null,
+    {
+     "openlibrary": 2009
+    }
+   ],
+   [
+    "The Artificial Silk Girl",
+    "La jeune fille en soie artificielle",
+    {
+     "loc": 2002
+    }
+   ],
+   [
+    "The Lagoon",
+    null,
+    {
+     "openlibrary": 1990,
+     "loc": 1896
+    }
+   ],
+   [
+    "The Black Girl in Search of God",
+    null,
+    {
+     "openlibrary": 1934
+    }
+   ],
+   [
+    "Cat Country",
+    null,
+    {
+     "openlibrary": 1970,
+     "loc": 1970
+    }
+   ],
+   [
+    "Worms of the Earth",
+    null,
+    {
+     "openlibrary": 1975
+    }
+   ],
+   [
+    "Javid Nama",
+    null,
+    {
+     "openlibrary": 2011,
+     "loc": 1966
+    }
+   ],
+   [
+    "Pirates of Venus",
+    null,
+    {
+     "openlibrary": 1934,
+     "loc": 1934
+    }
+   ],
+   [
+    "Angarey",
+    null,
+    {}
+   ],
+   [
+    "The Stalin School of Falsification",
+    null,
+    {
+     "openlibrary": 1937,
+     "loc": 1937
+    }
+   ],
+   [
+    "Pother Kanta",
+    null,
+    {}
+   ],
+   [
+    "Hitler Youth Quex",
+    "Hitlerjunge Quex",
+    {}
+   ],
+   [
+    "Glory",
+    null,
+    {
+     "loc": 1971
+    }
+   ],
+   [
+    "Tarzan and the City of Gold",
+    null,
+    {
+     "cce": 1933,
+     "openlibrary": 1933,
+     "loc": 1933
+    }
+   ],
+   [
+    "Three Drops of Blood",
+    null,
+    {}
+   ],
+   [
+    "The Idiots",
+    null,
+    {
+     "openlibrary": 1896,
+     "loc": 1896
+    }
+   ],
+   [
+    "Time, Forward!",
+    null,
+    {
+     "cce": 1933,
+     "openlibrary": 1933,
+     "loc": 1933
+    }
+   ],
+   [
+    "Yaban",
+    null,
+    {
+     "openlibrary": 1942,
+     "loc": 1942
+    }
+   ],
+   [
+    "Omenuko",
+    null,
+    {
+     "openlibrary": 1963,
+     "loc": 1966
+    }
+   ],
+   [
+    "The Sowers of the Thunder",
+    null,
+    {
+     "openlibrary": 1973,
+     "loc": 1973
+    }
+   ],
+   [
+    "The Return",
+    null,
+    {
+     "openlibrary": 2004
+    }
+   ],
+   [
+    "The Waxworks Murder",
+    null,
+    {}
+   ],
+   [
+    "The Madman of Bergerac",
+    "Maigret und der Verrückte",
+    {
+     "loc": 2007
+    }
+   ],
+   [
+    "The Testament of Athammaus",
+    null,
+    {}
+   ],
+   [
+    "The Queer Story of Brownlow's Newspaper",
+    null,
+    {
+     "openlibrary": 2016
+    }
+   ],
+   [
+    "Phu Chana Sip Thit",
+    null,
+    {}
+   ],
+   [
+    "Mountain Victory",
+    null,
+    {}
+   ],
+   [
+    "Ursonate",
+    null,
+    {
+     "loc": 1993
+    }
+   ],
+   [
+    "Celia en el colegio",
+    null,
+    {
+     "openlibrary": 1992,
+     "loc": 2020
+    }
+   ],
+   [
+    "Music",
+    null,
+    {}
+   ],
+   [
+    "The Night Club",
+    "L'Âne rouge",
+    {
+     "bnf": 1933
+    }
+   ],
+   [
+    "Dian yang Tak Kunjung Padam",
+    null,
+    {
+     "loc": 1977
+    }
+   ],
+   [
+    "Distant Lands",
+    null,
+    {}
+   ],
+   [
+    "Winged Girl of Knossos",
+    null,
+    {
+     "cce": 1933
+    }
+   ],
+   [
+    "El amor brujo",
+    null,
+    {
+     "openlibrary": 1968,
+     "loc": 1968
+    }
+   ],
+   [
+    "Orache",
+    null,
+    {}
+   ],
+   [
+    "Alicia Deane",
+    null,
+    {}
+   ],
+   [
+    "Pertemuan Jodoh",
+    null,
+    {}
+   ],
+   [
+    "Flesh in Armour",
+    null,
+    {
+     "openlibrary": 1944,
+     "loc": 2008
+    }
+   ],
+   [
+    "The Multiple States of Being",
+    null,
+    {
+     "openlibrary": 1984,
+     "loc": 1984
+    }
+   ],
+   [
+    "Hell's Doorway",
+    null,
+    {}
+   ],
+   [
+    "Dark Shanghai",
+    null,
+    {
+     "openlibrary": 2014
+    }
+   ],
+   [
+    "Night of Battle",
+    null,
+    {
+     "openlibrary": 2020
+    }
+   ],
+   [
+    "Vikings of the Gloves",
+    null,
+    {
+     "openlibrary": 2014
+    }
+   ],
+   [
+    "Soomustüdruk",
+    null,
+    {
+     "openlibrary": 1957,
+     "loc": 1957
+    }
+   ],
+   [
+    "The New Land",
+    null,
+    {}
+   ],
+   [
+    "Yegor Bulychov and Others",
+    null,
+    {}
+   ],
+   [
+    "Dash Akol",
+    null,
+    {}
+   ],
+   [
+    "Picking the morning flower in the evening",
+    null,
+    {}
+   ],
+   [
+    "Karain: un ricordo",
+    null,
+    {}
+   ],
+   [
+    "Rangun Raudi",
+    null,
+    {}
+   ],
+   [
+    "Adhunika Rajyanga Samsthalu",
+    null,
+    {}
+   ],
+   [
+    "Sarvey Ganita Chandrika",
+    null,
+    {}
+   ],
+   [
+    "Forgiveness",
+    null,
+    {}
+   ],
+   [
+    "The Life of Guskō Budori",
+    null,
+    {}
+   ],
+   [
+    "Orașele scufundate",
+    null,
+    {
+     "openlibrary": 2006,
+     "loc": 2006
+    }
+   ],
+   [
+    "Blind Beast",
+    null,
+    {}
+   ],
+   [
+    "Wings in the Night",
+    null,
+    {
+     "openlibrary": 2005
+    }
+   ],
+   [
+    "Tsushima",
+    null,
+    {}
+   ],
+   [
+    "Mount of Olives",
+    null,
+    {}
+   ],
+   [
+    "Nihon Shihonshugi Hattatsushi Kōza",
+    null,
+    {}
+   ],
+   [
+    "The Pure Tree of Light in the Layers of the Malikis",
+    null,
+    {}
+   ],
+   [
+    "Identical Toes",
+    null,
+    {}
+   ],
+   [
+    "Red mountain",
+    null,
+    {}
+   ],
+   [
+    "Fram the polar bear",
+    null,
+    {}
+   ],
+   [
+    "Truth and Justice IV",
+    null,
+    {}
+   ],
+   [
+    "The Trap",
+    null,
+    {
+     "openlibrary": 2016
+    }
+   ],
+   [
+    "The Vaults of Yoh-Vombis",
+    null,
+    {}
+   ],
+   [
+    "The Thing on the Roof",
+    null,
+    {}
+   ],
+   [
+    "The Broken Mirror",
+    null,
+    {}
+   ],
+   [
+    "The Man of Stone",
+    null,
+    {}
+   ],
+   [
+    "Supplementary Collected Stele Biographies",
+    null,
+    {}
    ]
   ]
+ },
+ "biblioteche_nazionali": {
+  "bnf | risposte | anno trovato": 31,
+  "dnb | nessun record | -": 31,
+  "bnf | risposte | -": 2,
+  "bnf | nessun record | -": 3
  }
 }

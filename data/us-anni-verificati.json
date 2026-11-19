@@ -3,20 +3,26 @@
 "Q1218608": [
 "ok",
 1931,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1931
+}
 ],
 "Q1217475": [
 "ok",
 1931,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1931
+}
 ],
 "Q1152214": [
 "nd",
@@ -24,9 +30,14 @@
 "openlibrary",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 2016,
+"loc": 2020
+}
 ],
 "Q571244": [
 "ok",
@@ -34,35 +45,47 @@
 "openlibrary",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"openlibrary": 1931
+}
 ],
 "Q1212765": [
 "ok",
 1931,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1931
+}
 ],
 "Q1197989": [
 "ok",
 1931,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1931
+}
 ],
 "Q6035197": [
 "ok",
 1931,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1931
+}
 ],
 "Q28419570": [
 "nd",
@@ -70,9 +93,13 @@
 "openlibrary",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 1980
+}
 ],
 "Q4190252": [
 "ok",
@@ -80,28 +107,37 @@
 "openlibrary",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"openlibrary": 1931
+}
 ],
 "Q7765142": [
-"nd",
-null,
-null,
+"ok",
+1931,
+"bnf",
 "2026-11-19",
 [
-"openlibrary",
-"loc"
-]
+"cce",
+"bnf"
+],
+{
+"bnf": 1931
+}
 ],
 "Q887062": [
-"nd",
-1966,
-"loc",
+"ok",
+1931,
+"bnf",
 "2026-11-19",
 [
-"openlibrary",
-"loc"
-]
+"cce",
+"bnf"
+],
+{
+"bnf": 1931
+}
 ],
 "Q1216006": [
 "nd",
@@ -109,29 +145,41 @@ null,
 "loc",
 "2026-11-19",
 [
+"cce",
+"dnb",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 1932,
+"loc": 1932
+}
 ],
 "Q1070729": [
-"nd",
-1932,
-"loc",
+"ok",
+1931,
+"bnf",
 "2026-11-19",
 [
-"openlibrary",
-"loc"
-]
+"cce",
+"bnf"
+],
+{
+"cce": 1932,
+"bnf": 1931
+}
 ],
 "Q2564588": [
-"nd",
-1986,
-"loc",
+"ok",
+1931,
+"cce",
 "2026-11-19",
 [
-"openlibrary",
-"loc"
-]
+"cce"
+],
+{
+"cce": 1931
+}
 ],
 "Q5990586": [
 "ok",
@@ -139,17 +187,23 @@ null,
 "openlibrary",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"openlibrary": 1931
+}
 ],
 "Q8039491": [
 "ok",
 1931,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1931
+}
 ],
 "Q265042": [
 "ok",
@@ -157,27 +211,39 @@ null,
 "openlibrary",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1932,
+"openlibrary": 1931
+}
 ],
 "Q3228173": [
 "ok",
 1931,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1931
+}
 ],
 "Q1171231": [
 "nd",
 1932,
-"loc",
+"cce",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"cce": 1932,
+"loc": 1932
+}
 ],
 "Q7414788": [
 "nd",
@@ -185,9 +251,14 @@ null,
 "loc",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 1933,
+"loc": 1933
+}
 ],
 "Q7271766": [
 "nd",
@@ -195,9 +266,13 @@ null,
 "loc",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"loc": 1994
+}
 ],
 "Q1141993": [
 "nd",
@@ -205,9 +280,15 @@ null,
 "loc",
 "2026-11-19",
 [
+"cce",
+"dnb",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 2006,
+"loc": 2006
+}
 ],
 "Q7718449": [
 "nd",
@@ -215,9 +296,14 @@ null,
 "loc",
 "2026-11-19",
 [
+"cce",
+"bnf",
 "openlibrary",
 "loc"
-]
+],
+{
+"loc": 2022
+}
 ],
 "Q1438006": [
 "nd",
@@ -225,18 +311,27 @@ null,
 "openlibrary",
 "2026-11-19",
 [
+"cce",
+"dnb",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 2016,
+"loc": 2017
+}
 ],
 "Q3290152": [
 "ok",
 1931,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1931
+}
 ],
 "Q7766907": [
 "nd",
@@ -244,9 +339,11 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q2498251": [
 "ok",
@@ -254,8 +351,11 @@ null,
 "openlibrary",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"openlibrary": 1931
+}
 ],
 "Q7711173": [
 "nd",
@@ -263,9 +363,13 @@ null,
 "openlibrary",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 2013
+}
 ],
 "Q1775716": [
 "nd",
@@ -273,18 +377,23 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q3881234": [
 "ok",
 1931,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1931
+}
 ],
 "Q5309555": [
 "ok",
@@ -292,8 +401,11 @@ null,
 "openlibrary",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"openlibrary": 1931
+}
 ],
 "Q6743438": [
 "nd",
@@ -301,18 +413,23 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q6663021": [
 "ok",
 1931,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1931
+}
 ],
 "Q1746433": [
 "nd",
@@ -320,19 +437,24 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
+"dnb",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q2836696": [
 "ok",
 1931,
-"loc",
+"cce",
 "2026-11-19",
 [
-"openlibrary",
-"loc"
-]
+"cce"
+],
+{
+"cce": 1931
+}
 ],
 "Q7722509": [
 "nd",
@@ -340,47 +462,59 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q7460836": [
 "ok",
 1931,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1931
+}
 ],
 "Q4659979": [
 "ok",
 1931,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1931
+}
 ],
 "Q573765": [
-"prima",
-1930,
-"openlibrary",
+"ok",
+1931,
+"cce",
 "2026-11-19",
 [
-"openlibrary",
-"loc"
-]
+"cce"
+],
+{
+"cce": 1931
+}
 ],
 "Q3506429": [
 "ok",
 1931,
-"loc",
+"cce",
 "2026-11-19",
 [
-"openlibrary",
-"loc"
-]
+"cce"
+],
+{
+"cce": 1931
+}
 ],
 "Q7069500": [
 "nd",
@@ -388,9 +522,11 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q874809": [
 "nd",
@@ -398,28 +534,38 @@ null,
 "loc",
 "2026-11-19",
 [
+"cce",
+"dnb",
 "openlibrary",
 "loc"
-]
+],
+{
+"loc": 1965
+}
 ],
 "Q119144545": [
 "ok",
 1931,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1931
+}
 ],
 "Q2836721": [
 "ok",
 1931,
-"loc",
+"cce",
 "2026-11-19",
 [
-"openlibrary",
-"loc"
-]
+"cce"
+],
+{
+"cce": 1931
+}
 ],
 "Q1194666": [
 "nd",
@@ -427,9 +573,12 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
+"dnb",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q43578331": [
 "nd",
@@ -437,9 +586,15 @@ null,
 "loc",
 "2026-11-19",
 [
+"cce",
+"bnf",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 1932,
+"loc": 1932
+}
 ],
 "Q7252252": [
 "ok",
@@ -447,18 +602,26 @@ null,
 "openlibrary",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce",
+"dnb"
+],
+{
+"openlibrary": 1931
+}
 ],
 "Q1885291": [
-"nd",
-1933,
-"loc",
+"ok",
+1931,
+"bnf",
 "2026-11-19",
 [
-"openlibrary",
-"loc"
-]
+"cce",
+"bnf"
+],
+{
+"cce": 1933,
+"bnf": 1931
+}
 ],
 "Q7767973": [
 "nd",
@@ -466,9 +629,13 @@ null,
 "openlibrary",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 2006
+}
 ],
 "Q1214380": [
 "nd",
@@ -476,9 +643,12 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
+"dnb",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q1170330": [
 "nd",
@@ -486,9 +656,12 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
+"dnb",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q7760465": [
 "nd",
@@ -496,9 +669,14 @@ null,
 "openlibrary",
 "2026-11-19",
 [
+"cce",
+"bnf",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 2007
+}
 ],
 "Q1306780": [
 "nd",
@@ -506,9 +684,15 @@ null,
 "loc",
 "2026-11-19",
 [
+"cce",
+"dnb",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 1933,
+"loc": 1933
+}
 ],
 "Q7939007": [
 "nd",
@@ -516,27 +700,38 @@ null,
 "loc",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 1964,
+"loc": 1950
+}
 ],
 "Q7713437": [
 "ok",
 1931,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1931
+}
 ],
 "Q3109849": [
 "ok",
 1931,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1931
+}
 ],
 "Q5047445": [
 "ok",
@@ -544,9 +739,11 @@ null,
 "loc",
 "2026-11-19",
 [
-"openlibrary",
-"loc"
-]
+"cce"
+],
+{
+"loc": 1931
+}
 ],
 "Q5670870": [
 "nd",
@@ -554,9 +751,11 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q6770866": [
 "nd",
@@ -564,9 +763,14 @@ null,
 "openlibrary",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 1946,
+"loc": 1957
+}
 ],
 "Q11247830": [
 "nd",
@@ -574,9 +778,15 @@ null,
 "loc",
 "2026-11-19",
 [
+"cce",
+"dnb",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 1977,
+"loc": 1977
+}
 ],
 "Q1192045": [
 "nd",
@@ -584,9 +794,15 @@ null,
 "loc",
 "2026-11-19",
 [
+"cce",
+"dnb",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 1933,
+"loc": 1933
+}
 ],
 "Q1192982": [
 "nd",
@@ -594,9 +810,12 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
+"dnb",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q938770": [
 "nd",
@@ -604,9 +823,12 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
+"dnb",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q7687019": [
 "ok",
@@ -614,36 +836,52 @@ null,
 "openlibrary",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1932,
+"openlibrary": 1931
+}
 ],
 "Q3821967": [
 "prima",
 1930,
-"loc",
+"cce",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"cce": 1930,
+"openlibrary": 1930,
+"loc": 1930
+}
 ],
 "Q7727380": [
 "ok",
 1931,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1931
+}
 ],
 "Q96387336": [
 "ok",
 1931,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1931
+}
 ],
 "Q1696432": [
 "nd",
@@ -651,85 +889,122 @@ null,
 "loc",
 "2026-11-19",
 [
+"cce",
+"dnb",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 2019,
+"loc": 1985
+}
 ],
 "Q1885266": [
-"nd",
-2025,
-"loc",
+"ok",
+1931,
+"bnf",
 "2026-11-19",
 [
-"openlibrary",
-"loc"
-]
+"cce",
+"bnf"
+],
+{
+"bnf": 1931
+}
 ],
 "Q1366540": [
 "nd",
-1987,
-"loc",
+1976,
+"bnf",
 "2026-11-19",
 [
+"cce",
+"bnf",
 "openlibrary",
 "loc"
-]
+],
+{
+"bnf": 1976,
+"loc": 1987
+}
 ],
 "Q17031427": [
 "ok",
 1931,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1931
+}
 ],
 "Q3220209": [
 "prima",
 1930,
-"loc",
+"cce",
 "2026-11-19",
 [
+"cce",
+"bnf",
 "openlibrary",
 "loc"
-]
+],
+{
+"cce": 1930,
+"openlibrary": 1930,
+"loc": 1930
+}
 ],
 "Q4003978": [
 "ok",
 1931,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1931
+}
 ],
 "Q5019855": [
 "ok",
 1931,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1931
+}
 ],
 "Q56308426": [
 "ok",
 1931,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1931
+}
 ],
 "Q328061": [
-"nd",
-1963,
-"openlibrary",
+"ok",
+1931,
+"bnf",
 "2026-11-19",
 [
-"openlibrary",
-"loc"
-]
+"cce",
+"bnf"
+],
+{
+"bnf": 1931
+}
 ],
 "Q5437626": [
 "ok",
@@ -737,8 +1012,11 @@ null,
 "openlibrary",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"openlibrary": 1931
+}
 ],
 "Q7720011": [
 "nd",
@@ -746,9 +1024,14 @@ null,
 "loc",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 1937,
+"loc": 1937
+}
 ],
 "Q16210839": [
 "nd",
@@ -756,9 +1039,14 @@ null,
 "loc",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 1975,
+"loc": 1975
+}
 ],
 "Q7756737": [
 "ok",
@@ -766,9 +1054,12 @@ null,
 "loc",
 "2026-11-19",
 [
-"openlibrary",
-"loc"
-]
+"cce",
+"dnb"
+],
+{
+"loc": 1931
+}
 ],
 "Q811229": [
 "nd",
@@ -776,18 +1067,27 @@ null,
 "loc",
 "2026-11-19",
 [
+"cce",
+"dnb",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 2012,
+"loc": 2012
+}
 ],
 "Q7974168": [
 "ok",
 1931,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1931
+}
 ],
 "Q6492731": [
 "ok",
@@ -795,8 +1095,11 @@ null,
 "openlibrary",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"openlibrary": 1931
+}
 ],
 "Q1195963": [
 "nd",
@@ -804,9 +1107,12 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
+"dnb",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q3274361": [
 "nd",
@@ -814,9 +1120,11 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q4050857": [
 "nd",
@@ -824,9 +1132,13 @@ null,
 "openlibrary",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 1990
+}
 ],
 "Q6929263": [
 "nd",
@@ -834,9 +1146,11 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q154783": [
 "nd",
@@ -844,19 +1158,24 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q1404733": [
-"nd",
-2025,
-"loc",
+"ok",
+1931,
+"bnf",
 "2026-11-19",
 [
-"openlibrary",
-"loc"
-]
+"cce",
+"bnf"
+],
+{
+"bnf": 1931
+}
 ],
 "Q7990995": [
 "nd",
@@ -864,9 +1183,13 @@ null,
 "openlibrary",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 1937
+}
 ],
 "Q6683419": [
 "ok",
@@ -874,18 +1197,24 @@ null,
 "openlibrary",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"openlibrary": 1931
+}
 ],
 "Q1732704": [
-"nd",
-null,
-null,
+"ok",
+1931,
+"bnf",
 "2026-11-19",
 [
-"openlibrary",
-"loc"
-]
+"cce",
+"bnf"
+],
+{
+"bnf": 1931
+}
 ],
 "Q8346134": [
 "nd",
@@ -893,29 +1222,37 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q3209740": [
-"nd",
-null,
-null,
+"ok",
+1931,
+"bnf",
 "2026-11-19",
 [
-"openlibrary",
-"loc"
-]
+"cce",
+"bnf"
+],
+{
+"bnf": 1931
+}
 ],
 "Q1885267": [
-"nd",
-null,
-null,
+"ok",
+1931,
+"bnf",
 "2026-11-19",
 [
-"openlibrary",
-"loc"
-]
+"cce",
+"bnf"
+],
+{
+"bnf": 1931
+}
 ],
 "Q4915806": [
 "nd",
@@ -923,9 +1260,11 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q7286666": [
 "nd",
@@ -933,19 +1272,24 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q6461108": [
 "ok",
 1931,
-"loc",
+"bnf",
 "2026-11-19",
 [
-"openlibrary",
-"loc"
-]
+"cce",
+"bnf"
+],
+{
+"bnf": 1931
+}
 ],
 "Q7736867": [
 "nd",
@@ -953,9 +1297,11 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q7625506": [
 "nd",
@@ -963,18 +1309,23 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q16385287": [
 "ok",
 1931,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1931
+}
 ],
 "Q6151026": [
 "ok",
@@ -982,17 +1333,23 @@ null,
 "openlibrary",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"openlibrary": 1931
+}
 ],
 "Q7111757": [
 "ok",
 1931,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1931
+}
 ],
 "Q11931224": [
 "nd",
@@ -1000,38 +1357,51 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q523506": [
 "nd",
-1970,
-"loc",
+1954,
+"bnf",
 "2026-11-19",
 [
+"cce",
+"bnf",
 "openlibrary",
 "loc"
-]
+],
+{
+"bnf": 1954,
+"loc": 1970
+}
 ],
 "Q4952168": [
 "ok",
 1931,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1931
+}
 ],
 "Q5050296": [
 "ok",
 1931,
-"loc",
+"cce",
 "2026-11-19",
 [
-"openlibrary",
-"loc"
-]
+"cce"
+],
+{
+"cce": 1931
+}
 ],
 "Q98078403": [
 "ok",
@@ -1039,8 +1409,11 @@ null,
 "openlibrary",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"openlibrary": 1931
+}
 ],
 "Q21085990": [
 "nd",
@@ -1048,19 +1421,31 @@ null,
 "loc",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 1954,
+"loc": 1954
+}
 ],
 "Q20726178": [
-"nd",
-1933,
-"loc",
+"prima",
+1930,
+"bnf",
 "2026-11-19",
 [
+"cce",
+"bnf",
 "openlibrary",
 "loc"
-]
+],
+{
+"bnf": 1930,
+"openlibrary": 1933,
+"loc": 1933
+}
 ],
 "Q4928550": [
 "nd",
@@ -1068,19 +1453,26 @@ null,
 "openlibrary",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 2014
+}
 ],
 "Q3548512": [
-"nd",
-1993,
-"loc",
+"ok",
+1931,
+"bnf",
 "2026-11-19",
 [
-"openlibrary",
-"loc"
-]
+"cce",
+"bnf"
+],
+{
+"bnf": 1931
+}
 ],
 "Q4732223": [
 "nd",
@@ -1088,28 +1480,38 @@ null,
 "openlibrary",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 2014
+}
 ],
 "Q11967379": [
 "ok",
 1931,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1931
+}
 ],
 "Q972066": [
-"nd",
-1991,
-"loc",
+"ok",
+1931,
+"bnf",
 "2026-11-19",
 [
-"openlibrary",
-"loc"
-]
+"cce",
+"bnf"
+],
+{
+"bnf": 1931
+}
 ],
 "Q21657640": [
 "nd",
@@ -1117,18 +1519,23 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q3887314": [
 "ok",
 1931,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1931
+}
 ],
 "Q17278594": [
 "nd",
@@ -1136,9 +1543,14 @@ null,
 "loc",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 1978,
+"loc": 1978
+}
 ],
 "Q4960195": [
 "nd",
@@ -1146,18 +1558,23 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q96378028": [
 "ok",
 1931,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1931
+}
 ],
 "Q5121809": [
 "nd",
@@ -1165,9 +1582,13 @@ null,
 "openlibrary",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 2020
+}
 ],
 "Q7767852": [
 "nd",
@@ -1175,9 +1596,11 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q7764170": [
 "nd",
@@ -1185,9 +1608,11 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q7707689": [
 "nd",
@@ -1195,9 +1620,13 @@ null,
 "openlibrary",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 2014
+}
 ],
 "Q9369134": [
 "nd",
@@ -1205,9 +1634,11 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q2252950": [
 "nd",
@@ -1215,9 +1646,11 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q11757814": [
 "ok",
@@ -1225,27 +1658,36 @@ null,
 "openlibrary",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"openlibrary": 1931
+}
 ],
 "Q3206458": [
-"nd",
-null,
-null,
+"ok",
+1931,
+"bnf",
 "2026-11-19",
 [
-"openlibrary",
-"loc"
-]
+"cce",
+"bnf"
+],
+{
+"bnf": 1931
+}
 ],
 "Q2824300": [
 "ok",
 1931,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1931
+}
 ],
 "Q1213323": [
 "nd",
@@ -1253,18 +1695,24 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
+"dnb",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q1430492": [
 "ok",
 1931,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1931
+}
 ],
 "Q6043023": [
 "ok",
@@ -1272,8 +1720,11 @@ null,
 "openlibrary",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"openlibrary": 1931
+}
 ],
 "Q17538871": [
 "nd",
@@ -1281,9 +1732,14 @@ null,
 "loc",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 1934,
+"loc": 1934
+}
 ],
 "Q19135670": [
 "nd",
@@ -1291,19 +1747,29 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q21743249": [
 "nd",
 1933,
-"loc",
+"cce",
 "2026-11-19",
 [
+"cce",
+"bnf",
 "openlibrary",
 "loc"
-]
+],
+{
+"cce": 1933,
+"bnf": 2003,
+"openlibrary": 1933,
+"loc": 1933
+}
 ],
 "Q21995450": [
 "nd",
@@ -1311,9 +1777,14 @@ null,
 "openlibrary",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 1948,
+"loc": 1956
+}
 ],
 "Q116150984": [
 "nd",
@@ -1321,9 +1792,13 @@ null,
 "loc",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"loc": 1973
+}
 ],
 "Q952083": [
 "nd",
@@ -1331,28 +1806,36 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q1371979": [
 "ok",
 1931,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1931
+}
 ],
 "Q1809904": [
-"nd",
-1969,
-"loc",
+"ok",
+1931,
+"bnf",
 "2026-11-19",
 [
-"openlibrary",
-"loc"
-]
+"cce",
+"bnf"
+],
+{
+"bnf": 1931
+}
 ],
 "Q5981118": [
 "nd",
@@ -1360,9 +1843,14 @@ null,
 "loc",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 2002,
+"loc": 2002
+}
 ],
 "Q10472591": [
 "nd",
@@ -1370,9 +1858,14 @@ null,
 "loc",
 "2026-11-19",
 [
+"cce",
+"dnb",
 "openlibrary",
 "loc"
-]
+],
+{
+"loc": 1971
+}
 ],
 "Q11792659": [
 "nd",
@@ -1380,9 +1873,14 @@ null,
 "openlibrary",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 1934,
+"loc": 1947
+}
 ],
 "Q12355204": [
 "nd",
@@ -1390,9 +1888,11 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q16407463": [
 "nd",
@@ -1400,9 +1900,11 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q18620436": [
 "nd",
@@ -1410,9 +1912,11 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q18679627": [
 "nd",
@@ -1420,9 +1924,13 @@ null,
 "loc",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"loc": 1932
+}
 ],
 "Q28610697": [
 "nd",
@@ -1430,9 +1938,11 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q28653530": [
 "nd",
@@ -1440,18 +1950,23 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q30900938": [
 "ok",
 1931,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1931
+}
 ],
 "Q104827186": [
 "nd",
@@ -1459,9 +1974,11 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q106603100": [
 "nd",
@@ -1469,9 +1986,11 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q117353888": [
 "nd",
@@ -1479,9 +1998,14 @@ null,
 "openlibrary",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 1950,
+"loc": 1962
+}
 ],
 "Q130472608": [
 "nd",
@@ -1489,39 +2013,50 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ]
 },
 "2028": {
 "Q191949": [
 "ok",
 1932,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1932
+}
 ],
 "Q7173181": [
 "ok",
 1932,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1932
+}
 ],
 "Q774233": [
-"nd",
-1934,
-"loc",
+"ok",
+1932,
+"bnf",
 "2026-11-19",
 [
-"openlibrary",
-"loc"
-]
+"cce",
+"bnf"
+],
+{
+"bnf": 1932
+}
 ],
 "Q1195668": [
 "nd",
@@ -1529,28 +2064,39 @@ null,
 "loc",
 "2026-11-19",
 [
+"cce",
+"dnb",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 1960,
+"loc": 1953
+}
 ],
 "Q1823273": [
-"prima",
-1931,
-"openlibrary",
+"ok",
+1932,
+"cce",
 "2026-11-19",
 [
-"openlibrary",
-"loc"
-]
+"cce"
+],
+{
+"cce": 1932
+}
 ],
 "Q957248": [
 "ok",
 1932,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1932
+}
 ],
 "Q5142221": [
 "ok",
@@ -1558,8 +2104,11 @@ null,
 "openlibrary",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"openlibrary": 1932
+}
 ],
 "Q7727278": [
 "nd",
@@ -1567,38 +2116,56 @@ null,
 "loc",
 "2026-11-19",
 [
+"cce",
+"dnb",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 2005,
+"loc": 1976
+}
 ],
 "Q934396": [
 "ok",
 1932,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1932
+}
 ],
 "Q610428": [
 "nd",
 1933,
-"loc",
+"cce",
 "2026-11-19",
 [
+"cce",
+"dnb",
 "openlibrary",
 "loc"
-]
+],
+{
+"cce": 1933,
+"openlibrary": 1933,
+"loc": 1933
+}
 ],
 "Q1970223": [
-"prima",
-1920,
-"openlibrary",
+"ok",
+1932,
+"cce",
 "2026-11-19",
 [
-"openlibrary",
-"loc"
-]
+"cce"
+],
+{
+"cce": 1932
+}
 ],
 "Q63707": [
 "nd",
@@ -1606,27 +2173,39 @@ null,
 "loc",
 "2026-11-19",
 [
+"cce",
+"dnb",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 1970,
+"loc": 1952
+}
 ],
 "Q1169793": [
 "ok",
 1932,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1932
+}
 ],
 "Q1955781": [
 "ok",
 1932,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1932
+}
 ],
 "Q2512207": [
 "nd",
@@ -1634,18 +2213,23 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q1900478": [
 "ok",
 1932,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1932
+}
 ],
 "Q5264340": [
 "nd",
@@ -1653,9 +2237,14 @@ null,
 "loc",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 1933,
+"loc": 1933
+}
 ],
 "Q17036247": [
 "nd",
@@ -1663,9 +2252,11 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q3655833": [
 "nd",
@@ -1673,9 +2264,13 @@ null,
 "openlibrary",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 1933
+}
 ],
 "Q370698": [
 "nd",
@@ -1683,9 +2278,14 @@ null,
 "openlibrary",
 "2026-11-19",
 [
+"cce",
+"dnb",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 1956
+}
 ],
 "Q751574": [
 "nd",
@@ -1693,45 +2293,62 @@ null,
 "loc",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 1941,
+"loc": 1941
+}
 ],
 "Q257144": [
 "ok",
 1932,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1932
+}
 ],
 "Q2182784": [
 "ok",
 1932,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1932
+}
 ],
 "Q1529809": [
 "ok",
 1932,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1932
+}
 ],
 "Q20657367": [
 "ok",
 1932,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1932
+}
 ],
 "Q6372683": [
 "nd",
@@ -1739,9 +2356,13 @@ null,
 "openlibrary",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 2019
+}
 ],
 "Q1746652": [
 "nd",
@@ -1749,9 +2370,14 @@ null,
 "openlibrary",
 "2026-11-19",
 [
+"cce",
+"dnb",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 1933
+}
 ],
 "Q2614387": [
 "nd",
@@ -1759,18 +2385,25 @@ null,
 "loc",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"loc": 2020
+}
 ],
 "Q7562273": [
 "ok",
 1932,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1932
+}
 ],
 "Q357328": [
 "nd",
@@ -1778,9 +2411,15 @@ null,
 "loc",
 "2026-11-19",
 [
+"cce",
+"dnb",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 1970,
+"loc": 1970
+}
 ],
 "Q1192235": [
 "nd",
@@ -1788,9 +2427,15 @@ null,
 "loc",
 "2026-11-19",
 [
+"cce",
+"dnb",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 2017,
+"loc": 2017
+}
 ],
 "Q5216075": [
 "ok",
@@ -1798,8 +2443,12 @@ null,
 "openlibrary",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1933,
+"openlibrary": 1932
+}
 ],
 "Q17060239": [
 "nd",
@@ -1807,19 +2456,28 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q1706363": [
-"prima",
+"nd",
 1930,
 "loc",
 "2026-11-19",
 [
+"cce",
+"dnb",
 "openlibrary",
 "loc"
-]
+],
+{
+"cce": 1933,
+"openlibrary": 1933,
+"loc": 1930
+}
 ],
 "Q104829995": [
 "nd",
@@ -1827,9 +2485,13 @@ null,
 "openlibrary",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 2009
+}
 ],
 "Q1171410": [
 "nd",
@@ -1837,19 +2499,29 @@ null,
 "loc",
 "2026-11-19",
 [
+"cce",
+"dnb",
 "openlibrary",
 "loc"
-]
+],
+{
+"loc": 2002
+}
 ],
 "Q7745219": [
-"prima",
+"nd",
 1896,
 "loc",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 1990,
+"loc": 1896
+}
 ],
 "Q7718329": [
 "nd",
@@ -1857,9 +2529,13 @@ null,
 "openlibrary",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 1934
+}
 ],
 "Q1075805": [
 "nd",
@@ -1867,9 +2543,14 @@ null,
 "loc",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 1970,
+"loc": 1970
+}
 ],
 "Q8036886": [
 "nd",
@@ -1877,9 +2558,13 @@ null,
 "openlibrary",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 1975
+}
 ],
 "Q5278419": [
 "ok",
@@ -1887,8 +2572,11 @@ null,
 "openlibrary",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"openlibrary": 1932
+}
 ],
 "Q12410009": [
 "ok",
@@ -1896,8 +2584,11 @@ null,
 "openlibrary",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"openlibrary": 1932
+}
 ],
 "Q6165398": [
 "nd",
@@ -1905,9 +2596,14 @@ null,
 "loc",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 2011,
+"loc": 1966
+}
 ],
 "Q3791139": [
 "nd",
@@ -1915,9 +2611,14 @@ null,
 "loc",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 1934,
+"loc": 1934
+}
 ],
 "Q5247648": [
 "ok",
@@ -1925,18 +2626,23 @@ null,
 "openlibrary",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"openlibrary": 1932
+}
 ],
 "Q7173756": [
-"prima",
-1800,
-"openlibrary",
+"ok",
+1932,
+"cce",
 "2026-11-19",
 [
-"openlibrary",
-"loc"
-]
+"cce"
+],
+{
+"cce": 1932
+}
 ],
 "Q104830453": [
 "nd",
@@ -1944,9 +2650,11 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q5267101": [
 "ok",
@@ -1954,9 +2662,11 @@ null,
 "loc",
 "2026-11-19",
 [
-"openlibrary",
-"loc"
-]
+"cce"
+],
+{
+"loc": 1932
+}
 ],
 "Q104856374": [
 "nd",
@@ -1964,9 +2674,14 @@ null,
 "loc",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 1937,
+"loc": 1937
+}
 ],
 "Q7234896": [
 "nd",
@@ -1974,19 +2689,25 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q7758787": [
-"nd",
-1933,
-"loc",
+"ok",
+1932,
+"bnf",
 "2026-11-19",
 [
-"openlibrary",
-"loc"
-]
+"cce",
+"bnf"
+],
+{
+"cce": 1933,
+"bnf": 1932
+}
 ],
 "Q5872036": [
 "nd",
@@ -1994,37 +2715,47 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q21162245": [
 "ok",
 1932,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1932
+}
 ],
 "Q5318076": [
 "ok",
 1932,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1932
+}
 ],
 "Q8199988": [
 "ok",
 1932,
-"loc",
+"cce",
 "2026-11-19",
 [
-"openlibrary",
-"loc"
-]
+"cce"
+],
+{
+"cce": 1932
+}
 ],
 "Q1979886": [
 "nd",
@@ -2032,18 +2763,25 @@ null,
 "loc",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"loc": 1971
+}
 ],
 "Q16385280": [
 "ok",
 1932,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1932
+}
 ],
 "Q3412860": [
 "ok",
@@ -2051,56 +2789,75 @@ null,
 "loc",
 "2026-11-19",
 [
-"openlibrary",
-"loc"
-]
+"cce"
+],
+{
+"loc": 1932
+}
 ],
 "Q85806586": [
 "ok",
 1932,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1932
+}
 ],
 "Q6383214": [
 "ok",
 1932,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1932
+}
 ],
 "Q7735448": [
-"prima",
-1923,
-"openlibrary",
+"ok",
+1932,
+"cce",
 "2026-11-19",
 [
-"openlibrary",
-"loc"
-]
+"cce"
+],
+{
+"cce": 1932
+}
 ],
 "Q8000821": [
 "ok",
 1932,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1932
+}
 ],
 "Q15032732": [
 "nd",
 1933,
-"loc",
+"cce",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"cce": 1933,
+"openlibrary": 1933,
+"loc": 1933
+}
 ],
 "Q5677810": [
 "nd",
@@ -2108,37 +2865,50 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q3818205": [
 "ok",
 1932,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1932
+}
 ],
 "Q3772100": [
-"prima",
+"nd",
 1896,
 "loc",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 1896,
+"loc": 1896
+}
 ],
 "Q23035595": [
 "ok",
 1932,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1932
+}
 ],
 "Q5614417": [
 "ok",
@@ -2146,45 +2916,63 @@ null,
 "openlibrary",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"openlibrary": 1932
+}
 ],
 "Q8058128": [
 "ok",
 1932,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1932
+}
 ],
 "Q7797601": [
 "ok",
 1932,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1932
+}
 ],
 "Q7804791": [
 "nd",
 1933,
-"loc",
+"cce",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"cce": 1933,
+"openlibrary": 1933,
+"loc": 1933
+}
 ],
 "Q5910588": [
 "ok",
 1932,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1932
+}
 ],
 "Q8046351": [
 "nd",
@@ -2192,9 +2980,14 @@ null,
 "loc",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 1942,
+"loc": 1942
+}
 ],
 "Q7090080": [
 "nd",
@@ -2202,18 +2995,26 @@ null,
 "openlibrary",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 1963,
+"loc": 1966
+}
 ],
 "Q3794795": [
 "ok",
 1932,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1932
+}
 ],
 "Q7765614": [
 "nd",
@@ -2221,9 +3022,14 @@ null,
 "loc",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 1973,
+"loc": 1973
+}
 ],
 "Q3795569": [
 "nd",
@@ -2231,9 +3037,13 @@ null,
 "openlibrary",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 2004
+}
 ],
 "Q7773771": [
 "nd",
@@ -2241,9 +3051,11 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q1112060": [
 "nd",
@@ -2251,9 +3063,14 @@ null,
 "loc",
 "2026-11-19",
 [
+"cce",
+"bnf",
 "openlibrary",
 "loc"
-]
+],
+{
+"loc": 2007
+}
 ],
 "Q7768564": [
 "nd",
@@ -2261,9 +3078,11 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q7759037": [
 "nd",
@@ -2271,9 +3090,13 @@ null,
 "openlibrary",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 2016
+}
 ],
 "Q13017091": [
 "nd",
@@ -2281,9 +3104,11 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q6925288": [
 "nd",
@@ -2291,27 +3116,35 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q17151836": [
 "ok",
 1932,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1932
+}
 ],
 "Q7208469": [
 "ok",
 1932,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1932
+}
 ],
 "Q735269": [
 "nd",
@@ -2319,28 +3152,38 @@ null,
 "loc",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"loc": 1993
+}
 ],
 "Q1325013": [
-"nd",
-1967,
-"loc",
+"ok",
+1932,
+"bnf",
 "2026-11-19",
 [
-"openlibrary",
-"loc"
-]
+"cce",
+"bnf"
+],
+{
+"bnf": 1932
+}
 ],
 "Q110732464": [
 "ok",
 1932,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1932
+}
 ],
 "Q5058034": [
 "nd",
@@ -2348,9 +3191,14 @@ null,
 "openlibrary",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 1992,
+"loc": 2020
+}
 ],
 "Q16387178": [
 "nd",
@@ -2358,19 +3206,26 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q17173648": [
 "nd",
-null,
-null,
+1933,
+"bnf",
 "2026-11-19",
 [
+"cce",
+"bnf",
 "openlibrary",
 "loc"
-]
+],
+{
+"bnf": 1933
+}
 ],
 "Q6817094": [
 "ok",
@@ -2378,45 +3233,64 @@ null,
 "openlibrary",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"openlibrary": 1932
+}
 ],
 "Q7656082": [
 "ok",
 1932,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1932
+}
 ],
 "Q16677418": [
-"nd",
-2002,
-"loc",
+"prima",
+1930,
+"bnf",
 "2026-11-19",
 [
+"cce",
+"bnf",
 "openlibrary",
 "loc"
-]
+],
+{
+"bnf": 1930,
+"openlibrary": 2002,
+"loc": 2002
+}
 ],
 "Q23035603": [
 "ok",
 1932,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1932
+}
 ],
 "Q7759291": [
 "ok",
 1932,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1932
+}
 ],
 "Q5271049": [
 "nd",
@@ -2424,18 +3298,25 @@ null,
 "loc",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"loc": 1977
+}
 ],
 "Q60785449": [
 "ok",
 1932,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1932
+}
 ],
 "Q16385501": [
 "nd",
@@ -2443,19 +3324,25 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q8025166": [
 "nd",
-null,
-null,
+1933,
+"cce",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"cce": 1933
+}
 ],
 "Q5352372": [
 "nd",
@@ -2463,38 +3350,51 @@ null,
 "loc",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 1968,
+"loc": 1968
+}
 ],
 "Q109167813": [
 "ok",
 1932,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1932
+}
 ],
 "Q5098569": [
 "ok",
 1932,
-"loc",
+"cce",
 "2026-11-19",
 [
-"openlibrary",
-"loc"
-]
+"cce"
+],
+{
+"cce": 1932
+}
 ],
 "Q3210349": [
-"nd",
-null,
-null,
+"ok",
+1932,
+"bnf",
 "2026-11-19",
 [
-"openlibrary",
-"loc"
-]
+"cce",
+"bnf"
+],
+{
+"bnf": 1932
+}
 ],
 "Q7099218": [
 "nd",
@@ -2502,27 +3402,35 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q96373014": [
 "ok",
 1932,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1932
+}
 ],
 "Q86753954": [
 "ok",
 1932,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1932
+}
 ],
 "Q18351196": [
 "nd",
@@ -2530,19 +3438,24 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q3237799": [
-"nd",
-1988,
-"loc",
+"ok",
+1932,
+"bnf",
 "2026-11-19",
 [
-"openlibrary",
-"loc"
-]
+"cce",
+"bnf"
+],
+{
+"bnf": 1932
+}
 ],
 "Q7170795": [
 "nd",
@@ -2550,9 +3463,11 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q23035584": [
 "nd",
@@ -2560,18 +3475,26 @@ null,
 "openlibrary",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 1944,
+"loc": 2008
+}
 ],
 "Q29379121": [
 "ok",
 1932,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1932
+}
 ],
 "Q17633276": [
 "nd",
@@ -2579,19 +3502,27 @@ null,
 "loc",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 1984,
+"loc": 1984
+}
 ],
 "Q1885256": [
-"nd",
-2014,
-"loc",
+"ok",
+1932,
+"bnf",
 "2026-11-19",
 [
-"openlibrary",
-"loc"
-]
+"cce",
+"bnf"
+],
+{
+"bnf": 1932
+}
 ],
 "Q18392587": [
 "nd",
@@ -2599,9 +3530,11 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q5223407": [
 "nd",
@@ -2609,9 +3542,13 @@ null,
 "openlibrary",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 2014
+}
 ],
 "Q16999020": [
 "nd",
@@ -2619,19 +3556,26 @@ null,
 "openlibrary",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 2020
+}
 ],
 "Q3204486": [
-"nd",
-1934,
-"loc",
+"ok",
+1932,
+"bnf",
 "2026-11-19",
 [
-"openlibrary",
-"loc"
-]
+"cce",
+"bnf"
+],
+{
+"bnf": 1932
+}
 ],
 "Q7929510": [
 "nd",
@@ -2639,18 +3583,26 @@ null,
 "openlibrary",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 2014
+}
 ],
 "Q691326": [
 "ok",
 1932,
-"openlibrary",
+"bnf",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce",
+"bnf"
+],
+{
+"bnf": 1932
+}
 ],
 "Q7562673": [
 "nd",
@@ -2658,19 +3610,27 @@ null,
 "loc",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 1957,
+"loc": 1957
+}
 ],
 "Q685630": [
-"nd",
-null,
-null,
+"ok",
+1932,
+"bnf",
 "2026-11-19",
 [
-"openlibrary",
-"loc"
-]
+"cce",
+"bnf"
+],
+{
+"bnf": 1932
+}
 ],
 "Q4367932": [
 "nd",
@@ -2678,19 +3638,25 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q3225099": [
-"nd",
-1933,
-"loc",
+"ok",
+1932,
+"bnf",
 "2026-11-19",
 [
-"openlibrary",
-"loc"
-]
+"cce",
+"bnf"
+],
+{
+"cce": 1933,
+"bnf": 1932
+}
 ],
 "Q59198105": [
 "nd",
@@ -2698,27 +3664,35 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q3824666": [
 "ok",
 1932,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1932
+}
 ],
 "Q3824667": [
 "ok",
 1932,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1932
+}
 ],
 "Q5952364": [
 "nd",
@@ -2726,9 +3700,11 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q7228197": [
 "nd",
@@ -2736,9 +3712,11 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q10432740": [
 "ok",
@@ -2746,27 +3724,35 @@ null,
 "openlibrary",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"openlibrary": 1932
+}
 ],
 "Q10493925": [
 "ok",
 1932,
-"loc",
+"cce",
 "2026-11-19",
 [
-"openlibrary",
-"loc"
-]
+"cce"
+],
+{
+"cce": 1932
+}
 ],
 "Q13554420": [
 "ok",
 1932,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1932
+}
 ],
 "Q16648039": [
 "nd",
@@ -2774,9 +3760,11 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q21651654": [
 "nd",
@@ -2784,9 +3772,11 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q21864337": [
 "nd",
@@ -2794,9 +3784,11 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q22067782": [
 "nd",
@@ -2804,9 +3796,11 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q29559196": [
 "nd",
@@ -2814,9 +3808,11 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q55736663": [
 "nd",
@@ -2824,19 +3820,23 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q1198971": [
 "ok",
 1932,
-"loc",
+"cce",
 "2026-11-19",
 [
-"openlibrary",
-"loc"
-]
+"cce"
+],
+{
+"cce": 1932
+}
 ],
 "Q1217071": [
 "nd",
@@ -2844,9 +3844,14 @@ null,
 "loc",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 2006,
+"loc": 2006
+}
 ],
 "Q3794895": [
 "nd",
@@ -2854,18 +3859,23 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q3815410": [
 "ok",
 1932,
-"openlibrary",
+"cce",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce"
+],
+{
+"cce": 1932
+}
 ],
 "Q3828461": [
 "nd",
@@ -2873,9 +3883,13 @@ null,
 "openlibrary",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 2005
+}
 ],
 "Q4506215": [
 "nd",
@@ -2883,9 +3897,11 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q6500301": [
 "nd",
@@ -2893,9 +3909,11 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q11509176": [
 "nd",
@@ -2903,9 +3921,11 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q12218416": [
 "nd",
@@ -2913,9 +3933,11 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q12597454": [
 "nd",
@@ -2923,9 +3945,11 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q12599279": [
 "nd",
@@ -2933,9 +3957,11 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q12728549": [
 "nd",
@@ -2943,9 +3969,11 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q16407465": [
 "nd",
@@ -2953,9 +3981,11 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q19101057": [
 "nd",
@@ -2963,9 +3993,13 @@ null,
 "openlibrary",
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{
+"openlibrary": 2016
+}
 ],
 "Q19101656": [
 "nd",
@@ -2973,9 +4007,11 @@ null,
 null,
 "2026-11-19",
 [
+"cce",
 "openlibrary",
 "loc"
-]
+],
+{}
 ],
 "Q19217469": [
 "ok",
@@ -2983,8 +4019,12 @@ null,
 "openlibrary",
 "2026-11-19",
 [
-"openlibrary"
-]
+"cce",
+"dnb"
+],
+{
+"openlibrary": 1932
+}
 ],
 "Q21660419": [
 "nd",
