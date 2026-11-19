@@ -24,7 +24,22 @@ BUDGET = 48 * 60
 def main():
     inizio = time.time()
     # 1. la lista, come per il 2027
-    ops = opere.opere_anno(P)
+    # una classe alla volta: la domanda unica a Wikidata è andata in timeout (prova del 19/11/2026, lista vuota)
+    tutte, classi = {}, list(opere.CLASSI)
+    for c in classi:
+        for t in range(3):
+            opere.CLASSI = [c]
+            r = opere.opere_anno(P)
+            if r:
+                break
+            time.sleep(30)
+        for o in r:
+            tutte.setdefault(o["qid"], o)
+        print("classe", c, len(r))
+    opere.CLASSI = classi
+    ops = list(tutte.values())
+    if len(ops) < 20:
+        raise SystemExit("Lista del 1929 vuota o quasi: Wikidata non ha risposto. Prova NON valida, non scrivo risultati.")
     ops.sort(key=lambda o: -o["pagine"])
     ops = ops[:opere.MAX_OPERE]
     print("opere del 1929 da Wikidata:", len(ops))
