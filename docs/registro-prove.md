@@ -366,3 +366,15 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
   - opere in lingue senza catalogo nella catena (russo, ceco, giapponese…);
   - racconti usciti in rivista;
   - racconti postumi di Kafka, usciti dentro la raccolta del 1931 e non come libri a sé.
+
+## 19/11/2026 (notte) — Perché Gravelli è in cima alla classifica italiana
+- **Prova:** scripts/prova_visite.py. Per 6 autori della lista 2027 ha letto le visite mese per mese a it.wikipedia negli ultimi 12 mesi, separate per tipo di visitatore (persone, programmi, crawler), e poi il mese con più visite giorno per giorno.
+- **Cosa ha trovato:**
+  - Gravelli ha 19.430 visite da persone. Di queste 11.690 sono di febbraio 2026, e 9.380 arrivano da un solo giorno, il 9 febbraio; il 10 febbraio ne ha 1.718. Negli altri mesi le visite sono tra 560 e 1.020.
+  - Senza il picco, Gravelli ha circa 8.000 visite l'anno.
+  - Papini, Alvaro, Brecht, Walser e Milne hanno visite regolari, senza picchi di questo tipo.
+- **Errori di metodo:**
+  1. La somma dei 12 mesi conta per intero un picco di un giorno.
+  2. Il voto da 0 a 100 dà 100 a tutti i primi, quindi tra loro decide il numero grezzo, che è quello falsato dal picco.
+  3. L'aggiornamento riparte da solo quando non finisce (.incompleto): il 19/11 ha girato 8 volte, e la classifica cambia a ogni giro.
+- **Nota:** anche senza il picco, Gravelli su it.wikipedia ha più visite di Milne (circa 530 al mese) e di Walser. La classifica «Italia» misura solo la Wikipedia italiana.
