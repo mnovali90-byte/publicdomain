@@ -378,3 +378,18 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
   2. Il voto da 0 a 100 dà 100 a tutti i primi, quindi tra loro decide il numero grezzo, che è quello falsato dal picco.
   3. L'aggiornamento riparte da solo quando non finisce (.incompleto): il 19/11 ha girato 8 volte, e la classifica cambia a ogni giro.
 - **Nota:** anche senza il picco, Gravelli su it.wikipedia ha più visite di Milne (circa 530 al mese) e di Walser. La classifica «Italia» misura solo la Wikipedia italiana.
+
+## 19/11/2026 (notte) — Perché lo scaffale «Italiano» di Già pubblici ha solo 37 titoli
+- **Cosa ho guardato:** data/storico/opere.json, cioè le 3.000 opere degli scaffali, e data/storico/ricerca (l'archivio intero, 82.545 opere).
+- **Come sono costruiti gli scaffali:**
+  - chi entra: le 3.000 opere con più Wikipedia nel mondo, almeno 12 lingue (fama mondiale);
+  - in che ordine: le visite nella lingua del paese scelto (locale).
+  - La classifica degli autori invece usa la Wikipedia locale per tutti gli autori: è diverso.
+- **Lingue nelle 3.000:** inglese 725, francese 327, tedesco 292, greco antico 219, russo 183, latino 167, italiano 40.
+- **L'italiano spezzato:** dialetti toscani 5 (Divina Commedia), italiano medievale 6 (Decameron), napoletano 2.
+- **Non libri dentro le 3.000:** Lo schiaccianoci, Torah, Editto di Milano, testi biblici.
+- **Correzione proposta, da fare dopo il campione:**
+  - per ogni lingua, le opere più lette nella Wikipedia di quella lingua, prese dall'archivio intero;
+  - unire le varianti (italiano medievale e toscano → italiano; le varianti del latino → latino);
+  - solo libri e testi letterari;
+  - campione con i primi 30 per lingua, prima e dopo.
