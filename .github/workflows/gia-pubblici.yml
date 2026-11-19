@@ -35,7 +35,7 @@ jobs:
       - name: Ritratti da Wikimedia Commons
         continue-on-error: true   # senza ritratti la pagina mostra le iniziali
         run: python storico/ritratti.py
-      - name: Anni delle opere libere solo negli USA: conferma da Duke, Open Library, Library of Congress (docs/metodo-anni-opere.md)
+      - name: "Anni delle opere libere solo negli USA, conferma da Duke, Open Library, Library of Congress (docs/metodo-anni-opere.md)"
         continue-on-error: true
         run: python storico/verifica_anni.py 40
       - name: Dati e pagine
