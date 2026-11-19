@@ -40,11 +40,13 @@ jobs:
         run: python storico/verifica_anni.py 40
       - name: Dati e pagine
         run: python storico/pagina.py
+      - name: Schede autore (lo stato USA opera per opera dipende dagli anni verificati)
+        run: python scripts/pagine.py
       - name: Salva
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A data/storico gia-pubblici en/already-public
+          git add -A data/storico gia-pubblici en/already-public autore en/author
           if ! git diff --cached --quiet; then
             git commit -m "Già pubblici: pagina e dati del $(date -u +%Y-%m-%d)"
             for i in 1 2 3 4 5; do git pull --rebase --autostash -X theirs origin main && git push && break; sleep $((i*20)); done

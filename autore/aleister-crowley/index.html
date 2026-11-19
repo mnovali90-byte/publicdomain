@@ -72,6 +72,9 @@ main:has(.sa){max-width:720px;padding:20px 0 72px}
 .sa-asta{height:10px;background:var(--riquadro)}.sa-asta i{display:block;height:10px;background:var(--vermiglio)}
 .sa-val{font-size:14px;color:var(--muto)}.sa-val b{color:var(--ink)}
 .sa-azioni{padding:8px 24px 0}
+.usa .us{flex:none;font-family:var(--mono);font-size:12px;padding:2px 8px;border:1px solid #CFCCC2;color:var(--muto);white-space:nowrap}
+.usa .us.ok{background:#0E3B2E;border-color:#0E3B2E;color:var(--carta)}.usa .us.ver{background:#F2B705;border-color:#F2B705;color:var(--ink)}
+.faq details{border-top:1px solid #D9D6CC;padding:12px 0}.faq summary{cursor:pointer;font-weight:600;font-size:17px}.faq p{margin:8px 0 0;font-size:16px}
 .pg{list-style:none;margin:16px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
 .pg li{margin:0;background:var(--riquadro);padding:12px 14px;display:flex;flex-direction:column;gap:2px}
 .pg .p{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muto)}
@@ -116,17 +119,18 @@ footer{background:var(--ink);color:#B9B9C6;font-size:13px;padding:32px 20px}foot
 <p class="sa-nota">Calcolo indicativo, non è consulenza legale. <a href="/#regole-paesi">Le regole, paese per paese</a></p>
 </div>
 <section class="sa-sez">
-<h2>Opere principali</h2>
-<ul class="sa-opere">
-<li><span>Thelema</span></li>
-<li><span>The Book of the Law</span><span class="anno">1909</span></li>
-<li><span>abbazia di Thélema</span></li>
-<li><span>The Book of Lies</span><span class="anno">1912</span></li>
-<li><span>The Confessions of Aleister Crowley</span></li>
-<li><span>777 and Other Qabalistic Writings of Aleister Crowley</span></li>
-<li><span>Magick</span></li>
-<li><span>Magick Without Tears</span><span class="anno">1954</span></li>
+<h2>Opere principali · negli USA opera per opera</h2>
+<ul class="sa-opere usa">
+<li><span>Thelema<span class="anno"> </span></span><span class="us ">anno non noto</span></li>
+<li><span>The Book of the Law<span class="anno"> 1909</span></span><span class="us ver">da verificare</span></li>
+<li><span>abbazia di Thélema<span class="anno"> </span></span><span class="us ">anno non noto</span></li>
+<li><span>The Book of Lies<span class="anno"> 1912</span></span><span class="us ver">da verificare</span></li>
+<li><span>The Confessions of Aleister Crowley<span class="anno"> </span></span><span class="us ">anno non noto</span></li>
+<li><span>777 and Other Qabalistic Writings of Aleister Crowley<span class="anno"> </span></span><span class="us ">anno non noto</span></li>
+<li><span>Magick<span class="anno"> </span></span><span class="us ">anno non noto</span></li>
+<li><span>Magick Without Tears<span class="anno"> 1954</span></span><span class="us ">dal 2050</span></li>
 </ul>
+<p class="sa-nota">Negli USA conta l&#x27;anno di uscita di ogni opera (95 anni). «Libero» solo se l&#x27;anno di Wikidata è confermato da una seconda fonte (Duke, Open Library, Library of Congress); altrimenti «da verificare». Le date future usano l&#x27;anno di Wikidata.</p>
 <p class="sa-nota">Su 43 opere registrate in Wikidata, qui le più note.</p>
 </section>
 <section class="sa-sez">
@@ -146,6 +150,11 @@ footer{background:var(--ink);color:#B9B9C6;font-size:13px;padding:32px 20px}foot
 <div class="sa-barra"><div class="sa-bn">Nel mondo</div><div class="sa-asta"><i style="width:100%"></i></div><div class="sa-val">pagina Wikipedia in 78 lingue · <b>1° su 770</b></div></div>
 <p class="sa-nota">Misura la curiosità per l’autore (visite alle pagine Wikipedia), non le vendite dei suoi libri.</p>
 </section>
+<section class="sa-sez">
+<h2>Domande</h2>
+<div class="faq"><details open><summary>Quando Aleister Crowley entra in pubblico dominio in Italia?</summary><p>Il 1° gennaio 2018: Aleister Crowley è morto nel 1947 e in Italia le opere diventano libere 70 anni dopo la morte, dal 1° gennaio dell&#x27;anno successivo. Per gli autori di paesi alleati nella Seconda guerra mondiale va verificato caso per caso.</p></details></div>
+</section>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Quando Aleister Crowley entra in pubblico dominio in Italia?", "acceptedAnswer": {"@type": "Answer", "text": "Il 1° gennaio 2018: Aleister Crowley è morto nel 1947 e in Italia le opere diventano libere 70 anni dopo la morte, dal 1° gennaio dell'anno successivo. Per gli autori di paesi alleati nella Seconda guerra mondiale va verificato caso per caso."}}]}</script>
 <section class="sa-sez">
 <h2>Chi era</h2>
 <p class="sa-bio">Edward Alexander Crowley, detto Aleister, è stato un esoterista, astrologo, scrittore, poeta e alpinista britannico.</p>

@@ -72,6 +72,9 @@ main:has(.sa){max-width:720px;padding:20px 0 72px}
 .sa-asta{height:10px;background:var(--riquadro)}.sa-asta i{display:block;height:10px;background:var(--vermiglio)}
 .sa-val{font-size:14px;color:var(--muto)}.sa-val b{color:var(--ink)}
 .sa-azioni{padding:8px 24px 0}
+.usa .us{flex:none;font-family:var(--mono);font-size:12px;padding:2px 8px;border:1px solid #CFCCC2;color:var(--muto);white-space:nowrap}
+.usa .us.ok{background:#0E3B2E;border-color:#0E3B2E;color:var(--carta)}.usa .us.ver{background:#F2B705;border-color:#F2B705;color:var(--ink)}
+.faq details{border-top:1px solid #D9D6CC;padding:12px 0}.faq summary{cursor:pointer;font-weight:600;font-size:17px}.faq p{margin:8px 0 0;font-size:16px}
 .pg{list-style:none;margin:16px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
 .pg li{margin:0;background:var(--riquadro);padding:12px 14px;display:flex;flex-direction:column;gap:2px}
 .pg .p{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muto)}
@@ -116,17 +119,18 @@ footer{background:var(--ink);color:#B9B9C6;font-size:13px;padding:32px 20px}foot
 <p class="sa-nota">Indicative calculation, not legal advice. <a href="/en/#regole-paesi">The rules, country by country</a></p>
 </div>
 <section class="sa-sez">
-<h2>Main works</h2>
-<ul class="sa-opere">
-<li><span>The Scarlet Pimpernel</span><span class="anno">1905</span></li>
-<li><span>I Will Repay</span><span class="anno">1906</span></li>
-<li><span>Sir Percy Leads the Band</span><span class="anno">1936</span></li>
-<li><span>The Old Man in the Corner</span><span class="anno">1908</span></li>
-<li><span>Lady Molly of Scotland Yard</span></li>
-<li><span>A Bride of the Plains</span></li>
-<li><span>A Child of the Revolution</span></li>
-<li><span>A Sheaf of Bluebells</span><span class="anno">1917</span></li>
+<h2>Main works · in the USA work by work</h2>
+<ul class="sa-opere usa">
+<li><span>The Scarlet Pimpernel<span class="anno"> 1905</span></span><span class="us ver">to be checked</span></li>
+<li><span>I Will Repay<span class="anno"> 1906</span></span><span class="us ver">to be checked</span></li>
+<li><span>Sir Percy Leads the Band<span class="anno"> 1936</span></span><span class="us ">from 2032</span></li>
+<li><span>The Old Man in the Corner<span class="anno"> 1908</span></span><span class="us ver">to be checked</span></li>
+<li><span>Lady Molly of Scotland Yard<span class="anno"> </span></span><span class="us ">year unknown</span></li>
+<li><span>A Bride of the Plains<span class="anno"> </span></span><span class="us ">year unknown</span></li>
+<li><span>A Child of the Revolution<span class="anno"> </span></span><span class="us ">year unknown</span></li>
+<li><span>A Sheaf of Bluebells<span class="anno"> 1917</span></span><span class="us ver">to be checked</span></li>
 </ul>
+<p class="sa-nota">In the USA what counts is each work&#x27;s year of publication (95 years). «Free» only when the Wikidata year is confirmed by a second source (Duke, Open Library, Library of Congress); otherwise «to be checked». Future dates use the Wikidata year.</p>
 <p class="sa-nota">Of 47 works recorded in Wikidata, the best known.</p>
 </section>
 <section class="sa-sez">
@@ -146,6 +150,11 @@ footer{background:var(--ink);color:#B9B9C6;font-size:13px;padding:32px 20px}foot
 <div class="sa-barra"><div class="sa-bn">Worldwide</div><div class="sa-asta"><i style="width:98%"></i></div><div class="sa-val">Wikipedia page in 45 languages · <b>#8 of 770</b></div></div>
 <p class="sa-nota">Measures curiosity about the author (Wikipedia page views), not sales of their books.</p>
 </section>
+<section class="sa-sez">
+<h2>Questions</h2>
+<div class="faq"><details open><summary>When does Emma Orczy enter the public domain?</summary><p>In the UK and the EU on 1 January 2018: Emma Orczy died in 1947, and the works become free 70 years after death, from 1 January of the following year. In Spain on 1 January 2028.</p></details></div>
+</section>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "When does Emma Orczy enter the public domain?", "acceptedAnswer": {"@type": "Answer", "text": "In the UK and the EU on 1 January 2018: Emma Orczy died in 1947, and the works become free 70 years after death, from 1 January of the following year. In Spain on 1 January 2028."}}]}</script>
 <section class="sa-sez">
 <h2>Who they were</h2>
 <p class="sa-bio">Baroness Emma Magdalena Rozália Mária Jozefa Borbála Orczy de Orci, usually known as Baroness Orczy, was a Hungarian-born British novelist and playwright.</p>

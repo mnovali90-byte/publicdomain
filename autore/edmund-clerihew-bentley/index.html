@@ -72,6 +72,9 @@ main:has(.sa){max-width:720px;padding:20px 0 72px}
 .sa-asta{height:10px;background:var(--riquadro)}.sa-asta i{display:block;height:10px;background:var(--vermiglio)}
 .sa-val{font-size:14px;color:var(--muto)}.sa-val b{color:var(--ink)}
 .sa-azioni{padding:8px 24px 0}
+.usa .us{flex:none;font-family:var(--mono);font-size:12px;padding:2px 8px;border:1px solid #CFCCC2;color:var(--muto);white-space:nowrap}
+.usa .us.ok{background:#0E3B2E;border-color:#0E3B2E;color:var(--carta)}.usa .us.ver{background:#F2B705;border-color:#F2B705;color:var(--ink)}
+.faq details{border-top:1px solid #D9D6CC;padding:12px 0}.faq summary{cursor:pointer;font-weight:600;font-size:17px}.faq p{margin:8px 0 0;font-size:16px}
 .pg{list-style:none;margin:16px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
 .pg li{margin:0;background:var(--riquadro);padding:12px 14px;display:flex;flex-direction:column;gap:2px}
 .pg .p{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muto)}
@@ -116,15 +119,16 @@ footer{background:var(--ink);color:#B9B9C6;font-size:13px;padding:32px 20px}foot
 <p class="sa-nota">Calcolo indicativo, non è consulenza legale. <a href="/#regole-paesi">Le regole, paese per paese</a></p>
 </div>
 <section class="sa-sez">
-<h2>Opere principali</h2>
-<ul class="sa-opere">
-<li><span>La vedova del miliardario</span><span class="anno">1913</span></li>
-<li><span>The Scoop and Behind the Screen</span><span class="anno">1983</span></li>
-<li><span>Trent&#x27;s Own Case</span><span class="anno">1936</span></li>
-<li><span>Aeschylus</span></li>
-<li><span>Trent&#x27;s Last Case</span></li>
-<li><span>Trentův poslední případ</span><span class="anno">1939</span></li>
+<h2>Opere principali · negli USA opera per opera</h2>
+<ul class="sa-opere usa">
+<li><span>La vedova del miliardario<span class="anno"> 1913</span></span><span class="us ok">libero dal 2009</span></li>
+<li><span>The Scoop and Behind the Screen<span class="anno"> 1983</span></span><span class="us ">dal 2079</span></li>
+<li><span>Trent&#x27;s Own Case<span class="anno"> 1936</span></span><span class="us ">dal 2032</span></li>
+<li><span>Aeschylus<span class="anno"> </span></span><span class="us ">anno non noto</span></li>
+<li><span>Trent&#x27;s Last Case<span class="anno"> </span></span><span class="us ">anno non noto</span></li>
+<li><span>Trentův poslední případ<span class="anno"> 1939</span></span><span class="us ">dal 2035</span></li>
 </ul>
+<p class="sa-nota">Negli USA conta l&#x27;anno di uscita di ogni opera (95 anni). «Libero» solo se l&#x27;anno di Wikidata è confermato da una seconda fonte (Duke, Open Library, Library of Congress); altrimenti «da verificare». Le date future usano l&#x27;anno di Wikidata.</p>
 </section>
 <section class="sa-sez">
 <h2>Registrazioni in italiano</h2>
@@ -143,6 +147,11 @@ footer{background:var(--ink);color:#B9B9C6;font-size:13px;padding:32px 20px}foot
 <div class="sa-barra"><div class="sa-bn">Nel mondo</div><div class="sa-asta"><i style="width:96%"></i></div><div class="sa-val">pagina Wikipedia in 20 lingue · <b>30° su 825</b></div></div>
 <p class="sa-nota">Misura la curiosità per l’autore (visite alle pagine Wikipedia), non le vendite dei suoi libri.</p>
 </section>
+<section class="sa-sez">
+<h2>Domande</h2>
+<div class="faq"><details open><summary>Quando Edmund Clerihew Bentley entra in pubblico dominio in Italia?</summary><p>Il 1° gennaio 2027: Edmund Clerihew Bentley è morto nel 1956 e in Italia le opere diventano libere 70 anni dopo la morte, dal 1° gennaio dell&#x27;anno successivo. Per gli autori di paesi alleati nella Seconda guerra mondiale va verificato caso per caso.</p></details><details><summary>Quali opere di Edmund Clerihew Bentley sono già libere negli USA?</summary><p>Tra le opere principali, con l&#x27;anno confermato da due fonti: La vedova del miliardario.</p></details></div>
+</section>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Quando Edmund Clerihew Bentley entra in pubblico dominio in Italia?", "acceptedAnswer": {"@type": "Answer", "text": "Il 1° gennaio 2027: Edmund Clerihew Bentley è morto nel 1956 e in Italia le opere diventano libere 70 anni dopo la morte, dal 1° gennaio dell'anno successivo. Per gli autori di paesi alleati nella Seconda guerra mondiale va verificato caso per caso."}}, {"@type": "Question", "name": "Quali opere di Edmund Clerihew Bentley sono già libere negli USA?", "acceptedAnswer": {"@type": "Answer", "text": "Tra le opere principali, con l'anno confermato da due fonti: La vedova del miliardario."}}]}</script>
 <section class="sa-sez">
 <h2>Chi era</h2>
 <p class="sa-bio">Edmund Clerihew Bentley è stato uno scrittore inglese, famoso per aver inventato il clerihew, un&#x27;irregolare forma di versi umoristici su temi biografici.</p>

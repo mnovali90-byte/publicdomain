@@ -149,6 +149,9 @@ main:has(.sa){max-width:720px;padding:20px 0 72px}
 .sa-asta{height:10px;background:var(--riquadro)}.sa-asta i{display:block;height:10px;background:var(--vermiglio)}
 .sa-val{font-size:14px;color:var(--muto)}.sa-val b{color:var(--ink)}
 .sa-azioni{padding:8px 24px 0}
+.usa .us{flex:none;font-family:var(--mono);font-size:12px;padding:2px 8px;border:1px solid #CFCCC2;color:var(--muto);white-space:nowrap}
+.usa .us.ok{background:#0E3B2E;border-color:#0E3B2E;color:var(--carta)}.usa .us.ver{background:#F2B705;border-color:#F2B705;color:var(--ink)}
+.faq details{border-top:1px solid #D9D6CC;padding:12px 0}.faq summary{cursor:pointer;font-weight:600;font-size:17px}.faq p{margin:8px 0 0;font-size:16px}
 .pg{list-style:none;margin:16px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
 .pg li{margin:0;background:var(--riquadro);padding:12px 14px;display:flex;flex-direction:column;gap:2px}
 .pg .p{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muto)}
@@ -400,6 +403,80 @@ def iniziali_nome(nome):
     return ((p[0][:1] + p[-1][:1]) if len(p) > 1 else (p[0][:2] if p else "?")).upper()
 
 
+# Anni delle opere verificati con il metodo di docs/metodo-anni-opere.md (seconda fonte: Duke, Open Library, Library of Congress)
+def _leggi(p, x):
+    try:
+        return json.loads(Path(p).read_text(encoding="utf-8"))
+    except Exception:
+        return x
+
+
+ANNI_VER = _leggi(RADICE / "data" / "storico" / "anni_verificati.json", {})
+_PER_AUT = {}
+
+
+def _parole(t):
+    return re.findall(r"[a-z0-9]+", unicodedata.normalize("NFKD", t or "").encode("ascii", "ignore").decode().lower())
+
+
+def opere_storico(qid):
+    """Le opere dell'autore nello Storico (per collegare un titolo al suo codice Wikidata)."""
+    try:
+        k = f"{int(qid[1:]) % 100:02d}"
+    except ValueError:
+        return []
+    if k not in _PER_AUT:
+        _PER_AUT[k] = _leggi(RADICE / "data" / "storico" / "per_autore" / f"{k}.json", {})
+    return _PER_AUT[k].get(qid, [])
+
+
+def stato_usa(a, o):
+    """Stato negli USA di un'opera principale: ('libero', anno) solo con anno confermato da una seconda fonte."""
+    y = o.get("anno")
+    if not isinstance(y, int):
+        return "nd", None
+    limite = datetime.date.today().year - 96
+    if y > limite:
+        return "dal", y + 96
+    tw = {tuple(_parole(o.get("titolo"))), tuple(_parole(o.get("titolo_en")))}
+    for r in opere_storico(a["wikidata"]):
+        if tuple(_parole(r[1])) in tw or tuple(_parole(r[2])) in tw:
+            v = ANNI_VER.get(r[0])
+            if v and v[0] == "ok":
+                return "libero", y + 96
+    return "verifica", None
+
+
+def opere_usa(a, lang):
+    """Sezione «Negli USA, opera per opera»: solo dati, con il metodo di verifica degli anni."""
+    it = lang == "it"
+    righe, liberi = [], []
+    for o in a.get("opere", [])[:10]:
+        t = o.get("titolo") if it else o.get("titolo_en") or o.get("titolo")
+        if not t:
+            continue
+        st, y = stato_usa(a, o)
+        if st == "libero":
+            et, cl = (f"libero dal {y}" if it else f"free since {y}"), "ok"
+            liberi.append(t)
+        elif st == "dal":
+            et, cl = (f"dal {y}" if it else f"from {y}"), ""
+        elif st == "verifica":
+            et, cl = ("da verificare" if it else "to be checked"), "ver"
+        else:
+            et, cl = ("anno non noto" if it else "year unknown"), ""
+        anno = o.get("anno") if isinstance(o.get("anno"), int) else ""
+        righe.append(f'<li><span>{esc(t)}<span class="anno"> {anno}</span></span><span class="us {cl}">{esc(et)}</span></li>\n')
+    if not righe:
+        return "", []
+    nota = ("Negli USA conta l'anno di uscita di ogni opera (95 anni). «Libero» solo se l'anno di Wikidata è confermato da una "
+            "seconda fonte (Duke, Open Library, Library of Congress); altrimenti «da verificare». Le date future usano l'anno di Wikidata."
+            if it else
+            "In the USA what counts is each work's year of publication (95 years). «Free» only when the Wikidata year is confirmed by a "
+            "second source (Duke, Open Library, Library of Congress); otherwise «to be checked». Future dates use the Wikidata year.")
+    return f'<ul class="sa-opere usa">\n{"".join(righe)}</ul>\n<p class="sa-nota">{esc(nota)}</p>\n', liberi
+
+
 CATALOGHI = [("sbn_it", "Italia · SBN", "Italy · SBN"), ("bnf_fr", "Francia · BnF", "France · BnF"), ("bne_es", "Spagna · BNE", "Spain · BNE"),
              ("bl_en", "Regno Unito · British Library", "United Kingdom · British Library"), ("loc_en", "USA · Library of Congress", "USA · Library of Congress")]
 
@@ -426,6 +503,29 @@ def catalogi_a_confronto(a, lang):
             "Records linked to the author in each catalogue: each edition or reprint counts once, collaborations included. "
             "They show how much an author is already published in each country.")
     return f'<ul class="cat">{li}</ul>\n<p class="sa-nota">{esc(nota)}</p>\n'
+
+
+def domande(a, lang):
+    """Domande con risposte fatte solo di dati di questo autore (niente frasi uguali in tutte le schede)."""
+    it = lang == "it"
+    nome = pulisci(a["nome"])
+    D = anno_di(a.get("morte"))
+    out = []
+    T = (lambda x, y: x) if it else (lambda x, y: y)
+    if it:
+        out.append((f"Quando {nome} entra in pubblico dominio in Italia?",
+                    f"Il {data_l(lang, D + 71)}: {nome} è morto nel {D} e in Italia le opere diventano libere 70 anni dopo la morte, "
+                    f"dal 1° gennaio dell'anno successivo." + (" Per gli autori di paesi alleati nella Seconda guerra mondiale va verificato caso per caso." if avviso_alleato(a, lang) else "")))
+    else:
+        out.append((f"When does {nome} enter the public domain?",
+                    f"In the UK and the EU on {data_l(lang, D + 71)}: {nome} died in {D}, and the works become free 70 years after death, "
+                    f"from 1 January of the following year." + (f" In Spain on {data_l(lang, D + 81)}." if D < 1987 else "")))
+    liberi = [t for t in a.get("_liberi_usa", [])]
+    if liberi:
+        el = ", ".join(liberi[:6])
+        out.append((T(f"Quali opere di {nome} sono già libere negli USA?", f"Which works by {nome} are already free in the USA?"),
+                    T(f"Tra le opere principali, con l'anno confermato da due fonti: {el}.", f"Among the main works, with the year confirmed by two sources: {el}.")))
+    return out
 
 
 def scheda_statica(a, lang, bd):
@@ -487,13 +587,12 @@ def scheda_statica(a, lang, bd):
     o.append(f'<p class="sa-nota">{T("Calcolo indicativo, non è consulenza legale.", "Indicative calculation, not legal advice.")} '
              f'<a href="{"/" if it else "/en/"}#regole-paesi">{T("Le regole, paese per paese", "The rules, country by country")}</a></p>\n</div>\n')
     sez = lambda tit, corpo: f'<section class="sa-sez">\n<h2>{tit}</h2>\n{corpo}</section>\n'
-    opere = [(x.get("titolo") if it else x.get("titolo_en"), x.get("anno")) for x in a.get("opere", [])[:10]]
-    opere = [(t, y) for t, y in opere if t]
-    if opere:
-        righe = "".join(f'<li><span>{esc(t)}</span>' + (f'<span class="anno">{esc(y)}</span>' if y else "") + "</li>\n" for t, y in opere)
+    corpo_usa, liberi_usa = opere_usa(a, lang)
+    a["_liberi_usa"] = liberi_usa
+    if corpo_usa:
         extra = (f'<p class="sa-nota">{T(f"Su {migliaia(a["n_opere"])} opere registrate in Wikidata, qui le più note.", f"Of {migliaia(a["n_opere"], lang)} works recorded in Wikidata, the best known.")}</p>\n'
-                 if a.get("n_opere", 0) > len(opere) else "")
-        o.append(sez(T("Opere principali", "Main works"), f'<ul class="sa-opere">\n{righe}</ul>\n{extra}'))
+                 if a.get("n_opere", 0) > 10 else "")
+        o.append(sez(T("Opere principali · negli USA opera per opera", "Main works · in the USA work by work"), corpo_usa + extra))
     g = ((a.get("traduzioni") or {}).get("sbn_it") if it else (a.get("traduzioni") or {}).get("bl_en"))
     if g and g.get("sospeso_manuale"):
         o.append(sez(T("Registrazioni in italiano", "Records in English"),
@@ -532,6 +631,13 @@ def scheda_statica(a, lang, bd):
     if barre:
         o.append(sez(T("Quanto è conosciuto", "How well known"), "".join(barre)
                      + f'<p class="sa-nota">{T("Misura la curiosità per l’autore (visite alle pagine Wikipedia), non le vendite dei suoi libri.", "Measures curiosity about the author (Wikipedia page views), not sales of their books.")}</p>\n'))
+    faq = domande(a, lang)
+    if faq:
+        o.append(sez(T("Domande", "Questions"), '<div class="faq">' + "".join(
+            f'<details{" open" if i == 0 else ""}><summary>{esc(q)}</summary><p>{esc(r_)}</p></details>' for i, (q, r_) in enumerate(faq)) + "</div>\n"))
+        fq = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+            {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": r_}} for q, r_ in faq]}
+        o.append('<script type="application/ld+json">' + json.dumps(fq, ensure_ascii=False).replace("</", "<\\/") + "</script>\n")
     if bd:
         ln = f'<a href="{esc(bd["url"])}" rel="noopener">{T("Continua su Wikipedia", "Continue on Wikipedia")}</a>' if bd.get("url") else ""
         o.append(sez(T("Chi era", "Who they were"), f'<p class="sa-bio">{esc(bd["testo"])}</p>\n{ln}\n<p class="sa-nota">{T("Testo da Wikipedia, licenza CC BY-SA.", "Text from Wikipedia, licence CC BY-SA.")}</p>\n'))

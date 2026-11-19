@@ -72,6 +72,9 @@ main:has(.sa){max-width:720px;padding:20px 0 72px}
 .sa-asta{height:10px;background:var(--riquadro)}.sa-asta i{display:block;height:10px;background:var(--vermiglio)}
 .sa-val{font-size:14px;color:var(--muto)}.sa-val b{color:var(--ink)}
 .sa-azioni{padding:8px 24px 0}
+.usa .us{flex:none;font-family:var(--mono);font-size:12px;padding:2px 8px;border:1px solid #CFCCC2;color:var(--muto);white-space:nowrap}
+.usa .us.ok{background:#0E3B2E;border-color:#0E3B2E;color:var(--carta)}.usa .us.ver{background:#F2B705;border-color:#F2B705;color:var(--ink)}
+.faq details{border-top:1px solid #D9D6CC;padding:12px 0}.faq summary{cursor:pointer;font-weight:600;font-size:17px}.faq p{margin:8px 0 0;font-size:16px}
 .pg{list-style:none;margin:16px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
 .pg li{margin:0;background:var(--riquadro);padding:12px 14px;display:flex;flex-direction:column;gap:2px}
 .pg .p{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muto)}
@@ -114,17 +117,18 @@ footer{background:var(--ink);color:#B9B9C6;font-size:13px;padding:32px 20px}foot
 <p class="sa-nota">Calcolo indicativo, non è consulenza legale. <a href="/#regole-paesi">Le regole, paese per paese</a></p>
 </div>
 <section class="sa-sez">
-<h2>Opere principali</h2>
-<ul class="sa-opere">
-<li><span>The 12.30 from Croydon</span><span class="anno">1934</span></li>
-<li><span>Inspector French and the Starvel Tragedy</span><span class="anno">1927</span></li>
-<li><span>L&#x27;ammiraglio alla deriva</span><span class="anno">1931</span></li>
-<li><span>I tre segugi</span><span class="anno">1920</span></li>
-<li><span>The Crime of Guildford</span></li>
-<li><span>The Scoop and Behind the Screen</span><span class="anno">1983</span></li>
-<li><span>Sudden Death</span><span class="anno">1932</span></li>
-<li><span>Antidote to Venom</span></li>
+<h2>Opere principali · negli USA opera per opera</h2>
+<ul class="sa-opere usa">
+<li><span>The 12.30 from Croydon<span class="anno"> 1934</span></span><span class="us ">dal 2030</span></li>
+<li><span>Inspector French and the Starvel Tragedy<span class="anno"> 1927</span></span><span class="us ok">libero dal 2023</span></li>
+<li><span>L&#x27;ammiraglio alla deriva<span class="anno"> 1931</span></span><span class="us ">dal 2027</span></li>
+<li><span>I tre segugi<span class="anno"> 1920</span></span><span class="us ok">libero dal 2016</span></li>
+<li><span>The Crime of Guildford<span class="anno"> </span></span><span class="us ">anno non noto</span></li>
+<li><span>The Scoop and Behind the Screen<span class="anno"> 1983</span></span><span class="us ">dal 2079</span></li>
+<li><span>Sudden Death<span class="anno"> 1932</span></span><span class="us ">dal 2028</span></li>
+<li><span>Antidote to Venom<span class="anno"> </span></span><span class="us ">anno non noto</span></li>
 </ul>
+<p class="sa-nota">Negli USA conta l&#x27;anno di uscita di ogni opera (95 anni). «Libero» solo se l&#x27;anno di Wikidata è confermato da una seconda fonte (Duke, Open Library, Library of Congress); altrimenti «da verificare». Le date future usano l&#x27;anno di Wikidata.</p>
 <p class="sa-nota">Su 44 opere registrate in Wikidata, qui le più note.</p>
 </section>
 <section class="sa-sez">
@@ -144,6 +148,11 @@ footer{background:var(--ink);color:#B9B9C6;font-size:13px;padding:32px 20px}foot
 <div class="sa-barra"><div class="sa-bn">Nel mondo</div><div class="sa-asta"><i style="width:93%"></i></div><div class="sa-val">pagina Wikipedia in 16 lingue · <b>42° su 846</b></div></div>
 <p class="sa-nota">Misura la curiosità per l’autore (visite alle pagine Wikipedia), non le vendite dei suoi libri.</p>
 </section>
+<section class="sa-sez">
+<h2>Domande</h2>
+<div class="faq"><details open><summary>Quando Freeman Wills Crofts entra in pubblico dominio in Italia?</summary><p>Il 1° gennaio 2028: Freeman Wills Crofts è morto nel 1957 e in Italia le opere diventano libere 70 anni dopo la morte, dal 1° gennaio dell&#x27;anno successivo.</p></details><details><summary>Quali opere di Freeman Wills Crofts sono già libere negli USA?</summary><p>Tra le opere principali, con l&#x27;anno confermato da due fonti: Inspector French and the Starvel Tragedy, I tre segugi.</p></details></div>
+</section>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Quando Freeman Wills Crofts entra in pubblico dominio in Italia?", "acceptedAnswer": {"@type": "Answer", "text": "Il 1° gennaio 2028: Freeman Wills Crofts è morto nel 1957 e in Italia le opere diventano libere 70 anni dopo la morte, dal 1° gennaio dell'anno successivo."}}, {"@type": "Question", "name": "Quali opere di Freeman Wills Crofts sono già libere negli USA?", "acceptedAnswer": {"@type": "Answer", "text": "Tra le opere principali, con l'anno confermato da due fonti: Inspector French and the Starvel Tragedy, I tre segugi."}}]}</script>
 <section class="sa-sez">
 <h2>Chi era</h2>
 <p class="sa-bio">Freeman Wills Crofts è stato uno scrittore irlandese ed uno dei Grandi quattro della Golden Age of Detective Fiction, un periodo nel quale tutti gli autori seguono lo stesso stile: il Decalogo di Knox.</p>
