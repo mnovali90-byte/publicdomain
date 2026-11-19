@@ -246,11 +246,6 @@
      "morte": 1939
     },
     {
-     "opera": "The Soul of a Bishop",
-     "nome": "Charles Allan Gilbert",
-     "morte": 1929
-    },
-    {
      "opera": "The First Men in the Moon",
      "nome": "Claude Allin Shepperson",
      "morte": 1921
@@ -259,6 +254,11 @@
      "opera": "The Story of the Late Mr. Elvesham",
      "nome": "Max Cowper",
      "morte": 1911
+    },
+    {
+     "opera": "The Soul of a Bishop",
+     "nome": "Charles Allan Gilbert",
+     "morte": 1929
     }
    ],
    "pagina": "h-g-wells",
@@ -452,8 +452,6 @@
      "loc": 1946
     },
     "citate": {
-     "Discogs": 1946,
-     "Archivio Storico Ricordi": 1946,
      "Great Soviet Encyclopedia (1969–1978)": 1946,
      "The Fine Art Archive Db": 1946,
      "Roglo": 1946,
@@ -468,7 +466,9 @@
      "RKDartists": 1946,
      "Munzinger Personen": 1946,
      "Brockhaus Enzyklopädie": 1946,
-     "Integrated Authority File": 1946
+     "Integrated Authority File": 1946,
+     "Discogs": 1946,
+     "Archivio Storico Ricordi": 1946
     }
    },
    "pagina": "gerhart-hauptmann",
@@ -1236,12 +1236,12 @@
      "loc": 1946
     },
     "citate": {
-     "Benezit Dictionary of Artists": 1946,
      "SNAC": 1946,
      "The Fine Art Archive Db": 1946,
      "Great Soviet Encyclopedia (1969–1978)": 1946,
      "IMDb": 1946,
-     "Internet Speculative Fiction Database": 1946
+     "Internet Speculative Fiction Database": 1946,
+     "Benezit Dictionary of Artists": 1946
     }
    },
    "pagina": "ernest-thompson-seton",
@@ -4816,7 +4816,6 @@
      "loc": 1946
     },
     "citate": {
-     "REGO": 1946,
      "regional database of the Municipal Library of Jindřichův Hradec": 1946,
      "Czech National Authority Database": 1946,
      "Regional Database of the Central Bohemian Research Library in Kladno": 1946,
@@ -4827,7 +4826,8 @@
      "The Fine Art Archive": 1946,
      "BnF authorities": 1946,
      "Integrated Authority File": 1946,
-     "SNAC": 1946
+     "SNAC": 1946,
+     "REGO": 1946
     }
    },
    "pagina": "gabriela-preissova",
@@ -21520,6 +21520,107 @@
    "url": "https://www.wikidata.org/wiki/Q1456617"
   },
   {
+   "wikidata": "Q28007662",
+   "nome": "Harriette Ashbrook",
+   "nascita": "1898-01-01",
+   "morte": "1946-01-01",
+   "pagine_wikipedia": 3,
+   "professioni": [
+    "romanziere",
+    "scrittore"
+   ],
+   "descrizione": "US-american crime writer",
+   "url": "https://www.wikidata.org/wiki/Q28007662",
+   "letterario": true,
+   "tipo_catalogo": [
+    "Romanzo"
+   ],
+   "bio": "Harriette Ashbrook (1898–1946) was an American author of mystery and detective stories. She also wrote under the name Susannah Shane. She was born in Manhattan, Kansas, and came to Nebraska in the early 1900s.",
+   "bio_url": "https://en.wikipedia.org/wiki/Harriette_Ashbrook",
+   "bio_lingua": "en",
+   "bios": {
+    "en": {
+     "testo": "Harriette Ashbrook (1898–1946) was an American author of mystery and detective stories. She also wrote under the name Susannah Shane. She was born in Manhattan, Kansas, and came to Nebraska in the early 1900s.",
+     "url": "https://en.wikipedia.org/wiki/Harriette_Ashbrook"
+    }
+   },
+   "n_opere": 0,
+   "visite_12m": 35,
+   "visite_it": 0,
+   "visite_en": 35,
+   "visite_es": 0,
+   "visite_de": 0,
+   "visite_fr": 0,
+   "paesi": [
+    "Stati Uniti"
+   ],
+   "lingue": [
+    "inglese"
+   ],
+   "indice_it": 0,
+   "indice_en": 65,
+   "indice_es": 0,
+   "indice_de": 0,
+   "indice_fr": 0,
+   "indice_int": 64,
+   "indice": 63,
+   "traduzioni": {
+    "opere": 6,
+    "con_lingua": 6,
+    "per_lingua": {
+     "it": 0,
+     "en": 6,
+     "es": 0,
+     "fr": 0,
+     "de": 0
+    },
+    "parziale": false,
+    "fonte": "Open Library",
+    "ts": "2026-11-19",
+    "sbn_it": {
+     "trovato": false,
+     "edizioni": 0,
+     "ultimo": null,
+     "dal_2000": 0,
+     "metodo": null,
+     "riconoscimento": "non_trovato",
+     "fonte": "SBN",
+     "ambigue": 0
+    },
+    "bne_es": {
+     "trovato": true,
+     "edizioni": 1,
+     "dal_2000": 1,
+     "fonte": "BNE",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    },
+    "bl_en": {
+     "trovato": false,
+     "edizioni": 0,
+     "dal_2000": 0,
+     "fonte": "British Library",
+     "scartate": 0,
+     "metodo": "nome_anni"
+    },
+    "loc_en": {
+     "trovato": true,
+     "edizioni": 9,
+     "dal_2000": 0,
+     "metodo": "codice_lc",
+     "fonte": "Library of Congress",
+     "intestazione": "Ashbrook, Harriette, 1898-1946"
+    }
+   },
+   "verifica": {
+    "esito": "verificato",
+    "fonti": {
+     "wikidata": 1946,
+     "loc": 1946
+    }
+   }
+  },
+  {
    "wikidata": "Q4199482",
    "nome": "Heinrich Ilgenstein",
    "nascita": "1875-06-03",
@@ -23426,10 +23527,10 @@
      "loc": 1946
     },
     "citate": {
-     "death certificate": 1946,
      "Médias 19": 1946,
      "BnF authorities": 1946,
-     "The Fine Art Archive": 1946
+     "The Fine Art Archive": 1946,
+     "death certificate": 1946
     }
    }
   },
@@ -28712,7 +28813,7 @@
    "indice_de": 0,
    "indice_fr": 0,
    "indice_int": 48,
-   "indice": 76,
+   "indice": 75,
    "traduzioni": {
     "opere": 8,
     "con_lingua": 8,
@@ -29118,107 +29219,6 @@
    ],
    "descrizione": "Finnish journalist (1882-1946)",
    "url": "https://www.wikidata.org/wiki/Q11861510"
-  },
-  {
-   "wikidata": "Q28007662",
-   "nome": "Harriette Ashbrook",
-   "nascita": "1898-01-01",
-   "morte": "1946-01-01",
-   "pagine_wikipedia": 2,
-   "professioni": [
-    "romanziere",
-    "scrittore"
-   ],
-   "descrizione": "US-american crime writer",
-   "url": "https://www.wikidata.org/wiki/Q28007662",
-   "letterario": true,
-   "tipo_catalogo": [
-    "Romanzo"
-   ],
-   "bio": "Harriette Ashbrook (1898–1946) was an American author of mystery and detective stories. She also wrote under the name Susannah Shane. She was born in Manhattan, Kansas, and came to Nebraska in the early 1900s.",
-   "bio_url": "https://en.wikipedia.org/wiki/Harriette_Ashbrook",
-   "bio_lingua": "en",
-   "bios": {
-    "en": {
-     "testo": "Harriette Ashbrook (1898–1946) was an American author of mystery and detective stories. She also wrote under the name Susannah Shane. She was born in Manhattan, Kansas, and came to Nebraska in the early 1900s.",
-     "url": "https://en.wikipedia.org/wiki/Harriette_Ashbrook"
-    }
-   },
-   "n_opere": 0,
-   "visite_12m": 35,
-   "visite_it": 0,
-   "visite_en": 35,
-   "visite_es": 0,
-   "visite_de": 0,
-   "visite_fr": 0,
-   "paesi": [
-    "Stati Uniti"
-   ],
-   "lingue": [
-    "inglese"
-   ],
-   "indice_it": 0,
-   "indice_en": 65,
-   "indice_es": 0,
-   "indice_de": 0,
-   "indice_fr": 0,
-   "indice_int": 48,
-   "indice": 59,
-   "traduzioni": {
-    "opere": 6,
-    "con_lingua": 6,
-    "per_lingua": {
-     "it": 0,
-     "en": 6,
-     "es": 0,
-     "fr": 0,
-     "de": 0
-    },
-    "parziale": false,
-    "fonte": "Open Library",
-    "ts": "2026-11-19",
-    "sbn_it": {
-     "trovato": false,
-     "edizioni": 0,
-     "ultimo": null,
-     "dal_2000": 0,
-     "metodo": null,
-     "riconoscimento": "non_trovato",
-     "fonte": "SBN",
-     "ambigue": 0
-    },
-    "bne_es": {
-     "trovato": true,
-     "edizioni": 1,
-     "dal_2000": 1,
-     "fonte": "BNE",
-     "scartate": 0,
-     "metodo": "nome_anni"
-    },
-    "bl_en": {
-     "trovato": false,
-     "edizioni": 0,
-     "dal_2000": 0,
-     "fonte": "British Library",
-     "scartate": 0,
-     "metodo": "nome_anni"
-    },
-    "loc_en": {
-     "trovato": true,
-     "edizioni": 9,
-     "dal_2000": 0,
-     "metodo": "codice_lc",
-     "fonte": "Library of Congress",
-     "intestazione": "Ashbrook, Harriette, 1898-1946"
-    }
-   },
-   "verifica": {
-    "esito": "verificato",
-    "fonti": {
-     "wikidata": 1946,
-     "loc": 1946
-    }
-   }
   },
   {
    "wikidata": "Q15997317",
@@ -31816,7 +31816,7 @@
    "indice_de": 0,
    "indice_fr": 88,
    "indice_int": 48,
-   "indice": 64,
+   "indice": 63,
    "traduzioni": {
     "opere": 4,
     "con_lingua": 4,
