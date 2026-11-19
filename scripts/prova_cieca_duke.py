@@ -19,7 +19,7 @@ import verifica_anni_usa as vu   # noqa: E402
 
 ANNO = int(os.environ.get("ANNO_PROVA", "2025"))
 P = ANNO - 96
-BUDGET = 50 * 60
+BUDGET = 100 * 60
 
 
 def norm(t):
@@ -31,8 +31,8 @@ def main():
     ops = opere.opere_anno_sicuro(P)
     ops.sort(key=lambda o: -o["pagine"])
     print("opere da Wikidata:", len(ops))
-    if len(ops) < 20:
-        raise SystemExit("Lista vuota o quasi: Wikidata non ha risposto. Prova NON valida.")
+    if len(ops) < 20 or opere.FALLITE:
+        raise SystemExit(f"Wikidata non ha risposto per {opere.FALLITE}: prova NON valida, non scrivo risultati.")
     idx = vu.indice_cce(range(P - 3, P + 3))
     orig = vu.originali([o["qid"] for o in ops])
     esiti = {}

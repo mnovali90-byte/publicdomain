@@ -38,7 +38,7 @@ CLASSI_USA = CLASSI + ["Q35760", "Q116476516"]
 SPAN_PUNTATE = 5   # anni massimi tra prima e ultima data per considerarle puntate o prima edizione + libro
 
 
-def opere_anno(anno_pub, classi=None, scritte=True):
+def opere_anno(anno_pub, classi=None, scritte=True, con_esito=False):
     """Opere il cui anno per gli USA è anno_pub. Per un'opera uscita a puntate o con più date di pubblicazione conta
     la data PIÙ RECENTE (l'opera è libera per intero solo quando lo è l'ultima parte: Compendium III, 1909.3), purché
     le date stiano entro SPAN_PUNTATE anni; oltre, conta la più vecchia e l'opera è segnata «date lontane»."""
@@ -50,17 +50,20 @@ def opere_anno(anno_pub, classi=None, scritte=True):
     if scritte:
         rami.append("{ ?w wdt:P31 wd:Q47461344; wdt:P50 [] }")
     if not rami:
-        return []
+        return ([], True) if con_esito else []
     q = f'''SELECT ?w ?wLabel ?wit ?a ?aLabel ?sl ?img ?en ?dt WHERE {{
       {" UNION ".join(rami)}
-      ?w wdt:P577 ?d. FILTER(YEAR(?d)={anno_pub})   # almeno una data in quell'anno; tutte le date in ?dt
-      ?w wdt:P577 ?dt.
+      ?w p:P577 ?st. ?st ps:P577 ?d. FILTER(YEAR(?d)={anno_pub})   # almeno una data in quell'anno, di qualsiasi rango
+      FILTER NOT EXISTS {{ ?st wikibase:rank wikibase:DeprecatedRank }}
+      ?w p:P577 ?st2. ?st2 ps:P577 ?dt. FILTER NOT EXISTS {{ ?st2 wikibase:rank wikibase:DeprecatedRank }}
+      # wdt: dà solo la data «preferita»: Red Harvest (1927 preferita, 1929 normale) restava fuori (20/11/2026)
       ?w wikibase:sitelinks ?sl. FILTER(?sl>={MIN_PAGINE})
       OPTIONAL {{ ?w wdt:P50 ?a }} OPTIONAL {{ ?w wdt:P18 ?img }}
       OPTIONAL {{ ?w rdfs:label ?wit FILTER(LANG(?wit)="it") }}
       OPTIONAL {{ ?en schema:about ?w; schema:isPartOf <https://en.wikipedia.org/> }}
       SERVICE wikibase:label {{ bd:serviceParam wikibase:language "en,it,mul". }} }}'''
-    righe = sparql(q)
+    d_ = get("https://query.wikidata.org/sparql?" + urllib.parse.urlencode({"query": q, "format": "json"}))
+    righe = d_["results"]["bindings"] if d_ else []
     out = {}
     for r in righe:
         k = qid(val(r, "w"))
@@ -86,19 +89,26 @@ def opere_anno(anno_pub, classi=None, scritte=True):
             o["date_nota"] = "lontane" if lontane else "puntate_o_edizioni"
         o["autori"] = [{"qid": a, "nome": n} for a, n in o["autori"].items() if not re.fullmatch(r"Q\d+", n or "")]
         res.append(o)
-    return res
+    return (res, d_ is not None) if con_esito else res
+
+FALLITE = []   # pezzi della domanda a cui Wikidata non ha mai risposto (errore, non lista vuota)
+
 
 def opere_anno_sicuro(anno_pub):
-    """Come opere_anno, ma un tipo alla volta: la domanda unica a Wikidata va a volte in timeout (19/11/2026)."""
+    """Come opere_anno, ma un tipo alla volta: la domanda unica a Wikidata va a volte in timeout (19/11/2026).
+    Distingue «nessuna opera» da «Wikidata non ha risposto»: i pezzi falliti finiscono in FALLITE."""
     tutte = {}
     gruppi = [([c], False) for c in CLASSI_USA] + [([], True)]
     for classi, scritte in gruppi:
-        r = []
-        for t in range(3):
-            r = opere_anno(anno_pub, classi, scritte)
-            if r:
+        r, ok = [], False
+        for t in range(5):
+            r, ok = opere_anno(anno_pub, classi, scritte, con_esito=True)
+            if ok:
                 break
-            time.sleep(20)
+            time.sleep(60)
+        if not ok:
+            FALLITE.append(classi or ["opere scritte"])
+        print("  domanda", classi or "opere scritte", "->", len(r), "" if ok else "FALLITA")
         for o in r:
             tutte.setdefault(o["qid"], o)
     return list(tutte.values())
@@ -170,7 +180,10 @@ def main():
     for anno in ANNI:
         pub = anno - 96
         print("Anno", anno, "-> opere pubblicate nel", pub)
+        FALLITE.clear()
         ops = opere_anno_sicuro(pub)
+        if FALLITE:
+            print(" Wikidata non ha risposto per", FALLITE, ": lascio il file com'è"); continue
         print(" trovate", len(ops))
         if len(ops) < 20:
             print(" troppo poche: lascio il file com'è"); continue

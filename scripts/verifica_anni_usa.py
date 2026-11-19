@@ -29,7 +29,7 @@ parole, UA = va.parole, va.UA
 BUDGET = float(os.environ.get("BUDGET_MINUTI_USA", "50")) * 60
 RICONTROLLA = 30   # giorni: un libro non confermato si ricontrolla dopo un mese, non a ogni giro
 OGGI = date.today().isoformat()
-AUTOREVOLI = ("duke", "cce", "bnf", "k10plus", "isfdb", "wikipedia")
+AUTOREVOLI = ("duke", "cce", "bnf", "k10plus", "isfdb")
 CCE_RAW = "https://raw.githubusercontent.com/NYPL/catalog_of_copyright_entries_project/master/xml/"
 CCE_FILE = {}   # anno -> file del volume: si legge dall'elenco del repository NYPL (i nomi dei file non seguono una regola)
 CCE_API = "https://api.github.com/repos/NYPL/catalog_of_copyright_entries_project/contents/xml/"
@@ -51,9 +51,17 @@ def scarica(u, timeout=60, prove=4):
 
 
 def file_cce(anni):
-    """Nome del file XML di ogni volume (es. 1931 -> 1931/1931_v28.xml), letto dall'elenco del repository."""
+    """Nome del file XML di ogni volume (es. 1931 -> 1931/1931_v28.xml): da data/cce_file.json, e solo se manca
+    dall'elenco del repository (la richiesta a GitHub va oltre il limite: prova del 20/11/2026)."""
+    try:
+        noti = json.loads((R / "data" / "cce_file.json").read_text(encoding="utf-8"))["file"]
+    except Exception:
+        noti = {}
     for y in anni:
         if y in CCE_FILE:
+            continue
+        if str(y) in noti:
+            CCE_FILE[y] = noti[str(y)]
             continue
         x = scarica(CCE_API + str(y), timeout=60)
         if not x:
@@ -211,8 +219,8 @@ def puntate_wikipedia(o, p):
         return None
     pag = next(iter((json.loads(x).get("query") or {}).get("pages", {}).values()), {})
     t = pag.get("extract") or ""
-    parti = re.findall(r"Part \d+[^\n]*?((?:%s)?\s*\d{4})" % MESI_EN, t)
-    if len(parti) >= 2:
+    parti = re.findall(r"Part \d+[^\n]*?((?:%s)?\s*\d{4})" % MESI_EN, t) if re.search(r"serial", t, re.I) else []
+    if len(parti) >= 2:   # solo se la pagina parla di uscita a puntate: i capitoli con una data non sono puntate
         a = [y for v in parti for y in _anni(v, p)]
         if a:
             return min(a), max(a)
@@ -224,7 +232,7 @@ def puntate_wikipedia(o, p):
         return int(m.group(1)), int(m.group(1))
     m = re.search(r"serial(?:ized|ised)[^.\n]{0,80}?\b(1[6-9]\d\d)\b", t, re.I)
     if m and int(m.group(1)) <= p + 10:
-        return int(m.group(1)), int(m.group(1))
+        return int(m.group(1)), None   # si sa quando è iniziata, non quando è finita
     return None
 
 
@@ -262,14 +270,20 @@ def decidi(trovati, p, puntate=None):
     """Esito per la lista dell'anno p. puntate = (prima, ultima, fonte) dalle riviste, se note."""
     giusti = [f for f, a in trovati.items() if a == p]
     ordine = ("duke", "cce", "bnf", "k10plus", "isfdb", "wikipedia", "openlibrary", "loc")
+    if puntate and puntate[1] is None:
+        puntate = None if puntate[0] >= p else puntate   # fine ignota: serve solo se la prima uscita è prima di p
+        if puntate:
+            return ("ok", p, min(giusti, key=ordine.index)) if giusti else ("nd", puntate[0], puntate[2])
     if puntate:
         a, b, fp = puntate
         if a <= p < b:
             return "parziale", b, fp           # uscito a puntate fino a un anno DOPO: libero per intero solo più tardi
         if a == p and b == p and not giusti:
             return "ok", p, fp                 # racconto o puntate tutte nell'anno: confermato dalla rivista
+        if b < p and not giusti and fp != "wikipedia":
+            return "prima", a, fp              # tutte le uscite prima dell'anno (ISFDB), e nessuna fonte conferma p
         if b < p and not giusti:
-            return "prima", a, fp              # tutte le uscite prima dell'anno, e nessuna fonte conferma p
+            return "nd", a, fp                 # Wikipedia da sola non basta per dire «uscito prima» (20/11/2026)
     if giusti:
         return "ok", p, min(giusti, key=ordine.index)
     prima = [(a, f) for f, a in trovati.items() if a is not None and a < p and f in AUTOREVOLI]
@@ -307,8 +321,8 @@ def verifica_opera(o, p, dk, idx, orig, vecchio=None, prove_naz=None):
     if not punt or punt[0] == punt[1]:
         i_ = puntate_isfdb(o, cognomi, p)
         provate.append("isfdb")
-        if i_ and (not punt or i_[0] != i_[1]):
-            punt = (i_[0], i_[1], "isfdb")
+        if i_ and (not punt or i_[0] != i_[1] or (i_[0], i_[1]) == (punt[0], punt[1])):
+            punt = (i_[0], i_[1], "isfdb")   # ISFDB ha la data del numero della rivista: vale più del testo di Wikipedia
     if punt:
         trovati[punt[2]] = punt[0] if punt[0] == punt[1] else None
     if p not in trovati.values():
