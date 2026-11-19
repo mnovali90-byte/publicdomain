@@ -15,6 +15,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: gia-pubblici
@@ -34,7 +35,7 @@ jobs:
       - name: Ritratti da Wikimedia Commons
         continue-on-error: true   # senza ritratti la pagina mostra le iniziali
         run: python storico/ritratti.py
-      - name: Seconda fonte per gli anni delle opere libere solo negli USA (Duke, Open Library)
+      - name: Anni delle opere libere solo negli USA: conferma da Duke, Open Library, Library of Congress (docs/metodo-anni-opere.md)
         continue-on-error: true
         run: python storico/verifica_anni.py 40
       - name: Dati e pagine
@@ -47,4 +48,12 @@ jobs:
           if ! git diff --cached --quiet; then
             git commit -m "Già pubblici: pagina e dati del $(date -u +%Y-%m-%d)"
             for i in 1 2 3 4 5; do git pull --rebase --autostash -X theirs origin main && git push && break; sleep $((i*20)); done
+          fi
+      - name: Se la verifica degli anni non è finita, riparte da solo
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ -f .verifica_incompleta ]; then
+            gh workflow run gia-pubblici.yml --ref main
           fi
