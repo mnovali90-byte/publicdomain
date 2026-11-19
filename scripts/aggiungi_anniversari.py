@@ -14,14 +14,38 @@ DATA = A.DATA
 LINGUE = ["en", "it", "fr", "de", "es"]
 
 
+def scarica(u):
+    """Come json_url, ma con attese lunghe quando il servizio risponde «troppe richieste» (429)."""
+    import urllib.request, urllib.error
+    for t in range(8):
+        try:
+            with urllib.request.urlopen(urllib.request.Request(u, headers=A.UA), timeout=60) as f:
+                return json.load(f)
+        except urllib.error.HTTPError as e:
+            time.sleep(30 * (t + 1) if e.code == 429 else 5)
+        except Exception:
+            time.sleep(5 * (t + 1))
+    return None
+
+
 def entita(qids):
+    out = {}
+    for i in range(0, len(qids), 40):
+        r = scarica("https://www.wikidata.org/w/api.php?" + urllib.parse.urlencode({
+            "action": "wbgetentities", "ids": "|".join(qids[i:i + 40]), "props": "labels|descriptions|claims|sitelinks", "format": "json"}))
+        out.update((r or {}).get("entities", {}))
+        time.sleep(2)
+    return out
+
+
+def _vecchia_entita(qids):
     r = A.json_url("https://www.wikidata.org/w/api.php?" + urllib.parse.urlencode({
         "action": "wbgetentities", "ids": "|".join(qids), "props": "labels|descriptions|claims|sitelinks", "format": "json"}))
     return (r or {}).get("entities", {})
 
 
 def cerca(nome, prop, anno):
-    r = A.json_url("https://www.wikidata.org/w/api.php?" + urllib.parse.urlencode({
+    r = scarica("https://www.wikidata.org/w/api.php?" + urllib.parse.urlencode({
         "action": "wbsearchentities", "search": nome, "language": "en", "type": "item", "limit": 7, "format": "json"}))
     ids = [x["id"] for x in (r or {}).get("search", [])]
     for q, e in entita(ids).items():
@@ -49,7 +73,7 @@ def data_wd(e, prop):
 
 def date_wikipedia(titolo, lg, anno):
     """Tutte le date (mese, giorno) dell'anno atteso nell'inizio della voce e nel riquadro."""
-    r = A.json_url(f"https://{lg}.wikipedia.org/w/api.php?" + urllib.parse.urlencode({
+    r = scarica(f"https://{lg}.wikipedia.org/w/api.php?" + urllib.parse.urlencode({
         "action": "query", "prop": "revisions", "rvprop": "content", "rvslots": "main", "redirects": 1,
         "titles": titolo, "format": "json", "formatversion": 2}))
     try:
@@ -77,6 +101,7 @@ def main():
     cal = json.loads(f.read_text(encoding="utf-8"))
     gia = {(v["tipo"], v["qid"]) for v in cal["voci"]}
     resoconto, nuove = [], []
+    tutte = entita([x["qid"] for x in cfg["voci"] if x.get("qid")])
     for x in cfg["voci"]:
         prop = "P569" if x["tipo"] == "nascita" else "P570"
         q = x.get("qid") or cerca(x["cerca"], prop, x["anno"])
@@ -84,7 +109,9 @@ def main():
             resoconto.append({"voce": x.get("nota"), "esito": "non trovata su Wikidata"}); continue
         if (x["tipo"], q) in gia:
             resoconto.append({"voce": x.get("nota"), "qid": q, "esito": "già nel calendario"}); continue
-        e = entita([q])[q]
+        e = tutte.get(q) or entita([q]).get(q)
+        if not e:
+            resoconto.append({"voce": x.get("nota"), "qid": q, "esito": "Wikidata non ha risposto: da rifare"}); continue
         anno_ev = anno_cal - x["anni"]
         date = {(mo, d) for y, mo, d in data_wd(e, prop) if y == anno_ev}
         if len(date) != 1:
@@ -96,7 +123,7 @@ def main():
             if not sl:
                 continue
             dw = date_wikipedia(sl["title"], lg, anno_ev)
-            time.sleep(0.5)
+            time.sleep(1)
             if dw is None:
                 continue
             if mg in dw:
