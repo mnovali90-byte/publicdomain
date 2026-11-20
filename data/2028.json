@@ -7785,11 +7785,21 @@
     }
    },
    "verifica": {
-    "esito": "discorde",
+    "esito": "maggioranza",
     "fonti": {
      "wikidata": 1957,
      "gnd": 1957,
      "loc": 1957
+    },
+    "autorevoli": {
+     "morte": 1957,
+     "fonti": [
+      "BnF",
+      "Britannica",
+      "GND",
+      "Library of Congress",
+      "Store norske leksikon"
+     ]
     },
     "citate": {
      "Encyclopædia Britannica Online": 1957,
@@ -21810,11 +21820,19 @@
     }
    },
    "verifica": {
-    "esito": "discorde",
+    "esito": "maggioranza",
     "fonti": {
      "wikidata": 1957,
      "gnd": 1957,
      "loc": 1959
+    },
+    "autorevoli": {
+     "morte": 1957,
+     "fonti": [
+      "BnF",
+      "GND",
+      "Library of Congress"
+     ]
     },
     "citate": {
      "BnF authorities": 1957,
@@ -29205,79 +29223,6 @@
    }
   },
   {
-   "wikidata": "Q11909782",
-   "nome": "Vladimír Sís",
-   "nascita": "1889-06-30",
-   "morte": "1957-07-02",
-   "pagine_wikipedia": 4,
-   "professioni": [
-    "scrittore"
-   ],
-   "descrizione": "Czech writer (1889-1958)",
-   "url": "https://www.wikidata.org/wiki/Q11909782",
-   "letterario": true,
-   "tipo_catalogo": [],
-   "opere": [
-    {
-     "titolo": "Makedonie: [studie zeměpisná, historická, národopisná, statistická i kulturní]",
-     "anno": 1914,
-     "generi": [],
-     "sl": 0
-    },
-    {
-     "titolo": "Nový Balkán",
-     "anno": 1924,
-     "generi": [],
-     "sl": 0
-    },
-    {
-     "titolo": "Z bulharského bojiště: dojmy válečného zpravodaje",
-     "anno": 1913,
-     "generi": [],
-     "sl": 0
-    },
-    {
-     "titolo": "Z bulharského bojiště: dojmy válečného zpravodaje",
-     "anno": 1913,
-     "generi": [],
-     "sl": 0
-    }
-   ],
-   "n_opere": 4,
-   "visite_12m": 0,
-   "visite_it": 0,
-   "visite_en": 0,
-   "visite_es": 0,
-   "visite_de": 0,
-   "visite_fr": 0,
-   "foto": {
-    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vladimir_Sis.JPG?width=800",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Vladimir_Sis.JPG",
-    "licenza": "Public domain",
-    "autore": "Unknown author"
-   },
-   "indice_it": 0,
-   "indice_en": 0,
-   "indice_es": 0,
-   "indice_de": 0,
-   "indice_fr": 0,
-   "indice_int": 77,
-   "indice": 42,
-   "verifica": {
-    "esito": "discorde",
-    "fonti": {
-     "wikidata": 1957,
-     "gnd": 1958,
-     "wikidata_altra": 1958
-    },
-    "citate": {
-     "REGO": 1957,
-     "Czech National Authority Database": 1958,
-     "The Fine Art Archive": 1957
-    }
-   }
-  },
-  {
    "wikidata": "Q16499862",
    "nome": "Walter Prichard Eaton",
    "nascita": "1878-08-24",
@@ -29921,11 +29866,18 @@
     }
    },
    "verifica": {
-    "esito": "discorde",
+    "esito": "maggioranza",
     "fonti": {
      "wikidata": 1957,
      "gnd": 1957,
      "wikidata_altra": 1958
+    },
+    "autorevoli": {
+     "morte": 1957,
+     "fonti": [
+      "Deutsche Biographie",
+      "GND"
+     ]
     },
     "citate": {
      "Deutsche Biographie": 1957,
@@ -56121,11 +56073,18 @@
    "indice_int": 32,
    "indice": 31,
    "verifica": {
-    "esito": "discorde",
+    "esito": "maggioranza",
     "fonti": {
      "wikidata": 1957,
      "gnd": 1957,
      "loc": 1956
+    },
+    "autorevoli": {
+     "morte": 1957,
+     "fonti": [
+      "GND",
+      "al-Aʻlām"
+     ]
     },
     "citate": {
      "al-Aʻlām (Dār al-ʻIlm, 2002)": 1957
@@ -56755,53 +56714,6 @@
     "esito": "una_fonte",
     "fonti": {
      "wikidata": 1957
-    }
-   }
-  },
-  {
-   "wikidata": "Q55192298",
-   "nome": "Hanns Gobsch",
-   "nascita": "1883-08-01",
-   "morte": "1957-12-03",
-   "pagine_wikipedia": 1,
-   "professioni": [
-    "scrittore"
-   ],
-   "descrizione": "German author (1883-1957)",
-   "url": "https://www.wikidata.org/wiki/Q55192298",
-   "letterario": true,
-   "tipo_catalogo": [],
-   "n_opere": 0,
-   "visite_12m": 0,
-   "visite_it": 0,
-   "visite_en": 0,
-   "visite_es": 0,
-   "visite_de": 161,
-   "visite_fr": 0,
-   "paesi": [
-    "Germania"
-   ],
-   "lingue": [
-    "tedesco"
-   ],
-   "indice_it": 0,
-   "indice_en": 0,
-   "indice_es": 0,
-   "indice_de": 88,
-   "indice_fr": 0,
-   "indice_int": 32,
-   "indice": 31,
-   "verifica": {
-    "esito": "discorde",
-    "fonti": {
-     "wikidata": 1957,
-     "gnd": 1958
-    },
-    "citate": {
-     "Czech National Authority Database": 1958,
-     "Internet Speculative Fiction Database": 1957,
-     "The Encyclopedia of Science Fiction": 1957,
-     "World Biographical Information System Online": 1957
     }
    }
   },
@@ -66629,11 +66541,18 @@
    "indice_int": 0,
    "indice": 25,
    "verifica": {
-    "esito": "discorde",
+    "esito": "maggioranza",
     "fonti": {
      "wikidata": 1957,
      "gnd": 1957,
      "loc": 1967
+    },
+    "autorevoli": {
+     "morte": 1957,
+     "fonti": [
+      "Biblioteca nazionale ceca",
+      "GND"
+     ]
     },
     "citate": {
      "Czech National Authority Database": 1957

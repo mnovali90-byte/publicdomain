@@ -98,6 +98,12 @@ def main():
     if not trovati:
         righe.append("- Nessuno (oppure la verifica delle date non ha ancora girato su questi anni).")
     righe.append("")
+    corr = leggi(D / "morti_corrette.json", {}).get("autori", {})
+    if corr:
+        righe.append("### Corretti in automatico (due fonti autorevoli contro Wikidata): solo da sapere")
+        for c in sorted(corr.values(), key=lambda c: c["nome"]):
+            righe.append(f"- {c['nome']}: Wikidata {c['morte_wikidata']}, {', '.join(c['fonti'])} {c['morte']}.")
+        righe.append("")
 
     # 4. Duke
     righe.append("## 4. Lista Duke dell'anno")

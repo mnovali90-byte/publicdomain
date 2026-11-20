@@ -322,6 +322,16 @@ def blocco_verifica(a, lang):
         t = (f"Anno di morte controllato a mano su una fonte del paese dell'autore ({n.get('fonte')}), perché le altre fonti non concordavano." if it
              else f"Year of death checked by hand against a source from the author's country ({n.get('fonte')}), because the other sources disagreed.")
         return [f'<p class="sotto">{esc(t)} <a href="{esc(n.get("url", ""))}" rel="noopener">{"Fonte" if it else "Source"}</a></p>\n']
+    if v["esito"] in ("maggioranza", "corretto"):
+        au = v.get("autorevoli") or {}
+        fa = ", ".join(au.get("fonti", []))
+        if v["esito"] == "maggioranza":
+            t = (f"Anno di morte {au.get('morte')} confermato da {len(au.get('fonti', []))} fonti autorevoli ({fa}). Altre fonti danno un anno diverso: vale quello su cui concordano le fonti autorevoli." if it
+                 else f"Year of death {au.get('morte')} confirmed by {len(au.get('fonti', []))} authoritative sources ({fa}). Other sources give a different year: the one the authoritative sources agree on applies.")
+        else:
+            t = (f"Anno di morte {au.get('morte')} secondo {len(au.get('fonti', []))} fonti autorevoli ({fa}). Wikidata dice {fv.get('wikidata')}: vale quello delle fonti autorevoli." if it
+                 else f"Year of death {au.get('morte')} according to {len(au.get('fonti', []))} authoritative sources ({fa}). Wikidata says {fv.get('wikidata')}: the authoritative sources apply.")
+        return [f'<p class="sotto">{esc(t)}</p>\n']
     if v["esito"] == "documentato":
         cit = ", ".join(v.get("citate", {}))
         t = (f"Anno di morte documentato: Wikidata lo riporta citando {cit}. Le biblioteche nazionali che consultiamo non hanno questo autore." if it

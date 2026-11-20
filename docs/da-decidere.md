@@ -2,7 +2,7 @@
 
 Scritto da `scripts/da_decidere.py`. Qui ci sono solo i casi in cui i dati non bastano. Il resto è già sul sito.
 
-**Casi da decidere: 94.**
+**Casi da decidere: 61.**
 
 ## 0. Aggiornamento non finito
 - **L'aggiornamento non ha finito in questo giro.** Non riparte da solo (decisione del 19/11/2026): i dati mancanti arrivano al prossimo giro previsto, oppure si lancia a mano.
@@ -25,34 +25,23 @@ Scritto da `scripts/da_decidere.py`. Qui ci sono solo i casi in cui i dati non b
 - Lista 2028: **Cat Country**: a puntate fino al 1933 (wikipedia). Per intero è libero solo dal 2029.
 
 ## 3. Autori con l'anno di morte discorde tra le fonti
-- ue-2027: **Blanca de los Ríos** (wikidata 1956, gnd 1956, loc 1956, wikidata_altra 1955).
 - ue-2027: **Louise Frances Stevens Bryant** (wikidata 1956, loc 1959).
 - ue-2027: **Frances Mabel Robinson** (wikidata 1956, wikidata_altra 1954).
 - ue-2027: **Beatrice Irwin** (wikidata 1956, gnd 1953, wikidata_altra 1953).
 - ue-2027: **George Scarborough** (wikidata 1956, wikidata_altra 1951).
-- ue-2027: **Ricardo Baeza** (wikidata 1956, gnd 1956, loc 1956, wikidata_altra 1959).
 - ue-2027: **Nikola Georgiev Dančov** (wikidata 1956).
 - ue-2027: **Noel Everingham Sainsbury** (wikidata 1956, loc 1955).
-- ue-2027: **Ioseb Mčedlišvili** (wikidata 1956, gnd 1950, loc 1950, wikidata_altra 1950).
 - ue-2027: **Paul Leutwein** (wikidata 1956, gnd 1966).
-- ue-2027: **Irma Krützner** (wikidata 1956, gnd 1956).
-- es-2027: **Chilakamarthi Lakshmi Narasimham** (wikidata 1946, gnd 1945, loc 1945).
 - es-2027: **Jafar Kashif** (wikidata 1946, wikidata_altra 1947).
 - es-2027: **Julian Cruz Balmaceda** (wikidata 1946, loc 1947, wikidata_altra 1947).
 - es-2027: **Nikolai Semyonovich Vylka** (wikidata 1946, wikidata_altra 1942).
-- es-2027: **Vasilijs Sinaiskis** (wikidata 1946, gnd 1949, loc 1949, wikidata_altra 1949).
-- es-2027: **Victoria Manners** (wikidata 1946, gnd 1933, loc 1933, wikidata_altra 1933).
 - es-2027: **Ammon Wrigley** (wikidata 1946, loc 1945).
-- es-2027: **Carl Rössler** (wikidata 1946, gnd 1948, loc 1948, wikidata_altra 1948).
-- es-2027: **Ernest Augustus Boyd** (wikidata 1946, gnd 1947, loc 1946).
 - es-2027: **Ernest George Henham** (wikidata 1946, gnd 1946, loc 1948, wikidata_altra 1948).
-- es-2027: **Hulda Lütken** (wikidata 1946, gnd 1946).
 - es-2027: **Lan Khai** (wikidata 1946, gnd 1945, wikidata_altra 1945).
 - es-2027: **Norbert Sevestre** (wikidata 1946, gnd 1945).
 - es-2027: **Sylʹvestr Kalynet︠s︡ʹ** (wikidata 1946, loc 1945).
 - es-2027: **Fritz Groß** (wikidata 1946, gnd 1946, loc 1947).
 - es-2027: **Ramón de Solano Polanco** (wikidata 1946, loc 1939).
-- es-2027: **Raoul Vèze** (wikidata 1946, gnd 1935, loc 1935).
 - es-2027: **Sophie Margaretta Almon Hensley** (wikidata 1946, gnd 1913, loc 1946).
 - es-2027: **Vellakal Palaniapa Subramania Mudaliar** (wikidata 1946, gnd 1947, loc 1946).
 - es-2027: **William Macneile Dixon** (wikidata 1946, gnd 1946, loc 1945).
@@ -60,54 +49,48 @@ Scritto da `scripts/da_decidere.py`. Qui ci sono solo i casi in cui i dati non b
 - es-2027: **Herbert von Hoerner** (wikidata 1946, gnd 1950).
 - es-2027: **John Lyle Donaghy** (wikidata 1946, loc 1949, wikidata_altra 1949).
 - es-2027: **Richard Schlemmer** (wikidata 1946, gnd 1869).
-- es-2027: **Xiaotian Xu** (wikidata 1946, gnd 1948, wikidata_altra 1948).
 - es-2027: **H. L. Dodge** (wikidata 1946, loc 1945).
 - es-2027: **Jan Zíbar** (wikidata 1946, wikidata_altra 1945).
-- es-2027: **Juan Carlos Welker** (wikidata 1946, gnd 1946).
-- es-2027: **Virginia Fiastri Guicciardi** (wikidata 1946, gnd 1946).
-- ue-2028: **Freeman Wills Crofts** (wikidata 1957, gnd 1957, loc 1957).
-- ue-2028: **Franz Maria Feldhaus** (wikidata 1957, gnd 1957, loc 1959).
 - ue-2028: **Nikos Karvounis** (wikidata 1957, wikidata_altra 1947).
-- ue-2028: **Vladimír Sís** (wikidata 1957, gnd 1958, wikidata_altra 1958).
-- ue-2028: **Agnes Fry** (wikidata 1957, gnd 1957, wikidata_altra 1958).
 - ue-2028: **Charles Neville Buck** (wikidata 1957, loc 1957).
 - ue-2028: **Lee Hawkins Garby** (wikidata 1957).
 - ue-2028: **Solomon Abramovič Abramov** (wikidata 1957, gnd 1954).
 - ue-2028: **Ada Tyrrell** (wikidata 1957, wikidata_altra 1955).
-- ue-2028: **Fuʼād Khaṭīb** (wikidata 1957, gnd 1957, loc 1956).
-- ue-2028: **Hanns Gobsch** (wikidata 1957, gnd 1958).
 - ue-2028: **Hitoshi Manzōji** (wikidata 1957, gnd 1958).
 - ue-2028: **Hugh Francis Blunt** (wikidata 1957, loc 1957, wikidata_altra 1955).
-- ue-2028: **Aleksandr Pavlovič Burov** (wikidata 1957, gnd 1957, loc 1967).
 - ue-2028: **Roscoe Gilmore Stott** (wikidata 1957, wikidata_altra 1980).
-- es-2028: **André Savignon** (wikidata 1947, gnd 1947, loc 1946).
 - es-2028: **Marguerite Coppin** (wikidata 1947, gnd 1931, wikidata_altra 1931).
-- es-2028: **Heinrich August Luyken** (wikidata 1947, gnd 1940, loc 1940).
-- es-2028: **Labiba Hashim** (wikidata 1947, gnd 1946, loc 1946).
-- es-2028: **Zhaleh Alamtaj Qaem-Maqami** (wikidata 1947, gnd 1946, loc 1946).
 - es-2028: **Jafar Kashif** (wikidata 1947, wikidata_altra 1946).
 - es-2028: **Mirza Farhatullah Baig** (wikidata 1947, loc 1948).
-- es-2028: **Najib Nassar** (wikidata 1947, gnd 1948, loc 1948, wikidata_altra 1948).
 - es-2028: **Julian Cruz Balmaceda** (wikidata 1947, loc 1947, wikidata_altra 1946).
-- es-2028: **Kamta Prasad Guru** (wikidata 1947, gnd 1949, loc 1949).
 - es-2028: **Nikos Karvounis** (wikidata 1947, wikidata_altra 1957).
-- es-2028: **Collofino** (wikidata 1947, gnd 1947, loc 1947, wikidata_altra 1937).
-- es-2028: **Friedrich Wilhelm Mader** (wikidata 1947, gnd 1945, loc 1947).
-- es-2028: **Adam Kowalski** (wikidata 1947, gnd 1896, loc 1947).
 - es-2028: **Arthur Zweiniger** (wikidata 1947, gnd 1949).
-- es-2028: **Josef Zdeněk Raušar** (wikidata 1947, gnd 1947, loc 1947).
 - es-2028: **Kolau Chernyavsky** (wikidata 1947, wikidata_altra 1942).
 - es-2028: **Lally Horstmann** (wikidata 1947, gnd 1954, wikidata_altra 1954).
 - es-2028: **Sture Appelberg** (wikidata 1947, gnd 1944).
-- es-2028: **Adolfo de Sandoval** (wikidata 1947, loc 1947, wikidata_altra 1945).
 - es-2028: **Harriet A. Glazebrook** (wikidata 1947, loc 1937).
 - es-2028: **Herbert Scheffler** (wikidata 1947, gnd 1951, wikidata_altra 1951).
 - es-2028: **Janmashankar Buch** (wikidata 1947, loc 1946).
-- es-2028: **Martha Kneschke** (wikidata 1947, gnd 1947).
 - es-2028: **Моисей Павлович Венгеров** (wikidata 1947, wikidata_altra 1962).
 - es-2028: **E. E. Ohlson** (wikidata 1947, wikidata_altra 1948).
 - es-2028: **Henry Harrison Lewis** (wikidata 1947, wikidata_altra 1923).
 - es-2028: **Irena Mohor** (wikidata 1947, wikidata_altra 1948).
+
+### Corretti in automatico (due fonti autorevoli contro Wikidata): solo da sapere
+- Carl Rössler: Wikidata 1946, GND, Library of Congress 1948.
+- Chilakamarthi Lakshmi Narasimham: Wikidata 1946, GND, Library of Congress 1945.
+- Hanns Gobsch: Wikidata 1957, Biblioteca nazionale ceca, GND 1958.
+- Heinrich August Luyken: Wikidata 1947, GND, Library of Congress 1940.
+- Ioseb Mčedlišvili: Wikidata 1956, Dizionario biografico della Georgia, GND, Library of Congress 1950.
+- Kamta Prasad Guru: Wikidata 1947, GND, Library of Congress 1949.
+- Labiba Hashim: Wikidata 1947, GND, Library of Congress 1946.
+- Najib Nassar: Wikidata 1947, GND, Library of Congress, al-Aʻlām 1948.
+- Raoul Vèze: Wikidata 1946, GND, Library of Congress 1935.
+- Vasilijs Sinaiskis: Wikidata 1946, GND, Library of Congress, NUKAT (Polonia) 1949.
+- Victoria Manners: Wikidata 1946, GND, Library of Congress 1933.
+- Vladimír Sís: Wikidata 1957, Biblioteca nazionale ceca, GND 1958.
+- Xiaotian Xu: Wikidata 1946, GND, Library of Congress 1948.
+- Zhaleh Alamtaj Qaem-Maqami: Wikidata 1947, GND, Library of Congress 1946.
 
 ## 4. Lista Duke dell'anno
 - Letta: 19 libri nel 2026.

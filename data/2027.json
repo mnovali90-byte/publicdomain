@@ -8782,12 +8782,19 @@
     }
    },
    "verifica": {
-    "esito": "discorde",
+    "esito": "maggioranza",
     "fonti": {
      "wikidata": 1956,
      "gnd": 1956,
      "loc": 1956,
      "wikidata_altra": 1955
+    },
+    "autorevoli": {
+     "morte": 1956,
+     "fonti": [
+      "GND",
+      "Library of Congress"
+     ]
     },
     "citate": {
      "FemBio database": 1956,
@@ -34838,12 +34845,20 @@
    "indice_int": 70,
    "indice": 41,
    "verifica": {
-    "esito": "discorde",
+    "esito": "maggioranza",
     "fonti": {
      "wikidata": 1956,
      "gnd": 1956,
      "loc": 1956,
      "wikidata_altra": 1959
+    },
+    "autorevoli": {
+     "morte": 1956,
+     "fonti": [
+      "BnF",
+      "GND",
+      "Library of Congress"
+     ]
     },
     "citate": {
      "Spanish Biographical Dictionary": 1959,
@@ -54043,55 +54058,6 @@
    "url": "https://www.wikidata.org/wiki/Q12282024"
   },
   {
-   "wikidata": "Q137639065",
-   "nome": "Ioseb Mčedlišvili",
-   "nascita": "1888-04-20",
-   "morte": "1956-01-01",
-   "pagine_wikipedia": 1,
-   "professioni": [
-    "poeta",
-    "scrittore"
-   ],
-   "descrizione": null,
-   "url": "https://www.wikidata.org/wiki/Q137639065",
-   "letterario": true,
-   "tipo_catalogo": [
-    "Poesia"
-   ],
-   "n_opere": 0,
-   "visite_12m": 0,
-   "visite_it": 0,
-   "visite_en": 0,
-   "visite_es": 0,
-   "visite_de": 0,
-   "visite_fr": 0,
-   "paesi": [
-    "Repubblica Democratica di Georgia",
-    "Repubblica Socialista Sovietica Georgiana",
-    "Impero russo"
-   ],
-   "indice_it": 0,
-   "indice_en": 0,
-   "indice_es": 0,
-   "indice_de": 0,
-   "indice_fr": 0,
-   "indice_int": 33,
-   "indice": 32,
-   "verifica": {
-    "esito": "discorde",
-    "fonti": {
-     "wikidata": 1956,
-     "gnd": 1950,
-     "loc": 1950,
-     "wikidata_altra": 1950
-    },
-    "citate": {
-     "Society for the Promotion of Literacy among Georgians Members": 1950,
-     "Biographical Dictionary of Georgia": 1950
-    }
-   }
-  },
-  {
    "wikidata": "Q124839363",
    "nome": "Iryna Klymkevych",
    "nascita": "1893-01-01",
@@ -66464,10 +66430,17 @@
    "indice_int": 0,
    "indice": 26,
    "verifica": {
-    "esito": "discorde",
+    "esito": "maggioranza",
     "fonti": {
      "wikidata": 1956,
      "gnd": 1956
+    },
+    "autorevoli": {
+     "morte": 1956,
+     "fonti": [
+      "Biblioteca nazionale ceca",
+      "GND"
+     ]
     },
     "citate": {
      "Österreichische Schriftstellerinnen 1880–1938": 1950,

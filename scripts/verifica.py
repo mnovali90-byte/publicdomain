@@ -18,6 +18,19 @@ Per ogni autore «letterario» dei file data/<anno>.json:
 4. da Wikidata prende anche gli illustratori (P110) delle opere dell'autore, con il loro anno di morte:
    "illustratori": [{"opera": "...", "nome": "...", "morte": 1976}]  (le illustrazioni hanno diritti propri).
 
+5. REGOLA DELLE DUE FONTI AUTOREVOLI (decisa da Marco il 20/11/2026): se almeno due fonti autorevoli diverse danno lo
+   stesso anno di morte, e nessun altro anno ne ha altrettante, vale quell'anno, anche contro Wikidata.
+   Autorevoli: le biblioteche che leggiamo noi (GND, Library of Congress) e, tra le fonti citate da Wikidata, le
+   autorità delle biblioteche nazionali (BnF, Repubblica Ceca, IdRef, NUKAT, Biblioteca nazionale russa) e i grandi
+   dizionari biografici (Diccionario Biográfico Español, Deutsche Biographie, Britannica, Store norske leksikon...).
+   La stessa biblioteca citata due volte (GND letta da noi e GND citata da Wikidata) conta una volta sola.
+   Non sono autorevoli: Wikidata stessa (anche la sua «altra data»), IMDb, Project Gutenberg, Open Library, siti di fan.
+   - le fonti autorevoli danno ragione a Wikidata: esito «maggioranza» (confermato, con la fonte che dissente);
+   - danno un altro anno: esito «corretto». L'autore esce dall'elenco sbagliato ed entra in quello giusto, se c'è
+     (UE: morti nell'anno N-71; Spagna: N-81). Le correzioni restano in data/morti_corrette.json, così valgono anche per
+     gli elenchi degli anni dopo.
+   Se le fonti autorevoli non arrivano a due d'accordo, resta «discorde» (da verificare).
+
 Le risposte delle biblioteche restano in data/cache_verifica.json e si richiedono di nuovo solo dopo 180 giorni.
 Se una fonte non risponde, l'autore resta con le fonti che ci sono: niente si blocca.
 """
@@ -157,6 +170,54 @@ def morte_loc(codice):
     return None
 
 
+# fonte -> biblioteca o dizionario (la stessa fonte con nomi diversi conta una volta)
+AUTOREVOLI = {
+    "gnd": "GND", "Integrated Authority File": "GND", "Catalog of the German National Library": "GND",
+    "loc": "Library of Congress", "Library of Congress Authorities": "Library of Congress",
+    "Faceted Application of Subject Terminology": "Library of Congress",
+    "BnF authorities": "BnF", "Czech National Authority Database": "Biblioteca nazionale ceca", "IdRef": "IdRef (Francia)",
+    "NUKAT": "NUKAT (Polonia)", "Authority Author Files at Russian National Library": "Biblioteca nazionale russa",
+    "National Library of Israel Names and Subjects Authority File": "Biblioteca nazionale di Israele",
+    "Spanish Biographical Dictionary": "Diccionario Biográfico Español", "Deutsche Biographie": "Deutsche Biographie",
+    "Encyclopædia Britannica Online": "Britannica", "Great Norwegian Encyclopedia": "Store norske leksikon",
+    "Biographical Dictionary of Georgia": "Dizionario biografico della Georgia", "al-Aʻlām (Dār al-ʻIlm, 2002)": "al-Aʻlām",
+    "Österreichische Schriftstellerinnen 1880–1938": "Österreichische Schriftstellerinnen 1880–1938",
+    "The Biographical Dictionary of Women in Science": "Biographical Dictionary of Women in Science",
+    "The Encyclopedia of Science Fiction": "Encyclopedia of Science Fiction",
+    "Oxford Dictionary of National Biography": "Oxford Dictionary of National Biography",
+    "Dizionario Biografico degli Italiani": "Dizionario Biografico degli Italiani",
+}
+# le altre fonti citate con nomi da biblioteca nazionale o da dizionario biografico (ognuna conta per sé);
+# non gli aggregatori, che ripetono altre fonti
+AUTOREVOLI_RE = re.compile(r"authority file|national library|nationalbibliothek|bibliothèque nationale|biblioteca nacional|"
+                           r"biographical dictionary|dictionary of national biography|biographisches lexikon|biografick|"
+                           r"dizionario biografico|diccionario biográfico|digitale bibliotheek", re.I)
+NON_AUTOREVOLI_RE = re.compile(r"worldcat|snac|viaf|virtual international|wikipedia|wikidata", re.I)
+CORRETTE = DATA / "morti_corrette.json"
+
+
+def maggioranza(fv, citate):
+    """(anno, [fonti]) se almeno due fonti autorevoli diverse danno lo stesso anno e nessun altro anno ne ha altrettante."""
+    voti = {}
+    for k, y in list(fv.items()) + list((citate or {}).items()):
+        g = AUTOREVOLI.get(k) or (k if AUTOREVOLI_RE.search(k) and not NON_AUTOREVOLI_RE.search(k) else None)
+        if g and y:
+            voti.setdefault(y, set()).add(g)
+    if not voti:
+        return None
+    ordine = sorted(voti.items(), key=lambda t: -len(t[1]))
+    y, g = ordine[0]
+    if len(g) >= 2 and all(len(x[1]) < len(g) for x in ordine[1:]):
+        return y, sorted(g)
+    return None
+
+
+def anno_atteso(f):
+    """Anno di morte degli autori di un elenco: UE N-71, Spagna N-81 (morti prima del 1987)."""
+    n = int(re.search(r"(\d{4})\.json$", f.name).group(1))
+    return n - 81 if f.name.startswith("es-") else n - 71
+
+
 def main():
     inizio = time.time()
     oggi = dt.date.today()
@@ -205,7 +266,8 @@ def main():
         manuali = json.load(open(DATA / "verifiche_manuali.json", encoding="utf-8"))["autori"]
     except Exception:
         manuali = {}
-    conta = {"verificato": 0, "documentato": 0, "discorde": 0, "una_fonte": 0, "nazionale": 0, "tolti": 0}
+    conta = {"verificato": 0, "maggioranza": 0, "corretto": 0, "documentato": 0, "discorde": 0, "una_fonte": 0, "nazionale": 0, "tolti": 0}
+    corr = {}
     for f, p in pacchetti.items():
         anno_file = int(re.search(r"(\d{4})\.json$", f.name).group(1))
         tenuti = []
@@ -230,7 +292,7 @@ def main():
             if not a.get("letterario"):
                 continue
             q = a["wikidata"]
-            fv = {"wikidata": anno(a.get("morte"))}
+            fv = {"wikidata": a.get("morte_wikidata") or anno(a.get("morte"))}
             for nome_f in fonti:
                 c = cod.get(q, {}).get(nome_f)
                 y = (cache[nome_f].get(c) or {}).get("morte") if c else None
@@ -247,8 +309,14 @@ def main():
                 citate = (a.get("verifica") or {}).get("citate") or {}
             else:
                 citate = cit.get(q, {})
+            magg = None
             if any(y != fv["wikidata"] for y in altre + list(citate.values())):
                 esito = "discorde"
+                magg = maggioranza(fv, citate)
+                if magg and magg[0] == fv["wikidata"]:
+                    esito = "maggioranza"
+                elif magg:
+                    esito = "corretto"
             elif altre:
                 esito = "verificato"
             elif citate:
@@ -256,6 +324,11 @@ def main():
             else:
                 esito = "una_fonte"
             a["verifica"] = {"esito": esito, "fonti": fv}
+            if magg:
+                a["verifica"]["autorevoli"] = {"morte": magg[0], "fonti": magg[1]}
+            if esito == "corretto":
+                corr[q] = {"nome": a["nome"], "morte_wikidata": fv["wikidata"], "morte": magg[0], "fonti": magg[1],
+                           "scheda": {k: v for k, v in a.items() if k not in ("verifica",)}}
             if citate:
                 a["verifica"]["citate"] = citate
             conta[esito] += 1
@@ -263,7 +336,44 @@ def main():
                 a["illustratori"] = ill[q]
             else:
                 a.pop("illustratori", None)
+    # regola delle due fonti autorevoli: l'autore va nell'elenco dell'anno giusto (vedi il punto 5 in cima)
+    try:
+        vecchie = json.load(open(CORRETTE, encoding="utf-8")).get("autori", {})
+    except Exception:
+        vecchie = {}
+    tutte = {**vecchie, **corr}
+    for q in list(tutte):
+        if q in manuali:               # il controllo a mano vince
+            tutte.pop(q)
+    for f, p in pacchetti.items():
+        atteso = anno_atteso(f)
+        tenuti = []
+        for a in p["autori"]:
+            c = tutte.get(a["wikidata"])
+            if c and c["morte"] != atteso:
+                print(f"  TOLTO da {f.name}: {a['nome']} (Wikidata {c['morte_wikidata']}, {', '.join(c['fonti'])} {c['morte']})")
+                conta["tolti"] += 1
+                continue
+            tenuti.append(a)
+        p["autori"] = tenuti
+        presenti = {a["wikidata"] for a in p["autori"]}
+        for q, c in tutte.items():
+            if c["morte"] == atteso and q not in presenti:
+                nuovo = dict(c["scheda"])
+                nuovo["morte_wikidata"] = c["morte_wikidata"]
+                nuovo["morte"] = str(c["morte"])
+                nuovo["verifica"] = {"esito": "corretto", "fonti": {"wikidata": c["morte_wikidata"]},
+                                     "autorevoli": {"morte": c["morte"], "fonti": c["fonti"]}}
+                p["autori"].append(nuovo)
+                print(f"  AGGIUNTO a {f.name}: {c['nome']} (morto nel {c['morte']} secondo {', '.join(c['fonti'])})")
+        for a in p["autori"]:          # chi è già nell'elenco giusto prende l'anno delle fonti autorevoli
+            c = tutte.get(a["wikidata"])
+            if c and c["morte"] == atteso and anno(a.get("morte")) != c["morte"]:
+                a["morte_wikidata"] = c["morte_wikidata"]
+                a["morte"] = str(c["morte"])
         f.write_text(json.dumps(p, ensure_ascii=False, indent=1), encoding="utf-8")
+    CORRETTE.write_text(json.dumps({"nota": "Anni di morte corretti con la regola delle due fonti autorevoli (scripts/verifica.py, punto 5).",
+                                    "autori": tutte}, ensure_ascii=False, indent=1), encoding="utf-8")
     CACHE.write_text(json.dumps(cache, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     n_ill = len({a["wikidata"] for p in pacchetti.values() for a in p["autori"] if a.get("illustratori")})
     print("autori con illustratori noti:", n_ill)

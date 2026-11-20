@@ -6038,11 +6038,18 @@
    "letterario": true,
    "tipo_catalogo": [],
    "verifica": {
-    "esito": "discorde",
+    "esito": "maggioranza",
     "fonti": {
      "wikidata": 1947,
      "gnd": 1947,
      "loc": 1946
+    },
+    "autorevoli": {
+     "morte": 1947,
+     "fonti": [
+      "BnF",
+      "GND"
+     ]
     },
     "citate": {
      "BnF authorities": 1947
@@ -8279,28 +8286,6 @@
    "url": "https://www.wikidata.org/wiki/Q86526"
   },
   {
-   "wikidata": "Q92081",
-   "nome": "Heinrich August Luyken",
-   "nascita": "1864-12-10",
-   "morte": "1947-09-21",
-   "pagine_wikipedia": 11,
-   "professioni": [
-    "scrittore"
-   ],
-   "descrizione": "German British author and Esperantist (1864-1947)",
-   "url": "https://www.wikidata.org/wiki/Q92081",
-   "letterario": true,
-   "tipo_catalogo": [],
-   "verifica": {
-    "esito": "discorde",
-    "fonti": {
-     "wikidata": 1947,
-     "gnd": 1940,
-     "loc": 1940
-    }
-   }
-  },
-  {
    "wikidata": "Q5977075",
    "nome": "Luisa Piccarreta",
    "nascita": "1865-04-23",
@@ -10151,114 +10136,6 @@
    }
   },
   {
-   "wikidata": "Q16125016",
-   "nome": "Labiba Hashim",
-   "nascita": "1880-01-01",
-   "morte": "1947-01-01",
-   "pagine_wikipedia": 9,
-   "professioni": [
-    "romanziere",
-    "scrittore"
-   ],
-   "descrizione": "Lebanese novelist and journalist, noted for her pioneering role in women's Arabic literature",
-   "url": "https://www.wikidata.org/wiki/Q16125016",
-   "letterario": true,
-   "tipo_catalogo": [
-    "Romanzo"
-   ],
-   "bio": "Labiba Hashim (1952-1882) was a Lebanese author who founded and published Fatat al-Sharq magazine in Cairo in 1906, one of the first female-oriented magazines of the Arab world. In the magazine Hashim advocated for women's rights, especially rights related to women's education and involvement in politics. Today, many researchers are working to collect information about Hashim in order to preserve her heritage and legacy.",
-   "bio_url": "https://en.wikipedia.org/wiki/Labiba_Hashim",
-   "bio_lingua": "en",
-   "bios": {
-    "en": {
-     "testo": "Labiba Hashim (1952-1882) was a Lebanese author who founded and published Fatat al-Sharq magazine in Cairo in 1906, one of the first female-oriented magazines of the Arab world. In the magazine Hashim advocated for women's rights, especially rights related to women's education and involvement in politics. Today, many researchers are working to collect information about Hashim in order to preserve her heritage and legacy.",
-     "url": "https://en.wikipedia.org/wiki/Labiba_Hashim"
-    }
-   },
-   "n_opere": 0,
-   "visite_12m": 903,
-   "visite_it": 0,
-   "visite_en": 903,
-   "visite_es": 0,
-   "visite_de": 0,
-   "visite_fr": 162,
-   "foto": {
-    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Labiba_Hashim.png?width=800",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Labiba_Hashim.png",
-    "licenza": "Public domain",
-    "autore": "Unknown"
-   },
-   "paesi": [
-    "Regno Arabo di Siria",
-    "Grande Libano",
-    "Impero ottomano",
-    "Libano"
-   ],
-   "lingue": [
-    "arabo",
-    "francese",
-    "inglese"
-   ],
-   "indice_it": 0,
-   "indice_en": 80,
-   "indice_es": 0,
-   "indice_de": 0,
-   "indice_fr": 85,
-   "indice_int": 86,
-   "indice": 80,
-   "traduzioni": {
-    "opere": 0,
-    "con_lingua": 0,
-    "per_lingua": {
-     "it": 0,
-     "en": 0,
-     "es": 0,
-     "fr": 0,
-     "de": 0
-    },
-    "parziale": false,
-    "fonte": "Open Library",
-    "ts": "2026-11-19",
-    "sbn_it": {
-     "trovato": false,
-     "edizioni": 0,
-     "ultimo": null,
-     "dal_2000": 0,
-     "metodo": null,
-     "riconoscimento": "non_trovato",
-     "fonte": "SBN",
-     "ambigue": 0
-    },
-    "bl_en": {
-     "trovato": false,
-     "edizioni": 0,
-     "dal_2000": 0,
-     "fonte": "British Library",
-     "scartate": 0,
-     "metodo": "nome_anni"
-    },
-    "loc_en": {
-     "trovato": false,
-     "edizioni": 0,
-     "dal_2000": 0,
-     "metodo": "codice_lc",
-     "fonte": "Library of Congress",
-     "intestazione": "Hāshim, Labībah, 1879 or 1880-1946 or 1947"
-    }
-   },
-   "verifica": {
-    "esito": "discorde",
-    "fonti": {
-     "wikidata": 1947,
-     "gnd": 1946,
-     "loc": 1946
-    },
-    "citate": {
-     "al-Aʻlām (Dār al-ʻIlm, 2002)": 1947
-    }
-   }
-  },
-  {
    "wikidata": "Q17393095",
    "nome": "Marija Ljudvigovna Moravskaja",
    "nascita": "1890-01-12",
@@ -11785,105 +11662,6 @@
      "Integrated Authority File": 1947,
      "Discogs": 1947,
      "filmportal.de": 1947
-    }
-   }
-  },
-  {
-   "wikidata": "Q5952483",
-   "nome": "Zhaleh Alamtaj Qaem-Maqami",
-   "nascita": "1883-03-01",
-   "morte": "1947-09-28",
-   "pagine_wikipedia": 8,
-   "professioni": [
-    "poeta"
-   ],
-   "descrizione": "20th century feminist Iranian poet",
-   "url": "https://www.wikidata.org/wiki/Q5952483",
-   "letterario": true,
-   "tipo_catalogo": [
-    "Poesia"
-   ],
-   "bio": "Zhaleh Alamtaj Qaem-Maqami was one of the first Iranian female poets who showed her feminist attitudes in her poetry. The book Mirror of Dew was the first translation of her poems into English.",
-   "bio_url": "https://en.wikipedia.org/wiki/Zhaleh_Alamtaj_Qaem-Maqami",
-   "bio_lingua": "en",
-   "bios": {
-    "en": {
-     "testo": "Zhaleh Alamtaj Qaem-Maqami was one of the first Iranian female poets who showed her feminist attitudes in her poetry. The book Mirror of Dew was the first translation of her poems into English.",
-     "url": "https://en.wikipedia.org/wiki/Zhaleh_Alamtaj_Qaem-Maqami"
-    }
-   },
-   "n_opere": 0,
-   "visite_12m": 370,
-   "visite_it": 0,
-   "visite_en": 370,
-   "visite_es": 0,
-   "visite_de": 0,
-   "visite_fr": 497,
-   "foto": {
-    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%DA%98%D8%A7%D9%84%D9%87-%D9%82%D8%A7%D8%A6%D9%85_%D9%85%D9%82%D8%A7%D9%85%DB%8C.png?width=800",
-    "pagina": "https://commons.wikimedia.org/wiki/File:%DA%98%D8%A7%D9%84%D9%87-%D9%82%D8%A7%D8%A6%D9%85_%D9%85%D9%82%D8%A7%D9%85%DB%8C.png",
-    "licenza": "Public domain",
-    "autore": "Unknown author"
-   },
-   "paesi": [
-    "Iran"
-   ],
-   "lingue": [
-    "persiano"
-   ],
-   "indice_it": 0,
-   "indice_en": 69,
-   "indice_es": 0,
-   "indice_de": 0,
-   "indice_fr": 91,
-   "indice_int": 83,
-   "indice": 72,
-   "traduzioni": {
-    "opere": 0,
-    "con_lingua": 0,
-    "per_lingua": {
-     "it": 0,
-     "en": 0,
-     "es": 0,
-     "fr": 0,
-     "de": 0
-    },
-    "parziale": false,
-    "fonte": "Open Library",
-    "ts": "2026-11-19",
-    "sbn_it": {
-     "trovato": false,
-     "edizioni": 0,
-     "ultimo": null,
-     "dal_2000": 0,
-     "metodo": null,
-     "riconoscimento": "non_trovato",
-     "fonte": "SBN",
-     "ambigue": 0
-    },
-    "bl_en": {
-     "trovato": false,
-     "edizioni": 0,
-     "dal_2000": 0,
-     "fonte": "British Library",
-     "scartate": 0,
-     "metodo": "nome_anni"
-    },
-    "loc_en": {
-     "trovato": false,
-     "edizioni": 0,
-     "dal_2000": 0,
-     "metodo": "codice_lc",
-     "fonte": "Library of Congress",
-     "intestazione": "Qāʼimʹmaqāmī, ʻĀlamtāj, 1883 or 1884-1946 or 1947"
-    }
-   },
-   "verifica": {
-    "esito": "discorde",
-    "fonti": {
-     "wikidata": 1947,
-     "gnd": 1946,
-     "loc": 1946
     }
    }
   },
@@ -17848,129 +17626,6 @@
    }
   },
   {
-   "wikidata": "Q6959985",
-   "nome": "Najib Nassar",
-   "nascita": "1873-01-01",
-   "morte": "1947-12-28",
-   "pagine_wikipedia": 5,
-   "professioni": [
-    "romanziere",
-    "scrittore"
-   ],
-   "descrizione": "Palestinian journalist",
-   "url": "https://www.wikidata.org/wiki/Q6959985",
-   "letterario": true,
-   "tipo_catalogo": [
-    "Romanzo"
-   ],
-   "bio": "Najib Nassar was a Palestinian journalist perhaps best known as the owner-editor of, and frequent contributor to, the Palestinian weekly newspaper Al-Karmil. Historian Rashid Khalidi described him as \"a pioneer among Palestinian and Arab journalists\" due to \"the sophistication and tenaciousness of his opposition to Zionism.\"",
-   "bio_url": "https://en.wikipedia.org/wiki/Najib_Nassar",
-   "bio_lingua": "en",
-   "bios": {
-    "en": {
-     "testo": "Najib Nassar was a Palestinian journalist perhaps best known as the owner-editor of, and frequent contributor to, the Palestinian weekly newspaper Al-Karmil. Historian Rashid Khalidi described him as \"a pioneer among Palestinian and Arab journalists\" due to \"the sophistication and tenaciousness of his opposition to Zionism.\"",
-     "url": "https://en.wikipedia.org/wiki/Najib_Nassar"
-    }
-   },
-   "opere": [
-    {
-     "titolo": "al-Ṣihyūnīyah : Mulakhkhaṣ tārīkhuhā, ghāythā wāmtdādhā ḥattá sanat 1905",
-     "titolo_en": "al-Ṣihyūnīyah : Mulakhkhaṣ tārīkhuhā, ghāythā wāmtdādhā ḥattá sanat 1905",
-     "anno": null,
-     "generi": [],
-     "sl": 0
-    },
-    {
-     "titolo": "al-Ṣihyūnīyah : Mulakhkhaṣ tārīkhuhā, ghāythā wāmtdādhā ḥattá sanat 1905 (Maṭbaʻat al-Karmal, 1911)",
-     "titolo_en": "al-Ṣihyūnīyah : Mulakhkhaṣ tārīkhuhā, ghāythā wāmtdādhā ḥattá sanat 1905 (Maṭbaʻat al-Karmal, 1911)",
-     "anno": 1911,
-     "generi": [],
-     "sl": 0
-    }
-   ],
-   "n_opere": 2,
-   "visite_12m": 3061,
-   "visite_it": 0,
-   "visite_en": 3061,
-   "visite_es": 0,
-   "visite_de": 0,
-   "visite_fr": 0,
-   "foto": {
-    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Naj%C4%ABb_Na%E1%B9%A3%E1%B9%A3%C4%81r_Portrait.jpg?width=800",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Naj%C4%ABb_Na%E1%B9%A3%E1%B9%A3%C4%81r_Portrait.jpg",
-    "licenza": "Public domain",
-    "autore": "Unknown author"
-   },
-   "paesi": [
-    "Stato di Palestina",
-    "Impero ottomano"
-   ],
-   "lingue": [
-    "arabo"
-   ],
-   "indice_it": 0,
-   "indice_en": 88,
-   "indice_es": 0,
-   "indice_de": 0,
-   "indice_fr": 0,
-   "indice_int": 74,
-   "indice": 84,
-   "traduzioni": {
-    "opere": 6,
-    "con_lingua": 6,
-    "per_lingua": {
-     "it": 0,
-     "en": 0,
-     "es": 0,
-     "fr": 0,
-     "de": 0
-    },
-    "parziale": false,
-    "fonte": "Open Library",
-    "ts": "2026-11-05",
-    "sbn_it": {
-     "trovato": false,
-     "edizioni": 0,
-     "ultimo": null,
-     "dal_2000": 0,
-     "metodo": null,
-     "riconoscimento": "non_trovato",
-     "fonte": "SBN",
-     "ambigue": 0
-    },
-    "bl_en": {
-     "trovato": false,
-     "edizioni": 0,
-     "dal_2000": 0,
-     "fonte": "British Library",
-     "scartate": 0,
-     "metodo": "nome_anni"
-    },
-    "loc_en": {
-     "trovato": false,
-     "edizioni": 0,
-     "dal_2000": 0,
-     "metodo": "codice_lc",
-     "fonte": "Library of Congress",
-     "intestazione": "Naṣṣār, Najīb, 1862-1948"
-    }
-   },
-   "verifica": {
-    "esito": "discorde",
-    "fonti": {
-     "wikidata": 1947,
-     "gnd": 1948,
-     "loc": 1948,
-     "wikidata_altra": 1948
-    },
-    "citate": {
-     "al-Aʻlām (Dār al-ʻIlm, 2002)": 1948
-    }
-   },
-   "pagina": "najib-nassar",
-   "pagina_en": "najib-nassar"
-  },
-  {
    "wikidata": "Q7344027",
    "nome": "Robert Elliott Speer",
    "nascita": "1867-09-10",
@@ -19828,28 +19483,6 @@
      "NUKAT": 1947,
      "Faceted Application of Subject Terminology": 1947,
      "Trove": 1947
-    }
-   }
-  },
-  {
-   "wikidata": "Q12419214",
-   "nome": "Kamta Prasad Guru",
-   "nascita": "1875-12-24",
-   "morte": "1947-11-16",
-   "pagine_wikipedia": 4,
-   "professioni": [
-    "scrittore"
-   ],
-   "descrizione": "Eminent Indian Hindi grammarian, linguist, and author",
-   "url": "https://www.wikidata.org/wiki/Q12419214",
-   "letterario": true,
-   "tipo_catalogo": [],
-   "verifica": {
-    "esito": "discorde",
-    "fonti": {
-     "wikidata": 1947,
-     "gnd": 1949,
-     "loc": 1949
     }
    }
   },
@@ -22751,12 +22384,19 @@
    "letterario": true,
    "tipo_catalogo": [],
    "verifica": {
-    "esito": "discorde",
+    "esito": "maggioranza",
     "fonti": {
      "wikidata": 1947,
      "gnd": 1947,
      "loc": 1947,
      "wikidata_altra": 1937
+    },
+    "autorevoli": {
+     "morte": 1947,
+     "fonti": [
+      "GND",
+      "Library of Congress"
+     ]
     },
     "citate": {
      "Integrated Authority File": 1947
@@ -23693,11 +23333,18 @@
     }
    },
    "verifica": {
-    "esito": "discorde",
+    "esito": "maggioranza",
     "fonti": {
      "wikidata": 1947,
      "gnd": 1945,
      "loc": 1947
+    },
+    "autorevoli": {
+     "morte": 1947,
+     "fonti": [
+      "GND",
+      "Library of Congress"
+     ]
     },
     "citate": {
      "Integrated Authority File": 1947
@@ -27232,11 +26879,18 @@
     }
    },
    "verifica": {
-    "esito": "discorde",
+    "esito": "maggioranza",
     "fonti": {
      "wikidata": 1947,
      "gnd": 1896,
      "loc": 1947
+    },
+    "autorevoli": {
+     "morte": 1947,
+     "fonti": [
+      "BnF",
+      "Library of Congress"
+     ]
     },
     "citate": {
      "BnF authorities": 1947
@@ -31450,11 +31104,19 @@
     }
    },
    "verifica": {
-    "esito": "discorde",
+    "esito": "maggioranza",
     "fonti": {
      "wikidata": 1947,
      "gnd": 1947,
      "loc": 1947
+    },
+    "autorevoli": {
+     "morte": 1947,
+     "fonti": [
+      "Biblioteca nazionale ceca",
+      "GND",
+      "Library of Congress"
+     ]
     },
     "citate": {
      "Czech National Authority Database": 1947,
@@ -35798,11 +35460,18 @@
     }
    },
    "verifica": {
-    "esito": "discorde",
+    "esito": "maggioranza",
     "fonti": {
      "wikidata": 1947,
      "loc": 1947,
      "wikidata_altra": 1945
+    },
+    "autorevoli": {
+     "morte": 1947,
+     "fonti": [
+      "BNE authority file",
+      "Library of Congress"
+     ]
     },
     "citate": {
      "BNE authority file": 1947
@@ -43078,10 +42747,17 @@
    "letterario": true,
    "tipo_catalogo": [],
    "verifica": {
-    "esito": "discorde",
+    "esito": "maggioranza",
     "fonti": {
      "wikidata": 1947,
      "gnd": 1947
+    },
+    "autorevoli": {
+     "morte": 1947,
+     "fonti": [
+      "GND",
+      "Österreichisches Biographisches Lexikon 1815–1950"
+     ]
     },
     "citate": {
      "Österreichische Schriftstellerinnen 1880–1938": 1903,
