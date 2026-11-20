@@ -208,9 +208,7 @@ TESTA = """<!doctype html>
 <meta property="og:description" content="{descr}">
 <meta name="twitter:card" content="summary">
 {jsonld}
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@900&family=Instrument+Sans:wght@400;600&family=DM+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="/assets/fonts/fonts.css" rel="stylesheet">
 <style>{css}</style>
 <!-- contatore visite senza cookie (GoatCounter) -->
 <script data-goatcounter="https://pdr.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>

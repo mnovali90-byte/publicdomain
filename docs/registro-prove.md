@@ -457,3 +457,9 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - **2027 (libri del 1931):** 169 libri (prima 154), 111 confermati (prima 78), 3 usciti prima, 1 a puntate fino al 1932 (Tarzan Triumphant). Conferme: registro del copyright 48, Wikipedia 18, BnF 15, ISFDB 12, Open Library 9, K10plus 8, Library of Congress 1.
 - **2028 (libri del 1932):** 175 libri (prima 159), 110 confermati (prima 76), 5 usciti prima (Musil, Brecht, tre racconti di Conrad dell'Ottocento), 1 a puntate fino al 1933 (Cat Country di Lao She).
 - **Errore trovato e corretto:** «Dwellers in the Mirage» risultava a puntate fino al 1941, perché ISFDB ha anche una ristampa a puntate del 1941. Ora contano solo le puntate entro 5 anni dalla prima uscita. Il libro è stato corretto a mano nei dati: confermato 1932 dal registro del copyright.
+
+## 20/11/2026 — Caratteri serviti dal nostro dominio
+- **Prima:** ogni pagina caricava Big Shoulders Display, Instrument Sans e DM Mono da Google Fonts, quindi l'indirizzo IP di chi visita arrivava a Google.
+- **Come:** scripts/scarica_font.py ha scaricato i file .woff2 (solo alfabeti latino e latino esteso) in assets/fonts/ e ha scritto assets/fonts/fonts.css. Licenza dei tre caratteri: SIL Open Font License. In 821 pagine e nei modelli (scripts/pagine.py, storico/pagina.html, index.html) il collegamento a Google è stato sostituito con /assets/fonts/fonts.css. Le copie salvate delle pagine Duke in docs/ non sono state toccate.
+- **Controllo:** home IT ed EN, Già pubblici, Public Domain Day 2027, calendario 2027 e una scheda autore aperti nel browser: tutti i caratteri caricati, zero richieste a Google, aspetto invariato.
+- **Limite:** i nomi in alfabeti non latini (cirillico, greco) usano il carattere di sistema. Prima Google li serviva per Big Shoulders e Instrument Sans.
