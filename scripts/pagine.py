@@ -224,7 +224,7 @@ CSS += CSS_MARCHIO
 PIEDE = {
     "it": """<footer>
 <p>Un progetto di Marco Novali · <a href="https://www.linkedin.com/in/marconovali" rel="me noopener" target="_blank">LinkedIn</a></p>
-<p>Fonti: Wikidata (CC0), Wikipedia (testi CC BY-SA, con link alla pagina d'origine), Wikimedia Commons (ritratti, ciascuno con la sua licenza), cataloghi nazionali (SBN, BnF, BNE, British Library e Library of Congress). Dati aperti, aggiornati ogni mese in automatico; possono contenere errori.</p>
+<p>Fonti: Wikidata (CC0), Wikipedia (testi CC BY-SA, con link alla pagina d'origine), Wikimedia Commons (ritratti, ciascuno con la sua licenza), cataloghi nazionali (SBN, BnF, BNE, British Library e Library of Congress). Dati aperti, aggiornati in automatico ogni tre mesi e a dicembre; possono contenere errori.</p>
 <p>Le date sono un calcolo indicativo dalle norme elencate nel <a href="/#regole-paesi">riquadro delle regole</a>. Non è consulenza legale: prima di pubblicare va controllato nella legge del paese.</p>
 <p>Chi usa questi dati lo fa sotto la propria responsabilità. Le date sono indicative e riguardano le opere originali: traduzioni, illustrazioni ed edizioni recenti hanno diritti propri. Per un'edizione commerciale chiedi un parere a un esperto di diritto d'autore. <a href="https://github.com/mnovali90-byte/publicdomain/issues">Hai trovato un errore? Segnalalo</a>.</p>
 <p><a href="/">Tutti gli autori</a> · <a href="/pubblico-dominio-@@ANNO@@/">Pubblico dominio @@ANNO@@</a> · <a href="/autore/">Indice degli autori</a> · <a href="https://github.com/mnovali90-byte/publicdomain">Codice e dati su GitHub</a></p>
@@ -234,7 +234,7 @@ PIEDE = {
 """,
     "en": """<footer>
 <p>A project by Marco Novali · <a href="https://www.linkedin.com/in/marconovali" rel="me noopener" target="_blank">LinkedIn</a></p>
-<p>Sources: Wikidata (CC0), Wikipedia (text CC BY-SA, linked to the original page), Wikimedia Commons (portraits, each with its own licence), national catalogues (SBN, BnF, BNE, British Library and Library of Congress). Open data, updated automatically every month; it may contain errors.</p>
+<p>Sources: Wikidata (CC0), Wikipedia (text CC BY-SA, linked to the original page), Wikimedia Commons (portraits, each with its own licence), national catalogues (SBN, BnF, BNE, British Library and Library of Congress). Open data, updated automatically every three months and in December; it may contain errors.</p>
 <p>The dates are an indicative calculation from the rules listed in the <a href="/en/#regole-paesi">rules box</a>. Not legal advice: check the law of the country before publishing.</p>
 <p>Anyone using this data does so at their own risk. The dates are indicative and refer to the original works: translations, illustrations and recent editions have their own rights. For a commercial edition, ask a copyright expert for advice. <a href="https://github.com/mnovali90-byte/publicdomain/issues">Found an error? Report it</a>.</p>
 <p><a href="/en/">All authors</a> · <a href="/en/public-domain-@@ANNO@@/">Public domain @@ANNO@@</a> · <a href="/en/author/">Author index</a> · <a href="https://github.com/mnovali90-byte/publicdomain">Code and data on GitHub</a></p>
@@ -811,7 +811,7 @@ def aggiorna_home_italiana():
     s = f.read_text(encoding="utf-8")
     tit = f"Pubblico dominio {A}: gli autori che diventano liberi · Public Domain Radar"
     descr = (f"Quali autori entrano in pubblico dominio il 1° gennaio {A}, con le regole di Italia, Francia, Germania, Spagna, Regno Unito e USA "
-             f"lette sui testi di legge ufficiali, e le registrazioni nei cataloghi nazionali. Dati aperti, aggiornati ogni mese.")
+             f"lette sui testi di legge ufficiali, e le registrazioni nei cataloghi nazionali. Dati aperti, aggiornati ogni tre mesi e a dicembre.")
     breve = f"Quali autori diventano liberi il 1° gennaio {A}, paese per paese, con dati aperti e fonti di legge ufficiali."
     s = sostituisci(s, r"<title>.*?</title>", f"<title>{esc(tit)}</title>")
     s = sostituisci(s, r'<meta name="description" content="[^"]*">', f'<meta name="description" content="{esc(descr)}">')
@@ -831,7 +831,7 @@ def crea_home_inglese():
     en = testi_app(s, "en")
     tit = f"Public Domain {A}: books and authors entering the public domain · Public Domain Radar"
     descr = (f"Which books and authors enter the public domain on 1 January {A}, with the term rules of Italy, France, Germany, Spain, the UK and the USA "
-             f"read from official legal texts, and records in national catalogues. Open data, updated monthly.")
+             f"read from official legal texts, and records in national catalogues. Open data, updated every three months and in December.")
     breve = f"Which books and authors become free on 1 January {A}, country by country, with open data and official legal sources."
     s = s.replace('<html lang="it">', '<html lang="en">', 1)
     s = sostituisci(s, r"<title>.*?</title>", f"<title>{esc(tit)}</title>")
