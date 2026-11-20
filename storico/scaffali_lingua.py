@@ -36,9 +36,10 @@ TIPI = {"Q7725634", "Q571", "Q8261", "Q25379", "Q49084", "Q5185279", "Q35760", "
 NON_LIBRI = ("constitution", "law", "legal", "statute", "treaty", "declaration", "charter", "manual", "dictionary",
              "encyclopedia", "gazetteer", "anthem", "hymn", "religious text", "scripture", "sacred", "liturgical",
              "prayer", "catechism", "creed", "encyclical", "papal bull", "edict", "decree", "atlas", "almanac", "speech",
-             "sermon", "song", "libretto", "ballet", "opera", "etiquette", "reference work", "textbook")
+             "sermon", "song", "libretto", "ballet", "opera", "etiquette", "reference work", "textbook", "oath", "lexicon",
+             "biographical dictionary", "catalog")
 TITOLI_NO = re.compile(r"\b(dizionario|diccionario|dictionnaire|dictionary|w[öo]rterbuch|manuale|manual|manuel|"
-                       r"handbuch|enciclopedia|encyclop)", re.I)
+                       r"handbuch|enciclopedia|encyclop|lexicon|lexikon|promptuarium|catalogus|catalogue)", re.I)
 # codici di lingua storici → lingua di oggi (ISO 639)
 BASE = {"fro": "fr", "frm": "fr", "xno": "fr", "gmh": "de", "goh": "de", "enm": "en", "osp": "es", "ita": "it",
         "it-tuscany": "it", "roa-opt": "pt", "dum": "nl", "odt": "nl", "non": "is", "orv": "ru", "la-x-medieval": "la"}
@@ -66,6 +67,14 @@ def sparql(q):
     return None if d is None else d["results"]["bindings"]
 
 
+# lingue riconosciute dall'ultima parola dell'etichetta quando la variante non ha un codice (20/11/2026: il Don
+# Chisciotte su Wikidata è in «Early Modern Spanish», senza codice, e mancava dallo scaffale spagnolo)
+NOMI_LINGUA = {"spanish": "es", "castilian": "es", "french": "fr", "german": "de", "english": "en", "italian": "it",
+               "russian": "ru", "portuguese": "pt", "latin": "la", "greek": "el", "dutch": "nl", "polish": "pl",
+               "czech": "cs", "danish": "da", "swedish": "sv", "norwegian": "no", "icelandic": "is", "hungarian": "hu",
+               "catalan": "ca", "arabic": "ar", "persian": "fa", "chinese": "zh", "japanese": "ja", "hebrew": "he"}
+
+
 def base(codice, etichetta_en):
     c = (codice or "").lower()
     e = (etichetta_en or "").lower()
@@ -74,7 +83,10 @@ def base(codice, etichetta_en):
     if c in BASE:
         return BASE[c]
     if not c:
-        return None
+        ultima = e.split()[-1] if e.split() else ""
+        if e.startswith("ancient greek"):
+            return "grc"
+        return NOMI_LINGUA.get(ultima)
     return c.split("-")[0]
 
 
