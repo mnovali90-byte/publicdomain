@@ -16,6 +16,8 @@ Che cosa raccoglie (solo Wikidata, CC0):
    la pagina avvisa che la musica o il libretto hanno diritti propri e quando scadono.
 3. per_autore: per gli autori delle schede (data/AAAA.json, es-AAAA.json), le loro opere che hanno altri autori (P50)
    o musica, con titolo italiano e inglese, per legarle alle «Opere principali» della scheda.
+Nato dopo la morte degli altri autori (anno di nascita P569): non è un coautore, è chi ha curato, letto o presentato
+un'edizione (Stephen Fry per «La strada di Puh», Neil Gaiman per Dunsany). Deciso da Marco il 20/11/2026.
 Gli illustratori (P110) non si leggono: è libero il testo, non l'edizione (avviso generale del sito).
 Se Wikidata non risponde a un pezzo, per quel pezzo resta il dato di prima."""
 import glob, json, os, re, sys, time, urllib.parse, urllib.request
@@ -76,9 +78,9 @@ def per_autore(autori):
     out, ok = {}, True
     for i in range(0, len(autori), 40):
         vals = " ".join("wd:" + a for a in autori[i:i + 40])
-        r = sparql(f"""SELECT ?a ?o ?oLabel ?oit ?p ?c ?cLabel ?m WHERE {{ VALUES ?a {{ {vals} }}
+        r = sparql(f"""SELECT ?a ?o ?oLabel ?oit ?p ?c ?cLabel ?m ?n WHERE {{ VALUES ?a {{ {vals} }}
           ?o wdt:P50 ?a. VALUES ?p {{ wdt:P50 wdt:P86 wdt:P87 }} ?o ?p ?c. FILTER(?c != ?a)
-          OPTIONAL {{ ?c wdt:P570 ?m }} OPTIONAL {{ ?o rdfs:label ?oit FILTER(LANG(?oit)="it") }}
+          OPTIONAL {{ ?c wdt:P570 ?m }} OPTIONAL {{ ?c wdt:P569 ?n }} OPTIONAL {{ ?o rdfs:label ?oit FILTER(LANG(?oit)="it") }}
           SERVICE wikibase:label {{ bd:serviceParam wikibase:language "en,mul". }} }}""")
         if r is None:
             ok = False
@@ -94,14 +96,16 @@ def per_autore(autori):
             dove = w["co"] if p == "P50" else w["mu"]
             k = cq if p == "P50" else (RUOLI[p], cq)
             vecchio = dove.get(k)
-            dove[k] = [nome, max([y for y in (m, vecchio and vecchio[1]) if y is not None], default=None)]
+            n = anno(v(x, "n"))
+            dove[k] = [nome, max([y for y in (m, vecchio and vecchio[1]) if y is not None], default=None),
+                       min([y for y in (n, vecchio and vecchio[2]) if y is not None], default=None)]
         time.sleep(1)
     finale = {}
     for a, opere in out.items():
         for o, w in opere.items():
             finale.setdefault(a, {})[o] = {"t": w["t"], "ti": w["ti"],
-                                           "co": [[k, n, m] for k, (n, m) in w["co"].items()],
-                                           "mu": [[r, n, m] for (r, _), (n, m) in w["mu"].items()]}
+                                           "co": [[k, n, m, nasc] for k, (n, m, nasc) in w["co"].items()],
+                                           "mu": [[r, n, m] for (r, _), (n, m, _n) in w["mu"].items()]}
     return finale, ok
 
 
@@ -110,7 +114,7 @@ def tipi(qids):
     out, ok = {}, True
     for i in range(0, len(qids), 150):
         vals = " ".join("wd:" + a for a in qids[i:i + 150])
-        r = sparql(f"""SELECT ?a ?t ?mem ?mm WHERE {{ VALUES ?a {{ {vals} }} OPTIONAL {{ ?a wdt:P31 ?t }}
+        r = sparql(f"""SELECT ?a ?t ?mem ?mm ?n WHERE {{ VALUES ?a {{ {vals} }} OPTIONAL {{ ?a wdt:P31 ?t }} OPTIONAL {{ ?a wdt:P569 ?n }}
           OPTIONAL {{ ?a wdt:P527 ?mem. OPTIONAL {{ ?mem wdt:P570 ?mm }} }} }}""")
         if r is None:
             ok = False
@@ -118,7 +122,10 @@ def tipi(qids):
         grezzo = {}
         for x in r:
             a = q_(v(x, "a"))
-            g = grezzo.setdefault(a, {"tipi": set(), "membri": {}})
+            g = grezzo.setdefault(a, {"tipi": set(), "membri": {}, "n": None})
+            nn = anno(v(x, "n"))
+            if nn is not None and (g["n"] is None or nn < g["n"]):
+                g["n"] = nn
             if v(x, "t"):
                 g["tipi"].add(q_(v(x, "t")))
             if v(x, "mem"):
@@ -131,7 +138,8 @@ def tipi(qids):
             morti = list(g["membri"].values())
             out[a] = {"t": "p" if persona else "g",
                       "m": max(morti) if morti and all(y is not None for y in morti) and not persona else None,
-                      "nd": bool(morti) and any(y is None for y in morti) and not persona}
+                      "nd": bool(morti) and any(y is None for y in morti) and not persona,
+                      "n": g["n"]}   # anno di nascita: chi è nato dopo la morte degli altri autori non è un coautore
         time.sleep(1)
     return out, ok
 
