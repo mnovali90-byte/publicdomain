@@ -471,3 +471,14 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
   - nei dati: 4 file degli autori, 2 liste USA, cache_arricchimento (372 voci, altrimenti il giro successivo le rimetteva) e ritratti dello Storico;
   - schede e Già pubblici rifatte in locale.
 - **Attenzione:** la prima regola, più larga, rovinava nomi veri («R. R. Bowker» diventava «R. Bowker», «The Theatre» diventava «Theatre»). È stata ristretta a ripetizioni di almeno 4 caratteri seguite da fine, spazio o punteggiatura. Controllato su questi casi.
+
+## 20/11/2026 — Campione degli scaffali per lingua (Già pubblici)
+- **Come:** scripts/prova_scaffali.py. Per ogni opera dell'archivio (82.545) legge da Wikidata la lingua (P407), il tipo (P31) e le pagine Wikipedia. Unisce le varianti storiche (italiano antico, toscano e medievale → italiano; francese antico e anglo-normanno → francese…). Tiene solo i tipi letterari. Per le 400 opere più diffuse di ogni lingua legge le visite degli ultimi 12 mesi alla Wikipedia di quella lingua, con la regola anti-picchi.
+- **Opere per lingua (oggi → candidati):** italiano 51 → 946, francese 354 → 2.192, tedesco 303 → 1.402, spagnolo 50 → 673, inglese 839 → 6.309.
+- **Italiano, primi 10 col metodo nuovo:** Divina Commedia, L'infinito, I promessi sposi, La pioggia nel pineto, Cantico delle creature, Il fu Mattia Pascal, Orlando furioso, Pinocchio, Uno nessuno e centomila, I Malavoglia. Oggi mancavano Il fu Mattia Pascal, La pioggia nel pineto e Uno nessuno e centomila.
+- **Problemi trovati:**
+  1. 24 blocchi di Wikidata su 207 falliti (circa 9.600 opere, il 12%): servono più tentativi.
+  2. Entrano testi d'odio già esclusi dalle classifiche (Mein Kampf, Protocolli dei Savi di Sion): va applicato anche qui l'elenco degli esclusi (colonna escl dell'archivio).
+  3. Entrano non-libri: Costituzione degli Stati Uniti, Siete Partidas, Diccionario geográfico, Manual de Carreño, inni nazionali. Il tipo «opera scritta» è troppo largo: serve un elenco di tipi da escludere (leggi, costituzioni, dizionari, manuali, inni, testi sacri).
+  4. Opere in più lingue: Guerra e pace finisce nel francese perché Wikidata elenca anche il francese. Regola: si assegna una lingua solo se tutte le lingue dell'opera portano a quella.
+  5. Alcuni autori anonimi compaiono come codice tecnico di Wikidata (Lazarillo de Tormes, Beowulf): vanno mostrati come «anonimo».
