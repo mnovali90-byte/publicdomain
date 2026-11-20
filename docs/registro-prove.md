@@ -451,3 +451,9 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - **Limiti che restano:**
   - pseudonimi: usare P742 di Wikidata per confrontare con il registro del copyright;
   - opere senza Wikipedia: valutare il registro del copyright come porta d'ingresso.
+
+## 20/11/2026 — Liste USA 2027 e 2028 ricostruite col metodo corretto
+- **Come:** scripts/ricostruisci_liste_usa.py (opere.py, poi verifica_anni_usa.py da capo, poi le pagine del Public Domain Day e da_decidere). Wikidata ha dato molti errori 502/504, ma ogni domanda ha risposto entro i 5 tentativi: nessuna è fallita.
+- **2027 (libri del 1931):** 169 libri (prima 154), 111 confermati (prima 78), 3 usciti prima, 1 a puntate fino al 1932 (Tarzan Triumphant). Conferme: registro del copyright 48, Wikipedia 18, BnF 15, ISFDB 12, Open Library 9, K10plus 8, Library of Congress 1.
+- **2028 (libri del 1932):** 175 libri (prima 159), 110 confermati (prima 76), 5 usciti prima (Musil, Brecht, tre racconti di Conrad dell'Ottocento), 1 a puntate fino al 1933 (Cat Country di Lao She).
+- **Errore trovato e corretto:** «Dwellers in the Mirage» risultava a puntate fino al 1941, perché ISFDB ha anche una ristampa a puntate del 1941. Ora contano solo le puntate entro 5 anni dalla prima uscita. Il libro è stato corretto a mano nei dati: confermato 1932 dal registro del copyright.

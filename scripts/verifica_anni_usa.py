@@ -27,6 +27,7 @@ import verifica_anni as va   # noqa: E402  (Open Library e Library of Congress, 
 
 parole, UA = va.parole, va.UA
 BUDGET = float(os.environ.get("BUDGET_MINUTI_USA", "50")) * 60
+SPAN_PUNTATE = 5   # come in scripts/opere.py
 RICONTROLLA = 30   # giorni: un libro non confermato si ricontrolla dopo un mese, non a ogni giro
 OGGI = date.today().isoformat()
 AUTOREVOLI = ("duke", "cce", "bnf", "k10plus", "isfdb")
@@ -260,7 +261,10 @@ def puntate_isfdb(o, cognomi, p):
         elif c[1] in ("SHORTFICTION",):
             brevi.append(y)
     if serial:
-        return min(serial), max(serial)
+        # solo le puntate della prima uscita: una ristampa a puntate anni dopo non conta («Dwellers in the Mirage»,
+        # 1932 e ristampa 1941: 20/11/2026)
+        prima = min(serial)
+        return prima, max(y for y in serial if y - prima <= SPAN_PUNTATE)
     if brevi:
         return min(brevi), min(brevi)
     return None

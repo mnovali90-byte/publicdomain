@@ -413,13 +413,13 @@
   "libri": 175,
   "controllati": 175,
   "esiti": {
-   "ok": 109,
+   "ok": 110,
    "prima": 5,
    "nd": 59,
-   "parziale": 2
+   "parziale": 1
   },
   "confermati_per_fonte": {
-   "cce": 52,
+   "cce": 53,
    "bnf": 13,
    "openlibrary": 10,
    "k10plus": 7,
@@ -439,11 +439,6 @@
     "Cat Country",
     1933,
     "wikipedia"
-   ],
-   [
-    "Dwellers in the Mirage",
-    1941,
-    "isfdb"
    ]
   ],
   "piu_vecchi": [

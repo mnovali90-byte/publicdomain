@@ -2,7 +2,7 @@
 
 Scritto da `scripts/da_decidere.py`. Qui ci sono solo i casi in cui i dati non bastano. Il resto è già sul sito.
 
-**Casi da decidere: 95.**
+**Casi da decidere: 94.**
 
 ## 0. Aggiornamento non finito
 - **L'aggiornamento non ha finito in questo giro.** Non riparte da solo (decisione del 19/11/2026): i dati mancanti arrivano al prossimo giro previsto, oppure si lancia a mano.
@@ -23,7 +23,6 @@ Scritto da `scripts/da_decidere.py`. Qui ci sono solo i casi in cui i dati non b
 ## 2b. Libri USA usciti a puntate fino a un anno dopo
 - Lista 2027: **Tarzan Triumphant**: a puntate fino al 1932 (wikipedia). Per intero è libero solo dal 2028.
 - Lista 2028: **Cat Country**: a puntate fino al 1933 (wikipedia). Per intero è libero solo dal 2029.
-- Lista 2028: **Dwellers in the Mirage**: a puntate fino al 1941 (isfdb). Per intero è libero solo dal 2037.
 
 ## 3. Autori con l'anno di morte discorde tra le fonti
 - ue-2027: **Blanca de los Ríos** (wikidata 1956, gnd 1956, loc 1956, wikidata_altra 1955).
