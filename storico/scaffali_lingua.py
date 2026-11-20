@@ -14,7 +14,7 @@ aveva 51 titoli. Ora:
      propria (es. greco antico) si usa la Wikipedia inglese.
 Scrive data/storico/scaffali_lingua.json, letto da storico/pagina.py. Se Wikidata non risponde per una parte
 dell'archivio, il file vecchio resta com'è (niente scaffali a metà)."""
-import json, re, statistics, sys, time, urllib.error, urllib.parse, urllib.request
+import os, json, re, statistics, sys, time, urllib.error, urllib.parse, urllib.request
 from collections import Counter, defaultdict
 from concurrent.futures import ThreadPoolExecutor
 from datetime import date, timedelta
@@ -49,6 +49,9 @@ WIKI = {"grc": "en", "ang": "en", "sa": "en", "pi": "en", "lzh": "zh-classical",
         "egy": "en", "sux": "en", "he": "he", "arc": "en", "cu": "en", "got": "en", "peo": "en", "pal": "en"}
 
 
+ATTESE = Counter()   # quante volte un sito ci ha detto «aspetta» o non ha risposto (scritto alla fine del giro)
+
+
 def get(u, prove=8):
     for t in range(prove):
         try:
@@ -56,9 +59,12 @@ def get(u, prove=8):
         except urllib.error.HTTPError as e:
             if e.code == 404:
                 return {"items": []}
+            ATTESE[f"HTTP {e.code}"] += 1
             time.sleep(15 * (t + 1) if e.code in (429, 502, 503, 504) else 3)
-        except Exception:
+        except Exception as e:
+            ATTESE[type(e).__name__] += 1
             time.sleep(5 * (t + 1))
+    ATTESE["rinuncia dopo tutti i tentativi"] += 1
     return None
 
 
@@ -170,6 +176,17 @@ def visite(wiki, titolo):
 
 def main():
     inizio = time.time()
+    # le visite sono quelle degli ultimi 12 mesi interi: cambiano una volta al mese. Se il file è già di questo mese
+    # non si rifà (20/11/2026: cinque giri in un giorno = 12.000 domande ogni volta e Wikipedia/Wikidata ci rallentano).
+    # FORZA=1 per rifarlo comunque.
+    try:
+        vecchio = json.loads((S / "scaffali_lingua.json").read_text(encoding="utf-8"))
+    except Exception:
+        vecchio = {}
+    mesi = f"{INIZIO:%Y-%m}/{FINE - timedelta(days=1):%Y-%m}"
+    if vecchio.get("mesi") == mesi and (vecchio.get("aggiornato") or "")[:7] == f"{OGGI:%Y-%m}" and not os.environ.get("FORZA"):
+        print(f"scaffali già aggiornati questo mese ({vecchio['aggiornato']}, visite {mesi}): non rifaccio le 12.000 domande")
+        return 0
     arch = leggi_archivio()
     esc = json.loads((R / "data" / "storico_esclusioni.json").read_text(encoding="utf-8"))
     no_o, no_a = set(esc.get("qid", {})), set(esc.get("autori_qid", {}))
@@ -214,7 +231,7 @@ def main():
                             "letture_fallite": persi, "opere": [[k, v.get(k) or 0] for k in ordine]}
         print(f"  {l} ({it}): {len(cand[l])} opere, visite su {wiki}.wikipedia, letture fallite {persi}", flush=True)
     (S / "scaffali_lingua.json").write_text(json.dumps(out, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
-    print(f"fatto in {int(time.time() - inizio) // 60} minuti")
+    print(f"fatto in {int(time.time() - inizio) // 60} minuti | risposte «aspetta» o mancate: {dict(ATTESE) or 'nessuna'}")
     return 0
 
 

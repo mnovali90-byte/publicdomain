@@ -545,3 +545,8 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - **Calendario:** resta curato a mano. Il registro ora contiene anche le persone degli anniversari di morte; docs/da-decidere.md (sezione 5b) segnala un anniversario con un anno diverso da quello del registro.
 - **Aggiornamento:** il registro gira il 1° di ogni mese, prima dello Storico (il 2).
 - **Errori:** gravi 0; medi 0 (le 2 opere sul confine ora sono «da verificare»).
+
+## 20/11/2026 — Giri più leggeri: scaffali e coautori una volta al mese
+- **Problema:** il giro «Pagina Già pubblici» delle 16:10 ha impiegato 118 minuti negli scaffali (di solito 40-55) e 35 nei coautori (di solito 10). Nel dettaglio dei coautori: 17 risposte «troppe richieste» (429), 502 e tempo scaduto di Wikidata, dopo cinque giri in un giorno. Negli scaffali la causa non si poteva vedere: il programma riprovava senza scriverlo.
+- **Correzione:** gli scaffali non si rifanno se il file è già del mese in corso (le visite sono mensili); i coautori si rileggono solo se il file è di un mese prima, se era incompleto o se sono cambiati gli autori delle schede o le opere dell'archivio. FORZA=1 rifà comunque. Ogni «aspetta» o risposta mancata viene contata e scritta alla fine del giro.
+- **Prova in locale:** scaffali saltati («già aggiornati questo mese»). Il sito non cambia.

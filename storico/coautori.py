@@ -38,9 +38,14 @@ def sparql(q):
             r = urllib.request.Request(u, data=dati, headers={**UA, "Content-Type": "application/x-www-form-urlencoded"})
             return json.load(urllib.request.urlopen(r, timeout=120))["results"]["bindings"]
         except Exception as e:
+            ATTESE[str(e)[:40]] += 1
             print("  Wikidata non risponde:", str(e)[:80], flush=True)
             time.sleep(15 * (t + 1))
     return None
+
+
+from collections import Counter
+ATTESE = Counter()
 
 
 def v(x, k):
@@ -180,6 +185,12 @@ def main():
     arch = archivio()
     print("opere nell'archivio:", len(arch), flush=True)
     schede = autori_schede()
+    # una volta al mese basta (20/11/2026): si rilegge solo se il file è di un mese prima, se era incompleto, o se
+    # sono cambiati gli autori delle schede o le opere dell'archivio. FORZA=1 per rileggere comunque.
+    if (vecchio.get("aggiornato") or "")[:7] == date.today().isoformat()[:7] and not vecchio.get("incompleto") \
+            and vecchio.get("schede") == schede and vecchio.get("n_archivio") == len(arch) and not os.environ.get("FORZA"):
+        print(f"coautori già letti questo mese ({vecchio['aggiornato']}), stessi autori e stesse opere: non rileggo")
+        return
     print("autori delle schede:", len(schede), flush=True)
     pa, ok_pa = per_autore(schede)
     print("schede: opere con coautori o musica:", sum(len(x) for x in pa.values()), "" if ok_pa else "(INCOMPLETO)", flush=True)
@@ -198,9 +209,11 @@ def main():
            "autori": ti if ok_ti else {**vecchio.get("autori", {}), **ti},
            "musica": mu if ok_mu else vecchio.get("musica", {}),
            "per_autore": pa if ok_pa else {**vecchio.get("per_autore", {}), **pa},
+           "schede": schede, "n_archivio": len(arch),
            "incompleto": [n for n, ok in (("autori", ok_ti), ("musica", ok_mu), ("per_autore", ok_pa)) if not ok]}
     json.dump(out, open(USCITA, "w", encoding="utf8"), ensure_ascii=False, separators=(",", ":"))
-    print("scritto", USCITA, "| pezzi incompleti:", out["incompleto"] or "nessuno")
+    print("scritto", USCITA, "| pezzi incompleti:", out["incompleto"] or "nessuno",
+          "| risposte «aspetta» o mancate:", dict(ATTESE) or "nessuna")
 
 
 if __name__ == "__main__":
