@@ -1,0 +1,40 @@
+name: Registro unico (anni di morte degli autori)
+
+on:
+  push:
+    paths:
+      - "docs/registro/passo.txt"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: registro
+  cancel-in-progress: false
+
+jobs:
+  registro:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: "Registro degli autori: anno di morte deciso con la regola delle due fonti (scripts/registro_autori.py)"
+        run: python scripts/registro_autori.py
+        env:
+          BUDGET_MINUTI: "40"
+      - name: Salva
+        if: ${{ !cancelled() }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/registro data/cache_verifica.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Registro degli autori del $(date -u +%Y-%m-%d)"
+            for i in 1 2 3 4 5; do git pull --rebase --autostash -X theirs origin main && git push && break; sleep $((i*20)); done
+          fi
