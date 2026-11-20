@@ -482,3 +482,11 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
   3. Entrano non-libri: Costituzione degli Stati Uniti, Siete Partidas, Diccionario geográfico, Manual de Carreño, inni nazionali. Il tipo «opera scritta» è troppo largo: serve un elenco di tipi da escludere (leggi, costituzioni, dizionari, manuali, inni, testi sacri).
   4. Opere in più lingue: Guerra e pace finisce nel francese perché Wikidata elenca anche il francese. Regola: si assegna una lingua solo se tutte le lingue dell'opera portano a quella.
   5. Alcuni autori anonimi compaiono come codice tecnico di Wikidata (Lazarillo de Tormes, Beowulf): vanno mostrati come «anonimo».
+
+## 20/11/2026 — Scaffali per lingua in produzione (Già pubblici)
+- **Come:** storico/scaffali_lingua.py nel lavoro gia-pubblici.yml, prima di storico/pagina.py. storico/pagina.py aggiunge le opere degli scaffali in coda (n_principali), e la pagina le usa solo per gli scaffali per lingua.
+- **Primo giro (44712368946):** riuscito, tutte le opere con risposta da Wikidata, 0 letture fallite, 30 lingue. Opere: italiano 2.362, francese 3.036, tedesco 2.426, russo 1.744, latino 1.384, greco antico 1.107, spagnolo 936. Tolte: 39.318 per tipo non letterario, 4.882 non libri, 17 escluse (testi d'odio).
+- **Errori trovati nei risultati:**
+  1. Don Chisciotte assente: la sua lingua su Wikidata è «Early Modern Spanish», senza codice. Ora le varianti senza codice si riconoscono dall'ultima parola del nome.
+  2. Nel latino entravano Lexicon Universale e Promptuarium iconum: aggiunti lessici e cataloghi tra i non-libri.
+- **Secondo giro:** 44720257705.
