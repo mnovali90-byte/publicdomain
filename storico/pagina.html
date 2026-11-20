@@ -216,6 +216,13 @@ it: {
   sDuke: "Anno preso dagli elenchi del Public Domain Day della Duke University, non da Wikidata: da verificare.",
   sUsPrima: "Conta la prima data di pubblicazione registrata su Wikidata: per le opere uscite prima a puntate o in rivista può essere diversa.",
   sInc: "Le fonti danno anni di morte diversi: si usa il più tardo, per prudenza.",
+  sCoaut: "Da verificare: tra gli autori c'è anche {n}, di cui Wikidata non dà l'anno di morte. Per gli altri autori il tempo è già passato.",
+  sconosciuto: "un autore sconosciuto",
+  sMusica: "{r} di {n} ha diritti propri: in Europa è libero dal 1° gennaio {y}. Il testo no: vale la data qui sopra.",
+  sMusicaNd: "{r} di {n} ha diritti propri: non sappiamo quando scadono (manca l'anno di morte).",
+  ruoli: { compositore: "La musica", librettista: "Il libretto" },
+  sGruppo: "«{g}» è un gruppo: contano gli anni di morte dei suoi membri.",
+  sManuale: "Coautore aggiunto da noi, non segnato su Wikidata: {n} (morto nel {m}). Fonte:",
   piede1: "Calcolo indicativo, non è consulenza legale. È libero il testo originale, non l'edizione né la traduzione: traduzioni, illustrazioni e curatele recenti hanno diritti propri. Prima di pubblicare controlla la legge del paese.",
   piede2: "Regole usate: Italia, Francia, Germania, Regno Unito 70 anni dalla morte dell'autore (nel Regno Unito le opere uscite per la prima volta dopo il 1988 di autori morti prima del 1969 sono protette fino al 2039); Spagna 80 anni per gli autori morti prima del 7 dicembre 1987; USA 95 anni dalla prima pubblicazione (si guarda la prima data registrata). In Italia gli autori di paesi alleati nella Seconda guerra mondiale sono segnalati da verificare e restano fuori dagli scaffali italiani.",
   piede3: "Fonti: Wikidata (CC0) per opere, autori e anni; Wikipedia per le visite della settimana; elenchi del Public Domain Day della Duke University (CC BY 4.0) come seconda fonte per gli USA; Wikimedia Commons per i ritratti, ciascuno con la sua licenza. Dati aggiornati ogni mese in automatico: possono contenere errori.",
@@ -275,6 +282,13 @@ en: {
   sDuke: "Year taken from Duke University's Public Domain Day lists, not from Wikidata: to be checked.",
   sUsPrima: "What counts is the first publication date recorded on Wikidata: for works first published in instalments or in a magazine it may differ.",
   sInc: "Sources give different years of death: the latest is used, to be safe.",
+  sCoaut: "To be checked: the authors also include {n}, whose year of death Wikidata does not give. For the other authors the term has already run out.",
+  sconosciuto: "an unknown author",
+  sMusica: "{r} by {n} has its own rights: in Europe it is free from 1 January {y}. The text does not: the date above applies.",
+  sMusicaNd: "{r} by {n} has its own rights: we do not know when they expire (the year of death is missing).",
+  ruoli: { compositore: "The music", librettista: "The libretto" },
+  sGruppo: "«{g}» is a group: the years of death of its members count.",
+  sManuale: "Co-author added by us, not recorded on Wikidata: {n} (died in {m}). Source:",
   piede1: "An indicative calculation, not legal advice. What is free is the original text, not the edition or the translation: recent translations, illustrations and editions have their own rights. Check the law of the country before publishing.",
   piede2: "Rules used: Italy, France, Germany, United Kingdom 70 years from the author's death (in the UK, works first published after 1988 by authors who died before 1969 are protected until 2039); Spain 80 years for authors who died before 7 December 1987; USA 95 years from first publication (the first recorded date is used). In Italy, authors from Allied countries in the Second World War are flagged to be checked and kept off the Italian shelves.",
   piede3: "Sources: Wikidata (CC0) for works, authors and years; Wikipedia for this week's page views; Duke University's Public Domain Day lists (CC BY 4.0) as a second source for the USA; Wikimedia Commons for portraits, each with its own licence. Data updated automatically every month: it may contain errors.",
@@ -325,7 +339,33 @@ function daRiga(r) {   // riga dei file di ricerca: [qid, titolo, titolo_it, ann
   return pulisciAnno({ q: r[0], t: r[1], ti: r[2] || "", y: r[3] === null || r[3] === undefined ? null : r[3], pg: r[4] || 0, yd: r[6] || 0,
     au: (r[5] || []).map((a) => ({ q: a[0], n: nomeA(a[1]), m: a[2], an: !!a[3], inc: !!a[4], al: !!a[5] })), v: 0, g: [], l: null });
 }
+// coautori (regola del 20/11/2026, storico/coautori.py): gruppi ed enti senza membri noti non contano se ci sono autori
+// persone con la data di morte; un gruppo con membri vale per l'anno di morte più tardo dei membri; un coautore senza
+// data di morte (o «valore sconosciuto») accanto ad autori con la data rende l'opera «da verificare»
+function coautori(o) {
+  const C = D.coaut || {}, A = C.autori || {}, man = (D.coautMan || {})[o.q] || [];
+  let au = o.au.map((a) => ({ ...a }));
+  for (const x of man) if (!au.some((a) => a.q === x.qid)) au.push({ q: x.qid || "man:" + x.nome, n: x.nome, m: x.morte ?? null, an: false, inc: false, al: false, man: x });
+  const noto = (a) => a.an || (a.m !== null && a.m !== undefined);
+  for (const a of au) {
+    if (noto(a)) continue;
+    const t = A[a.q];
+    const altri = au.filter((b) => b !== a && b.m !== null && b.m !== undefined).map((b) => b.m);
+    if (t && t.t === "p" && t.n !== null && t.n !== undefined && altri.length && t.n > Math.max(...altri)) { a.ign = true; continue; }   // nato dopo la morte degli altri: curatore di un'edizione
+    if (t && t.t === "g") { if (t.m !== null && t.m !== undefined) { a.m = t.m; a.gr = true; } else if (t.nd) a.sc = true; else a.ign = true; }
+    else a.sc = true;   // persona senza data di morte, o «valore sconosciuto»
+  }
+  if (au.some((a) => !a.ign && noto(a))) au = au.filter((a) => !a.ign);
+  else au.forEach((a) => { delete a.ign; });
+  if (!au.some((a) => noto(a))) au.forEach((a) => { delete a.sc; });   // nessun altro autore con la data: resta «non lo sappiamo»
+  // coautore senza data accanto ad autori tutti antichi o morti da più di 170 anni: è antico anche lui (deciso da Marco, 20/11/2026)
+  else if (au.some((a) => a.sc) && au.filter((a) => !a.sc).every((a) => a.an || a.m <= D.anno - 171)) au.forEach((a) => { if (a.sc) { delete a.sc; a.an = true; } });
+  o.au = au;
+  o.mu = (C.musica || {})[o.q] || null;
+  return o;
+}
 function pulisciAnno(o) {
+  coautori(o);
   // un anno di uscita molto più vecchio della morte di tutti gli autori è un errore dei dati (es. 1562 per un autore morto nel 1944): non si usa
   const morti = o.au.filter((a) => !a.an && a.m !== null && a.m !== undefined).map((a) => a.m);
   if (o.y !== null && morti.length === o.au.length && morti.length && o.y < Math.min(...morti) - 90) o.y = null;
@@ -356,13 +396,15 @@ function stato(o, c) {
   const durata = (a) => (c === "es" && a.m < 1987 ? 80 : 70);
   if (o.y !== null && o.y <= Y - (c === "es" ? 181 : 171)) return { s: "si", note };
   if (!o.au.length) return { s: "nd", note };
-  let fine = 0;
+  let fine = 0, dubbio = false;
   for (const a of o.au) {
     if (a.an) continue;
+    if (a.sc) { dubbio = true; continue; }
     if (a.m === null || a.m === undefined) return { s: "nd", note };
     fine = Math.max(fine, a.m + durata(a) + 1);
   }
   if (fine > Y) return { s: "dal", y: fine, note };
+  if (dubbio) return { s: "ver", note: note.concat(["sCoaut"]) };
   if (c === "uk") {   // regola del 2039 e opere postume (CDPA 1988, allegato 1, par. 12)
     const morti = o.au.filter((a) => !a.an).map((a) => a.m);
     if (morti.length) {
@@ -383,7 +425,7 @@ const _lib = new Map();
 function liberaUe(o) {   // libera in Europa per la regola dei 70 anni (stessa regola dello Storico)
   const Y = D.anno;
   if (o.y !== null && o.y <= Y - 171) return true;
-  return o.au.length > 0 && o.au.every((a) => a.an || (a.m !== null && a.m !== undefined && a.m <= Y - 71));
+  return o.au.length > 0 && o.au.every((a) => a.an || (!a.sc && a.m !== null && a.m !== undefined && a.m <= Y - 71));
 }
 const libera = (o, c) => { const k = o.q + c; if (!_lib.has(k)) _lib.set(k, stato(o, c).s === "si"); return _lib.get(k); };
 
@@ -434,6 +476,7 @@ addEventListener("keydown", (e) => { if (e.key === "Escape" && !$("#finestra").h
 
 function testoStato(o, c) {
   const st = stato(o, c);
+  if (st.s === "ver" && st.note.includes("sCoaut")) return tr("sCoaut", { n: o.au.filter((a) => a.sc).map((a) => /^https?:|^[0-9a-f]{32}$/.test(a.q) || a.n === (LING === "it" ? "Anonimo" : "Anonymous") ? L.sconosciuto : a.n).join(", ") });
   if (st.s === "ver") return c === "uk" ? L.sUkPostumo : c === "us" ? (st.note.includes("sUsNo") ? tr("sUsNo", { y: st.y2 }) : L.sUsNd) : L.sAlleato;
   if (st.s === "nd") return L.sNd;
   if (c === "us") return st.s === "si" ? (st.senza ? L.sUsSenza : L.sUsSi) : tr("sUsDal", { y: st.y });
@@ -443,7 +486,7 @@ function testoStato(o, c) {
 function apriOpera(o) {
   const righe = ["it", "fr", "de", "es", "uk", "us"].map((c) => {
     const st = stato(o, c);
-    const extra = st.note.filter((k) => k !== "sAlleato" && k !== "sUsNo" && k !== "sUsNd" && !(st.s === "ver" && k === "sUkPostumo")).map((k) => h("span", { style: "display:block;margin-top:4px;font-size:13px;color:#5C5C66" }, L[k]));
+    const extra = st.note.filter((k) => k !== "sAlleato" && k !== "sCoaut" && k !== "sUsNo" && k !== "sUsNd" && !(st.s === "ver" && k === "sUkPostumo")).map((k) => h("span", { style: "display:block;margin-top:4px;font-size:13px;color:#5C5C66" }, L[k]));
     return h("li", {}, h("span", { class: "p" }, L.paesi[c], " ", badge(st)), h("span", {}, testoStato(o, c), extra));
   });
   const orig = LING === "it" && o.ti && o.t && o.ti !== o.t ? o.t : null;
@@ -452,8 +495,23 @@ function apriOpera(o) {
     h("p", { style: "margin:12px 0 0;font-size:16px" }, [autoriTxt(o), o.y !== null ? tr("uscita", { y: annoTxt(o.y) }) : L.uscitaNd].filter(Boolean).join(" · ")),
     h("h3", { class: "mono", style: "margin:24px 0 0;font-size:12px;color:#C2301A" }, L.stati),
     h("ul", { class: "stati" }, righe),
+    noteOpera(o),
     h("p", {}, h("a", { class: "link-forte", href: `https://www.wikidata.org/wiki/${o.q}`, rel: "noopener", target: "_blank" }, L.wikidata)),
     h("p", { class: "nota" }, L.piede1));
+}
+function noteOpera(o) {   // gruppi, coautori aggiunti a mano, musica e libretto (regola del 20/11/2026)
+  const Y = D.anno, r = [];
+  for (const a of o.au) {
+    if (a.gr) r.push(tr("sGruppo", { g: a.n }));
+    if (a.man) r.push(h("span", {}, tr("sManuale", { n: a.n, m: a.m }), " ", h("a", { href: a.man.fonte, rel: "noopener", target: "_blank" }, a.man.fonte_nome || a.man.fonte)));
+  }
+  for (const [ruolo, n, m] of o.mu || []) {
+    if (!n) continue;
+    const ra = (L.ruoli || {})[ruolo] || ruolo;
+    if (m === null || m === undefined) r.push(tr("sMusicaNd", { r: ra, n }));
+    else if (m + 71 > Y) r.push(tr("sMusica", { r: ra, n, y: m + 71 }));
+  }
+  return r.length ? h("div", { style: "margin-top:12px;font-size:14px;color:#5C5C66" }, r.map((x) => h("p", { style: "margin:6px 0 0" }, x))) : null;
 }
 function badge(st) {
   if (st.s === "si") return h("span", { class: "b si" }, L.libero);
@@ -721,7 +779,9 @@ async function avvia() {
   try { P = await leggi("/data/storico/pagina.json"); } catch (e) { $("#scaffali-corpo").replaceChildren(h("p", {}, L.errore)); return; }
   D.anno = Number(String(P.aggiornato).slice(0, 4)) || D.anno;
   D.lingue = P.lingue || {};
-  try { D.verifiche = await leggi("/data/storico/anni_verificati.json"); } catch (e) { D.verifiche = {}; } D.foto = P.foto || {}; D.prossimi = P.prossimi || [];
+  try { D.verifiche = await leggi("/data/storico/anni_verificati.json"); } catch (e) { D.verifiche = {}; }
+  try { D.coaut = await leggi("/data/storico/coautori.json"); } catch (e) { D.coaut = {}; }
+  try { D.coautMan = (await leggi("/data/coautori_manuali.json")).opere || {}; } catch (e) { D.coautMan = {}; } D.foto = P.foto || {}; D.prossimi = P.prossimi || [];
   const au = P.autori.map((a) => ({ q: a[0], n: nomeA(a[1]), m: a[2], an: !!a[3], inc: !!a[4], al: !!a[5] }));
   D.opere = P.opere.map((r) => pulisciAnno({ q: r[0], t: r[1], ti: r[2], y: r[3], yd: r[4], au: r[5].map((i) => au[i]), v: r[6], g: r[7], l: r[8], pg: r[9], escl: !!r[10], vl: r[11] || [] }));
   // lingue di Wikipedia già misurate (le visite in francese, tedesco e spagnolo arrivano con il primo aggiornamento dopo il 19/11/2026)

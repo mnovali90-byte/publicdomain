@@ -11,6 +11,7 @@ on:
       - "storico/ritratti.py"
       - "storico/verifica_anni.py"
       - "storico/scaffali_lingua.py"
+      - "storico/coautori.py"
       - ".github/workflows/gia-pubblici.yml"
   workflow_dispatch:
 
@@ -42,6 +43,9 @@ jobs:
       - name: Scaffali per lingua (archivio intero, visite nella Wikipedia della lingua; storico/scaffali_lingua.py)
         continue-on-error: true   # se Wikidata non risponde resta il file di prima
         run: python storico/scaffali_lingua.py
+      - name: Coautori (tipo degli autori senza data, membri dei gruppi, compositori e librettisti; storico/coautori.py)
+        continue-on-error: true   # se Wikidata non risponde resta il file di prima
+        run: python storico/coautori.py
       - name: Dati e pagine
         run: python storico/pagina.py
       - name: Schede autore (lo stato USA opera per opera dipende dagli anni verificati)

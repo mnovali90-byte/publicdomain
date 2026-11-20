@@ -512,3 +512,9 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - **Schede autore:** 75 con una nota nuova (Brecht: Hauptmann e Berlau; Nordhoff: Hall; Crofts: Agatha Christie).
 - **Errori che restano:** gravi 0. Medi 2: 5 opere antiche «da verificare» per un coautore antico senza data (Kādambari, Pseudo-Demostene); persone messe come autori su Wikidata che hanno solo curato un'edizione (Stephen Fry per «La strada di Puh», Neil Gaiman, Vivian Gornick). Lievi: musica di film o adattamenti segnata sull'opera (Kazantzakis).
 - **Da decidere (Marco):** 1) coautore senza data accanto ad autori morti da più di 170 anni: antico e libero? 2) elenco a mano dei «non coautori» con fonte.
+
+## 20/11/2026 — Coautori: due aggiunte decise da Marco
+- **1. Coautore senza data accanto ad autori tutti antichi o morti da più di 170 anni:** è antico anche lui, l'opera è libera (5 opere: Kādambari, Pseudo-Demostene, Alcione).
+- **2. Chi è nato dopo la morte degli altri autori non è un coautore** (ha curato, letto o presentato un'edizione): si legge l'anno di nascita (P569). Spariscono Stephen Fry («La strada di Puh») e Neil Gaiman (Dunsany). Vivian Gornick è nata nel 1935, prima della morte di Willa Cather: resta «da verificare». Giro 44741780482, nessun pezzo mancante.
+- **Risultato finale (Italia, Già pubblici):** cambiano 174 opere. Da «non lo sappiamo» a libere: 132; a «libera dal…»: 11; a «da verificare»: 31. Opere libere che smettono di esserlo: 0. Schede autore con una nota nuova: 72, di cui 7 note «da verificare».
+- **Errori che restano:** gravi 0; medi 1 (persone segnate come autori su Wikidata ma nate prima della morte dell'autore, come Gornick: restano «da verificare», che è onesto); lievi: musica di film o adattamenti segnata sull'opera.

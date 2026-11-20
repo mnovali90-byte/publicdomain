@@ -206,7 +206,7 @@ def libera_ue(o):
     più di 100 anni prima di quella data (chi pubblicava nel 1855 è per forza morto entro il 1955)."""
     if o.get("anno") is not None and o["anno"] <= ANNO_UE - 100:
         return True
-    au = o.get("autori") or []
+    au, _ = autori_efficaci(o.get("autori"))
     return bool(au) and all((a.get("morte") is not None and a["morte"] <= ANNO_UE) or a.get("antico") for a in au)
 
 
@@ -219,9 +219,54 @@ def libera_usa(o):
     return bool(au) and all(a.get("antico") or (a.get("morte") is not None and a["morte"] <= ANNO_UE - 100) for a in au)
 
 
+_COAUT = None
+
+
+def autori_efficaci(au):
+    """Regola dei coautori (20/11/2026, storico/coautori.py, la stessa della pagina): gruppi ed enti senza membri noti
+    non contano se ci sono autori persone con la data di morte; un gruppo con membri vale per la morte più tardiva dei
+    membri. Restituisce (autori da contare, c'è un coautore senza data di morte accanto ad autori con la data)."""
+    global _COAUT
+    if _COAUT is None:
+        try:
+            _COAUT = json.load(open(f"{CARTELLA}/coautori.json", encoding="utf8")).get("autori", {})
+        except Exception:
+            _COAUT = {}
+    out = []
+    for a in au or []:
+        a = dict(a)
+        if a.get("morte") is None and not a.get("antico"):
+            t = _COAUT.get(a.get("qid"))
+            altri = [b["morte"] for b in au if b is not a and b.get("morte") is not None]
+            if t and t["t"] == "p" and t.get("n") is not None and altri and t["n"] > max(altri):
+                a["_ignora"] = True   # nato dopo la morte degli altri autori: ha curato un'edizione
+            elif t and t["t"] == "g":
+                if t.get("m") is not None:
+                    a["morte"] = t["m"]
+                elif not t.get("nd"):
+                    a["_ignora"] = True
+        out.append(a)
+    noto = lambda a: a.get("antico") or a.get("morte") is not None
+    if any(noto(a) and not a.get("_ignora") for a in out):
+        out = [a for a in out if not a.get("_ignora")]
+    dubbio = any(not noto(a) for a in out) and any(noto(a) for a in out)
+    # coautore senza data accanto ad autori tutti antichi o morti da più di 170 anni: antico anche lui (Marco, 20/11/2026)
+    if dubbio and all(a.get("antico") or a["morte"] <= ANNO_UE - 100 for a in out if noto(a)):
+        out = [dict(a, antico=True) if not noto(a) else a for a in out]
+        dubbio = False
+    return out, dubbio
+
+
+def ue_da_verificare(o):
+    """Europa «da verificare»: tutti gli autori con la data sono morti entro il 1955, ma c'è un coautore senza data.
+    L'opera entra nello Storico, dove la pagina la mostra «da verificare» (non «libera»)."""
+    au, dubbio = autori_efficaci(o.get("autori"))
+    return dubbio and all(a.get("antico") or a.get("morte") is None or a["morte"] <= ANNO_UE for a in au)
+
+
 def libera(o):
-    """Libera in almeno un paese: altrimenti fuori dallo Storico."""
-    return libera_ue(o) or libera_usa(o)
+    """Libera in almeno un paese (o da verificare in Europa per un coautore senza data): altrimenti fuori dallo Storico."""
+    return libera_ue(o) or libera_usa(o) or ue_da_verificare(o)
 
 
 def opere_anonime():

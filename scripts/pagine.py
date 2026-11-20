@@ -477,6 +477,72 @@ def stato_usa(a, o):
     return "verifica", None
 
 
+COAUT = _leggi(RADICE / "data" / "storico" / "coautori.json", {})
+COAUT_MAN = _leggi(RADICE / "data" / "coautori_manuali.json", {}).get("opere", {})
+
+
+def note_coautori(a, lang):
+    """Regola dei coautori (20/11/2026, storico/coautori.py): per le «Opere principali» della scheda, i coautori morti
+    dopo l'autore (la data europea dell'opera è la loro), quelli senza data di morte (da verificare) e la musica o il
+    libretto ancora protetti. Gruppi ed enti senza membri noti non contano; un gruppo con membri vale per i membri."""
+    it = lang == "it"
+    T = (lambda x, y: x) if it else (lambda x, y: y)
+    D = anno_di(a.get("morte"))
+    oggi_a = datetime.date.today().year
+    mie = (COAUT.get("per_autore") or {}).get(a["wikidata"], {})
+    tipi = COAUT.get("autori") or {}
+    note = []
+    for o in a.get("opere", [])[:10]:
+        t = o.get("titolo") if it else o.get("titolo_en") or o.get("titolo")
+        if not t or not D:
+            continue
+        chiavi = {tuple(_parole(o.get("titolo"))), tuple(_parole(o.get("titolo_en")))} - {()}
+        wq = next((q for q, w in mie.items() if {tuple(_parole(w.get("t"))), tuple(_parole(w.get("ti")))} & chiavi), None)
+        if not wq:
+            wq = next((r[0] for r in opere_storico(a["wikidata"]) if {tuple(_parole(r[1])), tuple(_parole(r[2]))} & chiavi), None)
+        w = mie.get(wq) or {}
+        co = [list(c) for c in w.get("co", [])]
+        for x in COAUT_MAN.get(wq, []):
+            co.append([x.get("qid") or "", x["nome"], x.get("morte"), None])
+        tardi, ignoti = [], []
+        for c in co:
+            q, nome, m = c[0], c[1], c[2]
+            nasc = c[3] if len(c) > 3 else (tipi.get(q) or {}).get("n")
+            if nasc is not None and nasc > D:
+                continue          # nato dopo la morte dell'autore: ha curato, letto o presentato un'edizione
+            if m is None:
+                ti = tipi.get(q)
+                if ti and ti["t"] == "g":
+                    if ti.get("m") is not None:
+                        m = ti["m"]
+                    elif not ti.get("nd"):
+                        continue          # gruppo o ente senza membri: non conta
+            if m is None:
+                ignoti.append(nome or T("un autore sconosciuto", "an unknown author"))
+            elif m > D:
+                tardi.append((nome, m))
+        tt = f"«{t}»"
+        if tardi:
+            nome, m = max(tardi, key=lambda x: x[1])
+            es = m + 81 if m < 1987 else m + 71
+            note.append(T(f"{tt} è scritta anche da {nome} (morte: {m}): in Europa è libera dal 1° gennaio {m + 71} (in Spagna dal {es}).",
+                          f"{tt} was also written by {nome}, who died in {m}: in Europe it is free from 1 January {m + 71} (in Spain from {es})."))
+        elif ignoti:
+            note.append(T(f"{tt}: tra gli autori c'è anche {', '.join(ignoti)}, di cui Wikidata non dà l'anno di morte. Da verificare.",
+                          f"{tt}: the authors also include {', '.join(ignoti)}, whose year of death Wikidata does not give. To be checked."))
+        for ruolo, nome, m in w.get("mu", []):
+            if not nome:
+                continue
+            r = {"compositore": T("La musica", "The music"), "librettista": T("Il libretto", "The libretto")}.get(ruolo, ruolo)
+            if m is None:
+                note.append(T(f"{tt}: {r.lower()} di {nome} ha diritti propri; non sappiamo quando scadono.",
+                              f"{tt}: {r.lower()} by {nome} has its own rights; we do not know when they expire."))
+            elif m + 71 > oggi_a and m > D:
+                note.append(T(f"{tt}: {r.lower()} di {nome} (morte: {m}) ha diritti propri, in Europa fino al 31 dicembre {m + 70}. Il testo segue la data dell'autore.",
+                              f"{tt}: {r.lower()} by {nome} (died {m}) has its own rights, in Europe until 31 December {m + 70}. The text follows the author's date."))
+    return list(dict.fromkeys(note))   # stessa nota per titoli doppi su Wikidata: una volta sola
+
+
 def opere_usa(a, lang):
     """Sezione «Negli USA, opera per opera»: solo dati, con il metodo di verifica degli anni."""
     it = lang == "it"
@@ -504,7 +570,8 @@ def opere_usa(a, lang):
             if it else
             "In the USA what counts is each work's year of publication (95 years). «Free» only when the Wikidata year is confirmed by a "
             "second source (Duke, Open Library, Library of Congress); otherwise «to be checked». Future dates use the Wikidata year.")
-    return f'<ul class="sa-opere usa">\n{"".join(righe)}</ul>\n<p class="sa-nota">{esc(nota)}</p>\n', liberi
+    co = "".join(f'<p class="sa-nota">{esc(x)}</p>\n' for x in note_coautori(a, lang))
+    return f'<ul class="sa-opere usa">\n{"".join(righe)}</ul>\n<p class="sa-nota">{esc(nota)}</p>\n{co}', liberi
 
 
 CATALOGHI = [("sbn_it", "Italia · SBN", "Italy · SBN"), ("bnf_fr", "Francia · BnF", "France · BnF"), ("bne_es", "Spagna · BNE", "Spain · BNE"),
