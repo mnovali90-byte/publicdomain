@@ -1,252 +1,257 @@
 {
- "blocchi_wikidata_falliti": 24,
+ "tolti": {
+  "non libri": 4405,
+  "lingua del titolo fuori da queste 5": 266,
+  "esclusi (testi d'odio)": 6
+ },
+ "opere_senza_risposta": 0,
  "letture_visite_fallite": 0,
  "etichette_lingua_piu_comuni": [
   [
    "German",
-   17713
+   18344
   ],
   [
    "English",
-   12225
+   15166
   ],
   [
    "French",
-   4136
+   4729
   ],
   [
    "Czech",
-   2613
-  ],
-  [
-   "Russian",
-   1906
+   2949
   ],
   [
    "Italian",
-   1757
+   2864
+  ],
+  [
+   "Russian",
+   1994
   ],
   [
    "Latin",
-   1329
+   1597
   ],
   [
    "Spanish",
-   1222
+   1331
   ],
   [
    "Ancient Greek",
-   1187
+   1296
   ],
   [
    "Arabic",
-   537
+   601
   ],
   [
    "Polish",
-   403
-  ],
-  [
-   "medieval Latin",
-   337
-  ],
-  [
-   "Classical Chinese",
-   321
+   479
   ],
   [
    "Swedish",
-   276
+   466
   ],
   [
-   "Portuguese",
-   273
+   "medieval Latin",
+   443
+  ],
+  [
+   "Classical Chinese",
+   365
   ],
   [
    "Danish",
-   264
-  ],
-  [
-   "Japanese",
-   260
-  ],
-  [
-   "Chinese",
-   248
+   329
   ],
   [
    "Dutch",
-   232
+   326
   ],
   [
-   "Old French",
-   216
+   "Portuguese",
+   296
+  ],
+  [
+   "Japanese",
+   295
+  ],
+  [
+   "Chinese",
+   279
   ],
   [
    "Bangla",
-   192
+   252
   ],
   [
-   "American English",
-   179
-  ],
-  [
-   "Persian",
-   175
-  ],
-  [
-   "Norwegian",
-   165
+   "Old French",
+   230
   ],
   [
    "Catalan",
-   159
+   208
+  ],
+  [
+   "American English",
+   203
+  ],
+  [
+   "Persian",
+   193
+  ],
+  [
+   "Norwegian",
+   169
   ],
   [
    "British English",
-   141
-  ],
-  [
-   "Middle English",
-   135
+   160
   ],
   [
    "Hebrew",
-   135
+   149
   ],
   [
    "Hungarian",
-   124
+   148
+  ],
+  [
+   "Middle English",
+   138
   ],
   [
    "Sanskrit",
-   116
+   133
   ],
   [
    "Ukrainian",
-   107
+   119
   ],
   [
    "Middle French",
-   104
+   115
+  ],
+  [
+   "Modern Greek",
+   115
   ],
   [
    "Telugu",
-   94
+   110
   ],
   [
    "Esperanto",
-   91
-  ],
-  [
-   "Welsh",
-   89
-  ],
-  [
-   "Estonian",
-   85
+   97
   ],
   [
    "Old Norse",
-   84
+   93
+  ],
+  [
+   "Welsh",
+   92
+  ],
+  [
+   "Estonian",
+   88
   ],
   [
    "Romanian",
-   77
+   86
   ],
   [
    "Classical Latin",
-   70
-  ],
-  [
-   "Korean",
-   63
-  ],
-  [
-   "Slovene",
-   61
-  ],
-  [
-   "Early Modern English",
-   59
-  ],
-  [
-   "Armenian",
-   57
+   75
   ],
   [
    "Middle High German",
-   57
-  ],
-  [
-   "Old Spanish",
-   54
-  ],
-  [
-   "Finnish",
-   48
+   74
   ],
   [
    "Greek",
-   47
+   71
+  ],
+  [
+   "Early Modern English",
+   69
+  ],
+  [
+   "Korean",
+   68
+  ],
+  [
+   "Slovene",
+   65
+  ],
+  [
+   "Armenian",
+   58
+  ],
+  [
+   "Old Spanish",
+   57
+  ],
+  [
+   "Malayalam",
+   57
+  ],
+  [
+   "Finnish",
+   54
+  ],
+  [
+   "Assamese",
+   51
+  ],
+  [
+   "Gujarati",
+   51
   ],
   [
    "Ottoman Turkish",
+   51
+  ],
+  [
+   "Scots",
+   49
+  ],
+  [
+   "Tamil",
    47
   ],
   [
    "Classical Japanese",
-   45
+   46
   ],
   [
-   "Scots",
+   "medieval Italian",
    44
   ],
   [
-   "Tamil",
-   44
+   "Azerbaijani",
+   42
   ],
   [
-   "Gujarati",
-   43
+   "Urdu",
+   40
   ],
   [
    "Neo-Latin",
    40
   ],
   [
-   "medieval Italian",
-   40
-  ],
-  [
-   "Modern Greek",
-   39
-  ],
-  [
-   "Azerbaijani",
-   38
-  ],
-  [
    "Neapolitan",
-   38
-  ],
-  [
-   "Urdu",
-   35
-  ],
-  [
-   "Middle Dutch",
-   35
-  ],
-  [
-   "Breton",
-   34
+   39
   ]
  ],
  "lingue": {
   "it": {
    "oggi_titoli": 51,
-   "domani_candidati": 946,
+   "domani_candidati": 1040,
    "oggi_primi_30": [
     "Divina Commedia",
     "L'infinito",
@@ -288,7 +293,7 @@
     [
      "L'infinito",
      "Giacomo Leopardi",
-     170893
+     170898
     ],
     [
      "I promessi sposi",
@@ -301,14 +306,9 @@
      148660
     ],
     [
-     "Cantico delle creature",
-     "Francis of Assisi",
-     137389
-    ],
-    [
      "Il fu Mattia Pascal",
      "Luigi Pirandello",
-     102545
+     102541
     ],
     [
      "Orlando furioso",
@@ -323,7 +323,7 @@
     [
      "Uno, nessuno e centomila",
      "Luigi Pirandello",
-     95455
+     95453
     ],
     [
      "I Malavoglia",
@@ -376,9 +376,19 @@
      49990
     ],
     [
+     "Gerusalemme liberata",
+     "Torquato Tasso",
+     46654
+    ],
+    [
      "La luna e i falò",
      "Cesare Pavese",
      44790
+    ],
+    [
+     "Il principe",
+     "Niccolò Machiavelli",
+     43882
     ],
     [
      "La locandiera",
@@ -398,12 +408,12 @@
     [
      "S'i' fosse foco, arderei 'l mondo",
      "Cecco Angiolieri",
-     40168
+     40167
     ],
     [
      "Canzoniere",
      "Petrarch",
-     39678
+     39681
     ],
     [
      "Rosso Malpelo",
@@ -414,11 +424,6 @@
      "La mandragola",
      "Niccolò Machiavelli",
      38386
-    ],
-    [
-     "Alla sera",
-     "Ugo Foscolo",
-     37930
     ],
     [
      "Dei sepolcri",
@@ -434,7 +439,7 @@
   },
   "fr": {
    "oggi_titoli": 354,
-   "domani_candidati": 2192,
+   "domani_candidati": 2281,
    "oggi_primi_30": [
     "Il conte di Montecristo",
     "I miserabili",
@@ -479,6 +484,16 @@
      316289
     ],
     [
+     "Cyrano de Bergerac",
+     "Edmond Rostand",
+     229012
+    ],
+    [
+     "I tre moschettieri",
+     "Alexandre Dumas",
+     223123
+    ],
+    [
      "Il rosso e il nero",
      "Stendhal",
      202459
@@ -486,12 +501,12 @@
     [
      "Il piccolo principe",
      "Antoine de Saint-Exupéry",
-     192881
+     192867
     ],
     [
      "Alla ricerca del tempo perduto",
      "Marcel Proust",
-     179981
+     179982
     ],
     [
      "Discorso sulla servitù volontaria",
@@ -506,12 +521,12 @@
     [
      "Le relazioni pericolose",
      "Pierre Choderlos de Laclos",
-     168770
+     168769
     ],
     [
      "Madame Bovary",
      "Gustave Flaubert",
-     156840
+     156844
     ],
     [
      "Storia del cavaliere Des Grieux e di Manon Lescaut",
@@ -521,12 +536,7 @@
     [
      "I fiori del male",
      "Charles Baudelaire",
-     119827
-    ],
-    [
-     "Guerra e pace",
-     "Leo Tolstoy",
-     110017
+     119817
     ],
     [
      "Notre-Dame de Paris",
@@ -544,14 +554,24 @@
      95232
     ],
     [
+     "Il borghese gentiluomo",
+     "Molière",
+     94334
+    ],
+    [
      "Al paradiso delle signore",
      "Émile Zola",
-     93691
+     93690
     ],
     [
      "La Fontaine's Fables",
      "Jean de La Fontaine",
      93003
+    ],
+    [
+     "Germinale",
+     "Émile Zola",
+     92471
     ],
     [
      "Il fantasma dell'Opera",
@@ -569,11 +589,6 @@
      91720
     ],
     [
-     "Non si scherza con l'amore (opera)",
-     "Alfred de Musset",
-     91364
-    ],
-    [
      "Barbablù",
      "Charles Perrault",
      90019
@@ -581,7 +596,7 @@
     [
      "La principessa di Clèves",
      "Madame de Lafayette",
-     85979
+     85984
     ],
     [
      "La signora delle camelie",
@@ -606,23 +621,13 @@
     [
      "Il grande Meaulnes",
      "Alain-Fournier",
-     79432
-    ],
-    [
-     "Illusioni perdute",
-     "Honoré de Balzac",
-     78875
-    ],
-    [
-     "Ventimila leghe sotto i mari",
-     "Jules Verne",
-     78486
+     79434
     ]
    ]
   },
   "de": {
    "oggi_titoli": 303,
-   "domani_candidati": 1402,
+   "domani_candidati": 1494,
    "oggi_primi_30": [
     "Erlkönig",
     "Deutschlandlied",
@@ -667,6 +672,11 @@
      208145
     ],
     [
+     "Faust, Part One",
+     "Johann Wolfgang von Goethe",
+     206578
+    ],
+    [
      "L'apprendista stregone",
      "Johann Wolfgang von Goethe",
      200615
@@ -674,7 +684,7 @@
     [
      "The Rider on the White Horse",
      "Theodor Storm",
-     175503
+     175501
     ],
     [
      "I Buddenbrook. Decadenza di una famiglia",
@@ -699,12 +709,12 @@
     [
      "I dolori del giovane Werther",
      "Johann Wolfgang von Goethe",
-     140825
+     140824
     ],
     [
      "Niente di nuovo sul fronte occidentale",
      "Erich Maria Remarque",
-     130497
+     130496
     ],
     [
      "Mein Kampf",
@@ -719,12 +729,17 @@
     [
      "Woyzeck",
      "Georg Büchner",
-     123604
+     123609
     ],
     [
      "L'uomo della sabbia",
      "E. T. A. Hoffmann",
      116245
+    ],
+    [
+     "I musicanti di Brema",
+     "Wilhelm Grimm",
+     115063
     ],
     [
      "The Panther",
@@ -774,7 +789,7 @@
     [
      "Emilio e i detectives",
      "Erich Kästner",
-     93979
+     93977
     ],
     [
      "Michael Kohlhaas",
@@ -782,19 +797,9 @@
      92126
     ],
     [
-     "Song of the Bell",
-     "Friedrich Schiller",
-     91369
-    ],
-    [
-     "Heidi",
-     "Johanna Spyri",
-     85949
-    ],
-    [
      "Parzival",
      "Wolfram von Eschenbach",
-     85451
+     85440
     ],
     [
      "Tremotino",
@@ -810,7 +815,7 @@
   },
   "es": {
    "oggi_titoli": 50,
-   "domani_candidati": 673,
+   "domani_candidati": 682,
    "oggi_primi_30": [
     "Don Chisciotte della Mancia",
     "Martín Fierro",
@@ -852,11 +857,11 @@
     [
      "La casa di Bernarda Alba",
      "Federico García Lorca",
-     157909
+     157952
     ],
     [
      "Lazarillo de Tormes",
-     "http://www.wikidata.org/.well-known/genid/82a46281ef70285018048ab0d1bd06c9",
+     "anonimo",
      147320
     ],
     [
@@ -875,6 +880,11 @@
      86211
     ],
     [
+     "La vita è sogno",
+     "Pedro Calderón de la Barca",
+     85789
+    ],
+    [
      "Platero and I",
      "Juan Ramón Jiménez",
      63895
@@ -891,7 +901,7 @@
     ],
     [
      "Don Juan Tenorio",
-     "",
+     "anonimo",
      54423
     ],
     [
@@ -915,9 +925,14 @@
      40284
     ],
     [
+     "El Conde Lucanor",
+     "Don Juan Manuel",
+     38460
+    ],
+    [
      "Canción del Pirata",
      "José de Espronceda",
-     37633
+     37634
     ],
     [
      "Romancero Gitano",
@@ -927,7 +942,7 @@
     [
      "Paco Yunque",
      "César Vallejo",
-     37006
+     37013
     ],
     [
      "Nebbia",
@@ -937,7 +952,7 @@
     [
      "Luces de Bohemia",
      "Ramón María del Valle-Inclán",
-     36937
+     36938
     ],
     [
      "Amadigi di Gaula",
@@ -961,13 +976,13 @@
     ],
     [
      "A Cristo crocifisso",
-     "http://www.wikidata.org/.well-known/genid/251033d5cc4a70bc81b01293aa06dbfb",
+     "anonimo",
      32192
     ],
     [
      "Diccionario geográfico-estadístico-histórico de España y sus posesiones de Ultramar",
      "Pascual Madoz",
-     32165
+     32169
     ],
     [
      "Marianela",
@@ -982,23 +997,13 @@
     [
      "Libro de Buen Amor",
      "Juan Ruiz",
-     30324
-    ],
-    [
-     "La Araucana",
-     "Alonso de Ercilla",
-     25642
-    ],
-    [
-     "Siete Partidas",
-     "various authors",
-     25515
+     30325
     ]
    ]
   },
   "en": {
    "oggi_titoli": 839,
-   "domani_candidati": 6309,
+   "domani_candidati": 6811,
    "oggi_primi_30": [
     "Moby Dick",
     "Boots",
@@ -1035,12 +1040,12 @@
     [
      "Cime tempestose",
      "Emily Brontë",
-     4622964
+     4623086
     ],
     [
      "Frankenstein",
      "Mary Shelley",
-     1962658
+     1962786
     ],
     [
      "1984",
@@ -1051,6 +1056,11 @@
      "Amleto",
      "William Shakespeare",
      1674337
+    ],
+    [
+     "La fattoria degli animali",
+     "George Orwell",
+     1428435
     ],
     [
      "Orgoglio e pregiudizio",
@@ -1085,7 +1095,7 @@
     [
      "Moby Dick",
      "Herman Melville",
-     997612
+     997656
     ],
     [
      "Paradise Lost",
@@ -1095,12 +1105,7 @@
     [
      "Jane Eyre",
      "Charlotte Brontë",
-     938741
-    ],
-    [
-     "costituzione degli Stati Uniti d'America",
-     "Constitutional Convention",
-     900680
+     938755
     ],
     [
      "Il ritratto di Dorian Gray",
@@ -1109,8 +1114,8 @@
     ],
     [
      "Beowulf",
-     "http://www.wikidata.org/.well-known/genid/1fc4478a0282e7fe3c3db46a7cb2e4d1",
-     884039
+     "anonimo",
+     884064
     ],
     [
      "Macbeth",
@@ -1125,7 +1130,7 @@
     [
      "Ozymandias",
      "Percy Bysshe Shelley",
-     837352
+     837362
     ],
     [
      "Ragione e sentimento",
@@ -1135,12 +1140,17 @@
     [
      "Piccole donne",
      "Louisa May Alcott",
-     745931
+     745933
+    ],
+    [
+     "Sogno di una notte di mezza estate",
+     "William Shakespeare",
+     710184
     ],
     [
      "Lo strano caso del dottor Jekyll e del signor Hyde",
      "Robert Louis Stevenson",
-     677273
+     677276
     ],
     [
      "Le due città",
@@ -1160,7 +1170,7 @@
     [
      "Il meraviglioso mago di Oz",
      "L. Frank Baum",
-     647788
+     647803
     ],
     [
      "Otello",
@@ -1176,11 +1186,6 @@
      "Grandi speranze",
      "Charles Dickens",
      549517
-    ],
-    [
-     "L'isola del tesoro",
-     "Robert Louis Stevenson",
-     548567
     ]
    ]
   }
