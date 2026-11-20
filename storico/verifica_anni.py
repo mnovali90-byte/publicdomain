@@ -28,7 +28,8 @@ RINFRESCA = 90
 
 
 def parole(t):
-    t = unicodedata.normalize("NFKD", t or "").encode("ascii", "ignore").decode().lower()
+    t = (t or "").replace("’", "").replace("'", "")   # «One’s» e «One's» devono dare la stessa parola (20/11/2026)
+    t = unicodedata.normalize("NFKD", t).encode("ascii", "ignore").decode().lower()
     return re.findall(r"[a-z0-9]+", t)
 
 

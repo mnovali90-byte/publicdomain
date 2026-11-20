@@ -431,3 +431,23 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
   - tolte tutte le ripartenze automatiche (aggiorna, storico, gia-pubblici);
   - l'elenco «fuori classifica» si legge da data/fuori_classifica.json e non dipende più dai file dei dati.
 - **Limite che resta:** se l'arricchimento fallisce senza annullamento, «Salva» salva comunque l'elenco grezzo. Da blindare: non salvare i file degli autori se mancano biografie e visite.
+
+## 20/11/2026 — Prova alla cieca contro la Duke 2025, metodo corretto
+- **Correzioni rispetto alla prova del 19/11:**
+  - liste USA con saggi, opere drammatiche e «opere scritte» con autore;
+  - tutte le date di Wikidata, non solo la preferita (Red Harvest);
+  - per le opere a puntate conta la data più recente;
+  - riviste e puntate da ISFDB e dal testo della Wikipedia inglese;
+  - registro del copyright da data/cce_file.json;
+  - domande a Wikidata con 5 tentativi, e prova non valida se una fallisce;
+  - prova senza limite di tempo stretto.
+- **Lista del 1929:** 187 opere, tutte controllate. Esiti: 115 confermate, 69 non confermate, 2 «uscito prima» (The Gunner 1928 dal registro del copyright, The Croxley Master 1899 da ISFDB), 1 a puntate fino all'anno dopo (Tintin nel paese dei Soviet, fino al 1930). Conferme per fonte: registro del copyright 60, Wikipedia 17, Open Library 13, BnF 11, ISFDB 8, K10plus 4, Library of Congress 2.
+- **Confronto con la Duke (15 libri):**
+  - 14 nella nostra lista. A Room of One's Own c'era, ma il confronto non la trovava per l'apostrofo tipografico «One’s»: corretto in parole().
+  - 12 confermati.
+  - Non confermati: Cup of Gold, e The Roman Hat Mystery (lo pseudonimo «Ellery Queen» non corrisponde ai nomi veri degli autori su Wikidata).
+  - Mancante: A Preface to Morals (Lippmann), che su Wikidata non ha nessuna pagina Wikipedia e resta fuori dalla soglia.
+- **Giudizio:** sui libri della Duke ora troviamo 14 su 15 e ne confermiamo 12; in più abbiamo circa 100 libri confermati che la Duke non elenca.
+- **Limiti che restano:**
+  - pseudonimi: usare P742 di Wikidata per confrontare con il registro del copyright;
+  - opere senza Wikipedia: valutare il registro del copyright come porta d'ingresso.
