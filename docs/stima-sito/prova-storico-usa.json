@@ -1,0 +1,419 @@
+{
+ "fatte": 1257,
+ "su": 2153,
+ "esiti": {
+  "niente": 1133,
+  "confermate": 114,
+  "per fonte: isfdb": 62,
+  "per fonte: k10plus": 31,
+  "per fonte: bnf": 16,
+  "solo edizioni dopo il 1930": 10,
+  "per fonte: cce": 5
+ },
+ "esempi": [
+  [
+   "Q4659578",
+   "L'avventura di Wilfred Mulliner",
+   [
+    "P. G. Wodehouse"
+   ],
+   1926,
+   "isfdb",
+   1926
+  ],
+  [
+   "Q132719534",
+   "A Visitor from the Twentieth Century",
+   [
+    "Harold Donitz"
+   ],
+   1928,
+   "isfdb",
+   1928
+  ],
+  [
+   "Q132733670",
+   "A Biological Experiment",
+   [
+    "David H. Keller"
+   ],
+   1928,
+   "isfdb",
+   1928
+  ],
+  [
+   "Q133730174",
+   "Advanced Chemistry",
+   [
+    "Jack G. Huekels"
+   ],
+   1923,
+   "isfdb",
+   1923
+  ],
+  [
+   "Q443991",
+   "L'altra parte",
+   [
+    "Alfred Kubin"
+   ],
+   1909,
+   "k10plus",
+   1909
+  ],
+  [
+   "Q2834706",
+   "Alexis o il trattato della lotta vana",
+   [
+    "Marguerite Yourcenar"
+   ],
+   1929,
+   "bnf",
+   1929
+  ],
+  [
+   "Q1244092",
+   "I and Thou",
+   [
+    "Martin Buber"
+   ],
+   1923,
+   "k10plus",
+   1923
+  ],
+  [
+   "Q132674709",
+   "The Ancient Horror",
+   [
+    "Hal Grant"
+   ],
+   1928,
+   "isfdb",
+   1928
+  ],
+  [
+   "Q1193785",
+   "L'assistente",
+   [
+    "Robert Walser"
+   ],
+   1908,
+   "k10plus",
+   1908
+  ],
+  [
+   "Q1212233",
+   "L'assassinio di un ranuncolo",
+   [
+    "Alfred Döblin"
+   ],
+   1913,
+   "k10plus",
+   1913
+  ],
+  [
+   "Q88679827",
+   "Ashes",
+   [
+    "C. M. Eddy, Jr.",
+    "H. P. Lovecraft"
+   ],
+   1924,
+   "isfdb",
+   1924
+  ],
+  [
+   "Q1194686",
+   "La battaglia come esperienza interiore",
+   [
+    "Ernst Jünger"
+   ],
+   1922,
+   "k10plus",
+   1922
+  ],
+  [
+   "Q3204045",
+   "The Baden-Baden Lesson on Consent",
+   [
+    "Bertolt Brecht"
+   ],
+   1930,
+   "k10plus",
+   1930
+  ],
+  [
+   "Q404567",
+   "Essere e tempo",
+   [
+    "Martin Heidegger"
+   ],
+   1927,
+   "k10plus",
+   1927
+  ],
+  [
+   "Q1325403",
+   "Sotto la ruota",
+   [
+    "Hermann Hesse"
+   ],
+   1906,
+   "k10plus",
+   1906
+  ],
+  [
+   "Q135552054",
+   "Bibi Mkuba: My experiences in German East Africa during World War I",
+   [
+    "Ada Schnee"
+   ],
+   1918,
+   "k10plus",
+   1918
+  ],
+  [
+   "Q113573826",
+   "The Blue Light",
+   [
+    "Brothers Grimm"
+   ],
+   1877,
+   "isfdb",
+   1823
+  ],
+  [
+   "Q116463340",
+   "The Blue City",
+   [
+    "Frank Owen"
+   ],
+   1927,
+   "isfdb",
+   1927
+  ],
+  [
+   "Q66599878",
+   "The Boar Men",
+   [
+    "J.-H. Rosny"
+   ],
+   1929,
+   "bnf",
+   1929
+  ],
+  [
+   "Q6934255",
+   "Il \"buck-uppo\" Mulliner",
+   [
+    "P. G. Wodehouse"
+   ],
+   1926,
+   "isfdb",
+   1926
+  ],
+  [
+   "Q1750535",
+   "Il caso dei cioccolatini avvelenati",
+   [
+    "Anthony Berkeley Cox"
+   ],
+   1929,
+   "cce",
+   1929
+  ],
+  [
+   "Q7721293",
+   "The Captain of Köpenick",
+   [
+    "Carl Zuckmayer"
+   ],
+   1930,
+   "k10plus",
+   1930
+  ],
+  [
+   "Q109974009",
+   "Caffè al veleno a Piccadilly",
+   [
+    "Anthony Berkeley Cox"
+   ],
+   1929,
+   "cce",
+   1929
+  ],
+  [
+   "Q113632327",
+   "Cat-Skin",
+   [
+    "Brothers Grimm"
+   ],
+   1877,
+   "isfdb",
+   1930
+  ],
+  [
+   "Q5115107",
+   "Chu-Bu and Sheemish",
+   [
+    "Edward Plunkett, 18th Baron of Dunsany"
+   ],
+   1911,
+   "isfdb",
+   1911
+  ],
+  [
+   "Q9026284",
+   "I raccoglitori di cotone",
+   [
+    "B. Traven"
+   ],
+   1925,
+   "k10plus",
+   1928
+  ],
+  [
+   "Q3202360",
+   "The Coming of the Ice",
+   [
+    "Green Peyton Wertenbaker"
+   ],
+   1926,
+   "isfdb",
+   1926
+  ],
+  [
+   "Q7726935",
+   "The Comet",
+   [
+    "W. E. B. Du Bois"
+   ],
+   1920,
+   "isfdb",
+   1920
+  ],
+  [
+   "Q5674377",
+   "The Crawling Chaos",
+   [
+    "Winifred V. Jackson",
+    "H. P. Lovecraft"
+   ],
+   1921,
+   "isfdb",
+   1921
+  ],
+  [
+   "Q3205422",
+   "The Crew",
+   [
+    "Joseph Kessel"
+   ],
+   1923,
+   "bnf",
+   1923
+  ],
+  [
+   "Q7728471",
+   "La maledizione di Yig",
+   [
+    "Zealia Bishop",
+    "H. P. Lovecraft"
+   ],
+   1929,
+   "isfdb",
+   1929
+  ],
+  [
+   "Q110963214",
+   "The Davidson Case",
+   [
+    "Cecil Street"
+   ],
+   1929,
+   "cce",
+   1929
+  ],
+  [
+   "Q19153688",
+   "Das tapfere Schneiderlein",
+   [
+    "Brothers Grimm"
+   ],
+   1857,
+   "isfdb",
+   1812
+  ],
+  [
+   "Q68730878",
+   "Daumesdick",
+   [
+    "Brothers Grimm"
+   ],
+   1857,
+   "isfdb",
+   1819
+  ],
+  [
+   "Q318208",
+   "La linea di condotta",
+   [
+    "Bertolt Brecht"
+   ],
+   1930,
+   "k10plus",
+   1930
+  ],
+  [
+   "Q123465497",
+   "Des fistules salivaires de la parotide et du canal de sténon",
+   [
+    "Edmond Nadreau"
+   ],
+   1869,
+   "bnf",
+   1869
+  ],
+  [
+   "Q19156821",
+   "Der Fuchs und das Pferd",
+   [
+    "Brothers Grimm"
+   ],
+   1857,
+   "isfdb",
+   1815
+  ],
+  [
+   "Q19157593",
+   "Der Hund und der Sperling",
+   [
+    "Brothers Grimm"
+   ],
+   1857,
+   "isfdb",
+   1819
+  ],
+  [
+   "Q19167525",
+   "Der Wolf und die sieben jungen Geislein",
+   [
+    "Brothers Grimm"
+   ],
+   1857,
+   "isfdb",
+   1812
+  ],
+  [
+   "Q19181099",
+   "Der gestiefelte Kater",
+   [
+    "Brothers Grimm"
+   ],
+   1856,
+   "isfdb",
+   1812
+  ]
+ ],
+ "minuti": 110
+}
