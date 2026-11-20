@@ -1,0 +1,1404 @@
+{
+ "A_opere": 294,
+ "A_tipi_delle_voci_senza_morte": [
+  [
+   "brother duo",
+   83
+  ],
+  [
+   "human",
+   78
+  ],
+  [
+   "valore sconosciuto",
+   24
+  ],
+  [
+   "collective pseudonym, male duo, writing duo",
+   23
+  ],
+  [
+   "term",
+   12
+  ],
+  [
+   "human, pseudo-author",
+   5
+  ],
+  [
+   "sibling duo",
+   4
+  ],
+  [
+   "herbarium, national museum, natural history museum, non-departmental public body, nonprofit organization, organization",
+   3
+  ],
+  [
+   "medical association, nonprofit organization, open-access publisher",
+   3
+  ],
+  [
+   "pseudo-author",
+   3
+  ],
+  [
+   "academic publisher, constituent college, educational organization, public research university",
+   2
+  ],
+  [
+   "organization",
+   2
+  ],
+  [
+   "business",
+   2
+  ],
+  [
+   "learned society, organization",
+   2
+  ],
+  [
+   "group or class of humans",
+   2
+  ],
+  [
+   "academy of sciences, learned society, national academy, open-access publisher, organization, publishing house",
+   2
+  ],
+  [
+   "group of humans, pseudo-author",
+   2
+  ],
+  [
+   "art museum",
+   2
+  ],
+  [
+   "learned society, scientific society",
+   1
+  ],
+  [
+   "academic publisher, book publisher, open-access publisher, publishing house",
+   1
+  ],
+  [
+   "business, printing company",
+   1
+  ],
+  [
+   "big city, city, former capital, human settlement",
+   1
+  ],
+  [
+   "Mediterranean country, country, sovereign state, transcontinental country",
+   1
+  ],
+  [
+   "deity, names of God in Judaism, theonym",
+   1
+  ],
+  [
+   "occupation",
+   1
+  ],
+  [
+   "era, group of humans",
+   1
+  ],
+  [
+   "organization, publishing house",
+   1
+  ],
+  [
+   "concept, recording industry term, special purpose artist",
+   1
+  ],
+  [
+   "private not-for-profit educational institution, private university, research university",
+   1
+  ],
+  [
+   "educational institution, natural history museum, nonprofit organization",
+   1
+  ],
+  [
+   "literary genre",
+   1
+  ],
+  [
+   "art academy, national academy",
+   1
+  ],
+  [
+   "auction house, multi-story urban building",
+   1
+  ],
+  [
+   "archives",
+   1
+  ],
+  [
+   "ethnic group, group of humans, population group",
+   1
+  ],
+  [
+   "Christian Church, Christian denomination, church congregation, historic Church",
+   1
+  ],
+  [
+   "archives, art gallery",
+   1
+  ],
+  [
+   "botanical garden, garden, herbarium, higher education institution",
+   1
+  ],
+  [
+   "biorepository, museum, organization",
+   1
+  ],
+  [
+   "business model, legal form",
+   1
+  ]
+ ],
+ "A_esempi": {
+  "human": [
+   "1688 Germantown Quaker Petition Against Slavery — Francis Daniel Pastorius",
+   "Advice to a desolate France — S. Chateillon",
+   "Aegimius — Cercops of Miletus",
+   "Đại Nam nhất thống chí — Phan Đình Bình",
+   "Aladdin and the Wonderful Lamp — Hanna Diyab",
+   "Ali Baba and the Forty Thieves — Hanna Diyab",
+   "Almanac: Two Paths — Andrey Nikolaevich Balashov",
+   "Annales Musei Botanici Lugduno-Batavi — A. Bernecker"
+  ],
+  "valore sconosciuto": [
+   "To Christ Crucified — http://www.wikidata.org/.well-known/genid/251033d5cc4a70bc81b01293aa06dbfb",
+   "Analysis of the game of chess — http://www.wikidata.org/.well-known/genid/6801aa0cba00c9747a8a7d31a1d63ae9",
+   "Beiträge zur Pflanzenkunde des Russischen Reiches — http://www.wikidata.org/.well-known/genid/2b1a39e4406002c234d00a389b9395fc",
+   "Beiträge zur Pflanzenkunde des Russischen Reiches — http://www.wikidata.org/.well-known/genid/cf0d6ae07b34c364a959c7361756bc67",
+   "Beiträge zur Pflanzenkunde des Russischen Reiches — http://www.wikidata.org/.well-known/genid/abfe678ed0ea110af3931e1c0790bab1",
+   "Boy Scouts and What They Do — http://www.wikidata.org/.well-known/genid/8f73426bc927a8e6340adfc101c6e5e3",
+   "Song of the Albigensian Crusade — http://www.wikidata.org/.well-known/genid/a88ec81e55e5c7b7b464168238513871",
+   "Counsels of Wisdom — http://www.wikidata.org/.well-known/genid/8f50efcdf82d5a4b61fc5b84e54d84fb"
+  ],
+  "academic publisher, constituent college, educational organization, public research university": [
+   "A manual of the anatomy of vertebrated animals — King's College London",
+   "Lachesis lapponica, or, A tour in Lapland — King's College London"
+  ],
+  "learned society, scientific society": [
+   "A catalogue of Lucanoid Coleoptera : with illustrations and descriptions of various new and interesting species — Royal Entomological Society"
+  ],
+  "academic publisher, book publisher, open-access publisher, publishing house": [
+   "A monograph of the birds forming the tanagrine genus Calliste : illustrated by coloured plates of all the known species — Taylor & Francis"
+  ],
+  "business, printing company": [
+   "A monograph of the Trochilidæ, or family of humming-birds — Hullmandel & Walton"
+  ],
+  "big city, city, former capital, human settlement": [
+   "Ein Abendbesuch bei Pelekanen — Aden"
+  ],
+  "Mediterranean country, country, sovereign state, transcontinental country": [
+   "Ein Abendbesuch bei Pelekanen — Egypt"
+  ],
+  "human, pseudo-author": [
+   "Against Neaera — Pseudo-Demosthenes",
+   "Against Stephanus 2 — Pseudo-Demosthenes",
+   "Halcyon — Pseudo-Lucian",
+   "Praise of the fatherland — Pseudo-Lucian",
+   "Théomneste et Apollodore contre Nééra — Pseudo-Demosthenes"
+  ],
+  "organization": [
+   "Đại Nam nhất thống chí — Quốc sử quán (Nguyễn dynasty)",
+   "Le Naturaliste Canadien — Société Provancher d'histoire naturelle du Canada"
+  ],
+  "deity, names of God in Judaism, theonym": [
+   "Amos 1 — Jehovah"
+  ],
+  "collective pseudonym, male duo, writing duo": [
+   "An Artist's Whim — Ilf and Petrov",
+   "Appendage to the Letter \"Щ\" — Ilf and Petrov",
+   "Avksenty Philosopulo — Ilf and Petrov",
+   "Blue Devil — Ilf and Petrov",
+   "Bright Personality — Ilf and Petrov",
+   "The City and Its Surroundings — Ilf and Petrov",
+   "The Twelve Chairs — Ilf and Petrov",
+   "Dog Train — Ilf and Petrov"
+  ],
+  "occupation": [
+   "The Authentic Life of Billy, the Kid — ghostwriter"
+  ],
+  "era, group of humans": [
+   "Babylonian Talmud — Amoraim"
+  ],
+  "brother duo": [
+   "Bearskin — Brothers Grimm",
+   "Brother and Sister — Brothers Grimm",
+   "Cat and Mouse in Partnership — Brothers Grimm",
+   "Cinder-Maid — Brothers Grimm",
+   "Clever Elsie — Brothers Grimm",
+   "Clever Hans — Brothers Grimm",
+   "Godfather Death — Brothers Grimm",
+   "The Devil With the Three Golden Hairs — Brothers Grimm"
+  ],
+  "organization, publishing house": [
+   "Beauty in common things — Society for Promoting Christian Knowledge"
+  ],
+  "concept, recording industry term, special purpose artist": [
+   "Bilder-Brevier der Dresdner Gallerie — various artists"
+  ],
+  "business": [
+   "The birds of New Guinea and the adjacent Papuan islands : including many new species recently discovered in Australia — Mintern Bros.",
+   "Ornithological miscellany — Mintern Bros."
+  ],
+  "private not-for-profit educational institution, private university, research university": [
+   "Botanical Gazette — University of Chicago"
+  ],
+  "term": [
+   "Botanische Zeitung — various authors",
+   "Cancionero general — various authors",
+   "Deutschlands Flora in Abbildungen nach der Natur mit Beschreibungen — various authors",
+   "Die Natur — various authors",
+   "Die Süsswasserfauna Deutschlands. Eine Exkursionsfauna — various authors",
+   "Die Käfer Europas. Nach der Natur beschrieben — various authors",
+   "Entomologische Monatsblätter — various authors",
+   "Entomologisches Taschenbuch für die Anfänger und Liebhaber dieser Wissenschaft — various authors"
+  ],
+  "educational institution, natural history museum, nonprofit organization": [
+   "Bulletin of the American Museum of Natural History — American Museum of Natural History"
+  ],
+  "learned society, organization": [
+   "The Canadian Naturalist and Geologist — Natural History Society of Montreal",
+   "The Canadian naturalist and quarterly journal of science : with proceedings of the Natural History Society of Montreal — Natural History Society of Montreal"
+  ],
+  "literary genre": [
+   "Cartas Chilenas — apocrypha"
+  ],
+  "herbarium, national museum, natural history museum, non-departmental public body, nonprofit organization, organization": [
+   "Catalogue of monkeys, lemurs, and fruit-eating bats in the collection of the British museum — Natural History Museum",
+   "Catalogue of the recent Echinida ... in the ... Museum — Natural History Museum",
+   "Catalogue of the fishes in the British Museum — Natural History Museum"
+  ],
+  "art academy, national academy": [
+   "Carte particulière des Environs de Paris — Académie royale de peinture et de sculpture"
+  ],
+  "auction house, multi-story urban building": [
+   "Catalogue de 43 tableaux de maîtres anciens provenant de la collection de M. le Comte Koucheleff Besborodko — Hôtel Drouot"
+  ],
+  "archives": [
+   "Carte topographique de la Corse — Dépôt de la Guerre"
+  ],
+  "group or class of humans": [
+   "Chronicle of Dalimil — anonymous",
+   "Tulip Book by Judith Leyster — anonymous"
+  ],
+  "ethnic group, group of humans, population group": [
+   "Florentine Codex — indigenous peoples of the Americas"
+  ],
+  "Christian Church, Christian denomination, church congregation, historic Church": [
+   "Costituzione dogmatica sulla fede cattolica — Catholic Church"
+  ],
+  "archives, art gallery": [
+   "Collection Cottier catalogue — Durand-Ruel & Cie."
+  ],
+  "botanical garden, garden, herbarium, higher education institution": [
+   "Curtis's Botanical Magazine — Kew Gardens"
+  ],
+  "biorepository, museum, organization": [
+   "Descriptive catalogue of the mining, metallurgical, geological, and agricultural models in the National Museum, Melbourne — Museums Victoria"
+  ],
+  "business model, legal form": [
+   "Le Diable à Paris — collective"
+  ],
+  "academy of sciences, national academy": [
+   "The Edinburgh philosophical journal — Royal Society of Edinburgh"
+  ],
+  "medical association, nonprofit organization, open-access publisher": [
+   "Erpétologie générale, ou, Histoire naturelle complète des reptiles — Royal College of Physicians of Edinburgh",
+   "Le monde de la mer — Royal College of Physicians of Edinburgh",
+   "Tableau du règne végétal, selon la méthode de Jussieu tome premier — Royal College of Physicians of Edinburgh"
+  ],
+  "learned society": [
+   "Fauna Hawaiiensis — British Science Association"
+  ],
+  "academic publisher, museum, museum building, nonprofit organization": [
+   "Fauna Hawaiiensis — Museo Berenice Pauhai Bishop"
+  ],
+  "academy of sciences, learned society, national academy, open-access publisher, organization, publishing house": [
+   "Fauna Hawaiiensis — Royal Society of London",
+   "Philosophical Transactions — Royal Society of London"
+  ],
+  "collective pseudonym": [
+   "Federalist Papers — Publius"
+  ],
+  "fictional human, pseudonym": [
+   "The Fortunes of Nigel — Clutterbuck"
+  ],
+  "academic publisher, international organization, nonprofit organization, open-access publisher": [
+   "Fossil butterflies — American Association for the Advancement of Science"
+  ],
+  "Catholic religious institute": [
+   "Gallia Christiana — Congregation of St. Maur"
+  ],
+  "pseudo-author": [
+   "Magna Moralia — Pseudo-Aristotle",
+   "Problems — Pseudo-Aristotle",
+   "Rhetoric to Alexander — Pseudo-Aristotle"
+  ],
+  "school": [
+   "Handleiding tot de beoefening der dierkunde — Koninklijke Militaire Academie"
+  ],
+  "research institute, think tank": [
+   "Hunminjeongeum — Hall of Worthies"
+  ],
+  "city-state, confessional state, country, enclave, institutional complex, landlocked country, religious complex, sacerdotal state, sovereign state, successor state, tourist destination, urban area": [
+   "Inter caetera — Vatican City"
+  ],
+  "human whose existence is disputed": [
+   "The Mahatma Letters to A.P. Sinnett — Kuthumi"
+  ],
+  "Executive Committee of the Petrograd Soviet": [
+   "The Lessons of the German Events — Executive Committee of the Communist International"
+  ],
+  "group of humans, pseudo-author": [
+   "Le odi di Anacreonte e di Saffo — Pseudo-Anacreon",
+   "Pindar and Anacreon — Pseudo-Anacreon"
+  ],
+  "charitable organization, faculty, medical organization": [
+   "Lectures on the comparative anatomy and physiology of the invertebrate animals : delivered at the Royal College of Surgeons — Royal College of Surgeons of England"
+  ],
+  "park, urban park": [
+   "The Madman — Gibran Khalil Gibran Garden"
+  ],
+  "United States federal agency, national mapping agency": [
+   "Map of United States, 1890 — United States Geological Survey"
+  ],
+  "open-access publisher, research institute, scientific society": [
+   "Museum Senckenbergianum — Senckenberg – Leibniz Institution for Biodiversity and Earth System Research"
+  ],
+  "family, organization, publishing house": [
+   "Musci exotici :containing figures and descriptions of new or little known foreign mosses and other cryptogamic subjects — Longman"
+  ],
+  "Wikimedia human name disambiguation page": [
+   "My Inventions: The Autobiography of Nikola Tesla — Ben Johnston"
+  ],
+  "Catholic order, group of humans, organization": [
+   "Nippo Jisho — Society of Jesus"
+  ],
+  "text publication society": [
+   "Nitzsch's Pterylography, tr. from the German — Ray Society"
+  ],
+  "art museum": [
+   "Notice des tableaux et autres objets d'art exposés au Musée Fabre de Montpellier, 1830 — Musée Fabre",
+   "Notice des tableaux et objets d'art exposés au Musée Fabre de la ville de Montpellier, 1839 — Musée Fabre"
+  ],
+  "?": [
+   "On The War — General Council of the International Workingmen's Association"
+  ],
+  "fictional human, literary character": [
+   "The Works of Ossian — Ossian"
+  ],
+  "printing company, publishing house": [
+   "Paxton's Magazine of Botany — Bradbury and Evans"
+  ],
+  "group of humans, historical profession": [
+   "Peniarth MS 49 — Beirdd yr Uchelwyr"
+  ],
+  "publishing house": [
+   "Plantae Asiaticae Rariores — Treuttel et Würtz"
+  ],
+  "government agency": [
+   "Prodromus of the paleontology of Victoria : or, Figures and descriptions of Victorian organic remains — Geological Survey of Victoria"
+  ],
+  "sibling duo": [
+   "Preface — Charles and Mary Lamb",
+   "Tales from Shakespeare — Charles and Mary Lamb",
+   "Tales from Shakspere, Vol I — Charles and Mary Lamb",
+   "Tales from Shakspere, Vol II — Charles and Mary Lamb"
+  ],
+  "state education agency": [
+   "State manual and course of study for the district schools of Michigan — Michigan Department of Education"
+  ],
+  "human, notname": [
+   "Theophanes Continuatus — Theophanes Continuatus"
+  ],
+  "botanical garden, national museum, natural history museum": [
+   "Template:Milne-Edwards, 1865 — Muséum national d'histoire naturelle"
+  ],
+  "house name, pseudonym": [
+   "Tom Swift and His War Tank — Victor Appleton"
+  ],
+  "committee": [
+   "Verhandelingen over de natuurlijke geschiedenis der Nederlandsche overzeesche bezittingen — Natural History Commission for the Netherlands Indies"
+  ]
+ },
+ "B_opere_importanti": 5896,
+ "B_con_collaboratori": 411,
+ "B_per_campo": [
+  [
+   "illustratore",
+   420
+  ],
+  [
+   "collaboratore",
+   71
+  ],
+  [
+   "compositore",
+   69
+  ],
+  [
+   "librettista",
+   24
+  ],
+  [
+   "possibile autore",
+   1
+  ]
+ ],
+ "B_libere_oggi_ma_collaboratore_morto_dopo": 49,
+ "B_esempi": [
+  {
+   "opera": "Robinson Crusoe",
+   "titolo_it": "Robinson Crusoe",
+   "wikipedia": 99,
+   "autori": [
+    [
+     "Daniel Defoe",
+     1731
+    ]
+   ],
+   "collaboratori_dopo": [
+    [
+     "illustratore",
+     "Vicenç Badalona Ballestar",
+     2014
+    ]
+   ]
+  },
+  {
+   "opera": "The Metamorphosis",
+   "titolo_it": "La metamorfosi",
+   "wikipedia": 85,
+   "autori": [
+    [
+     "Franz Kafka",
+     1924
+    ]
+   ],
+   "collaboratori_dopo": [
+    [
+     "illustratore",
+     "Raymond Grandjean",
+     2006
+    ]
+   ]
+  },
+  {
+   "opera": "Poland Is Not Yet Lost",
+   "titolo_it": "Mazurek Dąbrowskiego",
+   "wikipedia": 85,
+   "autori": [
+    [
+     "Józef Wybicki",
+     1822
+    ]
+   ],
+   "collaboratori_dopo": [
+    [
+     "compositore",
+     "http://www.wikidata.org/.well-known/genid/ef48570fadf9bf7a7423ab8e57855cf0",
+     null
+    ]
+   ]
+  },
+  {
+   "opera": "Gone with the Wind",
+   "titolo_it": "Via col vento",
+   "wikipedia": 64,
+   "autori": [
+    [
+     "Margaret Mitchell",
+     1949
+    ]
+   ],
+   "collaboratori_dopo": [
+    [
+     "illustratore",
+     "Emilio Grau Sala",
+     1975
+    ],
+    [
+     "illustratore",
+     "André Dignimont",
+     1965
+    ]
+   ]
+  },
+  {
+   "opera": "Thai National Anthem",
+   "titolo_it": "Phleng Chat",
+   "wikipedia": 60,
+   "autori": [
+    [
+     "Luang Saranupraphan",
+     1954
+    ]
+   ],
+   "collaboratori_dopo": [
+    [
+     "compositore",
+     "Phra Chenduriyang (Piti Wathayakon)",
+     1968
+    ]
+   ]
+  },
+  {
+   "opera": "The Good Soldier Švejk",
+   "titolo_it": "Il buon soldato Sc'vèik",
+   "wikipedia": 55,
+   "autori": [
+    [
+     "Jaroslav Hašek",
+     1923
+    ]
+   ],
+   "collaboratori_dopo": [
+    [
+     "illustratore",
+     "Josef Lada",
+     1957
+    ]
+   ]
+  },
+  {
+   "opera": "Tarawih",
+   "titolo_it": "Tarawih",
+   "wikipedia": 55,
+   "autori": [
+    [
+     "Muhammad",
+     632
+    ]
+   ],
+   "collaboratori_dopo": [
+    [
+     "illustratore",
+     "companions of the Prophet",
+     null
+    ],
+    [
+     "illustratore",
+     "tabi‘un",
+     null
+    ],
+    [
+     "illustratore",
+     "Muhammad's wives",
+     null
+    ]
+   ]
+  },
+  {
+   "opera": "Anne of Green Gables",
+   "titolo_it": "Anna dai capelli rossi",
+   "wikipedia": 51,
+   "autori": [
+    [
+     "Lucy Maud Montgomery",
+     1942
+    ]
+   ],
+   "collaboratori_dopo": [
+    [
+     "illustratore",
+     "Jacques Fromont",
+     2010
+    ]
+   ]
+  },
+  {
+   "opera": "Book of Han",
+   "titolo_it": "Libro degli Han",
+   "wikipedia": 48,
+   "autori": [
+    [
+     "Ban Gu",
+     92
+    ]
+   ],
+   "collaboratori_dopo": [
+    [
+     "collaboratore",
+     "Ma Xu",
+     null
+    ]
+   ]
+  },
+  {
+   "opera": "The Wind in the Willows",
+   "titolo_it": "Il vento tra i salici",
+   "wikipedia": 45,
+   "autori": [
+    [
+     "Kenneth Grahame",
+     1932
+    ]
+   ],
+   "collaboratori_dopo": [
+    [
+     "illustratore",
+     "Paul Bransom",
+     1979
+    ]
+   ]
+  },
+  {
+   "opera": "Tender Is the Night",
+   "titolo_it": "Tenera è la notte",
+   "wikipedia": 34,
+   "autori": [
+    [
+     "F. Scott Fitzgerald",
+     1940
+    ]
+   ],
+   "collaboratori_dopo": [
+    [
+     "illustratore",
+     "Edward Shenton",
+     1977
+    ]
+   ]
+  },
+  {
+   "opera": "The House of Bernarda Alba",
+   "titolo_it": "La casa di Bernarda Alba",
+   "wikipedia": 32,
+   "autori": [
+    [
+     "Federico García Lorca",
+     1936
+    ]
+   ],
+   "collaboratori_dopo": [
+    [
+     "illustratore",
+     "Georges Wakhévitch",
+     1984
+    ]
+   ]
+  },
+  {
+   "opera": "Leyli and Majnun",
+   "titolo_it": "Layla e Majnun",
+   "wikipedia": 27,
+   "autori": [
+    [
+     "Uzeyir Hajibeyov",
+     1948
+    ]
+   ],
+   "collaboratori_dopo": [
+    [
+     "librettista",
+     "Jeyhoun Bey Hajibeyli",
+     1962
+    ]
+   ]
+  },
+  {
+   "opera": "Paris in the Twentieth Century",
+   "titolo_it": "Parigi nel XX secolo",
+   "wikipedia": 27,
+   "autori": [
+    [
+     "Jules Verne",
+     1905
+    ]
+   ],
+   "collaboratori_dopo": [
+    [
+     "illustratore",
+     "François Schuiten",
+     null
+    ]
+   ]
+  },
+  {
+   "opera": "Blood Wedding",
+   "titolo_it": "Nozze di sangue",
+   "wikipedia": 27,
+   "autori": [
+    [
+     "Federico García Lorca",
+     1936
+    ]
+   ],
+   "collaboratori_dopo": [
+    [
+     "illustratore",
+     "Georges Wakhévitch",
+     1984
+    ]
+   ]
+  },
+  {
+   "opera": "A Little Princess",
+   "titolo_it": "La piccola principessa",
+   "wikipedia": 26,
+   "autori": [
+    [
+     "Frances Hodgson Burnett",
+     1924
+    ]
+   ],
+   "collaboratori_dopo": [
+    [
+     "illustratore",
+     "Ethel Franklin Betts",
+     1956
+    ],
+    [
+     "illustratore",
+     "Ethel Franklin Betts",
+     1959
+    ]
+   ]
+  },
+  {
+   "opera": "Le Grand Meaulnes",
+   "titolo_it": "Il grande Meaulnes",
+   "wikipedia": 25,
+   "autori": [
+    [
+     "Alain-Fournier",
+     1914
+    ]
+   ],
+   "collaboratori_dopo": [
+    [
+     "illustratore",
+     "Jean-Olivier Héron",
+     2017
+    ]
+   ]
+  },
+  {
+   "opera": "Zdravljica",
+   "titolo_it": "Zdravljica",
+   "wikipedia": 24,
+   "autori": [
+    [
+     "France Prešeren",
+     1849
+    ]
+   ],
+   "collaboratori_dopo": [
+    [
+     "compositore",
+     "Stanko Premrl",
+     1965
+    ]
+   ]
+  },
+  {
+   "opera": "Ship of Fools",
+   "titolo_it": "La nave dei folli",
+   "wikipedia": 23,
+   "autori": [
+    [
+     "Sebastian Brant",
+     1521
+    ]
+   ],
+   "collaboratori_dopo": [
+    [
+     "illustratore",
+     "Meister des Haintz Narr",
+     null
+    ],
+    [
+     "illustratore",
+     "Meister der Bergmannschen Offizin",
+     null
+    ]
+   ]
+  },
+  {
+   "opera": "The Adventure of the Veiled Lodger",
+   "titolo_it": "L’avventura dell’inquilina velata",
+   "wikipedia": 23,
+   "autori": [
+    [
+     "Arthur Conan Doyle",
+     1930
+    ]
+   ],
+   "collaboratori_dopo": [
+    [
+     "illustratore",
+     "Frank Wiles",
+     1963
+    ]
+   ]
+  },
+  {
+   "opera": "The Adventure of Shoscombe Old Place",
+   "titolo_it": "L’avventura di Shoscombe Old Place",
+   "wikipedia": 23,
+   "autori": [
+    [
+     "Arthur Conan Doyle",
+     1930
+    ]
+   ],
+   "collaboratori_dopo": [
+    [
+     "illustratore",
+     "Frank Wiles",
+     1963
+    ]
+   ]
+  },
+  {
+   "opera": "Yerma",
+   "titolo_it": "Yerma",
+   "wikipedia": 22,
+   "autori": [
+    [
+     "Federico García Lorca",
+     1936
+    ]
+   ],
+   "collaboratori_dopo": [
+    [
+     "illustratore",
+     "Georges Wakhévitch",
+     1984
+    ]
+   ]
+  },
+  {
+   "opera": "Seven Pillars of Wisdom",
+   "titolo_it": "I sette pilastri della saggezza",
+   "wikipedia": 19,
+   "autori": [
+    [
+     "T. E. Lawrence",
+     1935
+    ]
+   ],
+   "collaboratori_dopo": [
+    [
+     "illustratore",
+     "Augustus John",
+     1961
+    ],
+    [
+     "illustratore",
+     "Q4924110",
+     1981
+    ],
+    [
+     "illustratore",
+     "Eric Kennington",
+     1960
+    ],
+    [
+     "illustratore",
+     "Q5553330",
+     1983
+    ],
+    [
+     "illustratore",
+     "Cosmo Clark",
+     1967
+    ]
+   ]
+  },
+  {
+   "opera": "Cousin Bette",
+   "titolo_it": "La cugina Bette",
+   "wikipedia": 18,
+   "autori": [
+    [
+     "Honoré de Balzac",
+     1850
+    ]
+   ],
+   "collaboratori_dopo": [
+    [
+     "illustratore",
+     "Charles Huard",
+     1965
+    ]
+   ]
+  },
+  {
+   "opera": "Goodbye, Mr. Chips",
+   "titolo_it": "",
+   "wikipedia": 18,
+   "autori": [
+    [
+     "James Hilton",
+     1954
+    ]
+   ],
+   "collaboratori_dopo": [
+    [
+     "illustratore",
+     "Bip Pares",
+     1973
+    ]
+   ]
+  },
+  {
+   "opera": "Calligrammes",
+   "titolo_it": "",
+   "wikipedia": 15,
+   "autori": [
+    [
+     "Guillaume Apollinaire",
+     1918
+    ]
+   ],
+   "collaboratori_dopo": [
+    [
+     "illustratore",
+     "Giorgio de Chirico",
+     1978
+    ]
+   ]
+  },
+  {
+   "opera": "The Legend of Thyl Ulenspiegel and Lamme Goedzak",
+   "titolo_it": "La leggenda di Thyl Ulenspiegel",
+   "wikipedia": 15,
+   "autori": [
+    [
+     "Charles De Coster",
+     1879
+    ]
+   ],
+   "collaboratori_dopo": [
+    [
+     "illustratore",
+     "Q559297",
+     1972
+    ]
+   ]
+  },
+  {
+   "opera": "The Return of Tarzan",
+   "titolo_it": "Il ritorno di Tarzan",
+   "wikipedia": 13,
+   "autori": [
+    [
+     "Edgar Rice Burroughs",
+     1950
+    ]
+   ],
+   "collaboratori_dopo": [
+    [
+     "illustratore",
+     "J. Allen St. John",
+     1957
+    ]
+   ]
+  },
+  {
+   "opera": "Shooting an Elephant",
+   "titolo_it": "",
+   "wikipedia": 13,
+   "autori": [
+    [
+     "George Orwell",
+     1950
+    ]
+   ],
+   "collaboratori_dopo": [
+    [
+     "compositore",
+     "Greg Kuehn",
+     null
+    ]
+   ]
+  },
+  {
+   "opera": "The Hollow Needle",
+   "titolo_it": "",
+   "wikipedia": 12,
+   "autori": [
+    [
+     "Maurice Leblanc",
+     1941
+    ]
+   ],
+   "collaboratori_dopo": [
+    [
+     "illustratore",
+     "Q3270468",
+     1965
+    ]
+   ]
+  },
+  {
+   "opera": "The White Disease",
+   "titolo_it": "",
+   "wikipedia": 11,
+   "autori": [
+    [
+     "Karel Čapek",
+     1938
+    ]
+   ],
+   "collaboratori_dopo": [
+    [
+     "compositore",
+     "Rudolf Maria Mandé",
+     1964
+    ]
+   ]
+  },
+  {
+   "opera": "Kaytek the Wizard",
+   "titolo_it": "",
+   "wikipedia": 5,
+   "autori": [
+    [
+     "Janusz Korczak",
+     1942
+    ]
+   ],
+   "collaboratori_dopo": [
+    [
+     "illustratore",
+     "Q4828468",
+     null
+    ]
+   ]
+  },
+  {
+   "opera": "A Difficult Parish",
+   "titolo_it": "",
+   "wikipedia": 4,
+   "autori": [
+    [
+     "Axel Wallengren",
+     1896
+    ]
+   ],
+   "collaboratori_dopo": [
+    [
+     "compositore",
+     "Sten Broman",
+     1983
+    ]
+   ]
+  },
+  {
+   "opera": "Altazor",
+   "titolo_it": "",
+   "wikipedia": 4,
+   "autori": [
+    [
+     "Vicente Hohoneo",
+     1948
+    ]
+   ],
+   "collaboratori_dopo": [
+    [
+     "illustratore",
+     "Pablo Picasso",
+     1973
+    ]
+   ]
+  },
+  {
+   "opera": "Machine",
+   "titolo_it": "",
+   "wikipedia": 3,
+   "autori": [
+    [
+     "Riichi Yokomitsu",
+     1947
+    ]
+   ],
+   "collaboratori_dopo": [
+    [
+     "illustratore",
+     "Shigejirō Sano",
+     1987
+    ]
+   ]
+  },
+  {
+   "opera": "Light and Darkness",
+   "titolo_it": "",
+   "wikipedia": 3,
+   "autori": [
+    [
+     "Natsume Sōseki",
+     1916
+    ]
+   ],
+   "collaboratori_dopo": [
+    [
+     "illustratore",
+     "Natori Shunsen",
+     1960
+    ]
+   ]
+  },
+  {
+   "opera": "The Saci",
+   "titolo_it": "",
+   "wikipedia": 2,
+   "autori": [
+    [
+     "Monteiro Lobato",
+     1948
+    ]
+   ],
+   "collaboratori_dopo": [
+    [
+     "illustratore",
+     "Paulo Borges",
+     null
+    ]
+   ]
+  },
+  {
+   "opera": "Discourse on Decadence",
+   "titolo_it": "",
+   "wikipedia": 2,
+   "autori": [
+    [
+     "Ango Sakaguchi",
+     1955
+    ]
+   ],
+   "collaboratori_dopo": [
+    [
+     "illustratore",
+     "Hiromu Hara",
+     1986
+    ]
+   ]
+  },
+  {
+   "opera": "Nukitsamees",
+   "titolo_it": "",
+   "wikipedia": 2,
+   "autori": [
+    [
+     "Oskar Luts",
+     1953
+    ]
+   ],
+   "collaboratori_dopo": [
+    [
+     "illustratore",
+     "Richard Kaljo",
+     1978
+    ]
+   ]
+  },
+  {
+   "opera": "The gypsy baron",
+   "titolo_it": "",
+   "wikipedia": 2,
+   "autori": [
+    [
+     "Mór Jókai",
+     1904
+    ]
+   ],
+   "collaboratori_dopo": [
+    [
+     "illustratore",
+     "Károly Reich",
+     1988
+    ],
+    [
+     "illustratore",
+     "Károly Reich",
+     1988
+    ]
+   ]
+  },
+  {
+   "opera": "Sahaj Path",
+   "titolo_it": "",
+   "wikipedia": 2,
+   "autori": [
+    [
+     "Rabindranath Tagore",
+     1941
+    ]
+   ],
+   "collaboratori_dopo": [
+    [
+     "illustratore",
+     "Nandalal Bose",
+     1966
+    ]
+   ]
+  },
+  {
+   "opera": "Natuurlyke Historie",
+   "titolo_it": "",
+   "wikipedia": 2,
+   "autori": [
+    [
+     "Louis Renard",
+     1746
+    ]
+   ],
+   "collaboratori_dopo": [
+    [
+     "illustratore",
+     "Samuel Fallours",
+     null
+    ]
+   ]
+  },
+  {
+   "opera": "Anita",
+   "titolo_it": "",
+   "wikipedia": 1,
+   "autori": [
+    [
+     "Gustaf Fröding",
+     1911
+    ]
+   ],
+   "collaboratori_dopo": [
+    [
+     "compositore",
+     "Sven-Erik Magnusson",
+     2017
+    ]
+   ]
+  },
+  {
+   "opera": "The Idiot",
+   "titolo_it": "",
+   "wikipedia": 1,
+   "autori": [
+    [
+     "Ango Sakaguchi",
+     1955
+    ]
+   ],
+   "collaboratori_dopo": [
+    [
+     "illustratore",
+     "Hiromu Hara",
+     1986
+    ]
+   ]
+  },
+  {
+   "opera": "The Fateful Game of Love",
+   "titolo_it": "",
+   "wikipedia": 1,
+   "autori": [
+    [
+     "Josef Čapek",
+     1945
+    ],
+    [
+     "Karel Čapek",
+     1938
+    ]
+   ],
+   "collaboratori_dopo": [
+    [
+     "compositore",
+     "Miroslav Ponc",
+     1976
+    ]
+   ]
+  },
+  {
+   "opera": "Afrodite",
+   "titolo_it": "",
+   "wikipedia": 1,
+   "autori": [
+    [
+     "Louis Couperus",
+     1923
+    ]
+   ],
+   "collaboratori_dopo": [
+    [
+     "compositore",
+     "Rudolph Cort van der Linden",
+     1965
+    ]
+   ]
+  },
+  {
+   "opera": "Texel",
+   "titolo_it": "",
+   "wikipedia": 1,
+   "autori": [
+    [
+     "Jac P. Thijsse",
+     1945
+    ]
+   ],
+   "collaboratori_dopo": [
+    [
+     "illustratore",
+     "Cornelis Rol",
+     1963
+    ],
+    [
+     "illustratore",
+     "Jan Voerman jr.",
+     1976
+    ]
+   ]
+  },
+  {
+   "opera": "Usha Parinayam",
+   "titolo_it": "",
+   "wikipedia": 1,
+   "autori": [
+    [
+     "Vedam Venkataraya Sastry",
+     1929
+    ]
+   ],
+   "collaboratori_dopo": [
+    [
+     "compositore",
+     "S. Hanumantha Rao",
+     1980
+    ]
+   ]
+  },
+  {
+   "opera": "Chickens and the Fox",
+   "titolo_it": "",
+   "wikipedia": 1,
+   "autori": [
+    [
+     "Hayim Nahman Bialik",
+     1934
+    ]
+   ],
+   "collaboratori_dopo": [
+    [
+     "illustratore",
+     "Nachum Gutman",
+     1980
+    ]
+   ]
+  }
+ ]
+}
