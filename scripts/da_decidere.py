@@ -126,6 +126,22 @@ def main():
         righe.append(f"- Approvati: {', '.join(map(str, cal)) or 'nessuno'}.")
     righe.append("")
 
+    # 5b. calendario e registro unico: un anniversario di morte con un anno diverso da quello deciso nel registro
+    reg = leggi(D / "registro" / "autori.json", {}).get("autori", {})
+    diversi = []
+    for f in sorted(D.glob("anniversari-[0-9][0-9][0-9][0-9].json")):
+        for v in leggi(f, {}).get("voci", []):
+            r = reg.get(v.get("qid"))
+            if v.get("tipo") == "morte" and r and r.get("m") != v.get("anno"):
+                diversi.append(f"- {f.stem}: **{v.get('nome')}**, nel calendario morto nel {v.get('anno')}, nel registro {r['m']} "
+                               f"({r.get('e')}{': ' + ', '.join(r['a']) if r.get('a') else ''}).")
+            elif v.get("tipo") == "morte" and r and r.get("e") == "discorde":
+                diversi.append(f"- {f.stem}: **{v.get('nome')}**, anno di morte {v.get('anno')} con fonti discordi: da guardare.")
+    righe.append("## 5b. Calendario: anniversari di morte da ricontrollare con il registro")
+    righe += diversi or ["- Nessuno."]
+    n += len(diversi)
+    righe.append("")
+
     # 6. nomi in apertura
     righe.append("## 6. Nomi in apertura delle pagine del Public Domain Day (da guardare)")
     for a in anni:

@@ -98,6 +98,9 @@ Scritto da `scripts/da_decidere.py`. Qui ci sono solo i casi in cui i dati non b
 ## 5. Calendario degli anniversari
 - Approvati: 2027.
 
+## 5b. Calendario: anniversari di morte da ricontrollare con il registro
+- Nessuno.
+
 ## 6. Nomi in apertura delle pagine del Public Domain Day (da guardare)
 - 2027: B. R. Ambedkar, Bertolt Brecht, A. A. Milne, Henry Louis Mencken, Gottfried Benn, Robert Walser, Pío Baroja, Giovanni Papini
 - 2028: Laura Ingalls Wilder, Gabriela Mistral, Dorothy L. Sayers, Nikos Kazantzakis, Curzio Malaparte, Sacha Guitry, Giuseppe Tomasi di Lampedusa, Peter Freuchen

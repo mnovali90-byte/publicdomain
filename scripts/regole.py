@@ -67,3 +67,20 @@ def decidi_morte(fv, citate):
     if citate:
         return "documentato", wd, None
     return "una_fonte", wd, None
+
+
+def morte_dal_registro(qid, morte, registro, anno_ue):
+    """Anno di morte che tutte le pagine devono usare: quello deciso nel registro (data/registro/autori.json).
+    Restituisce (anno, incerta): incerta 0 = fonti d'accordo; 1 = fonti discordi; 2 = fonti discordi proprio sul
+    confine della regola europea (una fonte dice entro anno_ue, un'altra dopo): l'opera va mostrata «da verificare».
+    Un autore che non è nel registro tiene il suo anno."""
+    v = (registro or {}).get(qid)
+    if not v or morte is None:
+        return morte, None
+    if v.get("e") != "discorde":
+        return v["m"], 0
+    # contano Wikidata e le fonti autorevoli, non le fonti deboli (Project Gutenberg, IMDb...)
+    cit = {k: y for k, y in (v.get("c") or {}).items() if AUTOREVOLI.get(k) or (AUTOREVOLI_RE.search(k) and not NON_AUTOREVOLI_RE.search(k))}
+    anni = [y for y in list((v.get("f") or {}).values()) + list(cit.values()) if isinstance(y, int)]
+    sul_confine = anni and min(anni) <= anno_ue < max(anni)
+    return v["m"], 2 if sul_confine else 1

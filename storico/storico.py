@@ -25,6 +25,7 @@ from datetime import date, datetime, timedelta, timezone
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "scripts"))
 from opere import CLASSI, GENERI, get, qid, sparql, val  # noqa: E402
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import applica_registro  # noqa: E402
 from per_autore import semi, opere_per_autore, opere_anonime, libera_ue, libera_usa, libera, info_autori, sparql_o_errore  # noqa: E402
 import duke  # noqa: E402  seconda fonte per gli USA (19/11/2026)
 
@@ -390,6 +391,11 @@ def main():
                 a["morte"] = max(x["morti"])
             a["morte_incerta"] = 1 if len(set(x["morti"])) > 1 else 0
             a["alleato"] = x["alleato"]
+    # 1d) REGISTRO UNICO (20/11/2026): l'anno di morte è quello deciso in data/registro/autori.json (due fonti
+    #     autorevoli contro Wikidata vincono). Vedi storico/applica_registro.py.
+    for o in tutte.values():
+        for a in o["autori"]:
+            applica_registro.applica(a)
     prima_controllo = len(tutte)
     tutte = {k: o for k, o in tutte.items() if libera(o)}
     print(f"controllo autori: {len(info)} letti su {len(da_controllare)}; opere uscite perché non più libere: {prima_controllo - len(tutte)}")

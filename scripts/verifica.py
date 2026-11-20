@@ -172,6 +172,10 @@ def morte_loc(codice):
 
 from regole import AUTOREVOLI, AUTOREVOLI_RE, NON_AUTOREVOLI_RE, maggioranza, decidi_morte  # noqa: E402,F401  (regole in un posto solo)
 CORRETTE = DATA / "morti_corrette.json"
+try:
+    REGISTRO = json.load(open(DATA / "registro" / "autori.json", encoding="utf-8")).get("autori", {})
+except Exception:
+    REGISTRO = {}
 
 
 def anno_atteso(f):
@@ -271,7 +275,18 @@ def main():
                 citate = (a.get("verifica") or {}).get("citate") or {}
             else:
                 citate = cit.get(q, {})
-            esito, deciso, fonti_d = decidi_morte(fv, citate)
+            r = REGISTRO.get(q)
+            if r and r.get("e") != "nazionale":
+                # REGISTRO UNICO (20/11/2026): la decisione è quella di data/registro/autori.json, presa con la stessa
+                # regola (scripts/regole.py). Qui si ricalcola solo per chi nel registro non c'è ancora.
+                fv, citate = dict(r["f"]), dict(r.get("c") or {})
+                esito, deciso, fonti_d = r["e"], r["m"], r.get("a")
+                lista = a.get("morte_wikidata") or anno(a.get("morte"))
+                if esito == "corretto" and deciso == lista:   # Wikidata ha più anni: le fonti confermano quello della lista
+                    esito = "maggioranza"
+                    fv["wikidata"] = lista
+            else:
+                esito, deciso, fonti_d = decidi_morte(fv, citate)
             magg = (deciso, fonti_d) if fonti_d else None
             a["verifica"] = {"esito": esito, "fonti": fv}
             if magg:

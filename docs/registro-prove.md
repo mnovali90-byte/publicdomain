@@ -538,3 +538,10 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - **Misura sullo Storico (in locale):** stato in Europa delle 82.545 opere con gli anni di morte del registro al posto di quelli di oggi, stesse regole dei coautori. **Opere che cambiano stato: 0.** Le 14 correzioni non attraversano mai il confine del 1955 (esempio: Carrasquilla 1936 → 1940, libero comunque).
 - **Rischio che resta:** 2 opere libere in Europa hanno un autore con fonti discordi proprio sul confine: Otto Nückel, «Destiny» (Wikidata e GND 1955, Library of Congress 1956) e Alice Alison Lide, «Ood-le-uk the Wanderer» (Wikidata 1955, Library of Congress 1956). Con una sola fonte autorevole contro, la regola non le cambia: andrebbero mostrate «da verificare».
 - **Giudizio:** gravi 0, medi 2. Lo Storico con solo Wikidata era già giusto per lo stato delle opere; il registro serve a non avere più date diverse da una pagina all'altra.
+
+## 20/11/2026 — Registro unico, parte 3: le pagine leggono dal registro
+- **Storico / Già pubblici:** storico/applica_registro.py porta nello Storico gli anni di morte del registro (anche dentro storico/storico.py, passo 1d, e come passo di gia-pubblici.yml). Regola: scripts/regole.py, morte_dal_registro(). Prova in locale: 37 autori cambiano (10 nell'anno, 27 solo come «fonti discordi»), nessuna opera cambia stato tranne 2 che passano a «da verificare» perché le fonti autorevoli discordano proprio sul confine del 1955 (Otto Nückel, Alice Alison Lide). Seconda passata: 0 cambi (il risultato non si sposta).
+- **Liste degli autori (home, schede, Public Domain Day):** scripts/verifica.py prende la decisione dal registro; ricalcola solo per chi nel registro non c'è ancora. Prova in locale: elenchi e esiti identici a prima (0 differenze).
+- **Calendario:** resta curato a mano. Il registro ora contiene anche le persone degli anniversari di morte; docs/da-decidere.md (sezione 5b) segnala un anniversario con un anno diverso da quello del registro.
+- **Aggiornamento:** il registro gira il 1° di ogni mese, prima dello Storico (il 2).
+- **Errori:** gravi 0; medi 0 (le 2 opere sul confine ora sono «da verificare»).

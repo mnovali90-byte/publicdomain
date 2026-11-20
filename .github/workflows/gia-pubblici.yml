@@ -12,6 +12,7 @@ on:
       - "storico/verifica_anni.py"
       - "storico/scaffali_lingua.py"
       - "storico/coautori.py"
+      - "storico/applica_registro.py"
       - ".github/workflows/gia-pubblici.yml"
   workflow_dispatch:
 
@@ -46,6 +47,8 @@ jobs:
       - name: Coautori (tipo degli autori senza data, membri dei gruppi, compositori e librettisti; storico/coautori.py)
         continue-on-error: true   # se Wikidata non risponde resta il file di prima
         run: python storico/coautori.py
+      - name: Anni di morte dal registro unico (storico/applica_registro.py)
+        run: python storico/applica_registro.py
       - name: Dati e pagine
         run: python storico/pagina.py
       - name: Schede autore (lo stato USA opera per opera dipende dagli anni verificati)

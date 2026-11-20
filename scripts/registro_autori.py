@@ -2,8 +2,8 @@
 Scrive data/registro/autori.json: per ogni autore l'anno di morte DECISO, con le fonti e l'esito. Da qui leggono tutte
 le parti del sito (liste, Storico, schede, Già pubblici, calendario), che non decidono più niente da sole.
 
-Quali autori: quelli delle liste (data/AAAA.json, data/es-AAAA.json) e quelli dello Storico morti tra il 1930 e l'anno
-in cui scade la regola europea (oggi 1955). Per chi è morto prima del 1930 un anno sbagliato non cambia niente: le opere
+Quali autori: quelli delle liste (data/AAAA.json, data/es-AAAA.json), quelli dello Storico morti tra il 1930 e l'anno
+in cui scade la regola europea (oggi 1955) e le persone degli anniversari di morte del calendario (data/anniversari-AAAA.json). Per chi è morto prima del 1930 un anno sbagliato non cambia niente: le opere
 sono libere comunque da decenni.
 
 Fonti, per ogni autore:
@@ -42,6 +42,11 @@ def autori_da_fare():
             for a in r[5]:
                 if a[2] is not None and DA <= a[2] <= ANNO_UE and re.fullmatch(r"Q\d+", a[0] or ""):
                     nomi.setdefault(a[0], a[1])
+    # le persone del calendario degli anniversari (morte): il calendario è curato a mano, ma le date vengono da qui
+    for f in glob.glob(str(R / "data" / "anniversari-[0-9][0-9][0-9][0-9].json")):
+        for v in json.load(open(f, encoding="utf-8")).get("voci", []):
+            if v.get("tipo") == "morte" and re.fullmatch(r"Q\d+", v.get("qid") or ""):
+                nomi.setdefault(v["qid"], v.get("nome"))
     return nomi
 
 

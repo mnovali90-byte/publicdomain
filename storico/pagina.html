@@ -216,6 +216,7 @@ it: {
   sDuke: "Anno preso dagli elenchi del Public Domain Day della Duke University, non da Wikidata: da verificare.",
   sUsPrima: "Conta la prima data di pubblicazione registrata su Wikidata: per le opere uscite prima a puntate o in rivista può essere diversa.",
   sInc: "Le fonti danno anni di morte diversi: si usa il più tardo, per prudenza.",
+  sConfine: "Da verificare: le fonti non concordano sull'anno di morte, e la differenza decide proprio se l'opera è già libera (per esempio Wikidata 1955, Library of Congress 1956).",
   sCoaut: "Da verificare: tra gli autori c'è anche {n}, di cui Wikidata non dà l'anno di morte. Per gli altri autori il tempo è già passato.",
   sconosciuto: "un autore sconosciuto",
   sMusica: "{r} di {n} ha diritti propri: in Europa è libero dal 1° gennaio {y}. Il testo no: vale la data qui sopra.",
@@ -282,6 +283,7 @@ en: {
   sDuke: "Year taken from Duke University's Public Domain Day lists, not from Wikidata: to be checked.",
   sUsPrima: "What counts is the first publication date recorded on Wikidata: for works first published in instalments or in a magazine it may differ.",
   sInc: "Sources give different years of death: the latest is used, to be safe.",
+  sConfine: "To be checked: the sources disagree on the year of death, and the difference decides whether the work is already free (for example Wikidata 1955, Library of Congress 1956).",
   sCoaut: "To be checked: the authors also include {n}, whose year of death Wikidata does not give. For the other authors the term has already run out.",
   sconosciuto: "an unknown author",
   sMusica: "{r} by {n} has its own rights: in Europe it is free from 1 January {y}. The text does not: the date above applies.",
@@ -337,7 +339,7 @@ const D = { verifiche: {}, anno: new Date().getFullYear(), opere: [], aut: new M
 // opera normalizzata: { q, t, ti, y, yd, au:[{q,n,m,an,inc,al}], v, g:[], l, pg }
 function daRiga(r) {   // riga dei file di ricerca: [qid, titolo, titolo_it, anno, pagine, autori, anno_duke]
   return pulisciAnno({ q: r[0], t: r[1], ti: r[2] || "", y: r[3] === null || r[3] === undefined ? null : r[3], pg: r[4] || 0, yd: r[6] || 0,
-    au: (r[5] || []).map((a) => ({ q: a[0], n: nomeA(a[1]), m: a[2], an: !!a[3], inc: !!a[4], al: !!a[5] })), v: 0, g: [], l: null });
+    au: (r[5] || []).map((a) => ({ q: a[0], n: nomeA(a[1]), m: a[2], an: !!a[3], inc: a[4] || 0, al: !!a[5] })), v: 0, g: [], l: null });
 }
 // coautori (regola del 20/11/2026, storico/coautori.py): gruppi ed enti senza membri noti non contano se ci sono autori
 // persone con la data di morte; un gruppo con membri vale per l'anno di morte più tardo dei membri; un coautore senza
@@ -405,6 +407,8 @@ function stato(o, c) {
   }
   if (fine > Y) return { s: "dal", y: fine, note };
   if (dubbio) return { s: "ver", note: note.concat(["sCoaut"]) };
+  // fonti in disaccordo proprio sul confine dei 70 anni (registro unico, 20/11/2026): non lo diamo per libero
+  if (c !== "es" && o.au.some((a) => a.inc === 2)) return { s: "ver", note: note.filter((k) => k !== "sInc").concat(["sConfine"]) };
   if (c === "uk") {   // regola del 2039 e opere postume (CDPA 1988, allegato 1, par. 12)
     const morti = o.au.filter((a) => !a.an).map((a) => a.m);
     if (morti.length) {
@@ -425,7 +429,7 @@ const _lib = new Map();
 function liberaUe(o) {   // libera in Europa per la regola dei 70 anni (stessa regola dello Storico)
   const Y = D.anno;
   if (o.y !== null && o.y <= Y - 171) return true;
-  return o.au.length > 0 && o.au.every((a) => a.an || (!a.sc && a.m !== null && a.m !== undefined && a.m <= Y - 71));
+  return o.au.length > 0 && o.au.every((a) => a.an || (!a.sc && a.inc !== 2 && a.m !== null && a.m !== undefined && a.m <= Y - 71));
 }
 const libera = (o, c) => { const k = o.q + c; if (!_lib.has(k)) _lib.set(k, stato(o, c).s === "si"); return _lib.get(k); };
 
@@ -476,6 +480,7 @@ addEventListener("keydown", (e) => { if (e.key === "Escape" && !$("#finestra").h
 
 function testoStato(o, c) {
   const st = stato(o, c);
+  if (st.s === "ver" && st.note.includes("sConfine")) return L.sConfine;
   if (st.s === "ver" && st.note.includes("sCoaut")) return tr("sCoaut", { n: o.au.filter((a) => a.sc).map((a) => /^https?:|^[0-9a-f]{32}$/.test(a.q) || a.n === (LING === "it" ? "Anonimo" : "Anonymous") ? L.sconosciuto : a.n).join(", ") });
   if (st.s === "ver") return c === "uk" ? L.sUkPostumo : c === "us" ? (st.note.includes("sUsNo") ? tr("sUsNo", { y: st.y2 }) : L.sUsNd) : L.sAlleato;
   if (st.s === "nd") return L.sNd;
@@ -486,7 +491,7 @@ function testoStato(o, c) {
 function apriOpera(o) {
   const righe = ["it", "fr", "de", "es", "uk", "us"].map((c) => {
     const st = stato(o, c);
-    const extra = st.note.filter((k) => k !== "sAlleato" && k !== "sCoaut" && k !== "sUsNo" && k !== "sUsNd" && !(st.s === "ver" && k === "sUkPostumo")).map((k) => h("span", { style: "display:block;margin-top:4px;font-size:13px;color:#5C5C66" }, L[k]));
+    const extra = st.note.filter((k) => k !== "sAlleato" && k !== "sCoaut" && k !== "sConfine" && k !== "sUsNo" && k !== "sUsNd" && !(st.s === "ver" && k === "sUkPostumo")).map((k) => h("span", { style: "display:block;margin-top:4px;font-size:13px;color:#5C5C66" }, L[k]));
     return h("li", {}, h("span", { class: "p" }, L.paesi[c], " ", badge(st)), h("span", {}, testoStato(o, c), extra));
   });
   const orig = LING === "it" && o.ti && o.t && o.ti !== o.t ? o.t : null;
@@ -600,7 +605,7 @@ async function cerca(q) {
   if (mio !== _cerca) return;
   const autori = new Map(), opere = new Map();
   for (const f of files) {
-    for (const r of f.autori) if (contiene(r[1], tok) && !autori.has(r[0])) autori.set(r[0], { a: { q: r[0], n: r[1], m: r[2], an: !!r[4], inc: !!r[5], al: !!r[6] }, n: r[3] });
+    for (const r of f.autori) if (contiene(r[1], tok) && !autori.has(r[0])) autori.set(r[0], { a: { q: r[0], n: r[1], m: r[2], an: !!r[4], inc: r[5] || 0, al: !!r[6] }, n: r[3] });
     for (const r of f.opere) if (!opere.has(r[0]) && (contiene(r[1], tok) || contiene(r[2], tok))) opere.set(r[0], arricchisci(daRiga(r)));
   }
   const qn = tok.join(" ");
@@ -782,7 +787,7 @@ async function avvia() {
   try { D.verifiche = await leggi("/data/storico/anni_verificati.json"); } catch (e) { D.verifiche = {}; }
   try { D.coaut = await leggi("/data/storico/coautori.json"); } catch (e) { D.coaut = {}; }
   try { D.coautMan = (await leggi("/data/coautori_manuali.json")).opere || {}; } catch (e) { D.coautMan = {}; } D.foto = P.foto || {}; D.prossimi = P.prossimi || [];
-  const au = P.autori.map((a) => ({ q: a[0], n: nomeA(a[1]), m: a[2], an: !!a[3], inc: !!a[4], al: !!a[5] }));
+  const au = P.autori.map((a) => ({ q: a[0], n: nomeA(a[1]), m: a[2], an: !!a[3], inc: a[4] || 0, al: !!a[5] }));
   D.opere = P.opere.map((r) => pulisciAnno({ q: r[0], t: r[1], ti: r[2], y: r[3], yd: r[4], au: r[5].map((i) => au[i]), v: r[6], g: r[7], l: r[8], pg: r[9], escl: !!r[10], vl: r[11] || [] }));
   // lingue di Wikipedia già misurate (le visite in francese, tedesco e spagnolo arrivano con il primo aggiornamento dopo il 19/11/2026)
   D.misurate = new Set(["it", "en", "fr", "de", "es"].filter((l, i) => D.opere.some((o) => o.vl[i] !== null && o.vl[i] !== undefined)));
