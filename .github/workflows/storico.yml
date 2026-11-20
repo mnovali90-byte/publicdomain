@@ -2,7 +2,7 @@ name: Aggiorna lo Storico (opere già libere)
 
 on:
   schedule:
-    - cron: "23 4 2 * *"   # una volta al mese, il 2 (decisione di Marco, 19/11/2026); non parte più da solo quando cambia lo script
+    - cron: "23 4 2 1 *"   # una volta l'anno, il 2 gennaio, dopo l'aggiornamento degli autori del 1° (decisione di Marco, 20/11/2026)
   workflow_dispatch:        # pulsante "Run workflow" per lanciarlo a mano
   push:                     # lancio a mano anche da qui: si cambia la data in storico/avvia.txt
     paths:
