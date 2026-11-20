@@ -33,11 +33,24 @@ def parole(t):
     return re.findall(r"[a-z0-9]+", t)
 
 
+_TIPI = None
+
+
 def libera_ue(r):
-    au = r[5]
+    """Libera in Europa: la stessa regola di tutto il sito (scripts/regole.py, autori_che_contano), niente copie."""
+    global _TIPI
     if r[3] is not None and r[3] <= Y - 171:
         return True
-    return bool(au) and all((a[2] is not None and a[2] <= Y - 71) or a[3] for a in au)
+    if _TIPI is None:
+        try:
+            _TIPI = json.loads((S / "coautori.json").read_text(encoding="utf-8")).get("autori", {})
+        except Exception:
+            _TIPI = {}
+    import sys as _s, os as _o
+    _s.path.insert(0, _o.path.join(_o.path.dirname(_o.path.abspath(__file__)), "..", "scripts"))
+    from regole import autori_che_contano
+    au = autori_che_contano([{"qid": a[0], "nome": a[1], "morte": a[2], "antico": bool(a[3])} for a in r[5]], _TIPI, Y)
+    return bool(au) and all(a.get("antico") or (a.get("morte") is not None and a["morte"] <= Y - 71) for a in au)
 
 
 def da_controllare():
@@ -142,6 +155,88 @@ def library_of_congress(r):
         return "nd", None
     a = min(anni)
     return ("ok" if a <= LIMITE else "no"), a
+
+
+# ---------- fonti forti e titolo originale (20/11/2026) ----------
+# Prima si cercava solo con il titolo inglese di Wikidata: «Essere e tempo» non si trovava perché nei cataloghi è
+# «Sein und Zeit». Ora, per le opere non ancora confermate: titolo originale (lingua dell'opera, P407) su Open Library e
+# Library of Congress, più le fonti delle liste (scripts/verifica_anni_usa.py): registro del copyright americano
+# (1923-1930), BnF per le opere francesi, K10plus per le tedesche, ISFDB per riviste e racconti (solo se l'anno
+# trovato è entro 3 anni da quello di Wikidata: i titoli brevi dei racconti possono coincidere per caso).
+LINGUE = {"Q150": "fr", "Q188": "de", "Q652": "it", "Q1321": "es", "Q5146": "pt", "Q7411": "nl", "Q9027": "sv",
+          "Q809": "pl", "Q9056": "cs", "Q9067": "hu", "Q9035": "da", "Q9043": "no", "Q1412": "fi", "Q7026": "ca",
+          "Q256": "tr", "Q7913": "ro", "Q9288": "he", "Q5287": "ja", "Q7737": "ru"}
+
+
+def titoli_originali(qids):
+    """{opera: (lingua, titolo nella lingua dell'opera)} da Wikidata (P407 e P1476, altrimenti l'etichetta)."""
+    out = {}
+    for i in range(0, len(qids), 50):
+        u = "https://www.wikidata.org/w/api.php?" + urllib.parse.urlencode(
+            {"action": "wbgetentities", "ids": "|".join(qids[i:i + 50]), "props": "claims|labels", "format": "json"})
+        for t in range(3):
+            try:
+                d = json.load(urllib.request.urlopen(urllib.request.Request(u, headers=UA), timeout=60))
+                break
+            except Exception:
+                time.sleep(5 * (t + 1))
+        else:
+            continue
+        for q, e in d.get("entities", {}).items():
+            cl = e.get("claims", {})
+            lingue = [c["mainsnak"].get("datavalue", {}).get("value", {}).get("id") for c in cl.get("P407", [])]
+            lg = next((LINGUE[l] for l in lingue if l in LINGUE), None)
+            if not lg:
+                continue
+            titolo = next((c["mainsnak"]["datavalue"]["value"]["text"] for c in cl.get("P1476", [])
+                           if c["mainsnak"].get("datavalue", {}).get("value", {}).get("language") == lg), None)
+            titolo = titolo or e.get("labels", {}).get(lg, {}).get("value")
+            if titolo:
+                out[q] = (lg, titolo)
+        time.sleep(1)
+    return out
+
+
+def fonti_forti(r, orig, idx, V):
+    """(anno confermato entro il limite, fonte, fonti provate) oppure (None, None, provate). V = scripts/verifica_anni_usa."""
+    provate, y = [], r[3]
+    cognomi = [parole(a[1])[-1] for a in r[5] if parole(a[1] or "")]
+    o = {"qid": r[0], "titolo": r[1] or "", "autori": [{"nome": a[1]} for a in r[5]]}
+    conf = []
+    c = V.cce(idx, o, cognomi)
+    provate.append("cce")
+    if c and c <= LIMITE:
+        conf.append((c, "cce"))
+    if r[0] in orig:
+        lg, t = orig[r[0]]
+        r2 = list(r); r2[1] = t
+        e, a = open_library(r2); provate.append("openlibrary:originale")
+        if e == "ok":
+            conf.append((a, "openlibrary"))
+        if not conf:
+            e, a = library_of_congress(r2); provate.append("loc:originale")
+            if e == "ok":
+                conf.append((a, "loc"))
+        if not conf and cognomi and lg in ("fr", "de"):
+            try:
+                a = V.bnf(t, cognomi[0])[0] if lg == "fr" else V.k10plus(t, cognomi[0], min(y + 3, LIMITE))[0]
+            except Exception:
+                a = None
+            provate.append("bnf" if lg == "fr" else "k10plus")
+            if a and a <= LIMITE:
+                conf.append((a, "bnf" if lg == "fr" else "k10plus"))
+    if not conf and cognomi:
+        try:
+            i_ = V.puntate_isfdb(o, cognomi, LIMITE)
+        except Exception:
+            i_ = None
+        provate.append("isfdb")
+        if i_ and i_[0] <= LIMITE and abs(i_[0] - y) <= 3:
+            conf.append((i_[0], "isfdb"))
+    if conf:
+        a, f = min(conf)
+        return a, f, provate
+    return None, None, provate
 
 
 def main():
