@@ -66,7 +66,8 @@ def main():
                     continue
                 em = p["imageinfo"][0].get("extmetadata", {})
                 lic = em.get("LicenseShortName", {}).get("value", "")
-                aut = re.sub(r"\s+", " ", re.sub("<[^>]+>", "", em.get("Artist", {}).get("value", ""))).strip()
+                aut = re.sub(r"\s+", " ", re.sub("<[^>]+>", " ", em.get("Artist", {}).get("value", ""))).strip()
+                aut = re.sub(r"(Unknown(?: [a-z]+)?)\1", r"\1", re.sub(r"^(.{4,}?)\s*\1(?=$|[\s(;,])", r"\1", aut))   # Commons ripete il nome due volte (visibile e nascosto): «Unknown authorUnknown author» (20/11/2026)
                 nome = t[5:].replace(" ", "_")
                 cache[qa] = {"d": oggi, "url": "https://commons.wikimedia.org/wiki/Special:FilePath/" + urllib.parse.quote(nome) + "?width=240",
                              "pagina": "https://commons.wikimedia.org/wiki/" + urllib.parse.quote(t.replace(" ", "_")),

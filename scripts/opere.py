@@ -170,7 +170,8 @@ def immagine_libera(nome):
     lic = (m.get("LicenseShortName", {}).get("value") or "").strip()
     if not LICENZE_OK.match(lic) or m.get("NonFree", {}).get("value", "").lower() == "true":
         return None
-    autore = re.sub(r"<[^>]+>", "", m.get("Artist", {}).get("value", "") or "").strip()
+    autore = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", m.get("Artist", {}).get("value", "") or "")).strip()
+    autore = re.sub(r"(Unknown(?: [a-z]+)?)\1", r"\1", re.sub(r"^(.{4,}?)\s*\1(?=$|[\s(;,])", r"\1", autore))   # Commons ripete il nome due volte (visibile e nascosto): «Unknown authorUnknown author» (20/11/2026)
     return {"file": nome, "url": p.get("thumburl") or p.get("url"),
             "pagina": "https://commons.wikimedia.org/wiki/File:" + urllib.parse.quote(nome.replace(" ", "_")),
             "licenza": lic, "autore": autore[:120]}

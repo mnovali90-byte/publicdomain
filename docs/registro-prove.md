@@ -463,3 +463,11 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - **Come:** scripts/scarica_font.py ha scaricato i file .woff2 (solo alfabeti latino e latino esteso) in assets/fonts/ e ha scritto assets/fonts/fonts.css. Licenza dei tre caratteri: SIL Open Font License. In 821 pagine e nei modelli (scripts/pagine.py, storico/pagina.html, index.html) il collegamento a Google è stato sostituito con /assets/fonts/fonts.css. Le copie salvate delle pagine Duke in docs/ non sono state toccate.
 - **Controllo:** home IT ed EN, Già pubblici, Public Domain Day 2027, calendario 2027 e una scheda autore aperti nel browser: tutti i caratteri caricati, zero richieste a Google, aspetto invariato.
 - **Limite:** i nomi in alfabeti non latini (cirillico, greco) usano il carattere di sistema. Prima Google li serviva per Big Shoulders e Instrument Sans.
+
+## 20/11/2026 — Credito delle foto: nome dell'autore ripetuto
+- **Difetto:** Wikimedia Commons scrive il nome due volte (visibile e nascosto), e noi li incollavamo: «Unknown authorUnknown author».
+- **Correzione:**
+  - alla lettura da Commons, in arricchisci.py, opere.py e storico/ritratti.py: si toglie la ripetizione all'inizio e il modello «Unknown…» ripetuto;
+  - nei dati: 4 file degli autori, 2 liste USA, cache_arricchimento (372 voci, altrimenti il giro successivo le rimetteva) e ritratti dello Storico;
+  - schede e Già pubblici rifatte in locale.
+- **Attenzione:** la prima regola, più larga, rovinava nomi veri («R. R. Bowker» diventava «R. Bowker», «The Theatre» diventava «Theatre»). È stata ristretta a ripetizioni di almeno 4 caratteri seguite da fine, spazio o punteggiatura. Controllato su questi casi.

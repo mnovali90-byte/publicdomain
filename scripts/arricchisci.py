@@ -126,7 +126,8 @@ def foto_commons(nome_file):
     licenza = meta.get("LicenseShortName", {}).get("value", "").strip()
     if not licenza:
         return None
-    autore = re.sub(r"<[^>]+>", "", meta.get("Artist", {}).get("value", ""))
+    autore = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", meta.get("Artist", {}).get("value", ""))).strip()
+    autore = re.sub(r"(Unknown(?: [a-z]+)?)\1", r"\1", re.sub(r"^(.{4,}?)\s*\1(?=$|[\s(;,])", r"\1", autore))   # Commons ripete il nome due volte (visibile e nascosto): «Unknown authorUnknown author» (20/11/2026)
     autore = re.sub(r"\s+", " ", autore).strip()[:120]
     nome = urllib.parse.quote(nome_file.replace(" ", "_"))
     return {
