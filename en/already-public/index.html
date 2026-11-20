@@ -205,7 +205,7 @@ it: {
   vediTutti: "Vedi tutti i {n} →", vediMeno: "Mostra meno", vediTutto: "Vedi tutto →",
   titoliLiberi: "{n} titoli liberi", titoli: "{n} titoli",
   generi: "Per genere", generiSub: "Solo le opere che su Wikidata hanno un genere.", genere: "Genere",
-  lingue: "Per lingua originale", lingueSub: "La lingua in cui l'opera è stata scritta, secondo Wikidata.", lingua: "Lingua",
+  lingue: "Per lingua originale", lingueSub: "La lingua in cui l'opera è stata scritta, secondo Wikidata.", lingueSubN: "La lingua in cui l'opera è stata scritta, secondo Wikidata. In ogni lingua, le opere più lette sulla Wikipedia di quella lingua negli ultimi 12 mesi.", lingua: "Lingua",
   ritratti: "Ritratti da Wikimedia Commons", ritrattiPd: "in pubblico dominio", ritrattiTranne: "tranne", fotoDi: "foto di",
   vuotoS: "Nessun titolo in questo scaffale.",
   chiudi: "Chiudi", stati: "Paese per paese", wikidata: "Scheda su Wikidata →", uscita: "uscita nel {y}", uscitaNd: "anno di uscita non noto",
@@ -264,7 +264,7 @@ en: {
   vediTutti: "See all {n} →", vediMeno: "Show less", vediTutto: "See all →",
   titoliLiberi: "{n} free titles", titoli: "{n} titles",
   generi: "By genre", generiSub: "Only works that have a genre on Wikidata.", genere: "Genre",
-  lingue: "By original language", lingueSub: "The language the work was written in, according to Wikidata.", lingua: "Language",
+  lingue: "By original language", lingueSub: "The language the work was written in, according to Wikidata.", lingueSubN: "The language the work was written in, according to Wikidata. In each language, the works most read on that language's Wikipedia over the last 12 months.", lingua: "Language",
   ritratti: "Portraits from Wikimedia Commons", ritrattiPd: "in the public domain", ritrattiTranne: "except", fotoDi: "photo by",
   vuotoS: "No titles on this shelf.",
   chiudi: "Close", stati: "Country by country", wikidata: "Wikidata entry →", uscita: "published in {y}", uscitaNd: "year of publication unknown",
@@ -641,7 +641,7 @@ function creditiRitratti(lista) {
 }
 function disegnaScaffali() {
   const p = D.paese, Y = D.anno, inP = L.inPaese[p];
-  const opere = D.opere.filter((o) => !o.escl);
+  const opere = D.opere.slice(0, D.nPrincipali).filter((o) => !o.escl);   // le opere degli scaffali per lingua (in coda) non entrano negli altri scaffali
   const liberi = opere.filter((o) => libera(o, p));
   const corpo = $("#scaffali-corpo");
   const s = [h("p", { class: "occ", style: "margin:0" }, tr("giaIn", { p: inP })), h("h2", { class: "h2" }, L.sfoglia), h("p", { class: "intro", html: tr("introS", { p: esc(inP) }) })];
@@ -680,11 +680,25 @@ function disegnaScaffali() {
     return quadro(L.genere, GENERI[g], lista.length, COLORI_TRAMA[c].map((x, j) => (j === 1 ? (c === 2 || c === 3 ? "#F7F7F4" : "#0C0C10") : x)), trama([g], g, c),
       () => griglia(GENERI[g], tr("titoli", { n: num(lista.length) }) + " · " + inP, primi(lista, 60)));
   })));
+  if (D.scaffaliLingua) {
+    // regola del 20/11/2026: archivio intero, ordine per visite alla Wikipedia della lingua (storico/scaffali_lingua.py)
+    const sl = Object.entries(D.scaffaliLingua).map(([k, x]) => {
+      const lista = x.o.map(([q]) => D.indice.get(q)).filter((o) => o && !o.escl && libera(o, p));
+      return [k, x, lista];
+    }).filter(([, , lista]) => lista.length >= 3).sort((a, b) => b[1].c - a[1].c);
+    s.push(scaffale(L.lingue, L.lingueSubN, sl.map(([k, x, lista], i) => {
+      const nome = (LING === "it" ? x.n[0] : x.n[1]) || k;
+      const Nome = nome.charAt(0).toUpperCase() + nome.slice(1);
+      return quadro(L.lingua, Nome, lista.length, PIATTI[i % PIATTI.length], null,
+        () => griglia(Nome, tr("titoli", { n: num(lista.length) }) + " · " + inP, lista.slice(0, 60)));   // già in ordine di visite
+    })));
+  } else {
   const ll = [...perL.entries()].filter(([, v]) => v.length >= 3).sort((a, b) => b[1].length - a[1].length);
   s.push(scaffale(L.lingue, L.lingueSub, ll.map(([k, lista], i) => {
     const nome = (D.lingue[k] && D.lingue[k][LING === "it" ? 1 : 0]) || k;
     return quadro(L.lingua, nome, lista.length, PIATTI[i % PIATTI.length], null, () => griglia(nome, tr("titoli", { n: num(lista.length) }) + " · " + inP, primi(lista, 60)));
   })));
+  }
   corpo.replaceChildren(...s);
 }
 
@@ -718,6 +732,8 @@ async function avvia() {
   // lingue di Wikipedia già misurate (le visite in francese, tedesco e spagnolo arrivano con il primo aggiornamento dopo il 19/11/2026)
   D.misurate = new Set(["it", "en", "fr", "de", "es"].filter((l, i) => D.opere.some((o) => o.vl[i] !== null && o.vl[i] !== undefined)));
   D.indice = new Map(D.opere.map((o) => [o.q, o]));
+  D.nPrincipali = P.n_principali || D.opere.length;
+  D.scaffaliLingua = P.scaffali_lingua || null;
   const [a, b] = P.settimana.map((d) => new Date(d + "T12:00:00"));
   D.sett = L.dateFmt(a, b);
   $("#conti").textContent = tr("conti", { o: num(P.n_opere), a: num(P.n_autori), s: D.sett });

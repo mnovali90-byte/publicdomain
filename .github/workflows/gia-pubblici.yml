@@ -10,6 +10,7 @@ on:
       - "storico/pagina.html"
       - "storico/ritratti.py"
       - "storico/verifica_anni.py"
+      - "storico/scaffali_lingua.py"
       - ".github/workflows/gia-pubblici.yml"
   workflow_dispatch:
 
@@ -24,7 +25,7 @@ concurrency:
 jobs:
   pagina:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 170
     steps:
       - uses: actions/checkout@v4
         with:
@@ -38,6 +39,9 @@ jobs:
       - name: "Anni delle opere libere solo negli USA, conferma da Duke, Open Library, Library of Congress (docs/metodo-anni-opere.md)"
         continue-on-error: true
         run: python storico/verifica_anni.py 40
+      - name: Scaffali per lingua (archivio intero, visite nella Wikipedia della lingua; storico/scaffali_lingua.py)
+        continue-on-error: true   # se Wikidata non risponde resta il file di prima
+        run: python storico/scaffali_lingua.py
       - name: Dati e pagine
         run: python storico/pagina.py
       - name: Schede autore (lo stato USA opera per opera dipende dagli anni verificati)

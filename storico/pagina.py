@@ -98,12 +98,36 @@ def dati():
             visti.add(a["wikidata"])
             prossimi.append({"w": a["wikidata"], "n": a["nome"], "m": int(m.group()), "p": a["pagina"], "pe": a.get("pagina_en")})
 
+    # scaffali per lingua (storico/scaffali_lingua.py): opere dall'archivio intero, ordinate per visite nella lingua
+    scaffali, extra = {}, []
+    SL = leggi(S / "scaffali_lingua.json", {}) or {}
+    gia = {o[0] for o in opere}
+    for l, x in (SL.get("lingue") or {}).items():
+        ids = []
+        for q, v in x.get("opere", []):
+            r = tutte.get(q)
+            if not r:
+                continue
+            if q not in gia:
+                ii = []
+                for a in r[5]:
+                    if a[0] not in idx:
+                        idx[a[0]] = len(autori)
+                        autori.append([a[0], a[1], a[2], a[3] if len(a) > 3 else 0, a[4] if len(a) > 4 else 0, a[5] if len(a) > 5 else 0])
+                    ii.append(idx[a[0]])
+                extra.append([q, r[1], r[2] or "", r[3], 0, ii, v, [], None, r[4] or 0, 1 if r[6] else 0, [v] * 5])
+                gia.add(q)
+            ids.append([q, v])
+        scaffali[l] = {"n": [x.get("nome_it"), x.get("nome_en")], "c": x.get("candidati", 0), "w": x.get("wiki"), "o": ids}
+    opere += extra
+
     rit = leggi(S / "ritratti.json", {}) or {}
     foto = {q: {"u": r["url"], "p": r["pagina"], "l": r.get("licenza", ""), "a": r.get("autore", "")}
             for q, r in rit.items() if r and r.get("url") and q in idx}
 
     pagina = {"aggiornato": O["aggiornato"], "settimana": O["settimana"], "n_opere": len(tutte), "n_autori": len(n_aut),
-              "autori": autori, "opere": opere, "lingue": lingue, "foto": foto, "prossimi": prossimi}
+              "autori": autori, "opere": opere, "lingue": lingue, "foto": foto, "prossimi": prossimi,
+              "scaffali_lingua": scaffali, "n_principali": len(opere) - len(extra)}
     (S / "pagina.json").write_text(json.dumps(pagina, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     return pagina
 
