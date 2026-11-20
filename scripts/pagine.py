@@ -487,6 +487,7 @@ def stato_usa(a, o):
     return "verifica", None
 
 
+from regole import autori_che_contano  # noqa: E402
 COAUT = _leggi(RADICE / "data" / "storico" / "coautori.json", {})
 COAUT_MAN = _leggi(RADICE / "data" / "coautori_manuali.json", {}).get("opere", {})
 
@@ -514,23 +515,12 @@ def note_coautori(a, lang):
         co = [list(c) for c in w.get("co", [])]
         for x in COAUT_MAN.get(wq, []):
             co.append([x.get("qid") or "", x["nome"], x.get("morte"), None])
-        tardi, ignoti = [], []
-        for c in co:
-            q, nome, m = c[0], c[1], c[2]
-            nasc = c[3] if len(c) > 3 else (tipi.get(q) or {}).get("n")
-            if nasc is not None and nasc > D:
-                continue          # nato dopo la morte dell'autore: ha curato, letto o presentato un'edizione
-            if m is None:
-                ti = tipi.get(q)
-                if ti and ti["t"] == "g":
-                    if ti.get("m") is not None:
-                        m = ti["m"]
-                    elif not ti.get("nd"):
-                        continue          # gruppo o ente senza membri: non conta
-            if m is None:
-                ignoti.append(nome or T("un autore sconosciuto", "an unknown author"))
-            elif m > D:
-                tardi.append((nome, m))
+        # regola dei coautori: la stessa di tutto il sito (scripts/regole.py, autori_che_contano)
+        au = [{"qid": a["wikidata"], "nome": a["nome"], "morte": D}] + [
+            {"qid": c[0] or "man:" + c[1], "nome": c[1], "morte": c[2], "nascita": c[3] if len(c) > 3 else None} for c in co]
+        dopo = [x for x in autori_che_contano(au, tipi, oggi_a) if x["qid"] != a["wikidata"]]
+        tardi = [(x["nome"], x["morte"]) for x in dopo if x.get("morte") is not None and not x.get("antico") and x["morte"] > D]
+        ignoti = [x["nome"] or T("un autore sconosciuto", "an unknown author") for x in dopo if x.get("senza_data")]
         tt = f"«{t}»"
         if tardi:
             nome, m = max(tardi, key=lambda x: x[1])

@@ -550,3 +550,8 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - **Problema:** il giro «Pagina Già pubblici» delle 16:10 ha impiegato 118 minuti negli scaffali (di solito 40-55) e 35 nei coautori (di solito 10). Nel dettaglio dei coautori: 17 risposte «troppe richieste» (429), 502 e tempo scaduto di Wikidata, dopo cinque giri in un giorno. Negli scaffali la causa non si poteva vedere: il programma riprovava senza scriverlo.
 - **Correzione:** gli scaffali non si rifanno se il file è già del mese in corso (le visite sono mensili); i coautori si rileggono solo se il file è di un mese prima, se era incompleto o se sono cambiati gli autori delle schede o le opere dell'archivio. FORZA=1 rifà comunque. Ogni «aspetta» o risposta mancata viene contata e scritta alla fine del giro.
 - **Prova in locale:** scaffali saltati («già aggiornati questo mese»). Il sito non cambia.
+
+## 20/11/2026 — Registro unico, parte 2a: coautori in un posto solo
+- **Prima:** la regola dei coautori era scritta tre volte: nella pagina Già pubblici (JavaScript), nello Storico (storico/per_autore.py) e nelle schede autore (scripts/pagine.py).
+- **Ora:** una sola regola, scripts/regole.py autori_che_contano(). Lo Storico e le schede la chiamano; per Già pubblici storico/registro_opere.py scrive le decisioni in data/registro/opere.json (968 opere: 550 gruppi con membri, 72 autori che non contano, 50 coautori senza data, 49 antichi, 251 con musica) e la pagina le applica soltanto.
+- **Prova:** stato in Europa di tutte le 82.545 opere con la regola vecchia e con la nuova: 0 differenze. Schede autore con note: 72 prima, 72 dopo; pagine delle schede rifatte identiche al bit. La funzione della pagina provata con node sui dati veri.

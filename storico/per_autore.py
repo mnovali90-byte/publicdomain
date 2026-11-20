@@ -223,38 +223,17 @@ _COAUT = None
 
 
 def autori_efficaci(au):
-    """Regola dei coautori (20/11/2026, storico/coautori.py, la stessa della pagina): gruppi ed enti senza membri noti
-    non contano se ci sono autori persone con la data di morte; un gruppo con membri vale per la morte più tardiva dei
-    membri. Restituisce (autori da contare, c'è un coautore senza data di morte accanto ad autori con la data)."""
+    """Regola dei coautori: la stessa di tutto il sito, in scripts/regole.py (autori_che_contano).
+    Restituisce (autori da contare, c'è un coautore senza data di morte accanto ad autori con la data)."""
     global _COAUT
     if _COAUT is None:
         try:
             _COAUT = json.load(open(f"{CARTELLA}/coautori.json", encoding="utf8")).get("autori", {})
         except Exception:
             _COAUT = {}
-    out = []
-    for a in au or []:
-        a = dict(a)
-        if a.get("morte") is None and not a.get("antico"):
-            t = _COAUT.get(a.get("qid"))
-            altri = [b["morte"] for b in au if b is not a and b.get("morte") is not None]
-            if t and t["t"] == "p" and t.get("n") is not None and altri and t["n"] > max(altri):
-                a["_ignora"] = True   # nato dopo la morte degli altri autori: ha curato un'edizione
-            elif t and t["t"] == "g":
-                if t.get("m") is not None:
-                    a["morte"] = t["m"]
-                elif not t.get("nd"):
-                    a["_ignora"] = True
-        out.append(a)
-    noto = lambda a: a.get("antico") or a.get("morte") is not None
-    if any(noto(a) and not a.get("_ignora") for a in out):
-        out = [a for a in out if not a.get("_ignora")]
-    dubbio = any(not noto(a) for a in out) and any(noto(a) for a in out)
-    # coautore senza data accanto ad autori tutti antichi o morti da più di 170 anni: antico anche lui (Marco, 20/11/2026)
-    if dubbio and all(a.get("antico") or a["morte"] <= ANNO_UE - 100 for a in out if noto(a)):
-        out = [dict(a, antico=True) if not noto(a) else a for a in out]
-        dubbio = False
-    return out, dubbio
+    from regole import autori_che_contano
+    out = autori_che_contano(au or [], _COAUT, ANNO_UE + 71)
+    return out, any(a.get("senza_data") for a in out)
 
 
 def ue_da_verificare(o):

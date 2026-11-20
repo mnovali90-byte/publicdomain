@@ -341,29 +341,22 @@ function daRiga(r) {   // riga dei file di ricerca: [qid, titolo, titolo_it, ann
   return pulisciAnno({ q: r[0], t: r[1], ti: r[2] || "", y: r[3] === null || r[3] === undefined ? null : r[3], pg: r[4] || 0, yd: r[6] || 0,
     au: (r[5] || []).map((a) => ({ q: a[0], n: nomeA(a[1]), m: a[2], an: !!a[3], inc: a[4] || 0, al: !!a[5] })), v: 0, g: [], l: null });
 }
-// coautori (regola del 20/11/2026, storico/coautori.py): gruppi ed enti senza membri noti non contano se ci sono autori
-// persone con la data di morte; un gruppo con membri vale per l'anno di morte più tardo dei membri; un coautore senza
-// data di morte (o «valore sconosciuto») accanto ad autori con la data rende l'opera «da verificare»
+// coautori: la decisione è nel REGISTRO UNICO (data/registro/opere.json, storico/registro_opere.py, regola in
+// scripts/regole.py autori_che_contano). Qui si applica soltanto, non si decide.
 function coautori(o) {
-  const C = D.coaut || {}, A = C.autori || {}, man = (D.coautMan || {})[o.q] || [];
+  const e = (D.regOpere || {})[o.q];
   let au = o.au.map((a) => ({ ...a }));
-  for (const x of man) if (!au.some((a) => a.q === x.qid)) au.push({ q: x.qid || "man:" + x.nome, n: x.nome, m: x.morte ?? null, an: false, inc: false, al: false, man: x });
-  const noto = (a) => a.an || (a.m !== null && a.m !== undefined);
-  for (const a of au) {
-    if (noto(a)) continue;
-    const t = A[a.q];
-    const altri = au.filter((b) => b !== a && b.m !== null && b.m !== undefined).map((b) => b.m);
-    if (t && t.t === "p" && t.n !== null && t.n !== undefined && altri.length && t.n > Math.max(...altri)) { a.ign = true; continue; }   // nato dopo la morte degli altri: curatore di un'edizione
-    if (t && t.t === "g") { if (t.m !== null && t.m !== undefined) { a.m = t.m; a.gr = true; } else if (t.nd) a.sc = true; else a.ign = true; }
-    else a.sc = true;   // persona senza data di morte, o «valore sconosciuto»
+  if (e) {
+    for (const x of e.add || []) if (!au.some((a) => a.q === x[0])) au.push({ q: x[0], n: x[1], m: x[2], an: false, inc: 0, al: false, man: { fonte: x[3], fonte_nome: x[4] } });
+    au = au.filter((a) => !(e.x || []).includes(a.q));
+    for (const a of au) {
+      if (e.m && e.m[a.q] !== undefined) { a.m = e.m[a.q]; a.gr = true; }
+      if ((e.sc || []).includes(a.q)) a.sc = true;
+      if ((e.an || []).includes(a.q)) a.an = true;
+    }
   }
-  if (au.some((a) => !a.ign && noto(a))) au = au.filter((a) => !a.ign);
-  else au.forEach((a) => { delete a.ign; });
-  if (!au.some((a) => noto(a))) au.forEach((a) => { delete a.sc; });   // nessun altro autore con la data: resta «non lo sappiamo»
-  // coautore senza data accanto ad autori tutti antichi o morti da più di 170 anni: è antico anche lui (deciso da Marco, 20/11/2026)
-  else if (au.some((a) => a.sc) && au.filter((a) => !a.sc).every((a) => a.an || a.m <= D.anno - 171)) au.forEach((a) => { if (a.sc) { delete a.sc; a.an = true; } });
   o.au = au;
-  o.mu = (C.musica || {})[o.q] || null;
+  o.mu = (e && e.mu) || null;
   return o;
 }
 function pulisciAnno(o) {
@@ -785,8 +778,7 @@ async function avvia() {
   D.anno = Number(String(P.aggiornato).slice(0, 4)) || D.anno;
   D.lingue = P.lingue || {};
   try { D.verifiche = await leggi("/data/storico/anni_verificati.json"); } catch (e) { D.verifiche = {}; }
-  try { D.coaut = await leggi("/data/storico/coautori.json"); } catch (e) { D.coaut = {}; }
-  try { D.coautMan = (await leggi("/data/coautori_manuali.json")).opere || {}; } catch (e) { D.coautMan = {}; } D.foto = P.foto || {}; D.prossimi = P.prossimi || [];
+  try { D.regOpere = (await leggi("/data/registro/opere.json")).coautori || {}; } catch (e) { D.regOpere = {}; } D.foto = P.foto || {}; D.prossimi = P.prossimi || [];
   const au = P.autori.map((a) => ({ q: a[0], n: nomeA(a[1]), m: a[2], an: !!a[3], inc: a[4] || 0, al: !!a[5] }));
   D.opere = P.opere.map((r) => pulisciAnno({ q: r[0], t: r[1], ti: r[2], y: r[3], yd: r[4], au: r[5].map((i) => au[i]), v: r[6], g: r[7], l: r[8], pg: r[9], escl: !!r[10], vl: r[11] || [] }));
   // lingue di Wikipedia già misurate (le visite in francese, tedesco e spagnolo arrivano con il primo aggiornamento dopo il 19/11/2026)
