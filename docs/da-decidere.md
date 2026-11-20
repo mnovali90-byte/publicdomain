@@ -2,7 +2,7 @@
 
 Scritto da `scripts/da_decidere.py`. Qui ci sono solo i casi in cui i dati non bastano. Il resto è già sul sito.
 
-**Casi da decidere: 61.**
+**Casi da decidere: 62.**
 
 ## 0. Aggiornamento non finito
 - **L'aggiornamento non ha finito in questo giro.** Non riparte da solo (decisione del 19/11/2026): i dati mancanti arrivano al prossimo giro previsto, oppure si lancia a mano.
@@ -11,9 +11,10 @@ Scritto da `scripts/da_decidere.py`. Qui ci sono solo i casi in cui i dati non b
 - Nessuna.
 
 ## 2. Libri USA che risultano usciti prima dell'anno della lista
-- Lista 2027: **The Decision**: k10plus dà il 1930. Se è vero, il libro è già libero e va tolto dalla lista.
 - Lista 2027: **Charlie Chan Carries On**: cce dà il 1930. Se è vero, il libro è già libero e va tolto dalla lista.
 - Lista 2027: **Le Bal**: cce dà il 1930. Se è vero, il libro è già libero e va tolto dalla lista.
+- Lista 2027: **The Threepenny Opera**: duke dà il 1928. Se è vero, il libro è già libero e va tolto dalla lista.
+- Lista 2027: **The Decision**: k10plus dà il 1930. Se è vero, il libro è già libero e va tolto dalla lista.
 - Lista 2028: **The Man Without Qualities**: k10plus dà il 1930. Se è vero, il libro è già libero e va tolto dalla lista.
 - Lista 2028: **Saint Joan of the Stockyards**: k10plus dà il 1930. Se è vero, il libro è già libero e va tolto dalla lista.
 - Lista 2028: **The Lagoon**: isfdb dà il 1897. Se è vero, il libro è già libero e va tolto dalla lista.

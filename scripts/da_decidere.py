@@ -61,8 +61,14 @@ def main():
     # 2. libri usciti prima
     righe.append("## 2. Libri USA che risultano usciti prima dell'anno della lista")
     trovati = False
+    # dai dati veri (data/us-anni-verificati.json), non dal riepilogo dell'ultimo giro: così vale anche una
+    # correzione fatta dopo il giro (20/11/2026)
+    ver = leggi(D / "us-anni-verificati.json", {})
+    def voci(a, esito):
+        titoli = {o["qid"]: o.get("titolo") for o in leggi(D / f"us-{a}.json", {}).get("opere", [])}
+        return [(titoli.get(q, q), v[1], v[2]) for q, v in (ver.get(str(a)) or {}).items() if v[0] == esito]
     for a in anni:
-        for titolo, anno_f, fonte in (us.get(str(a)) or {}).get("piu_vecchi", []):
+        for titolo, anno_f, fonte in voci(a, "prima"):
             righe.append(f"- Lista {a}: **{titolo}**: {fonte} dà il {anno_f}. Se è vero, il libro è già libero e va tolto dalla lista.")
             trovati = True
             n += 1
@@ -74,7 +80,7 @@ def main():
     righe.append("## 2b. Libri USA usciti a puntate fino a un anno dopo")
     trovati = False
     for a in anni:
-        for titolo, ultima, fonte in (us.get(str(a)) or {}).get("parziali", []):
+        for titolo, ultima, fonte in voci(a, "parziale"):
             righe.append(f"- Lista {a}: **{titolo}**: a puntate fino al {ultima} ({fonte}). Per intero è libero solo dal {ultima + 96}.")
             trovati = True
             n += 1

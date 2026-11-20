@@ -274,10 +274,15 @@ def decidi(trovati, p, puntate=None):
     """Esito per la lista dell'anno p. puntate = (prima, ultima, fonte) dalle riviste, se note."""
     giusti = [f for f, a in trovati.items() if a == p]
     ordine = ("duke", "cce", "bnf", "k10plus", "isfdb", "wikipedia", "openlibrary", "loc")
+    # edizione uscita prima dell'anno della lista secondo una fonte autorevole (Duke, registro del copyright, BnF,
+    # K10plus, ISFDB). Vale più del testo di Wikipedia: prima (fino al 20/11/2026) un «a puntate» letto su Wikipedia
+    # dava «non confermato» anche con Duke e K10plus d'accordo (L'opera da tre soldi: 1928).
+    prima_aut = sorted((a, f) for f, a in trovati.items() if a is not None and a < p and f in AUTOREVOLI)
+    nd_o_prima = lambda a, f: ("prima", *prima_aut[0]) if prima_aut else ("nd", a, f)
     if puntate and puntate[1] is None:
         puntate = None if puntate[0] >= p else puntate   # fine ignota: serve solo se la prima uscita è prima di p
         if puntate:
-            return ("ok", p, min(giusti, key=ordine.index)) if giusti else ("nd", puntate[0], puntate[2])
+            return ("ok", p, min(giusti, key=ordine.index)) if giusti else nd_o_prima(puntate[0], puntate[2])
     if puntate:
         a, b, fp = puntate
         if a <= p < b:
@@ -287,7 +292,7 @@ def decidi(trovati, p, puntate=None):
         if b < p and not giusti and fp != "wikipedia":
             return "prima", a, fp              # tutte le uscite prima dell'anno (ISFDB), e nessuna fonte conferma p
         if b < p and not giusti:
-            return "nd", a, fp                 # Wikipedia da sola non basta per dire «uscito prima» (20/11/2026)
+            return nd_o_prima(a, fp)           # Wikipedia da sola non basta per dire «uscito prima» (20/11/2026)
     if giusti:
         return "ok", p, min(giusti, key=ordine.index)
     prima = [(a, f) for f, a in trovati.items() if a is not None and a < p and f in AUTOREVOLI]
