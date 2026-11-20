@@ -1,27 +1,44 @@
 {
  "2027": {
-  "libri": 154,
-  "controllati": 154,
+  "libri": 169,
+  "controllati": 169,
   "esiti": {
-   "ok": 78,
-   "nd": 74,
-   "prima": 2
+   "nd": 54,
+   "ok": 111,
+   "prima": 3,
+   "parziale": 1
   },
   "confermati_per_fonte": {
-   "cce": 38,
-   "openlibrary": 15,
+   "cce": 48,
+   "wikipedia": 18,
+   "openlibrary": 9,
    "bnf": 15,
    "k10plus": 8,
-   "loc": 2
+   "isfdb": 12,
+   "loc": 1
   },
   "conferme_per_fonte_anche_doppie": {
-   "cce": 38,
-   "openlibrary": 15,
+   "cce": 48,
+   "wikipedia": 33,
+   "openlibrary": 10,
    "bnf": 15,
    "k10plus": 8,
-   "loc": 2
+   "isfdb": 13,
+   "loc": 1
   },
+  "parziali": [
+   [
+    "Tarzan Triumphant",
+    1932,
+    "wikipedia"
+   ]
+  ],
   "piu_vecchi": [
+   [
+    "The Decision",
+    1930,
+    "k10plus"
+   ],
    [
     "Charlie Chan Carries On",
     1930,
@@ -35,11 +52,29 @@
   ],
   "non_confermati": [
    [
-    "The Whisperer in Darkness",
+    "The Threepenny Opera",
+    "Die Dreigroschenoper",
+    {
+     "duke": 1928,
+     "k10plus": 1928,
+     "wikipedia": 1929,
+     "openlibrary": 1949,
+     "loc": 1954
+    }
+   ],
+   [
+    "Why I am an Atheist",
     null,
     {
-     "openlibrary": 2016,
-     "loc": 2020
+     "openlibrary": 2008,
+     "loc": 2008
+    }
+   ],
+   [
+    "Tintin in the Congo",
+    "Tintin au Congo",
+    {
+     "bnf": 1970
     }
    ],
    [
@@ -69,36 +104,18 @@
     "Quicksand",
     null,
     {
+     "wikipedia": 1928,
      "loc": 1994
-    }
-   ],
-   [
-    "The Zürau Aphorisms",
-    "Die Zürauer Aphorismen",
-    {
-     "openlibrary": 2006,
-     "loc": 2006
-    }
-   ],
-   [
-    "The Black Stone",
-    null,
-    {
-     "loc": 2022
     }
    ],
    [
     "Investigations of a Dog",
     "Investigations of a dog",
     {
+     "isfdb": 1933,
      "openlibrary": 2016,
      "loc": 2017
     }
-   ],
-   [
-    "The Strange High House in the Mist",
-    null,
-    {}
    ],
    [
     "That Evening Sun",
@@ -118,12 +135,7 @@
     {}
    ],
    [
-    "A Little Fable",
-    "Kleine Fabel",
-    {}
-   ],
-   [
-    "The Children of the Night",
+    "The Spike",
     null,
     {}
    ],
@@ -142,33 +154,15 @@
    [
     "The Hunter Gracchus",
     "Der Jäger Gracchus",
-    {}
-   ],
-   [
-    "Coup d'État: The Technique of Revolution",
-    "La Technique du coup d'État",
     {
-     "openlibrary": 1932,
-     "loc": 1932
-    }
-   ],
-   [
-    "The Tale of Satampra Zeiros",
-    null,
-    {
-     "openlibrary": 2006
+     "isfdb": 1933
     }
    ],
    [
     "The Silence of the Sirens",
     "Das Schweigen der Sirenen",
-    {}
-   ],
-   [
-    "The Return of the Sorcerer",
-    null,
     {
-     "openlibrary": 2007
+     "isfdb": 1933
     }
    ],
    [
@@ -185,43 +179,27 @@
     {}
    ],
    [
-    "Markéta Lazarová",
-    null,
-    {
-     "openlibrary": 1946,
-     "loc": 1957
-    }
-   ],
-   [
     "The 35th of May, or Conrad's Ride to the South Seas",
     "Der 35. Mai oder Konrad reitet in die Südsee",
     {
+     "cce": 1933,
+     "wikipedia": 1932,
      "openlibrary": 1933,
      "loc": 1933
     }
    ],
    [
-    "The Village Schoolmaster",
-    "Der Dorfschullehrer",
-    {}
-   ],
-   [
     "The Truth about Sancho Panza",
     "Die Wahrheit über Sancho Pansa",
-    {}
-   ],
-   [
-    "Maigret and the Yellow Dog",
-    "Le Chien jaune",
     {
-     "bnf": 1976,
-     "loc": 1987
+     "isfdb": 1933
     }
    ],
    [
     "The Bridal Canopy",
     null,
     {
+     "wikipedia": 1937,
      "openlibrary": 1937,
      "loc": 1937
     }
@@ -237,7 +215,9 @@
    [
     "My Neighbor",
     "Der Nachbar",
-    {}
+    {
+     "isfdb": 1933
+    }
    ],
    [
     "Machine",
@@ -245,10 +225,10 @@
     {}
    ],
    [
-    "Terra Incognita",
+    "Mathews' Chinese-English Dictionary",
     null,
     {
-     "openlibrary": 1990
+     "loc": 1943
     }
    ],
    [
@@ -262,19 +242,7 @@
     {}
    ],
    [
-    "What Bird is That?",
-    null,
-    {
-     "openlibrary": 1937
-    }
-   ],
-   [
     "A Hundred Authors Against Einstein",
-    null,
-    {}
-   ],
-   [
-    "Bird's Shadow",
     null,
     {}
    ],
@@ -284,12 +252,7 @@
     {}
    ],
    [
-    "The Go-getter",
-    null,
-    {}
-   ],
-   [
-    "Strychnine in the Soup",
+    "Bird's Shadow",
     null,
     {}
    ],
@@ -297,14 +260,6 @@
     "Laura a la ciutat dels sants",
     null,
     {}
-   ],
-   [
-    "The Sailors' Rendezvous",
-    "Au rendez-vous des Terre-Neuvas",
-    {
-     "bnf": 1954,
-     "loc": 1970
-    }
    ],
    [
     "Mort de dama",
@@ -323,23 +278,11 @@
     }
    ],
    [
-    "Blow the Chinks Down!",
-    null,
-    {
-     "openlibrary": 2014
-    }
-   ],
-   [
-    "Alleys of Peril",
-    null,
-    {
-     "openlibrary": 2014
-    }
-   ],
-   [
     "The Wanderers",
     null,
-    {}
+    {
+     "wikipedia": 1930
+    }
    ],
    [
     "Madah Kelana",
@@ -347,35 +290,6 @@
     {
      "openlibrary": 1978,
      "loc": 1978
-    }
-   ],
-   [
-    "Breed of Battle",
-    null,
-    {}
-   ],
-   [
-    "Circus Fists",
-    null,
-    {
-     "openlibrary": 2020
-    }
-   ],
-   [
-    "The TNT Punch",
-    null,
-    {}
-   ],
-   [
-    "The Sign of the Snake",
-    null,
-    {}
-   ],
-   [
-    "Texas Fists",
-    null,
-    {
-     "openlibrary": 2014
     }
    ],
    [
@@ -392,6 +306,7 @@
     "Black Monastery",
     null,
     {
+     "cce": 1934,
      "openlibrary": 1934,
      "loc": 1934
     }
@@ -400,16 +315,6 @@
     "Do swego Boga",
     null,
     {}
-   ],
-   [
-    "The Story of Babar",
-    "L'Histoire de Babar, le petit Elephant",
-    {
-     "cce": 1933,
-     "bnf": 2003,
-     "openlibrary": 1933,
-     "loc": 1933
-    }
    ],
    [
     "Muži v offsidu",
@@ -435,6 +340,7 @@
     "Los placeres prohibidos",
     null,
     {
+     "openlibrary": 2002,
      "loc": 2002
     }
    ],
@@ -453,11 +359,6 @@
    ],
    [
     "Truth and Justice III",
-    null,
-    {}
-   ],
-   [
-    "The City of Singing Flame",
     null,
     {}
    ],
@@ -500,40 +401,55 @@
     "Rasabharanamu",
     null,
     {}
+   ],
+   [
+    "The Course of Wisdom in Europe",
+    null,
+    {}
    ]
   ]
  },
  "2028": {
-  "libri": 159,
-  "controllati": 159,
+  "libri": 175,
+  "controllati": 175,
   "esiti": {
-   "ok": 76,
-   "prima": 4,
-   "nd": 79
+   "ok": 109,
+   "prima": 5,
+   "nd": 59,
+   "parziale": 2
   },
   "confermati_per_fonte": {
-   "cce": 48,
-   "bnf": 11,
-   "openlibrary": 9,
-   "k10plus": 6,
-   "loc": 2
+   "cce": 52,
+   "bnf": 13,
+   "openlibrary": 10,
+   "k10plus": 7,
+   "isfdb": 11,
+   "wikipedia": 16
   },
   "conferme_per_fonte_anche_doppie": {
-   "cce": 48,
-   "bnf": 11,
-   "openlibrary": 9,
-   "k10plus": 6,
-   "loc": 2
+   "cce": 53,
+   "isfdb": 12,
+   "bnf": 13,
+   "wikipedia": 39,
+   "openlibrary": 10,
+   "k10plus": 7
   },
+  "parziali": [
+   [
+    "Cat Country",
+    1933,
+    "wikipedia"
+   ],
+   [
+    "Dwellers in the Mirage",
+    1941,
+    "isfdb"
+   ]
+  ],
   "piu_vecchi": [
    [
     "The Man Without Qualities",
     1930,
-    "k10plus"
-   ],
-   [
-    "Journey to the East",
-    1931,
     "k10plus"
    ],
    [
@@ -542,9 +458,19 @@
     "k10plus"
    ],
    [
-    "The Solitude of Compassion",
-    1930,
-    "bnf"
+    "The Lagoon",
+    1897,
+    "isfdb"
+   ],
+   [
+    "The Idiots",
+    1896,
+    "isfdb"
+   ],
+   [
+    "The Return",
+    1898,
+    "isfdb"
    ]
   ],
   "non_confermati": [
@@ -557,9 +483,13 @@
     }
    ],
    [
-    "The Phoenix on the Sword",
-    null,
-    {}
+    "Economic and Philosophic Manuscripts of 1844",
+    "Ökonomisch-philosophischen Manuskripte aus dem Jahre 1844",
+    {
+     "wikipedia": 1933,
+     "openlibrary": 2012,
+     "loc": 1959
+    }
    ],
    [
     "Design for Living",
@@ -572,7 +502,9 @@
    [
     "Tripura Rahasya",
     null,
-    {}
+    {
+     "wikipedia": 1938
+    }
    ],
    [
     "Sunset Song",
@@ -604,44 +536,19 @@
     }
    ],
    [
+    "The Dawn-Breakers",
+    null,
+    {}
+   ],
+   [
     "Legend of the Swordsmen of the Mountains of Shu",
     null,
     {}
    ],
    [
-    "The Empire of the Necromancers",
+    "Before the Fact",
     null,
     {}
-   ],
-   [
-    "The Lagoon",
-    null,
-    {
-     "openlibrary": 1990,
-     "loc": 1896
-    }
-   ],
-   [
-    "The Black Girl in Search of God",
-    null,
-    {
-     "openlibrary": 1934
-    }
-   ],
-   [
-    "Cat Country",
-    null,
-    {
-     "openlibrary": 1970,
-     "loc": 1970
-    }
-   ],
-   [
-    "Worms of the Earth",
-    null,
-    {
-     "openlibrary": 1975
-    }
    ],
    [
     "Javid Nama",
@@ -655,14 +562,10 @@
     "Pirates of Venus",
     null,
     {
+     "cce": 1934,
      "openlibrary": 1934,
      "loc": 1934
     }
-   ],
-   [
-    "Angarey",
-    null,
-    {}
    ],
    [
     "The Stalin School of Falsification",
@@ -678,15 +581,17 @@
     {}
    ],
    [
-    "Hitler Youth Quex",
-    "Hitlerjunge Quex",
-    {}
-   ],
-   [
     "Glory",
     null,
     {
      "loc": 1971
+    }
+   ],
+   [
+    "An Essay on the Nature and Significance of Economic Science",
+    null,
+    {
+     "loc": 1984
     }
    ],
    [
@@ -702,14 +607,6 @@
     "Three Drops of Blood",
     null,
     {}
-   ],
-   [
-    "The Idiots",
-    null,
-    {
-     "openlibrary": 1896,
-     "loc": 1896
-    }
    ],
    [
     "Time, Forward!",
@@ -737,44 +634,7 @@
     }
    ],
    [
-    "The Sowers of the Thunder",
-    null,
-    {
-     "openlibrary": 1973,
-     "loc": 1973
-    }
-   ],
-   [
-    "The Return",
-    null,
-    {
-     "openlibrary": 2004
-    }
-   ],
-   [
-    "The Waxworks Murder",
-    null,
-    {}
-   ],
-   [
-    "The Testament of Athammaus",
-    null,
-    {}
-   ],
-   [
-    "The Queer Story of Brownlow's Newspaper",
-    null,
-    {
-     "openlibrary": 2016
-    }
-   ],
-   [
     "Phu Chana Sip Thit",
-    null,
-    {}
-   ],
-   [
-    "Mountain Victory",
     null,
     {}
    ],
@@ -786,6 +646,13 @@
     }
    ],
    [
+    "The Night Club",
+    "L'Âne rouge",
+    {
+     "bnf": 1933
+    }
+   ],
+   [
     "Celia en el colegio",
     null,
     {
@@ -794,28 +661,11 @@
     }
    ],
    [
-    "Music",
-    null,
-    {}
-   ],
-   [
-    "The Night Club",
-    "L'Âne rouge",
-    {
-     "bnf": 1933
-    }
-   ],
-   [
     "Dian yang Tak Kunjung Padam",
     null,
     {
      "loc": 1977
     }
-   ],
-   [
-    "Distant Lands",
-    null,
-    {}
    ],
    [
     "Winged Girl of Knossos",
@@ -833,17 +683,7 @@
     }
    ],
    [
-    "Orache",
-    null,
-    {}
-   ],
-   [
     "Alicia Deane",
-    null,
-    {}
-   ],
-   [
-    "Pertemuan Jodoh",
     null,
     {}
    ],
@@ -872,6 +712,7 @@
     "Dark Shanghai",
     null,
     {
+     "wikipedia": 1931,
      "openlibrary": 2014
     }
    ],
@@ -879,6 +720,7 @@
     "Night of Battle",
     null,
     {
+     "wikipedia": 1931,
      "openlibrary": 2020
     }
    ],
@@ -886,15 +728,8 @@
     "Vikings of the Gloves",
     null,
     {
+     "wikipedia": 1931,
      "openlibrary": 2014
-    }
-   ],
-   [
-    "Soomustüdruk",
-    null,
-    {
-     "openlibrary": 1957,
-     "loc": 1957
     }
    ],
    [
@@ -923,11 +758,6 @@
     {}
    ],
    [
-    "Rangun Raudi",
-    null,
-    {}
-   ],
-   [
     "Adhunika Rajyanga Samsthalu",
     null,
     {}
@@ -948,6 +778,13 @@
     {}
    ],
    [
+    "Flora Hawaiiensis; the New Illustrated Flora of the Hawaiian Islands",
+    null,
+    {
+     "loc": 1946
+    }
+   ],
+   [
     "Orașele scufundate",
     null,
     {
@@ -959,13 +796,6 @@
     "Blind Beast",
     null,
     {}
-   ],
-   [
-    "Wings in the Night",
-    null,
-    {
-     "openlibrary": 2005
-    }
    ],
    [
     "Tsushima",
@@ -1008,31 +838,7 @@
     {}
    ],
    [
-    "The Trap",
-    null,
-    {
-     "openlibrary": 2016
-    }
-   ],
-   [
-    "The Vaults of Yoh-Vombis",
-    null,
-    {}
-   ],
-   [
-    "The Thing on the Roof",
-    null,
-    {
-     "openlibrary": 2018
-    }
-   ],
-   [
     "The Broken Mirror",
-    null,
-    {}
-   ],
-   [
-    "The Man of Stone",
     null,
     {}
    ],
@@ -1040,13 +846,28 @@
     "Supplementary Collected Stele Biographies",
     null,
     {}
+   ],
+   [
+    "La Forêt des aventures",
+    null,
+    {}
    ]
   ]
  },
  "biblioteche_nazionali": {
-  "bnf | risposte | anno trovato": 31,
-  "k10plus | risposte | anno trovato": 17,
-  "k10plus | nessun record | -": 10,
+  "k10plus | risposte | anno trovato": 20,
+  "bnf | risposte | anno trovato": 34,
+  "k10plus | nessun record | -": 11,
   "bnf | nessun record | -": 2
+ },
+ "fonti_non_raggiunte": {},
+ "registro_volumi": {
+  "1928": "1928/1928_v25.xml",
+  "1929": "1929/1929_v26.xml",
+  "1930": "1930/cc271libr_001-2321.xml",
+  "1931": "1931/1931_v28.xml",
+  "1932": "1932/1932_v29.xml",
+  "1933": "1933/1933_v30.xml",
+  "1934": "1934/1934_v31.xml"
  }
 }

@@ -1,7 +1,7 @@
 {
  "anno": 2028,
  "anno_pubblicazione": 1932,
- "aggiornato": "2026-11-19",
+ "aggiornato": "2026-11-20",
  "fonte": "Wikidata (CC0), Wikipedia, Wikimedia Commons",
  "opere": [
   {
@@ -23,7 +23,7 @@
    "generi": [
     "fantasy_sf"
    ],
-   "visite_en": 932543,
+   "visite_en": 932716,
    "copertina": {
     "file": "Giveaway von Pinguin Books für Brave New World (cropped).jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Giveaway_von_Pinguin_Books_f%C3%BCr_Brave_New_World_%28cropped%29.jpg/500px-Giveaway_von_Pinguin_Books_f%C3%BCr_Brave_New_World_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -51,7 +51,7 @@
    "generi": [
     "ragazzi"
    ],
-   "visite_en": 109105
+   "visite_en": 109094
   },
   {
    "qid": "Q774233",
@@ -72,7 +72,7 @@
    "generi": [
     "memorie"
    ],
-   "visite_en": 84889,
+   "visite_en": 84901,
    "copertina": {
     "file": "Journey to the End of the Night 1932.jpg",
     "url": "https://upload.wikimedia.org/wikipedia/commons/5/59/Journey_to_the_End_of_the_Night_1932.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -100,7 +100,7 @@
    "generi": [
     "storico"
    ],
-   "visite_en": 78757,
+   "visite_en": 78729,
    "copertina": {
     "file": "Robert Musil - Der Mann ohne Eigenschaften, 1930.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Robert_Musil_-_Der_Mann_ohne_Eigenschaften%2C_1930.jpg/500px-Robert_Musil_-_Der_Mann_ohne_Eigenschaften%2C_1930.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -128,7 +128,7 @@
    "generi": [
     "horror"
    ],
-   "visite_en": 60611,
+   "visite_en": 60534,
    "copertina": {
     "file": "Light in August (1932 dust jacket cover).jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Light_in_August_%281932_dust_jacket_cover%29.jpg/500px-Light_in_August_%281932_dust_jacket_cover%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -156,7 +156,7 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 56307
+   "visite_en": 56281
   },
   {
    "qid": "Q5142221",
@@ -177,7 +177,33 @@
    "generi": [
     "satira"
    ],
-   "visite_en": 47237
+   "visite_en": 47240
+  },
+  {
+   "qid": "Q470600",
+   "titolo": "The German Ideology",
+   "titolo_it": "L'ideologia tedesca",
+   "autori": [
+    {
+     "qid": "Q9061",
+     "nome": "Karl Marx"
+    },
+    {
+     "qid": "Q34787",
+     "nome": "Friedrich Engels"
+    }
+   ],
+   "pagine": 33,
+   "wiki_en": "https://en.wikipedia.org/wiki/The_German_Ideology",
+   "generi": [],
+   "visite_en": 46607,
+   "copertina": {
+    "file": "Немецкая идеология (первая страница рукописи).png",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/1/15/%D0%9D%D0%B5%D0%BC%D0%B5%D1%86%D0%BA%D0%B0%D1%8F_%D0%B8%D0%B4%D0%B5%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F_%28%D0%BF%D0%B5%D1%80%D0%B2%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0_%D1%80%D1%83%D0%BA%D0%BE%D0%BF%D0%B8%D1%81%D0%B8%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "pagina": "https://commons.wikimedia.org/wiki/File:%D0%9D%D0%B5%D0%BC%D0%B5%D1%86%D0%BA%D0%B0%D1%8F_%D0%B8%D0%B4%D0%B5%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F_%28%D0%BF%D0%B5%D1%80%D0%B2%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0_%D1%80%D1%83%D0%BA%D0%BE%D0%BF%D0%B8%D1%81%D0%B8%29.png",
+    "licenza": "Public domain",
+    "autore": "Karl Marx / Friedrich Engels"
+   }
   },
   {
    "qid": "Q7727278",
@@ -196,7 +222,7 @@
     "it": "tedesco"
    },
    "generi": [],
-   "visite_en": 40385
+   "visite_en": 40408
   },
   {
    "qid": "Q934396",
@@ -215,7 +241,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 40104
+   "visite_en": 40048
   },
   {
    "qid": "Q610428",
@@ -236,7 +262,7 @@
    "generi": [
     "storico"
    ],
-   "visite_en": 39399,
+   "visite_en": 39404,
    "copertina": {
     "file": "Joseph Roth Radetzkymarsch 1932.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Joseph_Roth_Radetzkymarsch_1932.jpg/500px-Joseph_Roth_Radetzkymarsch_1932.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -288,13 +314,35 @@
     "it": "russo"
    },
    "generi": [],
-   "visite_en": 35990,
+   "visite_en": 35975,
    "copertina": {
     "file": "RUB 95 (Leipzig, 1984, 23.Auflage) - Ostrowski, Wie der Stahl.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/RUB_95_%28Leipzig%2C_1984%2C_23.Auflage%29_-_Ostrowski%2C_Wie_der_Stahl.jpg/500px-RUB_95_%28Leipzig%2C_1984%2C_23.Auflage%29_-_Ostrowski%2C_Wie_der_Stahl.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "pagina": "https://commons.wikimedia.org/wiki/File:RUB_95_%28Leipzig%2C_1984%2C_23.Auflage%29_-_Ostrowski%2C_Wie_der_Stahl.jpg",
     "licenza": "Public domain",
     "autore": "Cookroach"
+   }
+  },
+  {
+   "qid": "Q295347",
+   "titolo": "Economic and Philosophic Manuscripts of 1844",
+   "titolo_it": "Manoscritti economico-filosofici del 1844",
+   "autori": [
+    {
+     "qid": "Q9061",
+     "nome": "Karl Marx"
+    }
+   ],
+   "pagine": 28,
+   "wiki_en": "https://en.wikipedia.org/wiki/Economic_and_Philosophic_Manuscripts_of_1844",
+   "generi": [],
+   "visite_en": 26728,
+   "copertina": {
+    "file": "Manuscipt.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Manuscipt.jpg/500px-Manuscipt.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Manuscipt.jpg",
+    "licenza": "Public domain",
+    "autore": "Karl Marx"
    }
   },
   {
@@ -314,7 +362,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 23655
+   "visite_en": 23652
   },
   {
    "qid": "Q1955781",
@@ -335,7 +383,7 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 22526
+   "visite_en": 22516
   },
   {
    "qid": "Q2512207",
@@ -356,7 +404,22 @@
    "generi": [
     "fantasy_sf"
    ],
-   "visite_en": 22443
+   "visite_en": 22449
+  },
+  {
+   "qid": "Q3404825",
+   "titolo": "Black Elk Speaks",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q6250218",
+     "nome": "John Neihardt"
+    }
+   ],
+   "pagine": 8,
+   "wiki_en": "https://en.wikipedia.org/wiki/Black_Elk_Speaks",
+   "generi": [],
+   "visite_en": 21382
   },
   {
    "qid": "Q1900478",
@@ -381,7 +444,7 @@
    "generi": [
     "storico"
    ],
-   "visite_en": 20504
+   "visite_en": 20506
   },
   {
    "qid": "Q5264340",
@@ -400,7 +463,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 18638
+   "visite_en": 18660
   },
   {
    "qid": "Q17036247",
@@ -418,6 +481,21 @@
     "en": "Sanskrit",
     "it": "sanscrito"
    },
+   "generi": [],
+   "visite_en": 18172
+  },
+  {
+   "qid": "Q2822836",
+   "titolo": "Save Me the Waltz",
+   "titolo_it": "Lasciami l'ultimo valzer",
+   "autori": [
+    {
+     "qid": "Q187324",
+     "nome": "Zelda Fitzgerald"
+    }
+   ],
+   "pagine": 6,
+   "wiki_en": "https://en.wikipedia.org/wiki/Save_Me_the_Waltz",
    "generi": [],
    "visite_en": 18161
   },
@@ -438,7 +516,7 @@
     "it": "lingua scots"
    },
    "generi": [],
-   "visite_en": 17344
+   "visite_en": 17345
   },
   {
    "qid": "Q370698",
@@ -457,7 +535,7 @@
     "it": "tedesco"
    },
    "generi": [],
-   "visite_en": 16224
+   "visite_en": 16208
   },
   {
    "qid": "Q751574",
@@ -478,7 +556,7 @@
    "generi": [
     "ragazzi"
    ],
-   "visite_en": 15307
+   "visite_en": 15304
   },
   {
    "qid": "Q257144",
@@ -497,7 +575,7 @@
     "it": "inglese americano"
    },
    "generi": [],
-   "visite_en": 12196
+   "visite_en": 12189
   },
   {
    "qid": "Q2182784",
@@ -518,7 +596,7 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 11282
+   "visite_en": 11222
   },
   {
    "qid": "Q1529809",
@@ -537,7 +615,22 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 9953
+   "visite_en": 9969
+  },
+  {
+   "qid": "Q4921296",
+   "titolo": "Black Mischief",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q107002",
+     "nome": "Evelyn Waugh"
+    }
+   ],
+   "pagine": 3,
+   "wiki_en": "https://en.wikipedia.org/wiki/Black_Mischief",
+   "generi": [],
+   "visite_en": 9434
   },
   {
    "qid": "Q20657367",
@@ -556,7 +649,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 9166
+   "visite_en": 9158
   },
   {
    "qid": "Q6372683",
@@ -575,7 +668,7 @@
     "it": "hindī"
    },
    "generi": [],
-   "visite_en": 8732
+   "visite_en": 8733
   },
   {
    "qid": "Q1746652",
@@ -613,13 +706,39 @@
     "it": "polacco"
    },
    "generi": [],
-   "visite_en": 8247,
+   "visite_en": 8252,
    "copertina": {
     "file": "Tadeusz Dolega-Mostowicz.jpg",
     "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Tadeusz_Dolega-Mostowicz.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
     "pagina": "https://commons.wikimedia.org/wiki/File:Tadeusz_Dolega-Mostowicz.jpg",
     "licenza": "Public domain",
     "autore": "Unknown authorUnknown author"
+   }
+  },
+  {
+   "qid": "Q357328",
+   "titolo": "Saint Joan of the Stockyards",
+   "titolo_it": "Santa Giovanna dei Macelli",
+   "autori": [
+    {
+     "qid": "Q38757",
+     "nome": "Bertolt Brecht"
+    }
+   ],
+   "pagine": 10,
+   "wiki_en": "https://en.wikipedia.org/wiki/Saint_Joan_of_the_Stockyards",
+   "lingua": {
+    "en": "German",
+    "it": "tedesco"
+   },
+   "generi": [],
+   "visite_en": 8159,
+   "copertina": {
+    "file": "Carola Neher als 'Johanna' - Karl Schrecker, 1930.jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Carola_Neher_als_%27Johanna%27_-_Karl_Schrecker%2C_1930.jpg/500px-Carola_Neher_als_%27Johanna%27_-_Karl_Schrecker%2C_1930.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Carola_Neher_als_%27Johanna%27_-_Karl_Schrecker%2C_1930.jpg",
+    "licenza": "Public domain",
+    "autore": "Karl Schrecker (1885-1935)"
    }
   },
   {
@@ -639,33 +758,22 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 8174
+   "visite_en": 8159
   },
   {
-   "qid": "Q357328",
-   "titolo": "Saint Joan of the Stockyards",
-   "titolo_it": "Santa Giovanna dei Macelli",
+   "qid": "Q2966758",
+   "titolo": "The Dawn-Breakers",
+   "titolo_it": null,
    "autori": [
     {
-     "qid": "Q38757",
-     "nome": "Bertolt Brecht"
+     "qid": "Q1645632",
+     "nome": "Nabíl-i-A`zam"
     }
    ],
-   "pagine": 10,
-   "wiki_en": "https://en.wikipedia.org/wiki/Saint_Joan_of_the_Stockyards",
-   "lingua": {
-    "en": "German",
-    "it": "tedesco"
-   },
+   "pagine": 5,
+   "wiki_en": "https://en.wikipedia.org/wiki/The_Dawn-Breakers",
    "generi": [],
-   "visite_en": 8164,
-   "copertina": {
-    "file": "Carola Neher als 'Johanna' - Karl Schrecker, 1930.jpg",
-    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Carola_Neher_als_%27Johanna%27_-_Karl_Schrecker%2C_1930.jpg/500px-Carola_Neher_als_%27Johanna%27_-_Karl_Schrecker%2C_1930.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Carola_Neher_als_%27Johanna%27_-_Karl_Schrecker%2C_1930.jpg",
-    "licenza": "Public domain",
-    "autore": "Karl Schrecker (1885-1935)"
-   }
+   "visite_en": 7617
   },
   {
    "qid": "Q1192235",
@@ -686,7 +794,7 @@
    "generi": [
     "saggio"
    ],
-   "visite_en": 7584
+   "visite_en": 7565
   },
   {
    "qid": "Q5216075",
@@ -705,7 +813,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 7188
+   "visite_en": 7190
   },
   {
    "qid": "Q17060239",
@@ -727,7 +835,7 @@
     "fantasy_sf",
     "sentimentale"
    ],
-   "visite_en": 7119
+   "visite_en": 7127
   },
   {
    "qid": "Q104829995",
@@ -749,7 +857,7 @@
     "fantasy_sf",
     "horror"
    ],
-   "visite_en": 6968
+   "visite_en": 6970
   },
   {
    "qid": "Q1706363",
@@ -770,7 +878,7 @@
    "generi": [
     "memorie"
    ],
-   "visite_en": 6962,
+   "visite_en": 6956,
    "copertina": {
     "file": "Louise Elisabeth Vigée-Lebrun - Marie-Antoinette dit « à la Rose » - Google Art Project.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Louise_Elisabeth_Vig%C3%A9e-Lebrun_-_Marie-Antoinette_dit_%C2%AB_%C3%A0_la_Rose_%C2%BB_-_Google_Art_Project.jpg/500px-Louise_Elisabeth_Vig%C3%A9e-Lebrun_-_Marie-Antoinette_dit_%C2%AB_%C3%A0_la_Rose_%C2%BB_-_Google_Art_Project.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -778,6 +886,21 @@
     "licenza": "Public domain",
     "autore": "Élisabeth Louise Vigée Le Brun"
    }
+  },
+  {
+   "qid": "Q3795929",
+   "titolo": "Before the Fact",
+   "titolo_it": "Il sospetto",
+   "autori": [
+    {
+     "qid": "Q519357",
+     "nome": "Anthony Berkeley Cox"
+    }
+   ],
+   "pagine": 4,
+   "wiki_en": "https://en.wikipedia.org/wiki/Before_the_Fact",
+   "generi": [],
+   "visite_en": 6405
   },
   {
    "qid": "Q1171410",
@@ -796,7 +919,7 @@
     "it": "tedesco"
    },
    "generi": [],
-   "visite_en": 5911
+   "visite_en": 5910
   },
   {
    "qid": "Q7745219",
@@ -815,7 +938,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 5602,
+   "visite_en": 5604,
    "copertina": {
     "file": "W. J. Linton (1812-1897) design for The Cornhill Magazine front, on a copy dated December 1945.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/W._J._Linton_%281812-1897%29_design_for_The_Cornhill_Magazine_front%2C_on_a_copy_dated_December_1945.jpg/500px-W._J._Linton_%281812-1897%29_design_for_The_Cornhill_Magazine_front%2C_on_a_copy_dated_December_1945.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -837,7 +960,7 @@
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Adventures_of_the_Black_Girl_in_Her_Search_for_God",
    "generi": [],
-   "visite_en": 5505
+   "visite_en": 5506
   },
   {
    "qid": "Q1075805",
@@ -858,7 +981,7 @@
    "generi": [
     "fantasy_sf"
    ],
-   "visite_en": 5464
+   "visite_en": 5445
   },
   {
    "qid": "Q8036886",
@@ -877,7 +1000,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 5398
+   "visite_en": 5402
   },
   {
    "qid": "Q5278419",
@@ -900,7 +1023,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 5320,
+   "visite_en": 5319,
    "copertina": {
     "file": "Dinner-at-Eight-FE.jpg",
     "url": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Dinner-at-Eight-FE.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -926,7 +1049,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 5298
+   "visite_en": 5300
   },
   {
    "qid": "Q6165398",
@@ -947,7 +1070,7 @@
    "generi": [
     "poesia"
    ],
-   "visite_en": 5237
+   "visite_en": 5243
   },
   {
    "qid": "Q3791139",
@@ -996,7 +1119,7 @@
    "generi": [
     "storico"
    ],
-   "visite_en": 5105
+   "visite_en": 5111
   },
   {
    "qid": "Q7173756",
@@ -1015,7 +1138,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 4435,
+   "visite_en": 4426,
    "copertina": {
     "file": "Swallows and Amazons 03.png",
     "url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Swallows_and_Amazons_03.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -1049,7 +1172,7 @@
     "it": "urdu"
    },
    "generi": [],
-   "visite_en": 4373
+   "visite_en": 4379
   },
   {
    "qid": "Q5267101",
@@ -1068,7 +1191,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 4266
+   "visite_en": 4262
   },
   {
    "qid": "Q104856374",
@@ -1087,7 +1210,7 @@
     "it": "russo"
    },
    "generi": [],
-   "visite_en": 3949,
+   "visite_en": 3946,
    "copertina": {
     "file": "Trotsky - The Stalin school of falsification (cover, 1930).jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Trotsky_-_The_Stalin_school_of_falsification_%28cover%2C_1930%29.jpg/500px-Trotsky_-_The_Stalin_school_of_falsification_%28cover%2C_1930%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -1115,7 +1238,22 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 3919
+   "visite_en": 3925
+  },
+  {
+   "qid": "Q1215882",
+   "titolo": "The Return of Philip Latinowicz",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q325428",
+     "nome": "Miroslav Krleža"
+    }
+   ],
+   "pagine": 5,
+   "wiki_en": "https://en.wikipedia.org/wiki/The_Return_of_Philip_Latinowicz",
+   "generi": [],
+   "visite_en": 3799
   },
   {
    "qid": "Q7758787",
@@ -1134,7 +1272,7 @@
     "it": "francese"
    },
    "generi": [],
-   "visite_en": 3816
+   "visite_en": 3797
   },
   {
    "qid": "Q5872036",
@@ -1148,7 +1286,7 @@
     "it": "tedesco"
    },
    "generi": [],
-   "visite_en": 3450
+   "visite_en": 3446
   },
   {
    "qid": "Q21162245",
@@ -1167,7 +1305,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 3398
+   "visite_en": 3396
   },
   {
    "qid": "Q5318076",
@@ -1188,7 +1326,7 @@
    "generi": [
     "fantasy_sf"
    ],
-   "visite_en": 3141,
+   "visite_en": 3132,
    "copertina": {
     "file": "Fantastic Novels cover September 1949.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Fantastic_Novels_cover_September_1949.jpg/500px-Fantastic_Novels_cover_September_1949.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -1216,39 +1354,13 @@
    "generi": [
     "ragazzi"
    ],
-   "visite_en": 3130,
+   "visite_en": 3129,
    "copertina": {
     "file": "The Clue in the Diary (1932) front cover, 1945 printing.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/The_Clue_in_the_Diary_%281932%29_front_cover%2C_1945_printing.jpg/500px-The_Clue_in_the_Diary_%281932%29_front_cover%2C_1945_printing.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "pagina": "https://commons.wikimedia.org/wiki/File:The_Clue_in_the_Diary_%281932%29_front_cover%2C_1945_printing.jpg",
     "licenza": "Public domain",
     "autore": "Cover art by Russell H. Tandy"
-   }
-  },
-  {
-   "qid": "Q1979886",
-   "titolo": "Glory",
-   "titolo_it": "Gloria",
-   "autori": [
-    {
-     "qid": "Q36591",
-     "nome": "Vladimir Nabokov"
-    }
-   ],
-   "pagine": 9,
-   "wiki_en": "https://en.wikipedia.org/wiki/Glory_(Vladimir_Nabokov_novel)",
-   "lingua": {
-    "en": "Russian",
-    "it": "russo"
-   },
-   "generi": [],
-   "visite_en": 3104,
-   "copertina": {
-    "file": "Podvig.jpg",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Podvig.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Podvig.jpg",
-    "licenza": "Public domain",
-    "autore": "Издательство журнала Современные записки (1920-1940)"
    }
   },
   {
@@ -1268,7 +1380,48 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 3102
+   "visite_en": 3099
+  },
+  {
+   "qid": "Q1979886",
+   "titolo": "Glory",
+   "titolo_it": "Gloria",
+   "autori": [
+    {
+     "qid": "Q36591",
+     "nome": "Vladimir Nabokov"
+    }
+   ],
+   "pagine": 9,
+   "wiki_en": "https://en.wikipedia.org/wiki/Glory_(Vladimir_Nabokov_novel)",
+   "lingua": {
+    "en": "Russian",
+    "it": "russo"
+   },
+   "generi": [],
+   "visite_en": 3092,
+   "copertina": {
+    "file": "Podvig.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Podvig.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Podvig.jpg",
+    "licenza": "Public domain",
+    "autore": "Издательство журнала Современные записки (1920-1940)"
+   }
+  },
+  {
+   "qid": "Q868892",
+   "titolo": "An Essay on the Nature and Significance of Economic Science",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q335199",
+     "nome": "Lionel Robbins, Baron Robbins"
+    }
+   ],
+   "pagine": 7,
+   "wiki_en": "https://en.wikipedia.org/wiki/An_Essay_on_the_Nature_and_Significance_of_Economic_Science",
+   "generi": [],
+   "visite_en": 2779
   },
   {
    "qid": "Q3412860",
@@ -1289,7 +1442,7 @@
    "generi": [
     "ragazzi"
    ],
-   "visite_en": 2725,
+   "visite_en": 2726,
    "copertina": {
     "file": "Nancy's Mysterious Letter (1932) front cover, first edition.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Nancy%27s_Mysterious_Letter_%281932%29_front_cover%2C_first_edition.jpg/500px-Nancy%27s_Mysterious_Letter_%281932%29_front_cover%2C_first_edition.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -1315,7 +1468,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 2607
+   "visite_en": 2606
   },
   {
    "qid": "Q6383214",
@@ -1334,7 +1487,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 2586
+   "visite_en": 2581
   },
   {
    "qid": "Q7735448",
@@ -1374,7 +1527,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 2380
+   "visite_en": 2382
   },
   {
    "qid": "Q15032732",
@@ -1395,7 +1548,7 @@
    "generi": [
     "fantasy_sf"
    ],
-   "visite_en": 2359
+   "visite_en": 2361
   },
   {
    "qid": "Q5677810",
@@ -1414,7 +1567,7 @@
     "it": "persiano"
    },
    "generi": [],
-   "visite_en": 2331
+   "visite_en": 2325
   },
   {
    "qid": "Q3818205",
@@ -1435,7 +1588,7 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 2321
+   "visite_en": 2293
   },
   {
    "qid": "Q3772100",
@@ -1454,7 +1607,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 2211,
+   "visite_en": 2204,
    "copertina": {
     "file": "Joseph Conrad.PNG",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Joseph_Conrad.PNG/500px-Joseph_Conrad.PNG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -1480,7 +1633,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 2099
+   "visite_en": 2093
   },
   {
    "qid": "Q5614417",
@@ -1499,7 +1652,22 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 2068
+   "visite_en": 2065
+  },
+  {
+   "qid": "Q302237",
+   "titolo": "Sketches of Etruscan Places and other Italian essays",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q34970",
+     "nome": "D. H. Lawrence"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/Sketches_of_Etruscan_Places_and_Other_Italian_Essays",
+   "generi": [],
+   "visite_en": 1957
   },
   {
    "qid": "Q8058128",
@@ -1520,7 +1688,7 @@
    "generi": [
     "ragazzi"
    ],
-   "visite_en": 1916
+   "visite_en": 1913
   },
   {
    "qid": "Q7797601",
@@ -1539,7 +1707,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 1864
+   "visite_en": 1854
   },
   {
    "qid": "Q7804791",
@@ -1558,7 +1726,7 @@
     "it": "russo"
    },
    "generi": [],
-   "visite_en": 1843
+   "visite_en": 1842
   },
   {
    "qid": "Q5910588",
@@ -1577,7 +1745,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 1831
+   "visite_en": 1830
   },
   {
    "qid": "Q8046351",
@@ -1596,7 +1764,7 @@
     "it": "turco"
    },
    "generi": [],
-   "visite_en": 1800
+   "visite_en": 1801
   },
   {
    "qid": "Q7090080",
@@ -1615,7 +1783,7 @@
     "it": "igbo"
    },
    "generi": [],
-   "visite_en": 1673
+   "visite_en": 1669
   },
   {
    "qid": "Q3794795",
@@ -1636,7 +1804,7 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 1595
+   "visite_en": 1581
   },
   {
    "qid": "Q7765614",
@@ -1684,28 +1852,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 1326
-  },
-  {
-   "qid": "Q7773771",
-   "titolo": "The Waxworks Murder",
-   "titolo_it": "L'ultima carta",
-   "autori": [
-    {
-     "qid": "Q365664",
-     "nome": "John Dickson Carr"
-    }
-   ],
-   "pagine": 3,
-   "wiki_en": "https://en.wikipedia.org/wiki/The_Waxworks_Murder",
-   "lingua": {
-    "en": "English",
-    "it": "inglese"
-   },
-   "generi": [
-    "giallo"
-   ],
-   "visite_en": 1265
+   "visite_en": 1316
   },
   {
    "qid": "Q7768564",
@@ -1748,7 +1895,28 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 1251
+   "visite_en": 1241
+  },
+  {
+   "qid": "Q7773771",
+   "titolo": "The Waxworks Murder",
+   "titolo_it": "L'ultima carta",
+   "autori": [
+    {
+     "qid": "Q365664",
+     "nome": "John Dickson Carr"
+    }
+   ],
+   "pagine": 3,
+   "wiki_en": "https://en.wikipedia.org/wiki/The_Waxworks_Murder",
+   "lingua": {
+    "en": "English",
+    "it": "inglese"
+   },
+   "generi": [
+    "giallo"
+   ],
+   "visite_en": 1240
   },
   {
    "qid": "Q7759037",
@@ -1767,7 +1935,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 1191
+   "visite_en": 1194
   },
   {
    "qid": "Q13017091",
@@ -1786,7 +1954,7 @@
     "it": "thailandese"
    },
    "generi": [],
-   "visite_en": 1131
+   "visite_en": 1127
   },
   {
    "qid": "Q6925288",
@@ -1805,7 +1973,7 @@
     "it": "inglese americano"
    },
    "generi": [],
-   "visite_en": 1065
+   "visite_en": 1066
   },
   {
    "qid": "Q17151836",
@@ -1820,7 +1988,37 @@
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/Wild_Pilgrimage",
    "generi": [],
-   "visite_en": 1024
+   "visite_en": 1021
+  },
+  {
+   "qid": "Q1639851",
+   "titolo": "Blue Boy",
+   "titolo_it": "Il ragazzo celeste",
+   "autori": [
+    {
+     "qid": "Q177411",
+     "nome": "Jean Giono"
+    }
+   ],
+   "pagine": 5,
+   "wiki_en": "https://en.wikipedia.org/wiki/Blue_Boy_(novel)",
+   "generi": [],
+   "visite_en": 900
+  },
+  {
+   "qid": "Q3208022",
+   "titolo": "La cuisine pour tous",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q3106745",
+     "nome": "Ginette Mathiot"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/La_cuisine_pour_tous",
+   "generi": [],
+   "visite_en": 682
   },
   {
    "qid": "Q7208469",
@@ -1841,7 +2039,7 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 704
+   "visite_en": 678
   },
   {
    "qid": "Q735269",
@@ -1856,7 +2054,7 @@
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/Ursonate",
    "generi": [],
-   "visite_en": 661
+   "visite_en": 660
   },
   {
    "qid": "Q1325013",
@@ -1877,7 +2075,7 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 634,
+   "visite_en": 625,
    "copertina": {
     "file": "Paray-le-Frésil.JPG",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Paray-le-Fr%C3%A9sil.JPG/500px-Paray-le-Fr%C3%A9sil.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -1885,6 +2083,21 @@
     "licenza": "CC BY-SA 3.0",
     "autore": "Bmazerolles"
    }
+  },
+  {
+   "qid": "Q3232049",
+   "titolo": "The Two Sources of Morality and Religion",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q42156",
+     "nome": "Henri Bergson"
+    }
+   ],
+   "pagine": 8,
+   "wiki_en": "https://en.wikipedia.org/wiki/The_Two_Sources_of_Morality_and_Religion",
+   "generi": [],
+   "visite_en": 588
   },
   {
    "qid": "Q110732464",
@@ -1903,26 +2116,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 574
-  },
-  {
-   "qid": "Q5058034",
-   "titolo": "Celia en el colegio",
-   "titolo_it": null,
-   "autori": [
-    {
-     "qid": "Q5359012",
-     "nome": "Elena Fortún"
-    }
-   ],
-   "pagine": 3,
-   "wiki_en": "https://en.wikipedia.org/wiki/Celia_en_el_colegio",
-   "lingua": {
-    "en": "Spanish",
-    "it": "spagnolo"
-   },
-   "generi": [],
-   "visite_en": 545
+   "visite_en": 573
   },
   {
    "qid": "Q16387178",
@@ -1941,7 +2135,7 @@
     "it": "russo"
    },
    "generi": [],
-   "visite_en": 539
+   "visite_en": 538
   },
   {
    "qid": "Q17173648",
@@ -1962,7 +2156,26 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 537
+   "visite_en": 535
+  },
+  {
+   "qid": "Q5058034",
+   "titolo": "Celia en el colegio",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q5359012",
+     "nome": "Elena Fortún"
+    }
+   ],
+   "pagine": 3,
+   "wiki_en": "https://en.wikipedia.org/wiki/Celia_en_el_colegio",
+   "lingua": {
+    "en": "Spanish",
+    "it": "spagnolo"
+   },
+   "generi": [],
+   "visite_en": 520
   },
   {
    "qid": "Q6817094",
@@ -1981,7 +2194,7 @@
     "it": "portoghese"
    },
    "generi": [],
-   "visite_en": 521
+   "visite_en": 519
   },
   {
    "qid": "Q7656082",
@@ -2002,7 +2215,7 @@
    "generi": [
     "storico"
    ],
-   "visite_en": 501
+   "visite_en": 499
   },
   {
    "qid": "Q16677418",
@@ -2021,7 +2234,7 @@
     "it": "francese"
    },
    "generi": [],
-   "visite_en": 458
+   "visite_en": 454
   },
   {
    "qid": "Q7759291",
@@ -2036,7 +2249,7 @@
    "pagine": 2,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Railroad_to_Freedom",
    "generi": [],
-   "visite_en": 452
+   "visite_en": 450
   },
   {
    "qid": "Q5271049",
@@ -2055,7 +2268,7 @@
     "it": "indonesiano"
    },
    "generi": [],
-   "visite_en": 451
+   "visite_en": 449
   },
   {
    "qid": "Q23035603",
@@ -2076,7 +2289,7 @@
    "generi": [
     "memorie"
    ],
-   "visite_en": 450,
+   "visite_en": 448,
    "copertina": {
     "file": "Adamic.JPG",
     "url": "https://upload.wikimedia.org/wikipedia/commons/d/df/Adamic.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -2084,25 +2297,6 @@
     "licenza": "CC BY-SA 4.0",
     "autore": "Ribashevina"
    }
-  },
-  {
-   "qid": "Q16385501",
-   "titolo": "Distant Lands",
-   "titolo_it": null,
-   "autori": [
-    {
-     "qid": "Q202537",
-     "nome": "Arkady Gaidar"
-    }
-   ],
-   "pagine": 4,
-   "wiki_en": "https://en.wikipedia.org/wiki/Distant_Lands",
-   "lingua": {
-    "en": "Russian",
-    "it": "russo"
-   },
-   "generi": [],
-   "visite_en": 417
   },
   {
    "qid": "Q60785449",
@@ -2124,6 +2318,25 @@
    "visite_en": 417
   },
   {
+   "qid": "Q16385501",
+   "titolo": "Distant Lands",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q202537",
+     "nome": "Arkady Gaidar"
+    }
+   ],
+   "pagine": 4,
+   "wiki_en": "https://en.wikipedia.org/wiki/Distant_Lands",
+   "lingua": {
+    "en": "Russian",
+    "it": "russo"
+   },
+   "generi": [],
+   "visite_en": 415
+  },
+  {
    "qid": "Q8025166",
    "titolo": "Winged Girl of Knossos",
    "titolo_it": null,
@@ -2142,7 +2355,7 @@
    "generi": [
     "storico"
    ],
-   "visite_en": 413
+   "visite_en": 412
   },
   {
    "qid": "Q5352372",
@@ -2161,7 +2374,7 @@
     "it": "spagnolo"
    },
    "generi": [],
-   "visite_en": 410,
+   "visite_en": 411,
    "copertina": {
     "file": "El amor brujo portada 1932.jpg",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/El_amor_brujo_portada_1932.jpg/500px-El_amor_brujo_portada_1932.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -2169,6 +2382,23 @@
     "licenza": "Public domain",
     "autore": "Unknown authorUnknown author"
    }
+  },
+  {
+   "qid": "Q5098569",
+   "titolo": "Children of the Soil",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q19974442",
+     "nome": "Nora Burglon"
+    }
+   ],
+   "pagine": 3,
+   "wiki_en": "https://en.wikipedia.org/wiki/Children_of_the_Soil",
+   "generi": [
+    "storico"
+   ],
+   "visite_en": 346
   },
   {
    "qid": "Q109167813",
@@ -2187,24 +2417,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 349
-  },
-  {
-   "qid": "Q5098569",
-   "titolo": "Children of the Soil",
-   "titolo_it": null,
-   "autori": [
-    {
-     "qid": "Q19974442",
-     "nome": "Nora Burglon"
-    }
-   ],
-   "pagine": 3,
-   "wiki_en": "https://en.wikipedia.org/wiki/Children_of_the_Soil",
-   "generi": [
-    "storico"
-   ],
-   "visite_en": 347
+   "visite_en": 346
   },
   {
    "qid": "Q3210349",
@@ -2223,26 +2436,7 @@
     "it": "francese"
    },
    "generi": [],
-   "visite_en": 333
-  },
-  {
-   "qid": "Q7099218",
-   "titolo": "Orache",
-   "titolo_it": null,
-   "autori": [
-    {
-     "qid": "Q36591",
-     "nome": "Vladimir Nabokov"
-    }
-   ],
-   "pagine": 2,
-   "wiki_en": "https://en.wikipedia.org/wiki/Orache_(short_story)",
-   "lingua": {
-    "en": "Russian",
-    "it": "russo"
-   },
-   "generi": [],
-   "visite_en": 326
+   "visite_en": 332
   },
   {
    "qid": "Q86753954",
@@ -2261,7 +2455,26 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 321
+   "visite_en": 319
+  },
+  {
+   "qid": "Q7099218",
+   "titolo": "Orache",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q36591",
+     "nome": "Vladimir Nabokov"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": "https://en.wikipedia.org/wiki/Orache_(short_story)",
+   "lingua": {
+    "en": "Russian",
+    "it": "russo"
+   },
+   "generi": [],
+   "visite_en": 318
   },
   {
    "qid": "Q96373014",
@@ -2280,7 +2493,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 319
+   "visite_en": 313
   },
   {
    "qid": "Q7170795",
@@ -2299,7 +2512,7 @@
     "it": "indonesiano"
    },
    "generi": [],
-   "visite_en": 306
+   "visite_en": 305
   },
   {
    "qid": "Q3237799",
@@ -2320,7 +2533,7 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 304
+   "visite_en": 297
   },
   {
    "qid": "Q18351196",
@@ -2339,7 +2552,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 304
+   "visite_en": 290
   },
   {
    "qid": "Q23035584",
@@ -2358,7 +2571,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 276
+   "visite_en": 272
   },
   {
    "qid": "Q29379121",
@@ -2377,7 +2590,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 245
+   "visite_en": 237
   },
   {
    "qid": "Q17633276",
@@ -2392,7 +2605,7 @@
    "pagine": 3,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Multiple_States_of_Being",
    "generi": [],
-   "visite_en": 225
+   "visite_en": 224
   },
   {
    "qid": "Q18392587",
@@ -2411,28 +2624,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 199
-  },
-  {
-   "qid": "Q1885256",
-   "titolo": "The Flemish House",
-   "titolo_it": "La casa dei fiamminghi",
-   "autori": [
-    {
-     "qid": "Q128790",
-     "nome": "Georges Simenon"
-    }
-   ],
-   "pagine": 6,
-   "wiki_en": "https://en.wikipedia.org/wiki/The_Flemish_House",
-   "lingua": {
-    "en": "French",
-    "it": "francese"
-   },
-   "generi": [
-    "giallo"
-   ],
-   "visite_en": 197
+   "visite_en": 196
   },
   {
    "qid": "Q5223407",
@@ -2451,7 +2643,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 190
+   "visite_en": 191
   },
   {
    "qid": "Q16999020",
@@ -2473,6 +2665,27 @@
    "visite_en": 189
   },
   {
+   "qid": "Q1885256",
+   "titolo": "The Flemish House",
+   "titolo_it": "La casa dei fiamminghi",
+   "autori": [
+    {
+     "qid": "Q128790",
+     "nome": "Georges Simenon"
+    }
+   ],
+   "pagine": 6,
+   "wiki_en": "https://en.wikipedia.org/wiki/The_Flemish_House",
+   "lingua": {
+    "en": "French",
+    "it": "francese"
+   },
+   "generi": [
+    "giallo"
+   ],
+   "visite_en": 184
+  },
+  {
    "qid": "Q3204486",
    "titolo": "The Shadow in the Courtyard",
    "titolo_it": "L'ombra cinese",
@@ -2491,7 +2704,7 @@
    "generi": [
     "giallo"
    ],
-   "visite_en": 178
+   "visite_en": 156
   },
   {
    "qid": "Q7929510",
@@ -2510,7 +2723,7 @@
     "it": "inglese"
    },
    "generi": [],
-   "visite_en": 152
+   "visite_en": 155
   },
   {
    "qid": "Q691326",
@@ -2531,7 +2744,7 @@
    "generi": [
     "storico"
    ],
-   "visite_en": 150,
+   "visite_en": 151,
    "copertina": {
     "file": "Woman, with large bow in her hair, putting needle on record on phonograph.png",
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Woman%2C_with_large_bow_in_her_hair%2C_putting_needle_on_record_on_phonograph.png/500px-Woman%2C_with_large_bow_in_her_hair%2C_putting_needle_on_record_on_phonograph.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -2557,7 +2770,7 @@
     "it": "estone"
    },
    "generi": [],
-   "visite_en": 86
+   "visite_en": 85
   },
   {
    "qid": "Q685630",
@@ -2834,25 +3047,6 @@
    }
   },
   {
-   "qid": "Q21651654",
-   "titolo": "Rangun Raudi",
-   "titolo_it": null,
-   "autori": [
-    {
-     "qid": "Q20650996",
-     "nome": "Somaraju Ramanujarao"
-    }
-   ],
-   "pagine": 3,
-   "wiki_en": null,
-   "lingua": {
-    "en": "Telugu",
-    "it": "telugu"
-   },
-   "generi": [],
-   "visite_en": null
-  },
-  {
    "qid": "Q21864337",
    "titolo": "Adhunika Rajyanga Samsthalu",
    "titolo_it": null,
@@ -2936,6 +3130,21 @@
     "fantasy_sf",
     "ragazzi"
    ],
+   "visite_en": null
+  },
+  {
+   "qid": "Q12175192",
+   "titolo": "Flora Hawaiiensis; the New Illustrated Flora of the Hawaiian Islands",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q2040112",
+     "nome": "Otto Degener"
+    }
+   ],
+   "pagine": 3,
+   "wiki_en": null,
+   "generi": [],
    "visite_en": null
   },
   {
@@ -3389,6 +3598,62 @@
     "memorie"
    ],
    "visite_en": null
+  },
+  {
+   "qid": "Q3225292",
+   "titolo": "Il passeggero del \"Polarlys\"",
+   "titolo_it": "Il passeggero del \"Polarlys\"",
+   "autori": [
+    {
+     "qid": "Q128790",
+     "nome": "Georges Simenon"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": null,
+   "generi": [],
+   "visite_en": null
+  },
+  {
+   "qid": "Q3793759",
+   "titolo": "When Rogues Fall Out",
+   "titolo_it": "Il diabolico terzetto",
+   "autori": [
+    {
+     "qid": "Q2065950",
+     "nome": "R. Austin Freeman"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": null,
+   "generi": [],
+   "visite_en": null
+  },
+  {
+   "qid": "Q104509066",
+   "titolo": "La Forêt des aventures",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q314993",
+     "nome": "Maurice Leblanc"
+    },
+    {
+     "qid": "Q18115496",
+     "nome": "André de Maricourt"
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": null,
+   "generi": [],
+   "visite_en": null,
+   "copertina": {
+    "file": "Peau d’Âne et Don Quichotte (Le Gaulois, Annonce 19271021).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Peau_d%E2%80%99%C3%82ne_et_Don_Quichotte_%28Le_Gaulois%2C_Annonce_19271021%29.jpg/500px-Peau_d%E2%80%99%C3%82ne_et_Don_Quichotte_%28Le_Gaulois%2C_Annonce_19271021%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Peau_d%E2%80%99%C3%82ne_et_Don_Quichotte_%28Le_Gaulois%2C_Annonce_19271021%29.jpg",
+    "licenza": "Public domain",
+    "autore": "Maurice Leblanc"
+   }
   }
  ]
 }

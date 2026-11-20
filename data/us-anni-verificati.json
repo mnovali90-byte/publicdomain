@@ -4,841 +4,1216 @@
 "ok",
 1931,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1931
-}
+},
+{}
 ],
 "Q1217475": [
 "ok",
 1931,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1931
-}
+},
+{}
 ],
 "Q1152214": [
-"nd",
-2016,
-"openlibrary",
-"2026-11-19",
+"ok",
+1931,
+"wikipedia",
+"2026-11-20",
 [
 "cce",
-"openlibrary",
-"loc"
+"wikipedia",
+"isfdb"
 ],
 {
-"openlibrary": 2016,
-"loc": 2020
+"wikipedia": 1931
+},
+{
+"puntate": [
+1931,
+1931,
+"wikipedia"
+]
 }
 ],
 "Q571244": [
 "ok",
 1931,
-"openlibrary",
-"2026-11-19",
+"wikipedia",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
-"openlibrary": 1931
+"wikipedia": 1931
+},
+{
+"puntate": [
+1931,
+1931,
+"wikipedia"
+]
 }
 ],
 "Q1212765": [
 "ok",
 1931,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1931
-}
+},
+{}
 ],
 "Q1197989": [
 "ok",
 1931,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia"
 ],
 {
 "cce": 1931
+},
+{
+"puntate": [
+1930,
+1931,
+"wikipedia"
+]
 }
 ],
 "Q6035197": [
 "ok",
 1931,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
-"cce": 1931
+"cce": 1931,
+"wikipedia": 1930
+},
+{
+"puntate": [
+1930,
+1930,
+"wikipedia"
+]
 }
 ],
 "Q28419570": [
 "nd",
 1980,
 "openlibrary",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
 {
 "openlibrary": 1980
-}
+},
+{}
 ],
 "Q4190252": [
 "ok",
 1931,
 "openlibrary",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "openlibrary": 1931
-}
+},
+{}
 ],
 "Q7765142": [
 "ok",
 1931,
 "bnf",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
-"bnf"
+"bnf",
+"wikipedia",
+"isfdb"
 ],
 {
 "bnf": 1931
-}
+},
+{}
 ],
 "Q887062": [
 "ok",
 1931,
 "bnf",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
-"bnf"
+"bnf",
+"wikipedia",
+"isfdb"
 ],
 {
 "bnf": 1931
-}
+},
+{}
 ],
 "Q1216006": [
 "ok",
 1931,
 "k10plus",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
-"k10plus"
+"k10plus",
+"wikipedia",
+"isfdb"
 ],
 {
 "k10plus": 1931
-}
+},
+{}
 ],
 "Q1070729": [
 "ok",
 1931,
 "bnf",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
-"bnf"
+"bnf",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1932,
 "bnf": 1931
-}
+},
+{}
 ],
 "Q2564588": [
 "ok",
 1931,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1931
-}
+},
+{}
 ],
 "Q5990586": [
 "ok",
 1931,
 "openlibrary",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "openlibrary": 1931
-}
+},
+{}
 ],
 "Q8039491": [
 "ok",
 1931,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1931
-}
+},
+{}
 ],
 "Q265042": [
 "ok",
 1931,
 "openlibrary",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1932,
 "openlibrary": 1931
-}
+},
+{}
 ],
 "Q3228173": [
 "ok",
 1931,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
-"cce": 1931
+"cce": 1931,
+"wikipedia": 1931
+},
+{
+"puntate": [
+1931,
+1931,
+"wikipedia"
+]
 }
 ],
 "Q1171231": [
 "nd",
 1932,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
 {
 "cce": 1932,
 "loc": 1932
-}
+},
+{}
 ],
 "Q7414788": [
 "nd",
 1933,
 "loc",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
 {
 "openlibrary": 1933,
 "loc": 1933
-}
+},
+{}
 ],
 "Q7271766": [
 "nd",
-1994,
-"loc",
-"2026-11-19",
+1928,
+"wikipedia",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
 {
+"wikipedia": 1928,
 "loc": 1994
+},
+{
+"puntate": [
+1928,
+1928,
+"wikipedia"
+]
 }
 ],
 "Q1141993": [
-"nd",
-2006,
-"loc",
-"2026-11-19",
+"ok",
+1931,
+"wikipedia",
+"2026-11-20",
 [
 "cce",
 "k10plus",
-"openlibrary",
-"loc"
+"wikipedia",
+"isfdb"
 ],
 {
-"openlibrary": 2006,
-"loc": 2006
+"wikipedia": 1931
+},
+{
+"puntate": [
+1931,
+1931,
+"wikipedia"
+]
 }
 ],
 "Q7718449": [
-"nd",
-2022,
-"loc",
-"2026-11-19",
+"ok",
+1931,
+"isfdb",
+"2026-11-20",
 [
 "cce",
-"openlibrary",
-"loc"
+"wikipedia",
+"isfdb"
 ],
 {
-"loc": 2022
+"isfdb": 1931
+},
+{
+"puntate": [
+1931,
+1931,
+"isfdb"
+]
 }
 ],
 "Q1438006": [
 "nd",
-2016,
-"openlibrary",
-"2026-11-19",
+1933,
+"isfdb",
+"2026-11-20",
 [
 "cce",
 "k10plus",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
 {
+"isfdb": 1933,
 "openlibrary": 2016,
 "loc": 2017
+},
+{
+"puntate": [
+1933,
+1933,
+"isfdb"
+]
 }
 ],
 "Q3290152": [
 "ok",
 1931,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia"
 ],
 {
 "cce": 1931
+},
+{
+"puntate": [
+1932,
+null,
+"wikipedia"
+]
 }
 ],
 "Q7766907": [
-"nd",
-null,
-null,
-"2026-11-19",
+"ok",
+1931,
+"isfdb",
+"2026-11-20",
 [
 "cce",
-"openlibrary",
-"loc"
+"wikipedia",
+"isfdb"
 ],
-{}
+{
+"isfdb": 1931
+},
+{
+"puntate": [
+1931,
+1931,
+"isfdb"
+]
+}
 ],
 "Q2498251": [
 "ok",
 1931,
-"openlibrary",
-"2026-11-19",
+"cce",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
-"openlibrary": 1931
-}
+"cce": 1931
+},
+{}
 ],
 "Q7711173": [
 "nd",
 2013,
 "openlibrary",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
 {
 "openlibrary": 2013
-}
+},
+{}
 ],
 "Q1775716": [
 "nd",
 null,
 null,
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
+{},
 {}
 ],
 "Q3881234": [
 "ok",
 1931,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1931
-}
+},
+{}
 ],
 "Q5309555": [
 "ok",
 1931,
-"openlibrary",
-"2026-11-19",
+"wikipedia",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
-"openlibrary": 1931
+"wikipedia": 1931
+},
+{
+"puntate": [
+1931,
+1931,
+"wikipedia"
+]
 }
 ],
 "Q6743438": [
 "nd",
 null,
 null,
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
+{},
 {}
 ],
 "Q6663021": [
 "ok",
 1931,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1931
-}
+},
+{}
 ],
 "Q1746433": [
-"nd",
-null,
-null,
-"2026-11-19",
+"ok",
+1931,
+"wikipedia",
+"2026-11-20",
 [
 "cce",
 "k10plus",
-"openlibrary",
-"loc"
+"wikipedia",
+"isfdb"
 ],
-{}
+{
+"wikipedia": 1931
+},
+{
+"puntate": [
+1931,
+1931,
+"wikipedia"
+]
+}
 ],
 "Q2836696": [
 "ok",
 1931,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
-"cce": 1931
+"cce": 1931,
+"wikipedia": 1931
+},
+{
+"puntate": [
+1931,
+1931,
+"wikipedia"
+]
 }
 ],
 "Q7722509": [
-"nd",
-null,
-null,
-"2026-11-19",
+"ok",
+1931,
+"isfdb",
+"2026-11-20",
 [
 "cce",
-"openlibrary",
-"loc"
+"wikipedia",
+"isfdb"
 ],
-{}
+{
+"isfdb": 1931
+},
+{
+"puntate": [
+1931,
+1931,
+"isfdb"
+]
+}
 ],
 "Q7460836": [
 "ok",
 1931,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1931
-}
+},
+{}
 ],
 "Q4659979": [
 "ok",
 1931,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1931
-}
+},
+{}
 ],
 "Q573765": [
 "ok",
 1931,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1931
-}
+},
+{}
 ],
 "Q3506429": [
 "ok",
 1931,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
-"cce": 1931
+"cce": 1931,
+"wikipedia": 1931
+},
+{
+"puntate": [
+1931,
+1931,
+"wikipedia"
+]
 }
 ],
 "Q7069500": [
 "nd",
-null,
-null,
-"2026-11-19",
+1924,
+"wikipedia",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
 "openlibrary",
 "loc"
 ],
-{}
+{},
+{
+"puntate": [
+1924,
+null,
+"wikipedia"
+]
+}
 ],
 "Q874809": [
 "nd",
 1965,
 "loc",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
 "k10plus",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
 {
 "loc": 1965
-}
+},
+{}
 ],
 "Q119144545": [
 "ok",
 1931,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
-"cce": 1931
+"cce": 1931,
+"wikipedia": 1931
+},
+{
+"puntate": [
+1931,
+1931,
+"wikipedia"
+]
 }
 ],
 "Q2836721": [
 "ok",
 1931,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
-"cce": 1931
+"cce": 1931,
+"wikipedia": 1931
+},
+{
+"puntate": [
+1931,
+1931,
+"wikipedia"
+]
 }
 ],
 "Q1194666": [
 "nd",
-null,
-null,
-"2026-11-19",
+1933,
+"isfdb",
+"2026-11-20",
 [
 "cce",
 "k10plus",
-"openlibrary",
-"loc"
-],
-{}
-],
-"Q43578331": [
-"nd",
-1932,
-"loc",
-"2026-11-19",
-[
-"cce",
-"bnf",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
 {
-"openlibrary": 1932,
-"loc": 1932
+"isfdb": 1933
+},
+{
+"puntate": [
+1933,
+1933,
+"isfdb"
+]
+}
+],
+"Q43578331": [
+"ok",
+1931,
+"wikipedia",
+"2026-11-20",
+[
+"cce",
+"bnf",
+"wikipedia",
+"isfdb"
+],
+{
+"cce": 1932,
+"wikipedia": 1931
+},
+{
+"puntate": [
+1931,
+1931,
+"wikipedia"
+]
 }
 ],
 "Q7252252": [
 "ok",
 1931,
 "openlibrary",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
-"dnb"
+"wikipedia",
+"isfdb"
 ],
 {
 "openlibrary": 1931
-}
+},
+{}
 ],
 "Q1885291": [
 "ok",
 1931,
 "bnf",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
-"bnf"
+"bnf",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1933,
 "bnf": 1931
-}
+},
+{}
 ],
 "Q7767973": [
-"nd",
-2006,
-"openlibrary",
-"2026-11-19",
+"ok",
+1931,
+"isfdb",
+"2026-11-20",
 [
 "cce",
-"openlibrary",
-"loc"
+"wikipedia",
+"isfdb"
 ],
 {
-"openlibrary": 2006
+"isfdb": 1931
+},
+{
+"puntate": [
+1931,
+1931,
+"isfdb"
+]
 }
 ],
 "Q1214380": [
 "ok",
 1931,
 "k10plus",
-"2026-11-19",
-[
-"cce",
-"k10plus"
-],
-{
-"k10plus": 1931
-}
-],
-"Q1170330": [
-"nd",
-null,
-null,
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
 "k10plus",
-"openlibrary",
-"loc"
+"wikipedia",
+"isfdb"
 ],
+{
+"k10plus": 1931
+},
 {}
 ],
-"Q7760465": [
+"Q1170330": [
 "nd",
-2007,
-"openlibrary",
-"2026-11-19",
+1933,
+"isfdb",
+"2026-11-20",
 [
 "cce",
+"k10plus",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
 {
-"openlibrary": 2007
+"isfdb": 1933
+},
+{
+"puntate": [
+1933,
+1933,
+"isfdb"
+]
+}
+],
+"Q7760465": [
+"ok",
+1931,
+"isfdb",
+"2026-11-20",
+[
+"cce",
+"wikipedia",
+"isfdb"
+],
+{
+"isfdb": 1931
+},
+{
+"puntate": [
+1931,
+1931,
+"isfdb"
+]
 }
 ],
 "Q1306780": [
 "ok",
 1931,
 "k10plus",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
-"k10plus"
+"k10plus",
+"wikipedia",
+"isfdb"
 ],
 {
-"k10plus": 1931
+"k10plus": 1931,
+"isfdb": 1933
+},
+{
+"puntate": [
+1933,
+1933,
+"isfdb"
+]
 }
 ],
 "Q7939007": [
 "nd",
 1950,
 "loc",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
 {
 "openlibrary": 1964,
 "loc": 1950
-}
+},
+{}
 ],
 "Q7713437": [
 "ok",
 1931,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1931
-}
+},
+{}
 ],
 "Q3109849": [
 "ok",
 1931,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1931
-}
+},
+{}
 ],
 "Q5047445": [
 "ok",
 1931,
-"loc",
-"2026-11-19",
+"wikipedia",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
-"loc": 1931
+"wikipedia": 1931
+},
+{
+"puntate": [
+1931,
+1931,
+"wikipedia"
+]
 }
 ],
 "Q5670870": [
 "nd",
 null,
 null,
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
+{},
 {}
 ],
 "Q6770866": [
-"nd",
-1946,
-"openlibrary",
-"2026-11-19",
+"ok",
+1931,
+"wikipedia",
+"2026-11-20",
 [
 "cce",
-"openlibrary",
-"loc"
+"wikipedia",
+"isfdb"
 ],
 {
-"openlibrary": 1946,
-"loc": 1957
+"wikipedia": 1931
+},
+{
+"puntate": [
+1931,
+1931,
+"wikipedia"
+]
 }
 ],
 "Q11247830": [
 "ok",
 1931,
 "k10plus",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
-"k10plus"
+"k10plus",
+"wikipedia",
+"isfdb"
 ],
 {
 "k10plus": 1931
-}
+},
+{}
 ],
 "Q1192045": [
 "nd",
-1933,
-"loc",
-"2026-11-19",
+1932,
+"wikipedia",
+"2026-11-20",
 [
 "cce",
 "k10plus",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
 {
+"cce": 1933,
+"wikipedia": 1932,
 "openlibrary": 1933,
 "loc": 1933
+},
+{
+"puntate": [
+1932,
+1932,
+"wikipedia"
+]
 }
 ],
 "Q1192982": [
-"nd",
-null,
-null,
-"2026-11-19",
+"ok",
+1931,
+"wikipedia",
+"2026-11-20",
 [
 "cce",
 "k10plus",
-"openlibrary",
-"loc"
+"wikipedia",
+"isfdb"
 ],
-{}
+{
+"wikipedia": 1931
+},
+{
+"puntate": [
+1931,
+1931,
+"wikipedia"
+]
+}
 ],
 "Q938770": [
 "nd",
-null,
-null,
-"2026-11-19",
+1933,
+"isfdb",
+"2026-11-20",
 [
 "cce",
 "k10plus",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
-{}
+{
+"isfdb": 1933
+},
+{
+"puntate": [
+1933,
+1933,
+"isfdb"
+]
+}
 ],
 "Q7687019": [
-"ok",
-1931,
-"openlibrary",
-"2026-11-19",
+"parziale",
+1932,
+"wikipedia",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia"
 ],
 {
 "cce": 1932,
 "openlibrary": 1931
+},
+{
+"puntate": [
+1931,
+1932,
+"wikipedia"
+]
 }
 ],
 "Q3821967": [
 "prima",
 1930,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
@@ -846,94 +1221,133 @@ null,
 "cce": 1930,
 "openlibrary": 1930,
 "loc": 1930
-}
+},
+{}
 ],
 "Q7727380": [
 "ok",
 1931,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1931
-}
+},
+{}
 ],
 "Q96387336": [
 "ok",
 1931,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1931
-}
+},
+{}
 ],
 "Q1696432": [
 "ok",
 1931,
 "k10plus",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
-"k10plus"
+"k10plus",
+"wikipedia",
+"isfdb"
 ],
 {
-"k10plus": 1931
+"k10plus": 1931,
+"wikipedia": 1931
+},
+{
+"puntate": [
+1931,
+1931,
+"wikipedia"
+]
 }
 ],
 "Q1885266": [
 "ok",
 1931,
 "bnf",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
-"bnf"
+"bnf",
+"wikipedia",
+"isfdb"
 ],
 {
-"bnf": 1931
+"bnf": 1931,
+"wikipedia": 1931
+},
+{
+"puntate": [
+1931,
+1931,
+"wikipedia"
+]
 }
 ],
 "Q1366540": [
-"nd",
-1976,
-"bnf",
-"2026-11-19",
+"ok",
+1931,
+"wikipedia",
+"2026-11-20",
 [
 "cce",
 "bnf",
-"openlibrary",
-"loc"
+"wikipedia",
+"isfdb"
 ],
 {
 "bnf": 1976,
-"loc": 1987
+"wikipedia": 1931
+},
+{
+"puntate": [
+1931,
+1931,
+"wikipedia"
+]
 }
 ],
 "Q17031427": [
 "ok",
 1931,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1931
-}
+},
+{}
 ],
 "Q3220209": [
 "prima",
 1930,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
 "bnf",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
@@ -941,797 +1355,1126 @@ null,
 "cce": 1930,
 "openlibrary": 1930,
 "loc": 1930
-}
+},
+{}
 ],
 "Q4003978": [
 "ok",
 1931,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1931
-}
+},
+{}
 ],
 "Q5019855": [
 "ok",
 1931,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1931
-}
+},
+{}
 ],
 "Q56308426": [
 "ok",
 1931,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1931
-}
+},
+{}
 ],
 "Q328061": [
 "ok",
 1931,
 "bnf",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
-"bnf"
+"bnf",
+"wikipedia",
+"isfdb"
 ],
 {
-"bnf": 1931
+"bnf": 1931,
+"wikipedia": 1931
+},
+{
+"puntate": [
+1931,
+1931,
+"wikipedia"
+]
 }
 ],
 "Q5437626": [
 "ok",
 1931,
-"openlibrary",
-"2026-11-19",
+"cce",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
-"openlibrary": 1931
+"cce": 1931,
+"isfdb": 1931
+},
+{
+"puntate": [
+1931,
+1931,
+"isfdb"
+]
 }
 ],
 "Q7720011": [
 "nd",
 1937,
 "loc",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
 {
+"wikipedia": 1937,
 "openlibrary": 1937,
 "loc": 1937
+},
+{
+"puntate": [
+1937,
+1937,
+"wikipedia"
+]
 }
 ],
 "Q16210839": [
 "nd",
 1975,
 "loc",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
 {
 "openlibrary": 1975,
 "loc": 1975
-}
+},
+{}
 ],
 "Q7756737": [
 "ok",
 1931,
 "loc",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
-"dnb"
+"wikipedia",
+"isfdb"
 ],
 {
+"wikipedia": 1930,
 "loc": 1931
+},
+{
+"puntate": [
+1930,
+1930,
+"wikipedia"
+]
 }
 ],
 "Q811229": [
 "ok",
 1931,
 "k10plus",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
-"k10plus"
+"k10plus",
+"wikipedia",
+"isfdb"
 ],
 {
 "k10plus": 1931
+},
+{
+"date_wikidata": [
+1931,
+1942
+]
 }
 ],
 "Q7974168": [
 "ok",
 1931,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1931
-}
+},
+{}
 ],
 "Q6492731": [
 "ok",
 1931,
 "openlibrary",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "openlibrary": 1931
-}
+},
+{}
 ],
 "Q1195963": [
 "nd",
-null,
-null,
-"2026-11-19",
+1933,
+"isfdb",
+"2026-11-20",
 [
 "cce",
 "k10plus",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
-{}
+{
+"isfdb": 1933
+},
+{
+"puntate": [
+1933,
+1933,
+"isfdb"
+]
+}
 ],
 "Q3274361": [
 "nd",
 null,
 null,
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
+{},
 {}
 ],
 "Q4050857": [
-"nd",
-1990,
-"openlibrary",
-"2026-11-19",
+"ok",
+1931,
+"wikipedia",
+"2026-11-20",
 [
 "cce",
-"openlibrary",
-"loc"
+"wikipedia",
+"isfdb"
 ],
 {
-"openlibrary": 1990
+"wikipedia": 1931
+},
+{
+"puntate": [
+1931,
+1931,
+"wikipedia"
+]
 }
 ],
 "Q6929263": [
 "nd",
 null,
 null,
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
+{},
 {}
 ],
 "Q154783": [
 "nd",
 null,
 null,
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
+{},
 {}
 ],
 "Q1404733": [
 "ok",
 1931,
 "bnf",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
-"bnf"
+"bnf",
+"wikipedia",
+"isfdb"
 ],
 {
-"bnf": 1931
+"bnf": 1931,
+"wikipedia": 1931
+},
+{
+"puntate": [
+1931,
+1931,
+"wikipedia"
+]
 }
 ],
 "Q7990995": [
-"nd",
-1937,
-"openlibrary",
-"2026-11-19",
+"ok",
+1931,
+"wikipedia",
+"2026-11-20",
 [
 "cce",
-"openlibrary",
-"loc"
+"wikipedia",
+"isfdb"
 ],
 {
-"openlibrary": 1937
+"wikipedia": 1931
+},
+{
+"puntate": [
+1931,
+1931,
+"wikipedia"
+]
 }
 ],
 "Q6683419": [
 "ok",
 1931,
 "openlibrary",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "openlibrary": 1931
-}
+},
+{}
 ],
 "Q1732704": [
 "ok",
 1931,
 "bnf",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
-"bnf"
+"bnf",
+"wikipedia",
+"isfdb"
 ],
 {
-"bnf": 1931
+"bnf": 1931,
+"wikipedia": 1931
+},
+{
+"puntate": [
+1931,
+1931,
+"wikipedia"
+]
 }
 ],
 "Q8346134": [
 "nd",
 null,
 null,
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
+{},
 {}
 ],
 "Q3209740": [
 "ok",
 1931,
 "bnf",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
-"bnf"
+"bnf",
+"wikipedia",
+"isfdb"
 ],
 {
-"bnf": 1931
+"bnf": 1931,
+"wikipedia": 1932
+},
+{
+"puntate": [
+1932,
+1932,
+"wikipedia"
+]
 }
 ],
 "Q1885267": [
 "ok",
 1931,
 "bnf",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
-"bnf"
+"bnf",
+"wikipedia",
+"isfdb"
 ],
 {
-"bnf": 1931
+"bnf": 1931,
+"wikipedia": 1931
+},
+{
+"puntate": [
+1931,
+1931,
+"wikipedia"
+]
 }
 ],
 "Q4915806": [
 "nd",
 null,
 null,
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
+{},
 {}
 ],
 "Q7286666": [
 "nd",
 null,
 null,
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
+{},
 {}
 ],
 "Q6461108": [
 "ok",
 1931,
 "bnf",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
-"bnf"
+"bnf",
+"wikipedia",
+"isfdb"
 ],
 {
 "bnf": 1931
-}
+},
+{}
 ],
 "Q7736867": [
-"nd",
-null,
-null,
-"2026-11-19",
+"ok",
+1931,
+"wikipedia",
+"2026-11-20",
 [
 "cce",
-"openlibrary",
-"loc"
+"wikipedia",
+"isfdb"
 ],
-{}
+{
+"wikipedia": 1931
+},
+{
+"puntate": [
+1931,
+1931,
+"wikipedia"
+]
+}
 ],
 "Q7625506": [
-"nd",
-null,
-null,
-"2026-11-19",
+"ok",
+1931,
+"wikipedia",
+"2026-11-20",
 [
 "cce",
-"openlibrary",
-"loc"
+"wikipedia",
+"isfdb"
 ],
-{}
+{
+"wikipedia": 1931
+},
+{
+"puntate": [
+1931,
+1931,
+"wikipedia"
+]
+}
 ],
 "Q16385287": [
 "ok",
 1931,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1931
-}
+},
+{}
 ],
 "Q6151026": [
 "ok",
 1931,
-"openlibrary",
-"2026-11-19",
+"cce",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
-"openlibrary": 1931
-}
+"cce": 1931
+},
+{}
 ],
 "Q7111757": [
 "ok",
 1931,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1931
-}
+},
+{}
 ],
 "Q11931224": [
 "nd",
 null,
 null,
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
+{},
 {}
 ],
 "Q523506": [
-"nd",
-1954,
-"bnf",
-"2026-11-19",
+"ok",
+1931,
+"wikipedia",
+"2026-11-20",
 [
 "cce",
 "bnf",
-"openlibrary",
-"loc"
+"wikipedia",
+"isfdb"
 ],
 {
 "bnf": 1954,
-"loc": 1970
+"wikipedia": 1931
+},
+{
+"puntate": [
+1931,
+1931,
+"wikipedia"
+]
 }
 ],
 "Q4952168": [
 "ok",
 1931,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1931
-}
+},
+{}
 ],
 "Q5050296": [
 "ok",
 1931,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1931
-}
+},
+{}
 ],
 "Q98078403": [
 "ok",
 1931,
 "openlibrary",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "openlibrary": 1931
-}
+},
+{}
 ],
 "Q21085990": [
 "nd",
 1954,
 "loc",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
 {
 "openlibrary": 1954,
 "loc": 1954
-}
+},
+{}
 ],
 "Q20726178": [
 "nd",
 1933,
 "loc",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
 {
 "openlibrary": 1933,
 "loc": 1933
-}
+},
+{}
 ],
 "Q4928550": [
-"nd",
-2014,
-"openlibrary",
-"2026-11-19",
+"ok",
+1931,
+"wikipedia",
+"2026-11-20",
 [
 "cce",
-"openlibrary",
-"loc"
+"wikipedia",
+"isfdb"
 ],
 {
-"openlibrary": 2014
+"wikipedia": 1931
+},
+{
+"puntate": [
+1931,
+1931,
+"wikipedia"
+]
 }
 ],
 "Q3548512": [
 "ok",
 1931,
 "bnf",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
-"bnf"
+"bnf",
+"wikipedia",
+"isfdb"
 ],
 {
 "bnf": 1931
-}
+},
+{}
 ],
 "Q4732223": [
-"nd",
-2014,
-"openlibrary",
-"2026-11-19",
+"ok",
+1931,
+"isfdb",
+"2026-11-20",
 [
 "cce",
-"openlibrary",
-"loc"
+"wikipedia",
+"isfdb"
 ],
 {
-"openlibrary": 2014
+"isfdb": 1931
+},
+{
+"puntate": [
+1931,
+1931,
+"isfdb"
+]
 }
 ],
 "Q11967379": [
 "ok",
 1931,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1931
-}
+},
+{}
 ],
 "Q972066": [
 "ok",
 1931,
 "bnf",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
-"bnf"
+"bnf",
+"wikipedia",
+"isfdb"
 ],
 {
-"bnf": 1931
+"bnf": 1931,
+"wikipedia": 1931
+},
+{
+"puntate": [
+1931,
+1931,
+"wikipedia"
+]
 }
 ],
 "Q21657640": [
 "nd",
-null,
-null,
-"2026-11-19",
+1930,
+"wikipedia",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
-{}
+{
+"wikipedia": 1930
+},
+{
+"puntate": [
+1930,
+1930,
+"wikipedia"
+]
+}
 ],
 "Q3887314": [
 "ok",
 1931,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1931
-}
+},
+{}
 ],
 "Q17278594": [
 "nd",
 1978,
 "loc",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
 {
 "openlibrary": 1978,
 "loc": 1978
-}
+},
+{}
 ],
 "Q4960195": [
-"nd",
-null,
-null,
-"2026-11-19",
+"ok",
+1931,
+"isfdb",
+"2026-11-20",
 [
 "cce",
-"openlibrary",
-"loc"
+"wikipedia",
+"isfdb"
 ],
-{}
+{
+"isfdb": 1931
+},
+{
+"puntate": [
+1931,
+1931,
+"isfdb"
+]
+}
 ],
 "Q96378028": [
 "ok",
 1931,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1931
-}
+},
+{}
 ],
 "Q5121809": [
-"nd",
-2020,
-"openlibrary",
-"2026-11-19",
+"ok",
+1931,
+"isfdb",
+"2026-11-20",
 [
 "cce",
-"openlibrary",
-"loc"
+"wikipedia",
+"isfdb"
 ],
 {
-"openlibrary": 2020
+"isfdb": 1931
+},
+{
+"puntate": [
+1931,
+1931,
+"isfdb"
+]
 }
 ],
 "Q7767852": [
-"nd",
-null,
-null,
-"2026-11-19",
+"ok",
+1931,
+"isfdb",
+"2026-11-20",
 [
 "cce",
-"openlibrary",
-"loc"
-],
-{}
-],
-"Q7764170": [
-"nd",
-null,
-null,
-"2026-11-19",
-[
-"cce",
-"openlibrary",
-"loc"
-],
-{}
-],
-"Q7707689": [
-"nd",
-2014,
-"openlibrary",
-"2026-11-19",
-[
-"cce",
-"openlibrary",
-"loc"
+"wikipedia",
+"isfdb"
 ],
 {
-"openlibrary": 2014
+"isfdb": 1931
+},
+{
+"puntate": [
+1931,
+1931,
+"isfdb"
+]
+}
+],
+"Q7764170": [
+"ok",
+1931,
+"isfdb",
+"2026-11-20",
+[
+"cce",
+"wikipedia",
+"isfdb"
+],
+{
+"isfdb": 1931
+},
+{
+"puntate": [
+1931,
+1931,
+"isfdb"
+]
+}
+],
+"Q7707689": [
+"ok",
+1931,
+"isfdb",
+"2026-11-20",
+[
+"cce",
+"wikipedia",
+"isfdb"
+],
+{
+"isfdb": 1931
+},
+{
+"puntate": [
+1931,
+1931,
+"isfdb"
+]
 }
 ],
 "Q9369134": [
 "nd",
 null,
 null,
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
+{},
 {}
 ],
 "Q2252950": [
 "nd",
 null,
 null,
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
+{},
 {}
 ],
 "Q11757814": [
 "ok",
 1931,
 "openlibrary",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "openlibrary": 1931
-}
+},
+{}
 ],
 "Q3206458": [
 "ok",
 1931,
 "bnf",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
-"bnf"
+"bnf",
+"wikipedia",
+"isfdb"
 ],
 {
 "bnf": 1931
-}
+},
+{}
 ],
 "Q2824300": [
 "ok",
 1931,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1931
-}
+},
+{}
 ],
 "Q1213323": [
 "ok",
 1931,
 "k10plus",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
-"k10plus"
+"k10plus",
+"wikipedia",
+"isfdb"
 ],
 {
 "k10plus": 1931
-}
+},
+{}
 ],
 "Q1430492": [
 "ok",
 1931,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1931
-}
+},
+{}
 ],
 "Q6043023": [
 "ok",
 1931,
 "openlibrary",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "openlibrary": 1931
-}
+},
+{}
 ],
 "Q17538871": [
 "nd",
 1934,
-"loc",
-"2026-11-19",
+"cce",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
 {
+"cce": 1934,
 "openlibrary": 1934,
 "loc": 1934
-}
+},
+{}
 ],
 "Q19135670": [
 "nd",
 null,
 null,
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
+{},
 {}
 ],
 "Q21743249": [
@@ -1756,246 +2499,640 @@ null,
 "nd",
 1948,
 "openlibrary",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
 {
 "openlibrary": 1948,
 "loc": 1956
-}
+},
+{}
 ],
 "Q116150984": [
 "nd",
 1973,
 "loc",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
 {
 "loc": 1973
-}
+},
+{}
 ],
 "Q952083": [
 "nd",
 null,
 null,
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
+{},
 {}
 ],
 "Q1371979": [
 "ok",
 1931,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1931
-}
+},
+{}
 ],
 "Q1809904": [
 "ok",
 1931,
 "bnf",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
-"bnf"
+"bnf",
+"wikipedia",
+"isfdb"
 ],
 {
 "bnf": 1931
-}
+},
+{}
 ],
 "Q5981118": [
 "nd",
 2002,
 "loc",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
 {
+"openlibrary": 2002,
 "loc": 2002
-}
+},
+{}
 ],
 "Q10472591": [
 "ok",
 1931,
 "k10plus",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
-"k10plus"
+"k10plus",
+"wikipedia",
+"isfdb"
 ],
 {
 "k10plus": 1931
-}
+},
+{}
 ],
 "Q11792659": [
 "nd",
 1934,
 "openlibrary",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
 {
 "openlibrary": 1934,
 "loc": 1947
-}
+},
+{}
 ],
 "Q12355204": [
 "nd",
 null,
 null,
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
+{},
 {}
 ],
 "Q16407463": [
 "nd",
 null,
 null,
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
+{},
 {}
 ],
 "Q18620436": [
-"nd",
-null,
-null,
-"2026-11-19",
+"ok",
+1931,
+"isfdb",
+"2026-11-20",
 [
 "cce",
-"openlibrary",
-"loc"
+"wikipedia",
+"isfdb"
 ],
-{}
+{
+"isfdb": 1931
+},
+{
+"puntate": [
+1931,
+1931,
+"isfdb"
+]
+}
 ],
 "Q18679627": [
 "nd",
 1932,
 "loc",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
 {
 "loc": 1932
-}
+},
+{}
 ],
 "Q28610697": [
 "nd",
 null,
 null,
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
+{},
 {}
 ],
 "Q28653530": [
 "nd",
 null,
 null,
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
+{},
 {}
 ],
 "Q30900938": [
 "ok",
 1931,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1931
-}
+},
+{}
 ],
 "Q104827186": [
 "nd",
 null,
 null,
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
+{},
 {}
 ],
 "Q106603100": [
 "nd",
 null,
 null,
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
+{},
 {}
 ],
 "Q117353888": [
 "nd",
 1950,
 "openlibrary",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
 {
 "openlibrary": 1950,
 "loc": 1962
-}
+},
+{}
 ],
 "Q130472608": [
 "nd",
 null,
 null,
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
+{},
 {}
+],
+"Q212495": [
+"nd",
+1929,
+"wikipedia",
+"2026-11-20",
+[
+"cce",
+"k10plus",
+"wikipedia",
+"isfdb",
+"openlibrary",
+"loc"
+],
+{
+"duke": 1928,
+"k10plus": 1928,
+"wikipedia": 1929,
+"openlibrary": 1949,
+"loc": 1954
+},
+{
+"puntate": [
+1929,
+1929,
+"wikipedia"
+],
+"date_wikidata": [
+1928,
+1931
+]
+}
+],
+"Q16224234": [
+"nd",
+2008,
+"loc",
+"2026-11-20",
+[
+"cce",
+"wikipedia",
+"isfdb",
+"openlibrary",
+"loc"
+],
+{
+"openlibrary": 2008,
+"loc": 2008
+},
+{}
+],
+"Q636870": [
+"nd",
+1970,
+"bnf",
+"2026-11-20",
+[
+"cce",
+"bnf",
+"wikipedia",
+"openlibrary",
+"loc"
+],
+{
+"bnf": 1970
+},
+{
+"puntate": [
+1930,
+1931,
+"wikipedia"
+]
+}
+],
+"Q2917079": [
+"ok",
+1931,
+"cce",
+"2026-11-20",
+[
+"cce",
+"wikipedia",
+"isfdb"
+],
+{
+"cce": 1931
+},
+{}
+],
+"Q2020355": [
+"ok",
+1931,
+"wikipedia",
+"2026-11-20",
+[
+"cce",
+"wikipedia",
+"isfdb"
+],
+{
+"wikipedia": 1931
+},
+{
+"puntate": [
+1931,
+1931,
+"wikipedia"
+]
+}
+],
+"Q3210396": [
+"ok",
+1931,
+"cce",
+"2026-11-20",
+[
+"cce",
+"wikipedia",
+"isfdb"
+],
+{
+"cce": 1931,
+"wikipedia": 1931
+},
+{
+"puntate": [
+1931,
+1931,
+"wikipedia"
+]
+}
+],
+"Q318208": [
+"prima",
+1930,
+"k10plus",
+"2026-11-20",
+[
+"cce",
+"k10plus",
+"wikipedia",
+"isfdb",
+"openlibrary",
+"loc"
+],
+{
+"k10plus": 1930
+},
+{
+"date_wikidata": [
+1930,
+1931
+]
+}
+],
+"Q7765859": [
+"nd",
+null,
+null,
+"2026-11-20",
+[
+"cce",
+"wikipedia",
+"isfdb",
+"openlibrary",
+"loc"
+],
+{},
+{}
+],
+"Q112276362": [
+"ok",
+1931,
+"cce",
+"2026-11-20",
+[
+"cce",
+"wikipedia",
+"isfdb"
+],
+{
+"cce": 1931,
+"wikipedia": 1931
+},
+{
+"puntate": [
+1931,
+1931,
+"wikipedia"
+],
+"date_wikidata": [
+1929,
+1931
+]
+}
+],
+"Q2878373": [
+"ok",
+1931,
+"cce",
+"2026-11-20",
+[
+"cce",
+"wikipedia",
+"isfdb"
+],
+{
+"cce": 1931
+},
+{}
+],
+"Q3981235": [
+"ok",
+1931,
+"cce",
+"2026-11-20",
+[
+"cce",
+"wikipedia"
+],
+{
+"cce": 1931
+},
+{
+"puntate": [
+1930,
+1931,
+"wikipedia"
+],
+"date_wikidata": [
+1930,
+1931
+]
+}
+],
+"Q25091412": [
+"ok",
+1931,
+"cce",
+"2026-11-20",
+[
+"cce",
+"wikipedia",
+"isfdb"
+],
+{
+"cce": 1931,
+"wikipedia": 1931
+},
+{
+"puntate": [
+1931,
+1931,
+"wikipedia"
+]
+}
+],
+"Q4501687": [
+"ok",
+1931,
+"cce",
+"2026-11-20",
+[
+"cce",
+"wikipedia",
+"isfdb"
+],
+{
+"cce": 1931
+},
+{}
+],
+"Q1908420": [
+"nd",
+1943,
+"loc",
+"2026-11-20",
+[
+"cce",
+"wikipedia",
+"isfdb",
+"openlibrary",
+"loc"
+],
+{
+"loc": 1943
+},
+{}
+],
+"Q800070": [
+"ok",
+1931,
+"wikipedia",
+"2026-11-20",
+[
+"cce",
+"wikipedia",
+"isfdb"
+],
+{
+"wikipedia": 1931
+},
+{
+"puntate": [
+1931,
+1931,
+"wikipedia"
+]
+}
+],
+"Q5932172": [
+"nd",
+null,
+null,
+"2026-11-20",
+[
+"cce",
+"wikipedia",
+"isfdb",
+"openlibrary",
+"loc"
+],
+{},
+{
+"date_wikidata": [
+1931,
+1939,
+1941
+]
+}
 ]
 },
 "2028": {
@@ -2003,47 +3140,66 @@ null,
 "ok",
 1932,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
-"cce": 1932
+"cce": 1932,
+"isfdb": 1932
+},
+{
+"puntate": [
+1932,
+1932,
+"isfdb"
+]
 }
 ],
 "Q7173181": [
 "ok",
 1932,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1932
-}
+},
+{}
 ],
 "Q774233": [
 "ok",
 1932,
 "bnf",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
-"bnf"
+"bnf",
+"wikipedia",
+"isfdb"
 ],
 {
+"cce": 1934,
 "bnf": 1932
-}
+},
+{}
 ],
 "Q1195668": [
 "prima",
 1930,
 "k10plus",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
 "k10plus",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
@@ -2051,339 +3207,496 @@ null,
 "k10plus": 1930,
 "openlibrary": 1960,
 "loc": 1953
-}
+},
+{}
 ],
 "Q1823273": [
 "ok",
 1932,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
-"cce": 1932
+"cce": 1932,
+"wikipedia": 1932
+},
+{
+"puntate": [
+1932,
+1932,
+"wikipedia"
+]
 }
 ],
 "Q957248": [
 "ok",
 1932,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
-"cce": 1932
+"cce": 1932,
+"wikipedia": 1932
+},
+{
+"puntate": [
+1932,
+1932,
+"wikipedia"
+]
 }
 ],
 "Q5142221": [
 "ok",
 1932,
 "openlibrary",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "openlibrary": 1932
-}
+},
+{}
 ],
 "Q7727278": [
 "ok",
 1932,
 "k10plus",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
-"k10plus"
+"k10plus",
+"wikipedia",
+"isfdb"
 ],
 {
-"k10plus": 1932
+"k10plus": 1932,
+"wikipedia": 1932
+},
+{
+"puntate": [
+1932,
+1932,
+"wikipedia"
+]
 }
 ],
 "Q934396": [
 "ok",
 1932,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
-"cce": 1932
+"cce": 1932,
+"wikipedia": 1932
+},
+{
+"puntate": [
+1932,
+1932,
+"wikipedia"
+]
 }
 ],
 "Q610428": [
 "ok",
 1932,
 "k10plus",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
-"k10plus"
+"k10plus",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1933,
-"k10plus": 1932
+"k10plus": 1932,
+"wikipedia": 1932
+},
+{
+"puntate": [
+1932,
+1932,
+"wikipedia"
+]
 }
 ],
 "Q1970223": [
 "ok",
 1932,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1932
-}
+},
+{}
 ],
 "Q63707": [
 "nd",
 1952,
 "loc",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
 {
 "openlibrary": 1970,
 "loc": 1952
-}
+},
+{}
 ],
 "Q1169793": [
 "ok",
 1932,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1932
-}
+},
+{}
 ],
 "Q1955781": [
 "ok",
 1932,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1932
-}
+},
+{}
 ],
 "Q2512207": [
-"nd",
-null,
-null,
-"2026-11-19",
+"ok",
+1932,
+"isfdb",
+"2026-11-20",
 [
 "cce",
-"openlibrary",
-"loc"
+"wikipedia",
+"isfdb"
 ],
-{}
+{
+"isfdb": 1932
+},
+{
+"puntate": [
+1932,
+1932,
+"isfdb"
+]
+}
 ],
 "Q1900478": [
 "ok",
 1932,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1932
-}
+},
+{}
 ],
 "Q5264340": [
 "nd",
 1933,
 "loc",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
 {
 "openlibrary": 1933,
 "loc": 1933
-}
+},
+{}
 ],
 "Q17036247": [
 "nd",
-null,
-null,
-"2026-11-19",
+1938,
+"wikipedia",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
-{}
+{
+"wikipedia": 1938
+},
+{
+"puntate": [
+1938,
+1938,
+"wikipedia"
+]
+}
 ],
 "Q3655833": [
 "nd",
 1933,
 "openlibrary",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
 {
 "openlibrary": 1933
-}
+},
+{}
 ],
 "Q370698": [
-"prima",
-1931,
-"k10plus",
-"2026-11-19",
+"ok",
+1932,
+"wikipedia",
+"2026-11-20",
 [
 "cce",
 "k10plus",
-"openlibrary",
-"loc"
+"wikipedia",
+"isfdb"
 ],
 {
 "k10plus": 1931,
-"openlibrary": 1956
+"wikipedia": 1932
+},
+{
+"puntate": [
+1932,
+1932,
+"wikipedia"
+]
 }
 ],
 "Q751574": [
 "nd",
 1941,
 "loc",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
 {
 "openlibrary": 1941,
 "loc": 1941
-}
+},
+{}
 ],
 "Q257144": [
 "ok",
 1932,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1932
-}
+},
+{}
 ],
 "Q2182784": [
 "ok",
 1932,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1932
-}
+},
+{}
 ],
 "Q1529809": [
 "ok",
 1932,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
-"cce": 1932
+"cce": 1932,
+"wikipedia": 1932
+},
+{
+"puntate": [
+1932,
+1932,
+"wikipedia"
+]
 }
 ],
 "Q20657367": [
 "ok",
 1932,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1932
-}
+},
+{}
 ],
 "Q6372683": [
 "nd",
 2019,
 "openlibrary",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
 {
 "openlibrary": 2019
-}
+},
+{}
 ],
 "Q1746652": [
 "ok",
 1932,
 "k10plus",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
-"k10plus"
+"k10plus",
+"wikipedia",
+"isfdb"
 ],
 {
-"k10plus": 1932
+"k10plus": 1932,
+"wikipedia": 1932
+},
+{
+"puntate": [
+1932,
+1932,
+"wikipedia"
+]
 }
 ],
 "Q2614387": [
 "nd",
-2020,
-"loc",
-"2026-11-19",
+1931,
+"wikipedia",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
 "openlibrary",
 "loc"
 ],
 {
 "loc": 2020
+},
+{
+"puntate": [
+1931,
+null,
+"wikipedia"
+]
 }
 ],
 "Q7562273": [
 "ok",
 1932,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
-"cce": 1932
+"cce": 1932,
+"wikipedia": 1932
+},
+{
+"puntate": [
+1932,
+1932,
+"wikipedia"
+]
 }
 ],
 "Q357328": [
 "prima",
 1930,
 "k10plus",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
 "k10plus",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
@@ -2391,427 +3704,603 @@ null,
 "k10plus": 1930,
 "openlibrary": 1970,
 "loc": 1970
-}
+},
+{}
 ],
 "Q1192235": [
 "ok",
 1932,
 "k10plus",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
-"k10plus"
+"k10plus",
+"wikipedia",
+"isfdb"
 ],
 {
 "k10plus": 1932
-}
+},
+{}
 ],
 "Q5216075": [
 "ok",
 1932,
 "openlibrary",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1933,
 "openlibrary": 1932
-}
+},
+{}
 ],
 "Q17060239": [
 "nd",
 null,
 null,
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
+{},
 {}
 ],
 "Q1706363": [
 "ok",
 1932,
 "k10plus",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
-"k10plus"
+"k10plus",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1933,
 "k10plus": 1932
-}
+},
+{}
 ],
 "Q104829995": [
-"nd",
-null,
-null,
-"2026-11-19",
+"ok",
+1932,
+"isfdb",
+"2026-11-20",
 [
 "cce",
-"openlibrary",
-"loc"
+"wikipedia",
+"isfdb"
 ],
-{}
+{
+"isfdb": 1932
+},
+{
+"puntate": [
+1932,
+1932,
+"isfdb"
+]
+}
 ],
 "Q1171410": [
 "ok",
 1932,
 "k10plus",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
-"k10plus"
+"k10plus",
+"wikipedia",
+"isfdb"
 ],
 {
 "k10plus": 1932
-}
+},
+{}
 ],
 "Q7745219": [
-"nd",
-1896,
-"loc",
-"2026-11-19",
+"prima",
+1897,
+"isfdb",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
 {
+"isfdb": 1897,
 "openlibrary": 1990,
 "loc": 1896
+},
+{
+"puntate": [
+1897,
+1897,
+"isfdb"
+]
 }
 ],
 "Q7718329": [
-"nd",
-1934,
-"openlibrary",
-"2026-11-19",
+"ok",
+1932,
+"wikipedia",
+"2026-11-20",
 [
 "cce",
-"openlibrary",
-"loc"
+"wikipedia",
+"isfdb"
 ],
 {
-"openlibrary": 1934
+"wikipedia": 1932
+},
+{
+"puntate": [
+1932,
+1932,
+"wikipedia"
+]
 }
 ],
 "Q1075805": [
-"nd",
-1970,
-"loc",
-"2026-11-19",
+"parziale",
+1933,
+"wikipedia",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
 "openlibrary",
 "loc"
 ],
 {
 "openlibrary": 1970,
 "loc": 1970
+},
+{
+"puntate": [
+1932,
+1933,
+"wikipedia"
+]
 }
 ],
 "Q8036886": [
-"nd",
-1975,
-"openlibrary",
-"2026-11-19",
+"ok",
+1932,
+"isfdb",
+"2026-11-20",
 [
 "cce",
-"openlibrary",
-"loc"
+"wikipedia",
+"isfdb"
 ],
 {
-"openlibrary": 1975
+"isfdb": 1932
+},
+{
+"puntate": [
+1932,
+1932,
+"isfdb"
+]
 }
 ],
 "Q5278419": [
 "ok",
 1932,
 "openlibrary",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "openlibrary": 1932
-}
+},
+{}
 ],
 "Q12410009": [
 "ok",
 1932,
 "openlibrary",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "openlibrary": 1932
-}
+},
+{}
 ],
 "Q6165398": [
 "nd",
 1966,
 "loc",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
 {
 "openlibrary": 2011,
 "loc": 1966
-}
+},
+{}
 ],
 "Q3791139": [
 "nd",
 1934,
-"loc",
-"2026-11-19",
+"cce",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
 "openlibrary",
 "loc"
 ],
 {
+"cce": 1934,
 "openlibrary": 1934,
 "loc": 1934
+},
+{
+"puntate": [
+1932,
+null,
+"wikipedia"
+]
 }
 ],
 "Q5247648": [
 "ok",
 1932,
 "openlibrary",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "openlibrary": 1932
-}
+},
+{}
 ],
 "Q7173756": [
 "ok",
 1932,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
-"cce": 1932
+"cce": 1932,
+"wikipedia": 1932
+},
+{
+"puntate": [
+1932,
+1932,
+"wikipedia"
+]
 }
 ],
 "Q104830453": [
-"nd",
-null,
-null,
-"2026-11-19",
+"ok",
+1932,
+"wikipedia",
+"2026-11-20",
 [
 "cce",
-"openlibrary",
-"loc"
+"wikipedia",
+"isfdb"
 ],
-{}
+{
+"wikipedia": 1932
+},
+{
+"puntate": [
+1932,
+1932,
+"wikipedia"
+]
+}
 ],
 "Q5267101": [
 "ok",
 1932,
-"loc",
-"2026-11-19",
+"cce",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
-"loc": 1932
-}
+"cce": 1932
+},
+{}
 ],
 "Q104856374": [
 "nd",
 1937,
 "loc",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
 {
 "openlibrary": 1937,
 "loc": 1937
-}
+},
+{}
 ],
 "Q7234896": [
 "nd",
 null,
 null,
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
+{},
 {}
 ],
 "Q7758787": [
 "ok",
 1932,
 "bnf",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
-"bnf"
+"bnf",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1933,
 "bnf": 1932
-}
+},
+{}
 ],
 "Q5872036": [
-"nd",
-null,
-null,
-"2026-11-19",
+"ok",
+1932,
+"wikipedia",
+"2026-11-20",
 [
 "cce",
-"openlibrary",
-"loc"
+"wikipedia",
+"isfdb"
 ],
-{}
+{
+"wikipedia": 1932
+},
+{
+"puntate": [
+1932,
+1932,
+"wikipedia"
+]
+}
 ],
 "Q21162245": [
 "ok",
 1932,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1932
-}
+},
+{}
 ],
 "Q5318076": [
-"ok",
-1932,
-"cce",
-"2026-11-19",
+"parziale",
+1941,
+"isfdb",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1932
+},
+{
+"puntate": [
+1932,
+1941,
+"isfdb"
+]
 }
 ],
 "Q8199988": [
 "ok",
 1932,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
-"cce": 1932
+"cce": 1932,
+"wikipedia": 1932
+},
+{
+"puntate": [
+1932,
+1932,
+"wikipedia"
+]
 }
 ],
 "Q1979886": [
 "nd",
 1971,
 "loc",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
 {
 "loc": 1971
-}
+},
+{}
 ],
 "Q16385280": [
 "ok",
 1932,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
-"cce": 1932
+"cce": 1932,
+"wikipedia": 1932
+},
+{
+"puntate": [
+1932,
+1932,
+"wikipedia"
+]
 }
 ],
 "Q3412860": [
 "ok",
 1932,
-"loc",
-"2026-11-19",
+"cce",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
-"loc": 1932
+"cce": 1932,
+"wikipedia": 1932
+},
+{
+"puntate": [
+1932,
+1932,
+"wikipedia"
+]
 }
 ],
 "Q85806586": [
 "ok",
 1932,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1932
-}
+},
+{}
 ],
 "Q6383214": [
 "ok",
 1932,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1932
-}
+},
+{}
 ],
 "Q7735448": [
 "ok",
 1932,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1932
-}
+},
+{}
 ],
 "Q8000821": [
 "ok",
 1932,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1932
-}
+},
+{}
 ],
 "Q15032732": [
 "nd",
 1933,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
 "openlibrary",
 "loc"
 ],
@@ -2819,102 +4308,146 @@ null,
 "cce": 1933,
 "openlibrary": 1933,
 "loc": 1933
+},
+{
+"puntate": [
+1932,
+null,
+"wikipedia"
+]
 }
 ],
 "Q5677810": [
 "nd",
 null,
 null,
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
+{},
 {}
 ],
 "Q3818205": [
 "ok",
 1932,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1932
-}
+},
+{}
 ],
 "Q3772100": [
-"nd",
+"prima",
 1896,
-"loc",
-"2026-11-19",
+"isfdb",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
 {
+"isfdb": 1896,
 "openlibrary": 1896,
 "loc": 1896
+},
+{
+"puntate": [
+1896,
+1896,
+"isfdb"
+]
 }
 ],
 "Q23035595": [
 "ok",
 1932,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
-"cce": 1932
+"cce": 1932,
+"wikipedia": 1932
+},
+{
+"puntate": [
+1932,
+1932,
+"wikipedia"
+]
 }
 ],
 "Q5614417": [
 "ok",
 1932,
-"openlibrary",
-"2026-11-19",
+"cce",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
-"openlibrary": 1932
-}
+"cce": 1932
+},
+{}
 ],
 "Q8058128": [
 "ok",
 1932,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1932
-}
+},
+{}
 ],
 "Q7797601": [
 "ok",
 1932,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1932
-}
+},
+{}
 ],
 "Q7804791": [
 "nd",
 1933,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
@@ -2922,808 +4455,1148 @@ null,
 "cce": 1933,
 "openlibrary": 1933,
 "loc": 1933
-}
+},
+{}
 ],
 "Q5910588": [
 "ok",
 1932,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
-"cce": 1932
+"cce": 1932,
+"wikipedia": 1932
+},
+{
+"puntate": [
+1932,
+1932,
+"wikipedia"
+]
 }
 ],
 "Q8046351": [
 "nd",
 1942,
 "loc",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
 {
 "openlibrary": 1942,
 "loc": 1942
-}
+},
+{}
 ],
 "Q7090080": [
 "nd",
 1963,
 "openlibrary",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
 {
 "openlibrary": 1963,
 "loc": 1966
-}
+},
+{}
 ],
 "Q3794795": [
 "ok",
 1932,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1932
-}
+},
+{}
 ],
 "Q7765614": [
-"nd",
-1973,
-"loc",
-"2026-11-19",
+"ok",
+1932,
+"isfdb",
+"2026-11-20",
 [
 "cce",
-"openlibrary",
-"loc"
+"wikipedia",
+"isfdb"
 ],
 {
-"openlibrary": 1973,
-"loc": 1973
+"isfdb": 1932
+},
+{
+"puntate": [
+1932,
+1932,
+"isfdb"
+]
 }
 ],
 "Q3795569": [
-"nd",
-2004,
-"openlibrary",
-"2026-11-19",
+"prima",
+1898,
+"isfdb",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
 {
+"isfdb": 1898,
 "openlibrary": 2004
+},
+{
+"puntate": [
+1898,
+1898,
+"isfdb"
+]
 }
 ],
 "Q7773771": [
-"nd",
-null,
-null,
-"2026-11-19",
+"ok",
+1932,
+"wikipedia",
+"2026-11-20",
 [
 "cce",
-"openlibrary",
-"loc"
+"wikipedia",
+"isfdb"
 ],
-{}
+{
+"wikipedia": 1932
+},
+{
+"puntate": [
+1932,
+1932,
+"wikipedia"
+]
+}
 ],
 "Q1112060": [
 "ok",
 1932,
 "bnf",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
-"bnf"
+"bnf",
+"wikipedia",
+"isfdb"
 ],
 {
-"bnf": 1932
+"bnf": 1932,
+"wikipedia": 1932
+},
+{
+"puntate": [
+1932,
+1932,
+"wikipedia"
+]
 }
 ],
 "Q7768564": [
-"nd",
-null,
-null,
-"2026-11-19",
+"ok",
+1932,
+"isfdb",
+"2026-11-20",
 [
 "cce",
-"openlibrary",
-"loc"
-],
-{}
-],
-"Q7759037": [
-"nd",
-2016,
-"openlibrary",
-"2026-11-19",
-[
-"cce",
-"openlibrary",
-"loc"
+"wikipedia",
+"isfdb"
 ],
 {
-"openlibrary": 2016
+"isfdb": 1932
+},
+{
+"puntate": [
+1932,
+1932,
+"isfdb"
+]
+}
+],
+"Q7759037": [
+"ok",
+1932,
+"isfdb",
+"2026-11-20",
+[
+"cce",
+"wikipedia",
+"isfdb"
+],
+{
+"isfdb": 1932
+},
+{
+"puntate": [
+1932,
+1932,
+"isfdb"
+]
 }
 ],
 "Q13017091": [
 "nd",
 null,
 null,
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
+{},
 {}
 ],
 "Q6925288": [
-"nd",
-null,
-null,
-"2026-11-19",
+"ok",
+1932,
+"wikipedia",
+"2026-11-20",
 [
 "cce",
-"openlibrary",
-"loc"
+"wikipedia",
+"isfdb"
 ],
-{}
+{
+"wikipedia": 1932
+},
+{
+"puntate": [
+1932,
+1932,
+"wikipedia"
+]
+}
 ],
 "Q17151836": [
 "ok",
 1932,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1932
-}
+},
+{}
 ],
 "Q7208469": [
 "ok",
 1932,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
-"cce": 1932
+"cce": 1932,
+"wikipedia": 1932
+},
+{
+"puntate": [
+1932,
+1932,
+"wikipedia"
+]
 }
 ],
 "Q735269": [
 "nd",
 1993,
 "loc",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
 {
 "loc": 1993
-}
+},
+{}
 ],
 "Q1325013": [
 "ok",
 1932,
 "bnf",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
-"bnf"
+"bnf",
+"wikipedia",
+"isfdb"
 ],
 {
-"bnf": 1932
+"bnf": 1932,
+"wikipedia": 1932
+},
+{
+"puntate": [
+1932,
+1932,
+"wikipedia"
+]
 }
 ],
 "Q110732464": [
 "ok",
 1932,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1932
-}
+},
+{}
 ],
 "Q5058034": [
 "nd",
 1992,
 "openlibrary",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
 {
 "openlibrary": 1992,
 "loc": 2020
-}
+},
+{}
 ],
 "Q16387178": [
-"nd",
-null,
-null,
-"2026-11-19",
+"ok",
+1932,
+"wikipedia",
+"2026-11-20",
 [
 "cce",
-"openlibrary",
-"loc"
+"wikipedia",
+"isfdb"
 ],
-{}
+{
+"wikipedia": 1932
+},
+{
+"puntate": [
+1932,
+1932,
+"wikipedia"
+]
+}
 ],
 "Q17173648": [
 "nd",
 1933,
 "bnf",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
 "bnf",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
 {
 "bnf": 1933
-}
+},
+{}
 ],
 "Q6817094": [
 "ok",
 1932,
-"openlibrary",
-"2026-11-19",
+"wikipedia",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
-"openlibrary": 1932
+"wikipedia": 1932
+},
+{
+"puntate": [
+1932,
+1932,
+"wikipedia"
+]
 }
 ],
 "Q7656082": [
 "ok",
 1932,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1932
-}
+},
+{}
 ],
 "Q16677418": [
-"prima",
-1930,
-"bnf",
-"2026-11-19",
+"ok",
+1932,
+"wikipedia",
+"2026-11-20",
 [
 "cce",
 "bnf",
-"openlibrary",
-"loc"
+"wikipedia",
+"isfdb"
 ],
 {
 "bnf": 1930,
-"openlibrary": 2002,
-"loc": 2002
+"wikipedia": 1932
+},
+{
+"puntate": [
+1932,
+1932,
+"wikipedia"
+]
 }
 ],
 "Q23035603": [
 "ok",
 1932,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1932
-}
+},
+{}
 ],
 "Q7759291": [
 "ok",
 1932,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1932
-}
+},
+{}
 ],
 "Q5271049": [
 "nd",
 1977,
 "loc",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
 {
 "loc": 1977
-}
+},
+{}
 ],
 "Q60785449": [
 "ok",
 1932,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
-"cce": 1932
+"cce": 1932,
+"wikipedia": 1932
+},
+{
+"puntate": [
+1932,
+1932,
+"wikipedia"
+]
 }
 ],
 "Q16385501": [
-"nd",
-null,
-null,
-"2026-11-19",
+"ok",
+1932,
+"wikipedia",
+"2026-11-20",
 [
 "cce",
-"openlibrary",
-"loc"
+"wikipedia",
+"isfdb"
 ],
-{}
+{
+"wikipedia": 1932
+},
+{
+"puntate": [
+1932,
+1932,
+"wikipedia"
+]
+}
 ],
 "Q8025166": [
 "nd",
 1933,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
 {
 "cce": 1933
-}
+},
+{}
 ],
 "Q5352372": [
 "nd",
 1968,
 "loc",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
 {
 "openlibrary": 1968,
 "loc": 1968
-}
+},
+{}
 ],
 "Q109167813": [
 "ok",
 1932,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1932
-}
+},
+{}
 ],
 "Q5098569": [
 "ok",
 1932,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1932
-}
+},
+{}
 ],
 "Q3210349": [
 "ok",
 1932,
 "bnf",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
-"bnf"
+"bnf",
+"wikipedia",
+"isfdb"
 ],
 {
 "bnf": 1932
-}
+},
+{}
 ],
 "Q7099218": [
-"nd",
-null,
-null,
-"2026-11-19",
+"ok",
+1932,
+"wikipedia",
+"2026-11-20",
 [
 "cce",
-"openlibrary",
-"loc"
+"wikipedia",
+"isfdb"
 ],
-{}
+{
+"wikipedia": 1932
+},
+{
+"puntate": [
+1932,
+1932,
+"wikipedia"
+]
+}
 ],
 "Q96373014": [
 "ok",
 1932,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1932
-}
+},
+{}
 ],
 "Q86753954": [
 "ok",
 1932,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1932
-}
+},
+{}
 ],
 "Q18351196": [
 "nd",
 null,
 null,
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
+{},
 {}
 ],
 "Q3237799": [
 "ok",
 1932,
 "bnf",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
-"bnf"
+"bnf",
+"wikipedia",
+"isfdb"
 ],
 {
-"bnf": 1932
+"bnf": 1932,
+"wikipedia": 1932
+},
+{
+"puntate": [
+1932,
+1932,
+"wikipedia"
+]
 }
 ],
 "Q7170795": [
-"nd",
-null,
-null,
-"2026-11-19",
+"ok",
+1932,
+"wikipedia",
+"2026-11-20",
 [
 "cce",
-"openlibrary",
-"loc"
+"wikipedia",
+"isfdb"
 ],
-{}
+{
+"wikipedia": 1932
+},
+{
+"puntate": [
+1932,
+1932,
+"wikipedia"
+]
+}
 ],
 "Q23035584": [
 "nd",
 1944,
 "openlibrary",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
 {
 "openlibrary": 1944,
 "loc": 2008
-}
+},
+{}
 ],
 "Q29379121": [
 "ok",
 1932,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1932
-}
+},
+{}
 ],
 "Q17633276": [
 "nd",
 1984,
 "loc",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
 {
 "openlibrary": 1984,
 "loc": 1984
-}
+},
+{}
 ],
 "Q1885256": [
 "ok",
 1932,
 "bnf",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
-"bnf"
+"bnf",
+"wikipedia",
+"isfdb"
 ],
 {
-"bnf": 1932
+"bnf": 1932,
+"wikipedia": 1932
+},
+{
+"puntate": [
+1932,
+1932,
+"wikipedia"
+]
 }
 ],
 "Q18392587": [
 "nd",
 null,
 null,
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
+{},
 {}
 ],
 "Q5223407": [
 "nd",
-2014,
-"openlibrary",
-"2026-11-19",
+1931,
+"wikipedia",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
 {
+"wikipedia": 1931,
 "openlibrary": 2014
+},
+{
+"puntate": [
+1931,
+1931,
+"wikipedia"
+]
 }
 ],
 "Q16999020": [
 "nd",
-2020,
-"openlibrary",
-"2026-11-19",
+1931,
+"wikipedia",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
 {
+"wikipedia": 1931,
 "openlibrary": 2020
+},
+{
+"puntate": [
+1931,
+1931,
+"wikipedia"
+]
 }
 ],
 "Q3204486": [
 "ok",
 1932,
 "bnf",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
-"bnf"
+"bnf",
+"wikipedia",
+"isfdb"
 ],
 {
-"bnf": 1932
+"cce": 1934,
+"bnf": 1932,
+"wikipedia": 1932
+},
+{
+"puntate": [
+1932,
+1932,
+"wikipedia"
+]
 }
 ],
 "Q7929510": [
 "nd",
-2014,
-"openlibrary",
-"2026-11-19",
+1931,
+"wikipedia",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
 {
+"wikipedia": 1931,
 "openlibrary": 2014
+},
+{
+"puntate": [
+1931,
+1931,
+"wikipedia"
+]
 }
 ],
 "Q691326": [
 "ok",
 1932,
 "bnf",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
-"bnf"
+"bnf",
+"wikipedia",
+"isfdb"
 ],
 {
 "bnf": 1932
-}
+},
+{}
 ],
 "Q7562673": [
-"nd",
-1957,
-"loc",
-"2026-11-19",
+"ok",
+1932,
+"wikipedia",
+"2026-11-20",
 [
 "cce",
-"openlibrary",
-"loc"
+"wikipedia",
+"isfdb"
 ],
 {
-"openlibrary": 1957,
-"loc": 1957
+"wikipedia": 1932
+},
+{
+"puntate": [
+1932,
+1932,
+"wikipedia"
+]
 }
 ],
 "Q685630": [
 "ok",
 1932,
 "bnf",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
-"bnf"
+"bnf",
+"wikipedia",
+"isfdb"
 ],
 {
-"bnf": 1932
+"bnf": 1932,
+"wikipedia": 1932
+},
+{
+"puntate": [
+1932,
+1932,
+"wikipedia"
+]
 }
 ],
 "Q4367932": [
 "nd",
 null,
 null,
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
+{},
 {}
 ],
 "Q3225099": [
 "ok",
 1932,
 "bnf",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
-"bnf"
+"bnf",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1933,
 "bnf": 1932
-}
+},
+{}
 ],
 "Q59198105": [
 "nd",
 null,
 null,
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
+{},
 {}
 ],
 "Q3824666": [
 "ok",
 1932,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1932
-}
+},
+{}
 ],
 "Q3824667": [
 "ok",
 1932,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1932
-}
+},
+{}
 ],
 "Q5952364": [
 "nd",
 null,
 null,
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
+{},
 {}
 ],
 "Q7228197": [
 "nd",
 null,
 null,
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
+{},
 {}
 ],
 "Q10432740": [
 "ok",
 1932,
 "openlibrary",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "openlibrary": 1932
-}
+},
+{}
 ],
 "Q10493925": [
 "ok",
 1932,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1932
-}
+},
+{}
 ],
 "Q13554420": [
 "ok",
 1932,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1932
-}
+},
+{}
 ],
 "Q16648039": [
 "nd",
 null,
 null,
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
+{},
 {}
 ],
 "Q21651654": [
@@ -3742,310 +5615,718 @@ null,
 "nd",
 null,
 null,
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
+{},
 {}
 ],
 "Q22067782": [
 "nd",
 null,
 null,
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
+{},
 {}
 ],
 "Q29559196": [
 "nd",
 null,
 null,
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
+{},
 {}
 ],
 "Q55736663": [
 "nd",
 null,
 null,
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
+{},
 {}
 ],
 "Q1198971": [
 "ok",
 1932,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1932
-}
+},
+{}
 ],
 "Q1217071": [
 "nd",
 2006,
 "loc",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
 {
 "openlibrary": 2006,
 "loc": 2006
-}
+},
+{}
 ],
 "Q3794895": [
 "nd",
 null,
 null,
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
+{},
 {}
 ],
 "Q3815410": [
 "ok",
 1932,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
-"cce": 1932
+"cce": 1932,
+"isfdb": 1983
+},
+{
+"puntate": [
+1983,
+1983,
+"isfdb"
+]
 }
 ],
 "Q3828461": [
-"nd",
-2005,
-"openlibrary",
-"2026-11-19",
+"ok",
+1932,
+"isfdb",
+"2026-11-20",
 [
 "cce",
-"openlibrary",
-"loc"
+"wikipedia",
+"isfdb"
 ],
 {
-"openlibrary": 2005
+"isfdb": 1932
+},
+{
+"puntate": [
+1932,
+1932,
+"isfdb"
+]
 }
 ],
 "Q4506215": [
 "nd",
 null,
 null,
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
+{},
 {}
 ],
 "Q6500301": [
 "nd",
 null,
 null,
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
+{},
 {}
 ],
 "Q11509176": [
 "nd",
 null,
 null,
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
+{},
 {}
 ],
 "Q12218416": [
 "nd",
 null,
 null,
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
+{},
 {}
 ],
 "Q12597454": [
 "nd",
 null,
 null,
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
+{},
 {}
 ],
 "Q12599279": [
 "nd",
 null,
 null,
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
+{},
 {}
 ],
 "Q12728549": [
 "nd",
 null,
 null,
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
+{},
 {}
 ],
 "Q16407465": [
 "nd",
 null,
 null,
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
+{},
 {}
 ],
 "Q19101057": [
-"nd",
-2016,
-"openlibrary",
-"2026-11-19",
+"ok",
+1932,
+"isfdb",
+"2026-11-20",
 [
 "cce",
-"openlibrary",
-"loc"
+"wikipedia",
+"isfdb"
 ],
 {
-"openlibrary": 2016
+"isfdb": 1932
+},
+{
+"puntate": [
+1932,
+1932,
+"isfdb"
+]
 }
 ],
 "Q19101656": [
-"nd",
-null,
-null,
-"2026-11-19",
+"ok",
+1932,
+"isfdb",
+"2026-11-20",
 [
 "cce",
-"openlibrary",
-"loc"
+"wikipedia",
+"isfdb"
 ],
-{}
+{
+"isfdb": 1932
+},
+{
+"puntate": [
+1932,
+1932,
+"isfdb"
+]
+}
 ],
 "Q19217469": [
 "ok",
 1932,
 "openlibrary",
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
-"dnb"
+"wikipedia",
+"isfdb"
 ],
 {
 "openlibrary": 1932
-}
+},
+{}
 ],
 "Q21660419": [
-"nd",
-2018,
-"openlibrary",
-"2026-11-19",
+"ok",
+1932,
+"isfdb",
+"2026-11-20",
 [
 "cce",
-"openlibrary",
-"loc"
+"wikipedia",
+"isfdb"
 ],
 {
-"openlibrary": 2018
+"isfdb": 1932
+},
+{
+"puntate": [
+1932,
+1932,
+"isfdb"
+]
 }
 ],
 "Q29405101": [
 "nd",
 null,
 null,
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
+{},
 {}
 ],
 "Q89784584": [
 "ok",
 1932,
 "cce",
-"2026-11-19",
+"2026-11-20",
 [
-"cce"
+"cce",
+"wikipedia",
+"isfdb"
 ],
 {
 "cce": 1932
-}
+},
+{}
 ],
 "Q102229104": [
-"nd",
-null,
-null,
-"2026-11-19",
+"ok",
+1932,
+"isfdb",
+"2026-11-20",
 [
 "cce",
-"openlibrary",
-"loc"
+"wikipedia",
+"isfdb"
 ],
-{}
+{
+"isfdb": 1932
+},
+{
+"puntate": [
+1932,
+1932,
+"isfdb"
+]
+}
 ],
 "Q107359351": [
 "nd",
 null,
 null,
-"2026-11-19",
+"2026-11-20",
 [
 "cce",
+"wikipedia",
+"isfdb",
 "openlibrary",
 "loc"
 ],
+{},
+{}
+],
+"Q470600": [
+"ok",
+1932,
+"k10plus",
+"2026-11-20",
+[
+"cce",
+"k10plus",
+"wikipedia",
+"isfdb"
+],
+{
+"k10plus": 1932,
+"wikipedia": 1932
+},
+{
+"puntate": [
+1932,
+1932,
+"wikipedia"
+]
+}
+],
+"Q295347": [
+"nd",
+1933,
+"wikipedia",
+"2026-11-20",
+[
+"cce",
+"k10plus",
+"wikipedia",
+"isfdb",
+"openlibrary",
+"loc"
+],
+{
+"wikipedia": 1933,
+"openlibrary": 2012,
+"loc": 1959
+},
+{
+"puntate": [
+1933,
+1933,
+"wikipedia"
+]
+}
+],
+"Q3404825": [
+"ok",
+1932,
+"openlibrary",
+"2026-11-20",
+[
+"cce",
+"wikipedia",
+"isfdb",
+"openlibrary"
+],
+{
+"openlibrary": 1932
+},
+{}
+],
+"Q2822836": [
+"ok",
+1932,
+"cce",
+"2026-11-20",
+[
+"cce",
+"wikipedia",
+"isfdb"
+],
+{
+"cce": 1932
+},
+{}
+],
+"Q4921296": [
+"ok",
+1932,
+"cce",
+"2026-11-20",
+[
+"cce",
+"wikipedia",
+"isfdb"
+],
+{
+"cce": 1932
+},
+{}
+],
+"Q2966758": [
+"nd",
+null,
+null,
+"2026-11-20",
+[
+"cce",
+"wikipedia",
+"isfdb",
+"openlibrary",
+"loc"
+],
+{},
+{}
+],
+"Q3795929": [
+"nd",
+null,
+null,
+"2026-11-20",
+[
+"cce",
+"wikipedia",
+"isfdb",
+"openlibrary",
+"loc"
+],
+{},
+{}
+],
+"Q1215882": [
+"ok",
+1932,
+"wikipedia",
+"2026-11-20",
+[
+"cce",
+"wikipedia",
+"isfdb"
+],
+{
+"wikipedia": 1932
+},
+{
+"puntate": [
+1932,
+1932,
+"wikipedia"
+]
+}
+],
+"Q868892": [
+"nd",
+1984,
+"loc",
+"2026-11-20",
+[
+"cce",
+"wikipedia",
+"isfdb",
+"openlibrary",
+"loc"
+],
+{
+"loc": 1984
+},
+{}
+],
+"Q302237": [
+"ok",
+1932,
+"wikipedia",
+"2026-11-20",
+[
+"cce",
+"wikipedia",
+"isfdb"
+],
+{
+"wikipedia": 1932
+},
+{
+"puntate": [
+1932,
+1932,
+"wikipedia"
+]
+}
+],
+"Q1639851": [
+"ok",
+1932,
+"openlibrary",
+"2026-11-20",
+[
+"cce",
+"bnf",
+"wikipedia",
+"isfdb",
+"openlibrary"
+],
+{
+"bnf": 1934,
+"openlibrary": 1932
+},
+{}
+],
+"Q3208022": [
+"ok",
+1932,
+"wikipedia",
+"2026-11-20",
+[
+"cce",
+"wikipedia",
+"isfdb"
+],
+{
+"wikipedia": 1932
+},
+{
+"puntate": [
+1932,
+1932,
+"wikipedia"
+]
+}
+],
+"Q3232049": [
+"ok",
+1932,
+"bnf",
+"2026-11-20",
+[
+"cce",
+"bnf",
+"wikipedia",
+"isfdb"
+],
+{
+"bnf": 1932
+},
+{}
+],
+"Q12175192": [
+"nd",
+1946,
+"loc",
+"2026-11-20",
+[
+"cce",
+"wikipedia",
+"isfdb",
+"openlibrary",
+"loc"
+],
+{
+"loc": 1946
+},
+{}
+],
+"Q3225292": [
+"ok",
+1932,
+"bnf",
+"2026-11-20",
+[
+"cce",
+"bnf",
+"wikipedia",
+"isfdb"
+],
+{
+"bnf": 1932
+},
+{}
+],
+"Q3793759": [
+"ok",
+1932,
+"openlibrary",
+"2026-11-20",
+[
+"cce",
+"wikipedia",
+"isfdb",
+"openlibrary"
+],
+{
+"openlibrary": 1932
+},
+{}
+],
+"Q104509066": [
+"nd",
+null,
+null,
+"2026-11-20",
+[
+"cce",
+"wikipedia",
+"isfdb",
+"openlibrary",
+"loc"
+],
+{},
 {}
 ]
 }
