@@ -379,8 +379,10 @@ function stato(o, c) {
     if (o.y !== null) {
       // libera solo negli USA e solo per l'anno: serve una seconda fonte (Duke o Open Library), altrimenti «da verificare»
       if (o.y + 96 <= Y && !liberaUe(o)) {
+        // registro unico: [anno confermato, fonte, solo anni più tardi, anno trovato] (regola in scripts/regole.py)
         const v = D.verifiche[o.q];
-        if (!v || v[0] !== "ok") return { s: "ver", note: note.concat([v && v[0] === "no" ? "sUsNo" : "sUsNd"]), y2: v && v[1] };
+        if (v && v[0] !== null && v[0] > Y - 96) return { s: "dal", y: v[0] + 96, note };
+        if (!v || v[0] === null) return { s: "ver", note: note.concat([v && v[2] ? "sUsNo" : "sUsNd"]), y2: v && v[3] };
       }
       if (o.y + 96 <= Y) { if (o.y >= Y - 106) note.push("sUsPrima"); return { s: "si", note }; }
       return { s: "dal", y: o.y + 96, note };
@@ -777,8 +779,8 @@ async function avvia() {
   try { P = await leggi("/data/storico/pagina.json"); } catch (e) { $("#scaffali-corpo").replaceChildren(h("p", {}, L.errore)); return; }
   D.anno = Number(String(P.aggiornato).slice(0, 4)) || D.anno;
   D.lingue = P.lingue || {};
-  try { D.verifiche = await leggi("/data/storico/anni_verificati.json"); } catch (e) { D.verifiche = {}; }
-  try { D.regOpere = (await leggi("/data/registro/opere.json")).coautori || {}; } catch (e) { D.regOpere = {}; } D.foto = P.foto || {}; D.prossimi = P.prossimi || [];
+  try { const reg = await leggi("/data/registro/opere.json"); D.regOpere = reg.coautori || {}; D.verifiche = reg.usa || {}; }
+  catch (e) { D.regOpere = {}; D.verifiche = {}; }   // registro unico: coautori e anni USA D.foto = P.foto || {}; D.prossimi = P.prossimi || [];
   const au = P.autori.map((a) => ({ q: a[0], n: nomeA(a[1]), m: a[2], an: !!a[3], inc: a[4] || 0, al: !!a[5] }));
   D.opere = P.opere.map((r) => pulisciAnno({ q: r[0], t: r[1], ti: r[2], y: r[3], yd: r[4], au: r[5].map((i) => au[i]), v: r[6], g: r[7], l: r[8], pg: r[9], escl: !!r[10], vl: r[11] || [] }));
   // lingue di Wikipedia già misurate (le visite in francese, tedesco e spagnolo arrivano con il primo aggiornamento dopo il 19/11/2026)

@@ -451,7 +451,8 @@ def _leggi(p, x):
         return x
 
 
-ANNI_VER = _leggi(RADICE / "data" / "storico" / "anni_verificati.json", {})
+from registro import anni_usa, liste_usa  # noqa: E402
+ANNI_VER = anni_usa()   # registro unico: anno USA confermato di ogni opera (regola in scripts/regole.py)
 _PER_AUT = {}
 
 
@@ -482,8 +483,9 @@ def stato_usa(a, o):
     for r in opere_storico(a["wikidata"]):
         if tuple(_parole(r[1])) in tw or tuple(_parole(r[2])) in tw:
             v = ANNI_VER.get(r[0])
-            if v and v[0] == "ok":
-                return "libero", y + 96
+            if v and v[0] is not None:
+                # confermata un'edizione entro il limite: libera dall'anno di uscita dell'opera; solo edizioni più tarde: dal loro anno
+                return ("libero", y + 96) if v[0] <= limite else ("dal", v[0] + 96)
     return "verifica", None
 
 
@@ -1382,10 +1384,7 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
 def crea_landing():
     """Per ogni anno disponibile: en/public-domain-<anno>/ e pubblico-dominio-<anno>/. Restituisce gli indirizzi."""
     urls = []
-    try:
-        ver = json.loads((RADICE / "data" / "us-anni-verificati.json").read_text(encoding="utf-8"))
-    except Exception:
-        ver = {}
+    ver = liste_usa()   # registro unico (scripts/registro.py): le verifiche delle liste, per anno
     for f in sorted(glob.glob(str(RADICE / "data" / "[0-9][0-9][0-9][0-9].json"))):
         anno = int(Path(f).stem)
         ue = json.load(open(f, encoding="utf-8"))

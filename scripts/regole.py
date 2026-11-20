@@ -130,3 +130,26 @@ def autori_che_contano(autori, tipi, anno):
             if a.pop("senza_data", None):
                 a["antico"] = True
     return out
+
+
+def anno_usa_confermato(voci):
+    """ANNO USA DI UN'OPERA (registro unico, 20/11/2026). voci: lista di (origine, voce) dalle due verifiche:
+      - "storico" (storico/verifica_anni.py): esito "ok" = una fonte indipendente ha un'edizione uscita entro il limite;
+        "no" = le fonti hanno solo edizioni più tarde; "nd" = nessuna conferma;
+      - "lista" (scripts/verifica_anni_usa.py): "ok" = uscita nell'anno della lista; "prima" = uscita prima (fonte
+        autorevole); "parziale" = a puntate fino a quell'anno; "nd" = nessuna conferma.
+    Regola: vale l'edizione confermata più vecchia (basta un'edizione uscita entro il limite, come per la Duke).
+    Restituisce [anno confermato o None, fonte, le fonti danno solo anni più tardi (True/False), anno trovato senza conferma]."""
+    conf, tardi, trovato = [], False, None
+    for origine, v in voci:
+        e, y, fonte = v[0], v[1], v[2]
+        buono = e == "ok" if origine == "storico" else e in ("ok", "prima", "parziale")
+        if buono and isinstance(y, int):
+            conf.append((y, fonte))
+        elif isinstance(y, int):
+            trovato = y if trovato is None else min(trovato, y)
+            tardi = tardi or e == "no"
+    if conf:
+        y, fonte = min(conf)
+        return [y, fonte, False, None]
+    return [None, None, tardi, trovato]

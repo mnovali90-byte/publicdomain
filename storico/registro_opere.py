@@ -8,12 +8,14 @@ già decisi con scripts/regole.py (autori_che_contano). La pagina Già pubblici 
   "an": coautori senza data trattati come antichi (accanto ad autori morti da più di 170 anni)
   "add": coautori aggiunti a mano (data/coautori_manuali.json) [qid, nome, morte, fonte, nome della fonte]
   "mu": compositore e librettista [ruolo, nome, anno di morte] (avviso: il testo resta libero)
+e, nella parte "usa", l'anno USA verificato di ogni opera (scripts/registro.py, anni_usa: liste e Storico insieme).
 Dati: data/storico/coautori.json (tipi degli autori, da Wikidata) e le righe dell'archivio (data/storico/ricerca)."""
 import glob, json, os, sys
 from datetime import date
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "scripts"))
 from regole import autori_che_contano  # noqa: E402
+from registro import anni_usa  # noqa: E402
 
 Y = date.today().year
 
@@ -74,7 +76,8 @@ def main():
     os.makedirs("data/registro", exist_ok=True)
     json.dump({"aggiornato": date.today().isoformat(),
                "regola": "coautori decisi con scripts/regole.py, autori_che_contano(); vedi l'inizio di storico/registro_opere.py",
-               "coautori": opere}, open("data/registro/opere.json", "w", encoding="utf8"), ensure_ascii=False, separators=(",", ":"))
+               "coautori": opere,
+               "usa": anni_usa()}, open("data/registro/opere.json", "w", encoding="utf8"), ensure_ascii=False, separators=(",", ":"))
     from collections import Counter
     c = Counter(k for v in opere.values() for k in v)
     print("registro delle opere:", len(opere), "opere con una decisione sui coautori o con musica |", dict(c))

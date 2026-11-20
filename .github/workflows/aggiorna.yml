@@ -85,6 +85,9 @@ jobs:
         # anche se un passo prima è fallito: i dati vecchi nei file vanno ricontrollati comunque
         if: ${{ !cancelled() }}   # se il giro viene annullato non si salva niente (19/11/2026: un giro annullato aveva salvato dati a metà)
         run: python scripts/controlli.py
+      - name: Registro delle opere (anni USA e coautori decisi con la regola unica)
+        if: ${{ !cancelled() }}
+        run: python storico/registro_opere.py
       - name: Crea le pagine degli autori e la sitemap
         if: ${{ !cancelled() }}   # se il giro viene annullato non si salva niente (19/11/2026: un giro annullato aveva salvato dati a metà)
         run: python scripts/pagine.py
