@@ -490,3 +490,16 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
   1. Don Chisciotte assente: la sua lingua su Wikidata è «Early Modern Spanish», senza codice. Ora le varianti senza codice si riconoscono dall'ultima parola del nome.
   2. Nel latino entravano Lexicon Universale e Promptuarium iconum: aggiunti lessici e cataloghi tra i non-libri.
 - **Secondo giro:** 44720257705.
+
+## 20/11/2026 — Coautori: misura
+- **Come:** controllo locale sull'archivio (82.545 opere), poi scripts/prova_coautori.py su Wikidata.
+- **Regola di oggi (storico/pagina.html, liberaUe):** in Europa un'opera è libera se sono morti da più di 70 anni tutti gli autori segnati su Wikidata (P50).
+- **A. Voci senza data di morte tra gli autori:** 294 opere oggi risultano non libere per questo. Che cosa sono quelle voci:
+  - duo di fratelli (Fratelli Grimm): 83;
+  - pseudonimi collettivi e duo di scrittori (Ilf e Petrov, Publius): 23;
+  - organizzazioni (università, editori, società scientifiche): circa 15;
+  - valore sconosciuto: 24;
+  - persone senza data di morte su Wikidata: 78.
+  Esempi di opere libere date per non libere: Hänsel e Gretel, Raperonzolo, I musicanti di Brema, Le dodici sedie, Federalist Papers.
+- **B. Collaboratori in altri campi (opere degli scaffali, 5.896):** 411 opere ne hanno: illustratore 420, collaboratore 71, compositore 69, librettista 24. Le opere oggi libere con un collaboratore morto dopo la soglia sono 49, quasi tutte per illustratori di edizioni moderne (Robinson Crusoe illustrato nel 2014, La metamorfosi, Via col vento). Il testo resta libero: l'illustrazione di un'edizione ha diritti propri.
+- **Giudizio:** il caso «L'opera da tre soldi» (Elisabeth Hauptmann) non risulta su Wikidata in nessun campo. I coautori non dichiarati non si trovano in automatico.
