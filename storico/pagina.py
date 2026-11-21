@@ -161,14 +161,14 @@ def pagine():
     sim = simboli()
     testi = {
         "it": {"TITLE": "Già pubblici: le opere già in pubblico dominio, paese per paese · Public Domain Radar",
-               "DESC": "Cerca un titolo o un autore e scopri se è già in pubblico dominio in Italia, Francia, Germania, Spagna e USA, e da quando. Scaffali dei classici più letti, già liberi. Dati aperti da Wikidata.",
+               "DESC": "Cerca un titolo o un autore e scopri se è già in pubblico dominio in Italia, Francia, Germania, Spagna e USA, e da quando. Scaffali dei classici più visitati su Wikipedia, già liberi. Dati aperti da Wikidata.",
                "CANON": "https://publicdomainradar.com/gia-pubblici/", "ALTRA": ("/en/already-public/", "en", "EN"),
                "OCC": "Storico del pubblico dominio", "H1": "È già libero?", "CERCA": "Cerca un titolo o un autore", "CANC": "Cancella", "CHIUDI": "Chiudi",
                "LEAD": "Scrivi un titolo o un autore. Ti diciamo se si può già pubblicare e da quando, paese per paese.",
                "PROVA": ("Prova:", ["Kafka", "Orwell", "Il grande Gatsby", "Brecht", "Frankenstein"]),
                "out": RADICE / "gia-pubblici" / "index.html"},
         "en": {"TITLE": "Already public: works already in the public domain, country by country · Public Domain Radar",
-               "DESC": "Search a title or an author and find out whether it is already in the public domain in Italy, France, Germany, Spain and the USA, and since when. Shelves of the most read classics, already free. Open data from Wikidata.",
+               "DESC": "Search a title or an author and find out whether it is already in the public domain in Italy, France, Germany, Spain and the USA, and since when. Shelves of the classics most visited on Wikipedia, already free. Open data from Wikidata.",
                "CANON": "https://publicdomainradar.com/en/already-public/", "ALTRA": ("/gia-pubblici/", "it", "IT"),
                "OCC": "Public domain archive", "H1": "Is it free yet?", "CERCA": "Search a title or an author", "CANC": "Clear", "CHIUDI": "Close",
                "LEAD": "Type a title or an author. We tell you whether it can already be published, and since when, country by country.",

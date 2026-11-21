@@ -270,9 +270,10 @@ h1.h1 .w:nth-child(2)>span{animation-delay:60ms}h1.h1 .w:nth-child(3)>span{anima
 
 .pf{position:fixed;z-index:30;right:var(--pad);top:52%;width:min(24vw,320px);aspect-ratio:4/5;transform:translateY(-50%);pointer-events:none;opacity:0;transition:opacity 300ms}
 body.ix-in .pf{opacity:1}body.menu-on .pf{opacity:0}
-.pf .ly{position:absolute;inset:0;background:var(--box);overflow:hidden;clip-path:inset(100% 0 0 0);transition:clip-path 460ms var(--cut)}
-.pf .ly.on{clip-path:inset(0 0 0 0)}.pf .ly.off{clip-path:inset(0 0 100% 0)}
-.pf img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.06);display:block;transform:scale(1.08);transition:transform 900ms var(--out)}
+/* il ritratto cambia appena cambia il nome, con una dissolvenza breve (21/11/2026) */
+.pf .ly{position:absolute;inset:0;background:var(--box);overflow:hidden;opacity:0;transition:opacity 260ms ease}
+.pf .ly.on{opacity:1}.pf .ly.off{opacity:0}
+.pf img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.06);display:block;transform:scale(1.03);transition:transform 600ms var(--out)}
 .pf .ly.on img{transform:none}
 .cv{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:12%}
 .cv b{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:clamp(22px,2.6vw,38px);line-height:.92}
@@ -384,7 +385,7 @@ body.ix-in .pf{opacity:1}body.menu-on .pf{opacity:0}
 <div class="nums"><a href="#ix1"><span class="n">826</span><span class="c">scrittori liberi in Italia, Francia, Germania e Regno Unito</span><span class="m">morti nel 1956</span></a><a href="/radar/#/2027"><span class="n">790</span><span class="c">scrittori liberi in Spagna</span><span class="m">morti nel 1946</span></a><a href="#ix2"><span class="n">169</span><span class="c">libri liberi negli USA</span><span class="m">pubblicati nel 1931 · 111 con l&#x27;anno confermato</span></a></div>
 <section class="sec ix" id="ix1">
 <div class="sh m"><h2>I nomi più attesi</h2><span>Europa e Regno Unito · morti nel 1956</span></div>
-<p class="lede">Gli scrittori morti nel 1956 più letti su Wikipedia. Dal 1° gennaio i loro testi originali si possono pubblicare senza permesso in Italia, Francia, Germania e Regno Unito.</p>
+<p class="lede">Gli scrittori morti nel 1956, in ordine di visite alla loro pagina Wikipedia negli ultimi 12 mesi (in italiano, inglese, francese, tedesco e spagnolo): misura quanto sono conosciuti oggi, non quanto si vendono i loro libri. Dal 1° gennaio i loro testi originali si possono pubblicare senza permesso in Italia, Francia, Germania e Regno Unito.</p>
 <ol class="rows" style="margin-top:28px">
 <li class="row" data-f="https://commons.wikimedia.org/wiki/Special:FilePath/Dr._Bhimrao_Ambedkar.jpg?width=480" data-i="BA"><span class="no">01</span><span class="nm"><a href="/autore/b-r-ambedkar/">B. R. Ambedkar</a></span><span class="mt">saggista<br>1891 – 6 dicembre 1956</span></li>
 <li class="row" data-f="https://commons.wikimedia.org/wiki/Special:FilePath/Bundesarchiv_Bild_183-W0409-300%2C_Bertolt_Brecht.jpg?width=480" data-i="BB"><span class="no">02</span><span class="nm"><a href="/autore/bertolt-brecht/">Bertolt Brecht</a></span><span class="mt">drammaturgo<br>1898 – 14 agosto 1956</span></li>
@@ -400,20 +401,20 @@ body.ix-in .pf{opacity:1}body.menu-on .pf{opacity:0}
 </section>
 <section class="sec ix" id="ix2">
 <div class="sh m"><h2>I libri del 1931</h2><span>Stati Uniti · 95 anni dall’uscita</span></div>
-<p class="lede">Negli USA conta l&#39;anno di pubblicazione: il 1° gennaio diventano liberi i libri usciti nel 1931. Diciamo «confermato» solo quando l&#39;anno è confermato da una fonte diversa da Wikidata (registro del copyright americano, biblioteche nazionali, Open Library, Library of Congress); per gli altri scriviamo «anno da confermare».</p>
+<p class="lede">Negli USA conta l&#39;anno di pubblicazione: il 1° gennaio diventano liberi i libri usciti nel 1931. Diciamo «confermato» solo quando l&#39;anno è confermato da una fonte diversa da Wikidata (registro del copyright americano, biblioteche nazionali, Open Library, Library of Congress); per gli altri scriviamo «anno da confermare». In ordine di visite alla pagina del libro su Wikipedia in inglese, negli ultimi 12 mesi.</p>
 <ol class="rows" style="margin-top:28px">
-<li class="row" data-t="L&#x27;opera da tre soldi" data-a="Bertolt Brecht" data-y="1931"><span class="no">01</span><span class="nm"><a href="/radar/#/opera/Q212495">L&#x27;opera da tre soldi</a></span><span class="mt">Bertolt Brecht, Elisabeth Hauptmann<br><span class="tbd">anno da confermare</span></span></li>
-<li class="row" data-t="La buona terra" data-a="Pearl S. Buck" data-y="1931"><span class="no">02</span><span class="nm"><a href="/radar/#/opera/Q1218608">La buona terra</a></span><span class="mt">Pearl S. Buck<br>1931 confermato</span></li>
-<li class="row" data-t="Why I am an Atheist" data-a="Bhagat Singh" data-y="1931"><span class="no">03</span><span class="nm"><a href="/radar/#/opera/Q16224234">Why I am an Atheist</a></span><span class="mt">Bhagat Singh<br><span class="tbd">anno da confermare</span></span></li>
-<li class="row" data-t="Tintin in Congo" data-a="Hergé" data-y="1931"><span class="no">04</span><span class="nm"><a href="/radar/#/opera/Q636870">Tintin in Congo</a></span><span class="mt">Hergé<br><span class="tbd">anno da confermare</span></span></li>
-<li class="row" data-t="Le onde" data-a="Virginia Woolf" data-y="1931"><span class="no">05</span><span class="nm"><a href="/radar/#/opera/Q1217475">Le onde</a></span><span class="mt">Virginia Woolf<br>1931 confermato</span></li>
-<li class="row" data-t="Colui che sussurrava nelle tenebre" data-a="H. P. Lovecraft" data-y="1931"><span class="no">06</span><span class="nm"><a href="/radar/#/opera/Q1152214">Colui che sussurrava nelle tenebre</a></span><span class="mt">H. P. Lovecraft<br>1931 confermato</span></li>
-<li class="row" data-t="Un messaggio dagli spiriti" data-a="Agatha Christie" data-y="1931"><span class="no">07</span><span class="nm"><a href="/radar/#/opera/Q571244">Un messaggio dagli spiriti</a></span><span class="mt">Agatha Christie<br>1931 confermato</span></li>
-<li class="row" data-t="Santuario" data-a="William Faulkner" data-y="1931"><span class="no">08</span><span class="nm"><a href="/radar/#/opera/Q1212765">Santuario</a></span><span class="mt">William Faulkner<br>1931 confermato</span></li>
-<li class="row" data-t="The Joy of Cooking" data-a="Irma S. Rombauer" data-y="1931"><span class="no">09</span><span class="nm"><a href="/radar/#/opera/Q2917079">The Joy of Cooking</a></span><span class="mt">Irma S. Rombauer<br>1931 confermato</span></li>
-<li class="row" data-t="La via del ritorno" data-a="Erich Maria Remarque" data-y="1931"><span class="no">10</span><span class="nm"><a href="/radar/#/opera/Q1197989">La via del ritorno</a></span><span class="mt">Erich Maria Remarque<br>1931 confermato</span></li>
-<li class="row" data-t="La chiave di vetro" data-a="Dashiell Hammett" data-y="1931"><span class="no">11</span><span class="nm"><a href="/radar/#/opera/Q6035197">La chiave di vetro</a></span><span class="mt">Dashiell Hammett<br>1931 confermato</span></li>
-<li class="row" data-t="Gaban" data-a="Premchand" data-y="1931"><span class="no">12</span><span class="nm"><a href="/radar/#/opera/Q28419570">Gaban</a></span><span class="mt">Premchand<br><span class="tbd">anno da confermare</span></span></li>
+<li class="row" data-i="BB"><span class="no">01</span><span class="nm"><a href="/radar/#/opera/Q212495">L&#x27;opera da tre soldi</a></span><span class="mt">Bertolt Brecht, Elisabeth Hauptmann<br><span class="tbd">anno da confermare</span></span></li>
+<li class="row" data-i="PB"><span class="no">02</span><span class="nm"><a href="/radar/#/opera/Q1218608">La buona terra</a></span><span class="mt">Pearl S. Buck<br>1931 confermato</span></li>
+<li class="row" data-i="BS"><span class="no">03</span><span class="nm"><a href="/radar/#/opera/Q16224234">Why I am an Atheist</a></span><span class="mt">Bhagat Singh<br><span class="tbd">anno da confermare</span></span></li>
+<li class="row" data-i="HE"><span class="no">04</span><span class="nm"><a href="/radar/#/opera/Q636870">Tintin in Congo</a></span><span class="mt">Hergé<br><span class="tbd">anno da confermare</span></span></li>
+<li class="row" data-i="VW"><span class="no">05</span><span class="nm"><a href="/radar/#/opera/Q1217475">Le onde</a></span><span class="mt">Virginia Woolf<br>1931 confermato</span></li>
+<li class="row" data-i="HL"><span class="no">06</span><span class="nm"><a href="/radar/#/opera/Q1152214">Colui che sussurrava nelle tenebre</a></span><span class="mt">H. P. Lovecraft<br>1931 confermato</span></li>
+<li class="row" data-i="AC"><span class="no">07</span><span class="nm"><a href="/radar/#/opera/Q571244">Un messaggio dagli spiriti</a></span><span class="mt">Agatha Christie<br>1931 confermato</span></li>
+<li class="row" data-i="WF"><span class="no">08</span><span class="nm"><a href="/radar/#/opera/Q1212765">Santuario</a></span><span class="mt">William Faulkner<br>1931 confermato</span></li>
+<li class="row" data-i="IR"><span class="no">09</span><span class="nm"><a href="/radar/#/opera/Q2917079">The Joy of Cooking</a></span><span class="mt">Irma S. Rombauer<br>1931 confermato</span></li>
+<li class="row" data-i="ER"><span class="no">10</span><span class="nm"><a href="/radar/#/opera/Q1197989">La via del ritorno</a></span><span class="mt">Erich Maria Remarque<br>1931 confermato</span></li>
+<li class="row" data-i="DH"><span class="no">11</span><span class="nm"><a href="/radar/#/opera/Q6035197">La chiave di vetro</a></span><span class="mt">Dashiell Hammett<br>1931 confermato</span></li>
+<li class="row" data-i="PR"><span class="no">12</span><span class="nm"><a href="/radar/#/opera/Q28419570">Gaban</a></span><span class="mt">Premchand<br><span class="tbd">anno da confermare</span></span></li>
 </ol>
 <a href="/radar/#/us/2027" class="more">Tutti i 169 libri: 111 confermati, 58 da confermare →</a>
 </section>
@@ -463,13 +464,12 @@ function ink(){ const ws=$$('#say .w'), r=say.getBoundingClientRect(); const p=M
 const esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 let act=null;
 function face(r){ const i=$$('.row').indexOf(r);
-  if(r.dataset.t) return '<div class="cv '+COV[i%4]+'"><span>'+r.dataset.y+'</span><b>'+esc(r.dataset.t)+'</b><span>'+esc(r.dataset.a)+'</span></div>';
   return r.dataset.f?'<img src="'+r.dataset.f+'" alt="" onerror="this.remove()">':'<div class="cv c-box"><span></span><b>'+esc(r.dataset.i||'')+'</b><span></span></div>'; }
 function setAct(r){ if(r===act) return; act=r; $$('.row').forEach(x=>x.classList.toggle('on',x===r));
-  $$('#pf .ly').forEach(l=>{ l.classList.remove('on'); l.classList.add('off'); setTimeout(()=>l.remove(),480); });
+  $$('#pf .ly').forEach(l=>{ l.classList.remove('on'); l.classList.add('off'); setTimeout(()=>l.remove(),300); });
   const ly=document.createElement('div'); ly.className='ly'; ly.innerHTML=face(r); $('#pf').appendChild(ly);
   requestAnimationFrame(()=>requestAnimationFrame(()=>ly.classList.add('on'))); }
-function pick(){ const mid=innerHeight*.52; let inside=null;
+function pick(){ const pr=$('#pf').getBoundingClientRect(), mid=pr.height?pr.top+pr.height/2:innerHeight*.52; let inside=null;   /* la riga accesa è quella all'altezza del ritratto */
   $$('.ix').forEach(s=>{ const ol=s.querySelector('.rows').getBoundingClientRect(); if(ol.top<mid&&ol.bottom>mid) inside=s; });
   document.body.classList.toggle('ix-in',!!inside); if(!inside) return;
   let best=null,bd=1e9; inside.querySelectorAll('.row').forEach(r=>{ const b=r.getBoundingClientRect(), d=Math.abs(b.top+b.height/2-mid); if(d<bd){bd=d;best=r;} });

@@ -126,9 +126,10 @@ h1.h1 em{font-style:normal;color:var(--red)}
 
 .pf{position:fixed;z-index:30;right:var(--pad);top:54%;width:min(24vw,320px);aspect-ratio:4/5;transform:translateY(-50%);pointer-events:none;opacity:0;transition:opacity 300ms}
 body.ix-in .pf{opacity:1}body.menu-on .pf,body.panel-on .pf{opacity:0}
-.pf .ly{position:absolute;inset:0;background:var(--box);overflow:hidden;clip-path:inset(100% 0 0 0);transition:clip-path 460ms var(--cut)}
-.pf .ly.on{clip-path:inset(0 0 0 0)}.pf .ly.off{clip-path:inset(0 0 100% 0)}
-.pf img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.06);display:block;transform:scale(1.08);transition:transform 900ms var(--out)}
+/* il ritratto cambia appena cambia il nome, con una dissolvenza breve (21/11/2026: prima la tendina era lenta e sul telefono arrivava in ritardo) */
+.pf .ly{position:absolute;inset:0;background:var(--box);overflow:hidden;opacity:0;transition:opacity 260ms ease}
+.pf .ly.on{opacity:1}.pf .ly.off{opacity:0}
+.pf img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.06);display:block;transform:scale(1.03);transition:transform 600ms var(--out)}
 .pf .ly.on img{transform:none}
 .pf .ini,.sq .ini{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--grey);text-transform:uppercase;text-align:center;padding:12px}
 .cv{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:12%}
@@ -141,7 +142,7 @@ body.ix-in .pf{opacity:1}body.menu-on .pf,body.panel-on .pf{opacity:0}
 .au{position:relative;cursor:pointer}
 .sq{position:relative;aspect-ratio:1;background:var(--box);overflow:hidden}
 .sq img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05);transition:filter .5s,transform .8s var(--out)}
-.au:hover .sq img{filter:none;transform:scale(1.04)}
+@media (hover:hover){.au:hover .sq img{filter:none;transform:scale(1.04)}}
 .au b{display:block;margin-top:10px;font-size:15.5px;font-weight:600;line-height:1.2}
 .au span{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;color:var(--grey);text-transform:uppercase;margin-top:4px}
 .au:hover b{color:var(--redt)}
@@ -158,10 +159,10 @@ body.ix-in .pf{opacity:1}body.menu-on .pf,body.panel-on .pf{opacity:0}
 .tabs button:hover{color:var(--ink)}
 .shelf{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 5*20px)/6);gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:22px 0 8px}
 .shelf::-webkit-scrollbar{display:none}
-.bk{scroll-snap-align:start;opacity:0;animation:fi 520ms var(--out) forwards}
+.bk{scroll-snap-align:start;opacity:0;animation:fi 520ms var(--out) forwards;display:flex;flex-direction:column;justify-content:flex-start;align-items:stretch;text-align:left}   /* è un pulsante: senza questo il contenuto si centrava in altezza e le copertine con didascalia corta scendevano */
 @keyframes fi{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 .cvr{position:relative;aspect-ratio:2/3;transition:transform 400ms var(--out)}
-.bk:hover .cvr{transform:translateY(-6px)}
+@media (hover:hover){.bk:hover .cvr{transform:translateY(-6px)}}   /* sul telefono il dito lasciava la copertina toccata sollevata */
 .cvr .cv b{font-size:clamp(19px,1.8vw,28px)}
 .bk p{margin:10px 0 0;font-size:14px;font-weight:500;line-height:1.3}
 .bk p span{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.06em;color:var(--grey);text-transform:uppercase;font-weight:400;margin-top:3px}
@@ -286,9 +287,9 @@ details.rules .rb b{display:block;font-family:var(--mono);font-size:11px;letter-
 .al li>button.riga{display:contents;text-align:left}
 .us-row-t{font-style:normal}
 .cvr{display:block}
-.bk{display:block;text-align:left;width:100%}
+.bk{display:flex;flex-direction:column;justify-content:flex-start;text-align:left;width:100%}
 .cvr .cv{padding:12%}
-.cvr .cv b{overflow-wrap:break-word}
+.cv b{overflow-wrap:normal;word-break:normal;hyphens:none;display:block;max-width:100%}
 .cvr.img{background:var(--box);overflow:hidden}
 .cvr.img img{width:100%;height:100%;object-fit:cover;display:block}
 
@@ -530,7 +531,7 @@ const MESI_EN = ["January","February","March","April","May","June","July","Augus
 
 const TESTI = {
 it: {
-  kick: "Public Domain Day · {d} · tra {n} giorni", kick0: "Public Domain Day · {d}", interesseIn: "interesse {p}", topPaese: "I più letti {p}", topInt: "I più noti nel mondo", topScop: "Da scoprire {p}", topLede: "{P} il 1° gennaio {a} diventano liberi {n} scrittori morti nel {m}.", topLedeUS: "Negli USA il 1° gennaio {a} diventano libere {n} opere pubblicate nel {p}. Qui si contano le opere, non gli autori.", ritrattiCommons: "Ritratti da Wikimedia Commons", nessunRitratto: "Nessun ritratto libero", cntIdx: "N° {r} / {n}", cntGiorni: "{d} · tra {n} giorni", mieiBreve: "I miei", chiudiM: "Chiudi", fbOrdine: "Ordine", fbCerca: "Cerca", toccaFiltra: "Tocca per filtrare", fontiEt: "Fonti", mieiSalvati: "{n} salvati", altriFiltri: "Altri filtri +", altriFiltriOn: "Meno filtri –", cercaOpera: "Cerca un titolo o un autore", nessunaOpera: "Nessuna opera corrisponde alla ricerca.", regolaPiu: "Regola [+]", regolaMeno: "Regola [–]", liberoTra: "Libero {p} tra", liberoGiaIn: "Libero {p}", giorno: "giorno", giorniP: "giorni", r70: "70 anni dalla morte", r70uk: "70 anni dalla morte; inediti fino al 2039", r80: "80 anni: è morto prima del 1987", r95: "95 anni dall'uscita di ogni opera",
+  kick: "Public Domain Day · {d} · tra {n} giorni", kick0: "Public Domain Day · {d}", interesseIn: "interesse {p}", topPaese: "I più noti {p}", comeOrdine: "In ordine di visite alla loro pagina Wikipedia negli ultimi 12 mesi: dice quanto sono conosciuti oggi, non quanto si vendono i loro libri.", topInt: "I più noti nel mondo", topScop: "Da scoprire {p}", topLede: "{P} il 1° gennaio {a} diventano liberi {n} scrittori morti nel {m}.", topLedeUS: "Negli USA il 1° gennaio {a} diventano libere {n} opere pubblicate nel {p}. Qui si contano le opere, non gli autori.", ritrattiCommons: "Ritratti da Wikimedia Commons", nessunRitratto: "Nessun ritratto libero", cntIdx: "N° {r} / {n}", cntGiorni: "{d} · tra {n} giorni", mieiBreve: "I miei", chiudiM: "Chiudi", fbOrdine: "Ordine", fbCerca: "Cerca", toccaFiltra: "Tocca per filtrare", fontiEt: "Fonti", mieiSalvati: "{n} salvati", altriFiltri: "Altri filtri +", altriFiltriOn: "Meno filtri –", cercaOpera: "Cerca un titolo o un autore", nessunaOpera: "Nessuna opera corrisponde alla ricerca.", regolaPiu: "Regola [+]", regolaMeno: "Regola [–]", liberoTra: "Libero {p} tra", liberoGiaIn: "Libero {p}", giorno: "giorno", giorniP: "giorni", r70: "70 anni dalla morte", r70uk: "70 anni dalla morte; inediti fino al 2039", r80: "80 anni: è morto prima del 1987", r95: "95 anni dall'uscita di ogni opera",
   titolo: "Pubblico dominio 2027: gli autori che diventano liberi · Public Domain Radar",
   indiceAutori: "Indice degli autori (una pagina per ogni autore)", paginaDedicata: "Pagina dedicata", paginaDedicataEn: "Pagina dedicata",
   descrizione: "Gli autori le cui opere entrano nel pubblico dominio in Europa il prossimo 1° gennaio. Dati aperti da Wikidata e Wikipedia, aggiornati ogni tre mesi e a dicembre.",
@@ -540,7 +541,7 @@ it: {
   liberoIn: "Libero {p} dal", nonPrima: "non prima del ", traGiorni: "tra {n} giorni", giaLibero: "già libero", mortoIl: "anno di morte {a}",
   verificato: "Anno di morte confermato da {n} fonti: {f}.",
   unaFonte: "Anno di morte da una sola fonte (Wikidata): non lo abbiamo trovato in altre fonti. Controllalo prima di pubblicare.",
-  alleato: "Autore di un paese alleato nella Seconda guerra mondiale ({p}): in Italia la protezione può durare di più (Trattato di pace del 1947, allegato XV). La data qui sopra non ne tiene conto: va verificata caso per caso.",
+  daVerif: "da verificare", alleato: "Autore di un paese alleato nella Seconda guerra mondiale ({p}): in Italia la protezione può durare di più (Trattato di pace del 1947, allegato XV): per questo in Italia non diamo una data, va verificata opera per opera.",
   documentato: "Anno di morte documentato: Wikidata lo riporta citando {f}.",
   discorde: "Da verificare: le fonti non concordano sull'anno di morte ({f}). La data qui sopra usa Wikidata.", maggioranza: "Anno di morte {y} confermato da {n} fonti autorevoli ({f}). Altre fonti danno un anno diverso: vale quello delle fonti autorevoli.", corretto: "Anno di morte {y} secondo {n} fonti autorevoli ({f}). Wikidata dice {w}: vale quello delle fonti autorevoli.", fontiNomi: { wikidata: "Wikidata", wikidata_altra: "Wikidata (altra data)", gnd: "Biblioteca nazionale tedesca", loc: "Library of Congress" },
   altriPaesi: "Negli altri paesi", nomiPaesi: { it: "Italia", fr: "Francia", de: "Germania", uk: "Regno Unito", es: "Spagna" }, usaRiga: "dipende dall'anno di pubblicazione di ogni opera",
@@ -599,7 +600,7 @@ it: {
   apriScheda: "Apri la scheda di {nome}",
   scaffOcc: "Le opere che si liberano", scaffTit: "Sfoglia per genere",
   scaffNota: "Gli scaffali nascono dai dati di Wikidata e mostrano solo le opere che hanno un genere indicato. Le copertine sono tipografiche: le copertine vere sono protette.",
-  piuNote: "Le più note", vediTutto: "Vedi tutto →", vediTutteAria: "Vedi tutte le {n} opere: {nome}", nOpere: "{n} opere", libereDal: "Libere dal {d}", opGenere: "Genere", opLibera: "Libera in Europa dal", opAutore: "Autore", opScheda: "Scheda dell'autore →", opNota: "Data secondo la regola europea dei 70 anni dalla morte dell'autore. Nella scheda dell'autore trovi le date paese per paese.",
+  piuNote: "Le più note", vediTutto: "Vedi tutto →", vediTutteAria: "Vedi tutte le {n} opere: {nome}", nOpere: "{n} opere", libereDal: "Libere dal {d}", opGenere: "Genere", opLibera: "Libera {p} dal", opLiberaVer: "In Italia: da verificare (autore di un paese alleato, Trattato di pace del 1947)", pLibera: { ue: "in Italia, Francia, Germania e nel Regno Unito", ueAll: "in Francia, Germania e nel Regno Unito", es: "in Spagna" }, opAutore: "Autore", opScheda: "Scheda dell'autore →", opNota: "Data secondo la regola europea dei 70 anni dalla morte dell'autore. Nella scheda dell'autore trovi le date paese per paese.",
   esplora: "Esplora", perPaese: "Paese d'origine", perLingua: "Per lingua",
   mieiOcc: "La tua lista", mieiTit: "I miei candidati",
   mieiVuoto: "Tocca il cuore su un autore per metterlo qui. La lista resta su questo dispositivo e puoi scaricarla in Excel.",
@@ -648,7 +649,7 @@ it: {
   nomiLingua: { it: "Italiano", en: "Inglese", es: "Spagnolo", fr: "Francese", de: "Tedesco" }
 },
 en: {
-  kick: "Public Domain Day · {d} · in {n} days", kick0: "Public Domain Day · {d}", interesseIn: "interest {p}", topPaese: "Most read {p}", topInt: "Best known worldwide", topScop: "To discover {p}", topLede: "{P}, {n} writers who died in {m} become free on 1 January {a}.", topLedeUS: "In the USA, {n} works published in {p} become free on 1 January {a}. Here we count works, not authors.", ritrattiCommons: "Portraits from Wikimedia Commons", nessunRitratto: "No free portrait", cntIdx: "No. {r} / {n}", cntGiorni: "{d} · in {n} days", mieiBreve: "My list", chiudiM: "Close", fbOrdine: "Order", fbCerca: "Search", toccaFiltra: "Tap to filter", fontiEt: "Sources", mieiSalvati: "{n} saved", altriFiltri: "More filters +", altriFiltriOn: "Fewer filters –", cercaOpera: "Search a title or an author", nessunaOpera: "No work matches the search.", regolaPiu: "Rule [+]", regolaMeno: "Rule [–]", liberoTra: "Free {p} in", liberoGiaIn: "Free {p}", giorno: "day", giorniP: "days", r70: "70 years after death", r70uk: "70 years after death; unpublished until 2039", r80: "80 years: died before 1987", r95: "95 years from publication of each work",
+  kick: "Public Domain Day · {d} · in {n} days", kick0: "Public Domain Day · {d}", interesseIn: "interest {p}", topPaese: "Best known {p}", comeOrdine: "Ranked by visits to their Wikipedia page over the last 12 months: it shows how well known they are today, not how well their books sell.", topInt: "Best known worldwide", topScop: "To discover {p}", topLede: "{P}, {n} writers who died in {m} become free on 1 January {a}.", topLedeUS: "In the USA, {n} works published in {p} become free on 1 January {a}. Here we count works, not authors.", ritrattiCommons: "Portraits from Wikimedia Commons", nessunRitratto: "No free portrait", cntIdx: "No. {r} / {n}", cntGiorni: "{d} · in {n} days", mieiBreve: "My list", chiudiM: "Close", fbOrdine: "Order", fbCerca: "Search", toccaFiltra: "Tap to filter", fontiEt: "Sources", mieiSalvati: "{n} saved", altriFiltri: "More filters +", altriFiltriOn: "Fewer filters –", cercaOpera: "Search a title or an author", nessunaOpera: "No work matches the search.", regolaPiu: "Rule [+]", regolaMeno: "Rule [–]", liberoTra: "Free {p} in", liberoGiaIn: "Free {p}", giorno: "day", giorniP: "days", r70: "70 years after death", r70uk: "70 years after death; unpublished until 2039", r80: "80 years: died before 1987", r95: "95 years from publication of each work",
   titolo: "Public Domain Radar · authors entering the public domain",
   indiceAutori: "Index of authors (one page per author)", paginaDedicata: "Dedicated page (Italian)", paginaDedicataEn: "Dedicated page",
   descrizione: "The authors whose works enter the public domain in Europe on 1 January next year. Open data from Wikidata and Wikipedia, updated every three months and in December.",
@@ -658,7 +659,7 @@ en: {
   liberoIn: "Free {p} from", nonPrima: "not before ", traGiorni: "in {n} days", giaLibero: "already free", mortoIl: "died in {a}",
   verificato: "Year of death confirmed by {n} sources: {f}.",
   unaFonte: "Year of death from a single source (Wikidata): we did not find it in other sources. Check it before publishing.",
-  alleato: "Author from an Allied country in the Second World War ({p}): in Italy protection may last longer (1947 Peace Treaty, Annex XV). The date above does not take this into account: check case by case.",
+  daVerif: "to be checked", alleato: "Author from an Allied country in the Second World War ({p}): in Italy protection may last longer (1947 Peace Treaty, Annex XV): so we give no date for Italy, it must be checked work by work.",
   documentato: "Year of death documented: Wikidata gives it citing {f}.",
   discorde: "To verify: the sources disagree on the year of death ({f}). The date above uses Wikidata.", maggioranza: "Year of death {y} confirmed by {n} authoritative sources ({f}). Other sources give a different year: the authoritative one applies.", corretto: "Year of death {y} according to {n} authoritative sources ({f}). Wikidata says {w}: the authoritative sources apply.", fontiNomi: { wikidata: "Wikidata", wikidata_altra: "Wikidata (another date)", gnd: "German National Library", loc: "Library of Congress" },
   altriPaesi: "In other countries", nomiPaesi: { it: "Italy", fr: "France", de: "Germany", uk: "United Kingdom", es: "Spain" }, usaRiga: "depends on the publication year of each work",
@@ -717,7 +718,7 @@ en: {
   apriScheda: "Open the profile of {nome}",
   scaffOcc: "The works being freed", scaffTit: "Browse by genre",
   scaffNota: "The shelves are built from Wikidata and only show works that have a genre. Covers are typographic: real covers are protected.",
-  piuNote: "Best known", vediTutto: "See all →", vediTutteAria: "See all {n} works: {nome}", nOpere: "{n} works", libereDal: "Free from {d}", opGenere: "Genre", opLibera: "Free in Europe from", opAutore: "Author", opScheda: "Author profile →", opNota: "Date under the European life-plus-70-years rule. The author profile shows the date country by country.",
+  piuNote: "Best known", vediTutto: "See all →", vediTutteAria: "See all {n} works: {nome}", nOpere: "{n} works", libereDal: "Free from {d}", opGenere: "Genre", opLibera: "Free {p} from", opLiberaVer: "In Italy: to be checked (author from an Allied country, 1947 Peace Treaty)", pLibera: { ue: "in Italy, France, Germany and the UK", ueAll: "in France, Germany and the UK", es: "in Spain" }, opAutore: "Author", opScheda: "Author profile →", opNota: "Date under the European life-plus-70-years rule. The author profile shows the date country by country.",
   esplora: "Explore", perPaese: "Country of origin", perLingua: "By language",
   mieiOcc: "Your list", mieiTit: "My shortlist",
   mieiVuoto: "Tap the heart on an author to put them here. The list stays on this device and you can download it as a spreadsheet.",
@@ -1150,7 +1151,10 @@ function disegnaEroe() {
     _top = d.opere.slice().sort(ORDINI[stato.ordineUS || "letti"]).slice(0, 12).map((o) => ({ o, pub: d.anno_pubblicazione }));
     box.replaceChildren(h("ol", { class: "rows" }, _top.map((x, i) => rigaIndiceUS(x.o, i, x.pub))));
     lk.replaceChildren(h("button", { type: "button", onclick: () => scorri("archivio") }, ot("tutte", { n: d.opere.length })));
-    cr.replaceChildren();
+    // ritratti degli autori dei libri USA (al posto delle copertine tipografiche: Marco, 21/11/2026)
+    const visti = new Set(), conFotoUS = [];
+    _top.forEach((x) => { const a = autoreConFoto(x.o); if (a && !visti.has(a.qid)) { visti.add(a.qid); conFotoUS.push(a); } });
+    cr.replaceChildren(...(conFotoUS.length ? [tr("ritrattiCommons") + " — ", ...conFotoUS.flatMap((a, i) => [i ? " · " : "", a.nome + ": ", creditoBreve(a)])] : []));
     legaRighe();
     return;
   }
@@ -1160,7 +1164,7 @@ function disegnaEroe() {
   $("#tit-paese").textContent = scop ? tr("topScop", { p }) : stato.mercati && stato.mercato === "int" ? tr("topInt") : tr("topPaese", { p });
   $("#topR").textContent = nomeGiur(stato.opz).join(" · ");
   const morti = parseInt(String(d.libero_dal || "").slice(0, 4), 10) - (stato.giur === "es" ? 81 : 71);
-  $("#topL").innerHTML = (scop ? tr("scopCome") + " " : "") + tr("topLede", { P: maiuscola1(p), n: `<span class="big">${n(g.principali.length)}</span>`, a: String(d.libero_dal || "").slice(0, 4), m: morti });
+  $("#topL").innerHTML = (scop ? tr("scopCome") + " " : "") + tr("topLede", { P: maiuscola1(p), n: `<span class="big">${n(g.principali.length)}</span>`, a: String(d.libero_dal || "").slice(0, 4), m: morti }) + (scop || (stato.mercati && stato.mercato === "int") ? "" : " " + tr("comeOrdine"));
   const lista = listaTop();
   _top = lista.slice(0, 12).map((a) => ({ a }));
   if (!_top.length) { box.replaceChildren(h("p", { class: "messaggio" }, scop ? tr("nessuno") : tr("nessunAutoreAnno"))); }
@@ -1178,26 +1182,26 @@ function creditoBreve(a) {
   const t = [ripara(autore, 60), pulisci((a.foto || {}).licenza)].filter(Boolean).join(" · ") || "Wikimedia Commons";
   return a.foto.pagina ? h("a", { href: a.foto.pagina, target: "_blank", rel: "noopener" }, t) : t;
 }
-/* la riga al centro dello schermo si accende; accanto compare il ritratto (o la copertina per gli USA) */
+/* la riga all'altezza del ritratto si accende; accanto compare il ritratto (per gli USA quello dell'autore del libro) */
 let _act = null;
 const RIDOTTO = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
 function legaRighe() {
   document.querySelectorAll("#eroe .row").forEach((r) => r.addEventListener("mouseenter", () => { if (matchMedia("(hover:hover)").matches) accendi(+r.dataset.i); }));
 }
 function faccia(x, i) {
-  if (x.o) { const c = ["c-red", "c-box", "c-ink", "c-pap"][i % 4]; return h("div", { class: "cv " + c }, h("span", {}, String(x.pub)), h("b", {}, titoloOp(x.o)), h("span", {}, ((x.o.autori || [])[0] || {}).nome || "")); }
-  const a = x.a, f = [];
+  const a = x.o ? (autoreConFoto(x.o) || {}) : x.a, f = [];
   if (a.foto && a.foto.url) { const img = h("img", { src: a.foto.url, alt: "", referrerpolicy: "no-referrer" }); img.addEventListener("error", () => img.remove()); f.push(img); }
   else f.push(h("span", { class: "ini" }, tr("nessunRitratto")));
   return f;
 }
+function autoreConFoto(o) { return (o.autori || []).find((a) => a.foto && a.foto.url) || null; }
 function accendi(i) {
   if (i === _act || !_top[i]) return;
   _act = i;
   document.querySelectorAll("#eroe .row").forEach((r) => r.classList.toggle("on", +r.dataset.i === i));
   const tot = èUS() ? (stato.opere[stato.anno] || { opere: [] }).opere.length : gruppi(stato.anno).principali.length;
   contatore(tr("cntIdx", { r: i + 1, n: n(tot) }));
-  document.querySelectorAll("#pf .ly").forEach((l) => { l.classList.remove("on"); l.classList.add("off"); setTimeout(() => l.remove(), 480); });
+  document.querySelectorAll("#pf .ly").forEach((l) => { l.classList.remove("on"); l.classList.add("off"); setTimeout(() => l.remove(), 300); });
   const ly = h("div", { class: "ly" }, faccia(_top[i], i));
   $("#pf").append(ly);
   requestAnimationFrame(() => requestAnimationFrame(() => ly.classList.add("on")));
@@ -1219,7 +1223,9 @@ function testoGiorni() {
 }
 function scegliRiga() {
   const ol = document.querySelector("#eroe .rows");
-  const mid = innerHeight * .52;
+  // la riga accesa è quella all'altezza del ritratto (sul telefono il ritratto sta più in basso: prima si accendeva la riga sopra)
+  const pr = $("#pf").getBoundingClientRect();
+  const mid = pr.height ? pr.top + pr.height / 2 : innerHeight * .52;
   const r0 = ol ? ol.getBoundingClientRect() : null;
   const dentro = !!(r0 && r0.top < mid && r0.bottom > mid);
   document.body.classList.toggle("ix-in", dentro);
@@ -1330,7 +1336,9 @@ function mostraOperaEU(o) {
         h("div", { class: "sotto" }, a.nome + (o.anno ? " · " + o.anno : "")),
         h("dl", { class: "us-dl" },
           ...(gen ? riga(tr("opGenere"), gen) : []),
-          ...riga(tr("opLibera"), dataIt(stato.dati[stato.anno].libero_dal)),
+          // solo i paesi dove è davvero libera (Marco, 21/11/2026: niente «Europa»; paesi alleati: Italia da verificare)
+          ...riga(tr("opLibera", { p: tr("pLibera")[stato.giur === "es" ? "es" : paesiAlleati(a).length ? "ueAll" : "ue"] }), dataIt(stato.dati[stato.anno].libero_dal)),
+          ...(stato.giur !== "es" && paesiAlleati(a).length ? riga("", tr("opLiberaVer")) : []),
           ...riga(tr("opAutore"), h("button", { class: "collegamento", type: "button", onclick: () => apriAutore(a.wikidata) }, a.nome))),
         h("div", { class: "azioni" },
           h("button", { class: "collegamento", type: "button", onclick: () => apriAutore(a.wikidata) }, tr("opScheda"))),
@@ -1360,7 +1368,22 @@ function disegnaFila(scaffali, conta, tutte) {
   $("#tabs").replaceChildren(...scaffali.map((s, i) => h("button", { type: "button", role: "tab", class: i === _tab ? "on" : "", "aria-selected": i === _tab ? "true" : "false", onclick: () => { _tab = i; disegnaFila(scaffali, conta, tutte); } }, s.nome)));
   const s = scaffali[_tab];
   const fila = $("#shelf");
-  fila.replaceChildren(...s.voci.slice(0, 18).map((x, i) => { x.style.animationDelay = Math.min(i, 8) * 35 + "ms"; return x; }));
+  // colori in fila: niente due uguali vicine, al massimo due chiare (beige, bianca) o due scure (rossa, nera) di seguito (Marco, 21/11/2026)
+  const COL = ["c-red", "c-box", "c-ink", "c-pap"], CHIARI = new Set([1, 3]), prima = [];
+  const voci = s.voci.slice(0, 18);
+  voci.forEach((x) => {
+    const cv = x.querySelector(".cv"); if (!cv) return;
+    const base = Math.max(0, COL.findIndex((k) => cv.classList.contains(k)));
+    let c = base;
+    for (let k = 0; k < 4; k++) {
+      const t = (base + k) % 4, n = prima.length;
+      if (n && prima[n - 1] === t) continue;
+      if (n >= 2 && [prima[n - 1], prima[n - 2]].every((y) => CHIARI.has(y) === CHIARI.has(t))) continue;
+      c = t; break;
+    }
+    prima.push(c); COL.forEach((k) => cv.classList.remove(k)); cv.classList.add(COL[c]);
+  });
+  fila.replaceChildren(...voci.map((x, i) => { x.style.animationDelay = Math.min(i, 8) * 35 + "ms"; return x; }));
   fila.scrollLeft = 0;
   $("#scaffali-link").replaceChildren(s.n > 18 ? h("button", { type: "button", onclick: () => tutte(s) }, conta(s)) : "");
 }
@@ -1580,15 +1603,18 @@ function bloccoLibero(a, c) {
   const v = es === "verificato" && vv.fonti ? Object.keys(vv.fonti) : [];
   const breve = (y) => LING === "it" ? `1° gen ${y}` : `1 Jan ${y}`;
   // come la scheda autore del sito: in grande il conto alla rovescia, la data solo nella tabella dei paesi
+  // paese alleato: in Italia niente data finché la proroga del Trattato di pace (max poco più di 7 anni, per prudenza 8) può valere (Marco, 21/11/2026)
+  const allItAnno = (y) => paesiAlleati(a).length > 0 && y + 8 > new Date().getFullYear();
+  const allIt = c === "it" && allItAnno(dataLibera(a, "it").anno);
   const righe = ["it", "fr", "de", "uk", "es"].map((k) => {
     const y = dataLibera(a, k);
     const nota = k === "es" ? (y.prima ? tr("r80") : tr("r70")) : k === "uk" ? tr("r70uk") : tr("r70");
-    return h("li", { class: (k === c ? "cur " : "") + (y.anno > x.anno ? "later" : "") }, h("span", { class: "c" }, tr("nomiPaesi")[k], h("small", {}, nota)), h("span", { class: "v" }, (y.prima ? tr("nonPrima") : "") + breve(y.anno)));
+    return h("li", { class: (k === c ? "cur " : "") + (y.anno > x.anno ? "later" : "") }, h("span", { class: "c" }, tr("nomiPaesi")[k], h("small", {}, nota)), h("span", { class: "v" }, k === "it" && allItAnno(y.anno) ? tr("daVerif") : (y.prima ? tr("nonPrima") : "") + breve(y.anno)));
   });
   righe.push(h("li", {}, h("span", { class: "c" }, "USA", h("small", {}, tr("r95"))), h("span", { class: "v t" }, tr("usaRiga"))));
   return h("div", {},
-    h("span", { class: "lb-lab" }, giorni > 0 ? tr("liberoTra", { p: tr("paesiNomi")[c] }) : tr("liberoGiaIn", { p: tr("paesiNomi")[c] })),
-    h("div", { class: "lb-big" }, giorni > 0 ? `${n(giorni)} ${giorni === 1 ? tr("giorno") : tr("giorniP")}` : tr("giaLibero")),
+    h("span", { class: "lb-lab" }, allIt ? maiuscola1(tr("paesiNomi")[c]) : giorni > 0 ? tr("liberoTra", { p: tr("paesiNomi")[c] }) : tr("liberoGiaIn", { p: tr("paesiNomi")[c] })),
+    h("div", { class: "lb-big" }, allIt ? maiuscola1(tr("daVerif")) : giorni > 0 ? `${n(giorni)} ${giorni === 1 ? tr("giorno") : tr("giorniP")}` : tr("giaLibero")),
     h("div", { class: "lb-sotto" }, tr("mortoIl", { a: String(a.morte).slice(0, 4) })),
     v.length >= 2 ? h("div", { class: "lb-ver" }, spunta(), h("span", {}, tr("verificato", { n: v.length, f: v.map((k) => tr("fontiNomi")[k] || k).join(", ") }))) : null,
     es === "una_fonte" ? h("div", { class: "lb-ver" }, h("span", {}, tr("unaFonte"))) : null,
@@ -1757,7 +1783,7 @@ const OP_T = {
     nota: "Le immagini (copertine o foto collegate all'opera) compaiono solo nella scheda dell'opera, se hanno una licenza libera su Wikimedia Commons (con credito). Elenco parziale: solo opere con anno di pubblicazione su Wikidata e almeno 2 pagine Wikipedia. Non è consulenza legale: i dati arrivano da fonti aperte e possono contenere errori.",
     regolaB: "Pubblicata nel {p} → di norma libera dal 1° gennaio {a}.", regolaT: "Negli USA conta l'anno di pubblicazione, 95 anni dopo. Qui si contano le opere, non gli autori. Calcolo indicativo, non è consulenza legale: in Italia e in Europa valgono altre regole (scegli il paese dal menu).",
     giorni: "giorni", giorno: "giorno", libere: "Libere", dal: "dal 1° gennaio {a}",
-    ordine: "Ordine", ordiniNomi: { letti: "Più lette", intl: "Più internazionali", az: "Titolo A–Z", aut: "Autore A–Z" },
+    ordine: "Ordine", ordiniNomi: { letti: "Più visitate su Wikipedia", intl: "Più internazionali", az: "Titolo A–Z", aut: "Autore A–Z" },
     conta: "{n} opere", filtro: "Filtro: {f}", togli: "Togli il filtro", nOpere: "{n} opere", tutte: "Tutte le {n} opere →", altriAutori: " e altri",
     scaffTit: "Sfoglia gli scaffali", perLingua: "Per lingua originale (oltre all'inglese)", perGenere: "Per genere",
     notaScaffali: "Lingua e genere vengono da Wikidata. La lingua è nota per quasi tutte le opere, il genere solo per una parte: gli scaffali per genere sono incompleti. Uno scaffale con meno di 6 opere non si mostra.",
@@ -1781,7 +1807,7 @@ const OP_T = {
     nota: "Images (covers or photos linked to the work) appear only in the work's page, when they have a free licence on Wikimedia Commons (with credit). Partial list: only works with a publication year on Wikidata and at least 2 Wikipedia pages. Not legal advice: the data comes from open sources and may contain errors.",
     regolaB: "Published in {p} → as a rule free from 1 January {a}.", regolaT: "In the USA what counts is the year of publication, 95 years later. This list counts works, not authors. Indicative calculation, not legal advice: Italy and Europe follow other rules (pick the country from the menu).",
     giorni: "days to go", giorno: "day to go", libere: "Free", dal: "since 1 January {a}",
-    ordine: "Order", ordiniNomi: { letti: "Most read", intl: "Most international", az: "Title A–Z", aut: "Author A–Z" },
+    ordine: "Order", ordiniNomi: { letti: "Most visited on Wikipedia", intl: "Most international", az: "Title A–Z", aut: "Author A–Z" },
     conta: "{n} works", filtro: "Filter: {f}", togli: "Remove filter", nOpere: "{n} works", tutte: "All {n} works →", altriAutori: " et al.",
     scaffTit: "Browse the shelves", perLingua: "By original language (other than English)", perGenere: "By genre",
     notaScaffali: "Language and genre come from Wikidata. Language is known for almost every work, genre only for some: the genre shelves are incomplete. A shelf with fewer than 6 works is not shown.",
@@ -2142,6 +2168,26 @@ $("#logo").setAttribute("href", SU_EN ? "/en/" : "/");   // il marchio porta all
 $("#finestra").addEventListener("close", () => document.body.classList.remove("finestra-on"));
 $("#finestra").addEventListener("click", (e) => { if (e.target === e.currentTarget) e.currentTarget.close(); });
 avvia();
+
+/* titoli sulle copertine: le parole non si spezzano mai a metà («L'ADOLESCENT-E», «COCCODRILL-O»): se una parola non ci sta,
+   il carattere si rimpicciolisce finché ci sta (Marco, 21/11/2026). Vale per scaffali, griglie e schede. */
+(() => {
+  const SEL = ".cv b";
+  function adatta(b) {
+    if (!b.isConnected || !b.clientWidth) return;
+    if (!b.dataset.fs) b.dataset.fs = parseFloat(getComputedStyle(b).fontSize) || 20;
+    let fs = +b.dataset.fs;
+    b.style.fontSize = fs + "px";
+    for (let k = 0; k < 40 && fs > 11 && b.scrollWidth > b.clientWidth + 1; k++) { fs -= 1; b.style.fontSize = fs + "px"; }
+  }
+  let attesa = false;
+  const tutto = () => { attesa = false; document.querySelectorAll(SEL).forEach(adatta); };
+  const presto = () => { if (!attesa) { attesa = true; requestAnimationFrame(tutto); } };
+  new MutationObserver(presto).observe(document.body, { childList: true, subtree: true });
+  addEventListener("resize", presto);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(presto);
+  presto();
+})();
 </script>
 <noscript><p style="padding:24px">Questa pagina ha bisogno di JavaScript per mostrare gli autori.</p></noscript>
 </body>

@@ -176,6 +176,31 @@ def immagine_libera(nome):
             "pagina": "https://commons.wikimedia.org/wiki/File:" + urllib.parse.quote(nome.replace(" ", "_")),
             "licenza": lic, "autore": autore[:120]}
 
+def foto_autori(ops):
+    """Ritratto dell'autore (Wikidata P18) con licenza libera su Commons, per ogni autore delle opere.
+    Le copertine tipografiche non aggiungevano nulla (Marco, 21/11/2026): nelle liste USA si mostra chi ha scritto il libro."""
+    qids = sorted({a["qid"] for o in ops for a in o.get("autori", [])})
+    img = {}
+    for i in range(0, len(qids), 150):
+        pezzo = " ".join("wd:" + q for q in qids[i:i + 150])
+        for r in sparql(f"SELECT ?a ?img WHERE {{ VALUES ?a {{ {pezzo} }} ?a wdt:P18 ?img }}"):
+            q = qid(val(r, "a"))
+            if q not in img:
+                img[q] = urllib.parse.unquote(val(r, "img").rsplit("/", 1)[-1])
+    foto = {}
+    for q, nome in img.items():
+        f = immagine_libera(nome)
+        if f:
+            f["url"] = "https://commons.wikimedia.org/wiki/Special:FilePath/" + urllib.parse.quote(nome.replace(" ", "_")) + "?width=480"
+            foto[q] = f
+        time.sleep(0.1)
+    for o in ops:
+        for a in o.get("autori", []):
+            a.pop("foto", None)
+            if a["qid"] in foto:
+                a["foto"] = foto[a["qid"]]
+    return len(foto), len(qids)
+
 def main():
     os.makedirs("data", exist_ok=True)
     for anno in ANNI:
@@ -202,6 +227,10 @@ def main():
             o.pop("immagine", None)
             time.sleep(0.1)
         ops.sort(key=lambda o: (-(o["visite_en"] or 0), -o["pagine"]))
+        try:
+            print(" ritratti degli autori:", "%d su %d" % foto_autori(ops))
+        except Exception as e:
+            print(" ritratti non riusciti:", e)
         with open(f"data/us-{anno}.json", "w", encoding="utf8") as f:
             json.dump({"anno": anno, "anno_pubblicazione": pub, "aggiornato": date.today().isoformat(),
                        "fonte": "Wikidata (CC0), Wikipedia, Wikimedia Commons", "opere": ops}, f, ensure_ascii=False, indent=1)

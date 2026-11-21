@@ -274,9 +274,10 @@ h1.h1 .w:nth-child(2)>span{animation-delay:60ms}h1.h1 .w:nth-child(3)>span{anima
 
 .pf{position:fixed;z-index:30;right:var(--pad);top:52%;width:min(24vw,320px);aspect-ratio:4/5;transform:translateY(-50%);pointer-events:none;opacity:0;transition:opacity 300ms}
 body.ix-in .pf{opacity:1}body.menu-on .pf{opacity:0}
-.pf .ly{position:absolute;inset:0;background:var(--box);overflow:hidden;clip-path:inset(100% 0 0 0);transition:clip-path 460ms var(--cut)}
-.pf .ly.on{clip-path:inset(0 0 0 0)}.pf .ly.off{clip-path:inset(0 0 100% 0)}
-.pf img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.06);display:block;transform:scale(1.08);transition:transform 900ms var(--out)}
+/* il ritratto cambia appena cambia il nome, con una dissolvenza breve (21/11/2026) */
+.pf .ly{position:absolute;inset:0;background:var(--box);overflow:hidden;opacity:0;transition:opacity 260ms ease}
+.pf .ly.on{opacity:1}.pf .ly.off{opacity:0}
+.pf img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.06);display:block;transform:scale(1.03);transition:transform 600ms var(--out)}
 .pf .ly.on img{transform:none}
 .cv{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:12%}
 .cv b{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:clamp(22px,2.6vw,38px);line-height:.92}
@@ -443,7 +444,7 @@ body.ix-in .pf{opacity:1}body.menu-on .pf{opacity:0}
 <div class="porte"><a class="porta" href="/en/public-domain-2027/"><span class="m">1 January 2027</span><h3>Public domain 2027</h3><p>Who becomes free on 1 January, explained: the most awaited names, the American books, the rules country by country.</p><span class="go">Read →</span></a><a class="porta" href="/en/radar/"><span class="m">The complete list</span><h3>All authors</h3><p>The complete list of the 826 writers of 2027, to filter by country and genre and download in Excel.</p><span class="go">Search →</span></a><a class="porta" href="/en/already-public/"><span class="m">Archive</span><h3>Already public</h3><p>Search a title or an author: is it already free in Italy, France, Germany, Spain, the UK, the USA?</p><span class="go">Search →</span></a><a class="porta" href="/en/calendar/2027/"><span class="m">Anniversaries</span><h3>Calendar 2027</h3><p>The literary anniversaries of 2027, day by day, to add to your calendar.</p><span class="go">Open →</span></a></div></section>
 </div>
 <script>
-const P=[{"a": "Bertolt Brecht", "t": "The Threepenny Opera", "r": "Free in Europe <em>from 1 January 2027.</em>"}, {"a": "A. A. Milne", "t": "Winnie-the-Pooh", "r": "Free in Europe <em>from 1 January 2027.</em>"}, {"a": "Pearl S. Buck", "t": "The Good Earth", "r": "Free in the United States <em>from 1 January 2027.</em>"}, {"a": "Bertolt Brecht", "t": "Mother Courage and Her Children", "r": "Free in Europe <em>from 1 January 2027.</em>"}, {"a": "Robert Walser", "t": "Geschwister Tanner", "r": "Free in Europe <em>from 1 January 2027.</em>"}, {"a": "Virginia Woolf", "t": "The Waves", "r": "Free in the United States <em>from 1 January 2027.</em>"}, {"a": "Antoine de Saint-Exupéry", "t": "Night Flight", "r": "Free in the United States <em>from 1 January 2027.</em>"}], DIRITTI="All rights reserved.", FOLIO="{k} of {n}";
+const P=[{"a": "Bertolt Brecht", "t": "The Threepenny Opera", "r": "Free in Italy, France, Germany and the UK <em>from 1 January 2027.</em>"}, {"a": "A. A. Milne", "t": "Winnie-the-Pooh", "r": "Free in France, Germany and the UK <em>from 1 January 2027.</em>"}, {"a": "Pearl S. Buck", "t": "The Good Earth", "r": "Free in the United States <em>from 1 January 2027.</em>"}, {"a": "Bertolt Brecht", "t": "Mother Courage and Her Children", "r": "Free in Italy, France, Germany and the UK <em>from 1 January 2027.</em>"}, {"a": "Robert Walser", "t": "Geschwister Tanner", "r": "Free in Italy, France, Germany and the UK <em>from 1 January 2027.</em>"}, {"a": "Virginia Woolf", "t": "The Waves", "r": "Free in the United States <em>from 1 January 2027.</em>"}, {"a": "Antoine de Saint-Exupéry", "t": "Night Flight", "r": "Free in the United States <em>from 1 January 2027.</em>"}], DIRITTI="All rights reserved.", FOLIO="{k} of {n}";
 const el=s=>document.getElementById(s);
 el("gg").textContent=Math.max(0,Math.ceil((new Date(2027,0,1)-new Date())/864e5));
 const lenta=matchMedia("(prefers-reduced-motion: reduce)").matches;

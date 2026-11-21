@@ -274,9 +274,10 @@ h1.h1 .w:nth-child(2)>span{animation-delay:60ms}h1.h1 .w:nth-child(3)>span{anima
 
 .pf{position:fixed;z-index:30;right:var(--pad);top:52%;width:min(24vw,320px);aspect-ratio:4/5;transform:translateY(-50%);pointer-events:none;opacity:0;transition:opacity 300ms}
 body.ix-in .pf{opacity:1}body.menu-on .pf{opacity:0}
-.pf .ly{position:absolute;inset:0;background:var(--box);overflow:hidden;clip-path:inset(100% 0 0 0);transition:clip-path 460ms var(--cut)}
-.pf .ly.on{clip-path:inset(0 0 0 0)}.pf .ly.off{clip-path:inset(0 0 100% 0)}
-.pf img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.06);display:block;transform:scale(1.08);transition:transform 900ms var(--out)}
+/* il ritratto cambia appena cambia il nome, con una dissolvenza breve (21/11/2026) */
+.pf .ly{position:absolute;inset:0;background:var(--box);overflow:hidden;opacity:0;transition:opacity 260ms ease}
+.pf .ly.on{opacity:1}.pf .ly.off{opacity:0}
+.pf img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.06);display:block;transform:scale(1.03);transition:transform 600ms var(--out)}
 .pf .ly.on img{transform:none}
 .cv{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:12%}
 .cv b{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:clamp(22px,2.6vw,38px);line-height:.92}
@@ -443,7 +444,7 @@ body.ix-in .pf{opacity:1}body.menu-on .pf{opacity:0}
 <div class="porte"><a class="porta" href="/pubblico-dominio-2027/"><span class="m">1° gennaio 2027</span><h3>Pubblico dominio 2027</h3><p>Chi si libera il 1° gennaio, spiegato: i nomi più attesi, i libri americani, le regole paese per paese.</p><span class="go">Leggi →</span></a><a class="porta" href="/radar/"><span class="m">L'elenco completo</span><h3>Tutti gli autori</h3><p>L'elenco completo dei 826 scrittori del 2027, da filtrare per paese e genere e scaricare in Excel.</p><span class="go">Cerca →</span></a><a class="porta" href="/gia-pubblici/"><span class="m">Archivio</span><h3>Già pubblici</h3><p>Cerca un titolo o un autore: è già libero in Italia, Francia, Germania, Spagna, Regno Unito, USA?</p><span class="go">Cerca →</span></a><a class="porta" href="/calendario/2027/"><span class="m">Anniversari</span><h3>Calendario 2027</h3><p>Gli anniversari letterari del 2027 giorno per giorno, da aggiungere al tuo calendario.</p><span class="go">Apri →</span></a></div></section>
 </div>
 <script>
-const P=[{"a": "Bertolt Brecht", "t": "L'opera da tre soldi", "r": "Libero in Europa <em>dal 1° gennaio 2027.</em>"}, {"a": "A. A. Milne", "t": "Winnie Puh", "r": "Libero in Europa <em>dal 1° gennaio 2027.</em>"}, {"a": "Pearl S. Buck", "t": "La buona terra", "r": "Libero negli Stati Uniti <em>dal 1° gennaio 2027.</em>"}, {"a": "Bertolt Brecht", "t": "Madre Coraggio e i suoi figli", "r": "Libero in Europa <em>dal 1° gennaio 2027.</em>"}, {"a": "Robert Walser", "t": "I fratelli Tanner", "r": "Libero in Europa <em>dal 1° gennaio 2027.</em>"}, {"a": "Virginia Woolf", "t": "Le onde", "r": "Libero negli Stati Uniti <em>dal 1° gennaio 2027.</em>"}, {"a": "Antoine de Saint-Exupéry", "t": "Volo di notte", "r": "Libero negli Stati Uniti <em>dal 1° gennaio 2027.</em>"}], DIRITTI="Tutti i diritti riservati.", FOLIO="{k} di {n}";
+const P=[{"a": "Bertolt Brecht", "t": "L'opera da tre soldi", "r": "Libero in Italia, Francia, Germania e nel Regno Unito <em>dal 1° gennaio 2027.</em>"}, {"a": "A. A. Milne", "t": "Winnie Puh", "r": "Libero in Francia, Germania e nel Regno Unito <em>dal 1° gennaio 2027.</em>"}, {"a": "Pearl S. Buck", "t": "La buona terra", "r": "Libero negli Stati Uniti <em>dal 1° gennaio 2027.</em>"}, {"a": "Bertolt Brecht", "t": "Madre Coraggio e i suoi figli", "r": "Libero in Italia, Francia, Germania e nel Regno Unito <em>dal 1° gennaio 2027.</em>"}, {"a": "Robert Walser", "t": "I fratelli Tanner", "r": "Libero in Italia, Francia, Germania e nel Regno Unito <em>dal 1° gennaio 2027.</em>"}, {"a": "Virginia Woolf", "t": "Le onde", "r": "Libero negli Stati Uniti <em>dal 1° gennaio 2027.</em>"}, {"a": "Antoine de Saint-Exupéry", "t": "Volo di notte", "r": "Libero negli Stati Uniti <em>dal 1° gennaio 2027.</em>"}], DIRITTI="Tutti i diritti riservati.", FOLIO="{k} di {n}";
 const el=s=>document.getElementById(s);
 el("gg").textContent=Math.max(0,Math.ceil((new Date(2027,0,1)-new Date())/864e5));
 const lenta=matchMedia("(prefers-reduced-motion: reduce)").matches;

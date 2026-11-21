@@ -2,7 +2,7 @@
 
 Mockup approvato da Marco il 21/11/2026 (prova 1, «frontespizio»): il titolo di un'opera che si libera il prossimo
 1° gennaio, in grande come in un frontespizio; sotto «Tutti i diritti riservati» viene barrato e sostituito da
-«Libero in Europa / negli Stati Uniti dal 1° gennaio <anno>». Ogni 7 secondi si volta pagina.
+«Libero in Italia, Francia, Germania e Regno Unito / negli Stati Uniti dal 1° gennaio <anno>» (in Spagna gli autori morti prima del 1987 hanno 80 anni: niente «Europa»). Ogni 7 secondi si volta pagina.
 Sotto, una parte di solo testo (per chi legge e per Google): i numeri del prossimo 1° gennaio e le porte del sito.
 Il radar (lo strumento con i filtri) sta su /radar/ e /en/radar/: i vecchi indirizzi con # ci rimandano lì.
 
@@ -34,12 +34,33 @@ def _leggi(p, vuoto=None):
         return vuoto
 
 
+NOMI_P = {"it": {"it": "in Italia", "fr": "in Francia", "de": "in Germania", "uk": "nel Regno Unito", "es": "in Spagna"},
+          "en": {"it": "Italy", "fr": "France", "de": "Germany", "uk": "the UK", "es": "Spain"}}
+
+
+def elenco_paesi(paesi, lang):
+    """«in Italia, Francia, Germania e Regno Unito» / «in Italy, France, Germany and the UK»."""
+    if not paesi:
+        return ""
+    if lang == "en":
+        n = [NOMI_P["en"][x] for x in paesi]
+        return "in " + (", ".join(n[:-1]) + " and " + n[-1] if len(n) > 1 else n[0])
+    n = [NOMI_P["it"][x] for x in paesi]
+    if len(n) > 1:
+        # «in Italia, Francia, Germania e nel Regno Unito»: preposizione solo sul primo, articolo dove serve
+        corti = [x.split(" ", 1)[1] if x.startswith("in ") else x for x in n]
+        testa = n[0] + "".join(", " + c for c in corti[1:-1])
+        return testa + " e " + corti[-1]
+    return n[0]
+
+
 def pagine_frontespizio(anno):
     ue = _leggi(RADICE / "data" / f"{anno}.json", {}) or {}
     us = _leggi(RADICE / "data" / f"us-{anno}.json", {}) or {}
     ver = (_leggi(RADICE / "data" / "us-anni-verificati.json", {}) or {}).get(str(anno), {})
     pub = us.get("anno_pubblicazione")
     autori = {a["wikidata"]: a for a in ue.get("autori", [])}
+    autori_es = {a["wikidata"] for a in (_leggi(RADICE / "data" / f"es-{anno}.json", {}) or {}).get("autori", [])}
     opere_us = {o["qid"]: o for o in us.get("opere", [])}
 
     def us_ok(q):
@@ -56,7 +77,13 @@ def pagine_frontespizio(anno):
     pag = {}
     for k, (q, i) in enumerate(scelte_ue):
         a, o = autori[q], autori[q]["opere"][i]
-        pag[f"ue{k}"] = {"a": a["nome"], "it": o["titolo"], "en": o.get("titolo_en") or o["titolo"], "dove": "ue"}
+        # La riga dice solo i paesi dove l'autore è davvero libero quel giorno, calcolati dalle regole (Marco, 21/11/2026: «dobbiamo essere precisi»):
+        # Italia no se l'autore è di un paese alleato (Trattato di pace 1947: va verificato); Spagna solo se è nella lista spagnola di quell'anno
+        # (80 anni per chi è morto prima del 1987). Francia: i «morti per la Francia» riguardano solo i morti 1939-1945, mai l'anno di questa pagina.
+        from pagine import ALLEATI_1947
+        alleato = any(x in ALLEATI_1947 for x in a.get("paesi") or [])
+        paesi = ([] if alleato else ["it"]) + ["fr", "de", "uk"] + (["es"] if q in autori_es else [])
+        pag[f"ue{k}"] = {"a": a["nome"], "it": o["titolo"], "en": o.get("titolo_en") or o["titolo"], "dove": "ue", "paesi": paesi}
     for k, q in enumerate(scelte_us):
         o = opere_us[q]
         nomi = [x["nome"] for x in o.get("autori", [])][:2]
@@ -144,7 +171,7 @@ TESTI = {
         titolo="Public Domain Radar · Chi diventa libero, e quando",
         descr="Ogni 1° gennaio scadono i diritti di centinaia di scrittori e di libri. Chi diventa libero nel {a} in Europa e negli Stati Uniti, paese per paese, con dati aperti e fonti di legge.",
         diritti="Tutti i diritti riservati.",
-        libero={"ue": "Libero in Europa <em>dal 1° gennaio {a}.</em>", "us": "Libero negli Stati Uniti <em>dal 1° gennaio {a}.</em>"},
+        libero={"ue": "Libero {p} <em>dal 1° gennaio {a}.</em>", "us": "Libero negli Stati Uniti <em>dal 1° gennaio {a}.</em>"},
         colophon='Ogni 1° gennaio, in Europa e negli Stati Uniti, scadono i diritti di centinaia di libri. Il prossimo è tra <span class="giorni" id="gg"></span> giorni.',
         cta="Scopri chi si libera nel {a}", folio="{k} di {n}", pagina_anno="/pubblico-dominio-{a}/",
         cnt=('<span id="cnt"><i class="lg">1° gennaio {a} · </i><i class="sm">1° gen {a} · </i>tra {g} giorni</span>'),
@@ -163,7 +190,7 @@ TESTI = {
         titolo="Public Domain Radar · Who becomes free, and when",
         descr="Every 1 January the copyright of hundreds of writers and books expires. Who becomes free in {a} in Europe and the United States, country by country, with open data and legal sources.",
         diritti="All rights reserved.",
-        libero={"ue": "Free in Europe <em>from 1 January {a}.</em>", "us": "Free in the United States <em>from 1 January {a}.</em>"},
+        libero={"ue": "Free {p} <em>from 1 January {a}.</em>", "us": "Free in the United States <em>from 1 January {a}.</em>"},
         colophon='Every 1 January, in Europe and the United States, the copyright of hundreds of books expires. The next one is in <span class="giorni" id="gg"></span> days.',
         cta="See who becomes free in {a}", folio="{k} of {n}", pagina_anno="/en/public-domain-{a}/",
         cnt=('<span id="cnt"><i class="lg">1 January {a} · </i><i class="sm">1 Jan {a} · </i>in {g} days</span>'),
@@ -188,7 +215,7 @@ def pagina(lang, anno, P):
     gg = max(0, (datetime.date(anno, 1, 1) - datetime.date.today()).days)
     fmt = dict(a=anno, a1=anno + 1, ue=migliaia(nu["ue"], lang), m=anno - 71, me=anno - 81, pub=nu["pub"], usok=migliaia(nu["us_ok"], lang),
                agg=data_lunga(nu["aggiornato"][:10], lang), g=migliaia(gg, lang))
-    pag = [{"a": p.get("a_en", p["a"]) if lang == "en" else p["a"], "t": p[lang], "r": t["libero"][p["dove"]].format(a=anno)}
+    pag = [{"a": p.get("a_en", p["a"]) if lang == "en" else p["a"], "t": p[lang], "r": t["libero"][p["dove"]].format(a=anno, p=elenco_paesi(p.get("paesi", []), lang))}
            for p in pagine_frontespizio(anno)]
     if not pag:
         raise RuntimeError("home: nessuna opera per il frontespizio")

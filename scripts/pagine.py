@@ -350,14 +350,20 @@ ALLEATI_1947 = {"Regno Unito", "Regno Unito di Gran Bretagna e Irlanda", "Regno 
                 "Serbia", "Albania"}
 
 
+# Trattato di pace del 1947, allegato XV, parte A, punto 3: in Italia non conta il periodo dall'inizio della guerra
+# all'entrata in vigore del trattato (15 settembre 1947). Al massimo poco più di 7 anni: per prudenza 8. Finché la data
+# normale più questa proroga non è passata, per gli autori dei paesi alleati in Italia scriviamo «da verificare».
+PROROGA_ALLEATI = 8
+
+
 def avviso_alleato(a, lang):
     p = [x for x in a.get("paesi", []) if x in ALLEATI_1947]
     if not p:
         return ""
     t = (f"Autore di un paese alleato nella Seconda guerra mondiale ({', '.join(p)}): in Italia la protezione può durare di più "
-         "(Trattato di pace del 1947, allegato XV). La data qui sopra non ne tiene conto: va verificata caso per caso." if lang == "it" else
+         "(Trattato di pace del 1947, allegato XV): per questo in Italia non diamo una data, va verificata opera per opera." if lang == "it" else
          f"Author from an Allied country in the Second World War ({', '.join(p)}): in Italy protection may last longer "
-         "(1947 Peace Treaty, Annex XV). The date above does not take this into account: check case by case.")
+         "(1947 Peace Treaty, Annex XV): so we give no date for Italy, it must be checked work by work.")
     return f'<p><strong>{esc(t)}</strong></p>\n'
 
 
@@ -760,10 +766,16 @@ def scheda_statica(a, lang, bd):
     o.append(avviso_alleato(a, lang))
     # le date paese per paese, visibili e brevi: le regole spiegate stanno in un posto solo (riquadro delle regole)
     oggi_a = datetime.date.today().year
+    _all = bool(avviso_alleato(a, lang))
     def tessera(paese, anno, regola, cl=""):
         libero = bool(anno and anno <= oggi_a)
+        italia_ver = paese == T("Italia", "Italy") and _all and anno and anno + PROROGA_ALLEATI > oggi_a
+        if italia_ver:
+            libero = False
         stato = "ok" if libero else cl
         d = (T("libero", "free") + f" {T('dal', 'since')} {anno}") if libero else (data_l(lang, anno).replace("1° gennaio", "1° gen").replace("1 January", "1 Jan") if anno else T("opera per opera", "work by work"))
+        if italia_ver:
+            d = T("da verificare", "to be checked")   # paese alleato: niente data (Marco, 21/11/2026)
         return f'<li class="{stato}"><span class="p">{esc(paese)}</span><span class="d">{esc(d)}</span><span class="r">{esc(regola)}</span></li>'
     ue = T("70 anni dalla morte", "70 years after death")
     fr = ue + (T("; +30 anni se «morto per la Francia»", "; +30 years if «died for France»") if 1939 <= D <= 1945 else "")
@@ -968,8 +980,8 @@ def blocco_vicini_n(a, lang):
     scelti = (stessi + [x for x in lista if x not in stessi])[:6]
     morti = anno - (71 if tipo == "ue" else 81)
     nome = pulisci(a["nome"])
-    ordine = (T(f"Prima quelli {del_paese(c)}, poi i più letti su Wikipedia.", "Same country first, then the most read on Wikipedia.") if stessi
-              else T("Prima i più letti su Wikipedia.", "Most read on Wikipedia first."))
+    ordine = (T(f"Prima quelli {del_paese(c)}, poi quelli con la pagina Wikipedia più visitata.", "Same country first, then those whose Wikipedia page gets the most visits.") if stessi
+              else T("Prima quelli con la pagina Wikipedia più visitata.", "Those whose Wikipedia page gets the most visits first."))
     if tipo == "ue":
         tit = T(f"Altri scrittori liberi dal 1° gennaio {anno}", f"Other writers free from 1 January {anno}")
         dove = T("in Italia, Francia, Germania e Regno Unito", "in Italy, France, Germany and the UK")
@@ -1099,6 +1111,8 @@ def scheda_nuova(a, lang, bd):
             continue
         libero = anno <= oggi.year
         val = (T(f"libero dal {anno}", f"free since {anno}") if libero else _data_breve(lang, anno))
+        if paese == T("Italia", "Italy") and al and anno + PROROGA_ALLEATI > oggi.year:
+            val, libero = T("da verificare", "to be checked"), False   # paese alleato: niente data, la protezione può durare di più (Marco, 21/11/2026)
         cl = "cur" if primo else ("free" if libero else ("later" if anno > anno_ue else ""))
         primo = False
         righe.append(f'<li class="{cl}"><span class="c">{esc(paese)}<small>{esc(regola)}</small></span><span class="v">{esc(val)}</span></li>')
@@ -1690,7 +1704,7 @@ def _tessera_vicino(q, lang):
 
 
 def blocco_vicini(a, lang):
-    """Sei scrittori che diventano liberi lo stesso giorno: prima dello stesso paese, poi i più letti su Wikipedia."""
+    """Sei scrittori che diventano liberi lo stesso giorno: prima dello stesso paese, poi per visite alla pagina Wikipedia."""
     q = a["wikidata"]
     if q not in MEMBRI:
         return ""
@@ -1708,9 +1722,9 @@ def blocco_vicini(a, lang):
     morti = anno - (71 if tipo == "ue" else 81)
     nome = pulisci(a["nome"])
     if stessi:
-        ordine = T(f"Prima quelli {del_paese(c)}, poi i più letti su Wikipedia.", "Same country first, then the most read on Wikipedia.")
+        ordine = T(f"Prima quelli {del_paese(c)}, poi quelli con la pagina Wikipedia più visitata.", "Same country first, then those whose Wikipedia page gets the most visits.")
     else:
-        ordine = T("Prima i più letti su Wikipedia.", "Most read on Wikipedia first.")
+        ordine = T("Prima quelli con la pagina Wikipedia più visitata.", "Those whose Wikipedia page gets the most visits first.")
     if tipo == "ue":
         tit = T(f"Altri scrittori liberi dal 1° gennaio {anno}", f"Other writers free from 1 January {anno}")
         dove = T("in Italia, Francia, Germania e Regno Unito", "in Italy, France, Germany and the UK")
@@ -1939,7 +1953,7 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
     # 2. i nomi più attesi
     if aut:
         out.append(f'<section class="sec ix" id="ix1">\n<div class="sh m"><h2>{T("I nomi più attesi", "The most awaited names")}</h2><span>{T(f"Europa e Regno Unito · morti nel {morti}", f"Europe and the UK · died in {morti}")}</span></div>\n'
-                   f'<p class="lede">{T(f"Gli scrittori morti nel {morti} più letti su Wikipedia. Dal 1° gennaio i loro testi originali si possono pubblicare senza permesso in Italia, Francia, Germania e Regno Unito.", f"The writers who died in {morti} that are most read on Wikipedia. From 1 January their original texts can be published without permission in Italy, France, Germany and the UK.")}</p>\n'
+                   f'<p class="lede">{T(f"Gli scrittori morti nel {morti}, in ordine di visite alla loro pagina Wikipedia negli ultimi 12 mesi (in italiano, inglese, francese, tedesco e spagnolo): misura quanto sono conosciuti oggi, non quanto si vendono i loro libri. Dal 1° gennaio i loro testi originali si possono pubblicare senza permesso in Italia, Francia, Germania e Regno Unito.", f"The writers who died in {morti}, ranked by visits to their Wikipedia page over the last 12 months (in Italian, English, French, German and Spanish): it measures how well known they are today, not how well their books sell. From 1 January their original texts can be published without permission in Italy, France, Germany and the UK.")}</p>\n'
                    '<ol class="rows" style="margin-top:28px">\n')
         crediti = []
         for k, a in enumerate(aut[:8]):
@@ -1969,8 +1983,9 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
     # 3. i libri USA
     if opere:
         out.append(f'<section class="sec ix" id="ix2">\n<div class="sh m"><h2>{T(f"I libri del {pub}", f"The books of {pub}")}</h2><span>{T("Stati Uniti · 95 anni dall’uscita", "United States · 95 years from publication")}</span></div>\n'
-                   f'<p class="lede">{T(f"Negli USA conta l&#39;anno di pubblicazione: il 1° gennaio diventano liberi i libri usciti nel {pub}. Diciamo «confermato» solo quando l&#39;anno è confermato da una fonte diversa da Wikidata (registro del copyright americano, biblioteche nazionali, Open Library, Library of Congress); per gli altri scriviamo «anno da confermare».", f"In the USA what counts is the year of publication: on 1 January books published in {pub} become free. We say «confirmed» only when a source other than Wikidata confirms the year (the US copyright register, national libraries, Open Library, Library of Congress); for the others we say «year to be confirmed».")}</p>\n'
+                   f'<p class="lede">{T(f"Negli USA conta l&#39;anno di pubblicazione: il 1° gennaio diventano liberi i libri usciti nel {pub}. Diciamo «confermato» solo quando l&#39;anno è confermato da una fonte diversa da Wikidata (registro del copyright americano, biblioteche nazionali, Open Library, Library of Congress); per gli altri scriviamo «anno da confermare». In ordine di visite alla pagina del libro su Wikipedia in inglese, negli ultimi 12 mesi.", f"In the USA what counts is the year of publication: on 1 January books published in {pub} become free. We say «confirmed» only when a source other than Wikidata confirms the year (the US copyright register, national libraries, Open Library, Library of Congress); for the others we say «year to be confirmed». Ranked by visits to the book\'s English Wikipedia page over the last 12 months.")}</p>\n'
                    '<ol class="rows" style="margin-top:28px">\n')
+        crediti_us, visti_us = [], set()
         for k, o in enumerate(opere[:12]):
             t = (o.get("titolo_it") or o["titolo"]) if it else o["titolo"]
             chi = ", ".join(pulisci(a["nome"]) for a in o.get("autori", [])) or "—"
@@ -1981,9 +1996,22 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
                 badge = f'<span class="tbd">{esc(T(f"a puntate fino al {v_[1]}", f"serialized until {v_[1]}"))}</span>'
             else:
                 badge = f'<span class="tbd">{esc(T("anno da confermare", "year to be confirmed"))}</span>'
-            out.append(f'<li class="row" data-t="{esc(t)}" data-a="{esc(chi.split(", ")[0])}" data-y="{pub}"><span class="no">{k + 1:02d}</span>'
+            # ritratto del primo autore che ne ha uno (le copertine tipografiche non aggiungevano nulla: Marco, 21/11/2026)
+            fa = next((a for a in o.get("autori", []) if (a.get("foto") or {}).get("url")), None)
+            df = ""
+            if fa:
+                df = ' data-f="' + esc(fa["foto"]["url"]) + '"'
+                if fa["qid"] not in visti_us:
+                    visti_us.add(fa["qid"])
+                    chi_f = re.sub(r"^(.+?)\1$", r"\1", pulisci(fa["foto"].get("autore")))
+                    chi_f = "" if len(chi_f) > 60 else chi_f
+                    crediti_us.append(f'{esc(pulisci(fa["nome"]))}: <a href="{esc(fa["foto"].get("pagina", ""))}" rel="noopener">{esc(" · ".join(x for x in (chi_f, pulisci(fa["foto"].get("licenza"))) if x) or "Wikimedia Commons")}</a>')
+            out.append(f'<li class="row"{df} data-i="{esc(iniziali_nome(chi.split(", ")[0]))}"><span class="no">{k + 1:02d}</span>'
                        f'<span class="nm"><a href="{app}#/opera/{o["qid"]}">{esc(t)}</a></span><span class="mt">{esc(chi)}<br>{badge}</span></li>\n')
-        out.append(f'</ol>\n<a href="{app}#/us/{anno}" class="more">{T(f"Tutti i {n_us} libri: {n_us_ok} confermati, {n_us - n_us_ok} da confermare →", f"All {n_us} books: {n_us_ok} confirmed, {n_us - n_us_ok} to be confirmed →")}</a>\n</section>\n')
+        out.append(f'</ol>\n<a href="{app}#/us/{anno}" class="more">{T(f"Tutti i {n_us} libri: {n_us_ok} confermati, {n_us - n_us_ok} da confermare →", f"All {n_us} books: {n_us_ok} confirmed, {n_us - n_us_ok} to be confirmed →")}</a>\n')
+        if crediti_us:
+            out.append(f'<p class="cred">{T("Ritratti degli autori da Wikimedia Commons", "Authors\' portraits from Wikimedia Commons")} — {" · ".join(crediti_us)}</p>\n')
+        out.append("</section>\n")
 
     # 4. paese per paese
     righe = [
@@ -2083,13 +2111,12 @@ function ink(){ const ws=$$('#say .w'), r=say.getBoundingClientRect(); const p=M
 const esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 let act=null;
 function face(r){ const i=$$('.row').indexOf(r);
-  if(r.dataset.t) return '<div class="cv '+COV[i%4]+'"><span>'+r.dataset.y+'</span><b>'+esc(r.dataset.t)+'</b><span>'+esc(r.dataset.a)+'</span></div>';
   return r.dataset.f?'<img src="'+r.dataset.f+'" alt="" onerror="this.remove()">':'<div class="cv c-box"><span></span><b>'+esc(r.dataset.i||'')+'</b><span></span></div>'; }
 function setAct(r){ if(r===act) return; act=r; $$('.row').forEach(x=>x.classList.toggle('on',x===r));
-  $$('#pf .ly').forEach(l=>{ l.classList.remove('on'); l.classList.add('off'); setTimeout(()=>l.remove(),480); });
+  $$('#pf .ly').forEach(l=>{ l.classList.remove('on'); l.classList.add('off'); setTimeout(()=>l.remove(),300); });
   const ly=document.createElement('div'); ly.className='ly'; ly.innerHTML=face(r); $('#pf').appendChild(ly);
   requestAnimationFrame(()=>requestAnimationFrame(()=>ly.classList.add('on'))); }
-function pick(){ const mid=innerHeight*.52; let inside=null;
+function pick(){ const pr=$('#pf').getBoundingClientRect(), mid=pr.height?pr.top+pr.height/2:innerHeight*.52; let inside=null;   /* la riga accesa è quella all'altezza del ritratto */
   $$('.ix').forEach(s=>{ const ol=s.querySelector('.rows').getBoundingClientRect(); if(ol.top<mid&&ol.bottom>mid) inside=s; });
   document.body.classList.toggle('ix-in',!!inside); if(!inside) return;
   let best=null,bd=1e9; inside.querySelectorAll('.row').forEach(r=>{ const b=r.getBoundingClientRect(), d=Math.abs(b.top+b.height/2-mid); if(d<bd){bd=d;best=r;} });

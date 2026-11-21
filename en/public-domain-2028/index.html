@@ -270,9 +270,10 @@ h1.h1 .w:nth-child(2)>span{animation-delay:60ms}h1.h1 .w:nth-child(3)>span{anima
 
 .pf{position:fixed;z-index:30;right:var(--pad);top:52%;width:min(24vw,320px);aspect-ratio:4/5;transform:translateY(-50%);pointer-events:none;opacity:0;transition:opacity 300ms}
 body.ix-in .pf{opacity:1}body.menu-on .pf{opacity:0}
-.pf .ly{position:absolute;inset:0;background:var(--box);overflow:hidden;clip-path:inset(100% 0 0 0);transition:clip-path 460ms var(--cut)}
-.pf .ly.on{clip-path:inset(0 0 0 0)}.pf .ly.off{clip-path:inset(0 0 100% 0)}
-.pf img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.06);display:block;transform:scale(1.08);transition:transform 900ms var(--out)}
+/* il ritratto cambia appena cambia il nome, con una dissolvenza breve (21/11/2026) */
+.pf .ly{position:absolute;inset:0;background:var(--box);overflow:hidden;opacity:0;transition:opacity 260ms ease}
+.pf .ly.on{opacity:1}.pf .ly.off{opacity:0}
+.pf img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.06);display:block;transform:scale(1.03);transition:transform 600ms var(--out)}
 .pf .ly.on img{transform:none}
 .cv{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:12%}
 .cv b{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:clamp(22px,2.6vw,38px);line-height:.92}
@@ -384,7 +385,7 @@ body.ix-in .pf{opacity:1}body.menu-on .pf{opacity:0}
 <div class="nums"><a href="#ix1"><span class="n">849</span><span class="c">writers free in Italy, France, Germany and the UK</span><span class="m">died in 1957</span></a><a href="/en/radar/#/2028"><span class="n">770</span><span class="c">writers free in Spain</span><span class="m">died in 1947</span></a><a href="#ix2"><span class="n">175</span><span class="c">books free in the USA</span><span class="m">published in 1932 · 110 with the year confirmed</span></a></div>
 <section class="sec ix" id="ix1">
 <div class="sh m"><h2>The most awaited names</h2><span>Europe and the UK · died in 1957</span></div>
-<p class="lede">The writers who died in 1957 that are most read on Wikipedia. From 1 January their original texts can be published without permission in Italy, France, Germany and the UK.</p>
+<p class="lede">The writers who died in 1957, ranked by visits to their Wikipedia page over the last 12 months (in Italian, English, French, German and Spanish): it measures how well known they are today, not how well their books sell. From 1 January their original texts can be published without permission in Italy, France, Germany and the UK.</p>
 <ol class="rows" style="margin-top:28px">
 <li class="row" data-f="https://commons.wikimedia.org/wiki/Special:FilePath/Laura_Ingalls_Wilder.jpg?width=480" data-i="LW"><span class="no">01</span><span class="nm"><a href="/en/author/laura-ingalls-wilder/">Laura Ingalls Wilder</a></span><span class="mt">American children&#x27;s writer, diarist, and journalist<br>died 10 February 1957</span></li>
 <li class="row" data-f="https://commons.wikimedia.org/wiki/Special:FilePath/Gabriela_Mistral_1945.jpg?width=480" data-i="GM"><span class="no">02</span><span class="nm"><a href="/en/author/gabriela-mistral/">Gabriela Mistral</a></span><span class="mt">Chilean poet, diplomat and educator<br>died 10 January 1957</span></li>
@@ -400,20 +401,20 @@ body.ix-in .pf{opacity:1}body.menu-on .pf{opacity:0}
 </section>
 <section class="sec ix" id="ix2">
 <div class="sh m"><h2>The books of 1932</h2><span>United States · 95 years from publication</span></div>
-<p class="lede">In the USA what counts is the year of publication: on 1 January books published in 1932 become free. We say «confirmed» only when a source other than Wikidata confirms the year (the US copyright register, national libraries, Open Library, Library of Congress); for the others we say «year to be confirmed».</p>
+<p class="lede">In the USA what counts is the year of publication: on 1 January books published in 1932 become free. We say «confirmed» only when a source other than Wikidata confirms the year (the US copyright register, national libraries, Open Library, Library of Congress); for the others we say «year to be confirmed». Ranked by visits to the book's English Wikipedia page over the last 12 months.</p>
 <ol class="rows" style="margin-top:28px">
-<li class="row" data-t="Brave New World" data-a="Aldous Huxley" data-y="1932"><span class="no">01</span><span class="nm"><a href="/en/radar/#/opera/Q191949">Brave New World</a></span><span class="mt">Aldous Huxley<br>1932 confirmed</span></li>
-<li class="row" data-t="Little House in the Big Woods" data-a="Laura Ingalls Wilder" data-y="1932"><span class="no">02</span><span class="nm"><a href="/en/radar/#/opera/Q7173181">Little House in the Big Woods</a></span><span class="mt">Laura Ingalls Wilder<br>1932 confirmed</span></li>
-<li class="row" data-t="Journey to the End of the Night" data-a="Louis-Ferdinand Céline" data-y="1932"><span class="no">03</span><span class="nm"><a href="/en/radar/#/opera/Q774233">Journey to the End of the Night</a></span><span class="mt">Louis-Ferdinand Céline<br>1932 confirmed</span></li>
-<li class="row" data-t="The Man Without Qualities" data-a="Robert Musil" data-y="1932"><span class="no">04</span><span class="nm"><a href="/en/radar/#/opera/Q1195668">The Man Without Qualities</a></span><span class="mt">Robert Musil<br><span class="tbd">year to be confirmed</span></span></li>
-<li class="row" data-t="Light in August" data-a="William Faulkner" data-y="1932"><span class="no">05</span><span class="nm"><a href="/en/radar/#/opera/Q1823273">Light in August</a></span><span class="mt">William Faulkner<br>1932 confirmed</span></li>
-<li class="row" data-t="Peril at End House" data-a="Agatha Christie" data-y="1932"><span class="no">06</span><span class="nm"><a href="/en/radar/#/opera/Q957248">Peril at End House</a></span><span class="mt">Agatha Christie<br>1932 confirmed</span></li>
-<li class="row" data-t="Cold Comfort Farm" data-a="Stella Gibbons" data-y="1932"><span class="no">07</span><span class="nm"><a href="/en/radar/#/opera/Q5142221">Cold Comfort Farm</a></span><span class="mt">Stella Gibbons<br>1932 confirmed</span></li>
-<li class="row" data-t="The German Ideology" data-a="Karl Marx" data-y="1932"><span class="no">08</span><span class="nm"><a href="/en/radar/#/opera/Q470600">The German Ideology</a></span><span class="mt">Karl Marx, Friedrich Engels<br>1932 confirmed</span></li>
-<li class="row" data-t="The Concept of the Political" data-a="Carl Schmitt" data-y="1932"><span class="no">09</span><span class="nm"><a href="/en/radar/#/opera/Q7727278">The Concept of the Political</a></span><span class="mt">Carl Schmitt<br>1932 confirmed</span></li>
-<li class="row" data-t="The Thirteen Problems" data-a="Agatha Christie" data-y="1932"><span class="no">10</span><span class="nm"><a href="/en/radar/#/opera/Q934396">The Thirteen Problems</a></span><span class="mt">Agatha Christie<br>1932 confirmed</span></li>
-<li class="row" data-t="Radetzky March" data-a="Joseph Roth" data-y="1932"><span class="no">11</span><span class="nm"><a href="/en/radar/#/opera/Q610428">Radetzky March</a></span><span class="mt">Joseph Roth<br>1932 confirmed</span></li>
-<li class="row" data-t="Death in the Afternoon" data-a="Ernest Hemingway" data-y="1932"><span class="no">12</span><span class="nm"><a href="/en/radar/#/opera/Q1970223">Death in the Afternoon</a></span><span class="mt">Ernest Hemingway<br>1932 confirmed</span></li>
+<li class="row" data-i="AH"><span class="no">01</span><span class="nm"><a href="/en/radar/#/opera/Q191949">Brave New World</a></span><span class="mt">Aldous Huxley<br>1932 confirmed</span></li>
+<li class="row" data-i="LW"><span class="no">02</span><span class="nm"><a href="/en/radar/#/opera/Q7173181">Little House in the Big Woods</a></span><span class="mt">Laura Ingalls Wilder<br>1932 confirmed</span></li>
+<li class="row" data-i="LC"><span class="no">03</span><span class="nm"><a href="/en/radar/#/opera/Q774233">Journey to the End of the Night</a></span><span class="mt">Louis-Ferdinand Céline<br>1932 confirmed</span></li>
+<li class="row" data-i="RM"><span class="no">04</span><span class="nm"><a href="/en/radar/#/opera/Q1195668">The Man Without Qualities</a></span><span class="mt">Robert Musil<br><span class="tbd">year to be confirmed</span></span></li>
+<li class="row" data-i="WF"><span class="no">05</span><span class="nm"><a href="/en/radar/#/opera/Q1823273">Light in August</a></span><span class="mt">William Faulkner<br>1932 confirmed</span></li>
+<li class="row" data-i="AC"><span class="no">06</span><span class="nm"><a href="/en/radar/#/opera/Q957248">Peril at End House</a></span><span class="mt">Agatha Christie<br>1932 confirmed</span></li>
+<li class="row" data-i="SG"><span class="no">07</span><span class="nm"><a href="/en/radar/#/opera/Q5142221">Cold Comfort Farm</a></span><span class="mt">Stella Gibbons<br>1932 confirmed</span></li>
+<li class="row" data-i="KM"><span class="no">08</span><span class="nm"><a href="/en/radar/#/opera/Q470600">The German Ideology</a></span><span class="mt">Karl Marx, Friedrich Engels<br>1932 confirmed</span></li>
+<li class="row" data-i="CS"><span class="no">09</span><span class="nm"><a href="/en/radar/#/opera/Q7727278">The Concept of the Political</a></span><span class="mt">Carl Schmitt<br>1932 confirmed</span></li>
+<li class="row" data-i="AC"><span class="no">10</span><span class="nm"><a href="/en/radar/#/opera/Q934396">The Thirteen Problems</a></span><span class="mt">Agatha Christie<br>1932 confirmed</span></li>
+<li class="row" data-i="JR"><span class="no">11</span><span class="nm"><a href="/en/radar/#/opera/Q610428">Radetzky March</a></span><span class="mt">Joseph Roth<br>1932 confirmed</span></li>
+<li class="row" data-i="EH"><span class="no">12</span><span class="nm"><a href="/en/radar/#/opera/Q1970223">Death in the Afternoon</a></span><span class="mt">Ernest Hemingway<br>1932 confirmed</span></li>
 </ol>
 <a href="/en/radar/#/us/2028" class="more">All 175 books: 110 confirmed, 65 to be confirmed →</a>
 </section>
@@ -462,13 +463,12 @@ function ink(){ const ws=$$('#say .w'), r=say.getBoundingClientRect(); const p=M
 const esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 let act=null;
 function face(r){ const i=$$('.row').indexOf(r);
-  if(r.dataset.t) return '<div class="cv '+COV[i%4]+'"><span>'+r.dataset.y+'</span><b>'+esc(r.dataset.t)+'</b><span>'+esc(r.dataset.a)+'</span></div>';
   return r.dataset.f?'<img src="'+r.dataset.f+'" alt="" onerror="this.remove()">':'<div class="cv c-box"><span></span><b>'+esc(r.dataset.i||'')+'</b><span></span></div>'; }
 function setAct(r){ if(r===act) return; act=r; $$('.row').forEach(x=>x.classList.toggle('on',x===r));
-  $$('#pf .ly').forEach(l=>{ l.classList.remove('on'); l.classList.add('off'); setTimeout(()=>l.remove(),480); });
+  $$('#pf .ly').forEach(l=>{ l.classList.remove('on'); l.classList.add('off'); setTimeout(()=>l.remove(),300); });
   const ly=document.createElement('div'); ly.className='ly'; ly.innerHTML=face(r); $('#pf').appendChild(ly);
   requestAnimationFrame(()=>requestAnimationFrame(()=>ly.classList.add('on'))); }
-function pick(){ const mid=innerHeight*.52; let inside=null;
+function pick(){ const pr=$('#pf').getBoundingClientRect(), mid=pr.height?pr.top+pr.height/2:innerHeight*.52; let inside=null;   /* la riga accesa è quella all'altezza del ritratto */
   $$('.ix').forEach(s=>{ const ol=s.querySelector('.rows').getBoundingClientRect(); if(ol.top<mid&&ol.bottom>mid) inside=s; });
   document.body.classList.toggle('ix-in',!!inside); if(!inside) return;
   let best=null,bd=1e9; inside.querySelectorAll('.row').forEach(r=>{ const b=r.getBoundingClientRect(), d=Math.abs(b.top+b.height/2-mid); if(d<bd){bd=d;best=r;} });
