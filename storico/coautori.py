@@ -181,8 +181,11 @@ def musica(qids):
 # biografici, che su Wikidata ne sono una sottoclasse), riviste anche scientifiche e accademiche, giornali.
 # NON la classe larga «opera di consultazione»: comprende anche gli Elementi di Euclide e la Summa Theologiae.
 # NON i «periodici» e basta: spesso è narrativa uscita a puntate (Varney il vampiro, Il Federalista).
+# 21/11/2026 sera, dopo la prova DNB (docs/stima-sito/prova-dnb-nomi.json): anche le singole VOCI di enciclopedie e
+# dizionari (25.673 nell'archivio, tra cui le 10.872 del Dictionary of National Biography; nessun libro vero tra loro).
 CONSULTAZIONE = {"Q5292": "enciclopedia", "Q1371849": "dizionario biografico", "Q41298": "rivista", "Q11032": "giornale",
-                 "Q5633421": "rivista scientifica", "Q737498": "rivista accademica"}
+                 "Q5633421": "rivista scientifica", "Q737498": "rivista accademica",
+                 "Q19389637": "voce biografica", "Q13433827": "voce di enciclopedia", "Q1580166": "voce di dizionario"}
 
 
 def consultazione(qids):
@@ -226,7 +229,8 @@ def main():
     # una volta al mese basta (20/11/2026): si rilegge solo se il file è di un mese prima, se era incompleto, o se
     # sono cambiati gli autori delle schede o le opere dell'archivio. FORZA=1 per rileggere comunque.
     if (vecchio.get("aggiornato") or "")[:7] == date.today().isoformat()[:7] and not vecchio.get("incompleto") \
-            and vecchio.get("schede") == schede and vecchio.get("n_archivio") == len(arch) and not os.environ.get("FORZA"):
+            and vecchio.get("schede") == schede and vecchio.get("n_archivio") == len(arch) \
+            and vecchio.get("classi_consultazione") == sorted(CONSULTAZIONE) and not os.environ.get("FORZA"):
         print(f"coautori già letti questo mese ({vecchio['aggiornato']}), stessi autori e stesse opere: non rileggo")
         return
     print("autori delle schede:", len(schede), flush=True)
@@ -257,7 +261,7 @@ def main():
            "consultazione": {**vecchio.get("consultazione", {}), **cons},
            "creazione": {**vecchio.get("creazione", {}), **cre},
            "per_autore": pa if ok_pa else {**vecchio.get("per_autore", {}), **pa},
-           "schede": schede, "n_archivio": len(arch),
+           "schede": schede, "n_archivio": len(arch), "classi_consultazione": sorted(CONSULTAZIONE),
            "incompleto": [n for n, ok in (("autori", ok_ti), ("musica", ok_mu), ("per_autore", ok_pa),
                                                          ("consultazione", ok_cons), ("creazione", ok_cre)) if not ok]}
     json.dump(out, open(USCITA, "w", encoding="utf8"), ensure_ascii=False, separators=(",", ":"))

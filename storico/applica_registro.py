@@ -93,6 +93,10 @@ def riordina_ricerca():
        (prima Virginia Woolf e Marcel Proust comparivano due volte). Se i nomi uguali sono più d'uno, non si tocca.
     Restituisce (opere, autori uniti, file)."""
     from chiavi import chiavi_ricerca
+    try:   # nomi italiani degli autori (storico/nomi_it.py): la ricerca trova anche «Tolstoj» ed «Esopo»
+        nomi_it = json.load(open(f"{CARTELLA}/nomi_it.json", encoding="utf8"))
+    except Exception:
+        nomi_it = {}
     opere, autori = {}, {}
     for f in sorted(glob.glob(f"{CARTELLA}/ricerca/*.json")):
         d = json.load(open(f, encoding="utf8"))
@@ -125,7 +129,11 @@ def riordina_ricerca():
         for k in chiavi_ricerca(r[1]) | chiavi_ricerca(r[2] or ""):
             lettere.setdefault(k, {"opere": [], "autori": []})["opere"].append(r)
     for r in autori.values():
-        for k in chiavi_ricerca(r[1], autore=True):
+        it = nomi_it.get(r[0])
+        del r[7:]
+        if it:   # riga autore: [qid, nome, morte, n_opere, antico, morte_incerta, alleato, nome italiano]
+            r.extend([None] * (7 - len(r)) + [it])
+        for k in chiavi_ricerca(r[1], autore=True) | (chiavi_ricerca(it, autore=True) if it else set()):
             lettere.setdefault(k, {"opere": [], "autori": []})["autori"].append(r)
     for f in glob.glob(f"{CARTELLA}/ricerca/*.json"):
         os.remove(f)

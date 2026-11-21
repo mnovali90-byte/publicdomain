@@ -198,7 +198,7 @@ const D = { verifiche: {}, anno: new Date().getFullYear(), opere: [], aut: new M
 // opera normalizzata: { q, t, ti, y, yd, au:[{q,n,m,an,inc,al}], v, g:[], l, pg }
 function daRiga(r) {   // riga dei file di ricerca: [qid, titolo, titolo_it, anno, pagine, autori, anno_duke]
   return pulisciAnno({ q: r[0], t: r[1], ti: r[2] || "", y: r[3] === null || r[3] === undefined ? null : r[3], pg: r[4] || 0, yd: r[6] || 0,
-    au: (r[5] || []).map((a) => ({ q: a[0], n: nomeA(a[1]), m: a[2], an: !!a[3], inc: a[4] || 0, al: !!a[5] })), v: 0, g: [], l: null });
+    au: (r[5] || []).map((a) => ({ q: a[0], n: nomeQ(a[0], a[1]), m: a[2], an: !!a[3], inc: a[4] || 0, al: !!a[5] })), v: 0, g: [], l: null });
 }
 // coautori: la decisione è nel REGISTRO UNICO (data/registro/opere.json, storico/registro_opere.py, regola in
 // scripts/regole.py autori_che_contano). Qui si applica soltanto, non si decide.
@@ -313,6 +313,9 @@ function trama(generi, seme, c) {
 const titolo = (o) => (LING === "it" && o.ti) || o.t || o.ti;
 // autore anonimo: su Wikidata è un «valore sconosciuto», che arriva come indirizzo tecnico (20/11/2026)
 const nomeA = (n) => (!n || /^https?:\/\//.test(n)) ? (LING === "it" ? "Anonimo" : "Anonymous") : n;
+// nomi italiani degli autori (storico/nomi_it.py, 21/11/2026): sulla pagina italiana «Lev Tolstoj», non «Leo Tolstoy»
+let NOMI_IT = {};
+const nomeQ = (q, n) => (LING === "it" && NOMI_IT[q]) || nomeA(n);
 const autoriTxt = (o) => o.au.slice(0, 2).map((a) => a.n).join(", ");
 const annoTxt = (y) => (y === null ? "" : y < 0 ? (LING === "it" ? `${-y} a.C.` : `${-y} BC`) : String(y));
 function copertina(o) {
@@ -470,7 +473,7 @@ async function cerca(q) {
   if (mio !== _cerca) return;
   const autori = new Map(), opere = new Map();
   for (const f of files) {
-    for (const r of f.autori) if (contiene(r[1], tok) && !autori.has(r[0])) autori.set(r[0], { a: { q: r[0], n: r[1], m: r[2], an: !!r[4], inc: r[5] || 0, al: !!r[6] }, n: r[3] });
+    for (const r of f.autori) if ((contiene(r[1], tok) || (r[7] && contiene(r[7], tok))) && !autori.has(r[0])) autori.set(r[0], { a: { q: r[0], n: (LING === "it" && r[7]) || r[1], m: r[2], an: !!r[4], inc: r[5] || 0, al: !!r[6] }, n: r[3] });
     for (const r of f.opere) if (!opere.has(r[0]) && (contiene(r[1], tok) || contiene(r[2], tok))) opere.set(r[0], arricchisci(daRiga(r)));
   }
   const qn = tok.join(" ");
@@ -648,13 +651,14 @@ async function avvia() {
   document.querySelectorAll(".try button").forEach((b) => b.addEventListener("click", () => { qi.value = b.textContent; segna(); cerca(qi.value); history.replaceState(null, "", "#" + encodeURIComponent(qi.value)); $("#risultati").scrollIntoView({ behavior: "smooth", block: "start" }); }));
   $("#scaffali-corpo").replaceChildren(h("p", { class: "sec" }, L.caricamento));
   let P;
+  if (LING === "it") { try { NOMI_IT = await leggi("/data/storico/nomi_it.json"); } catch (e) { NOMI_IT = {}; } }
   try { P = await leggi("/data/storico/pagina.json"); } catch (e) { $("#scaffali-corpo").replaceChildren(h("p", {}, L.errore)); return; }
   D.anno = Number(String(P.aggiornato).slice(0, 4)) || D.anno;
   D.lingue = P.lingue || {};
   try { const reg = await leggi("/data/registro/opere.json"); D.regOpere = reg.coautori || {}; D.verifiche = reg.usa || {}; }
   catch (e) { D.regOpere = {}; D.verifiche = {}; }   // registro unico: coautori e anni USA
   D.foto = P.foto || {}; D.prossimi = P.prossimi || [];   // prima erano finiti dentro il commento qui sopra: ritratti e «non è ancora libero» non comparivano (21/11/2026)
-  const au = P.autori.map((a) => ({ q: a[0], n: nomeA(a[1]), m: a[2], an: !!a[3], inc: a[4] || 0, al: !!a[5] }));
+  const au = P.autori.map((a) => ({ q: a[0], n: nomeQ(a[0], a[1]), m: a[2], an: !!a[3], inc: a[4] || 0, al: !!a[5] }));
   D.opere = P.opere.map((r) => pulisciAnno({ q: r[0], t: r[1], ti: r[2], y: r[3], yd: r[4], au: r[5].map((i) => au[i]), v: r[6], g: r[7], l: r[8], pg: r[9], escl: !!r[10], vl: r[11] || [] }));
   // lingue di Wikipedia già misurate (le visite in francese, tedesco e spagnolo arrivano con il primo aggiornamento dopo il 19/11/2026)
   D.misurate = new Set(["it", "en", "fr", "de", "es"].filter((l, i) => D.opere.some((o) => o.vl[i] !== null && o.vl[i] !== undefined)));

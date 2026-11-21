@@ -14,6 +14,7 @@ on:
       - "storico/coautori.py"
       - "storico/applica_registro.py"
       - "storico/registro_opere.py"
+      - "storico/nomi_it.py"
       - ".github/workflows/gia-pubblici.yml"
   workflow_dispatch:
 
@@ -48,6 +49,9 @@ jobs:
       - name: Coautori (tipo degli autori senza data, membri dei gruppi, compositori e librettisti; storico/coautori.py)
         continue-on-error: true   # se Wikidata non risponde resta il file di prima
         run: python storico/coautori.py
+      - name: Nomi italiani degli autori (storico/nomi_it.py)
+        continue-on-error: true   # se Wikidata non risponde resta il file di prima
+        run: python storico/nomi_it.py
       - name: Anni di morte dal registro unico (storico/applica_registro.py)
         run: python storico/applica_registro.py
       - name: "Registro delle opere: coautori decisi con la regola unica (storico/registro_opere.py)"
