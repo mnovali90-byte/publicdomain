@@ -636,3 +636,9 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - Confronto con la pagina online (IT e EN): titolo, descrizione, canonical, h1 identici; 0 link persi; aggiunto il link alla versione in altra lingua.
 - Prove filtri (telefono): tutti 408; Italia 2027 = 122; Spagna 2027 = 90; tutti 2028 = 196; Spagna tutti gli anni = 162; Regno Unito 2028 = 124. Coincidono con gli anni di morte nell'elenco (1946: 90, 1947: 72, 1956: 122, 1957: 124). Nessun errore JavaScript, nessuna pagina più larga dello schermo.
 - Effetto collaterale: le 803 schede cambiano di una riga nel codice (piede: controllo che il nome esista, serviva per l'indice). Nessun cambiamento visibile.
+
+## 21/11/2026 — Pagine Pubblico dominio 2027 e 2028 col nuovo design (solo in locale, non pubblicate)
+- Come: pagina_landing in scripts/pagine.py riscritta con la struttura del mockup rdr-2027-indice.html + scripts/stile_anno.css. Tutti i testi restano scritti nella pagina (anche le risposte brevi e l'elenco A–Z); il contatore dei giorni è in alto.
+- Confronto con la versione online (4 pagine, IT/EN, 2027/2028): titolo, descrizione, canonical, hreflang, h1, dati strutturati (FAQ) identici; 0 link persi; 0 titoli di sezione (h2) persi. Le frasi segnalate dal confronto sono solo testi spezzati in modo diverso (numeri, righe della tabella paesi).
+- Telefono 390 px e computer: nessun errore, nessuna pagina più larga dello schermo. Corretti durante la prova: contatore in alto che andava a capo sul telefono (ora solo «tra N giorni»), etichetta «anno da confermare» spezzata su due righe.
+- Effetto: anche le schede autore e l'indice vengono rigenerati, ma senza cambiamenti (solo i parametri della funzione comune).
