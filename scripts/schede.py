@@ -7,10 +7,10 @@ from pathlib import Path
 RADICE = Path(__file__).resolve().parent.parent
 
 TESTI = {
-    "it": {"crea": "Crea scheda →", "titolo": "Scheda da condividere", "storia": "Storia 9:16", "post": "Post 4:5",
+    "it": {"crea": "Condividi →", "titolo": "Scheda da condividere", "storia": "Storia 9:16", "post": "Post 4:5",
            "condividi": "Condividi", "scarica": "Scarica immagine", "chiudi": "Chiudi", "cal": "Calendario {a}",
            "url": "publicdomainradar.com/calendario", "suggerimento": "Da telefono: Condividi → Instagram → Storia."},
-    "en": {"crea": "Create card →", "titolo": "Shareable card", "storia": "Story 9:16", "post": "Post 4:5",
+    "en": {"crea": "Share →", "titolo": "Shareable card", "storia": "Story 9:16", "post": "Post 4:5",
            "condividi": "Share", "scarica": "Download image", "chiudi": "Close", "cal": "Calendar {a}",
            "url": "publicdomainradar.com/en/calendar", "suggerimento": "On your phone: Share → Instagram → Story."},
 }

@@ -642,3 +642,9 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - Confronto con la versione online (4 pagine, IT/EN, 2027/2028): titolo, descrizione, canonical, hreflang, h1, dati strutturati (FAQ) identici; 0 link persi; 0 titoli di sezione (h2) persi. Le frasi segnalate dal confronto sono solo testi spezzati in modo diverso (numeri, righe della tabella paesi).
 - Telefono 390 px e computer: nessun errore, nessuna pagina più larga dello schermo. Corretti durante la prova: contatore in alto che andava a capo sul telefono (ora solo «tra N giorni»), etichetta «anno da confermare» spezzata su due righe.
 - Effetto: anche le schede autore e l'indice vengono rigenerati, ma senza cambiamenti (solo i parametri della funzione comune).
+
+## 21/11/2026 — Calendario 2027 col nuovo design (solo in locale, non pubblicato)
+- Come: pagina() e scheda() in scripts/calendario.py riscritte sul mockup rdr-calendario-indice.html + scripts/stile_cal.css. Ogni voce è una riga (giorno, nome, tipo); i dettagli (paese, anni, descrizione, opere, Nobel, Wikipedia) restano scritti nella pagina e il pannello a destra (in basso sul telefono) li mostra. «Crea scheda →» diventa «Condividi →» (scripts/schede.py).
+- Confronto con la versione online (IT ed EN): titolo, descrizione, canonical, hreflang, h1, dati strutturati identici; 0 link persi; 232 titoli delle voci (h3) tutti presenti; i 14 titoli dei mesi restano, con «·» in più tra anno e numero di voci.
+- Prove: filtro Morti + 100 anni = 15 voci, uguale al conteggio nel file dei dati; «Condividi» dal pannello apre la scheda da condividere (computer e telefono); barra dei mesi e mese in alto seguono lo scorrimento; nessun errore, nessuna pagina più larga dello schermo (1280 e 390 px).
+- I file .ics e .csv non cambiano.

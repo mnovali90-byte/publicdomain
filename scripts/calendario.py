@@ -66,66 +66,7 @@ T = {
     },
 }
 
-CSS_CAL = """
-:root{--ink:#0C0C10;--carta:#F7F7F4;--verm:#FF4326;--vt:#C2301A;--muto:#5C5C66;--notte:#1C1C24;--verde:#0E3B2E;--riq:#E4E2DA;
---display:'Big Shoulders Display',Impact,'Arial Narrow',sans-serif;--testo:'Instrument Sans',system-ui,sans-serif;--mono:'DM Mono',ui-monospace,Menlo,monospace}
-*{box-sizing:border-box}
-body{margin:0;background:var(--carta);color:var(--ink);font-family:var(--testo);line-height:1.5;-webkit-text-size-adjust:100%}
-a{color:inherit}
-.barra{background:var(--ink);color:#fff;padding:18px clamp(20px,4vw,48px);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-family:var(--mono);font-weight:500;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
-.barra a{color:#8E8E9B;text-decoration:none;margin-left:16px}.barra a:first-child{margin-left:0;color:#fff}
-.barra .on{color:#fff;border-bottom:2px solid var(--verm);padding-bottom:3px}
-.barra span a:hover{color:#fff}
-.hero{background:var(--ink);color:#fff;padding:clamp(36px,6vw,72px) 0 clamp(36px,5vw,56px);position:relative;overflow:hidden}
-.hero:after{content:"";position:absolute;right:-8vw;top:60px;width:32vw;height:32vw;max-width:420px;max-height:420px;border-radius:50%;background:var(--verm)}
-.in{max-width:1120px;margin:0 auto;padding:0 clamp(20px,4vw,48px);position:relative;z-index:1}
-.occ{font:500 13px var(--mono);letter-spacing:.14em;text-transform:uppercase;margin:0 0 16px}
-h1{font:900 clamp(48px,10vw,120px)/.88 var(--display);text-transform:uppercase;margin:0 0 20px;max-width:10ch}
-h1 em{font-style:normal;color:var(--verm)}
-.lead{max-width:36rem;color:#D2CFC4;font-size:18px;margin:0 0 26px}
-.abb{display:inline-flex;gap:12px;flex-wrap:wrap}
-.btn{display:inline-block;padding:14px 20px;font:500 13px var(--mono);letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border:2px solid #fff;color:#fff;background:none;cursor:pointer}
-.btn.p{background:#fff;color:var(--ink)}
-.filtri{background:#fff;border-bottom:1px solid var(--riq);position:sticky;top:0;z-index:5}
-.filtri>.in{display:flex;flex-wrap:wrap;gap:12px 34px;padding-top:4px;padding-bottom:14px;align-items:center}
-.filtri summary{list-style:none;cursor:pointer;min-height:48px;display:flex;align-items:center}.filtri summary::-webkit-details-marker{display:none}
-.filtri summary .in{display:flex;align-items:center;gap:12px;width:100%}
-.filtri .ftit{font:500 12px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink)}
-.filtri .ftit:after{content:"+";display:inline-block;margin-left:10px;font-size:16px;color:var(--vermiglio-testo, #C2301A)}
-.filtri[open] .ftit:after{content:"\2212"}
-.filtri .fatt{font:500 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:#fff;background:var(--ink);padding:3px 8px}.filtri .fatt:empty{display:none}
-.gr{display:flex;flex-wrap:wrap;gap:6px;align-items:center}.gr>span{font:500 11px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muto);margin-right:6px}
-.ch{font:500 12px var(--mono);letter-spacing:.05em;text-transform:uppercase;padding:0 12px;min-height:44px;border:1.5px solid var(--ink);background:#fff;color:var(--ink);cursor:pointer}
-.ch[aria-pressed="true"]{background:var(--ink);color:#fff}
-.mese{padding:clamp(40px,6vw,72px) 0 0}
-.mese h2{font:900 clamp(40px,7vw,80px)/.9 var(--display);text-transform:uppercase;margin:0 0 6px;display:flex;justify-content:space-between;align-items:baseline;border-bottom:3px solid var(--ink);padding-bottom:10px}
-.mese h2 small{font:500 12px var(--mono);letter-spacing:.1em;color:var(--muto)}
-.ev{display:grid;grid-template-columns:96px 1fr 230px;gap:6px 24px;padding:22px 0;border-bottom:1px solid var(--riq)}
-.gg{font:900 64px/.85 var(--display);color:var(--ink)}.gg.nd{font-size:34px;color:var(--muto)}
-.gg small{display:block;font:500 11px var(--mono);letter-spacing:.1em;color:var(--muto);margin-top:6px;text-transform:uppercase}
-.tipo{font:500 11px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--vt);margin-bottom:4px}
-.tipo b{background:var(--ink);color:#fff;padding:3px 8px;margin-right:8px;font-weight:500;letter-spacing:.08em}
-.ev h3{font:900 clamp(26px,3.6vw,38px)/1.12 var(--display);text-transform:uppercase;margin:0 0 4px;padding-top:12px}
-.ev .au{color:var(--muto);margin:0 0 10px}
-.az{font-size:15px;line-height:1.45;color:#33333B;border-left:3px solid var(--verm);padding-left:14px;display:flex;flex-direction:column;gap:6px;margin-top:12px;max-width:44rem}
-.az b{font:500 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muto);font-weight:500}
-.az .nobel{align-self:flex-start;font:500 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;background:var(--ink);color:#fff;padding:3px 8px}
-.az a{align-self:flex-start;font:500 12px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--vt);text-decoration:underline;text-underline-offset:3px;padding:4px 0}
-.az2{display:flex;flex-direction:column;align-items:flex-start;gap:6px;align-self:start;margin-top:12px}
-.az2 button{font:500 12px var(--mono);letter-spacing:.06em;text-transform:uppercase;background:none;border:0;padding:4px 0;color:var(--vt);cursor:pointer;text-decoration:underline;text-underline-offset:3px;text-align:left}
-.spec{background:var(--verm);color:var(--ink);padding:26px 0 30px;margin:26px 0 0;display:grid;grid-template-columns:96px 1fr;gap:6px 24px;box-shadow:-16px 0 0 var(--verm),16px 0 0 var(--verm)}
-.spec h3{font:900 clamp(30px,4vw,46px)/1 var(--display);text-transform:uppercase;margin:0 0 6px}
-.spec p{margin:0 0 10px;max-width:40rem}.spec a{font:500 13px var(--mono);letter-spacing:.06em;text-transform:uppercase}
-.spec a+a{margin-left:18px}
-.fine{background:var(--ink);color:#fff;margin-top:72px;padding:clamp(44px,6vw,72px) 0}
-.fine h2{font:900 clamp(34px,6vw,64px)/.95 var(--display);text-transform:uppercase;margin:0 0 14px}
-.fine p{max-width:38rem;color:#D2CFC4}
-.nota{font-size:13px;color:var(--muto);padding:22px 0 0;max-width:46rem}
-.vuoto{padding:40px 0;color:var(--muto)}
-footer{background:var(--ink);color:#B9B9C6;font-size:13px;padding:32px 20px}footer p{max-width:780px;margin:0 auto 10px}footer a{color:#fff}
-[hidden]{display:none!important}
-@media(max-width:820px){.filtri{position:static}.ev{grid-template-columns:70px 1fr}.ev .az2{grid-column:2;flex-direction:row;flex-wrap:wrap;gap:4px 20px;margin-top:0}.gg{font-size:50px}.spec{grid-template-columns:70px 1fr}.hero:after{width:60vw;height:60vw;right:-22vw;top:40px}}
-"""
+CSS_CAL = (Path(__file__).resolve().parent / "stile_cal.css").read_text()
 
 
 def esc(s):
@@ -230,20 +171,21 @@ def info_html(v, lang):
 
 
 def scheda(v, lang, anno):
+    """Una voce: riga (giorno, nome, tipo) + dettagli nascosti che il pannello mostra. Tutto il testo resta nella pagina."""
     t = T[lang]
     nome = nome_di(v, lang)
     orig = v["nome"] if v["nome"] != nome else ""
     dat = v.get("mese") and v.get("giorno")
+    gg = f'{v["giorno"]:02d}' if dat else "—"
     if dat:
-        gg = f'<div class="gg">{v["giorno"]}<small>{BREVI[lang][v["mese"] - 1]}</small></div>'
+        quando = f'{v["giorno"]} {MESI[lang][v["mese"] - 1]} {anno}' if lang == "it" else f'{v["giorno"]} {MESI[lang][v["mese"] - 1]} {anno}'
     elif v.get("mese"):
-        gg = f'<div class="gg nd">—<small>{BREVI[lang][v["mese"] - 1]}</small></div>'
+        quando = f'{MESI[lang][v["mese"] - 1]} {anno} · {t["nd"]}'
     else:
-        gg = f'<div class="gg nd">?<small>{esc(t["soloanno"].format(a=anno))}</small></div>'
+        quando = t["soloanno"].format(a=anno)
     azioni = ""
     if dat:
-        azioni += f'<button type="button" class="aggiungi" data-ics="{esc(v["tipo"])}-{v["qid"]}">{esc(t["aggiungi"])}</button>'
-    if dat:
+        azioni += f'<button type="button" class="aggiungi">{esc(t["aggiungi"])}</button>'
         azioni += f'<button type="button" class="crea">{esc(SCH.TESTI[lang]["crea"])}</button>'
     au = ""
     if v["tipo"] == "prima edizione":
@@ -255,116 +197,154 @@ def scheda(v, lang, anno):
     if dat:
         sc_attr = f' data-sc="{esc(json.dumps(SCH.dati_scheda(v, lang, t, MESI[lang], nome, autore_di(v), ((v.get("scheda") or {}).get(lang)) or {}), ensure_ascii=False))}"'
     extra = f' data-ics-d="{anno}{v["mese"]:02d}{v["giorno"]:02d}" data-ics-t="{esc(evento_ics(v, lang, anno))}"' if dat else ""
-    info = info_html(v, lang)
-    return (f'<div class="ev" data-tipo="{esc(v["tipo"])}" data-mese="{v.get("mese") or 0}" data-eta="{v["anni"]}" '
-            f'data-id="{esc(v["tipo"])}-{v["qid"]}"{extra}{sc_attr}>'
-            f'{gg}<div><div class="tipo"><b>{esc(t["tipi"][v["tipo"]])}</b>{esc(t["anni"].format(n=v["anni"]))} · {v["anno"]}</div>'
-            f'<h3>{esc(nome)}</h3>{au}<div class="az">{info}</div></div><div class="az2">{azioni}</div></div>')
+    sc = (v.get("scheda") or {})
+    wiki = (sc.get(lang) or {}).get("wiki") or (sc.get("en" if lang == "it" else "it") or {}).get("wiki")
+    w_attr = f' data-w="{esc(wiki)}"' if wiki else ""
+    eta = v["anni"]
+    return (f'<div class="ev" data-tipo="{esc(v["tipo"])}" data-mese="{v.get("mese") or 0}" data-eta="{eta}" '
+            f'data-id="{esc(v["tipo"])}-{v["qid"]}" data-q="{esc(quando)}" data-y="{v["anno"]}"{extra}{sc_attr}{w_attr}>'
+            f'<span class="gg">{gg}</span><h3 class="nm">{esc(nome)}</h3>'
+            f'<span class="tp"><b>{esc(t["tipi"][v["tipo"]])}</b> · {esc(t["anni"].format(n=eta))}</span>'
+            f'<div class="det">{au}<div class="az">{info_html(v, lang)}</div><div class="az2">{azioni}</div></div></div>')
 
 
 def pagina(dati, lang):
-    from pagine import TESTA, PIEDE  # evita l'import circolare all'avvio
+    from pagine import testa_scheda, piede_scheda, marchio_html  # evita l'import circolare all'avvio
     anno = dati["anno"]
     t = T[lang]
+    it = lang == "it"
     vv = dati["voci"]
     url = f"{SITO}{'/en/calendar' if lang == 'en' else '/calendario'}/{anno}/"
     eu, us = anno - 71, anno - 96
-    spec_it = (f'<div class="spec"><div class="gg">1<small>{BREVI[lang][0]}</small></div><div><h3>{esc(t["pdd"])}</h3>'
-               f'<p>{esc(t["pdd_txt"].format(eu=eu, us=us))}</p>'
-               f'<a href="{"/en" if lang == "en" else ""}/#/{anno}">{"Authors" if lang == "en" else "Autori"} →</a>'
-               f'<a href="{"/en" if lang == "en" else ""}/#/us/{anno}">{"Works USA" if lang == "en" else "Opere USA"} →</a></div></div>')
+    app = "/en/" if lang == "en" else "/"
+    spec = (f'<div class="ev pdd" data-tipo="pdd" data-mese="1" data-q="{esc(("1° gennaio " if it else "1 January ") + str(anno))}">'
+            f'<span class="gg">01</span><h3 class="nm">{esc(t["pdd"])}</h3><span class="tp"><b>{"Pubblico dominio" if it else "Public domain"}</b></span>'
+            f'<div class="det"><p class="pdt">{esc(t["pdd_txt"].format(eu=eu, us=us))}</p>'
+            f'<a href="{app}#/{anno}">{"Authors" if lang == "en" else "Autori"} →</a>'
+            f'<a href="{app}#/us/{anno}">{"Works USA" if lang == "en" else "Opere USA"} →</a></div></div>')
     mesi = {}
     for v in vv:
         mesi.setdefault(v.get("mese") or 0, []).append(v)
-    corpo = []
-    ordine = list(range(1, 13)) + [0]
-    for m in ordine:
+    corpo, nav = [], []
+    for m in list(range(1, 13)) + [0]:
         elenco = mesi.get(m, [])
-        extra = spec_it if m == 1 else ""
+        extra = spec if m == 1 else ""
         if not elenco and not extra:
             continue
-        titolo = MESI[lang][m - 1] if m else t["durante"]
+        titolo = MESI[lang][m - 1].capitalize() if m else t["durante"]
         n = len(elenco)
-        sotto = f"{n} {t['voce'] if n == 1 else t['voci']}" + (f" · {t['nd']}" if m == 0 else "")
+        sotto = (f"{anno} · " if m else "") + f"{n} {t['voce'] if n == 1 else t['voci']}" + (f" · {t['nd']}" if m == 0 else "")
+        sid = ("mese-" if it else "month-") + str(m) if m else "anno"
         elenco.sort(key=lambda v: ((v.get("giorno") or 99), -v["pagine"]))
-        corpo.append(f'<section class="mese" data-mese="{m}" id="{("mese-" if lang == "it" else "month-") + str(m) if m else "anno"}"><h2>{esc((titolo.capitalize() + " " + str(anno)) if m else titolo)} <small>{esc(sotto)}</small></h2>{extra}'
-                     + "".join(scheda(v, lang, anno) for v in elenco) + "</section>")
-    mesi_btn = "".join(f'<button type="button" class="ch" data-mese="{m}" aria-pressed="false">{BREVI[lang][m - 1]}</button>' for m in range(1, 13))
-    eta_btn = "".join(f'<button type="button" class="ch" data-eta="{e}" aria-pressed="false">{e}</button>' for e in (50, 75, 100, 125, 150, 175, 200)) + f'<button type="button" class="ch" data-eta="piu" aria-pressed="false">{esc(t["piu"])}</button>'
-    tipi_btn = "".join(f'<button type="button" class="ch" data-tipo="{k}" aria-pressed="false">{esc(n)}</button>' for k, n in t["filtri_tipo"])
-    base_ics = f"{url}anniversari-{anno}.ics" if lang == "it" else f"{url}anniversaries-{anno}.ics"
-    base_csv = f"anniversari-{anno}.csv" if lang == "it" else f"anniversaries-{anno}.csv"
+        corpo.append(f'<section class="mo" id="{sid}" data-mese="{m}"><h2><span>{esc(titolo)}</span> <small data-s="{esc((f"{anno} · " if m else "") + "# " + t["voci"])}">{esc(sotto)}</small></h2>{extra}'
+                     + "".join(scheda(v, lang, anno) for v in elenco) + f'<p class="empty">{esc(t["vuoto"])}</p></section>\n')
+        nav.append(f'<a href="#{sid}" data-m="{m}" data-l="{esc((titolo + " " + str(anno)) if m else titolo)}">{esc(BREVI[lang][m - 1] if m else ("Anno" if it else "Year"))}</a>')
+    tipi_btn = "".join(f'<button type="button" class="c" data-t="{k}">{esc(n)}</button>' for k, n in t["filtri_tipo"])
+    eta_btn = "".join(f'<button type="button" class="c" data-a="{e}">{e}</button>' for e in (50, 75, 100, 125, 150, 175, 200)) + f'<button type="button" class="c" data-a="piu">{esc(t["piu"])}</button>'
+    base_ics = f"{url}anniversari-{anno}.ics" if it else f"{url}anniversaries-{anno}.ics"
+    base_csv = f"anniversari-{anno}.csv" if it else f"anniversaries-{anno}.csv"
     ics_nome = base_ics.rsplit("/", 1)[-1]
-    nav = "".join((f'<a class="on" href="{url}">{n}</a>' if h is None else f'<a href="{h.format(a=anno)}">{n}</a>') for n, h in t["navt"])
-    altra_lingua = f'<span>{nav}<a href="{t["altra"][1].format(a=anno)}" hreflang="{"en" if lang == "it" else "it"}">{t["altra"][0]}</a></span>'
-    faq_ld = ""
+    altra = f'<a href="{t["altra"][1].format(a=anno)}" hreflang="{"en" if it else "it"}">{t["altra"][0]}</a>'
     ld = {"@context": "https://schema.org", "@type": "CollectionPage", "name": t["titolo"].format(a=anno), "url": url, "inLanguage": lang,
           "dateModified": dati.get("generato"), "isPartOf": {"@type": "WebSite", "name": "Public Domain Radar", "url": SITO + ("/en/" if lang == "en" else "/")}}
     jsonld = '<script type="application/ld+json">' + json.dumps(ld, ensure_ascii=False).replace("</", "<\\/") + "</script>"
     alt = (f'<link rel="alternate" hreflang="it" href="{SITO}/calendario/{anno}/">\n<link rel="alternate" hreflang="en" href="{SITO}/en/calendar/{anno}/">\n')
-    testa = TESTA.format(lang=lang, titolo=esc(t["titolo"].format(a=anno)), descr=esc(t["descr"].format(a=anno)), url=url, alterne=alt,
-                         og_tipo="website", jsonld=jsonld, css=CSS_CAL + SCH.CSS + __import__('marchio').CSS_MARCHIO, home=t["home"], altra_lingua=altra_lingua)
-    js = """<script>
-(function(){
-var st={mese:0,tipo:"",eta:""};
-var evs=[].slice.call(document.querySelectorAll(".ev"));
-function applica(){
-  var visibili=0;
-  evs.forEach(function(e){
-    var ok=(!st.mese||e.dataset.mese==st.mese)&&(!st.tipo||e.dataset.tipo===st.tipo)&&(!st.eta||(st.eta==="piu"?+e.dataset.eta>200:e.dataset.eta===st.eta));
-    e.hidden=!ok; if(ok)visibili++;
-  });
-  [].slice.call(document.querySelectorAll(".mese")).forEach(function(s){
-    var n=s.querySelectorAll(".ev:not([hidden])").length, spec=s.querySelector(".spec");
-    s.hidden=!n&&!(spec&&!st.tipo&&!st.eta&&(!st.mese||s.dataset.mese==st.mese));
-  });
-  document.getElementById("vuoto").hidden=visibili>0;
-  var n=(st.mese?1:0)+(st.tipo?1:0)+(st.eta?1:0),fa=document.getElementById("fatt");
-  if(fa)fa.textContent=n?n+" "+fa.getAttribute("data-attivi"):"";
-}
-function gruppo(attr,chiave){
-  [].slice.call(document.querySelectorAll(".ch["+attr+"]")).forEach(function(b){
-    b.addEventListener("click",function(){
-      var on=b.getAttribute("aria-pressed")==="true";
-      [].slice.call(document.querySelectorAll(".ch["+attr+"]")).forEach(function(x){x.setAttribute("aria-pressed","false")});
-      if(!on){b.setAttribute("aria-pressed","true");st[chiave]=b.getAttribute(attr)}else st[chiave]=chiave==="mese"?0:"";
-      applica();
-    });
-  });
-}
-gruppo("data-mese","mese");gruppo("data-tipo","tipo");gruppo("data-eta","eta");
-[].slice.call(document.querySelectorAll(".aggiungi")).forEach(function(b){
-  b.addEventListener("click",function(){
-    var e=b.closest(".ev"),d=e.dataset.icsD,t=e.dataset.icsT;
-    var f=new Date(Date.UTC(+d.slice(0,4),+d.slice(4,6)-1,+d.slice(6,8)+1)),fs=f.getUTCFullYear()+("0"+(f.getUTCMonth()+1)).slice(-2)+("0"+f.getUTCDate()).slice(-2);
-    var x=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Public Domain Radar//EN","BEGIN:VEVENT","UID:"+e.dataset.id+"@publicdomainradar.com","DTSTAMP:"+d+"T000000Z","DTSTART;VALUE=DATE:"+d,"DTEND;VALUE=DATE:"+fs,"SUMMARY:"+t.replace(/[,;]/g,function(c){return "\\\\"+c}),"END:VEVENT","END:VCALENDAR"].join("\\r\\n");
-    var a=document.createElement("a");a.href=URL.createObjectURL(new Blob([x],{type:"text/calendar"}));a.download=e.dataset.id+".ics";document.body.appendChild(a);a.click();a.remove();
-  });
-});
-})();
-</script>""".replace("COPIATO", json.dumps(t["copiato"]))
+    cal_lab = ("Calendario " if it else "Calendar ") + str(anno)
+    testa = testa_scheda(lang, esc(t["titolo"].format(a=anno)), esc(t["descr"].format(a=anno)), url, alt, jsonld, altra, "@@CNT@@",
+                         og_tipo="website", css_extra=CSS_CAL + SCH.CSS, main_cls="calm", body_cls="cal-b")
+    testa = testa.replace('<div class="cnt">@@CNT@@</div>', f'<div class="cnt"><span id="cnt" data-l="{esc(cal_lab)}">{esc(cal_lab)}</span></div>')
+    testa = testa.replace("@@MARCHIO_S@@", marchio_html(56).replace('<span class="pdr" style="--w:56px">', "").rsplit("</span>", 1)[0])
+    h1a = t["h1a"].strip()
+    p1, p2 = (h1a.rsplit(" ", 1) if " " in h1a else (h1a, ""))
     out = [testa]
-    out.append(f"""<header class="hero"><div class="in">
-<p class="occ">{esc(t["occ"].format(a=anno))}</p>
-<h1>{esc(t["h1a"])}<em>{anno}</em></h1>
-<p class="lead">{esc(t["lead"])}</p>
-<div class="abb"><a class="btn p" href="{ics_nome}">{esc(t["ics"])}</a><a class="btn" href="{base_csv}">{esc(t["csv"])}</a></div>
-</div></header>
-<details class="filtri" id="filtri"><summary><span class="in"><span class="ftit">{esc(t["filtri"])}</span><span class="fatt" id="fatt" data-attivi="{esc(t["attivi"])}"></span></span></summary><div class="in">
-<div class="gr" role="group"><span>{esc(t["mese"])}</span>{mesi_btn}</div>
-<div class="gr" role="group"><span>{esc(t["tipo"])}</span>{tipi_btn}</div>
-<div class="gr" role="group"><span>{esc(t["eta"])}</span>{eta_btn}</div>
-</div></details>
-<main class="in">
+    out.append(f"""<section class="open">
+<p class="m k">{esc(t["occ"].format(a=anno))}</p>
+<h1 class="h1"><span class="w"><span>{esc(p1)}</span></span><br><span class="w"><span>{esc(p2)} <em>{anno}</em></span></span></h1>
+<p class="say" id="say">{esc(t["lead"])}</p>
+<div class="dl"><a href="{ics_nome}">{esc(t["ics"])}</a><a href="{base_csv}">{esc(t["csv"])}</a></div>
+</section>
+<div class="bar" id="bar"><nav class="months" id="months" aria-label="{"Mesi" if it else "Months"}">{"".join(nav)}</nav><button class="ft" id="ft" type="button">{esc(t["filtri"])} <b id="fn"></b> <span>[+]</span></button></div>
+<div class="fp" id="fp"><div class="in">
+<span class="m" style="color:var(--grey)">{esc(t["tipo"])}</span><div class="chips">{tipi_btn}</div>
+<span class="m" style="color:var(--grey)">{esc(t["eta"])}</span><div class="chips">{eta_btn}</div>
+</div></div>
+<div class="cal" id="cal">
 """)
     out += corpo
-    out.append(f'<p class="vuoto" id="vuoto" hidden>{esc(t["vuoto"])}</p>\n<p class="nota">{esc(t["nota"])}</p>\n</main>\n')
-    out.append(f"""<section class="fine"><div class="in"><h2>{esc(t["fine_h"])}</h2><p>{esc(t["fine_p"])}</p><a class="btn p" href="{ics_nome}">{esc(t["ics"])}</a></div></section>
-{js}
-{SCH.finestra(lang)}{SCH.js(lang, anno)}
+    out.append(f"""<section class="ann"><div class="sh m"><h2>{esc(t["fine_h"])}</h2><span>.ics · CSV</span></div><p>{esc(t["fine_p"])}</p>
+<div class="dl"><a href="{ics_nome}">{esc(t["ics"])}</a><a href="{base_csv}">{esc(t["csv"])}</a></div></section>
+</div>
+<aside class="pn" id="pn" aria-live="polite"></aside>
 """)
-    out.append(PIEDE[lang])
+    L = {"anni": "anni" if it else "years", "agg": "Aggiungi al calendario" if it else "Add to calendar", "cond": "Condividi" if it else "Share",
+         "pdd_t": "1° gennaio · ogni anno" if it else "1 January · every year"}
+    out.append(JS_CAL.replace("@@L@@", json.dumps(L, ensure_ascii=False)))
+    out.append(SCH.finestra(lang) + SCH.js(lang, anno))
+    out.append(piede_scheda(lang, ("Fonti" if it else "Sources", esc(t["nota"]))))
     return "".join(out), url
+
+
+JS_CAL = """<script>
+(()=>{const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)], L=@@L@@;
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const say=$('#say'); say.innerHTML=say.textContent.split(' ').map(w=>'<span class="w">'+w+'</span>').join(' ');
+function ink(){ const ws=$$('#say .w'), r=say.getBoundingClientRect(); const p=Math.min(1,Math.max(0,(innerHeight*.95-r.top)/(r.height+innerHeight*.3))); const k=RM?999:Math.round(p*ws.length); ws.forEach((w,i)=>w.classList.toggle('on',i<k)); }
+const esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let act=null;
+function panel(r){ if(r===act) return; act=r; $$('.ev').forEach(x=>x.classList.toggle('on',x===r));
+  const d=r.querySelector('.det'); let h;
+  if(r.classList.contains('pdd')){
+    const ls=[...d.querySelectorAll('a')].map(a=>'<a href="'+a.getAttribute('href')+'">'+esc(a.textContent)+'</a>').join('');
+    h='<span class="m t">'+esc(L.pdd_t)+'</span><div class="big" style="font-size:clamp(60px,6vw,96px)">PD DAY</div><p class="d">'+esc(r.dataset.q)+'</p><p class="pdt">'+esc(d.querySelector('.pdt').textContent)+'</p><div class="acts">'+ls+'</div>';
+  } else {
+    const au=d.querySelector('.au'), inf=d.querySelector('.az');
+    let acts='';
+    if(d.querySelector('.aggiungi')) acts+='<button type="button" data-x="aggiungi">'+esc(L.agg)+' <span>+</span></button>';
+    if(d.querySelector('.crea')) acts+='<button type="button" data-x="crea">'+esc(L.cond)+' <span>→</span></button>';
+    if(r.dataset.w) acts+='<a href="'+esc(r.dataset.w)+'" target="_blank" rel="noopener">Wikipedia <span>↗</span></a>';
+    h='<span class="m t">'+esc(r.querySelector('.tp b').textContent)+' · '+r.dataset.y+'</span><div class="big">'+r.dataset.eta+'<small>'+L.anni+'</small></div><p class="d">'+esc(r.dataset.q)+'</p>'
+     +'<p class="who"><b>'+esc(r.querySelector('.nm').textContent)+'</b>'+(au?'<br>'+au.innerHTML:'')+'</p>'+(inf&&inf.innerHTML?'<div class="inf">'+inf.innerHTML+'</div>':'')+(acts?'<div class="acts">'+acts+'</div>':'');
+  }
+  const pn=$('#pn'); $$('#pn .ly').forEach(l=>{ l.classList.add('out'); setTimeout(()=>l.remove(),320); });
+  const ly=document.createElement('div'); ly.className='ly'; ly.innerHTML=h; pn.appendChild(ly);
+  requestAnimationFrame(()=>requestAnimationFrame(()=>ly.classList.add('on')));
+  ly.querySelectorAll('[data-x]').forEach(b=>b.onclick=()=>{ const o=d.querySelector('.'+b.dataset.x); if(o) o.click(); });
+}
+let curM=null;
+function pick(){ const mid=innerHeight*(innerWidth<=860?.42:.5);
+  const cal=$('#cal').getBoundingClientRect(), inside=cal.top<mid&&cal.bottom>mid;
+  document.body.classList.toggle('cal-in',inside);
+  let best=null,bd=1e9;
+  $$('.ev:not(.hide)').forEach(r=>{ const b=r.getBoundingClientRect(); if(b.bottom<0||b.top>innerHeight) return; const d=Math.abs(b.top+b.height/2-mid); if(d<bd){bd=d;best=r;} });
+  if(inside&&best) panel(best);
+  let m=null; $$('.mo').forEach(s=>{ if(s.getBoundingClientRect().top<mid) m=s; });
+  if(m!==curM){ curM=m; const id=m?m.id:''; $$('#months a').forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+id));
+    const on=$('#months a[href="#'+id+'"]'); if(on){ const nav=$('#months'); nav.scrollTo({left:nav.scrollLeft+(on.getBoundingClientRect().left-nav.getBoundingClientRect().left)-(nav.clientWidth-on.offsetWidth)/2,behavior:RM?'auto':'smooth'}); }
+    const c=$('#cnt'), lab=on?on.dataset.l:c.dataset.l;
+    c.style.transform='translateY(-100%)'; setTimeout(()=>{ c.textContent=lab; c.style.transition='none'; c.style.transform='translateY(100%)'; requestAnimationFrame(()=>{ c.style.transition=''; c.style.transform=''; }); },190); }
+}
+$$('.ev').forEach(r=>{ r.addEventListener('click',e=>{ if(!e.target.closest('a,button')) panel(r); }); r.addEventListener('mouseenter',()=>{ if(matchMedia('(hover:hover)').matches) panel(r); }); });
+const F={t:new Set(),a:new Set()};
+function applyF(){
+  $$('.ev:not(.pdd)').forEach(r=>{ const e=+r.dataset.eta; const okT=!F.t.size||F.t.has(r.dataset.tipo); const okA=!F.a.size||F.a.has(String(e))||(F.a.has('piu')&&e>200); r.classList.toggle('hide',!(okT&&okA)); });
+  $$('.pdd').forEach(r=>r.classList.toggle('hide',F.t.size+F.a.size>0));
+  $$('.mo').forEach(s=>{ const n=s.querySelectorAll('.ev:not(.hide):not(.pdd)').length, sm=s.querySelector('h2 small'), vis=s.querySelectorAll('.ev:not(.hide)').length;
+    s.classList.toggle('none',vis===0); sm.dataset.o=sm.dataset.o||sm.textContent; sm.textContent=(F.t.size+F.a.size)?sm.dataset.s.replace('#',n):sm.dataset.o;
+    const a=$('#months a[href="#'+s.id+'"]'); if(a) a.classList.toggle('off',vis===0); });
+  const k=F.t.size+F.a.size; $('#fn').textContent=k?'· '+k:''; act=null; pick(); }
+$$('#fp button.c').forEach(b=>b.onclick=()=>{ const set=b.dataset.t?F.t:F.a, v=b.dataset.t||b.dataset.a; set.has(v)?set.delete(v):set.add(v); b.classList.toggle('on'); applyF(); });
+$('#ft').onclick=()=>{ const on=$('#fp').classList.toggle('on'); document.body.classList.toggle('f-on',on); $('#ft span').textContent=on?'[–]':'[+]'; };
+$$('.aggiungi').forEach(b=>b.addEventListener('click',()=>{
+  const e=b.closest('.ev'),d=e.dataset.icsD,t=e.dataset.icsT;
+  const f=new Date(Date.UTC(+d.slice(0,4),+d.slice(4,6)-1,+d.slice(6,8)+1)),fs=f.getUTCFullYear()+('0'+(f.getUTCMonth()+1)).slice(-2)+('0'+f.getUTCDate()).slice(-2);
+  const x=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Public Domain Radar//EN','BEGIN:VEVENT','UID:'+e.dataset.id+'@publicdomainradar.com','DTSTAMP:'+d+'T000000Z','DTSTART;VALUE=DATE:'+d,'DTEND;VALUE=DATE:'+fs,'SUMMARY:'+t.replace(/[,;]/g,c=>'\\\\'+c),'END:VEVENT','END:VCALENDAR'].join('\\r\\n');
+  const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([x],{type:'text/calendar'}));a.download=e.dataset.id+'.ics';document.body.appendChild(a);a.click();a.remove(); }));
+$('#mbtn').addEventListener('click',()=>document.body.classList.add('menu-on')); $('#mx').addEventListener('click',()=>document.body.classList.remove('menu-on'));
+let tk=false; function frame(){ tk=false; ink(); pick(); }
+addEventListener('scroll',()=>{ if(!tk){tk=true;requestAnimationFrame(frame);} },{passive:true}); addEventListener('resize',frame); frame();
+})();
+</script>
+"""
 
 
 def anni_approvati():
