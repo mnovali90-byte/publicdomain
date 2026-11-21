@@ -45,9 +45,47 @@ def data_l(lang, anno):
     return f"1° {MESI[0]} {anno}" if lang == "it" else f"1 January {anno}"
 
 
-def slug_base(nome):
+# lettere che la normalizzazione non scompone e che prima sparivano dall'indirizzo (21/11/2026: Valdemar Rørdam
+# diventava «valdemar-rrdam», Cahit Sıtkı Tarancı «cahit-stk-taranc»; 74 autori nelle liste)
+LETTERE = {"ø": "o", "Ø": "O", "ı": "i", "ł": "l", "Ł": "L", "ß": "ss", "æ": "ae", "Æ": "Ae", "œ": "oe", "Œ": "Oe",
+           "đ": "d", "Đ": "D", "þ": "th", "Þ": "Th", "ð": "d", "Ð": "D", "ħ": "h", "Ħ": "H", "ŧ": "t", "ĸ": "k"}
+
+
+def slug_vecchio(nome):
+    """Indirizzo come lo si faceva prima del 21/11/2026 (serve per i rimandi dalle schede già pubblicate)."""
     t = unicodedata.normalize("NFKD", nome).encode("ascii", "ignore").decode()
     return re.sub(r"[^a-z0-9]+", "-", t.lower()).strip("-")
+
+
+def slug_base(nome):
+    return slug_vecchio("".join(LETTERE.get(c, c) for c in nome or ""))
+
+
+def pagina_rimando(nuovo_url, lang):
+    """Pagina al vecchio indirizzo di una scheda: rimanda subito al nuovo, e dice a Google qual è quello giusto."""
+    t = "La pagina si è spostata" if lang == "it" else "This page has moved"
+    return (f'<!DOCTYPE html>\n<html lang="{lang}"><head><meta charset="utf-8"><title>{t}</title>'
+            f'<meta name="robots" content="noindex"><link rel="canonical" href="{nuovo_url}">'
+            f'<meta http-equiv="refresh" content="0; url={nuovo_url}"></head>'
+            f'<body><p><a href="{nuovo_url}">{nuovo_url}</a></p></body></html>\n')
+
+
+# date della sitemap (21/11/2026): la data di una pagina è quella in cui il suo contenuto cambia davvero, non quella
+# di ogni giro. Il conto alla rovescia («tra 41 giorni») e le date di aggiornamento non contano come cambiamento.
+DATE_SITEMAP = RADICE / "data" / "sitemap_date.json"
+VOLATILE = [re.compile(p) for p in (r"tra \d+ giorn[oi]", r"in \d+ days?", r"\d+ (giorni|days?) (left|rimasti)",
+                                     r'"dateModified": ?"[^"]*"', r"\d{4}-\d{2}-\d{2}")]
+
+
+def impronta(percorso):
+    import hashlib
+    try:
+        t = percorso.read_text(encoding="utf-8")
+    except Exception:
+        return None
+    for r_ in VOLATILE:
+        t = r_.sub("", t)
+    return hashlib.sha1(t.encode("utf-8")).hexdigest()[:16]
 
 
 def anno_di(iso):
@@ -1423,6 +1461,15 @@ def main():
     if len(autori) < 100:
         print(f"Solo {len(autori)} autori con biografia e opere: dati incompleti, le schede restano come sono.")
         return 1
+    # rimandi dai vecchi indirizzi: si ricordano in data/indirizzi_vecchi.json e si riscrivono a ogni giro
+    f_rim = RADICE / "data" / "indirizzi_vecchi.json"
+    rimandi = _leggi(f_rim, {})
+    esistenti = {l: {p.name for p in (RADICE / PERCORSO[l]).iterdir() if p.is_dir()} if (RADICE / PERCORSO[l]).exists() else set()
+                 for l in ("it", "en")}
+    for q, a in autori.items():
+        vecchio = slug_vecchio(a["nome"])
+        if vecchio and vecchio != slug_di[q] and any(vecchio in esistenti[l] for l in esistenti):
+            rimandi[vecchio] = slug_di[q]
     for l in ("it", "en"):
         cartella = RADICE / PERCORSO[l]
         if cartella.exists():
@@ -1440,6 +1487,12 @@ def main():
             (d / "index.html").write_text(pagina_autore(a, slug, l, ha_altra=(q in en_ok)), encoding="utf-8")
             voci[l].append((pulisci(a["nome"]), slug, f"{anno_di(a.get('nascita')) or '?'} – {anno_di(a['morte'])}"))
             urls.append(url_pagina(l, slug))
+    for vecchio, nuovo in rimandi.items():
+        for l in ("it", "en"):
+            if (RADICE / PERCORSO[l] / nuovo).exists() and not (RADICE / PERCORSO[l] / vecchio).exists():
+                (RADICE / PERCORSO[l] / vecchio).mkdir()
+                (RADICE / PERCORSO[l] / vecchio / "index.html").write_text(pagina_rimando(url_pagina(l, nuovo), l), encoding="utf-8")
+    f_rim.write_text(json.dumps(rimandi, ensure_ascii=False, indent=1, sort_keys=True), encoding="utf-8")
     for l in ("it", "en"):
         voci[l].sort(key=lambda v: (slug_base(v[0]), v[1]))
         (RADICE / PERCORSO[l] / "index.html").write_text(pagina_indice(voci[l], l), encoding="utf-8")
@@ -1469,14 +1522,22 @@ def main():
     if CALENDARIO_ON:
         import calendario
         landing_urls += calendario.crea_calendario()
-    righe = [f"  <url><loc>{SITO}/</loc><lastmod>{oggi}</lastmod><changefreq>monthly</changefreq></url>",
-             f"  <url><loc>{SITO}/en/</loc><lastmod>{oggi}</lastmod><changefreq>monthly</changefreq></url>",
-             f"  <url><loc>{url_pagina('it')}</loc><lastmod>{oggi}</lastmod><changefreq>monthly</changefreq></url>",
-             f"  <url><loc>{url_pagina('en')}</loc><lastmod>{oggi}</lastmod><changefreq>monthly</changefreq></url>"]
+    date_s = _leggi(DATE_SITEMAP, {})
+    nuove_date = {}
+
+    def data_di(u):
+        imp = impronta(RADICE / u[len(SITO):].strip("/") / "index.html")
+        prima = date_s.get(u)
+        d = prima[1] if prima and prima[0] == imp else str(oggi)
+        nuove_date[u] = [imp, d]
+        return d
+    righe = [f"  <url><loc>{u}</loc><lastmod>{data_di(u)}</lastmod><changefreq>monthly</changefreq></url>"
+             for u in (f"{SITO}/", f"{SITO}/en/", url_pagina('it'), url_pagina('en'))]
     if (RADICE / "gia-pubblici" / "index.html").exists():   # pagina «Già pubblici» (storico/pagina.py)
         landing_urls += [f"{SITO}/gia-pubblici/", f"{SITO}/en/already-public/"]
-    righe += [f"  <url><loc>{u}</loc><lastmod>{oggi}</lastmod><changefreq>weekly</changefreq></url>" for u in landing_urls]
-    righe += [f"  <url><loc>{u}</loc><lastmod>{oggi}</lastmod></url>" for u in sorted(urls)]
+    righe += [f"  <url><loc>{u}</loc><lastmod>{data_di(u)}</lastmod><changefreq>weekly</changefreq></url>" for u in landing_urls]
+    righe += [f"  <url><loc>{u}</loc><lastmod>{data_di(u)}</lastmod></url>" for u in sorted(urls)]
+    DATE_SITEMAP.write_text(json.dumps(nuove_date, ensure_ascii=False, indent=0, sort_keys=True), encoding="utf-8")
     (RADICE / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "\n".join(righe) + "\n</urlset>\n", encoding="utf-8")
     print(f"Pagine create: {len(voci['it'])} in italiano, {len(voci['en'])} in inglese (su {len(autori)} autori con biografia e opere)")
 
