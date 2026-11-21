@@ -111,6 +111,21 @@ main:has(.sa) .sa-azioni{max-width:1180px;margin:40px auto 0;padding:0 clamp(20p
 @media (max-width:560px){.cat li{grid-template-columns:1fr auto}.cat .b{grid-column:1/-1;order:3}}
 .sa-salva{display:flex;align-items:center;justify-content:center;height:56px;background:var(--ink);color:var(--carta);text-decoration:none;font-family:var(--mono);font-size:13px;letter-spacing:.12em;text-transform:uppercase}
 footer{background:var(--ink);color:#B9B9C6;font-size:13px;padding:32px 20px}footer p{max-width:780px;margin:0 auto 10px}footer a{color:#fff}
+.vic{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;gap:8px}
+@media(min-width:560px){.vic{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:900px){.vic{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}}
+.vic li{margin:0}
+.vic a{display:flex;gap:12px;align-items:center;padding:10px;background:var(--riquadro);color:var(--ink);text-decoration:none;height:100%;transition:background .15s}
+.vic a:hover{background:#D9D6CC}
+.vf{flex:none;width:48px;height:60px;background:#D2CFC4;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.vf img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block}
+.vi{font-family:var(--display);font-weight:900;font-size:26px;color:#F7F7F4}
+.vt{display:flex;flex-direction:column;min-width:0;line-height:1.25}
+.vt b{font-size:16px;font-weight:600}
+.vt span{font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--muto);margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.vt .vm{font-family:var(--testo);font-size:13px;letter-spacing:0;margin-top:1px}
+.vic-tutti{margin:16px 0 0;font-family:var(--mono);font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+.vic-tutti a{color:var(--vermiglio-testo)!important}
 
 .pdr{display:inline-flex;flex-direction:column;align-items:stretch;width:var(--w,110px);color:currentColor;text-transform:none;letter-spacing:0;line-height:1;vertical-align:middle}
 .pdr svg{display:block;width:100%;height:auto;color:#F7F7F4}
@@ -181,6 +196,13 @@ footer{background:var(--ink);color:#B9B9C6;font-size:13px;padding:32px 20px}foot
 <h2>Before publishing</h2>
 <p class="sa-testo">The dates on this page apply to the original texts. Illustrations and translations have their own rights, lasting 70 years after the death of the illustrator or translator: a book can have a free text and still-protected drawings.</p>
 <p class="sa-nota">Indicative calculation, not legal advice.</p>
+</section>
+<section class="sa-sez sa-vicini">
+<p class="sa-occ">Same year, same date</p>
+<h2>Other writers free from 1 January 2027</h2>
+<p class="sa-testo">They died in 1956, like Jacques-Gabriel Prod’homme: in Italy, France, Germany and the UK their original texts can be published from the same day. Same country first, then the most read on Wikipedia.</p>
+<ul class="vic"><li><a href="/en/author/paul-leautaud/"><span class="vf"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/L%C3%A9autaud_en_1920.jpg?width=160" alt="" loading="lazy"></span><span class="vt"><b>Paul Léautaud</b><span>1872 – 1956</span><span class="vm">French writer</span></span></a></li><li><a href="/en/author/curnonsky/"><span class="vf"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Curnonsky.jpg?width=160" alt="" loading="lazy"></span><span class="vt"><b>Curnonsky</b><span>1872 – 1956</span><span class="vm">French food writer</span></span></a></li><li><a href="/en/author/julien-benda/"><span class="vf"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Julien_Benda.jpg?width=160" alt="" loading="lazy"></span><span class="vt"><b>Julien Benda</b><span>1867 – 1956</span><span class="vm">French essayist and philosopher</span></span></a></li><li><a href="/en/author/paul-gadenne/"><span class="vf" aria-hidden="true"><span class="vi">PG</span></span><span class="vt"><b>Paul Gadenne</b><span>1907 – 1956</span><span class="vm">French writer</span></span></a></li><li><a href="/en/author/adolphe-d-espie/"><span class="vf"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Jean_de_La_Hire.jpg?width=160" alt="" loading="lazy"></span><span class="vt"><b>Adolphe d&#x27;Espie</b><span>1878 – 1956</span><span class="vm">French author</span></span></a></li><li><a href="/en/author/francois-jaffrennou/"><span class="vf"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Taldir2.jpg?width=160" alt="" loading="lazy"></span><span class="vt"><b>François Jaffrennou</b><span>1879 – 1956</span><span class="vm">Breton language writer and editor, Breton nationalist and neo-druid bard</span></span></a></li></ul>
+<p class="vic-tutti"><a href="/en/public-domain-2027/#autori">All 116 writers of 2027 with a page →</a></p>
 </section>
 </div>
 </div>

@@ -111,6 +111,21 @@ main:has(.sa) .sa-azioni{max-width:1180px;margin:40px auto 0;padding:0 clamp(20p
 @media (max-width:560px){.cat li{grid-template-columns:1fr auto}.cat .b{grid-column:1/-1;order:3}}
 .sa-salva{display:flex;align-items:center;justify-content:center;height:56px;background:var(--ink);color:var(--carta);text-decoration:none;font-family:var(--mono);font-size:13px;letter-spacing:.12em;text-transform:uppercase}
 footer{background:var(--ink);color:#B9B9C6;font-size:13px;padding:32px 20px}footer p{max-width:780px;margin:0 auto 10px}footer a{color:#fff}
+.vic{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;gap:8px}
+@media(min-width:560px){.vic{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:900px){.vic{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}}
+.vic li{margin:0}
+.vic a{display:flex;gap:12px;align-items:center;padding:10px;background:var(--riquadro);color:var(--ink);text-decoration:none;height:100%;transition:background .15s}
+.vic a:hover{background:#D9D6CC}
+.vf{flex:none;width:48px;height:60px;background:#D2CFC4;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.vf img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block}
+.vi{font-family:var(--display);font-weight:900;font-size:26px;color:#F7F7F4}
+.vt{display:flex;flex-direction:column;min-width:0;line-height:1.25}
+.vt b{font-size:16px;font-weight:600}
+.vt span{font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--muto);margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.vt .vm{font-family:var(--testo);font-size:13px;letter-spacing:0;margin-top:1px}
+.vic-tutti{margin:16px 0 0;font-family:var(--mono);font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+.vic-tutti a{color:var(--vermiglio-testo)!important}
 
 .pdr{display:inline-flex;flex-direction:column;align-items:stretch;width:var(--w,110px);color:currentColor;text-transform:none;letter-spacing:0;line-height:1;vertical-align:middle}
 .pdr svg{display:block;width:100%;height:auto;color:#F7F7F4}
@@ -173,6 +188,13 @@ footer{background:var(--ink);color:#B9B9C6;font-size:13px;padding:32px 20px}foot
 <h2>Prima di pubblicare</h2>
 <p class="sa-testo">Le date di questa pagina valgono per i testi originali. Illustrazioni e traduzioni hanno diritti propri, che durano 70 anni dalla morte dell'illustratore o del traduttore: un libro può avere il testo libero e i disegni ancora protetti.</p>
 <p class="sa-nota">Calcolo indicativo, non consulenza legale.</p>
+</section>
+<section class="sa-sez sa-vicini">
+<p class="sa-occ">Stesso anno, stessa data</p>
+<h2>Altri scrittori liberi dal 1° gennaio 2028</h2>
+<p class="sa-testo">Sono morti nel 1957 come Dorothy Cottrell: in Italia, Francia, Germania e Regno Unito i loro testi originali si possono pubblicare dallo stesso giorno. Prima i più letti su Wikipedia.</p>
+<ul class="vic"><li><a href="/autore/laura-ingalls-wilder/"><span class="vf"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Laura_Ingalls_Wilder.jpg?width=160" alt="" loading="lazy"></span><span class="vt"><b>Laura Ingalls Wilder</b><span>1867 – 1957 · Stati Uniti</span><span class="vm">romanziere</span></span></a></li><li><a href="/autore/gabriela-mistral/"><span class="vf"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Gabriela_Mistral_1945.jpg?width=160" alt="" loading="lazy"></span><span class="vt"><b>Gabriela Mistral</b><span>1889 – 1957 · Cile</span><span class="vm">poeta</span></span></a></li><li><a href="/autore/dorothy-l-sayers/"><span class="vf"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Dorothy_L._Sayers.png?width=160" alt="" loading="lazy"></span><span class="vt"><b>Dorothy L. Sayers</b><span>1893 – 1957 · Regno Unito</span><span class="vm">drammaturgo</span></span></a></li><li><a href="/autore/nikos-kazantzakis/"><span class="vf"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nikos_Kazantzakis_%281956%29.jpg?width=160" alt="" loading="lazy"></span><span class="vt"><b>Nikos Kazantzakis</b><span>1883 – 1957 · Grecia</span><span class="vm">drammaturgo</span></span></a></li><li><a href="/autore/curzio-malaparte/"><span class="vf"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Curzio_Malaparte.jpg?width=160" alt="" loading="lazy"></span><span class="vt"><b>Curzio Malaparte</b><span>1898 – 1957 · Italia</span><span class="vm">drammaturgo</span></span></a></li><li><a href="/autore/sacha-guitry/"><span class="vf"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/SachaGuitry-1938-Harcourt.png?width=160" alt="" loading="lazy"></span><span class="vt"><b>Sacha Guitry</b><span>1885 – 1957 · Francia</span><span class="vm">drammaturgo</span></span></a></li></ul>
+<p class="vic-tutti"><a href="/pubblico-dominio-2028/#autori">Tutti i 122 scrittori del 2028 con una scheda →</a></p>
 </section>
 </div>
 </div>

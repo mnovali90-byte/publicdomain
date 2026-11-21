@@ -111,6 +111,21 @@ main:has(.sa) .sa-azioni{max-width:1180px;margin:40px auto 0;padding:0 clamp(20p
 @media (max-width:560px){.cat li{grid-template-columns:1fr auto}.cat .b{grid-column:1/-1;order:3}}
 .sa-salva{display:flex;align-items:center;justify-content:center;height:56px;background:var(--ink);color:var(--carta);text-decoration:none;font-family:var(--mono);font-size:13px;letter-spacing:.12em;text-transform:uppercase}
 footer{background:var(--ink);color:#B9B9C6;font-size:13px;padding:32px 20px}footer p{max-width:780px;margin:0 auto 10px}footer a{color:#fff}
+.vic{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;gap:8px}
+@media(min-width:560px){.vic{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:900px){.vic{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}}
+.vic li{margin:0}
+.vic a{display:flex;gap:12px;align-items:center;padding:10px;background:var(--riquadro);color:var(--ink);text-decoration:none;height:100%;transition:background .15s}
+.vic a:hover{background:#D9D6CC}
+.vf{flex:none;width:48px;height:60px;background:#D2CFC4;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.vf img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block}
+.vi{font-family:var(--display);font-weight:900;font-size:26px;color:#F7F7F4}
+.vt{display:flex;flex-direction:column;min-width:0;line-height:1.25}
+.vt b{font-size:16px;font-weight:600}
+.vt span{font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--muto);margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.vt .vm{font-family:var(--testo);font-size:13px;letter-spacing:0;margin-top:1px}
+.vic-tutti{margin:16px 0 0;font-family:var(--mono);font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+.vic-tutti a{color:var(--vermiglio-testo)!important}
 
 .pdr{display:inline-flex;flex-direction:column;align-items:stretch;width:var(--w,110px);color:currentColor;text-transform:none;letter-spacing:0;line-height:1;vertical-align:middle}
 .pdr svg{display:block;width:100%;height:auto;color:#F7F7F4}
@@ -174,6 +189,12 @@ footer{background:var(--ink);color:#B9B9C6;font-size:13px;padding:32px 20px}foot
 <h2>Before publishing</h2>
 <p class="sa-testo">The dates on this page apply to the original texts. Illustrations and translations have their own rights, lasting 70 years after the death of the illustrator or translator: a book can have a free text and still-protected drawings.</p>
 <p class="sa-nota">Indicative calculation, not legal advice.</p>
+</section>
+<section class="sa-sez sa-vicini">
+<p class="sa-occ">Same year, same date</p>
+<h2>Other writers free in Spain from 1 January 2027</h2>
+<p class="sa-testo">They died in 1946, like Nikolaj Aleksandrovič Morozov: in Spain their original texts can be published from the same day. Most read on Wikipedia first.</p>
+<ul class="vic"><li><a href="/en/author/h-g-wells/"><span class="vf"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/H.G._Wells_by_Beresford.jpg?width=160" alt="" loading="lazy"></span><span class="vt"><b>H. G. Wells</b><span>1866 – 1946</span><span class="vm">English writer</span></span></a></li><li><a href="/en/author/gertrude-stein/"><span class="vf"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Gertrude_Stein_1934_%28facecrop%29.jpg?width=160" alt="" loading="lazy"></span><span class="vt"><b>Gertrude Stein</b><span>1874 – 1946</span><span class="vm">American author</span></span></a></li><li><a href="/en/author/gerhart-hauptmann/"><span class="vf"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Gerhart_Hauptmann_nobel.jpg?width=160" alt="" loading="lazy"></span><span class="vt"><b>Gerhart Hauptmann</b><span>1862 – 1946</span><span class="vm">German dramatist who received the Nobel Prize in Literature in 1912</span></span></a></li><li><a href="/en/author/manuel-de-falla/"><span class="vf"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Manuel_de_Falla_con_bast%C3%B3n_%28cropped%29.jpg?width=160" alt="" loading="lazy"></span><span class="vt"><b>Manuel de Falla</b><span>1876 – 1946</span><span class="vm">Spanish composer</span></span></a></li><li><a href="/en/author/damon-runyon/"><span class="vf"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/DamonRunyon.jpeg?width=160" alt="" loading="lazy"></span><span class="vt"><b>Damon Runyon</b><span>1884 – 1946</span><span class="vm">American writer</span></span></a></li><li><a href="/en/author/dion-fortune/"><span class="vf"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Violet_Mary_Firthova_%281890_1946%29.jpg?width=160" alt="" loading="lazy"></span><span class="vt"><b>Dion Fortune</b><span>1890 – 1946</span><span class="vm">British occultist, ceremonial magician, and writer</span></span></a></li></ul>
 </section>
 </div>
 </div>

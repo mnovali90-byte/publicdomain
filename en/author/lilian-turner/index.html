@@ -111,6 +111,21 @@ main:has(.sa) .sa-azioni{max-width:1180px;margin:40px auto 0;padding:0 clamp(20p
 @media (max-width:560px){.cat li{grid-template-columns:1fr auto}.cat .b{grid-column:1/-1;order:3}}
 .sa-salva{display:flex;align-items:center;justify-content:center;height:56px;background:var(--ink);color:var(--carta);text-decoration:none;font-family:var(--mono);font-size:13px;letter-spacing:.12em;text-transform:uppercase}
 footer{background:var(--ink);color:#B9B9C6;font-size:13px;padding:32px 20px}footer p{max-width:780px;margin:0 auto 10px}footer a{color:#fff}
+.vic{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;gap:8px}
+@media(min-width:560px){.vic{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:900px){.vic{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}}
+.vic li{margin:0}
+.vic a{display:flex;gap:12px;align-items:center;padding:10px;background:var(--riquadro);color:var(--ink);text-decoration:none;height:100%;transition:background .15s}
+.vic a:hover{background:#D9D6CC}
+.vf{flex:none;width:48px;height:60px;background:#D2CFC4;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.vf img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block}
+.vi{font-family:var(--display);font-weight:900;font-size:26px;color:#F7F7F4}
+.vt{display:flex;flex-direction:column;min-width:0;line-height:1.25}
+.vt b{font-size:16px;font-weight:600}
+.vt span{font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--muto);margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.vt .vm{font-family:var(--testo);font-size:13px;letter-spacing:0;margin-top:1px}
+.vic-tutti{margin:16px 0 0;font-family:var(--mono);font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+.vic-tutti a{color:var(--vermiglio-testo)!important}
 
 .pdr{display:inline-flex;flex-direction:column;align-items:stretch;width:var(--w,110px);color:currentColor;text-transform:none;letter-spacing:0;line-height:1;vertical-align:middle}
 .pdr svg{display:block;width:100%;height:auto;color:#F7F7F4}
@@ -186,6 +201,13 @@ footer{background:var(--ink);color:#B9B9C6;font-size:13px;padding:32px 20px}foot
 <h2>Before publishing</h2>
 <p class="sa-testo">The dates on this page apply to the original texts. Illustrations and translations have their own rights, lasting 70 years after the death of the illustrator or translator: a book can have a free text and still-protected drawings.</p>
 <p class="sa-nota">Indicative calculation, not legal advice.</p>
+</section>
+<section class="sa-sez sa-vicini">
+<p class="sa-occ">Same year, same date</p>
+<h2>Other writers free from 1 January 2027</h2>
+<p class="sa-testo">They died in 1956, like Lilian Turner: in Italy, France, Germany and the UK their original texts can be published from the same day. Most read on Wikipedia first.</p>
+<ul class="vic"><li><a href="/en/author/b-r-ambedkar/"><span class="vf"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Dr._Bhimrao_Ambedkar.jpg?width=160" alt="" loading="lazy"></span><span class="vt"><b>B. R. Ambedkar</b><span>1891 – 1956</span><span class="vm">Indian jurist, economist, and social reformer</span></span></a></li><li><a href="/en/author/bertolt-brecht/"><span class="vf"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Bundesarchiv_Bild_183-W0409-300%2C_Bertolt_Brecht.jpg?width=160" alt="" loading="lazy"></span><span class="vt"><b>Bertolt Brecht</b><span>1898 – 1956</span><span class="vm">German poet, playwright, and theatre director</span></span></a></li><li><a href="/en/author/a-a-milne/"><span class="vf"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/A_a_milne.jpg?width=160" alt="" loading="lazy"></span><span class="vt"><b>A. A. Milne</b><span>1882 – 1956</span><span class="vm">British author known for creating Winnie-the-Pooh</span></span></a></li><li><a href="/en/author/henry-louis-mencken/"><span class="vf"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/H-L-Mencken-1928.jpg?width=160" alt="" loading="lazy"></span><span class="vt"><b>Henry Louis Mencken</b><span>1880 – 1956</span><span class="vm">American journalist and writer</span></span></a></li><li><a href="/en/author/gottfried-benn/"><span class="vf"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Bundesarchiv-Bild-183-1984-1116-500%2C-Gottfried-Benn-Arzt-und-Schriftsteller_cropped.jpg?width=160" alt="" loading="lazy"></span><span class="vt"><b>Gottfried Benn</b><span>1886 – 1956</span><span class="vm">German physician, poet, and essayist</span></span></a></li><li><a href="/en/author/robert-walser/"><span class="vf"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Robert_Walser_%28cropped%29.jpg?width=160" alt="" loading="lazy"></span><span class="vt"><b>Robert Walser</b><span>1878 – 1956</span><span class="vm">Swiss writer</span></span></a></li></ul>
+<p class="vic-tutti"><a href="/en/public-domain-2027/#autori">All 116 writers of 2027 with a page →</a></p>
 </section>
 </div>
 </div>

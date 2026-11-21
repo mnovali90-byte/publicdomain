@@ -228,6 +228,21 @@ main:has(.sa) .sa-azioni{max-width:1180px;margin:40px auto 0;padding:0 clamp(20p
 @media (max-width:560px){.cat li{grid-template-columns:1fr auto}.cat .b{grid-column:1/-1;order:3}}
 .sa-salva{display:flex;align-items:center;justify-content:center;height:56px;background:var(--ink);color:var(--carta);text-decoration:none;font-family:var(--mono);font-size:13px;letter-spacing:.12em;text-transform:uppercase}
 footer{background:var(--ink);color:#B9B9C6;font-size:13px;padding:32px 20px}footer p{max-width:780px;margin:0 auto 10px}footer a{color:#fff}
+.vic{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;gap:8px}
+@media(min-width:560px){.vic{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:900px){.vic{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}}
+.vic li{margin:0}
+.vic a{display:flex;gap:12px;align-items:center;padding:10px;background:var(--riquadro);color:var(--ink);text-decoration:none;height:100%;transition:background .15s}
+.vic a:hover{background:#D9D6CC}
+.vf{flex:none;width:48px;height:60px;background:#D2CFC4;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.vf img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block}
+.vi{font-family:var(--display);font-weight:900;font-size:26px;color:#F7F7F4}
+.vt{display:flex;flex-direction:column;min-width:0;line-height:1.25}
+.vt b{font-size:16px;font-weight:600}
+.vt span{font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--muto);margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.vt .vm{font-family:var(--testo);font-size:13px;letter-spacing:0;margin-top:1px}
+.vic-tutti{margin:16px 0 0;font-family:var(--mono);font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+.vic-tutti a{color:var(--vermiglio-testo)!important}
 """
 
 TESTA = """<!doctype html>
@@ -787,6 +802,7 @@ def scheda_statica(a, lang, bd):
         o.append(sez(T("Chi era", "Who they were"), f'<p class="sa-bio">{esc(bd["testo"])}</p>\n{ln}\n<p class="sa-nota">{T("Testo da Wikipedia, licenza CC BY-SA.", "Text from Wikipedia, licence CC BY-SA.")}</p>\n'))
     ill = "".join(blocco_illustrazioni(a, lang)[1:]).replace('<p class="sotto">', '<p class="sa-testo">')
     o.append(sez(T("Prima di pubblicare", "Before publishing"), ill + f'<p class="sa-nota">{T("Calcolo indicativo, non consulenza legale.", "Indicative calculation, not legal advice.")}</p>\n'))
+    o.append(blocco_vicini(a, lang))
     o.append("</div>\n</div>\n")   # chiude sa-resto e sa
     return "".join(o)
 
@@ -1112,6 +1128,20 @@ main:has(.pd-sez){max-width:none;margin:0;padding:0}
 .pd-cred{margin:14px 0 0;font-size:12px;line-height:1.5;color:var(--muto)}.pd-cred a{color:var(--muto)}
 @media (max-width:760px){.pd-num{grid-template-columns:1fr}.pd-tre{grid-template-columns:1fr}
 .pd-tab li{grid-template-columns:1fr;gap:4px}.pd-cop{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.al-nav{display:flex;flex-wrap:wrap;gap:4px;margin:18px 0 22px}
+.al-nav a{font-family:var(--mono);font-size:13px;width:30px;height:30px;display:flex;align-items:center;justify-content:center;border:1.5px solid var(--ink);color:var(--ink);text-decoration:none}
+.al-nav a:hover{background:var(--ink);color:var(--carta)}
+.al{columns:2;column-gap:18px}
+@media(min-width:960px){.al{columns:3}}
+.al-g{break-inside:avoid;margin:0 0 18px}
+.al-l{font-family:var(--display);font-weight:900;font-size:30px;line-height:1;margin:0 0 6px;border-bottom:2px solid var(--ink);padding-bottom:4px}
+.al-g ul{list-style:none;margin:0;padding:0}
+.al-g li{margin:0;padding:6px 0;border-bottom:1px solid var(--riquadro);display:flex;flex-direction:column;line-height:1.3}
+.al-g li a{color:var(--ink);font-weight:600;text-decoration:none}
+.al-g li a:hover{color:var(--vermiglio-testo);text-decoration:underline}
+.al-g li span.m{font-size:inherit;margin:0;display:inline}
+.al-g li span{font-family:var(--mono);font-size:11px;color:var(--muto);margin-top:2px}
+@media(max-width:639px){.al-g li{padding:5px 0}.al-g li a{font-size:14px}.al-g li span{font-size:10px}.al-g li span.m{display:none}.al-l{font-size:24px}}
 """
 
 LETTERARI = {"scrittore", "scrittrice", "poeta", "poetessa", "romanziere", "romanziera", "drammaturgo", "drammaturga",
@@ -1130,6 +1160,118 @@ def _letterari(pacchetto, lang):
            and not a.get("fuori_classifica") and a["wikidata"] not in FUORI_CLASSIFICA
            and LETTERARI & set(a.get("professioni") or [])]
     return sorted(out, key=lambda a: -_visite(a))
+
+
+# --- collegamenti interni (mockup approvato il 21/11/2026): «Altri scrittori liberi dal…» nelle schede,
+# elenco di tutti gli scrittori con una scheda nella pagina dell'anno. Riempiti in main().
+MEMBRI = {}   # wikidata -> ("ue"|"es", anno in cui diventa libero)
+POOL = {}     # ("ue"|"es", anno) -> wikidata degli scrittori con una scheda, dal più letto
+AUT = {}      # wikidata -> dati dell'autore
+SLUG = {}     # wikidata -> indirizzo della scheda
+EN_OK = set()
+_MASCHILI_IN_A = {"Canada", "Kenya", "Guatemala", "Nicaragua", "Venezuela", "Panama", "Ghana", "Botswana", "Ruanda", "Malawi"}
+
+
+def del_paese(p):
+    """«del Regno Unito», «dell'India», «della Francia», «degli Stati Uniti»."""
+    if p.split()[0] in ("Stati", "Paesi", "Emirati"):
+        return "degli " + p
+    if p[0] in "AEIOUÀÈÉÌÒÙ":
+        return "dell'" + p
+    if p.endswith("a") and p not in _MASCHILI_IN_A:
+        return "della " + p
+    return "del " + p
+
+
+def _tessera_vicino(q, lang):
+    x = AUT[q]
+    it = lang == "it"
+    nome = pulisci(x["nome"])
+    href = f"/autore/{SLUG[q]}/" if it else f"/en/author/{SLUG[q]}/"
+    foto = x.get("foto") or {}
+    if foto.get("url"):
+        ft = f'<span class="vf"><img src="{esc(re.sub(r"width=\d+", "width=160", foto["url"]))}" alt="" loading="lazy"></span>'
+    else:
+        ft = f'<span class="vf" aria-hidden="true"><span class="vi">{esc(iniziali_nome(nome))}</span></span>'
+    sotto = f"{anno_di(x.get('nascita')) or '?'} – {anno_di(x.get('morte'))}"
+    if it:
+        pa = paesi_moderni(x.get("paesi"))
+        sotto += f" · {pa[0]}" if pa else ""
+        m = (x.get("professioni") or [""])[0]
+    else:
+        m = re.sub(r"\s*\([^)]*\)\s*$", "", pulisci(x.get("descrizione")))
+    vm = f'<span class="vm">{esc(m)}</span>' if m else ""
+    return f'<li><a href="{href}">{ft}<span class="vt"><b>{esc(nome)}</b><span>{esc(sotto)}</span>{vm}</span></a></li>'
+
+
+def blocco_vicini(a, lang):
+    """Sei scrittori che diventano liberi lo stesso giorno: prima dello stesso paese, poi i più letti su Wikipedia."""
+    q = a["wikidata"]
+    if q not in MEMBRI:
+        return ""
+    it = lang == "it"
+    T = (lambda x, y: x) if it else (lambda x, y: y)
+    tipo, anno = MEMBRI[q]
+    tutti = [x for x in POOL.get((tipo, anno), []) if it or x in EN_OK]
+    lista = [x for x in tutti if x != q]
+    if not lista:
+        return ""
+    pa = paesi_moderni(a.get("paesi"))
+    c = pa[0] if pa else None
+    stessi = [x for x in lista if c and c in paesi_moderni(AUT[x].get("paesi"))[:2]]
+    scelti = (stessi + [x for x in lista if x not in stessi])[:6]
+    morti = anno - (71 if tipo == "ue" else 81)
+    nome = pulisci(a["nome"])
+    if stessi:
+        ordine = T(f"Prima quelli {del_paese(c)}, poi i più letti su Wikipedia.", "Same country first, then the most read on Wikipedia.")
+    else:
+        ordine = T("Prima i più letti su Wikipedia.", "Most read on Wikipedia first.")
+    if tipo == "ue":
+        tit = T(f"Altri scrittori liberi dal 1° gennaio {anno}", f"Other writers free from 1 January {anno}")
+        dove = T("in Italia, Francia, Germania e Regno Unito", "in Italy, France, Germany and the UK")
+    else:
+        tit = T(f"Altri scrittori liberi in Spagna dal 1° gennaio {anno}", f"Other writers free in Spain from 1 January {anno}")
+        dove = T("in Spagna", "in Spain")
+    testo = T(f"Sono morti nel {morti} come {nome}: {dove} i loro testi originali si possono pubblicare dallo stesso giorno. {ordine}",
+              f"They died in {morti}, like {nome}: {dove} their original texts can be published from the same day. {ordine}")
+    o = [f'<section class="sa-sez sa-vicini">\n<p class="sa-occ">{T("Stesso anno, stessa data", "Same year, same date")}</p>\n'
+         f'<h2>{tit}</h2>\n<p class="sa-testo">{esc(testo)}</p>\n<ul class="vic">'
+         + "".join(_tessera_vicino(x, lang) for x in scelti) + "</ul>\n"]
+    if tipo == "ue":
+        dest = f"/pubblico-dominio-{anno}/#autori" if it else f"/en/public-domain-{anno}/#autori"
+        o.append(f'<p class="vic-tutti"><a href="{dest}">{T(f"Tutti i {len(tutti)} scrittori del {anno} con una scheda →", f"All {len(tutti)} writers of {anno} with a page →")}</a></p>\n')
+    o.append("</section>\n")
+    return "".join(o)
+
+
+def _cognome(nome):
+    parole = pulisci(nome).replace(",", " ").split()
+    return slug_base(parole[-1]) if parole else ""
+
+
+def elenco_az(aut, lang, morti):
+    """Sezione della pagina dell'anno: tutti gli scrittori con una scheda, per cognome, con le lettere per saltare."""
+    it = lang == "it"
+    T = (lambda x, y: x) if it else (lambda x, y: y)
+    pag = "pagina" if it else "pagina_en"
+    gruppi = {}
+    for a in sorted(aut, key=lambda a: (_cognome(a["nome"]), slug_base(a["nome"]))):
+        k = _cognome(a["nome"])[:1].upper()
+        gruppi.setdefault(k if k.isalpha() else "#", []).append(a)
+    o = [f'<section class="pd-sez" id="autori"><div class="pd-in">\n<p class="pd-et">{T("Europa e Regno Unito · elenco completo", "Europe and the UK · full list")}</p>\n'
+         f'<h2>{T("Tutti gli scrittori con una scheda", "All the writers with a page")}</h2>\n'
+         f'<p class="lead">{T(f"I {len(aut)} scrittori morti nel {morti} per cui abbiamo una scheda, in ordine di cognome. Ogni scheda ha la data paese per paese, le opere principali e le fonti.", f"The {len(aut)} writers who died in {morti} that have a page, by surname. Each page has the date country by country, the main works and the sources.")}</p>\n'
+         f'<nav class="al-nav" aria-label="{T("Lettere", "Letters")}">' + "".join(f'<a href="#al-{k}">{k}</a>' for k in gruppi) + '</nav>\n<div class="al">']
+    for k, lista in gruppi.items():
+        o.append(f'<div class="al-g" id="al-{k}"><p class="al-l">{k}</p><ul>')
+        for a in lista:
+            href = f"/autore/{a[pag]}/" if it else f"/en/author/{a[pag]}/"
+            m = (a.get("professioni") or [""])[0] if it else re.sub(r"\s*\([^)]*\)\s*$", "", pulisci(a.get("descrizione")))
+            mm = f'<span class="m"> · {esc(m)}</span>' if m else ""
+            o.append(f'<li><a href="{href}">{esc(pulisci(a["nome"]))}</a><span>{anno_di(a.get("nascita")) or "?"} – {anno_di(a["morte"])}{mm}</span></li>')
+        o.append("</ul></div>")
+    o.append("</div>\n</div></section>\n")
+    return "".join(o)
 
 
 def _data_lunga(iso, lang):
@@ -1325,7 +1467,7 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
                 d = re.sub(r"\s*\([^)]*\)\s*$", "", pulisci(a.get("descrizione")))
                 sotto = (d + " · " if d else "") + f"died {_data_lunga(a['morte'], 'en')}"
             out.append(f'<li><a href="{href}">{ft}<span><b>{esc(nome)}</b><span>{esc(sotto)}</span></span></a></li>\n')
-        out.append(f'</ul>\n<p class="pd-piu"><a href="{app}#/{anno}">{T(f"Tutti i {n_(n_ue)} scrittori, con le schede →", f"All {n_(n_ue)} writers, with their pages →")}</a></p>\n')
+        out.append(f'</ul>\n<p class="pd-piu"><a href="#autori">{T(f"Tutti i {len(aut)} scrittori con una scheda →", f"All {len(aut)} writers with a page →")}</a> · <a href="{app}#/{anno}">{T(f"tutti gli {n_(n_ue)} nel radar →", f"all {n_(n_ue)} in the radar →")}</a></p>\n')
         if crediti:
             out.append(f'<p class="pd-cred">{T("Ritratti da Wikimedia Commons", "Portraits from Wikimedia Commons")} — {" · ".join(crediti)}</p>\n')
         out.append("</div></section>\n")
@@ -1347,6 +1489,10 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
                 badge = f'<span class="pd-bd ver">{T("anno da confermare", "year to be confirmed")}</span>'
             out.append(_cop_pdd(f"{app}#/opera/{o['qid']}", t, f"{chi} · {pub}", badge))
         out.append(f'</ul>\n<p class="pd-piu"><a href="{app}#/us/{anno}">{T(f"Tutti i {n_us} libri: {n_us_ok} confermati, {n_us - n_us_ok} da confermare →", f"All {n_us} books: {n_us_ok} confirmed, {n_us - n_us_ok} to be confirmed →")}</a></p>\n</div></section>\n')
+
+    # 3b. tutti gli scrittori con una scheda (collegamenti interni verso ogni scheda)
+    if aut:
+        out.append(elenco_az(aut, lang, morti))
 
     # 4. paese per paese
     righe = [
@@ -1456,6 +1602,23 @@ def main():
     en_ok = {q for q, a in autori.items() if abbastanza_contenuto(a, "en")}
     for f in file_autori():
         calcola_ranghi(json.load(open(f, encoding="utf-8")))
+
+    AUT.update(autori)
+    SLUG.update(slug_di)
+    EN_OK.update(en_ok)
+    for f in file_autori():
+        st = Path(f).stem
+        tipo, anno_f = ("es", int(st[3:])) if st.startswith("es-") else ("ue", int(st))
+        for a_ in json.load(open(f, encoding="utf-8"))["autori"]:
+            q = a_["wikidata"]
+            if q not in slug_di:
+                continue
+            MEMBRI.setdefault(q, (tipo, anno_f))
+            if (a_.get("letterario") and a_.get("morte") and q not in FUORI_CLASSIFICA and not a_.get("fuori_classifica")
+                    and LETTERARI & set(a_.get("professioni") or [])):
+                POOL.setdefault((tipo, anno_f), []).append(q)
+    for k_ in POOL:
+        POOL[k_].sort(key=lambda q: -_visite(AUT[q]))
 
     # guardia (19/11/2026): se i dati non hanno biografie e opere (giro interrotto a metà) non si tocca niente
     if len(autori) < 100:
