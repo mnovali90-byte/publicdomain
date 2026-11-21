@@ -1,0 +1,100 @@
+{
+ "titolo_wikidata": "Q3324507",
+ "persone_con_titolo": 2300,
+ "per_periodo": {
+  "1939-1945": 1547,
+  "1914-1918": 635,
+  "altri anni": 95,
+  "senza anno": 23
+ },
+ "nostri_autori": 21002,
+ "nostri_con_titolo": 11,
+ "nostri_con_titolo_per_lista": {
+  "già pubblici": 11
+ },
+ "elenco_nostri": [
+  {
+   "qid": "Q298394",
+   "nome": "Alain-Fournier",
+   "morte": 1914,
+   "lista": "già pubblici"
+  },
+  {
+   "qid": "Q334965",
+   "nome": "Charles Péguy",
+   "morte": 1914,
+   "lista": "già pubblici"
+  },
+  {
+   "qid": "Q133855",
+   "nome": "Guillaume Apollinaire",
+   "morte": 1918,
+   "lista": "già pubblici"
+  },
+  {
+   "qid": "Q462604",
+   "nome": "Victor Segalen",
+   "morte": 1919,
+   "lista": "già pubblici"
+  },
+  {
+   "qid": "Q601482",
+   "nome": "Georges Politzer",
+   "morte": 1942,
+   "lista": "già pubblici"
+  },
+  {
+   "qid": "Q168441",
+   "nome": "Irène Némirovsky",
+   "morte": 1942,
+   "lista": "già pubblici"
+  },
+  {
+   "qid": "Q65706308",
+   "nome": "Éric Allatini",
+   "morte": 1943,
+   "lista": "già pubblici"
+  },
+  {
+   "qid": "Q2908",
+   "nome": "Antoine de Saint-Exupéry",
+   "morte": 1944,
+   "lista": "già pubblici"
+  },
+  {
+   "qid": "Q156585",
+   "nome": "Marc Bloch",
+   "morte": 1944,
+   "lista": "già pubblici"
+  },
+  {
+   "qid": "Q170095",
+   "nome": "Robert Desnos",
+   "morte": 1945,
+   "lista": "già pubblici"
+  },
+  {
+   "qid": "Q3455763",
+   "nome": "Régis Messac",
+   "morte": 1945,
+   "lista": "già pubblici"
+  }
+ ],
+ "nostri_morti_in_guerra": 1736,
+ "wikisource_autori_marcati": 22,
+ "wikisource_con_wikidata": 22,
+ "wikisource_con_titolo_su_wikidata": 22,
+ "wikisource_senza_titolo_su_wikidata": [],
+ "wikisource_tra_i_nostri": [
+  "Auteur:Antoine de Saint-Exupéry (Q2908)",
+  "Auteur:Georges Politzer (Q601482)",
+  "Auteur:Irène Némirovsky (Q168441)",
+  "Auteur:Marc Bloch (Q156585)",
+  "Auteur:Robert Desnos (Q170095)",
+  "Auteur:Régis Messac (Q3455763)",
+  "Auteur:Éric Allatini (Q65706308)"
+ ],
+ "wikisource_tra_i_nostri_senza_titolo": [],
+ "con_stato_diritti_criterio_mpf": 0,
+ "minuti": 0.2
+}
