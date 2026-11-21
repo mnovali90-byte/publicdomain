@@ -618,3 +618,9 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - Tolta la domanda «Quando X entra in pubblico dominio in Italia?» dalle «Risposte brevi», perché ripeteva la stessa frase. La sezione resta solo nelle 47 schede che hanno opere già libere negli USA. Restano il riquadro rosso e le date paese per paese (grafica e dettaglio).
 - Controllo: 408 schede IT e 395 EN generate, nessuna senza frase; viste a schermo Brecht (IT/EN) e Döblin (alleato).
 - 44885040526: finito bene. Elenco enciclopedie e riviste: 356 voci; tolte 0 perché erano già state tolte: nessuna delle 356 è ancora nell'archivio, nella ricerca o nelle pagine per autore (controllato a mano). Titolo originale: 1182 provate; confermate in totale 61 con Open Library e 5 con Library of Congress (+8 rispetto al giro prima). Pseudonimi: 254 autori. Opere confermate in totale 1417 (prima 1405). Schede autore dopo il Salva: blocco «Altri scrittori» e frase di risposta presenti.
+
+## 21/11/2026 — Logo: RDR al posto di PDR
+- Perché: «PDR» è anche la sigla di The Public Domain Review (publicdomainreview.org), nel nostro stesso campo. Nome del sito e dominio restano uguali.
+- Scelto da Marco dopo i mockup: sigla RDR, taglio sull'ultima R come lancetta del radar, «solo taglio bianco» (senza punto e senza lancetta piena nel buco).
+- Come è fatto: scripts/logo.py prende le lettere dal carattere già usato dal sito (Big Shoulders Display, peso 900), misura il centro del buco della R sul disegno della lettera e fa partire il taglio esattamente da lì, a 40 gradi, spessore 3,7. Scrive assets/logo-rdr.svg e assets/favicon.svg. La scritta «Public Domain Radar» sotto ora corre per tutta la larghezza della sigla.
+- Controllo: tracciata sopra al logo la retta della lancetta: passa per il centro del buco e sta al centro del taglio. Viste a schermo testata della home, scheda autore (telefono), Già pubblici, calendario e icona.

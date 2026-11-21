@@ -1,7 +1,7 @@
 """Schede da condividere (immagini per storie e post), generate nel browser dal calendario.
 Fornisce: dati_scheda(v, lang, ...) per ogni voce, CSS, HTML della finestra e JS."""
 import html
-import json
+import json, re
 from pathlib import Path
 
 RADICE = Path(__file__).resolve().parent.parent
@@ -110,10 +110,10 @@ function disegna(d,f){
   cv.width=W;cv.height=H;
   c.fillStyle=CARTA;c.fillRect(0,0,W,H);c.textBaseline="alphabetic";
   /* logo */
-  var lw=240,lh=lw*120/215.67;
+  var lw=240,lh=lw*__LH__/__LW__;
   if(logoImg)c.drawImage(logoImg,M,M,lw,lh);
   c.fillStyle=MUTO;c.font='500 17px '+MONO;
-  var k=lw/215.67,sy=M+lh+30,p=[[0,61.42,"PUBLIC"],[74.58,137.65,"DOMAIN"],[152.82,215.67,"RADAR"]];
+  var k=lw/__LW__,sy=M+lh+30,p=[[0,__LW__,"PUBLIC DOMAIN RADAR"]];
   p.forEach(function(q){justify(c,q[2],M+q[0]*k,sy,(q[1]-q[0])*k)});
   c.font='500 28px '+MONO;spaced(c,X.cal.toUpperCase(),W-M,M+34,4,true);
   /* piede */
@@ -178,7 +178,8 @@ document.getElementById("sds").addEventListener("click",function(){
 
 
 def js(lang, anno):
-    svg = (RADICE / "assets" / "logo-pdr.svg").read_text(encoding="utf-8").replace("currentColor", "#0C0C10")
+    svg = (RADICE / "assets" / "logo-rdr.svg").read_text(encoding="utf-8").replace("currentColor", "#0C0C10")
+    lw, lh = re.search(r'viewBox="0 0 ([\d.]+) ([\d.]+)"', svg).groups()
     x = TESTI[lang]
     dati = {"cal": x["cal"].format(a=anno), "url": x["url"]}
-    return "<script>" + JS.replace("__LOGO__", json.dumps(svg)).replace("__X__", json.dumps(dati)) + "</script>"
+    return "<script>" + JS.replace("__LW__", lw).replace("__LH__", lh).replace("__LOGO__", json.dumps(svg)).replace("__X__", json.dumps(dati)) + "</script>"
