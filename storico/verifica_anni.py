@@ -48,23 +48,32 @@ _PSEUDO = {}
 
 
 def pseudonimi(qids):
-    """Pseudonimi degli autori (P742 di Wikidata): «Ellery Queen» per Manfred B. Lee e Frederic Dannay (21/11/2026).
-    I cataloghi spesso hanno solo lo pseudonimo."""
+    """Pseudonimi degli autori da Wikidata: P742 sull'autore, oppure il nome di una voce di cui l'autore è membro
+    (P527: «Ellery Queen» ha come membri Manfred B. Lee e Frederic Dannay). I cataloghi spesso hanno solo lo pseudonimo
+    (21/11/2026)."""
     mancano = [q for q in dict.fromkeys(qids) if q not in _PSEUDO and re.fullmatch(r"Q\d+", q or "")]
-    for i in range(0, len(mancano), 50):
-        u = "https://www.wikidata.org/w/api.php?" + urllib.parse.urlencode(
-            {"action": "wbgetentities", "ids": "|".join(mancano[i:i + 50]), "props": "claims", "format": "json"})
-        for t in range(3):
+    for q in mancano:
+        _PSEUDO[q] = []
+    for i in range(0, len(mancano), 200):
+        vals = " ".join("wd:" + q for q in mancano[i:i + 200])
+        dom = (f"SELECT ?a ?ps WHERE {{ VALUES ?a {{ {vals} }} {{ ?a wdt:P742 ?ps }} UNION "
+               f"{{ ?g wdt:P527 ?a. ?g rdfs:label ?ps FILTER(LANG(?ps) = \"en\") }} }}")
+        dati = urllib.parse.urlencode({"query": dom, "format": "json"}).encode()
+        for t in range(4):
             try:
-                d = json.load(urllib.request.urlopen(urllib.request.Request(u, headers=UA), timeout=60))
+                req = urllib.request.Request("https://query.wikidata.org/sparql", data=dati,
+                                             headers={**UA, "Content-Type": "application/x-www-form-urlencoded"})
+                righe = json.load(urllib.request.urlopen(req, timeout=120))["results"]["bindings"]
                 break
             except Exception:
-                time.sleep(5 * (t + 1))
+                time.sleep(15 * (t + 1))
         else:
             continue
-        for q, e in d.get("entities", {}).items():
-            _PSEUDO[q] = [c["mainsnak"]["datavalue"]["value"] for c in e.get("claims", {}).get("P742", [])
-                          if isinstance(c["mainsnak"].get("datavalue", {}).get("value"), str)]
+        for x in righe:
+            q = x["a"]["value"].rsplit("/", 1)[-1]
+            ps = x["ps"]["value"]
+            if ps not in _PSEUDO[q]:
+                _PSEUDO[q].append(ps)
         time.sleep(1)
     return {q: _PSEUDO.get(q, []) for q in qids}
 

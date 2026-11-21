@@ -70,7 +70,8 @@ def risolvi(autore, titolo):
     r = sparql(f'''SELECT ?w ?wLabel ?wit ?sl ?a ?aLabel ?morte ?en ?itw WHERE {{
       {{ ?w rdfs:label "{t}"@en }} UNION {{ ?w skos:altLabel "{t}"@en }}
       ?w wdt:P50 ?a ; wikibase:sitelinks ?sl .
-      {{ ?a rdfs:label ?al FILTER(LANG(?al) = "en") }} UNION {{ ?a wdt:P742 ?al }}   # anche lo pseudonimo (Ellery Queen)
+      {{ ?a rdfs:label ?al FILTER(LANG(?al) = "en") }} UNION {{ ?a wdt:P742 ?al }}
+      UNION {{ ?g wdt:P527 ?a. ?g rdfs:label ?al FILTER(LANG(?al) = "en") }}   # anche lo pseudonimo (Ellery Queen)
       FILTER(CONTAINS(LCASE(STR(?al)), "{cognome}"))
       OPTIONAL {{ ?a wdt:P570 ?morte }}
       OPTIONAL {{ ?w rdfs:label ?wit FILTER(LANG(?wit)="it") }}
