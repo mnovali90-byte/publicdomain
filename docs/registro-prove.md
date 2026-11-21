@@ -607,3 +607,8 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - Prima: media 3,0 pagine, minimo 2. Dopo: media 9,6, minimo 3.
 - Restano 82 schede con 3 link o meno: sono soprattutto autori delle liste spagnole (morti nel 1946–47), che non hanno una pagina dell'anno con l'elenco. Prova futura possibile: un elenco anche per loro.
 - Controllo a vista: desktop e telefono (sul telefono l'elenco è a 2 colonne senza la professione, come nel mockup).
+
+## 21/11/2026 — Controllo giri «Pagina Già pubblici»
+- 44883389633: finito bene. Pseudonimi letti per 254 autori. Fase «titolo originale e fonti forti»: 1268 opere provate, confermate 53 con Open Library (titolo originale) e 4 con Library of Congress (titolo originale). Totale confermate 1405.
+- Enciclopedie tolte: 0. Atteso: in quel giro l'elenco era stato svuotato (errore già corretto, elenco ripristinato con 356 voci). Le toglie il giro successivo.
+- 44885040526 (avviato dalla correzione): in corso alle 09:29 UTC, fermo sulla fase degli anni USA (~40 minuti). Ricontrollo alle 09:55 UTC.
