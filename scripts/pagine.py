@@ -228,6 +228,9 @@ main:has(.sa) .sa-azioni{max-width:1180px;margin:40px auto 0;padding:0 clamp(20p
 @media (max-width:560px){.cat li{grid-template-columns:1fr auto}.cat .b{grid-column:1/-1;order:3}}
 .sa-salva{display:flex;align-items:center;justify-content:center;height:56px;background:var(--ink);color:var(--carta);text-decoration:none;font-family:var(--mono);font-size:13px;letter-spacing:.12em;text-transform:uppercase}
 footer{background:var(--ink);color:#B9B9C6;font-size:13px;padding:32px 20px}footer p{max-width:780px;margin:0 auto 10px}footer a{color:#fff}
+.sa-risposta{margin:22px 0 0;max-width:46rem;font-size:clamp(18px,2vw,21px);line-height:1.45;color:#F7F7F4}
+.sa-risposta b{color:#FF6A52;font-weight:600}
+.sa-risposta + .sa-credito{margin-top:10px}
 .vic{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;gap:8px}
 @media(min-width:560px){.vic{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(min-width:900px){.vic{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}}
@@ -664,20 +667,51 @@ def domande(a, lang):
     D = anno_di(a.get("morte"))
     out = []
     T = (lambda x, y: x) if it else (lambda x, y: y)
-    if it:
-        out.append((f"Quando {nome} entra in pubblico dominio in Italia?",
-                    f"Il {data_l(lang, D + 71)}: {nome} è morto nel {D} e in Italia le opere diventano libere 70 anni dopo la morte, "
-                    f"dal 1° gennaio dell'anno successivo." + (" Per gli autori di paesi alleati nella Seconda guerra mondiale va verificato caso per caso." if avviso_alleato(a, lang) else "")))
-    else:
-        out.append((f"When does {nome} enter the public domain?",
-                    f"In the UK and the EU on {data_l(lang, D + 71)}: {nome} died in {D}, and the works become free 70 years after death, "
-                    f"from 1 January of the following year." + (f" In Spain on {data_l(lang, D + 81)}." if D < 1987 else "")))
+    # «Quando entra in pubblico dominio?» ora è la frase di risposta in cima alla scheda (frase_risposta, 21/11/2026)
     liberi = [t for t in a.get("_liberi_usa", [])]
     if liberi:
         el = ", ".join(liberi[:6])
         out.append((T(f"Quali opere di {nome} sono già libere negli USA?", f"Which works by {nome} are already free in the USA?"),
                     T(f"Tra le opere principali, con l'anno confermato da due fonti: {el}.", f"Among the main works, with the year confirmed by two sources: {el}.")))
     return out
+
+
+def frase_risposta(a, lang):
+    """La risposta in una frase, sotto il nome (mockup approvato il 21/11/2026): è il testo che Google mostra nei risultati."""
+    it = lang == "it"
+    nome = pulisci(a["nome"])
+    D = anno_di(a.get("morte"))
+    oggi = datetime.date.today()
+    fut = lambda anno: datetime.date(anno, 1, 1) > oggi
+    ue, es = D + 71, (D + 81 if D < 1987 else None)
+    alleato = bool(avviso_alleato(a, lang))
+    if it:
+        paesi = "Francia, Germania e Regno Unito" if alleato else "Italia, Francia, Germania e Regno Unito"
+        x = (f"Le opere di {esc(nome)} diventano di pubblico dominio in {paesi} il <b>{data_l(lang, ue)}</b>" if fut(ue)
+             else f"Le opere di {esc(nome)} sono di pubblico dominio in {paesi} dal <b>{data_l(lang, ue)}</b>")
+        if es:
+            if fut(es) == fut(ue):
+                x += f"; in Spagna {'il' if fut(es) else 'dal'} {data_l(lang, es)}"
+            else:
+                x += f"; in Spagna lo diventano il {data_l(lang, es)}"
+        x += "."
+        if alleato:
+            x += " In Italia va verificato: è un autore di un paese alleato nella Seconda guerra mondiale."
+        x += " Negli USA dipende dall’anno di uscita di ogni opera."
+    else:
+        paesi = "the UK, France and Germany" if alleato else "the UK, France, Germany and Italy"
+        x = (f"The works of {esc(nome)} enter the public domain in {paesi} on <b>{data_l(lang, ue)}</b>" if fut(ue)
+             else f"The works of {esc(nome)} have been in the public domain in {paesi} since <b>{data_l(lang, ue)}</b>")
+        if es:
+            if fut(es) == fut(ue):
+                x += f"; in Spain {'on' if fut(es) else 'since'} {data_l(lang, es)}"
+            else:
+                x += f"; in Spain they enter it on {data_l(lang, es)}"
+        x += "."
+        if alleato:
+            x += " In Italy it must be checked: the author is from an Allied country in the Second World War."
+        x += " In the USA it depends on each work’s publication year."
+    return f'<p class="sa-risposta">{x}</p>\n'
 
 
 def scheda_statica(a, lang, bd):
@@ -702,6 +736,7 @@ def scheda_statica(a, lang, bd):
     lunga = max((len(w) for w in nome.split()), default=0)   # la parola più lunga deve stare intera accanto al ritratto
     dim = ' style="font-size:clamp(36px,6vw,80px)"' if lunga >= 11 else (' style="font-size:clamp(44px,7.5vw,100px)"' if lunga >= 9 else "")
     o.append(f'<div><h1{dim}>{esc(nome)}</h1>\n<p class="sa-desc">{esc(" · ".join(desc))}</p></div>\n</header>\n')
+    o.append(frase_risposta(a, lang))
     if foto.get("url"):
         cap = " · ".join(x for x in (pulisci(foto.get("autore")), pulisci(foto.get("licenza"))) if x)
         pag = f' <a href="{esc(foto["pagina"])}" rel="noopener">Wikimedia Commons</a>' if foto.get("pagina") else ""

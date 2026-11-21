@@ -612,3 +612,8 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - 44883389633: finito bene. Pseudonimi letti per 254 autori. Fase «titolo originale e fonti forti»: 1268 opere provate, confermate 53 con Open Library (titolo originale) e 4 con Library of Congress (titolo originale). Totale confermate 1405.
 - Enciclopedie tolte: 0. Atteso: in quel giro l'elenco era stato svuotato (errore già corretto, elenco ripristinato con 356 voci). Le toglie il giro successivo.
 - 44885040526 (avviato dalla correzione): in corso alle 09:29 UTC, fermo sulla fase degli anni USA (~40 minuti). Ricontrollo alle 09:55 UTC.
+
+## 21/11/2026 — Frase di risposta in cima alle schede (SEO punto 3, mockup approvato)
+- Cosa: sotto il nome, una frase con la risposta («Le opere di X diventano di pubblico dominio in … il 1° gennaio AAAA; in Spagna …; negli USA dipende…»), scritta dai dati della scheda. Varianti controllate: autore già libero, Spagna più tardi dell'UE, autore di paese alleato (Italia «va verificato»), inglese.
+- Tolta la domanda «Quando X entra in pubblico dominio in Italia?» dalle «Risposte brevi», perché ripeteva la stessa frase. La sezione resta solo nelle 47 schede che hanno opere già libere negli USA. Restano il riquadro rosso e le date paese per paese (grafica e dettaglio).
+- Controllo: 408 schede IT e 395 EN generate, nessuna senza frase; viste a schermo Brecht (IT/EN) e Döblin (alleato).
