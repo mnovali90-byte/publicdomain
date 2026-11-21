@@ -10,6 +10,7 @@ import glob, json, os, sys
 from datetime import date
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "scripts"))
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from regole import morte_dal_registro  # noqa: E402
 
 CARTELLA = "data/storico"
@@ -83,6 +84,58 @@ def togli_consultazione():
     return tolte
 
 
+def riordina_ricerca():
+    """Riscrive i file della ricerca (data/storico/ricerca/) con la regola di storico/chiavi.py (21/11/2026):
+    1. ogni opera va sotto ogni parola che conta del titolo, non solo sotto la prima («Pinocchio» trova
+       «Le avventure di Pinocchio»);
+    2. i libri della Duke rimasti senza codice Wikidata hanno un autore fittizio («duke-a-virginia-woolf»):
+       se il nome è identico a quello di un solo autore vero dell'archivio, il libro passa a quell'autore
+       (prima Virginia Woolf e Marcel Proust comparivano due volte). Se i nomi uguali sono più d'uno, non si tocca.
+    Restituisce (opere, autori uniti, file)."""
+    from chiavi import chiavi_ricerca
+    opere, autori = {}, {}
+    for f in sorted(glob.glob(f"{CARTELLA}/ricerca/*.json")):
+        d = json.load(open(f, encoding="utf8"))
+        for r in d["opere"]:
+            opere.setdefault(r[0], r)
+        for r in d["autori"]:
+            autori.setdefault(r[0], r)
+    if len(opere) < 1000:
+        return len(opere), 0, 0
+    veri = {}
+    for q, r in autori.items():
+        if q.startswith("Q"):
+            veri.setdefault(r[1].strip().lower(), []).append(r)
+    unisci = {}
+    for q, r in autori.items():
+        if q.startswith("duke-a-"):
+            c = veri.get(r[1].strip().lower(), [])
+            if len(c) == 1:
+                unisci[q] = c[0]
+    for r in opere.values():
+        for i, a in enumerate(r[5]):
+            v = unisci.get(a[0])
+            if v:   # autore dell'opera: [qid, nome, morte, antico, morte_incerta, alleato]
+                r[5][i] = [v[0], v[1], v[2], v[4], v[5], v[6]]
+    for q, v in unisci.items():
+        v[3] += autori[q][3]
+        del autori[q]
+    lettere = {}
+    for r in opere.values():
+        for k in chiavi_ricerca(r[1]) | chiavi_ricerca(r[2] or ""):
+            lettere.setdefault(k, {"opere": [], "autori": []})["opere"].append(r)
+    for r in autori.values():
+        for k in chiavi_ricerca(r[1], autore=True):
+            lettere.setdefault(k, {"opere": [], "autori": []})["autori"].append(r)
+    for f in glob.glob(f"{CARTELLA}/ricerca/*.json"):
+        os.remove(f)
+    for k, d in lettere.items():
+        d["opere"].sort(key=lambda r: -(r[4] or 0))
+        d["autori"].sort(key=lambda r: -r[3])
+        json.dump(d, open(f"{CARTELLA}/ricerca/{k}.json", "w", encoding="utf8"), ensure_ascii=False, separators=(",", ":"))
+    return len(opere), len(unisci), len(lettere)
+
+
 def main():
     if not registro():
         print("registro non trovato: lo Storico resta com'è"); return
@@ -107,6 +160,8 @@ def main():
             json.dump(d, open(f, "w", encoding="utf8"), ensure_ascii=False, separators=(",", ":"))
             cambi += c
     print("Storico allineato al registro: voci cambiate", cambi)
+    n, u, k = riordina_ricerca()
+    print(f"ricerca riordinata: {n} opere, {u} autori della Duke uniti al loro autore vero, {k} file")
 
 
 if __name__ == "__main__":

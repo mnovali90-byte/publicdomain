@@ -39,33 +39,8 @@ BUDGET_VISITE = float(os.environ.get("BUDGET_MINUTI_VISITE", 35))       # tempo 
 RINFRESCA_GIORNI = 30   # un periodo già scaricato si riscarica solo dopo 30 giorni
 USCITA = "data/storico"
 SOGLIA = 1000   # sotto questo numero di opere qualcosa è andato storto: non si sovrascrive nulla
-ARTICOLI = {"the", "a", "an", "il", "lo", "la", "l", "le", "i", "gli", "un", "una", "uno", "der", "die", "das", "den",
-            "ein", "eine", "les", "el", "los", "las", "de", "het"}
-
-
-# ------------------------------------------------------------------ regola di ricerca
-def _norm(t):
-    t = unicodedata.normalize("NFKD", t or "").encode("ascii", "ignore").decode().lower()
-    return re.findall(r"[a-z0-9]+", t)
-
-
-def _lettera(parola):
-    """Le prime due lettere della parola (file più piccoli da scaricare): «promessi» -> «pr»."""
-    return parola[:2] if parola and parola[0].isalpha() else "_"
-
-
-def chiavi_ricerca(testo, autore=False):
-    """Lettere (file) sotto cui va cercato un titolo o un autore."""
-    p = _norm(testo)
-    if not p:
-        return set()
-    if autore:
-        return {_lettera(p[0]), _lettera(p[-1])}
-    ks = {_lettera(p[0])}
-    for w in p:
-        if w not in ARTICOLI:
-            ks.add(_lettera(w)); break
-    return ks
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from chiavi import ARTICOLI, chiavi_ricerca, norm as _norm, lettera as _lettera  # noqa: E402,F401  (regola di ricerca in storico/chiavi.py)
 
 
 # ------------------------------------------------------------------ Wikidata

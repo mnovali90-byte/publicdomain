@@ -541,6 +541,7 @@ const COLORI_TRAMA = [["#FF4326", "#0C0C10"], ["#E9E6DD", "#FF4326"], ["#0E3B2E"
 // lingue: solo colore piatto, nessun simbolo (regola di Marco: i simboli vanno solo su generi e copertine)
 const PIATTI = [["#FF4326", "#0C0C10"], ["#0E3B2E", "#F7F7F4"], ["#E9E6DD", "#0C0C10"], ["#2B3A8C", "#F7F7F4"], ["#F2B705", "#0C0C10"], ["#5B2A4E", "#F7F7F4"], ["#1C1C24", "#F7F7F4"], ["#7FB3A8", "#0C0C10"], ["#B5543A", "#F7F7F4"], ["#C9C3E6", "#0C0C10"]];
 const ARTICOLI = new Set(["the","a","an","il","lo","la","l","le","i","gli","un","una","uno","der","die","das","den","ein","eine","les","el","los","las","de","het"]);
+const VUOTE = new Set(["a", "am", "an", "and", "at", "by", "con", "da", "dal", "dalla", "das", "de", "degli", "dei", "del", "della", "delle", "dello", "dem", "den", "der", "des", "di", "die", "du", "e", "ed", "ein", "eine", "el", "en", "et", "for", "from", "gli", "het", "i", "il", "im", "in", "l", "la", "las", "le", "les", "lo", "los", "nel", "nella", "o", "of", "on", "op", "or", "per", "que", "su", "sul", "the", "to", "un", "una", "und", "uno", "van", "von", "with", "y", "zu"]);   // come VUOTE in storico/chiavi.py
 const UE = ["it", "fr", "de"];
 const NON_AUTORI = /^(various authors|group of authors|anonymous|anonimo|autori vari|unknown)/i;   // non sono persone: fuori dalla classifica
 
@@ -772,9 +773,11 @@ async function fileRicerca(k) {
   return D.file.get(k);
 }
 function chiavi(q) {
+  // stessa regola di storico/chiavi.py: le opere stanno sotto ogni parola del titolo che conta (21/11/2026),
+  // gli autori sotto la prima e l'ultima parola del nome. Basta un file per parola cercata.
   const p = parole(q); if (!p.length) return [];
   const ks = new Set([lettera(p[0]), lettera(p[p.length - 1])]);
-  const piena = p.find((w) => !ARTICOLI.has(w)); if (piena) ks.add(lettera(piena));
+  for (const w of p) if (!VUOTE.has(w) && (w.length >= 3 || /^\d+$/.test(w))) { ks.add(lettera(w)); break; }
   return [...ks];
 }
 function contiene(testo, tok) { const w = parole(testo); return tok.every((t) => w.some((x) => x.startsWith(t))); }
