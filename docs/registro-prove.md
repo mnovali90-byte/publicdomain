@@ -668,3 +668,7 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - Risultato: 82.189 opere, 575 file. Ogni opera è sotto ogni parola che conta del titolo. 16 autori «finti» della Duke uniti al loro autore vero (Virginia Woolf, Marcel Proust… non compaiono più due volte).
 - Prove nella pagina: «Pinocchio» ora trova «Le avventure di Pinocchio» (prima niente); «Virginia Woolf» un solo autore (prima due); «promessi sposi», «guerra e pace», «the waves», «anna karenina» trovati. Nessun errore.
 - Costo: i file della ricerca passano da 14 a 31 MB in tutto, ma ogni ricerca ne scarica solo 1–3 (per esempio «pi» da 54 a 136 KB). Il più grande resta «th» (1,1 MB, come prima); «dn» è 1,1 MB per le 10.879 voci del Dictionary of National Biography, da togliere con la prova DNB.
+
+## 21/11/2026 sera — Telefono: più respiro su tutte le pagine (solo in locale, non pubblicato)
+- Come: un blocco di regole per schermi fino a 860 px aggiunto in fondo a tutti i fogli di stile (scheda, anno, calendario, indice, Già pubblici, home): titoli grandi con interlinea .96 invece di .82 (le righe non si toccano più), voci del menu più piccole e distanziate, righe dell'indice più alte, ritratto che scorre più piccolo e più in basso, sezioni più distanziate. Barra fissa della home sul telefono: solo i valori («Italia · Interesse in Italia»), senza i due punti rimasti.
+- Prova: schermate a 390 px di home (apertura, indice, menu), scheda Brecht, 2027, calendario, Già pubblici, indice autori. Nessuna pagina più larga dello schermo.

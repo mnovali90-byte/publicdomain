@@ -197,6 +197,29 @@ h1 .w:nth-child(2)>span{animation-delay:70ms}
 .end a{color:inherit}
 .oc span i{display:block;font-style:normal;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .ini-s{display:flex;align-items:center;justify-content:center;width:100%;height:100%;font-family:var(--disp);font-weight:800;font-size:44px;color:#fff;background:var(--ink)}
+
+/* telefono: più respiro (Marco, 21/11/2026): titoli grandi con interlinea che non si tocca, menu spaziato, righe dell'indice più ariose */
+@media (max-width:860px){
+  h1,h1.h1{line-height:.96!important}
+  h1 .w,h1.h1 .w{padding-bottom:.06em}
+  .menu nav{gap:12px;margin-top:4vh}
+  .menu nav a{font-size:clamp(40px,11vw,60px);line-height:1;padding:.08em 0 .02em}
+  .big,.lb-big,.nums .n,.two .n,.mo h2 span,.scheda h2,.p-n{line-height:.95}
+  .row{padding:18px 0 16px!important;gap:6px!important}
+  .row .nm{line-height:.98}
+  .row .mt{margin-top:4px!important}
+  .pf{width:24vw!important;top:62%!important}
+  .cv b,.cvr b{line-height:.98}
+  .say{line-height:1.32}
+  .sec{padding-top:12vh}
+  .tabs{gap:8px 18px}.tabs button{line-height:1.08}
+  .opts{gap:8px 18px}.opts button{line-height:1.1}
+  .ix button b,.ix li b{line-height:1.02}
+  .names a{line-height:1.12}
+  .grp>h2,.grp>b{line-height:.95}
+  .au b{margin-top:12px}
+  .big7{gap:14px}
+}
 /* Indice degli autori (mockup rdr-indice-autori.html, approvato 21/11/2026); si aggiunge a stile_scheda.css */
 main.idx{padding:calc(var(--top) + 9vh) var(--pad) 12vh}
 main.idx h1{font-size:clamp(72px,11vw,180px);line-height:.92;margin:14px 0 0}
@@ -222,6 +245,29 @@ html:not(.js) .fil{display:none}
 @media (max-width:860px){
   main.idx h1{font-size:clamp(60px,18vw,100px)}
   .grp{grid-template-columns:1fr;gap:8px}.let{margin-left:0}.names a{font-size:24px}
+}
+
+/* telefono: più respiro (Marco, 21/11/2026): titoli grandi con interlinea che non si tocca, menu spaziato, righe dell'indice più ariose */
+@media (max-width:860px){
+  h1,h1.h1{line-height:.96!important}
+  h1 .w,h1.h1 .w{padding-bottom:.06em}
+  .menu nav{gap:12px;margin-top:4vh}
+  .menu nav a{font-size:clamp(40px,11vw,60px);line-height:1;padding:.08em 0 .02em}
+  .big,.lb-big,.nums .n,.two .n,.mo h2 span,.scheda h2,.p-n{line-height:.95}
+  .row{padding:18px 0 16px!important;gap:6px!important}
+  .row .nm{line-height:.98}
+  .row .mt{margin-top:4px!important}
+  .pf{width:24vw!important;top:62%!important}
+  .cv b,.cvr b{line-height:.98}
+  .say{line-height:1.32}
+  .sec{padding-top:12vh}
+  .tabs{gap:8px 18px}.tabs button{line-height:1.08}
+  .opts{gap:8px 18px}.opts button{line-height:1.1}
+  .ix button b,.ix li b{line-height:1.02}
+  .names a{line-height:1.12}
+  .grp>h2,.grp>b{line-height:.95}
+  .au b{margin-top:12px}
+  .big7{gap:14px}
 }
 </style>
 <script>document.documentElement.classList.add('js')</script>
