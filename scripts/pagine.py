@@ -842,6 +842,417 @@ def scheda_statica(a, lang, bd):
     return "".join(o)
 
 
+# ===================================================================================================
+# SCHEDA AUTORE, grafica «Indice» (mockup approvato da Marco il 21/11/2026: rdr-scheda-brecht-indice.html)
+# Tutto il testo sta nella pagina (non lo costruisce il browser), così Google lo legge come prima.
+# ===================================================================================================
+CSS_SCHEDA = (Path(__file__).resolve().parent / "stile_scheda.css").read_text(encoding="utf-8")
+
+
+def _menu_link(lang):
+    it = lang == "it"
+    a = ANNO_PROSSIMO
+    if it:
+        v = [("/", "Il radar"), (f"/pubblico-dominio-{a}/", f"Pubblico dominio {a}"), (f"/pubblico-dominio-{a + 1}/", f"Pubblico dominio {a + 1}")]
+        if CALENDARIO_ON:
+            v.append((f"/calendario/{a}/", "Calendario"))
+        v += [("/gia-pubblici/", "Già pubblici"), ("/autore/", "Indice degli autori")]
+    else:
+        v = [("/en/", "The radar"), (f"/en/public-domain-{a}/", f"Public domain {a}"), (f"/en/public-domain-{a + 1}/", f"Public domain {a + 1}")]
+        if CALENDARIO_ON:
+            v.append((f"/en/calendar/{a}/", "Calendar"))
+        v += [("/en/already-public/", "Already public"), ("/en/author/", "Author index")]
+    return v
+
+
+def testa_scheda(lang, titolo, descr, url, alterne_, jsonld, altra, cnt):
+    it = lang == "it"
+    menu = "".join(f'<a href="{h}"><span>{esc(t)}</span></a>' for h, t in _menu_link(lang))
+    return f"""<!doctype html>
+<html lang="{lang}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<title>{titolo}</title>
+<meta name="description" content="{descr}">
+<link rel="canonical" href="{url}">
+{alterne_}<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Public Domain Radar">
+<meta property="og:url" content="{url}">
+<meta property="og:title" content="{titolo}">
+<meta property="og:description" content="{descr}">
+<meta name="twitter:card" content="summary">
+{jsonld}
+<link href="/assets/fonts/fonts.css" rel="stylesheet">
+<style>{CSS_SCHEDA}</style>
+<script>document.documentElement.classList.add('js')</script>
+<!-- contatore visite senza cookie (GoatCounter) -->
+<script data-goatcounter="https://pdr.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+<header class="top">
+  <a href="{"/" if it else "/en/"}" class="pdr" style="--w:56px" aria-label="Public Domain Radar">@@MARCHIO_S@@</a>
+  <div class="cnt">{esc(cnt)}</div>
+  <div class="r">{altra}<button id="mbtn" type="button">MENU</button></div>
+</header>
+<div class="menu" id="menu"><button class="x" id="mx" type="button">{"CHIUDI" if it else "CLOSE"}</button><nav aria-label="{"Sezioni del sito" if it else "Site sections"}">{menu}</nav></div>
+<main>
+"""
+
+
+def piede_scheda(lang):
+    it = lang == "it"
+    T = (lambda x, y: x) if it else (lambda x, y: y)
+    lk = " · ".join(f'<a href="{h}">{esc(t)}</a>' for h, t in _menu_link(lang))
+    return f"""</main>
+<footer class="end">
+  <div><p class="m" style="color:var(--redt)">{T("Fonti", "Sources")}</p><p>{T("Wikidata (CC0), Wikipedia (testi CC BY-SA, con link alla pagina d'origine), Wikimedia Commons (ritratti, ciascuno con la sua licenza), cataloghi nazionali (SBN, BnF, BNE, British Library e Library of Congress). Dati aperti, aggiornati in automatico ogni tre mesi e a dicembre; possono contenere errori.", "Wikidata (CC0), Wikipedia (text CC BY-SA, linked to the original page), Wikimedia Commons (portraits, each with its own licence), national catalogues (SBN, BnF, BNE, British Library and Library of Congress). Open data, updated automatically every three months and in December; it may contain errors.")}</p>
+  <p class="lk">{lk} · <a href="https://github.com/mnovali90-byte/publicdomain">{T("Codice e dati su GitHub", "Code and data on GitHub")}</a></p></div>
+  <div><p class="m" style="color:var(--redt)">{T("Prima di pubblicare", "Before publishing")}</p><p>{T('Le date sono un calcolo indicativo dalle norme elencate nel <a href="/#regole-paesi">riquadro delle regole</a>. Non è consulenza legale: prima di pubblicare va controllato nella legge del paese. Riguardano le opere originali: traduzioni, illustrazioni ed edizioni recenti hanno diritti propri. Chi usa questi dati lo fa sotto la propria responsabilità; per un’edizione commerciale chiedi un parere a un esperto di diritto d’autore.', 'The dates are an indicative calculation from the rules listed in the <a href="/en/#regole-paesi">rules box</a>. Not legal advice: check the law of the country before publishing. They refer to the original works: translations, illustrations and recent editions have their own rights. Anyone using this data does so at their own risk; for a commercial edition, ask a copyright expert for advice.')}</p>
+  <p>{T("Un progetto di Marco Novali", "A project by Marco Novali")} · <a href="https://www.linkedin.com/in/marconovali" rel="me noopener" target="_blank">LinkedIn</a> · <a href="https://github.com/mnovali90-byte/publicdomain/issues">{T("Hai trovato un errore?", "Found an error?")}</a></p></div>
+</footer>
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+$('#mbtn').onclick=()=>$('#menu').classList.add('on'); $('#mx').onclick=()=>$('#menu').classList.remove('on');
+const nm=$('#name'); addEventListener('scroll',()=>document.body.classList.toggle('past',nm.getBoundingClientRect().bottom<0),{{passive:true}});
+const gg=$('#days'); if(gg){{ const t=new Date(+gg.dataset.y,0,1)-new Date(); if(t>0) gg.textContent=Math.ceil(t/864e5).toLocaleString('{"it-IT" if it else "en-GB"}'); }}
+const cat=$('#cat'); if(cat) new IntersectionObserver(([e],o)=>{{ if(e.isIntersecting){{ cat.classList.add('on'); o.disconnect(); }} }},{{threshold:.4}}).observe(cat);
+$$('.why button').forEach(b=>b.onclick=()=>{{ const w=b.parentElement; w.classList.toggle('on'); b.querySelector('span').textContent=w.classList.contains('on')?'[–]':'[+]'; }});
+$$('.acc button').forEach(b=>b.onclick=()=>{{ const a=b.parentElement; a.classList.toggle('on'); b.querySelector('span').textContent=a.classList.contains('on')?'[–]':'[+]'; }});
+$$('#op sup').forEach(s=>s.onclick=()=>{{ const n=$('#nt'+s.dataset.n); if(!n) return; n.scrollIntoView({{behavior:'smooth',block:'center'}}); n.classList.add('hl'); setTimeout(()=>n.classList.remove('hl'),1600); }});
+</script>
+</body>
+</html>
+"""
+
+
+def _paesi_riga(a, lang):
+    """Righe «paese per paese»: (paese, anno o None, regola, classe)."""
+    it = lang == "it"
+    T = (lambda x, y: x) if it else (lambda x, y: y)
+    D = anno_di(a.get("morte"))
+    ue = T("70 anni dalla morte", "70 years after death")
+    fr = ue + (T("; +30 anni se «morto per la Francia»", "; +30 years if «died for France»") if 1939 <= D <= 1945 else "")
+    es_y = D + 81 if D < 1987 else D + 71
+    es_r = T("80 anni: è morto prima del 1987", "80 years: died before 1987") if D < 1987 else ue
+    it_r = ue + (T("; paese alleato: da verificare", "; Allied country: check") if avviso_alleato(a, lang) else "")
+    r = [(T("Italia", "Italy"), D + 71, it_r), (T("Francia", "France"), D + 71, fr), (T("Germania", "Germany"), D + 71, ue),
+         (T("Regno Unito", "United Kingdom"), D + 71, ue + T("; inediti fino al 2039", "; unpublished works until 2039")),
+         (T("Spagna", "Spain"), es_y, es_r), ("USA", None, T("95 anni dall'uscita di ogni opera", "95 years from each work's publication"))]
+    if not it:
+        r = [r[3], r[5]] + [r[i] for i in (0, 1, 2, 4)]
+    return r
+
+
+def _data_breve(lang, anno):
+    return data_l(lang, anno).replace("1° gennaio", "1° gen").replace("1 January", "1 Jan")
+
+
+def blocco_vicini_n(a, lang):
+    """«Altri scrittori liberi dal…» con le foto (grafica nuova); stessi scrittori e stesso ordine di blocco_vicini."""
+    q = a["wikidata"]
+    it = lang == "it"
+    T = (lambda x, y: x) if it else (lambda x, y: y)
+    cta = f'<a href="{"/" if it else "/en/"}#/autore/{esc(q)}">{T("Apri nel radar", "Open in the radar")} →</a>'
+    if q not in MEMBRI:
+        return f'<section class="blk"><span class="m"><b>{T("Nel radar", "In the radar")}</b>{T("Tutti gli autori", "All authors")}</span><div><div class="lnk">{cta}</div></div></section>\n'
+    tipo, anno = MEMBRI[q]
+    tutti = [x for x in POOL.get((tipo, anno), []) if it or x in EN_OK]
+    lista = [x for x in tutti if x != q]
+    pa = paesi_moderni(a.get("paesi"))
+    c = pa[0] if pa else None
+    stessi = [x for x in lista if c and c in paesi_moderni(AUT[x].get("paesi"))[:2]]
+    scelti = (stessi + [x for x in lista if x not in stessi])[:6]
+    morti = anno - (71 if tipo == "ue" else 81)
+    nome = pulisci(a["nome"])
+    ordine = (T(f"Prima quelli {del_paese(c)}, poi i più letti su Wikipedia.", "Same country first, then the most read on Wikipedia.") if stessi
+              else T("Prima i più letti su Wikipedia.", "Most read on Wikipedia first."))
+    if tipo == "ue":
+        tit = T(f"Altri scrittori liberi dal 1° gennaio {anno}", f"Other writers free from 1 January {anno}")
+        dove = T("in Italia, Francia, Germania e Regno Unito", "in Italy, France, Germany and the UK")
+    else:
+        tit = T(f"Altri scrittori liberi in Spagna dal 1° gennaio {anno}", f"Other writers free in Spain from 1 January {anno}")
+        dove = T("in Spagna", "in Spain")
+    lede = T(f"Sono morti nel {morti} come {nome}: {dove} i loro testi originali si possono pubblicare dallo stesso giorno. {ordine}",
+             f"They died in {morti}, like {nome}: {dove} their original texts can be published from the same day. {ordine}")
+    carte = []
+    for x in scelti:
+        X = AUT[x]
+        nx = pulisci(X["nome"])
+        href = f"/autore/{SLUG[x]}/" if it else f"/en/author/{SLUG[x]}/"
+        foto = X.get("foto") or {}
+        img = (f'<img src="{esc(re.sub(r"width=\d+", "width=400", foto["url"]))}" alt="" loading="lazy">' if foto.get("url")
+               else f'<span class="ini-s" aria-hidden="true">{esc(iniziali_nome(nx))}</span>')
+        righe = [f"{anno_di(X.get('nascita')) or '?'} – {anno_di(X.get('morte'))}"]
+        if it:
+            pp = paesi_moderni(X.get("paesi"))
+            if pp:
+                righe.append(pp[0])
+            if X.get("professioni"):
+                righe.append(X["professioni"][0])
+        else:
+            d = re.sub(r"\s*\([^)]*\)\s*$", "", pulisci(X.get("descrizione")))
+            if d:
+                righe.append(d)
+        carte.append(f'<a class="oc" href="{href}"><div class="p">{img}</div><b>{esc(nx)}</b><span>' + "".join(f"<i>{esc(r)}</i>" for r in righe) + "</span></a>")
+    tutti_l = ""
+    if tipo == "ue":
+        dest = f"/pubblico-dominio-{anno}/#autori" if it else f"/en/public-domain-{anno}/#autori"
+        tutti_l = f'<a href="{dest}">{T(f"Tutti i {len(tutti)} scrittori del {anno} con una scheda", f"All {len(tutti)} writers of {anno} with a page")} →</a>'
+    corpo = (f'<p class="lede">{esc(lede)}</p>\n<div class="others">{"".join(carte)}</div>\n' if carte else "")
+    return (f'<section class="blk"><span class="m"><b>{esc(tit)}</b>{T("Stesso anno, stessa data", "Same year, same date")}</span>\n<div>{corpo}'
+            f'<div class="lnk">{tutti_l}{cta}</div></div></section>\n')
+
+
+def scheda_nuova(a, lang, bd):
+    """Corpo della pagina autore con la grafica nuova. Stessi dati e stessi testi della scheda di prima, in un altro ordine."""
+    it = lang == "it"
+    T = (lambda x, y: x) if it else (lambda x, y: y)
+    nome = pulisci(a["nome"])
+    nasc, D = anno_di(a.get("nascita")), anno_di(a.get("morte"))
+    oggi = datetime.date.today()
+    o = []
+    # percorso in alto
+    if a["wikidata"] in MEMBRI and MEMBRI[a["wikidata"]][0] == "ue":
+        an = MEMBRI[a["wikidata"]][1]
+        su = (f"/pubblico-dominio-{an}/#autori" if it else f"/en/public-domain-{an}/#autori", T(f"← Morti nel {D}", f"← Died in {D}"))
+    else:
+        su = ("/autore/" if it else "/en/author/", T("← Indice degli autori", "← Author index"))
+    prof = ", ".join((a.get("professioni") or [])[:2]) if it else ""
+    o.append(f'<div class="crumb"><a href="{su[0]}">{esc(su[1])}</a><span class="m g">{T("Scheda autore", "Author page")}{(" · " + esc(prof)) if prof else ""}</span></div>\n')
+    # nome, dati, frase di risposta, ritratto
+    parole = nome.split()
+    lunga = max((len(w) for w in parole), default=7)
+    h1 = "<br>".join(f'<span class="w"><span>{esc(w)}</span></span>' for w in (parole if len(parole) <= 3 else [" ".join(parole[:-1]), parole[-1]]))
+    meta = [f"{nasc if nasc else '?'} – {D}"]
+    if it and a.get("professioni"):
+        meta.append(", ".join(a["professioni"][:2]))
+    if it and a.get("paesi"):
+        meta.append(", ".join(paesi_moderni(a["paesi"])[:2]))
+    if not it:
+        dd = re.sub(r"\s*\([^)]*\)\s*$", "", pulisci(a.get("descrizione")))
+        if dd:
+            meta.append(dd)
+    foto = a.get("foto") or {}
+    if foto.get("url"):
+        ph = f'<div class="ph"><img src="{esc(re.sub(r"width=\d+", "width=800", foto["url"]))}" alt="{T("Ritratto di", "Portrait of")} {esc(nome)}"></div>'
+        cap = " · ".join(x for x in (pulisci(foto.get("autore")), pulisci(foto.get("licenza"))) if x)
+        pag = f' · <a href="{esc(foto["pagina"])}" rel="noopener">Wikimedia Commons</a>' if foto.get("pagina") else ""
+        ph += f'<p class="cap">{T("Foto", "Photo")}: {esc(cap)}{pag}</p>'
+    else:
+        ph = f'<div class="ph ini" aria-hidden="true">{esc(iniziali_nome(nome))}</div>'
+    risp = frase_risposta(a, lang).replace('<p class="sa-risposta">', '<p class="ans">')
+    o.append(f'<div class="hd"><div><h1 id="name" style="--k:{lunga}">{h1}</h1>\n<p class="m meta">{esc(" · ".join(meta))}</p>\n{risp}</div>\n<div class="pc">{ph}</div></div>\n')
+
+    # quando è libero
+    anno_ue = D + 71
+    giorni = (datetime.date(anno_ue, 1, 1) - oggi).days
+    dove = T("in Italia", "in the UK and the EU")
+    if avviso_alleato(a, lang):
+        dove = T("in Francia, Germania e Regno Unito", "in the UK, France and Germany")
+    # in grande il conto alla rovescia (Marco, 21/11/2026): la data sta solo nella tabella dei paesi.
+    # Se in Europa è già libero ma in Spagna no, si conta verso la Spagna; se è libero dappertutto, «già libero».
+    anno_es = D + 81 if D < 1987 else D + 71
+    giorni_es = (datetime.date(anno_es, 1, 1) - oggi).days
+    if giorni <= 0 and giorni_es > 0:
+        dove, giorni, anno_ue_c = T("in Spagna", "in Spain"), giorni_es, anno_es
+    else:
+        anno_ue_c = anno_ue
+    if giorni > 0:
+        grande = (f'<span class="m lab-big">{T("Libero", "Free")} {dove} {T("tra", "in")}</span>\n'
+                  f'<p class="big"><span id="days" data-y="{anno_ue_c}">{migliaia(giorni, lang)}</span> {T("giorni", "days") if giorni != 1 else T("giorno", "day")}</p>\n')
+    else:
+        grande = (f'<span class="m lab-big">{T("In Europa e nel Regno Unito", "In Europe and the UK")}</span>\n'
+                  f'<p class="big">{T("già libero", "already free")}</p>\n')
+    v = a.get("verifica") or {}
+    if v.get("esito") == "verificato":
+        nomi = [NOMI_FONTE[lang][k] for k in v.get("fonti", {}) if k in NOMI_FONTE[lang]]
+        conf = T(f"Anno di morte <b>{D}</b>, confermato da <b>{len(nomi)} fonti</b>: {esc(', '.join(nomi))}.",
+                 f"Year of death <b>{D}</b>, confirmed by <b>{len(nomi)} sources</b>: {esc(', '.join(nomi))}.")
+        conf = f'<p class="conf">{conf}</p>\n'
+    else:
+        conf = "".join(x.replace('<p class="sotto">', '<p class="conf">').replace("<p><strong>", '<p class="conf warn"><strong>') for x in blocco_verifica(a, lang))
+        conf = f'<p class="conf">{T("Anno di morte", "Year of death")} <b>{D}</b>.</p>\n' + conf
+    al = avviso_alleato(a, lang)
+    al = f'<div class="all">{al}</div>\n' if al else ""
+    corpo_usa = opere_usa_n(a, lang)
+    liberi = a.get("_liberi_usa", [])
+    righe = []
+    primo = True
+    for paese, anno, regola in _paesi_riga(a, lang):
+        if paese == "USA":
+            if liberi:
+                el = ", ".join(f"<a href=\"#works\">{esc(t)}</a>" for t in liberi[:4])
+                n = len(liberi)
+                gia = T(f"Tra le opere principali di {esc(nome)} {'una è già libera' if n == 1 else f'{n} sono già libere'}: {el}; le altre hanno ognuna la sua data, nella tabella <a href=\"#works\">qui sotto ↓</a>",
+                        f"Among the main works of {esc(nome)}, {'one is already free' if n == 1 else f'{n} are already free'}: {el}; the others each have their own date, in the table <a href=\"#works\">below ↓</a>")
+            elif corpo_usa:
+                gia = T('Ogni opera principale ha la sua data, nella tabella <a href="#works">qui sotto ↓</a>', 'Each main work has its own date, in the table <a href="#works">below ↓</a>')
+            else:
+                gia = T("Per questo autore non abbiamo ancora le date di uscita delle opere.", "We do not have the publication dates of this author's works yet.")
+            spieg = T(f"Negli USA non conta la morte dell'autore: ogni libro diventa libero per conto suo, 95 anni dopo la prima uscita. {gia}.",
+                      f"In the USA the author's death does not count: each book becomes free on its own, 95 years after first publication. {gia}.")
+            righe.append(f'<li class="usa"><span class="c">USA<small>{esc(regola)}</small></span><span class="v">{T("opera per opera", "work by work")}</span><p class="usa-n">{spieg}</p></li>')
+            continue
+        libero = anno <= oggi.year
+        val = (T(f"libero dal {anno}", f"free since {anno}") if libero else _data_breve(lang, anno))
+        cl = "cur" if primo else ("free" if libero else ("later" if anno > anno_ue else ""))
+        primo = False
+        righe.append(f'<li class="{cl}"><span class="c">{esc(paese)}<small>{esc(regola)}</small></span><span class="v">{esc(val)}</span></li>')
+    o.append(f'<section class="blk" id="dates"><span class="m"><b>{T("Quando è libero", "When it is free")}</b>{T("Paese per paese", "Country by country")}</span>\n<div>'
+             f'{grande}{conf}{al}<ul class="ps">{"".join(righe)}</ul>\n<p class="legal">{T("Calcolo indicativo, non è consulenza legale.", "Indicative calculation, not legal advice.")}</p>\n'
+             f'<div class="lnk"><a href="{"/" if it else "/en/"}#regole-paesi">{T("Le regole, paese per paese", "The rules, country by country")}</a></div></div></section>\n')
+
+    # chi era
+    if bd:
+        ln = f' · <a href="{esc(bd["url"])}" rel="noopener">{T("Continua su Wikipedia", "Continue on Wikipedia")}</a>' if bd.get("url") else ""
+        o.append(f'<section class="blk"><span class="m"><b>{T("Chi era", "Who they were")}</b>{T("Da Wikipedia", "From Wikipedia")}</span>\n'
+                 f'<div><p class="bio">{esc(bd["testo"])}</p>\n<p class="src">{T("Testo da Wikipedia, licenza CC BY-SA", "Text from Wikipedia, licence CC BY-SA")}{ln}</p></div></section>\n')
+    # opere principali
+    if corpo_usa:
+        n_op = a.get("n_opere") or 0
+        sotto = (T(f"Le più note delle {migliaia(n_op)} su Wikidata", f"The best known of {migliaia(n_op, lang)} on Wikidata") if n_op > 10
+                 else T("Su Wikidata", "On Wikidata"))
+        o.append(f'<section class="blk" id="works"><span class="m"><b>{T("Opere principali", "Main works")}</b>{sotto}</span>\n<div>{corpo_usa}</div></section>\n')
+    # quanto è già pubblicato
+    cat = cataloghi_n(a, lang)
+    if cat:
+        o.append(f'<section class="blk"><span class="m"><b>{T("Quanto è già pubblicato", "How much is already published")}</b>{T("Nei cataloghi nazionali", "In national catalogues")}</span>\n<div>{cat}</div></section>\n')
+    # quanto è conosciuto
+    due = []
+    for m, campo, etich in ((("it", "visite_it", T("In Italia", "")),) if it else (("en", "visite_en", "In the English-speaking world"),)) + (("int", "pagine_wikipedia", T("Nel mondo", "Worldwide")),):
+        if a.get("indice_" + m) is None:
+            continue
+        val = a.get(campo) or 0
+        if m == "int":
+            num, sp = str(val), T("lingue con una pagina Wikipedia", "languages with a Wikipedia page")
+        elif val:
+            num, sp = migliaia(val, lang), T("visite su Wikipedia in 12 mesi", "Wikipedia views in 12 months")
+        else:
+            num, sp = "—", T("nessuna pagina in italiano", "no page in English")
+        rg = RANGHI.get((a["wikidata"], m))
+        rk = f'<span class="rk">{T(f"{rg[0]}° su {rg[1]}", f"#{rg[0]} of {rg[1]}")}</span>' if rg else ""
+        due.append(f'<div><span class="m g">{esc(etich)}</span><div class="n">{num}</div><p>{esc(sp)}</p>{rk}</div>')
+    if due:
+        o.append(f'<section class="blk"><span class="m"><b>{T("Quanto è conosciuto", "How well known")}</b>{T("Visite a Wikipedia, non vendite", "Wikipedia views, not sales")}</span>\n<div><div class="two">{"".join(due)}</div><p class="src">{T("Misura la curiosità per l’autore (visite alle pagine Wikipedia), non le vendite dei suoi libri.", "Measures curiosity about the author (Wikipedia page views), not sales of their books.")}</p></div></section>\n')
+    # risposte brevi
+    faq = domande(a, lang)
+    ill = [x for x in (a.get("illustratori") or []) if x.get("nome")]
+    r_ill = T("No, non automaticamente. Le date di questa pagina valgono per i testi originali. Illustrazioni e traduzioni hanno diritti propri, che durano 70 anni dalla morte dell'illustratore o del traduttore: un libro può avere il testo libero e i disegni ancora protetti.",
+              "Not automatically. The dates on this page apply to the original texts. Illustrations and translations have their own rights, lasting 70 years after the death of the illustrator or translator: a book can have a free text and still-protected drawings.")
+    faq.append((T("Traduzioni e illustrazioni sono libere anche loro?", "Are translations and illustrations free too?"), r_ill))
+    li_ill = ""
+    if ill:
+        rr = []
+        for x in ill:
+            if x.get("morte"):
+                quando = T(f"libere nell'UE dal {data_l(lang, x['morte'] + 71)}", f"free in the EU from {data_l(lang, x['morte'] + 71)}")
+                rr.append(T(f"{x['opera']}: illustrazioni di {x['nome']} (morto nel {x['morte']}), {quando}", f"{x['opera']}: illustrations by {x['nome']} (died {x['morte']}), {quando}"))
+            else:
+                rr.append(T(f"{x['opera']}: illustrazioni di {x['nome']}, data di morte non nota", f"{x['opera']}: illustrations by {x['nome']}, year of death unknown"))
+        li_ill = "<ul>" + "".join(f"<li>{esc(r)}</li>" for r in rr) + "</ul>"
+    acc = []
+    for i, (q, r_) in enumerate(faq):
+        extra = li_ill if i == len(faq) - 1 else ""
+        acc.append(f'<div class="acc"><button type="button">{esc(q)}<span>[+]</span></button><div class="bd"><p>{esc(r_)}</p>{extra}</div></div>')
+    o.append(f'<section class="blk"><span class="m"><b>{T("Le risposte brevi", "Short answers")}</b>{T("Domande", "Questions")}</span>\n<div>{"".join(acc)}</div></section>\n')
+    fq = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+        {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": r_}} for q, r_ in faq]}
+    o.append('<script type="application/ld+json">' + json.dumps(fq, ensure_ascii=False).replace("</", "<\\/") + "</script>\n")
+    # altri scrittori
+    o.append(blocco_vicini_n(a, lang))
+    return "".join(o)
+
+
+def opere_usa_n(a, lang):
+    """Tabella delle opere principali (titolo, anno, stato negli USA) con le note dei coautori come rimandi numerati."""
+    it = lang == "it"
+    T = (lambda x, y: x) if it else (lambda x, y: y)
+    note = note_coautori(a, lang)
+    righe, liberi, usate = [], [], []
+    for o in a.get("opere", [])[:10]:
+        t = o.get("titolo") if it else o.get("titolo_en") or o.get("titolo")
+        if not t:
+            continue
+        st, y = stato_usa(a, o)
+        if st == "libero":
+            et, cl = T(f"libero dal {y}", f"free since {y}"), "free"
+            liberi.append(t)
+        elif st == "dal":
+            et, cl = T(f"dal {y}", f"from {y}"), ""
+        elif st == "verifica":
+            et, cl = T("da verificare", "to be checked"), "ver"
+        else:
+            et, cl = T("anno non noto", "year unknown"), "ver"
+        sup = ""
+        for n in note:
+            if n.startswith(f"«{t}»") and n not in usate:
+                usate.append(n)
+                sup = f'<sup data-n="{len(usate)}">{len(usate)}</sup>'
+                break
+        anno = o.get("anno") if isinstance(o.get("anno"), int) else ""
+        righe.append(f'<li><span class="t">{esc(t)}{sup}</span><span class="y">{anno}</span><span class="u {cl}">{esc(et)}</span></li>')
+    a["_liberi_usa"] = liberi
+    if not righe:
+        return ""
+    for n in note:
+        if n not in usate:
+            usate.append(n)
+    notes = "".join(f'<li id="nt{i}"><b>{i}</b>{esc(n)}</li>' for i, n in enumerate(usate, 1))
+    nota = T("Negli USA conta l'anno di uscita di ogni opera (95 anni). «Libero» solo se l'anno di Wikidata è confermato da una seconda fonte (Duke, Open Library, Library of Congress); altrimenti «da verificare». Le date future usano l'anno di Wikidata.",
+             "In the USA what counts is each work's year of publication (95 years). «Free» only when the Wikidata year is confirmed by a second source (Duke, Open Library, Library of Congress); otherwise «to be checked». Future dates use the Wikidata year.")
+    return (f'<div class="oph m"><span>{T("Titolo", "Title")}</span><span>{T("Anno", "Year")}</span><span>{T("Negli USA", "In the USA")}</span></div>\n'
+            f'<ul class="op" id="op">{"".join(righe)}</ul>\n' + (f'<ol class="notes">{notes}</ol>\n' if notes else "") + f'<p class="opn">{esc(nota)}</p>\n')
+
+
+def cataloghi_n(a, lang):
+    """Registrazioni nei cataloghi nazionali come barre (in tutto e dal 2000), con la spiegazione nel [+]."""
+    it = lang == "it"
+    T = (lambda x, y: x) if it else (lambda x, y: y)
+    tr = a.get("traduzioni") or {}
+    nomi = {"sbn_it": (T("Italia", "Italy"), "SBN"), "bnf_fr": (T("Francia", "France"), "BnF"), "bne_es": (T("Spagna", "Spain"), "BNE"),
+            "bl_en": (T("Regno Unito", "United Kingdom"), "British Library"), "loc_en": ("USA", "Library of Congress")}
+    mio = "sbn_it" if it else "bl_en"
+    righe, sospesi = [], []
+    for k in ("bnf_fr", "sbn_it", "bl_en", "loc_en", "bne_es"):
+        g = tr.get(k)
+        if not g or not g.get("trovato"):
+            continue
+        if g.get("sospeso_manuale") or g.get("stato") == "da_verificare" or problemi_conteggio(g, datetime.date.today().year):
+            sospesi.append(nomi[k][0])
+            continue
+        righe.append((k, g.get("edizioni", 0), g.get("dal_2000", 0)))
+    if not righe and not sospesi:
+        return ""
+    righe.sort(key=lambda x: -x[1])
+    mx = max([x[1] for x in righe] or [1]) or 1
+    html_r = "".join(
+        f'<div class="cr{" cur" if k == mio else ""}"><span class="l">{esc(nomi[k][0])}<small>{esc(nomi[k][1])}</small></span>'
+        f'<span class="b"><i class="n" style="width:{e / mx * 100:.1f}%"></i><i style="width:{d / mx * 100:.1f}%"></i></span>'
+        f'<span class="v">{migliaia(e, lang)} <span>· {migliaia(d, lang)} {T("dal 2000", "since 2000")}</span></span></div>' for k, e, d in righe)
+    leg = (f'<div class="cleg"><span><i style="background:var(--ink)"></i>{T("registrazioni in tutto", "records in total")}</span>'
+           f'<span><i style="background:var(--box)"></i>{T("di cui dal 2000", "of which since 2000")}</span></div>') if righe else ""
+    g = tr.get(mio) or {}
+    ult = (T(f" Nel catalogo {nomi[mio][1]}, la più recente con anno certo è del {g['ultimo']}.", f" In the {nomi[mio][1]} catalogue, the latest with a certain year is from {g['ultimo']}.")
+           if g.get("ultimo") and mio in [x[0] for x in righe] else "")
+    met = ""
+    if it and g.get("metodo") == "nome":
+        met = " Autore riconosciuto nel catalogo SBN solo dal nome: il conteggio può essere impreciso."
+    elif it and g.get("metodo") == "nome_con_prova":
+        met = " Autore riconosciuto nel catalogo SBN dal nome con una prova in più (anni di nascita e morte, un titolo o un cognome unico nel catalogo), non da un codice."
+    cosa = T("La scheda con cui la biblioteca descrive una pubblicazione. Di solito ce n'è una per ogni edizione o ristampa, quindi un libro uscito cinque volte conta cinque. Non sono copie vendute né titoli diversi. Comprendono tutte le pubblicazioni collegate alla persona, anche quelle in cui ha collaborato (traduzioni, curatele, prefazioni), non solo i libri scritti da lei: è una misura di quanto è presente nel catalogo.",
+             "The entry a library uses to describe a publication. There is usually one for each edition or reprint, so a book published five times counts five. Records are not copies sold, nor different titles. They include every publication linked to the person, including those they contributed to (translations, editing, prefaces), not only books they wrote: it measures how present they are in the catalogue.")
+    cosa = T("Dicono quanto un autore è già pubblicato in ogni paese. Che cos’è una registrazione: ", "They show how much an author is already published in each country. What a record is: ") + cosa
+    if it and "sbn_it" in [x[0] for x in righe]:
+        cosa += " Nel catalogo SBN: registrazioni bibliografiche in italiano collegate all'autore, comprese ristampe e antologie."
+    if not it and "bl_en" in [x[0] for x in righe]:
+        cosa += " In the British Library catalogue the author is searched by surname and years of birth and death; a record counts only if surname and years belong to the same person. Some records catalogued differently may be missed."
+    sosp = (f'<p class="cat-n">{esc(T("Dati in verifica per " + ", ".join(sospesi) + ": i numeri del catalogo non sono ancora sicuri, quindi non li mostriamo.", "Data under review for " + ", ".join(sospesi) + ": the catalogue figures are not yet reliable, so we do not show them."))}</p>' if sospesi else "")
+    return (f'<div class="cat" id="cat">{html_r}</div>{leg}{sosp}'
+            f'<div class="why"><button type="button">{T("Che cos’è una registrazione", "What a record is")} <span>[+]</span></button><p>{esc(cosa + ult + met)}</p></div>\n')
+
+
 def pagina_autore(a, slug, lang, ha_altra):
     nome = pulisci(a["nome"])
     nasc, mor = anno_di(a.get("nascita")), anno_di(a.get("morte"))
@@ -871,14 +1282,13 @@ def pagina_autore(a, slug, lang, ha_altra):
     jsonld = "".join('<script type="application/ld+json">' + json.dumps(j, ensure_ascii=False).replace("</", "<\\/") + "</script>\n" for j in (persona, briciole))
     altra = ""
     if ha_altra:
-        altra = (f'<a href="{url_pagina("en" if it else "it", slug)}" hreflang="{"en" if it else "it"}">{"English" if it else "Italiano"}</a>')
-    out = [TESTA.format(lang=lang, titolo=esc(titolo), descr=esc(descr), url=url, alterne=alterne(lang, slug) if ha_altra else "",
-                        og_tipo="profile", jsonld=jsonld, css=CSS, home="/" if it else "/en/", altra_lingua=altra), "<main>\n"]
-    out.append(scheda_statica(a, lang, bd))
-
-    cta = f'/#/autore/{esc(a["wikidata"])}' if it else f'/en/#/autore/{esc(a["wikidata"])}'
-    out.append(f'<p class="sa-azioni"><a class="sa-salva" href="{cta}">{"Apri la scheda nel radar" if it else "Open the card in the radar"}</a></p>\n')
-    out.append("</main>\n" + PIEDE[lang])
+        altra = (f'<a href="{url_pagina("en" if it else "it", slug)}" hreflang="{"en" if it else "it"}">{"EN" if it else "IT"}</a>')
+    # grafica nuova (21/11/2026): testata, corpo e piede della scheda «Indice»
+    cnt = (f"{nome} · libero dal {data_l(lang, D + 71)}" if it else f"{nome} · free from {data_l(lang, D + 71)}")
+    out = [testa_scheda(lang, esc(titolo), esc(descr), url, alterne(lang, slug) if ha_altra else "", jsonld, altra, cnt)
+           .replace("@@MARCHIO_S@@", marchio_html(56).replace('<span class="pdr" style="--w:56px">', "").rsplit("</span>", 1)[0])]
+    out.append(scheda_nuova(a, lang, bd))
+    out.append(piede_scheda(lang))
     return "".join(out)
 
 

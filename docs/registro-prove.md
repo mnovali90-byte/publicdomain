@@ -624,3 +624,9 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - Scelto da Marco dopo i mockup: sigla RDR, taglio sull'ultima R come lancetta del radar, «solo taglio bianco» (senza punto e senza lancetta piena nel buco).
 - Come è fatto: scripts/logo.py prende le lettere dal carattere già usato dal sito (Big Shoulders Display, peso 900), misura il centro del buco della R sul disegno della lettera e fa partire il taglio esattamente da lì, a 40 gradi, spessore 3,7. Scrive assets/logo-rdr.svg e assets/favicon.svg. La scritta «Public Domain Radar» sotto ora corre per tutta la larghezza della sigla.
 - Controllo: tracciata sopra al logo la retta della lancetta: passa per il centro del buco e sta al centro del taglio. Viste a schermo testata della home, scheda autore (telefono), Già pubblici, calendario e icona.
+
+## 21/11/2026 — Scheda autore col nuovo design (solo in locale, non pubblicata)
+- Come: scheda rigenerata con scripts/pagine.py + scripts/stile_scheda.css; confronto automatico con la versione online (titolo, h1, descrizione, canonical, dati strutturati, link interni, frasi).
+- Risultato: 803 pagine (408 IT, 395 EN). Titolo, h1, descrizione, canonical e dati strutturati identici; 0 link interni persi. Frasi segnalate: quasi tutte il vecchio piede di pagina (ora nel menu e nel nuovo piede) e «Su N opere registrate in Wikidata» diventata «Le più note delle N su Wikidata».
+- Casi speciali visti: Döblin (paese alleato, avviso giallo), Mörne (già libero in UE, conto verso la Spagna), Brecht EN, telefono 390 px: nessuna pagina più larga dello schermo, nessun errore JavaScript.
+- Giudizio: pronta per l'ok di Marco. Le foto in locale non si vedono perché qui non c'è rete (vengono da Wikimedia): online si vedono.
