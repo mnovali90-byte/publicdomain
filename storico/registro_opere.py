@@ -14,8 +14,8 @@ import glob, json, os, sys
 from datetime import date
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "scripts"))
-from regole import autori_che_contano  # noqa: E402
-from registro import anni_usa  # noqa: E402
+from regole import autori_che_contano, opera_antica  # noqa: E402
+from registro import anni_usa, dati_eta, consultazione  # noqa: E402
 
 Y = date.today().year
 
@@ -27,9 +27,10 @@ def leggi(p, vuoto):
         return vuoto
 
 
-def decidi(riga, tipi, manuali):
+def decidi(riga, tipi, manuali, eta=({}, {})):
     """Voce del registro per una riga dell'archivio, o None se la regola non cambia niente."""
     au = [{"qid": a[0], "nome": a[1], "morte": a[2], "antico": bool(a[3])} for a in riga[5]]
+    antica = opera_antica(riga[0], au, riga[3], eta[0].get(riga[0]), eta[1], Y)
     add = []
     for x in manuali.get(riga[0], []):
         if not any(a["qid"] == x.get("qid") for a in au):
@@ -53,6 +54,8 @@ def decidi(riga, tipi, manuali):
         voce["an"] = an
     if add:
         voce["add"] = add
+    if antica:
+        voce["antica"] = antica   # libera dappertutto per età (scripts/regole.py, opera_antica)
     return voce or None
 
 
@@ -66,8 +69,9 @@ def main():
         for r in json.load(open(f, encoding="utf8"))["opere"]:
             arch.setdefault(r[0], r)
     opere = {}
+    eta = dati_eta()
     for q, r in arch.items():
-        v = decidi(r, tipi, manuali)
+        v = decidi(r, tipi, manuali, eta)
         if musica.get(q):
             v = v or {}
             v["mu"] = musica[q]
@@ -77,6 +81,7 @@ def main():
     json.dump({"aggiornato": date.today().isoformat(),
                "regola": "coautori decisi con scripts/regole.py, autori_che_contano(); vedi l'inizio di storico/registro_opere.py",
                "coautori": opere,
+               "via": consultazione(),
                "usa": anni_usa()}, open("data/registro/opere.json", "w", encoding="utf8"), ensure_ascii=False, separators=(",", ":"))
     from collections import Counter
     c = Counter(k for v in opere.values() for k in v)

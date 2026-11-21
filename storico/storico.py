@@ -397,7 +397,9 @@ def main():
         for a in o["autori"]:
             applica_registro.applica(a)
     prima_controllo = len(tutte)
-    tutte = {k: o for k, o in tutte.items() if libera(o)}
+    from registro import consultazione   # enciclopedie, riviste e giornali: fuori (Marco, 21/11/2026)
+    via = set(consultazione())
+    tutte = {k: o for k, o in tutte.items() if libera(o) and k not in via}
     print(f"controllo autori: {len(info)} letti su {len(da_controllare)}; opere uscite perché non più libere: {prima_controllo - len(tutte)}")
     ops = sorted(tutte.values(), key=lambda o: (-o["pagine"], o["qid"]))
     if len(ops) < SOGLIA:

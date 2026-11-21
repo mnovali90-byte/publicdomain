@@ -14,7 +14,7 @@ Scrive data/storico/anni_verificati.json: {qid: [esito, anno, fonte, data, fonti
 La pagina «Già pubblici» legge questo file: senza «ok» l'opera è «da verificare» negli USA.
 Gira dentro gia-pubblici.yml; riprende da dove era rimasta (le opere già controllate non si ricontrollano per 90 giorni).
 """
-import html, json, re, sys, time, unicodedata, urllib.parse, urllib.request
+import os, sys, html, json, re, sys, time, unicodedata, urllib.parse, urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from datetime import date, timedelta
 from pathlib import Path
@@ -48,7 +48,12 @@ def libera_ue(r):
             _TIPI = {}
     import sys as _s, os as _o
     _s.path.insert(0, _o.path.join(_o.path.dirname(_o.path.abspath(__file__)), "..", "scripts"))
-    from regole import autori_che_contano
+    from regole import autori_che_contano, opera_antica
+    from registro import dati_eta
+    cre, antiche = dati_eta()
+    grezzi = [{"qid": a[0], "nome": a[1], "morte": a[2], "antico": bool(a[3])} for a in r[5]]
+    if opera_antica(r[0], grezzi, r[3], cre.get(r[0]), antiche, Y):
+        return True
     au = autori_che_contano([{"qid": a[0], "nome": a[1], "morte": a[2], "antico": bool(a[3])} for a in r[5]], _TIPI, Y)
     return bool(au) and all(a.get("antico") or (a.get("morte") is not None and a["morte"] <= Y - 71) for a in au)
 
@@ -212,11 +217,11 @@ def fonti_forti(r, orig, idx, V):
         r2 = list(r); r2[1] = t
         e, a = open_library(r2); provate.append("openlibrary:originale")
         if e == "ok":
-            conf.append((a, "openlibrary"))
+            conf.append((a, "openlibrary:originale"))
         if not conf:
             e, a = library_of_congress(r2); provate.append("loc:originale")
             if e == "ok":
-                conf.append((a, "loc"))
+                conf.append((a, "loc:originale"))
         if not conf and cognomi and lg in ("fr", "de"):
             try:
                 a = V.bnf(t, cognomi[0])[0] if lg == "fr" else V.k10plus(t, cognomi[0], min(y + 3, LIMITE))[0]
@@ -255,7 +260,9 @@ def main():
     for q in lista:
         if q in dk:
             fatto[q] = ["ok" if dk[q] <= LIMITE else "no", dk[q], "duke", oggi]
-    resta = [q for q in lista if q not in fatto or (fatto[q][2] != "duke" and fatto[q][3] < vecchio)]
+    # si ricontrollano dopo 90 giorni solo i dati di Open Library; le conferme di Duke, Library of Congress e fonti
+    # forti restano (prima un nuovo «non trovato» di Open Library poteva cancellare una conferma buona)
+    resta = [q for q in lista if q not in fatto or (fatto[q][2] == "openlibrary" and fatto[q][3] < vecchio)]
     print(f"da controllare: {len(lista)} (Duke: {sum(1 for q in lista if q in dk)}), mancano: {len(resta)}")
     fine = time.time() + BUDGET * 60
 
@@ -268,7 +275,8 @@ def main():
     with ThreadPoolExecutor(max_workers=3) as pool:
         for q, esito, anno in pool.map(uno, resta):
             if esito:
-                fatto[q] = [esito, anno, "openlibrary", oggi, ["openlibrary"]]
+                gia = fatto.get(q, [None] * 5)
+                fatto[q] = [esito, anno, "openlibrary", oggi, sorted(set((gia[4] if len(gia) > 4 and gia[4] else []) + ["openlibrary"]))]
     # terza fonte: Library of Congress, solo per le non confermate e non ancora provate lì (una richiesta alla volta)
     lc = [q for q in lista if q in fatto and fatto[q][0] != "ok" and "loc" not in (fatto[q][4] if len(fatto[q]) > 4 else [])]
     print(f"Library of Congress: da provare {len(lc)}")
@@ -284,13 +292,33 @@ def main():
         if lc.index(q) % 100 == 0:
             f.write_text(json.dumps(fatto, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     f.write_text(json.dumps(fatto, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    # quarta fase (21/11/2026): titolo originale e fonti forti (fonti_forti, qui sopra), per le non confermate che non
+    # ci sono ancora passate; prima le più note. Prova del 20-21/11: 86 confermate su 515, controllo a mano tutto giusto.
+    ff = sorted((q for q in lista if q in fatto and fatto[q][0] != "ok"
+                 and "forti" not in (fatto[q][4] if len(fatto[q]) > 4 else [])), key=lambda q: -(lista[q][4] or 0))
+    print(f"titolo originale e fonti forti: da provare {len(ff)}", flush=True)
+    if ff and time.time() < fine:
+        sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "scripts"))
+        import verifica_anni_usa as V
+        orig = titoli_originali(ff[:3000])
+        idx = V.indice_cce(list(range(1923, LIMITE + 1)))
+        for n, q in enumerate(ff):
+            if time.time() > fine:
+                break
+            a, fonte, prov = fonti_forti(lista[q], orig, idx, V)
+            provate = (fatto[q][4] if len(fatto[q]) > 4 else [fatto[q][2]]) + ["forti"]
+            fatto[q] = ["ok", a, fonte, oggi, provate] if a else fatto[q][:4] + [provate]
+            if n % 100 == 0:
+                f.write_text(json.dumps(fatto, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+        f.write_text(json.dumps(fatto, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     from collections import Counter
     c = Counter(v[0] for q, v in fatto.items() if q in lista)
     per_fonte = Counter(v[2] for q, v in fatto.items() if q in lista and v[0] == "ok")
     lc_resta = sum(1 for q in lista if q in fatto and fatto[q][0] != "ok" and "loc" not in (fatto[q][4] if len(fatto[q]) > 4 else []))
+    ff_resta = sum(1 for q in lista if q in fatto and fatto[q][0] != "ok" and "forti" not in (fatto[q][4] if len(fatto[q]) > 4 else []))
     print(f"esiti: {dict(c)}; confermate per fonte: {dict(per_fonte)}; mai controllate: {len(lista) - sum(c.values())}; "
-          f"da provare sulla Library of Congress: {lc_resta}")
-    if len(lista) - sum(c.values()) > 0 or lc_resta > 0:
+          f"da provare sulla Library of Congress: {lc_resta}; da provare con il titolo originale: {ff_resta}")
+    if len(lista) - sum(c.values()) > 0 or lc_resta > 0 or ff_resta > 0:
         Path(".verifica_incompleta").write_text("1")
 
 

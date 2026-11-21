@@ -153,3 +153,32 @@ def anno_usa_confermato(voci):
         y, fonte = min(conf)
         return [y, fonte, False, None]
     return [None, None, tardi, trovato]
+
+
+ANONIMI = {"anonymous", "anonimo", "anonyme", "anonym", "anónimo", "folklore", "unknown", "traditional", "tradizionale"}
+
+
+def anonimo(qid, nome):
+    """Autore dichiarato anonimo o «valore sconosciuto» su Wikidata (non: autore che Wikidata semplicemente non mette)."""
+    return bool(re.fullmatch(r"[0-9a-f]{32}", qid or "")) or (nome or "").strip().lower() in ANONIMI
+
+
+def opera_antica(qid, autori, anno_opera, creazione, antiche, anno):
+    """TESTI ANTICHI E OPERE ANONIME (approvato da Marco il 21/11/2026). Motivo per cui l'opera è libera dappertutto
+    per età, oppure None.
+      "a mano": in data/opere_antiche.json (opera o autore), con la fonte;
+      "creazione": Wikidata dà una data di creazione (P571) più vecchia di 171 anni e nessun autore ha una data;
+      "anonima": tutti gli autori sono dichiarati anonimi e l'opera è uscita da più di 70 anni. Direttiva 2006/116/CE,
+                 art. 1, c. 3: per le opere anonime la protezione dura 70 anni dalla pubblicazione."""
+    antiche = antiche or {}
+    if qid in antiche.get("opere", {}):
+        return "a mano"
+    if autori and all(a.get("qid") in antiche.get("autori", {}) or a.get("antico") for a in autori) \
+            and any(a.get("qid") in antiche.get("autori", {}) for a in autori):
+        return "a mano"
+    senza_data = all(a.get("morte") is None and not a.get("antico") for a in autori)
+    if senza_data and creazione is not None and creazione <= anno - 171:
+        return "creazione"
+    if autori and all(anonimo(a.get("qid"), a.get("nome")) for a in autori) and anno_opera is not None and anno_opera <= anno - 71:
+        return "anonima"
+    return None

@@ -177,6 +177,44 @@ def musica(qids):
     return out, ok
 
 
+# opere di consultazione da togliere da Già pubblici (deciso da Marco il 21/11/2026): enciclopedie (anche i dizionari
+# biografici, che su Wikidata ne sono una sottoclasse), riviste anche scientifiche e accademiche, giornali.
+# NON la classe larga «opera di consultazione»: comprende anche gli Elementi di Euclide e la Summa Theologiae.
+# NON i «periodici» e basta: spesso è narrativa uscita a puntate (Varney il vampiro, Il Federalista).
+CONSULTAZIONE = {"Q5292": "enciclopedia", "Q1371849": "dizionario biografico", "Q41298": "rivista", "Q11032": "giornale",
+                 "Q5633421": "rivista scientifica", "Q737498": "rivista accademica"}
+
+
+def consultazione(qids):
+    out, ok = {}, True
+    vals_c = " ".join("wd:" + c for c in CONSULTAZIONE)
+    for i in range(0, len(qids), 300):
+        v_ = " ".join("wd:" + q for q in qids[i:i + 300])
+        r = sparql(f"SELECT ?o ?c WHERE {{ VALUES ?o {{ {v_} }} VALUES ?c {{ {vals_c} }} ?o wdt:P31/wdt:P279* ?c. }}")
+        if r is None:
+            ok = False; continue
+        for x in r:
+            out.setdefault(q_(v(x, "o")), set()).add(CONSULTAZIONE[q_(v(x, "c"))])
+        time.sleep(0.5)
+    return {q: sorted(t) for q, t in out.items()}, ok
+
+
+def creazione(qids):
+    """Anno di creazione (P571, il più vecchio) delle opere senza autori con la data: per i testi antichi."""
+    out, ok = {}, True
+    for i in range(0, len(qids), 300):
+        v_ = " ".join("wd:" + q for q in qids[i:i + 300])
+        r = sparql(f"SELECT ?o (MIN(?c) AS ?creato) WHERE {{ VALUES ?o {{ {v_} }} ?o wdt:P571 ?c. }} GROUP BY ?o")
+        if r is None:
+            ok = False; continue
+        for x in r:
+            a = anno(v(x, "creato"))
+            if a is not None:
+                out[q_(v(x, "o"))] = a
+        time.sleep(0.5)
+    return out, ok
+
+
 def main():
     try:
         vecchio = json.load(open(USCITA, encoding="utf8"))
@@ -200,7 +238,13 @@ def main():
     ti, ok_ti = tipi(sorted(senza))
     print("autori senza data di morte:", len(senza), "| letti:", len(ti), "| non persone:",
           sum(1 for x in ti.values() if x["t"] == "g"), "" if ok_ti else "(INCOMPLETO)", flush=True)
-    mu, ok_mu = musica(sorted(q for q in arch if re.fullmatch(r"Q\d+", q)))
+    tutte_q = sorted(q for q in arch if re.fullmatch(r"Q\d+", q))
+    mu, ok_mu = musica(tutte_q)
+    cons, ok_cons = consultazione(tutte_q)
+    print("enciclopedie, riviste e giornali:", len(cons), "" if ok_cons else "(INCOMPLETO)", flush=True)
+    senza = [q for q in tutte_q if all(a[2] is None and not a[3] for a in arch[q][5])]
+    cre, ok_cre = creazione(senza)
+    print("opere senza autori con data: con anno di creazione", len(cre), "su", len(senza), "" if ok_cre else "(INCOMPLETO)", flush=True)
     print("opere dell'archivio con compositore o librettista:", len(mu), "" if ok_mu else "(INCOMPLETO)", flush=True)
     out = {"aggiornato": date.today().isoformat(),
            "regola": "docs/registro-prove.md, 20/11/2026: gruppi e organizzazioni senza membri noti non contano se ci sono "
@@ -208,9 +252,12 @@ def main():
                      "coautori senza data di morte: «da verificare»; compositore e librettista: avviso, il testo resta libero",
            "autori": ti if ok_ti else {**vecchio.get("autori", {}), **ti},
            "musica": mu if ok_mu else vecchio.get("musica", {}),
+           "consultazione": cons if ok_cons else {**vecchio.get("consultazione", {}), **cons},
+           "creazione": cre if ok_cre else {**vecchio.get("creazione", {}), **cre},
            "per_autore": pa if ok_pa else {**vecchio.get("per_autore", {}), **pa},
            "schede": schede, "n_archivio": len(arch),
-           "incompleto": [n for n, ok in (("autori", ok_ti), ("musica", ok_mu), ("per_autore", ok_pa)) if not ok]}
+           "incompleto": [n for n, ok in (("autori", ok_ti), ("musica", ok_mu), ("per_autore", ok_pa),
+                                                         ("consultazione", ok_cons), ("creazione", ok_cre)) if not ok]}
     json.dump(out, open(USCITA, "w", encoding="utf8"), ensure_ascii=False, separators=(",", ":"))
     print("scritto", USCITA, "| pezzi incompleti:", out["incompleto"] or "nessuno",
           "| risposte «aspetta» o mancate:", dict(ATTESE) or "nessuna")

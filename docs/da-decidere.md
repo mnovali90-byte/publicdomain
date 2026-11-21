@@ -1,4 +1,4 @@
-# Da decidere — 2026-11-20
+# Da decidere — 2026-11-21
 
 Scritto da `scripts/da_decidere.py`. Qui ci sono solo i casi in cui i dati non bastano. Il resto è già sul sito.
 

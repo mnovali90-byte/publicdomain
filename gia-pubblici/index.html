@@ -224,6 +224,8 @@ it: {
   sDuke: "Anno preso dagli elenchi del Public Domain Day della Duke University, non da Wikidata: da verificare.",
   sUsPrima: "Conta la prima data di pubblicazione registrata su Wikidata: per le opere uscite prima a puntate o in rivista può essere diversa.",
   sInc: "Le fonti danno anni di morte diversi: si usa il più tardo, per prudenza.",
+  sAntica_antica: "Testo antico: è libero dappertutto.",
+  sAntica_anonima: "Opera anonima: per la legge europea è libera 70 anni dopo la pubblicazione (Direttiva 2006/116/CE, art. 1).",
   sConfine: "Da verificare: le fonti non concordano sull'anno di morte, e la differenza decide proprio se l'opera è già libera (per esempio Wikidata 1955, Library of Congress 1956).",
   sCoaut: "Da verificare: tra gli autori c'è anche {n}, di cui Wikidata non dà l'anno di morte. Per gli altri autori il tempo è già passato.",
   sconosciuto: "un autore sconosciuto",
@@ -291,6 +293,8 @@ en: {
   sDuke: "Year taken from Duke University's Public Domain Day lists, not from Wikidata: to be checked.",
   sUsPrima: "What counts is the first publication date recorded on Wikidata: for works first published in instalments or in a magazine it may differ.",
   sInc: "Sources give different years of death: the latest is used, to be safe.",
+  sAntica_antica: "Ancient text: it is free everywhere.",
+  sAntica_anonima: "Anonymous work: under EU law it is free 70 years after publication (Directive 2006/116/EC, art. 1).",
   sConfine: "To be checked: the sources disagree on the year of death, and the difference decides whether the work is already free (for example Wikidata 1955, Library of Congress 1956).",
   sCoaut: "To be checked: the authors also include {n}, whose year of death Wikidata does not give. For the other authors the term has already run out.",
   sconosciuto: "an unknown author",
@@ -365,6 +369,7 @@ function coautori(o) {
   }
   o.au = au;
   o.mu = (e && e.mu) || null;
+  o.antica = (e && e.antica) || null;   // libera dappertutto per età: «a mano», «creazione», «anonima» (scripts/regole.py)
   return o;
 }
 function pulisciAnno(o) {
@@ -381,6 +386,12 @@ function pulisciAnno(o) {
 // restituisce { s: "si" | "dal" | "nd" | "ver", y, note: [] }
 function stato(o, c) {
   const Y = D.anno, note = [];
+  if (o.antica && o.antica !== "anonima") return { s: "si", note: ["sAntica_antica"] };
+  // opera anonima: in Europa 70 anni dalla pubblicazione (in Spagna, per prudenza, 80); negli USA vale la solita regola
+  if (o.antica === "anonima" && c !== "us" && o.y !== null) {
+    const fine = o.y + (c === "es" ? 81 : 71);
+    return fine <= Y ? { s: "si", note: ["sAntica_anonima"] } : { s: "dal", y: fine, note: ["sAntica_anonima"] };
+  }
   if (o.au.some((a) => a.inc)) note.push("sInc");
   if (c === "us") {
     if (o.yd) note.push("sDuke");
@@ -431,6 +442,7 @@ function stato(o, c) {
 const _lib = new Map();
 function liberaUe(o) {   // libera in Europa per la regola dei 70 anni (stessa regola dello Storico)
   const Y = D.anno;
+  if (o.antica) return true;
   if (o.y !== null && o.y <= Y - 171) return true;
   return o.au.length > 0 && o.au.every((a) => a.an || (!a.sc && a.inc !== 2 && a.m !== null && a.m !== undefined && a.m <= Y - 71));
 }

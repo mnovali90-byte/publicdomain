@@ -1,0 +1,20 @@
+{
+ "nota": "Testi antichi che Wikidata non riesce a datare (autore senza data di morte, oppure nessun autore e nessuna data di creazione). Controllati a mano con Marco il 21/11/2026; la fonte è la voce di Wikidata, che ha la datazione e il collegamento a Wikipedia.",
+ "opere": {
+  "Q131072": {"titolo": "Qoèlet (Ecclesiaste)", "motivo": "libro della Bibbia ebraica, III secolo a.C. circa", "fonte": "https://www.wikidata.org/wiki/Q131072"},
+  "Q815523": {"titolo": "Mabinogion", "motivo": "racconti gallesi medievali, XII-XIII secolo", "fonte": "https://www.wikidata.org/wiki/Q815523"},
+  "Q1341410": {"titolo": "Tosefta", "motivo": "raccolta della legge orale ebraica, II-III secolo", "fonte": "https://www.wikidata.org/wiki/Q1341410"},
+  "Q302350": {"titolo": "Il contadino eloquente", "motivo": "racconto dell'antico Egitto, Medio Regno", "fonte": "https://www.wikidata.org/wiki/Q302350"},
+  "Q467520": {"titolo": "Il principe predestinato", "motivo": "racconto dell'antico Egitto, Nuovo Regno", "fonte": "https://www.wikidata.org/wiki/Q467520"},
+  "Q871136": {"titolo": "Sutra in quarantadue sezioni", "motivo": "testo buddista, I-II secolo", "fonte": "https://www.wikidata.org/wiki/Q871136"},
+  "Q3651961": {"titolo": "Visramiani", "motivo": "poema georgiano, XII secolo", "fonte": "https://www.wikidata.org/wiki/Q3651961"},
+  "Q541717": {"titolo": "Ollantay", "motivo": "dramma quechua, XVIII secolo", "fonte": "https://www.wikidata.org/wiki/Q541717"}
+ },
+ "autori": {
+  "Q11740876": {"nome": "Qoèlet", "motivo": "autore biblico", "fonte": "https://www.wikidata.org/wiki/Q11740876"},
+  "Q4112612": {"nome": "Vishakhadatta", "motivo": "drammaturgo indiano, IV-VIII secolo", "fonte": "https://www.wikidata.org/wiki/Q4112612"},
+  "Q17584591": {"nome": "Gunadhya", "motivo": "autore indiano antico", "fonte": "https://www.wikidata.org/wiki/Q17584591"},
+  "Q2076461": {"nome": "Jimutavahana", "motivo": "giurista indiano, XII secolo", "fonte": "https://www.wikidata.org/wiki/Q2076461"},
+  "Q16886346": {"nome": "Vijñāneśvara", "motivo": "giurista indiano, XI-XII secolo", "fonte": "https://www.wikidata.org/wiki/Q16886346"}
+ }
+}

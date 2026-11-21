@@ -37,3 +37,14 @@ def anni_usa():
 def liste_usa():
     """Le verifiche delle liste per anno di lista, come le usano le pagine del Public Domain Day."""
     return _leggi(R / "data" / "us-anni-verificati.json", {})
+
+
+def dati_eta():
+    """(anni di creazione da Wikidata, opere e autori antichi messi a mano) per scripts/regole.py, opera_antica."""
+    cre = _leggi(R / "data" / "storico" / "coautori.json", {}).get("creazione", {})
+    return cre, _leggi(R / "data" / "opere_antiche.json", {})
+
+
+def consultazione():
+    """Enciclopedie, riviste e giornali da togliere da Già pubblici (deciso da Marco il 21/11/2026)."""
+    return _leggi(R / "data" / "storico" / "coautori.json", {}).get("consultazione", {})

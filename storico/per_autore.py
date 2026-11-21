@@ -206,6 +206,13 @@ def libera_ue(o):
     più di 100 anni prima di quella data (chi pubblicava nel 1855 è per forza morto entro il 1955)."""
     if o.get("anno") is not None and o["anno"] <= ANNO_UE - 100:
         return True
+    from regole import opera_antica
+    from registro import dati_eta
+    global _ETA
+    if _ETA is None:
+        _ETA = dati_eta()
+    if opera_antica(o.get("qid"), o.get("autori") or [], o.get("anno"), _ETA[0].get(o.get("qid")), _ETA[1], ANNO_UE + 71):
+        return True
     au, _ = autori_efficaci(o.get("autori"))
     return bool(au) and all((a.get("morte") is not None and a["morte"] <= ANNO_UE) or a.get("antico") for a in au)
 
@@ -220,6 +227,7 @@ def libera_usa(o):
 
 
 _COAUT = None
+_ETA = None
 
 
 def autori_efficaci(au):
