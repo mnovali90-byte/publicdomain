@@ -11,7 +11,14 @@
    "autori": [
     {
      "qid": "Q81447",
-     "nome": "Aldous Huxley"
+     "nome": "Aldous Huxley",
+     "foto": {
+      "file": "Aldous Huxley 1947.png",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aldous_Huxley_1947.png?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Aldous_Huxley_1947.png",
+      "licenza": "Public domain",
+      "autore": "Anonymous Unknown author"
+     }
     }
    ],
    "pagine": 74,
@@ -39,7 +46,14 @@
    "autori": [
     {
      "qid": "Q237514",
-     "nome": "Laura Ingalls Wilder"
+     "nome": "Laura Ingalls Wilder",
+     "foto": {
+      "file": "Laura Ingalls Wilder.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Laura_Ingalls_Wilder.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Laura_Ingalls_Wilder.jpg",
+      "licenza": "Public domain",
+      "autore": ""
+     }
     }
    ],
    "pagine": 11,
@@ -60,7 +74,14 @@
    "autori": [
     {
      "qid": "Q151820",
-     "nome": "Louis-Ferdinand Céline"
+     "nome": "Louis-Ferdinand Céline",
+     "foto": {
+      "file": "L.-F. Céline.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/L.-F._C%C3%A9line.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:L.-F._C%C3%A9line.jpg",
+      "licenza": "Public domain",
+      "autore": "Agence Meurisse"
+     }
     }
    ],
    "pagine": 48,
@@ -88,7 +109,14 @@
    "autori": [
     {
      "qid": "Q78487",
-     "nome": "Robert Musil"
+     "nome": "Robert Musil",
+     "foto": {
+      "file": "Musil.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Musil.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Musil.jpg",
+      "licenza": "Public domain",
+      "autore": "не указан в источнике"
+     }
     }
    ],
    "pagine": 34,
@@ -116,7 +144,14 @@
    "autori": [
     {
      "qid": "Q38392",
-     "nome": "William Faulkner"
+     "nome": "William Faulkner",
+     "foto": {
+      "file": "Carl Van Vechten - William Faulkner (greyscale and cropped).jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Carl_Van_Vechten_-_William_Faulkner_%28greyscale_and_cropped%29.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Carl_Van_Vechten_-_William_Faulkner_%28greyscale_and_cropped%29.jpg",
+      "licenza": "Public domain",
+      "autore": "Carl Van Vechten"
+     }
     }
    ],
    "pagine": 27,
@@ -144,7 +179,14 @@
    "autori": [
     {
      "qid": "Q35064",
-     "nome": "Agatha Christie"
+     "nome": "Agatha Christie",
+     "foto": {
+      "file": "Agatha Christie in Nederland (detectiveschrijfster), bij aankomst op Schiphol me, Bestanddeelnr 916-8898 (cropped).jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Agatha_Christie_in_Nederland_%28detectiveschrijfster%29%2C_bij_aankomst_op_Schiphol_me%2C_Bestanddeelnr_916-8898_%28cropped%29.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Agatha_Christie_in_Nederland_%28detectiveschrijfster%29%2C_bij_aankomst_op_Schiphol_me%2C_Bestanddeelnr_916-8898_%28cropped%29.jpg",
+      "licenza": "CC0",
+      "autore": "Joop van Bilsen for Anefo"
+     }
     }
    ],
    "pagine": 28,
@@ -165,7 +207,14 @@
    "autori": [
     {
      "qid": "Q1252645",
-     "nome": "Stella Gibbons"
+     "nome": "Stella Gibbons",
+     "foto": {
+      "file": "Stella-gibbons-web.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Stella-gibbons-web.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Stella-gibbons-web.jpg",
+      "licenza": "CC BY-SA 3.0",
+      "autore": "Jburlinson"
+     }
     }
    ],
    "pagine": 5,
@@ -186,11 +235,25 @@
    "autori": [
     {
      "qid": "Q9061",
-     "nome": "Karl Marx"
+     "nome": "Karl Marx",
+     "foto": {
+      "file": "Karl Marx 001 restored.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Karl_Marx_001_restored.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Karl_Marx_001_restored.jpg",
+      "licenza": "Public domain",
+      "autore": "John Jabez Edwin Mayall"
+     }
     },
     {
      "qid": "Q34787",
-     "nome": "Friedrich Engels"
+     "nome": "Friedrich Engels",
+     "foto": {
+      "file": "Friedrich Engels portrait (cropped).jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Friedrich_Engels_portrait_%28cropped%29.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Friedrich_Engels_portrait_%28cropped%29.jpg",
+      "licenza": "Public domain",
+      "autore": "William Hall (1826–ca. 1898) (cropped and sepia tone removed)"
+     }
     }
    ],
    "pagine": 33,
@@ -212,7 +275,14 @@
    "autori": [
     {
      "qid": "Q77148",
-     "nome": "Carl Schmitt"
+     "nome": "Carl Schmitt",
+     "foto": {
+      "file": "1929 report on Carl Schmitt.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1929_report_on_Carl_Schmitt.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:1929_report_on_Carl_Schmitt.jpg",
+      "licenza": "Public domain",
+      "autore": "ABC"
+     }
     }
    ],
    "pagine": 11,
@@ -231,7 +301,14 @@
    "autori": [
     {
      "qid": "Q35064",
-     "nome": "Agatha Christie"
+     "nome": "Agatha Christie",
+     "foto": {
+      "file": "Agatha Christie in Nederland (detectiveschrijfster), bij aankomst op Schiphol me, Bestanddeelnr 916-8898 (cropped).jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Agatha_Christie_in_Nederland_%28detectiveschrijfster%29%2C_bij_aankomst_op_Schiphol_me%2C_Bestanddeelnr_916-8898_%28cropped%29.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Agatha_Christie_in_Nederland_%28detectiveschrijfster%29%2C_bij_aankomst_op_Schiphol_me%2C_Bestanddeelnr_916-8898_%28cropped%29.jpg",
+      "licenza": "CC0",
+      "autore": "Joop van Bilsen for Anefo"
+     }
     }
    ],
    "pagine": 26,
@@ -250,7 +327,14 @@
    "autori": [
     {
      "qid": "Q78509",
-     "nome": "Joseph Roth"
+     "nome": "Joseph Roth",
+     "foto": {
+      "file": "Joseph Roth (1926).jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Joseph_Roth_%281926%29.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Joseph_Roth_%281926%29.jpg",
+      "licenza": "Public domain",
+      "autore": "s/a"
+     }
     }
    ],
    "pagine": 21,
@@ -278,7 +362,14 @@
    "autori": [
     {
      "qid": "Q23434",
-     "nome": "Ernest Hemingway"
+     "nome": "Ernest Hemingway",
+     "foto": {
+      "file": "ErnestHemingway.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/ErnestHemingway.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:ErnestHemingway.jpg",
+      "licenza": "Public domain",
+      "autore": "Lloyd Arnold"
+     }
     }
    ],
    "pagine": 18,
@@ -304,7 +395,14 @@
    "autori": [
     {
      "qid": "Q271853",
-     "nome": "Nikolai Ostrovsky"
+     "nome": "Nikolai Ostrovsky",
+     "foto": {
+      "file": "N Ostrovskiy.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/N_Ostrovskiy.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:N_Ostrovskiy.jpg",
+      "licenza": "Public domain",
+      "autore": "Unknown author"
+     }
     }
    ],
    "pagine": 33,
@@ -330,7 +428,14 @@
    "autori": [
     {
      "qid": "Q9061",
-     "nome": "Karl Marx"
+     "nome": "Karl Marx",
+     "foto": {
+      "file": "Karl Marx 001 restored.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Karl_Marx_001_restored.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Karl_Marx_001_restored.jpg",
+      "licenza": "Public domain",
+      "autore": "John Jabez Edwin Mayall"
+     }
     }
    ],
    "pagine": 28,
@@ -352,7 +457,14 @@
    "autori": [
     {
      "qid": "Q310464",
-     "nome": "Erskine Caldwell"
+     "nome": "Erskine Caldwell",
+     "foto": {
+      "file": "Erskine Caldwell 1975.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Erskine_Caldwell_1975.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Erskine_Caldwell_1975.jpg",
+      "licenza": "Public domain",
+      "autore": "Giorgio Lotti (Mondadori Publishers)"
+     }
     }
    ],
    "pagine": 9,
@@ -371,7 +483,14 @@
    "autori": [
     {
      "qid": "Q128560",
-     "nome": "Graham Greene"
+     "nome": "Graham Greene",
+     "foto": {
+      "file": "Graham Greene angol író, 1975 Fortepan 84697.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Graham_Greene_angol_%C3%ADr%C3%B3%2C_1975_Fortepan_84697.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Graham_Greene_angol_%C3%ADr%C3%B3%2C_1975_Fortepan_84697.jpg",
+      "licenza": "CC BY-SA 3.0",
+      "autore": "FOTO:Fortepan — ID 84697 : Adományozó/Donor: Magyar Hírek folyóirat. archive copy at the Wayback Machine"
+     }
     }
    ],
    "pagine": 6,
@@ -392,7 +511,14 @@
    "autori": [
     {
      "qid": "Q207640",
-     "nome": "Robert E. Howard"
+     "nome": "Robert E. Howard",
+     "foto": {
+      "file": "Robert E Howard suit.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Robert_E_Howard_suit.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Robert_E_Howard_suit.jpg",
+      "licenza": "Public domain",
+      "autore": "Unknown author"
+     }
     }
    ],
    "pagine": 13,
@@ -428,7 +554,14 @@
    "autori": [
     {
      "qid": "Q460952",
-     "nome": "Charles Nordhoff"
+     "nome": "Charles Nordhoff",
+     "foto": {
+      "file": "Charles Nordhoff.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Charles_Nordhoff.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Charles_Nordhoff.jpg",
+      "licenza": "Public domain",
+      "autore": "Watkins"
+     }
     },
     {
      "qid": "Q933918",
@@ -453,7 +586,14 @@
    "autori": [
     {
      "qid": "Q298388",
-     "nome": "Noël Coward"
+     "nome": "Noël Coward",
+     "foto": {
+      "file": "Noel Coward Allan warren edit 1.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Noel_Coward_Allan_warren_edit_1.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Noel_Coward_Allan_warren_edit_1.jpg",
+      "licenza": "CC BY-SA 3.0",
+      "autore": "Allan Warren"
+     }
     }
    ],
    "pagine": 4,
@@ -491,7 +631,14 @@
    "autori": [
     {
      "qid": "Q187324",
-     "nome": "Zelda Fitzgerald"
+     "nome": "Zelda Fitzgerald",
+     "foto": {
+      "file": "Zelda Fitzgerald (1923 Portrait) Retouched.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Zelda_Fitzgerald_%281923_Portrait%29_Retouched.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Zelda_Fitzgerald_%281923_Portrait%29_Retouched.jpg",
+      "licenza": "Public domain",
+      "autore": "Alfred Cheney Johnston"
+     }
     }
    ],
    "pagine": 6,
@@ -506,7 +653,14 @@
    "autori": [
     {
      "qid": "Q650800",
-     "nome": "James Leslie Mitchell"
+     "nome": "James Leslie Mitchell",
+     "foto": {
+      "file": "Leslie-mitchell.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Leslie-mitchell.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Leslie-mitchell.jpg",
+      "licenza": "Public domain",
+      "autore": "Unidentify"
+     }
     }
    ],
    "pagine": 3,
@@ -525,7 +679,14 @@
    "autori": [
     {
      "qid": "Q25973",
-     "nome": "Hermann Hesse"
+     "nome": "Hermann Hesse",
+     "foto": {
+      "file": "Hermann Hesse 2.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hermann_Hesse_2.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Hermann_Hesse_2.jpg",
+      "licenza": "CC BY-SA 3.0 nl",
+      "autore": "Unknown author"
+     }
     }
    ],
    "pagine": 14,
@@ -565,7 +726,14 @@
    "autori": [
     {
      "qid": "Q39212",
-     "nome": "John Steinbeck"
+     "nome": "John Steinbeck",
+     "foto": {
+      "file": "John Steinbeck 1939 (cropped).jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/John_Steinbeck_1939_%28cropped%29.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:John_Steinbeck_1939_%28cropped%29.jpg",
+      "licenza": "Public domain",
+      "autore": "McFadden Publications, Inc.; no photographer credited; photo likely the work of Sonya Noskowiak, as Steinbeck is wearing"
+     }
     }
    ],
    "pagine": 10,
@@ -584,7 +752,14 @@
    "autori": [
     {
      "qid": "Q106740",
-     "nome": "Dorothy L. Sayers"
+     "nome": "Dorothy L. Sayers",
+     "foto": {
+      "file": "Dorothy L. Sayers.png",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dorothy_L._Sayers.png?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Dorothy_L._Sayers.png",
+      "licenza": "Public domain",
+      "autore": "uncredited; published by Boni and Liveright in connexion with her 1925 release Whose Body"
+     }
     }
    ],
    "pagine": 4,
@@ -605,7 +780,14 @@
    "autori": [
     {
      "qid": "Q1398332",
-     "nome": "John Cowper Powys"
+     "nome": "John Cowper Powys",
+     "foto": {
+      "file": "John-Cowper-Powys 2.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/John-Cowper-Powys_2.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:John-Cowper-Powys_2.jpg",
+      "licenza": "Public domain",
+      "autore": "FinnWikiNo"
+     }
     }
    ],
    "pagine": 2,
@@ -624,7 +806,14 @@
    "autori": [
     {
      "qid": "Q107002",
-     "nome": "Evelyn Waugh"
+     "nome": "Evelyn Waugh",
+     "foto": {
+      "file": "Evelynwaugh.jpeg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Evelynwaugh.jpeg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Evelynwaugh.jpeg",
+      "licenza": "Public domain",
+      "autore": "Carl Van Vechten (1880–1964)"
+     }
     }
    ],
    "pagine": 3,
@@ -639,7 +828,14 @@
    "autori": [
     {
      "qid": "Q358561",
-     "nome": "Reinhold Niebuhr"
+     "nome": "Reinhold Niebuhr",
+     "foto": {
+      "file": "Rev. Reinhold Niebuhr 1927 Edit.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rev._Reinhold_Niebuhr_1927_Edit.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Rev._Reinhold_Niebuhr_1927_Edit.jpg",
+      "licenza": "Public domain",
+      "autore": "Unknown author"
+     }
     }
    ],
    "pagine": 2,
@@ -658,7 +854,14 @@
    "autori": [
     {
      "qid": "Q174152",
-     "nome": "Premchand"
+     "nome": "Premchand",
+     "foto": {
+      "file": "Prem chand.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Prem_chand.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Prem_chand.jpg",
+      "licenza": "CC BY-SA 3.0",
+      "autore": "Ankur8563"
+     }
     }
    ],
    "pagine": 5,
@@ -677,7 +880,14 @@
    "autori": [
     {
      "qid": "Q76539",
-     "nome": "Hans Fallada"
+     "nome": "Hans Fallada",
+     "foto": {
+      "file": "Erich Ohser Hans Fallada 1943.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Erich_Ohser_Hans_Fallada_1943.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Erich_Ohser_Hans_Fallada_1943.jpg",
+      "licenza": "Public domain",
+      "autore": "e.o.plauen, das ist Erich Ohser"
+     }
     }
    ],
    "pagine": 16,
@@ -696,7 +906,14 @@
    "autori": [
     {
      "qid": "Q973270",
-     "nome": "Tadeusz Dołęga-Mostowicz"
+     "nome": "Tadeusz Dołęga-Mostowicz",
+     "foto": {
+      "file": "Tadeusz Dolega-Mostowicz.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tadeusz_Dolega-Mostowicz.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Tadeusz_Dolega-Mostowicz.jpg",
+      "licenza": "Public domain",
+      "autore": "Unknown author"
+     }
     }
    ],
    "pagine": 9,
@@ -722,7 +939,14 @@
    "autori": [
     {
      "qid": "Q38757",
-     "nome": "Bertolt Brecht"
+     "nome": "Bertolt Brecht",
+     "foto": {
+      "file": "Bundesarchiv Bild 183-W0409-300, Bertolt Brecht.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bundesarchiv_Bild_183-W0409-300%2C_Bertolt_Brecht.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_183-W0409-300%2C_Bertolt_Brecht.jpg",
+      "licenza": "CC BY-SA 3.0 de",
+      "autore": "Kolbe, Jörg"
+     }
     }
    ],
    "pagine": 10,
@@ -748,7 +972,14 @@
    "autori": [
     {
      "qid": "Q80900",
-     "nome": "Pearl S. Buck"
+     "nome": "Pearl S. Buck",
+     "foto": {
+      "file": "Pearl Buck (Nobel).jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pearl_Buck_%28Nobel%29.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Pearl_Buck_%28Nobel%29.jpg",
+      "licenza": "Public domain",
+      "autore": "Unknown (see print without name"
+     }
     }
    ],
    "pagine": 5,
@@ -767,7 +998,14 @@
    "autori": [
     {
      "qid": "Q1645632",
-     "nome": "Nabíl-i-A`zam"
+     "nome": "Nabíl-i-A`zam",
+     "foto": {
+      "file": "Early Bahais-1 (cropped).jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Early_Bahais-1_%28cropped%29.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Early_Bahais-1_%28cropped%29.jpg",
+      "licenza": "Public domain",
+      "autore": "Unknown author"
+     }
     }
    ],
    "pagine": 5,
@@ -782,7 +1020,14 @@
    "autori": [
     {
      "qid": "Q76727",
-     "nome": "Ernst Jünger"
+     "nome": "Ernst Jünger",
+     "foto": {
+      "file": "Ernst Jünger vers 1920 (cropped).jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ernst_J%C3%BCnger_vers_1920_%28cropped%29.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Ernst_J%C3%BCnger_vers_1920_%28cropped%29.jpg",
+      "licenza": "Public domain",
+      "autore": "Magnus Merck"
+     }
     }
    ],
    "pagine": 4,
@@ -803,7 +1048,14 @@
    "autori": [
     {
      "qid": "Q443528",
-     "nome": "J. B. Priestley"
+     "nome": "J. B. Priestley",
+     "foto": {
+      "file": "J. B. Priestley arrives in New York, 1931, Associated Press.png",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/J._B._Priestley_arrives_in_New_York%2C_1931%2C_Associated_Press.png?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:J._B._Priestley_arrives_in_New_York%2C_1931%2C_Associated_Press.png",
+      "licenza": "Public domain",
+      "autore": "Associated Press"
+     }
     }
    ],
    "pagine": 4,
@@ -844,7 +1096,14 @@
    "autori": [
     {
      "qid": "Q555298",
-     "nome": "Clark Ashton Smith"
+     "nome": "Clark Ashton Smith",
+     "foto": {
+      "file": "Clark Ashton Smith 1912.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Clark_Ashton_Smith_1912.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Clark_Ashton_Smith_1912.jpg",
+      "licenza": "Public domain",
+      "autore": "Unknown author"
+     }
     }
    ],
    "pagine": 2,
@@ -866,7 +1125,14 @@
    "autori": [
     {
      "qid": "Q78491",
-     "nome": "Stefan Zweig"
+     "nome": "Stefan Zweig",
+     "foto": {
+      "file": "Zweig Setzer 1927.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Zweig_Setzer_1927.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Zweig_Setzer_1927.jpg",
+      "licenza": "Public domain",
+      "autore": "Franz Xaver Setzer"
+     }
     }
    ],
    "pagine": 8,
@@ -894,7 +1160,14 @@
    "autori": [
     {
      "qid": "Q519357",
-     "nome": "Anthony Berkeley Cox"
+     "nome": "Anthony Berkeley Cox",
+     "foto": {
+      "file": "AnthonyBerkeley1911.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/AnthonyBerkeley1911.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:AnthonyBerkeley1911.jpg",
+      "licenza": "Public domain",
+      "autore": "Unknown author"
+     }
     }
    ],
    "pagine": 4,
@@ -909,7 +1182,14 @@
    "autori": [
     {
      "qid": "Q71461",
-     "nome": "Irmgard Keun"
+     "nome": "Irmgard Keun",
+     "foto": {
+      "file": "Rathausturm Köln - Keun-3437.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rathausturm_K%C3%B6ln_-_Keun-3437.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Rathausturm_K%C3%B6ln_-_Keun-3437.jpg",
+      "licenza": "CC BY-SA 4.0",
+      "autore": "Raimond Spekking"
+     }
     }
    ],
    "pagine": 3,
@@ -928,7 +1208,14 @@
    "autori": [
     {
      "qid": "Q82925",
-     "nome": "Joseph Conrad"
+     "nome": "Joseph Conrad",
+     "foto": {
+      "file": "Joseph Conrad-remastered to black and white.png",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Joseph_Conrad-remastered_to_black_and_white.png?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Joseph_Conrad-remastered_to_black_and_white.png",
+      "licenza": "Public domain",
+      "autore": "George Charles Beresford"
+     }
     }
    ],
    "pagine": 4,
@@ -954,7 +1241,14 @@
    "autori": [
     {
      "qid": "Q19185",
-     "nome": "George Bernard Shaw"
+     "nome": "George Bernard Shaw",
+     "foto": {
+      "file": "George Bernard Shaw.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/George_Bernard_Shaw.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:George_Bernard_Shaw.jpg",
+      "licenza": "Public domain",
+      "autore": "Bain News Service, publisher"
+     }
     }
    ],
    "pagine": 2,
@@ -969,7 +1263,14 @@
    "autori": [
     {
      "qid": "Q315167",
-     "nome": "Lao She"
+     "nome": "Lao She",
+     "foto": {
+      "file": "LaoShe.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/LaoShe.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:LaoShe.jpg",
+      "licenza": "Public domain",
+      "autore": ""
+     }
     }
    ],
    "pagine": 13,
@@ -990,7 +1291,14 @@
    "autori": [
     {
      "qid": "Q207640",
-     "nome": "Robert E. Howard"
+     "nome": "Robert E. Howard",
+     "foto": {
+      "file": "Robert E Howard suit.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Robert_E_Howard_suit.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Robert_E_Howard_suit.jpg",
+      "licenza": "Public domain",
+      "autore": "Unknown author"
+     }
     }
    ],
    "pagine": 3,
@@ -1009,11 +1317,25 @@
    "autori": [
     {
      "qid": "Q163662",
-     "nome": "George S. Kaufman"
+     "nome": "George S. Kaufman",
+     "foto": {
+      "file": "George S. Kaufman.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/George_S._Kaufman.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:George_S._Kaufman.jpg",
+      "licenza": "Public domain",
+      "autore": "The Theatre Magazine Company, photograph by Vandamm"
+     }
     },
     {
      "qid": "Q283496",
-     "nome": "Edna Ferber"
+     "nome": "Edna Ferber",
+     "foto": {
+      "file": "Edna-Ferber-1928.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Edna-Ferber-1928.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Edna-Ferber-1928.jpg",
+      "licenza": "Public domain",
+      "autore": "Theatre Magazine Company; Nickolas Muray, photographer"
+     }
     }
    ],
    "pagine": 5,
@@ -1039,7 +1361,14 @@
    "autori": [
     {
      "qid": "Q37767",
-     "nome": "T. S. Eliot"
+     "nome": "T. S. Eliot",
+     "foto": {
+      "file": "Thomas Stearns Eliot by Lady Ottoline Morrell (1934).jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Thomas_Stearns_Eliot_by_Lady_Ottoline_Morrell_%281934%29.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Thomas_Stearns_Eliot_by_Lady_Ottoline_Morrell_%281934%29.jpg",
+      "licenza": "Public domain",
+      "autore": "Thomas Stearns Eliot with his sister and his cousin by Lady Ottoline Morrell.jpg : Lady Ottoline Morrell (1873–1938) der"
+     }
     }
    ],
    "pagine": 2,
@@ -1058,7 +1387,14 @@
    "autori": [
     {
      "qid": "Q484141",
-     "nome": "Muhammad Iqbal"
+     "nome": "Muhammad Iqbal",
+     "foto": {
+      "file": "Iqbal 2.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Iqbal_2.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Iqbal_2.jpg",
+      "licenza": "Public domain",
+      "autore": "Amrita Sher-Gil"
+     }
     }
    ],
    "pagine": 5,
@@ -1079,7 +1415,14 @@
    "autori": [
     {
      "qid": "Q148234",
-     "nome": "Edgar Rice Burroughs"
+     "nome": "Edgar Rice Burroughs",
+     "foto": {
+      "file": "BurroughsEdgarRice.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/BurroughsEdgarRice.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:BurroughsEdgarRice.jpg",
+      "licenza": "Public domain",
+      "autore": "Unknown author"
+     }
     }
    ],
    "pagine": 5,
@@ -1107,7 +1450,14 @@
    "autori": [
     {
      "qid": "Q430182",
-     "nome": "C. S. Forester"
+     "nome": "C. S. Forester",
+     "foto": {
+      "file": "C. S. Forester in 1939.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/C._S._Forester_in_1939.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:C._S._Forester_in_1939.jpg",
+      "licenza": "Public domain",
+      "autore": "Bassano Ltd"
+     }
     }
    ],
    "pagine": 2,
@@ -1128,7 +1478,14 @@
    "autori": [
     {
      "qid": "Q515845",
-     "nome": "Arthur Ransome"
+     "nome": "Arthur Ransome",
+     "foto": {
+      "file": "Arthur Ransome in uniform.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Arthur_Ransome_in_uniform.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Arthur_Ransome_in_uniform.jpg",
+      "licenza": "Public domain",
+      "autore": "unknown"
+     }
     }
    ],
    "pagine": 3,
@@ -1158,11 +1515,25 @@
     },
     {
      "qid": "Q4695257",
-     "nome": "Ahmad Ali"
+     "nome": "Ahmad Ali",
+     "foto": {
+      "file": "Ahmed Ali (Pakistani writer), 1974.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ahmed_Ali_%28Pakistani_writer%29%2C_1974.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Ahmed_Ali_%28Pakistani_writer%29%2C_1974.jpg",
+      "licenza": "Public domain",
+      "autore": "International Portrait Gallery"
+     }
     },
     {
      "qid": "Q7402689",
-     "nome": "Sajjad Zaheer"
+     "nome": "Sajjad Zaheer",
+     "foto": {
+      "file": "Sajjad Zaheer.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sajjad_Zaheer.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Sajjad_Zaheer.jpg",
+      "licenza": "Public domain",
+      "autore": "Unknown author"
+     }
     }
    ],
    "pagine": 2,
@@ -1181,7 +1552,14 @@
    "autori": [
     {
      "qid": "Q272706",
-     "nome": "Georgette Heyer"
+     "nome": "Georgette Heyer",
+     "foto": {
+      "file": "Georgette Heyer (New York Herald, 1921).jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Georgette_Heyer_%28New_York_Herald%2C_1921%29.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Georgette_Heyer_%28New_York_Herald%2C_1921%29.jpg",
+      "licenza": "Public domain",
+      "autore": "Unknown author"
+     }
     }
    ],
    "pagine": 2,
@@ -1200,7 +1578,14 @@
    "autori": [
     {
      "qid": "Q33391",
-     "nome": "Leon Trotsky"
+     "nome": "Leon Trotsky",
+     "foto": {
+      "file": "Leon Trotsky (3x4 cropped).jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Leon_Trotsky_%283x4_cropped%29.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Leon_Trotsky_%283x4_cropped%29.jpg",
+      "licenza": "Public domain",
+      "autore": "Unknown author"
+     }
     }
    ],
    "pagine": 3,
@@ -1247,7 +1632,14 @@
    "autori": [
     {
      "qid": "Q325428",
-     "nome": "Miroslav Krleža"
+     "nome": "Miroslav Krleža",
+     "foto": {
+      "file": "Miroslav Krleža 1953.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Miroslav_Krle%C5%BEa_1953.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Miroslav_Krle%C5%BEa_1953.jpg",
+      "licenza": "Public domain",
+      "autore": "Unknown author"
+     }
     }
    ],
    "pagine": 5,
@@ -1262,7 +1654,14 @@
    "autori": [
     {
      "qid": "Q218679",
-     "nome": "Colette"
+     "nome": "Colette",
+     "foto": {
+      "file": "Colette - photo.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Colette_-_photo.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Colette_-_photo.jpg",
+      "licenza": "Public domain",
+      "autore": "Henri Manuel"
+     }
     }
    ],
    "pagine": 3,
@@ -1295,7 +1694,14 @@
    "autori": [
     {
      "qid": "Q134942",
-     "nome": "William Somerset Maugham"
+     "nome": "William Somerset Maugham",
+     "foto": {
+      "file": "Maugham retouched.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Maugham_retouched.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Maugham_retouched.jpg",
+      "licenza": "Public domain",
+      "autore": "Carl Van Vechten (1880 - 1964)"
+     }
     }
    ],
    "pagine": 2,
@@ -1314,7 +1720,14 @@
    "autori": [
     {
      "qid": "Q330376",
-     "nome": "Abraham Grace Merritt"
+     "nome": "Abraham Grace Merritt",
+     "foto": {
+      "file": "Abraham Merritt 001.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Abraham_Merritt_001.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Abraham_Merritt_001.jpg",
+      "licenza": "Public domain",
+      "autore": "Unknown author"
+     }
     }
    ],
    "pagine": 3,
@@ -1370,7 +1783,14 @@
    "autori": [
     {
      "qid": "Q260026",
-     "nome": "Nancy Mitford"
+     "nome": "Nancy Mitford",
+     "foto": {
+      "file": "Nancy-Mitford.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nancy-Mitford.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Nancy-Mitford.jpg",
+      "licenza": "Public domain",
+      "autore": "Unidentified photographer for Bassano Ltd"
+     }
     }
    ],
    "pagine": 2,
@@ -1389,7 +1809,14 @@
    "autori": [
     {
      "qid": "Q36591",
-     "nome": "Vladimir Nabokov"
+     "nome": "Vladimir Nabokov",
+     "foto": {
+      "file": "Vladimir Nabokov 1973.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vladimir_Nabokov_1973.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Vladimir_Nabokov_1973.jpg",
+      "licenza": "Public domain",
+      "autore": "Walter Mori (Mondadori Publishers)"
+     }
     }
    ],
    "pagine": 9,
@@ -1458,7 +1885,14 @@
    "autori": [
     {
      "qid": "Q345104",
-     "nome": "Rafael Sabatini"
+     "nome": "Rafael Sabatini",
+     "foto": {
+      "file": "Good Housekeeping-Vol. 78-578.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Good_Housekeeping-Vol._78-578.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Good_Housekeeping-Vol._78-578.jpg",
+      "licenza": "Public domain",
+      "autore": "The Phelps Publishing Company"
+     }
     }
    ],
    "pagine": 2,
@@ -1477,7 +1911,14 @@
    "autori": [
     {
      "qid": "Q983421",
-     "nome": "Earl Derr Biggers"
+     "nome": "Earl Derr Biggers",
+     "foto": {
+      "file": "Earl Derr Biggers portrait.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Earl_Derr_Biggers_portrait.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Earl_Derr_Biggers_portrait.jpg",
+      "licenza": "Public domain",
+      "autore": "Unknown photographer"
+     }
     }
    ],
    "pagine": 2,
@@ -1496,7 +1937,14 @@
    "autori": [
     {
      "qid": "Q3355",
-     "nome": "Amelia Earhart"
+     "nome": "Amelia Earhart",
+     "foto": {
+      "file": "Amelia Earhart 1935.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Amelia_Earhart_1935.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Amelia_Earhart_1935.jpg",
+      "licenza": "Public domain",
+      "autore": "NBC Photo-NBC Radio"
+     }
     }
    ],
    "pagine": 2,
@@ -1517,7 +1965,14 @@
    "autori": [
     {
      "qid": "Q443325",
-     "nome": "Charles Fort"
+     "nome": "Charles Fort",
+     "foto": {
+      "file": "Fort charles 1920.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fort_charles_1920.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Fort_charles_1920.jpg",
+      "licenza": "Public domain",
+      "autore": "public domain"
+     }
     }
    ],
    "pagine": 3,
@@ -1536,7 +1991,14 @@
    "autori": [
     {
      "qid": "Q148234",
-     "nome": "Edgar Rice Burroughs"
+     "nome": "Edgar Rice Burroughs",
+     "foto": {
+      "file": "BurroughsEdgarRice.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/BurroughsEdgarRice.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:BurroughsEdgarRice.jpg",
+      "licenza": "Public domain",
+      "autore": "Unknown author"
+     }
     }
    ],
    "pagine": 4,
@@ -1557,7 +2019,14 @@
    "autori": [
     {
      "qid": "Q315017",
-     "nome": "Sadegh Hedayat"
+     "nome": "Sadegh Hedayat",
+     "foto": {
+      "file": "Sadeq-Hedayat.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sadeq-Hedayat.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Sadeq-Hedayat.jpg",
+      "licenza": "Public domain",
+      "autore": "Unknown author"
+     }
     }
    ],
    "pagine": 6,
@@ -1597,7 +2066,14 @@
    "autori": [
     {
      "qid": "Q82925",
-     "nome": "Joseph Conrad"
+     "nome": "Joseph Conrad",
+     "foto": {
+      "file": "Joseph Conrad-remastered to black and white.png",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Joseph_Conrad-remastered_to_black_and_white.png?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Joseph_Conrad-remastered_to_black_and_white.png",
+      "licenza": "Public domain",
+      "autore": "George Charles Beresford"
+     }
     }
    ],
    "pagine": 3,
@@ -1623,7 +2099,14 @@
    "autori": [
     {
      "qid": "Q3442258",
-     "nome": "Rosamond Lehmann"
+     "nome": "Rosamond Lehmann",
+     "foto": {
+      "file": "Rosamond Lehmann with her brother John and Lytton Strachey.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rosamond_Lehmann_with_her_brother_John_and_Lytton_Strachey.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Rosamond_Lehmann_with_her_brother_John_and_Lytton_Strachey.jpg",
+      "licenza": "Public domain",
+      "autore": "Unknown author"
+     }
     }
    ],
    "pagine": 2,
@@ -1642,7 +2125,14 @@
    "autori": [
     {
      "qid": "Q560015",
-     "nome": "Hugh Lofting"
+     "nome": "Hugh Lofting",
+     "foto": {
+      "file": "Hughloftingyoung.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hughloftingyoung.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Hughloftingyoung.jpg",
+      "licenza": "Public domain",
+      "autore": "Unknown (Before 1925) Depicts Hugh Lofting (1886-1947)"
+     }
     }
    ],
    "pagine": 4,
@@ -1661,7 +2151,14 @@
    "autori": [
     {
      "qid": "Q34970",
-     "nome": "D. H. Lawrence"
+     "nome": "D. H. Lawrence",
+     "foto": {
+      "file": "D H Lawrence passport photograph.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/D_H_Lawrence_passport_photograph.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:D_H_Lawrence_passport_photograph.jpg",
+      "licenza": "Public domain",
+      "autore": "Unknown author (passport office)"
+     }
     }
    ],
    "pagine": 2,
@@ -1697,7 +2194,14 @@
    "autori": [
     {
      "qid": "Q179059",
-     "nome": "A. J. Cronin"
+     "nome": "A. J. Cronin",
+     "foto": {
+      "file": "A. J. Cronin 1931b.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A._J._Cronin_1931b.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:A._J._Cronin_1931b.jpg",
+      "licenza": "Public domain",
+      "autore": "Bassano Ltd"
+     }
     }
    ],
    "pagine": 3,
@@ -1716,7 +2220,14 @@
    "autori": [
     {
      "qid": "Q333873",
-     "nome": "Valentin Kataev"
+     "nome": "Valentin Kataev",
+     "foto": {
+      "file": "Valentin Kataev.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Valentin_Kataev.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Valentin_Kataev.jpg",
+      "licenza": "CC BY 4.0",
+      "autore": "Unknown author"
+     }
     }
    ],
    "pagine": 2,
@@ -1735,7 +2246,14 @@
    "autori": [
     {
      "qid": "Q207515",
-     "nome": "P. G. Wodehouse"
+     "nome": "P. G. Wodehouse",
+     "foto": {
+      "file": "PGWodehouse.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/PGWodehouse.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:PGWodehouse.jpg",
+      "licenza": "Public domain",
+      "autore": "Unknown author"
+     }
     }
    ],
    "pagine": 2,
@@ -1754,7 +2272,14 @@
    "autori": [
     {
      "qid": "Q1151724",
-     "nome": "Yakup Kadri Karaosmanoğlu"
+     "nome": "Yakup Kadri Karaosmanoğlu",
+     "foto": {
+      "file": "Yakup Kadri Bey Karaosmanoğlu.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Yakup_Kadri_Bey_Karaosmano%C4%9Flu.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Yakup_Kadri_Bey_Karaosmano%C4%9Flu.jpg",
+      "licenza": "Public domain",
+      "autore": "Unknown author"
+     }
     }
    ],
    "pagine": 4,
@@ -1813,7 +2338,14 @@
    "autori": [
     {
      "qid": "Q207640",
-     "nome": "Robert E. Howard"
+     "nome": "Robert E. Howard",
+     "foto": {
+      "file": "Robert E Howard suit.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Robert_E_Howard_suit.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Robert_E_Howard_suit.jpg",
+      "licenza": "Public domain",
+      "autore": "Unknown author"
+     }
     }
    ],
    "pagine": 2,
@@ -1842,7 +2374,14 @@
    "autori": [
     {
      "qid": "Q82925",
-     "nome": "Joseph Conrad"
+     "nome": "Joseph Conrad",
+     "foto": {
+      "file": "Joseph Conrad-remastered to black and white.png",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Joseph_Conrad-remastered_to_black_and_white.png?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Joseph_Conrad-remastered_to_black_and_white.png",
+      "licenza": "Public domain",
+      "autore": "George Charles Beresford"
+     }
     }
    ],
    "pagine": 4,
@@ -1861,7 +2400,14 @@
    "autori": [
     {
      "qid": "Q555298",
-     "nome": "Clark Ashton Smith"
+     "nome": "Clark Ashton Smith",
+     "foto": {
+      "file": "Clark Ashton Smith 1912.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Clark_Ashton_Smith_1912.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Clark_Ashton_Smith_1912.jpg",
+      "licenza": "Public domain",
+      "autore": "Unknown author"
+     }
     }
    ],
    "pagine": 3,
@@ -1883,7 +2429,14 @@
    "autori": [
     {
      "qid": "Q128790",
-     "nome": "Georges Simenon"
+     "nome": "Georges Simenon",
+     "foto": {
+      "file": "GeorgesSimenon-StudioHarcourt-1952.png",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/GeorgesSimenon-StudioHarcourt-1952.png?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:GeorgesSimenon-StudioHarcourt-1952.png",
+      "licenza": "Public domain",
+      "autore": "Studio Harcourt."
+     }
     }
    ],
    "pagine": 6,
@@ -1925,7 +2478,14 @@
    "autori": [
     {
      "qid": "Q42511",
-     "nome": "H. G. Wells"
+     "nome": "H. G. Wells",
+     "foto": {
+      "file": "H.G. Wells by Beresford.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/H.G._Wells_by_Beresford.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:H.G._Wells_by_Beresford.jpg",
+      "licenza": "Public domain",
+      "autore": "George Charles Beresford"
+     }
     }
    ],
    "pagine": 2,
@@ -1944,7 +2504,14 @@
    "autori": [
     {
      "qid": "Q13026668",
-     "nome": "Chote Praepan"
+     "nome": "Chote Praepan",
+     "foto": {
+      "file": "Chot Phraephan (1).jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chot_Phraephan_%281%29.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Chot_Phraephan_%281%29.jpg",
+      "licenza": "Public domain",
+      "autore": "Unknown author"
+     }
     }
    ],
    "pagine": 3,
@@ -1963,7 +2530,14 @@
    "autori": [
     {
      "qid": "Q38392",
-     "nome": "William Faulkner"
+     "nome": "William Faulkner",
+     "foto": {
+      "file": "Carl Van Vechten - William Faulkner (greyscale and cropped).jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Carl_Van_Vechten_-_William_Faulkner_%28greyscale_and_cropped%29.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Carl_Van_Vechten_-_William_Faulkner_%28greyscale_and_cropped%29.jpg",
+      "licenza": "Public domain",
+      "autore": "Carl Van Vechten"
+     }
     }
    ],
    "pagine": 2,
@@ -1982,7 +2556,14 @@
    "autori": [
     {
      "qid": "Q122644",
-     "nome": "Lynd Ward"
+     "nome": "Lynd Ward",
+     "foto": {
+      "file": "Lynd Ward au travail.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lynd_Ward_au_travail.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Lynd_Ward_au_travail.jpg",
+      "licenza": "CC BY-SA 4.0",
+      "autore": "Ignorethissign"
+     }
     }
    ],
    "pagine": 2,
@@ -1997,7 +2578,14 @@
    "autori": [
     {
      "qid": "Q177411",
-     "nome": "Jean Giono"
+     "nome": "Jean Giono",
+     "foto": {
+      "file": "Jean-Giono-1932.png",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jean-Giono-1932.png?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Jean-Giono-1932.png",
+      "licenza": "Public domain",
+      "autore": "Inconnu. Collection AAJG."
+     }
     }
    ],
    "pagine": 5,
@@ -2048,7 +2636,14 @@
    "autori": [
     {
      "qid": "Q155158",
-     "nome": "Kurt Schwitters"
+     "nome": "Kurt Schwitters",
+     "foto": {
+      "file": "Kurt Schwitters.JPG",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kurt_Schwitters.JPG?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Kurt_Schwitters.JPG",
+      "licenza": "Public domain",
+      "autore": "Genja Jonas"
+     }
     }
    ],
    "pagine": 3,
@@ -2063,7 +2658,14 @@
    "autori": [
     {
      "qid": "Q128790",
-     "nome": "Georges Simenon"
+     "nome": "Georges Simenon",
+     "foto": {
+      "file": "GeorgesSimenon-StudioHarcourt-1952.png",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/GeorgesSimenon-StudioHarcourt-1952.png?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:GeorgesSimenon-StudioHarcourt-1952.png",
+      "licenza": "Public domain",
+      "autore": "Studio Harcourt."
+     }
     }
    ],
    "pagine": 8,
@@ -2091,7 +2693,14 @@
    "autori": [
     {
      "qid": "Q42156",
-     "nome": "Henri Bergson"
+     "nome": "Henri Bergson",
+     "foto": {
+      "file": "Henri Bergson 02.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Henri_Bergson_02.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Henri_Bergson_02.jpg",
+      "licenza": "Public domain",
+      "autore": "Henri Manuel"
+     }
     }
    ],
    "pagine": 8,
@@ -2125,7 +2734,14 @@
    "autori": [
     {
      "qid": "Q36591",
-     "nome": "Vladimir Nabokov"
+     "nome": "Vladimir Nabokov",
+     "foto": {
+      "file": "Vladimir Nabokov 1973.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vladimir_Nabokov_1973.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Vladimir_Nabokov_1973.jpg",
+      "licenza": "Public domain",
+      "autore": "Walter Mori (Mondadori Publishers)"
+     }
     }
    ],
    "pagine": 4,
@@ -2144,7 +2760,14 @@
    "autori": [
     {
      "qid": "Q128790",
-     "nome": "Georges Simenon"
+     "nome": "Georges Simenon",
+     "foto": {
+      "file": "GeorgesSimenon-StudioHarcourt-1952.png",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/GeorgesSimenon-StudioHarcourt-1952.png?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:GeorgesSimenon-StudioHarcourt-1952.png",
+      "licenza": "Public domain",
+      "autore": "Studio Harcourt."
+     }
     }
    ],
    "pagine": 3,
@@ -2165,7 +2788,14 @@
    "autori": [
     {
      "qid": "Q5359012",
-     "nome": "Elena Fortún"
+     "nome": "Elena Fortún",
+     "foto": {
+      "file": "Elena Fortún-2.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Elena_Fort%C3%BAn-2.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Elena_Fort%C3%BAn-2.jpg",
+      "licenza": "CC BY-SA 4.0",
+      "autore": "Unknown author"
+     }
     }
    ],
    "pagine": 3,
@@ -2184,7 +2814,14 @@
    "autori": [
     {
      "qid": "Q2712435",
-     "nome": "José Lins do Rego"
+     "nome": "José Lins do Rego",
+     "foto": {
+      "file": "Jose lins 1918.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jose_lins_1918.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Jose_lins_1918.jpg",
+      "licenza": "Public domain",
+      "autore": "unkwnow"
+     }
     }
    ],
    "pagine": 4,
@@ -2224,7 +2861,14 @@
    "autori": [
     {
      "qid": "Q177411",
-     "nome": "Jean Giono"
+     "nome": "Jean Giono",
+     "foto": {
+      "file": "Jean-Giono-1932.png",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jean-Giono-1932.png?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Jean-Giono-1932.png",
+      "licenza": "Public domain",
+      "autore": "Inconnu. Collection AAJG."
+     }
     }
    ],
    "pagine": 3,
@@ -2258,7 +2902,14 @@
    "autori": [
     {
      "qid": "Q1755191",
-     "nome": "Sutan Takdir Alisjahbana"
+     "nome": "Sutan Takdir Alisjahbana",
+     "foto": {
+      "file": "Sutan Takdir Alisjahbana Kesusastraan Modern Indonesia p6.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sutan_Takdir_Alisjahbana_Kesusastraan_Modern_Indonesia_p6.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Sutan_Takdir_Alisjahbana_Kesusastraan_Modern_Indonesia_p6.jpg",
+      "licenza": "Public domain",
+      "autore": "Sjamsuddin"
+     }
     }
    ],
    "pagine": 5,
@@ -2277,7 +2928,14 @@
    "autori": [
     {
      "qid": "Q713658",
-     "nome": "Louis Adamic"
+     "nome": "Louis Adamic",
+     "foto": {
+      "file": "Louis Adamič 1949 obisk v Sloveniji.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Louis_Adami%C4%8D_1949_obisk_v_Sloveniji.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Louis_Adami%C4%8D_1949_obisk_v_Sloveniji.jpg",
+      "licenza": "Public domain",
+      "autore": "Vlastja Simončič"
+     }
     }
    ],
    "pagine": 2,
@@ -2305,7 +2963,14 @@
    "autori": [
     {
      "qid": "Q5560909",
-     "nome": "Gilbert Frankau"
+     "nome": "Gilbert Frankau",
+     "foto": {
+      "file": "Gilbert Frankau.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gilbert_Frankau.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Gilbert_Frankau.jpg",
+      "licenza": "Public domain",
+      "autore": "George Grantham Bain Collection (Library of Congress)"
+     }
     }
    ],
    "pagine": 2,
@@ -2324,7 +2989,14 @@
    "autori": [
     {
      "qid": "Q202537",
-     "nome": "Arkady Gaidar"
+     "nome": "Arkady Gaidar",
+     "foto": {
+      "file": "Гайдар, Аркадий Петрович 001.png",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%93%D0%B0%D0%B9%D0%B4%D0%B0%D1%80%2C_%D0%90%D1%80%D0%BA%D0%B0%D0%B4%D0%B8%D0%B9_%D0%9F%D0%B5%D1%82%D1%80%D0%BE%D0%B2%D0%B8%D1%87_001.png?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:%D0%93%D0%B0%D0%B9%D0%B4%D0%B0%D1%80%2C_%D0%90%D1%80%D0%BA%D0%B0%D0%B4%D0%B8%D0%B9_%D0%9F%D0%B5%D1%82%D1%80%D0%BE%D0%B2%D0%B8%D1%87_001.png",
+      "licenza": "Public domain",
+      "autore": "Unknown author"
+     }
     }
    ],
    "pagine": 4,
@@ -2364,7 +3036,14 @@
    "autori": [
     {
      "qid": "Q188838",
-     "nome": "Roberto Arlt"
+     "nome": "Roberto Arlt",
+     "foto": {
+      "file": "RobertoArlt.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/RobertoArlt.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:RobertoArlt.jpg",
+      "licenza": "Public domain",
+      "autore": "unknow. uploader Claudio Elias"
+     }
     }
    ],
    "pagine": 3,
@@ -2426,7 +3105,14 @@
    "autori": [
     {
      "qid": "Q648241",
-     "nome": "Maxence Van Der Meersch"
+     "nome": "Maxence Van Der Meersch",
+     "foto": {
+      "file": "Maxence Van der Meersch 1936.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Maxence_Van_der_Meersch_1936.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Maxence_Van_der_Meersch_1936.jpg",
+      "licenza": "Public domain",
+      "autore": "Agence de presse Meurisse"
+     }
     }
    ],
    "pagine": 4,
@@ -2445,7 +3131,14 @@
    "autori": [
     {
      "qid": "Q4899427",
-     "nome": "Beverley Nichols"
+     "nome": "Beverley Nichols",
+     "foto": {
+      "file": "Beverley Nichols 1963.png",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Beverley_Nichols_1963.png?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Beverley_Nichols_1963.png",
+      "licenza": "Public domain",
+      "autore": "Anonymous Unknown author"
+     }
     }
    ],
    "pagine": 2,
@@ -2464,7 +3157,14 @@
    "autori": [
     {
      "qid": "Q36591",
-     "nome": "Vladimir Nabokov"
+     "nome": "Vladimir Nabokov",
+     "foto": {
+      "file": "Vladimir Nabokov 1973.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vladimir_Nabokov_1973.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Vladimir_Nabokov_1973.jpg",
+      "licenza": "Public domain",
+      "autore": "Walter Mori (Mondadori Publishers)"
+     }
     }
    ],
    "pagine": 2,
@@ -2483,7 +3183,14 @@
    "autori": [
     {
      "qid": "Q5354389",
-     "nome": "Eleanor Smith"
+     "nome": "Eleanor Smith",
+     "foto": {
+      "file": "Lady Eleanor Furneaux Smith.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lady_Eleanor_Furneaux_Smith.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Lady_Eleanor_Furneaux_Smith.jpg",
+      "licenza": "Public domain",
+      "autore": "Bassano Ltd"
+     }
     }
    ],
    "pagine": 2,
@@ -2502,7 +3209,14 @@
    "autori": [
     {
      "qid": "Q1401053",
-     "nome": "Abdul Muis"
+     "nome": "Abdul Muis",
+     "foto": {
+      "file": "Abdul Muis.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Abdul_Muis.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Abdul_Muis.jpg",
+      "licenza": "Public domain",
+      "autore": "Unknown author"
+     }
     }
    ],
    "pagine": 2,
@@ -2521,7 +3235,14 @@
    "autori": [
     {
      "qid": "Q128790",
-     "nome": "Georges Simenon"
+     "nome": "Georges Simenon",
+     "foto": {
+      "file": "GeorgesSimenon-StudioHarcourt-1952.png",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/GeorgesSimenon-StudioHarcourt-1952.png?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:GeorgesSimenon-StudioHarcourt-1952.png",
+      "licenza": "Public domain",
+      "autore": "Studio Harcourt."
+     }
     }
    ],
    "pagine": 5,
@@ -2599,7 +3320,14 @@
    "autori": [
     {
      "qid": "Q496850",
-     "nome": "René Guénon"
+     "nome": "René Guénon",
+     "foto": {
+      "file": "Rene-guenon-1925 (cropped).jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rene-guenon-1925_%28cropped%29.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Rene-guenon-1925_%28cropped%29.jpg",
+      "licenza": "Public domain",
+      "autore": "Unknown author"
+     }
     }
    ],
    "pagine": 3,
@@ -2633,7 +3361,14 @@
    "autori": [
     {
      "qid": "Q207640",
-     "nome": "Robert E. Howard"
+     "nome": "Robert E. Howard",
+     "foto": {
+      "file": "Robert E Howard suit.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Robert_E_Howard_suit.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Robert_E_Howard_suit.jpg",
+      "licenza": "Public domain",
+      "autore": "Unknown author"
+     }
     }
    ],
    "pagine": 2,
@@ -2652,7 +3387,14 @@
    "autori": [
     {
      "qid": "Q207640",
-     "nome": "Robert E. Howard"
+     "nome": "Robert E. Howard",
+     "foto": {
+      "file": "Robert E Howard suit.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Robert_E_Howard_suit.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Robert_E_Howard_suit.jpg",
+      "licenza": "Public domain",
+      "autore": "Unknown author"
+     }
     }
    ],
    "pagine": 2,
@@ -2671,7 +3413,14 @@
    "autori": [
     {
      "qid": "Q128790",
-     "nome": "Georges Simenon"
+     "nome": "Georges Simenon",
+     "foto": {
+      "file": "GeorgesSimenon-StudioHarcourt-1952.png",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/GeorgesSimenon-StudioHarcourt-1952.png?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:GeorgesSimenon-StudioHarcourt-1952.png",
+      "licenza": "Public domain",
+      "autore": "Studio Harcourt."
+     }
     }
    ],
    "pagine": 6,
@@ -2692,7 +3441,14 @@
    "autori": [
     {
      "qid": "Q128790",
-     "nome": "Georges Simenon"
+     "nome": "Georges Simenon",
+     "foto": {
+      "file": "GeorgesSimenon-StudioHarcourt-1952.png",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/GeorgesSimenon-StudioHarcourt-1952.png?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:GeorgesSimenon-StudioHarcourt-1952.png",
+      "licenza": "Public domain",
+      "autore": "Studio Harcourt."
+     }
     }
    ],
    "pagine": 6,
@@ -2713,7 +3469,14 @@
    "autori": [
     {
      "qid": "Q207640",
-     "nome": "Robert E. Howard"
+     "nome": "Robert E. Howard",
+     "foto": {
+      "file": "Robert E Howard suit.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Robert_E_Howard_suit.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Robert_E_Howard_suit.jpg",
+      "licenza": "Public domain",
+      "autore": "Unknown author"
+     }
     }
    ],
    "pagine": 2,
@@ -2732,7 +3495,14 @@
    "autori": [
     {
      "qid": "Q20733",
-     "nome": "Georges Duhamel"
+     "nome": "Georges Duhamel",
+     "foto": {
+      "file": "Georges Duhamel 1930.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Georges_Duhamel_1930.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Georges_Duhamel_1930.jpg",
+      "licenza": "Public domain",
+      "autore": "Anonymous Unknown author"
+     }
     }
    ],
    "pagine": 2,
@@ -2779,7 +3549,14 @@
    "autori": [
     {
      "qid": "Q128790",
-     "nome": "Georges Simenon"
+     "nome": "Georges Simenon",
+     "foto": {
+      "file": "GeorgesSimenon-StudioHarcourt-1952.png",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/GeorgesSimenon-StudioHarcourt-1952.png?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:GeorgesSimenon-StudioHarcourt-1952.png",
+      "licenza": "Public domain",
+      "autore": "Studio Harcourt."
+     }
     }
    ],
    "pagine": 6,
@@ -2807,7 +3584,14 @@
    "autori": [
     {
      "qid": "Q42398",
-     "nome": "Mikhail Sholokhov"
+     "nome": "Mikhail Sholokhov",
+     "foto": {
+      "file": "Михаил Александрович Шолохов.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%9C%D0%B8%D1%85%D0%B0%D0%B8%D0%BB_%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80%D0%BE%D0%B2%D0%B8%D1%87_%D0%A8%D0%BE%D0%BB%D0%BE%D1%85%D0%BE%D0%B2.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:%D0%9C%D0%B8%D1%85%D0%B0%D0%B8%D0%BB_%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80%D0%BE%D0%B2%D0%B8%D1%87_%D0%A8%D0%BE%D0%BB%D0%BE%D1%85%D0%BE%D0%B2.jpg",
+      "licenza": "Public domain",
+      "autore": "Unknown author"
+     }
     }
    ],
    "pagine": 14,
@@ -2833,7 +3617,14 @@
    "autori": [
     {
      "qid": "Q81685",
-     "nome": "François Mauriac"
+     "nome": "François Mauriac",
+     "foto": {
+      "file": "Mauriac Harcourt 1945 2.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mauriac_Harcourt_1945_2.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Mauriac_Harcourt_1945_2.jpg",
+      "licenza": "Public domain",
+      "autore": "Studio Harcourt"
+     }
     }
    ],
    "pagine": 8,
@@ -2852,7 +3643,14 @@
    "autori": [
     {
      "qid": "Q12706",
-     "nome": "Maxim Gorky"
+     "nome": "Maxim Gorky",
+     "foto": {
+      "file": "Maxim Gorky LOC Restored edit1.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Maxim_Gorky_LOC_Restored_edit1.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Maxim_Gorky_LOC_Restored_edit1.jpg",
+      "licenza": "Public domain",
+      "autore": "Herman Mishkin"
+     }
     }
    ],
    "pagine": 4,
@@ -2928,7 +3726,14 @@
    "autori": [
     {
      "qid": "Q315017",
-     "nome": "Sadegh Hedayat"
+     "nome": "Sadegh Hedayat",
+     "foto": {
+      "file": "Sadeq-Hedayat.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sadeq-Hedayat.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Sadeq-Hedayat.jpg",
+      "licenza": "Public domain",
+      "autore": "Unknown author"
+     }
     }
    ],
    "pagine": 3,
@@ -2947,7 +3752,14 @@
    "autori": [
     {
      "qid": "Q23114",
-     "nome": "Lu Xun"
+     "nome": "Lu Xun",
+     "foto": {
+      "file": "LuXun1930.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/LuXun1930.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:LuXun1930.jpg",
+      "licenza": "Public domain",
+      "autore": "Unknown author"
+     }
     }
    ],
    "pagine": 3,
@@ -2966,7 +3778,14 @@
    "autori": [
     {
      "qid": "Q5504807",
-     "nome": "Fritiof Nilsson Piraten"
+     "nome": "Fritiof Nilsson Piraten",
+     "foto": {
+      "file": "Fritiof Nilsson Piraten (cropped).jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fritiof_Nilsson_Piraten_%28cropped%29.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Fritiof_Nilsson_Piraten_%28cropped%29.jpg",
+      "licenza": "Public domain",
+      "autore": "Unknown author"
+     }
     }
    ],
    "pagine": 3,
@@ -2985,7 +3804,14 @@
    "autori": [
     {
      "qid": "Q224029",
-     "nome": "André Maurois"
+     "nome": "André Maurois",
+     "foto": {
+      "file": "Maurois Harcourt 1936.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Maurois_Harcourt_1936.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Maurois_Harcourt_1936.jpg",
+      "licenza": "Public domain",
+      "autore": "Studio Harcourt"
+     }
     }
    ],
    "pagine": 3,
@@ -3027,7 +3853,14 @@
    "autori": [
     {
      "qid": "Q82925",
-     "nome": "Joseph Conrad"
+     "nome": "Joseph Conrad",
+     "foto": {
+      "file": "Joseph Conrad-remastered to black and white.png",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Joseph_Conrad-remastered_to_black_and_white.png?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Joseph_Conrad-remastered_to_black_and_white.png",
+      "licenza": "Public domain",
+      "autore": "George Charles Beresford"
+     }
     }
    ],
    "pagine": 3,
@@ -3053,7 +3886,14 @@
    "autori": [
     {
      "qid": "Q6428924",
-     "nome": "Konda Venkatappaiah"
+     "nome": "Konda Venkatappaiah",
+     "foto": {
+      "file": "Konda Venkatappayya2.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Konda_Venkatappayya2.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Konda_Venkatappayya2.jpg",
+      "licenza": "Public domain",
+      "autore": "surya patrika"
+     }
     }
    ],
    "pagine": 3,
@@ -3098,7 +3938,14 @@
    "autori": [
     {
      "qid": "Q315017",
-     "nome": "Sadegh Hedayat"
+     "nome": "Sadegh Hedayat",
+     "foto": {
+      "file": "Sadeq-Hedayat.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sadeq-Hedayat.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Sadeq-Hedayat.jpg",
+      "licenza": "Public domain",
+      "autore": "Unknown author"
+     }
     }
    ],
    "pagine": 3,
@@ -3117,7 +3964,14 @@
    "autori": [
     {
      "qid": "Q55993",
-     "nome": "Kenji Miyazawa"
+     "nome": "Kenji Miyazawa",
+     "foto": {
+      "file": "Miyazawa Kenji.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Miyazawa_Kenji.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Miyazawa_Kenji.jpg",
+      "licenza": "Public domain",
+      "autore": "Unknown author"
+     }
     }
    ],
    "pagine": 3,
@@ -3154,7 +4008,14 @@
    "autori": [
     {
      "qid": "Q77024",
-     "nome": "Lion Feuchtwanger"
+     "nome": "Lion Feuchtwanger",
+     "foto": {
+      "file": "Lion Feuchtwanger.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lion_Feuchtwanger.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Lion_Feuchtwanger.jpg",
+      "licenza": "Public domain",
+      "autore": "Unknown author"
+     }
     }
    ],
    "pagine": 2,
@@ -3180,7 +4041,14 @@
    "autori": [
     {
      "qid": "Q925452",
-     "nome": "Felix Aderca"
+     "nome": "Felix Aderca",
+     "foto": {
+      "file": "F. Aderca 1936.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/F._Aderca_1936.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:F._Aderca_1936.jpg",
+      "licenza": "Public domain",
+      "autore": "Unknown author"
+     }
     }
    ],
    "pagine": 2,
@@ -3201,7 +4069,14 @@
    "autori": [
     {
      "qid": "Q347412",
-     "nome": "Edogawa Ranpo"
+     "nome": "Edogawa Ranpo",
+     "foto": {
+      "file": "Rampo Edogawa 02.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rampo_Edogawa_02.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Rampo_Edogawa_02.jpg",
+      "licenza": "Public domain",
+      "autore": "Unknown author"
+     }
     }
    ],
    "pagine": 2,
@@ -3220,7 +4095,14 @@
    "autori": [
     {
      "qid": "Q594731",
-     "nome": "Delos W. Lovelace"
+     "nome": "Delos W. Lovelace",
+     "foto": {
+      "file": "Delos W. Lovelace - DPLA - aefdc24eab847e21e232c043301bdc4f.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Delos_W._Lovelace_-_DPLA_-_aefdc24eab847e21e232c043301bdc4f.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Delos_W._Lovelace_-_DPLA_-_aefdc24eab847e21e232c043301bdc4f.jpg",
+      "licenza": "Public domain",
+      "autore": ""
+     }
     }
    ],
    "pagine": 2,
@@ -3248,7 +4130,14 @@
    "autori": [
     {
      "qid": "Q207640",
-     "nome": "Robert E. Howard"
+     "nome": "Robert E. Howard",
+     "foto": {
+      "file": "Robert E Howard suit.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Robert_E_Howard_suit.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Robert_E_Howard_suit.jpg",
+      "licenza": "Public domain",
+      "autore": "Unknown author"
+     }
     }
    ],
    "pagine": 2,
@@ -3269,7 +4158,14 @@
    "autori": [
     {
      "qid": "Q2143362",
-     "nome": "Alexey Novikov-Priboy"
+     "nome": "Alexey Novikov-Priboy",
+     "foto": {
+      "file": "Новиков-Прибой Алексей Силыч.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%9D%D0%BE%D0%B2%D0%B8%D0%BA%D0%BE%D0%B2-%D0%9F%D1%80%D0%B8%D0%B1%D0%BE%D0%B9_%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B9_%D0%A1%D0%B8%D0%BB%D1%8B%D1%87.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:%D0%9D%D0%BE%D0%B2%D0%B8%D0%BA%D0%BE%D0%B2-%D0%9F%D1%80%D0%B8%D0%B1%D0%BE%D0%B9_%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B9_%D0%A1%D0%B8%D0%BB%D1%8B%D1%87.jpg",
+      "licenza": "Public domain",
+      "autore": "Sergey Strunnikov"
+     }
     }
    ],
    "pagine": 2,
@@ -3288,7 +4184,14 @@
    "autori": [
     {
      "qid": "Q2920160",
-     "nome": "Falih Rıfkı Atay"
+     "nome": "Falih Rıfkı Atay",
+     "foto": {
+      "file": "Dinliçoğlu Mustafa Rıfkı Bey.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dinli%C3%A7o%C4%9Flu_Mustafa_R%C4%B1fk%C4%B1_Bey.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Dinli%C3%A7o%C4%9Flu_Mustafa_R%C4%B1fk%C4%B1_Bey.jpg",
+      "licenza": "Public domain",
+      "autore": "Unknown author"
+     }
     }
    ],
    "pagine": 2,
@@ -3309,7 +4212,14 @@
    "autori": [
     {
      "qid": "Q11470546",
-     "nome": "Moritarō Yamada"
+     "nome": "Moritarō Yamada",
+     "foto": {
+      "file": "Moritaro Yamada.JPG",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Moritaro_Yamada.JPG?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Moritaro_Yamada.JPG",
+      "licenza": "Public domain",
+      "autore": "Unknown author"
+     }
     }
    ],
    "pagine": 2,
@@ -3350,7 +4260,14 @@
    "autori": [
     {
      "qid": "Q625815",
-     "nome": "Kim Dong-in"
+     "nome": "Kim Dong-in",
+     "foto": {
+      "file": "김동인 작가.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%EA%B9%80%EB%8F%99%EC%9D%B8_%EC%9E%91%EA%B0%80.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:%EA%B9%80%EB%8F%99%EC%9D%B8_%EC%9E%91%EA%B0%80.jpg",
+      "licenza": "Public domain",
+      "autore": "조선일보"
+     }
     }
    ],
    "pagine": 2,
@@ -3369,7 +4286,14 @@
    "autori": [
     {
      "qid": "Q625815",
-     "nome": "Kim Dong-in"
+     "nome": "Kim Dong-in",
+     "foto": {
+      "file": "김동인 작가.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%EA%B9%80%EB%8F%99%EC%9D%B8_%EC%9E%91%EA%B0%80.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:%EA%B9%80%EB%8F%99%EC%9D%B8_%EC%9E%91%EA%B0%80.jpg",
+      "licenza": "Public domain",
+      "autore": "조선일보"
+     }
     }
    ],
    "pagine": 2,
@@ -3388,7 +4312,14 @@
    "autori": [
     {
      "qid": "Q2428037",
-     "nome": "Cezar Petrescu"
+     "nome": "Cezar Petrescu",
+     "foto": {
+      "file": "Cezar Petrescu.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cezar_Petrescu.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Cezar_Petrescu.jpg",
+      "licenza": "Attribution",
+      "autore": "Unknown author"
+     }
     }
    ],
    "pagine": 2,
@@ -3414,7 +4345,14 @@
    "autori": [
     {
      "qid": "Q353637",
-     "nome": "A. H. Tammsaare"
+     "nome": "A. H. Tammsaare",
+     "foto": {
+      "file": "Anton Hansen Tammsaare, 000290.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Anton_Hansen_Tammsaare%2C_000290.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Anton_Hansen_Tammsaare%2C_000290.jpg",
+      "licenza": "Public domain",
+      "autore": ""
+     }
     }
    ],
    "pagine": 2,
@@ -3433,7 +4371,14 @@
    "autori": [
     {
      "qid": "Q169566",
-     "nome": "H. P. Lovecraft"
+     "nome": "H. P. Lovecraft",
+     "foto": {
+      "file": "H. P. Lovecraft, June 1934.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/H._P._Lovecraft%2C_June_1934.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:H._P._Lovecraft%2C_June_1934.jpg",
+      "licenza": "Public domain",
+      "autore": "Lucius B. Truesdell"
+     }
     },
     {
      "qid": "Q1607236",
@@ -3456,7 +4401,14 @@
    "autori": [
     {
      "qid": "Q555298",
-     "nome": "Clark Ashton Smith"
+     "nome": "Clark Ashton Smith",
+     "foto": {
+      "file": "Clark Ashton Smith 1912.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Clark_Ashton_Smith_1912.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Clark_Ashton_Smith_1912.jpg",
+      "licenza": "Public domain",
+      "autore": "Unknown author"
+     }
     }
    ],
    "pagine": 2,
@@ -3499,7 +4451,14 @@
    "autori": [
     {
      "qid": "Q207640",
-     "nome": "Robert E. Howard"
+     "nome": "Robert E. Howard",
+     "foto": {
+      "file": "Robert E Howard suit.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Robert_E_Howard_suit.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Robert_E_Howard_suit.jpg",
+      "licenza": "Public domain",
+      "autore": "Unknown author"
+     }
     }
    ],
    "pagine": 2,
@@ -3520,7 +4479,14 @@
    "autori": [
     {
      "qid": "Q315017",
-     "nome": "Sadegh Hedayat"
+     "nome": "Sadegh Hedayat",
+     "foto": {
+      "file": "Sadeq-Hedayat.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sadeq-Hedayat.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Sadeq-Hedayat.jpg",
+      "licenza": "Public domain",
+      "autore": "Unknown author"
+     }
     }
    ],
    "pagine": 2,
@@ -3539,7 +4505,14 @@
    "autori": [
     {
      "qid": "Q314993",
-     "nome": "Maurice Leblanc"
+     "nome": "Maurice Leblanc",
+     "foto": {
+      "file": "Maurice Leblanc âgé.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Maurice_Leblanc_%C3%A2g%C3%A9.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Maurice_Leblanc_%C3%A2g%C3%A9.jpg",
+      "licenza": "Public domain",
+      "autore": "Unknown author (Service international photographique / SIPHO S.A.)"
+     }
     }
    ],
    "pagine": 2,
@@ -3565,11 +4538,25 @@
    "autori": [
     {
      "qid": "Q169566",
-     "nome": "H. P. Lovecraft"
+     "nome": "H. P. Lovecraft",
+     "foto": {
+      "file": "H. P. Lovecraft, June 1934.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/H._P._Lovecraft%2C_June_1934.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:H._P._Lovecraft%2C_June_1934.jpg",
+      "licenza": "Public domain",
+      "autore": "Lucius B. Truesdell"
+     }
     },
     {
      "qid": "Q11336366",
-     "nome": "Hazel Heald"
+     "nome": "Hazel Heald",
+     "foto": {
+      "file": "Hazel Heald WS3210.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hazel_Heald_WS3210.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Hazel_Heald_WS3210.jpg",
+      "licenza": "Public domain",
+      "autore": "Stellar Publishing / unidentified staff artist"
+     }
     }
    ],
    "pagine": 2,
@@ -3606,7 +4593,14 @@
    "autori": [
     {
      "qid": "Q128790",
-     "nome": "Georges Simenon"
+     "nome": "Georges Simenon",
+     "foto": {
+      "file": "GeorgesSimenon-StudioHarcourt-1952.png",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/GeorgesSimenon-StudioHarcourt-1952.png?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:GeorgesSimenon-StudioHarcourt-1952.png",
+      "licenza": "Public domain",
+      "autore": "Studio Harcourt."
+     }
     }
    ],
    "pagine": 2,
@@ -3636,7 +4630,14 @@
    "autori": [
     {
      "qid": "Q314993",
-     "nome": "Maurice Leblanc"
+     "nome": "Maurice Leblanc",
+     "foto": {
+      "file": "Maurice Leblanc âgé.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Maurice_Leblanc_%C3%A2g%C3%A9.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Maurice_Leblanc_%C3%A2g%C3%A9.jpg",
+      "licenza": "Public domain",
+      "autore": "Unknown author (Service international photographique / SIPHO S.A.)"
+     }
     },
     {
      "qid": "Q18115496",
