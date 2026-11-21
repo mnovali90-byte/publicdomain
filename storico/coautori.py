@@ -252,8 +252,10 @@ def main():
                      "coautori senza data di morte: «da verificare»; compositore e librettista: avviso, il testo resta libero",
            "autori": ti if ok_ti else {**vecchio.get("autori", {}), **ti},
            "musica": mu if ok_mu else vecchio.get("musica", {}),
-           "consultazione": cons if ok_cons else {**vecchio.get("consultazione", {}), **cons},
-           "creazione": cre if ok_cre else {**vecchio.get("creazione", {}), **cre},
+           # elenchi che si sommano: un'opera già tolta dall'archivio non si vede più, ma deve restare nell'elenco,
+           # altrimenti al giro dopo lo Storico la rimette dentro (errore del 21/11/2026)
+           "consultazione": {**vecchio.get("consultazione", {}), **cons},
+           "creazione": {**vecchio.get("creazione", {}), **cre},
            "per_autore": pa if ok_pa else {**vecchio.get("per_autore", {}), **pa},
            "schede": schede, "n_archivio": len(arch),
            "incompleto": [n for n, ok in (("autori", ok_ti), ("musica", ok_mu), ("per_autore", ok_pa),
