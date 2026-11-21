@@ -689,3 +689,9 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - **Regola usata:** non libero in Francia finché morte + 101 > anno in corso (lettura più prudente: 70 + 30 anni). Le date esatte variano: per Saint-Exupéry fonti diverse dicono 2032 o 2033.
 - **Prove (pagina in locale, Chrome):** «Il piccolo principe» prima risultava LIBERO in Francia, ora DA VERIFICARE con la spiegazione; schede di Némirovsky, Desnos, Saint-Exupéry (anche in inglese) corrette; Joseph Odolant Desnos (morto nel 1849) invariato. Nessun errore nella pagina. Gli 11 autori di partenza vengono dalla prova precedente (stessi dati Wikidata); il workflow li riprende da Wikidata a ogni aggiornamento.
 - **Errori gravi corretti:** 7 autori della Seconda guerra (e le loro opere) risultavano liberi in Francia senza esserlo. Errori nuovi introdotti: nessuno trovato. Resta un limite noto: chi è «morto per la Francia» ma non segnato su Wikidata (es. Pergaud, già libero) non viene riconosciuto.
+
+## 21/11/2026 sera — Controllo dopo i giri di Già pubblici (74c69d44: voci di enciclopedia, nomi italiani)
+- **Giri:** 44928297536 (18:07) e 44931457782 (74c69d44) finiti bene.
+- **Numeri:** opere nell'archivio da 82.189 a 56.516 (−25.673, esattamente le voci di enciclopedia e dizionario previste dalla prova DNB); voci di consultazione segnate in coautori.json: 26.029; nomi italiani: 3.114.
+- **Telefono:** le regole «più respiro» ci sono in Già pubblici (it/en) e in 409 schede autore su 411; le 2 senza sono vecchi rimandi a indirizzi nuovi (pagine vuote che reindirizzano), non schede.
+- **Ricerche (Chrome, in locale):** Tolstoj, Esopo, Joyce: nessuna voce DNB, nessun errore. Trovato un difetto vecchio: Esopo appare «morto nel -563 · libero dal -492» (anni prima di Cristo scritti col meno); da correggere.
