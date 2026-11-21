@@ -630,3 +630,9 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - Risultato: 803 pagine (408 IT, 395 EN). Titolo, h1, descrizione, canonical e dati strutturati identici; 0 link interni persi. Frasi segnalate: quasi tutte il vecchio piede di pagina (ora nel menu e nel nuovo piede) e «Su N opere registrate in Wikidata» diventata «Le più note delle N su Wikidata».
 - Casi speciali visti: Döblin (paese alleato, avviso giallo), Mörne (già libero in UE, conto verso la Spagna), Brecht EN, telefono 390 px: nessuna pagina più larga dello schermo, nessun errore JavaScript.
 - Giudizio: pronta per l'ok di Marco. Le foto in locale non si vedono perché qui non c'è rete (vengono da Wikimedia): online si vedono.
+
+## 21/11/2026 — Indice degli autori col nuovo design (solo in locale, non pubblicato)
+- Come: pagina_indice riscritta in scripts/pagine.py + scripts/stile_indice.css. L'elenco completo resta scritto nella pagina (Google lo legge); i due filtri (Paese, Libero dal) nascondono solo le voci, con la regola 70 anni (morte+71) e Spagna 80 anni (morte+81).
+- Confronto con la pagina online (IT e EN): titolo, descrizione, canonical, h1 identici; 0 link persi; aggiunto il link alla versione in altra lingua.
+- Prove filtri (telefono): tutti 408; Italia 2027 = 122; Spagna 2027 = 90; tutti 2028 = 196; Spagna tutti gli anni = 162; Regno Unito 2028 = 124. Coincidono con gli anni di morte nell'elenco (1946: 90, 1947: 72, 1956: 122, 1957: 124). Nessun errore JavaScript, nessuna pagina più larga dello schermo.
+- Effetto collaterale: le 803 schede cambiano di una riga nel codice (piede: controllo che il nome esista, serviva per l'indice). Nessun cambiamento visibile.

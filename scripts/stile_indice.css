@@ -1,0 +1,26 @@
+/* Indice degli autori (mockup rdr-indice-autori.html, approvato 21/11/2026); si aggiunge a stile_scheda.css */
+main.idx{padding:calc(var(--top) + 9vh) var(--pad) 12vh}
+main.idx h1{font-size:clamp(72px,11vw,180px);line-height:.92;margin:14px 0 0}
+main.idx .lead{font-size:clamp(19px,1.8vw,25px);line-height:1.4;max-width:760px;margin:3vh 0 0;font-weight:500}
+.bar{position:sticky;top:var(--top);z-index:30;background:var(--paper);border-bottom:1px solid var(--ink);margin-top:7vh;padding:10px 0;display:flex;flex-wrap:wrap;gap:10px 28px;align-items:center}
+.fil{display:flex;gap:4px 18px;flex-wrap:wrap}
+.fil label{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--grey);display:flex;align-items:center;gap:8px}
+.fil select{font:500 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink);background:transparent;border:0;border-bottom:2px solid var(--red);padding:4px 18px 4px 0;border-radius:0;appearance:none;-webkit-appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--ink) 50%),linear-gradient(135deg,var(--ink) 50%,transparent 50%);background-position:right 6px center,right 1px center;background-size:5px 5px;background-repeat:no-repeat;cursor:pointer}
+html:not(.js) .fil{display:none}
+.let{display:flex;gap:2px 10px;flex-wrap:wrap;margin-left:auto}
+.let a{font-family:var(--mono);font-size:12px;text-decoration:none;color:var(--grey)}.let a:hover{color:var(--redt)}
+.grp{display:grid;grid-template-columns:120px minmax(0,1fr);gap:24px;border-bottom:1px solid var(--hair);padding:22px 0 18px;scroll-margin-top:calc(var(--top) + 60px)}
+.grp>h2{font-family:var(--disp);font-weight:800;font-size:clamp(60px,6vw,96px);line-height:.92;color:var(--red);margin:-.06em 0 0;padding-top:.06em}
+.names{display:flex;flex-wrap:wrap;gap:4px 30px;align-items:baseline;list-style:none;margin:0;padding:0}
+.names li{margin:0}
+.names a{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:clamp(26px,2.4vw,38px);line-height:1.1;text-decoration:none;color:var(--ink);transition:color .2s}
+.names a span{white-space:nowrap;font-family:var(--mono);font-weight:400;font-size:10.5px;letter-spacing:.04em;color:var(--grey);margin-left:6px;vertical-align:.6em}
+.names a:hover{color:var(--redt)}
+.names li.no,.grp.no{display:none}
+.vuoto{font-size:17px;color:var(--grey);padding:30px 0;display:none}
+.vuoto.on{display:block}
+.idx .note{font-size:13px;color:var(--grey);margin-top:20px;max-width:760px}
+@media (max-width:860px){
+  main.idx h1{font-size:clamp(60px,18vw,100px)}
+  .grp{grid-template-columns:1fr;gap:8px}.let{margin-left:0}.names a{font-size:24px}
+}

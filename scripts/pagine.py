@@ -865,7 +865,7 @@ def _menu_link(lang):
     return v
 
 
-def testa_scheda(lang, titolo, descr, url, alterne_, jsonld, altra, cnt):
+def testa_scheda(lang, titolo, descr, url, alterne_, jsonld, altra, cnt, og_tipo="profile", css_extra=""):
     it = lang == "it"
     menu = "".join(f'<a href="{h}"><span>{esc(t)}</span></a>' for h, t in _menu_link(lang))
     return f"""<!doctype html>
@@ -877,7 +877,7 @@ def testa_scheda(lang, titolo, descr, url, alterne_, jsonld, altra, cnt):
 <title>{titolo}</title>
 <meta name="description" content="{descr}">
 <link rel="canonical" href="{url}">
-{alterne_}<meta property="og:type" content="profile">
+{alterne_}<meta property="og:type" content="{og_tipo}">
 <meta property="og:site_name" content="Public Domain Radar">
 <meta property="og:url" content="{url}">
 <meta property="og:title" content="{titolo}">
@@ -885,7 +885,7 @@ def testa_scheda(lang, titolo, descr, url, alterne_, jsonld, altra, cnt):
 <meta name="twitter:card" content="summary">
 {jsonld}
 <link href="/assets/fonts/fonts.css" rel="stylesheet">
-<style>{CSS_SCHEDA}</style>
+<style>{CSS_SCHEDA}{css_extra}</style>
 <script>document.documentElement.classList.add('js')</script>
 <!-- contatore visite senza cookie (GoatCounter) -->
 <script data-goatcounter="https://pdr.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
@@ -897,7 +897,7 @@ def testa_scheda(lang, titolo, descr, url, alterne_, jsonld, altra, cnt):
   <div class="r">{altra}<button id="mbtn" type="button">MENU</button></div>
 </header>
 <div class="menu" id="menu"><button class="x" id="mx" type="button">{"CHIUDI" if it else "CLOSE"}</button><nav aria-label="{"Sezioni del sito" if it else "Site sections"}">{menu}</nav></div>
-<main>
+<main{' class="idx"' if css_extra else ''}>
 """
 
 
@@ -915,7 +915,7 @@ def piede_scheda(lang):
 <script>
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 $('#mbtn').onclick=()=>$('#menu').classList.add('on'); $('#mx').onclick=()=>$('#menu').classList.remove('on');
-const nm=$('#name'); addEventListener('scroll',()=>document.body.classList.toggle('past',nm.getBoundingClientRect().bottom<0),{{passive:true}});
+const nm=$('#name'); if(nm) addEventListener('scroll',()=>document.body.classList.toggle('past',nm.getBoundingClientRect().bottom<0),{{passive:true}});
 const gg=$('#days'); if(gg){{ const t=new Date(+gg.dataset.y,0,1)-new Date(); if(t>0) gg.textContent=Math.ceil(t/864e5).toLocaleString('{"it-IT" if it else "en-GB"}'); }}
 const cat=$('#cat'); if(cat) new IntersectionObserver(([e],o)=>{{ if(e.isIntersecting){{ cat.classList.add('on'); o.disconnect(); }} }},{{threshold:.4}}).observe(cat);
 $$('.why button').forEach(b=>b.onclick=()=>{{ const w=b.parentElement; w.classList.toggle('on'); b.querySelector('span').textContent=w.classList.contains('on')?'[–]':'[+]'; }});
@@ -1292,27 +1292,64 @@ def pagina_autore(a, slug, lang, ha_altra):
     return "".join(out)
 
 
+CSS_INDICE = (Path(__file__).resolve().parent / "stile_indice.css").read_text()
+
+
 def pagina_indice(voci, lang):
+    """Indice degli autori, grafica «Indice» (mockup rdr-indice-autori.html, approvato da Marco il 21/11/2026).
+    L'elenco è tutto scritto nella pagina (Google lo legge); i due filtri, paese e anno, nascondono solo le voci."""
     it = lang == "it"
+    T = (lambda x, y: x) if it else (lambda x, y: y)
     url = url_pagina(lang)
     titolo = "Indice degli autori in pubblico dominio · Public Domain Radar" if it else "Index of authors entering the public domain · Public Domain Radar"
     descr = (f"{len(voci)} autori con la data di pubblico dominio paese per paese (UE, Italia, Francia, Germania, Spagna, Regno Unito), da dati aperti." if it else
              f"{len(voci)} authors with the public-domain date country by country (EU, Italy, France, Germany, Spain, UK), from open data.")
-    out = [TESTA.format(lang=lang, titolo=esc(titolo), descr=esc(descr), url=url, alterne="", og_tipo="website", jsonld="", css=CSS,
-                        home="/" if it else "/en/", altra_lingua=""), "<main>\n",
-           f"<h1>{'Indice degli autori' if it else 'Index of authors'}</h1>\n",
-           f'<p class="lead">' + (f"{len(voci)} autori con una pagina dedicata: biografia, opere e data di pubblico dominio paese per paese." if it else
-                                  f"{len(voci)} authors with a dedicated page: biography, Italian editions and the public-domain date country by country.") + "</p>\n"]
-    lettera = None
+    gruppi = {}
     for nome, slug, anni in voci:
-        k = (nome[:1] or "#").upper()
-        if k != lettera:
-            if lettera is not None:
-                out.append("</ul>\n")
-            out.append(f"<h2>{esc(k)}</h2>\n<ul>\n")
-            lettera = k
-        out.append(f'<li><a href="/{PERCORSO[lang]}/{slug}/">{esc(nome)}</a> <span class="sotto">{esc(anni)}</span></li>\n')
-    out.append("</ul>\n</main>\n" + PIEDE[lang])
+        k = unicodedata.normalize("NFD", nome[:1] or "#")[:1].upper()
+        if not ("A" <= k <= "Z"):
+            k = "#"
+        gruppi.setdefault(k, []).append((nome, slug, anni))
+    lettere = "".join(f'<a href="#g-{"0" if k == "#" else k}">{k}</a>' for k in gruppi)
+    A = ANNO_PROSSIMO
+    paesi = [("tutti", T("Tutti", "All")), ("it", T("Italia", "Italy")), ("fr", T("Francia", "France")), ("de", T("Germania", "Germany")),
+             ("uk", T("Regno Unito", "United Kingdom")), ("es", T("Spagna", "Spain"))]
+    anni_f = [("tutti", T("Tutti gli anni", "All years"))] + [(str(y), T(f"1° gennaio {y}", f"1 January {y}")) for y in (A, A + 1)]
+    sel = lambda nid, op: f'<select id="{nid}">' + "".join(f'<option value="{v}">{esc(t)}</option>' for v, t in op) + "</select>"
+    lead_n = (f"{len(voci)} autori con una pagina dedicata: biografia, opere e data di pubblico dominio paese per paese." if it else
+              f"{len(voci)} authors with a dedicated page: biography, Italian editions and the public-domain date country by country.")
+    out = [testa_scheda(lang, esc(titolo), esc(descr), url, "", "", f'<a href="{T("/en/author/", "/autore/")}" hreflang="{T("en", "it")}">{T("EN", "IT")}</a>', "", og_tipo="website", css_extra=CSS_INDICE)
+           .replace("@@MARCHIO_S@@", marchio_html(56).replace('<span class="pdr" style="--w:56px">', "").rsplit("</span>", 1)[0]),
+           '<p class="m" style="color:var(--redt)">Public Domain Radar</p>\n',
+           f'<h1>{T("Indice <br>degli autori", "Index <br>of authors")}</h1>\n',
+           f'<p class="lead" id="lead">{lead_n}</p>\n',
+           f'<div class="bar"><div class="fil"><label>{T("Paese", "Country")} {sel("sp", paesi)}</label>'
+           f'<label>{T("Libero dal", "Free from")} {sel("sa", anni_f)}</label></div><nav class="let" id="let" aria-label="{T("Lettere", "Letters")}">{lettere}</nav></div>\n']
+    for k, g in gruppi.items():
+        li = "".join(f'<li data-m="{esc(anni[-4:])}"><a href="/{PERCORSO[lang]}/{slug}/">{esc(nome)}<span>{esc(anni.replace(" – ", "–"))}</span></a></li>' for nome, slug, anni in g)
+        out.append(f'<section class="grp" id="g-{"0" if k == "#" else k}"><h2>{k}</h2><ul class="names">{li}</ul></section>\n')
+    out.append(f'<p class="vuoto" id="vuoto">{T("Nessun autore con questi filtri.", "No authors with these filters.")}</p>\n')
+    out.append(f'<p class="note">{T("Ogni scheda ha biografia, opere e data di pubblico dominio paese per paese. Dati indicativi, non è consulenza legale.", "Each page has the biography, works and public-domain date country by country. Indicative data, not legal advice.")}</p>\n')
+    js = """<script>
+(()=>{const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+// In Italia, Francia, Germania e Regno Unito valgono 70 anni dalla morte (libero il 1° gennaio dell'anno morte+71), in Spagna 80 per chi è morto prima del 1987 (morte+81)
+const ANNI=[@@A@@,@@B@@], TOT=$$('.names li').length;
+let fp='tutti',fa='tutti';
+const dopo=p=>p==='es'?[81]:p==='tutti'?[71,81]:[71];
+function passa(m){ if(fp==='tutti'&&fa==='tutti') return true; const an=fa==='tutti'?ANNI:[+fa]; return an.some(y=>dopo(fp).some(k=>m===y-k)); }
+function render(){ let n=0;
+  $$('.grp').forEach(g=>{ let v=0; g.querySelectorAll('li').forEach(li=>{ const ok=passa(+li.dataset.m); li.classList.toggle('no',!ok); if(ok) v++; }); g.classList.toggle('no',!v); n+=v;
+    const a=$('#let a[href="#'+g.id+'"]'); if(a) a.style.display=v?'':'none'; });
+  $('#lead').textContent=@@LEAD@@;
+  $('#vuoto').classList.toggle('on',!n); }
+$('#sp').onchange=e=>{fp=e.target.value;render();}; $('#sa').onchange=e=>{fa=e.target.value;render();};
+})();
+</script>
+"""
+    lead_js = ("`${n} autori con una pagina dedicata${n<TOT?' tra i '+TOT:''}: biografia, opere e data di pubblico dominio paese per paese.`" if it else
+               "`${n} authors with a dedicated page${n<TOT?' out of '+TOT:''}: biography, Italian editions and the public-domain date country by country.`")
+    out.append(js.replace("@@A@@", str(A)).replace("@@B@@", str(A + 1)).replace("@@LEAD@@", lead_js))
+    out.append(piede_scheda(lang))
     return "".join(out)
 
 

@@ -260,7 +260,7 @@ h1 .w:nth-child(2)>span{animation-delay:70ms}
 <script>
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 $('#mbtn').onclick=()=>$('#menu').classList.add('on'); $('#mx').onclick=()=>$('#menu').classList.remove('on');
-const nm=$('#name'); addEventListener('scroll',()=>document.body.classList.toggle('past',nm.getBoundingClientRect().bottom<0),{passive:true});
+const nm=$('#name'); if(nm) addEventListener('scroll',()=>document.body.classList.toggle('past',nm.getBoundingClientRect().bottom<0),{passive:true});
 const gg=$('#days'); if(gg){ const t=new Date(+gg.dataset.y,0,1)-new Date(); if(t>0) gg.textContent=Math.ceil(t/864e5).toLocaleString('en-GB'); }
 const cat=$('#cat'); if(cat) new IntersectionObserver(([e],o)=>{ if(e.isIntersecting){ cat.classList.add('on'); o.disconnect(); } },{threshold:.4}).observe(cat);
 $$('.why button').forEach(b=>b.onclick=()=>{ const w=b.parentElement; w.classList.toggle('on'); b.querySelector('span').textContent=w.classList.contains('on')?'[–]':'[+]'; });
