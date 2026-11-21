@@ -1,164 +1,18 @@
-<!doctype html>
-<html lang="__LANG__">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-<title>__TITLE__</title>
-<meta name="description" content="__DESC__">
-<link rel="canonical" href="__CANON__">
-<link rel="alternate" hreflang="it" href="https://publicdomainradar.com/gia-pubblici/">
-<link rel="alternate" hreflang="en" href="https://publicdomainradar.com/en/already-public/">
-<link rel="alternate" hreflang="x-default" href="https://publicdomainradar.com/gia-pubblici/">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Public Domain Radar">
-<meta property="og:url" content="__CANON__">
-<meta property="og:title" content="__TITLE__">
-<meta property="og:description" content="__DESC__">
-<meta name="twitter:card" content="summary">
-<link href="/assets/fonts/fonts.css" rel="stylesheet">
-<style>
-:root{--ink:#0C0C10;--carta:#F7F7F4;--vermiglio:#FF4326;--vermiglio-testo:#C2301A;--muto:#5C5C66;--muto-chiaro:#B9B9C6;
---notte:#1C1C24;--bordo-notte:#2E2E3A;--verde:#0E3B2E;--crema:#E9E6DD;
---display:'Big Shoulders Display',Impact,'Arial Narrow',sans-serif;--testo:'Instrument Sans',system-ui,sans-serif;--mono:'DM Mono',ui-monospace,Menlo,monospace;--lato:clamp(20px,4vw,48px)}
-*{box-sizing:border-box}
-body{margin:0;background:var(--carta);color:var(--ink);font-family:var(--testo);-webkit-text-size-adjust:100%}
-a{color:inherit}
-button{font:inherit;color:inherit;cursor:pointer}
-:focus-visible{outline:3px solid var(--vermiglio);outline-offset:3px}
-.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-.cont{max-width:1280px;margin:0 auto;padding-left:var(--lato);padding-right:var(--lato)}
-.scuro{background:var(--ink);color:var(--carta)}
-.mono{font-family:var(--mono);font-weight:500;letter-spacing:.12em;text-transform:uppercase}
-.barra{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 28px;padding-top:24px}
-.barra>a{text-decoration:none}
-nav.nav{display:flex;flex-wrap:wrap;align-items:center;gap:4px 24px;font-family:var(--mono);font-weight:500;font-size:14px}
-nav.nav a{text-decoration:none;color:#A9A9B6;padding:12px 0;border-bottom:2px solid transparent;min-height:44px;display:inline-flex;align-items:center}
-nav.nav a:hover{color:var(--carta)}
-nav.nav a.forte{color:var(--carta)}
-nav.nav a.on{color:var(--carta);border-bottom-color:var(--vermiglio)}
-nav.nav .lingue{display:inline-flex;gap:12px}
-.occ{margin:56px 0 0;font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--vermiglio)}
-h1{margin:14px 0 0;font-family:var(--display);font-weight:900;font-size:clamp(56px,11vw,140px);line-height:.86;text-transform:uppercase}
-h1 em{font-style:normal;color:var(--vermiglio)}
-.lead{margin:20px 0 0;max-width:640px;font-size:clamp(17px,2vw,20px);line-height:1.45}
-.cerca{margin-top:32px;display:flex;max-width:760px}
-.cerca input{flex:1;min-width:0;min-height:60px;padding:0 20px;border:2px solid var(--carta);background:var(--carta);color:var(--ink);font:500 18px var(--testo);border-radius:0}
-.cerca input::placeholder{color:var(--muto)}
-.paesi{margin-top:20px;display:flex;flex-wrap:wrap;align-items:center;gap:8px}
-.paesi .et{font-family:var(--mono);font-size:12px;letter-spacing:.12em;color:#A9A9B6;margin-right:6px}
-.paesi button{min-height:44px;padding:0 16px;border:1.5px solid var(--carta);background:transparent;color:var(--carta);font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase}
-.paesi button[aria-pressed="true"]{background:var(--carta);color:var(--ink)}
-.conti{margin:20px 0 0;max-width:760px;font-size:13px;line-height:1.5;color:var(--muto-chiaro)}
-#risultati{padding-top:48px}
-#risultati:empty{display:none}
-.r-tit{margin:0;font-family:var(--display);font-weight:800;font-size:clamp(32px,4vw,48px);line-height:.95;text-transform:uppercase}
-.r-sotto{margin:8px 0 0;font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--muto)}
-.aut-card{margin-top:24px;display:flex;flex-wrap:wrap;gap:20px;align-items:flex-start;padding:24px;background:#fff;border:1px solid #E4E2DA}
-.aut-card .nome{font-family:var(--display);font-weight:900;font-size:36px;line-height:.95;text-transform:uppercase}
-.aut-card .det{margin-top:6px;font-size:15px;line-height:1.5}
-.aut-card .det b{font-weight:600}
-.link-forte{display:inline-flex;align-items:center;min-height:44px;margin-top:8px;font-weight:600;color:var(--vermiglio-testo)}
-.righe{margin:24px 0 0;padding:0;list-style:none;border-top:1px solid #E4E2DA}
-.riga{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 24px;align-items:center;padding:14px 0;border-bottom:1px solid #E4E2DA}
-.riga button.tit{all:unset;cursor:pointer;display:block}
-.riga button.tit:focus-visible{outline:3px solid var(--vermiglio)}
-.riga .t{font-weight:600;font-size:17px;line-height:1.3}
-.riga .o{color:var(--muto);font-weight:400}
-.riga .a{display:block;margin-top:2px;font-size:13px;color:var(--muto)}
-.badge{display:flex;flex-wrap:wrap;gap:6px;justify-content:flex-end}
-.b{display:inline-flex;gap:6px;align-items:center;min-height:28px;padding:0 8px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;border:1px solid #CFCCC2;background:#fff;color:var(--muto)}
-.b.si{background:var(--verde);border-color:var(--verde);color:var(--carta)}
-.b.ver{background:#F2B705;border-color:#F2B705;color:var(--ink)}
-.b.attivo{outline:2px solid var(--vermiglio);outline-offset:1px}
-.nota{margin:20px 0 0;max-width:860px;font-size:13px;line-height:1.55;color:var(--muto)}
-.box-no{margin-top:24px;padding:24px;background:var(--crema);font-size:16px;line-height:1.5;max-width:860px}
-.box-no .k{font-family:var(--display);font-weight:900;font-size:30px;text-transform:uppercase;line-height:1;display:block;margin-bottom:8px}
-.bottone{display:inline-flex;align-items:center;min-height:44px;padding:0 20px;background:var(--vermiglio);color:var(--ink);text-decoration:none;font-weight:600;border:0;margin-top:12px}
-.altro{margin-top:16px;min-height:44px;padding:0 18px;border:1.5px solid var(--ink);background:transparent;font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase}
-#scaffali{margin-top:0}
-#risultati:not(:empty){padding-bottom:56px}
-#scaffali .dentro{padding-top:64px;padding-bottom:88px}
-.h2{margin:12px 0 0;font-family:var(--display);font-weight:900;font-size:clamp(48px,8vw,104px);line-height:.88;text-transform:uppercase}
-.intro{margin:16px 0 0;max-width:680px;font-size:16px;line-height:1.5}
-.scaffale{margin-top:56px}
-.s-testa{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 16px}
-.s-testa h3{margin:0;font-family:var(--display);font-weight:800;font-size:clamp(30px,3.4vw,44px);line-height:.95;text-transform:uppercase}
-.s-testa p{margin:8px 0 0;max-width:640px;font-size:14px;line-height:1.5;color:var(--muto-chiaro)}
-.s-testa button{background:none;border:0;min-height:44px;font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muto-chiaro);text-decoration:underline}
-.fila{margin-top:20px;display:flex;gap:16px;overflow-x:auto;padding-bottom:12px;scroll-snap-type:x proximity}
-.fila.tutta{flex-wrap:wrap;overflow:visible}
-.copertina{flex:none;width:184px;height:276px;padding:0;text-align:left;display:flex;flex-direction:column;justify-content:flex-end;border:0;position:relative;overflow:hidden;scroll-snap-align:start;transition:transform .15s}
-.copertina:hover{transform:translateY(-4px)}
-.copertina .trama{position:absolute;inset:0;background-repeat:repeat;background-size:58px 58px;background-position:-6px -4px}
-.copertina .fascia{position:relative;background:inherit;padding:16px 20px 20px;display:flex;flex-direction:column;gap:10px}
-.copertina .t{font-family:var(--display);font-weight:900;line-height:.92;text-transform:uppercase;overflow-wrap:normal;word-break:normal;hyphens:none}
-.copertina .a{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;line-height:1.4}
-.c0{background:var(--vermiglio);color:var(--ink)}.c1{background:var(--crema);color:var(--ink)}.c2{background:var(--verde);color:var(--carta)}.c3{background:var(--notte);color:var(--carta);border:1px solid var(--bordo-notte)}
-.quadro{flex:none;width:184px;padding:0;border:0;background:none;text-align:left;color:var(--carta)}
-.quadro .q{position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;width:184px;height:184px}
-.quadro .q .trama{position:absolute;inset:0;background-repeat:repeat;background-size:58px 58px;background-position:-6px -4px}
-.quadro .q .f{position:relative;background:inherit;padding:12px 16px 14px;display:flex;flex-direction:column;gap:4px}
-.quadro .k{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase}
-.quadro .n{font-family:var(--display);font-weight:900;font-size:28px;line-height:.92;text-transform:uppercase;overflow-wrap:normal;word-break:normal;hyphens:none}
-.quadro .c{display:block;margin-top:10px;font-size:13px;line-height:1.35;color:var(--muto-chiaro)}
-.classifica{list-style:none;margin:24px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:24px 32px}
-.classifica button{all:unset;cursor:pointer;display:flex;align-items:center;gap:16px;min-height:120px;color:var(--carta)}
-.classifica button:focus-visible{outline:3px solid var(--vermiglio)}
-.classifica .pos{flex:none;width:76px;text-align:right;font-family:var(--display);font-weight:900;font-size:80px;line-height:.8;color:var(--vermiglio)}
-.classifica .foto{flex:none;position:relative;width:120px;height:120px;overflow:hidden;background:var(--notte)}
-.classifica .foto img{display:block;width:120px;height:120px;object-fit:cover;object-position:center 20%}
-.classifica .foto .ini{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding-bottom:22px;font-family:var(--display);font-weight:900;font-size:56px;color:#3A3A46}
-.classifica .foto .cog{position:absolute;left:0;right:0;bottom:0;padding:6px 8px;background:var(--ink);color:var(--carta);font-family:var(--display);font-weight:900;font-size:18px;line-height:1;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.classifica .nm{font-weight:600;font-size:17px;line-height:1.25}
-.classifica .nn{display:block;margin-top:4px;font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--muto-chiaro)}
-.crediti{margin:20px 0 0;font-size:12px;line-height:1.5;color:#8A8A96;max-width:900px}
-.crediti a{color:#A9A9B6}
-.vuoto{margin-top:16px;color:var(--muto-chiaro);font-size:14px}
-footer{padding:48px 0 64px;font-size:13px;line-height:1.6;color:var(--muto)}
-footer p{max-width:860px}
-#finestra{position:fixed;inset:0;z-index:20;background:rgba(12,12,16,.7);display:flex;justify-content:center;align-items:flex-start;overflow-y:auto;padding:24px 12px}
-#finestra[hidden]{display:none}
-#finestra .pan{position:relative;width:100%;max-width:980px;background:var(--carta);color:var(--ink);padding:32px clamp(20px,4vw,40px) 40px}
-#finestra .chiudi{position:absolute;top:12px;right:12px;width:44px;height:44px;border:0;background:var(--ink);color:var(--carta);font-size:22px}
-#finestra h2{margin:0 48px 0 0;font-family:var(--display);font-weight:900;font-size:clamp(34px,5vw,56px);line-height:.92;text-transform:uppercase}
-.griglia{margin-top:24px;display:flex;flex-wrap:wrap;gap:16px}
-.griglia .copertina{width:calc(25% - 12px);min-width:150px;height:230px}
-.stati{margin:20px 0 0;padding:0;list-style:none}
-.stati li{display:grid;grid-template-columns:110px 1fr;gap:12px;padding:10px 0;border-bottom:1px solid #E4E2DA;font-size:15px;line-height:1.45}
-.stati .p{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
-@media (max-width:640px){.riga{grid-template-columns:1fr}.badge{justify-content:flex-start}.copertina{width:156px;height:240px}.griglia .copertina{width:calc(50% - 8px);min-width:0;height:210px}.classifica{grid-template-columns:1fr}.classifica .pos{width:52px;font-size:56px}.classifica .foto,.classifica .foto img{width:96px;height:96px}.stati li{grid-template-columns:1fr}}
-@media (prefers-reduced-motion:reduce){.copertina{transition:none}}
-__CSS_MARCHIO__
-</style>
-<script data-goatcounter="https://pdr.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-</head>
-<body>
-<section class="scuro">
-<div class="cont" style="padding-bottom:64px">
-<header class="barra">
-<a href="__HOME__" aria-label="Public Domain Radar">__MARCHIO__</a>
-<nav class="nav" aria-label="__NAV_ARIA__">__NAV__</nav>
-</header>
-<p class="occ" id="occ"></p>
-<h1 id="h1"></h1>
-<p class="lead" id="lead"></p>
-<form class="cerca" role="search" onsubmit="return false">
-<label class="sr" for="q" id="q-et"></label>
-<input id="q" type="search" autocomplete="off" spellcheck="false">
-</form>
-<div class="paesi" role="group" id="paesi"></div>
-<p class="conti" id="conti"></p>
-<noscript><p class="conti">JavaScript is needed for the search. / Per la ricerca serve JavaScript.</p></noscript>
-</div>
+<section class="open">
+<p class="m k">__OCC__</p>
+<h1 class="h1">__H1__</h1>
+<p class="lead">__LEAD__</p>
+<form class="q" id="qw" role="search" onsubmit="return false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><label class="sr" for="q">__CERCA__</label><input id="q" type="search" placeholder="__CERCA__" autocomplete="off" spellcheck="false"><button class="clr" id="clr" type="button">__CANC__</button></form>
+<p class="try">__PROVA__</p>
+<div class="cs" role="group" id="paesi"></div>
+<p class="facts" id="conti"></p>
+<noscript><p class="facts">JavaScript is needed for the search. / Per la ricerca serve JavaScript.</p></noscript>
 </section>
-<main>
-<section class="cont" id="risultati" aria-live="polite"></section>
-<section class="scuro" id="scaffali"><div class="cont dentro" id="scaffali-corpo"></div></section>
-</main>
-<footer><div class="cont" id="piede"></div></footer>
-<div id="finestra" hidden><div class="pan" role="dialog" aria-modal="true" aria-labelledby="fin-tit"><button class="chiudi" type="button" id="fin-chiudi">×</button><div id="fin-corpo"></div></div></div>
+<section class="res" id="risultati" aria-live="polite"></section>
+<div id="scaffali-corpo"></div>
+<div id="finestra" hidden><div class="pan" role="dialog" aria-modal="true" aria-labelledby="fin-tit"><button class="chiudi" type="button" id="fin-chiudi">__CHIUDI__</button><div id="fin-corpo"></div></div></div>
 <script>
+(() => {
 "use strict";
 const LING = document.documentElement.lang === "en" ? "en" : "it";
 const SIMBOLI = __SIMBOLI__;
@@ -462,19 +316,20 @@ const autoriTxt = (o) => o.au.slice(0, 2).map((a) => a.n).join(", ");
 const annoTxt = (y) => (y === null ? "" : y < 0 ? (LING === "it" ? `${-y} a.C.` : `${-y} BC`) : String(y));
 function copertina(o) {
   const t = titolo(o), c = hashNumero(t + autoriTxt(o)) % 4;
-  let dim = t.length <= 12 ? 34 : t.length <= 24 ? 28 : t.length <= 40 ? 22 : 18;
   const lunga = Math.max(...t.split(/\s+/).map((w) => w.length));
-  dim = Math.max(14, Math.min(dim, Math.floor(106 / (0.5 * lunga))));
+  let dim = t.length <= 14 ? 30 : t.length <= 28 ? 25 : t.length <= 45 ? 20 : 16;
+  dim = Math.max(13, Math.min(dim, Math.floor(150 / (0.5 * lunga))));
   const sotto = [autoriTxt(o), annoTxt(o.y)].filter(Boolean).join(" · ");
-  return h("button", { class: `copertina c${c}`, type: "button", "aria-label": [t, sotto].filter(Boolean).join(", "), onclick: () => apriOpera(o) },
-    trama(o.g, t, c), h("span", { class: "fascia" }, h("span", { class: "t", style: `font-size:${dim}px` }, t), sotto ? h("span", { class: "a" }, sotto) : null));
+  return h("button", { class: "bk", type: "button", role: "listitem", "aria-label": [t, sotto].filter(Boolean).join(", "), onclick: () => apriOpera(o) },
+    h("span", { class: `cvr c${c}`, "aria-hidden": "true" }, h("span", {}, annoTxt(o.y)), h("b", { style: `font-size:${dim}px` }, t), h("span", {}, (o.au[0] && o.au[0].n) || "")),
+    h("p", {}, t, h("span", {}, sotto)));
 }
 
 /* ---------- finestra ---------- */
 let _prima = null;
 function finestra(...contenuto) {
   _prima = document.activeElement;
-  $("#fin-corpo").replaceChildren(...contenuto);
+  $("#fin-corpo").replaceChildren(...contenuto.filter((x) => x !== null && x !== undefined));   // prima un null diventava la scritta «null»
   $("#finestra").hidden = false;
   document.body.style.overflow = "hidden";
   $("#fin-chiudi").focus();
@@ -505,7 +360,7 @@ function apriOpera(o) {
   finestra(h("h2", { id: "fin-tit" }, titolo(o)),
     orig ? h("p", { style: "margin:8px 0 0;color:#5C5C66" }, orig) : null,
     h("p", { style: "margin:12px 0 0;font-size:16px" }, [autoriTxt(o), o.y !== null ? tr("uscita", { y: annoTxt(o.y) }) : L.uscitaNd].filter(Boolean).join(" · ")),
-    h("h3", { class: "mono", style: "margin:24px 0 0;font-size:12px;color:#C2301A" }, L.stati),
+    h("h3", { class: "mono", style: "margin:24px 0 0;font-size:12px;color:var(--redt)" }, L.stati),
     h("ul", { class: "stati" }, righe),
     noteOpera(o),
     h("p", {}, h("a", { class: "link-forte", href: `https://www.wikidata.org/wiki/${o.q}`, rel: "noopener", target: "_blank" }, L.wikidata)),
@@ -528,8 +383,8 @@ function noteOpera(o) {   // gruppi, coautori aggiunti a mano, musica e libretto
 function badge(st) {
   if (st.s === "si") return h("span", { class: "b si" }, L.libero);
   if (st.s === "ver") return h("span", { class: "b ver" }, L.verifica);
-  if (st.s === "dal") return h("span", { class: "b" }, tr("dal", { y: st.y }));
-  return h("span", { class: "b" }, L.nd);
+  if (st.s === "dal") return h("span", { class: "b dal" }, tr("dal", { y: st.y }));
+  return h("span", { class: "b nd" }, L.nd);
 }
 function griglia(tit, sotto, opere) {
   finestra(h("h2", { id: "fin-tit" }, tit), sotto ? h("p", { style: "margin:10px 0 0;color:#5C5C66" }, sotto) : null,
@@ -564,7 +419,7 @@ function rigaOpera(o) {
       h("span", { class: "a" }, [autoriTxt(o), annoTxt(o.y)].filter(Boolean).join(" · "))),
     h("span", { class: "badge" }, ["it", "fr", "de", "es", "uk", "us"].map((c) => {
       const st = stato(o, c), b = badge(st);
-      b.prepend(h("span", { style: "opacity:.75" }, c.toUpperCase()));
+      b.prepend(h("span", {}, c.toUpperCase()));
       if (c === D.paese) b.classList.add("attivo");
       b.setAttribute("title", L.paesi[c]);
       return b;
@@ -647,27 +502,6 @@ const POS_LINGUA = { it: 0, en: 1, fr: 2, de: 3, es: 4 };
 function linguaVisite() { const l = LINGUA_PAESE[D.paese]; return D.misurate && D.misurate.has(l) ? l : null; }
 function vis(o) { const l = linguaVisite(); return l ? o.vl[POS_LINGUA[l]] || 0 : o.v; }
 function primi(lista, n) { return lista.slice().sort((a, b) => vis(b) - vis(a) || b.pg - a.pg).slice(0, n); }
-function scaffale(tit, sotto, elementi, opzioni) {
-  const fila = h("div", { class: "fila", role: "list" }, elementi.length ? elementi.slice(0, 12) : h("p", { class: "vuoto" }, L.vuotoS));
-  const testa = h("div", { class: "s-testa" }, h("div", {}, h("h3", {}, tit), sotto ? h("p", {}, sotto) : null));
-  if (elementi.length > 12 || (opzioni && opzioni.tutto)) {
-    testa.append(h("button", { type: "button", onclick: opzioni && opzioni.tutto ? opzioni.tutto : (e) => {
-      const aperto = fila.classList.toggle("tutta");
-      fila.replaceChildren(...(aperto ? elementi : elementi.slice(0, 12)));
-      e.currentTarget.textContent = aperto ? L.vediMeno : L.vediTutto;
-    } }, L.vediTutto));
-  }
-  return h("div", { class: "scaffale" }, testa, fila);
-}
-function quadro(k, nome, n, colori, conTrama, onclick) {
-  const q = h("span", { class: "q", style: `background:${colori[0]};color:${colori[1]}` });
-  if (conTrama) q.append(conTrama);
-  // la parola più lunga deve stare intera nel quadrato: si rimpicciolisce, non si spezza
-  const lunga = Math.max(...String(nome).split(/\s+/).map((w) => w.length));
-  const dim = Math.max(16, Math.min(28, Math.floor(130 / (0.5 * lunga))));
-  q.append(h("span", { class: "f", style: `background:${colori[0]}` }, h("span", { class: "k" }, k), h("span", { class: "n", style: `font-size:${dim}px` }, nome)));
-  return h("button", { class: "quadro", type: "button", onclick }, q, h("span", { class: "c" }, tr("titoli", { n: num(n) })));
-}
 function classificaAutori(liberi) {
   const per = new Map();
   for (const o of liberi) for (const a of o.au) {
@@ -686,10 +520,10 @@ function classificaAutori(liberi) {
 }
 function voceClassifica(x, i, p) {
   const f = D.foto[x.a.q];
-  const foto = h("span", { class: "foto" }, f ? h("img", { src: f.u, alt: (LING === "it" ? "Ritratto di " : "Portrait of ") + x.a.n, loading: "lazy", decoding: "async", referrerpolicy: "no-referrer" }) : h("span", { class: "ini", "aria-hidden": "true" }, iniziali(x.a.n)),
-    h("span", { class: "cog", "aria-hidden": "true" }, cognome(x.a.n)));
   return h("li", {}, h("button", { type: "button", onclick: () => griglia(x.a.n, tr("titoliLiberi", { n: num(x.opere.length) }) + " " + L.inPaese[p], primi(x.opere, 60)) },
-    h("span", { class: "pos" }, String(i + 1)), foto, h("span", {}, h("span", { class: "nm" }, x.a.n), h("span", { class: "nn" }, tr("titoliLiberi", { n: num(x.opere.length) })))));
+    h("span", { class: "p" }, String(i + 1)),
+    h("span", { class: "f" }, h("i", { "aria-hidden": "true" }, iniziali(x.a.n)), f ? h("img", { src: f.u, alt: (LING === "it" ? "Ritratto di " : "Portrait of ") + x.a.n, loading: "lazy", decoding: "async", referrerpolicy: "no-referrer", onerror: "this.remove()" }) : null),
+    h("span", { class: "n" }, x.a.n, h("span", {}, tr("titoliLiberi", { n: num(x.opere.length) })))));
 }
 function creditiRitratti(lista) {
   const conFoto = lista.filter((x) => D.foto[x.a.q]);
@@ -703,96 +537,120 @@ function creditiRitratti(lista) {
   });
   return p;
 }
+const FRECCIA = (d) => `<svg viewBox="0 0 16 16" aria-hidden="true"><path d="${d < 0 ? "M10 3 5 8l5 5" : "m6 3 5 5-5 5"}" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>`;
+let _tab = 0;
+function sezione(titolo, destra, ...corpo) {
+  return h("section", { class: "sec" }, h("div", { class: "sh m" }, h("h2", {}, titolo), destra ? h("span", {}, destra) : null), ...corpo);
+}
 function disegnaScaffali() {
   const p = D.paese, Y = D.anno, inP = L.inPaese[p];
   const opere = D.opere.slice(0, D.nPrincipali).filter((o) => !o.escl);   // le opere degli scaffali per lingua (in coda) non entrano negli altri scaffali
   const liberi = opere.filter((o) => libera(o, p));
-  const corpo = $("#scaffali-corpo");
-  const s = [h("p", { class: "occ", style: "margin:0" }, tr("giaIn", { p: inP })), h("h2", { class: "h2" }, L.sfoglia), h("p", { class: "intro", html: tr("introS", { p: esc(inP) }) })];
-  s.splice(2, 1, h("p", { class: "intro", html: tr("introS", { p: esc(inP) }) + " " + esc(tr("contaLiberi", { n: num(liberi.length), t: num(opere.length), p: inP })) }));
   const altri = Object.keys(L.paesi).filter((c) => c !== p);
   const soloQui = liberi.filter((o) => altri.some((c) => !libera(o, c)));
-  s.push(scaffale(tr("soloQui", { p: inP }), tr("soloQuiSub", { p: inP }) + (["it", "fr", "de", "uk"].includes(p) ? " " + L.soloQuiUe : ""), primi(soloQui, 30).map(copertina)));
-  let nuovi, sotto;
-  if (p === "us") { nuovi = liberi.filter((o) => o.y === Y - 96); sotto = tr("nuoviUs", { m: Y - 96 }); }
+  let nuovi, sottoN;
+  if (p === "us") { nuovi = liberi.filter((o) => o.y === Y - 96); sottoN = tr("nuoviUs", { m: Y - 96 }); }
   else {
     const m = p === "es" ? Y - 81 : Y - 71;
     nuovi = liberi.filter((o) => { const mm = o.au.filter((a) => !a.an && a.m !== null).map((a) => a.m); return mm.length && Math.max(...mm) === m; });
-    sotto = p === "es" ? tr("nuoviEs", { m }) : tr("nuoviUe", { m, p: inP.charAt(0).toUpperCase() + inP.slice(1) });
+    sottoN = p === "es" ? tr("nuoviEs", { m }) : tr("nuoviUe", { m, p: inP.charAt(0).toUpperCase() + inP.slice(1) });
   }
-  s.push(scaffale(tr("nuovi", { y: Y }), sotto, primi(nuovi, 30).map(copertina)));
-  s.push(scaffale(L.piuLetti, tr("piuLettiSub", { p: inP, s: D.sett, w: L.wiki[linguaVisite() || "tutte"] }), primi(liberi, 30).map(copertina)));
-  // autori
+  // 1. scaffali: tre schede, una fila di copertine che scorre
+  const tabs = [
+    { t: tr("soloQui", { p: inP }), s: tr("soloQuiSub", { p: inP }) + (["it", "fr", "de", "uk"].includes(p) ? " " + L.soloQuiUe : ""), o: primi(soloQui, 60) },
+    { t: tr("nuovi", { y: Y }), s: sottoN, o: primi(nuovi, 60) },
+    { t: L.piuLetti, s: tr("piuLettiSub", { p: inP, s: D.sett, w: L.wiki[linguaVisite() || "tutte"] }), o: primi(liberi, 60) },
+  ];
+  if (_tab >= tabs.length) _tab = 0;
+  const barra = h("div", { class: "tabs", role: "tablist" }), nota = h("p", { class: "tnote" }), fila = h("div", { class: "shelf", role: "list" });
+  const tutto = h("button", { class: "tutto", type: "button" }, L.vediTutto);
+  const scegli = (k) => {
+    _tab = k; const x = tabs[k];
+    [...barra.children].forEach((b, n) => b.setAttribute("aria-selected", n === k ? "true" : "false"));
+    nota.textContent = x.s;
+    fila.replaceChildren(...(x.o.length ? x.o.slice(0, 24).map((o, n) => { const c = copertina(o); c.style.animationDelay = Math.min(n, 8) * 35 + "ms"; return c; }) : [h("p", { class: "vuoto" }, L.vuotoS)]));
+    fila.scrollLeft = 0;
+    tutto.onclick = () => griglia(x.t, inP.charAt(0).toUpperCase() + inP.slice(1), x.o);
+  };
+  tabs.forEach((x, k) => barra.append(h("button", { type: "button", role: "tab", onclick: () => scegli(k) }, x.t)));
+  const frecce = h("div", { class: "arr" }, [-1, 1].map((d) => h("button", { type: "button", "aria-label": d < 0 ? (LING === "it" ? "Indietro" : "Back") : (LING === "it" ? "Avanti" : "Forward"), html: FRECCIA(d),
+    onclick: () => fila.scrollBy({ left: d * fila.clientWidth * .84, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" }) })));
+  scegli(_tab);
+  const s1 = sezione(L.sfoglia, tr("giaIn", { p: inP }),
+    h("p", { class: "lede", html: tr("introS", { p: esc(inP) }) + " " + esc(tr("contaLiberi", { n: num(liberi.length), t: num(opere.length), p: inP })) }),
+    barra, nota, fila, h("div", { class: "shf" }, tutto, frecce));
+  // 2. autori
   const cl = classificaAutori(liberi);
-  const ol = h("ol", { class: "classifica" }, cl.slice(0, 10).map((x, i) => voceClassifica(x, i, p)));
-  const testa = h("div", { class: "s-testa" }, h("div", {}, h("h3", {}, L.autori), h("p", {}, tr("autoriSub", { p: inP, n: cl.length, w: L.wiki[linguaVisite() || "tutte"] }))));
-  if (cl.length > 10) testa.append(h("button", { type: "button", onclick: (e) => {
+  const ol = h("ol", { class: "rk" }, cl.slice(0, 10).map((x, i) => voceClassifica(x, i, p)));
+  const piede = h("div", { class: "shf" });
+  if (cl.length > 10) piede.append(h("button", { class: "tutto", type: "button", onclick: (e) => {
     const aperto = ol.children.length <= 10;
     ol.replaceChildren(...cl.slice(0, aperto ? cl.length : 10).map((x, i) => voceClassifica(x, i, p)));
     e.currentTarget.textContent = aperto ? L.vediMeno : tr("vediTutti", { n: cl.length });
   } }, tr("vediTutti", { n: cl.length })));
-  s.push(h("div", { class: "scaffale" }, testa, cl.length ? ol : h("p", { class: "vuoto" }, L.vuotoS), creditiRitratti(cl)));
-  // generi (con simbolo) e lingue (colore piatto)
+  const s2 = sezione(L.autori, cl.length ? (LING === "it" ? `${cl.length} autori in classifica` : `${cl.length} authors ranked`) : "",
+    h("p", { class: "lede" }, tr("autoriSub", { p: inP, n: cl.length, w: L.wiki[linguaVisite() || "tutte"] })),
+    cl.length ? ol : h("p", { class: "vuoto" }, L.vuotoS), piede, creditiRitratti(cl));
+  // 3. generi e lingue: indice tipografico
   const perG = new Map(), perL = new Map();
   for (const o of liberi) {
     for (const g of o.g) if (GENERI[g]) { if (!perG.has(g)) perG.set(g, []); perG.get(g).push(o); }
     if (o.l) { if (!perL.has(o.l)) perL.set(o.l, []); perL.get(o.l).push(o); }
   }
+  const voceIx = (nome, n, apri, colore) => h("li", {}, h("button", { type: "button", onclick: apri },
+    h("b", {}, colore ? h("i", { class: "sw", style: `background:${colore}` }) : null, nome), h("span", {}, tr("titoli", { n: num(n) }))));
   const gg = [...perG.entries()].sort((a, b) => b[1].length - a[1].length);
-  s.push(scaffale(L.generi, L.generiSub, gg.map(([g, lista], i) => {
-    const c = i % 4;
-    return quadro(L.genere, GENERI[g], lista.length, COLORI_TRAMA[c].map((x, j) => (j === 1 ? (c === 2 || c === 3 ? "#F7F7F4" : "#0C0C10") : x)), trama([g], g, c),
-      () => griglia(GENERI[g], tr("titoli", { n: num(lista.length) }) + " · " + inP, primi(lista, 60)));
-  })));
+  const ulG = h("ul", { class: "ix" }, gg.map(([g, lista]) => voceIx(GENERI[g], lista.length, () => griglia(GENERI[g], tr("titoli", { n: num(lista.length) }) + " · " + inP, primi(lista, 60)))));
+  let ulL, sottoL = L.lingueSub;
   if (D.scaffaliLingua) {
     // regola del 20/11/2026: archivio intero, ordine per visite alla Wikipedia della lingua (storico/scaffali_lingua.py)
-    const sl = Object.entries(D.scaffaliLingua).map(([k, x]) => {
-      const lista = x.o.map(([q]) => D.indice.get(q)).filter((o) => o && !o.escl && libera(o, p));
-      return [k, x, lista];
-    }).filter(([, , lista]) => lista.length >= 3).sort((a, b) => b[1].c - a[1].c);
-    s.push(scaffale(L.lingue, L.lingueSubN, sl.map(([k, x, lista], i) => {
-      const nome = (LING === "it" ? x.n[0] : x.n[1]) || k;
-      const Nome = nome.charAt(0).toUpperCase() + nome.slice(1);
+    sottoL = L.lingueSubN;
+    const sl = Object.entries(D.scaffaliLingua).map(([k, x]) => [k, x, x.o.map(([q]) => D.indice.get(q)).filter((o) => o && !o.escl && libera(o, p))])
+      .filter(([, , lista]) => lista.length >= 3).sort((a, b) => b[1].c - a[1].c);
+    ulL = h("ul", { class: "ix" }, sl.map(([k, x, lista], i) => {
+      const nome = (LING === "it" ? x.n[0] : x.n[1]) || k, Nome = nome.charAt(0).toUpperCase() + nome.slice(1);
       const n = Math.max(lista.length, x.c || 0);   // x.c = tutte le opere della lingua nell'archivio; la pagina ne tiene le 150 più lette
-      return quadro(L.lingua, Nome, n, PIATTI[i % PIATTI.length], null,
-        () => griglia(Nome, tr("titoli", { n: num(n) }) + " · " + tr("piuLetteLingua", { w: x.w }), lista.slice(0, 60)));   // già in ordine di visite
-    })));
+      return voceIx(Nome, n, () => griglia(Nome, tr("titoli", { n: num(n) }) + " · " + tr("piuLetteLingua", { w: x.w }), lista.slice(0, 60)), PIATTI[i % PIATTI.length][0]);
+    }));
   } else {
-  const ll = [...perL.entries()].filter(([, v]) => v.length >= 3).sort((a, b) => b[1].length - a[1].length);
-  s.push(scaffale(L.lingue, L.lingueSub, ll.map(([k, lista], i) => {
-    const nome = (D.lingue[k] && D.lingue[k][LING === "it" ? 1 : 0]) || k;
-    return quadro(L.lingua, nome, lista.length, PIATTI[i % PIATTI.length], null, () => griglia(nome, tr("titoli", { n: num(lista.length) }) + " · " + inP, primi(lista, 60)));
-  })));
+    const ll = [...perL.entries()].filter(([, v]) => v.length >= 3).sort((a, b) => b[1].length - a[1].length);
+    ulL = h("ul", { class: "ix" }, ll.map(([k, lista], i) => {
+      const nome = (D.lingue[k] && D.lingue[k][LING === "it" ? 1 : 0]) || k;
+      return voceIx(nome, lista.length, () => griglia(nome, tr("titoli", { n: num(lista.length) }) + " · " + inP, primi(lista, 60)), PIATTI[i % PIATTI.length][0]);
+    }));
   }
-  corpo.replaceChildren(...s);
+  const s3 = h("section", { class: "sec" }, h("div", { class: "two" },
+    h("div", {}, h("div", { class: "sh m" }, h("h2", {}, L.generi), h("span", {}, inP)), h("p", { class: "sub-ix" }, L.generiSub), ulG),
+    h("div", {}, h("div", { class: "sh m" }, h("h2", {}, L.lingue), h("span", {}, inP)), h("p", { class: "sub-ix" }, sottoL), ulL)));
+  $("#scaffali-corpo").replaceChildren(s1, s2, s3);
 }
+function contatore() { const c = $(".top .cnt"); if (c) c.textContent = (LING === "it" ? "Già pubblici · " : "Already public · ") + L.paesi[D.paese]; }
 
 /* ---------- testata e avvio ---------- */
 function disegnaPaesi() {
   const box = $("#paesi");
   box.setAttribute("aria-label", L.paese);
-  box.replaceChildren(h("span", { class: "et" }, L.paese.toUpperCase()), ...Object.keys(L.paesi).map((c) => h("button", { type: "button", "aria-pressed": c === D.paese ? "true" : "false", onclick: () => {
+  box.replaceChildren(h("span", { class: "m lab" }, L.paese), ...Object.keys(L.paesi).map((c) => h("button", { type: "button", "aria-pressed": c === D.paese ? "true" : "false", onclick: () => {
     D.paese = c; try { localStorage.setItem("pdr-storico-paese", c); } catch (e) { /* ok */ }
-    disegnaPaesi(); disegnaScaffali(); cerca($("#q").value);
+    disegnaPaesi(); disegnaScaffali(); cerca($("#q").value); contatore();
   } }, L.paesi[c])));
 }
 async function avvia() {
-  $("#occ").textContent = L.occ;
-  $("#h1").replaceChildren(L.h1a, h("em", {}, L.h1b), L.h1c);
-  $("#lead").textContent = L.lead;
-  $("#q-et").textContent = L.cerca; $("#q").placeholder = L.cerca;
-  $("#piede").replaceChildren(h("p", {}, L.piede1), h("p", {}, L.piede2), h("p", {}, L.piede3),
-    h("p", {}, L.piede4 + " ", h("a", { href: "https://www.linkedin.com/in/marconovali", rel: "me noopener", target: "_blank" }, "LinkedIn"), " · ",
-      h("a", { href: "https://github.com/mnovali90-byte/publicdomain/issues" }, L.segnala)));
   try { const c = localStorage.getItem("pdr-storico-paese"); if (c && L.paesi[c]) D.paese = c; else if (LING === "en") D.paese = "us"; } catch (e) { if (LING === "en") D.paese = "us"; }
-  disegnaPaesi();
-  $("#scaffali-corpo").replaceChildren(h("p", {}, L.caricamento));
+  disegnaPaesi(); contatore();
+  const qw = $("#qw"), qi = $("#q");
+  const segna = () => qw.classList.toggle("has", !!qi.value);
+  qi.addEventListener("input", segna);
+  $("#clr").addEventListener("click", () => { qi.value = ""; segna(); cerca(""); history.replaceState(null, "", location.pathname); qi.focus(); });
+  document.querySelectorAll(".try button").forEach((b) => b.addEventListener("click", () => { qi.value = b.textContent; segna(); cerca(qi.value); history.replaceState(null, "", "#" + encodeURIComponent(qi.value)); $("#risultati").scrollIntoView({ behavior: "smooth", block: "start" }); }));
+  $("#scaffali-corpo").replaceChildren(h("p", { class: "sec" }, L.caricamento));
   let P;
   try { P = await leggi("/data/storico/pagina.json"); } catch (e) { $("#scaffali-corpo").replaceChildren(h("p", {}, L.errore)); return; }
   D.anno = Number(String(P.aggiornato).slice(0, 4)) || D.anno;
   D.lingue = P.lingue || {};
   try { const reg = await leggi("/data/registro/opere.json"); D.regOpere = reg.coautori || {}; D.verifiche = reg.usa || {}; }
-  catch (e) { D.regOpere = {}; D.verifiche = {}; }   // registro unico: coautori e anni USA D.foto = P.foto || {}; D.prossimi = P.prossimi || [];
+  catch (e) { D.regOpere = {}; D.verifiche = {}; }   // registro unico: coautori e anni USA
+  D.foto = P.foto || {}; D.prossimi = P.prossimi || [];   // prima erano finiti dentro il commento qui sopra: ritratti e «non è ancora libero» non comparivano (21/11/2026)
   const au = P.autori.map((a) => ({ q: a[0], n: nomeA(a[1]), m: a[2], an: !!a[3], inc: a[4] || 0, al: !!a[5] }));
   D.opere = P.opere.map((r) => pulisciAnno({ q: r[0], t: r[1], ti: r[2], y: r[3], yd: r[4], au: r[5].map((i) => au[i]), v: r[6], g: r[7], l: r[8], pg: r[9], escl: !!r[10], vl: r[11] || [] }));
   // lingue di Wikipedia già misurate (le visite in francese, tedesco e spagnolo arrivano con il primo aggiornamento dopo il 19/11/2026)
@@ -807,9 +665,8 @@ async function avvia() {
   let t = null;
   $("#q").addEventListener("input", (e) => { clearTimeout(t); const v = e.target.value; t = setTimeout(() => { cerca(v); history.replaceState(null, "", v.trim() ? "#" + encodeURIComponent(v.trim()) : location.pathname); }, 250); });
   const iniz = decodeURIComponent(location.hash.slice(1) || "");
-  if (iniz) { $("#q").value = iniz; cerca(iniz); }
+  if (iniz) { $("#q").value = iniz; segna(); cerca(iniz); }
 }
 avvia();
+})();
 </script>
-</body>
-</html>

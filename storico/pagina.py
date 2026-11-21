@@ -155,21 +155,48 @@ def nav(lang):
 
 
 def pagine():
+    from pagine import testa_scheda, piede_scheda   # grafica comune del sito (scripts/pagine.py)
     t = (RADICE / "storico" / "pagina.html").read_text(encoding="utf-8")
+    css = (RADICE / "storico" / "stile_gia.css").read_text(encoding="utf-8")
     sim = simboli()
     testi = {
         "it": {"TITLE": "Già pubblici: le opere già in pubblico dominio, paese per paese · Public Domain Radar",
                "DESC": "Cerca un titolo o un autore e scopri se è già in pubblico dominio in Italia, Francia, Germania, Spagna e USA, e da quando. Scaffali dei classici più letti, già liberi. Dati aperti da Wikidata.",
-               "CANON": "https://publicdomainradar.com/gia-pubblici/", "HOME": "/", "NAV_ARIA": "Navigazione", "out": RADICE / "gia-pubblici" / "index.html"},
+               "CANON": "https://publicdomainradar.com/gia-pubblici/", "ALTRA": ("/en/already-public/", "en", "EN"),
+               "OCC": "Storico del pubblico dominio", "H1": "È già libero?", "CERCA": "Cerca un titolo o un autore", "CANC": "Cancella", "CHIUDI": "Chiudi",
+               "LEAD": "Scrivi un titolo o un autore. Ti diciamo se si può già pubblicare e da quando, paese per paese.",
+               "PROVA": ("Prova:", ["Kafka", "Orwell", "Il grande Gatsby", "Brecht", "Frankenstein"]),
+               "out": RADICE / "gia-pubblici" / "index.html"},
         "en": {"TITLE": "Already public: works already in the public domain, country by country · Public Domain Radar",
                "DESC": "Search a title or an author and find out whether it is already in the public domain in Italy, France, Germany, Spain and the USA, and since when. Shelves of the most read classics, already free. Open data from Wikidata.",
-               "CANON": "https://publicdomainradar.com/en/already-public/", "HOME": "/en/", "NAV_ARIA": "Navigation", "out": RADICE / "en" / "already-public" / "index.html"},
+               "CANON": "https://publicdomainradar.com/en/already-public/", "ALTRA": ("/gia-pubblici/", "it", "IT"),
+               "OCC": "Public domain archive", "H1": "Is it free yet?", "CERCA": "Search a title or an author", "CANC": "Clear", "CHIUDI": "Close",
+               "LEAD": "Type a title or an author. We tell you whether it can already be published, and since when, country by country.",
+               "PROVA": ("Try:", ["Kafka", "Orwell", "The Great Gatsby", "Brecht", "Frankenstein"]),
+               "out": RADICE / "en" / "already-public" / "index.html"},
     }
+    alterne = ('<link rel="alternate" hreflang="it" href="https://publicdomainradar.com/gia-pubblici/">\n'
+               '<link rel="alternate" hreflang="en" href="https://publicdomainradar.com/en/already-public/">\n'
+               '<link rel="alternate" hreflang="x-default" href="https://publicdomainradar.com/gia-pubblici/">\n')
     for lang, x in testi.items():
-        s = t.replace("__LANG__", lang).replace("__SIMBOLI__", sim).replace("__MARCHIO__", marchio_html(150)).replace("__CSS_MARCHIO__", CSS_MARCHIO)
-        s = s.replace("__NAV__", nav(lang))
-        for k in ("TITLE", "DESC", "CANON", "HOME", "NAV_ARIA"):
-            s = s.replace(f"__{k}__", x[k])
+        # piede: regole e fonti, dagli stessi testi della pagina (oggetto T)
+        blocco = t[t.index(f"\n{lang}: {{"):]
+        regole = json.loads('"' + re.search(r'piede2: "((?:[^"\\]|\\.)*)"', blocco).group(1) + '"')
+        fonti = json.loads('"' + re.search(r'piede3: "((?:[^"\\]|\\.)*)"', blocco).group(1) + '"')
+        fonti = re.sub(r"^(Fonti|Sources): ", "", fonti)
+        e = lambda v: v.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")
+        h1 = " ".join(f'<span class="w"><span>{e(w)}</span></span>' for w in [x["H1"]])
+        h_, l_, n_ = x["ALTRA"]
+        testa = testa_scheda(lang, e(x["TITLE"]), e(x["DESC"]), x["CANON"], alterne, "", f'<a href="{h_}" hreflang="{l_}">{n_}</a>',
+                             "Già pubblici" if lang == "it" else "Already public", og_tipo="website", css_extra=css, main_cls="gia", body_cls="gia-b")
+        testa = testa.replace("@@MARCHIO_S@@", marchio_html(56).replace('<span class="pdr" style="--w:56px">', "").rsplit("</span>", 1)[0])
+        prova = e(x["PROVA"][0]) + " " + "".join(f'<button type="button">{e(v)}</button>' for v in x["PROVA"][1])
+        corpo = t.replace("__LANG__", lang).replace("__SIMBOLI__", sim)
+        for k in ("OCC", "LEAD", "CERCA", "CANC", "CHIUDI"):
+            corpo = corpo.replace(f"__{k}__", e(x[k]))
+        corpo = corpo.replace("__H1__", h1).replace("__PROVA__", prova)
+        piede = piede_scheda(lang, ("Fonti e regole" if lang == "it" else "Sources and rules", e(fonti) + "</p><p>" + e(regole)))
+        s = testa + corpo + piede
         assert "__" not in re.sub(r"__(proto|dirname)__", "", s).split("<script>")[0], "segnaposto rimasto"
         x["out"].parent.mkdir(parents=True, exist_ok=True)
         x["out"].write_text(s, encoding="utf-8")
