@@ -1,8 +1,14 @@
 {
  "pseudonimi": {
   "John Steinbeck": [],
-  "Manfred B. Lee": [],
-  "Frederic Dannay": []
+  "Manfred B. Lee": [
+   "Ellery Queen",
+   "Barnaby Ross"
+  ],
+  "Frederic Dannay": [
+   "Ellery Queen",
+   "Barnaby Ross"
+  ]
  },
  "Cup of Gold: A Life of Sir Henry Morgan,": {
   "titolo cercato": "Cup of Gold",
@@ -23,17 +29,19 @@
   "titolo cercato": "The Roman Hat Mystery",
   "cognomi": [
    "lee",
-   "dannay"
+   "dannay",
+   "queen",
+   "ross"
   ],
-  "registro del copyright": null,
+  "registro del copyright": 1929,
   "open library": [
-   "nd",
-   null
+   "ok",
+   1929
   ],
   "library of congress": [
    "nd",
    null
   ]
  },
- "duke: The Roman Hat Mystery ora riconosciuta come": null
+ "duke: The Roman Hat Mystery ora riconosciuta come": "Q1147884"
 }
