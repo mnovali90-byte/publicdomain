@@ -109,7 +109,7 @@ def indice_cce(anni=None):
 
 
 def cce(idx, o, cognomi):
-    tw = senza_articolo(parole(re.sub(r"\s*\(.*?\)\s*$", "", o["titolo"])))
+    tw = senza_articolo(parole(va.titolo_cercato(o["titolo"])))   # senza sottotitolo (21/11/2026)
     if not tw:
         return None
     anni = [a for t, au, a in idx.get(tw[0], []) if t[:len(tw)] == tw and (not cognomi or any(c in au for c in cognomi))]
@@ -242,7 +242,7 @@ def puntate_isfdb(o, cognomi, p):
     (prima uscita). Solo righe con lo stesso titolo e il cognome dell'autore. Restituisce (prima, ultima) o None."""
     if not cognomi:
         return None
-    x = scarica("https://www.isfdb.org/cgi-bin/se.cgi?" + urllib.parse.urlencode({"arg": o["titolo"], "type": "All Titles"}), timeout=60, prove=2)
+    x = scarica("https://www.isfdb.org/cgi-bin/se.cgi?" + urllib.parse.urlencode({"arg": va.titolo_cercato(o["titolo"]), "type": "All Titles"}), timeout=60, prove=2)
     time.sleep(1.5)
     if not x:
         return None
@@ -253,7 +253,7 @@ def puntate_isfdb(o, cognomi, p):
         if len(c) < 5 or not any(k in parole(c[4]) for k in cognomi):
             continue
         tit = re.sub(r"\s*\(Part \d+ of \d+\)\s*$", "", c[3])
-        if not stesso_titolo(tit, o["titolo"]) or not re.match(r"^\d{4}", c[0]) or c[0].startswith("0000"):
+        if not stesso_titolo(tit, va.titolo_cercato(o["titolo"])) or not re.match(r"^\d{4}", c[0]) or c[0].startswith("0000"):
             continue
         y = int(c[0][:4])
         if c[1] == "SERIAL":
@@ -308,6 +308,10 @@ def verifica_opera(o, p, dk, idx, orig, vecchio=None, prove_naz=None):
     """Una voce di data/us-anni-verificati.json: [esito, anno, fonte, data, fonti_provate, {fonte: anno}, extra]."""
     q = o["qid"]
     cognomi = [parole(a["nome"])[-1] for a in o.get("autori", []) if parole(a["nome"])]
+    for a in o.get("autori", []):                    # anche gli pseudonimi (Ellery Queen), 21/11/2026
+        for ps in va._PSEUDO.get(a.get("qid"), []):
+            if parole(ps):
+                cognomi.append(parole(ps)[-1])
     trovati, provate = {}, []
     if q in dk:
         trovati["duke"] = dk[q]
@@ -371,6 +375,7 @@ def main():
         d = json.loads((R / "data" / nome).read_text(encoding="utf-8"))
         liste[str(d["anno"])] = d
     orig = originali(sorted({o["qid"] for d in liste.values() for o in d["opere"]}))
+    va.pseudonimi([a["qid"] for d in liste.values() for o in d["opere"] for a in o.get("autori", [])])
     print("titoli originali francesi/tedeschi da Wikidata:", Counter(v[0] for v in orig.values()))
     prove_naz = Counter()
     riepilogo = {}

@@ -69,8 +69,9 @@ def risolvi(autore, titolo):
     t = titolo.replace('"', '\\"')
     r = sparql(f'''SELECT ?w ?wLabel ?wit ?sl ?a ?aLabel ?morte ?en ?itw WHERE {{
       {{ ?w rdfs:label "{t}"@en }} UNION {{ ?w skos:altLabel "{t}"@en }}
-      ?w wdt:P50 ?a ; wikibase:sitelinks ?sl . ?a rdfs:label ?al FILTER(LANG(?al) = "en")
-      FILTER(CONTAINS(LCASE(?al), "{cognome}"))
+      ?w wdt:P50 ?a ; wikibase:sitelinks ?sl .
+      {{ ?a rdfs:label ?al FILTER(LANG(?al) = "en") }} UNION {{ ?a wdt:P742 ?al }}   # anche lo pseudonimo (Ellery Queen)
+      FILTER(CONTAINS(LCASE(STR(?al)), "{cognome}"))
       OPTIONAL {{ ?a wdt:P570 ?morte }}
       OPTIONAL {{ ?w rdfs:label ?wit FILTER(LANG(?wit)="it") }}
       OPTIONAL {{ ?en schema:about ?w; schema:isPartOf <https://en.wikipedia.org/> }}
@@ -105,6 +106,12 @@ def carica(anno_corrente):
     for anno in range(PRIMO_ANNO, anno_corrente + 1):
         c = cache.get(str(anno))
         if c and (anno < anno_corrente or (oggi - date.fromisoformat(c["letto"])).days < 30):
+            # libri non trovati in Wikidata: si riprovano una volta con la ricerca nuova (pseudonimi, 21/11/2026)
+            for v in c["libri"]:
+                if not v.get("wd") and v.get("riprovato") != "pseudonimi":
+                    v["wd"] = risolvi(v["autore"], v["titolo"])
+                    v["riprovato"] = "pseudonimi"
+                    time.sleep(1)
             continue
         libri = libri_anno(anno)
         if libri is None:

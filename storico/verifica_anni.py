@@ -36,6 +36,49 @@ def parole(t):
 _TIPI = None
 
 
+def titolo_cercato(t):
+    """Titolo da cercare nei cataloghi: senza la parte tra parentesi in fondo e senza il sottotitolo dopo i due punti
+    (21/11/2026: «Cup of Gold: A Life of Sir Henry Morgan, Buccaneer...» non si trovava; i cataloghi hanno «Cup of gold»)."""
+    t = re.sub(r"\s*\(.*?\)\s*$", "", t or "")
+    corto = re.split(r"\s*[:;]\s+|\s+[-–—]\s+", t)[0]
+    return corto if parole(corto) else t
+
+
+_PSEUDO = {}
+
+
+def pseudonimi(qids):
+    """Pseudonimi degli autori (P742 di Wikidata): «Ellery Queen» per Manfred B. Lee e Frederic Dannay (21/11/2026).
+    I cataloghi spesso hanno solo lo pseudonimo."""
+    mancano = [q for q in dict.fromkeys(qids) if q not in _PSEUDO and re.fullmatch(r"Q\d+", q or "")]
+    for i in range(0, len(mancano), 50):
+        u = "https://www.wikidata.org/w/api.php?" + urllib.parse.urlencode(
+            {"action": "wbgetentities", "ids": "|".join(mancano[i:i + 50]), "props": "claims", "format": "json"})
+        for t in range(3):
+            try:
+                d = json.load(urllib.request.urlopen(urllib.request.Request(u, headers=UA), timeout=60))
+                break
+            except Exception:
+                time.sleep(5 * (t + 1))
+        else:
+            continue
+        for q, e in d.get("entities", {}).items():
+            _PSEUDO[q] = [c["mainsnak"]["datavalue"]["value"] for c in e.get("claims", {}).get("P742", [])
+                          if isinstance(c["mainsnak"].get("datavalue", {}).get("value"), str)]
+        time.sleep(1)
+    return {q: _PSEUDO.get(q, []) for q in qids}
+
+
+def cognomi_riga(r):
+    """Cognomi degli autori di una riga, più quelli dei loro pseudonimi già letti."""
+    out = [parole(a[1])[-1] for a in r[5] if parole(a[1] or "")]
+    for a in r[5]:
+        for ps in _PSEUDO.get(a[0], []):
+            if parole(ps):
+                out.append(parole(ps)[-1])
+    return list(dict.fromkeys(out))
+
+
 def libera_ue(r):
     """Libera in Europa: la stessa regola di tutto il sito (scripts/regole.py, autori_che_contano), niente copie."""
     global _TIPI
@@ -81,14 +124,15 @@ def duke():
 
 def open_library(r):
     """Anno di prima pubblicazione su Open Library: il più vecchio tra i risultati con lo stesso titolo e lo stesso autore."""
-    titolo = re.sub(r"\s*\(.*?\)\s*$", "", r[1] or "")
+    titolo = titolo_cercato(r[1])
     tw = parole(titolo)
     if not tw:
         return "nd", None
     q = {"title": titolo, "fields": "title,author_name,first_publish_year", "limit": 10}
-    cognomi = [parole(a[1])[-1] for a in r[5] if parole(a[1])]
+    cognomi = cognomi_riga(r)
     if cognomi:
-        q["author"] = r[5][0][1]
+        ps = _PSEUDO.get(r[5][0][0]) if r[5] else None
+        q["author"] = ps[0] if ps else r[5][0][1]   # i cataloghi hanno spesso solo lo pseudonimo
     u = "https://openlibrary.org/search.json?" + urllib.parse.urlencode(q)
     for t in range(3):
         try:
@@ -121,12 +165,12 @@ def sa(t):
 
 def library_of_congress(r):
     """Anno più vecchio tra le edizioni del catalogo LC con lo stesso titolo (campo 245) e il cognome dell'autore."""
-    titolo = re.sub(r"\s*\(.*?\)\s*$", "", r[1] or "")
+    titolo = titolo_cercato(r[1])
     tw = parole(titolo)
     if not tw:
         return "nd", None
     q = f'dc.title="{sa(titolo)}"'   # «bath.name» non è accettato dal catalogo LC (prova del 19/11/2026)
-    cognomi = [parole(a[1])[-1] for a in r[5] if parole(a[1])]
+    cognomi = cognomi_riga(r)
     if cognomi:
         q += f' and dc.creator="{cognomi[0]}"'
     x = None
@@ -205,8 +249,8 @@ def titoli_originali(qids):
 def fonti_forti(r, orig, idx, V):
     """(anno confermato entro il limite, fonte, fonti provate) oppure (None, None, provate). V = scripts/verifica_anni_usa."""
     provate, y = [], r[3]
-    cognomi = [parole(a[1])[-1] for a in r[5] if parole(a[1] or "")]
-    o = {"qid": r[0], "titolo": r[1] or "", "autori": [{"nome": a[1]} for a in r[5]]}
+    cognomi = cognomi_riga(r)
+    o = {"qid": r[0], "titolo": titolo_cercato(r[1]), "autori": [{"nome": a[1]} for a in r[5]]}
     conf = []
     c = V.cce(idx, o, cognomi)
     provate.append("cce")
@@ -252,6 +296,8 @@ def main():
         fatto = {}
     lista = da_controllare()
     dk = duke()
+    pseudonimi([a[0] for r in lista.values() for a in r[5]])
+    print("autori con uno pseudonimo:", sum(1 for v in _PSEUDO.values() if v), flush=True)
     oggi = date.today().isoformat()
     vecchio = (date.today() - timedelta(days=RINFRESCA)).isoformat()
     for q in list(fatto):
