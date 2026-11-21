@@ -133,7 +133,7 @@ def dati():
 
 
 def simboli():
-    s = (RADICE / "index.html").read_text(encoding="utf-8")
+    s = (RADICE / "radar" / "index.html").read_text(encoding="utf-8")
     m = re.search(r"^const SIMBOLI = (\{.*\});$", s, re.M)
     return m.group(1)
 

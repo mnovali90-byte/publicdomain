@@ -1,0 +1,265 @@
+"""La home del sito (21/11/2026): il «frontespizio». Scrive index.html (italiano) ed en/index.html (inglese).
+
+Mockup approvato da Marco il 21/11/2026 (prova 1, «frontespizio»): il titolo di un'opera che si libera il prossimo
+1° gennaio, in grande come in un frontespizio; sotto «Tutti i diritti riservati» viene barrato e sostituito da
+«Libero in Europa / negli Stati Uniti dal 1° gennaio <anno>». Ogni 7 secondi si volta pagina.
+Sotto, una parte di solo testo (per chi legge e per Google): i numeri del prossimo 1° gennaio e le porte del sito.
+Il radar (lo strumento con i filtri) sta su /radar/ e /en/radar/: i vecchi indirizzi con # ci rimandano lì.
+
+Le opere del frontespizio sono una scelta editoriale (OPERE_UE, OPERE_US) ma titoli, autori e «dove» vengono dai dati:
+- Europa: l'autore deve essere nella lista del prossimo anno (data/<anno>.json), cioè morto 70 anni prima;
+- Stati Uniti: l'opera deve essere nella lista USA (data/us-<anno>.json) con l'anno CONFERMATO dal registro
+  (data/us-anni-verificati.json, stato «ok»). Se manca qualcosa, quella pagina non compare.
+Se la scelta non vale per l'anno (cambia il 1° gennaio), si usano gli autori e le opere più letti della lista."""
+import json, re
+from pathlib import Path
+
+RADICE = Path(__file__).resolve().parent.parent
+SITO = "https://publicdomainradar.com"
+
+# scelta per il 1° gennaio 2027: (wikidata dell'autore, indice dell'opera nella sua scheda)
+OPERE_UE = [("Q38757", 0), ("Q207036", 0), ("Q38757", 1), ("Q123075", 0)]
+OPERE_US = ["Q1218608", "Q1217475", "Q1070729"]
+ORDINE = ["ue0", "ue1", "us0", "ue2", "ue3", "us1", "us2"]
+
+
+def esc(s):
+    return str(s).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")
+
+
+def _leggi(p, vuoto=None):
+    try:
+        return json.loads(Path(p).read_text(encoding="utf-8"))
+    except Exception:
+        return vuoto
+
+
+def pagine_frontespizio(anno):
+    ue = _leggi(RADICE / "data" / f"{anno}.json", {}) or {}
+    us = _leggi(RADICE / "data" / f"us-{anno}.json", {}) or {}
+    ver = (_leggi(RADICE / "data" / "us-anni-verificati.json", {}) or {}).get(str(anno), {})
+    pub = us.get("anno_pubblicazione")
+    autori = {a["wikidata"]: a for a in ue.get("autori", [])}
+    opere_us = {o["qid"]: o for o in us.get("opere", [])}
+
+    def us_ok(q):
+        v = ver.get(q)
+        return bool(v and v[0] == "ok" and v[1] == pub)
+    scelte_ue = [(q, i) for q, i in OPERE_UE if q in autori and len(autori[q].get("opere") or []) > i]
+    scelte_us = [q for q in OPERE_US if q in opere_us and us_ok(q)]
+    if not scelte_ue:   # anno nuovo, scelta non aggiornata: i più letti con un'opera
+        cand = sorted((a for a in autori.values() if a.get("letterario") and a.get("opere")), key=lambda a: -(a.get("visite_12m") or 0))
+        scelte_ue = [(a["wikidata"], 0) for a in cand[:4]]
+    if not scelte_us:
+        cand = sorted((o for o in opere_us.values() if us_ok(o["qid"])), key=lambda o: -(o.get("visite_en") or 0))
+        scelte_us = [o["qid"] for o in cand[:3]]
+    pag = {}
+    for k, (q, i) in enumerate(scelte_ue):
+        a, o = autori[q], autori[q]["opere"][i]
+        pag[f"ue{k}"] = {"a": a["nome"], "it": o["titolo"], "en": o.get("titolo_en") or o["titolo"], "dove": "ue"}
+    for k, q in enumerate(scelte_us):
+        o = opere_us[q]
+        nomi = [x["nome"] for x in o.get("autori", [])][:2]
+        pag[f"us{k}"] = {"a": " e ".join(nomi), "a_en": " and ".join(nomi), "it": o.get("titolo_it") or o["titolo"], "en": o["titolo"], "dove": "us"}
+    ordine = [k for k in ORDINE if k in pag] + [k for k in pag if k not in ORDINE]
+    return [pag[k] for k in ordine]
+
+
+def numeri(anno):
+    ue = _leggi(RADICE / "data" / f"{anno}.json", {}) or {}
+    es = _leggi(RADICE / "data" / f"es-{anno}.json", {}) or {}
+    us = _leggi(RADICE / "data" / f"us-{anno}.json", {}) or {}
+    ver = (_leggi(RADICE / "data" / "us-anni-verificati.json", {}) or {}).get(str(anno), {})
+    n = lambda d: sum(1 for a in d.get("autori", []) if a.get("letterario") and a.get("morte"))   # come le pagine dell'anno
+    opere = us.get("opere", [])
+    return {"ue": n(ue), "es": n(es), "us": len(opere), "us_ok": sum(1 for o in opere if (ver.get(o["qid"]) or ["nd"])[0] == "ok"),
+            "pub": us.get("anno_pubblicazione") or anno - 96, "aggiornato": ue.get("aggiornato") or ""}
+
+
+MESI = {"it": ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio", "agosto", "settembre", "ottobre", "novembre", "dicembre"],
+        "en": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]}
+
+
+def data_lunga(iso, lang):
+    try:
+        y, m, d = (int(x) for x in iso.split("-"))
+    except ValueError:
+        return iso
+    return f"{d} {MESI[lang][m - 1]} {y}"
+
+
+def migliaia(n, lang):
+    return f"{n:,}".replace(",", "." if lang == "it" else ",")
+
+
+CSS = r"""
+/* il frontespizio (solo questa parte in Garamond); il resto della home usa lo stile del sito (stile_scheda + stile_anno) */
+.fronte{--serif:'EB Garamond',Garamond,'Times New Roman',serif;--lento:cubic-bezier(.65,0,.35,1);--matita:#6E6C66;
+  font-family:var(--serif);font-feature-settings:'kern','liga','onum';text-rendering:optimizeLegibility;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:110px var(--pad) 64px;min-height:100svh}
+.fronte .sc{font-variant-caps:all-small-caps;letter-spacing:.09em}
+.fronte .autore{margin:0;font-size:clamp(17px,1.5vw,22px);color:var(--matita)}
+.fronte .titolo{margin:.28em auto 0;font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(64px,11.5vw,200px);line-height:.92;letter-spacing:-.015em;text-transform:none;text-wrap:balance;max-width:12ch}
+.fronte .diritti{margin:clamp(28px,4.5vh,56px) auto 0;font-size:clamp(18px,1.6vw,24px);line-height:1.4;max-width:30ch;min-height:2.8em;text-wrap:balance}
+#riga{display:inline}
+#riga.vecchia{color:var(--matita);background:linear-gradient(var(--ink),var(--ink)) left 58%/0% 1.5px no-repeat;transition:background-size .8s var(--lento),opacity .4s}
+#riga.vecchia.barra{background-size:100% 1.5px}
+#riga.vecchia.via{opacity:0}
+#riga.nuova{display:inline-block;clip-path:inset(0 100% 0 0);animation:scrivi 1.1s var(--lento) forwards}
+@keyframes scrivi{to{clip-path:inset(0 0 0 0)}}
+#riga em{font-style:italic}
+.foglio{transition:opacity .7s var(--lento),transform .7s var(--lento)}
+.foglio.via{opacity:0;transform:translateY(-10px)}
+.foglio.arriva{opacity:0;transform:translateY(10px);transition:none}
+.colophon{margin-top:clamp(48px,9vh,110px);display:flex;flex-direction:column;align-items:center;gap:22px}
+.colophon p{margin:0;font-size:clamp(17px,1.35vw,20px);line-height:1.5;max-width:34ch;text-wrap:balance}
+.colophon .giorni{color:var(--red)}
+.colophon .folio{font-style:italic;font-size:15px;color:var(--matita)}
+/* il pulsante è già quello del sito */
+.vai{display:inline-flex;align-items:center;gap:14px;height:56px;padding:0 24px;background:var(--ink);color:var(--paper);text-decoration:none;font-family:var(--mono);font-size:13px;letter-spacing:.1em;text-transform:uppercase;transition:background .3s,color .3s}
+.vai:hover{background:var(--red);color:var(--ink)}
+.home-sotto .sec:first-child{padding-top:6vh}
+.home-sotto .nums{margin:28px 0 0;border-top:0}
+/* sotto un frontespizio centrato anche i numeri stanno al centro della loro colonna */
+.home-sotto .nums a,.home-sotto .nums a+a{text-align:center;padding:26px 24px 30px}
+.home-sotto .nums .c{margin:14px auto 0;max-width:30ch}
+@media (max-width:760px){.home-sotto .nums a,.home-sotto .nums a+a{padding:22px 0 24px}}
+.porte{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));margin-top:0}
+/* come i numeri: ogni sezione al centro della sua cella, con i filetti del sito tra le celle */
+.porta{display:flex;flex-direction:column;align-items:center;text-align:center;padding:34px 28px 38px;border-bottom:1px solid var(--hair);text-decoration:none;color:var(--ink)}
+.porta:nth-child(odd){border-right:1px solid var(--hair)}
+.porta .m{color:var(--redt)}
+.porta h3{margin:12px 0 12px;font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:clamp(34px,3.3vw,52px);line-height:.95;padding-top:.08em}
+.porta p{margin:0 auto;font-size:16px;line-height:1.55;max-width:40ch}
+.porta .go{margin-top:20px;font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;border-bottom:2px solid var(--red);padding-bottom:4px}
+.porta:hover h3{color:var(--red)}
+@media (max-width:760px){.porte{grid-template-columns:1fr}.porta{padding:28px 0 32px}.porta:nth-child(odd){border-right:0}.porta h3{font-size:40px}}
+@media (max-width:760px){.fronte .titolo{min-height:1.84em;display:flex;align-items:flex-end;justify-content:center}.fronte .diritti{font-size:18px}}
+@media (prefers-reduced-motion:reduce){.fronte *{animation-duration:1ms!important;transition-duration:1ms!important}}
+"""
+
+TESTI = {
+    "it": dict(
+        url=f"{SITO}/", altra='<a href="/en/" hreflang="en">EN</a>', radar="/radar/",
+        titolo="Public Domain Radar · Chi diventa libero, e quando",
+        descr="Ogni 1° gennaio scadono i diritti di centinaia di scrittori e di libri. Chi diventa libero nel {a} in Europa e negli Stati Uniti, paese per paese, con dati aperti e fonti di legge.",
+        diritti="Tutti i diritti riservati.",
+        libero={"ue": "Libero in Europa <em>dal 1° gennaio {a}.</em>", "us": "Libero negli Stati Uniti <em>dal 1° gennaio {a}.</em>"},
+        colophon='Ogni 1° gennaio, in Europa e negli Stati Uniti, scadono i diritti di centinaia di libri. Il prossimo è tra <span class="giorni" id="gg"></span> giorni.',
+        cta="Scopri chi si libera nel {a}", folio="{k} di {n}", pagina_anno="/pubblico-dominio-{a}/",
+        cnt=('<span id="cnt"><i class="lg">1° gennaio {a} · </i><i class="sm">1° gen {a} · </i>tra {g} giorni</span>'),
+        nums=[("scrittori liberi in Italia, Francia, Germania e Regno Unito", "morti nel {m}", "/pubblico-dominio-{a}/#ix1", "ue"),
+              ("scrittori liberi in Spagna", "morti nel {me}", "/pubblico-dominio-{a}/", "es"),
+              ("libri liberi negli USA", "pubblicati nel {pub} · {usok} con l'anno confermato", "/pubblico-dominio-{a}/#ix2", "us")],
+        sez=("Da dove partire", "Le sezioni del sito"), sez_n=("Il 1° gennaio {a}", "Chi diventa libero, e dove"),
+        porte=[("/pubblico-dominio-{a}/", "Pubblico dominio {a}", "1° gennaio {a}", "Chi si libera il 1° gennaio, spiegato: i nomi più attesi, i libri americani, le regole paese per paese.", "Leggi"),
+               ("/radar/", "Tutti gli autori", "L'elenco completo", "L'elenco completo dei {ue} scrittori del {a}, da filtrare per paese e genere e scaricare in Excel.", "Cerca"),
+               ("/gia-pubblici/", "Già pubblici", "Archivio", "Cerca un titolo o un autore: è già libero in Italia, Francia, Germania, Spagna, Regno Unito, USA?", "Cerca"),
+               ("/calendario/{a}/", "Calendario {a}", "Anniversari", "Gli anniversari letterari del {a} giorno per giorno, da aggiungere al tuo calendario.", "Apri")],
+        fonti=("Fonti", "Wikidata (CC0), Wikipedia, Project Gutenberg, il registro del copyright americano e i cataloghi delle biblioteche nazionali. Liste aggiornate al {agg}."),
+    ),
+    "en": dict(
+        url=f"{SITO}/en/", altra='<a href="/" hreflang="it">IT</a>', radar="/en/radar/",
+        titolo="Public Domain Radar · Who becomes free, and when",
+        descr="Every 1 January the copyright of hundreds of writers and books expires. Who becomes free in {a} in Europe and the United States, country by country, with open data and legal sources.",
+        diritti="All rights reserved.",
+        libero={"ue": "Free in Europe <em>from 1 January {a}.</em>", "us": "Free in the United States <em>from 1 January {a}.</em>"},
+        colophon='Every 1 January, in Europe and the United States, the copyright of hundreds of books expires. The next one is in <span class="giorni" id="gg"></span> days.',
+        cta="See who becomes free in {a}", folio="{k} of {n}", pagina_anno="/en/public-domain-{a}/",
+        cnt=('<span id="cnt"><i class="lg">1 January {a} · </i><i class="sm">1 Jan {a} · </i>in {g} days</span>'),
+        nums=[("writers free in Italy, France, Germany and the UK", "died in {m}", "/en/public-domain-{a}/#ix1", "ue"),
+              ("writers free in Spain", "died in {me}", "/en/public-domain-{a}/", "es"),
+              ("books free in the USA", "published in {pub} · {usok} with the year confirmed", "/en/public-domain-{a}/#ix2", "us")],
+        sez=("Where to start", "The sections of the site"), sez_n=("1 January {a}", "Who becomes free, and where"),
+        porte=[("/en/public-domain-{a}/", "Public domain {a}", "1 January {a}", "Who becomes free on 1 January, explained: the most awaited names, the American books, the rules country by country.", "Read"),
+               ("/en/radar/", "All authors", "The complete list", "The complete list of the {ue} writers of {a}, to filter by country and genre and download in Excel.", "Search"),
+               ("/en/already-public/", "Already public", "Archive", "Search a title or an author: is it already free in Italy, France, Germany, Spain, the UK, the USA?", "Search"),
+               ("/en/calendar/{a}/", "Calendar {a}", "Anniversaries", "The literary anniversaries of {a}, day by day, to add to your calendar.", "Open")],
+        fonti=("Sources", "Wikidata (CC0), Wikipedia, Project Gutenberg, the US copyright register and national library catalogues. Lists updated on {agg}."),
+    ),
+}
+
+
+def pagina(lang, anno, P):
+    """P: le funzioni del sito (scripts/pagine.py): testa_scheda, piede_scheda, CSS_ANNO, marchio."""
+    import datetime
+    t = TESTI[lang]
+    nu = numeri(anno)
+    gg = max(0, (datetime.date(anno, 1, 1) - datetime.date.today()).days)
+    fmt = dict(a=anno, a1=anno + 1, ue=migliaia(nu["ue"], lang), m=anno - 71, me=anno - 81, pub=nu["pub"], usok=migliaia(nu["us_ok"], lang),
+               agg=data_lunga(nu["aggiornato"][:10], lang), g=migliaia(gg, lang))
+    pag = [{"a": p.get("a_en", p["a"]) if lang == "en" else p["a"], "t": p[lang], "r": t["libero"][p["dove"]].format(a=anno)}
+           for p in pagine_frontespizio(anno)]
+    if not pag:
+        raise RuntimeError("home: nessuna opera per il frontespizio")
+    alterne = (f'<link rel="alternate" hreflang="it" href="{SITO}/">\n<link rel="alternate" hreflang="en" href="{SITO}/en/">\n'
+               f'<link rel="alternate" hreflang="x-default" href="{SITO}/">\n')
+    jsonld = ('<script type="application/ld+json">' + json.dumps({"@context": "https://schema.org", "@type": "WebSite", "name": "Public Domain Radar",
+              "url": t["url"], "inLanguage": lang, "description": t["descr"].format(a=anno)}, ensure_ascii=False) + "</script>")
+    rimando = (f'<script>/* i vecchi indirizzi della home con # (filtri, schede) sono del radar, che ora sta su {t["radar"]} */\n'
+               f'if(location.hash.length>1){{location.replace("{t["radar"]}"+location.hash)}}'
+               + ('' if lang == 'en' else 'else if(new URLSearchParams(location.search).get("lang")==="en"){location.replace("/en/")}') + '</script>\n')
+    testa = P["testa_scheda"](lang, esc(t["titolo"]), esc(t["descr"].format(a=anno)), t["url"], alterne, jsonld, t["altra"],
+                              "@@CNT@@", og_tipo="website", css_extra=P["CSS_ANNO"] + CSS, main_cls="pdd", body_cls="pdd-b")
+    testa = testa.replace("@@CNT@@", t["cnt"].format(**fmt) if gg else "").replace("@@MARCHIO_S@@", P["marchio"]).replace('<meta charset="utf-8">', '<meta charset="utf-8">\n' + rimando, 1)
+    numeri_html = "".join(f'<a href="{h.format(**fmt)}"><span class="n">{migliaia(nu[k], lang)}</span><span class="c">{esc(c)}</span><span class="m">{esc(m.format(**fmt))}</span></a>'
+                          for c, m, h, k in t["nums"] if nu[k])
+    porte = "".join(f'<a class="porta" href="{h.format(**fmt)}"><span class="m">{esc(y.format(**fmt))}</span><h3>{esc(x.format(**fmt))}</h3>'
+                    f'<p>{esc(d.format(**fmt))}</p><span class="go">{esc(v)} →</span></a>' for h, x, y, d, v in t["porte"])
+    primo = pag[0]
+    corpo = f"""<section class="fronte" id="pagina" aria-label="{"Frontespizio" if lang == "it" else "Title page"}">
+  <div class="foglio" id="foglio" aria-live="polite">
+    <p class="autore sc" id="autore">{esc(primo["a"])}</p>
+    <h1 class="titolo" id="titolo">{esc(primo["t"])}</h1>
+    <p class="diritti"><span id="riga" class="vecchia">{esc(t["diritti"])}</span></p>
+  </div>
+  <div class="colophon">
+    <p>{t["colophon"]}</p>
+    <a class="vai" href="{t["pagina_anno"].format(a=anno)}">{esc(t["cta"].format(a=anno))} <b>→</b></a>
+    <span class="folio" id="folio"></span>
+  </div>
+</section>
+<div class="home-sotto">
+<section class="sec"><div class="sh m"><h2>{esc(t["sez_n"][0].format(**fmt))}</h2><span>{esc(t["sez_n"][1])}</span></div>
+<div class="nums">{numeri_html}</div></section>
+<section class="sec"><div class="sh m"><h2>{esc(t["sez"][0])}</h2><span>{esc(t["sez"][1])}</span></div>
+<div class="porte">{porte}</div></section>
+</div>
+<script>
+const P={json.dumps(pag, ensure_ascii=False)}, DIRITTI={json.dumps(t["diritti"], ensure_ascii=False)}, FOLIO={json.dumps(t["folio"], ensure_ascii=False)};
+const el=s=>document.getElementById(s);
+el("gg").textContent=Math.max(0,Math.ceil((new Date({anno},0,1)-new Date())/864e5));
+const lenta=matchMedia("(prefers-reduced-motion: reduce)").matches;
+let i=0;
+function mostra(k){{const p=P[k];el("autore").textContent=p.a;el("titolo").textContent=p.t;el("folio").textContent=FOLIO.replace("{{k}}",k+1).replace("{{n}}",P.length);
+  const r=el("riga");r.className="vecchia";r.textContent=DIRITTI;}}
+function libera(k){{const r=el("riga");r.classList.add("barra");setTimeout(()=>r.classList.add("via"),900);
+  setTimeout(()=>{{r.className="nuova";r.innerHTML=P[k].r;}},1350);}}
+function giro(){{const f=el("foglio");mostra(i);f.classList.add("arriva");requestAnimationFrame(()=>requestAnimationFrame(()=>f.classList.remove("arriva")));
+  setTimeout(()=>libera(i),1800);
+  setTimeout(()=>{{f.classList.add("via");setTimeout(()=>{{f.classList.remove("via");i=(i+1)%P.length;giro();}},700);}},7600);}}
+if(lenta){{mostra(0);const r=el("riga");r.className="nuova";r.innerHTML=P[0].r;}}else giro();
+</script>
+"""
+    fonti = (t["fonti"][0], esc(t["fonti"][1].format(**fmt)))
+    return testa + corpo + P["piede_scheda"](lang, fonti)
+
+
+def crea_home(P=None, anno=None):
+    """P: dizionario con testa_scheda, piede_scheda, CSS_ANNO, marchio (da scripts/pagine.py). Senza, si importa pagine."""
+    import datetime, sys
+    if P is None:
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+        import pagine as pg
+        from marchio import marchio_html
+        P = {"testa_scheda": pg.testa_scheda, "piede_scheda": pg.piede_scheda, "CSS_ANNO": pg.CSS_ANNO,
+             "marchio": marchio_html(56).replace('<span class="pdr" style="--w:56px">', "").rsplit("</span>", 1)[0]}
+    anno = anno or datetime.date.today().year + 1
+    (RADICE / "index.html").write_text(pagina("it", anno, P), encoding="utf-8")
+    (RADICE / "en").mkdir(exist_ok=True)
+    (RADICE / "en" / "index.html").write_text(pagina("en", anno, P), encoding="utf-8")
+    print("home: index.html ed en/index.html (frontespizio)")
+
+
+if __name__ == "__main__":
+    crea_home()

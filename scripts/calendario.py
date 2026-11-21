@@ -35,7 +35,7 @@ T = {
         "vuoto": "Nessuna voce con questi filtri.",
         "fine_h": "Un calendario che si aggiorna da solo", "fine_p": "Sottoscrivi il calendario in Google Calendar, Apple Calendar o Outlook: gli anniversari con una data precisa arrivano da soli. Le voci di cui si conosce solo l'anno restano nella tabella CSV.",
         "nota": "Dati da fonti aperte (Wikidata, Wikipedia): possono contenere errori. Per molte opere si conosce solo l'anno di pubblicazione, e per alcune ricorrenze le fonti indicano date diverse. Controlla sempre la data prima di usarla in una campagna.",
-        "navt": [("Autori", "/"), ("Opere USA", "/#/us/{a}"), ("Calendario", None), ("Già pubblici", "/gia-pubblici/")], "altra": ("EN", "/en/calendar/{a}/"),
+        "navt": [("Autori", "/radar/"), ("Opere USA", "/radar/#/us/{a}"), ("Calendario", None), ("Già pubblici", "/gia-pubblici/")], "altra": ("EN", "/en/calendar/{a}/"),
         "home": "/", "piede": "piede", "post_n": "{e} anni fa, il {g} {m} {y}, nasceva {nome}.", "post_n0": "{e} anni fa, nel {y}, nasceva {nome}.",
         "post_m": "{e} anni fa, il {g} {m} {y}, moriva {nome}.", "post_m0": "{e} anni fa, nel {y}, moriva {nome}.",
         "post_p": "{e} anni fa, il {g} {m} {y}, usciva «{nome}»{aut}.", "post_p0": "{e} anni fa, nel {y}, usciva «{nome}»{aut}.", "di": " di ",
@@ -57,7 +57,7 @@ T = {
         "vuoto": "No entries with these filters.",
         "fine_h": "A calendar that updates itself", "fine_p": "Subscribe in Google Calendar, Apple Calendar or Outlook: the anniversaries with an exact date arrive by themselves. Entries where only the year is known stay in the CSV table.",
         "nota": "Data from open sources (Wikidata, Wikipedia): it may contain errors. For many works only the year of publication is known, and for some anniversaries sources give different dates. Always check the date before using it in a campaign.",
-        "navt": [("Authors", "/en/"), ("Works USA", "/en/#/us/{a}"), ("Calendar", None), ("Already public", "/en/already-public/")], "altra": ("IT", "/calendario/{a}/"),
+        "navt": [("Authors", "/en/radar/"), ("Works USA", "/en/radar/#/us/{a}"), ("Calendar", None), ("Already public", "/en/already-public/")], "altra": ("IT", "/calendario/{a}/"),
         "home": "/en/", "piede": "piede", "post_n": "{e} years ago, on {m} {g}, {y}, {nome} was born.", "post_n0": "{e} years ago, in {y}, {nome} was born.",
         "post_m": "{e} years ago, on {m} {g}, {y}, {nome} died.", "post_m0": "{e} years ago, in {y}, {nome} died.",
         "post_p": "{e} years ago, on {m} {g}, {y}, “{nome}”{aut} was first published.", "post_p0": "{e} years ago, in {y}, “{nome}”{aut} was first published.", "di": " by ",
@@ -216,7 +216,7 @@ def pagina(dati, lang):
     vv = dati["voci"]
     url = f"{SITO}{'/en/calendar' if lang == 'en' else '/calendario'}/{anno}/"
     eu, us = anno - 71, anno - 96
-    app = "/en/" if lang == "en" else "/"
+    app = "/en/radar/" if lang == "en" else "/radar/"
     spec = (f'<div class="ev pdd" data-tipo="pdd" data-mese="1" data-q="{esc(("1° gennaio " if it else "1 January ") + str(anno))}">'
             f'<span class="gg">01</span><h3 class="nm">{esc(t["pdd"])}</h3><span class="tp"><b>{"Pubblico dominio" if it else "Public domain"}</b></span>'
             f'<div class="det"><p class="pdt">{esc(t["pdd_txt"].format(eu=eu, us=us))}</p>'

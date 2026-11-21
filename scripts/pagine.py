@@ -281,9 +281,9 @@ PIEDE = {
     "it": """<footer>
 <p>Un progetto di Marco Novali · <a href="https://www.linkedin.com/in/marconovali" rel="me noopener" target="_blank">LinkedIn</a></p>
 <p>Fonti: Wikidata (CC0), Wikipedia (testi CC BY-SA, con link alla pagina d'origine), Wikimedia Commons (ritratti, ciascuno con la sua licenza), cataloghi nazionali (SBN, BnF, BNE, British Library e Library of Congress). Dati aperti, aggiornati in automatico ogni tre mesi e a dicembre; possono contenere errori.</p>
-<p>Le date sono un calcolo indicativo dalle norme elencate nel <a href="/#regole-paesi">riquadro delle regole</a>. Non è consulenza legale: prima di pubblicare va controllato nella legge del paese.</p>
+<p>Le date sono un calcolo indicativo dalle norme elencate nel <a href="/radar/#regole-paesi">riquadro delle regole</a>. Non è consulenza legale: prima di pubblicare va controllato nella legge del paese.</p>
 <p>Chi usa questi dati lo fa sotto la propria responsabilità. Le date sono indicative e riguardano le opere originali: traduzioni, illustrazioni ed edizioni recenti hanno diritti propri. Per un'edizione commerciale chiedi un parere a un esperto di diritto d'autore. <a href="https://github.com/mnovali90-byte/publicdomain/issues">Hai trovato un errore? Segnalalo</a>.</p>
-<p><a href="/">Tutti gli autori</a> · <a href="/pubblico-dominio-@@ANNO@@/">Pubblico dominio @@ANNO@@</a> · <a href="/autore/">Indice degli autori</a> · <a href="https://github.com/mnovali90-byte/publicdomain">Codice e dati su GitHub</a></p>
+<p><a href="/radar/">Tutti gli autori</a> · <a href="/pubblico-dominio-@@ANNO@@/">Pubblico dominio @@ANNO@@</a> · <a href="/autore/">Indice degli autori</a> · <a href="https://github.com/mnovali90-byte/publicdomain">Codice e dati su GitHub</a></p>
 </footer>
 </body>
 </html>
@@ -291,9 +291,9 @@ PIEDE = {
     "en": """<footer>
 <p>A project by Marco Novali · <a href="https://www.linkedin.com/in/marconovali" rel="me noopener" target="_blank">LinkedIn</a></p>
 <p>Sources: Wikidata (CC0), Wikipedia (text CC BY-SA, linked to the original page), Wikimedia Commons (portraits, each with its own licence), national catalogues (SBN, BnF, BNE, British Library and Library of Congress). Open data, updated automatically every three months and in December; it may contain errors.</p>
-<p>The dates are an indicative calculation from the rules listed in the <a href="/en/#regole-paesi">rules box</a>. Not legal advice: check the law of the country before publishing.</p>
+<p>The dates are an indicative calculation from the rules listed in the <a href="/en/radar/#regole-paesi">rules box</a>. Not legal advice: check the law of the country before publishing.</p>
 <p>Anyone using this data does so at their own risk. The dates are indicative and refer to the original works: translations, illustrations and recent editions have their own rights. For a commercial edition, ask a copyright expert for advice. <a href="https://github.com/mnovali90-byte/publicdomain/issues">Found an error? Report it</a>.</p>
-<p><a href="/en/">All authors</a> · <a href="/en/public-domain-@@ANNO@@/">Public domain @@ANNO@@</a> · <a href="/en/author/">Author index</a> · <a href="https://github.com/mnovali90-byte/publicdomain">Code and data on GitHub</a></p>
+<p><a href="/en/radar/">All authors</a> · <a href="/en/public-domain-@@ANNO@@/">Public domain @@ANNO@@</a> · <a href="/en/author/">Author index</a> · <a href="https://github.com/mnovali90-byte/publicdomain">Code and data on GitHub</a></p>
 </footer>
 </body>
 </html>
@@ -778,7 +778,7 @@ def scheda_statica(a, lang, bd):
     o.append(f'<ul class="pg" aria-label="{T("Paese per paese", "Country by country")}">' + "".join(
         tessera(*x, cl=("primo" if i == 0 else "usa" if x[0] == "USA" else "")) for i, x in enumerate(righe_p)) + "</ul>\n")
     o.append(f'<p class="sa-nota">{T("Calcolo indicativo, non è consulenza legale.", "Indicative calculation, not legal advice.")} '
-             f'<a href="{"/" if it else "/en/"}#regole-paesi">{T("Le regole, paese per paese", "The rules, country by country")}</a></p>\n</div>\n'
+             f'<a href="{"/radar/" if it else "/en/radar/"}#regole-paesi">{T("Le regole, paese per paese", "The rules, country by country")}</a></p>\n</div>\n'
              '</div></section>\n<div class="sa-in sa-resto">\n')
     sez = lambda tit, corpo, occ=None: (f'<section class="sa-sez">\n' + (f'<p class="sa-occ">{occ}</p>\n' if occ else "") + f'<h2>{tit}</h2>\n{corpo}</section>\n')
     corpo_usa, liberi_usa = opere_usa(a, lang)
@@ -853,12 +853,14 @@ def _menu_link(lang):
     it = lang == "it"
     a = ANNO_PROSSIMO
     if it:
-        v = [("/", "Il radar"), (f"/pubblico-dominio-{a}/", f"Pubblico dominio {a}"), (f"/pubblico-dominio-{a + 1}/", f"Pubblico dominio {a + 1}")]
+        # l'anno dopo (es. 2028) non compare nei menu fino al suo turno, il 1° gennaio (decisione di Marco, 21/11/2026);
+        # la pagina resta online per Google. «Il radar» nel menu si chiama «Tutti gli autori».
+        v = [(f"/pubblico-dominio-{a}/", f"Pubblico dominio {a}"), ("/radar/", "Tutti gli autori")]
         if CALENDARIO_ON:
             v.append((f"/calendario/{a}/", "Calendario"))
         v += [("/gia-pubblici/", "Già pubblici"), ("/autore/", "Indice degli autori")]
     else:
-        v = [("/en/", "The radar"), (f"/en/public-domain-{a}/", f"Public domain {a}"), (f"/en/public-domain-{a + 1}/", f"Public domain {a + 1}")]
+        v = [(f"/en/public-domain-{a}/", f"Public domain {a}"), ("/en/radar/", "All authors")]
         if CALENDARIO_ON:
             v.append((f"/en/calendar/{a}/", "Calendar"))
         v += [("/en/already-public/", "Already public"), ("/en/author/", "Author index")]
@@ -909,7 +911,7 @@ def piede_scheda(lang, fonti=None):
 <footer class="end">
   <div><p class="m" style="color:var(--redt)">{fonti[0] if fonti else T("Fonti", "Sources")}</p><p>{fonti[1] if fonti else T("Wikidata (CC0), Wikipedia (testi CC BY-SA, con link alla pagina d'origine), Wikimedia Commons (ritratti, ciascuno con la sua licenza), cataloghi nazionali (SBN, BnF, BNE, British Library e Library of Congress). Dati aperti, aggiornati in automatico ogni tre mesi e a dicembre; possono contenere errori.", "Wikidata (CC0), Wikipedia (text CC BY-SA, linked to the original page), Wikimedia Commons (portraits, each with its own licence), national catalogues (SBN, BnF, BNE, British Library and Library of Congress). Open data, updated automatically every three months and in December; it may contain errors.")}</p>
   <p class="lk">{lk} · <a href="https://github.com/mnovali90-byte/publicdomain">{T("Codice e dati su GitHub", "Code and data on GitHub")}</a></p></div>
-  <div><p class="m" style="color:var(--redt)">{T("Prima di pubblicare", "Before publishing")}</p><p>{T('Le date sono un calcolo indicativo dalle norme elencate nel <a href="/#regole-paesi">riquadro delle regole</a>. Non è consulenza legale: prima di pubblicare va controllato nella legge del paese. Riguardano le opere originali: traduzioni, illustrazioni ed edizioni recenti hanno diritti propri. Chi usa questi dati lo fa sotto la propria responsabilità; per un’edizione commerciale chiedi un parere a un esperto di diritto d’autore.', 'The dates are an indicative calculation from the rules listed in the <a href="/en/#regole-paesi">rules box</a>. Not legal advice: check the law of the country before publishing. They refer to the original works: translations, illustrations and recent editions have their own rights. Anyone using this data does so at their own risk; for a commercial edition, ask a copyright expert for advice.')}</p>
+  <div><p class="m" style="color:var(--redt)">{T("Prima di pubblicare", "Before publishing")}</p><p>{T('Le date sono un calcolo indicativo dalle norme elencate nel <a href="/radar/#regole-paesi">riquadro delle regole</a>. Non è consulenza legale: prima di pubblicare va controllato nella legge del paese. Riguardano le opere originali: traduzioni, illustrazioni ed edizioni recenti hanno diritti propri. Chi usa questi dati lo fa sotto la propria responsabilità; per un’edizione commerciale chiedi un parere a un esperto di diritto d’autore.', 'The dates are an indicative calculation from the rules listed in the <a href="/en/radar/#regole-paesi">rules box</a>. Not legal advice: check the law of the country before publishing. They refer to the original works: translations, illustrations and recent editions have their own rights. Anyone using this data does so at their own risk; for a commercial edition, ask a copyright expert for advice.')}</p>
   <p>{T("Un progetto di Marco Novali", "A project by Marco Novali")} · <a href="https://www.linkedin.com/in/marconovali" rel="me noopener" target="_blank">LinkedIn</a> · <a href="https://github.com/mnovali90-byte/publicdomain/issues">{T("Hai trovato un errore?", "Found an error?")}</a></p></div>
 </footer>
 <script>
@@ -954,7 +956,7 @@ def blocco_vicini_n(a, lang):
     q = a["wikidata"]
     it = lang == "it"
     T = (lambda x, y: x) if it else (lambda x, y: y)
-    cta = f'<a href="{"/" if it else "/en/"}#/autore/{esc(q)}">{T("Apri nel radar", "Open in the radar")} →</a>'
+    cta = f'<a href="{"/radar/" if it else "/en/radar/"}#/autore/{esc(q)}">{T("Apri nel radar", "Open in the radar")} →</a>'
     if q not in MEMBRI:
         return f'<section class="blk"><span class="m"><b>{T("Nel radar", "In the radar")}</b>{T("Tutti gli autori", "All authors")}</span><div><div class="lnk">{cta}</div></div></section>\n'
     tipo, anno = MEMBRI[q]
@@ -1102,7 +1104,7 @@ def scheda_nuova(a, lang, bd):
         righe.append(f'<li class="{cl}"><span class="c">{esc(paese)}<small>{esc(regola)}</small></span><span class="v">{esc(val)}</span></li>')
     o.append(f'<section class="blk" id="dates"><span class="m"><b>{T("Quando è libero", "When it is free")}</b>{T("Paese per paese", "Country by country")}</span>\n<div>'
              f'{grande}{conf}{al}<ul class="ps">{"".join(righe)}</ul>\n<p class="legal">{T("Calcolo indicativo, non è consulenza legale.", "Indicative calculation, not legal advice.")}</p>\n'
-             f'<div class="lnk"><a href="{"/" if it else "/en/"}#regole-paesi">{T("Le regole, paese per paese", "The rules, country by country")}</a></div></div></section>\n')
+             f'<div class="lnk"><a href="{"/radar/" if it else "/en/radar/"}#regole-paesi">{T("Le regole, paese per paese", "The rules, country by country")}</a></div></div></section>\n')
 
     # chi era
     if bd:
@@ -1413,7 +1415,7 @@ def sostituisci(s, schema, nuovo):
 def aggiorna_home_italiana():
     """Titolo, descrizione e testo statico della home con l'anno del prossimo 1° gennaio (parola chiave «pubblico dominio <anno>»)."""
     A = ANNO_PROSSIMO
-    f = RADICE / "index.html"
+    f = RADICE / "radar" / "index.html"   # il radar sta su /radar/ dal 21/11/2026; la home è il frontespizio (scripts/home.py)
     s = f.read_text(encoding="utf-8")
     tit = f"Pubblico dominio {A}: gli autori che diventano liberi · Public Domain Radar"
     descr = (f"Quali autori entrano in pubblico dominio il 1° gennaio {A}, con le regole di Italia, Francia, Germania, Spagna, Regno Unito e USA "
@@ -1433,7 +1435,7 @@ def aggiorna_home_italiana():
 def crea_home_inglese():
     """en/index.html: la stessa app di index.html, con testi già in inglese nel codice della pagina (così Google la legge in inglese)."""
     A = ANNO_PROSSIMO
-    s = (RADICE / "index.html").read_text(encoding="utf-8")
+    s = (RADICE / "radar" / "index.html").read_text(encoding="utf-8")
     en = testi_app(s, "en")
     tit = f"Public Domain {A}: books and authors entering the public domain · Public Domain Radar"
     descr = (f"Which books and authors enter the public domain on 1 January {A}, with the term rules of Italy, France, Germany, Spain, the UK and the USA "
@@ -1445,8 +1447,8 @@ def crea_home_inglese():
     s = sostituisci(s, r'<meta property="og:title" content="[^"]*">', f'<meta property="og:title" content="{esc(tit)}">')
     s = sostituisci(s, r'<meta property="og:description" content="[^"]*">', f'<meta property="og:description" content="{esc(breve)}">')
     s = sostituisci(s, r'<meta name="twitter:description" content="[^"]*">', f'<meta name="twitter:description" content="{esc(breve)}">')
-    s = sostituisci(s, r'<link rel="canonical" href="https://publicdomainradar.com/">', '<link rel="canonical" href="https://publicdomainradar.com/en/">')
-    s = sostituisci(s, r'<meta property="og:url" content="https://publicdomainradar.com/">', '<meta property="og:url" content="https://publicdomainradar.com/en/">')
+    s = sostituisci(s, r'<link rel="canonical" href="https://publicdomainradar.com/radar/">', '<link rel="canonical" href="https://publicdomainradar.com/en/radar/">')
+    s = sostituisci(s, r'<meta property="og:url" content="https://publicdomainradar.com/radar/">', '<meta property="og:url" content="https://publicdomainradar.com/en/radar/">')
     s = sostituisci(s, r'\{"@type":"WebSite","name":"Public Domain Radar","url":"https://publicdomainradar.com/"',
                     '{"@type":"WebSite","name":"Public Domain Radar","url":"https://publicdomainradar.com/en/"')
     i = s.index("const TESTI = {")
@@ -1461,8 +1463,8 @@ def crea_home_inglese():
         return m.group(1) + esc(v)
     s = re.sub(r'(<[^>]*\bdata-t="(\w+)"[^>]*>)([^<]*)(?=<)', trad, s)
     s = metti_statico(s, "en")
-    (RADICE / "en").mkdir(exist_ok=True)
-    (RADICE / "en" / "index.html").write_text(s, encoding="utf-8")
+    (RADICE / "en" / "radar").mkdir(parents=True, exist_ok=True)
+    (RADICE / "en" / "radar" / "index.html").write_text(s, encoding="utf-8")
 
 
 def file_autori():
@@ -1812,7 +1814,7 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
     url = url_landing(lang, anno)
     it = lang == "it"
     T = (lambda a, b: a) if it else (lambda a, b: b)
-    app = "/" if it else "/en/"
+    app = "/radar/" if it else "/en/radar/"
     pub = opere_us["anno_pubblicazione"] if opere_us else anno - 96
     morti = anno - 71
     morti_es = anno - 81
@@ -2218,6 +2220,9 @@ def main():
     aggiorna_home_italiana()
     crea_home_inglese()
     landing_urls = crea_landing()
+    import home   # la home (frontespizio), italiano e inglese: scripts/home.py
+    home.crea_home({"testa_scheda": testa_scheda, "piede_scheda": piede_scheda, "CSS_ANNO": CSS_ANNO,
+                    "marchio": marchio_html(56).replace('<span class="pdr" style="--w:56px">', "").rsplit("</span>", 1)[0]})
     if CALENDARIO_ON:
         import calendario
         landing_urls += calendario.crea_calendario()
@@ -2231,7 +2236,7 @@ def main():
         nuove_date[u] = [imp, d]
         return d
     righe = [f"  <url><loc>{u}</loc><lastmod>{data_di(u)}</lastmod><changefreq>monthly</changefreq></url>"
-             for u in (f"{SITO}/", f"{SITO}/en/", url_pagina('it'), url_pagina('en'))]
+             for u in (f"{SITO}/", f"{SITO}/en/", f"{SITO}/radar/", f"{SITO}/en/radar/", url_pagina('it'), url_pagina('en'))]
     if (RADICE / "gia-pubblici" / "index.html").exists():   # pagina «Già pubblici» (storico/pagina.py)
         landing_urls += [f"{SITO}/gia-pubblici/", f"{SITO}/en/already-public/"]
     righe += [f"  <url><loc>{u}</loc><lastmod>{data_di(u)}</lastmod><changefreq>weekly</changefreq></url>" for u in landing_urls]

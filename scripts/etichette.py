@@ -42,7 +42,7 @@ def etichette_italiane():
             voci.update(a.get("paesi") or [])
             voci.update(a.get("lingue") or [])
     # i nomi moderni con cui la pagina raggruppa gli stati storici (oggetto PAESI in index.html)
-    s = (RADICE / "index.html").read_text(encoding="utf-8")
+    s = (RADICE / "radar" / "index.html").read_text(encoding="utf-8")
     blocco = s[s.index("const PAESI = {"):s.index("};", s.index("const PAESI = {"))]
     voci.update(re.findall(r'^\s*"([^"]+)": \[', blocco, flags=re.M))
     return sorted(v for v in voci if v)
