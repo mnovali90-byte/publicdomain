@@ -202,11 +202,14 @@ MPF_ANNI_IN_PIU = 30
 USA_ANNI = 95
 # Trattato di pace con l'Italia (Parigi, 10/2/1947), allegato XV, parte A, punto 3 (testo inglese: legislation.gov.uk,
 # The Treaty of Peace (Italy) Order 1948, SI 1948/117): per i diritti dei cittadini delle Potenze alleate in vigore in Italia
-# allo scoppio della guerra (o riconosciuti dall'allegato) non conta il periodo dallo scoppio della guerra all'entrata in
-# vigore del trattato (15/9/1947), e la durata si allunga di altrettanto. Al massimo poco più di 7 anni: per prudenza 8.
-# Riguarda le opere uscite fino al 1947. Quando la cittadinanza non è nota, non possiamo escluderlo: «da verificare».
+# allo scoppio della guerra non conta il periodo fino all'entrata in vigore del trattato (15/9/1947).
+# DECISIONE DI MARCO (22/11/2026, dopo la ricerca nel registro delle prove): in Italia la data è quella dei 70 anni anche
+# per gli autori dei paesi alleati, perché i tribunali non hanno applicato questa proroga oltre i 70 anni (Il Piccolo
+# Principe libero dal 1/1/2015: Tribunale di Milano n. 2826/2021, Corte d'appello di Milano n. 2994/2022; Cassazione
+# Sezioni Unite n. 49783/2009). Resta solo una NOTA, per le opere uscite prima del 10 giugno 1940 (diritti già in vigore
+# allo scoppio della guerra), finché la proroga massima (poco più di 7 anni; per prudenza 8) potrebbe essere in corso.
 PROROGA_ALLEATI = 8
-ALLEATI_OPERE_FINO_AL = 1947
+ALLEATI_OPERE_FINO_AL = 1940
 # Potenze alleate e associate del Trattato (preambolo; Albania per adesione), con tutti i nomi con cui Wikidata indica la
 # cittadinanza: italiano storico, italiano attuale (radar), inglese (Storico). Unione delle tre liste che c'erano prima.
 ALLEATI_1947 = frozenset({
@@ -266,23 +269,18 @@ def paesi_alleati(paesi):
     return [p for p in (paesi or []) if p in ALLEATI_1947]
 
 
-def alleato_o_ignoto(paesi):
-    """Il Trattato potrebbe valere: cittadinanza di una Potenza alleata, o cittadinanza non nota (non possiamo escluderlo)."""
-    return not paesi or bool(paesi_alleati(paesi))
-
-
-def italia_da_verificare_flag(alleato_o_ignoto_, morte, oggi_anno, anno_opera=None):
-    """True se in Italia la data normale non basta: autore alleato o di paese non noto, opera uscita fino al 1947 (o anno
-    non noto), e la proroga massima del Trattato potrebbe non essere ancora finita."""
-    if morte is None or not alleato_o_ignoto_:
+def nota_trattato_flag(alleato, morte, oggi_anno, anno_opera=None):
+    """True se accanto alla data italiana va la nota sul Trattato di pace: autore di un paese alleato, opera uscita entro
+    il 1940 (o anno non noto), e la proroga massima potrebbe essere ancora in corso. La data NON cambia (decisione 22/11/2026)."""
+    if morte is None or not alleato:
         return False
     if anno_opera is not None and anno_opera > ALLEATI_OPERE_FINO_AL:
         return False
     return anno_libero(morte, "it") + PROROGA_ALLEATI > oggi_anno
 
 
-def italia_da_verificare(paesi, morte, oggi_anno, anno_opera=None):
-    return italia_da_verificare_flag(alleato_o_ignoto(paesi), morte, oggi_anno, anno_opera)
+def nota_trattato(paesi, morte, oggi_anno, anno_opera=None):
+    return nota_trattato_flag(bool(paesi_alleati(paesi)), morte, oggi_anno, anno_opera)
 
 
 # --- la stessa cosa per il browser: assets/regole.js è scritto da qui. Se cambi una funzione sopra, cambia anche sotto:
@@ -297,15 +295,14 @@ window.REGOLE_PAESI = (() => {
   const annoLiberoUsa = (pub) => pub + C.USA_ANNI + 1;
   const pubblicateLibereUsaNel = (anno) => anno - C.USA_ANNI - 1;
   const paesiAlleati = (paesi) => (paesi || []).filter((p) => ALLEATI.has(p));
-  const alleatoOIgnoto = (paesi) => !paesi || !paesi.length || paesiAlleati(paesi).length > 0;
-  const italiaDaVerificareFlag = (flag, morte, oggiAnno, annoOpera) => {
-    if (morte === null || morte === undefined || !flag) return false;
+  const notaTrattatoFlag = (alleato, morte, oggiAnno, annoOpera) => {
+    if (morte === null || morte === undefined || !alleato) return false;
     if (annoOpera !== null && annoOpera !== undefined && annoOpera > C.ALLEATI_OPERE_FINO_AL) return false;
     return annoLibero(morte, "it") + C.PROROGA_ALLEATI > oggiAnno;
   };
-  const italiaDaVerificare = (paesi, morte, oggiAnno, annoOpera) => italiaDaVerificareFlag(alleatoOIgnoto(paesi), morte, oggiAnno, annoOpera);
+  const notaTrattato = (paesi, morte, oggiAnno, annoOpera) => notaTrattatoFlag(paesiAlleati(paesi).length > 0, morte, oggiAnno, annoOpera);
   return Object.assign({}, C, { anniProtezione, annoLibero, mortiLiberiNel, annoLiberoUsa, pubblicateLibereUsaNel, paesiAlleati,
-    alleatoOIgnoto, italiaDaVerificareFlag, italiaDaVerificare });
+    notaTrattatoFlag, notaTrattato });
 })();
 """
 
@@ -322,17 +319,14 @@ def esporta_js(percorso):
 
 
 def paesi_liberi_insieme(paesi, morte, oggi_anno, mpf=False):
-    """Paesi (it, fr, de, uk, es) in cui le opere dell'autore si liberano lo stesso giorno della regola dei 70 anni, senza
-    eccezioni da verificare: è l'elenco da scrivere in frasi come «Libero in … dal 1° gennaio». L'Italia esce se va
-    verificata (paese alleato o non noto), la Spagna entra solo se la sua data coincide, la Francia esce per i «morti per la
-    Francia» (mpf=True)."""
+    """Paesi (it, fr, de, uk, es) in cui le opere dell'autore si liberano lo stesso giorno della regola dei 70 anni: è
+    l'elenco da scrivere in frasi come «Libero in … dal 1° gennaio». La Spagna entra solo se la sua data coincide, la Francia
+    esce per i «morti per la Francia» (mpf=True). (oggi_anno e paesi restano per compatibilità: dal 22/11/2026 l'Italia c'è sempre.)"""
     if morte is None:
         return []
     base = anno_libero(morte, "it")
     out = []
     for p in ("it", "fr", "de", "uk", "es"):
-        if p == "it" and italia_da_verificare(paesi, morte, oggi_anno):
-            continue
         if anno_libero(morte, p, mpf) != base:
             continue
         out.append(p)

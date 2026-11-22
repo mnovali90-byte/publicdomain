@@ -1,12 +1,11 @@
 """Cittadinanza (Wikidata P27) per TUTTI gli autori delle liste, non solo per gli scrittori arricchiti (21/11/2026).
 
-Perché: la regola dei paesi alleati (scripts/regole.py, italia_da_verificare) tratta «cittadinanza non nota» come «da
-verificare in Italia». Senza questo passo, «non nota» voleva dire spesso solo «non l'abbiamo chiesta» (gli autori non
-scrittori non passano da scripts/arricchisci.py). Qui si chiede a Wikidata per tutti quelli senza `paesi`, con le stesse
+Perché: la nota sul Trattato di pace (scripts/regole.py, nota_trattato) dipende dalla cittadinanza. Senza questo passo,
+«non nota» voleva dire spesso solo «non l'abbiamo chiesta» (gli autori non scrittori non passano da scripts/arricchisci.py). Qui si chiede a Wikidata per tutti quelli senza `paesi`, con le stesse
 etichette italiane dell'arricchimento. Chi resta senza paese, su Wikidata il paese non ce l'ha davvero: si scrive
 `paesi: []` e `paesi_fonte: "P27 assente"`, così si distingue da «non chiesto».
 
-Non tocca chi ha già `paesi`. Se Wikidata non risponde, lascia il file com'è (resta «non noto», cioè «da verificare»)."""
+Non tocca chi ha già `paesi`. Se Wikidata non risponde, lascia il file com'è."""
 import glob, json, re, sys, time, urllib.parse, urllib.request
 from pathlib import Path
 

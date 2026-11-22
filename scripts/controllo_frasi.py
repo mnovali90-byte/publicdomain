@@ -1,7 +1,7 @@
 """Controllo delle frasi sui paesi (21/11/2026, dopo il caso Milne): cerca nelle pagine pubblicate le affermazioni imprecise.
 1. «libero/libera in Europa» o «free in Europe» seguito da una data: in Spagna valgono 80 anni per chi è morto prima del 1987,
    in Italia gli autori di paesi alleati vanno verificati, quindi «Europa» non è mai preciso.
-2. Schede autore di paesi alleati che mostrano una data per l'Italia invece di «da verificare».
+2. (tolto il 22/11/2026: per i paesi alleati l'Italia ha di nuovo la data, con una nota)
 3. (21/11/2026, regole in un posto solo) Ogni scheda autore, italiana e inglese: la tabella «paese per paese» deve dire
    esattamente quello che calcola scripts/regole.py (data o «da verificare»), paese per paese.
 Esce con errore se trova qualcosa."""
@@ -17,11 +17,6 @@ for f in glob.glob(str(RADICE / "**" / "*.html"), recursive=True):
     t = Path(f).read_text(encoding="utf-8", errors="ignore")
     for m in EUROPA.finditer(t):
         errori.append(f"{Path(f).relative_to(RADICE)}: «{t[max(0, m.start() - 30):m.end() + 30].strip()}»")
-    if "/autore/" in f or "/author/" in f:
-        if "paese alleato nella Seconda guerra" in t or "Allied country in the Second World War" in t:
-            m = re.search(r'<span class="c">(Italia|Italy)<small>[^<]*</small></span><span class="v">([^<]*)</span>', t)
-            if m and m.group(2) not in ("da verificare", "to be checked") and not m.group(2).startswith(("libero dal", "free since")):
-                errori.append(f"{Path(f).relative_to(RADICE)}: Italia «{m.group(2)}» per un autore di paese alleato")
 # 3. tabella paese per paese di ogni scheda contro scripts/regole.py
 import json  # noqa: E402
 from datetime import date  # noqa: E402
@@ -57,11 +52,8 @@ for chiave, a in schede.items():
         if not p:
             continue
         n_righe += 1
-        if p == "it" and R.italia_da_verificare(a.get("paesi"), D, OGGI):
-            atteso = "to be checked" if en else "da verificare"
-        else:
-            y = R.anno_libero(D, p, a["wikidata"] in MPF)
-            atteso = ((f"free since {y}" if en else f"libero dal {y}") if y <= OGGI else (f"1 Jan {y}" if en else f"1° gen {y}"))
+        y = R.anno_libero(D, p, a["wikidata"] in MPF)
+        atteso = ((f"free since {y}" if en else f"libero dal {y}") if y <= OGGI else (f"1 Jan {y}" if en else f"1° gen {y}"))
         if val.strip() != atteso:
             errori.append(f"{chiave}: {nome} «{val}», le regole dicono «{atteso}»")
 print(f"Schede controllate contro scripts/regole.py: {n_schede}, righe paese: {n_righe}")

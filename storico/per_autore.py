@@ -169,10 +169,11 @@ def info_autori(qids, budget_fine):
     except Exception:
         cache = {}
     oggi = date.today()
-    # v2 (21/11/2026): «alleato» conta anche la cittadinanza non nota; si rifanno subito gli autori per cui può contare
+    # v3 (22/11/2026): «alleato» = solo cittadinanza alleata (la v2 contava anche la cittadinanza non nota); si rifanno
+    # subito gli autori per cui la nota può contare
     recenti = lambda q: max(cache[q].get("morti") or [0]) >= oggi.year - (R.ANNI_DOPO_MORTE + 1 + R.PROROGA_ALLEATI)
     da_fare = [q for q in qids if q not in cache or (oggi - date.fromisoformat(cache[q]["d"])).days >= RINFRESCA_INFO
-               or (cache[q].get("v") != 2 and recenti(q))]
+               or (cache[q].get("v") != 3 and recenti(q))]
     for i in range(0, len(da_fare), 150):
         if time.time() > budget_fine:
             print(f"info autori: tempo finito, {len(da_fare) - i} da fare al prossimo giro")
@@ -188,8 +189,8 @@ def info_autori(qids, budget_fine):
             k = qid(val(x, "a"))
             morti = sorted({int(y) for y in (val(x, "morti") or "").split("|") if re.fullmatch(r"-?\d+", y)})
             cit = {c for c in (val(x, "cit") or "").split("|") if c}
-            # «alleato» = il Trattato potrebbe valere: cittadinanza alleata o non nota (scripts/regole.py, alleato_o_ignoto)
-            cache[k] = {"d": oggi.isoformat(), "morti": morti, "alleato": 1 if R.alleato_o_ignoto(sorted(cit)) else 0, "v": 2}
+            # «alleato» = cittadinanza di una Potenza alleata (scripts/regole.py): serve per la nota sul Trattato di pace
+            cache[k] = {"d": oggi.isoformat(), "morti": morti, "alleato": 1 if R.paesi_alleati(sorted(cit)) else 0, "v": 3}
         time.sleep(1)
     json.dump(cache, open(f, "w", encoding="utf8"), separators=(",", ":"))
     return {q: cache[q] for q in qids if q in cache}
