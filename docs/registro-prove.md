@@ -913,3 +913,26 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
   - Corretto anche il testo di quella scheda, che diceva «in Italia anche salvo le eccezioni dei paesi alleati»: era rimasto da prima della decisione sul Trattato.
 - **Simulazione:** il 20/12, il 1/1, il 4/1 e il 10/1 i testi tornano tutti; per Papini il 2/1 compare «Libero da poco».
 - **Contraddizione trovata, non corretta:** *L'opera da tre soldi* è nella vetrina della home come «libera dal 1° gennaio 2027» in Italia, Francia, Germania e Regno Unito. Su Wikidata però ha come coautrice Elisabeth Hauptmann (morta nel 1973), quindi per Già pubblici, con la regola dei coautori, è libera dal 2044. La vetrina della home guarda solo l'autore, non l'opera. Da decidere con Marco.
+
+## 22/11/2026 — Prova «anni mancanti»: risultati (giro 45042176593)
+- **Cosa ha fatto:** opere delle schede senza anno su Wikidata: 375. Il tempo (50 minuti) è bastato per controllarne 270, cercandole in Library of Congress, Open Library, Wikipedia en/it, BnF e K10plus.
+- **Risultati:**
+  - con almeno un anno trovato: 137 su 270 (51%);
+  - due o più fonti d'accordo: 73;
+  - una fonte sola: 42;
+  - fonti in disaccordo: 22;
+  - nessuna fonte: 133.
+- **Quante volte ogni fonte ha trovato un anno:** Open Library 104, LoC 94, Wikipedia en 23, BnF 17, K10plus 12, Wikipedia it 5.
+- **Controllo a mano:**
+  - Mencken, *In Defense of Women*: 1918, giusto, con Open Library e Wikipedia d'accordo.
+  - *Toad of Toad Hall* 1929 e *Il tradimento dei chierici* 1928: giusti.
+- **Problema 1:** anche quando le fonti sono d'accordo possono dare la data di una traduzione o di una ristampa, non della prima uscita.
+  - Walser, *A Schoolboy's Diary*: 2013, cioè la traduzione inglese.
+  - Gail, *The Shot into Infinity*: 1975, cioè la traduzione.
+  - In 22 casi l'anno più vecchio trovato è dopo la morte dell'autore. Alcuni sono veri postumi (Alvaro, Gadenne), altri sono edizioni tarde.
+- **Problema 2:** il gruppo di controllo (opere con l'anno su Wikidata, per misurare quanto sbaglia Wikidata) non è partito. Il tempo è finito sul primo gruppo. È un errore di come ho costruito la prova: i due gruppi andavano alternati.
+- **Giudizio:** le fonti autorevoli completano circa metà delle opere senza anno, ma prendere «l'anno più vecchio» in automatico non basta.
+- **Regole proposte prima di usarle sul sito:**
+  - contare solo le edizioni con il titolo originale;
+  - non basta Open Library da sola;
+  - se l'anno è dopo la morte, l'opera va verificata.
