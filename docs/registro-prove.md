@@ -871,3 +871,9 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
   - **Pagina vera nel browser:** autore Adolf Hitler, 1945; libero in Italia, Germania e USA.
   - **Casi di riferimento:** 24 su 24, il caso 6 ora blocca.
 - L'opera resta fuori da classifiche e scaffali (data/storico_esclusioni.json); si trova solo con la ricerca.
+
+## 22/11/2026 — Giri automatici: tre protezioni corrette (dall'audit esterno; in locale)
+- **Giro trimestrale (aggiorna.yml):** «Salva» partiva anche con il controllo delle regole fallito, bastava che il giro non fosse annullato. Ora il controllo gira sempre e «Salva» parte solo se il controllo è riuscito.
+- **Già pubblici (gia-pubblici.yml):** partiva anche dopo uno Storico fallito o annullato. Ora, quando parte dopo lo Storico, parte solo se lo Storico è finito bene. Il pulsante e i cambi di file restano come prima.
+- **Già pubblici e stima:** se l'invio su GitHub falliva 5 volte, il giro restava verde. Ora finisce rosso, con il messaggio «niente pubblicato». La logica è provata in locale con un invio finto che fallisce (codice 1) e con uno che riesce (codice 0).
+- **Non toccato:** i giri che scrivono nello stesso momento (punto 4 dell'audit), da risolvere nel passo 4 mettendo in fila tutti i giri che scrivono.

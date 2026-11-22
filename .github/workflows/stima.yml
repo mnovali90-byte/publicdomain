@@ -26,5 +26,11 @@ jobs:
           touch data/us-anni-verificati.json && git add assets/fonts assets/regole.js data/[0-9]*.json data/es-[0-9]*.json index.html en/index.html autore en/author data/us-anni-verificati.json data/us-[0-9]*.json data/indice.json pubblico-dominio-* en/public-domain-* docs/da-decidere.md docs/stima-sito docs/regola-lista docs/mockup-ritratti data/anniversari-*.json calendario en/calendar
           if ! git diff --cached --quiet; then
             git commit -m "Stima del sito: dati raccolti"
-            for i in 1 2 3 4 5; do git pull --rebase --autostash -X theirs origin main && git push && break; sleep $((i*20)); done
+            # fino a 5 tentativi; se falliscono tutti il giro finisce ROSSO (22/11/2026: prima restava verde senza aver pubblicato)
+            ok=0
+            for i in 1 2 3 4 5; do
+              if git pull --rebase --autostash -X theirs origin main && git push; then ok=1; break; fi
+              echo "Push fallito (tentativo $i)"; sleep $((i*20))
+            done
+            [ "$ok" = 1 ] || { echo "Push fallito 5 volte: niente pubblicato"; exit 1; }
           fi

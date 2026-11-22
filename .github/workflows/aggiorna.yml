@@ -96,7 +96,11 @@ jobs:
         if: ${{ !cancelled() }}   # se il giro viene annullato non si salva niente (19/11/2026: un giro annullato aveva salvato dati a metà)
         run: python scripts/pagine.py
       - name: Controllo delle regole per paese (Python e browser uguali) e delle frasi sui paesi
-        # bloccante: se le regole non coincidono o una pagina dice una cosa imprecisa, non si salva niente
+        # bloccante: se le regole non coincidono o una pagina dice una cosa imprecisa, non si salva niente.
+        # Gira sempre (anche se un passo prima si è rotto), e «Salva» parte solo se questo controllo è riuscito
+        # (22/11/2026: prima «Salva» partiva anche con il controllo fallito)
+        id: controlli
+        if: ${{ !cancelled() }}
         run: |
           python scripts/prova_regole.py
           python scripts/controllo_frasi.py
@@ -105,8 +109,9 @@ jobs:
         continue-on-error: true
         run: python scripts/da_decidere.py
       - name: Salva i dati nel repository
-        # sempre, anche se un passo prima è stato interrotto: così il lavoro fatto non si perde
-        if: ${{ !cancelled() }}   # se il giro viene annullato non si salva niente (19/11/2026: un giro annullato aveva salvato dati a metà)
+        # anche se un passo di raccolta si è interrotto (il lavoro fatto non si perde), ma SOLO se i controlli sono passati;
+        # se il giro viene annullato non si salva niente (19/11/2026: un giro annullato aveva salvato dati a metà)
+        if: ${{ !cancelled() && steps.controlli.outcome == 'success' }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

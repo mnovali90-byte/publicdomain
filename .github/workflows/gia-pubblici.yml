@@ -28,6 +28,8 @@ concurrency:
 
 jobs:
   pagina:
+    # dopo lo Storico solo se lo Storico è finito bene (22/11/2026: prima partiva anche dopo un giro fallito o annullato)
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     timeout-minutes: 170
     steps:
@@ -74,5 +76,11 @@ jobs:
           git add -A data/storico data/registro/opere.json data/registro/mpf.json gia-pubblici en/already-public autore en/author assets/regole.js
           if ! git diff --cached --quiet; then
             git commit -m "Già pubblici: pagina e dati del $(date -u +%Y-%m-%d)"
-            for i in 1 2 3 4 5; do git pull --rebase --autostash -X theirs origin main && git push && break; sleep $((i*20)); done
+            # fino a 5 tentativi; se falliscono tutti il giro finisce ROSSO (22/11/2026: prima restava verde senza aver pubblicato)
+            ok=0
+            for i in 1 2 3 4 5; do
+              if git pull --rebase --autostash -X theirs origin main && git push; then ok=1; break; fi
+              echo "Push fallito (tentativo $i)"; sleep $((i*20))
+            done
+            [ "$ok" = 1 ] || { echo "Push fallito 5 volte: niente pubblicato"; exit 1; }
           fi
