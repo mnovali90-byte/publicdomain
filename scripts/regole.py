@@ -382,6 +382,13 @@ def stato_opera(o, c, oggi, mpf=(), verifiche=None):
         if a.get("m") is None:
             return {"s": "nd", "note": note}
         fine = max(fine, anno_libero(a["m"], c, False))   # i «morti per la Francia» più sotto
+    # Regno Unito, regola del 2039: viene PRIMA dei 70 anni, perché per chi è morto tra il 1960 e il 1968 i 70 anni
+    # finirebbero prima del 31/12/2039 (correzione del 22/11/2026, trovata dal caso di confine in data/casi_riferimento.json)
+    if c == "uk" and y is not None and y >= UK_LEGGE_1988:
+        morti = [a["m"] for a in au if not a.get("an") and not a.get("sc") and a.get("m") is not None]
+        if morti and y > max(morti) and max(morti) < UK_MORTI_PRIMA_DEL and fine < UK_2039_LIBERO:
+            fine = UK_2039_LIBERO
+            note = note + ["sUk2039"]
     if fine > Y:
         return {"s": "dal", "y": fine, "note": note}
     if dubbio:
@@ -394,8 +401,6 @@ def stato_opera(o, c, oggi, mpf=(), verifiche=None):
         if morti:
             ultima = max(morti)
             if y is not None and y > ultima:
-                if y >= UK_LEGGE_1988 and ultima < UK_MORTI_PRIMA_DEL:
-                    return {"s": "dal", "y": UK_2039_LIBERO, "note": note + ["sUk2039"]}
                 if y < UK_LEGGE_1988 and y + UK_POSTUME_ANNI + 1 > Y:
                     return {"s": "ver", "note": note + ["sUkPostumo"]}
             if y is None and ultima < UK_MORTI_PRIMA_DEL:
@@ -503,6 +508,10 @@ window.REGOLE_PAESI = (() => {
       if (!nn(a.m)) return { s: "nd", note };
       fine = Math.max(fine, annoLibero(a.m, c, false));
     }
+    if (c === "uk" && y !== null && y >= C.UK_LEGGE_1988) {
+      const morti = au.filter((a) => !a.an && !a.sc && nn(a.m)).map((a) => a.m);
+      if (morti.length && y > Math.max(...morti) && Math.max(...morti) < C.UK_MORTI_PRIMA_DEL && fine < C.UK_2039_LIBERO) { fine = C.UK_2039_LIBERO; note.push("sUk2039"); }
+    }
     if (fine > Y) return { s: "dal", y: fine, note };
     if (dubbio) return { s: "ver", note: note.concat(["sCoaut"]) };
     if (c !== "es" && au.some((a) => a.inc === 2)) return { s: "ver", note: note.filter((k) => k !== "sInc").concat(["sConfine"]) };
@@ -511,7 +520,6 @@ window.REGOLE_PAESI = (() => {
       if (morti.length) {
         const ultima = Math.max(...morti);
         if (y !== null && y > ultima) {
-          if (y >= C.UK_LEGGE_1988 && ultima < C.UK_MORTI_PRIMA_DEL) return { s: "dal", y: C.UK_2039_LIBERO, note: note.concat(["sUk2039"]) };
           if (y < C.UK_LEGGE_1988 && y + C.UK_POSTUME_ANNI + 1 > Y) return { s: "ver", note: note.concat(["sUkPostumo"]) };
         }
         if (y === null && ultima < C.UK_MORTI_PRIMA_DEL) note.push("sUkNd");

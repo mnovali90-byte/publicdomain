@@ -312,6 +312,19 @@
    ],
    "y_att": 2040,
    "fonte": "CDPA 1988, s. 12"
+  },
+  {
+   "caso": "Regno Unito: morto nel 1950, inedito uscito nel 1990: libero dal 2040 (controllo nel 2041)",
+   "au": [
+    1950
+   ],
+   "y": 1990,
+   "paese": "uk",
+   "anno": 2041,
+   "atteso": [
+    "si"
+   ],
+   "fonte": "CDPA 1988, allegato 1, par. 12 (GOV.UK, regola del 2039)"
   }
  ]
 }

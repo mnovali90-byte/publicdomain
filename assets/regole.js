@@ -60,6 +60,10 @@ window.REGOLE_PAESI = (() => {
       if (!nn(a.m)) return { s: "nd", note };
       fine = Math.max(fine, annoLibero(a.m, c, false));
     }
+    if (c === "uk" && y !== null && y >= C.UK_LEGGE_1988) {
+      const morti = au.filter((a) => !a.an && !a.sc && nn(a.m)).map((a) => a.m);
+      if (morti.length && y > Math.max(...morti) && Math.max(...morti) < C.UK_MORTI_PRIMA_DEL && fine < C.UK_2039_LIBERO) { fine = C.UK_2039_LIBERO; note.push("sUk2039"); }
+    }
     if (fine > Y) return { s: "dal", y: fine, note };
     if (dubbio) return { s: "ver", note: note.concat(["sCoaut"]) };
     if (c !== "es" && au.some((a) => a.inc === 2)) return { s: "ver", note: note.filter((k) => k !== "sInc").concat(["sConfine"]) };
@@ -68,7 +72,6 @@ window.REGOLE_PAESI = (() => {
       if (morti.length) {
         const ultima = Math.max(...morti);
         if (y !== null && y > ultima) {
-          if (y >= C.UK_LEGGE_1988 && ultima < C.UK_MORTI_PRIMA_DEL) return { s: "dal", y: C.UK_2039_LIBERO, note: note.concat(["sUk2039"]) };
           if (y < C.UK_LEGGE_1988 && y + C.UK_POSTUME_ANNI + 1 > Y) return { s: "ver", note: note.concat(["sUkPostumo"]) };
         }
         if (y === null && ultima < C.UK_MORTI_PRIMA_DEL) note.push("sUkNd");
