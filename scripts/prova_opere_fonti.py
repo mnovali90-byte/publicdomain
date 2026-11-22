@@ -157,11 +157,44 @@ def edizioni(fonte, titolo, cognome):
             a = vu.controllo(rec, "008")[7:11]
             a = [int(a)] if a.isdigit() else []
         persone, dic = leggi(rec)
-        out.append({"anno": a[0] if a else None, "persone": persone, "dicitura": dic[:300]})
+        if fonte == "bnf":
+            lingua = ([f.get("a", "") for f in vu.campi(rec, "101")] or [""])[0][:3]
+            cop = " ".join(f.get("d", "") for f in vu.campi(rec, "210") + vu.campi(rec, "214"))
+        else:
+            lingua = vu.controllo(rec, "008")[35:38].strip()
+            cop = " ".join(f.get("c", "") for f in vu.campi(rec, "260") + vu.campi(rec, "264"))
+        mc = re.search(r"(?:c|©|cop\.?\s?)\s?(1[5-9]\d\d|20[0-2]\d)", cop)
+        # lingua originale tradotta (041 $h) e titolo uniforme (240): dicono se l'edizione è una traduzione
+        orig = " ".join(f.get("h", "") for f in vu.campi(rec, "041")) if fonte != "bnf" else ""
+        out.append({"anno": a[0] if a else None, "lingua": lingua, "copyright": int(mc.group(1)) if mc else None,
+                    "traduzione_da": orig.strip()[:3] or None, "persone": persone, "dicitura": dic[:300]})
     return out
 
 
+LISTE = [x for x in os.environ.get("LISTE", "").split(",") if x]
+_AUTORI_LISTA = {}   # es. "2027,2028,es-2027,es-2028": raccolta completa
+
+
+def campione_liste():
+    """Tutti gli autori «letterari» delle liste indicate, le prime 10 opere di ciascuno (come le schede)."""
+    out, visti = [], set()
+    for nome in LISTE:
+        d = json.loads((R / "data" / f"{nome}.json").read_text(encoding="utf-8"))
+        for a in d.get("autori", []):
+            if not (a.get("letterario") and a.get("opere")):
+                continue
+            _AUTORI_LISTA.setdefault(nome, []).append(a)
+            for o in a["opere"][:10]:
+                k = (a["wikidata"], o.get("titolo"))
+                if k not in visti:
+                    visti.add(k)
+                    out.append((a, o))
+    return None, out
+
+
 def campione():
+    if LISTE:
+        return campione_liste()
     anno = RG.fase_sito(date.today())[1]
     ue = json.loads((R / "data" / f"{anno}.json").read_text(encoding="utf-8"))
     aut = [a for a in ue.get("autori", []) if a.get("letterario") and a.get("opere")]
@@ -198,8 +231,19 @@ def stessa_persona(n1, n2):
 
 
 def main():
+    global USCITA
     inizio = time.time()
     anno, lista = campione()
+    anno = anno or RG.fase_sito(date.today())[1]
+    gia = []
+    if LISTE:
+        USCITA = R / "docs" / "fonti-opere"
+        try:
+            gia = json.loads((USCITA / "risultati.json").read_text(encoding="utf-8"))
+        except Exception:
+            gia = []
+        fatte = {(x["aq"], x["titolo"]) for x in gia}
+        lista = [(a, o) for a, o in lista if (a["wikidata"], o.get("titolo")) not in fatte]
     qids = [q for q in {codice_opera(a, o) for a, o in lista} if q and q.startswith("Q")]
     orig = va.titoli_originali(qids)
     out = []
@@ -251,9 +295,16 @@ def main():
                     "titoli_cercati": titoli, "anno_wikidata": o.get("anno"), "anni_fonti": anni, "errori": errori,
                     "edizioni": {f: len(v["edizioni"]) for f, v in per_fonte.items()}, "persone": persone,
                     "diciture": sorted({e["dicitura"] for v in per_fonte.values() for e in v["edizioni"] if e["dicitura"]})[:6]})
+        if LISTE:
+            # le edizioni restano nel file: servono per incrociare le fonti (lingua, copyright, persone)
+            out[-1]["edizioni_dettaglio"] = {f: v["edizioni"][:40] for f, v in per_fonte.items()}
+            out[-1]["lista"] = next((n for n in LISTE if a in _AUTORI_LISTA.get(n, [])), None)
     USCITA.mkdir(parents=True, exist_ok=True)
-    (USCITA / "risultati.json").write_text(json.dumps(out, ensure_ascii=False, indent=1, default=list), encoding="utf-8")
-    riepilogo(out, len(lista), time.time() - inizio)
+    tutte = gia + out
+    (USCITA / "risultati.json").write_text(json.dumps(tutte, ensure_ascii=False, default=list), encoding="utf-8")
+    riepilogo(tutte, len(gia) + len(lista), time.time() - inizio)
+    if LISTE:
+        (USCITA / "stato.txt").write_text(f"opere fatte {len(tutte)} su {len(gia) + len(lista)}\n", encoding="utf-8")
 
 
 def riepilogo(out, n_lista, secondi):

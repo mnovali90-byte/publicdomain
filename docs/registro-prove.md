@@ -1040,3 +1040,22 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
   - la data di copyright (260/264 $c «c1923») vale più dell'anno di stampa;
   - Open Library da sola non basta;
   - un anno dopo la morte dell'autore va verificato.
+
+## 22/11/2026 — Prova «opere dalle fonti»: risultati (191 opere, 18 minuti, nessun errore di rete)
+- **Trovate in almeno un catalogo:** 125. K10plus 105, LoC 100, BnF 1.
+- **Persone che Wikidata non segna, in edizioni uscite quando l'autore era vivo:** 30. Di queste 7 sono morte dopo l'autore, quindi cambiano la data:
+  - Shepard per 4 libri di Milne;
+  - l'illustratrice Maginel Wright Barney per *Downright Dencey*;
+  - l'illustratore Frank Schoonover per *The Man from Bar-20*;
+  - il coautore H. Warner Allen per *Trent's Own Case* di Bentley.
+- **Casi noti:**
+  - Hauptmann trovata (K10plus);
+  - Shepard trovato (K10plus e LoC);
+  - Berlau non trovata: nei cataloghi c'erano solo traduzioni inglesi.
+- **Anni:** coincidono con Wikidata 68 volte su 94. Le differenze sono quasi tutte traduzioni o edizioni più tarde, come nella prova sugli anni.
+- **Giudizio:** i collaboratori e gli illustratori che contano escono davvero. Le edizioni in traduzione vanno però tolte dal voto, come per gli anni.
+
+## 22/11/2026 — Attività «verifica delle opere» impostata (docs/verifica-opere.md)
+- **Decisione di Marco:** si fa una volta per lista, non a pagamento. Claude prepara il rapporto e Marco controlla. Si parte dalle liste 2027 e 2028; la lista 2029 si fa a gennaio.
+- **Raccolta completa:** scripts/prova_opere_fonti.py con LISTE, giro fonti-opere.yml. Le opere sono 2.126 (2027, 2028, es-2027, es-2028), circa 3,5 ore. Salva per ogni edizione lingua, data di copyright e lingua di traduzione. Se non finisce, riprende da dove si era fermato.
+- **Prova a secco in locale, con una rete finta:** la ripresa funziona (119 opere fatte su 1.026, nessuna ripetuta).

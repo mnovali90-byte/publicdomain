@@ -1,0 +1,37 @@
+name: Fonti delle opere, liste 2027-2028 (non cambia il sito)
+
+# Parte solo a mano (o cambiando docs/fonti-opere/passo.txt), con l'ok di Marco. Scrive solo docs/fonti-opere. Se non finisce, il giro dopo riprende da dove si era fermato.
+on:
+  push:
+    paths:
+      - "docs/fonti-opere/passo.txt"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fonti-opere
+  cancel-in-progress: false
+
+jobs:
+  prova:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Collaboratori, illustratori e prima edizione dai cataloghi (LoC, K10plus, BnF)
+        run: python scripts/prova_opere_fonti.py
+        env:
+          BUDGET_MINUTI: "330"
+          LISTE: "2027,2028,es-2027,es-2028"
+      - name: Salva il risultato della prova
+        if: ${{ !cancelled() }}
+        run: |
+          git add docs/fonti-opere
+          bash scripts/salva.sh "Fonti delle opere 2027-2028: raccolta"
