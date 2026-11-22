@@ -1078,3 +1078,15 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
   - **Prova:** la parte 6 controlla che ogni scheda con fonti in disaccordo lo dica. Ha trovato 6 schede che non lo dicevano: Buck, Henham, Robinson, Scarborough, Garby, Sainsbury. Ora 0.
   - **Risultato:** nessun autore spostato, nessun cambio di stato (fotografia: 0 cambi). Sul sito cambiano solo le note di quelle 6 schede (e delle inglesi), più il «totale» delle liste, che ora è giusto: 2027 dice 1.423, non 1.427.
 - **Registro, numeri:** verificato 4.333, documentato 588, una sola fonte 945, discorde 78, maggioranza 45, corretto 14, nazionale 4. I 78 «discorde» entrano nella verifica (docs/verifica-opere.md).
+
+## 22/11/2026 sera — Prova 2 Open Library rifatta con il metodo fissato prima (preparata, non lanciata)
+- **Cambi decisi con Marco prima del lancio:**
+  - niente filtro «uscite mentre l'autore era vivo», perché taglierebbe le postume e si fiderebbe degli anni peggiori;
+  - la misura è decisa prima: 50 candidate a caso (seme 20261122), controllate a mano, da cui una percentuale con il suo margine d'errore;
+  - il file si scarica da Internet Archive, tutto su disco prima di leggerlo, e il server di Open Library resta come riserva.
+- **Filtri tenuti:**
+  - solo persone (P31 = Q5);
+  - tolti i titoli che abbiamo già;
+  - le probabili raccolte e antologie contate a parte.
+- **Giro separato** (prova-openlibrary.yml, partenza da docs/stima-sito/passo-openlibrary.txt). Salva solo il rapporto (prova-openlibrary2.json, campione-openlibrary2.md), niente registro e niente pagine.
+- **Il vecchio script prova 2** (con il filtro sull'anno) è sostituito ed è nella storia di git (b8ec64040).

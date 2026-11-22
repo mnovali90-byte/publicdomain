@@ -1,0 +1,35 @@
+name: Prova Open Library – opere mancanti (non cambia il sito)
+
+# Parte solo cambiando docs/stima-sito/passo-openlibrary.txt, con l'ok di Marco (22/11/2026).
+# Scrive solo il rapporto: docs/stima-sito/prova-openlibrary2.json e campione-openlibrary2.md (niente registro, niente pagine).
+on:
+  push:
+    paths:
+      - "docs/stima-sito/passo-openlibrary.txt"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: prova-openlibrary
+  cancel-in-progress: false
+
+jobs:
+  prova:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Opere dei nostri autori su Open Library (file da Internet Archive, scaricato prima e poi letto)
+        run: python scripts/prova_openlibrary2.py
+      - name: Salva solo il rapporto
+        if: ${{ !cancelled() }}
+        run: |
+          git add docs/stima-sito/prova-openlibrary2.json docs/stima-sito/campione-openlibrary2.md 2>/dev/null || true
+          bash scripts/salva.sh "Prova 2 Open Library: rapporto"
