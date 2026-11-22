@@ -834,3 +834,8 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
   - regola britannica del 2039, che diceva 2040 invece di 2039: 0 opere del sito cambiano;
   - date di morte avanti Cristo nello Storico: vale dal prossimo giro.
 - **Mein Kampf:** non corretto. L'autore Q346521 è nelle esclusioni dello Storico, e da qui non posso aprire Wikidata per controllare il collegamento giusto.
+
+## 22/11/2026 — Regola USA selettiva ANNULLATA (decisione di Marco)
+- **Perché:** con quella regola l'Iliade, la Bibbia, l'Odissea e Romeo e Giulietta sarebbero risultate «da verificare» negli USA. Il mio errore è stato non mostrare prima quali titoli conosciuti avrebbe toccato. La decisione di Marco: le opere antiche sono di pubblico dominio e non si toccano più.
+- **Fatto:** annullato il commit 3e2042e92 con un revert. Già pubblici è di nuovo identico al sito di oggi: 0 differenze su 56.516 opere. L'Iliade, l'Odissea, la Bibbia, Romeo e Giulietta e la Divina Commedia risultano libere negli USA e in Italia.
+- **Regola di lavoro da ora in poi:** prima di proporre qualsiasi cambio di regola, mostrare i titoli più letti che cambierebbero.
