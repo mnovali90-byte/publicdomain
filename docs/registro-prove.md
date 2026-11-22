@@ -877,3 +877,16 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - **Già pubblici (gia-pubblici.yml):** partiva anche dopo uno Storico fallito o annullato. Ora, quando parte dopo lo Storico, parte solo se lo Storico è finito bene. Il pulsante e i cambi di file restano come prima.
 - **Già pubblici e stima:** se l'invio su GitHub falliva 5 volte, il giro restava verde. Ora finisce rosso, con il messaggio «niente pubblicato». La logica è provata in locale con un invio finto che fallisce (codice 1) e con uno che riesce (codice 0).
 - **Non toccato:** i giri che scrivono nello stesso momento (punto 4 dell'audit), da risolvere nel passo 4 mettendo in fila tutti i giri che scrivono.
+
+## 22/11/2026 — Passo 4, prima parte: salvataggio unico e fotografia nei giri (in locale)
+- **scripts/salva.sh, usato da tutti i 15 giri che salvano** (il logo escluso): niente più «-X theirs». Se un altro giro ha cambiato gli stessi file, il giro finisce rosso e non pubblica; se l'invio fallisce 5 volte, finisce rosso. Provato su un deposito finto:
+  - salvataggio normale: pubblicato, codice 0;
+  - stesso file cambiato da due giri: «CONFLITTO», niente pubblicato, codice 1;
+  - file diversi: pubblicato, codice 0;
+  - niente da salvare: codice 0.
+- **Fotografia nei giri che rifanno le pagine** (aggiorna, Già pubblici, anniversari, stima): confronto con data/fotografia.json.gz, che è la prima fotografia ed è salvata adesso. Provato:
+  - nessun cambio: passa;
+  - regola cambiata apposta: 8 cambi, codice 1, elenco con impronta in docs/cambi-da-approvare.md;
+  - impronta scritta in data/cambi-approvati.txt: passa, e la fotografia si aggiorna.
+- **Anniversari e stima** salvavano anche un giro annullato («always()»): ora salvano solo se il giro non è annullato.
+- **Non ancora fatto:** cambiare le date dei giri secondo docs/giri-automatici.md (seconda parte del passo 4).

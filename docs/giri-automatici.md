@@ -128,6 +128,12 @@ La prova «Python e browser uguali» dice che i due programmi danno lo stesso ri
 
 Oggi `scripts/regole.py` ha le regole per autore (durate per paese, Spagna, Francia, USA, Trattato di pace, decisione sulle date di morte). Le regole per singola opera di Già pubblici (coautori, opere anonime, inediti nel Regno Unito, libri USA con anno confermato o no) stanno ancora in parte nella pagina stessa (`storico/pagina.html`) e in `storico/per_autore.py`. Usano le durate di `regole.py`, ma la logica è scritta lì: va spostata in `regole.py` come per gli autori, con la stessa prova «Python e browser uguali».
 
+## Protezioni già attive in tutti i giri (22/11/2026)
+
+- **Salvataggio unico** (`scripts/salva.sh`), uguale per tutti i giri. Se nel frattempo un altro giro ha cambiato gli stessi file, il giro si ferma rosso e non pubblica niente. Prima vincevano a occhi chiusi i dati di chi salvava per ultimo. Se GitHub rifiuta l'invio 5 volte, il giro finisce rosso.
+- **Fotografia dello stato** (`scripts/confronta_fotografia.py --giro`) nei giri che rifanno le pagine: aggiorna, Già pubblici, anniversari, stima. Se un'opera o un autore che c'era già cambia stato senza un motivo atteso, il giro non pubblica. Salva solo `docs/cambi-da-approvare.md`, con l'elenco e l'impronta dei cambi. Per approvare, l'impronta si scrive in `data/cambi-approvati.txt`. L'ultima fotografia pubblicata sta in `data/fotografia.json.gz`.
+- **I controlli bloccano davvero:** nel giro aggiorna il salvataggio parte solo se i controlli sono passati. Già pubblici riparte solo dopo uno Storico finito bene.
+
 ## Com'è oggi (fino all'approvazione)
 
 | Giro | Quando |

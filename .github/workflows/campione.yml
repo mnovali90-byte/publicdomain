@@ -30,10 +30,5 @@ jobs:
       - name: Salva il campione
         if: always()
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add docs/campione
-          if ! git diff --cached --quiet; then
-            git commit -m "Campione SBN: misura della fase 3"
-            for i in 1 2 3 4 5; do git pull --rebase --autostash -X theirs origin main && git push && break; sleep $((i*20)); done
-          fi
+          bash scripts/salva.sh "Campione SBN: misura della fase 3"

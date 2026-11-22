@@ -113,8 +113,6 @@ jobs:
         # se il giro viene annullato non si salva niente (19/11/2026: un giro annullato aveva salvato dati a metà)
         if: ${{ !cancelled() && steps.controlli.outcome == 'success' }}
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           # se i dati degli autori sono incompleti (biografie o visite calate di oltre il 20%) si rimettono quelli di prima
           if ! python scripts/controlla_salvataggio.py; then
             git checkout -- data/[0-9]*.json data/es-[0-9]*.json autore en/author index.html en/index.html radar/index.html en/radar/index.html sitemap.xml 2>/dev/null || true
@@ -122,17 +120,13 @@ jobs:
             python scripts/da_decidere.py || true   # così l'elenco «da decidere» lo dice
             rm -f .salvataggio_rifiutato
           fi
-          git add -A
-          if git diff --cached --quiet; then
-            echo "Nessun cambiamento"
-          else
-            git commit -m "Aggiornamento dati $(date -u +%Y-%m-%d)"
-            # GitHub ogni tanto rifiuta il push con un errore suo: si riprova fino a 5 volte
-            for i in 1 2 3 4 5; do
-              git pull --rebase --autostash -X theirs origin main   # in caso di conflitto sui dati vincono quelli appena scaricati
-              if git push; then break; fi
-              echo "Push fallito (tentativo $i), riprovo tra $((i*20)) secondi"
-              [ "$i" = 5 ] && exit 1
-              sleep $((i*20))
-            done
+          # fotografia dello stato giuridico: se qualcuno che c'era già cambia stato senza un motivo atteso, non si pubblica
+          # (scripts/confronta_fotografia.py); si salva solo l'elenco dei cambi da approvare, e il giro finisce rosso
+          if ! python scripts/confronta_fotografia.py --giro; then
+            git reset -q
+            git add docs/cambi-da-approvare.md
+            bash scripts/salva.sh "Cambi di stato da approvare $(date -u +%Y-%m-%d) (niente pubblicato)"
+            exit 1
           fi
+          git add -A
+          bash scripts/salva.sh "Aggiornamento dati $(date -u +%Y-%m-%d)"
