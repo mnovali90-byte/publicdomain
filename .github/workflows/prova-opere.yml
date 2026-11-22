@@ -1,0 +1,36 @@
+name: Prova – opere dalle fonti (non cambia il sito)
+
+# Parte solo a mano (o cambiando docs/prova-opere/passo.txt), con l'ok di Marco. Scrive solo docs/prova-opere.
+on:
+  push:
+    paths:
+      - "docs/prova-opere/passo.txt"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: prova-opere
+  cancel-in-progress: false
+
+jobs:
+  prova:
+    runs-on: ubuntu-latest
+    timeout-minutes: 75
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Collaboratori, illustratori e prima edizione dai cataloghi (LoC, K10plus, BnF)
+        run: python scripts/prova_opere_fonti.py
+        env:
+          BUDGET_MINUTI: "55"
+      - name: Salva il risultato della prova
+        if: ${{ !cancelled() }}
+        run: |
+          git add docs/prova-opere
+          bash scripts/salva.sh "Prova – opere dalle fonti: risultati"

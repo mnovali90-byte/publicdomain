@@ -958,3 +958,18 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - I risultati del primo giro restano in risultati-giro1.json e riepilogo-giro1.md.
 - **Il cerchio di gesso del Caucaso:** aggiunta Ruth Berlau (morta nel 1974) ai coautori che Wikidata non segna. Le fonti sono l'edizione Suhrkamp («Unter Mitarbeit von Ruth Berlau») e la Brecht Guide dell'Università del Wisconsin («Collaborator: Ruth Berlau»). La scheda di Brecht ora la dà libera dal 1° gennaio 2045.
 - **Nota di data/coautori_manuali.json corretta:** i coautori li decidono le fonti terze, non Marco e non Claude.
+
+## 22/11/2026 — Prova «opere dalle fonti» (preparata, non ancora lanciata)
+- **Perché:** opere, coautori e illustratori vengono ancora solo da Wikidata. Le altre fonti oggi confermano soltanto quello che Wikidata dice già.
+- **Cosa fa:** per ogni opera interroga i cataloghi Library of Congress, K10plus (catalogo collettivo tedesco) e BnF (solo per gli autori francesi) e legge:
+  - la dicitura del frontespizio, campo 245 $c («unter Mitarbeit von», «illustrated by»…);
+  - le persone con le loro date e il loro ruolo, campi 700;
+  - l'anno di ogni edizione.
+- **Cosa non conta:** traduttori, curatori e prefatori.
+- **Campione:** i 60 autori più letti della lista 2027, 4 opere ciascuno, più Brecht e Milne.
+- **Cosa misura:**
+  - le persone che Wikidata non segna, nelle edizioni uscite quando l'autore era vivo, e quante sono morte dopo l'autore (quelle cambiano la data);
+  - quante volte l'anno della prima edizione coincide con Wikidata;
+  - se ritrova i casi noti: Hauptmann, Berlau, Shepard.
+- **Prova a secco, in locale con un record finto:** legge Berlau sia dal campo 700 sia dalla dicitura «Mitarbeiter: R. Berlau», e Shepard da «with decorations by E. H. Shepard». Il traduttore viene scartato.
+- **Limite:** da qui non posso raggiungere i cataloghi, quindi la prova vera gira solo su GitHub.
