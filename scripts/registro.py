@@ -26,6 +26,13 @@ def voci_usa():
     for anno, voci in _leggi(R / "data" / "us-anni-verificati.json", {}).items():
         for q, v in voci.items():
             out.setdefault(q, []).append(("lista", v))
+    # 22/11/2026: anche le liste della Duke (data/storico/duke.json, storico/duke.py) contano come seconda fonte;
+    # prima servivano solo ad aggiungere opere mancanti, e per esempio Il grande Gatsby restava senza conferma
+    for anno, x in _leggi(R / "data" / "storico" / "duke.json", {}).items():
+        for b in x.get("libri", []):
+            q = (b.get("wd") or {}).get("qid")
+            if q and isinstance(b.get("pub"), int):
+                out.setdefault(q, []).append(("duke", ["ok", b["pub"], "duke"]))
     return out
 
 
