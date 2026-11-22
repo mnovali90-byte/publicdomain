@@ -91,7 +91,16 @@ scaricato = None
 for u in fonti:
     for t in range(4):
         print("scarico", u, "tentativo", t + 1, min_(), "min", flush=True)
-        r = subprocess.run(["curl", "-L", "-C", "-", "--fail", "--retry", "5", "--retry-delay", "10", "-sS", "-o", FILE, u])
+        # 23/11/2026: il primo lancio è stato annullato dopo 8 minuti di scaricamento senza messaggi. Ora si stampa ogni
+        # minuto quanto è arrivato e lo spazio libero, e se la velocità scende sotto 1 MB/s per 2 minuti curl riprova
+        subprocess.run(["df", "-h", "/tmp"])
+        proc = subprocess.Popen(["curl", "-L", "-C", "-", "--fail", "--retry", "5", "--retry-delay", "10", "-sS",
+                                 "--speed-limit", "1000000", "--speed-time", "120", "-o", FILE, u])
+        while proc.poll() is None:
+            time.sleep(60)
+            mb = round(os.path.getsize(FILE) / 1e6) if os.path.exists(FILE) else 0
+            print(f"  scaricati {mb} MB, {min_()} min", flush=True)
+        r = proc
         if r.returncode == 0:
             scaricato = u
             break

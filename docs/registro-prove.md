@@ -1090,3 +1090,8 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
   - le probabili raccolte e antologie contate a parte.
 - **Giro separato** (prova-openlibrary.yml, partenza da docs/stima-sito/passo-openlibrary.txt). Salva solo il rapporto (prova-openlibrary2.json, campione-openlibrary2.md), niente registro e niente pagine.
 - **Il vecchio script prova 2** (con il filtro sull'anno) è sostituito ed è nella storia di git (b8ec64040).
+
+## 23/11/2026 notte — Prova 2 Open Library, primo lancio annullato (giro 45070358753)
+- **Esito:** codici Open Library letti: 15.641 per 12.247 persone. Poi lo scaricamento da archive.org (ol_dump_works_2026-10-31) è stato annullato dopo 8 minuti, senza messaggi d'errore: il passo risulta «cancelled». La causa non si vede nel log; un annullamento a mano non si può escludere.
+- **Correzione (in locale, non lanciata):** lo script stampa ogni minuto quanto ha scaricato e lo spazio libero. Se la velocità resta sotto 1 MB/s per 2 minuti, curl riprova e riprende da dove era arrivato.
+- **Raccolta «fonti delle opere 2027-2028»:** finita (giro del 22/11, 188 minuti), 2.003 opere su 2.003, 967 trovate in almeno un catalogo, nessun errore di rete. L'analisi è al controllo programmato delle 00:50 UTC.
