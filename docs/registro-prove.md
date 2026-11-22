@@ -1017,3 +1017,26 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
     - 11 opere passano a «da verificare», perché ora c'è l'anno ma non ancora la seconda fonte.
   - **Henham:** anno di morte 1948 secondo il registro (Library of Congress e Wikidata; GND e SNAC dicono 1946); tutte le date si spostano di due anni.
 - **Ancora da fare:** le liste per anno (data/AAAA.json) non usano ancora il registro, quindi 11 autori con fonti discordi stanno nella lista di un anno diverso da quello deciso. Lo stesso problema riguarda radar e pagine dell'anno: è la prossima correzione.
+
+## 22/11/2026 — Prova «anni mancanti», secondo giro: risultati (100 senza anno, 100 di controllo)
+- **Opere senza anno:**
+  - con almeno un anno trovato: 56 su 100;
+  - due o più fonti d'accordo: 21;
+  - una fonte sola: 24;
+  - fonti in disaccordo: 11;
+  - anno trovato dopo la morte dell'autore: 4.
+  - Fonti che rispondono: LoC 47, Open Library 27, K10plus 11, Wikipedia 5, BnF 1.
+- **Gruppo di controllo (opere con l'anno su Wikidata):** almeno una fonte per 58; l'anno più vecchio delle fonti coincide con Wikidata in 40 casi (69%) e differisce in 18.
+- **Controllo a mano di 5 casi in disaccordo:**
+  - *Weeds* (Kelley): Wikidata dice 2020, LoC 1923. Ha ragione LoC: il frontespizio dice «Copyright, 1923, by Harcourt, Brace» (archive.org).
+  - *El árbol de la ciencia* (Baroja): Wikidata dice 1911, le fonti 1928, che è la traduzione inglese. Ha ragione Wikidata (1911, Wikipedia e Revista de Literatura CSIC).
+  - *Les civilisés* (Farrère): Wikidata dice 1905, le fonti 1906 e 1900. Ha ragione Wikidata (Wikisource, Ollendorff 1905; Goncourt 1905).
+  - *Once on a Time* (Milne): Wikidata dice 1917, le fonti 1922, che è l'edizione americana. Ha ragione Wikidata (Project Gutenberg, 1917).
+  - *Zaynab* (Haykal): Wikidata dice 1913, le fonti 1963. Ha ragione Wikidata (Wikipedia; Cambridge University Press).
+- **Giudizio:** cercare «l'edizione più vecchia con lo stesso titolo» nei cataloghi sbaglia spesso, perché trova traduzioni e edizioni più tarde, soprattutto quando cerca col titolo inglese. Wikidata sbaglia soprattutto quando dà l'anno di un'edizione moderna (Weeds 2020), e quel caso ora lo ferma anno_opera_credibile.
+- **Proposta di regole per l'anno:**
+  - si contano solo le edizioni nella lingua originale (campo 008/35-37 di MARC) o col titolo originale;
+  - deve dirlo il catalogo nazionale del paese dell'autore, oppure due fonti d'accordo;
+  - la data di copyright (260/264 $c «c1923») vale più dell'anno di stampa;
+  - Open Library da sola non basta;
+  - un anno dopo la morte dell'autore va verificato.
