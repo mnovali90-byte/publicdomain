@@ -891,3 +891,4 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - **Anniversari e stima** salvavano anche un giro annullato («always()»): ora salvano solo se il giro non è annullato.
 - **Non ancora fatto:** cambiare le date dei giri secondo docs/giri-automatici.md (seconda parte del passo 4).
 - Date cambiate (22/11/2026, ok di Marco): registro il 1° aprile, luglio, ottobre e novembre; anniversari il 1° ottobre e novembre.
+- Fotografia: se spariscono in massa opere o autori (più di 50 e più dell'1%), anche le uscite vanno approvate. Provato: 2000 opere tolte apposta, il giro si ferma (codice 1). In locale, da pubblicare.

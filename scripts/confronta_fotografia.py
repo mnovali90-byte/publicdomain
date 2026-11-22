@@ -25,7 +25,7 @@ RADICE = Path(__file__).resolve().parent.parent
 BASE = RADICE / "data" / "fotografia.json.gz"
 APPROVATI = RADICE / "data" / "cambi-approvati.txt"
 ELENCO = RADICE / "docs" / "cambi-da-approvare.md"
-BLOCCANO = ("dati", "regola", "non spiegato")
+BLOCCANO = ("dati", "regola", "non spiegato", "tolta in massa")
 from collections import Counter
 
 
@@ -83,6 +83,13 @@ def giro():
         return 0
     vecchia = carica(BASE)
     cambi = confronta(vecchia, nuova)
+    # opere o autori SPARITI in massa (più di 50 e più dell'1%): di solito è un giro che ha perso dati, non il sito che
+    # cambia. Allora anche le uscite vanno approvate (22/11/2026)
+    for tipo in ("opere", "autori"):
+        tolte = [x for x in cambi if x["tipo"] == tipo and x["perche"] == "tolta"]
+        if len(tolte) > max(50, len(vecchia[tipo]) // 100):
+            for x in tolte:
+                x["perche"] = "tolta in massa"
     imp = impronta(cambi)
     ok = imp is None or imp in APPROVATI.read_text(encoding="utf-8").split() if APPROVATI.exists() else imp is None
     da_guardare = [x for x in cambi if x["perche"] in BLOCCANO]
