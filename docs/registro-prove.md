@@ -956,3 +956,5 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - I due gruppi vanno a turno: 100 opere senza anno, scegliendo prima le 105 non ancora cercate, e 100 di controllo con l'anno su Wikidata.
 - Il riepilogo conta anche gli anni trovati che cadono dopo la morte dell'autore.
 - I risultati del primo giro restano in risultati-giro1.json e riepilogo-giro1.md.
+- **Il cerchio di gesso del Caucaso:** aggiunta Ruth Berlau (morta nel 1974) ai coautori che Wikidata non segna. Le fonti sono l'edizione Suhrkamp («Unter Mitarbeit von Ruth Berlau») e la Brecht Guide dell'Università del Wisconsin («Collaborator: Ruth Berlau»). La scheda di Brecht ora la dà libera dal 1° gennaio 2045.
+- **Nota di data/coautori_manuali.json corretta:** i coautori li decidono le fonti terze, non Marco e non Claude.
