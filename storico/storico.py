@@ -96,7 +96,7 @@ def opere_periodo(da, a):
         if val(r, "a"):
             x = o["autori"].setdefault(qid(val(r, "a")), {"nome": val(r, "aLabel"), "morte": None})
             if val(r, "morte"):
-                m = re.match(r"-?(\d{4})", val(r, "morte"))
+                m = re.match(r"(-?\d+)", val(r, "morte"))   # 22/11/2026: prima perdeva il segno meno (Platone 348 invece di -348)
                 if m and (x["morte"] is None or int(m.group(1)) > x["morte"]):
                     x["morte"] = int(m.group(1))   # più anni di morte: si tiene il più tardo (prudente)
         if val(r, "en") and not o["wiki_en"]: o["wiki_en"] = val(r, "en")
