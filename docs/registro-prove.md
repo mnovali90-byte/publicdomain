@@ -814,3 +814,23 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - **Già pubblici e Python per lo Storico (per_autore.py):** le tre differenze (anonime in Spagna, 180 anni in Spagna, seconda fonte USA) non cambiano niente di ciò che si vede. Il Python decide solo quali opere entrano nello Storico, con un filtro più largo della pagina, e poi decide la pagina. Gli scaffali «solo USA» e «solo UE» calcolati dal Python non sono usati dalla pagina.
 - **Dato sbagliato trovato:** nei file di ricerca le date di morte avanti Cristo perdono il segno meno (Platone 348 invece di -348). Lo stato non cambia, perché sono comunque antichi, ma nella ricerca si legge «morto nel 348».
 - **Aperto:** la regola «niente seconda fonte se l'autore è libero in Europa» vale oggi per 35.684 opere «libere negli USA» in Già pubblici. Da decidere con Marco.
+
+## 22/11/2026 — Regola USA (b): impatto prima della decisione (niente pubblicato)
+- **Domanda di Marco:** non dichiarare un'opera libera negli USA solo perché l'autore è libero in Europa. Quando serve davvero la seconda fonte?
+- **Base giuridica (17 U.S.C. § 303; tabella Cornell «Copyright Term and the Public Domain»):** è libero ciò che è uscito entro il 1930. Gli inediti seguono la regola della vita dell'autore più 70 anni. Un'opera creata prima del 1978 e pubblicata per la prima volta tra il 1978 e il 2002 è protetta almeno fino al 31/12/2047. Quindi il rischio vero è una prima pubblicazione dal 1931 al 2002, cioè le opere postume o tardive, non l'anno esatto in sé.
+- **Prova:** ho diviso le 35.684 opere «libere USA» senza seconda fonte usando la data di pubblicazione (P577) e quella di composizione (P571) dei blocchi dello Storico. Script in /home/claude/prove/impatto_b*.py, non nel repo.
+  - Bastano i dati (18.827 + 4.816):
+    - 149 testi antichi dell'elenco a mano;
+    - 8.234 pubblicate più di 170 anni fa;
+    - 10.444 pubblicate in vita da autori morti entro il 1930;
+    - 4.816 composte da autori morti più di 170 anni fa.
+  - Serve la seconda fonte:
+    - 4.234 in cui l'anno decide perché l'autore è morto dopo il 1930 (Gatsby, Ulisse);
+    - 1.290 postume (Il processo);
+    - 6.518 con la sola data di composizione e autori più recenti.
+  - **Risultato con la (b) così precisata:** in Già pubblici 23.671 opere restano libere negli USA e 12.013 diventano «da verificare». Nelle schede degli autori, rispetto al sito di oggi, cambiano 28 opere principali.
+- **Errore trovato e corretto a parte:** le liste della Duke non contavano come seconda fonte. Corretto in scripts/registro.py: 32 conferme in più, tra cui Gatsby, e 0 risultati visibili cambiati oggi.
+- **Altri errori corretti a parte, in locale, ognuno nel suo commit:**
+  - regola britannica del 2039, che diceva 2040 invece di 2039: 0 opere del sito cambiano;
+  - date di morte avanti Cristo nello Storico: vale dal prossimo giro.
+- **Mein Kampf:** non corretto. L'autore Q346521 è nelle esclusioni dello Storico, e da qui non posso aprire Wikidata per controllare il collegamento giusto.
