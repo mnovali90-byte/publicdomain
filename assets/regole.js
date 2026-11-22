@@ -31,10 +31,10 @@ window.REGOLE_PAESI = (() => {
   };
   const statoOpera = (o, c, oggi, mpf, verifiche) => {
     const Y = oggi, note = [], y = nn(o.y) ? o.y : null, au = o.au || [];
-    if (o.antica && o.antica !== "anonima") return { s: "si", note: ["sAntica_antica"] };
+    if (o.antica && o.antica !== "anonima") return { s: "si", note: ["sAntica_antica"], r: "antico" };
     if (o.antica === "anonima" && c !== "us" && y !== null) {
       const fine = y + (c === "es" ? C.SPAGNA_ANNI_VECCHI : C.ANNI_DOPO_MORTE) + 1;
-      return fine <= Y ? { s: "si", note: ["sAntica_anonima"] } : { s: "dal", y: fine, note: ["sAntica_anonima"] };
+      return fine <= Y ? { s: "si", note: ["sAntica_anonima"], r: "anonima" } : { s: "dal", y: fine, note: ["sAntica_anonima"], r: "anonima" };
     }
     if (au.some((a) => a.inc)) note.push("sInc");
     if (c === "us") {
@@ -42,46 +42,46 @@ window.REGOLE_PAESI = (() => {
       if (y !== null) {
         if (annoLiberoUsa(y) <= Y && !liberaUeOpera(o, Y)) {
           const v = (verifiche || {})[o.q];
-          if (v && v[0] !== null && v[0] > pubblicateLibereUsaNel(Y)) return { s: "dal", y: annoLiberoUsa(v[0]), note };
-          if (!v || v[0] === null) return { s: "ver", note: note.concat([v && v[2] ? "sUsNo" : "sUsNd"]), y2: v ? (nn(v[3]) ? v[3] : null) : null };
+          if (v && v[0] !== null && v[0] > pubblicateLibereUsaNel(Y)) return { s: "dal", y: annoLiberoUsa(v[0]), note, r: "usa_edizione_confermata" };
+          if (!v || v[0] === null) return { s: "ver", note: note.concat([v && v[2] ? "sUsNo" : "sUsNd"]), y2: v ? (nn(v[3]) ? v[3] : null) : null, r: "usa_seconda_fonte_mancante" };
         }
-        if (annoLiberoUsa(y) <= Y) { if (annoLiberoUsa(y) >= Y - C.USA_NOTA_RECENTE) note.push("sUsPrima"); return { s: "si", note }; }
-        return { s: "dal", y: annoLiberoUsa(y), note };
+        if (annoLiberoUsa(y) <= Y) { if (annoLiberoUsa(y) >= Y - C.USA_NOTA_RECENTE) note.push("sUsPrima"); return { s: "si", note, r: "usa_95_anni" }; }
+        return { s: "dal", y: annoLiberoUsa(y), note, r: "usa_95_anni" };
       }
-      if (au.length && au.every((a) => a.an || (nn(a.m) && vecchio(a.m, Y)))) return { s: "si", senza: true, note };
-      return { s: "nd", note };
+      if (au.length && au.every((a) => a.an || (nn(a.m) && vecchio(a.m, Y)))) return { s: "si", senza: true, note, r: "usa_autori_antichi" };
+      return { s: "nd", note, r: "usa_anno_mancante" };
     }
-    if (y !== null && vecchio(y, Y, c)) return { s: "si", note };
-    if (!au.length) return { s: "nd", note };
+    if (y !== null && vecchio(y, Y, c)) return { s: "si", note, r: "uscita_oltre_170_anni" };
+    if (!au.length) return { s: "nd", note, r: "autori_mancanti" };
     let fine = 0, dubbio = false;
     for (const a of au) {
       if (a.an) continue;
       if (a.sc) { dubbio = true; continue; }
-      if (!nn(a.m)) return { s: "nd", note };
+      if (!nn(a.m)) return { s: "nd", note, r: "morte_mancante" };
       fine = Math.max(fine, annoLibero(a.m, c, false));
     }
     if (c === "uk" && y !== null && y >= C.UK_LEGGE_1988) {
       const morti = au.filter((a) => !a.an && !a.sc && nn(a.m)).map((a) => a.m);
       if (morti.length && y > Math.max(...morti) && Math.max(...morti) < C.UK_MORTI_PRIMA_DEL && fine < C.UK_2039_LIBERO) { fine = C.UK_2039_LIBERO; note.push("sUk2039"); }
     }
-    if (fine > Y) return { s: "dal", y: fine, note };
-    if (dubbio) return { s: "ver", note: note.concat(["sCoaut"]) };
-    if (c !== "es" && au.some((a) => a.inc === 2)) return { s: "ver", note: note.filter((k) => k !== "sInc").concat(["sConfine"]) };
+    if (fine > Y) return { s: "dal", y: fine, note, r: note.includes("sUk2039") ? "uk_2039" : "morte" };
+    if (dubbio) return { s: "ver", note: note.concat(["sCoaut"]), r: "coautore_senza_data" };
+    if (c !== "es" && au.some((a) => a.inc === 2)) return { s: "ver", note: note.filter((k) => k !== "sInc").concat(["sConfine"]), r: "morte_incerta_sul_confine" };
     if (c === "uk") {
       const morti = au.filter((a) => !a.an).map((a) => a.m);
       if (morti.length) {
         const ultima = Math.max(...morti);
         if (y !== null && y > ultima) {
-          if (y < C.UK_LEGGE_1988 && y + C.UK_POSTUME_ANNI + 1 > Y) return { s: "ver", note: note.concat(["sUkPostumo"]) };
+          if (y < C.UK_LEGGE_1988 && y + C.UK_POSTUME_ANNI + 1 > Y) return { s: "ver", note: note.concat(["sUkPostumo"]), r: "uk_postuma" };
         }
         if (y === null && ultima < C.UK_MORTI_PRIMA_DEL) note.push("sUkNd");
       }
     }
     if (c === "it" && au.some((a) => !a.an && notaTrattatoFlag(a.al, a.m, Y, y))) note.push("sAlleato");
     const haMpf = (q) => (mpf && (mpf.has ? mpf.has(q) : mpf.includes(q)));
-    if (c === "fr" && au.some((a) => !a.an && haMpf(a.q) && annoLibero(a.m, "fr", true) > Y)) return { s: "ver", note: note.concat(["sMpf"]) };
+    if (c === "fr" && au.some((a) => !a.an && haMpf(a.q) && annoLibero(a.m, "fr", true) > Y)) return { s: "ver", note: note.concat(["sMpf"]), r: "fr_morto_per_la_francia" };
     if (c === "fr" && au.some((a) => !a.an && a.m >= C.FR_GUERRA[0] && a.m <= C.FR_GUERRA[1] && annoLibero(a.m, "fr", true) > Y)) note.push("sFr");
-    return { s: "si", note };
+    return { s: "si", note, r: note.includes("sUk2039") ? "uk_2039" : "morte" };
   };
   return Object.assign({}, C, { anniProtezione, annoLibero, mortiLiberiNel, annoLiberoUsa, pubblicateLibereUsaNel, paesiAlleati,
     notaTrattatoFlag, notaTrattato, statoOpera, liberaUeOpera, annoOperaCredibile });

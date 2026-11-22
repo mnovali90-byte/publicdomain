@@ -839,3 +839,26 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - **Perché:** con quella regola l'Iliade, la Bibbia, l'Odissea e Romeo e Giulietta sarebbero risultate «da verificare» negli USA. Il mio errore è stato non mostrare prima quali titoli conosciuti avrebbe toccato. La decisione di Marco: le opere antiche sono di pubblico dominio e non si toccano più.
 - **Fatto:** annullato il commit 3e2042e92 con un revert. Già pubblici è di nuovo identico al sito di oggi: 0 differenze su 56.516 opere. L'Iliade, l'Odissea, la Bibbia, Romeo e Giulietta e la Divina Commedia risultano libere negli USA e in Italia.
 - **Regola di lavoro da ora in poi:** prima di proporre qualsiasi cambio di regola, mostrare i titoli più letti che cambierebbero.
+
+## 22/11/2026 — Passo 2 pubblicato (push 394266e7, approvato da Marco)
+- **Pubblicato:** regole in un posto solo, regola britannica del 2039, date a.C., Duke come seconda fonte, e 3 schede rigenerate. Il cambio USA delle schede (le 474 opere) è rimasto fuori.
+- **Giro «Pagina Già pubblici» 45009014354:** tutti i passi «success», controlli bloccanti compresi. Dopo il giro le 3 schede mostrano «libero dal 2024/2023/2022», come atteso.
+- **Storico 44999863016:** fermato da Marco (cancelled). Il controllo programmato su quel giro non serve più.
+
+## 22/11/2026 — Passo 3: fotografia dello stato giuridico (in locale, non pubblicato)
+- **Cosa fa:** scripts/fotografia.py salva, per ognuna delle 56.516 opere di Già pubblici e dei 5.400 autori delle liste e per ogni paese, tre cose:
+  - lo stato;
+  - il perché, cioè la regola usata, che ora stato_opera restituisce in Python e nel browser (campo «r», per esempio «morte», «uk_2039», «usa_seconda_fonte_mancante»);
+  - i dati usati: anno di uscita, anni di morte, conferma USA, «morto per la Francia», paesi.
+  - In cima ci sono l'anno e l'impronta delle regole (assets/regole.js). Il file compresso pesa circa 1,7 MB e si crea in 2-3 secondi.
+- **Confronto** (scripts/confronta_fotografia.py): ogni cambio è classificato come atteso (è cambiato solo l'anno), dati, regola o non spiegato. Se c'è un cambio non atteso esce con errore, e quindi il giro non pubblica.
+- **Prove:**
+  - **Due fotografie di fila sono identiche, byte per byte.**
+  - **Simulazione del 1° gennaio 2027** (fotografia con l'anno 2027 contro quella del 2026):
+    - 9.152 cambi, tutti «atteso», codice 0;
+    - 6.991 riguardano autori, per esempio 1.423 morti nel 1956 che diventano liberi in Italia, Francia, Germania e Regno Unito;
+    - 1.187 riguardano opere;
+    - 974 cambiano solo il motivo, non lo stato.
+  - **Regola cambiata apposta** (Spagna 80 anni fino al 1986 invece che al 1987): 8 cambi, tutti «regola», codice 1. Il giro si sarebbe fermato. Esempio: The Little Friend in Spagna, da «dal 2068» a «dal 2058».
+  - prova_regole: 0 errori; Python e browser uguali, anche nel motivo.
+- **Da fare al passo 4:** mettere la fotografia nei giri: si salva dopo ogni giro riuscito e si confronta prima di pubblicare.

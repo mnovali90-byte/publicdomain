@@ -340,11 +340,11 @@ def stato_opera(o, c, oggi, mpf=(), verifiche=None):
     Y, note, y, au = oggi, [], o.get("y"), o.get("au") or []
     antica = o.get("antica")
     if antica and antica != "anonima":
-        return {"s": "si", "note": ["sAntica_antica"]}
+        return {"s": "si", "note": ["sAntica_antica"], "r": "antico"}
     # opera anonima: in Europa 70 anni dalla pubblicazione (in Spagna, per prudenza, 80); negli USA la solita regola
     if antica == "anonima" and c != "us" and y is not None:
         fine = y + (SPAGNA_ANNI_VECCHI if c == "es" else ANNI_DOPO_MORTE) + 1
-        return {"s": "si", "note": ["sAntica_anonima"]} if fine <= Y else {"s": "dal", "y": fine, "note": ["sAntica_anonima"]}
+        return {"s": "si", "note": ["sAntica_anonima"], "r": "anonima"} if fine <= Y else {"s": "dal", "y": fine, "note": ["sAntica_anonima"], "r": "anonima"}
     if any(a.get("inc") for a in au):
         note.append("sInc")
     if c == "us":
@@ -355,23 +355,23 @@ def stato_opera(o, c, oggi, mpf=(), verifiche=None):
             if anno_libero_usa(y) <= Y and not libera_ue_opera(o, Y):
                 v = (verifiche or {}).get(o.get("q"))
                 if v and v[0] is not None and v[0] > pubblicate_libere_usa_nel(Y):
-                    return {"s": "dal", "y": anno_libero_usa(v[0]), "note": note}
+                    return {"s": "dal", "y": anno_libero_usa(v[0]), "note": note, "r": "usa_edizione_confermata"}
                 if not v or v[0] is None:
                     return {"s": "ver", "note": note + ["sUsNo" if v and v[2] else "sUsNd"],
-                            "y2": v[3] if v and len(v) > 3 else None}
+                            "y2": v[3] if v and len(v) > 3 else None, "r": "usa_seconda_fonte_mancante"}
             if anno_libero_usa(y) <= Y:
                 if anno_libero_usa(y) >= Y - USA_NOTA_RECENTE:
                     note.append("sUsPrima")
-                return {"s": "si", "note": note}
-            return {"s": "dal", "y": anno_libero_usa(y), "note": note}
+                return {"s": "si", "note": note, "r": "usa_95_anni"}
+            return {"s": "dal", "y": anno_libero_usa(y), "note": note, "r": "usa_95_anni"}
         if au and all(a.get("an") or (a.get("m") is not None and _vecchio(a["m"], Y)) for a in au):
-            return {"s": "si", "senza": True, "note": note}
-        return {"s": "nd", "note": note}
+            return {"s": "si", "senza": True, "note": note, "r": "usa_autori_antichi"}
+        return {"s": "nd", "note": note, "r": "usa_anno_mancante"}
 
     if y is not None and _vecchio(y, Y, c):
-        return {"s": "si", "note": note}
+        return {"s": "si", "note": note, "r": "uscita_oltre_170_anni"}
     if not au:
-        return {"s": "nd", "note": note}
+        return {"s": "nd", "note": note, "r": "autori_mancanti"}
     fine, dubbio = 0, False
     for a in au:
         if a.get("an"):
@@ -380,7 +380,7 @@ def stato_opera(o, c, oggi, mpf=(), verifiche=None):
             dubbio = True
             continue
         if a.get("m") is None:
-            return {"s": "nd", "note": note}
+            return {"s": "nd", "note": note, "r": "morte_mancante"}
         fine = max(fine, anno_libero(a["m"], c, False))   # i «morti per la Francia» più sotto
     # Regno Unito, regola del 2039: viene PRIMA dei 70 anni, perché per chi è morto tra il 1960 e il 1968 i 70 anni
     # finirebbero prima del 31/12/2039 (correzione del 22/11/2026, trovata dal caso di confine in data/casi_riferimento.json)
@@ -390,19 +390,19 @@ def stato_opera(o, c, oggi, mpf=(), verifiche=None):
             fine = UK_2039_LIBERO
             note = note + ["sUk2039"]
     if fine > Y:
-        return {"s": "dal", "y": fine, "note": note}
+        return {"s": "dal", "y": fine, "note": note, "r": "uk_2039" if "sUk2039" in note else "morte"}
     if dubbio:
-        return {"s": "ver", "note": note + ["sCoaut"]}
+        return {"s": "ver", "note": note + ["sCoaut"], "r": "coautore_senza_data"}
     # fonti in disaccordo proprio sul confine dei 70 anni (registro unico, 20/11/2026): non la diamo per libera
     if c != "es" and any(a.get("inc") == 2 for a in au):
-        return {"s": "ver", "note": [k for k in note if k != "sInc"] + ["sConfine"]}
+        return {"s": "ver", "note": [k for k in note if k != "sInc"] + ["sConfine"], "r": "morte_incerta_sul_confine"}
     if c == "uk":
         morti = [a["m"] for a in au if not a.get("an")]
         if morti:
             ultima = max(morti)
             if y is not None and y > ultima:
                 if y < UK_LEGGE_1988 and y + UK_POSTUME_ANNI + 1 > Y:
-                    return {"s": "ver", "note": note + ["sUkPostumo"]}
+                    return {"s": "ver", "note": note + ["sUkPostumo"], "r": "uk_postuma"}
             if y is None and ultima < UK_MORTI_PRIMA_DEL:
                 note.append("sUkNd")
     # Trattato di pace del 1947: la data italiana resta quella dei 70 anni, con una nota (decisione di Marco, 22/11/2026)
@@ -410,10 +410,10 @@ def stato_opera(o, c, oggi, mpf=(), verifiche=None):
         note.append("sAlleato")
     # «morts pour la France»: con il titolo l'opera non è libera in Francia finché non passano 100 anni (lettura prudente)
     if c == "fr" and any(not a.get("an") and a.get("q") in mpf and anno_libero(a["m"], "fr", True) > Y for a in au):
-        return {"s": "ver", "note": note + ["sMpf"]}
+        return {"s": "ver", "note": note + ["sMpf"], "r": "fr_morto_per_la_francia"}
     if c == "fr" and any(not a.get("an") and FR_GUERRA[0] <= a["m"] <= FR_GUERRA[1] and anno_libero(a["m"], "fr", True) > Y for a in au):
         note.append("sFr")
-    return {"s": "si", "note": note}
+    return {"s": "si", "note": note, "r": "uk_2039" if "sUk2039" in note else "morte"}
 
 
 def opera_vecchia(anno_x, oggi, paese="it"):
@@ -479,10 +479,10 @@ window.REGOLE_PAESI = (() => {
   };
   const statoOpera = (o, c, oggi, mpf, verifiche) => {
     const Y = oggi, note = [], y = nn(o.y) ? o.y : null, au = o.au || [];
-    if (o.antica && o.antica !== "anonima") return { s: "si", note: ["sAntica_antica"] };
+    if (o.antica && o.antica !== "anonima") return { s: "si", note: ["sAntica_antica"], r: "antico" };
     if (o.antica === "anonima" && c !== "us" && y !== null) {
       const fine = y + (c === "es" ? C.SPAGNA_ANNI_VECCHI : C.ANNI_DOPO_MORTE) + 1;
-      return fine <= Y ? { s: "si", note: ["sAntica_anonima"] } : { s: "dal", y: fine, note: ["sAntica_anonima"] };
+      return fine <= Y ? { s: "si", note: ["sAntica_anonima"], r: "anonima" } : { s: "dal", y: fine, note: ["sAntica_anonima"], r: "anonima" };
     }
     if (au.some((a) => a.inc)) note.push("sInc");
     if (c === "us") {
@@ -490,46 +490,46 @@ window.REGOLE_PAESI = (() => {
       if (y !== null) {
         if (annoLiberoUsa(y) <= Y && !liberaUeOpera(o, Y)) {
           const v = (verifiche || {})[o.q];
-          if (v && v[0] !== null && v[0] > pubblicateLibereUsaNel(Y)) return { s: "dal", y: annoLiberoUsa(v[0]), note };
-          if (!v || v[0] === null) return { s: "ver", note: note.concat([v && v[2] ? "sUsNo" : "sUsNd"]), y2: v ? (nn(v[3]) ? v[3] : null) : null };
+          if (v && v[0] !== null && v[0] > pubblicateLibereUsaNel(Y)) return { s: "dal", y: annoLiberoUsa(v[0]), note, r: "usa_edizione_confermata" };
+          if (!v || v[0] === null) return { s: "ver", note: note.concat([v && v[2] ? "sUsNo" : "sUsNd"]), y2: v ? (nn(v[3]) ? v[3] : null) : null, r: "usa_seconda_fonte_mancante" };
         }
-        if (annoLiberoUsa(y) <= Y) { if (annoLiberoUsa(y) >= Y - C.USA_NOTA_RECENTE) note.push("sUsPrima"); return { s: "si", note }; }
-        return { s: "dal", y: annoLiberoUsa(y), note };
+        if (annoLiberoUsa(y) <= Y) { if (annoLiberoUsa(y) >= Y - C.USA_NOTA_RECENTE) note.push("sUsPrima"); return { s: "si", note, r: "usa_95_anni" }; }
+        return { s: "dal", y: annoLiberoUsa(y), note, r: "usa_95_anni" };
       }
-      if (au.length && au.every((a) => a.an || (nn(a.m) && vecchio(a.m, Y)))) return { s: "si", senza: true, note };
-      return { s: "nd", note };
+      if (au.length && au.every((a) => a.an || (nn(a.m) && vecchio(a.m, Y)))) return { s: "si", senza: true, note, r: "usa_autori_antichi" };
+      return { s: "nd", note, r: "usa_anno_mancante" };
     }
-    if (y !== null && vecchio(y, Y, c)) return { s: "si", note };
-    if (!au.length) return { s: "nd", note };
+    if (y !== null && vecchio(y, Y, c)) return { s: "si", note, r: "uscita_oltre_170_anni" };
+    if (!au.length) return { s: "nd", note, r: "autori_mancanti" };
     let fine = 0, dubbio = false;
     for (const a of au) {
       if (a.an) continue;
       if (a.sc) { dubbio = true; continue; }
-      if (!nn(a.m)) return { s: "nd", note };
+      if (!nn(a.m)) return { s: "nd", note, r: "morte_mancante" };
       fine = Math.max(fine, annoLibero(a.m, c, false));
     }
     if (c === "uk" && y !== null && y >= C.UK_LEGGE_1988) {
       const morti = au.filter((a) => !a.an && !a.sc && nn(a.m)).map((a) => a.m);
       if (morti.length && y > Math.max(...morti) && Math.max(...morti) < C.UK_MORTI_PRIMA_DEL && fine < C.UK_2039_LIBERO) { fine = C.UK_2039_LIBERO; note.push("sUk2039"); }
     }
-    if (fine > Y) return { s: "dal", y: fine, note };
-    if (dubbio) return { s: "ver", note: note.concat(["sCoaut"]) };
-    if (c !== "es" && au.some((a) => a.inc === 2)) return { s: "ver", note: note.filter((k) => k !== "sInc").concat(["sConfine"]) };
+    if (fine > Y) return { s: "dal", y: fine, note, r: note.includes("sUk2039") ? "uk_2039" : "morte" };
+    if (dubbio) return { s: "ver", note: note.concat(["sCoaut"]), r: "coautore_senza_data" };
+    if (c !== "es" && au.some((a) => a.inc === 2)) return { s: "ver", note: note.filter((k) => k !== "sInc").concat(["sConfine"]), r: "morte_incerta_sul_confine" };
     if (c === "uk") {
       const morti = au.filter((a) => !a.an).map((a) => a.m);
       if (morti.length) {
         const ultima = Math.max(...morti);
         if (y !== null && y > ultima) {
-          if (y < C.UK_LEGGE_1988 && y + C.UK_POSTUME_ANNI + 1 > Y) return { s: "ver", note: note.concat(["sUkPostumo"]) };
+          if (y < C.UK_LEGGE_1988 && y + C.UK_POSTUME_ANNI + 1 > Y) return { s: "ver", note: note.concat(["sUkPostumo"]), r: "uk_postuma" };
         }
         if (y === null && ultima < C.UK_MORTI_PRIMA_DEL) note.push("sUkNd");
       }
     }
     if (c === "it" && au.some((a) => !a.an && notaTrattatoFlag(a.al, a.m, Y, y))) note.push("sAlleato");
     const haMpf = (q) => (mpf && (mpf.has ? mpf.has(q) : mpf.includes(q)));
-    if (c === "fr" && au.some((a) => !a.an && haMpf(a.q) && annoLibero(a.m, "fr", true) > Y)) return { s: "ver", note: note.concat(["sMpf"]) };
+    if (c === "fr" && au.some((a) => !a.an && haMpf(a.q) && annoLibero(a.m, "fr", true) > Y)) return { s: "ver", note: note.concat(["sMpf"]), r: "fr_morto_per_la_francia" };
     if (c === "fr" && au.some((a) => !a.an && a.m >= C.FR_GUERRA[0] && a.m <= C.FR_GUERRA[1] && annoLibero(a.m, "fr", true) > Y)) note.push("sFr");
-    return { s: "si", note };
+    return { s: "si", note, r: note.includes("sUk2039") ? "uk_2039" : "morte" };
   };
   return Object.assign({}, C, { anniProtezione, annoLibero, mortiLiberiNel, annoLiberoUsa, pubblicateLibereUsaNel, paesiAlleati,
     notaTrattatoFlag, notaTrattato, statoOpera, liberaUeOpera, annoOperaCredibile });
