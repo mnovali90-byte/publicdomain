@@ -125,6 +125,23 @@ print(f"3. Regole per opera, Python/browser: {len(_norm)} opere, {len(py3) + len
 if len(py3) != len(res3) or diversi3:
     errori.append(f"regole per opera diverse tra Python e browser: {len(diversi3)} casi")
 
+# ---------------------------------------------------------------- 3b. calendario del sito: fase_sito e faseSito, tutti i giorni 2025-2029
+import datetime as _dt  # noqa: E402
+_giorni = [(_dt.date(2025, 1, 1) + _dt.timedelta(days=k)) for k in range(365 * 5 + 1)]
+with tempfile.TemporaryDirectory() as d:
+    Path(d, "g.js").write_text("const window = {};\n" + js + """
+const G = JSON.parse(require("fs").readFileSync(process.argv[2], "utf8"));
+console.log(JSON.stringify(G.map(([y, m, g]) => window.REGOLE_PAESI.faseSito(new Date(y, m - 1, g, 12)))));""", encoding="utf-8")
+    Path(d, "g.json").write_text(json.dumps([[x.year, x.month, x.day] for x in _giorni]), encoding="utf-8")
+    _resg = json.loads(subprocess.run(["node", str(Path(d, "g.js")), str(Path(d, "g.json"))], capture_output=True, text=True, check=True).stdout)
+_dg = [x for x, r in zip(_giorni, _resg) if list(R.fase_sito(x)) != r]
+_attesi = {(_dt.date(2026, 12, 31)): ("vigilia", 2027), _dt.date(2027, 1, 1): ("festa", 2027), _dt.date(2027, 1, 6): ("festa", 2027),
+           _dt.date(2027, 1, 7): ("conto", 2028), _dt.date(2026, 11, 22): ("conto", 2027)}
+_da = [k for k, v in _attesi.items() if R.fase_sito(k) != v]
+print(f"3b. Calendario del sito: {len(_giorni)} giorni, Python/browser diversi: {len(_dg)}, date chiave sbagliate: {len(_da)}")
+if _dg or _da:
+    errori.append(f"calendario del sito: {len(_dg)} giorni diversi tra Python e browser, {len(_da)} date chiave sbagliate")
+
 # ---------------------------------------------------------------- 4. casi di riferimento (data/casi_riferimento.json)
 CASI = json.load(open(RADICE / "data" / "casi_riferimento.json", encoding="utf-8"))
 _pern = {o["q"]: o for o in _norm}

@@ -143,6 +143,7 @@ Oggi `scripts/regole.py` ha le regole per autore (durate per paese, Spagna, Fran
 | Aggiorna autori | 1° gennaio, aprile, luglio, ottobre, dicembre |
 | Storico | 2 di ogni mese |
 | Già pubblici | dopo ogni Storico e quando cambia il suo codice |
+| Public Domain Day e fine festa (rifà le pagine) | 1° gennaio e 7 gennaio, 00:05 ora italiana (dal 22/11/2026) |
 | Prove (Stima, Campione SBN, BnF, British Library, Library of Congress, verifiche, Logo) | solo a mano |
 
 ## Dopo il 7 gennaio 2027 (deciso da Marco il 22/11/2026)

@@ -186,6 +186,14 @@ TESTI = {
                ("/gia-pubblici/", "Già pubblici", "Archivio", "Cerca un titolo o un autore: è già libero in Italia, Francia, Germania, Spagna, Regno Unito, USA?", "Cerca"),
                ("/calendario/{a}/", "Calendario {a}", "Anniversari", "Gli anniversari letterari del {a} giorno per giorno, da aggiungere al tuo calendario.", "Apri")],
         fonti=("Fonti", "Wikidata (CC0), Wikipedia, Project Gutenberg, il registro del copyright americano e i cataloghi delle biblioteche nazionali. Liste aggiornate al {agg}."),
+        # settimana del Public Domain Day (mockup approvato da Marco il 22/11/2026); la fase la decide scripts/regole.py (fase_sito)
+        fasi=dict(cnt_conto="tra {g} giorni", cnt_vigilia="Domani", cnt_festa="Public Domain Day",
+                  col_vigilia='A mezzanotte, in Europa e negli Stati Uniti, scadono i diritti di centinaia di libri. Mancano <span class="giorni" id="orologio"></span>.',
+                  col_oggi='Da oggi, 1° gennaio {a}, sono liberi <span class="giorni">{ue}</span> scrittori in Italia, Francia, Germania e Regno Unito, <span class="giorni">{es}</span> in Spagna e <span class="giorni">{us}</span> libri negli Stati Uniti.',
+                  col_dal='Dal 1° gennaio {a} sono liberi <span class="giorni">{ue}</span> scrittori in Italia, Francia, Germania e Regno Unito, <span class="giorni">{es}</span> in Spagna e <span class="giorni">{us}</span> libri negli Stati Uniti.',
+                  cta_vigilia="Chi si libera a mezzanotte", cta_oggi="Scopri chi è libero da oggi", cta_dal="Scopri chi è libero",
+                  sez_oggi=("Da oggi, 1° gennaio {a}", "Chi è diventato libero, e dove"), sez_dal=("Dal 1° gennaio {a}", "Chi è diventato libero, e dove"),
+                  data_em="dal 1° gennaio {a}.", oggi_em="da oggi."),
     ),
     "en": dict(
         url=f"{SITO}/en/", altra='<a href="/" hreflang="it">IT</a>', radar="/en/radar/",
@@ -205,6 +213,13 @@ TESTI = {
                ("/en/already-public/", "Already public", "Archive", "Search a title or an author: is it already free in Italy, France, Germany, Spain, the UK, the USA?", "Search"),
                ("/en/calendar/{a}/", "Calendar {a}", "Anniversaries", "The literary anniversaries of {a}, day by day, to add to your calendar.", "Open")],
         fonti=("Sources", "Wikidata (CC0), Wikipedia, Project Gutenberg, the US copyright register and national library catalogues. Lists updated on {agg}."),
+        fasi=dict(cnt_conto="in {g} days", cnt_vigilia="Tomorrow", cnt_festa="Public Domain Day",
+                  col_vigilia='At midnight, in Europe and the United States, the copyright of hundreds of books expires. Time left: <span class="giorni" id="orologio"></span>.',
+                  col_oggi='From today, 1 January {a}, <span class="giorni">{ue}</span> writers are free in Italy, France, Germany and the UK, <span class="giorni">{es}</span> in Spain, and <span class="giorni">{us}</span> books in the United States.',
+                  col_dal='Since 1 January {a}, <span class="giorni">{ue}</span> writers are free in Italy, France, Germany and the UK, <span class="giorni">{es}</span> in Spain, and <span class="giorni">{us}</span> books in the United States.',
+                  cta_vigilia="Who becomes free at midnight", cta_oggi="See who is free from today", cta_dal="See who is free",
+                  sez_oggi=("From today, 1 January {a}", "Who has become free, and where"), sez_dal=("Since 1 January {a}", "Who has become free, and where"),
+                  data_em="from 1 January {a}.", oggi_em="from today."),
     ),
 }
 
@@ -230,7 +245,7 @@ def pagina(lang, anno, P):
                + ('' if lang == 'en' else 'else if(new URLSearchParams(location.search).get("lang")==="en"){location.replace("/en/")}') + '</script>\n')
     testa = P["testa_scheda"](lang, esc(t["titolo"]), esc(t["descr"].format(a=anno)), t["url"], alterne, jsonld, t["altra"],
                               "@@CNT@@", og_tipo="website", css_extra=P["CSS_ANNO"] + CSS, main_cls="pdd", body_cls="pdd-b")
-    testa = testa.replace("@@CNT@@", t["cnt"].format(**fmt) if gg else "").replace("@@MARCHIO_S@@", P["marchio"]).replace('<meta charset="utf-8">', '<meta charset="utf-8">\n' + rimando, 1)
+    testa = testa.replace("@@CNT@@", t["cnt"].format(**fmt) if gg else f'<span id="cnt" style="color:var(--redt)">{t["fasi"]["cnt_festa"]}</span>').replace("</head>", '<script src="/assets/regole.js"></script>\n</head>', 1).replace("@@MARCHIO_S@@", P["marchio"]).replace('<meta charset="utf-8">', '<meta charset="utf-8">\n' + rimando, 1)
     numeri_html = "".join(f'<a href="{h.format(**fmt)}"><span class="n">{migliaia(nu[k], lang)}</span><span class="c">{esc(c)}</span><span class="m">{esc(m.format(**fmt))}</span></a>'
                           for c, m, h, k in t["nums"] if nu[k])
     porte = "".join(f'<a class="porta" href="{h.format(**fmt)}"><span class="m">{esc(y.format(**fmt))}</span><h3>{esc(x.format(**fmt))}</h3>'
@@ -243,13 +258,13 @@ def pagina(lang, anno, P):
     <p class="diritti"><span id="riga" class="vecchia">{esc(t["diritti"])}</span></p>
   </div>
   <div class="colophon">
-    <p>{t["colophon"]}</p>
-    <a class="vai" href="{t["pagina_anno"].format(a=anno)}">{esc(t["cta"].format(a=anno))} <b>→</b></a>
+    <p id="colo">{t["colophon"]}</p>
+    <a class="vai" href="{t["pagina_anno"].format(a=anno)}"><span id="cta">{esc(t["cta"].format(a=anno))}</span> <b>→</b></a>
     <span class="folio" id="folio"></span>
   </div>
 </section>
 <div class="home-sotto">
-<section class="sec"><div class="sh m"><h2>{esc(t["sez_n"][0].format(**fmt))}</h2><span>{esc(t["sez_n"][1])}</span></div>
+<section class="sec"><div class="sh m"><h2 id="sezn">{esc(t["sez_n"][0].format(**fmt))}</h2><span id="sezn2">{esc(t["sez_n"][1])}</span></div>
 <div class="nums">{numeri_html}</div></section>
 <section class="sec"><div class="sh m"><h2>{esc(t["sez"][0])}</h2><span>{esc(t["sez"][1])}</span></div>
 <div class="porte">{porte}</div></section>
@@ -257,7 +272,31 @@ def pagina(lang, anno, P):
 <script>
 const P={json.dumps(pag, ensure_ascii=False)}, DIRITTI={json.dumps(t["diritti"], ensure_ascii=False)}, FOLIO={json.dumps(t["folio"], ensure_ascii=False)};
 const el=s=>document.getElementById(s);
-el("gg").textContent=Math.max(0,Math.ceil((new Date({anno},0,1)-new Date())/864e5));
+const ANNO={anno}, F={json.dumps({k: (v if isinstance(v, str) else list(v)) for k, v in t["fasi"].items()}, ensure_ascii=False)};
+const NUM={json.dumps({"a": str(anno), "ue": migliaia(nu["ue"], lang), "es": migliaia(nu["es"], lang), "us": migliaia(nu["us"], lang)})};
+const fmtF=(x)=>Object.keys(NUM).reduce((s,k)=>s.split("{{"+k+"}}").join(NUM[k]),x);
+/* fase della settimana del Public Domain Day, calcolata nel browser con la regola unica (scripts/regole.py, fase_sito):
+   a mezzanotte la pagina cambia da sola, senza aspettare un giro. Se la pagina è dell'anno già liberato
+   (il giro del 7 gennaio non è ancora passato), resta in festa con «dal 1° gennaio». */
+function modo(ora){{const fs=window.REGOLE_PAESI?REGOLE_PAESI.faseSito(ora):["conto",ANNO];
+  if(ora>=new Date(ANNO,0,1))return ora.getFullYear()===ANNO&&ora.getMonth()===0&&ora.getDate()===1?"oggi":"dal";
+  return fs[0]==="vigilia"&&fs[1]===ANNO?"vigilia":"conto";}}
+const cnt=document.getElementById("cnt");
+function applica(M){{
+  if(M==="conto"){{const g=Math.max(0,Math.ceil((new Date(ANNO,0,1)-new Date())/864e5));el("gg").textContent=g;
+    if(cnt)cnt.lastChild.textContent=F.cnt_conto.split("{{g}}").join(g.toLocaleString(document.documentElement.lang||"it"));return;}}   // prima restava il numero del giorno in cui era stata fatta la pagina
+  if(cnt){{cnt.textContent=M==="vigilia"?F.cnt_vigilia:F.cnt_festa;cnt.style.color=M==="vigilia"?"":"var(--redt)";}}
+  el("colo").innerHTML=fmtF(M==="vigilia"?F.col_vigilia:M==="oggi"?F.col_oggi:F.col_dal);
+  el("cta").textContent=M==="vigilia"?F.cta_vigilia:M==="oggi"?F.cta_oggi:F.cta_dal;
+  if(M!=="vigilia"){{const z=M==="oggi"?F.sez_oggi:F.sez_dal;el("sezn").textContent=fmtF(z[0]);el("sezn2").textContent=z[1];
+    if(M==="oggi")P.forEach(p=>{{p.r=p.r.split(fmtF(F.data_em)).join(F.oggi_em)}});return;}}
+  const o=el("orologio"),mezz=new Date(ANNO,0,1);
+  const tic=()=>{{const s=Math.max(0,Math.floor((mezz-new Date())/1000));
+    if(s===0){{clearInterval(t);applica("oggi");return}}   // mezzanotte: la pagina passa da sola alla festa
+    o.textContent=Math.floor(s/3600)+":"+String(Math.floor(s%3600/60)).padStart(2,"0")+":"+String(s%60).padStart(2,"0");}};
+  const t=setInterval(tic,1000);tic();
+}}
+applica(modo(new Date()));
 const lenta=matchMedia("(prefers-reduced-motion: reduce)").matches;
 let i=0;
 function mostra(k){{const p=P[k];el("autore").textContent=p.a;el("titolo").textContent=p.t;el("folio").textContent=FOLIO.replace("{{k}}",k+1).replace("{{n}}",P.length);
@@ -283,7 +322,7 @@ def crea_home(P=None, anno=None):
         from marchio import marchio_html
         P = {"testa_scheda": pg.testa_scheda, "piede_scheda": pg.piede_scheda, "CSS_ANNO": pg.CSS_ANNO,
              "marchio": marchio_html(56).replace('<span class="pdr" style="--w:56px">', "").rsplit("</span>", 1)[0]}
-    anno = anno or datetime.date.today().year + 1
+    anno = anno or R.fase_sito(datetime.date.today())[1]   # anno in vetrina: scripts/regole.py (fase_sito)
     (RADICE / "index.html").write_text(pagina("it", anno, P), encoding="utf-8")
     (RADICE / "en").mkdir(exist_ok=True)
     (RADICE / "en" / "index.html").write_text(pagina("en", anno, P), encoding="utf-8")

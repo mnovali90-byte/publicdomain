@@ -414,6 +414,7 @@ body.ix-in .pf{opacity:1}body.menu-on .pf{opacity:0}
 <script>document.documentElement.classList.add('js')</script>
 <!-- contatore visite senza cookie (GoatCounter) -->
 <script data-goatcounter="https://pdr.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script src="/assets/regole.js"></script>
 </head>
 <body class="pdd-b">
 <header class="top">
@@ -432,13 +433,13 @@ body.ix-in .pf{opacity:1}body.menu-on .pf{opacity:0}
     <p class="diritti"><span id="riga" class="vecchia">Tutti i diritti riservati.</span></p>
   </div>
   <div class="colophon">
-    <p>Ogni 1° gennaio, in Europa e negli Stati Uniti, scadono i diritti di centinaia di libri. Il prossimo è tra <span class="giorni" id="gg"></span> giorni.</p>
-    <a class="vai" href="/pubblico-dominio-2027/">Scopri chi si libera nel 2027 <b>→</b></a>
+    <p id="colo">Ogni 1° gennaio, in Europa e negli Stati Uniti, scadono i diritti di centinaia di libri. Il prossimo è tra <span class="giorni" id="gg"></span> giorni.</p>
+    <a class="vai" href="/pubblico-dominio-2027/"><span id="cta">Scopri chi si libera nel 2027</span> <b>→</b></a>
     <span class="folio" id="folio"></span>
   </div>
 </section>
 <div class="home-sotto">
-<section class="sec"><div class="sh m"><h2>Il 1° gennaio 2027</h2><span>Chi diventa libero, e dove</span></div>
+<section class="sec"><div class="sh m"><h2 id="sezn">Il 1° gennaio 2027</h2><span id="sezn2">Chi diventa libero, e dove</span></div>
 <div class="nums"><a href="/pubblico-dominio-2027/#ix1"><span class="n">826</span><span class="c">scrittori liberi in Italia, Francia, Germania e Regno Unito</span><span class="m">morti nel 1956</span></a><a href="/pubblico-dominio-2027/"><span class="n">790</span><span class="c">scrittori liberi in Spagna</span><span class="m">morti nel 1946</span></a><a href="/pubblico-dominio-2027/#ix2"><span class="n">169</span><span class="c">libri liberi negli USA</span><span class="m">pubblicati nel 1931 · 111 con l'anno confermato</span></a></div></section>
 <section class="sec"><div class="sh m"><h2>Da dove partire</h2><span>Le sezioni del sito</span></div>
 <div class="porte"><a class="porta" href="/pubblico-dominio-2027/"><span class="m">1° gennaio 2027</span><h3>Pubblico dominio 2027</h3><p>Chi si libera il 1° gennaio, spiegato: i nomi più attesi, i libri americani, le regole paese per paese.</p><span class="go">Leggi →</span></a><a class="porta" href="/radar/"><span class="m">L'elenco completo</span><h3>Tutti gli autori</h3><p>L'elenco completo dei 826 scrittori del 2027, da filtrare per paese e genere e scaricare in Excel.</p><span class="go">Cerca →</span></a><a class="porta" href="/gia-pubblici/"><span class="m">Archivio</span><h3>Già pubblici</h3><p>Cerca un titolo o un autore: è già libero in Italia, Francia, Germania, Spagna, Regno Unito, USA?</p><span class="go">Cerca →</span></a><a class="porta" href="/calendario/2027/"><span class="m">Anniversari</span><h3>Calendario 2027</h3><p>Gli anniversari letterari del 2027 giorno per giorno, da aggiungere al tuo calendario.</p><span class="go">Apri →</span></a></div></section>
@@ -446,7 +447,31 @@ body.ix-in .pf{opacity:1}body.menu-on .pf{opacity:0}
 <script>
 const P=[{"a": "Bertolt Brecht", "t": "L'opera da tre soldi", "r": "Libero in Italia, Francia, Germania e nel Regno Unito <em>dal 1° gennaio 2027.</em>"}, {"a": "A. A. Milne", "t": "Winnie Puh", "r": "Libero in Italia, Francia, Germania e nel Regno Unito <em>dal 1° gennaio 2027.</em>"}, {"a": "Pearl S. Buck", "t": "La buona terra", "r": "Libero negli Stati Uniti <em>dal 1° gennaio 2027.</em>"}, {"a": "Bertolt Brecht", "t": "Madre Coraggio e i suoi figli", "r": "Libero in Italia, Francia, Germania e nel Regno Unito <em>dal 1° gennaio 2027.</em>"}, {"a": "Robert Walser", "t": "I fratelli Tanner", "r": "Libero in Italia, Francia, Germania e nel Regno Unito <em>dal 1° gennaio 2027.</em>"}, {"a": "Virginia Woolf", "t": "Le onde", "r": "Libero negli Stati Uniti <em>dal 1° gennaio 2027.</em>"}, {"a": "Antoine de Saint-Exupéry", "t": "Volo di notte", "r": "Libero negli Stati Uniti <em>dal 1° gennaio 2027.</em>"}], DIRITTI="Tutti i diritti riservati.", FOLIO="{k} di {n}";
 const el=s=>document.getElementById(s);
-el("gg").textContent=Math.max(0,Math.ceil((new Date(2027,0,1)-new Date())/864e5));
+const ANNO=2027, F={"cnt_conto": "tra {g} giorni", "cnt_vigilia": "Domani", "cnt_festa": "Public Domain Day", "col_vigilia": "A mezzanotte, in Europa e negli Stati Uniti, scadono i diritti di centinaia di libri. Mancano <span class=\"giorni\" id=\"orologio\"></span>.", "col_oggi": "Da oggi, 1° gennaio {a}, sono liberi <span class=\"giorni\">{ue}</span> scrittori in Italia, Francia, Germania e Regno Unito, <span class=\"giorni\">{es}</span> in Spagna e <span class=\"giorni\">{us}</span> libri negli Stati Uniti.", "col_dal": "Dal 1° gennaio {a} sono liberi <span class=\"giorni\">{ue}</span> scrittori in Italia, Francia, Germania e Regno Unito, <span class=\"giorni\">{es}</span> in Spagna e <span class=\"giorni\">{us}</span> libri negli Stati Uniti.", "cta_vigilia": "Chi si libera a mezzanotte", "cta_oggi": "Scopri chi è libero da oggi", "cta_dal": "Scopri chi è libero", "sez_oggi": ["Da oggi, 1° gennaio {a}", "Chi è diventato libero, e dove"], "sez_dal": ["Dal 1° gennaio {a}", "Chi è diventato libero, e dove"], "data_em": "dal 1° gennaio {a}.", "oggi_em": "da oggi."};
+const NUM={"a": "2027", "ue": "826", "es": "790", "us": "169"};
+const fmtF=(x)=>Object.keys(NUM).reduce((s,k)=>s.split("{"+k+"}").join(NUM[k]),x);
+/* fase della settimana del Public Domain Day, calcolata nel browser con la regola unica (scripts/regole.py, fase_sito):
+   a mezzanotte la pagina cambia da sola, senza aspettare un giro. Se la pagina è dell'anno già liberato
+   (il giro del 7 gennaio non è ancora passato), resta in festa con «dal 1° gennaio». */
+function modo(ora){const fs=window.REGOLE_PAESI?REGOLE_PAESI.faseSito(ora):["conto",ANNO];
+  if(ora>=new Date(ANNO,0,1))return ora.getFullYear()===ANNO&&ora.getMonth()===0&&ora.getDate()===1?"oggi":"dal";
+  return fs[0]==="vigilia"&&fs[1]===ANNO?"vigilia":"conto";}
+const cnt=document.getElementById("cnt");
+function applica(M){
+  if(M==="conto"){const g=Math.max(0,Math.ceil((new Date(ANNO,0,1)-new Date())/864e5));el("gg").textContent=g;
+    if(cnt)cnt.lastChild.textContent=F.cnt_conto.split("{g}").join(g.toLocaleString(document.documentElement.lang||"it"));return;}   // prima restava il numero del giorno in cui era stata fatta la pagina
+  if(cnt){cnt.textContent=M==="vigilia"?F.cnt_vigilia:F.cnt_festa;cnt.style.color=M==="vigilia"?"":"var(--redt)";}
+  el("colo").innerHTML=fmtF(M==="vigilia"?F.col_vigilia:M==="oggi"?F.col_oggi:F.col_dal);
+  el("cta").textContent=M==="vigilia"?F.cta_vigilia:M==="oggi"?F.cta_oggi:F.cta_dal;
+  if(M!=="vigilia"){const z=M==="oggi"?F.sez_oggi:F.sez_dal;el("sezn").textContent=fmtF(z[0]);el("sezn2").textContent=z[1];
+    if(M==="oggi")P.forEach(p=>{p.r=p.r.split(fmtF(F.data_em)).join(F.oggi_em)});return;}
+  const o=el("orologio"),mezz=new Date(ANNO,0,1);
+  const tic=()=>{const s=Math.max(0,Math.floor((mezz-new Date())/1000));
+    if(s===0){clearInterval(t);applica("oggi");return}   // mezzanotte: la pagina passa da sola alla festa
+    o.textContent=Math.floor(s/3600)+":"+String(Math.floor(s%3600/60)).padStart(2,"0")+":"+String(s%60).padStart(2,"0");};
+  const t=setInterval(tic,1000);tic();
+}
+applica(modo(new Date()));
 const lenta=matchMedia("(prefers-reduced-motion: reduce)").matches;
 let i=0;
 function mostra(k){const p=P[k];el("autore").textContent=p.a;el("titolo").textContent=p.t;el("folio").textContent=FOLIO.replace("{k}",k+1).replace("{n}",P.length);

@@ -2128,7 +2128,9 @@ async function avvia() {
   stato.mercati = stato.anni.some((an) => stato.dati[an].autori.some((a) => a.indice_it !== undefined));
   const m = leggiLocale(CHIAVE_MERCATO, "it");
   stato.mercato = ["it", "es", "de", "fr", "en", "int", "scop"].includes(m) ? m : "it";
-  stato.anno = stato.anni[0];
+  // anno in vetrina dalla regola unica (scripts/regole.py, fase_sito): nella settimana della festa l'anno appena liberato,
+  // dal 7 gennaio il prossimo. Prima era sempre il primo anno dell'indice, che dopo il 1° gennaio resta quello vecchio.
+  { const v = window.REGOLE_PAESI ? REGOLE_PAESI.faseSito(new Date())[1] : null; stato.anno = stato.anni.includes(v) ? v : stato.anni[0]; }
   const gsalvata = leggiLocale(CHIAVE_GIUR, LING === "en" ? null : "it");   // in inglese, senza scelta salvata, decide la lingua del browser
   const og = GIUR_OPZ.find((o) => o[0] === gsalvata);
   if (og && stato.giurDisp.includes(og[1])) { stato.opz = og[0]; stato.giur = og[1]; stato.dati = stato.perGiur[og[1]]; }

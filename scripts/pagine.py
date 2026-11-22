@@ -283,7 +283,7 @@ PIEDE = {
 }
 
 
-ANNO_PROSSIMO = datetime.date.today().year + 1   # l'anno del prossimo 1° gennaio
+ANNO_PROSSIMO = R.fase_sito(datetime.date.today())[1]   # l'anno in vetrina: il prossimo 1° gennaio, o quello appena passato nella settimana della festa (scripts/regole.py, fase_sito)
 PIEDE = {k: v.replace("@@ANNO@@", str(ANNO_PROSSIMO)) for k, v in PIEDE.items()}
 
 

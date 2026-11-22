@@ -444,6 +444,25 @@ def opera_da_riga(r, coautori=None):
     return {"q": r[0], "y": anno_opera_credibile(r[3], au), "yd": (r[6] if len(r) > 6 else 0) or 0, "antica": antica, "au": au}
 
 
+# =====================================================================================================================
+# CALENDARIO DEL SITO (docs/giri-automatici.md, mockup approvato da Marco il 22/11/2026): dalla data di oggi, quale anno è
+# in vetrina e in che fase siamo. Tutte le pagine usano questa funzione, niente «anno + 1» sparsi.
+#   «vigilia»: 31 dicembre (domani è Public Domain Day), in vetrina l'anno che arriva;
+#   «festa»:   dal 1° al 6 gennaio, in vetrina l'anno appena liberato;
+#   «conto»:   il resto dell'anno, conto alla rovescia verso il prossimo 1° gennaio.
+# =====================================================================================================================
+FESTA_FINO_AL = 6   # la festa dura dal 1° al 6 gennaio; il 7 riparte il conto alla rovescia
+
+
+def fase_sito(oggi):
+    """(fase, anno in vetrina) per una data (datetime.date)."""
+    if oggi.month == 12 and oggi.day == 31:
+        return "vigilia", oggi.year + 1
+    if oggi.month == 1 and oggi.day <= FESTA_FINO_AL:
+        return "festa", oggi.year
+    return "conto", oggi.year + 1
+
+
 # --- la stessa cosa per il browser: assets/regole.js è scritto da qui. Se cambi una funzione sopra, cambia anche sotto:
 #     scripts/prova_regole.py confronta le due versioni su tutti gli autori e su tutti gli anni e si ferma se differiscono.
 _JS = """/* SCRITTO DA scripts/regole.py (esporta_js): non modificare a mano. Regole per paese del sito, in un posto solo. */
@@ -476,6 +495,13 @@ window.REGOLE_PAESI = (() => {
     if (o.antica) return true;
     if (nn(o.y) && vecchio(o.y, oggi)) return true;
     return o.au.length > 0 && o.au.every((a) => a.an || (!a.sc && a.inc !== 2 && nn(a.m) && annoLibero(a.m, "it") <= oggi));
+  };
+  // gemella di fase_sito: d è una Date del browser (ora locale)
+  const faseSito = (d) => {
+    const m = d.getMonth() + 1, g = d.getDate(), y = d.getFullYear();
+    if (m === 12 && g === 31) return ["vigilia", y + 1];
+    if (m === 1 && g <= C.FESTA_FINO_AL) return ["festa", y];
+    return ["conto", y + 1];
   };
   const statoOpera = (o, c, oggi, mpf, verifiche) => {
     const Y = oggi, note = [], y = nn(o.y) ? o.y : null, au = o.au || [];
@@ -532,7 +558,7 @@ window.REGOLE_PAESI = (() => {
     return { s: "si", note, r: note.includes("sUk2039") ? "uk_2039" : "morte" };
   };
   return Object.assign({}, C, { anniProtezione, annoLibero, mortiLiberiNel, annoLiberoUsa, pubblicateLibereUsaNel, paesiAlleati,
-    notaTrattatoFlag, notaTrattato, statoOpera, liberaUeOpera, annoOperaCredibile });
+    notaTrattatoFlag, notaTrattato, statoOpera, liberaUeOpera, annoOperaCredibile, faseSito });
 })();
 """
 
@@ -544,7 +570,8 @@ def esporta_js(percorso):
          "ALLEATI_OPERE_FINO_AL": ALLEATI_OPERE_FINO_AL, "PAESI_70": list(PAESI_70), "ALLEATI_1947": sorted(ALLEATI_1947),
          "OPERA_VECCHIA_ANNI": OPERA_VECCHIA_ANNI, "OPERA_VECCHIA_ANNI_ES": OPERA_VECCHIA_ANNI_ES, "ANNO_DATI_PRIMA_MORTE": ANNO_DATI_PRIMA_MORTE,
          "ANNO_DATI_DOPO_MORTE": ANNO_DATI_DOPO_MORTE, "USA_NOTA_RECENTE": USA_NOTA_RECENTE, "UK_LEGGE_1988": UK_LEGGE_1988,
-         "UK_MORTI_PRIMA_DEL": UK_MORTI_PRIMA_DEL, "UK_2039_LIBERO": UK_2039_LIBERO, "UK_POSTUME_ANNI": UK_POSTUME_ANNI, "FR_GUERRA": list(FR_GUERRA)}
+         "UK_MORTI_PRIMA_DEL": UK_MORTI_PRIMA_DEL, "UK_2039_LIBERO": UK_2039_LIBERO, "UK_POSTUME_ANNI": UK_POSTUME_ANNI, "FR_GUERRA": list(FR_GUERRA),
+         "FESTA_FINO_AL": FESTA_FINO_AL}
     testo = _JS.replace("@@COSTANTI@@", json.dumps(c, ensure_ascii=False))
     from pathlib import Path
     Path(percorso).write_text(testo, encoding="utf-8")

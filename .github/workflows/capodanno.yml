@@ -1,0 +1,52 @@
+name: Public Domain Day e fine festa (rifà le pagine)
+
+# Il 1° gennaio a mezzanotte e il 7 gennaio a mezzanotte (ora italiana) rifà le pagine con la data nuova
+# (docs/giri-automatici.md, giri 4 e 5; mockup approvato da Marco il 22/11/2026).
+# La home e il radar cambiano fase da soli nel browser (scripts/regole.py, fase_sito); questo giro aggiorna tutto il resto:
+# schede degli autori («libero dal…»), pagine dell'anno, Già pubblici, e il 7 gennaio l'anno in vetrina.
+# Non scarica niente: i dati li prepara il giro trimestrale (aggiorna.yml).
+on:
+  schedule:
+    - cron: "5 23 31 12 *"   # 1° gennaio, 00:05 in Italia
+    - cron: "5 23 6 1 *"     # 7 gennaio, 00:05 in Italia
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: capodanno
+  cancel-in-progress: false
+
+env:
+  TZ: Europe/Rome   # la data che conta è quella italiana, non quella del server (che a mezzanotte italiana è ancora il giorno prima)
+
+jobs:
+  pagine:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Già pubblici (pagina e dati)
+        run: python storico/pagina.py
+      - name: Pagine del sito (home, schede, pagine dell'anno)
+        run: python scripts/pagine.py
+      - name: Controllo delle regole e delle frasi
+        run: |
+          python scripts/prova_regole.py
+          python scripts/controllo_frasi.py
+      - name: Salva (con la fotografia dello stato)
+        run: |
+          if ! python scripts/confronta_fotografia.py --giro; then
+            git reset -q
+            git add docs/cambi-da-approvare.md
+            bash scripts/salva.sh "Cambi di stato da approvare $(date +%Y-%m-%d) (niente pubblicato)"
+            exit 1
+          fi
+          git add -A
+          bash scripts/salva.sh "Public Domain Day: pagine del $(date +%Y-%m-%d)"
