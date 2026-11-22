@@ -5,7 +5,7 @@ on:
     paths:
       - "docs/registro/passo.txt"
   schedule:
-    - cron: "17 3 1 * *"     # il 1° del mese, prima dello Storico (il 2): così lo Storico usa date fresche
+    - cron: "17 3 1 4,7,10,11 *"   # 1° aprile, luglio, ottobre (prima del rinfresco delle 5:17) e 1° novembre, controllo date (decisione di Marco, 22/11/2026)
   workflow_dispatch:
 
 permissions:

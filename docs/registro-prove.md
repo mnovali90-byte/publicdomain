@@ -890,3 +890,4 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
   - impronta scritta in data/cambi-approvati.txt: passa, e la fotografia si aggiorna.
 - **Anniversari e stima** salvavano anche un giro annullato («always()»): ora salvano solo se il giro non è annullato.
 - **Non ancora fatto:** cambiare le date dei giri secondo docs/giri-automatici.md (seconda parte del passo 4).
+- Date cambiate (22/11/2026, ok di Marco): registro il 1° aprile, luglio, ottobre e novembre; anniversari il 1° ottobre e novembre.

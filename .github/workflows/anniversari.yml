@@ -2,7 +2,7 @@ name: Calendario anniversari
 
 on:
   schedule:
-    - cron: "43 4 1 * *"   # il primo di ogni mese
+    - cron: "43 4 1 10,11 *"   # 1° ottobre (calendario dell'anno dopo) e 1° novembre (ricontrollo); decisione di Marco, 22/11/2026
   push:
     paths:
       - "scripts/anniversari.py"

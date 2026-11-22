@@ -138,8 +138,8 @@ Oggi `scripts/regole.py` ha le regole per autore (durate per paese, Spagna, Fran
 
 | Giro | Quando |
 |---|---|
-| Registro unico (date di morte) | 1° di ogni mese |
-| Calendario anniversari | 1° di ogni mese |
+| Registro unico (date di morte) | 1° aprile, luglio, ottobre, novembre (dal 22/11/2026) |
+| Calendario anniversari | 1° ottobre e 1° novembre (dal 22/11/2026) |
 | Aggiorna autori | 1° gennaio, aprile, luglio, ottobre, dicembre |
 | Storico | 2 di ogni mese |
 | Già pubblici | dopo ogni Storico e quando cambia il suo codice |
