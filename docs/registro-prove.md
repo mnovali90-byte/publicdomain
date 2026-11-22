@@ -973,3 +973,22 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
   - se ritrova i casi noti: Hauptmann, Berlau, Shepard.
 - **Prova a secco, in locale con un record finto:** legge Berlau sia dal campo 700 sia dalla dicitura «Mitarbeiter: R. Berlau», e Shepard da «with decorations by E. H. Shepard». Il traduttore viene scartato.
 - **Limite:** da qui non posso raggiungere i cataloghi, quindi la prova vera gira solo su GitHub.
+
+## 22/11/2026 — Controllo degli stati scritti sulle schede (scripts/controllo_stati.py, prova_regole parte 6)
+- **Come funziona:** legge le 803 schede autore già generate (italiano e inglese) e rifà ogni conto da capo con regole.py e i registri (autori, opere, USA), senza usare il codice di pagine.py. Controlla quattro cose:
+  - la tabella paese per paese;
+  - l'intestazione;
+  - le note dei coautori e della musica;
+  - lo stato USA e i coautori delle opere che sono anche in Già pubblici.
+- **Numeri:** 4.015 date per paese, 1.284 intestazioni, 202 note, 906 stati USA, 22 opere con un coautore morto dopo. Le opere che non sono in Già pubblici sono 2.273 e non si possono controllare.
+- **Differenze nelle schede italiane** (le inglesi sono uguali):
+  - **149 opere, colonna USA:** la scheda dice «da verificare» e Già pubblici «libera». Le due pagine usano due regole diverse sulla seconda fonte. È la decisione aperta sulle 474 opere.
+  - **20 opere, colonna USA:** la scheda usa l'anno grezzo di Wikidata, spesso quello di un'edizione moderna, mentre Già pubblici usa l'anno del registro. Esempi:
+    - *Millions of Cats* (1928): la scheda dice «dal 2052», ma è libera;
+    - *Weeds* (1923): la scheda dice «dal 2116»;
+    - *Cirkus Humberto*: la scheda dice 2113, Già pubblici 2037.
+  - **Henham:** la scheda usa l'anno di morte 1946 della lista, mentre il registro, con fonti discordi, ha deciso 1948.
+  - ***The Skylark of Space* (Garby):** la regola per opera la dà libera dal 2036 per il coautore E. E. Smith, ma la scheda non lo dice.
+  - ***Reigin pappi*:** la scheda dice «libero», Già pubblici «da verificare», perché usano due registri di verifica diversi.
+- **Causa comune:** le schede (pagine.py) usano dati loro, cioè gli anni grezzi di Wikidata, una propria verifica USA e coautori.json, invece dei registri e di stato_opera.
+- **Per ora la parte 6 non blocca i giri.** Diventa bloccante quando le schede useranno stato_opera.

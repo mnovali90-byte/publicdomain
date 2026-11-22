@@ -211,6 +211,13 @@ for x in no5 + nontrovate5:
     print("   ", x)
 errori += no5
 
+# ---------------------------------------------------------------- 6. stati scritti sulle schede autore (22/11/2026)
+# scripts/controllo_stati.py rifà da capo, con regole.py e i registri, ogni stato scritto sulle schede generate.
+# PER ORA NON BLOCCA: le differenze trovate il 22/11/2026 vengono da schede che non usano ancora i registri (colonna USA,
+# anni delle opere, anno di morte «discorde», coautori). Diventa bloccante quando le schede useranno stato_opera.
+import controllo_stati  # noqa: E402
+_e6 = controllo_stati.main(stampa=True)
+
 for e in errori:
     print("ERRORE:", e)
 sys.exit(1 if errori else 0)
