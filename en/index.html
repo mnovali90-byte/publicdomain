@@ -382,6 +382,10 @@ body.ix-in .pf{opacity:1}body.menu-on .pf{opacity:0}
 #riga.nuova{display:inline-block;clip-path:inset(0 100% 0 0);animation:scrivi 1.1s var(--lento) forwards}
 @keyframes scrivi{to{clip-path:inset(0 0 0 0)}}
 #riga em{font-style:italic}
+/* avvertenza sotto la riga (es. disegni di Shepard): fuori dal flusso, così il colophon non si sposta tra una pagina e l'altra */
+.foglio{position:relative}
+.fronte .avv{position:absolute;left:0;right:0;top:100%;margin:12px auto 0;max-width:48ch;font-size:clamp(14px,1.05vw,16px);line-height:1.45;color:var(--matita);text-wrap:balance;opacity:0;transition:opacity .6s var(--lento)}
+.fronte .avv.su{opacity:1}
 .foglio{transition:opacity .7s var(--lento),transform .7s var(--lento)}
 .foglio.via{opacity:0;transform:translateY(-10px)}
 .foglio.arriva{opacity:0;transform:translateY(10px);transition:none}
@@ -429,8 +433,9 @@ body.ix-in .pf{opacity:1}body.menu-on .pf{opacity:0}
 <section class="fronte" id="pagina" aria-label="Title page">
   <div class="foglio" id="foglio" aria-live="polite">
     <p class="autore sc" id="autore">Bertolt Brecht</p>
-    <h1 class="titolo" id="titolo">The Threepenny Opera</h1>
+    <h1 class="titolo" id="titolo">Mother Courage and Her Children</h1>
     <p class="diritti"><span id="riga" class="vecchia">All rights reserved.</span></p>
+    <p class="avv" id="avv"></p>
   </div>
   <div class="colophon">
     <p id="colo">Every 1 January, in Europe and the United States, the copyright of hundreds of books expires. The next one is in <span class="giorni" id="gg"></span> days.</p>
@@ -445,7 +450,7 @@ body.ix-in .pf{opacity:1}body.menu-on .pf{opacity:0}
 <div class="porte"><a class="porta" href="/en/public-domain-2027/"><span class="m">1 January 2027</span><h3>Public domain 2027</h3><p>Who becomes free on 1 January, explained: the most awaited names, the American books, the rules country by country.</p><span class="go">Read →</span></a><a class="porta" href="/en/radar/"><span class="m">The complete list</span><h3>All authors</h3><p>The complete list of the 826 writers of 2027, to filter by country and genre and download in Excel.</p><span class="go">Search →</span></a><a class="porta" href="/en/already-public/"><span class="m">Archive</span><h3>Already public</h3><p>Search a title or an author: is it already free in Italy, France, Germany, Spain, the UK, the USA?</p><span class="go">Search →</span></a><a class="porta" href="/en/calendar/2027/"><span class="m">Anniversaries</span><h3>Calendar 2027</h3><p>The literary anniversaries of 2027, day by day, to add to your calendar.</p><span class="go">Open →</span></a></div></section>
 </div>
 <script>
-const P=[{"a": "Bertolt Brecht", "t": "The Threepenny Opera", "r": "Free in Italy, France, Germany and the UK <em>from 1 January 2027.</em>"}, {"a": "A. A. Milne", "t": "Winnie-the-Pooh", "r": "Free in Italy, France, Germany and the UK <em>from 1 January 2027.</em>"}, {"a": "Pearl S. Buck", "t": "The Good Earth", "r": "Free in the United States <em>from 1 January 2027.</em>"}, {"a": "Bertolt Brecht", "t": "Mother Courage and Her Children", "r": "Free in Italy, France, Germany and the UK <em>from 1 January 2027.</em>"}, {"a": "Robert Walser", "t": "Geschwister Tanner", "r": "Free in Italy, France, Germany and the UK <em>from 1 January 2027.</em>"}, {"a": "Virginia Woolf", "t": "The Waves", "r": "Free in the United States <em>from 1 January 2027.</em>"}, {"a": "Antoine de Saint-Exupéry", "t": "Night Flight", "r": "Free in the United States <em>from 1 January 2027.</em>"}], DIRITTI="All rights reserved.", FOLIO="{k} of {n}";
+const P=[{"a": "Bertolt Brecht", "t": "Mother Courage and Her Children", "r": "Free in Italy, France, Germany and the UK <em>from 1 January 2027.</em>", "n": ""}, {"a": "A. A. Milne", "t": "Winnie-the-Pooh", "r": "Free in Italy, France, Germany and the UK <em>from 1 January 2027.</em>", "n": "The text only: E. H. Shepard's original drawings stay protected until 2046."}, {"a": "Pearl S. Buck", "t": "The Good Earth", "r": "Free in the United States <em>from 1 January 2027.</em>", "n": ""}, {"a": "Bertolt Brecht", "t": "The Resistible Rise of Arturo Ui", "r": "Free in Italy, France, Germany and the UK <em>from 1 January 2027.</em>", "n": ""}, {"a": "Robert Walser", "t": "Geschwister Tanner", "r": "Free in Italy, France, Germany and the UK <em>from 1 January 2027.</em>", "n": ""}, {"a": "Virginia Woolf", "t": "The Waves", "r": "Free in the United States <em>from 1 January 2027.</em>", "n": ""}, {"a": "Antoine de Saint-Exupéry", "t": "Night Flight", "r": "Free in the United States <em>from 1 January 2027.</em>", "n": ""}], DIRITTI="All rights reserved.", FOLIO="{k} of {n}";
 const el=s=>document.getElementById(s);
 const ANNO=2027, F={"cnt_conto": "in {g} days", "cnt_vigilia": "Tomorrow", "cnt_festa": "Public Domain Day", "col_vigilia": "At midnight, in Europe and the United States, the copyright of hundreds of books expires. Time left: <span class=\"giorni\" id=\"orologio\"></span>.", "col_oggi": "From today, 1 January {a}, <span class=\"giorni\">{ue}</span> writers are free in Italy, France, Germany and the UK, <span class=\"giorni\">{es}</span> in Spain, and <span class=\"giorni\">{us}</span> books in the United States.", "col_dal": "Since 1 January {a}, <span class=\"giorni\">{ue}</span> writers are free in Italy, France, Germany and the UK, <span class=\"giorni\">{es}</span> in Spain, and <span class=\"giorni\">{us}</span> books in the United States.", "cta_vigilia": "Who becomes free at midnight", "cta_oggi": "See who is free from today", "cta_dal": "See who is free", "sez_oggi": ["From today, 1 January {a}", "Who has become free, and where"], "sez_dal": ["Since 1 January {a}", "Who has become free, and where"], "data_em": "from 1 January {a}.", "oggi_em": "from today."};
 const NUM={"a": "2027", "ue": "826", "es": "790", "us": "169"};
@@ -475,13 +480,13 @@ applica(modo(new Date()));
 const lenta=matchMedia("(prefers-reduced-motion: reduce)").matches;
 let i=0;
 function mostra(k){const p=P[k];el("autore").textContent=p.a;el("titolo").textContent=p.t;el("folio").textContent=FOLIO.replace("{k}",k+1).replace("{n}",P.length);
-  const r=el("riga");r.className="vecchia";r.textContent=DIRITTI;}
+  const r=el("riga");r.className="vecchia";r.textContent=DIRITTI;const v=el("avv");v.className="avv";v.textContent=p.n||"";}
 function libera(k){const r=el("riga");r.classList.add("barra");setTimeout(()=>r.classList.add("via"),900);
-  setTimeout(()=>{r.className="nuova";r.innerHTML=P[k].r;},1350);}
+  setTimeout(()=>{r.className="nuova";r.innerHTML=P[k].r;},1350);setTimeout(()=>el("avv").classList.add("su"),2400);}
 function giro(){const f=el("foglio");mostra(i);f.classList.add("arriva");requestAnimationFrame(()=>requestAnimationFrame(()=>f.classList.remove("arriva")));
   setTimeout(()=>libera(i),1800);
   setTimeout(()=>{f.classList.add("via");setTimeout(()=>{f.classList.remove("via");i=(i+1)%P.length;giro();},700);},7600);}
-if(lenta){mostra(0);const r=el("riga");r.className="nuova";r.innerHTML=P[0].r;}else giro();
+if(lenta){mostra(0);const r=el("riga");r.className="nuova";r.innerHTML=P[0].r;el("avv").classList.add("su");}else giro();
 </script>
 </main>
 <footer class="end">

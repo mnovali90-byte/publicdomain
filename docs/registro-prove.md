@@ -936,3 +936,23 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
   - contare solo le edizioni con il titolo originale;
   - non basta Open Library da sola;
   - se l'anno è dopo la morte, l'opera va verificata.
+
+## 22/11/2026 — Vetrina della home con la regola dei coautori
+- **Problema:** la vetrina guardava solo l'anno di morte dell'autore. *L'opera da tre soldi* risultava libera dal 2027, ma ha come coautrice Elisabeth Hauptmann (morta nel 1973). Per la Kurt Weill Foundation, che ne detiene i diritti, l'opera è protetta fino al 2043.
+- **Correzione:**
+  - la vetrina usa la stessa regola delle schede: pagine.opera_libera_ue, ricavata da note_coautori, che ora la usa anch'essa;
+  - le schede autore rigenerate sono identiche a prima.
+- **Opere di Brecht in vetrina:**
+  - *Madre Coraggio e i suoi figli* e *La resistibile ascesa di Arturo Ui*.
+  - Non *Il cerchio di gesso del Caucaso*: l'edizione Suhrkamp porta «unter Mitarbeit von Ruth Berlau», morta nel 1974. Wikidata non la segna; inserirla fra i coautori manuali è da decidere con Marco.
+- **Winnie Puh:** in vetrina compare la nota «Solo il testo: i disegni originali di E. H. Shepard restano protetti fino al 2046». La fonte è lo UK IPO: Shepard è morto nel 1976, quindi i disegni sono liberi dal 1° gennaio 2047. La nota sta fuori dal flusso della pagina, così il resto non si sposta.
+- **Nuova prova automatica** (prova_regole parte 5): ogni opera della vetrina europea deve risultare libera anche per le regole per opera di Già pubblici.
+  - Con la vecchia home dà 2 errori, *L'opera da tre soldi* in italiano e in inglese.
+  - Con la nuova home dà 0 errori.
+  - 4 pagine non sono controllabili: le due opere di Brecht non sono nei dati di Già pubblici, perché sono uscite dopo il 1930.
+- **Pagine dell'anno 2027 e 2028 rigenerate:** ora contengono il codice della settimana del Public Domain Day.
+
+## 22/11/2026 — Prova «anni mancanti», secondo giro (preparata)
+- I due gruppi vanno a turno: 100 opere senza anno, scegliendo prima le 105 non ancora cercate, e 100 di controllo con l'anno su Wikidata.
+- Il riepilogo conta anche gli anni trovati che cadono dopo la morte dell'autore.
+- I risultati del primo giro restano in risultati-giro1.json e riepilogo-giro1.md.

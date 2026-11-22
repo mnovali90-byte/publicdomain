@@ -27,7 +27,8 @@ import verifica_anni_usa as vu    # noqa: E402  BnF, K10plus
 
 UA = va.UA
 BUDGET = float(os.environ.get("BUDGET_MINUTI", "50")) * 60
-CONTROLLO = int(os.environ.get("CONTROLLO", "120"))   # opere CON l'anno su Wikidata, per misurare quanto sbaglia
+CONTROLLO = int(os.environ.get("CONTROLLO", "100"))
+SENZA = int(os.environ.get("SENZA", "100"))           # opere SENZA anno per giro (22/11/2026: prima le non ancora cercate)   # opere CON l'anno su Wikidata, per misurare quanto sbaglia
 USCITA = R / "docs" / "prova-anni"
 FR = {"Francia", "Terza Repubblica francese", "Quarta Repubblica francese", "Belgio"}
 DE = {"Germania", "Reich tedesco", "Austria", "Svizzera", "Repubblica Democratica Tedesca", "Repubblica di Weimar",
@@ -142,17 +143,29 @@ def main():
     senza, con = opere_schede()
     USCITA.mkdir(parents=True, exist_ok=True)
     out = {"senza_anno": [], "controllo": []}
-    for gruppo, elenco in (("senza_anno", senza), ("controllo", con)):
-        for x in elenco:
-            if time.time() - inizio > BUDGET:
-                break
-            t = interroga(x)
-            out[gruppo].append({**x, "fonti": t, "esito": esito(t)})
+    # 22/11/2026, secondo giro: i due gruppi a turno (nel primo giro il tempo era finito tutto sul primo gruppo e il
+    # controllo non era partito); tra le opere senza anno prima quelle non ancora cercate, poi le altre
+    try:
+        fatte = {(o["aq"], o["titolo"]) for o in json.loads((USCITA / "risultati.json").read_text(encoding="utf-8"))["senza_anno"]}
+    except Exception:
+        fatte = set()
+    senza = [x for x in senza if (x["aq"], x["titolo"]) not in fatte] + [x for x in senza if (x["aq"], x["titolo"]) in fatte]
+    totale_senza = len(senza)
+    senza = senza[:SENZA]
+    turni = [("senza_anno", x) for x in senza]
+    turni = [t for coppia in zip(turni, [("controllo", x) for x in con]) for t in coppia] + turni[len(con):] + [("controllo", x) for x in con[len(senza):]]
+    for gruppo, x in turni:
+        if time.time() - inizio > BUDGET:
+            break
+        t = interroga(x)
+        out[gruppo].append({**x, "fonti": t, "esito": esito(t)})
     (USCITA / "risultati.json").write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
     # riepilogo
-    righe = ["# Prova – anni mancanti", "", f"Opere senza anno su Wikidata nelle schede: {len(senza)}; controllate: {len(out['senza_anno'])}.", ""]
+    righe = ["# Prova – anni mancanti", "", f"Opere senza anno su Wikidata nelle schede: {totale_senza}; controllate in questo giro: {len(out['senza_anno'])}.", ""]
     c = Counter(o["esito"] for o in out["senza_anno"])
     righe += [f"- {k}: {v}" for k, v in c.most_common()]
+    tardi = [o for o in out["senza_anno"] if o["fonti"] and o["morte"].lstrip("-").isdigit() and min(o["fonti"].values()) > int(o["morte"])]
+    righe += ["", f"Anno più vecchio trovato DOPO la morte dell'autore (postumo vero o edizione tarda, da guardare): {len(tardi)}"]
     f = Counter(k for o in out["senza_anno"] for k in o["fonti"])
     righe += ["", "Quante volte ogni fonte ha trovato un anno: " + ", ".join(f"{k} {v}" for k, v in f.most_common()), ""]
     dis = [o for o in out["controllo"] if o["fonti"]]

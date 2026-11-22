@@ -175,6 +175,42 @@ for x in no4 + avvisi4:
     print("   ", x)
 errori += no4
 
+# ---------------------------------------------------------------- 5. vetrina della home contro le regole per opera (22/11/2026)
+# Ogni opera che la home dà «libera dal 1° gennaio» in Europa deve esserlo anche per stato_opera (le regole di Già pubblici,
+# con i coautori del registro). Caso che l'ha fatta nascere: «L'opera da tre soldi» (coautrice Elisabeth Hauptmann, morta nel 1973).
+def _pt(x):
+    import unicodedata
+    x = unicodedata.normalize("NFKD", str(x or "")).encode("ascii", "ignore").decode().lower()
+    return " ".join(re.findall(r"[a-z0-9]+", x))
+_anno_v = R.fase_sito(date.today())[1]
+_pert = {}
+for r, o in zip(_righe, _norm):
+    for t in (r[1], r[2]):
+        for au in r[5]:
+            _pert.setdefault((_pt(au[1]), _pt(t)), o)
+no5, nontrovate5, viste5 = [], [], 0
+for f in (RADICE / "index.html", RADICE / "en" / "index.html"):
+    h = f.read_text(encoding="utf-8")
+    m = re.search(r"const P=(\[.*?\]), DIRITTI=", h)
+    if not m:
+        no5.append(f"{f.name}: vetrina non trovata")
+        continue
+    for p in json.loads(m.group(1)):
+        if ("Stati Uniti" in p["r"]) or ("United States" in p["r"]):
+            continue
+        viste5 += 1
+        o = next((_pert.get((_pt(n), _pt(p["t"]))) for n in re.split(r" e | and ", p["a"]) if _pert.get((_pt(n), _pt(p["t"])))), None)
+        if not o:
+            nontrovate5.append(f"{p['a']}, «{p['t']}» non è nei dati di Già pubblici: non controllabile")
+            continue
+        st = R.stato_opera(o, "it", _anno_v, set(_mpf), _reg.get("usa", {}))
+        if st["s"] != "si":
+            no5.append(f"home: «{p['t']}» di {p['a']} è in vetrina come libera dal {_anno_v}, ma per le regole per opera è «{st['s']}» {st.get('y') or ''} ({st['r']})")
+print(f"5. Vetrina della home: {viste5} pagine europee, contro le regole: {len(no5)}, non controllabili: {len(nontrovate5)}")
+for x in no5 + nontrovate5:
+    print("   ", x)
+errori += no5
+
 for e in errori:
     print("ERRORE:", e)
 sys.exit(1 if errori else 0)

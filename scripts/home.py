@@ -21,9 +21,20 @@ RADICE = Path(__file__).resolve().parent.parent
 SITO = "https://publicdomainradar.com"
 
 # scelta per il 1° gennaio 2027: (wikidata dell'autore, indice dell'opera nella sua scheda)
-OPERE_UE = [("Q38757", 0), ("Q207036", 0), ("Q38757", 1), ("Q123075", 0)]
+# 22/11/2026: tolta «L'opera da tre soldi» (coautrice Elisabeth Hauptmann, morta nel 1973: libera dal 2044, Kurt Weill Foundation)
+# e non messo «Il cerchio di gesso del Caucaso» (Suhrkamp: «unter Mitarbeit von Ruth Berlau», morta nel 1974; da decidere con Marco)
+OPERE_UE = [("Q38757", 1), ("Q207036", 0), ("Q38757", 5), ("Q123075", 0)]
 OPERE_US = ["Q1218608", "Q1217475", "Q1070729"]
 ORDINE = ["ue0", "ue1", "us0", "ue2", "ue3", "us1", "us2"]
+# Avvertenze sotto la riga «Libero…», per le parti di un'opera con diritti propri che i dati non coprono (non coautori del testo).
+# Chiave: (wikidata dell'autore, titolo nella scheda). Ogni nota con la sua fonte.
+NOTE_VETRINA = {
+    # Fonte: UK Intellectual Property Office, «A bear of very little copyright» (6/3/2025),
+    # https://ipo.blog.gov.uk/2025/03/06/a-bear-of-very-little-copyright-winnie-the-poohs-journey-into-the-public-domain/
+    # testo di Milne (morto nel 1956) libero dal 1° gennaio 2027; disegni di E. H. Shepard (morto nel 1976) dal 1° gennaio 2047.
+    ("Q207036", "Winnie Puh"): {"it": "Solo il testo: i disegni originali di E.\u00a0H.\u00a0Shepard restano protetti fino al 2046.",
+                                "en": "The text only: E.\u00a0H.\u00a0Shepard's original drawings stay protected until 2046."},
+}
 
 
 def esc(s):
@@ -69,11 +80,21 @@ def pagine_frontespizio(anno):
     def us_ok(q):
         v = ver.get(q)
         return bool(v and v[0] == "ok" and v[1] == pub)
-    scelte_ue = [(q, i) for q, i in OPERE_UE if q in autori and len(autori[q].get("opere") or []) > i]
+    import pagine as pg   # regola dei coautori, la stessa delle schede (pagine.opera_libera_ue)
+    # solo opere davvero libere quel 1° gennaio, non solo autori liberi (22/11/2026: «L'opera da tre soldi» ha come
+    # coautrice Elisabeth Hauptmann, morta nel 1973). Se l'opera scelta non è libera, si prende la prossima opera libera
+    # dello stesso autore che non sia già nel frontespizio.
+    scelte_ue = []
+    for q, i in OPERE_UE:
+        op = (autori.get(q) or {}).get("opere") or []
+        for j in [i] + [j for j in range(len(op)) if j != i]:
+            if j < len(op) and (q, j) not in scelte_ue and pg.opera_libera_ue(autori[q], op[j], anno):
+                scelte_ue.append((q, j))
+                break
     scelte_us = [q for q in OPERE_US if q in opere_us and us_ok(q)]
     if not scelte_ue:   # anno nuovo, scelta non aggiornata: i più letti con un'opera
         cand = sorted((a for a in autori.values() if a.get("letterario") and a.get("opere")), key=lambda a: -(a.get("visite_12m") or 0))
-        scelte_ue = [(a["wikidata"], 0) for a in cand[:4]]
+        scelte_ue = [(a["wikidata"], j) for a in cand for j, o in enumerate(a["opere"][:10]) if pg.opera_libera_ue(a, o, anno)][:4]
     if not scelte_us:
         cand = sorted((o for o in opere_us.values() if us_ok(o["qid"])), key=lambda o: -(o.get("visite_en") or 0))
         scelte_us = [o["qid"] for o in cand[:3]]
@@ -85,7 +106,8 @@ def pagine_frontespizio(anno):
         # (80 anni per chi è morto prima del 1987). Francia: i «morti per la Francia» riguardano solo i morti 1939-1945, mai l'anno di questa pagina.
         paesi = [p for p in R.paesi_liberi_insieme(a.get("paesi"), int(str(a["morte"])[:4]), date.today().year) if p != "es"] \
             + (["es"] if q in autori_es else [])
-        pag[f"ue{k}"] = {"a": a["nome"], "it": o["titolo"], "en": o.get("titolo_en") or o["titolo"], "dove": "ue", "paesi": paesi}
+        pag[f"ue{k}"] = {"a": a["nome"], "it": o["titolo"], "en": o.get("titolo_en") or o["titolo"], "dove": "ue", "paesi": paesi,
+                         "nota": NOTE_VETRINA.get((q, o["titolo"]))}
     for k, q in enumerate(scelte_us):
         o = opere_us[q]
         nomi = [x["nome"] for x in o.get("autori", [])][:2]
@@ -137,6 +159,10 @@ CSS = r"""
 #riga.nuova{display:inline-block;clip-path:inset(0 100% 0 0);animation:scrivi 1.1s var(--lento) forwards}
 @keyframes scrivi{to{clip-path:inset(0 0 0 0)}}
 #riga em{font-style:italic}
+/* avvertenza sotto la riga (es. disegni di Shepard): fuori dal flusso, così il colophon non si sposta tra una pagina e l'altra */
+.foglio{position:relative}
+.fronte .avv{position:absolute;left:0;right:0;top:100%;margin:12px auto 0;max-width:48ch;font-size:clamp(14px,1.05vw,16px);line-height:1.45;color:var(--matita);text-wrap:balance;opacity:0;transition:opacity .6s var(--lento)}
+.fronte .avv.su{opacity:1}
 .foglio{transition:opacity .7s var(--lento),transform .7s var(--lento)}
 .foglio.via{opacity:0;transform:translateY(-10px)}
 .foglio.arriva{opacity:0;transform:translateY(10px);transition:none}
@@ -232,7 +258,8 @@ def pagina(lang, anno, P):
     gg = max(0, (datetime.date(anno, 1, 1) - datetime.date.today()).days)
     fmt = dict(a=anno, a1=anno + 1, ue=migliaia(nu["ue"], lang), m=R.morti_liberi_nel(anno, "it"), me=R.morti_liberi_nel(anno, "es"), pub=nu["pub"], usok=migliaia(nu["us_ok"], lang),
                agg=data_lunga(nu["aggiornato"][:10], lang), g=migliaia(gg, lang))
-    pag = [{"a": p.get("a_en", p["a"]) if lang == "en" else p["a"], "t": p[lang], "r": t["libero"][p["dove"]].format(a=anno, p=elenco_paesi(p.get("paesi", []), lang))}
+    pag = [{"a": p.get("a_en", p["a"]) if lang == "en" else p["a"], "t": p[lang], "r": t["libero"][p["dove"]].format(a=anno, p=elenco_paesi(p.get("paesi", []), lang)),
+            "n": p["nota"][lang] if p.get("nota") else ""}
            for p in pagine_frontespizio(anno)]
     if not pag:
         raise RuntimeError("home: nessuna opera per il frontespizio")
@@ -256,6 +283,7 @@ def pagina(lang, anno, P):
     <p class="autore sc" id="autore">{esc(primo["a"])}</p>
     <h1 class="titolo" id="titolo">{esc(primo["t"])}</h1>
     <p class="diritti"><span id="riga" class="vecchia">{esc(t["diritti"])}</span></p>
+    <p class="avv" id="avv"></p>
   </div>
   <div class="colophon">
     <p id="colo">{t["colophon"]}</p>
@@ -300,13 +328,13 @@ applica(modo(new Date()));
 const lenta=matchMedia("(prefers-reduced-motion: reduce)").matches;
 let i=0;
 function mostra(k){{const p=P[k];el("autore").textContent=p.a;el("titolo").textContent=p.t;el("folio").textContent=FOLIO.replace("{{k}}",k+1).replace("{{n}}",P.length);
-  const r=el("riga");r.className="vecchia";r.textContent=DIRITTI;}}
+  const r=el("riga");r.className="vecchia";r.textContent=DIRITTI;const v=el("avv");v.className="avv";v.textContent=p.n||"";}}
 function libera(k){{const r=el("riga");r.classList.add("barra");setTimeout(()=>r.classList.add("via"),900);
-  setTimeout(()=>{{r.className="nuova";r.innerHTML=P[k].r;}},1350);}}
+  setTimeout(()=>{{r.className="nuova";r.innerHTML=P[k].r;}},1350);setTimeout(()=>el("avv").classList.add("su"),2400);}}
 function giro(){{const f=el("foglio");mostra(i);f.classList.add("arriva");requestAnimationFrame(()=>requestAnimationFrame(()=>f.classList.remove("arriva")));
   setTimeout(()=>libera(i),1800);
   setTimeout(()=>{{f.classList.add("via");setTimeout(()=>{{f.classList.remove("via");i=(i+1)%P.length;giro();}},700);}},7600);}}
-if(lenta){{mostra(0);const r=el("riga");r.className="nuova";r.innerHTML=P[0].r;}}else giro();
+if(lenta){{mostra(0);const r=el("riga");r.className="nuova";r.innerHTML=P[0].r;el("avv").classList.add("su");}}else giro();
 </script>
 """
     fonti = (t["fonti"][0], esc(t["fonti"][1].format(**fmt)))

@@ -572,6 +572,41 @@ COAUT = _leggi(RADICE / "data" / "storico" / "coautori.json", {})
 COAUT_MAN = _leggi(RADICE / "data" / "coautori_manuali.json", {}).get("opere", {})
 
 
+def vincoli_opera(a, o, oggi_a=None):
+    """Coautori di un'opera della scheda con la regola unica (scripts/regole.py, autori_che_contano), come in tutto il sito.
+    Torna (tardi, ignoti, w): tardi = [(nome, morte)] dei coautori morti dopo l'autore; ignoti = nomi senza data di morte;
+    w = i dati dell'opera in data/storico/coautori.json (w["mu"]: musica e libretto). Usata dalle schede e dalla home (22/11/2026)."""
+    D = anno_di(a.get("morte"))
+    oggi_a = oggi_a or datetime.date.today().year
+    mie = (COAUT.get("per_autore") or {}).get(a["wikidata"], {})
+    tipi = COAUT.get("autori") or {}
+    chiavi = {tuple(_parole(o.get("titolo"))), tuple(_parole(o.get("titolo_en")))} - {()}
+    wq = next((q for q, w in mie.items() if {tuple(_parole(w.get("t"))), tuple(_parole(w.get("ti")))} & chiavi), None)
+    if not wq:
+        wq = next((r[0] for r in opere_storico(a["wikidata"]) if {tuple(_parole(r[1])), tuple(_parole(r[2]))} & chiavi), None)
+    w = mie.get(wq) or {}
+    co = [list(c) for c in w.get("co", [])]
+    for x in COAUT_MAN.get(wq, []):
+        co.append([x.get("qid") or "", x["nome"], x.get("morte"), None])
+    au = [{"qid": a["wikidata"], "nome": a["nome"], "morte": D}] + [
+        {"qid": c[0] or "man:" + c[1], "nome": c[1], "morte": c[2], "nascita": c[3] if len(c) > 3 else None} for c in co]
+    dopo = [x for x in autori_che_contano(au, tipi, oggi_a) if x["qid"] != a["wikidata"]]
+    tardi = [(x["nome"], x["morte"]) for x in dopo if x.get("morte") is not None and not x.get("antico") and D and x["morte"] > D]
+    ignoti = [x["nome"] for x in dopo if x.get("senza_data")]
+    return tardi, ignoti, w
+
+
+def opera_libera_ue(a, o, anno):
+    """Il testo dell'opera (autore e coautori) è libero in Europa il 1° gennaio <anno>? Per la home (22/11/2026):
+    il frontespizio mostra solo opere davvero libere, non solo autori liberi (caso «L'opera da tre soldi», Hauptmann 1973)."""
+    D = anno_di(a.get("morte"))
+    if not D or R.anno_libero(D, "it") > anno:
+        return False
+    tardi, ignoti, w = vincoli_opera(a, o, anno)
+    # musica e libretto hanno diritti propri ma, come nelle schede, il testo segue la data dell'autore: non escludono l'opera
+    return not ignoti and not any(R.anno_libero(m, "it") > anno for _, m in tardi)
+
+
 def note_coautori(a, lang):
     """Regola dei coautori (20/11/2026, storico/coautori.py): per le «Opere principali» della scheda, i coautori morti
     dopo l'autore (la data europea dell'opera è la loro), quelli senza data di morte (da verificare) e la musica o il
@@ -580,27 +615,13 @@ def note_coautori(a, lang):
     T = (lambda x, y: x) if it else (lambda x, y: y)
     D = anno_di(a.get("morte"))
     oggi_a = datetime.date.today().year
-    mie = (COAUT.get("per_autore") or {}).get(a["wikidata"], {})
-    tipi = COAUT.get("autori") or {}
     note = []
     for o in a.get("opere", [])[:10]:
         t = o.get("titolo") if it else o.get("titolo_en") or o.get("titolo")
         if not t or not D:
             continue
-        chiavi = {tuple(_parole(o.get("titolo"))), tuple(_parole(o.get("titolo_en")))} - {()}
-        wq = next((q for q, w in mie.items() if {tuple(_parole(w.get("t"))), tuple(_parole(w.get("ti")))} & chiavi), None)
-        if not wq:
-            wq = next((r[0] for r in opere_storico(a["wikidata"]) if {tuple(_parole(r[1])), tuple(_parole(r[2]))} & chiavi), None)
-        w = mie.get(wq) or {}
-        co = [list(c) for c in w.get("co", [])]
-        for x in COAUT_MAN.get(wq, []):
-            co.append([x.get("qid") or "", x["nome"], x.get("morte"), None])
-        # regola dei coautori: la stessa di tutto il sito (scripts/regole.py, autori_che_contano)
-        au = [{"qid": a["wikidata"], "nome": a["nome"], "morte": D}] + [
-            {"qid": c[0] or "man:" + c[1], "nome": c[1], "morte": c[2], "nascita": c[3] if len(c) > 3 else None} for c in co]
-        dopo = [x for x in autori_che_contano(au, tipi, oggi_a) if x["qid"] != a["wikidata"]]
-        tardi = [(x["nome"], x["morte"]) for x in dopo if x.get("morte") is not None and not x.get("antico") and x["morte"] > D]
-        ignoti = [x["nome"] or T("un autore sconosciuto", "an unknown author") for x in dopo if x.get("senza_data")]
+        tardi, ignoti, w = vincoli_opera(a, o, oggi_a)
+        ignoti = [x or T("un autore sconosciuto", "an unknown author") for x in ignoti]
         tt = f"«{t}»"
         if tardi:
             nome, m = max(tardi, key=lambda x: x[1])
