@@ -64,6 +64,100 @@ for k in py:
                 errori.append(f"   {a['n']} ({a['f']}): Python {py[k][i]}, browser {res[k][i]}; paesi {a['p']}")
 print(f"1. Gemelli Python/browser: {sum(len(v) for v in py.values())} confronti, differenze: {sum(1 for e in errori if e.startswith('gemelli'))} gruppi")
 
+# ---------------------------------------------------------------- 2. copie delle regole fuori da regole.py
+# (22/11/2026: aggiorna.py e altri 4 script avevano ancora +71/+81/-96 scritti a mano e la prima unificazione non li aveva visti)
+import re as _re  # noqa: E402
+NUMERI = _re.compile(r"(?<![\w.])(?:[+-]\s?(?:51|70|71|80|81|90|95|96|101|106|150|170|171|180|181)|(?:70|71|80|81|95|96|101|171|181)\s?[+-](?!\d))(?![\w.])(?!\s*(?:anni|years|ans|Jahre))")   # 22/11/2026: anche le soglie delle regole per opera (Y - 171, + 150...)
+SOGLIE = _re.compile(r"(?<![\w.])(?:1969|1989|2039|2040)(?![\w.])")   # regola britannica del 2039   # «morte + 70 anni» nei testi non conta
+copie = []
+for f in sorted(glob.glob(str(RADICE / "scripts" / "*.py")) + glob.glob(str(RADICE / "storico" / "*.py"))
+                + [str(RADICE / "radar" / "index.html"), str(RADICE / "storico" / "pagina.html"), str(RADICE / "scripts" / "pagine.py")]):
+    nome = Path(f).name
+    if nome in ("regole.py", "prova_regole.py") or nome.startswith(("prova_", "campione", "esplora", "stima")):
+        continue
+    for i, riga in enumerate(Path(f).read_text(encoding="utf-8").splitlines(), 1):
+        codice = riga.split("#", 1)[0] if f.endswith(".py") else riga.split("//", 1)[0]
+        codice = _re.sub(r'"(?:[^"\\]|\\.)*"|\'(?:[^\'\\]|\\.)*\'', '""', codice)   # i testi tra virgolette non sono regole
+        if (NUMERI.search(codice) or SOGLIE.search(codice)) and _re.search(r"\b(anno|morte|morti|pub|y|m|D|Y|ultima|oggi)\b", codice):
+            copie.append(f"{Path(f).relative_to(RADICE)}:{i}: {riga.strip()[:110]}")
+print(f"2. Copie delle regole fuori da regole.py: {len(copie)}")
+for c in copie[:30]:
+    print("   ", c)
+if copie:
+    errori.append(f"{len(copie)} righe con numeri delle regole scritti a mano (usare scripts/regole.py)")
+
+# ---------------------------------------------------------------- 3. regole per opera: gemelli su tutte le opere di Già pubblici
+# (22/11/2026) stato_opera in Python e statoOpera in assets/regole.js, su ogni opera dei file di ricerca e 6 paesi
+_reg = json.load(open(RADICE / "data" / "registro" / "opere.json", encoding="utf-8"))
+_mpf = sorted(json.load(open(RADICE / "data" / "registro" / "mpf.json", encoding="utf-8")).get("autori", {}))
+_viste = {}
+for f in sorted(glob.glob(str(RADICE / "data" / "storico" / "ricerca" / "*.json"))):
+    for r in json.load(open(f, encoding="utf-8"))["opere"]:
+        _viste.setdefault(r[0], r)
+_righe = list(_viste.values())
+PAESI6 = ["it", "fr", "de", "uk", "es", "us"]
+CORPO3 = r"""
+const R = window.REGOLE_PAESI, C = JSON.parse(require("fs").readFileSync(process.argv[2], "utf8"));
+const mpf = new Set(C.mpf), out = [];
+for (const o of C.opere) { for (const c of C.paesi) out.push(R.statoOpera(o, c, C.oggi, mpf, C.ver)); out.push(R.liberaUeOpera(o, C.oggi)); }
+console.log(JSON.stringify(out));
+"""
+_norm = [R.opera_da_riga(r, _reg.get("coautori", {})) for r in _righe]
+# anno_opera_credibile: confronto anche sugli anni grezzi
+CORPO3b = r"""
+const R = window.REGOLE_PAESI, C = JSON.parse(require("fs").readFileSync(process.argv[2], "utf8"));
+console.log(JSON.stringify(C.righe.map((x) => R.annoOperaCredibile(x[0], x[1]))));
+"""
+with tempfile.TemporaryDirectory() as d:
+    Path(d, "p.js").write_text("const window = {};\n" + js + CORPO3, encoding="utf-8")
+    Path(d, "c.json").write_text(json.dumps({"opere": _norm, "paesi": PAESI6, "oggi": OGGI, "mpf": _mpf, "ver": _reg.get("usa", {})}), encoding="utf-8")
+    res3 = json.loads(subprocess.run(["node", str(Path(d, "p.js")), str(Path(d, "c.json"))], capture_output=True, text=True, check=True).stdout)
+    grezzi = [[r[3], R.opera_da_riga([r[0], "", "", None, 0, r[5], 0], _reg.get("coautori", {}))["au"]] for r in _righe]
+    Path(d, "q.js").write_text("const window = {};\n" + js + CORPO3b, encoding="utf-8")
+    Path(d, "d.json").write_text(json.dumps({"righe": grezzi}), encoding="utf-8")
+    res3b = json.loads(subprocess.run(["node", str(Path(d, "q.js")), str(Path(d, "d.json"))], capture_output=True, text=True, check=True).stdout)
+py3 = []
+for o in _norm:
+    py3 += [R.stato_opera(o, c, OGGI, set(_mpf), _reg.get("usa", {})) for c in PAESI6] + [R.libera_ue_opera(o, OGGI)]
+diversi3 = [i for i, (x, y) in enumerate(zip(py3, res3)) if json.dumps(x, sort_keys=True) != json.dumps(y, sort_keys=True)]
+diversi3 += [i for i, (g, y) in enumerate(zip(grezzi, res3b)) if R.anno_opera_credibile(g[0], g[1]) != y]
+print(f"3. Regole per opera, Python/browser: {len(_norm)} opere, {len(py3) + len(grezzi)} confronti, differenze: {len(diversi3)}")
+if len(py3) != len(res3) or diversi3:
+    errori.append(f"regole per opera diverse tra Python e browser: {len(diversi3)} casi")
+
+# ---------------------------------------------------------------- 4. casi di riferimento (data/casi_riferimento.json)
+CASI = json.load(open(RADICE / "data" / "casi_riferimento.json", encoding="utf-8"))
+_pern = {o["q"]: o for o in _norm}
+ok4, no4, avvisi4 = 0, [], []
+def _controlla(c, o):
+    global ok4
+    if o is None:
+        return f"opera {c.get('q')} non trovata nei dati"
+    st = R.stato_opera(o, c["paese"], c["anno"], set(_mpf), _reg.get("usa", {}))
+    if st["s"] not in c["atteso"] or ("y_att" in c and st.get("y") != c["y_att"]):
+        return f"atteso {c['atteso']} {c.get('y_att', '')}, risulta {st['s']} {st.get('y', '')}"
+    return None
+for c in CASI["reali"]:
+    e = _controlla(c, c.get("o") or _pern.get(c.get("q")))
+    if e is None:
+        ok4 += 1
+    elif c.get("blocca", True):
+        no4.append(f"caso reale {c['n']}, {c['caso']}: {e}")
+    else:
+        avvisi4.append(f"caso reale {c['n']}, {c['caso']}: {e} ({c.get('perche', '')})")
+for c in CASI["confine"]:
+    o = {"q": "confine", "y": c.get("y"), "yd": 0, "antica": c.get("antica"),
+         "au": [{"q": f"x{i}", "m": m, "an": False, "inc": 0, "sc": False, "al": False} for i, m in enumerate(c["au"])]}
+    e = _controlla(c, o)
+    if e is None:
+        ok4 += 1
+    else:
+        no4.append(f"caso di confine «{c['caso']}»: {e}")
+print(f"4. Casi di riferimento: {len(CASI['reali'])} reali e {len(CASI['confine'])} di confine; tornano {ok4}, sbagliati {len(no4)}, noti da sistemare {len(avvisi4)}")
+for x in no4 + avvisi4:
+    print("   ", x)
+errori += no4
+
 for e in errori:
     print("ERRORE:", e)
 sys.exit(1 if errori else 0)

@@ -199,7 +199,7 @@ def info_autori(qids, budget_fine):
 def libera_ue(o):
     """Europa (70 anni dalla morte): tutti gli autori morti entro il 1955, o antichi; oppure opera uscita
     più di 100 anni prima di quella data (chi pubblicava nel 1855 è per forza morto entro il 1955)."""
-    if o.get("anno") is not None and o["anno"] <= ANNO_UE - 100:
+    if o.get("anno") is not None and R.opera_vecchia(o["anno"], date.today().year):   # più di 170 anni (scripts/regole.py)
         return True
     from regole import opera_antica
     from registro import dati_eta
@@ -218,7 +218,7 @@ def libera_usa(o):
     if o.get("anno") is not None:
         return o["anno"] <= ANNO_USA
     au = o.get("autori") or []
-    return bool(au) and all(a.get("antico") or (a.get("morte") is not None and a["morte"] <= ANNO_UE - 100) for a in au)
+    return bool(au) and all(a.get("antico") or (a.get("morte") is not None and R.opera_vecchia(a["morte"], date.today().year)) for a in au)
 
 
 _COAUT = None

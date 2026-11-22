@@ -24,6 +24,8 @@ from pathlib import Path
 R = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(R / "storico"))
 import verifica_anni as va   # noqa: E402  (Open Library e Library of Congress, come per lo Storico)
+sys.path.insert(0, str(R / "scripts"))
+from regole import pubblicate_libere_usa_nel  # noqa: E402  (regole per paese in un posto solo)
 
 parole, UA = va.parole, va.UA
 BUDGET = float(os.environ.get("BUDGET_MINUTI_USA", "50")) * 60
@@ -362,7 +364,7 @@ def main():
     inizio = time.time()
     oggi_anno = date.today().year
     nomi = sorted(x.name for x in (R / "data").glob("us-[0-9][0-9][0-9][0-9].json") if int(x.stem[3:]) > oggi_anno)
-    pubs = [int(n[3:7]) - 96 for n in nomi]
+    pubs = [pubblicate_libere_usa_nel(int(n[3:7])) for n in nomi]
     # volumi del registro: dall'anno prima della lista più vecchia a due anni dopo la più recente (registrazioni tardive)
     dk, idx = va.duke(), indice_cce(range(min(pubs) - 3, max(pubs) + 3) if pubs else [])
     f = R / "data" / "us-anni-verificati.json"

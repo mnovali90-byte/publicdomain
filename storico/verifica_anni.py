@@ -22,7 +22,9 @@ from pathlib import Path
 S = Path(__file__).resolve().parent.parent / "data" / "storico"
 UA = {"User-Agent": "PublicDomainRadar/1.0 (https://publicdomainradar.com; open data project)"}
 Y = date.today().year
-LIMITE = Y - 96
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "scripts"))
+import regole as RG  # noqa: E402  (regole per paese in un posto solo)
+LIMITE = RG.pubblicate_libere_usa_nel(Y)
 BUDGET = float(sys.argv[1]) if len(sys.argv) > 1 else 15   # minuti
 RINFRESCA = 90
 
@@ -91,7 +93,7 @@ def cognomi_riga(r):
 def libera_ue(r):
     """Libera in Europa: la stessa regola di tutto il sito (scripts/regole.py, autori_che_contano), niente copie."""
     global _TIPI
-    if r[3] is not None and r[3] <= Y - 171:
+    if r[3] is not None and RG.opera_vecchia(r[3], Y):
         return True
     if _TIPI is None:
         try:
@@ -107,7 +109,7 @@ def libera_ue(r):
     if opera_antica(r[0], grezzi, r[3], cre.get(r[0]), antiche, Y):
         return True
     au = autori_che_contano([{"qid": a[0], "nome": a[1], "morte": a[2], "antico": bool(a[3])} for a in r[5]], _TIPI, Y)
-    return bool(au) and all(a.get("antico") or (a.get("morte") is not None and a["morte"] <= Y - 71) for a in au)
+    return bool(au) and all(a.get("antico") or (a.get("morte") is not None and RG.anno_libero(a["morte"], "it") <= Y) for a in au)
 
 
 def da_controllare():

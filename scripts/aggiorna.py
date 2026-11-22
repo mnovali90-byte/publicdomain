@@ -108,7 +108,9 @@ def scarica_anno(anno_morte, pausa=2):
 
 
 # prefisso del file -> anni da aggiungere alla morte per arrivare all'anno di liberazione
-PAESI = {"": (71, "ue"), "es-": (81, "es")}
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+import regole as R  # noqa: E402  (regole per paese in un posto solo: anno di morte da scaricare per ogni anno e paese)
+PAESI = {"": ("it", "ue"), "es-": ("es", "es")}
 REGOLA = {
     "": "UE: morte + 70 anni, dal 1 gennaio dell'anno successivo",
     "es-": "Spagna, autori morti prima del 1987: 80 anni dalla morte (Ley de 10 de enero de 1879, art. 6; "
@@ -152,7 +154,7 @@ def main():
     oggi = dt.date.today().year
     anni = [a.anno] if a.anno else [oggi + 1, oggi + 2]
     # scarica tutto PRIMA di scrivere: se qualcosa fallisce, non cambia nulla
-    risultati = {(pref, anno): scarica_anno(anno - dopo) for pref, (dopo, _) in PAESI.items() for anno in anni}
+    risultati = {(pref, anno): scarica_anno(R.morti_liberi_nel(anno, regola)) for pref, (regola, _) in PAESI.items() for anno in anni}
     for (pref, anno), autori in risultati.items():
         print(f"{pref}{anno}: {len(autori)} autori -> {salva(anno, autori, pref)}")
     aggiorna_indice()

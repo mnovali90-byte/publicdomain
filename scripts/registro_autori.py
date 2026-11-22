@@ -22,11 +22,11 @@ from pathlib import Path
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import verifica as V                       # noqa: E402  (lettura delle fonti: stesse funzioni di verifica.py)
-from regole import decidi_morte            # noqa: E402
+from regole import decidi_morte, morti_liberi_nel   # noqa: E402
 
 R = Path(__file__).resolve().parent.parent
 USCITA = R / "data" / "registro" / "autori.json"
-ANNO_UE = date.today().year - 71
+ANNO_UE = morti_liberi_nel(date.today().year, "it")
 DA = 1930
 BUDGET = float(os.environ.get("BUDGET_MINUTI", "40"))
 

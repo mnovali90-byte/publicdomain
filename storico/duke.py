@@ -21,6 +21,7 @@ from datetime import date
 import urllib.request
 
 from opere import qid, sparql, val
+from regole import pubblicate_libere_usa_nel  # noqa: E402  (regole per paese in un posto solo)
 
 UA = {"User-Agent": "PublicDomainTool/0.1 (https://github.com/mnovali90-byte/publicdomain)"}
 
@@ -119,7 +120,7 @@ def carica(anno_corrente):
             continue
         voci = []
         for autore, titolo in libri:
-            v = {"autore": autore, "titolo": titolo, "pub": anno - 96, "wd": risolvi(autore, titolo)}
+            v = {"autore": autore, "titolo": titolo, "pub": pubblicate_libere_usa_nel(anno), "wd": risolvi(autore, titolo)}
             voci.append(v)
             time.sleep(1)
         cache[str(anno)] = {"letto": oggi.isoformat(), "libri": voci}

@@ -9,9 +9,11 @@ Il sistema gira da solo; questo file raccoglie SOLO le eccezioni, cioè i casi i
   6. i nomi in apertura delle pagine del Public Domain Day, da guardare prima che escano.
 Non scarica niente: legge solo i file già prodotti dagli altri script.
 """
-import json
+import json, sys
 from datetime import date
 from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import regole as RG  # noqa: E402  (regole per paese in un posto solo)
 
 R = Path(__file__).resolve().parent.parent
 D = R / "data"
@@ -81,7 +83,7 @@ def main():
     trovati = False
     for a in anni:
         for titolo, ultima, fonte in voci(a, "parziale"):
-            righe.append(f"- Lista {a}: **{titolo}**: a puntate fino al {ultima} ({fonte}). Per intero è libero solo dal {ultima + 96}.")
+            righe.append(f"- Lista {a}: **{titolo}**: a puntate fino al {ultima} ({fonte}). Per intero è libero solo dal {RG.anno_libero_usa(ultima)}.")
             trovati = True
             n += 1
     if not trovati:
@@ -117,7 +119,7 @@ def main():
     if str(Y) in dk:
         righe.append(f"- Letta: {len(dk[str(Y)].get('libri', []))} libri nel {Y}.")
     else:
-        righe.append(f"- **La lista Duke del {Y} non è ancora letta.** Esce intorno al 1° gennaio: senza, i libri del {Y - 96} "
+        righe.append(f"- **La lista Duke del {Y} non è ancora letta.** Esce intorno al 1° gennaio: senza, i libri del {RG.pubblicate_libere_usa_nel(Y)} "
                      "hanno solo le nostre conferme.")
         n += 1
     righe.append("")

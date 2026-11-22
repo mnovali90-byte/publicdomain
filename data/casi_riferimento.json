@@ -1,0 +1,317 @@
+{
+ "spiegazione": "Casi di riferimento per scripts/regole.py (stato_opera), controllati da scripts/prova_regole.py. Due tipi separati: «reali» (opera vera dei nostri dati + fonte esterna che ne dice lo stato) e «confine» (opera costruita apposta sul confine di una regola, fonte = la norma). Stato: si (libera), dal (si libera nell'anno y), ver (da verificare), nd (non determinato). «blocca»: false = risultato atteso ma non ancora garantito (dati sbagliati o caso da verificare): la prova lo segnala senza fermarsi. Vedi docs/casi-di-riferimento.md.",
+ "reali": [
+  {
+   "n": 1,
+   "caso": "Il piccolo principe in Italia",
+   "q": "Q25338",
+   "paese": "it",
+   "anno": 2026,
+   "atteso": [
+    "si"
+   ],
+   "fonte": "Tribunale di Milano n. 2826/2021; Corte d'appello di Milano n. 2994/2022",
+   "blocca": true
+  },
+  {
+   "n": 2,
+   "caso": "Il piccolo principe in Germania",
+   "q": "Q25338",
+   "paese": "de",
+   "anno": 2026,
+   "atteso": [
+    "si"
+   ],
+   "fonte": "Bibliothèque royale de Belgique, news.belgium.be 5/2/2015 (libero nel 2015 fuori dalla Francia)",
+   "blocca": true
+  },
+  {
+   "n": 2,
+   "caso": "Il piccolo principe nel Regno Unito",
+   "q": "Q25338",
+   "paese": "uk",
+   "anno": 2026,
+   "atteso": [
+    "si"
+   ],
+   "fonte": "come sopra",
+   "blocca": true
+  },
+  {
+   "n": 3,
+   "caso": "Il piccolo principe in Francia (mort pour la France)",
+   "q": "Q25338",
+   "paese": "fr",
+   "anno": 2026,
+   "atteso": [
+    "ver",
+    "dal"
+   ],
+   "fonte": "non libero nel 2026; data esatta da verificare (fonti autorevoli: 1° gennaio 2033)",
+   "blocca": true
+  },
+  {
+   "n": 4,
+   "caso": "Lorca, La casa di Bernarda Alba, in Spagna",
+   "q": "Q822850",
+   "paese": "es",
+   "anno": 2026,
+   "atteso": [
+    "si"
+   ],
+   "fonte": "Biblioteca Nacional de España, 2/1/2017",
+   "blocca": true
+  },
+  {
+   "n": 4,
+   "caso": "Lorca, Nozze di sangue, in Spagna",
+   "q": "Q886624",
+   "paese": "es",
+   "anno": 2026,
+   "atteso": [
+    "si"
+   ],
+   "fonte": "come sopra",
+   "blocca": true
+  },
+  {
+   "n": 5,
+   "caso": "The Great Gatsby negli USA",
+   "q": "Q214371",
+   "paese": "us",
+   "anno": 2026,
+   "atteso": [
+    "si"
+   ],
+   "fonte": "Duke University, CSPD, Public Domain Day 2021",
+   "blocca": true
+  },
+  {
+   "n": 6,
+   "caso": "Mein Kampf in Germania",
+   "q": "Q48244",
+   "paese": "de",
+   "anno": 2026,
+   "atteso": [
+    "si"
+   ],
+   "fonte": "Institut für Zeitgeschichte; Bundeszentrale für politische Bildung (libero dal 1/1/2016)",
+   "blocca": false,
+   "perche": "dati: l'opera è collegata a Q346521 «Hitler» senza data di morte invece di Q352"
+  },
+  {
+   "n": 7,
+   "caso": "Beatrix Potter, Peter Coniglio, nel Regno Unito",
+   "q": "Q580463",
+   "paese": "uk",
+   "anno": 2026,
+   "atteso": [
+    "si"
+   ],
+   "fonte": "UCL Copyright, 2016 (opere pubblicate in vita libere dal 2014)",
+   "blocca": true
+  },
+  {
+   "n": 8,
+   "caso": "Beatrix Potter, Kitty-in-Boots (inedito, uscito nel 2016), nel Regno Unito",
+   "o": {
+    "q": "kitty",
+    "y": 2016,
+    "yd": 0,
+    "antica": null,
+    "au": [
+     {
+      "q": "Q192355",
+      "m": 1943,
+      "an": false,
+      "inc": 0,
+      "sc": false,
+      "al": false
+     }
+    ]
+   },
+   "paese": "uk",
+   "anno": 2026,
+   "atteso": [
+    "dal"
+   ],
+   "fonte": "GOV.UK, Copyright Notice: Duration of copyright (regola del 2039); UCL Copyright, 2016",
+   "blocca": false,
+   "perche": "da verificare: testo originale, nuova edizione del 2016 e illustrazioni hanno diritti diversi",
+   "y_att": 2040
+  }
+ ],
+ "confine": [
+  {
+   "caso": "70 anni: morto nel 1955, libero nel 2026",
+   "au": [
+    1955
+   ],
+   "paese": "it",
+   "anno": 2026,
+   "atteso": [
+    "si"
+   ],
+   "fonte": "Direttiva 2006/116/CE, art. 1, par. 1; art. 8 (si conta dal 1° gennaio dopo la morte)"
+  },
+  {
+   "caso": "70 anni: morto nel 1956, libero dal 2027",
+   "au": [
+    1956
+   ],
+   "paese": "it",
+   "anno": 2026,
+   "atteso": [
+    "dal"
+   ],
+   "fonte": "come sopra",
+   "y_att": 2027
+  },
+  {
+   "caso": "coautori: conta l'ultimo morto (1940 e 1960)",
+   "au": [
+    1940,
+    1960
+   ],
+   "paese": "de",
+   "anno": 2026,
+   "atteso": [
+    "dal"
+   ],
+   "fonte": "Direttiva 2006/116/CE, art. 1, par. 2",
+   "y_att": 2031
+  },
+  {
+   "caso": "Spagna: morto nel 1986, 80 anni",
+   "au": [
+    1986
+   ],
+   "paese": "es",
+   "anno": 2026,
+   "atteso": [
+    "dal"
+   ],
+   "fonte": "Ley de Propiedad Intelectual, disposición transitoria cuarta (BOE): morti prima del 7/12/1987, legge del 1879, 80 anni",
+   "y_att": 2067
+  },
+  {
+   "caso": "Spagna: morto nel 1987, 80 anni (prudenza: abbiamo solo l'anno, non il giorno)",
+   "au": [
+    1987
+   ],
+   "paese": "es",
+   "anno": 2026,
+   "atteso": [
+    "dal"
+   ],
+   "fonte": "come sopra; per chi è morto dal 7 al 31/12/1987 la data giusta sarebbe il 2058",
+   "y_att": 2068
+  },
+  {
+   "caso": "Spagna: morto nel 1988, 70 anni",
+   "au": [
+    1988
+   ],
+   "paese": "es",
+   "anno": 2026,
+   "atteso": [
+    "dal"
+   ],
+   "fonte": "Ley de Propiedad Intelectual, art. 26 (70 anni)",
+   "y_att": 2059
+  },
+  {
+   "caso": "USA: uscito nel 1930, libero nel 2026 (con seconda fonte o già libero in Europa)",
+   "au": [
+    1900
+   ],
+   "y": 1930,
+   "paese": "us",
+   "anno": 2026,
+   "atteso": [
+    "si"
+   ],
+   "fonte": "17 U.S.C. § 304 (95 anni dalla pubblicazione)"
+  },
+  {
+   "caso": "USA: uscito nel 1931, libero dal 2027",
+   "au": [
+    1900
+   ],
+   "y": 1931,
+   "paese": "us",
+   "anno": 2026,
+   "atteso": [
+    "dal"
+   ],
+   "fonte": "come sopra",
+   "y_att": 2027
+  },
+  {
+   "caso": "USA: uscito nel 1930, autore non libero in Europa, senza seconda fonte: da verificare",
+   "au": [
+    1980
+   ],
+   "y": 1930,
+   "paese": "us",
+   "anno": 2026,
+   "atteso": [
+    "ver"
+   ],
+   "fonte": "regola del sito (approvata da Marco): l'anno di Wikidata da solo non basta"
+  },
+  {
+   "caso": "anonima: uscita nel 1955, libera nel 2026",
+   "antica": "anonima",
+   "au": [],
+   "y": 1955,
+   "paese": "it",
+   "anno": 2026,
+   "atteso": [
+    "si"
+   ],
+   "fonte": "Direttiva 2006/116/CE, art. 1, par. 3 (70 anni dalla pubblicazione)"
+  },
+  {
+   "caso": "anonima: uscita nel 1956, libera dal 2027",
+   "antica": "anonima",
+   "au": [],
+   "y": 1956,
+   "paese": "it",
+   "anno": 2026,
+   "atteso": [
+    "dal"
+   ],
+   "y_att": 2027,
+   "fonte": "come sopra"
+  },
+  {
+   "caso": "Regno Unito: morto nel 1968, inedito uscito nel 1990: dal 2040",
+   "au": [
+    1968
+   ],
+   "y": 1990,
+   "paese": "uk",
+   "anno": 2026,
+   "atteso": [
+    "dal"
+   ],
+   "y_att": 2040,
+   "fonte": "CDPA 1988, allegato 1, par. 12 (GOV.UK, regola del 2039)"
+  },
+  {
+   "caso": "Regno Unito: morto nel 1969, uscito nel 1990: regola normale, libero dal 2040 (70 anni)",
+   "au": [
+    1969
+   ],
+   "y": 1990,
+   "paese": "uk",
+   "anno": 2026,
+   "atteso": [
+    "dal"
+   ],
+   "y_att": 2040,
+   "fonte": "CDPA 1988, s. 12"
+  }
+ ]
+}
