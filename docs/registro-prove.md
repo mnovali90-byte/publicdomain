@@ -892,3 +892,12 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - **Non ancora fatto:** cambiare le date dei giri secondo docs/giri-automatici.md (seconda parte del passo 4).
 - Date cambiate (22/11/2026, ok di Marco): registro il 1° aprile, luglio, ottobre e novembre; anniversari il 1° ottobre e novembre.
 - Fotografia: se spariscono in massa opere o autori (più di 50 e più dell'1%), anche le uscite vanno approvate. Provato: 2000 opere tolte apposta, il giro si ferma (codice 1). In locale, da pubblicare.
+
+## 22/11/2026 — Passo 5: mockup della settimana del Public Domain Day, APPROVATO da Marco
+- **Primo mockup** disegnato da zero: bocciato («spaziature, forma, tutto fatto a caso»). Conteneva anche un numero sbagliato, 1.423 autori invece degli 826 scrittori indicati dal sito.
+- **Secondo mockup**, approvato («Perfetto mi piace»): costruito dalla home vera, con lo stesso codice, gli stessi spazi e i caratteri incorporati. Cambiano solo i testi e una sezione. Script fuori dal repository: /home/claude/prove/costruisci_mockup.py.
+  - **31/12:** in alto «Domani»; nel testo un orologio fino a mezzanotte; bottone «Chi si libera a mezzanotte».
+  - **1/1:** in alto, in rosso, «Public Domain Day»; le righe del frontespizio dicono «da oggi»; testo: «Da oggi, 1° gennaio 2027, sono liberi 826 scrittori in IT, FR, DE e UK, 790 in Spagna e 169 libri negli Stati Uniti»; numeri sotto il titolo «Da oggi, 1° gennaio 2027»; sezione nuova «Da oggi sono liberi», con 4 riquadri porta (paesi e Spagna dal 2037).
+  - **2-6/1:** come il 1°, con «dal 1° gennaio».
+  - **7/1:** la home dell'anno dopo (2028), più un riquadro d'archivio «Pubblico dominio 2027» a tutta larghezza.
+- **Regola di lavoro imparata:** i mockup si costruiscono sulla pagina vera del sito, non disegnati da zero.
