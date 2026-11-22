@@ -32,6 +32,8 @@ def decidi(riga, tipi, manuali, eta=({}, {})):
     au = [{"qid": a[0], "nome": a[1], "morte": a[2], "antico": bool(a[3])} for a in riga[5]]
     antica = opera_antica(riga[0], au, riga[3], eta[0].get(riga[0]), eta[1], Y)
     add = []
+    via = [x["sostituisce"] for x in manuali.get(riga[0], []) if x.get("sostituisce")]   # autore sbagliato, tolto a mano
+    au = [a for a in au if a["qid"] not in via]
     for x in manuali.get(riga[0], []):
         if not any(a["qid"] == x.get("qid") for a in au):
             q = x.get("qid") or "man:" + x["nome"]
@@ -40,7 +42,7 @@ def decidi(riga, tipi, manuali, eta=({}, {})):
     fuori = autori_che_contano(au, tipi, Y)
     tenuti = {a["qid"] for a in fuori}
     voce = {}
-    x = [a["qid"] for a in au if a["qid"] not in tenuti]
+    x = via + [a["qid"] for a in au if a["qid"] not in tenuti]
     if x:
         voce["x"] = x
     m = {a["qid"]: a["morte"] for a in fuori if a.get("gruppo")}

@@ -1,5 +1,5 @@
 {
- "nota": "Coautori che Wikidata non segna (regola del 20/11/2026, punto 5). Uno per opera, con la fonte. Li decide Marco caso per caso. Formato: \"opere\": {\"<codice Wikidata dell'opera>\": [{\"nome\": ..., \"qid\": ..., \"morte\": anno, \"ruolo\": ..., \"fonte\": url, \"fonte_nome\": ...}]}",
+ "nota": "Coautori che Wikidata non segna (regola del 20/11/2026, punto 5). Uno per opera, con la fonte. Li decide Marco caso per caso. Formato: \"opere\": {\"<codice Wikidata dell'opera>\": [{\"nome\": ..., \"qid\": ..., \"morte\": anno, \"ruolo\": ..., \"fonte\": url, \"fonte_nome\": ...}]} Facoltativo \"sostituisce\": codice Wikidata di un autore sbagliato da togliere dall'opera (22/11/2026, caso Mein Kampf).",
  "opere": {
   "Q3241743": [
    {
@@ -9,6 +9,17 @@
     "ruolo": "autore",
     "fonte": "https://en.wikipedia.org/wiki/Sare_Jahan_se_Accha",
     "fonte_nome": "Wikipedia: Sare Jahan se Accha (scritta da Muhammad Iqbal, 1877-1938, pubblicata nel 1904)"
+   }
+  ],
+  "Q48244": [
+   {
+    "nome": "Adolf Hitler",
+    "qid": "Q352",
+    "morte": 1945,
+    "ruolo": "autore",
+    "sostituisce": "Q346521",
+    "fonte": "https://www.ifz-muenchen.de/?id=550",
+    "fonte_nome": "Institut für Zeitgeschichte, Monaco: i diritti su Mein Kampf scadono il 31/12/2015, 70 anni dopo la morte di Hitler (1945). Nei dati di Wikidata l'opera era collegata a Q346521 «Hitler», senza data di morte"
    }
   ]
  }

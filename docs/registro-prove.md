@@ -862,3 +862,12 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
   - **Regola cambiata apposta** (Spagna 80 anni fino al 1986 invece che al 1987): 8 cambi, tutti «regola», codice 1. Il giro si sarebbe fermato. Esempio: The Little Friend in Spagna, da «dal 2068» a «dal 2058».
   - prova_regole: 0 errori; Python e browser uguali, anche nel motivo.
 - **Da fare al passo 4:** mettere la fotografia nei giri: si salva dopo ogni giro riuscito e si confronta prima di pubblicare.
+
+## 22/11/2026 — Mein Kampf corretto (in locale)
+- **Errore:** nei dati di Wikidata, Mein Kampf (Q48244) è collegato a Q346521 «Hitler», che non ha data di morte. Per questo risultava «non determinato» in tutti i paesi europei.
+- **Correzione a mano, con fonte:** in data/coautori_manuali.json l'autore diventa Adolf Hitler (Q352, morto nel 1945). La fonte è l'Institut für Zeitgeschichte (ifz-muenchen.de/?id=550): i diritti sono scaduti il 31/12/2015, 70 anni dopo la morte. Per farlo ho aggiunto il campo «sostituisce» in storico/registro_opere.py, che toglie dall'opera l'autore sbagliato.
+- **Verifica:**
+  - **Fotografia prima e dopo:** 5 cambi, tutti per Mein Kampf, tutti classificati «dati» (corretto). In Italia, Francia, Germania, Regno Unito e Spagna passa da «non determinato» a «libero»; negli USA era già libero.
+  - **Pagina vera nel browser:** autore Adolf Hitler, 1945; libero in Italia, Germania e USA.
+  - **Casi di riferimento:** 24 su 24, il caso 6 ora blocca.
+- L'opera resta fuori da classifiche e scaffali (data/storico_esclusioni.json); si trova solo con la ricerca.
