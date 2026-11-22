@@ -9,6 +9,8 @@ I fatti li decidono le fonti terze, non Marco e non Claude.
 - 2029: a gennaio 2027, dopo il giro del 7 gennaio che crea la lista. È programmato.
 - Poi ogni anno a gennaio, per la lista nuova.
 
+**Anche gli autori:** quelli con fonti in disaccordo sull'anno di morte (esito «discorde» nel registro, 78 al 22/11/2026) seguono gli stessi passi 4-6. La decisione va in `data/verifiche_manuali.json`, con la fonte. Per quelli con una fonte sola (945) prima si contano quelli vicini al confine, cioè quelli per cui un anno sbagliato cambierebbe la data.
+
 ## Passi
 
 1. **Raccolta (GitHub, giro «Fonti delle opere»).** Lo script è `scripts/prova_opere_fonti.py`, con `LISTE=...`. Per ogni opera principale (le prime 10 della scheda di ogni autore letterario) interroga Library of Congress, K10plus e BnF (solo per gli autori francesi). Di ogni edizione salva:

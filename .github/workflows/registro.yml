@@ -30,8 +30,37 @@ jobs:
         run: python scripts/registro_autori.py
         env:
           BUDGET_MINUTI: "40"
-      - name: Salva
+      # 22/11/2026: quando il registro cambia un anno di morte, cambiano anche le liste e tutte le pagine che le leggono
+      # (radar, pagine dell'anno, home, schede): si rifanno qui, con gli stessi controlli bloccanti degli altri giri
+      - name: Liste con l'anno di morte del registro unico (scripts/applica_registro_liste.py)
+        if: ${{ !cancelled() }}
+        run: python scripts/applica_registro_liste.py
+      - name: Pagine (schede, radar, pagine dell'anno, home)
+        if: ${{ !cancelled() }}
+        run: python scripts/pagine.py
+      - name: Controlli (regole, schede e liste contro il registro)
+        id: controlli
         if: ${{ !cancelled() }}
         run: |
+          python scripts/prova_regole.py
+          python scripts/controllo_frasi.py
+      - name: Salva
+        if: ${{ !cancelled() && steps.controlli.outcome == 'success' }}
+        run: |
+          if ! python scripts/confronta_fotografia.py --giro; then
+            git reset -q
+            git add docs/cambi-da-approvare.md
+            bash scripts/salva.sh "Cambi di stato da approvare $(date -u +%Y-%m-%d) (niente pubblicato)"
+            exit 1
+          fi
+          git add -A
+          bash scripts/salva.sh "Registro degli autori del $(date -u +%Y-%m-%d), liste e pagine"
+      - name: Se i controlli non passano si salva solo il registro (le pagine restano come prima)
+        if: ${{ !cancelled() && steps.controlli.outcome != 'success' }}
+        run: |
+          cp -r data/registro /tmp/registro && cp data/cache_verifica.json /tmp/ 2>/dev/null || true
+          git reset -q && git checkout -- . && git clean -fdq
+          rm -rf data/registro && cp -r /tmp/registro data/registro && cp /tmp/cache_verifica.json data/ 2>/dev/null || true
           git add data/registro data/cache_verifica.json
-          bash scripts/salva.sh "Registro degli autori del $(date -u +%Y-%m-%d)"
+          bash scripts/salva.sh "Registro degli autori del $(date -u +%Y-%m-%d) (liste e pagine non aggiornate: controlli falliti)"
+          exit 1

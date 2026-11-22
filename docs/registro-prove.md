@@ -1059,3 +1059,22 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - **Decisione di Marco:** si fa una volta per lista, non a pagamento. Claude prepara il rapporto e Marco controlla. Si parte dalle liste 2027 e 2028; la lista 2029 si fa a gennaio.
 - **Raccolta completa:** scripts/prova_opere_fonti.py con LISTE, giro fonti-opere.yml. Le opere sono 2.126 (2027, 2028, es-2027, es-2028), circa 3,5 ore. Salva per ogni edizione lingua, data di copyright e lingua di traduzione. Se non finisce, riprende da dove si era fermato.
 - **Prova a secco in locale, con una rete finta:** la ripresa funziona (119 opere fatte su 1.026, nessuna ripetuta).
+
+## 22/11/2026 — Registro unico collegato alle liste per anno e al calendario (in locale)
+- **Errore di Claude:** il registro unico (20/11) diceva «da qui leggono tutte le parti del sito», ma liste per anno, radar, pagine dell'anno e calendario leggevano ancora Wikidata, e le schede fino a stasera. Nessuna prova lo controllava.
+- **Correzione:**
+  - scripts/applica_registro_liste.py mette nelle liste l'anno di morte deciso nel registro. Se un autore appartiene a un altro anno lo sposta, se quella lista non esiste lo toglie, e scrive ogni spostamento in data/registro/liste_spostati.json. Rifatto due volte dà lo stesso risultato.
+  - Gira nel giro aggiorna, dopo Wikidata, e nel giro registro. Il giro registro ora rifà anche le pagine, con i controlli bloccanti e la fotografia; se i controlli falliscono salva solo il registro.
+- **Nuova prova bloccante (prova_regole parte 7):** ogni autore delle liste e del calendario deve avere l'anno del registro e stare nella lista del suo anno. Prima della correzione dava 11 differenze, dopo 0. Il calendario 2027 era già a posto.
+- **Spostamenti:**
+  - Jafar Kashif e Julián Cruz Balmaceda: morti nel 1947, non nel 1946, quindi liberi in Spagna dal 2028;
+  - Nikos Karvounis: morto nel 1957, quindi entra nella lista europea 2028;
+  - 8 autori escono dalle liste: Stott (1980), Henham (1948), Donaghy (1949), Horstmann (1954), Scheffler (1951), Vengerov (1962), Ohlson (1948), Mohor (1948).
+  - Hanno tutti fonti in disaccordo; decide la regola del registro (due fonti autorevoli contro Wikidata).
+- **Schede:** 407 invece di 408 (esce Henham). Prove 1-7 tutte a 0.
+- **Fotografia:** 10 cambi di stato da approvare, tutti «dati»: Kashif e Cruz Balmaceda in Spagna passano dal 2027 al 2028. Marco li deve approvare prima della pubblicazione.
+- **Correzione dopo la domanda di Marco «chi decide e controlla il registro?»** Gli 11 autori erano tutti «discorde»: il registro non aveva deciso e teneva l'anno di Wikidata. Non si spostano più.
+  - **Regola:** applica_registro_liste e le schede usano l'anno del registro solo se le fonti hanno deciso (verificato, documentato, maggioranza, corretto, nazionale). Con fonti in disaccordo resta l'anno della lista e la scheda dice «Da verificare: le fonti non concordano…». Questa nota ora la decide il registro, non il vecchio scripts/verifica.py.
+  - **Prova:** la parte 6 controlla che ogni scheda con fonti in disaccordo lo dica. Ha trovato 6 schede che non lo dicevano: Buck, Henham, Robinson, Scarborough, Garby, Sainsbury. Ora 0.
+  - **Risultato:** nessun autore spostato, nessun cambio di stato (fotografia: 0 cambi). Sul sito cambiano solo le note di quelle 6 schede (e delle inglesi), più il «totale» delle liste, che ora è giusto: 2027 dice 1.423, non 1.427.
+- **Registro, numeri:** verificato 4.333, documentato 588, una sola fonte 945, discorde 78, maggioranza 45, corretto 14, nazionale 4. I 78 «discorde» entrano nella verifica (docs/verifica-opere.md).

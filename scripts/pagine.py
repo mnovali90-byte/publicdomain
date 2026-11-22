@@ -418,8 +418,8 @@ def blocco_verifica(a, lang):
     if v["esito"] == "discorde":
         el = ", ".join([f"{NOMI_FONTE[lang][k]} {y}" for k, y in fv.items() if k in NOMI_FONTE[lang]]
                        + [f"{k} {y}" for k, y in v.get("citate", {}).items()])
-        t = (f"Da verificare: le fonti non concordano sull'anno di morte ({el}). Le date qui sopra usano Wikidata." if it
-             else f"To verify: the sources disagree on the year of death ({el}). The dates above use Wikidata.")
+        t = (f"Da verificare: le fonti non concordano sull'anno di morte ({el}). Le date qui sopra usano l'anno della lista; lo stiamo verificando." if it
+             else f"To verify: the sources disagree on the year of death ({el}). The dates above use the list year; we are checking it.")
         return [f'<p><strong>{esc(t)}</strong></p>\n']
     t = ("Anno di morte da una sola fonte (Wikidata), senza fonti citate: le biblioteche nazionali consultate non lo riportano." if it
          else "Year of death from a single source (Wikidata), with no cited source: the national libraries we check do not record it.")
@@ -2162,8 +2162,12 @@ def main():
     for q_, a_ in autori.items():
         D_ = anno_di(a_.get("morte"))
         m_, inc_ = R.morte_dal_registro(q_, D_, reg_aut, R.morti_liberi_nel(oggi.year, "it"))
-        if D_ is not None and m_ is not None and m_ != D_:
+        if D_ is not None and m_ is not None and m_ != D_ and not inc_:   # «discorde»: resta l'anno di prima, con «da verificare»
             a_["morte_lista"], a_["morte"] = a_["morte"], str(m_)
+        v_ = reg_aut.get(q_) or {}
+        if v_.get("e") == "discorde":
+            # la nota sotto l'anno di morte la decide il registro, non il vecchio controllo di scripts/verifica.py
+            a_["verifica"] = {"esito": "discorde", "fonti": v_.get("f") or {}, "citate": v_.get("c") or {}}
     scelti = sorted(autori.values(), key=lambda a: (slug_base(a["nome"]), a["wikidata"]))
     usati = {}
     for a in scelti:

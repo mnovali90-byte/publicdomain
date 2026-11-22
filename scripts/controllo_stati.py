@@ -75,6 +75,16 @@ def main(stampa=True):
             non_contr += 1
             continue
         en = "/en/" in f
+        if v.get("e") == "discorde":
+            # fonti in disaccordo: la scheda usa l'anno della lista e deve dire «da verificare»
+            conti["incerti"] = conti.get("incerti", 0) + 1
+            hu = html.unescape(h)
+            if "le fonti non concordano sull'anno di morte" not in hu and "the sources disagree on the year of death" not in hu:
+                errori.append(f"{nome_p}: fonti in disaccordo sull'anno di morte, ma la scheda non dice «da verificare»")
+            md = re.search(r"(?:Anno di morte|Year of death) <b>(\d{4})</b>", h)
+            if not md:
+                continue
+            D = int(md.group(1))
 
         # 1. tabella paese per paese
         ul = re.search(r'<ul class="ps">(.*?)</ul>', h, re.S)
@@ -156,11 +166,48 @@ def main(stampa=True):
     if stampa:
         print(f"6. Stati scritti sulle pagine: {conti['pagine']} schede; controllati {conti['paesi']} paesi, {conti['intestazioni']} intestazioni, "
               f"{conti['note']} note, {conti['usa']} opere negli USA ({conti.get('aperta', 0)} con la decisione USA ancora aperta), {conti['coautori']} opere con coautori più tardi; "
-              f"contro le regole: {len(errori)}; non controllabili: {non_contr}")
+              f"autori con l'anno di morte da verificare: {conti.get('incerti', 0)}; contro le regole: {len(errori)}; non controllabili: {non_contr}")
         for e in errori[:40]:
             print("   ", e)
     return errori
 
 
+def controlla_liste(stampa=True):
+    """Liste per anno e calendario contro il registro unico: l'anno di morte deve essere quello deciso
+    (regole.morte_dal_registro), e ogni autore deve stare nella lista del suo anno. Radar, pagine dell'anno, home e schede
+    leggono le liste: se le liste tornano, tornano anche loro (22/11/2026)."""
+    reg = (_l(RADICE / "data" / "registro" / "autori.json", {}) or {}).get("autori", {})
+    anno_ue = R.morti_liberi_nel(OGGI, "it")
+    errori, n = [], 0
+    for f in sorted(glob.glob(str(RADICE / "data" / "[0-9][0-9][0-9][0-9].json")) + glob.glob(str(RADICE / "data" / "es-[0-9][0-9][0-9][0-9].json"))):
+        nome = Path(f).stem
+        tipo, anno_l = ("es" if nome.startswith("es-") else "it"), int(nome[-4:])
+        for a in (_l(f, {}) or {}).get("autori", []):
+            m_l = re.match(r"-?\d+", str(a.get("morte") or ""))
+            if not m_l:
+                continue
+            n += 1
+            m_l = int(m_l.group())
+            m, inc = R.morte_dal_registro(a.get("wikidata"), m_l, reg, anno_ue)
+            if inc:   # fonti in disaccordo: resta l'anno della lista finché non è verificato
+                continue
+            if m != m_l:
+                errori.append(f"lista {nome}: {a.get('nome')} morto nel {m_l}, il registro dice {m}")
+            elif R.anno_libero(m, tipo) != anno_l:
+                errori.append(f"lista {nome}: {a.get('nome')} (morte {m}) dovrebbe stare nella lista {R.anno_libero(m, tipo)}")
+    for f in sorted(glob.glob(str(RADICE / "data" / "anniversari-[0-9][0-9][0-9][0-9].json"))):
+        for v in (_l(f, {}) or {}).get("voci", []):
+            if v.get("tipo") == "morte" and v.get("qid") in reg:
+                n += 1
+                m, inc = R.morte_dal_registro(v["qid"], v.get("anno"), reg, anno_ue)
+                if not inc and m != v.get("anno"):
+                    errori.append(f"calendario {Path(f).stem}: {v.get('nome')} morto nel {v.get('anno')}, il registro dice {m}")
+    if stampa:
+        print(f"7. Liste e calendario contro il registro unico: {n} autori; diversi: {len(errori)}")
+        for e in errori[:20]:
+            print("   ", e)
+    return errori
+
+
 if __name__ == "__main__":
-    sys.exit(1 if main() else 0)
+    sys.exit(1 if (main() + controlla_liste()) else 0)

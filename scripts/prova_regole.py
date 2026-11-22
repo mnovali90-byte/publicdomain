@@ -216,6 +216,8 @@ errori += no5
 # Bloccante dal 22/11/2026, da quando le schede usano gli stessi dati e la stessa regola di Già pubblici.
 import controllo_stati  # noqa: E402
 errori += [f"scheda contro le regole: {x}" for x in controllo_stati.main(stampa=True)]
+# ---------------------------------------------------------------- 7. liste e calendario contro il registro unico (22/11/2026)
+errori += [f"dati contro il registro: {x}" for x in controllo_stati.controlla_liste(stampa=True)]
 
 for e in errori:
     print("ERRORE:", e)
