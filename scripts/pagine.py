@@ -10,6 +10,7 @@ i due indici e sitemap.xml. Le pagine inglesi non mostrano opere, paesi e profes
 hanno etichette italiane: meglio meno contenuto che contenuto in due lingue.
 """
 from controlli import problemi as problemi_conteggio  # noqa: E402
+import regole as R  # noqa: E402  (regole per paese in un posto solo)
 import datetime
 import glob
 import html
@@ -115,25 +116,6 @@ def bio_di(a, lang="it"):
 def abbastanza_contenuto(a, lang="it"):
     return bool(a.get("letterario") and bio_di(a, lang) and a.get("opere") and anno_di(a.get("morte")))
 
-
-def paese_per_paese(D, lang="it"):
-    """Stesse regole della scheda del sito (bloccoPaesi in index.html): vanno tenute allineate."""
-    d = lambda y: data_l(lang, y)
-    if lang == "en":
-        return [
-            f"EU (base rule), Germany and the United Kingdom: from {d(D + 71)}. In the UK, works still unpublished in 1989 stay protected until 31 December 2039.",
-            f"France: from {d(D + 71)}. Wartime extensions are not added to the 70 years (French Court of Cassation, 2007). Exception: authors who «died for France» get 30 more years.",
-            f"Italy: from {d(D + 71)}. The 6-year wartime extension was repealed in 1996. For authors from Allied countries in the Second World War the term can be longer (1947 Peace Treaty): check case by case.",
-            (f"Spain: not before {d(D + 81)} (80 years after death, because the author died before 1987; the law does not say how the year is counted)."
-             if D < 1987 else f"Spain: from {d(D + 71)}."),
-        ]
-    return [
-        f"UE (base), Germania e Regno Unito: dal {d(D + 71)}. Nel Regno Unito le opere rimaste inedite fino al 1989 restano protette fino al 31 dicembre 2039.",
-        f"Francia: dal {d(D + 71)}. Le proroghe di guerra non si sommano ai 70 anni (Cassazione francese, 2007). Eccezione: gli autori «morti per la Francia» hanno 30 anni in più.",
-        f"Italia: dal {d(D + 71)}. La proroga di guerra di 6 anni è stata abrogata nel 1996. Per gli autori di paesi alleati nella Seconda guerra mondiale la durata può essere più lunga (Trattato di pace del 1947): va verificato caso per caso.",
-        (f"Spagna: non prima del {d(D + 81)} (80 anni dalla morte, perché è morto prima del 1987; la legge non dice come si conta l'anno)."
-         if D < 1987 else f"Spagna: dal {d(D + 71)}."),
-    ]
 
 
 CSS = """
@@ -338,28 +320,62 @@ def alterne(lang, slug):
 NOMI_FONTE = {"it": {"wikidata": "Wikidata", "wikidata_altra": "Wikidata (altra data)", "gnd": "Biblioteca nazionale tedesca (GND)", "loc": "Library of Congress"},
               "en": {"wikidata": "Wikidata", "wikidata_altra": "Wikidata (another date)", "gnd": "German National Library (GND)", "loc": "Library of Congress"}}
 
-# Potenze alleate e associate del Trattato di pace con l'Italia del 1947 (preambolo; Albania per adesione), con i nomi
-# che Wikidata dà alla cittadinanza: stessa lista di ALLEATI_1947 in index.html (lì con i nomi attuali). È un indizio.
-ALLEATI_1947 = {"Regno Unito", "Regno Unito di Gran Bretagna e Irlanda", "Regno d'Inghilterra", "Galles", "Stati Uniti",
-                "Unione Sovietica", "Impero russo", "Repubblica Socialista Federativa Sovietica Russa", "Russia sovietica", "RSS Ucraina",
-                "RSS Bielorussa", "Repubblica Socialista Sovietica Georgiana", "Kazakistan", "Cina", "Repubblica di Cina", "Francia",
-                "Australia", "Belgio", "Brasile", "Canada", "Cecoslovacchia", "Prima Repubblica cecoslovacca", "Repubblica Socialista Cecoslovacca",
-                "Grecia", "India", "Impero anglo-indiano", "Dominion dell'India", "Pakistan", "Regno dei Paesi Bassi", "Nuova Zelanda",
-                "Polonia", "Seconda Repubblica di Polonia", "Repubblica Popolare di Polonia", "Sudafrica", "Jugoslavia", "Regno di Jugoslavia",
-                "Repubblica federale popolare di Jugoslavia", "Repubblica Socialista Federale di Jugoslavia", "Regno dei Serbi, Croati e Sloveni",
-                "Serbia", "Albania"}
+NOMI_P = {"it": {"it": "in Italia", "fr": "in Francia", "de": "in Germania", "uk": "nel Regno Unito", "es": "in Spagna"},
+          "en": {"it": "Italy", "fr": "France", "de": "Germany", "uk": "the UK", "es": "Spain"}}
 
 
-# Trattato di pace del 1947, allegato XV, parte A, punto 3: in Italia non conta il periodo dall'inizio della guerra
-# all'entrata in vigore del trattato (15 settembre 1947). Al massimo poco più di 7 anni: per prudenza 8. Finché la data
-# normale più questa proroga non è passata, per gli autori dei paesi alleati in Italia scriviamo «da verificare».
-PROROGA_ALLEATI = 8
+def maiuscola(t):
+    return t[:1].upper() + t[1:]
+
+
+def elenco_paesi(paesi, lang):
+    """«in Italia, Francia, Germania e nel Regno Unito» / «in Italy, France, Germany and the UK»."""
+    if not paesi:
+        return ""
+    if lang == "en":
+        n = [NOMI_P["en"][x] for x in paesi]
+        return "in " + (", ".join(n[:-1]) + " and " + n[-1] if len(n) > 1 else n[0])
+    n = [NOMI_P["it"][x] for x in paesi]
+    if len(n) == 1:
+        return n[0]
+    corti = [x.split(" ", 1)[1] if x.startswith("in ") else x for x in n]
+    return n[0] + "".join(", " + c for c in corti[1:-1]) + " e " + corti[-1]
+
+
+def dove_libero(paesi, morte, lang):
+    """Frase dei paesi in cui le opere si liberano il giorno della regola dei 70 anni (scripts/regole.py)."""
+    return elenco_paesi(R.paesi_liberi_insieme(paesi, morte, datetime.date.today().year), lang)
+
+
+_MPF = []
+
+
+def è_mpf(a):
+    """«Mort pour la France» (storico/mpf.py, data/registro/mpf.json): in Francia 30 anni in più."""
+    if not _MPF:
+        try:
+            _MPF.append(set(json.loads((RADICE / "data" / "registro" / "mpf.json").read_text(encoding="utf-8")).get("autori", {})))
+        except Exception:
+            _MPF.append(set())
+    return a.get("wikidata") in _MPF[0]
+
+
+def italia_da_verificare(a):
+    return R.italia_da_verificare(a.get("paesi"), anno_di(a.get("morte")), datetime.date.today().year)
 
 
 def avviso_alleato(a, lang):
-    p = [x for x in a.get("paesi", []) if x in ALLEATI_1947]
-    if not p:
+    """Avviso per l'Italia quando la data normale non basta (regola in scripts/regole.py, italia_da_verificare)."""
+    if not italia_da_verificare(a):
         return ""
+    p = R.paesi_alleati(a.get("paesi"))
+    if not p:
+        t = ("Nei dati non c'è la cittadinanza dell'autore: se era di un paese alleato nella Seconda guerra mondiale, in Italia "
+             "la protezione può durare di più (Trattato di pace del 1947, allegato XV). Per questo in Italia non diamo una data: "
+             "va verificata opera per opera." if lang == "it" else
+             "The data do not give the author's citizenship: if they were from an Allied country in the Second World War, in Italy "
+             "protection may last longer (1947 Peace Treaty, Annex XV). So we give no date for Italy: it must be checked work by work.")
+        return f'<p><strong>{esc(t)}</strong></p>\n'
     t = (f"Autore di un paese alleato nella Seconda guerra mondiale ({', '.join(p)}): in Italia la protezione può durare di più "
          "(Trattato di pace del 1947, allegato XV): per questo in Italia non diamo una data, va verificata opera per opera." if lang == "it" else
          f"Author from an Allied country in the Second World War ({', '.join(p)}): in Italy protection may last longer "
@@ -419,7 +435,7 @@ def blocco_illustrazioni(a, lang):
         out.append("<ul>\n")
         for x in ill:
             if x.get("morte"):
-                quando = (f"libere nell'UE dal {data_l(lang, x['morte'] + 71)}" if it else f"free in the EU from {data_l(lang, x['morte'] + 71)}")
+                quando = (f"libere {dove_libero(None, x['morte'], lang)} dal {data_l(lang, R.anno_libero(x['morte'], 'it'))}" if it else f"free {dove_libero(None, x['morte'], lang)} from {data_l(lang, R.anno_libero(x['morte'], 'it'))}")
                 morto = f"morto nel {x['morte']}" if it else f"died {x['morte']}"
                 r = f"{x['opera']}: illustrazioni di {x['nome']} ({morto}), {quando}" if it else f"{x['opera']}: illustrations by {x['nome']} ({morto}), {quando}"
             else:
@@ -538,16 +554,16 @@ def stato_usa(a, o):
     y = o.get("anno")
     if not isinstance(y, int):
         return "nd", None
-    limite = datetime.date.today().year - 96
+    limite = R.pubblicate_libere_usa_nel(datetime.date.today().year)
     if y > limite:
-        return "dal", y + 96
+        return "dal", R.anno_libero_usa(y)
     tw = {tuple(_parole(o.get("titolo"))), tuple(_parole(o.get("titolo_en")))}
     for r in opere_storico(a["wikidata"]):
         if tuple(_parole(r[1])) in tw or tuple(_parole(r[2])) in tw:
             v = ANNI_VER.get(r[0])
             if v and v[0] is not None:
                 # confermata un'edizione entro il limite: libera dall'anno di uscita dell'opera; solo edizioni più tarde: dal loro anno
-                return ("libero", y + 96) if v[0] <= limite else ("dal", v[0] + 96)
+                return ("libero", R.anno_libero_usa(y)) if v[0] <= limite else ("dal", R.anno_libero_usa(v[0]))
     return "verifica", None
 
 
@@ -588,9 +604,9 @@ def note_coautori(a, lang):
         tt = f"«{t}»"
         if tardi:
             nome, m = max(tardi, key=lambda x: x[1])
-            es = m + 81 if m < 1987 else m + 71
-            note.append(T(f"{tt} è scritta anche da {nome} (morte: {m}): in Europa è libera dal 1° gennaio {m + 71} (in Spagna dal {es}).",
-                          f"{tt} was also written by {nome}, who died in {m}: in Europe it is free from 1 January {m + 71} (in Spain from {es})."))
+            es, ue_m = R.anno_libero(m, "es"), R.anno_libero(m, "it")
+            note.append(T(f"{tt} è scritta anche da {nome} (morte: {m}): in Francia, Germania e Regno Unito è libera dal 1° gennaio {ue_m}, in Spagna dal {es}; in Italia la stessa data, salvo le eccezioni dei paesi alleati.",
+                          f"{tt} was also written by {nome}, who died in {m}: in France, Germany and the UK it is free from 1 January {ue_m}, in Spain from {es}; in Italy the same date, except for the Allied-country cases."))
         elif ignoti:
             note.append(T(f"{tt}: tra gli autori c'è anche {', '.join(ignoti)}, di cui Wikidata non dà l'anno di morte. Da verificare.",
                           f"{tt}: the authors also include {', '.join(ignoti)}, whose year of death Wikidata does not give. To be checked."))
@@ -601,9 +617,9 @@ def note_coautori(a, lang):
             if m is None:
                 note.append(T(f"{tt}: {r.lower()} di {nome} ha diritti propri; non sappiamo quando scadono.",
                               f"{tt}: {r.lower()} by {nome} has its own rights; we do not know when they expire."))
-            elif m + 71 > oggi_a and m > D:
-                note.append(T(f"{tt}: {r.lower()} di {nome} (morte: {m}) ha diritti propri, in Europa fino al 31 dicembre {m + 70}. Il testo segue la data dell'autore.",
-                              f"{tt}: {r.lower()} by {nome} (died {m}) has its own rights, in Europe until 31 December {m + 70}. The text follows the author's date."))
+            elif R.anno_libero(m, "it") > oggi_a and m > D:
+                note.append(T(f"{tt}: {r.lower()} di {nome} (morte: {m}) ha diritti propri: in Francia, Germania e Regno Unito fino al 31 dicembre {R.anno_libero(m, 'it') - 1}, in Spagna fino al 31 dicembre {R.anno_libero(m, 'es') - 1}. Il testo segue la data dell'autore.",
+                              f"{tt}: {r.lower()} by {nome} (died {m}) has its own rights: in France, Germany and the UK until 31 December {R.anno_libero(m, 'it') - 1}, in Spain until 31 December {R.anno_libero(m, 'es') - 1}. The text follows the author's date."))
     return list(dict.fromkeys(note))   # stessa nota per titoli doppi su Wikidata: una volta sola
 
 
@@ -683,175 +699,41 @@ def domande(a, lang):
 
 
 def frase_risposta(a, lang):
-    """La risposta in una frase, sotto il nome (mockup approvato il 21/11/2026): è il testo che Google mostra nei risultati."""
+    """La risposta in una frase, sotto il nome (mockup approvato il 21/11/2026): è il testo che Google mostra nei risultati.
+    Paesi e date vengono da scripts/regole.py (dove_libero, anno_libero): niente regole scritte qui."""
     it = lang == "it"
     nome = pulisci(a["nome"])
     D = anno_di(a.get("morte"))
     oggi = datetime.date.today()
     fut = lambda anno: datetime.date(anno, 1, 1) > oggi
-    ue, es = D + 71, (D + 81 if D < 1987 else None)
-    alleato = bool(avviso_alleato(a, lang))
+    mpf = è_mpf(a)
+    insieme = R.paesi_liberi_insieme(a.get("paesi"), D, oggi.year, mpf)
+    ue = R.anno_libero(D, "it")
+    altri = [(p, R.anno_libero(D, p, mpf)) for p in ("fr", "es") if p not in insieme]
+    ver = italia_da_verificare(a)
+    paesi = elenco_paesi(insieme, lang)
     if it:
-        paesi = "Francia, Germania e Regno Unito" if alleato else "Italia, Francia, Germania e Regno Unito"
-        x = (f"Le opere di {esc(nome)} diventano di pubblico dominio in {paesi} il <b>{data_l(lang, ue)}</b>" if fut(ue)
-             else f"Le opere di {esc(nome)} sono di pubblico dominio in {paesi} dal <b>{data_l(lang, ue)}</b>")
-        if es:
-            if fut(es) == fut(ue):
-                x += f"; in Spagna {'il' if fut(es) else 'dal'} {data_l(lang, es)}"
-            else:
-                x += f"; in Spagna lo diventano il {data_l(lang, es)}"
+        x = (f"Le opere di {esc(nome)} diventano di pubblico dominio {paesi} il <b>{data_l(lang, ue)}</b>" if fut(ue)
+             else f"Le opere di {esc(nome)} sono di pubblico dominio {paesi} dal <b>{data_l(lang, ue)}</b>")
+        for p, y in altri:
+            x += f"; {NOMI_P['it'][p]} {'il' if fut(y) else 'dal'} {data_l(lang, y)}"
         x += "."
-        if alleato:
-            x += " In Italia va verificato: è un autore di un paese alleato nella Seconda guerra mondiale."
+        if ver:
+            x += (" In Italia va verificato: è un autore di un paese alleato nella Seconda guerra mondiale." if R.paesi_alleati(a.get("paesi"))
+                  else " In Italia va verificato: nei dati manca la cittadinanza dell’autore.")
         x += " Negli USA dipende dall’anno di uscita di ogni opera."
     else:
-        paesi = "the UK, France and Germany" if alleato else "the UK, France, Germany and Italy"
-        x = (f"The works of {esc(nome)} enter the public domain in {paesi} on <b>{data_l(lang, ue)}</b>" if fut(ue)
-             else f"The works of {esc(nome)} have been in the public domain in {paesi} since <b>{data_l(lang, ue)}</b>")
-        if es:
-            if fut(es) == fut(ue):
-                x += f"; in Spain {'on' if fut(es) else 'since'} {data_l(lang, es)}"
-            else:
-                x += f"; in Spain they enter it on {data_l(lang, es)}"
+        x = (f"The works of {esc(nome)} enter the public domain {paesi} on <b>{data_l(lang, ue)}</b>" if fut(ue)
+             else f"The works of {esc(nome)} have been in the public domain {paesi} since <b>{data_l(lang, ue)}</b>")
+        for p, y in altri:
+            x += f"; in {NOMI_P['en'][p]} {'on' if fut(y) else 'since'} {data_l(lang, y)}"
         x += "."
-        if alleato:
-            x += " In Italy it must be checked: the author is from an Allied country in the Second World War."
+        if ver:
+            x += (" In Italy it must be checked: the author is from an Allied country in the Second World War." if R.paesi_alleati(a.get("paesi"))
+                  else " In Italy it must be checked: the data do not give the author’s citizenship.")
         x += " In the USA it depends on each work’s publication year."
     return f'<p class="sa-risposta">{x}</p>\n'
 
-
-def scheda_statica(a, lang, bd):
-    """Corpo della pagina autore, con lo stesso disegno della scheda del sito (mockup approvato)."""
-    it = lang == "it"
-    nome = pulisci(a["nome"])
-    nasc, D = anno_di(a.get("nascita")), anno_di(a.get("morte"))
-    T = (lambda x, y: x) if it else (lambda x, y: y)
-    prof = ", ".join((a.get("professioni") or [])[:2]) if it else ""
-    o = ['<div class="sa">\n<section class="sa-top"><div class="sa-in">\n',
-         f'<p class="sa-et">{T("Scheda autore", "Author card")}{(" · " + esc(prof)) if prof else ""}</p>\n<header class="sa-head">\n']
-    foto = a.get("foto") or {}
-    if foto.get("url"):
-        o.append(f'<div class="sa-foto"><img src="{esc(foto["url"])}" alt="{T("Ritratto di", "Portrait of")} {esc(nome)}" loading="lazy"></div>\n')
-    else:
-        o.append(f'<div class="sa-foto sa-ini" aria-hidden="true">{esc(iniziali_nome(nome))}</div>\n')
-    desc = [f"{nasc if nasc else '?'} – {D}"]
-    if it and a.get("professioni"):
-        desc.append(", ".join(a["professioni"][:2]))
-    if it and a.get("paesi"):
-        desc.append(", ".join(paesi_moderni(a["paesi"])[:2]))
-    lunga = max((len(w) for w in nome.split()), default=0)   # la parola più lunga deve stare intera accanto al ritratto
-    dim = ' style="font-size:clamp(36px,6vw,80px)"' if lunga >= 11 else (' style="font-size:clamp(44px,7.5vw,100px)"' if lunga >= 9 else "")
-    o.append(f'<div><h1{dim}>{esc(nome)}</h1>\n<p class="sa-desc">{esc(" · ".join(desc))}</p></div>\n</header>\n')
-    o.append(frase_risposta(a, lang))
-    if foto.get("url"):
-        cap = " · ".join(x for x in (pulisci(foto.get("autore")), pulisci(foto.get("licenza"))) if x)
-        pag = f' <a href="{esc(foto["pagina"])}" rel="noopener">Wikimedia Commons</a>' if foto.get("pagina") else ""
-        o.append(f'<p class="sa-credito">{T("Foto", "Photo")}: {esc(cap)}{pag}</p>\n')
-    # la risposta principale
-    giorni = (datetime.date(D + 71, 1, 1) - datetime.date.today()).days
-    quando = (T(f"tra {migliaia(giorni)} giorni", f"in {migliaia(giorni, lang)} days") if giorni > 0 else T("già libero", "already free"))
-    o.append('<div class="sa-libero">\n<div class="libero-blocco">'
-             f'<div class="lb-et">{T("Libero in Italia dal", "Free in the UK and the EU from")}</div>'
-             f'<div class="lb-data">{data_l(lang, D + 71)}</div>'
-             f'<div class="lb-sotto">{quando} · {T(f"anno di morte {D}", f"died in {D}")}</div></div>\n')
-    v = a.get("verifica") or {}
-    if v.get("esito") == "verificato":
-        nomi = [NOMI_FONTE[lang][k] for k in v.get("fonti", {}) if k in NOMI_FONTE[lang]]
-        o.append('<p class="lb-ver"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" '
-                 'stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg><span>'
-                 + esc(T(f"Anno di morte confermato da {len(nomi)} fonti: {', '.join(nomi)}.", f"Year of death confirmed by {len(nomi)} sources: {', '.join(nomi)}."))
-                 + "</span></p>\n")
-    else:
-        o += [x.replace('<p class="sotto">', '<p class="lb-ver">') for x in blocco_verifica(a, lang)]
-    o.append(avviso_alleato(a, lang))
-    # le date paese per paese, visibili e brevi: le regole spiegate stanno in un posto solo (riquadro delle regole)
-    oggi_a = datetime.date.today().year
-    _all = bool(avviso_alleato(a, lang))
-    def tessera(paese, anno, regola, cl=""):
-        libero = bool(anno and anno <= oggi_a)
-        italia_ver = paese == T("Italia", "Italy") and _all and anno and anno + PROROGA_ALLEATI > oggi_a
-        if italia_ver:
-            libero = False
-        stato = "ok" if libero else cl
-        d = (T("libero", "free") + f" {T('dal', 'since')} {anno}") if libero else (data_l(lang, anno).replace("1° gennaio", "1° gen").replace("1 January", "1 Jan") if anno else T("opera per opera", "work by work"))
-        if italia_ver:
-            d = T("da verificare", "to be checked")   # paese alleato: niente data (Marco, 21/11/2026)
-        return f'<li class="{stato}"><span class="p">{esc(paese)}</span><span class="d">{esc(d)}</span><span class="r">{esc(regola)}</span></li>'
-    ue = T("70 anni dalla morte", "70 years after death")
-    fr = ue + (T("; +30 anni se «morto per la Francia»", "; +30 years if «died for France»") if 1939 <= D <= 1945 else "")
-    es_y = D + 81 if D < 1987 else D + 71
-    es_r = T("80 anni: è morto prima del 1987", "80 years: died before 1987") if D < 1987 else ue
-    it_r = ue + (T("; paese alleato: da verificare", "; Allied country: check") if avviso_alleato(a, lang) else "")
-    righe_p = [(T("Italia", "Italy"), D + 71, it_r), (T("Francia", "France"), D + 71, fr), (T("Germania", "Germany"), D + 71, ue),
-               (T("Regno Unito", "United Kingdom"), D + 71, ue + T("; inediti fino al 2039", "; unpublished works until 2039")),
-               (T("Spagna", "Spain"), es_y, es_r), ("USA", None, T("95 anni dall'uscita di ogni opera", "95 years from each work's publication"))]
-    if not it:   # in inglese prima i paesi di lingua inglese
-        righe_p = [righe_p[3], righe_p[5]] + [righe_p[i] for i in (0, 1, 2, 4)]
-    o.append(f'<ul class="pg" aria-label="{T("Paese per paese", "Country by country")}">' + "".join(
-        tessera(*x, cl=("primo" if i == 0 else "usa" if x[0] == "USA" else "")) for i, x in enumerate(righe_p)) + "</ul>\n")
-    o.append(f'<p class="sa-nota">{T("Calcolo indicativo, non è consulenza legale.", "Indicative calculation, not legal advice.")} '
-             f'<a href="{"/radar/" if it else "/en/radar/"}#regole-paesi">{T("Le regole, paese per paese", "The rules, country by country")}</a></p>\n</div>\n'
-             '</div></section>\n<div class="sa-in sa-resto">\n')
-    sez = lambda tit, corpo, occ=None: (f'<section class="sa-sez">\n' + (f'<p class="sa-occ">{occ}</p>\n' if occ else "") + f'<h2>{tit}</h2>\n{corpo}</section>\n')
-    corpo_usa, liberi_usa = opere_usa(a, lang)
-    a["_liberi_usa"] = liberi_usa
-    if corpo_usa:
-        extra = (f'<p class="sa-nota">{T(f"Su {migliaia(a["n_opere"])} opere registrate in Wikidata, qui le più note.", f"Of {migliaia(a["n_opere"], lang)} works recorded in Wikidata, the best known.")}</p>\n'
-                 if a.get("n_opere", 0) > 10 else "")
-        o.append(sez(T("Opere principali", "Main works"), corpo_usa + extra, T("Negli USA, opera per opera", "In the USA, work by work")))
-    g = ((a.get("traduzioni") or {}).get("sbn_it") if it else (a.get("traduzioni") or {}).get("bl_en"))
-    if g and g.get("sospeso_manuale"):
-        o.append(sez(T("Registrazioni in italiano", "Records in English"),
-                     f'<p class="sa-nota">{esc(T("Dati in verifica: non è ancora dimostrato che la scheda del catalogo collegata a questo autore sia davvero sua, quindi non mostriamo i numeri finché non è chiarito.", "Data under review: it is not yet shown that the catalogue record linked to this author is really theirs, so we do not show the figures until this is cleared up."))}</p>\n'))
-    elif g and g.get("trovato") and (g.get("stato") == "da_verificare" or problemi_conteggio(g, datetime.date.today().year)):
-        o.append(sez(T("Registrazioni in italiano", "Records in English"),
-                     f'<p class="sa-nota">{esc(T("Dati in verifica: per questo autore i numeri del catalogo si contraddicono, quindi non li mostriamo finché non sono corretti.", "Data under review: for this author the catalogue figures contradict each other, so we do not show them until they are fixed."))}</p>\n'))
-    elif g and g.get("trovato"):
-        box = lambda num, et: f'<div class="ed-box"><b>{migliaia(num, lang)}</b><span>{esc(et)}</span></div>'
-        ult = f" · {T('più recente con anno certo:', 'latest with a certain year:')} {g['ultimo']}" if g.get("ultimo") else ""
-        nota = (T("Registrazioni bibliografiche in italiano collegate all'autore nel catalogo SBN, comprese ristampe e antologie. Comprendono tutte le pubblicazioni collegate alla persona, anche quelle in cui ha collaborato (traduzioni, curatele, prefazioni), non solo i libri scritti da lei: è una misura di quanto è presente nel catalogo.", "")
-                if it else "Bibliographic records in English linked to the author in the British Library catalogue, searched by surname and years of birth and death; a record counts only if surname and years belong to the same person. Some records catalogued differently may be missed. They include every publication linked to the person, including those they contributed to (translations, editing, prefaces), not only books they wrote: it measures how present they are in the catalogue.")
-        if it and g.get("metodo") == "nome":
-            nota += " Autore riconosciuto solo dal nome: il conteggio può essere impreciso."
-        elif it and g.get("metodo") == "nome_con_prova":
-            nota += " Autore riconosciuto dal nome con una prova in più (anni di nascita e morte, un titolo o un cognome unico nel catalogo), non da un codice."
-        cosa = T("Che cos'è una registrazione: la scheda con cui la biblioteca descrive una pubblicazione. Di solito ce n'è una per ogni edizione o ristampa, quindi un libro uscito cinque volte conta cinque. Non sono copie vendute né titoli diversi.", "What a record is: the entry a library uses to describe a publication. There is usually one for each edition or reprint, so a book published five times counts five. Records are not copies sold, nor different titles.")
-        o.append(sez(T("Registrazioni in italiano", "Records in English"),
-                     f'<div class="ed-boxes">{box(g["edizioni"], T("registrazioni in italiano", "records in English"))}{box(g.get("dal_2000", 0), T("con anno dal 2000", "dated 2000 or later") + ult)}</div>\n<p class="sa-nota">{esc(cosa)}</p>\n<p class="sa-nota">{esc(nota)}</p>\n'))
-    cat = catalogi_a_confronto(a, lang)
-    if cat:
-        o.append(sez(T("Quanto è già pubblicato", "How much is already published"), cat, T("Nei cataloghi nazionali", "In national catalogues")))
-    barre = []
-    for m, campo, etich in ((("it", "visite_it", T("In Italia", "")),) if it else (("en", "visite_en", "In the English-speaking world"),)) + (("int", "pagine_wikipedia", T("Nel mondo", "Worldwide")),):
-        idx = a.get("indice_" + m)
-        if idx is None:
-            continue
-        val = a.get(campo) or 0
-        testo = (T(f"pagina Wikipedia in {val} lingue", f"Wikipedia page in {val} languages") if m == "int"
-                 else T(f"{migliaia(val)} visite su Wikipedia in 12 mesi", f"{migliaia(val, lang)} Wikipedia views in 12 months") if val
-                 else T("nessuna pagina in italiano", "no page in English"))
-        rg = RANGHI.get((a["wikidata"], m))
-        pos = f' · <b>{T(f"{rg[0]}° su {rg[1]}", f"#{rg[0]} of {rg[1]}")}</b>' if rg else ""
-        barre.append(f'<div class="sa-barra"><div class="sa-bn">{etich}</div><div class="sa-asta"><i style="width:{max(0, min(100, idx))}%"></i></div>'
-                     f'<div class="sa-val">{esc(testo)}{pos}</div></div>\n')
-    if barre:
-        o.append(sez(T("Quanto è conosciuto", "How well known"), "".join(barre)
-                     + f'<p class="sa-nota">{T("Misura la curiosità per l’autore (visite alle pagine Wikipedia), non le vendite dei suoi libri.", "Measures curiosity about the author (Wikipedia page views), not sales of their books.")}</p>\n'))
-    faq = domande(a, lang)
-    if faq:
-        o.append(sez(T("Le risposte brevi", "Short answers"), '<div class="faq">' + "".join(
-            f'<details{" open" if i == 0 else ""}><summary>{esc(q)}</summary><p>{esc(r_)}</p></details>' for i, (q, r_) in enumerate(faq)) + "</div>\n", T("Domande", "Questions")))
-        fq = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
-            {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": r_}} for q, r_ in faq]}
-        o.append('<script type="application/ld+json">' + json.dumps(fq, ensure_ascii=False).replace("</", "<\\/") + "</script>\n")
-    if bd:
-        ln = f'<a href="{esc(bd["url"])}" rel="noopener">{T("Continua su Wikipedia", "Continue on Wikipedia")}</a>' if bd.get("url") else ""
-        o.append(sez(T("Chi era", "Who they were"), f'<p class="sa-bio">{esc(bd["testo"])}</p>\n{ln}\n<p class="sa-nota">{T("Testo da Wikipedia, licenza CC BY-SA.", "Text from Wikipedia, licence CC BY-SA.")}</p>\n'))
-    ill = "".join(blocco_illustrazioni(a, lang)[1:]).replace('<p class="sotto">', '<p class="sa-testo">')
-    o.append(sez(T("Prima di pubblicare", "Before publishing"), ill + f'<p class="sa-nota">{T("Calcolo indicativo, non consulenza legale.", "Indicative calculation, not legal advice.")}</p>\n'))
-    o.append(blocco_vicini(a, lang))
-    o.append("</div>\n</div>\n")   # chiude sa-resto e sa
-    return "".join(o)
 
 
 # ===================================================================================================
@@ -946,14 +828,17 @@ def _paesi_riga(a, lang):
     it = lang == "it"
     T = (lambda x, y: x) if it else (lambda x, y: y)
     D = anno_di(a.get("morte"))
+    mpf = è_mpf(a)
     ue = T("70 anni dalla morte", "70 years after death")
-    fr = ue + (T("; +30 anni se «morto per la Francia»", "; +30 years if «died for France»") if 1939 <= D <= 1945 else "")
-    es_y = D + 81 if D < 1987 else D + 71
-    es_r = T("80 anni: è morto prima del 1987", "80 years: died before 1987") if D < 1987 else ue
-    it_r = ue + (T("; paese alleato: da verificare", "; Allied country: check") if avviso_alleato(a, lang) else "")
-    r = [(T("Italia", "Italy"), D + 71, it_r), (T("Francia", "France"), D + 71, fr), (T("Germania", "Germany"), D + 71, ue),
-         (T("Regno Unito", "United Kingdom"), D + 71, ue + T("; inediti fino al 2039", "; unpublished works until 2039")),
-         (T("Spagna", "Spain"), es_y, es_r), ("USA", None, T("95 anni dall'uscita di ogni opera", "95 years from each work's publication"))]
+    fr = (T("100 anni: «morto per la Francia»", "100 years: «died for France»") if mpf else ue)
+    es_80 = R.anni_protezione(D, "es") != R.ANNI_DOPO_MORTE
+    es_r = T("80 anni: è morto entro il 1987", "80 years: died by 1987") if es_80 else ue
+    it_r = ue + ((T("; paese alleato: da verificare", "; Allied country: check") if R.paesi_alleati(a.get("paesi"))
+                  else T("; cittadinanza non nota: da verificare", "; citizenship unknown: check")) if italia_da_verificare(a) else "")
+    r = [(T("Italia", "Italy"), R.anno_libero(D, "it"), it_r), (T("Francia", "France"), R.anno_libero(D, "fr", mpf), fr),
+         (T("Germania", "Germany"), R.anno_libero(D, "de"), ue),
+         (T("Regno Unito", "United Kingdom"), R.anno_libero(D, "uk"), ue + T("; inediti fino al 2039", "; unpublished works until 2039")),
+         (T("Spagna", "Spain"), R.anno_libero(D, "es"), es_r), ("USA", None, T("95 anni dall'uscita di ogni opera", "95 years from each work's publication"))]
     if not it:
         r = [r[3], r[5]] + [r[i] for i in (0, 1, 2, 4)]
     return r
@@ -1059,15 +944,16 @@ def scheda_nuova(a, lang, bd):
     risp = frase_risposta(a, lang).replace('<p class="sa-risposta">', '<p class="ans">')
     o.append(f'<div class="hd"><div><h1 id="name" style="--k:{lunga}">{h1}</h1>\n<p class="m meta">{esc(" · ".join(meta))}</p>\n{risp}</div>\n<div class="pc">{ph}</div></div>\n')
 
-    # quando è libero
-    anno_ue = D + 71
+    # quando è libero (paesi e date da scripts/regole.py)
+    mpf = è_mpf(a)
+    anno_ue = R.anno_libero(D, "it")
     giorni = (datetime.date(anno_ue, 1, 1) - oggi).days
-    dove = T("in Italia", "in the UK and the EU")
-    if avviso_alleato(a, lang):
-        dove = T("in Francia, Germania e Regno Unito", "in the UK, France and Germany")
+    insieme = R.paesi_liberi_insieme(a.get("paesi"), D, oggi.year, mpf)
+    # sulla scheda italiana si dice l'Italia se vale la data normale; altrimenti i paesi in cui vale
+    dove = T("in Italia", "") if (it and "it" in insieme) else elenco_paesi(insieme, lang)
     # in grande il conto alla rovescia (Marco, 21/11/2026): la data sta solo nella tabella dei paesi.
-    # Se in Europa è già libero ma in Spagna no, si conta verso la Spagna; se è libero dappertutto, «già libero».
-    anno_es = D + 81 if D < 1987 else D + 71
+    # Se dove vale la regola dei 70 anni è già libero ma in Spagna no, si conta verso la Spagna; se è libero dappertutto, «già libero».
+    anno_es = R.anno_libero(D, "es")
     giorni_es = (datetime.date(anno_es, 1, 1) - oggi).days
     if giorni <= 0 and giorni_es > 0:
         dove, giorni, anno_ue_c = T("in Spagna", "in Spain"), giorni_es, anno_es
@@ -1077,7 +963,8 @@ def scheda_nuova(a, lang, bd):
         grande = (f'<span class="m lab-big">{T("Libero", "Free")} {dove} {T("tra", "in")}</span>\n'
                   f'<p class="big"><span id="days" data-y="{anno_ue_c}">{migliaia(giorni, lang)}</span> {T("giorni", "days") if giorni != 1 else T("giorno", "day")}</p>\n')
     else:
-        grande = (f'<span class="m lab-big">{T("In Europa e nel Regno Unito", "In Europe and the UK")}</span>\n'
+        liberi = [p for p in ("it", "fr", "de", "uk", "es") if R.anno_libero(D, p, mpf) <= oggi.year and not (p == "it" and italia_da_verificare(a))]
+        grande = (f'<span class="m lab-big">{maiuscola(elenco_paesi(liberi, lang))}</span>\n'
                   f'<p class="big">{T("già libero", "already free")}</p>\n')
     v = a.get("verifica") or {}
     if v.get("esito") == "verificato":
@@ -1111,8 +998,8 @@ def scheda_nuova(a, lang, bd):
             continue
         libero = anno <= oggi.year
         val = (T(f"libero dal {anno}", f"free since {anno}") if libero else _data_breve(lang, anno))
-        if paese == T("Italia", "Italy") and al and anno + PROROGA_ALLEATI > oggi.year:
-            val, libero = T("da verificare", "to be checked"), False   # paese alleato: niente data, la protezione può durare di più (Marco, 21/11/2026)
+        if paese == T("Italia", "Italy") and al:   # paese alleato o non noto (regole.py, italia_da_verificare): niente data
+            val, libero = T("da verificare", "to be checked"), False
         cl = "cur" if primo else ("free" if libero else ("later" if anno > anno_ue else ""))
         primo = False
         righe.append(f'<li class="{cl}"><span class="c">{esc(paese)}<small>{esc(regola)}</small></span><span class="v">{esc(val)}</span></li>')
@@ -1163,7 +1050,7 @@ def scheda_nuova(a, lang, bd):
         rr = []
         for x in ill:
             if x.get("morte"):
-                quando = T(f"libere nell'UE dal {data_l(lang, x['morte'] + 71)}", f"free in the EU from {data_l(lang, x['morte'] + 71)}")
+                quando = T(f"libere {dove_libero(None, x['morte'], lang)} dal {data_l(lang, R.anno_libero(x['morte'], 'it'))}", f"free {dove_libero(None, x['morte'], lang)} from {data_l(lang, R.anno_libero(x['morte'], 'it'))}")
                 rr.append(T(f"{x['opera']}: illustrazioni di {x['nome']} (morto nel {x['morte']}), {quando}", f"{x['opera']}: illustrations by {x['nome']} (died {x['morte']}), {quando}"))
             else:
                 rr.append(T(f"{x['opera']}: illustrazioni di {x['nome']}, data di morte non nota", f"{x['opera']}: illustrations by {x['nome']}, year of death unknown"))
@@ -1279,11 +1166,11 @@ def pagina_autore(a, slug, lang, ha_altra):
     it = lang == "it"
     if it:
         titolo = f"{nome} ({anni}): quando entra in pubblico dominio · Public Domain Radar"
-        descr = (f"{nome} è morto nel {D}: nell'UE le sue opere sono libere dal {data_l(lang, D + 71)}. "
+        descr = (f"{nome} è morto nel {D}: {dove_libero(a.get('paesi'), D, lang)} le sue opere sono libere dal {data_l(lang, R.anno_libero(D, 'it'))}. "
                  f"Date per Italia, Francia, Germania, Spagna, Regno Unito e USA, registrazioni nei cataloghi nazionali e opere principali, da dati aperti.")
     else:
         titolo = f"{nome} ({anni}): when the works enter the public domain · Public Domain Radar"
-        descr = (f"{nome} died in {D}: in the EU the works are free from {data_l(lang, D + 71)}. "
+        descr = (f"{nome} died in {D}: {dove_libero(a.get('paesi'), D, lang)} the works are free from {data_l(lang, R.anno_libero(D, 'it'))}. "
                  f"Dates for Italy, France, Germany, Spain, the UK and the USA, records in national catalogues and main works, from open data.")
     persona = {"@context": "https://schema.org", "@type": "Person", "name": nome, "url": url,
                "sameAs": [u for u in (bd.get("url") if bd else None, a.get("url")) if u]}
@@ -1300,7 +1187,7 @@ def pagina_autore(a, slug, lang, ha_altra):
     if ha_altra:
         altra = (f'<a href="{url_pagina("en" if it else "it", slug)}" hreflang="{"en" if it else "it"}">{"EN" if it else "IT"}</a>')
     # grafica nuova (21/11/2026): testata, corpo e piede della scheda «Indice»
-    cnt = (f"{nome} · libero dal {data_l(lang, D + 71)}" if it else f"{nome} · free from {data_l(lang, D + 71)}")
+    cnt = (f"{nome} · libero dal {data_l(lang, R.anno_libero(D, 'it'))}" if it else f"{nome} · free from {data_l(lang, R.anno_libero(D, 'it'))}")
     out = [testa_scheda(lang, esc(titolo), esc(descr), url, alterne(lang, slug) if ha_altra else "", jsonld, altra, cnt)
            .replace("@@MARCHIO_S@@", marchio_html(56).replace('<span class="pdr" style="--w:56px">', "").rsplit("</span>", 1)[0])]
     out.append(scheda_nuova(a, lang, bd))
@@ -1349,11 +1236,11 @@ def pagina_indice(voci, lang):
     out.append(f'<p class="note">{T("Ogni scheda ha biografia, opere e data di pubblico dominio paese per paese. Dati indicativi, non è consulenza legale.", "Each page has the biography, works and public-domain date country by country. Indicative data, not legal advice.")}</p>\n')
     js = """<script>
 (()=>{const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
-// In Italia, Francia, Germania e Regno Unito valgono 70 anni dalla morte (libero il 1° gennaio dell'anno morte+71), in Spagna 80 per chi è morto prima del 1987 (morte+81)
-const ANNI=[@@A@@,@@B@@], TOT=$$('.names li').length;
+// anno di morte di chi si libera in ogni anno, per paese: calcolato da scripts/regole.py (morti_liberi_nel)
+const ANNI=[@@A@@,@@B@@], MORTI=@@MORTI@@, TOT=$$('.names li').length;
 let fp='tutti',fa='tutti';
-const dopo=p=>p==='es'?[81]:p==='tutti'?[71,81]:[71];
-function passa(m){ if(fp==='tutti'&&fa==='tutti') return true; const an=fa==='tutti'?ANNI:[+fa]; return an.some(y=>dopo(fp).some(k=>m===y-k)); }
+const gruppi=p=>p==='es'?['es']:p==='tutti'?['ue','es']:['ue'];
+function passa(m){ if(fp==='tutti'&&fa==='tutti') return true; const an=fa==='tutti'?ANNI:[+fa]; return an.some(y=>gruppi(fp).some(k=>m===MORTI[k][y])); }
 function render(){ let n=0;
   $$('.grp').forEach(g=>{ let v=0; g.querySelectorAll('li').forEach(li=>{ const ok=passa(+li.dataset.m); li.classList.toggle('no',!ok); if(ok) v++; }); g.classList.toggle('no',!v); n+=v;
     const a=$('#let a[href="#'+g.id+'"]'); if(a) a.style.display=v?'':'none'; });
@@ -1365,7 +1252,8 @@ $('#sp').onchange=e=>{fp=e.target.value;render();}; $('#sa').onchange=e=>{fa=e.t
 """
     lead_js = ("`${n} autori con una pagina dedicata${n<TOT?' tra i '+TOT:''}: biografia, opere e data di pubblico dominio paese per paese.`" if it else
                "`${n} authors with a dedicated page${n<TOT?' out of '+TOT:''}: biography, Italian editions and the public-domain date country by country.`")
-    out.append(js.replace("@@A@@", str(A)).replace("@@B@@", str(A + 1)).replace("@@LEAD@@", lead_js))
+    morti = {"ue": {y: R.morti_liberi_nel(y, "it") for y in (A, A + 1)}, "es": {y: R.morti_liberi_nel(y, "es") for y in (A, A + 1)}}
+    out.append(js.replace("@@A@@", str(A)).replace("@@B@@", str(A + 1)).replace("@@MORTI@@", json.dumps(morti)).replace("@@LEAD@@", lead_js))
     out.append(piede_scheda(lang))
     return "".join(out)
 
@@ -1399,12 +1287,12 @@ def blocco_statico(lang):
         return ""
     if lang == "it":
         tit = f"Chi entra in pubblico dominio il 1° gennaio {A}"
-        sotto = f"Autori morti nel {A - 71}: nell'Unione europea le loro opere diventano libere il 1° gennaio {A}."
+        sotto = f"Autori morti nel {R.morti_liberi_nel(A, 'it')}: in Francia, Germania e Regno Unito le loro opere diventano libere il 1° gennaio {A}; in Italia anche, salvo gli autori di paesi alleati (da verificare)."
         voci = "".join(f'<li><a href="/autore/{a["pagina"]}/">{esc(pulisci(a["nome"]))}</a> ({anno_di(a.get("nascita")) or "?"}–{anno_di(a["morte"])})</li>' for a in aut)
         piu = f'<p><a href="/pubblico-dominio-{A}/">Pubblico dominio {A}: tutto quello che diventa libero</a></p>'
     else:
         tit = f"Who enters the public domain on 1 January {A}"
-        sotto = f"Authors who died in {A - 71}: in the European Union their works become free on 1 January {A}."
+        sotto = f"Authors who died in {R.morti_liberi_nel(A, 'it')}: in France, Germany and the UK their works become free on 1 January {A}; in Italy too, except for authors from Allied countries (to be checked)."
         voci = "".join(f'<li><a href="/en/author/{a["pagina_en"]}/">{esc(pulisci(a["nome"]))}</a> ({anno_di(a.get("nascita")) or "?"}–{anno_di(a["morte"])})</li>' for a in aut if a.get("pagina_en"))
         piu = f'<p><a href="/en/public-domain-{A}/">Public Domain {A}: everything that becomes free</a></p>'
     return (f'<!--statico--><div class="messaggio" style="padding:40px 0"><h2 style="font-size:22px;margin:0 0 8px">{esc(tit)}</h2>'
@@ -1807,12 +1695,14 @@ def _esempio_duke(anno, ue):
     for y, v in dk.items():
         for l in v.get("libri", []):
             w = l.get("wd") or {}
-            if int(y) < anno and len(w.get("autori", [])) == 1 and w["autori"][0].get("qid") in aut and not teatrale(w):
-                cand.append(((w.get("pagine") or 0), int(y), l["titolo"], w.get("titolo_it")))
+            q = w["autori"][0].get("qid") if len(w.get("autori", [])) == 1 else None
+            # niente autori per cui in Italia va verificato (paesi alleati: regole.py): l'esempio deve valere ovunque
+            if int(y) < anno and q in aut and not teatrale(w) and not italia_da_verificare(aut[q]):
+                cand.append(((w.get("pagine") or 0), int(y), l["titolo"], w.get("titolo_it"), q))
     if not cand:
         return None
-    _, y, t, t_it = max(cand)
-    return y, t, (t_it or t)
+    _, y, t, t_it, q = max(cand)
+    return y, t, (t_it or t), aut[q]
 
 
 def _cop_pdd(href, titolo, sotto, badge):
@@ -1829,13 +1719,14 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
     it = lang == "it"
     T = (lambda a, b: a) if it else (lambda a, b: b)
     app = "/radar/" if it else "/en/radar/"
-    pub = opere_us["anno_pubblicazione"] if opere_us else anno - 96
-    morti = anno - 71
-    morti_es = anno - 81
+    pub = opere_us["anno_pubblicazione"] if opere_us else R.pubblicate_libere_usa_nel(anno)
+    morti = R.morti_liberi_nel(anno, "it")
+    morti_es = R.morti_liberi_nel(anno, "es")
     libero = pacchetto_ue.get("libero_dal") or f"{anno}-01-01"
     verificati = verificati or {}
     aut = _letterari(pacchetto_ue, lang)
     n_ue = sum(1 for a in pacchetto_ue.get("autori", []) if a.get("letterario") and a.get("morte"))
+    n_ver_it = sum(1 for a in pacchetto_ue.get("autori", []) if a.get("letterario") and a.get("morte") and italia_da_verificare(a))
     n_es = sum(1 for a in (pacchetto_es or {}).get("autori", []) if a.get("letterario") and a.get("morte"))
     es_nomi = [pulisci(a["nome"]) for a in _letterari(pacchetto_es or {}, "it")[:3]]
     opere = (opere_us or {}).get("opere", [])
@@ -1858,7 +1749,7 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
         descr = f"Gli scrittori e i libri che entrano in pubblico dominio il 1° gennaio {anno}, paese per paese, da dati aperti e con le fonti."
         if len(_au) >= 3 and len(_op) >= 2:
             titolo = f"Pubblico dominio {anno}: {_au[0]}, {_au[1]}, {_op[0][0]} e cosa diventa libero"
-            descr = (f"Dal 1° gennaio {anno} in Europa diventano liberi {_au[0]}, {_au[1]}, {_au[2]} e altri scrittori; "
+            descr = (f"Dal 1° gennaio {anno} in Francia, Germania e Regno Unito diventano liberi {_au[0]}, {_au[1]}, {_au[2]} e altri scrittori; "
                      f"negli USA {_op[0][0]} ({_op[0][1]}), {_op[1][0]} ({_op[1][1]}) e altri libri del {pub}. Dati aperti, con le fonti.")
     else:
         titolo = f"Public Domain Day {anno}: books and authors that become free on 1 January · Public Domain Radar"
@@ -1866,11 +1757,11 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
         if len(_au) >= 3 and len(_op) >= 2:
             titolo = f"Public Domain Day {anno}: {_op[0][0]}, {_op[1][0]}, {_au[0]}, {_au[1]} and more"
             descr = (f"Free on 1 January {anno}: {_op[0][0]} ({_op[0][1]}), {_op[1][0]} ({_op[1][1]}) and more US books from {pub}; "
-                     f"{_au[0]}, {_au[1]}, {_au[2]} and more writers in Europe and the UK. Open data, with sources.")
+                     f"{_au[0]}, {_au[1]}, {_au[2]} and more writers in France, Germany and the UK. Open data, with sources.")
 
     # esempio per «dipende da dove pubblichi» e per le domande
     duke = _esempio_duke(anno, pacchetto_ue)
-    non_alleati = [a for a in aut if not set(a.get("paesi") or []) & ALLEATI_1947]
+    non_alleati = [a for a in aut if not italia_da_verificare(a)]
     primo = non_alleati[0] if non_alleati else None
 
     faq = []
@@ -1879,9 +1770,9 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
                     "È il 1° gennaio di ogni anno, il giorno in cui scadono i diritti d'autore delle opere che hanno raggiunto il limite di legge: "
                     "nell'Unione europea e nel Regno Unito 70 anni dalla morte dell'autore (direttiva 2006/116/CE, art. 1), negli USA 95 anni dalla pubblicazione (17 U.S.C. § 304)."))
         faq.append((f"Cosa entra in pubblico dominio nel {anno}?",
-                    f"In Italia, Francia, Germania e Regno Unito le opere degli scrittori morti nel {morti}. In Spagna quelle degli scrittori morti nel {morti_es}. "
+                    f"In Francia, Germania e Regno Unito le opere degli scrittori morti nel {morti}; in Italia anche, salvo gli autori di paesi alleati nella Seconda guerra mondiale o di cittadinanza non nota, per cui va verificato (Trattato di pace del 1947). In Spagna quelle degli scrittori morti nel {morti_es}. "
                     f"Negli USA i libri pubblicati nel {pub}."))
-        if n_es and morti_es < 1987:
+        if n_es and R.anni_protezione(morti_es, "es") != R.ANNI_DOPO_MORTE:
             faq.append((f"Perché in Spagna entrano gli autori morti nel {morti_es}?",
                         "Per chi è morto prima del 7 dicembre 1987 la legge spagnola applica ancora gli 80 anni della legge del 1879 "
                         "(Ley de Propiedad Intelectual, disposizione transitoria quarta)."))
@@ -1899,9 +1790,9 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
                     "It is 1 January of every year, the day copyright expires for works that have reached the legal limit: in the European Union and the UK "
                     "70 years after the author's death (Directive 2006/116/EC, Art. 1), in the USA 95 years after publication (17 U.S.C. § 304)."))
         faq.append((f"What enters the public domain in {anno}?",
-                    f"In Italy, France, Germany and the UK, the works of writers who died in {morti}. In Spain, those of writers who died in {morti_es}. "
+                    f"In France, Germany and the UK, the works of writers who died in {morti}; in Italy too, except for authors from Allied countries in the Second World War or of unknown citizenship, which must be checked (1947 Peace Treaty). In Spain, those of writers who died in {morti_es}. "
                     f"In the USA, books published in {pub}."))
-        if n_es and morti_es < 1987:
+        if n_es and R.anni_protezione(morti_es, "es") != R.ANNI_DOPO_MORTE:
             faq.append((f"Why do authors who died in {morti_es} enter in Spain?",
                         "For authors who died before 7 December 1987, Spanish law still applies the 80 years of the 1879 law "
                         "(Ley de Propiedad Intelectual, fourth transitional provision)."))
@@ -1940,8 +1831,8 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
                    f"On 1 January {anno} copyright expires for hundreds of writers and books. Who, where and with what caveats, from open data with sources.")}</p>
 </section>
 """)
-    nums = [(n_ue, T("scrittori liberi in Italia, Francia, Germania e Regno Unito", "writers free in Italy, France, Germany and the UK"),
-             T(f"morti nel {morti}", f"died in {morti}"), "#ix1" if aut else f"{app}#/{anno}")]
+    nums = [(n_ue, T("scrittori liberi in Francia, Germania e Regno Unito", "writers free in France, Germany and the UK"),
+             T(f"morti nel {morti} · in Italia {n_(n_ver_it)} da verificare", f"died in {morti} · in Italy {n_(n_ver_it)} to be checked"), "#ix1" if aut else f"{app}#/{anno}")]
     if n_es:
         nums.append((n_es, T("scrittori liberi in Spagna", "writers free in Spain"), T(f"morti nel {morti_es}", f"died in {morti_es}"), f"{app}#/{anno}"))
     if n_us:
@@ -2016,7 +1907,7 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
     # 4. paese per paese
     righe = [
         (T("Italia", "Italy"), T(f"Autori morti nel {morti}", f"Authors who died in {morti}"),
-         T("70 anni dalla morte. Per gli autori di paesi alleati nella Seconda guerra mondiale va verificato.", "70 years after death. For authors from Allied countries in the Second World War it must be checked."),
+         T(f"70 anni dalla morte. Per gli autori di paesi alleati nella Seconda guerra mondiale o di cittadinanza non nota va verificato: {n_(n_ver_it)} su {n_(n_ue)}.", f"70 years after death. For authors from Allied countries in the Second World War or of unknown citizenship it must be checked: {n_(n_ver_it)} of {n_(n_ue)}."),
          f"{app}#/{anno}", T(f"{n_(n_ue)} scrittori →", f"{n_(n_ue)} writers →"), ""),
         (T("Francia", "France"), T(f"Autori morti nel {morti}", f"Authors who died in {morti}"),
          T("70 anni; 30 in più per chi è «morto per la Francia».", "70 years; 30 more for authors who «died for France»."),
@@ -2045,8 +1936,9 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
 
     # 5. cosa significa davvero
     if duke:
-        y, t_en, t_it = duke
-        dove = T(f"«{t_it}» è libero negli USA dal {y} e in Europa solo dal {anno}.", f"«{t_en}» has been free in the USA since {y}, and in Europe only from {anno}.")
+        y, t_en, t_it, a_dk = duke
+        dl = dove_libero(a_dk.get("paesi"), anno_di(a_dk.get("morte")), lang)
+        dove = T(f"«{t_it}» è libero negli USA dal {y} e {dl} solo dal {anno}.", f"«{t_en}» has been free in the USA since {y}, and {dl} only from {anno}.")
     else:
         dove = ""
     out.append(f"""<section class="sec">
@@ -2151,6 +2043,7 @@ def crea_landing():
 
 def main():
     oggi = datetime.date.today()
+    R.esporta_js(RADICE / "assets" / "regole.js")   # le regole per paese per il browser, scritte da scripts/regole.py
     autori = {}
     for f in file_autori():
         for a in json.load(open(f, encoding="utf-8"))["autori"]:

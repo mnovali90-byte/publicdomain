@@ -4,6 +4,9 @@ Scrive data/us-<anno>.json. Per l'anno X contano le opere pubblicate nell'anno X
 import json, os, re, sys, time, urllib.parse, urllib.request
 from datetime import date
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from regole import pubblicate_libere_usa_nel  # noqa: E402  (regole per paese in un posto solo)
+
 UA = {"User-Agent": "PublicDomainRadar/1.0 (https://publicdomainradar.com; open data project)"}
 ANNI = [date.today().year + 1, date.today().year + 2]   # come gli autori (aggiorna.py): il prossimo 1° gennaio e quello dopo
 CLASSI = ["Q8261", "Q49084", "Q25379", "Q5185279", "Q571", "Q7725634", "Q149537"]
@@ -204,7 +207,7 @@ def foto_autori(ops):
 def main():
     os.makedirs("data", exist_ok=True)
     for anno in ANNI:
-        pub = anno - 96
+        pub = pubblicate_libere_usa_nel(anno)
         print("Anno", anno, "-> opere pubblicate nel", pub)
         FALLITE.clear()
         ops = opere_anno_sicuro(pub)

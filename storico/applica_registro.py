@@ -11,10 +11,10 @@ from datetime import date
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "scripts"))
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from regole import morte_dal_registro  # noqa: E402
+from regole import morte_dal_registro, morti_liberi_nel  # noqa: E402
 
 CARTELLA = "data/storico"
-ANNO_UE = date.today().year - 71
+ANNO_UE = morti_liberi_nel(date.today().year, "it")
 _REG = None
 
 

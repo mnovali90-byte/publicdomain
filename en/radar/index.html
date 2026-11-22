@@ -452,7 +452,7 @@ dialog#finestra::backdrop{background:rgba(12,12,16,.5)}
   <section class="sec ixs" id="indice">
     <div class="sh m"><h2 class="m" id="tit-paese" style="margin:0;font-weight:500;color:var(--ink)"></h2><span id="topR"></span></div>
     <p class="lede" id="topL"></p>
-    <div id="eroe"><!--statico--><div class="messaggio" style="padding:40px 0"><h2 style="font-size:22px;margin:0 0 8px">Who enters the public domain on 1 January 2027</h2><p style="margin:0 0 12px">Authors who died in 1956: in the European Union their works become free on 1 January 2027.</p><ul style="margin:0;padding-left:20px;line-height:1.7"><li><a href="/en/author/bertolt-brecht/">Bertolt Brecht</a> (1898–1956)</li><li><a href="/en/author/b-r-ambedkar/">B. R. Ambedkar</a> (1891–1956)</li><li><a href="/en/author/a-a-milne/">A. A. Milne</a> (1882–1956)</li><li><a href="/en/author/jakub-kolas/">Jakub Kolas</a> (1882–1956)</li><li><a href="/en/author/henry-louis-mencken/">Henry Louis Mencken</a> (1880–1956)</li><li><a href="/en/author/pio-baroja/">Pío Baroja</a> (1872–1956)</li><li><a href="/en/author/gottfried-benn/">Gottfried Benn</a> (1886–1956)</li><li><a href="/en/author/robert-walser/">Robert Walser</a> (1878–1956)</li><li><a href="/en/author/aleksandr-aleksandrovic-fadeev/">Aleksandr Aleksandrovič Fadeev</a> (1901–1956)</li><li><a href="/en/author/giovanni-papini/">Giovanni Papini</a> (1881–1956)</li><li><a href="/en/author/vladimir-afanas-evic-obrucev/">Vladimir Afanas&#x27;evič Obručev</a> (1863–1956)</li><li><a href="/en/author/evelyn-beatrice-hall/">Evelyn Beatrice Hall</a> (1868–1956)</li></ul><p><a href="/en/public-domain-2027/">Public Domain 2027: everything that becomes free</a></p></div><!--/statico--></div>
+    <div id="eroe"><!--statico--><div class="messaggio" style="padding:40px 0"><h2 style="font-size:22px;margin:0 0 8px">Who enters the public domain on 1 January 2027</h2><p style="margin:0 0 12px">Authors who died in 1956: in France, Germany and the UK their works become free on 1 January 2027; in Italy too, except for authors from Allied countries (to be checked).</p><ul style="margin:0;padding-left:20px;line-height:1.7"><li><a href="/en/author/bertolt-brecht/">Bertolt Brecht</a> (1898–1956)</li><li><a href="/en/author/b-r-ambedkar/">B. R. Ambedkar</a> (1891–1956)</li><li><a href="/en/author/a-a-milne/">A. A. Milne</a> (1882–1956)</li><li><a href="/en/author/jakub-kolas/">Jakub Kolas</a> (1882–1956)</li><li><a href="/en/author/henry-louis-mencken/">Henry Louis Mencken</a> (1880–1956)</li><li><a href="/en/author/pio-baroja/">Pío Baroja</a> (1872–1956)</li><li><a href="/en/author/gottfried-benn/">Gottfried Benn</a> (1886–1956)</li><li><a href="/en/author/robert-walser/">Robert Walser</a> (1878–1956)</li><li><a href="/en/author/aleksandr-aleksandrovic-fadeev/">Aleksandr Aleksandrovič Fadeev</a> (1901–1956)</li><li><a href="/en/author/giovanni-papini/">Giovanni Papini</a> (1881–1956)</li><li><a href="/en/author/vladimir-afanas-evic-obrucev/">Vladimir Afanas&#x27;evič Obručev</a> (1863–1956)</li><li><a href="/en/author/evelyn-beatrice-hall/">Evelyn Beatrice Hall</a> (1868–1956)</li></ul><p><a href="/en/public-domain-2027/">Public Domain 2027: everything that becomes free</a></p></div><!--/statico--></div>
     <div class="lnk" id="indice-link"></div>
     <p class="cred" id="cred"></p>
   </section>
@@ -516,6 +516,7 @@ dialog#finestra::backdrop{background:rgba(12,12,16,.5)}
 <div class="toast" id="toast" role="status"></div>
 <dialog id="finestra" aria-label="Scheda"></dialog>
 
+<script src="/assets/regole.js"></script>
 <script>
 "use strict";
 const PASSO = 40;
@@ -534,14 +535,14 @@ it: {
   kick: "Public Domain Day · {d} · tra {n} giorni", kick0: "Public Domain Day · {d}", interesseIn: "interesse {p}", topPaese: "I più noti {p}", comeOrdine: "In ordine di visite alla loro pagina Wikipedia negli ultimi 12 mesi: dice quanto sono conosciuti oggi, non quanto si vendono i loro libri.", topInt: "I più noti nel mondo", topScop: "Da scoprire {p}", topLede: "{P} il 1° gennaio {a} diventano liberi {n} scrittori morti nel {m}.", topLedeUS: "Negli USA il 1° gennaio {a} diventano libere {n} opere pubblicate nel {p}. Qui si contano le opere, non gli autori.", ritrattiCommons: "Ritratti da Wikimedia Commons", nessunRitratto: "Nessun ritratto libero", cntIdx: "N° {r} / {n}", cntGiorni: "{d} · tra {n} giorni", mieiBreve: "I miei", chiudiM: "Chiudi", fbOrdine: "Ordine", fbCerca: "Cerca", toccaFiltra: "Tocca per filtrare", fontiEt: "Fonti", mieiSalvati: "{n} salvati", altriFiltri: "Altri filtri +", altriFiltriOn: "Meno filtri –", cercaOpera: "Cerca un titolo o un autore", nessunaOpera: "Nessuna opera corrisponde alla ricerca.", regolaPiu: "Regola [+]", regolaMeno: "Regola [–]", liberoTra: "Libero {p} tra", liberoGiaIn: "Libero {p}", giorno: "giorno", giorniP: "giorni", r70: "70 anni dalla morte", r70uk: "70 anni dalla morte; inediti fino al 2039", r80: "80 anni: è morto prima del 1987", r95: "95 anni dall'uscita di ogni opera",
   titolo: "Pubblico dominio 2027: gli autori che diventano liberi · Public Domain Radar",
   indiceAutori: "Indice degli autori (una pagina per ogni autore)", paginaDedicata: "Pagina dedicata", paginaDedicataEn: "Pagina dedicata",
-  descrizione: "Gli autori le cui opere entrano nel pubblico dominio in Europa il prossimo 1° gennaio. Dati aperti da Wikidata e Wikipedia, aggiornati ogni tre mesi e a dicembre.",
+  descrizione: "Gli autori le cui opere entrano nel pubblico dominio il prossimo 1° gennaio, paese per paese (Italia, Francia, Germania, Regno Unito, Spagna). Dati aperti da Wikidata e Wikipedia, aggiornati ogni tre mesi e a dicembre.",
   chipLingue: "Pagine in {n} lingue", chipVisite: "{n} visite {p}", scopCome: "Come si calcola: in quante lingue esiste la pagina Wikipedia dell'autore, confrontato con le visite nella lingua del paese scelto (meno di 300 in un anno). È un indizio, non la prova che manchi una traduzione.",
   schedaAutore: "Scheda autore", paeseEt: "Paese", continuaWp: "Continua su Wikipedia", vVisWp: "{n} visite su Wikipedia in 12 mesi", vLingueWp: "pagina Wikipedia in {n} lingue",
   barraNomi: { it: "In Italia", fr: "In Francia", de: "In Germania", es: "In Spagna", en: "Nel mondo anglofono", int: "Nel mondo" }, altriLink: "Cerca altrove",
   liberoIn: "Libero {p} dal", nonPrima: "non prima del ", traGiorni: "tra {n} giorni", giaLibero: "già libero", mortoIl: "anno di morte {a}",
   verificato: "Anno di morte confermato da {n} fonti: {f}.",
   unaFonte: "Anno di morte da una sola fonte (Wikidata): non lo abbiamo trovato in altre fonti. Controllalo prima di pubblicare.",
-  daVerif: "da verificare", alleato: "Autore di un paese alleato nella Seconda guerra mondiale ({p}): in Italia la protezione può durare di più (Trattato di pace del 1947, allegato XV): per questo in Italia non diamo una data, va verificata opera per opera.",
+  daVerif: "da verificare", alleatoIgnoto: "Nei dati manca la cittadinanza dell'autore: se era di un paese alleato nella Seconda guerra mondiale, in Italia la protezione può durare di più (Trattato di pace del 1947, allegato XV). Per questo in Italia non diamo una data: va verificata opera per opera.", alleato: "Autore di un paese alleato nella Seconda guerra mondiale ({p}): in Italia la protezione può durare di più (Trattato di pace del 1947, allegato XV): per questo in Italia non diamo una data, va verificata opera per opera.",
   documentato: "Anno di morte documentato: Wikidata lo riporta citando {f}.",
   discorde: "Da verificare: le fonti non concordano sull'anno di morte ({f}). La data qui sopra usa Wikidata.", maggioranza: "Anno di morte {y} confermato da {n} fonti autorevoli ({f}). Altre fonti danno un anno diverso: vale quello delle fonti autorevoli.", corretto: "Anno di morte {y} secondo {n} fonti autorevoli ({f}). Wikidata dice {w}: vale quello delle fonti autorevoli.", fontiNomi: { wikidata: "Wikidata", wikidata_altra: "Wikidata (altra data)", gnd: "Biblioteca nazionale tedesca", loc: "Library of Congress" },
   altriPaesi: "Negli altri paesi", nomiPaesi: { it: "Italia", fr: "Francia", de: "Germania", uk: "Regno Unito", es: "Spagna" }, usaRiga: "dipende dall'anno di pubblicazione di ogni opera",
@@ -600,7 +601,7 @@ it: {
   apriScheda: "Apri la scheda di {nome}",
   scaffOcc: "Le opere che si liberano", scaffTit: "Sfoglia per genere",
   scaffNota: "Gli scaffali nascono dai dati di Wikidata e mostrano solo le opere che hanno un genere indicato. Le copertine sono tipografiche: le copertine vere sono protette.",
-  piuNote: "Le più note", vediTutto: "Vedi tutto →", vediTutteAria: "Vedi tutte le {n} opere: {nome}", nOpere: "{n} opere", libereDal: "Libere dal {d}", opGenere: "Genere", opLibera: "Libera {p} dal", opLiberaVer: "In Italia: da verificare (autore di un paese alleato, Trattato di pace del 1947)", pLibera: { ue: "in Italia, Francia, Germania e nel Regno Unito", ueAll: "in Francia, Germania e nel Regno Unito", es: "in Spagna" }, opAutore: "Autore", opScheda: "Scheda dell'autore →", opNota: "Data secondo la regola europea dei 70 anni dalla morte dell'autore. Nella scheda dell'autore trovi le date paese per paese.",
+  piuNote: "Le più note", vediTutto: "Vedi tutto →", vediTutteAria: "Vedi tutte le {n} opere: {nome}", nOpere: "{n} opere", libereDal: "Libere dal {d}", opGenere: "Genere", opLibera: "Libera {p} dal", opLiberaVer: "In Italia: da verificare (autore di un paese alleato, Trattato di pace del 1947)", opLiberaVerIgnoto: "In Italia: da verificare (cittadinanza dell'autore non nota, Trattato di pace del 1947)", pLibera: { ue: "in Italia, Francia, Germania e nel Regno Unito", ueAll: "in Francia, Germania e nel Regno Unito", es: "in Spagna" }, opAutore: "Autore", opScheda: "Scheda dell'autore →", opNota: "Data secondo la regola europea dei 70 anni dalla morte dell'autore. Nella scheda dell'autore trovi le date paese per paese.",
   esplora: "Esplora", perPaese: "Paese d'origine", perLingua: "Per lingua",
   mieiOcc: "La tua lista", mieiTit: "I miei candidati",
   mieiVuoto: "Tocca il cuore su un autore per metterlo qui. La lista resta su questo dispositivo e puoi scaricarla in Excel.",
@@ -652,14 +653,14 @@ en: {
   kick: "Public Domain Day · {d} · in {n} days", kick0: "Public Domain Day · {d}", interesseIn: "interest {p}", topPaese: "Best known {p}", comeOrdine: "Ranked by visits to their Wikipedia page over the last 12 months: it shows how well known they are today, not how well their books sell.", topInt: "Best known worldwide", topScop: "To discover {p}", topLede: "{P}, {n} writers who died in {m} become free on 1 January {a}.", topLedeUS: "In the USA, {n} works published in {p} become free on 1 January {a}. Here we count works, not authors.", ritrattiCommons: "Portraits from Wikimedia Commons", nessunRitratto: "No free portrait", cntIdx: "No. {r} / {n}", cntGiorni: "{d} · in {n} days", mieiBreve: "My list", chiudiM: "Close", fbOrdine: "Order", fbCerca: "Search", toccaFiltra: "Tap to filter", fontiEt: "Sources", mieiSalvati: "{n} saved", altriFiltri: "More filters +", altriFiltriOn: "Fewer filters –", cercaOpera: "Search a title or an author", nessunaOpera: "No work matches the search.", regolaPiu: "Rule [+]", regolaMeno: "Rule [–]", liberoTra: "Free {p} in", liberoGiaIn: "Free {p}", giorno: "day", giorniP: "days", r70: "70 years after death", r70uk: "70 years after death; unpublished until 2039", r80: "80 years: died before 1987", r95: "95 years from publication of each work",
   titolo: "Public Domain 2027: books and authors entering the public domain · Public Domain Radar",
   indiceAutori: "Index of authors (one page per author)", paginaDedicata: "Dedicated page (Italian)", paginaDedicataEn: "Dedicated page",
-  descrizione: "The authors whose works enter the public domain in Europe on 1 January next year. Open data from Wikidata and Wikipedia, updated every three months and in December.",
+  descrizione: "The authors whose works enter the public domain on 1 January next year, country by country (Italy, France, Germany, the UK, Spain). Open data from Wikidata and Wikipedia, updated every three months and in December.",
   chipLingue: "Pages in {n} languages", chipVisite: "{n} views {p}", scopCome: "How it is calculated: how many languages have a Wikipedia page for the author, compared with the views in the chosen country's language (fewer than 300 a year). It is a clue, not proof that a translation is missing.",
   schedaAutore: "Author card", paeseEt: "Country", continuaWp: "Continue on Wikipedia", vVisWp: "{n} Wikipedia views in 12 months", vLingueWp: "Wikipedia page in {n} languages",
   barraNomi: { it: "In Italy", fr: "In France", de: "In Germany", es: "In Spain", en: "In the English-speaking world", int: "Worldwide" }, altriLink: "Look elsewhere",
   liberoIn: "Free {p} from", nonPrima: "not before ", traGiorni: "in {n} days", giaLibero: "already free", mortoIl: "died in {a}",
   verificato: "Year of death confirmed by {n} sources: {f}.",
   unaFonte: "Year of death from a single source (Wikidata): we did not find it in other sources. Check it before publishing.",
-  daVerif: "to be checked", alleato: "Author from an Allied country in the Second World War ({p}): in Italy protection may last longer (1947 Peace Treaty, Annex XV): so we give no date for Italy, it must be checked work by work.",
+  daVerif: "to be checked", alleatoIgnoto: "The data do not give the author's citizenship: if they were from an Allied country in the Second World War, in Italy protection may last longer (1947 Peace Treaty, Annex XV). So we give no date for Italy: it must be checked work by work.", alleato: "Author from an Allied country in the Second World War ({p}): in Italy protection may last longer (1947 Peace Treaty, Annex XV): so we give no date for Italy, it must be checked work by work.",
   documentato: "Year of death documented: Wikidata gives it citing {f}.",
   discorde: "To verify: the sources disagree on the year of death ({f}). The date above uses Wikidata.", maggioranza: "Year of death {y} confirmed by {n} authoritative sources ({f}). Other sources give a different year: the authoritative one applies.", corretto: "Year of death {y} according to {n} authoritative sources ({f}). Wikidata says {w}: the authoritative sources apply.", fontiNomi: { wikidata: "Wikidata", wikidata_altra: "Wikidata (another date)", gnd: "German National Library", loc: "Library of Congress" },
   altriPaesi: "In other countries", nomiPaesi: { it: "Italy", fr: "France", de: "Germany", uk: "United Kingdom", es: "Spain" }, usaRiga: "depends on the publication year of each work",
@@ -718,7 +719,7 @@ en: {
   apriScheda: "Open the profile of {nome}",
   scaffOcc: "The works being freed", scaffTit: "Browse by genre",
   scaffNota: "The shelves are built from Wikidata and only show works that have a genre. Covers are typographic: real covers are protected.",
-  piuNote: "Best known", vediTutto: "See all →", vediTutteAria: "See all {n} works: {nome}", nOpere: "{n} works", libereDal: "Free from {d}", opGenere: "Genre", opLibera: "Free {p} from", opLiberaVer: "In Italy: to be checked (author from an Allied country, 1947 Peace Treaty)", pLibera: { ue: "in Italy, France, Germany and the UK", ueAll: "in France, Germany and the UK", es: "in Spain" }, opAutore: "Author", opScheda: "Author profile →", opNota: "Date under the European life-plus-70-years rule. The author profile shows the date country by country.",
+  piuNote: "Best known", vediTutto: "See all →", vediTutteAria: "See all {n} works: {nome}", nOpere: "{n} works", libereDal: "Free from {d}", opGenere: "Genre", opLibera: "Free {p} from", opLiberaVer: "In Italy: to be checked (author from an Allied country, 1947 Peace Treaty)", opLiberaVerIgnoto: "In Italy: to be checked (author's citizenship unknown, 1947 Peace Treaty)", pLibera: { ue: "in Italy, France, Germany and the UK", ueAll: "in France, Germany and the UK", es: "in Spain" }, opAutore: "Author", opScheda: "Author profile →", opNota: "Date under the European life-plus-70-years rule. The author profile shows the date country by country.",
   esplora: "Explore", perPaese: "Country of origin", perLingua: "By language",
   mieiOcc: "Your list", mieiTit: "My shortlist",
   mieiVuoto: "Tap the heart on an author to put them here. The list stays on this device and you can download it as a spreadsheet.",
@@ -905,7 +906,7 @@ function ripulisciDati() {
     const d = stato.dati[an];
     const conta = new Map();
     for (const a of d.autori) {
-      if (Array.isArray(a.paesi)) a.paesi = senzaRussiaGenerica([...new Set(a.paesi.map(paeseModerno))]);
+      if (Array.isArray(a.paesi)) { a.paesiWd = a.paesi; a.paesi = senzaRussiaGenerica([...new Set(a.paesi.map(paeseModerno))]); }   // paesiWd: i nomi di Wikidata, per le regole (come scripts/regole.py)
       if (Array.isArray(a.generi)) {
         const visti = new Map();
         for (const g of a.generi) { const c = genereCanonico(g); if (c) visti.set(c.chiave, c); }
@@ -1163,7 +1164,7 @@ function disegnaEroe() {
   const p = tr("paesiNomi")[stato.opz] || "";
   $("#tit-paese").textContent = scop ? tr("topScop", { p }) : stato.mercati && stato.mercato === "int" ? tr("topInt") : tr("topPaese", { p });
   $("#topR").textContent = nomeGiur(stato.opz).join(" · ");
-  const morti = parseInt(String(d.libero_dal || "").slice(0, 4), 10) - (stato.giur === "es" ? 81 : 71);
+  const morti = REGOLE_PAESI.mortiLiberiNel(parseInt(String(d.libero_dal || "").slice(0, 4), 10), stato.giur === "es" ? "es" : "it");
   $("#topL").innerHTML = (scop ? tr("scopCome") + " " : "") + tr("topLede", { P: maiuscola1(p), n: `<span class="big">${n(g.principali.length)}</span>`, a: String(d.libero_dal || "").slice(0, 4), m: morti }) + (scop || (stato.mercati && stato.mercato === "int") ? "" : " " + tr("comeOrdine"));
   const lista = listaTop();
   _top = lista.slice(0, 12).map((a) => ({ a }));
@@ -1337,8 +1338,8 @@ function mostraOperaEU(o) {
         h("dl", { class: "us-dl" },
           ...(gen ? riga(tr("opGenere"), gen) : []),
           // solo i paesi dove è davvero libera (Marco, 21/11/2026: niente «Europa»; paesi alleati: Italia da verificare)
-          ...riga(tr("opLibera", { p: tr("pLibera")[stato.giur === "es" ? "es" : paesiAlleati(a).length ? "ueAll" : "ue"] }), dataIt(stato.dati[stato.anno].libero_dal)),
-          ...(stato.giur !== "es" && paesiAlleati(a).length ? riga("", tr("opLiberaVer")) : []),
+          ...riga(tr("opLibera", { p: tr("pLibera")[stato.giur === "es" ? "es" : italiaVer(a) ? "ueAll" : "ue"] }), dataIt(stato.dati[stato.anno].libero_dal)),
+          ...(stato.giur !== "es" && italiaVer(a) ? riga("", tr(paesiAlleati(a).length ? "opLiberaVer" : "opLiberaVerIgnoto")) : []),
           ...riga(tr("opAutore"), h("button", { class: "collegamento", type: "button", onclick: () => apriAutore(a.wikidata) }, a.nome))),
         h("div", { class: "azioni" },
           h("button", { class: "collegamento", type: "button", onclick: () => apriAutore(a.wikidata) }, tr("opScheda"))),
@@ -1566,13 +1567,13 @@ function bloccoPaesi(a) {
   const D = parseInt(String(a.morte || "").slice(0, 4), 10);
   if (!D) return null;
   const data = (y) => new Date(Date.UTC(y, 0, 1)).toLocaleDateString(LING === "it" ? "it-IT" : "en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
-  const spagna80 = D < 1987;
+  const spagna80 = REGOLE_PAESI.anniProtezione(D, "es") !== REGOLE_PAESI.ANNI_DOPO_MORTE;   // regole in scripts/regole.py (assets/regole.js)
   return h("div", {}, h("h4", {}, tr("paTit")),
     h("ul", { class: "opere paesi" },
-      h("li", {}, tr("paUe", { d: data(D + 71) })),
-      h("li", {}, tr("paFr", { d: data(D + 71) })),
-      h("li", {}, tr("paIt", { d: data(D + 71) })),
-      h("li", {}, spagna80 ? tr("paEs80", { d: data(D + 81) }) : tr("paEs70", { d: data(D + 71) }))),
+      h("li", {}, tr("paUe", { d: data(REGOLE_PAESI.annoLibero(D, "de")) })),
+      h("li", {}, tr("paFr", { d: data(REGOLE_PAESI.annoLibero(D, "fr")) })),
+      h("li", {}, tr("paIt", { d: data(REGOLE_PAESI.annoLibero(D, "it")) })),
+      h("li", {}, tr(spagna80 ? "paEs80" : "paEs70", { d: data(REGOLE_PAESI.annoLibero(D, "es")) }))),
     h("div", { class: "sotto" }, tr("paNota")));
 }
 const nomeLingua = (l) => { const x = tr("nomiLingua")[l] || l; return LING === "it" ? x.toLowerCase() : x; };
@@ -1581,13 +1582,15 @@ const AMAZON = { it: "amazon.it", fr: "amazon.fr", de: "amazon.de", uk: "amazon.
 const paeseScheda = () => (["it", "fr", "de", "uk", "es"].includes(stato.opz) ? stato.opz : (LING === "it" ? "it" : "uk"));
 /* Potenze alleate e associate del Trattato di pace con l'Italia del 1947 (preambolo; Albania per adesione), con i nomi
    attuali usati nel sito. È un indizio dalla cittadinanza in Wikidata: per questo il sito dice «va verificata», non cambia la data. */
-const ALLEATI_1947 = new Set(["Regno Unito", "Galles", "Scozia", "Stati Uniti", "Russia", "Unione Sovietica", "Ucraina", "Bielorussia", "Georgia", "Armenia", "Azerbaigian", "Kazakistan", "Uzbekistan", "Cina", "Francia", "Australia", "Belgio", "Brasile", "Canada", "Cecoslovacchia", "Repubblica Ceca", "Etiopia", "Grecia", "India", "Pakistan", "Bangladesh", "Paesi Bassi", "Nuova Zelanda", "Polonia", "Sudafrica", "Jugoslavia", "Serbia", "Albania"]);
-const paesiAlleati = (a) => (a.paesi || []).map(paeseModerno).filter((p) => ALLEATI_1947.has(p));
+// Potenze alleate del Trattato di pace del 1947 e regole per paese: scripts/regole.py, qui tramite assets/regole.js (REGOLE_PAESI).
+// Si usano i nomi dei paesi come li dà Wikidata (a.paesiWd), gli stessi che usa il Python: niente traduzioni in mezzo.
+const paesiWd = (a) => a.paesiWd || a.paesi || [];
+const paesiAlleati = (a) => REGOLE_PAESI.paesiAlleati(paesiWd(a));
+const italiaVer = (a) => REGOLE_PAESI.italiaDaVerificare(paesiWd(a), parseInt(String(a.morte || "").slice(0, 4), 10) || null, new Date().getFullYear());
 function dataLibera(a, c) {
   const D = parseInt(String(a.morte || "").slice(0, 4), 10);
   if (!D) return null;
-  const anni = c === "es" && D < 1987 ? 81 : 71;
-  return { anno: D + anni, prima: anni === 81 };
+  return { anno: REGOLE_PAESI.annoLibero(D, c), prima: REGOLE_PAESI.anniProtezione(D, c) !== REGOLE_PAESI.ANNI_DOPO_MORTE };
 }
 const dataLunga = (y) => new Date(Date.UTC(y, 0, 1)).toLocaleDateString(LING === "it" ? "it-IT" : "en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
 function spunta() {
@@ -1604,12 +1607,11 @@ function bloccoLibero(a, c) {
   const breve = (y) => LING === "it" ? `1° gen ${y}` : `1 Jan ${y}`;
   // come la scheda autore del sito: in grande il conto alla rovescia, la data solo nella tabella dei paesi
   // paese alleato: in Italia niente data finché la proroga del Trattato di pace (max poco più di 7 anni, per prudenza 8) può valere (Marco, 21/11/2026)
-  const allItAnno = (y) => paesiAlleati(a).length > 0 && y + 8 > new Date().getFullYear();
-  const allIt = c === "it" && allItAnno(dataLibera(a, "it").anno);
+  const allIt = c === "it" && italiaVer(a);
   const righe = ["it", "fr", "de", "uk", "es"].map((k) => {
     const y = dataLibera(a, k);
     const nota = k === "es" ? (y.prima ? tr("r80") : tr("r70")) : k === "uk" ? tr("r70uk") : tr("r70");
-    return h("li", { class: (k === c ? "cur " : "") + (y.anno > x.anno ? "later" : "") }, h("span", { class: "c" }, tr("nomiPaesi")[k], h("small", {}, nota)), h("span", { class: "v" }, k === "it" && allItAnno(y.anno) ? tr("daVerif") : (y.prima ? tr("nonPrima") : "") + breve(y.anno)));
+    return h("li", { class: (k === c ? "cur " : "") + (y.anno > x.anno ? "later" : "") }, h("span", { class: "c" }, tr("nomiPaesi")[k], h("small", {}, nota)), h("span", { class: "v" }, k === "it" && italiaVer(a) ? tr("daVerif") : (y.prima ? tr("nonPrima") : "") + breve(y.anno)));
   });
   righe.push(h("li", {}, h("span", { class: "c" }, "USA", h("small", {}, tr("r95"))), h("span", { class: "v t" }, tr("usaRiga"))));
   return h("div", {},
@@ -1618,7 +1620,7 @@ function bloccoLibero(a, c) {
     h("div", { class: "lb-sotto" }, tr("mortoIl", { a: String(a.morte).slice(0, 4) })),
     v.length >= 2 ? h("div", { class: "lb-ver" }, spunta(), h("span", {}, tr("verificato", { n: v.length, f: v.map((k) => tr("fontiNomi")[k] || k).join(", ") }))) : null,
     es === "una_fonte" ? h("div", { class: "lb-ver" }, h("span", {}, tr("unaFonte"))) : null,
-    c === "it" && paesiAlleati(a).length ? h("div", { class: "lb-ver lb-discorde" }, h("span", {}, tr("alleato", { p: [...new Set(paesiAlleati(a))].map((y) => et(y)).join(", ") }))) : null,
+    c === "it" && italiaVer(a) ? h("div", { class: "lb-ver lb-discorde" }, h("span", {}, paesiAlleati(a).length ? tr("alleato", { p: [...new Set(paesiAlleati(a))].map((y) => et(y)).join(", ") }) : tr("alleatoIgnoto"))) : null,
     es === "documentato" ? h("div", { class: "lb-ver" }, h("span", {}, tr("documentato", { f: Object.keys(vv.citate || {}).join(", ") }))) : null,
     (es === "maggioranza" || es === "corretto") && vv.autorevoli ? h("div", { class: "lb-ver" }, spunta(), h("span", {}, tr(es, { y: vv.autorevoli.morte, n: vv.autorevoli.fonti.length, f: vv.autorevoli.fonti.join(", "), w: (vv.fonti || {}).wikidata }))) : null,
     es === "discorde" ? h("div", { class: "lb-ver lb-discorde" }, h("span", {}, tr("discorde", { f: [...Object.entries(vv.fonti || {}).map(([k, y]) => (tr("fontiNomi")[k] || k) + " " + y), ...Object.entries(vv.citate || {}).map(([k, y]) => k + " " + y)].join(", ") }))) : null,
@@ -1944,7 +1946,7 @@ function disegnaGiur() {
   const box = $("#giur");
   box.setAttribute("aria-label", tr("giurEt"));
   const opz = [...GIUR_OPZ.filter((o) => stato.giurDisp.includes(o[1])).map((o) => o[0]), ...(stato.opere ? ["us"] : [])];
-  const desc = èUS() ? ot("desc", { a: stato.anno, p: (stato.opere[stato.anno] || {}).anno_pubblicazione || stato.anno - 96 }) : tr("giurDesc")[stato.opz] || "";
+  const desc = èUS() ? ot("desc", { a: stato.anno, p: (stato.opere[stato.anno] || {}).anno_pubblicazione || REGOLE_PAESI.pubblicateLibereUsaNel(stato.anno) }) : tr("giurDesc")[stato.opz] || "";
   const corta = desc.split(/(?<=\.)\s/)[0];
   const ib = h("div", { class: "ib" }, h("p", {}, desc));
   const info = h("button", { class: "info", type: "button", onclick: () => { const o = ib.classList.toggle("on"); info.textContent = o ? tr("regolaMeno") : tr("regolaPiu"); } }, tr("regolaPiu"));

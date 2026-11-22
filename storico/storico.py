@@ -28,9 +28,10 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import applica_registro  # noqa: E402
 from per_autore import semi, opere_per_autore, opere_anonime, libera_ue, libera_usa, libera, info_autori, sparql_o_errore  # noqa: E402
 import duke  # noqa: E402  seconda fonte per gli USA (19/11/2026)
+import regole as R  # noqa: E402  (regole per paese in un posto solo)
 
 UA = {"User-Agent": "PublicDomainRadar/1.0 (https://publicdomainradar.com; open data project)"}
-ANNO_A = int(os.environ.get("STORICO_ANNO_A", date.today().year - 96))   # 2026 -> 1930
+ANNO_A = int(os.environ.get("STORICO_ANNO_A", R.pubblicate_libere_usa_nel(date.today().year)))   # 2026 -> 1930
 ANNO_DA = int(os.environ.get("STORICO_ANNO_DA", 1800))
 FASCE_ANTICHE = [(-3000, 1400), (1400, 1600), (1600, 1700), (1700, ANNO_DA)]   # prima di ANNO_DA, a fasce
 MAX_VISITE = int(os.environ.get("STORICO_MAX_VISITE", 3000))
@@ -224,7 +225,7 @@ def costruisci_playlist(ops):
         decenni.setdefault("data non nota" if y is None else str(y // 10 * 10) if y >= 1800 else "prima del 1800", []).append(o)
 
     # tre scaffali sulle differenze tra paesi: utili a chi pubblica (un libro libero negli USA non lo è per forza in Italia)
-    anno_ue = date.today().year - 71
+    anno_ue = R.morti_liberi_nel(date.today().year, "it")
     ue, usa = libera_ue, libera_usa
     def ultimo_morto(o):
         m = [a.get("morte") for a in o.get("autori") or [] if a.get("morte") is not None]
@@ -347,7 +348,7 @@ def main():
         open(".storico_incompleto", "w").write(" ".join(mancanti))
     # 1b-bis) SECONDA FONTE PER GLI USA (19/11/2026): i libri delle pagine Public Domain Day della Duke (storico/duke.py)
     try:
-        duke.integra(tutte, duke.carica(ANNO_A + 96))
+        duke.integra(tutte, duke.carica(R.anno_libero_usa(ANNO_A)))
     except Exception as e:      # se la Duke non risponde lo Storico si fa lo stesso
         print("Duke non letta:", e)
     # 1c) CONTROLLO SUGLI AUTORI (18/11/2026): tutti gli anni di morte e la cittadinanza, per gli autori morti dal 1900.
@@ -441,7 +442,7 @@ def main():
             "regola": f"USA: opere pubblicate fino al {ANNO_A} (95 anni compiuti), compreso tutto ciò che è più antico",
             "fonte": "Wikidata (CC0), Wikipedia (visite)",
             "copertura": f"ricerca: le opere con anno su Wikidata e una pagina Wikipedia, più tutte le opere scritte degli scrittori morti "
-                         f"entro il {date.today().year - 71} e degli autori delle opere più note, se libere in almeno un paese; "
+                         f"entro il {R.morti_liberi_nel(date.today().year, 'it')} e degli autori delle opere più note, se libere in almeno un paese; "
                          f"playlist e visite: le {MAX_VISITE} più note"}
     json.dump({**meta, "opere": [{k: v for k, v in o.items() if k not in ("wiki_en", "wiki_it")} for o in misurate]},
               open(f"{USCITA}/opere.json", "w", encoding="utf8"), ensure_ascii=False, separators=(",", ":"))

@@ -34,6 +34,10 @@ jobs:
         env:
           BUDGET_MINUTI: "90"
         run: python scripts/arricchisci.py
+      - name: Cittadinanza di tutti gli autori (Wikidata P27), per la regola dei paesi alleati
+        # se Wikidata non risponde resta «non nota», cioè «da verificare» in Italia (scripts/regole.py)
+        continue-on-error: true
+        run: python scripts/cittadinanza.py
       - name: Controlla in quali lingue esistono le opere
         # dato accessorio: se fallisce, il resto viene salvato comunque
         continue-on-error: true
@@ -91,6 +95,11 @@ jobs:
       - name: Crea le pagine degli autori e la sitemap
         if: ${{ !cancelled() }}   # se il giro viene annullato non si salva niente (19/11/2026: un giro annullato aveva salvato dati a metà)
         run: python scripts/pagine.py
+      - name: Controllo delle regole per paese (Python e browser uguali) e delle frasi sui paesi
+        # bloccante: se le regole non coincidono o una pagina dice una cosa imprecisa, non si salva niente
+        run: |
+          python scripts/prova_regole.py
+          python scripts/controllo_frasi.py
       - name: Elenco delle cose da decidere con Marco (docs/da-decidere.md)
         if: ${{ !cancelled() }}   # se il giro viene annullato non si salva niente (19/11/2026: un giro annullato aveva salvato dati a metà)
         continue-on-error: true

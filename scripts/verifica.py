@@ -170,7 +170,7 @@ def morte_loc(codice):
     return None
 
 
-from regole import AUTOREVOLI, AUTOREVOLI_RE, NON_AUTOREVOLI_RE, maggioranza, decidi_morte  # noqa: E402,F401  (regole in un posto solo)
+from regole import AUTOREVOLI, AUTOREVOLI_RE, NON_AUTOREVOLI_RE, maggioranza, decidi_morte, morti_liberi_nel  # noqa: E402,F401  (regole in un posto solo)
 CORRETTE = DATA / "morti_corrette.json"
 try:
     REGISTRO = json.load(open(DATA / "registro" / "autori.json", encoding="utf-8")).get("autori", {})
@@ -179,9 +179,9 @@ except Exception:
 
 
 def anno_atteso(f):
-    """Anno di morte degli autori di un elenco: UE N-71, Spagna N-81 (morti prima del 1987)."""
+    """Anno di morte degli autori di un elenco (regola in scripts/regole.py, morti_liberi_nel)."""
     n = int(re.search(r"(\d{4})\.json$", f.name).group(1))
-    return n - 81 if f.name.startswith("es-") else n - 71
+    return morti_liberi_nel(n, "es" if f.name.startswith("es-") else "it")
 
 
 def main():

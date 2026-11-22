@@ -433,6 +433,7 @@ h1.h1 .w>span{display:inline-block;transform:translateY(102%);animation:rise 900
 <section class="res" id="risultati" aria-live="polite"></section>
 <div id="scaffali-corpo"></div>
 <div id="finestra" hidden><div class="pan" role="dialog" aria-modal="true" aria-labelledby="fin-tit"><button class="chiudi" type="button" id="fin-chiudi">Close</button><div id="fin-corpo"></div></div></div>
+<script src="/assets/regole.js"></script>
 <script>
 (() => {
 "use strict";
@@ -451,6 +452,8 @@ it: {
   autore: "Autore", mortoNel: "morto nel {m}", mortoNelInc: "morto nel {m} (le fonti danno anni diversi: si usa il più tardo)", antico: "autore antico", morteNd: "anno di morte non noto",
   operaN: "{n} opere nell'elenco", tutteOpere: "Tutte le opere dell'autore →",
   sMpfBreve: "Francia: non ancora libero, l'autore è «morto per la Francia» (30 anni in più, art. L123-10).",
+  ueLiberoP: "{p}: libero dal {y}", ueDalP: "{p}: dal 1° gennaio {y}",
+  nomiUe: ["Italia", "Francia", "Germania", "Regno Unito"], elenco: (x) => x.length > 1 ? x.slice(0, -1).join(", ") + " e " + x[x.length - 1] : x.join(""),
   ueLiberoNoFr: "Italia, Germania, Regno Unito: libero dal {y}", ueDalNoFr: "Italia, Germania, Regno Unito: dal 1° gennaio {y}",
   ueLibero: "Italia, Francia, Germania, Regno Unito: libero dal {y}", ueDal: "Italia, Francia, Germania, Regno Unito: dal 1° gennaio {y}",
   esLibero: "Spagna: libero dal {y}", esDal: "Spagna: dal 1° gennaio {y}",
@@ -461,7 +464,7 @@ it: {
   nessuno: "Nessun titolo o autore trovato in questo elenco.",
   nessunoSpieg: "L'elenco contiene le opere che hanno una pagina Wikipedia e un anno su Wikidata, più le opere degli scrittori già liberi. Se un titolo non c'è, non vuol dire per forza che sia protetto: controlla l'anno di uscita e l'anno di morte dell'autore.",
   prossimoK: "Non è ancora libero",
-  prossimo: "{nome} non è in questo elenco: è morto nel {m}, quindi in Italia, Francia e Germania diventa libero il 1° gennaio {ue} (in Spagna nel {es}). Lo trovi nel radar con la sua scheda.",
+  prossimo: "{nome} non è in questo elenco: è morto nel {m}, quindi in Francia, Germania e Regno Unito diventa libero il 1° gennaio {ue}, in Italia anche salvo le eccezioni dei paesi alleati, in Spagna nel {es}. Lo trovi nel radar con la sua scheda.",
   apriRadar: "Apri la scheda nel radar", altriRis: "Mostra altri risultati",
   soloQui: "Liberi {p}, non ancora altrove", soloQuiSub: "Opere già libere {p} che in almeno uno degli altri paesi sono ancora protette: è qui che i paesi si distinguono.",
   soloQuiUe: "Italia, Francia, Germania e Regno Unito hanno la stessa regola (70 anni dalla morte): questi scaffali cambiano poco tra loro. Cambiano molto con Spagna e USA.",
@@ -523,6 +526,8 @@ en: {
   autore: "Author", mortoNel: "died in {m}", mortoNelInc: "died in {m} (sources give different years: the latest is used)", antico: "ancient author", morteNd: "year of death unknown",
   operaN: "{n} works in the list", tutteOpere: "All works by this author →",
   sMpfBreve: "France: not yet free, the author «died for France» (30 more years, art. L123-10).",
+  ueLiberoP: "{p}: free since {y}", ueDalP: "{p}: from 1 January {y}",
+  nomiUe: ["Italy", "France", "Germany", "United Kingdom"], elenco: (x) => x.length > 1 ? x.slice(0, -1).join(", ") + " and " + x[x.length - 1] : x.join(""),
   ueLiberoNoFr: "Italy, Germany, United Kingdom: free since {y}", ueDalNoFr: "Italy, Germany, United Kingdom: from 1 January {y}",
   ueLibero: "Italy, France, Germany, United Kingdom: free since {y}", ueDal: "Italy, France, Germany, United Kingdom: from 1 January {y}",
   esLibero: "Spain: free since {y}", esDal: "Spain: from 1 January {y}",
@@ -533,7 +538,7 @@ en: {
   nessuno: "No title or author found in this list.",
   nessunoSpieg: "The list holds the works that have a Wikipedia page and a year on Wikidata, plus the works of writers who are already free. If a title is missing, it is not necessarily protected: check the year of publication and the author's year of death.",
   prossimoK: "Not free yet",
-  prossimo: "{nome} is not in this list: they died in {m}, so in Italy, France and Germany their works become free on 1 January {ue} (in Spain in {es}). You'll find them in the radar with their own page.",
+  prossimo: "{nome} is not in this list: they died in {m}, so in France, Germany and the UK their works become free on 1 January {ue}, in Italy too except for the Allied-country cases, in Spain in {es}. You'll find them in the radar with their own page.",
   apriRadar: "Open their page in the radar", altriRis: "Show more results",
   soloQui: "Free {p}, not yet elsewhere", soloQuiSub: "Works already free {p} that are still protected in at least one of the other countries: this is where the countries differ.",
   soloQuiUe: "Italy, France, Germany and the United Kingdom share the same rule (70 years from death): these shelves change little between them. They change a lot with Spain and the USA.",
@@ -664,7 +669,7 @@ function stato(o, c) {
   if (o.antica && o.antica !== "anonima") return { s: "si", note: ["sAntica_antica"] };
   // opera anonima: in Europa 70 anni dalla pubblicazione (in Spagna, per prudenza, 80); negli USA vale la solita regola
   if (o.antica === "anonima" && c !== "us" && o.y !== null) {
-    const fine = o.y + (c === "es" ? 81 : 71);
+    const fine = o.y + (c === "es" ? REGOLE_PAESI.SPAGNA_ANNI_VECCHI : REGOLE_PAESI.ANNI_DOPO_MORTE) + 1;
     return fine <= Y ? { s: "si", note: ["sAntica_anonima"] } : { s: "dal", y: fine, note: ["sAntica_anonima"] };
   }
   if (o.au.some((a) => a.inc)) note.push("sInc");
@@ -672,19 +677,19 @@ function stato(o, c) {
     if (o.yd) note.push("sDuke");
     if (o.y !== null) {
       // libera solo negli USA e solo per l'anno: serve una seconda fonte (Duke o Open Library), altrimenti «da verificare»
-      if (o.y + 96 <= Y && !liberaUe(o)) {
+      if (REGOLE_PAESI.annoLiberoUsa(o.y) <= Y && !liberaUe(o)) {
         // registro unico: [anno confermato, fonte, solo anni più tardi, anno trovato] (regola in scripts/regole.py)
         const v = D.verifiche[o.q];
-        if (v && v[0] !== null && v[0] > Y - 96) return { s: "dal", y: v[0] + 96, note };
+        if (v && v[0] !== null && v[0] > REGOLE_PAESI.pubblicateLibereUsaNel(Y)) return { s: "dal", y: REGOLE_PAESI.annoLiberoUsa(v[0]), note };
         if (!v || v[0] === null) return { s: "ver", note: note.concat([v && v[2] ? "sUsNo" : "sUsNd"]), y2: v && v[3] };
       }
-      if (o.y + 96 <= Y) { if (o.y >= Y - 106) note.push("sUsPrima"); return { s: "si", note }; }
-      return { s: "dal", y: o.y + 96, note };
+      if (REGOLE_PAESI.annoLiberoUsa(o.y) <= Y) { if (o.y >= Y - 106) note.push("sUsPrima"); return { s: "si", note }; }
+      return { s: "dal", y: REGOLE_PAESI.annoLiberoUsa(o.y), note };
     }
     if (o.au.length && o.au.every((a) => a.an || (a.m !== null && a.m <= Y - 171))) return { s: "si", senza: true, note };
     return { s: "nd", note };
   }
-  const durata = (a) => (c === "es" && a.m < 1987 ? 80 : 70);
+
   if (o.y !== null && o.y <= Y - (c === "es" ? 181 : 171)) return { s: "si", note };
   if (!o.au.length) return { s: "nd", note };
   let fine = 0, dubbio = false;
@@ -692,7 +697,7 @@ function stato(o, c) {
     if (a.an) continue;
     if (a.sc) { dubbio = true; continue; }
     if (a.m === null || a.m === undefined) return { s: "nd", note };
-    fine = Math.max(fine, a.m + durata(a) + 1);
+    fine = Math.max(fine, REGOLE_PAESI.annoLibero(a.m, c, false));   // durate per paese: scripts/regole.py (i «morti per la Francia» più sotto)
   }
   if (fine > Y) return { s: "dal", y: fine, note };
   if (dubbio) return { s: "ver", note: note.concat(["sCoaut"]) };
@@ -709,12 +714,13 @@ function stato(o, c) {
       if (o.y === null && ultima < 1969) note.push("sUkNd");
     }
   }
-  if (c === "it" && o.au.some((a) => a.al && !a.an && a.m >= Y - 79) && (o.y === null || o.y <= 1947)) return { s: "ver", note: note.concat(["sAlleato"]) };
+  // Trattato di pace del 1947: autore alleato o di cittadinanza non nota (a.al), opera fino al 1947 (scripts/regole.py)
+  if (c === "it" && o.au.some((a) => !a.an && REGOLE_PAESI.italiaDaVerificareFlag(a.al, a.m, Y, o.y))) return { s: "ver", note: note.concat(["sAlleato"]) };
   // «morts pour la France»: +30 anni; conta solo per chi è morto nella Seconda guerra mondiale (per la Prima i 100 anni sono già passati)
   // elenco da Wikidata (storico/mpf.py, data/registro/mpf.json): con il titolo l'opera non è libera in Francia finché
   // non passano 100 anni (lettura più prudente: le date esatte variano con l'anno di uscita delle opere)
-  if (c === "fr" && o.au.some((a) => !a.an && D.mpf.has(a.q) && a.m + 101 > Y)) return { s: "ver", note: note.concat(["sMpf"]) };
-  if (c === "fr" && o.au.some((a) => !a.an && a.m >= 1939 && a.m <= 1945 && a.m + 101 > Y)) note.push("sFr");
+  if (c === "fr" && o.au.some((a) => !a.an && D.mpf.has(a.q) && REGOLE_PAESI.annoLibero(a.m, "fr", true) > Y)) return { s: "ver", note: note.concat(["sMpf"]) };
+  if (c === "fr" && o.au.some((a) => !a.an && a.m >= 1939 && a.m <= 1945 && REGOLE_PAESI.annoLibero(a.m, "fr", true) > Y)) note.push("sFr");
   return { s: "si", note };
 }
 const _lib = new Map();
@@ -722,7 +728,7 @@ function liberaUe(o) {   // libera in Europa per la regola dei 70 anni (stessa r
   const Y = D.anno;
   if (o.antica) return true;
   if (o.y !== null && o.y <= Y - 171) return true;
-  return o.au.length > 0 && o.au.every((a) => a.an || (!a.sc && a.inc !== 2 && a.m !== null && a.m !== undefined && a.m <= Y - 71));
+  return o.au.length > 0 && o.au.every((a) => a.an || (!a.sc && a.inc !== 2 && a.m !== null && a.m !== undefined && REGOLE_PAESI.annoLibero(a.m, "it") <= Y));
 }
 const libera = (o, c) => { const k = o.q + c; if (!_lib.has(k)) _lib.set(k, stato(o, c).s === "si"); return _lib.get(k); };
 
@@ -826,7 +832,7 @@ function noteOpera(o) {   // gruppi, coautori aggiunti a mano, musica e libretto
     if (!n) continue;
     const ra = (L.ruoli || {})[ruolo] || ruolo;
     if (m === null || m === undefined) r.push(tr("sMusicaNd", { r: ra, n }));
-    else if (m + 71 > Y) r.push(tr("sMusica", { r: ra, n, y: m + 71 }));
+    else if (REGOLE_PAESI.annoLibero(m, "de") > Y) r.push(tr("sMusica", { r: ra, n, y: REGOLE_PAESI.annoLibero(m, "de") }));
   }
   return r.length ? h("div", { style: "margin-top:12px;font-size:14px;color:#5C5C66" }, r.map((x) => h("p", { style: "margin:6px 0 0" }, x))) : null;
 }
@@ -858,13 +864,17 @@ function contiene(testo, tok) { const w = parole(testo); return tok.every((t) =>
 function statoAutore(a) {
   if (a.an) return [L.anticoTutto];
   if (a.m === null || a.m === undefined) return [L.morteNd];
-  const Y = D.anno, ue = a.m + 71, es = a.m + (a.m < 1987 ? 81 : 71);
-  const mpf = D.mpf.has(a.q) && a.m + 101 > Y;   // «morto per la Francia» (storico/mpf.py)
-  const r = [tr((ue <= Y ? "ueLibero" : "ueDal") + (mpf ? "NoFr" : ""), { y: ue }), tr(es <= Y ? "esLibero" : "esDal", { y: es }) + " · " + L.usRegola];
+  // date e paesi da scripts/regole.py (assets/regole.js): l'Italia esce se va verificata, la Francia se «morto per la Francia»
+  const Y = D.anno, ue = REGOLE_PAESI.annoLibero(a.m, "it"), es = REGOLE_PAESI.annoLibero(a.m, "es");
+  const mpf = D.mpf.has(a.q) && REGOLE_PAESI.annoLibero(a.m, "fr", true) > Y;   // «morto per la Francia» (storico/mpf.py)
+  const ver = REGOLE_PAESI.italiaDaVerificareFlag(a.al, a.m, Y);
+  const paesi = L.nomiUe.filter((x, i) => !(i === 0 && ver) && !(i === 1 && mpf));
+  const r = [tr(ue <= Y ? "ueLiberoP" : "ueDalP", { p: L.elenco(paesi), y: ue }), tr(es <= Y ? "esLibero" : "esDal", { y: es }) + " · " + L.usRegola];
   if (mpf) r.splice(1, 0, L.sMpfBreve);
-  if (a.al && a.m >= Y - 79) r.push(L.sAlleatoBreve);
+  if (ver) r.push(L.sAlleatoBreve);
   return r;
 }
+window.statoAutore = statoAutore;   // per scripts/controllo_pagine.py: confronta queste frasi con scripts/regole.py
 function rigaOpera(o) {
   const orig = LING === "it" && o.ti && o.t && o.ti !== o.t ? o.t : null;
   return h("li", { class: "riga" },
@@ -938,9 +948,9 @@ async function cerca(q) {
   if (!la.length) {
     const p = prossimo(q);
     if (p) {
-      const es = p.m + (p.m < 1987 ? 81 : 71);
+      const es = REGOLE_PAESI.annoLibero(p.m, "es");
       parti.push(h("div", { class: "box-no" }, h("span", { class: "k" }, L.prossimoK),
-        tr("prossimo", { nome: p.n, m: p.m, ue: p.m + 71, es }),
+        tr("prossimo", { nome: p.n, m: p.m, ue: REGOLE_PAESI.annoLibero(p.m, "it"), es }),
         h("div", {}, h("a", { class: "bottone", href: LING === "en" ? (p.pe ? `/en/author/${p.pe}/` : `/en/`) : `/autore/${p.p}/` }, L.apriRadar))));
     }
   }
@@ -1003,9 +1013,9 @@ function disegnaScaffali() {
   const altri = Object.keys(L.paesi).filter((c) => c !== p);
   const soloQui = liberi.filter((o) => altri.some((c) => !libera(o, c)));
   let nuovi, sottoN;
-  if (p === "us") { nuovi = liberi.filter((o) => o.y === Y - 96); sottoN = tr("nuoviUs", { m: Y - 96 }); }
+  if (p === "us") { nuovi = liberi.filter((o) => o.y === REGOLE_PAESI.pubblicateLibereUsaNel(Y)); sottoN = tr("nuoviUs", { m: REGOLE_PAESI.pubblicateLibereUsaNel(Y) }); }
   else {
-    const m = p === "es" ? Y - 81 : Y - 71;
+    const m = REGOLE_PAESI.mortiLiberiNel(Y, p === "es" ? "es" : "it");
     nuovi = liberi.filter((o) => { const mm = o.au.filter((a) => !a.an && a.m !== null).map((a) => a.m); return mm.length && Math.max(...mm) === m; });
     sottoN = p === "es" ? tr("nuoviEs", { m }) : tr("nuoviUe", { m, p: inP.charAt(0).toUpperCase() + inP.slice(1) });
   }

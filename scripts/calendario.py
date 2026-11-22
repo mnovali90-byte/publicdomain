@@ -11,6 +11,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import schede as SCH
+import regole as R  # noqa: E402  (regole per paese in un posto solo)
 
 RADICE = Path(__file__).resolve().parent.parent
 SITO = "https://publicdomainradar.com"
@@ -31,7 +32,7 @@ T = {
         "anni": "{n} anni", "voce": "voce", "voci": "voci", "durante": "Durante l'anno", "nd": "giorno non noto", "soloanno": "{a} · solo anno",
         "wiki": "Leggi su Wikipedia →", "orig": "Titolo originale", "opere": "Opere principali", "nobel": "Nobel per la letteratura {y}",
         "copia": "Copia testo per un post →", "copiato": "Copiato ✓", "aggiungi": "Aggiungi al calendario →",
-        "pdd": "Public Domain Day", "pdd_txt": "Entrano in pubblico dominio in Europa gli autori morti nel {eu}, e negli USA le opere pubblicate nel {us}.", "pdd_link": "Vedi l'elenco →",
+        "pdd": "Public Domain Day", "pdd_txt": "Entrano in pubblico dominio in Francia, Germania e Regno Unito gli autori morti nel {eu} (in Italia anche, salvo gli autori di paesi alleati: da verificare), e negli USA le opere pubblicate nel {us}.", "pdd_link": "Vedi l'elenco →",
         "vuoto": "Nessuna voce con questi filtri.",
         "fine_h": "Un calendario che si aggiorna da solo", "fine_p": "Sottoscrivi il calendario in Google Calendar, Apple Calendar o Outlook: gli anniversari con una data precisa arrivano da soli. Le voci di cui si conosce solo l'anno restano nella tabella CSV.",
         "nota": "Dati da fonti aperte (Wikidata, Wikipedia): possono contenere errori. Per molte opere si conosce solo l'anno di pubblicazione, e per alcune ricorrenze le fonti indicano date diverse. Controlla sempre la data prima di usarla in una campagna.",
@@ -53,7 +54,7 @@ T = {
         "anni": "{n} years", "voce": "entry", "voci": "entries", "durante": "During the year", "nd": "day unknown", "soloanno": "{a} · year only",
         "wiki": "Read on Wikipedia →", "orig": "Original title", "opere": "Main works", "nobel": "Nobel Prize in Literature {y}",
         "copia": "Copy text for a post →", "copiato": "Copied ✓", "aggiungi": "Add to calendar →",
-        "pdd": "Public Domain Day", "pdd_txt": "Authors who died in {eu} enter the public domain in Europe, and works published in {us} in the USA.", "pdd_link": "See the list →",
+        "pdd": "Public Domain Day", "pdd_txt": "Authors who died in {eu} enter the public domain in France, Germany and the UK (in Italy too, except authors from Allied countries: to be checked), and works published in {us} in the USA.", "pdd_link": "See the list →",
         "vuoto": "No entries with these filters.",
         "fine_h": "A calendar that updates itself", "fine_p": "Subscribe in Google Calendar, Apple Calendar or Outlook: the anniversaries with an exact date arrive by themselves. Entries where only the year is known stay in the CSV table.",
         "nota": "Data from open sources (Wikidata, Wikipedia): it may contain errors. For many works only the year of publication is known, and for some anniversaries sources give different dates. Always check the date before using it in a campaign.",
@@ -215,7 +216,7 @@ def pagina(dati, lang):
     it = lang == "it"
     vv = dati["voci"]
     url = f"{SITO}{'/en/calendar' if lang == 'en' else '/calendario'}/{anno}/"
-    eu, us = anno - 71, anno - 96
+    eu, us = R.morti_liberi_nel(anno, "it"), R.pubblicate_libere_usa_nel(anno)
     app = "/en/radar/" if lang == "en" else "/radar/"
     spec = (f'<div class="ev pdd" data-tipo="pdd" data-mese="1" data-q="{esc(("1° gennaio " if it else "1 January ") + str(anno))}">'
             f'<span class="gg">01</span><h3 class="nm">{esc(t["pdd"])}</h3><span class="tp"><b>{"Pubblico dominio" if it else "Public domain"}</b></span>'

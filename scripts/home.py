@@ -11,8 +11,11 @@ Le opere del frontespizio sono una scelta editoriale (OPERE_UE, OPERE_US) ma tit
 - Stati Uniti: l'opera deve essere nella lista USA (data/us-<anno>.json) con l'anno CONFERMATO dal registro
   (data/us-anni-verificati.json, stato «ok»). Se manca qualcosa, quella pagina non compare.
 Se la scelta non vale per l'anno (cambia il 1° gennaio), si usano gli autori e le opere più letti della lista."""
-import json, re
+import json, re, sys
+from datetime import date
 from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import regole as R  # noqa: E402  (regole per paese in un posto solo)
 
 RADICE = Path(__file__).resolve().parent.parent
 SITO = "https://publicdomainradar.com"
@@ -80,9 +83,8 @@ def pagine_frontespizio(anno):
         # La riga dice solo i paesi dove l'autore è davvero libero quel giorno, calcolati dalle regole (Marco, 21/11/2026: «dobbiamo essere precisi»):
         # Italia no se l'autore è di un paese alleato (Trattato di pace 1947: va verificato); Spagna solo se è nella lista spagnola di quell'anno
         # (80 anni per chi è morto prima del 1987). Francia: i «morti per la Francia» riguardano solo i morti 1939-1945, mai l'anno di questa pagina.
-        from pagine import ALLEATI_1947
-        alleato = any(x in ALLEATI_1947 for x in a.get("paesi") or [])
-        paesi = ([] if alleato else ["it"]) + ["fr", "de", "uk"] + (["es"] if q in autori_es else [])
+        paesi = [p for p in R.paesi_liberi_insieme(a.get("paesi"), int(str(a["morte"])[:4]), date.today().year) if p != "es"] \
+            + (["es"] if q in autori_es else [])
         pag[f"ue{k}"] = {"a": a["nome"], "it": o["titolo"], "en": o.get("titolo_en") or o["titolo"], "dove": "ue", "paesi": paesi}
     for k, q in enumerate(scelte_us):
         o = opere_us[q]
@@ -98,9 +100,12 @@ def numeri(anno):
     us = _leggi(RADICE / "data" / f"us-{anno}.json", {}) or {}
     ver = (_leggi(RADICE / "data" / "us-anni-verificati.json", {}) or {}).get(str(anno), {})
     n = lambda d: sum(1 for a in d.get("autori", []) if a.get("letterario") and a.get("morte"))   # come le pagine dell'anno
+    # in Italia: da verificare gli autori di paesi alleati o di cittadinanza non nota (scripts/regole.py)
+    ver_it = sum(1 for a in ue.get("autori", []) if a.get("letterario") and a.get("morte")
+                 and R.italia_da_verificare(a.get("paesi"), int(str(a["morte"])[:4]), date.today().year))
     opere = us.get("opere", [])
-    return {"ue": n(ue), "es": n(es), "us": len(opere), "us_ok": sum(1 for o in opere if (ver.get(o["qid"]) or ["nd"])[0] == "ok"),
-            "pub": us.get("anno_pubblicazione") or anno - 96, "aggiornato": ue.get("aggiornato") or ""}
+    return {"ue": n(ue), "ver_it": ver_it, "es": n(es), "us": len(opere), "us_ok": sum(1 for o in opere if (ver.get(o["qid"]) or ["nd"])[0] == "ok"),
+            "pub": us.get("anno_pubblicazione") or R.pubblicate_libere_usa_nel(anno), "aggiornato": ue.get("aggiornato") or ""}
 
 
 MESI = {"it": ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio", "agosto", "settembre", "ottobre", "novembre", "dicembre"],
@@ -175,7 +180,7 @@ TESTI = {
         colophon='Ogni 1° gennaio, in Europa e negli Stati Uniti, scadono i diritti di centinaia di libri. Il prossimo è tra <span class="giorni" id="gg"></span> giorni.',
         cta="Scopri chi si libera nel {a}", folio="{k} di {n}", pagina_anno="/pubblico-dominio-{a}/",
         cnt=('<span id="cnt"><i class="lg">1° gennaio {a} · </i><i class="sm">1° gen {a} · </i>tra {g} giorni</span>'),
-        nums=[("scrittori liberi in Italia, Francia, Germania e Regno Unito", "morti nel {m}", "/pubblico-dominio-{a}/#ix1", "ue"),
+        nums=[("scrittori liberi in Francia, Germania e Regno Unito", "morti nel {m} · in Italia {ver} da verificare", "/pubblico-dominio-{a}/#ix1", "ue"),
               ("scrittori liberi in Spagna", "morti nel {me}", "/pubblico-dominio-{a}/", "es"),
               ("libri liberi negli USA", "pubblicati nel {pub} · {usok} con l'anno confermato", "/pubblico-dominio-{a}/#ix2", "us")],
         sez=("Da dove partire", "Le sezioni del sito"), sez_n=("Il 1° gennaio {a}", "Chi diventa libero, e dove"),
@@ -194,7 +199,7 @@ TESTI = {
         colophon='Every 1 January, in Europe and the United States, the copyright of hundreds of books expires. The next one is in <span class="giorni" id="gg"></span> days.',
         cta="See who becomes free in {a}", folio="{k} of {n}", pagina_anno="/en/public-domain-{a}/",
         cnt=('<span id="cnt"><i class="lg">1 January {a} · </i><i class="sm">1 Jan {a} · </i>in {g} days</span>'),
-        nums=[("writers free in Italy, France, Germany and the UK", "died in {m}", "/en/public-domain-{a}/#ix1", "ue"),
+        nums=[("writers free in France, Germany and the UK", "died in {m} · in Italy {ver} to be checked", "/en/public-domain-{a}/#ix1", "ue"),
               ("writers free in Spain", "died in {me}", "/en/public-domain-{a}/", "es"),
               ("books free in the USA", "published in {pub} · {usok} with the year confirmed", "/en/public-domain-{a}/#ix2", "us")],
         sez=("Where to start", "The sections of the site"), sez_n=("1 January {a}", "Who becomes free, and where"),
@@ -213,7 +218,7 @@ def pagina(lang, anno, P):
     t = TESTI[lang]
     nu = numeri(anno)
     gg = max(0, (datetime.date(anno, 1, 1) - datetime.date.today()).days)
-    fmt = dict(a=anno, a1=anno + 1, ue=migliaia(nu["ue"], lang), m=anno - 71, me=anno - 81, pub=nu["pub"], usok=migliaia(nu["us_ok"], lang),
+    fmt = dict(a=anno, a1=anno + 1, ue=migliaia(nu["ue"], lang), m=R.morti_liberi_nel(anno, "it"), me=R.morti_liberi_nel(anno, "es"), ver=migliaia(nu["ver_it"], lang), pub=nu["pub"], usok=migliaia(nu["us_ok"], lang),
                agg=data_lunga(nu["aggiornato"][:10], lang), g=migliaia(gg, lang))
     pag = [{"a": p.get("a_en", p["a"]) if lang == "en" else p["a"], "t": p[lang], "r": t["libero"][p["dove"]].format(a=anno, p=elenco_paesi(p.get("paesi", []), lang))}
            for p in pagine_frontespizio(anno)]

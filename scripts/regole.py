@@ -182,3 +182,158 @@ def opera_antica(qid, autori, anno_opera, creazione, antiche, anno):
     if autori and all(anonimo(a.get("qid"), a.get("nome")) for a in autori) and anno_opera is not None and anno_opera <= anno - 71:
         return "anonima"
     return None
+
+
+# =====================================================================================================================
+# REGOLE_PAESI PER PAESE (21/11/2026, dopo il caso Milne): durate, Spagna, «morti per la Francia», USA, paesi alleati.
+# Prima erano copiate in schede, home, radar e Già pubblici (con liste di paesi diverse tra loro). Ora stanno qui e basta:
+# il Python le importa; le pagine nel browser usano assets/regole.js, che è SCRITTO DA QUESTO FILE (esporta_js) e
+# controllato identico da scripts/prova_regole.py. Non scrivere numeri come +71, +81, +96 in altri file.
+# =====================================================================================================================
+PAESI_70 = ("it", "fr", "de", "uk")   # Direttiva 2006/116/CE art. 1 (e Regno Unito, CDPA 1988 s. 12): 70 anni dalla morte
+ANNI_DOPO_MORTE = 70
+# Spagna: per chi è morto prima del 7 dicembre 1987 vale la legge del 1879 (80 anni, art. 6; LPI, disposizione transitoria
+# quarta). Con il solo anno di morte, chi è morto nel 1987 lo trattiamo da prudenti come «80 anni».
+SPAGNA_80_FINO_AL = 1987
+SPAGNA_ANNI_VECCHI = 80
+# Francia, «mort pour la France»: 30 anni in più (Code de la propriété intellectuelle, art. L123-10). Elenco: storico/mpf.py.
+MPF_ANNI_IN_PIU = 30
+# USA: 95 anni dalla pubblicazione per le opere uscite prima del 1978 (17 U.S.C. § 304): libera il 1° gennaio dell'anno pub+96.
+USA_ANNI = 95
+# Trattato di pace con l'Italia (Parigi, 10/2/1947), allegato XV, parte A, punto 3 (testo inglese: legislation.gov.uk,
+# The Treaty of Peace (Italy) Order 1948, SI 1948/117): per i diritti dei cittadini delle Potenze alleate in vigore in Italia
+# allo scoppio della guerra (o riconosciuti dall'allegato) non conta il periodo dallo scoppio della guerra all'entrata in
+# vigore del trattato (15/9/1947), e la durata si allunga di altrettanto. Al massimo poco più di 7 anni: per prudenza 8.
+# Riguarda le opere uscite fino al 1947. Quando la cittadinanza non è nota, non possiamo escluderlo: «da verificare».
+PROROGA_ALLEATI = 8
+ALLEATI_OPERE_FINO_AL = 1947
+# Potenze alleate e associate del Trattato (preambolo; Albania per adesione), con tutti i nomi con cui Wikidata indica la
+# cittadinanza: italiano storico, italiano attuale (radar), inglese (Storico). Unione delle tre liste che c'erano prima.
+ALLEATI_1947 = frozenset({
+    # italiano
+    "Regno Unito", "Regno Unito di Gran Bretagna e Irlanda", "Regno d'Inghilterra", "Galles", "Scozia", "Stati Uniti",
+    "Unione Sovietica", "Impero russo", "Repubblica Socialista Federativa Sovietica Russa", "Russia sovietica", "Russia",
+    "RSS Ucraina", "Ucraina", "RSS Bielorussa", "Bielorussia", "Repubblica Socialista Sovietica Georgiana", "Georgia",
+    "Armenia", "Azerbaigian", "Kazakistan", "Uzbekistan", "Cina", "Repubblica di Cina", "Francia", "Australia", "Belgio",
+    "Brasile", "Canada", "Cecoslovacchia", "Prima Repubblica cecoslovacca", "Repubblica Socialista Cecoslovacca",
+    "Repubblica Ceca", "Etiopia", "Impero d'Etiopia", "Grecia", "Regno di Grecia", "India", "Impero anglo-indiano",
+    "Dominion dell'India", "Pakistan", "Bangladesh", "Paesi Bassi", "Regno dei Paesi Bassi", "Nuova Zelanda", "Polonia",
+    "Seconda Repubblica di Polonia", "Repubblica Popolare di Polonia", "Sudafrica", "Unione Sudafricana", "Jugoslavia",
+    "Regno di Jugoslavia", "Repubblica federale popolare di Jugoslavia", "Repubblica Socialista Federale di Jugoslavia",
+    "Regno dei Serbi, Croati e Sloveni", "Serbia", "Albania",
+    # inglese
+    "United Kingdom", "United Kingdom of Great Britain and Ireland", "Kingdom of England", "Wales", "Scotland",
+    "United States", "United States of America", "Soviet Union", "Russian Empire", "Russian Soviet Federative Socialist Republic",
+    "Ukrainian Soviet Socialist Republic", "Byelorussian Soviet Socialist Republic", "Georgian Soviet Socialist Republic",
+    "Armenian Soviet Socialist Republic", "Azerbaijan Soviet Socialist Republic", "China", "Republic of China (1912–1949)",
+    "Republic of China", "France", "French Third Republic", "Australia", "Belgium", "Brazil", "Canada", "Czechoslovakia",
+    "First Czechoslovak Republic", "Ethiopia", "Ethiopian Empire", "Greece", "Kingdom of Greece", "India", "British Raj",
+    "Dominion of India", "Pakistan", "Netherlands", "Kingdom of the Netherlands", "New Zealand", "Poland",
+    "Second Polish Republic", "Polish People's Republic", "South Africa", "Union of South Africa", "Yugoslavia",
+    "Kingdom of Yugoslavia", "Kingdom of Serbs, Croats and Slovenes", "Federal People's Republic of Yugoslavia",
+    "Socialist Federal Republic of Yugoslavia", "Serbia", "Albania",
+})
+
+
+def anni_protezione(morte, paese):
+    """Anni di protezione dopo la morte: 70, o 80 in Spagna per chi è morto entro il 1987."""
+    return SPAGNA_ANNI_VECCHI if paese == "es" and morte <= SPAGNA_80_FINO_AL else ANNI_DOPO_MORTE
+
+
+def anno_libero(morte, paese, mpf=False):
+    """Anno (1° gennaio) in cui le opere di un autore morto nell'anno `morte` diventano libere nel paese."""
+    anni = anni_protezione(morte, paese) + (MPF_ANNI_IN_PIU if paese == "fr" and mpf else 0)
+    return morte + anni + 1
+
+
+def morti_liberi_nel(anno, paese):
+    """Anno di morte degli autori che diventano liberi il 1° gennaio `anno` nel paese (regola senza eccezioni)."""
+    m = anno - ANNI_DOPO_MORTE - 1
+    if paese == "es" and anno - SPAGNA_ANNI_VECCHI - 1 <= SPAGNA_80_FINO_AL:
+        m = anno - SPAGNA_ANNI_VECCHI - 1
+    return m
+
+
+def anno_libero_usa(pubblicazione):
+    return pubblicazione + USA_ANNI + 1
+
+
+def pubblicate_libere_usa_nel(anno):
+    return anno - USA_ANNI - 1
+
+
+def paesi_alleati(paesi):
+    return [p for p in (paesi or []) if p in ALLEATI_1947]
+
+
+def alleato_o_ignoto(paesi):
+    """Il Trattato potrebbe valere: cittadinanza di una Potenza alleata, o cittadinanza non nota (non possiamo escluderlo)."""
+    return not paesi or bool(paesi_alleati(paesi))
+
+
+def italia_da_verificare_flag(alleato_o_ignoto_, morte, oggi_anno, anno_opera=None):
+    """True se in Italia la data normale non basta: autore alleato o di paese non noto, opera uscita fino al 1947 (o anno
+    non noto), e la proroga massima del Trattato potrebbe non essere ancora finita."""
+    if morte is None or not alleato_o_ignoto_:
+        return False
+    if anno_opera is not None and anno_opera > ALLEATI_OPERE_FINO_AL:
+        return False
+    return anno_libero(morte, "it") + PROROGA_ALLEATI > oggi_anno
+
+
+def italia_da_verificare(paesi, morte, oggi_anno, anno_opera=None):
+    return italia_da_verificare_flag(alleato_o_ignoto(paesi), morte, oggi_anno, anno_opera)
+
+
+# --- la stessa cosa per il browser: assets/regole.js è scritto da qui. Se cambi una funzione sopra, cambia anche sotto:
+#     scripts/prova_regole.py confronta le due versioni su tutti gli autori e su tutti gli anni e si ferma se differiscono.
+_JS = """/* SCRITTO DA scripts/regole.py (esporta_js): non modificare a mano. Regole per paese del sito, in un posto solo. */
+window.REGOLE_PAESI = (() => {
+  const C = @@COSTANTI@@;
+  const ALLEATI = new Set(C.ALLEATI_1947);
+  const anniProtezione = (morte, paese) => (paese === "es" && morte <= C.SPAGNA_80_FINO_AL ? C.SPAGNA_ANNI_VECCHI : C.ANNI_DOPO_MORTE);
+  const annoLibero = (morte, paese, mpf) => morte + anniProtezione(morte, paese) + (paese === "fr" && mpf ? C.MPF_ANNI_IN_PIU : 0) + 1;
+  const mortiLiberiNel = (anno, paese) => (paese === "es" && anno - C.SPAGNA_ANNI_VECCHI - 1 <= C.SPAGNA_80_FINO_AL ? anno - C.SPAGNA_ANNI_VECCHI - 1 : anno - C.ANNI_DOPO_MORTE - 1);
+  const annoLiberoUsa = (pub) => pub + C.USA_ANNI + 1;
+  const pubblicateLibereUsaNel = (anno) => anno - C.USA_ANNI - 1;
+  const paesiAlleati = (paesi) => (paesi || []).filter((p) => ALLEATI.has(p));
+  const alleatoOIgnoto = (paesi) => !paesi || !paesi.length || paesiAlleati(paesi).length > 0;
+  const italiaDaVerificareFlag = (flag, morte, oggiAnno, annoOpera) => {
+    if (morte === null || morte === undefined || !flag) return false;
+    if (annoOpera !== null && annoOpera !== undefined && annoOpera > C.ALLEATI_OPERE_FINO_AL) return false;
+    return annoLibero(morte, "it") + C.PROROGA_ALLEATI > oggiAnno;
+  };
+  const italiaDaVerificare = (paesi, morte, oggiAnno, annoOpera) => italiaDaVerificareFlag(alleatoOIgnoto(paesi), morte, oggiAnno, annoOpera);
+  return Object.assign({}, C, { anniProtezione, annoLibero, mortiLiberiNel, annoLiberoUsa, pubblicateLibereUsaNel, paesiAlleati,
+    alleatoOIgnoto, italiaDaVerificareFlag, italiaDaVerificare });
+})();
+"""
+
+
+def esporta_js(percorso):
+    import json
+    c = {"ANNI_DOPO_MORTE": ANNI_DOPO_MORTE, "SPAGNA_80_FINO_AL": SPAGNA_80_FINO_AL, "SPAGNA_ANNI_VECCHI": SPAGNA_ANNI_VECCHI,
+         "MPF_ANNI_IN_PIU": MPF_ANNI_IN_PIU, "USA_ANNI": USA_ANNI, "PROROGA_ALLEATI": PROROGA_ALLEATI,
+         "ALLEATI_OPERE_FINO_AL": ALLEATI_OPERE_FINO_AL, "PAESI_70": list(PAESI_70), "ALLEATI_1947": sorted(ALLEATI_1947)}
+    testo = _JS.replace("@@COSTANTI@@", json.dumps(c, ensure_ascii=False))
+    from pathlib import Path
+    Path(percorso).write_text(testo, encoding="utf-8")
+    return testo
+
+
+def paesi_liberi_insieme(paesi, morte, oggi_anno, mpf=False):
+    """Paesi (it, fr, de, uk, es) in cui le opere dell'autore si liberano lo stesso giorno della regola dei 70 anni, senza
+    eccezioni da verificare: è l'elenco da scrivere in frasi come «Libero in … dal 1° gennaio». L'Italia esce se va
+    verificata (paese alleato o non noto), la Spagna entra solo se la sua data coincide, la Francia esce per i «morti per la
+    Francia» (mpf=True)."""
+    if morte is None:
+        return []
+    base = anno_libero(morte, "it")
+    out = []
+    for p in ("it", "fr", "de", "uk", "es"):
+        if p == "it" and italia_da_verificare(paesi, morte, oggi_anno):
+            continue
+        if anno_libero(morte, p, mpf) != base:
+            continue
+        out.append(p)
+    return out

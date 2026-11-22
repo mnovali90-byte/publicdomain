@@ -34,8 +34,9 @@ from opere import get, val, qid  # noqa: E402
 CARTELLA = "data/storico"
 OCCUPAZIONI = "wd:Q36180 wd:Q49757 wd:Q214917 wd:Q6625963 wd:Q4853732 wd:Q482980 wd:Q1930187 wd:Q11774202 wd:Q18844224"
 RADICI = "wd:Q7725634 wd:Q47461344"          # opera letteraria, opera scritta
-ANNO_USA = date.today().year - 96             # 2026 -> 1930
-ANNO_UE = date.today().year - 71              # 2026 -> 1955 (morti entro quest'anno: liberi)
+import regole as R  # noqa: E402  (regole per paese in un posto solo)
+ANNO_USA = R.pubblicate_libere_usa_nel(date.today().year)   # 2026 -> 1930
+ANNO_UE = R.morti_liberi_nel(date.today().year, "it")      # 2026 -> 1955 (morti entro quest'anno: liberi)
 ANTICHI = 1800
 RINFRESCA_SEMI, RINFRESCA_BLOCCHI = 90, 90
 
@@ -155,18 +156,7 @@ def opere_di(autori):
     return res
 
 
-# Potenze alleate e associate del Trattato di pace con l'Italia (1947, preambolo; Albania per adesione), con i nomi inglesi
-# che Wikidata dà alla cittadinanza (P27). Stessa lista di ALLEATI_1947 in index.html e scripts/pagine.py.
-ALLEATI_EN = {"United Kingdom", "United Kingdom of Great Britain and Ireland", "Kingdom of England", "Wales", "Scotland",
-              "United States", "United States of America", "Soviet Union", "Russian Empire", "Russian Soviet Federative Socialist Republic",
-              "Ukrainian Soviet Socialist Republic", "Byelorussian Soviet Socialist Republic", "Georgian Soviet Socialist Republic",
-              "Armenian Soviet Socialist Republic", "Azerbaijan Soviet Socialist Republic", "China", "Republic of China (1912–1949)",
-              "Republic of China", "France", "French Third Republic", "Australia", "Belgium", "Brazil", "Canada", "Czechoslovakia",
-              "First Czechoslovak Republic", "Ethiopia", "Ethiopian Empire", "Greece", "Kingdom of Greece", "India", "British Raj",
-              "Dominion of India", "Pakistan", "Netherlands", "Kingdom of the Netherlands", "New Zealand", "Poland",
-              "Second Polish Republic", "Polish People's Republic", "South Africa", "Union of South Africa", "Yugoslavia",
-              "Kingdom of Yugoslavia", "Kingdom of Serbs, Croats and Slovenes", "Federal People's Republic of Yugoslavia",
-              "Socialist Federal Republic of Yugoslavia", "Serbia", "Albania"}
+# Potenze alleate del Trattato di pace del 1947: la lista sta in scripts/regole.py (ALLEATI_1947), con anche i nomi inglesi.
 RINFRESCA_INFO = 30
 
 
@@ -179,7 +169,10 @@ def info_autori(qids, budget_fine):
     except Exception:
         cache = {}
     oggi = date.today()
-    da_fare = [q for q in qids if q not in cache or (oggi - date.fromisoformat(cache[q]["d"])).days >= RINFRESCA_INFO]
+    # v2 (21/11/2026): «alleato» conta anche la cittadinanza non nota; si rifanno subito gli autori per cui può contare
+    recenti = lambda q: max(cache[q].get("morti") or [0]) >= oggi.year - (R.ANNI_DOPO_MORTE + 1 + R.PROROGA_ALLEATI)
+    da_fare = [q for q in qids if q not in cache or (oggi - date.fromisoformat(cache[q]["d"])).days >= RINFRESCA_INFO
+               or (cache[q].get("v") != 2 and recenti(q))]
     for i in range(0, len(da_fare), 150):
         if time.time() > budget_fine:
             print(f"info autori: tempo finito, {len(da_fare) - i} da fare al prossimo giro")
@@ -195,7 +188,8 @@ def info_autori(qids, budget_fine):
             k = qid(val(x, "a"))
             morti = sorted({int(y) for y in (val(x, "morti") or "").split("|") if re.fullmatch(r"-?\d+", y)})
             cit = {c for c in (val(x, "cit") or "").split("|") if c}
-            cache[k] = {"d": oggi.isoformat(), "morti": morti, "alleato": 1 if cit & ALLEATI_EN else 0}
+            # «alleato» = il Trattato potrebbe valere: cittadinanza alleata o non nota (scripts/regole.py, alleato_o_ignoto)
+            cache[k] = {"d": oggi.isoformat(), "morti": morti, "alleato": 1 if R.alleato_o_ignoto(sorted(cit)) else 0, "v": 2}
         time.sleep(1)
     json.dump(cache, open(f, "w", encoding="utf8"), separators=(",", ":"))
     return {q: cache[q] for q in qids if q in cache}
@@ -211,7 +205,7 @@ def libera_ue(o):
     global _ETA
     if _ETA is None:
         _ETA = dati_eta()
-    if opera_antica(o.get("qid"), o.get("autori") or [], o.get("anno"), _ETA[0].get(o.get("qid")), _ETA[1], ANNO_UE + 71):
+    if opera_antica(o.get("qid"), o.get("autori") or [], o.get("anno"), _ETA[0].get(o.get("qid")), _ETA[1], date.today().year):
         return True
     au, _ = autori_efficaci(o.get("autori"))
     return bool(au) and all((a.get("morte") is not None and a["morte"] <= ANNO_UE) or a.get("antico") for a in au)
@@ -240,7 +234,7 @@ def autori_efficaci(au):
         except Exception:
             _COAUT = {}
     from regole import autori_che_contano
-    out = autori_che_contano(au or [], _COAUT, ANNO_UE + 71)
+    out = autori_che_contano(au or [], _COAUT, date.today().year)
     return out, any(a.get("senza_data") for a in out)
 
 

@@ -316,11 +316,11 @@ html:not(.js) .fil{display:none}
 <p class="note">Each page has the biography, works and public-domain date country by country. Indicative data, not legal advice.</p>
 <script>
 (()=>{const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
-// In Italia, Francia, Germania e Regno Unito valgono 70 anni dalla morte (libero il 1° gennaio dell'anno morte+71), in Spagna 80 per chi è morto prima del 1987 (morte+81)
-const ANNI=[2027,2028], TOT=$$('.names li').length;
+// anno di morte di chi si libera in ogni anno, per paese: calcolato da scripts/regole.py (morti_liberi_nel)
+const ANNI=[2027,2028], MORTI={"ue": {"2027": 1956, "2028": 1957}, "es": {"2027": 1946, "2028": 1947}}, TOT=$$('.names li').length;
 let fp='tutti',fa='tutti';
-const dopo=p=>p==='es'?[81]:p==='tutti'?[71,81]:[71];
-function passa(m){ if(fp==='tutti'&&fa==='tutti') return true; const an=fa==='tutti'?ANNI:[+fa]; return an.some(y=>dopo(fp).some(k=>m===y-k)); }
+const gruppi=p=>p==='es'?['es']:p==='tutti'?['ue','es']:['ue'];
+function passa(m){ if(fp==='tutti'&&fa==='tutti') return true; const an=fa==='tutti'?ANNI:[+fa]; return an.some(y=>gruppi(fp).some(k=>m===MORTI[k][y])); }
 function render(){ let n=0;
   $$('.grp').forEach(g=>{ let v=0; g.querySelectorAll('li').forEach(li=>{ const ok=passa(+li.dataset.m); li.classList.toggle('no',!ok); if(ok) v++; }); g.classList.toggle('no',!v); n+=v;
     const a=$('#let a[href="#'+g.id+'"]'); if(a) a.style.display=v?'':'none'; });
