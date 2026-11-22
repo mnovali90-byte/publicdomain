@@ -136,6 +136,13 @@ def main(stampa=True):
             else:
                 pagina = ("ver", None)
             regola = ("si", None) if su["s"] == "si" else ("dal", su.get("y")) if su["s"] == "dal" else ("ver", None)
+            # decisione ancora aperta (le «474 opere», docs/registro-prove.md): Già pubblici non chiede la seconda fonte se
+            # l'opera è libera in Europa, le schede sì. Si conta a parte, non è un errore.
+            vv = (reg_op.get("usa", {}) or {}).get(o.get("q"))
+            if pagina[0] == "ver" and su["s"] == "si" and o.get("y") is not None and not o.get("antica") \
+                    and R.libera_ue_opera(o, OGGI) and not (vv and vv[0] is not None):
+                conti["aperta"] = conti.get("aperta", 0) + 1
+                continue
             if pagina[0] != regola[0] or (pagina[0] == "dal" and pagina[1] != regola[1]):
                 errori.append(f"{nome_p}: «{tit}» negli USA la scheda dice «{stato_h}», Già pubblici (stato_opera) dice {su['s']} {su.get('y') or ''} ({su['r']})")
             # Europa: coautore morto dopo l'autore → la scheda deve dirlo, con la stessa data
@@ -148,7 +155,7 @@ def main(stampa=True):
 
     if stampa:
         print(f"6. Stati scritti sulle pagine: {conti['pagine']} schede; controllati {conti['paesi']} paesi, {conti['intestazioni']} intestazioni, "
-              f"{conti['note']} note, {conti['usa']} opere negli USA, {conti['coautori']} opere con coautori più tardi; "
+              f"{conti['note']} note, {conti['usa']} opere negli USA ({conti.get('aperta', 0)} con la decisione USA ancora aperta), {conti['coautori']} opere con coautori più tardi; "
               f"contro le regole: {len(errori)}; non controllabili: {non_contr}")
         for e in errori[:40]:
             print("   ", e)

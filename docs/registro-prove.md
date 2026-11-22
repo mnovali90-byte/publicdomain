@@ -992,3 +992,28 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
   - ***Reigin pappi*:** la scheda dice «libero», Già pubblici «da verificare», perché usano due registri di verifica diversi.
 - **Causa comune:** le schede (pagine.py) usano dati loro, cioè gli anni grezzi di Wikidata, una propria verifica USA e coautori.json, invece dei registri e di stato_opera.
 - **Per ora la parte 6 non blocca i giri.** Diventa bloccante quando le schede useranno stato_opera.
+
+## 22/11/2026 — Le schede usano gli stessi dati di Già pubblici (in locale, branch schede-registri, non pubblicato)
+- **Cosa cambia in scripts/pagine.py:**
+  - **anno di morte:** quello deciso nel registro unico (regole.morte_dal_registro). Chi per il registro è morto in un altro anno non compare più tra gli «altri scrittori» di quella lista.
+  - **opere principali che sono anche in Già pubblici:** stessa riga, stesso anno, stessi coautori e stesso stato USA (regole.stato_opera, verifiche di data/registro/opere.json).
+  - **opere che non sono in Già pubblici:** l'anno di Wikidata vale solo se è credibile (regole.anno_opera_credibile).
+  - **decisione ancora aperta (le 474 opere):** nelle schede un'opera libera in Europa resta «da verificare» negli USA senza la seconda fonte.
+  - **stesso titolo due volte:** la nota del coautore ha lo stesso numero su tutte e due le righe.
+- **Controllo degli stati (parte 6):** 0 differenze (prima 351). Conta a parte 313 righe con la decisione USA aperta, cioè le stesse opere nelle schede in italiano e in inglese. Ora la parte 6 blocca i giri.
+- **Cosa cambia sul sito:** 32 opere principali nelle schede italiane (le stesse nelle inglesi) e la scheda di Henham.
+  - **Da protette a libere negli USA, con l'anno giusto:**
+    - *Millions of Cats*: da «dal 2102» a «libero dal 2024», anno 1928;
+    - *Weeds*: da «dal 2116» a «libero dal 2019»;
+    - *Caliban by the Yellow Sands*.
+  - **Da «anno non noto» a «libero»:** *Tarr*, *Trent's Last Case*, *The Green Hat*.
+  - **Anni corretti:**
+    - *The American Language*: 1919, non 1923;
+    - *The Richest Man in Babylon*: 1926;
+    - *Cirkus Humberto*: 1941, quindi dal 2037 e non dal 2113.
+  - **Più prudenti:**
+    - *Reigin pappi*: da «libero» a «da verificare», perché le fonti trovano solo edizioni dal 1962;
+    - *Héro et Léandre*: da «libero» a «anno non noto», perché l'anno 1854 è precedente alla nascita dell'autore;
+    - 11 opere passano a «da verificare», perché ora c'è l'anno ma non ancora la seconda fonte.
+  - **Henham:** anno di morte 1948 secondo il registro (Library of Congress e Wikidata; GND e SNAC dicono 1946); tutte le date si spostano di due anni.
+- **Ancora da fare:** le liste per anno (data/AAAA.json) non usano ancora il registro, quindi 11 autori con fonti discordi stanno nella lista di un anno diverso da quello deciso. Lo stesso problema riguarda radar e pagine dell'anno: è la prossima correzione.

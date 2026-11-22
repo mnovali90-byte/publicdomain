@@ -213,10 +213,9 @@ errori += no5
 
 # ---------------------------------------------------------------- 6. stati scritti sulle schede autore (22/11/2026)
 # scripts/controllo_stati.py rifà da capo, con regole.py e i registri, ogni stato scritto sulle schede generate.
-# PER ORA NON BLOCCA: le differenze trovate il 22/11/2026 vengono da schede che non usano ancora i registri (colonna USA,
-# anni delle opere, anno di morte «discorde», coautori). Diventa bloccante quando le schede useranno stato_opera.
+# Bloccante dal 22/11/2026, da quando le schede usano gli stessi dati e la stessa regola di Già pubblici.
 import controllo_stati  # noqa: E402
-_e6 = controllo_stati.main(stampa=True)
+errori += [f"scheda contro le regole: {x}" for x in controllo_stati.main(stampa=True)]
 
 for e in errori:
     print("ERRORE:", e)

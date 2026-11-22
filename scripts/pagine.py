@@ -549,9 +549,71 @@ def opere_storico(qid):
     return _PER_AUT[k].get(qid, [])
 
 
-def stato_usa(a, o):
-    """Stato negli USA di un'opera principale: ('libero', anno) solo con anno confermato da una seconda fonte."""
+_GP = {}
+
+
+def _gp():
+    """Opere di Già pubblici (data/storico/ricerca) per autore e titolo, con il registro delle opere: gli stessi dati e la
+    stessa regola (regole.stato_opera) della pagina Già pubblici (22/11/2026: prima le schede usavano dati loro)."""
+    if not _GP:
+        reg = _leggi(RADICE / "data" / "registro" / "opere.json", {}) or {}
+        per = {}
+        for f in sorted(glob.glob(str(RADICE / "data" / "storico" / "ricerca" / "*.json"))):
+            for r in (_leggi(f, {}) or {}).get("opere", []):
+                for au in r[5]:
+                    for t in (r[1], r[2]):
+                        if t:
+                            per.setdefault(au[0], {}).setdefault(tuple(_parole(t)), r)
+        _GP.update({"per": per, "coautori": reg.get("coautori", {}), "usa": reg.get("usa", {})})
+    return _GP
+
+
+def riga_gp(a, o):
+    """La riga di Già pubblici dell'opera principale (stesso autore, stesso titolo), o None."""
+    mie = _gp()["per"].get(a["wikidata"], {})
+    for t in (o.get("titolo"), o.get("titolo_en")):
+        r = mie.get(tuple(_parole(t))) if t else None
+        if r:
+            return r
+    return None
+
+
+def opera_gp(a, o):
+    """L'opera nel formato di regole.stato_opera, se è in Già pubblici."""
+    r = riga_gp(a, o)
+    return R.opera_da_riga(r, _gp()["coautori"]) if r else None
+
+
+def anno_opera(a, o):
+    """Anno di uscita da mostrare: quello di Già pubblici (registro) se c'è; se no quello di Wikidata, solo se credibile
+    (regole.anno_opera_credibile: un'edizione moderna di un autore morto da tempo non è l'anno dell'opera)."""
+    og = opera_gp(a, o)
+    if og is not None:
+        return og.get("y")
     y = o.get("anno")
+    D = anno_di(a.get("morte"))
+    if not isinstance(y, int):
+        return None
+    return R.anno_opera_credibile(y, [{"q": a["wikidata"], "m": D}] if D is not None else [])
+
+
+def stato_usa(a, o):
+    """Stato negli USA di un'opera principale. Se l'opera è in Già pubblici: regole.stato_opera, come la pagina Già
+    pubblici, con una sola differenza ancora da decidere con Marco (le «474 opere», docs/registro-prove.md): nelle schede
+    un'opera libera in Europa non diventa «libera» negli USA senza la seconda fonte per l'anno."""
+    Y = datetime.date.today().year
+    og = opera_gp(a, o)
+    if og is not None:
+        st = R.stato_opera(og, "us", Y, _MPF[0] if _MPF else set(), _gp()["usa"])
+        if st["s"] == "si":
+            v = _gp()["usa"].get(og.get("q"))
+            if og.get("y") is not None and not og.get("antica") and R.libera_ue_opera(og, Y) and not (v and v[0] is not None):
+                return "verifica", None   # decisione aperta (le 474 opere): niente «libero» senza seconda fonte
+            return "libero", (R.anno_libero_usa(og["y"]) if og.get("y") is not None else None)
+        if st["s"] == "dal":
+            return "dal", st["y"]
+        return ("verifica", None) if st["s"] == "ver" else ("nd", None)
+    y = anno_opera(a, o)
     if not isinstance(y, int):
         return "nd", None
     limite = R.pubblicate_libere_usa_nel(datetime.date.today().year)
@@ -586,6 +648,11 @@ def vincoli_opera(a, o, oggi_a=None):
         wq = next((r[0] for r in opere_storico(a["wikidata"]) if {tuple(_parole(r[1])), tuple(_parole(r[2]))} & chiavi), None)
     w = mie.get(wq) or {}
     co = [list(c) for c in w.get("co", [])]
+    # gli autori dell'opera in Già pubblici (stessi dati della pagina Già pubblici, anni di morte dal registro)
+    r = riga_gp(a, o)
+    if r:
+        visti = {c[0] for c in co if c and c[0]} | {a["wikidata"]}
+        co += [[x[0], x[1], x[2], None] for x in r[5] if x[0] not in visti]
     for x in COAUT_MAN.get(wq, []):
         co.append([x.get("qid") or "", x["nome"], x.get("morte"), None])
     au = [{"qid": a["wikidata"], "nome": a["nome"], "morte": D}] + [
@@ -662,7 +729,8 @@ def opere_usa(a, lang):
             et, cl = ("da verificare" if it else "to be checked"), "ver"
         else:
             et, cl = ("anno non noto" if it else "year unknown"), ""
-        anno = o.get("anno") if isinstance(o.get("anno"), int) else ""
+        anno = anno_opera(a, o)
+        anno = anno if isinstance(anno, int) else ""
         righe.append(f'<li><span>{esc(t)}<span class="anno"> {anno}</span></span><span class="us {cl}">{esc(et)}</span></li>\n')
     if not righe:
         return "", []
@@ -1101,11 +1169,14 @@ def opere_usa_n(a, lang):
             et, cl = T("anno non noto", "year unknown"), "ver"
         sup = ""
         for n in note:
-            if n.startswith(f"«{t}»") and n not in usate:
-                usate.append(n)
-                sup = f'<sup data-n="{len(usate)}">{len(usate)}</sup>'
+            if n.startswith(f"«{t}»"):
+                if n not in usate:   # stesso titolo due volte su Wikidata: stessa nota, stesso numero
+                    usate.append(n)
+                k = usate.index(n) + 1
+                sup = f'<sup data-n="{k}">{k}</sup>'
                 break
-        anno = o.get("anno") if isinstance(o.get("anno"), int) else ""
+        anno = anno_opera(a, o)
+        anno = anno if isinstance(anno, int) else ""
         righe.append(f'<li><span class="t">{esc(t)}{sup}</span><span class="y">{anno}</span><span class="u {cl}">{esc(et)}</span></li>')
     a["_liberi_usa"] = liberi
     if not righe:
@@ -1114,8 +1185,8 @@ def opere_usa_n(a, lang):
         if n not in usate:
             usate.append(n)
     notes = "".join(f'<li id="nt{i}"><b>{i}</b>{esc(n)}</li>' for i, n in enumerate(usate, 1))
-    nota = T("Negli USA conta l'anno di uscita di ogni opera (95 anni). «Libero» solo se l'anno di Wikidata è confermato da una seconda fonte (Duke, Open Library, Library of Congress); altrimenti «da verificare». Le date future usano l'anno di Wikidata.",
-             "In the USA what counts is each work's year of publication (95 years). «Free» only when the Wikidata year is confirmed by a second source (Duke, Open Library, Library of Congress); otherwise «to be checked». Future dates use the Wikidata year.")
+    nota = T("Negli USA conta l'anno di uscita di ogni opera (95 anni). «Libero» solo se l'anno è confermato da una seconda fonte (Duke, Open Library, Library of Congress); altrimenti «da verificare». Anni e verifiche sono gli stessi della pagina Già pubblici.",
+             "In the USA what counts is each work's year of publication (95 years). «Free» only when the year is confirmed by a second source (Duke, Open Library, Library of Congress); otherwise «to be checked». Years and checks are the same as on the Already public page.")
     return (f'<div class="oph m"><span>{T("Titolo", "Title")}</span><span>{T("Anno", "Year")}</span><span>{T("Negli USA", "In the USA")}</span></div>\n'
             f'<ul class="op" id="op">{"".join(righe)}</ul>\n' + (f'<ol class="notes">{notes}</ol>\n' if notes else "") + f'<p class="opn">{esc(nota)}</p>\n')
 
@@ -2085,6 +2156,14 @@ def main():
         for a in json.load(open(f, encoding="utf-8"))["autori"]:
             if abbastanza_contenuto(a):
                 autori.setdefault(a["wikidata"], a)
+    # anno di morte deciso nel registro unico (data/registro/autori.json, regole.morte_dal_registro), come Già pubblici
+    # e lo Storico (22/11/2026: le schede usavano l'anno della lista, cioè di Wikidata)
+    reg_aut = (_leggi(RADICE / "data" / "registro" / "autori.json", {}) or {}).get("autori", {})
+    for q_, a_ in autori.items():
+        D_ = anno_di(a_.get("morte"))
+        m_, inc_ = R.morte_dal_registro(q_, D_, reg_aut, R.morti_liberi_nel(oggi.year, "it"))
+        if D_ is not None and m_ is not None and m_ != D_:
+            a_["morte_lista"], a_["morte"] = a_["morte"], str(m_)
     scelti = sorted(autori.values(), key=lambda a: (slug_base(a["nome"]), a["wikidata"]))
     usati = {}
     for a in scelti:
@@ -2106,6 +2185,9 @@ def main():
         for a_ in json.load(open(f, encoding="utf-8"))["autori"]:
             q = a_["wikidata"]
             if q not in slug_di:
+                continue
+            # chi per il registro è morto in un altro anno non sta tra gli «altri scrittori» di questa lista
+            if anno_di(autori.get(q, a_).get("morte")) != anno_f - (71 if tipo == "ue" else 81):
                 continue
             MEMBRI.setdefault(q, (tipo, anno_f))
             if (a_.get("letterario") and a_.get("morte") and q not in FUORI_CLASSIFICA and not a_.get("fuori_classifica")
