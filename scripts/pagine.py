@@ -1807,14 +1807,14 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
                f'<span id="cnt">{data_l_}</span>'
     testa = testa_scheda(lang, esc(titolo), esc(descr), url, alt, jsonld, altra, "@@CNT@@", og_tipo="website",
                          css_extra=CSS_ANNO, main_cls="pdd", body_cls="pdd-b")
-    testa = testa.replace('<div class="cnt">@@CNT@@</div>', f'<div class="cnt">{cnt_html}</div>')
+    testa = testa.replace('<div class="cnt">@@CNT@@</div>', f'<div class="cnt">{cnt_html}</div>').replace("</head>", '<script src="/assets/regole.js"></script>\n</head>', 1)
     out = [testa.replace("@@MARCHIO_S@@", marchio_html(56).replace('<span class="pdr" style="--w:56px">', "").rsplit("</span>", 1)[0])]
 
     # 1. apertura
     w = lambda t: f'<span class="w"><span>{t}</span></span>'
     out.append(f"""<section class="open">
-<p class="m k">Public Domain Day · {data_l_}</p>
-<h1 class="h1">{w(T("Cosa diventa", "What becomes"))}<br>{w(T("libero", "free"))} {w(T(f"nel {anno}", f"in {anno}"))}</h1>
+<p class="m k" id="pd-k">Public Domain Day · {data_l_}</p>
+<h1 class="h1" id="pd-h1">{w(T("Cosa diventa", "What becomes"))}<br>{w(T("libero", "free"))} {w(T(f"nel {anno}", f"in {anno}"))}</h1>
 <p class="say" id="say">{T(f"Il 1° gennaio {anno} scadono i diritti di centinaia di scrittori e libri. Chi, dove e con quali cautele, da dati aperti e con le fonti.",
                    f"On 1 January {anno} copyright expires for hundreds of writers and books. Who, where and with what caveats, from open data with sources.")}</p>
 </section>
@@ -1831,7 +1831,7 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
 
     # 2. i nomi più attesi
     if aut:
-        out.append(f'<section class="sec ix" id="ix1">\n<div class="sh m"><h2>{T("I nomi più attesi", "The most awaited names")}</h2><span>{T(f"Europa e Regno Unito · morti nel {morti}", f"Europe and the UK · died in {morti}")}</span></div>\n'
+        out.append(f'<section class="sec ix" id="ix1">\n<div class="sh m"><h2 id="pd-attesi">{T("I nomi più attesi", "The most awaited names")}</h2><span>{T(f"Europa e Regno Unito · morti nel {morti}", f"Europe and the UK · died in {morti}")}</span></div>\n'
                    f'<p class="lede">{T(f"Gli scrittori morti nel {morti}, in ordine di visite alla loro pagina Wikipedia negli ultimi 12 mesi (in italiano, inglese, francese, tedesco e spagnolo): misura quanto sono conosciuti oggi, non quanto si vendono i loro libri. Dal 1° gennaio i loro testi originali si possono pubblicare senza permesso in Italia, Francia, Germania e Regno Unito.", f"The writers who died in {morti}, ranked by visits to their Wikipedia page over the last 12 months (in Italian, English, French, German and Spanish): it measures how well known they are today, not how well their books sell. From 1 January their original texts can be published without permission in Italy, France, Germany and the UK.")}</p>\n'
                    '<ol class="rows" style="margin-top:28px">\n')
         crediti = []
@@ -1862,7 +1862,7 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
     # 3. i libri USA
     if opere:
         out.append(f'<section class="sec ix" id="ix2">\n<div class="sh m"><h2>{T(f"I libri del {pub}", f"The books of {pub}")}</h2><span>{T("Stati Uniti · 95 anni dall’uscita", "United States · 95 years from publication")}</span></div>\n'
-                   f'<p class="lede">{T(f"Negli USA conta l&#39;anno di pubblicazione: il 1° gennaio diventano liberi i libri usciti nel {pub}. Diciamo «confermato» solo quando l&#39;anno è confermato da una fonte diversa da Wikidata (registro del copyright americano, biblioteche nazionali, Open Library, Library of Congress); per gli altri scriviamo «anno da confermare». In ordine di visite alla pagina del libro su Wikipedia in inglese, negli ultimi 12 mesi.", f"In the USA what counts is the year of publication: on 1 January books published in {pub} become free. We say «confirmed» only when a source other than Wikidata confirms the year (the US copyright register, national libraries, Open Library, Library of Congress); for the others we say «year to be confirmed». Ranked by visits to the book\'s English Wikipedia page over the last 12 months.")}</p>\n'
+                   f'<p class="lede" id="pd-us">{T(f"Negli USA conta l&#39;anno di pubblicazione: il 1° gennaio diventano liberi i libri usciti nel {pub}. Diciamo «confermato» solo quando l&#39;anno è confermato da una fonte diversa da Wikidata (registro del copyright americano, biblioteche nazionali, Open Library, Library of Congress); per gli altri scriviamo «anno da confermare». In ordine di visite alla pagina del libro su Wikipedia in inglese, negli ultimi 12 mesi.", f"In the USA what counts is the year of publication: on 1 January books published in {pub} become free. We say «confirmed» only when a source other than Wikidata confirms the year (the US copyright register, national libraries, Open Library, Library of Congress); for the others we say «year to be confirmed». Ranked by visits to the book\'s English Wikipedia page over the last 12 months.")}</p>\n'
                    '<ol class="rows" style="margin-top:28px">\n')
         crediti_us, visti_us = [], set()
         for k, o in enumerate(opere[:12]):
@@ -1977,6 +1977,33 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
         "Wikidata (CC0) for authors, works and years; national libraries to confirm years of death. For the publication years of US books: the US copyright register (Catalog of Copyright Entries, transcribed by the New York Public Library, CC0), Duke University (CC BY 4.0), Open Library, Library of Congress, BnF and the German union catalogue K10plus. Page views: Wikipedia in 5 languages.")
         + f' <a href="{metodo}" rel="noopener">{T("Come confermiamo gli anni", "How we confirm the years")}</a>.' + cal)
     out.append('<div class="pf" id="pf" aria-hidden="true"></div>\n')
+    # settimana del Public Domain Day e archivio (22/11/2026): i testi cambiano tempo nel browser, con la regola unica
+    # (scripts/regole.py, fase_sito), senza aspettare un giro: prima «diventa libero», il 1° gennaio «oggi», dopo «è diventato»
+    fasi = {"oggi": {"k": T("Public Domain Day · oggi", "Public Domain Day · today"),
+                     "h1": [T("Cosa è", "What is"), T("libero", "free"), T("da oggi", "from today")],
+                     "say": T(f"Oggi, 1° gennaio {anno}, scadono i diritti di centinaia di scrittori e libri. Chi, dove e con quali cautele, da dati aperti e con le fonti.",
+                              f"Today, 1 January {anno}, copyright expires for hundreds of writers and books. Who, where and with what caveats, from open data with sources.")},
+            "dal": {"k": f"Public Domain Day · {data_l_}",
+                    "h1": [T("Cosa è diventato", "What became"), T("libero", "free"), T(f"nel {anno}", f"in {anno}")],
+                    "say": T(f"Il 1° gennaio {anno} sono scaduti i diritti di centinaia di scrittori e libri. Chi, dove e con quali cautele, da dati aperti e con le fonti.",
+                             f"On 1 January {anno} copyright expired for hundreds of writers and books. Who, where and with what caveats, from open data with sources.")},
+            "attesi": T("I nomi più letti", "The most read names"),
+            "us": [T("il 1° gennaio diventano liberi", f"on 1 January books published in {pub} become free"),
+                   T(f"il 1° gennaio {anno} sono diventati liberi", f"on 1 January {anno} books published in {pub} became free")],
+            "cnt_festa": "Public Domain Day", "cnt_dopo": T(f"Liberi dal {data_l_}", f"Free since {data_l_}")}
+    out.append("<script>(()=>{const A=" + str(anno) + ",F=" + json.dumps(fasi, ensure_ascii=False) + """;
+const ora=new Date(); if(ora<new Date(A,0,1))return;
+const fs=window.REGOLE_PAESI?REGOLE_PAESI.faseSito(ora):["conto",A+1], festa=fs[0]==="festa"&&fs[1]===A;
+const M=(ora.getFullYear()===A&&ora.getMonth()===0&&ora.getDate()===1)?"oggi":"dal", t=F[M], $=s=>document.getElementById(s);
+const w=x=>'<span class="w"><span>'+x+'</span></span>';
+if($("pd-k"))$("pd-k").textContent=t.k;
+if($("pd-h1"))$("pd-h1").innerHTML=w(t.h1[0])+"<br>"+w(t.h1[1])+" "+w(t.h1[2]);
+if($("say"))$("say").textContent=t.say;
+if($("pd-attesi"))$("pd-attesi").textContent=F.attesi;
+if($("pd-us"))$("pd-us").innerHTML=$("pd-us").innerHTML.replace(F.us[0],F.us[1]);
+const c=$("cnt"); if(c){c.textContent=festa?F.cnt_festa:F.cnt_dopo; if(festa)c.style.color="var(--redt)";}
+})();</script>
+""")
     out.append(JS_ANNO.replace("@@LOC@@", "it-IT" if it else "en-GB"))
     out.append(piede_scheda(lang, fonti))
     return "".join(out), url

@@ -42,7 +42,9 @@ it: {
   nessuno: "Nessun titolo o autore trovato in questo elenco.",
   nessunoSpieg: "L'elenco contiene le opere che hanno una pagina Wikipedia e un anno su Wikidata, più le opere degli scrittori già liberi. Se un titolo non c'è, non vuol dire per forza che sia protetto: controlla l'anno di uscita e l'anno di morte dell'autore.",
   prossimoK: "Non è ancora libero",
-  prossimo: "{nome} non è in questo elenco: è morto nel {m}, quindi in Francia, Germania e Regno Unito diventa libero il 1° gennaio {ue}, in Italia anche salvo le eccezioni dei paesi alleati, in Spagna nel {es}. Lo trovi nel radar con la sua scheda.",
+  prossimo: "{nome} non è in questo elenco: è morto nel {m}, quindi in Italia, Francia, Germania e Regno Unito diventa libero il 1° gennaio {ue}, in Spagna nel {es}. Lo trovi nel radar con la sua scheda.",
+    appenaK: "Libero da poco",
+    appena: "{nome} è morto nel {m}: in Italia, Francia, Germania e Regno Unito è libero dal 1° gennaio {ue} (in Spagna dal {es}). Le sue opere entrano in questo elenco con il prossimo aggiornamento; intanto lo trovi nel radar con la sua scheda.",
   apriRadar: "Apri la scheda nel radar", altriRis: "Mostra altri risultati",
   soloQui: "Liberi {p}, non ancora altrove", soloQuiSub: "Opere già libere {p} che in almeno uno degli altri paesi sono ancora protette: è qui che i paesi si distinguono.",
   soloQuiUe: "Italia, Francia, Germania e Regno Unito hanno la stessa regola (70 anni dalla morte): questi scaffali cambiano poco tra loro. Cambiano molto con Spagna e USA.",
@@ -116,7 +118,9 @@ en: {
   nessuno: "No title or author found in this list.",
   nessunoSpieg: "The list holds the works that have a Wikipedia page and a year on Wikidata, plus the works of writers who are already free. If a title is missing, it is not necessarily protected: check the year of publication and the author's year of death.",
   prossimoK: "Not free yet",
-  prossimo: "{nome} is not in this list: they died in {m}, so in France, Germany and the UK their works become free on 1 January {ue}, in Italy too except for the Allied-country cases, in Spain in {es}. You'll find them in the radar with their own page.",
+  prossimo: "{nome} is not in this list: they died in {m}, so in Italy, France, Germany and the UK their works become free on 1 January {ue}, in Spain in {es}. You'll find them in the radar with their own page.",
+    appenaK: "Recently free",
+    appena: "{nome} died in {m}: in Italy, France, Germany and the UK their works have been free since 1 January {ue} (in Spain from {es}). They will join this list with the next update; meanwhile you'll find them in the radar with their own page.",
   apriRadar: "Open their page in the radar", altriRis: "Show more results",
   soloQui: "Free {p}, not yet elsewhere", soloQuiSub: "Works already free {p} that are still protected in at least one of the other countries: this is where the countries differ.",
   soloQuiUe: "Italy, France, Germany and the United Kingdom share the same rule (70 years from death): these shelves change little between them. They change a lot with Spain and the USA.",
@@ -461,8 +465,9 @@ async function cerca(q) {
     const p = prossimo(q);
     if (p) {
       const es = REGOLE_PAESI.annoLibero(p.m, "es");
-      parti.push(h("div", { class: "box-no" }, h("span", { class: "k" }, L.prossimoK),
-        tr("prossimo", { nome: p.n, m: p.m, ue: REGOLE_PAESI.annoLibero(p.m, "it"), es }),
+      const ue = REGOLE_PAESI.annoLibero(p.m, "it"), gia = ue <= D.anno;   // nella settimana della festa: appena liberato
+      parti.push(h("div", { class: "box-no" }, h("span", { class: "k" }, gia ? L.appenaK : L.prossimoK),
+        tr(gia ? "appena" : "prossimo", { nome: p.n, m: p.m, ue, es }),
         h("div", {}, h("a", { class: "bottone", href: LING === "en" ? (p.pe ? `/en/author/${p.pe}/` : `/en/`) : `/autore/${p.p}/` }, L.apriRadar))));
     }
   }
@@ -623,7 +628,8 @@ async function avvia() {
   let P;
   if (LING === "it") { try { NOMI_IT = await leggi("/data/storico/nomi_it.json"); } catch (e) { NOMI_IT = {}; } }
   try { P = await leggi("/data/storico/pagina.json"); } catch (e) { $("#scaffali-corpo").replaceChildren(h("p", {}, L.errore)); return; }
-  D.anno = Number(String(P.aggiornato).slice(0, 4)) || D.anno;
+  // l'anno di oggi, non quello dei dati: il 1° gennaio gli stati devono cambiare subito, anche se lo Storico gira il 2 (22/11/2026)
+  D.anno = Math.max(Number(String(P.aggiornato).slice(0, 4)) || 0, D.anno);
   D.lingue = P.lingue || {};
   try { const reg = await leggi("/data/registro/opere.json"); D.regOpere = reg.coautori || {}; D.verifiche = reg.usa || {}; }
   catch (e) { D.regOpere = {}; D.verifiche = {}; }   // registro unico: coautori e anni USA

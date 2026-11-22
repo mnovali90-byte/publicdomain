@@ -901,3 +901,15 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
   - **2-6/1:** come il 1°, con «dal 1° gennaio».
   - **7/1:** la home dell'anno dopo (2028), più un riquadro d'archivio «Pubblico dominio 2027» a tutta larghezza.
 - **Regola di lavoro imparata:** i mockup si costruiscono sulla pagina vera del sito, non disegnati da zero.
+
+## 22/11/2026 — Pagina del Public Domain Day e comportamento del sito nella settimana (in locale, simulato)
+- **Pagina dell'anno (pubblico-dominio-2027):** i testi cambiano tempo da soli nel browser, con fase_sito, e il codice è di scripts/pagine.py.
+  - **Prima del 1° gennaio:** come oggi, «Cosa diventa libero nel 2027».
+  - **1° gennaio:** «Public Domain Day · oggi», «Cosa è libero da oggi», «Oggi, 1° gennaio 2027, scadono…»; in alto, in rosso, «Public Domain Day».
+  - **Dal 2 gennaio:** «Cosa è diventato libero nel 2027», «sono scaduti»; «I nomi più attesi» diventa «I nomi più letti»; nel paragrafo USA «sono diventati liberi».
+  - **Dal 7 gennaio, archivio:** in alto «Liberi dal 1° gennaio 2027».
+- **Già pubblici:** prima calcolava gli stati con l'anno dei dati (l'ultimo Storico), non con l'anno di oggi, quindi il 1° gennaio non cambiava niente fino allo Storico del 2 gennaio. Ora usa l'anno di oggi.
+  - Gli autori appena liberati restano nell'elenco «in arrivo» per tutta la festa, con la scheda «Libero da poco» invece di «Non è ancora libero».
+  - Corretto anche il testo di quella scheda, che diceva «in Italia anche salvo le eccezioni dei paesi alleati»: era rimasto da prima della decisione sul Trattato.
+- **Simulazione:** il 20/12, il 1/1, il 4/1 e il 10/1 i testi tornano tutti; per Papini il 2/1 compare «Libero da poco».
+- **Contraddizione trovata, non corretta:** *L'opera da tre soldi* è nella vetrina della home come «libera dal 1° gennaio 2027» in Italia, Francia, Germania e Regno Unito. Su Wikidata però ha come coautrice Elisabeth Hauptmann (morta nel 1973), quindi per Già pubblici, con la regola dei coautori, è libera dal 2044. La vetrina della home guarda solo l'autore, non l'opera. Da decidere con Marco.

@@ -17,6 +17,7 @@ from datetime import date
 RADICE = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(RADICE / "scripts"))
 from marchio import marchio_html, CSS_MARCHIO  # noqa: E402
+import regole as R  # noqa: E402  (calendario del sito: fase_sito)
 
 S = RADICE / "data" / "storico"
 
@@ -85,7 +86,9 @@ def dati():
 
     # autori che non sono ancora liberi ma hanno la scheda nel radar
     prossimi, visti = [], set()
-    for anno in range(date.today().year + 1, date.today().year + 4):
+    # dall'anno in vetrina (scripts/regole.py, fase_sito): nella settimana della festa restano anche gli appena liberati,
+    # finché lo Storico (il 2 del mese) non porta le loro opere nell'elenco
+    for anno in range(R.fase_sito(date.today())[1], date.today().year + 4):
         d = leggi(RADICE / "data" / f"{anno}.json")
         if not d:
             continue
