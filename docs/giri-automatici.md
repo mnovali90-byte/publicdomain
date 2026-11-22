@@ -144,3 +144,9 @@ Oggi `scripts/regole.py` ha le regole per autore (durate per paese, Spagna, Fran
 | Storico | 2 di ogni mese |
 | Già pubblici | dopo ogni Storico e quando cambia il suo codice |
 | Prove (Stima, Campione SBN, BnF, British Library, Library of Congress, verifiche, Logo) | solo a mano |
+
+## Dopo il 7 gennaio 2027 (deciso da Marco il 22/11/2026)
+
+- Estendere il sito ai 27 paesi UE seguendo `docs/specifica-ue27.md`: prima un rapporto, senza pubblicare niente.
+- Da studiare: l'articolo 7 della direttiva 2006/116/CE, la regola del termine più breve per le opere di autori di paesi fuori dall'UE (per esempio gli americani). Oggi il sito non ne tiene conto.
+- Da decidere a parte: in Spagna, per i morti nel 1987 di cui si conosce solo l'anno, la specifica dice «da verificare». Oggi il sito applica gli 80 anni per prudenza.
