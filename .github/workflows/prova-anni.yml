@@ -1,0 +1,36 @@
+name: Prova – anni mancanti (non cambia il sito)
+
+# Parte solo a mano (o cambiando docs/prova-anni/passo.txt), con l'ok di Marco. Scrive solo docs/prova-anni.
+on:
+  push:
+    paths:
+      - "docs/prova-anni/passo.txt"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: prova-anni
+  cancel-in-progress: false
+
+jobs:
+  prova:
+    runs-on: ubuntu-latest
+    timeout-minutes: 75
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Anni di uscita dalle fonti autorevoli per le opere che Wikidata non data
+        run: python scripts/prova_anni_mancanti.py
+        env:
+          BUDGET_MINUTI: "60"
+      - name: Salva il risultato della prova
+        if: ${{ !cancelled() }}
+        run: |
+          git add docs/prova-anni
+          bash scripts/salva.sh "Prova – anni mancanti: risultati"
