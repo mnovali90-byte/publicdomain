@@ -741,8 +741,8 @@
    "esito": "resta",
    "conferma": 1931,
    "nota": {
-    "it": "Uscito a puntate sulla Vossische Zeitung tra dicembre 1930 e gennaio 1931, libro nell'aprile 1931: negli USA si libera per intero nel 2027. In Europa è ancora protetto.",
-    "en": "Serialised in the Vossische Zeitung between December 1930 and January 1931, book in April 1931: in the US it becomes free as a whole in 2027. In Europe it is still protected."
+    "it": "Uscito a puntate sulla Vossische Zeitung tra dicembre 1930 e gennaio 1931, libro nell'aprile 1931: negli USA le puntate del 1930 sono già libere, il resto si libera nel 2027. In Europa è ancora protetto.",
+    "en": "Serialised in the Vossische Zeitung between December 1930 and January 1931, book in April 1931: in the US the 1930 instalments are already free, the rest becomes free in 2027. In Europe it is still protected."
    },
    "fonti": [
     {
@@ -756,8 +756,13 @@
     {
      "nome": "Faded Page: «Copyright, 1930, 1931, by Propylaen-Verlag»",
      "link": "https://www.fadedpage.com/books/20241109/html.php"
+    },
+    {
+     "nome": "Der Volksfreund (Karlsruhe), 10 dicembre 1930: «Der Weg zurück», «der am Sonntag in den Zeitungen von 15 Ländern zu erscheinen begann» (Badische Landesbibliothek)",
+     "link": "https://digital.blb-karlsruhe.de/download/pdf/3724484.pdf"
     }
-   ]
+   ],
+   "nota_corretta": "23/11/2026, Marco: le puntate di dicembre 1930 sono già libere (come le altre note)"
   },
   "Q16224234": {
    "titolo": "Why I Am an Atheist",
@@ -1654,6 +1659,44 @@
     }
    ],
    "perche": "ricerca sul web (docs/ricerca-web/risultati.json), esito «nota» della regola; testo della nota approvato da Marco (23/11/2026) (23/11/2026)"
+  },
+  "Q7727278": {
+   "titolo": "Il concetto di 'politico' (Der Begriff des Politischen)",
+   "esito": "resta",
+   "bozza": true,
+   "nota": {
+    "it": "Una prima versione era uscita nel 1927 sulla rivista Archiv für Sozialwissenschaft und Sozialpolitik ed è già libera negli USA. Il libro del 1932, rivisto, negli USA si libera nel 2028.",
+    "en": "A first version appeared in 1927 in the journal Archiv für Sozialwissenschaft und Sozialpolitik and is already free in the US. The revised 1932 book becomes free in the US in 2028."
+   },
+   "fonti": [
+    {
+     "nome": "Springer, Schlüsselwerke der Politikwissenschaft: Archiv für Sozialwissenschaft und Sozialpolitik 58 (1927), pp. 1–33",
+     "link": "https://link.springer.com/content/pdf/10.1007/978-3-531-90400-9_115.pdf"
+    },
+    {
+     "nome": "Stanford Encyclopedia of Philosophy (Carl Schmitt): nel 1927 la prima versione dell'opera",
+     "link": "https://plato.stanford.edu/ENTRiES/schmitt/"
+    }
+   ]
+  },
+  "Q934396": {
+   "titolo": "Miss Marple e i tredici problemi (The Thirteen Problems)",
+   "esito": "resta",
+   "bozza": true,
+   "nota": {
+    "it": "Raccolta di racconti usciti prima su rivista: i primi sei su The Royal Magazine tra il 1927 e il 1928, già liberi negli USA. La raccolta del 1932 negli USA si libera nel 2028.",
+    "en": "Collection of stories first printed in magazines: the first six in The Royal Magazine in 1927–1928, already free in the US. The 1932 collection becomes free in the US in 2028."
+   },
+   "fonti": [
+    {
+     "nome": "agathachristie.com: i primi sei racconti su The Royal Magazine tra 1927 e 1928",
+     "link": "https://www.agathachristie.com/news/2016/thirteen-facts-about-the-thirteen-problems"
+    },
+    {
+     "nome": "Collecting Christie: Royal Magazine n. 350, dicembre 1927, The Tuesday Night Club",
+     "link": "https://www.collectingchristie.com/post/the-royal-magazine-agatha-christie"
+    }
+   ]
   }
  },
  "nota_prima_pubblicazione": "prima_pubblicazione: prima uscita documentata (rivista o editore, con la data), con le fonti. Regola di Marco (23/11/2026): quando c'è, vale quella; i cataloghi confermano ma non la battono (scripts/regole.py, anno_prima_pubblicazione).",

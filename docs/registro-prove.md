@@ -1565,3 +1565,10 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
   - Il dato: data/verifiche_manuali.json, «verifiche_tolte», «caso_aperto».
   - scripts/verifica.py lo tiene fuori anche se il giro di Wikidata lo riporta. La prova 9 controlla che non sia in nessuna lista.
 - **Von den Steinen (Q115085):** rientra nella lista 2027 con Wikidata 1956. L'Onassis Cavafy Archive concorda («died on Rhodes (Greece) in 1956», https://cavafy.onassis.org/creator/von-den-steinen-helmut/) e lo aggiungo come fonte trovata a mano («fonti_aggiunte»). In pagina e nel radar: «Anno di morte da Wikidata, che concorda con Onassis Cavafy Archive (fonte trovata a mano)».
+
+## 2026-11-23 — Ritocchi vetrina 2027 e vetrina 2028 (locale, non pubblicato)
+- Cosa: voci di ricerca nel blocco «vetrina-2027» (Why I am an Atheist, Gaban) e «vetrina-2028» (12 opere più viste); nota corretta per La via del ritorno (puntate 1930 già libere); bozze di nota per Il concetto di 'politico' (prima versione 1927) e The Thirteen Problems (primi sei racconti 1927-28).
+- Regola (incrocio_opera): conferma Why I am an Atheist, Little House, Light in August, Cold Comfort Farm, Radetzky March; nota Concept of the Political, Thirteen Problems; da decidere Gaban (una fonte dice 1930), Céline (una sola fonte), Musil (volume 2: 1932 o 1933), Peril at End House (a puntate su Liberty nel 1931), German Ideology (prima parte 1926, una sola fonte), Death in the Afternoon (seconda fonte debole).
+- Seconda lettura (altra sessione), seme 20261127, 3 voci: Morgan/Light in August trovata e confermata; PARI/Atheist e MUSE/Radetzky non verificabili (pagina caricata via script; blocco anti-robot). Nessuna smentita.
+- Etichette: 2027 63/84/8 (prima 62/85/8); 2028 7/103/65 (prima 1/109/65).
+- Prove 1-9: 0 errori; fotografia: 0 cambi da approvare.
