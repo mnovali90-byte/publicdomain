@@ -26,15 +26,17 @@ SITO = "https://publicdomainradar.com"
 OPERE_UE = [("Q38757", 1), ("Q207036", 0), ("Q38757", 5), ("Q123075", 0)]
 OPERE_US = ["Q1218608", "Q1217475", "Q1070729"]
 ORDINE = ["ue0", "ue1", "us0", "ue2", "ue3", "us1", "us2"]
-# Avvertenze sotto la riga «Libero…», per le parti di un'opera con diritti propri che i dati non coprono (non coautori del testo).
-# Chiave: (wikidata dell'autore, titolo nella scheda). Ogni nota con la sua fonte.
-NOTE_VETRINA = {
-    # Fonte: UK Intellectual Property Office, «A bear of very little copyright» (6/3/2025),
-    # https://ipo.blog.gov.uk/2025/03/06/a-bear-of-very-little-copyright-winnie-the-poohs-journey-into-the-public-domain/
-    # testo di Milne (morto nel 1956) libero dal 1° gennaio 2027; disegni di E. H. Shepard (morto nel 1976) dal 1° gennaio 2047.
-    ("Q207036", "Winnie Puh"): {"it": "Solo il testo: i disegni originali di E.\u00a0H.\u00a0Shepard restano protetti fino al 2046.",
-                                "en": "The text only: E.\u00a0H.\u00a0Shepard's original drawings stay protected until 2046."},
-}
+def nota_disegni(pg, a, o):
+    """Avvertenza sotto la riga «Libero…»: i disegni originali con diritti propri, dagli stessi dati delle schede e di Già
+    pubblici (data/coautori_manuali.json, ruolo «illustratore», con la fonte). Prima era scritta a mano qui (23/11/2026)."""
+    D = pg.anno_di(a.get("morte"))
+    ill = [(n, m) for n, m in pg.vincoli_opera(a, o)[2].get("ill", []) if m and D and m > D]
+    if not ill:
+        return None
+    n, m = max(ill, key=lambda x: x[1])
+    fino = pg.R.anno_libero(m, "it") - 1
+    return {"it": f"Solo il testo: i disegni originali di {n} restano protetti fino al {fino}.".replace("E. H. ", "E.\u00a0H.\u00a0"),
+            "en": f"The text only: {n}'s original drawings stay protected until {fino}.".replace("E. H. ", "E.\u00a0H.\u00a0")}
 
 
 def esc(s):
@@ -107,7 +109,7 @@ def pagine_frontespizio(anno):
         paesi = [p for p in R.paesi_liberi_insieme(a.get("paesi"), int(str(a["morte"])[:4]), date.today().year) if p != "es"] \
             + (["es"] if q in autori_es else [])
         pag[f"ue{k}"] = {"a": a["nome"], "it": o["titolo"], "en": o.get("titolo_en") or o["titolo"], "dove": "ue", "paesi": paesi,
-                         "nota": NOTE_VETRINA.get((q, o["titolo"]))}
+                         "nota": nota_disegni(pg, a, o)}
     for k, q in enumerate(scelte_us):
         o = opere_us[q]
         nomi = [x["nome"] for x in o.get("autori", [])][:2]

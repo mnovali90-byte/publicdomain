@@ -508,6 +508,7 @@ it: {
   sMusica: "{r} di {n} ha diritti propri, che durano 70 anni dalla morte: in Francia, Germania e Regno Unito è libero dal 1° gennaio {y}; in Italia e in Spagna la data può essere più tarda. Il testo no: vale la data qui sopra.",
   sMusicaNd: "{r} di {n} ha diritti propri: non sappiamo quando scadono (manca l'anno di morte).",
   ruoli: { compositore: "La musica", librettista: "Il libretto" },
+  sDisegni: "I disegni originali di {n} hanno diritti propri, che durano 70 anni dalla morte: in Italia, Francia, Germania e Regno Unito sono liberi dal 1° gennaio {y}. Il testo no: vale la data qui sopra.",
   sGruppo: "«{g}» è un gruppo: contano gli anni di morte dei suoi membri.",
   sManuale: "Coautore aggiunto da noi, non segnato su Wikidata: {n} (morto nel {m}). Fonte:",
   piede1: "Calcolo indicativo, non è consulenza legale. È libero il testo originale, non l'edizione né la traduzione: traduzioni, illustrazioni e curatele recenti hanno diritti propri. Prima di pubblicare controlla la legge del paese.",
@@ -584,6 +585,7 @@ en: {
   sMusica: "{r} by {n} has its own rights, lasting 70 years from death: in France, Germany and the UK it is free from 1 January {y}; in Italy and Spain the date may be later. The text does not: the date above applies.",
   sMusicaNd: "{r} by {n} has its own rights: we do not know when they expire (the year of death is missing).",
   ruoli: { compositore: "The music", librettista: "The libretto" },
+  sDisegni: "The original drawings by {n} have their own rights, lasting 70 years from death: in Italy, France, Germany and the UK they are free from 1 January {y}. The text does not: the date above applies.",
   sGruppo: "«{g}» is a group: the years of death of its members count.",
   sManuale: "Co-author added by us, not recorded on Wikidata: {n} (died in {m}). Source:",
   piede1: "An indicative calculation, not legal advice. What is free is the original text, not the edition or the translation: recent translations, illustrations and editions have their own rights. Check the law of the country before publishing.",
@@ -767,6 +769,10 @@ function noteOpera(o) {   // gruppi, coautori aggiunti a mano, musica e libretto
   }
   for (const [ruolo, n, m] of o.mu || []) {
     if (!n) continue;
+    if (ruolo === "illustratore") {   // 23/11/2026: disegni originali con diritti propri
+      if (m !== null && m !== undefined && REGOLE_PAESI.annoLibero(m, "it") > Y) r.push(tr("sDisegni", { n, y: REGOLE_PAESI.annoLibero(m, "it") }));
+      continue;
+    }
     const ra = (L.ruoli || {})[ruolo] || ruolo;
     if (m === null || m === undefined) r.push(tr("sMusicaNd", { r: ra, n }));
     else if (REGOLE_PAESI.annoLibero(m, "de") > Y) r.push(tr("sMusica", { r: ra, n, y: REGOLE_PAESI.annoLibero(m, "de") }));

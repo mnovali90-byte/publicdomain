@@ -80,6 +80,12 @@ def main():
         if musica.get(q):
             v = v or {}
             v["mu"] = musica[q]
+        # musica e disegni scritti a mano con la loro fonte (data/coautori_manuali.json): stessa nota delle schede (23/11/2026)
+        extra = [[x["ruolo"], x["nome"], x.get("morte")] for x in manuali.get(q, [])
+                 if x.get("ruolo") in ("compositore", "librettista", "illustratore")]
+        if extra:
+            v = v or {}
+            v["mu"] = list(v.get("mu", [])) + [e for e in extra if e not in v.get("mu", [])]
         if v:
             opere[q] = v
     os.makedirs("data/registro", exist_ok=True)

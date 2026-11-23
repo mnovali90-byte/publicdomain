@@ -1147,3 +1147,13 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
   - Il radar toglie dalle «opere che si liberano» quelle con un coautore più tardo o senza data, e mostra la nota (per esempio i disegni di Shepard).
   - Verificato nel browser: L'opera da tre soldi, Trent's Own Case e Ferdinand non ci sono più; Winnie Puh c'è, con la nota.
 - **Prove:** 1-7 a 0. Fotografia: 0 cambi, perché le schede e il radar non entrano nella fotografia.
+
+## 23/11/2026 — Disegni e musica allineati su tutto il sito (in locale)
+- **Un dato solo, data/coautori_manuali.json:**
+  - le schede lo leggono con vincoli_opera;
+  - Già pubblici con registro_opere (illustratori, compositori e librettisti messi a mano entrano in «mu»), e la pagina ha la nota nuova sDisegni;
+  - la home con nota_disegni, che sostituisce la nota scritta a mano NOTE_VETRINA;
+  - il radar con vincoli-opere.json.
+- **Milne:** le voci sono legate ai codici delle opere (Winnie-the-Pooh, The House at Pooh Corner con anche la voce della Duke, When We Were Very Young, Now We Are Six).
+- **Verifica nel browser:** in Già pubblici, aprendo *Winnie Puh* compare «I disegni originali di E. H. Shepard hanno diritti propri… liberi dal 1° gennaio 2047». Prove 1-7 a 0, fotografia 0 cambi.
+- **Errore di procedura di Claude:** il push delle 08:03 ha fatto partire il giro Già pubblici, perché era cambiato storico/registro_opere.py, e non era stato detto prima. Il giro è passato senza problemi.
