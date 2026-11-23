@@ -1585,3 +1585,10 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - Fonti: The Online Books Page (UPenn), rinnovi CCE dei contributi a Liberty: 11 puntate dal 13/6 al 22/8/1931. Delicious Death: Liberty giugno-agosto 1931 e Woman's Pictorial ottobre-dicembre 1931.
 - Testo completo? Solo Wikipedia (copiata da nocloo e dal wiki fandom) dice «slight abridgements», niente capitoli e una frase tolta nel cap. III. Non ho trovato una seconda fonte indipendente, né le puntate digitalizzate da confrontare.
 - Regola (incrocio_opera) con le due voci nuove (blocco vetrina-2028-peril): «nota», uscita prima solo una parte. Resta nella lista 2028 con la nota, in attesa del testo approvato da Marco.
+
+## 2026-11-23 — Nota Peril approvata; niente «Da confermare» in vetrina (ok di Marco)
+- Peril at End House: nota approvata da Marco, senza l'inciso sui tagli (fonte unica).
+- Come fu temprato l'acciaio (Q63707): non verificabile. Le fonti si contraddicono sull'inizio delle puntate su Molodaja gvardija: maggio 1932 (Rossijskaja Gazeta) o aprile/primavera 1934 (biblioteca NGOUNB, Radio Rossii con esperti IMLI). Inoltre seconda parte e libro intero sono del 1934. Resta «Da confermare» (blocco vetrina-2028-ostrovskij).
+- Regola nuova (Marco): nessun «Da confermare» nella vetrina dei libri USA, né nelle pagine dell'anno né nella home (pagine.py, home.py); prova 5b lo controlla. Sulla pagina 2028 di prima ne avrebbe trovati 2 (Musil e Ostrovskij), sulla 2027 nessuno.
+- Vetrina 2028: escono Musil (L'uomo senza qualità, volumi 1930/1932-33) e Ostrovskij; salgono Tobacco Road e Stamboul Train («Edizione confermata»). Solo 7 opere della lista 2028 sono «Verificato» (Schmitt escluso): una vetrina di soli «Verificato» non si riempie.
+- Etichette 2028: 8/102/65 (Peril passa a Verificato con la nota). Prove 1-9 e 5b: 0 errori; fotografia: 0 cambi.

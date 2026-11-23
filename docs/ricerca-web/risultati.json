@@ -2271,6 +2271,52 @@
    "intera": false,
    "citazione": "There were slight abridgements to the text",
    "nota": "stesso testo di Wikipedia e del wiki fandom: non è una fonte indipendente"
+  },
+  {
+   "qid": "Q63707",
+   "titolo": "How the Steel Was Tempered",
+   "lingua": "ru",
+   "data_ricerca": "2026-11-23",
+   "chi": "Claude",
+   "blocco": "vetrina-2028-ostrovskij",
+   "fonte": "Rossijskaja Gazeta, intervista a V. Jurkin (Molodaja gvardija)",
+   "link": "https://rg.ru/2012/09/05/gvardiya.html",
+   "tipo": "parte_prima",
+   "anno": 1932,
+   "gruppo": "rg",
+   "intera": false,
+   "citazione": "в мае 1932 года началась публикация произведения Николая Островского"
+  },
+  {
+   "qid": "Q63707",
+   "titolo": "How the Steel Was Tempered",
+   "lingua": "ru",
+   "data_ricerca": "2026-11-23",
+   "chi": "Claude",
+   "blocco": "vetrina-2028-ostrovskij",
+   "fonte": "Biblioteca scientifica regionale di Nižnij Novgorod (NGOUNB)",
+   "link": "https://ngounb.ru/?p=22453",
+   "tipo": "parte_prima",
+   "anno": 1934,
+   "gruppo": "ngounb",
+   "intera": false,
+   "citazione": "весной 1934 года в журнале «Молодая гвардия» началась публикация романа",
+   "nota": "contraddice il 1932; dice anche che la seconda parte e il libro intero sono del 1934"
+  },
+  {
+   "qid": "Q63707",
+   "titolo": "How the Steel Was Tempered",
+   "lingua": "ru",
+   "data_ricerca": "2026-11-23",
+   "chi": "Claude",
+   "blocco": "vetrina-2028-ostrovskij",
+   "fonte": "Radio Rossii, Pjatidnevka (con esperti dell'IMLI RAN e del museo Ostrovskij di Soči)",
+   "link": "https://www.radiorus.ru/brand/62331/episode/1752165",
+   "tipo": "parte_prima",
+   "anno": 1934,
+   "gruppo": "radiorus",
+   "intera": false,
+   "citazione": "В апреле 1934 года началась публикация романа"
   }
  ]
 }

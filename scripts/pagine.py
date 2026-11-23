@@ -1925,7 +1925,9 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
     # titolo e descrizione per Google: i nomi più cercati
     _au = [cogn(a["nome"]) for a in aut[:3]]
     _op = []
-    vetrina_us = [o for o in opere if opera_in_vetrina(o)]   # data/fuori_classifica.json: fuori dalla vetrina, non dalla lista
+    # vetrina dei libri USA: niente autori di data/fuori_classifica.json e niente «Da confermare» (Marco, 23/11/2026);
+    # restano nella lista, nei conteggi e nella ricerca, in vetrina sale il successivo
+    vetrina_us = [o for o in opere if opera_in_vetrina(o) and stati_us.get(o["qid"], "da_confermare") != "da_confermare"]
     for o in vetrina_us:
         chi = cogn(o["autori"][0]["nome"]) if o.get("autori") else ""
         if chi in _au:

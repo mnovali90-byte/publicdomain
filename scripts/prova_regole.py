@@ -254,12 +254,14 @@ for f in sorted(list(RADICE.glob("pubblico-dominio-*/index.html")) + list((RADIC
     m2 = re.search(r"const P=(\[.*?\]), DIRITTI=", h)
     if m2:
         pezzi.append(json.dumps([p_.get("a") for p_ in json.loads(m2.group(1))], ensure_ascii=False))
+    if m and re.search(r'class="tbd">(Da confermare|To be confirmed)<', m.group(0)):   # niente «Da confermare» in vetrina (23/11/2026)
+        no5b.append(f"{f.relative_to(RADICE)}: un libro «Da confermare» è nella vetrina dei libri USA")
     for pz in pezzi:
         viste5b += 1
         for x in _fuori:
             if x["nome"] in pz:
                 no5b.append(f"{f.relative_to(RADICE)}: {x['nome']} è in vetrina ma è in data/fuori_classifica.json")
-print(f"5b. Fuori classifica nelle vetrine: {viste5b} vetrine controllate, {len(_fuori)} autori esclusi, presenti: {len(no5b)}")
+print(f"5b. Fuori classifica e «Da confermare» nelle vetrine: {viste5b} vetrine controllate, {len(_fuori)} autori esclusi, presenti: {len(no5b)}")
 for x in no5b:
     print("   ", x)
 errori += no5b

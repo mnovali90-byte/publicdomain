@@ -1697,6 +1697,25 @@
     }
    ],
    "approvata": "2026-11-23"
+  },
+  "Q957248": {
+   "titolo": "Il pericolo senza nome (Peril at End House)",
+   "esito": "resta",
+   "approvata": "2026-11-23",
+   "nota": {
+    "it": "Uscito prima a puntate su Liberty tra giugno e agosto 1931: negli USA le puntate si liberano nel 2027, il libro nel 2028.",
+    "en": "First serialized in Liberty between June and August 1931: in the US the instalments become free in 2027, the book in 2028."
+   },
+   "fonti": [
+    {
+     "nome": "The Online Books Page (University of Pennsylvania), rinnovi CCE dei contributi a Liberty: 11 puntate dal 13 giugno al 22 agosto 1931",
+     "link": "https://onlinebooks.library.upenn.edu/webbin/cinfo/liberty"
+    },
+    {
+     "nome": "Delicious Death: Liberty, Jun.13-Aug.22 1931",
+     "link": "https://www.deliciousdeath.com/15/index15.html"
+    }
+   ]
   }
  },
  "nota_prima_pubblicazione": "prima_pubblicazione: prima uscita documentata (rivista o editore, con la data), con le fonti. Regola di Marco (23/11/2026): quando c'è, vale quella; i cataloghi confermano ma non la battono (scripts/regole.py, anno_prima_pubblicazione).",
