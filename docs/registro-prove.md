@@ -1290,3 +1290,19 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
   - prove 1-8 a 0;
   - fotografia 0 cambi;
   - home IT/EN senza errori JS.
+
+## 23/11/2026 — Ricerca sulle 52 opere USA 2027 «da confermare» (solo ricerca, niente applicato)
+- **Metodo:** circa 50 ricerche web, dalle opere più viste, con le regole di Marco:
+  - due fonti indipendenti, di cui almeno una primaria o specialistica;
+  - vale la prima pubblicazione documentata;
+  - una regola sola per originali e traduzioni;
+  - le opere uscite dopo il 1931 si spostano.
+- **Esito** (rapporto in docs/da-decidere-usa-2027.md, opera per opera con i link):
+  - 28 confermate 1931;
+  - 7 restano con la nota (una parte uscita prima);
+  - 2 escono (Quicksand e Macchina, uscite per intero a puntate entro il 1930);
+  - 3 da spostare (La madre e Vlak u snijegu al 2029, Il 35 maggio al 2028);
+  - 3 da decidere (Noce i dnie, Kondujt i Švambranija, Los placeres prohibidos);
+  - 6 incerte;
+  - 3 già decise.
+- **Fonti deboli segnalate:** San Manuel Bueno, Racconti di Odessa, Vlak u snijegu. Marco fa controllare a campione 10 opere prima di decidere.
