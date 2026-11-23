@@ -113,7 +113,10 @@ def pagine_frontespizio(anno):
     for k, q in enumerate(scelte_us):
         o = opere_us[q]
         nomi = [x["nome"] for x in o.get("autori", [])][:2]
-        pag[f"us{k}"] = {"a": " e ".join(nomi), "a_en": " and ".join(nomi), "it": o.get("titolo_it") or o["titolo"], "en": o["titolo"], "dove": "us"}
+        # 23/11/2026: il codice Wikidata dell'opera va nella pagina, così la prova 8 la confronta con il registro delle opere;
+        # la nota, se c'è, viene dal registro (la stessa della pagina dell'anno, del radar e di Già pubblici)
+        pag[f"us{k}"] = {"a": " e ".join(nomi), "a_en": " and ".join(nomi), "it": o.get("titolo_it") or o["titolo"], "en": o["titolo"], "dove": "us",
+                         "q": q, "nota": pg.NOTE_USA.get(q)}
     ordine = [k for k in ORDINE if k in pag] + [k for k in pag if k not in ORDINE]
     return [pag[k] for k in ordine]
 
@@ -261,7 +264,7 @@ def pagina(lang, anno, P):
     fmt = dict(a=anno, a1=anno + 1, ue=migliaia(nu["ue"], lang), m=R.morti_liberi_nel(anno, "it"), me=R.morti_liberi_nel(anno, "es"), pub=nu["pub"], usok=migliaia(nu["us_ok"], lang),
                agg=data_lunga(nu["aggiornato"][:10], lang), g=migliaia(gg, lang))
     pag = [{"a": p.get("a_en", p["a"]) if lang == "en" else p["a"], "t": p[lang], "r": t["libero"][p["dove"]].format(a=anno, p=elenco_paesi(p.get("paesi", []), lang)),
-            "n": p["nota"][lang] if p.get("nota") else ""}
+            "n": p["nota"][lang] if p.get("nota") else "", **({"q": p["q"]} if p.get("q") else {})}
            for p in pagine_frontespizio(anno)]
     if not pag:
         raise RuntimeError("home: nessuna opera per il frontespizio")

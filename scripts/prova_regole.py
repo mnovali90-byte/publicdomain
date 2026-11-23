@@ -362,6 +362,21 @@ for f in sorted((RADICE / "data").glob("[0-9][0-9][0-9][0-9].json")):
                 nota = (x.get("nota") or {}).get(lang)
                 if nota and nota[0].lower() + nota[1:] not in h8:
                     no8.append(f"scheda {a.get('nome')} ({lang}): «{t}» senza la nota del registro")
+# vetrina della home: le opere USA hanno il codice Wikidata (23/11/2026); se il registro ha una nota, la home la mostra uguale
+for lang, f8 in (("it", RADICE / "index.html"), ("en", RADICE / "en" / "index.html")):
+    m8 = re.search(r"const P=(\[.*?\]), DIRITTI=", f8.read_text(encoding="utf-8"))
+    for p8 in json.loads(m8.group(1)) if m8 else []:
+        if ("Stati Uniti" in p8["r"]) or ("United States" in p8["r"]):
+            if not p8.get("q"):
+                no8.append(f"home ({lang}): «{p8['t']}» negli USA senza codice Wikidata: non si può confrontare con il registro")
+                continue
+            conti8["confronti"] += 1
+            x = _dec.get(p8["q"])
+            nota = ((x or {}).get("nota") or {}).get(lang) or ""
+            if x:
+                _visti8.add(p8["q"])
+            if _html.unescape(p8.get("n") or "") != nota:
+                no8.append(f"home ({lang}): «{p8['t']}» ha la nota «{p8.get('n')}», il registro «{nota}»")
 conti8["opere"] = len(_visti8)
 _mai = [q for q in _dec if q not in _visti8]
 print(f"8. Registro delle opere: {len(_dec)} opere nel registro, {conti8['opere']} trovate nelle pagine e nei file, {conti8['confronti']} confronti; "

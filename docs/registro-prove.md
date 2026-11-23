@@ -1281,3 +1281,12 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - **Prova 8:** ora controlla anche che l'anno del registro e l'anno USA siano quelli della prima pubblicazione documentata.
 - **Punto c:** alle 9:17 la prova 5 sul sito pubblicato dava ancora «non controllabili», perché il commit 09cf19d è stato pubblicato alle 9:29. Sulla copia attuale dà 8 controllate, 0 non controllabili; i casi 9 e 10 sono in data/casi_riferimento.json.
 - **Esito:** prove 1-8 a 0, fotografia 0 cambi di stato.
+
+## 23/11/2026 — Vetrina USA della home nella prova 8
+- **Cosa cambia:** le opere USA del frontespizio (La buona terra Q1218608, Le onde Q1217475, Volo di notte Q1070729) ora hanno nella pagina il codice Wikidata. Se il registro delle opere ha una nota, la home mostra quella (scripts/home.py).
+- **Prova 8:** controlla anche la home, in italiano e in inglese. Ogni opera USA deve avere il codice e la stessa nota del registro.
+- **Esito:**
+  - prova 8: 120 confronti (prima 114), 0 diversi;
+  - prove 1-8 a 0;
+  - fotografia 0 cambi;
+  - home IT/EN senza errori JS.
