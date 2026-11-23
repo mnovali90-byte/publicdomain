@@ -4,7 +4,7 @@ La regola che decide sta in scripts/regole.py (anno_usa_confermato)."""
 import json
 from pathlib import Path
 
-from regole import anno_usa_confermato
+from regole import anno_usa_confermato, anno_prima_pubblicazione
 
 R = Path(__file__).resolve().parent.parent
 
@@ -34,9 +34,13 @@ def voci_usa():
             if q and isinstance(b.get("pub"), int):
                 out.setdefault(q, []).append(("duke", ["ok", b["pub"], "duke"]))
     # 23/11/2026: opere tolte dalle liste USA perché due fonti le danno uscite per intero prima (applica_registro_liste.py)
+    pp = _leggi(R / "data" / "verifiche_opere.json", {}).get("prima_pubblicazione") or {}
     for x in (_leggi(R / "data" / "registro" / "liste_spostati.json", {}).get("usa_gia_libere") or []):
         if x.get("qid") and isinstance(x.get("uscita"), int):
-            out.setdefault(x["qid"], []).append(("libere", ["prima", x["uscita"], "due fonti: " + ", ".join(x.get("fonti", []))]))
+            p = pp.get(x["qid"]) or {}
+            y = anno_prima_pubblicazione(p.get("anno"), x["uscita"])
+            f = ("prima pubblicazione: " + p["dove"]["it"]) if p.get("anno") else "due fonti: " + ", ".join(x.get("fonti", []))
+            out.setdefault(x["qid"], []).append(("libere", ["prima", y, f]))
     # 23/11/2026: decisioni con le fonti sulle opere delle liste USA (data/verifiche_opere.json, «usa_lista»)
     for q, x in (_leggi(R / "data" / "verifiche_opere.json", {}).get("usa_lista") or {}).items():
         vl = x.get("versione_libera") or {}
@@ -145,6 +149,25 @@ def opere_decise():
             e["anno"], e["tipo"] = None, None   # solo la nota: l'anno resta quello di oggi
         if pub and e.get("anno") and pub != e["anno"]:
             e["anno_lista"] = pub
+        out[q] = e
+    # 4. prima pubblicazione documentata (rivista o editore con la data): vale quella, i cataloghi confermano (regole.anno_prima_pubblicazione)
+    for q, p in (ver.get("prima_pubblicazione") or {}).items():
+        if not isinstance(p.get("anno"), int) or len(p.get("fonti", [])) < 2:
+            continue
+        e = out.get(q) or {"nota": None}
+        vecchio = e.get("anno")
+        cat = [f for f in e.get("fonti", [])]
+        e.update({"anno": anno_prima_pubblicazione(p["anno"], vecchio), "tipo": "uscita",
+                  "fonti": [_fonte(y) for y in p["fonti"]] + cat,
+                  "perche": "prima pubblicazione documentata (data/verifiche_opere.json, «prima_pubblicazione»)"
+                            + (f"; {e['perche']}" if e.get("perche") else "")})
+        if (e.get("nota") or {}).get("it", "").startswith("Negli USA conta l'edizione del"):
+            e["nota"] = {"it": f"Prima pubblicazione: {p['dove']['it']}. Negli USA è già libera.",
+                         "en": f"First published in {p['dove']['en']}. It is already free in the US."}
+            altri = [f["nome"].rsplit(":", 1)[0] for f in cat if f["nome"].endswith(f": {vecchio}")]
+            if vecchio and vecchio != p["anno"] and altri:
+                e["nota"]["it"] += f" {', '.join(altri)} dà il {vecchio}, probabilmente l'anno in cui fu scritta: i cataloghi confermano, ma la prima pubblicazione documentata vale di più." if len(altri) == 1 else f" {', '.join(altri)} danno il {vecchio}, probabilmente l'anno in cui fu scritta: i cataloghi confermano, ma la prima pubblicazione documentata vale di più."
+                e["nota"]["en"] += f" {', '.join(altri)} {'gives' if len(altri) == 1 else 'give'} {vecchio}, probably the year it was written: catalogues confirm, but the documented first publication counts for more."
         out[q] = e
     return out
 

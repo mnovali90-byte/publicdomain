@@ -789,5 +789,48 @@
     }
    ]
   }
+ },
+ "nota_prima_pubblicazione": "prima_pubblicazione: prima uscita documentata (rivista o editore, con la data), con le fonti. Regola di Marco (23/11/2026): quando c'è, vale quella; i cataloghi confermano ma non la battono (scripts/regole.py, anno_prima_pubblicazione).",
+ "prima_pubblicazione": {
+  "Q7745219": {
+   "titolo": "The Lagoon (La laguna)",
+   "anno": 1897,
+   "dove": {
+    "it": "The Cornhill Magazine, gennaio 1897",
+    "en": "The Cornhill Magazine, January 1897"
+   },
+   "fonti": [
+    {
+     "nome": "Victorian Web, da Frederick R. Karl, A Reader's Guide to Joseph Conrad: «The Lagoon» in Cornhill (gennaio 1897)",
+     "link": "https://victorianweb.org/authors/conrad/pva47.html"
+    },
+    {
+     "nome": "Wikipedia: The Lagoon, scritto nel 1896, pubblicato su The Cornhill Magazine nel gennaio 1897",
+     "link": "https://en.wikipedia.org/wiki/The_Lagoon"
+    }
+   ]
+  },
+  "Q3772100": {
+   "titolo": "The Idiots (Gli idioti)",
+   "anno": 1896,
+   "dove": {
+    "it": "The Savoy, ottobre 1896",
+    "en": "The Savoy, October 1896"
+   },
+   "fonti": [
+    {
+     "nome": "Victorian Web, da Frederick R. Karl, A Reader's Guide to Joseph Conrad: «The Idiots» in The Savoy (ottobre 1896)",
+     "link": "https://victorianweb.org/authors/conrad/pva47.html"
+    },
+    {
+     "nome": "Wikipedia: The Idiots, pubblicato su The Savoy nell'ottobre 1896",
+     "link": "https://en.wikipedia.org/wiki/The_Idiots_(short_story)"
+    },
+    {
+     "nome": "Project MUSE, William Atkinson: uscito nell'ottobre 1896 su The Savoy",
+     "link": "https://muse.jhu.edu/article/698407"
+    }
+   ]
+  }
  }
 }

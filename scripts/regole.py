@@ -328,6 +328,13 @@ def anno_opera_credibile(y, au):
     return y
 
 
+def anno_prima_pubblicazione(documentata, cataloghi):
+    """Regola di Marco (23/11/2026): quando c'è una prima pubblicazione documentata (rivista o editore, con la data e le
+    fonti), vale quella; i cataloghi la confermano ma non la battono (caso «The Lagoon»: Cornhill, gennaio 1897; ISFDB e
+    LoC danno il 1896, l'anno in cui fu scritto)."""
+    return documentata if isinstance(documentata, int) else cataloghi
+
+
 def anno_deciso(q, y, decise):
     """L'anno di uscita da usare: quello deciso nel registro delle opere (data/registro/opere.json, «opere»; scripts/registro.py,
     opere_decise) se c'è ed è un anno di uscita, altrimenti y. Una regola sola per tutte le pagine (23/11/2026)."""

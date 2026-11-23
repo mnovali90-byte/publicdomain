@@ -1268,3 +1268,16 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - **Esito:**
   - prove 1-8 a 0;
   - browser in italiano e inglese (Già pubblici, radar, pagina 2027, scheda di Brecht, home): nessun errore JS.
+
+## 23/11/2026 — La laguna 1897 e la regola della prima pubblicazione documentata
+- **Correzione (Marco, fonti verificate):** The Lagoon uscì su The Cornhill Magazine nel gennaio 1897 (Victorian Web, da F. R. Karl, A Reader's Guide to Joseph Conrad; Wikipedia).
+  - Nel registro adesso c'è 1897.
+  - Nei dati, per fonte, la Library of Congress dà il 1896, ISFDB il 1897. Il 1896 veniva dall'anno più vecchio fra i cataloghi.
+- **Regola nuova** (scripts/regole.py, anno_prima_pubblicazione): quando c'è una prima pubblicazione documentata (rivista o editore, con la data e due fonti), vale quella. I cataloghi confermano ma non la battono.
+  - I dati stanno in data/verifiche_opere.json, «prima_pubblicazione».
+  - Valgono sia per il registro delle opere sia per l'anno USA del registro.
+- **Gli idioti:** 1896 confermato con la prima pubblicazione su The Savoy, ottobre 1896 (Victorian Web, Wikipedia, Project MUSE).
+- **Note:** dicono dove uscì l'opera. Per La laguna, la nota dice anche che la Library of Congress dà il 1896.
+- **Prova 8:** ora controlla anche che l'anno del registro e l'anno USA siano quelli della prima pubblicazione documentata.
+- **Punto c:** alle 9:17 la prova 5 sul sito pubblicato dava ancora «non controllabili», perché il commit 09cf19d è stato pubblicato alle 9:29. Sulla copia attuale dà 8 controllate, 0 non controllabili; i casi 11 e 12 sono in data/casi_riferimento.json.
+- **Esito:** prove 1-8 a 0, fotografia 0 cambi di stato.

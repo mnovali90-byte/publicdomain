@@ -254,6 +254,14 @@ no8, nc8, conti8 = [], [], {"opere": 0, "confronti": 0}
 if json.loads(json.dumps(_dec)) != _reg.get("opere"):
     no8.append("data/registro/opere.json («opere») è diverso da quello che calcola scripts/registro.py: rilanciare storico/registro_opere.py")
 _uscita = {q: x["anno"] for q, x in _dec.items() if x.get("tipo") == "uscita" and isinstance(x.get("anno"), int)}
+# la prima pubblicazione documentata batte i cataloghi (regole.anno_prima_pubblicazione; caso The Lagoon, Cornhill 1897)
+for q, p8 in (json.load(open(RADICE / "data" / "verifiche_opere.json", encoding="utf-8")).get("prima_pubblicazione") or {}).items():
+    conti8["confronti"] += 1
+    if _uscita.get(q) != p8.get("anno"):
+        no8.append(f"{q}: prima pubblicazione documentata {p8.get('anno')}, ma il registro dice {_uscita.get(q)}")
+    v8 = (_reg.get("usa") or {}).get(q) or [None]
+    if v8[0] is not None and v8[0] != p8.get("anno"):
+        no8.append(f"{q}: prima pubblicazione documentata {p8.get('anno')}, ma l'anno USA del registro è {v8[0]}")
 for q, x in _dec.items():
     n = x.get("nota") or {}
     if n:
