@@ -529,10 +529,19 @@ def _leggi(p, x):
         return x
 
 
-from registro import anni_usa, liste_usa, note_usa  # noqa: E402
-NOTE_USA = note_usa()   # note USA uguali in liste, radar, Già pubblici e schede (23/11/2026)
+from registro import anni_usa, liste_usa, opere_decise  # noqa: E402
+# REGISTRO DELLE OPERE (23/11/2026): anno deciso, fonti e note in un posto solo, uguali in liste, radar, Già pubblici e schede
+DECISE = opere_decise()
+NOTE_USA = {q: x["nota"] for q, x in DECISE.items() if x.get("nota")}
 ANNI_VER = anni_usa()   # registro unico: anno USA confermato di ogni opera (regola in scripts/regole.py)
-VER_OPERE = (_leggi(RADICE / "data" / "verifiche_opere.json", {}) or {}).get("opere", {})   # anni USA dai cataloghi (23/11/2026)
+# anni «entro» provati da due cataloghi, per «autore|titolo della scheda»: dal registro delle opere
+def confermato_registro(q, pub):
+    """L'anno della lista USA è deciso con le fonti nel registro delle opere (anno di uscita o anno della versione in lista)."""
+    d = DECISE.get(q) or {}
+    return pub is not None and (d.get("anno_lista") or (d.get("anno") if d.get("tipo") == "uscita" else None)) == pub
+
+
+VER_OPERE = {x["scheda"]: {"entro": x["anno"]} for x in DECISE.values() if x.get("tipo") == "entro" and x.get("scheda")}
 _PER_AUT = {}
 
 
@@ -566,7 +575,7 @@ def _gp():
                     for t in (r[1], r[2]):
                         if t:
                             per.setdefault(au[0], {}).setdefault(tuple(_parole(t)), r)
-        _GP.update({"per": per, "coautori": reg.get("coautori", {}), "usa": reg.get("usa", {})})
+        _GP.update({"per": per, "coautori": reg.get("coautori", {}), "usa": reg.get("usa", {}), "decise": reg.get("opere", {})})
     return _GP
 
 
@@ -583,7 +592,7 @@ def riga_gp(a, o):
 def opera_gp(a, o):
     """L'opera nel formato di regole.stato_opera, se è in Già pubblici."""
     r = riga_gp(a, o)
-    return R.opera_da_riga(r, _gp()["coautori"]) if r else None
+    return R.opera_da_riga(r, _gp()["coautori"], _gp()["decise"]) if r else None
 
 
 def anno_opera(a, o):
@@ -1243,13 +1252,12 @@ def opere_usa_n(a, lang):
         else:
             et, cl = T("anno non noto", "year unknown"), "ver"
         sup = ""
-        for n in note:
+        for n in note:   # 23/11/2026: tutte le note dell'opera (coautori, musica, nota USA), non solo la prima
             if n.startswith(f"«{t}»"):
                 if n not in usate:   # stesso titolo due volte su Wikidata: stessa nota, stesso numero
                     usate.append(n)
                 k = usate.index(n) + 1
-                sup = f'<sup data-n="{k}">{k}</sup>'
-                break
+                sup += f'<sup data-n="{k}">{k}</sup>'
         anno = anno_opera(a, o)
         if not isinstance(anno, int):
             v_ = VER_OPERE.get(f"{a['wikidata']}|{o.get('titolo')}")
@@ -1888,7 +1896,7 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
     es_nomi = [pulisci(a["nome"]) for a in _letterari(pacchetto_es or {}, "it")[:3]]
     opere = (opere_us or {}).get("opere", [])
     n_us = len(opere)
-    n_us_ok = sum(1 for o in opere if (verificati.get(o["qid"]) or ["nd"])[0] == "ok" or o.get("conferma_usa"))
+    n_us_ok = sum(1 for o in opere if (verificati.get(o["qid"]) or ["nd"])[0] == "ok" or confermato_registro(o["qid"], (opere_us or {}).get("anno_pubblicazione")))
     cogn = lambda nome: pulisci(nome).split()[-1] if nome else ""
 
     # titolo e descrizione per Google: i nomi più cercati
@@ -2038,7 +2046,7 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
             t = (o.get("titolo_it") or o["titolo"]) if it else o["titolo"]
             chi = ", ".join(pulisci(a["nome"]) for a in o.get("autori", [])) or "—"
             v_ = verificati.get(o["qid"]) or ["nd"]
-            if o.get("conferma_usa"):   # confermato a mano con due fonti (data/verifiche_opere.json, «usa_lista»)
+            if confermato_registro(o["qid"], pub):   # anno deciso con le fonti nel registro delle opere
                 v_ = ["ok"]
             if v_[0] == "ok":
                 badge = esc(T(f"{pub} confermato", f"{pub} confirmed"))
@@ -2056,7 +2064,7 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
                     chi_f = re.sub(r"^(.+?)\1$", r"\1", pulisci(fa["foto"].get("autore")))
                     chi_f = "" if len(chi_f) > 60 else chi_f
                     crediti_us.append(f'{esc(pulisci(fa["nome"]))}: <a href="{esc(fa["foto"].get("pagina", ""))}" rel="noopener">{esc(" · ".join(x for x in (chi_f, pulisci(fa["foto"].get("licenza"))) if x) or "Wikimedia Commons")}</a>')
-            nu = (o.get("nota_usa") or {}).get("it" if it else "en")
+            nu = (NOTE_USA.get(o["qid"]) or {}).get("it" if it else "en")   # nota dal registro delle opere
             if nu:
                 badge += f'<br><span class="tbd">{esc(nu)}</span>'
             out.append(f'<li class="row"{df} data-i="{esc(iniziali_nome(chi.split(", ")[0]))}"><span class="no">{k + 1:02d}</span>'

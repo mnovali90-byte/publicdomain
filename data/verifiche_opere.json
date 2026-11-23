@@ -641,15 +641,34 @@
     "en": "In the US the first version, published in 1930, is already free; the revised 1931 version becomes free in the US in 2027."
    },
    "fonti": [
-    "K10plus: edizione del 1930",
-    "Brecht Guide, University of Wisconsin: «Die Massnahme. Lehrstück. (1930)» e «(1931)», https://brechtguide.library.wisc.edu/catalog/01840",
-    "eScholarship: versione rivista pubblicata nei Versuche del 1931"
+    {
+     "nome": "K10plus (catalogo collettivo tedesco): edizione «Die Maßnahme», 1930",
+     "link": "https://kxp.k10plus.de/"
+    },
+    {
+     "nome": "Brecht Guide, University of Wisconsin: «Die Massnahme. Lehrstück. (1930)»",
+     "link": "https://brechtguide.library.wisc.edu/catalog/02746"
+    },
+    {
+     "nome": "Brecht Guide, University of Wisconsin: «Die Massnahme. Lehrstück (1931)», la versione rivista",
+     "link": "https://brechtguide.library.wisc.edu/catalog/00743"
+    },
+    {
+     "nome": "German Literature: pubblicata nel 1930, versione rivista nel 1931",
+     "link": "https://sites.google.com/site/germanliterature/20th-century/brecht/die-massnahme-the-measures-taken"
+    }
    ],
    "versione_libera": {
     "anno": 1930,
     "fonti": [
-     "K10plus: edizione «Die Maßnahme», 1930",
-     "Brecht Guide, University of Wisconsin: «Die Massnahme. Lehrstück. (1930)», https://brechtguide.library.wisc.edu/catalog/01840"
+     {
+      "nome": "K10plus (catalogo collettivo tedesco): edizione «Die Maßnahme», 1930",
+      "link": "https://kxp.k10plus.de/"
+     },
+     {
+      "nome": "Brecht Guide, University of Wisconsin: «Die Massnahme. Lehrstück. (1930)»",
+      "link": "https://brechtguide.library.wisc.edu/catalog/02746"
+     }
     ]
    }
   },
@@ -661,8 +680,14 @@
     "en": "In the US the 1929 French original is already free; the 1931 English translation becomes free in the US in 2027."
    },
    "fonti": [
-    "Bibliothèques numériques de la Défense (BnF): «Mystiques et magiciens du Thibet», Paris, Plon, 1929",
-    "Wikipedia: traduzione inglese pubblicata la prima volta nel 1931 (The Bodley Head)"
+    {
+     "nome": "Bibliothèques numériques de la Défense: «Mystiques et magiciens du Thibet», Paris, Plon, 1929",
+     "link": "https://bibliotheques-numeriques.defense.gouv.fr/impression/document/80413c7d-0e2a-438e-9f9f-35406d035f93"
+    },
+    {
+     "nome": "Wikipedia: originale francese Plon 1929, traduzione inglese The Bodley Head 1931",
+     "link": "https://en.wikipedia.org/wiki/With_Mystics_and_Magicians_in_Tibet"
+    }
    ]
   },
   "Q636870": {
@@ -674,8 +699,18 @@
     "en": "Serialised in Le Petit Vingtième from 5 June 1930 to 11 June 1931, in book form in 1931. In the US the 1930 pages are already free and the whole work becomes free in 2027; in Europe it is still protected."
    },
    "fonti": [
-    "BnF, notice de titre: «Publié dans Le Petit Vingtième du 5 juin 1930 au 11 juin 1931, en volume cette dernière année», https://catalogue.bnf.fr/ark:/12148/cb16135825j",
-    "Wikipedia e Tintinologist: volume del 1931"
+    {
+     "nome": "BnF, notice de titre: in Le Petit Vingtième dal 5/6/1930 all'11/6/1931, in volume nel 1931",
+     "link": "https://catalogue.bnf.fr/ark:/12148/cb16135825j"
+    },
+    {
+     "nome": "Wikipedia: Tintin in the Congo",
+     "link": "https://en.wikipedia.org/wiki/Tintin_in_the_Congo"
+    },
+    {
+     "nome": "Tintinologist: volume nel 1931",
+     "link": "https://www.tintinologist.org/guides/books/02congo.html"
+    }
    ]
   },
   "Q6035197": {
@@ -687,8 +722,18 @@
     "en": "Serialised in Black Mask from March to June 1930: in the US that version is already free, the 1931 book becomes free in 2027. In Europe it is still protected."
    },
    "fonti": [
-    "University at Buffalo Libraries: serializzato su Black Mask, marzo-giugno 1930",
-    "Wikipedia e Open Library: libro Knopf 1931"
+    {
+     "nome": "University at Buffalo Libraries: a puntate su Black Mask, marzo-giugno 1930",
+     "link": "https://library.buffalo.edu/lml/collections/kelley/plot-summaries/detail.html?ID=104"
+    },
+    {
+     "nome": "Wikipedia: The Glass Key, libro Knopf 1931",
+     "link": "https://en.wikipedia.org/wiki/The_Glass_Key"
+    },
+    {
+     "nome": "Open Library: Knopf 1931",
+     "link": "https://openlibrary.org/books/OL6757267M"
+    }
    ]
   },
   "Q1197989": {
@@ -700,8 +745,18 @@
     "en": "Serialised in the Vossische Zeitung between December 1930 and January 1931, book in April 1931: in the US it becomes free as a whole in 2027. In Europe it is still protected."
    },
    "fonti": [
-    "Wikipedia: The Road Back",
-    "Open Library: Propyläen-Verlag 1931; Faded Page: «Copyright, 1930, 1931, by Propylaen-Verlag»"
+    {
+     "nome": "Wikipedia: The Road Back, a puntate dicembre 1930-gennaio 1931, libro aprile 1931",
+     "link": "https://en.wikipedia.org/wiki/The_Road_Back"
+    },
+    {
+     "nome": "Open Library: Propyläen-Verlag 1931",
+     "link": "https://openlibrary.org/books/OL14576914M"
+    },
+    {
+     "nome": "Faded Page: «Copyright, 1930, 1931, by Propylaen-Verlag»",
+     "link": "https://www.fadedpage.com/books/20241109/html.php"
+    }
    ]
   },
   "Q16224234": {
@@ -709,8 +764,14 @@
    "esito": "resta",
    "conferma": 1931,
    "fonti": [
-    "Wikipedia: pubblicato il 27 settembre 1931 su The People",
-    "Marxists Internet Archive: «first published … in the 27 Sept. 1931 issue of The People»"
+    {
+     "nome": "Wikipedia: pubblicato il 27 settembre 1931 su The People",
+     "link": "https://en.wikipedia.org/wiki/Why_I_Am_an_Atheist"
+    },
+    {
+     "nome": "Marxists Internet Archive: pubblicato la prima volta su The People del 27/9/1931",
+     "link": "https://www.marxists.org/archive/bhagat-singh/1930/10/05-files/05b.htm"
+    }
    ]
   },
   "Q28419570": {
@@ -718,8 +779,14 @@
    "esito": "resta",
    "conferma": 1931,
    "fonti": [
-    "Wikipedia: pubblicato da Saraswati Press nel 1931",
-    "Oxford University Press (2002): «Gaban, first published in 1931»"
+    {
+     "nome": "Wikipedia: Saraswati Press, 1931",
+     "link": "https://en.wikipedia.org/wiki/Gaban_(novel)"
+    },
+    {
+     "nome": "Oxford University Press (2002): «first published in 1931»",
+     "link": "https://www.schweitzer-online.de/en/buch/Premchand/Gaban/9780195662634/A1117492/"
+    }
    ]
   }
  }

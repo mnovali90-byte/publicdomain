@@ -372,6 +372,7 @@ def main():
     for o in tutte.values():
         for a in o["autori"]:
             applica_registro.applica(a)
+        o["anno"] = applica_registro.anno_opera(o["qid"], o["anno"])   # anno deciso nel registro delle opere (23/11/2026)
     prima_controllo = len(tutte)
     from registro import consultazione   # enciclopedie, riviste e giornali: fuori (Marco, 21/11/2026)
     via = set(consultazione())

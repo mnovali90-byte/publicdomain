@@ -328,6 +328,15 @@ def anno_opera_credibile(y, au):
     return y
 
 
+def anno_deciso(q, y, decise):
+    """L'anno di uscita da usare: quello deciso nel registro delle opere (data/registro/opere.json, «opere»; scripts/registro.py,
+    opere_decise) se c'è ed è un anno di uscita, altrimenti y. Una regola sola per tutte le pagine (23/11/2026)."""
+    d = (decise or {}).get(q)
+    if d and d.get("tipo") == "uscita" and isinstance(d.get("anno"), int):
+        return d["anno"]
+    return y
+
+
 def libera_ue_opera(o, oggi):
     """Libera in Europa per la regola dei 70 anni (serve alla regola USA della seconda fonte)."""
     if o.get("antica"):
@@ -434,7 +443,7 @@ def opera_vecchia(anno_x, oggi, paese="it"):
     return _vecchio(anno_x, oggi, paese)
 
 
-def opera_da_riga(r, coautori=None):
+def opera_da_riga(r, coautori=None, decise=None):
     """Opera normalizzata (vedi sopra) da una riga dei file dello Storico (ricerca e per_autore):
     [qid, titolo, titolo_it, anno, pagine, [[qid, nome, morte, antico, incerta, alleato]], anno_duke], applicando le
     decisioni del registro unico dei coautori (data/registro/opere.json, «coautori»). Come coautori() in storico/pagina.html."""
@@ -454,7 +463,7 @@ def opera_da_riga(r, coautori=None):
             if a["q"] in (e.get("an") or []):
                 a["an"] = True
         antica = e.get("antica") or None
-    return {"q": r[0], "y": anno_opera_credibile(r[3], au), "yd": (r[6] if len(r) > 6 else 0) or 0, "antica": antica, "au": au}
+    return {"q": r[0], "y": anno_deciso(r[0], anno_opera_credibile(r[3], au), decise), "yd": (r[6] if len(r) > 6 else 0) or 0, "antica": antica, "au": au}
 
 
 # =====================================================================================================================
@@ -497,6 +506,10 @@ window.REGOLE_PAESI = (() => {
   // ---- regole per opera: gemelle di stato_opera, libera_ue_opera, anno_opera_credibile in scripts/regole.py ----
   const vecchio = (x, oggi, paese) => x <= oggi - (paese === "es" ? C.OPERA_VECCHIA_ANNI_ES : C.OPERA_VECCHIA_ANNI) - 1;
   const nn = (v) => v !== null && v !== undefined;
+  const annoDeciso = (q, y, decise) => {
+    const d = (decise || {})[q];
+    return d && d.tipo === "uscita" && Number.isInteger(d.anno) ? d.anno : y;
+  };
   const annoOperaCredibile = (y, au) => {
     if (!nn(y)) return null;
     const morti = au.filter((a) => !a.an && nn(a.m)).map((a) => a.m);
@@ -575,7 +588,7 @@ window.REGOLE_PAESI = (() => {
     return { s: "si", note, r: note.includes("sUk2039") ? "uk_2039" : "morte" };
   };
   return Object.assign({}, C, { anniProtezione, annoLibero, mortiLiberiNel, annoLiberoUsa, pubblicateLibereUsaNel, paesiAlleati,
-    notaTrattatoFlag, notaTrattato, statoOpera, liberaUeOpera, annoOperaCredibile, faseSito });
+    notaTrattatoFlag, notaTrattato, statoOpera, liberaUeOpera, annoOperaCredibile, annoDeciso, faseSito });
 })();
 """
 

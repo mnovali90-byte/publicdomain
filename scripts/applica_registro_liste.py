@@ -86,22 +86,19 @@ def main():
             prima = sorted({f_ for f_, y in per_fonte.items() if isinstance(y, int) and pub and y < pub})
             m = man.get(o.get("qid"))
             if m and m.get("esito") == "resta":
-                # resta nella lista (non è libera per intero): nota e anno confermato a mano, con le fonti
-                o = dict(o)
-                if m.get("nota"):
-                    o["nota_usa"] = m["nota"]
-                if m.get("conferma"):
-                    o["conferma_usa"] = {"anno": m["conferma"], "fonti": m.get("fonti", [])}
+                # resta nella lista (non è libera per intero). Anno, fonti e nota NON si scrivono qui: stanno nel
+                # registro delle opere (scripts/registro.py, opere_decise) e le pagine li leggono da lì (23/11/2026)
+                o = {k: v for k, v in o.items() if k not in ("nota_usa", "conferma_usa")}
                 tenute.append(o)
                 continue
             if m and m.get("esito") == "tolta" and isinstance(m.get("prima"), int) and m["prima"] < pub:
-                prima = ["a mano: " + "; ".join(m.get("fonti", []))]
+                prima = ["a mano: " + "; ".join(f["nome"] if isinstance(f, dict) else f for f in m.get("fonti", []))]
                 prima_anno = m["prima"]
             else:
                 prima_anno = min((per_fonte[f_] for f_ in prima), default=None)
             if (m and m.get("esito") == "tolta") or len(prima) >= 2:
                 usa_tolte.append({"lista": f"us-{lista}", "qid": o.get("qid"), "titolo": o.get("titolo_it") or o.get("titolo"),
-                                  "uscita": prima_anno, "fonti": prima, "nota": (m or {}).get("nota")})
+                                  "uscita": prima_anno, "fonti": prima, "nota": (m or {}).get("nota"), "wiki_en": o.get("wiki_en")})
                 continue
             tenute.append(o)
         if tenute != d.get("opere", []):

@@ -39,6 +39,24 @@ def applica(a):
     return cambiato
 
 
+_DECISE = None
+
+
+def decise():
+    """Il registro delle opere (scripts/registro.py, opere_decise): anni decisi con le fonti (23/11/2026)."""
+    global _DECISE
+    if _DECISE is None:
+        from registro import opere_decise
+        _DECISE = opere_decise()
+    return _DECISE
+
+
+def anno_opera(q, y):
+    """L'anno di uscita dell'opera nei file dello Storico: quello deciso nel registro, se c'è (regole.anno_deciso)."""
+    from regole import anno_deciso
+    return anno_deciso(q, y, decise())
+
+
 def _riga(r, i_morte, i_inc):
     """Riga di un file (autore come lista). Restituisce True se cambiata."""
     m, inc = morte_dal_registro(r[0], r[i_morte], registro(), ANNO_UE)
@@ -151,23 +169,36 @@ def main():
     cambi = 0
     f = f"{CARTELLA}/opere.json"
     d = json.load(open(f, encoding="utf8"))
+    anni = 0
     for o in d["opere"]:
         for a in o.get("autori", []):
             cambi += applica(a)
+        y = anno_opera(o["qid"], o.get("anno"))
+        if y != o.get("anno"):
+            o["anno"], anni = y, anni + 1
     json.dump(d, open(f, "w", encoding="utf8"), ensure_ascii=False, separators=(",", ":"))
     for f in sorted(glob.glob(f"{CARTELLA}/ricerca/*.json")):
         d = json.load(open(f, encoding="utf8"))
         c = sum(_riga(a, 2, 4) for r in d["opere"] for a in r[5]) + sum(_riga(r, 2, 5) for r in d["autori"])
+        for r in d["opere"]:
+            y = anno_opera(r[0], r[3])
+            if y != r[3]:
+                r[3], c, anni = y, c + 1, anni + 1
         if c:
             json.dump(d, open(f, "w", encoding="utf8"), ensure_ascii=False, separators=(",", ":"))
             cambi += c
     for f in sorted(glob.glob(f"{CARTELLA}/per_autore/*.json")):
         d = json.load(open(f, encoding="utf8"))
         c = sum(_riga(a, 2, 4) for righe in d.values() for r in righe for a in r[5])
+        for righe in d.values():
+            for r in righe:
+                y = anno_opera(r[0], r[3])
+                if y != r[3]:
+                    r[3], c, anni = y, c + 1, anni + 1
         if c:
             json.dump(d, open(f, "w", encoding="utf8"), ensure_ascii=False, separators=(",", ":"))
             cambi += c
-    print("Storico allineato al registro: voci cambiate", cambi)
+    print("Storico allineato al registro: voci cambiate", cambi, "| anni di uscita dal registro delle opere:", anni)
     n, u, k = riordina_ricerca()
     print(f"ricerca riordinata: {n} opere, {u} autori della Duke uniti al loro autore vero, {k} file")
 

@@ -61,7 +61,7 @@ it: {
   lingue: "Per lingua originale", lingueSub: "La lingua in cui l'opera è stata scritta, secondo Wikidata.", lingueSubN: "La lingua in cui l'opera è stata scritta, secondo Wikidata. In ogni lingua, le opere con più visite sulla Wikipedia di quella lingua negli ultimi 12 mesi.", piuLetteLingua: "qui le 60 con più visite su {w}.wikipedia negli ultimi 12 mesi", lingua: "Lingua",
   ritratti: "Ritratti da Wikimedia Commons", ritrattiPd: "in pubblico dominio", ritrattiTranne: "tranne", fotoDi: "foto di",
   vuotoS: "Nessun titolo in questo scaffale.",
-  chiudi: "Chiudi", stati: "Paese per paese", wikidata: "Scheda su Wikidata →", uscita: "uscita nel {y}", uscitaNd: "anno di uscita non noto",
+  chiudi: "Chiudi", stati: "Paese per paese", wikidata: "Scheda su Wikidata →", uscita: "uscita nel {y}", uscitaNd: "anno di uscita non noto", entro: "Un'edizione esiste entro il {y}: lo confermano due cataloghi.",
   sUeSi: "Libero: tutti gli autori sono morti da più di 70 anni.", sUeDal: "Libero dal 1° gennaio {y} (70 anni dalla morte dell'autore).",
   sEsSi: "Libero: in Spagna contano 80 anni dalla morte per chi è morto prima del 1987.", sEsDal: "Libero dal 1° gennaio {y} (in Spagna 80 anni dalla morte per chi è morto prima del 1987).",
   sUsSi: "Libero: uscito più di 95 anni fa.", sUsDal: "Libero dal 1° gennaio {y} (95 anni dall'uscita).", sUsSenza: "Libero: l'anno di uscita non è noto, ma l'autore è antico o morto da oltre 170 anni.",
@@ -138,7 +138,7 @@ en: {
   lingue: "By original language", lingueSub: "The language the work was written in, according to Wikidata.", lingueSubN: "The language the work was written in, according to Wikidata. In each language, the works with the most views on that language's Wikipedia over the last 12 months.", piuLetteLingua: "here the 60 with the most views on {w}.wikipedia over the last 12 months", lingua: "Language",
   ritratti: "Portraits from Wikimedia Commons", ritrattiPd: "in the public domain", ritrattiTranne: "except", fotoDi: "photo by",
   vuotoS: "No titles on this shelf.",
-  chiudi: "Close", stati: "Country by country", wikidata: "Wikidata entry →", uscita: "published in {y}", uscitaNd: "year of publication unknown",
+  chiudi: "Close", stati: "Country by country", wikidata: "Wikidata entry →", uscita: "published in {y}", uscitaNd: "year of publication unknown", entro: "An edition exists by {y}: two catalogues confirm it.",
   sUeSi: "Free: all authors died more than 70 years ago.", sUeDal: "Free from 1 January {y} (70 years from the author's death).",
   sEsSi: "Free: in Spain the term is 80 years from death for authors who died before 1987.", sEsDal: "Free from 1 January {y} (in Spain 80 years from death for authors who died before 1987).",
   sUsSi: "Free: published more than 95 years ago.", sUsDal: "Free from 1 January {y} (95 years from publication).", sUsSenza: "Free: the year of publication is unknown, but the author is ancient or died more than 170 years ago.",
@@ -239,6 +239,7 @@ function coautori(o) {
 function pulisciAnno(o) {
   coautori(o);
   o.y = REGOLE_PAESI.annoOperaCredibile(o.y, o.au);   // anni impossibili rispetto alla morte degli autori: scripts/regole.py
+  o.y = REGOLE_PAESI.annoDeciso(o.q, o.y, D.decise);   // anno deciso nel registro delle opere, anche se i file sono vecchi (23/11/2026)
   return o;
 }
 
@@ -326,7 +327,7 @@ function testoStato(o, c) {
 function apriOpera(o) {
   const righe = ["it", "fr", "de", "es", "uk", "us"].map((c) => {
     const st = stato(o, c);
-    const extra = st.note.filter((k) => k !== "sMpf" && k !== "sCoaut" && k !== "sConfine" && k !== "sUsNo" && k !== "sUsNd" && !(st.s === "ver" && k === "sUkPostumo")).map((k) => h("span", { style: "display:block;margin-top:4px;font-size:13px;color:#5C5C66" }, L[k]));
+    const extra = st.note.filter((k) => k !== "sMpf" && k !== "sCoaut" && k !== "sConfine" && k !== "sUsNo" && k !== "sUsNd" && !(st.s === "ver" && k === "sUkPostumo") && !(k === "sUsPrima" && ((D.decise || {})[o.q] || {}).tipo === "uscita")).map((k) => h("span", { style: "display:block;margin-top:4px;font-size:13px;color:#5C5C66" }, L[k]));
     return h("li", {}, h("span", { class: "p" }, L.paesi[c], " ", badge(st)), h("span", {}, testoStato(o, c), extra));
   });
   const orig = LING === "it" && o.ti && o.t && o.ti !== o.t ? o.t : null;
@@ -355,8 +356,9 @@ function noteOpera(o) {   // gruppi, coautori aggiunti a mano, musica e libretto
     if (m === null || m === undefined) r.push(tr("sMusicaNd", { r: ra, n }));
     else if (REGOLE_PAESI.annoLibero(m, "de") > Y) r.push(tr("sMusica", { r: ra, n, y: REGOLE_PAESI.annoLibero(m, "de") }));
   }
-  const nu = (D.usaNote || {})[o.q];   // 23/11/2026: la stessa nota USA delle liste e del radar (scripts/registro.py, note_usa)
-  if (nu && nu[LING]) r.push(nu[LING]);
+  const dec = (D.decise || {})[o.q];   // 23/11/2026: anno e nota dal registro delle opere (scripts/registro.py, opere_decise)
+  if (dec && dec.nota && dec.nota[LING]) r.push(dec.nota[LING]);
+  if (dec && dec.tipo === "entro" && o.y === null) r.push(tr("entro", { y: dec.anno }));
   return r.length ? h("div", { style: "margin-top:12px;font-size:14px;color:#5C5C66" }, r.map((x) => h("p", { style: "margin:6px 0 0" }, x))) : null;
 }
 function badge(st) {
@@ -639,8 +641,8 @@ async function avvia() {
   // l'anno di oggi, non quello dei dati: il 1° gennaio gli stati devono cambiare subito, anche se lo Storico gira il 2 (22/11/2026)
   D.anno = Math.max(Number(String(P.aggiornato).slice(0, 4)) || 0, D.anno);
   D.lingue = P.lingue || {};
-  try { const reg = await leggi("/data/registro/opere.json"); D.regOpere = reg.coautori || {}; D.verifiche = reg.usa || {}; D.usaNote = reg.usa_note || {}; }
-  catch (e) { D.regOpere = {}; D.verifiche = {}; }   // registro unico: coautori e anni USA
+  try { const reg = await leggi("/data/registro/opere.json"); D.regOpere = reg.coautori || {}; D.verifiche = reg.usa || {}; D.decise = reg.opere || {}; }
+  catch (e) { D.regOpere = {}; D.verifiche = {}; D.decise = {}; }   // registro unico: coautori e anni USA
   try { D.mpf = new Set(Object.keys((await leggi("/data/registro/mpf.json")).autori || {})); } catch (e) { D.mpf = new Set(); }   // «morti per la Francia»
   D.foto = P.foto || {}; D.prossimi = P.prossimi || [];   // prima erano finiti dentro il commento qui sopra: ritratti e «non è ancora libero» non comparivano (21/11/2026)
   const au = P.autori.map((a) => ({ q: a[0], n: nomeQ(a[0], a[1]), m: a[2], an: !!a[3], inc: a[4] || 0, al: !!a[5] }));

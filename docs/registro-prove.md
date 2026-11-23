@@ -1222,3 +1222,49 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
   - prove 1-7 a 0: casi di riferimento 26 su 26, vetrina 8 su 8 controllate;
   - fotografia 0 cambi;
   - nel browser, in italiano e in inglese, le note si vedono in Già pubblici e nel radar, senza errori JS.
+
+## 23/11/2026 — Registro delle opere: un anno e una nota per opera, letti da tutte le pagine
+- **Problema (Marco):** le regole erano uniche, i fatti no. Il ballo aveva 1930 nella lista USA e 1931 (Wikidata) in Già pubblici, perché Già pubblici prendeva dal registro solo lo stato.
+- **Il registro** (data/registro/opere.json, parte nuova «opere», scritta da storico/registro_opere.py con scripts/registro.py, opere_decise).
+  - Contiene 73 opere. Per ognuna:
+    - anno deciso, di tipo «uscita» o «entro» (entro = un'edizione esiste entro quell'anno, dai cataloghi);
+    - «anno_lista», se la versione in lista è un'altra;
+    - tutte le fonti, ciascuna con il link;
+    - nota in italiano e inglese;
+    - da dove viene la decisione.
+  - Le fonti web hanno il link alla pagina. Per i cataloghi (LoC, K10plus, BnF) il link è la ricerca nel catalogo per titolo e autore, perché non danno un link stabile alla scheda.
+  - Le opere tolte dalle liste ora salvano anche il link a Wikipedia.
+  - Non ho toccato il registro degli autori, né spostato o rinominato file.
+- **Chi legge dal registro:**
+  - **Già pubblici:**
+    - i file della ricerca, per autore e scaffali, scritti da storico/applica_registro.py e anche dal giro mensile storico/storico.py;
+    - la pagina stessa (regole.anno_deciso, gemello nel browser annoDeciso), così vale anche se i file sono vecchi;
+    - la scheda dell'opera mostra la nota, o «un'edizione esiste entro il …»;
+    - la frase «conta la data registrata su Wikidata» non compare più quando l'anno viene dal registro.
+  - **Liste USA:** non hanno più copie di note e conferme (applica_registro_liste.py le toglie).
+  - **Pagine dell'anno:** «confermato» e la nota vengono dal registro.
+  - **Radar, IT e EN:** carica il registro solo quando si apre la scheda di un'opera USA.
+  - **Schede autore:** anno, «entro il …» e note vengono dal registro. Ogni nota ha il suo numero, prima si vedeva solo la prima.
+- **Anni che cambiano** (prima → ora, tutti in Già pubblici e nelle schede):
+  - Il ballo 1931 → 1930;
+  - Charlie Chan Carries On 1931 → 1930;
+  - La laguna 1932 → 1896;
+  - Gli idioti 1932 → 1896.
+  - Fotografia: 0 cambi di stato.
+- **Prova 8, bloccante** (scripts/prova_regole.py). Controlla:
+  - il file del registro uguale al calcolo (nessuna copia rimasta indietro);
+  - anno uguale al registro in ricerca, per autore, scaffali, liste USA, pagine dell'anno e schede;
+  - nota presente nelle pagine dell'anno e nelle schede;
+  - nessuna copia della nota nelle liste;
+  - «libero/free» sempre con «negli USA / in the US»;
+  - almeno due fonti per ogni anno deciso;
+  - fonti senza link.
+  - Esito: 73 opere, 55 trovate, 112 confronti, 0 diversi.
+  - Non controllabili 18: opere del registro (dai cataloghi) che non compaiono in nessuna pagina o file.
+  - Prova al contrario: rimesso a mano 1931 a Il ballo e una nota copiata nella lista, la prova li trova tutti e due.
+- **Punti a-d:** ricontrollati, erano già a posto (commit 09cf19d); la prova 8 ora controlla il punto a. Errori medi:
+  - Maßnahme senza nota in Già pubblici: sparito;
+  - anno di Wikidata accanto a «USA libero»: sparito.
+- **Esito:**
+  - prove 1-8 a 0;
+  - browser in italiano e inglese (Già pubblici, radar, pagina 2027, scheda di Brecht, home): nessun errore JS.

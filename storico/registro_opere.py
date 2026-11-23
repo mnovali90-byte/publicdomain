@@ -15,7 +15,7 @@ from datetime import date
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "scripts"))
 from regole import autori_che_contano, opera_antica  # noqa: E402
-from registro import anni_usa, note_usa, dati_eta, consultazione  # noqa: E402
+from registro import anni_usa, opere_decise, dati_eta, consultazione  # noqa: E402
 
 Y = date.today().year
 
@@ -94,7 +94,8 @@ def main():
                "coautori": opere,
                "via": consultazione(),
                "usa": anni_usa(),
-               "usa_note": note_usa()}, open("data/registro/opere.json", "w", encoding="utf8"), ensure_ascii=False, separators=(",", ":"))
+               # 23/11/2026: REGISTRO DELLE OPERE, un posto solo per anno deciso, fonti e note (scripts/registro.py, opere_decise)
+               "opere": opere_decise()}, open("data/registro/opere.json", "w", encoding="utf8"), ensure_ascii=False, separators=(",", ":"))
     from collections import Counter
     c = Counter(k for v in opere.values() for k in v)
     print("registro delle opere:", len(opere), "opere con una decisione sui coautori o con musica |", dict(c))

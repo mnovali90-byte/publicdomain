@@ -44,7 +44,7 @@ def fotografia(anno):
             righe.setdefault(r[0], r)
     opere = {}
     for q, r in sorted(righe.items()):
-        o = R.opera_da_riga(r, coaut)
+        o = R.opera_da_riga(r, coaut, reg.get("opere", {}))
         st = [R.stato_opera(o, c, anno, mpf, ver) for c in PAESI]
         v = ver.get(q)
         opere[q] = {

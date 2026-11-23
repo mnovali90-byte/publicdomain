@@ -1561,6 +1561,7 @@ function chiudiBottone() {
   return h("button", { class: "chiudi", type: "button", "aria-label": tr("chiudi"), onclick: () => $("#finestra").close() }, tr("chiudi") + " ✕");
 }
 function mostraFinestra(contenuto) {
+  OPERA_APERTA = null;
   const f = $("#finestra");
   document.body.classList.add("finestra-on");
   f.replaceChildren(contenuto);
@@ -1918,8 +1919,18 @@ function trovaOpera(q) {
   }
   return null;
 }
+// REGISTRO DELLE OPERE (23/11/2026): anno deciso, fonti e note in un posto solo (data/registro/opere.json, «opere»).
+// Si carica solo quando si apre la scheda di un'opera USA, perché il file è grande.
+let REG_OPERE = null, REG_OPERE_CARICA = null, OPERA_APERTA = null;
+function regOpere() {
+  if (!REG_OPERE_CARICA) REG_OPERE_CARICA = leggi("/data/registro/opere.json").then((r) => { REG_OPERE = r.opere || {}; }).catch(() => { REG_OPERE = {}; });
+  return REG_OPERE_CARICA;
+}
 function mostraOpera(t) {
   const { o, anno, pub } = t;
+  if (REG_OPERE === null) regOpere().then(() => { if (OPERA_APERTA === t && document.querySelector(".scheda")) mostraOpera(t); });
+  const dec = (REG_OPERE || {})[o.qid] || {};
+  const nota = dec.nota && dec.nota[LING === "en" ? "en" : "it"];
   const autori = (o.autori || []).map((a, i) => {
     const hit = trovaAutore(a.qid);
     return [i ? ", " : "", hit ? h("button", { class: "collegamento", type: "button", onclick: () => apriAutore(a.qid) }, a.nome) : a.nome];
@@ -1939,13 +1950,14 @@ function mostraOpera(t) {
           ...riga(ot("regola"), ot("regolaTesto")),
           ...riga(ot("semplice"), ot("semplicetesto", { a: anno, p: pub })),
           ...riga(ot("attenzione"), ot("attenzioneTesto")),
-          ...(o.nota_usa && o.nota_usa[LING === "en" ? "en" : "it"] ? riga(LING === "en" ? "Note" : "Nota", o.nota_usa[LING === "en" ? "en" : "it"]) : []),
+          ...(nota ? riga(LING === "en" ? "Note" : "Nota", nota) : []),
           ...(autori.length ? riga((o.autori || []).length > 1 ? ot("autori") : ot("autore"), autori) : []),
           ...(o.visite_en ? riga("Wikipedia", ot("visite", { n: n(o.visite_en) })) : [])),
         h("div", { class: "azioni" },
           o.wiki_en ? h("a", { class: "collegamento", href: o.wiki_en, target: "_blank", rel: "noopener" }, ot("wiki")) : null,
           prima ? h("button", { class: "collegamento", type: "button", onclick: () => apriAutore(prima.qid) }, ot("schedaAutore")) : null),
         h("p", { class: "sotto", style: "margin-top:18px;font-size:13px" }, ot("fonti") + ": " + ot("fontiTesto"))))));
+  OPERA_APERTA = t;   // dopo mostraFinestra, che lo azzera
   return true;
 }
 function disegnaGiur() {

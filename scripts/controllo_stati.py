@@ -54,7 +54,7 @@ def main(stampa=True):
     per_aut = {}
     for f in sorted(glob.glob(str(RADICE / "data" / "storico" / "ricerca" / "*.json"))):
         for r in (_l(f, {}) or {}).get("opere", []):
-            o = R.opera_da_riga(r, reg_op.get("coautori", {}))
+            o = R.opera_da_riga(r, reg_op.get("coautori", {}), reg_op.get("opere", {}))
             for au in r[5]:
                 for t in (r[1], r[2]):
                     if t:

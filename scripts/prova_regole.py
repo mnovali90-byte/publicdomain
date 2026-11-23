@@ -102,7 +102,7 @@ const mpf = new Set(C.mpf), out = [];
 for (const o of C.opere) { for (const c of C.paesi) out.push(R.statoOpera(o, c, C.oggi, mpf, C.ver)); out.push(R.liberaUeOpera(o, C.oggi)); }
 console.log(JSON.stringify(out));
 """
-_norm = [R.opera_da_riga(r, _reg.get("coautori", {})) for r in _righe]
+_norm = [R.opera_da_riga(r, _reg.get("coautori", {}), _reg.get("opere", {})) for r in _righe]
 # anno_opera_credibile: confronto anche sugli anni grezzi
 CORPO3b = r"""
 const R = window.REGOLE_PAESI, C = JSON.parse(require("fs").readFileSync(process.argv[2], "utf8"));
@@ -239,6 +239,132 @@ import controllo_stati  # noqa: E402
 errori += [f"scheda contro le regole: {x}" for x in controllo_stati.main(stampa=True)]
 # ---------------------------------------------------------------- 7. liste e calendario contro il registro unico (22/11/2026)
 errori += [f"dati contro il registro: {x}" for x in controllo_stati.controlla_liste(stampa=True)]
+
+# ---------------------------------------------------------------- 8. registro delle opere: un anno e una nota, uguali ovunque (23/11/2026)
+# Per ogni opera del registro delle opere (data/registro/opere.json, «opere»; scripts/registro.py, opere_decise):
+#   - l'anno mostrato in Già pubblici (file della ricerca, file per autore, scaffali), nelle liste USA, nella pagina dell'anno
+#     e nelle schede autore è quello del registro;
+#   - la nota del registro compare dove si mostra l'opera (pagina dell'anno, schede autore) e le liste non ne hanno copie;
+#   - ogni nota che dice «libero/libera» dice dove («negli USA» / «in the US»);
+#   - il registro scritto nel file è uguale a quello che calcola scripts/registro.py (niente copie rimaste indietro).
+import html as _html  # noqa: E402
+import registro as _registro  # noqa: E402
+_dec = _registro.opere_decise()
+no8, nc8, conti8 = [], [], {"opere": 0, "confronti": 0}
+if json.loads(json.dumps(_dec)) != _reg.get("opere"):
+    no8.append("data/registro/opere.json («opere») è diverso da quello che calcola scripts/registro.py: rilanciare storico/registro_opere.py")
+_uscita = {q: x["anno"] for q, x in _dec.items() if x.get("tipo") == "uscita" and isinstance(x.get("anno"), int)}
+for q, x in _dec.items():
+    n = x.get("nota") or {}
+    if n:
+        if re.search(r"\blibe(r[oaie]|ra)\b|si liber", n.get("it", "")) and "USA" not in n.get("it", ""):
+            no8.append(f"{q}: la nota italiana dice «libero» ma non dice dove («negli USA»)")
+        if re.search(r"\bfree\b", n.get("en", "")) and " US" not in n.get("en", ""):
+            no8.append(f"{q}: la nota inglese dice «free» ma non dice dove («in the US»)")
+        if not n.get("it") or not n.get("en"):
+            no8.append(f"{q}: nota senza italiano o senza inglese")
+    if x.get("tipo") == "uscita" and len(x.get("fonti", [])) < 2:
+        no8.append(f"{q}: anno deciso con meno di due fonti")
+    senza = [f["nome"] for f in x.get("fonti", []) if not f.get("link")]
+    if senza:
+        nc8.append(f"{q}: fonti senza link: {'; '.join(senza)}")
+# Già pubblici: file della ricerca, file per autore, scaffali
+_visti8 = set()
+for f in sorted(glob.glob(str(RADICE / "data" / "storico" / "ricerca" / "*.json"))) + sorted(glob.glob(str(RADICE / "data" / "storico" / "per_autore" / "*.json"))):
+    d = json.load(open(f, encoding="utf-8"))
+    righe = d["opere"] if "opere" in d and isinstance(d["opere"], list) and (not d["opere"] or isinstance(d["opere"][0], list)) else [r for v in d.values() for r in v]
+    for r in righe:
+        if r[0] in _dec and r[0] not in _uscita:
+            _visti8.add(r[0])   # «entro»: la scheda dell'opera in Già pubblici lo dice quando manca l'anno di uscita
+        if r[0] in _uscita:
+            conti8["confronti"] += 1
+            _visti8.add(r[0])
+            if r[3] != _uscita[r[0]]:
+                no8.append(f"{r[0]} «{r[1]}»: {Path(f).relative_to(RADICE)} dice {r[3]}, il registro {_uscita[r[0]]}")
+_pj = json.load(open(RADICE / "data" / "storico" / "pagina.json", encoding="utf-8"))
+for r in _pj.get("opere", []):
+    if r[0] in _uscita:
+        conti8["confronti"] += 1
+        if r[3] != _uscita[r[0]]:
+            no8.append(f"{r[0]} «{r[1]}»: scaffali di Già pubblici dicono {r[3]}, il registro {_uscita[r[0]]}")
+# liste USA e pagine dell'anno
+for f in sorted((RADICE / "data").glob("us-[0-9][0-9][0-9][0-9].json")):
+    d = json.load(open(f, encoding="utf-8"))
+    pub, an = d.get("anno_pubblicazione"), f.stem[3:]
+    pag = {lang: (RADICE / (f"pubblico-dominio-{an}" if lang == "it" else f"en/public-domain-{an}") / "index.html") for lang in ("it", "en")}
+    pag = {k: _html.unescape(v.read_text(encoding="utf-8")) if v.exists() else "" for k, v in pag.items()}
+    for o in d.get("opere", []):
+        if "nota_usa" in o or "conferma_usa" in o:
+            no8.append(f"{f.name}: {o['qid']} ha ancora una copia della nota o della conferma (devono stare solo nel registro)")
+        x = _dec.get(o["qid"])
+        if not x:
+            continue
+        _visti8.add(o["qid"])
+        conti8["confronti"] += 1
+        anno_l = x.get("anno_lista") or (x.get("anno") if x.get("tipo") == "uscita" else None)
+        if anno_l is not None and anno_l != pub:
+            no8.append(f"{f.name}: {o['qid']} è nella lista dei libri del {pub}, ma il registro dice {anno_l} (manca «anno_lista» o l'opera non va qui)")
+        for lang, h8 in pag.items():
+            m8 = re.search(r'<li class="row"[^>]*>(?:(?!</li>).)*?#/opera/' + o["qid"] + r'".*?</li>', h8, re.S)
+            if not m8:
+                continue
+            conti8["confronti"] += 1
+            riga = m8.group(0)
+            nota = (x.get("nota") or {}).get(lang)
+            if nota and nota not in riga:
+                no8.append(f"pagina {an} ({lang}): {o['qid']} senza la nota del registro")
+            if anno_l is not None and str(anno_l) not in re.sub(r"<[^>]+>", " ", riga):
+                no8.append(f"pagina {an} ({lang}): {o['qid']} non mostra l'anno del registro {anno_l}")
+# schede autore: anno nella tabella delle opere e nota
+import pagine as _pg  # noqa: E402
+for f in sorted((RADICE / "data").glob("[0-9][0-9][0-9][0-9].json")):
+    for a in json.load(open(f, encoding="utf-8")).get("autori", []):
+        for o in a.get("opere", [])[:10]:
+            og = _pg.opera_gp(a, o)
+            ks = f"{a.get('wikidata')}|{o.get('titolo')}"
+            if og and og["q"] in _dec:
+                k8 = og["q"]
+            elif ks in _dec or any(x.get("scheda") == ks for x in _dec.values()):
+                k8 = ks if ks in _dec else next(q for q, x in _dec.items() if x.get("scheda") == ks)
+                og = {"q": k8}
+            else:
+                continue
+            x = _dec[k8]
+            for lang, cart in (("it", "autore"), ("en", "en/author")):
+                pg8 = a.get("pagina") if lang == "it" else a.get("pagina_en")
+                if not pg8:
+                    continue   # autore senza scheda
+                fs = RADICE / cart / pg8 / "index.html"
+                if not fs.exists():
+                    nc8.append(f"{og['q']}: scheda di {a.get('nome')} ({lang}) non trovata")
+                    continue
+                h8 = _html.unescape(fs.read_text(encoding="utf-8"))
+                _visti8.add(og["q"])
+                t = o.get("titolo") if lang == "it" else o.get("titolo_en") or o.get("titolo")
+                conti8["confronti"] += 1
+                m8 = re.search(r'<li><span class="t">' + re.escape(t) + r'(?:<sup[^>]*>\d+</sup>)*</span><span class="y">([^<]*)</span>', h8)
+                if m8 and x.get("tipo") == "uscita" and m8.group(1).strip() != str(x["anno"]):
+                    no8.append(f"scheda {a.get('nome')} ({lang}): «{t}» mostra {m8.group(1)}, il registro {x['anno']}")
+                if m8 and x.get("tipo") == "entro" and not m8.group(1).strip():
+                    pass   # c'è un anno di uscita credibile: «entro» serve solo quando manca
+                elif m8 and x.get("tipo") == "entro" and str(x["anno"]) not in m8.group(1) and not m8.group(1).strip().isdigit():
+                    no8.append(f"scheda {a.get('nome')} ({lang}): «{t}» mostra «{m8.group(1)}», il registro «entro il {x['anno']}»")
+                if not m8:
+                    nc8.append(f"scheda {a.get('nome')} ({lang}): «{t}» non trovata nella tabella delle opere")
+                nota = (x.get("nota") or {}).get(lang)
+                if nota and nota[0].lower() + nota[1:] not in h8:
+                    no8.append(f"scheda {a.get('nome')} ({lang}): «{t}» senza la nota del registro")
+conti8["opere"] = len(_visti8)
+_mai = [q for q in _dec if q not in _visti8]
+print(f"8. Registro delle opere: {len(_dec)} opere nel registro, {conti8['opere']} trovate nelle pagine e nei file, {conti8['confronti']} confronti; "
+      f"diversi dal registro: {len(no8)}; non controllabili: {len(nc8) + len(_mai)}")
+for x in no8 + nc8:
+    print("   ", x)
+if _mai:
+    print("    non mostrate:", "; ".join(_mai))
+if _mai:
+    print(f"    non mostrate in nessuna pagina o file controllato (opere senza codice nelle schede o fuori da Già pubblici): {len(_mai)}")
+errori += no8
 
 for e in errori:
     print("ERRORE:", e)

@@ -17,6 +17,10 @@ window.REGOLE_PAESI = (() => {
   // ---- regole per opera: gemelle di stato_opera, libera_ue_opera, anno_opera_credibile in scripts/regole.py ----
   const vecchio = (x, oggi, paese) => x <= oggi - (paese === "es" ? C.OPERA_VECCHIA_ANNI_ES : C.OPERA_VECCHIA_ANNI) - 1;
   const nn = (v) => v !== null && v !== undefined;
+  const annoDeciso = (q, y, decise) => {
+    const d = (decise || {})[q];
+    return d && d.tipo === "uscita" && Number.isInteger(d.anno) ? d.anno : y;
+  };
   const annoOperaCredibile = (y, au) => {
     if (!nn(y)) return null;
     const morti = au.filter((a) => !a.an && nn(a.m)).map((a) => a.m);
@@ -95,5 +99,5 @@ window.REGOLE_PAESI = (() => {
     return { s: "si", note, r: note.includes("sUk2039") ? "uk_2039" : "morte" };
   };
   return Object.assign({}, C, { anniProtezione, annoLibero, mortiLiberiNel, annoLiberoUsa, pubblicateLibereUsaNel, paesiAlleati,
-    notaTrattatoFlag, notaTrattato, statoOpera, liberaUeOpera, annoOperaCredibile, faseSito });
+    notaTrattatoFlag, notaTrattato, statoOpera, liberaUeOpera, annoOperaCredibile, annoDeciso, faseSito });
 })();
