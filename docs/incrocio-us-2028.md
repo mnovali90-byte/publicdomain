@@ -3,8 +3,8 @@
 Solo rapporto: niente cambia nel sito. Regola `regole.incrocio_opera`, collaudata in docs/collaudo-incrocio.md.
 
 - Opere: 175
-- conferma: 12
-- da decidere: 163
+- conferma: 14
+- da decidere: 161
 
 | Esito | Opera | Anno | Perché | Visite (en) |
 |---|---|---|---|---|
@@ -15,6 +15,8 @@ Solo rapporto: niente cambia nel sito. Regola `regole.incrocio_opera`, collaudat
 | conferma | The Sowers of the Thunder (Q7765614) | 1932 | prima uscita 1932 da isfdb, wiki | 1414 |
 | conferma | Il testamento di Athammaus (Q7768564) | 1932 | prima uscita 1932 da isfdb, wiki | 1257 |
 | conferma | The Queer Story of Brownlow's Newspaper (Q7759037) | 1932 | prima uscita 1932 da isfdb, wiki | 1194 |
+| conferma | Music (Q16387178) | 1932 | prima uscita 1932 da rivista, wiki | 538 |
+| conferma | Orache (Q7099218) | 1932 | prima uscita 1932 da rivista, wiki | 318 |
 | conferma | Le ali notturne (Q3828461) | 1932 | prima uscita 1932 da isfdb, wiki | 0 |
 | conferma | The Trap (Q19101057) | 1932 | prima uscita 1932 da isfdb, wiki | 0 |
 | conferma | Le Cripte di Yoh-Vombis (Q19101656) | 1932 | prima uscita 1932 da isfdb, wiki | 0 |
@@ -27,7 +29,7 @@ Solo rapporto: niente cambia nel sito. Regola `regole.incrocio_opera`, collaudat
 | da decidere | Il pericolo senza nome (Q957248) |  | meno di due fonti indipendenti sull'anno | 56281 |
 | da decidere | Cold Comfort Farm (Q5142221) |  | meno di due fonti indipendenti sull'anno | 47240 |
 | da decidere | L'ideologia tedesca (Q470600) |  | meno di due fonti indipendenti sull'anno | 46607 |
-| da decidere | The Concept of the Political (Q7727278) |  | meno di due fonti indipendenti sull'anno | 40408 |
+| da decidere | The Concept of the Political (Q7727278) |  | un anno più vecchio senza due fonti indipendenti d'accordo, o puntate su più anni | 40408 |
 | da decidere | Miss Marple e i tredici problemi (Q934396) |  | meno di due fonti indipendenti sull'anno | 40048 |
 | da decidere | La marcia di Radetzky (Q610428) |  | meno di due fonti indipendenti sull'anno | 39404 |
 | da decidere | Morte nel pomeriggio (Q1970223) |  | meno di due fonti indipendenti sull'anno | 36535 |
@@ -79,13 +81,13 @@ Solo rapporto: niente cambia nel sito. Regola `regole.incrocio_opera`, collaudat
 | da decidere | Dwellers in the Mirage (Q5318076) |  | meno di due fonti indipendenti sull'anno | 3132 |
 | da decidere | Il diario rivelatore (Q8199988) |  | meno di due fonti indipendenti sull'anno | 3129 |
 | da decidere | Christmas Pudding (Q16385280) |  | meno di due fonti indipendenti sull'anno | 3099 |
-| da decidere | Gloria (Q1979886) |  | meno di due fonti indipendenti sull'anno | 3092 |
+| da decidere | Gloria (Q1979886) |  | un anno più vecchio senza due fonti indipendenti d'accordo, o puntate su più anni | 3092 |
 | da decidere | An Essay on the Nature and Significance of Economic Science (Q868892) |  | meno di due fonti indipendenti sull'anno | 2779 |
 | da decidere | La lettera misteriosa (Q3412860) |  | meno di due fonti indipendenti sull'anno | 2726 |
 | da decidere | The Black Swan (Q85806586) |  | meno di due fonti indipendenti sull'anno | 2606 |
 | da decidere | Keeper of the Keys (Q6383214) |  | meno di due fonti indipendenti sull'anno | 2581 |
 | da decidere | The Fun of It (Q7735448) |  | meno di due fonti indipendenti sull'anno | 2437 |
-| da decidere | The 35th of May, or Conrad's Ride to the South Seas (Q1192045) |  | meno di due fonti indipendenti sull'anno | 2428 |
+| da decidere | The 35th of May, or Conrad's Ride to the South Seas (Q1192045) |  | un anno più vecchio senza due fonti indipendenti d'accordo, o puntate su più anni | 2428 |
 | da decidere | Wild Talents (Q8000821) |  | meno di due fonti indipendenti sull'anno | 2382 |
 | da decidere | Tarzan and the City of Gold (Q15032732) |  | meno di due fonti indipendenti sull'anno | 2361 |
 | da decidere | Three Drops of Blood (Q5677810) |  | meno di due fonti indipendenti sull'anno | 2325 |
@@ -113,7 +115,6 @@ Solo rapporto: niente cambia nel sito. Regola `regole.incrocio_opera`, collaudat
 | da decidere | L'affare Saint-Fiacre (Q1325013) |  | meno di due fonti indipendenti sull'anno | 625 |
 | da decidere | The Two Sources of Morality and Religion (Q3232049) |  | meno di due fonti indipendenti sull'anno | 588 |
 | da decidere | Sudden Death (Q110732464) |  | meno di due fonti indipendenti sull'anno | 573 |
-| da decidere | Music (Q16387178) |  | meno di due fonti indipendenti sull'anno | 538 |
 | da decidere | The Night Club (Q17173648) |  | meno di due fonti indipendenti sull'anno | 535 |
 | da decidere | Celia en el colegio (Q5058034) |  | meno di due fonti indipendenti sull'anno | 520 |
 | da decidere | Menino de engenho (Q6817094) |  | meno di due fonti indipendenti sull'anno | 519 |
@@ -130,7 +131,6 @@ Solo rapporto: niente cambia nel sito. Regola `regole.incrocio_opera`, collaudat
 | da decidere | Uno di noi (Q109167813) |  | meno di due fonti indipendenti sull'anno | 346 |
 | da decidere | The House on the Dune (Q3210349) |  | meno di due fonti indipendenti sull'anno | 332 |
 | da decidere | Evensong (Q86753954) |  | meno di due fonti indipendenti sull'anno | 319 |
-| da decidere | Orache (Q7099218) |  | meno di due fonti indipendenti sull'anno | 318 |
 | da decidere | Ballerina (Q96373014) |  | meno di due fonti indipendenti sull'anno | 313 |
 | da decidere | Pertemuan Jodoh (Q7170795) |  | meno di due fonti indipendenti sull'anno | 305 |
 | da decidere | Liberty Bar (Q3237799) |  | meno di due fonti indipendenti sull'anno | 297 |
@@ -177,9 +177,9 @@ Solo rapporto: niente cambia nel sito. Regola `regole.incrocio_opera`, collaudat
 | da decidere | Truth and Justice IV (Q16407465) |  | meno di due fonti indipendenti sull'anno | 0 |
 | da decidere | Lerne lachen ohne zu weinen (Q19217469) |  | meno di due fonti indipendenti sull'anno | 0 |
 | da decidere | The Broken Mirror (Q29405101) |  | meno di due fonti indipendenti sull'anno | 0 |
-| da decidere | De minuit à sept heures (Q89784584) |  | meno di due fonti indipendenti sull'anno | 0 |
+| da decidere | De minuit à sept heures (Q89784584) |  | un anno più vecchio senza due fonti indipendenti d'accordo, o puntate su più anni | 0 |
 | da decidere | Supplementary Collected Stele Biographies (Q107359351) |  | meno di due fonti indipendenti sull'anno | 0 |
 | da decidere | Il passeggero del "Polarlys" (Q3225292) |  | meno di due fonti indipendenti sull'anno | 0 |
 | da decidere | Il diabolico terzetto (Q3793759) |  | meno di due fonti indipendenti sull'anno | 0 |
-| da decidere | La Forêt des aventures (Q104509066) |  | meno di due fonti indipendenti sull'anno | 0 |
-| da decidere | Noce i dnie (Q11792659) |  | meno di due fonti indipendenti sull'anno | 0 |
+| da decidere | La Forêt des aventures (Q104509066) |  | un anno più vecchio senza due fonti indipendenti d'accordo, o puntate su più anni | 0 |
+| da decidere | Noce i dnie (Q11792659) |  | un anno più vecchio senza due fonti indipendenti d'accordo, o puntate su più anni | 0 |

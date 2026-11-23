@@ -667,6 +667,9 @@ def incrocio_opera(pub, lingua, per_fonte, puntate=None, date_wikidata=None, fat
         pp = f.get("parte_prima")
         if pp and (pp.get("fonti") or 0) >= 2:
             return {"esito": "nota", "anno": pub, "motivo": "una parte uscita prima"}
+        if f.get("indizi_prima"):   # 23/11/2026: una sola fonte dice che qualcosa è uscito prima: non si conferma
+            return {"esito": "da decidere", "anno": None,
+                    "motivo": f"una sola fonte indica un'uscita più vecchia ({min(f['indizi_prima'])})"}
         return {"esito": "conferma", "anno": pub, "motivo": "prima pubblicazione documentata"}
     # voti dai dati raccolti: gruppo -> anni
     voti, deboli = {}, []
@@ -753,6 +756,10 @@ def fatti_da_ricerca(voci, pub):
     val = {v["testi_nuovi"] for v in rac}
     if len(val) == 1 and len({v.get("gruppo") or v.get("fonte") for v in rac}) >= 2:
         f["raccolta"] = {"testi_nuovi": val.pop(), "fonti": len(rac), "anno": min((v["anno"] for v in rac if isinstance(v.get("anno"), int)), default=None)}
+    ind = sorted({v["anno"] for v in voci if isinstance(v.get("anno"), int) and v["anno"] < pub
+                  and v.get("tipo") in ("prima_pubblicazione", "parte_prima", "raccolta")})
+    if ind:
+        f["indizi_prima"] = ind
     vols = {}
     for v in voci:
         if v.get("tipo") == "volume":

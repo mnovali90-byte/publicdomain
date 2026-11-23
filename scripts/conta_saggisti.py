@@ -42,10 +42,10 @@ def cerca(morte):
                 x["professioni"].append(nome)
         time.sleep(2)
     qids = sorted(out)
-    for i in range(0, len(qids), 200):
-        v = " ".join("wd:" + q for q in qids[i:i + 200])
+    for i in range(0, len(qids), 50):   # 50 per volta: con 200 Wikidata non rispondeva (giro del 23/11/2026)
+        v = " ".join("wd:" + q for q in qids[i:i + 50])
         for r in V.sparql(f"""SELECT ?a (COUNT(DISTINCT ?art) AS ?n) WHERE {{ VALUES ?a {{ {v} }}
-                 OPTIONAL {{ ?art schema:about ?a ; schema:isPartOf ?w . ?w wikibase:wikiGroup "wikipedia" }} }} GROUP BY ?a"""):
+                 ?art schema:about ?a ; schema:isPartOf ?w . ?w wikibase:wikiGroup "wikipedia" }} GROUP BY ?a"""):
             out[r["a"]["value"].rsplit("/", 1)[-1]]["wikipedia"] = int(r["n"]["value"])
         for r in V.sparql(f"""SELECT DISTINCT ?a WHERE {{ VALUES ?a {{ {v} }} VALUES ?s {{ {' '.join('wd:' + s for s in SCRITTORI_WD)} }} ?a wdt:P106 ?s }}"""):
             out[r["a"]["value"].rsplit("/", 1)[-1]]["anche_scrittore"] = True

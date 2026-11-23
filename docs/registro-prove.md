@@ -1466,3 +1466,11 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
   - Giudizio: la bibliografia nazionale dà l'anno del libro, non della prima uscita, quindi da sola non conferma (è il caso Black Swan). Esempio: Der Weg zurück, K10plus 1931, ma secondo la verifica a mano (data/verifiche_opere.json) era uscito a puntate sulla Vossische Zeitung fra dicembre 1930 e gennaio 1931.
   - La rivista su Wikidata c'è per poche opere.
 - **Dehkhoda:** Encyclopaedia Iranica letta su iranicaonline.org (26 febbraio 1956). Scheda da costruire con scripts/scheda_autore.py e .github/workflows/scheda-autore.yml (parte con docs/registro/passo-scheda.txt); non lanciato.
+
+## 23/11/2026 — Ricerca sul web, lista USA 2027, blocco 1 (18 opere)
+- **Esito** (docs/ricerca-web/blocco-01-2027.md): 12 conferma, 2 nota (Wyatt Earp, The Face in the Abyss), 4 da decidere. Fonti in disaccordo solo per Living My Life (volume 2: 1931 o 1934).
+- **Regola rafforzata** (regole.incrocio_opera e fatti_da_ricerca): se anche una sola fonte indica un'uscita più vecchia, non si conferma («da decidere»). Caso: If It Had Happened Otherwise.
+- **Lista 2027:** delle 111, conferma 32, nota 2, da decidere 77. Collaudo sulle 55 invariato (2 giuste, 0 sbagliate). Lista 2028: 14 conferma (prima 12; la differenza viene dai dati del giro fonti-prima-uscita, non ricontrollata a mano).
+- **Proposta** in docs/giri-automatici.md: verifica delle opere USA per la lista 2029, da gennaio 2027.
+- **Conteggio dei saggisti:** il giro è fallito alla richiesta del numero di Wikipedia (Wikidata non ha risposto a 200 autori per volta). Corretto: 50 per volta. Da rilanciare con l'ok di Marco.
+- **Nel sito:** niente cambiato. Prove 1-8 a 0.

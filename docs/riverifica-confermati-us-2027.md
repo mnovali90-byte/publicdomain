@@ -3,32 +3,19 @@
 Solo rapporto: niente cambia nel sito. Opere segnate «ok» il 20/11/2026 e ancora in lista, ripassate per `regole.incrocio_opera` con la regola del 23/11/2026 (per confermare serve una prima pubblicazione documentata).
 
 - Opere: 111
-- conferma: 20
-- da decidere: 91
+- conferma: 32
+- da decidere: 77
+- nota: 2
 - «Già a mano»: l'opera è anche fra le decisioni a mano del 23/11/2026 (data/verifiche_opere.json), che valgono più della regola.
 
 | Esito | Opera | Perché | Visite (en) | Già a mano | Fonti provate il 20/11 |
 |---|---|---|---|---|---|
 | da decidere | La via del ritorno (Q1197989) | un anno più vecchio senza due fonti indipendenti d'accordo, o puntate su più anni | 31413 | sì | cce, wikipedia |
 | da decidere | La chiave di vetro (Q6035197) | un anno più vecchio senza due fonti indipendenti d'accordo, o puntate su più anni | 24371 | sì | cce, wikipedia, isfdb |
-| da decidere | Green Grow the Lilacs (Q4190252) | meno di due fonti indipendenti sull'anno | 20523 |  | cce, wikipedia, isfdb |
-| da decidere | The Solar Anus (Q7765142) | meno di due fonti indipendenti sull'anno | 15488 |  | cce, bnf, wikipedia, isfdb |
-| da decidere | Fuoco fatuo (Q887062) | meno di due fonti indipendenti sull'anno | 14622 |  | cce, bnf, wikipedia, isfdb |
 | da decidere | The Sleepwalkers (Q1216006) | meno di due fonti indipendenti sull'anno | 13905 |  | cce, k10plus, wikipedia, isfdb |
-| da decidere | Volo di notte (Q1070729) | meno di due fonti indipendenti sull'anno | 13747 |  | cce, bnf, wikipedia, isfdb |
-| da decidere | Cinque piste false (Q2564588) | meno di due fonti indipendenti sull'anno | 10592 |  | cce, wikipedia, isfdb |
-| da decidere | Un'impiccagione (Q2020355) | meno di due fonti indipendenti sull'anno | 10533 |  | cce, wikipedia, isfdb |
 | da decidere | If It Had Happened Otherwise (Q5990586) | meno di due fonti indipendenti sull'anno | 10516 |  | cce, wikipedia, isfdb |
-| da decidere | Wyatt Earp: Frontier Marshal (Q8039491) | meno di due fonti indipendenti sull'anno | 10297 |  | cce, wikipedia, isfdb |
-| da decidere | L'ammiraglio alla deriva (Q265042) | meno di due fonti indipendenti sull'anno | 9800 |  | cce, wikipedia, isfdb |
-| da decidere | Il volto nell'abisso (Q3228173) | meno di due fonti indipendenti sull'anno | 9251 |  | cce, wikipedia, isfdb |
 | da decidere | Aforismi di Zürau (Q1141993) | meno di due fonti indipendenti sull'anno | 8470 |  | cce, k10plus, wikipedia, isfdb |
 | da decidere | Living My Life (Q3290152) | meno di due fonti indipendenti sull'anno | 7493 |  | cce, wikipedia |
-| da decidere | Police at the Funeral (Q3210396) | meno di due fonti indipendenti sull'anno | 7417 |  | cce, wikipedia, isfdb |
-| da decidere | Il castello del cappellaio (Q2498251) | meno di due fonti indipendenti sull'anno | 7285 |  | cce, wikipedia, isfdb |
-| da decidere | Ogni passione spenta (Q3881234) | meno di due fonti indipendenti sull'anno | 6210 |  | cce, wikipedia, isfdb |
-| da decidere | Dry September (Q5309555) | meno di due fonti indipendenti sull'anno | 5723 |  | cce, wikipedia, isfdb |
-| da decidere | Lo! (Q6663021) | meno di due fonti indipendenti sull'anno | 5625 |  | cce, wikipedia, isfdb |
 | da decidere | A Little Fable (Q1746433) | meno di due fonti indipendenti sull'anno | 5230 |  | cce, k10plus, wikipedia, isfdb |
 | da decidere | Il ranch delle ombre (Q2836696) | meno di due fonti indipendenti sull'anno | 4917 |  | cce, wikipedia, isfdb |
 | da decidere | Shadows on the Rock (Q7460836) | meno di due fonti indipendenti sull'anno | 4804 |  | cce, wikipedia, isfdb |
@@ -106,8 +93,22 @@ Solo rapporto: niente cambia nel sito. Opere segnate «ok» il 20/11/2026 e anco
 | conferma | Un messaggio dagli spiriti (Q571244) | prima pubblicazione documentata | 55848 |  | cce, wikipedia, isfdb |
 | conferma | Santuario (Q1212765) | prima pubblicazione documentata | 48896 |  | cce, wikipedia, isfdb |
 | conferma | The Joy of Cooking (Q2917079) | prima pubblicazione documentata | 41756 |  | cce, wikipedia, isfdb |
+| conferma | Green Grow the Lilacs (Q4190252) | prima pubblicazione documentata | 20523 |  | cce, wikipedia, isfdb |
+| conferma | The Solar Anus (Q7765142) | prima pubblicazione documentata | 15488 |  | cce, bnf, wikipedia, isfdb |
+| conferma | Fuoco fatuo (Q887062) | prima pubblicazione documentata | 14622 |  | cce, bnf, wikipedia, isfdb |
+| conferma | Volo di notte (Q1070729) | prima pubblicazione documentata | 13747 |  | cce, bnf, wikipedia, isfdb |
+| conferma | Cinque piste false (Q2564588) | prima pubblicazione documentata | 10592 |  | cce, wikipedia, isfdb |
+| conferma | Un'impiccagione (Q2020355) | prima pubblicazione documentata | 10533 |  | cce, wikipedia, isfdb |
+| nota | Wyatt Earp: Frontier Marshal (Q8039491) | uscita prima solo una parte | 10297 |  | cce, wikipedia, isfdb |
+| conferma | L'ammiraglio alla deriva (Q265042) | prima pubblicazione documentata | 9800 |  | cce, wikipedia, isfdb |
+| nota | Il volto nell'abisso (Q3228173) | uscita prima solo una parte | 9251 |  | cce, wikipedia, isfdb |
 | conferma | The Black Stone (Q7718449) | prima uscita 1931 da isfdb, wiki | 8414 |  | cce, wikipedia, isfdb |
+| conferma | Police at the Funeral (Q3210396) | prima pubblicazione documentata | 7417 |  | cce, wikipedia, isfdb |
 | conferma | La casa misteriosa lassù nella nebbia (Q7766907) | prima uscita 1931 da isfdb, wiki | 7375 |  | cce, wikipedia, isfdb |
+| conferma | Il castello del cappellaio (Q2498251) | prima pubblicazione documentata | 7285 |  | cce, wikipedia, isfdb |
+| conferma | Ogni passione spenta (Q3881234) | prima pubblicazione documentata | 6210 |  | cce, wikipedia, isfdb |
+| conferma | Dry September (Q5309555) | prima pubblicazione documentata | 5723 |  | cce, wikipedia, isfdb |
+| conferma | Lo! (Q6663021) | prima pubblicazione documentata | 5625 |  | cce, wikipedia, isfdb |
 | conferma | I figli della notte (Q7722509) | prima uscita 1931 da isfdb, wiki | 4871 |  | cce, wikipedia, isfdb |
 | conferma | Il racconto di Satampra Zeiros (Q7767973) | prima uscita 1931 da isfdb, wiki | 3561 |  | cce, wikipedia, isfdb |
 | conferma | The Return of the Sorcerer (Q7760465) | prima uscita 1931 da isfdb, wiki | 3392 |  | cce, wikipedia, isfdb |

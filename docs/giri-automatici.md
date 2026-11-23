@@ -151,3 +151,22 @@ Oggi `scripts/regole.py` ha le regole per autore (durate per paese, Spagna, Fran
 - Estendere il sito ai 27 paesi UE seguendo `docs/specifica-ue27.md`: prima un rapporto, senza pubblicare niente.
 - Da studiare: l'articolo 7 della direttiva 2006/116/CE, la regola del termine più breve per le opere di autori di paesi fuori dall'UE (per esempio gli americani). Oggi il sito non ne tiene conto.
 - Da decidere a parte: in Spagna, per i morti nel 1987 di cui si conosce solo l'anno, la specifica dice «da verificare». Oggi il sito applica gli 80 anni per prudenza.
+
+## Proposta (23/11/2026, da approvare): verifica delle opere USA per la lista 2029
+
+Il campione del 2028 ha mostrato che l'anno del libro non basta: serve la prima uscita in assoluto, anche in rivista (docs/campione-conferma-2028.md). La ricerca sul web non si può fare su GitHub: la fa Claude, con la procedura fissa (docs/ricerca-web.md), e decide il codice.
+
+| Quando | Cosa | Chi |
+|---|---|---|
+| 8 gennaio 2027 (dopo la fine festa) | giro `fonti-prima-uscita` con LISTE=2029: dati di Wikidata e bibliografie nella lingua originale, poi incrocio e rapporto (conferma, nota, esce, sposta, da decidere) | GitHub, da solo |
+| da metà gennaio, ogni 2 settimane | un blocco di 15-20 «da decidere», in ordine di visite: risultati in docs/ricerca-web/risultati.json, incrocio rifatto dal codice, rapporto breve del blocco | Claude (attività programmata) |
+| entro il 31 marzo 2027 | le più viste (le prime 40) | |
+| entro il 30 settembre 2027 | tutte le altre | |
+| 1° novembre 2027 | controllo date: incrocio rifatto su tutta la lista; quelle ancora «da decidere» restano sul sito con la nota «anno da verificare» | GitHub, da solo |
+| entro dicembre 2027 | Marco vede solo i casi con fonti in disaccordo | Marco |
+| 7 gennaio 2028 | la pagina 2029 diventa pubblica con gli esiti decisi | GitHub, da solo |
+
+Regole:
+- le decisioni le prende `regole.incrocio_opera`; chi cerca scrive solo cosa dice ogni fonte;
+- il ramo «conferma» si usa solo dopo un campione a caso (seme scritto) con 0 sbagliate;
+- niente cambia sul sito fino alla pubblicazione del 7 gennaio, salvo correzioni straordinarie decise da Marco.
