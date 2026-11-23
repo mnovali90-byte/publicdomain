@@ -631,12 +631,14 @@ INCROCIO_CATALOGHI = {"cce": ("cce", "en"), "loc": ("loc", "en"), "openlibrary":
                       "k10plus": ("k10plus", "de"), "bnf": ("bnf", "fr")}                       # (gruppo, lingua delle edizioni)
 
 
-def incrocio_opera(pub, lingua, per_fonte, puntate=None, date_wikidata=None, fatti=None):
+def incrocio_opera(pub, lingua, per_fonte, puntate=None, date_wikidata=None, fatti=None, extra=None):
     """Decide l'anno USA di un'opera da una lista (pub = anno della lista, es. 1931) incrociando le fonti raccolte.
     per_fonte: {fonte: anno dell'edizione più vecchia trovata}; puntate: [inizio, fine, fonte] se una fonte dice che uscì
     a puntate; date_wikidata: tutti gli anni che Wikidata dà; lingua: codice della lingua originale (en, de, fr...).
     fatti (facoltativo, dalle verifiche): {"prima": {"anno", "fonti": n, "intera": bool}, "raccolta": {"testi_nuovi": bool,
-    "fonti": n}, "volumi": [{"anno", "fonti": n}], "parte_prima": {"anno", "fonti": n}}.
+    "fonti": n}, "volumi": [{"anno", "fonti": n}], "parte_prima": {"anno", "fonti": n}} (si ricavano con fatti_da_ricerca).
+    extra (facoltativo, da data/fonti_prima_uscita.json): {"originale": {"fonte", "anno"}: bibliografia nazionale nella
+    lingua originale; "riviste": [anni di uscita in rivista da Wikidata]; "edizioni": [anni delle edizioni da Wikidata]}.
     Regole: la prima pubblicazione documentata vale più dei cataloghi (i cataloghi confermano); le traduzioni non votano
     (un catalogo vota solo per le opere nella lingua delle sue edizioni); le fonti che si copiano contano una volta;
     Wikidata con più date non vota; raccolta senza testi nuovi = esce, con testi nuovi = resta con nota; volumi uno per
@@ -680,12 +682,17 @@ def incrocio_opera(pub, lingua, per_fonte, puntate=None, date_wikidata=None, fat
             voti.setdefault(INCROCIO_DOCUMENTATE[k], set()).add(y)
         elif k in INCROCIO_CATALOGHI:
             g, lg = INCROCIO_CATALOGHI[k]
-            if lingua == lg:
+            if lingua == lg and not ("naz_" + g) in voti:
                 voti.setdefault(g, set()).add(y)
             else:
                 deboli.append(y)                    # traduzione (o lingua ignota): non vota
     if puntate and isinstance(puntate[0], int):
         deboli.append(puntate[0])
+    ex = extra or {}
+    org = ex.get("originale") or {}
+    if isinstance(org.get("anno"), int):
+        voti.setdefault("naz_" + str(org.get("fonte")), set()).add(org["anno"])   # bibliografia nella lingua originale: vota
+    deboli += [y for y in (ex.get("riviste") or []) + (ex.get("edizioni") or []) if isinstance(y, int)]   # Wikidata: indizi
     minimo = {g: min(a) for g, a in voti.items()}
     prima = [g for g, y in minimo.items() if y < pub]
     if prima or any(y < pub for y in deboli):
@@ -704,12 +711,55 @@ def incrocio_opera(pub, lingua, per_fonte, puntate=None, date_wikidata=None, fat
             if min(tutti) >= Y and punt_ok:
                 return {"esito": "esce", "anno": Y, "motivo": f"due fonti indipendenti danno {Y} ({', '.join(sorted(conta_anni[Y]))}), nessuna più vecchia"}
         return {"esito": "da decidere", "anno": None, "motivo": "un anno più vecchio senza due fonti indipendenti d'accordo, o puntate su più anni"}
-    doc = [g for g in minimo if g in ("duke", "wiki", "isfdb")]
+    # 23/11/2026 (campione dei «conferma» 2028: The Black Swan aveva un racconto del 1931 da cui nasce il romanzo):
+    # Wikidata e i cataloghi non bastano per confermare; serve una prima pubblicazione documentata (Duke, ISFDB, una
+    # rivista con la data su Wikidata, o la ricerca sul web registrata in docs/ricerca-web/risultati.json)
+    riv = [y for y in (extra or {}).get("riviste") or [] if isinstance(y, int)]
+    doc = [g for g in minimo if g in ("duke", "isfdb")] + (["rivista"] if riv and min(riv) == pub else [])
+    if riv and min(riv) == pub:
+        minimo["rivista"] = pub
     a_pub = [g for g, y in minimo.items() if y == pub]
-    if pub in [minimo.get(g) for g in doc] and len(a_pub) >= 2:
+    a_pub = [g for g, y in minimo.items() if y == pub]
+    if doc and pub in [minimo.get(g) for g in doc] and len(a_pub) >= 2:
         return {"esito": "conferma", "anno": pub, "motivo": f"prima uscita {pub} da {', '.join(sorted(a_pub))}"}
     dopo = {g: y for g, y in minimo.items() if y > pub and g in ("duke", "isfdb") or (g == "wiki" and y > pub and len(wd) == 1 and y != pub)}
     return {"esito": "da decidere", "anno": None, "motivo": "meno di due fonti indipendenti sull'anno" if not dopo else "solo cataloghi o una fonte danno un anno più tardo"}
+
+
+def fatti_da_ricerca(voci, pub):
+    """Dai risultati della ricerca sul web (docs/ricerca-web.md, formato fisso) ai «fatti» di incrocio_opera. Chi cerca
+    scrive solo cosa dice ogni fonte; decide questa regola. voci: [{"fonte", "link", "tipo", "anno", "gruppo",
+    "intera", "testi_nuovi", "volume"}]; tipo: prima_pubblicazione | parte_prima | raccolta | volume | edizione.
+    Due voci contano come due fonti solo se hanno «gruppo» diverso (chi copia chi: stesso gruppo)."""
+    f = {}
+    def due(vv):
+        per = {}
+        for v in vv:
+            if isinstance(v.get("anno"), int):
+                per.setdefault(v["anno"], set()).add(v.get("gruppo") or v.get("fonte"))
+        ok = sorted(y for y, g in per.items() if len(g) >= 2)
+        return (ok[0], len(per[ok[0]]), sorted(per)) if ok else (None, 0, sorted(per))
+    intere = [v for v in voci if v.get("tipo") == "prima_pubblicazione" and v.get("intera") is not False]
+    y, n, tutti = due(intere)
+    if y is not None and min(tutti) >= y:            # nessuna fonte dice un anno ancora più vecchio
+        f["prima"] = {"anno": y, "fonti": n, "intera": True}
+    parti = [v for v in voci if v.get("tipo") == "parte_prima" or (v.get("tipo") == "prima_pubblicazione" and v.get("intera") is False)]
+    y2, n2, _ = due(parti)
+    if y2 is not None and y2 < pub:
+        f["parte_prima"] = {"anno": y2, "fonti": n2}
+        if "prima" not in f and not intere:
+            f["prima"] = {"anno": y2, "fonti": n2, "intera": False}
+    rac = [v for v in voci if v.get("tipo") == "raccolta" and isinstance(v.get("testi_nuovi"), bool)]
+    val = {v["testi_nuovi"] for v in rac}
+    if len(val) == 1 and len({v.get("gruppo") or v.get("fonte") for v in rac}) >= 2:
+        f["raccolta"] = {"testi_nuovi": val.pop(), "fonti": len(rac), "anno": min((v["anno"] for v in rac if isinstance(v.get("anno"), int)), default=None)}
+    vols = {}
+    for v in voci:
+        if v.get("tipo") == "volume":
+            vols.setdefault(v.get("volume"), []).append(v)
+    if vols:
+        f["volumi"] = [{"volume": k, "anno": due(vv)[0], "fonti": due(vv)[1]} for k, vv in sorted(vols.items(), key=lambda t: str(t[0]))]
+    return f
 
 
 def esporta_js(percorso):

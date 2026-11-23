@@ -10,6 +10,31 @@ R = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(R / "scripts"))
 import regole as RG   # noqa: E402
 
+
+def extra_da_file(R):
+    """data/fonti_prima_uscita.json (scripts/fonti_prima_uscita.py) e i risultati della ricerca sul web
+    (docs/ricerca-web/risultati.json, docs/ricerca-web.md): {qid: (extra, voci)}."""
+    import json as _j
+    out = {}
+    try:
+        fp = _j.load(open(R / "data" / "fonti_prima_uscita.json", encoding="utf-8")).get("opere", {})
+    except Exception:
+        fp = {}
+    anno = lambda s: int(s[:4]) if s and s[:4].isdigit() else None
+    for q, x in fp.items():
+        w = x.get("wikidata") or {}
+        out[q] = ({"originale": x.get("catalogo") if (x.get("catalogo") or {}).get("anno") else None,
+                   "riviste": [anno(r.get("data")) for r in w.get("riviste", []) if anno(r.get("data"))],
+                   "edizioni": [anno(e.get("data")) for e in w.get("edizioni", []) if anno(e.get("data"))],
+                   "p577": [anno(d) for d in w.get("p577", []) if anno(d)]}, [])
+    try:
+        ric = _j.load(open(R / "docs" / "ricerca-web" / "risultati.json", encoding="utf-8")).get("voci", [])
+    except Exception:
+        ric = []
+    for v in ric:
+        out.setdefault(v.get("qid"), ({}, []))[1].append(v)
+    return out
+
 LINGUE = {"English": "en", "German": "de", "French": "fr"}
 
 
@@ -18,12 +43,15 @@ def main():
     lista = json.load(open(R / "data" / f"us-{anno}.json", encoding="utf-8"))
     ver = json.load(open(R / "data" / "us-anni-verificati.json", encoding="utf-8")).get(anno, {})
     pub = RG.pubblicate_libere_usa_nel(int(anno))
+    ex = extra_da_file(R)
     conta, righe = Counter(), []
     for o in lista["opere"]:
         v = ver.get(o["qid"]) or []
         extra = v[6] if len(v) > 6 and isinstance(v[6], dict) else {}
+        e_, voci = ex.get(o["qid"], ({}, []))
         r = RG.incrocio_opera(pub, LINGUE.get((o.get("lingua") or {}).get("en")), v[5] if len(v) > 5 else {},
-                              extra.get("puntate"), extra.get("date_wikidata"))
+                              extra.get("puntate"), extra.get("date_wikidata") or (e_.get("p577") or None),
+                              fatti=RG.fatti_da_ricerca(voci, pub) if voci else None, extra=e_)
         conta[r["esito"]] += 1
         righe.append((r["esito"], o.get("titolo_it") or o.get("titolo"), o["qid"], r.get("anno"), r["motivo"], o.get("visite_en") or 0))
     md = [f"# Incrocio delle fonti: lista USA {anno} (libri del {pub})", "",

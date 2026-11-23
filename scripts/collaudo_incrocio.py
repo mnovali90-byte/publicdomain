@@ -12,6 +12,31 @@ R = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(R / "scripts"))
 import regole as RG   # noqa: E402
 
+
+def extra_da_file(R):
+    """data/fonti_prima_uscita.json (scripts/fonti_prima_uscita.py) e i risultati della ricerca sul web
+    (docs/ricerca-web/risultati.json, docs/ricerca-web.md): {qid: (extra, voci)}."""
+    import json as _j
+    out = {}
+    try:
+        fp = _j.load(open(R / "data" / "fonti_prima_uscita.json", encoding="utf-8")).get("opere", {})
+    except Exception:
+        fp = {}
+    anno = lambda s: int(s[:4]) if s and s[:4].isdigit() else None
+    for q, x in fp.items():
+        w = x.get("wikidata") or {}
+        out[q] = ({"originale": x.get("catalogo") if (x.get("catalogo") or {}).get("anno") else None,
+                   "riviste": [anno(r.get("data")) for r in w.get("riviste", []) if anno(r.get("data"))],
+                   "edizioni": [anno(e.get("data")) for e in w.get("edizioni", []) if anno(e.get("data"))],
+                   "p577": [anno(d) for d in w.get("p577", []) if anno(d)]}, [])
+    try:
+        ric = _j.load(open(R / "docs" / "ricerca-web" / "risultati.json", encoding="utf-8")).get("voci", [])
+    except Exception:
+        ric = []
+    for v in ric:
+        out.setdefault(v.get("qid"), ({}, []))[1].append(v)
+    return out
+
 LINGUE = {"English": "en", "German": "de", "French": "fr"}
 PRIMA = "c50a23324"   # le liste USA del 22/11/2026 sera, prima delle decisioni
 
@@ -23,6 +48,7 @@ def lista_vecchia(anno):
 
 def risposte(qids):
     ver = json.load(open(R / "data" / "us-anni-verificati.json", encoding="utf-8"))
+    ex = extra_da_file(R)
     out = {}
     for anno, voci in ver.items():
         vecchia = lista_vecchia(anno)
@@ -33,7 +59,10 @@ def risposte(qids):
             v = voci[q]
             extra = v[6] if len(v) > 6 and isinstance(v[6], dict) else {}
             lingua = LINGUE.get(((vecchia.get(q) or {}).get("lingua") or {}).get("en"))
-            r = RG.incrocio_opera(pub, lingua, v[5] if len(v) > 5 else {}, extra.get("puntate"), extra.get("date_wikidata"))
+            e_, ricerca = ex.get(q, ({}, []))
+            dw = extra.get("date_wikidata") or (e_.get("p577") or None)
+            r = RG.incrocio_opera(pub, lingua, v[5] if len(v) > 5 else {}, extra.get("puntate"), dw,
+                                  fatti=RG.fatti_da_ricerca(ricerca, pub) if ricerca else None, extra=e_)
             out[q] = {**r, "lista": anno, "titolo": (vecchia.get(q) or {}).get("titolo")}
     return out
 

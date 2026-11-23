@@ -1432,3 +1432,17 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
   - giro annuale degli autori mancanti (scripts/autori_mancanti.py, .github/workflows/autori-mancanti.yml, che parte con docs/registro/passo-mancanti.txt);
   - fonti: categorie Wikipedia dei morti dell'anno in en, it, de, fr, es e pl (con una categoria da scrittore) e la GND; poi Wikidata dice perché l'autore manca.
 - **Nel sito:** niente cambiato. Prove 1-8 a 0.
+
+## 23/11/2026 — Campione di 15 «conferma» 2028: non passa; regola corretta; dati più ricchi preparati
+- **Campione** (docs/campione-conferma-2028.md, seme 20261123, controllo a mano sul web): 14 giuste, 1 sbagliata o dubbia.
+  - The Black Swan: il racconto da cui nasce il romanzo è uscito su Ladies' Home Journal a settembre 1931. Doveva essere almeno «nota».
+  - Regola 0 sbagliate: **il ramo «conferma» non passa.**
+- **Correzione di regole.incrocio_opera:** per confermare serve una prima pubblicazione documentata (Duke, ISFDB, rivista con data su Wikidata, ricerca sul web registrata). Wikidata e cataloghi da soli danno l'anno del libro, non della prima uscita.
+  - Lista 2028: conferma da 78 a 12 (tutte con ISFDB); The Black Swan ora «da decidere». Le 12 non sono ricontrollate a mano.
+  - Collaudo sulle 55: invariato, 2 giuste, 0 sbagliate, 53 da decidere.
+- **Dati più ricchi, preparati e non lanciati:** scripts/fonti_prima_uscita.py con .github/workflows/fonti-prima-uscita.yml (parte con docs/registro/passo-fonti.txt).
+  - Wikidata: data (P577), rivista di prima uscita (P1433) e date delle edizioni (P629) per 344 opere (liste 2027 e 2028 e le opere tolte o spostate).
+  - Bibliografia nella lingua originale, col titolo originale: K10plus per il tedesco (la DNB blocca GitHub), BnF per il francese, BNE per lo spagnolo, SBN per l'italiano.
+  - Nella regola: la bibliografia nella lingua originale vota; le date di riviste ed edizioni da Wikidata sono indizi.
+- **Ricerca sul web come procedura fissa:** docs/ricerca-web.md (cosa cercare, fonti che valgono, formato fisso) e docs/ricerca-web/risultati.json. Decide regole.fatti_da_ricerca: due gruppi indipendenti per ogni fatto; una fonte sola resta indizio. Prima voce: The Black Swan (una fonte con link).
+- **Nel sito:** niente cambiato. Prove 1-8 a 0, fotografia 0 cambi.
