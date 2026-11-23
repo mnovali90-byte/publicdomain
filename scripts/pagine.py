@@ -659,8 +659,18 @@ def vincoli_opera(a, o, oggi_a=None):
     if r:
         visti = {c[0] for c in co if c and c[0]} | {a["wikidata"]}
         co += [[x[0], x[1], x[2], None] for x in r[5] if x[0] not in visti]
-    for x in COAUT_MAN.get(wq, []):
-        co.append([x.get("qid") or "", x["nome"], x.get("morte"), None])
+    # coautori, musica e illustratori scritti a mano con la loro fonte (data/coautori_manuali.json): per codice dell'opera
+    # o, per le opere senza codice, per «autore|titolo della scheda» (23/11/2026)
+    w = dict(w, mu=list(w.get("mu", [])), ill=[], ruoli={})
+    for x in COAUT_MAN.get(wq, []) + COAUT_MAN.get(f"{a['wikidata']}|{o.get('titolo')}", []):
+        ruolo = x.get("ruolo") or "autore"
+        if ruolo in ("compositore", "librettista"):
+            w["mu"].append([ruolo, x["nome"], x.get("morte")])
+        elif ruolo == "illustratore":
+            w["ill"].append([x["nome"], x.get("morte")])
+        else:
+            co.append([x.get("qid") or "", x["nome"], x.get("morte"), None])
+            w["ruoli"][x["nome"]] = ruolo
     au = [{"qid": a["wikidata"], "nome": a["nome"], "morte": D}] + [
         {"qid": c[0] or "man:" + c[1], "nome": c[1], "morte": c[2], "nascita": c[3] if len(c) > 3 else None} for c in co]
     dopo = [x for x in autori_che_contano(au, tipi, oggi_a) if x["qid"] != a["wikidata"]]
@@ -678,6 +688,36 @@ def opera_libera_ue(a, o, anno):
     tardi, ignoti, w = vincoli_opera(a, o, anno)
     # musica e libretto hanno diritti propri ma, come nelle schede, il testo segue la data dell'autore: non escludono l'opera
     return not ignoti and not any(R.anno_libero(m, "it") > anno for _, m in tardi)
+
+
+def vincoli_radar():
+    """data/vincoli-opere.json per il radar (23/11/2026): per ogni opera delle liste con coautori, illustratori o musica
+    con diritti propri, la data europea e spagnola dell'opera (la regola dei coautori, come nelle schede) e la nota.
+    Così il radar non dice più «libera dal…» guardando solo l'autore (stesso errore della vetrina della home)."""
+    out = {}
+    for f in file_autori():
+        for a in (_leggi(f, {}) or {}).get("autori", []):
+            D = anno_di(a.get("morte"))
+            if not D:
+                continue
+            for o in a.get("opere", []):
+                k = f"{a['wikidata']}|{o.get('titolo')}"
+                if k in out:
+                    continue
+                tardi, ignoti, w = vincoli_opera(a, o)
+                v = {}
+                if tardi:
+                    m = max(x[1] for x in tardi)
+                    v["ue"], v["es"] = R.anno_libero(m, "it"), R.anno_libero(m, "es")
+                if ignoti:
+                    v["ver"] = True
+                note = [n for n in note_coautori(dict(a, opere=[o]), "it")]
+                note_en = [n for n in note_coautori(dict(a, opere=[o]), "en")]
+                if note:
+                    v["n"], v["n_en"] = " ".join(note), " ".join(note_en)
+                if v:
+                    out[k] = v
+    return out
 
 
 def note_coautori(a, lang):
@@ -699,8 +739,12 @@ def note_coautori(a, lang):
         if tardi:
             nome, m = max(tardi, key=lambda x: x[1])
             es, ue_m = R.anno_libero(m, "es"), R.anno_libero(m, "it")
-            note.append(T(f"{tt} è scritta anche da {nome} (morte: {m}): in Italia, Francia, Germania e Regno Unito è libera dal 1° gennaio {ue_m}, in Spagna dal {es}.",
-                          f"{tt} was also written by {nome}, who died in {m}: in Italy, France, Germany and the UK it is free from 1 January {ue_m}, in Spain from {es}."))
+            if w.get("ruoli", {}).get(nome) == "opera originale":
+                note.append(T(f"{tt} è tratta da un'opera di {nome} (morte: {m}): in Italia, Francia, Germania e Regno Unito è libera dal 1° gennaio {ue_m}, in Spagna dal {es}.",
+                              f"{tt} is based on a work by {nome}, who died in {m}: in Italy, France, Germany and the UK it is free from 1 January {ue_m}, in Spain from {es}."))
+            else:
+                note.append(T(f"{tt} è scritta anche da {nome} (morte: {m}): in Italia, Francia, Germania e Regno Unito è libera dal 1° gennaio {ue_m}, in Spagna dal {es}.",
+                              f"{tt} was also written by {nome}, who died in {m}: in Italy, France, Germany and the UK it is free from 1 January {ue_m}, in Spain from {es}."))
         elif ignoti:
             note.append(T(f"{tt}: tra gli autori c'è anche {', '.join(ignoti)}, di cui Wikidata non dà l'anno di morte. Da verificare.",
                           f"{tt}: the authors also include {', '.join(ignoti)}, whose year of death Wikidata does not give. To be checked."))
@@ -714,6 +758,10 @@ def note_coautori(a, lang):
             elif R.anno_libero(m, "it") > oggi_a and m > D:
                 note.append(T(f"{tt}: {r.lower()} di {nome} (morte: {m}) ha diritti propri: in Italia, Francia, Germania e Regno Unito fino al 31 dicembre {R.anno_libero(m, 'it') - 1}, in Spagna fino al 31 dicembre {R.anno_libero(m, 'es') - 1}. Il testo segue la data dell'autore.",
                               f"{tt}: {r.lower()} by {nome} (died {m}) has its own rights: in Italy, France, Germany and the UK until 31 December {R.anno_libero(m, 'it') - 1}, in Spain until 31 December {R.anno_libero(m, 'es') - 1}. The text follows the author's date."))
+        for nome, m in w.get("ill", []):
+            if m is not None and R.anno_libero(m, "it") > oggi_a and m > D:
+                note.append(T(f"{tt}: i disegni originali di {nome} (morte: {m}) hanno diritti propri: in Italia, Francia, Germania e Regno Unito fino al 31 dicembre {R.anno_libero(m, 'it') - 1}, in Spagna fino al 31 dicembre {R.anno_libero(m, 'es') - 1}. Il testo segue la data dell'autore.",
+                              f"{tt}: the original drawings by {nome} (died {m}) have their own rights: in Italy, France, Germany and the UK until 31 December {R.anno_libero(m, 'it') - 1}, in Spain until 31 December {R.anno_libero(m, 'es') - 1}. The text follows the author's date."))
     return list(dict.fromkeys(note))   # stessa nota per titoli doppi su Wikidata: una volta sola
 
 
@@ -2162,6 +2210,7 @@ def crea_landing():
 def main():
     oggi = datetime.date.today()
     R.esporta_js(RADICE / "assets" / "regole.js")   # le regole per paese per il browser, scritte da scripts/regole.py
+    (RADICE / "data" / "vincoli-opere.json").write_text(json.dumps(vincoli_radar(), ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     autori = {}
     for f in file_autori():
         for a in json.load(open(f, encoding="utf-8"))["autori"]:

@@ -35,6 +35,9 @@ def decidi(riga, tipi, manuali, eta=({}, {})):
     via = [x["sostituisce"] for x in manuali.get(riga[0], []) if x.get("sostituisce")]   # autore sbagliato, tolto a mano
     au = [a for a in au if a["qid"] not in via]
     for x in manuali.get(riga[0], []):
+        # illustratori, compositori e librettisti hanno diritti propri ma non sono autori del testo (23/11/2026)
+        if (x.get("ruolo") or "autore") not in ("autore", "opera originale"):
+            continue
         if not any(a["qid"] == x.get("qid") for a in au):
             q = x.get("qid") or "man:" + x["nome"]
             au.append({"qid": q, "nome": x["nome"], "morte": x.get("morte"), "antico": False})

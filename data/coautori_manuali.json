@@ -1,5 +1,5 @@
 {
- "nota": "Coautori che Wikidata non segna (regola del 20/11/2026, punto 5). Uno per opera, con la fonte. Li decidono le fonti terze (editore, archivi, cataloghi delle biblioteche, chi detiene i diritti), mai noi: ogni voce ha la sua fonte (Marco, 22/11/2026). Formato: \"opere\": {\"<codice Wikidata dell'opera>\": [{\"nome\": ..., \"qid\": ..., \"morte\": anno, \"ruolo\": ..., \"fonte\": url, \"fonte_nome\": ...}]} Facoltativo \"sostituisce\": codice Wikidata di un autore sbagliato da togliere dall'opera (22/11/2026, caso Mein Kampf).",
+ "nota": "Coautori che Wikidata non segna (regola del 20/11/2026, punto 5). Uno per opera, con la fonte. Li decidono le fonti terze (editore, archivi, cataloghi delle biblioteche, chi detiene i diritti), mai noi: ogni voce ha la sua fonte (Marco, 22/11/2026). Formato: \"opere\": {\"<codice Wikidata dell'opera>\": [{\"nome\": ..., \"qid\": ..., \"morte\": anno, \"ruolo\": ..., \"fonte\": url, \"fonte_nome\": ...}]} Facoltativo \"sostituisce\": codice Wikidata di un autore sbagliato da togliere dall'opera (22/11/2026, caso Mein Kampf). Chiave: codice Wikidata dell'opera, oppure «codice dell'autore|titolo della scheda» per le opere senza codice. Ruoli: autore, opera originale (l'opera è tratta da un'opera di questa persona), compositore o librettista (diritti propri, il testo segue l'autore), illustratore (i disegni originali hanno diritti propri, il testo no) (23/11/2026).",
  "opere": {
   "Q3241743": [
    {
@@ -30,6 +30,96 @@
     "ruolo": "autore",
     "fonte": "https://res.cloudinary.com/suhrkamp/images/q_auto/v1758760049/160171/der-kaukasische-kreidekreis_9783518475065_leseprobe.pdf",
     "fonte_nome": "Suhrkamp (editore e titolare dei diritti di Brecht), Der kaukasische Kreidekreis: «Bertolt Brecht, Der kaukasische Kreidekreis. Unter Mitarbeit von Ruth Berlau» (Berlau 1906-1974). Conferma: Brecht Guide dell'Università del Wisconsin, «Collaborator: Ruth Berlau» (https://brechtguide.library.wisc.edu/catalog/00635)"
+   }
+  ],
+  "Q1153256|The Story of Ferdinand": [
+   {
+    "nome": "Munro Leaf",
+    "qid": "",
+    "morte": 1976,
+    "ruolo": "autore",
+    "fonte": "https://en.wikipedia.org/wiki/The_Story_of_Ferdinand",
+    "fonte_nome": "Wikipedia e Penguin Random House: The Story of Ferdinand (1936) è di Munro Leaf (1905-1976), illustrato da Robert Lawson; schede LoC e K10plus"
+   }
+  ],
+  "Q596925|Trent's Own Case": [
+   {
+    "nome": "H. Warner Allen",
+    "qid": "",
+    "morte": 1968,
+    "ruolo": "autore",
+    "fonte": "https://en.wikipedia.org/wiki/Trent%27s_Own_Case",
+    "fonte_nome": "Wikipedia: Trent's Own Case (Constable 1936), di E. C. Bentley e H. Warner Allen; schede LoC e K10plus (Allen 1881-1968)"
+   }
+  ],
+  "Q2695518|I Am a Camera": [
+   {
+    "nome": "Christopher Isherwood",
+    "qid": "Q352553",
+    "morte": 1986,
+    "ruolo": "opera originale",
+    "fonte": "https://en.wikipedia.org/wiki/I_Am_a_Camera",
+    "fonte_nome": "Wikipedia e University of Miami (Hecht Theatre): commedia di John Van Druten tratta da Goodbye to Berlin di Christopher Isherwood (1904-1986)"
+   }
+  ],
+  "Q188385|Four Saints in Three Acts": [
+   {
+    "nome": "Virgil Thomson",
+    "qid": "",
+    "morte": 1989,
+    "ruolo": "compositore",
+    "fonte": "https://catalog.loc.gov",
+    "fonte_nome": "Schede LoC e K10plus: musica di Virgil Thomson (1896-1989), libretto di Gertrude Stein"
+   }
+  ],
+  "Q7182457|Honk, the Moose": [
+   {
+    "nome": "Kurt Wiese",
+    "qid": "",
+    "morte": 1974,
+    "ruolo": "illustratore",
+    "fonte": "https://en.wikipedia.org/wiki/Honk,_the_Moose",
+    "fonte_nome": "Wikipedia e catalogo University of Southern Indiana: «story by Phil Stong ; pictures by Kurt Wiese» (Dodd, Mead 1935); Wiese 1887-1974"
+   }
+  ],
+  "Q207036|Winnie Puh": [
+   {
+    "nome": "E. H. Shepard",
+    "qid": "",
+    "morte": 1976,
+    "ruolo": "illustratore",
+    "fonte": "https://ipo.blog.gov.uk/2025/03/06/a-bear-of-very-little-copyright-winnie-the-poohs-journey-into-the-public-domain/",
+    "fonte_nome": "UK Intellectual Property Office (6/3/2025): le illustrazioni di E. H. Shepard (morto nel 1976) sono protette fino al 1° gennaio 2047; schede LoC e K10plus della prima edizione"
+   }
+  ],
+  "Q207036|La strada di Puh": [
+   {
+    "nome": "E. H. Shepard",
+    "qid": "",
+    "morte": 1976,
+    "ruolo": "illustratore",
+    "fonte": "https://ipo.blog.gov.uk/2025/03/06/a-bear-of-very-little-copyright-winnie-the-poohs-journey-into-the-public-domain/",
+    "fonte_nome": "UK Intellectual Property Office (6/3/2025): le illustrazioni di E. H. Shepard (morto nel 1976) sono protette fino al 1° gennaio 2047; schede LoC e K10plus della prima edizione"
+   }
+  ],
+  "Q207036|When We Were Very Young": [
+   {
+    "nome": "E. H. Shepard",
+    "qid": "",
+    "morte": 1976,
+    "ruolo": "illustratore",
+    "fonte": "https://ipo.blog.gov.uk/2025/03/06/a-bear-of-very-little-copyright-winnie-the-poohs-journey-into-the-public-domain/",
+    "fonte_nome": "UK Intellectual Property Office (6/3/2025): le illustrazioni di E. H. Shepard (morto nel 1976) sono protette fino al 1° gennaio 2047; schede LoC e K10plus della prima edizione"
+   }
+  ],
+  "Q207036|Now We Are Six": [
+   {
+    "nome": "E. H. Shepard",
+    "qid": "",
+    "morte": 1976,
+    "ruolo": "illustratore",
+    "fonte": "https://ipo.blog.gov.uk/2025/03/06/a-bear-of-very-little-copyright-winnie-the-poohs-journey-into-the-public-domain/",
+    "fonte_nome": "UK Intellectual Property Office (6/3/2025): le illustrazioni di E. H. Shepard (morto nel 1976) sono protette fino al 1° gennaio 2047; schede LoC e K10plus della prima edizione"
    }
   ]
  }

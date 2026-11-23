@@ -1277,6 +1277,8 @@ function disegnaGrandi() {
   $("#cred2").replaceChildren(...(conFoto.length ? [tr("ritrattiCommons") + " — ", ...conFoto.flatMap((a, i) => [i ? " · " : "", a.nome + ": ", creditoBreve(a)])] : []));
 }
 /* ---------- scaffali per genere ---------- */
+let VINCOLI = {};
+function vincolo(a, o) { return VINCOLI[a.wikidata + "|" + o.titolo] || null; }
 function opereDellAnno(anno) {
   const g = gruppi(anno), viste = new Set(), out = [];
   for (const a of g.letterari) {
@@ -1284,9 +1286,12 @@ function opereDellAnno(anno) {
       const k = norm(o.titolo) + "|" + a.wikidata;
       if (viste.has(k)) continue;
       viste.add(k);
+      // un coautore morto dopo l'autore (o senza data) sposta la data dell'opera: non è tra quelle che si liberano quest'anno
+      const v = vincolo(a, o), lib = v && (stato.giur === "es" ? v.es : v.ue);
+      if (v && (v.ver || (lib && lib > anno))) continue;
       const canon = new Map();
       for (const x of o.generi || []) { const c = genereCanonico(x); if (c) canon.set(c.chiave, c); }
-      out.push({ titolo: (LING === "en" && o.titolo_en) || o.titolo, anno: o.anno, generi: [...canon.values()], sl: o.sl || 0, a });
+      out.push({ titolo: (LING === "en" && o.titolo_en) || o.titolo, anno: o.anno, generi: [...canon.values()], sl: o.sl || 0, a, v });
     }
   }
   return out;
@@ -1340,6 +1345,7 @@ function mostraOperaEU(o) {
           // solo i paesi dove è davvero libera (Marco, 21/11/2026: niente «Europa»); paesi alleati: nota sul Trattato (22/11/2026)
           ...riga(tr("opLibera", { p: tr("pLibera")[stato.giur === "es" ? "es" : "ue"] }), dataIt(stato.dati[stato.anno].libero_dal)),
           ...(stato.giur !== "es" && notaTrattato(a) ? riga("", tr("opNotaTrattato")) : []),
+          ...(o.v && (LING === "en" ? o.v.n_en : o.v.n) ? riga("", LING === "en" ? o.v.n_en : o.v.n) : []),
           ...riga(tr("opAutore"), h("button", { class: "collegamento", type: "button", onclick: () => apriAutore(a.wikidata) }, a.nome))),
         h("div", { class: "azioni" },
           h("button", { class: "collegamento", type: "button", onclick: () => apriAutore(a.wikidata) }, tr("opScheda"))),
@@ -2097,6 +2103,8 @@ async function avvia() {
   try {
     try { ETICHETTE_EN = await leggi("/data/etichette_en.json"); } catch (e) { /* facoltativo */ }
     try { FUORI = new Set((await leggi("/data/fuori_classifica.json")).autori.map((x) => x.wikidata)); } catch (e) { /* facoltativo */ }
+    // coautori, illustratori e musica per opera, decisi con le regole del sito (scripts/pagine.py, vincoli_radar) (23/11/2026)
+    try { VINCOLI = await leggi("/data/vincoli-opere.json"); } catch (e) { VINCOLI = {}; }
     const indice = await leggi("/data/indice.json");
     stato.anni = indice.anni;
     stato.perGiur.ue = {};

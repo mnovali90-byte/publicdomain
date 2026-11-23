@@ -1128,3 +1128,22 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
   - 14 vengono da questi dati.
   - 1 viene dalla regola: *Nymphée* di J.-H. Rosny, anno di Wikidata non credibile, ma Open Library conferma un'edizione del 1909.
 - **Prove:** 1-7 tutte a 0 differenze.
+
+## 23/11/2026 mattina — Coautori, opere derivate, musica e illustratori confermati messi nei dati (in locale)
+- **data/coautori_manuali.json** ha una chiave nuova, «autore|titolo», per le opere senza codice, e quattro ruoli: autore, opera originale, compositore/librettista, illustratore. Ogni voce ha la sua fonte. Voci nuove:
+  - Munro Leaf per Ferdinand;
+  - H. Warner Allen per Trent's Own Case;
+  - Isherwood per I Am a Camera (opera originale);
+  - Virgil Thomson per Four Saints (compositore);
+  - Shepard per 4 libri di Milne (illustratore);
+  - Kurt Wiese per Honk, the Moose (illustratore).
+- **Schede:** nuove note per i casi sopra:
+  - coautore: «è scritta anche da»;
+  - opera originale: «è tratta da un'opera di»;
+  - illustratore: «i disegni originali di X hanno diritti propri… il testo segue la data dell'autore».
+  - storico/registro_opere.py non conta come autori del testo illustratori, compositori e librettisti scritti a mano.
+- **Errore trovato nel radar:** lo stesso della vetrina della home. Il dettaglio di un'opera diceva «Libera dal 1° gennaio» con la data dell'autore, senza la regola dei coautori: L'opera da tre soldi risultava libera nel 2027, Ferdinand nel 2028.
+  - Correzione: pagine.py scrive data/vincoli-opere.json (117 opere) con vincoli_opera, cioè la stessa regola delle schede.
+  - Il radar toglie dalle «opere che si liberano» quelle con un coautore più tardo o senza data, e mostra la nota (per esempio i disegni di Shepard).
+  - Verificato nel browser: L'opera da tre soldi, Trent's Own Case e Ferdinand non ci sono più; Winnie Puh c'è, con la nota.
+- **Prove:** 1-7 a 0. Fotografia: 0 cambi, perché le schede e il radar non entrano nella fotografia.
