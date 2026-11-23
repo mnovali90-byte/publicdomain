@@ -1,13 +1,6 @@
 {
  "nota": "Terza fonte, controllata a mano su fonti terze, per i casi in cui Wikidata e le biblioteche (GND, Library of Congress) non concordano. 'morte' è l'anno giusto secondo quella fonte. Se è diverso da Wikidata, l'autore esce dall'elenco dell'anno sbagliato.",
  "autori": {
-  "Q12731091": {
-   "nome": "Isaiia Răcăciuni",
-   "morte": 1976,
-   "fonte": "Wikipedia (en), con fonti; Ziarul de Bacău",
-   "url": "https://en.wikipedia.org/wiki/Isaia_R%C4%83c%C4%83ciuni",
-   "controllato": "2026-11-09"
-  },
   "Q20142373": {
    "nome": "Gerard Diels",
    "morte": 1956,
@@ -22,25 +15,11 @@
    "url": "https://catalogue.bnf.fr/ark:/12148/cb121395463",
    "controllato": "2026-11-09"
   },
-  "Q20738418": {
-   "nome": "Marcel Romanescu",
-   "morte": 1956,
-   "fonte": "Dicționarul biografic al literaturii române (A. Sasu)",
-   "url": "https://en.wikipedia.org/wiki/Marcel_Romanescu",
-   "controllato": "2026-11-09"
-  },
   "Q5210092": {
    "nome": "Dakshinaranjan Mitra Majumder",
    "morte": 1957,
    "fonte": "Banglapedia",
    "url": "https://en.banglapedia.org/index.php/Mitra_Majumder,_Dakshinaranjan",
-   "controllato": "2026-11-09"
-  },
-  "Q115085": {
-   "nome": "Helmut von den Steinen",
-   "morte": 1957,
-   "fonte": "Wikipedia (de) via BookBrainz: 26 novembre 1957, Rodi (l'archivio Cavafy dice 1956)",
-   "url": "https://bookbrainz.org/author/2fa0e7be-054c-489b-a193-c37ea7358fd7",
    "controllato": "2026-11-09"
   },
   "Q4303556": {
@@ -53,9 +32,25 @@
   "Q6963402": {
    "nome": "Nanduri Venkata Subba Rao",
    "morte": 1957,
-   "fonte": "Wikipedia (en): 29 maggio 1957",
-   "url": "https://en.wikipedia.org/wiki/Nanduri_Venkata_Subba_Rao",
-   "controllato": "2026-11-09"
+   "discorde": true,
+   "fonte": "le fonti non concordano: necrologio del Triveni Journal (luglio 1957) contro GND e Library of Congress (1958)",
+   "url": "https://www.wisdomlib.org/history/compilation/triveni-journal/d/doc69419.html",
+   "fonti": [
+    {
+     "nome": "Triveni Journal, necrologio di luglio",
+     "anno": 1957,
+     "url": "https://www.wisdomlib.org/history/compilation/triveni-journal/d/doc69419.html",
+     "citazione": "The death of their author, Mr. Nanduri Venkata Subba Rao"
+    }
+   ],
+   "fonti_lette": {
+    "wikidata": 1958,
+    "wikidata_altra": 1957,
+    "gnd": 1958,
+    "loc": 1958
+   },
+   "nota": "Decisione di Marco (23/11/2026): «da verificare, le fonti non concordano». Resta nella lista 2028 con l'avviso. Il necrologio dice che a luglio 1957 era già morto; GND e Library of Congress danno il 1958. Prima la verifica a mano usava Wikipedia (en), tolta.",
+   "controllato": "2026-11-23"
   },
   "Q16484645": {
    "nome": "Abílio Barreto",
@@ -537,5 +532,30 @@
    "approvato": false
   }
  },
- "nota_aggiunti_a_mano": "Autori che non entrano con la regola automatica delle liste ma che Marco ha scelto a mano (23/11/2026: saggisti noti soprattutto come autori di libri; niente regola automatica sui saggisti prima del 7 gennaio 2027). Per ognuno: la lista, l'anno di morte con due fonti terze (in «autori»), un'opera principale con la sua fonte; sono segnati come scrittori («scrittori_a_mano») e saggisti («professioni_aggiunte»). La scheda viene da scripts/scheda_autore.py (data/registro/schede_proposte.json); scripts/verifica.py li mette nella lista. Klages non entra finché non è valutato con la regola sugli autori razzisti. Entrano nelle liste solo con «approvato»: true, dopo che Marco ha visto la fotografia."
+ "nota_aggiunti_a_mano": "Autori che non entrano con la regola automatica delle liste ma che Marco ha scelto a mano (23/11/2026: saggisti noti soprattutto come autori di libri; niente regola automatica sui saggisti prima del 7 gennaio 2027). Per ognuno: la lista, l'anno di morte con due fonti terze (in «autori»), un'opera principale con la sua fonte; sono segnati come scrittori («scrittori_a_mano») e saggisti («professioni_aggiunte»). La scheda viene da scripts/scheda_autore.py (data/registro/schede_proposte.json); scripts/verifica.py li mette nella lista. Klages non entra finché non è valutato con la regola sugli autori razzisti. Entrano nelle liste solo con «approvato»: true, dopo che Marco ha visto la fotografia.",
+ "verifiche_tolte": {
+  "Q12731091": {
+   "nome": "Isaiia Răcăciuni",
+   "morte_a_mano": 1976,
+   "fonte_vecchia": "Wikipedia (en), con fonti; Ziarul de Bacău",
+   "tolta": "2026-11-23",
+   "motivo": "la verifica a mano usava Wikipedia; nessuna seconda fonte terza trovata (decisione di Marco del 23/11/2026: si torna allo stato delle fonti automatiche)"
+  },
+  "Q20738418": {
+   "nome": "Marcel Romanescu",
+   "morte_a_mano": 1956,
+   "fonte_vecchia": "Dicționarul biografic al literaturii române (A. Sasu)",
+   "tolta": "2026-11-23",
+   "motivo": "la verifica a mano usava Wikipedia; nessuna seconda fonte terza trovata (decisione di Marco del 23/11/2026: si torna allo stato delle fonti automatiche)",
+   "trovato": "Muzeul Aman (Craiova), scheda delle personalità: «m. 1956» — una sola fonte terza"
+  },
+  "Q115085": {
+   "nome": "Helmut von den Steinen",
+   "morte_a_mano": 1957,
+   "fonte_vecchia": "Wikipedia (de) via BookBrainz: 26 novembre 1957, Rodi (l'archivio Cavafy dice 1956)",
+   "tolta": "2026-11-23",
+   "motivo": "la verifica a mano usava Wikipedia; nessuna seconda fonte terza trovata (decisione di Marco del 23/11/2026: si torna allo stato delle fonti automatiche)",
+   "trovato": "Onassis Cavafy Archive: «died on Rhodes (Greece) in 1956» — una fonte terza con un anno diverso dal 1957 della vecchia verifica"
+  }
+ }
 }

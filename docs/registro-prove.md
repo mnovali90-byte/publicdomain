@@ -1538,4 +1538,12 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - Esito: 8 conferma, 1 nota (raccolta di Kafka), 5 da decidere.
 - Lista 2027: prima uscita verificata 53, anno dell'edizione confermato 94, da confermare 8 (con le 18 voci «non trovata» del primo giro del controllo ancora escluse).
 - Limite trovato: l'esito «nota» della ricerca non mette la nota in pagina (6 opere). Da sistemare con un'approvazione di Marco sui testi delle note.
-- **scheda-autore.yml, primo giro per gli 8 saggisti:** fermato dopo 20 minuti (Gutenberg non rispondeva per Sarton) senza salvare nulla. Corretto: si salva dopo ogni autore, si riprende chi è già fatto, limite 90 minuti. Rilanciato con l'ok di Marco (15:48) per i 10 autori (8 saggisti, Răcăciuni, von den Steinen).
+
+## 23/11/2026 — Verifiche a mano rifatte, note delle opere «nota» (ok di Marco, 15:20)
+- **Subbaravu:** verifica a mano «discorde» (Triveni Journal, luglio 1957, contro GND e LoC 1958). Resta nella lista 2028 con l'avviso «da verificare». La regola è ora in un posto solo, regole.voce_morte, usata dal registro degli autori (scripts/registro_autori.py, anche senza rete con --solo-manuali) e da verifica.py.
+- **Răcăciuni, Romanescu, von den Steinen:** nessuna seconda fonte terza; verifiche a mano tolte (data/verifiche_manuali.json, «verifiche_tolte»).
+  - Romanescu: torna «discorde» (Wikidata 1956, GND 1955, LoC 1954). Trovata una sola fonte terza: Muzeul Aman, «m. 1956».
+  - Von den Steinen: l'Onassis Cavafy Archive dice 1956, la vecchia verifica diceva 1957.
+  - Răcăciuni e von den Steinen non sono in nessuna lista e nel registro: tornano al primo giro automatico, con lo stato delle fonti automatiche.
+- **Note delle opere con esito «nota»:** sono 4, non 6 (avevo contato male): I sonnambuli, Wyatt Earp: Frontier Marshal, la raccolta di Kafka, Tarzan the Invincible. I testi sono in data/verifiche_opere.json «usa_lista», con le fonti della ricerca. Regola nuova in docs/criteri.md.
+- **Registro degli autori rifatto per le verifiche a mano:** 4 voci (Romanescu e Subbaravu discordi, Keynes nazionale, Dehkhoda con il secondo link).

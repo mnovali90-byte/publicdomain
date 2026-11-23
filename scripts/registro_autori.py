@@ -22,7 +22,7 @@ from pathlib import Path
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import verifica as V                       # noqa: E402  (lettura delle fonti: stesse funzioni di verifica.py)
-from regole import decidi_morte, morti_liberi_nel   # noqa: E402
+from regole import decidi_morte, morti_liberi_nel, voce_morte   # noqa: E402
 
 R = Path(__file__).resolve().parent.parent
 USCITA = R / "data" / "registro" / "autori.json"
@@ -161,16 +161,7 @@ def main():
                 fv[nf] = v["morte"]
         aggiungi_fonti(fv, aggiunte.get(q))
         citate = cit.get(q, {})
-        m = manuali.get(q)
-        if m:
-            voce = {"n": nomi[q], "m": m["morte"], "e": "nazionale", "f": fv, "manuale": {"fonte": m["fonte"], "url": m["url"]}}
-        else:
-            esito, deciso, autorevoli = decidi_morte(fv, citate)
-            voce = {"n": nomi[q], "m": deciso, "e": esito, "f": fv}
-            if autorevoli:
-                voce["a"] = autorevoli
-        if citate:
-            voce["c"] = citate
+        voce = {"n": nomi[q], **voce_morte(fv, citate, manuali.get(q))}
         if manca:
             voce["in_attesa"] = True          # una biblioteca non ancora letta: l'esito può cambiare al giro dopo
             attesa += 1
@@ -195,5 +186,35 @@ def main():
         print(f"  CORRETTO {v['n']}: Wikidata {v['f']['wikidata']} -> {v['m']} ({', '.join(v.get('a', [])) or v['e']})")
 
 
+def solo_manuali():
+    """Senza rete (23/11/2026): rifà con voce_morte le voci del registro toccate da una verifica a mano (aggiunta,
+    cambiata o tolta), con le fonti già lette e scritte nel registro. Stessa regola del giro completo."""
+    vm = json.load(open(R / "data" / "verifiche_manuali.json", encoding="utf-8"))
+    manuali = vm.get("autori", {})
+    reg = json.load(open(USCITA, encoding="utf-8"))
+    cambiate = 0
+    for q, v in reg["autori"].items():
+        if q not in manuali and not v.get("manuale") and q not in vm.get("verifiche_tolte", {}):
+            continue
+        m = manuali.get(q)
+        fv = dict(v.get("f") or {})
+        citate = dict(v.get("c") or {})
+        if m and m.get("discorde"):     # le fonti terze a mano non sono «citate da Wikidata»: si tolgono prima di rifarle
+            for x in m.get("fonti") or []:
+                citate.pop(x["nome"], None)
+        nuova = {"n": v["n"], **voce_morte(fv, citate, m), "d": v.get("d")}
+        if v.get("in_attesa"):
+            nuova["in_attesa"] = True
+        if nuova != v:
+            reg["autori"][q] = nuova
+            cambiate += 1
+            print(f"  {v['n']}: {v.get('e')} {v.get('m')} -> {nuova['e']} {nuova['m']}")
+    json.dump(reg, open(USCITA, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
+    print("voci rifatte:", cambiate)
+
+
 if __name__ == "__main__":
-    main()
+    if "--solo-manuali" in sys.argv:
+        solo_manuali()
+    else:
+        main()

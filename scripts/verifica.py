@@ -171,6 +171,7 @@ def morte_loc(codice):
 
 
 from arricchisci import TIPO_CATALOGO, percentile  # noqa: E402  (stesse misure delle liste)
+from regole import voce_morte  # noqa: E402
 from regole import AUTOREVOLI, AUTOREVOLI_RE, NON_AUTOREVOLI_RE, maggioranza, decidi_morte, morti_liberi_nel  # noqa: E402,F401  (regole in un posto solo)
 CORRETTE = DATA / "morti_corrette.json"
 try:
@@ -183,6 +184,16 @@ def anno_atteso(f):
     """Anno di morte degli autori di un elenco (regola in scripts/regole.py, morti_liberi_nel)."""
     n = int(re.search(r"(\d{4})\.json$", f.name).group(1))
     return morti_liberi_nel(n, "es" if f.name.startswith("es-") else "it")
+
+
+def verifica_a_mano(a, m):
+    """Esito di una verifica a mano (data/verifiche_manuali.json, «autori»), con la regola del registro (regole.voce_morte):
+    di norma «nazionale»; con «discorde» le fonti non concordano e l'autore resta nella lista con l'avviso «da verificare»."""
+    if m.get("discorde"):
+        v = voce_morte({"wikidata": anno(a.get("morte"))}, {}, m)
+        return {"esito": "discorde", "fonti": v["f"], "citate": v["c"]}
+    return {"esito": "nazionale", "fonti": {"wikidata": anno(a.get("morte"))},
+            "nazionale": {"fonte": m["fonte"], "url": m["url"], "url_2": m.get("url_2"), "morte": m["morte"]}}
 
 
 def carica_aggiunti():
@@ -293,9 +304,8 @@ def main():
         for a in p["autori"]:
             m = manuali.get(a["wikidata"])
             if m:
-                a["verifica"] = {"esito": "nazionale", "fonti": {"wikidata": anno(a.get("morte"))},
-                                 "nazionale": {"fonte": m["fonte"], "url": m["url"], "url_2": m.get("url_2"), "morte": m["morte"]}}
-                conta["nazionale"] += 1
+                a["verifica"] = verifica_a_mano(a, m)
+                conta[a["verifica"]["esito"]] += 1
                 if ill.get(a["wikidata"]):
                     a["illustratori"] = ill[a["wikidata"]]
                 continue
@@ -402,15 +412,18 @@ def main():
 
 
 def solo_aggiunti():
-    """Senza rete: mette nelle liste gli autori scelti a mano che hanno già la scheda (stesso codice del giro)."""
+    """Senza rete: rifà le verifiche a mano e mette nelle liste gli autori scelti a mano che hanno già la scheda (stesso codice del giro)."""
     manuali, aggiunti, prof_mano, schede = carica_aggiunti()
     for f in sorted(DATA.glob("*.json")):
         if not re.fullmatch(r"(es-)?\d{4}\.json", f.name):
             continue
         p = json.load(open(f, encoding="utf-8"))
-        n = len(p["autori"])
+        n, prima = len(p["autori"]), json.dumps(p["autori"], ensure_ascii=False)
+        for a in p["autori"]:       # verifiche a mano cambiate (stesso codice del giro)
+            if a["wikidata"] in manuali and anno(a.get("morte")) == manuali[a["wikidata"]]["morte"]:
+                a["verifica"] = verifica_a_mano(a, manuali[a["wikidata"]])
         inserisci_aggiunti(f, p, anno_atteso(f), manuali, aggiunti, prof_mano, schede, anteprima="--anteprima" in sys.argv)
-        if len(p["autori"]) != n:
+        if len(p["autori"]) != n or json.dumps(p["autori"], ensure_ascii=False) != prima:
             f.write_text(json.dumps(p, ensure_ascii=False, indent=1), encoding="utf-8")
 
 

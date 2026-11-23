@@ -43,6 +43,30 @@ def maggioranza(fv, citate):
     return None
 
 
+def voce_morte(fv, citate, manuale=None):
+    """Voce del registro degli autori (data/registro/autori.json) per un autore: la verifica a mano
+    (data/verifiche_manuali.json, «autori») vince su tutto; con «discorde» (23/11/2026, decisione di Marco, caso Subbaravu)
+    le fonti terze contraddicono le biblioteche: resta l'anno della lista con l'avviso «da verificare».
+    Senza verifica a mano decide decidi_morte. Restituisce {"m", "e", "f", ["manuale"], ["c"], ["a"]}."""
+    m = manuale or {}
+    if m.get("discorde"):
+        c = dict(citate or {})
+        c.update({x["nome"]: x["anno"] for x in m.get("fonti") or []})
+        return {"m": m["morte"], "e": "discorde", "f": dict(m.get("fonti_lette") or fv), "c": c}
+    if m:
+        v = {"m": m["morte"], "e": "nazionale", "f": fv, "manuale": {"fonte": m["fonte"], "url": m["url"]}}
+        if m.get("url_2"):
+            v["manuale"]["url_2"] = m["url_2"]
+    else:
+        esito, deciso, autorevoli = decidi_morte(fv, citate)
+        v = {"m": deciso, "e": esito, "f": fv}
+        if autorevoli:
+            v["a"] = autorevoli
+    if citate:
+        v["c"] = citate
+    return v
+
+
 def decidi_morte(fv, citate):
     """Anno di morte di un autore. fv: {"wikidata": anno principale, "wikidata_altra": altro anno di Wikidata,
     "gnd": anno, "loc": anno}; citate: {fonte citata da Wikidata: anno}.

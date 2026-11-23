@@ -24011,14 +24011,16 @@
     }
    },
    "verifica": {
-    "esito": "nazionale",
+    "esito": "discorde",
     "fonti": {
-     "wikidata": 1957
+     "wikidata": 1958,
+     "wikidata_altra": 1957,
+     "gnd": 1958,
+     "loc": 1958
     },
-    "nazionale": {
-     "fonte": "Wikipedia (en): 29 maggio 1957",
-     "url": "https://en.wikipedia.org/wiki/Nanduri_Venkata_Subba_Rao",
-     "morte": 1957
+    "citate": {
+     "Faceted Application of Subject Terminology": 1958,
+     "Triveni Journal, necrologio di luglio": 1957
     }
    },
    "pagina": "nanduri-venkata-subbaravu",

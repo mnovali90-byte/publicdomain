@@ -1562,6 +1562,94 @@
     "en": "Scribner's January 1931 issue is registered with publication date 18 December 1930 (Catalog of Copyright Entries). Free in the US since 2026."
    },
    "deciso": "2026-11-23"
+  },
+  "Q1216006": {
+   "titolo": "I sonnambuli (Die Schlafwandler)",
+   "esito": "resta",
+   "nota": {
+    "it": "Negli USA i primi due volumi della trilogia (Pasenow ed Esch, usciti nel 1931) si liberano nel 2027; il terzo (Huguenau, del 1932) si libera nel 2028.",
+    "en": "In the US the first two volumes of the trilogy (Pasenow and Esch, published in 1931) become free in 2027; the third (Huguenau, from 1932) becomes free in 2028."
+   },
+   "fonti": [
+    {
+     "nome": "Encyclopædia Britannica: vol. 1 Pasenow 1931",
+     "link": "https://www.britannica.com/topic/The-Sleepwalkers"
+    },
+    {
+     "nome": "Università Masaryk, scheda su Broch: vol. 1 Pasenow, Monaco/Zurigo 1931",
+     "link": "https://is.muni.cz/el/phil/jaro2016/NJI_20/um/61954987/56639148/Broch.pdf?lang=en"
+    }
+   ],
+   "perche": "ricerca sul web (docs/ricerca-web/risultati.json), esito «nota» della regola; testo della nota da approvare (23/11/2026)"
+  },
+  "Q8039491": {
+   "titolo": "Wyatt Earp: Frontier Marshal",
+   "esito": "resta",
+   "nota": {
+    "it": "Prima del libro (1931) una parte è uscita in quattro puntate sul Saturday Evening Post tra ottobre e novembre 1930: negli USA quelle puntate sono già libere, il libro intero si libera nel 2027.",
+    "en": "Before the book (1931), part of it appeared in four instalments in The Saturday Evening Post in October and November 1930: in the US those instalments are already free, the whole book becomes free in 2027."
+   },
+   "fonti": [
+    {
+     "nome": "AFI Catalog, Frontier Marshal (1934): quattro articoli sul Saturday Evening Post, 25 ottobre-15 novembre 1930",
+     "link": "https://catalog.afi.com/Catalog/moviedetails/6565"
+    },
+    {
+     "nome": "Kansas Historical Quarterly (Kansas Historical Society): libro 7 ottobre 1931, dopo un'anteprima in quattro parti sul Saturday Evening Post",
+     "link": "https://www.kansashistory.gov/p/kansas-historical-quarterly-wyatt-earp-and-the-buntline-special-myth/13255"
+    }
+   ],
+   "perche": "ricerca sul web (docs/ricerca-web/risultati.json), esito «nota» della regola; testo della nota da approvare (23/11/2026)"
+  },
+  "Q1306780": {
+   "titolo": "La muraglia cinese (Beim Bau der chinesischen Mauer)",
+   "esito": "resta",
+   "nota": {
+    "it": "Raccolta postuma (1931) di testi in gran parte inediti; un brano, «Eine kaiserliche Botschaft», era uscito nel 1919 ed è già libero negli USA. Negli USA la raccolta si libera nel 2027.",
+    "en": "Posthumous collection (1931) of mostly unpublished texts; one piece, «Eine kaiserliche Botschaft», had appeared in 1919 and is already free in the US. In the US the collection becomes free in 2027."
+   },
+   "fonti": [
+    {
+     "nome": "EBSCO Research Starters (D. B. Billingsley): prima pubblicazione: Beim Bau der chinesischen Mauer, 1931",
+     "link": "https://www.ebsco.com/research-starters/literature-and-writing/great-wall-china-franz-kafka"
+    },
+    {
+     "nome": "dLib (Slovenia), articolo accademico: «Eine kaiserliche Botschaft», nata nel contesto del racconto, uscita in Selbstwehr il 24/9/1919 e in Ein Landarzt (1920)",
+     "link": "https://www.dlib.si/stream/URN:NBN:SI:DOC-MCAGZRQM/6c4fe293-2b00-434e-85a0-e4d1530380e0/PDF"
+    },
+    {
+     "nome": "Deutsches Literaturarchiv Marbach, recensione digitalizzata: un volume di prosa che riunisce lavori inediti dal lascito (Kiepenheuer, Berlino, 266 pagine)",
+     "link": "https://digital.dla-marbach.de/viewer/fullscreen/BF00043387/62"
+    },
+    {
+     "nome": "franzkafka.de (opere, Das Ehepaar): almeno un testo esce per la prima volta nella raccolta (Ungedruckte Erzählungen und Prosa aus dem Nachlaß)",
+     "link": "https://www.franzkafka.de/werk/saemtliche-titel/das-ehepaar"
+    }
+   ],
+   "perche": "ricerca sul web (docs/ricerca-web/risultati.json), esito «nota» della regola; testo della nota da approvare (23/11/2026)"
+  },
+  "Q3981235": {
+   "titolo": "Tarzan the Invincible",
+   "esito": "resta",
+   "nota": {
+    "it": "Prima del libro (1931) è uscito a puntate su Blue Book da ottobre 1930 ad aprile 1931: negli USA le puntate del 1930 sono già libere, il resto si libera nel 2027.",
+    "en": "Before the book (1931) it was serialised in Blue Book from October 1930 to April 1931: in the US the 1930 instalments are already free, the rest becomes free in 2027."
+   },
+   "fonti": [
+    {
+     "nome": "Encyclopedia of Science Fiction (voce Burroughs): Blue Book da ottobre 1930 ad aprile 1931 come «Tarzan, Guard of the Jungle»; libro 1931",
+     "link": "https://sf-encyclopedia.com/entry/burroughs_edgar_rice"
+    },
+    {
+     "nome": "ERBzine (bibliografia di Burroughs): sette puntate su Blue Book, ottobre 1930 - aprile 1931",
+     "link": "https://erbzine.com/mag7/0722.html"
+    },
+    {
+     "nome": "Winthrop University, Rare Books: prima a puntate su Blue Book da ottobre 1930",
+     "link": "https://digitalcommons.winthrop.edu/rarebooks/56"
+    }
+   ],
+   "perche": "ricerca sul web (docs/ricerca-web/risultati.json), esito «nota» della regola; testo della nota da approvare (23/11/2026)"
   }
  },
  "nota_prima_pubblicazione": "prima_pubblicazione: prima uscita documentata (rivista o editore, con la data), con le fonti. Regola di Marco (23/11/2026): quando c'è, vale quella; i cataloghi confermano ma non la battono (scripts/regole.py, anno_prima_pubblicazione).",

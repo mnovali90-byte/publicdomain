@@ -23640,12 +23640,12 @@
    "verifica": {
     "esito": "nazionale",
     "fonti": {
-     "wikidata": 1956,
-     "openlibrary": 1957
+     "wikidata": 1956
     },
     "nazionale": {
      "fonte": "Banglapedia: «Ali, Syed Emdad (1875-1956)»",
      "url": "https://en.banglapedia.org/index.php/Ali,_Syed_Emdad",
+     "url_2": null,
      "morte": 1956
     }
    },
@@ -33325,6 +33325,7 @@
     "nazionale": {
      "fonte": "Biblioteca nazionale di Francia (BnF)",
      "url": "https://catalogue.bnf.fr/ark:/12148/cb121395463",
+     "url_2": null,
      "morte": 1956
     }
    }
@@ -41041,6 +41042,7 @@
     "nazionale": {
      "fonte": "DBNL, biblioteca digitale della letteratura olandese",
      "url": "https://dbnl.org/tekst/bork001schr01_01/bork001schr01_01_0260.php",
+     "url_2": null,
      "morte": 1956
     }
    }
@@ -58575,14 +58577,15 @@
     }
    },
    "verifica": {
-    "esito": "nazionale",
+    "esito": "discorde",
     "fonti": {
-     "wikidata": 1956
+     "wikidata": 1956,
+     "wikidata_altra": 1955,
+     "gnd": 1955,
+     "loc": 1954
     },
-    "nazionale": {
-     "fonte": "Dicționarul biografic al literaturii române (A. Sasu)",
-     "url": "https://en.wikipedia.org/wiki/Marcel_Romanescu",
-     "morte": 1956
+    "citate": {
+     "Integrated Authority File": 1955
     }
    }
   },
@@ -73363,12 +73366,12 @@
    "verifica": {
     "esito": "nazionale",
     "fonti": {
-     "wikidata": 1956,
-     "openlibrary": 1957
+     "wikidata": 1956
     },
     "nazionale": {
      "fonte": "Yiddish Leksikon: «Hersh-Leyzer Kroy (December 25, 1900-December 29, 1956)», che cita G. Kressel, Leksikon hasifrut haivrit, vol. 2 (1967)",
      "url": "https://yleksikon.blogspot.com/2019/04/hersh-leyzer-kroy.html",
+     "url_2": null,
      "morte": 1956
     }
    }
@@ -73718,11 +73721,12 @@
    "verifica": {
     "esito": "nazionale",
     "fonti": {
-     "wikidata": 1959
+     "wikidata": 1956
     },
     "nazionale": {
      "fonte": "Encyclopaedia Iranica (26 febbraio 1956) e Rekhta (27 febbraio 1956); Wikidata dà il 1959",
      "url": "https://www.iranicaonline.org/articles/dehkoda/",
+     "url_2": "https://www.rekhta.org/authors/ali-akbar-dahkhuda/profile",
      "morte": 1956
     }
    },

@@ -37,6 +37,7 @@ Sulla pagina della lista USA un'opera ha uno di tre stati:
 | 23/11/2026 | Volumi in anni diversi: primo volume nell'anno della lista e altri dopo → resta con nota, ogni volume si libera nel suo anno; volume con fonti in disaccordo → nota «da verificare» | trilogia uscita nel 1931 e nel 1932 | I sonnambuli (Broch), Q1216006 |
 | 23/11/2026 | Registrazione: con la legge del 1909 conta la prima tra pubblicazione e registrazione da inedita (Copyright Office, Circular 15A), presa dal CCE | opera teatrale registrata da inedita nel 1930, pubblicata nel 1931 | Green Grow the Lilacs (Riggs), Q4190252 |
 | 23/11/2026 | Per un numero di rivista conta la data © del CCE (data di pubblicazione), non la data in copertina | numero di gennaio 1931 pubblicato il 18 dicembre 1930 | Dry September (Faulkner), Q5309555 |
+| 23/11/2026 | Un'opera che resta in lista con una parte uscita prima (esito «nota» della regola) ha sempre la sua nota in pagina, scritta nel registro delle opere (data/verifiche_opere.json, «usa_lista») | l'esito «nota» diventava «Verificato» senza dire che una parte era già libera | Tarzan the Invincible, Q3981235 |
 
 ## Anni di morte degli autori
 
@@ -48,3 +49,5 @@ Sulla pagina della lista USA un'opera ha uno di tre stati:
 | 23/11/2026 | Un autore che la regola della lista lascerebbe solo in «Tutti» entra nella lista principale se una fonte lo descrive come scrittore o poeta (data/verifiche_manuali.json, «scrittori_a_mano») | lessicografo e poeta | Ali-Akbar Dehkhoda, Q470931 |
 | 23/11/2026 | Saggisti: niente regola automatica prima del 7 gennaio 2027; entra a mano solo chi Marco sceglie perché noto soprattutto come autore di libri, con anno di morte da due fonti terze e un'opera principale con la sua fonte (data/verifiche_manuali.json, «aggiunti_a_mano»; docs/saggisti-a-mano.md). La prova 9 li ricontrolla | le professioni di Wikidata sono larghe: prenderebbero Planck, von Neumann, Eliot Ness | 8 saggisti, tra cui Lucien Febvre, Q156999 |
 | 23/11/2026 | Una verifica a mano non usa Wikipedia come fonte (la prova 9 lo controlla dal 23/11/2026) | Wikipedia non è una fonte terza | Nanduri Venkata Subbarao, Q6963402 |
+| 23/11/2026 | Verifica a mano «discorde»: quando una fonte terza contraddice le biblioteche, l'autore resta nella lista con l'avviso «da verificare, le fonti non concordano» (regole.voce_morte, un posto solo per registro e liste) | necrologio di luglio 1957 contro GND e Library of Congress 1958 | Nanduri Venkata Subbarao, Q6963402 |
+| 23/11/2026 | Una verifica a mano senza due fonti terze si toglie e l'autore torna allo stato delle fonti automatiche (la vecchia verifica resta in «verifiche_tolte», con quello che si è trovato) | le verifiche a mano del 09/11 usavano Wikipedia | Marcel Romanescu, Q20738418 |
