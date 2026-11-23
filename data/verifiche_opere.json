@@ -1580,7 +1580,7 @@
      "link": "https://is.muni.cz/el/phil/jaro2016/NJI_20/um/61954987/56639148/Broch.pdf?lang=en"
     }
    ],
-   "perche": "ricerca sul web (docs/ricerca-web/risultati.json), esito «nota» della regola; testo della nota da approvare (23/11/2026)"
+   "perche": "ricerca sul web (docs/ricerca-web/risultati.json), esito «nota» della regola; testo della nota approvato da Marco (23/11/2026) (23/11/2026)"
   },
   "Q8039491": {
    "titolo": "Wyatt Earp: Frontier Marshal",
@@ -1599,7 +1599,7 @@
      "link": "https://www.kansashistory.gov/p/kansas-historical-quarterly-wyatt-earp-and-the-buntline-special-myth/13255"
     }
    ],
-   "perche": "ricerca sul web (docs/ricerca-web/risultati.json), esito «nota» della regola; testo della nota da approvare (23/11/2026)"
+   "perche": "ricerca sul web (docs/ricerca-web/risultati.json), esito «nota» della regola; testo della nota approvato da Marco (23/11/2026) (23/11/2026)"
   },
   "Q1306780": {
    "titolo": "La muraglia cinese (Beim Bau der chinesischen Mauer)",
@@ -1624,9 +1624,13 @@
     {
      "nome": "franzkafka.de (opere, Das Ehepaar): almeno un testo esce per la prima volta nella raccolta (Ungedruckte Erzählungen und Prosa aus dem Nachlaß)",
      "link": "https://www.franzkafka.de/werk/saemtliche-titel/das-ehepaar"
+    },
+    {
+     "nome": "TextGrid Digitale Bibliothek: «Eine kaiserliche Botschaft», Erstdruck in Selbstwehr, 1919",
+     "link": "https://www.textgridrep.de/browse/qmwb.0?lang=en"
     }
    ],
-   "perche": "ricerca sul web (docs/ricerca-web/risultati.json), esito «nota» della regola; testo della nota da approvare (23/11/2026)"
+   "perche": "ricerca sul web (docs/ricerca-web/risultati.json), esito «nota» della regola; testo della nota da approvare (23/11/2026); nota approvata da Marco il 23/11/2026, con la seconda fonte per il 1919"
   },
   "Q3981235": {
    "titolo": "Tarzan the Invincible",
@@ -1649,7 +1653,7 @@
      "link": "https://digitalcommons.winthrop.edu/rarebooks/56"
     }
    ],
-   "perche": "ricerca sul web (docs/ricerca-web/risultati.json), esito «nota» della regola; testo della nota da approvare (23/11/2026)"
+   "perche": "ricerca sul web (docs/ricerca-web/risultati.json), esito «nota» della regola; testo della nota approvato da Marco (23/11/2026) (23/11/2026)"
   }
  },
  "nota_prima_pubblicazione": "prima_pubblicazione: prima uscita documentata (rivista o editore, con la data), con le fonti. Regola di Marco (23/11/2026): quando c'è, vale quella; i cataloghi confermano ma non la battono (scripts/regole.py, anno_prima_pubblicazione).",
