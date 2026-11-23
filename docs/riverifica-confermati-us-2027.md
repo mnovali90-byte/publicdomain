@@ -3,8 +3,8 @@
 Solo rapporto: niente cambia nel sito. Opere segnate «ok» il 20/11/2026 e ancora in lista, ripassate per `regole.incrocio_opera` con la regola del 23/11/2026 (per confermare serve una prima pubblicazione documentata).
 
 - Opere: 111
-- conferma: 19
-- da decidere: 92
+- conferma: 20
+- da decidere: 91
 - «Già a mano»: l'opera è anche fra le decisioni a mano del 23/11/2026 (data/verifiche_opere.json), che valgono più della regola.
 
 | Esito | Opera | Perché | Visite (en) | Già a mano | Fonti provate il 20/11 |
@@ -46,7 +46,7 @@ Solo rapporto: niente cambia nel sito. Opere segnate «ok» il 20/11/2026 e anco
 | da decidere | Un messaggio dell'imperatore (Q1306780) | solo cataloghi o una fonte danno un anno più tardo | 3262 |  | cce, k10plus, wikipedia, isfdb |
 | da decidere | Tarzan the Invincible (Q3981235) | un anno più vecchio senza due fonti indipendenti d'accordo, o puntate su più anni | 3017 |  | cce, wikipedia |
 | da decidere | The American Black Chamber (Q7713437) | meno di due fonti indipendenti sull'anno | 2659 |  | cce, wikipedia, isfdb |
-| da decidere | Gog (Q3109849) | meno di due fonti indipendenti sull'anno | 2631 |  | cce, wikipedia, isfdb |
+| da decidere | Gog (Q3109849) | un anno più vecchio senza due fonti indipendenti d'accordo, o puntate su più anni | 2631 |  | cce, wikipedia, isfdb |
 | da decidere | Cartucho (Q5047445) | meno di due fonti indipendenti sull'anno | 2629 |  | cce, wikipedia, isfdb |
 | da decidere | Markéta Lazarová (Q6770866) | meno di due fonti indipendenti sull'anno | 2500 |  | cce, wikipedia, isfdb |
 | da decidere | Tales from the Vienna Woods (Q11247830) | meno di due fonti indipendenti sull'anno | 2486 |  | cce, k10plus, wikipedia, isfdb |
@@ -67,7 +67,6 @@ Solo rapporto: niente cambia nel sito. Opere segnate «ok» il 20/11/2026 e anco
 | da decidere | La rivoluzione permanente (Q7756737) | un anno più vecchio senza due fonti indipendenti d'accordo, o puntate su più anni | 1272 |  | cce, wikipedia, isfdb |
 | da decidere | Waterless Mountain (Q7974168) | meno di due fonti indipendenti sull'anno | 1253 |  | cce, wikipedia, isfdb |
 | da decidere | Las lanzas coloradas (Q6492731) | meno di due fonti indipendenti sull'anno | 1232 |  | cce, wikipedia, isfdb |
-| da decidere | Terra Incognita (Q4050857) | meno di due fonti indipendenti sull'anno | 1037 |  | cce, wikipedia, isfdb |
 | da decidere | Il signor Gallet, defunto (Q1404733) | meno di due fonti indipendenti sull'anno | 975 |  | cce, bnf, wikipedia, isfdb |
 | da decidere | What Bird is That? (Q7990995) | meno di due fonti indipendenti sull'anno | 885 |  | cce, wikipedia, isfdb |
 | da decidere | Los lanzallamas (Q6683419) | meno di due fonti indipendenti sull'anno | 866 |  | cce, wikipedia, isfdb |
@@ -113,6 +112,7 @@ Solo rapporto: niente cambia nel sito. Opere segnate «ok» il 20/11/2026 e anco
 | conferma | Il racconto di Satampra Zeiros (Q7767973) | prima uscita 1931 da isfdb, wiki | 3561 |  | cce, wikipedia, isfdb |
 | conferma | The Return of the Sorcerer (Q7760465) | prima uscita 1931 da isfdb, wiki | 3392 |  | cce, wikipedia, isfdb |
 | conferma | Il miracolo di padre Malachia (Q5437626) | prima uscita 1931 da cce, isfdb, wiki | 1343 |  | cce, wikipedia, isfdb |
+| conferma | Terra Incognita (Q4050857) | prima uscita 1931 da rivista, wiki | 1037 |  | cce, wikipedia, isfdb |
 | conferma | Alleys of Peril (Q4732223) | prima uscita 1931 da isfdb, wiki | 273 |  | cce, wikipedia, isfdb |
 | conferma | Breed of Battle (Q4960195) | prima uscita 1931 da isfdb, wiki | 210 |  | cce, wikipedia, isfdb |
 | conferma | The TNT Punch (Q7767852) | prima uscita 1931 da isfdb, wiki | 174 |  | cce, wikipedia, isfdb |

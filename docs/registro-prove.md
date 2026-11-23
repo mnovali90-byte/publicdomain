@@ -1457,3 +1457,12 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - **Dehkhoda:** morto nel 1956 secondo l'Encyclopaedia Iranica e Rekhta (docs/verifica-autori-mancanti-2027.md). Wikidata (1959) sbaglia. Non inserito nella lista: serve l'ok di Marco.
 - **Conteggio dei saggisti, preparato e non lanciato:** scripts/conta_saggisti.py con .github/workflows/conta-saggisti.yml (parte con docs/registro/passo-saggisti.txt).
 - **Nel sito:** niente cambiato.
+
+## 23/11/2026 — Incrocio sulle 111 confermate 2027 con i dati nuovi; Dehkhoda nella lista 2027 (preparato)
+- **Giro fonti-prima-uscita** (fatto alle 12:58), 344 opere:
+  - Wikidata: tutte hanno una data (P577); 26 hanno la rivista di prima uscita (P1433) e 79 hanno edizioni datate;
+  - bibliografia nella lingua originale: 71 opere con un anno (BnF 35, K10plus 30, BNE 5, SBN 1).
+- **Incrocio sulle 111:** 20 conferma, 91 da decidere (prima dei dati nuovi: 19 e 92). Collaudo sulle 55: invariato, 2 giuste e 0 sbagliate.
+  - Giudizio: la bibliografia nazionale dà l'anno del libro, non della prima uscita, quindi da sola non conferma (è il caso Black Swan). Esempio: Der Weg zurück, K10plus 1931, ma uscito a puntate sulla Vossische Zeitung prima.
+  - La rivista su Wikidata c'è per poche opere.
+- **Dehkhoda:** Encyclopaedia Iranica letta su iranicaonline.org (26 febbraio 1956). Scheda da costruire con scripts/scheda_autore.py e .github/workflows/scheda-autore.yml (parte con docs/registro/passo-scheda.txt); non lanciato.

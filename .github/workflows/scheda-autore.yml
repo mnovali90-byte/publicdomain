@@ -1,0 +1,37 @@
+name: Scheda di un autore da aggiungere (Wikidata e Wikipedia; non cambia il sito)
+
+# Parte solo cambiando docs/registro/passo-scheda.txt, con l'ok di Marco (23/11/2026).
+# Scrive solo data/registro/schede_proposte.json: le liste non cambiano.
+on:
+  push:
+    paths:
+      - "docs/registro/passo-scheda.txt"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: scheda-autore
+  cancel-in-progress: false
+
+jobs:
+  scheda:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Scheda come la fanno aggiorna.py e arricchisci.py
+        env:
+          QID: "Q470931"
+        run: python scripts/scheda_autore.py
+      - name: Salva solo la scheda proposta
+        if: ${{ !cancelled() }}
+        run: |
+          git add data/registro/schede_proposte.json 2>/dev/null || true
+          bash scripts/salva.sh "Scheda autore proposta"
