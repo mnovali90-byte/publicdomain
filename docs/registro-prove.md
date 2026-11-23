@@ -1592,3 +1592,11 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - Regola nuova (Marco): nessun «Da confermare» nella vetrina dei libri USA, né nelle pagine dell'anno né nella home (pagine.py, home.py); prova 5b lo controlla. Sulla pagina 2028 di prima ne avrebbe trovati 2 (Musil e Ostrovskij), sulla 2027 nessuno.
 - Vetrina 2028: escono Musil (L'uomo senza qualità, volumi 1930/1932-33) e Ostrovskij; salgono Tobacco Road e Stamboul Train («Edizione confermata»). Solo 7 opere della lista 2028 sono «Verificato» (Schmitt escluso): una vetrina di soli «Verificato» non si riempie.
 - Etichette 2028: 8/102/65 (Peril passa a Verificato con la nota). Prove 1-9 e 5b: 0 errori; fotografia: 0 cambi.
+
+## 2026-11-23 — Prova a vuoto dei giri del 1° e del 7 gennaio (capodanno.yml), niente pubblicato
+- Come: copia del repository in /tmp (senza collegamento a GitHub, cancellata alla fine). Orologio finto per Python (sitecustomize: date.today e datetime.now) e per node (Date finto via NODE_OPTIONS --require), così le prove 1, 3 e 3b confrontano Python e browser con la stessa data finta. Stessi passi del giro: storico/pagina.py, scripts/pagine.py, prova_regole.py, controllo_frasi.py, confronta_fotografia.py --giro; prima 1/1/2027 00:05, poi 7/1/2027 00:05 sopra il risultato del 1°.
+- Orari: cron "5 23 31 12 *" = 1/1/2027 00:05 a Roma; "5 23 6 1 *" = 7/1/2027 00:05 (gennaio è sempre ora solare, UTC+1).
+- Fase del sito, Python e browser uguali: 31/12 23:59 vigilia 2027; 1/1 00:05 festa 2027; 6/1 23:59 festa 2027; 7/1 00:05 conto 2028.
+- 1° gennaio: prove 1-9 e 5b 0 errori, frasi imprecise 0; fotografia 9325 cambi, tutti attesi, 0 da approvare: il giro pubblicherebbe. 831 file (schede «1° gen 2027» → «libero dal 2027», conti dei giorni, sitemap, data degli .ics).
+- 7 gennaio: 0 errori, fotografia 0 cambi; 840 file (menu «Pubblico dominio 2028», conto alla rovescia 2028, autori in arrivo da 251 a 125).
+- Se il giro fallisce: niente ripartenza; il sito resta com'era, ma home e radar cambiano fase da soli nel browser. Avviso solo per email di GitHub a chi ha toccato per ultimo l'orario (se le notifiche sono accese); se GitHub salta il giro, nessun avviso. Rimedio a mano: pulsante «Run workflow».
