@@ -23,7 +23,7 @@ I fatti li decidono le fonti terze, non Marco e non Claude.
 
    Scrive `docs/fonti-opere/risultati.json`. Se il tempo finisce, il giro dopo riprende da dove si era fermato: basta cambiare `docs/fonti-opere/passo.txt`.
 
-2. **Incrocio (regola, da scrivere sui dati raccolti).**
+2. **Incrocio (regola scritta in codice il 23/11/2026: `regole.incrocio_opera`, script `scripts/incrocio_opere.py`, collaudo `scripts/collaudo_incrocio.py` → docs/collaudo-incrocio.md).** Esiti: conferma, nota, esce, sposta, da decidere. Regole del 23/11: prima pubblicazione documentata > cataloghi; le traduzioni non votano (un catalogo vota solo per le opere nella lingua delle sue edizioni); raccolta senza testi nuovi = esce, con testi nuovi = resta con nota; volumi uno per uno; uscita dopo = sposta; un solo indizio contrario basta per «da decidere».
    - **Anni.**
      - Votano Wikidata e i cataloghi, ma solo con le edizioni nella lingua originale e non tradotte.
      - Le fonti che si copiano contano una volta (Open Library ripete spesso la Library of Congress).

@@ -624,6 +624,94 @@ def lista_pubblica(pacchetto):
     return d
 
 
+# ---------------------------------------------------------------- INCROCIO DELLE FONTI SULLE OPERE (passo 2 di docs/verifica-opere.md)
+# Regole decise da Marco il 23/11/2026 sulle opere USA 2027. Esiti: conferma, nota, esce, sposta, da decidere.
+INCROCIO_DOCUMENTATE = {"duke": "duke", "wikipedia": "wiki", "wikidata": "wiki", "isfdb": "isfdb"}   # dicono la prima uscita
+INCROCIO_CATALOGHI = {"cce": ("cce", "en"), "loc": ("loc", "en"), "openlibrary": ("loc", "en"),   # Open Library ripete la LoC
+                      "k10plus": ("k10plus", "de"), "bnf": ("bnf", "fr")}                       # (gruppo, lingua delle edizioni)
+
+
+def incrocio_opera(pub, lingua, per_fonte, puntate=None, date_wikidata=None, fatti=None):
+    """Decide l'anno USA di un'opera da una lista (pub = anno della lista, es. 1931) incrociando le fonti raccolte.
+    per_fonte: {fonte: anno dell'edizione più vecchia trovata}; puntate: [inizio, fine, fonte] se una fonte dice che uscì
+    a puntate; date_wikidata: tutti gli anni che Wikidata dà; lingua: codice della lingua originale (en, de, fr...).
+    fatti (facoltativo, dalle verifiche): {"prima": {"anno", "fonti": n, "intera": bool}, "raccolta": {"testi_nuovi": bool,
+    "fonti": n}, "volumi": [{"anno", "fonti": n}], "parte_prima": {"anno", "fonti": n}}.
+    Regole: la prima pubblicazione documentata vale più dei cataloghi (i cataloghi confermano); le traduzioni non votano
+    (un catalogo vota solo per le opere nella lingua delle sue edizioni); le fonti che si copiano contano una volta;
+    Wikidata con più date non vota; raccolta senza testi nuovi = esce, con testi nuovi = resta con nota; volumi uno per
+    uno; uscita dopo l'anno della lista = sposta. Ogni decisione vuole due gruppi di fonti indipendenti; un solo indizio
+    contrario basta per «da decidere». Restituisce {"esito", "anno", "motivo"}."""
+    f = fatti or {}
+    if f.get("raccolta") and (f["raccolta"].get("fonti") or 0) >= 2:
+        if f["raccolta"].get("testi_nuovi") is False:
+            return {"esito": "esce", "anno": f["raccolta"].get("anno"), "motivo": "raccolta senza testi nuovi"}
+        if f["raccolta"].get("testi_nuovi") is True:
+            return {"esito": "nota", "anno": pub, "motivo": "raccolta con almeno un testo nuovo"}
+    vol = [v for v in f.get("volumi") or [] if (v.get("fonti") or 0) >= 2 and isinstance(v.get("anno"), int)]
+    if vol and len(vol) == len(f.get("volumi") or []):
+        primo = min(v["anno"] for v in vol)
+        if primo > pub:
+            return {"esito": "sposta", "anno": primo, "motivo": "volumi uno per uno: il primo esce dopo"}
+        if primo < pub:
+            return {"esito": "esce", "anno": primo, "motivo": "volumi uno per uno: il primo esce prima"}
+    pr = f.get("prima")
+    if pr and (pr.get("fonti") or 0) >= 2 and isinstance(pr.get("anno"), int):
+        if pr["anno"] < pub:
+            return ({"esito": "esce", "anno": pr["anno"], "motivo": "prima pubblicazione documentata, testo intero, prima"}
+                    if pr.get("intera") else {"esito": "nota", "anno": pub, "motivo": "uscita prima solo una parte"})
+        if pr["anno"] > pub:
+            return {"esito": "sposta", "anno": pr["anno"], "motivo": "prima pubblicazione documentata dopo l'anno della lista"}
+        pp = f.get("parte_prima")
+        if pp and (pp.get("fonti") or 0) >= 2:
+            return {"esito": "nota", "anno": pub, "motivo": "una parte uscita prima"}
+        return {"esito": "conferma", "anno": pub, "motivo": "prima pubblicazione documentata"}
+    # voti dai dati raccolti: gruppo -> anni
+    voti, deboli = {}, []
+    wd = sorted(set(date_wikidata or [])) or [pub]
+    if len(wd) == 1:
+        voti.setdefault("wiki", set()).add(wd[0])
+    else:
+        deboli.append(min(wd))                      # Wikidata con più date: non vota, ma è un indizio
+    for k, y in (per_fonte or {}).items():
+        if not isinstance(y, int):
+            continue
+        if k in INCROCIO_DOCUMENTATE:
+            voti.setdefault(INCROCIO_DOCUMENTATE[k], set()).add(y)
+        elif k in INCROCIO_CATALOGHI:
+            g, lg = INCROCIO_CATALOGHI[k]
+            if lingua == lg:
+                voti.setdefault(g, set()).add(y)
+            else:
+                deboli.append(y)                    # traduzione (o lingua ignota): non vota
+    if puntate and isinstance(puntate[0], int):
+        deboli.append(puntate[0])
+    minimo = {g: min(a) for g, a in voti.items()}
+    prima = [g for g, y in minimo.items() if y < pub]
+    if prima or any(y < pub for y in deboli):
+        # l'anno più vecchio confermato da due gruppi indipendenti; nessun indizio può essere ancora più vecchio, e le
+        # puntate contano solo se uscite tutte in quell'anno (un romanzo a puntate su più anni è un caso da decidere)
+        conta_anni = {}
+        for g in prima:
+            for y in voti[g]:
+                if y < pub:
+                    conta_anni.setdefault(y, set()).add(g)
+        cand = sorted(y for y, gg in conta_anni.items() if len(gg) >= 2)
+        if cand:
+            Y = cand[0]
+            tutti = [y for g in voti for y in voti[g] if y < pub] + [y for y in deboli if y < pub]
+            punt_ok = not puntate or (puntate[0] == puntate[1] == Y) or (isinstance(puntate[0], int) and puntate[0] > Y)
+            if min(tutti) >= Y and punt_ok:
+                return {"esito": "esce", "anno": Y, "motivo": f"due fonti indipendenti danno {Y} ({', '.join(sorted(conta_anni[Y]))}), nessuna più vecchia"}
+        return {"esito": "da decidere", "anno": None, "motivo": "un anno più vecchio senza due fonti indipendenti d'accordo, o puntate su più anni"}
+    doc = [g for g in minimo if g in ("duke", "wiki", "isfdb")]
+    a_pub = [g for g, y in minimo.items() if y == pub]
+    if pub in [minimo.get(g) for g in doc] and len(a_pub) >= 2:
+        return {"esito": "conferma", "anno": pub, "motivo": f"prima uscita {pub} da {', '.join(sorted(a_pub))}"}
+    dopo = {g: y for g, y in minimo.items() if y > pub and g in ("duke", "isfdb") or (g == "wiki" and y > pub and len(wd) == 1 and y != pub)}
+    return {"esito": "da decidere", "anno": None, "motivo": "meno di due fonti indipendenti sull'anno" if not dopo else "solo cataloghi o una fonte danno un anno più tardo"}
+
+
 def esporta_js(percorso):
     import json
     c = {"ANNI_DOPO_MORTE": ANNI_DOPO_MORTE, "SPAGNA_80_FINO_AL": SPAGNA_80_FINO_AL, "SPAGNA_ANNI_VECCHI": SPAGNA_ANNI_VECCHI,

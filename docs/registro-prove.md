@@ -1408,3 +1408,27 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - **Gutenberg, una sola prova:** scripts/confronta_una_fonte.py legge ora il catalogo RDF in file unico (rdf-files.tar.bz2) invece delle pagine autore. Se non funziona, si lascia.
 - **Chiuso il lavoro sui 395 «una fonte»** (Marco): basta la nota del sito «anno di morte da una sola fonte».
 - **Esito:** prove 1-8 a 0, fotografia 0 cambi.
+
+## 23/11/2026 — Gutenberg dal catalogo: non funziona, si lascia
+- **Esito del giro delle 11:21:** il catalogo RDF di Gutenberg ha risposto «HTTP 503 Service Unavailable». Come deciso, Gutenberg si lascia.
+- **Open Library su 392 autori:** 11 d'accordo, 0 disaccordi, 11 senza anno, 370 senza codici.
+
+## 23/11/2026 — Incrocio delle fonti sulle opere in codice, collaudo alla cieca, giro 2028 (solo rapporti)
+- **Regola:** regole.incrocio_opera (passo 2 di docs/verifica-opere.md).
+  - Esiti: conferma, nota, esce, sposta, da decidere.
+  - La prima pubblicazione documentata vale più dei cataloghi.
+  - Le traduzioni non votano: un catalogo vota solo per le opere nella lingua delle sue edizioni (CCE, LoC, Open Library e ISFDB per l'inglese, K10plus per il tedesco, BnF per il francese).
+  - Open Library conta insieme alla LoC, perché la ripete. Wikidata con più date non vota.
+  - Raccolte, volumi e prima pubblicazione documentata entrano come «fatti» dalle verifiche.
+  - Ogni decisione vuole due gruppi indipendenti; un solo indizio contrario dà «da decidere».
+- **Collaudo alla cieca** (scripts/collaudo_incrocio.py, docs/collaudo-incrocio.md):
+  - 55 opere: le 50 di «usa_lista» e le 5 tolte stamattina che non sono già fra quelle;
+  - il sistema legge solo i dati raccolti in automatico e la lingua dalle liste com'erano prima delle decisioni (commit c50a23324); le decisioni si leggono dopo;
+  - esito: giuste 2, sbagliate 0, da decidere 53. Le due giuste sono Gli idioti e Charlie Chan Carries On, entrambe «esce».
+- **Prima versione corretta durante la prova:** bloccava ogni «esce» se c'era un'indicazione di uscita a puntate. Ora le puntate bloccano solo se iniziano prima dell'anno trovato o durano più anni. Con la prima versione: 1 giusta, 0 sbagliate.
+- **Limite del collaudo:** le 55 opere sono i casi difficili, quelli che il sistema non sapeva già confermare. Il ramo «conferma» non è mai stato messo alla prova.
+- **Giro sulla lista 2028** (scripts/incrocio_opere.py, docs/incrocio-us-2028.md): 175 opere, 78 conferma e 97 da decidere. Sono «conferma» non collaudate.
+- **Preparato, non lanciato:**
+  - giro annuale degli autori mancanti (scripts/autori_mancanti.py, .github/workflows/autori-mancanti.yml, che parte con docs/registro/passo-mancanti.txt);
+  - fonti: categorie Wikipedia dei morti dell'anno in en, it, de, fr, es e pl (con una categoria da scrittore) e la GND; poi Wikidata dice perché l'autore manca.
+- **Nel sito:** niente cambiato. Prove 1-8 a 0.
