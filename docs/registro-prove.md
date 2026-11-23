@@ -1114,3 +1114,17 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
   - Scartati: 36 attori e produttori senza ruolo; 4 traduzioni o adattamenti presi per prima edizione.
 - **USA: 130 opere** con un'edizione entro il 1930 nei cataloghi ma non su Wikidata. Due cataloghi indipendenti d'accordo per 62, uno solo per 68. Tra le 68 ci sono trappole: Gatsby e Gentlemen Prefer Blondes nelle schede dei riduttori teatrali.
 - **Niente cambiato sul sito.**
+
+## 23/11/2026 mattina — 62 opere USA dai cataloghi messe nei dati (in locale, da approvare)
+- **Dati:** data/verifiche_opere.json, 62 voci (chiave autore|titolo). «entro» è il più tardo dei due cataloghi che hanno un'edizione entro il 1930; ogni voce ha le sue fonti.
+- **Codice:**
+  - **scripts/registro.py (voci_usa):** le voci con codice d'opera diventano seconda fonte nel registro USA;
+  - **regole.stato_opera** (e la gemella JS): se Wikidata non dà l'anno, vale quello confermato dal registro USA;
+  - **pagine.stato_usa:** per le opere che non sono in Già pubblici legge verifiche_opere.json e scrive «libero» senza anno, con «entro il 1922» nella colonna dell'anno.
+- **Effetto sulle schede:** 55 righe in italiano, le stesse in inglese.
+  - 49 passano da «anno non noto» a «libero».
+  - 6 passano da «da verificare» a «libero dal…». Queste vengono dal registro delle opere rifatto, che ora conta anche le conferme della Duke aggiunte il 22/11 (Polti, T. Bernard ×3, Toman, May Sinclair in ceco).
+- **Effetto su Già pubblici (fotografia):** 15 cambi negli USA da «non determinato» a «libero».
+  - 14 vengono da questi dati.
+  - 1 viene dalla regola: *Nymphée* di J.-H. Rosny, anno di Wikidata non credibile, ma Open Library conferma un'edizione del 1909.
+- **Prove:** 1-7 tutte a 0 differenze.

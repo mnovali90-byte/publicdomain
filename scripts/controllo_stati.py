@@ -139,7 +139,9 @@ def main(stampa=True):
             conti["usa"] += 1
             su = R.stato_opera(o, "us", OGGI, mpf, reg_op.get("usa", {}))
             mm = re.match(r"(libero dal|free since|dal|from) (\d{4})", stato_h.strip())
-            if mm and mm.group(1) in ("libero dal", "free since"):
+            if stato_h.strip() in ("libero", "free"):
+                pagina = ("si", None)
+            elif mm and mm.group(1) in ("libero dal", "free since"):
                 pagina = ("si", int(mm.group(2)))
             elif mm:
                 pagina = ("dal", int(mm.group(2)))

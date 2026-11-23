@@ -531,6 +531,7 @@ def _leggi(p, x):
 
 from registro import anni_usa, liste_usa  # noqa: E402
 ANNI_VER = anni_usa()   # registro unico: anno USA confermato di ogni opera (regola in scripts/regole.py)
+VER_OPERE = (_leggi(RADICE / "data" / "verifiche_opere.json", {}) or {}).get("opere", {})   # anni USA dai cataloghi (23/11/2026)
 _PER_AUT = {}
 
 
@@ -614,9 +615,14 @@ def stato_usa(a, o):
             return "dal", st["y"]
         return ("verifica", None) if st["s"] == "ver" else ("nd", None)
     y = anno_opera(a, o)
-    if not isinstance(y, int):
-        return "nd", None
     limite = R.pubblicate_libere_usa_nel(datetime.date.today().year)
+    if not isinstance(y, int):
+        # 23/11/2026: anno provato da due cataloghi (data/verifiche_opere.json), che valgono anche come seconda fonte
+        v = VER_OPERE.get(f"{a['wikidata']}|{o.get('titolo')}")
+        if v and isinstance(v.get("entro"), int):
+            # libero senza un anno preciso: si sa solo che l'opera era uscita entro «entro»
+            return ("libero", None) if v["entro"] <= limite else ("dal", R.anno_libero_usa(v["entro"]))
+        return "nd", None
     if y > limite:
         return "dal", R.anno_libero_usa(y)
     tw = {tuple(_parole(o.get("titolo"))), tuple(_parole(o.get("titolo_en")))}
@@ -714,6 +720,7 @@ def note_coautori(a, lang):
 def opere_usa(a, lang):
     """Sezione «Negli USA, opera per opera»: solo dati, con il metodo di verifica degli anni."""
     it = lang == "it"
+    T = (lambda x, y: x) if it else (lambda x, y: y)
     righe, liberi = [], []
     for o in a.get("opere", [])[:10]:
         t = o.get("titolo") if it else o.get("titolo_en") or o.get("titolo")
@@ -721,7 +728,7 @@ def opere_usa(a, lang):
             continue
         st, y = stato_usa(a, o)
         if st == "libero":
-            et, cl = (f"libero dal {y}" if it else f"free since {y}"), "ok"
+            et, cl = ((f"libero dal {y}" if it else f"free since {y}") if y else ("libero" if it else "free")), "ok"
             liberi.append(t)
         elif st == "dal":
             et, cl = (f"dal {y}" if it else f"from {y}"), ""
@@ -730,7 +737,9 @@ def opere_usa(a, lang):
         else:
             et, cl = ("anno non noto" if it else "year unknown"), ""
         anno = anno_opera(a, o)
-        anno = anno if isinstance(anno, int) else ""
+        if not isinstance(anno, int):
+            v_ = VER_OPERE.get(f"{a['wikidata']}|{o.get('titolo')}")
+            anno = T(f"entro il {v_['entro']}", f"by {v_['entro']}") if v_ else ""
         righe.append(f'<li><span>{esc(t)}<span class="anno"> {anno}</span></span><span class="us {cl}">{esc(et)}</span></li>\n')
     if not righe:
         return "", []
@@ -1159,7 +1168,7 @@ def opere_usa_n(a, lang):
             continue
         st, y = stato_usa(a, o)
         if st == "libero":
-            et, cl = T(f"libero dal {y}", f"free since {y}"), "free"
+            et, cl = (T(f"libero dal {y}", f"free since {y}") if y else T("libero", "free")), "free"
             liberi.append(t)
         elif st == "dal":
             et, cl = T(f"dal {y}", f"from {y}"), ""
@@ -1176,7 +1185,9 @@ def opere_usa_n(a, lang):
                 sup = f'<sup data-n="{k}">{k}</sup>'
                 break
         anno = anno_opera(a, o)
-        anno = anno if isinstance(anno, int) else ""
+        if not isinstance(anno, int):
+            v_ = VER_OPERE.get(f"{a['wikidata']}|{o.get('titolo')}")
+            anno = T(f"entro il {v_['entro']}", f"by {v_['entro']}") if v_ else ""
         righe.append(f'<li><span class="t">{esc(t)}{sup}</span><span class="y">{anno}</span><span class="u {cl}">{esc(et)}</span></li>')
     a["_liberi_usa"] = liberi
     if not righe:

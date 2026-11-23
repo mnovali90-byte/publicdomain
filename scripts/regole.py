@@ -350,6 +350,9 @@ def stato_opera(o, c, oggi, mpf=(), verifiche=None):
     if c == "us":
         if o.get("yd"):
             note.append("sDuke")
+        # 23/11/2026: senza anno su Wikidata, vale l'anno confermato dal registro USA (es. due cataloghi, data/verifiche_opere.json)
+        if y is None and ((verifiche or {}).get(o.get("q")) or [None])[0] is not None:
+            y = verifiche[o.get("q")][0]
         if y is not None:
             # libera solo negli USA e solo per l'anno: serve una seconda fonte (Duke o Open Library), se no «da verificare»
             if anno_libero_usa(y) <= Y and not libera_ue_opera(o, Y):
@@ -504,7 +507,8 @@ window.REGOLE_PAESI = (() => {
     return ["conto", y + 1];
   };
   const statoOpera = (o, c, oggi, mpf, verifiche) => {
-    const Y = oggi, note = [], y = nn(o.y) ? o.y : null, au = o.au || [];
+    const Y = oggi, note = [], au = o.au || [];
+    let y = nn(o.y) ? o.y : null;
     if (o.antica && o.antica !== "anonima") return { s: "si", note: ["sAntica_antica"], r: "antico" };
     if (o.antica === "anonima" && c !== "us" && y !== null) {
       const fine = y + (c === "es" ? C.SPAGNA_ANNI_VECCHI : C.ANNI_DOPO_MORTE) + 1;
@@ -513,6 +517,8 @@ window.REGOLE_PAESI = (() => {
     if (au.some((a) => a.inc)) note.push("sInc");
     if (c === "us") {
       if (o.yd) note.push("sDuke");
+      // 23/11/2026: senza anno su Wikidata, vale l'anno confermato dal registro USA (gemella di stato_opera)
+      if (y === null && ((verifiche || {})[o.q] || [null])[0] != null) y = verifiche[o.q][0];
       if (y !== null) {
         if (annoLiberoUsa(y) <= Y && !liberaUeOpera(o, Y)) {
           const v = (verifiche || {})[o.q];

@@ -33,6 +33,10 @@ def voci_usa():
             q = (b.get("wd") or {}).get("qid")
             if q and isinstance(b.get("pub"), int):
                 out.setdefault(q, []).append(("duke", ["ok", b["pub"], "duke"]))
+    # 23/11/2026: anni provati da due cataloghi (data/verifiche_opere.json, verifica delle opere approvata da Marco)
+    for k, x in (_leggi(R / "data" / "verifiche_opere.json", {}).get("opere") or {}).items():
+        if x.get("opera") and isinstance(x.get("entro"), int):
+            out.setdefault(x["opera"], []).append(("cataloghi", ["ok", x["entro"], "cataloghi: " + "; ".join(x.get("fonti", []))]))
     return out
 
 

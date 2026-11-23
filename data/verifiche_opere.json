@@ -1,0 +1,634 @@
+{
+ "nota": "Anni USA dai cataloghi (docs/verifica-opere.md, approvato da Marco il 23/11/2026). Chiave: wikidata dell'autore|titolo della scheda. «entro»: l'opera era già uscita in quell'anno, provato da edizioni con stesso titolo e autore in due cataloghi indipendenti (vale il più tardo dei due). Letto da scripts/registro.py (voci_usa, per le opere con codice) e da scripts/pagine.py (stato_usa).",
+ "opere": {
+  "Q207036|A Gallery of Children": {
+   "autore": "A. A. Milne",
+   "titolo": "A Gallery of Children",
+   "opera": null,
+   "entro": 1925,
+   "fonti": [
+    "K10plus (catalogo collettivo tedesco): edizione del 1925",
+    "Library of Congress: edizione del 1925"
+   ]
+  },
+  "Q439204|Treatise on the Gods": {
+   "autore": "Henry Louis Mencken",
+   "titolo": "Treatise on the Gods",
+   "opera": null,
+   "entro": 1930,
+   "fonti": [
+    "K10plus (catalogo collettivo tedesco): edizione del 1930",
+    "Library of Congress: edizione del 1930"
+   ]
+  },
+  "Q439204|In Defense of Women": {
+   "autore": "Henry Louis Mencken",
+   "titolo": "In Defense of Women",
+   "opera": null,
+   "entro": 1922,
+   "fonti": [
+    "K10plus (catalogo collettivo tedesco): edizione del 1922",
+    "Library of Congress: edizione del 1918"
+   ]
+  },
+  "Q155270|Il tradimento dei chierici": {
+   "autore": "Julien Benda",
+   "titolo": "Il tradimento dei chierici",
+   "opera": null,
+   "entro": 1928,
+   "fonti": [
+    "K10plus (catalogo collettivo tedesco): edizione del 1928",
+    "Library of Congress: edizione del 1928"
+   ]
+  },
+  "Q261223|Ants Raudjalg": {
+   "autore": "Aino Kallas",
+   "titolo": "Ants Raudjalg",
+   "opera": null,
+   "entro": 1907,
+   "fonti": [
+    "K10plus (catalogo collettivo tedesco): edizione del 1907",
+    "Library of Congress: edizione del 1907"
+   ]
+  },
+  "Q981086|Memoirs of a Midget": {
+   "autore": "Walter de la Mare",
+   "titolo": "Memoirs of a Midget",
+   "opera": null,
+   "entro": 1921,
+   "fonti": [
+    "K10plus (catalogo collettivo tedesco): edizione del 1921",
+    "Library of Congress: edizione del 1921"
+   ]
+  },
+  "Q596925|Trent's Last Case": {
+   "autore": "Edmund Clerihew Bentley",
+   "titolo": "Trent's Last Case",
+   "opera": "Q3824759",
+   "entro": 1913,
+   "fonti": [
+    "K10plus (catalogo collettivo tedesco): edizione del 1913",
+    "Library of Congress: edizione del 1913"
+   ]
+  },
+  "Q115683|The London venture": {
+   "autore": "Michael Arlen",
+   "titolo": "The London venture",
+   "opera": null,
+   "entro": 1920,
+   "fonti": [
+    "K10plus (catalogo collettivo tedesco): edizione del 1920",
+    "Library of Congress: edizione del 1919"
+   ]
+  },
+  "Q49714|Hans Hardts Mondfahrt": {
+   "autore": "Otto Willi Gail",
+   "titolo": "Hans Hardts Mondfahrt",
+   "opera": null,
+   "entro": 1928,
+   "fonti": [
+    "K10plus (catalogo collettivo tedesco): edizione del 1927",
+    "Library of Congress: edizione del 1928"
+   ]
+  },
+  "Q1650288|The Scarecrow": {
+   "autore": "Percy MacKaye",
+   "titolo": "The Scarecrow",
+   "opera": null,
+   "entro": 1917,
+   "fonti": [
+    "K10plus (catalogo collettivo tedesco): edizione del 1917",
+    "Library of Congress: edizione del 1908"
+   ]
+  },
+  "Q4958416|Joanna Godden": {
+   "autore": "Sheila Kaye-Smith",
+   "titolo": "Joanna Godden",
+   "opera": null,
+   "entro": 1921,
+   "fonti": [
+    "K10plus (catalogo collettivo tedesco): edizione del 1921",
+    "Library of Congress: edizione del 1921"
+   ]
+  },
+  "Q4958416|The End of the House of Alard": {
+   "autore": "Sheila Kaye-Smith",
+   "titolo": "The End of the House of Alard",
+   "opera": null,
+   "entro": 1923,
+   "fonti": [
+    "K10plus (catalogo collettivo tedesco): edizione del 1910",
+    "Library of Congress: edizione del 1923"
+   ]
+  },
+  "Q3157945|Richard Wagner et la France": {
+   "autore": "Jacques-Gabriel Prod’homme",
+   "titolo": "Richard Wagner et la France",
+   "opera": null,
+   "entro": 1921,
+   "fonti": [
+    "Bibliothèque nationale de France: edizione del 1921",
+    "K10plus (catalogo collettivo tedesco): edizione del 1921",
+    "Library of Congress: edizione del 1921"
+   ]
+  },
+  "Q517886|L'Autobus évanoui": {
+   "autore": "Léon Groc",
+   "titolo": "L'Autobus évanoui",
+   "opera": null,
+   "entro": 1914,
+   "fonti": [
+    "Bibliothèque nationale de France: edizione del 1914",
+    "Library of Congress: edizione del 1914"
+   ]
+  },
+  "Q7167474|The Plastic Age": {
+   "autore": "Percy Marks",
+   "titolo": "The Plastic Age",
+   "opera": null,
+   "entro": 1924,
+   "fonti": [
+    "K10plus (catalogo collettivo tedesco): edizione del 1924",
+    "Library of Congress: edizione del 1924"
+   ]
+  },
+  "Q2847633|La Reine de l’ombre": {
+   "autore": "André Demaison",
+   "titolo": "La Reine de l’ombre",
+   "opera": null,
+   "entro": 1925,
+   "fonti": [
+    "Bibliothèque nationale de France: edizione del 1925",
+    "Library of Congress: edizione del 1925"
+   ]
+  },
+  "Q337276|Pasteur": {
+   "autore": "Sacha Guitry",
+   "titolo": "Pasteur",
+   "opera": null,
+   "entro": 1919,
+   "fonti": [
+    "Bibliothèque nationale de France: edizione del 1919",
+    "K10plus (catalogo collettivo tedesco): edizione del 1919",
+    "Library of Congress: edizione del 1919"
+   ]
+  },
+  "Q337276|Deburau": {
+   "autore": "Sacha Guitry",
+   "titolo": "Deburau",
+   "opera": null,
+   "entro": 1926,
+   "fonti": [
+    "Bibliothèque nationale de France: edizione del 1926",
+    "K10plus (catalogo collettivo tedesco): edizione del 1918",
+    "Library of Congress: edizione del 1918"
+   ]
+  },
+  "Q337276|Le Scandale de Monte-Carlo": {
+   "autore": "Sacha Guitry",
+   "titolo": "Le Scandale de Monte-Carlo",
+   "opera": null,
+   "entro": 1908,
+   "fonti": [
+    "Bibliothèque nationale de France: edizione del 1908",
+    "K10plus (catalogo collettivo tedesco): edizione del 1908"
+   ]
+  },
+  "Q135640|Amants, heureux amants": {
+   "autore": "Valery Larbaud",
+   "titolo": "Amants, heureux amants",
+   "opera": null,
+   "entro": 1923,
+   "fonti": [
+    "Bibliothèque nationale de France: edizione del 1923",
+    "K10plus (catalogo collettivo tedesco): edizione del 1923",
+    "Library of Congress: edizione del 1923"
+   ]
+  },
+  "Q380439|The God of Vengeance": {
+   "autore": "Sholem Asch",
+   "titolo": "The God of Vengeance",
+   "opera": null,
+   "entro": 1918,
+   "fonti": [
+    "K10plus (catalogo collettivo tedesco): edizione del 1918",
+    "Library of Congress: edizione del 1918"
+   ]
+  },
+  "Q447268|Pointed Roofs": {
+   "autore": "Dorothy Richardson",
+   "titolo": "Pointed Roofs",
+   "opera": null,
+   "entro": 1921,
+   "fonti": [
+    "K10plus (catalogo collettivo tedesco): edizione del 1921",
+    "Library of Congress: edizione del 1915"
+   ]
+  },
+  "Q447268|The Long Day": {
+   "autore": "Dorothy Richardson",
+   "titolo": "The Long Day",
+   "opera": null,
+   "entro": 1905,
+   "fonti": [
+    "K10plus (catalogo collettivo tedesco): edizione del 1905",
+    "Library of Congress: edizione del 1905"
+   ]
+  },
+  "Q2987397|The Flaming Terrapin": {
+   "autore": "Roy Campbell",
+   "titolo": "The Flaming Terrapin",
+   "opera": null,
+   "entro": 1924,
+   "fonti": [
+    "K10plus (catalogo collettivo tedesco): edizione del 1924",
+    "Library of Congress: edizione del 1924"
+   ]
+  },
+  "Q543360|Den erotiske hamster": {
+   "autore": "Thit Jensen",
+   "titolo": "Den erotiske hamster",
+   "opera": null,
+   "entro": 1928,
+   "fonti": [
+    "K10plus (catalogo collettivo tedesco): edizione del 1928",
+    "Library of Congress: edizione del 1919"
+   ]
+  },
+  "Q2847528|Dans l’Inde": {
+   "autore": "André Chevrillon",
+   "titolo": "Dans l’Inde",
+   "opera": null,
+   "entro": 1891,
+   "fonti": [
+    "Bibliothèque nationale de France: edizione del 1891",
+    "K10plus (catalogo collettivo tedesco): edizione del 1891"
+   ]
+  },
+  "Q2695518|Young Woodley": {
+   "autore": "John William Van Druten",
+   "titolo": "Young Woodley",
+   "opera": null,
+   "entro": 1926,
+   "fonti": [
+    "K10plus (catalogo collettivo tedesco): edizione del 1926",
+    "Library of Congress: edizione del 1926"
+   ]
+  },
+  "Q4647724|Pink Furniture": {
+   "autore": "A. E. Coppard",
+   "titolo": "Pink Furniture",
+   "opera": null,
+   "entro": 1930,
+   "fonti": [
+    "K10plus (catalogo collettivo tedesco): edizione del 1930",
+    "Library of Congress: edizione del 1930"
+   ]
+  },
+  "Q4647724|Silver Circus": {
+   "autore": "A. E. Coppard",
+   "titolo": "Silver Circus",
+   "opera": null,
+   "entro": 1928,
+   "fonti": [
+    "K10plus (catalogo collettivo tedesco): edizione del 1928",
+    "Library of Congress: edizione del 1928"
+   ]
+  },
+  "Q5298362|The Singing Gold": {
+   "autore": "Dorothy Cottrell",
+   "titolo": "The Singing Gold",
+   "opera": null,
+   "entro": 1929,
+   "fonti": [
+    "K10plus (catalogo collettivo tedesco): edizione del 1929",
+    "Library of Congress: edizione del 1929"
+   ]
+  },
+  "Q188385|Four Saints in Three Acts": {
+   "autore": "Gertrude Stein",
+   "titolo": "Four Saints in Three Acts",
+   "opera": null,
+   "entro": 1927,
+   "fonti": [
+    "K10plus (catalogo collettivo tedesco): edizione del 1925",
+    "Library of Congress: edizione del 1927"
+   ]
+  },
+  "Q193283|El retablo de maese Pedro": {
+   "autore": "Manuel de Falla",
+   "titolo": "El retablo de maese Pedro",
+   "opera": null,
+   "entro": 1924,
+   "fonti": [
+    "K10plus (catalogo collettivo tedesco): edizione del 1923",
+    "Library of Congress: edizione del 1924"
+   ]
+  },
+  "Q505017|The Book of Woodcraft and Indian Lore": {
+   "autore": "Ernest Thompson Seton",
+   "titolo": "The Book of Woodcraft and Indian Lore",
+   "opera": null,
+   "entro": 1912,
+   "fonti": [
+    "K10plus (catalogo collettivo tedesco): edizione del 1912",
+    "Library of Congress: edizione del 1912"
+   ]
+  },
+  "Q260670|The Demon Lover": {
+   "autore": "Dion Fortune",
+   "titolo": "The Demon Lover",
+   "opera": null,
+   "entro": 1927,
+   "fonti": [
+    "K10plus (catalogo collettivo tedesco): edizione del 1927",
+    "Library of Congress: edizione del 1927"
+   ]
+  },
+  "Q1131497|Arnold Waterlow: a Life": {
+   "autore": "May Sinclair",
+   "titolo": "Arnold Waterlow: a Life",
+   "opera": "Q108092662",
+   "entro": 1924,
+   "fonti": [
+    "K10plus (catalogo collettivo tedesco): edizione del 1924",
+    "Library of Congress: edizione del 1924"
+   ]
+  },
+  "Q1131497|Mary Olivier: A Life": {
+   "autore": "May Sinclair",
+   "titolo": "Mary Olivier: A Life",
+   "opera": null,
+   "entro": 1919,
+   "fonti": [
+    "K10plus (catalogo collettivo tedesco): edizione del 1919",
+    "Library of Congress: edizione del 1919"
+   ]
+  },
+  "Q1131497|The Divine Fire": {
+   "autore": "May Sinclair",
+   "titolo": "The Divine Fire",
+   "opera": null,
+   "entro": 1904,
+   "fonti": [
+    "K10plus (catalogo collettivo tedesco): edizione del 1904",
+    "Library of Congress: edizione del 1904"
+   ]
+  },
+  "Q1137066|Color": {
+   "autore": "Countee Cullen",
+   "titolo": "Color",
+   "opera": "Q130302197",
+   "entro": 1925,
+   "fonti": [
+    "K10plus (catalogo collettivo tedesco): edizione del 1925",
+    "Library of Congress: edizione del 1925"
+   ]
+  },
+  "Q163069|Prodigals of Monte Carlo": {
+   "autore": "E. Phillips Oppenheim",
+   "titolo": "Prodigals of Monte Carlo",
+   "opera": "Q109283506",
+   "entro": 1926,
+   "fonti": [
+    "K10plus (catalogo collettivo tedesco): edizione del 1926",
+    "Library of Congress: edizione del 1926"
+   ]
+  },
+  "Q163069|The Great Prince Shan": {
+   "autore": "E. Phillips Oppenheim",
+   "titolo": "The Great Prince Shan",
+   "opera": "Q96408890",
+   "entro": 1922,
+   "fonti": [
+    "K10plus (catalogo collettivo tedesco): edizione del 1922",
+    "Library of Congress: edizione del 1922"
+   ]
+  },
+  "Q2043891|Waste": {
+   "autore": "Harley Granville-Barker",
+   "titolo": "Waste",
+   "opera": "Q7972795",
+   "entro": 1916,
+   "fonti": [
+    "K10plus (catalogo collettivo tedesco): edizione del 1909",
+    "Library of Congress: edizione del 1916"
+   ]
+  },
+  "Q84676|Eleagabal Kuperus": {
+   "autore": "Karl Hans Strobl",
+   "titolo": "Eleagabal Kuperus",
+   "opera": null,
+   "entro": 1928,
+   "fonti": [
+    "K10plus (catalogo collettivo tedesco): edizione del 1910",
+    "Library of Congress: edizione del 1928"
+   ]
+  },
+  "Q1398181|Sluneční hodiny": {
+   "autore": "Karel Toman",
+   "titolo": "Sluneční hodiny",
+   "opera": "Q135318503",
+   "entro": 1913,
+   "fonti": [
+    "K10plus (catalogo collettivo tedesco): edizione del 1913",
+    "Library of Congress: edizione del 1913"
+   ]
+  },
+  "Q5345299|Romance": {
+   "autore": "Edward Sheldon",
+   "titolo": "Romance",
+   "opera": "Q28167332",
+   "entro": 1917,
+   "fonti": [
+    "K10plus (catalogo collettivo tedesco): edizione del 1917",
+    "Library of Congress: edizione del 1913"
+   ]
+  },
+  "Q2593206|The Thirty-Six Dramatic Situations": {
+   "autore": "Georges Polti",
+   "titolo": "The Thirty-Six Dramatic Situations",
+   "opera": "Q2591339",
+   "entro": 1895,
+   "fonti": [
+    "Bibliothèque nationale de France: edizione del 1895",
+    "K10plus (catalogo collettivo tedesco): edizione del 1895",
+    "Library of Congress: edizione del 1895"
+   ]
+  },
+  "Q3553609|The Man with the Clubfoot": {
+   "autore": "Valentin Williams",
+   "titolo": "The Man with the Clubfoot",
+   "opera": "Q130641892",
+   "entro": 1925,
+   "fonti": [
+    "K10plus (catalogo collettivo tedesco): edizione del 1925",
+    "Library of Congress: edizione del 1918"
+   ]
+  },
+  "Q3185863|Le Livre de raison": {
+   "autore": "Joseph de Pesquidoux",
+   "titolo": "Le Livre de raison",
+   "opera": null,
+   "entro": 1925,
+   "fonti": [
+    "Bibliothèque nationale de France: edizione del 1925",
+    "K10plus (catalogo collettivo tedesco): edizione del 1925",
+    "Library of Congress: edizione del 1925"
+   ]
+  },
+  "Q27955752|Hans Sonnenstössers Höllenfahrt": {
+   "autore": "Paul Apel",
+   "titolo": "Hans Sonnenstössers Höllenfahrt",
+   "opera": null,
+   "entro": 1911,
+   "fonti": [
+    "K10plus (catalogo collettivo tedesco): edizione del 1900",
+    "Library of Congress: edizione del 1911"
+   ]
+  },
+  "Q1493001|Tanz und Erotik": {
+   "autore": "Rudolf von Delius",
+   "titolo": "Tanz und Erotik",
+   "opera": null,
+   "entro": 1926,
+   "fonti": [
+    "K10plus (catalogo collettivo tedesco): edizione del 1926",
+    "Library of Congress: edizione del 1926"
+   ]
+  },
+  "Q540166|The Angels of Mons": {
+   "autore": "Arthur Machen",
+   "titolo": "The Angels of Mons",
+   "opera": "Q124400504",
+   "entro": 1915,
+   "fonti": [
+    "K10plus (catalogo collettivo tedesco): edizione del 1915",
+    "Library of Congress: edizione del 1915"
+   ]
+  },
+  "Q379949|Jeanne Doré": {
+   "autore": "Tristan Bernard",
+   "titolo": "Jeanne Doré",
+   "opera": "Q125931385",
+   "entro": 1914,
+   "fonti": [
+    "Bibliothèque nationale de France: edizione del 1914",
+    "K10plus (catalogo collettivo tedesco): edizione del 1914",
+    "Library of Congress: edizione del 1914"
+   ]
+  },
+  "Q379949|The Little Cafe": {
+   "autore": "Tristan Bernard",
+   "titolo": "The Little Cafe",
+   "opera": "Q17066334",
+   "entro": 1912,
+   "fonti": [
+    "Bibliothèque nationale de France: edizione del 1912",
+    "K10plus (catalogo collettivo tedesco): edizione del 1911"
+   ]
+  },
+  "Q379949|L'Anglais tel qu'on le parle": {
+   "autore": "Tristan Bernard",
+   "titolo": "L'Anglais tel qu'on le parle",
+   "opera": null,
+   "entro": 1907,
+   "fonti": [
+    "Bibliothèque nationale de France: edizione del 1899",
+    "K10plus (catalogo collettivo tedesco): edizione del 1907",
+    "Library of Congress: edizione del 1900"
+   ]
+  },
+  "Q389375|The Chink in the Armour": {
+   "autore": "Marie Belloc Lowndes",
+   "titolo": "The Chink in the Armour",
+   "opera": "Q96408537",
+   "entro": 1912,
+   "fonti": [
+    "K10plus (catalogo collettivo tedesco): edizione del 1912",
+    "Library of Congress: edizione del 1912"
+   ]
+  },
+  "Q389375|The End of Her Honeymoon": {
+   "autore": "Marie Belloc Lowndes",
+   "titolo": "The End of Her Honeymoon",
+   "opera": "Q96408659",
+   "entro": 1914,
+   "fonti": [
+    "K10plus (catalogo collettivo tedesco): edizione del 1914",
+    "Library of Congress: edizione del 1913"
+   ]
+  },
+  "Q338826|Bohyně, světice, ženy": {
+   "autore": "Stanislav Kostka Neumann",
+   "titolo": "Bohyně, světice, ženy",
+   "opera": null,
+   "entro": 1915,
+   "fonti": [
+    "K10plus (catalogo collettivo tedesco): edizione del 1915",
+    "Library of Congress: edizione del 1915"
+   ]
+  },
+  "Q4762392|A Popular Schoolgirl": {
+   "autore": "Angela Brazil",
+   "titolo": "A Popular Schoolgirl",
+   "opera": null,
+   "entro": 1921,
+   "fonti": [
+    "K10plus (catalogo collettivo tedesco): edizione del 1920",
+    "Library of Congress: edizione del 1921"
+   ]
+  },
+  "Q15516791|The Volunteer": {
+   "autore": "Herbert Asquith",
+   "titolo": "The Volunteer",
+   "opera": "Q19101860",
+   "entro": 1916,
+   "fonti": [
+    "K10plus (catalogo collettivo tedesco): edizione del 1915",
+    "Library of Congress: edizione del 1916"
+   ]
+  },
+  "Q15516791|The volunteer": {
+   "autore": "Herbert Asquith",
+   "titolo": "The volunteer",
+   "opera": "Q19101860",
+   "entro": 1916,
+   "fonti": [
+    "K10plus (catalogo collettivo tedesco): edizione del 1915",
+    "Library of Congress: edizione del 1916"
+   ]
+  },
+  "Q4707865|A Little Way Ahead": {
+   "autore": "Alan Sullivan",
+   "titolo": "A Little Way Ahead",
+   "opera": null,
+   "entro": 1930,
+   "fonti": [
+    "K10plus (catalogo collettivo tedesco): edizione del 1930",
+    "Library of Congress: edizione del 1930"
+   ]
+  },
+  "Q6818964|The Port of Missing Men": {
+   "autore": "Meredith Nicholson",
+   "titolo": "The Port of Missing Men",
+   "opera": null,
+   "entro": 1907,
+   "fonti": [
+    "K10plus (catalogo collettivo tedesco): edizione del 1907",
+    "Library of Congress: edizione del 1907"
+   ]
+  },
+  "Q43249272|L'homme qui lit dans les âmes": {
+   "autore": "Paul Gsell",
+   "titolo": "L'homme qui lit dans les âmes",
+   "opera": null,
+   "entro": 1928,
+   "fonti": [
+    "Bibliothèque nationale de France: edizione del 1928",
+    "K10plus (catalogo collettivo tedesco): edizione del 1928",
+    "Library of Congress: edizione del 1928"
+   ]
+  }
+ }
+}
