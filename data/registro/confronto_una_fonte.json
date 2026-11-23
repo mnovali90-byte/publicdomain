@@ -7,7 +7,6 @@
  "conteggi": {
   "d'accordo": 11,
   "senza codici": 370,
-  "disaccordo": 2,
   "senza anno": 11
  },
  "autori": {
@@ -416,21 +415,6 @@
    "pg": {},
    "esito": "senza codici"
   },
-  "Q113360712": {
-   "nome": "Zebi Eliezer Kroy",
-   "wikidata": 1956,
-   "liste": [
-    "2027"
-   ],
-   "ol": {
-    "OL146206A": {
-     "morte": 1957,
-     "etichetta": "Zevi Kroy"
-    }
-   },
-   "pg": {},
-   "esito": "disaccordo"
-  },
   "Q113482710": {
    "nome": "Jaime Câmara",
    "wikidata": 1946,
@@ -542,7 +526,7 @@
    "esito": "senza codici"
   },
   "Q116608616": {
-   "nome": "Q116608616",
+   "nome": "ميراوليا حسين مغموم دروازی",
    "wikidata": 1946,
    "liste": [
     "es-2027"
@@ -630,7 +614,7 @@
    "ol": {},
    "pg": {
     "58849": {
-     "errore": "non risponde: https://www.gutenberg.org/ebooks/author/58849"
+     "errore": "autore non nel catalogo Gutenberg"
     }
    },
    "esito": "senza anno"
@@ -644,7 +628,7 @@
    "ol": {},
    "pg": {
     "51032": {
-     "errore": "non risponde: https://www.gutenberg.org/ebooks/author/51032"
+     "errore": "autore non nel catalogo Gutenberg"
     }
    },
    "esito": "senza anno"
@@ -1000,7 +984,7 @@
    "esito": "senza codici"
   },
   "Q12557692": {
-   "nome": "Q12557692",
+   "nome": "Орынбай Тайманов",
    "wikidata": 1946,
    "liste": [
     "es-2027"
@@ -1375,7 +1359,7 @@
    "esito": "senza codici"
   },
   "Q135525045": {
-   "nome": "Q135525045",
+   "nome": "Асан Чергєєв",
    "wikidata": 1946,
    "liste": [
     "es-2027"
@@ -1565,7 +1549,7 @@
    "esito": "senza codici"
   },
   "Q141248198": {
-   "nome": "Q141248198",
+   "nome": "Hódsághy Béla",
    "wikidata": 1956,
    "liste": [
     "2027"
@@ -1740,7 +1724,7 @@
    "esito": "senza codici"
   },
   "Q16119099": {
-   "nome": "Q16119099",
+   "nome": "أحمد بن عبد الله السالمي",
    "wikidata": 1946,
    "liste": [
     "es-2027"
@@ -1770,7 +1754,7 @@
    "esito": "senza codici"
   },
   "Q16365308": {
-   "nome": "Q16365308",
+   "nome": "Nəcəf Alı oğlu Hüseynov",
    "wikidata": 1946,
    "liste": [
     "es-2027"
@@ -2078,7 +2062,7 @@
    "ol": {},
    "pg": {
     "54017": {
-     "errore": "non risponde: https://www.gutenberg.org/ebooks/author/54017"
+     "errore": "autore non nel catalogo Gutenberg"
     }
    },
    "esito": "senza anno"
@@ -2167,7 +2151,7 @@
    "ol": {},
    "pg": {
     "26499": {
-     "errore": "non risponde: https://www.gutenberg.org/ebooks/author/26499"
+     "errore": "autore non nel catalogo Gutenberg"
     }
    },
    "esito": "senza anno"
@@ -2223,7 +2207,7 @@
    "esito": "senza codici"
   },
   "Q20483877": {
-   "nome": "Q20483877",
+   "nome": "Өтеп Оңғарбаев",
    "wikidata": 1946,
    "liste": [
     "es-2027"
@@ -2765,7 +2749,7 @@
    "ol": {},
    "pg": {
     "48600": {
-     "errore": "non risponde: https://www.gutenberg.org/ebooks/author/48600"
+     "errore": "autore non nel catalogo Gutenberg"
     }
    },
    "esito": "senza anno"
@@ -2824,7 +2808,7 @@
    },
    "pg": {
     "4218": {
-     "errore": "non risponde: https://www.gutenberg.org/ebooks/author/4218"
+     "errore": "autore non nel catalogo Gutenberg"
     }
    },
    "esito": "d'accordo"
@@ -2853,7 +2837,7 @@
    },
    "pg": {
     "47448": {
-     "errore": "non risponde: https://www.gutenberg.org/ebooks/author/47448"
+     "errore": "autore non nel catalogo Gutenberg"
     }
    },
    "esito": "d'accordo"
@@ -2907,7 +2891,7 @@
    },
    "pg": {
     "50788": {
-     "errore": "non risponde: https://www.gutenberg.org/ebooks/author/50788"
+     "errore": "autore non nel catalogo Gutenberg"
     }
    },
    "esito": "senza anno"
@@ -3011,7 +2995,7 @@
    "ol": {},
    "pg": {
     "48585": {
-     "errore": "non risponde: https://www.gutenberg.org/ebooks/author/48585"
+     "errore": "autore non nel catalogo Gutenberg"
     }
    },
    "esito": "senza anno"
@@ -3342,7 +3326,7 @@
    "esito": "senza codici"
   },
   "Q5990104": {
-   "nome": "Q5990104",
+   "nome": "مەلا حەسەنی دزڵی",
    "wikidata": 1946,
    "liste": [
     "es-2027"
@@ -3721,21 +3705,6 @@
    "pg": {},
    "esito": "senza codici"
   },
-  "Q7660316": {
-   "nome": "Syed Emdad Ali",
-   "wikidata": 1956,
-   "liste": [
-    "2027"
-   ],
-   "ol": {
-    "OL11762A": {
-     "morte": 1957,
-     "etichetta": "Syed Emdad Ali"
-    }
-   },
-   "pg": {},
-   "esito": "disaccordo"
-  },
   "Q78489443": {
    "nome": "Dimana Daneva",
    "wikidata": 1946,
@@ -3915,7 +3884,7 @@
    "ol": {},
    "pg": {
     "26745": {
-     "errore": "non risponde: https://www.gutenberg.org/ebooks/author/26745"
+     "errore": "autore non nel catalogo Gutenberg"
     }
    },
    "esito": "senza anno"
@@ -4074,7 +4043,7 @@
    "ol": {},
    "pg": {
     "57235": {
-     "errore": "non risponde: https://www.gutenberg.org/ebooks/author/57235"
+     "errore": "autore non nel catalogo Gutenberg"
     }
    },
    "esito": "senza anno"
