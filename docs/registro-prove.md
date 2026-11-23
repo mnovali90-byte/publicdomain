@@ -1212,7 +1212,7 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
     - Madre Coraggio: Wikipedia, German Literature;
     - Arturo Ui: DLA Marbach, Suhrkamp;
     - Steffin è morta il 4/6/1941 (Suhrkamp): la data europea non cambia (2027).
-  - Le due opere sono nei casi di riferimento (data/casi_riferimento.json, casi 11 e 12). La prova 5 controlla anche le opere non ancora in Già pubblici, con gli stessi dati della home (scripts/pagine.py, opera_regole).
+  - Le due opere sono nei casi di riferimento (data/casi_riferimento.json, casi 9 e 10). La prova 5 controlla anche le opere non ancora in Già pubblici, con gli stessi dati della home (scripts/pagine.py, opera_regole).
   - Risultato: non controllabili da 4 a 0.
   - Da sapere: Encyclopedia.com scrive che per Arturo Ui Brecht fu aiutato anche dal figlio Stefan (morto nel 2009). L'editore e il DLA indicano come collaboratrice solo Steffin: non l'ho messo coautore.
 - **Errori medi corretti (Già pubblici):**
@@ -1279,5 +1279,5 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - **Gli idioti:** 1896 confermato con la prima pubblicazione su The Savoy, ottobre 1896 (Victorian Web, Wikipedia, Project MUSE).
 - **Note:** dicono dove uscì l'opera. Per La laguna, la nota dice anche che la Library of Congress dà il 1896.
 - **Prova 8:** ora controlla anche che l'anno del registro e l'anno USA siano quelli della prima pubblicazione documentata.
-- **Punto c:** alle 9:17 la prova 5 sul sito pubblicato dava ancora «non controllabili», perché il commit 09cf19d è stato pubblicato alle 9:29. Sulla copia attuale dà 8 controllate, 0 non controllabili; i casi 11 e 12 sono in data/casi_riferimento.json.
+- **Punto c:** alle 9:17 la prova 5 sul sito pubblicato dava ancora «non controllabili», perché il commit 09cf19d è stato pubblicato alle 9:29. Sulla copia attuale dà 8 controllate, 0 non controllabili; i casi 9 e 10 sono in data/casi_riferimento.json.
 - **Esito:** prove 1-8 a 0, fotografia 0 cambi di stato.
