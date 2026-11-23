@@ -1547,3 +1547,4 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
   - Răcăciuni e von den Steinen non sono in nessuna lista e nel registro: tornano al primo giro automatico, con lo stato delle fonti automatiche.
 - **Note delle opere con esito «nota»:** sono 4, non 6 (avevo contato male): I sonnambuli, Wyatt Earp: Frontier Marshal, la raccolta di Kafka, Tarzan the Invincible. I testi sono in data/verifiche_opere.json «usa_lista», con le fonti della ricerca. Regola nuova in docs/criteri.md.
 - **Registro degli autori rifatto per le verifiche a mano:** 4 voci (Romanescu e Subbaravu discordi, Keynes nazionale, Dehkhoda con il secondo link).
+- **scheda-autore.yml, primo giro per gli 8 saggisti:** fermato dopo 20 minuti (Gutenberg non rispondeva per Sarton) senza salvare nulla. Corretto: si salva dopo ogni autore, si riprende chi è già fatto, limite 90 minuti. Da rilanciare con l'ok di Marco.
