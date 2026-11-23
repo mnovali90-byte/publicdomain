@@ -2,14 +2,16 @@
 
 Solo prova: niente cambia nel sito. Script `scripts/collaudo_incrocio.py`, regola `regole.incrocio_opera`.
 
-- Opere: 55 (le 50 decise in «usa_lista» più le opere tolte stamattina che non sono già fra quelle).
-- Giuste: 2 · Sbagliate: 0 · Da decidere: 53
+- Opere: 57 (le 50 decise in «usa_lista» più le opere tolte stamattina che non sono già fra quelle).
+- Giuste: 4 · Sbagliate: 0 · Da decidere: 53
 - Esito del collaudo: PASSATO (regola: 0 sbagliate).
 
 | Esito | Opera | Sistema | Decisione | Perché (sistema) |
 |---|---|---|---|---|
 | giusta | Charlie Chan Carries On (Q3821967) | esce | esce | due fonti indipendenti danno 1930 (cce, loc), nessuna più vecchia |
+| giusta | Dry September (Faulkner) (Q5309555) | esce | esce | numero registrato nel 1930 (CCE): è la data di pubblicazione |
 | giusta | Gli idioti (Q3772100) | esce | esce | due fonti indipendenti danno 1896 (isfdb, loc), nessuna più vecchia |
+| giusta | Green Grow the Lilacs (Riggs) (Q4190252) | esce | esce | registrata da inedita nel 1930 (CCE) |
 | da decidere | Altazor (Huidobro) (Q5670870) | da decidere | nota | meno di due fonti indipendenti sull'anno |
 | da decidere | Blokken (Bordewijk) (Q952083) | da decidere | conferma | meno di due fonti indipendenti sull'anno |
 | da decidere | Cento autori contro Einstein (Q8346134) | da decidere | conferma | meno di due fonti indipendenti sull'anno |

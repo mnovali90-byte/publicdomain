@@ -31,7 +31,13 @@ def extra_da_file(R):
         ric = _j.load(open(R / "docs" / "ricerca-web" / "risultati.json", encoding="utf-8")).get("voci", [])
     except Exception:
         ric = []
-    for v in ric:
+    try:   # 23/11/2026: le voci senza citazione o con la citazione non trovata nella pagina non valgono
+        ctr = _j.load(open(R / "data" / "registro" / "controllo_citazioni.json", encoding="utf-8")).get("voci", {})
+    except Exception:
+        ctr = {}
+    for i, v in enumerate(ric):
+        if not v.get("citazione") or (ctr.get(str(i)) or {}).get("esito") == "non trovata":
+            continue
         out.setdefault(v.get("qid"), ({}, []))[1].append(v)
     return out
 

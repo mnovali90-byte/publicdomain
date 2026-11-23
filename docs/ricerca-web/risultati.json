@@ -1,5 +1,5 @@
 {
- "nota": "Risultati della ricerca sul web, formato fisso in docs/ricerca-web.md. Decide regole.fatti_da_ricerca, non chi cerca.",
+ "nota": "Risultati della ricerca sul web, formato fisso in docs/ricerca-web.md. Decide regole.fatti_da_ricerca, non chi cerca. Ogni voce ha una «citazione» (frase esatta dalla pagina), controllata da scripts/controlla_citazioni.py.",
  "voci": [
   {
    "qid": "Q85806586",
@@ -13,7 +13,8 @@
    "lingua": "en",
    "nota": "racconto lungo (titolo dell'autore The Head of Tom Leach) uscito su Ladies' Home Journal a settembre 1931, scritto subito prima del romanzo",
    "data_ricerca": "2026-11-23",
-   "chi": "Claude"
+   "chi": "Claude",
+   "citazione": "published by Ladies' Home Journal in September 1931"
   },
   {
    "qid": "Q1218608",
@@ -27,7 +28,8 @@
    "lingua": "en",
    "nota": "John Day, New York, 2 marzo 1931",
    "data_ricerca": "2026-11-23",
-   "chi": "Claude"
+   "chi": "Claude",
+   "citazione": "Published by The John Day Company, New York, March 2 1931"
   },
   {
    "qid": "Q1218608",
@@ -41,7 +43,8 @@
    "lingua": "en",
    "nota": "John Day, New York, 1931",
    "data_ricerca": "2026-11-23",
-   "chi": "Claude"
+   "chi": "Claude",
+   "citazione": "John Day, 1931"
   },
   {
    "qid": "Q1217475",
@@ -55,7 +58,8 @@
    "lingua": "en",
    "nota": "Hogarth Press 8 ottobre 1931, Harcourt Brace 22 ottobre 1931",
    "data_ricerca": "2026-11-23",
-   "chi": "Claude"
+   "chi": "Claude",
+   "citazione": "on October 8, 1931, the novel was published by the Hogarth Press"
   },
   {
    "qid": "Q1217475",
@@ -69,7 +73,8 @@
    "lingua": "en",
    "nota": "prima edizione britannica 8 ottobre 1931",
    "data_ricerca": "2026-11-23",
-   "chi": "Claude"
+   "chi": "Claude",
+   "citazione": "The British edition was published by the Hogarth Press on 8 October 1931."
   },
   {
    "qid": "Q1152214",
@@ -83,7 +88,8 @@
    "lingua": "en",
    "nota": "prima uscita su Weird Tales 18 n. 1, agosto 1931",
    "data_ricerca": "2026-11-23",
-   "chi": "Claude"
+   "chi": "Claude",
+   "citazione": "First published in Weird Tales, 18, No. 1 (Aug 1931)."
   },
   {
    "qid": "Q1152214",
@@ -97,7 +103,8 @@
    "lingua": "en",
    "nota": "scritto nel 1930, uscito su Weird Tales agosto 1931",
    "data_ricerca": "2026-11-23",
-   "chi": "Claude"
+   "chi": "Claude",
+   "citazione": "first published in the August 1931 issue of Weird Tales"
   },
   {
    "qid": "Q571244",
@@ -111,7 +118,8 @@
    "lingua": "en",
    "nota": "prima a puntate su Good Housekeeping USA da marzo ad agosto 1931, poi Dodd Mead e Collins (7 settembre)",
    "data_ricerca": "2026-11-23",
-   "chi": "Claude"
+   "chi": "Claude",
+   "citazione": "both editions were preceded by the US Good Housekeeping serialisation in six instalments from March to August"
   },
   {
    "qid": "Q571244",
@@ -125,7 +133,8 @@
    "lingua": "en",
    "nota": "Good Housekeeping mar-ago 1931; Dodd Mead 1931; Collins settembre 1931",
    "data_ricerca": "2026-11-23",
-   "chi": "Claude"
+   "chi": "Claude",
+   "citazione": "Good Housekeeping, Mar.-Aug. 1931"
   },
   {
    "qid": "Q1212765",
@@ -139,7 +148,8 @@
    "lingua": "en",
    "nota": "Cape and Smith, New York, 9 febbraio 1931",
    "data_ricerca": "2026-11-23",
-   "chi": "Claude"
+   "chi": "Claude",
+   "citazione": "That version of the novel appeared on 9 February 1931"
   },
   {
    "qid": "Q1212765",
@@ -153,7 +163,8 @@
    "lingua": "en",
    "nota": "Sanctuary, New York, Cape & Smith, 1931",
    "data_ricerca": "2026-11-23",
-   "chi": "Claude"
+   "chi": "Claude",
+   "citazione": "Sanctuary. – New York : Cape & Smith, 1931."
   },
   {
    "qid": "Q2917079",
@@ -167,7 +178,8 @@
    "lingua": "en",
    "nota": "prima edizione stampata a sue spese nel 1931, 3.000 copie",
    "data_ricerca": "2026-11-23",
-   "chi": "Claude"
+   "chi": "Claude",
+   "citazione": "self-published the first edition in 1931"
   },
   {
    "qid": "Q2917079",
@@ -181,7 +193,8 @@
    "lingua": "en",
    "nota": "pubblicato a sue spese nel 1931",
    "data_ricerca": "2026-11-23",
-   "chi": "Claude"
+   "chi": "Claude",
+   "citazione": "She used most of her savings to self-publish Joy in 1931."
   },
   {
    "qid": "Q4190252",
@@ -196,7 +209,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 1,
-   "intera": true
+   "intera": true,
+   "citazione": "Copyright and published, 1931, by Samuel French"
   },
   {
    "qid": "Q4190252",
@@ -211,7 +225,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 1,
-   "intera": true
+   "intera": true,
+   "citazione": "First published: 1931"
   },
   {
    "qid": "Q7765142",
@@ -226,7 +241,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 1,
-   "intera": true
+   "intera": true,
+   "citazione": "Éd. de la Galerie Simon, 1931"
   },
   {
    "qid": "Q7765142",
@@ -241,7 +257,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 1,
-   "intera": true
+   "intera": true,
+   "citazione": "Éditions de la Galerie Simon (Daniel-Henry Kahnweiler), Paris"
   },
   {
    "qid": "Q887062",
@@ -256,7 +273,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 1,
-   "intera": true
+   "intera": true,
+   "citazione": "Le Feu follet, Paris, 1931"
   },
   {
    "qid": "Q887062",
@@ -271,7 +289,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 1,
-   "intera": true
+   "intera": true,
+   "citazione": "Le Feu follet, 1931"
   },
   {
    "qid": "Q1216006",
@@ -286,7 +305,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 1,
-   "volume": 1
+   "volume": 1,
+   "citazione": "Pasenow oder die Romantik 1888 (1931; The Romantic)"
   },
   {
    "qid": "Q1216006",
@@ -301,7 +321,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 1,
-   "volume": 1
+   "volume": 1,
+   "citazione": "(beide Mchn./Zürich 1931)"
   },
   {
    "qid": "Q1216006",
@@ -316,7 +337,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 1,
-   "volume": 2
+   "volume": 2,
+   "citazione": "Esch oder die Anarchie 1903 (1931; The Anarchist)"
   },
   {
    "qid": "Q1216006",
@@ -331,7 +353,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 1,
-   "volume": 2
+   "volume": 2,
+   "citazione": "(beide Mchn./Zürich 1931)"
   },
   {
    "qid": "Q1216006",
@@ -346,7 +369,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 1,
-   "volume": 3
+   "volume": 3,
+   "citazione": "Huguenau oder die Sachlichkeit 1918 (1932; The Realist)"
   },
   {
    "qid": "Q1216006",
@@ -361,7 +385,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 1,
-   "volume": 3
+   "volume": 3,
+   "citazione": "(Mchn./Zürich 1932)"
   },
   {
    "qid": "Q1070729",
@@ -376,7 +401,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 1,
-   "intera": true
+   "intera": true,
+   "citazione": "Récit publié pour la première fois en 1931 chez Gallimard à Paris."
   },
   {
    "qid": "Q1070729",
@@ -391,7 +417,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 1,
-   "intera": true
+   "intera": true,
+   "citazione": "fut publié chez Gallimard au début du mois d'octobre 1931"
   },
   {
    "qid": "Q2564588",
@@ -406,7 +433,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 1,
-   "intera": true
+   "intera": true,
+   "citazione": "Publication Date 1931"
   },
   {
    "qid": "Q2564588",
@@ -421,7 +449,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 1,
-   "intera": true
+   "intera": true,
+   "citazione": "Originally published, London, Gollancz, 1931."
   },
   {
    "qid": "Q2020355",
@@ -436,7 +465,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 1,
-   "intera": true
+   "intera": true,
+   "citazione": "first appeared in the Adelphi magazine in August 1931"
   },
   {
    "qid": "Q2020355",
@@ -451,7 +481,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 1,
-   "intera": true
+   "intera": true,
+   "citazione": "Published in Adelphi magazine in 1931"
   },
   {
    "qid": "Q5990586",
@@ -465,7 +496,8 @@
    "nota": "Longmans, 1931",
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
-   "blocco": 1
+   "blocco": 1,
+   "citazione": "Lapses into Imaginary History"
   },
   {
    "qid": "Q5990586",
@@ -479,7 +511,8 @@
    "nota": "pubblicato da Longmans, Londra 4 febbraio 1931",
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
-   "blocco": 1
+   "blocco": 1,
+   "citazione": "is published by Longmans"
   },
   {
    "qid": "Q5990586",
@@ -493,7 +526,8 @@
    "nota": "la maggior parte dei testi esce qui per la prima volta; il saggio di Churchill era già su Scribner's, dicembre 1930",
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
-   "blocco": 1
+   "blocco": 1,
+   "citazione": "(December 1930 Scribner's)"
   },
   {
    "qid": "Q8039491",
@@ -507,7 +541,8 @@
    "nota": "quattro articoli sul Saturday Evening Post, 25 ottobre-15 novembre 1930",
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
-   "blocco": 1
+   "blocco": 1,
+   "citazione": "\"Buffalo Hunters\" (25 Oct 1930)"
   },
   {
    "qid": "Q8039491",
@@ -521,7 +556,8 @@
    "nota": "libro 7 ottobre 1931, dopo un'anteprima in quattro parti sul Saturday Evening Post",
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
-   "blocco": 1
+   "blocco": 1,
+   "citazione": "after a four-part sneak preview in The Saturday Evening Post"
   },
   {
    "qid": "Q265042",
@@ -536,7 +572,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 1,
-   "intera": true
+   "intera": true,
+   "citazione": "Hodder & Stoughton, 1931"
   },
   {
    "qid": "Q265042",
@@ -551,7 +588,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 1,
-   "intera": true
+   "intera": true,
+   "citazione": "Hodder & Stoughton, London, 1931."
   },
   {
    "qid": "Q3228173",
@@ -565,7 +603,8 @@
    "nota": "racconto su Argosy 8/9/1923 e «The Snake Mother» su Argosy ott-dic 1930; libro 1931",
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
-   "blocco": 1
+   "blocco": 1,
+   "citazione": "(8 September 1923 Argosy plus \"The Snake Mother\" 25 October-6 December 1930 Argosy; fixup 1931)"
   },
   {
    "qid": "Q3228173",
@@ -579,7 +618,8 @@
    "nota": "novelette su Argosy All-Story 8/9/1923; seguito a puntate dal 25/10/1930",
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
-   "blocco": 1
+   "blocco": 1,
+   "citazione": "originally appeared in the magazine Argosy All-Story Weekly in the September 8, 1923 issue"
   },
   {
    "qid": "Q1141993",
@@ -594,7 +634,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 1,
-   "intera": true
+   "intera": true,
+   "citazione": "Erscheinungsdatum: 1931"
   },
   {
    "qid": "Q3290152",
@@ -609,7 +650,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 1,
-   "volume": 2
+   "volume": 2,
+   "citazione": "New York: Alfred A Knopf Inc., 1931."
   },
   {
    "qid": "Q3290152",
@@ -624,7 +666,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 1,
-   "volume": 2
+   "volume": 2,
+   "citazione": "Written: 1931 (Volume 1), 1934 (Volume 2)"
   },
   {
    "qid": "Q3210396",
@@ -639,7 +682,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 1,
-   "intera": true
+   "intera": true,
+   "citazione": "Heinemann, October 1931"
   },
   {
    "qid": "Q3210396",
@@ -654,7 +698,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 1,
-   "intera": true
+   "intera": true,
+   "citazione": "1931, W. Heinemann, Ltd."
   },
   {
    "qid": "Q2498251",
@@ -669,7 +714,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 1,
-   "intera": true
+   "intera": true,
+   "citazione": "Hatter's Castle. By A. J. Cronin. (Gollancz. 8s. 6d.)"
   },
   {
    "qid": "Q2498251",
@@ -684,7 +730,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 1,
-   "intera": true
+   "intera": true,
+   "citazione": "Publication Year 1931"
   },
   {
    "qid": "Q3881234",
@@ -699,7 +746,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 1,
-   "intera": true
+   "intera": true,
+   "citazione": "First published May 1931"
   },
   {
    "qid": "Q3881234",
@@ -714,7 +762,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 1,
-   "intera": true
+   "intera": true,
+   "citazione": "Publication Date 1931"
   },
   {
    "qid": "Q5309555",
@@ -729,7 +778,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 1,
-   "intera": true
+   "intera": true,
+   "citazione": "\"Dry September\" was first published in Scribner's Magazine in January 1931"
   },
   {
    "qid": "Q5309555",
@@ -744,7 +794,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 1,
-   "intera": true
+   "intera": true,
+   "citazione": "in the January issue of Scribner's magazine"
   },
   {
    "qid": "Q6663021",
@@ -759,7 +810,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 1,
-   "intera": true
+   "intera": true,
+   "citazione": "1931, (9 Feb) Claude H. Kendall, NY."
   },
   {
    "qid": "Q6663021",
@@ -774,7 +826,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 1,
-   "intera": true
+   "intera": true,
+   "citazione": "New York: Claude Kendall"
   },
   {
    "qid": "Q4190252",
@@ -789,7 +842,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 1,
-   "inedita": true
+   "inedita": true,
+   "citazione": "Green grow the lilacs"
   },
   {
    "qid": "Q5309555",
@@ -804,7 +858,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 1,
-   "inedita": false
+   "inedita": false,
+   "citazione": "B 98709"
   },
   {
    "qid": "Q3290152",
@@ -819,7 +874,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 1,
-   "volume": 1
+   "volume": 1,
+   "citazione": "Alfred A Knopf Inc.,1931"
   },
   {
    "qid": "Q3290152",
@@ -834,7 +890,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 1,
-   "volume": 1
+   "volume": 1,
+   "citazione": "Written: 1931 (Volume 1)"
   },
   {
    "qid": "Q2836696",
@@ -849,7 +906,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 2,
-   "intera": true
+   "intera": true,
+   "citazione": "Grosset & Dunlap ©1931"
   },
   {
    "qid": "Q7460836",
@@ -864,7 +922,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 2,
-   "intera": true
+   "intera": true,
+   "citazione": "Date: August 1931 at $2.50"
   },
   {
    "qid": "Q7460836",
@@ -879,7 +938,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 2,
-   "intera": true
+   "intera": true,
+   "citazione": "Published by Alfred A. Knopf on August 1, 1931."
   },
   {
    "qid": "Q4659979",
@@ -894,7 +954,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 2,
-   "intera": true
+   "intera": true,
+   "citazione": "was published in October 1931 by McClelland & Stewart"
   },
   {
    "qid": "Q4659979",
@@ -909,7 +970,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 2,
-   "intera": true
+   "intera": true,
+   "citazione": "McClelland & Stewart"
   },
   {
    "qid": "Q573765",
@@ -924,7 +986,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 2,
-   "intera": true
+   "intera": true,
+   "citazione": "Deutsche Verl. Anst."
   },
   {
    "qid": "Q573765",
@@ -939,7 +1002,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 2,
-   "intera": true
+   "intera": true,
+   "citazione": "Fabian. Die Geschichte eines Moralisten"
   },
   {
    "qid": "Q3506429",
@@ -954,7 +1018,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 2,
-   "intera": true
+   "intera": true,
+   "citazione": "Swallowdale First edition 1931"
   },
   {
    "qid": "Q3506429",
@@ -969,7 +1034,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 2,
-   "intera": true
+   "intera": true,
+   "citazione": "Cape, 1931"
   },
   {
    "qid": "Q119144545",
@@ -984,7 +1050,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 2,
-   "intera": true
+   "intera": true,
+   "citazione": "THE SANDS OF WINDEE. By Arthur W. Upfield."
   },
   {
    "qid": "Q119144545",
@@ -999,7 +1066,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 2,
-   "intera": true
+   "intera": true,
+   "citazione": "First known date: 1931"
   },
   {
    "qid": "Q2836721",
@@ -1014,7 +1082,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 2,
-   "intera": true
+   "intera": true,
+   "citazione": "1931, Grosset &"
   },
   {
    "qid": "Q2836721",
@@ -1029,7 +1098,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 2,
-   "intera": true
+   "intera": true,
+   "citazione": "Grosset & Dunlap, c(1961), 1931."
   },
   {
    "qid": "Q43578331",
@@ -1044,7 +1114,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 2,
-   "intera": true
+   "intera": true,
+   "citazione": "cet essai publié pour la première fois en 1931"
   },
   {
    "qid": "Q43578331",
@@ -1059,7 +1130,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 2,
-   "intera": true
+   "intera": true,
+   "citazione": "dont la traduction française paraît en 1931 aux éditions Grasset"
   },
   {
    "qid": "Q7252252",
@@ -1074,7 +1146,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 2,
-   "intera": true
+   "intera": true,
+   "citazione": "Chatto and Windus 1931"
   },
   {
    "qid": "Q7252252",
@@ -1089,7 +1162,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 2,
-   "intera": true
+   "intera": true,
+   "citazione": "In 1931 Samuel Beckett published a study of Marcel Proust"
   },
   {
    "qid": "Q7252252",
@@ -1103,7 +1177,8 @@
    "nota": "fra le edizioni citate «una versione del 1930 senza luogo di pubblicazione»: da verificare",
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
-   "blocco": 2
+   "blocco": 2,
+   "citazione": "Editions cited include a 1930 version without place of publication"
   },
   {
    "qid": "Q1885291",
@@ -1118,7 +1193,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 2,
-   "intera": true
+   "intera": true,
+   "citazione": "First published in serial, as Pietr-le-Letton, in Ric et Rac 1930"
   },
   {
    "qid": "Q1885291",
@@ -1132,7 +1208,8 @@
    "nota": "libro: Paris, A. Fayard & cie, 1931",
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
-   "blocco": 2
+   "blocco": 2,
+   "citazione": "1931, A. Fayard & cie"
   },
   {
    "qid": "Q1214380",
@@ -1147,7 +1224,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 2,
-   "intera": true
+   "intera": true,
+   "citazione": "1931, J. Kösel & F. Pustet"
   },
   {
    "qid": "Q1214380",
@@ -1162,7 +1240,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 2,
-   "intera": true
+   "intera": true,
+   "citazione": "die Novelle Die Letzte am Schafott (1931)"
   },
   {
    "qid": "Q2878373",
@@ -1176,7 +1255,8 @@
    "nota": "a puntate su Cosmopolitan da settembre 1930 (parte 1 di 7) a inizio 1931",
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
-   "blocco": 2
+   "blocco": 2,
+   "citazione": "\"Back Streets\" (part 1 of 7), by Fannie Hurst"
   },
   {
    "qid": "Q1306780",
@@ -1190,7 +1270,8 @@
    "nota": "prima pubblicazione: Beim Bau der chinesischen Mauer, 1931",
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
-   "blocco": 2
+   "blocco": 2,
+   "citazione": "FIRST PUBLISHED: \"Beim Bau der chinesischen Mauer,\" 1931"
   },
   {
    "qid": "Q1306780",
@@ -1204,7 +1285,8 @@
    "nota": "«Eine kaiserliche Botschaft», nata nel contesto del racconto, uscita in Selbstwehr il 24/9/1919 e in Ein Landarzt (1920)",
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
-   "blocco": 2
+   "blocco": 2,
+   "citazione": "wurde am 24. September 1919 selbstständig in Selbstwehr"
   },
   {
    "qid": "Q3981235",
@@ -1218,7 +1300,8 @@
    "nota": "Blue Book da ottobre 1930 ad aprile 1931 come «Tarzan, Guard of the Jungle»; libro 1931",
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
-   "blocco": 2
+   "blocco": 2,
+   "citazione": "Tarzan the Invincible (October 1930-April 1931 Blue Book"
   },
   {
    "qid": "Q3981235",
@@ -1232,7 +1315,8 @@
    "nota": "sette puntate su Blue Book, ottobre 1930 - aprile 1931",
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
-   "blocco": 2
+   "blocco": 2,
+   "citazione": "Blue Book Magazine: 1930 October through 1931 April"
   },
   {
    "qid": "Q3981235",
@@ -1246,7 +1330,8 @@
    "nota": "prima a puntate su Blue Book da ottobre 1930",
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
-   "blocco": 2
+   "blocco": 2,
+   "citazione": "first published as a serial in Blue Book Magazine from October 1930 through April 1931"
   },
   {
    "qid": "Q7713437",
@@ -1261,7 +1346,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 2,
-   "intera": true
+   "intera": true,
+   "citazione": "It appeared first in serial form in The Saturday Evening Post, then as a book, The American Black Chamber."
   },
   {
    "qid": "Q7713437",
@@ -1276,7 +1362,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 2,
-   "intera": true
+   "intera": true,
+   "citazione": "The year was 1931"
   },
   {
    "qid": "Q3109849",
@@ -1291,7 +1378,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 2,
-   "intera": true
+   "intera": true,
+   "citazione": "verscheen voor enkele weken GOG (Vallecchi editore Firenzi, 1931)"
   },
   {
    "qid": "Q3109849",
@@ -1306,7 +1394,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 2,
-   "intera": true
+   "intera": true,
+   "citazione": "PAPINI, Giovanni. Gog. 1. ed. Florença, Itália: Vallecchi, 1931."
   },
   {
    "qid": "Q5047445",
@@ -1321,7 +1410,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 2,
-   "intera": true
+   "intera": true,
+   "citazione": "la primera edición de Cartucho (1931)"
   },
   {
    "qid": "Q5047445",
@@ -1336,7 +1426,8 @@
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 2,
-   "intera": true
+   "intera": true,
+   "citazione": "Cartucho, publicada por primera vez en 1931"
   }
  ]
 }

@@ -349,5 +349,242 @@
    ],
    "fonte": "CDPA 1988, allegato 1, par. 12 (GOV.UK, regola del 2039)"
   }
- ]
+ ],
+ "incrocio": [
+  {
+   "caso": "La laguna (Conrad): prima pubblicazione documentata batte i cataloghi",
+   "q": "Q7745219",
+   "regola": "23/11/2026, prima pubblicazione documentata",
+   "pub": 1932,
+   "lingua": "en",
+   "per_fonte": {
+    "loc": 1896,
+    "isfdb": 1897
+   },
+   "voci": [
+    {
+     "tipo": "prima_pubblicazione",
+     "anno": 1897,
+     "gruppo": "victorianweb-karl",
+     "intera": true
+    },
+    {
+     "tipo": "prima_pubblicazione",
+     "anno": 1897,
+     "gruppo": "isfdb",
+     "intera": true
+    }
+   ],
+   "atteso": {
+    "esito": "esce",
+    "anno": 1897
+   },
+   "fonte": "data/verifiche_opere.json, prima_pubblicazione Q7745219"
+  },
+  {
+   "caso": "Racconti di Odessa (Babel'): raccolta senza testi nuovi",
+   "q": "Q1775716",
+   "regola": "23/11/2026, raccolte",
+   "pub": 1931,
+   "lingua": null,
+   "per_fonte": {},
+   "voci": [
+    {
+     "tipo": "raccolta",
+     "anno": 1924,
+     "gruppo": "a",
+     "testi_nuovi": false
+    },
+    {
+     "tipo": "raccolta",
+     "anno": 1924,
+     "gruppo": "b",
+     "testi_nuovi": false
+    }
+   ],
+   "atteso": {
+    "esito": "esce",
+    "anno": 1924
+   },
+   "fonte": "data/verifiche_opere.json, usa_lista Q1775716"
+  },
+  {
+   "caso": "Altazor (Huidobro): frammenti prima, libro completo nel 1931",
+   "q": "Q5670870",
+   "regola": "23/11/2026, parte uscita prima",
+   "pub": 1931,
+   "lingua": null,
+   "per_fonte": {},
+   "voci": [
+    {
+     "tipo": "parte_prima",
+     "anno": 1925,
+     "gruppo": "uchile-cyber"
+    },
+    {
+     "tipo": "parte_prima",
+     "anno": 1925,
+     "gruppo": "uchile-rcl"
+    },
+    {
+     "tipo": "prima_pubblicazione",
+     "anno": 1931,
+     "gruppo": "ciap-1931",
+     "intera": true
+    },
+    {
+     "tipo": "prima_pubblicazione",
+     "anno": 1931,
+     "gruppo": "memoriachilena",
+     "intera": true
+    }
+   ],
+   "atteso": {
+    "esito": "nota"
+   },
+   "fonte": "data/verifiche_opere.json, usa_lista Q5670870"
+  },
+  {
+   "caso": "The Black Swan (Sabatini): l'anno del libro non basta",
+   "q": "Q85806586",
+   "regola": "23/11/2026, prima uscita documentata",
+   "pub": 1932,
+   "lingua": "en",
+   "per_fonte": {
+    "cce": 1932,
+    "loc": 1932
+   },
+   "date_wikidata": [
+    1932
+   ],
+   "voci": [
+    {
+     "tipo": "parte_prima",
+     "anno": 1931,
+     "gruppo": "gutenberg.net.au"
+    }
+   ],
+   "atteso": {
+    "esito": "da decidere"
+   },
+   "fonte": "docs/campione-conferma-2028.md"
+  },
+  {
+   "caso": "I sonnambuli (Broch): volumi nel 1931, 1931 e 1932",
+   "q": "Q1216006",
+   "regola": "23/11/2026, volumi in anni diversi",
+   "pub": 1931,
+   "lingua": "de",
+   "per_fonte": {},
+   "voci": [
+    {
+     "tipo": "volume",
+     "anno": 1931,
+     "gruppo": "britannica",
+     "volume": 1
+    },
+    {
+     "tipo": "volume",
+     "anno": 1931,
+     "gruppo": "muni",
+     "volume": 1
+    },
+    {
+     "tipo": "volume",
+     "anno": 1931,
+     "gruppo": "britannica",
+     "volume": 2
+    },
+    {
+     "tipo": "volume",
+     "anno": 1931,
+     "gruppo": "muni",
+     "volume": 2
+    },
+    {
+     "tipo": "volume",
+     "anno": 1932,
+     "gruppo": "britannica",
+     "volume": 3
+    },
+    {
+     "tipo": "volume",
+     "anno": 1932,
+     "gruppo": "muni",
+     "volume": 3
+    }
+   ],
+   "atteso": {
+    "esito": "nota"
+   },
+   "fonte": "docs/ricerca-web/risultati.json, Q1216006"
+  },
+  {
+   "caso": "Green Grow the Lilacs (Riggs): registrata da inedita nel 1930",
+   "q": "Q4190252",
+   "regola": "23/11/2026, registrazione (CCE)",
+   "pub": 1931,
+   "lingua": "en",
+   "per_fonte": {},
+   "voci": [
+    {
+     "tipo": "prima_pubblicazione",
+     "anno": 1931,
+     "gruppo": "best-plays",
+     "intera": true
+    },
+    {
+     "tipo": "prima_pubblicazione",
+     "anno": 1931,
+     "gruppo": "ebsco",
+     "intera": true
+    },
+    {
+     "tipo": "registrazione",
+     "anno": 1930,
+     "gruppo": "cce",
+     "inedita": true
+    }
+   ],
+   "atteso": {
+    "esito": "esce",
+    "anno": 1930
+   },
+   "fonte": "CCE 1930, Dramatic compositions, D unpub. 7017"
+  },
+  {
+   "caso": "Dry September (Faulkner): numero registrato il 18/12/1930",
+   "q": "Q5309555",
+   "regola": "23/11/2026, data © del numero di rivista",
+   "pub": 1931,
+   "lingua": "en",
+   "per_fonte": {},
+   "voci": [
+    {
+     "tipo": "prima_pubblicazione",
+     "anno": 1931,
+     "gruppo": "uva-faulkner",
+     "intera": true
+    },
+    {
+     "tipo": "prima_pubblicazione",
+     "anno": 1931,
+     "gruppo": "tirade",
+     "intera": true
+    },
+    {
+     "tipo": "registrazione",
+     "anno": 1930,
+     "gruppo": "cce",
+     "inedita": false
+    }
+   ],
+   "atteso": {
+    "esito": "esce",
+    "anno": 1930
+   },
+   "fonte": "CCE 1931, Periodicals, B 98709"
+  }
+ ],
+ "spiegazione_incrocio": "Un caso per ogni regola dell'incrocio delle fonti sulle opere USA (docs/criteri.md): dati d'ingresso scritti qui, esito atteso; la prova 4 li rifà con regole.incrocio_opera."
 }

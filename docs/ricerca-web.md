@@ -35,6 +35,7 @@ Una voce per fonte, in `docs/ricerca-web/risultati.json`, lista «voci»:
 | titolo | titolo come nella lista | sì |
 | fonte | nome della fonte | sì |
 | link | indirizzo della pagina letta | sì: senza link la voce non vale |
+| citazione | frase esatta e breve copiata dalla pagina, che dice il fatto (anno, rivista, editore) | sì: senza citazione la voce non vale |
 | tipo | prima_pubblicazione, parte_prima, raccolta, volume, edizione, registrazione | sì |
 | anno | anno che la fonte dà (numero) | sì, se la fonte lo dà |
 | gruppo | chi c'è dietro la fonte (per l'indipendenza) | sì |
@@ -45,6 +46,11 @@ Una voce per fonte, in `docs/ricerca-web/risultati.json`, lista «voci»:
 | lingua | lingua di quella uscita (en, fr, de, it, es...) | se si sa |
 | nota | cosa dice la fonte, in parole proprie, una riga | no |
 | data_ricerca, chi | quando e chi ha cercato | sì |
+
+## Controlli contro l'invenzione (dal 23/11/2026)
+- **Citazione controllata in automatico:** scripts/controlla_citazioni.py (giro `citazioni.yml`) apre ogni link e cerca la citazione. Esiti: «trovata», «non trovata», «non verificabile in automatico» (il sito blocca, non risponde, PDF illeggibile). Le voci «non trovata» e quelle senza citazione l'incrocio non le usa.
+- **Seconda lettura:** in ogni blocco 3 voci estratte a caso (seme scritto nel rapporto del blocco) le ricontrolla un'altra chat, che apre il link e dice se la pagina dice davvero quello che è scritto. Le voci del blocco si applicano solo dopo.
+- I criteri sono in docs/criteri.md: «una scheda CCE basta da sola; per tutto il resto servono due fonti».
 
 ## Registrazione (dal 23/11/2026)
 Con la legge del 1909 il copyright nasce alla pubblicazione o, per le opere inedite, alla registrazione (Copyright Office, Circular 15A). Si cerca la scheda nel Catalog of Copyright Entries (CCE, scansioni su archive.org): per le opere inedite la data «©» della registrazione; per i numeri delle riviste la data «©» del numero, che è la data di pubblicazione (non quella in copertina). Gruppo «cce». Il CCE basta da solo: è il registro ufficiale.

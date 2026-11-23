@@ -3,25 +3,12 @@
 Solo rapporto: niente cambia nel sito. Regola `regole.incrocio_opera`, collaudata in docs/collaudo-incrocio.md.
 
 - Opere: 175
-- conferma: 14
-- da decidere: 161
+- conferma: 1
+- da decidere: 174
 
 | Esito | Opera | Anno | Perché | Visite (en) |
 |---|---|---|---|---|
-| conferma | Il mondo nuovo (Q191949) | 1932 | prima uscita 1932 da cce, isfdb, wiki | 932716 |
-| conferma | La fenice sulla lama (Q2512207) | 1932 | prima uscita 1932 da isfdb, wiki | 22449 |
-| conferma | L'impero dei negromanti (Q104829995) | 1932 | prima uscita 1932 da isfdb, wiki | 6970 |
-| conferma | Vermi della Terra (Q8036886) | 1932 | prima uscita 1932 da isfdb, wiki | 5402 |
-| conferma | The Sowers of the Thunder (Q7765614) | 1932 | prima uscita 1932 da isfdb, wiki | 1414 |
-| conferma | Il testamento di Athammaus (Q7768564) | 1932 | prima uscita 1932 da isfdb, wiki | 1257 |
-| conferma | The Queer Story of Brownlow's Newspaper (Q7759037) | 1932 | prima uscita 1932 da isfdb, wiki | 1194 |
-| conferma | Music (Q16387178) | 1932 | prima uscita 1932 da rivista, wiki | 538 |
-| conferma | Orache (Q7099218) | 1932 | prima uscita 1932 da rivista, wiki | 318 |
-| conferma | Le ali notturne (Q3828461) | 1932 | prima uscita 1932 da isfdb, wiki | 0 |
-| conferma | The Trap (Q19101057) | 1932 | prima uscita 1932 da isfdb, wiki | 0 |
-| conferma | Le Cripte di Yoh-Vombis (Q19101656) | 1932 | prima uscita 1932 da isfdb, wiki | 0 |
-| conferma | Sul tetto (Q21660419) | 1932 | prima uscita 1932 da isfdb, wiki | 0 |
-| conferma | The Man of Stone (Q102229104) | 1932 | prima uscita 1932 da isfdb, wiki | 0 |
+| conferma | Il mondo nuovo (Q191949) | 1932 | prima uscita 1932 da cce, isfdb | 932716 |
 | da decidere | Little House in the Big Woods (Q7173181) |  | meno di due fonti indipendenti sull'anno | 109094 |
 | da decidere | Viaggio al termine della notte (Q774233) |  | meno di due fonti indipendenti sull'anno | 84901 |
 | da decidere | L'uomo senza qualità (Q1195668) |  | un anno più vecchio senza due fonti indipendenti d'accordo, o puntate su più anni | 78729 |
@@ -37,6 +24,7 @@ Solo rapporto: niente cambia nel sito. Regola `regole.incrocio_opera`, collaudat
 | da decidere | Manoscritti economico-filosofici del 1844 (Q295347) |  | meno di due fonti indipendenti sull'anno | 26728 |
 | da decidere | La via del tabacco (Q1169793) |  | meno di due fonti indipendenti sull'anno | 23652 |
 | da decidere | Il treno d'Istanbul (Q1955781) |  | meno di due fonti indipendenti sull'anno | 22516 |
+| da decidere | La fenice sulla lama (Q2512207) |  | meno di due fonti indipendenti sull'anno | 22449 |
 | da decidere | Black Elk Speaks (Q3404825) |  | meno di due fonti indipendenti sull'anno | 21382 |
 | da decidere | Mutiny on the Bounty (Q1900478) |  | meno di due fonti indipendenti sull'anno | 20506 |
 | da decidere | Partita a quattro (Q5264340) |  | meno di due fonti indipendenti sull'anno | 18660 |
@@ -59,11 +47,13 @@ Solo rapporto: niente cambia nel sito. Regola `regole.incrocio_opera`, collaudat
 | da decidere | The worker (Q1192235) |  | meno di due fonti indipendenti sull'anno | 7565 |
 | da decidere | Dangerous Corner (Q5216075) |  | meno di due fonti indipendenti sull'anno | 7190 |
 | da decidere | Legend of the Swordsmen of the Mountains of Shu (Q17060239) |  | meno di due fonti indipendenti sull'anno | 7127 |
+| da decidere | L'impero dei negromanti (Q104829995) |  | meno di due fonti indipendenti sull'anno | 6970 |
 | da decidere | Maria Antonietta - Una vita involontariamente eroica (Q1706363) |  | meno di due fonti indipendenti sull'anno | 6956 |
 | da decidere | Il sospetto (Q3795929) |  | meno di due fonti indipendenti sull'anno | 6405 |
 | da decidere | La ragazza di seta artificiale (Q1171410) |  | meno di due fonti indipendenti sull'anno | 5910 |
 | da decidere | The Black Girl in Search of God (Q7718329) |  | meno di due fonti indipendenti sull'anno | 5506 |
 | da decidere | Cat Country (Q1075805) |  | meno di due fonti indipendenti sull'anno | 5445 |
+| da decidere | Vermi della Terra (Q8036886) |  | meno di due fonti indipendenti sull'anno | 5402 |
 | da decidere | Dinner at Eight (Q5278419) |  | meno di due fonti indipendenti sull'anno | 5319 |
 | da decidere | Sweeney Agonistes (Q12410009) |  | meno di due fonti indipendenti sull'anno | 5300 |
 | da decidere | Il poema celeste (Q6165398) |  | meno di due fonti indipendenti sull'anno | 5243 |
@@ -102,9 +92,12 @@ Solo rapporto: niente cambia nel sito. Regola `regole.incrocio_opera`, collaudat
 | da decidere | Yaban (Q8046351) |  | meno di due fonti indipendenti sull'anno | 1801 |
 | da decidere | Omenuko (Q7090080) |  | meno di due fonti indipendenti sull'anno | 1669 |
 | da decidere | Il mistero delle croci egizie (Q3794795) |  | meno di due fonti indipendenti sull'anno | 1581 |
+| da decidere | The Sowers of the Thunder (Q7765614) |  | meno di due fonti indipendenti sull'anno | 1414 |
 | da decidere | Il ritorno (Q3795569) |  | un anno più vecchio senza due fonti indipendenti d'accordo, o puntate su più anni | 1316 |
+| da decidere | Il testamento di Athammaus (Q7768564) |  | meno di due fonti indipendenti sull'anno | 1257 |
 | da decidere | Il pazzo di Bergerac (Q1112060) |  | meno di due fonti indipendenti sull'anno | 1241 |
 | da decidere | L'ultima carta (Q7773771) |  | meno di due fonti indipendenti sull'anno | 1240 |
+| da decidere | The Queer Story of Brownlow's Newspaper (Q7759037) |  | meno di due fonti indipendenti sull'anno | 1194 |
 | da decidere | Phu Chana Sip Thit (Q13017091) |  | meno di due fonti indipendenti sull'anno | 1127 |
 | da decidere | Mountain Victory (Q6925288) |  | meno di due fonti indipendenti sull'anno | 1066 |
 | da decidere | Wild Pilgrimage (Q17151836) |  | meno di due fonti indipendenti sull'anno | 1021 |
@@ -115,6 +108,7 @@ Solo rapporto: niente cambia nel sito. Regola `regole.incrocio_opera`, collaudat
 | da decidere | L'affare Saint-Fiacre (Q1325013) |  | meno di due fonti indipendenti sull'anno | 625 |
 | da decidere | The Two Sources of Morality and Religion (Q3232049) |  | meno di due fonti indipendenti sull'anno | 588 |
 | da decidere | Sudden Death (Q110732464) |  | meno di due fonti indipendenti sull'anno | 573 |
+| da decidere | Music (Q16387178) |  | meno di due fonti indipendenti sull'anno | 538 |
 | da decidere | The Night Club (Q17173648) |  | meno di due fonti indipendenti sull'anno | 535 |
 | da decidere | Celia en el colegio (Q5058034) |  | meno di due fonti indipendenti sull'anno | 520 |
 | da decidere | Menino de engenho (Q6817094) |  | meno di due fonti indipendenti sull'anno | 519 |
@@ -131,6 +125,7 @@ Solo rapporto: niente cambia nel sito. Regola `regole.incrocio_opera`, collaudat
 | da decidere | Uno di noi (Q109167813) |  | meno di due fonti indipendenti sull'anno | 346 |
 | da decidere | The House on the Dune (Q3210349) |  | meno di due fonti indipendenti sull'anno | 332 |
 | da decidere | Evensong (Q86753954) |  | meno di due fonti indipendenti sull'anno | 319 |
+| da decidere | Orache (Q7099218) |  | meno di due fonti indipendenti sull'anno | 318 |
 | da decidere | Ballerina (Q96373014) |  | meno di due fonti indipendenti sull'anno | 313 |
 | da decidere | Pertemuan Jodoh (Q7170795) |  | meno di due fonti indipendenti sull'anno | 305 |
 | da decidere | Liberty Bar (Q3237799) |  | meno di due fonti indipendenti sull'anno | 297 |
@@ -167,6 +162,7 @@ Solo rapporto: niente cambia nel sito. Regola `regole.incrocio_opera`, collaudat
 | da decidere | Orașele scufundate (Q1217071) |  | meno di due fonti indipendenti sull'anno | 0 |
 | da decidere | Il mostro cieco (Q3794895) |  | meno di due fonti indipendenti sull'anno | 0 |
 | da decidere | King Kong (Q3815410) |  | solo cataloghi o una fonte danno un anno più tardo | 0 |
+| da decidere | Le ali notturne (Q3828461) |  | meno di due fonti indipendenti sull'anno | 0 |
 | da decidere | Tsushima (Q4506215) |  | meno di due fonti indipendenti sull'anno | 0 |
 | da decidere | Mount of Olives (Q6500301) |  | meno di due fonti indipendenti sull'anno | 0 |
 | da decidere | Nihon Shihonshugi Hattatsushi Kōza (Q11509176) |  | meno di due fonti indipendenti sull'anno | 0 |
@@ -175,9 +171,13 @@ Solo rapporto: niente cambia nel sito. Regola `regole.incrocio_opera`, collaudat
 | da decidere | Red mountain (Q12599279) |  | meno di due fonti indipendenti sull'anno | 0 |
 | da decidere | Fram the polar bear (Q12728549) |  | meno di due fonti indipendenti sull'anno | 0 |
 | da decidere | Truth and Justice IV (Q16407465) |  | meno di due fonti indipendenti sull'anno | 0 |
+| da decidere | The Trap (Q19101057) |  | meno di due fonti indipendenti sull'anno | 0 |
+| da decidere | Le Cripte di Yoh-Vombis (Q19101656) |  | meno di due fonti indipendenti sull'anno | 0 |
 | da decidere | Lerne lachen ohne zu weinen (Q19217469) |  | meno di due fonti indipendenti sull'anno | 0 |
+| da decidere | Sul tetto (Q21660419) |  | meno di due fonti indipendenti sull'anno | 0 |
 | da decidere | The Broken Mirror (Q29405101) |  | meno di due fonti indipendenti sull'anno | 0 |
 | da decidere | De minuit à sept heures (Q89784584) |  | un anno più vecchio senza due fonti indipendenti d'accordo, o puntate su più anni | 0 |
+| da decidere | The Man of Stone (Q102229104) |  | meno di due fonti indipendenti sull'anno | 0 |
 | da decidere | Supplementary Collected Stele Biographies (Q107359351) |  | meno di due fonti indipendenti sull'anno | 0 |
 | da decidere | Il passeggero del "Polarlys" (Q3225292) |  | meno di due fonti indipendenti sull'anno | 0 |
 | da decidere | Il diabolico terzetto (Q3793759) |  | meno di due fonti indipendenti sull'anno | 0 |

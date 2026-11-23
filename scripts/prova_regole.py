@@ -185,7 +185,16 @@ for c in CASI["confine"]:
         ok4 += 1
     else:
         no4.append(f"caso di confine «{c['caso']}»: {e}")
-print(f"4. Casi di riferimento: {len(CASI['reali'])} reali e {len(CASI['confine'])} di confine; tornano {ok4}, sbagliati {len(no4)}, noti da sistemare {len(avvisi4)}")
+# 23/11/2026: un caso per ogni regola dell'incrocio delle fonti sulle opere USA (docs/criteri.md)
+for c in CASI.get("incrocio", []):
+    r = R.incrocio_opera(c["pub"], c.get("lingua"), c.get("per_fonte") or {}, None, c.get("date_wikidata"),
+                         fatti=R.fatti_da_ricerca(c.get("voci") or [], c["pub"]))
+    att = c["atteso"]
+    if r["esito"] != att["esito"] or ("anno" in att and r.get("anno") != att["anno"]):
+        no4.append(f"caso dell'incrocio «{c['caso']}»: atteso {att}, risulta {r['esito']} {r.get('anno')} ({r.get('motivo')})")
+    else:
+        ok4 += 1
+print(f"4. Casi di riferimento: {len(CASI['reali'])} reali, {len(CASI['confine'])} di confine e {len(CASI.get('incrocio', []))} dell'incrocio USA; tornano {ok4}, sbagliati {len(no4)}, noti da sistemare {len(avvisi4)}")
 for x in no4 + avvisi4:
     print("   ", x)
 errori += no4

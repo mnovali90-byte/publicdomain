@@ -743,8 +743,9 @@ def incrocio_opera(pub, lingua, per_fonte, puntate=None, date_wikidata=None, fat
     doc = [g for g in minimo if g in ("duke", "isfdb")] + (["rivista"] if riv and min(riv) == pub else [])
     if riv and min(riv) == pub:
         minimo["rivista"] = pub
-    a_pub = [g for g, y in minimo.items() if y == pub]
-    a_pub = [g for g, y in minimo.items() if y == pub]
+    # 23/11/2026 (criterio di docs/criteri.md): Wikidata non è una fonte indipendente (spesso ripete le altre), quindi
+    # non fa da seconda fonte per confermare
+    a_pub = [g for g, y in minimo.items() if y == pub and g != "wiki"]
     if doc and pub in [minimo.get(g) for g in doc] and len(a_pub) >= 2:
         return {"esito": "conferma", "anno": pub, "motivo": f"prima uscita {pub} da {', '.join(sorted(a_pub))}"}
     dopo = {g: y for g, y in minimo.items() if y > pub and g in ("duke", "isfdb") or (g == "wiki" and y > pub and len(wd) == 1 and y != pub)}
@@ -799,6 +800,31 @@ def fatti_da_ricerca(voci, pub):
         r0 = min(reg, key=lambda v: v["anno"])
         f["registrazione"] = {"anno": r0["anno"], "inedita": bool(r0.get("inedita")), "fonte": r0.get("fonte")}
     return f
+
+
+# 23/11/2026 (docs/criteri.md): i tre stati della lista USA. Fonti che non contano come indipendenti per il criterio.
+FONTI_DEBOLI_RE = re.compile(r"wikipedia|wikidata|\bbiblio\b|biblio\.co|abebooks|goodreads|amazon|ebay|librarything", re.I)
+
+
+def stato_usa_lista(decisione_a_mano, esito_incrocio, esito_20_11):
+    """Stato di un'opera nella lista USA: «verificata» (prima uscita verificata: due fonti indipendenti o una scheda CCE,
+    nessuna uscita precedente), «edizione» (anno dell'edizione confermato da una fonte diversa da Wikidata), «da_confermare».
+    decisione_a_mano: voce di data/verifiche_opere.json «usa_lista» o None; esito_incrocio: esito di incrocio_opera;
+    esito_20_11: primo campo di data/us-anni-verificati.json («ok» = edizione confermata da una fonte non Wikidata)."""
+    m = decisione_a_mano or {}
+    if esito_incrocio in ("conferma", "nota"):
+        return "verificata"
+    if m.get("esito") == "resta":
+        forti = [f for f in m.get("fonti") or [] if not FONTI_DEBOLI_RE.search(f.get("nome", "") + " " + f.get("link", ""))]
+        cce = any("catalog of copyright entries" in (f.get("nome", "") or "").lower() for f in m.get("fonti") or [])
+        if len(forti) >= 2 or cce:
+            return "verificata"
+        return "edizione"
+    if esito_incrocio in ("conferma", "nota"):
+        return "verificata"
+    if esito_20_11 == "ok":
+        return "edizione"
+    return "da_confermare"
 
 
 def esporta_js(percorso):
