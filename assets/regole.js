@@ -98,7 +98,7 @@ window.REGOLE_PAESI = (() => {
     if (c === "fr" && au.some((a) => !a.an && a.m >= C.FR_GUERRA[0] && a.m <= C.FR_GUERRA[1] && annoLibero(a.m, "fr", true) > Y)) note.push("sFr");
     return { s: "si", note, r: note.includes("sUk2039") ? "uk_2039" : "morte" };
   };
-  const autoreConNome = (nome) => typeof nome === "string" && nome.trim() !== "" && !/^Q\d+$/.test(nome.trim());
-  return Object.assign({}, C, { autoreConNome, anniProtezione, annoLibero, mortiLiberiNel, annoLiberoUsa, pubblicateLibereUsaNel, paesiAlleati,
+  const autoreVisibile = (a) => !(a && a.senza_nome);
+  return Object.assign({}, C, { autoreVisibile, anniProtezione, annoLibero, mortiLiberiNel, annoLiberoUsa, pubblicateLibereUsaNel, paesiAlleati,
     notaTrattatoFlag, notaTrattato, statoOpera, liberaUeOpera, annoOperaCredibile, annoDeciso, faseSito });
 })();

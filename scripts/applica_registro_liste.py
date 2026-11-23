@@ -36,6 +36,7 @@ def anno_di(x):
 def main():
     reg = (json.loads((DATA / "registro" / "autori.json").read_text(encoding="utf-8")) or {}).get("autori", {})
     anno_ue = RG.morti_liberi_nel(date.today().year, "it")
+    nomi_or = (_l(DATA / "registro" / "nomi_originali.json", {}) or {}).get("autori", {})
     file = sorted(glob.glob(str(DATA / "[0-9][0-9][0-9][0-9].json")) + glob.glob(str(DATA / "es-[0-9][0-9][0-9][0-9].json")))
     liste = {Path(f).stem: json.loads(Path(f).read_text(encoding="utf-8")) for f in file}
     spostati, arrivi = [], {}
@@ -44,6 +45,15 @@ def main():
         anno_l = int(nome[-4:])
         tenuti = []
         for a in d.get("autori", []):
+            # autori con il solo codice Wikidata (23/11/2026): il nome in un'altra lingua (scripts/nomi_originali.py),
+            # con la traslitterazione se c'è; chi non ha nome in nessuna lingua resta nei dati con «senza_nome»
+            no = nomi_or.get(a.get("wikidata")) if re.fullmatch(r"Q\d+", (a.get("nome") or "").strip() or "Q0") else None
+            if no and no.get("nome"):
+                a["nome"] = f"{no['nome']} ({no['latino']})" if no.get("latino") else no["nome"]
+                a["nome_fonte"] = f"Wikidata, nome in «{no.get('lingua')}»"
+                a.pop("senza_nome", None)
+            elif no and no.get("nessuno"):
+                a["senza_nome"] = True
             # fonti in disaccordo nel registro: la lista lo dice (nota «da verificare» nel radar), con le fonti del registro (23/11/2026)
             v_reg = reg.get(a.get("wikidata")) or {}
             # (se la lista dice già «discorde» si lascia la sua nota: le sue fonti partono dall'anno della lista)

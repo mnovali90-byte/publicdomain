@@ -596,23 +596,29 @@ window.REGOLE_PAESI = (() => {
     if (c === "fr" && au.some((a) => !a.an && a.m >= C.FR_GUERRA[0] && a.m <= C.FR_GUERRA[1] && annoLibero(a.m, "fr", true) > Y)) note.push("sFr");
     return { s: "si", note, r: note.includes("sUk2039") ? "uk_2039" : "morte" };
   };
-  const autoreConNome = (nome) => typeof nome === "string" && nome.trim() !== "" && !/^Q\d+$/.test(nome.trim());
-  return Object.assign({}, C, { autoreConNome, anniProtezione, annoLibero, mortiLiberiNel, annoLiberoUsa, pubblicateLibereUsaNel, paesiAlleati,
+  const autoreVisibile = (a) => !(a && a.senza_nome);
+  return Object.assign({}, C, { autoreVisibile, anniProtezione, annoLibero, mortiLiberiNel, annoLiberoUsa, pubblicateLibereUsaNel, paesiAlleati,
     notaTrattatoFlag, notaTrattato, statoOpera, liberaUeOpera, annoOperaCredibile, annoDeciso, faseSito });
 })();
 """
 
 
 def autore_con_nome(nome):
-    """REGOLA (Marco, 23/11/2026): un autore senza nome (in Wikidata solo il codice, es. «Q20483877») non compare nelle
-    liste pubbliche; resta nei dati. Gemella: autoreConNome in assets/regole.js."""
+    """Il nome è un nome vero e non il solo codice Wikidata (es. «Q20483877»)."""
     return isinstance(nome, str) and bool(nome.strip()) and not re.fullmatch(r"Q\d+", nome.strip())
+
+
+def autore_visibile(a):
+    """REGOLA (Marco, 23/11/2026): un autore senza nome in nessuna lingua su Wikidata («senza_nome», scritto da
+    scripts/applica_registro_liste.py con data/registro/nomi_originali.json) non compare nelle liste pubbliche; resta nei
+    dati. Chi ha un nome in un'altra lingua compare con quel nome. Gemella: autoreVisibile in assets/regole.js."""
+    return not (a or {}).get("senza_nome")
 
 
 def lista_pubblica(pacchetto):
     """Il file di una lista (data/AAAA.json, data/es-AAAA.json) come lo mostrano le pagine: senza gli autori senza nome."""
     d = dict(pacchetto or {})
-    d["autori"] = [a for a in d.get("autori", []) if autore_con_nome(a.get("nome"))]
+    d["autori"] = [a for a in d.get("autori", []) if autore_visibile(a)]
     if "totale" in d:
         d["totale"] = len(d["autori"])
     return d

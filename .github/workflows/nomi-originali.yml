@@ -1,0 +1,35 @@
+name: Nomi degli autori che hanno solo il codice Wikidata (non cambia le pagine)
+
+# Parte cambiando docs/registro/passo-nomi.txt, con l'ok di Marco (23/11/2026). Gira anche nel giro mensile (aggiorna.yml).
+# Scrive solo data/registro/nomi_originali.json; lo applica scripts/applica_registro_liste.py.
+on:
+  push:
+    paths:
+      - "docs/registro/passo-nomi.txt"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: nomi-originali
+  cancel-in-progress: false
+
+jobs:
+  nomi:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Nomi in qualsiasi lingua da Wikidata
+        run: python scripts/nomi_originali.py
+      - name: Salva solo il file dei nomi
+        if: ${{ !cancelled() }}
+        run: |
+          git add data/registro/nomi_originali.json 2>/dev/null || true
+          bash scripts/salva.sh "Nomi originali degli autori con il solo codice"

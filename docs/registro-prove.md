@@ -1365,3 +1365,14 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - **Esito:**
   - prove 1-8 a 0 (prova 1: 36.937 confronti);
   - fotografia 0 cambi: la fotografia legge i file dei dati, che non cambiano.
+
+## 23/11/2026 — Autori senza nome: prima si cerca il nome in qualsiasi lingua (correzione di Marco)
+- **Regola corretta:** si nasconde solo chi non ha un nome in nessuna lingua su Wikidata. Gli altri compaiono con il nome originale, e con la traslitterazione se Wikidata ne ha una.
+- **Perché succede:** scripts/aggiorna.py chiede il nome solo in 18 lingue. Chi ce l'ha solo in un'altra lingua (ucraino, georgiano, arabo...) resta con il codice.
+- **Codice:**
+  - scripts/nomi_originali.py cerca in Wikidata, in qualsiasi lingua, il nome nella lingua nativa (P1559), le etichette e gli altri nomi. Scrive data/registro/nomi_originali.json;
+  - giro .github/workflows/nomi-originali.yml, e un passo nel giro mensile aggiorna.yml;
+  - scripts/applica_registro_liste.py mette il nome nella lista, oppure «senza_nome» se un nome non c'è in nessuna lingua;
+  - regole.autore_visibile, con la gemella autoreVisibile, nasconde solo chi ha «senza_nome».
+- **Finché il giro dei nomi non è passato non si nasconde nessuno:** i numeri delle pagine restano 826 e 790.
+- **Esito:** prove 1-8 a 0, fotografia 0 cambi.

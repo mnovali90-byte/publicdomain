@@ -89,6 +89,9 @@ jobs:
         # anche se un passo prima è fallito: i dati vecchi nei file vanno ricontrollati comunque
         if: ${{ !cancelled() }}   # se il giro viene annullato non si salva niente (19/11/2026: un giro annullato aveva salvato dati a metà)
         run: python scripts/controlli.py
+      - name: Nomi in qualsiasi lingua per gli autori che hanno solo il codice Wikidata (scripts/nomi_originali.py)
+        continue-on-error: true
+        run: python scripts/nomi_originali.py
       - name: Liste con l'anno di morte del registro unico (scripts/applica_registro_liste.py)
         # 22/11/2026: le liste nascono da Wikidata; l'anno di morte che vale è quello deciso nel registro
         if: ${{ !cancelled() }}

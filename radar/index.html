@@ -821,10 +821,10 @@ async function leggi(url) {
   if (!r.ok) throw new Error(`${url}: ${r.status}`);
   return r.json();
 }
-// liste per anno senza gli autori senza nome (regola di Marco, 23/11/2026; regole.autore_con_nome / autoreConNome)
+// liste per anno senza gli autori senza nome in nessuna lingua (regola di Marco, 23/11/2026; regole.autore_visibile / autoreVisibile)
 async function leggiLista(url) {
   const d = await leggi(url);
-  if (d && Array.isArray(d.autori)) d.autori = d.autori.filter((a) => window.REGOLE_PAESI.autoreConNome(a.nome));
+  if (d && Array.isArray(d.autori)) d.autori = d.autori.filter((a) => window.REGOLE_PAESI.autoreVisibile(a));
   return d;
 }
 function salvaLocale(chiave, valore) { try { localStorage.setItem(chiave, JSON.stringify(valore)); } catch (e) { /* ok */ } }
