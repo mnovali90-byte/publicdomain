@@ -1446,3 +1446,14 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
   - Nella regola: la bibliografia nella lingua originale vota; le date di riviste ed edizioni da Wikidata sono indizi.
 - **Ricerca sul web come procedura fissa:** docs/ricerca-web.md (cosa cercare, fonti che valgono, formato fisso) e docs/ricerca-web/risultati.json. Decide regole.fatti_da_ricerca: due gruppi indipendenti per ogni fatto; una fonte sola resta indizio. Prima voce: The Black Swan (una fonte con link).
 - **Nel sito:** niente cambiato. Prove 1-8 a 0, fotografia 0 cambi.
+
+## 23/11/2026 — Riverifica dei confermati 2027, prime ricerche sul web, Dehkhoda, conteggio dei saggisti (preparato)
+- **Riverifica** (scripts/riverifica_confermati.py, docs/riverifica-confermati-us-2027.md): le 111 opere segnate «ok» il 20/11 e ancora nella lista 2027, ripassate con la regola di oggi.
+  - Senza ricerca sul web: 13 conferma, 98 da decidere.
+  - Il motivo: il 20/11 85 delle 111 erano state confermate da una sola fonte (di solito il registro CCE) che aveva trovato un'edizione del 1931.
+- **Ricerca sul web** (docs/ricerca-web.md), partendo dalle più viste: La buona terra, Le onde, The Whisperer in Darkness, The Sittaford Mystery, Sanctuary, The Joy of Cooking. Due fonti indipendenti per ciascuna, tutte danno il 1931; in docs/ricerca-web/risultati.json.
+  - The Sittaford Mystery è uscito a puntate su Good Housekeeping da marzo ad agosto 1931, prima del libro: tutto nel 1931, quindi resta.
+  - Dopo: 19 conferma, 92 da decidere.
+- **Dehkhoda:** morto nel 1956 secondo l'Encyclopaedia Iranica e Rekhta (docs/verifica-autori-mancanti-2027.md). Wikidata (1959) sbaglia. Non inserito nella lista: serve l'ok di Marco.
+- **Conteggio dei saggisti, preparato e non lanciato:** scripts/conta_saggisti.py con .github/workflows/conta-saggisti.yml (parte con docs/registro/passo-saggisti.txt).
+- **Nel sito:** niente cambiato.

@@ -1,0 +1,37 @@
+name: Conteggio autori di saggistica (Wikidata; non cambia il sito)
+
+# Parte solo cambiando docs/registro/passo-saggisti.txt, con l'ok di Marco (23/11/2026).
+# Scrive solo il rapporto: docs/conteggio-saggisti.md e data/registro/conteggio_saggisti.json.
+on:
+  push:
+    paths:
+      - "docs/registro/passo-saggisti.txt"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: conta-saggisti
+  cancel-in-progress: false
+
+jobs:
+  saggisti:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Storici, filosofi, economisti, giuristi e critici morti negli anni delle liste 2027 e 2028
+        env:
+          ANNI: "2027,2028"
+        run: python scripts/conta_saggisti.py
+      - name: Salva solo il rapporto
+        if: ${{ !cancelled() }}
+        run: |
+          git add docs/conteggio-saggisti.md data/registro/conteggio_saggisti.json 2>/dev/null || true
+          bash scripts/salva.sh "Conteggio saggisti: rapporto"
