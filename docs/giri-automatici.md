@@ -138,7 +138,7 @@ Oggi `scripts/regole.py` ha le regole per autore (durate per paese, Spagna, Fran
 
 - **Giri 4 e 5** (`.github/workflows/capodanno.yml`): provati a vuoto su una copia, con data finta per Python e browser. Orari giusti (1° e 7 gennaio, 00:05 ora italiana; a gennaio vale sempre l'ora solare). Passi: Già pubblici (`storico/pagina.py`), pagine (`scripts/pagine.py`), controlli (`prova_regole.py`, `controllo_frasi.py`), fotografia. Esito: 0 errori; il 1° gennaio 9325 cambi attesi e 0 da approvare, il 7 gennaio 0 cambi.
 - **Non fatti da capodanno.yml, quindi non provati:** giro 4, punto 2 (lista della Duke University: non c'è un giro, va lanciata a mano quando esce) e punto 4 (lista di due anni dopo: la fa il giro «Aggiorna autori» del 1° gennaio alle 6:17 ora italiana, `aggiorna.yml`).
-- **Se il giro fallisce:** non riparte; il sito resta com'era, mentre home e radar cambiano fase da soli nel browser. Avviso solo con l'email di GitHub, se le notifiche sono accese; se GitHub salta il giro non arriva niente. Rimedio: pulsante «Run workflow». Il 1° e il 7 gennaio alle 9 Marco controlla il sito.
+- **Se il giro fallisce:** non riparte; il sito resta com'era, mentre home e radar cambiano fase da soli nel browser. Avviso solo con l'email di GitHub, se le notifiche sono accese; se GitHub salta il giro non arriva niente. Rimedio: pulsante «Run workflow».
 
 ## Com'è oggi
 
