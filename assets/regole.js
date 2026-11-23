@@ -49,6 +49,7 @@ window.REGOLE_PAESI = (() => {
       if (o.yd) note.push("sDuke");
       // 23/11/2026: senza anno su Wikidata, vale l'anno confermato dal registro USA (gemella di stato_opera)
       if (y === null && ((verifiche || {})[o.q] || [null])[0] != null) y = verifiche[o.q][0];
+      { const _v = (verifiche || {})[o.q] || [null]; if (y !== null && _v[0] != null && _v[0] < y && _v.length > 4 && _v[4]) y = _v[0]; }
       if (y !== null) {
         if (annoLiberoUsa(y) <= Y && !liberaUeOpera(o, Y)) {
           const v = (verifiche || {})[o.q];

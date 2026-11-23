@@ -33,6 +33,10 @@ def voci_usa():
             q = (b.get("wd") or {}).get("qid")
             if q and isinstance(b.get("pub"), int):
                 out.setdefault(q, []).append(("duke", ["ok", b["pub"], "duke"]))
+    # 23/11/2026: opere tolte dalle liste USA perché due fonti le danno uscite per intero prima (applica_registro_liste.py)
+    for x in (_leggi(R / "data" / "registro" / "liste_spostati.json", {}).get("usa_gia_libere") or []):
+        if x.get("qid") and isinstance(x.get("uscita"), int):
+            out.setdefault(x["qid"], []).append(("libere", ["prima", x["uscita"], "due fonti: " + ", ".join(x.get("fonti", []))]))
     # 23/11/2026: anni provati da due cataloghi (data/verifiche_opere.json, verifica delle opere approvata da Marco)
     for k, x in (_leggi(R / "data" / "verifiche_opere.json", {}).get("opere") or {}).items():
         if x.get("opera") and isinstance(x.get("entro"), int):

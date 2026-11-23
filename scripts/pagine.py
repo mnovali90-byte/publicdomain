@@ -1870,7 +1870,7 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
     es_nomi = [pulisci(a["nome"]) for a in _letterari(pacchetto_es or {}, "it")[:3]]
     opere = (opere_us or {}).get("opere", [])
     n_us = len(opere)
-    n_us_ok = sum(1 for o in opere if (verificati.get(o["qid"]) or ["nd"])[0] == "ok")
+    n_us_ok = sum(1 for o in opere if (verificati.get(o["qid"]) or ["nd"])[0] == "ok" or o.get("conferma_usa"))
     cogn = lambda nome: pulisci(nome).split()[-1] if nome else ""
 
     # titolo e descrizione per Google: i nomi più cercati
@@ -2020,6 +2020,8 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
             t = (o.get("titolo_it") or o["titolo"]) if it else o["titolo"]
             chi = ", ".join(pulisci(a["nome"]) for a in o.get("autori", [])) or "—"
             v_ = verificati.get(o["qid"]) or ["nd"]
+            if o.get("conferma_usa"):   # confermato a mano con due fonti (data/verifiche_opere.json, «usa_lista»)
+                v_ = ["ok"]
             if v_[0] == "ok":
                 badge = esc(T(f"{pub} confermato", f"{pub} confirmed"))
             elif v_[0] == "parziale":   # uscito a puntate fino a un anno dopo: libero per intero più tardi
@@ -2036,6 +2038,9 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
                     chi_f = re.sub(r"^(.+?)\1$", r"\1", pulisci(fa["foto"].get("autore")))
                     chi_f = "" if len(chi_f) > 60 else chi_f
                     crediti_us.append(f'{esc(pulisci(fa["nome"]))}: <a href="{esc(fa["foto"].get("pagina", ""))}" rel="noopener">{esc(" · ".join(x for x in (chi_f, pulisci(fa["foto"].get("licenza"))) if x) or "Wikimedia Commons")}</a>')
+            nu = (o.get("nota_usa") or {}).get("it" if it else "en")
+            if nu:
+                badge += f'<br><span class="tbd">{esc(nu)}</span>'
             out.append(f'<li class="row"{df} data-i="{esc(iniziali_nome(chi.split(", ")[0]))}"><span class="no">{k + 1:02d}</span>'
                        f'<span class="nm"><a href="{app}#/opera/{o["qid"]}">{esc(t)}</a></span><span class="mt">{esc(chi)}<br>{badge}</span></li>\n')
         out.append(f'</ol>\n<a href="{app}#/us/{anno}" class="more">{T(f"Tutti i {n_us} libri: {n_us_ok} confermati, {n_us - n_us_ok} da confermare →", f"All {n_us} books: {n_us_ok} confirmed, {n_us - n_us_ok} to be confirmed →")}</a>\n')

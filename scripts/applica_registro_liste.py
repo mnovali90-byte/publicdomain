@@ -73,7 +73,7 @@ def main():
     # dalla lista. Fonti: le verifiche delle liste (data/us-anni-verificati.json, quarto campo: anno per fonte) e le
     # conferme scritte a mano con le loro fonti (data/verifiche_opere.json, «usa_prima»).
     ver = _l(DATA / "us-anni-verificati.json", {})
-    man = (_l(DATA / "verifiche_opere.json", {}) or {}).get("usa_prima", {})
+    man = (_l(DATA / "verifiche_opere.json", {}) or {}).get("usa_lista", {})
     usa_tolte = []
     for f in sorted(glob.glob(str(DATA / "us-[0-9][0-9][0-9][0-9].json"))):
         lista = Path(f).stem[3:]
@@ -85,17 +85,26 @@ def main():
             per_fonte = v[5] if len(v) > 5 and isinstance(v[5], dict) else {}
             prima = sorted({f_ for f_, y in per_fonte.items() if isinstance(y, int) and pub and y < pub})
             m = man.get(o.get("qid"))
-            if m and isinstance(m.get("prima"), int) and m["prima"] < pub:
+            if m and m.get("esito") == "resta":
+                # resta nella lista (non è libera per intero): nota e anno confermato a mano, con le fonti
+                o = dict(o)
+                if m.get("nota"):
+                    o["nota_usa"] = m["nota"]
+                if m.get("conferma"):
+                    o["conferma_usa"] = {"anno": m["conferma"], "fonti": m.get("fonti", [])}
+                tenute.append(o)
+                continue
+            if m and m.get("esito") == "tolta" and isinstance(m.get("prima"), int) and m["prima"] < pub:
                 prima = ["a mano: " + "; ".join(m.get("fonti", []))]
                 prima_anno = m["prima"]
             else:
                 prima_anno = min((per_fonte[f_] for f_ in prima), default=None)
-            if (m and prima) or len(prima) >= 2:
+            if (m and m.get("esito") == "tolta") or len(prima) >= 2:
                 usa_tolte.append({"lista": f"us-{lista}", "qid": o.get("qid"), "titolo": o.get("titolo_it") or o.get("titolo"),
                                   "uscita": prima_anno, "fonti": prima, "nota": (m or {}).get("nota")})
                 continue
             tenute.append(o)
-        if len(tenute) != len(d.get("opere", [])):
+        if tenute != d.get("opere", []):
             d["opere"] = tenute
             Path(f).write_text(json.dumps(d, ensure_ascii=False, indent=1), encoding="utf-8")
     # l'elenco degli spostamenti si tiene: al giro dopo gli autori già spostati non risultano più diversi
@@ -111,7 +120,10 @@ def main():
     except Exception:
         usa_vecchie = []
     nuove_q = {(x["lista"], x["qid"]) for x in usa_tolte}
-    usa_tutte = [x for x in usa_vecchie if (x["lista"], x["qid"]) not in nuove_q] + usa_tolte
+    # un'opera che ora resta nella lista (es. decisione «resta» in verifiche_opere.json) non è più fra le tolte
+    in_lista = {(Path(f).stem, o.get("qid")) for f in glob.glob(str(DATA / "us-[0-9][0-9][0-9][0-9].json"))
+                for o in json.loads(Path(f).read_text(encoding="utf-8")).get("opere", [])}
+    usa_tutte = [x for x in usa_vecchie if (x["lista"], x["qid"]) not in nuove_q and (x["lista"], x["qid"]) not in in_lista] + usa_tolte
     fs.write_text(json.dumps({"aggiornato": date.today().isoformat(), "regola": "anno di morte del registro unico (regole.morte_dal_registro)",
                               "spostati": tutti, "usa_gia_libere": usa_tutte}, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"Liste USA: {len(usa_tolte)} opere già libere tolte (due fonti le danno uscite prima dell'anno della lista)")

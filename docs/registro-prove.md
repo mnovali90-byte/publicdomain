@@ -1175,3 +1175,25 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
   - The Course of Wisdom in Europe: più volumi dal 1931, nessuna fonte prima.
 - **Effetto della stessa regola su us-2028:** tolte La laguna e Gli idioti di Conrad (1896: ISFDB, LoC, Open Library). Restano, con una fonte sola: Il ritorno di Conrad, L'uomo senza qualità, Santa Giovanna dei Macelli.
 - **Liste:** us-2027 passa da 169 a 164 opere, us-2028 da 175 a 173. Prove 1-7 a 0.
+
+## 23/11/2026 — Correzione di Marco sulle opere USA: esce solo ciò che è libero per intero
+- **Regola (Marco):** esce dalla lista solo ciò che è già libero per intero. Se è libera solo una versione (prima versione, originale straniero, uscita a puntate), l'opera resta con una nota.
+  - scritta in data/verifiche_opere.json («usa_lista», esito «resta» con nota e fonti), al posto di «usa_prima»;
+  - letta da scripts/applica_registro_liste.py; la nota si vede sulla pagina 2027 (prime 12) e nella scheda dell'opera nel radar (tutte).
+- **Tornano nella lista con la nota:**
+  - Die Maßnahme: prima versione del 1930 già libera, versione rivista del 1931 libera nel 2027;
+  - With Mystics and Magicians in Tibet: originale francese del 1929 già libero, traduzione inglese del 1931 libera nel 2027.
+- **Vetrina 2027, titoli con «anno da confermare», controllati con due fonti:**
+  - Tintin in Congo: a puntate dal 5/6/1930 all'11/6/1931, volume 1931 (BnF, notice de titre; Wikipedia, Tintinologist). Ora «1931 confermato» con la nota sulle tavole del 1930;
+  - Why I Am an Atheist: pubblicato il 27/9/1931 su The People (Wikipedia; Marxists Internet Archive). Ora «1931 confermato»;
+  - Gaban: Saraswati Press 1931 (Wikipedia; Oxford University Press). Ora «1931 confermato»;
+  - nella vetrina 2027 non resta nessun «anno da confermare».
+- **Stessa regola, applicata anche a due titoli già confermati della vetrina:** La chiave di vetro (Black Mask, marzo-giugno 1930; University at Buffalo) e La via del ritorno (Vossische Zeitung, dicembre 1930-gennaio 1931; Wikipedia). Restano con la nota sulle puntate.
+- **Le opere tolte ora risultano libere negli USA in Già pubblici.** Prima Charlie Chan Carries On, Il ballo, La laguna e Gli idioti vi comparivano come «dal 2027/2028».
+  - Ora vale anche lì la regola: se due fonti danno l'opera uscita per intero prima, conta quell'anno (scripts/registro.py, voce «libere»; scripts/regole.py, nei gemelli Python e browser).
+  - Fotografia: 4 cambi, approvati (impronta e1275a5e5bcb). L'opera da tre soldi era già libera.
+- **Liste:** us-2027 passa da 169 a 166, us-2028 da 175 a 173. Prove 1-7 a 0. Nel browser:
+  - pagina 2027 e radar con le note, in italiano e in inglese;
+  - Già pubblici con le 5 opere libere negli USA;
+  - nessun errore JS.
+- **Corretto anche:** liste_spostati.json ora toglie dalle «già libere» le opere che sono tornate nella lista.

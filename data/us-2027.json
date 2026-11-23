@@ -59,7 +59,14 @@
    "pagine": 10,
    "wiki_en": "https://en.wikipedia.org/wiki/Why_I_Am_an_Atheist",
    "generi": [],
-   "visite_en": 77249
+   "visite_en": 77249,
+   "conferma_usa": {
+    "anno": 1931,
+    "fonti": [
+     "Wikipedia: pubblicato il 27 settembre 1931 su The People",
+     "Marxists Internet Archive: «first published … in the 27 Sept. 1931 issue of The People»"
+    ]
+   }
   },
   {
    "qid": "Q636870",
@@ -88,6 +95,17 @@
     "pagina": "https://commons.wikimedia.org/wiki/File:Tintin_au_Congo.png",
     "licenza": "Public domain",
     "autore": "Herge"
+   },
+   "nota_usa": {
+    "it": "Uscito a puntate su Le Petit Vingtième dal 5 giugno 1930 all'11 giugno 1931, in volume nel 1931: le tavole del 1930 sono già libere, l'opera intera nel 2027.",
+    "en": "Serialised in Le Petit Vingtième from 5 June 1930 to 11 June 1931, in book form in 1931: the 1930 pages are already free, the whole work in 2027."
+   },
+   "conferma_usa": {
+    "anno": 1931,
+    "fonti": [
+     "BnF, notice de titre: «Publié dans Le Petit Vingtième du 5 juin 1930 au 11 juin 1931, en volume cette dernière année», https://catalogue.bnf.fr/ark:/12148/cb16135825j",
+     "Wikipedia e Tintinologist: volume del 1931"
+    ]
    }
   },
   {
@@ -254,6 +272,17 @@
     "pagina": "https://commons.wikimedia.org/wiki/File:Erich_Maria_Remarque_-_Der_Weg_zur%C3%BCck_1931.jpg",
     "licenza": "Public domain",
     "autore": "Unknown author"
+   },
+   "nota_usa": {
+    "it": "Uscito a puntate sulla Vossische Zeitung tra dicembre 1930 e gennaio 1931, libro nell'aprile 1931: per intero si libera nel 2027.",
+    "en": "Serialised in the Vossische Zeitung between December 1930 and January 1931, book in April 1931: as a whole it becomes free in 2027."
+   },
+   "conferma_usa": {
+    "anno": 1931,
+    "fonti": [
+     "Wikipedia: The Road Back",
+     "Open Library: Propyläen-Verlag 1931; Faded Page: «Copyright, 1930, 1931, by Propylaen-Verlag»"
+    ]
    }
   },
   {
@@ -289,6 +318,17 @@
     "pagina": "https://commons.wikimedia.org/wiki/File:The_Glass_Key_%281st_ed_cover%29.jpg",
     "licenza": "Public domain",
     "autore": "Designer unknown; published by Knopf"
+   },
+   "nota_usa": {
+    "it": "Uscito a puntate su Black Mask da marzo a giugno 1930 (quella versione è già libera); il libro del 1931 si libera nel 2027.",
+    "en": "Serialised in Black Mask from March to June 1930 (that version is already free); the 1931 book becomes free in 2027."
+   },
+   "conferma_usa": {
+    "anno": 1931,
+    "fonti": [
+     "University at Buffalo Libraries: serializzato su Black Mask, marzo-giugno 1930",
+     "Wikipedia e Open Library: libro Knopf 1931"
+    ]
    }
   },
   {
@@ -315,7 +355,14 @@
     "it": "hindī"
    },
    "generi": [],
-   "visite_en": 21537
+   "visite_en": 21537,
+   "conferma_usa": {
+    "anno": 1931,
+    "fonti": [
+     "Wikipedia: pubblicato da Saraswati Press nel 1931",
+     "Oxford University Press (2002): «Gaban, first published in 1931»"
+    ]
+   }
   },
   {
    "qid": "Q4190252",
@@ -1083,6 +1130,37 @@
    "visite_en": 5625
   },
   {
+   "qid": "Q318208",
+   "titolo": "The Decision",
+   "titolo_it": "La linea di condotta",
+   "autori": [
+    {
+     "qid": "Q38757",
+     "nome": "Bertolt Brecht",
+     "foto": {
+      "file": "Bundesarchiv Bild 183-W0409-300, Bertolt Brecht.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bundesarchiv_Bild_183-W0409-300%2C_Bertolt_Brecht.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_183-W0409-300%2C_Bertolt_Brecht.jpg",
+      "licenza": "CC BY-SA 3.0 de",
+      "autore": "Kolbe, Jörg"
+     }
+    }
+   ],
+   "pagine": 5,
+   "wiki_en": "https://en.wikipedia.org/wiki/The_Decision_(play)",
+   "date_wikidata": [
+    1930,
+    1931
+   ],
+   "date_nota": "puntate_o_edizioni",
+   "generi": [],
+   "visite_en": 5249,
+   "nota_usa": {
+    "it": "La prima versione, pubblicata nel 1930, è già libera; nel 2027 si libera la versione rivista del 1931.",
+    "en": "The first version, published in 1930, is already free; the revised 1931 version becomes free in 2027."
+   }
+  },
+  {
    "qid": "Q1746433",
    "titolo": "A Little Fable",
    "titolo_it": null,
@@ -1266,6 +1344,37 @@
    },
    "generi": [],
    "visite_en": 4612
+  },
+  {
+   "qid": "Q112276362",
+   "titolo": "With Mystics and Magicians in Tibet",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q230456",
+     "nome": "Alexandra David-Néel",
+     "foto": {
+      "file": "Alexandra David-Néel, also know as Louise Eugenie Alexandrine Marie David 19th century (cropped).gif",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Alexandra_David-N%C3%A9el%2C_also_know_as_Louise_Eugenie_Alexandrine_Marie_David_19th_century_%28cropped%29.gif?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Alexandra_David-N%C3%A9el%2C_also_know_as_Louise_Eugenie_Alexandrine_Marie_David_19th_century_%28cropped%29.gif",
+      "licenza": "Public domain",
+      "autore": "Unknown author"
+     }
+    }
+   ],
+   "pagine": 3,
+   "wiki_en": "https://en.wikipedia.org/wiki/With_Mystics_and_Magicians_in_Tibet",
+   "date_wikidata": [
+    1929,
+    1931
+   ],
+   "date_nota": "puntate_o_edizioni",
+   "generi": [],
+   "visite_en": 4365,
+   "nota_usa": {
+    "it": "L'originale francese del 1929 è già libero; nel 2027 si libera la traduzione inglese del 1931.",
+    "en": "The 1929 French original is already free; the 1931 English translation becomes free in 2027."
+   }
   },
   {
    "qid": "Q3506429",

@@ -140,6 +140,11 @@ def anno_usa_confermato(voci):
         autorevole); "parziale" = a puntate fino a quell'anno; "nd" = nessuna conferma.
     Regola: vale l'edizione confermata più vecchia (basta un'edizione uscita entro il limite, come per la Duke).
     Restituisce [anno confermato o None, fonte, le fonti danno solo anni più tardi (True/False), anno trovato senza conferma]."""
+    # 23/11/2026: uscita per intero prima dell'anno della lista, provato da due fonti (scripts/applica_registro_liste.py)
+    certe = [v for o_, v in voci if o_ == "libere" and isinstance(v[1], int)]
+    if certe:
+        v = min(certe, key=lambda x: x[1])
+        return [v[1], v[2], False, None, True]
     conf, tardi, trovato = [], False, None
     for origine, v in voci:
         e, y, fonte = v[0], v[1], v[2]
@@ -353,6 +358,11 @@ def stato_opera(o, c, oggi, mpf=(), verifiche=None):
         # 23/11/2026: senza anno su Wikidata, vale l'anno confermato dal registro USA (es. due cataloghi, data/verifiche_opere.json)
         if y is None and ((verifiche or {}).get(o.get("q")) or [None])[0] is not None:
             y = verifiche[o.get("q")][0]
+        # 23/11/2026: un'edizione confermata PIÙ VECCHIA dell'anno di Wikidata prova che l'opera era già uscita prima
+        # (regola del registro: vale l'edizione confermata più vecchia; es. Charlie Chan Carries On: CCE 1930, Wikidata 1931)
+        _v = (verifiche or {}).get(o.get("q")) or [None]
+        if y is not None and _v[0] is not None and _v[0] < y and len(_v) > 4 and _v[4]:
+            y = _v[0]   # solo se due fonti indipendenti la danno uscita per intero prima (liste USA, «usa_gia_libere»)
         if y is not None:
             # libera solo negli USA e solo per l'anno: serve una seconda fonte (Duke o Open Library), se no «da verificare»
             if anno_libero_usa(y) <= Y and not libera_ue_opera(o, Y):
@@ -519,6 +529,7 @@ window.REGOLE_PAESI = (() => {
       if (o.yd) note.push("sDuke");
       // 23/11/2026: senza anno su Wikidata, vale l'anno confermato dal registro USA (gemella di stato_opera)
       if (y === null && ((verifiche || {})[o.q] || [null])[0] != null) y = verifiche[o.q][0];
+      { const _v = (verifiche || {})[o.q] || [null]; if (y !== null && _v[0] != null && _v[0] < y && _v.length > 4 && _v[4]) y = _v[0]; }
       if (y !== null) {
         if (annoLiberoUsa(y) <= Y && !liberaUeOpera(o, Y)) {
           const v = (verifiche || {})[o.q];

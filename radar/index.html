@@ -1939,6 +1939,7 @@ function mostraOpera(t) {
           ...riga(ot("regola"), ot("regolaTesto")),
           ...riga(ot("semplice"), ot("semplicetesto", { a: anno, p: pub })),
           ...riga(ot("attenzione"), ot("attenzioneTesto")),
+          ...(o.nota_usa && o.nota_usa[LING === "en" ? "en" : "it"] ? riga(LING === "en" ? "Note" : "Nota", o.nota_usa[LING === "en" ? "en" : "it"]) : []),
           ...(autori.length ? riga((o.autori || []).length > 1 ? ot("autori") : ot("autore"), autori) : []),
           ...(o.visite_en ? riga("Wikipedia", ot("visite", { n: n(o.visite_en) })) : [])),
         h("div", { class: "azioni" },
