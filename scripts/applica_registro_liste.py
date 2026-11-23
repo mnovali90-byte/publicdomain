@@ -44,6 +44,11 @@ def main():
         anno_l = int(nome[-4:])
         tenuti = []
         for a in d.get("autori", []):
+            # fonti in disaccordo nel registro: la lista lo dice (nota «da verificare» nel radar), con le fonti del registro (23/11/2026)
+            v_reg = reg.get(a.get("wikidata")) or {}
+            # (se la lista dice già «discorde» si lascia la sua nota: le sue fonti partono dall'anno della lista)
+            if v_reg.get("e") == "discorde" and (a.get("verifica") or {}).get("esito") != "discorde":
+                a["verifica"] = {"esito": "discorde", "fonti": v_reg.get("f") or {}, "citate": v_reg.get("c") or {}}
             m_l = anno_di(a.get("morte"))
             m, inc = RG.morte_dal_registro(a.get("wikidata"), m_l, reg, anno_ue)
             # fonti in disaccordo («discorde»): il registro non ha deciso, l'autore resta dov'è (la scheda dice «da verificare»)

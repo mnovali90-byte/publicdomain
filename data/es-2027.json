@@ -38547,10 +38547,12 @@
    "indice_int": 38,
    "indice": 31,
    "verifica": {
-    "esito": "una_fonte",
+    "esito": "discorde",
     "fonti": {
-     "wikidata": 1946
-    }
+     "wikidata": 1946,
+     "gutenberg": 1956
+    },
+    "citate": {}
    },
    "paesi": [],
    "paesi_fonte": "P27 assente"

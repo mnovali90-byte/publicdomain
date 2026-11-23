@@ -317,8 +317,8 @@ def alterne(lang, slug):
             f'<link rel="alternate" hreflang="en" href="{url_pagina("en", slug)}">\n')
 
 
-NOMI_FONTE = {"it": {"wikidata": "Wikidata", "wikidata_altra": "Wikidata (altra data)", "gnd": "Biblioteca nazionale tedesca (GND)", "loc": "Library of Congress"},
-              "en": {"wikidata": "Wikidata", "wikidata_altra": "Wikidata (another date)", "gnd": "German National Library (GND)", "loc": "Library of Congress"}}
+NOMI_FONTE = {"it": {"wikidata": "Wikidata", "wikidata_altra": "Wikidata (altra data)", "gnd": "Biblioteca nazionale tedesca (GND)", "loc": "Library of Congress", "gutenberg": "Project Gutenberg"},
+              "en": {"wikidata": "Wikidata", "wikidata_altra": "Wikidata (another date)", "gnd": "German National Library (GND)", "loc": "Library of Congress", "gutenberg": "Project Gutenberg"}}
 
 NOMI_P = {"it": {"it": "in Italia", "fr": "in Francia", "de": "in Germania", "uk": "nel Regno Unito", "es": "in Spagna"},
           "en": {"it": "Italy", "fr": "France", "de": "Germany", "uk": "the UK", "es": "Spain"}}
@@ -508,7 +508,7 @@ RANGHI = {}   # (wikidata, misura) -> (posizione, totale): calcolati in main() c
 
 
 def calcola_ranghi(pacchetto):
-    lett = [x for x in pacchetto["autori"] if x.get("letterario") and not re.fullmatch(r"Q\d+", x["nome"])]
+    lett = [x for x in pacchetto["autori"] if x.get("letterario") and R.autore_con_nome(x.get("nome"))]
     for m, campo in (("it", "visite_it"), ("en", "visite_en"), ("int", "pagine_wikipedia")):
         ordine = sorted(lett, key=lambda x: (-(x.get("indice_" + m) if x.get("indice_" + m) is not None else -1), -(x.get(campo) or 0),
                                              -(x.get("pagine_wikipedia") or 0), x["nome"]))
@@ -719,7 +719,7 @@ def vincoli_radar():
     Così il radar non dice più «libera dal…» guardando solo l'autore (stesso errore della vetrina della home)."""
     out = {}
     for f in file_autori():
-        for a in (_leggi(f, {}) or {}).get("autori", []):
+        for a in R.lista_pubblica(_leggi(f, {}) or {}).get("autori", []):
             D = anno_di(a.get("morte"))
             if not D:
                 continue
@@ -1441,7 +1441,7 @@ def autori_in_vetrina(n=12):
     f = RADICE / "data" / f"{ANNO_PROSSIMO}.json"
     if not f.exists():
         return []
-    aut = [a for a in json.load(open(f, encoding="utf-8"))["autori"] if a.get("letterario") and a.get("pagina")]
+    aut = [a for a in leggi_lista(f)["autori"] if a.get("letterario") and a.get("pagina")]
     aut.sort(key=lambda a: -(a.get("indice_int") or a.get("indice") or 0))
     return aut[:n]
 
@@ -1534,6 +1534,11 @@ def crea_home_inglese():
     s = metti_statico(s, "en")
     (RADICE / "en" / "radar").mkdir(parents=True, exist_ok=True)
     (RADICE / "en" / "radar" / "index.html").write_text(s, encoding="utf-8")
+
+
+def leggi_lista(f):
+    """Una lista per anno come la mostrano le pagine: senza gli autori senza nome (regole.lista_pubblica, 23/11/2026)."""
+    return R.lista_pubblica(json.load(open(f, encoding="utf-8")))
 
 
 def file_autori():
@@ -2225,11 +2230,11 @@ def crea_landing():
     ver = liste_usa()   # registro unico (scripts/registro.py): le verifiche delle liste, per anno
     for f in sorted(glob.glob(str(RADICE / "data" / "[0-9][0-9][0-9][0-9].json"))):
         anno = int(Path(f).stem)
-        ue = json.load(open(f, encoding="utf-8"))
+        ue = leggi_lista(f)
         fus = RADICE / "data" / f"us-{anno}.json"
         us = json.load(open(fus, encoding="utf-8")) if fus.exists() else None
         fes = RADICE / "data" / f"es-{anno}.json"
-        es = json.load(open(fes, encoding="utf-8")) if fes.exists() else None
+        es = leggi_lista(fes) if fes.exists() else None
         for lang, d in (("en", RADICE / "en" / f"public-domain-{anno}"), ("it", RADICE / f"pubblico-dominio-{anno}")):
             html_, url = pagina_landing(anno, ue, us, lang, es, ver.get(str(anno)))
             d.mkdir(parents=True, exist_ok=True)
@@ -2244,7 +2249,7 @@ def main():
     (RADICE / "data" / "vincoli-opere.json").write_text(json.dumps(vincoli_radar(), ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     autori = {}
     for f in file_autori():
-        for a in json.load(open(f, encoding="utf-8"))["autori"]:
+        for a in leggi_lista(f)["autori"]:
             if abbastanza_contenuto(a):
                 autori.setdefault(a["wikidata"], a)
     # anno di morte deciso nel registro unico (data/registro/autori.json, regole.morte_dal_registro), come Già pubblici
@@ -2269,7 +2274,7 @@ def main():
             slug_di[a_["wikidata"]] = s_ if len(gruppo) == 1 else f"{s_}-{a_['wikidata'].lower()}"
     en_ok = {q for q, a in autori.items() if abbastanza_contenuto(a, "en")}
     for f in file_autori():
-        calcola_ranghi(json.load(open(f, encoding="utf-8")))
+        calcola_ranghi(leggi_lista(f))
 
     AUT.update(autori)
     SLUG.update(slug_di)
@@ -2277,7 +2282,7 @@ def main():
     for f in file_autori():
         st = Path(f).stem
         tipo, anno_f = ("es", int(st[3:])) if st.startswith("es-") else ("ue", int(st))
-        for a_ in json.load(open(f, encoding="utf-8"))["autori"]:
+        for a_ in leggi_lista(f)["autori"]:
             q = a_["wikidata"]
             if q not in slug_di:
                 continue
@@ -2333,7 +2338,7 @@ def main():
 
     # il sito usa il nome nell'indirizzo della scheda e linka la pagina dedicata: serve sapere quale autore ne ha una
     for f in file_autori():
-        pacchetto = json.load(open(f, encoding="utf-8"))
+        pacchetto = json.load(open(f, encoding="utf-8"))   # qui si riscrive il file: tutti gli autori, anche senza nome
         for a_ in pacchetto["autori"]:
             q = a_["wikidata"]
             if q in FUORI_CLASSIFICA:

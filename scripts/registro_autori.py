@@ -78,6 +78,15 @@ def a_pezzi(funzione, qids, passo):
     return out, ok
 
 
+def aggiungi_fonti(fv, aggiunte):
+    """Fonti trovate a mano (data/verifiche_manuali.json, «fonti_aggiunte», 23/11/2026): entrano nel confronto accanto a
+    Wikidata, GND e LoC, ma non decidono da sole. Un anno diverso rende l'esito «discorde» (scheda «da verificare»)."""
+    for x in aggiunte or []:
+        if isinstance(x.get("morte"), int):
+            fv[x.get("chiave") or "a_mano"] = x["morte"]
+    return fv
+
+
 def main():
     inizio = time.time()
     oggi = date.today()
@@ -123,9 +132,10 @@ def main():
     print("letture nuove dalle biblioteche:", letti, "| tempo finito:" if esaurito else "", flush=True)
 
     try:
-        manuali = json.load(open(R / "data" / "verifiche_manuali.json", encoding="utf-8"))["autori"]
+        vm = json.load(open(R / "data" / "verifiche_manuali.json", encoding="utf-8"))
+        manuali, aggiunte = vm["autori"], vm.get("fonti_aggiunte", {})
     except Exception:
-        manuali = {}
+        manuali, aggiunte = {}, {}
     out, attesa = {}, 0
     for q in qids:
         wd_anni = sorted(anni.get(q, set()))
@@ -149,6 +159,7 @@ def main():
                 manca = True
             elif v.get("morte"):
                 fv[nf] = v["morte"]
+        aggiungi_fonti(fv, aggiunte.get(q))
         citate = cit.get(q, {})
         m = manuali.get(q)
         if m:

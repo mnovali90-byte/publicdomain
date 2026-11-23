@@ -31,6 +31,7 @@
 | 15-30 | Miklós Vitéz (Q31190440), Roman Mohytych (Q12124024), Juan Abando Urrejola (Q12260932), Minnie E. Bond (Q115015736), Matti Lilja (Q17382212), Ana Maria (Q123857200), Mukhtar Shavlokhov (Q112085467), Q20483877 (senza nome in Wikidata), Ibrantina Cardona (Q136736462), Géza Buday (Q851311), Béla Arató (Q117252748), Lajos Jámbor poeta (Q1102368), T. E. Grattan-Smith (Q64685269), Bronius Stosiūnas (Q16446222), Muḥammad ʻAlī Unsī (Q108616921), Sabri Andrea (Q111098197) | — | — | non trovato | nessuna fonte con l'anno di morte. Per Jámbor esce solo un omonimo (pittore, 1884-1954) |
 
 ## Cosa significa
+- **Decisione di Marco (23/11/2026):** il campione è inconcludente, non «0 sbagliati». I 395 non si controllano a mano: si fa un confronto automatico con Open Library e Project Gutenberg (scripts/confronta_una_fonte.py).
 - **Per la regola decisa prima:** 0 sbagliati, quindi si controllano solo i più noti e quelli vicini al confine.
 - **Il campione però dice poco:** 16 autori su 30 non si trovano nemmeno, e 8 hanno una fonte sola. Lo «0 sbagliati» viene quasi tutto da opere che non si possono verificare, non da conferme.
 - **Davis è proprio un caso di confine:** se è morto nel 1956 e non nel 1946, non è libero in Spagna nel 2027 (lista es-2027 sbagliata) ma lo è in Europa nel 2027. Serve una seconda fonte (Library of Congress n91100021, VIAF 63191932).

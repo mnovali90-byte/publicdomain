@@ -1346,3 +1346,22 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
   - 16 non trovati.
 - **Giudizio:** per la regola decisa prima vale «0 sbagliati». Però con 16 non trovati il campione non può escludere errori, e il caso Davis tocca proprio il confine tra la lista spagnola e quella europea.
 - **Nel sito:** niente cambiato.
+
+## 23/11/2026 — Davis «discorde», autori senza nome fuori dalle liste pubbliche, controllo automatico preparato
+- **Campione dei 30 autori:** l'esito è inconcludente (decisione di Marco), non «0 sbagliati»: 16 su 30 non sono verificabili. I 395 non si controllano a mano.
+- **Davis (Q87470685):**
+  - nuova parte «fonti_aggiunte» in data/verifiche_manuali.json, con Project Gutenberg 1882-1956 e il link. Queste fonti entrano nel confronto ma non decidono l'anno;
+  - lo script scripts/registro_autori.py le legge (aggiungi_fonti); l'esito ora è «discorde»;
+  - scripts/applica_registro_liste.py scrive nella lista la nota «da verificare» per gli autori «discorde» del registro, se la lista non l'ha già;
+  - regole.morte_dal_registro: Gutenberg, che è una fonte debole, non conta per dire «sul confine», come già succedeva per le fonti citate.
+- **Autori senza nome:**
+  - regola in scripts/regole.py (autore_con_nome, lista_pubblica) con la gemella autoreConNome nel browser. Le usano il radar, le pagine dell'anno, le schede e la home; i file data/*.json restano completi;
+  - quanti sono: 45 in tutto (2027: 2, 2028: 19, es-2027: 14, es-2028: 10). Di questi, 25 sono letterari con una data e quindi cambiano i conteggi (1, 11, 8, 5);
+  - la prova 1 ora confronta anche la regola dei nomi (Python e browser).
+- **Errore trovato e corretto durante la prova:** un primo tentativo toglieva gli autori senza nome anche dai file dei dati, perché scripts/pagine.py riscrive le liste. Ora la riscrittura legge il file completo.
+- **Controllo automatico preparato, non lanciato:**
+  - script scripts/confronta_una_fonte.py e giro .github/workflows/confronto-una-fonte.yml, che parte cambiando docs/registro/passo-confronto.txt;
+  - confronta gli autori con Open Library e Project Gutenberg, abbinati con i codici Wikidata P648 e P1938.
+- **Esito:**
+  - prove 1-8 a 0 (prova 1: 36.937 confronti);
+  - fotografia 0 cambi: la fotografia legge i file dei dati, che non cambiano.

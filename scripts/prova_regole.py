@@ -31,13 +31,15 @@ for f in sorted(glob.glob(str(RADICE / "data" / "[0-9]*.json")) + glob.glob(str(
         if m:
             autori.append({"q": a["wikidata"], "n": a.get("nome"), "m": int(m.group(0)), "p": a.get("paesi") or [], "f": Path(f).name})
 
-casi = {"morti": list(range(-500, 2031)), "anni": list(range(1900, 2101)), "autori": autori, "oggi": OGGI}
+NOMI_PROVA = [{"n": x} for x in ("Q20483877", " Q1 ", "", None, "Q", "q12", "Maria Q1", "Q12 bis", " Ana Maria ")]
+casi = {"nomi": NOMI_PROVA, "morti": list(range(-500, 2031)), "anni": list(range(1900, 2101)), "autori": autori, "oggi": OGGI}
 js = (RADICE / "assets" / "regole.js").read_text(encoding="utf-8")
 CORPO = r"""
 const REGOLE_PAESI = window.REGOLE_PAESI;
 const paeseModerno = (nome) => PAESE_MODERNO.get(norm(nome)) || nome;
 const C = JSON.parse(require("fs").readFileSync(process.argv[2], "utf8"));
-const out = { al: [], mo: [], usa: [], ver: [] };
+const out = { al: [], mo: [], usa: [], ver: [], nome: [] };
+for (const a of C.autori.concat(C.nomi)) out.nome.push(REGOLE_PAESI.autoreConNome(a.n));
 for (const m of C.morti) for (const p of ["it", "fr", "de", "uk", "es"]) for (const f of [false, true]) out.al.push(REGOLE_PAESI.annoLibero(m, p, f));
 for (const y of C.anni) { for (const p of ["it", "es"]) out.mo.push(REGOLE_PAESI.mortiLiberiNel(y, p)); out.usa.push(REGOLE_PAESI.annoLiberoUsa(y), REGOLE_PAESI.pubblicateLibereUsaNel(y)); }
 for (const a of C.autori) out.ver.push(REGOLE_PAESI.notaTrattato(a.p, a.m, C.oggi));   // il radar usa a.paesiWd: i nomi di Wikidata
@@ -53,7 +55,8 @@ with tempfile.TemporaryDirectory() as d:
 py = {"al": [R.anno_libero(m, p, f) for m in casi["morti"] for p in ("it", "fr", "de", "uk", "es") for f in (False, True)],
       "mo": [R.morti_liberi_nel(y, p) for y in casi["anni"] for p in ("it", "es")],
       "usa": [x for y in casi["anni"] for x in (R.anno_libero_usa(y), R.pubblicate_libere_usa_nel(y))],
-      "ver": [R.nota_trattato(a["p"], a["m"], OGGI) for a in autori]}
+      "ver": [R.nota_trattato(a["p"], a["m"], OGGI) for a in autori],
+      "nome": [R.autore_con_nome(a["n"]) for a in autori + NOMI_PROVA]}
 for k in py:
     diff = [i for i, (x, y) in enumerate(zip(py[k], res[k])) if x != y]
     if len(py[k]) != len(res[k]) or diff:

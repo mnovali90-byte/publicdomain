@@ -1,0 +1,37 @@
+name: Confronto autori «una fonte» 2027 con Open Library e Gutenberg (non cambia il sito)
+
+# Parte solo cambiando docs/registro/passo-confronto.txt, con l'ok di Marco (23/11/2026).
+# Scrive solo il rapporto: docs/registro/confronto-una-fonte-2027.md e data/registro/confronto_una_fonte.json.
+on:
+  push:
+    paths:
+      - "docs/registro/passo-confronto.txt"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: confronto-una-fonte
+  cancel-in-progress: false
+
+jobs:
+  confronto:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Anni di morte da Open Library e Project Gutenberg (codici da Wikidata)
+        env:
+          BUDGET_MINUTI: "30"
+        run: python scripts/confronta_una_fonte.py
+      - name: Salva solo il rapporto
+        if: ${{ !cancelled() }}
+        run: |
+          git add docs/registro/confronto-una-fonte-2027.md data/registro/confronto_una_fonte.json 2>/dev/null || true
+          bash scripts/salva.sh "Confronto autori una fonte 2027: rapporto"

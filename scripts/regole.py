@@ -81,7 +81,9 @@ def morte_dal_registro(qid, morte, registro, anno_ue):
         return v["m"], 0
     # contano Wikidata e le fonti autorevoli, non le fonti deboli (Project Gutenberg, IMDb...)
     cit = {k: y for k, y in (v.get("c") or {}).items() if AUTOREVOLI.get(k) or (AUTOREVOLI_RE.search(k) and not NON_AUTOREVOLI_RE.search(k))}
-    anni = [y for y in list((v.get("f") or {}).values()) + list(cit.values()) if isinstance(y, int)]
+    # anche tra le fonti lette: Wikidata e le biblioteche, non le fonti deboli aggiunte a mano (Project Gutenberg, 23/11/2026)
+    lette = {k: y for k, y in (v.get("f") or {}).items() if k in ("wikidata", "wikidata_altra") or AUTOREVOLI.get(k)}
+    anni = [y for y in list(lette.values()) + list(cit.values()) if isinstance(y, int)]
     sul_confine = anni and min(anni) <= anno_ue < max(anni)
     return v["m"], 2 if sul_confine else 1
 
@@ -594,10 +596,26 @@ window.REGOLE_PAESI = (() => {
     if (c === "fr" && au.some((a) => !a.an && a.m >= C.FR_GUERRA[0] && a.m <= C.FR_GUERRA[1] && annoLibero(a.m, "fr", true) > Y)) note.push("sFr");
     return { s: "si", note, r: note.includes("sUk2039") ? "uk_2039" : "morte" };
   };
-  return Object.assign({}, C, { anniProtezione, annoLibero, mortiLiberiNel, annoLiberoUsa, pubblicateLibereUsaNel, paesiAlleati,
+  const autoreConNome = (nome) => typeof nome === "string" && nome.trim() !== "" && !/^Q\d+$/.test(nome.trim());
+  return Object.assign({}, C, { autoreConNome, anniProtezione, annoLibero, mortiLiberiNel, annoLiberoUsa, pubblicateLibereUsaNel, paesiAlleati,
     notaTrattatoFlag, notaTrattato, statoOpera, liberaUeOpera, annoOperaCredibile, annoDeciso, faseSito });
 })();
 """
+
+
+def autore_con_nome(nome):
+    """REGOLA (Marco, 23/11/2026): un autore senza nome (in Wikidata solo il codice, es. «Q20483877») non compare nelle
+    liste pubbliche; resta nei dati. Gemella: autoreConNome in assets/regole.js."""
+    return isinstance(nome, str) and bool(nome.strip()) and not re.fullmatch(r"Q\d+", nome.strip())
+
+
+def lista_pubblica(pacchetto):
+    """Il file di una lista (data/AAAA.json, data/es-AAAA.json) come lo mostrano le pagine: senza gli autori senza nome."""
+    d = dict(pacchetto or {})
+    d["autori"] = [a for a in d.get("autori", []) if autore_con_nome(a.get("nome"))]
+    if "totale" in d:
+        d["totale"] = len(d["autori"])
+    return d
 
 
 def esporta_js(percorso):

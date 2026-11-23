@@ -71,12 +71,12 @@ def elenco_paesi(paesi, lang):
 
 
 def pagine_frontespizio(anno):
-    ue = _leggi(RADICE / "data" / f"{anno}.json", {}) or {}
+    ue = R.lista_pubblica(_leggi(RADICE / "data" / f"{anno}.json", {}) or {})
     us = _leggi(RADICE / "data" / f"us-{anno}.json", {}) or {}
     ver = (_leggi(RADICE / "data" / "us-anni-verificati.json", {}) or {}).get(str(anno), {})
     pub = us.get("anno_pubblicazione")
     autori = {a["wikidata"]: a for a in ue.get("autori", [])}
-    autori_es = {a["wikidata"] for a in (_leggi(RADICE / "data" / f"es-{anno}.json", {}) or {}).get("autori", [])}
+    autori_es = {a["wikidata"] for a in R.lista_pubblica(_leggi(RADICE / "data" / f"es-{anno}.json", {}) or {}).get("autori", [])}
     opere_us = {o["qid"]: o for o in us.get("opere", [])}
 
     def us_ok(q):
@@ -122,8 +122,8 @@ def pagine_frontespizio(anno):
 
 
 def numeri(anno):
-    ue = _leggi(RADICE / "data" / f"{anno}.json", {}) or {}
-    es = _leggi(RADICE / "data" / f"es-{anno}.json", {}) or {}
+    ue = R.lista_pubblica(_leggi(RADICE / "data" / f"{anno}.json", {}) or {})
+    es = R.lista_pubblica(_leggi(RADICE / "data" / f"es-{anno}.json", {}) or {})
     us = _leggi(RADICE / "data" / f"us-{anno}.json", {}) or {}
     ver = (_leggi(RADICE / "data" / "us-anni-verificati.json", {}) or {}).get(str(anno), {})
     n = lambda d: sum(1 for a in d.get("autori", []) if a.get("letterario") and a.get("morte"))   # come le pagine dell'anno
