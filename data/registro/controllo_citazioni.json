@@ -40,8 +40,8 @@
    "qid": "Q1152214",
    "titolo": "The Whisperer in Darkness",
    "link": "https://repository.library.brown.edu/studio/item/bdr:735746/",
-   "esito": "non trovata",
-   "motivo": "html"
+   "esito": "non verificabile in automatico",
+   "motivo": "pagina di verifica anti-bot"
   },
   "6": {
    "qid": "Q1152214",
@@ -60,9 +60,9 @@
   "8": {
    "qid": "Q571244",
    "titolo": "The Sittaford Mystery",
-   "link": "https://deliciousdeath.com/14\\index14.html",
-   "esito": "non trovata",
-   "motivo": "html"
+   "link": "https://deliciousdeath.com/14/index14.html",
+   "esito": "trovata",
+   "motivo": "html, ignorando spazi e punteggiatura"
   },
   "9": {
    "qid": "Q1212765",
@@ -75,8 +75,8 @@
    "qid": "Q1212765",
    "titolo": "Sanctuary",
    "link": "https://nobelprize.org/prizes/literature/1949/faulkner/bibliography",
-   "esito": "non trovata",
-   "motivo": "html"
+   "esito": "trovata",
+   "motivo": "html, ignorando spazi e punteggiatura"
   },
   "11": {
    "qid": "Q2917079",
@@ -111,7 +111,7 @@
    "titolo": "The Solar Anus",
    "link": "https://catalogue.bnf.fr/ark:/12148/cb357449356",
    "esito": "non verificabile in automatico",
-   "motivo": "The read operation timed out"
+   "motivo": "HTTP Error 503: Service Unavailable"
   },
   "16": {
    "qid": "Q7765142",
@@ -124,15 +124,15 @@
    "qid": "Q887062",
    "titolo": "Will O' the Wisp",
    "link": "https://www.universalis.fr/encyclopedie/pierre-drieu-la-rochelle/4-bibliographie/",
-   "esito": "non trovata",
-   "motivo": "html"
+   "esito": "non verificabile in automatico",
+   "motivo": "la pagina scaricata non mostra il testo della scheda (lo carica dopo)"
   },
   "18": {
    "qid": "Q887062",
    "titolo": "Will O' the Wisp",
    "link": "https://fr.wikisource.org/wiki/Auteur:Pierre_Drieu_La_Rochelle",
-   "esito": "non trovata",
-   "motivo": "html"
+   "esito": "trovata",
+   "motivo": "html, ignorando spazi e punteggiatura"
   },
   "19": {
    "qid": "Q1216006",
@@ -146,7 +146,7 @@
    "titolo": "The Sleepwalkers",
    "link": "https://is.muni.cz/el/phil/jaro2016/NJI_20/um/61954987/56639148/Broch.pdf?lang=en",
    "esito": "non verificabile in automatico",
-   "motivo": "<urlopen error timed out>"
+   "motivo": "pagina quasi vuota (il sito blocca o carica il testo dopo)"
   },
   "21": {
    "qid": "Q1216006",
@@ -160,7 +160,7 @@
    "titolo": "The Sleepwalkers",
    "link": "https://is.muni.cz/el/phil/jaro2016/NJI_20/um/61954987/56639148/Broch.pdf?lang=en",
    "esito": "non verificabile in automatico",
-   "motivo": "<urlopen error timed out>"
+   "motivo": "pagina quasi vuota (il sito blocca o carica il testo dopo)"
   },
   "23": {
    "qid": "Q1216006",
@@ -174,7 +174,7 @@
    "titolo": "The Sleepwalkers",
    "link": "https://is.muni.cz/el/phil/jaro2016/NJI_20/um/61954987/56639148/Broch.pdf?lang=en",
    "esito": "non verificabile in automatico",
-   "motivo": "<urlopen error timed out>"
+   "motivo": "pagina quasi vuota (il sito blocca o carica il testo dopo)"
   },
   "25": {
    "qid": "Q1070729",
@@ -187,8 +187,8 @@
    "qid": "Q1070729",
    "titolo": "Night Flight",
    "link": "https://e.lavoisier.fr/extract/523291",
-   "esito": "non trovata",
-   "motivo": "html"
+   "esito": "non verificabile in automatico",
+   "motivo": "la pagina scaricata non mostra il testo della scheda (lo carica dopo)"
   },
   "27": {
    "qid": "Q2564588",
@@ -236,8 +236,8 @@
    "qid": "Q5990586",
    "titolo": "If It Had Happened Otherwise",
    "link": "https://sf-encyclopedia.com/entry/squire_j_c",
-   "esito": "non trovata",
-   "motivo": "html"
+   "esito": "trovata",
+   "motivo": "html, ignorando spazi e punteggiatura"
   },
   "34": {
    "qid": "Q8039491",
@@ -257,8 +257,8 @@
    "qid": "Q265042",
    "titolo": "The Floating Admiral",
    "link": "https://fantlab.ru/edition396652",
-   "esito": "non trovata",
-   "motivo": "html"
+   "esito": "trovata",
+   "motivo": "html, ignorando spazi e punteggiatura"
   },
   "37": {
    "qid": "Q265042",
@@ -271,7 +271,7 @@
    "qid": "Q3228173",
    "titolo": "The Face in the Abyss",
    "link": "https://sf-encyclopedia.com/entry/merritt_a",
-   "esito": "non trovata",
+   "esito": "trovata",
    "motivo": "html"
   },
   "39": {
@@ -313,8 +313,8 @@
    "qid": "Q3210396",
    "titolo": "Police at the Funeral",
    "link": "https://openlibrary.org/books/OL6769579M",
-   "esito": "trovata",
-   "motivo": "html"
+   "esito": "non verificabile in automatico",
+   "motivo": "<urlopen error [Errno 104] Connection reset by peer>"
   },
   "45": {
    "qid": "Q2498251",
@@ -334,8 +334,8 @@
    "qid": "Q3881234",
    "titolo": "All Passion Spent",
    "link": "https://openlibrary.org/books/OL17838614M/All_passion_spent",
-   "esito": "non verificabile in automatico",
-   "motivo": "<urlopen error [Errno 104] Connection reset by peer>"
+   "esito": "trovata",
+   "motivo": "html"
   },
   "48": {
    "qid": "Q3881234",
@@ -404,8 +404,8 @@
    "qid": "Q2836696",
    "titolo": "The Secret at Shadow Ranch",
    "link": "https://catalog.princeton.edu/catalog/9995047563506421",
-   "esito": "non trovata",
-   "motivo": "html"
+   "esito": "non verificabile in automatico",
+   "motivo": "pagina di verifica anti-bot"
   },
   "58": {
    "qid": "Q7460836",
@@ -439,29 +439,29 @@
    "qid": "Q573765",
    "titolo": "Fabian",
    "link": "https://www.deutsche-digitale-bibliothek.de/item/BSWRAGL3W6VHW3YHCWYL6KCMXC34ODQ4",
-   "esito": "non trovata",
-   "motivo": "html"
+   "esito": "non verificabile in automatico",
+   "motivo": "pagina di verifica anti-bot"
   },
   "63": {
    "qid": "Q573765",
    "titolo": "Fabian",
    "link": "https://www.deutsche-digitale-bibliothek.de/item/3VQ5NNEKX2G6QMDABLVP3A7LY2QFXFTM?lang=en",
-   "esito": "non trovata",
-   "motivo": "html"
+   "esito": "non verificabile in automatico",
+   "motivo": "pagina di verifica anti-bot"
   },
   "64": {
    "qid": "Q3506429",
    "titolo": "Swallowdale",
    "link": "https://allthingsransome.net/literary/archildrensbooks/SDfirst.htm",
-   "esito": "trovata",
-   "motivo": "html"
+   "esito": "non verificabile in automatico",
+   "motivo": "<urlopen error timed out>"
   },
   "65": {
    "qid": "Q3506429",
    "titolo": "Swallowdale",
    "link": "https://vufind.lboro.ac.uk/Record/149726/Similar",
-   "esito": "non trovata",
-   "motivo": "html"
+   "esito": "non verificabile in automatico",
+   "motivo": "pagina di verifica anti-bot"
   },
   "66": {
    "qid": "Q119144545",
@@ -481,8 +481,8 @@
    "qid": "Q2836721",
    "titolo": "The Secret of Red Gate Farm",
    "link": "https://openlibrary.org/books/OL1115425M?v=9",
-   "esito": "non verificabile in automatico",
-   "motivo": "<urlopen error [Errno 104] Connection reset by peer>"
+   "esito": "trovata",
+   "motivo": "html"
   },
   "69": {
    "qid": "Q2836721",
@@ -496,28 +496,28 @@
    "titolo": "Coup d'État: The Technique of Revolution",
    "link": "https://catalogue.bnf.fr/ark:/12148/cb469963705",
    "esito": "non verificabile in automatico",
-   "motivo": "<urlopen error [Errno 104] Connection reset by peer>"
+   "motivo": "HTTP Error 503: Service Unavailable"
   },
   "71": {
    "qid": "Q43578331",
    "titolo": "Coup d'État: The Technique of Revolution",
    "link": "https://www.universalis.fr/encyclopedie/curzio-malaparte/3-le-choix-de-la-france/",
-   "esito": "non trovata",
-   "motivo": "html"
+   "esito": "non verificabile in automatico",
+   "motivo": "la pagina scaricata non mostra il testo della scheda (lo carica dopo)"
   },
   "72": {
    "qid": "Q7252252",
    "titolo": "Proust",
    "link": "https://web.marshlibrary.ie/catalogue/Record/BI27694",
-   "esito": "non trovata",
-   "motivo": "html"
+   "esito": "non verificabile in automatico",
+   "motivo": "pagina di verifica anti-bot"
   },
   "73": {
    "qid": "Q7252252",
    "titolo": "Proust",
    "link": "https://www.taylorfrancis.com/books/9781317175902/chapters/10.4324/9781315568812-8",
-   "esito": "non trovata",
-   "motivo": "html"
+   "esito": "non verificabile in automatico",
+   "motivo": "la pagina scaricata non mostra il testo della scheda (lo carica dopo)"
   },
   "74": {
    "qid": "Q7252252",
@@ -537,15 +537,15 @@
    "qid": "Q1885291",
    "titolo": "The Strange Case of Peter the Lett",
    "link": "https://openlibrary.org/books/OL6767972M",
-   "esito": "non verificabile in automatico",
-   "motivo": "<urlopen error [Errno 104] Connection reset by peer>"
+   "esito": "trovata",
+   "motivo": "html"
   },
   "77": {
    "qid": "Q1214380",
    "titolo": "The last one at the scaffold",
    "link": "https://openlibrary.org/works/OL1386161W",
-   "esito": "non verificabile in automatico",
-   "motivo": "<urlopen error [Errno 104] Connection reset by peer>"
+   "esito": "trovata",
+   "motivo": "html"
   },
   "78": {
    "qid": "Q1214380",
@@ -559,7 +559,7 @@
    "titolo": "Back Street",
    "link": "https://onlinebooks.library.upenn.edu/webbin/cinfo/cosmopolitan",
    "esito": "non trovata",
-   "motivo": "html"
+   "motivo": "html: le parole ci sono, la frase esatta no"
   },
   "80": {
    "qid": "Q1306780",
@@ -572,8 +572,8 @@
    "qid": "Q1306780",
    "titolo": "The Great Wall of China",
    "link": "https://www.dlib.si/stream/URN:NBN:SI:DOC-MCAGZRQM/6c4fe293-2b00-434e-85a0-e4d1530380e0/PDF",
-   "esito": "non trovata",
-   "motivo": "html"
+   "esito": "non verificabile in automatico",
+   "motivo": "la pagina scaricata non mostra il testo della scheda (lo carica dopo)"
   },
   "82": {
    "qid": "Q3981235",
@@ -614,8 +614,8 @@
    "qid": "Q3109849",
    "titolo": "Gog",
    "link": "https://dbnl.org/tekst/_die004193101_01/_die004193101_01_0044.php",
-   "esito": "non verificabile in automatico",
-   "motivo": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1011)>"
+   "esito": "trovata",
+   "motivo": "html"
   },
   "88": {
    "qid": "Q3109849",
@@ -637,6 +637,349 @@
    "link": "https://www.scielo.org.mx/pdf/latinoam/n52/n52a3.pdf",
    "esito": "trovata",
    "motivo": "pdf"
+  },
+  "91": {
+   "qid": "Q7718449",
+   "titolo": "The Black Stone",
+   "link": "https://mail.gutenberg.net.au/ebooks06/0601711h.html",
+   "esito": "trovata",
+   "motivo": "html, ignorando spazi e punteggiatura"
+  },
+  "92": {
+   "qid": "Q7718449",
+   "titolo": "The Black Stone",
+   "link": "https://reh.world/?p=11756",
+   "esito": "non trovata",
+   "motivo": "html: le parole ci sono, la frase esatta no"
+  },
+  "93": {
+   "qid": "Q7766907",
+   "titolo": "The Strange High House in the Mist",
+   "link": "https://authorwars.com/publications/weird-tales-october-1931-62118.html",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "94": {
+   "qid": "Q7766907",
+   "titolo": "The Strange High House in the Mist",
+   "link": "https://reactormag.com/shriveling-of-old-fears-the-strange-high-house-in-the-mist/",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "95": {
+   "qid": "Q7722509",
+   "titolo": "The Children of the Night",
+   "link": "https://howardworks.com/weirdtalesV17N3-April1931.html",
+   "esito": "non verificabile in automatico",
+   "motivo": "HTTP Error 403: Forbidden"
+  },
+  "96": {
+   "qid": "Q7722509",
+   "titolo": "The Children of the Night",
+   "link": "https://nobanners.classicistranieri.com/au/ebooks06/0607961h.html",
+   "esito": "non verificabile in automatico",
+   "motivo": "HTTP Error 404: Not Found"
+  },
+  "97": {
+   "qid": "Q7767973",
+   "titolo": "The Tale of Satampra Zeiros",
+   "link": "https://fantlab.ru/work46213",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "98": {
+   "qid": "Q7767973",
+   "titolo": "The Tale of Satampra Zeiros",
+   "link": "https://authorwars.com/books/the-tale-of-satampra-zeiros-62555.html",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "99": {
+   "qid": "Q7760465",
+   "titolo": "The Return of the Sorcerer",
+   "link": "https://archive.org/details/StrangeTalesV01N01193109",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "100": {
+   "qid": "Q7760465",
+   "titolo": "The Return of the Sorcerer",
+   "link": "https://fantlab.ru/work46211",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "101": {
+   "qid": "Q7760465",
+   "titolo": "The Return of the Sorcerer",
+   "link": "https://reactormag.com/translating-the-necronomicon-may-be-hazardous-to-your-health-clark-ashton-smiths-the-return-of-the-sorcerer/",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "102": {
+   "qid": "Q1306780",
+   "titolo": "The Great Wall of China",
+   "link": "https://digital.dla-marbach.de/viewer/fullscreen/BF00043387/62",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "103": {
+   "qid": "Q1306780",
+   "titolo": "The Great Wall of China",
+   "link": "https://www.franzkafka.de/werk/saemtliche-titel/das-ehepaar",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "104": {
+   "qid": "Q11247830",
+   "titolo": "Tales from the Vienna Woods",
+   "link": "https://webarchiv.onb.ac.at/web/20160803104606/http://www.onb.ac.at/images/Literaturarchiv/vw_bd3_gww.pdf",
+   "esito": "non verificabile in automatico",
+   "motivo": "<urlopen error timed out>"
+  },
+  "105": {
+   "qid": "Q1696432",
+   "titolo": "Castle Gripsholm",
+   "link": "https://www.tagesspiegel.de/berlin/kennzeichen-liebe-1994395.html",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "106": {
+   "qid": "Q1696432",
+   "titolo": "Castle Gripsholm",
+   "link": "https://service.penguinrandomhouse.de/leseprobe/Kurt-Tucholsky-Schloss-Gripsholm-Eine-Sommergeschichte-Schmuckausgabe-mit-Goldpraegung/leseprobe_9783730613320.pdf",
+   "esito": "non verificabile in automatico",
+   "motivo": "la pagina scaricata non mostra il testo della scheda (lo carica dopo)"
+  },
+  "107": {
+   "qid": "Q1696432",
+   "titolo": "Castle Gripsholm",
+   "link": "https://www.dla-marbach.de/en/catalogue/find/opac/id/AK00702444/",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "108": {
+   "qid": "Q1885266",
+   "titolo": "The Hanged Man of Saint-Pholien",
+   "link": "https://cdn.penguin.co.uk/dam-assets/books/9780141393452/9780141393452-sample.pdf",
+   "esito": "trovata",
+   "motivo": "pdf"
+  },
+  "109": {
+   "qid": "Q1885266",
+   "titolo": "The Hanged Man of Saint-Pholien",
+   "link": "https://ci.nii.ac.jp/ncid/BA7271870X?l=en",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "110": {
+   "qid": "Q25091412",
+   "titolo": "The Earth Gods",
+   "link": "https://archive.org/download/cu31924010302143/cu31924010302143.pdf",
+   "esito": "non verificabile in automatico",
+   "motivo": "<urlopen error _ssl.c:994: The handshake operation timed out>"
+  },
+  "111": {
+   "qid": "Q25091412",
+   "titolo": "The Earth Gods",
+   "link": "https://onlinebooks.library.upenn.edu/webbin/who/Gibran%2c%20Kahlil%2c%201883%2d1931",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "112": {
+   "qid": "Q7727380",
+   "titolo": "The Conqueror",
+   "link": "https://www.goodreads.com/author_blog_posts/20145400-the-conqueror-a-deep-dive-into-history",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "113": {
+   "qid": "Q7727380",
+   "titolo": "The Conqueror",
+   "link": "https://heyersociety.com/?p=6742",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "114": {
+   "qid": "Q6770866",
+   "titolo": "Markéta Lazarová",
+   "link": "https://edicee.ucl.cas.cz/images/data/sborniky/2000/NKV/12.pdf",
+   "esito": "non verificabile in automatico",
+   "motivo": "la pagina scaricata non mostra il testo della scheda (lo carica dopo)"
+  },
+  "115": {
+   "qid": "Q6770866",
+   "titolo": "Markéta Lazarová",
+   "link": "https://www.criterion.com/current/posts/2810",
+   "esito": "non verificabile in automatico",
+   "motivo": "HTTP Error 403: Forbidden"
+  },
+  "a:Q156999:0": {
+   "qid": "Q156999",
+   "titolo": "Lucien Febvre, anno di morte",
+   "link": "https://www.britannica.com/print/article/203280",
+   "esito": "non verificabile in automatico",
+   "motivo": "HTTP Error 403: Forbidden"
+  },
+  "a:Q156999:1": {
+   "qid": "Q156999",
+   "titolo": "Lucien Febvre, anno di morte",
+   "link": "https://www.college-de-france.fr/fr/personne/lucien-febvre",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "a:Q1316061:0": {
+   "qid": "Q1316061",
+   "titolo": "George Sarton, anno di morte",
+   "link": "https://www.britannica.com/biography/George-Alfred-Leon-Sarton/article-bibliography",
+   "esito": "non verificabile in automatico",
+   "motivo": "HTTP Error 403: Forbidden"
+  },
+  "a:Q1316061:1": {
+   "qid": "Q1316061",
+   "titolo": "George Sarton, anno di morte",
+   "link": "https://www.bmj.com/content/1/4971/865.1.full.pdf",
+   "esito": "non verificabile in automatico",
+   "motivo": "HTTP Error 403: Forbidden"
+  },
+  "a:Q1130486:0": {
+   "qid": "Q1130486",
+   "titolo": "Piero Calamandrei, anno di morte",
+   "link": "https://www.unifi.it/en/node/12438",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "a:Q1130486:1": {
+   "qid": "Q1130486",
+   "titolo": "Piero Calamandrei, anno di morte",
+   "link": "https://cultura.comune.fi.it/system/files/2019-01/Piero_Calamandrei_maximum-compressed.pdf",
+   "esito": "trovata",
+   "motivo": "pdf"
+  },
+  "a:Q9317:0": {
+   "qid": "Q9317",
+   "titolo": "John Maynard Keynes, anno di morte",
+   "link": "https://britannica.com/summary/John-Maynard-Keynes",
+   "esito": "non verificabile in automatico",
+   "motivo": "HTTP Error 403: Forbidden"
+  },
+  "a:Q9317:1": {
+   "qid": "Q9317",
+   "titolo": "John Maynard Keynes, anno di morte",
+   "link": "https://snl.no/John_Maynard_Keynes",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "a:Q29031:0": {
+   "qid": "Q29031",
+   "titolo": "Charles Oman, anno di morte",
+   "link": "https://www.napoleon.org/en/magazine/napoleonic-pleasures/a-history-of-the-peninsular-war-by-sir-charles-oman/",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "a:Q29031:1": {
+   "qid": "Q29031",
+   "titolo": "Charles Oman, anno di morte",
+   "link": "https://dichp.bnportugal.gov.pt/imagens/oman.pdf",
+   "esito": "trovata",
+   "motivo": "pdf"
+  },
+  "a:Q77521:0": {
+   "qid": "Q77521",
+   "titolo": "Karl Groos, anno di morte",
+   "link": "https://www.deutsche-biographie.de/116865865.html",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "a:Q77521:1": {
+   "qid": "Q77521",
+   "titolo": "Karl Groos, anno di morte",
+   "link": "https://www.spektrum.de/lexikon/psychologie/groos/6076",
+   "esito": "non verificabile in automatico",
+   "motivo": "HTTP Error 403: Forbidden"
+  },
+  "a:Q730889:0": {
+   "qid": "Q730889",
+   "titolo": "Gaetano Salvemini, anno di morte",
+   "link": "https://booksite.ru/FullText/1/001/008/099/084.htm",
+   "esito": "non verificabile in automatico",
+   "motivo": "la pagina scaricata non mostra il testo della scheda (lo carica dopo)"
+  },
+  "a:Q730889:1": {
+   "qid": "Q730889",
+   "titolo": "Gaetano Salvemini, anno di morte",
+   "link": "https://www.dcuci.univr.it/documenti/OccorrenzaIns/matdid/matdid389522.pdf",
+   "esito": "trovata",
+   "motivo": "pdf"
+  },
+  "a:Q708794:0": {
+   "qid": "Q708794",
+   "titolo": "Tokutomi Sohō, anno di morte",
+   "link": "https://www.ndl.go.jp/portrait/e/datas/298",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "a:Q708794:1": {
+   "qid": "Q708794",
+   "titolo": "Tokutomi Sohō, anno di morte",
+   "link": "https://www.britannica.com/print/article/598405",
+   "esito": "non verificabile in automatico",
+   "motivo": "HTTP Error 403: Forbidden"
+  },
+  "a:Q156999:opera": {
+   "qid": "Q156999",
+   "titolo": "Lucien Febvre, Le Problème de l'incroyance au XVIe siècle",
+   "link": "https://lex.dk/Lucien_Febvre",
+   "esito": "trovata",
+   "motivo": "html, ignorando spazi e punteggiatura"
+  },
+  "a:Q1316061:opera": {
+   "qid": "Q1316061",
+   "titolo": "George Sarton, Introduction to the History of Science",
+   "link": "https://www.britannica.com/biography/George-Alfred-Leon-Sarton/article-bibliography",
+   "esito": "non verificabile in automatico",
+   "motivo": "HTTP Error 403: Forbidden"
+  },
+  "a:Q1130486:opera": {
+   "qid": "Q1130486",
+   "titolo": "Piero Calamandrei, Elogio dei giudici scritto da un avvocato",
+   "link": "https://www.ponteallegrazie.it/autore/piero-calamandrei.html",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "a:Q9317:opera": {
+   "qid": "Q9317",
+   "titolo": "John Maynard Keynes, The General Theory of Employment, Interest and Money",
+   "link": "https://snl.no/John_Maynard_Keynes",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "a:Q29031:opera": {
+   "qid": "Q29031",
+   "titolo": "Charles Oman, A History of the Peninsular War",
+   "link": "https://dichp.bnportugal.gov.pt/imagens/oman.pdf",
+   "esito": "trovata",
+   "motivo": "pdf"
+  },
+  "a:Q77521:opera": {
+   "qid": "Q77521",
+   "titolo": "Karl Groos, Die Spiele der Tiere",
+   "link": "https://www.spektrum.de/lexikon/psychologie/groos/6076",
+   "esito": "non verificabile in automatico",
+   "motivo": "HTTP Error 403: Forbidden"
+  },
+  "a:Q730889:opera": {
+   "qid": "Q730889",
+   "titolo": "Gaetano Salvemini, La Rivoluzione francese",
+   "link": "https://www.dcuci.univr.it/documenti/OccorrenzaIns/matdid/matdid389522.pdf",
+   "esito": "trovata",
+   "motivo": "pdf"
+  },
+  "a:Q708794:opera": {
+   "qid": "Q708794",
+   "titolo": "Tokutomi Sohō, Kinsei Nihon kokumin shi",
+   "link": "https://www.britannica.com/print/article/598405",
+   "esito": "non verificabile in automatico",
+   "motivo": "HTTP Error 403: Forbidden"
   }
  }
 }
