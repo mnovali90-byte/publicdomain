@@ -1335,3 +1335,14 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - **Approvazione di Marco:** Racconti di Odessa e Macchina passano da «dal 2027» a «libero» negli USA. Impronta f1eaf52c4506, aggiunta a data/cambi-approvati.txt.
 - **Fotografia:** aggiornata (data/fotografia.json.gz). Il confronto rifatto dà 0 cambi; docs/cambi-da-approvare.md dice «Nessun cambio di stato da approvare».
 - **Il ballo:** non c'è nessun errore aperto. In Già pubblici ha il 1930 (Q3220209) da stamattina: era una mia segnalazione sbagliata.
+
+## 23/11/2026 — Campione di 30 autori «una fonte» delle liste 2027 (solo rapporto)
+- **Come:** 30 estratti a caso (seme 20261123) dai 395 autori «una_fonte» di 2027 ed es-2027. Per ognuno ho cercato due fonti indipendenti da Wikidata. Circa 45 ricerche web.
+- **Esito** (docs/campione-una-fonte-2027.md):
+  - 5 confermati;
+  - 0 sbagliati con due fonti;
+  - 1 in disaccordo: F. Hadland Davis, Gutenberg dà 1956, Wikidata 1946;
+  - 8 con una fonte sola, tutte concordi con Wikidata;
+  - 16 non trovati.
+- **Giudizio:** per la regola decisa prima vale «0 sbagliati». Però con 16 non trovati il campione non può escludere errori, e il caso Davis tocca proprio il confine tra la lista spagnola e quella europea.
+- **Nel sito:** niente cambiato.
