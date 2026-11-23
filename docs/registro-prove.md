@@ -1532,3 +1532,9 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
   - Senza la verifica a mano non tornerebbe «da una sola fonte»: GND e Library of Congress danno il 1958 (registro autori). Con la regola delle due fonti autorevoli diventerebbe «corretto 1958» e uscirebbe dalla lista 2028. Ma il necrologio del luglio 1957 contraddice il 1958. Non applicato: decide Marco.
 - **Altre verifiche a mano con Wikipedia** (del 09/11/2026): Răcăciuni (Wikipedia en e Ziarul de Bacău), Romanescu (il link è a Wikipedia), von den Steinen (Wikipedia de via BookBrainz). Segnalate, non toccate.
 - **8 saggisti a mano** (docs/saggisti-a-mano.md): anno di morte da due fonti terze con citazione, opera principale con fonte, segnati come scrittori e saggisti; data/verifiche_manuali.json «aggiunti_a_mano». Entrano solo con «approvato»: true. La scheda viene da scheda-autore.yml, che ora legge i codici da docs/registro/passo-scheda.txt. scripts/verifica.py li mette nella lista (anche senza rete: --solo-aggiunti; --anteprima per la fotografia prima dell'ok). La prova 9 controlla fonti, citazioni, opera e lista. Le pagine delle verifiche a mano ora linkano anche la seconda fonte.
+
+## 23/11/2026 — Blocco 3 (docs/ricerca-web/blocco-03-2027.md)
+- 14 opere, 25 voci, tutte con citazione. Seconda lettura di 3 voci (seme 20261126) prima di applicarle: 1 confermata, 2 non verificabili (anti-bot, link che apre la home), nessuna smentita.
+- Esito: 8 conferma, 1 nota (raccolta di Kafka), 5 da decidere.
+- Lista 2027: prima uscita verificata 53, anno dell'edizione confermato 94, da confermare 8 (con le 18 voci «non trovata» del primo giro del controllo ancora escluse).
+- Limite trovato: l'esito «nota» della ricerca non mette la nota in pagina (6 opere). Da sistemare con un'approvazione di Marco sui testi delle note.
