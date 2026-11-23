@@ -20,6 +20,16 @@ def norm(t):
     return re.sub(r"\s+", " ", t).strip()
 
 
+def solo_lettere(t):
+    """Solo lettere e cifre: così non contano gli spazi messi dai tag HTML, la punteggiatura e gli a capo dei PDF."""
+    return re.sub(r"[\W_]+", "", norm(t).replace("-\n", ""))
+
+
+# pagine di verifica anti-bot: il sito non mostra il contenuto (23/11/2026: Brown, Princeton, Marsh's Library)
+ANTIBOT_RE = re.compile(r"verification required|verify you are human|verifying connection|access denied|just a moment|"
+                        r"enable (javascript|cookies)|captcha|botstopper|are you a robot", re.I)
+
+
 def testo(url):
     req = urllib.request.Request(url.replace("\\", "/"), headers=UA)
     with urllib.request.urlopen(req, timeout=60) as r:
@@ -31,18 +41,28 @@ def testo(url):
                 return subprocess.run(["pdftotext", "-q", f.name, "-"], capture_output=True, timeout=120).stdout.decode("utf-8", "replace"), "pdf"
             except Exception:
                 return None, "pdf non leggibile"
-    t = dati.decode("utf-8", "replace")
+    t = dati.decode("utf-8", "replace").replace("-\n", "")
     t = re.sub(r"<script.*?</script>|<style.*?</style>", " ", t, flags=re.S | re.I)
     return re.sub(r"<[^>]+>", " ", t), "html"
 
 
 def main():
     voci = json.load(open(R / "docs" / "ricerca-web" / "risultati.json", encoding="utf-8"))["voci"]
+    # 23/11/2026: anche le fonti delle verifiche a mano degli autori e le opere principali degli autori aggiunti a mano
+    # (data/verifiche_manuali.json); la chiave comincia con «a:» per non toccare la numerazione delle voci
+    vm = json.load(open(R / "data" / "verifiche_manuali.json", encoding="utf-8"))
+    righe = [(str(i), v) for i, v in enumerate(voci)]
+    for q, m in vm.get("autori", {}).items():
+        for k, f in enumerate(m.get("fonti") or []):
+            righe.append((f"a:{q}:{k}", {"qid": q, "titolo": f"{m.get('nome')}, anno di morte", "link": f.get("url"), "citazione": f.get("citazione")}))
+    for q, ag in vm.get("aggiunti_a_mano", {}).items():
+        op = ag.get("opera") or {}
+        righe.append((f"a:{q}:opera", {"qid": q, "titolo": f"{ag.get('nome')}, {op.get('titolo')}", "link": op.get("url"), "citazione": op.get("citazione")}))
     out, cache = {}, {}
-    for i, v in enumerate(voci):
+    for i, v in righe:
         c, link = v.get("citazione"), v.get("link")
         if not c:
-            out[str(i)] = {"qid": v.get("qid"), "link": link, "esito": "senza citazione", "motivo": "campo obbligatorio mancante"}
+            out[i] = {"qid": v.get("qid"), "link": link, "esito": "senza citazione", "motivo": "campo obbligatorio mancante"}
             continue
         if link not in cache:
             try:
@@ -51,19 +71,27 @@ def main():
                 cache[link] = (None, str(e)[:120])
             time.sleep(1)
         t, info = cache[link]
+        parole = [w for w in re.findall(r"\w{4,}", norm(c))]
+        presenti = sum(1 for w in parole if w in norm(t or "")) / len(parole) if parole else 1
         if t is None or len(t.strip()) < 200:
             esito, motivo = "non verificabile in automatico", info if t is None else "pagina quasi vuota (il sito blocca o carica il testo dopo)"
         elif norm(c) in norm(t):
             esito, motivo = "trovata", info
+        elif solo_lettere(c) in solo_lettere(t):
+            esito, motivo = "trovata", info + ", ignorando spazi e punteggiatura"
+        elif ANTIBOT_RE.search(t[:5000]) and presenti < 0.6:
+            esito, motivo = "non verificabile in automatico", "pagina di verifica anti-bot"
+        elif presenti < 0.6:
+            esito, motivo = "non verificabile in automatico", "la pagina scaricata non mostra il testo della scheda (lo carica dopo)"
         else:
-            esito, motivo = "non trovata", info
-        out[str(i)] = {"qid": v.get("qid"), "titolo": v.get("titolo"), "link": link, "esito": esito, "motivo": motivo}
+            esito, motivo = "non trovata", info + ": le parole ci sono, la frase esatta no"
+        out[i] = {"qid": v.get("qid"), "titolo": v.get("titolo"), "link": link, "esito": esito, "motivo": motivo}
     json.dump({"fatto": time.strftime("%Y-%m-%d"), "voci": out},
               open(R / "data" / "registro" / "controllo_citazioni.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     from collections import Counter
     n = Counter(x["esito"] for x in out.values())
     md = ["# Controllo delle citazioni (" + time.strftime("%Y-%m-%d") + ")", "",
-          "Script `scripts/controlla_citazioni.py`: apre ogni link di docs/ricerca-web/risultati.json e cerca la citazione.", ""]
+          "Script `scripts/controlla_citazioni.py`: apre ogni link di docs/ricerca-web/risultati.json e delle verifiche a mano (data/verifiche_manuali.json, chiavi «a:») e cerca la citazione.", ""]
     md += [f"- {k}: {v}" for k, v in sorted(n.items())] + ["", "| # | Opera | Esito | Motivo | Link |", "|---|---|---|---|---|"]
     for k, x in out.items():
         if x["esito"] != "trovata":

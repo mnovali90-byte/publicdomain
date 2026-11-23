@@ -1508,3 +1508,18 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 ## 23/11/2026 — Pubblicazione della fotografia 6fced287e3a0 e lancio del controllo delle citazioni (ok di Marco, 14:57)
 - Impronta 6fced287e3a0 aggiunta a data/cambi-approvati.txt; la fotografia nuova prende il posto della vecchia. Sul sito: escono Green Grow the Lilacs e Dry September dalla lista USA 2027 (155 libri); frase delle verifiche a mano «controllato a mano su fonti terze».
 - Lanciato citazioni.yml (docs/registro/passo-citazioni.txt): solo rapporto, non cambia il sito.
+
+## 23/11/2026 — Controllo delle citazioni: primo giro e correzione del controllo
+- **Primo giro** (citazioni.yml): 41 trovate, 32 non verificabili in automatico, 18 non trovate.
+- **Ricontrollo a mano delle 18 non trovate** (lettura delle pagine):
+  - 1 citazione sbagliata: The Face in the Abyss (voce 38). I fatti erano giusti ma la frase non era quella esatta dell'SFE. Ora è «stories first appeared 8 September 1923 Argosy».
+  - 3 pagine anti-bot (Brown, Princeton, Marsh's Library): il controllo le contava come «non trovata».
+  - 9 citazioni presenti nella pagina ma divise dai tag HTML o dagli a capo dei PDF: Sanctuary (Nobel), If It Had Happened Otherwise (SFE), The Floating Admiral (Fantlab), Back Street, Proust (Taylor & Francis), Fabian (DDB, 2 voci), Swallowdale (Loughborough), The Great Wall of China (dLib, PDF).
+  - 1 link scritto con «\» invece di «/»: The Sittaford Mystery (deliciousdeath). Corretto; la citazione c'è.
+  - 4 non controllabili da qui: Le Feu follet (Universalis, Wikisource), Night Flight (Lavoisier), Coup d'État (Universalis). Restano fuori dall'incrocio finché il controllo non le trova.
+- **Correzione del controllo** (scripts/controlla_citazioni.py):
+  - seconda prova con sole lettere e cifre, così spazi, punteggiatura e a capo non contano;
+  - pagine anti-bot e pagine che non mostrano il testo della scheda → «non verificabile in automatico»;
+  - «non trovata» resta solo quando le parole ci sono ma la frase esatta no;
+  - controlla anche le fonti delle verifiche a mano degli autori e le opere principali degli autori aggiunti a mano (chiavi «a:»).
+- **Effetto sui tre stati 2027:** con il primo giro le prime uscite verificate scendono da 54 a 44, perché le voci «non trovata» non contano più. Il numero si rifà dopo il secondo giro del controllo.
