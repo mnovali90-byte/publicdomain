@@ -631,7 +631,7 @@
    ]
   }
  },
- "nota_usa_lista": "usa_lista: decisioni con le fonti sulle opere delle liste USA (23/11/2026, regola di Marco: esce dalla lista solo ciò che è già libero per intero). esito «resta»: l'opera resta nella lista, con la nota; «conferma»: anno di uscita confermato da due fonti. Le legge scripts/applica_registro_liste.py. «versione_libera»: una versione uscita prima (con due fonti) è già libera negli USA: conta per Già pubblici, ma l'opera resta nella lista.",
+ "nota_usa_lista": "usa_lista: decisioni con le fonti sulle opere delle liste USA (regole di Marco, 23/11/2026). esito «resta»: resta nella lista (conferma = anno confermato; nota se una parte uscì prima); «tolta»: già libera per intero (prima = anno, dove = dove uscì), esce dalla lista; «sposta»: uscita dopo l'anno della lista, va nella lista del suo anno (anno, titolo_lista se l'opera in lista è una parte). Raccolte: senza testi nuovi = esce; con almeno un testo nuovo = resta con nota. Le legge scripts/applica_registro_liste.py; anno, fonti e note vanno nel registro delle opere (scripts/registro.py).",
  "usa_lista": {
   "Q318208": {
    "titolo": "Die Maßnahme (La linea di condotta)",
@@ -788,6 +788,740 @@
      "link": "https://www.schweitzer-online.de/en/buch/Premchand/Gaban/9780195662634/A1117492/"
     }
    ]
+  },
+  "Q1171231": {
+   "titolo": "Il vitello d'oro (Ilf e Petrov)",
+   "esito": "resta",
+   "conferma": 1931,
+   "fonti": [
+    {
+     "nome": "Bol'šaja Rossijskaja Enciklopedija: «Zolotoj telënok» su «30 dnej», 1931, nn. 1-7 e 9-12",
+     "link": "https://bigenc.ru/c/tridtsat-dnei-zhurnal-f718c9"
+    },
+    {
+     "nome": "Fantlab: prima pubblicazione «30 dnej», 1931",
+     "link": "https://fantlab.ru/work182818"
+    }
+   ],
+   "nota": {
+    "it": "Uscito a puntate su «30 dnej» nel 1931 (in volume nel 1932 in inglese, nel 1933 in russo): negli USA si libera nel 2027.",
+    "en": "Serialised in «30 dnej» in 1931 (in book form in 1932 in English, 1933 in Russian): it becomes free in the US in 2027."
+   }
+  },
+  "Q7414788": {
+   "titolo": "San Manuel Bueno, mártir (Unamuno)",
+   "esito": "resta",
+   "conferma": 1931,
+   "fonti": [
+    {
+     "nome": "Open Library: nota del prologo, «La Novela de Hoy, número 461… 13 de marzo de 1931»",
+     "link": "https://openlibrary.org/books/OL6454378M"
+    },
+    {
+     "nome": "One More Library: La Novela de Hoy n. 461, Atlántida, Madrid 1931",
+     "link": "https://onemorelibrary.com/index.php/en/languages/spanish/book/literatura-espanola-132/san-manuel-bueno-martir-1434"
+    },
+    {
+     "nome": "Wikipedia",
+     "link": "https://en.wikipedia.org/wiki/San_Manuel_Bueno,_M%C3%A1rtir"
+    }
+   ]
+  },
+  "Q1438006": {
+   "titolo": "Indagini di un cane (Kafka)",
+   "esito": "resta",
+   "conferma": 1931,
+   "fonti": [
+    {
+     "nome": "DLA Marbach: recensione del 1931 di «Beim Bau der chinesischen Mauer» (Kiepenheuer)",
+     "link": "https://digital.dla-marbach.de/viewer/fullscreen/BF00043387/62"
+    },
+    {
+     "nome": "Wikipedia: The Great Wall of China (raccolta, Kiepenheuer 1931)",
+     "link": "https://en.wikipedia.org/wiki/The_Great_Wall_of_China_(short_story_collection)"
+    }
+   ]
+  },
+  "Q1194666": {
+   "titolo": "Il cacciatore Gracco (Kafka)",
+   "esito": "resta",
+   "conferma": 1931,
+   "fonti": [
+    {
+     "nome": "Penguin Random House DE: testi dal lascito secondo «Beim Bau der chinesischen Mauer» (Berlino 1931)",
+     "link": "https://service.penguinrandomhouse.de/leseprobe/Franz-Kafka-Die-besten-Geschichten/leseprobe_9783730606551.pdf"
+    },
+    {
+     "nome": "Wikipedia: bibliografia di Kafka",
+     "link": "https://www.wikipedia.org/wiki/Franz_Kafka_bibliography"
+    }
+   ]
+  },
+  "Q1170330": {
+   "titolo": "Il silenzio delle sirene (Kafka)",
+   "esito": "resta",
+   "conferma": 1931,
+   "fonti": [
+    {
+     "nome": "Penguin Random House DE: «Beim Bau der chinesischen Mauer» (Berlino 1931)",
+     "link": "https://service.penguinrandomhouse.de/leseprobe/Franz-Kafka-Die-besten-Geschichten/leseprobe_9783730606551.pdf"
+    },
+    {
+     "nome": "Wikipedia",
+     "link": "https://en.wikipedia.org/wiki/The_Silence_of_the_Sirens"
+    }
+   ]
+  },
+  "Q938770": {
+   "titolo": "La verità su Sancio Panza (Kafka)",
+   "esito": "resta",
+   "conferma": 1931,
+   "fonti": [
+    {
+     "nome": "Bard College: indice dell'edizione",
+     "link": "https://www.bard.edu/library/pdfs/archives/2023/11/Kafka-TheGreatWallOfChina.pdf"
+    },
+    {
+     "nome": "Wikipedia",
+     "link": "https://en.wikipedia.org/wiki/The_Truth_about_Sancho_Panza"
+    }
+   ]
+  },
+  "Q1195963": {
+   "titolo": "Il vicino (Kafka)",
+   "esito": "resta",
+   "conferma": 1931,
+   "fonti": [
+    {
+     "nome": "Penguin Random House DE: «Beim Bau der chinesischen Mauer» (Berlino 1931)",
+     "link": "https://service.penguinrandomhouse.de/leseprobe/Franz-Kafka-Die-besten-Geschichten/leseprobe_9783730606551.pdf"
+    },
+    {
+     "nome": "Wikipedia",
+     "link": "https://www.wikiwand.com/en/My_Neighbor"
+    }
+   ]
+  },
+  "Q7711173": {
+   "titolo": "That Evening Sun (Faulkner)",
+   "esito": "resta",
+   "conferma": 1931,
+   "fonti": [
+    {
+     "nome": "Digital Yoknapatawpha, University of Virginia: American Mercury, marzo 1931",
+     "link": "https://faulkner.iath.virginia.edu/shanti/node/248"
+    },
+    {
+     "nome": "Wikipedia: bibliografia di Faulkner",
+     "link": "https://en.wikipedia.com/wiki/William_Faulkner_bibliography"
+    }
+   ]
+  },
+  "Q6743438": {
+   "titolo": "Malice Aforethought (Iles)",
+   "esito": "resta",
+   "conferma": 1931,
+   "fonti": [
+    {
+     "nome": "Rooke Books (PBFA): prima edizione Gollancz 1931",
+     "link": "https://www.antiqbook.com/boox/rookeb/764L13.shtml"
+    },
+    {
+     "nome": "Wikipedia",
+     "link": "https://en.wikipedia.org/wiki/Malice_Aforethought"
+    }
+   ]
+  },
+  "Q7765859": {
+   "titolo": "The Spike (Orwell)",
+   "esito": "resta",
+   "conferma": 1931,
+   "fonti": [
+    {
+     "nome": "Bibliografia di Orwell: The Adelphi, aprile 1931",
+     "link": "https://orwell.ru/biblio/english/bbl_01"
+    },
+    {
+     "nome": "Orwell Foundation",
+     "link": "https://www.orwellfoundation.com/?p=147"
+    }
+   ]
+  },
+  "Q1908420": {
+   "titolo": "Dizionario cinese-inglese di Mathews",
+   "esito": "resta",
+   "conferma": 1931,
+   "fonti": [
+    {
+     "nome": "Catalogo CRL: China Inland Mission, Shanghai 1931",
+     "link": "https://catalog.crl.edu/Record/4500a939-7a9c-5e9b-afc9-ff0f72965c51/Description"
+    },
+    {
+     "nome": "Catalogo East Carolina University",
+     "link": "https://catalog.lib.ecu.edu/catalog/864566"
+    }
+   ]
+  },
+  "Q154783": {
+   "titolo": "Il paese del carnevale (Amado)",
+   "esito": "resta",
+   "conferma": 1931,
+   "fonti": [
+    {
+     "nome": "Companhia das Letras (editore): 1931, Schmidt",
+     "link": "https://www.companhiadasletras.com.br/sala_professor/pdfs/CL_AliteraturadeJorgeAmado_trajetoria.pdf"
+    },
+    {
+     "nome": "Wikipedia",
+     "link": "https://en.wikipedia.org/wiki/The_Country_of_Carnival"
+    }
+   ]
+  },
+  "Q8346134": {
+   "titolo": "Cento autori contro Einstein",
+   "esito": "resta",
+   "conferma": 1931,
+   "fonti": [
+    {
+     "nome": "Hentschel (Birkhäuser): recensione del 13/3/1931",
+     "link": "https://newsletter-phenomenology.ophen.org/pub-213321"
+    },
+    {
+     "nome": "Open Library: facsimile dell'edizione 1931 (Univ. Innsbruck)",
+     "link": "https://openlibrary.org/isbn/3226005375"
+    }
+   ]
+  },
+  "Q7286666": {
+   "titolo": "Rakhine Razawin Thit",
+   "esito": "resta",
+   "conferma": 1931,
+   "fonti": [
+    {
+     "nome": "KoreaScience: studio accademico (Hanthawady Pitaka Press, Mandalay 1931)",
+     "link": "https://koreascience.kr/article/JAKO201512359865233.page?lang=ko"
+    },
+    {
+     "nome": "Wikipedia",
+     "link": "https://en.wikipedia.org/wiki/Rakhine_Razawin_Thit"
+    }
+   ]
+  },
+  "Q11931224": {
+   "titolo": "Laura a la ciutat dels sants (Llor)",
+   "esito": "resta",
+   "conferma": 1931,
+   "fonti": [
+    {
+     "nome": "Enciclopèdia Catalana",
+     "link": "https://www.enciclopedia.cat/diccionari-de-la-literatura-catalana/laura-a-la-ciutat-dels-sants"
+    },
+    {
+     "nome": "Articolo accademico (CORE)",
+     "link": "https://core.ac.uk/download/13320644.pdf"
+    }
+   ]
+  },
+  "Q21085990": {
+   "titolo": "Mort de dama (Villalonga)",
+   "esito": "resta",
+   "conferma": 1931,
+   "fonti": [
+    {
+     "nome": "Enciclopèdia Catalana",
+     "link": "https://www.enciclopedia.cat/diccionari-de-la-literatura-catalana/mort-de-dama"
+    },
+    {
+     "nome": "Institut d'Estudis Catalans",
+     "link": "https://publicacions.iec.cat/repository/pdf/00000250/00000066.pdf"
+    }
+   ]
+  },
+  "Q17278594": {
+   "titolo": "Madah Kelana (Sanusi Pane)",
+   "esito": "resta",
+   "conferma": 1931,
+   "fonti": [
+    {
+     "nome": "Università di Surabaya (UNESA): Balai Pustaka, prima stampa 1931",
+     "link": "https://ejournal.unesa.ac.id/index.php/avatara/article/view/3966/6493"
+    },
+    {
+     "nome": "Badan Bahasa, «Citra Manusia…» (Wikisource)",
+     "link": "https://id.wikisource.org/wiki/Halaman:Citra_Manusia_Dalam_Puisi_Indonesia_Modern_1920-1960.pdf/174"
+    }
+   ]
+  },
+  "Q17538871": {
+   "titolo": "Il monastero nero (Kuncz)",
+   "esito": "resta",
+   "conferma": 1931,
+   "fonti": [
+    {
+     "nome": "Biblioteca nazionale ungherese (MEK/OSZK): Kolozsvár, Erdélyi Szépmíves Céh, 1931",
+     "link": "https://www.mek.oszk.hu/15500/15550/cedula.html"
+    },
+    {
+     "nome": "Università di Novi Sad",
+     "link": "https://godisnjak.ff.uns.ac.rs/index.php/gff/article/download/2215/2104/5732"
+    }
+   ]
+  },
+  "Q21995450": {
+   "titolo": "Muži v offsidu (Poláček)",
+   "esito": "resta",
+   "conferma": 1931,
+   "fonti": [
+    {
+     "nome": "Università Carlo di Praga (tesi): libro 1931",
+     "link": "https://dspace.cuni.cz/handle/20.500.11956/79566?locale-attribute=cs"
+    },
+    {
+     "nome": "Tesi (theses.cz)",
+     "link": "https://theses.cz/id/qs962c/th76_1205090360.pdf"
+    }
+   ]
+  },
+  "Q116150984": {
+   "titolo": "L'Homme approximatif (Tzara)",
+   "esito": "resta",
+   "conferma": 1931,
+   "fonti": [
+    {
+     "nome": "Sotheby's: édition originale Fourcade, dedica del 23/4/1931",
+     "link": "https://www.sothebys.com/en/auctions/ecatalogue/2016/bibliotheque-r-bl-dada-surrealisme-pf1623/lot.479.html"
+    },
+    {
+     "nome": "Giquello: bozze corrette del 16/4/1931",
+     "link": "https://www.giquelloetassocies.fr/en/lot/148051/24026614-tzara-tristan-lhomme-approximatif-signed-corrected-proofs"
+    }
+   ]
+  },
+  "Q952083": {
+   "titolo": "Blokken (Bordewijk)",
+   "esito": "resta",
+   "conferma": 1931,
+   "fonti": [
+    {
+     "nome": "DBNL, Lexicon literaire werken: De Gemeenschap, Utrecht 1931",
+     "link": "https://dbnl.org/tekst/anbe001lexi01_01/lvlw00058.php"
+    },
+    {
+     "nome": "Nijgh & Van Ditmar (editore)",
+     "link": "https://api.boekenbank.be/sample_content/9789/038/896/9789038896199.pdf"
+    }
+   ]
+  },
+  "Q16407463": {
+   "titolo": "Verità e giustizia III (Tammsaare)",
+   "esito": "resta",
+   "conferma": 1931,
+   "fonti": [
+    {
+     "nome": "Eesti Kirjandus 1931 (archivio DIGAR)",
+     "link": "https://digar.ee/arhiiv/en/download/131139"
+    },
+    {
+     "nome": "The Modern Novel",
+     "link": "https://www.themodernnovel.org/?p=28912"
+    }
+   ]
+  },
+  "Q18679627": {
+   "titolo": "Uni ja kuolema (Kailas)",
+   "esito": "resta",
+   "conferma": 1931,
+   "fonti": [
+    {
+     "nome": "Biblioteca nazionale finlandese (Doria): WSOY 1931",
+     "link": "https://doria.fi/handle/10024/100649?show=full"
+    },
+    {
+     "nome": "Britannica",
+     "link": "https://www.Britannica.Com/art/Finnish-literature/Finnish-language-literature"
+    }
+   ]
+  },
+  "Q28610697": {
+   "titolo": "Saluto alla vita (Antonyč)",
+   "esito": "resta",
+   "conferma": 1931,
+   "fonti": [
+    {
+     "nome": "Studia Ukrainica Posnaniensia",
+     "link": "https://bazhum.muzhp.pl/media/texts/studia-ukrainica-posnaniensia/2014-tom-2/studia_ukrainica_posnaniensia-r2014-t2-s103-111.pdf"
+    },
+    {
+     "nome": "Wikipedia",
+     "link": "https://www.wikipedia.org/wiki/Bohdan_Ihor_Antonych"
+    }
+   ]
+  },
+  "Q28653530": {
+   "titolo": "L'hereu (Bertrana)",
+   "esito": "resta",
+   "conferma": 1931,
+   "fonti": [
+    {
+     "nome": "Diari de Girona (archivio UAB): Catalònia, Sant Jordi 1931",
+     "link": "https://ddd.uab.cat/pub/artpub/2024/300534/diarigirona_a2024m6d23p8.pdf"
+    },
+    {
+     "nome": "Enciclopèdia Catalana",
+     "link": "https://www.enciclopedia.cat/gran-enciclopedia-catalana/prudenci-bertrana-i-compte"
+    }
+   ]
+  },
+  "Q104827186": {
+   "titolo": "Chumbote (de la Cuadra)",
+   "esito": "resta",
+   "conferma": 1931,
+   "fonti": [
+    {
+     "nome": "Kipus, Universidad Andina Simón Bolívar: «Repisas», 1931",
+     "link": "https://repositorio.uasb.edu.ec/bitstream/10644/1494/1/RK16-Recuperaciones-Ubidia.pdf"
+    },
+    {
+     "nome": "Hispanopedia (cita Landázuri, INPC 2011)",
+     "link": "https://es.hispanopedia.com/wiki/Chumbote"
+    }
+   ]
+  },
+  "Q117353888": {
+   "titolo": "Kubula a Kuba Kubikula (Vančura)",
+   "esito": "resta",
+   "conferma": 1931,
+   "fonti": [
+    {
+     "nome": "Istituto di letteratura ceca, Accademia delle Scienze",
+     "link": "https://edicee.ucl.cas.cz/images/data/dejiny/hcl/dcl4/26.pdf"
+    },
+    {
+     "nome": "Deník",
+     "link": "https://www.denik.cz/moje_rodina/vecernicek_kubula20080821.html"
+    }
+   ]
+  },
+  "Q7069500": {
+   "titolo": "Number 31328 (Venezis)",
+   "esito": "resta",
+   "conferma": 1931,
+   "fonti": [
+    {
+     "nome": "Università di Creta (tesi): a puntate su «Kampana» 1924, libro 1931",
+     "link": "https://elocus.lib.uoc.gr//dlib/0/a/3/attached-metadata-dlib-1720167104-420037-14917/20240705_Kalaitzakis_Konstantinos_Mc.pdf"
+    },
+    {
+     "nome": "Wikipedia (cita Beaton)",
+     "link": "https://en.wikipedia.org/wiki/Number_31328"
+    }
+   ],
+   "nota": {
+    "it": "Negli USA la versione a puntate del 1924 è già libera; nel 2027 si libera, negli USA, la versione ampliata del 1931.",
+    "en": "In the US the 1924 serialised version is already free; the expanded 1931 version becomes free in the US in 2027."
+   }
+  },
+  "Q7720011": {
+   "titolo": "Il baldacchino nuziale (Agnon)",
+   "esito": "resta",
+   "conferma": 1931,
+   "fonti": [
+    {
+     "nome": "DLB / encyclopedia.com: Hakhnasat Kalah, Schocken 1931",
+     "link": "https://encyclopedia.com/arts/culture-magazines/agnon-shmuel-yosef-8-august-1887-17-february-1970"
+    },
+    {
+     "nome": "DBNL: compilazione di racconti pubblicati prima",
+     "link": "https://dbnl.org/tekst/_bzz001199201_01/_bzz001199201_01_0083.php"
+    }
+   ],
+   "nota": {
+    "it": "Negli USA i racconti usciti prima singolarmente sono già liberi; nel 2027 si libera, negli USA, il romanzo del 1931.",
+    "en": "In the US the tales published earlier on their own are already free; the 1931 novel becomes free in the US in 2027."
+   }
+  },
+  "Q16210839": {
+   "titolo": "The London Scene (Woolf)",
+   "esito": "resta",
+   "conferma": 1931,
+   "fonti": [
+    {
+     "nome": "Taylor & Francis: i sei saggi su Good Housekeeping, dicembre 1931 - dicembre 1932",
+     "link": "https://www.taylorfrancis.com/books/9780429452932/chapters/10.4324/9780429452932-1"
+    },
+    {
+     "nome": "Wikipedia",
+     "link": "https://en.wikipedia.org/wiki/The_London_Scene"
+    }
+   ],
+   "nota": {
+    "it": "Negli USA nel 2027 si libera il primo saggio (Good Housekeeping, dicembre 1931); gli altri cinque, usciti nel 1932, si liberano negli USA nel 2028.",
+    "en": "In the US the first essay (Good Housekeeping, December 1931) becomes free in 2027; the other five, published in 1932, become free in the US in 2028."
+   }
+  },
+  "Q4915806": {
+   "titolo": "L'ombra dell'uccello (Bunin)",
+   "esito": "resta",
+   "conferma": 1931,
+   "fonti": [
+    {
+     "nome": "Wikipedia: racconti del 1907-1911, quasi tutti già nel 1917; libro Parigi 1931",
+     "link": "https://en.wikipedia.org/wiki/Bird%27s_Shadow"
+    },
+    {
+     "nome": "Università di Danzica",
+     "link": "https://czasopisma.bg.ug.edu.pl/index.php/SRG/article/download/6725/5978/10297"
+    }
+   ],
+   "nota": {
+    "it": "Negli USA i racconti usciti prima in rivista sono già liberi; nel 2027 si libera, negli USA, la raccolta del 1931.",
+    "en": "In the US the stories published earlier in periodicals are already free; the 1931 collection becomes free in the US in 2027."
+   }
+  },
+  "Q21657640": {
+   "titolo": "I vagabondi (Šiškov)",
+   "esito": "resta",
+   "conferma": 1931,
+   "fonti": [
+    {
+     "nome": "Wikipedia: bibliografia di Šiškov (parte 1 su «Krasnaja Nov'» 1930, romanzo intero 1931)",
+     "link": "https://en.wikipedia.org/wiki/Vyacheslav_Shishkov_bibliography"
+    },
+    {
+     "nome": "Studio accademico (Chungbuk)",
+     "link": "https://scholar.kyobobook.co.kr/article/detail/4010071763247"
+    }
+   ],
+   "nota": {
+    "it": "Negli USA la prima parte, uscita su «Krasnaja Nov'» nel 1930, è già libera; nel 2027 si libera, negli USA, il romanzo intero del 1931.",
+    "en": "In the US the first part, published in «Krasnaya Nov» in 1930, is already free; the complete 1931 novel becomes free in the US in 2027."
+   }
+  },
+  "Q106603100": {
+   "titolo": "Siamese Musical Instruments (Damrong)",
+   "esito": "resta",
+   "conferma": 1931,
+   "fonti": [
+    {
+     "nome": "Scansione della 1ª edizione del trattato thai, prefazione del 14/1/1929 (Wikimedia Commons)",
+     "link": "https://download.osmand.net/wiki/File:%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%A1%E0%B9%82%E0%B8%AB%E0%B8%A3%E0%B8%B5%E0%B8%AF_-_%E0%B8%94%E0%B8%B3%E0%B8%A3%E0%B8%87_-_%E0%B9%92%E0%B9%94%E0%B9%97%E0%B9%91.pdf"
+    },
+    {
+     "nome": "Scansione dell'edizione inglese, prefazione dell'11/2/1931 (Wikimedia Commons)",
+     "link": "https://download.osmand.net/wiki/File:%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%A1%E0%B9%82%E0%B8%AB%E0%B8%A3%E0%B8%B5%E0%B8%AF_-_%E0%B8%94%E0%B8%B3%E0%B8%A3%E0%B8%87_-_%E0%B9%92%E0%B9%94%E0%B9%97%E0%B9%93_(%E0%B9%92).pdf"
+    }
+   ],
+   "nota": {
+    "it": "Negli USA il trattato in thai del 1929 è già libero; nel 2027 si libera, negli USA, la traduzione inglese del 1931.",
+    "en": "In the US the 1929 Thai treatise is already free; the 1931 English translation becomes free in the US in 2027."
+   }
+  },
+  "Q5670870": {
+   "titolo": "Altazor (Huidobro)",
+   "esito": "resta",
+   "conferma": 1931,
+   "fonti": [
+    {
+     "nome": "Prima edizione (CIAP, Madrid 1931), nota: «publicado en diferentes diarios y revistas en fragmentos… primera vez que se publica en libro y completo»",
+     "link": "https://edisciplinas.usp.br/mod/resource/view.php?id=2353041"
+    },
+    {
+     "nome": "Universidad de Chile (Cyber Humanitatis): frammenti dal 1925, tra cui il Prefacio su «La Nación»",
+     "link": "https://cyberhumanitatis.uchile.cl/index.php/RCH/article/download/8969/8888/20498"
+    },
+    {
+     "nome": "Revista Chilena de Literatura (Universidad de Chile): frammenti pubblicati a partire dal 1925",
+     "link": "https://revistaliteratura.uchile.cl/index.php/RCL/article/download/39047/40694"
+    },
+    {
+     "nome": "Memoria Chilena (Biblioteca Nacional de Chile)",
+     "link": "https://www.memoriachilena.gob.cl/temas/index.asp?id_ut=altazor"
+    }
+   ],
+   "nota": {
+    "it": "Negli USA i frammenti usciti in giornali e riviste dal 1925 sono già liberi; nel 2027 si libera, negli USA, la prima edizione completa del 1931.",
+    "en": "In the US the fragments published in newspapers and magazines from 1925 are already free; the first complete 1931 edition becomes free in the US in 2027."
+   }
+  },
+  "Q7271766": {
+   "titolo": "Quicksand / Manji (Tanizaki)",
+   "esito": "tolta",
+   "prima": 1930,
+   "dove": {
+    "it": "a puntate su «Kaizō», da marzo 1928 ad aprile 1930",
+    "en": "serialised in «Kaizō», March 1928 to April 1930"
+   },
+   "fonti": [
+    {
+     "nome": "CiNii: nota dell'edizione Knopf, «Manji was serialized in Kaizo in 1928-30»",
+     "link": "https://ci.nii.ac.jp/ncid/BB01243723?l=en"
+    },
+    {
+     "nome": "Lyons, Brandeis (studio accademico): pubblicazione a puntate dal marzo 1928",
+     "link": "https://journals.library.brandeis.edu/index.php/PMAJLS/article/download/2441/1931/5924"
+    }
+   ],
+   "nota": {
+    "it": "Prima pubblicazione: a puntate su «Kaizō», da marzo 1928 ad aprile 1930. Negli USA è già libera per intero.",
+    "en": "First published: serialised in «Kaizō», March 1928 to April 1930. It is already free in the US in full."
+   }
+  },
+  "Q3274361": {
+   "titolo": "Macchina (Yokomitsu)",
+   "esito": "tolta",
+   "prima": 1930,
+   "dove": {
+    "it": "su «Kaizō», settembre 1930",
+    "en": "in «Kaizō», September 1930"
+   },
+   "fonti": [
+    {
+     "nome": "Università di Yamaguchi: «Kaizō», settembre 1930; libro Hakusuisha, aprile 1931",
+     "link": "https://petit.lib.yamaguchi-u.ac.jp/29846/files/167831"
+    },
+    {
+     "nome": "Università di Hiroshima: «Kaizō», settembre 1930",
+     "link": "https://ir.lib.hiroshima-u.ac.jp/15778/files/32837"
+    }
+   ],
+   "nota": {
+    "it": "Prima pubblicazione: su «Kaizō», settembre 1930. Negli USA è già libera per intero.",
+    "en": "First published: in «Kaizō», September 1930. It is already free in the US in full."
+   }
+  },
+  "Q1775716": {
+   "titolo": "Racconti di Odessa (Babel')",
+   "esito": "tolta",
+   "prima": 1924,
+   "dove": {
+    "it": "i quattro racconti in rivista, 1921-1924 (la raccolta del 1931 non ha testi nuovi)",
+    "en": "the four stories in periodicals, 1921-1924 (the 1931 collection has no new texts)"
+   },
+   "fonti": [
+    {
+     "nome": "Wikipedia: i quattro racconti della raccolta del 1931 (1921, 1923, 1924, 1924)",
+     "link": "https://en.wikipedia.org/wiki/Odessa_Stories"
+    },
+    {
+     "nome": "Biblio: prima edizione completa GIKhL 1931, racconti usciti in rivista 1921-1924",
+     "link": "https://biblio.co.nz/book/jewish-life-odesa-odesskie-rasskazy-odesa/d/1582108686"
+    }
+   ],
+   "nota": {
+    "it": "Prima pubblicazione: i quattro racconti in rivista, 1921-1924 (la raccolta del 1931 non ha testi nuovi). Negli USA è già libera per intero.",
+    "en": "First published: the four stories in periodicals, 1921-1924 (the 1931 collection has no new texts). It is already free in the US in full."
+   }
+  },
+  "Q874809": {
+   "titolo": "La madre (Brecht)",
+   "esito": "sposta",
+   "anno": 1933,
+   "fonti": [
+    {
+     "nome": "University of Wisconsin, collezione digitale: prima nel 1932, pubblicata nel 1933",
+     "link": "https://search.library.wisc.edu/digital/AB47LC3AJDTMVG8H/text/ATXPXLJAYOSWSM8R"
+    },
+    {
+     "nome": "Brecht Guide: «Die Mutter. Nach Gorki (1933)»",
+     "link": "https://brechtguide.library.wisc.edu/catalog/01592"
+    }
+   ]
+  },
+  "Q7939007": {
+   "titolo": "Vlak u snijegu (Lovrak)",
+   "esito": "sposta",
+   "anno": 1933,
+   "fonti": [
+    {
+     "nome": "Libri & Liberi (Hrčak, studio accademico): pubblicato nel 1933",
+     "link": "https://hrcak.srce.hr/file/129030"
+    },
+    {
+     "nome": "Goodreads: prima edizione 1933",
+     "link": "https://www.goodreads.com/book/show/6336225"
+    }
+   ]
+  },
+  "Q1192045": {
+   "titolo": "Il 35 maggio (Kästner)",
+   "esito": "sposta",
+   "anno": 1932,
+   "fonti": [
+    {
+     "nome": "Università di Colonia, ALEKI: uscito nel novembre 1932",
+     "link": "https://aleki.uni-koeln.de/sites/aleki/user_upload/Material/Ausstellungen/Kaestner_Bio-fuers_web.pdf"
+    },
+    {
+     "nome": "Wikipedia: «first published in 1932»",
+     "link": "https://en.wikipedia.org/wiki/The_35th_of_May;_or,_Conrad%27s_Ride_to_the_South_Seas"
+    }
+   ]
+  },
+  "Q11792659": {
+   "titolo": "Noce i dnie (Dąbrowska)",
+   "esito": "sposta",
+   "anno": 1932,
+   "fonti": [
+    {
+     "nome": "lubimyczytac: I «Bogumił i Barbara» (1932), II «Wieczne zmartwienie» (1932), III «Miłość» (1933), IV «Wiatr w oczy» (1934)",
+     "link": "https://lubimyczytac.pl/autor/18924/maria-dabrowska"
+    },
+    {
+     "nome": "Britannica: Noce i dnie (1932–34)",
+     "link": "https://www.britannica.com/topic/Noce-i-dnie"
+    }
+   ],
+   "nota": {
+    "it": "Quattro volumi: I «Bogumił i Barbara» (1932) e II «Wieczne zmartwienie» (1932) si liberano negli USA nel 2028, III «Miłość» (1933) nel 2029, IV «Wiatr w oczy» (1934) nel 2030.",
+    "en": "Four volumes: I «Bogumił i Barbara» (1932) and II «Wieczne zmartwienie» (1932) become free in the US in 2028, III «Miłość» (1933) in 2029, IV «Wiatr w oczy» (1934) in 2030."
+   }
+  },
+  "Q2252950": {
+   "titolo": "Švambranija (Kassil')",
+   "esito": "sposta",
+   "anno": 1933,
+   "fonti": [
+    {
+     "nome": "Detskie čtenija (rivista accademica): «Kondujt» in volume nel 1930, poi «Švambranija», riuniti nel 1935",
+     "link": "https://detskie-chtenia.ru/index.php/journal/article/download/545/535"
+    },
+    {
+     "nome": "AST (editore): «Kondujt» 1930, «Švambranija» 1933, insieme nel 1935",
+     "link": "https://ast.ru/book/konduit-i-shvambraniya-711601/"
+    },
+    {
+     "nome": "Krugosvet: «Kondujt» (1930), «Švambranija» (1933; nel 1935 riuniti)",
+     "link": "https://www.krugosvet.ru/enc/psihologiya-i-pedagogika/kassil-lev-abramovich"
+    }
+   ],
+   "titolo_lista": "Švambranija",
+   "nota": {
+    "it": "Negli USA «Kondujt» (1930) è già libero; «Švambranija» (1933) si libera negli USA nel 2029; il libro unico «Kondujt i Švambranija» è del 1935.",
+    "en": "In the US «Kondujt» (1930) is already free; «Shvambrania» (1933) becomes free in the US in 2029; the combined book is from 1935."
+   }
+  },
+  "Q5981118": {
+   "titolo": "Los placeres prohibidos (Cernuda)",
+   "esito": "sposta",
+   "anno": 1936,
+   "fonti": [
+    {
+     "nome": "Alianza Editorial: prima edizione di «La realidad y el deseo», 1936",
+     "link": "https://www.alianzaeditorial.es:443/primer_capitulo/la-realidad-y-el-deseo-1924-1962.pdf"
+    },
+    {
+     "nome": "FUESP: poesie scritte nell'aprile 1931",
+     "link": "https://www.fuesp.com/wp-content/uploads/cilh40art6.pdf"
+    },
+    {
+     "nome": "Wikipedia: «La realidad y el deseo» pubblicato nell'aprile 1936 (Cruz y Raya)",
+     "link": "https://EN.wikipedia.com/wiki/Luis_Cernuda"
+    }
+   ],
+   "nota": {
+    "it": "Scritto nel 1931, pubblicato per la prima volta nel 1936 in «La realidad y el deseo»: negli USA si libera nel 2032.",
+    "en": "Written in 1931, first published in 1936 in «La realidad y el deseo»: it becomes free in the US in 2032."
+   }
   }
  },
  "nota_prima_pubblicazione": "prima_pubblicazione: prima uscita documentata (rivista o editore, con la data), con le fonti. Regola di Marco (23/11/2026): quando c'è, vale quella; i cataloghi confermano ma non la battono (scripts/regole.py, anno_prima_pubblicazione).",

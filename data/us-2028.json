@@ -1926,6 +1926,42 @@
    "visite_en": 2437
   },
   {
+   "qid": "Q1192045",
+   "titolo": "The 35th of May, or Conrad's Ride to the South Seas",
+   "titolo_it": null,
+   "autori": [
+    {
+     "qid": "Q76546",
+     "nome": "Erich Kästner",
+     "foto": {
+      "file": "Erich Kästner 1961.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Erich_K%C3%A4stner_1961.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Erich_K%C3%A4stner_1961.jpg",
+      "licenza": "CC0",
+      "autore": "Basch, [...] / Opdracht Anefo"
+     }
+    }
+   ],
+   "pagine": 13,
+   "wiki_en": "https://en.wikipedia.org/wiki/The_35th_of_May;_or,_Conrad%27s_Ride_to_the_South_Seas",
+   "lingua": {
+    "en": "German",
+    "it": "tedesco"
+   },
+   "generi": [
+    "ragazzi"
+   ],
+   "visite_en": 2428,
+   "copertina": {
+    "file": "Buchdeckel des Kinderbuchs \"Der 35. Mai\" (33.-43 Aufl. 1948).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Buchdeckel_des_Kinderbuchs_%22Der_35._Mai%22_%2833.-43_Aufl._1948%29.jpg/500px-Buchdeckel_des_Kinderbuchs_%22Der_35._Mai%22_%2833.-43_Aufl._1948%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Buchdeckel_des_Kinderbuchs_%22Der_35._Mai%22_%2833.-43_Aufl._1948%29.jpg",
+    "licenza": "Public domain",
+    "autore": "Walter Trier"
+   },
+   "spostata_da": "us-2027"
+  },
+  {
    "qid": "Q8000821",
    "titolo": "Wild Talents",
    "titolo_it": null,
@@ -4589,6 +4625,33 @@
     "licenza": "Public domain",
     "autore": "Maurice Leblanc"
    }
+  },
+  {
+   "qid": "Q11792659",
+   "titolo": "Noce i dnie",
+   "titolo_it": "Noce i dnie",
+   "autori": [
+    {
+     "qid": "Q242423",
+     "nome": "Maria Dąbrowska",
+     "foto": {
+      "file": "Maria Dąbrowska.jpg",
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Maria_D%C4%85browska.jpg?width=480",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Maria_D%C4%85browska.jpg",
+      "licenza": "Public domain",
+      "autore": "Unknown author"
+     }
+    }
+   ],
+   "pagine": 2,
+   "wiki_en": null,
+   "lingua": {
+    "en": "Polish",
+    "it": "polacco"
+   },
+   "generi": [],
+   "visite_en": null,
+   "spostata_da": "us-2027"
   }
  ]
 }

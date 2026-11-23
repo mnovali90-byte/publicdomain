@@ -48,3 +48,17 @@ I fatti li decidono le fonti terze, non Marco e non Claude.
    Marco decide solo i casi incerti.
 
 6. **Decisioni nei dati.** Ogni decisione va in `data/coautori_manuali.json` (collaboratori) o in `data/verifiche_opere.json` (anni, illustratori), con la fonte. Le pagine le leggono da lì. Il controllo degli stati (`scripts/controllo_stati.py`) verifica che le schede le rispettino.
+
+## Liste USA: esiti delle decisioni (23/11/2026)
+
+Le decisioni sulle opere delle liste USA stanno in `data/verifiche_opere.json`, parte «usa_lista», sempre con almeno due fonti indipendenti (almeno una primaria o specialistica) e con il link. Gli esiti sono tre:
+
+- **resta:** l'opera resta nella lista del suo anno. Se una parte è uscita prima (puntate, frammenti, racconti già in rivista, originale in un'altra lingua), c'è una nota che lo dice.
+- **tolta:** l'opera è già uscita per intero prima ed è già libera negli USA. Esce dalla lista e va in Già pubblici con l'anno della prima uscita.
+- **sposta:** l'opera è uscita dopo l'anno della lista. Va nella lista del suo anno. Se quella lista non c'è ancora (si crea a gennaio), l'opera aspetta in `data/registro/liste_spostati.json`, parte «usa_spostate».
+
+**Regola delle raccolte:** una raccolta senza testi nuovi esce (i testi erano già liberi); una raccolta con almeno un testo nuovo resta, con la nota.
+
+**Opere in più volumi:** ogni volume conta con il suo anno, confermato da due fonti. La nota dell'opera dice l'anno di ogni volume.
+
+Le applica `scripts/applica_registro_liste.py`; anno, fonti e note vanno nel registro delle opere (`scripts/registro.py`, `opere_decise`).

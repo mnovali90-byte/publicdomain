@@ -74,7 +74,7 @@ def main():
     # conferme scritte a mano con le loro fonti (data/verifiche_opere.json, «usa_prima»).
     ver = _l(DATA / "us-anni-verificati.json", {})
     man = (_l(DATA / "verifiche_opere.json", {}) or {}).get("usa_lista", {})
-    usa_tolte = []
+    usa_tolte, usa_arrivi, usa_attesa = [], {}, []
     for f in sorted(glob.glob(str(DATA / "us-[0-9][0-9][0-9][0-9].json"))):
         lista = Path(f).stem[3:]
         d = json.loads(Path(f).read_text(encoding="utf-8"))
@@ -91,6 +91,19 @@ def main():
                 o = {k: v for k, v in o.items() if k not in ("nota_usa", "conferma_usa")}
                 tenute.append(o)
                 continue
+            if m and m.get("esito") == "sposta" and isinstance(m.get("anno"), int) and len(m.get("fonti", [])) >= 2 \
+                    and RG.anno_libero_usa(m["anno"]) != int(lista):
+                # uscita DOPO l'anno della lista (23/11/2026): va nella lista del suo anno; se quella lista non c'è
+                # ancora (si crea a gennaio), aspetta in liste_spostati.json («usa_in_attesa»)
+                dest = RG.anno_libero_usa(m["anno"])
+                b = dict(o, spostata_da=f"us-{lista}")
+                if m.get("titolo_lista"):
+                    b["titolo"] = b["titolo_it"] = m["titolo_lista"]
+                if (DATA / f"us-{dest}.json").exists():
+                    usa_arrivi.setdefault(dest, []).append(b)
+                usa_attesa.append({"da": f"us-{lista}", "a": f"us-{dest}", "qid": o.get("qid"), "titolo": m.get("titolo_lista") or o.get("titolo_it") or o.get("titolo"),
+                                   "uscita": m["anno"], "lista_pronta": (DATA / f"us-{dest}.json").exists(), "opera": b})
+                continue
             if m and m.get("esito") == "tolta" and isinstance(m.get("prima"), int) and m["prima"] < pub:
                 prima = ["a mano: " + "; ".join(f["nome"] if isinstance(f, dict) else f for f in m.get("fonti", []))]
                 prima_anno = m["prima"]
@@ -104,6 +117,14 @@ def main():
         if tenute != d.get("opere", []):
             d["opere"] = tenute
             Path(f).write_text(json.dumps(d, ensure_ascii=False, indent=1), encoding="utf-8")
+    for dest, nuove in usa_arrivi.items():
+        p = DATA / f"us-{dest}.json"
+        d = json.loads(p.read_text(encoding="utf-8"))
+        q_gia = {o.get("qid") for o in d.get("opere", [])}
+        agg = [b for b in nuove if b.get("qid") not in q_gia]
+        if agg:
+            d["opere"] = sorted(d.get("opere", []) + agg, key=lambda o: -(o.get("visite_en") or 0))
+            p.write_text(json.dumps(d, ensure_ascii=False, indent=1), encoding="utf-8")
     # l'elenco degli spostamenti si tiene: al giro dopo gli autori già spostati non risultano più diversi
     fs = DATA / "registro" / "liste_spostati.json"
     try:
@@ -121,8 +142,20 @@ def main():
     in_lista = {(Path(f).stem, o.get("qid")) for f in glob.glob(str(DATA / "us-[0-9][0-9][0-9][0-9].json"))
                 for o in json.loads(Path(f).read_text(encoding="utf-8")).get("opere", [])}
     usa_tutte = [x for x in usa_vecchie if (x["lista"], x["qid"]) not in nuove_q and (x["lista"], x["qid"]) not in in_lista] + usa_tolte
+    try:
+        attesa_vecchie = json.loads(fs.read_text(encoding="utf-8")).get("usa_spostate", [])
+    except Exception:
+        attesa_vecchie = []
+    nuove_s = {x["qid"] for x in usa_attesa}
+    # si tengono le spostate dei giri prima (la lista d'origine non le ha più), tranne quelle che ora non sono più «sposta»
+    usa_sp = [x for x in attesa_vecchie if x["qid"] not in nuove_s and (man.get(x["qid"]) or {}).get("esito") == "sposta"] + usa_attesa
+    for x in usa_sp:
+        x["lista_pronta"] = (DATA / f"{x['a']}.json").exists()
     fs.write_text(json.dumps({"aggiornato": date.today().isoformat(), "regola": "anno di morte del registro unico (regole.morte_dal_registro)",
-                              "spostati": tutti, "usa_gia_libere": usa_tutte}, ensure_ascii=False, indent=1), encoding="utf-8")
+                              "spostati": tutti, "usa_gia_libere": usa_tutte, "usa_spostate": usa_sp}, ensure_ascii=False, indent=1), encoding="utf-8")
+    print(f"Liste USA: {len(usa_attesa)} opere spostate nella lista del loro anno (uscite dopo)")
+    for x in usa_attesa:
+        print(f"   {x['da']} → {x['a']}{'' if x['lista_pronta'] else ' (lista non ancora creata: in attesa)'}: {x['titolo']} ({x['uscita']})")
     print(f"Liste USA: {len(usa_tolte)} opere già libere tolte (due fonti le danno uscite prima dell'anno della lista)")
     for x in usa_tolte:
         print(f"   {x['lista']}: {x['titolo']} (uscita {x['uscita']}; {', '.join(x['fonti'])})")

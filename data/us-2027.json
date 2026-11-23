@@ -708,32 +708,6 @@
    }
   },
   {
-   "qid": "Q7271766",
-   "titolo": "Quicksand",
-   "titolo_it": "La croce buddista",
-   "autori": [
-    {
-     "qid": "Q316213",
-     "nome": "Jun'ichirō Tanizaki",
-     "foto": {
-      "file": "Junichiro Tanizaki 02.jpg",
-      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Junichiro_Tanizaki_02.jpg?width=480",
-      "pagina": "https://commons.wikimedia.org/wiki/File:Junichiro_Tanizaki_02.jpg",
-      "licenza": "Public domain",
-      "autore": "Unknown author"
-     }
-    }
-   ],
-   "pagine": 4,
-   "wiki_en": "https://en.wikipedia.org/wiki/Quicksand_(Tanizaki_novel)",
-   "lingua": {
-    "en": "Japanese",
-    "it": "giapponese"
-   },
-   "generi": [],
-   "visite_en": 8600
-  },
-  {
    "qid": "Q1141993",
    "titolo": "The Zürau Aphorisms",
    "titolo_it": "Aforismi di Zürau",
@@ -942,39 +916,6 @@
    },
    "generi": [],
    "visite_en": 6936
-  },
-  {
-   "qid": "Q1775716",
-   "titolo": "The Odessa Tales",
-   "titolo_it": "Racconti di Odessa",
-   "autori": [
-    {
-     "qid": "Q49080",
-     "nome": "Isaak Babel",
-     "foto": {
-      "file": "Isaac Babel.jpg",
-      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Isaac_Babel.jpg?width=480",
-      "pagina": "https://commons.wikimedia.org/wiki/File:Isaac_Babel.jpg",
-      "licenza": "Public domain",
-      "autore": "anonimous"
-     }
-    }
-   ],
-   "pagine": 10,
-   "wiki_en": "https://en.wikipedia.org/wiki/Odessa_Stories",
-   "lingua": {
-    "en": "Russian",
-    "it": "russo"
-   },
-   "generi": [],
-   "visite_en": 6633,
-   "copertina": {
-    "file": "Odesskie rasskazy - I. Babel, 1931.JPG",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/7/75/Odesskie_rasskazy_-_I._Babel%2C_1931.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Odesskie_rasskazy_-_I._Babel%2C_1931.JPG",
-    "licenza": "Public domain",
-    "autore": "Государственное издательство художественной литературы"
-   }
   },
   {
    "qid": "Q3881234",
@@ -1381,32 +1322,6 @@
    "visite_en": 3899
   },
   {
-   "qid": "Q874809",
-   "titolo": "The Mother",
-   "titolo_it": "La madre",
-   "autori": [
-    {
-     "qid": "Q38757",
-     "nome": "Bertolt Brecht",
-     "foto": {
-      "file": "Bundesarchiv Bild 183-W0409-300, Bertolt Brecht.jpg",
-      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bundesarchiv_Bild_183-W0409-300%2C_Bertolt_Brecht.jpg?width=480",
-      "pagina": "https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_183-W0409-300%2C_Bertolt_Brecht.jpg",
-      "licenza": "CC BY-SA 3.0 de",
-      "autore": "Kolbe, Jörg"
-     }
-    }
-   ],
-   "pagine": 5,
-   "wiki_en": "https://en.wikipedia.org/wiki/The_Mother_(Brecht_play)",
-   "lingua": {
-    "en": "German",
-    "it": "tedesco"
-   },
-   "generi": [],
-   "visite_en": 3851
-  },
-  {
    "qid": "Q119144545",
    "titolo": "The Sands of Windee",
    "titolo_it": null,
@@ -1771,32 +1686,6 @@
    "visite_en": 3017
   },
   {
-   "qid": "Q7939007",
-   "titolo": "Vlak u snijegu",
-   "titolo_it": null,
-   "autori": [
-    {
-     "qid": "Q1565233",
-     "nome": "Mato Lovrak",
-     "foto": {
-      "file": "Mato Lovrak.jpg",
-      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mato_Lovrak.jpg?width=480",
-      "pagina": "https://commons.wikimedia.org/wiki/File:Mato_Lovrak.jpg",
-      "licenza": "CC BY-SA 4.0",
-      "autore": "Fraxinus Croat"
-     }
-    }
-   ],
-   "pagine": 5,
-   "wiki_en": "https://en.wikipedia.org/wiki/Vlak_u_snijegu",
-   "lingua": {
-    "en": "Croatian",
-    "it": "croato"
-   },
-   "generi": [],
-   "visite_en": 2941
-  },
-  {
    "qid": "Q7713437",
    "titolo": "The American Black Chamber",
    "titolo_it": null,
@@ -1962,41 +1851,6 @@
    },
    "generi": [],
    "visite_en": 2486
-  },
-  {
-   "qid": "Q1192045",
-   "titolo": "The 35th of May, or Conrad's Ride to the South Seas",
-   "titolo_it": null,
-   "autori": [
-    {
-     "qid": "Q76546",
-     "nome": "Erich Kästner",
-     "foto": {
-      "file": "Erich Kästner 1961.jpg",
-      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Erich_K%C3%A4stner_1961.jpg?width=480",
-      "pagina": "https://commons.wikimedia.org/wiki/File:Erich_K%C3%A4stner_1961.jpg",
-      "licenza": "CC0",
-      "autore": "Basch, [...] / Opdracht Anefo"
-     }
-    }
-   ],
-   "pagine": 13,
-   "wiki_en": "https://en.wikipedia.org/wiki/The_35th_of_May;_or,_Conrad%27s_Ride_to_the_South_Seas",
-   "lingua": {
-    "en": "German",
-    "it": "tedesco"
-   },
-   "generi": [
-    "ragazzi"
-   ],
-   "visite_en": 2428,
-   "copertina": {
-    "file": "Buchdeckel des Kinderbuchs \"Der 35. Mai\" (33.-43 Aufl. 1948).jpg",
-    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Buchdeckel_des_Kinderbuchs_%22Der_35._Mai%22_%2833.-43_Aufl._1948%29.jpg/500px-Buchdeckel_des_Kinderbuchs_%22Der_35._Mai%22_%2833.-43_Aufl._1948%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Buchdeckel_des_Kinderbuchs_%22Der_35._Mai%22_%2833.-43_Aufl._1948%29.jpg",
-    "licenza": "Public domain",
-    "autore": "Walter Trier"
-   }
   },
   {
    "qid": "Q25091412",
@@ -2611,32 +2465,6 @@
    },
    "generi": [],
    "visite_en": 1103
-  },
-  {
-   "qid": "Q3274361",
-   "titolo": "Machine",
-   "titolo_it": null,
-   "autori": [
-    {
-     "qid": "Q908573",
-     "nome": "Riichi Yokomitsu",
-     "foto": {
-      "file": "Riichi Yokomitsu 01.jpg",
-      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Riichi_Yokomitsu_01.jpg?width=480",
-      "pagina": "https://commons.wikimedia.org/wiki/File:Riichi_Yokomitsu_01.jpg",
-      "licenza": "Public domain",
-      "autore": "Unknown author"
-     }
-    }
-   ],
-   "pagine": 3,
-   "wiki_en": "https://en.wikipedia.org/wiki/Machine_(novel)",
-   "lingua": {
-    "en": "Japanese",
-    "it": "giapponese"
-   },
-   "generi": [],
-   "visite_en": 1063
   },
   {
    "qid": "Q1908420",
@@ -3710,34 +3538,6 @@
    "visite_en": 27
   },
   {
-   "qid": "Q2252950",
-   "titolo": "Conduit and Shvambrania",
-   "titolo_it": null,
-   "autori": [
-    {
-     "qid": "Q715281",
-     "nome": "Lev Kassil",
-     "foto": {
-      "file": "Лев Кассиль в Московском городском Дворце пионеров и школьников (1965) (cropped).jpg",
-      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%9B%D0%B5%D0%B2_%D0%9A%D0%B0%D1%81%D1%81%D0%B8%D0%BB%D1%8C_%D0%B2_%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%BC_%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%BC_%D0%94%D0%B2%D0%BE%D1%80%D1%86%D0%B5_%D0%BF%D0%B8%D0%BE%D0%BD%D0%B5%D1%80%D0%BE%D0%B2_%D0%B8_%D1%88%D0%BA%D0%BE%D0%BB%D1%8C%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2_%281965%29_%28cropped%29.jpg?width=480",
-      "pagina": "https://commons.wikimedia.org/wiki/File:%D0%9B%D0%B5%D0%B2_%D0%9A%D0%B0%D1%81%D1%81%D0%B8%D0%BB%D1%8C_%D0%B2_%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%BC_%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%BC_%D0%94%D0%B2%D0%BE%D1%80%D1%86%D0%B5_%D0%BF%D0%B8%D0%BE%D0%BD%D0%B5%D1%80%D0%BE%D0%B2_%D0%B8_%D1%88%D0%BA%D0%BE%D0%BB%D1%8C%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2_%281965%29_%28cropped%29.jpg",
-      "licenza": "CC BY 4.0",
-      "autore": "И. И. Гольдберг"
-     }
-    }
-   ],
-   "pagine": 5,
-   "wiki_en": null,
-   "lingua": {
-    "en": "Russian",
-    "it": "russo"
-   },
-   "generi": [
-    "memorie"
-   ],
-   "visite_en": null
-  },
-  {
    "qid": "Q11757814",
    "titolo": "Poema del cante jondo",
    "titolo_it": null,
@@ -4106,28 +3906,6 @@
    "visite_en": null
   },
   {
-   "qid": "Q5981118",
-   "titolo": "Los placeres prohibidos",
-   "titolo_it": null,
-   "autori": [
-    {
-     "qid": "Q439578",
-     "nome": "Luis Cernuda",
-     "foto": {
-      "file": "Luis Cernuda.jpg",
-      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Luis_Cernuda.jpg?width=480",
-      "pagina": "https://commons.wikimedia.org/wiki/File:Luis_Cernuda.jpg",
-      "licenza": "CC BY-SA 4.0",
-      "autore": "CarlosVdeHabsburgo"
-     }
-    }
-   ],
-   "pagine": 2,
-   "wiki_en": null,
-   "generi": [],
-   "visite_en": null
-  },
-  {
    "qid": "Q10472591",
    "titolo": "Government",
    "titolo_it": "Speroni nella polvere",
@@ -4149,32 +3927,6 @@
    "lingua": {
     "en": "German",
     "it": "tedesco"
-   },
-   "generi": [],
-   "visite_en": null
-  },
-  {
-   "qid": "Q11792659",
-   "titolo": "Noce i dnie",
-   "titolo_it": "Noce i dnie",
-   "autori": [
-    {
-     "qid": "Q242423",
-     "nome": "Maria Dąbrowska",
-     "foto": {
-      "file": "Maria Dąbrowska.jpg",
-      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Maria_D%C4%85browska.jpg?width=480",
-      "pagina": "https://commons.wikimedia.org/wiki/File:Maria_D%C4%85browska.jpg",
-      "licenza": "Public domain",
-      "autore": "Unknown author"
-     }
-    }
-   ],
-   "pagine": 2,
-   "wiki_en": null,
-   "lingua": {
-    "en": "Polish",
-    "it": "polacco"
    },
    "generi": [],
    "visite_en": null

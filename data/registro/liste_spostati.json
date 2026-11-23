@@ -66,6 +66,267 @@
    ],
    "nota": null,
    "wiki_en": "https://en.wikipedia.org/wiki/The_Idiots_(short_story)"
+  },
+  {
+   "lista": "us-2027",
+   "qid": "Q7271766",
+   "titolo": "La croce buddista",
+   "uscita": 1930,
+   "fonti": [
+    "a mano: CiNii: nota dell'edizione Knopf, «Manji was serialized in Kaizo in 1928-30»; Lyons, Brandeis (studio accademico): pubblicazione a puntate dal marzo 1928"
+   ],
+   "nota": {
+    "it": "Prima pubblicazione: a puntate su «Kaizō», da marzo 1928 ad aprile 1930. Negli USA è già libera per intero.",
+    "en": "First published: serialised in «Kaizō», March 1928 to April 1930. It is already free in the US in full."
+   },
+   "wiki_en": "https://en.wikipedia.org/wiki/Quicksand_(Tanizaki_novel)"
+  },
+  {
+   "lista": "us-2027",
+   "qid": "Q1775716",
+   "titolo": "Racconti di Odessa",
+   "uscita": 1924,
+   "fonti": [
+    "a mano: Wikipedia: i quattro racconti della raccolta del 1931 (1921, 1923, 1924, 1924); Biblio: prima edizione completa GIKhL 1931, racconti usciti in rivista 1921-1924"
+   ],
+   "nota": {
+    "it": "Prima pubblicazione: i quattro racconti in rivista, 1921-1924 (la raccolta del 1931 non ha testi nuovi). Negli USA è già libera per intero.",
+    "en": "First published: the four stories in periodicals, 1921-1924 (the 1931 collection has no new texts). It is already free in the US in full."
+   },
+   "wiki_en": "https://en.wikipedia.org/wiki/Odessa_Stories"
+  },
+  {
+   "lista": "us-2027",
+   "qid": "Q3274361",
+   "titolo": "Machine",
+   "uscita": 1930,
+   "fonti": [
+    "a mano: Università di Yamaguchi: «Kaizō», settembre 1930; libro Hakusuisha, aprile 1931; Università di Hiroshima: «Kaizō», settembre 1930"
+   ],
+   "nota": {
+    "it": "Prima pubblicazione: su «Kaizō», settembre 1930. Negli USA è già libera per intero.",
+    "en": "First published: in «Kaizō», September 1930. It is already free in the US in full."
+   },
+   "wiki_en": "https://en.wikipedia.org/wiki/Machine_(novel)"
+  }
+ ],
+ "usa_spostate": [
+  {
+   "da": "us-2027",
+   "a": "us-2029",
+   "qid": "Q874809",
+   "titolo": "La madre",
+   "uscita": 1933,
+   "lista_pronta": false,
+   "opera": {
+    "qid": "Q874809",
+    "titolo": "The Mother",
+    "titolo_it": "La madre",
+    "autori": [
+     {
+      "qid": "Q38757",
+      "nome": "Bertolt Brecht",
+      "foto": {
+       "file": "Bundesarchiv Bild 183-W0409-300, Bertolt Brecht.jpg",
+       "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bundesarchiv_Bild_183-W0409-300%2C_Bertolt_Brecht.jpg?width=480",
+       "pagina": "https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_183-W0409-300%2C_Bertolt_Brecht.jpg",
+       "licenza": "CC BY-SA 3.0 de",
+       "autore": "Kolbe, Jörg"
+      }
+     }
+    ],
+    "pagine": 5,
+    "wiki_en": "https://en.wikipedia.org/wiki/The_Mother_(Brecht_play)",
+    "lingua": {
+     "en": "German",
+     "it": "tedesco"
+    },
+    "generi": [],
+    "visite_en": 3851,
+    "spostata_da": "us-2027"
+   }
+  },
+  {
+   "da": "us-2027",
+   "a": "us-2029",
+   "qid": "Q7939007",
+   "titolo": "Vlak u snijegu",
+   "uscita": 1933,
+   "lista_pronta": false,
+   "opera": {
+    "qid": "Q7939007",
+    "titolo": "Vlak u snijegu",
+    "titolo_it": null,
+    "autori": [
+     {
+      "qid": "Q1565233",
+      "nome": "Mato Lovrak",
+      "foto": {
+       "file": "Mato Lovrak.jpg",
+       "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mato_Lovrak.jpg?width=480",
+       "pagina": "https://commons.wikimedia.org/wiki/File:Mato_Lovrak.jpg",
+       "licenza": "CC BY-SA 4.0",
+       "autore": "Fraxinus Croat"
+      }
+     }
+    ],
+    "pagine": 5,
+    "wiki_en": "https://en.wikipedia.org/wiki/Vlak_u_snijegu",
+    "lingua": {
+     "en": "Croatian",
+     "it": "croato"
+    },
+    "generi": [],
+    "visite_en": 2941,
+    "spostata_da": "us-2027"
+   }
+  },
+  {
+   "da": "us-2027",
+   "a": "us-2028",
+   "qid": "Q1192045",
+   "titolo": "The 35th of May, or Conrad's Ride to the South Seas",
+   "uscita": 1932,
+   "lista_pronta": true,
+   "opera": {
+    "qid": "Q1192045",
+    "titolo": "The 35th of May, or Conrad's Ride to the South Seas",
+    "titolo_it": null,
+    "autori": [
+     {
+      "qid": "Q76546",
+      "nome": "Erich Kästner",
+      "foto": {
+       "file": "Erich Kästner 1961.jpg",
+       "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Erich_K%C3%A4stner_1961.jpg?width=480",
+       "pagina": "https://commons.wikimedia.org/wiki/File:Erich_K%C3%A4stner_1961.jpg",
+       "licenza": "CC0",
+       "autore": "Basch, [...] / Opdracht Anefo"
+      }
+     }
+    ],
+    "pagine": 13,
+    "wiki_en": "https://en.wikipedia.org/wiki/The_35th_of_May;_or,_Conrad%27s_Ride_to_the_South_Seas",
+    "lingua": {
+     "en": "German",
+     "it": "tedesco"
+    },
+    "generi": [
+     "ragazzi"
+    ],
+    "visite_en": 2428,
+    "copertina": {
+     "file": "Buchdeckel des Kinderbuchs \"Der 35. Mai\" (33.-43 Aufl. 1948).jpg",
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Buchdeckel_des_Kinderbuchs_%22Der_35._Mai%22_%2833.-43_Aufl._1948%29.jpg/500px-Buchdeckel_des_Kinderbuchs_%22Der_35._Mai%22_%2833.-43_Aufl._1948%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Buchdeckel_des_Kinderbuchs_%22Der_35._Mai%22_%2833.-43_Aufl._1948%29.jpg",
+     "licenza": "Public domain",
+     "autore": "Walter Trier"
+    },
+    "spostata_da": "us-2027"
+   }
+  },
+  {
+   "da": "us-2027",
+   "a": "us-2029",
+   "qid": "Q2252950",
+   "titolo": "Švambranija",
+   "uscita": 1933,
+   "lista_pronta": false,
+   "opera": {
+    "qid": "Q2252950",
+    "titolo": "Švambranija",
+    "titolo_it": "Švambranija",
+    "autori": [
+     {
+      "qid": "Q715281",
+      "nome": "Lev Kassil",
+      "foto": {
+       "file": "Лев Кассиль в Московском городском Дворце пионеров и школьников (1965) (cropped).jpg",
+       "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%9B%D0%B5%D0%B2_%D0%9A%D0%B0%D1%81%D1%81%D0%B8%D0%BB%D1%8C_%D0%B2_%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%BC_%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%BC_%D0%94%D0%B2%D0%BE%D1%80%D1%86%D0%B5_%D0%BF%D0%B8%D0%BE%D0%BD%D0%B5%D1%80%D0%BE%D0%B2_%D0%B8_%D1%88%D0%BA%D0%BE%D0%BB%D1%8C%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2_%281965%29_%28cropped%29.jpg?width=480",
+       "pagina": "https://commons.wikimedia.org/wiki/File:%D0%9B%D0%B5%D0%B2_%D0%9A%D0%B0%D1%81%D1%81%D0%B8%D0%BB%D1%8C_%D0%B2_%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%BC_%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%BC_%D0%94%D0%B2%D0%BE%D1%80%D1%86%D0%B5_%D0%BF%D0%B8%D0%BE%D0%BD%D0%B5%D1%80%D0%BE%D0%B2_%D0%B8_%D1%88%D0%BA%D0%BE%D0%BB%D1%8C%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2_%281965%29_%28cropped%29.jpg",
+       "licenza": "CC BY 4.0",
+       "autore": "И. И. Гольдберг"
+      }
+     }
+    ],
+    "pagine": 5,
+    "wiki_en": null,
+    "lingua": {
+     "en": "Russian",
+     "it": "russo"
+    },
+    "generi": [
+     "memorie"
+    ],
+    "visite_en": null,
+    "spostata_da": "us-2027"
+   }
+  },
+  {
+   "da": "us-2027",
+   "a": "us-2032",
+   "qid": "Q5981118",
+   "titolo": "Los placeres prohibidos",
+   "uscita": 1936,
+   "lista_pronta": false,
+   "opera": {
+    "qid": "Q5981118",
+    "titolo": "Los placeres prohibidos",
+    "titolo_it": null,
+    "autori": [
+     {
+      "qid": "Q439578",
+      "nome": "Luis Cernuda",
+      "foto": {
+       "file": "Luis Cernuda.jpg",
+       "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Luis_Cernuda.jpg?width=480",
+       "pagina": "https://commons.wikimedia.org/wiki/File:Luis_Cernuda.jpg",
+       "licenza": "CC BY-SA 4.0",
+       "autore": "CarlosVdeHabsburgo"
+      }
+     }
+    ],
+    "pagine": 2,
+    "wiki_en": null,
+    "generi": [],
+    "visite_en": null,
+    "spostata_da": "us-2027"
+   }
+  },
+  {
+   "da": "us-2027",
+   "a": "us-2028",
+   "qid": "Q11792659",
+   "titolo": "Noce i dnie",
+   "uscita": 1932,
+   "lista_pronta": true,
+   "opera": {
+    "qid": "Q11792659",
+    "titolo": "Noce i dnie",
+    "titolo_it": "Noce i dnie",
+    "autori": [
+     {
+      "qid": "Q242423",
+      "nome": "Maria Dąbrowska",
+      "foto": {
+       "file": "Maria Dąbrowska.jpg",
+       "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Maria_D%C4%85browska.jpg?width=480",
+       "pagina": "https://commons.wikimedia.org/wiki/File:Maria_D%C4%85browska.jpg",
+       "licenza": "Public domain",
+       "autore": "Unknown author"
+      }
+     }
+    ],
+    "pagine": 2,
+    "wiki_en": null,
+    "lingua": {
+     "en": "Polish",
+     "it": "polacco"
+    },
+    "generi": [],
+    "visite_en": null,
+    "spostata_da": "us-2027"
+   }
   }
  ]
 }

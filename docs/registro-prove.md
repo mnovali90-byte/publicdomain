@@ -1306,3 +1306,27 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
   - 6 incerte;
   - 3 già decise.
 - **Fonti deboli segnalate:** San Manuel Bueno, Racconti di Odessa, Vlak u snijegu. Marco fa controllare a campione 10 opere prima di decidere.
+
+## 23/11/2026 — Decisioni sulle 52 opere USA 2027 applicate (decise dall'altra chat, su delega di Marco)
+- **Dati:** `data/verifiche_opere.json`, «usa_lista», 43 decisioni nuove, ognuna con due o più fonti e i link:
+  - 27 confermate 1931 (resta);
+  - 7 restano con la nota: Number 31328, Il baldacchino nuziale, The London Scene, L'ombra dell'uccello, I vagabondi, Siamese Musical Instruments, Altazor;
+  - 3 tolte, già libere per intero: Quicksand (1930), Macchina (1930), Racconti di Odessa (1924, raccolta senza testi nuovi);
+  - 6 spostate: Il 35 maggio e Noce i dnie (vol. I) al 2028; La madre, Vlak u snijegu e Švambranija al 2029; Los placeres prohibidos al 2032.
+- **Fonti nuove verificate oggi:**
+  - Altazor: nota della prima edizione 1931 (CIAP), Cyber Humanitatis e Revista Chilena de Literatura (Universidad de Chile): frammenti dal 1925;
+  - San Manuel: Open Library, nota del prologo (La Novela de Hoy n. 461, 13 marzo 1931);
+  - Noce i dnie: lubimyczytac (I e II 1932, III 1933, IV 1934) e Britannica (1932-34). Goodreads non conta: dà anni diversi da edizione a edizione.
+- **Do swego Boga:** resta «da confermare». Per il 1894 c'è ancora una fonte sola (one.bid); il record BnF cb332271862 non dà la data.
+- **Codice:**
+  - `scripts/applica_registro_liste.py`: nuovo esito «sposta». L'opera esce dalla lista; se la lista del suo anno c'è, ci entra; altrimenti aspetta in liste_spostati.json, «usa_spostate»;
+  - `scripts/registro.py`: «tolta» e «sposta» danno anno, fonti e nota nel registro delle opere.
+- **Regola scritta** in docs/verifica-opere.md: raccolte (senza testi nuovi = esce; con almeno un testo nuovo = resta con nota) e opere in più volumi.
+- **Esito:**
+  - us-2027 passa da 166 a 157 opere; us-2028 passa da 173 a 175;
+  - prove 1-8 a 0 (prova 8: 236 confronti, 0 diversi, 23 non mostrati);
+  - fotografia: 2 cambi di stato, entrambi voluti (Racconti di Odessa e Macchina: da «dal 2027» a «libero» negli USA).
+- **Limiti:**
+  - Quicksand entra in Già pubblici solo al giro mensile dello Storico (2 dicembre): oggi non è nella ricerca, perché con il 1931 non era libero da nessuna parte;
+  - per Noce i dnie i volumi II-IV non hanno un codice Wikidata proprio: i loro anni sono nella nota;
+  - Švambranija, La madre, Vlak u snijegu e Los placeres prohibidos aspettano che si creino le liste 2029 e 2032.

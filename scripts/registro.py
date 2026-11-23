@@ -46,6 +46,8 @@ def voci_usa():
         vl = x.get("versione_libera") or {}
         if isinstance(vl.get("anno"), int) and len(vl.get("fonti", [])) >= 2:
             out.setdefault(q, []).append(("libere", ["prima", vl["anno"], "due fonti: " + "; ".join(f["nome"] if isinstance(f, dict) else f for f in vl["fonti"])]))
+        if x.get("esito") == "sposta" and isinstance(x.get("anno"), int) and len(x.get("fonti", [])) >= 2:
+            out.setdefault(q, []).append(("cataloghi", ["ok", x["anno"], "due fonti: " + "; ".join(f["nome"] if isinstance(f, dict) else f for f in x["fonti"])]))
         if isinstance(x.get("conferma"), int) and len(x.get("fonti", [])) >= 2:
             out.setdefault(q, []).append(("cataloghi", ["ok", x["conferma"], "due fonti: " + "; ".join(f["nome"] if isinstance(f, dict) else f for f in x["fonti"])]))
     # 23/11/2026: anni provati da due cataloghi (data/verifiche_opere.json, verifica delle opere approvata da Marco)
@@ -141,7 +143,14 @@ def opere_decise():
         vl = x.get("versione_libera") or {}
         e = {"tipo": "uscita", "fonti": [_fonte(y) for y in x.get("fonti", [])], "nota": x.get("nota"),
              "perche": "decisione con le fonti sulla lista USA (data/verifiche_opere.json, «usa_lista»)"}
-        if isinstance(vl.get("anno"), int) and len(vl.get("fonti", [])) >= 2:
+        n2 = len(x.get("fonti", [])) >= 2
+        if x.get("esito") == "tolta" and isinstance(x.get("prima"), int) and n2:
+            # già libera per intero: vale la prima uscita, con le fonti e la nota della decisione
+            e["anno"], e["perche"] = x["prima"], "tolta dalla lista USA: già libera per intero (data/verifiche_opere.json, «usa_lista»)"
+        elif x.get("esito") == "sposta" and isinstance(x.get("anno"), int) and n2:
+            # uscita dopo l'anno della lista: va nella lista del suo anno (scripts/applica_registro_liste.py)
+            e["anno"], e["perche"] = x["anno"], "spostata nella lista USA del suo anno: uscita dopo (data/verifiche_opere.json, «usa_lista»)"
+        elif isinstance(vl.get("anno"), int) and len(vl.get("fonti", [])) >= 2:
             e["anno"] = vl["anno"]
         elif isinstance(x.get("conferma"), int) and len(x.get("fonti", [])) >= 2:
             e["anno"] = x["conferma"]
