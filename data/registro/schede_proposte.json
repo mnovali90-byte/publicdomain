@@ -1,0 +1,75 @@
+{
+ "nota": "Schede proposte (scripts/scheda_autore.py): non sono nelle liste finché Marco non approva.",
+ "autori": {
+  "Q470931": {
+   "scheda": {
+    "wikidata": "Q470931",
+    "nome": "Ali-Akbar Dehkhoda",
+    "nascita": "1879-01-01",
+    "morte": "1959-03-09",
+    "pagine_wikipedia": 31,
+    "professioni": [
+     "giornalista",
+     "lessicografo",
+     "letterato",
+     "linguista",
+     "politico",
+     "satirista",
+     "scrittore",
+     "traduttore"
+    ],
+    "descrizione": "Iranian linguist and lexicographer (1879–1956)",
+    "url": "https://www.wikidata.org/wiki/Q470931",
+    "bio": "Allamah Ali-Akbar Dehkhodā was a prominent Iranian literary writer, philologist, and lexicographer.",
+    "bio_url": "https://en.wikipedia.org/wiki/Ali-Akbar_Dehkhoda",
+    "bio_lingua": "en",
+    "bios": {
+     "en": {
+      "testo": "Allamah Ali-Akbar Dehkhodā was a prominent Iranian literary writer, philologist, and lexicographer.",
+      "url": "https://en.wikipedia.org/wiki/Ali-Akbar_Dehkhoda"
+     }
+    },
+    "opere": [
+     {
+      "titolo": "Dehkhoda Dictionary",
+      "titolo_en": "Dehkhoda Dictionary",
+      "anno": 1931,
+      "generi": [],
+      "sl": 14
+     },
+     {
+      "titolo": "Remember the dead candle, remember",
+      "titolo_en": "Remember the dead candle, remember",
+      "anno": 1909,
+      "generi": [],
+      "sl": 1
+     }
+    ],
+    "n_opere": 2,
+    "visite_12m": 4263,
+    "visite_it": 0,
+    "visite_en": 4263,
+    "visite_es": 149,
+    "visite_de": 274,
+    "visite_fr": 251,
+    "foto": {
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ali-Akbar-Dehkhoda.jpg?width=800",
+     "pagina": "https://commons.wikimedia.org/wiki/File:Ali-Akbar-Dehkhoda.jpg",
+     "licenza": "Public domain",
+     "autore": "tarnama.org"
+    },
+    "paesi": [
+     "Iran"
+    ],
+    "lingue": [
+     "francese",
+     "persiano"
+    ],
+    "candidato": false,
+    "letterario": false,
+    "tipo_catalogo": []
+   },
+   "fatto": "2026-11-23"
+  }
+ }
+}
