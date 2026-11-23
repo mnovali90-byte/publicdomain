@@ -1157,3 +1157,21 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - **Milne:** le voci sono legate ai codici delle opere (Winnie-the-Pooh, The House at Pooh Corner con anche la voce della Duke, When We Were Very Young, Now We Are Six).
 - **Verifica nel browser:** in Già pubblici, aprendo *Winnie Puh* compare «I disegni originali di E. H. Shepard hanno diritti propri… liberi dal 1° gennaio 2047». Prove 1-7 a 0, fotografia 0 cambi.
 - **Errore di procedura di Claude:** il push delle 08:03 ha fatto partire il giro Già pubblici, perché era cambiato storico/registro_opere.py, e non era stato detto prima. Il giro è passato senza problemi.
+
+## 23/11/2026 — Le 9 opere USA dubbie della lista 2027
+- **Regola (Marco):** per ogni opera si decide con due fonti se è già libera; se lo è, esce dalla lista. È scritta in scripts/applica_registro_liste.py:
+  - fonti: le verifiche delle liste (anno per fonte) e, quando i cataloghi ne danno una sola, le conferme web in data/verifiche_opere.json («usa_prima»);
+  - ogni opera tolta è scritta in data/registro/liste_spostati.json («usa_gia_libere»).
+- **Tolte da us-2027 (5):**
+  - L'opera da tre soldi: 1928 (Duke, K10plus, Wikipedia);
+  - Charlie Chan Carries On: 1930 (CCE, LoC, Open Library);
+  - Il ballo di Némirovsky: 1930 (CCE, LoC, Open Library);
+  - Die Maßnahme: 1930 (K10plus, Brecht Guide dell'Università del Wisconsin). La versione rivista del 1931 si libera nel 2027;
+  - With Mystics and Magicians in Tibet: originale francese del 1929 (Plon; BnF/Défense, Wikipedia). La traduzione inglese del 1931 si libera nel 2027.
+- **Restano (4):**
+  - Tarzan the Invincible: a puntate 1930-31, libro 1931;
+  - Tarzan Triumphant: a puntate 1931-32;
+  - A Small Circus: originale tedesco del 1931 (K10plus); il 1942 di Wikidata è la traduzione;
+  - The Course of Wisdom in Europe: più volumi dal 1931, nessuna fonte prima.
+- **Effetto della stessa regola su us-2028:** tolte La laguna e Gli idioti di Conrad (1896: ISFDB, LoC, Open Library). Restano, con una fonte sola: Il ritorno di Conrad, L'uomo senza qualità, Santa Giovanna dei Macelli.
+- **Liste:** us-2027 passa da 169 a 164 opere, us-2028 da 175 a 173. Prove 1-7 a 0.

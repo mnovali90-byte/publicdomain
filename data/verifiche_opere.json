@@ -630,5 +630,26 @@
     "Library of Congress: edizione del 1928"
    ]
   }
- }
+ },
+ "usa_prima": {
+  "Q318208": {
+   "titolo": "Die Maßnahme (La linea di condotta)",
+   "prima": 1930,
+   "fonti": [
+    "K10plus: edizione del 1930",
+    "Brecht Guide, University of Wisconsin: fonte «Die Massnahme. Lehrstück. (1930)», https://brechtguide.library.wisc.edu/catalog/01840"
+   ],
+   "nota": "Pubblicata nel 1930; Brecht ne pubblicò una versione rivista nel 1931 (Versuche): la versione del 1931 negli USA si libera nel 2027."
+  },
+  "Q112276362": {
+   "titolo": "With Mystics and Magicians in Tibet",
+   "prima": 1929,
+   "fonti": [
+    "BnF / Bibliothèques numériques de la Défense: «Mystiques et magiciens du Thibet», Paris, Plon, 1929",
+    "Wikipedia: pubblicato in Francia nel 1929, traduzione inglese 1931"
+   ],
+   "nota": "L'originale francese è del 1929; la traduzione inglese del 1931 ha diritti propri e negli USA si libera nel 2027."
+  }
+ },
+ "nota_usa_prima": "usa_prima: opere delle liste USA uscite PRIMA dell'anno della lista, confermate da due fonti (qui le fonti web, quando i cataloghi raccolti ne danno una sola). Le legge scripts/applica_registro_liste.py (23/11/2026)."
 }
