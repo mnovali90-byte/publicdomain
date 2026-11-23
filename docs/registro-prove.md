@@ -1538,3 +1538,4 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - Esito: 8 conferma, 1 nota (raccolta di Kafka), 5 da decidere.
 - Lista 2027: prima uscita verificata 53, anno dell'edizione confermato 94, da confermare 8 (con le 18 voci «non trovata» del primo giro del controllo ancora escluse).
 - Limite trovato: l'esito «nota» della ricerca non mette la nota in pagina (6 opere). Da sistemare con un'approvazione di Marco sui testi delle note.
+- **scheda-autore.yml, primo giro per gli 8 saggisti:** fermato dopo 20 minuti (Gutenberg non rispondeva per Sarton) senza salvare nulla. Corretto: si salva dopo ogni autore, si riprende chi è già fatto, limite 90 minuti. Rilanciato con l'ok di Marco (15:48) per i 10 autori (8 saggisti, Răcăciuni, von den Steinen).

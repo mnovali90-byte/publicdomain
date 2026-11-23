@@ -43,6 +43,8 @@ def main():
         out = {"nota": "Schede proposte (scripts/scheda_autore.py): non sono nelle liste finché Marco non approva.", "autori": {}}
     cache = A.carica_cache()
     for q in os.environ.get("QID", "Q470931").split(","):
+        if (out["autori"].get(q) or {}).get("fatto") == oggi.isoformat():
+            continue                     # già fatta oggi (giro ripreso)
         a = base(q)
         A.arricchisci_gruppo([a], cache, oggi)
         voce = cache.get(q, {})
@@ -56,8 +58,10 @@ def main():
         a["tipo_catalogo"] = [A.TIPO_CATALOGO[p] for p in a["professioni"] if p in A.TIPO_CATALOGO]
         out["autori"][q] = {"scheda": a, "fatto": oggi.isoformat()}
         print(q, a["nome"], "| professioni:", a["professioni"], "| descrizione:", a.get("descrizione"),
-              "| letterario:", a["letterario"], "| opere:", a.get("n_opere"), "| visite:", a.get("visite_12m"))
-    json.dump(out, open(out_p, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+              "| letterario:", a["letterario"], "| opere:", a.get("n_opere"), "| visite:", a.get("visite_12m"), flush=True)
+        # 23/11/2026: si salva dopo ogni autore (il primo giro con 8 autori è finito per tempo senza salvare nulla)
+        json.dump(out, open(out_p, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+        A.salva_cache(cache)
 
 
 if __name__ == "__main__":
