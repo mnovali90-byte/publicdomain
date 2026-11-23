@@ -1572,3 +1572,11 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - Seconda lettura (altra sessione), seme 20261127, 3 voci: Morgan/Light in August trovata e confermata; PARI/Atheist e MUSE/Radetzky non verificabili (pagina caricata via script; blocco anti-robot). Nessuna smentita.
 - Etichette: 2027 63/84/8 (prima 62/85/8); 2028 7/103/65 (prima 1/109/65).
 - Prove 1-9: 0 errori; fotografia: 0 cambi da approvare.
+
+## 2026-11-23 — Modifiche di Marco alla vetrina 2028 (ok alla pubblicazione)
+- Carl Schmitt (Q77148) in data/fuori_classifica.json (iscritto al partito nazista nel 1933, Britannica https://www.britannica.com/print/article/2003862). Fuori dalle vetrine, resta in lista, conteggi e ricerca.
+- Il filtro valeva solo per gli autori europei: aggiunta pagine.opera_in_vetrina, usata dalle pagine dell'anno (libri USA, anche titolo per Google) e dalla home (scelte e riserve, Europa e USA).
+- Nuova prova 5b: nessun autore fuori classifica nelle vetrine. Sulla pagina 2028 di prima l'avrebbe trovato (Schmitt era all'11° posto); ora 0.
+- In vetrina 2028 sale al 12° posto Come fu temprato l'acciaio (Ostrovskij, Q63707), «Da confermare».
+- Nota Thirteen Problems riscritta con il testo di Marco; note di Schmitt e Christie approvate (la prima resta nel registro).
+- Prove 1-9 e 5b: 0 errori; fotografia: 0 cambi. Etichette invariate: 2027 63/84/8, 2028 7/103/65.

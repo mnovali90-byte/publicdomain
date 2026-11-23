@@ -1663,7 +1663,6 @@
   "Q7727278": {
    "titolo": "Il concetto di 'politico' (Der Begriff des Politischen)",
    "esito": "resta",
-   "bozza": true,
    "nota": {
     "it": "Una prima versione era uscita nel 1927 sulla rivista Archiv für Sozialwissenschaft und Sozialpolitik ed è già libera negli USA. Il libro del 1932, rivisto, negli USA si libera nel 2028.",
     "en": "A first version appeared in 1927 in the journal Archiv für Sozialwissenschaft und Sozialpolitik and is already free in the US. The revised 1932 book becomes free in the US in 2028."
@@ -1677,15 +1676,15 @@
      "nome": "Stanford Encyclopedia of Philosophy (Carl Schmitt): nel 1927 la prima versione dell'opera",
      "link": "https://plato.stanford.edu/ENTRiES/schmitt/"
     }
-   ]
+   ],
+   "approvata": "2026-11-23"
   },
   "Q934396": {
    "titolo": "Miss Marple e i tredici problemi (The Thirteen Problems)",
    "esito": "resta",
-   "bozza": true,
    "nota": {
-    "it": "Raccolta di racconti usciti prima su rivista: i primi sei su The Royal Magazine tra il 1927 e il 1928, già liberi negli USA. La raccolta del 1932 negli USA si libera nel 2028.",
-    "en": "Collection of stories first printed in magazines: the first six in The Royal Magazine in 1927–1928, already free in the US. The 1932 collection becomes free in the US in 2028."
+    "it": "In parte usciti prima su rivista: i primi sei racconti su The Royal Magazine tra il 1927 e il 1928, già liberi negli USA. La raccolta del 1932 negli USA si libera nel 2028.",
+    "en": "Partly printed earlier in a magazine: the first six stories appeared in The Royal Magazine in 1927–1928 and are already free in the US. The 1932 collection becomes free in the US in 2028."
    },
    "fonti": [
     {
@@ -1696,7 +1695,8 @@
      "nome": "Collecting Christie: Royal Magazine n. 350, dicembre 1927, The Tuesday Night Club",
      "link": "https://www.collectingchristie.com/post/the-royal-magazine-agatha-christie"
     }
-   ]
+   ],
+   "approvata": "2026-11-23"
   }
  },
  "nota_prima_pubblicazione": "prima_pubblicazione: prima uscita documentata (rivista o editore, con la data), con le fonti. Regola di Marco (23/11/2026): quando c'è, vale quella; i cataloghi confermano ma non la battono (scripts/regole.py, anno_prima_pubblicazione).",

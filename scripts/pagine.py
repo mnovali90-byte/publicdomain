@@ -306,6 +306,12 @@ except Exception:
     FUORI_CLASSIFICA = set()
 
 
+def opera_in_vetrina(o):
+    """Un'opera USA può stare in vetrina solo se nessun suo autore è in data/fuori_classifica.json (23/11/2026, Carl Schmitt).
+    Resta nella lista, nei conteggi e nella ricerca: esce solo da vetrine e classifiche."""
+    return not any(x.get("qid") in FUORI_CLASSIFICA for x in (o.get("autori") or []))
+
+
 def url_pagina(lang, slug=""):
     return f"{SITO}/{PERCORSO[lang]}/{slug + '/' if slug else ''}"
 
@@ -1919,7 +1925,8 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
     # titolo e descrizione per Google: i nomi più cercati
     _au = [cogn(a["nome"]) for a in aut[:3]]
     _op = []
-    for o in opere:
+    vetrina_us = [o for o in opere if opera_in_vetrina(o)]   # data/fuori_classifica.json: fuori dalla vetrina, non dalla lista
+    for o in vetrina_us:
         chi = cogn(o["autori"][0]["nome"]) if o.get("autori") else ""
         if chi in _au:
             continue
@@ -2059,7 +2066,7 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
                    f'<p class="lede" id="pd-us">{T(f"Negli USA conta l&#39;anno della prima uscita: il 1° gennaio {anno} diventano liberi i libri usciti per la prima volta nel {pub}. Per ogni libro diciamo a che punto è il controllo. «Verificato»: la prima uscita (libro, rivista o registrazione) è documentata da due fonti indipendenti o da una scheda del registro americano del copyright, e nessuna fonte indica un&#39;uscita precedente. «Edizione confermata»: una fonte diversa da Wikidata conferma l&#39;anno dell&#39;edizione, ma la prima uscita non è ancora verificata. «Da confermare»: negli altri casi. In ordine di visite alla pagina del libro su Wikipedia in inglese, negli ultimi 12 mesi.", f"In the USA what counts is the year of first publication: on 1 January {anno} books first published in {pub} become free. For each book we say how far the check has got. «Verified»: the first publication (book, magazine or registration) is documented by two independent sources or by a record in the US copyright register, and no source points to an earlier publication. «Edition confirmed»: a source other than Wikidata confirms the year of the edition, but the first publication is not verified yet. «To be confirmed»: all other cases. Ranked by visits to the book\'s English Wikipedia page over the last 12 months.")}</p>\n'
                    '<ol class="rows" style="margin-top:28px">\n')
         crediti_us, visti_us = [], set()
-        for k, o in enumerate(opere[:12]):
+        for k, o in enumerate(vetrina_us[:12]):
             t = (o.get("titolo_it") or o["titolo"]) if it else o["titolo"]
             chi = ", ".join(pulisci(a["nome"]) for a in o.get("autori", [])) or "—"
             v_ = verificati.get(o["qid"]) or ["nd"]

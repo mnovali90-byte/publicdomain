@@ -93,12 +93,14 @@ def pagine_frontespizio(anno):
             if j < len(op) and (q, j) not in scelte_ue and pg.opera_libera_ue(autori[q], op[j], anno):
                 scelte_ue.append((q, j))
                 break
-    scelte_us = [q for q in OPERE_US if q in opere_us and us_ok(q)]
+    # data/fuori_classifica.json: autori tolti dalle vetrine per decisione di Marco (pagine.FUORI_CLASSIFICA, pagine.opera_in_vetrina)
+    scelte_ue = [(q, j) for q, j in scelte_ue if q not in pg.FUORI_CLASSIFICA]
+    scelte_us = [q for q in OPERE_US if q in opere_us and us_ok(q) and pg.opera_in_vetrina(opere_us[q])]
     if not scelte_ue:   # anno nuovo, scelta non aggiornata: i più letti con un'opera
-        cand = sorted((a for a in autori.values() if a.get("letterario") and a.get("opere")), key=lambda a: -(a.get("visite_12m") or 0))
+        cand = sorted((a for a in autori.values() if a.get("letterario") and a.get("opere") and a["wikidata"] not in pg.FUORI_CLASSIFICA), key=lambda a: -(a.get("visite_12m") or 0))
         scelte_ue = [(a["wikidata"], j) for a in cand for j, o in enumerate(a["opere"][:10]) if pg.opera_libera_ue(a, o, anno)][:4]
     if not scelte_us:
-        cand = sorted((o for o in opere_us.values() if us_ok(o["qid"])), key=lambda o: -(o.get("visite_en") or 0))
+        cand = sorted((o for o in opere_us.values() if us_ok(o["qid"]) and pg.opera_in_vetrina(o)), key=lambda o: -(o.get("visite_en") or 0))
         scelte_us = [o["qid"] for o in cand[:3]]
     pag = {}
     for k, (q, i) in enumerate(scelte_ue):

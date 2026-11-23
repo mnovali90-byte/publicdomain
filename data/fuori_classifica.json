@@ -1,6 +1,23 @@
 {
- "nota": "Autori tolti dalle classifiche e dalle vetrine per decisione di Marco. La scheda resta raggiungibile dalla ricerca. Applicato da scripts/pagine.py (campo fuori_classifica) e letto da index.html e dalle pagine del Public Domain Day.",
+ "nota": "Autori tolti dalle classifiche e dalle vetrine per decisione di Marco. La scheda resta raggiungibile dalla ricerca. Applicato da scripts/pagine.py (campo fuori_classifica; per le opere USA pagine.opera_in_vetrina, anche nella home) e letto da index.html e dalle pagine del Public Domain Day.",
  "autori": [
-  {"wikidata": "Q3627696", "nome": "Asvero Gravelli", "dal": "2026-11-19", "motivo": "decisione di Marco: esponente del fascismo intransigente; in cima alla classifica italiana solo per un picco di visite del 9/2/2026 (docs/registro-prove.md)"}
+  {
+   "wikidata": "Q3627696",
+   "nome": "Asvero Gravelli",
+   "dal": "2026-11-19",
+   "motivo": "decisione di Marco: esponente del fascismo intransigente; in cima alla classifica italiana solo per un picco di visite del 9/2/2026 (docs/registro-prove.md)"
+  },
+  {
+   "wikidata": "Q77148",
+   "nome": "Carl Schmitt",
+   "dal": "2026-11-23",
+   "motivo": "decisione di Marco (regola sugli autori nazisti): iscritto al partito nazista nel 1933",
+   "fonti": [
+    {
+     "nome": "Encyclopaedia Britannica, Carl Schmitt: «in 1933 he joined the Nazi Party»",
+     "link": "https://www.britannica.com/print/article/2003862"
+    }
+   ]
+  }
  ]
 }

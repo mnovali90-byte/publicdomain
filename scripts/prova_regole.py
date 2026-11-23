@@ -244,6 +244,26 @@ for x in no5 + nontrovate5:
     print("   ", x)
 errori += no5
 
+# 5b. (23/11/2026, Carl Schmitt) nessun autore di data/fuori_classifica.json nelle vetrine: libri USA delle pagine dell'anno e home
+_fuori = json.load(open(RADICE / "data" / "fuori_classifica.json", encoding="utf-8"))["autori"]
+no5b, viste5b = [], 0
+for f in sorted(list(RADICE.glob("pubblico-dominio-*/index.html")) + list((RADICE / "en").glob("public-domain-*/index.html")) + [RADICE / "index.html", RADICE / "en" / "index.html"]):
+    h = f.read_text(encoding="utf-8")
+    m = re.search(r'id="ix2".*?</ol>', h, re.S)
+    pezzi = [m.group(0)] if m else []
+    m2 = re.search(r"const P=(\[.*?\]), DIRITTI=", h)
+    if m2:
+        pezzi.append(json.dumps([p_.get("a") for p_ in json.loads(m2.group(1))], ensure_ascii=False))
+    for pz in pezzi:
+        viste5b += 1
+        for x in _fuori:
+            if x["nome"] in pz:
+                no5b.append(f"{f.relative_to(RADICE)}: {x['nome']} è in vetrina ma è in data/fuori_classifica.json")
+print(f"5b. Fuori classifica nelle vetrine: {viste5b} vetrine controllate, {len(_fuori)} autori esclusi, presenti: {len(no5b)}")
+for x in no5b:
+    print("   ", x)
+errori += no5b
+
 # ---------------------------------------------------------------- 6. stati scritti sulle schede autore (22/11/2026)
 # scripts/controllo_stati.py rifà da capo, con regole.py e i registri, ogni stato scritto sulle schede generate.
 # Bloccante dal 22/11/2026, da quando le schede usano gli stessi dati e la stessa regola di Già pubblici.
