@@ -1376,3 +1376,11 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
   - regole.autore_visibile, con la gemella autoreVisibile, nasconde solo chi ha «senza_nome».
 - **Finché il giro dei nomi non è passato non si nasconde nessuno:** i numeri delle pagine restano 826 e 790.
 - **Esito:** prove 1-8 a 0, fotografia 0 cambi.
+- **Giro dei nomi (11:02):** tutti e 45 gli autori hanno un nome in qualche lingua, 0 non ne hanno nessuno. Quindi non si nasconde nessuno.
+  - 1 ha anche una traslitterazione: Q6749996 «יהושכר כרכי (קרקובסקי) (Jehoŝua Kraki)»;
+  - per esempio Q20483877 ora è «Өтеп Оңғарбаев» (kazako).
+- **Applicato:**
+  - le liste e le pagine mostrano i nomi originali;
+  - i numeri restano 826 e 790 per il 2027;
+  - nelle schede il «su N» delle classifiche torna a contare anche questi autori (per esempio da «6° su 825» a «6° su 826»).
+- **Esito:** prove 1-8 a 0, fotografia 0 cambi di stato.
