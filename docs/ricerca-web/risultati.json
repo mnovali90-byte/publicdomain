@@ -210,7 +210,8 @@
    "chi": "Claude",
    "blocco": 1,
    "intera": true,
-   "citazione": "Copyright and published, 1931, by Samuel French"
+   "citazione": "Copyright and published, 1931, by Samuel French",
+   "seconda_lettura": "confermata"
   },
   {
    "qid": "Q4190252",
@@ -386,7 +387,8 @@
    "chi": "Claude",
    "blocco": 1,
    "volume": 3,
-   "citazione": "(Mchn./Zürich 1932)"
+   "citazione": "(Mchn./Zürich 1932)",
+   "seconda_lettura": "non verificabile (pagina anti-bot)"
   },
   {
    "qid": "Q1070729",
@@ -883,15 +885,16 @@
    "fonte": "Marxists Internet Archive, Emma Goldman",
    "link": "https://www.marxists.org/reference/archive/goldman/works/1931/living-my-life/vol-1-chapter-1.html",
    "tipo": "volume",
-   "anno": 1931,
+   "anno": null,
    "gruppo": "marxists",
    "lingua": "en",
-   "nota": "volume 1 1931",
+   "nota": "volume 1 1931 — seconda lettura (23/11/2026): «Written» è l'anno di scrittura, non di uscita",
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 1,
    "volume": 1,
-   "citazione": "Written: 1931 (Volume 1)"
+   "citazione": "Written: 1931 (Volume 1)",
+   "seconda_lettura": "confermata con riserva: non dice l'anno di uscita"
   },
   {
    "qid": "Q2836696",
@@ -907,7 +910,8 @@
    "chi": "Claude",
    "blocco": 2,
    "intera": true,
-   "citazione": "Grosset & Dunlap ©1931"
+   "citazione": "Grosset & Dunlap ©1931",
+   "seconda_lettura": "non verificabile (pagina anti-bot)"
   },
   {
    "qid": "Q7460836",
@@ -1225,7 +1229,8 @@
    "chi": "Claude",
    "blocco": 2,
    "intera": true,
-   "citazione": "1931, J. Kösel & F. Pustet"
+   "citazione": "1931, J. Kösel & F. Pustet",
+   "seconda_lettura": "confermata"
   },
   {
    "qid": "Q1214380",
@@ -1339,15 +1344,16 @@
    "fonte": "NSA, Center for Cryptologic History",
    "link": "https://www.nsa.gov/History/Cryptologic-History/Historical-Events/Article-View/Article/2740622/the-black-chamber/",
    "tipo": "prima_pubblicazione",
-   "anno": 1931,
+   "anno": null,
    "gruppo": "nsa",
    "lingua": "en",
-   "nota": "prima a puntate sul Saturday Evening Post, poi il libro",
+   "nota": "prima a puntate sul Saturday Evening Post, poi il libro — seconda lettura (23/11/2026): la pagina non dà l'anno; l'unico anno è il 1932 (vendite)",
    "data_ricerca": "2026-11-23",
    "chi": "Claude",
    "blocco": 2,
    "intera": true,
-   "citazione": "It appeared first in serial form in The Saturday Evening Post, then as a book, The American Black Chamber."
+   "citazione": "It appeared first in serial form in The Saturday Evening Post, then as a book, The American Black Chamber.",
+   "seconda_lettura": "non confermata sull'anno"
   },
   {
    "qid": "Q7713437",
