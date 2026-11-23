@@ -1,6 +1,6 @@
 # I giri automatici del sito
 
-Bozza del 22/11/2026, terza versione (con due revisioni di ChatGPT), **da approvare da Marco**. Finché non è approvata, i giri restano quelli di oggi (in fondo, «Com'è oggi»).
+Terza versione del 22/11/2026 (con due revisioni di ChatGPT), **approvata da Marco il 23/11/2026 come provata quel giorno** (prova a vuoto dei giri 4 e 5, docs/registro-prove.md). Vale quanto scritto in «Come è stato provato il 23/11/2026», più sotto: i punti non provati restano da provare.
 Se un giro cambia, si cambia anche questa pagina.
 
 ## L'idea
@@ -134,7 +134,13 @@ Oggi `scripts/regole.py` ha le regole per autore (durate per paese, Spagna, Fran
 - **Fotografia dello stato** (`scripts/confronta_fotografia.py --giro`) nei giri che rifanno le pagine: aggiorna, Già pubblici, anniversari, stima. Se un'opera o un autore che c'era già cambia stato senza un motivo atteso, il giro non pubblica. Salva solo `docs/cambi-da-approvare.md`, con l'elenco e l'impronta dei cambi. Per approvare, l'impronta si scrive in `data/cambi-approvati.txt`. L'ultima fotografia pubblicata sta in `data/fotografia.json.gz`.
 - **I controlli bloccano davvero:** nel giro aggiorna il salvataggio parte solo se i controlli sono passati. Già pubblici riparte solo dopo uno Storico finito bene.
 
-## Com'è oggi (fino all'approvazione)
+## Come è stato provato il 23/11/2026 (approvato da Marco)
+
+- **Giri 4 e 5** (`.github/workflows/capodanno.yml`): provati a vuoto su una copia, con data finta per Python e browser. Orari giusti (1° e 7 gennaio, 00:05 ora italiana; a gennaio vale sempre l'ora solare). Passi: Già pubblici (`storico/pagina.py`), pagine (`scripts/pagine.py`), controlli (`prova_regole.py`, `controllo_frasi.py`), fotografia. Esito: 0 errori; il 1° gennaio 9325 cambi attesi e 0 da approvare, il 7 gennaio 0 cambi.
+- **Non fatti da capodanno.yml, quindi non provati:** giro 4, punto 2 (lista della Duke University: non c'è un giro, va lanciata a mano quando esce) e punto 4 (lista di due anni dopo: la fa il giro «Aggiorna autori» del 1° gennaio alle 6:17 ora italiana, `aggiorna.yml`).
+- **Se il giro fallisce:** non riparte; il sito resta com'era, mentre home e radar cambiano fase da soli nel browser. Avviso solo con l'email di GitHub, se le notifiche sono accese; se GitHub salta il giro non arriva niente. Rimedio: pulsante «Run workflow». Il 1° e il 7 gennaio alle 9 Marco controlla il sito.
+
+## Com'è oggi
 
 | Giro | Quando |
 |---|---|
