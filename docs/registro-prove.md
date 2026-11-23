@@ -1463,6 +1463,6 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
   - Wikidata: tutte hanno una data (P577); 26 hanno la rivista di prima uscita (P1433) e 79 hanno edizioni datate;
   - bibliografia nella lingua originale: 71 opere con un anno (BnF 35, K10plus 30, BNE 5, SBN 1).
 - **Incrocio sulle 111:** 20 conferma, 91 da decidere (prima dei dati nuovi: 19 e 92). Collaudo sulle 55: invariato, 2 giuste e 0 sbagliate.
-  - Giudizio: la bibliografia nazionale dà l'anno del libro, non della prima uscita, quindi da sola non conferma (è il caso Black Swan). Esempio: Der Weg zurück, K10plus 1931, ma uscito a puntate sulla Vossische Zeitung prima.
+  - Giudizio: la bibliografia nazionale dà l'anno del libro, non della prima uscita, quindi da sola non conferma (è il caso Black Swan). Esempio: Der Weg zurück, K10plus 1931, ma nelle decisioni a mano del 23/11 è «nota» perché era uscito prima un'altra forma dell'opera.
   - La rivista su Wikidata c'è per poche opere.
 - **Dehkhoda:** Encyclopaedia Iranica letta su iranicaonline.org (26 febbraio 1956). Scheda da costruire con scripts/scheda_autore.py e .github/workflows/scheda-autore.yml (parte con docs/registro/passo-scheda.txt); non lanciato.
