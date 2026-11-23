@@ -1522,6 +1522,46 @@
     "it": "Scritto nel 1931, pubblicato per la prima volta nel 1936 in «La realidad y el deseo»: negli USA si libera nel 2032.",
     "en": "Written in 1931, first published in 1936 in «La realidad y el deseo»: it becomes free in the US in 2032."
    }
+  },
+  "Q4190252": {
+   "titolo": "Green Grow the Lilacs (Riggs)",
+   "esito": "tolta",
+   "prima": 1930,
+   "dove": {
+    "it": "registrata da inedita al Copyright Office il 30 agosto 1930",
+    "en": "registered as an unpublished work with the Copyright Office on 30 August 1930"
+   },
+   "fonti": [
+    {
+     "nome": "Catalog of Copyright Entries 1930, Part 1 Group 3 (Dramatic compositions), voce 4911: «© 1 c. Aug. 30, 1930; D unpub. 7017; Lynn Riggs, Claremore, Okla.»",
+     "link": "https://archive.org/details/catalogofcopyri31libr"
+    }
+   ],
+   "nota": {
+    "it": "Registrata da inedita il 30 agosto 1930 (Catalog of Copyright Entries): con la legge del 1909 il copyright parte dalla registrazione. Negli USA è libera dal 2026.",
+    "en": "Registered as an unpublished work on 30 August 1930 (Catalog of Copyright Entries): under the 1909 Act the copyright runs from registration. Free in the US since 2026."
+   },
+   "deciso": "2026-11-23"
+  },
+  "Q5309555": {
+   "titolo": "Dry September (Faulkner)",
+   "esito": "tolta",
+   "prima": 1930,
+   "dove": {
+    "it": "su Scribner's Magazine, numero di gennaio 1931 pubblicato il 18 dicembre 1930",
+    "en": "in Scribner's Magazine, January 1931 issue published on 18 December 1930"
+   },
+   "fonti": [
+    {
+     "nome": "Catalog of Copyright Entries 1931, Part 2 (Periodicals), voci 8738-8740: «v. 89, 1931, no. 1, Jan. © Dec. 18, 1930; B 98709»",
+     "link": "https://archive.org/details/catalogofcopyrig262libr"
+    }
+   ],
+   "nota": {
+    "it": "Il numero di gennaio 1931 di Scribner's è registrato con data di pubblicazione 18 dicembre 1930 (Catalog of Copyright Entries). Negli USA è libero dal 2026.",
+    "en": "Scribner's January 1931 issue is registered with publication date 18 December 1930 (Catalog of Copyright Entries). Free in the US since 2026."
+   },
+   "deciso": "2026-11-23"
   }
  },
  "nota_prima_pubblicazione": "prima_pubblicazione: prima uscita documentata (rivista o editore, con la data), con le fonti. Regola di Marco (23/11/2026): quando c'è, vale quella; i cataloghi confermano ma non la battono (scripts/regole.py, anno_prima_pubblicazione).",

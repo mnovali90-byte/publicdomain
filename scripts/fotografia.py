@@ -70,8 +70,16 @@ def fotografia(anno):
                 st["it"][2] = "morte_con_nota_trattato"
             autori[a["wikidata"]] = {"t": a.get("nome"), "lista": Path(f).stem,
                                      "dati": {"morte": morte, "mpf": e_mpf, "paesi": a.get("paesi") or []}, "stato": st}
+    # 23/11/2026: anche le liste USA per anno (data/us-AAAA.json). Prima un'opera tolta da una lista non si vedeva
+    # (Dry September non era in Già pubblici). Una lista è «l'opera si libera il 1° gennaio di quell'anno».
+    liste_usa = {}
+    for f in sorted(glob.glob(str(RADICE / "data" / "us-[0-9]*.json"))):
+        y = int(re.search(r"(\d{4})", Path(f).stem).group(1))
+        for o in leggi(f, {}).get("opere", []):
+            liste_usa.setdefault(o["qid"], {"t": o.get("titolo"), "dati": {"lista": y},
+                                            "stato": {"us": ["si" if y <= anno else "dal", y, "lista_usa"]}})
     return {"fatta": date.today().isoformat(), "anno": anno, "regole": versione_regole(),
-            "n_opere": len(opere), "n_autori": len(autori), "opere": opere, "autori": autori}
+            "n_opere": len(opere), "n_autori": len(autori), "opere": opere, "autori": autori, "liste_usa": liste_usa}
 
 
 if __name__ == "__main__":

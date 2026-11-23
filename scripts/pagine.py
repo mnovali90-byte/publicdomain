@@ -397,8 +397,9 @@ def blocco_verifica(a, lang):
         return [f'<p class="sotto">{esc(t)}</p>\n']
     if v["esito"] == "nazionale":
         n = v.get("nazionale", {})
-        t = (f"Anno di morte controllato a mano su una fonte del paese dell'autore ({n.get('fonte')}), perché le altre fonti non concordavano." if it
-             else f"Year of death checked by hand against a source from the author's country ({n.get('fonte')}), because the other sources disagreed.")
+        # 23/11/2026 (Marco): frase uguale per tutte le verifiche a mano, seguita dalle fonti
+        t = (f"Anno di morte controllato a mano su fonti terze: {n.get('fonte')}." if it
+             else f"Year of death checked by hand against third-party sources: {n.get('fonte')}.")
         return [f'<p class="sotto">{esc(t)} <a href="{esc(n.get("url", ""))}" rel="noopener">{"Fonte" if it else "Source"}</a></p>\n']
     if v["esito"] in ("maggioranza", "corretto"):
         au = v.get("autorevoli") or {}

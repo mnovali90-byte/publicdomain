@@ -25,7 +25,7 @@ RADICE = Path(__file__).resolve().parent.parent
 BASE = RADICE / "data" / "fotografia.json.gz"
 APPROVATI = RADICE / "data" / "cambi-approvati.txt"
 ELENCO = RADICE / "docs" / "cambi-da-approvare.md"
-BLOCCANO = ("dati", "regola", "non spiegato", "tolta in massa")
+BLOCCANO = ("dati", "regola", "non spiegato", "tolta in massa", "tolta dalla lista")
 from collections import Counter
 
 
@@ -35,13 +35,16 @@ def carica(p):
 
 def confronta(a, b):
     out = []
-    for tipo in ("opere", "autori"):
+    for tipo in ("opere", "autori", "liste_usa"):
+        if tipo not in a or tipo not in b:    # fotografia vecchia senza le liste USA (prima del 23/11/2026)
+            continue
         A, B = a[tipo], b[tipo]
         for q in sorted(set(A) | set(B)):
             if q not in A or q not in B:
                 out.append({"tipo": tipo, "q": q, "t": (B.get(q) or A.get(q))["t"], "paese": "-",
                             "prima": "assente" if q not in A else "c'era", "dopo": "assente" if q not in B else "c'è",
-                            "perche": "nuova" if q not in A else "tolta"})
+                            # un'opera che esce da una lista USA cambia il sito: va approvata (23/11/2026)
+                            "perche": "nuova" if q not in A else ("tolta dalla lista" if tipo == "liste_usa" else "tolta")})
                 continue
             x, y = A[q], B[q]
             for c in y["stato"]:
