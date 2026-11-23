@@ -11,6 +11,7 @@ hanno etichette italiane: meglio meno contenuto che contenuto in due lingue.
 """
 from controlli import problemi as problemi_conteggio  # noqa: E402
 import regole as R  # noqa: E402  (regole per paese in un posto solo)
+from stati_usa import stati_anno as stati_usa_anno  # noqa: E402  (tre stati della lista USA)
 import datetime
 import glob
 import html
@@ -1905,7 +1906,9 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
     es_nomi = [pulisci(a["nome"]) for a in _letterari(pacchetto_es or {}, "it")[:3]]
     opere = (opere_us or {}).get("opere", [])
     n_us = len(opere)
-    n_us_ok = sum(1 for o in opere if (verificati.get(o["qid"]) or ["nd"])[0] == "ok" or confermato_registro(o["qid"], (opere_us or {}).get("anno_pubblicazione")))
+    # tre stati della lista USA (docs/criteri.md; ok di Marco del 23/11/2026): calcolati qui con regole.stato_usa_lista
+    stati_us = stati_usa_anno(anno) if opere else {}
+    n_st = {k: sum(1 for o in opere if stati_us.get(o["qid"], "da_confermare") == k) for k in ("verificata", "edizione", "da_confermare")}
     cogn = lambda nome: pulisci(nome).split()[-1] if nome else ""
 
     # titolo e descrizione per Google: i nomi più cercati
@@ -2011,7 +2014,7 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
         nums.append((n_es, T("scrittori liberi in Spagna", "writers free in Spain"), T(f"morti nel {morti_es}", f"died in {morti_es}"), f"{app}#/{anno}"))
     if n_us:
         nums.append((n_us, T("libri liberi negli USA", "books free in the USA"),
-                     T(f"pubblicati nel {pub} · {n_us_ok} con l'anno confermato", f"published in {pub} · {n_us_ok} with the year confirmed"), "#ix2"))
+                     T(f"usciti nel {pub} · {n_st['verificata']} verificati, {n_st['edizione']} con l'edizione confermata", f"published in {pub} · {n_st['verificata']} verified, {n_st['edizione']} edition confirmed"), "#ix2"))
     out.append('<div class="nums">' + "".join(f'<a href="{h}"><span class="n">{n_(x)}</span><span class="c">{esc(c)}</span><span class="m">{esc(m)}</span></a>'
                                               for x, c, m, h in nums) + "</div>\n")
 
@@ -2048,21 +2051,22 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
     # 3. i libri USA
     if opere:
         out.append(f'<section class="sec ix" id="ix2">\n<div class="sh m"><h2>{T(f"I libri del {pub}", f"The books of {pub}")}</h2><span>{T("Stati Uniti · 95 anni dall’uscita", "United States · 95 years from publication")}</span></div>\n'
-                   f'<p class="lede" id="pd-us">{T(f"Negli USA conta l&#39;anno di pubblicazione: il 1° gennaio diventano liberi i libri usciti nel {pub}. Diciamo «confermato» solo quando l&#39;anno è confermato da una fonte diversa da Wikidata (registro del copyright americano, biblioteche nazionali, Open Library, Library of Congress); per gli altri scriviamo «anno da confermare». In ordine di visite alla pagina del libro su Wikipedia in inglese, negli ultimi 12 mesi.", f"In the USA what counts is the year of publication: on 1 January books published in {pub} become free. We say «confirmed» only when a source other than Wikidata confirms the year (the US copyright register, national libraries, Open Library, Library of Congress); for the others we say «year to be confirmed». Ranked by visits to the book\'s English Wikipedia page over the last 12 months.")}</p>\n'
+                   f'<p class="lede" id="pd-us">{T(f"Negli USA conta l&#39;anno della prima uscita: il 1° gennaio {anno} diventano liberi i libri usciti per la prima volta nel {pub}. Per ogni libro diciamo a che punto è il controllo. «Verificato»: la prima uscita (libro, rivista o registrazione) è documentata da due fonti indipendenti o da una scheda del registro americano del copyright, e nessuna fonte indica un&#39;uscita precedente. «Edizione confermata»: una fonte diversa da Wikidata conferma l&#39;anno dell&#39;edizione, ma la prima uscita non è ancora verificata. «Da confermare»: negli altri casi. In ordine di visite alla pagina del libro su Wikipedia in inglese, negli ultimi 12 mesi.", f"In the USA what counts is the year of first publication: on 1 January {anno} books first published in {pub} become free. For each book we say how far the check has got. «Verified»: the first publication (book, magazine or registration) is documented by two independent sources or by a record in the US copyright register, and no source points to an earlier publication. «Edition confirmed»: a source other than Wikidata confirms the year of the edition, but the first publication is not verified yet. «To be confirmed»: all other cases. Ranked by visits to the book\'s English Wikipedia page over the last 12 months.")}</p>\n'
                    '<ol class="rows" style="margin-top:28px">\n')
         crediti_us, visti_us = [], set()
         for k, o in enumerate(opere[:12]):
             t = (o.get("titolo_it") or o["titolo"]) if it else o["titolo"]
             chi = ", ".join(pulisci(a["nome"]) for a in o.get("autori", [])) or "—"
             v_ = verificati.get(o["qid"]) or ["nd"]
-            if confermato_registro(o["qid"], pub):   # anno deciso con le fonti nel registro delle opere
-                v_ = ["ok"]
-            if v_[0] == "ok":
-                badge = esc(T(f"{pub} confermato", f"{pub} confirmed"))
-            elif v_[0] == "parziale":   # uscito a puntate fino a un anno dopo: libero per intero più tardi
-                badge = f'<span class="tbd">{esc(T(f"a puntate fino al {v_[1]}", f"serialized until {v_[1]}"))}</span>'
+            st_ = stati_us.get(o["qid"], "da_confermare")
+            if st_ == "verificata":
+                badge = esc(T("Verificato", "Verified"))
+            elif st_ == "edizione":
+                badge = esc(T("Edizione confermata", "Edition confirmed"))
             else:
-                badge = f'<span class="tbd">{esc(T("anno da confermare", "year to be confirmed"))}</span>'
+                badge = f'<span class="tbd">{esc(T("Da confermare", "To be confirmed"))}</span>'
+            if v_[0] == "parziale" and len(v_) > 1:   # uscito a puntate fino a un anno dopo: libero per intero più tardi
+                badge += f'<br><span class="tbd">{esc(T(f"a puntate fino al {v_[1]}", f"serialized until {v_[1]}"))}</span>'
             # ritratto del primo autore che ne ha uno (le copertine tipografiche non aggiungevano nulla: Marco, 21/11/2026)
             fa = next((a for a in o.get("autori", []) if (a.get("foto") or {}).get("url")), None)
             df = ""
@@ -2078,7 +2082,7 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
                 badge += f'<br><span class="tbd">{esc(nu)}</span>'
             out.append(f'<li class="row"{df} data-i="{esc(iniziali_nome(chi.split(", ")[0]))}"><span class="no">{k + 1:02d}</span>'
                        f'<span class="nm"><a href="{app}#/opera/{o["qid"]}">{esc(t)}</a></span><span class="mt">{esc(chi)}<br>{badge}</span></li>\n')
-        out.append(f'</ol>\n<a href="{app}#/us/{anno}" class="more">{T(f"Tutti i {n_us} libri: {n_us_ok} confermati, {n_us - n_us_ok} da confermare →", f"All {n_us} books: {n_us_ok} confirmed, {n_us - n_us_ok} to be confirmed →")}</a>\n')
+        out.append(f'</ol>\n<a href="{app}#/us/{anno}" class="more">{T(f"Tutti i {n_us} libri: {n_st['verificata']} con la prima uscita verificata, {n_st['edizione']} con l&#39;anno dell&#39;edizione confermato, {n_st['da_confermare']} da confermare →", f"All {n_us} books: {n_st['verificata']} with the first publication verified, {n_st['edizione']} with the edition year confirmed, {n_st['da_confermare']} to be confirmed →")}</a>\n')
         if crediti_us:
             out.append(f'<p class="cred">{T("Ritratti degli autori da Wikimedia Commons", "Authors\' portraits from Wikimedia Commons")} — {" · ".join(crediti_us)}</p>\n')
         out.append("</section>\n")

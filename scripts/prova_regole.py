@@ -333,8 +333,10 @@ for f in sorted((RADICE / "data").glob("us-[0-9][0-9][0-9][0-9].json")):
             nota = (x.get("nota") or {}).get(lang)
             if nota and nota not in riga:
                 no8.append(f"pagina {an} ({lang}): {o['qid']} senza la nota del registro")
-            if anno_l is not None and str(anno_l) not in re.sub(r"<[^>]+>", " ", riga):
-                no8.append(f"pagina {an} ({lang}): {o['qid']} non mostra l'anno del registro {anno_l}")
+            # dal 23/11/2026 l'etichetta non ripete l'anno (tre stati, docs/criteri.md): un anno deciso nel registro
+            # non può comparire come «Da confermare»
+            if anno_l is not None and not re.search(r"Verificato|Verified|Edizione confermata|Edition confirmed", riga):
+                no8.append(f"pagina {an} ({lang}): {o['qid']} ha l'anno deciso nel registro ({anno_l}) ma compare «da confermare»")
 # schede autore: anno nella tabella delle opere e nota
 import pagine as _pg  # noqa: E402
 for f in sorted((RADICE / "data").glob("[0-9][0-9][0-9][0-9].json")):
