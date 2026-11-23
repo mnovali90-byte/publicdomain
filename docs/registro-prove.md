@@ -1095,3 +1095,22 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - **Esito:** codici Open Library letti: 15.641 per 12.247 persone. Poi lo scaricamento da archive.org (ol_dump_works_2026-10-31) è stato annullato dopo 8 minuti, senza messaggi d'errore: il passo risulta «cancelled». La causa non si vede nel log; un annullamento a mano non si può escludere.
 - **Correzione (in locale, non lanciata):** lo script stampa ogni minuto quanto ha scaricato e lo spazio libero. Se la velocità resta sotto 1 MB/s per 2 minuti, curl riprova e riprende da dove era arrivato.
 - **Raccolta «fonti delle opere 2027-2028»:** finita (giro del 22/11, 188 minuti), 2.003 opere su 2.003, 967 trovate in almeno un catalogo, nessun errore di rete. L'analisi è al controllo programmato delle 00:50 UTC.
+
+## 23/11/2026 notte — Verifica delle opere 2027-2028: primo rapporto (docs/da-decidere-opere.md)
+- **Incrocio:**
+  - un'edizione con stesso titolo e stesso autore prova che l'opera era già uscita in quell'anno;
+  - per gli USA contano solo le edizioni entro il 1930, quando Wikidata non dà l'anno o ne dà uno più tardo;
+  - per l'Europa contano le persone con un ruolo scritto nel catalogo (autore, collaboratore, illustratore, musica), presenti nella prima edizione (anno di Wikidata o prima edizione del catalogo, ±1), non già su Wikidata, morte dopo l'autore e non ancora libere oggi.
+- **Europa: 33 casi.**
+  - Confermati con fonti web, 5:
+    - Ferdinand: il testo è di Munro Leaf, morto nel 1976;
+    - Trent's Own Case: coautore H. Warner Allen;
+    - I Am a Camera: commedia tratta da Isherwood;
+    - Four Saints: musica di Thomson;
+    - Honk the Moose: illustrazioni di Wiese;
+    - più Shepard, già confermato.
+  - Illustratori della prima edizione con una sola fonte: 13.
+  - Incerto: 1 (Tribulations, Farrère e Méré).
+  - Scartati: 36 attori e produttori senza ruolo; 4 traduzioni o adattamenti presi per prima edizione.
+- **USA: 130 opere** con un'edizione entro il 1930 nei cataloghi ma non su Wikidata. Due cataloghi indipendenti d'accordo per 62, uno solo per 68. Tra le 68 ci sono trappole: Gatsby e Gentlemen Prefer Blondes nelle schede dei riduttori teatrali.
+- **Niente cambiato sul sito.**
