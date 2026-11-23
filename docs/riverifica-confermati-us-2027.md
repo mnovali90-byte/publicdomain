@@ -3,38 +3,25 @@
 Solo rapporto: niente cambia nel sito. Opere segnate «ok» il 20/11/2026 e ancora in lista, ripassate per `regole.incrocio_opera` con la regola del 23/11/2026 (per confermare serve una prima pubblicazione documentata).
 
 - Opere: 111
-- conferma: 32
-- da decidere: 77
-- nota: 2
+- conferma: 41
+- da decidere: 63
+- esce: 2
+- nota: 5
 - «Già a mano»: l'opera è anche fra le decisioni a mano del 23/11/2026 (data/verifiche_opere.json), che valgono più della regola.
 
 | Esito | Opera | Perché | Visite (en) | Già a mano | Fonti provate il 20/11 |
 |---|---|---|---|---|---|
 | da decidere | La via del ritorno (Q1197989) | un anno più vecchio senza due fonti indipendenti d'accordo, o puntate su più anni | 31413 | sì | cce, wikipedia |
 | da decidere | La chiave di vetro (Q6035197) | un anno più vecchio senza due fonti indipendenti d'accordo, o puntate su più anni | 24371 | sì | cce, wikipedia, isfdb |
-| da decidere | The Sleepwalkers (Q1216006) | meno di due fonti indipendenti sull'anno | 13905 |  | cce, k10plus, wikipedia, isfdb |
 | da decidere | If It Had Happened Otherwise (Q5990586) | meno di due fonti indipendenti sull'anno | 10516 |  | cce, wikipedia, isfdb |
 | da decidere | Aforismi di Zürau (Q1141993) | meno di due fonti indipendenti sull'anno | 8470 |  | cce, k10plus, wikipedia, isfdb |
-| da decidere | Living My Life (Q3290152) | meno di due fonti indipendenti sull'anno | 7493 |  | cce, wikipedia |
 | da decidere | A Little Fable (Q1746433) | meno di due fonti indipendenti sull'anno | 5230 |  | cce, k10plus, wikipedia, isfdb |
 | da decidere | Il ranch delle ombre (Q2836696) | meno di due fonti indipendenti sull'anno | 4917 |  | cce, wikipedia, isfdb |
-| da decidere | Shadows on the Rock (Q7460836) | meno di due fonti indipendenti sull'anno | 4804 |  | cce, wikipedia, isfdb |
-| da decidere | Matassa ingarbugliata (Q4659979) | meno di due fonti indipendenti sull'anno | 4664 |  | cce, wikipedia, isfdb |
-| da decidere | Fabian (Q573765) | meno di due fonti indipendenti sull'anno | 4612 |  | cce, wikipedia, isfdb |
 | da decidere | With Mystics and Magicians in Tibet (Q112276362) | un anno più vecchio senza due fonti indipendenti d'accordo, o puntate su più anni | 4365 | sì | cce, wikipedia, isfdb |
-| da decidere | Swallowdale (Q3506429) | meno di due fonti indipendenti sull'anno | 4187 |  | cce, wikipedia, isfdb |
-| da decidere | The Sands of Windee (Q119144545) | meno di due fonti indipendenti sull'anno | 3792 |  | cce, wikipedia, isfdb |
-| da decidere | The Secret of Red Gate Farm (Q2836721) | meno di due fonti indipendenti sull'anno | 3781 |  | cce, wikipedia, isfdb |
-| da decidere | Tecnica del colpo di Stato (Q43578331) | meno di due fonti indipendenti sull'anno | 3719 |  | cce, bnf, wikipedia, isfdb |
-| da decidere | Proust (Beckett) (Q7252252) | meno di due fonti indipendenti sull'anno | 3643 |  | cce, wikipedia, isfdb |
+| da decidere | Proust (Beckett) (Q7252252) | una sola fonte indica un'uscita più vecchia (1930) | 3643 |  | cce, wikipedia, isfdb |
 | da decidere | Pietro il Lettone (Q1885291) | meno di due fonti indipendenti sull'anno | 3639 |  | cce, bnf, wikipedia, isfdb |
-| da decidere | The last one at the scaffold (Q1214380) | meno di due fonti indipendenti sull'anno | 3547 |  | cce, k10plus, wikipedia, isfdb |
 | da decidere | Back Street (Q2878373) | meno di due fonti indipendenti sull'anno | 3366 |  | cce, wikipedia, isfdb |
 | da decidere | Un messaggio dell'imperatore (Q1306780) | solo cataloghi o una fonte danno un anno più tardo | 3262 |  | cce, k10plus, wikipedia, isfdb |
-| da decidere | Tarzan the Invincible (Q3981235) | un anno più vecchio senza due fonti indipendenti d'accordo, o puntate su più anni | 3017 |  | cce, wikipedia |
-| da decidere | The American Black Chamber (Q7713437) | meno di due fonti indipendenti sull'anno | 2659 |  | cce, wikipedia, isfdb |
-| da decidere | Gog (Q3109849) | un anno più vecchio senza due fonti indipendenti d'accordo, o puntate su più anni | 2631 |  | cce, wikipedia, isfdb |
-| da decidere | Cartucho (Q5047445) | meno di due fonti indipendenti sull'anno | 2629 |  | cce, wikipedia, isfdb |
 | da decidere | Markéta Lazarová (Q6770866) | meno di due fonti indipendenti sull'anno | 2500 |  | cce, wikipedia, isfdb |
 | da decidere | Tales from the Vienna Woods (Q11247830) | meno di due fonti indipendenti sull'anno | 2486 |  | cce, k10plus, wikipedia, isfdb |
 | da decidere | The Earth Gods (Q25091412) | meno di due fonti indipendenti sull'anno | 2397 |  | cce, wikipedia, isfdb |
@@ -93,9 +80,10 @@ Solo rapporto: niente cambia nel sito. Opere segnate «ok» il 20/11/2026 e anco
 | conferma | Un messaggio dagli spiriti (Q571244) | prima pubblicazione documentata | 55848 |  | cce, wikipedia, isfdb |
 | conferma | Santuario (Q1212765) | prima pubblicazione documentata | 48896 |  | cce, wikipedia, isfdb |
 | conferma | The Joy of Cooking (Q2917079) | prima pubblicazione documentata | 41756 |  | cce, wikipedia, isfdb |
-| conferma | Green Grow the Lilacs (Q4190252) | prima pubblicazione documentata | 20523 |  | cce, wikipedia, isfdb |
+| esce | Green Grow the Lilacs (Q4190252) | registrata da inedita nel 1930 (CCE) | 20523 |  | cce, wikipedia, isfdb |
 | conferma | The Solar Anus (Q7765142) | prima pubblicazione documentata | 15488 |  | cce, bnf, wikipedia, isfdb |
 | conferma | Fuoco fatuo (Q887062) | prima pubblicazione documentata | 14622 |  | cce, bnf, wikipedia, isfdb |
+| nota | The Sleepwalkers (Q1216006) | volume 3 uscito nel 1932: libero dal 2028 | 13905 |  | cce, k10plus, wikipedia, isfdb |
 | conferma | Volo di notte (Q1070729) | prima pubblicazione documentata | 13747 |  | cce, bnf, wikipedia, isfdb |
 | conferma | Cinque piste false (Q2564588) | prima pubblicazione documentata | 10592 |  | cce, wikipedia, isfdb |
 | conferma | Un'impiccagione (Q2020355) | prima pubblicazione documentata | 10533 |  | cce, wikipedia, isfdb |
@@ -103,15 +91,28 @@ Solo rapporto: niente cambia nel sito. Opere segnate «ok» il 20/11/2026 e anco
 | conferma | L'ammiraglio alla deriva (Q265042) | prima pubblicazione documentata | 9800 |  | cce, wikipedia, isfdb |
 | nota | Il volto nell'abisso (Q3228173) | uscita prima solo una parte | 9251 |  | cce, wikipedia, isfdb |
 | conferma | The Black Stone (Q7718449) | prima uscita 1931 da isfdb, wiki | 8414 |  | cce, wikipedia, isfdb |
+| nota | Living My Life (Q3290152) | volume 2 da verificare (1931 contro 1934) | 7493 |  | cce, wikipedia |
 | conferma | Police at the Funeral (Q3210396) | prima pubblicazione documentata | 7417 |  | cce, wikipedia, isfdb |
 | conferma | La casa misteriosa lassù nella nebbia (Q7766907) | prima uscita 1931 da isfdb, wiki | 7375 |  | cce, wikipedia, isfdb |
 | conferma | Il castello del cappellaio (Q2498251) | prima pubblicazione documentata | 7285 |  | cce, wikipedia, isfdb |
 | conferma | Ogni passione spenta (Q3881234) | prima pubblicazione documentata | 6210 |  | cce, wikipedia, isfdb |
-| conferma | Dry September (Q5309555) | prima pubblicazione documentata | 5723 |  | cce, wikipedia, isfdb |
+| esce | Dry September (Q5309555) | numero registrato nel 1930 (CCE): è la data di pubblicazione | 5723 |  | cce, wikipedia, isfdb |
 | conferma | Lo! (Q6663021) | prima pubblicazione documentata | 5625 |  | cce, wikipedia, isfdb |
 | conferma | I figli della notte (Q7722509) | prima uscita 1931 da isfdb, wiki | 4871 |  | cce, wikipedia, isfdb |
+| conferma | Shadows on the Rock (Q7460836) | prima pubblicazione documentata | 4804 |  | cce, wikipedia, isfdb |
+| conferma | Matassa ingarbugliata (Q4659979) | prima pubblicazione documentata | 4664 |  | cce, wikipedia, isfdb |
+| conferma | Fabian (Q573765) | prima pubblicazione documentata | 4612 |  | cce, wikipedia, isfdb |
+| conferma | Swallowdale (Q3506429) | prima pubblicazione documentata | 4187 |  | cce, wikipedia, isfdb |
+| conferma | The Sands of Windee (Q119144545) | prima pubblicazione documentata | 3792 |  | cce, wikipedia, isfdb |
+| conferma | The Secret of Red Gate Farm (Q2836721) | prima pubblicazione documentata | 3781 |  | cce, wikipedia, isfdb |
+| conferma | Tecnica del colpo di Stato (Q43578331) | prima pubblicazione documentata | 3719 |  | cce, bnf, wikipedia, isfdb |
 | conferma | Il racconto di Satampra Zeiros (Q7767973) | prima uscita 1931 da isfdb, wiki | 3561 |  | cce, wikipedia, isfdb |
+| conferma | The last one at the scaffold (Q1214380) | prima pubblicazione documentata | 3547 |  | cce, k10plus, wikipedia, isfdb |
 | conferma | The Return of the Sorcerer (Q7760465) | prima uscita 1931 da isfdb, wiki | 3392 |  | cce, wikipedia, isfdb |
+| nota | Tarzan the Invincible (Q3981235) | uscita prima solo una parte | 3017 |  | cce, wikipedia |
+| conferma | The American Black Chamber (Q7713437) | prima pubblicazione documentata | 2659 |  | cce, wikipedia, isfdb |
+| conferma | Gog (Q3109849) | prima pubblicazione documentata | 2631 |  | cce, wikipedia, isfdb |
+| conferma | Cartucho (Q5047445) | prima pubblicazione documentata | 2629 |  | cce, wikipedia, isfdb |
 | conferma | Il miracolo di padre Malachia (Q5437626) | prima uscita 1931 da cce, isfdb, wiki | 1343 |  | cce, wikipedia, isfdb |
 | conferma | Terra Incognita (Q4050857) | prima uscita 1931 da rivista, wiki | 1037 |  | cce, wikipedia, isfdb |
 | conferma | Alleys of Peril (Q4732223) | prima uscita 1931 da isfdb, wiki | 273 |  | cce, wikipedia, isfdb |

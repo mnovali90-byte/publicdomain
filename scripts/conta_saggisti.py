@@ -40,15 +40,22 @@ def cerca(morte):
                                    "opere_wikidata": int(r["opere"]["value"])})
             if nome not in x["professioni"]:
                 x["professioni"].append(nome)
-        time.sleep(2)
+        time.sleep(5)
     qids = sorted(out)
     for i in range(0, len(qids), 50):   # 50 per volta: con 200 Wikidata non rispondeva (giro del 23/11/2026)
         v = " ".join("wd:" + q for q in qids[i:i + 50])
-        for r in V.sparql(f"""SELECT ?a (COUNT(DISTINCT ?art) AS ?n) WHERE {{ VALUES ?a {{ {v} }}
-                 ?art schema:about ?a ; schema:isPartOf ?w . ?w wikibase:wikiGroup "wikipedia" }} GROUP BY ?a"""):
-            out[r["a"]["value"].rsplit("/", 1)[-1]]["wikipedia"] = int(r["n"]["value"])
-        for r in V.sparql(f"""SELECT DISTINCT ?a WHERE {{ VALUES ?a {{ {v} }} VALUES ?s {{ {' '.join('wd:' + s for s in SCRITTORI_WD)} }} ?a wdt:P106 ?s }}"""):
+        try:   # 23/11/2026: due giri falliti qui (Wikidata non risponde dopo le richieste pesanti): si aspetta e, se non va, si tiene il resto
+            time.sleep(10)
+            for r in V.sparql(f"""SELECT ?a (COUNT(DISTINCT ?art) AS ?n) WHERE {{ VALUES ?a {{ {v} }}
+                     ?art schema:about ?a ; schema:isPartOf ?w . ?w wikibase:wikiGroup "wikipedia" }} GROUP BY ?a"""):
+                out[r["a"]["value"].rsplit("/", 1)[-1]]["wikipedia"] = int(r["n"]["value"])
+        except RuntimeError as e:
+            print("numero di Wikipedia non letto per un gruppo:", str(e)[:120], flush=True)
+        try:
+          for r in V.sparql(f"""SELECT DISTINCT ?a WHERE {{ VALUES ?a {{ {v} }} VALUES ?s {{ {' '.join('wd:' + s for s in SCRITTORI_WD)} }} ?a wdt:P106 ?s }}"""):
             out[r["a"]["value"].rsplit("/", 1)[-1]]["anche_scrittore"] = True
+        except RuntimeError as e:
+            print("professioni da scrittore non lette per un gruppo:", str(e)[:120], flush=True)
         time.sleep(1)
     return out
 

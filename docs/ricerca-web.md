@@ -35,19 +35,24 @@ Una voce per fonte, in `docs/ricerca-web/risultati.json`, lista «voci»:
 | titolo | titolo come nella lista | sì |
 | fonte | nome della fonte | sì |
 | link | indirizzo della pagina letta | sì: senza link la voce non vale |
-| tipo | prima_pubblicazione, parte_prima, raccolta, volume, edizione | sì |
+| tipo | prima_pubblicazione, parte_prima, raccolta, volume, edizione, registrazione | sì |
 | anno | anno che la fonte dà (numero) | sì, se la fonte lo dà |
 | gruppo | chi c'è dietro la fonte (per l'indipendenza) | sì |
 | intera | per prima_pubblicazione: true se era l'opera intera, false se una parte | se si sa |
 | testi_nuovi | per raccolta: true se i testi erano nuovi, false se già usciti | se si sa |
 | volume | per volume: numero del volume | se tipo volume |
+| inedita | per registrazione: true se registrata da inedita (classe D unpub., ecc.) | se tipo registrazione |
 | lingua | lingua di quella uscita (en, fr, de, it, es...) | se si sa |
 | nota | cosa dice la fonte, in parole proprie, una riga | no |
 | data_ricerca, chi | quando e chi ha cercato | sì |
 
+## Registrazione (dal 23/11/2026)
+Con la legge del 1909 il copyright nasce alla pubblicazione o, per le opere inedite, alla registrazione (Copyright Office, Circular 15A). Si cerca la scheda nel Catalog of Copyright Entries (CCE, scansioni su archive.org): per le opere inedite la data «©» della registrazione; per i numeri delle riviste la data «©» del numero, che è la data di pubblicazione (non quella in copertina). Gruppo «cce». Il CCE basta da solo: è il registro ufficiale.
+
 ## Come decide la regola (in codice, regole.fatti_da_ricerca)
+- **Registrazione:** conta la prima tra pubblicazione e registrazione da inedita; se è prima dell'anno della lista → «esce».
 - **Prima uscita:** serve lo stesso anno da due gruppi diversi e nessuna fonte con un anno più vecchio.
 - **Parte uscita prima:** due gruppi; se l'anno è prima della lista → «nota» (resta, con l'avviso), mai «esce» da sola.
 - **Raccolta:** due gruppi d'accordo sui testi già usciti → «esce»; testi nuovi → «nota».
-- **Volumi:** il primo volume dopo l'anno della lista → «sposta».
+- **Volumi:** il primo volume dopo l'anno della lista → «sposta»; prima → «esce». Primo volume nell'anno della lista e altri dopo → «nota» (ogni volume si libera nel suo anno); un volume con fonti in disaccordo → «nota» con quel volume «da verificare».
 - Una sola fonte, o fonti in disaccordo: la voce resta scritta ma l'opera resta «da decidere».

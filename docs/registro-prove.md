@@ -1484,3 +1484,13 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - **Esito:** «corretto», 1956 (Wikidata 1959). Entra da data/morti_corrette.json, come gli altri corretti, quindi resta anche ai giri successivi.
 - **Anche con «poeta» resta solo in «Tutti»:** la descrizione nomina solo mestieri non letterari, quindi la regola vuole almeno 5 opere su Wikidata, e ne ha 2.
 - **Fotografia:** 1 cambio, l'autore nuovo Q470931. Prove 1-8 a 0. Non pubblicato: aspetta l'ok di Marco.
+
+## 23/11/2026 — Regola della registrazione (CCE), volumi in anni diversi, blocco 2, Dehkhoda (verifica a mano)
+- **Registrazione** (decisione di Marco; Circular 15A): conta la prima tra pubblicazione e registrazione da inedita, presa dal CCE; per le riviste vale la data © del numero.
+  - Green Grow the Lilacs: CCE 1930, D unpub. 7017, 30 agosto 1930 → esce.
+  - Dry September: CCE 1931 Periodicals, Scribner's v. 89 n. 1, © 18 dicembre 1930 → esce.
+- **Volumi:** primo volume nell'anno della lista e altri dopo → nota; volume con fonti in disaccordo → nota «da verificare». Casi: The Sleepwalkers (vol. 3 1932), Living My Life (vol. 2 1931 o 1934).
+- **Blocco 2** (docs/ricerca-web/blocco-02-2027.md): 11 conferma, 1 nota, 6 da decidere; fonti in disaccordo per Pietr-le-Letton e Proust.
+- **Lista 2027:** conferma 41, nota 5, esce 2, da decidere 63. Collaudo sulle 55 invariato.
+- **Dehkhoda rifatto:** Rekhta tolta dalle fonti autorevoli; verifica a mano (Iranica e Rekhta, con link) ed esito «nazionale»; segnalato come scrittore a mano (Iranica), quindi entra nella lista principale. Codice: verifica.py aggiunge chi manca quando la verifica a mano dà lo stesso anno; arricchisci.py legge professioni e scrittori aggiunti a mano. Fotografia: 1 cambio, l'autore nuovo. Non pubblicato.
+- **Conteggio dei saggisti:** secondo giro fallito di nuovo al numero di Wikipedia. Ora, se Wikidata non risponde, si aspetta e si va avanti senza quel dato. Da rilanciare con l'ok di Marco.

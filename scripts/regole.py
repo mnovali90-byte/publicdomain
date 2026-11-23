@@ -645,6 +645,14 @@ def incrocio_opera(pub, lingua, per_fonte, puntate=None, date_wikidata=None, fat
     uno; uscita dopo l'anno della lista = sposta. Ogni decisione vuole due gruppi di fonti indipendenti; un solo indizio
     contrario basta per «da decidere». Restituisce {"esito", "anno", "motivo"}."""
     f = fatti or {}
+    # 23/11/2026 (Marco; Copyright Office, Circular 15A): con la legge del 1909 il copyright nasce alla pubblicazione o,
+    # per le opere inedite, alla registrazione: conta la prima delle due, presa dal Catalog of Copyright Entries (CCE).
+    # Per i numeri delle riviste la data del CCE è la data di pubblicazione del numero, non quella in copertina.
+    rg = f.get("registrazione")
+    if rg and isinstance(rg.get("anno"), int) and rg["anno"] < pub:
+        return {"esito": "esce", "anno": rg["anno"],
+                "motivo": ("registrata da inedita nel %d (CCE)" if rg.get("inedita") else
+                           "numero registrato nel %d (CCE): è la data di pubblicazione") % rg["anno"]}
     if f.get("raccolta") and (f["raccolta"].get("fonti") or 0) >= 2:
         if f["raccolta"].get("testi_nuovi") is False:
             return {"esito": "esce", "anno": f["raccolta"].get("anno"), "motivo": "raccolta senza testi nuovi"}
@@ -657,6 +665,20 @@ def incrocio_opera(pub, lingua, per_fonte, puntate=None, date_wikidata=None, fat
             return {"esito": "sposta", "anno": primo, "motivo": "volumi uno per uno: il primo esce dopo"}
         if primo < pub:
             return {"esito": "esce", "anno": primo, "motivo": "volumi uno per uno: il primo esce prima"}
+    # 23/11/2026 (Marco): volumi in anni diversi. Il primo volume nell'anno della lista resta (con nota); quelli usciti
+    # dopo si liberano nel loro anno; un volume con le fonti in disaccordo è «da verificare»
+    vv = f.get("volumi") or []
+    v1 = min(vv, key=lambda v: str(v.get("volume"))) if vv else None
+    if v1 and (v1.get("fonti") or 0) >= 2 and v1.get("anno") == pub and len(vv) > 1:
+        dopo = [v for v in vv if v is not v1]
+        dis = [v for v in dopo if v.get("disaccordo")]
+        if dis:
+            return {"esito": "nota", "anno": pub, "motivo": "; ".join(
+                f"volume {v['volume']} da verificare ({' contro '.join(map(str, v['disaccordo']))})" for v in dis)}
+        tardi = [v for v in dopo if isinstance(v.get("anno"), int) and v["anno"] > pub and (v.get("fonti") or 0) >= 2]
+        if tardi:
+            return {"esito": "nota", "anno": pub, "motivo": "; ".join(
+                f"volume {v['volume']} uscito nel {v['anno']}: libero dal {v['anno'] + 96}" for v in tardi)}
     pr = f.get("prima")
     if pr and (pr.get("fonti") or 0) >= 2 and isinstance(pr.get("anno"), int):
         if pr["anno"] < pub:
@@ -765,7 +787,17 @@ def fatti_da_ricerca(voci, pub):
         if v.get("tipo") == "volume":
             vols.setdefault(v.get("volume"), []).append(v)
     if vols:
-        f["volumi"] = [{"volume": k, "anno": due(vv)[0], "fonti": due(vv)[1]} for k, vv in sorted(vols.items(), key=lambda t: str(t[0]))]
+        f["volumi"] = []
+        for k, vv in sorted(vols.items(), key=lambda t: str(t[0])):
+            y, n, anni = due(vv)
+            x = {"volume": k, "anno": y, "fonti": n}
+            if len(anni) > 1:
+                x = {"volume": k, "anno": None, "fonti": 0, "disaccordo": anni}
+            f["volumi"].append(x)
+    reg = [v for v in voci if v.get("tipo") == "registrazione" and v.get("gruppo") == "cce" and isinstance(v.get("anno"), int)]
+    if reg:                  # il CCE è il registro ufficiale (prova davanti al giudice per la legge del 1909): basta da solo
+        r0 = min(reg, key=lambda v: v["anno"])
+        f["registrazione"] = {"anno": r0["anno"], "inedita": bool(r0.get("inedita")), "fonte": r0.get("fonte")}
     return f
 
 
