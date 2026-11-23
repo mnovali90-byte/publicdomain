@@ -1,0 +1,642 @@
+{
+ "fatto": "2026-11-23",
+ "voci": {
+  "0": {
+   "qid": "Q85806586",
+   "titolo": "The Black Swan",
+   "link": "https://gutenberg.net.au/ebooks13/1305371h.html",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "1": {
+   "qid": "Q1218608",
+   "titolo": "The Good Earth",
+   "link": "https://bestsellers.lib.virginia.edu/submissions/55.html",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "2": {
+   "qid": "Q1218608",
+   "titolo": "The Good Earth",
+   "link": "https://e-aoi.uzh.ch/apps/china-west/documents/9663",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "3": {
+   "qid": "Q1217475",
+   "titolo": "The Waves",
+   "link": "https://uah.edu/woolf/wavespubhistory.html",
+   "esito": "non verificabile in automatico",
+   "motivo": "HTTP Error 404: Not Found"
+  },
+  "4": {
+   "qid": "Q1217475",
+   "titolo": "The Waves",
+   "link": "https://www.columbia.edu/~em36/VirginiaWoolf/thewavestext.html",
+   "esito": "non verificabile in automatico",
+   "motivo": "HTTP Error 403: Forbidden"
+  },
+  "5": {
+   "qid": "Q1152214",
+   "titolo": "The Whisperer in Darkness",
+   "link": "https://repository.library.brown.edu/studio/item/bdr:735746/",
+   "esito": "non trovata",
+   "motivo": "html"
+  },
+  "6": {
+   "qid": "Q1152214",
+   "titolo": "The Whisperer in Darkness",
+   "link": "https://tor.com/2014/12/16/hp-lovecraft-reread-the-whisperer-in-darkness",
+   "esito": "non verificabile in automatico",
+   "motivo": "HTTP Error 403: Forbidden"
+  },
+  "7": {
+   "qid": "Q571244",
+   "titolo": "The Sittaford Mystery",
+   "link": "https://agathachristie.com/stories/the-sittaford-mystery",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "8": {
+   "qid": "Q571244",
+   "titolo": "The Sittaford Mystery",
+   "link": "https://deliciousdeath.com/14\\index14.html",
+   "esito": "non trovata",
+   "motivo": "html"
+  },
+  "9": {
+   "qid": "Q1212765",
+   "titolo": "Sanctuary",
+   "link": "https://faulkner.drupal.shanti.virginia.edu/node/220",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "10": {
+   "qid": "Q1212765",
+   "titolo": "Sanctuary",
+   "link": "https://nobelprize.org/prizes/literature/1949/faulkner/bibliography",
+   "esito": "non trovata",
+   "motivo": "html"
+  },
+  "11": {
+   "qid": "Q2917079",
+   "titolo": "The Joy of Cooking",
+   "link": "https://www.pbs.org/video/i-am-st-louis-the-joy-of-cooking-xslpy2",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "12": {
+   "qid": "Q2917079",
+   "titolo": "The Joy of Cooking",
+   "link": "https://www.amnh.org/explore/news-blogs/joy-of-cooking-family-history",
+   "esito": "non verificabile in automatico",
+   "motivo": "HTTP Error 403: Forbidden"
+  },
+  "13": {
+   "qid": "Q4190252",
+   "titolo": "Green Grow the Lilacs",
+   "link": "https://archive.org/download/bestplaysof1930100mant/bestplaysof1930100mant_jpg.pdf",
+   "esito": "non verificabile in automatico",
+   "motivo": "<urlopen error _ssl.c:994: The handshake operation timed out>"
+  },
+  "14": {
+   "qid": "Q4190252",
+   "titolo": "Green Grow the Lilacs",
+   "link": "https://www.ebsco.com/research-starters/literature-and-writing/green-grow-lilacs-lynn-riggs",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "15": {
+   "qid": "Q7765142",
+   "titolo": "The Solar Anus",
+   "link": "https://catalogue.bnf.fr/ark:/12148/cb357449356",
+   "esito": "non verificabile in automatico",
+   "motivo": "The read operation timed out"
+  },
+  "16": {
+   "qid": "Q7765142",
+   "titolo": "The Solar Anus",
+   "link": "https://www.moma.org/collection/works/9195",
+   "esito": "non verificabile in automatico",
+   "motivo": "HTTP Error 403: Forbidden"
+  },
+  "17": {
+   "qid": "Q887062",
+   "titolo": "Will O' the Wisp",
+   "link": "https://www.universalis.fr/encyclopedie/pierre-drieu-la-rochelle/4-bibliographie/",
+   "esito": "non trovata",
+   "motivo": "html"
+  },
+  "18": {
+   "qid": "Q887062",
+   "titolo": "Will O' the Wisp",
+   "link": "https://fr.wikisource.org/wiki/Auteur:Pierre_Drieu_La_Rochelle",
+   "esito": "non trovata",
+   "motivo": "html"
+  },
+  "19": {
+   "qid": "Q1216006",
+   "titolo": "The Sleepwalkers",
+   "link": "https://www.britannica.com/topic/The-Sleepwalkers",
+   "esito": "non verificabile in automatico",
+   "motivo": "HTTP Error 403: Forbidden"
+  },
+  "20": {
+   "qid": "Q1216006",
+   "titolo": "The Sleepwalkers",
+   "link": "https://is.muni.cz/el/phil/jaro2016/NJI_20/um/61954987/56639148/Broch.pdf?lang=en",
+   "esito": "non verificabile in automatico",
+   "motivo": "<urlopen error timed out>"
+  },
+  "21": {
+   "qid": "Q1216006",
+   "titolo": "The Sleepwalkers",
+   "link": "https://www.britannica.com/topic/The-Sleepwalkers",
+   "esito": "non verificabile in automatico",
+   "motivo": "HTTP Error 403: Forbidden"
+  },
+  "22": {
+   "qid": "Q1216006",
+   "titolo": "The Sleepwalkers",
+   "link": "https://is.muni.cz/el/phil/jaro2016/NJI_20/um/61954987/56639148/Broch.pdf?lang=en",
+   "esito": "non verificabile in automatico",
+   "motivo": "<urlopen error timed out>"
+  },
+  "23": {
+   "qid": "Q1216006",
+   "titolo": "The Sleepwalkers",
+   "link": "https://www.britannica.com/topic/The-Sleepwalkers",
+   "esito": "non verificabile in automatico",
+   "motivo": "HTTP Error 403: Forbidden"
+  },
+  "24": {
+   "qid": "Q1216006",
+   "titolo": "The Sleepwalkers",
+   "link": "https://is.muni.cz/el/phil/jaro2016/NJI_20/um/61954987/56639148/Broch.pdf?lang=en",
+   "esito": "non verificabile in automatico",
+   "motivo": "<urlopen error timed out>"
+  },
+  "25": {
+   "qid": "Q1070729",
+   "titolo": "Night Flight",
+   "link": "https://www.andrebreton.fr/work/56600100989721",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "26": {
+   "qid": "Q1070729",
+   "titolo": "Night Flight",
+   "link": "https://e.lavoisier.fr/extract/523291",
+   "esito": "non trovata",
+   "motivo": "html"
+  },
+  "27": {
+   "qid": "Q2564588",
+   "titolo": "Five Red Herrings",
+   "link": "https://shakespeareandco.princeton.edu/books/sayers-five-red-herrings",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "28": {
+   "qid": "Q2564588",
+   "titolo": "Five Red Herrings",
+   "link": "https://openlibrary.org/books/OL22416896M",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "29": {
+   "qid": "Q2020355",
+   "titolo": "A Hanging",
+   "link": "https://www.atlantisjournal.org/index.php/atlantis/article/download/135/139",
+   "esito": "trovata",
+   "motivo": "pdf"
+  },
+  "30": {
+   "qid": "Q2020355",
+   "titolo": "A Hanging",
+   "link": "https://interestingliterature.com/2021/06/george-orwell-a-hanging-summary-analysis/",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "31": {
+   "qid": "Q5990586",
+   "titolo": "If It Had Happened Otherwise",
+   "link": "https://archive.spectator.co.uk/article/7th-february-1931/20/if-only",
+   "esito": "non verificabile in automatico",
+   "motivo": "pagina quasi vuota (il sito blocca o carica il testo dopo)"
+  },
+  "32": {
+   "qid": "Q5990586",
+   "titolo": "If It Had Happened Otherwise",
+   "link": "https://paperspast.natlib.govt.nz/newspapers/TDN19310207.2.83",
+   "esito": "non verificabile in automatico",
+   "motivo": "pagina quasi vuota (il sito blocca o carica il testo dopo)"
+  },
+  "33": {
+   "qid": "Q5990586",
+   "titolo": "If It Had Happened Otherwise",
+   "link": "https://sf-encyclopedia.com/entry/squire_j_c",
+   "esito": "non trovata",
+   "motivo": "html"
+  },
+  "34": {
+   "qid": "Q8039491",
+   "titolo": "Wyatt Earp: Frontier Marshal",
+   "link": "https://catalog.afi.com/Catalog/moviedetails/6565",
+   "esito": "non verificabile in automatico",
+   "motivo": "HTTP Error 403: Forbidden"
+  },
+  "35": {
+   "qid": "Q8039491",
+   "titolo": "Wyatt Earp: Frontier Marshal",
+   "link": "https://www.kansashistory.gov/p/kansas-historical-quarterly-wyatt-earp-and-the-buntline-special-myth/13255",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "36": {
+   "qid": "Q265042",
+   "titolo": "The Floating Admiral",
+   "link": "https://fantlab.ru/edition396652",
+   "esito": "non trovata",
+   "motivo": "html"
+  },
+  "37": {
+   "qid": "Q265042",
+   "titolo": "The Floating Admiral",
+   "link": "https://martinedwardsbooks.com/collecting-crime/the-floating-admiral/",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "38": {
+   "qid": "Q3228173",
+   "titolo": "The Face in the Abyss",
+   "link": "https://sf-encyclopedia.com/entry/merritt_a",
+   "esito": "non trovata",
+   "motivo": "html"
+  },
+  "39": {
+   "qid": "Q3228173",
+   "titolo": "The Face in the Abyss",
+   "link": "https://archive.org/details/TheFaceInTheAbyssFirstEdition1931/page/n21/mode/2up",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "40": {
+   "qid": "Q1141993",
+   "titolo": "The Zürau Aphorisms",
+   "link": "https://de.wikisource.org/wiki/Betrachtungen_%C3%BCber_S%C3%BCnde,_Leid,_Hoffnung_und_den_wahren_Weg",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "41": {
+   "qid": "Q3290152",
+   "titolo": "Living My Life",
+   "link": "https://pzacad.pitzer.edu/Anarchist_Archives/goldman/living/living2_50.html",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "42": {
+   "qid": "Q3290152",
+   "titolo": "Living My Life",
+   "link": "https://www.marxists.org/reference/archive/goldman/works/1931/living-my-life/index.html",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "43": {
+   "qid": "Q3210396",
+   "titolo": "Police at the Funeral",
+   "link": "https://margeryallingham.org.uk/the-novels/",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "44": {
+   "qid": "Q3210396",
+   "titolo": "Police at the Funeral",
+   "link": "https://openlibrary.org/books/OL6769579M",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "45": {
+   "qid": "Q2498251",
+   "titolo": "Hatter's Castle",
+   "link": "https://archive.spectator.co.uk/article/30th-may-1931/28/fiction",
+   "esito": "non verificabile in automatico",
+   "motivo": "pagina quasi vuota (il sito blocca o carica il testo dopo)"
+  },
+  "46": {
+   "qid": "Q2498251",
+   "titolo": "Hatter's Castle",
+   "link": "https://www.abdn.ac.uk/collections/our-collections/browse/rare-book-collections/provenance/4729/",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "47": {
+   "qid": "Q3881234",
+   "titolo": "All Passion Spent",
+   "link": "https://openlibrary.org/books/OL17838614M/All_passion_spent",
+   "esito": "non verificabile in automatico",
+   "motivo": "<urlopen error [Errno 104] Connection reset by peer>"
+  },
+  "48": {
+   "qid": "Q3881234",
+   "titolo": "All Passion Spent",
+   "link": "https://shakespeareandco.princeton.edu/books/sackville-west-passion-spent/",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "49": {
+   "qid": "Q5309555",
+   "titolo": "Dry September",
+   "link": "https://faulkner.drupal.shanti.virginia.edu/node/237",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "50": {
+   "qid": "Q5309555",
+   "titolo": "Dry September",
+   "link": "https://philarchive.org/rec/FAUSDS",
+   "esito": "non verificabile in automatico",
+   "motivo": "HTTP Error 403: Forbidden"
+  },
+  "51": {
+   "qid": "Q6663021",
+   "titolo": "Lo!",
+   "link": "https://forteana.org/fortsbooks.html",
+   "esito": "non verificabile in automatico",
+   "motivo": "HTTP Error 403: Forbidden"
+  },
+  "52": {
+   "qid": "Q6663021",
+   "titolo": "Lo!",
+   "link": "https://sacred-texts.com/fort/lo/lo00.htm",
+   "esito": "non verificabile in automatico",
+   "motivo": "HTTP Error 403: Forbidden"
+  },
+  "53": {
+   "qid": "Q4190252",
+   "titolo": "Green Grow the Lilacs",
+   "link": "https://archive.org/stream/catalogofcopyri31libr/catalogofcopyri31libr_djvu.txt",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "54": {
+   "qid": "Q5309555",
+   "titolo": "Dry September",
+   "link": "https://archive.org/stream/catalogofcopyrig262libr/catalogofcopyrig262libr_djvu.txt",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "55": {
+   "qid": "Q3290152",
+   "titolo": "Living My Life",
+   "link": "https://pzacad.pitzer.edu/Anarchist_Archives/goldman/living/living1_1.html",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "56": {
+   "qid": "Q3290152",
+   "titolo": "Living My Life",
+   "link": "https://www.marxists.org/reference/archive/goldman/works/1931/living-my-life/vol-1-chapter-1.html",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "57": {
+   "qid": "Q2836696",
+   "titolo": "The Secret at Shadow Ranch",
+   "link": "https://catalog.princeton.edu/catalog/9995047563506421",
+   "esito": "non trovata",
+   "motivo": "html"
+  },
+  "58": {
+   "qid": "Q7460836",
+   "titolo": "Shadows on the Rock",
+   "link": "https://bestsellers.lib.virginia.edu/submissions/27.html",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "59": {
+   "qid": "Q7460836",
+   "titolo": "Shadows on the Rock",
+   "link": "https://cather.unl.edu/writings/books/shadows-on-the-rock",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "60": {
+   "qid": "Q4659979",
+   "titolo": "A Tangled Web",
+   "link": "https://lmmonline.org/books/a-tangled-web/",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "61": {
+   "qid": "Q4659979",
+   "titolo": "A Tangled Web",
+   "link": "https://doceww.dhil.lib.sfu.ca/book/6713",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "62": {
+   "qid": "Q573765",
+   "titolo": "Fabian",
+   "link": "https://www.deutsche-digitale-bibliothek.de/item/BSWRAGL3W6VHW3YHCWYL6KCMXC34ODQ4",
+   "esito": "non trovata",
+   "motivo": "html"
+  },
+  "63": {
+   "qid": "Q573765",
+   "titolo": "Fabian",
+   "link": "https://www.deutsche-digitale-bibliothek.de/item/3VQ5NNEKX2G6QMDABLVP3A7LY2QFXFTM?lang=en",
+   "esito": "non trovata",
+   "motivo": "html"
+  },
+  "64": {
+   "qid": "Q3506429",
+   "titolo": "Swallowdale",
+   "link": "https://allthingsransome.net/literary/archildrensbooks/SDfirst.htm",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "65": {
+   "qid": "Q3506429",
+   "titolo": "Swallowdale",
+   "link": "https://vufind.lboro.ac.uk/Record/149726/Similar",
+   "esito": "non trovata",
+   "motivo": "html"
+  },
+  "66": {
+   "qid": "Q119144545",
+   "titolo": "The Sands of Windee",
+   "link": "https://archive.spectator.co.uk/article/22nd-august-1931/24/the-sands-of-windee-by-arthur-w-upfield-hutchinson",
+   "esito": "non verificabile in automatico",
+   "motivo": "pagina quasi vuota (il sito blocca o carica il testo dopo)"
+  },
+  "67": {
+   "qid": "Q119144545",
+   "titolo": "The Sands of Windee",
+   "link": "https://cirrus.austlit.edu.au/austlit/page/C115016",
+   "esito": "non verificabile in automatico",
+   "motivo": "HTTP Error 403: Forbidden"
+  },
+  "68": {
+   "qid": "Q2836721",
+   "titolo": "The Secret of Red Gate Farm",
+   "link": "https://openlibrary.org/books/OL1115425M?v=9",
+   "esito": "non verificabile in automatico",
+   "motivo": "<urlopen error [Errno 104] Connection reset by peer>"
+  },
+  "69": {
+   "qid": "Q2836721",
+   "titolo": "The Secret of Red Gate Farm",
+   "link": "https://boulder.marmot.org/Record/.b13127871",
+   "esito": "non verificabile in automatico",
+   "motivo": "HTTP Error 403: Forbidden"
+  },
+  "70": {
+   "qid": "Q43578331",
+   "titolo": "Coup d'État: The Technique of Revolution",
+   "link": "https://catalogue.bnf.fr/ark:/12148/cb469963705",
+   "esito": "non verificabile in automatico",
+   "motivo": "<urlopen error [Errno 104] Connection reset by peer>"
+  },
+  "71": {
+   "qid": "Q43578331",
+   "titolo": "Coup d'État: The Technique of Revolution",
+   "link": "https://www.universalis.fr/encyclopedie/curzio-malaparte/3-le-choix-de-la-france/",
+   "esito": "non trovata",
+   "motivo": "html"
+  },
+  "72": {
+   "qid": "Q7252252",
+   "titolo": "Proust",
+   "link": "https://web.marshlibrary.ie/catalogue/Record/BI27694",
+   "esito": "non trovata",
+   "motivo": "html"
+  },
+  "73": {
+   "qid": "Q7252252",
+   "titolo": "Proust",
+   "link": "https://www.taylorfrancis.com/books/9781317175902/chapters/10.4324/9781315568812-8",
+   "esito": "non trovata",
+   "motivo": "html"
+  },
+  "74": {
+   "qid": "Q7252252",
+   "titolo": "Proust",
+   "link": "https://unlost.uwaterloo.ca/?p=54547",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "75": {
+   "qid": "Q1885291",
+   "titolo": "The Strange Case of Peter the Lett",
+   "link": "https://cdn.penguin.co.uk/dam-assets/books/9780141392738/9780141392738-sample.pdf",
+   "esito": "trovata",
+   "motivo": "pdf"
+  },
+  "76": {
+   "qid": "Q1885291",
+   "titolo": "The Strange Case of Peter the Lett",
+   "link": "https://openlibrary.org/books/OL6767972M",
+   "esito": "non verificabile in automatico",
+   "motivo": "<urlopen error [Errno 104] Connection reset by peer>"
+  },
+  "77": {
+   "qid": "Q1214380",
+   "titolo": "The last one at the scaffold",
+   "link": "https://openlibrary.org/works/OL1386161W",
+   "esito": "non verificabile in automatico",
+   "motivo": "<urlopen error [Errno 104] Connection reset by peer>"
+  },
+  "78": {
+   "qid": "Q1214380",
+   "titolo": "The last one at the scaffold",
+   "link": "https://gertrud-von-le-fort-gesellschaft.de/gesellschaft/Forum_Nr_2_Maerz_2014.pdf",
+   "esito": "trovata",
+   "motivo": "pdf"
+  },
+  "79": {
+   "qid": "Q2878373",
+   "titolo": "Back Street",
+   "link": "https://onlinebooks.library.upenn.edu/webbin/cinfo/cosmopolitan",
+   "esito": "non trovata",
+   "motivo": "html"
+  },
+  "80": {
+   "qid": "Q1306780",
+   "titolo": "The Great Wall of China",
+   "link": "https://www.ebsco.com/research-starters/literature-and-writing/great-wall-china-franz-kafka",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "81": {
+   "qid": "Q1306780",
+   "titolo": "The Great Wall of China",
+   "link": "https://www.dlib.si/stream/URN:NBN:SI:DOC-MCAGZRQM/6c4fe293-2b00-434e-85a0-e4d1530380e0/PDF",
+   "esito": "non trovata",
+   "motivo": "html"
+  },
+  "82": {
+   "qid": "Q3981235",
+   "titolo": "Tarzan the Invincible",
+   "link": "https://sf-encyclopedia.com/entry/burroughs_edgar_rice",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "83": {
+   "qid": "Q3981235",
+   "titolo": "Tarzan the Invincible",
+   "link": "https://erbzine.com/mag7/0722.html",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "84": {
+   "qid": "Q3981235",
+   "titolo": "Tarzan the Invincible",
+   "link": "https://digitalcommons.winthrop.edu/rarebooks/56",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "85": {
+   "qid": "Q7713437",
+   "titolo": "The American Black Chamber",
+   "link": "https://www.nsa.gov/History/Cryptologic-History/Historical-Events/Article-View/Article/2740622/the-black-chamber/",
+   "esito": "non verificabile in automatico",
+   "motivo": "HTTP Error 403: Forbidden"
+  },
+  "86": {
+   "qid": "Q7713437",
+   "titolo": "The American Black Chamber",
+   "link": "https://www.saturdayeveningpost.com/sep-keyword/black-chamber/",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "87": {
+   "qid": "Q3109849",
+   "titolo": "Gog",
+   "link": "https://dbnl.org/tekst/_die004193101_01/_die004193101_01_0044.php",
+   "esito": "non verificabile in automatico",
+   "motivo": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1011)>"
+  },
+  "88": {
+   "qid": "Q3109849",
+   "titolo": "Gog",
+   "link": "https://literaturabrasileira.ufsc.br/documentos/?id=227706",
+   "esito": "non verificabile in automatico",
+   "motivo": "HTTP Error 403: Forbidden"
+  },
+  "89": {
+   "qid": "Q5047445",
+   "titolo": "Cartucho",
+   "link": "https://bibliographica.iib.unam.mx/index.php/RB/article/view/61/221",
+   "esito": "non verificabile in automatico",
+   "motivo": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl."
+  },
+  "90": {
+   "qid": "Q5047445",
+   "titolo": "Cartucho",
+   "link": "https://www.scielo.org.mx/pdf/latinoam/n52/n52a3.pdf",
+   "esito": "trovata",
+   "motivo": "pdf"
+  }
+ }
+}
