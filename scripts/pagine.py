@@ -426,6 +426,11 @@ def blocco_verifica(a, lang):
         t = (f"Da verificare: le fonti non concordano sull'anno di morte ({el}). Le date qui sopra usano l'anno della lista; lo stiamo verificando." if it
              else f"To verify: the sources disagree on the year of death ({el}). The dates above use the list year; we are checking it.")
         return [f'<p><strong>{esc(t)}</strong></p>\n']
+    ag = ", ".join(v.get("aggiunte") or {})
+    if ag:      # fonte trovata a mano che concorda (23/11/2026, von den Steinen)
+        t = (f"Anno di morte da Wikidata, che concorda con {ag} (fonte trovata a mano): le biblioteche nazionali consultate non lo riportano." if it
+             else f"Year of death from Wikidata, which agrees with {ag} (a source found by hand): the national libraries we check do not record it.")
+        return [f'<p class="sotto">{esc(t)}</p>\n']
     t = ("Anno di morte da una sola fonte (Wikidata), senza fonti citate: le biblioteche nazionali consultate non lo riportano." if it
          else "Year of death from a single source (Wikidata), with no cited source: the national libraries we check do not record it.")
     return [f'<p class="sotto">{esc(t)}</p>\n']

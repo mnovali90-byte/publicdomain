@@ -440,6 +440,11 @@ for q9, ag9 in _vm9.get("aggiunti_a_mano", {}).items():
 for q9, m9 in _vm9.get("autori", {}).items():
     if (m9.get("controllato") or "") >= "2026-11-23" and _wiki9.search((m9.get("fonte") or "") + (m9.get("url") or "")):
         no9.append(f"verifica a mano di {m9.get('nome')} (dal 23/11/2026) con Wikipedia come fonte")
+for q9, t9 in _vm9.get("verifiche_tolte", {}).items():   # caso aperto: in nessuna lista (Răcăciuni, 23/11/2026)
+    if t9.get("caso_aperto"):
+        for f9 in sorted((RADICE / "data").glob("*.json")):
+            if re.fullmatch(r"(es-)?\d{4}\.json", f9.name) and any(a.get("wikidata") == q9 for a in json.load(open(f9, encoding="utf-8")).get("autori", [])):
+                no9.append(f"{t9.get('nome')}: caso aperto, ma è nella lista {f9.stem}")
 print(f"9. Autori aggiunti a mano: {len(_vm9.get('aggiunti_a_mano', {}))} (approvati: {sum(1 for x in _vm9.get('aggiunti_a_mano', {}).values() if x.get('approvato'))}), già nella loro lista: {in_lista9}, problemi: {len(no9)}")
 for x in no9:
     print("   ", x)

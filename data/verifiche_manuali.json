@@ -273,6 +273,17 @@
     "url": "https://openlibrary.org/authors/OL146206A",
     "aggiunto": "2026-11-23"
    }
+  ],
+  "Q115085": [
+   {
+    "chiave": "onassis",
+    "nome": "Helmut von den Steinen",
+    "fonte": "Onassis Cavafy Archive: «died on Rhodes (Greece) in 1956»",
+    "morte": 1956,
+    "url": "https://cavafy.onassis.org/creator/von-den-steinen-helmut/",
+    "citazione": "died on Rhodes (Greece) in 1956",
+    "aggiunto": "2026-11-23"
+   }
   ]
  },
  "nota_fonti_aggiunte": "fonti_aggiunte (23/11/2026, Marco): fonti trovate a mano che NON decidono l'anno ma entrano nel confronto (scripts/registro_autori.py le mette accanto a Wikidata, GND e LoC). Se danno un anno diverso, l'esito diventa «discorde» e la scheda dice «da verificare».",
@@ -430,7 +441,8 @@
    },
    "motivo": "scelto da Marco: noto soprattutto come autore di libri (saggistica)",
    "aggiunto": "2026-11-23",
-   "approvato": false
+   "approvato": true,
+   "approvato_il": "2026-11-23"
   },
   "Q1316061": {
    "nome": "George Sarton",
@@ -443,7 +455,8 @@
    },
    "motivo": "scelto da Marco: noto soprattutto come autore di libri (saggistica)",
    "aggiunto": "2026-11-23",
-   "approvato": false
+   "approvato": true,
+   "approvato_il": "2026-11-23"
   },
   "Q1130486": {
    "nome": "Piero Calamandrei",
@@ -457,7 +470,8 @@
    },
    "motivo": "scelto da Marco: noto soprattutto come autore di libri (saggistica)",
    "aggiunto": "2026-11-23",
-   "approvato": false
+   "approvato": true,
+   "approvato_il": "2026-11-23"
   },
   "Q9317": {
    "nome": "John Maynard Keynes",
@@ -471,7 +485,8 @@
    },
    "motivo": "scelto da Marco: noto soprattutto come autore di libri (saggistica)",
    "aggiunto": "2026-11-23",
-   "approvato": false
+   "approvato": true,
+   "approvato_il": "2026-11-23"
   },
   "Q29031": {
    "nome": "Charles Oman",
@@ -486,7 +501,8 @@
    },
    "motivo": "scelto da Marco: noto soprattutto come autore di libri (saggistica)",
    "aggiunto": "2026-11-23",
-   "approvato": false
+   "approvato": true,
+   "approvato_il": "2026-11-23"
   },
   "Q77521": {
    "nome": "Karl Groos",
@@ -500,7 +516,8 @@
    },
    "motivo": "scelto da Marco: noto soprattutto come autore di libri (saggistica)",
    "aggiunto": "2026-11-23",
-   "approvato": false
+   "approvato": true,
+   "approvato_il": "2026-11-23"
   },
   "Q730889": {
    "nome": "Gaetano Salvemini",
@@ -514,7 +531,8 @@
    },
    "motivo": "scelto da Marco: noto soprattutto come autore di libri (saggistica)",
    "aggiunto": "2026-11-23",
-   "approvato": false
+   "approvato": true,
+   "approvato_il": "2026-11-23"
   },
   "Q708794": {
    "nome": "Tokutomi Sohō",
@@ -529,7 +547,8 @@
    },
    "motivo": "scelto da Marco: noto soprattutto come autore di libri (saggistica)",
    "aggiunto": "2026-11-23",
-   "approvato": false
+   "approvato": true,
+   "approvato_il": "2026-11-23"
   }
  },
  "nota_aggiunti_a_mano": "Autori che non entrano con la regola automatica delle liste ma che Marco ha scelto a mano (23/11/2026: saggisti noti soprattutto come autori di libri; niente regola automatica sui saggisti prima del 7 gennaio 2027). Per ognuno: la lista, l'anno di morte con due fonti terze (in «autori»), un'opera principale con la sua fonte; sono segnati come scrittori («scrittori_a_mano») e saggisti («professioni_aggiunte»). La scheda viene da scripts/scheda_autore.py (data/registro/schede_proposte.json); scripts/verifica.py li mette nella lista. Klages non entra finché non è valutato con la regola sugli autori razzisti. Entrano nelle liste solo con «approvato»: true, dopo che Marco ha visto la fotografia.",
@@ -539,7 +558,10 @@
    "morte_a_mano": 1976,
    "fonte_vecchia": "Wikipedia (en), con fonti; Ziarul de Bacău",
    "tolta": "2026-11-23",
-   "motivo": "la verifica a mano usava Wikipedia; nessuna seconda fonte terza trovata (decisione di Marco del 23/11/2026: si torna allo stato delle fonti automatiche)"
+   "motivo": "la verifica a mano usava Wikipedia; nessuna seconda fonte terza trovata (decisione di Marco del 23/11/2026: si torna allo stato delle fonti automatiche)",
+   "caso_aperto": true,
+   "indizio_contrario": "Wikidata dice 1956, Wikipedia (en) dice 17 giugno 1976: 20 anni di differenza; se fosse 1976 le opere sono protette in Europa fino al 2046",
+   "decisione": "Marco, 23/11/2026: non rientra nelle liste finché una fonte terza non decide l'anno (caso aperto)"
   },
   "Q20738418": {
    "nome": "Marcel Romanescu",
@@ -555,7 +577,8 @@
    "fonte_vecchia": "Wikipedia (de) via BookBrainz: 26 novembre 1957, Rodi (l'archivio Cavafy dice 1956)",
    "tolta": "2026-11-23",
    "motivo": "la verifica a mano usava Wikipedia; nessuna seconda fonte terza trovata (decisione di Marco del 23/11/2026: si torna allo stato delle fonti automatiche)",
-   "trovato": "Onassis Cavafy Archive: «died on Rhodes (Greece) in 1956» — una fonte terza con un anno diverso dal 1957 della vecchia verifica"
+   "trovato": "Onassis Cavafy Archive: «died on Rhodes (Greece) in 1956» — una fonte terza con un anno diverso dal 1957 della vecchia verifica",
+   "decisione": "Marco, 23/11/2026: rientra con Wikidata 1956, che concorda con l'Onassis Cavafy Archive (fonte aggiunta)"
   }
  }
 }

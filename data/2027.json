@@ -5,7 +5,7 @@
  "regola": "UE: morte + 70 anni, dal 1 gennaio dell'anno successivo",
  "fonte": "Wikidata (CC0)",
  "aggiornato": "2026-11-19",
- "totale": 1429,
+ "totale": 1428,
  "autori": [
   {
    "wikidata": "Q38757",
@@ -74047,72 +74047,6 @@
    "pagina_en": "piero-calamandrei"
   },
   {
-   "wikidata": "Q12731091",
-   "nome": "Isaiia Răcăciuni",
-   "nascita": "1888-01-01",
-   "morte": "1956-01-01",
-   "pagine_wikipedia": 3,
-   "professioni": [
-    "critico cinematografico",
-    "critico letterario",
-    "critico teatrale",
-    "curatore editoriale",
-    "editore",
-    "poeta",
-    "politico",
-    "romanziere",
-    "scrittore",
-    "traduttore"
-   ],
-   "descrizione": "Romanian writer",
-   "url": "https://www.wikidata.org/wiki/Q12731091",
-   "bio": "Isaia or Isaiia Răcăciuni was a Romanian writer and editor. A member of the local Jewish community, he always craved assimilation, a longing that informed part of his literary output. His works were also tinged by expressionism, a stylistic affiliation that began when he was an adolescent.",
-   "bio_url": "https://en.wikipedia.org/wiki/Isaia_R%C4%83c%C4%83ciuni",
-   "bio_lingua": "en",
-   "bios": {
-    "en": {
-     "testo": "Isaia or Isaiia Răcăciuni was a Romanian writer and editor. A member of the local Jewish community, he always craved assimilation, a longing that informed part of his literary output. His works were also tinged by expressionism, a stylistic affiliation that began when he was an adolescent.",
-     "url": "https://en.wikipedia.org/wiki/Isaia_R%C4%83c%C4%83ciuni"
-    }
-   },
-   "n_opere": 0,
-   "visite_12m": 1425,
-   "visite_it": 0,
-   "visite_en": 1425,
-   "visite_es": 0,
-   "visite_de": 0,
-   "visite_fr": 0,
-   "foto": {
-    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Isaia_R%C4%83c%C4%83ciuni_circa_1937.png?width=800",
-    "pagina": "https://commons.wikimedia.org/wiki/File:Isaia_R%C4%83c%C4%83ciuni_circa_1937.png",
-    "licenza": "Public domain",
-    "autore": "Anonymous Unknown author"
-   },
-   "paesi": [
-    "Romania"
-   ],
-   "lingue": [
-    "romeno"
-   ],
-   "letterario": true,
-   "tipo_catalogo": [
-    "Poesia",
-    "Romanzo"
-   ],
-   "verifica": {
-    "esito": "una_fonte",
-    "fonti": {
-     "wikidata": 1956
-    }
-   },
-   "indice_it": 0,
-   "indice_en": 88,
-   "indice_es": 0,
-   "indice_de": 0,
-   "indice_fr": 0,
-   "indice_int": 70
-  },
-  {
    "wikidata": "Q115085",
    "nome": "Helmut von den Steinen",
    "nascita": "1890-12-06",
@@ -74145,6 +74079,9 @@
     "esito": "una_fonte",
     "fonti": {
      "wikidata": 1956
+    },
+    "aggiunte": {
+     "Onassis Cavafy Archive": 1956
     }
    },
    "indice_it": 0,

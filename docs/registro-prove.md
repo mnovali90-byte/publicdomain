@@ -1553,3 +1553,15 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - **Schede dei 10 autori:** riuscite (data/registro/schede_proposte.json). Keynes non aveva l'etichetta italiana e la scheda aveva solo il codice: ora il nome viene dalla voce a mano, e scheda_autore.py usa l'etichetta di riserva.
 - **Rientri:** chi ha avuto la verifica a mano tolta torna nella lista dell'anno di Wikidata (scripts/verifica.py, inserisci_rientri, anche nel giro). Răcăciuni (Wikidata 1956) e von den Steinen (Wikidata 1956) rientrano nella lista 2027 con «una sola fonte». Le biblioteche le legge il giro dopo.
 - **Anteprima della pubblicazione unica** (verifica.py --solo-aggiunti --anteprima): fotografia con 0 cambi di stato e 10 autori nuovi; prove 1-9 a 0. Lista 2027: 62 / 85 / 8.
+
+## 23/11/2026 — Pubblicazione unica (ok di Marco, 16:23)
+- **Contenuto:**
+  - etichette dei tre stati: 2027 62 / 85 / 8, 2028 1 / 109 / 65;
+  - 4 note delle opere «nota»;
+  - 8 saggisti approvati;
+  - von den Steinen rientra;
+  - Subbaravu e Romanescu «da verificare».
+- **CASO APERTO — Isaiia Răcăciuni (Q12731091):** Wikidata dice 1956, Wikipedia (en) dice 17 giugno 1976. Sono 20 anni di differenza: se fosse il 1976, in Europa le opere sono protette fino al 2046. Decisione di Marco: resta fuori dalle liste finché una fonte terza non decide l'anno.
+  - Il dato: data/verifiche_manuali.json, «verifiche_tolte», «caso_aperto».
+  - scripts/verifica.py lo tiene fuori anche se il giro di Wikidata lo riporta. La prova 9 controlla che non sia in nessuna lista.
+- **Von den Steinen (Q115085):** rientra nella lista 2027 con Wikidata 1956. L'Onassis Cavafy Archive concorda («died on Rhodes (Greece) in 1956», https://cavafy.onassis.org/creator/von-den-steinen-helmut/) e lo aggiungo come fonte trovata a mano («fonti_aggiunte»). In pagina e nel radar: «Anno di morte da Wikidata, che concorda con Onassis Cavafy Archive (fonte trovata a mano)».

@@ -256,13 +256,24 @@ def inserisci_rientri(f, p, atteso, tolte, schede):
     torna allo stato delle fonti automatiche: se l'anno di morte di Wikidata (scheda di scripts/scheda_autore.py) è
     quello della lista e l'autore non c'è, rientra; le biblioteche (GND, Library of Congress) le legge il giro dopo."""
     presenti = {a["wikidata"] for a in p["autori"]}
-    for q in tolte:
+    try:
+        aggiunte = json.load(open(DATA / "verifiche_manuali.json", encoding="utf-8")).get("fonti_aggiunte", {})
+    except Exception:
+        aggiunte = {}
+    for q, t in tolte.items():
+        if t.get("caso_aperto"):     # indizio contrario non risolto (Răcăciuni: 1956 contro 1976): resta fuori
+            continue
         sch = (schede.get(q) or {}).get("scheda")
         if not sch or q in presenti or anno(sch.get("morte")) != atteso or not sch.get("letterario"):
             continue
         nuovo = {k: x for k, x in sch.items() if k not in ("candidato",)}
-        esito, deciso, fonti_d = decidi_morte({"wikidata": anno(sch["morte"])}, {})
-        nuovo["verifica"] = {"esito": esito, "fonti": {"wikidata": anno(sch["morte"])}}
+        fv = {"wikidata": anno(sch["morte"])}
+        agg = {x["fonte"].split(":")[0]: x["morte"] for x in aggiunte.get(q, []) if isinstance(x.get("morte"), int)}
+        disaccordo = any(y != fv["wikidata"] for y in agg.values())
+        esito, deciso, fonti_d = decidi_morte(fv, {})
+        nuovo["verifica"] = {"esito": "discorde" if disaccordo else esito, "fonti": fv}
+        if agg:                      # fonti trovate a mano: non decidono, ma si dicono (Onassis per von den Steinen)
+            nuovo["verifica"]["aggiunte"] = agg
         lett = [a for a in p["autori"] if a.get("letterario") and "n_opere" in a]
         for campo, chiave in (("visite_it", "indice_it"), ("visite_en", "indice_en"), ("visite_es", "indice_es"),
                               ("visite_de", "indice_de"), ("visite_fr", "indice_fr"), ("pagine_wikipedia", "indice_int")):
@@ -325,6 +336,12 @@ def main():
         anno_file = int(re.search(r"(\d{4})\.json$", f.name).group(1))
         tenuti = []
         for a in p["autori"]:
+            if (_tolte.get(a["wikidata"]) or {}).get("caso_aperto"):
+                # caso aperto (23/11/2026, Marco): un indizio contrario di anni diversi (Răcăciuni: 1956 o 1976);
+                # l'autore resta fuori dalle liste finché una fonte terza non decide l'anno
+                print(f"  FUORI da {f.name}: {a['nome']} (caso aperto: {_tolte[a['wikidata']].get('indizio_contrario')})")
+                conta["tolti"] += 1
+                continue
             m = manuali.get(a["wikidata"])
             if m and anno(a.get("morte")) != m["morte"]:
                 # la fonte nazionale dà un altro anno di morte: l'autore non appartiene a questo elenco
