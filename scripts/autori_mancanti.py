@@ -93,6 +93,11 @@ def wikidata(qids):
                     x["morti"].add(y)
             if "p" in r:
                 x["prof"].add(r["p"]["value"].rsplit("/", 1)[-1])
+        # in quante Wikipedia ha una pagina (i sitelinks contano anche Wikisource, Wikiquote...)
+        for r in V.sparql(f"""SELECT ?a (COUNT(DISTINCT ?art) AS ?n) WHERE {{ VALUES ?a {{ {v} }}
+                               ?art schema:about ?a ; schema:isPartOf ?w . ?w wikibase:wikiGroup "wikipedia" }} GROUP BY ?a"""):
+            q = r["a"]["value"].rsplit("/", 1)[-1]
+            info.setdefault(q, {"morti": set(), "prof": set(), "lingue": 0})["wikipedia"] = int(r["n"]["value"])
     return info
 
 
@@ -114,6 +119,7 @@ def main():
         righe = []
         for q, c in cand.items():
             w = info.get(q, {"morti": set(), "prof": set(), "lingue": 0})
+            w.setdefault("wikipedia", 0)
             if not w["morti"]:
                 perche = "Wikidata non ha la data di morte"
             elif morte not in w["morti"]:
@@ -123,8 +129,9 @@ def main():
             else:
                 perche = "altro (da controllare: professione o regola della lista)"
             righe.append({"qid": q, "nome": next(iter(c["titoli"].values())), "fonti": sorted(c["fonti"]), "perche": perche,
-                          "lingue": w["lingue"], "morti_wikidata": sorted(w["morti"])})
-        righe.sort(key=lambda r: (-len(r["fonti"]), -r["lingue"]))
+                          "lingue": w["lingue"], "wikipedia": w["wikipedia"], "morti_wikidata": sorted(w["morti"])})
+        # in cima chi ha una pagina in 10 o più Wikipedia (il traguardo: nessuno di loro manca senza un motivo scritto)
+        righe.sort(key=lambda r: (r["wikipedia"] < 10, -r["wikipedia"], -len(r["fonti"])))
         out["europa" if tipo == "it" else "spagna"] = {"morte": morte, "candidati": righe}
     json.dump({"aggiornato": date.today().isoformat(), "anno": ANNO, **out},
               open(R / "data" / "registro" / f"autori_mancanti_{ANNO}.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
@@ -133,10 +140,12 @@ def main():
           "Candidati: scrittori morti nell'anno secondo Wikipedia (categorie dei morti dell'anno, en it de fr es pl, con una "
           "categoria da scrittore) o secondo la GND, che non sono nelle nostre liste. Prima quelli con più fonti.", ""]
     for k, x in out.items():
+        dieci = [r for r in x["candidati"] if r["wikipedia"] >= 10]
         md += [f"## {'Europa' if k == 'europa' else 'Spagna'}: morti nel {x['morte']}", "",
-               f"Candidati: {len(x['candidati'])}", "", "| Autore | Fonti | Lingue Wikipedia | Perché manca |", "|---|---|---|---|"]
-        md += [f"| {r['nome']} ([{r['qid']}](https://www.wikidata.org/wiki/{r['qid']})) | {', '.join(r['fonti'])} | {r['lingue']} | {r['perche']} |"
-               for r in x["candidati"][:300]]
+               f"Candidati: {len(x['candidati'])}; con una pagina in 10 o più Wikipedia: **{len(dieci)}** (in cima).", "",
+               "| Autore | Wikipedia | Fonti | Perché manca |", "|---|---|---|---|"]
+        md += [f"| {r['nome']} ([{r['qid']}](https://www.wikidata.org/wiki/{r['qid']})) | {r['wikipedia']} | {', '.join(r['fonti'])} | {r['perche']} |"
+               for r in x["candidati"][:400]]
         md.append("")
     (R / "docs" / f"autori-mancanti-{ANNO}.md").write_text("\n".join(md) + "\n", encoding="utf-8")
     print({k: len(x["candidati"]) for k, x in out.items()}, f"| {time.time() - inizio:.0f} s")
