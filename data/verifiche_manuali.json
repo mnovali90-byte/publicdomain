@@ -1,5 +1,5 @@
 {
- "nota": "Terza fonte, controllata a mano sulla fonte del paese dell'autore, per i casi in cui Wikidata e le biblioteche (GND, Library of Congress) non concordano. 'morte' è l'anno giusto secondo quella fonte. Se è diverso da Wikidata, l'autore esce dall'elenco dell'anno sbagliato.",
+ "nota": "Terza fonte, controllata a mano su fonti terze, per i casi in cui Wikidata e le biblioteche (GND, Library of Congress) non concordano. 'morte' è l'anno giusto secondo quella fonte. Se è diverso da Wikidata, l'autore esce dall'elenco dell'anno sbagliato.",
  "autori": {
   "Q12731091": {
    "nome": "Isaiia Răcăciuni",
@@ -85,6 +85,167 @@
    "url": "https://www.iranicaonline.org/articles/dehkoda/",
    "url_2": "https://www.rekhta.org/authors/ali-akbar-dahkhuda/profile",
    "controllato": "2026-11-23"
+  },
+  "Q156999": {
+   "nome": "Lucien Febvre",
+   "morte": 1956,
+   "fonte": "Encyclopaedia Britannica e Collège de France",
+   "url": "https://www.britannica.com/print/article/203280",
+   "url_2": "https://www.college-de-france.fr/fr/personne/lucien-febvre",
+   "fonti": [
+    {
+     "nome": "Encyclopaedia Britannica",
+     "url": "https://www.britannica.com/print/article/203280",
+     "citazione": "died Sept. 27, 1956, Saint-Amour"
+    },
+    {
+     "nome": "Collège de France",
+     "url": "https://www.college-de-france.fr/fr/personne/lucien-febvre",
+     "citazione": "Décédé le 25 septembre 1956 à Saint-Amour."
+    }
+   ],
+   "controllato": "2026-11-23",
+   "nota": "Britannica dà il 27 settembre, il Collège de France il 25: l'anno è lo stesso"
+  },
+  "Q1316061": {
+   "nome": "George Sarton",
+   "morte": 1956,
+   "fonte": "Encyclopaedia Britannica e British Medical Journal, necrologio del 14 aprile 1956",
+   "url": "https://www.britannica.com/biography/George-Alfred-Leon-Sarton/article-bibliography",
+   "url_2": "https://www.bmj.com/content/1/4971/865.1.full.pdf",
+   "fonti": [
+    {
+     "nome": "Encyclopaedia Britannica",
+     "url": "https://www.britannica.com/biography/George-Alfred-Leon-Sarton/article-bibliography",
+     "citazione": "died March 22, 1956, Cambridge, Mass."
+    },
+    {
+     "nome": "British Medical Journal, necrologio del 14 aprile 1956",
+     "url": "https://www.bmj.com/content/1/4971/865.1.full.pdf",
+     "citazione": "died at Cambridge, Massachusetts, on March 22, aged 71"
+    }
+   ],
+   "controllato": "2026-11-23"
+  },
+  "Q1130486": {
+   "nome": "Piero Calamandrei",
+   "morte": 1956,
+   "fonte": "Università di Firenze e Comune di Firenze",
+   "url": "https://www.unifi.it/en/node/12438",
+   "url_2": "https://cultura.comune.fi.it/system/files/2019-01/Piero_Calamandrei_maximum-compressed.pdf",
+   "fonti": [
+    {
+     "nome": "Università di Firenze",
+     "url": "https://www.unifi.it/en/node/12438",
+     "citazione": "il 27 settembre 1956, moriva Piero Calamandrei"
+    },
+    {
+     "nome": "Comune di Firenze",
+     "url": "https://cultura.comune.fi.it/system/files/2019-01/Piero_Calamandrei_maximum-compressed.pdf",
+     "citazione": "(Firenze 21 aprile 1889 - 27 settembre 1956)"
+    }
+   ],
+   "controllato": "2026-11-23"
+  },
+  "Q9317": {
+   "nome": "John Maynard Keynes",
+   "morte": 1946,
+   "fonte": "Encyclopaedia Britannica e Store norske leksikon",
+   "url": "https://britannica.com/summary/John-Maynard-Keynes",
+   "url_2": "https://snl.no/John_Maynard_Keynes",
+   "fonti": [
+    {
+     "nome": "Encyclopaedia Britannica",
+     "url": "https://britannica.com/summary/John-Maynard-Keynes",
+     "citazione": "died April 21, 1946, Firle, Sussex"
+    },
+    {
+     "nome": "Store norske leksikon",
+     "url": "https://snl.no/John_Maynard_Keynes",
+     "citazione": "21. april 1946, Firle, England"
+    }
+   ],
+   "controllato": "2026-11-23"
+  },
+  "Q29031": {
+   "nome": "Charles Oman",
+   "morte": 1946,
+   "fonte": "Fondation Napoléon e Biblioteca Nacional de Portugal, dizionario degli storici",
+   "url": "https://www.napoleon.org/en/magazine/napoleonic-pleasures/a-history-of-the-peninsular-war-by-sir-charles-oman/",
+   "url_2": "https://dichp.bnportugal.gov.pt/imagens/oman.pdf",
+   "fonti": [
+    {
+     "nome": "Fondation Napoléon",
+     "url": "https://www.napoleon.org/en/magazine/napoleonic-pleasures/a-history-of-the-peninsular-war-by-sir-charles-oman/",
+     "citazione": "(January 12, 1860 – June 23, 1946)"
+    },
+    {
+     "nome": "Biblioteca Nacional de Portugal, dizionario degli storici",
+     "url": "https://dichp.bnportugal.gov.pt/imagens/oman.pdf",
+     "citazione": "OMAN, Charles (Muzaffarpur, 1860; Oxford, 1946)"
+    }
+   ],
+   "controllato": "2026-11-23"
+  },
+  "Q77521": {
+   "nome": "Karl Groos",
+   "morte": 1946,
+   "fonte": "Neue Deutsche Biographie e Spektrum, Lexikon der Psychologie",
+   "url": "https://www.deutsche-biographie.de/116865865.html",
+   "url_2": "https://www.spektrum.de/lexikon/psychologie/groos/6076",
+   "fonti": [
+    {
+     "nome": "Neue Deutsche Biographie",
+     "url": "https://www.deutsche-biographie.de/116865865.html",
+     "citazione": "† 27.3.1946 Tübingen"
+    },
+    {
+     "nome": "Spektrum, Lexikon der Psychologie",
+     "url": "https://www.spektrum.de/lexikon/psychologie/groos/6076",
+     "citazione": "Groos, Karl, 1861-1946, Philosoph und Psychologe"
+    }
+   ],
+   "controllato": "2026-11-23"
+  },
+  "Q730889": {
+   "nome": "Gaetano Salvemini",
+   "morte": 1957,
+   "fonte": "Grande enciclopedia sovietica e Università di Verona",
+   "url": "https://booksite.ru/FullText/1/001/008/099/084.htm",
+   "url_2": "https://www.dcuci.univr.it/documenti/OccorrenzaIns/matdid/matdid389522.pdf",
+   "fonti": [
+    {
+     "nome": "Grande enciclopedia sovietica",
+     "url": "https://booksite.ru/FullText/1/001/008/099/084.htm",
+     "citazione": "6.9.1957, Сорренто"
+    },
+    {
+     "nome": "Università di Verona",
+     "url": "https://www.dcuci.univr.it/documenti/OccorrenzaIns/matdid/matdid389522.pdf",
+     "citazione": "Sorrento, 6 settembre 1957"
+    }
+   ],
+   "controllato": "2026-11-23"
+  },
+  "Q708794": {
+   "nome": "Tokutomi Sohō",
+   "morte": 1957,
+   "fonte": "National Diet Library (Giappone) e Encyclopaedia Britannica",
+   "url": "https://www.ndl.go.jp/portrait/e/datas/298",
+   "url_2": "https://www.britannica.com/print/article/598405",
+   "fonti": [
+    {
+     "nome": "National Diet Library (Giappone)",
+     "url": "https://www.ndl.go.jp/portrait/e/datas/298",
+     "citazione": "March 14, 1863 - November 2, 1957"
+    },
+    {
+     "nome": "Encyclopaedia Britannica",
+     "url": "https://www.britannica.com/print/article/598405",
+     "citazione": "died Nov. 2, 1957, Atami"
+    }
+   ],
+   "controllato": "2026-11-23"
   }
  },
  "fonti_aggiunte": {
@@ -129,6 +290,78 @@
    "fonte": "Encyclopaedia Iranica: «scholar, poet, and social critic»",
    "url": "https://www.iranicaonline.org/articles/dehkoda/",
    "aggiunto": "2026-11-23"
+  },
+  "Q156999": {
+   "nome": "Lucien Febvre",
+   "professioni": [
+    "saggista"
+   ],
+   "fonte": "Den Store Danske (lex.dk): Le Problème de l'incroyance au XVIe siècle",
+   "url": "https://lex.dk/Lucien_Febvre",
+   "aggiunto": "2026-11-23"
+  },
+  "Q1316061": {
+   "nome": "George Sarton",
+   "professioni": [
+    "saggista"
+   ],
+   "fonte": "Encyclopaedia Britannica: Introduction to the History of Science",
+   "url": "https://www.britannica.com/biography/George-Alfred-Leon-Sarton/article-bibliography",
+   "aggiunto": "2026-11-23"
+  },
+  "Q1130486": {
+   "nome": "Piero Calamandrei",
+   "professioni": [
+    "saggista"
+   ],
+   "fonte": "Ponte alle Grazie (editore): Elogio dei giudici scritto da un avvocato",
+   "url": "https://www.ponteallegrazie.it/autore/piero-calamandrei.html",
+   "aggiunto": "2026-11-23"
+  },
+  "Q9317": {
+   "nome": "John Maynard Keynes",
+   "professioni": [
+    "saggista"
+   ],
+   "fonte": "Store norske leksikon: The General Theory of Employment, Interest and Money",
+   "url": "https://snl.no/John_Maynard_Keynes",
+   "aggiunto": "2026-11-23"
+  },
+  "Q29031": {
+   "nome": "Charles Oman",
+   "professioni": [
+    "saggista"
+   ],
+   "fonte": "Biblioteca Nacional de Portugal, dizionario degli storici: A History of the Peninsular War",
+   "url": "https://dichp.bnportugal.gov.pt/imagens/oman.pdf",
+   "aggiunto": "2026-11-23"
+  },
+  "Q77521": {
+   "nome": "Karl Groos",
+   "professioni": [
+    "saggista"
+   ],
+   "fonte": "Spektrum, Lexikon der Psychologie: Die Spiele der Tiere",
+   "url": "https://www.spektrum.de/lexikon/psychologie/groos/6076",
+   "aggiunto": "2026-11-23"
+  },
+  "Q730889": {
+   "nome": "Gaetano Salvemini",
+   "professioni": [
+    "saggista"
+   ],
+   "fonte": "Università di Verona: La Rivoluzione francese",
+   "url": "https://www.dcuci.univr.it/documenti/OccorrenzaIns/matdid/matdid389522.pdf",
+   "aggiunto": "2026-11-23"
+  },
+  "Q708794": {
+   "nome": "Tokutomi Sohō",
+   "professioni": [
+    "saggista"
+   ],
+   "fonte": "Encyclopaedia Britannica: Kinsei Nihon kokumin shi",
+   "url": "https://www.britannica.com/print/article/598405",
+   "aggiunto": "2026-11-23"
   }
  },
  "nota_professioni_aggiunte": "Professioni aggiunte a mano con una fonte (23/11/2026): si aggiungono a quelle di Wikidata nella scheda dell'autore.",
@@ -138,7 +371,171 @@
    "fonte": "Encyclopaedia Iranica: «scholar, poet, and social critic»",
    "url": "https://www.iranicaonline.org/articles/dehkoda/",
    "aggiunto": "2026-11-23"
+  },
+  "Q156999": {
+   "nome": "Lucien Febvre",
+   "fonte": "Den Store Danske (lex.dk): Le Problème de l'incroyance au XVIe siècle",
+   "url": "https://lex.dk/Lucien_Febvre",
+   "aggiunto": "2026-11-23"
+  },
+  "Q1316061": {
+   "nome": "George Sarton",
+   "fonte": "Encyclopaedia Britannica: Introduction to the History of Science",
+   "url": "https://www.britannica.com/biography/George-Alfred-Leon-Sarton/article-bibliography",
+   "aggiunto": "2026-11-23"
+  },
+  "Q1130486": {
+   "nome": "Piero Calamandrei",
+   "fonte": "Ponte alle Grazie (editore): Elogio dei giudici scritto da un avvocato",
+   "url": "https://www.ponteallegrazie.it/autore/piero-calamandrei.html",
+   "aggiunto": "2026-11-23"
+  },
+  "Q9317": {
+   "nome": "John Maynard Keynes",
+   "fonte": "Store norske leksikon: The General Theory of Employment, Interest and Money",
+   "url": "https://snl.no/John_Maynard_Keynes",
+   "aggiunto": "2026-11-23"
+  },
+  "Q29031": {
+   "nome": "Charles Oman",
+   "fonte": "Biblioteca Nacional de Portugal, dizionario degli storici: A History of the Peninsular War",
+   "url": "https://dichp.bnportugal.gov.pt/imagens/oman.pdf",
+   "aggiunto": "2026-11-23"
+  },
+  "Q77521": {
+   "nome": "Karl Groos",
+   "fonte": "Spektrum, Lexikon der Psychologie: Die Spiele der Tiere",
+   "url": "https://www.spektrum.de/lexikon/psychologie/groos/6076",
+   "aggiunto": "2026-11-23"
+  },
+  "Q730889": {
+   "nome": "Gaetano Salvemini",
+   "fonte": "Università di Verona: La Rivoluzione francese",
+   "url": "https://www.dcuci.univr.it/documenti/OccorrenzaIns/matdid/matdid389522.pdf",
+   "aggiunto": "2026-11-23"
+  },
+  "Q708794": {
+   "nome": "Tokutomi Sohō",
+   "fonte": "Encyclopaedia Britannica: Kinsei Nihon kokumin shi",
+   "url": "https://www.britannica.com/print/article/598405",
+   "aggiunto": "2026-11-23"
   }
  },
- "nota_scrittori_a_mano": "Autori che la regola della lista (scripts/regola_lista.py) lascerebbe solo in «Tutti» ma che una fonte descrive come scrittori o poeti: vanno nella lista principale (decisione di Marco, 23/11/2026)."
+ "nota_scrittori_a_mano": "Autori che la regola della lista (scripts/regola_lista.py) lascerebbe solo in «Tutti» ma che una fonte descrive come scrittori o poeti: vanno nella lista principale (decisione di Marco, 23/11/2026).",
+ "aggiunti_a_mano": {
+  "Q156999": {
+   "nome": "Lucien Febvre",
+   "lista": "2027",
+   "opera": {
+    "titolo": "Le Problème de l'incroyance au XVIe siècle",
+    "fonte": "Den Store Danske (lex.dk)",
+    "url": "https://lex.dk/Lucien_Febvre",
+    "citazione": "Le Problème de l'incroyance au 16e siècle (1942)",
+    "anno": 1942
+   },
+   "motivo": "scelto da Marco: noto soprattutto come autore di libri (saggistica)",
+   "aggiunto": "2026-11-23",
+   "approvato": false
+  },
+  "Q1316061": {
+   "nome": "George Sarton",
+   "lista": "2027",
+   "opera": {
+    "titolo": "Introduction to the History of Science",
+    "fonte": "Encyclopaedia Britannica",
+    "url": "https://www.britannica.com/biography/George-Alfred-Leon-Sarton/article-bibliography",
+    "citazione": "his classic work, Introduction to the History of Science"
+   },
+   "motivo": "scelto da Marco: noto soprattutto come autore di libri (saggistica)",
+   "aggiunto": "2026-11-23",
+   "approvato": false
+  },
+  "Q1130486": {
+   "nome": "Piero Calamandrei",
+   "lista": "2027",
+   "opera": {
+    "titolo": "Elogio dei giudici scritto da un avvocato",
+    "fonte": "Ponte alle Grazie (editore)",
+    "url": "https://www.ponteallegrazie.it/autore/piero-calamandrei.html",
+    "citazione": "fin dalla prima apparizione nel 1935",
+    "anno": 1935
+   },
+   "motivo": "scelto da Marco: noto soprattutto come autore di libri (saggistica)",
+   "aggiunto": "2026-11-23",
+   "approvato": false
+  },
+  "Q9317": {
+   "nome": "John Maynard Keynes",
+   "lista": "es-2027",
+   "opera": {
+    "titolo": "The General Theory of Employment, Interest and Money",
+    "fonte": "Store norske leksikon",
+    "url": "https://snl.no/John_Maynard_Keynes",
+    "citazione": "The General Theory of Employment, Interest and Money (1936)",
+    "anno": 1936
+   },
+   "motivo": "scelto da Marco: noto soprattutto come autore di libri (saggistica)",
+   "aggiunto": "2026-11-23",
+   "approvato": false
+  },
+  "Q29031": {
+   "nome": "Charles Oman",
+   "lista": "es-2027",
+   "opera": {
+    "titolo": "A History of the Peninsular War",
+    "fonte": "Biblioteca Nacional de Portugal, dizionario degli storici",
+    "url": "https://dichp.bnportugal.gov.pt/imagens/oman.pdf",
+    "citazione": "A History of the Peninsular War, 7 vols., Oxford, Clarendon Press, 1902-1930",
+    "anno": 1902,
+    "nota": "7 volumi, 1902-1930"
+   },
+   "motivo": "scelto da Marco: noto soprattutto come autore di libri (saggistica)",
+   "aggiunto": "2026-11-23",
+   "approvato": false
+  },
+  "Q77521": {
+   "nome": "Karl Groos",
+   "lista": "es-2027",
+   "opera": {
+    "titolo": "Die Spiele der Tiere",
+    "fonte": "Spektrum, Lexikon der Psychologie",
+    "url": "https://www.spektrum.de/lexikon/psychologie/groos/6076",
+    "citazione": "\"Die Spiele der Tiere\" (1896)",
+    "anno": 1896
+   },
+   "motivo": "scelto da Marco: noto soprattutto come autore di libri (saggistica)",
+   "aggiunto": "2026-11-23",
+   "approvato": false
+  },
+  "Q730889": {
+   "nome": "Gaetano Salvemini",
+   "lista": "2028",
+   "opera": {
+    "titolo": "La Rivoluzione francese",
+    "fonte": "Università di Verona",
+    "url": "https://www.dcuci.univr.it/documenti/OccorrenzaIns/matdid/matdid389522.pdf",
+    "citazione": "Analisi storiografica della prima edizione del 1905",
+    "anno": 1905
+   },
+   "motivo": "scelto da Marco: noto soprattutto come autore di libri (saggistica)",
+   "aggiunto": "2026-11-23",
+   "approvato": false
+  },
+  "Q708794": {
+   "nome": "Tokutomi Sohō",
+   "lista": "2028",
+   "opera": {
+    "titolo": "Kinsei Nihon kokumin shi",
+    "fonte": "Encyclopaedia Britannica",
+    "url": "https://www.britannica.com/print/article/598405",
+    "citazione": "100-volume Kinsei Nihon kokumin shi (1918–52",
+    "anno": 1918,
+    "nota": "100 volumi, 1918-1952"
+   },
+   "motivo": "scelto da Marco: noto soprattutto come autore di libri (saggistica)",
+   "aggiunto": "2026-11-23",
+   "approvato": false
+  }
+ },
+ "nota_aggiunti_a_mano": "Autori che non entrano con la regola automatica delle liste ma che Marco ha scelto a mano (23/11/2026: saggisti noti soprattutto come autori di libri; niente regola automatica sui saggisti prima del 7 gennaio 2027). Per ognuno: la lista, l'anno di morte con due fonti terze (in «autori»), un'opera principale con la sua fonte; sono segnati come scrittori («scrittori_a_mano») e saggisti («professioni_aggiunte»). La scheda viene da scripts/scheda_autore.py (data/registro/schede_proposte.json); scripts/verifica.py li mette nella lista. Klages non entra finché non è valutato con la regola sugli autori razzisti. Entrano nelle liste solo con «approvato»: true, dopo che Marco ha visto la fotografia."
 }

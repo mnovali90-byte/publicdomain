@@ -170,6 +170,7 @@ def morte_loc(codice):
     return None
 
 
+from arricchisci import TIPO_CATALOGO, percentile  # noqa: E402  (stesse misure delle liste)
 from regole import AUTOREVOLI, AUTOREVOLI_RE, NON_AUTOREVOLI_RE, maggioranza, decidi_morte, morti_liberi_nel  # noqa: E402,F401  (regole in un posto solo)
 CORRETTE = DATA / "morti_corrette.json"
 try:
@@ -183,6 +184,52 @@ def anno_atteso(f):
     n = int(re.search(r"(\d{4})\.json$", f.name).group(1))
     return morti_liberi_nel(n, "es" if f.name.startswith("es-") else "it")
 
+
+def carica_aggiunti():
+    """Correzioni a mano (data/verifiche_manuali.json) e schede proposte (data/registro/schede_proposte.json)."""
+    try:
+        _vm = json.load(open(DATA / "verifiche_manuali.json", encoding="utf-8"))
+    except Exception:
+        _vm = {}
+    try:
+        schede = json.load(open(DATA / "registro" / "schede_proposte.json", encoding="utf-8")).get("autori", {})
+    except Exception:
+        schede = {}
+    return _vm.get("autori", {}), _vm.get("aggiunti_a_mano", {}), _vm.get("professioni_aggiunte", {}), schede
+
+
+def inserisci_aggiunti(f, p, atteso, manuali, aggiunti, prof_mano, schede, anteprima=False):
+    # 23/11/2026 (Marco): autori scelti a mano (data/verifiche_manuali.json «aggiunti_a_mano»: saggisti noti
+    # soprattutto come autori di libri). Entrano solo nella loro lista, con la scheda di scripts/scheda_autore.py e
+    # l'anno di morte controllato a mano su due fonti terze (esito «nazionale»); sono scrittori segnati a mano.
+    presenti = {a["wikidata"] for a in p["autori"]}
+    for q, ag in aggiunti.items():
+        if ag.get("lista") != f.stem or q in presenti:
+            continue
+        if not ag.get("approvato") and not anteprima:   # entra solo dopo l'ok di Marco sulla fotografia
+            continue
+        sch, m = (schede.get(q) or {}).get("scheda"), manuali.get(q)
+        if not sch or not m or m.get("morte") != atteso or anno(sch.get("morte")) not in (None, m["morte"]):
+            print(f"  NON AGGIUNTO a {f.name}: {ag.get('nome')} (manca la scheda o l'anno di morte non torna)")
+            continue
+        nuovo = {k: x for k, x in sch.items() if k not in ("candidato",)}
+        nuovo["morte"] = sch.get("morte") or str(m["morte"])
+        nuovo["letterario"] = True
+        for pr in (prof_mano.get(q) or {}).get("professioni", []):
+            if pr not in nuovo.setdefault("professioni", []):
+                nuovo["professioni"].append(pr)
+        nuovo["tipo_catalogo"] = [TIPO_CATALOGO[x] for x in nuovo["professioni"] if x in TIPO_CATALOGO]
+        nuovo["verifica"] = {"esito": "nazionale", "fonti": {"wikidata": anno(sch.get("morte"))},
+                             "nazionale": {"fonte": m["fonte"], "url": m["url"], "url_2": m.get("url_2"), "morte": m["morte"]}}
+        # indici come per gli altri della lista (0-100 sullo stesso dato), senza toccare quelli già calcolati
+        lett = [a for a in p["autori"] if a.get("letterario") and "n_opere" in a]
+        for campo, chiave in (("visite_it", "indice_it"), ("visite_en", "indice_en"), ("visite_es", "indice_es"),
+                              ("visite_de", "indice_de"), ("visite_fr", "indice_fr"), ("pagine_wikipedia", "indice_int")):
+            val = [a[campo] for a in lett if a.get(campo) is not None]
+            if nuovo.get(campo) is not None and val:
+                nuovo[chiave] = 0 if nuovo[campo] == 0 else round(100 * percentile(nuovo[campo], val))
+        p["autori"].append(nuovo)
+        print(f"  AGGIUNTO a {f.name}: {ag.get('nome')} (scelto a mano; morto nel {m['morte']} secondo {m['fonte']})")
 
 def main():
     inizio = time.time()
@@ -228,10 +275,7 @@ def main():
                 print(nome_f, c, "non letto:", e)
             time.sleep(0.2)
 
-    try:
-        manuali = json.load(open(DATA / "verifiche_manuali.json", encoding="utf-8"))["autori"]
-    except Exception:
-        manuali = {}
+    manuali, aggiunti, prof_mano, schede = carica_aggiunti()
     conta = {"verificato": 0, "maggioranza": 0, "corretto": 0, "documentato": 0, "discorde": 0, "una_fonte": 0, "nazionale": 0, "tolti": 0}
     corr = {}
     for f, p in pacchetti.items():
@@ -250,7 +294,7 @@ def main():
             m = manuali.get(a["wikidata"])
             if m:
                 a["verifica"] = {"esito": "nazionale", "fonti": {"wikidata": anno(a.get("morte"))},
-                                 "nazionale": {"fonte": m["fonte"], "url": m["url"], "morte": m["morte"]}}
+                                 "nazionale": {"fonte": m["fonte"], "url": m["url"], "url_2": m.get("url_2"), "morte": m["morte"]}}
                 conta["nazionale"] += 1
                 if ill.get(a["wikidata"]):
                     a["illustratori"] = ill[a["wikidata"]]
@@ -333,9 +377,10 @@ def main():
                 m = manuali.get(q)
                 if m:                  # verifica a mano: esito «nazionale», come per chi è già nell'elenco
                     nuovo["verifica"] = {"esito": "nazionale", "fonti": {"wikidata": c["morte_wikidata"]},
-                                         "nazionale": {"fonte": m["fonte"], "url": m["url"], "morte": m["morte"]}}
+                                         "nazionale": {"fonte": m["fonte"], "url": m["url"], "url_2": m.get("url_2"), "morte": m["morte"]}}
                 p["autori"].append(nuovo)
                 print(f"  AGGIUNTO a {f.name}: {c['nome']} (morto nel {c['morte']} secondo {', '.join(c['fonti'])})")
+        inserisci_aggiunti(f, p, atteso, manuali, aggiunti, prof_mano, schede)
         for a in p["autori"]:          # chi è già nell'elenco giusto prende l'anno delle fonti autorevoli
             c = tutte.get(a["wikidata"])
             if c and c["morte"] == atteso and anno(a.get("morte")) != c["morte"]:
@@ -356,5 +401,20 @@ def main():
         print("  DISCORDE:", n, fv)
 
 
+def solo_aggiunti():
+    """Senza rete: mette nelle liste gli autori scelti a mano che hanno già la scheda (stesso codice del giro)."""
+    manuali, aggiunti, prof_mano, schede = carica_aggiunti()
+    for f in sorted(DATA.glob("*.json")):
+        if not re.fullmatch(r"(es-)?\d{4}\.json", f.name):
+            continue
+        p = json.load(open(f, encoding="utf-8"))
+        n = len(p["autori"])
+        inserisci_aggiunti(f, p, anno_atteso(f), manuali, aggiunti, prof_mano, schede, anteprima="--anteprima" in sys.argv)
+        if len(p["autori"]) != n:
+            f.write_text(json.dumps(p, ensure_ascii=False, indent=1), encoding="utf-8")
+
+
 if __name__ == "__main__":
+    if "--solo-aggiunti" in sys.argv:
+        sys.exit(solo_aggiunti())
     sys.exit(main())

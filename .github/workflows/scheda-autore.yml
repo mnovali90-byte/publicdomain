@@ -27,9 +27,11 @@ jobs:
         with:
           python-version: "3.12"
       - name: Scheda come la fanno aggiorna.py e arricchisci.py
-        env:
-          QID: "Q470931"
-        run: python scripts/scheda_autore.py
+        # i codici Wikidata (Q...) sono quelli scritti in docs/registro/passo-scheda.txt
+        run: |
+          export QID=$(grep -o 'Q[0-9]\+' docs/registro/passo-scheda.txt | paste -sd, -)
+          echo "Schede: $QID"
+          python scripts/scheda_autore.py
       - name: Salva solo la scheda proposta
         if: ${{ !cancelled() }}
         run: |

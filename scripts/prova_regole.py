@@ -401,6 +401,48 @@ if _mai:
     print(f"    non mostrate in nessuna pagina o file controllato (opere senza codice nelle schede o fuori da Già pubblici): {len(_mai)}")
 errori += no8
 
+# ---------------------------------------------------------------- 9. autori aggiunti e verifiche a mano (23/11/2026)
+# Ogni autore scelto a mano (data/verifiche_manuali.json, «aggiunti_a_mano») ha: la lista giusta per il suo anno di morte,
+# due fonti terze con citazione (non Wikipedia), un'opera principale con fonte e citazione, il segno di scrittore; se ha la
+# scheda è nella sua lista una volta sola, con l'esito «nazionale». Nessuna verifica a mano nuova usa Wikipedia come fonte.
+# Caso che l'ha fatta nascere: gli 8 saggisti scelti da Marco (Febvre, Sarton, Calamandrei, Keynes, Oman, Groos, Salvemini,
+# Tokutomi); Klages resta fuori finché non è valutato con la regola sugli autori razzisti.
+_vm9 = json.load(open(RADICE / "data" / "verifiche_manuali.json", encoding="utf-8"))
+try:
+    _sch9 = json.load(open(RADICE / "data" / "registro" / "schede_proposte.json", encoding="utf-8")).get("autori", {})
+except Exception:
+    _sch9 = {}
+no9, in_lista9 = [], 0
+_wiki9 = re.compile(r"wikipedia", re.I)
+for q9, ag9 in _vm9.get("aggiunti_a_mano", {}).items():
+    m9 = _vm9["autori"].get(q9) or {}
+    lista9 = ag9.get("lista", "")
+    f9 = RADICE / "data" / f"{lista9}.json"
+    atteso9 = R.morti_liberi_nel(int(lista9[-4:]), "es" if lista9.startswith("es-") else "it") if re.search(r"\d{4}$", lista9) else None
+    if m9.get("morte") != atteso9:
+        no9.append(f"{ag9.get('nome')}: anno di morte {m9.get('morte')} non è quello della lista {lista9} ({atteso9})")
+    fonti9 = m9.get("fonti") or []
+    if len(fonti9) < 2 or any(not x.get("citazione") or _wiki9.search(x.get("nome", "") + x.get("url", "")) for x in fonti9):
+        no9.append(f"{ag9.get('nome')}: servono due fonti terze (non Wikipedia) con citazione")
+    op9 = ag9.get("opera") or {}
+    if not (op9.get("titolo") and op9.get("fonte") and op9.get("url") and op9.get("citazione")):
+        no9.append(f"{ag9.get('nome')}: manca l'opera principale con fonte e citazione")
+    if q9 not in _vm9.get("scrittori_a_mano", {}):
+        no9.append(f"{ag9.get('nome')}: non è segnato come scrittore")
+    if ag9.get("approvato") and q9 in _sch9 and f9.exists():
+        trovati9 = [a for a in json.load(open(f9, encoding="utf-8"))["autori"] if a.get("wikidata") == q9]
+        if len(trovati9) != 1 or (trovati9[0].get("verifica") or {}).get("esito") != "nazionale" or not trovati9[0].get("letterario"):
+            no9.append(f"{ag9.get('nome')}: ha la scheda ma nella lista {lista9} compare {len(trovati9)} volte o senza esito «nazionale»")
+        else:
+            in_lista9 += 1
+for q9, m9 in _vm9.get("autori", {}).items():
+    if (m9.get("controllato") or "") >= "2026-11-23" and _wiki9.search((m9.get("fonte") or "") + (m9.get("url") or "")):
+        no9.append(f"verifica a mano di {m9.get('nome')} (dal 23/11/2026) con Wikipedia come fonte")
+print(f"9. Autori aggiunti a mano: {len(_vm9.get('aggiunti_a_mano', {}))} (approvati: {sum(1 for x in _vm9.get('aggiunti_a_mano', {}).values() if x.get('approvato'))}), già nella loro lista: {in_lista9}, problemi: {len(no9)}")
+for x in no9:
+    print("   ", x)
+errori += no9
+
 for e in errori:
     print("ERRORE:", e)
 sys.exit(1 if errori else 0)

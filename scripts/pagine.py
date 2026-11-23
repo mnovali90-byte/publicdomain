@@ -400,7 +400,10 @@ def blocco_verifica(a, lang):
         # 23/11/2026 (Marco): frase uguale per tutte le verifiche a mano, seguita dalle fonti
         t = (f"Anno di morte controllato a mano su fonti terze: {n.get('fonte')}." if it
              else f"Year of death checked by hand against third-party sources: {n.get('fonte')}.")
-        return [f'<p class="sotto">{esc(t)} <a href="{esc(n.get("url", ""))}" rel="noopener">{"Fonte" if it else "Source"}</a></p>\n']
+        link = f'<a href="{esc(n.get("url", ""))}" rel="noopener">{"Fonte" if it else "Source"}</a>'
+        if n.get("url_2"):
+            link += f', <a href="{esc(n["url_2"])}" rel="noopener">{"seconda fonte" if it else "second source"}</a>'
+        return [f'<p class="sotto">{esc(t)} {link}</p>\n']
     if v["esito"] in ("maggioranza", "corretto"):
         au = v.get("autorevoli") or {}
         fa = ", ".join(au.get("fonti", []))
