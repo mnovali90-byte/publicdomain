@@ -1330,3 +1330,8 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
   - Quicksand entra in Già pubblici solo al giro mensile dello Storico (2 dicembre): oggi non è nella ricerca, perché con il 1931 non era libero da nessuna parte;
   - per Noce i dnie i volumi II-IV non hanno un codice Wikidata proprio: i loro anni sono nella nota;
   - Švambranija, La madre, Vlak u snijegu e Los placeres prohibidos aspettano che si creino le liste 2029 e 2032.
+
+## 23/11/2026 — Approvati i 2 cambi di stato delle opere USA tolte
+- **Approvazione di Marco:** Racconti di Odessa e Macchina passano da «dal 2027» a «libero» negli USA. Impronta f1eaf52c4506, aggiunta a data/cambi-approvati.txt.
+- **Fotografia:** aggiornata (data/fotografia.json.gz). Il confronto rifatto dà 0 cambi; docs/cambi-da-approvare.md dice «Nessun cambio di stato da approvare».
+- **Il ballo:** non c'è nessun errore aperto. In Già pubblici ha il 1930 (Q3220209) da stamattina: era una mia segnalazione sbagliata.
