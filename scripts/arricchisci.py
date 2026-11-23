@@ -463,7 +463,17 @@ def elabora_anno(percorso, cache, oggi):
     pacchetto = json.loads(percorso.read_text(encoding="utf-8"))
     # regola della lista (18/11/2026, scripts/regola_lista.py): si arricchisce chi PUÒ essere uno scrittore
     # (descrizione con un mestiere letterario o professione letteraria); il verdetto arriva dopo, con il numero di opere
-    letterari = [a for a in pacchetto["autori"] if regola_lista.candidato(a, a.get("descrizione"))]
+    # correzioni a mano con una fonte (data/verifiche_manuali.json, 23/11/2026): professioni in più e scrittori segnalati
+    try:
+        _vm = json.loads((DATA_DIR / "verifiche_manuali.json").read_text(encoding="utf-8"))
+    except Exception:
+        _vm = {}
+    prof_mano, scritt_mano = _vm.get("professioni_aggiunte", {}), _vm.get("scrittori_a_mano", {})
+    for a in pacchetto["autori"]:
+        for pr in (prof_mano.get(a["wikidata"]) or {}).get("professioni", []):
+            if pr not in a.setdefault("professioni", []):
+                a["professioni"].append(pr)
+    letterari = [a for a in pacchetto["autori"] if regola_lista.candidato(a, a.get("descrizione")) or a["wikidata"] in scritt_mano]
     da_fare = [a for a in letterari if da_aggiornare(cache.get(a["wikidata"]), oggi)]
     print(f"{percorso.name}: {len(letterari)} letterari, {len(da_fare)} da scaricare", file=sys.stderr)
     da_fare.sort(key=lambda a: -a.get("pagine_wikipedia", 0))   # i più noti per primi
@@ -490,7 +500,7 @@ def elabora_anno(percorso, cache, oggi):
             if voce:
                 a.setdefault("n_opere", 0)
     for a in pacchetto["autori"]:
-        if a.get("letterario") and "n_opere" in a and not regola_lista.scrittore(a, a.get("descrizione")):
+        if a.get("letterario") and "n_opere" in a and a["wikidata"] not in scritt_mano and not regola_lista.scrittore(a, a.get("descrizione")):
             a["letterario"] = False      # soprattutto altro (pittore, scacchista...): resta solo in «Tutti»
     calcola_indici([a for a in pacchetto["autori"] if a.get("letterario") and "n_opere" in a])
     pacchetto["letterari"] = len(letterari)

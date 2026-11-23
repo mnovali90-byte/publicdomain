@@ -308,8 +308,9 @@ def main():
         vecchie = {}
     tutte = {**vecchie, **corr}
     for q in list(tutte):
-        if q in manuali:               # il controllo a mano vince
+        if q in manuali and manuali[q].get("morte") != tutte[q].get("morte"):   # il controllo a mano vince
             tutte.pop(q)
+        # 23/11/2026 (Dehkhoda): se il controllo a mano dà lo stesso anno, l'autore che manca va aggiunto (scheda qui)
     for f, p in pacchetti.items():
         atteso = anno_atteso(f)
         tenuti = []
@@ -329,6 +330,10 @@ def main():
                 nuovo["morte"] = str(c["morte"])
                 nuovo["verifica"] = {"esito": "corretto", "fonti": {"wikidata": c["morte_wikidata"]},
                                      "autorevoli": {"morte": c["morte"], "fonti": c["fonti"]}}
+                m = manuali.get(q)
+                if m:                  # verifica a mano: esito «nazionale», come per chi è già nell'elenco
+                    nuovo["verifica"] = {"esito": "nazionale", "fonti": {"wikidata": c["morte_wikidata"]},
+                                         "nazionale": {"fonte": m["fonte"], "url": m["url"], "morte": m["morte"]}}
                 p["autori"].append(nuovo)
                 print(f"  AGGIUNTO a {f.name}: {c['nome']} (morto nel {c['morte']} secondo {', '.join(c['fonti'])})")
         for a in p["autori"]:          # chi è già nell'elenco giusto prende l'anno delle fonti autorevoli

@@ -77,6 +77,14 @@
    "fonte": "Yiddish Leksikon: «Hersh-Leyzer Kroy (December 25, 1900-December 29, 1956)», che cita G. Kressel, Leksikon hasifrut haivrit, vol. 2 (1967)",
    "url": "https://yleksikon.blogspot.com/2019/04/hersh-leyzer-kroy.html",
    "controllato": "2026-11-23"
+  },
+  "Q470931": {
+   "nome": "Ali-Akbar Dehkhoda",
+   "morte": 1956,
+   "fonte": "Encyclopaedia Iranica (26 febbraio 1956) e Rekhta (27 febbraio 1956); Wikidata dà il 1959",
+   "url": "https://www.iranicaonline.org/articles/dehkoda/",
+   "url_2": "https://www.rekhta.org/authors/ali-akbar-dahkhuda/profile",
+   "controllato": "2026-11-23"
   }
  },
  "fonti_aggiunte": {
@@ -111,5 +119,26 @@
    }
   ]
  },
- "nota_fonti_aggiunte": "fonti_aggiunte (23/11/2026, Marco): fonti trovate a mano che NON decidono l'anno ma entrano nel confronto (scripts/registro_autori.py le mette accanto a Wikidata, GND e LoC). Se danno un anno diverso, l'esito diventa «discorde» e la scheda dice «da verificare»."
+ "nota_fonti_aggiunte": "fonti_aggiunte (23/11/2026, Marco): fonti trovate a mano che NON decidono l'anno ma entrano nel confronto (scripts/registro_autori.py le mette accanto a Wikidata, GND e LoC). Se danno un anno diverso, l'esito diventa «discorde» e la scheda dice «da verificare».",
+ "professioni_aggiunte": {
+  "Q470931": {
+   "nome": "Ali-Akbar Dehkhoda",
+   "professioni": [
+    "poeta"
+   ],
+   "fonte": "Encyclopaedia Iranica: «scholar, poet, and social critic»",
+   "url": "https://www.iranicaonline.org/articles/dehkoda/",
+   "aggiunto": "2026-11-23"
+  }
+ },
+ "nota_professioni_aggiunte": "Professioni aggiunte a mano con una fonte (23/11/2026): si aggiungono a quelle di Wikidata nella scheda dell'autore.",
+ "scrittori_a_mano": {
+  "Q470931": {
+   "nome": "Ali-Akbar Dehkhoda",
+   "fonte": "Encyclopaedia Iranica: «scholar, poet, and social critic»",
+   "url": "https://www.iranicaonline.org/articles/dehkoda/",
+   "aggiunto": "2026-11-23"
+  }
+ },
+ "nota_scrittori_a_mano": "Autori che la regola della lista (scripts/regola_lista.py) lascerebbe solo in «Tutti» ma che una fonte descrive come scrittori o poeti: vanno nella lista principale (decisione di Marco, 23/11/2026)."
 }

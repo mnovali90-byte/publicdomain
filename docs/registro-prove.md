@@ -1474,3 +1474,13 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - **Proposta** in docs/giri-automatici.md: verifica delle opere USA per la lista 2029, da gennaio 2027.
 - **Conteggio dei saggisti:** il giro è fallito alla richiesta del numero di Wikipedia (Wikidata non ha risposto a 200 autori per volta). Corretto: 50 per volta. Da rilanciare con l'ok di Marco.
 - **Nel sito:** niente cambiato. Prove 1-8 a 0.
+
+## 23/11/2026 — Dehkhoda nella lista 2027 (preparato, non pubblicato)
+- **Scheda** (giro scheda-autore, data/registro/schede_proposte.json): professioni su Wikidata giornalista, lessicografo, letterato, linguista, politico, satirista, scrittore, traduttore; descrizione «Iranian linguist and lexicographer»; 2 opere su Wikidata. Per la regola della lista è solo in «Tutti».
+- **Correzioni a mano** (data/verifiche_manuali.json):
+  - fonti aggiunte: Encyclopaedia Iranica 1956 e Rekhta 1956;
+  - professione «poeta» con la fonte Iranica («scholar, poet, and social critic»).
+- **Regola:** Encyclopaedia Iranica e Rekhta entrano fra le fonti autorevoli (scripts/regole.py). Effetto sugli altri autori: nessuno; Iranica era citata solo per Balaghi e Christensen, già d'accordo.
+- **Esito:** «corretto», 1956 (Wikidata 1959). Entra da data/morti_corrette.json, come gli altri corretti, quindi resta anche ai giri successivi.
+- **Anche con «poeta» resta solo in «Tutti»:** la descrizione nomina solo mestieri non letterari, quindi la regola vuole almeno 5 opere su Wikidata, e ne ha 2.
+- **Fotografia:** 1 cambio, l'autore nuovo Q470931. Prove 1-8 a 0. Non pubblicato: aspetta l'ok di Marco.
