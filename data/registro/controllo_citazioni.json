@@ -97,7 +97,7 @@
    "titolo": "Green Grow the Lilacs",
    "link": "https://archive.org/download/bestplaysof1930100mant/bestplaysof1930100mant_jpg.pdf",
    "esito": "non verificabile in automatico",
-   "motivo": "<urlopen error _ssl.c:994: The handshake operation timed out>"
+   "motivo": "HTTP Error 404: Not Found"
   },
   "14": {
    "qid": "Q4190252",
@@ -111,7 +111,7 @@
    "titolo": "The Solar Anus",
    "link": "https://catalogue.bnf.fr/ark:/12148/cb357449356",
    "esito": "non verificabile in automatico",
-   "motivo": "HTTP Error 503: Service Unavailable"
+   "motivo": "The read operation timed out"
   },
   "16": {
    "qid": "Q7765142",
@@ -313,8 +313,8 @@
    "qid": "Q3210396",
    "titolo": "Police at the Funeral",
    "link": "https://openlibrary.org/books/OL6769579M",
-   "esito": "non verificabile in automatico",
-   "motivo": "<urlopen error [Errno 104] Connection reset by peer>"
+   "esito": "trovata",
+   "motivo": "html"
   },
   "45": {
    "qid": "Q2498251",
@@ -453,8 +453,8 @@
    "qid": "Q3506429",
    "titolo": "Swallowdale",
    "link": "https://allthingsransome.net/literary/archildrensbooks/SDfirst.htm",
-   "esito": "non verificabile in automatico",
-   "motivo": "<urlopen error timed out>"
+   "esito": "trovata",
+   "motivo": "html"
   },
   "65": {
    "qid": "Q3506429",
@@ -481,8 +481,8 @@
    "qid": "Q2836721",
    "titolo": "The Secret of Red Gate Farm",
    "link": "https://openlibrary.org/books/OL1115425M?v=9",
-   "esito": "trovata",
-   "motivo": "html"
+   "esito": "non verificabile in automatico",
+   "motivo": "<urlopen error [Errno 104] Connection reset by peer>"
   },
   "69": {
    "qid": "Q2836721",
@@ -496,7 +496,7 @@
    "titolo": "Coup d'État: The Technique of Revolution",
    "link": "https://catalogue.bnf.fr/ark:/12148/cb469963705",
    "esito": "non verificabile in automatico",
-   "motivo": "HTTP Error 503: Service Unavailable"
+   "motivo": "The read operation timed out"
   },
   "71": {
    "qid": "Q43578331",
@@ -537,15 +537,15 @@
    "qid": "Q1885291",
    "titolo": "The Strange Case of Peter the Lett",
    "link": "https://openlibrary.org/books/OL6767972M",
-   "esito": "trovata",
-   "motivo": "html"
+   "esito": "non verificabile in automatico",
+   "motivo": "<urlopen error timed out>"
   },
   "77": {
    "qid": "Q1214380",
    "titolo": "The last one at the scaffold",
    "link": "https://openlibrary.org/works/OL1386161W",
-   "esito": "trovata",
-   "motivo": "html"
+   "esito": "non verificabile in automatico",
+   "motivo": "<urlopen error timed out>"
   },
   "78": {
    "qid": "Q1214380",
@@ -733,8 +733,8 @@
    "qid": "Q11247830",
    "titolo": "Tales from the Vienna Woods",
    "link": "https://webarchiv.onb.ac.at/web/20160803104606/http://www.onb.ac.at/images/Literaturarchiv/vw_bd3_gww.pdf",
-   "esito": "non verificabile in automatico",
-   "motivo": "<urlopen error timed out>"
+   "esito": "trovata",
+   "motivo": "pdf"
   },
   "105": {
    "qid": "Q1696432",
@@ -812,6 +812,209 @@
    "link": "https://www.criterion.com/current/posts/2810",
    "esito": "non verificabile in automatico",
    "motivo": "HTTP Error 403: Forbidden"
+  },
+  "116": {
+   "qid": "Q1306780",
+   "titolo": "The Great Wall of China",
+   "link": "https://www.textgridrep.de/browse/qmwb.0?lang=en",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "117": {
+   "qid": "Q16224234",
+   "titolo": "Why I am an Atheist",
+   "link": "https://www.marxists.org/archive/bhagat-singh/1930/10/05.htm",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "118": {
+   "qid": "Q16224234",
+   "titolo": "Why I am an Atheist",
+   "link": "https://ruralindiaonline.org/gu/library/resource/why-i-am-an-atheist/",
+   "esito": "non verificabile in automatico",
+   "motivo": "la pagina scaricata non mostra il testo della scheda (lo carica dopo)"
+  },
+  "119": {
+   "qid": "Q28419570",
+   "titolo": "Gaban",
+   "link": "https://www.pustakmahal.com/gaban",
+   "esito": "non verificabile in automatico",
+   "motivo": "HTTP Error 404: Not Found"
+  },
+  "120": {
+   "qid": "Q28419570",
+   "titolo": "Gaban",
+   "link": "https://bharatdiscovery.org/india/%E0%A4%97%E0%A4%BC%E0%A4%AC%E0%A4%A8",
+   "esito": "non verificabile in automatico",
+   "motivo": "HTTP Error 403: Forbidden"
+  },
+  "121": {
+   "qid": "Q7173181",
+   "titolo": "Little House in the Big Woods",
+   "link": "https://www.neh.gov/humanities/2014/julyaugust/feature/reading-laura-ingalls-wilder-not-the-same-when-youre-parent",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "122": {
+   "qid": "Q7173181",
+   "titolo": "Little House in the Big Woods",
+   "link": "https://salida.marmot.org/Record/.b10280650",
+   "esito": "non verificabile in automatico",
+   "motivo": "HTTP Error 403: Forbidden"
+  },
+  "123": {
+   "qid": "Q774233",
+   "titolo": "Journey to the End of the Night",
+   "link": "https://bibliotheques-numeriques.defense.gouv.fr/impression/document/0666f998-e1d2-4dc3-afd3-6b1613fcf183",
+   "esito": "non verificabile in automatico",
+   "motivo": "<urlopen error timed out>"
+  },
+  "124": {
+   "qid": "Q1823273",
+   "titolo": "Light in August",
+   "link": "https://faulkner.drupal.shanti.virginia.edu/node/221",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "125": {
+   "qid": "Q1823273",
+   "titolo": "Light in August",
+   "link": "https://themorgan.org/node/291821",
+   "esito": "non verificabile in automatico",
+   "motivo": "HTTP Error 403: Forbidden"
+  },
+  "126": {
+   "qid": "Q957248",
+   "titolo": "Peril at End House",
+   "link": "https://www.deliciousdeath.com/15/index15.html",
+   "esito": "trovata",
+   "motivo": "html, ignorando spazi e punteggiatura"
+  },
+  "127": {
+   "qid": "Q5142221",
+   "titolo": "Cold Comfort Farm",
+   "link": "https://www.ebsco.com/research-starters/literature-and-writing/cold-comfort-farm-stella-gibbons",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "128": {
+   "qid": "Q5142221",
+   "titolo": "Cold Comfort Farm",
+   "link": "https://www.themodernnovel.org/?p=3300",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "129": {
+   "qid": "Q470600",
+   "titolo": "The German Ideology",
+   "link": "https://hermes-ir.lib.hit-u.ac.jp/hermes/ir/re/17054/010081091.pdf",
+   "esito": "non verificabile in automatico",
+   "motivo": "<urlopen error [Errno -2] Name or service not known>"
+  },
+  "130": {
+   "qid": "Q470600",
+   "titolo": "The German Ideology",
+   "link": "https://search.worldcat.org/title/The-German-ideology/oclc/3576887",
+   "esito": "non verificabile in automatico",
+   "motivo": "HTTP Error 403: Forbidden"
+  },
+  "131": {
+   "qid": "Q7727278",
+   "titolo": "The Concept of the Political",
+   "link": "https://link.springer.com/content/pdf/10.1007/978-3-531-90400-9_115.pdf",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "132": {
+   "qid": "Q7727278",
+   "titolo": "The Concept of the Political",
+   "link": "https://plato.stanford.edu/ENTRiES/schmitt/",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "133": {
+   "qid": "Q934396",
+   "titolo": "The Thirteen Problems",
+   "link": "https://www.agathachristie.com/news/2016/thirteen-facts-about-the-thirteen-problems",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "134": {
+   "qid": "Q934396",
+   "titolo": "The Thirteen Problems",
+   "link": "https://www.collectingchristie.com/post/the-royal-magazine-agatha-christie",
+   "esito": "trovata",
+   "motivo": "html, ignorando spazi e punteggiatura"
+  },
+  "135": {
+   "qid": "Q610428",
+   "titolo": "Radetzky March",
+   "link": "https://muse.jhu.edu/article/223660/pdf",
+   "esito": "non verificabile in automatico",
+   "motivo": "pagina di verifica anti-bot"
+  },
+  "136": {
+   "qid": "Q610428",
+   "titolo": "Radetzky March",
+   "link": "https://service.penguinrandomhouse.de/leseprobe/Radetzkymarsch/leseprobe_9783866478664.pdf",
+   "esito": "non verificabile in automatico",
+   "motivo": "la pagina scaricata non mostra il testo della scheda (lo carica dopo)"
+  },
+  "137": {
+   "qid": "Q1970223",
+   "titolo": "Death in the Afternoon",
+   "link": "https://openbook.lib.utah.edu/book-of-the-week-death-in-the-afternoon/",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "138": {
+   "qid": "Q1970223",
+   "titolo": "Death in the Afternoon",
+   "link": "https://libcat.library.tamu.edu/Record/in00000602385/Description",
+   "esito": "non verificabile in automatico",
+   "motivo": "HTTP Error 403: Forbidden"
+  },
+  "139": {
+   "qid": "Q1195668",
+   "titolo": "The Man Without Qualities",
+   "link": "https://erster-weltkrieg.dnb.de/KIE/Content/EN/Persons/musil-robert-en.html",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "140": {
+   "qid": "Q1195668",
+   "titolo": "The Man Without Qualities",
+   "link": "https://erster-weltkrieg.dnb.de/KIE/Content/EN/Persons/musil-robert-en.html",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "141": {
+   "qid": "Q1195668",
+   "titolo": "The Man Without Qualities",
+   "link": "https://www.britannica.com/print/article/671405",
+   "esito": "non verificabile in automatico",
+   "motivo": "HTTP Error 403: Forbidden"
+  },
+  "142": {
+   "qid": "Q1195668",
+   "titolo": "The Man Without Qualities",
+   "link": "https://www.britannica.com/print/article/671405",
+   "esito": "non verificabile in automatico",
+   "motivo": "HTTP Error 403: Forbidden"
+  },
+  "143": {
+   "qid": "Q1195668",
+   "titolo": "The Man Without Qualities",
+   "link": "https://cambridge.org/core/books/in-the-shadow-of-empire/europe-is-committing-suicide-joseph-roths-radetzkymarsch/6F7880BA01EAF24CEB0F9ACCEF54F2C9",
+   "esito": "trovata",
+   "motivo": "html"
+  },
+  "a:Q6963402:0": {
+   "qid": "Q6963402",
+   "titolo": "Nanduri Venkata Subba Rao, anno di morte",
+   "link": "https://www.wisdomlib.org/history/compilation/triveni-journal/d/doc69419.html",
+   "esito": "trovata",
+   "motivo": "html"
   },
   "a:Q156999:0": {
    "qid": "Q156999",
