@@ -1504,3 +1504,7 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - **Tre stati della lista USA** (regole.stato_usa_lista, scripts/stati_usa.py → data/registro/stati_usa.json): 2027 su 155 opere: 56 prima uscita verificata, 91 anno dell'edizione confermato, 8 da confermare. Delle 41 decise a mano il 23/11, 18 hanno solo una fonte indipendente oltre a Wikipedia: per il criterio sono «anno dell'edizione confermato». Non pubblicato.
 - **Fotografia:** ora controlla anche le liste USA per anno. Prima 79 delle 157 opere della lista 2027 non erano nella fotografia, quindi un'opera tolta dalla lista non si vedeva (Dry September).
 - **Q1306780:** è la raccolta Beim Bau der chinesischen Mauer (Kiepenheuer 1931): lo dicono il titolo e la data su Wikidata e la pagina Wikipedia collegata. Il titolo italiano «Un messaggio dell'imperatore» viene dall'etichetta italiana di Wikidata ed è sbagliato per la raccolta.
+
+## 23/11/2026 — Pubblicazione della fotografia 6fced287e3a0 e lancio del controllo delle citazioni (ok di Marco, 14:57)
+- Impronta 6fced287e3a0 aggiunta a data/cambi-approvati.txt; la fotografia nuova prende il posto della vecchia. Sul sito: escono Green Grow the Lilacs e Dry September dalla lista USA 2027 (155 libri); frase delle verifiche a mano «controllato a mano su fonti terze».
+- Lanciato citazioni.yml (docs/registro/passo-citazioni.txt): solo rapporto, non cambia il sito.

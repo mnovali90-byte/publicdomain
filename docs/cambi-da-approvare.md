@@ -2,7 +2,7 @@
 
 Fotografia 2026 → 2026. Cambi attesi (passa l'anno): 0. Opere o autori nuovi o tolti: 0.
 
-**DA APPROVARE: il giro non ha pubblicato.** 3 cambi di stato. Impronta: `6fced287e3a0`
+**Approvati** 3 cambi di stato. Impronta: `6fced287e3a0`
 
 | Tipo | Titolo | Paese | Prima | Dopo | Perché |
 |---|---|---|---|---|---|
