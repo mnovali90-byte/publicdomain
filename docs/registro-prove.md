@@ -1396,3 +1396,15 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
   - Zebi Eliezer Kroy (Q113360712, OL146206A).
 - **Problema:** Project Gutenberg non ha risposto a nessuna delle 8 pagine autore (su GitHub dava «non risponde»), quindi il confronto con Gutenberg non è stato fatto. Il confronto con Open Library sì.
 - **Nel sito:** niente cambiato.
+
+## 23/11/2026 — Due disaccordi risolti, Gutenberg dal catalogo, chiusura del lavoro sui «una fonte»
+- **Syed Emdad Ali (Q7660316) e Zebi Eliezer Kroy (Q113360712): 1956**, per decisione di Marco con le fonti:
+  - Banglapedia, «Ali, Syed Emdad (1875-1956)»;
+  - Yiddish Leksikon, «December 25, 1900-December 29, 1956», che cita Kressel, Leksikon hasifrut haivrit, vol. 2 (1967).
+- **Come sono registrati:**
+  - in data/verifiche_manuali.json («autori», verifica a mano: esito «nazionale», cioè confermato);
+  - Open Library (1957) è in «fonti_aggiunte»: è una fonte in disaccordo e non ha effetto;
+  - scripts/applica_registro_liste.py ora scrive nella lista anche le verifiche a mano. Effetto sul sito: per questi due il radar non dice più «una sola fonte».
+- **Gutenberg, una sola prova:** scripts/confronta_una_fonte.py legge ora il catalogo RDF in file unico (rdf-files.tar.bz2) invece delle pagine autore. Se non funziona, si lascia.
+- **Chiuso il lavoro sui 395 «una fonte»** (Marco): basta la nota del sito «anno di morte da una sola fonte».
+- **Esito:** prove 1-8 a 0, fotografia 0 cambi.

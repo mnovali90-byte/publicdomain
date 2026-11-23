@@ -63,6 +63,20 @@
    "fonte": "Redalyc, articolo accademico: Diamantina 1882 – Ouro Preto 1959",
    "url": "https://www.redalyc.org/pdf/4056/405641272008.pdf",
    "controllato": "2026-11-09"
+  },
+  "Q7660316": {
+   "nome": "Syed Emdad Ali",
+   "morte": 1956,
+   "fonte": "Banglapedia: «Ali, Syed Emdad (1875-1956)»",
+   "url": "https://en.banglapedia.org/index.php/Ali,_Syed_Emdad",
+   "controllato": "2026-11-23"
+  },
+  "Q113360712": {
+   "nome": "Zebi Eliezer Kroy",
+   "morte": 1956,
+   "fonte": "Yiddish Leksikon: «Hersh-Leyzer Kroy (December 25, 1900-December 29, 1956)», che cita G. Kressel, Leksikon hasifrut haivrit, vol. 2 (1967)",
+   "url": "https://yleksikon.blogspot.com/2019/04/hersh-leyzer-kroy.html",
+   "controllato": "2026-11-23"
   }
  },
  "fonti_aggiunte": {
@@ -73,6 +87,26 @@
     "fonte": "Project Gutenberg, scheda autore «Davis, F. Hadland (Frederick Hadland), 1882-1956»",
     "morte": 1956,
     "url": "https://www.gutenberg.org/ebooks/16043",
+    "aggiunto": "2026-11-23"
+   }
+  ],
+  "Q7660316": [
+   {
+    "chiave": "openlibrary",
+    "nome": "Syed Emdad Ali",
+    "fonte": "Open Library OL11762A (in disaccordo, senza effetto: vale la verifica a mano)",
+    "morte": 1957,
+    "url": "https://openlibrary.org/authors/OL11762A",
+    "aggiunto": "2026-11-23"
+   }
+  ],
+  "Q113360712": [
+   {
+    "chiave": "openlibrary",
+    "nome": "Zebi Eliezer Kroy",
+    "fonte": "Open Library OL146206A (in disaccordo, senza effetto: vale la verifica a mano)",
+    "morte": 1957,
+    "url": "https://openlibrary.org/authors/OL146206A",
     "aggiunto": "2026-11-23"
    }
   ]

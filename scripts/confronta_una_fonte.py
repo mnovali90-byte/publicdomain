@@ -4,8 +4,8 @@ Quali autori: quelli di data/2027.json e data/es-2027.json che nel registro (dat
 «una_fonte», cioè l'anno di morte viene solo da Wikidata.
 Fonti di confronto, abbinate con il codice che Wikidata stesso dà all'autore (niente abbinamenti per nome):
 - Open Library: codice autore P648 -> https://openlibrary.org/authors/<codice>.json, campo death_date;
-- Project Gutenberg: codice autore P1938 -> https://www.gutenberg.org/ebooks/author/<codice>, nome con le date
-  (es. «Davis, F. Hadland (Frederick Hadland), 1882-1956»).
+- Project Gutenberg: codice autore P1938 -> catalogo RDF in file unico (rdf-files.tar.bz2), data di morte dell'autore
+  (23/11/2026: le pagine autore lette una per una non rispondevano da GitHub).
 Scrive solo il rapporto: docs/registro/confronto-una-fonte-2027.md (i disaccordi, con i link) e
 data/registro/confronto_una_fonte.json (tutti i risultati). Niente si corregge in automatico: i disaccordi li decide
 Marco, e chi va cambiato si mette a mano in data/verifiche_manuali.json («fonti_aggiunte»)."""
@@ -60,12 +60,33 @@ def morte_ol(c):
     return V.anno(d.get("death_date")), d.get("name")
 
 
+CATALOGO_PG = "https://www.gutenberg.org/cache/epub/feeds/rdf-files.tar.bz2"
+PG = {}
+
+
+def catalogo_pg():
+    """Gutenberg in file unico (23/11/2026, una sola prova: le pagine autore da GitHub non rispondevano).
+    Il catalogo RDF (un archivio con una scheda per libro) dà per ogni autore il codice e le date:
+    <pgterms:agent rdf:about="2009/agents/58849"> ... <pgterms:deathdate ...>1956</pgterms:deathdate>."""
+    import tarfile, urllib.request
+    req = urllib.request.Request(CATALOGO_PG, headers=V.UA)
+    with urllib.request.urlopen(req, timeout=120) as r, tarfile.open(fileobj=r, mode="r|bz2") as t:
+        for m in t:
+            if not m.isfile():
+                continue
+            testo = t.extractfile(m).read().decode("utf-8", "replace")
+            for a in re.finditer(r'<pgterms:agent rdf:about="[^"]*/agents/(\d+)">(.*?)</pgterms:agent>', testo, re.S):
+                if a.group(1) in PG:
+                    continue
+                nome = re.search(r"<pgterms:name>(.*?)</pgterms:name>", a.group(2), re.S)
+                morte = re.search(r"<pgterms:deathdate[^>]*>(-?\d+)</pgterms:deathdate>", a.group(2))
+                PG[a.group(1)] = (int(morte.group(1)) if morte else None, html.unescape(nome.group(1)) if nome else "")
+
+
 def morte_pg(c):
-    t = leggi(f"https://www.gutenberg.org/ebooks/author/{c}", "text/html")
-    m = re.search(r"<title>(.*?)</title>", t, re.S)
-    titolo = html.unescape(m.group(1)).strip() if m else ""
-    d = re.search(r"(\d{3,4})\??\s*-\s*(\d{3,4})\??", titolo)
-    return (int(d.group(2)) if d else None), titolo
+    if c not in PG:
+        raise RuntimeError("autore non nel catalogo Gutenberg")
+    return PG[c]
 
 
 def main():
@@ -74,12 +95,23 @@ def main():
     qids = sorted(aut)
     print("autori «una fonte» in", ", ".join(LISTE), ":", len(qids), flush=True)
     cod = codici(qids)
+    try:
+        catalogo_pg()
+        print("catalogo Gutenberg: autori letti", len(PG), flush=True)
+    except Exception as e:
+        print("catalogo Gutenberg non letto:", e, flush=True)
     righe, conta = {}, Counter()
     for q in qids:
         c = cod.get(q, {"ol": set(), "pg": set()})
         r = {"nome": aut[q]["nome"], "wikidata": aut[q]["morte"], "liste": aut[q]["liste"], "ol": {}, "pg": {}}
         for nf, leggi_f in (("ol", morte_ol), ("pg", morte_pg)):
             for k in sorted(c[nf]):
+                if nf == "pg":
+                    try:
+                        y, etichetta = leggi_f(k); r[nf][k] = {"morte": y, "etichetta": etichetta}
+                    except Exception as e:
+                        r[nf][k] = {"errore": str(e)[:120]}
+                    continue
                 if time.time() - inizio > BUDGET * 60:
                     r[nf][k] = {"errore": "tempo finito"}; conta["tempo finito"] += 1; continue
                 try:

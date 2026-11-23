@@ -59,6 +59,10 @@ def main():
             # (se la lista dice già «discorde» si lascia la sua nota: le sue fonti partono dall'anno della lista)
             if v_reg.get("e") == "discorde" and (a.get("verifica") or {}).get("esito") != "discorde":
                 a["verifica"] = {"esito": "discorde", "fonti": v_reg.get("f") or {}, "citate": v_reg.get("c") or {}}
+            # verifica a mano nel registro (data/verifiche_manuali.json): la lista la dice, con la fonte (23/11/2026)
+            if v_reg.get("e") == "nazionale" and v_reg.get("manuale") and (a.get("verifica") or {}).get("esito") != "nazionale":
+                a["verifica"] = {"esito": "nazionale", "fonti": v_reg.get("f") or {},
+                                 "nazionale": {**v_reg["manuale"], "morte": v_reg.get("m")}}
             m_l = anno_di(a.get("morte"))
             m, inc = RG.morte_dal_registro(a.get("wikidata"), m_l, reg, anno_ue)
             # fonti in disaccordo («discorde»): il registro non ha deciso, l'autore resta dov'è (la scheda dice «da verificare»)

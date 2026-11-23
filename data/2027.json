@@ -23638,9 +23638,15 @@
     }
    },
    "verifica": {
-    "esito": "una_fonte",
+    "esito": "nazionale",
     "fonti": {
-     "wikidata": 1956
+     "wikidata": 1956,
+     "openlibrary": 1957
+    },
+    "nazionale": {
+     "fonte": "Banglapedia: «Ali, Syed Emdad (1875-1956)»",
+     "url": "https://en.banglapedia.org/index.php/Ali,_Syed_Emdad",
+     "morte": 1956
     }
    },
    "pagina": "syed-emdad-ali",
@@ -73355,9 +73361,15 @@
    "indice_int": 0,
    "indice": 26,
    "verifica": {
-    "esito": "una_fonte",
+    "esito": "nazionale",
     "fonti": {
-     "wikidata": 1956
+     "wikidata": 1956,
+     "openlibrary": 1957
+    },
+    "nazionale": {
+     "fonte": "Yiddish Leksikon: «Hersh-Leyzer Kroy (December 25, 1900-December 29, 1956)», che cita G. Kressel, Leksikon hasifrut haivrit, vol. 2 (1967)",
+     "url": "https://yleksikon.blogspot.com/2019/04/hersh-leyzer-kroy.html",
+     "morte": 1956
     }
    }
   },
