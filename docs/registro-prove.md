@@ -1384,3 +1384,15 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
   - i numeri restano 826 e 790 per il 2027;
   - nelle schede il «su N» delle classifiche torna a contare anche questi autori (per esempio da «6° su 825» a «6° su 826»).
 - **Esito:** prove 1-8 a 0, fotografia 0 cambi di stato.
+
+## 23/11/2026 — Confronto automatico dei 394 autori «una fonte» 2027 (giro delle 11:02, durato 7 minuti)
+- **Esito:**
+  - 370 senza codici: nessun codice Open Library né Gutenberg in Wikidata;
+  - 11 d'accordo;
+  - 2 in disaccordo;
+  - 11 senza anno.
+- **Disaccordi:** tutti e due sul confine europeo, Wikidata 1956 contro Open Library 1957. Con il 1957 entrerebbero nel 2028, non nel 2027.
+  - Syed Emdad Ali (Q7660316, OL11762A);
+  - Zebi Eliezer Kroy (Q113360712, OL146206A).
+- **Problema:** Project Gutenberg non ha risposto a nessuna delle 8 pagine autore (su GitHub dava «non risponde»), quindi il confronto con Gutenberg non è stato fatto. Il confronto con Open Library sì.
+- **Nel sito:** niente cambiato.
