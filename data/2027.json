@@ -5,7 +5,7 @@
  "regola": "UE: morte + 70 anni, dal 1 gennaio dell'anno successivo",
  "fonte": "Wikidata (CC0)",
  "aggiornato": "2026-11-19",
- "totale": 1424,
+ "totale": 1429,
  "autori": [
   {
    "wikidata": "Q38757",
@@ -73732,6 +73732,427 @@
    },
    "pagina": "ali-akbar-dehkhoda",
    "pagina_en": "ali-akbar-dehkhoda"
+  },
+  {
+   "wikidata": "Q156999",
+   "nome": "Lucien Febvre",
+   "nascita": "1878-07-22",
+   "morte": "1956-09-25",
+   "pagine_wikipedia": 48,
+   "professioni": [
+    "autore",
+    "professore",
+    "storico",
+    "saggista"
+   ],
+   "descrizione": "French historian (1878-1956)",
+   "url": "https://www.wikidata.org/wiki/Q156999",
+   "bio": "Lucien Febvre è stato uno storico francese, conosciuto soprattutto per il suo ruolo nella fondazione della Scuola delle Annales.",
+   "bio_url": "https://it.wikipedia.org/wiki/Lucien_Febvre",
+   "bio_lingua": "it",
+   "bios": {
+    "it": {
+     "testo": "Lucien Febvre è stato uno storico francese, conosciuto soprattutto per il suo ruolo nella fondazione della Scuola delle Annales.",
+     "url": "https://it.wikipedia.org/wiki/Lucien_Febvre"
+    },
+    "en": {
+     "testo": "Lucien Paul Victor Febvre was a French historian best known for the role he played in establishing the Annales School of history. He was the initial editor of the Encyclopédie française together with Anatole de Monzie.",
+     "url": "https://en.wikipedia.org/wiki/Lucien_Febvre"
+    }
+   },
+   "opere": [
+    {
+     "titolo": "Felipe II y el Franco Condado: Un estudio de historia política, religiosa y social",
+     "anno": 1912,
+     "generi": [
+      "storia della Francia",
+      "territorial evolution of France"
+     ],
+     "sl": 0
+    },
+    {
+     "titolo": "Encyclopédie française",
+     "titolo_en": "Encyclopédie française",
+     "anno": null,
+     "generi": [],
+     "sl": 7
+    },
+    {
+     "titolo": "L’Histoire dans le monde en ruines",
+     "anno": 1919,
+     "generi": [],
+     "sl": 1
+    },
+    {
+     "titolo": "El problema de la incredulidad en el siglo XVI, la religión de Rabelais",
+     "anno": 1942,
+     "generi": [
+      "storia della mentalità"
+     ],
+     "sl": 0
+    },
+    {
+     "titolo": "Encyclopédie Française",
+     "titolo_en": "Encyclopédie Française",
+     "anno": 1966,
+     "generi": [],
+     "sl": 0
+    },
+    {
+     "titolo": "Les trois âges de l'économie",
+     "anno": 1956,
+     "generi": [
+      "articolo scientifico"
+     ],
+     "sl": 0
+    },
+    {
+     "titolo": "Martín Lutero: un destino",
+     "anno": 1928,
+     "generi": [
+      "biografia"
+     ],
+     "sl": 0
+    }
+   ],
+   "n_opere": 7,
+   "generi": [
+    "articolo scientifico",
+    "biografia",
+    "storia della Francia",
+    "storia della mentalità"
+   ],
+   "visite_12m": 19117,
+   "visite_it": 5552,
+   "visite_en": 13565,
+   "visite_es": 7066,
+   "visite_de": 2156,
+   "visite_fr": 25462,
+   "foto": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lucien_Febvre-Strasbourg.jpg?width=800",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Lucien_Febvre-Strasbourg.jpg",
+    "licenza": "Public domain",
+    "autore": "Unknown author"
+   },
+   "paesi": [
+    "Francia"
+   ],
+   "lingue": [
+    "francese"
+   ],
+   "letterario": true,
+   "tipo_catalogo": [
+    "Saggi"
+   ],
+   "verifica": {
+    "esito": "nazionale",
+    "fonti": {
+     "wikidata": 1956
+    },
+    "nazionale": {
+     "fonte": "Encyclopaedia Britannica e Collège de France",
+     "url": "https://www.britannica.com/print/article/203280",
+     "url_2": "https://www.college-de-france.fr/fr/personne/lucien-febvre",
+     "morte": 1956
+    }
+   },
+   "indice_it": 99,
+   "indice_en": 97,
+   "indice_es": 99,
+   "indice_de": 98,
+   "indice_fr": 100,
+   "indice_int": 99,
+   "pagina": "lucien-febvre",
+   "pagina_en": "lucien-febvre"
+  },
+  {
+   "wikidata": "Q1316061",
+   "nome": "George Sarton",
+   "nascita": "1884-08-31",
+   "morte": "1956-03-22",
+   "pagine_wikipedia": 25,
+   "professioni": [
+    "chimico",
+    "professore universitario",
+    "storia della medicina",
+    "storico",
+    "saggista"
+   ],
+   "descrizione": "Belgian-American historian of science (1884–1956)",
+   "url": "https://www.wikidata.org/wiki/Q1316061",
+   "bio": "George Alfred Leon Sarton was a Belgian-American chemist and historian. He is considered the founder of the discipline of the history of science as an independent field of study. His most influential works were the Introduction to the History of Science, which consists of three volumes and 4,296 pages, and the journal Isis.",
+   "bio_url": "https://en.wikipedia.org/wiki/George_Sarton",
+   "bio_lingua": "en",
+   "bios": {
+    "en": {
+     "testo": "George Alfred Leon Sarton was a Belgian-American chemist and historian. He is considered the founder of the discipline of the history of science as an independent field of study. His most influential works were the Introduction to the History of Science, which consists of three volumes and 4,296 pages, and the journal Isis.",
+     "url": "https://en.wikipedia.org/wiki/George_Sarton"
+    }
+   },
+   "opere": [
+    {
+     "titolo": "ḥḍārẗ ʿṣr al-nhḍẗ",
+     "titolo_en": "ḥḍārẗ ʿṣr al-nhḍẗ",
+     "anno": 1961,
+     "generi": [
+      "non-fiction"
+     ],
+     "sl": 0
+    },
+    {
+     "titolo": "Galen of Pergamon",
+     "titolo_en": "Galen of Pergamon",
+     "anno": 1954,
+     "generi": [],
+     "sl": 0
+    },
+    {
+     "titolo": "The life of science; essays in the history of civilization",
+     "titolo_en": "The life of science; essays in the history of civilization",
+     "anno": 1948,
+     "generi": [],
+     "sl": 0
+    }
+   ],
+   "n_opere": 3,
+   "generi": [
+    "non-fiction"
+   ],
+   "visite_12m": 15491,
+   "visite_it": 0,
+   "visite_en": 15491,
+   "visite_es": 1309,
+   "visite_de": 706,
+   "visite_fr": 2194,
+   "foto": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/George_Sarton_1941a.jpg?width=800",
+    "pagina": "https://commons.wikimedia.org/wiki/File:George_Sarton_1941a.jpg",
+    "licenza": "Public domain",
+    "autore": "Unknown author"
+   },
+   "paesi": [
+    "Stati Uniti"
+   ],
+   "lingue": [
+    "francese",
+    "inglese"
+   ],
+   "letterario": true,
+   "tipo_catalogo": [
+    "Saggi"
+   ],
+   "verifica": {
+    "esito": "nazionale",
+    "fonti": {
+     "wikidata": 1956
+    },
+    "nazionale": {
+     "fonte": "Encyclopaedia Britannica e British Medical Journal, necrologio del 14 aprile 1956",
+     "url": "https://www.britannica.com/biography/George-Alfred-Leon-Sarton/article-bibliography",
+     "url_2": "https://www.bmj.com/content/1/4971/865.1.full.pdf",
+     "morte": 1956
+    }
+   },
+   "indice_it": 0,
+   "indice_en": 97,
+   "indice_es": 96,
+   "indice_de": 95,
+   "indice_fr": 98,
+   "indice_int": 97,
+   "pagina": "george-sarton",
+   "pagina_en": "george-sarton"
+  },
+  {
+   "wikidata": "Q1130486",
+   "nome": "Piero Calamandrei",
+   "nascita": "1889-04-21",
+   "morte": "1956-09-27",
+   "pagine_wikipedia": 15,
+   "professioni": [
+    "avvocato",
+    "constitutional lawyer",
+    "giornalista",
+    "giurista",
+    "politico",
+    "professore universitario",
+    "saggista"
+   ],
+   "descrizione": "Italian jurist, politician and writer (1889-1956)",
+   "url": "https://www.wikidata.org/wiki/Q1130486",
+   "bio": "Piero Calamandrei è stato un politico, giurista e avvocato italiano, nonché uno dei fondatori del Partito d'Azione.",
+   "bio_url": "https://it.wikipedia.org/wiki/Piero_Calamandrei",
+   "bio_lingua": "it",
+   "bios": {
+    "it": {
+     "testo": "Piero Calamandrei è stato un politico, giurista e avvocato italiano, nonché uno dei fondatori del Partito d'Azione.",
+     "url": "https://it.wikipedia.org/wiki/Piero_Calamandrei"
+    },
+    "en": {
+     "testo": "Piero Calamandrei was an Italian author, jurist, soldier, university professor, and politician. He was one of Italy's leading authorities on the law of civil procedure.",
+     "url": "https://en.wikipedia.org/wiki/Piero_Calamandrei"
+    }
+   },
+   "opere": [
+    {
+     "titolo": "Lastra ai partigiani caduti alla stazione di Montorsoli",
+     "titolo_en": "Plaque to the fallen partisans at the Montorsoli station",
+     "anno": null,
+     "generi": [],
+     "sl": 0
+    }
+   ],
+   "n_opere": 1,
+   "visite_12m": 107404,
+   "visite_it": 104202,
+   "visite_en": 3202,
+   "visite_es": 2990,
+   "visite_de": 951,
+   "visite_fr": 850,
+   "foto": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Piero_Calamandrei_2.JPG?width=800",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Piero_Calamandrei_2.JPG",
+    "licenza": "Public domain",
+    "autore": ""
+   },
+   "paesi": [
+    "Regno d'Italia",
+    "Italia"
+   ],
+   "lingue": [
+    "italiano"
+   ],
+   "letterario": true,
+   "tipo_catalogo": [
+    "Saggi"
+   ],
+   "verifica": {
+    "esito": "nazionale",
+    "fonti": {
+     "wikidata": 1956
+    },
+    "nazionale": {
+     "fonte": "Università di Firenze e Comune di Firenze",
+     "url": "https://www.unifi.it/en/node/12438",
+     "url_2": "https://cultura.comune.fi.it/system/files/2019-01/Piero_Calamandrei_maximum-compressed.pdf",
+     "morte": 1956
+    }
+   },
+   "indice_it": 100,
+   "indice_en": 92,
+   "indice_es": 98,
+   "indice_de": 96,
+   "indice_fr": 96,
+   "indice_int": 95,
+   "pagina": "piero-calamandrei",
+   "pagina_en": "piero-calamandrei"
+  },
+  {
+   "wikidata": "Q12731091",
+   "nome": "Isaiia Răcăciuni",
+   "nascita": "1888-01-01",
+   "morte": "1956-01-01",
+   "pagine_wikipedia": 3,
+   "professioni": [
+    "critico cinematografico",
+    "critico letterario",
+    "critico teatrale",
+    "curatore editoriale",
+    "editore",
+    "poeta",
+    "politico",
+    "romanziere",
+    "scrittore",
+    "traduttore"
+   ],
+   "descrizione": "Romanian writer",
+   "url": "https://www.wikidata.org/wiki/Q12731091",
+   "bio": "Isaia or Isaiia Răcăciuni was a Romanian writer and editor. A member of the local Jewish community, he always craved assimilation, a longing that informed part of his literary output. His works were also tinged by expressionism, a stylistic affiliation that began when he was an adolescent.",
+   "bio_url": "https://en.wikipedia.org/wiki/Isaia_R%C4%83c%C4%83ciuni",
+   "bio_lingua": "en",
+   "bios": {
+    "en": {
+     "testo": "Isaia or Isaiia Răcăciuni was a Romanian writer and editor. A member of the local Jewish community, he always craved assimilation, a longing that informed part of his literary output. His works were also tinged by expressionism, a stylistic affiliation that began when he was an adolescent.",
+     "url": "https://en.wikipedia.org/wiki/Isaia_R%C4%83c%C4%83ciuni"
+    }
+   },
+   "n_opere": 0,
+   "visite_12m": 1425,
+   "visite_it": 0,
+   "visite_en": 1425,
+   "visite_es": 0,
+   "visite_de": 0,
+   "visite_fr": 0,
+   "foto": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Isaia_R%C4%83c%C4%83ciuni_circa_1937.png?width=800",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Isaia_R%C4%83c%C4%83ciuni_circa_1937.png",
+    "licenza": "Public domain",
+    "autore": "Anonymous Unknown author"
+   },
+   "paesi": [
+    "Romania"
+   ],
+   "lingue": [
+    "romeno"
+   ],
+   "letterario": true,
+   "tipo_catalogo": [
+    "Poesia",
+    "Romanzo"
+   ],
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1956
+    }
+   },
+   "indice_it": 0,
+   "indice_en": 88,
+   "indice_es": 0,
+   "indice_de": 0,
+   "indice_fr": 0,
+   "indice_int": 70
+  },
+  {
+   "wikidata": "Q115085",
+   "nome": "Helmut von den Steinen",
+   "nascita": "1890-12-06",
+   "morte": "1956-01-01",
+   "pagine_wikipedia": 1,
+   "professioni": [
+    "saggista",
+    "traduttore"
+   ],
+   "descrizione": "German translator (1890–1956)",
+   "url": "https://www.wikidata.org/wiki/Q115085",
+   "n_opere": 0,
+   "visite_12m": 0,
+   "visite_it": 0,
+   "visite_en": 0,
+   "visite_es": 0,
+   "visite_de": 505,
+   "visite_fr": 0,
+   "paesi": [
+    "Germania"
+   ],
+   "lingue": [
+    "tedesco"
+   ],
+   "letterario": true,
+   "tipo_catalogo": [
+    "Saggi"
+   ],
+   "verifica": {
+    "esito": "una_fonte",
+    "fonti": {
+     "wikidata": 1956
+    }
+   },
+   "indice_it": 0,
+   "indice_en": 0,
+   "indice_es": 0,
+   "indice_de": 94,
+   "indice_fr": 0,
+   "indice_int": 33
   }
  ],
  "letterari": 881,

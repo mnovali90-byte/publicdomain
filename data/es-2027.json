@@ -5,7 +5,7 @@
  "regola": "Spagna, autori morti prima del 1987: 80 anni dalla morte (Ley de 10 de enero de 1879, art. 6; Ley de Propiedad Intelectual, disp. trans. cuarta). Data prudente: 1 gennaio dell'anno dopo gli 80 anni",
  "fonte": "Wikidata (CC0)",
  "aggiornato": "2026-11-19",
- "totale": 1299,
+ "totale": 1302,
  "autori": [
   {
    "wikidata": "Q42511",
@@ -65706,6 +65706,350 @@
      ]
     }
    }
+  },
+  {
+   "wikidata": "Q9317",
+   "nome": "John Maynard Keynes",
+   "nascita": "1883-06-05",
+   "morte": "1946-04-21",
+   "pagine_wikipedia": 189,
+   "professioni": [
+    "autore",
+    "diplomatico",
+    "economista",
+    "filosofo",
+    "matematico",
+    "opinionista",
+    "personalità del mondo degli affari",
+    "politico",
+    "professore",
+    "saggista"
+   ],
+   "descrizione": "British economist (1883–1946)",
+   "url": "https://www.wikidata.org/wiki/Q9317",
+   "bio": "John Maynard Keynes, 1º barone Keynes di Tilton, è stato un economista britannico, padre della macroeconomia.",
+   "bio_url": "https://it.wikipedia.org/wiki/John_Maynard_Keynes",
+   "bio_lingua": "it",
+   "bios": {
+    "it": {
+     "testo": "John Maynard Keynes, 1º barone Keynes di Tilton, è stato un economista britannico, padre della macroeconomia.",
+     "url": "https://it.wikipedia.org/wiki/John_Maynard_Keynes"
+    },
+    "en": {
+     "testo": "John Maynard Keynes, 1st Baron Keynes, was an English economist. His writings formed the basis for the school of thought known as Keynesian economics, as well as its various offshoots. Originally trained in mathematics, he built on and refined earlier work on the causes of business cycles. His ideas, further developed after his death as New Keynesianism, are seen as foundational to mainstream macroeconomics.",
+     "url": "https://en.wikipedia.org/wiki/John_Maynard_Keynes"
+    }
+   },
+   "opere": [
+    {
+     "titolo": "Teoria generale dell'occupazione, dell'interesse e della moneta",
+     "titolo_en": "The General Theory of Employment, Interest and Money",
+     "anno": 1936,
+     "generi": [
+      "non-fiction"
+     ],
+     "sl": 37
+    },
+    {
+     "titolo": "Le conseguenze economiche della pace",
+     "titolo_en": "The Economic Consequences of the Peace",
+     "anno": 1919,
+     "generi": [
+      "saggio"
+     ],
+     "sl": 12
+    },
+    {
+     "titolo": "Trattato sulla moneta",
+     "titolo_en": "A Treatise on Money",
+     "anno": 1930,
+     "generi": [
+      "saggio"
+     ],
+     "sl": 4
+    },
+    {
+     "titolo": "A Treatise on Probability",
+     "titolo_en": "A Treatise on Probability",
+     "anno": 1921,
+     "generi": [
+      "trattato"
+     ],
+     "sl": 3
+    },
+    {
+     "titolo": "Indian Currency and Finance",
+     "titolo_en": "Indian Currency and Finance",
+     "anno": 1913,
+     "generi": [],
+     "sl": 1
+    },
+    {
+     "titolo": "Economic Possibilities for our Grandchildren",
+     "titolo_en": "Economic Possibilities for our Grandchildren",
+     "anno": 1930,
+     "generi": [],
+     "sl": 0
+    },
+    {
+     "titolo": "How To Pay For The War",
+     "titolo_en": "How To Pay For The War",
+     "anno": 1940,
+     "generi": [],
+     "sl": 3
+    },
+    {
+     "titolo": "A Tract on Monetary Reform",
+     "titolo_en": "A Tract on Monetary Reform",
+     "anno": null,
+     "generi": [],
+     "sl": 2
+    }
+   ],
+   "n_opere": 22,
+   "generi": [
+    "non-fiction",
+    "saggio",
+    "trattato"
+   ],
+   "visite_12m": 608165,
+   "visite_it": 50347,
+   "visite_en": 557818,
+   "visite_es": 86432,
+   "visite_de": 51783,
+   "visite_fr": 56043,
+   "foto": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Keynes_1933.jpg?width=800",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Keynes_1933.jpg",
+    "licenza": "Public domain",
+    "autore": "Unknown author"
+   },
+   "paesi": [
+    "Regno Unito di Gran Bretagna e Irlanda",
+    "Regno Unito"
+   ],
+   "lingue": [
+    "inglese"
+   ],
+   "letterario": true,
+   "tipo_catalogo": [
+    "Saggi"
+   ],
+   "verifica": {
+    "esito": "nazionale",
+    "fonti": {
+     "wikidata": 1946
+    },
+    "nazionale": {
+     "fonte": "Encyclopaedia Britannica e Store norske leksikon",
+     "url": "https://britannica.com/summary/John-Maynard-Keynes",
+     "url_2": "https://snl.no/John_Maynard_Keynes",
+     "morte": 1946
+    }
+   },
+   "indice_it": 100,
+   "indice_en": 100,
+   "indice_es": 100,
+   "indice_de": 99,
+   "indice_fr": 100,
+   "indice_int": 100,
+   "pagina": "john-maynard-keynes",
+   "pagina_en": "john-maynard-keynes"
+  },
+  {
+   "wikidata": "Q29031",
+   "nome": "Charles Oman",
+   "nascita": "1860-01-12",
+   "morte": "1946-06-23",
+   "pagine_wikipedia": 21,
+   "professioni": [
+    "numismatico",
+    "politico",
+    "saggista",
+    "storico",
+    "storico militare"
+   ],
+   "descrizione": "British military historian (1860-1946)",
+   "url": "https://www.wikidata.org/wiki/Q29031",
+   "bio": "Sir Charles William Chadwick Oman è stato uno storico e numismatico britannico.",
+   "bio_url": "https://it.wikipedia.org/wiki/Charles_Oman",
+   "bio_lingua": "it",
+   "bios": {
+    "it": {
+     "testo": "Sir Charles William Chadwick Oman è stato uno storico e numismatico britannico.",
+     "url": "https://it.wikipedia.org/wiki/Charles_Oman"
+    },
+    "en": {
+     "testo": "Sir Charles William Chadwick Oman, was a British military historian. His reconstructions of medieval battles from the fragmentary and distorted accounts left by chroniclers were pioneering.",
+     "url": "https://en.wikipedia.org/wiki/Charles_Oman"
+    }
+   },
+   "opere": [
+    {
+     "titolo": "Inaugural Lecture on The Study of History",
+     "titolo_en": "Inaugural Lecture on The Study of History",
+     "anno": 1906,
+     "generi": [
+      "lezione"
+     ],
+     "sl": 1
+    },
+    {
+     "titolo": "A History of the Art of War in the Middle Ages",
+     "titolo_en": "A History of the Art of War in the Middle Ages",
+     "anno": 1924,
+     "generi": [],
+     "sl": 0
+    },
+    {
+     "titolo": "Castles",
+     "titolo_en": "Castles",
+     "anno": 1926,
+     "generi": [],
+     "sl": 0
+    },
+    {
+     "titolo": "ENGLISH COINS: from the seventh century to the present day. By G . C . Brooke, Acting Deputy Keeper of Coins, British Museum. Methuen, 1932. pp. XII, 277 and 64 collotype plates. 22s. 6d",
+     "titolo_en": "ENGLISH COINS: from the seventh century to the present day. By G . C . Brooke, Acting Deputy Keeper of Coins, British Museum. Methuen, 1932. pp. XII, 277 and 64 collotype plates. 22s. 6d",
+     "anno": 1933,
+     "generi": [],
+     "sl": 0
+    },
+    {
+     "titolo": "The last age of Roman Britain. By Edward Foord, author of ‘The Invasions of England,’ etc. London, Calcutta and Sydney: Geo. Harrap and Co. 1925. Pp. 294, 16 plates. 15s. net",
+     "titolo_en": "The last age of Roman Britain. By Edward Foord, author of ‘The Invasions of England,’ etc. London, Calcutta and Sydney: Geo. Harrap and Co. 1925. Pp. 294, 16 plates. 15s. net",
+     "anno": 1925,
+     "generi": [],
+     "sl": 0
+    }
+   ],
+   "n_opere": 5,
+   "generi": [
+    "lezione"
+   ],
+   "visite_12m": 8789,
+   "visite_it": 138,
+   "visite_en": 8651,
+   "visite_es": 323,
+   "visite_de": 207,
+   "visite_fr": 247,
+   "foto": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Charles_Oman.png?width=800",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Charles_Oman.png",
+    "licenza": "Public domain",
+    "autore": "Unknown author"
+   },
+   "paesi": [
+    "Regno Unito"
+   ],
+   "lingue": [
+    "inglese"
+   ],
+   "letterario": true,
+   "tipo_catalogo": [
+    "Saggi"
+   ],
+   "verifica": {
+    "esito": "nazionale",
+    "fonti": {
+     "wikidata": 1946
+    },
+    "nazionale": {
+     "fonte": "Fondation Napoléon e Biblioteca Nacional de Portugal, dizionario degli storici",
+     "url": "https://www.napoleon.org/en/magazine/napoleonic-pleasures/a-history-of-the-peninsular-war-by-sir-charles-oman/",
+     "url_2": "https://dichp.bnportugal.gov.pt/imagens/oman.pdf",
+     "morte": 1946
+    }
+   },
+   "indice_it": 92,
+   "indice_en": 94,
+   "indice_es": 93,
+   "indice_de": 86,
+   "indice_fr": 88,
+   "indice_int": 97,
+   "pagina": "charles-oman",
+   "pagina_en": "charles-oman"
+  },
+  {
+   "wikidata": "Q77521",
+   "nome": "Karl Groos",
+   "nascita": "1861-12-10",
+   "morte": "1946-03-27",
+   "pagine_wikipedia": 16,
+   "professioni": [
+    "filosofo",
+    "professore universitario",
+    "psicologo",
+    "saggista"
+   ],
+   "descrizione": "German psychologist and philosopher (1861-1946)",
+   "url": "https://www.wikidata.org/wiki/Q77521",
+   "bio": "Karl Groos è stato uno psicologo tedesco.",
+   "bio_url": "https://it.wikipedia.org/wiki/Karl_Groos",
+   "bio_lingua": "it",
+   "bios": {
+    "it": {
+     "testo": "Karl Groos è stato uno psicologo tedesco.",
+     "url": "https://it.wikipedia.org/wiki/Karl_Groos"
+    },
+    "en": {
+     "testo": "Karl Groos was a German philosopher and psychologist who proposed an evolutionary instrumentalist theory of play. His 1898 book on The Play of Animals suggested that play is a preparation for later life.",
+     "url": "https://en.wikipedia.org/wiki/Karl_Groos"
+    }
+   },
+   "opere": [
+    {
+     "titolo": "The play of animals",
+     "titolo_en": "The play of animals",
+     "anno": 1898,
+     "generi": [],
+     "sl": 0
+    },
+    {
+     "titolo": "The play of animals",
+     "titolo_en": "The play of animals",
+     "anno": 1898,
+     "generi": [],
+     "sl": 0
+    }
+   ],
+   "n_opere": 2,
+   "visite_12m": 2217,
+   "visite_it": 326,
+   "visite_en": 1891,
+   "visite_es": 913,
+   "visite_de": 720,
+   "visite_fr": 178,
+   "paesi": [
+    "Germania"
+   ],
+   "lingue": [
+    "tedesco"
+   ],
+   "letterario": true,
+   "tipo_catalogo": [
+    "Saggi"
+   ],
+   "verifica": {
+    "esito": "nazionale",
+    "fonti": {
+     "wikidata": 1946
+    },
+    "nazionale": {
+     "fonte": "Neue Deutsche Biographie e Spektrum, Lexikon der Psychologie",
+     "url": "https://www.deutsche-biographie.de/116865865.html",
+     "url_2": "https://www.spektrum.de/lexikon/psychologie/groos/6076",
+     "morte": 1946
+    }
+   },
+   "indice_it": 95,
+   "indice_en": 88,
+   "indice_es": 96,
+   "indice_de": 95,
+   "indice_fr": 86,
+   "indice_int": 94,
+   "pagina": "karl-groos",
+   "pagina_en": "karl-groos"
   }
  ],
  "letterari": 830,

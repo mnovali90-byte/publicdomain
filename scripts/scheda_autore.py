@@ -16,7 +16,7 @@ import regola_lista        # noqa: E402
 
 
 def base(q):
-    righe = A.sparql(f"""SELECT ?nome ?nascita ?morte ?sl ?profLabel ?descrizione WHERE {{
+    righe = A.sparql(f"""SELECT ?nome ?aLabel ?nascita ?morte ?sl ?profLabel ?descrizione WHERE {{
       BIND(wd:{q} AS ?a) ?a wikibase:sitelinks ?sl .
       OPTIONAL {{ ?a wdt:P569 ?nascita }} OPTIONAL {{ ?a wdt:P570 ?morte }} OPTIONAL {{ ?a wdt:P106 ?prof }}
       OPTIONAL {{ ?a rdfs:label ?nome FILTER(LANG(?nome) = "it") }}
@@ -25,7 +25,7 @@ def base(q):
     if not righe:
         raise SystemExit(f"{q}: Wikidata non risponde")
     r0 = righe[0]
-    return {"wikidata": q, "nome": r0.get("nome", {}).get("value") or q,
+    return {"wikidata": q, "nome": next((r["nome"]["value"] for r in righe if r.get("nome")), None) or r0.get("aLabel", {}).get("value") or q,
             "nascita": (r0.get("nascita", {}).get("value") or "")[:10] or None,
             "morte": (r0.get("morte", {}).get("value") or "")[:10] or None,
             "pagine_wikipedia": int(r0["sl"]["value"]),

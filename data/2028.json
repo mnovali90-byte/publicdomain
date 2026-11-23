@@ -5,7 +5,7 @@
  "regola": "UE: morte + 70 anni, dal 1 gennaio dell'anno successivo",
  "fonte": "Wikidata (CC0)",
  "aggiornato": "2026-11-19",
- "totale": 1398,
+ "totale": 1400,
  "autori": [
   {
    "wikidata": "Q80871",
@@ -77173,6 +77173,169 @@
    "url": "https://www.wikidata.org/wiki/Q141485283",
    "paesi": [],
    "paesi_fonte": "P27 assente"
+  },
+  {
+   "wikidata": "Q730889",
+   "nome": "Gaetano Salvemini",
+   "nascita": "1873-09-08",
+   "morte": "1957-09-06",
+   "pagine_wikipedia": 20,
+   "professioni": [
+    "politico",
+    "professore universitario",
+    "storico",
+    "storico dell'età moderna",
+    "saggista"
+   ],
+   "descrizione": "Italian politician (1873–1957)",
+   "url": "https://www.wikidata.org/wiki/Q730889",
+   "bio": "Gaetano Salvemini è stato uno storico, politico e antifascista italiano.",
+   "bio_url": "https://it.wikipedia.org/wiki/Gaetano_Salvemini",
+   "bio_lingua": "it",
+   "bios": {
+    "it": {
+     "testo": "Gaetano Salvemini è stato uno storico, politico e antifascista italiano.",
+     "url": "https://it.wikipedia.org/wiki/Gaetano_Salvemini"
+    },
+    "en": {
+     "testo": "Gaetano Salvemini was an Italian socialist and anti-fascist politician, historian, and writer. Born into a family of modest means, he became a historian of note whose work drew attention in Italy and abroad, particularly in the United States, after he was forced into exile by Benito Mussolini's Italian fascist regime.",
+     "url": "https://en.wikipedia.org/wiki/Gaetano_Salvemini"
+    }
+   },
+   "opere": [
+    {
+     "titolo": "Il ministro della mala vita",
+     "anno": 1910,
+     "generi": [
+      "saggio"
+     ],
+     "sl": 1
+    },
+    {
+     "titolo": "Italy under Fascism",
+     "titolo_en": "Italy under Fascism",
+     "anno": 1927,
+     "generi": [],
+     "sl": 1
+    }
+   ],
+   "n_opere": 2,
+   "generi": [
+    "saggio"
+   ],
+   "visite_12m": 60819,
+   "visite_it": 51744,
+   "visite_en": 9075,
+   "visite_es": 722,
+   "visite_de": 777,
+   "visite_fr": 1611,
+   "foto": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gaetano_Salvemini_official.jpg?width=800",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Gaetano_Salvemini_official.jpg",
+    "licenza": "Public domain",
+    "autore": "Unknown author"
+   },
+   "paesi": [
+    "Regno d'Italia",
+    "Italia",
+    "Stati Uniti"
+   ],
+   "lingue": [
+    "italiano",
+    "inglese"
+   ],
+   "letterario": true,
+   "tipo_catalogo": [
+    "Saggi"
+   ],
+   "verifica": {
+    "esito": "nazionale",
+    "fonti": {
+     "wikidata": 1957
+    },
+    "nazionale": {
+     "fonte": "Grande enciclopedia sovietica e Università di Verona",
+     "url": "https://booksite.ru/FullText/1/001/008/099/084.htm",
+     "url_2": "https://www.dcuci.univr.it/documenti/OccorrenzaIns/matdid/matdid389522.pdf",
+     "morte": 1957
+    }
+   },
+   "indice_it": 100,
+   "indice_en": 96,
+   "indice_es": 95,
+   "indice_de": 95,
+   "indice_fr": 97,
+   "indice_int": 96,
+   "pagina": "gaetano-salvemini",
+   "pagina_en": "gaetano-salvemini"
+  },
+  {
+   "wikidata": "Q708794",
+   "nome": "Tokutomi Sohō",
+   "nascita": "1863-03-14",
+   "morte": "1957-11-02",
+   "pagine_wikipedia": 13,
+   "professioni": [
+    "critico",
+    "critico letterario",
+    "filosofo",
+    "giornalista",
+    "politico",
+    "storico",
+    "saggista"
+   ],
+   "descrizione": "Japanese writer (1863–1957)",
+   "url": "https://www.wikidata.org/wiki/Q708794",
+   "bio": "Tokutomi Sohō , born Tokutomi Iichirō , was a Japanese journalist, publisher and historian. He advocated commoner Europeanism and Europeanization, established Min'yūsha, and launched the magazines Kokumin no Tomo and the newspaper Kokumin Shimbun. He was the older brother of noted author, Tokutomi Roka.",
+   "bio_url": "https://en.wikipedia.org/wiki/Tokutomi_Soh%C5%8D",
+   "bio_lingua": "en",
+   "bios": {
+    "en": {
+     "testo": "Tokutomi Sohō , born Tokutomi Iichirō , was a Japanese journalist, publisher and historian. He advocated commoner Europeanism and Europeanization, established Min'yūsha, and launched the magazines Kokumin no Tomo and the newspaper Kokumin Shimbun. He was the older brother of noted author, Tokutomi Roka.",
+     "url": "https://en.wikipedia.org/wiki/Tokutomi_Soh%C5%8D"
+    }
+   },
+   "n_opere": 0,
+   "visite_12m": 2362,
+   "visite_it": 0,
+   "visite_en": 2362,
+   "visite_es": 180,
+   "visite_de": 147,
+   "visite_fr": 172,
+   "foto": {
+    "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Soho_Tokutomi_1_cropped.jpg?width=800",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Soho_Tokutomi_1_cropped.jpg",
+    "licenza": "Public domain",
+    "autore": "Unknown author"
+   },
+   "paesi": [
+    "Giappone"
+   ],
+   "lingue": [
+    "giapponese"
+   ],
+   "letterario": true,
+   "tipo_catalogo": [
+    "Saggi"
+   ],
+   "verifica": {
+    "esito": "nazionale",
+    "fonti": {
+     "wikidata": 1957
+    },
+    "nazionale": {
+     "fonte": "National Diet Library (Giappone) e Encyclopaedia Britannica",
+     "url": "https://www.ndl.go.jp/portrait/e/datas/298",
+     "url_2": "https://www.britannica.com/print/article/598405",
+     "morte": 1957
+    }
+   },
+   "indice_it": 0,
+   "indice_en": 91,
+   "indice_es": 89,
+   "indice_de": 88,
+   "indice_fr": 89,
+   "indice_int": 94
   }
  ],
  "letterari": 902,
