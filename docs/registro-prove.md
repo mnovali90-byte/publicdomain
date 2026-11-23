@@ -1580,3 +1580,8 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - In vetrina 2028 sale al 12° posto Come fu temprato l'acciaio (Ostrovskij, Q63707), «Da confermare».
 - Nota Thirteen Problems riscritta con il testo di Marco; note di Schmitt e Christie approvate (la prima resta nel registro).
 - Prove 1-9 e 5b: 0 errori; fotografia: 0 cambi. Etichette invariate: 2027 63/84/8, 2028 7/103/65.
+
+## 2026-11-23 — Peril at End House: le puntate su Liberty (1931) erano il testo completo? (locale, non pubblicato)
+- Fonti: The Online Books Page (UPenn), rinnovi CCE dei contributi a Liberty: 11 puntate dal 13/6 al 22/8/1931. Delicious Death: Liberty giugno-agosto 1931 e Woman's Pictorial ottobre-dicembre 1931.
+- Testo completo? Solo Wikipedia (copiata da nocloo e dal wiki fandom) dice «slight abridgements», niente capitoli e una frase tolta nel cap. III. Non ho trovato una seconda fonte indipendente, né le puntate digitalizzate da confrontare.
+- Regola (incrocio_opera) con le due voci nuove (blocco vetrina-2028-peril): «nota», uscita prima solo una parte. Resta nella lista 2028 con la nota, in attesa del testo approvato da Marco.
