@@ -355,6 +355,8 @@ function noteOpera(o) {   // gruppi, coautori aggiunti a mano, musica e libretto
     if (m === null || m === undefined) r.push(tr("sMusicaNd", { r: ra, n }));
     else if (REGOLE_PAESI.annoLibero(m, "de") > Y) r.push(tr("sMusica", { r: ra, n, y: REGOLE_PAESI.annoLibero(m, "de") }));
   }
+  const nu = (D.usaNote || {})[o.q];   // 23/11/2026: la stessa nota USA delle liste e del radar (scripts/registro.py, note_usa)
+  if (nu && nu[LING]) r.push(nu[LING]);
   return r.length ? h("div", { style: "margin-top:12px;font-size:14px;color:#5C5C66" }, r.map((x) => h("p", { style: "margin:6px 0 0" }, x))) : null;
 }
 function badge(st) {
@@ -637,7 +639,7 @@ async function avvia() {
   // l'anno di oggi, non quello dei dati: il 1° gennaio gli stati devono cambiare subito, anche se lo Storico gira il 2 (22/11/2026)
   D.anno = Math.max(Number(String(P.aggiornato).slice(0, 4)) || 0, D.anno);
   D.lingue = P.lingue || {};
-  try { const reg = await leggi("/data/registro/opere.json"); D.regOpere = reg.coautori || {}; D.verifiche = reg.usa || {}; }
+  try { const reg = await leggi("/data/registro/opere.json"); D.regOpere = reg.coautori || {}; D.verifiche = reg.usa || {}; D.usaNote = reg.usa_note || {}; }
   catch (e) { D.regOpere = {}; D.verifiche = {}; }   // registro unico: coautori e anni USA
   try { D.mpf = new Set(Object.keys((await leggi("/data/registro/mpf.json")).autori || {})); } catch (e) { D.mpf = new Set(); }   // «morti per la Francia»
   D.foto = P.foto || {}; D.prossimi = P.prossimi || [];   // prima erano finiti dentro il commento qui sopra: ritratti e «non è ancora libero» non comparivano (21/11/2026)

@@ -154,8 +154,20 @@ def _controlla(c, o):
     if st["s"] not in c["atteso"] or ("y_att" in c and st.get("y") != c["y_att"]):
         return f"atteso {c['atteso']} {c.get('y_att', '')}, risulta {st['s']} {st.get('y', '')}"
     return None
+def _opera_home(chiave):
+    """«autore|titolo della scheda»: l'opera come la vede la home (scripts/pagine.py, opera_regole), cercata nelle liste."""
+    import glob as _g
+    import pagine as _pg
+    aq, t = chiave.split("|", 1)
+    for f in sorted(_g.glob(str(RADICE / "data" / "[0-9][0-9][0-9][0-9].json"))):
+        for a in json.load(open(f, encoding="utf-8")).get("autori", []):
+            if a.get("wikidata") == aq:
+                for o in a.get("opere", []):
+                    if o.get("titolo") == t or o.get("titolo_en") == t:
+                        return _pg.opera_regole(a, o)
+    return None
 for c in CASI["reali"]:
-    e = _controlla(c, c.get("o") or _pern.get(c.get("q")))
+    e = _controlla(c, c.get("o") or (_opera_home(c["home"]) if c.get("home") else _pern.get(c.get("q"))))
     if e is None:
         ok4 += 1
     elif c.get("blocca", True):
@@ -200,6 +212,15 @@ for f in (RADICE / "index.html", RADICE / "en" / "index.html"):
             continue
         viste5 += 1
         o = next((_pert.get((_pt(n), _pt(p["t"]))) for n in re.split(r" e | and ", p["a"]) if _pert.get((_pt(n), _pt(p["t"])))), None)
+        if not o:   # 23/11/2026: non ancora in Già pubblici, si controlla con gli stessi dati della home
+            for n_ in re.split(r" e | and ", p["a"]):
+                for f_ in sorted((RADICE / "data").glob("[0-9][0-9][0-9][0-9].json")):
+                    for a_ in json.load(open(f_, encoding="utf-8")).get("autori", []):
+                        if _pt(a_.get("nome")) == _pt(n_):
+                            for o_ in a_.get("opere", []):
+                                if _pt(p["t"]) in (_pt(o_.get("titolo")), _pt(o_.get("titolo_en"))):
+                                    import pagine as _pg
+                                    o = _pg.opera_regole(a_, o_)
         if not o:
             nontrovate5.append(f"{p['a']}, «{p['t']}» non è nei dati di Già pubblici: non controllabile")
             continue

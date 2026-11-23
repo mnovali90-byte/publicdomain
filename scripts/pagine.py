@@ -529,7 +529,8 @@ def _leggi(p, x):
         return x
 
 
-from registro import anni_usa, liste_usa  # noqa: E402
+from registro import anni_usa, liste_usa, note_usa  # noqa: E402
+NOTE_USA = note_usa()   # note USA uguali in liste, radar, Già pubblici e schede (23/11/2026)
 ANNI_VER = anni_usa()   # registro unico: anno USA confermato di ogni opera (regola in scripts/regole.py)
 VER_OPERE = (_leggi(RADICE / "data" / "verifiche_opere.json", {}) or {}).get("opere", {})   # anni USA dai cataloghi (23/11/2026)
 _PER_AUT = {}
@@ -640,7 +641,7 @@ COAUT = _leggi(RADICE / "data" / "storico" / "coautori.json", {})
 COAUT_MAN = _leggi(RADICE / "data" / "coautori_manuali.json", {}).get("opere", {})
 
 
-def vincoli_opera(a, o, oggi_a=None):
+def vincoli_opera(a, o, oggi_a=None, solo_autori=False):
     """Coautori di un'opera della scheda con la regola unica (scripts/regole.py, autori_che_contano), come in tutto il sito.
     Torna (tardi, ignoti, w): tardi = [(nome, morte)] dei coautori morti dopo l'autore; ignoti = nomi senza data di morte;
     w = i dati dell'opera in data/storico/coautori.json (w["mu"]: musica e libretto). Usata dalle schede e dalla home (22/11/2026)."""
@@ -673,10 +674,23 @@ def vincoli_opera(a, o, oggi_a=None):
             w["ruoli"][x["nome"]] = ruolo
     au = [{"qid": a["wikidata"], "nome": a["nome"], "morte": D}] + [
         {"qid": c[0] or "man:" + c[1], "nome": c[1], "morte": c[2], "nascita": c[3] if len(c) > 3 else None} for c in co]
+    if solo_autori:
+        return au
     dopo = [x for x in autori_che_contano(au, tipi, oggi_a) if x["qid"] != a["wikidata"]]
     tardi = [(x["nome"], x["morte"]) for x in dopo if x.get("morte") is not None and not x.get("antico") and D and x["morte"] > D]
     ignoti = [x["nome"] for x in dopo if x.get("senza_data")]
     return tardi, ignoti, w
+
+
+def opera_regole(a, o):
+    """Un'opera della scheda o della home nel formato di regole.stato_opera, con gli stessi autori che usano la home e
+    le schede (vincoli_opera). Per le opere che non sono ancora in Già pubblici: così la prova 5 può controllarle (23/11/2026)."""
+    og = opera_gp(a, o)
+    if og is not None:
+        return og
+    return {"q": f"{a['wikidata']}|{o.get('titolo')}", "y": anno_opera(a, o), "yd": 0,
+            "au": [{"q": x["qid"], "m": x["morte"], "an": False, "inc": 0, "sc": False, "al": False}
+                   for x in vincoli_opera(a, o, solo_autori=True)]}
 
 
 def opera_libera_ue(a, o, anno):
@@ -762,6 +776,10 @@ def note_coautori(a, lang):
             if m is not None and R.anno_libero(m, "it") > oggi_a and m > D:
                 note.append(T(f"{tt}: i disegni originali di {nome} (morte: {m}) hanno diritti propri: in Italia, Francia, Germania e Regno Unito fino al 31 dicembre {R.anno_libero(m, 'it') - 1}, in Spagna fino al 31 dicembre {R.anno_libero(m, 'es') - 1}. Il testo segue la data dell'autore.",
                               f"{tt}: the original drawings by {nome} (died {m}) have their own rights: in Italy, France, Germany and the UK until 31 December {R.anno_libero(m, 'it') - 1}, in Spain until 31 December {R.anno_libero(m, 'es') - 1}. The text follows the author's date."))
+        og = opera_gp(a, o)
+        nu = (NOTE_USA.get(og["q"]) or {}).get(lang if lang in ("it", "en") else "en") if og else None
+        if nu:
+            note.append(f"{tt}: {nu[0].lower() + nu[1:]}")
     return list(dict.fromkeys(note))   # stessa nota per titoli doppi su Wikidata: una volta sola
 
 

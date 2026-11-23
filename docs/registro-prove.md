@@ -1197,3 +1197,28 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
   - Già pubblici con le 5 opere libere negli USA;
   - nessun errore JS.
 - **Corretto anche:** liste_spostati.json ora toglie dalle «già libere» le opere che sono tornate nella lista.
+
+## 23/11/2026 — Controllo di Marco: tre punti e i due errori medi
+- **1. Note USA sempre con «negli USA»** (data/verifiche_opere.json, «usa_lista»), in italiano e in inglese.
+  - Le note sulle opere a puntate dicono anche «in Europa è ancora protetto/a»: Tintin, La chiave di vetro, La via del ritorno.
+  - Le note sono in un solo posto, scripts/registro.py (note_usa), e da lì arrivano a:
+    - liste e radar (nota_usa);
+    - Già pubblici (data/registro/opere.json, «usa_note», mostrata in storico/pagina.html);
+    - schede autore (scripts/pagine.py, note_coautori).
+- **2. La linea di condotta con due fonti nei dati:** in «usa_lista» c'è «versione_libera» (1930: K10plus e Brecht Guide dell'Università del Wisconsin). Il registro ora dice «due fonti: …» al posto del solo K10plus.
+  - Con la stessa regola, quando «usa_lista» ha un anno confermato da due fonti (Tintin, Atheist, Gaban…), quell'anno entra nel registro.
+- **3. Vetrina della home sotto controllo:**
+  - Margarete Steffin è messa come coautrice, con due fonti ciascuna, in data/coautori_manuali.json:
+    - Madre Coraggio: Wikipedia, German Literature;
+    - Arturo Ui: DLA Marbach, Suhrkamp;
+    - Steffin è morta il 4/6/1941 (Suhrkamp): la data europea non cambia (2027).
+  - Le due opere sono nei casi di riferimento (data/casi_riferimento.json, casi 11 e 12). La prova 5 controlla anche le opere non ancora in Già pubblici, con gli stessi dati della home (scripts/pagine.py, opera_regole).
+  - Risultato: non controllabili da 4 a 0.
+  - Da sapere: Encyclopedia.com scrive che per Arturo Ui Brecht fu aiutato anche dal figlio Stefan (morto nel 2009). L'editore e il DLA indicano come collaboratrice solo Steffin: non l'ho messo coautore.
+- **Errori medi corretti (Già pubblici):**
+  - La linea di condotta mostra la nota sulla versione rivista del 1931;
+  - le 5 opere tolte dicono quale edizione conta negli USA e con quali fonti. I codici delle fonti sono scritti per esteso (es. Catalog of Copyright Entries).
+- **Esito:**
+  - prove 1-7 a 0: casi di riferimento 26 su 26, vetrina 8 su 8 controllate;
+  - fotografia 0 cambi;
+  - nel browser, in italiano e in inglese, le note si vedono in Già pubblici e nel radar, senza errori JS.

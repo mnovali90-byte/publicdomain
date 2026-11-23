@@ -138,6 +138,30 @@
    "blocca": false,
    "perche": "da verificare: testo originale, nuova edizione del 2016 e illustrazioni hanno diritti diversi",
    "y_att": 2040
+  },
+  {
+   "n": 9,
+   "caso": "Vetrina della home: «Madre Coraggio e i suoi figli» di Brecht in Italia",
+   "home": "Q38757|Madre Coraggio e i suoi figli",
+   "paese": "it",
+   "anno": 2027,
+   "atteso": [
+    "si"
+   ],
+   "fonte": "Wikipedia e German Literature: coautrice Margarete Steffin, morta nel 1941 (Suhrkamp); Brecht morto nel 1956",
+   "blocca": true
+  },
+  {
+   "n": 10,
+   "caso": "Vetrina della home: «La resistibile ascesa di Arturo Ui» di Brecht in Italia",
+   "home": "Q38757|La resistibile ascesa di Arturo Ui",
+   "paese": "it",
+   "anno": 2027,
+   "atteso": [
+    "si"
+   ],
+   "fonte": "DLA Marbach e Suhrkamp: «unter Mitarbeit von Margarete Steffin», morta nel 1941; Brecht morto nel 1956",
+   "blocca": true
   }
  ],
  "confine": [

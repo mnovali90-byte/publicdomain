@@ -37,10 +37,32 @@ def voci_usa():
     for x in (_leggi(R / "data" / "registro" / "liste_spostati.json", {}).get("usa_gia_libere") or []):
         if x.get("qid") and isinstance(x.get("uscita"), int):
             out.setdefault(x["qid"], []).append(("libere", ["prima", x["uscita"], "due fonti: " + ", ".join(x.get("fonti", []))]))
+    # 23/11/2026: decisioni con le fonti sulle opere delle liste USA (data/verifiche_opere.json, «usa_lista»)
+    for q, x in (_leggi(R / "data" / "verifiche_opere.json", {}).get("usa_lista") or {}).items():
+        vl = x.get("versione_libera") or {}
+        if isinstance(vl.get("anno"), int) and len(vl.get("fonti", [])) >= 2:
+            out.setdefault(q, []).append(("libere", ["prima", vl["anno"], "due fonti: " + "; ".join(vl["fonti"])]))
+        if isinstance(x.get("conferma"), int) and len(x.get("fonti", [])) >= 2:
+            out.setdefault(q, []).append(("cataloghi", ["ok", x["conferma"], "due fonti: " + "; ".join(x["fonti"])]))
     # 23/11/2026: anni provati da due cataloghi (data/verifiche_opere.json, verifica delle opere approvata da Marco)
     for k, x in (_leggi(R / "data" / "verifiche_opere.json", {}).get("opere") or {}).items():
         if x.get("opera") and isinstance(x.get("entro"), int):
             out.setdefault(x["opera"], []).append(("cataloghi", ["ok", x["entro"], "cataloghi: " + "; ".join(x.get("fonti", []))]))
+    return out
+
+
+def note_usa():
+    """{opera: {"it", "en"}}: le note USA che spiegano l'anno, uguali in liste, radar e Già pubblici (23/11/2026).
+      - le note scritte con le fonti in data/verifiche_opere.json («usa_lista»);
+      - per le opere tolte dalle liste perché già libere per intero: quale edizione conta e con quali fonti."""
+    out = {q: x["nota"] for q, x in (_leggi(R / "data" / "verifiche_opere.json", {}).get("usa_lista") or {}).items() if x.get("nota")}
+    for x in (_leggi(R / "data" / "registro" / "liste_spostati.json", {}).get("usa_gia_libere") or []):
+        if x.get("qid") and isinstance(x.get("uscita"), int) and x["qid"] not in out:
+            nomi = {"duke": "Duke University", "k10plus": "K10plus", "wikipedia": "Wikipedia", "cce": "Catalog of Copyright Entries",
+                    "loc": "Library of Congress", "openlibrary": "Open Library", "isfdb": "ISFDB", "bnf": "BnF", "dnb": "DNB"}
+            f = ", ".join(nomi.get(y, y) for y in x.get("fonti", []))
+            out[x["qid"]] = {"it": f"Negli USA conta l'edizione del {x['uscita']}, la più vecchia confermata da due fonti ({f}): per questo negli USA è già libera.",
+                             "en": f"In the US the {x['uscita']} edition counts, the oldest confirmed by two sources ({f}): that is why it is already free in the US."}
     return out
 
 
