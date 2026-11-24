@@ -82,8 +82,9 @@ VOLATILE = [re.compile(p) for p in (r"tra \d+ giorn[oi]", r"in \d+ days?", r"\d+
 # e l'elenco «Altri scrittori liberi» (cambia ogni mese con le visite).
 VOLATILE_2 = VOLATILE + [re.compile(p, re.S) for p in (
     r'(?<=<span id="days")[^>]*>\d+(?=</span>)', r'<span class="rk">[^<]*</span>',
-    r"Tutti i \d+ scrittori", r"All \d+ writers", r'<div class="others">.*?</section>')]
-VERSIONE_IMPRONTA = 2
+    r"Tutti i \d+ scrittori", r"All \d+ writers", r'<div class="others">.*?</section>',
+    r'<style[^>]*>.*?</style>', r'<link [^>]*>')]   # grafica e collegamenti della testata non sono fatti della pagina (24/11/2026, caratteri)
+VERSIONE_IMPRONTA = 4   # 3: senza <style>; 4: senza <link> (24/11/2026)
 
 
 def impronta(percorso, regole=None):
@@ -128,7 +129,7 @@ def abbastanza_contenuto(a, lang="it"):
 
 CSS = """
 :root{--ink:#0C0C10;--carta:#F7F7F4;--vermiglio:#FF4326;--vermiglio-testo:#C2301A;--muto:#5C5C66;--riquadro:#E4E2DA;--notte:#1C1C24;
---display:'Big Shoulders Display',Impact,'Arial Narrow',sans-serif;--testo:'Instrument Sans',system-ui,sans-serif;--mono:'DM Mono',ui-monospace,Menlo,monospace}
+--display:'Big Shoulders Display',Impact,'Arial Narrow',sans-serif;--testo:'Instrument Sans','Instrument Fallback',system-ui,sans-serif;--mono:'DM Mono',ui-monospace,Menlo,monospace}
 *{box-sizing:border-box}
 body{margin:0;background:var(--carta);color:var(--ink);font-family:var(--testo);line-height:1.6;-webkit-text-size-adjust:100%}
 a{color:var(--vermiglio-testo)}
@@ -254,6 +255,7 @@ TESTA = """<!doctype html>
 <meta property="og:description" content="{descr}">
 <meta name="twitter:card" content="summary">
 {jsonld}
+<link rel="preload" href="/assets/fonts/big-shoulders-display-800-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link href="/assets/fonts/fonts.css" rel="stylesheet">
 <style>{css}</style>
 <!-- contatore visite senza cookie (GoatCounter) -->
@@ -969,6 +971,7 @@ def testa_scheda(lang, titolo, descr, url, alterne_, jsonld, altra, cnt, og_tipo
 <meta property="og:description" content="{descr}">
 <meta name="twitter:card" content="summary">
 {jsonld}
+<link rel="preload" href="/assets/fonts/big-shoulders-display-800-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link href="/assets/fonts/fonts.css" rel="stylesheet">
 <style>{CSS_SCHEDA}{css_extra}</style>
 <script>document.documentElement.classList.add('js')</script>
@@ -2400,7 +2403,7 @@ def main():
         f_ = RADICE / u[len(SITO):].strip("/") / "index.html"
         imp = impronta(f_)
         prima = date_s.get(u)
-        if prima and len(prima) < 3:   # passaggio alla versione 2 (24/11/2026): si tiene la data, si salva la nuova impronta
+        if prima and (len(prima) < 3 or prima[2] < VERSIONE_IMPRONTA):   # regola dell'impronta cambiata: si tiene la data, si salva la nuova impronta
             stessa = True
         else:
             stessa = bool(prima) and prima[0] == imp

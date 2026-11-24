@@ -1,0 +1,41 @@
+# Public Domain Radar
+
+> Every 1 January the copyright of hundreds of writers and books expires. Public Domain Radar shows who and what becomes free, country by country (Italy, France, Germany, Spain, the United Kingdom and the United States), with the term rules read from official legal texts and records in national library catalogues. Open data, with sources. Site in Italian and English.
+
+Made by Marco Novali (https://www.linkedin.com/in/marconovali). Data from Wikidata, Wikipedia, national catalogues (SBN, BnF, BNE, British Library, Library of Congress) and the US Catalog of Copyright Entries; refreshed every three months and in December.
+
+How to read the dates:
+- Europe: an author's works are free from 1 January after 70 years from death, with national exceptions: 80 years in Spain for authors who died before 7 December 1987, 30 more years in France for authors "mort pour la France", and wartime extensions for some authors from Allied countries in Italy. Each author page gives the date for each country.
+- United States: what counts is the date of first publication, not the author's death. Books first published in 1931 become free on 1 January 2027, books from 1932 on 1 January 2028.
+- A US work is marked "verified" only when its first publication is documented by two independent sources or by one Catalog of Copyright Entries record, and no source points to an earlier release. Otherwise it is marked "edition year confirmed" or "to be confirmed".
+- Translations, illustrations and later editions can still be protected when the original text is free.
+
+## Public Domain Day
+
+- [Public Domain Day 2027](https://publicdomainradar.com/en/public-domain-2027/): writers and US books that become free on 1 January 2027, with sources
+- [Public Domain Day 2028](https://publicdomainradar.com/en/public-domain-2028/): writers and US books that become free on 1 January 2028
+- [Pubblico dominio 2027](https://publicdomainradar.com/pubblico-dominio-2027/): the same page in Italian
+- [Pubblico dominio 2028](https://publicdomainradar.com/pubblico-dominio-2028/): the same page in Italian
+
+## Tools
+
+- [Radar](https://publicdomainradar.com/en/radar/): authors and books entering the public domain, with filters by country and order
+- [Already public](https://publicdomainradar.com/en/already-public/): search a title or an author to see whether it is already in the public domain in Italy, France, Germany, Spain and the USA, and since when
+- [Literary anniversaries 2027](https://publicdomainradar.com/en/calendar/2027/): authors born and died 50, 100, 150 years ago and books first published, month by month
+- Author pages: one page per writer, for example [Phil Stong](https://publicdomainradar.com/en/author/phil-stong/), with the date for each country, catalogue records and main works
+
+## Data
+
+- [Anniversaries 2027, CSV](https://publicdomainradar.com/en/calendar/2027/anniversaries-2027.csv)
+- [Anniversaries 2027, calendar (.ics)](https://publicdomainradar.com/en/calendar/2027/anniversaries-2027.ics)
+- [Sitemap](https://publicdomainradar.com/sitemap.xml): every page of the site
+
+## Method
+
+- [Criteria (Italian)](https://github.com/mnovali90-byte/publicdomain/blob/main/docs/criteri.md): the rules for dates and for verifying US works, with the cases that created each rule
+- [Source code and data](https://github.com/mnovali90-byte/publicdomain): public repository
+
+## Optional
+
+- [Home in Italian](https://publicdomainradar.com/)
+- [Home in English](https://publicdomainradar.com/en/)

@@ -1607,3 +1607,14 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - Correzione (scripts/pagine.py, VOLATILE_2, versione 2 dell'impronta): queste parti non contano. Al passaggio si tiene la data già salvata.
 - Prova: giro di oggi, 833 date invariate (831 al 23/11, 2 al 22/11). Giro simulato al 24/12 su una copia: schede con data nuova 0 su 418 (con la regola vecchia 416); cambiano solo le 4 pagine dell'anno (conto alla rovescia). Prove 1-9 e 5b: 0 errori.
 - Le 47 pagine sparite: 4 sono rinominate e hanno già il rimando; 43 sono autori tolti dalle liste (non letterari): il 404 è la risposta giusta, nessun intervento.
+
+## 2026-11-24 — Pagina che salta (CLS) e llms.txt (locale, in attesa di ok)
+- PageSpeed (Marco, computer, calendario EN 2027): spostamento del layout 0.171, navigazione agentica 1/2 (telefono 98/2/2).
+- Causa misurata (Chrome senza schermo, caratteri ritardati di 0,8 s): il titolo in Big Shoulders cambia righe quando arriva il carattere vero (il ripiego Impact/sans-serif è largo il doppio: Big Shoulders = 53% di Arial) e tutto sotto salta. Sul radar, in più, la riga sopra il titolo si riempie dopo i dati e su telefono va a capo.
+- Tentativo scartato: ripiego Arial ridotto al 53-60% (size-adjust) per il titolo: cifre e lettere hanno proporzioni diverse, le righe cambiano comunque (0.07-0.35).
+- Correzione: Big Shoulders con font-display optional + pre-caricamento del file 800 latino in ogni pagina; Instrument Sans con ripiego Arial al 101,6% (misurato); DM Mono non serve (99,7%). Radar: spazio fisso di due righe per la riga sopra il titolo sul telefono. Tutto in fonts.css (e nel suo generatore scarica_font.py), nelle due testate di pagine.py e nelle pagine radar.
+- Misure dopo (pc / telefono, caratteri subito e in ritardo): calendario EN 0.047/0.002, calendario IT 0.001/0.001, pubblico dominio 2027 IT 0.025-0.034/0.051, EN 0.051/0.001, radar 0.002-0.025/0-0.005, home EN 0.017/0.010, scheda 0.001/0.026. Prima: fino a 0.45 (pd 2027 IT) e 0.35 (radar telefono).
+- Confronto foto prima/dopo con caratteri caricati: calendario e scheda identici al pixel; radar e pagina 2027 differiscono solo per il punto dell'animazione del testo.
+- Date della sitemap: impronta versione 4 (senza <style> e <link>), le 833 date restano quelle di prima.
+- llms.txt nuovo alla radice: descrizione del sito, regole delle date (con le eccezioni di Spagna, Francia, Italia), pagine principali, dati scaricabili, metodo (docs/criteri.md su GitHub).
+- Prove 1-9 e 5b: 0 errori.
