@@ -1600,3 +1600,10 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - 1° gennaio: prove 1-9 e 5b 0 errori, frasi imprecise 0; fotografia 9325 cambi, tutti attesi, 0 da approvare: il giro pubblicherebbe. 831 file (schede «1° gen 2027» → «libero dal 2027», conti dei giorni, sitemap, data degli .ics).
 - 7 gennaio: 0 errori, fotografia 0 cambi; 840 file (menu «Pubblico dominio 2028», conto alla rovescia 2028, autori in arrivo da 251 a 125).
 - Se il giro fallisce: niente ripartenza; il sito resta com'era, ma home e radar cambiano fase da soli nel browser. Avviso solo per email di GitHub a chi ha toccato per ultimo l'orario (se le notifiche sono accese); se GitHub salta il giro, nessun avviso. Rimedio a mano: pulsante «Run workflow».
+
+## 2026-11-24 — Calo su Google: date della sitemap solo per cambi veri (locale, in attesa di ok)
+- Search Console: impressioni da 275 (14/11) a 0 (21-22/11); calendario 2027 «scansionata, ma attualmente non indicizzata» (22/11); nessuna azione manuale; site: circa 10 risultati; home seconda per «public domain radar».
+- Causa trovata nel codice: l'impronta che decide la data «modificata» contava il conto dei giorni (<span id="days">), le posizioni in classifica, i conteggi «Tutti i N scrittori» e l'elenco «Altri scrittori liberi». Ogni giro segnava tutte le pagine come nuove.
+- Correzione (scripts/pagine.py, VOLATILE_2, versione 2 dell'impronta): queste parti non contano. Al passaggio si tiene la data già salvata.
+- Prova: giro di oggi, 833 date invariate (831 al 23/11, 2 al 22/11). Giro simulato al 24/12 su una copia: schede con data nuova 0 su 418 (con la regola vecchia 416); cambiano solo le 4 pagine dell'anno (conto alla rovescia). Prove 1-9 e 5b: 0 errori.
+- Le 47 pagine sparite: 4 sono rinominate e hanno già il rimando; 43 sono autori tolti dalle liste (non letterari): il 404 è la risposta giusta, nessun intervento.

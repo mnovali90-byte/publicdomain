@@ -77,15 +77,22 @@ def pagina_rimando(nuovo_url, lang):
 DATE_SITEMAP = RADICE / "data" / "sitemap_date.json"
 VOLATILE = [re.compile(p) for p in (r"tra \d+ giorn[oi]", r"in \d+ days?", r"\d+ (giorni|days?) (left|rimasti)",
                                      r'"dateModified": ?"[^"]*"', r"\d{4}-\d{2}-\d{2}")]
+# 24/11/2026 (calo su Google): la data «modificata» della sitemap cambia solo se cambiano i fatti della pagina.
+# Non contano: il conto dei giorni, le posizioni in classifica per visite, i conteggi degli altri scrittori
+# e l'elenco «Altri scrittori liberi» (cambia ogni mese con le visite).
+VOLATILE_2 = VOLATILE + [re.compile(p, re.S) for p in (
+    r'(?<=<span id="days")[^>]*>\d+(?=</span>)', r'<span class="rk">[^<]*</span>',
+    r"Tutti i \d+ scrittori", r"All \d+ writers", r'<div class="others">.*?</section>')]
+VERSIONE_IMPRONTA = 2
 
 
-def impronta(percorso):
+def impronta(percorso, regole=None):
     import hashlib
     try:
         t = percorso.read_text(encoding="utf-8")
     except Exception:
         return None
-    for r_ in VOLATILE:
+    for r_ in (VOLATILE_2 if regole is None else regole):
         t = r_.sub("", t)
     return hashlib.sha1(t.encode("utf-8")).hexdigest()[:16]
 
@@ -2390,10 +2397,15 @@ def main():
     nuove_date = {}
 
     def data_di(u):
-        imp = impronta(RADICE / u[len(SITO):].strip("/") / "index.html")
+        f_ = RADICE / u[len(SITO):].strip("/") / "index.html"
+        imp = impronta(f_)
         prima = date_s.get(u)
-        d = prima[1] if prima and prima[0] == imp else str(oggi)
-        nuove_date[u] = [imp, d]
+        if prima and len(prima) < 3:   # passaggio alla versione 2 (24/11/2026): si tiene la data, si salva la nuova impronta
+            stessa = True
+        else:
+            stessa = bool(prima) and prima[0] == imp
+        d = prima[1] if stessa else str(oggi)
+        nuove_date[u] = [imp, d, VERSIONE_IMPRONTA]
         return d
     righe = [f"  <url><loc>{u}</loc><lastmod>{data_di(u)}</lastmod><changefreq>monthly</changefreq></url>"
              for u in (f"{SITO}/", f"{SITO}/en/", f"{SITO}/radar/", f"{SITO}/en/radar/", url_pagina('it'), url_pagina('en'))]
