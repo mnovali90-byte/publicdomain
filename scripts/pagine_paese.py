@@ -239,7 +239,7 @@ def pagina_paese_ue(k, lang, REG, liste):
     out.append(f'<section class="open">\n<nav class="bc m" aria-label="{T("Sei qui", "You are here")}"><a href="{"/" if it else "/en/"}">Home</a> › '
                f'<a href="{url_indice(lang).replace(P.SITO, "")}">{T("Per paese", "By country")}</a> › <span>{esc(nome)}</span></nav>\n'
                f'<p class="m k">{T("Pubblico dominio", "Public domain")} · {esc(nome)}</p>\n'
-               f'<h1 class="h1">{w(T("Quando un libro", "When a book"))}<br>{w(T("diventa libero", "becomes free"))}<br>{w(esc(in_))}</h1>\n'
+               f'<h1 class="h1">{w(T("Quando un libro", "When a book"))} <br>{w(T("diventa libero", "becomes free"))} <br>{w(esc(in_))}</h1>\n'
                f'<p class="say" id="say">{esc(T(f"{in_it[0].upper() + in_it[1:]} un’opera diventa libera {anni} anni dopo la morte dell’autore, dal 1° gennaio dell’anno dopo. Chi entra, cosa è già libero e cosa controllare, con le fonti di legge.", f"{in_en[0].upper() + in_en[1:]} a work becomes free {anni} years after the author’s death, from 1 January of the following year. Who enters, what is already free and what to check, with the legal sources."))}</p>\n</section>\n')
     nums = [(anni, T("anni dopo la morte dell'autore", "years after the author's death"), NORMA[k]),
             (len(tutti), T(f"scrittori liberi {in_it} dal 1° gennaio {anno}", f"writers free {in_en} from 1 January {anno}"), T(f"di tutti i paesi, morti nel {morti}", f"from every country, died in {morti}")),
@@ -405,7 +405,7 @@ def pagina_usa(lang, liste):
     out.append(f'<section class="open">\n<nav class="bc m" aria-label="{T("Sei qui", "You are here")}"><a href="{"/" if it else "/en/"}">Home</a> › '
                f'<a href="{url_indice(lang).replace(P.SITO, "")}">{T("Per paese", "By country")}</a> › <span>{T("Stati Uniti", "United States")}</span></nav>\n'
                f'<p class="m k">{T("Pubblico dominio · Stati Uniti", "Public domain · United States")}</p>\n'
-               f'<h1 class="h1">{w(T("Quando un libro", "When a book"))}<br>{w(T("diventa libero", "becomes free"))}<br>{w(T("negli Stati Uniti", "in the United States"))}</h1>\n'
+               f'<h1 class="h1">{w(T("Quando un libro", "When a book"))} <br>{w(T("diventa libero", "becomes free"))} <br>{w(T("negli Stati Uniti", "in the United States"))}</h1>\n'
                f'<p class="say" id="say">{esc(T(f"Negli Stati Uniti conta l’anno della prima uscita, non la morte dell’autore: 95 anni dopo. Il 1° gennaio {anno} tocca ai libri del {pub}, opera per opera, con le fonti.", f"In the United States what counts is the year of first publication, not the author’s death: 95 years later. On 1 January {anno} it is the turn of the {pub} books, work by work, with sources."))}</p>\n</section>\n')
     nums = [(95, T("anni dalla pubblicazione", "years from publication"), "17 U.S.C. § 304"),
             (len(opere), T(f"libri del {pub} liberi dal {anno}", f"{pub} books free from {anno}"), T(f"{n_st['verificata']} verificati, {n_st['edizione']} con l'edizione confermata", f"{n_st['verificata']} verified, {n_st['edizione']} edition confirmed"))]
@@ -481,7 +481,7 @@ def pagina_indice(lang, liste):
     w = lambda t: f'<span class="w"><span>{t}</span></span>'
     out.append(f'<section class="open">\n<nav class="bc m" aria-label="{T("Sei qui", "You are here")}"><a href="{"/" if it else "/en/"}">Home</a> › <span>{T("Per paese", "By country")}</span></nav>\n'
                f'<p class="m k">{T("Pubblico dominio · per paese", "Public domain · by country")}</p>\n'
-               f'<h1 class="h1">{w(T("Ogni paese", "Each country"))}<br>{w(T("ha la sua", "has its own"))}<br>{w(T("regola", "rule"))}</h1>\n'
+               f'<h1 class="h1">{w(T("Ogni paese", "Each country"))} <br>{w(T("ha la sua", "has its own"))} <br>{w(T("regola", "rule"))}</h1>\n'
                f'<p class="say" id="say">{esc(descr)}</p>\n</section>\n')
     porte = []
     for k in ORDINE:
@@ -531,7 +531,7 @@ def pagina_come(lang):
     w = lambda t: f'<span class="w"><span>{t}</span></span>'
     out.append(f'<section class="open">\n<nav class="bc m" aria-label="{T("Sei qui", "You are here")}"><a href="{"/" if it else "/en/"}">Home</a> › <span>{T("Come funziona", "How it works")}</span></nav>\n'
                f'<p class="m k">{T("Il metodo", "The method")}</p>\n'
-               f'<h1 class="h1">{w(T("Come", "How"))}<br>{w(T("funziona", "it works"))}</h1>\n'
+               f'<h1 class="h1">{w(T("Come", "How"))} <br>{w(T("funziona", "it works"))}</h1>\n'
                f'<p class="say" id="say">{esc(T("Ogni data del sito si calcola da fatti controllati (quando è morto l’autore, quando è uscito il libro) e dalle regole di legge di ogni paese. Ecco da dove vengono i fatti, come li controlliamo e cosa resta da verificare.", "Every date on the site is worked out from checked facts (when the author died, when the book came out) and from each country’s legal rules. Here is where the facts come from, how we check them and what is still to be verified."))}</p>\n</section>\n')
     # elenco completo delle fonti, come nei piedi delle pagine (pagine.py, radar, storico/pagina.html): Marco, 25/11/2026
     fonti = [{"t": {"it": "Autori, date di nascita e di morte, opere, anni di uscita, cittadinanze. Dati liberi (CC0).", "en": "Authors, dates of birth and death, works, publication years, citizenships. Free data (CC0)."}, "f": "Wikidata", "u": "https://www.wikidata.org/"},
@@ -620,7 +620,15 @@ def pagina_shop(lang):
     descr = T("Poster tipografici dai libri in pubblico dominio: prime righe, frasi famose e la serie Distant Reading. Stampati su richiesta, si comprano sul negozio Etsy di Public Domain Radar.",
               "Typographic posters from public domain books: opening lines, famous phrases and the Distant Reading series. Printed on demand, sold on Public Domain Radar's Etsy shop.")
     lk = lambda c: f"{ETSY}/{'it/' if it else ''}listing/{c}"
-    jl = {"@context": "https://schema.org", "@type": "CollectionPage", "@id": url, "url": url, "name": titolo, "description": descr, "inLanguage": lang}
+    # 25/11/2026 (analisi SEO): i poster come prodotti, con gli stessi dati che si vedono in pagina (nome, immagine, prezzo, link Etsy)
+    prodotti = [{"@type": "Product", "name": f"{frase} · {opera}", "image": f"{P.SITO}/shop/img/{img}.webp",
+                 "description": T(f"Poster tipografico 50 × 70 cm da {opera} di {autore} ({anno}).", f"Typographic poster, 50 × 70 cm, from {opera} by {autore} ({anno})."),
+                 "brand": {"@type": "Brand", "name": "Public Domain Radar"},
+                 "offers": {"@type": "Offer", "url": lk(cod), "price": prezzo, "priceCurrency": "EUR", "availability": "https://schema.org/MadeToOrder"}}
+                for img, cod, frase, opera, autore, anno, prezzo, serie in POSTER if prezzo]
+    jl = {"@context": "https://schema.org", "@graph": [
+        {"@type": "CollectionPage", "@id": url, "url": url, "name": titolo, "description": descr, "inLanguage": lang},
+        {"@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": i + 1, "item": pr} for i, pr in enumerate(prodotti)]}]}
     jsonld = '<script type="application/ld+json">' + json.dumps(jl, ensure_ascii=False).replace("</", "<\\/") + "</script>"
     altra = ('<a href="/en/shop/" hreflang="en">EN</a>' if it else '<a href="/shop/" hreflang="it">IT</a>')
     out = [apri(lang, titolo, descr, url, alterne(url_shop), jsonld, altra, P.ANNO_PROSSIMO, CSS_SHOP)]
@@ -715,7 +723,7 @@ def pagina_paese_radar(k, lang, REG, liste):
     h = re.sub(r'<script id="radar-rimando">.*?</script>\n?', "", h, count=1, flags=re.S)
     u_it, u_en = url_paese(k, "it"), url_paese(k, "en")
     # testa: titolo, descrizione, indirizzi, dati strutturati della pagina del paese
-    h = re.sub(r"<title>.*?</title>", f"<title>{esc(titolo)}</title>", h, count=1, flags=re.S)
+    h = re.sub(r"<title>.*?</title>", f"<title>{esc(P.titolo_corto(titolo))}</title>", h, count=1, flags=re.S)
     h = re.sub(r'(<meta name="description" content=")[^"]*', lambda m: m.group(1) + esc(descr), h, count=1)
     h = re.sub(r'(<meta property="og:title" content=")[^"]*', lambda m: m.group(1) + esc(titolo), h, count=1)
     h = re.sub(r'(<meta property="og:description" content=")[^"]*', lambda m: m.group(1) + esc(descr), h, count=1)
@@ -737,7 +745,7 @@ def pagina_paese_radar(k, lang, REG, liste):
     apertura = (f'<section class="open" id="inizio">\n<nav class="bc" aria-label="{T("Sei qui", "You are here")}"><a href="{"/" if it else "/en/"}">Home</a> › '
                 f'<a href="{url_indice(lang).replace(P.SITO, "")}">{T("Per paese", "By country")}</a> › <span>{esc(nome)}</span></nav>\n'
                 f'<p class="m k" id="kick"></p>\n'
-                f'<h1 class="h1">{w(T("Chi diventa libero", "Who becomes free"))}<br>{w(esc(in_))}</h1>\n'
+                f'<h1 class="h1">{w(T("Chi diventa libero", "Who becomes free"))} <br>{w(esc(in_))}</h1>\n'
                 f'<p class="say" id="say">{esc(T(f"{in_it[0].upper() + in_it[1:]} un’opera diventa libera {anni} anni dopo la morte dell’autore, dal 1° gennaio dell’anno dopo. Il 1° gennaio {anno} tocca agli scrittori morti nel {morti}, di qualsiasi paese.", f"{in_en[0].upper() + in_en[1:]} a work becomes free {anni} years after the author’s death, from 1 January of the following year. On 1 January {anno} it is the turn of writers who died in {morti}, from any country."))}</p>\n</section>')
     if k == "es":
         apertura = apertura.replace(T("In Spagna un’opera diventa libera 80 anni", "In Spain a work becomes free 80 years"),
@@ -777,7 +785,45 @@ def crea_pagine_paese():
             d.mkdir(parents=True, exist_ok=True)
             (d / "index.html").write_text(html_, encoding="utf-8")
             urls.append(url)
+    (RADICE / "404.html").write_text(pagina_404(), encoding="utf-8")
+    # 25/11/2026: /calendario/ e /en/calendar/ senza anno davano la 404 di GitHub: portano all'anno in corso
+    for lang, d in (("it", "calendario"), ("en", "en/calendar")):
+        if not (RADICE / d / "index.html").exists() or "http-equiv=\"refresh\"" in (RADICE / d / "index.html").read_text(encoding="utf-8"):
+            (RADICE / d / "index.html").write_text(pagina_rimando(f"/{d}/{anno}/", lang), encoding="utf-8")
     return urls
+
+
+def pagina_404():
+    """25/11/2026: pagina «non trovata» del sito (GitHub Pages usa /404.html per ogni indirizzo che non esiste).
+    In italiano, con le porte principali e il passaggio all'inglese; noindex."""
+    lang, it = "it", True
+    anno = P.ANNO_PROSSIMO
+    url = P.SITO + "/404.html"
+    out = [apri(lang, "Pagina non trovata · Public Domain Radar", "Questa pagina non esiste o è stata spostata.", url, "", "",
+                '<a href="/en/" hreflang="en">EN</a>', anno).replace('<link rel="canonical"', '<meta name="robots" content="noindex"><link rel="canonical"', 1)]
+    w = lambda t: f'<span class="w"><span>{t}</span></span>'
+    out.append('<section class="open">\n<p class="m k">Errore 404 · Page not found</p>\n'
+               f'<h1 class="h1">{w("Pagina")} <br>{w("non trovata")}</h1>\n'
+               '<p class="say" id="say">Questa pagina non esiste o è stata spostata. Riparti da qui sotto. '
+               '<a href="/en/" hreflang="en" lang="en">This page does not exist: go to the English site.</a></p>\n</section>\n')
+    porte = [("/pubblico-dominio-" + str(anno) + "/", f"Chi diventa libero nel {anno}", f"Gli scrittori e i libri che diventano liberi il 1° gennaio {anno}."),
+             ("/pubblico-dominio/", "Per paese", "Le regole e gli elenchi di Italia, Francia, Germania, Spagna, Regno Unito e Stati Uniti."),
+             ("/gia-pubblici/", "Già pubblici", "Cerca un autore o un libro e scopri se è già libero."),
+             ("/autore/", "Indice degli autori", "Tutte le schede degli autori, in ordine alfabetico.")]
+    corpo = '<div class="porte">' + "".join(f'<a class="porta" href="{h}"><h3>{esc(x)}</h3><p>{esc(d)}</p><span class="go">Apri →</span></a>' for h, x, d in porte) + "</div>"
+    out.append(sezione("Dove vuoi andare", "Public Domain Radar", corpo))
+    out.append('<div class="pf" id="pf" aria-hidden="true"></div>\n')
+    out.append(P.JS_ANNO.replace("@@LOC@@", "it-IT"))
+    out.append(P.piede_scheda(lang))
+    return "".join(out)
+
+
+def pagina_rimando(dest, lang):
+    """Pagina che porta subito a un altro indirizzo (GitHub Pages non fa rimandi veri): noindex e canonical verso la destinazione."""
+    return (f'<!DOCTYPE html>\n<html lang="{lang}"><head><meta charset="utf-8"><title>Public Domain Radar</title>'
+            f'<meta name="robots" content="noindex"><link rel="canonical" href="{P.SITO}{dest}">'
+            f'<meta http-equiv="refresh" content="0; url={dest}"><script>location.replace("{dest}"+location.hash)</script></head>'
+            f'<body><a href="{dest}">{dest}</a></body></html>\n')
 
 
 if __name__ == "__main__":

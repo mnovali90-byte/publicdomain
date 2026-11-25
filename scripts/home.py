@@ -158,6 +158,8 @@ def migliaia(n, lang):
 
 
 CSS = r"""
+/* 25/11/2026: il vero titolo della pagina per Google e per chi usa un lettore di schermo; il titolo dell'opera che cambia non è più un h1 */
+.vh{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 /* il frontespizio (solo questa parte in Garamond); il resto della home usa lo stile del sito (stile_scheda + stile_anno) */
 .fronte{--serif:'EB Garamond',Garamond,'Times New Roman',serif;--lento:cubic-bezier(.65,0,.35,1);--matita:#6E6C66;
   font-family:var(--serif);font-feature-settings:'kern','liga','onum';text-rendering:optimizeLegibility;
@@ -283,8 +285,11 @@ def pagina(lang, anno, P):
         raise RuntimeError("home: nessuna opera per il frontespizio")
     alterne = (f'<link rel="alternate" hreflang="it" href="{SITO}/">\n<link rel="alternate" hreflang="en" href="{SITO}/en/">\n'
                f'<link rel="alternate" hreflang="x-default" href="{SITO}/">\n')
-    jsonld = ('<script type="application/ld+json">' + json.dumps({"@context": "https://schema.org", "@type": "WebSite", "name": "Public Domain Radar",
-              "url": t["url"], "inLanguage": lang, "description": t["descr"].format(a=anno)}, ensure_ascii=False) + "</script>")
+    # 25/11/2026 (analisi SEO): chi c'è dietro il sito (Organization, con Marco e il suo LinkedIn già in fondo a ogni pagina) legato al WebSite
+    org = {"@type": "Organization", "@id": SITO + "/#organizzazione", "name": "Public Domain Radar", "url": SITO + "/", "logo": SITO + "/assets/favicon.svg",
+           "founder": {"@type": "Person", "name": "Marco Novali", "sameAs": "https://www.linkedin.com/in/marconovali"}}
+    jsonld = ('<script type="application/ld+json">' + json.dumps({"@context": "https://schema.org", "@graph": [org, {"@type": "WebSite", "name": "Public Domain Radar",
+              "url": t["url"], "inLanguage": lang, "description": t["descr"].format(a=anno), "publisher": {"@id": SITO + "/#organizzazione"}}]}, ensure_ascii=False) + "</script>")
     rimando = (f'<script>/* i vecchi indirizzi della home con # (filtri, schede) sono del radar, che ora sta su {t["radar"]} */\n'
                f'if(location.hash.length>1){{location.replace("{t["radar"]}"+location.hash)}}'
                + ('' if lang == 'en' else 'else if(new URLSearchParams(location.search).get("lang")==="en"){location.replace("/en/")}') + '</script>\n')
@@ -300,9 +305,10 @@ def pagina(lang, anno, P):
                     f'<p>{esc(d.format(**fmt))}</p><span class="go">{esc(v)} →</span></a>' for h, x, y, d, v in t["porte"])
     primo = pag[0]
     corpo = f"""<section class="fronte" id="pagina" aria-label="{"Frontespizio" if lang == "it" else "Title page"}">
+  <h1 class="vh">{"Public Domain Radar: chi diventa libero, e quando" if lang == "it" else "Public Domain Radar: who becomes free, and when"}</h1>
   <div class="foglio" id="foglio" aria-live="polite">
     <p class="autore sc" id="autore">{esc(primo["a"])}</p>
-    <h1 class="titolo" id="titolo">{esc(primo["t"])}</h1>
+    <p class="titolo" id="titolo">{esc(primo["t"])}</p>
     <p class="diritti"><span id="riga" class="vecchia">{esc(t["diritti"])}</span></p>
     <p class="avv" id="avv"></p>
   </div>

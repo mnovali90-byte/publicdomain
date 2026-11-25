@@ -5,6 +5,7 @@ import datetime
 import html
 import io
 import json
+from urllib.parse import quote
 import re
 import sys
 from pathlib import Path
@@ -30,7 +31,7 @@ T = {
         "tipi": {"prima edizione": "Prima edizione", "nascita": "Nascita", "morte": "Morte"},
         "filtri_tipo": [("prima edizione", "Prime edizioni"), ("nascita", "Nascite"), ("morte", "Morti")],
         "anni": "{n} anni", "voce": "voce", "voci": "voci", "durante": "Durante l'anno", "nd": "giorno non noto", "soloanno": "{a} · solo anno",
-        "wiki": "Leggi su Wikipedia →", "orig": "Titolo originale", "opere": "Opere principali", "nobel": "Nobel per la letteratura {y}",
+        "gp": "Dove è già libero", "wiki": "Leggi su Wikipedia →", "orig": "Titolo originale", "opere": "Opere principali", "nobel": "Nobel per la letteratura {y}",
         "copia": "Copia testo per un post →", "copiato": "Copiato ✓", "aggiungi": "Aggiungi al calendario →",
         "pdd": "Public Domain Day", "pdd_txt": "Entrano in pubblico dominio in Italia, Francia, Germania e Regno Unito gli autori morti nel {eu}, e negli USA le opere pubblicate nel {us}.", "pdd_link": "Vedi l'elenco →",
         "vuoto": "Nessuna voce con questi filtri.",
@@ -52,7 +53,7 @@ T = {
         "tipi": {"prima edizione": "First edition", "nascita": "Birth", "morte": "Death"},
         "filtri_tipo": [("prima edizione", "First editions"), ("nascita", "Births"), ("morte", "Deaths")],
         "anni": "{n} years", "voce": "entry", "voci": "entries", "durante": "During the year", "nd": "day unknown", "soloanno": "{a} · year only",
-        "wiki": "Read on Wikipedia →", "orig": "Original title", "opere": "Main works", "nobel": "Nobel Prize in Literature {y}",
+        "gp": "Where it is already free", "wiki": "Read on Wikipedia →", "orig": "Original title", "opere": "Main works", "nobel": "Nobel Prize in Literature {y}",
         "copia": "Copy text for a post →", "copiato": "Copied ✓", "aggiungi": "Add to calendar →",
         "pdd": "Public Domain Day", "pdd_txt": "Authors who died in {eu} enter the public domain in Italy, France, Germany and the UK, and works published in {us} in the USA.", "pdd_link": "See the list →",
         "vuoto": "No entries with these filters.",
@@ -137,6 +138,25 @@ def csv_testo(vv, lang, anno):
     return "\ufeff" + buf.getvalue()
 
 
+_GP = None
+
+
+def cerca_gia_pubblici(v, lang):
+    """Indirizzo di Già pubblici con la ricerca dell'opera o dell'autore, se c'è (dati: data/storico/pagina.json)."""
+    global _GP
+    if _GP is None:
+        f = RADICE / "data" / "storico" / "pagina.json"
+        d = json.loads(f.read_text(encoding="utf-8")) if f.exists() else {"opere": [], "autori": []}
+        _GP = ({r[0]: (r[2] or r[1], r[1]) for r in d.get("opere", []) if not (len(r) > 10 and r[10])}, {a[0]: a[1] for a in d.get("autori", [])})
+    opere, autori = _GP
+    base = "/gia-pubblici/#" if lang == "it" else "/en/already-public/#"
+    if v["tipo"] == "prima edizione" and v["qid"] in opere:
+        return base + quote(opere[v["qid"]][0 if lang == "it" else 1])
+    if v["tipo"] != "prima edizione" and v["qid"] in autori:
+        return base + quote(nome_di(v, lang))
+    return None
+
+
 def info_html(v, lang):
     """Colonna destra: chi è / cos'è, in poche righe (da Wikidata e Wikipedia)."""
     t = T[lang]
@@ -165,6 +185,11 @@ def info_html(v, lang):
         righe.append(f'<span>{esc(t["opere"])}: {esc(", ".join(sc["opere"]))}</span>')
     if sc.get("nobel"):
         righe.append(f'<span class="nobel">{esc(t["nobel"].format(y=sc["nobel"]))}</span>')
+    # 25/11/2026 (Marco: «Promessi sposi, Manzoni, Machiavelli»): chi è già in pubblico dominio ha il collegamento a Già pubblici,
+    # che si apre con la ricerca già fatta. Prima di Wikipedia, che resta come fonte.
+    gp = cerca_gia_pubblici(v, lang)
+    if gp:
+        righe.append(f'<a class="gp" href="{gp}">{esc(t["gp"])}</a>')
     wiki = sc.get("wiki") or ((v.get("scheda") or {}).get("en" if lang == "it" else "it") or {}).get("wiki")
     if wiki:
         righe.append(f'<a href="{esc(wiki)}" rel="noopener" target="_blank">{esc(t["wiki"])}</a>')
@@ -221,8 +246,9 @@ def pagina(dati, lang):
     spec = (f'<div class="ev pdd" data-tipo="pdd" data-mese="1" data-q="{esc(("1° gennaio " if it else "1 January ") + str(anno))}">'
             f'<span class="gg">01</span><h3 class="nm">{esc(t["pdd"])}</h3><span class="tp"><b>{"Pubblico dominio" if it else "Public domain"}</b></span>'
             f'<div class="det"><p class="pdt">{esc(t["pdd_txt"].format(eu=eu, us=us))}</p>'
-            f'<a href="{app}#/{anno}">{"Authors" if lang == "en" else "Autori"} →</a>'
-            f'<a href="{app}#/us/{anno}">{"Works USA" if lang == "en" else "Opere USA"} →</a></div></div>')
+            # 25/11/2026: diretti alle pagine (prima passavano dal radar, che non è indicizzato e rimanda comunque qui)
+            f'<a href="{"/en/public-domain-" if lang == "en" else "/pubblico-dominio-"}{anno}/">{"Authors" if lang == "en" else "Autori"} →</a>'
+            f'<a href="{"/en/public-domain/united-states/" if lang == "en" else "/pubblico-dominio/stati-uniti/"}">{"Works USA" if lang == "en" else "Opere USA"} →</a></div></div>')
     mesi = {}
     for v in vv:
         mesi.setdefault(v.get("mese") or 0, []).append(v)
@@ -260,7 +286,7 @@ def pagina(dati, lang):
     out = [testa]
     out.append(f"""<section class="open">
 <p class="m k">{esc(t["occ"].format(a=anno))}</p>
-<h1 class="h1"><span class="w"><span>{esc(p1)}</span></span><br><span class="w"><span>{esc(p2)} <em>{anno}</em></span></span></h1>
+<h1 class="h1"><span class="w"><span>{esc(p1)}</span></span> <br><span class="w"><span>{esc(p2)} <em>{anno}</em></span></span></h1>
 <p class="say" id="say">{esc(t["lead"])}</p>
 <div class="dl"><a href="{ics_nome}">{esc(t["ics"])}</a><a href="{base_csv}">{esc(t["csv"])}</a></div>
 </section>
@@ -302,6 +328,7 @@ function panel(r){ if(r===act) return; act=r; $$('.ev').forEach(x=>x.classList.t
     let acts='';
     if(d.querySelector('.aggiungi')) acts+='<button type="button" data-x="aggiungi">'+esc(L.agg)+' <span>+</span></button>';
     if(d.querySelector('.crea')) acts+='<button type="button" data-x="crea">'+esc(L.cond)+' <span>→</span></button>';
+    const gp=d.querySelector('a.gp'); if(gp) acts+='<a href="'+esc(gp.getAttribute('href'))+'">'+esc(gp.textContent)+' <span>→</span></a>';
     if(r.dataset.w) acts+='<a href="'+esc(r.dataset.w)+'" target="_blank" rel="noopener">Wikipedia <span>↗</span></a>';
     h='<span class="m t">'+esc(r.querySelector('.tp b').textContent)+' · '+r.dataset.y+'</span><div class="big">'+r.dataset.eta+'<small>'+L.anni+'</small></div><p class="d">'+esc(r.dataset.q)+'</p>'
      +'<p class="who"><b>'+esc(r.querySelector('.nm').textContent)+'</b>'+(au?'<br>'+au.innerHTML:'')+'</p>'+(inf&&inf.innerHTML?'<div class="inf">'+inf.innerHTML+'</div>':'')+(acts?'<div class="acts">'+acts+'</div>':'');

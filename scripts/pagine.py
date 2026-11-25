@@ -964,6 +964,13 @@ def _piede_link(lang):
     return _menu_link(lang) + ([("/autore/", "Indice degli autori")] if it else [("/en/author/", "Author index")])   # il radar non è più una voce (25/11/2026)
 
 
+def titolo_corto(t):
+    """25/11/2026 (analisi SEO): Google taglia i titoli oltre i ~60 caratteri e mostra già il nome del sito da solo.
+    Se un titolo è lungo, togliamo « · Public Domain Radar» in fondo; la parte importante resta davanti. Una regola sola per tutte le pagine."""
+    coda = " · Public Domain Radar"
+    return t[:-len(coda)] if len(t) > 60 and t.endswith(coda) else t
+
+
 def testa_scheda(lang, titolo, descr, url, alterne_, jsonld, altra, cnt, og_tipo="profile", css_extra="", main_cls="", body_cls=""):
     it = lang == "it"
     menu = "".join(f'<a href="{h}"><span>{esc(t)}</span></a>' for h, t in _menu_link(lang))
@@ -973,7 +980,7 @@ def testa_scheda(lang, titolo, descr, url, alterne_, jsonld, altra, cnt, og_tipo
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-<title>{titolo}</title>
+<title>{titolo_corto(titolo)}</title>
 <meta name="description" content="{descr}">
 <link rel="canonical" href="{url}">
 {alterne_}<meta property="og:type" content="{og_tipo}">
@@ -1144,7 +1151,7 @@ def scheda_nuova(a, lang, bd):
     # nome, dati, frase di risposta, ritratto
     parole = nome.split()
     lunga = max((len(w) for w in parole), default=7)
-    h1 = "<br>".join(f'<span class="w"><span>{esc(w)}</span></span>' for w in (parole if len(parole) <= 3 else [" ".join(parole[:-1]), parole[-1]]))
+    h1 = " <br>".join(f'<span class="w"><span>{esc(w)}</span></span>' for w in (parole if len(parole) <= 3 else [" ".join(parole[:-1]), parole[-1]]))
     meta = [f"{nasc if nasc else '?'} – {D}"]
     if it and a.get("professioni"):
         meta.append(", ".join(a["professioni"][:2]))
@@ -2060,7 +2067,7 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
     w = lambda t: f'<span class="w"><span>{t}</span></span>'
     out.append(f"""<section class="open">
 <p class="m k" id="pd-k">Public Domain Day · {data_l_}</p>
-<h1 class="h1" id="pd-h1">{w(T("Cosa diventa", "What becomes"))}<br>{w(T("libero", "free"))} {w(T(f"nel {anno}", f"in {anno}"))}</h1>
+<h1 class="h1" id="pd-h1">{w(T("Cosa diventa", "What becomes"))} <br>{w(T("libero", "free"))} {w(T(f"nel {anno}", f"in {anno}"))}</h1>
 <p class="say" id="say">{T(f"Il 1° gennaio {anno} scadono i diritti di centinaia di scrittori e libri. Chi, dove e con quali cautele, da dati aperti e con le fonti.",
                    f"On 1 January {anno} copyright expires for hundreds of writers and books. Who, where and with what caveats, from open data with sources.")}</p>
 <div style="margin-top:34px">{_tendina(lang)}</div>
@@ -2252,7 +2259,7 @@ const fs=window.REGOLE_PAESI?REGOLE_PAESI.faseSito(ora):["conto",A+1], festa=fs[
 const M=(ora.getFullYear()===A&&ora.getMonth()===0&&ora.getDate()===1)?"oggi":"dal", t=F[M], $=s=>document.getElementById(s);
 const w=x=>'<span class="w"><span>'+x+'</span></span>';
 if($("pd-k"))$("pd-k").textContent=t.k;
-if($("pd-h1"))$("pd-h1").innerHTML=w(t.h1[0])+"<br>"+w(t.h1[1])+" "+w(t.h1[2]);
+if($("pd-h1"))$("pd-h1").innerHTML=w(t.h1[0])+" <br>"+w(t.h1[1])+" "+w(t.h1[2]);
 if($("say"))$("say").textContent=t.say;
 if($("pd-attesi"))$("pd-attesi").textContent=F.attesi;
 if($("pd-us"))$("pd-us").innerHTML=$("pd-us").innerHTML.replace(F.us[0],F.us[1]);

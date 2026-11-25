@@ -19,7 +19,7 @@ if(location.hash.length>1){location.replace("/en/radar/"+location.hash)}</script
 <meta property="og:title" content="Public Domain Radar · Who becomes free, and when">
 <meta property="og:description" content="Every 1 January the copyright of hundreds of writers and books expires. Who becomes free in 2027 in Europe and the United States, country by country, with open data and legal sources.">
 <meta name="twitter:card" content="summary">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "Public Domain Radar", "url": "https://publicdomainradar.com/en/", "inLanguage": "en", "description": "Every 1 January the copyright of hundreds of writers and books expires. Who becomes free in 2027 in Europe and the United States, country by country, with open data and legal sources."}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://publicdomainradar.com/#organizzazione", "name": "Public Domain Radar", "url": "https://publicdomainradar.com/", "logo": "https://publicdomainradar.com/assets/favicon.svg", "founder": {"@type": "Person", "name": "Marco Novali", "sameAs": "https://www.linkedin.com/in/marconovali"}}, {"@type": "WebSite", "name": "Public Domain Radar", "url": "https://publicdomainradar.com/en/", "inLanguage": "en", "description": "Every 1 January the copyright of hundreds of writers and books expires. Who becomes free in 2027 in Europe and the United States, country by country, with open data and legal sources.", "publisher": {"@id": "https://publicdomainradar.com/#organizzazione"}}]}</script>
 <link rel="preload" href="/assets/fonts/big-shoulders-display-800-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link href="/assets/fonts/fonts.css" rel="stylesheet">
 <style>:root{
@@ -370,6 +370,8 @@ body.ix-in .pf{opacity:1}body.menu-on .pf{opacity:0}
   .big7{gap:14px}
 }
 
+/* 25/11/2026: il vero titolo della pagina per Google e per chi usa un lettore di schermo; il titolo dell'opera che cambia non è più un h1 */
+.vh{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 /* il frontespizio (solo questa parte in Garamond); il resto della home usa lo stile del sito (stile_scheda + stile_anno) */
 .fronte{--serif:'EB Garamond',Garamond,'Times New Roman',serif;--lento:cubic-bezier(.65,0,.35,1);--matita:#6E6C66;
   font-family:var(--serif);font-feature-settings:'kern','liga','onum';text-rendering:optimizeLegibility;
@@ -434,9 +436,10 @@ body.ix-in .pf{opacity:1}body.menu-on .pf{opacity:0}
 <div class="menu" id="menu"><button class="x" id="mx" type="button">CLOSE</button><nav aria-label="Site sections"><a href="/en/"><span>Home</span></a><a href="/en/public-domain-2027/"><span>2027: what becomes free</span></a><a href="/en/already-public/"><span>Already public</span></a><a href="/en/public-domain/"><span>By country</span></a><a href="/en/calendar/2027/"><span>Anniversaries 2027</span></a><a href="/en/how-it-works/"><span>How it works</span></a><a href="/en/shop/"><span>Shop</span></a></nav></div>
 <main class="pdd">
 <section class="fronte" id="pagina" aria-label="Title page">
+  <h1 class="vh">Public Domain Radar: who becomes free, and when</h1>
   <div class="foglio" id="foglio" aria-live="polite">
     <p class="autore sc" id="autore">Bertolt Brecht</p>
-    <h1 class="titolo" id="titolo">Mother Courage and Her Children</h1>
+    <p class="titolo" id="titolo">Mother Courage and Her Children</p>
     <p class="diritti"><span id="riga" class="vecchia">All rights reserved.</span></p>
     <p class="avv" id="avv"></p>
   </div>
