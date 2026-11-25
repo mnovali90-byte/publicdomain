@@ -624,6 +624,8 @@ def pagina_shop(lang):
 # (radar/index.html, en/radar/index.html: un posto solo per il programma), con window.PAESE_FISSO.
 CSS_LEGGE = ("<style>#giur,#navigazione,#lingue-tasti,#menu-lingue,#regole-paesi,#mineBtn+.lang{display:none!important}"
              ".altra-l{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-decoration:none;color:var(--ink)}"
+             # il radar nasconde MENU sul computer (lì c'è la barra delle voci): nelle pagine paese la barra non c'è, quindi MENU sempre (25/11/2026)
+             "#mbtn{display:inline!important;font-family:var(--mono);font-size:12px;letter-spacing:.12em;background:none;border:0;cursor:pointer;color:var(--ink);padding:0}"
              ".bc{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin:0 0 14px}.bc a{color:inherit}"
              ".legge .where{margin:28px 0 0;padding:0;list-style:none}"
              ".legge .where li{display:grid;grid-template-columns:minmax(0,.9fr) 210px minmax(0,1.6fr) 150px;gap:24px;align-items:baseline;padding:18px 0;border-bottom:1px solid var(--hair)}"
