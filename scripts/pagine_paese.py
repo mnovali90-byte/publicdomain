@@ -580,23 +580,28 @@ def pagina_come(lang):
 
 # Shop (mockup approvato da Marco, fatto in un'altra chat il 25/11/2026): i poster sono su Etsy, stampati da Gelato.
 # I link restano nel formato publicdomainradar.etsy.com, quello che conta per Share & Save; in inglese senza «/it/».
-POSTER = [
+POSTER = [   # (immagine, inserzione Etsy, frase, opera, autore, anno, prezzo in euro o None, serie)
     ("alice", "4624523730/alice-was-beginning-to-get-very-tired", "Alice was beginning to get very tired",
-     "Alice's Adventures in Wonderland", "Lewis Carroll", 1865),
+     "Alice's Adventures in Wonderland", "Lewis Carroll", 1865, 35, None),
     ("tale-of-two-cities", "4624515025/it-was-the-best-of-times-a-tale-of-two", "It was the best of times",
-     "A Tale of Two Cities", "Charles Dickens", 1859),
+     "A Tale of Two Cities", "Charles Dickens", 1859, 35, None),
+    # serie «Distant Reading» (25/11/2026): il romanzo intero in caratteri minuscoli colorati per personaggio
+    ("wuthering-heights", "4625383799/i-am-heathcliff-wuthering-heights-emily", "I am Heathcliff!",
+     "Wuthering Heights", "Emily Brontë", 1847, None, "Distant Reading"),
+    ("white-nights", "4625419690/a-whole-moment-of-happiness-white-nights", "A whole moment of happiness!",
+     "White Nights", "Fyodor Dostoevsky", 1848, None, "Distant Reading"),
 ]
 ETSY = "https://publicdomainradar.etsy.com"
 CSS_SHOP = (".shop-hd{display:grid;grid-template-columns:minmax(0,1fr) min(32vw,440px);gap:6vw;align-items:end}"
             ".shop-hd .say{margin:0;max-width:440px}"
             ".facts{margin:22px 0 0;padding:0;list-style:none;border-top:1px solid var(--ink)}"
             ".facts li{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px solid var(--hair)}.facts .g{color:var(--grey)}"
-            ".shopgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:56px 40px;margin-top:40px;max-width:1000px}"
+            ".shopgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:56px 32px;margin-top:40px}@media (max-width:1199px){.shopgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (max-width:640px){.shopgrid{grid-template-columns:1fr}}"
             ".item{display:flex;flex-direction:column}"
             ".wall{position:relative;background:var(--box,#E4E2DA);aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;overflow:hidden;text-decoration:none}"
             ".wall img{width:62%;height:auto;display:block;box-shadow:0 1px 2px rgba(12,12,16,.18),0 18px 40px -14px rgba(12,12,16,.45);transition:transform 700ms var(--out),box-shadow 700ms var(--out)}"
             ".wall:hover img{transform:translateY(-6px) scale(1.015)}"
-            ".info{display:grid;grid-template-columns:1fr auto;gap:4px 16px;margin-top:18px;align-items:baseline}"
+            ".info{display:grid;grid-template-columns:1fr auto;gap:4px 16px;margin-top:18px;align-items:baseline;align-content:start;flex:1}"
             ".info h3{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:clamp(24px,1.9vw,30px);line-height:.95;margin:0}"
             ".info .price{font-family:var(--disp);font-weight:800;font-size:clamp(26px,2.3vw,34px);line-height:.95}"
             ".info .who{grid-column:1/-1;margin:4px 0 0;font-size:15px;color:var(--grey)}.info .who em{color:var(--ink)}"
@@ -620,8 +625,8 @@ def pagina_shop(lang):
     url = url_shop(lang)
     titolo = T("Shop: poster tipografici dai libri in pubblico dominio · Public Domain Radar",
                "Shop: typographic posters from public domain books · Public Domain Radar")
-    descr = T("Poster tipografici con le prime righe e le frasi famose dei libri in pubblico dominio. Stampati su richiesta, si comprano sul negozio Etsy di Public Domain Radar.",
-              "Typographic posters with the opening lines and famous phrases of public domain books. Printed on demand, sold on Public Domain Radar's Etsy shop.")
+    descr = T("Poster tipografici dai libri in pubblico dominio: prime righe, frasi famose e la serie Distant Reading. Stampati su richiesta, si comprano sul negozio Etsy di Public Domain Radar.",
+              "Typographic posters from public domain books: opening lines, famous phrases and the Distant Reading series. Printed on demand, sold on Public Domain Radar's Etsy shop.")
     lk = lambda c: f"{ETSY}/{'it/' if it else ''}listing/{c}"
     jl = {"@context": "https://schema.org", "@type": "CollectionPage", "@id": url, "url": url, "name": titolo, "description": descr, "inLanguage": lang}
     jsonld = '<script type="application/ld+json">' + json.dumps(jl, ensure_ascii=False).replace("</", "<\\/") + "</script>"
@@ -631,22 +636,22 @@ def pagina_shop(lang):
     out.append(f'<section class="open">\n<nav class="bc m" aria-label="{T("Sei qui", "You are here")}"><a href="{"/" if it else "/en/"}">Home</a> › <span>Shop</span></nav>\n'
                f'<p class="m k">{T("Stampa su richiesta", "Printed on demand")}</p>\n'
                f'<div class="shop-hd"><h1 class="h1">{w("Shop")}</h1><div>'
-               f'<p class="say" id="say">{esc(T("Poster tipografici con le prime righe e le frasi famose dei libri in pubblico dominio.", "Typographic posters with the opening lines and famous phrases of public domain books."))}</p>'
+               f'<p class="say" id="say">{esc(T("Poster tipografici dai libri in pubblico dominio: frasi famose e romanzi interi.", "Typographic posters from public domain books: famous lines and whole novels."))}</p>'
                f'<ul class="facts m"><li><span>{T("Stampa", "Printing")}</span><span class="g">{T("su richiesta, con Gelato", "on demand, by Gelato")}</span></li>'
                f'<li><span>{T("Acquisto", "Purchase")}</span><span class="g">{T("sul nostro negozio Etsy", "on our Etsy shop")}</span></li>'
                f'<li><span>Poster</span><span class="g">50 × 70 cm</span></li></ul></div></div>\n</section>\n')
     card = []
-    for img, cod, frase, opera, autore, anno in POSTER:
+    for img, cod, frase, opera, autore, anno, prezzo, serie in POSTER:
         alt = T(f"Poster tipografico: «{frase}…», da {opera} di {autore}", f"Typographic poster: “{frase}…”, from {opera} by {autore}")
         card.append(f'<article class="item"><a class="wall" href="{lk(cod)}" rel="noopener" target="_blank">'
                     f'<img src="/shop/img/{img}.webp" width="900" height="1260" loading="lazy" alt="{esc(alt)}"></a>'
-                    f'<div class="info"><h3>{esc(frase)}</h3><span class="price">35 €</span>'
-                    f'<p class="who"><em>{esc(opera)}</em> · {esc(autore)} · {anno}</p></div>'
+                    f'<div class="info"><h3>{esc(frase)}</h3><span class="price">{f"{prezzo} €" if prezzo else ""}</span>'
+                    f'<p class="who"><em>{esc(opera)}</em> · {esc(autore)} · {anno}{(" · " + T("serie ", "") + esc(serie) + T("", " series")) if serie else ""}</p></div>'
                     f'<a class="buy" href="{lk(cod)}" rel="noopener" target="_blank"><span>{T("Acquista su Etsy", "Buy on Etsy")}</span><span>→</span></a></article>\n')
     out.append(sezione(T("I poster", "The posters"), f'<a href="{ETSY}" rel="noopener" target="_blank">{T("Tutto il negozio su Etsy ↗", "The whole shop on Etsy ↗")}</a>',
                        f'<div class="shopgrid">\n{"".join(card)}</div>\n'))
-    passi = [(T("Scegli", "Choose"), T("Ogni poster parte da un libro in pubblico dominio: le prime righe e le frasi più famose, composte solo con la tipografia.",
-                                     "Every poster starts from a public domain book: the opening lines and most famous phrases, set in type alone.")),
+    passi = [(T("Scegli", "Choose"), T("Ogni poster parte da un libro in pubblico dominio, composto solo con la tipografia: le prime righe, una frase famosa o il testo intero.",
+                                     "Every poster starts from a public domain book, set in type alone: the opening lines, a famous phrase or the whole text.")),
              (T("Acquista su Etsy", "Buy on Etsy"), T("Il pagamento e l'assistenza passano dal nostro negozio Etsy. Prezzo e spedizione definitivi li vedi lì.",
                                                      "Payment and support go through our Etsy shop. You see the final price and shipping there.")),
              (T("Stampato vicino a te", "Printed near you"), T("Gelato stampa e spedisce solo quando ordini, dal centro di produzione più vicino.",
