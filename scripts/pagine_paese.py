@@ -608,7 +608,7 @@ CSS_SHOP = (".shop-hd{display:grid;grid-template-columns:minmax(0,1fr) min(32vw,
             ".buy{margin-top:18px;display:flex;justify-content:space-between;align-items:center;padding:15px 18px;background:var(--ink);color:var(--paper);text-decoration:none;font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;position:relative;overflow:hidden}"
             ".buy::before{content:'';position:absolute;inset:0;background:var(--red);transform:translateY(101%);transition:transform 480ms var(--cut)}"
             ".buy span{position:relative}.buy:hover::before{transform:none}"
-            ".how{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}"
+            ".how{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:34px}"
             ".how .n{font-family:var(--disp);font-weight:800;font-size:56px;line-height:.9;color:var(--red)}"
             ".how p{margin:10px 0 0;font-size:16px;line-height:1.5;max-width:360px}"
             "@media (max-width:900px){.shop-hd{grid-template-columns:1fr;gap:26px}.how{grid-template-columns:1fr;gap:28px}}"
