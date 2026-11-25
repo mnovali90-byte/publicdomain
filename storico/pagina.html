@@ -28,7 +28,7 @@ it: {
   caricamento: "Caricamento…", errore: "Non riesco a leggere i dati. Riprova tra poco.",
   risPer: "Risultati per «{q}»", nAut: "{n} autore", nAutP: "{n} autori", nOp: "{n} opera", nOpP: "{n} opere",
   autore: "Autore", mortoNel: "morto nel {m}", mortoNelInc: "morto nel {m} (le fonti danno anni diversi: si usa il più tardo)", antico: "autore antico", morteNd: "anno di morte non noto",
-  operaN: "{n} opere nell'elenco", tutteOpere: "Tutte le opere dell'autore →",
+  operaN: "{n} opere nell'elenco", tutteOpere: "Tutte le opere dell'autore →", tutteN: "Tutte le {n} opere dell'autore →",
   sMpfBreve: "Francia: non ancora libero, l'autore è «morto per la Francia» (30 anni in più, art. L123-10).",
   ueLiberoP: "{p}: libero dal {y}", ueDalP: "{p}: dal 1° gennaio {y}",
   nomiUe: ["Italia", "Francia", "Germania", "Regno Unito"], elenco: (x) => x.length > 1 ? x.slice(0, -1).join(", ") + " e " + x[x.length - 1] : x.join(""),
@@ -105,7 +105,7 @@ en: {
   caricamento: "Loading…", errore: "I can't read the data. Please try again shortly.",
   risPer: "Results for “{q}”", nAut: "{n} author", nAutP: "{n} authors", nOp: "{n} work", nOpP: "{n} works",
   autore: "Author", mortoNel: "died in {m}", mortoNelInc: "died in {m} (sources give different years: the latest is used)", antico: "ancient author", morteNd: "year of death unknown",
-  operaN: "{n} works in the list", tutteOpere: "All works by this author →",
+  operaN: "{n} works in the list", tutteOpere: "All works by this author →", tutteN: "All {n} works by this author →",
   sMpfBreve: "France: not yet free, the author «died for France» (30 more years, art. L123-10).",
   ueLiberoP: "{p}: free since {y}", ueDalP: "{p}: from 1 January {y}",
   nomiUe: ["Italy", "France", "Germany", "United Kingdom"], elenco: (x) => x.length > 1 ? x.slice(0, -1).join(", ") + " and " + x[x.length - 1] : x.join(""),
@@ -386,8 +386,10 @@ function chiavi(q) {
   return [...ks];
 }
 function contiene(testo, tok) { const w = parole(testo); return tok.every((t) => w.some((x) => x.startsWith(t))); }
+// autore con anno di morte prima dell'anno 1 (es. Omero, -800): si mostra come «autore antico», non «morto nel -800, libero dal -729» (Marco, 25/11/2026)
+function antico(a) { return !!a.an || (a.m !== null && a.m !== undefined && a.m < 1); }
 function statoAutore(a) {
-  if (a.an) return [L.anticoTutto];
+  if (antico(a)) return [L.anticoTutto];
   if (a.m === null || a.m === undefined) return [L.morteNd];
   // date e paesi da scripts/regole.py (assets/regole.js): la Francia esce se «morto per la Francia»; per i paesi alleati una nota
   const Y = D.anno, ue = REGOLE_PAESI.annoLibero(a.m, "it"), es = REGOLE_PAESI.annoLibero(a.m, "es");
@@ -423,12 +425,18 @@ async function opereDiAutore(qid) {
 }
 function arricchisci(o) { const x = D.indice.get(o.q); if (x) { o.v = x.v; o.g = x.g; o.l = x.l; } return o; }
 function schedaAutore(a, n, subito) {
-  const morte = a.an ? L.antico : a.m === null || a.m === undefined ? L.morteNd : tr(a.inc ? "mortoNelInc" : "mortoNel", { m: a.m });
+  const morte = antico(a) ? L.antico : a.m === null || a.m === undefined ? L.morteNd : tr(a.inc ? "mortoNelInc" : "mortoNel", { m: a.m });
   const lista = h("ul", { class: "righe" });
   const bott = h("button", { class: "altro", type: "button", onclick: async () => {
     bott.disabled = true;
     const opere = (await opereDiAutore(a.q)).map(arricchisci).sort((x, y) => y.pg - x.pg);
-    lista.replaceChildren(...opere.map(rigaOpera)); bott.remove();
+    // aperte da sole: le prime 10, il resto con un pulsante (così i titoli trovati sotto restano vicini)
+    const primi = subito && opere.length > 12 ? opere.slice(0, 10) : opere;
+    lista.replaceChildren(...primi.map(rigaOpera)); bott.remove();
+    if (primi.length < opere.length) {
+      const b2 = h("button", { class: "altro", type: "button", onclick: () => { lista.replaceChildren(...opere.map(rigaOpera)); b2.remove(); } }, tr("tutteN", { n: num(opere.length) }));
+      lista.after(b2);
+    }
   } }, L.tutteOpere);
   if (subito) setTimeout(() => bott.click(), 0);   // un solo autore trovato: le sue opere si mostrano subito
   return h("div", {}, h("div", { class: "aut-card" }, h("div", {},
@@ -465,7 +473,10 @@ async function cerca(q) {
   const lo = [...opere.values()].sort((x, y) => (parole(titolo(y)).join(" ") === qn) - (parole(titolo(x)).join(" ") === qn) || y.pg - x.pg);
   const parti = [h("h2", { class: "r-tit" }, tr("risPer", { q: q.trim() })),
     h("p", { class: "r-sotto" }, [autori.size ? tr(autori.size === 1 ? "nAut" : "nAutP", { n: num(autori.size) }) : "", lo.length ? tr(lo.length === 1 ? "nOp" : "nOpP", { n: num(lo.length) }) : ""].filter(Boolean).join(" · "))];
-  for (const x of la) parti.push(schedaAutore(x.a, x.n, la.length === 1));
+  // le opere dell'autore si aprono da sole se è l'unico trovato o se il nome è proprio quello cercato («Omero» → le opere di Omero, 25/11/2026)
+  // e anche se è di gran lunga il più presente («Dante» → Dante Alighieri, 149 opere contro 2)
+  const apri0 = la.length === 1 || parole(la[0] ? la[0].a.n : "").join(" ") === qn || (la.length > 1 && la[0].n >= 10 && la[0].n >= 10 * la[1].n);
+  la.forEach((x, i) => parti.push(schedaAutore(x.a, x.n, i === 0 && apri0)));
   if (lo.length) {
     const lista = h("ul", { class: "righe" }, lo.slice(0, 20).map(rigaOpera));
     parti.push(lista);

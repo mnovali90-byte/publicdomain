@@ -1651,3 +1651,9 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
   7. Radar: voce «Anniversari 2027» come nel resto del sito.
 - Controllato e lasciato com'è: interlinea dei titoli grandi uguale alla pagina 2027 già approvata (stesse misure); gli «elementi fuori schermo» rimasti sono gli scaffali che scorrono di lato apposta (Già pubblici, radar, schede, mesi del calendario).
 - Dopo le correzioni: nessuna pagina scorre di lato a nessuna larghezza; prova_regole 1–9 e 5b a 0.
+
+## 25/11/2026 — Pubblicazione della ristrutturazione e ricerca «Omero» in Già pubblici
+- Pubblicati con l'ok di Marco (09:52) i 5 commit della ristrutturazione (df498c1f5 … 0213a2679); GitHub Pages: riuscito alle 09:53. Le pagine vere non si possono aprire da qui (sito non tra gli indirizzi permessi): controllo affidato a Marco.
+- Segnalazione di Marco: cercando «Omero» uscivano Pseudo-Omero e titoli di altri autori (Andersen, Nietzsche, Miquel), e Omero risultava «morto nel -800, libero dal -729 / -719».
+- Perché: (1) la ricerca trova anche le opere con «Omero» nel titolo, giusto, ma le opere di Omero stesso restavano chiuse dietro «Tutte le opere dell'autore» perché gli autori trovati erano due; (2) Omero ha un anno di morte su Wikidata (-800) e la pagina lo trattava come un autore qualsiasi.
+- Corretto (storico/pagina.html): un autore morto prima dell'anno 1 si mostra come «autore antico, libero ovunque»; le opere del primo autore si aprono da sole se il nome è proprio quello cercato o se ha almeno 10 volte le opere del secondo (Dante Alighieri 149 contro 2), mostrando le prime 10 e un pulsante «Tutte le N opere». Provato: Omero, Dante, Homer (inglese, 390 px), Tolkien.
