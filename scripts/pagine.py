@@ -330,12 +330,19 @@ def url_pagina(lang, slug=""):
     return f"{SITO}/{PERCORSO[lang]}/{slug + '/' if slug else ''}"
 
 
+def link_alterne(url_it, url_en):
+    """hreflang di una coppia italiano/inglese. x-default punta all'inglese: i visitatori internazionali sono il pubblico più grande.
+    Pagine senza controparte inglese non chiamano questa funzione e non hanno x-default."""
+    return (f'<link rel="alternate" hreflang="it" href="{url_it}">\n'
+            f'<link rel="alternate" hreflang="en" href="{url_en}">\n'
+            f'<link rel="alternate" hreflang="x-default" href="{url_en}">\n')
+
+
 def alterne(lang, slug):
     """Collegamenti tra la pagina italiana e quella inglese (hreflang). Solo se esistono tutte e due."""
     if slug is None:
         return ""
-    return (f'<link rel="alternate" hreflang="it" href="{url_pagina("it", slug)}">\n'
-            f'<link rel="alternate" hreflang="en" href="{url_pagina("en", slug)}">\n')
+    return link_alterne(url_pagina("it", slug), url_pagina("en", slug))
 
 
 NOMI_FONTE = {"it": {"wikidata": "Wikidata", "wikidata_altra": "Wikidata (altra data)", "gnd": "Biblioteca nazionale tedesca (GND)", "loc": "Library of Congress", "gutenberg": "Project Gutenberg"},
@@ -1012,6 +1019,8 @@ def piede_scheda(lang, fonti=None):
     it = lang == "it"
     T = (lambda x, y: x) if it else (lambda x, y: y)
     lk = " · ".join(f'<a href="{h}">{esc(t)}</a>' for h, t in _piede_link(lang))
+    # barra «questa pagina è in inglese»: solo sulle pagine italiane (assets/lingua.js). La copia inglese non la riceve.
+    lingua = '<script src="/assets/lingua.js"></script>\n' if it else ''
     return f"""</main>
 <footer class="end">
   <div><p class="m" style="color:var(--redt)">{fonti[0] if fonti else T("Fonti", "Sources")}</p><p>{fonti[1] if fonti else T("Wikidata (CC0), Wikipedia (testi CC BY-SA, con link alla pagina d'origine), Wikimedia Commons (ritratti, ciascuno con la sua licenza), cataloghi nazionali (SBN, BnF, BNE, British Library, Library of Congress, GND, K10plus), Catalog of Copyright Entries (trascrizione della New York Public Library, CC0), Duke University (CC BY 4.0), Open Library, Project Gutenberg. Dati aperti, aggiornati in automatico ogni tre mesi e a dicembre; possono contenere errori. <a href='/come-funziona/'>Come funziona</a>.", "Wikidata (CC0), Wikipedia (text CC BY-SA, linked to the original page), Wikimedia Commons (portraits, each with its own licence), national catalogues (SBN, BnF, BNE, British Library, Library of Congress, GND, K10plus), Catalog of Copyright Entries (transcribed by the New York Public Library, CC0), Duke University (CC BY 4.0), Open Library, Project Gutenberg. Open data, updated automatically every three months and in December; it may contain errors. <a href='/en/how-it-works/'>How it works</a>.")}</p>
@@ -1029,7 +1038,7 @@ $$('.why button').forEach(b=>b.onclick=()=>{{ const w=b.parentElement; w.classLi
 $$('.acc button').forEach(b=>b.onclick=()=>{{ const a=b.parentElement; a.classList.toggle('on'); b.querySelector('span').textContent=a.classList.contains('on')?'[–]':'[+]'; }});
 $$('#op sup').forEach(s=>s.onclick=()=>{{ const n=$('#nt'+s.dataset.n); if(!n) return; n.scrollIntoView({{behavior:'smooth',block:'center'}}); n.classList.add('hl'); setTimeout(()=>n.classList.remove('hl'),1600); }});
 </script>
-</body>
+{lingua}</body>
 </html>
 """
 
@@ -1452,7 +1461,7 @@ def pagina_indice(voci, lang):
     sel = lambda nid, op: f'<select id="{nid}">' + "".join(f'<option value="{v}">{esc(t)}</option>' for v, t in op) + "</select>"
     lead_n = (f"{len(voci)} autori con una pagina dedicata: biografia, opere e data di pubblico dominio paese per paese." if it else
               f"{len(voci)} authors with a dedicated page: biography, Italian editions and the public-domain date country by country.")
-    out = [testa_scheda(lang, esc(titolo), esc(descr), url, "", "", f'<a href="{T("/en/author/", "/autore/")}" hreflang="{T("en", "it")}">{T("EN", "IT")}</a>', "", og_tipo="website", css_extra=CSS_INDICE, main_cls="idx")
+    out = [testa_scheda(lang, esc(titolo), esc(descr), url, link_alterne(url_pagina("it"), url_pagina("en")), "", f'<a href="{T("/en/author/", "/autore/")}" hreflang="{T("en", "it")}">{T("EN", "IT")}</a>', "", og_tipo="website", css_extra=CSS_INDICE, main_cls="idx")
            .replace("@@MARCHIO_S@@", marchio_html(56).replace('<span class="pdr" style="--w:56px">', "").rsplit("</span>", 1)[0]),
            '<p class="m" style="color:var(--redt)">Public Domain Radar</p>\n',
            f'<h1>{T("Indice <br>degli autori", "Index <br>of authors")}</h1>\n',
@@ -1580,6 +1589,10 @@ def crea_home_inglese():
     s = sostituisci(s, r'<meta property="og:description" content="[^"]*">', f'<meta property="og:description" content="{esc(breve)}">')
     s = sostituisci(s, r'<meta name="twitter:description" content="[^"]*">', f'<meta name="twitter:description" content="{esc(breve)}">')
     s = sostituisci(s, r'<link rel="canonical" href="https://publicdomainradar.com/radar/">', '<link rel="canonical" href="https://publicdomainradar.com/en/radar/">')   # il radar ha «noindex» e rimanda alle pagine paese: un segnale solo (25/11/2026)
+    # la copia parte dal radar italiano: x-default resta sull'inglese, e la barra di lingua non passa di qua
+    s = sostituisci(s, r'<link rel="alternate" hreflang="x-default" href="[^"]*">',
+                    '<link rel="alternate" hreflang="x-default" href="https://publicdomainradar.com/en/radar/">')
+    s = s.replace('<script src="/assets/lingua.js"></script>\n', '').replace('<script src="/assets/lingua.js"></script>', '')
     s = sostituisci(s, r'<meta property="og:url" content="https://publicdomainradar.com/radar/">', '<meta property="og:url" content="https://publicdomainradar.com/en/radar/">')
     s = sostituisci(s, r'\{"@type":"WebSite","name":"Public Domain Radar","url":"https://publicdomainradar.com/"',
                     '{"@type":"WebSite","name":"Public Domain Radar","url":"https://publicdomainradar.com/en/"')
@@ -2049,8 +2062,7 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
         {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q,
                                              "acceptedAnswer": {"@type": "Answer", "text": r}} for q, r in faq]}]}
     jsonld = '<script type="application/ld+json">' + json.dumps(jl, ensure_ascii=False).replace("</", "<\\/") + "</script>"
-    alt = (f'<link rel="alternate" hreflang="it" href="{url_landing("it", anno)}">\n'
-           f'<link rel="alternate" hreflang="en" href="{url_landing("en", anno)}">\n')
+    alt = link_alterne(url_landing("it", anno), url_landing("en", anno))
     altra = (f'<a href="/en/public-domain-{anno}/" hreflang="en">EN</a>' if it else f'<a href="/pubblico-dominio-{anno}/" hreflang="it">IT</a>')
     gg_ = max(0, (datetime.date.fromisoformat(libero) - oggi).days)
     n_ = lambda x: migliaia(x, lang)

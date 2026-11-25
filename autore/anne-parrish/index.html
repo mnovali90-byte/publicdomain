@@ -9,6 +9,7 @@
 <link rel="canonical" href="https://publicdomainradar.com/autore/anne-parrish/">
 <link rel="alternate" hreflang="it" href="https://publicdomainradar.com/autore/anne-parrish/">
 <link rel="alternate" hreflang="en" href="https://publicdomainradar.com/en/author/anne-parrish/">
+<link rel="alternate" hreflang="x-default" href="https://publicdomainradar.com/en/author/anne-parrish/">
 <meta property="og:type" content="profile">
 <meta property="og:site_name" content="Public Domain Radar">
 <meta property="og:url" content="https://publicdomainradar.com/autore/anne-parrish/">
@@ -292,5 +293,6 @@ $$('.why button').forEach(b=>b.onclick=()=>{ const w=b.parentElement; w.classLis
 $$('.acc button').forEach(b=>b.onclick=()=>{ const a=b.parentElement; a.classList.toggle('on'); b.querySelector('span').textContent=a.classList.contains('on')?'[–]':'[+]'; });
 $$('#op sup').forEach(s=>s.onclick=()=>{ const n=$('#nt'+s.dataset.n); if(!n) return; n.scrollIntoView({behavior:'smooth',block:'center'}); n.classList.add('hl'); setTimeout(()=>n.classList.remove('hl'),1600); });
 </script>
+<script src="/assets/lingua.js"></script>
 </body>
 </html>

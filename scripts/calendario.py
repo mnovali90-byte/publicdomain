@@ -235,7 +235,7 @@ def scheda(v, lang, anno):
 
 
 def pagina(dati, lang):
-    from pagine import testa_scheda, piede_scheda, marchio_html  # evita l'import circolare all'avvio
+    from pagine import testa_scheda, piede_scheda, marchio_html, link_alterne  # evita l'import circolare all'avvio
     anno = dati["anno"]
     t = T[lang]
     it = lang == "it"
@@ -275,7 +275,7 @@ def pagina(dati, lang):
     ld = {"@context": "https://schema.org", "@type": "CollectionPage", "name": t["titolo"].format(a=anno), "url": url, "inLanguage": lang,
           "dateModified": dati.get("generato"), "isPartOf": {"@type": "WebSite", "name": "Public Domain Radar", "url": SITO + ("/en/" if lang == "en" else "/")}}
     jsonld = '<script type="application/ld+json">' + json.dumps(ld, ensure_ascii=False).replace("</", "<\\/") + "</script>"
-    alt = (f'<link rel="alternate" hreflang="it" href="{SITO}/calendario/{anno}/">\n<link rel="alternate" hreflang="en" href="{SITO}/en/calendar/{anno}/">\n')
+    alt = link_alterne(f"{SITO}/calendario/{anno}/", f"{SITO}/en/calendar/{anno}/")
     cal_lab = ("Calendario " if it else "Calendar ") + str(anno)
     testa = testa_scheda(lang, esc(t["titolo"].format(a=anno)), esc(t["descr"].format(a=anno)), url, alt, jsonld, altra, "@@CNT@@",
                          og_tipo="website", css_extra=CSS_CAL + SCH.CSS, main_cls="calm", body_cls="cal-b")

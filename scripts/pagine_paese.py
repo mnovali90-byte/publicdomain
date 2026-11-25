@@ -192,7 +192,7 @@ def sezione(titolo, dx, corpo, cls="sec", id_=""):
 
 
 def alterne(fn):
-    return f'<link rel="alternate" hreflang="it" href="{fn("it")}">\n<link rel="alternate" hreflang="en" href="{fn("en")}">\n'
+    return P.link_alterne(fn("it"), fn("en"))
 
 
 def pagina_paese_ue(k, lang, REG, liste):
@@ -730,6 +730,15 @@ def pagina_paese_radar(k, lang, REG, liste):
     h = re.sub(r'(<meta name="twitter:title" content=")[^"]*', lambda m: m.group(1) + esc(titolo), h, count=1)
     h = re.sub(r'(<meta name="twitter:description" content=")[^"]*', lambda m: m.group(1) + esc(descr), h, count=1)
     h = h.replace(f"{P.SITO}/en/radar/", u_en).replace(f"{P.SITO}/radar/", u_it)
+    # x-default segue la pagina inglese del paese (il modello del radar punta al radar)
+    xd = f'<link rel="alternate" hreflang="x-default" href="{u_en}">'
+    if re.search(r'hreflang="x-default"', h):
+        h = re.sub(r'<link rel="alternate" hreflang="x-default" href="[^"]*">', xd, h, count=1)
+    else:
+        en_link = f'<link rel="alternate" hreflang="en" href="{u_en}">'
+        h = h.replace(en_link, en_link + "\n" + xd, 1)
+    if not it:
+        h = h.replace('<script src="/assets/lingua.js"></script>\n', '').replace('<script src="/assets/lingua.js"></script>', '')
     h = re.sub(r'<link rel="canonical" href="[^"]*">', f'<link rel="canonical" href="{url}">', h, count=1)
     h = re.sub(r'(<meta property="og:url" content=")[^"]*', lambda m: m.group(1) + url, h, count=1)
     h = re.sub(r'<script type="application/ld\+json">.*?</script>', lambda m: jsonld, h, count=1, flags=re.S)
