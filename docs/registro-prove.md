@@ -1618,3 +1618,10 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - Date della sitemap: impronta versione 4 (senza <style> e <link>), le 833 date restano quelle di prima.
 - llms.txt nuovo alla radice: descrizione del sito, regole delle date (con le eccezioni di Spagna, Francia, Italia), pagine principali, dati scaricabili, metodo (docs/criteri.md su GitHub).
 - Prove 1-9 e 5b: 0 errori.
+
+## 2026-11-25 — Navigazione: controllo e menu del radar nell'HTML (locale, in attesa di ok)
+- Controllo dei collegamenti (HTML senza programmi, come lo leggono Google e le AI): radar con menu vuoto (costruito dal programma) e 15 collegamenti; Già pubblici 12 collegamenti (contenuto dal programma); menu con «Tutti gli autori» e «Indice degli autori» simili; 334 schede su 825 raggiungibili solo dall'indice A–Z o da altre schede; «sei qui» solo sulle schede. Le pagine 2027/2028 collegano circa 135 autori ciascuna.
+- Correzione dell'analisi: il calendario 2027 non ha schede da collegare (0 delle 189 voci con codice Wikidata ha una scheda: morti del 1927/1977 e nati del 1827/1877/1927).
+- Fatto: il menu del radar (IT/EN) è scritto nell'HTML con le stesse voci che disegna il programma; il programma lo ridisegna uguale, quindi nessun cambio visibile. Spostamento del layout radar invariato.
+- Scoperta: il riquadro delle regole con le fonti di legge (Italia, Francia, Germania, Regno Unito, Svezia, Spagna, UE) esiste solo dentro il programma del radar: Google e le AI non lo vedono. Base per le pagine paese.
+- Mockup (in chat, fuori dal repository): menu per domande e pagina paese per i sei paesi, con dati delle liste (data/2027.json, 2028, es-, us-) e testi del riquadro regole.
