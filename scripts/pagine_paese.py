@@ -145,7 +145,7 @@ def righe(aut, n, lang):
     return "".join(out), crediti
 
 
-def lista_regole(voci, lang):
+def lista_regole(voci, lang, etichetta=None):
     li = []
     for v in voci:
         if v.get("aperto"):
@@ -153,7 +153,7 @@ def lista_regole(voci, lang):
         f = v.get("f", "")
         p_ = re.sub(r" con l.Italia \(testo francese\)", " del 1947", f.split(",")[0])
         resto = ", ".join(x.strip() for x in f.split(",")[1:])
-        a = (f'<a href="{esc(v["u"])}" rel="noopener">{"Leggi la norma →" if lang == "it" else "Read the law →"}</a>' if v.get("u") else "<span></span>")
+        a = (f'<a href="{esc(v["u"])}" rel="noopener">{etichetta or ("Leggi la norma →" if lang == "it" else "Read the law →")}</a>' if v.get("u") else "<span></span>")
         li.append(f'<li><span class="p">{esc(p_)}</span><span class="m y">{esc(resto)}</span><span class="r">{esc(v["t"][lang])}</span>{a}</li>\n')
     return '<ul class="where">\n' + "".join(li) + "</ul>\n"
 
@@ -415,12 +415,17 @@ def pagina_come(lang):
                f'<p class="m k">{T("Il metodo", "The method")}</p>\n'
                f'<h1 class="h1">{w(T("Come", "How"))}<br>{w(T("funziona", "it works"))}</h1>\n'
                f'<p class="say" id="say">{esc(T("Ogni data del sito si calcola da fatti controllati (quando è morto l’autore, quando è uscito il libro) e dalle regole di legge di ogni paese. Ecco da dove vengono i fatti, come li controlliamo e cosa resta da verificare.", "Every date on the site is worked out from checked facts (when the author died, when the book came out) and from each country’s legal rules. Here is where the facts come from, how we check them and what is still to be verified."))}</p>\n</section>\n')
-    fonti = [{"t": {"it": "Autori, date di nascita e di morte, opere, cittadinanze. Dati liberi (CC0).", "en": "Authors, dates of birth and death, works, citizenships. Free data (CC0)."}, "f": "Wikidata", "u": "https://www.wikidata.org/"},
-             {"t": {"it": "Le visite del mese scorso: decidono l'ordine degli elenchi. I testi citati hanno il link alla pagina d'origine (CC BY-SA).", "en": "Last month's page views: they set the order of the lists. Quoted texts link to their source page (CC BY-SA)."}, "f": "Wikipedia", "u": "https://www.wikipedia.org/"},
-             {"t": {"it": "Le edizioni e gli anni di morte confermati: SBN, BnF, Deutsche Nationalbibliothek, BNE, British Library, Library of Congress.", "en": "Editions and confirmed years of death: SBN, BnF, Deutsche Nationalbibliothek, BNE, British Library, Library of Congress."}, "f": T("Cataloghi delle biblioteche nazionali", "National library catalogues")},
-             {"t": {"it": "Il registro ufficiale del Copyright Office americano: una sua scheda basta da sola per verificare la prima uscita di un libro.", "en": "The official register of the US Copyright Office: one of its records is enough on its own to verify a book's first publication."}, "f": "Catalog of Copyright Entries"},
-             {"t": {"it": "I ritratti degli autori, ciascuno con la sua licenza.", "en": "The authors' portraits, each with its own licence."}, "f": "Wikimedia Commons", "u": "https://commons.wikimedia.org/"}]
-    out.append(sezione(T("Da dove vengono i dati", "Where the data comes from"), T("Solo fonti aperte o ufficiali", "Open or official sources only"), lista_regole(fonti, lang)))
+    # elenco completo delle fonti, come nei piedi delle pagine (pagine.py, radar, storico/pagina.html): Marco, 25/11/2026
+    fonti = [{"t": {"it": "Autori, date di nascita e di morte, opere, anni di uscita, cittadinanze. Dati liberi (CC0).", "en": "Authors, dates of birth and death, works, publication years, citizenships. Free data (CC0)."}, "f": "Wikidata", "u": "https://www.wikidata.org/"},
+             {"t": {"it": "Le visite in 5 lingue, che decidono l'ordine degli elenchi. I testi citati hanno il link alla pagina d'origine (CC BY-SA).", "en": "Page views in 5 languages, which set the order of the lists. Quoted texts link to their source page (CC BY-SA)."}, "f": "Wikipedia", "u": "https://www.wikipedia.org/"},
+             {"t": {"it": "Gli anni di morte confermati e le edizioni di ogni autore: SBN (Italia), BnF (Francia), BNE (Spagna), British Library (Regno Unito), Library of Congress (USA), Biblioteca nazionale tedesca (GND) e il catalogo collettivo tedesco K10plus.", "en": "Confirmed years of death and each author's editions: SBN (Italy), BnF (France), BNE (Spain), British Library (UK), Library of Congress (USA), German National Library (GND) and the German union catalogue K10plus."}, "f": T("Cataloghi delle biblioteche nazionali", "National library catalogues")},
+             {"t": {"it": "Il registro ufficiale del Copyright Office americano, nella trascrizione della New York Public Library (CC0): una sua scheda basta da sola per verificare la prima uscita di un libro.", "en": "The official register of the US Copyright Office, as transcribed by the New York Public Library (CC0): one of its records is enough on its own to verify a book's first publication."}, "f": "Catalog of Copyright Entries"},
+             {"t": {"it": "Gli elenchi del Public Domain Day: seconda fonte per gli anni di uscita dei libri americani (CC BY 4.0).", "en": "The Public Domain Day lists: a second source for the publication years of American books (CC BY 4.0)."}, "f": "Duke University", "u": "https://web.law.duke.edu/cspd/publicdomainday/"},
+             {"t": {"it": "Le edizioni e gli anni di uscita, per controllare i libri americani.", "en": "Editions and publication years, to check American books."}, "f": "Open Library", "u": "https://openlibrary.org/"},
+             {"t": {"it": "I download dei libri già liberi: dicono quanto un autore è letto oggi.", "en": "Downloads of books already free: they show how much an author is read today."}, "f": "Project Gutenberg", "u": "https://www.gutenberg.org/"},
+             {"t": {"it": "I ritratti degli autori, ciascuno con la sua licenza.", "en": "The authors' portraits, each with its own licence."}, "f": "Wikimedia Commons", "u": "https://commons.wikimedia.org/"},
+             {"t": {"it": "Le regole di durata: ogni norma è letta sul testo ufficiale del suo paese, con il link.", "en": "The term rules: each law is read in its country's official text, with a link."}, "f": T("Testi di legge", "Legal texts"), "u": url_indice(lang).replace(P.SITO, "")}]
+    out.append(sezione(T("Da dove vengono i dati", "Where the data comes from"), T("Solo fonti aperte o ufficiali", "Open or official sources only"), lista_regole(fonti, lang, T("Apri →", "Open →"))))
     tre = [(T("Europa: la morte dell'autore", "Europe: the author's death"),
             T("In Italia, Francia, Germania e Regno Unito un'opera è libera 70 anni dopo la morte dell'autore, dal 1° gennaio dell'anno dopo. In Spagna, per chi è morto prima del 1987, gli anni sono 80.",
               "In Italy, France, Germany and the UK a work is free 70 years after the author's death, from 1 January of the following year. In Spain, for authors who died before 1987, it is 80 years.")),
