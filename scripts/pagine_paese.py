@@ -754,6 +754,18 @@ def pagina_paese_radar(k, lang, REG, liste):
     # per chi non esegue il programma (motori di ricerca, assistenti AI): i primi nomi già scritti nella pagina
     r_, _ = righe(lib, 12, lang)
     h = re.sub(r'(<div id="eroe">).*?(</div>\s*<div class="lnk" id="indice-link">)', lambda m: m.group(1) + f'<ol class="rows">{r_}</ol>' + m.group(2), h, count=1, flags=re.S)
+    # 25/11/2026 (analisi SEO): l'elenco completo già scritto nella pagina, con il link alla scheda di chi ce l'ha.
+    # Le righe sono nascoste: quando la pagina si apre il programma le sostituisce con il suo elenco (stesso aspetto di prima);
+    # senza programma (alcuni motori di ricerca e assistenti AI) l'elenco si vede intero.
+    def voce(i, a):
+        nome = esc(P.pulisci(a["nome"]))
+        href = (f"/en/author/{a['pagina_en']}/" if not it and a.get("pagina_en") else f"/autore/{a['pagina']}/" if a.get("pagina") else "")
+        an = f'<a href="{href}">{nome}</a>' if href else nome
+        return f'<li hidden><span class="k2">{i + 1:03d}</span><span class="an">{an}<small>† {P.anno_di(a.get("morte")) or "?"}</small></span></li>'
+    tutti = sorted((a for a in pacc.get("autori", []) if a.get("letterario") and vale(a)), key=lambda a: -(a.get(f"visite_{lingua}") or 0))   # come «Elenco completo» del radar
+    statico = "".join(voce(i, a) for i, a in enumerate(tutti))
+    h = h.replace('<ul class="al" id="elenco"></ul>', f'<ul class="al" id="elenco">{statico}</ul>', 1)
+    h = h.replace('<noscript>', '<noscript><style>#elenco li[hidden]{display:grid!important;opacity:1;animation:none}</style>', 1)
     # sotto: la regola di legge del paese, cosa significa, le domande, gli altri paesi
     domande = "".join(f'<details><summary>{esc(q)}</summary><p>{esc(r)}</p></details>' for q, r in faq)
     legge = (sezione(T("La regola, dalla legge", "The rule, from the law"), T("Testi di legge letti alla fonte", "Legal texts read at the source"), lista_regole(REG[NOME_REGOLE[k]], lang), "sec legge")

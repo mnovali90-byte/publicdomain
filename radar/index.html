@@ -217,6 +217,7 @@ body.ix-in .pf{opacity:1}body.menu-on .pf,body.panel-on .pf{opacity:0}
 .al{list-style:none;margin:18px 0 0;padding:0;border-top:1px solid var(--ink)}
 .al li{display:grid;grid-template-columns:56px minmax(0,1fr) 40px;gap:14px;align-items:center;padding:11px 0;border-bottom:1px solid var(--hair);cursor:pointer;opacity:0;animation:fi 380ms var(--out) forwards}
 .al li:hover .an{color:var(--redt)}
+.al li[hidden]{display:none}.al .an a{color:inherit;text-decoration:none}
 .al .k2{font-family:var(--mono);font-size:11.5px;color:var(--grey);font-variant-numeric:tabular-nums}
 .al .an{font-size:clamp(17px,1.5vw,20px);font-weight:600;line-height:1.25;transition:color .2s}
 .al .an small{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.04em;color:var(--grey);font-weight:400;margin-top:3px;text-transform:uppercase}
@@ -1560,11 +1561,16 @@ function disegnaArchivio() {
     h("span", { class: "sp" }),
     ...[["popolarita", tr("oPop")], ["morte", tr("oData")], ["nome", "A–Z"]].map(([k, t]) => h("button", { class: "chip", type: "button", "aria-pressed": stato.ordine === k ? "true" : "false", onclick: () => { stato.ordine = k; disegnaArchivio(); } }, t)));
   $("#strumenti2-in").replaceChildren(...altre.map(pill));
+  // 25/11/2026 (analisi SEO): tutti i nomi restano nella pagina (quelli oltre i primi sono nascosti finché non si tocca «Mostra altri»),
+  // e chi ha la scheda ha un vero link: così Google li vede tutti. A video non cambia nulla.
   const mostra = lista.slice(0, stato.visibili);
-  $("#elenco").replaceChildren(...mostra.map((a, i) => h("li", { onclick: (ev) => { if (!ev.target.closest("[data-cuore]")) apriAutore(a.wikidata); } },
+  const urlScheda = (a) => LING === "en" && a.pagina_en ? `/en/author/${a.pagina_en}/` : a.pagina ? `/autore/${a.pagina}/` : null;
+  $("#elenco").replaceChildren(...lista.map((a, i) => h("li", { hidden: i >= stato.visibili, onclick: (ev) => { if (!ev.target.closest("[data-cuore]")) apriAutore(a.wikidata); } },
     h("span", { class: "k2" }, String(i + 1).padStart(3, "0")),
-    h("span", { class: "an" }, h("button", { type: "button", style: "text-align:left;font:inherit", onclick: (ev) => { ev.stopPropagation(); apriAutore(a.wikidata); } }, a.nome), h("small", {}, `† ${a.morte ? a.morte.slice(0, 4) : "?"}${etIdx(a)}`)),
-    bottoneCuore(a, "hb"))));
+    h("span", { class: "an" }, urlScheda(a)
+      ? h("a", { href: urlScheda(a), onclick: (ev) => { ev.preventDefault(); ev.stopPropagation(); apriAutore(a.wikidata); } }, a.nome)
+      : h("button", { type: "button", style: "text-align:left;font:inherit", onclick: (ev) => { ev.stopPropagation(); apriAutore(a.wikidata); } }, a.nome), h("small", {}, `† ${a.morte ? a.morte.slice(0, 4) : "?"}${etIdx(a)}`)),
+    i < stato.visibili ? bottoneCuore(a, "hb") : null)));
   const altro = $("#altro");
   altro.replaceChildren();
   if (!lista.length) altro.append(h("p", { class: "nores" }, tr("nessuno")));
