@@ -461,8 +461,8 @@ def pagina_indice(lang, liste):
     T = (lambda a, b: a) if it else (lambda a, b: b)
     anno = P.ANNO_PROSSIMO
     url = url_indice(lang)
-    titolo = T("Pubblico dominio per paese: le regole di Italia, Francia, Germania, Spagna, Regno Unito e Stati Uniti · Public Domain Radar",
-               "Public domain by country: the rules of Italy, France, Germany, Spain, the UK and the United States · Public Domain Radar")
+    titolo = T("Pubblico dominio per paese: le regole · Public Domain Radar",   # corto: Google mostra circa 60 caratteri (25/11/2026)
+               "Public domain by country: the rules · Public Domain Radar")
     descr = T("In Europa conta quando è morto l'autore, negli Stati Uniti quando è uscito il libro. La regola di ogni paese, con le fonti di legge, e chi entra in pubblico dominio.",
               "In Europe the author's death counts, in the United States the year the book came out. Each country's rule, with legal sources, and who enters the public domain.")
     jl = {"@context": "https://schema.org", "@type": "CollectionPage", "@id": url, "url": url, "name": titolo, "description": descr, "inLanguage": lang}

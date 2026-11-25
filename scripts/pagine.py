@@ -1564,7 +1564,7 @@ def crea_home_inglese():
     s = sostituisci(s, r'<meta property="og:title" content="[^"]*">', f'<meta property="og:title" content="{esc(tit)}">')
     s = sostituisci(s, r'<meta property="og:description" content="[^"]*">', f'<meta property="og:description" content="{esc(breve)}">')
     s = sostituisci(s, r'<meta name="twitter:description" content="[^"]*">', f'<meta name="twitter:description" content="{esc(breve)}">')
-    s = sostituisci(s, r'<link rel="canonical" href="https://publicdomainradar.com/pubblico-dominio/">', '<link rel="canonical" href="https://publicdomainradar.com/en/public-domain/">')   # 25/11/2026: il radar rimanda alle pagine paese
+    s = sostituisci(s, r'<link rel="canonical" href="https://publicdomainradar.com/radar/">', '<link rel="canonical" href="https://publicdomainradar.com/en/radar/">')   # il radar ha «noindex» e rimanda alle pagine paese: un segnale solo (25/11/2026)
     s = sostituisci(s, r'<meta property="og:url" content="https://publicdomainradar.com/radar/">', '<meta property="og:url" content="https://publicdomainradar.com/en/radar/">')
     s = sostituisci(s, r'\{"@type":"WebSite","name":"Public Domain Radar","url":"https://publicdomainradar.com/"',
                     '{"@type":"WebSite","name":"Public Domain Radar","url":"https://publicdomainradar.com/en/"')
@@ -2392,6 +2392,13 @@ def main():
                 (RADICE / PERCORSO[l] / vecchio).mkdir()
                 (RADICE / PERCORSO[l] / vecchio / "index.html").write_text(pagina_rimando(url_pagina(l, nuovo), l), encoding="utf-8")
     f_rim.write_text(json.dumps(rimandi, ensure_ascii=False, indent=1, sort_keys=True), encoding="utf-8")
+    # schede tolte di proposito (data/schede_tolte.json, 25/11/2026): al vecchio indirizzo un rimando, non «pagina non trovata»
+    for slug, x in (_leggi(RADICE / "data" / "schede_tolte.json", {}) or {}).get("schede", {}).items():
+        for l in ("it", "en"):
+            d = RADICE / PERCORSO[l] / slug
+            if x.get(l) and not d.exists():
+                d.mkdir()
+                (d / "index.html").write_text(pagina_rimando(SITO + x[l], l), encoding="utf-8")
     for l in ("it", "en"):
         voci[l].sort(key=lambda v: (slug_base(v[0]), v[1]))
         (RADICE / PERCORSO[l] / "index.html").write_text(pagina_indice(voci[l], l), encoding="utf-8")
