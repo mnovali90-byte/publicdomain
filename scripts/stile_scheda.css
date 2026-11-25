@@ -23,7 +23,7 @@ body.past .cnt{opacity:1}
 .menu.on{clip-path:inset(0 0 0 0)}
 .menu .x{position:absolute;right:var(--pad);top:22px;font-family:var(--mono);font-size:12px;letter-spacing:.12em}
 .menu nav{margin-top:6vh;display:flex;flex-direction:column}
-.menu nav a{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:clamp(44px,min(9vw,10svh),120px);line-height:1.02;padding-top:.06em;text-decoration:none;overflow:hidden;display:block}
+.menu nav a{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:clamp(40px,min(9vw,9svh),120px);line-height:1.02;padding-top:.06em;text-decoration:none;overflow:hidden;display:block}
 .menu nav a span{display:block;transform:translateY(105%);transition:transform 620ms var(--out)}
 .menu.on nav a span{transform:none}
 

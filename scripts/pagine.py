@@ -941,12 +941,12 @@ def _menu_link(lang):
     it = lang == "it"
     a = ANNO_PROSSIMO
     if it:
-        v = [(f"/pubblico-dominio-{a}/", f"{a}: chi diventa libero"), ("/gia-pubblici/", "Già pubblici"), ("/pubblico-dominio/", "Per paese")]
+        v = [("/", "Home"), (f"/pubblico-dominio-{a}/", f"{a}: chi diventa libero"), ("/gia-pubblici/", "Già pubblici"), ("/pubblico-dominio/", "Per paese")]
         if CALENDARIO_ON:
             v.append((f"/calendario/{a}/", f"Anniversari {a}"))
         v += [("/come-funziona/", "Come funziona"), ("/shop/", "Shop")]
     else:
-        v = [(f"/en/public-domain-{a}/", f"{a}: what becomes free"), ("/en/already-public/", "Already public"), ("/en/public-domain/", "By country")]
+        v = [("/en/", "Home"), (f"/en/public-domain-{a}/", f"{a}: what becomes free"), ("/en/already-public/", "Already public"), ("/en/public-domain/", "By country")]
         if CALENDARIO_ON:
             v.append((f"/en/calendar/{a}/", f"Anniversaries {a}"))
         v += [("/en/how-it-works/", "How it works"), ("/en/shop/", "Shop")]

@@ -63,7 +63,7 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 .menu.on{clip-path:inset(0 0 0 0)}
 .menu .x{position:absolute;right:var(--pad);top:22px;font-family:var(--mono);font-size:12px;letter-spacing:.12em}
 .menu nav{margin-top:6vh;display:flex;flex-direction:column}
-.menu nav a{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:clamp(44px,min(9vw,10svh),120px);line-height:1.02;padding-top:.06em;text-decoration:none;overflow:hidden;display:block}
+.menu nav a{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:clamp(40px,min(9vw,9svh),120px);line-height:1.02;padding-top:.06em;text-decoration:none;overflow:hidden;display:block}
 .menu nav a span{display:block;transform:translateY(105%);transition:transform 620ms var(--out)}
 .menu.on nav a span{transform:none}
 .menu nav a:nth-child(2) span{transition-delay:60ms}.menu nav a:nth-child(3) span{transition-delay:120ms}.menu nav a:nth-child(4) span{transition-delay:180ms}
@@ -434,7 +434,7 @@ dialog#finestra::backdrop{background:rgba(12,12,16,.5)}
 </header>
 <div class="menu" id="menu"><button class="x" id="mx" type="button" data-t="chiudiM">Close</button>
   <!-- 25/11/2026: menu già scritto nell'HTML (lo stesso che ridisegna il programma), visibile a Google e alle AI -->
-  <nav id="menu-nav"><a href="#/2027" class="on" aria-current="true"><span>2027</span></a><a href="/gia-pubblici/"><span>Già pubblici</span></a><a href="/pubblico-dominio/"><span>Per paese</span></a><a href="/calendario/2027/"><span>Anniversari 2027</span></a><a href="/come-funziona/"><span>Come funziona</span></a><a href="/shop/"><span>Shop</span></a><a href="/autore/"><span>Indice autori</span></a></nav>
+  <nav id="menu-nav"><a href="/"><span>Home</span></a><a href="#/2027" class="on" aria-current="true"><span>2027</span></a><a href="/gia-pubblici/"><span>Già pubblici</span></a><a href="/pubblico-dominio/"><span>Per paese</span></a><a href="/calendario/2027/"><span>Anniversari 2027</span></a><a href="/come-funziona/"><span>Come funziona</span></a><a href="/shop/"><span>Shop</span></a><a href="/autore/"><span>Indice autori</span></a></nav>
   <div class="ml" id="menu-lingue"></div>
 </div>
 
@@ -1086,7 +1086,7 @@ function disegnaNavigazione() {
     h("a", { href: LING === "en" ? "/en/how-it-works/" : "/come-funziona/" }, h("span", {}, LING === "en" ? "How it works" : "Come funziona")),
     h("a", { href: LING === "en" ? "/en/shop/" : "/shop/" }, h("span", {}, "Shop"))];
   nav.replaceChildren(...voci().slice(0, 3));   // in testata solo le prime tre (spazio); il menu ha tutte le voci
-  mnav.replaceChildren(...voci(), h("a", { href: LING === "en" ? "/en/author/" : "/autore/" }, h("span", {}, LING === "en" ? "Author index" : "Indice autori")));
+  mnav.replaceChildren(h("a", { href: LING === "en" ? "/en/" : "/" }, h("span", {}, "Home")), ...voci(), h("a", { href: LING === "en" ? "/en/author/" : "/autore/" }, h("span", {}, LING === "en" ? "Author index" : "Indice autori")));
   mnav.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => menu(false)));
   const tasti = (box) => box.replaceChildren(...["it", "en"].map((l) => h("button", { type: "button", lang: l, class: l === LING ? "on" : "", "aria-pressed": l === LING ? "true" : "false", onclick: () => { menu(false); impostaLingua(l); } }, l.toUpperCase())));
   tasti($("#lingue-tasti")); tasti($("#menu-lingue"));

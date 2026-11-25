@@ -213,7 +213,7 @@ def pagina_paese_ue(k, lang, REG, liste):
     vale = (lambda a: not P.è_mpf(a)) if k == "fr" else (lambda a: True)
     tutti = [a for a in tutti if vale(a)]
     liberi = lambda pc: sorted((a for a in P._letterari(pc, lang) if vale(a)), key=lambda a: -(a.get(f"visite_{lingua}") or 0))
-    lib27, lib28 = liberi(pacc), liberi(pacc2)
+    lib27 = liberi(pacc)   # solo l'anno in vetrina: l'anno dopo ha la sua pagina dal 7 gennaio (Marco, 25/11/2026)
     nazionali = lambda lst: [a for a in lst if set(a.get("paesi") or []) & set(naz)]
     naz27 = nazionali(lib27)
     n_naz = len([a for a in tutti if set(a.get("paesi") or []) & set(naz)])
@@ -222,8 +222,8 @@ def pagina_paese_ue(k, lang, REG, liste):
     tre, faq = testi(k, lang, anno, morti)
     titolo = T(f"Pubblico dominio {in_it}: quando un libro diventa libero · Public Domain Radar",
                f"Public domain {in_en}: when a book becomes free · Public Domain Radar")
-    descr = T(f"{in_it[0].upper() + in_it[1:]} un'opera diventa libera {anni} anni dopo la morte dell'autore. Gli scrittori che entrano in pubblico dominio nel {anno} e nel {anno + 1}, la regola di legge e cosa controllare.",
-              f"{in_en[0].upper() + in_en[1:]} a work becomes free {anni} years after the author's death. The writers entering the public domain in {anno} and {anno + 1}, the legal rule and what to check.")
+    descr = T(f"{in_it[0].upper() + in_it[1:]} un'opera diventa libera {anni} anni dopo la morte dell'autore. Gli scrittori che entrano in pubblico dominio nel {anno}, la regola di legge e cosa controllare.",
+              f"{in_en[0].upper() + in_en[1:]} a work becomes free {anni} years after the author's death. The writers entering the public domain in {anno}, the legal rule and what to check.")
     jl = {"@context": "https://schema.org", "@graph": [
         {"@type": "WebPage", "@id": url, "url": url, "name": titolo, "description": descr, "inLanguage": lang,
          "isPartOf": {"@type": "WebSite", "name": "Public Domain Radar", "url": P.SITO + ("/" if it else "/en/")}},
@@ -249,8 +249,7 @@ def pagina_paese_ue(k, lang, REG, liste):
     wl_en = {"it": "Italian", "fr": "French", "de": "German", "uk": "English", "es": "Spanish"}[k]
     r1, c1 = righe(lib27, 12, lang)
     r2, c2 = righe(naz27, 5, lang)
-    r3, c3 = righe(lib28, 5, lang)
-    cred = (f'<p class="cred">{T("Ritratti da Wikimedia Commons", "Portraits from Wikimedia Commons")} — {" · ".join(dict.fromkeys(c1 + c2 + c3))}</p>\n') if (c1 or c2 or c3) else ""
+    cred = (f'<p class="cred">{T("Ritratti da Wikimedia Commons", "Portraits from Wikimedia Commons")} — {" · ".join(dict.fromkeys(c1 + c2))}</p>\n') if (c1 or c2) else ""
     out.append(sezione(T(f"Chi diventa libero {in_it} nel {anno}", f"Who becomes free {in_en} in {anno}"),
                        T(f"morti nel {morti} · in ordine di visite su Wikipedia in {wl}", f"died in {morti} · by {wl_en} Wikipedia visits"),
                        f'<ol class="rows" style="margin-top:28px">\n{r1}</ol>\n'
@@ -259,9 +258,6 @@ def pagina_paese_ue(k, lang, REG, liste):
     if naz27:
         out.append(sezione(T(f"Gli scrittori {agg_it}", f"{agg_en} writers"), T(f"morti nel {morti}", f"died in {morti}"),
                            f'<ol class="rows" style="margin-top:28px">\n{r2}</ol>\n', "sec ix"))
-    if lib28:
-        out.append(sezione(T(f"E nel {anno + 1}", f"And in {anno + 1}"), T(f"morti nel {morti2}", f"died in {morti2}"),
-                           f'<ol class="rows" style="margin-top:28px">\n{r3}</ol>\n', "sec ix"))
     out[-1] = out[-1][::-1].replace("</section>"[::-1], ("</section>" + cred[::-1].join(["", ""]) if False else ("</section>"[::-1] + cred[::-1])), 1)[::-1]   # crediti dentro l'ultima lista
     gp = "/gia-pubblici/" if it else "/en/already-public/"
     cal = f"/calendario/{anno}/" if it else f"/en/calendar/{anno}/"
@@ -331,8 +327,7 @@ def pagina_usa(lang, liste):
                f'<h1 class="h1">{w(T("Quando un libro", "When a book"))}<br>{w(T("diventa libero", "becomes free"))}<br>{w(T("negli Stati Uniti", "in the United States"))}</h1>\n'
                f'<p class="say" id="say">{esc(T(f"Negli Stati Uniti conta l’anno della prima uscita, non la morte dell’autore: 95 anni dopo. Il 1° gennaio {anno} tocca ai libri del {pub}, opera per opera, con le fonti.", f"In the United States what counts is the year of first publication, not the author’s death: 95 years later. On 1 January {anno} it is the turn of the {pub} books, work by work, with sources."))}</p>\n</section>\n')
     nums = [(95, T("anni dalla pubblicazione", "years from publication"), "17 U.S.C. § 304"),
-            (len(opere), T(f"libri del {pub} liberi dal {anno}", f"{pub} books free from {anno}"), T(f"{n_st['verificata']} verificati, {n_st['edizione']} con l'edizione confermata", f"{n_st['verificata']} verified, {n_st['edizione']} edition confirmed")),
-            (len((liste.get(("us", anno + 1)) or {}).get("opere", [])), T(f"libri del {pub + 1}", f"{pub + 1} books"), T(f"liberi dal 1° gennaio {anno + 1}", f"free from 1 January {anno + 1}"))]
+            (len(opere), T(f"libri del {pub} liberi dal {anno}", f"{pub} books free from {anno}"), T(f"{n_st['verificata']} verificati, {n_st['edizione']} con l'edizione confermata", f"{n_st['verificata']} verified, {n_st['edizione']} edition confirmed"))]
     out.append('<div class="nums">' + "".join(f'<a href="#ix2"><span class="n">{P.migliaia(x, lang)}</span><span class="c">{esc(c)}</span><span class="m">{esc(m)}</span></a>' for x, c, m in nums) + "</div>\n")
     rr = []
     # in classifica solo i libri «Verificato» e fuori dai fuori classifica (Marco, 25/11/2026); tutti gli altri nel radar con il loro stato
