@@ -935,21 +935,27 @@ CSS_SCHEDA = (Path(__file__).resolve().parent / "stile_scheda.css").read_text(en
 
 
 def _menu_link(lang):
+    """Menu di tutte le pagine (ristrutturazione del 25/11/2026, mockup approvato da Marco): una voce per domanda.
+    L'anno dopo (es. 2028) non compare nei menu fino al suo turno, il 1° gennaio (decisione di Marco, 21/11/2026).
+    Il radar non è più una voce a sé: ci si arriva dalla pagina dell'anno e dalle pagine paese. L'indice A–Z resta nel piede."""
     it = lang == "it"
     a = ANNO_PROSSIMO
     if it:
-        # l'anno dopo (es. 2028) non compare nei menu fino al suo turno, il 1° gennaio (decisione di Marco, 21/11/2026);
-        # la pagina resta online per Google. «Il radar» nel menu si chiama «Tutti gli autori».
-        v = [(f"/pubblico-dominio-{a}/", f"Pubblico dominio {a}"), ("/radar/", "Tutti gli autori")]
+        v = [(f"/pubblico-dominio-{a}/", f"{a}: chi diventa libero"), ("/gia-pubblici/", "Già pubblici"), ("/pubblico-dominio/", "Per paese")]
         if CALENDARIO_ON:
-            v.append((f"/calendario/{a}/", "Calendario"))
-        v += [("/gia-pubblici/", "Già pubblici"), ("/autore/", "Indice degli autori")]
+            v.append((f"/calendario/{a}/", f"Anniversari {a}"))
     else:
-        v = [(f"/en/public-domain-{a}/", f"Public domain {a}"), ("/en/radar/", "All authors")]
+        v = [(f"/en/public-domain-{a}/", f"{a}: what becomes free"), ("/en/already-public/", "Already public"), ("/en/public-domain/", "By country")]
         if CALENDARIO_ON:
-            v.append((f"/en/calendar/{a}/", "Calendar"))
-        v += [("/en/already-public/", "Already public"), ("/en/author/", "Author index")]
+            v.append((f"/en/calendar/{a}/", f"Anniversaries {a}"))
     return v
+
+
+def _piede_link(lang):
+    """Collegamenti del piede: il menu più radar e indice A–Z (restano raggiungibili da ogni pagina)."""
+    it = lang == "it"
+    return _menu_link(lang) + ([("/radar/", "Tutti gli autori (radar)"), ("/autore/", "Indice degli autori")] if it
+                               else [("/en/radar/", "All authors (radar)"), ("/en/author/", "Author index")])
 
 
 def testa_scheda(lang, titolo, descr, url, alterne_, jsonld, altra, cnt, og_tipo="profile", css_extra="", main_cls="", body_cls=""):
@@ -992,7 +998,7 @@ def testa_scheda(lang, titolo, descr, url, alterne_, jsonld, altra, cnt, og_tipo
 def piede_scheda(lang, fonti=None):
     it = lang == "it"
     T = (lambda x, y: x) if it else (lambda x, y: y)
-    lk = " · ".join(f'<a href="{h}">{esc(t)}</a>' for h, t in _menu_link(lang))
+    lk = " · ".join(f'<a href="{h}">{esc(t)}</a>' for h, t in _piede_link(lang))
     return f"""</main>
 <footer class="end">
   <div><p class="m" style="color:var(--redt)">{fonti[0] if fonti else T("Fonti", "Sources")}</p><p>{fonti[1] if fonti else T("Wikidata (CC0), Wikipedia (testi CC BY-SA, con link alla pagina d'origine), Wikimedia Commons (ritratti, ciascuno con la sua licenza), cataloghi nazionali (SBN, BnF, BNE, British Library e Library of Congress). Dati aperti, aggiornati in automatico ogni tre mesi e a dicembre; possono contenere errori.", "Wikidata (CC0), Wikipedia (text CC BY-SA, linked to the original page), Wikimedia Commons (portraits, each with its own licence), national catalogues (SBN, BnF, BNE, British Library and Library of Congress). Open data, updated automatically every three months and in December; it may contain errors.")}</p>
@@ -2390,6 +2396,8 @@ def main():
     aggiorna_home_italiana()
     crea_home_inglese()
     landing_urls = crea_landing()
+    import pagine_paese   # pagine paese e indice «Per paese» (25/11/2026): scripts/pagine_paese.py
+    landing_urls += pagine_paese.crea_pagine_paese()
     import home   # la home (frontespizio), italiano e inglese: scripts/home.py
     home.crea_home({"testa_scheda": testa_scheda, "piede_scheda": piede_scheda, "CSS_ANNO": CSS_ANNO,
                     "marchio": marchio_html(56).replace('<span class="pdr" style="--w:56px">', "").rsplit("</span>", 1)[0]})

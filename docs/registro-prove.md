@@ -1625,3 +1625,8 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - Fatto: il menu del radar (IT/EN) è scritto nell'HTML con le stesse voci che disegna il programma; il programma lo ridisegna uguale, quindi nessun cambio visibile. Spostamento del layout radar invariato.
 - Scoperta: il riquadro delle regole con le fonti di legge (Italia, Francia, Germania, Regno Unito, Svezia, Spagna, UE) esiste solo dentro il programma del radar: Google e le AI non lo vedono. Base per le pagine paese.
 - Mockup (in chat, fuori dal repository): menu per domande e pagina paese per i sei paesi, con dati delle liste (data/2027.json, 2028, es-, us-) e testi del riquadro regole.
+
+## 25/11/2026 — Pagine paese e menu nuovo (solo in locale, non pubblicato)
+- Cosa: nuovo `scripts/pagine_paese.py` (14 pagine: indice «Per paese» e 6 paesi, IT ed EN), costruite con i pezzi della pagina dell'anno; regole lette dal riquadro del radar (un posto solo); fuori classifica esclusi. Menu di tutte le pagine generate: «2027: chi diventa libero · Già pubblici · Per paese · Anniversari 2027»; radar e indice A–Z spostati nel piede.
+- Prova: `pagine.py` completo, poi `prova_regole.py`: test 1–9 e 5b tutti a 0 errori. 834 file cambiati (quasi tutti per il menu).
+- Ancora da fare: menu scritti a mano di radar e Già pubblici; pagine Come funziona e Shop (servono immagini e link Etsy); sitemap, CLS e foto controllati sul sito vero.
