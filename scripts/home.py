@@ -125,6 +125,11 @@ def pagine_frontespizio(anno):
     return [pag[k] for k in ordine]
 
 
+def _stati_us(anno):
+    import pagine as pg
+    return pg.stati_usa_anno(anno)
+
+
 def numeri(anno):
     ue = R.lista_pubblica(_leggi(RADICE / "data" / f"{anno}.json", {}) or {})
     es = R.lista_pubblica(_leggi(RADICE / "data" / f"es-{anno}.json", {}) or {})
@@ -132,7 +137,7 @@ def numeri(anno):
     ver = (_leggi(RADICE / "data" / "us-anni-verificati.json", {}) or {}).get(str(anno), {})
     n = lambda d: sum(1 for a in d.get("autori", []) if a.get("letterario") and a.get("morte"))   # come le pagine dell'anno
     opere = us.get("opere", [])
-    return {"ue": n(ue), "es": n(es), "us": len(opere), "us_ok": sum(1 for o in opere if (ver.get(o["qid"]) or ["nd"])[0] == "ok"),
+    return {"ue": n(ue), "es": n(es), "us": len(opere), "us_ok": sum(1 for o in opere if _stati_us(anno).get(o["qid"]) == "verificata"),   # stesso numero delle pagine 2027 e Stati Uniti (25/11/2026)
             "pub": us.get("anno_pubblicazione") or R.pubblicate_libere_usa_nel(anno), "aggiornato": ue.get("aggiornato") or ""}
 
 
@@ -181,6 +186,7 @@ CSS = r"""
 .colophon .folio{font-style:italic;font-size:15px;color:var(--matita)}
 /* il pulsante è già quello del sito */
 .vai{display:inline-flex;align-items:center;gap:14px;height:56px;padding:0 24px;background:var(--ink);color:var(--paper);text-decoration:none;font-family:var(--mono);font-size:13px;letter-spacing:.1em;text-transform:uppercase;transition:background .3s,color .3s}
+.dove{position:relative;display:inline-block}.dove .vai{cursor:pointer;border:0;min-width:300px;justify-content:space-between}.dove .vai[aria-expanded="true"]{background:var(--red);color:var(--ink)}.dovel{position:absolute;left:0;right:0;top:100%;margin:0;padding:0;list-style:none;background:var(--paper);border:1px solid var(--ink);border-top:0;z-index:20;text-align:left}.dovel a{display:block;padding:14px 24px;font-family:var(--mono);font-size:13px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--ink);border-top:1px solid var(--hair)}.dovel a:hover,.dovel a:focus{background:var(--ink);color:var(--paper);outline:0}
 .vai:hover{background:var(--red);color:var(--ink)}
 .home-sotto .sec:first-child{padding-top:6vh}
 .home-sotto .nums{margin:28px 0 0;border-top:0}
@@ -214,7 +220,7 @@ TESTI = {
         cnt=('<span id="cnt"><i class="lg">1° gennaio {a} · </i><i class="sm">1° gen {a} · </i>tra {g} giorni</span>'),
         nums=[("scrittori liberi in Italia, Francia, Germania e Regno Unito", "morti nel {m}", "/pubblico-dominio-{a}/#ix1", "ue"),
               ("scrittori liberi in Spagna", "morti nel {me}", "/pubblico-dominio-{a}/", "es"),
-              ("libri liberi negli USA", "pubblicati nel {pub} · {usok} con l'anno confermato", "/pubblico-dominio-{a}/#ix2", "us")],
+              ("libri liberi negli USA", "pubblicati nel {pub} · {usok} verificati", "/pubblico-dominio-{a}/#ix2", "us")],
         sez=("Da dove partire", "Le sezioni del sito"), sez_n=("Il 1° gennaio {a}", "Chi diventa libero, e dove"),
         porte=[("/pubblico-dominio-{a}/", "Pubblico dominio {a}", "1° gennaio {a}", "Chi si libera il 1° gennaio, spiegato: i nomi più attesi, i libri americani, le regole paese per paese.", "Leggi"),
                ("/pubblico-dominio/", "Per paese", "Sei paesi, sei regole", "Italia, Francia, Germania, Spagna, Regno Unito e Stati Uniti: la regola di legge di ogni paese e chi entra in pubblico dominio.", "Scegli"),
@@ -243,7 +249,7 @@ TESTI = {
         cnt=('<span id="cnt"><i class="lg">1 January {a} · </i><i class="sm">1 Jan {a} · </i>in {g} days</span>'),
         nums=[("writers free in Italy, France, Germany and the UK", "died in {m}", "/en/public-domain-{a}/#ix1", "ue"),
               ("writers free in Spain", "died in {me}", "/en/public-domain-{a}/", "es"),
-              ("books free in the USA", "published in {pub} · {usok} with the year confirmed", "/en/public-domain-{a}/#ix2", "us")],
+              ("books free in the USA", "published in {pub} · {usok} verified", "/en/public-domain-{a}/#ix2", "us")],
         sez=("Where to start", "The sections of the site"), sez_n=("1 January {a}", "Who becomes free, and where"),
         porte=[("/en/public-domain-{a}/", "Public domain {a}", "1 January {a}", "Who becomes free on 1 January, explained: the most awaited names, the American books, the rules country by country.", "Read"),
                ("/en/public-domain/", "By country", "Six countries, six rules", "Italy, France, Germany, Spain, the UK and the United States: each country's legal rule and who enters the public domain.", "Choose"),
@@ -288,6 +294,12 @@ def pagina(lang, anno, P):
     testa = testa.replace("@@CNT@@", t["cnt"].format(**fmt) if gg else f'<span id="cnt" style="color:var(--redt)">{t["fasi"]["cnt_festa"]}</span>').replace("</head>", '<script src="/assets/regole.js"></script>\n</head>', 1).replace("@@MARCHIO_S@@", P["marchio"]).replace('<meta charset="utf-8">', '<meta charset="utf-8">\n' + rimando, 1)
     numeri_html = "".join(f'<a href="{h.format(**fmt)}"><span class="n">{migliaia(nu[k], lang)}</span><span class="c">{esc(c)}</span><span class="m">{esc(m.format(**fmt))}</span></a>'
                           for c, m, h, k in t["nums"] if nu[k])
+    # «Dove pubblichi?» (Marco, 25/11/2026): una tendina con i sei paesi al posto del pulsante unico verso la pagina dell'anno
+    import pagine_paese as PP
+    voci_p = "".join(f'<li><a href="{PP.url_paese(k, lang).replace(SITO, "")}">{esc(PP.PAESI[k][0] if lang == "it" else PP.PAESI[k][1])}</a></li>' for k in PP.ORDINE)
+    dove = "Dove pubblichi?" if lang == "it" else "Where do you publish?"
+    tendina = (f'<div class="dove" id="dove"><button class="vai" type="button" id="dovebtn" aria-haspopup="true" aria-expanded="false" aria-controls="dovel">'
+               f'<span>{dove}</span> <b id="dovefr" aria-hidden="true">▾</b></button><ul class="dovel" id="dovel" hidden>{voci_p}</ul></div>')
     porte = "".join(f'<a class="porta" href="{h.format(**fmt)}"><span class="m">{esc(y.format(**fmt))}</span><h3>{esc(x.format(**fmt))}</h3>'
                     f'<p>{esc(d.format(**fmt))}</p><span class="go">{esc(v)} →</span></a>' for h, x, y, d, v in t["porte"])
     primo = pag[0]
@@ -300,7 +312,7 @@ def pagina(lang, anno, P):
   </div>
   <div class="colophon">
     <p id="colo">{t["colophon"]}</p>
-    <a class="vai" href="{t["pagina_anno"].format(a=anno)}"><span id="cta">{esc(t["cta"].format(a=anno))}</span> <b>→</b></a>
+    {tendina}
     <span class="folio" id="folio"></span>
   </div>
 </section>
@@ -328,7 +340,7 @@ function applica(M){{
     if(cnt)cnt.lastChild.textContent=F.cnt_conto.split("{{g}}").join(g.toLocaleString(document.documentElement.lang||"it"));return;}}   // prima restava il numero del giorno in cui era stata fatta la pagina
   if(cnt){{cnt.textContent=M==="vigilia"?F.cnt_vigilia:F.cnt_festa;cnt.style.color=M==="vigilia"?"":"var(--redt)";}}
   el("colo").innerHTML=fmtF(M==="vigilia"?F.col_vigilia:M==="oggi"?F.col_oggi:F.col_dal);
-  el("cta").textContent=M==="vigilia"?F.cta_vigilia:M==="oggi"?F.cta_oggi:F.cta_dal;
+  // il pulsante è la tendina «Dove pubblichi?»: non cambia con la fase
   if(M!=="vigilia"){{const z=M==="oggi"?F.sez_oggi:F.sez_dal;el("sezn").textContent=fmtF(z[0]);el("sezn2").textContent=z[1];
     if(M==="oggi")P.forEach(p=>{{p.r=p.r.split(fmtF(F.data_em)).join(F.oggi_em)}});return;}}
   const o=el("orologio"),mezz=new Date(ANNO,0,1);
@@ -338,6 +350,11 @@ function applica(M){{
   const t=setInterval(tic,1000);tic();
 }}
 applica(modo(new Date()));
+(function(){{const b=el("dovebtn"),l=el("dovel"),fr=el("dovefr");if(!b)return;
+  const chiudi=()=>{{l.hidden=true;b.setAttribute("aria-expanded","false");fr.textContent="▾";}};
+  b.onclick=()=>{{const o=l.hidden;l.hidden=!o;b.setAttribute("aria-expanded",String(o));fr.textContent=o?"▴":"▾";if(o)l.querySelector("a").focus();}};
+  document.addEventListener("click",e=>{{if(!el("dove").contains(e.target))chiudi();}});
+  document.addEventListener("keydown",e=>{{if(e.key==="Escape"){{chiudi();b.focus();}}}});}})();
 const lenta=matchMedia("(prefers-reduced-motion: reduce)").matches;
 let i=0;
 function mostra(k){{const p=P[k];el("autore").textContent=p.a;el("titolo").textContent=p.t;el("folio").textContent=FOLIO.replace("{{k}}",k+1).replace("{{n}}",P.length);

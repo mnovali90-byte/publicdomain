@@ -1419,7 +1419,7 @@ def pagina_indice(voci, lang):
     A = ANNO_PROSSIMO
     paesi = [("tutti", T("Tutti", "All")), ("it", T("Italia", "Italy")), ("fr", T("Francia", "France")), ("de", T("Germania", "Germany")),
              ("uk", T("Regno Unito", "United Kingdom")), ("es", T("Spagna", "Spain"))]
-    anni_f = [("tutti", T("Tutti gli anni", "All years"))] + [(str(y), T(f"1° gennaio {y}", f"1 January {y}")) for y in (A, A + 1)]
+    anni_f = [("tutti", T("Tutti gli anni", "All years"))] + [(str(y), T(f"1° gennaio {y}", f"1 January {y}")) for y in (A,)]   # l'anno dopo compare il 7 gennaio (Marco, 21 e 25/11/2026)
     sel = lambda nid, op: f'<select id="{nid}">' + "".join(f'<option value="{v}">{esc(t)}</option>' for v, t in op) + "</select>"
     lead_n = (f"{len(voci)} autori con una pagina dedicata: biografia, opere e data di pubblico dominio paese per paese." if it else
               f"{len(voci)} authors with a dedicated page: biography, Italian editions and the public-domain date country by country.")

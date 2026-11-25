@@ -396,6 +396,7 @@ body.ix-in .pf{opacity:1}body.menu-on .pf{opacity:0}
 .colophon .folio{font-style:italic;font-size:15px;color:var(--matita)}
 /* il pulsante è già quello del sito */
 .vai{display:inline-flex;align-items:center;gap:14px;height:56px;padding:0 24px;background:var(--ink);color:var(--paper);text-decoration:none;font-family:var(--mono);font-size:13px;letter-spacing:.1em;text-transform:uppercase;transition:background .3s,color .3s}
+.dove{position:relative;display:inline-block}.dove .vai{cursor:pointer;border:0;min-width:300px;justify-content:space-between}.dove .vai[aria-expanded="true"]{background:var(--red);color:var(--ink)}.dovel{position:absolute;left:0;right:0;top:100%;margin:0;padding:0;list-style:none;background:var(--paper);border:1px solid var(--ink);border-top:0;z-index:20;text-align:left}.dovel a{display:block;padding:14px 24px;font-family:var(--mono);font-size:13px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--ink);border-top:1px solid var(--hair)}.dovel a:hover,.dovel a:focus{background:var(--ink);color:var(--paper);outline:0}
 .vai:hover{background:var(--red);color:var(--ink)}
 .home-sotto .sec:first-child{padding-top:6vh}
 .home-sotto .nums{margin:28px 0 0;border-top:0}
@@ -440,13 +441,13 @@ body.ix-in .pf{opacity:1}body.menu-on .pf{opacity:0}
   </div>
   <div class="colophon">
     <p id="colo">Every 1 January, in Europe and the United States, the copyright of hundreds of books expires. The next one is in <span class="giorni" id="gg"></span> days.</p>
-    <a class="vai" href="/en/public-domain-2027/"><span id="cta">See who becomes free in 2027</span> <b>→</b></a>
+    <div class="dove" id="dove"><button class="vai" type="button" id="dovebtn" aria-haspopup="true" aria-expanded="false" aria-controls="dovel"><span>Where do you publish?</span> <b id="dovefr" aria-hidden="true">▾</b></button><ul class="dovel" id="dovel" hidden><li><a href="/en/public-domain/italy/">Italy</a></li><li><a href="/en/public-domain/france/">France</a></li><li><a href="/en/public-domain/germany/">Germany</a></li><li><a href="/en/public-domain/spain/">Spain</a></li><li><a href="/en/public-domain/united-kingdom/">United Kingdom</a></li><li><a href="/en/public-domain/united-states/">United States</a></li></ul></div>
     <span class="folio" id="folio"></span>
   </div>
 </section>
 <div class="home-sotto">
 <section class="sec"><div class="sh m"><h2 id="sezn">1 January 2027</h2><span id="sezn2">Who becomes free, and where</span></div>
-<div class="nums"><a href="/en/public-domain-2027/#ix1"><span class="n">831</span><span class="c">writers free in Italy, France, Germany and the UK</span><span class="m">died in 1956</span></a><a href="/en/public-domain-2027/"><span class="n">793</span><span class="c">writers free in Spain</span><span class="m">died in 1946</span></a><a href="/en/public-domain-2027/#ix2"><span class="n">155</span><span class="c">books free in the USA</span><span class="m">published in 1931 · 109 with the year confirmed</span></a></div></section>
+<div class="nums"><a href="/en/public-domain-2027/#ix1"><span class="n">831</span><span class="c">writers free in Italy, France, Germany and the UK</span><span class="m">died in 1956</span></a><a href="/en/public-domain-2027/"><span class="n">793</span><span class="c">writers free in Spain</span><span class="m">died in 1946</span></a><a href="/en/public-domain-2027/#ix2"><span class="n">155</span><span class="c">books free in the USA</span><span class="m">published in 1931 · 63 verified</span></a></div></section>
 <section class="sec"><div class="sh m"><h2>Where to start</h2><span>The sections of the site</span></div>
 <div class="porte"><a class="porta" href="/en/public-domain-2027/"><span class="m">1 January 2027</span><h3>Public domain 2027</h3><p>Who becomes free on 1 January, explained: the most awaited names, the American books, the rules country by country.</p><span class="go">Read →</span></a><a class="porta" href="/en/public-domain/"><span class="m">Six countries, six rules</span><h3>By country</h3><p>Italy, France, Germany, Spain, the UK and the United States: each country's legal rule and who enters the public domain.</p><span class="go">Choose →</span></a><a class="porta" href="/en/already-public/"><span class="m">Archive</span><h3>Already public</h3><p>Search a title or an author: is it already free in Italy, France, Germany, Spain, the UK, the USA?</p><span class="go">Search →</span></a><a class="porta" href="/en/calendar/2027/"><span class="m">Anniversaries</span><h3>Calendar 2027</h3><p>The literary anniversaries of 2027, day by day, to add to your calendar.</p><span class="go">Open →</span></a><a class="porta" href="/en/how-it-works/"><span class="m">The method</span><h3>How it works</h3><p>Where the data comes from, how the dates are worked out and how certain they are.</p><span class="go">Read →</span></a><a class="porta" href="/en/shop/"><span class="m">Posters</span><h3>Shop</h3><p>Typographic posters with the opening lines of public domain books, printed on demand.</p><span class="go">Look →</span></a></div></section>
 </div>
@@ -468,7 +469,7 @@ function applica(M){
     if(cnt)cnt.lastChild.textContent=F.cnt_conto.split("{g}").join(g.toLocaleString(document.documentElement.lang||"it"));return;}   // prima restava il numero del giorno in cui era stata fatta la pagina
   if(cnt){cnt.textContent=M==="vigilia"?F.cnt_vigilia:F.cnt_festa;cnt.style.color=M==="vigilia"?"":"var(--redt)";}
   el("colo").innerHTML=fmtF(M==="vigilia"?F.col_vigilia:M==="oggi"?F.col_oggi:F.col_dal);
-  el("cta").textContent=M==="vigilia"?F.cta_vigilia:M==="oggi"?F.cta_oggi:F.cta_dal;
+  // il pulsante è la tendina «Dove pubblichi?»: non cambia con la fase
   if(M!=="vigilia"){const z=M==="oggi"?F.sez_oggi:F.sez_dal;el("sezn").textContent=fmtF(z[0]);el("sezn2").textContent=z[1];
     if(M==="oggi")P.forEach(p=>{p.r=p.r.split(fmtF(F.data_em)).join(F.oggi_em)});return;}
   const o=el("orologio"),mezz=new Date(ANNO,0,1);
@@ -478,6 +479,11 @@ function applica(M){
   const t=setInterval(tic,1000);tic();
 }
 applica(modo(new Date()));
+(function(){const b=el("dovebtn"),l=el("dovel"),fr=el("dovefr");if(!b)return;
+  const chiudi=()=>{l.hidden=true;b.setAttribute("aria-expanded","false");fr.textContent="▾";};
+  b.onclick=()=>{const o=l.hidden;l.hidden=!o;b.setAttribute("aria-expanded",String(o));fr.textContent=o?"▴":"▾";if(o)l.querySelector("a").focus();};
+  document.addEventListener("click",e=>{if(!el("dove").contains(e.target))chiudi();});
+  document.addEventListener("keydown",e=>{if(e.key==="Escape"){chiudi();b.focus();}});})();
 const lenta=matchMedia("(prefers-reduced-motion: reduce)").matches;
 let i=0;
 function mostra(k){const p=P[k];el("autore").textContent=p.a;el("titolo").textContent=p.t;el("folio").textContent=FOLIO.replace("{k}",k+1).replace("{n}",P.length);

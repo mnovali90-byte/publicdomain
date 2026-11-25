@@ -234,7 +234,7 @@ def pagina_paese_ue(k, lang, REG, liste):
         {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": r}} for q, r in faq]}]}
     jsonld = '<script type="application/ld+json">' + json.dumps(jl, ensure_ascii=False).replace("</", "<\\/") + "</script>"
     altra = (f'<a href="{url_paese(k, "en").replace(P.SITO, "")}" hreflang="en">EN</a>' if it else f'<a href="{url_paese(k, "it").replace(P.SITO, "")}" hreflang="it">IT</a>')
-    out = [apri(lang, titolo, descr, url, alterne(lambda l: url_paese(k, l)), jsonld, altra, anno)]
+    out = [apri(lang, titolo, descr, url, alterne(lambda l: url_paese(k, l)), jsonld, altra, anno, CSS_ELENCO)]
     w = lambda t: f'<span class="w"><span>{t}</span></span>'
     out.append(f'<section class="open">\n<nav class="bc m" aria-label="{T("Sei qui", "You are here")}"><a href="{"/" if it else "/en/"}">Home</a> › '
                f'<a href="{url_indice(lang).replace(P.SITO, "")}">{T("Per paese", "By country")}</a> › <span>{esc(nome)}</span></nav>\n'
@@ -245,20 +245,12 @@ def pagina_paese_ue(k, lang, REG, liste):
             (len(tutti), T(f"scrittori liberi {in_it} dal 1° gennaio {anno}", f"writers free {in_en} from 1 January {anno}"), T(f"di tutti i paesi, morti nel {morti}", f"from every country, died in {morti}")),
             (n_naz, T(f"di questi sono {agg_it}", f"of them are {agg_en}"), T(f"morti nel {morti}", f"died in {morti}"))]
     out.append('<div class="nums">' + "".join(f'<a href="#ix1"><span class="n">{P.migliaia(x, lang)}</span><span class="c">{esc(c)}</span><span class="m">{esc(m)}</span></a>' for x, c, m in nums) + "</div>\n")
-    wl = {"it": "italiana", "fr": "francese", "de": "tedesca", "uk": "inglese", "es": "spagnola"}[k]
+    wl = {"it": "italiano", "fr": "francese", "de": "tedesco", "uk": "inglese", "es": "spagnolo"}[k]
     wl_en = {"it": "Italian", "fr": "French", "de": "German", "uk": "English", "es": "Spanish"}[k]
-    r1, c1 = righe(lib27, 12, lang)
-    r2, c2 = righe(naz27, 5, lang)
-    cred = (f'<p class="cred">{T("Ritratti da Wikimedia Commons", "Portraits from Wikimedia Commons")} — {" · ".join(dict.fromkeys(c1 + c2))}</p>\n') if (c1 or c2) else ""
-    out.append(sezione(T(f"Chi diventa libero {in_it} nel {anno}", f"Who becomes free {in_en} in {anno}"),
-                       T(f"morti nel {morti} · in ordine di visite su Wikipedia in {wl}", f"died in {morti} · by {wl_en} Wikipedia visits"),
-                       f'<ol class="rows" style="margin-top:28px">\n{r1}</ol>\n'
-                       f'<a href="{app}#/{anno}" class="more">{T(f"Tutti i {P.migliaia(len(tutti), lang)} scrittori liberi {in_it}, nel radar →", f"All {P.migliaia(len(tutti), lang)} writers free {in_en}, in the radar →")}</a>'
-                       f'<a href="{P.url_landing(lang, anno).replace(P.SITO, "")}" class="more">{T(f"Pubblico dominio {anno} →", f"Public domain {anno} →")}</a>\n', "sec ix", "ix1"))
-    if naz27:
-        out.append(sezione(T(f"Gli scrittori {agg_it}", f"{agg_en} writers"), T(f"morti nel {morti}", f"died in {morti}"),
-                           f'<ol class="rows" style="margin-top:28px">\n{r2}</ol>\n', "sec ix"))
-    out[-1] = out[-1][::-1].replace("</section>"[::-1], ("</section>" + cred[::-1].join(["", ""]) if False else ("</section>"[::-1] + cred[::-1])), 1)[::-1]   # crediti dentro l'ultima lista
+    # 25/11/2026 (Marco): un elenco solo, completo, con ricerca, «solo del paese» ed Excel, al posto della classifica dei 12
+    # e della lista degli scrittori del paese. Gli autori di data/fuori_classifica.json restano nell'elenco completo e nei
+    # conteggi, come nel radar (pagine.opera_in_vetrina: escono solo da vetrine e classifiche).
+    out.append(elenco_completo(k, lang, sorted(tutti, key=lambda a: -(a.get(f"visite_{lingua}") or 0)), naz, morti, wl, wl_en, in_it, in_en, agg_it, agg_en, anni))
     gp = "/gia-pubblici/" if it else "/en/already-public/"
     cal = f"/calendario/{anno}/" if it else f"/en/calendar/{anno}/"
     out.append(sezione(T(f"Già liberi {in_it}", f"Already free {in_en}"), T("Archivio", "Archive"),
@@ -276,6 +268,76 @@ def pagina_paese_ue(k, lang, REG, liste):
     out.append(P.JS_ANNO.replace("@@LOC@@", "it-IT" if it else "en-GB"))
     out.append(P.piede_scheda(lang))
     return "".join(out), url
+
+
+CSS_ELENCO = (".tutti .ctl{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:26px 0 8px}"
+              ".tutti .q{flex:1 1 280px;display:flex;align-items:center;gap:10px;border-bottom:2px solid var(--ink);padding:6px 0}"
+              ".tutti .q input{border:0;background:transparent;font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:clamp(24px,3vw,34px);width:100%;outline:0;color:var(--ink);border-radius:0}"
+              ".tutti .ch{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;padding:10px 14px;border:1px solid var(--ink);background:transparent;cursor:pointer;color:var(--ink)}"
+              ".tutti .ch.on{background:var(--ink);color:var(--paper)}"
+              ".tutti ol{list-style:none;margin:18px 0 0;padding:0;border-top:1px solid var(--ink)}"
+              ".tutti li{display:grid;grid-template-columns:56px minmax(0,1fr);gap:2px 16px;padding:12px 0;border-bottom:1px solid var(--hair)}"
+              ".tutti li .k{grid-row:1/3;font-family:var(--mono);font-size:12px;color:var(--grey);padding-top:6px}"
+              ".tutti li .nm{font-size:20px;line-height:1.25}.tutti li .nm a{color:inherit;text-decoration:none;border-bottom:1px solid var(--hair)}"
+              ".tutti li .nm a:hover{color:var(--red)}"
+              ".tutti li .mt{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--grey)}"
+              ".tutti .conta{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--grey);margin-top:14px}"
+              ".tutti li[hidden],.tutti [hidden]{display:none}")
+
+
+def _norm(t):
+    import unicodedata
+    return "".join(c for c in unicodedata.normalize("NFD", t or "") if not unicodedata.combining(c)).lower()
+
+
+def elenco_completo(k, lang, autori, naz, morti, wl, wl_en, in_it, in_en, agg_it, agg_en, anni):
+    """Elenco completo di chi diventa libero nel paese: un elenco solo, ricerca, filtro «solo del paese», Excel (CSV)."""
+    it = lang == "it"
+    T = (lambda a, b: a) if it else (lambda a, b: b)
+    anno = P.ANNO_PROSSIMO
+    pag = "pagina" if it else "pagina_en"
+    li, n_naz = [], 0
+    for i, a in enumerate(autori):
+        del_paese = bool(set(a.get("paesi") or []) & set(naz))
+        n_naz += del_paese
+        nome = P.pulisci(a["nome"])
+        if it:
+            ruolo = ", ".join((a.get("professioni") or [])[:2])
+        else:
+            ruolo = re.sub(r"\s*\([^)]*\)\s*$", "", P.pulisci(a.get("descrizione")))
+        nome_h = f'<a href="{"/autore/" if it else "/en/author/"}{a[pag]}/">{esc(nome)}</a>' if a.get(pag) else esc(nome)
+        li.append(f'<li data-p="{int(del_paese)}" data-n="{esc(_norm(nome))}"><span class="k">{i + 1:03d}</span><span class="nm">{nome_h}</span>'
+                  f'<span class="mt">{P.anno_di(a.get("nascita")) or "?"}–{P.anno_di(a.get("morte"))}{(" · " + esc(ruolo)) if ruolo else ""}</span></li>')
+    n = P.migliaia(len(autori), lang)
+    frase = T(f"{in_it[0].upper() + in_it[1:]} le opere diventano libere {anni} anni dopo la morte dell’autore. Il 1° gennaio {anno} tocca agli scrittori morti nel {morti}, di qualsiasi paese.",
+              f"{in_en[0].upper() + in_en[1:]} works become free {anni} years after the author’s death. On 1 January {anno} it is the turn of writers who died in {morti}, from any country.")
+    if k == "es":   # gli 80 anni valgono solo per chi è morto prima del 7 dicembre 1987 (riquadro delle regole del radar)
+        frase = T(f"In Spagna, per chi è morto prima del 7 dicembre 1987, le opere diventano libere 80 anni dopo la morte dell’autore. Il 1° gennaio {anno} tocca agli scrittori morti nel {morti}, di qualsiasi paese.",
+                  f"In Spain, for authors who died before 7 December 1987, works become free 80 years after the author’s death. On 1 January {anno} it is the turn of writers who died in {morti}, from any country.")
+    if k == "fr":
+        frase += T(" Gli autori «morti per la Francia» hanno 30 anni in più e non sono in questo elenco.", " Authors who «died for France» get 30 more years and are not in this list.")
+    testi = {"primi": T("I primi {v} di {n}, in ordine di visite su Wikipedia in " + wl, "The first {v} of {n}, by " + wl_en + " Wikipedia visits"),
+             "trovati": T("{n} trovati", "{n} found"), "trovato": T("1 trovato", "1 found"), "file": f"{PAESI[k][2] if it else PAESI[k][3]}-{anno}.csv",
+             "intest": T("Numero;Nome;Anni;Professione", "Number;Name;Years;Occupation")}
+    js = ("<script>(function(){var L=[].slice.call(document.querySelectorAll('#lista li')),f='tutti',q='',max=30,T=" + json.dumps(testi, ensure_ascii=False) + ";"
+          "function nr(t){return t.normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').toLowerCase().trim()}"
+          "function vai(){var n=0,v=0;L.forEach(function(li){var ok=(f==='tutti'||li.dataset.p==='1')&&(!q||q.every(function(t){return li.dataset.n.split(' ').some(function(w){return w.indexOf(t)===0})}));if(ok)n++;var m=ok&&(q||f!=='tutti'||n<=max);li.hidden=!m;if(m)v++});"
+          "document.getElementById('conta').textContent=(q||f!=='tutti')?(n===1?T.trovato:T.trovati.replace('{n}',n)):T.primi.replace('{v}',v).replace('{n}',n);document.getElementById('altri').hidden=v>=n}"
+          "document.getElementById('q').addEventListener('input',function(e){q=nr(e.target.value);q=q?q.split(/\\s+/):'';vai()});"
+          "[].forEach.call(document.querySelectorAll('.tutti [data-f]'),function(b){b.onclick=function(){f=b.dataset.f;[].forEach.call(document.querySelectorAll('.tutti [data-f]'),function(x){x.classList.toggle('on',x===b);x.setAttribute('aria-pressed',x===b)});vai()}});"
+          "document.getElementById('altri').onclick=function(){max=1e9;vai()};"
+          "document.getElementById('xls').onclick=function(){var r=[T.intest];L.forEach(function(li){var mt=li.querySelector('.mt').textContent.split(' · ');r.push([li.querySelector('.k').textContent,li.querySelector('.nm').textContent,mt[0],mt.slice(1).join(' · ')].map(function(x){return '\"'+x.replace(/\"/g,'\"\"')+'\"'}).join(';'))});"
+          "var a=document.createElement('a');a.href=URL.createObjectURL(new Blob(['\\ufeff'+r.join('\\n')],{type:'text/csv;charset=utf-8'}));a.download=T.file;document.body.appendChild(a);a.click();a.remove()};vai()})();</script>")
+    corpo = (f'<p class="say" style="margin-top:22px;font-size:clamp(18px,1.6vw,22px)">{esc(frase)}</p>'
+             f'<div class="ctl"><label class="q"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>'
+             f'<input id="q" type="search" placeholder="{T("Cerca un nome", "Search a name")}" aria-label="{T("Cerca un nome", "Search a name")}"></label>'
+             f'<button class="ch on" type="button" data-f="tutti" aria-pressed="true">{T("Tutti", "All")} · {n}</button>'
+             f'<button class="ch" type="button" data-f="paese" aria-pressed="false">{T(f"Solo {agg_it}", f"{agg_en} only")} · {P.migliaia(n_naz, lang)}</button>'
+             f'<button class="ch" type="button" id="xls">{T("Scarica Excel", "Download Excel")}</button></div>'
+             f'<p class="conta" id="conta" aria-live="polite"></p><ol id="lista">{"".join(li)}</ol>'
+             f'<button class="ch" type="button" id="altri" style="margin-top:18px">{T("Mostra tutti", "Show all")}</button>\n' + js.replace("li.dataset.p==='1'", "li.dataset.p==='1'").replace("f==='tutti'||", "f==='tutti'||") + "\n")
+    return sezione(T(f"Chi diventa libero {in_it} nel {anno}", f"Who becomes free {in_en} in {anno}"),
+                   T(f"{n} scrittori · morti nel {morti}", f"{n} writers · died in {morti}"), corpo, "sec tutti", "ix1")
 
 
 def altri_paesi(k, lang):
