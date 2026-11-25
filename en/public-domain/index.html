@@ -267,6 +267,8 @@ h1.h1 .w:nth-child(2)>span{animation-delay:60ms}h1.h1 .w:nth-child(3)>span{anima
 .more+.more{margin-left:26px}
 @media (max-width:860px){.more+.more{margin-left:0}.more{margin-right:20px}}
 .cred{font-family:var(--mono);font-size:10px;line-height:1.7;letter-spacing:.03em;color:var(--grey);margin:22px 0 0;max-width:980px}
+/* crediti delle foto chiusi: si aprono toccando (Marco, 25/11/2026) */
+.cred summary{cursor:pointer;list-style:none;text-decoration:underline;text-underline-offset:3px;width:max-content;max-width:100%}.cred summary::-webkit-details-marker{display:none}.cred summary::after{content:' +'}.cred[open] summary::after{content:' −'}.cred p{margin:8px 0 0}.cred:has(p:empty){display:none}
 .cred a{color:var(--grey)}
 
 .pf{position:fixed;z-index:30;right:var(--pad);top:52%;width:min(24vw,320px);aspect-ratio:4/5;transform:translateY(-50%);pointer-events:none;opacity:0;transition:opacity 300ms}

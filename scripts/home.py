@@ -164,7 +164,7 @@ CSS = r"""
   display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:110px var(--pad) 64px;min-height:100svh}
 .fronte .sc{font-variant-caps:all-small-caps;letter-spacing:.09em}
 .fronte .autore{margin:0;font-size:clamp(17px,1.5vw,22px);color:var(--matita)}
-.fronte .titolo{margin:.28em auto 0;font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(64px,11.5vw,200px);line-height:.92;letter-spacing:-.015em;text-transform:none;text-wrap:balance;max-width:12ch}
+.fronte .titolo{margin:.28em auto 0;font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(64px,11.5vw,200px);line-height:1.04;letter-spacing:-.015em;text-transform:none;text-wrap:balance;max-width:12ch}
 .fronte .diritti{margin:clamp(28px,4.5vh,56px) auto 0;font-size:clamp(18px,1.6vw,24px);line-height:1.4;max-width:30ch;min-height:2.8em;text-wrap:balance}
 #riga{display:inline}
 #riga.vecchia{color:var(--matita);background:linear-gradient(var(--ink),var(--ink)) left 58%/0% 1.5px no-repeat;transition:background-size .8s var(--lento),opacity .4s}
@@ -203,7 +203,7 @@ CSS = r"""
 .porta .go{margin-top:20px;font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;border-bottom:2px solid var(--red);padding-bottom:4px}
 .porta:hover h3{color:var(--red)}
 @media (max-width:760px){.porte{grid-template-columns:1fr}.porta{padding:28px 0 32px}.porta:nth-child(odd){border-right:0}.porta h3{font-size:40px}}
-@media (max-width:760px){.fronte .titolo{min-height:1.84em;display:flex;align-items:flex-end;justify-content:center}.fronte .diritti{font-size:18px}}
+@media (max-width:760px){.fronte .titolo{min-height:2.08em;display:flex;align-items:flex-end;justify-content:center}.fronte .diritti{font-size:18px}}
 @media (prefers-reduced-motion:reduce){.fronte *{animation-duration:1ms!important;transition-duration:1ms!important}}
 """
 

@@ -119,7 +119,7 @@ h1.h1 em{font-style:normal;color:var(--red)}
 .tbd{border:1.5px dashed currentColor;padding:0 5px}
 .lnk{display:flex;flex-wrap:wrap;gap:12px 28px;margin-top:24px}
 .lnk a,.lnk button{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;border-bottom:2px solid var(--red);padding-bottom:4px}
-.cred{font-family:var(--mono);font-size:10px;line-height:1.7;letter-spacing:.03em;color:var(--grey);margin:20px 0 0;max-width:1000px}
+.cred{font-family:var(--mono);font-size:10px;line-height:1.7;letter-spacing:.03em;color:var(--grey);margin:20px 0 0;max-width:1000px}.cred summary{cursor:pointer;list-style:none;text-decoration:underline;text-underline-offset:3px;width:max-content;max-width:100%}.cred summary::-webkit-details-marker{display:none}.cred summary::after{content:' +'}.cred[open] summary::after{content:' −'}.cred p{margin:8px 0 0}.cred:has(p:empty){display:none}
 .cred a{color:var(--grey)}
 
 .pf{position:fixed;z-index:30;right:var(--pad);top:54%;width:min(24vw,320px);aspect-ratio:4/5;transform:translateY(-50%);pointer-events:none;opacity:0;transition:opacity 300ms}
@@ -466,13 +466,13 @@ dialog#finestra::backdrop{background:rgba(12,12,16,.5)}
 <li class="row" data-f="https://commons.wikimedia.org/wiki/Special:FilePath/Ernest_Thompson_Seton.jpg?width=480" data-i="ES"><span class="no">12</span><span class="nm"><a href="/autore/ernest-thompson-seton/">Ernest Thompson Seton</a></span><span class="mt">saggista<br>1860 – 23 ottobre 1946</span></li>
 </ol></div>
     <div class="lnk" id="indice-link"></div>
-    <p class="cred" id="cred"></p>
+    <details class="cred"><summary data-t="creditiFoto">Crediti delle foto</summary><p id="cred"></p></details>
   </section>
 
   <section class="sec" id="grandi-nomi" hidden>
     <div class="sh m"><h2 class="m" id="grandi-occhiello" style="margin:0;font-weight:500;color:var(--ink)"></h2><span id="grandi-titolo"></span></div>
     <div class="big7" id="grandi"></div>
-    <p class="cred" id="cred2"></p>
+    <details class="cred"><summary data-t="creditiFoto">Crediti delle foto</summary><p id="cred2"></p></details>
   </section>
 
   <section class="sec" id="scaffali" hidden>
@@ -637,7 +637,7 @@ it: {
   mieiOcc: "La tua lista", mieiTit: "I miei candidati",
   mieiVuoto: "Tocca il cuore su un autore per metterlo qui. La lista resta su questo dispositivo e puoi scaricarla in Excel.",
   scaricaMiei: "Scarica in Excel · {n}", togli: "Togli", togliAria: "Togli {nome} dalla lista", liberoIndice: "libero dal {d}", indiceN: "{m} {n}",
-  archOcc: "L'archivio", archTit: "Elenco completo: {n}", cerca: "Cerca un autore",
+  creditiFoto: "Crediti delle foto", archOcc: "L'archivio", archTit: "Elenco completo: {n}", cerca: "Cerca un autore",
   fLett: "Autori letterari · {n}", fCon: "Scrittori · {n}", bioAltra: "Biografia da Wikipedia in {l}: non esiste una pagina nella tua lingua.", bioAltraPresto: "Biografia in {l}: la versione nella tua lingua arriverà con il prossimo aggiornamento dei dati.", primoPer: "{r}° per notorietà online", slideAria: "Autore {i} di {t}", prec: "Precedente", succ: "Successivo", vaiA: "Vai all'autore {i}", fNarr: "Narrativa, poesia, teatro · {n}", fAltri: "Saggisti e altri · {n}", fSenza: "Senza opere in Wikidata · {n}", fTutti: "Tutti · {n}", fSenzaIt: "Senza edizioni italiane · {n}",
   oPop: "Interesse", oData: "Data", nessuno: "Nessun autore corrisponde alla ricerca.",
   mostraAltri: "Mostra altri {n} →", scaricaElenco: "Scarica questo elenco in Excel · {n}",
@@ -755,7 +755,7 @@ en: {
   mieiOcc: "Your list", mieiTit: "My shortlist",
   mieiVuoto: "Tap the heart on an author to put them here. The list stays on this device and you can download it as a spreadsheet.",
   scaricaMiei: "Download as Excel · {n}", togli: "Remove", togliAria: "Remove {nome} from the list", liberoIndice: "free from {d}", indiceN: "{m} {n}",
-  archOcc: "The archive", archTit: "Full list: {n}", cerca: "Search an author",
+  creditiFoto: "Photo credits", archOcc: "The archive", archTit: "Full list: {n}", cerca: "Search an author",
   fLett: "Literary authors · {n}", fCon: "Writers · {n}", bioAltra: "Biography from Wikipedia in {l}: there is no page in your language.", bioAltraPresto: "Biography in {l}: the version in your language will arrive with the next data update.", primoPer: "#{r} by online fame", slideAria: "Author {i} of {t}", prec: "Previous", succ: "Next", vaiA: "Go to author {i}", fNarr: "Fiction, poetry, theatre · {n}", fAltri: "Essayists and others · {n}", fSenza: "No works in Wikidata · {n}", fTutti: "All · {n}", fSenzaIt: "No Italian editions · {n}",
   oPop: "Interest", oData: "Date", nessuno: "No author matches your search.",
   mostraAltri: "Show {n} more →", scaricaElenco: "Download this list as Excel · {n}",

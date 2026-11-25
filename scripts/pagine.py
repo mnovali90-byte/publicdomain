@@ -1051,6 +1051,14 @@ def _data_breve(lang, anno):
     return data_l(lang, anno).replace("1° gennaio", "1° gen").replace("1 January", "1 Jan")
 
 
+def crediti_foto(lang, titolo, voci):
+    """Crediti dei ritratti (licenze di Wikimedia Commons): chiusi, si aprono toccando «Crediti delle foto» (25/11/2026)."""
+    if not voci:
+        return ""
+    s = "Crediti delle foto" if lang == "it" else "Photo credits"
+    return f'<details class="cred"><summary>{s} ({len(voci)})</summary><p>{titolo} — {" · ".join(voci)}</p></details>\n'
+
+
 def _tendina(lang):
     import pagine_paese   # «Dove pubblichi?» in un posto solo (scripts/pagine_paese.py)
     return pagine_paese.tendina_html(lang)
@@ -2095,7 +2103,7 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
         out.append(f'</ol>\n<a href="#autori" class="more">{T(f"Tutti i {len(aut)} scrittori con una scheda →", f"All {len(aut)} writers with a page →")}</a>'
                    f'<a href="{pp}" class="more">{T(f"Tutti gli {n_(n_ue)}, paese per paese →", f"All {n_(n_ue)}, country by country →")}</a>\n')
         if crediti:
-            out.append(f'<p class="cred">{T("Ritratti da Wikimedia Commons", "Portraits from Wikimedia Commons")} — {" · ".join(crediti)}</p>\n')
+            out.append(crediti_foto(lang, T("Ritratti da Wikimedia Commons", "Portraits from Wikimedia Commons"), crediti))
         out.append("</section>\n")
 
     # 3. i libri USA
@@ -2130,7 +2138,7 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
                        f'<span class="nm"><a href="{app}#/opera/{o["qid"]}">{esc(t)}</a></span><span class="mt">{esc(chi)}<br>{badge}</span></li>\n')
         out.append(f'</ol>\n<a href="{pp_us}" class="more">{T(f"Tutti i {n_us} libri: {n_st['verificata']} con la prima uscita verificata, {n_st['edizione']} con l&#39;anno dell&#39;edizione confermato, {n_st['da_confermare']} da confermare →", f"All {n_us} books: {n_st['verificata']} with the first publication verified, {n_st['edizione']} with the edition year confirmed, {n_st['da_confermare']} to be confirmed →")}</a>\n')
         if crediti_us:
-            out.append(f'<p class="cred">{T("Ritratti degli autori da Wikimedia Commons", "Authors\' portraits from Wikimedia Commons")} — {" · ".join(crediti_us)}</p>\n')
+            out.append(crediti_foto(lang, T("Ritratti degli autori da Wikimedia Commons", "Authors' portraits from Wikimedia Commons"), crediti_us))
         out.append("</section>\n")
 
     # 4. paese per paese

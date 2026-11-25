@@ -437,14 +437,14 @@ def pagina_usa(lang, liste):
     rr = [riga_us(i, o, "verificata") for i, o in enumerate(verif)]
     r2 = [riga_us(len(verif) + i, o, st.get(o["qid"], "da_confermare")) for i, o in enumerate(altri)]
     n_ed, n_da = sum(1 for o in altri if st.get(o["qid"]) == "edizione"), sum(1 for o in altri if st.get(o["qid"], "da_confermare") == "da_confermare")
-    amplia = (f'<button type="button" class="more" id="us-altri-btn" aria-expanded="false" aria-controls="us-altri" style="background:none;border:0;border-bottom:2px solid var(--red);cursor:pointer;font:inherit;padding:0 0 4px">'
+    amplia = (f'<button type="button" class="more" id="us-altri-btn" aria-expanded="false" aria-controls="us-altri" style="background:none;border:0;border-bottom:2px solid var(--red);cursor:pointer;color:var(--ink);text-align:left">'
               f'{T(f"Mostra anche gli altri {len(altri)}: {n_ed} con l’edizione confermata, {n_da} da confermare", f"Also show the other {len(altri)}: {n_ed} edition confirmed, {n_da} to be confirmed")} ↓</button>'
               f'<div id="us-altri" hidden><p class="lede" style="margin-top:28px">{esc(T("Questi libri non sono ancora verificati: la prima uscita non è documentata da due fonti indipendenti o da una scheda del Catalog of Copyright Entries.", "These books are not verified yet: their first publication is not documented by two independent sources or by a Catalog of Copyright Entries record."))}</p>'
               f'<ol class="rows" style="margin-top:20px">\n{"".join(r2)}</ol></div>'
               '<script>(function(){var b=document.getElementById("us-altri-btn"),d=document.getElementById("us-altri");b.onclick=function(){var o=d.hidden;d.hidden=!o;b.setAttribute("aria-expanded",String(o));b.lastChild&&0;b.innerHTML=b.innerHTML.replace(o?"↓":"↑",o?"↑":"↓")}})();</script>\n') if altri else ""
     out.append(sezione(T(f"I libri del {pub} verificati", f"The verified {pub} books"), T("in ordine di visite su Wikipedia", "by Wikipedia visits"),
                        f'<ol class="rows" style="margin-top:28px">\n{"".join(rr)}</ol>\n' + amplia
-                       + (f'<p class="cred">{T("Ritratti degli autori da Wikimedia Commons", "Authors’ portraits from Wikimedia Commons")} — {" · ".join(crediti)}</p>\n' if crediti else ""), "sec ix", "ix2"))
+                       + P.crediti_foto(lang, T("Ritratti degli autori da Wikimedia Commons", "Authors’ portraits from Wikimedia Commons"), crediti), "sec ix", "ix2"))
     leggi = [{"t": {"it": "Opere pubblicate prima del 1978: 95 anni dalla pubblicazione.", "en": "Works published before 1978: 95 years from publication."}, "f": "17 U.S.C. § 304"},
              {"t": {"it": "Le opere straniere che avevano perso la protezione l'hanno riavuta nel 1996, e durano 95 anni dalla pubblicazione.",
                     "en": "Foreign works that had lost protection regained it in 1996, and last 95 years from publication."}, "f": "17 U.S.C. § 104A"}]
