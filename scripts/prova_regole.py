@@ -352,9 +352,11 @@ for f in sorted((RADICE / "data").glob("us-[0-9][0-9][0-9][0-9].json")):
                 continue
             conti8["confronti"] += 1
             riga = m8.group(0)
+            # dal 25/11/2026 la nota NON va nella classifica ma nella scheda dell'opera del radar (Marco), che la legge
+            # direttamente dal registro (data/registro/opere.json): qui si controlla che la classifica non la ripeta
             nota = (x.get("nota") or {}).get(lang)
-            if nota and nota not in riga:
-                no8.append(f"pagina {an} ({lang}): {o['qid']} senza la nota del registro")
+            if nota and nota in riga:
+                no8.append(f"pagina {an} ({lang}): {o['qid']} ha la nota nella classifica (va solo nella scheda dell'opera)")
             # dal 23/11/2026 l'etichetta non ripete l'anno (tre stati, docs/criteri.md): un anno deciso nel registro
             # non può comparire come «Da confermare»
             if anno_l is not None and not re.search(r"Verificato|Verified|Edizione confermata|Edition confirmed", riga):

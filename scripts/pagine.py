@@ -2097,8 +2097,7 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
                 badge = esc(T("Edizione confermata", "Edition confirmed"))
             else:
                 badge = f'<span class="tbd">{esc(T("Da confermare", "To be confirmed"))}</span>'
-            if v_[0] == "parziale" and len(v_) > 1:   # uscito a puntate fino a un anno dopo: libero per intero più tardi
-                badge += f'<br><span class="tbd">{esc(T(f"a puntate fino al {v_[1]}", f"serialized until {v_[1]}"))}</span>'
+            # le note (puntate, parti uscite prima) stanno nella scheda dell'opera nel radar, non nella classifica (Marco, 25/11/2026)
             # ritratto del primo autore che ne ha uno (le copertine tipografiche non aggiungevano nulla: Marco, 21/11/2026)
             fa = next((a for a in o.get("autori", []) if (a.get("foto") or {}).get("url")), None)
             df = ""
@@ -2109,9 +2108,6 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
                     chi_f = re.sub(r"^(.+?)\1$", r"\1", pulisci(fa["foto"].get("autore")))
                     chi_f = "" if len(chi_f) > 60 else chi_f
                     crediti_us.append(f'{esc(pulisci(fa["nome"]))}: <a href="{esc(fa["foto"].get("pagina", ""))}" rel="noopener">{esc(" · ".join(x for x in (chi_f, pulisci(fa["foto"].get("licenza"))) if x) or "Wikimedia Commons")}</a>')
-            nu = (NOTE_USA.get(o["qid"]) or {}).get("it" if it else "en")   # nota dal registro delle opere
-            if nu:
-                badge += f'<br><span class="nota-us">{esc(nu)}</span>'
             out.append(f'<li class="row"{df} data-i="{esc(iniziali_nome(chi.split(", ")[0]))}"><span class="no">{k + 1:02d}</span>'
                        f'<span class="nm"><a href="{app}#/opera/{o["qid"]}">{esc(t)}</a></span><span class="mt">{esc(chi)}<br>{badge}</span></li>\n')
         out.append(f'</ol>\n<a href="{app}#/us/{anno}" class="more">{T(f"Tutti i {n_us} libri: {n_st['verificata']} con la prima uscita verificata, {n_st['edizione']} con l&#39;anno dell&#39;edizione confermato, {n_st['da_confermare']} da confermare →", f"All {n_us} books: {n_st['verificata']} with the first publication verified, {n_st['edizione']} with the edition year confirmed, {n_st['da_confermare']} to be confirmed →")}</a>\n')

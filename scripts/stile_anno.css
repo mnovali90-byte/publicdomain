@@ -115,8 +115,6 @@ body.ix-in .pf{opacity:1}body.menu-on .pf{opacity:0}
 }
 @media (max-width:860px){ body.pdd-b .cnt{white-space:nowrap;font-size:11px}body.pdd-b .cnt .sm,body.pdd-b .cnt .lg{display:none} }
 .tbd{display:inline-block;white-space:nowrap;margin-top:3px}
-/* le note lunghe del registro delle opere (es. «uscito prima a puntate…») vanno a capo: con nowrap la pagina scorreva di lato (controllo grafico del 25/11/2026) */
-.nota-us{display:inline-block;margin-top:4px;white-space:normal;text-transform:none;letter-spacing:0;font-family:var(--sans);font-size:13px;line-height:1.45;max-width:46ch}
 
 /* telefono: più respiro (Marco, 21/11/2026): titoli grandi con interlinea che non si tocca, menu spaziato, righe dell'indice più ariose */
 @media (max-width:860px){
