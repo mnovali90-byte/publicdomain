@@ -283,8 +283,8 @@ def pagina(lang, anno, P):
            for p in pagine_frontespizio(anno)]
     if not pag:
         raise RuntimeError("home: nessuna opera per il frontespizio")
-    alterne = (f'<link rel="alternate" hreflang="it" href="{SITO}/">\n<link rel="alternate" hreflang="en" href="{SITO}/en/">\n'
-               f'<link rel="alternate" hreflang="x-default" href="{SITO}/">\n')
+    from pagine import link_alterne
+    alterne = link_alterne(f"{SITO}/", f"{SITO}/en/")
     # 25/11/2026 (analisi SEO): chi c'è dietro il sito (Organization, con Marco e il suo LinkedIn già in fondo a ogni pagina) legato al WebSite
     org = {"@type": "Organization", "@id": SITO + "/#organizzazione", "name": "Public Domain Radar", "url": SITO + "/", "logo": SITO + "/assets/favicon.svg",
            "founder": {"@type": "Person", "name": "Marco Novali", "sameAs": "https://www.linkedin.com/in/marconovali"}}

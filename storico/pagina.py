@@ -162,7 +162,7 @@ def nav(lang):
 
 
 def pagine():
-    from pagine import testa_scheda, piede_scheda   # grafica comune del sito (scripts/pagine.py)
+    from pagine import testa_scheda, piede_scheda, link_alterne   # grafica comune del sito (scripts/pagine.py)
     t = (RADICE / "storico" / "pagina.html").read_text(encoding="utf-8")
     css = (RADICE / "storico" / "stile_gia.css").read_text(encoding="utf-8")
     sim = simboli()
@@ -182,9 +182,8 @@ def pagine():
                "PROVA": ("Try:", ["Kafka", "Orwell", "The Great Gatsby", "Brecht", "Frankenstein"]),
                "out": RADICE / "en" / "already-public" / "index.html"},
     }
-    alterne = ('<link rel="alternate" hreflang="it" href="https://publicdomainradar.com/gia-pubblici/">\n'
-               '<link rel="alternate" hreflang="en" href="https://publicdomainradar.com/en/already-public/">\n'
-               '<link rel="alternate" hreflang="x-default" href="https://publicdomainradar.com/gia-pubblici/">\n')
+    alterne = link_alterne("https://publicdomainradar.com/gia-pubblici/",
+                           "https://publicdomainradar.com/en/already-public/")
     for lang, x in testi.items():
         # piede: regole e fonti, dagli stessi testi della pagina (oggetto T)
         blocco = t[t.index(f"\n{lang}: {{"):]

@@ -290,5 +290,6 @@ $$('.why button').forEach(b=>b.onclick=()=>{ const w=b.parentElement; w.classLis
 $$('.acc button').forEach(b=>b.onclick=()=>{ const a=b.parentElement; a.classList.toggle('on'); b.querySelector('span').textContent=a.classList.contains('on')?'[–]':'[+]'; });
 $$('#op sup').forEach(s=>s.onclick=()=>{ const n=$('#nt'+s.dataset.n); if(!n) return; n.scrollIntoView({behavior:'smooth',block:'center'}); n.classList.add('hl'); setTimeout(()=>n.classList.remove('hl'),1600); });
 </script>
+<script src="/assets/lingua.js"></script>
 </body>
 </html>
