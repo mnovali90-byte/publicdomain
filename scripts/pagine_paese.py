@@ -587,9 +587,9 @@ POSTER = [   # (immagine, inserzione Etsy, frase, opera, autore, anno, prezzo in
      "A Tale of Two Cities", "Charles Dickens", 1859, 35, None),
     # serie «Distant Reading» (25/11/2026): il romanzo intero in caratteri minuscoli colorati per personaggio
     ("wuthering-heights", "4625383799/i-am-heathcliff-wuthering-heights-emily", "I am Heathcliff!",
-     "Wuthering Heights", "Emily Brontë", 1847, None, "Distant Reading"),
+     "Wuthering Heights", "Emily Brontë", 1847, 35, "Distant Reading"),
     ("white-nights", "4625419690/a-whole-moment-of-happiness-white-nights", "A whole moment of happiness!",
-     "White Nights", "Fyodor Dostoevsky", 1848, None, "Distant Reading"),
+     "White Nights", "Fyodor Dostoevsky", 1848, 35, "Distant Reading"),
 ]
 ETSY = "https://publicdomainradar.etsy.com"
 CSS_SHOP = (".shop-hd{display:grid;grid-template-columns:minmax(0,1fr) min(32vw,440px);gap:6vw;align-items:end}"
