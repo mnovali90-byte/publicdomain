@@ -618,6 +618,104 @@ def pagina_shop(lang):
     return "".join(out), url
 
 
+# 25/11/2026 (Marco): la pagina di un paese è la vista del radar su quel paese (classifica con «paese / fama nel mondo /
+# da scoprire», nomi più grandi, scaffali delle opere, paese d'origine e lingua, «I miei», elenco completo con i filtri),
+# con la testata e il menu del sito, e sotto la regola di legge e le domande. Si costruisce dal file del radar
+# (radar/index.html, en/radar/index.html: un posto solo per il programma), con window.PAESE_FISSO.
+CSS_LEGGE = ("<style>#giur,#navigazione,#lingue-tasti,#menu-lingue,#regole-paesi,#mineBtn+.lang{display:none!important}"
+             ".altra-l{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-decoration:none;color:var(--ink)}"
+             ".bc{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin:0 0 14px}.bc a{color:inherit}"
+             ".legge .where{margin:28px 0 0;padding:0;list-style:none}"
+             ".legge .where li{display:grid;grid-template-columns:minmax(0,.9fr) 210px minmax(0,1.6fr) 150px;gap:24px;align-items:baseline;padding:18px 0;border-bottom:1px solid var(--hair)}"
+             ".legge .where .p{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:clamp(32px,3.4vw,52px);line-height:.9}"
+             ".legge .where .m{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--grey)}"
+             ".legge .where .r{font-size:16px;line-height:1.45}"
+             ".legge .where a{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-align:right;text-decoration:none;border-bottom:1px solid var(--ink);justify-self:end;color:var(--ink)}"
+             ".legge .three{display:grid;grid-template-columns:repeat(3,1fr);gap:48px;margin-top:34px}"
+             ".legge .three h3{margin:10px 0;font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:clamp(30px,2.8vw,44px);line-height:.9}"
+             ".legge .three p{margin:0;font-size:16px;line-height:1.55}.legge .three .m{color:var(--redt);font-family:var(--mono);font-size:11px}"
+             ".legge details{border-bottom:1px solid var(--hair);padding:18px 0}.legge details summary{cursor:pointer;font-size:clamp(18px,1.6vw,22px);list-style:none;display:flex;justify-content:space-between;gap:20px}"
+             ".legge details summary::after{content:'[+]';font-family:var(--mono);font-size:12px;color:var(--grey)}.legge details[open] summary::after{content:'[−]'}"
+             ".legge details p{margin:12px 0 0;font-size:16px;line-height:1.55;max-width:70ch}"
+             ".legge .letters{display:flex;flex-wrap:wrap;gap:6px 16px;margin:24px 0 8px}.legge .letters a{font-family:var(--mono);font-size:13px;color:var(--ink)}"
+             "@media (max-width:860px){.legge .where li{grid-template-columns:1fr auto;gap:4px 12px;padding:16px 0}.legge .where .p{grid-column:1}"
+             ".legge .where a{grid-column:2;grid-row:1;align-self:center}.legge .where .m,.legge .where .r{grid-column:1/3}.legge .three{grid-template-columns:1fr;gap:30px}}</style>")
+
+
+def pagina_paese_radar(k, lang, REG, liste):
+    it = lang == "it"
+    T = (lambda a, b: a) if it else (lambda a, b: b)
+    nome_it, nome_en, _, _, in_it, in_en, naz, agg_it, agg_en = PAESI[k]
+    nome, in_ = T(nome_it, nome_en), T(in_it, in_en)
+    anno = P.ANNO_PROSSIMO
+    pk = "es" if k == "es" else "ue"
+    morti = R.morti_liberi_nel(anno, "es" if k == "es" else "it")
+    anni = R.anni_protezione(morti, "es" if k == "es" else "it")
+    pacc = liste[(pk, anno)]
+    lingua = {"it": "it", "fr": "fr", "de": "de", "uk": "en", "es": "es"}[k]
+    vale = (lambda a: not P.è_mpf(a)) if k == "fr" else (lambda a: True)
+    lib = sorted((a for a in P._letterari(pacc, lang) if vale(a)), key=lambda a: -(a.get(f"visite_{lingua}") or 0))
+    url = url_paese(k, lang)
+    tre, faq = testi(k, lang, anno, morti)
+    titolo = T(f"Pubblico dominio {in_it}: chi diventa libero nel {anno} · Public Domain Radar",
+               f"Public domain {in_en}: who becomes free in {anno} · Public Domain Radar")
+    descr = T(f"{in_it[0].upper() + in_it[1:]} un'opera diventa libera {anni} anni dopo la morte dell'autore. Tutti gli scrittori che entrano in pubblico dominio il 1° gennaio {anno}, le opere, la regola di legge e cosa controllare.",
+              f"{in_en[0].upper() + in_en[1:]} a work becomes free {anni} years after the author's death. All the writers entering the public domain on 1 January {anno}, their works, the legal rule and what to check.")
+    jl = {"@context": "https://schema.org", "@graph": [
+        {"@type": "WebPage", "@id": url, "url": url, "name": titolo, "description": descr, "inLanguage": lang,
+         "isPartOf": {"@type": "WebSite", "name": "Public Domain Radar", "url": P.SITO + ("/" if it else "/en/")}},
+        {"@type": "BreadcrumbList", "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": P.SITO + ("/" if it else "/en/")},
+            {"@type": "ListItem", "position": 2, "name": T("Per paese", "By country"), "item": url_indice(lang)},
+            {"@type": "ListItem", "position": 3, "name": nome, "item": url}]},
+        {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": r}} for q, r in faq]}]}
+    jsonld = '<script type="application/ld+json">' + json.dumps(jl, ensure_ascii=False).replace("</", "<\\/") + "</script>"
+    h = ((RADICE / "radar" / "index.html") if it else (RADICE / "en" / "radar" / "index.html")).read_text(encoding="utf-8")
+    u_it, u_en = url_paese(k, "it"), url_paese(k, "en")
+    # testa: titolo, descrizione, indirizzi, dati strutturati della pagina del paese
+    h = re.sub(r"<title>.*?</title>", f"<title>{esc(titolo)}</title>", h, count=1, flags=re.S)
+    h = re.sub(r'(<meta name="description" content=")[^"]*', lambda m: m.group(1) + esc(descr), h, count=1)
+    h = re.sub(r'(<meta property="og:title" content=")[^"]*', lambda m: m.group(1) + esc(titolo), h, count=1)
+    h = re.sub(r'(<meta property="og:description" content=")[^"]*', lambda m: m.group(1) + esc(descr), h, count=1)
+    h = re.sub(r'(<meta name="twitter:title" content=")[^"]*', lambda m: m.group(1) + esc(titolo), h, count=1)
+    h = re.sub(r'(<meta name="twitter:description" content=")[^"]*', lambda m: m.group(1) + esc(descr), h, count=1)
+    h = h.replace(f"{P.SITO}/en/radar/", u_en).replace(f"{P.SITO}/radar/", u_it)
+    h = re.sub(r'<link rel="canonical" href="[^"]*">', f'<link rel="canonical" href="{url}">', h, count=1)
+    h = re.sub(r'(<meta property="og:url" content=")[^"]*', lambda m: m.group(1) + url, h, count=1)
+    h = re.sub(r'<script type="application/ld\+json">.*?</script>', lambda m: jsonld, h, count=1, flags=re.S)
+    h = h.replace("</head>", CSS_LEGGE + "\n</head>", 1)
+    h = h.replace('href="/en/radar/" hidden', f'href="{u_en.replace(P.SITO, "")}" hidden', 1)
+    # testata: lo stesso menu delle altre pagine, la lingua come link alla pagina gemella
+    altra = (f'<a class="altra-l" href="{u_en.replace(P.SITO, "")}" hreflang="en">EN</a>' if it else f'<a class="altra-l" href="{u_it.replace(P.SITO, "")}" hreflang="it">IT</a>')
+    h = h.replace('<span class="lang" id="lingue-tasti"></span>', '<span class="lang" id="lingue-tasti"></span>' + altra, 1)
+    menu = "".join(f'<a href="{a}"><span>{esc(t)}</span></a>' for a, t in P._menu_link(lang))
+    h = re.sub(r'<nav id="menu-nav">.*?</nav>', f'<nav id="menu-nav">{menu}</nav>', h, count=1, flags=re.S)
+    # apertura: il paese, non il titolone del radar
+    w = lambda t: f'<span class="w"><span>{t}</span></span>'
+    apertura = (f'<section class="open" id="inizio">\n<nav class="bc" aria-label="{T("Sei qui", "You are here")}"><a href="{"/" if it else "/en/"}">Home</a> › '
+                f'<a href="{url_indice(lang).replace(P.SITO, "")}">{T("Per paese", "By country")}</a> › <span>{esc(nome)}</span></nav>\n'
+                f'<p class="m k" id="kick"></p>\n'
+                f'<h1 class="h1">{w(T("Chi diventa libero", "Who becomes free"))}<br>{w(esc(in_))}</h1>\n'
+                f'<p class="say" id="say">{esc(T(f"{in_it[0].upper() + in_it[1:]} un’opera diventa libera {anni} anni dopo la morte dell’autore, dal 1° gennaio dell’anno dopo. Il 1° gennaio {anno} tocca agli scrittori morti nel {morti}, di qualsiasi paese.", f"{in_en[0].upper() + in_en[1:]} a work becomes free {anni} years after the author’s death, from 1 January of the following year. On 1 January {anno} it is the turn of writers who died in {morti}, from any country."))}</p>\n</section>')
+    if k == "es":
+        apertura = apertura.replace(T("In Spagna un’opera diventa libera 80 anni", "In Spain a work becomes free 80 years"),
+                                    T("In Spagna, per chi è morto prima del 7 dicembre 1987, un’opera diventa libera 80 anni", "In Spain, for authors who died before 7 December 1987, a work becomes free 80 years"))
+    h = re.sub(r'<section class="open" id="inizio">.*?</section>', lambda m: apertura, h, count=1, flags=re.S)
+    # per chi non esegue il programma (motori di ricerca, assistenti AI): i primi nomi già scritti nella pagina
+    r_, _ = righe(lib, 12, lang)
+    h = re.sub(r'(<div id="eroe">).*?(</div>\s*<div class="lnk" id="indice-link">)', lambda m: m.group(1) + f'<ol class="rows">{r_}</ol>' + m.group(2), h, count=1, flags=re.S)
+    # sotto: la regola di legge del paese, cosa significa, le domande, gli altri paesi
+    domande = "".join(f'<details><summary>{esc(q)}</summary><p>{esc(r)}</p></details>' for q, r in faq)
+    legge = (sezione(T("La regola, dalla legge", "The rule, from the law"), T("Testi di legge letti alla fonte", "Legal texts read at the source"), lista_regole(REG[NOME_REGOLE[k]], lang), "sec legge")
+             + sezione(T("Cosa significa davvero", "What it really means"), T("Prima di pubblicare", "Before you publish"),
+                       '<div class="three">' + "".join(f'<div><span class="m">{i + 1:02d}</span><h3>{esc(t)}</h3><p>{esc(x)}</p></div>' for i, (t, x) in enumerate(tre)) + "</div>", "sec legge")
+             + sezione(T("Le risposte brevi", "The short answers"), T("Domande", "Questions"), f"<div>{domande}</div>", "sec legge")
+             + altri_paesi(k, lang).replace('class="sec"', 'class="sec legge"', 1))
+    h = h.replace("</main>", legge + "</main>", 1)
+    h = h.replace('<script src="/assets/regole.js"></script>', f'<script>window.PAESE_FISSO = "{k}";</script>\n<script src="/assets/regole.js"></script>', 1)
+    return h, url
+
+
 def crea_pagine_paese():
     """Scrive le pagine e restituisce gli indirizzi (per la sitemap)."""
     REG = regole_radar()
@@ -631,7 +729,7 @@ def crea_pagine_paese():
         liste[("us", a)] = json.load(open(fus, encoding="utf-8")) if fus.exists() else {"opere": []}
     urls = []
     for lang in ("it", "en"):
-        pagine = [pagina_indice(lang, liste)] + [pagina_paese_ue(k, lang, REG, liste) for k in ORDINE if k != "us"] + [pagina_usa(lang, liste), pagina_come(lang), pagina_shop(lang)]
+        pagine = [pagina_indice(lang, liste)] + [pagina_paese_radar(k, lang, REG, liste) for k in ORDINE if k != "us"] + [pagina_usa(lang, liste), pagina_come(lang), pagina_shop(lang)]
         for html_, url in pagine:
             d = RADICE / url.replace(P.SITO + "/", "")
             d.mkdir(parents=True, exist_ok=True)
