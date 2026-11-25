@@ -315,9 +315,14 @@ except Exception:
     FUORI_CLASSIFICA = set()
 
 
+_ESCL = R.opere_escluse()
+
+
 def opera_in_vetrina(o):
     """Un'opera USA può stare in vetrina solo se nessun suo autore è in data/fuori_classifica.json (23/11/2026, Carl Schmitt).
     Resta nella lista, nei conteggi e nella ricerca: esce solo da vetrine e classifiche."""
+    if R.opera_esclusa([o.get("titolo"), o.get("titolo_it")], o.get("qid"), _ESCL):   # opere escluse (25/11/2026)
+        return False
     return not any(x.get("qid") in FUORI_CLASSIFICA for x in (o.get("autori") or []))
 
 

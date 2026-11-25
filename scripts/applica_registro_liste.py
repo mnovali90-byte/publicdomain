@@ -81,6 +81,17 @@ def main():
     for dest, nuovi in arrivi.items():
         q_gia = {a.get("wikidata") for a in liste[dest].get("autori", [])}
         liste[dest]["autori"] += [b for b in nuovi if b.get("wikidata") not in q_gia]
+    # opere escluse (regole.opera_esclusa, data/storico_esclusioni.json; 25/11/2026): fuori dagli elenchi delle opere degli autori
+    escl = RG.opere_escluse(R)
+    for nome, d in liste.items():
+        for a in d.get("autori", []):
+            if a.get("opere"):
+                prima = len(a["opere"])
+                a["opere"] = [o for o in a["opere"] if not RG.opera_esclusa([o.get("titolo"), o.get("titolo_it"), o.get("titolo_en")], o.get("qid") or o.get("wikidata"), escl)]
+                if len(a["opere"]) < prima:
+                    print(f"opere escluse: {prima - len(a['opere'])} di {a.get('nome')} ({nome})")
+                    if "n_opere" in a:
+                        a["n_opere"] = len(a["opere"])
     for nome, d in liste.items():
         d["totale"] = len(d.get("autori", []))
         nuovo = json.dumps(d, ensure_ascii=False, indent=1)

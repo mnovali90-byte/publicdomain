@@ -413,16 +413,29 @@ def pagina_usa(lang, liste):
     rr = []
     # in classifica solo i libri «Verificato» e fuori dai fuori classifica (Marco, 25/11/2026); tutti gli altri nel radar con il loro stato
     verif = [o for o in opere if st.get(o["qid"]) == "verificata" and P.opera_in_vetrina(o)]
-    for i, o in enumerate(verif):
+    # 25/11/2026 (Marco): «solo verificati, con possibilità di ampliare»: gli altri libri della lista (edizione confermata,
+    # da confermare) sono sotto un pulsante, chiusi; le opere escluse non compaiono mai (regole.opera_esclusa)
+    altri = [o for o in opere if o not in verif and not R.opera_esclusa([o.get("titolo"), o.get("titolo_it")], o.get("qid"), P._ESCL)]
+    altri.sort(key=lambda o: 0 if st.get(o["qid"]) == "edizione" else 1)
+
+    def riga_us(i, o, stato):
         chi = ", ".join(P.pulisci(a["nome"]) for a in (o.get("autori") or [])[:2])
         t = (o.get("titolo_it") or o["titolo"]) if it else o["titolo"]
         foto = (o.get("foto") or {}).get("url") if isinstance(o.get("foto"), dict) else None
         df = f' data-f="{esc(re.sub(r"width=\d+", "width=480", foto))}"' if foto else ""
-        rr.append(f'<li class="row"{df} data-i="{esc(P.iniziali_nome(chi.split(", ")[0] or "?"))}"><span class="no">{i + 1:02d}</span>'
-                  f'<span class="nm"><a href="{app}#/opera/{o["qid"]}">{esc(t)}</a></span><span class="mt">{esc(chi)}<br>{eti["verificata"]}</span></li>\n')
+        lab = eti[stato] if stato == "verificata" else f'<span class="tbd">{eti[stato]}</span>'
+        return (f'<li class="row"{df} data-i="{esc(P.iniziali_nome(chi.split(", ")[0] or "?"))}"><span class="no">{i + 1:02d}</span>'
+                f'<span class="nm"><a href="{app}#/opera/{o["qid"]}">{esc(t)}</a></span><span class="mt">{esc(chi)}<br>{lab}</span></li>\n')
+    rr = [riga_us(i, o, "verificata") for i, o in enumerate(verif)]
+    r2 = [riga_us(len(verif) + i, o, st.get(o["qid"], "da_confermare")) for i, o in enumerate(altri)]
+    n_ed, n_da = sum(1 for o in altri if st.get(o["qid"]) == "edizione"), sum(1 for o in altri if st.get(o["qid"], "da_confermare") == "da_confermare")
+    amplia = (f'<button type="button" class="more" id="us-altri-btn" aria-expanded="false" aria-controls="us-altri" style="background:none;border:0;border-bottom:2px solid var(--red);cursor:pointer;font:inherit;padding:0 0 4px">'
+              f'{T(f"Mostra anche gli altri {len(altri)}: {n_ed} con l’edizione confermata, {n_da} da confermare", f"Also show the other {len(altri)}: {n_ed} edition confirmed, {n_da} to be confirmed")} ↓</button>'
+              f'<div id="us-altri" hidden><p class="lede" style="margin-top:28px">{esc(T("Questi libri non sono ancora verificati: la prima uscita non è documentata da due fonti indipendenti o da una scheda del Catalog of Copyright Entries.", "These books are not verified yet: their first publication is not documented by two independent sources or by a Catalog of Copyright Entries record."))}</p>'
+              f'<ol class="rows" style="margin-top:20px">\n{"".join(r2)}</ol></div>'
+              '<script>(function(){var b=document.getElementById("us-altri-btn"),d=document.getElementById("us-altri");b.onclick=function(){var o=d.hidden;d.hidden=!o;b.setAttribute("aria-expanded",String(o));b.lastChild&&0;b.innerHTML=b.innerHTML.replace(o?"↓":"↑",o?"↑":"↓")}})();</script>\n') if altri else ""
     out.append(sezione(T(f"I libri del {pub} verificati", f"The verified {pub} books"), T("in ordine di visite su Wikipedia", "by Wikipedia visits"),
-                       f'<ol class="rows" style="margin-top:28px">\n{"".join(rr)}</ol>\n'
-                       f'<a href="{app}#/us/{anno}" class="more">{T(f"Tutti i {len(opere)} libri del {pub}, con il loro stato, nel radar →", f"All {len(opere)} books from {pub}, with their status, in the radar →")}</a>\n', "sec ix", "ix2"))
+                       f'<ol class="rows" style="margin-top:28px">\n{"".join(rr)}</ol>\n' + amplia, "sec ix", "ix2"))
     leggi = [{"t": {"it": "Opere pubblicate prima del 1978: 95 anni dalla pubblicazione.", "en": "Works published before 1978: 95 years from publication."}, "f": "17 U.S.C. § 304"},
              {"t": {"it": "Le opere straniere che avevano perso la protezione l'hanno riavuta nel 1996, e durano 95 anni dalla pubblicazione.",
                     "en": "Foreign works that had lost protection regained it in 1996, and last 95 years from publication."}, "f": "17 U.S.C. § 104A"}]

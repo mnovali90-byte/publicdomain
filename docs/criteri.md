@@ -53,3 +53,10 @@ Sulla pagina della lista USA un'opera ha uno di tre stati:
 | 23/11/2026 | Una verifica a mano non usa Wikipedia come fonte (la prova 9 lo controlla dal 23/11/2026) | Wikipedia non è una fonte terza | Nanduri Venkata Subbarao, Q6963402 |
 | 23/11/2026 | Verifica a mano «discorde»: quando una fonte terza contraddice le biblioteche, l'autore resta nella lista con l'avviso «da verificare, le fonti non concordano» (regole.voce_morte, un posto solo per registro e liste) | necrologio di luglio 1957 contro GND e Library of Congress 1958 | Nanduri Venkata Subbarao, Q6963402 |
 | 23/11/2026 | Una verifica a mano senza due fonti terze si toglie e l'autore torna allo stato delle fonti automatiche (la vecchia verifica resta in «verifiche_tolte», con quello che si è trovato) | le verifiche a mano del 09/11 usavano Wikipedia | Marcel Romanescu, Q20738418 |
+
+## Contenuti d'odio (nazismo, fascismo, razzismo, antisemitismo)
+
+| Data | Regola | Motivo | Caso |
+|---|---|---|---|
+| 25/11/2026 | Le opere di data/storico_esclusioni.json (Mein Kampf, Il mito del XX secolo, Protocolli dei Savi di Sion, La dottrina del fascismo e altre) non compaiono mai in vetrine, scaffali, classifiche ed elenchi delle opere: né in Già pubblici, né nelle pagine paese, nel radar, nelle pagine dell'anno, nelle schede. Restano solo nella ricerca di Già pubblici. Si riconoscono per codice Wikidata e, dove le liste non hanno il codice, per titolo esatto, anche nelle traduzioni. Un posto solo: regole.opera_esclusa; applicata alle liste da scripts/applica_registro_liste.py; controllata dalla prova 5c (decisione di Marco) | lo scaffale «Le più note» della Spagna mostrava Mein Kampf, attribuito al traduttore inglese morto nel 1946 | Mein Kampf, James Vincent Murphy, Q1681235 |
+| 25/11/2026 | Chi è noto soprattutto per un'opera esclusa va anche in data/fuori_classifica.json (fuori da vetrine e classifiche, resta nell'elenco completo e nella ricerca) | la sua opera principale era Mein Kampf | James Vincent Murphy |

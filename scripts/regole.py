@@ -879,3 +879,32 @@ def paesi_liberi_insieme(paesi, morte, oggi_anno, mpf=False):
             continue
         out.append(p)
     return out
+
+
+# --- opere escluse (25/11/2026, Marco: «non voglio contenuti compromettenti nazisti ecc. in chiaro») ---
+def _norm_titolo(t):
+    import unicodedata
+    t = "".join(c for c in unicodedata.normalize("NFD", str(t or "")) if not unicodedata.combining(c))
+    return " ".join(t.lower().replace("’", "'").split())
+
+
+def opere_escluse(radice=None):
+    """(codici Wikidata, titoli normalizzati) delle opere che non compaiono mai in vetrine, scaffali ed elenchi
+    (data/storico_esclusioni.json). Restano solo nella ricerca di Già pubblici."""
+    import json as _j
+    from pathlib import Path as _P
+    f = _P(radice or _P(__file__).resolve().parent.parent) / "data" / "storico_esclusioni.json"
+    try:
+        e = _j.loads(f.read_text(encoding="utf-8"))
+    except Exception:
+        return set(), set()
+    return set(e.get("qid", {})), {_norm_titolo(t) for t in e.get("titoli", {})}
+
+
+def opera_esclusa(titolo, qid, escl):
+    """Vero se l'opera è nell'elenco delle esclusioni, per codice o per uno dei suoi titoli (titolo, titolo_it, titolo_en)."""
+    q, ti = escl
+    if qid and qid in q:
+        return True
+    tit = titolo if isinstance(titolo, (list, tuple)) else [titolo]
+    return any(_norm_titolo(t) in ti for t in tit if t)

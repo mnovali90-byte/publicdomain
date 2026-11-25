@@ -1,5 +1,5 @@
 {
- "nota": "Opere che non entrano in classifiche e playlist dello Storico (restano nella ricerca). Si esclude per QID e, per sicurezza, per autore.",
+ "nota": "Opere che non compaiono mai in vetrine, scaffali, classifiche ed elenchi delle opere del sito (Già pubblici, pagine paese, radar, pagine dell'anno, schede); restano solo nella ricerca di Già pubblici, che risponde se un titolo è libero. Si esclude per codice Wikidata e, dove le liste non hanno il codice dell'opera, per titolo esatto (campo «titoli»). Un posto solo: regole.opera_esclusa (scripts/regole.py); applicato alle liste da scripts/applica_registro_liste.py; prova 5c.",
  "qid": {
   "Q662930": "The Myth of the Twentieth Century (Alfred Rosenberg, 1930)",
   "Q3058688": "An Essay on the Inequality of the Human Races (Arthur de Gobineau, 1853)",
@@ -18,5 +18,26 @@
   "Q57737": "Houston Stewart Chamberlain",
   "Q1871107": "Lothrop Stoddard",
   "Q23559": "Benito Mussolini: aggiunto il 21/11/2026"
+ },
+ "titoli": {
+  "Mein Kampf": "Hitler, 1925 (anche nelle traduzioni: es. James Vincent Murphy, 1939; segnalato da Marco il 25/11/2026)",
+  "La mia battaglia": "traduzione italiana di Mein Kampf",
+  "My Struggle": "traduzione inglese di Mein Kampf",
+  "The Myth of the Twentieth Century": "Rosenberg",
+  "Der Mythus des 20. Jahrhunderts": "Rosenberg",
+  "Der Mythus des zwanzigsten Jahrhunderts": "Rosenberg",
+  "Il mito del XX secolo": "Rosenberg",
+  "The Protocols of the Elders of Zion": "falso antisemita",
+  "Protocolli dei Savi di Sion": "falso antisemita",
+  "I protocolli dei savi anziani di Sion": "falso antisemita",
+  "The Doctrine of Fascism": "Gentile, Mussolini",
+  "La dottrina del fascismo": "Gentile, Mussolini",
+  "An Essay on the Inequality of the Human Races": "Gobineau",
+  "Essai sur l'inégalité des races humaines": "Gobineau",
+  "Saggio sulla disuguaglianza delle razze umane": "Gobineau",
+  "The Foundations of the Nineteenth Century": "Chamberlain",
+  "Die Grundlagen des neunzehnten Jahrhunderts": "Chamberlain",
+  "I fondamenti del XIX secolo": "Chamberlain",
+  "The Rising Tide of Color Against White World-Supremacy": "Stoddard"
  }
 }

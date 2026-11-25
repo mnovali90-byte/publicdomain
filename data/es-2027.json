@@ -16606,20 +16606,8 @@
      "url": "https://en.wikipedia.org/wiki/James_Vincent_Murphy"
     }
    },
-   "opere": [
-    {
-     "titolo": "Mein Kampf",
-     "titolo_en": "Mein Kampf",
-     "anno": 1925,
-     "generi": [
-      "autobiografia",
-      "filosofia politica",
-      "pamphlet"
-     ],
-     "sl": 104
-    }
-   ],
-   "n_opere": 1,
+   "opere": [],
+   "n_opere": 0,
    "generi": [
     "autobiografia",
     "filosofia politica",
@@ -16703,8 +16691,7 @@
      "SNAC": 1946
     }
    },
-   "pagina": "james-vincent-murphy",
-   "pagina_en": "james-vincent-murphy"
+   "fuori_classifica": true
   },
   {
    "wikidata": "Q4893020",

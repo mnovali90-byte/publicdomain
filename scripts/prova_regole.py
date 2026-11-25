@@ -271,6 +271,29 @@ for x in no5b:
     print("   ", x)
 errori += no5b
 
+# 5c. (25/11/2026, Marco: niente contenuti nazisti in chiaro) nessuna opera di data/storico_esclusioni.json negli elenchi
+# delle opere delle liste (da cui leggono radar, pagine paese, schede) né nelle pagine con le vetrine
+import glob as _g5c, html as _html  # noqa: E402
+_escl = R.opere_escluse(RADICE)
+no5c, viste5c = [], 0
+for f in sorted(_g5c.glob(str(RADICE / "data" / "[0-9][0-9][0-9][0-9].json")) + _g5c.glob(str(RADICE / "data" / "es-[0-9][0-9][0-9][0-9].json"))):
+    for a in json.load(open(f, encoding="utf-8")).get("autori", []):
+        for o in a.get("opere") or []:
+            viste5c += 1
+            if R.opera_esclusa([o.get("titolo"), o.get("titolo_it"), o.get("titolo_en")], o.get("qid"), _escl):
+                no5c.append(f"{Path(f).name}: «{o.get('titolo')}» tra le opere di {a.get('nome')}")
+_tit5c = [t for t in json.load(open(RADICE / "data" / "storico_esclusioni.json", encoding="utf-8")).get("titoli", {})]
+for f in [RADICE / "index.html", RADICE / "en" / "index.html"] + sorted(RADICE.glob("pubblico-dominio-*/index.html")) + sorted((RADICE / "en").glob("public-domain-*/index.html")) \
+        + sorted(RADICE.glob("pubblico-dominio/*/index.html")) + sorted((RADICE / "en" / "public-domain").glob("*/index.html")):
+    h = _html.unescape(f.read_text(encoding="utf-8"))
+    for t in _tit5c:
+        if re.search(r">[^<]*" + re.escape(t) + r"[^<]*<", h):
+            no5c.append(f"{f.relative_to(RADICE)}: «{t}» nella pagina")
+print(f"5c. Opere escluse (contenuti d'odio) negli elenchi e nelle vetrine: {viste5c} opere controllate, presenti: {len(no5c)}")
+for x in no5c:
+    print("   ", x)
+errori += no5c
+
 # ---------------------------------------------------------------- 6. stati scritti sulle schede autore (22/11/2026)
 # scripts/controllo_stati.py rifà da capo, con regole.py e i registri, ogni stato scritto sulle schede generate.
 # Bloccante dal 22/11/2026, da quando le schede usano gli stessi dati e la stessa regola di Già pubblici.
