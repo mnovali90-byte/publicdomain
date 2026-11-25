@@ -580,17 +580,9 @@ def pagina_come(lang):
 
 # Shop (mockup approvato da Marco, fatto in un'altra chat il 25/11/2026): i poster sono su Etsy, stampati da Gelato.
 # I link restano nel formato publicdomainradar.etsy.com, quello che conta per Share & Save; in inglese senza «/it/».
-POSTER = [   # (immagine, inserzione Etsy, frase, opera, autore, anno, prezzo in euro o None, serie)
-    ("alice", "4624523730/alice-was-beginning-to-get-very-tired", "Alice was beginning to get very tired",
-     "Alice's Adventures in Wonderland", "Lewis Carroll", 1865, 35, None),
-    ("tale-of-two-cities", "4624515025/it-was-the-best-of-times-a-tale-of-two", "It was the best of times",
-     "A Tale of Two Cities", "Charles Dickens", 1859, 35, None),
-    # serie «Distant Reading» (25/11/2026): il romanzo intero in caratteri minuscoli colorati per personaggio
-    ("wuthering-heights", "4625383799/i-am-heathcliff-wuthering-heights-emily", "I am Heathcliff!",
-     "Wuthering Heights", "Emily Brontë", 1847, 35, "Distant Reading"),
-    ("white-nights", "4625419690/a-whole-moment-of-happiness-white-nights", "A whole moment of happiness!",
-     "White Nights", "Fyodor Dostoevsky", 1848, 35, "Distant Reading"),
-]
+# 25/11/2026: l'elenco dei poster sta in un posto solo, data/poster.json (lo legge anche Già pubblici)
+POSTER = [(p["img"], p["etsy"], p["frase"], p["opera"], p["autore"], p["anno"], p["prezzo"], p["serie"])
+          for p in json.loads((Path(__file__).resolve().parent.parent / "data" / "poster.json").read_text(encoding="utf-8"))["poster"]]
 ETSY = "https://publicdomainradar.etsy.com"
 CSS_SHOP = (".shop-hd{display:grid;grid-template-columns:minmax(0,1fr) min(32vw,440px);gap:6vw;align-items:end}"
             ".shop-hd .say{margin:0;max-width:440px}"

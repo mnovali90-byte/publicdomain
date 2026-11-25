@@ -406,6 +406,10 @@ h1.h1 .w>span{display:inline-block;transform:translateY(102%);animation:rise 900
   .au b{margin-top:12px}
   .big7{gap:14px}
 }
+
+/* 25/11/2026: opere con poster nello Shop */
+.riga .pst{display:inline-block;margin-top:6px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--redt)}
+.poster-op{margin:20px 0 0}.poster-op .link-forte{margin-top:0}.poster-op span{display:block;margin-top:8px;color:#5C5C66}
 </style>
 <script>document.documentElement.classList.add('js')</script>
 <!-- contatore visite senza cookie (GoatCounter) -->
@@ -512,6 +516,7 @@ it: {
   sDisegni: "I disegni originali di {n} hanno diritti propri, che durano 70 anni dalla morte: in Italia, Francia, Germania e Regno Unito sono liberi dal 1° gennaio {y}. Il testo no: vale la data qui sopra.",
   sGruppo: "«{g}» è un gruppo: contano gli anni di morte dei suoi membri.",
   sManuale: "Coautore aggiunto da noi, non segnato su Wikidata: {n} (morto nel {m}). Fonte:",
+  posterRiga: "Poster disponibile", posterLink: "Poster disponibile su Etsy", posterSerie: "serie {s}",
   piede1: "Calcolo indicativo, non è consulenza legale. È libero il testo originale, non l'edizione né la traduzione: traduzioni, illustrazioni e curatele recenti hanno diritti propri. Prima di pubblicare controlla la legge del paese.",
   piede2: "Regole usate: Italia, Francia, Germania, Regno Unito 70 anni dalla morte dell'autore (nel Regno Unito le opere uscite per la prima volta dopo il 1988 di autori morti prima del 1969 sono protette fino al 2039); Spagna 80 anni per gli autori morti prima del 7 dicembre 1987; USA 95 anni dalla prima pubblicazione (si guarda la prima data registrata). In Italia, per le opere uscite prima del 1940 di autori di paesi alleati nella Seconda guerra mondiale, una nota ricorda che c'è chi sostiene una proroga (Trattato di pace del 1947), finora non applicata dai tribunali.",
   piede3: "Fonti: Wikidata (CC0) per opere, autori e anni; Wikipedia per le visite della settimana; elenchi del Public Domain Day della Duke University (CC BY 4.0) come seconda fonte per gli USA; Wikimedia Commons per i ritratti, ciascuno con la sua licenza. Dati aggiornati ogni mese in automatico: possono contenere errori.",
@@ -589,6 +594,7 @@ en: {
   sDisegni: "The original drawings by {n} have their own rights, lasting 70 years from death: in Italy, France, Germany and the UK they are free from 1 January {y}. The text does not: the date above applies.",
   sGruppo: "«{g}» is a group: the years of death of its members count.",
   sManuale: "Co-author added by us, not recorded on Wikidata: {n} (died in {m}). Source:",
+  posterRiga: "Poster available", posterLink: "Poster available on Etsy", posterSerie: "{s} series",
   piede1: "An indicative calculation, not legal advice. What is free is the original text, not the edition or the translation: recent translations, illustrations and editions have their own rights. Check the law of the country before publishing.",
   piede2: "Rules used: Italy, France, Germany, United Kingdom 70 years from the author's death (in the UK, works first published after 1988 by authors who died before 1969 are protected until 2039); Spain 80 years for authors who died before 7 December 1987; USA 95 years from first publication (the first recorded date is used). In Italy, for works published before 1940 by authors from Allied countries in the Second World War, a note recalls that some argue for an extension (1947 Peace Treaty), not applied by courts so far.",
   piede3: "Sources: Wikidata (CC0) for works, authors and years; Wikipedia for this week's page views; Duke University's Public Domain Day lists (CC BY 4.0) as a second source for the USA; Wikimedia Commons for portraits, each with its own licence. Data updated automatically every month: it may contain errors.",
@@ -760,8 +766,16 @@ function apriOpera(o) {
     h("h3", { class: "mono", style: "margin:24px 0 0;font-size:12px;color:var(--redt)" }, L.stati),
     h("ul", { class: "stati" }, righe),
     noteOpera(o),
+    posterOpera(o),
     h("p", {}, h("a", { class: "link-forte", href: `https://www.wikidata.org/wiki/${o.q}`, rel: "noopener", target: "_blank" }, L.wikidata)),
     h("p", { class: "nota" }, L.piede1));
+}
+function posterOpera(o) {   // 25/11/2026: le opere di cui abbiamo un poster (data/poster.json, lo stesso elenco dello Shop)
+  const p = D.poster && D.poster.get(o.q);
+  if (!p) return null;
+  const url = `https://publicdomainradar.etsy.com/${LING === "it" ? "it/" : ""}listing/${p.etsy}`;
+  return h("p", { class: "poster-op" }, h("a", { class: "link-forte", href: url, rel: "noopener", target: "_blank" }, L.posterLink + " ↗"),
+    h("span", {}, "«" + p.frase + "»" + (p.serie ? " · " + tr("posterSerie", { s: p.serie }) : "")));
 }
 function noteOpera(o) {   // gruppi, coautori aggiunti a mano, musica e libretto (regola del 20/11/2026)
   const Y = D.anno, r = [];
@@ -831,7 +845,8 @@ function rigaOpera(o) {
   return h("li", { class: "riga" },
     h("button", { class: "tit", type: "button", onclick: () => apriOpera(o) },
       h("span", { class: "t" }, titolo(o), orig ? h("span", { class: "o" }, " · " + orig) : null),
-      h("span", { class: "a" }, [autoriTxt(o), annoTxt(o.y)].filter(Boolean).join(" · "))),
+      h("span", { class: "a" }, [autoriTxt(o), annoTxt(o.y)].filter(Boolean).join(" · ")),
+      D.poster && D.poster.has(o.q) ? h("span", { class: "pst" }, L.posterRiga) : null),
     h("span", { class: "badge" }, ["it", "fr", "de", "es", "uk", "us"].map((c) => {
       const st = stato(o, c), b = badge(st);
       b.prepend(h("span", {}, c.toUpperCase()));
@@ -1078,6 +1093,7 @@ async function avvia() {
   try { const reg = await leggi("/data/registro/opere.json"); D.regOpere = reg.coautori || {}; D.verifiche = reg.usa || {}; D.decise = reg.opere || {}; }
   catch (e) { D.regOpere = {}; D.verifiche = {}; D.decise = {}; }   // registro unico: coautori e anni USA
   try { D.mpf = new Set(Object.keys((await leggi("/data/registro/mpf.json")).autori || {})); } catch (e) { D.mpf = new Set(); }   // «morti per la Francia»
+  try { D.poster = new Map((await leggi("/data/poster.json")).poster.map((p) => [p.qid, p])); } catch (e) { D.poster = new Map(); }
   D.foto = P.foto || {}; D.prossimi = P.prossimi || [];   // prima erano finiti dentro il commento qui sopra: ritratti e «non è ancora libero» non comparivano (21/11/2026)
   const au = P.autori.map((a) => ({ q: a[0], n: nomeQ(a[0], a[1]), m: a[2], an: !!a[3], inc: a[4] || 0, al: !!a[5] }));
   D.opere = P.opere.map((r) => pulisciAnno({ q: r[0], t: r[1], ti: r[2], y: r[3], yd: r[4], au: r[5].map((i) => au[i]), v: r[6], g: r[7], l: r[8], pg: r[9], escl: !!r[10], vl: r[11] || [] }));

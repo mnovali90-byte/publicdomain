@@ -118,7 +118,11 @@ def dati():
                         idx[a[0]] = len(autori)
                         autori.append([a[0], a[1], a[2], a[3] if len(a) > 3 else 0, a[4] if len(a) > 4 else 0, a[5] if len(a) > 5 else 0])
                     ii.append(idx[a[0]])
-                extra.append([q, r[1], r[2] or "", r[3], 0, ii, v, [], None, r[4] or 0, 1 if r[6] else 0, [v] * 5])
+                # 25/11/2026: v qui è la visita MENSILE sulla Wikipedia della lingua originale (scaffali_lingua.py), non le visite
+                # settimanali nelle 5 lingue delle altre opere. Prima veniva copiata in tutte e 5 le lingue e queste opere salivano
+                # nelle classifiche (Faust I: 206.578 «in ogni lingua»). Ora: niente visite misurate per le classifiche; lo
+                # scaffale della loro lingua le ordina comunque con il suo numero (campo «o» qui sotto).
+                extra.append([q, r[1], r[2] or "", r[3], 0, ii, 0, [], None, r[4] or 0, 1 if r[6] else 0, [None] * 5])
                 gia.add(q)
             ids.append([q, v])
         scaffali[l] = {"n": [x.get("nome_it"), x.get("nome_en")], "c": x.get("candidati", 0), "w": x.get("wiki"), "o": ids}
