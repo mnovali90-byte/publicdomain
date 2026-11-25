@@ -321,15 +321,18 @@ def pagina_usa(lang, liste):
             (len((liste.get(("us", anno + 1)) or {}).get("opere", [])), T(f"libri del {pub + 1}", f"{pub + 1} books"), T(f"liberi dal 1° gennaio {anno + 1}", f"free from 1 January {anno + 1}"))]
     out.append('<div class="nums">' + "".join(f'<a href="#ix2"><span class="n">{P.migliaia(x, lang)}</span><span class="c">{esc(c)}</span><span class="m">{esc(m)}</span></a>' for x, c, m in nums) + "</div>\n")
     rr = []
-    for i, o in enumerate(opere):
+    # in classifica solo i libri «Verificato» e fuori dai fuori classifica (Marco, 25/11/2026); tutti gli altri nel radar con il loro stato
+    verif = [o for o in opere if st.get(o["qid"]) == "verificata" and P.opera_in_vetrina(o)]
+    for i, o in enumerate(verif):
         chi = ", ".join(P.pulisci(a["nome"]) for a in (o.get("autori") or [])[:2])
         t = (o.get("titolo_it") or o["titolo"]) if it else o["titolo"]
         foto = (o.get("foto") or {}).get("url") if isinstance(o.get("foto"), dict) else None
         df = f' data-f="{esc(re.sub(r"width=\d+", "width=480", foto))}"' if foto else ""
         rr.append(f'<li class="row"{df} data-i="{esc(P.iniziali_nome(chi.split(", ")[0] or "?"))}"><span class="no">{i + 1:02d}</span>'
-                  f'<span class="nm"><a href="{app}#/opera/{o["qid"]}">{esc(t)}</a></span><span class="mt">{esc(chi)}<br>{eti[st.get(o["qid"], "da_confermare")]}</span></li>\n')
-    out.append(sezione(T(f"Tutti i libri del {pub}", f"All the {pub} books"), T("in ordine di visite su Wikipedia", "by Wikipedia visits"),
-                       f'<ol class="rows" style="margin-top:28px">\n{"".join(rr)}</ol>\n', "sec ix", "ix2"))
+                  f'<span class="nm"><a href="{app}#/opera/{o["qid"]}">{esc(t)}</a></span><span class="mt">{esc(chi)}<br>{eti["verificata"]}</span></li>\n')
+    out.append(sezione(T(f"I libri del {pub} verificati", f"The verified {pub} books"), T("in ordine di visite su Wikipedia", "by Wikipedia visits"),
+                       f'<ol class="rows" style="margin-top:28px">\n{"".join(rr)}</ol>\n'
+                       f'<a href="{app}#/us/{anno}" class="more">{T(f"Tutti i {len(opere)} libri del {pub}, con il loro stato, nel radar →", f"All {len(opere)} books from {pub}, with their status, in the radar →")}</a>\n', "sec ix", "ix2"))
     leggi = [{"t": {"it": "Opere pubblicate prima del 1978: 95 anni dalla pubblicazione.", "en": "Works published before 1978: 95 years from publication."}, "f": "17 U.S.C. § 304"},
              {"t": {"it": "Le opere straniere che avevano perso la protezione l'hanno riavuta nel 1996, e durano 95 anni dalla pubblicazione.",
                     "en": "Foreign works that had lost protection regained it in 1996, and last 95 years from publication."}, "f": "17 U.S.C. § 104A"}]

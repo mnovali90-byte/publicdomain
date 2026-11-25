@@ -95,8 +95,8 @@ def pagine_frontespizio(anno):
                 break
     # data/fuori_classifica.json: autori tolti dalle vetrine per decisione di Marco (pagine.FUORI_CLASSIFICA, pagine.opera_in_vetrina)
     scelte_ue = [(q, j) for q, j in scelte_ue if q not in pg.FUORI_CLASSIFICA]
-    st_us = pg.stati_usa_anno(anno) if opere_us else {}   # niente «Da confermare» in vetrina (Marco, 23/11/2026)
-    in_v = lambda q: pg.opera_in_vetrina(opere_us[q]) and st_us.get(q, "da_confermare") != "da_confermare"
+    st_us = pg.stati_usa_anno(anno) if opere_us else {}   # in vetrina solo «Verificato» (Marco, 23 e 25/11/2026)
+    in_v = lambda q: pg.opera_in_vetrina(opere_us[q]) and st_us.get(q) == "verificata"   # solo «Verificato» (Marco, 25/11/2026)
     scelte_us = [q for q in OPERE_US if q in opere_us and us_ok(q) and in_v(q)]
     if not scelte_ue:   # anno nuovo, scelta non aggiornata: i più letti con un'opera
         cand = sorted((a for a in autori.values() if a.get("letterario") and a.get("opere") and a["wikidata"] not in pg.FUORI_CLASSIFICA), key=lambda a: -(a.get("visite_12m") or 0))

@@ -1945,7 +1945,8 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
     _op = []
     # vetrina dei libri USA: niente autori di data/fuori_classifica.json e niente «Da confermare» (Marco, 23/11/2026);
     # restano nella lista, nei conteggi e nella ricerca, in vetrina sale il successivo
-    vetrina_us = [o for o in opere if opera_in_vetrina(o) and stati_us.get(o["qid"], "da_confermare") != "da_confermare"]
+    # dal 25/11/2026 (Marco): nelle classifiche solo «Verificato», niente «Edizione confermata»
+    vetrina_us = [o for o in opere if opera_in_vetrina(o) and stati_us.get(o["qid"]) == "verificata"]
     for o in vetrina_us:
         chi = cogn(o["autori"][0]["nome"]) if o.get("autori") else ""
         if chi in _au:

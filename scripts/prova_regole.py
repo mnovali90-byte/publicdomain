@@ -247,7 +247,10 @@ errori += no5
 # 5b. (23/11/2026, Carl Schmitt) nessun autore di data/fuori_classifica.json nelle vetrine: libri USA delle pagine dell'anno e home
 _fuori = json.load(open(RADICE / "data" / "fuori_classifica.json", encoding="utf-8"))["autori"]
 no5b, viste5b = [], 0
-for f in sorted(list(RADICE.glob("pubblico-dominio-*/index.html")) + list((RADICE / "en").glob("public-domain-*/index.html")) + [RADICE / "index.html", RADICE / "en" / "index.html"]):
+for f in sorted(list(RADICE.glob("pubblico-dominio-*/index.html")) + list((RADICE / "en").glob("public-domain-*/index.html")) + [RADICE / "index.html", RADICE / "en" / "index.html"]
+                + [RADICE / "pubblico-dominio" / "stati-uniti" / "index.html", RADICE / "en" / "public-domain" / "united-states" / "index.html"]):   # pagine paese USA (25/11/2026)
+    if not f.exists():
+        continue
     h = f.read_text(encoding="utf-8")
     m = re.search(r'id="ix2".*?</ol>', h, re.S)
     pezzi = [m.group(0)] if m else []
@@ -256,6 +259,8 @@ for f in sorted(list(RADICE.glob("pubblico-dominio-*/index.html")) + list((RADIC
         pezzi.append(json.dumps([p_.get("a") for p_ in json.loads(m2.group(1))], ensure_ascii=False))
     if m and re.search(r'class="tbd">(Da confermare|To be confirmed)<', m.group(0)):   # niente «Da confermare» in vetrina (23/11/2026)
         no5b.append(f"{f.relative_to(RADICE)}: un libro «Da confermare» è nella vetrina dei libri USA")
+    if m and any(re.search(r"Edizione confermata|Edition confirmed", r_) for r_ in re.findall(r'<li class="row".*?</li>', m.group(0), re.S)):   # dal 25/11/2026 solo «Verificato» (Marco)
+        no5b.append(f"{f.relative_to(RADICE)}: un libro «Edizione confermata» è nella vetrina dei libri USA")
     for pz in pezzi:
         viste5b += 1
         for x in _fuori:
