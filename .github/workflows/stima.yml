@@ -29,5 +29,5 @@ jobs:
             bash scripts/salva.sh "Cambi di stato da approvare $(date -u +%Y-%m-%d) (niente pubblicato)"
             exit 1
           fi
-          touch data/us-anni-verificati.json && git add data/fotografia.json.gz docs/cambi-da-approvare.md assets/fonts assets/regole.js data/[0-9]*.json data/es-[0-9]*.json index.html en/index.html autore en/author data/us-anni-verificati.json data/us-[0-9]*.json data/indice.json pubblico-dominio-* en/public-domain-* docs/da-decidere.md docs/stima-sito docs/regola-lista docs/mockup-ritratti data/anniversari-*.json calendario en/calendar
+          touch data/us-anni-verificati.json && git add data/fotografia.json.gz docs/cambi-da-approvare.md assets/fonts assets/regole.js data/[0-9]*.json data/es-[0-9]*.json index.html en/index.html autore en/author data/us-anni-verificati.json data/us-[0-9]*.json data/indice.json pubblico-dominio-* en/public-domain-* pubblico-dominio en/public-domain come-funziona en/how-it-works shop en/shop docs/da-decidere.md docs/stima-sito docs/regola-lista docs/mockup-ritratti data/anniversari-*.json calendario en/calendar
           bash scripts/salva.sh "Stima del sito: dati raccolti"

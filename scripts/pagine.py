@@ -944,10 +944,12 @@ def _menu_link(lang):
         v = [(f"/pubblico-dominio-{a}/", f"{a}: chi diventa libero"), ("/gia-pubblici/", "Già pubblici"), ("/pubblico-dominio/", "Per paese")]
         if CALENDARIO_ON:
             v.append((f"/calendario/{a}/", f"Anniversari {a}"))
+        v += [("/come-funziona/", "Come funziona"), ("/shop/", "Shop")]
     else:
         v = [(f"/en/public-domain-{a}/", f"{a}: what becomes free"), ("/en/already-public/", "Already public"), ("/en/public-domain/", "By country")]
         if CALENDARIO_ON:
             v.append((f"/en/calendar/{a}/", f"Anniversaries {a}"))
+        v += [("/en/how-it-works/", "How it works"), ("/en/shop/", "Shop")]
     return v
 
 
@@ -2140,8 +2142,14 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
         righe.append(("USA", T(f"Libri pubblicati nel {pub}", f"Books published in {pub}"),
                       T("95 anni dalla pubblicazione, opera per opera.", "95 years after publication, work by work."),
                       f"{app}#/us/{anno}", T(f"{n_us} libri →", f"{n_us} books →"), "us"))
+    # ogni riga porta alla pagina del paese (ristrutturazione del 25/11/2026; indirizzi in scripts/pagine_paese.py)
+    pp = ["italia", "francia", "germania", "regno-unito"] if it else ["italy", "france", "germany", "united-kingdom"]
+    if n_es: pp.append("spagna" if it else "spain")
+    if n_us: pp.append("stati-uniti" if it else "united-states")
+    base = "/pubblico-dominio/" if it else "/en/public-domain/"
+    righe = [(p_, c, r, base + pp[i] + "/", l, cl) for i, (p_, c, r, h, l, cl) in enumerate(righe)]
     out.append(f'<section class="sec">\n<div class="sh m"><h2>{T("Chi entra, dove", "Who enters, where")}</h2>'
-               f'<span>{T("Regole lette sui testi di legge di ogni paese:", "Rules read from each country&#39;s legal texts:")} <a href="{app}#regole-paesi">{T("il riquadro delle regole", "the rules box")}</a></span></div>\n<ul class="where">\n')
+               f'<span>{T("Regole lette sui testi di legge di ogni paese:", "Rules read from each country&#39;s legal texts:")} <a href="{base}">{T("paese per paese", "country by country")}</a></span></div>\n<ul class="where">\n')
     for p_, c, r, h, l, cl in righe:
         cls = f' class="{cl}"' if cl else ""
         out.append(f'<li{cls}><span class="p">{esc(p_)}</span><span class="m y">{esc(c)}</span><span class="r">{esc(r)}</span><a href="{h}">{esc(l)}</a></li>\n')

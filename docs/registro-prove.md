@@ -1630,3 +1630,10 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - Cosa: nuovo `scripts/pagine_paese.py` (14 pagine: indice «Per paese» e 6 paesi, IT ed EN), costruite con i pezzi della pagina dell'anno; regole lette dal riquadro del radar (un posto solo); fuori classifica esclusi. Menu di tutte le pagine generate: «2027: chi diventa libero · Già pubblici · Per paese · Anniversari 2027»; radar e indice A–Z spostati nel piede.
 - Prova: `pagine.py` completo, poi `prova_regole.py`: test 1–9 e 5b tutti a 0 errori. 834 file cambiati (quasi tutti per il menu).
 - Ancora da fare: menu scritti a mano di radar e Già pubblici; pagine Come funziona e Shop (servono immagini e link Etsy); sitemap, CLS e foto controllati sul sito vero.
+
+## 25/11/2026 — Come funziona, Shop, menu su radar e Già pubblici, porte in home (solo in locale)
+- Cosa: pagine /come-funziona/ e /shop/ (IT/EN) in `scripts/pagine_paese.py`. Come funziona riporta solo cose scritte in docs/criteri.md e docs/giri-automatici.md. Lo Shop segue il mockup approvato in un'altra chat: due poster (Alice, Tale of Two Cities, 35 €), link Etsy nel formato publicdomainradar.etsy.com (in inglese senza «/it/»); il calendario non c'è perché manca l'inserzione.
+- Menu: «2027: chi diventa libero · Già pubblici · Per paese · Anniversari 2027 · Come funziona · Shop». Nel radar la testata mostra solo 2027, Già pubblici, Per paese (con 6 voci andava a capo); tutte le voci nel menu.
+- Home: 6 porte (2027, Per paese, Già pubblici, Calendario, Come funziona, Shop); la porta «Tutti gli autori» (radar) tolta, il radar resta nel piede e nei link della pagina 2027. Pagina 2027: «Chi entra, dove» porta alle pagine paese.
+- Giro «stima» (.github/workflows/stima.yml): aggiunte le cartelle nuove a `git add`.
+- Prova: catena completa (applica_registro_liste, applica_registro, registro_opere, pagina, pagine, stati_usa), prova_regole 1–9 e 5b a 0, confronta_fotografia: 0 cambi. Foto delle pagine a 1280 e 412 px.

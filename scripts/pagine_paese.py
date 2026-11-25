@@ -382,6 +382,160 @@ def pagina_indice(lang, liste):
     return "".join(out), url
 
 
+def url_come(lang):
+    return f"{P.SITO}/come-funziona/" if lang == "it" else f"{P.SITO}/en/how-it-works/"
+
+
+def pagina_come(lang):
+    """«Come funziona»: da dove vengono i dati, come si calcolano le date, quanto siamo sicuri, quando si aggiorna.
+    Solo cose già scritte in docs/criteri.md e docs/giri-automatici.md (un posto solo: se cambiano lì, cambiano qui)."""
+    it = lang == "it"
+    T = (lambda a, b: a) if it else (lambda a, b: b)
+    anno = P.ANNO_PROSSIMO
+    url = url_come(lang)
+    titolo = T("Come funziona Public Domain Radar: fonti, regole e verifiche", "How Public Domain Radar works: sources, rules and checks")
+    descr = T("Da dove vengono i dati di Public Domain Radar, come si calcola quando un libro diventa libero, quanto sono sicure le date e quando si aggiornano.",
+              "Where Public Domain Radar's data comes from, how we work out when a book becomes free, how certain the dates are and when they are updated.")
+    faq = [(T("È consulenza legale?", "Is this legal advice?"),
+            T("No. Sono informazioni generali costruite da dati aperti e possono contenere errori. Prima di pubblicare controlla la legge e i fatti per il tuo paese e la tua edizione.",
+              "No. It is general information built from open data, and it may contain errors. Before publishing, check the law and the facts for your country and your edition.")),
+           (T("Ho trovato un errore: cosa faccio?", "I found an error: what do I do?"),
+            T("Segnalalo su GitHub: il codice e i dati del sito sono pubblici, e ogni correzione resta scritta.",
+              "Report it on GitHub: the site's code and data are public, and every correction stays on record.")),
+           (T("Chi c'è dietro?", "Who is behind it?"),
+            T("È un progetto di Marco Novali. I contatti sono in fondo a ogni pagina.", "It is a project by Marco Novali. Contact details are at the bottom of every page."))]
+    jl = {"@context": "https://schema.org", "@graph": [
+        {"@type": "AboutPage", "@id": url, "url": url, "name": titolo, "description": descr, "inLanguage": lang},
+        {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": r}} for q, r in faq]}]}
+    jsonld = '<script type="application/ld+json">' + json.dumps(jl, ensure_ascii=False).replace("</", "<\\/") + "</script>"
+    altra = ('<a href="/en/how-it-works/" hreflang="en">EN</a>' if it else '<a href="/come-funziona/" hreflang="it">IT</a>')
+    out = [apri(lang, titolo, descr, url, alterne(url_come), jsonld, altra, anno)]
+    w = lambda t: f'<span class="w"><span>{t}</span></span>'
+    out.append(f'<section class="open">\n<nav class="bc m" aria-label="{T("Sei qui", "You are here")}"><a href="{"/" if it else "/en/"}">Home</a> › <span>{T("Come funziona", "How it works")}</span></nav>\n'
+               f'<p class="m k">{T("Il metodo", "The method")}</p>\n'
+               f'<h1 class="h1">{w(T("Come", "How"))}<br>{w(T("funziona", "it works"))}</h1>\n'
+               f'<p class="say" id="say">{esc(T("Ogni data del sito si calcola da fatti controllati (quando è morto l’autore, quando è uscito il libro) e dalle regole di legge di ogni paese. Ecco da dove vengono i fatti, come li controlliamo e cosa resta da verificare.", "Every date on the site is worked out from checked facts (when the author died, when the book came out) and from each country’s legal rules. Here is where the facts come from, how we check them and what is still to be verified."))}</p>\n</section>\n')
+    fonti = [{"t": {"it": "Autori, date di nascita e di morte, opere, cittadinanze. Dati liberi (CC0).", "en": "Authors, dates of birth and death, works, citizenships. Free data (CC0)."}, "f": "Wikidata", "u": "https://www.wikidata.org/"},
+             {"t": {"it": "Le visite del mese scorso: decidono l'ordine degli elenchi. I testi citati hanno il link alla pagina d'origine (CC BY-SA).", "en": "Last month's page views: they set the order of the lists. Quoted texts link to their source page (CC BY-SA)."}, "f": "Wikipedia", "u": "https://www.wikipedia.org/"},
+             {"t": {"it": "Le edizioni e gli anni di morte confermati: SBN, BnF, Deutsche Nationalbibliothek, BNE, British Library, Library of Congress.", "en": "Editions and confirmed years of death: SBN, BnF, Deutsche Nationalbibliothek, BNE, British Library, Library of Congress."}, "f": T("Cataloghi delle biblioteche nazionali", "National library catalogues")},
+             {"t": {"it": "Il registro ufficiale del Copyright Office americano: una sua scheda basta da sola per verificare la prima uscita di un libro.", "en": "The official register of the US Copyright Office: one of its records is enough on its own to verify a book's first publication."}, "f": "Catalog of Copyright Entries"},
+             {"t": {"it": "I ritratti degli autori, ciascuno con la sua licenza.", "en": "The authors' portraits, each with its own licence."}, "f": "Wikimedia Commons", "u": "https://commons.wikimedia.org/"}]
+    out.append(sezione(T("Da dove vengono i dati", "Where the data comes from"), T("Solo fonti aperte o ufficiali", "Open or official sources only"), lista_regole(fonti, lang)))
+    tre = [(T("Europa: la morte dell'autore", "Europe: the author's death"),
+            T("In Italia, Francia, Germania e Regno Unito un'opera è libera 70 anni dopo la morte dell'autore, dal 1° gennaio dell'anno dopo. In Spagna, per chi è morto prima del 1987, gli anni sono 80.",
+              "In Italy, France, Germany and the UK a work is free 70 years after the author's death, from 1 January of the following year. In Spain, for authors who died before 1987, it is 80 years.")),
+           (T("Stati Uniti: l'uscita del libro", "United States: the book's release"),
+            T("Conta l'anno della prima pubblicazione: 95 anni dopo. Per questo controlliamo opera per opera se un libro, o una sua parte, era già uscito prima, per esempio a puntate su una rivista.",
+              "The year of first publication counts: 95 years later. That is why we check work by work whether a book, or part of it, came out earlier, for example as a magazine serial.")),
+           (T("Le regole in un posto solo", "The rules in one place"),
+            T("Le regole di legge sono scritte una volta sola nel codice, con la fonte di ogni norma. Tutte le pagine le leggono da lì, e a ogni aggiornamento una serie di prove ricontrolla che nessuna pagina dica cose diverse.",
+              "The legal rules are written once in the code, with the source of each law. Every page reads them from there, and at each update a set of tests checks that no page says anything different."))]
+    out.append(sezione(T("Come calcoliamo le date", "How we work out the dates"), f'<a href="{url_indice(lang).replace(P.SITO, "")}">{T("Le regole paese per paese", "The rules country by country")}</a>',
+                       '<div class="three">\n' + "".join(f'<div><span class="m">{i + 1:02d}</span><h3>{esc(t)}</h3><p>{esc(x)}</p></div>\n' for i, (t, x) in enumerate(tre)) + "</div>\n"))
+    sic = [(T("Anni di morte", "Years of death"),
+            T("Quando Wikidata e due fonti autorevoli non concordano, vale l'anno delle due fonti. Quando le fonti si contraddicono, l'autore resta in lista con l'avviso «da verificare».",
+              "When Wikidata and two authoritative sources disagree, the two sources win. When the sources contradict each other, the author stays on the list marked «to be checked».")),
+           (T("Libri americani", "American books"),
+            T("«Verificato» vuol dire prima uscita documentata da due fonti indipendenti o da una scheda del Catalog of Copyright Entries. «Edizione confermata»: una fonte conferma l'anno dell'edizione. «Da confermare»: c'è solo Wikidata.",
+              "«Verified» means first publication documented by two independent sources or by a Catalog of Copyright Entries record. «Edition confirmed»: a source confirms the edition year. «To be confirmed»: only Wikidata so far.")),
+           (T("Nelle vetrine solo il certo", "Only certainties in the showcases"),
+            T("I nomi e i libri messi in evidenza hanno la data confermata. Quello che è ancora da verificare resta negli elenchi completi, con il motivo.",
+              "The names and books we highlight have a confirmed date. What is still to be checked stays in the full lists, with the reason."))]
+    out.append(sezione(T("Quanto siamo sicuri", "How certain we are"), T("Certo e da verificare", "Certain and to be checked"),
+                       '<div class="three">\n' + "".join(f'<div><span class="m">{i + 1:02d}</span><h3>{esc(t)}</h3><p>{esc(x)}</p></div>\n' for i, (t, x) in enumerate(sic)) + "</div>\n"))
+    agg = [{"t": {"it": "L'ordine degli elenchi, con le visite su Wikipedia del mese appena finito.", "en": "The order of the lists, with last month's Wikipedia page views."}, "f": T("Il 1° di ogni mese", "On the 1st of every month")},
+           {"t": {"it": "Le liste degli autori e delle opere, con le novità di Wikidata e delle biblioteche.", "en": "The lists of authors and works, with what is new on Wikidata and in the libraries."}, "f": T("Aprile, luglio, ottobre", "April, July, October")},
+           {"t": {"it": "Cambia chi è libero: le pagine passano all'anno nuovo e parte il conto alla rovescia per quello dopo.", "en": "Who is free changes: the pages move to the new year and the countdown to the next one starts."}, "f": T("Il 1° gennaio", "On 1 January")}]
+    out.append(sezione(T("Quando si aggiorna", "When it is updated"), T("In automatico", "Automatically"), lista_regole(agg, lang)))
+    out.append(sezione(T("Le risposte brevi", "The short answers"), T("Domande", "Questions"),
+                       "<div>\n" + "".join(f'<div class="acc"><button type="button">{esc(q)}<span>[+]</span></button><div class="bd"><p>{esc(r)}</p></div></div>\n' for q, r in faq) + "</div>\n"))
+    out.append('<div class="pf" id="pf" aria-hidden="true"></div>\n')
+    out.append(P.JS_ANNO.replace("@@LOC@@", "it-IT" if it else "en-GB"))
+    out.append(P.piede_scheda(lang))
+    return "".join(out), url
+
+
+# Shop (mockup approvato da Marco, fatto in un'altra chat il 25/11/2026): i poster sono su Etsy, stampati da Gelato.
+# I link restano nel formato publicdomainradar.etsy.com, quello che conta per Share & Save; in inglese senza «/it/».
+POSTER = [
+    ("alice", "4624523730/alice-was-beginning-to-get-very-tired", "Alice was beginning to get very tired",
+     "Alice's Adventures in Wonderland", "Lewis Carroll", 1865),
+    ("tale-of-two-cities", "4624515025/it-was-the-best-of-times-a-tale-of-two", "It was the best of times",
+     "A Tale of Two Cities", "Charles Dickens", 1859),
+]
+ETSY = "https://publicdomainradar.etsy.com"
+CSS_SHOP = (".shop-hd{display:grid;grid-template-columns:minmax(0,1fr) min(32vw,440px);gap:6vw;align-items:end}"
+            ".shop-hd .say{margin:0;max-width:440px}"
+            ".facts{margin:22px 0 0;padding:0;list-style:none;border-top:1px solid var(--ink)}"
+            ".facts li{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px solid var(--hair)}.facts .g{color:var(--grey)}"
+            ".shopgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:56px 40px;margin-top:40px}"
+            ".item{display:flex;flex-direction:column}"
+            ".wall{position:relative;background:var(--box,#E4E2DA);aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;overflow:hidden;text-decoration:none}"
+            ".wall img{width:62%;height:auto;display:block;box-shadow:0 1px 2px rgba(12,12,16,.18),0 18px 40px -14px rgba(12,12,16,.45);transition:transform 700ms var(--out),box-shadow 700ms var(--out)}"
+            ".wall:hover img{transform:translateY(-6px) scale(1.015)}"
+            ".info{display:grid;grid-template-columns:1fr auto;gap:4px 16px;margin-top:18px;align-items:baseline}"
+            ".info h3{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:clamp(24px,1.9vw,30px);line-height:.95;margin:0}"
+            ".info .price{font-family:var(--disp);font-weight:800;font-size:clamp(26px,2.3vw,34px);line-height:.95}"
+            ".info .who{grid-column:1/-1;margin:4px 0 0;font-size:15px;color:var(--grey)}.info .who em{color:var(--ink)}"
+            ".buy{margin-top:18px;display:flex;justify-content:space-between;align-items:center;padding:15px 18px;background:var(--ink);color:var(--paper);text-decoration:none;font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;position:relative;overflow:hidden}"
+            ".buy::before{content:'';position:absolute;inset:0;background:var(--red);transform:translateY(101%);transition:transform 480ms var(--cut)}"
+            ".buy span{position:relative}.buy:hover::before{transform:none}"
+            ".how{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}"
+            ".how .n{font-family:var(--disp);font-weight:800;font-size:56px;line-height:.9;color:var(--red)}"
+            ".how p{margin:10px 0 0;font-size:16px;line-height:1.5;max-width:360px}"
+            "@media (max-width:900px){.shop-hd{grid-template-columns:1fr;gap:26px}.shopgrid{grid-template-columns:1fr}.how{grid-template-columns:1fr;gap:28px}}"
+            "@media (prefers-reduced-motion:reduce){.wall img,.buy::before{transition:none}}")
+
+
+def url_shop(lang):
+    return f"{P.SITO}/shop/" if lang == "it" else f"{P.SITO}/en/shop/"
+
+
+def pagina_shop(lang):
+    it = lang == "it"
+    T = (lambda a, b: a) if it else (lambda a, b: b)
+    url = url_shop(lang)
+    titolo = T("Shop: poster tipografici dai libri in pubblico dominio · Public Domain Radar",
+               "Shop: typographic posters from public domain books · Public Domain Radar")
+    descr = T("Poster tipografici con le prime righe e le frasi famose dei libri in pubblico dominio. Stampati su richiesta, si comprano sul negozio Etsy di Public Domain Radar.",
+              "Typographic posters with the opening lines and famous phrases of public domain books. Printed on demand, sold on Public Domain Radar's Etsy shop.")
+    lk = lambda c: f"{ETSY}/{'it/' if it else ''}listing/{c}"
+    jl = {"@context": "https://schema.org", "@type": "CollectionPage", "@id": url, "url": url, "name": titolo, "description": descr, "inLanguage": lang}
+    jsonld = '<script type="application/ld+json">' + json.dumps(jl, ensure_ascii=False).replace("</", "<\\/") + "</script>"
+    altra = ('<a href="/en/shop/" hreflang="en">EN</a>' if it else '<a href="/shop/" hreflang="it">IT</a>')
+    out = [apri(lang, titolo, descr, url, alterne(url_shop), jsonld, altra, P.ANNO_PROSSIMO, CSS_SHOP)]
+    w = lambda t: f'<span class="w"><span>{t}</span></span>'
+    out.append(f'<section class="open">\n<nav class="bc m" aria-label="{T("Sei qui", "You are here")}"><a href="{"/" if it else "/en/"}">Home</a> › <span>Shop</span></nav>\n'
+               f'<p class="m k">{T("Stampa su richiesta", "Printed on demand")}</p>\n'
+               f'<div class="shop-hd"><h1 class="h1">{w("Shop")}</h1><div>'
+               f'<p class="say">{esc(T("Poster tipografici con le prime righe e le frasi famose dei libri in pubblico dominio.", "Typographic posters with the opening lines and famous phrases of public domain books."))}</p>'
+               f'<ul class="facts m"><li><span>{T("Stampa", "Printing")}</span><span class="g">{T("su richiesta, con Gelato", "on demand, by Gelato")}</span></li>'
+               f'<li><span>{T("Acquisto", "Purchase")}</span><span class="g">{T("sul nostro negozio Etsy", "on our Etsy shop")}</span></li>'
+               f'<li><span>Poster</span><span class="g">50 × 70 cm</span></li></ul></div></div>\n</section>\n')
+    card = []
+    for img, cod, frase, opera, autore, anno in POSTER:
+        alt = T(f"Poster tipografico: «{frase}…», da {opera} di {autore}", f"Typographic poster: “{frase}…”, from {opera} by {autore}")
+        card.append(f'<article class="item"><a class="wall" href="{lk(cod)}" rel="noopener" target="_blank">'
+                    f'<img src="/shop/img/{img}.webp" width="900" height="1260" loading="lazy" alt="{esc(alt)}"></a>'
+                    f'<div class="info"><h3>{esc(frase)}</h3><span class="price">35 €</span>'
+                    f'<p class="who"><em>{esc(opera)}</em> · {esc(autore)} · {anno}</p></div>'
+                    f'<a class="buy" href="{lk(cod)}" rel="noopener" target="_blank"><span>{T("Acquista su Etsy", "Buy on Etsy")}</span><span>→</span></a></article>\n')
+    out.append(sezione(T("I poster", "The posters"), f'<a href="{ETSY}" rel="noopener" target="_blank">{T("Tutto il negozio su Etsy ↗", "The whole shop on Etsy ↗")}</a>',
+                       f'<div class="shopgrid">\n{"".join(card)}</div>\n'))
+    passi = [(T("Scegli", "Choose"), T("Ogni poster parte da un libro in pubblico dominio: le prime righe e le frasi più famose, composte solo con la tipografia.",
+                                     "Every poster starts from a public domain book: the opening lines and most famous phrases, set in type alone.")),
+             (T("Acquista su Etsy", "Buy on Etsy"), T("Il pagamento e l'assistenza passano dal nostro negozio Etsy. Prezzo e spedizione definitivi li vedi lì.",
+                                                     "Payment and support go through our Etsy shop. You see the final price and shipping there.")),
+             (T("Stampato vicino a te", "Printed near you"), T("Gelato stampa e spedisce solo quando ordini, dal centro di produzione più vicino.",
+                                                              "Gelato prints and ships only when you order, from the nearest production centre."))]
+    out.append(sezione(T("Come si compra", "How to buy"), T("Tre passaggi", "Three steps"),
+                       '<div class="how">' + "".join(f'<div><div class="n">{i + 1:02d}</div><p class="m">{esc(t)}</p><p>{esc(x)}</p></div>' for i, (t, x) in enumerate(passi)) + "</div>\n"))
+    out.append('<div class="pf" id="pf" aria-hidden="true"></div>\n')
+    out.append(P.JS_ANNO.replace("@@LOC@@", "it-IT" if it else "en-GB"))
+    out.append(P.piede_scheda(lang))
+    return "".join(out), url
+
+
 def crea_pagine_paese():
     """Scrive le pagine e restituisce gli indirizzi (per la sitemap)."""
     REG = regole_radar()
@@ -395,7 +549,7 @@ def crea_pagine_paese():
         liste[("us", a)] = json.load(open(fus, encoding="utf-8")) if fus.exists() else {"opere": []}
     urls = []
     for lang in ("it", "en"):
-        pagine = [pagina_indice(lang, liste)] + [pagina_paese_ue(k, lang, REG, liste) for k in ORDINE if k != "us"] + [pagina_usa(lang, liste)]
+        pagine = [pagina_indice(lang, liste)] + [pagina_paese_ue(k, lang, REG, liste) for k in ORDINE if k != "us"] + [pagina_usa(lang, liste), pagina_come(lang), pagina_shop(lang)]
         for html_, url in pagine:
             d = RADICE / url.replace(P.SITO + "/", "")
             d.mkdir(parents=True, exist_ok=True)
