@@ -151,8 +151,11 @@ def lista_regole(voci, lang, etichetta=None):
         if v.get("aperto"):
             continue
         f = v.get("f", "")
-        p_ = re.sub(r" con l.Italia \(testo francese\)", " del 1947", f.split(",")[0])
-        resto = ", ".join(x.strip() for x in f.split(",")[1:])
+        if v.get("intero"):   # voci che non sono norme (fonti, date): niente divisione «legge, articolo»
+            p_, resto = f, ""
+        else:
+            p_ = re.sub(r" con l.Italia \(testo francese\)", " del 1947", f.split(",")[0])
+            resto = ", ".join(x.strip() for x in f.split(",")[1:])
         a = (f'<a href="{esc(v["u"])}" rel="noopener">{etichetta or ("Leggi la norma →" if lang == "it" else "Read the law →")}</a>' if v.get("u") else "<span></span>")
         li.append(f'<li><span class="p">{esc(p_)}</span><span class="m y">{esc(resto)}</span><span class="r">{esc(v["t"][lang])}</span>{a}</li>\n')
     return '<ul class="where">\n' + "".join(li) + "</ul>\n"
@@ -181,7 +184,7 @@ PORTE_CSS = (".porte{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
              ".porta p{margin:0 auto;font-size:16px;line-height:1.55;max-width:40ch}"
              ".porta .go{margin-top:20px;font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;border-bottom:2px solid var(--red);padding-bottom:4px}"
              ".porta:hover h3{color:var(--red)}.porta .big{font-family:var(--disp);font-weight:900;font-size:clamp(64px,7vw,104px);line-height:.85;color:var(--red)}"
-             "@media (max-width:860px){.porte{grid-template-columns:1fr}.porta{padding:28px 0 32px}.porta:nth-child(odd){border-right:0}}")
+             "@media (max-width:760px){.porte{grid-template-columns:1fr}.porta{padding:28px 0 32px}.porta:nth-child(odd){border-right:0}}")
 
 
 def sezione(titolo, dx, corpo, cls="sec", id_=""):
@@ -418,7 +421,7 @@ def pagina_come(lang):
     # elenco completo delle fonti, come nei piedi delle pagine (pagine.py, radar, storico/pagina.html): Marco, 25/11/2026
     fonti = [{"t": {"it": "Autori, date di nascita e di morte, opere, anni di uscita, cittadinanze. Dati liberi (CC0).", "en": "Authors, dates of birth and death, works, publication years, citizenships. Free data (CC0)."}, "f": "Wikidata", "u": "https://www.wikidata.org/"},
              {"t": {"it": "Le visite in 5 lingue, che decidono l'ordine degli elenchi. I testi citati hanno il link alla pagina d'origine (CC BY-SA).", "en": "Page views in 5 languages, which set the order of the lists. Quoted texts link to their source page (CC BY-SA)."}, "f": "Wikipedia", "u": "https://www.wikipedia.org/"},
-             {"t": {"it": "Gli anni di morte confermati e le edizioni di ogni autore: SBN (Italia), BnF (Francia), BNE (Spagna), British Library (Regno Unito), Library of Congress (USA), Biblioteca nazionale tedesca (GND) e il catalogo collettivo tedesco K10plus.", "en": "Confirmed years of death and each author's editions: SBN (Italy), BnF (France), BNE (Spain), British Library (UK), Library of Congress (USA), German National Library (GND) and the German union catalogue K10plus."}, "f": T("Cataloghi delle biblioteche nazionali", "National library catalogues")},
+             {"t": {"it": "Gli anni di morte confermati e le edizioni di ogni autore: SBN (Italia), BnF (Francia), BNE (Spagna), British Library (Regno Unito), Library of Congress (USA), Biblioteca nazionale tedesca (GND) e il catalogo collettivo tedesco K10plus.", "en": "Confirmed years of death and each author's editions: SBN (Italy), BnF (France), BNE (Spain), British Library (UK), Library of Congress (USA), German National Library (GND) and the German union catalogue K10plus."}, "f": T("Cataloghi delle biblioteche nazionali", "National library catalogues"), "intero": True},
              {"t": {"it": "Il registro ufficiale del Copyright Office americano, nella trascrizione della New York Public Library (CC0): una sua scheda basta da sola per verificare la prima uscita di un libro.", "en": "The official register of the US Copyright Office, as transcribed by the New York Public Library (CC0): one of its records is enough on its own to verify a book's first publication."}, "f": "Catalog of Copyright Entries"},
              {"t": {"it": "Gli elenchi del Public Domain Day: seconda fonte per gli anni di uscita dei libri americani (CC BY 4.0).", "en": "The Public Domain Day lists: a second source for the publication years of American books (CC BY 4.0)."}, "f": "Duke University", "u": "https://web.law.duke.edu/cspd/publicdomainday/"},
              {"t": {"it": "Le edizioni e gli anni di uscita, per controllare i libri americani.", "en": "Editions and publication years, to check American books."}, "f": "Open Library", "u": "https://openlibrary.org/"},
@@ -449,7 +452,7 @@ def pagina_come(lang):
     out.append(sezione(T("Quanto siamo sicuri", "How certain we are"), T("Certo e da verificare", "Certain and to be checked"),
                        '<div class="three">\n' + "".join(f'<div><span class="m">{i + 1:02d}</span><h3>{esc(t)}</h3><p>{esc(x)}</p></div>\n' for i, (t, x) in enumerate(sic)) + "</div>\n"))
     agg = [{"t": {"it": "L'ordine degli elenchi, con le visite su Wikipedia del mese appena finito.", "en": "The order of the lists, with last month's Wikipedia page views."}, "f": T("Il 1° di ogni mese", "On the 1st of every month")},
-           {"t": {"it": "Le liste degli autori e delle opere, con le novità di Wikidata e delle biblioteche.", "en": "The lists of authors and works, with what is new on Wikidata and in the libraries."}, "f": T("Aprile, luglio, ottobre", "April, July, October")},
+           {"t": {"it": "Le liste degli autori e delle opere, con le novità di Wikidata e delle biblioteche.", "en": "The lists of authors and works, with what is new on Wikidata and in the libraries."}, "f": T("Aprile, luglio e ottobre", "April, July and October"), "intero": True},
            {"t": {"it": "Cambia chi è libero: le pagine passano all'anno nuovo e parte il conto alla rovescia per quello dopo.", "en": "Who is free changes: the pages move to the new year and the countdown to the next one starts."}, "f": T("Il 1° gennaio", "On 1 January")}]
     out.append(sezione(T("Quando si aggiorna", "When it is updated"), T("In automatico", "Automatically"), lista_regole(agg, lang)))
     out.append(sezione(T("Le risposte brevi", "The short answers"), T("Domande", "Questions"),
@@ -473,7 +476,7 @@ CSS_SHOP = (".shop-hd{display:grid;grid-template-columns:minmax(0,1fr) min(32vw,
             ".shop-hd .say{margin:0;max-width:440px}"
             ".facts{margin:22px 0 0;padding:0;list-style:none;border-top:1px solid var(--ink)}"
             ".facts li{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px solid var(--hair)}.facts .g{color:var(--grey)}"
-            ".shopgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:56px 40px;margin-top:40px}"
+            ".shopgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:56px 40px;margin-top:40px;max-width:1000px}"
             ".item{display:flex;flex-direction:column}"
             ".wall{position:relative;background:var(--box,#E4E2DA);aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;overflow:hidden;text-decoration:none}"
             ".wall img{width:62%;height:auto;display:block;box-shadow:0 1px 2px rgba(12,12,16,.18),0 18px 40px -14px rgba(12,12,16,.45);transition:transform 700ms var(--out),box-shadow 700ms var(--out)}"
@@ -488,7 +491,7 @@ CSS_SHOP = (".shop-hd{display:grid;grid-template-columns:minmax(0,1fr) min(32vw,
             ".how{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}"
             ".how .n{font-family:var(--disp);font-weight:800;font-size:56px;line-height:.9;color:var(--red)}"
             ".how p{margin:10px 0 0;font-size:16px;line-height:1.5;max-width:360px}"
-            "@media (max-width:900px){.shop-hd{grid-template-columns:1fr;gap:26px}.shopgrid{grid-template-columns:1fr}.how{grid-template-columns:1fr;gap:28px}}"
+            "@media (max-width:900px){.shop-hd{grid-template-columns:1fr;gap:26px}.how{grid-template-columns:1fr;gap:28px}}"
             "@media (prefers-reduced-motion:reduce){.wall img,.buy::before{transition:none}}")
 
 

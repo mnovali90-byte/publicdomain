@@ -39,11 +39,11 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 .cnt{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-align:center;text-transform:uppercase;opacity:0;transition:opacity .3s}
 body.past .cnt{opacity:1}
 .top .r{justify-self:end;display:flex;gap:22px;align-items:center;font-family:var(--mono);font-size:12px;letter-spacing:.12em}
-.menu{position:fixed;inset:0;z-index:60;background:var(--red);clip-path:inset(0 0 100% 0);transition:clip-path 560ms var(--cut);display:flex;flex-direction:column;padding:var(--top) var(--pad) 40px}
+.menu{position:fixed;inset:0;z-index:60;overflow-y:auto;background:var(--red);clip-path:inset(0 0 100% 0);transition:clip-path 560ms var(--cut);display:flex;flex-direction:column;padding:var(--top) var(--pad) 40px}
 .menu.on{clip-path:inset(0 0 0 0)}
 .menu .x{position:absolute;right:var(--pad);top:22px;font-family:var(--mono);font-size:12px;letter-spacing:.12em}
 .menu nav{margin-top:6vh;display:flex;flex-direction:column}
-.menu nav a{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:clamp(56px,9vw,120px);line-height:1.02;padding-top:.06em;text-decoration:none;overflow:hidden;display:block}
+.menu nav a{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:clamp(44px,min(9vw,10svh),120px);line-height:1.02;padding-top:.06em;text-decoration:none;overflow:hidden;display:block}
 .menu nav a span{display:block;transform:translateY(105%);transition:transform 620ms var(--out)}
 .menu.on nav a span{transform:none}
 
@@ -340,6 +340,8 @@ body.ix-in .pf{opacity:1}body.menu-on .pf{opacity:0}
 }
 @media (max-width:860px){ body.pdd-b .cnt{white-space:nowrap;font-size:11px}body.pdd-b .cnt .sm,body.pdd-b .cnt .lg{display:none} }
 .tbd{display:inline-block;white-space:nowrap;margin-top:3px}
+/* le note lunghe del registro delle opere (es. «uscito prima a puntate…») vanno a capo: con nowrap la pagina scorreva di lato (controllo grafico del 25/11/2026) */
+.nota-us{display:inline-block;margin-top:4px;white-space:normal;text-transform:none;letter-spacing:0;font-family:var(--sans);font-size:13px;line-height:1.45;max-width:46ch}
 
 /* telefono: più respiro (Marco, 21/11/2026): titoli grandi con interlinea che non si tocca, menu spaziato, righe dell'indice più ariose */
 @media (max-width:860px){
@@ -363,7 +365,7 @@ body.ix-in .pf{opacity:1}body.menu-on .pf{opacity:0}
   .au b{margin-top:12px}
   .big7{gap:14px}
 }
-.porte{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));margin-top:0}.porta{display:flex;flex-direction:column;align-items:center;text-align:center;padding:34px 28px 38px;border-bottom:1px solid var(--hair);text-decoration:none;color:var(--ink)}.porta:nth-child(odd){border-right:1px solid var(--hair)}.porta .m{color:var(--redt)}.porta h3{margin:12px 0 12px;font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:clamp(34px,3.3vw,52px);line-height:.95;padding-top:.08em}.porta p{margin:0 auto;font-size:16px;line-height:1.55;max-width:40ch}.porta .go{margin-top:20px;font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;border-bottom:2px solid var(--red);padding-bottom:4px}.porta:hover h3{color:var(--red)}.porta .big{font-family:var(--disp);font-weight:900;font-size:clamp(64px,7vw,104px);line-height:.85;color:var(--red)}@media (max-width:860px){.porte{grid-template-columns:1fr}.porta{padding:28px 0 32px}.porta:nth-child(odd){border-right:0}}</style>
+.porte{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));margin-top:0}.porta{display:flex;flex-direction:column;align-items:center;text-align:center;padding:34px 28px 38px;border-bottom:1px solid var(--hair);text-decoration:none;color:var(--ink)}.porta:nth-child(odd){border-right:1px solid var(--hair)}.porta .m{color:var(--redt)}.porta h3{margin:12px 0 12px;font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:clamp(34px,3.3vw,52px);line-height:.95;padding-top:.08em}.porta p{margin:0 auto;font-size:16px;line-height:1.55;max-width:40ch}.porta .go{margin-top:20px;font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;border-bottom:2px solid var(--red);padding-bottom:4px}.porta:hover h3{color:var(--red)}.porta .big{font-family:var(--disp);font-weight:900;font-size:clamp(64px,7vw,104px);line-height:.85;color:var(--red)}@media (max-width:760px){.porte{grid-template-columns:1fr}.porta{padding:28px 0 32px}.porta:nth-child(odd){border-right:0}}</style>
 <script>document.documentElement.classList.add('js')</script>
 <!-- contatore visite senza cookie (GoatCounter) -->
 <script data-goatcounter="https://pdr.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
@@ -462,9 +464,9 @@ addEventListener('scroll',()=>{ if(!tk){tk=true;requestAnimationFrame(frame);} }
 </script>
 </main>
 <footer class="end">
-  <div><p class="m" style="color:var(--redt)">Fonti</p><p>Wikidata (CC0), Wikipedia (testi CC BY-SA, con link alla pagina d'origine), Wikimedia Commons (ritratti, ciascuno con la sua licenza), cataloghi nazionali (SBN, BnF, BNE, British Library e Library of Congress). Dati aperti, aggiornati in automatico ogni tre mesi e a dicembre; possono contenere errori.</p>
+  <div><p class="m" style="color:var(--redt)">Fonti</p><p>Wikidata (CC0), Wikipedia (testi CC BY-SA, con link alla pagina d'origine), Wikimedia Commons (ritratti, ciascuno con la sua licenza), cataloghi nazionali (SBN, BnF, BNE, British Library, Library of Congress, GND, K10plus), Catalog of Copyright Entries (trascrizione della New York Public Library, CC0), Duke University (CC BY 4.0), Open Library, Project Gutenberg. Dati aperti, aggiornati in automatico ogni tre mesi e a dicembre; possono contenere errori. <a href='/come-funziona/'>Come funziona</a>.</p>
   <p class="lk"><a href="/pubblico-dominio-2027/">2027: chi diventa libero</a> · <a href="/gia-pubblici/">Già pubblici</a> · <a href="/pubblico-dominio/">Per paese</a> · <a href="/calendario/2027/">Anniversari 2027</a> · <a href="/come-funziona/">Come funziona</a> · <a href="/shop/">Shop</a> · <a href="/radar/">Tutti gli autori (radar)</a> · <a href="/autore/">Indice degli autori</a> · <a href="https://github.com/mnovali90-byte/publicdomain">Codice e dati su GitHub</a></p></div>
-  <div><p class="m" style="color:var(--redt)">Prima di pubblicare</p><p>Le date sono un calcolo indicativo dalle norme elencate nel <a href="/radar/#regole-paesi">riquadro delle regole</a>. Non è consulenza legale: prima di pubblicare va controllato nella legge del paese. Riguardano le opere originali: traduzioni, illustrazioni ed edizioni recenti hanno diritti propri. Chi usa questi dati lo fa sotto la propria responsabilità; per un’edizione commerciale chiedi un parere a un esperto di diritto d’autore.</p>
+  <div><p class="m" style="color:var(--redt)">Prima di pubblicare</p><p>Le date sono un calcolo indicativo dalle norme elencate nelle <a href="/pubblico-dominio/">pagine dei paesi</a>. Non è consulenza legale: prima di pubblicare va controllato nella legge del paese. Riguardano le opere originali: traduzioni, illustrazioni ed edizioni recenti hanno diritti propri. Chi usa questi dati lo fa sotto la propria responsabilità; per un’edizione commerciale chiedi un parere a un esperto di diritto d’autore.</p>
   <p>Un progetto di Marco Novali · <a href="https://www.linkedin.com/in/marconovali" rel="me noopener" target="_blank">LinkedIn</a> · <a href="https://github.com/mnovali90-byte/publicdomain/issues">Hai trovato un errore?</a></p></div>
 </footer>
 <script>

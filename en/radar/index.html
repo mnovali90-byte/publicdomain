@@ -59,11 +59,11 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 .lang button{opacity:.5}.lang button.on{opacity:1;box-shadow:0 2px 0 var(--red)}
 #mbtn{display:none}
 
-.menu{position:fixed;inset:0;z-index:60;background:var(--red);clip-path:inset(0 0 100% 0);transition:clip-path 560ms var(--cut);display:flex;flex-direction:column;padding:var(--top) var(--pad) 40px}
+.menu{position:fixed;inset:0;z-index:60;overflow-y:auto;background:var(--red);clip-path:inset(0 0 100% 0);transition:clip-path 560ms var(--cut);display:flex;flex-direction:column;padding:var(--top) var(--pad) 40px}
 .menu.on{clip-path:inset(0 0 0 0)}
 .menu .x{position:absolute;right:var(--pad);top:22px;font-family:var(--mono);font-size:12px;letter-spacing:.12em}
 .menu nav{margin-top:6vh;display:flex;flex-direction:column}
-.menu nav a{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:clamp(56px,9vw,120px);line-height:1.02;padding-top:.06em;text-decoration:none;overflow:hidden;display:block}
+.menu nav a{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:clamp(44px,min(9vw,10svh),120px);line-height:1.02;padding-top:.06em;text-decoration:none;overflow:hidden;display:block}
 .menu nav a span{display:block;transform:translateY(105%);transition:transform 620ms var(--out)}
 .menu.on nav a span{transform:none}
 .menu nav a:nth-child(2) span{transition-delay:60ms}.menu nav a:nth-child(3) span{transition-delay:120ms}.menu nav a:nth-child(4) span{transition-delay:180ms}
@@ -434,7 +434,7 @@ dialog#finestra::backdrop{background:rgba(12,12,16,.5)}
 </header>
 <div class="menu" id="menu"><button class="x" id="mx" type="button" data-t="chiudiM">Close</button>
   <!-- 25/11/2026: menu già scritto nell'HTML (lo stesso che ridisegna il programma), visibile a Google e alle AI -->
-  <nav id="menu-nav"><a href="#/2027" class="on" aria-current="true"><span>2027</span></a><a href="/gia-pubblici/"><span>Già pubblici</span></a><a href="/pubblico-dominio/"><span>Per paese</span></a><a href="/calendario/2027/"><span>Anniversari</span></a><a href="/come-funziona/"><span>Come funziona</span></a><a href="/shop/"><span>Shop</span></a><a href="/autore/"><span>Indice autori</span></a></nav>
+  <nav id="menu-nav"><a href="#/2027" class="on" aria-current="true"><span>2027</span></a><a href="/gia-pubblici/"><span>Già pubblici</span></a><a href="/pubblico-dominio/"><span>Per paese</span></a><a href="/calendario/2027/"><span>Anniversari 2027</span></a><a href="/come-funziona/"><span>Come funziona</span></a><a href="/shop/"><span>Shop</span></a><a href="/autore/"><span>Indice autori</span></a></nav>
   <div class="ml" id="menu-lingue"></div>
 </div>
 
@@ -1082,7 +1082,7 @@ function disegnaNavigazione() {
     // stesso ordine del menu delle altre pagine (scripts/pagine.py, _menu_link; ristrutturazione del 25/11/2026)
     h("a", { href: LING === "en" ? "/en/already-public/" : "/gia-pubblici/" }, h("span", {}, LING === "en" ? "Already public" : "Già pubblici")),
     h("a", { href: LING === "en" ? "/en/public-domain/" : "/pubblico-dominio/" }, h("span", {}, LING === "en" ? "By country" : "Per paese")),
-    h("a", { href: LING === "en" ? `/en/calendar/${stato.anni[0]}/` : `/calendario/${stato.anni[0]}/` }, h("span", {}, LING === "en" ? "Anniversaries" : "Anniversari")),
+    h("a", { href: LING === "en" ? `/en/calendar/${stato.anni[0]}/` : `/calendario/${stato.anni[0]}/` }, h("span", {}, (LING === "en" ? "Anniversaries " : "Anniversari ") + stato.anni[0])),
     h("a", { href: LING === "en" ? "/en/how-it-works/" : "/come-funziona/" }, h("span", {}, LING === "en" ? "How it works" : "Come funziona")),
     h("a", { href: LING === "en" ? "/en/shop/" : "/shop/" }, h("span", {}, "Shop"))];
   nav.replaceChildren(...voci().slice(0, 3));   // in testata solo le prime tre (spazio); il menu ha tutte le voci

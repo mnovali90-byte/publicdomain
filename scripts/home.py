@@ -222,7 +222,7 @@ TESTI = {
                ("/calendario/{a}/", "Calendario {a}", "Anniversari", "Gli anniversari letterari del {a} giorno per giorno, da aggiungere al tuo calendario.", "Apri"),
                ("/come-funziona/", "Come funziona", "Il metodo", "Da dove vengono i dati, come si calcolano le date e quanto sono sicure.", "Leggi"),
                ("/shop/", "Shop", "Poster", "Poster tipografici con le prime righe dei libri in pubblico dominio, stampati su richiesta.", "Guarda")],
-        fonti=("Fonti", "Wikidata (CC0), Wikipedia, Project Gutenberg, il registro del copyright americano e i cataloghi delle biblioteche nazionali. Liste aggiornate al {agg}."),
+        fonti=("Fonti", "Wikidata (CC0), Wikipedia, Project Gutenberg, il registro del copyright americano, Duke University (CC BY 4.0), Open Library e i cataloghi delle biblioteche nazionali. Liste aggiornate al {agg}."),
         # settimana del Public Domain Day (mockup approvato da Marco il 22/11/2026); la fase la decide scripts/regole.py (fase_sito)
         fasi=dict(cnt_conto="tra {g} giorni", cnt_vigilia="Domani", cnt_festa="Public Domain Day",
                   col_vigilia='A mezzanotte, in Europa e negli Stati Uniti, scadono i diritti di centinaia di libri. Mancano <span class="giorni" id="orologio"></span>.',
@@ -251,7 +251,7 @@ TESTI = {
                ("/en/calendar/{a}/", "Calendar {a}", "Anniversaries", "The literary anniversaries of {a}, day by day, to add to your calendar.", "Open"),
                ("/en/how-it-works/", "How it works", "The method", "Where the data comes from, how the dates are worked out and how certain they are.", "Read"),
                ("/en/shop/", "Shop", "Posters", "Typographic posters with the opening lines of public domain books, printed on demand.", "Look")],
-        fonti=("Sources", "Wikidata (CC0), Wikipedia, Project Gutenberg, the US copyright register and national library catalogues. Lists updated on {agg}."),
+        fonti=("Sources", "Wikidata (CC0), Wikipedia, Project Gutenberg, the US copyright register, Duke University (CC BY 4.0), Open Library and national library catalogues. Lists updated on {agg}."),
         fasi=dict(cnt_conto="in {g} days", cnt_vigilia="Tomorrow", cnt_festa="Public Domain Day",
                   col_vigilia='At midnight, in Europe and the United States, the copyright of hundreds of books expires. Time left: <span class="giorni" id="orologio"></span>.',
                   col_oggi='From today, 1 January {a}, <span class="giorni">{ue}</span> writers are free in Italy, France, Germany and the UK, <span class="giorni">{es}</span> in Spain, and <span class="giorni">{us}</span> books in the United States.',

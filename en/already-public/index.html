@@ -40,11 +40,11 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 .cnt{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-align:center;text-transform:uppercase;opacity:0;transition:opacity .3s}
 body.past .cnt{opacity:1}
 .top .r{justify-self:end;display:flex;gap:22px;align-items:center;font-family:var(--mono);font-size:12px;letter-spacing:.12em}
-.menu{position:fixed;inset:0;z-index:60;background:var(--red);clip-path:inset(0 0 100% 0);transition:clip-path 560ms var(--cut);display:flex;flex-direction:column;padding:var(--top) var(--pad) 40px}
+.menu{position:fixed;inset:0;z-index:60;overflow-y:auto;background:var(--red);clip-path:inset(0 0 100% 0);transition:clip-path 560ms var(--cut);display:flex;flex-direction:column;padding:var(--top) var(--pad) 40px}
 .menu.on{clip-path:inset(0 0 0 0)}
 .menu .x{position:absolute;right:var(--pad);top:22px;font-family:var(--mono);font-size:12px;letter-spacing:.12em}
 .menu nav{margin-top:6vh;display:flex;flex-direction:column}
-.menu nav a{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:clamp(56px,9vw,120px);line-height:1.02;padding-top:.06em;text-decoration:none;overflow:hidden;display:block}
+.menu nav a{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:clamp(44px,min(9vw,10svh),120px);line-height:1.02;padding-top:.06em;text-decoration:none;overflow:hidden;display:block}
 .menu nav a span{display:block;transform:translateY(105%);transition:transform 620ms var(--out)}
 .menu.on nav a span{transform:none}
 
@@ -1111,7 +1111,7 @@ avvia();
 <footer class="end">
   <div><p class="m" style="color:var(--redt)">Sources and rules</p><p>Wikidata (CC0) for works, authors and years; Wikipedia for this week's page views; Duke University's Public Domain Day lists (CC BY 4.0) as a second source for the USA; Wikimedia Commons for portraits, each with its own licence. Data updated automatically every month: it may contain errors.</p><p>Rules used: Italy, France, Germany, United Kingdom 70 years from the author's death (in the UK, works first published after 1988 by authors who died before 1969 are protected until 2039); Spain 80 years for authors who died before 7 December 1987; USA 95 years from first publication (the first recorded date is used). In Italy, for works published before 1940 by authors from Allied countries in the Second World War, a note recalls that some argue for an extension (1947 Peace Treaty), not applied by courts so far.</p>
   <p class="lk"><a href="/en/public-domain-2027/">2027: what becomes free</a> · <a href="/en/already-public/">Already public</a> · <a href="/en/public-domain/">By country</a> · <a href="/en/calendar/2027/">Anniversaries 2027</a> · <a href="/en/how-it-works/">How it works</a> · <a href="/en/shop/">Shop</a> · <a href="/en/radar/">All authors (radar)</a> · <a href="/en/author/">Author index</a> · <a href="https://github.com/mnovali90-byte/publicdomain">Code and data on GitHub</a></p></div>
-  <div><p class="m" style="color:var(--redt)">Before publishing</p><p>The dates are an indicative calculation from the rules listed in the <a href="/en/radar/#regole-paesi">rules box</a>. Not legal advice: check the law of the country before publishing. They refer to the original works: translations, illustrations and recent editions have their own rights. Anyone using this data does so at their own risk; for a commercial edition, ask a copyright expert for advice.</p>
+  <div><p class="m" style="color:var(--redt)">Before publishing</p><p>The dates are an indicative calculation from the rules listed on the <a href="/en/public-domain/">country pages</a>. Not legal advice: check the law of the country before publishing. They refer to the original works: translations, illustrations and recent editions have their own rights. Anyone using this data does so at their own risk; for a commercial edition, ask a copyright expert for advice.</p>
   <p>A project by Marco Novali · <a href="https://www.linkedin.com/in/marconovali" rel="me noopener" target="_blank">LinkedIn</a> · <a href="https://github.com/mnovali90-byte/publicdomain/issues">Found an error?</a></p></div>
 </footer>
 <script>

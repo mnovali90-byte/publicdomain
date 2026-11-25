@@ -1638,3 +1638,16 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - Giro «stima» (.github/workflows/stima.yml): aggiunte le cartelle nuove a `git add`.
 - Prova: catena completa (applica_registro_liste, applica_registro, registro_opere, pagina, pagine, stati_usa), prova_regole 1–9 e 5b a 0, confronta_fotografia: 0 cambi. Foto delle pagine a 1280 e 412 px.
 - 25/11/2026, correzione chiesta da Marco: in «Come funziona» mancavano fonti. Ora l'elenco è completo come nei piedi delle pagine: Wikidata, Wikipedia (visite in 5 lingue), cataloghi nazionali (SBN, BnF, BNE, British Library, Library of Congress, GND, K10plus), Catalog of Copyright Entries (trascrizione NYPL, CC0), Duke University (CC BY 4.0), Open Library, Project Gutenberg, Wikimedia Commons, testi di legge. Il link delle fonti dice «Apri →» invece di «Leggi la norma →».
+
+## 25/11/2026 — Controllo grafico prima di pubblicare (chiesto da Marco)
+- Come è fatta la prova: pagine generate in locale e aperte in Chrome (Playwright) a 360, 412, 768, 1024, 1280 e 1600 px di larghezza, scorrendo tutta la pagina. Per ogni pagina un programma cerca: pagina che scorre di lato, elementi che escono dallo schermo, testi su più righe con interlinea più stretta di 0,84. Poi ho guardato a occhio le foto. Pagine: indice Per paese, i 6 paesi (IT ed EN), Come funziona, Shop (IT/EN), home (IT/EN), pagina 2027 (IT/EN), calendario, Già pubblici, radar, una scheda autore. Menu aperto a 360×640, 1280×720, 1600×900.
+- Trovato e corretto:
+  1. Pagina 2027 (già online): le note lunghe dei libri USA (es. Thirteen Problems, Peril at End House) stavano su una riga sola: la pagina scorreva di lato fino a 1.100 px sul telefono. Ora vanno a capo (classe `nota-us`, stile_anno.css).
+  2. Menu a tutto schermo: con 6–7 voci su un computer con schermo basso l'ultima voce («Shop») usciva dallo schermo. Ora la grandezza tiene conto dell'altezza (stile_scheda.css e radar) e il menu scorre se serve.
+  3. Come funziona: «Aprile, luglio, ottobre» e «Cataloghi delle biblioteche nazionali» venivano spezzati come «legge, articolo». Corretto.
+  4. Shop: la griglia a 3 colonne lasciava un buco con 2 poster; ora si adatta al numero di poster.
+  5. Indice Per paese: a 768 px andava in una colonna; ora va in una colonna solo sotto 760 px, come le porte della home.
+  6. Piede di tutte le pagine e home: l'elenco delle fonti non citava Duke, Open Library, Project Gutenberg, il registro USA e i cataloghi tedeschi; ora sì, con il link a Come funziona. Il link «riquadro delle regole» del piede porta alle pagine dei paesi.
+  7. Radar: voce «Anniversari 2027» come nel resto del sito.
+- Controllato e lasciato com'è: interlinea dei titoli grandi uguale alla pagina 2027 già approvata (stesse misure); gli «elementi fuori schermo» rimasti sono gli scaffali che scorrono di lato apposta (Già pubblici, radar, schede, mesi del calendario).
+- Dopo le correzioni: nessuna pagina scorre di lato a nessuna larghezza; prova_regole 1–9 e 5b a 0.
