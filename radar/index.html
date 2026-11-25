@@ -2,11 +2,13 @@
 <html lang="it">
 <head>
 <meta charset="utf-8">
+<meta name="robots" content="noindex,follow" id="radar-robots">
+<script id="radar-rimando">/* 25/11/2026 (Marco): il radar non è più una pagina a sé. L'elenco è nelle pagine dei paesi; qui restano solo le schede (#/autore/, #/opera/, #/genere/). Tutto il resto porta alla pagina «Per paese». */(function(){if(window.PAESE_FISSO)return;var h=location.hash.replace(/^#\/?/,"").split("/"),en=location.pathname.indexOf("/en/")===0,b=en?"/en/public-domain/":"/pubblico-dominio/";if(!h[0]||/^\d{4}$/.test(h[0])||h[0]==="regole-paesi")location.replace(b);else if(h[0]==="us")location.replace(b+(en?"united-states/":"stati-uniti/"));})();</script>
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pubblico dominio 2027: gli autori che diventano liberi · Public Domain Radar</title>
 <meta name="description" content="Quali autori entrano in pubblico dominio il 1° gennaio 2027, con le regole di Italia, Francia, Germania, Spagna, Regno Unito e USA lette sui testi di legge ufficiali, e le registrazioni nei cataloghi nazionali. Dati aperti, aggiornati ogni tre mesi e a dicembre.">
-<link rel="canonical" href="https://publicdomainradar.com/radar/">
+<link rel="canonical" href="https://publicdomainradar.com/pubblico-dominio/">
 <link rel="alternate" hreflang="it" href="https://publicdomainradar.com/radar/">
 <link rel="alternate" hreflang="en" href="https://publicdomainradar.com/en/radar/">
 <link rel="alternate" hreflang="x-default" href="https://publicdomainradar.com/radar/">
@@ -132,7 +134,7 @@ body.ix-in .pf{opacity:1}body.menu-on .pf,body.panel-on .pf{opacity:0}
 /* il ritratto cambia appena cambia il nome, con una dissolvenza breve (21/11/2026: prima la tendina era lenta e sul telefono arrivava in ritardo) */
 .pf .ly{position:absolute;inset:0;background:var(--box);overflow:hidden;opacity:0;transition:opacity 260ms ease}
 .pf .ly.on{opacity:1}.pf .ly.off{opacity:0}
-.pf img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.06);display:block;transform:scale(1.03);transition:transform 600ms var(--out)}
+.pf img{width:100%;height:100%;object-fit:cover;object-position:50% 18%;filter:grayscale(1) contrast(1.06);display:block;transform:scale(1.03);transition:transform 600ms var(--out)}
 .pf .ly.on img{transform:none}
 .pf .ini,.sq .ini{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--grey);text-transform:uppercase;text-align:center;padding:12px}
 .cv{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:12%}
@@ -144,7 +146,7 @@ body.ix-in .pf{opacity:1}body.menu-on .pf,body.panel-on .pf{opacity:0}
 .big7{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:18px;margin-top:24px}
 .au{position:relative;cursor:pointer}
 .sq{position:relative;aspect-ratio:1;background:var(--box);overflow:hidden}
-.sq img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05);transition:filter .5s,transform .8s var(--out)}
+.sq img{width:100%;height:100%;object-fit:cover;object-position:50% 18%;filter:grayscale(1) contrast(1.05);transition:filter .5s,transform .8s var(--out)}
 @media (hover:hover){.au:hover .sq img{filter:none;transform:scale(1.04)}}
 .au b{display:block;margin-top:10px;font-size:15.5px;font-weight:600;line-height:1.2}
 .au span{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;color:var(--grey);text-transform:uppercase;margin-top:4px}
@@ -318,7 +320,7 @@ dialog#finestra::backdrop{background:rgba(12,12,16,.5)}
 .sa-head h2{margin:0}
 .sa-desc{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--grey);margin:12px 0 0;line-height:1.6}
 .sa-foto .ritratto{position:relative;aspect-ratio:4/5;background:var(--box);overflow:hidden}
-.ritratto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1)}
+.ritratto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 18%;filter:grayscale(1)}
 .ritratto .iniziali{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--mono);font-size:13px;color:var(--grey)}
 .sa-credito .didascalia{font-family:var(--mono);font-size:9.5px;color:var(--grey);margin-top:8px;line-height:1.5;text-align:right}
 .sa-paese{display:flex;align-items:center;gap:12px;margin-top:26px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--grey)}

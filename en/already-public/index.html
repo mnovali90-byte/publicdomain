@@ -62,7 +62,7 @@ h1 .w:nth-child(2)>span{animation-delay:70ms}
 .ans b{color:var(--redt);font-weight:600}
 .ph{position:relative;aspect-ratio:4/5;background:var(--box);overflow:hidden;clip-path:inset(0 0 100% 0);animation:unmask 1000ms 200ms var(--cut) forwards}
 @keyframes unmask{to{clip-path:inset(0 0 0 0)}}
-.ph img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.06);display:block;transform:scale(1.1);animation:settle 1400ms 200ms var(--out) forwards}
+.ph img{width:100%;height:100%;object-fit:cover;object-position:50% 18%;filter:grayscale(1) contrast(1.06);display:block;transform:scale(1.1);animation:settle 1400ms 200ms var(--out) forwards}
 @keyframes settle{to{transform:none}}
 .cap{font-family:var(--mono);font-size:10px;letter-spacing:.03em;color:var(--grey);margin-top:8px;line-height:1.5}
 
@@ -146,7 +146,7 @@ h1 .w:nth-child(2)>span{animation-delay:70ms}
 .others{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:18px}
 .oc{text-decoration:none}
 .oc .p{position:relative;aspect-ratio:4/5;background:var(--box);overflow:hidden}
-.oc .p img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05);transition:filter .5s,transform .8s var(--out)}
+.oc .p img{width:100%;height:100%;object-fit:cover;object-position:50% 18%;filter:grayscale(1) contrast(1.05);transition:filter .5s,transform .8s var(--out)}
 .oc:hover .p img{filter:none;transform:scale(1.04)}
 .oc b{display:block;margin-top:10px;font-size:16px;font-weight:600;line-height:1.2}
 .oc span{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;color:var(--grey);text-transform:uppercase;margin-top:4px;line-height:1.5}
@@ -1121,7 +1121,7 @@ avvia();
 </main>
 <footer class="end">
   <div><p class="m" style="color:var(--redt)">Sources and rules</p><p>Wikidata (CC0) for works, authors and years; Wikipedia for this week's page views; Duke University's Public Domain Day lists (CC BY 4.0) as a second source for the USA; Wikimedia Commons for portraits, each with its own licence. Data updated automatically every month: it may contain errors.</p><p>Rules used: Italy, France, Germany, United Kingdom 70 years from the author's death (in the UK, works first published after 1988 by authors who died before 1969 are protected until 2039); Spain 80 years for authors who died before 7 December 1987; USA 95 years from first publication (the first recorded date is used). In Italy, for works published before 1940 by authors from Allied countries in the Second World War, a note recalls that some argue for an extension (1947 Peace Treaty), not applied by courts so far.</p>
-  <p class="lk"><a href="/en/">Home</a> · <a href="/en/public-domain-2027/">2027: what becomes free</a> · <a href="/en/already-public/">Already public</a> · <a href="/en/public-domain/">By country</a> · <a href="/en/calendar/2027/">Anniversaries 2027</a> · <a href="/en/how-it-works/">How it works</a> · <a href="/en/shop/">Shop</a> · <a href="/en/radar/">All authors (radar)</a> · <a href="/en/author/">Author index</a> · <a href="https://github.com/mnovali90-byte/publicdomain">Code and data on GitHub</a></p></div>
+  <p class="lk"><a href="/en/">Home</a> · <a href="/en/public-domain-2027/">2027: what becomes free</a> · <a href="/en/already-public/">Already public</a> · <a href="/en/public-domain/">By country</a> · <a href="/en/calendar/2027/">Anniversaries 2027</a> · <a href="/en/how-it-works/">How it works</a> · <a href="/en/shop/">Shop</a> · <a href="/en/author/">Author index</a> · <a href="https://github.com/mnovali90-byte/publicdomain">Code and data on GitHub</a></p></div>
   <div><p class="m" style="color:var(--redt)">Before publishing</p><p>The dates are an indicative calculation from the rules listed on the <a href="/en/public-domain/">country pages</a>. Not legal advice: check the law of the country before publishing. They refer to the original works: translations, illustrations and recent editions have their own rights. Anyone using this data does so at their own risk; for a commercial edition, ask a copyright expert for advice.</p>
   <p>A project by Marco Novali · <a href="https://www.linkedin.com/in/marconovali" rel="me noopener" target="_blank">LinkedIn</a> · <a href="https://github.com/mnovali90-byte/publicdomain/issues">Found an error?</a></p></div>
 </footer>

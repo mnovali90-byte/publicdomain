@@ -61,7 +61,7 @@ h1 .w:nth-child(2)>span{animation-delay:70ms}
 .ans b{color:var(--redt);font-weight:600}
 .ph{position:relative;aspect-ratio:4/5;background:var(--box);overflow:hidden;clip-path:inset(0 0 100% 0);animation:unmask 1000ms 200ms var(--cut) forwards}
 @keyframes unmask{to{clip-path:inset(0 0 0 0)}}
-.ph img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.06);display:block;transform:scale(1.1);animation:settle 1400ms 200ms var(--out) forwards}
+.ph img{width:100%;height:100%;object-fit:cover;object-position:50% 18%;filter:grayscale(1) contrast(1.06);display:block;transform:scale(1.1);animation:settle 1400ms 200ms var(--out) forwards}
 @keyframes settle{to{transform:none}}
 .cap{font-family:var(--mono);font-size:10px;letter-spacing:.03em;color:var(--grey);margin-top:8px;line-height:1.5}
 
@@ -145,7 +145,7 @@ h1 .w:nth-child(2)>span{animation-delay:70ms}
 .others{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:18px}
 .oc{text-decoration:none}
 .oc .p{position:relative;aspect-ratio:4/5;background:var(--box);overflow:hidden}
-.oc .p img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05);transition:filter .5s,transform .8s var(--out)}
+.oc .p img{width:100%;height:100%;object-fit:cover;object-position:50% 18%;filter:grayscale(1) contrast(1.05);transition:filter .5s,transform .8s var(--out)}
 .oc:hover .p img{filter:none;transform:scale(1.04)}
 .oc b{display:block;margin-top:10px;font-size:16px;font-weight:600;line-height:1.2}
 .oc span{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;color:var(--grey);text-transform:uppercase;margin-top:4px;line-height:1.5}
@@ -274,7 +274,7 @@ body.ix-in .pf{opacity:1}body.menu-on .pf{opacity:0}
 /* il ritratto cambia appena cambia il nome, con una dissolvenza breve (21/11/2026) */
 .pf .ly{position:absolute;inset:0;background:var(--box);overflow:hidden;opacity:0;transition:opacity 260ms ease}
 .pf .ly.on{opacity:1}.pf .ly.off{opacity:0}
-.pf img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.06);display:block;transform:scale(1.03);transition:transform 600ms var(--out)}
+.pf img{width:100%;height:100%;object-fit:cover;object-position:50% 18%;filter:grayscale(1) contrast(1.06);display:block;transform:scale(1.03);transition:transform 600ms var(--out)}
 .pf .ly.on img{transform:none}
 .cv{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:12%}
 .cv b{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:clamp(22px,2.6vw,38px);line-height:.92}
@@ -510,7 +510,7 @@ addEventListener('scroll',()=>{ if(!tk){tk=true;requestAnimationFrame(frame);} }
 </main>
 <footer class="end">
   <div><p class="m" style="color:var(--redt)">Fonti</p><p>Wikidata (CC0), Wikipedia (testi CC BY-SA, con link alla pagina d'origine), Wikimedia Commons (ritratti, ciascuno con la sua licenza), cataloghi nazionali (SBN, BnF, BNE, British Library, Library of Congress, GND, K10plus), Catalog of Copyright Entries (trascrizione della New York Public Library, CC0), Duke University (CC BY 4.0), Open Library, Project Gutenberg. Dati aperti, aggiornati in automatico ogni tre mesi e a dicembre; possono contenere errori. <a href='/come-funziona/'>Come funziona</a>.</p>
-  <p class="lk"><a href="/">Home</a> · <a href="/pubblico-dominio-2027/">2027: chi diventa libero</a> · <a href="/gia-pubblici/">Già pubblici</a> · <a href="/pubblico-dominio/">Per paese</a> · <a href="/calendario/2027/">Anniversari 2027</a> · <a href="/come-funziona/">Come funziona</a> · <a href="/shop/">Shop</a> · <a href="/radar/">Tutti gli autori (radar)</a> · <a href="/autore/">Indice degli autori</a> · <a href="https://github.com/mnovali90-byte/publicdomain">Codice e dati su GitHub</a></p></div>
+  <p class="lk"><a href="/">Home</a> · <a href="/pubblico-dominio-2027/">2027: chi diventa libero</a> · <a href="/gia-pubblici/">Già pubblici</a> · <a href="/pubblico-dominio/">Per paese</a> · <a href="/calendario/2027/">Anniversari 2027</a> · <a href="/come-funziona/">Come funziona</a> · <a href="/shop/">Shop</a> · <a href="/autore/">Indice degli autori</a> · <a href="https://github.com/mnovali90-byte/publicdomain">Codice e dati su GitHub</a></p></div>
   <div><p class="m" style="color:var(--redt)">Prima di pubblicare</p><p>Le date sono un calcolo indicativo dalle norme elencate nelle <a href="/pubblico-dominio/">pagine dei paesi</a>. Non è consulenza legale: prima di pubblicare va controllato nella legge del paese. Riguardano le opere originali: traduzioni, illustrazioni ed edizioni recenti hanno diritti propri. Chi usa questi dati lo fa sotto la propria responsabilità; per un’edizione commerciale chiedi un parere a un esperto di diritto d’autore.</p>
   <p>Un progetto di Marco Novali · <a href="https://www.linkedin.com/in/marconovali" rel="me noopener" target="_blank">LinkedIn</a> · <a href="https://github.com/mnovali90-byte/publicdomain/issues">Hai trovato un errore?</a></p></div>
 </footer>

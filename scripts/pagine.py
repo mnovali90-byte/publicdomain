@@ -956,8 +956,7 @@ def _menu_link(lang):
 def _piede_link(lang):
     """Collegamenti del piede: il menu più radar e indice A–Z (restano raggiungibili da ogni pagina)."""
     it = lang == "it"
-    return _menu_link(lang) + ([("/radar/", "Tutti gli autori (radar)"), ("/autore/", "Indice degli autori")] if it
-                               else [("/en/radar/", "All authors (radar)"), ("/en/author/", "Author index")])
+    return _menu_link(lang) + ([("/autore/", "Indice degli autori")] if it else [("/en/author/", "Author index")])   # il radar non è più una voce (25/11/2026)
 
 
 def testa_scheda(lang, titolo, descr, url, alterne_, jsonld, altra, cnt, og_tipo="profile", css_extra="", main_cls="", body_cls=""):
@@ -1047,12 +1046,22 @@ def _data_breve(lang, anno):
     return data_l(lang, anno).replace("1° gennaio", "1° gen").replace("1 January", "1 Jan")
 
 
+def _tendina(lang):
+    import pagine_paese   # «Dove pubblichi?» in un posto solo (scripts/pagine_paese.py)
+    return pagine_paese.tendina_html(lang)
+
+
 def blocco_vicini_n(a, lang):
     """«Altri scrittori liberi dal…» con le foto (grafica nuova); stessi scrittori e stesso ordine di blocco_vicini."""
     q = a["wikidata"]
     it = lang == "it"
     T = (lambda x, y: x) if it else (lambda x, y: y)
     cta = f'<a href="{"/radar/" if it else "/en/radar/"}#/autore/{esc(q)}">{T("Apri nel radar", "Open in the radar")} →</a>'
+    if q in MEMBRI and MEMBRI[q][1] == ANNO_PROSSIMO:   # 25/11/2026: l'elenco completo sta nella pagina del paese
+        _pp = ("spagna" if it else "spain") if MEMBRI[q][0] == "es" else ("italia" if it else "united-kingdom")
+        cta = (f'<a href="{"/pubblico-dominio/" if it else "/en/public-domain/"}{_pp}/">'
+               f'{T("Tutti gli scrittori liberi in Spagna", "All writers free in Spain") if MEMBRI[q][0] == "es" else T("Tutti gli scrittori liberi in Italia", "All writers free in the UK")} →</a>'
+               f' <a href="{"/pubblico-dominio/" if it else "/en/public-domain/"}">{T("Gli altri paesi", "Other countries")} →</a>')
     if q not in MEMBRI:
         return f'<section class="blk"><span class="m"><b>{T("Nel radar", "In the radar")}</b>{T("Tutti gli autori", "All authors")}</span><div><div class="lnk">{cta}</div></div></section>\n'
     tipo, anno = MEMBRI[q]
@@ -1202,7 +1211,7 @@ def scheda_nuova(a, lang, bd):
         righe.append(f'<li class="{cl}"><span class="c">{esc(paese)}<small>{esc(regola)}</small></span><span class="v">{esc(val)}</span></li>')
     o.append(f'<section class="blk" id="dates"><span class="m"><b>{T("Quando è libero", "When it is free")}</b>{T("Paese per paese", "Country by country")}</span>\n<div>'
              f'{grande}{conf}{al}<ul class="ps">{"".join(righe)}</ul>\n<p class="legal">{T("Calcolo indicativo, non è consulenza legale.", "Indicative calculation, not legal advice.")}</p>\n'
-             f'<div class="lnk"><a href="{"/radar/" if it else "/en/radar/"}#regole-paesi">{T("Le regole, paese per paese", "The rules, country by country")}</a></div></div></section>\n')
+             f'<div class="lnk"><a href="{"/pubblico-dominio/" if it else "/en/public-domain/"}">{T("Le regole, paese per paese", "The rules, country by country")}</a></div></div></section>\n')
 
     # chi era
     if bd:
@@ -1550,7 +1559,7 @@ def crea_home_inglese():
     s = sostituisci(s, r'<meta property="og:title" content="[^"]*">', f'<meta property="og:title" content="{esc(tit)}">')
     s = sostituisci(s, r'<meta property="og:description" content="[^"]*">', f'<meta property="og:description" content="{esc(breve)}">')
     s = sostituisci(s, r'<meta name="twitter:description" content="[^"]*">', f'<meta name="twitter:description" content="{esc(breve)}">')
-    s = sostituisci(s, r'<link rel="canonical" href="https://publicdomainradar.com/radar/">', '<link rel="canonical" href="https://publicdomainradar.com/en/radar/">')
+    s = sostituisci(s, r'<link rel="canonical" href="https://publicdomainradar.com/pubblico-dominio/">', '<link rel="canonical" href="https://publicdomainradar.com/en/public-domain/">')   # 25/11/2026: il radar rimanda alle pagine paese
     s = sostituisci(s, r'<meta property="og:url" content="https://publicdomainradar.com/radar/">', '<meta property="og:url" content="https://publicdomainradar.com/en/radar/">')
     s = sostituisci(s, r'\{"@type":"WebSite","name":"Public Domain Radar","url":"https://publicdomainradar.com/"',
                     '{"@type":"WebSite","name":"Public Domain Radar","url":"https://publicdomainradar.com/en/"')
@@ -1924,6 +1933,8 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
     it = lang == "it"
     T = (lambda a, b: a) if it else (lambda a, b: b)
     app = "/radar/" if it else "/en/radar/"
+    pp = "/pubblico-dominio/" if it else "/en/public-domain/"   # 25/11/2026: i «tutti» portano alle pagine dei paesi
+    pp_it, pp_es, pp_us = pp + ("italia/" if it else "italy/"), pp + ("spagna/" if it else "spain/"), pp + ("stati-uniti/" if it else "united-states/")
     pub = opere_us["anno_pubblicazione"] if opere_us else R.pubblicate_libere_usa_nel(anno)
     morti = R.morti_liberi_nel(anno, "it")
     morti_es = R.morti_liberi_nel(anno, "es")
@@ -2039,12 +2050,13 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
 <h1 class="h1" id="pd-h1">{w(T("Cosa diventa", "What becomes"))}<br>{w(T("libero", "free"))} {w(T(f"nel {anno}", f"in {anno}"))}</h1>
 <p class="say" id="say">{T(f"Il 1° gennaio {anno} scadono i diritti di centinaia di scrittori e libri. Chi, dove e con quali cautele, da dati aperti e con le fonti.",
                    f"On 1 January {anno} copyright expires for hundreds of writers and books. Who, where and with what caveats, from open data with sources.")}</p>
+<div style="margin-top:34px">{_tendina(lang)}</div>
 </section>
 """)
     nums = [(n_ue, T("scrittori liberi in Italia, Francia, Germania e Regno Unito", "writers free in Italy, France, Germany and the UK"),
-             T(f"morti nel {morti}", f"died in {morti}"), "#ix1" if aut else f"{app}#/{anno}")]
+             T(f"morti nel {morti}", f"died in {morti}"), "#ix1" if aut else pp)]
     if n_es:
-        nums.append((n_es, T("scrittori liberi in Spagna", "writers free in Spain"), T(f"morti nel {morti_es}", f"died in {morti_es}"), f"{app}#/{anno}"))
+        nums.append((n_es, T("scrittori liberi in Spagna", "writers free in Spain"), T(f"morti nel {morti_es}", f"died in {morti_es}"), pp_es))
     if n_us:
         nums.append((n_us, T("libri liberi negli USA", "books free in the USA"),
                      T(f"usciti nel {pub} · {n_st['verificata']} verificati, {n_st['edizione']} con l'edizione confermata", f"published in {pub} · {n_st['verificata']} verified, {n_st['edizione']} edition confirmed"), "#ix2"))
@@ -2076,7 +2088,7 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
             mt = (esc(ruolo) + "<br>" if ruolo else "") + esc(sotto)
             out.append(f'<li class="row"{df} data-i="{esc(iniziali_nome(nome))}"><span class="no">{k + 1:02d}</span><span class="nm"><a href="{href}">{esc(nome)}</a></span><span class="mt">{mt}</span></li>\n')
         out.append(f'</ol>\n<a href="#autori" class="more">{T(f"Tutti i {len(aut)} scrittori con una scheda →", f"All {len(aut)} writers with a page →")}</a>'
-                   f'<a href="{app}#/{anno}" class="more">{T(f"Tutti gli {n_(n_ue)} nel radar →", f"All {n_(n_ue)} in the radar →")}</a>\n')
+                   f'<a href="{pp}" class="more">{T(f"Tutti gli {n_(n_ue)}, paese per paese →", f"All {n_(n_ue)}, country by country →")}</a>\n')
         if crediti:
             out.append(f'<p class="cred">{T("Ritratti da Wikimedia Commons", "Portraits from Wikimedia Commons")} — {" · ".join(crediti)}</p>\n')
         out.append("</section>\n")
@@ -2111,7 +2123,7 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
                     crediti_us.append(f'{esc(pulisci(fa["nome"]))}: <a href="{esc(fa["foto"].get("pagina", ""))}" rel="noopener">{esc(" · ".join(x for x in (chi_f, pulisci(fa["foto"].get("licenza"))) if x) or "Wikimedia Commons")}</a>')
             out.append(f'<li class="row"{df} data-i="{esc(iniziali_nome(chi.split(", ")[0]))}"><span class="no">{k + 1:02d}</span>'
                        f'<span class="nm"><a href="{app}#/opera/{o["qid"]}">{esc(t)}</a></span><span class="mt">{esc(chi)}<br>{badge}</span></li>\n')
-        out.append(f'</ol>\n<a href="{app}#/us/{anno}" class="more">{T(f"Tutti i {n_us} libri: {n_st['verificata']} con la prima uscita verificata, {n_st['edizione']} con l&#39;anno dell&#39;edizione confermato, {n_st['da_confermare']} da confermare →", f"All {n_us} books: {n_st['verificata']} with the first publication verified, {n_st['edizione']} with the edition year confirmed, {n_st['da_confermare']} to be confirmed →")}</a>\n')
+        out.append(f'</ol>\n<a href="{pp_us}" class="more">{T(f"Tutti i {n_us} libri: {n_st['verificata']} con la prima uscita verificata, {n_st['edizione']} con l&#39;anno dell&#39;edizione confermato, {n_st['da_confermare']} da confermare →", f"All {n_us} books: {n_st['verificata']} with the first publication verified, {n_st['edizione']} with the edition year confirmed, {n_st['da_confermare']} to be confirmed →")}</a>\n')
         if crediti_us:
             out.append(f'<p class="cred">{T("Ritratti degli autori da Wikimedia Commons", "Authors\' portraits from Wikimedia Commons")} — {" · ".join(crediti_us)}</p>\n')
         out.append("</section>\n")
@@ -2424,7 +2436,7 @@ def main():
         nuove_date[u] = [imp, d, VERSIONE_IMPRONTA]
         return d
     righe = [f"  <url><loc>{u}</loc><lastmod>{data_di(u)}</lastmod><changefreq>monthly</changefreq></url>"
-             for u in (f"{SITO}/", f"{SITO}/en/", f"{SITO}/radar/", f"{SITO}/en/radar/", url_pagina('it'), url_pagina('en'))]
+             for u in (f"{SITO}/", f"{SITO}/en/", url_pagina('it'), url_pagina('en'))]   # il radar non va più nella mappa (25/11/2026)
     if (RADICE / "gia-pubblici" / "index.html").exists():   # pagina «Già pubblici» (storico/pagina.py)
         landing_urls += [f"{SITO}/gia-pubblici/", f"{SITO}/en/already-public/"]
     righe += [f"  <url><loc>{u}</loc><lastmod>{data_di(u)}</lastmod><changefreq>weekly</changefreq></url>" for u in landing_urls]

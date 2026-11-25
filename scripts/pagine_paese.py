@@ -340,6 +340,25 @@ def elenco_completo(k, lang, autori, naz, morti, wl, wl_en, in_it, in_en, agg_it
                    T(f"{n} scrittori · morti nel {morti}", f"{n} writers · died in {morti}"), corpo, "sec tutti", "ix1")
 
 
+def tendina_html(lang):
+    """«Dove pubblichi?»: una tendina con i sei paesi (home e pagina dell'anno; Marco, 25/11/2026). Un posto solo."""
+    it = lang == "it"
+    voci = "".join(f'<li><a href="{url_paese(k, lang).replace(P.SITO, "")}">{esc(PAESI[k][0] if it else PAESI[k][1])}</a></li>' for k in ORDINE)
+    dove = "Dove pubblichi?" if it else "Where do you publish?"
+    css = ('<style>.dove{position:relative;display:inline-block}.dove .vai{display:inline-flex;align-items:center;gap:14px;height:56px;padding:0 24px;background:var(--ink);color:var(--paper);'
+           'font-family:var(--mono);font-size:13px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;border:0;min-width:300px;justify-content:space-between;transition:background .3s,color .3s}'
+           '.dove .vai:hover,.dove .vai[aria-expanded="true"]{background:var(--red);color:var(--ink)}'
+           '.dovel{position:absolute;left:0;right:0;top:100%;margin:0;padding:0;list-style:none;background:var(--paper);border:1px solid var(--ink);border-top:0;z-index:20;text-align:left}'
+           '.dovel a{display:block;padding:14px 24px;font-family:var(--mono);font-size:13px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--ink);border-top:1px solid var(--hair)}'
+           '.dovel a:hover,.dovel a:focus{background:var(--ink);color:var(--paper);outline:0}</style>')
+    js = ('<script>(function(){var b=document.getElementById("dovebtn"),l=document.getElementById("dovel"),fr=document.getElementById("dovefr"),d=document.getElementById("dove");if(!b)return;'
+          'function chiudi(){l.hidden=true;b.setAttribute("aria-expanded","false");fr.textContent="\u25BE"}'
+          'b.onclick=function(){var o=l.hidden;l.hidden=!o;b.setAttribute("aria-expanded",String(o));fr.textContent=o?"\u25B4":"\u25BE";if(o)l.querySelector("a").focus()};'
+          'document.addEventListener("click",function(e){if(!d.contains(e.target))chiudi()});document.addEventListener("keydown",function(e){if(e.key==="Escape"){chiudi();b.focus()}})})();</script>')
+    return (css + f'<div class="dove" id="dove"><button class="vai" type="button" id="dovebtn" aria-haspopup="true" aria-expanded="false" aria-controls="dovel">'
+            f'<span>{dove}</span> <b id="dovefr" aria-hidden="true">▾</b></button><ul class="dovel" id="dovel" hidden>{voci}</ul></div>' + js)
+
+
 def altri_paesi(k, lang):
     it = lang == "it"
     T = (lambda a, b: a) if it else (lambda a, b: b)
@@ -590,7 +609,7 @@ def pagina_shop(lang):
     out.append(f'<section class="open">\n<nav class="bc m" aria-label="{T("Sei qui", "You are here")}"><a href="{"/" if it else "/en/"}">Home</a> › <span>Shop</span></nav>\n'
                f'<p class="m k">{T("Stampa su richiesta", "Printed on demand")}</p>\n'
                f'<div class="shop-hd"><h1 class="h1">{w("Shop")}</h1><div>'
-               f'<p class="say">{esc(T("Poster tipografici con le prime righe e le frasi famose dei libri in pubblico dominio.", "Typographic posters with the opening lines and famous phrases of public domain books."))}</p>'
+               f'<p class="say" id="say">{esc(T("Poster tipografici con le prime righe e le frasi famose dei libri in pubblico dominio.", "Typographic posters with the opening lines and famous phrases of public domain books."))}</p>'
                f'<ul class="facts m"><li><span>{T("Stampa", "Printing")}</span><span class="g">{T("su richiesta, con Gelato", "on demand, by Gelato")}</span></li>'
                f'<li><span>{T("Acquisto", "Purchase")}</span><span class="g">{T("sul nostro negozio Etsy", "on our Etsy shop")}</span></li>'
                f'<li><span>Poster</span><span class="g">50 × 70 cm</span></li></ul></div></div>\n</section>\n')
@@ -673,6 +692,8 @@ def pagina_paese_radar(k, lang, REG, liste):
         {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": r}} for q, r in faq]}]}
     jsonld = '<script type="application/ld+json">' + json.dumps(jl, ensure_ascii=False).replace("</", "<\\/") + "</script>"
     h = ((RADICE / "radar" / "index.html") if it else (RADICE / "en" / "radar" / "index.html")).read_text(encoding="utf-8")
+    h = re.sub(r'<meta name="robots"[^>]*id="radar-robots">\n?', "", h, count=1)
+    h = re.sub(r'<script id="radar-rimando">.*?</script>\n?', "", h, count=1, flags=re.S)
     u_it, u_en = url_paese(k, "it"), url_paese(k, "en")
     # testa: titolo, descrizione, indirizzi, dati strutturati della pagina del paese
     h = re.sub(r"<title>.*?</title>", f"<title>{esc(titolo)}</title>", h, count=1, flags=re.S)

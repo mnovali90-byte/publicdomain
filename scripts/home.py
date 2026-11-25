@@ -186,7 +186,6 @@ CSS = r"""
 .colophon .folio{font-style:italic;font-size:15px;color:var(--matita)}
 /* il pulsante è già quello del sito */
 .vai{display:inline-flex;align-items:center;gap:14px;height:56px;padding:0 24px;background:var(--ink);color:var(--paper);text-decoration:none;font-family:var(--mono);font-size:13px;letter-spacing:.1em;text-transform:uppercase;transition:background .3s,color .3s}
-.dove{position:relative;display:inline-block}.dove .vai{cursor:pointer;border:0;min-width:300px;justify-content:space-between}.dove .vai[aria-expanded="true"]{background:var(--red);color:var(--ink)}.dovel{position:absolute;left:0;right:0;top:100%;margin:0;padding:0;list-style:none;background:var(--paper);border:1px solid var(--ink);border-top:0;z-index:20;text-align:left}.dovel a{display:block;padding:14px 24px;font-family:var(--mono);font-size:13px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--ink);border-top:1px solid var(--hair)}.dovel a:hover,.dovel a:focus{background:var(--ink);color:var(--paper);outline:0}
 .vai:hover{background:var(--red);color:var(--ink)}
 .home-sotto .sec:first-child{padding-top:6vh}
 .home-sotto .nums{margin:28px 0 0;border-top:0}
@@ -294,12 +293,9 @@ def pagina(lang, anno, P):
     testa = testa.replace("@@CNT@@", t["cnt"].format(**fmt) if gg else f'<span id="cnt" style="color:var(--redt)">{t["fasi"]["cnt_festa"]}</span>').replace("</head>", '<script src="/assets/regole.js"></script>\n</head>', 1).replace("@@MARCHIO_S@@", P["marchio"]).replace('<meta charset="utf-8">', '<meta charset="utf-8">\n' + rimando, 1)
     numeri_html = "".join(f'<a href="{h.format(**fmt)}"><span class="n">{migliaia(nu[k], lang)}</span><span class="c">{esc(c)}</span><span class="m">{esc(m.format(**fmt))}</span></a>'
                           for c, m, h, k in t["nums"] if nu[k])
-    # «Dove pubblichi?» (Marco, 25/11/2026): una tendina con i sei paesi al posto del pulsante unico verso la pagina dell'anno
+    # «Dove pubblichi?» (Marco, 25/11/2026): la stessa tendina della pagina dell'anno (scripts/pagine_paese.py, tendina_html)
     import pagine_paese as PP
-    voci_p = "".join(f'<li><a href="{PP.url_paese(k, lang).replace(SITO, "")}">{esc(PP.PAESI[k][0] if lang == "it" else PP.PAESI[k][1])}</a></li>' for k in PP.ORDINE)
-    dove = "Dove pubblichi?" if lang == "it" else "Where do you publish?"
-    tendina = (f'<div class="dove" id="dove"><button class="vai" type="button" id="dovebtn" aria-haspopup="true" aria-expanded="false" aria-controls="dovel">'
-               f'<span>{dove}</span> <b id="dovefr" aria-hidden="true">▾</b></button><ul class="dovel" id="dovel" hidden>{voci_p}</ul></div>')
+    tendina = PP.tendina_html(lang)
     porte = "".join(f'<a class="porta" href="{h.format(**fmt)}"><span class="m">{esc(y.format(**fmt))}</span><h3>{esc(x.format(**fmt))}</h3>'
                     f'<p>{esc(d.format(**fmt))}</p><span class="go">{esc(v)} →</span></a>' for h, x, y, d, v in t["porte"])
     primo = pag[0]
@@ -350,11 +346,7 @@ function applica(M){{
   const t=setInterval(tic,1000);tic();
 }}
 applica(modo(new Date()));
-(function(){{const b=el("dovebtn"),l=el("dovel"),fr=el("dovefr");if(!b)return;
-  const chiudi=()=>{{l.hidden=true;b.setAttribute("aria-expanded","false");fr.textContent="▾";}};
-  b.onclick=()=>{{const o=l.hidden;l.hidden=!o;b.setAttribute("aria-expanded",String(o));fr.textContent=o?"▴":"▾";if(o)l.querySelector("a").focus();}};
-  document.addEventListener("click",e=>{{if(!el("dove").contains(e.target))chiudi();}});
-  document.addEventListener("keydown",e=>{{if(e.key==="Escape"){{chiudi();b.focus();}}}});}})();
+
 const lenta=matchMedia("(prefers-reduced-motion: reduce)").matches;
 let i=0;
 function mostra(k){{const p=P[k];el("autore").textContent=p.a;el("titolo").textContent=p.t;el("folio").textContent=FOLIO.replace("{{k}}",k+1).replace("{{n}}",P.length);
