@@ -421,11 +421,19 @@ def pagina_usa(lang, liste):
     def riga_us(i, o, stato):
         chi = ", ".join(P.pulisci(a["nome"]) for a in (o.get("autori") or [])[:2])
         t = (o.get("titolo_it") or o["titolo"]) if it else o["titolo"]
-        foto = (o.get("foto") or {}).get("url") if isinstance(o.get("foto"), dict) else None
-        df = f' data-f="{esc(re.sub(r"width=\d+", "width=480", foto))}"' if foto else ""
+        # ritratto del primo autore che ne ha uno, come nella pagina dell'anno (25/11/2026: prima cercava la foto dell'opera, che non c'è)
+        fa = next((a for a in (o.get("autori") or []) if (a.get("foto") or {}).get("url")), None)
+        foto = fa["foto"]["url"] if fa else None
+        if fa and fa["qid"] not in visti_cr:   # crediti dei ritratti (licenze di Wikimedia Commons), come nella pagina dell'anno
+            visti_cr.add(fa["qid"])
+            chi_f = re.sub(r"^(.+?)\1$", r"\1", P.pulisci(fa["foto"].get("autore")))
+            chi_f = "" if len(chi_f) > 60 else chi_f
+            crediti.append(f'{esc(P.pulisci(fa["nome"]))}: <a href="{esc(fa["foto"].get("pagina", ""))}" rel="noopener">{esc(" · ".join(x for x in (chi_f, P.pulisci(fa["foto"].get("licenza"))) if x) or "Wikimedia Commons")}</a>')
+        df = f' data-f="{esc(foto)}"' if foto else ""
         lab = eti[stato] if stato == "verificata" else f'<span class="tbd">{eti[stato]}</span>'
         return (f'<li class="row"{df} data-i="{esc(P.iniziali_nome(chi.split(", ")[0] or "?"))}"><span class="no">{i + 1:02d}</span>'
                 f'<span class="nm"><a href="{app}#/opera/{o["qid"]}">{esc(t)}</a></span><span class="mt">{esc(chi)}<br>{lab}</span></li>\n')
+    crediti, visti_cr = [], set()
     rr = [riga_us(i, o, "verificata") for i, o in enumerate(verif)]
     r2 = [riga_us(len(verif) + i, o, st.get(o["qid"], "da_confermare")) for i, o in enumerate(altri)]
     n_ed, n_da = sum(1 for o in altri if st.get(o["qid"]) == "edizione"), sum(1 for o in altri if st.get(o["qid"], "da_confermare") == "da_confermare")
@@ -435,7 +443,8 @@ def pagina_usa(lang, liste):
               f'<ol class="rows" style="margin-top:20px">\n{"".join(r2)}</ol></div>'
               '<script>(function(){var b=document.getElementById("us-altri-btn"),d=document.getElementById("us-altri");b.onclick=function(){var o=d.hidden;d.hidden=!o;b.setAttribute("aria-expanded",String(o));b.lastChild&&0;b.innerHTML=b.innerHTML.replace(o?"↓":"↑",o?"↑":"↓")}})();</script>\n') if altri else ""
     out.append(sezione(T(f"I libri del {pub} verificati", f"The verified {pub} books"), T("in ordine di visite su Wikipedia", "by Wikipedia visits"),
-                       f'<ol class="rows" style="margin-top:28px">\n{"".join(rr)}</ol>\n' + amplia, "sec ix", "ix2"))
+                       f'<ol class="rows" style="margin-top:28px">\n{"".join(rr)}</ol>\n' + amplia
+                       + (f'<p class="cred">{T("Ritratti degli autori da Wikimedia Commons", "Authors’ portraits from Wikimedia Commons")} — {" · ".join(crediti)}</p>\n' if crediti else ""), "sec ix", "ix2"))
     leggi = [{"t": {"it": "Opere pubblicate prima del 1978: 95 anni dalla pubblicazione.", "en": "Works published before 1978: 95 years from publication."}, "f": "17 U.S.C. § 304"},
              {"t": {"it": "Le opere straniere che avevano perso la protezione l'hanno riavuta nel 1996, e durano 95 anni dalla pubblicazione.",
                     "en": "Foreign works that had lost protection regained it in 1996, and last 95 years from publication."}, "f": "17 U.S.C. § 104A"}]
