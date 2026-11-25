@@ -257,7 +257,7 @@ def pagina_paese_ue(k, lang, REG, liste):
                        f'<a href="{app}#/{anno}" class="more">{T(f"Tutti i {P.migliaia(len(tutti), lang)} scrittori liberi {in_it}, nel radar →", f"All {P.migliaia(len(tutti), lang)} writers free {in_en}, in the radar →")}</a>'
                        f'<a href="{P.url_landing(lang, anno).replace(P.SITO, "")}" class="more">{T(f"Pubblico dominio {anno} →", f"Public domain {anno} →")}</a>\n', "sec ix", "ix1"))
     if naz27:
-        out.append(sezione(T(f"Gli scrittori {agg_it}", f"{agg_en} writers"), T(f"liberi ovunque in Europa dal {anno}", f"free across Europe from {anno}") if k != "es" else T(f"morti nel {morti}", f"died in {morti}"),
+        out.append(sezione(T(f"Gli scrittori {agg_it}", f"{agg_en} writers"), T(f"morti nel {morti}", f"died in {morti}"),
                            f'<ol class="rows" style="margin-top:28px">\n{r2}</ol>\n', "sec ix"))
     if lib28:
         out.append(sezione(T(f"E nel {anno + 1}", f"And in {anno + 1}"), T(f"morti nel {morti2}", f"died in {morti2}"),
@@ -438,7 +438,7 @@ def pagina_come(lang):
     # elenco completo delle fonti, come nei piedi delle pagine (pagine.py, radar, storico/pagina.html): Marco, 25/11/2026
     fonti = [{"t": {"it": "Autori, date di nascita e di morte, opere, anni di uscita, cittadinanze. Dati liberi (CC0).", "en": "Authors, dates of birth and death, works, publication years, citizenships. Free data (CC0)."}, "f": "Wikidata", "u": "https://www.wikidata.org/"},
              {"t": {"it": "Le visite in 5 lingue, che decidono l'ordine degli elenchi. I testi citati hanno il link alla pagina d'origine (CC BY-SA).", "en": "Page views in 5 languages, which set the order of the lists. Quoted texts link to their source page (CC BY-SA)."}, "f": "Wikipedia", "u": "https://www.wikipedia.org/"},
-             {"t": {"it": "Gli anni di morte confermati e le edizioni di ogni autore: SBN (Italia), BnF (Francia), BNE (Spagna), British Library (Regno Unito), Library of Congress (USA), Biblioteca nazionale tedesca (GND) e il catalogo collettivo tedesco K10plus.", "en": "Confirmed years of death and each author's editions: SBN (Italy), BnF (France), BNE (Spain), British Library (UK), Library of Congress (USA), German National Library (GND) and the German union catalogue K10plus."}, "f": T("Cataloghi delle biblioteche nazionali", "National library catalogues"), "intero": True},
+             {"t": {"it": "Gli anni di morte confermati e le edizioni di ogni autore: SBN (Italia), BnF (Francia), BNE (Spagna), British Library (Regno Unito), Library of Congress (USA), Biblioteca nazionale tedesca (GND). Per gli anni di uscita dei libri americani anche il catalogo collettivo tedesco K10plus.", "en": "Confirmed years of death and each author's editions: SBN (Italy), BnF (France), BNE (Spain), British Library (UK), Library of Congress (USA), German National Library (GND). For the publication years of American books, also the German union catalogue K10plus."}, "f": T("Cataloghi delle biblioteche nazionali", "National library catalogues"), "intero": True},
              {"t": {"it": "Il registro ufficiale del Copyright Office americano, nella trascrizione della New York Public Library (CC0): una sua scheda basta da sola per verificare la prima uscita di un libro.", "en": "The official register of the US Copyright Office, as transcribed by the New York Public Library (CC0): one of its records is enough on its own to verify a book's first publication."}, "f": "Catalog of Copyright Entries"},
              {"t": {"it": "Gli elenchi del Public Domain Day: seconda fonte per gli anni di uscita dei libri americani (CC BY 4.0).", "en": "The Public Domain Day lists: a second source for the publication years of American books (CC BY 4.0)."}, "f": "Duke University", "u": "https://web.law.duke.edu/cspd/publicdomainday/"},
              {"t": {"it": "Le edizioni e gli anni di uscita, per controllare i libri americani.", "en": "Editions and publication years, to check American books."}, "f": "Open Library", "u": "https://openlibrary.org/"},
@@ -463,9 +463,9 @@ def pagina_come(lang):
            (T("Libri americani", "American books"),
             T("«Verificato» vuol dire prima uscita documentata da due fonti indipendenti o da una scheda del Catalog of Copyright Entries. «Edizione confermata»: una fonte conferma l'anno dell'edizione. «Da confermare»: c'è solo Wikidata.",
               "«Verified» means first publication documented by two independent sources or by a Catalog of Copyright Entries record. «Edition confirmed»: a source confirms the edition year. «To be confirmed»: only Wikidata so far.")),
-           (T("Nelle vetrine solo il certo", "Only certainties in the showcases"),
-            T("I nomi e i libri messi in evidenza hanno la data confermata. Quello che è ancora da verificare resta negli elenchi completi, con il motivo.",
-              "The names and books we highlight have a confirmed date. What is still to be checked stays in the full lists, with the reason."))]
+           (T("Nelle classifiche dei libri americani solo «Verificato»", "Only «Verified» in the American book rankings"),
+            T("I libri americani in classifica sono solo quelli con la prima uscita verificata. Gli altri restano negli elenchi completi del radar, con il loro stato.",
+              "The American books in the rankings are only those with a verified first publication. The others stay in the radar's full lists, with their status."))]
     out.append(sezione(T("Quanto siamo sicuri", "How certain we are"), T("Certo e da verificare", "Certain and to be checked"),
                        '<div class="three">\n' + "".join(f'<div><span class="m">{i + 1:02d}</span><h3>{esc(t)}</h3><p>{esc(x)}</p></div>\n' for i, (t, x) in enumerate(sic)) + "</div>\n"))
     agg = [{"t": {"it": "L'ordine degli elenchi, con le visite su Wikipedia del mese appena finito.", "en": "The order of the lists, with last month's Wikipedia page views."}, "f": T("Il 1° di ogni mese", "On the 1st of every month")},
