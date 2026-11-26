@@ -1,7 +1,7 @@
 """Titoli, nomi, descrizioni e pagine Wikipedia in tedesco, francese e spagnolo per Già pubblici e il calendario (26/11/2026).
 
 Serve a tradurre tutto il sito nelle tre lingue (decisione di Marco, 26/11/2026). Solo dati aperti di Wikidata (CC0):
-- per ogni opera e autore di Già pubblici (data/storico/pagina.json) e ogni voce del calendario (data/anniversari-<anno>.json):
+- per ogni autore delle liste, ogni opera e autore di Già pubblici (data/storico/pagina.json) e ogni voce del calendario (data/anniversari-<anno>.json):
   etichetta, descrizione breve e pagina Wikipedia in de/fr/es, se esistono (se mancano, la pagina usa il titolo originale);
 - per le voci del calendario anche paese, genere e lingua (P27, P136, P407) con le etichette nelle tre lingue,
   come le righe «chi è / cos'è» che il calendario ha già in italiano e inglese.
@@ -30,6 +30,11 @@ def qid_sito():
             cal.add(v["qid"])
             if v.get("autore_qid"):
                 q.add(v["autore_qid"])
+    # 26/11/2026: anche gli autori delle liste (radar e pagine paese): descrizione breve nella lingua
+    for f in glob.glob(str(RADICE / "data" / "*.json")):
+        import re
+        if re.fullmatch(r"(es-)?\d{4}\.json", Path(f).name):
+            q |= {a["wikidata"] for a in json.loads(Path(f).read_text(encoding="utf-8")).get("autori", []) if a.get("wikidata")}
     return q | cal, cal
 
 

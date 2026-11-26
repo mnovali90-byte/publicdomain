@@ -17,6 +17,8 @@ from pathlib import Path
 
 RADICE = Path(__file__).resolve().parent.parent
 FILE = RADICE / "data" / "etichette_en.json"
+# 26/11/2026: anche tedesco, francese e spagnolo per le pagine in quelle lingue (data/etichette_<lingua>.json)
+LINGUE = ("en", "de", "fr", "es")
 UA = {"User-Agent": "PublicDomainRadar/1.0 (https://publicdomainradar.com; open data project)",
       "Accept": "application/sparql-results+json"}
 
@@ -49,6 +51,12 @@ def etichette_italiane():
 
 
 def main():
+    for lingua in LINGUE:
+        traduci(lingua)
+
+
+def traduci(lingua):
+    FILE = RADICE / "data" / f"etichette_{lingua}.json"
     try:
         trad = json.loads(FILE.read_text(encoding="utf-8"))
     except Exception:
@@ -59,7 +67,7 @@ def main():
         blocco = voci[i:i + 40]
         valori = " ".join(json.dumps(v, ensure_ascii=False) + "@it" for v in blocco)
         q = f"""SELECT ?it ?en ?sl WHERE {{ VALUES ?it {{ {valori} }}
-          ?x rdfs:label ?it; wikibase:sitelinks ?sl; rdfs:label ?en. FILTER(LANG(?en) = "en") }}"""
+          ?x rdfs:label ?it; wikibase:sitelinks ?sl; rdfs:label ?en. FILTER(LANG(?en) = "{lingua}") }}"""
         try:
             righe = sparql(q)
         except Exception as e:

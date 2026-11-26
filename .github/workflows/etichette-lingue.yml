@@ -28,8 +28,10 @@ jobs:
           python-version: "3.12"
       - name: Etichette, descrizioni e pagine Wikipedia da Wikidata
         run: python scripts/etichette_lingue.py
+      - name: Nomi di paesi e lingue in tedesco, francese e spagnolo (scripts/etichette.py)
+        run: python scripts/etichette.py
       - name: Salva solo il file delle lingue
         if: ${{ !cancelled() }}
         run: |
-          git add data/lingue_etichette.json 2>/dev/null || true
+          git add data/lingue_etichette.json data/etichette_*.json 2>/dev/null || true
           bash scripts/salva.sh "Titoli e descrizioni in tedesco, francese e spagnolo per Già pubblici e calendario"
