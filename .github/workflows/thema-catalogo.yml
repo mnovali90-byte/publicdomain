@@ -1,0 +1,35 @@
+name: Thema passo 1 – dati strutturati per tutto il catalogo (non cambia il sito)
+
+# Parte solo cambiando docs/registro/passo-thema-catalogo.txt, con l'ok di Marco (26/11/2026).
+# Scrive solo docs/stima-sito/prova-thema/ (descrizioni, lista Thema, rapporto): niente pagine, niente registro.
+on:
+  push:
+    paths:
+      - "docs/registro/passo-thema-catalogo.txt"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: thema-catalogo
+  cancel-in-progress: false
+
+jobs:
+  prova:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Dati Wikidata per 54.489 opere
+        run: python scripts/thema_raccolta.py
+      - name: Salva solo la cartella della prova
+        if: ${{ !cancelled() }}
+        run: |
+          git add docs/stima-sito/prova-thema/ 2>/dev/null || true
+          bash scripts/salva.sh "Thema passo 1: dati del catalogo raccolti"
