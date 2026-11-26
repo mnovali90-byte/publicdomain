@@ -1752,3 +1752,10 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - Errori gravi trovati: titolone di Già pubblici composto male nelle tre lingue («¿Es ya libre libre?», «Est-ce libre déjà libre ?»); in tedesco numeri attaccati («Die 312 1956 gestorbenen Autoren») e frasi rotte (doppio «für»); in francese «1e» al posto di «1er» nelle classifiche.
 - Effetto collaterale trovato e corretto: le nuove frasi d'apertura francese e spagnola non contenevano più il pezzo che la pagina Spagna completa con «per chi è morto prima del 7 dicembre 1987»; testi 304/305 aggiornati e aggiunto un controllo che ferma la generazione se in futuro non combaciano più.
 - Prove: testi mancanti 0; link rotti 0 nelle tre lingue; prova_regole a 0; controllo_pagine 0; fotografia 0 cambi; pagine italiane e inglesi: testo identico a prima.
+
+## 26/11/2026 — Home principale in inglese (decisione di Marco)
+- publicdomainradar.com/ ora è la home inglese; l'italiana è su /it/; /en/ rimanda a / (con l'eventuale # dietro). Tutte le altre pagine tengono il loro indirizzo.
+- Per Google la versione di partenza (x-default) è ora l'inglese su home, pagine paese e Già pubblici.
+- Collegamenti alla home: una passata sola alla fine della generazione (scripts/lingue.py, sistema_home): nelle pagine italiane i collegamenti alla home vanno a /it/, ovunque /en/ diventa /. Le righe hreflang e canonical non si toccano. Chiamata da scripts/pagine.py e da storico/pagina.py (che gira anche da sola sul server).
+- Niente avviso nella lingua del browser (Marco: non serve).
+- prova_regole aggiornata ai nuovi percorsi delle due home (punti 5 e 8): 245 confronti come prima, tutto a 0. controllo_pagine 0, fotografia 0 cambi, link rotti in tutto il sito 0.

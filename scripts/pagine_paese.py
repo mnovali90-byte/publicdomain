@@ -80,7 +80,7 @@ def url_indice(lang):
 def tasti_lingua(k, lang, fn):
     """hreflang e tasto lingua di una pagina (paese, indice, Come funziona, Shop): tutte le lingue del sito (26/11/2026)."""
     case = {l: fn(l).replace(P.SITO, "") for l in ["it", "en"] + list(L.NUOVE)}
-    return L.hreflang(case, P.SITO, x_default=False), L.selettore(lang, case)
+    return L.hreflang(case, P.SITO), L.selettore(lang, case)   # x-default: la versione inglese (26/11/2026)
 
 
 def regole_radar():
@@ -236,7 +236,7 @@ def alterne(fn):
 
 
 def casa(lang):
-    return "/" if lang == "it" else "/en/" if lang == "en" else f"/{L.CARTELLA[lang]['home']}/"
+    return "/it/" if lang == "it" else "/" if lang == "en" else f"/{L.CARTELLA[lang]['home']}/"
 
 
 def pagina_paese_ue(k, lang, REG, liste):
@@ -792,7 +792,7 @@ def pagina_paese_radar(k, lang, REG, liste):
     if tl:   # 26/11/2026: la pagina esiste anche in altre lingue (Germania in tedesco): tasto lingua e versioni per Google
         alt_, altra = tl
         h = re.sub(r'(<link rel="alternate" hreflang="it"[^>]*>\n)(<link rel="alternate" hreflang="en"[^>]*>\n)(<link rel="alternate" hreflang="x-default"[^>]*>\n)?',
-                   lambda m: alt_ + (m.group(3) or ""), h, count=1)   # x-default resta com'era
+                   lambda m: alt_, h, count=1)   # x-default: la versione inglese (tasti_lingua)
         h = h.replace("</head>", f"<style>{L.CSS_SELETTORE}</style>\n{L.JS_SELETTORE}\n</head>", 1)
     h = h.replace('<span class="lang" id="lingue-tasti"></span>', '<span class="lang" id="lingue-tasti"></span>' + altra, 1)
     menu = "".join(f'<a href="{a}"><span>{esc(t)}</span></a>' for a, t in P._menu_link(lang))

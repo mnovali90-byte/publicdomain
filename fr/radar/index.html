@@ -437,7 +437,7 @@ dialog#finestra::backdrop{background:rgba(12,12,16,.5)}
 </header>
 <div class="menu" id="menu"><button class="x" id="mx" type="button" data-t="chiudiM">Fermer</button>
   <!-- 25/11/2026: menu già scritto nell'HTML (lo stesso che ridisegna il programma), visibile a Google e alle AI -->
-  <nav id="menu-nav"><a href="/"><span>Home</span></a><a href="#/2027" class="on" aria-current="true"><span>2027</span></a><a href="/gia-pubblici/"><span>Già pubblici</span></a><a href="/pubblico-dominio/"><span>Per paese</span></a><a href="/calendario/2027/"><span>Anniversari 2027</span></a><a href="/come-funziona/"><span>Come funziona</span></a><a href="/shop/"><span>Shop</span></a><a href="/autore/"><span>Indice autori</span></a></nav>
+  <nav id="menu-nav"><a href="/it/"><span>Home</span></a><a href="#/2027" class="on" aria-current="true"><span>2027</span></a><a href="/gia-pubblici/"><span>Già pubblici</span></a><a href="/pubblico-dominio/"><span>Per paese</span></a><a href="/calendario/2027/"><span>Anniversari 2027</span></a><a href="/come-funziona/"><span>Come funziona</span></a><a href="/shop/"><span>Shop</span></a><a href="/autore/"><span>Indice autori</span></a></nav>
   <div class="ml" id="menu-lingue"></div>
 </div>
 
@@ -1101,7 +1101,7 @@ function disegnaNavigazione() {
     h("a", { href: U2("/come-funziona/", "/en/how-it-works/") }, h("span", {}, L2("Come funziona", "How it works"))),
     h("a", { href: U2("/shop/", "/en/shop/") }, h("span", {}, "Shop"))];
   if (!window.PAESE_FISSO) nav.replaceChildren(...voci().slice(0, 3));   // nelle pagine paese restano la testata e il menu del sito   // in testata solo le prime tre (spazio); il menu ha tutte le voci
-  if (!window.PAESE_FISSO) mnav.replaceChildren(h("a", { href: U2("/", "/en/") }, h("span", {}, "Home")), ...voci(), h("a", { href: U2("/autore/", "/en/author/") }, h("span", {}, L2("Indice autori", "Author index"))));
+  if (!window.PAESE_FISSO) mnav.replaceChildren(h("a", { href: U2("/it/", "/") }, h("span", {}, "Home")), ...voci(), h("a", { href: U2("/autore/", "/en/author/") }, h("span", {}, L2("Indice autori", "Author index"))));
   mnav.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => menu(false)));
   const tasti = (box) => box.replaceChildren(...["it", "en"].map((l) => h("button", { type: "button", lang: l, class: l === LING ? "on" : "", "aria-pressed": l === LING ? "true" : "false", onclick: () => { menu(false); impostaLingua(l); } }, l.toUpperCase())));
   if (!window.LINGUA_FISSA) { tasti($("#lingue-tasti")); tasti($("#menu-lingue")); }   // lingue in più: il tasto lingua del sito, scritto nella pagina
@@ -2231,7 +2231,7 @@ addEventListener("keydown", (e) => { if (e.key === "Escape") menu(false); });
 $("#mineBtn").addEventListener("click", () => scorri("miei"));
 document.querySelectorAll("[data-go]").forEach((b) => b.addEventListener("click", (e) => { e.preventDefault(); scorri(b.dataset.go); if (b.dataset.go === "archivio") setTimeout(() => $("#cerca").focus({ preventScroll: true }), 600); }));
 document.querySelectorAll(".arr button").forEach((b) => b.addEventListener("click", () => { const f = $("#shelf"); f.scrollBy({ left: (+b.dataset.d) * f.clientWidth * .84, behavior: RIDOTTO() ? "auto" : "smooth" }); }));
-$("#logo").setAttribute("href", SU_EN ? "/en/" : "/");   // il marchio porta alla home (frontespizio), dal 21/11/2026
+$("#logo").setAttribute("href", window.LINGUA_FISSA ? U2("/it/", "/") : SU_EN ? "/" : "/it/");   // il marchio porta alla home (frontespizio), dal 21/11/2026
 $("#finestra").addEventListener("close", () => document.body.classList.remove("finestra-on"));
 $("#finestra").addEventListener("click", (e) => { if (e.target === e.currentTarget) e.currentTarget.close(); });
 avvia();

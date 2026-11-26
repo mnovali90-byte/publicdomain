@@ -213,7 +213,7 @@ for r, o in zip(_righe, _norm):
         for au in r[5]:
             _pert.setdefault((_pt(au[1]), _pt(t)), o)
 no5, nontrovate5, viste5 = [], [], 0
-for f in (RADICE / "index.html", RADICE / "en" / "index.html"):
+for f in (RADICE / "it" / "index.html", RADICE / "index.html"):
     h = f.read_text(encoding="utf-8")
     m = re.search(r"const P=(\[.*?\]), DIRITTI=", h)
     if not m:
@@ -247,7 +247,7 @@ errori += no5
 # 5b. (23/11/2026, Carl Schmitt) nessun autore di data/fuori_classifica.json nelle vetrine: libri USA delle pagine dell'anno e home
 _fuori = json.load(open(RADICE / "data" / "fuori_classifica.json", encoding="utf-8"))["autori"]
 no5b, viste5b = [], 0
-for f in sorted(list(RADICE.glob("pubblico-dominio-*/index.html")) + list((RADICE / "en").glob("public-domain-*/index.html")) + [RADICE / "index.html", RADICE / "en" / "index.html"]
+for f in sorted(list(RADICE.glob("pubblico-dominio-*/index.html")) + list((RADICE / "en").glob("public-domain-*/index.html")) + [RADICE / "it" / "index.html", RADICE / "index.html"]
                 + [RADICE / "pubblico-dominio" / "stati-uniti" / "index.html", RADICE / "en" / "public-domain" / "united-states" / "index.html"]):   # pagine paese USA (25/11/2026)
     if not f.exists():
         continue
@@ -283,7 +283,7 @@ for f in sorted(_g5c.glob(str(RADICE / "data" / "[0-9][0-9][0-9][0-9].json")) + 
             if R.opera_esclusa([o.get("titolo"), o.get("titolo_it"), o.get("titolo_en")], o.get("qid"), _escl):
                 no5c.append(f"{Path(f).name}: «{o.get('titolo')}» tra le opere di {a.get('nome')}")
 _tit5c = [t for t in json.load(open(RADICE / "data" / "storico_esclusioni.json", encoding="utf-8")).get("titoli", {})]
-for f in [RADICE / "index.html", RADICE / "en" / "index.html"] + sorted(RADICE.glob("pubblico-dominio-*/index.html")) + sorted((RADICE / "en").glob("public-domain-*/index.html")) \
+for f in [RADICE / "it" / "index.html", RADICE / "index.html"] + sorted(RADICE.glob("pubblico-dominio-*/index.html")) + sorted((RADICE / "en").glob("public-domain-*/index.html")) \
         + sorted(RADICE.glob("pubblico-dominio/*/index.html")) + sorted((RADICE / "en" / "public-domain").glob("*/index.html")):
     h = _html.unescape(f.read_text(encoding="utf-8"))
     for t in _tit5c:
@@ -429,7 +429,7 @@ for f in sorted((RADICE / "data").glob("[0-9][0-9][0-9][0-9].json")):
                 if nota and nota[0].lower() + nota[1:] not in h8:
                     no8.append(f"scheda {a.get('nome')} ({lang}): «{t}» senza la nota del registro")
 # vetrina della home: le opere USA hanno il codice Wikidata (23/11/2026); se il registro ha una nota, la home la mostra uguale
-for lang, f8 in (("it", RADICE / "index.html"), ("en", RADICE / "en" / "index.html")):
+for lang, f8 in (("it", RADICE / "it" / "index.html"), ("en", RADICE / "index.html")):
     m8 = re.search(r"const P=(\[.*?\]), DIRITTI=", f8.read_text(encoding="utf-8"))
     for p8 in json.loads(m8.group(1)) if m8 else []:
         if ("Stati Uniti" in p8["r"]) or ("United States" in p8["r"]):

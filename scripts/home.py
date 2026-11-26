@@ -223,7 +223,7 @@ CSS = r"""
 
 TESTI = {
     "it": dict(
-        url=f"{SITO}/", altra='<a href="/en/" hreflang="en">EN</a>', radar="/radar/",
+        url=f"{SITO}/it/", altra='<a href="/" hreflang="en">EN</a>', radar="/radar/",
         titolo="Public Domain Radar · Chi diventa libero, e quando",
         descr="Ogni 1° gennaio scadono i diritti di centinaia di scrittori e di libri. Chi diventa libero nel {a} in Europa e negli Stati Uniti, paese per paese, con dati aperti e fonti di legge.",
         diritti="Tutti i diritti riservati.",
@@ -252,7 +252,7 @@ TESTI = {
                   data_em="dal 1° gennaio {a}.", oggi_em="da oggi."),
     ),
     "en": dict(
-        url=f"{SITO}/en/", altra='<a href="/" hreflang="it">IT</a>', radar="/en/radar/",
+        url=f"{SITO}/", altra='<a href="/" hreflang="it">IT</a>', radar="/en/radar/",
         titolo="Public Domain Radar · Who becomes free, and when",
         descr="Every 1 January the copyright of hundreds of writers and books expires. Who becomes free in {a} in Europe and the United States, country by country, with open data and legal sources.",
         diritti="All rights reserved.",
@@ -398,7 +398,7 @@ def pagina(lang, anno, P):
         raise RuntimeError("home: nessuna opera per il frontespizio")
     alterne = (f'<link rel="alternate" hreflang="it" href="{SITO}/">\n<link rel="alternate" hreflang="en" href="{SITO}/en/">\n'
                f'<link rel="alternate" hreflang="x-default" href="{SITO}/">\n')
-    case = {"it": "/", "en": "/en/", **{l: f"/{L.CARTELLA[l]['home']}/" for l in L.NUOVE}}
+    case = {"it": "/it/", "en": "/", **{l: f"/{L.CARTELLA[l]['home']}/" for l in L.NUOVE}}
     altra = t["altra"]
     if L.NUOVE:   # 26/11/2026: con le lingue in più, il tasto lingua (IT · EN · DE) e tutte le versioni per Google
         alterne = L.hreflang(case, SITO)
@@ -410,7 +410,7 @@ def pagina(lang, anno, P):
               "url": t["url"], "inLanguage": lang, "description": t["descr"].format(a=anno), "publisher": {"@id": SITO + "/#organizzazione"}}]}, ensure_ascii=False) + "</script>")
     rimando = (f'<script>/* i vecchi indirizzi della home con # (filtri, schede) sono del radar, che ora sta su {t["radar"]} */\n'
                f'if(location.hash.length>1){{location.replace("{t["radar"]}"+location.hash)}}'
-               + ('' if lang != 'it' else 'else if(new URLSearchParams(location.search).get("lang")==="en"){location.replace("/en/")}') + '</script>\n')
+               + ('' if lang != 'it' else 'else if(new URLSearchParams(location.search).get("lang")==="en"){location.replace("/")}') + '</script>\n')
     testa = P["testa_scheda"](lang, esc(t["titolo"]), esc(t["descr"].format(a=anno)), t["url"], alterne, jsonld, altra,
                               "@@CNT@@", og_tipo="website", css_extra=P["CSS_ANNO"] + CSS, main_cls="pdd", body_cls="pdd-b")
     testa = testa.replace("@@CNT@@", t["cnt"].format(**fmt) if gg else f'<span id="cnt" style="color:var(--redt)">{t["fasi"]["cnt_festa"]}</span>').replace("</head>", '<script src="/assets/regole.js"></script>\n</head>', 1).replace("@@MARCHIO_S@@", P["marchio"]).replace('<meta charset="utf-8">', '<meta charset="utf-8">\n' + rimando, 1)
@@ -497,9 +497,13 @@ def crea_home(P=None, anno=None):
         P = {"testa_scheda": pg.testa_scheda, "piede_scheda": pg.piede_scheda, "CSS_ANNO": pg.CSS_ANNO,
              "marchio": marchio_html(56).replace('<span class="pdr" style="--w:56px">', "").rsplit("</span>", 1)[0]}
     anno = anno or R.fase_sito(datetime.date.today())[1]   # anno in vetrina: scripts/regole.py (fase_sito)
-    (RADICE / "index.html").write_text(pagina("it", anno, P), encoding="utf-8")
+    # 26/11/2026 (Marco): la home principale è quella inglese; l'italiana sta su /it/, /en/ rimanda a /
+    (RADICE / "index.html").write_text(pagina("en", anno, P), encoding="utf-8")
+    (RADICE / "it").mkdir(exist_ok=True)
+    (RADICE / "it" / "index.html").write_text(pagina("it", anno, P), encoding="utf-8")
     (RADICE / "en").mkdir(exist_ok=True)
-    (RADICE / "en" / "index.html").write_text(pagina("en", anno, P), encoding="utf-8")
+    import pagine_paese as PP
+    (RADICE / "en" / "index.html").write_text(PP.pagina_rimando("/", "en"), encoding="utf-8")
     import lingue as L
     for l in L.NUOVE:   # 26/11/2026: home nelle lingue in più (i collegamenti alle pagine che esistono nella lingua passano lì)
         d = RADICE / L.CARTELLA[l]["home"]

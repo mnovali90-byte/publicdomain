@@ -467,7 +467,7 @@ function schedaAutore(a, n, subito) {
 function linkRadar(qid) {
   const p = D.prossimi.find((x) => x.w === qid);
   if (!p) return null;
-  return h("div", {}, h("a", { class: "link-forte", href: LING !== "it" ? (p.pe ? U2("", `/en/author/${p.pe}/`) : U2("/", "/en/")) : `/autore/${p.p}/` }, L.apriRadar + " →"));
+  return h("div", {}, h("a", { class: "link-forte", href: LING !== "it" ? (p.pe ? U2("", `/en/author/${p.pe}/`) : U2("/it/", "/")) : `/autore/${p.p}/` }, L.apriRadar + " →"));
 }
 function prossimo(q) {
   const tok = parole(q); if (!tok.length) return null;
@@ -507,7 +507,7 @@ async function cerca(q) {
       const ue = REGOLE_PAESI.annoLibero(p.m, "it"), gia = ue <= D.anno;   // nella settimana della festa: appena liberato
       parti.push(h("div", { class: "box-no" }, h("span", { class: "k" }, gia ? L.appenaK : L.prossimoK),
         tr(gia ? "appena" : "prossimo", { nome: p.n, m: p.m, ue, es }),
-        h("div", {}, h("a", { class: "bottone", href: LING !== "it" ? (p.pe ? U2("", `/en/author/${p.pe}/`) : U2("/", "/en/")) : `/autore/${p.p}/` }, L.apriRadar))));
+        h("div", {}, h("a", { class: "bottone", href: LING !== "it" ? (p.pe ? U2("", `/en/author/${p.pe}/`) : U2("/it/", "/")) : `/autore/${p.p}/` }, L.apriRadar))));
     }
   }
   if (!la.length && !lo.length && !parti.some((x) => x.classList && x.classList.contains("box-no"))) parti.push(h("div", { class: "box-no" }, h("span", { class: "k" }, L.nessuno), L.nessunoSpieg));

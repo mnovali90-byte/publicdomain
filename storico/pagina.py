@@ -238,7 +238,7 @@ def pagine():
                                   re.findall(r'(\w+): "([^"]+)"', t[t.index("\n  en:", t.index("const GENERI = { it:")):t.index("}[LING", t.index("const GENERI = { it:"))])):
                 trad[g_en[1]] = L.testo(lang, g_it[1], g_en[1])
             c = L.CARTELLA[lang]
-            link = {"/en/": f"/{c['home']}/"}
+            link = {"/en/": f"/{c['home']}/", "/": f"/{c['home']}/"}
             sch = (leggi(RADICE / "data" / f"radar_{lang}.json", {}) or {}).get("schede", {})
             corpo = corpo.replace("<script>", f'<script>window.TRAD_LINGUA = {json.dumps(trad, ensure_ascii=False)}; '
                                   f'window.LINK_LINGUA = Object.assign({json.dumps(link)}, {json.dumps({"/en/author/" + v.rstrip("/").rsplit("/", 1)[1] + "/": v for v in sch.values()})});</script>\n<script>', 1)
@@ -259,6 +259,7 @@ if __name__ == "__main__":
     p = dati()
     pagine()
     import lingue as L
+    L.sistema_home(RADICE)   # home inglese principale (scripts/lingue.py)
     L.salva_mancanti("-gia")
     L.salva_coppie("-gia")   # testi di Già pubblici senza traduzione: testi/mancanti-<lingua>-gia.json
     print(f"pagina: {len(p['opere'])} opere negli scaffali, {p['n_opere']} nella ricerca, {p['n_autori']} autori, "

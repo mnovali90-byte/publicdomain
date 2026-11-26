@@ -2681,7 +2681,7 @@ def main():
         nuove_date[u] = [imp, d, VERSIONE_IMPRONTA]
         return d
     righe = [f"  <url><loc>{u}</loc><lastmod>{data_di(u)}</lastmod><changefreq>monthly</changefreq></url>"
-             for u in (f"{SITO}/", f"{SITO}/en/", url_pagina('it'), url_pagina('en'))]
+             for u in (f"{SITO}/", f"{SITO}/it/", url_pagina('it'), url_pagina('en'))]   # 26/11/2026: / = inglese, /it/ = italiano
     righe += [f"  <url><loc>{SITO}/{L.CARTELLA[l]['home']}/</loc><lastmod>{data_di(f'{SITO}/' + L.CARTELLA[l]['home'] + '/')}</lastmod><changefreq>monthly</changefreq></url>" for l in L.NUOVE]   # il radar non va più nella mappa (25/11/2026)
     if (RADICE / "gia-pubblici" / "index.html").exists():   # pagina «Già pubblici» (storico/pagina.py)
         landing_urls += [f"{SITO}/gia-pubblici/", f"{SITO}/en/already-public/"]
@@ -2689,6 +2689,7 @@ def main():
     righe += [f"  <url><loc>{u}</loc><lastmod>{data_di(u)}</lastmod></url>" for u in sorted(urls)]
     DATE_SITEMAP.write_text(json.dumps(nuove_date, ensure_ascii=False, indent=0, sort_keys=True), encoding="utf-8")
     (RADICE / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "\n".join(righe) + "\n</urlset>\n", encoding="utf-8")
+    print("home inglese principale: collegamenti sistemati in", L.sistema_home(RADICE), "pagine")   # 26/11/2026: / = inglese, /it/ = italiano
     L.salva_mancanti()
     L.salva_coppie()   # testi senza traduzione: testi/mancanti-<lingua>.json
     print(f"Pagine create: {len(voci['it'])} in italiano, {len(voci['en'])} in inglese (su {len(autori)} autori con biografia e opere)")

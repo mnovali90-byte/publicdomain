@@ -12,7 +12,7 @@
 <link rel="alternate" hreflang="de" href="https://publicdomainradar.com/de/gemeinfrei/frankreich/">
 <link rel="alternate" hreflang="fr" href="https://publicdomainradar.com/fr/domaine-public/france/">
 <link rel="alternate" hreflang="es" href="https://publicdomainradar.com/es/dominio-publico/francia/">
-<link rel="alternate" hreflang="x-default" href="https://publicdomainradar.com/pubblico-dominio/francia/">
+<link rel="alternate" hreflang="x-default" href="https://publicdomainradar.com/en/public-domain/france/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Public Domain Radar">
 <meta property="og:url" content="https://publicdomainradar.com/de/gemeinfrei/frankreich/">
@@ -1130,7 +1130,7 @@ function disegnaNavigazione() {
     h("a", { href: U2("/come-funziona/", "/en/how-it-works/") }, h("span", {}, L2("Come funziona", "How it works"))),
     h("a", { href: U2("/shop/", "/en/shop/") }, h("span", {}, "Shop"))];
   if (!window.PAESE_FISSO) nav.replaceChildren(...voci().slice(0, 3));   // nelle pagine paese restano la testata e il menu del sito   // in testata solo le prime tre (spazio); il menu ha tutte le voci
-  if (!window.PAESE_FISSO) mnav.replaceChildren(h("a", { href: U2("/", "/en/") }, h("span", {}, "Home")), ...voci(), h("a", { href: U2("/autore/", "/en/author/") }, h("span", {}, L2("Indice autori", "Author index"))));
+  if (!window.PAESE_FISSO) mnav.replaceChildren(h("a", { href: U2("/it/", "/") }, h("span", {}, "Home")), ...voci(), h("a", { href: U2("/autore/", "/en/author/") }, h("span", {}, L2("Indice autori", "Author index"))));
   mnav.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => menu(false)));
   const tasti = (box) => box.replaceChildren(...["it", "en"].map((l) => h("button", { type: "button", lang: l, class: l === LING ? "on" : "", "aria-pressed": l === LING ? "true" : "false", onclick: () => { menu(false); impostaLingua(l); } }, l.toUpperCase())));
   if (!window.LINGUA_FISSA) { tasti($("#lingue-tasti")); tasti($("#menu-lingue")); }   // lingue in più: il tasto lingua del sito, scritto nella pagina
@@ -2260,7 +2260,7 @@ addEventListener("keydown", (e) => { if (e.key === "Escape") menu(false); });
 $("#mineBtn").addEventListener("click", () => scorri("miei"));
 document.querySelectorAll("[data-go]").forEach((b) => b.addEventListener("click", (e) => { e.preventDefault(); scorri(b.dataset.go); if (b.dataset.go === "archivio") setTimeout(() => $("#cerca").focus({ preventScroll: true }), 600); }));
 document.querySelectorAll(".arr button").forEach((b) => b.addEventListener("click", () => { const f = $("#shelf"); f.scrollBy({ left: (+b.dataset.d) * f.clientWidth * .84, behavior: RIDOTTO() ? "auto" : "smooth" }); }));
-$("#logo").setAttribute("href", SU_EN ? "/en/" : "/");   // il marchio porta alla home (frontespizio), dal 21/11/2026
+$("#logo").setAttribute("href", window.LINGUA_FISSA ? U2("/it/", "/") : SU_EN ? "/" : "/it/");   // il marchio porta alla home (frontespizio), dal 21/11/2026
 $("#finestra").addEventListener("close", () => document.body.classList.remove("finestra-on"));
 $("#finestra").addEventListener("click", (e) => { if (e.target === e.currentTarget) e.currentTarget.close(); });
 avvia();

@@ -202,6 +202,30 @@ JS_SELETTORE = ("<script>document.addEventListener('click',function(e){var l=doc
 def hreflang(indirizzi, sito, x_default=True):
     """<link rel=alternate> per tutte le versioni che esistono; x-default sull'italiano, come oggi (dove c'era)."""
     righe = [f'<link rel="alternate" hreflang="{l}" href="{sito}{indirizzi[l]}">' for l in SIGLE if l in indirizzi]
-    if x_default and "it" in indirizzi:
-        righe.append(f'<link rel="alternate" hreflang="x-default" href="{sito}{indirizzi["it"]}">')
+    if x_default and ("en" in indirizzi or "it" in indirizzi):   # 26/11/2026: la versione di partenza è l'inglese
+        righe.append(f'<link rel="alternate" hreflang="x-default" href="{sito}{indirizzi.get("en", indirizzi.get("it"))}">')
     return "\n".join(righe) + "\n"
+
+
+# ---------------------------------------------------------------------------------------------------------------
+# 26/11/2026 (Marco): la home principale è quella inglese. publicdomainradar.com/ = inglese, /it/ = italiano,
+# /en/ rimanda a /. Tutte le altre pagine tengono il loro indirizzo. Una passata sola, alla fine della generazione,
+# sistema i collegamenti alla home in tutte le pagine (un posto solo, invece di cambiare ogni programma).
+def sistema_home(radice):
+    import re as _re
+    sito = "https://publicdomainradar.com"
+    n = 0
+    for f in Path(radice).rglob("*.html"):
+        if any(x in f.parts for x in (".git", "node_modules", "mockup")) or f.parts[-2:] == ("en", "index.html"):
+            continue
+        h = f.read_text(encoding="utf-8")
+        m = _re.search(r'<html lang="(\w+)"', h)
+        lang = m.group(1) if m else ""
+        h2 = h
+        if lang == "it":   # solo nei collegamenti <a>: le righe hreflang e canonical restano quelle giuste
+            h2 = _re.sub(r'(<a\b[^>]*?\bhref=")(?:/|' + _re.escape(sito) + r'/)"', lambda m: m.group(1) + "/it/\"", h2)
+        h2 = h2.replace('href="/en/"', 'href="/"').replace(f'href="{sito}/en/"', f'href="{sito}/"')
+        if h2 != h:
+            f.write_text(h2, encoding="utf-8")
+            n += 1
+    return n
