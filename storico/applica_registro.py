@@ -72,21 +72,19 @@ def _riga(r, i_morte, i_inc):
 def togli_consultazione():
     """Enciclopedie, riviste e giornali fuori da Già pubblici (deciso da Marco il 21/11/2026; elenco da
     storico/coautori.py, classi in CONSULTAZIONE). Tolte dai file dello Storico: ricerca, opere, pagine per autore."""
-    from registro import consultazione
+    from registro import consultazione, non_e_un_opera   # e le pagine tecniche dei wiki, «Template:…» (Marco, 26/11/2026)
     via = set(consultazione())
-    if not via:
-        return 0
     tolte = 0
     f = f"{CARTELLA}/opere.json"
     d = json.load(open(f, encoding="utf8"))
     prima = len(d["opere"])
-    d["opere"] = [o for o in d["opere"] if o.get("qid") not in via]
+    d["opere"] = [o for o in d["opere"] if o.get("qid") not in via and not non_e_un_opera(o.get("titolo"))]
     tolte += prima - len(d["opere"])
     json.dump(d, open(f, "w", encoding="utf8"), ensure_ascii=False, separators=(",", ":"))
     for f in sorted(glob.glob(f"{CARTELLA}/ricerca/*.json")):
         d = json.load(open(f, encoding="utf8"))
         prima = len(d["opere"])
-        d["opere"] = [r for r in d["opere"] if r[0] not in via]
+        d["opere"] = [r for r in d["opere"] if r[0] not in via and not non_e_un_opera(r[1])]
         if len(d["opere"]) != prima:
             tolte += prima - len(d["opere"])
             json.dump(d, open(f, "w", encoding="utf8"), ensure_ascii=False, separators=(",", ":"))
@@ -95,7 +93,7 @@ def togli_consultazione():
         c = 0
         for k in d:
             n = len(d[k])
-            d[k] = [r for r in d[k] if r[0] not in via]
+            d[k] = [r for r in d[k] if r[0] not in via and not non_e_un_opera(r[1])]
             c += n - len(d[k])
         if c:
             json.dump(d, open(f, "w", encoding="utf8"), ensure_ascii=False, separators=(",", ":"))
@@ -165,7 +163,7 @@ def riordina_ricerca():
 def main():
     if not registro():
         print("registro non trovato: lo Storico resta com'è"); return
-    print("enciclopedie, riviste e giornali tolti dallo Storico:", togli_consultazione())
+    print("enciclopedie, riviste, giornali e pagine tecniche dei wiki tolti dallo Storico:", togli_consultazione())
     cambi = 0
     f = f"{CARTELLA}/opere.json"
     d = json.load(open(f, encoding="utf8"))

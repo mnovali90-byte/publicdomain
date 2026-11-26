@@ -374,9 +374,9 @@ def main():
             applica_registro.applica(a)
         o["anno"] = applica_registro.anno_opera(o["qid"], o["anno"])   # anno deciso nel registro delle opere (23/11/2026)
     prima_controllo = len(tutte)
-    from registro import consultazione   # enciclopedie, riviste e giornali: fuori (Marco, 21/11/2026)
-    via = set(consultazione())
-    tutte = {k: o for k, o in tutte.items() if libera(o) and k not in via}
+    from registro import consultazione, non_e_un_opera   # enciclopedie, riviste e giornali: fuori (Marco, 21/11/2026)
+    via = set(consultazione())                             # pagine tecniche dei wiki («Template:…»): fuori (Marco, 26/11/2026)
+    tutte = {k: o for k, o in tutte.items() if libera(o) and k not in via and not non_e_un_opera(o["titolo"])}
     print(f"controllo autori: {len(info)} letti su {len(da_controllare)}; opere uscite perché non più libere: {prima_controllo - len(tutte)}")
     ops = sorted(tutte.values(), key=lambda o: (-o["pagine"], o["qid"]))
     if len(ops) < SOGLIA:

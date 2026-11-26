@@ -184,3 +184,6 @@ h1.h1 .w>span{display:inline-block;transform:translateY(102%);animation:rise 900
 /* 25/11/2026: opere con poster nello Shop */
 .riga .pst{display:inline-block;margin-top:6px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--redt)}
 .poster-op{margin:20px 0 0}.poster-op .link-forte{margin-top:0}.poster-op span{display:block;margin-top:8px;color:#5C5C66}
+
+/* 26/11/2026: «Altri titoli che contengono…» sotto le opere dell'autore trovato */
+.r-altri{padding-top:5vh;border-top:1px solid var(--hair);margin-top:4vh}

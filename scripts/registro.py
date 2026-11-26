@@ -202,6 +202,16 @@ def dati_eta():
     return cre, _leggi(R / "data" / "opere_antiche.json", {})
 
 
+# Pagine tecniche dei wiki finite su Wikidata come «opere» (es. «Template:Brongniart, 1828», modelli di
+# Wikispecies per citare i libri): non sono opere, fuori da Già pubblici (Marco, 26/11/2026).
+_NON_OPERA = __import__("re").compile(r"^\s*(Template|Vorlage|Modèle|Modello|Plantilla|Predefinição|Category|Kategorie|Catégorie|Categoria|Categoría|Wikipedia|Wikispecies|Module|Modul|Help|Hilfe|Portal|Portail):", __import__("re").I)
+
+
+def non_e_un_opera(titolo):
+    """True se il titolo è una pagina tecnica di un wiki (modello, categoria, portale...), non un'opera."""
+    return bool(_NON_OPERA.match(titolo or ""))
+
+
 def consultazione():
     """Enciclopedie, riviste e giornali da togliere da Già pubblici (deciso da Marco il 21/11/2026)."""
     return _leggi(R / "data" / "storico" / "coautori.json", {}).get("consultazione", {})
