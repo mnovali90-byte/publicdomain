@@ -14,6 +14,7 @@ from pathlib import Path
 import pagine as P
 import regole as R
 from lingue import traduttore, testo as testo_l   # 26/11/2026: le lingue in un posto solo (scripts/lingue.py)
+import lingue as L
 
 RADICE = P.RADICE
 esc = P.esc
@@ -34,13 +35,52 @@ NORMA = {"it": "Legge 633/1941, art. 25", "fr": "Code de la propriété intellec
          "es": "Ley de 10 de enero de 1879, art. 6", "uk": "CDPA 1988, s. 12", "us": "17 U.S.C. § 304"}
 
 
+# 26/11/2026: nomi dei paesi nelle lingue in più (nome, «in …», aggettivo plurale, lingua di Wikipedia), come le colonne inglesi di PAESI
+PAESI_L = {"de": {"it": ("Italien", "in Italien", "italienische", "italienischen"), "fr": ("Frankreich", "in Frankreich", "französische", "französischen"),
+                  "de": ("Deutschland", "in Deutschland", "deutsche", "deutschen"), "es": ("Spanien", "in Spanien", "spanische", "spanischen"),
+                  "uk": ("Vereinigtes Königreich", "im Vereinigten Königreich", "britische", "englischen"), "us": ("USA", "in den USA", "", "")},
+           "fr": {"it": ("Italie", "en Italie", "italiens", "italien"), "fr": ("France", "en France", "français", "français"),
+                  "de": ("Allemagne", "en Allemagne", "allemands", "allemand"), "es": ("Espagne", "en Espagne", "espagnols", "espagnol"),
+                  "uk": ("Royaume-Uni", "au Royaume-Uni", "britanniques", "anglais"), "us": ("États-Unis", "aux États-Unis", "", "")},
+           "es": {"it": ("Italia", "en Italia", "italianos", "italiano"), "fr": ("Francia", "en Francia", "franceses", "francés"),
+                  "de": ("Alemania", "en Alemania", "alemanes", "alemán"), "es": ("España", "en España", "españoles", "español"),
+                  "uk": ("Reino Unido", "en el Reino Unido", "británicos", "inglés"), "us": ("Estados Unidos", "en Estados Unidos", "", "")}}
+
+
+def nome_paese(k, lang):
+    return PAESI[k][0] if lang == "it" else PAESI_L[lang][k][0] if lang in PAESI_L else PAESI[k][1]
+
+
+def colonne_en(k, lang):
+    """Nome, «in …» e aggettivo che entrano nei testi al posto delle colonne inglesi (per le lingue in più, nella loro lingua)."""
+    if lang in PAESI_L:
+        n, i, a, _ = PAESI_L[lang][k]
+        return n, i, a
+    return PAESI[k][1], PAESI[k][5], PAESI[k][8]
+
+
+def ha_pagina(k, lang):
+    """Dal 26/11/2026 ogni paese ha la sua pagina in tutte le lingue del sito (scripts/lingue.py, PAESE_SLUG)."""
+    return lang in ("it", "en") or k in L.PAESE_SLUG.get(lang, {})   # dal 26/11/2026 tutti i paesi in tutte le lingue
+
+
 def url_paese(k, lang):
     p = PAESI[k]
+    if lang in L.CARTELLA and ha_pagina(k, lang):
+        return f"{P.SITO}/{L.CARTELLA[lang]['paesi']}/{L.PAESE_SLUG[lang][k]}/"
     return f"{P.SITO}/pubblico-dominio/{p[2]}/" if lang == "it" else f"{P.SITO}/en/public-domain/{p[3]}/"
 
 
 def url_indice(lang):
+    if lang in L.CARTELLA:
+        return f"{P.SITO}/{L.CARTELLA[lang]['paesi']}/"
     return f"{P.SITO}/pubblico-dominio/" if lang == "it" else f"{P.SITO}/en/public-domain/"
+
+
+def tasti_lingua(k, lang, fn):
+    """hreflang e tasto lingua di una pagina (paese, indice, Come funziona, Shop): tutte le lingue del sito (26/11/2026)."""
+    case = {l: fn(l).replace(P.SITO, "") for l in ["it", "en"] + list(L.NUOVE)}
+    return L.hreflang(case, P.SITO, x_default=False), L.selettore(lang, case)
 
 
 def regole_radar():
@@ -136,8 +176,8 @@ def righe(aut, n, lang):
             ruolo = (a.get("professioni") or [""])[0]
             sotto = f"{P.anno_di(a.get('nascita')) or '?'} – {P._data_lunga(a['morte'], 'it')}"
         else:
-            ruolo = re.sub(r"\s*\([^)]*\)\s*$", "", P.pulisci(a.get("descrizione")))
-            sotto = f"died {P._data_lunga(a['morte'], 'en')}"
+            ruolo = re.sub(r"\s*\([^)]*\)\s*$", "", P.pulisci(P.descr_l(a, lang)))
+            sotto = testo_l(lang, "", "died {d}", d=P._data_lunga(a['morte'], lang))
         mt = (esc(ruolo) + "<br>" if ruolo else "") + esc(sotto)
         out.append(f'<li class="row"{df} data-i="{esc(P.iniziali_nome(nome))}"><span class="no">{k + 1:02d}</span>'
                    f'<span class="nm"><a href="{href}">{esc(nome)}</a></span><span class="mt">{mt}</span></li>\n')
@@ -155,8 +195,9 @@ def lista_regole(voci, lang, etichetta=None):
         else:
             p_ = re.sub(r" con l.Italia \(testo francese\)", " del 1947", f.split(",")[0])
             resto = ", ".join(x.strip() for x in f.split(",")[1:])
-        a = (f'<a href="{esc(v["u"])}" rel="noopener">{etichetta or ("Leggi la norma →" if lang == "it" else "Read the law →")}</a>' if v.get("u") else "<span></span>")
-        li.append(f'<li><span class="p">{esc(p_)}</span><span class="m y">{esc(resto)}</span><span class="r">{esc(v["t"][lang])}</span>{a}</li>\n')
+        a = (f'<a href="{esc(v["u"])}" rel="noopener">{etichetta or testo_l(lang, "Leggi la norma →", "Read the law →")}</a>' if v.get("u") else "<span></span>")
+        t_ = v["t"].get(lang) or testo_l(lang, v["t"]["it"], v["t"]["en"])   # lingue in più: dal catalogo testi/<lingua>.json
+        li.append(f'<li><span class="p">{esc(p_)}</span><span class="m y">{esc(resto)}</span><span class="r">{esc(t_)}</span>{a}</li>\n')
     return '<ul class="where">\n' + "".join(li) + "</ul>\n"
 
 
@@ -194,11 +235,16 @@ def alterne(fn):
     return f'<link rel="alternate" hreflang="it" href="{fn("it")}">\n<link rel="alternate" hreflang="en" href="{fn("en")}">\n'
 
 
+def casa(lang):
+    return "/" if lang == "it" else "/en/" if lang == "en" else f"/{L.CARTELLA[lang]['home']}/"
+
+
 def pagina_paese_ue(k, lang, REG, liste):
     it = lang == "it"
     T = traduttore(lang)
     nome_it, nome_en, _, _, in_it, in_en, naz, agg_it, agg_en = PAESI[k]
-    nome, in_ = T(nome_it, nome_en), T(in_it, in_en)
+    nome_en, in_en, agg_en = colonne_en(k, lang)
+    nome, in_ = (nome_it, in_it) if it else (nome_en, in_en)
     anno = P.ANNO_PROSSIMO
     pk = "es" if k == "es" else "ue"
     pacc, pacc2 = liste[(pk, anno)], liste[(pk, anno + 1)]
@@ -223,17 +269,19 @@ def pagina_paese_ue(k, lang, REG, liste):
     descr = T("{v1} un'opera diventa libera {anni} anni dopo la morte dell'autore. Gli scrittori che entrano in pubblico dominio nel {anno}, la regola di legge e cosa controllare.", "{v2} a work becomes free {anni} years after the author's death. The writers entering the public domain in {anno}, the legal rule and what to check.", v1=in_it[0].upper() + in_it[1:], anni=anni, anno=anno, v2=in_en[0].upper() + in_en[1:])
     jl = {"@context": "https://schema.org", "@graph": [
         {"@type": "WebPage", "@id": url, "url": url, "name": titolo, "description": descr, "inLanguage": lang,
-         "isPartOf": {"@type": "WebSite", "name": "Public Domain Radar", "url": P.SITO + ("/" if it else "/en/")}},
+         "isPartOf": {"@type": "WebSite", "name": "Public Domain Radar", "url": P.SITO + casa(lang)}},
         {"@type": "BreadcrumbList", "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "Home", "item": P.SITO + ("/" if it else "/en/")},
+            {"@type": "ListItem", "position": 1, "name": testo_l(lang, "Home", "Home"), "item": P.SITO + casa(lang)},
             {"@type": "ListItem", "position": 2, "name": T("Per paese", "By country"), "item": url_indice(lang)},
             {"@type": "ListItem", "position": 3, "name": nome, "item": url}]},
         {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": r}} for q, r in faq]}]}
     jsonld = '<script type="application/ld+json">' + json.dumps(jl, ensure_ascii=False).replace("</", "<\\/") + "</script>"
     altra = (T('<a href="{v1}" hreflang="en">EN</a>', '<a href="{v2}" hreflang="it">IT</a>', v1=url_paese(k, "en").replace(P.SITO, ""), v2=url_paese(k, "it").replace(P.SITO, "")))
-    out = [apri(lang, titolo, descr, url, alterne(lambda l: url_paese(k, l)), jsonld, altra, anno, CSS_ELENCO)]
+    alt = alterne(lambda l: url_paese(k, l))
+    alt, altra = tasti_lingua(k, lang, lambda l: url_paese(k, l))
+    out = [apri(lang, titolo, descr, url, alt, jsonld, altra, anno, CSS_ELENCO)]
     w = lambda t: f'<span class="w"><span>{t}</span></span>'
-    out.append(f'<section class="open">\n<nav class="bc m" aria-label="{T("Sei qui", "You are here")}"><a href="{"/" if it else "/en/"}">Home</a> › '
+    out.append(f'<section class="open">\n<nav class="bc m" aria-label="{T("Sei qui", "You are here")}"><a href="{casa(lang)}">{testo_l(lang, "Home", "Home")}</a> › '
                f'<a href="{url_indice(lang).replace(P.SITO, "")}">{T("Per paese", "By country")}</a> › <span>{esc(nome)}</span></nav>\n'
                f'<p class="m k">{T("Pubblico dominio", "Public domain")} · {esc(nome)}</p>\n'
                f'<h1 class="h1">{w(T("Quando un libro", "When a book"))} <br>{w(T("diventa libero", "becomes free"))} <br>{w(esc(in_))}</h1>\n'
@@ -243,7 +291,7 @@ def pagina_paese_ue(k, lang, REG, liste):
             (n_naz, T('di questi sono {agg_it}', 'of them are {agg_en}', agg_it=agg_it, agg_en=agg_en), T('morti nel {morti}', 'died in {morti}', morti=morti))]
     out.append('<div class="nums">' + "".join(f'<a href="#ix1"><span class="n">{P.migliaia(x, lang)}</span><span class="c">{esc(c)}</span><span class="m">{esc(m)}</span></a>' for x, c, m in nums) + "</div>\n")
     wl = {"it": "italiano", "fr": "francese", "de": "tedesco", "uk": "inglese", "es": "spagnolo"}[k]
-    wl_en = {"it": "Italian", "fr": "French", "de": "German", "uk": "English", "es": "Spanish"}[k]
+    wl_en = PAESI_L[lang][k][3] if lang in PAESI_L else {"it": "Italian", "fr": "French", "de": "German", "uk": "English", "es": "Spanish"}[k]
     # 25/11/2026 (Marco): un elenco solo, completo, con ricerca, «solo del paese» ed Excel, al posto della classifica dei 12
     # e della lista degli scrittori del paese. Gli autori di data/fuori_classifica.json restano nell'elenco completo e nei
     # conteggi, come nel radar (pagine.opera_in_vetrina: escono solo da vetrine e classifiche).
@@ -262,7 +310,7 @@ def pagina_paese_ue(k, lang, REG, liste):
                        "<div>\n" + "".join(f'<div class="acc"><button type="button">{esc(q)}<span>[+]</span></button><div class="bd"><p>{esc(r)}</p></div></div>\n' for q, r in faq) + "</div>\n"))
     out.append(altri_paesi(k, lang))
     out.append('<div class="pf" id="pf" aria-hidden="true"></div>\n')
-    out.append(P.JS_ANNO.replace("@@LOC@@", T('it-IT', 'en-GB')))
+    out.append(P.JS_ANNO.replace("@@LOC@@", L.LOCALE[lang]))
     out.append(P.piede_scheda(lang))
     return "".join(out), url
 
@@ -292,7 +340,7 @@ def elenco_completo(k, lang, autori, naz, morti, wl, wl_en, in_it, in_en, agg_it
     it = lang == "it"
     T = traduttore(lang)
     anno = P.ANNO_PROSSIMO
-    pag = T('pagina', 'pagina_en')
+    pag = "pagina" if it else "pagina_en"
     li, n_naz = [], 0
     for i, a in enumerate(autori):
         del_paese = bool(set(a.get("paesi") or []) & set(naz))
@@ -301,7 +349,7 @@ def elenco_completo(k, lang, autori, naz, morti, wl, wl_en, in_it, in_en, agg_it
         if it:
             ruolo = ", ".join((a.get("professioni") or [])[:2])
         else:
-            ruolo = re.sub(r"\s*\([^)]*\)\s*$", "", P.pulisci(a.get("descrizione")))
+            ruolo = re.sub(r"\s*\([^)]*\)\s*$", "", P.pulisci(P.descr_l(a, lang)))
         nome_h = f'<a href="{"/autore/" if it else "/en/author/"}{a[pag]}/">{esc(nome)}</a>' if a.get(pag) else esc(nome)
         li.append(f'<li data-p="{int(del_paese)}" data-n="{esc(_norm(nome))}"><span class="k">{i + 1:03d}</span><span class="nm">{nome_h}</span>'
                   f'<span class="mt">{P.anno_di(a.get("nascita")) or "?"}–{P.anno_di(a.get("morte"))}{(" · " + esc(ruolo)) if ruolo else ""}</span></li>')
@@ -338,7 +386,7 @@ def elenco_completo(k, lang, autori, naz, morti, wl, wl_en, in_it, in_en, agg_it
 def tendina_html(lang):
     """«Dove pubblichi?»: una tendina con i sei paesi (home e pagina dell'anno; Marco, 25/11/2026). Un posto solo."""
     it = lang == "it"
-    voci = "".join(f'<li><a href="{url_paese(k, lang).replace(P.SITO, "")}">{esc(PAESI[k][0] if it else PAESI[k][1])}</a></li>' for k in ORDINE)
+    voci = "".join(f'<li><a href="{url_paese(k, lang).replace(P.SITO, "")}">{esc(nome_paese(k, lang))}</a></li>' for k in ORDINE)
     dove = testo_l(lang, 'Dove pubblichi?', 'Where do you publish?')
     css = ('<style>.dove{position:relative;display:inline-block}.dove .vai{display:inline-flex;align-items:center;gap:14px;height:56px;padding:0 24px;background:var(--ink);color:var(--paper);'
            'font-family:var(--mono);font-size:13px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;border:0;min-width:300px;justify-content:space-between;transition:background .3s,color .3s}'
@@ -357,7 +405,7 @@ def tendina_html(lang):
 def altri_paesi(k, lang):
     it = lang == "it"
     T = traduttore(lang)
-    v = "".join(f'<a href="{url_paese(x, lang).replace(P.SITO, "")}">{esc(PAESI[x][0] if it else PAESI[x][1])}</a>' for x in ORDINE if x != k)
+    v = "".join(f'<a href="{url_paese(x, lang).replace(P.SITO, "")}">{esc(nome_paese(x, lang))}</a>' for x in ORDINE if x != k)
     return sezione(T("Gli altri paesi", "The other countries"), T("Ogni paese ha la sua regola", "Each country has its own rule"),
                    f'<nav class="letters" aria-label="{T("Paesi", "Countries")}">{v}</nav>\n')
 
@@ -387,15 +435,15 @@ def pagina_usa(lang, liste):
     jl = {"@context": "https://schema.org", "@graph": [
         {"@type": "WebPage", "@id": url, "url": url, "name": titolo, "description": descr, "inLanguage": lang},
         {"@type": "BreadcrumbList", "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "Home", "item": P.SITO + ("/" if it else "/en/")},
+            {"@type": "ListItem", "position": 1, "name": testo_l(lang, "Home", "Home"), "item": P.SITO + casa(lang)},
             {"@type": "ListItem", "position": 2, "name": T("Per paese", "By country"), "item": url_indice(lang)},
             {"@type": "ListItem", "position": 3, "name": T("Stati Uniti", "United States"), "item": url}]},
         {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": r}} for q, r in faq]}]}
     jsonld = '<script type="application/ld+json">' + json.dumps(jl, ensure_ascii=False).replace("</", "<\\/") + "</script>"
-    altra = (T('<a href="{v1}" hreflang="en">EN</a>', '<a href="{v2}" hreflang="it">IT</a>', v1=url_paese("us", "en").replace(P.SITO, ""), v2=url_paese("us", "it").replace(P.SITO, "")))
-    out = [apri(lang, titolo, descr, url, alterne(lambda l: url_paese("us", l)), jsonld, altra, anno)]
+    alt, altra = tasti_lingua("us", lang, lambda l: url_paese("us", l))
+    out = [apri(lang, titolo, descr, url, alt, jsonld, altra, anno)]
     w = lambda t: f'<span class="w"><span>{t}</span></span>'
-    out.append(f'<section class="open">\n<nav class="bc m" aria-label="{T("Sei qui", "You are here")}"><a href="{"/" if it else "/en/"}">Home</a> › '
+    out.append(f'<section class="open">\n<nav class="bc m" aria-label="{T("Sei qui", "You are here")}"><a href="{casa(lang)}">{testo_l(lang, "Home", "Home")}</a> › '
                f'<a href="{url_indice(lang).replace(P.SITO, "")}">{T("Per paese", "By country")}</a> › <span>{T("Stati Uniti", "United States")}</span></nav>\n'
                f'<p class="m k">{T("Pubblico dominio · Stati Uniti", "Public domain · United States")}</p>\n'
                f'<h1 class="h1">{w(T("Quando un libro", "When a book"))} <br>{w(T("diventa libero", "becomes free"))} <br>{w(T("negli Stati Uniti", "in the United States"))}</h1>\n'
@@ -453,7 +501,7 @@ def pagina_usa(lang, liste):
                        "<div>\n" + "".join(f'<div class="acc"><button type="button">{esc(q)}<span>[+]</span></button><div class="bd"><p>{esc(r)}</p></div></div>\n' for q, r in faq) + "</div>\n"))
     out.append(altri_paesi("us", lang))
     out.append('<div class="pf" id="pf" aria-hidden="true"></div>\n')
-    out.append(P.JS_ANNO.replace("@@LOC@@", T('it-IT', 'en-GB')))
+    out.append(P.JS_ANNO.replace("@@LOC@@", L.LOCALE[lang]))
     out.append(P.piede_scheda(lang))
     return "".join(out), url
 
@@ -470,30 +518,35 @@ def pagina_indice(lang, liste):
     jl = {"@context": "https://schema.org", "@type": "CollectionPage", "@id": url, "url": url, "name": titolo, "description": descr, "inLanguage": lang}
     jsonld = '<script type="application/ld+json">' + json.dumps(jl, ensure_ascii=False).replace("</", "<\\/") + "</script>"
     altra = (T('<a href="/en/public-domain/" hreflang="en">EN</a>', '<a href="/pubblico-dominio/" hreflang="it">IT</a>'))
-    out = [apri(lang, titolo, descr, url, alterne(url_indice), jsonld, altra, anno)]
+    alt = alterne(url_indice)
+    alt, altra = tasti_lingua(None, lang, url_indice)
+    out = [apri(lang, titolo, descr, url, alt, jsonld, altra, anno)]
     w = lambda t: f'<span class="w"><span>{t}</span></span>'
-    out.append(f'<section class="open">\n<nav class="bc m" aria-label="{T("Sei qui", "You are here")}"><a href="{"/" if it else "/en/"}">Home</a> › <span>{T("Per paese", "By country")}</span></nav>\n'
+    out.append(f'<section class="open">\n<nav class="bc m" aria-label="{T("Sei qui", "You are here")}"><a href="{casa(lang)}">{testo_l(lang, "Home", "Home")}</a> › <span>{T("Per paese", "By country")}</span></nav>\n'
                f'<p class="m k">{T("Pubblico dominio · per paese", "Public domain · by country")}</p>\n'
                f'<h1 class="h1">{w(T("Ogni paese", "Each country"))} <br>{w(T("ha la sua", "has its own"))} <br>{w(T("regola", "rule"))}</h1>\n'
                f'<p class="say" id="say">{esc(descr)}</p>\n</section>\n')
     porte = []
     for k in ORDINE:
-        nome = PAESI[k][0] if it else PAESI[k][1]
+        nome = nome_paese(k, lang)
         if k == "us":
             n_ = 95; sotto = T('anni dalla pubblicazione · nel {anno} i libri del {v1}', 'years from publication · in {anno} the {v1} books', anno=anno, v1=R.pubblicate_libere_usa_nel(anno))
         else:
             m = R.morti_liberi_nel(anno, "es" if k == "es" else "it")
             n_ = R.anni_protezione(m, "es" if k == "es" else "it")
             sotto = T('anni dopo la morte · nel {anno} i morti nel {m}', 'years after death · in {anno} those who died in {m}', anno=anno, m=m)
-        porte.append(f'<a class="porta" href="{url_paese(k, lang).replace(P.SITO, "")}"><span class="big">{n_}</span><h3>{esc(nome)}</h3><p>{esc(sotto)}</p><span class="go">{T("Apri →", "Open →")}</span></a>')
+        vai = T("Apri →", "Open →") if ha_pagina(k, lang) else testo_l(lang, "", "Open in English →")   # lingue in più: gli altri paesi sono in inglese
+        porte.append(f'<a class="porta" href="{url_paese(k, lang).replace(P.SITO, "")}"><span class="big">{n_}</span><h3>{esc(nome)}</h3><p>{esc(sotto)}</p><span class="go">{vai}</span></a>')
     out.append(sezione(T("Sei paesi", "Six countries"), T("Regole lette sui testi di legge", "Rules read from the legal texts"), f'<div class="porte">{"".join(porte)}</div>\n'))
     out.append('<div class="pf" id="pf" aria-hidden="true"></div>\n')
-    out.append(P.JS_ANNO.replace("@@LOC@@", T('it-IT', 'en-GB')))
+    out.append(P.JS_ANNO.replace("@@LOC@@", L.LOCALE[lang]))
     out.append(P.piede_scheda(lang))
     return "".join(out), url
 
 
 def url_come(lang):
+    if lang in L.CARTELLA:
+        return f"{P.SITO}/{L.CARTELLA[lang]['come']}/"
     return f"{P.SITO}/come-funziona/" if lang == "it" else f"{P.SITO}/en/how-it-works/"
 
 
@@ -519,10 +572,10 @@ def pagina_come(lang):
         {"@type": "AboutPage", "@id": url, "url": url, "name": titolo, "description": descr, "inLanguage": lang},
         {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": r}} for q, r in faq]}]}
     jsonld = '<script type="application/ld+json">' + json.dumps(jl, ensure_ascii=False).replace("</", "<\\/") + "</script>"
-    altra = (T('<a href="/en/how-it-works/" hreflang="en">EN</a>', '<a href="/come-funziona/" hreflang="it">IT</a>'))
-    out = [apri(lang, titolo, descr, url, alterne(url_come), jsonld, altra, anno)]
+    alt, altra = tasti_lingua(None, lang, url_come)
+    out = [apri(lang, titolo, descr, url, alt, jsonld, altra, anno)]
     w = lambda t: f'<span class="w"><span>{t}</span></span>'
-    out.append(f'<section class="open">\n<nav class="bc m" aria-label="{T("Sei qui", "You are here")}"><a href="{"/" if it else "/en/"}">Home</a> › <span>{T("Come funziona", "How it works")}</span></nav>\n'
+    out.append(f'<section class="open">\n<nav class="bc m" aria-label="{T("Sei qui", "You are here")}"><a href="{casa(lang)}">{testo_l(lang, "Home", "Home")}</a> › <span>{T("Come funziona", "How it works")}</span></nav>\n'
                f'<p class="m k">{T("Il metodo", "The method")}</p>\n'
                f'<h1 class="h1">{w(T("Come", "How"))} <br>{w(T("funziona", "it works"))}</h1>\n'
                f'<p class="say" id="say">{esc(T("Ogni data del sito si calcola da fatti controllati (quando è morto l’autore, quando è uscito il libro) e dalle regole di legge di ogni paese. Ecco da dove vengono i fatti, come li controlliamo e cosa resta da verificare.", "Every date on the site is worked out from checked facts (when the author died, when the book came out) and from each country’s legal rules. Here is where the facts come from, how we check them and what is still to be verified."))}</p>\n</section>\n')
@@ -566,7 +619,7 @@ def pagina_come(lang):
     out.append(sezione(T("Le risposte brevi", "The short answers"), T("Domande", "Questions"),
                        "<div>\n" + "".join(f'<div class="acc"><button type="button">{esc(q)}<span>[+]</span></button><div class="bd"><p>{esc(r)}</p></div></div>\n' for q, r in faq) + "</div>\n"))
     out.append('<div class="pf" id="pf" aria-hidden="true"></div>\n')
-    out.append(P.JS_ANNO.replace("@@LOC@@", T('it-IT', 'en-GB')))
+    out.append(P.JS_ANNO.replace("@@LOC@@", L.LOCALE[lang]))
     out.append(P.piede_scheda(lang))
     return "".join(out), url
 
@@ -601,6 +654,8 @@ CSS_SHOP = (".shop-hd{display:grid;grid-template-columns:minmax(0,1fr) min(32vw,
 
 
 def url_shop(lang):
+    if lang in L.CARTELLA:
+        return f"{P.SITO}/{L.CARTELLA[lang]['shop']}/"
     return f"{P.SITO}/shop/" if lang == "it" else f"{P.SITO}/en/shop/"
 
 
@@ -623,10 +678,10 @@ def pagina_shop(lang):
         {"@type": "CollectionPage", "@id": url, "url": url, "name": titolo, "description": descr, "inLanguage": lang},
         {"@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": i + 1, "item": pr} for i, pr in enumerate(prodotti)]}]}
     jsonld = '<script type="application/ld+json">' + json.dumps(jl, ensure_ascii=False).replace("</", "<\\/") + "</script>"
-    altra = (T('<a href="/en/shop/" hreflang="en">EN</a>', '<a href="/shop/" hreflang="it">IT</a>'))
-    out = [apri(lang, titolo, descr, url, alterne(url_shop), jsonld, altra, P.ANNO_PROSSIMO, CSS_SHOP)]
+    alt, altra = tasti_lingua(None, lang, url_shop)
+    out = [apri(lang, titolo, descr, url, alt, jsonld, altra, P.ANNO_PROSSIMO, CSS_SHOP)]
     w = lambda t: f'<span class="w"><span>{t}</span></span>'
-    out.append(f'<section class="open">\n<nav class="bc m" aria-label="{T("Sei qui", "You are here")}"><a href="{"/" if it else "/en/"}">Home</a> › <span>Shop</span></nav>\n'
+    out.append(f'<section class="open">\n<nav class="bc m" aria-label="{T("Sei qui", "You are here")}"><a href="{casa(lang)}">{testo_l(lang, "Home", "Home")}</a> › <span>Shop</span></nav>\n'
                f'<p class="m k">{T("Stampa su richiesta", "Printed on demand")}</p>\n'
                f'<div class="shop-hd"><h1 class="h1">{w("Shop")}</h1><div>'
                f'<p class="say" id="say">{esc(T("Poster tipografici dai libri in pubblico dominio: frasi famose e romanzi interi.", "Typographic posters from public domain books: famous lines and whole novels."))}</p>'
@@ -652,7 +707,7 @@ def pagina_shop(lang):
     out.append(sezione(T("Come si compra", "How to buy"), T("Tre passaggi", "Three steps"),
                        '<div class="how">' + "".join(f'<div><div class="n">{i + 1:02d}</div><p class="m">{esc(t)}</p><p>{esc(x)}</p></div>' for i, (t, x) in enumerate(passi)) + "</div>\n"))
     out.append('<div class="pf" id="pf" aria-hidden="true"></div>\n')
-    out.append(P.JS_ANNO.replace("@@LOC@@", T('it-IT', 'en-GB')))
+    out.append(P.JS_ANNO.replace("@@LOC@@", L.LOCALE[lang]))
     out.append(P.piede_scheda(lang))
     return "".join(out), url
 
@@ -687,7 +742,8 @@ def pagina_paese_radar(k, lang, REG, liste):
     it = lang == "it"
     T = traduttore(lang)
     nome_it, nome_en, _, _, in_it, in_en, naz, agg_it, agg_en = PAESI[k]
-    nome, in_ = T(nome_it, nome_en), T(in_it, in_en)
+    nome_en, in_en, agg_en = colonne_en(k, lang)   # lingue in più: nomi del paese nella lingua
+    nome, in_ = (nome_it, in_it) if it else (nome_en, in_en)
     anno = P.ANNO_PROSSIMO
     pk = "es" if k == "es" else "ue"
     morti = R.morti_liberi_nel(anno, "es" if k == "es" else "it")
@@ -702,14 +758,15 @@ def pagina_paese_radar(k, lang, REG, liste):
     descr = T("{v1} un'opera diventa libera {anni} anni dopo la morte dell'autore. Tutti gli scrittori che entrano in pubblico dominio il 1° gennaio {anno}, le opere, la regola di legge e cosa controllare.", "{v2} a work becomes free {anni} years after the author's death. All the writers entering the public domain on 1 January {anno}, their works, the legal rule and what to check.", v1=in_it[0].upper() + in_it[1:], anni=anni, anno=anno, v2=in_en[0].upper() + in_en[1:])
     jl = {"@context": "https://schema.org", "@graph": [
         {"@type": "WebPage", "@id": url, "url": url, "name": titolo, "description": descr, "inLanguage": lang,
-         "isPartOf": {"@type": "WebSite", "name": "Public Domain Radar", "url": P.SITO + ("/" if it else "/en/")}},
+         "isPartOf": {"@type": "WebSite", "name": "Public Domain Radar", "url": P.SITO + casa(lang)}},
         {"@type": "BreadcrumbList", "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "Home", "item": P.SITO + ("/" if it else "/en/")},
+            {"@type": "ListItem", "position": 1, "name": testo_l(lang, "Home", "Home"), "item": P.SITO + casa(lang)},
             {"@type": "ListItem", "position": 2, "name": T("Per paese", "By country"), "item": url_indice(lang)},
             {"@type": "ListItem", "position": 3, "name": nome, "item": url}]},
         {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": r}} for q, r in faq]}]}
     jsonld = '<script type="application/ld+json">' + json.dumps(jl, ensure_ascii=False).replace("</", "<\\/") + "</script>"
-    h = ((RADICE / "radar" / "index.html") if it else (RADICE / "en" / "radar" / "index.html")).read_text(encoding="utf-8")
+    cart = "radar" if it else "en/radar" if lang == "en" else L.CARTELLA[lang]["radar"]   # 26/11/2026: anche il radar nelle lingue in più
+    h = (RADICE / cart / "index.html").read_text(encoding="utf-8")
     h = re.sub(r'<meta name="robots"[^>]*id="radar-robots">\n?', "", h, count=1)
     h = re.sub(r'<script id="radar-rimando">.*?</script>\n?', "", h, count=1, flags=re.S)
     u_it, u_en = url_paese(k, "it"), url_paese(k, "en")
@@ -721,24 +778,35 @@ def pagina_paese_radar(k, lang, REG, liste):
     h = re.sub(r'(<meta name="twitter:title" content=")[^"]*', lambda m: m.group(1) + esc(titolo), h, count=1)
     h = re.sub(r'(<meta name="twitter:description" content=")[^"]*', lambda m: m.group(1) + esc(descr), h, count=1)
     h = h.replace(f"{P.SITO}/en/radar/", u_en).replace(f"{P.SITO}/radar/", u_it)
+    if lang in L.NUOVE:
+        h = h.replace(f"{P.SITO}/{cart}/", url)
     h = re.sub(r'<link rel="canonical" href="[^"]*">', f'<link rel="canonical" href="{url}">', h, count=1)
     h = re.sub(r'(<meta property="og:url" content=")[^"]*', lambda m: m.group(1) + url, h, count=1)
     h = re.sub(r'<script type="application/ld\+json">.*?</script>', lambda m: jsonld, h, count=1, flags=re.S)
     h = h.replace("</head>", CSS_LEGGE + "\n</head>", 1)
     h = h.replace('href="/en/radar/" hidden', f'href="{u_en.replace(P.SITO, "")}" hidden', 1)
+
     # testata: lo stesso menu delle altre pagine, la lingua come link alla pagina gemella
     altra = (T('<a class="altra-l" href="{v1}" hreflang="en">EN</a>', '<a class="altra-l" href="{v2}" hreflang="it">IT</a>', v1=u_en.replace(P.SITO, ""), v2=u_it.replace(P.SITO, "")))
+    tl = tasti_lingua(k, lang, lambda l: url_paese(k, l))
+    if tl:   # 26/11/2026: la pagina esiste anche in altre lingue (Germania in tedesco): tasto lingua e versioni per Google
+        alt_, altra = tl
+        h = re.sub(r'(<link rel="alternate" hreflang="it"[^>]*>\n)(<link rel="alternate" hreflang="en"[^>]*>\n)(<link rel="alternate" hreflang="x-default"[^>]*>\n)?',
+                   lambda m: alt_ + (m.group(3) or ""), h, count=1)   # x-default resta com'era
+        h = h.replace("</head>", f"<style>{L.CSS_SELETTORE}</style>\n{L.JS_SELETTORE}\n</head>", 1)
     h = h.replace('<span class="lang" id="lingue-tasti"></span>', '<span class="lang" id="lingue-tasti"></span>' + altra, 1)
     menu = "".join(f'<a href="{a}"><span>{esc(t)}</span></a>' for a, t in P._menu_link(lang))
     h = re.sub(r'<nav id="menu-nav">.*?</nav>', f'<nav id="menu-nav">{menu}</nav>', h, count=1, flags=re.S)
     # apertura: il paese, non il titolone del radar
     w = lambda t: f'<span class="w"><span>{t}</span></span>'
-    apertura = (f'<section class="open" id="inizio">\n<nav class="bc" aria-label="{T("Sei qui", "You are here")}"><a href="{"/" if it else "/en/"}">Home</a> › '
+    apertura = (f'<section class="open" id="inizio">\n<nav class="bc" aria-label="{T("Sei qui", "You are here")}"><a href="{casa(lang)}">{testo_l(lang, "Home", "Home")}</a> › '
                 f'<a href="{url_indice(lang).replace(P.SITO, "")}">{T("Per paese", "By country")}</a> › <span>{esc(nome)}</span></nav>\n'
                 f'<p class="m k" id="kick"></p>\n'
                 f'<h1 class="h1">{w(T("Chi diventa libero", "Who becomes free"))} <br>{w(esc(in_))}</h1>\n'
                 f'<p class="say" id="say">{esc(T('{v1} un’opera diventa libera {anni} anni dopo la morte dell’autore, dal 1° gennaio dell’anno dopo. Il 1° gennaio {anno} tocca agli scrittori morti nel {morti}, di qualsiasi paese.', '{v2} a work becomes free {anni} years after the author’s death, from 1 January of the following year. On 1 January {anno} it is the turn of writers who died in {morti}, from any country.', v1=in_it[0].upper() + in_it[1:], anni=anni, anno=anno, morti=morti, v2=in_en[0].upper() + in_en[1:]))}</p>\n</section>')
     if k == "es":
+        da_ = T("In Spagna un’opera diventa libera 80 anni", "In Spain a work becomes free 80 years")
+        assert da_ in apertura, f"pagina Spagna ({lang}): la frase d'apertura non contiene «{da_}»: aggiornare il testo 304/305 del catalogo"
         apertura = apertura.replace(T("In Spagna un’opera diventa libera 80 anni", "In Spain a work becomes free 80 years"),
                                     T("In Spagna, per chi è morto prima del 7 dicembre 1987, un’opera diventa libera 80 anni", "In Spain, for authors who died before 7 December 1987, a work becomes free 80 years"))
     h = re.sub(r'<section class="open" id="inizio">.*?</section>', lambda m: apertura, h, count=1, flags=re.S)
@@ -787,6 +855,17 @@ def crea_pagine_paese():
             d = RADICE / url.replace(P.SITO + "/", "")
             d.mkdir(parents=True, exist_ok=True)
             (d / "index.html").write_text(html_, encoding="utf-8")
+            urls.append(url)
+    # 26/11/2026: lingue in più: l'indice dei paesi e la pagina del proprio paese (la versione senza radar: il radar
+    # è scritto solo in italiano e inglese). Gli altri paesi restano in inglese.
+    for lang in L.NUOVE:
+        pagine = ([pagina_indice(lang, liste)] + [pagina_paese_radar(k, lang, REG, liste) for k in ORDINE if k != "us"]
+                  + [pagina_usa(lang, liste), pagina_come(lang), pagina_shop(lang)])
+        for html_, url in pagine:
+            d = RADICE / url.replace(P.SITO + "/", "")
+            d.mkdir(parents=True, exist_ok=True)
+            slugs = {P.SLUG[q] for q, ls in P.LINGUE_AUT.items() if lang in ls and q in P.SLUG}
+            (d / "index.html").write_text(L.localizza_link(html_, lang, slugs, [anno]), encoding="utf-8")
             urls.append(url)
     (RADICE / "404.html").write_text(pagina_404(), encoding="utf-8")
     # 25/11/2026: /calendario/ e /en/calendar/ senza anno davano la 404 di GitHub: portano all'anno in corso

@@ -68,6 +68,76 @@ T = {
     },
 }
 
+import lingue as L  # noqa: E402  26/11/2026: lingue in più (testi dal catalogo testi/<lingua>.json)
+
+
+def _testi_lingua(lang):
+    """T[lingua] per le lingue in più: i testi inglesi tradotti dal catalogo (stesse chiavi, stessi segnaposti)."""
+    if lang in T:
+        return T[lang]
+    en = T["en"]
+    tr = lambda v: L.testo(lang, "", v)
+    x = {}
+    for k, v in en.items():
+        if k in ("html",):
+            x[k] = lang
+        elif k == "navt" or k == "altra" or k == "home":
+            continue
+        elif isinstance(v, str):
+            x[k] = tr(v)
+        elif isinstance(v, dict):
+            x[k] = {kk: tr(vv) for kk, vv in v.items()}
+        elif k == "filtri_tipo":
+            x[k] = [(a, tr(b)) for a, b in v]
+        elif k == "csv_cols":
+            x[k] = [tr(c) for c in v]
+        else:
+            x[k] = v
+    x["home"] = "/" + L.CARTELLA[lang]["home"] + "/"
+    T[lang] = x
+    MESI[lang] = L.MESI[lang]
+    BREVI[lang] = L.MESI_BREVI[lang]
+    return x
+
+
+def cartella_cal(lang):
+    return "calendario" if lang == "it" else "en/calendar" if lang == "en" else L.CARTELLA[lang]["calendario"]
+
+
+def data_giorno(g, m, anno, lang):
+    return L.data(lang, g, m, anno) if lang in L.MESI else f"{g} {MESI[lang][m - 1]} {anno}"
+
+
+def scheda_lingua(v, lang):
+    """La riga «chi è / cos'è» nella lingua: per italiano e inglese è nei dati del calendario; per le lingue in più
+    viene da data/lingue_etichette.json (Wikidata: descrizione, paese, genere, lingua, pagina Wikipedia), con nascita, morte e Nobel dall'inglese."""
+    sc_ = (v.get("scheda") or {})
+    if lang in ("it", "en"):
+        return sc_.get(lang) or {}
+    global _ET
+    if _ET is None:
+        _ET = json.loads((RADICE / "data" / "lingue_etichette.json").read_text(encoding="utf-8")) if (RADICE / "data" / "lingue_etichette.json").exists() else {}
+    en = sc_.get("en") or sc_.get("it") or {}
+    e = ((_ET.get("voci") or {}).get(v["qid"]) or {}).get(lang) or [None, None, None]
+    det = ((_ET.get("calendario") or {}).get(v["qid"]) or {}).get(lang) or {}
+    out = {k: en[k] for k in ("nato", "morto", "nobel") if en.get(k)}
+    if e[1]:
+        out["desc"] = e[1]
+    if e[2]:
+        out["wiki"] = e[2]
+    if det.get("paese"):
+        out["paesi"] = det["paese"][:2]
+    if det.get("genere"):
+        out["generi"] = det["genere"][:2]
+    if det.get("lingua"):
+        out["lingua"] = det["lingua"][0]
+    if e[0] and v["tipo"] == "prima edizione":
+        out["titolo_l"] = e[0]
+    return out
+
+
+_ET = None
+
 CSS_CAL = (Path(__file__).resolve().parent / "stile_cal.css").read_text()
 
 
@@ -76,6 +146,10 @@ def esc(s):
 
 
 def nome_di(v, lang):
+    if lang not in ("it", "en") and v["tipo"] == "prima edizione":   # titolo nella lingua, se Wikidata lo ha
+        t_ = scheda_lingua(v, lang).get("titolo_l")
+        if t_:
+            return t_.strip()
     return (v.get("it") if lang == "it" and v.get("it") else v["nome"]).strip()
 
 
@@ -88,7 +162,7 @@ def eta_txt(v):
 
 
 def testo_post(v, lang):
-    t = T[lang]
+    t = _testi_lingua(lang)
     k = {"nascita": "n", "morte": "m", "prima edizione": "p"}[v["tipo"]]
     aut = (t["di"] + autore_di(v)) if v["tipo"] == "prima edizione" and autore_di(v) else ""
     base = dict(e=v["anni"], y=v["anno"], nome=nome_di(v, lang), aut=aut)
@@ -98,7 +172,7 @@ def testo_post(v, lang):
 
 
 def evento_ics(v, lang, anno):
-    t = T[lang]
+    t = _testi_lingua(lang)
     k = {"nascita": "ev_n", "morte": "ev_m", "prima edizione": "ev_p"}[v["tipo"]]
     return t[k].format(nome=nome_di(v, lang), e=v["anni"])
 
@@ -107,7 +181,7 @@ def ics_testo(vv, lang, anno):
     def e(s):
         return str(s).replace("\\", "\\\\").replace(";", "\\;").replace(",", "\\,").replace("\n", "\\n")
     righe = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Public Domain Radar//Literary anniversaries//" + lang.upper(),
-             "CALSCALE:GREGORIAN", "X-WR-CALNAME:" + e("Public Domain Radar · " + T[lang]["occ"].format(a=anno)),
+             "CALSCALE:GREGORIAN", "X-WR-CALNAME:" + e("Public Domain Radar · " + _testi_lingua(lang)["occ"].format(a=anno)),
              "X-WR-TIMEZONE:Europe/Rome"]
     ora = datetime.datetime.utcnow().strftime("%Y%m%dT%H%M%SZ")
     for v in vv:
@@ -127,7 +201,7 @@ def ics_testo(vv, lang, anno):
 
 
 def csv_testo(vv, lang, anno):
-    t = T[lang]
+    t = _testi_lingua(lang)
     buf = io.StringIO()
     w = csv.writer(buf)
     w.writerow(t["csv_cols"])
@@ -149,7 +223,7 @@ def cerca_gia_pubblici(v, lang):
         d = json.loads(f.read_text(encoding="utf-8")) if f.exists() else {"opere": [], "autori": []}
         _GP = ({r[0]: (r[2] or r[1], r[1]) for r in d.get("opere", []) if not (len(r) > 10 and r[10])}, {a[0]: a[1] for a in d.get("autori", [])})
     opere, autori = _GP
-    base = "/gia-pubblici/#" if lang == "it" else "/en/already-public/#"
+    base = "/gia-pubblici/#" if lang == "it" else "/en/already-public/#" if lang == "en" else f"/{L.CARTELLA[lang]['gia']}/#"
     if v["tipo"] == "prima edizione" and v["qid"] in opere:
         return base + quote(opere[v["qid"]][0 if lang == "it" else 1])
     if v["tipo"] != "prima edizione" and v["qid"] in autori:
@@ -160,7 +234,7 @@ def cerca_gia_pubblici(v, lang):
 def info_html(v, lang):
     """Colonna destra: chi è / cos'è, in poche righe (da Wikidata e Wikipedia)."""
     t = T[lang]
-    sc = ((v.get("scheda") or {}).get(lang)) or {}
+    sc = scheda_lingua(v, lang)
     righe = []
     if v["tipo"] == "prima edizione":
         det = [x for x in (", ".join(sc.get("generi") or []), sc.get("lingua")) if x]
@@ -176,7 +250,7 @@ def info_html(v, lang):
         if sc.get("nato") and sc.get("morto"):
             det.append(f'{sc["nato"]}–{sc["morto"]}')
         elif sc.get("nato"):
-            det.append(("nato nel " if lang == "it" else "born ") + str(sc["nato"]))
+            det.append(L.testo(lang, "nato nel ", "born ") + str(sc["nato"]))
         if det:
             righe.append(f'<b>{esc(" · ".join(det))}</b>')
     if sc.get("desc"):
@@ -191,6 +265,8 @@ def info_html(v, lang):
     if gp:
         righe.append(f'<a class="gp" href="{gp}">{esc(t["gp"])}</a>')
     wiki = sc.get("wiki") or ((v.get("scheda") or {}).get("en" if lang == "it" else "it") or {}).get("wiki")
+    if lang not in ("it", "en"):
+        wiki = sc.get("wiki") or ((v.get("scheda") or {}).get("en") or {}).get("wiki")
     if wiki:
         righe.append(f'<a href="{esc(wiki)}" rel="noopener" target="_blank">{esc(t["wiki"])}</a>')
     return "".join(righe)
@@ -204,7 +280,7 @@ def scheda(v, lang, anno):
     dat = v.get("mese") and v.get("giorno")
     gg = f'{v["giorno"]:02d}' if dat else "—"
     if dat:
-        quando = f'{v["giorno"]} {MESI[lang][v["mese"] - 1]} {anno}' if lang == "it" else f'{v["giorno"]} {MESI[lang][v["mese"] - 1]} {anno}'
+        quando = data_giorno(v["giorno"], v["mese"], anno, lang)
     elif v.get("mese"):
         quando = f'{MESI[lang][v["mese"] - 1]} {anno} · {t["nd"]}'
     else:
@@ -212,7 +288,7 @@ def scheda(v, lang, anno):
     azioni = ""
     if dat:
         azioni += f'<button type="button" class="aggiungi">{esc(t["aggiungi"])}</button>'
-        azioni += f'<button type="button" class="crea">{esc(SCH.TESTI[lang]["crea"])}</button>'
+        azioni += f'<button type="button" class="crea">{esc(SCH.testi_lingua(lang)["crea"])}</button>'
     au = ""
     if v["tipo"] == "prima edizione":
         au = esc(autore_di(v)) + (f' · <i>{esc(orig)}</i>' if orig else "")
@@ -221,10 +297,10 @@ def scheda(v, lang, anno):
         au = f'<p class="au"><i>{esc(orig)}</i></p>'
     sc_attr = ""
     if dat:
-        sc_attr = f' data-sc="{esc(json.dumps(SCH.dati_scheda(v, lang, t, MESI[lang], nome, autore_di(v), ((v.get("scheda") or {}).get(lang)) or {}), ensure_ascii=False))}"'
+        sc_attr = f' data-sc="{esc(json.dumps(SCH.dati_scheda(v, lang, t, MESI[lang], nome, autore_di(v), scheda_lingua(v, lang)), ensure_ascii=False))}"'
     extra = f' data-ics-d="{anno}{v["mese"]:02d}{v["giorno"]:02d}" data-ics-t="{esc(evento_ics(v, lang, anno))}"' if dat else ""
     sc = (v.get("scheda") or {})
-    wiki = (sc.get(lang) or {}).get("wiki") or (sc.get("en" if lang == "it" else "it") or {}).get("wiki")
+    wiki = scheda_lingua(v, lang).get("wiki") or (sc.get("en" if lang == "it" else "it") or {}).get("wiki")
     w_attr = f' data-w="{esc(wiki)}"' if wiki else ""
     eta = v["anni"]
     return (f'<div class="ev" data-tipo="{esc(v["tipo"])}" data-mese="{v.get("mese") or 0}" data-eta="{eta}" '
@@ -237,18 +313,19 @@ def scheda(v, lang, anno):
 def pagina(dati, lang):
     from pagine import testa_scheda, piede_scheda, marchio_html  # evita l'import circolare all'avvio
     anno = dati["anno"]
-    t = T[lang]
+    t = _testi_lingua(lang)
     it = lang == "it"
+    X = lambda i_, e_: L.testo(lang, i_, e_)
     vv = dati["voci"]
-    url = f"{SITO}{'/en/calendar' if lang == 'en' else '/calendario'}/{anno}/"
+    url = f"{SITO}/{cartella_cal(lang)}/{anno}/"
     eu, us = R.morti_liberi_nel(anno, "it"), R.pubblicate_libere_usa_nel(anno)
     app = "/en/radar/" if lang == "en" else "/radar/"
-    spec = (f'<div class="ev pdd" data-tipo="pdd" data-mese="1" data-q="{esc(("1° gennaio " if it else "1 January ") + str(anno))}">'
-            f'<span class="gg">01</span><h3 class="nm">{esc(t["pdd"])}</h3><span class="tp"><b>{"Pubblico dominio" if it else "Public domain"}</b></span>'
+    spec = (f'<div class="ev pdd" data-tipo="pdd" data-mese="1" data-q="{esc(X("1° gennaio ", "1 January ") + str(anno))}">'
+            f'<span class="gg">01</span><h3 class="nm">{esc(t["pdd"])}</h3><span class="tp"><b>{X("Pubblico dominio", "Public domain")}</b></span>'
             f'<div class="det"><p class="pdt">{esc(t["pdd_txt"].format(eu=eu, us=us))}</p>'
             # 25/11/2026: diretti alle pagine (prima passavano dal radar, che non è indicizzato e rimanda comunque qui)
-            f'<a href="{"/en/public-domain-" if lang == "en" else "/pubblico-dominio-"}{anno}/">{"Authors" if lang == "en" else "Autori"} →</a>'
-            f'<a href="{"/en/public-domain/united-states/" if lang == "en" else "/pubblico-dominio/stati-uniti/"}">{"Works USA" if lang == "en" else "Opere USA"} →</a></div></div>')
+            f'<a href="{"/pubblico-dominio-" if it else "/en/public-domain-"}{anno}/">{X("Autori", "Authors")} →</a>'
+            f'<a href="{"/pubblico-dominio/stati-uniti/" if it else "/en/public-domain/united-states/"}">{X("Opere USA", "Works USA")} →</a></div></div>')
     mesi = {}
     for v in vv:
         mesi.setdefault(v.get("mese") or 0, []).append(v)
@@ -265,18 +342,21 @@ def pagina(dati, lang):
         elenco.sort(key=lambda v: ((v.get("giorno") or 99), -v["pagine"]))
         corpo.append(f'<section class="mo" id="{sid}" data-mese="{m}"><h2><span>{esc(titolo)}</span> <small data-s="{esc((f"{anno} · " if m else "") + "# " + t["voci"])}">{esc(sotto)}</small></h2>{extra}'
                      + "".join(scheda(v, lang, anno) for v in elenco) + f'<p class="empty">{esc(t["vuoto"])}</p></section>\n')
-        nav.append(f'<a href="#{sid}" data-m="{m}" data-l="{esc((titolo + " " + str(anno)) if m else titolo)}">{esc(BREVI[lang][m - 1] if m else ("Anno" if it else "Year"))}</a>')
+        nav.append(f'<a href="#{sid}" data-m="{m}" data-l="{esc((titolo + " " + str(anno)) if m else titolo)}">{esc(BREVI[lang][m - 1] if m else X("Anno", "Year"))}</a>')
     tipi_btn = "".join(f'<button type="button" class="c" data-t="{k}">{esc(n)}</button>' for k, n in t["filtri_tipo"])
     eta_btn = "".join(f'<button type="button" class="c" data-a="{e}">{e}</button>' for e in (50, 75, 100, 125, 150, 175, 200)) + f'<button type="button" class="c" data-a="piu">{esc(t["piu"])}</button>'
-    base_ics = f"{url}anniversari-{anno}.ics" if it else f"{url}anniversaries-{anno}.ics"
-    base_csv = f"anniversari-{anno}.csv" if it else f"anniversaries-{anno}.csv"
+    base_ics = f"{url}{nome_file(lang, anno)}.ics"
+    base_csv = f"{nome_file(lang, anno)}.csv"
     ics_nome = base_ics.rsplit("/", 1)[-1]
-    altra = f'<a href="{t["altra"][1].format(a=anno)}" hreflang="{"en" if it else "it"}">{t["altra"][0]}</a>'
+    altra = f'<a href="{t["altra"][1].format(a=anno)}" hreflang="{"en" if it else "it"}">{t["altra"][0]}</a>' if "altra" in t else ""
     ld = {"@context": "https://schema.org", "@type": "CollectionPage", "name": t["titolo"].format(a=anno), "url": url, "inLanguage": lang,
-          "dateModified": dati.get("generato"), "isPartOf": {"@type": "WebSite", "name": "Public Domain Radar", "url": SITO + ("/en/" if lang == "en" else "/")}}
+          "dateModified": dati.get("generato"), "isPartOf": {"@type": "WebSite", "name": "Public Domain Radar", "url": SITO + t["home"]}}
     jsonld = '<script type="application/ld+json">' + json.dumps(ld, ensure_ascii=False).replace("</", "<\\/") + "</script>"
     alt = (f'<link rel="alternate" hreflang="it" href="{SITO}/calendario/{anno}/">\n<link rel="alternate" hreflang="en" href="{SITO}/en/calendar/{anno}/">\n')
-    cal_lab = ("Calendario " if it else "Calendar ") + str(anno)
+    if L.NUOVE:   # 26/11/2026: tasto lingua e versioni per Google in tutte le lingue
+        case = {l: f"/{cartella_cal(l)}/{anno}/" for l in ("it", "en") + L.NUOVE}
+        alt, altra = L.hreflang(case, SITO, x_default=False), L.selettore(lang, case)
+    cal_lab = X("Calendario ", "Calendar ") + str(anno)
     testa = testa_scheda(lang, esc(t["titolo"].format(a=anno)), esc(t["descr"].format(a=anno)), url, alt, jsonld, altra, "@@CNT@@",
                          og_tipo="website", css_extra=CSS_CAL + SCH.CSS, main_cls="calm", body_cls="cal-b")
     testa = testa.replace('<div class="cnt">@@CNT@@</div>', f'<div class="cnt"><span id="cnt" data-l="{esc(cal_lab)}">{esc(cal_lab)}</span></div>')
@@ -290,7 +370,7 @@ def pagina(dati, lang):
 <p class="say" id="say">{esc(t["lead"])}</p>
 <div class="dl"><a href="{ics_nome}">{esc(t["ics"])}</a><a href="{base_csv}">{esc(t["csv"])}</a></div>
 </section>
-<div class="bar" id="bar"><nav class="months" id="months" aria-label="{"Mesi" if it else "Months"}">{"".join(nav)}</nav><button class="ft" id="ft" type="button">{esc(t["filtri"])} <b id="fn"></b> <span>[+]</span></button></div>
+<div class="bar" id="bar"><nav class="months" id="months" aria-label="{X("Mesi", "Months")}">{"".join(nav)}</nav><button class="ft" id="ft" type="button">{esc(t["filtri"])} <b id="fn"></b> <span>[+]</span></button></div>
 <div class="fp" id="fp"><div class="in">
 <span class="m" style="color:var(--grey)">{esc(t["tipo"])}</span><div class="chips">{tipi_btn}</div>
 <span class="m" style="color:var(--grey)">{esc(t["eta"])}</span><div class="chips">{eta_btn}</div>
@@ -303,11 +383,11 @@ def pagina(dati, lang):
 </div>
 <aside class="pn" id="pn" aria-live="polite"></aside>
 """)
-    L = {"anni": "anni" if it else "years", "agg": "Aggiungi al calendario" if it else "Add to calendar", "cond": "Condividi" if it else "Share",
-         "pdd_t": "1° gennaio · ogni anno" if it else "1 January · every year"}
-    out.append(JS_CAL.replace("@@L@@", json.dumps(L, ensure_ascii=False)))
+    Lj = {"anni": X("anni", "years"), "agg": X("Aggiungi al calendario", "Add to calendar"), "cond": X("Condividi", "Share"),
+          "pdd_t": X("1° gennaio · ogni anno", "1 January · every year")}
+    out.append(JS_CAL.replace("@@L@@", json.dumps(Lj, ensure_ascii=False)))
     out.append(SCH.finestra(lang) + SCH.js(lang, anno))
-    out.append(piede_scheda(lang, ("Fonti" if it else "Sources", esc(t["nota"]))))
+    out.append(piede_scheda(lang, (X("Fonti", "Sources"), esc(t["nota"]))))
     return "".join(out), url
 
 
@@ -375,6 +455,10 @@ addEventListener('scroll',()=>{ if(!tk){tk=true;requestAnimationFrame(frame);} }
 """
 
 
+def nome_file(lang, anno):
+    return f"anniversari-{anno}" if lang == "it" else f"anniversaries-{anno}" if lang == "en" else {"de": "jahrestage", "fr": "anniversaires", "es": "aniversarios"}[lang] + f"-{anno}"
+
+
 def anni_approvati():
     """Anni approvati da Marco (data/calendari_approvati.json): solo questi vanno sul sito."""
     try:
@@ -395,12 +479,15 @@ def crea_calendario():
         if anno not in approvati:
             print(f"calendario {anno}: pronto ma non ancora approvato, resta fuori dal sito")
             continue
-        for lang in ("it", "en"):
+        for lang in ("it", "en") + L.NUOVE:
             html_, url = pagina(dati, lang)
-            d = RADICE / ("en/calendar" if lang == "en" else "calendario") / str(anno)
+            d = RADICE / cartella_cal(lang) / str(anno)
             d.mkdir(parents=True, exist_ok=True)
+            if lang not in ("it", "en"):   # collegamenti alle pagine della lingua (schede, anno, paesi, Già pubblici…)
+                sch = json.loads((RADICE / "data" / f"radar_{lang}.json").read_text(encoding="utf-8")).get("schede", {}) if (RADICE / "data" / f"radar_{lang}.json").exists() else {}
+                html_ = L.localizza_link(html_, lang, {x.rstrip("/").rsplit("/", 1)[1] for x in sch.values()}, [anno])
             (d / "index.html").write_text(html_, encoding="utf-8")
-            nome = f"anniversari-{anno}" if lang == "it" else f"anniversaries-{anno}"
+            nome = nome_file(lang, anno)
             (d / f"{nome}.ics").write_text(ics_testo(dati["voci"], lang, anno), encoding="utf-8", newline="")
             (d / f"{nome}.csv").write_text(csv_testo(dati["voci"], lang, anno), encoding="utf-8", newline="")
             urls.append(url)

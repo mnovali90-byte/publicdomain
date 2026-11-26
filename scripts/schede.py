@@ -16,6 +16,17 @@ TESTI = {
 }
 
 
+def testi_lingua(lang):
+    """26/11/2026: per le lingue in più i testi inglesi tradotti dal catalogo testi/<lingua>.json (scripts/lingue.py)."""
+    if lang in TESTI:
+        return TESTI[lang]
+    import lingue as L
+    x = {k: L.testo(lang, "", v) for k, v in TESTI["en"].items() if k != "url"}
+    x["url"] = "publicdomainradar.com/" + L.CARTELLA[lang]["calendario"]
+    TESTI[lang] = x
+    return x
+
+
 def cap(s):
     return s[:1].upper() + s[1:] if s else s
 
@@ -59,7 +70,7 @@ dialog#sd::backdrop{background:rgba(12,12,16,.72)}
 
 
 def finestra(lang):
-    x = TESTI[lang]
+    x = testi_lingua(lang)
     e = html.escape
     return (f'<dialog id="sd" aria-label="{e(x["titolo"])}"><div class="dh"><b>{e(x["titolo"])}</b>'
             f'<button type="button" id="sdx">{e(x["chiudi"])}</button></div>'
@@ -180,6 +191,6 @@ document.getElementById("sds").addEventListener("click",function(){
 def js(lang, anno):
     svg = (RADICE / "assets" / "logo-rdr.svg").read_text(encoding="utf-8").replace("currentColor", "#0C0C10")
     lw, lh = re.search(r'viewBox="0 0 ([\d.]+) ([\d.]+)"', svg).groups()
-    x = TESTI[lang]
+    x = testi_lingua(lang)
     dati = {"cal": x["cal"].format(a=anno), "url": x["url"]}
     return "<script>" + JS.replace("__LW__", lw).replace("__LH__", lh).replace("__LOGO__", json.dumps(svg)).replace("__X__", json.dumps(dati)) + "</script>"

@@ -21,6 +21,7 @@ import shutil
 import sys
 import unicodedata
 from pathlib import Path
+import lingue as L
 from lingue import traduttore, testo as testo_l   # 26/11/2026: le lingue in un posto solo (scripts/lingue.py)
 
 RADICE = Path(__file__).resolve().parent.parent
@@ -29,7 +30,7 @@ MESI = ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio", 
 MESI_EN = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 NOMI_LINGUA = {"it": {"it": "italiano", "en": "inglese", "es": "spagnolo", "de": "tedesco", "fr": "francese"},
                "en": {"it": "Italian", "en": "English", "es": "Spanish", "de": "German", "fr": "French"}}
-PERCORSO = {"it": "autore", "en": "en/author"}   # cartella delle pagine, per lingua
+PERCORSO = {"it": "autore", "en": "en/author", "de": "de/autor", "fr": "fr/auteur", "es": "es/autor"}   # cartella delle pagine, per lingua
 
 
 def esc(s):
@@ -41,10 +42,12 @@ def pulisci(s):
 
 
 def migliaia(n, lang="it"):
-    return f"{int(n):,}".replace(",", "." if lang == "it" else ",")
+    return f"{int(n):,}".replace(",", "." if lang in ("it", "de", "es") else ("\u202f" if lang == "fr" else ","))
 
 
 def data_l(lang, anno):
+    if lang in L.MESI:
+        return L.data(lang, 1, 1, anno)
     return f"1° {MESI[0]} {anno}" if lang == "it" else f"1 January {anno}"
 
 
@@ -111,9 +114,9 @@ def iso_valida(iso):
 def bio_di(a, lang="it"):
     """Pagina italiana: biografia in italiano se c'è, altrimenti in inglese (come la scheda del sito).
     Pagina inglese: solo biografia inglese (niente testi in due lingue)."""
-    if lang == "en":
-        b = (a.get("bios") or {}).get("en")
-        return {"testo": pulisci(b["testo"]), "url": b.get("url"), "lingua": "en"} if b and b.get("testo") else None
+    if lang != "it":   # pagine in inglese, tedesco…: solo la biografia di quella lingua (niente testi in due lingue)
+        b = (a.get("bios") or {}).get(lang)
+        return {"testo": pulisci(b["testo"]), "url": b.get("url"), "lingua": lang} if b and b.get("testo") else None
     for l in ("it", "en"):
         b = (a.get("bios") or {}).get(l)
         if b and b.get("testo"):
@@ -251,7 +254,7 @@ TESTA = """<!doctype html>
 <link rel="canonical" href="{url}">
 {alterne}<meta property="og:type" content="{og_tipo}">
 <meta property="og:site_name" content="Public Domain Radar">
-<meta property="og:url" content="{url}">
+{f'<meta property="og:locale" content="{L.OG_LOCALE[lang]}">' + chr(10) if lang in L.NUOVE else ""}<meta property="og:url" content="{url}">
 <meta property="og:title" content="{titolo}">
 <meta property="og:description" content="{descr}">
 <meta name="twitter:card" content="summary">
@@ -340,10 +343,15 @@ def alterne(lang, slug):
 
 
 NOMI_FONTE = {"it": {"wikidata": "Wikidata", "wikidata_altra": "Wikidata (altra data)", "gnd": "Biblioteca nazionale tedesca (GND)", "loc": "Library of Congress", "gutenberg": "Project Gutenberg"},
-              "en": {"wikidata": "Wikidata", "wikidata_altra": "Wikidata (another date)", "gnd": "German National Library (GND)", "loc": "Library of Congress", "gutenberg": "Project Gutenberg"}}
+              "en": {"wikidata": "Wikidata", "wikidata_altra": "Wikidata (another date)", "gnd": "German National Library (GND)", "loc": "Library of Congress", "gutenberg": "Project Gutenberg"},
+              "de": {"wikidata": "Wikidata", "wikidata_altra": "Wikidata (anderes Datum)", "gnd": "Deutsche Nationalbibliothek (GND)", "loc": "Library of Congress", "gutenberg": "Project Gutenberg"},
+              "fr": {"wikidata": "Wikidata", "wikidata_altra": "Wikidata (autre date)", "gnd": "Bibliothèque nationale allemande (GND)", "loc": "Library of Congress", "gutenberg": "Project Gutenberg"},
+              "es": {"wikidata": "Wikidata", "wikidata_altra": "Wikidata (otra fecha)", "gnd": "Biblioteca Nacional de Alemania (GND)", "loc": "Library of Congress", "gutenberg": "Project Gutenberg"}}
 
 NOMI_P = {"it": {"it": "in Italia", "fr": "in Francia", "de": "in Germania", "uk": "nel Regno Unito", "es": "in Spagna"},
-          "en": {"it": "Italy", "fr": "France", "de": "Germany", "uk": "the UK", "es": "Spain"}}
+          "en": {"it": "Italy", "fr": "France", "de": "Germany", "uk": "the UK", "es": "Spain"},
+          "de": {"it": "Italien", "fr": "Frankreich", "de": "Deutschland", "uk": "im Vereinigten Königreich", "es": "Spanien"},
+          "fr": L.PAESI_IN["fr"], "es": L.PAESI_IN["es"]}
 
 
 def maiuscola(t):
@@ -354,6 +362,8 @@ def elenco_paesi(paesi, lang):
     """«in Italia, Francia, Germania e nel Regno Unito» / «in Italy, France, Germany and the UK»."""
     if not paesi:
         return ""
+    if lang in L.PAESI_IN:
+        return L.elenco_paesi(lang, paesi)
     if lang == "en":
         n = [NOMI_P["en"][x] for x in paesi]
         return "in " + (", ".join(n[:-1]) + " and " + n[-1] if len(n) > 1 else n[0])
@@ -394,6 +404,15 @@ NOTA_TRATTATO = {
     "en": ("Author from an Allied country in the Second World War ({p}). For works published before 10 June 1940, some argue "
            "that protection in Italy lasts longer (1947 Peace Treaty, Annex XV). Courts have not applied it so far: «The Little "
            "Prince» has been free in Italy since 2015 (Milan Court 2021, Milan Court of Appeal 2022)."),
+    "de": ("Autor aus einem im Zweiten Weltkrieg alliierten Land ({p}). Für Werke, die vor dem 10. Juni 1940 erschienen sind, wird teils "
+           "vertreten, dass der Schutz in Italien länger dauert (Friedensvertrag von 1947, Anhang XV). Die Gerichte haben das bisher nicht "
+           "angewandt: «Der kleine Prinz» ist in Italien seit 2015 frei (Gericht Mailand 2021, Berufungsgericht Mailand 2022)."),
+    "fr": ("Auteur d'un pays allié pendant la Seconde Guerre mondiale ({p}). Pour les œuvres publiées avant le 10 juin 1940, certains "
+           "soutiennent qu'en Italie la protection dure plus longtemps (traité de paix de 1947, annexe XV). Les tribunaux ne l'ont pas appliqué "
+           "jusqu'ici : « Le Petit Prince » est libre en Italie depuis 2015 (tribunal de Milan 2021, cour d'appel de Milan 2022)."),
+    "es": ("Autor de un país aliado en la Segunda Guerra Mundial ({p}). Para las obras publicadas antes del 10 de junio de 1940, hay quien "
+           "sostiene que en Italia la protección dura más (Tratado de Paz de 1947, anexo XV). Los tribunales no lo han aplicado hasta ahora: "
+           "«El principito» es libre en Italia desde 2015 (Tribunal de Milán 2021, Tribunal de Apelación de Milán 2022)."),
 }
 
 
@@ -527,7 +546,7 @@ RANGHI = {}   # (wikidata, misura) -> (posizione, totale): calcolati in main() c
 
 def calcola_ranghi(pacchetto):
     lett = [x for x in pacchetto["autori"] if x.get("letterario") and R.autore_con_nome(x.get("nome"))]
-    for m, campo in (("it", "visite_it"), ("en", "visite_en"), ("int", "pagine_wikipedia")):
+    for m, campo in (("it", "visite_it"), ("en", "visite_en"), ("int", "pagine_wikipedia")) + tuple((l, f"visite_{l}") for l in L.NUOVE):
         ordine = sorted(lett, key=lambda x: (-(x.get("indice_" + m) if x.get("indice_" + m) is not None else -1), -(x.get(campo) or 0),
                                              -(x.get("pagine_wikipedia") or 0), x["nome"]))
         for r, x in enumerate(ordine, 1):
@@ -756,6 +775,8 @@ def vincoli_radar():
                 note_en = [n for n in note_coautori(dict(a, opere=[o]), "en")]
                 if note:
                     v["n"], v["n_en"] = " ".join(note), " ".join(note_en)
+                    for l in L.NUOVE:   # 26/11/2026: la stessa nota nelle lingue in più
+                        v["n_" + l] = " ".join(note_coautori(dict(a, opere=[o]), l))
                 if v:
                     out[k] = v
     return out
@@ -798,7 +819,8 @@ def note_coautori(a, lang):
             if m is not None and R.anno_libero(m, "it") > oggi_a and m > D:
                 note.append(T("{tt}: i disegni originali di {nome} (morte: {m}) hanno diritti propri: in Italia, Francia, Germania e Regno Unito fino al 31 dicembre {v1}, in Spagna fino al 31 dicembre {v2}. Il testo segue la data dell'autore.", "{tt}: the original drawings by {nome} (died {m}) have their own rights: in Italy, France, Germany and the UK until 31 December {v1}, in Spain until 31 December {v2}. The text follows the author's date.", tt=tt, nome=nome, m=m, v1=R.anno_libero(m, 'it') - 1, v2=R.anno_libero(m, 'es') - 1))
         og = opera_gp(a, o)
-        nu = (NOTE_USA.get(og["q"]) or {}).get(lang if lang in ("it", "en") else "en") if og else None
+        nu = NOTE_USA.get(og["q"]) if og else None
+        nu = testo_l(lang, nu.get("it") or "", nu.get("en") or "") if nu else None   # lingue in più: dal catalogo testi/<lingua>.json
         if nu:
             note.append(f"{tt}: {nu[0].lower() + nu[1:]}")
     return list(dict.fromkeys(note))   # stessa nota per titoli doppi su Wikidata: una volta sola
@@ -896,6 +918,27 @@ def frase_risposta(a, lang):
             x += f"; {NOMI_P['it'][p]} {'il' if fut(y) else 'dal'} {data_l(lang, y)}"
         x += "."
         x += " Negli USA dipende dall’anno di uscita di ogni opera."
+    elif lang == "de":
+        x = (f"Die Werke von {esc(nome)} werden {paesi} am <b>{data_l(lang, ue)}</b> gemeinfrei" if fut(ue)
+             else f"Die Werke von {esc(nome)} sind {paesi} seit <b>{data_l(lang, ue)}</b> gemeinfrei")
+        for p, y in altri:
+            x += f"; in {NOMI_P['de'][p]} {'am' if fut(y) else 'seit'} {data_l(lang, y)}"
+        x += "."
+        x += " In den USA hängt es vom Erscheinungsjahr jedes Werks ab."
+    elif lang == "fr":
+        x = (f"Les œuvres de {esc(nome)} entrent dans le domaine public {paesi} le <b>{data_l(lang, ue)}</b>" if fut(ue)
+             else f"Les œuvres de {esc(nome)} sont dans le domaine public {paesi} depuis le <b>{data_l(lang, ue)}</b>")
+        for p, y in altri:
+            x += f" ; {NOMI_P['fr'][p]} {'le' if fut(y) else 'depuis le'} {data_l(lang, y)}"
+        x += "."
+        x += " Aux États-Unis, cela dépend de l’année de publication de chaque œuvre."
+    elif lang == "es":
+        x = (f"Las obras de {esc(nome)} pasan al dominio público {paesi} el <b>{data_l(lang, ue)}</b>" if fut(ue)
+             else f"Las obras de {esc(nome)} están en dominio público {paesi} desde el <b>{data_l(lang, ue)}</b>")
+        for p, y in altri:
+            x += f"; {NOMI_P['es'][p]} {'el' if fut(y) else 'desde el'} {data_l(lang, y)}"
+        x += "."
+        x += " En Estados Unidos depende del año de publicación de cada obra."
     else:
         x = (f"The works of {esc(nome)} enter the public domain {paesi} on <b>{data_l(lang, ue)}</b>" if fut(ue)
              else f"The works of {esc(nome)} have been in the public domain {paesi} since <b>{data_l(lang, ue)}</b>")
@@ -930,13 +973,15 @@ def _menu_link(lang):
         if CALENDARIO_ON:
             v.append((f"/en/calendar/{a}/", f"Anniversaries {a}"))
         v += [("/en/how-it-works/", "How it works"), ("/en/shop/", "Shop")]
+    if lang in L.NUOVE:   # 26/11/2026: lingue in più, stesse voci dell'inglese con indirizzi e testi della lingua
+        v = [(L.percorso(lang, h), testo_l(lang, "", t.replace(str(a), "{a}")).replace("{a}", str(a))) for h, t in v]
     return v
 
 
 def _piede_link(lang):
     """Collegamenti del piede: il menu più radar e indice A–Z (restano raggiungibili da ogni pagina)."""
     it = lang == "it"
-    return _menu_link(lang) + ([("/autore/", "Indice degli autori")] if it else [("/en/author/", "Author index")])   # il radar non è più una voce (25/11/2026)
+    return _menu_link(lang) + ([("/autore/", "Indice degli autori")] if it else [("/en/author/", testo_l(lang, "Indice degli autori", "Author index"))])   # il radar non è più una voce (25/11/2026)
 
 
 def titolo_corto(t):
@@ -967,7 +1012,7 @@ def testa_scheda(lang, titolo, descr, url, alterne_, jsonld, altra, cnt, og_tipo
 {jsonld}
 <link rel="preload" href="/assets/fonts/big-shoulders-display-800-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link href="/assets/fonts/fonts.css" rel="stylesheet">
-<style>{CSS_SCHEDA}{css_extra}</style>
+<style>{CSS_SCHEDA}{css_extra}{L.CSS_SELETTORE if 'id="lng"' in altra else ""}{L.CSS_LINGUA if lang in L.NUOVE else ""}</style>
 <script>document.documentElement.classList.add('js')</script>
 <!-- contatore visite senza cookie (GoatCounter) -->
 <script data-goatcounter="https://pdr.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
@@ -977,7 +1022,7 @@ def testa_scheda(lang, titolo, descr, url, alterne_, jsonld, altra, cnt, og_tipo
   <a href="{"/" if it else "/en/"}" class="pdr" style="--w:56px" aria-label="Public Domain Radar">@@MARCHIO_S@@</a>
   <div class="cnt">{esc(cnt)}</div>
   <div class="r">{altra}<button id="mbtn" type="button">MENU</button></div>
-</header>
+</header>{L.JS_SELETTORE if 'id="lng"' in altra else ""}
 <div class="menu" id="menu"><button class="x" id="mx" type="button">{testo_l(lang, 'CHIUDI', 'CLOSE')}</button><nav aria-label="{testo_l(lang, 'Sezioni del sito', 'Site sections')}">{menu}</nav></div>
 <main{f' class="{main_cls}"' if main_cls else ''}>
 """
@@ -1030,14 +1075,16 @@ def _paesi_riga(a, lang):
 
 
 def _data_breve(lang, anno):
-    return data_l(lang, anno).replace("1° gennaio", "1° gen").replace("1 January", "1 Jan")
+    if lang in L.MESI:
+        return L.data_breve(lang, anno)
+    return data_l(lang, anno).replace("1° gennaio", "1° gen").replace("1 January", "1 Jan").replace("1. Januar", "1. Jan.")
 
 
 def crediti_foto(lang, titolo, voci):
     """Crediti dei ritratti (licenze di Wikimedia Commons): chiusi, si aprono toccando «Crediti delle foto» (25/11/2026)."""
     if not voci:
         return ""
-    s = "Crediti delle foto" if lang == "it" else "Photo credits"
+    s = testo_l(lang, "Crediti delle foto", "Photo credits")
     return f'<details class="cred"><summary>{s} ({len(voci)})</summary><p>{titolo} — {" · ".join(voci)}</p></details>\n'
 
 
@@ -1053,10 +1100,14 @@ def blocco_vicini_n(a, lang):
     T = traduttore(lang)
     cta = f'<a href="{"/radar/" if it else "/en/radar/"}#/autore/{esc(q)}">{T("Apri nel radar", "Open in the radar")} →</a>'
     if q in MEMBRI and MEMBRI[q][1] == ANNO_PROSSIMO:   # 25/11/2026: l'elenco completo sta nella pagina del paese
-        _pp = (T('spagna', 'spain')) if MEMBRI[q][0] == "es" else (T('italia', 'united-kingdom'))
+        _pp = ("spagna" if it else "spain") if MEMBRI[q][0] == "es" else ("italia" if it else "united-kingdom")
         cta = (f'<a href="{"/pubblico-dominio/" if it else "/en/public-domain/"}{_pp}/">'
                f'{T("Tutti gli scrittori liberi in Spagna", "All writers free in Spain") if MEMBRI[q][0] == "es" else T("Tutti gli scrittori liberi in Italia", "All writers free in the UK")} →</a>'
                f' <a href="{"/pubblico-dominio/" if it else "/en/public-domain/"}">{T("Gli altri paesi", "Other countries")} →</a>')
+        if lang in L.NUOVE and MEMBRI[q][0] != "es":   # lingue in più: la pagina del paese della lingua (Germania per il tedesco)
+            k_ = {"de": "de", "fr": "fr", "es": "uk"}[lang]   # il paese della lingua; per lo spagnolo, come l'inglese, il Regno Unito
+            cta = (f'<a href="/en/public-domain/{L.PAESE_EN[k_]}/">{T("", "All writers free in " + {"de": "Germany", "fr": "France", "uk": "the UK"}[k_])} →</a>'
+                   f' <a href="/en/public-domain/">{T("Gli altri paesi", "Other countries")} →</a>')
     if q not in MEMBRI:
         return f'<section class="blk"><span class="m"><b>{T("Nel radar", "In the radar")}</b>{T("Tutti gli autori", "All authors")}</span><div><div class="lnk">{cta}</div></div></section>\n'
     tipo, anno = MEMBRI[q]
@@ -1187,7 +1238,7 @@ def scheda_nuova(a, lang, bd):
             if liberi:
                 el = ", ".join(f"<a href=\"#works\">{esc(t)}</a>" for t in liberi[:4])
                 n = len(liberi)
-                gia = T('Tra le opere principali di {v1} {v2}: {el}; le altre hanno ognuna la sua data, nella tabella <a href="#works">qui sotto ↓</a>', 'Among the main works of {v1}, {v3}: {el}; the others each have their own date, in the table <a href="#works">below ↓</a>', v1=esc(nome), v2='una è già libera' if n == 1 else f'{n} sono già libere', el=el, v3='one is already free' if n == 1 else f'{n} are already free')
+                gia = T('Tra le opere principali di {v1} {v2}: {el}; le altre hanno ognuna la sua data, nella tabella <a href="#works">qui sotto ↓</a>', 'Among the main works of {v1}, {v3}: {el}; the others each have their own date, in the table <a href="#works">below ↓</a>', v1=esc(nome), v2='una è già libera' if n == 1 else f'{n} sono già libere', el=el, v3=testo_l(lang, '', 'one is already free') if n == 1 else testo_l(lang, '', '{n} are already free', n=n))
             elif corpo_usa:
                 gia = T('Ogni opera principale ha la sua data, nella tabella <a href="#works">qui sotto ↓</a>', 'Each main work has its own date, in the table <a href="#works">below ↓</a>')
             else:
@@ -1221,7 +1272,10 @@ def scheda_nuova(a, lang, bd):
         o.append(f'<section class="blk"><span class="m"><b>{T("Quanto è già pubblicato", "How much is already published")}</b>{T("Nei cataloghi nazionali", "In national catalogues")}</span>\n<div>{cat}</div></section>\n')
     # quanto è conosciuto
     due = []
-    for m, campo, etich in ((("it", "visite_it", T("In Italia", "")),) if it else (("en", "visite_en", "In the English-speaking world"),)) + (("int", "pagine_wikipedia", T("Nel mondo", "Worldwide")),):
+    LINGUA_EN = {"de": "German", "fr": "French", "es": "Spanish"}
+    casa_m = (("it", "visite_it", T("In Italia", "")),) if it else (("en", "visite_en", "In the English-speaking world"),) if lang == "en" else \
+        ((lang, f"visite_{lang}", testo_l(lang, "", f"In the {LINGUA_EN[lang]}-speaking world")),)   # lingue in più: le visite alla Wikipedia della lingua
+    for m, campo, etich in casa_m + (("int", "pagine_wikipedia", T("Nel mondo", "Worldwide")),):
         if a.get("indice_" + m) is None:
             continue
         val = a.get(campo) or 0
@@ -1230,7 +1284,7 @@ def scheda_nuova(a, lang, bd):
         elif val:
             num, sp = migliaia(val, lang), T("visite su Wikipedia in 12 mesi", "Wikipedia views in 12 months")
         else:
-            num, sp = "—", T("nessuna pagina in italiano", "no page in English")
+            num, sp = "—", T("nessuna pagina in italiano", "no page in English") if lang in ("it", "en") else testo_l(lang, "", f"no page in {LINGUA_EN[lang]}")
         rg = RANGHI.get((a["wikidata"], m))
         rk = f'<span class="rk">{T('{v1}° su {v2}', '#{v1} of {v2}', v1=rg[0], v2=rg[1])}</span>' if rg else ""
         due.append(f'<div><span class="m g">{esc(etich)}</span><div class="n">{num}</div><p>{esc(sp)}</p>{rk}</div>')
@@ -1317,7 +1371,7 @@ def cataloghi_n(a, lang):
     tr = a.get("traduzioni") or {}
     nomi = {"sbn_it": (T("Italia", "Italy"), "SBN"), "bnf_fr": (T("Francia", "France"), "BnF"), "bne_es": (T("Spagna", "Spain"), "BNE"),
             "bl_en": (T("Regno Unito", "United Kingdom"), "British Library"), "loc_en": ("USA", "Library of Congress")}
-    mio = T('sbn_it', 'bl_en')
+    mio = "sbn_it" if it else "bl_en" if lang == "en" else None   # lingue in più: nessun catalogo «di casa» evidenziato
     righe, sospesi = [], []
     for k in ("bnf_fr", "sbn_it", "bl_en", "loc_en", "bne_es"):
         g = tr.get(k)
@@ -1351,13 +1405,28 @@ def cataloghi_n(a, lang):
     if it and "sbn_it" in [x[0] for x in righe]:
         cosa += " Nel catalogo SBN: registrazioni bibliografiche in italiano collegate all'autore, comprese ristampe e antologie."
     if not it and "bl_en" in [x[0] for x in righe]:
-        cosa += " In the British Library catalogue the author is searched by surname and years of birth and death; a record counts only if surname and years belong to the same person. Some records catalogued differently may be missed."
+        cosa += testo_l(lang, "", " In the British Library catalogue the author is searched by surname and years of birth and death; a record counts only if surname and years belong to the same person. Some records catalogued differently may be missed.")
     sosp = (f'<p class="cat-n">{esc(T("Dati in verifica per {sospesi}: i numeri del catalogo non sono ancora sicuri, quindi non li mostriamo.", "Data under review for {sospesi}: the catalogue figures are not yet reliable, so we do not show them.", sospesi=", ".join(sospesi)))}</p>' if sospesi else "")
     return (f'<div class="cat" id="cat">{html_r}</div>{leg}{sosp}'
             f'<div class="why"><button type="button">{T("Che cos’è una registrazione", "What a record is")} <span>[+]</span></button><p>{esc(cosa + ult + met)}</p></div>\n')
 
 
+LINGUE_AUT = {}   # 26/11/2026: lingue in cui esiste la scheda di ogni autore (le riempie main)
 OPERA_NEL_TITOLO = json.loads((RADICE / "data" / "opera_nel_titolo.json").read_text(encoding="utf-8"))["autori"]
+
+
+def copia_lingua(a, lang, e):
+    """Copia dell'autore per le pagine di una lingua in più: descrizione e titoli delle opere in quella lingua
+    (data/lingue_extra.json). Le pagine non italiane usano descrizione e «titolo_en»: qui li prendono dalla lingua."""
+    import copy
+    c = copy.deepcopy(a)
+    c["descrizione"] = (e.get("descrizioni") or {}).get(lang) or ""
+    tit = e.get("opere") or {}
+    for o in c.get("opere") or []:
+        t = (tit.get(o.get("titolo")) or {}).get(lang)
+        if t:
+            o["titolo_en"] = t
+    return c
 
 
 def pagina_autore(a, slug, lang, ha_altra):
@@ -1378,6 +1447,21 @@ def pagina_autore(a, slug, lang, ha_altra):
             titolo = f"{nome} ({anni}): quando entra in pubblico dominio · Public Domain Radar"
         descr = (f"{nome} è morto nel {D}: {dove_libero(a.get('paesi'), D, lang)} le sue opere sono libere dal {data_l(lang, R.anno_libero(D, 'it'))}. "
                  f"Date per Italia, Francia, Germania, Spagna, Regno Unito e USA, registrazioni nei cataloghi nazionali e opere principali, da dati aperti.")
+    elif lang == "de":   # 26/11/2026
+        titolo = (f"{nome} und «{op_t}»: wann sie gemeinfrei werden · Public Domain Radar" if op_t
+                  else f"{nome} ({anni}): wann die Werke gemeinfrei werden · Public Domain Radar")
+        descr = (f"{nome} ist {D} gestorben: {dove_libero(a.get('paesi'), D, lang)} sind die Werke ab {data_l(lang, R.anno_libero(D, 'it'))} frei. "
+                 f"Daten für Italien, Frankreich, Deutschland, Spanien, das Vereinigte Königreich und die USA, Einträge in Nationalkatalogen und Hauptwerke, aus offenen Daten.")
+    elif lang == "fr":
+        titolo = (f"{nome} et « {op_t} » : quand ils entrent dans le domaine public · Public Domain Radar" if op_t
+                  else f"{nome} ({anni}) : quand ses œuvres entrent dans le domaine public · Public Domain Radar")
+        descr = (f"{nome} est mort en {D} : {dove_libero(a.get('paesi'), D, lang)}, ses œuvres sont libres depuis le {data_l(lang, R.anno_libero(D, 'it'))}. "
+                 f"Dates pour l'Italie, la France, l'Allemagne, l'Espagne, le Royaume-Uni et les États-Unis, notices dans les catalogues nationaux et œuvres principales, à partir de données ouvertes.")
+    elif lang == "es":
+        titolo = (f"{nome} y «{op_t}»: cuándo pasan al dominio público · Public Domain Radar" if op_t
+                  else f"{nome} ({anni}): cuándo sus obras pasan al dominio público · Public Domain Radar")
+        descr = (f"{nome} murió en {D}: {dove_libero(a.get('paesi'), D, lang)} sus obras son libres desde el {data_l(lang, R.anno_libero(D, 'it'))}. "
+                 f"Fechas para Italia, Francia, Alemania, España, el Reino Unido y Estados Unidos, registros en los catálogos nacionales y obras principales, a partir de datos abiertos.")
     else:
         if not op_t:
             titolo = f"{nome} ({anni}): when the works enter the public domain · Public Domain Radar"
@@ -1395,11 +1479,16 @@ def pagina_autore(a, slug, lang, ha_altra):
         {"@type": "ListItem", "position": 3, "name": nome, "item": url}]}
     jsonld = "".join('<script type="application/ld+json">' + json.dumps(j, ensure_ascii=False).replace("</", "<\\/") + "</script>\n" for j in (persona, briciole))
     altra = ""
-    if ha_altra:
+    lingue_a = LINGUE_AUT.get(a["wikidata"], {"it"} | ({"en"} if ha_altra else set()))
+    if len(lingue_a) > 2 or lang not in ("it", "en"):   # 26/11/2026: più di due lingue → il tasto lingua
+        altra = L.selettore(lang, {l: "/" + PERCORSO[l] + f"/{slug}/" for l in lingue_a})
+    elif ha_altra:
         altra = (f'<a href="{url_pagina("en" if it else "it", slug)}" hreflang="{"en" if it else "it"}">{"EN" if it else "IT"}</a>')
     # grafica nuova (21/11/2026): testata, corpo e piede della scheda «Indice»
     cnt = (testo_l(lang, '{nome} · libero dal {v1}', '{nome} · free from {v1}', nome=nome, v1=data_l(lang, R.anno_libero(D, 'it'))))
-    out = [testa_scheda(lang, esc(titolo), esc(descr), url, alterne(lang, slug) if ha_altra else "", jsonld, altra, cnt)
+    alt_l = (L.hreflang({l: "/" + PERCORSO[l] + f"/{slug}/" for l in lingue_a}, SITO, x_default=False)
+             if len(lingue_a) > 2 else (alterne(lang, slug) if ha_altra else ""))
+    out = [testa_scheda(lang, esc(titolo), esc(descr), url, alt_l, jsonld, altra, cnt)
            .replace("@@MARCHIO_S@@", marchio_html(56).replace('<span class="pdr" style="--w:56px">', "").rsplit("</span>", 1)[0])]
     out.append(scheda_nuova(a, lang, bd))
     out.append(piede_scheda(lang))
@@ -1431,7 +1520,12 @@ def pagina_indice(voci, lang):
     anni_f = [("tutti", T("Tutti gli anni", "All years"))] + [(str(y), T('1° gennaio {y}', '1 January {y}', y=y)) for y in (A,)]   # l'anno dopo compare il 7 gennaio (Marco, 21 e 25/11/2026)
     sel = lambda nid, op: f'<select id="{nid}">' + "".join(f'<option value="{v}">{esc(t)}</option>' for v, t in op) + "</select>"
     lead_n = (T('{v1} autori con una pagina dedicata: biografia, opere e data di pubblico dominio paese per paese.', '{v1} authors with a dedicated page: biography, Italian editions and the public-domain date country by country.', v1=len(voci)))
-    out = [testa_scheda(lang, esc(titolo), esc(descr), url, "", "", f'<a href="{T("/en/author/", "/autore/")}" hreflang="{T("en", "it")}">{T("EN", "IT")}</a>', "", og_tipo="website", css_extra=CSS_INDICE, main_cls="idx")
+    altra = f'<a href="{"/en/author/" if it else "/autore/"}" hreflang="{"en" if it else "it"}">{"EN" if it else "IT"}</a>'
+    alt_i = ""
+    if L.NUOVE:   # 26/11/2026: indice in tutte le lingue
+        case = {l: f"/{PERCORSO[l]}/" for l in ("it", "en") + L.NUOVE}
+        alt_i, altra = L.hreflang(case, SITO, x_default=False), L.selettore(lang, case)
+    out = [testa_scheda(lang, esc(titolo), esc(descr), url, alt_i, "", altra, "", og_tipo="website", css_extra=CSS_INDICE, main_cls="idx")
            .replace("@@MARCHIO_S@@", marchio_html(56).replace('<span class="pdr" style="--w:56px">', "").rsplit("</span>", 1)[0]),
            '<p class="m" style="color:var(--redt)">Public Domain Radar</p>\n',
            f'<h1>{T("Indice <br>degli autori", "Index <br>of authors")}</h1>\n',
@@ -1578,6 +1672,95 @@ def crea_home_inglese():
     (RADICE / "en" / "radar" / "index.html").write_text(s, encoding="utf-8")
 
 
+def _js_oggetto(s, inizio, fine_marker, espr):
+    """Legge un oggetto JavaScript della pagina del radar (TESTI, OP_T, REGOLE) con node, come regole_radar."""
+    i = s.index(inizio)
+    j = s.index(fine_marker, i) + len(fine_marker)
+    js = s[i:j] + f"\nprocess.stdout.write(JSON.stringify({espr}));"
+    import subprocess
+    return json.loads(subprocess.run(["node", "-e", js], capture_output=True, text=True, check=True).stdout)
+
+
+def _traduci_albero(x, lang):
+    """Traduce ogni testo di un oggetto (stringhe, liste, dizionari) dal catalogo della lingua, con l'inglese come chiave."""
+    if isinstance(x, str):
+        return testo_l(lang, "", x) if x else x
+    if isinstance(x, list):
+        return [_traduci_albero(v, lang) for v in x]
+    if isinstance(x, dict):
+        return {k: _traduci_albero(v, lang) for k, v in x.items()}
+    return x
+
+
+def crea_radar_lingua(lang, schede):
+    """<lingua>/radar/index.html (26/11/2026): lo stesso radar, con i testi della lingua dal catalogo testi/<lingua>.json.
+    Le parti del programma scritte in italiano e inglese restano quelle: qui si aggiungono TESTI[lingua], OP_T[lingua], le
+    regole di legge nella lingua, TRAD_LINGUA (frasi brevi del programma) e LINK_LINGUA (indirizzi delle pagine nella lingua).
+    Scrive anche data/radar_<lingua>.json: descrizioni brevi degli autori e titoli delle opere nella lingua, indirizzi delle schede."""
+    A = ANNO_PROSSIMO
+    s = (RADICE / "radar" / "index.html").read_text(encoding="utf-8")
+    testi = _traduci_albero(_js_oggetto(s, "const TESTI = {", "\n};", "TESTI.en"), lang)
+    opt = _traduci_albero(_js_oggetto(s, "const OP_T = {", "\n};", "OP_T.en"), lang)
+    regole = _js_oggetto(s, "const REGOLE = [", "];", "REGOLE")
+    trad = {}
+    for r in regole:
+        trad[r["paese"]["en"]] = testo_l(lang, r["paese"]["it"], r["paese"]["en"])
+        for v in r["voci"]:
+            trad[v["t"]["en"]] = testo_l(lang, v["t"]["it"], v["t"]["en"])
+    # frasi brevi scritte nel programma come L2("italiano", "inglese") e i generi (GENERI)
+    for it_, en_ in re.findall(r'L2\("((?:[^"\\]|\\.)*)", "((?:[^"\\]|\\.)*)"\)', s):
+        trad[en_] = testo_l(lang, it_, en_)
+    gi = s.index("const GENERI = [")
+    for it_, en_ in re.findall(r'\], "([^"]+)", "([^"]+)"\]', s[gi:s.index("];", gi)]):
+        trad[en_] = testo_l(lang, it_, en_)
+    for x in NOTE_USA.values():   # note delle opere (registro), come nelle schede
+        if x.get("en"):
+            trad[x["en"]] = testo_l(lang, x.get("it") or "", x["en"])
+    c = L.CARTELLA[lang]
+    link = {"/": f"/{c['home']}/", "/en/": f"/{c['home']}/", "/en/public-domain/": f"/{c['paesi']}/"}
+    for sez, u in L.EN.items():
+        if sez in L.PRONTE:
+            link[u] = f"/{c[sez]}/"
+    testa = (f'<script>window.LINGUA_FISSA = {json.dumps(lang)}; window.TRAD_LINGUA = {json.dumps(trad, ensure_ascii=False)}; '
+             f'window.LINK_LINGUA = {json.dumps(link)};</script>\n')
+    i = s.index("\n};", s.index("const TESTI = {")) + 3
+    s = s[:i] + f"\nTESTI[{json.dumps(lang)}] = {json.dumps(testi, ensure_ascii=False)};" + s[i:]
+    i = s.index("\n};", s.index("const OP_T = {")) + 3
+    s = s[:i] + f"\nOP_T[{json.dumps(lang)}] = {json.dumps(opt, ensure_ascii=False)};" + s[i:]
+    tit = testi["titolo"]
+    descr = testi["descrizione"]
+    s = s.replace('<html lang="it">', f'<html lang="{lang}">', 1)
+    s = sostituisci(s, r"<title>.*?</title>", f"<title>{esc(tit)}</title>")
+    s = sostituisci(s, r'<meta name="description" content="[^"]*">', f'<meta name="description" content="{esc(descr)}">')
+    s = sostituisci(s, r'<link rel="canonical" href="https://publicdomainradar.com/radar/">', f'<link rel="canonical" href="{SITO}/{c["radar"]}/">')
+    def trad_statico(m):
+        v = testi.get(m.group(2))
+        return m.group(0) if not isinstance(v, str) or "{" in v else m.group(1) + esc(v)
+    s = re.sub(r'(<[^>]*\bdata-t="(\w+)"[^>]*>)([^<]*)(?=<)', trad_statico, s)
+    s = re.sub(r"<!--statico-->.*?<!--/statico-->", "", s, flags=re.S)
+    s = re.sub(r'<a id="invito-en"[^>]*>.*?</a>\n?', "", s, count=1)   # l'invito «Read this site in English» non serve nelle altre lingue
+    s = s.replace("</head>", testa + "</head>", 1)
+    # il radar da solo rimanda all'indice dei paesi: quello della lingua
+    s = s.replace('b=en?"/en/public-domain/":"/pubblico-dominio/"', f'b="/{c["paesi"]}/"', 1)
+    d = RADICE / c["radar"]
+    d.mkdir(parents=True, exist_ok=True)
+    (d / "index.html").write_text(s, encoding="utf-8")
+    # dati della lingua per il radar
+    et = (_leggi(RADICE / "data" / "lingue_etichette.json", {}) or {}).get("voci", {})
+    descr_a, titoli = {}, {}
+    for f in file_autori():
+        for a in (_leggi(f, {}) or {}).get("autori", []):
+            q = a.get("wikidata")
+            v = ((et.get(q) or {}).get(lang) or [None, None])[1] or ((LINGUE_EXTRA.get(q) or {}).get("descrizioni") or {}).get(lang)
+            if v:
+                descr_a[q] = v
+    for q, e in LINGUE_EXTRA.items():
+        t = {it_: v[lang] for it_, v in (e.get("opere") or {}).items() if v.get(lang)}
+        if t:
+            titoli[q] = t
+    (RADICE / "data" / f"radar_{lang}.json").write_text(json.dumps({"descr": descr_a, "titoli": titoli, "schede": schede}, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+
+
 def leggi_lista(f):
     """Una lista per anno come la mostrano le pagine: senza gli autori senza nome (regole.lista_pubblica, 23/11/2026)."""
     return R.lista_pubblica(json.load(open(f, encoding="utf-8")))
@@ -1671,7 +1854,12 @@ def _cop(href, titolo, sotto):
 
 
 def url_landing(lang, anno):
+    if lang in L.CARTELLA:
+        return f"{SITO}/{L.CARTELLA[lang]['anno'].format(anno=anno)}/"
     return f"{SITO}/en/public-domain-{anno}/" if lang == "en" else f"{SITO}/pubblico-dominio-{anno}/"
+
+
+LINGUE_EXTRA = {}   # data/lingue_extra.json («autori»), letto in main()
 
 
 CSS_PDD = """
@@ -1879,6 +2067,8 @@ def _data_lunga(iso, lang):
     if not m:
         return str(anno_di(iso) or "")
     y, mm, d = int(m.group(1)), int(m.group(2)), int(m.group(3))
+    if lang in L.MESI:
+        return L.data(lang, d, mm, y)
     return f"{d} {MESI[mm - 1]} {y}" if lang == "it" else f"{d} {MESI_EN[mm - 1]} {y}"
 
 
@@ -1924,15 +2114,23 @@ def _cop_pdd(href, titolo, sotto, badge):
             f'<span class="a">{esc(sotto)}</span></a>{badge}</li>\n')
 
 
+def descr_l(a, lang):
+    """La descrizione breve dell'autore nella lingua della pagina (per le lingue in più da data/lingue_extra.json)."""
+    if lang in L.NUOVE:
+        return ((LINGUE_EXTRA.get(a.get("wikidata")) or {}).get("descrizioni") or {}).get(lang) or ""
+    return a.get("descrizione")
+
+
 def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, verificati=None):
     """Pagina del Public Domain Day di <anno> (mockup approvato il 19/11/2026). Solo dati dei file, con le fonti."""
     oggi = datetime.date.today()
     url = url_landing(lang, anno)
     it = lang == "it"
     T = traduttore(lang)
+    E = lambda en, **k: T(en, en, **k)   # testi scritti solo in inglese (pagine non italiane): per le lingue in più dal catalogo
     app = "/radar/" if it else "/en/radar/"
     pp = "/pubblico-dominio/" if it else "/en/public-domain/"   # 25/11/2026: i «tutti» portano alle pagine dei paesi
-    pp_it, pp_es, pp_us = pp + (T('italia/', 'italy/')), pp + (T('spagna/', 'spain/')), pp + (T('stati-uniti/', 'united-states/'))
+    pp_it, pp_es, pp_us = (pp + "italia/", pp + "spagna/", pp + "stati-uniti/") if it else (pp + "italy/", pp + "spain/", pp + "united-states/")
     pub = opere_us["anno_pubblicazione"] if opere_us else R.pubblicate_libere_usa_nel(anno)
     morti = R.morti_liberi_nel(anno, "it")
     morti_es = R.morti_liberi_nel(anno, "es")
@@ -1971,12 +2169,12 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
             descr = (f"Dal 1° gennaio {anno} in Italia, Francia, Germania e Regno Unito diventano liberi {_au[0]}, {_au[1]}, {_au[2]} e altri scrittori; "
                      f"negli USA {_op[0][0]} ({_op[0][1]}), {_op[1][0]} ({_op[1][1]}) e altri libri del {pub}. Dati aperti, con le fonti.")
     else:
-        titolo = f"Public Domain Day {anno}: books and authors that become free on 1 January · Public Domain Radar"
-        descr = f"The writers and books entering the public domain on 1 January {anno}, country by country, from open data with sources."
+        titolo = E("Public Domain Day {anno}: books and authors that become free on 1 January · Public Domain Radar", anno=anno)
+        descr = E("The writers and books entering the public domain on 1 January {anno}, country by country, from open data with sources.", anno=anno)
         if len(_au) >= 3 and len(_op) >= 2:
-            titolo = f"Public Domain Day {anno}: {_op[0][0]}, {_op[1][0]}, {_au[0]}, {_au[1]} and more"
-            descr = (f"Free on 1 January {anno}: {_op[0][0]} ({_op[0][1]}), {_op[1][0]} ({_op[1][1]}) and more US books from {pub}; "
-                     f"{_au[0]}, {_au[1]}, {_au[2]} and more writers in Italy, France, Germany and the UK. Open data, with sources.")
+            titolo = E("Public Domain Day {anno}: {o0}, {o1}, {a0}, {a1} and more", anno=anno, o0=_op[0][0], o1=_op[1][0], a0=_au[0], a1=_au[1])
+            descr = E("Free on 1 January {anno}: {o0} ({c0}), {o1} ({c1}) and more US books from {pub}; {a0}, {a1}, {a2} and more writers in Italy, France, Germany and the UK. Open data, with sources.",
+                      anno=anno, o0=_op[0][0], c0=_op[0][1], o1=_op[1][0], c1=_op[1][1], pub=pub, a0=_au[0], a1=_au[1], a2=_au[2])
 
     # esempio per «dipende da dove pubblichi» e per le domande
     duke = _esempio_duke(anno, pacchetto_ue)
@@ -2005,21 +2203,21 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
         faq.append(("È consulenza legale?",
                     "No. Sono informazioni generali costruite da dati aperti e possono contenere errori. Prima di pubblicare controlla la legge e i fatti per il tuo paese e la tua edizione."))
     else:
-        faq.append(("What is Public Domain Day?",
-                    "It is 1 January of every year, the day copyright expires for works that have reached the legal limit: in the European Union and the UK "
-                    "70 years after the author's death (Directive 2006/116/EC, Art. 1), in the USA 95 years after publication (17 U.S.C. § 304)."))
-        faq.append((f"What enters the public domain in {anno}?",
-                    f"In Italy, France, Germany and the UK, the works of writers who died in {morti}. In Spain, those of writers who died in {morti_es}. "
-                    f"In the USA, books published in {pub}."))
+        faq.append((E("What is Public Domain Day?"),
+                    E("It is 1 January of every year, the day copyright expires for works that have reached the legal limit: in the European Union and the UK "
+                      "70 years after the author's death (Directive 2006/116/EC, Art. 1), in the USA 95 years after publication (17 U.S.C. § 304).")))
+        faq.append((E("What enters the public domain in {anno}?", anno=anno),
+                    E("In Italy, France, Germany and the UK, the works of writers who died in {morti}. In Spain, those of writers who died in {morti_es}. "
+                      "In the USA, books published in {pub}.", morti=morti, morti_es=morti_es, pub=pub)))
         if n_es and R.anni_protezione(morti_es, "es") != R.ANNI_DOPO_MORTE:
-            faq.append((f"Why do authors who died in {morti_es} enter in Spain?",
-                        "For authors who died before 7 December 1987, Spanish law still applies the 80 years of the 1879 law "
-                        "(Ley de Propiedad Intelectual, fourth transitional provision)."))
-        faq.append((f"Is every book published in {pub} really free in the USA?",
-                    "Not always. Works first published in the USA whose copyright was not renewed after 28 years were already free earlier. Foreign works that regained "
-                    "protection in 1996 (17 U.S.C. § 104A) last 95 years from publication. We call a book free only when a second source confirms the year it came out."))
-        faq.append(("Is this legal advice?",
-                    "No. It is general information built from open data, and it may contain errors. Before publishing, check the law and the facts for your country and your edition."))
+            faq.append((E("Why do authors who died in {morti_es} enter in Spain?", morti_es=morti_es),
+                        E("For authors who died before 7 December 1987, Spanish law still applies the 80 years of the 1879 law "
+                          "(Ley de Propiedad Intelectual, fourth transitional provision).")))
+        faq.append((E("Is every book published in {pub} really free in the USA?", pub=pub),
+                    E("Not always. Works first published in the USA whose copyright was not renewed after 28 years were already free earlier. Foreign works that regained "
+                      "protection in 1996 (17 U.S.C. § 104A) last 95 years from publication. We call a book free only when a second source confirms the year it came out.")))
+        faq.append((E("Is this legal advice?"),
+                    E("No. It is general information built from open data, and it may contain errors. Before publishing, check the law and the facts for your country and your edition.")))
 
     jl = {"@context": "https://schema.org", "@graph": [
         {"@type": "WebPage", "@id": url, "url": url, "name": titolo, "description": descr, "inLanguage": lang,
@@ -2029,7 +2227,12 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
     jsonld = '<script type="application/ld+json">' + json.dumps(jl, ensure_ascii=False).replace("</", "<\\/") + "</script>"
     alt = (f'<link rel="alternate" hreflang="it" href="{url_landing("it", anno)}">\n'
            f'<link rel="alternate" hreflang="en" href="{url_landing("en", anno)}">\n')
-    altra = (T('<a href="/en/public-domain-{anno}/" hreflang="en">EN</a>', '<a href="/pubblico-dominio-{anno}/" hreflang="it">IT</a>', anno=anno))
+    altra = ('<a href="/en/public-domain-{anno}/" hreflang="en">EN</a>' if it else '<a href="/pubblico-dominio-{anno}/" hreflang="it">IT</a>').format(anno=anno)
+    ling_anno = ["it", "en"] + list(L.NUOVE)   # 26/11/2026: tutte le lingue
+    if len(ling_anno) > 2:
+        case = {l: url_landing(l, anno).replace(SITO, "") for l in ling_anno}
+        alt = L.hreflang(case, SITO, x_default=False)
+        altra = L.selettore(lang, case)
     gg_ = max(0, (datetime.date.fromisoformat(libero) - oggi).days)
     n_ = lambda x: migliaia(x, lang)
     data_l_ = T('1° gennaio {anno}', '1 January {anno}', anno=anno)
@@ -2080,8 +2283,8 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
                 ruolo = (a.get("professioni") or [""])[0]
                 sotto = f"{anno_di(a.get('nascita')) or '?'} – {_data_lunga(a['morte'], 'it')}"
             else:
-                ruolo = re.sub(r"\s*\([^)]*\)\s*$", "", pulisci(a.get("descrizione")))
-                sotto = f"died {_data_lunga(a['morte'], 'en')}"
+                ruolo = re.sub(r"\s*\([^)]*\)\s*$", "", pulisci(descr_l(a, lang)))
+                sotto = E("died {d}", d=_data_lunga(a['morte'], lang))
             mt = (esc(ruolo) + "<br>" if ruolo else "") + esc(sotto)
             out.append(f'<li class="row"{df} data-i="{esc(iniziali_nome(nome))}"><span class="no">{k + 1:02d}</span><span class="nm"><a href="{href}">{esc(nome)}</a></span><span class="mt">{mt}</span></li>\n')
         out.append(f'</ol>\n<a href="#autori" class="more">{T('Tutti i {v1} scrittori con una scheda →', 'All {v1} writers with a page →', v1=len(aut))}</a>'
@@ -2150,8 +2353,8 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
                       f"{app}#/us/{anno}", T('{n_us} libri →', '{n_us} books →', n_us=n_us), "us"))
     # ogni riga porta alla pagina del paese (ristrutturazione del 25/11/2026; indirizzi in scripts/pagine_paese.py)
     pp = ["italia", "francia", "germania", "regno-unito"] if it else ["italy", "france", "germany", "united-kingdom"]
-    if n_es: pp.append(T('spagna', 'spain'))
-    if n_us: pp.append(T('stati-uniti', 'united-states'))
+    if n_es: pp.append("spagna" if it else "spain")
+    if n_us: pp.append("stati-uniti" if it else "united-states")
     base = "/pubblico-dominio/" if it else "/en/public-domain/"
     righe = [(p_, c, r, base + pp[i] + "/", l, cl) for i, (p_, c, r, h, l, cl) in enumerate(righe)]
     out.append(f'<section class="sec">\n<div class="sh m"><h2>{T("Chi entra, dove", "Who enters, where")}</h2>'
@@ -2186,7 +2389,7 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
 
     # 7. tutti gli scrittori con una scheda (collegamenti interni verso ogni scheda)
     if aut:
-        pag = T('pagina', 'pagina_en')
+        pag = "pagina" if it else "pagina_en"
         gruppi = {}
         for a in sorted(aut, key=lambda a: (_cognome(a["nome"]), slug_base(a["nome"]))):
             k = _cognome(a["nome"])[:1].upper()
@@ -2199,7 +2402,7 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
             out.append(f'<div class="L" id="al-{k}"><b>{k}</b>')
             for a in lista:
                 href = f"/autore/{a[pag]}/" if it else f"/en/author/{a[pag]}/"
-                m = (a.get("professioni") or [""])[0] if it else re.sub(r"\s*\([^)]*\)\s*$", "", pulisci(a.get("descrizione")))
+                m = (a.get("professioni") or [""])[0] if it else re.sub(r"\s*\([^)]*\)\s*$", "", pulisci(descr_l(a, lang)))
                 mm = " · " + esc(m) if m else ""
                 out.append(f'<a href="{href}">{esc(pulisci(a["nome"]))}<span>{anno_di(a.get("nascita")) or "?"} – {anno_di(a["morte"])}{mm}</span></a>')
             out.append("</div>")
@@ -2241,7 +2444,7 @@ if($("pd-us"))$("pd-us").innerHTML=$("pd-us").innerHTML.replace(F.us[0],F.us[1])
 const c=$("cnt"); if(c){c.textContent=festa?F.cnt_festa:F.cnt_dopo; if(festa)c.style.color="var(--redt)";}
 })();</script>
 """)
-    out.append(JS_ANNO.replace("@@LOC@@", T('it-IT', 'en-GB')))
+    out.append(JS_ANNO.replace("@@LOC@@", L.LOCALE[lang] if lang in L.NUOVE else T('it-IT', 'en-GB')))
     out.append(piede_scheda(lang, fonti))
     return "".join(out), url
 
@@ -2290,6 +2493,14 @@ def crea_landing():
             d.mkdir(parents=True, exist_ok=True)
             (d / "index.html").write_text(html_, encoding="utf-8")
             urls.append(url)
+        if True:   # 26/11/2026: pagina dell'anno nelle lingue in più (ogni anno, come italiano e inglese)
+            for l in L.NUOVE:
+                html_, url = pagina_landing(anno, ue, us, l, es, ver.get(str(anno)))
+                d = RADICE / L.CARTELLA[l]["anno"].format(anno=anno)
+                d.mkdir(parents=True, exist_ok=True)
+                slugs = {SLUG[q] for q, ls in LINGUE_AUT.items() if l in ls and q in SLUG}
+                (d / "index.html").write_text(L.localizza_link(html_, l, slugs, [anno]), encoding="utf-8")
+                urls.append(url)
     return urls
 
 
@@ -2323,6 +2534,16 @@ def main():
         for a_ in gruppo:
             slug_di[a_["wikidata"]] = s_ if len(gruppo) == 1 else f"{s_}-{a_['wikidata'].lower()}"
     en_ok = {q for q, a in autori.items() if abbastanza_contenuto(a, "en")}
+    # 26/11/2026: lingue in più (scripts/lingue.py). Biografie, descrizioni e titoli da data/lingue_extra.json
+    # (scripts/bio_lingue.py); la scheda in una lingua nasce solo se c'è la biografia in quella lingua, come per l'inglese.
+    extra = (_leggi(RADICE / "data" / "lingue_extra.json", {}) or {}).get("autori", {})
+    LINGUE_EXTRA.update(extra)
+    for q, a in autori.items():
+        for l, b in ((extra.get(q) or {}).get("bios") or {}).items():
+            a.setdefault("bios", {}).setdefault(l, b)
+    ok_l = {l: {q for q, a in autori.items() if q in extra and abbastanza_contenuto(a, l)} for l in L.NUOVE}
+    for q in autori:
+        LINGUE_AUT[q] = {"it"} | ({"en"} if q in en_ok else set()) | {l for l in L.NUOVE if q in ok_l[l]}
     for f in file_autori():
         calcola_ranghi(leggi_lista(f))
 
@@ -2359,7 +2580,7 @@ def main():
         vecchio = slug_vecchio(a["nome"])
         if vecchio and vecchio != slug_di[q] and any(vecchio in esistenti[l] for l in esistenti):
             rimandi[vecchio] = slug_di[q]
-    for l in ("it", "en"):
+    for l in ("it", "en") + L.NUOVE:
         cartella = RADICE / PERCORSO[l]
         if cartella.exists():
             shutil.rmtree(cartella)
@@ -2376,6 +2597,26 @@ def main():
             (d / "index.html").write_text(pagina_autore(a, slug, l, ha_altra=(q in en_ok)), encoding="utf-8")
             voci[l].append((pulisci(a["nome"]), slug, f"{anno_di(a.get('nascita')) or '?'} – {anno_di(a['morte'])}"))
             urls.append(url_pagina(l, slug))
+    # 26/11/2026: schede nelle lingue in più, costruite come quelle inglesi ma con biografia, descrizioni e titoli della lingua
+    for l in L.NUOVE:
+        copie = {q: copia_lingua(a, l, extra.get(q) or {}) for q, a in AUT.items()}
+        originali = dict(AUT)
+        AUT.clear(); AUT.update(copie)   # gli «altri scrittori» mostrano le descrizioni della lingua
+        try:
+            slugs = {slug_di[q] for q in ok_l[l]}
+            for q in ok_l[l]:
+                slug = slug_di[q]
+                d = RADICE / PERCORSO[l] / slug
+                d.mkdir()
+                h = pagina_autore(copie[q], slug, l, ha_altra=(q in en_ok))
+                (d / "index.html").write_text(L.localizza_link(h, l, slugs, [ANNO_PROSSIMO]), encoding="utf-8")
+                urls.append(url_pagina(l, slug))
+        finally:
+            AUT.clear(); AUT.update(originali)
+        print(f"Schede {l}: {len(ok_l[l])}")
+        vl = sorted(((pulisci(AUT[q]["nome"]), slug_di[q], f"{anno_di(AUT[q].get('nascita')) or '?'} – {anno_di(AUT[q]['morte'])}") for q in ok_l[l]),
+                    key=lambda v: (slug_base(v[0]), v[1]))
+        (RADICE / PERCORSO[l] / "index.html").write_text(L.localizza_link(pagina_indice(vl, l), l, {slug_di[q] for q in ok_l[l]}, [ANNO_PROSSIMO]), encoding="utf-8")
     for vecchio, nuovo in rimandi.items():
         for l in ("it", "en"):
             if (RADICE / PERCORSO[l] / nuovo).exists() and not (RADICE / PERCORSO[l] / vecchio).exists():
@@ -2414,6 +2655,8 @@ def main():
 
     aggiorna_home_italiana()
     crea_home_inglese()
+    for l in L.NUOVE:   # 26/11/2026: il radar nelle lingue in più (prima delle pagine paese, che lo usano)
+        crea_radar_lingua(l, {q: f"/{L.CARTELLA[l]['autore']}/{SLUG[q]}/" for q, ls in LINGUE_AUT.items() if l in ls and q in SLUG})
     landing_urls = crea_landing()
     import pagine_paese   # pagine paese e indice «Per paese» (25/11/2026): scripts/pagine_paese.py
     landing_urls += pagine_paese.crea_pagine_paese()
@@ -2438,13 +2681,16 @@ def main():
         nuove_date[u] = [imp, d, VERSIONE_IMPRONTA]
         return d
     righe = [f"  <url><loc>{u}</loc><lastmod>{data_di(u)}</lastmod><changefreq>monthly</changefreq></url>"
-             for u in (f"{SITO}/", f"{SITO}/en/", url_pagina('it'), url_pagina('en'))]   # il radar non va più nella mappa (25/11/2026)
+             for u in (f"{SITO}/", f"{SITO}/en/", url_pagina('it'), url_pagina('en'))]
+    righe += [f"  <url><loc>{SITO}/{L.CARTELLA[l]['home']}/</loc><lastmod>{data_di(f'{SITO}/' + L.CARTELLA[l]['home'] + '/')}</lastmod><changefreq>monthly</changefreq></url>" for l in L.NUOVE]   # il radar non va più nella mappa (25/11/2026)
     if (RADICE / "gia-pubblici" / "index.html").exists():   # pagina «Già pubblici» (storico/pagina.py)
         landing_urls += [f"{SITO}/gia-pubblici/", f"{SITO}/en/already-public/"]
     righe += [f"  <url><loc>{u}</loc><lastmod>{data_di(u)}</lastmod><changefreq>weekly</changefreq></url>" for u in landing_urls]
     righe += [f"  <url><loc>{u}</loc><lastmod>{data_di(u)}</lastmod></url>" for u in sorted(urls)]
     DATE_SITEMAP.write_text(json.dumps(nuove_date, ensure_ascii=False, indent=0, sort_keys=True), encoding="utf-8")
     (RADICE / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "\n".join(righe) + "\n</urlset>\n", encoding="utf-8")
+    L.salva_mancanti()
+    L.salva_coppie()   # testi senza traduzione: testi/mancanti-<lingua>.json
     print(f"Pagine create: {len(voci['it'])} in italiano, {len(voci['en'])} in inglese (su {len(autori)} autori con biografia e opere)")
 
 

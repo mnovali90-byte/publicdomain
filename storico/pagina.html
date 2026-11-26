@@ -15,7 +15,12 @@
 <script>
 (() => {
 "use strict";
-const LING = document.documentElement.lang === "en" ? "en" : "it";
+const LING = ["en", "de", "fr", "es"].includes(document.documentElement.lang) ? document.documentElement.lang : "it";
+/* 26/11/2026: lingue in più. Le pagine di quelle lingue (storico/pagina.py) aggiungono T[lingua] tradotto, TRAD_LINGUA
+   (frasi brevi: inglese → lingua), LINK_LINGUA (indirizzi) e TITOLI_LINGUA (titoli delle opere nella lingua). Italiano e inglese non cambiano. */
+const LOCALI = { it: "it-IT", en: "en-GB", de: "de-DE", fr: "fr-FR", es: "es-ES" };
+const L2 = (it, en) => LING === "it" ? it : LING === "en" ? en : ((window.TRAD_LINGUA || {})[en] || en);
+const U2 = (it, en) => LING === "it" ? it : LING === "en" ? en : ((window.LINK_LINGUA || {})[en] || en);
 const SIMBOLI = __SIMBOLI__;
 const T = {
 it: {
@@ -176,9 +181,10 @@ en: {
 }};
 const MESI_IT = ["gennaio","febbraio","marzo","aprile","maggio","giugno","luglio","agosto","settembre","ottobre","novembre","dicembre"];
 const MESI_EN = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-const L = T[LING];
+const L = T[LING] || T.en;
 const GENERI = { it: { giallo: "Giallo e mistero", horror: "Horror e fantastico", fantasy_sf: "Fantasy e fantascienza", storico: "Romanzo storico", ragazzi: "Per ragazzi", poesia: "Poesia", saggio: "Saggi", memorie: "Memorie e biografie", satira: "Satira", avventura: "Avventura", sentimentale: "Romanzo sentimentale", guerra: "Guerra" },
-  en: { giallo: "Crime & mystery", horror: "Horror & weird fiction", fantasy_sf: "Fantasy & science fiction", storico: "Historical fiction", ragazzi: "Children's", poesia: "Poetry", saggio: "Essays", memorie: "Memoir & biography", satira: "Satire", avventura: "Adventure", sentimentale: "Romance", guerra: "War" } }[LING];
+  en: { giallo: "Crime & mystery", horror: "Horror & weird fiction", fantasy_sf: "Fantasy & science fiction", storico: "Historical fiction", ragazzi: "Children's", poesia: "Poetry", saggio: "Essays", memorie: "Memoir & biography", satira: "Satire", avventura: "Adventure", sentimentale: "Romance", guerra: "War" } }[LING === "it" ? "it" : "en"];
+if (!["it", "en"].includes(LING)) for (const k in GENERI) GENERI[k] = L2(GENERI[k], GENERI[k]);   // lingue in più: dal catalogo
 const SIMBOLO_GENERE = { giallo: "giallo", fantasy_sf: "fantascienza", storico: "storico", horror: "horror", ragazzi: "ragazzi", memorie: "memorie", saggio: "saggistica", poesia: "poesia", avventura: "avventura", satira: "satira", sentimentale: "sentimentale", guerra: "guerra" };
 const SIMBOLI_NEUTRI = ["libro", "calamaio", "lampada"];
 const COLORI_TRAMA = [["#FF4326", "#0C0C10"], ["#E9E6DD", "#FF4326"], ["#0E3B2E", "#FF4326"], ["#1C1C24", "#FF4326"]];
@@ -202,7 +208,7 @@ function h(tag, attrs, ...figli) {
   return e;
 }
 const $ = (s) => document.querySelector(s);
-const num = (x) => Number(x).toLocaleString(LING === "it" ? "it-IT" : "en-GB");
+const num = (x) => Number(x).toLocaleString(LOCALI[LING]);
 const tr = (k, p) => String(L[k]).replace(/\{(\w+)\}/g, (_, x) => (p && p[x] !== undefined ? p[x] : ""));
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 function hashNumero(s) { let x = 0; for (const c of s) x = (x * 31 + c.charCodeAt(0)) >>> 0; return x; }
@@ -267,14 +273,15 @@ function trama(generi, seme, c) {
   }
   return h("span", { class: "trama", "aria-hidden": "true", style: `background-image:${_trame.get(id)}` });
 }
-const titolo = (o) => (LING === "it" && o.ti) || o.t || o.ti;
+const titolo = (o) => (LING === "it" && o.ti) || (!["it", "en"].includes(LING) && (window.TITOLI_LINGUA || {})[o.q]) || o.t || o.ti;
 // autore anonimo: su Wikidata è un «valore sconosciuto», che arriva come indirizzo tecnico (20/11/2026)
-const nomeA = (n) => (!n || /^https?:\/\//.test(n)) ? (LING === "it" ? "Anonimo" : "Anonymous") : n;
+const nomeA = (n) => (!n || /^https?:\/\//.test(n)) ? L2("Anonimo", "Anonymous") : n;
 // nomi italiani degli autori (storico/nomi_it.py, 21/11/2026): sulla pagina italiana «Lev Tolstoj», non «Leo Tolstoy»
 let NOMI_IT = {};
+let ET_LINGUA = {};   // nomi di paesi e lingue nella lingua della pagina (data/etichette_<lingua>.json)
 const nomeQ = (q, n) => (LING === "it" && NOMI_IT[q]) || nomeA(n);
 const autoriTxt = (o) => o.au.slice(0, 2).map((a) => a.n).join(", ");
-const annoTxt = (y) => (y === null ? "" : y < 0 ? (LING === "it" ? `${-y} a.C.` : `${-y} BC`) : String(y));
+const annoTxt = (y) => (y === null ? "" : y < 0 ? (LING === "it" ? `${-y} a.C.` : L2("", "{y} BC").replace("{y}", -y)) : String(y));
 /* colore della copertina: parte dal colore «suo» (dal titolo) ma in fila non ripete il colore di quella prima e non mette
    più di due copertine chiare (beige, bianca) o scure (rossa, nera) di seguito (Marco, 21/11/2026) */
 const CHIARI = new Set([1, 3]);
@@ -318,7 +325,7 @@ addEventListener("keydown", (e) => { if (e.key === "Escape" && !$("#finestra").h
 function testoStato(o, c) {
   const st = stato(o, c);
   if (st.s === "ver" && st.note.includes("sConfine")) return L.sConfine;
-  if (st.s === "ver" && st.note.includes("sCoaut")) return tr("sCoaut", { n: o.au.filter((a) => a.sc).map((a) => /^https?:|^[0-9a-f]{32}$/.test(a.q) || a.n === (LING === "it" ? "Anonimo" : "Anonymous") ? L.sconosciuto : a.n).join(", ") });
+  if (st.s === "ver" && st.note.includes("sCoaut")) return tr("sCoaut", { n: o.au.filter((a) => a.sc).map((a) => /^https?:|^[0-9a-f]{32}$/.test(a.q) || a.n === L2("Anonimo", "Anonymous") ? L.sconosciuto : a.n).join(", ") });
   if (st.s === "ver" && st.note.includes("sMpf")) return L.sMpf;
   if (st.s === "ver") return c === "uk" ? L.sUkPostumo : c === "us" ? (st.note.includes("sUsNo") ? tr("sUsNo", { y: st.y2 }) : L.sUsNd) : L.sAlleato;
   if (st.s === "nd") return L.sNd;
@@ -346,7 +353,7 @@ function apriOpera(o) {
 function posterOpera(o) {   // 25/11/2026: le opere di cui abbiamo un poster (data/poster.json, lo stesso elenco dello Shop)
   const p = D.poster && D.poster.get(o.q);
   if (!p) return null;
-  const url = `https://publicdomainradar.etsy.com/${LING === "it" ? "it/" : ""}listing/${p.etsy}`;
+  const url = `https://publicdomainradar.etsy.com/${LING === "it" ? "it/" : ["de", "fr", "es"].includes(LING) ? LING + "/" : ""}listing/${p.etsy}`;
   return h("p", { class: "poster-op" }, h("a", { class: "link-forte", href: url, rel: "noopener", target: "_blank" }, L.posterLink + " ↗"),
     h("span", {}, "«" + p.frase + "»" + (p.serie ? " · " + tr("posterSerie", { s: p.serie }) : "")));
 }
@@ -367,7 +374,7 @@ function noteOpera(o) {   // gruppi, coautori aggiunti a mano, musica e libretto
     else if (REGOLE_PAESI.annoLibero(m, "de") > Y) r.push(tr("sMusica", { r: ra, n, y: REGOLE_PAESI.annoLibero(m, "de") }));
   }
   const dec = (D.decise || {})[o.q];   // 23/11/2026: anno e nota dal registro delle opere (scripts/registro.py, opere_decise)
-  if (dec && dec.nota && dec.nota[LING]) r.push(dec.nota[LING]);
+  if (dec && dec.nota && (dec.nota[LING] || dec.nota.en)) r.push(LING === "it" || LING === "en" ? dec.nota[LING] : L2(dec.nota.it, dec.nota.en));
   if (dec && dec.tipo === "entro" && o.y === null) r.push(tr("entro", { y: dec.anno }));
   return r.length ? h("div", { style: "margin-top:12px;font-size:14px;color:#5C5C66" }, r.map((x) => h("p", { style: "margin:6px 0 0" }, x))) : null;
 }
@@ -460,7 +467,7 @@ function schedaAutore(a, n, subito) {
 function linkRadar(qid) {
   const p = D.prossimi.find((x) => x.w === qid);
   if (!p) return null;
-  return h("div", {}, h("a", { class: "link-forte", href: LING === "en" ? (p.pe ? `/en/author/${p.pe}/` : "/en/") : `/autore/${p.p}/` }, L.apriRadar + " →"));
+  return h("div", {}, h("a", { class: "link-forte", href: LING !== "it" ? (p.pe ? U2("", `/en/author/${p.pe}/`) : U2("/", "/en/")) : `/autore/${p.p}/` }, L.apriRadar + " →"));
 }
 function prossimo(q) {
   const tok = parole(q); if (!tok.length) return null;
@@ -500,7 +507,7 @@ async function cerca(q) {
       const ue = REGOLE_PAESI.annoLibero(p.m, "it"), gia = ue <= D.anno;   // nella settimana della festa: appena liberato
       parti.push(h("div", { class: "box-no" }, h("span", { class: "k" }, gia ? L.appenaK : L.prossimoK),
         tr(gia ? "appena" : "prossimo", { nome: p.n, m: p.m, ue, es }),
-        h("div", {}, h("a", { class: "bottone", href: LING === "en" ? (p.pe ? `/en/author/${p.pe}/` : `/en/`) : `/autore/${p.p}/` }, L.apriRadar))));
+        h("div", {}, h("a", { class: "bottone", href: LING !== "it" ? (p.pe ? U2("", `/en/author/${p.pe}/`) : U2("/", "/en/")) : `/autore/${p.p}/` }, L.apriRadar))));
     }
   }
   if (!la.length && !lo.length && !parti.some((x) => x.classList && x.classList.contains("box-no"))) parti.push(h("div", { class: "box-no" }, h("span", { class: "k" }, L.nessuno), L.nessunoSpieg));
@@ -535,7 +542,7 @@ function voceClassifica(x, i, p) {
   const f = D.foto[x.a.q];
   return h("li", {}, h("button", { type: "button", onclick: () => griglia(x.a.n, tr("titoliLiberi", { n: num(x.opere.length) }) + " " + L.inPaese[p], primi(x.opere, 60)) },
     h("span", { class: "p" }, String(i + 1)),
-    h("span", { class: "f" }, h("i", { "aria-hidden": "true" }, iniziali(x.a.n)), f ? h("img", { src: f.u, alt: (LING === "it" ? "Ritratto di " : "Portrait of ") + x.a.n, loading: "lazy", decoding: "async", referrerpolicy: "no-referrer", onerror: "this.remove()" }) : null),
+    h("span", { class: "f" }, h("i", { "aria-hidden": "true" }, iniziali(x.a.n)), f ? h("img", { src: f.u, alt: L2("Ritratto di {n}", "Portrait of {n}").replace("{n}", x.a.n), loading: "lazy", decoding: "async", referrerpolicy: "no-referrer", onerror: "this.remove()" }) : null),
     h("span", { class: "n" }, x.a.n, h("span", {}, tr("titoliLiberi", { n: num(x.opere.length) })))));
 }
 function creditiRitratti(lista) {
@@ -586,7 +593,7 @@ function disegnaScaffali() {
     tutto.onclick = () => griglia(x.t, inP.charAt(0).toUpperCase() + inP.slice(1), x.o);
   };
   tabs.forEach((x, k) => barra.append(h("button", { type: "button", role: "tab", onclick: () => scegli(k) }, x.t)));
-  const frecce = h("div", { class: "arr" }, [-1, 1].map((d) => h("button", { type: "button", "aria-label": d < 0 ? (LING === "it" ? "Indietro" : "Back") : (LING === "it" ? "Avanti" : "Forward"), html: FRECCIA(d),
+  const frecce = h("div", { class: "arr" }, [-1, 1].map((d) => h("button", { type: "button", "aria-label": d < 0 ? L2("Indietro", "Back") : L2("Avanti", "Forward"), html: FRECCIA(d),
     onclick: () => fila.scrollBy({ left: d * fila.clientWidth * .84, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" }) })));
   scegli(_tab);
   const s1 = sezione(L.sfoglia, tr("giaIn", { p: inP }),
@@ -601,7 +608,7 @@ function disegnaScaffali() {
     ol.replaceChildren(...cl.slice(0, aperto ? cl.length : 10).map((x, i) => voceClassifica(x, i, p)));
     e.currentTarget.textContent = aperto ? L.vediMeno : tr("vediTutti", { n: cl.length });
   } }, tr("vediTutti", { n: cl.length })));
-  const s2 = sezione(L.autori, cl.length ? (LING === "it" ? `${cl.length} autori in classifica` : `${cl.length} authors ranked`) : "",
+  const s2 = sezione(L.autori, cl.length ? L2("{n} autori in classifica", "{n} authors ranked").replace("{n}", cl.length) : "",
     h("p", { class: "lede" }, tr("autoriSub", { p: inP, n: cl.length, w: L.wiki[linguaVisite() || "tutte"], s: D.sett })),
     cl.length ? ol : h("p", { class: "vuoto" }, L.vuotoS), piede, creditiRitratti(cl));
   // 3. generi e lingue: indice tipografico
@@ -621,14 +628,14 @@ function disegnaScaffali() {
     const sl = Object.entries(D.scaffaliLingua).map(([k, x]) => [k, x, x.o.map(([q]) => D.indice.get(q)).filter((o) => o && !o.escl && libera(o, p))])
       .filter(([, , lista]) => lista.length >= 3).sort((a, b) => b[1].c - a[1].c);
     ulL = h("ul", { class: "ix" }, sl.map(([k, x, lista], i) => {
-      const nome = (LING === "it" ? x.n[0] : x.n[1]) || k, Nome = nome.charAt(0).toUpperCase() + nome.slice(1);
+      const nome = (LING === "it" ? x.n[0] : LING === "en" ? x.n[1] : (ET_LINGUA[x.n[0]] || x.n[1])) || k, Nome = nome.charAt(0).toUpperCase() + nome.slice(1);
       const n = Math.max(lista.length, x.c || 0);   // x.c = tutte le opere della lingua nell'archivio; la pagina ne tiene le 150 più lette
       return voceIx(Nome, n, () => griglia(Nome, tr("titoli", { n: num(n) }) + " · " + tr("piuLetteLingua", { w: x.w }), lista.slice(0, 60)), PIATTI[i % PIATTI.length][0]);
     }));
   } else {
     const ll = [...perL.entries()].filter(([, v]) => v.length >= 3).sort((a, b) => b[1].length - a[1].length);
     ulL = h("ul", { class: "ix" }, ll.map(([k, lista], i) => {
-      const nome = (D.lingue[k] && D.lingue[k][LING === "it" ? 1 : 0]) || k;
+      const nome = (D.lingue[k] && (LING === "it" ? D.lingue[k][1] : LING === "en" ? D.lingue[k][0] : (ET_LINGUA[D.lingue[k][1].toLowerCase()] || ET_LINGUA[D.lingue[k][1]] || D.lingue[k][0]))) || k;
       return voceIx(nome, lista.length, () => griglia(nome, tr("titoli", { n: num(lista.length) }) + " · " + inP, primi(lista, 60)), PIATTI[i % PIATTI.length][0]);
     }));
   }
@@ -637,7 +644,7 @@ function disegnaScaffali() {
     h("div", {}, h("div", { class: "sh m" }, h("h2", {}, L.lingue), h("span", {}, inP)), h("p", { class: "sub-ix" }, sottoL), ulL)));
   $("#scaffali-corpo").replaceChildren(s1, s2, s3);
 }
-function contatore() { const c = $(".top .cnt"); if (c) c.textContent = (LING === "it" ? "Già pubblici · " : "Already public · ") + L.paesi[D.paese]; }
+function contatore() { const c = $(".top .cnt"); if (c) c.textContent = L2("Già pubblici · ", "Already public · ") + L.paesi[D.paese]; }
 
 /* ---------- testata e avvio ---------- */
 function disegnaPaesi() {
@@ -649,7 +656,7 @@ function disegnaPaesi() {
   } }, L.paesi[c])));
 }
 async function avvia() {
-  try { const c = localStorage.getItem("pdr-storico-paese"); if (c && L.paesi[c]) D.paese = c; else if (LING === "en") D.paese = "us"; } catch (e) { if (LING === "en") D.paese = "us"; }
+  try { const c = localStorage.getItem("pdr-storico-paese"); if (c && L.paesi[c]) D.paese = c; else if (LING === "en") D.paese = "us"; else if (["de", "fr", "es"].includes(LING)) D.paese = LING; } catch (e) { if (LING === "en") D.paese = "us"; }
   disegnaPaesi(); contatore();
   const qw = $("#qw"), qi = $("#q");
   const segna = () => qw.classList.toggle("has", !!qi.value);
@@ -659,6 +666,8 @@ async function avvia() {
   $("#scaffali-corpo").replaceChildren(h("p", { class: "sec" }, L.caricamento));
   let P;
   if (LING === "it") { try { NOMI_IT = await leggi("/data/storico/nomi_it.json"); } catch (e) { NOMI_IT = {}; } }
+  if (!["it", "en"].includes(LING)) { try { ET_LINGUA = await leggi(`/data/etichette_${LING}.json`); } catch (e) { ET_LINGUA = {}; }
+    try { window.TITOLI_LINGUA = await leggi(`/data/storico/titoli_${LING}.json`); } catch (e) { window.TITOLI_LINGUA = {}; } }
   try { P = await leggi("/data/storico/pagina.json"); } catch (e) { $("#scaffali-corpo").replaceChildren(h("p", {}, L.errore)); return; }
   // l'anno di oggi, non quello dei dati: il 1° gennaio gli stati devono cambiare subito, anche se lo Storico gira il 2 (22/11/2026)
   D.anno = Math.max(Number(String(P.aggiornato).slice(0, 4)) || 0, D.anno);

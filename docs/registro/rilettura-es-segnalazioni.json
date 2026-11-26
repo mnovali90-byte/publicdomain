@@ -1,0 +1,240 @@
+[
+ {
+  "id": "816",
+  "attuale": " libre?",
+  "proposta": "?",
+  "motivo": "El programa compone [854] + «libre» + [816]: con « libre?» el titular sale «¿Es ya libre libre?». La pieza debe contener solo el signo de cierre, como en italiano.",
+  "gravita": "grave"
+ },
+ {
+  "id": "854",
+  "attuale": "¿Es ya ",
+  "proposta": "¿Ya es ",
+  "motivo": "Con [816] corregido queda «¿Ya es libre?», igual que el titular completo [855]; ahora uno dice «¿Es ya» y el otro «¿Ya es».",
+  "gravita": "lieve"
+ },
+ {
+  "id": "523",
+  "attuale": "Por idioma original (además del inglés)",
+  "proposta": "Por idioma original (distinto del inglés)",
+  "motivo": "«Además del inglés» significa lo contrario de «other than English» (excluido el inglés). Ojo: el italiano «oltre all'inglese» admite las dos lecturas; comprobar qué hace el filtro.",
+  "gravita": "media"
+ },
+ {
+  "id": "11",
+  "attuale": "{v1} autores con una página propia: biografía, ediciones y fecha de dominio público país por país.",
+  "proposta": "{v1} autores con una página propia: biografía, obras y fecha de dominio público país por país.",
+  "motivo": "«Ediciones» no corresponde ni al italiano (opere) ni al inglés (Italian editions); en la ficha la sección se llama «Obras principales».",
+  "gravita": "media"
+ },
+ {
+  "id": "19",
+  "attuale": "80 años: muerto hasta 1987",
+  "proposta": "80 años: autores muertos hasta 1987",
+  "motivo": "«Muerto hasta 1987» es agramatical en singular sin sujeto; el resto del sitio dice «autores muertos antes de/en».",
+  "gravita": "media"
+ },
+ {
+  "id": "249",
+  "attuale": "No siempre. Las obras publicadas primero en Estados Unidos cuyo copyright no se renovó a los 28 años ya eran libres antes. Las obras extranjeras que volvieron a estar protegidas en 1996 (17 U.S.C. § 104A) duran 95 años desde la publicación.",
+  "proposta": "No siempre. Las obras publicadas primero en Estados Unidos cuyo copyright no se renovó a los 28 años ya eran libres antes. Las obras extranjeras que volvieron a estar protegidas en 1996 (17 U.S.C. § 104A) lo están durante 95 años desde la publicación.",
+  "motivo": "«Las obras duran 95 años» es un calco: lo que dura es la protección.",
+  "gravita": "media"
+ },
+ {
+  "id": "384",
+  "attuale": "No siempre. Las obras publicadas primero en Estados Unidos cuyo copyright no se renovó a los 28 años ya eran libres antes. Las obras extranjeras que volvieron a estar protegidas en 1996 (17 U.S.C. § 104A) duran 95 años desde la publicación. Decimos que un libro es libre solo cuando una segunda fuente confirma el año en que salió.",
+  "proposta": "No siempre. Las obras publicadas primero en Estados Unidos cuyo copyright no se renovó a los 28 años ya eran libres antes. Las obras extranjeras que volvieron a estar protegidas en 1996 (17 U.S.C. § 104A) lo están durante 95 años desde la publicación. Decimos que un libro es libre solo cuando una segunda fuente confirma el año en que salió.",
+  "motivo": "«Las obras duran 95 años» es un calco: lo que dura es la protección.",
+  "gravita": "media"
+ },
+ {
+  "id": "443",
+  "attuale": "Las obras extranjeras que habían perdido la protección la recuperaron en 1996, y duran 95 años desde la publicación.",
+  "proposta": "Las obras extranjeras que habían perdido la protección la recuperaron en 1996, por 95 años desde la publicación.",
+  "motivo": "«Y duran 95 años» atribuye la duración a las obras, no a la protección.",
+  "gravita": "media"
+ },
+ {
+  "id": "598",
+  "attuale": "Si la obra salió en Estados Unidos (o en los 30 días siguientes a su salida en el extranjero) y el copyright no se renovó a los 28 años, ya era libre antes. Las obras extranjeras que volvieron a estar protegidas en 1996 (§ 104A) duran 95 años desde la publicación, pero solo si seguían protegidas en su país de origen y el autor era de un país miembro. Por eso la fecha es «por regla general», no una certeza. Fuera de Estados Unidos las reglas son otras: en Italia y en Europa cuenta la muerte del autor.",
+  "proposta": "Si la obra salió en Estados Unidos (o en los 30 días siguientes a su salida en el extranjero) y el copyright no se renovó a los 28 años, ya era libre antes. Las obras extranjeras que volvieron a estar protegidas en 1996 (§ 104A) lo están durante 95 años desde la publicación, pero solo si seguían protegidas en su país de origen y el autor era de un país miembro. Por eso la fecha es «por regla general», no una certeza. Fuera de Estados Unidos las reglas son otras: en Italia y en Europa cuenta la muerte del autor.",
+  "motivo": "«Las obras duran 95 años»: calco; lo que dura es la protección.",
+  "gravita": "media"
+ },
+ {
+  "id": "313",
+  "attuale": "Tienen 30 años más (L123-10). Si se suman a los 70 el Tribunal de Casación no lo ha decidido: lo señalamos en las páginas de los autores.",
+  "proposta": "Tienen 30 años más (L123-10). El Tribunal de Casación no ha decidido si se suman a los 70: lo señalamos en las páginas de los autores.",
+  "motivo": "Orden calcado del inglés con complemento antepuesto y pronombre redundante («Si se suman… no lo ha decidido»): suena a traducción.",
+  "gravita": "media"
+ },
+ {
+  "id": "458",
+  "attuale": "Las prórrogas de guerra (L123-8, L123-9) siguen en el código, pero el Tribunal de Casación francés decidió que los 70 años las incluyen, salvo que el 1 de julio de 1995 ya estuviera en curso un plazo más largo (sentencias de 27 de febrero de 2007, casos Monet y Boldini). Los autores «muertos por Francia» tienen 30 años más (L123-10): si se suman a los 70 años el Tribunal no lo ha decidido.",
+  "proposta": "Las prórrogas de guerra (L123-8, L123-9) siguen en el código, pero el Tribunal de Casación francés decidió que los 70 años las incluyen, salvo que el 1 de julio de 1995 ya estuviera en curso un plazo más largo (sentencias de 27 de febrero de 2007, casos Monet y Boldini). Los autores «muertos por Francia» tienen 30 años más (L123-10): el Tribunal no ha decidido si se suman a los 70 años.",
+  "motivo": "Misma construcción calcada que en 313.",
+  "gravita": "media"
+ },
+ {
+  "id": "434",
+  "attuale": "Tratado de Paz de 1947, anexo XV, parte A, punto 3: para los derechos de las Potencias aliadas y sus nacionales en Italia, el periodo entre el inicio de las hostilidades y la entrada en vigor del tratado no se cuenta en el plazo, que se prolonga lo mismo. Vale para los autores de esos países, no para los italianos. Cómo se aplica a cada obra hay que comprobarlo.",
+  "proposta": "Tratado de Paz de 1947, anexo XV, parte A, punto 3: para los derechos de las Potencias aliadas y sus nacionales en Italia, el periodo entre el inicio de las hostilidades y la entrada en vigor del tratado no se cuenta en el plazo, que se prolonga por un periodo igual. Se aplica a los autores de esos países, no a los italianos. Hay que comprobar cómo se aplica a cada obra.",
+  "motivo": "«Se prolonga lo mismo» es impreciso y coloquial en un texto jurídico; «Cómo se aplica… hay que comprobarlo» es un orden calcado.",
+  "gravita": "media"
+ },
+ {
+  "id": "531",
+  "attuale": "El derecho de autor dura hasta el final del septuagésimo año siguiente al año de la muerte del autor (art. 43). El texto que leí no tiene prórrogas de guerra.",
+  "proposta": "El derecho de autor dura hasta el final del septuagésimo año siguiente al año de la muerte del autor (art. 43). El texto consultado no prevé prórrogas de guerra.",
+  "motivo": "Primera persona del singular («leí») en un sitio que habla siempre en plural o en impersonal («consultamos», «leídos»).",
+  "gravita": "media"
+ },
+ {
+  "id": "193",
+  "attuale": "En Estados Unidos cuenta el año de la primera publicación: el 1 de enero de {anno} pasan a ser libres los libros publicados por primera vez en {pub}. Para cada libro indicamos en qué punto está la verificación. «Verificado»: la primera publicación (libro, revista o registro) está documentada por dos fuentes independientes o por un registro del copyright estadounidense, y ninguna fuente apunta a una publicación anterior. «Edición confirmada»: una fuente distinta de Wikidata confirma el año de la edición, pero la primera publicación aún no está verificada. «Por confirmar»: todos los demás casos. Ordenados por visitas a la página de Wikipedia en inglés del libro en los últimos 12 meses.",
+  "proposta": "En Estados Unidos cuenta el año de la primera publicación: el 1 de enero de {anno} pasan a ser libres los libros publicados por primera vez en {pub}. Para cada libro indicamos en qué punto está la verificación. «Verificado»: la primera publicación (libro, revista o registro) está documentada por dos fuentes independientes o por una inscripción en el registro de copyright estadounidense, y ninguna fuente apunta a una publicación anterior. «Edición confirmada»: una fuente distinta de Wikidata confirma el año de la edición, pero la primera publicación aún no está verificada. «Por confirmar»: todos los demás casos. Ordenados por visitas a la página de Wikipedia en inglés del libro en los últimos 12 meses.",
+  "motivo": "«Un registro del copyright estadounidense» es ambiguo (registro = acto y oficina); se trata de una inscripción en el registro.",
+  "gravita": "media"
+ },
+ {
+  "id": "717",
+  "attuale": "Los nombres más grandes de {anno}",
+  "proposta": "Los grandes nombres de {anno}",
+  "motivo": "«Los nombres más grandes» es un calco del inglés/italiano; en español se dice «los grandes nombres».",
+  "gravita": "media"
+ },
+ {
+  "id": "844",
+  "attuale": "Libres {p}, aún no en otros sitios",
+  "proposta": "Libres {p}, aún no en otros países",
+  "motivo": "«En otros sitios» en una web se lee como «en otras webs»; se habla de países.",
+  "gravita": "media"
+ },
+ {
+  "id": "848",
+  "attuale": "Libre: el año de publicación es desconocido, pero el autor es antiguo o murió hace más de 170 años.",
+  "proposta": "Libre: el año de publicación es desconocido, pero el autor es de la Antigüedad o murió hace más de 170 años.",
+  "motivo": "«El autor es antiguo» no es idiomático en español; se refiere a autores de la Antigüedad.",
+  "gravita": "media"
+ },
+ {
+  "id": "904",
+  "attuale": "Obras libres en todos los países de la lista (autor antiguo).",
+  "proposta": "Obras libres en todos los países de la lista (autor de la Antigüedad).",
+  "motivo": "Igual que en 848: «autor antiguo» suena a calco.",
+  "gravita": "lieve"
+ },
+ {
+  "id": "907",
+  "attuale": "autor antiguo",
+  "proposta": "autor de la Antigüedad",
+  "motivo": "Igual que en 848.",
+  "gravita": "lieve"
+ },
+ {
+  "id": "948",
+  "attuale": "Nacimiento de {nome} ({e} años)",
+  "proposta": "Nacimiento de {nome} (hace {e} años)",
+  "motivo": "«({e} años)» tras «Nacimiento de…» se puede leer como la edad; es el aniversario.",
+  "gravita": "media"
+ },
+ {
+  "id": "956",
+  "attuale": "Muerte de {nome} ({e} años)",
+  "proposta": "Muerte de {nome} (hace {e} años)",
+  "motivo": "«Muerte de X (80 años)» se lee como la edad a la que murió, no como el aniversario: engaña.",
+  "gravita": "media"
+ },
+ {
+  "id": "963",
+  "attuale": "Primera edición de «{nome}» ({e} años)",
+  "proposta": "Primera edición de «{nome}» (hace {e} años)",
+  "motivo": "Igual que en 948 y 956, para mantener la coherencia.",
+  "gravita": "lieve"
+ },
+ {
+  "id": "375",
+  "attuale": " : entran ",
+  "proposta": ": entran ",
+  "motivo": "En español no va espacio antes de los dos puntos; el texto sale «Italia : entran».",
+  "gravita": "media"
+ },
+ {
+  "id": "995",
+  "attuale": "ano_evento",
+  "proposta": "anio_evento",
+  "motivo": "«ano» sin eñe es otra palabra en español; si la cabecera CSV tiene que ser ASCII, se suele usar «anio» (o «año_evento» si se acepta UTF-8).",
+  "gravita": "lieve"
+ },
+ {
+  "id": "130",
+  "attuale": "Quién entra, y dónde",
+  "proposta": "Quién entra y dónde",
+  "motivo": "La coma antes de «y» en enumeraciones breves es un calco del italiano o del inglés.",
+  "gravita": "lieve"
+ },
+ {
+  "id": "239",
+  "attuale": "Póster tipográfico: «{frase}…», de {opera} de {autore}",
+  "proposta": "Póster tipográfico: «{frase}…», de {opera}, de {autore}",
+  "motivo": "«De {opera} de {autore}» encadena dos «de» y es ambiguo; con la coma se ve que el segundo «de» es el autor.",
+  "gravita": "lieve"
+ },
+ {
+  "id": "292",
+  "attuale": "Póster tipográfico, 50 × 70 cm, de {opera} de {autore} ({anno}).",
+  "proposta": "Póster tipográfico, 50 × 70 cm, de {opera}, de {autore} ({anno}).",
+  "motivo": "Igual que en 239.",
+  "gravita": "lieve"
+ },
+ {
+  "id": "259",
+  "attuale": "Solo Wikidata por ahora: el año aún hay que confirmarlo.",
+  "proposta": "Solo Wikidata por ahora: el año aún está por confirmar.",
+  "motivo": "«El año aún hay que confirmarlo» está bien, pero choca con la etiqueta «Por confirmar» que explica.",
+  "gravita": "lieve"
+ },
+ {
+  "id": "920",
+  "attuale": "{nome} murió en {m}: en Italia, Francia, Alemania y el Reino Unido sus obras son libres desde el 1 de enero de {ue} (en España desde {es}). Entrará en esta lista con la próxima actualización; mientras tanto lo encontrarás en el radar con su propia página.",
+  "proposta": "{nome} murió en {m}: en Italia, Francia, Alemania y el Reino Unido sus obras son libres desde el 1 de enero de {ue} (en España desde {es}). Entrará en esta lista con la próxima actualización; mientras tanto, encontrarás su ficha en el radar.",
+  "motivo": "«Lo encontrarás» da por hecho que es un hombre; «su ficha» vale para cualquier autor (el inglés usa «them»).",
+  "gravita": "lieve"
+ },
+ {
+  "id": "921",
+  "attuale": "{nome} no está en esta lista: murió en {m}, así que en Italia, Francia, Alemania y el Reino Unido sus obras pasan a ser libres el 1 de enero de {ue}, en España en {es}. Lo encontrarás en el radar con su propia página.",
+  "proposta": "{nome} no está en esta lista: murió en {m}, así que en Italia, Francia, Alemania y el Reino Unido sus obras pasan a ser libres el 1 de enero de {ue}, en España en {es}. Encontrarás su ficha en el radar.",
+  "motivo": "Igual que en 920: «lo» da por hecho que es un hombre.",
+  "gravita": "lieve"
+ },
+ {
+  "id": "822",
+  "attuale": "Existe una edición en {y}: dos catálogos lo confirman.",
+  "proposta": "Ya existe una edición en {y}: dos catálogos lo confirman.",
+  "motivo": "«By {y}» quiere decir «como tarde en {y}»; con «ya» se recupera ese matiz.",
+  "gravita": "lieve"
+ },
+ {
+  "id": "671",
+  "attuale": "Radar del dominio público",
+  "proposta": "Public Domain Radar",
+  "motivo": "El nombre de la marca no se traduce en ningún otro sitio; «Radar del dominio público» parece otro producto. Comprobar dónde sale (si es texto descriptivo, se puede dejar).",
+  "gravita": "lieve"
+ },
+ {
+  "id": "318",
+  "attuale": "Para los autores muertos antes del 7 de diciembre de 1987 sigue valiendo la ley de 1879: en España, los autores muertos en {morti} entran en {anno}.",
+  "proposta": "Para los autores muertos antes del 7 de diciembre de 1987 sigue aplicándose la ley de 1879: en España, los autores muertos en {morti} entran en {anno}.",
+  "motivo": "«Sigue valiendo la ley» es coloquial en un texto jurídico.",
+  "gravita": "lieve"
+ },
+ {
+  "id": "43",
+  "attuale": "; país aliado: ver la nota",
+  "proposta": "; país aliado: véase la nota",
+  "motivo": "Para remitir a otra parte del texto, lo normal en un texto editorial es «véase».",
+  "gravita": "lieve"
+ }
+]

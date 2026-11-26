@@ -35,7 +35,10 @@ def nota_disegni(pg, a, o):
         return None
     n, m = max(ill, key=lambda x: x[1])
     fino = pg.R.anno_libero(m, "it") - 1
-    return {"it": f"Solo il testo: i disegni originali di {n} restano protetti fino al {fino}.".replace("E. H. ", "E.\u00a0H.\u00a0"),
+    return {"fr": f"Le texte seulement : les dessins originaux de {n} restent protégés jusqu'en {fino}.".replace("E. H. ", "E.\u00a0H.\u00a0"),
+            "es": f"Solo el texto: los dibujos originales de {n} siguen protegidos hasta {fino}.".replace("E. H. ", "E.\u00a0H.\u00a0"),
+            "de": f"Nur der Text: Die Originalzeichnungen von {n} bleiben bis {fino} geschützt.".replace("E. H. ", "E.\u00a0H.\u00a0"),
+            "it": f"Solo il testo: i disegni originali di {n} restano protetti fino al {fino}.".replace("E. H. ", "E.\u00a0H.\u00a0"),
             "en": f"The text only: {n}'s original drawings stay protected until {fino}.".replace("E. H. ", "E.\u00a0H.\u00a0")}
 
 
@@ -51,13 +54,17 @@ def _leggi(p, vuoto=None):
 
 
 NOMI_P = {"it": {"it": "in Italia", "fr": "in Francia", "de": "in Germania", "uk": "nel Regno Unito", "es": "in Spagna"},
-          "en": {"it": "Italy", "fr": "France", "de": "Germany", "uk": "the UK", "es": "Spain"}}
+          "en": {"it": "Italy", "fr": "France", "de": "Germany", "uk": "the UK", "es": "Spain"},
+          "de": {"it": "Italien", "fr": "Frankreich", "de": "Deutschland", "uk": "im Vereinigten Königreich", "es": "Spanien"}}
 
 
 def elenco_paesi(paesi, lang):
     """«in Italia, Francia, Germania e Regno Unito» / «in Italy, France, Germany and the UK»."""
     if not paesi:
         return ""
+    import lingue as L
+    if lang in L.PAESI_IN:   # tedesco, francese, spagnolo: una regola sola (scripts/lingue.py)
+        return L.elenco_paesi(lang, paesi)
     if lang == "en":
         n = [NOMI_P["en"][x] for x in paesi]
         return "in " + (", ".join(n[:-1]) + " and " + n[-1] if len(n) > 1 else n[0])
@@ -105,6 +112,7 @@ def pagine_frontespizio(anno):
         cand = sorted((o for o in opere_us.values() if us_ok(o["qid"]) and in_v(o["qid"])), key=lambda o: -(o.get("visite_en") or 0))
         scelte_us = [o["qid"] for o in cand[:3]]
     pag = {}
+    extra = (_leggi(RADICE / "data" / "lingue_extra.json", {}) or {}).get("autori", {})
     for k, (q, i) in enumerate(scelte_ue):
         a, o = autori[q], autori[q]["opere"][i]
         # La riga dice solo i paesi dove l'autore è davvero libero quel giorno, calcolati dalle regole (Marco, 21/11/2026: «dobbiamo essere precisi»):
@@ -112,7 +120,8 @@ def pagine_frontespizio(anno):
         # (80 anni per chi è morto prima del 1987). Francia: i «morti per la Francia» riguardano solo i morti 1939-1945, mai l'anno di questa pagina.
         paesi = [p for p in R.paesi_liberi_insieme(a.get("paesi"), int(str(a["morte"])[:4]), date.today().year) if p != "es"] \
             + (["es"] if q in autori_es else [])
-        pag[f"ue{k}"] = {"a": a["nome"], "it": o["titolo"], "en": o.get("titolo_en") or o["titolo"], "dove": "ue", "paesi": paesi,
+        tl = (((extra.get(q) or {}).get("opere") or {}).get(o["titolo"]) or {})   # titoli in tedesco, francese, spagnolo (data/lingue_extra.json)
+        pag[f"ue{k}"] = {"a": a["nome"], "it": o["titolo"], "en": o.get("titolo_en") or o["titolo"], "dove": "ue", "paesi": paesi, **{l: v for l, v in tl.items() if v},
                          "nota": nota_disegni(pg, a, o)}
     for k, q in enumerate(scelte_us):
         o = opere_us[q]
@@ -150,11 +159,14 @@ def data_lunga(iso, lang):
         y, m, d = (int(x) for x in iso.split("-"))
     except ValueError:
         return iso
+    import lingue as L
+    if lang in L.MESI:
+        return L.data(lang, d, m, y)
     return f"{d} {MESI[lang][m - 1]} {y}"
 
 
 def migliaia(n, lang):
-    return f"{n:,}".replace(",", "." if lang == "it" else ",")
+    return f"{n:,}".replace(",", "." if lang in ("it", "de", "es") else "\u202f" if lang == "fr" else ",")
 
 
 CSS = r"""
@@ -267,24 +279,130 @@ TESTI = {
                   sez_oggi=("From today, 1 January {a}", "Who has become free, and where"), sez_dal=("Since 1 January {a}", "Who has become free, and where"),
                   data_em="from 1 January {a}.", oggi_em="from today."),
     ),
+    "de": dict(
+        url=f"{SITO}/de/", altra="", radar="/de/radar/",
+        titolo="Public Domain Radar · Wer gemeinfrei wird, und wann",
+        descr="Jedes Jahr am 1. Januar erlischt das Urheberrecht Hunderter Schriftsteller und Bücher. Wer {a} in Europa und den USA gemeinfrei wird, Land für Land, mit offenen Daten und Gesetzesquellen.",
+        diritti="Alle Rechte vorbehalten.",
+        libero={"ue": "Gemeinfrei {p} <em>ab 1. Januar {a}.</em>", "us": "Gemeinfrei in den USA <em>ab 1. Januar {a}.</em>"},
+        colophon='Jedes Jahr am 1. Januar erlischt in Europa und den USA das Urheberrecht Hunderter Bücher. Der nächste ist in <span class="giorni" id="gg"></span> Tagen.',
+        cta="Wer {a} gemeinfrei wird", folio="{k} von {n}", pagina_anno="/de/gemeinfrei-{a}/",
+        cnt=('<span id="cnt"><i class="lg">1. Januar {a} · </i><i class="sm">1. Jan. {a} · </i>in {g} Tagen</span>'),
+        nums=[("Schriftsteller gemeinfrei in Italien, Frankreich, Deutschland und im Vereinigten Königreich", "gestorben {m}", "/de/gemeinfrei-{a}/#ix1", "ue"),
+              ("Schriftsteller gemeinfrei in Spanien", "gestorben {me}", "/de/gemeinfrei-{a}/", "es"),
+              ("Bücher gemeinfrei in den USA", "erschienen {pub} · {usok} geprüft", "/de/gemeinfrei-{a}/#ix2", "us")],
+        sez=("Wo anfangen", "Die Bereiche der Website"), sez_n=("1. Januar {a}", "Wer gemeinfrei wird, und wo"),
+        porte=[("/de/gemeinfrei-{a}/", "Gemeinfrei {a}", "1. Januar {a}", "Wer am 1. Januar gemeinfrei wird, erklärt: die meisterwarteten Namen, die amerikanischen Bücher, die Regeln Land für Land.", "Lesen"),
+               ("/de/gemeinfrei/", "Nach Land", "Sechs Länder, sechs Regeln", "Italien, Frankreich, Deutschland, Spanien, das Vereinigte Königreich und die USA: die gesetzliche Regel jedes Landes und wer gemeinfrei wird.", "Wählen"),
+               ("/en/already-public/", "Schon gemeinfrei", "Archiv", "Einen Titel oder Autor suchen: Ist er in Italien, Frankreich, Deutschland, Spanien, im Vereinigten Königreich oder in den USA schon frei?", "Suchen"),
+               ("/en/calendar/{a}/", "Kalender {a}", "Jahrestage", "Die literarischen Jahrestage {a}, Tag für Tag, für Ihren Kalender.", "Öffnen"),
+               ("/en/how-it-works/", "So funktioniert’s", "Die Methode", "Woher die Daten kommen, wie die Daten berechnet werden und wie sicher sie sind.", "Lesen"),
+               ("/en/shop/", "Shop", "Poster", "Typografische Poster mit den ersten Zeilen gemeinfreier Bücher, auf Bestellung gedruckt.", "Ansehen")],
+        fonti=("Quellen", "Wikidata (CC0), Wikipedia, Project Gutenberg, das US-Urheberrechtsregister, Duke University (CC BY 4.0), Open Library und die Kataloge der Nationalbibliotheken. Listen aktualisiert am {agg}."),
+        fasi=dict(cnt_conto="in {g} Tagen", cnt_vigilia="Morgen", cnt_festa="Public Domain Day",
+                  col_vigilia='Um Mitternacht erlischt in Europa und den USA das Urheberrecht Hunderter Bücher. Noch: <span class="giorni" id="orologio"></span>.',
+                  col_oggi='Ab heute, 1. Januar {a}, sind <span class="giorni">{ue}</span> Schriftsteller in Italien, Frankreich, Deutschland und im Vereinigten Königreich gemeinfrei, <span class="giorni">{es}</span> in Spanien und <span class="giorni">{us}</span> Bücher in den USA.',
+                  col_dal='Seit 1. Januar {a} sind <span class="giorni">{ue}</span> Schriftsteller in Italien, Frankreich, Deutschland und im Vereinigten Königreich gemeinfrei, <span class="giorni">{es}</span> in Spanien und <span class="giorni">{us}</span> Bücher in den USA.',
+                  cta_vigilia="Wer um Mitternacht gemeinfrei wird", cta_oggi="Wer ab heute gemeinfrei ist", cta_dal="Wer gemeinfrei ist",
+                  sez_oggi=("Ab heute, 1. Januar {a}", "Wer gemeinfrei geworden ist, und wo"), sez_dal=("Seit 1. Januar {a}", "Wer gemeinfrei geworden ist, und wo"),
+                  data_em="ab 1. Januar {a}.", oggi_em="ab heute."),
+    ),
+    "fr": dict(
+        url=f"{SITO}/fr/", altra="", radar="/fr/radar/",
+        titolo="Public Domain Radar · Qui entre dans le domaine public, et quand",
+        descr="Chaque 1er janvier, les droits de centaines d'écrivains et de livres expirent. Qui entre dans le domaine public en {a} en Europe et aux États-Unis, pays par pays, avec des données ouvertes et les textes de loi.",
+        diritti="Tous droits réservés.",
+        libero={"ue": "Libre {p} <em>à partir du 1er janvier {a}.</em>", "us": "Libre aux États-Unis <em>à partir du 1er janvier {a}.</em>"},
+        colophon='Chaque 1er janvier, en Europe et aux États-Unis, les droits de centaines de livres expirent. Le prochain est dans <span class="giorni" id="gg"></span> jours.',
+        cta="Qui entre dans le domaine public en {a}", folio="{k} sur {n}", pagina_anno="/fr/domaine-public-{a}/",
+        cnt=('<span id="cnt"><i class="lg">1er janvier {a} · </i><i class="sm">1er janv. {a} · </i>dans {g} jours</span>'),
+        nums=[("écrivains libres en Italie, en France, en Allemagne et au Royaume-Uni", "morts en {m}", "/fr/domaine-public-{a}/#ix1", "ue"),
+              ("écrivains libres en Espagne", "morts en {me}", "/fr/domaine-public-{a}/", "es"),
+              ("livres libres aux États-Unis", "publiés en {pub} · {usok} vérifiés", "/fr/domaine-public-{a}/#ix2", "us")],
+        sez=("Par où commencer", "Les rubriques du site"), sez_n=("1er janvier {a}", "Qui devient libre, et où"),
+        porte=[("/fr/domaine-public-{a}/", "Domaine public {a}", "1er janvier {a}", "Qui devient libre le 1er janvier, expliqué : les noms les plus attendus, les livres américains, les règles pays par pays.", "Lire"),
+               ("/fr/domaine-public/", "Par pays", "Six pays, six règles", "Italie, France, Allemagne, Espagne, Royaume-Uni et États-Unis : la règle légale de chaque pays et qui entre dans le domaine public.", "Choisir"),
+               ("/fr/deja-libres/", "Déjà libres", "Archives", "Cherchez un titre ou un auteur : est-il déjà libre en Italie, en France, en Allemagne, en Espagne, au Royaume-Uni, aux États-Unis ?", "Chercher"),
+               ("/fr/calendrier/{a}/", "Calendrier {a}", "Anniversaires", "Les anniversaires littéraires de {a}, jour par jour, à ajouter à votre agenda.", "Ouvrir"),
+               ("/fr/comment-ca-marche/", "Comment ça marche", "La méthode", "D'où viennent les données, comment les dates sont calculées et à quel point elles sont sûres.", "Lire"),
+               ("/fr/boutique/", "Boutique", "Affiches", "Affiches typographiques avec les premières lignes de livres du domaine public, imprimées à la demande.", "Voir")],
+        fonti=("Sources", "Wikidata (CC0), Wikipédia, Project Gutenberg, le registre du copyright américain, Duke University (CC BY 4.0), Open Library et les catalogues des bibliothèques nationales. Listes mises à jour le {agg}."),
+        fasi=dict(cnt_conto="dans {g} jours", cnt_vigilia="Demain", cnt_festa="Public Domain Day",
+                  col_vigilia='À minuit, en Europe et aux États-Unis, les droits de centaines de livres expirent. Il reste <span class="giorni" id="orologio"></span>.',
+                  col_oggi='Depuis aujourd\'hui, 1er janvier {a}, <span class="giorni">{ue}</span> écrivains sont libres en Italie, en France, en Allemagne et au Royaume-Uni, <span class="giorni">{es}</span> en Espagne et <span class="giorni">{us}</span> livres aux États-Unis.',
+                  col_dal='Depuis le 1er janvier {a}, <span class="giorni">{ue}</span> écrivains sont libres en Italie, en France, en Allemagne et au Royaume-Uni, <span class="giorni">{es}</span> en Espagne et <span class="giorni">{us}</span> livres aux États-Unis.',
+                  cta_vigilia="Qui devient libre à minuit", cta_oggi="Qui est libre depuis aujourd'hui", cta_dal="Qui est libre",
+                  sez_oggi=("Depuis aujourd'hui, 1er janvier {a}", "Qui est devenu libre, et où"), sez_dal=("Depuis le 1er janvier {a}", "Qui est devenu libre, et où"),
+                  data_em="à partir du 1er janvier {a}.", oggi_em="depuis aujourd'hui."),
+    ),
+    "es": dict(
+        url=f"{SITO}/es/", altra="", radar="/es/radar/",
+        titolo="Public Domain Radar · Quién pasa al dominio público, y cuándo",
+        descr="Cada 1 de enero expiran los derechos de cientos de escritores y libros. Quién pasa al dominio público en {a} en Europa y Estados Unidos, país por país, con datos abiertos y fuentes legales.",
+        diritti="Todos los derechos reservados.",
+        libero={"ue": "Libre {p} <em>desde el 1 de enero de {a}.</em>", "us": "Libre en Estados Unidos <em>desde el 1 de enero de {a}.</em>"},
+        colophon='Cada 1 de enero, en Europa y Estados Unidos, expiran los derechos de cientos de libros. El próximo es dentro de <span class="giorni" id="gg"></span> días.',
+        cta="Quién pasa al dominio público en {a}", folio="{k} de {n}", pagina_anno="/es/dominio-publico-{a}/",
+        cnt=('<span id="cnt"><i class="lg">1 de enero de {a} · </i><i class="sm">1 ene. {a} · </i>dentro de {g} días</span>'),
+        nums=[("escritores libres en Italia, Francia, Alemania y el Reino Unido", "muertos en {m}", "/es/dominio-publico-{a}/#ix1", "ue"),
+              ("escritores libres en España", "muertos en {me}", "/es/dominio-publico-{a}/", "es"),
+              ("libros libres en Estados Unidos", "publicados en {pub} · {usok} verificados", "/es/dominio-publico-{a}/#ix2", "us")],
+        sez=("Por dónde empezar", "Las secciones del sitio"), sez_n=("1 de enero de {a}", "Quién pasa a ser libre, y dónde"),
+        porte=[("/es/dominio-publico-{a}/", "Dominio público {a}", "1 de enero de {a}", "Quién pasa a ser libre el 1 de enero, explicado: los nombres más esperados, los libros estadounidenses, las reglas país por país.", "Leer"),
+               ("/es/dominio-publico/", "Por país", "Seis países, seis reglas", "Italia, Francia, Alemania, España, el Reino Unido y Estados Unidos: la regla legal de cada país y quién pasa al dominio público.", "Elegir"),
+               ("/es/ya-libres/", "Ya libres", "Archivo", "Busca un título o un autor: ¿ya es libre en Italia, Francia, Alemania, España, el Reino Unido, Estados Unidos?", "Buscar"),
+               ("/es/calendario/{a}/", "Calendario {a}", "Aniversarios", "Los aniversarios literarios de {a}, día a día, para añadir a tu calendario.", "Abrir"),
+               ("/es/como-funciona/", "Cómo funciona", "El método", "De dónde vienen los datos, cómo se calculan las fechas y cuán seguras son.", "Leer"),
+               ("/es/tienda/", "Tienda", "Pósteres", "Pósteres tipográficos con las primeras líneas de libros de dominio público, impresos bajo demanda.", "Ver")],
+        fonti=("Fuentes", "Wikidata (CC0), Wikipedia, Project Gutenberg, el registro de copyright estadounidense, Duke University (CC BY 4.0), Open Library y los catálogos de las bibliotecas nacionales. Listas actualizadas el {agg}."),
+        fasi=dict(cnt_conto="dentro de {g} días", cnt_vigilia="Mañana", cnt_festa="Public Domain Day",
+                  col_vigilia='A medianoche, en Europa y Estados Unidos, expiran los derechos de cientos de libros. Faltan <span class="giorni" id="orologio"></span>.',
+                  col_oggi='Desde hoy, 1 de enero de {a}, son libres <span class="giorni">{ue}</span> escritores en Italia, Francia, Alemania y el Reino Unido, <span class="giorni">{es}</span> en España y <span class="giorni">{us}</span> libros en Estados Unidos.',
+                  col_dal='Desde el 1 de enero de {a} son libres <span class="giorni">{ue}</span> escritores en Italia, Francia, Alemania y el Reino Unido, <span class="giorni">{es}</span> en España y <span class="giorni">{us}</span> libros en Estados Unidos.',
+                  cta_vigilia="Quién pasa a ser libre a medianoche", cta_oggi="Quién es libre desde hoy", cta_dal="Quién es libre",
+                  sez_oggi=("Desde hoy, 1 de enero de {a}", "Quién ha pasado a ser libre, y dónde"), sez_dal=("Desde el 1 de enero de {a}", "Quién ha pasado a ser libre, y dónde"),
+                  data_em="desde el 1 de enero de {a}.", oggi_em="desde hoy."),
+    ),
 }
 
 
 def pagina(lang, anno, P):
     """P: le funzioni del sito (scripts/pagine.py): testa_scheda, piede_scheda, CSS_ANNO, marchio."""
-    import datetime
+    import datetime, copy
     t = TESTI[lang]
+    # 26/11/2026: testi della home riscritti direttamente nella lingua (testi/home-<lingua>.json, percorso -> testo)
+    f_ = RADICE / "testi" / f"home-{lang}.json"
+    if f_.exists():
+        t = json.loads(json.dumps(t))   # copia, con le tuple come liste
+        for percorso, v in json.loads(f_.read_text(encoding="utf-8")).items():
+            parti, d = percorso.split("."), t
+            for x in parti[:-1]:
+                d = d[int(x)] if isinstance(d, (list, tuple)) else d[x]
+            ult = parti[-1]
+            vecchio = d[int(ult)] if isinstance(d, list) else d.get(ult)
+            if not isinstance(vecchio, str) or vecchio in ("ue", "es", "us") or vecchio.startswith("/"):
+                continue   # codici e indirizzi non si traducono
+            if isinstance(d, list):
+                d[int(ult)] = v
+            else:
+                d[ult] = v
     nu = numeri(anno)
     gg = max(0, (datetime.date(anno, 1, 1) - datetime.date.today()).days)
     fmt = dict(a=anno, a1=anno + 1, ue=migliaia(nu["ue"], lang), m=R.morti_liberi_nel(anno, "it"), me=R.morti_liberi_nel(anno, "es"), pub=nu["pub"], usok=migliaia(nu["us_ok"], lang),
                agg=data_lunga(nu["aggiornato"][:10], lang), g=migliaia(gg, lang))
-    pag = [{"a": p.get("a_en", p["a"]) if lang == "en" else p["a"], "t": p[lang], "r": t["libero"][p["dove"]].format(a=anno, p=elenco_paesi(p.get("paesi", []), lang)),
+    import lingue as L
+    pag = [{"a": p.get("a_en", p["a"]) if lang == "en" else p.get("a_en", p["a"]).replace(" and ", L.CONG[lang]) if lang in L.CONG else p["a"], "t": p.get(lang) or p["en"], "r": t["libero"][p["dove"]].format(a=anno, p=elenco_paesi(p.get("paesi", []), lang)),
             "n": p["nota"][lang] if p.get("nota") else "", **({"q": p["q"]} if p.get("q") else {})}
            for p in pagine_frontespizio(anno)]
     if not pag:
         raise RuntimeError("home: nessuna opera per il frontespizio")
     alterne = (f'<link rel="alternate" hreflang="it" href="{SITO}/">\n<link rel="alternate" hreflang="en" href="{SITO}/en/">\n'
                f'<link rel="alternate" hreflang="x-default" href="{SITO}/">\n')
+    case = {"it": "/", "en": "/en/", **{l: f"/{L.CARTELLA[l]['home']}/" for l in L.NUOVE}}
+    altra = t["altra"]
+    if L.NUOVE:   # 26/11/2026: con le lingue in più, il tasto lingua (IT · EN · DE) e tutte le versioni per Google
+        alterne = L.hreflang(case, SITO)
+        altra = L.selettore(lang, case)
     # 25/11/2026 (analisi SEO): chi c'è dietro il sito (Organization, con Marco e il suo LinkedIn già in fondo a ogni pagina) legato al WebSite
     org = {"@type": "Organization", "@id": SITO + "/#organizzazione", "name": "Public Domain Radar", "url": SITO + "/", "logo": SITO + "/assets/favicon.svg",
            "founder": {"@type": "Person", "name": "Marco Novali", "sameAs": "https://www.linkedin.com/in/marconovali"}}
@@ -292,8 +410,8 @@ def pagina(lang, anno, P):
               "url": t["url"], "inLanguage": lang, "description": t["descr"].format(a=anno), "publisher": {"@id": SITO + "/#organizzazione"}}]}, ensure_ascii=False) + "</script>")
     rimando = (f'<script>/* i vecchi indirizzi della home con # (filtri, schede) sono del radar, che ora sta su {t["radar"]} */\n'
                f'if(location.hash.length>1){{location.replace("{t["radar"]}"+location.hash)}}'
-               + ('' if lang == 'en' else 'else if(new URLSearchParams(location.search).get("lang")==="en"){location.replace("/en/")}') + '</script>\n')
-    testa = P["testa_scheda"](lang, esc(t["titolo"]), esc(t["descr"].format(a=anno)), t["url"], alterne, jsonld, t["altra"],
+               + ('' if lang != 'it' else 'else if(new URLSearchParams(location.search).get("lang")==="en"){location.replace("/en/")}') + '</script>\n')
+    testa = P["testa_scheda"](lang, esc(t["titolo"]), esc(t["descr"].format(a=anno)), t["url"], alterne, jsonld, altra,
                               "@@CNT@@", og_tipo="website", css_extra=P["CSS_ANNO"] + CSS, main_cls="pdd", body_cls="pdd-b")
     testa = testa.replace("@@CNT@@", t["cnt"].format(**fmt) if gg else f'<span id="cnt" style="color:var(--redt)">{t["fasi"]["cnt_festa"]}</span>').replace("</head>", '<script src="/assets/regole.js"></script>\n</head>', 1).replace("@@MARCHIO_S@@", P["marchio"]).replace('<meta charset="utf-8">', '<meta charset="utf-8">\n' + rimando, 1)
     numeri_html = "".join(f'<a href="{h.format(**fmt)}"><span class="n">{migliaia(nu[k], lang)}</span><span class="c">{esc(c)}</span><span class="m">{esc(m.format(**fmt))}</span></a>'
@@ -304,8 +422,8 @@ def pagina(lang, anno, P):
     porte = "".join(f'<a class="porta" href="{h.format(**fmt)}"><span class="m">{esc(y.format(**fmt))}</span><h3>{esc(x.format(**fmt))}</h3>'
                     f'<p>{esc(d.format(**fmt))}</p><span class="go">{esc(v)} →</span></a>' for h, x, y, d, v in t["porte"])
     primo = pag[0]
-    corpo = f"""<section class="fronte" id="pagina" aria-label="{"Frontespizio" if lang == "it" else "Title page"}">
-  <h1 class="vh">{"Public Domain Radar: chi diventa libero, e quando" if lang == "it" else "Public Domain Radar: who becomes free, and when"}</h1>
+    corpo = f"""<section class="fronte" id="pagina" aria-label="{ {"it": "Frontespizio", "de": "Titelseite", "fr": "Page de titre", "es": "Portada"}.get(lang, "Title page") }">
+  <h1 class="vh">{ {"it": "Public Domain Radar: chi diventa libero, e quando", "de": "Public Domain Radar: wer gemeinfrei wird, und wann", "fr": "Public Domain Radar : qui entre dans le domaine public, et quand", "es": "Public Domain Radar: quién pasa al dominio público, y cuándo"}.get(lang, "Public Domain Radar: who becomes free, and when") }</h1>
   <div class="foglio" id="foglio" aria-live="polite">
     <p class="autore sc" id="autore">{esc(primo["a"])}</p>
     <p class="titolo" id="titolo">{esc(primo["t"])}</p>
@@ -382,6 +500,11 @@ def crea_home(P=None, anno=None):
     (RADICE / "index.html").write_text(pagina("it", anno, P), encoding="utf-8")
     (RADICE / "en").mkdir(exist_ok=True)
     (RADICE / "en" / "index.html").write_text(pagina("en", anno, P), encoding="utf-8")
+    import lingue as L
+    for l in L.NUOVE:   # 26/11/2026: home nelle lingue in più (i collegamenti alle pagine che esistono nella lingua passano lì)
+        d = RADICE / L.CARTELLA[l]["home"]
+        d.mkdir(exist_ok=True)
+        (d / "index.html").write_text(L.localizza_link(pagina(l, anno, P), l, (), [anno]), encoding="utf-8")
     print("home: index.html ed en/index.html (frontespizio)")
 
 

@@ -185,32 +185,81 @@ def pagine():
     alterne = ('<link rel="alternate" hreflang="it" href="https://publicdomainradar.com/gia-pubblici/">\n'
                '<link rel="alternate" hreflang="en" href="https://publicdomainradar.com/en/already-public/">\n'
                '<link rel="alternate" hreflang="x-default" href="https://publicdomainradar.com/gia-pubblici/">\n')
+    # 26/11/2026: lingue in più (scripts/lingue.py). Testi dal catalogo testi/<lingua>.json, con l'inglese come chiave.
+    import lingue as L
+    case = {"it": "/gia-pubblici/", "en": "/en/already-public/", **{l: f"/{L.CARTELLA[l]['gia']}/" for l in L.NUOVE}}
+    if L.NUOVE:
+        alterne = L.hreflang(case, "https://publicdomainradar.com")
+    for l in L.NUOVE:
+        tt = lambda it_, en_: L.testo(l, it_, en_)
+        I, E_ = testi["it"], testi["en"]
+        testi[l] = {k: tt(I[k], E_[k]) for k in ("TITLE", "DESC", "OCC", "H1", "CERCA", "CANC", "CHIUDI", "LEAD")}
+        testi[l].update({"CANON": "https://publicdomainradar.com" + case[l], "PROVA": (tt(I["PROVA"][0], E_["PROVA"][0]), ["Kafka", "Orwell", "Gatsby", "Brecht", "Frankenstein"]),
+                         "out": RADICE / L.CARTELLA[l]["gia"] / "index.html"})
+    T_en = None
     for lang, x in testi.items():
         # piede: regole e fonti, dagli stessi testi della pagina (oggetto T)
-        blocco = t[t.index(f"\n{lang}: {{"):]
+        blocco = t[t.index(f"\n{lang if lang in ('it', 'en') else 'en'}: {{"):]
         regole = json.loads('"' + re.search(r'piede2: "((?:[^"\\]|\\.)*)"', blocco).group(1) + '"')
         fonti = json.loads('"' + re.search(r'piede3: "((?:[^"\\]|\\.)*)"', blocco).group(1) + '"')
         fonti = re.sub(r"^(Fonti|Sources): ", "", fonti)
         e = lambda v: v.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")
         h1 = " ".join(f'<span class="w"><span>{e(w)}</span></span>' for w in [x["H1"]])
-        h_, l_, n_ = x["ALTRA"]
-        testa = testa_scheda(lang, e(x["TITLE"]), e(x["DESC"]), x["CANON"], alterne, "", f'<a href="{h_}" hreflang="{l_}">{n_}</a>',
-                             "Già pubblici" if lang == "it" else "Already public", og_tipo="website", css_extra=css, main_cls="gia", body_cls="gia-b")
+        h_, l_, n_ = x.get("ALTRA") or ("", "", "")
+        altra = L.selettore(lang, case) if L.NUOVE else f'<a href="{h_}" hreflang="{l_}">{n_}</a>'
+        testa = testa_scheda(lang, e(x["TITLE"]), e(x["DESC"]), x["CANON"], alterne, "", altra,
+                             L.testo(lang, "Già pubblici", "Already public"), og_tipo="website", css_extra=css, main_cls="gia", body_cls="gia-b")
         testa = testa.replace("@@MARCHIO_S@@", marchio_html(56).replace('<span class="pdr" style="--w:56px">', "").rsplit("</span>", 1)[0])
         prova = e(x["PROVA"][0]) + " " + "".join(f'<button type="button">{e(v)}</button>' for v in x["PROVA"][1])
         corpo = t.replace("__LANG__", lang).replace("__SIMBOLI__", sim)
         for k in ("OCC", "LEAD", "CERCA", "CANC", "CHIUDI"):
             corpo = corpo.replace(f"__{k}__", e(x[k]))
         corpo = corpo.replace("__H1__", h1).replace("__PROVA__", prova)
-        piede = piede_scheda(lang, ("Fonti e regole" if lang == "it" else "Sources and rules", e(fonti) + "</p><p>" + e(regole)))
+        if lang not in ("it", "en"):
+            fonti, regole = L.testo(lang, "", fonti), L.testo(lang, "", regole)
+            # T[lingua]: i testi inglesi della pagina tradotti dal catalogo (le funzioni restano quelle inglesi, l'elenco usa la congiunzione della lingua)
+            i0 = t.index("const T = {"); i1 = t.index("\n}};", i0) + 4
+            import subprocess
+            en = json.loads(subprocess.run(["node", "-e", t[i0:i1] + "\nprocess.stdout.write(JSON.stringify(T.en));"], capture_output=True, text=True, check=True).stdout)
+            def albero(v):
+                return L.testo(lang, "", v) if isinstance(v, str) and v else [albero(z) for z in v] if isinstance(v, list) else {k: albero(z) for k, z in v.items()} if isinstance(v, dict) else v
+            cong = {"de": " und ", "fr": " et ", "es": " y "}[lang]
+            mesi = json.dumps(L.MESI.get(lang) or [])
+            agg = (f"\nT[{json.dumps(lang)}] = Object.assign({{}}, T.en, {json.dumps(albero(en), ensure_ascii=False)}, "
+                   f"{{ elenco: (x) => x.length > 1 ? x.slice(0, -1).join(\", \") + {json.dumps(cong)} + x[x.length - 1] : x.join(\"\"), "
+                   f"dateFmt: (a, b) => a.getDate() + \"–\" + b.toLocaleDateString({json.dumps(L.LOCALE[lang])}, {{ day: \"numeric\", month: \"long\", year: \"numeric\" }}) }});")
+            j = corpo.index("\n}};", corpo.index("const T = {")) + 4
+            corpo = corpo[:j] + agg + corpo[j:]
+            trad = {}
+            for it_, en_ in re.findall(r'L2\("((?:[^"\\]|\\.)*)", "((?:[^"\\]|\\.)*)"\)', t):
+                if en_:
+                    trad[en_] = L.testo(lang, it_, en_)
+            for g_it, g_en in zip(re.findall(r'(\w+): "([^"]+)"', t[t.index("const GENERI = { it:"):t.index("\n  en:", t.index("const GENERI = { it:"))]),
+                                  re.findall(r'(\w+): "([^"]+)"', t[t.index("\n  en:", t.index("const GENERI = { it:")):t.index("}[LING", t.index("const GENERI = { it:"))])):
+                trad[g_en[1]] = L.testo(lang, g_it[1], g_en[1])
+            c = L.CARTELLA[lang]
+            link = {"/en/": f"/{c['home']}/"}
+            sch = (leggi(RADICE / "data" / f"radar_{lang}.json", {}) or {}).get("schede", {})
+            corpo = corpo.replace("<script>", f'<script>window.TRAD_LINGUA = {json.dumps(trad, ensure_ascii=False)}; '
+                                  f'window.LINK_LINGUA = Object.assign({json.dumps(link)}, {json.dumps({"/en/author/" + v.rstrip("/").rsplit("/", 1)[1] + "/": v for v in sch.values()})});</script>\n<script>', 1)
+            # titoli delle opere nella lingua (Wikidata), letti dalla pagina all'avvio
+            et_ = (leggi(RADICE / "data" / "lingue_etichette.json", {}) or {}).get("voci", {})
+            tit = {r[0]: et_[r[0]][lang][0] for r in (leggi(S / "pagina.json", {}) or {}).get("opere", []) if (et_.get(r[0]) or {}).get(lang, [None])[0]}
+            (S / f"titoli_{lang}.json").write_text(json.dumps(tit, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+        piede = piede_scheda(lang, (L.testo(lang, "Fonti e regole", "Sources and rules"), e(fonti) + "</p><p>" + e(regole)))
         s = testa + corpo + piede
         assert "__" not in re.sub(r"__(proto|dirname)__", "", s).split("<script>")[0], "segnaposto rimasto"
         x["out"].parent.mkdir(parents=True, exist_ok=True)
+        if lang not in ("it", "en"):
+            s = L.localizza_link(s, lang, {v.rstrip("/").rsplit("/", 1)[1] for v in sch.values()}, [R.fase_sito(date.today())[1]])
         x["out"].write_text(s, encoding="utf-8")
 
 
 if __name__ == "__main__":
     p = dati()
     pagine()
+    import lingue as L
+    L.salva_mancanti("-gia")
+    L.salva_coppie("-gia")   # testi di Già pubblici senza traduzione: testi/mancanti-<lingua>-gia.json
     print(f"pagina: {len(p['opere'])} opere negli scaffali, {p['n_opere']} nella ricerca, {p['n_autori']} autori, "
           f"{len(p['foto'])} ritratti, {len(p['prossimi'])} autori in arrivo")

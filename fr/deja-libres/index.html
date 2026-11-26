@@ -1,0 +1,1169 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<title>Déjà libres : les œuvres du domaine public, pays par pays</title>
+<meta name="description" content="Cherchez un titre ou un auteur et vérifiez s'il est déjà dans le domaine public en Italie, en France, en Allemagne, en Espagne et aux États-Unis, et depuis quand. Des rayons de classiques déjà libres, les plus consultés sur Wikipédia. Données ouvertes issues de Wikidata.">
+<link rel="canonical" href="https://publicdomainradar.com/fr/deja-libres/">
+<link rel="alternate" hreflang="it" href="https://publicdomainradar.com/gia-pubblici/">
+<link rel="alternate" hreflang="en" href="https://publicdomainradar.com/en/already-public/">
+<link rel="alternate" hreflang="de" href="https://publicdomainradar.com/de/schon-gemeinfrei/">
+<link rel="alternate" hreflang="fr" href="https://publicdomainradar.com/fr/deja-libres/">
+<link rel="alternate" hreflang="es" href="https://publicdomainradar.com/es/ya-libres/">
+<link rel="alternate" hreflang="x-default" href="https://publicdomainradar.com/gia-pubblici/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Public Domain Radar">
+<meta property="og:url" content="https://publicdomainradar.com/fr/deja-libres/">
+<meta property="og:title" content="Déjà libres : les œuvres du domaine public, pays par pays · Public Domain Radar">
+<meta property="og:description" content="Cherchez un titre ou un auteur et vérifiez s'il est déjà dans le domaine public en Italie, en France, en Allemagne, en Espagne et aux États-Unis, et depuis quand. Des rayons de classiques déjà libres, les plus consultés sur Wikipédia. Données ouvertes issues de Wikidata.">
+<meta name="twitter:card" content="summary">
+
+<link rel="preload" href="/assets/fonts/big-shoulders-display-800-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link href="/assets/fonts/fonts.css" rel="stylesheet">
+<style>:root{
+  --ink:#0C0C10;--paper:#F7F7F4;--red:#FF4326;--redt:#FF4326;--grey:#5C5C66;--box:#E4E2DA;
+  --dim:rgba(12,12,16,.22);--hair:rgba(12,12,16,.12);
+  --disp:'Big Shoulders Display',Impact,'Arial Narrow',sans-serif;--sans:'Instrument Sans','Instrument Fallback',system-ui,sans-serif;--mono:'DM Mono',ui-monospace,monospace;
+  --cut:cubic-bezier(.77,0,.18,1);--out:cubic-bezier(.16,1,.3,1);
+  --pad:48px;--top:64px;
+}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}html,body{margin:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}a{color:inherit}
+.m{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+.g{color:var(--grey)}
+
+.top{position:fixed;inset:0 0 auto 0;height:var(--top);z-index:40;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:0 var(--pad);background:var(--paper)}
+.pdr{display:inline-flex;flex-direction:column;width:var(--w,56px);line-height:1}
+.pdr svg{display:block;width:100%;height:auto;color:var(--ink)}
+.pdr .sub{position:relative;display:block;height:calc(var(--w)*.06);margin-top:calc(var(--w)*.05);font:500 calc(var(--w)*.052)/1 var(--mono);text-transform:uppercase;color:#A9A9B6}
+.pdr .sub b{position:absolute;top:0;left:0;width:100%;display:flex;justify-content:space-between;font-weight:500}.pdr .sub i{font-style:normal}
+.cnt{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-align:center;text-transform:uppercase;opacity:0;transition:opacity .3s}
+body.past .cnt{opacity:1}
+.top .r{justify-self:end;display:flex;gap:22px;align-items:center;font-family:var(--mono);font-size:12px;letter-spacing:.12em}
+.menu{position:fixed;inset:0;z-index:60;overflow-y:auto;background:var(--red);clip-path:inset(0 0 100% 0);transition:clip-path 560ms var(--cut);display:flex;flex-direction:column;padding:var(--top) var(--pad) 40px}
+.menu.on{clip-path:inset(0 0 0 0)}
+.menu .x{position:absolute;right:var(--pad);top:22px;font-family:var(--mono);font-size:12px;letter-spacing:.12em}
+.menu nav{margin-top:6vh;display:flex;flex-direction:column}
+.menu nav a{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:clamp(40px,min(9vw,9svh),120px);line-height:1.02;padding-top:.06em;text-decoration:none;overflow:hidden;display:block}
+.menu nav a span{display:block;transform:translateY(105%);transition:transform 620ms var(--out)}
+.menu.on nav a span{transform:none}
+
+main{padding:calc(var(--top) + 4vh) var(--pad) 0}
+.crumb{display:flex;justify-content:space-between;align-items:center}
+.crumb a{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none}
+.hd{display:grid;grid-template-columns:minmax(0,1fr) min(30vw,420px);gap:6vw;margin-top:6vh;align-items:end}
+h1{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:min(clamp(72px,11vw,190px),calc(52vw / (var(--k,7) * .5)));line-height:.82;margin:0;letter-spacing:-.012em}
+h1 .w{display:inline-block;overflow:hidden;vertical-align:top;padding:.14em 0 .04em;margin-top:-.14em}
+h1 .w>span{display:inline-block;transform:translateY(102%);animation:rise 900ms var(--out) forwards}
+h1 .w:nth-child(2)>span{animation-delay:70ms}
+@keyframes rise{to{transform:none}}
+.meta{margin:22px 0 0;color:var(--grey)}
+.ans{font-size:clamp(20px,1.9vw,27px);line-height:1.4;letter-spacing:-.01em;margin:3.5vh 0 0;max-width:780px;font-weight:500}
+.ans b{color:var(--redt);font-weight:600}
+.ph{position:relative;aspect-ratio:4/5;background:var(--box);overflow:hidden;clip-path:inset(0 0 100% 0);animation:unmask 1000ms 200ms var(--cut) forwards}
+@keyframes unmask{to{clip-path:inset(0 0 0 0)}}
+.ph img{width:100%;height:100%;object-fit:cover;object-position:50% 18%;filter:grayscale(1) contrast(1.06);display:block;transform:scale(1.1);animation:settle 1400ms 200ms var(--out) forwards}
+@keyframes settle{to{transform:none}}
+.cap{font-family:var(--mono);font-size:10px;letter-spacing:.03em;color:var(--grey);margin-top:8px;line-height:1.5}
+
+/* blocchi con etichetta a sinistra */
+.blk{display:grid;grid-template-columns:220px minmax(0,1fr);gap:40px;border-top:1px solid var(--ink);margin-top:11vh;padding-top:18px}
+.blk>.m{color:var(--grey);padding-top:5px}
+.blk>div{min-width:0}
+.blk>.m b{display:block;color:var(--ink);font-weight:500;margin-bottom:4px}
+.lab-big{display:block;color:var(--redt);margin-bottom:14px}
+.big{text-transform:uppercase;font-family:var(--disp);font-weight:800;font-size:clamp(84px,10vw,170px);line-height:.82;color:var(--red);font-variant-numeric:tabular-nums;margin:0}
+.sub2{margin:10px 0 0;font-size:16px}
+.sub2 span{color:var(--grey)}
+.conf{margin:14px 0 0;font-size:14px;color:var(--grey);max-width:620px}
+.conf b{color:var(--ink);font-weight:500}
+.ps{margin:30px 0 0;padding:0;list-style:none;border-top:1px solid var(--ink)}
+.ps li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 20px;align-items:baseline;padding:13px 0;border-bottom:1px solid var(--hair);cursor:pointer}
+.ps .c{font-size:17px;font-weight:500}
+.ps .c small{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--grey);font-weight:400;margin-top:3px;text-transform:uppercase}
+.ps .v{font-family:var(--disp);font-weight:800;font-size:clamp(26px,2.4vw,36px);line-height:1;font-variant-numeric:tabular-nums}
+.ps li.cur .c,.ps li.cur .v{color:var(--red)}
+.ps li.later .v{color:var(--grey)}
+.ps li .v.txt{font-family:var(--sans);font-weight:500;font-size:16px}
+.ps li.usa .v{text-transform:uppercase}
+.usa-n{grid-column:1/-1;margin:6px 0 2px;font-size:15px;line-height:1.5;max-width:680px}
+.usa-n a{color:var(--ink);text-decoration-color:var(--red);text-underline-offset:3px}
+.lnk{display:flex;flex-wrap:wrap;gap:12px 26px;margin-top:18px}
+.lnk a{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;border-bottom:2px solid var(--red);padding-bottom:3px}
+.legal{font-size:13px;color:var(--grey);margin:12px 0 0}
+
+.bio{font-size:clamp(20px,1.8vw,25px);line-height:1.45;margin:0;max-width:820px}
+.src{font-size:13px;color:var(--grey);margin:12px 0 0}
+
+/* opere */
+.op{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
+.op li{display:grid;grid-template-columns:minmax(0,1fr) 70px 170px;gap:20px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--hair)}
+.op .t{font-size:clamp(18px,1.6vw,22px);font-weight:500;line-height:1.25}
+.op .t sup{font-family:var(--mono);font-size:10px;color:var(--redt);margin-left:3px;cursor:pointer}
+.op .y{font-family:var(--mono);font-size:12.5px;color:var(--grey);font-variant-numeric:tabular-nums}
+.op .u{justify-self:end;font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;padding:5px 9px;border:1px solid var(--ink);white-space:nowrap}
+.op .u.free{background:var(--ink);color:var(--paper)}
+.oph{display:grid;grid-template-columns:minmax(0,1fr) 70px 170px;gap:20px;padding-bottom:10px;color:var(--grey)}
+.oph span:last-child{justify-self:end}
+.notes{list-style:none;margin:20px 0 0;padding:0;counter-reset:n}
+.notes li{position:relative;padding-left:26px;font-size:14px;line-height:1.5;color:var(--grey);margin-bottom:8px;transition:color .3s}
+.notes li b{position:absolute;left:0;top:1px;font-family:var(--mono);font-size:11px;color:var(--redt);font-weight:500}
+.notes li.hl{color:var(--ink)}
+.opn{font-size:13px;color:var(--grey);margin:16px 0 0;max-width:760px;line-height:1.5}
+
+/* cataloghi: barre */
+.cat{margin:6px 0 0}
+.cr{display:grid;grid-template-columns:200px minmax(0,1fr) 170px;gap:18px;align-items:center;padding:10px 0;border-bottom:1px solid var(--hair)}
+.cr .l{font-size:15px;font-weight:500}.cr .l small{display:block;font-family:var(--mono);font-size:10px;color:var(--grey);letter-spacing:.06em;text-transform:uppercase;font-weight:400}
+.cr .b{position:relative;height:22px}
+.cr .b i{position:absolute;left:0;top:0;bottom:0;background:var(--box);transform-origin:left;transition:transform 900ms var(--out)}
+.js .cr .b i{transform:scaleX(0)}
+.cr .b i.n{background:var(--ink)}
+.cr.cur .b i.n{background:var(--red)}
+.js .cat.on .cr .b i{transform:scaleX(1)}
+.cr .v{font-family:var(--mono);font-size:12.5px;text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.cr .v span{color:var(--grey)}
+.cleg{display:flex;gap:20px;margin-top:12px;font-size:12.5px;color:var(--grey);flex-wrap:wrap}
+.cleg i{display:inline-block;width:14px;height:10px;margin-right:6px;vertical-align:0}
+.why{margin-top:14px}
+.why button{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--grey)}
+.why p{font-size:14px;line-height:1.55;color:var(--grey);max-width:760px;overflow:hidden;max-height:0;margin:0;transition:max-height 520ms var(--cut),margin .3s}
+.why.on p{max-height:300px;margin-top:10px}
+
+.two{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.two .n{font-family:var(--disp);font-weight:800;font-size:clamp(60px,6vw,104px);line-height:.85;font-variant-numeric:tabular-nums}
+.two p{margin:10px 0 0;font-size:15px;line-height:1.45}
+.two .rk{display:inline-block;margin-top:10px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:4px 8px;background:var(--red)}
+
+.acc{border-bottom:1px solid var(--hair)}
+.acc button{display:flex;justify-content:space-between;gap:20px;width:100%;padding:16px 0;text-align:left;font-size:clamp(18px,1.5vw,21px);font-weight:500}
+.acc button span{font-family:var(--mono);font-size:12px;color:var(--grey);flex:none}
+.acc .bd{overflow:hidden;max-height:0;transition:max-height 520ms var(--cut)}
+.acc.on .bd{max-height:300px}
+.acc .bd p{margin:0 0 18px;font-size:17px;line-height:1.55;max-width:760px}
+
+/* altri scrittori */
+.others{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:18px}
+.oc{text-decoration:none}
+.oc .p{position:relative;aspect-ratio:4/5;background:var(--box);overflow:hidden}
+.oc .p img{width:100%;height:100%;object-fit:cover;object-position:50% 18%;filter:grayscale(1) contrast(1.05);transition:filter .5s,transform .8s var(--out)}
+.oc:hover .p img{filter:none;transform:scale(1.04)}
+.oc b{display:block;margin-top:10px;font-size:16px;font-weight:600;line-height:1.2}
+.oc span{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;color:var(--grey);text-transform:uppercase;margin-top:4px;line-height:1.5}
+.oc span i{display:block;font-style:normal;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.oc:hover b{color:var(--redt)}
+.lede{font-size:16px;line-height:1.5;margin:0 0 22px;max-width:760px}
+
+.end{padding:12vh var(--pad) 14vh;display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:12vh;border-top:1px solid var(--ink)}
+.end p{margin:0 0 12px;font-size:13.5px;line-height:1.6;color:var(--grey);max-width:560px}
+
+@media (max-width:860px){
+  :root{--pad:20px;--top:56px}
+  .pdr{--w:48px!important}
+  .top{grid-template-columns:1fr auto}.top .r span,.cnt{display:none}
+  .hd{grid-template-columns:1fr;gap:26px;margin-top:4vh}
+  .hd .pc{order:-1;width:62%}
+  h1{font-size:min(clamp(60px,18vw,100px),calc(86vw / (var(--k,7) * .5)))}
+  .ans{font-size:19px}
+  .blk{grid-template-columns:1fr;gap:12px;margin-top:8vh}
+  .big{font-size:88px}
+  .op li,.oph{grid-template-columns:minmax(0,1fr) auto;gap:4px 12px}
+  .op .y{grid-row:2;grid-column:1}
+  .op .u{grid-row:1/3;grid-column:2;align-self:center}
+  .oph span:nth-child(2){display:none}
+  .cr{grid-template-columns:1fr auto;gap:6px 12px}
+  .cr .b{grid-column:1/3;grid-row:2;height:14px}
+  .two{grid-template-columns:1fr;gap:28px}
+  .others{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:40%;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -20px;padding:0 20px 6px;scroll-padding-left:20px;scrollbar-width:none}
+  .others::-webkit-scrollbar{display:none}
+  .oc{scroll-snap-align:start}
+  .end{grid-template-columns:1fr;gap:20px}
+}
+@media (prefers-reduced-motion:reduce){*{transition-duration:1ms!important;animation-duration:1ms!important}}
+
+/* aggiunte per il sito (21/11/2026) */
+.top .pdr{text-decoration:none}.top .r a{text-decoration:none}
+.crumb .m{text-align:right}
+.ph.ini{display:flex;align-items:center;justify-content:center;font-family:var(--disp);font-weight:800;font-size:clamp(60px,8vw,120px);color:#fff;background:var(--ink)}
+.conf.warn{color:var(--ink)}.conf.warn b{color:var(--redt)}
+.all{margin:14px 0 0;padding:12px 14px;border-left:3px solid var(--red);background:var(--box);font-size:14px;line-height:1.5;max-width:720px}
+.all p{margin:0}
+.ps li.free .v{color:var(--ink)}
+.ps li.usa .v{text-transform:uppercase}
+.usa-n{grid-column:1/-1;margin:6px 0 2px;font-size:15px;line-height:1.5;max-width:680px}
+.usa-n a{color:var(--ink);text-decoration-color:var(--red);text-underline-offset:3px}
+.op .u.ver{border-style:dashed;color:var(--grey)}
+.cat-n{font-size:13px;color:var(--grey);margin:12px 0 0;max-width:760px;line-height:1.5}
+.acc .bd ul{margin:0 0 14px;padding-left:18px;font-size:15px;line-height:1.5}
+.menu nav a{color:var(--ink)}
+.end .lk{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;line-height:2}
+.end .lk a{text-decoration:none;border-bottom:1px solid var(--red)}
+.end a{color:inherit}
+.oc span i{display:block;font-style:normal;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ini-s{display:flex;align-items:center;justify-content:center;width:100%;height:100%;font-family:var(--disp);font-weight:800;font-size:44px;color:#fff;background:var(--ink)}
+
+/* telefono: più respiro (Marco, 21/11/2026): titoli grandi con interlinea che non si tocca, menu spaziato, righe dell'indice più ariose */
+@media (max-width:860px){
+  h1,h1.h1{line-height:.96!important}
+  h1 .w,h1.h1 .w{padding-bottom:.06em}
+  .menu nav{gap:12px;margin-top:4vh}
+  .menu nav a{font-size:clamp(40px,11vw,60px);line-height:1;padding:.08em 0 .02em}
+  .big,.lb-big,.nums .n,.two .n,.mo h2 span,.scheda h2,.p-n{line-height:.95}
+  .row{padding:18px 0 16px!important;gap:6px!important}
+  .row .nm{line-height:.98}
+  .row .mt{margin-top:4px!important}
+  .pf{width:24vw!important;top:62%!important}
+  .cv b,.cvr b{line-height:.98}
+  .say{line-height:1.32}
+  .sec{padding-top:12vh}
+  .tabs{gap:8px 18px}.tabs button{line-height:1.08}
+  .opts{gap:8px 18px}.opts button{line-height:1.1}
+  .ix button b,.ix li b{line-height:1.02}
+  .names a{line-height:1.12}
+  .grp>h2,.grp>b{line-height:.95}
+  .au b{margin-top:12px}
+  .big7{gap:14px}
+}
+/* Già pubblici (mockup rdr-gia-pubblici-indice.html, approvato 21/11/2026); si aggiunge a scripts/stile_scheda.css */
+main.gia{padding:0}
+body.gia-b .cnt{opacity:1}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.mono{font-family:var(--mono);font-weight:500;letter-spacing:.12em;text-transform:uppercase}
+
+/* apertura: la domanda e la ricerca */
+.open{padding:calc(var(--top) + 9vh) var(--pad) 0;min-height:78svh;display:flex;flex-direction:column;justify-content:flex-end}
+.open .k{color:var(--redt)}
+h1.h1{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:clamp(76px,min(14vw,22svh),220px);line-height:.82;margin:18px 0 0;letter-spacing:-.012em}
+h1.h1 .w{display:inline-block;overflow:hidden;vertical-align:top;padding:.16em 0 .04em;margin-top:-.16em}
+h1.h1 .w>span{display:inline-block;transform:translateY(102%);animation:rise 900ms var(--out) forwards}
+.open .lead{font-size:clamp(17px,1.4vw,20px);line-height:1.45;max-width:720px;margin:3vh 0 0}
+.q{display:flex;align-items:center;gap:16px;border-bottom:3px solid var(--ink);margin:4vh 0 0;height:84px;position:relative}
+.q svg{width:30px;height:30px;flex:none}
+.q input{flex:1;min-width:0;border:0;background:none;outline:none;font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:clamp(34px,4.2vw,58px);color:var(--ink);letter-spacing:.005em;padding:0;-webkit-appearance:none;appearance:none;border-radius:0}
+.q input::-webkit-search-cancel-button{display:none}
+.q input::placeholder{color:var(--dim)}
+.q .clr{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;opacity:0;pointer-events:none;transition:opacity .2s}
+.q.has .clr{opacity:1;pointer-events:auto}
+.q::after{content:"";position:absolute;left:0;right:0;bottom:-3px;height:3px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform 460ms var(--cut)}
+.q:focus-within::after{transform:scaleX(1)}
+.try{margin:16px 0 0;font-size:14px;color:var(--grey)}
+.try button{border-bottom:1px solid var(--grey);margin:0 4px}
+.try button:hover{color:var(--redt);border-color:var(--red)}
+.cs{display:flex;flex-wrap:wrap;gap:4px 22px;margin:5vh 0 0;padding-top:16px;border-top:1px solid var(--hair);align-items:baseline}
+.cs .lab{color:var(--grey);margin-right:4px}
+.cs button{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;padding:4px 0;border-bottom:2px solid transparent;color:var(--grey);transition:color .2s,border-color .25s}
+.cs button[aria-pressed="true"]{color:var(--ink);border-color:var(--red)}
+.facts{margin:14px 0 0;font-size:13px;color:var(--grey);max-width:760px;line-height:1.5}
+
+/* risultati */
+.res{padding:0 var(--pad)}
+.res:empty{display:none}
+.r-tit{display:block;font:500 11px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink);margin:0;padding:6vh 0 0}
+.r-sotto{margin:0;padding:8px 0 12px;border-bottom:1px solid var(--ink);font:400 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--grey)}
+.aut-card{padding:18px 0;border-bottom:1px solid var(--hair)}
+.aut-card .nome{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:clamp(36px,4vw,60px);line-height:.9;margin:6px 0 8px}
+.aut-card .det{font-size:15px;line-height:1.5}
+.aut-card .det b{font-weight:600}
+.altro{margin-top:14px;font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;border-bottom:2px solid var(--red);padding:0 0 4px}
+.altro[disabled]{opacity:.4}
+.link-forte{display:inline-block;margin-top:12px;font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border-bottom:2px solid var(--red);padding-bottom:4px}
+.righe{list-style:none;margin:0;padding:0}
+.riga{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 30px;align-items:center;padding:14px 0;border-bottom:1px solid var(--hair);animation:wk 420ms var(--out) both}
+@keyframes wk{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.riga .tit{text-align:left}
+.riga .t{display:block;font-size:clamp(19px,1.7vw,24px);font-weight:600;line-height:1.2}
+.riga .t .o{font-weight:400;color:var(--grey)}
+.riga .a{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--grey);text-transform:uppercase;margin-top:3px}
+.riga .tit:hover .t{color:var(--redt)}
+.badge{display:grid;grid-template-columns:repeat(6,62px);gap:4px}
+.badge .b{height:42px;display:flex;flex-direction:column;justify-content:center;align-items:center;font-family:var(--mono);font-size:10px;letter-spacing:.04em;line-height:1.25;border:1px solid var(--ink);text-transform:uppercase;text-align:center}
+.badge .b span{font-weight:500;font-size:9.5px}
+.badge .b.si{background:var(--ink);color:var(--paper)}
+.badge .b.ver{border-style:dashed}
+.badge .b.nd{border-color:var(--hair);color:var(--grey)}
+.badge .b.attivo{outline:2px solid var(--red);outline-offset:2px}
+.box-no{padding:22px 0;font-size:16px;line-height:1.55;max-width:720px;border-bottom:1px solid var(--hair)}
+.box-no .k{display:block;font:500 11px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--redt);margin-bottom:8px}
+.bottone{display:inline-block;margin-top:14px;font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;border-bottom:2px solid var(--red);padding-bottom:4px}
+.nota{margin:18px 0 0;max-width:860px;font-size:13px;line-height:1.55;color:var(--grey)}
+
+/* sezioni */
+.sec{padding:16vh var(--pad) 0}
+.sh{display:flex;justify-content:space-between;gap:20px;border-bottom:1px solid var(--ink);padding-bottom:14px;color:var(--grey)}
+.sh h2{font:inherit;letter-spacing:inherit;margin:0;color:var(--ink);font-weight:500}
+.gia .lede{font-size:clamp(18px,1.5vw,21px);line-height:1.5;max-width:760px;margin:24px 0 0}
+.gia .lede b{font-weight:600}
+.tabs{display:flex;gap:4px 22px;flex-wrap:wrap;margin:30px 0 0}
+.tabs button{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:clamp(26px,2.6vw,40px);line-height:1.05;color:var(--dim);transition:color .25s;padding:.06em 0 4px;border-bottom:3px solid transparent;text-align:left}
+.tabs button[aria-selected="true"]{color:var(--ink);border-color:var(--red)}
+.tabs button:hover{color:var(--ink)}
+.tnote{margin:14px 0 0;font-size:14px;color:var(--grey);max-width:760px;line-height:1.5;min-height:42px}
+.shelf{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 5*20px)/6);gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:22px 0 8px}
+.shelf::-webkit-scrollbar{display:none}
+.bk{scroll-snap-align:start;text-align:left;display:flex;flex-direction:column;justify-content:flex-start;align-self:start;width:100%;animation:wk 520ms var(--out) both}
+.cvr{position:relative;aspect-ratio:2/3;display:flex;flex-direction:column;justify-content:space-between;padding:12%;transition:transform 400ms var(--out);overflow:hidden}
+@media (hover:hover){.bk:hover .cvr{transform:translateY(-6px)}}   /* sul telefono il dito lasciava la copertina toccata sollevata (Il piccolo principe, 21/11/2026) */
+.cvr b{font-family:var(--disp);font-weight:800;text-transform:uppercase;line-height:.92;overflow-wrap:normal;word-break:normal;hyphens:none;display:block;max-width:100%}
+.cvr span{font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;opacity:.8}
+.c0{background:var(--red)}.c1{background:var(--box)}.c2{background:var(--ink);color:var(--paper)}.c3{background:#fff;box-shadow:inset 0 0 0 1px var(--hair)}
+.bk p{margin:10px 0 0;font-size:14px;font-weight:500;line-height:1.3}
+.bk p span{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.06em;color:var(--grey);text-transform:uppercase;font-weight:400;margin-top:3px}
+.vuoto{color:var(--grey);font-size:15px;padding:20px 0}
+.shf{display:flex;justify-content:space-between;align-items:center;margin-top:16px;gap:20px}
+.shf button.tutto{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;border-bottom:2px solid var(--red);padding-bottom:4px}
+.arr{display:flex;gap:8px}
+.arr button{width:44px;height:44px;border:1px solid var(--ink);display:grid;place-items:center}
+.arr button:hover{background:var(--ink);color:var(--paper)}
+.arr svg{width:16px;height:16px}
+
+/* autori: classifica con ritratto quadrato */
+.rk{list-style:none;margin:24px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;column-gap:56px}
+.rk li{border-bottom:1px solid var(--hair)}
+.rk li button{width:100%;display:grid;grid-template-columns:76px 72px minmax(0,1fr);gap:18px;align-items:center;padding:12px 0;text-align:left}
+.rk .p{font-family:var(--disp);font-weight:800;font-size:64px;line-height:.92;text-align:right;color:var(--ink);font-variant-numeric:tabular-nums}
+.rk li:nth-child(-n+3) .p{color:var(--red)}
+/* ritratti interi, mai tagliati (Omero e Dante uscivano senza testa o senza naso, 21/11/2026): riquadro verticale 4:5 e immagine contenuta */
+.rk .f{width:72px;height:90px;background:var(--box);overflow:hidden;position:relative}
+.rk .f img{width:100%;height:100%;object-fit:contain;object-position:50% 0;filter:grayscale(1) contrast(1.06);transition:filter .4s;position:relative;z-index:1}
+.rk li:hover .f img{filter:none}
+.rk .f i{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--mono);font-style:normal;font-size:13px;color:var(--grey)}
+.rk .n{font-size:19px;font-weight:600;line-height:1.2}
+.rk .n span{display:block;font-family:var(--mono);font-size:11px;font-weight:400;letter-spacing:.06em;color:var(--grey);text-transform:uppercase;margin-top:4px}
+.rk li:hover .n{color:var(--redt)}
+.crediti{font-family:var(--mono);font-size:10px;line-height:1.7;letter-spacing:.03em;color:var(--grey);margin:18px 0 0;max-width:1000px}
+.crediti a{color:var(--grey)}
+
+/* generi e lingue: indice tipografico */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.two .sh span{text-align:right}
+.ix{list-style:none;margin:20px 0 0;padding:0}
+.ix li{border-bottom:1px solid var(--hair)}
+.ix li button{width:100%;display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:9px 0;text-align:left}
+.ix li b{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:clamp(26px,2.4vw,38px);line-height:1;color:var(--dim);transition:color .25s}
+.ix li button:hover b{color:var(--ink)}
+.ix li span{font-family:var(--mono);font-size:11.5px;color:var(--grey);white-space:nowrap}
+.ix .sw{display:inline-block;width:12px;height:12px;margin-right:10px;vertical-align:.12em}
+.gia .sub-ix{font-size:13px;color:var(--grey);margin:12px 0 0;max-width:520px;line-height:1.5}
+
+/* finestra (opera, griglia di un autore o di un genere) */
+#finestra{position:fixed;inset:0;z-index:70;background:rgba(12,12,16,.72);display:flex;justify-content:center;align-items:flex-start;overflow-y:auto;padding:24px 12px}
+#finestra[hidden]{display:none}
+#finestra .pan{position:relative;width:100%;max-width:980px;background:var(--paper);color:var(--ink);padding:36px clamp(20px,4vw,44px) 40px}
+#finestra .chiudi{position:absolute;top:14px;right:14px;font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;border-bottom:2px solid var(--red);padding-bottom:3px}
+#finestra h2{margin:0 90px 0 0;font-family:var(--disp);font-weight:800;font-size:clamp(40px,5vw,72px);line-height:.92;text-transform:uppercase}
+#finestra h3.mono{color:var(--redt)!important}
+.griglia{margin-top:24px;display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:22px 18px}
+.stati{margin:16px 0 0;padding:0;list-style:none;border-top:1px solid var(--ink)}
+.stati li{display:grid;grid-template-columns:200px 1fr;gap:14px;padding:12px 0;border-bottom:1px solid var(--hair);font-size:15px;line-height:1.45}
+.stati .p{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.stati .b{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;padding:3px 7px;border:1px solid var(--ink);text-transform:uppercase}
+.stati .b.si{background:var(--ink);color:var(--paper)}
+.stati .b.ver{border-style:dashed}
+.stati .b.nd{border-color:var(--hair);color:var(--grey)}
+
+@media (max-width:860px){
+  body.gia-b .cnt{display:none}
+  .open{min-height:auto;padding-top:calc(var(--top) + 7vh)}
+  h1.h1{font-size:clamp(64px,22vw,110px)}
+  .q{height:64px}.q svg{width:22px;height:22px}.q input{font-size:30px}
+  .cs{gap:2px 14px}
+  .riga{grid-template-columns:1fr;gap:10px}
+  .badge{grid-template-columns:repeat(6,1fr);gap:3px}
+  .badge .b{height:38px;font-size:9px}
+  .sec{padding-top:11vh}
+  .sh{flex-direction:column;gap:4px}
+  .two .sh span{text-align:left}
+  .tabs button{font-size:24px}
+  .shelf{grid-auto-columns:42%;gap:12px;margin:0 -20px;padding:18px 20px 8px;scroll-padding-left:20px}
+  .arr{display:none}
+  .rk{grid-template-columns:1fr}
+  .rk li button{grid-template-columns:52px 60px minmax(0,1fr);gap:12px}
+  .rk .p{font-size:48px}.rk .f{width:60px;height:75px}.rk .n{font-size:17px}
+  .two{grid-template-columns:1fr;gap:28px}
+  .stati li{grid-template-columns:1fr;gap:4px}
+  .griglia{grid-template-columns:repeat(2,1fr)}
+}
+
+/* telefono: più respiro (Marco, 21/11/2026): titoli grandi con interlinea che non si tocca, menu spaziato, righe dell'indice più ariose */
+@media (max-width:860px){
+  h1,h1.h1{line-height:.96!important}
+  h1 .w,h1.h1 .w{padding-bottom:.06em}
+  .menu nav{gap:12px;margin-top:4vh}
+  .menu nav a{font-size:clamp(40px,11vw,60px);line-height:1;padding:.08em 0 .02em}
+  .big,.lb-big,.nums .n,.two .n,.mo h2 span,.scheda h2,.p-n{line-height:.95}
+  .row{padding:18px 0 16px!important;gap:6px!important}
+  .row .nm{line-height:.98}
+  .row .mt{margin-top:4px!important}
+  .pf{width:24vw!important;top:62%!important}
+  .cv b,.cvr b{line-height:.98}
+  .say{line-height:1.32}
+  .sec{padding-top:12vh}
+  .tabs{gap:8px 18px}.tabs button{line-height:1.08}
+  .opts{gap:8px 18px}.opts button{line-height:1.1}
+  .ix button b,.ix li b{line-height:1.02}
+  .names a{line-height:1.12}
+  .grp>h2,.grp>b{line-height:.95}
+  .au b{margin-top:12px}
+  .big7{gap:14px}
+}
+
+/* 25/11/2026: opere con poster nello Shop */
+.riga .pst{display:inline-block;margin-top:6px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--redt)}
+.poster-op{margin:20px 0 0}.poster-op .link-forte{margin-top:0}.poster-op span{display:block;margin-top:8px;color:#5C5C66}
+.lng{position:relative;display:flex;align-items:center}.lng-b{display:none;font:500 12px/1 var(--mono,'DM Mono',monospace);letter-spacing:.12em;background:none;border:0;color:inherit;cursor:pointer;padding:6px 0}.lng-b span{font-size:9px}.lng-l{display:flex;gap:14px}.lng-l a{font:500 12px/1 var(--mono,'DM Mono',monospace);letter-spacing:.12em;color:inherit;text-decoration:none;padding:6px 0;border-bottom:2px solid transparent}.lng-l a[aria-current]{border-bottom-color:#FF4326}.lng-l a[href]:hover{color:#FF4326}@media (max-width:860px){.lng-b{display:block}.lng-l{display:none;position:absolute;top:100%;right:-10px;flex-direction:column;gap:0;background:#F7F7F4;color:#0C0C10;border:1px solid #0C0C10;padding:6px 14px;z-index:60;min-width:64px}.lng.on .lng-l{display:flex}.lng-l a{padding:9px 0}}@media (max-width:760px){h1.h1{font-size:clamp(48px,14.5vw,104px)}}</style>
+<script>document.documentElement.classList.add('js')</script>
+<!-- contatore visite senza cookie (GoatCounter) -->
+<script data-goatcounter="https://pdr.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body class="gia-b">
+<header class="top">
+  <a href="/fr/" class="pdr" style="--w:56px" aria-label="Public Domain Radar"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 216.65 120" aria-hidden="true" focusable="false">
+<defs><mask id="pdrt" maskUnits="userSpaceOnUse" x="-5" y="-5" width="226.65" height="130.00"><rect x="-5" y="-5" width="226.65" height="130.00" fill="#fff"/><line x1="184.59" y1="39.75" x2="414.40" y2="-153.09" stroke="#000" stroke-width="3.7"/></mask></defs>
+<path fill="currentColor" mask="url(#pdrt)" d="M0 120V0H28.95Q45.75 0 53.21 6.79Q60.67 13.58 61.2 29.25Q61.35 33.45 61.39 36.6Q61.42 39.75 61.39 42.9Q61.35 46.05 61.2 50.25Q60.9 60 57.94 66.22Q54.97 72.45 48.75 75.75L62.85 120H39L27.6 79.5H22.5V120ZM22.5 59.7H28.95Q33.67 59.7 36.08 57.53Q38.48 55.35 38.7 51.45Q38.92 47.78 39 43.76Q39.07 39.75 39 35.74Q38.92 31.73 38.7 28.05Q38.48 24.08 36.08 21.94Q33.67 19.8 28.95 19.8H22.5Z M75.55 120V0H106Q122.88 0 130.41 7.16Q137.95 14.33 138.25 30.75Q138.47 41.17 138.55 50.55Q138.62 59.93 138.55 69.3Q138.47 78.68 138.25 89.1Q137.95 105.6 130.41 112.8Q122.88 120 106 120ZM98.05 100.2H106Q110.72 100.2 113.2 98.03Q115.67 95.85 115.75 91.8Q115.97 83.78 116.09 75.83Q116.2 67.88 116.2 59.93Q116.2 51.98 116.09 43.99Q115.97 36 115.75 28.05Q115.67 24.08 113.2 21.94Q110.72 19.8 106 19.8H98.05Z M153.8 120V0H182.75Q199.55 0 207.01 6.79Q214.48 13.58 215 29.25Q215.15 33.45 215.19 36.6Q215.23 39.75 215.19 42.9Q215.15 46.05 215 50.25Q214.7 60 211.74 66.22Q208.78 72.45 202.55 75.75L216.65 120H192.8L181.4 79.5H176.3V120ZM176.3 59.7H182.75Q187.48 59.7 189.88 57.53Q192.28 55.35 192.5 51.45Q192.73 47.78 192.8 43.76Q192.88 39.75 192.8 35.74Q192.73 31.73 192.5 28.05Q192.28 24.08 189.88 21.94Q187.48 19.8 182.75 19.8H176.3Z"/></svg><span class="sub"><b style="left:0;width:100%"><i>P</i><i>U</i><i>B</i><i>L</i><i>I</i><i>C</i><i>&nbsp;</i><i>D</i><i>O</i><i>M</i><i>A</i><i>I</i><i>N</i><i>&nbsp;</i><i>R</i><i>A</i><i>D</i><i>A</i><i>R</i></b></span></a>
+  <div class="cnt">Déjà libres</div>
+  <div class="r"><div class="lng" id="lng"><button type="button" class="lng-b" aria-haspopup="true" aria-expanded="false">FR <span>▾</span></button><span class="lng-l"><a href="/gia-pubblici/" hreflang="it" lang="it">IT</a><a href="/fr/deja-libres/" hreflang="en" lang="en">EN</a><a href="/de/schon-gemeinfrei/" hreflang="de" lang="de">DE</a><a aria-current="true" lang="fr">FR</a><a href="/es/ya-libres/" hreflang="es" lang="es">ES</a></span></div><button id="mbtn" type="button">MENU</button></div>
+</header><script>document.addEventListener('click',function(e){var l=document.getElementById('lng');if(!l)return;var b=e.target.closest('.lng-b');if(b){l.classList.toggle('on');b.setAttribute('aria-expanded',l.classList.contains('on'));}else if(!e.target.closest('.lng-l'))l.classList.remove('on');});</script>
+<div class="menu" id="menu"><button class="x" id="mx" type="button">FERMER</button><nav aria-label="Rubriques du site"><a href="/fr/"><span>Accueil</span></a><a href="/fr/domaine-public-2027/"><span>Domaine public 2027</span></a><a href="/fr/deja-libres/"><span>Déjà libres</span></a><a href="/fr/domaine-public/"><span>Par pays</span></a><a href="/fr/calendrier/2027/"><span>Anniversaires 2027</span></a><a href="/fr/comment-ca-marche/"><span>Comment ça marche</span></a><a href="/fr/boutique/"><span>Boutique</span></a></nav></div>
+<main class="gia">
+<section class="open">
+<p class="m k">Archives du domaine public</p>
+<h1 class="h1"><span class="w"><span>Est-ce déjà dans le domaine public ?</span></span></h1>
+<p class="lead">Saisissez un titre ou un auteur : nous vous indiquons s'il peut déjà être publié, et depuis quand, pays par pays.</p>
+<form class="q" id="qw" role="search" onsubmit="return false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><label class="sr" for="q">Titre ou auteur</label><input id="q" type="search" placeholder="Titre ou auteur" autocomplete="off" spellcheck="false"><button class="clr" id="clr" type="button">Effacer</button></form>
+<p class="try">Essayez : <button type="button">Kafka</button><button type="button">Orwell</button><button type="button">Gatsby</button><button type="button">Brecht</button><button type="button">Frankenstein</button></p>
+<div class="cs" role="group" id="paesi"></div>
+<p class="facts" id="conti"></p>
+<noscript><p class="facts">JavaScript is needed for the search. / Per la ricerca serve JavaScript.</p></noscript>
+</section>
+<section class="res" id="risultati" aria-live="polite"></section>
+<div id="scaffali-corpo"></div>
+<div id="finestra" hidden><div class="pan" role="dialog" aria-modal="true" aria-labelledby="fin-tit"><button class="chiudi" type="button" id="fin-chiudi">Fermer</button><div id="fin-corpo"></div></div></div>
+<script src="/assets/regole.js"></script>
+<script>window.TRAD_LINGUA = {"Anonymous": "Anonyme", "{y} BC": "{y} av. J.-C.", "Portrait of {n}": "Portrait de {n}", "Back": "Précédent", "Forward": "Suivant", "{n} authors ranked": "{n} auteurs classés", "Already public · ": "Déjà libres · ", "Crime & mystery": "Policier et mystère", "Horror & weird fiction": "Horreur et fantastique", "Fantasy & science fiction": "Fantasy et science-fiction", "Historical fiction": "Roman historique", "Children's": "Jeunesse", "Poetry": "Poésie", "Essays": "Essais", "Memoir & biography": "Mémoires et biographies", "Satire": "Satire", "Adventure": "Aventure", "Romance": "Roman sentimental", "War": "Guerre"}; window.LINK_LINGUA = Object.assign({"/en/": "/fr/"}, {"/en/author/bertolt-brecht/": "/fr/auteur/bertolt-brecht/", "/en/author/b-r-ambedkar/": "/fr/auteur/b-r-ambedkar/", "/en/author/a-a-milne/": "/fr/auteur/a-a-milne/", "/en/author/jakub-kolas/": "/fr/auteur/jakub-kolas/", "/en/author/henry-louis-mencken/": "/fr/auteur/henry-louis-mencken/", "/en/author/pio-baroja/": "/fr/auteur/pio-baroja/", "/en/author/gottfried-benn/": "/fr/auteur/gottfried-benn/", "/en/author/robert-walser/": "/fr/auteur/robert-walser/", "/en/author/aleksandr-aleksandrovic-fadeev/": "/fr/auteur/aleksandr-aleksandrovic-fadeev/", "/en/author/giovanni-papini/": "/fr/auteur/giovanni-papini/", "/en/author/vladimir-afanas-evic-obrucev/": "/fr/auteur/vladimir-afanas-evic-obrucev/", "/en/author/evelyn-beatrice-hall/": "/fr/auteur/evelyn-beatrice-hall/", "/en/author/max-beerbohm/": "/fr/auteur/max-beerbohm/", "/en/author/resat-nuri-guntekin/": "/fr/auteur/resat-nuri-guntekin/", "/en/author/corrado-alvaro/": "/fr/auteur/corrado-alvaro/", "/en/author/julien-benda/": "/fr/auteur/julien-benda/", "/en/author/aino-kallas/": "/fr/auteur/aino-kallas/", "/en/author/walter-de-la-mare/": "/fr/auteur/walter-de-la-mare/", "/en/author/smd-vurgun/": "/fr/auteur/smd-vurgun/", "/en/author/nikolaj-velimirovic/": "/fr/auteur/nikolaj-velimirovic/", "/en/author/louis-bromfield/": "/fr/auteur/louis-bromfield/", "/en/author/muhammad-husayn-haykal/": "/fr/auteur/muhammad-husayn-haykal/", "/en/author/gustav-suits/": "/fr/auteur/gustav-suits/", "/en/author/ostap-vysnja/": "/fr/auteur/ostap-vysnja/", "/en/author/hans-carossa/": "/fr/auteur/hans-carossa/", "/en/author/paul-leautaud/": "/fr/auteur/paul-leautaud/", "/en/author/edmund-clerihew-bentley/": "/fr/auteur/edmund-clerihew-bentley/", "/en/author/cahit-sitki-taranci/": "/fr/auteur/cahit-sitki-taranci/", "/en/author/charles-macarthur/": "/fr/auteur/charles-macarthur/", "/en/author/michael-arlen/": "/fr/auteur/michael-arlen/", "/en/author/owen-davis/": "/fr/auteur/owen-davis/", "/en/author/derenik-demirchian/": "/fr/auteur/derenik-demirchian/", "/en/author/john-emerson/": "/fr/auteur/john-emerson/", "/en/author/kotaro-takamura/": "/fr/auteur/kotaro-takamura/", "/en/author/david-shimoni/": "/fr/auteur/david-shimoni/", "/en/author/leonora-speyer/": "/fr/auteur/leonora-speyer/", "/en/author/manik-bandyopadhyay/": "/fr/auteur/manik-bandyopadhyay/", "/en/author/curnonsky/": "/fr/auteur/curnonsky/", "/en/author/paul-gadenne/": "/fr/auteur/paul-gadenne/", "/en/author/renee-erdos/": "/fr/auteur/renee-erdos/", "/en/author/karl-m-baer/": "/fr/auteur/karl-m-baer/", "/en/author/nicolae-labis/": "/fr/auteur/nicolae-labis/", "/en/author/adolphe-d-espie/": "/fr/auteur/adolphe-d-espie/", "/en/author/aita-donostia/": "/fr/auteur/aita-donostia/", "/en/author/cesar-moro/": "/fr/auteur/cesar-moro/", "/en/author/francois-jaffrennou/": "/fr/auteur/francois-jaffrennou/", "/en/author/otto-willi-gail/": "/fr/auteur/otto-willi-gail/", "/en/author/rupert-hughes/": "/fr/auteur/rupert-hughes/", "/en/author/ward-greene/": "/fr/auteur/ward-greene/", "/en/author/clarence-e-mulford/": "/fr/auteur/clarence-e-mulford/", "/en/author/robert-mcalmon/": "/fr/auteur/robert-mcalmon/", "/en/author/julius-eisenstein/": "/fr/auteur/julius-eisenstein/", "/en/author/jack-snow/": "/fr/auteur/jack-snow/", "/en/author/paul-la-cour/": "/fr/auteur/paul-la-cour/", "/en/author/sara-cone-bryant/": "/fr/auteur/sara-cone-bryant/", "/en/author/sheila-kaye-smith/": "/fr/auteur/sheila-kaye-smith/", "/en/author/waldemar-kaempffert/": "/fr/auteur/waldemar-kaempffert/", "/en/author/domenico-giuliotti/": "/fr/auteur/domenico-giuliotti/", "/en/author/gejza-vamos/": "/fr/auteur/gejza-vamos/", "/en/author/jacques-gabriel-prodhomme/": "/fr/auteur/jacques-gabriel-prodhomme/", "/en/author/chote-praepan/": "/fr/auteur/chote-praepan/", "/en/author/guido-milanesi/": "/fr/auteur/guido-milanesi/", "/en/author/percy-marks/": "/fr/auteur/percy-marks/", "/en/author/philippe-de-tarrazi/": "/fr/auteur/philippe-de-tarrazi/", "/en/author/r-williams-parry/": "/fr/auteur/r-williams-parry/", "/en/author/e-r-punshon/": "/fr/auteur/e-r-punshon/", "/en/author/ali-akbar-dehkhoda/": "/fr/auteur/ali-akbar-dehkhoda/", "/en/author/lucien-febvre/": "/fr/auteur/lucien-febvre/", "/en/author/george-sarton/": "/fr/auteur/george-sarton/", "/en/author/piero-calamandrei/": "/fr/auteur/piero-calamandrei/", "/en/author/gabriela-mistral/": "/fr/auteur/gabriela-mistral/", "/en/author/nikos-kazantzakis/": "/fr/auteur/nikos-kazantzakis/", "/en/author/sacha-guitry/": "/fr/auteur/sacha-guitry/", "/en/author/giuseppe-tomasi-di-lampedusa/": "/fr/auteur/giuseppe-tomasi-di-lampedusa/", "/en/author/alfred-doblin/": "/fr/auteur/alfred-doblin/", "/en/author/laura-ingalls-wilder/": "/fr/auteur/laura-ingalls-wilder/", "/en/author/dorothy-l-sayers/": "/fr/auteur/dorothy-l-sayers/", "/en/author/curzio-malaparte/": "/fr/auteur/curzio-malaparte/", "/en/author/antonin-zapotocky/": "/fr/auteur/antonin-zapotocky/", "/en/author/malcolm-lowry/": "/fr/auteur/malcolm-lowry/", "/en/author/umberto-saba/": "/fr/auteur/umberto-saba/", "/en/author/james-connolly/": "/fr/auteur/james-connolly/", "/en/author/valery-larbaud/": "/fr/auteur/valery-larbaud/", "/en/author/edward-plunkett-xviii-barone-dunsany/": "/fr/auteur/edward-plunkett-xviii-barone-dunsany/", "/en/author/josef-lada/": "/fr/auteur/josef-lada/", "/en/author/anna-haava/": "/fr/auteur/anna-haava/", "/en/author/leo-perutz/": "/fr/auteur/leo-perutz/", "/en/author/sholem-asch/": "/fr/auteur/sholem-asch/", "/en/author/wyndham-lewis/": "/fr/auteur/wyndham-lewis/", "/en/author/claude-farrere/": "/fr/auteur/claude-farrere/", "/en/author/marija-juric-zagorka/": "/fr/auteur/marija-juric-zagorka/", "/en/author/christopher-morley/": "/fr/auteur/christopher-morley/", "/en/author/elia-abu-madi/": "/fr/auteur/elia-abu-madi/", "/en/author/charles-kay-ogden/": "/fr/auteur/charles-kay-ogden/", "/en/author/aleksej-michajlovic-remizov/": "/fr/auteur/aleksej-michajlovic-remizov/", "/en/author/dorothy-richardson/": "/fr/auteur/dorothy-richardson/", "/en/author/joyce-cary/": "/fr/auteur/joyce-cary/", "/en/author/lorinc-szabo/": "/fr/auteur/lorinc-szabo/", "/en/author/peter-freuchen/": "/fr/auteur/peter-freuchen/", "/en/author/gilbert-murray/": "/fr/auteur/gilbert-murray/", "/en/author/roger-vercel/": "/fr/auteur/roger-vercel/", "/en/author/roy-campbell/": "/fr/auteur/roy-campbell/", "/en/author/virgilio-giotti/": "/fr/auteur/virgilio-giotti/", "/en/author/arturo-barea/": "/fr/auteur/arturo-barea/", "/en/author/freeman-wills-crofts/": "/fr/auteur/freeman-wills-crofts/", "/en/author/oliver-st-john-gogarty/": "/fr/auteur/oliver-st-john-gogarty/", "/en/author/camil-petrescu/": "/fr/auteur/camil-petrescu/", "/en/author/george-bacovia/": "/fr/auteur/george-bacovia/", "/en/author/jeno-heltai/": "/fr/auteur/jeno-heltai/", "/en/author/john-middleton-murry/": "/fr/auteur/john-middleton-murry/", "/en/author/jose-lins-do-rego/": "/fr/auteur/jose-lins-do-rego/", "/en/author/kenneth-roberts/": "/fr/auteur/kenneth-roberts/", "/en/author/ray-cummings/": "/fr/auteur/ray-cummings/", "/en/author/franz-borkenau/": "/fr/auteur/franz-borkenau/", "/en/author/ricardo-rojas/": "/fr/auteur/ricardo-rojas/", "/en/author/judith-blunt-lytton/": "/fr/auteur/judith-blunt-lytton/", "/en/author/andre-chevrillon/": "/fr/auteur/andre-chevrillon/", "/en/author/john-william-van-druten/": "/fr/auteur/john-william-van-druten/", "/en/author/c-m-van-den-heever/": "/fr/auteur/c-m-van-den-heever/", "/en/author/craig-rice/": "/fr/auteur/craig-rice/", "/en/author/juan-jose-morosoli/": "/fr/auteur/juan-jose-morosoli/", "/en/author/noh-cheon-myeong/": "/fr/auteur/noh-cheon-myeong/", "/en/author/alexander-moritz-frey/": "/fr/auteur/alexander-moritz-frey/", "/en/author/erich-scheurmann/": "/fr/auteur/erich-scheurmann/", "/en/author/pierre-lhande/": "/fr/auteur/pierre-lhande/", "/en/author/rudolf-h-daumann/": "/fr/auteur/rudolf-h-daumann/", "/en/author/andre-frederique/": "/fr/auteur/andre-frederique/", "/en/author/franz-maria-feldhaus/": "/fr/auteur/franz-maria-feldhaus/", "/en/author/mario-puccini/": "/fr/auteur/mario-puccini/", "/en/author/roger-chauvire/": "/fr/auteur/roger-chauvire/", "/en/author/guy-de-teramond/": "/fr/auteur/guy-de-teramond/", "/en/author/gaetano-salvemini/": "/fr/auteur/gaetano-salvemini/", "/en/author/h-g-wells/": "/fr/auteur/h-g-wells/", "/en/author/gerhart-hauptmann/": "/fr/auteur/gerhart-hauptmann/", "/en/author/gertrude-stein/": "/fr/auteur/gertrude-stein/", "/en/author/manuel-de-falla/": "/fr/auteur/manuel-de-falla/", "/en/author/ernest-thompson-seton/": "/fr/auteur/ernest-thompson-seton/", "/en/author/booth-tarkington/": "/fr/auteur/booth-tarkington/", "/en/author/amir-hamzah/": "/fr/auteur/amir-hamzah/", "/en/author/nikolaj-aleksandrovic-morozov/": "/fr/auteur/nikolaj-aleksandrovic-morozov/", "/en/author/wen-yiduo/": "/fr/auteur/wen-yiduo/", "/en/author/dion-fortune/": "/fr/auteur/dion-fortune/", "/en/author/damon-runyon/": "/fr/auteur/damon-runyon/", "/en/author/may-sinclair/": "/fr/auteur/may-sinclair/", "/en/author/countee-cullen/": "/fr/auteur/countee-cullen/", "/en/author/eduard-bass/": "/fr/auteur/eduard-bass/", "/en/author/helen-bannerman/": "/fr/auteur/helen-bannerman/", "/en/author/john-langalibalele-dube/": "/fr/auteur/john-langalibalele-dube/", "/en/author/logan-pearsall-smith/": "/fr/auteur/logan-pearsall-smith/", "/en/author/herbert-macaulay/": "/fr/auteur/herbert-macaulay/", "/en/author/e-phillips-oppenheim/": "/fr/auteur/e-phillips-oppenheim/", "/en/author/wanda-gag/": "/fr/auteur/wanda-gag/", "/en/author/harley-granville-barker/": "/fr/auteur/harley-granville-barker/", "/en/author/henry-handel-richardson/": "/fr/auteur/henry-handel-richardson/", "/en/author/shekib-arslan/": "/fr/auteur/shekib-arslan/", "/en/author/thomas-dixon-jr/": "/fr/auteur/thomas-dixon-jr/", "/en/author/pedro-henriquez-urena/": "/fr/auteur/pedro-henriquez-urena/", "/en/author/gabriela-preissova/": "/fr/auteur/gabriela-preissova/", "/en/author/arthur-van-schendel/": "/fr/auteur/arthur-van-schendel/", "/en/author/eduard-marquina-i-angulo/": "/fr/auteur/eduard-marquina-i-angulo/", "/en/author/karl-hans-strobl/": "/fr/auteur/karl-hans-strobl/", "/en/author/ilarie-voronca/": "/fr/auteur/ilarie-voronca/", "/en/author/marius-grout/": "/fr/auteur/marius-grout/", "/en/author/hans-bethge/": "/fr/auteur/hans-bethge/", "/en/author/channing-pollock/": "/fr/auteur/channing-pollock/", "/en/author/frederich-bataille/": "/fr/auteur/frederich-bataille/", "/en/author/henri-hauser/": "/fr/auteur/henri-hauser/", "/en/author/ludwig-winder/": "/fr/auteur/ludwig-winder/", "/en/author/paul-zech/": "/fr/auteur/paul-zech/", "/en/author/edward-sheldon/": "/fr/auteur/edward-sheldon/", "/en/author/georges-polti/": "/fr/auteur/georges-polti/", "/en/author/mushitaro-oguri/": "/fr/auteur/mushitaro-oguri/", "/en/author/george-henry-weiss/": "/fr/auteur/george-henry-weiss/", "/en/author/ibn-zaydan/": "/fr/auteur/ibn-zaydan/", "/en/author/salomo-friedlaender/": "/fr/auteur/salomo-friedlaender/", "/en/author/stewart-white/": "/fr/auteur/stewart-white/", "/en/author/alice-moderno/": "/fr/auteur/alice-moderno/", "/en/author/valentin-williams/": "/fr/auteur/valentin-williams/", "/en/author/catulo-da-paixao-cearense/": "/fr/auteur/catulo-da-paixao-cearense/", "/en/author/georges-de-la-fouchardiere/": "/fr/auteur/georges-de-la-fouchardiere/", "/en/author/henriette-dessaulles/": "/fr/auteur/henriette-dessaulles/", "/en/author/joseph-de-pesquidoux/": "/fr/auteur/joseph-de-pesquidoux/", "/en/author/albert-frederick-calvert/": "/fr/auteur/albert-frederick-calvert/", "/en/author/ernest-rhys/": "/fr/auteur/ernest-rhys/", "/en/author/dana-chambers/": "/fr/auteur/dana-chambers/", "/en/author/john-maynard-keynes/": "/fr/auteur/john-maynard-keynes/", "/en/author/charles-oman/": "/fr/auteur/charles-oman/", "/en/author/karl-groos/": "/fr/auteur/karl-groos/", "/en/author/aleister-crowley/": "/fr/auteur/aleister-crowley/", "/en/author/nikolaj-konstantinovic-rerich/": "/fr/auteur/nikolaj-konstantinovic-rerich/", "/en/author/willa-cather/": "/fr/auteur/willa-cather/", "/en/author/charles-ferdinand-ramuz/": "/fr/auteur/charles-ferdinand-ramuz/", "/en/author/hans-fallada/": "/fr/auteur/hans-fallada/", "/en/author/ricarda-huch/": "/fr/auteur/ricarda-huch/", "/en/author/emma-orczy/": "/fr/auteur/emma-orczy/", "/en/author/arthur-machen/": "/fr/auteur/arthur-machen/", "/en/author/tristan-bernard/": "/fr/auteur/tristan-bernard/", "/en/author/wolfgang-borchert/": "/fr/auteur/wolfgang-borchert/", "/en/author/hugh-lofting/": "/fr/auteur/hugh-lofting/", "/en/author/felix-timmermans/": "/fr/auteur/felix-timmermans/", "/en/author/leon-paul-fargue/": "/fr/auteur/leon-paul-fargue/", "/en/author/elena-vacarescu/": "/fr/auteur/elena-vacarescu/", "/en/author/manuel-machado/": "/fr/auteur/manuel-machado/", "/en/author/marie-belloc-lowndes/": "/fr/auteur/marie-belloc-lowndes/", "/en/author/winston-churchill/": "/fr/auteur/winston-churchill/", "/en/author/jean-richard-bloch/": "/fr/auteur/jean-richard-bloch/", "/en/author/balys-sruoga/": "/fr/auteur/balys-sruoga/", "/en/author/yokomitsu-riichi/": "/fr/auteur/yokomitsu-riichi/", "/en/author/gregorio-martinez-sierra/": "/fr/auteur/gregorio-martinez-sierra/", "/en/author/yone-noguchi/": "/fr/auteur/yone-noguchi/", "/en/author/richard-le-gallienne/": "/fr/auteur/richard-le-gallienne/", "/en/author/benedict-wallet-vilakazi/": "/fr/auteur/benedict-wallet-vilakazi/", "/en/author/charles-nordhoff/": "/fr/auteur/charles-nordhoff/", "/en/author/koda-rohan/": "/fr/auteur/koda-rohan/", "/en/author/lloyd-osbourne/": "/fr/auteur/lloyd-osbourne/", "/en/author/angela-brazil/": "/fr/auteur/angela-brazil/", "/en/author/james-agate/": "/fr/auteur/james-agate/", "/en/author/max-jimenez/": "/fr/auteur/max-jimenez/", "/en/author/jean-ajalbert/": "/fr/auteur/jean-ajalbert/", "/en/author/oscar-nicolas-castro/": "/fr/auteur/oscar-nicolas-castro/", "/en/author/e-c-vivian/": "/fr/auteur/e-c-vivian/", "/en/author/edith-alleyne-sinnotte/": "/fr/auteur/edith-alleyne-sinnotte/", "/en/author/joaquin-gallegos-lara/": "/fr/auteur/joaquin-gallegos-lara/", "/en/author/saint-georges-de-bouhelier/": "/fr/auteur/saint-georges-de-bouhelier/", "/en/author/alfred-walter-stewart/": "/fr/auteur/alfred-walter-stewart/", "/en/author/max-maurey/": "/fr/auteur/max-maurey/", "/en/author/edouard-zotique-massicotte/": "/fr/auteur/edouard-zotique-massicotte/"});</script>
+<script>
+(() => {
+"use strict";
+const LING = ["en", "de", "fr", "es"].includes(document.documentElement.lang) ? document.documentElement.lang : "it";
+/* 26/11/2026: lingue in più. Le pagine di quelle lingue (storico/pagina.py) aggiungono T[lingua] tradotto, TRAD_LINGUA
+   (frasi brevi: inglese → lingua), LINK_LINGUA (indirizzi) e TITOLI_LINGUA (titoli delle opere nella lingua). Italiano e inglese non cambiano. */
+const LOCALI = { it: "it-IT", en: "en-GB", de: "de-DE", fr: "fr-FR", es: "es-ES" };
+const L2 = (it, en) => LING === "it" ? it : LING === "en" ? en : ((window.TRAD_LINGUA || {})[en] || en);
+const U2 = (it, en) => LING === "it" ? it : LING === "en" ? en : ((window.LINK_LINGUA || {})[en] || en);
+const SIMBOLI = {"teatro": "<path fill=\"A\" d=\"M4 5h40v3.5c-2.6 3-6.4 3-9 0-2.6 3-6.4 3-9 0h-4c-2.6 3-6.4 3-9 0-2.6 3-6.4 3-9 0z\"/><path fill=\"A\" d=\"M5 12h14c-.6 9-3.4 15.5-9.5 19.5 2.2 2.4 2.6 6.6 1.6 11.5H5z\"/><path fill=\"A\" d=\"M43 12H29c.6 9 3.4 15.5 9.5 19.5-2.2 2.4-2.6 6.6-1.6 11.5H43z\"/><rect fill=\"A\" x=\"3\" y=\"43\" width=\"42\" height=\"2.5\" rx=\"1.2\"/>", "fantascienza": "<circle fill=\"A\" cx=\"24\" cy=\"24\" r=\"11\"/><path fill=\"none\" stroke=\"B\" stroke-width=\"5\" d=\"M6.5 30.5c4 4.6 31 -4.4 35 -13\"/><path fill=\"none\" stroke=\"A\" stroke-width=\"2.6\" stroke-linecap=\"round\" d=\"M14.2 19.2C5.4 23.4 2.2 28.6 6.5 30.5c4 4.6 31-4.4 35-13 1.4-3.4-2.4-4.4-8.6-3.6\"/><path fill=\"A\" d=\"M39 4l1.2 3.3 3.3 1.2-3.3 1.2L39 13l-1.2-3.3-3.3-1.2 3.3-1.2zM9 38l.9 2.3 2.3.9-2.3.9L9 44.4l-.9-2.3-2.3-.9 2.3-.9z\"/>", "fantasy": "<path fill=\"A\" d=\"M14 44V20h-2v-8h4v3h3v-3h4v3h2v-3h4v3h3v-3h4v8h-2v24z\"/><path fill=\"A\" d=\"M24 12V3l9 3.2-9 3.2z\"/><path fill=\"B\" d=\"M20.5 44v-7a3.5 3.5 0 017 0v7zM22.6 24h2.8v5h-2.8z\"/>", "poesia": "<path fill=\"A\" d=\"M39 4C26 6 15 15 12.5 32l-1.5 6 4.5-1.5C33 34 39.5 21 39 4z\"/><path fill=\"none\" stroke=\"B\" stroke-width=\"1.6\" stroke-linecap=\"round\" d=\"M14 36L33 12M20.5 28l6-.6M24.5 22.8l6.2-1.4\"/><path fill=\"none\" stroke=\"A\" stroke-width=\"2.4\" stroke-linecap=\"round\" d=\"M14.2 36.2L8 44\"/>", "horror": "<circle fill=\"A\" cx=\"25\" cy=\"24\" r=\"17\"/><path fill=\"B\" d=\"M10 25c3-1.8 5.6-1.2 7 .8.6-2 2-3.3 3.6-3.6l1.2 2.4 1.2-1.4 1.2 1.4 1.2-2.4c1.6.3 3 1.6 3.6 3.6 1.4-2 4-2.6 7-.8-3.2.4-5 2.4-5.4 5-1.6-1.6-3.8-1.6-5 .4-1-1-2.2-1.4-3.6-1.4s-2.6.4-3.6 1.4c-1.2-2-3.4-2-5-.4-.4-2.6-2.2-4.6-5.4-5z\"/><path fill=\"A\" d=\"M6 41l.9 2.3 2.3.9-2.3.9L6 47.4l-.9-2.3-2.3-.9 2.3-.9zM42 4l.7 1.8 1.8.7-1.8.7L42 9l-.7-1.8-1.8-.7 1.8-.7z\"/>", "saggistica": "<path fill=\"A\" d=\"M22.5 13C17 9.5 10 9 4 10.5V38c6-1.5 13-1 18.5 2.5z\"/><path fill=\"A\" d=\"M25.5 13C31 9.5 38 9 44 10.5V38c-6-1.5-13-1-18.5 2.5z\"/><path fill=\"none\" stroke=\"B\" stroke-width=\"1.6\" stroke-linecap=\"round\" d=\"M8.5 17.5c3.6-.6 7.4-.2 10 1.2M8.5 23c3.6-.6 7.4-.2 10 1.2M8.5 28.5c3.6-.6 7.4-.2 10 1.2M29.5 18.7c2.6-1.4 6.4-1.8 10-1.2M29.5 24.2c2.6-1.4 6.4-1.8 10-1.2\"/>", "memorie": "<rect fill=\"A\" x=\"4\" y=\"11\" width=\"40\" height=\"27\" rx=\"2\"/><path fill=\"none\" stroke=\"B\" stroke-width=\"2\" stroke-linejoin=\"round\" d=\"M5 12.5l19 14 19-14\"/><circle fill=\"A\" cx=\"24\" cy=\"28\" r=\"5.4\"/><circle fill=\"B\" cx=\"24\" cy=\"28\" r=\"2.2\"/>", "ragazzi": "<path fill=\"A\" d=\"M30 3l12 14-12 16-12-16z\"/><path fill=\"none\" stroke=\"B\" stroke-width=\"1.6\" d=\"M30 3v30M18 17h24\"/><path fill=\"none\" stroke=\"A\" stroke-width=\"2\" stroke-linecap=\"round\" d=\"M30 33c-1 5-6 5-9 4.4s-6 .6-7 4.6-5 4.4-8 3\"/><path fill=\"A\" d=\"M22.6 37.6l-2.6-2.6-.4 3.8zM12.4 44.6l-1.8-3-1.4 3.4z\"/>", "giallo": "<circle fill=\"none\" stroke=\"A\" stroke-width=\"5\" cx=\"19\" cy=\"19\" r=\"12\"/><path fill=\"A\" d=\"M27.5 31.4l3.9-3.9 12.7 12.7a2.75 2.75 0 01-3.9 3.9z\"/><path fill=\"none\" stroke=\"A\" stroke-width=\"2\" stroke-linecap=\"round\" d=\"M13 15.5a7 7 0 016-4\"/>", "storico": "<path fill=\"A\" d=\"M8 6h32v3.5c-2 0-3.2 1.2-3.2 2.8H11.2C11.2 10.7 10 9.5 8 9.5zM12 14h24v3H12zM14 19h20v20H14zM11 40h26v3H11zM8 44h32v2.5H8z\"/><path fill=\"none\" stroke=\"B\" stroke-width=\"1.6\" d=\"M18 20v18M22 20v18M26 20v18M30 20v18\"/>", "satira": "<path fill=\"A\" d=\"M8 9c10-3.6 22-3.6 32 0 0 18-6.4 31-16 31S8 27 8 9z\"/><path fill=\"B\" d=\"M13.5 19.5c1.8-3 6.4-3 8.2 0-2.6-1.2-5.6-1.2-8.2 0zM26.3 19.5c1.8-3 6.4-3 8.2 0-2.6-1.2-5.6-1.2-8.2 0zM15 27c4.6 4.4 13.4 4.4 18 0-1 6.4-4.6 9.6-9 9.6S16 33.4 15 27z\"/>", "avventura": "<path fill=\"A\" d=\"M24 2l4.2 17.8L46 24l-17.8 4.2L24 46l-4.2-17.8L2 24l17.8-4.2z\"/><path fill=\"A\" d=\"M24 7l2.6 14.4L41 24l-14.4 2.6L24 41l-2.6-14.4L7 24l14.4-2.6z\" transform=\"rotate(45 24 24)\"/><path fill=\"A\" d=\"M24 2l4.2 17.8L46 24l-17.8 4.2L24 46l-4.2-17.8L2 24l17.8-4.2z\"/><circle fill=\"none\" stroke=\"B\" stroke-width=\"1.4\" cx=\"24\" cy=\"24\" r=\"6\"/><circle fill=\"B\" cx=\"24\" cy=\"24\" r=\"2.2\"/>", "viaggio": "<path fill=\"A\" d=\"M24 3c-9.4 0-16 6.8-16 15.4 0 7.6 5.6 12.4 10.4 15.8h11.2C34.4 30.8 40 26 40 18.4 40 9.8 33.4 3 24 3z\"/><path fill=\"none\" stroke=\"B\" stroke-width=\"1.6\" d=\"M24 3.5c-4.4 4-6.2 9.4-6.2 15s2 11 4.4 15.4M24 3.5c4.4 4 6.2 9.4 6.2 15s-2 11-4.4 15.4\"/><path fill=\"none\" stroke=\"A\" stroke-width=\"1.6\" d=\"M19.4 34.4l1.4 5.2M28.6 34.4l-1.4 5.2\"/><rect fill=\"A\" x=\"19.5\" y=\"39\" width=\"9\" height=\"6.5\" rx=\"1.2\"/>", "racconti": "<path fill=\"none\" stroke=\"A\" stroke-width=\"2.4\" d=\"M24 2.5a4 4 0 100 8 4 4 0 100-8z\" transform=\"translate(0 -1)\"/><path fill=\"A\" d=\"M14 10.5h20l3 4.5H11zM12.5 16h23v3h-23zM14 19h20l-1.5 19h-17zM11 38.5h26v4H11zM14 43h20v2.5H14z\"/><path fill=\"B\" d=\"M24 22.5c-3 3.6-4.2 6.6-4.2 9a4.2 4.2 0 008.4 0c0-2.4-1.2-5.4-4.2-9z\"/><path fill=\"none\" stroke=\"B\" stroke-width=\"1.4\" d=\"M18 19.5l-1 18M30 19.5l1 18\"/>", "guerra": "<path fill=\"A\" d=\"M24 6c3.6-3.6 10-2 11 3.6 5.6 1 7.2 7.4 3.6 11 3.6 3.6 2 10-3.6 11-1 5.6-7.4 7.2-11 3.6-3.6 3.6-10 2-11-3.6-5.6-1-7.2-7.4-3.6-11-3.6-3.6-2-10 3.6-11 1-5.6 7.4-7.2 11-3.6z\"/><circle fill=\"B\" cx=\"24\" cy=\"20.6\" r=\"5\"/><circle fill=\"A\" cx=\"24\" cy=\"20.6\" r=\"2.2\"/><path fill=\"none\" stroke=\"A\" stroke-width=\"2.2\" stroke-linecap=\"round\" d=\"M24 36v10\"/>", "sentimentale": "<path fill=\"A\" d=\"M24 42S6 31.4 6 18.6C6 12.4 10.6 8 16 8c3.6 0 6.4 1.8 8 4.6C25.6 9.8 28.4 8 32 8c5.4 0 10 4.4 10 10.6C42 31.4 24 42 24 42z\"/><path fill=\"none\" stroke=\"B\" stroke-width=\"1.6\" stroke-linecap=\"round\" d=\"M12.4 17.4c.4-2.8 2.4-4.6 5-4.8\"/>", "libro": "<path fill=\"A\" d=\"M10 5h24a4 4 0 014 4v34H14a4 4 0 01-4-4z\"/><path fill=\"none\" stroke=\"B\" stroke-width=\"1.6\" d=\"M14 5v31.5M10 39a4 4 0 014-4h24\"/><path fill=\"A\" d=\"M30 5h5v15l-2.5-2.2L30 20z\"/><path fill=\"B\" d=\"M19 13h12v1.8H19zM19 17h9v1.8h-9z\"/>", "calamaio": "<path fill=\"A\" d=\"M10 30c0-3.4 2.8-6 6.2-6h15.6c3.4 0 6.2 2.6 6.2 6v14H10z\"/><rect fill=\"A\" x=\"17\" y=\"20\" width=\"14\" height=\"5\" rx=\"1\"/><path fill=\"A\" d=\"M26 21L41 2.5c1.2 4.4.2 10.4-4.4 14.4-3 2.6-6.6 4-10.6 4.1z\"/><path fill=\"none\" stroke=\"B\" stroke-width=\"1.4\" stroke-linecap=\"round\" d=\"M27 20L37.5 8\"/>", "lampada": "<path fill=\"A\" d=\"M12 4h24l6 16H6z\"/><path fill=\"A\" d=\"M22.4 20h3.2v18h-3.2z\"/><path fill=\"A\" d=\"M12 40c0-3 3.4-5 12-5s12 2 12 5v4H12z\"/><path fill=\"none\" stroke=\"A\" stroke-width=\"1.6\" stroke-linecap=\"round\" d=\"M32 20v6\"/><circle fill=\"A\" cx=\"32\" cy=\"27.6\" r=\"1.6\"/>"};
+const T = {
+it: {
+  occ: "Storico del pubblico dominio", h1a: "È già ", h1b: "libero", h1c: "?",
+  lead: "Scrivi un titolo o un autore. Ti diciamo se si può già pubblicare e da quando, paese per paese.",
+  cerca: "Cerca un titolo o un autore", paese: "Paese",
+  paesi: { it: "Italia", fr: "Francia", de: "Germania", es: "Spagna", uk: "Regno Unito", us: "USA" },
+  inPaese: { it: "in Italia", fr: "in Francia", de: "in Germania", es: "in Spagna", uk: "nel Regno Unito", us: "negli USA" },
+  conti: "{o} opere e {a} autori da Wikidata, con l'anno di uscita e l'anno di morte degli autori. Le visite si misurano una volta al mese su una settimana (ultima: {s}).",
+  caricamento: "Caricamento…", errore: "Non riesco a leggere i dati. Riprova tra poco.",
+  risPer: "Risultati per «{q}»", nAut: "{n} autore", nAutP: "{n} autori", nOp: "{n} opera", nOpP: "{n} opere",
+  autore: "Autore", mortoNel: "morto nel {m}", mortoNelInc: "morto nel {m} (le fonti danno anni diversi: si usa il più tardo)", antico: "autore antico", morteNd: "anno di morte non noto",
+  operaN: "{n} opere nell'elenco", tutteOpere: "Tutte le opere dell'autore →", tutteN: "Tutte le {n} opere dell'autore →",
+  sMpfBreve: "Francia: non ancora libero, l'autore è «morto per la Francia» (30 anni in più, art. L123-10).",
+  ueLiberoP: "{p}: libero dal {y}", ueDalP: "{p}: dal 1° gennaio {y}",
+  nomiUe: ["Italia", "Francia", "Germania", "Regno Unito"], elenco: (x) => x.length > 1 ? x.slice(0, -1).join(", ") + " e " + x[x.length - 1] : x.join(""),
+  ueLiberoNoFr: "Italia, Germania, Regno Unito: libero dal {y}", ueDalNoFr: "Italia, Germania, Regno Unito: dal 1° gennaio {y}",
+  ueLibero: "Italia, Francia, Germania, Regno Unito: libero dal {y}", ueDal: "Italia, Francia, Germania, Regno Unito: dal 1° gennaio {y}",
+  esLibero: "Spagna: libero dal {y}", esDal: "Spagna: dal 1° gennaio {y}",
+  usRegola: "USA: ogni opera 95 anni dopo l'uscita",
+  anticoTutto: "Opere libere in tutti i paesi dell'elenco (autore antico).",
+  libero: "libero", dal: "dal {y}", nd: "non noto", verifica: "da verificare",
+  notaRis: "Ogni titolo mostra tutti i paesi: in Europa contano 70 anni dalla morte dell'autore (80 in Spagna per chi è morto prima del 1987), negli USA 95 anni dall'uscita. Calcolo indicativo, non è consulenza legale; traduzioni e illustrazioni hanno diritti propri.",
+  nessuno: "Nessun titolo o autore trovato in questo elenco.",
+  nessunoSpieg: "L'elenco contiene le opere che hanno una pagina Wikipedia e un anno su Wikidata, più le opere degli scrittori già liberi. Se un titolo non c'è, non vuol dire per forza che sia protetto: controlla l'anno di uscita e l'anno di morte dell'autore.",
+  prossimoK: "Non è ancora libero",
+  prossimo: "{nome} non è in questo elenco: è morto nel {m}, quindi in Italia, Francia, Germania e Regno Unito diventa libero il 1° gennaio {ue}, in Spagna nel {es}. Lo trovi nel radar con la sua scheda.",
+    appenaK: "Libero da poco",
+    appena: "{nome} è morto nel {m}: in Italia, Francia, Germania e Regno Unito è libero dal 1° gennaio {ue} (in Spagna dal {es}). Le sue opere entrano in questo elenco con il prossimo aggiornamento; intanto lo trovi nel radar con la sua scheda.",
+  apriRadar: "Apri la scheda nel radar", altriRis: "Mostra altri risultati",
+  soloQui: "Liberi {p}, non ancora altrove", soloQuiSub: "Opere già libere {p} che in almeno uno degli altri paesi sono ancora protette: è qui che i paesi si distinguono.",
+  soloQuiUe: "Italia, Francia, Germania e Regno Unito hanno la stessa regola (70 anni dalla morte): questi scaffali cambiano poco tra loro. Cambiano molto con Spagna e USA.",
+  contaLiberi: "{n} delle {t} opere con più visite su Wikipedia sono libere {p}.",
+  giaIn: "Già pubblici {p}", sfoglia: "Sfoglia gli scaffali",
+  introS: "Tutto quello che vedi qui sotto è <b>libero {p}</b>, il paese scelto in alto. Cambia paese e cambiano gli scaffali.",
+  piuLetti: "I più visitati", piuLettiSub: "Solo titoli già liberi {p}. Ordinati per visite alla Wikipedia {w}, {s}.",
+  wiki: { it: "in italiano", en: "in inglese", fr: "in francese", de: "in tedesco", es: "in spagnolo", tutte: "in inglese e in italiano" },
+  nuovi: "Liberi dal 1° gennaio {y}", nuoviUe: "Autori morti nel {m}: {p} contano 70 anni dalla morte.", nuoviEs: "Autori morti nel {m}: in Spagna contano 80 anni dalla morte.", nuoviUs: "Opere uscite nel {m}: negli USA contano 95 anni dall'uscita.",
+  autori: "Autori", autoriSub: "Classifica: gli autori con almeno tre titoli liberi {p}, in ordine di visite alle pagine Wikipedia {w} delle loro opere libere nella settimana {s}. Misura quanto sono cercate oggi, non quanto si vendono. In tutto {n}.",
+  vediTutti: "Vedi tutti i {n} →", vediMeno: "Mostra meno", vediTutto: "Vedi tutto →",
+  titoliLiberi: "{n} titoli liberi", titoli: "{n} titoli",
+  generi: "Per genere", generiSub: "Solo le opere che su Wikidata hanno un genere.", genere: "Genere",
+  lingue: "Per lingua originale", lingueSub: "La lingua in cui l'opera è stata scritta, secondo Wikidata.", lingueSubN: "La lingua in cui l'opera è stata scritta, secondo Wikidata. In ogni lingua, le opere con più visite sulla Wikipedia di quella lingua negli ultimi 12 mesi.", piuLetteLingua: "qui le 60 con più visite su {w}.wikipedia negli ultimi 12 mesi", lingua: "Lingua",
+  ritratti: "Ritratti da Wikimedia Commons", ritrattiPd: "in pubblico dominio", ritrattiTranne: "tranne", fotoDi: "foto di",
+  vuotoS: "Nessun titolo in questo scaffale.",
+  chiudi: "Chiudi", stati: "Paese per paese", wikidata: "Scheda su Wikidata →", uscita: "uscita nel {y}", uscitaNd: "anno di uscita non noto", entro: "Un'edizione esiste entro il {y}: lo confermano due cataloghi.",
+  sUeSi: "Libero: tutti gli autori sono morti da più di 70 anni.", sUeDal: "Libero dal 1° gennaio {y} (70 anni dalla morte dell'autore).",
+  sEsSi: "Libero: in Spagna contano 80 anni dalla morte per chi è morto prima del 1987.", sEsDal: "Libero dal 1° gennaio {y} (in Spagna 80 anni dalla morte per chi è morto prima del 1987).",
+  sUsSi: "Libero: uscito più di 95 anni fa.", sUsDal: "Libero dal 1° gennaio {y} (95 anni dall'uscita).", sUsSenza: "Libero: l'anno di uscita non è noto, ma l'autore è antico o morto da oltre 170 anni.",
+  sNd: "Non lo sappiamo: manca l'anno di morte o di uscita.",
+  sAlleato: "Autore di un paese alleato nella Seconda guerra mondiale: per le opere uscite prima del 10 giugno 1940 c'è chi sostiene che in Italia la protezione duri di più (Trattato di pace del 1947, allegato XV). I tribunali finora non l'hanno applicata: «Il piccolo principe» è libero in Italia dal 2015 (Tribunale di Milano 2021, Corte d'appello di Milano 2022).",
+  sAlleatoBreve: "Italia: per le opere uscite prima del 1940 c'è chi sostiene una proroga, perché l'autore era di un paese alleato (Trattato di pace del 1947); i tribunali finora non l'hanno applicata.",
+  sUsNo: "Da verificare negli USA: secondo Open Library l'opera è uscita nel {y}, non nell'anno che dà Wikidata.",
+  sUsNd: "Da verificare negli USA: l'anno di uscita viene solo da Wikidata e non l'abbiamo ancora confermato con una seconda fonte.",
+  sUk2039: "Nel Regno Unito: opera uscita per la prima volta dopo il 1988, di un autore morto prima del 1969: protetta fino al 31 dicembre 2039 (Copyright, Designs and Patents Act 1988, allegato 1, paragrafo 12).",
+  sUkPostumo: "Nel Regno Unito: opera uscita dopo la morte dell'autore e prima del 1989. Per le opere postume la durata può contare dalla pubblicazione: da verificare.",
+  sUkNd: "Nel Regno Unito: se l'opera è uscita per la prima volta dopo il 1988 e l'autore è morto prima del 1969, è protetta fino al 31 dicembre 2039.",
+  sFr: "In Francia gli autori «morti per la Francia» hanno 30 anni in più. Su Wikidata questo autore non risulta tale, ma l'elenco può essere incompleto: va verificato.",
+  sMpf: "In Francia non è ancora libero: l'autore è stato dichiarato «morto per la Francia» e ha 30 anni di protezione in più (Codice della proprietà intellettuale, art. L123-10). La data esatta dipende da quando è uscita ogni opera.",
+  sDuke: "Anno preso dagli elenchi del Public Domain Day della Duke University, non da Wikidata: da verificare.",
+  sUsPrima: "Conta la prima data di pubblicazione registrata su Wikidata: per le opere uscite prima a puntate o in rivista può essere diversa.",
+  sInc: "Le fonti danno anni di morte diversi: si usa il più tardo, per prudenza.",
+  sAntica_antica: "Testo antico: è libero dappertutto.",
+  sAntica_anonima: "Opera anonima: per la legge europea è libera 70 anni dopo la pubblicazione (Direttiva 2006/116/CE, art. 1).",
+  sConfine: "Da verificare: le fonti non concordano sull'anno di morte, e la differenza decide proprio se l'opera è già libera (per esempio Wikidata 1955, Library of Congress 1956).",
+  sCoaut: "Da verificare: tra gli autori c'è anche {n}, di cui Wikidata non dà l'anno di morte. Per gli altri autori il tempo è già passato.",
+  sconosciuto: "un autore sconosciuto",
+  sMusica: "{r} di {n} ha diritti propri, che durano 70 anni dalla morte: in Francia, Germania e Regno Unito è libero dal 1° gennaio {y}; in Italia e in Spagna la data può essere più tarda. Il testo no: vale la data qui sopra.",
+  sMusicaNd: "{r} di {n} ha diritti propri: non sappiamo quando scadono (manca l'anno di morte).",
+  ruoli: { compositore: "La musica", librettista: "Il libretto" },
+  sDisegni: "I disegni originali di {n} hanno diritti propri, che durano 70 anni dalla morte: in Italia, Francia, Germania e Regno Unito sono liberi dal 1° gennaio {y}. Il testo no: vale la data qui sopra.",
+  sGruppo: "«{g}» è un gruppo: contano gli anni di morte dei suoi membri.",
+  sManuale: "Coautore aggiunto da noi, non segnato su Wikidata: {n} (morto nel {m}). Fonte:",
+  posterRiga: "Poster disponibile", posterLink: "Poster disponibile su Etsy", posterSerie: "serie {s}",
+  piede1: "Calcolo indicativo, non è consulenza legale. È libero il testo originale, non l'edizione né la traduzione: traduzioni, illustrazioni e curatele recenti hanno diritti propri. Prima di pubblicare controlla la legge del paese.",
+  piede2: "Regole usate: Italia, Francia, Germania, Regno Unito 70 anni dalla morte dell'autore (nel Regno Unito le opere uscite per la prima volta dopo il 1988 di autori morti prima del 1969 sono protette fino al 2039); Spagna 80 anni per gli autori morti prima del 7 dicembre 1987; USA 95 anni dalla prima pubblicazione (si guarda la prima data registrata). In Italia, per le opere uscite prima del 1940 di autori di paesi alleati nella Seconda guerra mondiale, una nota ricorda che c'è chi sostiene una proroga (Trattato di pace del 1947), finora non applicata dai tribunali.",
+  piede3: "Fonti: Wikidata (CC0) per opere, autori e anni; Wikipedia per le visite della settimana; elenchi del Public Domain Day della Duke University (CC BY 4.0) come seconda fonte per gli USA; Wikimedia Commons per i ritratti, ciascuno con la sua licenza. Dati aggiornati ogni mese in automatico: possono contenere errori.",
+  piede4: "Un progetto di Marco Novali.", segnala: "Hai trovato un errore? Segnalalo",
+  dateFmt: (a, b) => `${a.getDate()}–${b.getDate()} ${MESI_IT[b.getMonth()]} ${b.getFullYear()}`,
+},
+en: {
+  occ: "Public domain archive", h1a: "Is it ", h1b: "free", h1c: " yet?",
+  lead: "Type a title or an author. We tell you whether it can already be published, and since when, country by country.",
+  cerca: "Search a title or an author", paese: "Country",
+  paesi: { it: "Italy", fr: "France", de: "Germany", es: "Spain", uk: "United Kingdom", us: "USA" },
+  inPaese: { it: "in Italy", fr: "in France", de: "in Germany", es: "in Spain", uk: "in the United Kingdom", us: "in the USA" },
+  conti: "{o} works and {a} authors from Wikidata, with the year of publication and the authors' year of death. Page views are measured once a month over one week (last: {s}).",
+  caricamento: "Loading…", errore: "I can't read the data. Please try again shortly.",
+  risPer: "Results for “{q}”", nAut: "{n} author", nAutP: "{n} authors", nOp: "{n} work", nOpP: "{n} works",
+  autore: "Author", mortoNel: "died in {m}", mortoNelInc: "died in {m} (sources give different years: the latest is used)", antico: "ancient author", morteNd: "year of death unknown",
+  operaN: "{n} works in the list", tutteOpere: "All works by this author →", tutteN: "All {n} works by this author →",
+  sMpfBreve: "France: not yet free, the author «died for France» (30 more years, art. L123-10).",
+  ueLiberoP: "{p}: free since {y}", ueDalP: "{p}: from 1 January {y}",
+  nomiUe: ["Italy", "France", "Germany", "United Kingdom"], elenco: (x) => x.length > 1 ? x.slice(0, -1).join(", ") + " and " + x[x.length - 1] : x.join(""),
+  ueLiberoNoFr: "Italy, Germany, United Kingdom: free since {y}", ueDalNoFr: "Italy, Germany, United Kingdom: from 1 January {y}",
+  ueLibero: "Italy, France, Germany, United Kingdom: free since {y}", ueDal: "Italy, France, Germany, United Kingdom: from 1 January {y}",
+  esLibero: "Spain: free since {y}", esDal: "Spain: from 1 January {y}",
+  usRegola: "USA: each work 95 years after publication",
+  anticoTutto: "Works free in every country of the list (ancient author).",
+  libero: "free", dal: "from {y}", nd: "unknown", verifica: "check",
+  notaRis: "Each title shows every country: in Europe what counts is 70 years from the author's death (80 in Spain for authors who died before 1987), in the USA 95 years from publication. An indicative calculation, not legal advice; translations and illustrations have their own rights.",
+  nessuno: "No title or author found in this list.",
+  nessunoSpieg: "The list holds the works that have a Wikipedia page and a year on Wikidata, plus the works of writers who are already free. If a title is missing, it is not necessarily protected: check the year of publication and the author's year of death.",
+  prossimoK: "Not free yet",
+  prossimo: "{nome} is not in this list: they died in {m}, so in Italy, France, Germany and the UK their works become free on 1 January {ue}, in Spain in {es}. You'll find them in the radar with their own page.",
+    appenaK: "Recently free",
+    appena: "{nome} died in {m}: in Italy, France, Germany and the UK their works have been free since 1 January {ue} (in Spain from {es}). They will join this list with the next update; meanwhile you'll find them in the radar with their own page.",
+  apriRadar: "Open their page in the radar", altriRis: "Show more results",
+  soloQui: "Free {p}, not yet elsewhere", soloQuiSub: "Works already free {p} that are still protected in at least one of the other countries: this is where the countries differ.",
+  soloQuiUe: "Italy, France, Germany and the United Kingdom share the same rule (70 years from death): these shelves change little between them. They change a lot with Spain and the USA.",
+  contaLiberi: "{n} of the {t} works with the most Wikipedia views are free {p}.",
+  giaIn: "Already public {p}", sfoglia: "Browse the shelves",
+  introS: "Everything you see below is <b>free {p}</b>, the country chosen above. Change the country and the shelves change.",
+  piuLetti: "Most visited", piuLettiSub: "Only titles already free {p}. Sorted by views of the {w} Wikipedia, {s}.",
+  wiki: { it: "Italian", en: "English", fr: "French", de: "German", es: "Spanish", tutte: "English and Italian" },
+  nuovi: "Free since 1 January {y}", nuoviUe: "Authors who died in {m}: {p} the term is 70 years from death.", nuoviEs: "Authors who died in {m}: in Spain the term is 80 years from death.", nuoviUs: "Works published in {m}: in the USA the term is 95 years from publication.",
+  autori: "Authors", autoriSub: "Ranking: authors with at least three titles free {p}, by views of the {w} Wikipedia pages of their free works in the week of {s}. It measures how much they are looked up today, not how well they sell. {n} in all.",
+  vediTutti: "See all {n} →", vediMeno: "Show less", vediTutto: "See all →",
+  titoliLiberi: "{n} free titles", titoli: "{n} titles",
+  generi: "By genre", generiSub: "Only works that have a genre on Wikidata.", genere: "Genre",
+  lingue: "By original language", lingueSub: "The language the work was written in, according to Wikidata.", lingueSubN: "The language the work was written in, according to Wikidata. In each language, the works with the most views on that language's Wikipedia over the last 12 months.", piuLetteLingua: "here the 60 with the most views on {w}.wikipedia over the last 12 months", lingua: "Language",
+  ritratti: "Portraits from Wikimedia Commons", ritrattiPd: "in the public domain", ritrattiTranne: "except", fotoDi: "photo by",
+  vuotoS: "No titles on this shelf.",
+  chiudi: "Close", stati: "Country by country", wikidata: "Wikidata entry →", uscita: "published in {y}", uscitaNd: "year of publication unknown", entro: "An edition exists by {y}: two catalogues confirm it.",
+  sUeSi: "Free: all authors died more than 70 years ago.", sUeDal: "Free from 1 January {y} (70 years from the author's death).",
+  sEsSi: "Free: in Spain the term is 80 years from death for authors who died before 1987.", sEsDal: "Free from 1 January {y} (in Spain 80 years from death for authors who died before 1987).",
+  sUsSi: "Free: published more than 95 years ago.", sUsDal: "Free from 1 January {y} (95 years from publication).", sUsSenza: "Free: the year of publication is unknown, but the author is ancient or died more than 170 years ago.",
+  sNd: "We don't know: the year of death or of publication is missing.",
+  sAlleato: "Author from an Allied country in the Second World War: for works published before 10 June 1940 some argue that protection in Italy lasts longer (1947 Peace Treaty, Annex XV). Courts have not applied it so far: «The Little Prince» has been free in Italy since 2015 (Milan Court 2021, Milan Court of Appeal 2022).",
+  sAlleatoBreve: "Italy: for works published before 1940 some argue for an extension, because the author was from an Allied country (1947 Peace Treaty); courts have not applied it so far.",
+  sUsNo: "To be checked in the USA: according to Open Library the work was published in {y}, not in the year Wikidata gives.",
+  sUsNd: "To be checked in the USA: the year of publication comes from Wikidata only and has not yet been confirmed by a second source.",
+  sUk2039: "In the United Kingdom: work first published after 1988, by an author who died before 1969: protected until 31 December 2039 (Copyright, Designs and Patents Act 1988, Schedule 1, paragraph 12).",
+  sUkPostumo: "In the United Kingdom: work published after the author's death and before 1989. For posthumous works the term may run from publication: to be checked.",
+  sUkNd: "In the United Kingdom: if the work was first published after 1988 and the author died before 1969, it is protected until 31 December 2039.",
+  sFr: "In France authors who «died for France» get 30 more years. Wikidata does not list this author as such, but the list may be incomplete: check.",
+  sMpf: "Not yet free in France: the author was declared «died for France» and gets 30 more years of protection (Intellectual Property Code, art. L123-10). The exact date depends on when each work was published.",
+  sDuke: "Year taken from Duke University's Public Domain Day lists, not from Wikidata: to be checked.",
+  sUsPrima: "What counts is the first publication date recorded on Wikidata: for works first published in instalments or in a magazine it may differ.",
+  sInc: "Sources give different years of death: the latest is used, to be safe.",
+  sAntica_antica: "Ancient text: it is free everywhere.",
+  sAntica_anonima: "Anonymous work: under EU law it is free 70 years after publication (Directive 2006/116/EC, art. 1).",
+  sConfine: "To be checked: the sources disagree on the year of death, and the difference decides whether the work is already free (for example Wikidata 1955, Library of Congress 1956).",
+  sCoaut: "To be checked: the authors also include {n}, whose year of death Wikidata does not give. For the other authors the term has already run out.",
+  sconosciuto: "an unknown author",
+  sMusica: "{r} by {n} has its own rights, lasting 70 years from death: in France, Germany and the UK it is free from 1 January {y}; in Italy and Spain the date may be later. The text does not: the date above applies.",
+  sMusicaNd: "{r} by {n} has its own rights: we do not know when they expire (the year of death is missing).",
+  ruoli: { compositore: "The music", librettista: "The libretto" },
+  sDisegni: "The original drawings by {n} have their own rights, lasting 70 years from death: in Italy, France, Germany and the UK they are free from 1 January {y}. The text does not: the date above applies.",
+  sGruppo: "«{g}» is a group: the years of death of its members count.",
+  sManuale: "Co-author added by us, not recorded on Wikidata: {n} (died in {m}). Source:",
+  posterRiga: "Poster available", posterLink: "Poster available on Etsy", posterSerie: "{s} series",
+  piede1: "An indicative calculation, not legal advice. What is free is the original text, not the edition or the translation: recent translations, illustrations and editions have their own rights. Check the law of the country before publishing.",
+  piede2: "Rules used: Italy, France, Germany, United Kingdom 70 years from the author's death (in the UK, works first published after 1988 by authors who died before 1969 are protected until 2039); Spain 80 years for authors who died before 7 December 1987; USA 95 years from first publication (the first recorded date is used). In Italy, for works published before 1940 by authors from Allied countries in the Second World War, a note recalls that some argue for an extension (1947 Peace Treaty), not applied by courts so far.",
+  piede3: "Sources: Wikidata (CC0) for works, authors and years; Wikipedia for this week's page views; Duke University's Public Domain Day lists (CC BY 4.0) as a second source for the USA; Wikimedia Commons for portraits, each with its own licence. Data updated automatically every month: it may contain errors.",
+  piede4: "A project by Marco Novali.", segnala: "Found a mistake? Report it",
+  dateFmt: (a, b) => `${a.getDate()}–${b.getDate()} ${MESI_EN[b.getMonth()]} ${b.getFullYear()}`,
+}};
+T["fr"] = Object.assign({}, T.en, {"occ": "Archives du domaine public", "h1a": "Est-ce déjà ", "h1b": "dans le domaine public", "h1c": " ?", "lead": "Saisissez un titre ou un auteur : nous vous indiquons s'il peut déjà être publié, et depuis quand, pays par pays.", "cerca": "Titre ou auteur", "paese": "Pays", "paesi": {"it": "Italie", "fr": "France", "de": "Allemagne", "es": "Espagne", "uk": "Royaume-Uni", "us": "États-Unis"}, "inPaese": {"it": "en Italie", "fr": "en France", "de": "en Allemagne", "es": "en Espagne", "uk": "au Royaume-Uni", "us": "aux États-Unis"}, "conti": "{o} œuvres et {a} auteurs issus de Wikidata, avec l'année de publication et l'année de décès des auteurs. Les consultations sont mesurées une fois par mois sur une semaine (dernière : {s}).", "caricamento": "Chargement…", "errore": "Impossible de lire les données. Réessayez dans un instant.", "risPer": "Résultats pour « {q} »", "nAut": "{n} auteur", "nAutP": "{n} auteurs", "nOp": "{n} œuvre", "nOpP": "{n} œuvres", "autore": "Auteur", "mortoNel": "mort en {m}", "mortoNelInc": "mort en {m} (les sources donnent des années différentes : la plus tardive est utilisée)", "antico": "auteur antique", "morteNd": "année de décès inconnue", "operaN": "{n} œuvres dans la liste", "tutteOpere": "Toutes les œuvres de cet auteur →", "tutteN": "Les {n} œuvres de cet auteur →", "sMpfBreve": "France : pas encore libre, l'auteur est « mort pour la France » (30 ans de plus, art. L123-10).", "ueLiberoP": "{p} : libre depuis {y}", "ueDalP": "{p} : à partir du 1er janvier {y}", "nomiUe": ["Italie", "France", "Allemagne", "Royaume-Uni"], "ueLiberoNoFr": "Italie, Allemagne, Royaume-Uni : libre depuis {y}", "ueDalNoFr": "Italie, Allemagne, Royaume-Uni : à partir du 1er janvier {y}", "ueLibero": "Italie, France, Allemagne, Royaume-Uni : libre depuis {y}", "ueDal": "Italie, France, Allemagne, Royaume-Uni : à partir du 1er janvier {y}", "esLibero": "Espagne : libre depuis {y}", "esDal": "Espagne : à partir du 1er janvier {y}", "usRegola": "États-Unis : chaque œuvre 95 ans après la publication", "anticoTutto": "Œuvres libres dans tous les pays de la liste (auteur antique).", "libero": "dans le domaine public", "dal": "à partir de {y}", "nd": "inconnue", "verifica": "à vérifier", "notaRis": "Chaque titre montre tous les pays : en Europe, c'est 70 ans après la mort de l'auteur qui compte (80 en Espagne pour les auteurs morts avant 1987), aux États-Unis 95 ans après la publication. Un calcul indicatif, pas un conseil juridique ; les traductions et les illustrations ont leurs propres droits.", "nessuno": "Aucun titre ni auteur trouvé dans cette liste.", "nessunoSpieg": "La liste contient les œuvres qui ont une page Wikipédia et une année sur Wikidata, plus les œuvres des écrivains déjà libres. Si un titre manque, il n'est pas forcément protégé : vérifiez l'année de publication et l'année de décès de l'auteur.", "prossimoK": "Pas encore libre", "prossimo": "{nome} ne figure pas dans cette liste : son année de décès étant {m}, ses œuvres deviennent libres en Italie, en France, en Allemagne et au Royaume-Uni le 1er janvier {ue}, en Espagne en {es}. Vous trouverez sa page dans le radar.", "appenaK": "Libres depuis peu", "appena": "Année de décès de {nome} : {m}. En Italie, en France, en Allemagne et au Royaume-Uni, ses œuvres sont libres depuis le 1er janvier {ue} (en Espagne à partir de {es}). Elles rejoindront cette liste à la prochaine mise à jour ; en attendant, vous trouverez sa page dans le radar.", "apriRadar": "Ouvrir sa page dans le radar", "altriRis": "Afficher plus de résultats", "soloQui": "Libres {p}, pas encore ailleurs", "soloQuiSub": "Œuvres déjà libres {p} et encore protégées dans au moins un des autres pays : c'est là que les pays diffèrent.", "soloQuiUe": "L'Italie, la France, l'Allemagne et le Royaume-Uni appliquent la même règle (70 ans après la mort) : d'un de ces pays à l'autre, les rayons varient peu. Ils varient beaucoup avec l'Espagne et les États-Unis.", "contaLiberi": "{n} des {t} œuvres les plus consultées sur Wikipédia sont libres {p}.", "giaIn": "Déjà libres {p}", "sfoglia": "Parcourir les rayons", "introS": "Tout ce que vous voyez ci-dessous est <b>libre {p}</b>, le pays choisi plus haut. Changez de pays, et les rayons changent.", "piuLetti": "Les plus consultés", "piuLettiSub": "Seulement des titres déjà libres {p}. Classés par consultations de la Wikipédia en {w}, {s}.", "wiki": {"it": "Italien", "en": "Anglais", "fr": "Français", "de": "Allemand", "es": "Espagnol", "tutte": "Anglais et italien"}, "nuovi": "Libres depuis le 1er janvier {y}", "nuoviUe": "Auteurs morts en {m} : {p}, la durée est de 70 ans après la mort.", "nuoviEs": "Auteurs morts en {m} : en Espagne, la durée est de 80 ans après la mort.", "nuoviUs": "Œuvres publiées en {m} : aux États-Unis, la durée est de 95 ans après la publication.", "autori": "Auteurs", "autoriSub": "Classement : auteurs avec au moins trois titres libres {p}, par consultations des pages Wikipédia en {w} de leurs œuvres libres pendant la semaine du {s}. Cela mesure à quel point ils sont recherchés aujourd'hui, pas leurs ventes. {n} au total.", "vediTutti": "Voir les {n} →", "vediMeno": "Afficher moins", "vediTutto": "Tout voir →", "titoliLiberi": "{n} titres libres", "titoli": "{n} titres", "generi": "Par genre", "generiSub": "Seulement les œuvres qui ont un genre sur Wikidata.", "genere": "Genre", "lingue": "Par langue originale", "lingueSub": "La langue dans laquelle l'œuvre a été écrite, selon Wikidata.", "lingueSubN": "La langue dans laquelle l'œuvre a été écrite, selon Wikidata. Dans chaque langue, les œuvres les plus consultées sur la Wikipédia de cette langue sur les 12 derniers mois.", "piuLetteLingua": "ici les 60 les plus consultées sur {w}.wikipedia sur les 12 derniers mois", "lingua": "Langue", "ritratti": "Portraits de Wikimedia Commons", "ritrattiPd": "dans le domaine public", "ritrattiTranne": "sauf", "fotoDi": "photo de", "vuotoS": "Aucun titre dans ce rayon.", "chiudi": "Fermer", "stati": "Pays par pays", "wikidata": "Fiche Wikidata →", "uscita": "publiée en {y}", "uscitaNd": "année de publication inconnue", "entro": "Une édition existe dès {y} : deux catalogues le confirment.", "sUeSi": "Libre : tous les auteurs sont morts il y a plus de 70 ans.", "sUeDal": "Libre à partir du 1er janvier {y} (70 ans après la mort de l'auteur).", "sEsSi": "Libre : en Espagne, la durée est de 80 ans après la mort pour les auteurs morts avant 1987.", "sEsDal": "Libre à partir du 1er janvier {y} (en Espagne, 80 ans après la mort pour les auteurs morts avant 1987).", "sUsSi": "Libre : publiée il y a plus de 95 ans.", "sUsDal": "Libre à partir du 1er janvier {y} (95 ans après la publication).", "sUsSenza": "Libre : l'année de publication est inconnue, mais l'auteur est antique ou mort il y a plus de 170 ans.", "sNd": "Nous ne savons pas : l'année de décès ou de publication manque.", "sAlleato": "Auteur d'un pays allié pendant la Seconde Guerre mondiale : pour les œuvres publiées avant le 10 juin 1940, certains soutiennent qu'en Italie la protection dure plus longtemps (traité de paix de 1947, annexe XV). Les tribunaux n'ont pas retenu cette thèse jusqu'ici : « Le Petit Prince » est libre en Italie depuis 2015 (tribunal de Milan 2021, cour d'appel de Milan 2022).", "sAlleatoBreve": "Italie : pour les œuvres publiées avant 1940, certains défendent l'idée d'une prolongation, parce que l'auteur venait d'un pays allié (traité de paix de 1947) ; les tribunaux ne l'ont pas appliquée jusqu'ici.", "sUsNo": "À vérifier aux États-Unis : selon Open Library, l'œuvre a été publiée en {y}, pas l'année indiquée par Wikidata.", "sUsNd": "À vérifier aux États-Unis : l'année de publication vient seulement de Wikidata et n'est pas encore confirmée par une deuxième source.", "sUk2039": "Au Royaume-Uni : œuvre publiée pour la première fois après 1988, d'un auteur mort avant 1969 : protégée jusqu'au 31 décembre 2039 (Copyright, Designs and Patents Act 1988, Schedule 1, paragraph 12).", "sUkPostumo": "Au Royaume-Uni : œuvre publiée après la mort de l'auteur et avant 1989. Pour les œuvres posthumes, la durée peut courir à partir de la publication : à vérifier.", "sUkNd": "Au Royaume-Uni : si l'œuvre a été publiée pour la première fois après 1988 et que l'auteur est mort avant 1969, elle est protégée jusqu'au 31 décembre 2039.", "sFr": "En France, les auteurs « morts pour la France » bénéficient de 30 ans supplémentaires. Wikidata ne classe pas cet auteur ainsi, mais la liste peut être incomplète : à vérifier.", "sMpf": "Pas encore libre en France : l'auteur a été déclaré « mort pour la France » et bénéficie de 30 ans de protection supplémentaires (Code de la propriété intellectuelle, art. L123-10). La date exacte dépend de la date de publication de chaque œuvre.", "sDuke": "Année tirée des listes du Public Domain Day de Duke University, pas de Wikidata : à vérifier.", "sUsPrima": "C'est la première date de publication enregistrée sur Wikidata qui compte : pour les œuvres parues d'abord en feuilleton ou dans une revue, elle peut être différente.", "sInc": "Les sources donnent des années de décès différentes : la plus tardive est utilisée, par prudence.", "sAntica_antica": "Texte antique : il est libre partout.", "sAntica_anonima": "Œuvre anonyme : selon le droit de l'UE, elle est libre 70 ans après sa publication (directive 2006/116/CE, art. 1).", "sConfine": "À vérifier : les sources ne s'accordent pas sur l'année de décès, et la différence décide si l'œuvre est déjà libre (par exemple Wikidata 1955, Library of Congress 1956).", "sCoaut": "À vérifier : parmi les auteurs figure aussi {n}, dont Wikidata ne donne pas l'année de décès. Pour les autres auteurs, la durée est déjà écoulée.", "sconosciuto": "un auteur inconnu", "sMusica": "{r} de {n} a ses propres droits, qui durent 70 ans après la mort : en France, en Allemagne et au Royaume-Uni, cet élément est libre à partir du 1er janvier {y} ; en Italie et en Espagne, la date peut être plus tardive. Ce n'est pas le cas du texte : c'est la date ci-dessus qui s'applique.", "sMusicaNd": "{r} de {n} a ses propres droits : nous ne savons pas quand ils expirent (l'année de décès manque).", "ruoli": {"compositore": "La musique", "librettista": "Le livret"}, "sDisegni": "Les dessins originaux de {n} ont leurs propres droits, qui durent 70 ans après la mort : en Italie, en France, en Allemagne et au Royaume-Uni, ils sont libres à partir du 1er janvier {y}. Ce n'est pas le cas du texte : c'est la date ci-dessus qui s'applique.", "sGruppo": "« {g} » est un groupe : ce sont les années de décès de ses membres qui comptent.", "sManuale": "Coauteur ajouté par nous, absent de Wikidata : {n} (mort en {m}). Source :", "posterRiga": "Affiche disponible", "posterLink": "Affiche disponible sur Etsy", "posterSerie": "Série {s}", "piede1": "Un calcul indicatif, pas un conseil juridique. Ce qui est libre, c'est le texte original, pas l'édition ni la traduction : les traductions, illustrations et éditions récentes ont leurs propres droits. Vérifiez la loi du pays avant de publier.", "piede2": "Règles appliquées : Italie, France, Allemagne, Royaume-Uni 70 ans après la mort de l'auteur (au Royaume-Uni, les œuvres publiées pour la première fois après 1988 par des auteurs morts avant 1969 sont protégées jusqu'en 2039) ; Espagne 80 ans pour les auteurs morts avant le 7 décembre 1987 ; États-Unis 95 ans après la première publication (la première date enregistrée est utilisée). En Italie, pour les œuvres publiées avant 1940 par des auteurs de pays alliés pendant la Seconde Guerre mondiale, une note rappelle que certains défendent l'idée d'une prolongation (traité de paix de 1947), que les tribunaux n'ont pas appliquée jusqu'ici.", "piede3": "Sources : Wikidata (CC0) pour les œuvres, les auteurs et les années ; Wikipédia pour les consultations de cette semaine ; les listes du Public Domain Day de Duke University (CC BY 4.0) comme deuxième source pour les États-Unis ; Wikimedia Commons pour les portraits, chacun avec sa licence. Données mises à jour automatiquement chaque mois : elles peuvent contenir des erreurs.", "piede4": "Un projet de Marco Novali.", "segnala": "Vous avez trouvé une erreur ? Signalez-la"}, { elenco: (x) => x.length > 1 ? x.slice(0, -1).join(", ") + " et " + x[x.length - 1] : x.join(""), dateFmt: (a, b) => a.getDate() + "–" + b.toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" }) });
+const MESI_IT = ["gennaio","febbraio","marzo","aprile","maggio","giugno","luglio","agosto","settembre","ottobre","novembre","dicembre"];
+const MESI_EN = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+const L = T[LING] || T.en;
+const GENERI = { it: { giallo: "Giallo e mistero", horror: "Horror e fantastico", fantasy_sf: "Fantasy e fantascienza", storico: "Romanzo storico", ragazzi: "Per ragazzi", poesia: "Poesia", saggio: "Saggi", memorie: "Memorie e biografie", satira: "Satira", avventura: "Avventura", sentimentale: "Romanzo sentimentale", guerra: "Guerra" },
+  en: { giallo: "Crime & mystery", horror: "Horror & weird fiction", fantasy_sf: "Fantasy & science fiction", storico: "Historical fiction", ragazzi: "Children's", poesia: "Poetry", saggio: "Essays", memorie: "Memoir & biography", satira: "Satire", avventura: "Adventure", sentimentale: "Romance", guerra: "War" } }[LING === "it" ? "it" : "en"];
+if (!["it", "en"].includes(LING)) for (const k in GENERI) GENERI[k] = L2(GENERI[k], GENERI[k]);   // lingue in più: dal catalogo
+const SIMBOLO_GENERE = { giallo: "giallo", fantasy_sf: "fantascienza", storico: "storico", horror: "horror", ragazzi: "ragazzi", memorie: "memorie", saggio: "saggistica", poesia: "poesia", avventura: "avventura", satira: "satira", sentimentale: "sentimentale", guerra: "guerra" };
+const SIMBOLI_NEUTRI = ["libro", "calamaio", "lampada"];
+const COLORI_TRAMA = [["#FF4326", "#0C0C10"], ["#E9E6DD", "#FF4326"], ["#0E3B2E", "#FF4326"], ["#1C1C24", "#FF4326"]];
+// lingue: solo colore piatto, nessun simbolo (regola di Marco: i simboli vanno solo su generi e copertine)
+const PIATTI = [["#FF4326", "#0C0C10"], ["#0E3B2E", "#F7F7F4"], ["#E9E6DD", "#0C0C10"], ["#2B3A8C", "#F7F7F4"], ["#F2B705", "#0C0C10"], ["#5B2A4E", "#F7F7F4"], ["#1C1C24", "#F7F7F4"], ["#7FB3A8", "#0C0C10"], ["#B5543A", "#F7F7F4"], ["#C9C3E6", "#0C0C10"]];
+const ARTICOLI = new Set(["the","a","an","il","lo","la","l","le","i","gli","un","una","uno","der","die","das","den","ein","eine","les","el","los","las","de","het"]);
+const VUOTE = new Set(["a", "am", "an", "and", "at", "by", "con", "da", "dal", "dalla", "das", "de", "degli", "dei", "del", "della", "delle", "dello", "dem", "den", "der", "des", "di", "die", "du", "e", "ed", "ein", "eine", "el", "en", "et", "for", "from", "gli", "het", "i", "il", "im", "in", "l", "la", "las", "le", "les", "lo", "los", "nel", "nella", "o", "of", "on", "op", "or", "per", "que", "su", "sul", "the", "to", "un", "una", "und", "uno", "van", "von", "with", "y", "zu"]);   // come VUOTE in storico/chiavi.py
+const UE = ["it", "fr", "de"];
+const NON_AUTORI = /^(various authors|group of authors|anonymous|anonimo|autori vari|unknown)/i;   // non sono persone: fuori dalla classifica
+
+/* ---------- strumenti ---------- */
+function h(tag, attrs, ...figli) {
+  const e = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs || {})) {
+    if (v === null || v === undefined || v === false) continue;
+    if (k.startsWith("on") && typeof v === "function") e.addEventListener(k.slice(2), v);
+    else if (k === "html") e.innerHTML = v;
+    else e.setAttribute(k, v === true ? "" : v);
+  }
+  for (const f of figli.flat()) { if (f === null || f === undefined || f === false) continue; e.append(f.nodeType ? f : document.createTextNode(String(f))); }
+  return e;
+}
+const $ = (s) => document.querySelector(s);
+const num = (x) => Number(x).toLocaleString(LOCALI[LING]);
+const tr = (k, p) => String(L[k]).replace(/\{(\w+)\}/g, (_, x) => (p && p[x] !== undefined ? p[x] : ""));
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+function hashNumero(s) { let x = 0; for (const c of s) x = (x * 31 + c.charCodeAt(0)) >>> 0; return x; }
+function parole(t) { return String(t || "").normalize("NFKD").replace(/[̀-ͯ]/g, "").toLowerCase().match(/[a-z0-9]+/g) || []; }
+const lettera = (p) => (p && /[a-z]/.test(p[0]) ? p.slice(0, 2) : "_");
+async function leggi(url) { const r = await fetch(url, { cache: "no-cache" }); if (!r.ok) throw new Error(url + " " + r.status); return r.json(); }
+function iniziali(nome) { const p = nome.replace(/[().,]/g, " ").split(/\s+/).filter(Boolean); return p.length ? (p[0][0] + (p.length > 1 ? p[p.length - 1][0] : "")).toUpperCase() : "?"; }
+function cognome(nome) { const p = nome.split(/\s+/).filter(Boolean); return p.length ? p[p.length - 1] : nome; }
+
+/* ---------- dati ---------- */
+const D = { mpf: new Set(), verifiche: {}, anno: new Date().getFullYear(), opere: [], aut: new Map(), foto: {}, prossimi: [], file: new Map(), perAutore: new Map(), paese: "it" };
+// opera normalizzata: { q, t, ti, y, yd, au:[{q,n,m,an,inc,al}], v, g:[], l, pg }
+function daRiga(r) {   // riga dei file di ricerca: [qid, titolo, titolo_it, anno, pagine, autori, anno_duke]
+  return pulisciAnno({ q: r[0], t: r[1], ti: r[2] || "", y: r[3] === null || r[3] === undefined ? null : r[3], pg: r[4] || 0, yd: r[6] || 0,
+    au: (r[5] || []).map((a) => ({ q: a[0], n: nomeQ(a[0], a[1]), m: a[2], an: !!a[3], inc: a[4] || 0, al: !!a[5] })), v: 0, g: [], l: null });
+}
+// coautori: la decisione è nel REGISTRO UNICO (data/registro/opere.json, storico/registro_opere.py, regola in
+// scripts/regole.py autori_che_contano). Qui si applica soltanto, non si decide.
+function coautori(o) {
+  const e = (D.regOpere || {})[o.q];
+  let au = o.au.map((a) => ({ ...a }));
+  if (e) {
+    for (const x of e.add || []) if (!au.some((a) => a.q === x[0])) au.push({ q: x[0], n: x[1], m: x[2], an: false, inc: 0, al: false, man: { fonte: x[3], fonte_nome: x[4] } });
+    au = au.filter((a) => !(e.x || []).includes(a.q));
+    for (const a of au) {
+      if (e.m && e.m[a.q] !== undefined) { a.m = e.m[a.q]; a.gr = true; }
+      if ((e.sc || []).includes(a.q)) a.sc = true;
+      if ((e.an || []).includes(a.q)) a.an = true;
+    }
+  }
+  o.au = au;
+  o.mu = (e && e.mu) || null;
+  o.antica = (e && e.antica) || null;   // libera dappertutto per età: «a mano», «creazione», «anonima» (scripts/regole.py)
+  return o;
+}
+function pulisciAnno(o) {
+  coautori(o);
+  o.y = REGOLE_PAESI.annoOperaCredibile(o.y, o.au);   // anni impossibili rispetto alla morte degli autori: scripts/regole.py
+  o.y = REGOLE_PAESI.annoDeciso(o.q, o.y, D.decise);   // anno deciso nel registro delle opere, anche se i file sono vecchi (23/11/2026)
+  return o;
+}
+
+/* ---------- regole per paese e per opera: scripts/regole.py (stato_opera), qui il gemello di assets/regole.js ---------- */
+// restituisce { s: "si" | "dal" | "nd" | "ver", y, note: [] }. Non scrivere regole qui: vanno in scripts/regole.py.
+const stato = (o, c) => REGOLE_PAESI.statoOpera(o, c, D.anno, D.mpf, D.verifiche);
+const liberaUe = (o) => REGOLE_PAESI.liberaUeOpera(o, D.anno);
+const _lib = new Map();
+const libera = (o, c) => { const k = o.q + c; if (!_lib.has(k)) _lib.set(k, stato(o, c).s === "si"); return _lib.get(k); };
+
+/* ---------- copertine ---------- */
+const _trame = new Map();
+function trama(generi, seme, c) {
+  let nome = null;
+  for (const g of generi || []) { if (SIMBOLO_GENERE[g]) { nome = SIMBOLO_GENERE[g]; break; } }
+  if (!nome) nome = SIMBOLI_NEUTRI[hashNumero(seme) % 3];
+  const id = nome + c;
+  if (!_trame.has(id)) {
+    const [fondo, dis] = COLORI_TRAMA[c];
+    const g = (x, y) => `<g transform="translate(${x} ${y}) scale(.5)">${SIMBOLI[nome].split('"A"').join(`"${dis}"`).split('"B"').join(`"${fondo}"`)}</g>`;
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="58" height="58">${g(6, 6)}${g(35, 35)}<circle cx="46" cy="16" r="1.6" fill="${dis}"/><circle cx="17" cy="45" r="1.6" fill="${dis}"/></svg>`;
+    _trame.set(id, `url("data:image/svg+xml,${encodeURIComponent(svg)}")`);
+  }
+  return h("span", { class: "trama", "aria-hidden": "true", style: `background-image:${_trame.get(id)}` });
+}
+const titolo = (o) => (LING === "it" && o.ti) || (!["it", "en"].includes(LING) && (window.TITOLI_LINGUA || {})[o.q]) || o.t || o.ti;
+// autore anonimo: su Wikidata è un «valore sconosciuto», che arriva come indirizzo tecnico (20/11/2026)
+const nomeA = (n) => (!n || /^https?:\/\//.test(n)) ? L2("Anonimo", "Anonymous") : n;
+// nomi italiani degli autori (storico/nomi_it.py, 21/11/2026): sulla pagina italiana «Lev Tolstoj», non «Leo Tolstoy»
+let NOMI_IT = {};
+let ET_LINGUA = {};   // nomi di paesi e lingue nella lingua della pagina (data/etichette_<lingua>.json)
+const nomeQ = (q, n) => (LING === "it" && NOMI_IT[q]) || nomeA(n);
+const autoriTxt = (o) => o.au.slice(0, 2).map((a) => a.n).join(", ");
+const annoTxt = (y) => (y === null ? "" : y < 0 ? (LING === "it" ? `${-y} a.C.` : L2("", "{y} BC").replace("{y}", -y)) : String(y));
+/* colore della copertina: parte dal colore «suo» (dal titolo) ma in fila non ripete il colore di quella prima e non mette
+   più di due copertine chiare (beige, bianca) o scure (rossa, nera) di seguito (Marco, 21/11/2026) */
+const CHIARI = new Set([1, 3]);
+function coloreInFila(base, prima) {
+  for (let k = 0; k < 4; k++) {
+    const c = (base + k) % 4, n = prima.length;
+    if (n && prima[n - 1] === c) continue;
+    if (n >= 2 && [prima[n - 1], prima[n - 2], c].every((x) => CHIARI.has(x) === CHIARI.has(c))) continue;
+    return c;
+  }
+  return base;
+}
+function copertina(o, prima) {
+  if (!Array.isArray(prima)) prima = null;   // chiamata anche come .map(copertina): il secondo argomento è l'indice
+  const t = titolo(o), base = hashNumero(t + autoriTxt(o)) % 4, c = prima ? coloreInFila(base, prima) : base;
+  if (prima) prima.push(c);
+  const lunga = Math.max(...t.split(/\s+/).map((w) => w.length));
+  let dim = t.length <= 14 ? 30 : t.length <= 28 ? 25 : t.length <= 45 ? 20 : 16;
+  dim = Math.max(13, Math.min(dim, Math.floor(150 / (0.5 * lunga))));
+  const sotto = [autoriTxt(o), annoTxt(o.y)].filter(Boolean).join(" · ");
+  return h("button", { class: "bk", type: "button", role: "listitem", "aria-label": [t, sotto].filter(Boolean).join(", "), onclick: () => apriOpera(o) },
+    h("span", { class: `cvr c${c}`, "aria-hidden": "true" }, h("span", {}, annoTxt(o.y)), h("b", { style: `font-size:${dim}px` }, t), h("span", {}, (o.au[0] && o.au[0].n) || "")),
+    h("p", {}, t, h("span", {}, sotto)));
+}
+
+/* ---------- finestra ---------- */
+let _prima = null;
+function finestra(...contenuto) {
+  _prima = document.activeElement;
+  $("#fin-corpo").replaceChildren(...contenuto.filter((x) => x !== null && x !== undefined));   // prima un null diventava la scritta «null»
+  $("#finestra").hidden = false;
+  document.body.style.overflow = "hidden";
+  $("#fin-chiudi").focus();
+}
+function chiudi() { $("#finestra").hidden = true; document.body.style.overflow = ""; if (_prima && _prima.focus) _prima.focus(); }
+$("#fin-chiudi").addEventListener("click", chiudi);
+$("#fin-chiudi").setAttribute("aria-label", L.chiudi);
+$("#finestra").addEventListener("click", (e) => { if (e.target.id === "finestra") chiudi(); });
+addEventListener("keydown", (e) => { if (e.key === "Escape" && !$("#finestra").hidden) chiudi(); });
+
+function testoStato(o, c) {
+  const st = stato(o, c);
+  if (st.s === "ver" && st.note.includes("sConfine")) return L.sConfine;
+  if (st.s === "ver" && st.note.includes("sCoaut")) return tr("sCoaut", { n: o.au.filter((a) => a.sc).map((a) => /^https?:|^[0-9a-f]{32}$/.test(a.q) || a.n === L2("Anonimo", "Anonymous") ? L.sconosciuto : a.n).join(", ") });
+  if (st.s === "ver" && st.note.includes("sMpf")) return L.sMpf;
+  if (st.s === "ver") return c === "uk" ? L.sUkPostumo : c === "us" ? (st.note.includes("sUsNo") ? tr("sUsNo", { y: st.y2 }) : L.sUsNd) : L.sAlleato;
+  if (st.s === "nd") return L.sNd;
+  if (c === "us") return st.s === "si" ? (st.senza ? L.sUsSenza : L.sUsSi) : tr("sUsDal", { y: st.y });
+  if (c === "es") return st.s === "si" ? L.sEsSi : tr("sEsDal", { y: st.y });
+  return st.s === "si" ? L.sUeSi : tr("sUeDal", { y: st.y });
+}
+function apriOpera(o) {
+  const righe = ["it", "fr", "de", "es", "uk", "us"].map((c) => {
+    const st = stato(o, c);
+    const extra = st.note.filter((k) => k !== "sMpf" && k !== "sCoaut" && k !== "sConfine" && k !== "sUsNo" && k !== "sUsNd" && !(st.s === "ver" && k === "sUkPostumo") && !(k === "sUsPrima" && ((D.decise || {})[o.q] || {}).tipo === "uscita")).map((k) => h("span", { style: "display:block;margin-top:4px;font-size:13px;color:#5C5C66" }, L[k]));
+    return h("li", {}, h("span", { class: "p" }, L.paesi[c], " ", badge(st)), h("span", {}, testoStato(o, c), extra));
+  });
+  const orig = LING === "it" && o.ti && o.t && o.ti !== o.t ? o.t : null;
+  finestra(h("h2", { id: "fin-tit" }, titolo(o)),
+    orig ? h("p", { style: "margin:8px 0 0;color:#5C5C66" }, orig) : null,
+    h("p", { style: "margin:12px 0 0;font-size:16px" }, [autoriTxt(o), o.y !== null ? tr("uscita", { y: annoTxt(o.y) }) : L.uscitaNd].filter(Boolean).join(" · ")),
+    h("h3", { class: "mono", style: "margin:24px 0 0;font-size:12px;color:var(--redt)" }, L.stati),
+    h("ul", { class: "stati" }, righe),
+    noteOpera(o),
+    posterOpera(o),
+    h("p", {}, h("a", { class: "link-forte", href: `https://www.wikidata.org/wiki/${o.q}`, rel: "noopener", target: "_blank" }, L.wikidata)),
+    h("p", { class: "nota" }, L.piede1));
+}
+function posterOpera(o) {   // 25/11/2026: le opere di cui abbiamo un poster (data/poster.json, lo stesso elenco dello Shop)
+  const p = D.poster && D.poster.get(o.q);
+  if (!p) return null;
+  const url = `https://publicdomainradar.etsy.com/${LING === "it" ? "it/" : ["de", "fr", "es"].includes(LING) ? LING + "/" : ""}listing/${p.etsy}`;
+  return h("p", { class: "poster-op" }, h("a", { class: "link-forte", href: url, rel: "noopener", target: "_blank" }, L.posterLink + " ↗"),
+    h("span", {}, "«" + p.frase + "»" + (p.serie ? " · " + tr("posterSerie", { s: p.serie }) : "")));
+}
+function noteOpera(o) {   // gruppi, coautori aggiunti a mano, musica e libretto (regola del 20/11/2026)
+  const Y = D.anno, r = [];
+  for (const a of o.au) {
+    if (a.gr) r.push(tr("sGruppo", { g: a.n }));
+    if (a.man) r.push(h("span", {}, tr("sManuale", { n: a.n, m: a.m }), " ", h("a", { href: a.man.fonte, rel: "noopener", target: "_blank" }, a.man.fonte_nome || a.man.fonte)));
+  }
+  for (const [ruolo, n, m] of o.mu || []) {
+    if (!n) continue;
+    if (ruolo === "illustratore") {   // 23/11/2026: disegni originali con diritti propri
+      if (m !== null && m !== undefined && REGOLE_PAESI.annoLibero(m, "it") > Y) r.push(tr("sDisegni", { n, y: REGOLE_PAESI.annoLibero(m, "it") }));
+      continue;
+    }
+    const ra = (L.ruoli || {})[ruolo] || ruolo;
+    if (m === null || m === undefined) r.push(tr("sMusicaNd", { r: ra, n }));
+    else if (REGOLE_PAESI.annoLibero(m, "de") > Y) r.push(tr("sMusica", { r: ra, n, y: REGOLE_PAESI.annoLibero(m, "de") }));
+  }
+  const dec = (D.decise || {})[o.q];   // 23/11/2026: anno e nota dal registro delle opere (scripts/registro.py, opere_decise)
+  if (dec && dec.nota && (dec.nota[LING] || dec.nota.en)) r.push(LING === "it" || LING === "en" ? dec.nota[LING] : L2(dec.nota.it, dec.nota.en));
+  if (dec && dec.tipo === "entro" && o.y === null) r.push(tr("entro", { y: dec.anno }));
+  return r.length ? h("div", { style: "margin-top:12px;font-size:14px;color:#5C5C66" }, r.map((x) => h("p", { style: "margin:6px 0 0" }, x))) : null;
+}
+function badge(st) {
+  if (st.s === "si") return h("span", { class: "b si" }, L.libero);
+  if (st.s === "ver") return h("span", { class: "b ver" }, L.verifica);
+  if (st.s === "dal") return h("span", { class: "b dal" }, tr("dal", { y: st.y }));
+  return h("span", { class: "b nd" }, L.nd);
+}
+function griglia(tit, sotto, opere) {
+  finestra(h("h2", { id: "fin-tit" }, tit), sotto ? h("p", { style: "margin:10px 0 0;color:#5C5C66" }, sotto) : null,
+    opere.length ? h("div", { class: "griglia" }, ((pr) => opere.map((o) => copertina(o, pr)))([])) : h("p", {}, L.vuotoS));
+}
+
+/* ---------- ricerca ---------- */
+async function fileRicerca(k) {
+  if (!D.file.has(k)) D.file.set(k, leggi(`/data/storico/ricerca/${k}.json`).catch(() => ({ opere: [], autori: [] })));
+  return D.file.get(k);
+}
+function chiavi(q) {
+  // stessa regola di storico/chiavi.py: le opere stanno sotto ogni parola del titolo che conta (21/11/2026),
+  // gli autori sotto la prima e l'ultima parola del nome. Basta un file per parola cercata.
+  const p = parole(q); if (!p.length) return [];
+  const ks = new Set([lettera(p[0]), lettera(p[p.length - 1])]);
+  for (const w of p) if (!VUOTE.has(w) && (w.length >= 3 || /^\d+$/.test(w))) { ks.add(lettera(w)); break; }
+  return [...ks];
+}
+function contiene(testo, tok) { const w = parole(testo); return tok.every((t) => w.some((x) => x.startsWith(t))); }
+// autore con anno di morte prima dell'anno 1 (es. Omero, -800): si mostra come «autore antico», non «morto nel -800, libero dal -729» (Marco, 25/11/2026)
+function antico(a) { return !!a.an || (a.m !== null && a.m !== undefined && a.m < 1); }
+function statoAutore(a) {
+  if (antico(a)) return [L.anticoTutto];
+  if (a.m === null || a.m === undefined) return [L.morteNd];
+  // date e paesi da scripts/regole.py (assets/regole.js): la Francia esce se «morto per la Francia»; per i paesi alleati una nota
+  const Y = D.anno, ue = REGOLE_PAESI.annoLibero(a.m, "it"), es = REGOLE_PAESI.annoLibero(a.m, "es");
+  const mpf = D.mpf.has(a.q) && REGOLE_PAESI.annoLibero(a.m, "fr", true) > Y;   // «morto per la Francia» (storico/mpf.py)
+  const ver = REGOLE_PAESI.notaTrattatoFlag(a.al, a.m, Y);
+  const paesi = L.nomiUe.filter((x, i) => !(i === 1 && mpf));
+  const r = [tr(ue <= Y ? "ueLiberoP" : "ueDalP", { p: L.elenco(paesi), y: ue }), tr(es <= Y ? "esLibero" : "esDal", { y: es }) + " · " + L.usRegola];
+  if (mpf) r.splice(1, 0, L.sMpfBreve);
+  if (ver) r.push(L.sAlleatoBreve);
+  return r;
+}
+window.statoAutore = statoAutore;   // per scripts/controllo_pagine.py: confronta queste frasi con scripts/regole.py
+window._prova = { D, daRiga, stato: (o, c) => stato(o, c), liberaUe: (o) => liberaUe(o) };   // solo per le prove (scripts/prova_regole.py, casi di riferimento)
+function rigaOpera(o) {
+  const orig = LING === "it" && o.ti && o.t && o.ti !== o.t ? o.t : null;
+  return h("li", { class: "riga" },
+    h("button", { class: "tit", type: "button", onclick: () => apriOpera(o) },
+      h("span", { class: "t" }, titolo(o), orig ? h("span", { class: "o" }, " · " + orig) : null),
+      h("span", { class: "a" }, [autoriTxt(o), annoTxt(o.y)].filter(Boolean).join(" · ")),
+      D.poster && D.poster.has(o.q) ? h("span", { class: "pst" }, L.posterRiga) : null),
+    h("span", { class: "badge" }, ["it", "fr", "de", "es", "uk", "us"].map((c) => {
+      const st = stato(o, c), b = badge(st);
+      b.prepend(h("span", {}, c.toUpperCase()));
+      if (c === D.paese) b.classList.add("attivo");
+      b.setAttribute("title", L.paesi[c]);
+      return b;
+    })));
+}
+async function opereDiAutore(qid) {
+  const k = String(Number(qid.slice(1)) % 100).padStart(2, "0");
+  if (!D.perAutore.has(k)) D.perAutore.set(k, leggi(`/data/storico/per_autore/${k}.json`).catch(() => ({})));
+  const d = await D.perAutore.get(k);
+  return (d[qid] || []).map(daRiga);
+}
+function arricchisci(o) { const x = D.indice.get(o.q); if (x) { o.v = x.v; o.g = x.g; o.l = x.l; } return o; }
+function schedaAutore(a, n, subito) {
+  const morte = antico(a) ? L.antico : a.m === null || a.m === undefined ? L.morteNd : tr(a.inc ? "mortoNelInc" : "mortoNel", { m: a.m });
+  const lista = h("ul", { class: "righe" });
+  const bott = h("button", { class: "altro", type: "button", onclick: async () => {
+    bott.disabled = true;
+    const opere = (await opereDiAutore(a.q)).map(arricchisci).sort((x, y) => y.pg - x.pg);
+    // aperte da sole: le prime 10, il resto con un pulsante (così i titoli trovati sotto restano vicini)
+    const primi = subito && opere.length > 12 ? opere.slice(0, 10) : opere;
+    lista.replaceChildren(...primi.map(rigaOpera)); bott.remove();
+    if (primi.length < opere.length) {
+      const b2 = h("button", { class: "altro", type: "button", onclick: () => { lista.replaceChildren(...opere.map(rigaOpera)); b2.remove(); } }, tr("tutteN", { n: num(opere.length) }));
+      lista.after(b2);
+    }
+  } }, L.tutteOpere);
+  if (subito) setTimeout(() => bott.click(), 0);   // un solo autore trovato: le sue opere si mostrano subito
+  return h("div", {}, h("div", { class: "aut-card" }, h("div", {},
+      h("div", { class: "mono", style: "font-size:11px;color:#5C5C66" }, L.autore),
+      h("div", { class: "nome" }, a.n),
+      h("div", { class: "det" }, morte, " · ", tr("operaN", { n: num(n) })),
+      statoAutore(a).map((t) => h("div", { class: "det" }, h("b", {}, t))),
+      bott, linkRadar(a.q))), lista);
+}
+function linkRadar(qid) {
+  const p = D.prossimi.find((x) => x.w === qid);
+  if (!p) return null;
+  return h("div", {}, h("a", { class: "link-forte", href: LING !== "it" ? (p.pe ? U2("", `/en/author/${p.pe}/`) : U2("/", "/en/")) : `/autore/${p.p}/` }, L.apriRadar + " →"));
+}
+function prossimo(q) {
+  const tok = parole(q); if (!tok.length) return null;
+  return D.prossimi.find((p) => contiene(p.n, tok)) || null;
+}
+let _cerca = 0;
+async function cerca(q) {
+  const box = $("#risultati");
+  const tok = parole(q);
+  if (tok.join("").length < 2) { box.replaceChildren(); return; }
+  const mio = ++_cerca;
+  const files = await Promise.all(chiavi(q).map(fileRicerca));
+  if (mio !== _cerca) return;
+  const autori = new Map(), opere = new Map();
+  for (const f of files) {
+    for (const r of f.autori) if ((contiene(r[1], tok) || (r[7] && contiene(r[7], tok))) && !autori.has(r[0])) autori.set(r[0], { a: { q: r[0], n: (LING === "it" && r[7]) || r[1], m: r[2], an: !!r[4], inc: r[5] || 0, al: !!r[6] }, n: r[3] });
+    for (const r of f.opere) if (!opere.has(r[0]) && (contiene(r[1], tok) || contiene(r[2], tok))) opere.set(r[0], arricchisci(daRiga(r)));
+  }
+  const qn = tok.join(" ");
+  const la = [...autori.values()].sort((x, y) => y.n - x.n).slice(0, 3);
+  const lo = [...opere.values()].sort((x, y) => (parole(titolo(y)).join(" ") === qn) - (parole(titolo(x)).join(" ") === qn) || y.pg - x.pg);
+  const parti = [h("h2", { class: "r-tit" }, tr("risPer", { q: q.trim() })),
+    h("p", { class: "r-sotto" }, [autori.size ? tr(autori.size === 1 ? "nAut" : "nAutP", { n: num(autori.size) }) : "", lo.length ? tr(lo.length === 1 ? "nOp" : "nOpP", { n: num(lo.length) }) : ""].filter(Boolean).join(" · "))];
+  // le opere dell'autore si aprono da sole se è l'unico trovato o se il nome è proprio quello cercato («Omero» → le opere di Omero, 25/11/2026)
+  // e anche se è di gran lunga il più presente («Dante» → Dante Alighieri, 149 opere contro 2)
+  const apri0 = la.length === 1 || parole(la[0] ? la[0].a.n : "").join(" ") === qn || (la.length > 1 && la[0].n >= 10 && la[0].n >= 10 * la[1].n);
+  la.forEach((x, i) => parti.push(schedaAutore(x.a, x.n, i === 0 && apri0)));
+  if (lo.length) {
+    const lista = h("ul", { class: "righe" }, lo.slice(0, 20).map(rigaOpera));
+    parti.push(lista);
+    if (lo.length > 20) { const b = h("button", { class: "altro", type: "button", onclick: () => { lista.replaceChildren(...lo.map(rigaOpera)); b.remove(); } }, L.altriRis); parti.push(b); }
+  }
+  if (!la.length) {
+    const p = prossimo(q);
+    if (p) {
+      const es = REGOLE_PAESI.annoLibero(p.m, "es");
+      const ue = REGOLE_PAESI.annoLibero(p.m, "it"), gia = ue <= D.anno;   // nella settimana della festa: appena liberato
+      parti.push(h("div", { class: "box-no" }, h("span", { class: "k" }, gia ? L.appenaK : L.prossimoK),
+        tr(gia ? "appena" : "prossimo", { nome: p.n, m: p.m, ue, es }),
+        h("div", {}, h("a", { class: "bottone", href: LING !== "it" ? (p.pe ? U2("", `/en/author/${p.pe}/`) : U2("/", "/en/")) : `/autore/${p.p}/` }, L.apriRadar))));
+    }
+  }
+  if (!la.length && !lo.length && !parti.some((x) => x.classList && x.classList.contains("box-no"))) parti.push(h("div", { class: "box-no" }, h("span", { class: "k" }, L.nessuno), L.nessunoSpieg));
+  if (la.length || lo.length) parti.push(h("p", { class: "nota" }, L.notaRis));
+  box.replaceChildren(...parti);
+}
+
+/* ---------- scaffali ---------- */
+// come nel resto del sito: si ordina per le visite alla Wikipedia nella lingua del paese scelto
+const LINGUA_PAESE = { it: "it", fr: "fr", de: "de", es: "es", uk: "en", us: "en" };
+const POS_LINGUA = { it: 0, en: 1, fr: 2, de: 3, es: 4 };
+function linguaVisite() { const l = LINGUA_PAESE[D.paese]; return D.misurate && D.misurate.has(l) ? l : null; }
+function vis(o) { const l = linguaVisite(); return l ? o.vl[POS_LINGUA[l]] || 0 : o.v; }
+function primi(lista, n) { return lista.slice().sort((a, b) => vis(b) - vis(a) || b.pg - a.pg).slice(0, n); }
+function classificaAutori(liberi) {
+  const per = new Map();
+  for (const o of liberi) for (const a of o.au) {
+    if (!per.has(a.q)) per.set(a.q, { a, opere: [], v: 0 });
+    const x = per.get(a.q); x.opere.push(o); x.v += vis(o);
+  }
+  const tutti = [...per.values()].filter((x) => x.opere.length >= 3 && !NON_AUTORI.test(x.a.n)).sort((a, b) => b.v - a.v);
+  const unici = [], visti = [];
+  for (const x of tutti) {   // chi ha quasi le stesse opere di uno già in lista (Jacob e Wilhelm dopo «Fratelli Grimm») si salta
+    const s = new Set(x.opere.map((o) => o.q));
+    if (visti.some((v) => [...s].filter((q) => v.has(q)).length >= 0.6 * s.size)) continue;
+    visti.push(s); unici.push(x);
+    if (unici.length === 40) break;
+  }
+  return unici;
+}
+function voceClassifica(x, i, p) {
+  const f = D.foto[x.a.q];
+  return h("li", {}, h("button", { type: "button", onclick: () => griglia(x.a.n, tr("titoliLiberi", { n: num(x.opere.length) }) + " " + L.inPaese[p], primi(x.opere, 60)) },
+    h("span", { class: "p" }, String(i + 1)),
+    h("span", { class: "f" }, h("i", { "aria-hidden": "true" }, iniziali(x.a.n)), f ? h("img", { src: f.u, alt: L2("Ritratto di {n}", "Portrait of {n}").replace("{n}", x.a.n), loading: "lazy", decoding: "async", referrerpolicy: "no-referrer", onerror: "this.remove()" }) : null),
+    h("span", { class: "n" }, x.a.n, h("span", {}, tr("titoliLiberi", { n: num(x.opere.length) })))));
+}
+function creditiRitratti(lista) {
+  const conFoto = lista.filter((x) => D.foto[x.a.q]);
+  if (!conFoto.length) return null;
+  const pd = (l) => /^(public domain|pd|cc0)/i.test(l || "") || /pubblico dominio/i.test(l || "");
+  const altri = conFoto.filter((x) => !pd(D.foto[x.a.q].l));
+  const p = h("p", { class: "crediti" }, L.ritratti + ", " + L.ritrattiPd + (altri.length ? " " + L.ritrattiTranne + " " : "."));
+  altri.forEach((x, i) => {
+    const f = D.foto[x.a.q];
+    p.append(x.a.n + " (", h("a", { href: f.p, rel: "noopener", target: "_blank" }, [f.a ? L.fotoDi + " " + f.a : "foto", f.l].filter(Boolean).join(", ")), ")" + (i < altri.length - 1 ? ", " : "."));
+  });
+  return p;
+}
+const FRECCIA = (d) => `<svg viewBox="0 0 16 16" aria-hidden="true"><path d="${d < 0 ? "M10 3 5 8l5 5" : "m6 3 5 5-5 5"}" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>`;
+let _tab = 0;
+function sezione(titolo, destra, ...corpo) {
+  return h("section", { class: "sec" }, h("div", { class: "sh m" }, h("h2", {}, titolo), destra ? h("span", {}, destra) : null), ...corpo);
+}
+function disegnaScaffali() {
+  const p = D.paese, Y = D.anno, inP = L.inPaese[p];
+  const opere = D.opere.slice(0, D.nPrincipali).filter((o) => !o.escl);   // le opere degli scaffali per lingua (in coda) non entrano negli altri scaffali
+  const liberi = opere.filter((o) => libera(o, p));
+  const altri = Object.keys(L.paesi).filter((c) => c !== p);
+  const soloQui = liberi.filter((o) => altri.some((c) => !libera(o, c)));
+  let nuovi, sottoN;
+  if (p === "us") { nuovi = liberi.filter((o) => o.y === REGOLE_PAESI.pubblicateLibereUsaNel(Y)); sottoN = tr("nuoviUs", { m: REGOLE_PAESI.pubblicateLibereUsaNel(Y) }); }
+  else {
+    const m = REGOLE_PAESI.mortiLiberiNel(Y, p === "es" ? "es" : "it");
+    nuovi = liberi.filter((o) => { const mm = o.au.filter((a) => !a.an && a.m !== null).map((a) => a.m); return mm.length && Math.max(...mm) === m; });
+    sottoN = p === "es" ? tr("nuoviEs", { m }) : tr("nuoviUe", { m, p: inP.charAt(0).toUpperCase() + inP.slice(1) });
+  }
+  // 1. scaffali: tre schede, una fila di copertine che scorre
+  const tabs = [
+    { t: tr("soloQui", { p: inP }), s: tr("soloQuiSub", { p: inP }) + (["it", "fr", "de", "uk"].includes(p) ? " " + L.soloQuiUe : ""), o: primi(soloQui, 60) },
+    { t: tr("nuovi", { y: Y }), s: sottoN, o: primi(nuovi, 60) },
+    { t: L.piuLetti, s: tr("piuLettiSub", { p: inP, s: D.sett, w: L.wiki[linguaVisite() || "tutte"] }), o: primi(liberi, 60) },
+  ];
+  if (_tab >= tabs.length) _tab = 0;
+  const barra = h("div", { class: "tabs", role: "tablist" }), nota = h("p", { class: "tnote" }), fila = h("div", { class: "shelf", role: "list" });
+  const tutto = h("button", { class: "tutto", type: "button" }, L.vediTutto);
+  const scegli = (k) => {
+    _tab = k; const x = tabs[k];
+    [...barra.children].forEach((b, n) => b.setAttribute("aria-selected", n === k ? "true" : "false"));
+    nota.textContent = x.s;
+    fila.replaceChildren(...(x.o.length ? ((pr) => x.o.slice(0, 24).map((o, n) => { const c = copertina(o, pr); c.style.animationDelay = Math.min(n, 8) * 35 + "ms"; return c; }))([]) : [h("p", { class: "vuoto" }, L.vuotoS)]));
+    fila.scrollLeft = 0;
+    tutto.onclick = () => griglia(x.t, inP.charAt(0).toUpperCase() + inP.slice(1), x.o);
+  };
+  tabs.forEach((x, k) => barra.append(h("button", { type: "button", role: "tab", onclick: () => scegli(k) }, x.t)));
+  const frecce = h("div", { class: "arr" }, [-1, 1].map((d) => h("button", { type: "button", "aria-label": d < 0 ? L2("Indietro", "Back") : L2("Avanti", "Forward"), html: FRECCIA(d),
+    onclick: () => fila.scrollBy({ left: d * fila.clientWidth * .84, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" }) })));
+  scegli(_tab);
+  const s1 = sezione(L.sfoglia, tr("giaIn", { p: inP }),
+    h("p", { class: "lede", html: tr("introS", { p: esc(inP) }) + " " + esc(tr("contaLiberi", { n: num(liberi.length), t: num(opere.length), p: inP })) }),
+    barra, nota, fila, h("div", { class: "shf" }, tutto, frecce));
+  // 2. autori
+  const cl = classificaAutori(liberi);
+  const ol = h("ol", { class: "rk" }, cl.slice(0, 10).map((x, i) => voceClassifica(x, i, p)));
+  const piede = h("div", { class: "shf" });
+  if (cl.length > 10) piede.append(h("button", { class: "tutto", type: "button", onclick: (e) => {
+    const aperto = ol.children.length <= 10;
+    ol.replaceChildren(...cl.slice(0, aperto ? cl.length : 10).map((x, i) => voceClassifica(x, i, p)));
+    e.currentTarget.textContent = aperto ? L.vediMeno : tr("vediTutti", { n: cl.length });
+  } }, tr("vediTutti", { n: cl.length })));
+  const s2 = sezione(L.autori, cl.length ? L2("{n} autori in classifica", "{n} authors ranked").replace("{n}", cl.length) : "",
+    h("p", { class: "lede" }, tr("autoriSub", { p: inP, n: cl.length, w: L.wiki[linguaVisite() || "tutte"], s: D.sett })),
+    cl.length ? ol : h("p", { class: "vuoto" }, L.vuotoS), piede, creditiRitratti(cl));
+  // 3. generi e lingue: indice tipografico
+  const perG = new Map(), perL = new Map();
+  for (const o of liberi) {
+    for (const g of o.g) if (GENERI[g]) { if (!perG.has(g)) perG.set(g, []); perG.get(g).push(o); }
+    if (o.l) { if (!perL.has(o.l)) perL.set(o.l, []); perL.get(o.l).push(o); }
+  }
+  const voceIx = (nome, n, apri, colore) => h("li", {}, h("button", { type: "button", onclick: apri },
+    h("b", {}, colore ? h("i", { class: "sw", style: `background:${colore}` }) : null, nome), h("span", {}, tr("titoli", { n: num(n) }))));
+  const gg = [...perG.entries()].sort((a, b) => b[1].length - a[1].length);
+  const ulG = h("ul", { class: "ix" }, gg.map(([g, lista]) => voceIx(GENERI[g], lista.length, () => griglia(GENERI[g], tr("titoli", { n: num(lista.length) }) + " · " + inP, primi(lista, 60)))));
+  let ulL, sottoL = L.lingueSub;
+  if (D.scaffaliLingua) {
+    // regola del 20/11/2026: archivio intero, ordine per visite alla Wikipedia della lingua (storico/scaffali_lingua.py)
+    sottoL = L.lingueSubN;
+    const sl = Object.entries(D.scaffaliLingua).map(([k, x]) => [k, x, x.o.map(([q]) => D.indice.get(q)).filter((o) => o && !o.escl && libera(o, p))])
+      .filter(([, , lista]) => lista.length >= 3).sort((a, b) => b[1].c - a[1].c);
+    ulL = h("ul", { class: "ix" }, sl.map(([k, x, lista], i) => {
+      const nome = (LING === "it" ? x.n[0] : LING === "en" ? x.n[1] : (ET_LINGUA[x.n[0]] || x.n[1])) || k, Nome = nome.charAt(0).toUpperCase() + nome.slice(1);
+      const n = Math.max(lista.length, x.c || 0);   // x.c = tutte le opere della lingua nell'archivio; la pagina ne tiene le 150 più lette
+      return voceIx(Nome, n, () => griglia(Nome, tr("titoli", { n: num(n) }) + " · " + tr("piuLetteLingua", { w: x.w }), lista.slice(0, 60)), PIATTI[i % PIATTI.length][0]);
+    }));
+  } else {
+    const ll = [...perL.entries()].filter(([, v]) => v.length >= 3).sort((a, b) => b[1].length - a[1].length);
+    ulL = h("ul", { class: "ix" }, ll.map(([k, lista], i) => {
+      const nome = (D.lingue[k] && (LING === "it" ? D.lingue[k][1] : LING === "en" ? D.lingue[k][0] : (ET_LINGUA[D.lingue[k][1].toLowerCase()] || ET_LINGUA[D.lingue[k][1]] || D.lingue[k][0]))) || k;
+      return voceIx(nome, lista.length, () => griglia(nome, tr("titoli", { n: num(lista.length) }) + " · " + inP, primi(lista, 60)), PIATTI[i % PIATTI.length][0]);
+    }));
+  }
+  const s3 = h("section", { class: "sec" }, h("div", { class: "two" },
+    h("div", {}, h("div", { class: "sh m" }, h("h2", {}, L.generi), h("span", {}, inP)), h("p", { class: "sub-ix" }, L.generiSub), ulG),
+    h("div", {}, h("div", { class: "sh m" }, h("h2", {}, L.lingue), h("span", {}, inP)), h("p", { class: "sub-ix" }, sottoL), ulL)));
+  $("#scaffali-corpo").replaceChildren(s1, s2, s3);
+}
+function contatore() { const c = $(".top .cnt"); if (c) c.textContent = L2("Già pubblici · ", "Already public · ") + L.paesi[D.paese]; }
+
+/* ---------- testata e avvio ---------- */
+function disegnaPaesi() {
+  const box = $("#paesi");
+  box.setAttribute("aria-label", L.paese);
+  box.replaceChildren(h("span", { class: "m lab" }, L.paese), ...Object.keys(L.paesi).map((c) => h("button", { type: "button", "aria-pressed": c === D.paese ? "true" : "false", onclick: () => {
+    D.paese = c; try { localStorage.setItem("pdr-storico-paese", c); } catch (e) { /* ok */ }
+    disegnaPaesi(); disegnaScaffali(); cerca($("#q").value); contatore();
+  } }, L.paesi[c])));
+}
+async function avvia() {
+  try { const c = localStorage.getItem("pdr-storico-paese"); if (c && L.paesi[c]) D.paese = c; else if (LING === "en") D.paese = "us"; else if (["de", "fr", "es"].includes(LING)) D.paese = LING; } catch (e) { if (LING === "en") D.paese = "us"; }
+  disegnaPaesi(); contatore();
+  const qw = $("#qw"), qi = $("#q");
+  const segna = () => qw.classList.toggle("has", !!qi.value);
+  qi.addEventListener("input", segna);
+  $("#clr").addEventListener("click", () => { qi.value = ""; segna(); cerca(""); history.replaceState(null, "", location.pathname); qi.focus(); });
+  document.querySelectorAll(".try button").forEach((b) => b.addEventListener("click", () => { qi.value = b.textContent; segna(); cerca(qi.value); history.replaceState(null, "", "#" + encodeURIComponent(qi.value)); $("#risultati").scrollIntoView({ behavior: "smooth", block: "start" }); }));
+  $("#scaffali-corpo").replaceChildren(h("p", { class: "sec" }, L.caricamento));
+  let P;
+  if (LING === "it") { try { NOMI_IT = await leggi("/data/storico/nomi_it.json"); } catch (e) { NOMI_IT = {}; } }
+  if (!["it", "en"].includes(LING)) { try { ET_LINGUA = await leggi(`/data/etichette_${LING}.json`); } catch (e) { ET_LINGUA = {}; }
+    try { window.TITOLI_LINGUA = await leggi(`/data/storico/titoli_${LING}.json`); } catch (e) { window.TITOLI_LINGUA = {}; } }
+  try { P = await leggi("/data/storico/pagina.json"); } catch (e) { $("#scaffali-corpo").replaceChildren(h("p", {}, L.errore)); return; }
+  // l'anno di oggi, non quello dei dati: il 1° gennaio gli stati devono cambiare subito, anche se lo Storico gira il 2 (22/11/2026)
+  D.anno = Math.max(Number(String(P.aggiornato).slice(0, 4)) || 0, D.anno);
+  D.lingue = P.lingue || {};
+  try { const reg = await leggi("/data/registro/opere.json"); D.regOpere = reg.coautori || {}; D.verifiche = reg.usa || {}; D.decise = reg.opere || {}; }
+  catch (e) { D.regOpere = {}; D.verifiche = {}; D.decise = {}; }   // registro unico: coautori e anni USA
+  try { D.mpf = new Set(Object.keys((await leggi("/data/registro/mpf.json")).autori || {})); } catch (e) { D.mpf = new Set(); }   // «morti per la Francia»
+  try { D.poster = new Map((await leggi("/data/poster.json")).poster.map((p) => [p.qid, p])); } catch (e) { D.poster = new Map(); }
+  D.foto = P.foto || {}; D.prossimi = P.prossimi || [];   // prima erano finiti dentro il commento qui sopra: ritratti e «non è ancora libero» non comparivano (21/11/2026)
+  const au = P.autori.map((a) => ({ q: a[0], n: nomeQ(a[0], a[1]), m: a[2], an: !!a[3], inc: a[4] || 0, al: !!a[5] }));
+  D.opere = P.opere.map((r) => pulisciAnno({ q: r[0], t: r[1], ti: r[2], y: r[3], yd: r[4], au: r[5].map((i) => au[i]), v: r[6], g: r[7], l: r[8], pg: r[9], escl: !!r[10], vl: r[11] || [] }));
+  // lingue di Wikipedia già misurate (le visite in francese, tedesco e spagnolo arrivano con il primo aggiornamento dopo il 19/11/2026)
+  D.misurate = new Set(["it", "en", "fr", "de", "es"].filter((l, i) => D.opere.some((o) => o.vl[i] !== null && o.vl[i] !== undefined)));
+  D.indice = new Map(D.opere.map((o) => [o.q, o]));
+  D.nPrincipali = P.n_principali || D.opere.length;
+  D.scaffaliLingua = P.scaffali_lingua || null;
+  const [a, b] = P.settimana.map((d) => new Date(d + "T12:00:00"));
+  D.sett = L.dateFmt(a, b);
+  $("#conti").textContent = tr("conti", { o: num(P.n_opere), a: num(P.n_autori), s: D.sett });
+  disegnaScaffali();
+  let t = null;
+  $("#q").addEventListener("input", (e) => { clearTimeout(t); const v = e.target.value; t = setTimeout(() => { cerca(v); history.replaceState(null, "", v.trim() ? "#" + encodeURIComponent(v.trim()) : location.pathname); }, 250); });
+  const iniz = decodeURIComponent(location.hash.slice(1) || "");
+  if (iniz) { $("#q").value = iniz; segna(); cerca(iniz); }
+}
+avvia();
+})();
+
+/* titoli sulle copertine: le parole non si spezzano mai a metà («L'ADOLESCENT-E», «COCCODRILL-O»): se una parola non ci sta,
+   il carattere si rimpicciolisce finché ci sta (Marco, 21/11/2026). Vale per scaffali, griglie e schede. */
+(() => {
+  const SEL = ".cvr b";
+  function adatta(b) {
+    if (!b.isConnected || !b.clientWidth) return;
+    if (!b.dataset.fs) b.dataset.fs = parseFloat(getComputedStyle(b).fontSize) || 20;
+    let fs = +b.dataset.fs;
+    b.style.fontSize = fs + "px";
+    for (let k = 0; k < 40 && fs > 11 && b.scrollWidth > b.clientWidth + 1; k++) { fs -= 1; b.style.fontSize = fs + "px"; }
+  }
+  let attesa = false;
+  const tutto = () => { attesa = false; document.querySelectorAll(SEL).forEach(adatta); };
+  const presto = () => { if (!attesa) { attesa = true; requestAnimationFrame(tutto); } };
+  new MutationObserver(presto).observe(document.body, { childList: true, subtree: true });
+  addEventListener("resize", presto);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(presto);
+  presto();
+})();
+</script>
+</main>
+<footer class="end">
+  <div><p class="m" style="color:var(--redt)">Sources et règles</p><p>Wikidata (CC0) pour les œuvres, les auteurs et les années ; Wikipédia pour les consultations de cette semaine ; les listes du Public Domain Day de Duke University (CC BY 4.0) comme deuxième source pour les États-Unis ; Wikimedia Commons pour les portraits, chacun avec sa licence. Données mises à jour automatiquement chaque mois : elles peuvent contenir des erreurs.</p><p>Règles appliquées : Italie, France, Allemagne, Royaume-Uni 70 ans après la mort de l'auteur (au Royaume-Uni, les œuvres publiées pour la première fois après 1988 par des auteurs morts avant 1969 sont protégées jusqu'en 2039) ; Espagne 80 ans pour les auteurs morts avant le 7 décembre 1987 ; États-Unis 95 ans après la première publication (la première date enregistrée est utilisée). En Italie, pour les œuvres publiées avant 1940 par des auteurs de pays alliés pendant la Seconde Guerre mondiale, une note rappelle que certains défendent l'idée d'une prolongation (traité de paix de 1947), que les tribunaux n'ont pas appliquée jusqu'ici.</p>
+  <p class="lk"><a href="/fr/">Accueil</a> · <a href="/fr/domaine-public-2027/">Domaine public 2027</a> · <a href="/fr/deja-libres/">Déjà libres</a> · <a href="/fr/domaine-public/">Par pays</a> · <a href="/fr/calendrier/2027/">Anniversaires 2027</a> · <a href="/fr/comment-ca-marche/">Comment ça marche</a> · <a href="/fr/boutique/">Boutique</a> · <a href="/fr/auteur/">Index des auteurs</a> · <a href="https://github.com/mnovali90-byte/publicdomain">Code et données sur GitHub</a></p></div>
+  <div><p class="m" style="color:var(--redt)">Avant de publier</p><p>Les dates sont un calcul indicatif fondé sur les règles présentées sur les <a href="/fr/domaine-public/">pages des pays</a>. Ce n'est pas un conseil juridique : vérifiez la loi du pays avant de publier. Elles concernent les œuvres originales : les traductions, les illustrations et les éditions récentes ont leurs propres droits. Toute personne qui utilise ces données le fait à ses propres risques ; pour une édition commerciale, demandez l'avis d'un spécialiste du droit d'auteur.</p>
+  <p>Un projet de Marco Novali · <a href="https://www.linkedin.com/in/marconovali" rel="me noopener" target="_blank">LinkedIn</a> · <a href="https://github.com/mnovali90-byte/publicdomain/issues">Vous avez trouvé une erreur ?</a></p></div>
+</footer>
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+$('#mbtn').onclick=()=>$('#menu').classList.add('on'); $('#mx').onclick=()=>$('#menu').classList.remove('on');
+const nm=$('#name'); if(nm) addEventListener('scroll',()=>document.body.classList.toggle('past',nm.getBoundingClientRect().bottom<0),{passive:true});
+const gg=$('#days'); if(gg){ const t=new Date(+gg.dataset.y,0,1)-new Date(); if(t>0) gg.textContent=Math.ceil(t/864e5).toLocaleString('fr-FR'); }
+const cat=$('#cat'); if(cat) new IntersectionObserver(([e],o)=>{ if(e.isIntersecting){ cat.classList.add('on'); o.disconnect(); } },{threshold:.4}).observe(cat);
+$$('.why button').forEach(b=>b.onclick=()=>{ const w=b.parentElement; w.classList.toggle('on'); b.querySelector('span').textContent=w.classList.contains('on')?'[–]':'[+]'; });
+$$('.acc button').forEach(b=>b.onclick=()=>{ const a=b.parentElement; a.classList.toggle('on'); b.querySelector('span').textContent=a.classList.contains('on')?'[–]':'[+]'; });
+$$('#op sup').forEach(s=>s.onclick=()=>{ const n=$('#nt'+s.dataset.n); if(!n) return; n.scrollIntoView({behavior:'smooth',block:'center'}); n.classList.add('hl'); setTimeout(()=>n.classList.remove('hl'),1600); });
+</script>
+</body>
+</html>

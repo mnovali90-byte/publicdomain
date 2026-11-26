@@ -1,0 +1,954 @@
+[
+ {
+  "id": "1",
+  "attuale": "In den USA zählt das Erscheinungsjahr jedes Werks (95 Jahre). «Frei» nur, wenn eine zweite Quelle das Jahr von Wikidata bestätigt (Duke, Open Library, Library of Congress); sonst «zu prüfen». Künftige Daten verwenden das Jahr von Wikidata.",
+  "proposta": "In den USA zählt das Erscheinungsjahr jedes Werks (95 Jahre). „Frei“ nur, wenn eine zweite Quelle das Wikidata-Jahr bestätigt (Duke, Open Library, Library of Congress); sonst „zu prüfen“. Künftige Stichtage beruhen auf dem Wikidata-Jahr.",
+  "motivo": "„Künftige Daten verwenden …“ doppeldeutig und übersetzt; Anführungszeichen: «…» ist italienisch/französisch; im Deutschen „…“ (wie bereits in 239).",
+  "gravita": "media"
+ },
+ {
+  "id": "5",
+  "attuale": "Nicht automatisch. Die Daten auf dieser Seite gelten für die Originaltexte. Illustrationen und Übersetzungen haben eigene Rechte, bis 70 Jahre nach dem Tod des Illustrators oder Übersetzers: Ein Buch kann einen freien Text und noch geschützte Zeichnungen haben.",
+  "proposta": "Nicht automatisch. Die Datumsangaben auf dieser Seite gelten für die Originaltexte. Illustrationen und Übersetzungen haben eigene Rechte, die bis 70 Jahre nach dem Tod des Illustrators oder Übersetzers bestehen: Ein Buch kann einen freien Text und noch geschützte Zeichnungen haben.",
+  "motivo": "„Daten“ ist doppeldeutig (data/dates); gemeint sind Datumsangaben.",
+  "gravita": "media"
+ },
+ {
+  "id": "6",
+  "attuale": "In den USA zählt das Erscheinungsjahr jedes Werks (95 Jahre). «Frei» nur, wenn eine zweite Quelle das Jahr bestätigt (Duke, Open Library, Library of Congress); sonst «zu prüfen». Jahre und Prüfungen sind dieselben wie auf der Seite Schon gemeinfrei.",
+  "proposta": "In den USA zählt das Erscheinungsjahr jedes Werks (95 Jahre). „Frei“ nur, wenn eine zweite Quelle das Jahr bestätigt (Duke, Open Library, Library of Congress); sonst „zu prüfen“. Jahre und Prüfungen sind dieselben wie auf der Seite Schon gemeinfrei.",
+  "motivo": "Anführungszeichen: «…» ist italienisch/französisch; im Deutschen „…“ (wie bereits in 239).",
+  "gravita": "lieve"
+ },
+ {
+  "id": "7",
+  "attuale": "Der Eintrag, mit dem eine Bibliothek eine Veröffentlichung beschreibt. Meist gibt es einen pro Ausgabe oder Nachdruck; ein fünfmal erschienenes Buch zählt also fünf. Datensätze sind keine verkauften Exemplare und keine verschiedenen Titel. Sie umfassen jede mit der Person verbundene Veröffentlichung, auch solche, an denen sie mitgewirkt hat (Übersetzungen, Herausgabe, Vorworte), nicht nur ihre eigenen Bücher: Gemessen wird, wie präsent sie im Katalog ist.",
+  "proposta": "Der Eintrag, mit dem eine Bibliothek eine Veröffentlichung beschreibt. Meist gibt es einen pro Ausgabe oder Nachdruck; ein fünfmal erschienenes Buch zählt also fünfmal. Datensätze sind keine verkauften Exemplare und keine verschiedenen Titel. Sie umfassen jede mit der Person verbundene Veröffentlichung, auch solche, an denen sie mitgewirkt hat (Übersetzungen, Herausgabe, Vorworte), nicht nur ihre eigenen Bücher: Gemessen wird, wie präsent sie im Katalog ist.",
+  "motivo": "„zählt also fünf“ → „fünfmal“.",
+  "gravita": "lieve"
+ },
+ {
+  "id": "11",
+  "attuale": "{v1} Autoren mit eigener Seite: Biografie, Ausgaben und das Datum der Gemeinfreiheit Land für Land.",
+  "proposta": "{v1} Autoren mit eigener Seite: Biografie, Werke und das Datum der Gemeinfreiheit Land für Land.",
+  "motivo": "Italienisch „opere“ = Werke; „Ausgaben“ (aus dem fehlerhaften EN „Italian editions“) ist inhaltlich ungenau.",
+  "gravita": "media"
+ },
+ {
+  "id": "16",
+  "attuale": "Zu prüfen: Die Quellen widersprechen sich beim Todesjahr ({el}). Die Daten oben verwenden das Jahr der Liste; wir prüfen es.",
+  "proposta": "Zu prüfen: Die Quellen nennen unterschiedliche Todesjahre ({el}). Die Datumsangaben oben beruhen auf dem Jahr der Liste; wir prüfen es.",
+  "motivo": "„Daten“ doppeldeutig; „widersprechen sich beim Todesjahr“ klingt übersetzt.",
+  "gravita": "media"
+ },
+ {
+  "id": "18",
+  "attuale": "100 Jahre: «Mort pour la France»",
+  "proposta": "100 Jahre: „Mort pour la France“",
+  "motivo": "Anführungszeichen: «…» ist italienisch/französisch; im Deutschen „…“ (wie bereits in 239).",
+  "gravita": "lieve"
+ },
+ {
+  "id": "27",
+  "attuale": " Im Katalog {v1} ist die jüngste mit sicherem Jahr von {v2}.",
+  "proposta": " Im Katalog {v1} stammt die jüngste Ausgabe mit gesichertem Jahr von {v2}.",
+  "motivo": "„die jüngste“ ohne Bezugswort unverständlich; „sicheres Jahr“ → „gesichertes Jahr“.",
+  "gravita": "media"
+ },
+ {
+  "id": "29",
+  "attuale": "«{t_en}» ist in den USA seit {y} frei, {dl} erst ab {anno}.",
+  "proposta": "„{t_en}“ ist in den USA seit {y} frei, {dl} erst ab {anno}.",
+  "motivo": "Anführungszeichen: «…» ist italienisch/französisch; im Deutschen „…“ (wie bereits in 239).",
+  "gravita": "lieve"
+ },
+ {
+  "id": "39",
+  "attuale": "Die Daten sind eine unverbindliche Berechnung nach den Regeln auf den <a href=\"/de/gemeinfrei/\">Länderseiten</a>. Keine Rechtsberatung: Prüfen Sie vor dem Veröffentlichen das Recht des jeweiligen Landes. Sie gelten für die Originalwerke: Übersetzungen, Illustrationen und neuere Ausgaben haben eigene Rechte. Die Nutzung dieser Daten erfolgt auf eigenes Risiko; für eine kommerzielle Ausgabe lassen Sie sich von einer Fachperson für Urheberrecht beraten.",
+  "proposta": "Die Datumsangaben sind eine unverbindliche Berechnung nach den Regeln auf den <a href=\"/de/gemeinfrei/\">Länderseiten</a>. Keine Rechtsberatung: Prüfen Sie vor dem Veröffentlichen das Recht des jeweiligen Landes. Sie gelten für die Originalwerke: Übersetzungen, Illustrationen und neuere Ausgaben haben eigene Rechte. Die Nutzung dieser Daten erfolgt auf eigenes Risiko; für eine kommerzielle Ausgabe lassen Sie sich von einer Fachperson für Urheberrecht beraten.",
+  "motivo": "„Die Daten sind eine Berechnung“ – doppeldeutig (data/dates). Hinweis: Link /de/gemeinfrei/ weicht als einziger vom Muster ab (86 verlinkt /en/…) – Route prüfen.",
+  "gravita": "media"
+ },
+ {
+  "id": "43",
+  "attuale": "; Land der Alliierten: siehe Hinweis",
+  "proposta": "; alliiertes Land: siehe Hinweis",
+  "motivo": "„Land der Alliierten“ klingt übersetzt.",
+  "gravita": "lieve"
+ },
+ {
+  "id": "66",
+  "attuale": "70 Jahre; 30 Jahre mehr für Autoren, die «für Frankreich gestorben» sind.",
+  "proposta": "70 Jahre; 30 zusätzliche Jahre für Autoren, die „für Frankreich gestorben“ sind.",
+  "motivo": "„30 Jahre mehr“; Anführungszeichen: «…» ist italienisch/französisch; im Deutschen „…“ (wie bereits in 239).",
+  "gravita": "lieve"
+ },
+ {
+  "id": "68",
+  "attuale": "70 Jahre; Werke, die erst nach 1988 erschienen sind, von vor 1969 gestorbenen Autoren, bleiben bis 2039 geschützt.",
+  "proposta": "70 Jahre; Werke von Autoren, die vor 1969 gestorben sind, bleiben bis 2039 geschützt, wenn sie erst nach 1988 erschienen sind.",
+  "motivo": "Verschachtelte Attributfolge („Werke, die … erschienen sind, von vor 1969 gestorbenen Autoren“) schwer lesbar.",
+  "gravita": "media"
+ },
+ {
+  "id": "80",
+  "attuale": "Die Daten auf dieser Seite gelten für die Originaltexte. Illustrationen und Übersetzungen haben eigene Rechte, bis 70 Jahre nach dem Tod des Illustrators oder Übersetzers: Ein Buch kann einen freien Text und noch geschützte Zeichnungen haben.",
+  "proposta": "Die Datumsangaben auf dieser Seite gelten für die Originaltexte. Illustrationen und Übersetzungen haben eigene Rechte, die bis 70 Jahre nach dem Tod des Illustrators oder Übersetzers bestehen: Ein Buch kann einen freien Text und noch geschützte Zeichnungen haben.",
+  "motivo": "„Daten“ doppeldeutig (data/dates).",
+  "gravita": "media"
+ },
+ {
+  "id": "123",
+  "attuale": "in den USA freie Bücher",
+  "proposta": "in den USA gemeinfreie Bücher",
+  "motivo": "„freie Bücher“ klingt nach kostenlos; Fachbegriff ist „gemeinfrei“ (vgl. 61, 121).",
+  "gravita": "media"
+ },
+ {
+  "id": "130",
+  "attuale": "Wer frei wird, und wo",
+  "proposta": "Wer frei wird – und wo",
+  "motivo": "Komma vor „und“ ist im Deutschen falsch (italienische/englische Interpunktion).",
+  "gravita": "lieve"
+ },
+ {
+  "id": "131",
+  "attuale": "Regeln, gelesen in den Gesetzestexten jedes Landes:",
+  "proposta": "Die Regeln stammen direkt aus den Gesetzestexten der einzelnen Länder:",
+  "motivo": "„Regeln, gelesen in den Gesetzestexten“ klingt übersetzt.",
+  "gravita": "media"
+ },
+ {
+  "id": "140",
+  "attuale": "Als sicher markieren wir nur, was mehr als eine Quelle bestätigt (Todesjahre, Erscheinungsjahre). Der Rest ist «zu prüfen», mit Begründung. Die Quellen stehen unten auf jeder Seite.",
+  "proposta": "Als sicher markieren wir nur, was mehr als eine Quelle bestätigt (Todesjahre, Erscheinungsjahre). Der Rest ist „zu prüfen“, mit Begründung. Die Quellen stehen unten auf jeder Seite.",
+  "motivo": "Anführungszeichen: «…» ist italienisch/französisch; im Deutschen „…“ (wie bereits in 239).",
+  "gravita": "lieve"
+ },
+ {
+  "id": "155",
+  "attuale": "{tt}: Die Originalzeichnungen von {nome} (gestorben {m}) haben eigene Rechte: in Italien, Frankreich, Deutschland und im Vereinigten Königreich bis 31. Dezember {v1}, in Spanien bis 31. Dezember {v2}. Der Text folgt dem Datum des Autors.",
+  "proposta": "{tt}: Die Originalzeichnungen von {nome} (gestorben {m}) haben eigene Rechte: in Italien, Frankreich, Deutschland und im Vereinigten Königreich bis 31. Dezember {v1}, in Spanien bis 31. Dezember {v2}. Für den Text gilt das Datum des Autors.",
+  "motivo": "„Der Text folgt dem Datum des Autors“ klingt übersetzt.",
+  "gravita": "media"
+ },
+ {
+  "id": "166",
+  "attuale": "Wer war das",
+  "proposta": "Zur Person",
+  "motivo": "„Wer war das“ wirkt umgangssprachlich; übliche Rubrik ist „Zur Person“.",
+  "gravita": "media"
+ },
+ {
+  "id": "190",
+  "attuale": "Porträts von Wikimedia Commons",
+  "proposta": "Porträts aus Wikimedia Commons",
+  "motivo": "„von Wikimedia Commons“ → „aus“ (Quelle).",
+  "gravita": "lieve"
+ },
+ {
+  "id": "191",
+  "attuale": "Die Bücher von {pub}",
+  "proposta": "Die Bücher des Jahres {pub}",
+  "motivo": "„Die Bücher von 1931“ – „von“ wird als Autorenangabe gelesen („Bücher von Kafka“). Gilt auch für 214, 248, 253, 255, 261, 724.",
+  "gravita": "media"
+ },
+ {
+  "id": "193",
+  "attuale": "In den USA zählt das Jahr der Erstveröffentlichung: Am 1. Januar {anno} werden die {pub} erstmals erschienenen Bücher frei. Für jedes Buch sagen wir, wie weit die Prüfung ist. «Geprüft»: Die Erstveröffentlichung (Buch, Zeitschrift oder Registrierung) ist durch zwei unabhängige Quellen oder einen Eintrag im US-Urheberrechtsregister belegt, und keine Quelle weist auf eine frühere Veröffentlichung hin. «Ausgabe bestätigt»: Eine andere Quelle als Wikidata bestätigt das Jahr der Ausgabe, die Erstveröffentlichung ist aber noch nicht geprüft. «Zu bestätigen»: alle übrigen Fälle. Geordnet nach den Aufrufen des englischen Wikipedia-Artikels zum Buch in den letzten 12 Monaten.",
+  "proposta": "In den USA zählt das Jahr der Erstveröffentlichung: Am 1. Januar {anno} werden die {pub} erstmals erschienenen Bücher frei. Für jedes Buch sagen wir, wie weit die Prüfung ist. „Geprüft“: Die Erstveröffentlichung (Buch, Zeitschrift oder Registrierung) ist durch zwei unabhängige Quellen oder einen Eintrag im US-Urheberrechtsregister belegt, und keine Quelle weist auf eine frühere Veröffentlichung hin. „Ausgabe bestätigt“: Eine andere Quelle als Wikidata bestätigt das Jahr der Ausgabe, die Erstveröffentlichung ist aber noch nicht geprüft. „Zu bestätigen“: alle übrigen Fälle. Geordnet nach den Aufrufen des englischen Wikipedia-Artikels zum Buch in den letzten 12 Monaten.",
+  "motivo": "Anführungszeichen: «…» ist italienisch/französisch; im Deutschen „…“ (wie bereits in 239).",
+  "gravita": "lieve"
+ },
+ {
+  "id": "196",
+  "attuale": "Porträts der Autoren von Wikimedia Commons",
+  "proposta": "Porträts der Autoren aus Wikimedia Commons",
+  "motivo": "Siehe 190.",
+  "gravita": "lieve"
+ },
+ {
+  "id": "199",
+  "attuale": "{tt}: {v1} von {nome} (gestorben {m}) hat eigene Rechte: in Italien, Frankreich, Deutschland und im Vereinigten Königreich bis 31. Dezember {v2}, in Spanien bis 31. Dezember {v3}. Der Text folgt dem Datum des Autors.",
+  "proposta": "{tt}: {v1} von {nome} (gestorben {m}) hat eigene Rechte: in Italien, Frankreich, Deutschland und im Vereinigten Königreich bis 31. Dezember {v2}, in Spanien bis 31. Dezember {v3}. Für den Text gilt das Datum des Autors.",
+  "motivo": "Wie 155: „Der Text folgt dem Datum“ klingt übersetzt.",
+  "gravita": "media"
+ },
+ {
+  "id": "205",
+  "attuale": "Die {v1} {morti} gestorbenen Autoren mit eigener Seite, nach Nachnamen. Jede Seite enthält das Datum Land für Land, die Hauptwerke und die Quellen.",
+  "proposta": "Die {v1} Autoren mit eigener Seite, die {morti} gestorben sind, nach Nachnamen. Jede Seite enthält das Datum Land für Land, die Hauptwerke und die Quellen.",
+  "motivo": "Zwei Zahlen stoßen aufeinander („Die 312 1956 gestorbenen Autoren“): unlesbar und missverständlich.",
+  "gravita": "grave"
+ },
+ {
+  "id": "230",
+  "attuale": " Autoren, die «für Frankreich gestorben» sind, erhalten 30 Jahre mehr und stehen nicht in dieser Liste.",
+  "proposta": " Autoren, die „für Frankreich gestorben“ sind, erhalten 30 zusätzliche Jahre und stehen nicht in dieser Liste.",
+  "motivo": "„30 Jahre mehr“ umgangssprachlich; Anführungszeichen: «…» ist italienisch/französisch; im Deutschen „…“ (wie bereits in 239).",
+  "gravita": "lieve"
+ },
+ {
+  "id": "238",
+  "attuale": "Jedes Land hat seine Regel",
+  "proposta": "Jedes Land hat eigene Regeln",
+  "motivo": "„hat seine Regel“ ist unidiomatisch.",
+  "gravita": "media"
+ },
+ {
+  "id": "246",
+  "attuale": "Die Regel, aus dem Gesetz",
+  "proposta": "Was das Gesetz sagt",
+  "motivo": "„Die Regel, aus dem Gesetz“ ist kein idiomatisches Deutsch.",
+  "gravita": "media"
+ },
+ {
+  "id": "247",
+  "attuale": "Gesetzestexte, an der Quelle gelesen",
+  "proposta": "Gesetzestexte aus erster Hand",
+  "motivo": "„an der Quelle gelesen“ ist eine Lehnübersetzung.",
+  "gravita": "media"
+ },
+ {
+  "id": "248",
+  "attuale": "Wird jedes Buch von {pub} erst jetzt frei?",
+  "proposta": "Wird jedes Buch aus dem Jahr {pub} erst jetzt frei?",
+  "motivo": "Siehe 191: „von {pub}“ missverständlich.",
+  "gravita": "media"
+ },
+ {
+  "id": "253",
+  "attuale": "Bücher von {pub}, frei ab {anno}",
+  "proposta": "Bücher aus dem Jahr {pub}, frei ab {anno}",
+  "motivo": "Siehe 191.",
+  "gravita": "media"
+ },
+ {
+  "id": "255",
+  "attuale": "Die geprüften Bücher von {pub}",
+  "proposta": "Die geprüften Bücher aus dem Jahr {pub}",
+  "motivo": "Siehe 191.",
+  "gravita": "media"
+ },
+ {
+  "id": "261",
+  "attuale": "Jahre ab Erscheinen · {anno} die Bücher von {v1}",
+  "proposta": "Jahre ab Erscheinen · {anno} die Bücher aus dem Jahr {v1}",
+  "motivo": "Siehe 191.",
+  "gravita": "media"
+ },
+ {
+  "id": "264",
+  "attuale": "Regeln, gelesen in den Gesetzestexten",
+  "proposta": "Regeln direkt aus den Gesetzestexten",
+  "motivo": "„gelesen in den Gesetzestexten“ klingt übersetzt.",
+  "gravita": "media"
+ },
+ {
+  "id": "277",
+  "attuale": "Die Regeln an einem Ort",
+  "proposta": "Alle Regeln an einer Stelle",
+  "motivo": "„an einem Ort“ für Code klingt übersetzt.",
+  "gravita": "lieve"
+ },
+ {
+  "id": "278",
+  "attuale": "Die gesetzlichen Regeln stehen einmal im Code, mit der Quelle jedes Gesetzes. Jede Seite liest sie von dort, und bei jeder Aktualisierung prüfen Tests, dass keine Seite etwas anderes sagt.",
+  "proposta": "Die gesetzlichen Regeln stehen nur einmal im Code, jeweils mit der Quelle des Gesetzes. Jede Seite liest sie von dort, und bei jeder Aktualisierung prüfen Tests, ob irgendeine Seite etwas anderes sagt.",
+  "motivo": "„prüfen Tests, dass …“ ist falsche Rektion (prüfen, ob).",
+  "gravita": "lieve"
+ },
+ {
+  "id": "279",
+  "attuale": "Wie wir die Daten berechnen",
+  "proposta": "Wie wir die Stichtage berechnen",
+  "motivo": "„Daten berechnen“ wird als „data“ gelesen; gemeint sind die Stichtage.",
+  "gravita": "media"
+ },
+ {
+  "id": "281",
+  "attuale": "Wenn Wikidata und zwei maßgebliche Quellen sich widersprechen, gelten die zwei Quellen. Wenn sich die Quellen untereinander widersprechen, bleibt der Autor mit «zu prüfen» in der Liste.",
+  "proposta": "Wenn Wikidata und zwei maßgebliche Quellen sich widersprechen, gelten die zwei Quellen. Wenn sich die Quellen untereinander widersprechen, bleibt der Autor mit „zu prüfen“ in der Liste.",
+  "motivo": "Anführungszeichen: «…» ist italienisch/französisch; im Deutschen „…“ (wie bereits in 239).",
+  "gravita": "lieve"
+ },
+ {
+  "id": "283",
+  "attuale": "«Geprüft» heißt: Erstveröffentlichung durch zwei unabhängige Quellen oder einen Eintrag im Catalog of Copyright Entries belegt. «Ausgabe bestätigt»: Eine Quelle bestätigt das Jahr der Ausgabe. «Zu bestätigen»: bisher nur Wikidata.",
+  "proposta": "„Geprüft“ heißt: Erstveröffentlichung durch zwei unabhängige Quellen oder einen Eintrag im Catalog of Copyright Entries belegt. „Ausgabe bestätigt“: Eine Quelle bestätigt das Jahr der Ausgabe. „Zu bestätigen“: bisher nur Wikidata.",
+  "motivo": "Anführungszeichen: «…» ist italienisch/französisch; im Deutschen „…“ (wie bereits in 239).",
+  "gravita": "lieve"
+ },
+ {
+  "id": "284",
+  "attuale": "In den Ranglisten amerikanischer Bücher nur «Geprüft»",
+  "proposta": "In den Ranglisten amerikanischer Bücher nur „Geprüft“",
+  "motivo": "Anführungszeichen: «…» ist italienisch/französisch; im Deutschen „…“ (wie bereits in 239).",
+  "gravita": "lieve"
+ },
+ {
+  "id": "290",
+  "attuale": "Wann aktualisiert wird",
+  "proposta": "Wann die Daten aktualisiert werden",
+  "motivo": "Unpersönliches Passiv ohne Subjekt („Wann aktualisiert wird“) wirkt unvollständig.",
+  "gravita": "lieve"
+ },
+ {
+  "id": "295",
+  "attuale": "Jedes Poster beginnt mit einem gemeinfreien Buch, nur mit Schrift gesetzt: die ersten Sätze, ein berühmtes Zitat oder der ganze Text.",
+  "proposta": "Jedes Poster geht von einem gemeinfreien Buch aus und ist rein typografisch gestaltet: mit den ersten Sätzen, einem berühmten Zitat oder dem ganzen Text.",
+  "motivo": "„beginnt mit einem Buch, nur mit Schrift gesetzt“ klingt übersetzt.",
+  "gravita": "media"
+ },
+ {
+  "id": "313",
+  "attuale": "Sie erhalten 30 Jahre mehr (L123-10). Ob diese zu den 70 hinzukommen, hat der Kassationsgerichtshof nicht entschieden: Wir weisen auf den Autorenseiten darauf hin.",
+  "proposta": "Sie erhalten 30 zusätzliche Jahre (L123-10). Ob diese zu den 70 hinzukommen, hat der Kassationsgerichtshof nicht entschieden: Wir weisen auf den Autorenseiten darauf hin.",
+  "motivo": "„30 Jahre mehr“ umgangssprachlich.",
+  "gravita": "lieve"
+ },
+ {
+  "id": "321",
+  "attuale": "Werke, die Ende 1988 noch unveröffentlicht waren, von Autoren, die vor 1969 gestorben sind, bleiben bis 31. Dezember 2039 geschützt.",
+  "proposta": "Werke von Autoren, die vor 1969 gestorben sind, bleiben bis 31. Dezember 2039 geschützt, wenn sie Ende 1988 noch unveröffentlicht waren.",
+  "motivo": "Gleiche verschachtelte Struktur wie 68, klingt übersetzt.",
+  "gravita": "media"
+ },
+ {
+  "id": "323",
+  "attuale": "Die Gestaltung einer Ausgabe hat ein eigenes Recht für 25 Jahre: Ein freier Text erlaubt nicht, eine neuere Ausgabe zu fotokopieren.",
+  "proposta": "Für die typografische Gestaltung einer Ausgabe gilt 25 Jahre lang ein eigenes Schutzrecht: Auch wenn der Text frei ist, dürfen Sie eine neuere Ausgabe nicht einfach fotokopieren.",
+  "motivo": "„Ein freier Text erlaubt nicht, … zu fotokopieren“ ist eine Lehnübersetzung.",
+  "gravita": "media"
+ },
+ {
+  "id": "359",
+  "attuale": "Alle zeigen",
+  "proposta": "Alle anzeigen",
+  "motivo": "UI-Standard: „anzeigen“ statt „zeigen“ (vgl. 694 „ansehen“).",
+  "gravita": "lieve"
+ },
+ {
+  "id": "363",
+  "attuale": "Porträts der Autoren von Wikimedia Commons",
+  "proposta": "Porträts der Autoren aus Wikimedia Commons",
+  "motivo": "Siehe 190.",
+  "gravita": "lieve"
+ },
+ {
+  "id": "374",
+  "attuale": "70 Jahre nach dem Tod (§64); die Fristen beginnen mit dem Ende des Kalenderjahres (§69).",
+  "proposta": "70 Jahre nach dem Tod (§ 64 UrhG); die Fristen beginnen mit dem Ende des Kalenderjahres (§ 69 UrhG).",
+  "motivo": "Uneinheitlich mit 315 („§ 69 UrhG“, mit Leerzeichen nach §).",
+  "gravita": "lieve"
+ },
+ {
+  "id": "382",
+  "attuale": "In Italien, Frankreich, Deutschland und im Vereinigten Königreich die Werke der {morti} gestorbenen Schriftsteller. In Spanien die der {morti_es} gestorbenen. In den USA die {pub} erschienenen Bücher.",
+  "proposta": "In Italien, Frankreich, Deutschland und im Vereinigten Königreich die Werke der {morti} gestorbenen Autoren. In Spanien die der {morti_es} gestorbenen. In den USA die {pub} erschienenen Bücher.",
+  "motivo": "Terminologie: Die Website nennt sie sonst „Autoren“, hier „Schriftsteller“.",
+  "gravita": "lieve"
+ },
+ {
+  "id": "385",
+  "attuale": "Es ist jedes Jahr der 1. Januar, der Tag, an dem das Urheberrecht der Werke erlischt, die die gesetzliche Frist erreicht haben: in der Europäischen Union und im Vereinigten Königreich 70 Jahre nach dem Tod des Autors (Richtlinie 2006/116/EG, Art. 1), in den USA 95 Jahre nach der Veröffentlichung (17 U.S.C. § 304).",
+  "proposta": "Der 1. Januar jedes Jahres: An diesem Tag erlischt das Urheberrecht an Werken, deren gesetzliche Schutzfrist abgelaufen ist – in der Europäischen Union und im Vereinigten Königreich 70 Jahre nach dem Tod des Autors (Richtlinie 2006/116/EG, Art. 1), in den USA 95 Jahre nach der Veröffentlichung (17 U.S.C. § 304).",
+  "motivo": "„Es ist jedes Jahr der 1. Januar, der Tag, an dem …“ ist steif und klingt übersetzt.",
+  "gravita": "media"
+ },
+ {
+  "id": "395",
+  "attuale": "Alle in Deutschland gemeinfreien Schriftsteller",
+  "proposta": "Alle in Deutschland gemeinfreien Autoren",
+  "motivo": "Uneinheitlich mit 159/160 („Alle in Spanien gemeinfreien Autoren“).",
+  "gravita": "lieve"
+ },
+ {
+  "id": "399",
+  "attuale": "keine Seite auf Deutsch",
+  "proposta": "kein deutscher Artikel",
+  "motivo": "Uneinheitlich mit 173 („kein deutscher Artikel“); bei Wikipedia spricht man von Artikeln.",
+  "gravita": "lieve"
+ },
+ {
+  "id": "403",
+  "attuale": "Erstveröffentlichung in The Cornhill Magazine, Januar 1897. In den USA schon gemeinfrei. Die Library of Congress nennt 1896, wahrscheinlich das Entstehungsjahr: Die Kataloge bestätigen es, aber die belegte Erstveröffentlichung zählt mehr.",
+  "proposta": "Erstveröffentlichung in The Cornhill Magazine, Januar 1897. In den USA schon gemeinfrei. Die Library of Congress nennt 1896, wahrscheinlich das Entstehungsjahr: Die Kataloge bestätigen es, aber die belegte Erstveröffentlichung hat Vorrang.",
+  "motivo": "„zählt mehr“ → „hat Vorrang“.",
+  "gravita": "lieve"
+ },
+ {
+  "id": "405",
+  "attuale": "Erstveröffentlichung: in «Kaizō», September 1930. In den USA schon vollständig gemeinfrei.",
+  "proposta": "Erstveröffentlichung: in „Kaizō“, September 1930. In den USA schon vollständig gemeinfrei.",
+  "motivo": "Anführungszeichen: «…» ist italienisch/französisch; im Deutschen „…“ (wie bereits in 239).",
+  "gravita": "lieve"
+ },
+ {
+  "id": "406",
+  "attuale": "Erstveröffentlichung: als Fortsetzung in «Kaizō», März 1928 bis April 1930. In den USA schon vollständig gemeinfrei.",
+  "proposta": "Erstveröffentlichung: als Fortsetzung in „Kaizō“, März 1928 bis April 1930. In den USA schon vollständig gemeinfrei.",
+  "motivo": "Anführungszeichen: «…» ist italienisch/französisch; im Deutschen „…“ (wie bereits in 239).",
+  "gravita": "lieve"
+ },
+ {
+  "id": "409",
+  "attuale": "Vier Bände: I «Bogumił i Barbara» (1932) und II «Wieczne zmartwienie» (1932) werden in den USA 2028 gemeinfrei, III «Miłość» (1933) 2029, IV «Wiatr w oczy» (1934) 2030.",
+  "proposta": "Vier Bände: I „Bogumił i Barbara“ (1932) und II „Wieczne zmartwienie“ (1932) werden in den USA 2028 gemeinfrei, III „Miłość“ (1933) 2029, IV „Wiatr w oczy“ (1934) 2030.",
+  "motivo": "Anführungszeichen: «…» ist italienisch/französisch; im Deutschen „…“ (wie bereits in 239).",
+  "gravita": "lieve"
+ },
+ {
+  "id": "416",
+  "attuale": "In den USA ist der erste Teil, 1930 in «Krasnaya Nov» erschienen, schon gemeinfrei; der vollständige Roman von 1931 wird in den USA 2027 gemeinfrei.",
+  "proposta": "In den USA ist der erste Teil, 1930 in „Krasnaya Nov“ erschienen, schon gemeinfrei; der vollständige Roman von 1931 wird in den USA 2027 gemeinfrei.",
+  "motivo": "Anführungszeichen: «…» ist italienisch/französisch; im Deutschen „…“ (wie bereits in 239).",
+  "gravita": "lieve"
+ },
+ {
+  "id": "422",
+  "attuale": "In den USA ist «Kondujt» (1930) schon gemeinfrei; «Shvambrania» (1933) wird in den USA 2029 gemeinfrei; das gemeinsame Buch ist von 1935.",
+  "proposta": "In den USA ist „Kondujt“ (1930) schon gemeinfrei; „Shvambrania“ (1933) wird in den USA 2029 gemeinfrei; der Sammelband erschien 1935.",
+  "motivo": "„das gemeinsame Buch ist von 1935“ klingt übersetzt; Anführungszeichen: «…» ist italienisch/französisch; im Deutschen „…“ (wie bereits in 239).",
+  "gravita": "lieve"
+ },
+ {
+  "id": "424",
+  "attuale": "Postume Sammlung (1931) meist unveröffentlichter Texte; ein Stück, «Eine kaiserliche Botschaft», war 1919 erschienen und ist in den USA schon gemeinfrei. In den USA wird die Sammlung 2027 gemeinfrei.",
+  "proposta": "Postume Sammlung (1931) meist unveröffentlichter Texte; ein Stück, „Eine kaiserliche Botschaft“, war 1919 erschienen und ist in den USA schon gemeinfrei. In den USA wird die Sammlung 2027 gemeinfrei.",
+  "motivo": "Anführungszeichen: «…» ist italienisch/französisch; im Deutschen „…“ (wie bereits in 239).",
+  "gravita": "lieve"
+ },
+ {
+  "id": "430",
+  "attuale": "1931 als Fortsetzung in «30 dnej» (als Buch 1932 auf Englisch, 1933 auf Russisch): In den USA wird es 2027 gemeinfrei.",
+  "proposta": "1931 als Fortsetzung in „30 dnej“ (als Buch 1932 auf Englisch, 1933 auf Russisch): In den USA wird es 2027 gemeinfrei.",
+  "motivo": "Anführungszeichen: «…» ist italienisch/französisch; im Deutschen „…“ (wie bereits in 239).",
+  "gravita": "lieve"
+ },
+ {
+  "id": "431",
+  "attuale": "1931 geschrieben, 1936 erstmals in «La realidad y el deseo» veröffentlicht: In den USA wird es 2032 gemeinfrei.",
+  "proposta": "1931 geschrieben, 1936 erstmals in „La realidad y el deseo“ veröffentlicht: In den USA wird es 2032 gemeinfrei.",
+  "motivo": "Anführungszeichen: «…» ist italienisch/französisch; im Deutschen „…“ (wie bereits in 239).",
+  "gravita": "lieve"
+ },
+ {
+  "id": "434",
+  "attuale": "Friedensvertrag von 1947, Anhang XV, Teil A, Punkt 3: Für die Rechte der Alliierten Mächte und ihrer Staatsangehörigen in Italien wird der Zeitraum zwischen Beginn der Feindseligkeiten und Inkrafttreten des Vertrags nicht auf die Schutzdauer angerechnet, die sich um dieselbe Zeit verlängert. Das gilt für Autoren dieser Länder, nicht für Italiener. Wie es für jedes Werk gilt, ist zu prüfen.",
+  "proposta": "Friedensvertrag von 1947, Anhang XV, Teil A, Punkt 3: Für die Rechte der Alliierten Mächte und ihrer Staatsangehörigen in Italien wird der Zeitraum zwischen Beginn der Feindseligkeiten und Inkrafttreten des Vertrags nicht auf die Schutzdauer angerechnet, die sich um dieselbe Zeit verlängert. Das gilt für Autoren dieser Länder, nicht für Italiener. Wie sich das auf das einzelne Werk auswirkt, ist im Einzelfall zu prüfen.",
+  "motivo": "„Wie es für jedes Werk gilt, ist zu prüfen“ klingt übersetzt.",
+  "gravita": "lieve"
+ },
+ {
+  "id": "453",
+  "attuale": "Das amtliche Register des US Copyright Office, transkribiert von der New York Public Library (CC0): Ein einziger Eintrag dort genügt, um die Erstveröffentlichung eines Buchs zu bestätigen.",
+  "proposta": "Das amtliche Register des US Copyright Office, transkribiert von der New York Public Library (CC0): Ein einziger Eintrag dort genügt, damit die Erstveröffentlichung eines Buchs als geprüft gilt.",
+  "motivo": "„bestätigen“ kollidiert mit dem Status „Ausgabe bestätigt“; gemeint ist der Status „Geprüft“.",
+  "gravita": "media"
+ },
+ {
+  "id": "457",
+  "attuale": "Die typografische Gestaltung einer Ausgabe hat ein eigenes Recht von 25 Jahren ab Erstveröffentlichung: Ein freier Text erlaubt nicht, eine neue Ausgabe zu fotokopieren.",
+  "proposta": "Für die typografische Gestaltung einer Ausgabe gilt ab der Erstveröffentlichung 25 Jahre lang ein eigenes Schutzrecht: Auch wenn der Text frei ist, dürfen Sie eine neuere Ausgabe nicht einfach fotokopieren.",
+  "motivo": "Wie 323; zudem „neue“ vs. „neuere“ Ausgabe uneinheitlich.",
+  "gravita": "media"
+ },
+ {
+  "id": "458",
+  "attuale": "Die Kriegsverlängerungen (L123-8, L123-9) stehen noch im Gesetz, aber der Kassationsgerichtshof hat entschieden, dass die 70 Jahre sie einschließen, außer wenn am 1. Juli 1995 schon eine längere Frist lief (Urteile vom 27. Februar 2007, Fälle Monet und Boldini). Autoren, die «für Frankreich gestorben» sind, erhalten 30 Jahre mehr (L123-10): Ob diese zu den 70 Jahren hinzukommen, hat das Gericht nicht entschieden.",
+  "proposta": "Die Kriegsverlängerungen (L123-8, L123-9) stehen noch im Gesetz, aber der Kassationsgerichtshof hat entschieden, dass die 70 Jahre sie einschließen, außer wenn am 1. Juli 1995 schon eine längere Frist lief (Urteile vom 27. Februar 2007, Fälle Monet und Boldini). Autoren, die „für Frankreich gestorben“ sind, erhalten 30 zusätzliche Jahre (L123-10): Ob diese zu den 70 Jahren hinzukommen, hat das Gericht nicht entschieden.",
+  "motivo": "„30 Jahre mehr“; Anführungszeichen: «…» ist italienisch/französisch; im Deutschen „…“ (wie bereits in 239).",
+  "gravita": "lieve"
+ },
+ {
+  "id": "461",
+  "attuale": "Ende 1988 noch unveröffentlichte Werke von Autoren, die vor 1969 gestorben sind: geschützt bis zum 31. Dezember 2039 (die «Regel 2039»). Das betrifft nach 1988 zuerst veröffentlichte Texte, etwa Briefe oder Tagebücher.",
+  "proposta": "Ende 1988 noch unveröffentlichte Werke von Autoren, die vor 1969 gestorben sind: geschützt bis zum 31. Dezember 2039 (die „Regel 2039“). Das betrifft nach 1988 zuerst veröffentlichte Texte, etwa Briefe oder Tagebücher.",
+  "motivo": "Anführungszeichen: «…» ist italienisch/französisch; im Deutschen „…“ (wie bereits in 239).",
+  "gravita": "lieve"
+ },
+ {
+  "id": "463",
+  "attuale": " In Italien sprechen sich manche für Werke, die vor 1940 von Autoren aus alliierten Ländern veröffentlicht wurden, für eine Verlängerung aus (Friedensvertrag von 1947); die Gerichte haben sie bisher nicht angewandt.",
+  "proposta": " In Italien vertreten manche für Werke von Autoren aus alliierten Ländern, die vor 1940 erschienen sind, eine Verlängerung (Friedensvertrag von 1947); die Gerichte haben sie bisher nicht angewandt.",
+  "motivo": "Satz grammatisch kaputt („sprechen sich manche für Werke … für eine Verlängerung aus“, doppeltes „für“).",
+  "gravita": "grave"
+ },
+ {
+  "id": "478",
+  "attuale": "1. Januar {a} (95 Jahre nach Erscheinen {p})",
+  "proposta": "1. Januar {a} (95 Jahre nach dem Erscheinen im Jahr {p})",
+  "motivo": "„nach Erscheinen {p}“ holprig.",
+  "gravita": "lieve"
+ },
+ {
+  "id": "490",
+  "attuale": "Wer diese Daten nutzt, tut es auf eigenes Risiko. Die Daten sind Richtwerte und beziehen sich auf die Originalwerke: Übersetzungen, Illustrationen und neue Ausgaben haben eigene Rechte. Lassen Sie sich für eine kommerzielle Ausgabe von einer Fachperson für Urheberrecht beraten.",
+  "proposta": "Wer diese Daten nutzt, tut dies auf eigenes Risiko. Die Datumsangaben sind Richtwerte und beziehen sich auf die Originalwerke: Übersetzungen, Illustrationen und neuere Ausgaben haben eigene Rechte. Lassen Sie sich für eine kommerzielle Ausgabe von einer Fachperson für Urheberrecht beraten.",
+  "motivo": "„Daten“ zweimal in verschiedener Bedeutung; „neue“ vs. sonst „neuere Ausgaben“.",
+  "gravita": "media"
+ },
+ {
+  "id": "493",
+  "attuale": "Autorenkarte",
+  "proposta": "Autorenprofil",
+  "motivo": "„Autorenkarte“ klingt nach Landkarte; „scheda“ = Profil. Einheitlich auch in 501, 543, 621, 660, 805.",
+  "gravita": "media"
+ },
+ {
+  "id": "494",
+  "attuale": "Autor aus einem alliierten Land des Zweiten Weltkriegs ({p}). Für Werke, die vor dem 10. Juni 1940 erschienen sind, meinen manche, dass der Schutz in Italien länger dauert (Friedensvertrag von 1947, Anhang XV). Die Gerichte haben das bisher nicht angewandt: «Der kleine Prinz» ist in Italien seit 2015 frei (Gericht Mailand 2021, Berufungsgericht Mailand 2022).",
+  "proposta": "Autor aus einem alliierten Land des Zweiten Weltkriegs ({p}). Für Werke, die vor dem 10. Juni 1940 erschienen sind, meinen manche, dass der Schutz in Italien länger dauert (Friedensvertrag von 1947, Anhang XV). Die Gerichte haben das bisher nicht angewandt: „Der kleine Prinz“ ist in Italien seit 2015 frei (Gericht Mailand 2021, Berufungsgericht Mailand 2022).",
+  "motivo": "Anführungszeichen: «…» ist italienisch/französisch; im Deutschen „…“ (wie bereits in 239).",
+  "gravita": "lieve"
+ },
+ {
+  "id": "501",
+  "attuale": "Autorenkarte →",
+  "proposta": "Zum Autorenprofil →",
+  "motivo": "Siehe 493 (Terminologie „Karte“).",
+  "gravita": "media"
+ },
+ {
+  "id": "503",
+  "attuale": "EU-Grundregel: Werke werden am 1. Januar des Jahres nach dem 70. Todestag des Autors frei. Manche Länder haben andere Regeln (Spanien 80 Jahre für vor 1987 gestorbene Autoren, Frankreich 30 Jahre mehr für die «für Frankreich Gestorbenen»): Prüfen Sie vor dem Veröffentlichen die nationalen Regeln. Eine bestehende Übersetzung hat eigene Rechte: Diese Website betrifft nur Originalwerke.",
+  "proposta": "EU-Grundregel: Werke werden am 1. Januar des Jahres nach dem 70. Todestag des Autors frei. Manche Länder haben andere Regeln (Spanien 80 Jahre für vor 1987 gestorbene Autoren, Frankreich 30 zusätzliche Jahre für Autoren, die „für Frankreich gestorben“ sind): Prüfen Sie vor dem Veröffentlichen die nationalen Regeln. Eine bestehende Übersetzung hat eigene Rechte: Diese Website behandelt nur Originalwerke.",
+  "motivo": "„die «für Frankreich Gestorbenen»“ holprig; „betrifft nur“ → „behandelt nur“; Anführungszeichen: «…» ist italienisch/französisch; im Deutschen „…“ (wie bereits in 239).",
+  "gravita": "lieve"
+ },
+ {
+  "id": "504",
+  "attuale": "Vor einer Neuübersetzung: Prüfen Sie, ob es in Ihrem Markt schon eine neue Übersetzung gibt, und prüfen Sie die Regeln Ihres Landes. In Italien sprechen sich manche für Werke, die vor 1940 von Autoren aus alliierten Ländern veröffentlicht wurden, für eine Verlängerung aus (Friedensvertrag von 1947); die Gerichte haben sie bisher nicht angewandt.",
+  "proposta": "Vor einer Neuübersetzung: Prüfen Sie, ob es auf Ihrem Markt schon eine neuere Übersetzung gibt, und klären Sie die Regeln Ihres Landes. In Italien vertreten manche für Werke von Autoren aus alliierten Ländern, die vor 1940 erschienen sind, eine Verlängerung (Friedensvertrag von 1947); die Gerichte haben sie bisher nicht angewandt.",
+  "motivo": "Zweiter Satz grammatisch kaputt (doppeltes „für“); „in Ihrem Markt“ → „auf Ihrem Markt“; doppeltes „prüfen Sie“.",
+  "gravita": "grave"
+ },
+ {
+  "id": "531",
+  "attuale": "Das Urheberrecht dauert bis zum Ende des siebzigsten Jahres nach dem Todesjahr des Autors (Art. 43). Der von mir gelesene Text kennt keine Kriegsverlängerungen.",
+  "proposta": "Das Urheberrecht dauert bis zum Ende des siebzigsten Jahres nach dem Todesjahr des Autors (Art. 43). Der geprüfte Gesetzestext enthält keine Kriegsverlängerungen.",
+  "motivo": "Einziger Text in der Ich-Form („von mir gelesen“); sonst spricht die Website als „wir“ oder unpersönlich.",
+  "gravita": "media"
+ },
+ {
+  "id": "543",
+  "attuale": "Datum nach der europäischen Regel 70 Jahre nach dem Tod. Die Autorenkarte zeigt das Datum Land für Land.",
+  "proposta": "Datum nach der europäischen Regel (70 Jahre nach dem Tod). Das Autorenprofil zeigt das Datum Land für Land.",
+  "motivo": "Klammer fehlt („nach der europäischen Regel 70 Jahre nach dem Tod“ ist missverständlich); „Autorenkarte“ siehe 493.",
+  "gravita": "media"
+ },
+ {
+  "id": "571",
+  "attuale": "Frankreich: Tod + 70 Jahre. Die Kriegsverlängerungen sind in den 70 Jahren enthalten (Kassationsgerichtshof, 2007); Ausnahme sind die «für Frankreich gestorbenen» Autoren, die 30 Jahre mehr erhalten.",
+  "proposta": "Frankreich: Tod + 70 Jahre. Die Kriegsverlängerungen sind in den 70 Jahren enthalten (Kassationsgerichtshof, 2007); ausgenommen sind Autoren, die „für Frankreich gestorben“ sind: Sie erhalten 30 zusätzliche Jahre.",
+  "motivo": "„die «für Frankreich gestorbenen» Autoren“ holprig; Anführungszeichen: «…» ist italienisch/französisch; im Deutschen „…“ (wie bereits in 239).",
+  "gravita": "lieve"
+ },
+ {
+  "id": "572",
+  "attuale": "Frankreich: ab {d}. Die Kriegsverlängerungen kommen nicht zu den 70 Jahren hinzu (Kassationsgerichtshof, 2007). Ausnahme: Die «für Frankreich gestorbenen» Autoren erhalten 30 Jahre mehr.",
+  "proposta": "Frankreich: ab {d}. Die Kriegsverlängerungen kommen nicht zu den 70 Jahren hinzu (Kassationsgerichtshof, 2007). Ausnahme: Autoren, die „für Frankreich gestorben“ sind, erhalten 30 zusätzliche Jahre.",
+  "motivo": "Wie 571.",
+  "gravita": "lieve"
+ },
+ {
+  "id": "573",
+  "attuale": "Frei ab wann, Land für Land",
+  "proposta": "Ab wann gemeinfrei – Land für Land",
+  "motivo": "„Frei ab wann“ ist eine wörtliche Wortstellung.",
+  "gravita": "media"
+ },
+ {
+  "id": "580",
+  "attuale": "Ab {d} sind ihre Originalwerke nach der EU-Regel 70 Jahre nach dem Tod frei.",
+  "proposta": "Ab {d} sind ihre Originalwerke nach der EU-Regel (70 Jahre nach dem Tod) frei.",
+  "motivo": "Ohne Klammer schwer lesbar („nach der EU-Regel 70 Jahre nach dem Tod frei“).",
+  "gravita": "lieve"
+ },
+ {
+  "id": "587",
+  "attuale": "Deutschland: Tod + 70 Jahre, keine Verlängerungen (Gesetz gelesen, siehe Kasten unten).",
+  "proposta": "Deutschland: Tod + 70 Jahre, keine Verlängerungen (Gesetzestext geprüft, siehe Kasten unten).",
+  "motivo": "„Gesetz gelesen“ klingt übersetzt.",
+  "gravita": "lieve"
+ },
+ {
+  "id": "598",
+  "attuale": "Wenn das Werk in den USA erschien (oder innerhalb von 30 Tagen nach dem Erscheinen im Ausland) und das Urheberrecht nach 28 Jahren nicht verlängert wurde, war es schon früher frei. Ausländische Werke, die 1996 wieder geschützt wurden (§ 104A), bleiben 95 Jahre ab Erscheinen geschützt, aber nur, wenn sie in ihrem Ursprungsland noch geschützt waren und der Autor aus einem Mitgliedsland stammte. Deshalb ist das Datum «in der Regel», keine Gewissheit. Außerhalb der USA gelten andere Regeln: In Italien und Europa zählt der Tod des Autors.",
+  "proposta": "Wenn das Werk in den USA erschien (oder innerhalb von 30 Tagen nach dem Erscheinen im Ausland) und das Urheberrecht nach 28 Jahren nicht verlängert wurde, war es schon früher frei. Ausländische Werke, die 1996 wieder geschützt wurden (§ 104A), bleiben 95 Jahre ab Erscheinen geschützt, aber nur, wenn sie in ihrem Ursprungsland noch geschützt waren und der Autor aus einem Mitgliedsland stammte. Deshalb gilt das Datum nur „in der Regel“ und ist nicht sicher. Außerhalb der USA gelten andere Regeln: In Italien und Europa zählt der Tod des Autors.",
+  "motivo": "„ist das Datum «in der Regel», keine Gewissheit“ ist grammatisch schief; Anführungszeichen: «…» ist italienisch/französisch; im Deutschen „…“ (wie bereits in 239).",
+  "gravita": "media"
+ },
+ {
+  "id": "609",
+  "attuale": "In den USA zählt das Erscheinungsjahr, 95 Jahre später. Diese Liste zählt Werke, nicht Autoren. Richtwert, keine Rechtsberatung: Italien und Europa folgen anderen Regeln (Land im Menü wählen).",
+  "proposta": "In den USA zählt das Erscheinungsjahr: 95 Jahre danach wird ein Werk gemeinfrei. Diese Liste zählt Werke, nicht Autoren. Unverbindliche Berechnung, keine Rechtsberatung: Für Italien und Europa gelten andere Regeln (Land im Menü wählen).",
+  "motivo": "„…, 95 Jahre später.“ als angehängte Ellipse unklar; „folgen anderen Regeln“ klingt übersetzt.",
+  "gravita": "media"
+ },
+ {
+  "id": "610",
+  "attuale": "In den USA werden {n} {p} erschienene Werke am 1. Januar {a} gemeinfrei. Hier zählen wir Werke, nicht Autoren.",
+  "proposta": "In den USA werden am 1. Januar {a} {n} Werke gemeinfrei, die {p} erschienen sind. Hier zählen wir Werke, nicht Autoren.",
+  "motivo": "Zwei Zahlen hintereinander („412 1931 erschienene Werke“) – missverständlich.",
+  "gravita": "grave"
+ },
+ {
+  "id": "614",
+  "attuale": "Richtwert nach den Regeln im Kasten unten auf der Seite. Keine Rechtsberatung.",
+  "proposta": "Unverbindliche Berechnung nach den Regeln im Kasten unten auf der Seite. Keine Rechtsberatung.",
+  "motivo": "Uneinheitlich: Sonst „Unverbindliche Berechnung“ (101, 117), hier „Richtwert“.",
+  "gravita": "lieve"
+ },
+ {
+  "id": "621",
+  "attuale": "Italien: Tod + 70 Jahre. Die Kriegsverlängerung um 6 Jahre wurde 1996 aufgehoben; für vor 1940 erschienene Werke von Autoren aus alliierten Ländern sprechen sich manche für eine Verlängerung aus (Friedensvertrag von 1947), die die Gerichte bisher nicht angewandt haben. Die Daten stehen auf jeder Autorenkarte.",
+  "proposta": "Italien: Tod + 70 Jahre. Die Kriegsverlängerung um 6 Jahre wurde 1996 aufgehoben; für vor 1940 erschienene Werke von Autoren aus alliierten Ländern vertreten manche eine Verlängerung (Friedensvertrag von 1947), die die Gerichte bisher nicht angewandt haben. Die Datumsangaben stehen im jeweiligen Autorenprofil.",
+  "motivo": "„Die Daten“ doppeldeutig; „Autorenkarte“ (siehe 493).",
+  "gravita": "media"
+ },
+ {
+  "id": "622",
+  "attuale": "Italien: ab {d}. Die Kriegsverlängerung um 6 Jahre wurde 1996 aufgehoben. Für vor 1940 erschienene Werke von Autoren aus alliierten Ländern des Zweiten Weltkriegs sprechen sich manche für eine Verlängerung aus (Friedensvertrag von 1947): Die Gerichte haben sie bisher nicht angewandt («Der kleine Prinz», frei seit 2015).",
+  "proposta": "Italien: ab {d}. Die Kriegsverlängerung um 6 Jahre wurde 1996 aufgehoben. Für vor 1940 erschienene Werke von Autoren aus alliierten Ländern des Zweiten Weltkriegs sprechen sich manche für eine Verlängerung aus (Friedensvertrag von 1947): Die Gerichte haben sie bisher nicht angewandt („Der kleine Prinz“, frei seit 2015).",
+  "motivo": "Anführungszeichen: «…» ist italienisch/französisch; im Deutschen „…“ (wie bereits in 239).",
+  "gravita": "lieve"
+ },
+ {
+  "id": "627",
+  "attuale": "Letzter Datensatz mit sicherem Jahr",
+  "proposta": "Letzter Datensatz mit gesichertem Jahr",
+  "motivo": "„sicheres Jahr“ → „gesichertes Jahr“.",
+  "gravita": "lieve"
+ },
+ {
+  "id": "658",
+  "attuale": "Nur der Originaltext ist frei. Übersetzungen, redaktionelle Arbeit und Illustrationen haben eigene Rechte. Richtwert, keine Rechtsberatung.",
+  "proposta": "Nur der Originaltext ist frei. Übersetzungen, redaktionelle Arbeit und Illustrationen haben eigene Rechte. Unverbindliche Berechnung, keine Rechtsberatung.",
+  "motivo": "Uneinheitlich: „Richtwert“ vs. „Unverbindliche Berechnung“.",
+  "gravita": "lieve"
+ },
+ {
+  "id": "660",
+  "attuale": "Karte von {nome} öffnen",
+  "proposta": "Profil von {nome} öffnen",
+  "motivo": "Siehe 493 (Terminologie).",
+  "gravita": "lieve"
+ },
+ {
+  "id": "671",
+  "attuale": "Radar der Gemeinfreiheit",
+  "proposta": "Public Domain Radar",
+  "motivo": "Markenname; „Radar der Gemeinfreiheit“ wirkt wie eine Übersetzung des Namens und ist uneinheitlich mit dem restlichen Auftritt.",
+  "gravita": "media"
+ },
+ {
+  "id": "687",
+  "attuale": "In meiner Auswahl speichern",
+  "proposta": "Zur Auswahl hinzufügen",
+  "motivo": "„In meiner Auswahl speichern“ holprig; übliche UI-Formulierung.",
+  "gravita": "lieve"
+ },
+ {
+  "id": "688",
+  "attuale": "{nome} in meiner Auswahl speichern",
+  "proposta": "{nome} zur Auswahl hinzufügen",
+  "motivo": "Siehe 687.",
+  "gravita": "lieve"
+ },
+ {
+  "id": "697",
+  "attuale": "Weitere Werke zeigen",
+  "proposta": "Weitere Werke anzeigen",
+  "motivo": "UI-Standard: „anzeigen“.",
+  "gravita": "lieve"
+ },
+ {
+  "id": "698",
+  "attuale": "{n} weitere zeigen →",
+  "proposta": "{n} weitere anzeigen →",
+  "motivo": "UI-Standard: „anzeigen“.",
+  "gravita": "lieve"
+ },
+ {
+  "id": "701",
+  "attuale": "Spanien: Für vor 1987 gestorbene Autoren gelten 80 Jahre nach dem Tod (Gesetz von 1879). Das Datum ist vorsichtig: Das Gesetz sagt nicht, wie das Jahr gezählt wird.",
+  "proposta": "Spanien: Für vor 1987 gestorbene Autoren gelten 80 Jahre nach dem Tod (Gesetz von 1879). Das Datum ist vorsichtig angesetzt: Das Gesetz regelt nicht, wie das Jahr gezählt wird.",
+  "motivo": "„Das Datum ist vorsichtig“ – ein Datum kann nicht vorsichtig sein.",
+  "gravita": "media"
+ },
+ {
+  "id": "717",
+  "attuale": "Die größten Namen von {anno}",
+  "proposta": "Die großen Namen des Jahrgangs {anno}",
+  "motivo": "„Die größten Namen von {anno}“ klingt übersetzt.",
+  "gravita": "lieve"
+ },
+ {
+  "id": "720",
+  "attuale": "Die Regale entstehen aus Wikidata und zeigen nur Werke mit Genre. Die Cover sind typografisch: Echte Cover sind geschützt.",
+  "proposta": "Die Regale werden aus Wikidata erstellt und zeigen nur Werke mit Genre. Die Cover sind typografisch: Echte Cover sind geschützt.",
+  "motivo": "„entstehen aus Wikidata“ klingt übersetzt.",
+  "gravita": "lieve"
+ },
+ {
+  "id": "724",
+  "attuale": "Diese Liste zählt Werke, nicht Autoren. In den USA zählt das Erscheinungsjahr: 95 Jahre später, am 1. Januar. Im Januar {a} sind die Werke von {p} an der Reihe, die noch geschützt waren. Das Jahr ist die erste Veröffentlichung, die Wikidata verzeichnet: Eine ältere, nicht verzeichnete Ausgabe würde bedeuten, dass das Werk schon frei ist. Aufgeführt sind nur Werke mit Wikipedia-Seiten, nicht alle. Richtwert, keine Rechtsberatung: Italien und Europa folgen anderen Regeln (Land im Menü wählen).",
+  "proposta": "Diese Liste zählt Werke, nicht Autoren. In den USA zählt das Erscheinungsjahr: 95 Jahre danach, jeweils am 1. Januar, wird ein Werk gemeinfrei. Im Januar {a} sind die noch geschützten Werke aus dem Jahr {p} an der Reihe. Maßgeblich ist die erste Veröffentlichung, die Wikidata verzeichnet: Gibt es eine ältere, nicht verzeichnete Ausgabe, ist das Werk schon frei. Aufgeführt sind nur Werke mit Wikipedia-Seiten, nicht alle. Unverbindliche Berechnung, keine Rechtsberatung: Für Italien und Europa gelten andere Regeln (Land im Menü wählen).",
+  "motivo": "„die Werke von {p}“ missverständlich (siehe 191); „Das Jahr ist die erste Veröffentlichung“ ist schief.",
+  "gravita": "media"
+ },
+ {
+  "id": "737",
+  "attuale": "USA: Diese Liste zählt Werke, nicht Autoren. Ein {p} erschienenes Werk wird am 1. Januar {a} gemeinfrei. Richtwert, die Sonderfälle sind bei jedem Eintrag erklärt.",
+  "proposta": "USA: Diese Liste zählt Werke, nicht Autoren. Ein {p} erschienenes Werk wird am 1. Januar {a} gemeinfrei. Unverbindliche Berechnung; die Sonderfälle sind bei jedem Eintrag erklärt.",
+  "motivo": "Uneinheitlich: „Richtwert“; Komma-Anschluss holprig.",
+  "gravita": "lieve"
+ },
+ {
+  "id": "741",
+  "attuale": "Was ein Datensatz ist: der Eintrag, mit dem eine Bibliothek eine Veröffentlichung beschreibt. Meist gibt es einen pro Ausgabe oder Nachdruck, ein fünfmal erschienenes Buch zählt also fünf. Datensätze sind weder verkaufte Exemplare noch verschiedene Titel.",
+  "proposta": "Was ein Datensatz ist: der Eintrag, mit dem eine Bibliothek eine Veröffentlichung beschreibt. Meist gibt es einen pro Ausgabe oder Nachdruck, ein fünfmal erschienenes Buch zählt also fünfmal. Datensätze sind weder verkaufte Exemplare noch verschiedene Titel.",
+  "motivo": "„zählt also fünf“ → „fünfmal“.",
+  "gravita": "lieve"
+ },
+ {
+  "id": "787",
+  "attuale": "letzter mit sicherem Jahr: {a}",
+  "proposta": "letzter mit gesichertem Jahr: {a}",
+  "motivo": "„sicheres Jahr“ → „gesichertes Jahr“.",
+  "gravita": "lieve"
+ },
+ {
+  "id": "792",
+  "attuale": "Romancier",
+  "proposta": "Romanautor",
+  "motivo": "„Romancier“ ist im Deutschen selten und gehoben.",
+  "gravita": "lieve"
+ },
+ {
+  "id": "795",
+  "attuale": "Dichter",
+  "proposta": "Lyriker",
+  "motivo": "„poet“ als Berufsangabe: „Lyriker“ ist präziser als „Dichter“.",
+  "gravita": "lieve"
+ },
+ {
+  "id": "801",
+  "attuale": "{P} werden am 1. Januar {a} {n} {m} gestorbene Schriftsteller gemeinfrei.",
+  "proposta": "{P} werden am 1. Januar {a} {n} Autoren gemeinfrei, die {m} gestorben sind.",
+  "motivo": "Drei Zahlen in Folge („2027 412 1956 gestorbene“) – unlesbar; zudem Autoren statt Schriftsteller (Terminologie).",
+  "gravita": "grave"
+ },
+ {
+  "id": "805",
+  "attuale": "Karte von {nome}",
+  "proposta": "Profil von {nome}",
+  "motivo": "Siehe 493 (Terminologie).",
+  "gravita": "lieve"
+ },
+ {
+  "id": "822",
+  "attuale": "Bis {y} gibt es eine Ausgabe: Zwei Kataloge bestätigen es.",
+  "proposta": "Spätestens {y} ist eine Ausgabe erschienen: Zwei Kataloge bestätigen das.",
+  "motivo": "„Bis {y} gibt es eine Ausgabe“ heißt „bis zu diesem Jahr existiert eine Ausgabe“ – gemeint ist „spätestens {y} erschienen“. Sinnfehler.",
+  "gravita": "grave"
+ },
+ {
+  "id": "823",
+  "attuale": "Ein Richtwert, keine Rechtsberatung. Frei ist der Originaltext, nicht die Ausgabe oder die Übersetzung: Neue Übersetzungen, Illustrationen und Ausgaben haben eigene Rechte. Prüfen Sie vor dem Veröffentlichen das Recht des Landes.",
+  "proposta": "Eine unverbindliche Berechnung, keine Rechtsberatung. Frei ist der Originaltext, nicht die Ausgabe oder die Übersetzung: Neuere Übersetzungen, Illustrationen und Ausgaben haben eigene Rechte. Prüfen Sie vor dem Veröffentlichen das Recht des Landes.",
+  "motivo": "Uneinheitlich: „Richtwert“; „Neue“ vs. sonst „Neuere Übersetzungen“.",
+  "gravita": "lieve"
+ },
+ {
+  "id": "827",
+  "attuale": "Autor aus einem alliierten Land des Zweiten Weltkriegs: Für vor dem 10. Juni 1940 erschienene Werke meinen manche, dass der Schutz in Italien länger dauert (Friedensvertrag von 1947, Anhang XV). Die Gerichte haben das bisher nicht angewandt: «Der kleine Prinz» ist in Italien seit 2015 frei (Gericht Mailand 2021, Berufungsgericht Mailand 2022).",
+  "proposta": "Autor aus einem alliierten Land des Zweiten Weltkriegs: Für vor dem 10. Juni 1940 erschienene Werke meinen manche, dass der Schutz in Italien länger dauert (Friedensvertrag von 1947, Anhang XV). Die Gerichte haben das bisher nicht angewandt: „Der kleine Prinz“ ist in Italien seit 2015 frei (Gericht Mailand 2021, Berufungsgericht Mailand 2022).",
+  "motivo": "Anführungszeichen: «…» ist italienisch/französisch; im Deutschen „…“ (wie bereits in 239).",
+  "gravita": "lieve"
+ },
+ {
+  "id": "832",
+  "attuale": "Löschen",
+  "proposta": "Zurücksetzen",
+  "motivo": "„Löschen“ klingt nach Datenverlust; für Such-/Filterfelder üblich: „Zurücksetzen“.",
+  "gravita": "lieve"
+ },
+ {
+  "id": "834",
+  "attuale": "Jeder Titel zeigt alle Länder: In Europa zählen 70 Jahre ab dem Tod des Autors (80 in Spanien für vor 1987 gestorbene Autoren), in den USA 95 Jahre ab Erscheinen. Ein Richtwert, keine Rechtsberatung; Übersetzungen und Illustrationen haben eigene Rechte.",
+  "proposta": "Jeder Titel zeigt alle Länder: In Europa zählen 70 Jahre ab dem Tod des Autors (80 in Spanien für vor 1987 gestorbene Autoren), in den USA 95 Jahre ab Erscheinen. Eine unverbindliche Berechnung, keine Rechtsberatung; Übersetzungen und Illustrationen haben eigene Rechte.",
+  "motivo": "Uneinheitlich: „Richtwert“.",
+  "gravita": "lieve"
+ },
+ {
+  "id": "839",
+  "attuale": "Frankreich: noch nicht frei, der Autor ist «für Frankreich gestorben» (30 Jahre mehr, Art. L123-10).",
+  "proposta": "Frankreich: noch nicht frei, der Autor ist „für Frankreich gestorben“ (30 zusätzliche Jahre, Art. L123-10).",
+  "motivo": "„30 Jahre mehr“; Anführungszeichen: «…» ist italienisch/französisch; im Deutschen „…“ (wie bereits in 239).",
+  "gravita": "lieve"
+ },
+ {
+  "id": "849",
+  "attuale": "Ich kann die Daten nicht lesen. Bitte versuchen Sie es gleich noch einmal.",
+  "proposta": "Die Daten konnten nicht geladen werden. Bitte versuchen Sie es gleich noch einmal.",
+  "motivo": "Ich-Form („Ich kann …“) uneinheitlich; Fehlermeldungen sind im Deutschen unpersönlich.",
+  "gravita": "media"
+ },
+ {
+  "id": "850",
+  "attuale": "In Frankreich erhalten Autoren, die «für Frankreich gestorben» sind, 30 Jahre mehr. Wikidata führt diesen Autor nicht so, aber die Liste kann unvollständig sein: prüfen.",
+  "proposta": "In Frankreich erhalten Autoren, die „für Frankreich gestorben“ sind, 30 zusätzliche Jahre. Wikidata führt diesen Autor nicht als solchen, aber die Liste kann unvollständig sein: bitte prüfen.",
+  "motivo": "„führt diesen Autor nicht so“ unklar; Anführungszeichen: «…» ist italienisch/französisch; im Deutschen „…“ (wie bereits in 239).",
+  "gravita": "lieve"
+ },
+ {
+  "id": "862",
+  "attuale": "Am meisten besucht",
+  "proposta": "Meistbesucht",
+  "motivo": "Uneinheitlich mit 638 („Meistbesucht auf Wikipedia“).",
+  "gravita": "lieve"
+ },
+ {
+  "id": "866",
+  "attuale": "In Frankreich noch nicht frei: Der Autor wurde für «für Frankreich gestorben» erklärt und erhält 30 Jahre mehr Schutz (Gesetzbuch des geistigen Eigentums, Art. L123-10). Das genaue Datum hängt davon ab, wann jedes Werk erschienen ist.",
+  "proposta": "In Frankreich noch nicht gemeinfrei: Der Autor trägt den Vermerk „Mort pour la France“ (für Frankreich gestorben) und erhält 30 Jahre zusätzlichen Schutz (Code de la propriété intellectuelle, Art. L123-10). Das genaue Datum hängt davon ab, wann das jeweilige Werk erschienen ist.",
+  "motivo": "„wurde für «für Frankreich gestorben» erklärt“ ist grammatisch falsch; Gesetzbuch besser mit Originalnamen.",
+  "gravita": "grave"
+ },
+ {
+  "id": "873",
+  "attuale": "Archiv der Gemeinfreiheit",
+  "proposta": "Archiv gemeinfreier Werke",
+  "motivo": "„Archiv der Gemeinfreiheit“ klingt übersetzt.",
+  "gravita": "media"
+ },
+ {
+  "id": "876",
+  "attuale": "Ergebnisse für «{q}»",
+  "proposta": "Ergebnisse für „{q}“",
+  "motivo": "Anführungszeichen: «…» ist italienisch/französisch; im Deutschen „…“ (wie bereits in 239).",
+  "gravita": "lieve"
+ },
+ {
+  "id": "880",
+  "attuale": "Weniger zeigen",
+  "proposta": "Weniger anzeigen",
+  "motivo": "UI-Standard: „anzeigen“.",
+  "gravita": "lieve"
+ },
+ {
+  "id": "881",
+  "attuale": "Mehr Ergebnisse zeigen",
+  "proposta": "Weitere Ergebnisse anzeigen",
+  "motivo": "UI-Standard: „anzeigen“.",
+  "gravita": "lieve"
+ },
+ {
+  "id": "889",
+  "attuale": "Die Liste enthält die Werke mit einer Wikipedia-Seite und einem Jahr auf Wikidata sowie die Werke schon freier Schriftsteller. Fehlt ein Titel, ist er nicht unbedingt geschützt: Prüfen Sie das Erscheinungsjahr und das Todesjahr des Autors.",
+  "proposta": "Die Liste enthält die Werke mit einer Wikipedia-Seite und einem Jahr auf Wikidata sowie die Werke bereits gemeinfreier Autoren. Fehlt ein Titel, ist er nicht unbedingt geschützt: Prüfen Sie das Erscheinungsjahr und das Todesjahr des Autors.",
+  "motivo": "„schon freier Schriftsteller“ ist missverständlich (Menschen sind nicht „frei“) und uneinheitlich (Autoren).",
+  "gravita": "media"
+ },
+ {
+  "id": "890",
+  "attuale": "Die Originalzeichnungen von {n} haben eigene Rechte, die 70 Jahre ab dem Tod dauern: In Italien, Frankreich, Deutschland und im Vereinigten Königreich sind sie ab 1. Januar {y} frei. Der Text nicht: Es gilt das Datum oben.",
+  "proposta": "Die Originalzeichnungen von {n} haben eigene Rechte, die bis 70 Jahre nach dem Tod bestehen: In Italien, Frankreich, Deutschland und im Vereinigten Königreich sind sie ab 1. Januar {y} frei. Für den Text gilt dagegen das Datum oben.",
+  "motivo": "„Der Text nicht: Es gilt …“ ist elliptisch und klingt übersetzt.",
+  "gravita": "media"
+ },
+ {
+  "id": "933",
+  "attuale": "{r} von {n} hat eigene Rechte, die 70 Jahre ab dem Tod dauern: In Frankreich, Deutschland und im Vereinigten Königreich ist sie ab 1. Januar {y} frei; in Italien und Spanien kann das Datum später liegen. Der Text nicht: Es gilt das Datum oben.",
+  "proposta": "{r} von {n} hat eigene Rechte, die bis 70 Jahre nach dem Tod bestehen: In Frankreich, Deutschland und im Vereinigten Königreich laufen sie am 1. Januar {y} ab; in Italien und Spanien kann das Datum später liegen. Für den Text gilt dagegen das Datum oben.",
+  "motivo": "„ist sie … frei“ passt grammatisch nur zu femininem {r} (falsch bei „Das Libretto“); Ellipse „Der Text nicht“ klingt übersetzt.",
+  "gravita": "media"
+ },
+ {
+  "id": "937",
+  "attuale": "«{g}» ist eine Gruppe: Es zählen die Todesjahre ihrer Mitglieder.",
+  "proposta": "„{g}“ ist eine Gruppe: Es zählen die Todesjahre ihrer Mitglieder.",
+  "motivo": "Anführungszeichen: «…» ist italienisch/französisch; im Deutschen „…“ (wie bereits in 239).",
+  "gravita": "lieve"
+ },
+ {
+  "id": "948",
+  "attuale": "Geburt von {nome} ({e} Jahre)",
+  "proposta": "Geburt von {nome} ({e}. Geburtstag)",
+  "motivo": "„({e} Jahre)“ ist bei Jahrestagen unidiomatisch.",
+  "gravita": "lieve"
+ },
+ {
+  "id": "949",
+  "attuale": "Geburten",
+  "proposta": "Geburtstage",
+  "motivo": "Bei Jahrestagen „Geburtstage“, nicht „Geburten“.",
+  "gravita": "media"
+ },
+ {
+  "id": "956",
+  "attuale": "Tod von {nome} ({e} Jahre)",
+  "proposta": "Tod von {nome} ({e}. Todestag)",
+  "motivo": "Wie 948.",
+  "gravita": "lieve"
+ },
+ {
+  "id": "957",
+  "attuale": "Todesfälle",
+  "proposta": "Todestage",
+  "motivo": "„Todesfälle“ klingt nach Statistik/Nachrufen; bei Jahrestagen heißt es „Todestage“.",
+  "gravita": "media"
+ },
+ {
+  "id": "963",
+  "attuale": "Erstausgabe von «{nome}» ({e} Jahre)",
+  "proposta": "Erstausgabe von „{nome}“ ({e} Jahre)",
+  "motivo": "Anführungszeichen: «…» ist italienisch/französisch; im Deutschen „…“ (wie bereits in 239).",
+  "gravita": "lieve"
+ },
+ {
+  "id": "973",
+  "attuale": "Auf dem Telefon: Teilen → Instagram → Story.",
+  "proposta": "Auf dem Smartphone: Teilen → Instagram → Story.",
+  "motivo": "„Telefon“ für das Gerät mit Instagram unüblich.",
+  "gravita": "lieve"
+ },
+ {
+  "id": "983",
+  "attuale": "Abonnieren Sie den Kalender in Google Kalender, Apple Kalender oder Outlook: Die Jahrestage mit genauem Datum kommen von selbst. Einträge, von denen nur das Jahr bekannt ist, bleiben in der CSV-Tabelle.",
+  "proposta": "Abonnieren Sie den Kalender in Google Kalender, Apple Kalender oder Outlook: Die Jahrestage mit genauem Datum erscheinen dann automatisch. Einträge, bei denen nur das Jahr bekannt ist, bleiben in der CSV-Tabelle.",
+  "motivo": "„kommen von selbst“ umgangssprachlich.",
+  "gravita": "lieve"
+ },
+ {
+  "id": "1003",
+  "attuale": "Vor {e} Jahren, {y}, starb {nome}.",
+  "proposta": "Vor {e} Jahren, im Jahr {y}, starb {nome}.",
+  "motivo": "Eingeschobene Jahreszahl ohne „im Jahr“ wirkt abgehackt.",
+  "gravita": "lieve"
+ },
+ {
+  "id": "1004",
+  "attuale": "Vor {e} Jahren, {y}, wurde {nome} geboren.",
+  "proposta": "Vor {e} Jahren, im Jahr {y}, wurde {nome} geboren.",
+  "motivo": "Wie 1003.",
+  "gravita": "lieve"
+ },
+ {
+  "id": "1005",
+  "attuale": "Vor {e} Jahren, {y}, erschien «{nome}»{aut} zum ersten Mal.",
+  "proposta": "Vor {e} Jahren, im Jahr {y}, erschien „{nome}“{aut} zum ersten Mal.",
+  "motivo": "Wie 1003; Anführungszeichen: «…» ist italienisch/französisch; im Deutschen „…“ (wie bereits in 239).",
+  "gravita": "lieve"
+ },
+ {
+  "id": "1008",
+  "attuale": "Vor {e} Jahren, am {g}. {m} {y}, erschien «{nome}»{aut} zum ersten Mal.",
+  "proposta": "Vor {e} Jahren, am {g}. {m} {y}, erschien „{nome}“{aut} zum ersten Mal.",
+  "motivo": "Anführungszeichen: «…» ist italienisch/französisch; im Deutschen „…“ (wie bereits in 239).",
+  "gravita": "lieve"
+ }
+]
