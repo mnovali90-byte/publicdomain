@@ -1,8 +1,11 @@
 name: Biografie e titoli in tedesco, francese e spagnolo (non cambia le pagine)
 
 # 26/11/2026, con l'ok di Marco: per le pagine in tedesco, francese e spagnolo (scripts/lingue.py).
-# Si lancia a mano. Scrive solo data/lingue_extra.json: non tocca liste, date, regole né pagine.
+# Parte cambiando docs/registro/passo-bio-lingue.txt (o a mano da GitHub). Scrive solo data/lingue_extra.json: non tocca liste, date, regole né pagine.
 on:
+  push:
+    paths:
+      - "docs/registro/passo-bio-lingue.txt"
   workflow_dispatch:
 
 permissions:
