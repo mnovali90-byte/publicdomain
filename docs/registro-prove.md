@@ -1759,3 +1759,14 @@ che resta un obiettivo da verificare dopo con un campione casuale più grande.
 - Collegamenti alla home: una passata sola alla fine della generazione (scripts/lingue.py, sistema_home): nelle pagine italiane i collegamenti alla home vanno a /it/, ovunque /en/ diventa /. Le righe hreflang e canonical non si toccano. Chiamata da scripts/pagine.py e da storico/pagina.py (che gira anche da sola sul server).
 - Niente avviso nella lingua del browser (Marco: non serve).
 - prova_regole aggiornata ai nuovi percorsi delle due home (punti 5 e 8): 245 confronti come prima, tutto a 0. controllo_pagine 0, fotografia 0 cambi, link rotti in tutto il sito 0.
+
+## 26/11/2026 — Già pubblici: titoli di altri autori separati (segnalazione di Marco)
+- Problema: cercando Dostoevskij e aprendo le sue opere, sotto comparivano «Dostoevskij e il parricidio» (Freud) e «L. Tolstoj e Dostoevskij» (Merežkovskij), che sembravano sue. Non erano nei dati dell'autore: erano i titoli che contengono la parola cercata, messi subito dopo senza separazione.
+- Correzione (storico/pagina.html): quando la ricerca trova un autore, i titoli di altri autori vanno in una parte a sé, «Altri titoli che contengono «…»» con la riga «Opere di altri autori: il nome compare solo nel titolo»; le opere dell'autore trovato non si ripetono lì. Testi in tutte e cinque le lingue.
+- Prova: ricerca «Dostoevskij» in locale: le 40 opere dell'autore, poi la parte separata con il libro di Freud. prova_regole e controllo_pagine a 0.
+
+## 26/11/2026 — Prova Thema, passo 1: raccolta dei testi con fonte (ok di Marco)
+- Scopo: capire quanto bene l'AI assegna i codici Thema (EDItEUR, gratuito; scartato BISAC perché la lista completa richiede licenza per i database) leggendo solo testi con fonte. Regola di Marco: mai inventare; se l'AI non è sicura decide lui.
+- Campione fisso: docs/stima-sito/prova-thema/campione.json, 200 opere su 54.509 (seme 20261126): 100 con voce Wikipedia in almeno 20 lingue, 100 meno note.
+- Raccolta (scripts/prova_thema.py, giro .github/workflows/prova-thema.yml, parte da docs/registro/passo-thema.txt): descrizioni Wikidata it/en, genere/argomento/luogo/periodo/forma Wikidata, inizio voce Wikipedia it/en con indirizzo; lista Thema en/it da EDItEUR. Solo italiano e inglese, per decisione di Marco: prima si misura la bravura dell'AI; i nomi Thema nelle lingue del sito (de/fr/es) vengono dopo.
+- Il giro scrive solo docs/stima-sito/prova-thema/: sito e pagine invariati. La correzione Dostoevskij resta fuori da questo invio.

@@ -1,0 +1,35 @@
+name: Prova Thema – testi con fonte per 200 opere (non cambia il sito)
+
+# Parte solo cambiando docs/registro/passo-thema.txt, con l'ok di Marco (26/11/2026).
+# Scrive solo docs/stima-sito/prova-thema/ (descrizioni, lista Thema, rapporto): niente pagine, niente registro.
+on:
+  push:
+    paths:
+      - "docs/registro/passo-thema.txt"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: prova-thema
+  cancel-in-progress: false
+
+jobs:
+  prova:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Testi da Wikidata e Wikipedia, lista Thema da EDItEUR
+        run: python scripts/prova_thema.py
+      - name: Salva solo la cartella della prova
+        if: ${{ !cancelled() }}
+        run: |
+          git add docs/stima-sito/prova-thema/ 2>/dev/null || true
+          bash scripts/salva.sh "Prova Thema: testi raccolti"
