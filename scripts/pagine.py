@@ -1386,6 +1386,9 @@ def cataloghi_n(a, lang):
             f'<div class="why"><button type="button">{T("Che cos’è una registrazione", "What a record is")} <span>[+]</span></button><p>{esc(cosa + ult + met)}</p></div>\n')
 
 
+OPERA_NEL_TITOLO = json.loads((RADICE / "data" / "opera_nel_titolo.json").read_text(encoding="utf-8"))["autori"]
+
+
 def pagina_autore(a, slug, lang, ha_altra):
     nome = pulisci(a["nome"])
     nasc, mor = anno_di(a.get("nascita")), anno_di(a.get("morte"))
@@ -1394,12 +1397,19 @@ def pagina_autore(a, slug, lang, ha_altra):
     bd = bio_di(a, lang)
     url = url_pagina(lang, slug)
     it = lang == "it"
+    op_t = OPERA_NEL_TITOLO.get(a["wikidata"], {}).get(lang)   # 25/11/2026: l'opera più cercata nel titolo (data/opera_nel_titolo.json)
+    if it and op_t:
+        titolo = f"{nome} e «{op_t}»: quando entrano in pubblico dominio · Public Domain Radar"
+    elif op_t:
+        titolo = f"{nome} and “{op_t}”: when they enter the public domain · Public Domain Radar"
     if it:
-        titolo = f"{nome} ({anni}): quando entra in pubblico dominio · Public Domain Radar"
+        if not op_t:
+            titolo = f"{nome} ({anni}): quando entra in pubblico dominio · Public Domain Radar"
         descr = (f"{nome} è morto nel {D}: {dove_libero(a.get('paesi'), D, lang)} le sue opere sono libere dal {data_l(lang, R.anno_libero(D, 'it'))}. "
                  f"Date per Italia, Francia, Germania, Spagna, Regno Unito e USA, registrazioni nei cataloghi nazionali e opere principali, da dati aperti.")
     else:
-        titolo = f"{nome} ({anni}): when the works enter the public domain · Public Domain Radar"
+        if not op_t:
+            titolo = f"{nome} ({anni}): when the works enter the public domain · Public Domain Radar"
         descr = (f"{nome} died in {D}: {dove_libero(a.get('paesi'), D, lang)} the works are free from {data_l(lang, R.anno_libero(D, 'it'))}. "
                  f"Dates for Italy, France, Germany, Spain, the UK and the USA, records in national catalogues and main works, from open data.")
     persona = {"@context": "https://schema.org", "@type": "Person", "name": nome, "url": url,

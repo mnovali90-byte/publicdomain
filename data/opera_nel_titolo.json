@@ -1,0 +1,28 @@
+{
+  "nota": "25/11/2026, decisione di Marco: nel titolo della scheda autore (il <title> che Google mostra) va anche l'opera più cercata, perché la gente cerca l'opera («winnie puh pubblico dominio»), non solo l'autore. Solo autori del 2027, scelti a mano tra le loro opere principali; chi non c'è tiene il titolo di sempre. Esclusi gli autori senza un'opera letteraria nota tra le principali e le opere d'odio (data/storico_esclusioni.json).",
+  "autori": {
+    "Q231690": {"it": "Annihilation of Caste", "en": "Annihilation of Caste"},
+    "Q42511": {"it": "La guerra dei mondi", "en": "The War of the Worlds"},
+    "Q38757": {"it": "L'opera da tre soldi", "en": "The Threepenny Opera"},
+    "Q9317": {"it": "la Teoria generale", "en": "The General Theory"},
+    "Q188385": {"it": "Autobiografia di Alice Toklas", "en": "The Autobiography of Alice B. Toklas"},
+    "Q207036": {"it": "Winnie Puh", "en": "Winnie-the-Pooh"},
+    "Q439204": {"it": "The American Language", "en": "The American Language"},
+    "Q43523": {"it": "I tessitori", "en": "The Weavers"},
+    "Q193283": {"it": "El amor brujo", "en": "El amor brujo"},
+    "Q57277": {"it": "Morgue", "en": "Morgue"},
+    "Q123075": {"it": "Jakob von Gunten", "en": "Jakob von Gunten"},
+    "Q220980": {"it": "El árbol de la ciencia", "en": "El árbol de la ciencia"},
+    "Q714880": {"it": "Guys and Dolls", "en": "Guys and Dolls"},
+    "Q529858": {"it": "Un uomo finito", "en": "Un uomo finito"},
+    "Q983356": {"it": "The Front Page", "en": "The Front Page"},
+    "Q1137066": {"it": "Color", "en": "Color"},
+    "Q893138": {"it": "I magnifici Amberson", "en": "The Magnificent Ambersons"},
+    "Q500042": {"it": "The Rains Came", "en": "The Rains Came"},
+    "Q472071": {"it": "Zuleika Dobson", "en": "Zuleika Dobson"},
+    "Q371925": {"it": "Gente in Aspromonte", "en": "Gente in Aspromonte"},
+    "Q263067": {"it": "The Friends of Voltaire", "en": "The Friends of Voltaire"},
+    "Q155270": {"it": "Il tradimento dei chierici", "en": "The Treason of the Intellectuals"},
+    "Q260670": {"it": "Moon Magic", "en": "Moon Magic"}
+  }
+}
