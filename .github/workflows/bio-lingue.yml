@@ -1,0 +1,32 @@
+name: Biografie e titoli in tedesco, francese e spagnolo (non cambia le pagine)
+
+# 26/11/2026, con l'ok di Marco: per le pagine in tedesco, francese e spagnolo (scripts/lingue.py).
+# Si lancia a mano. Scrive solo data/lingue_extra.json: non tocca liste, date, regole né pagine.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bio-lingue
+  cancel-in-progress: false
+
+jobs:
+  bio:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Biografie, descrizioni e titoli da Wikipedia e Wikidata
+        run: python scripts/bio_lingue.py
+      - name: Salva solo il file delle lingue
+        if: ${{ !cancelled() }}
+        run: |
+          git add data/lingue_extra.json 2>/dev/null || true
+          bash scripts/salva.sh "Biografie e titoli in tedesco, francese e spagnolo"
