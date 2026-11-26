@@ -21,6 +21,7 @@ import shutil
 import sys
 import unicodedata
 from pathlib import Path
+from lingue import traduttore, testo as testo_l   # 26/11/2026: le lingue in un posto solo (scripts/lingue.py)
 
 RADICE = Path(__file__).resolve().parent.parent
 SITO = "https://publicdomainradar.com"
@@ -413,72 +414,59 @@ def blocco_verifica(a, lang):
     fv = v.get("fonti", {})
     nomi = [NOMI_FONTE[lang][k] for k in fv if k in NOMI_FONTE[lang]]
     if v["esito"] == "verificato":
-        t = (f"Anno di morte confermato da {len(nomi)} fonti indipendenti: {', '.join(nomi)}." if it
-             else f"Year of death confirmed by {len(nomi)} independent sources: {', '.join(nomi)}.")
+        t = (testo_l(lang, 'Anno di morte confermato da {v1} fonti indipendenti: {v2}.', 'Year of death confirmed by {v1} independent sources: {v2}.', v1=len(nomi), v2=', '.join(nomi)))
         return [f'<p class="sotto">{esc(t)}</p>\n']
     if v["esito"] == "nazionale":
         n = v.get("nazionale", {})
         # 23/11/2026 (Marco): frase uguale per tutte le verifiche a mano, seguita dalle fonti
-        t = (f"Anno di morte controllato a mano su fonti terze: {n.get('fonte')}." if it
-             else f"Year of death checked by hand against third-party sources: {n.get('fonte')}.")
-        link = f'<a href="{esc(n.get("url", ""))}" rel="noopener">{"Fonte" if it else "Source"}</a>'
+        t = (testo_l(lang, 'Anno di morte controllato a mano su fonti terze: {v1}.', 'Year of death checked by hand against third-party sources: {v1}.', v1=n.get('fonte')))
+        link = f'<a href="{esc(n.get("url", ""))}" rel="noopener">{testo_l(lang, 'Fonte', 'Source')}</a>'
         if n.get("url_2"):
-            link += f', <a href="{esc(n["url_2"])}" rel="noopener">{"seconda fonte" if it else "second source"}</a>'
+            link += f', <a href="{esc(n["url_2"])}" rel="noopener">{testo_l(lang, 'seconda fonte', 'second source')}</a>'
         return [f'<p class="sotto">{esc(t)} {link}</p>\n']
     if v["esito"] in ("maggioranza", "corretto"):
         au = v.get("autorevoli") or {}
         fa = ", ".join(au.get("fonti", []))
         if v["esito"] == "maggioranza":
-            t = (f"Anno di morte {au.get('morte')} confermato da {len(au.get('fonti', []))} fonti autorevoli ({fa}). Altre fonti danno un anno diverso: vale quello su cui concordano le fonti autorevoli." if it
-                 else f"Year of death {au.get('morte')} confirmed by {len(au.get('fonti', []))} authoritative sources ({fa}). Other sources give a different year: the one the authoritative sources agree on applies.")
+            t = (testo_l(lang, 'Anno di morte {v1} confermato da {v2} fonti autorevoli ({fa}). Altre fonti danno un anno diverso: vale quello su cui concordano le fonti autorevoli.', 'Year of death {v1} confirmed by {v2} authoritative sources ({fa}). Other sources give a different year: the one the authoritative sources agree on applies.', v1=au.get('morte'), v2=len(au.get('fonti', [])), fa=fa))
         else:
-            t = (f"Anno di morte {au.get('morte')} secondo {len(au.get('fonti', []))} fonti autorevoli ({fa}). Wikidata dice {fv.get('wikidata')}: vale quello delle fonti autorevoli." if it
-                 else f"Year of death {au.get('morte')} according to {len(au.get('fonti', []))} authoritative sources ({fa}). Wikidata says {fv.get('wikidata')}: the authoritative sources apply.")
+            t = (testo_l(lang, 'Anno di morte {v1} secondo {v2} fonti autorevoli ({fa}). Wikidata dice {v3}: vale quello delle fonti autorevoli.', 'Year of death {v1} according to {v2} authoritative sources ({fa}). Wikidata says {v3}: the authoritative sources apply.', v1=au.get('morte'), v2=len(au.get('fonti', [])), fa=fa, v3=fv.get('wikidata')))
         return [f'<p class="sotto">{esc(t)}</p>\n']
     if v["esito"] == "documentato":
         cit = ", ".join(v.get("citate", {}))
-        t = (f"Anno di morte documentato: Wikidata lo riporta citando {cit}. Le biblioteche nazionali che consultiamo non hanno questo autore." if it
-             else f"Year of death documented: Wikidata gives it citing {cit}. The national libraries we check do not hold this author.")
+        t = (testo_l(lang, 'Anno di morte documentato: Wikidata lo riporta citando {cit}. Le biblioteche nazionali che consultiamo non hanno questo autore.', 'Year of death documented: Wikidata gives it citing {cit}. The national libraries we check do not hold this author.', cit=cit))
         return [f'<p class="sotto">{esc(t)}</p>\n']
     if v["esito"] == "discorde":
         el = ", ".join([f"{NOMI_FONTE[lang][k]} {y}" for k, y in fv.items() if k in NOMI_FONTE[lang]]
                        + [f"{k} {y}" for k, y in v.get("citate", {}).items()])
-        t = (f"Da verificare: le fonti non concordano sull'anno di morte ({el}). Le date qui sopra usano l'anno della lista; lo stiamo verificando." if it
-             else f"To verify: the sources disagree on the year of death ({el}). The dates above use the list year; we are checking it.")
+        t = (testo_l(lang, "Da verificare: le fonti non concordano sull'anno di morte ({el}). Le date qui sopra usano l'anno della lista; lo stiamo verificando.", 'To verify: the sources disagree on the year of death ({el}). The dates above use the list year; we are checking it.', el=el))
         return [f'<p><strong>{esc(t)}</strong></p>\n']
     ag = ", ".join(v.get("aggiunte") or {})
     if ag:      # fonte trovata a mano che concorda (23/11/2026, von den Steinen)
-        t = (f"Anno di morte da Wikidata, che concorda con {ag} (fonte trovata a mano): le biblioteche nazionali consultate non lo riportano." if it
-             else f"Year of death from Wikidata, which agrees with {ag} (a source found by hand): the national libraries we check do not record it.")
+        t = (testo_l(lang, 'Anno di morte da Wikidata, che concorda con {ag} (fonte trovata a mano): le biblioteche nazionali consultate non lo riportano.', 'Year of death from Wikidata, which agrees with {ag} (a source found by hand): the national libraries we check do not record it.', ag=ag))
         return [f'<p class="sotto">{esc(t)}</p>\n']
-    t = ("Anno di morte da una sola fonte (Wikidata), senza fonti citate: le biblioteche nazionali consultate non lo riportano." if it
-         else "Year of death from a single source (Wikidata), with no cited source: the national libraries we check do not record it.")
+    t = (testo_l(lang, 'Anno di morte da una sola fonte (Wikidata), senza fonti citate: le biblioteche nazionali consultate non lo riportano.', 'Year of death from a single source (Wikidata), with no cited source: the national libraries we check do not record it.'))
     return [f'<p class="sotto">{esc(t)}</p>\n']
 
 
 def blocco_illustrazioni(a, lang):
     """Le illustrazioni (e le traduzioni) hanno diritti propri: si liberano con la morte di chi le ha fatte."""
     it = lang == "it"
-    out = [f"<h2>{'Illustrazioni e traduzioni' if it else 'Illustrations and translations'}</h2>\n"]
+    out = [f"<h2>{testo_l(lang, 'Illustrazioni e traduzioni', 'Illustrations and translations')}</h2>\n"]
     ill = [x for x in (a.get("illustratori") or []) if x.get("nome")]
     if ill:
         out.append("<ul>\n")
         for x in ill:
             if x.get("morte"):
-                quando = (f"libere {dove_libero(None, x['morte'], lang)} dal {data_l(lang, R.anno_libero(x['morte'], 'it'))}" if it else f"free {dove_libero(None, x['morte'], lang)} from {data_l(lang, R.anno_libero(x['morte'], 'it'))}")
-                morto = f"morto nel {x['morte']}" if it else f"died {x['morte']}"
-                r = f"{x['opera']}: illustrazioni di {x['nome']} ({morto}), {quando}" if it else f"{x['opera']}: illustrations by {x['nome']} ({morto}), {quando}"
+                quando = (testo_l(lang, 'libere {v1} dal {v2}', 'free {v1} from {v2}', v1=dove_libero(None, x['morte'], lang), v2=data_l(lang, R.anno_libero(x['morte'], 'it'))))
+                morto = testo_l(lang, 'morto nel {v1}', 'died {v1}', v1=x['morte'])
+                r = testo_l(lang, '{v1}: illustrazioni di {v2} ({morto}), {quando}', '{v1}: illustrations by {v2} ({morto}), {quando}', v1=x['opera'], v2=x['nome'], morto=morto, quando=quando)
             else:
-                r = (f"{x['opera']}: illustrazioni di {x['nome']}, data di morte non nota" if it
-                     else f"{x['opera']}: illustrations by {x['nome']}, year of death unknown")
+                r = (testo_l(lang, '{v1}: illustrazioni di {v2}, data di morte non nota', '{v1}: illustrations by {v2}, year of death unknown', v1=x['opera'], v2=x['nome']))
             out.append(f"<li>{esc(r)}</li>\n")
         out.append("</ul>\n")
     out.append('<p class="sotto">' + (
-        "Le date di questa pagina valgono per i testi originali. Illustrazioni e traduzioni hanno diritti propri, "
-        "che durano 70 anni dalla morte dell'illustratore o del traduttore: un libro può avere il testo libero e i disegni ancora protetti."
-        if it else
-        "The dates on this page apply to the original texts. Illustrations and translations have their own rights, "
-        "lasting 70 years after the death of the illustrator or translator: a book can have a free text and still-protected drawings.") + "</p>\n")
+        testo_l(lang, "Le date di questa pagina valgono per i testi originali. Illustrazioni e traduzioni hanno diritti propri, che durano 70 anni dalla morte dell'illustratore o del traduttore: un libro può avere il testo libero e i disegni ancora protetti.", 'The dates on this page apply to the original texts. Illustrations and translations have their own rights, lasting 70 years after the death of the illustrator or translator: a book can have a free text and still-protected drawings.')) + "</p>\n")
     return out
 
 
@@ -778,7 +766,7 @@ def note_coautori(a, lang):
     dopo l'autore (la data europea dell'opera è la loro), quelli senza data di morte (da verificare) e la musica o il
     libretto ancora protetti. Gruppi ed enti senza membri noti non contano; un gruppo con membri vale per i membri."""
     it = lang == "it"
-    T = (lambda x, y: x) if it else (lambda x, y: y)
+    T = traduttore(lang)
     D = anno_di(a.get("morte"))
     oggi_a = datetime.date.today().year
     note = []
@@ -793,28 +781,22 @@ def note_coautori(a, lang):
             nome, m = max(tardi, key=lambda x: x[1])
             es, ue_m = R.anno_libero(m, "es"), R.anno_libero(m, "it")
             if w.get("ruoli", {}).get(nome) == "opera originale":
-                note.append(T(f"{tt} è tratta da un'opera di {nome} (morte: {m}): in Italia, Francia, Germania e Regno Unito è libera dal 1° gennaio {ue_m}, in Spagna dal {es}.",
-                              f"{tt} is based on a work by {nome}, who died in {m}: in Italy, France, Germany and the UK it is free from 1 January {ue_m}, in Spain from {es}."))
+                note.append(T("{tt} è tratta da un'opera di {nome} (morte: {m}): in Italia, Francia, Germania e Regno Unito è libera dal 1° gennaio {ue_m}, in Spagna dal {es}.", '{tt} is based on a work by {nome}, who died in {m}: in Italy, France, Germany and the UK it is free from 1 January {ue_m}, in Spain from {es}.', tt=tt, nome=nome, m=m, ue_m=ue_m, es=es))
             else:
-                note.append(T(f"{tt} è scritta anche da {nome} (morte: {m}): in Italia, Francia, Germania e Regno Unito è libera dal 1° gennaio {ue_m}, in Spagna dal {es}.",
-                              f"{tt} was also written by {nome}, who died in {m}: in Italy, France, Germany and the UK it is free from 1 January {ue_m}, in Spain from {es}."))
+                note.append(T('{tt} è scritta anche da {nome} (morte: {m}): in Italia, Francia, Germania e Regno Unito è libera dal 1° gennaio {ue_m}, in Spagna dal {es}.', '{tt} was also written by {nome}, who died in {m}: in Italy, France, Germany and the UK it is free from 1 January {ue_m}, in Spain from {es}.', tt=tt, nome=nome, m=m, ue_m=ue_m, es=es))
         elif ignoti:
-            note.append(T(f"{tt}: tra gli autori c'è anche {', '.join(ignoti)}, di cui Wikidata non dà l'anno di morte. Da verificare.",
-                          f"{tt}: the authors also include {', '.join(ignoti)}, whose year of death Wikidata does not give. To be checked."))
+            note.append(T("{tt}: tra gli autori c'è anche {v1}, di cui Wikidata non dà l'anno di morte. Da verificare.", '{tt}: the authors also include {v1}, whose year of death Wikidata does not give. To be checked.', tt=tt, v1=', '.join(ignoti)))
         for ruolo, nome, m in w.get("mu", []):
             if not nome:
                 continue
             r = {"compositore": T("La musica", "The music"), "librettista": T("Il libretto", "The libretto")}.get(ruolo, ruolo)
             if m is None:
-                note.append(T(f"{tt}: {r.lower()} di {nome} ha diritti propri; non sappiamo quando scadono.",
-                              f"{tt}: {r.lower()} by {nome} has its own rights; we do not know when they expire."))
+                note.append(T('{tt}: {v1} di {nome} ha diritti propri; non sappiamo quando scadono.', '{tt}: {v1} by {nome} has its own rights; we do not know when they expire.', tt=tt, v1=r.lower(), nome=nome))
             elif R.anno_libero(m, "it") > oggi_a and m > D:
-                note.append(T(f"{tt}: {r.lower()} di {nome} (morte: {m}) ha diritti propri: in Italia, Francia, Germania e Regno Unito fino al 31 dicembre {R.anno_libero(m, 'it') - 1}, in Spagna fino al 31 dicembre {R.anno_libero(m, 'es') - 1}. Il testo segue la data dell'autore.",
-                              f"{tt}: {r.lower()} by {nome} (died {m}) has its own rights: in Italy, France, Germany and the UK until 31 December {R.anno_libero(m, 'it') - 1}, in Spain until 31 December {R.anno_libero(m, 'es') - 1}. The text follows the author's date."))
+                note.append(T("{tt}: {v1} di {nome} (morte: {m}) ha diritti propri: in Italia, Francia, Germania e Regno Unito fino al 31 dicembre {v2}, in Spagna fino al 31 dicembre {v3}. Il testo segue la data dell'autore.", "{tt}: {v1} by {nome} (died {m}) has its own rights: in Italy, France, Germany and the UK until 31 December {v2}, in Spain until 31 December {v3}. The text follows the author's date.", tt=tt, v1=r.lower(), nome=nome, m=m, v2=R.anno_libero(m, 'it') - 1, v3=R.anno_libero(m, 'es') - 1))
         for nome, m in w.get("ill", []):
             if m is not None and R.anno_libero(m, "it") > oggi_a and m > D:
-                note.append(T(f"{tt}: i disegni originali di {nome} (morte: {m}) hanno diritti propri: in Italia, Francia, Germania e Regno Unito fino al 31 dicembre {R.anno_libero(m, 'it') - 1}, in Spagna fino al 31 dicembre {R.anno_libero(m, 'es') - 1}. Il testo segue la data dell'autore.",
-                              f"{tt}: the original drawings by {nome} (died {m}) have their own rights: in Italy, France, Germany and the UK until 31 December {R.anno_libero(m, 'it') - 1}, in Spain until 31 December {R.anno_libero(m, 'es') - 1}. The text follows the author's date."))
+                note.append(T("{tt}: i disegni originali di {nome} (morte: {m}) hanno diritti propri: in Italia, Francia, Germania e Regno Unito fino al 31 dicembre {v1}, in Spagna fino al 31 dicembre {v2}. Il testo segue la data dell'autore.", "{tt}: the original drawings by {nome} (died {m}) have their own rights: in Italy, France, Germany and the UK until 31 December {v1}, in Spain until 31 December {v2}. The text follows the author's date.", tt=tt, nome=nome, m=m, v1=R.anno_libero(m, 'it') - 1, v2=R.anno_libero(m, 'es') - 1))
         og = opera_gp(a, o)
         nu = (NOTE_USA.get(og["q"]) or {}).get(lang if lang in ("it", "en") else "en") if og else None
         if nu:
@@ -825,7 +807,7 @@ def note_coautori(a, lang):
 def opere_usa(a, lang):
     """Sezione «Negli USA, opera per opera»: solo dati, con il metodo di verifica degli anni."""
     it = lang == "it"
-    T = (lambda x, y: x) if it else (lambda x, y: y)
+    T = traduttore(lang)
     righe, liberi = [], []
     for o in a.get("opere", [])[:10]:
         t = o.get("titolo") if it else o.get("titolo_en") or o.get("titolo")
@@ -833,26 +815,22 @@ def opere_usa(a, lang):
             continue
         st, y = stato_usa(a, o)
         if st == "libero":
-            et, cl = ((f"libero dal {y}" if it else f"free since {y}") if y else ("libero" if it else "free")), "ok"
+            et, cl = ((T('libero dal {y}', 'free since {y}', y=y)) if y else (T('libero', 'free'))), "ok"
             liberi.append(t)
         elif st == "dal":
-            et, cl = (f"dal {y}" if it else f"from {y}"), ""
+            et, cl = (T('dal {y}', 'from {y}', y=y)), ""
         elif st == "verifica":
-            et, cl = ("da verificare" if it else "to be checked"), "ver"
+            et, cl = (T('da verificare', 'to be checked')), "ver"
         else:
-            et, cl = ("anno non noto" if it else "year unknown"), ""
+            et, cl = (T('anno non noto', 'year unknown')), ""
         anno = anno_opera(a, o)
         if not isinstance(anno, int):
             v_ = VER_OPERE.get(f"{a['wikidata']}|{o.get('titolo')}")
-            anno = T(f"entro il {v_['entro']}", f"by {v_['entro']}") if v_ else ""
+            anno = T('entro il {v1}', 'by {v1}', v1=v_['entro']) if v_ else ""
         righe.append(f'<li><span>{esc(t)}<span class="anno"> {anno}</span></span><span class="us {cl}">{esc(et)}</span></li>\n')
     if not righe:
         return "", []
-    nota = ("Negli USA conta l'anno di uscita di ogni opera (95 anni). «Libero» solo se l'anno di Wikidata è confermato da una "
-            "seconda fonte (Duke, Open Library, Library of Congress); altrimenti «da verificare». Le date future usano l'anno di Wikidata."
-            if it else
-            "In the USA what counts is each work's year of publication (95 years). «Free» only when the Wikidata year is confirmed by a "
-            "second source (Duke, Open Library, Library of Congress); otherwise «to be checked». Future dates use the Wikidata year.")
+    nota = (T("Negli USA conta l'anno di uscita di ogni opera (95 anni). «Libero» solo se l'anno di Wikidata è confermato da una seconda fonte (Duke, Open Library, Library of Congress); altrimenti «da verificare». Le date future usano l'anno di Wikidata.", "In the USA what counts is each work's year of publication (95 years). «Free» only when the Wikidata year is confirmed by a second source (Duke, Open Library, Library of Congress); otherwise «to be checked». Future dates use the Wikidata year."))
     co = "".join(f'<p class="sa-nota">{esc(x)}</p>\n' for x in note_coautori(a, lang))
     return f'<ul class="sa-opere usa">\n{"".join(righe)}</ul>\n<p class="sa-nota">{esc(nota)}</p>\n{co}', liberi
 
@@ -877,11 +855,8 @@ def catalogi_a_confronto(a, lang):
         return ""
     mx = max(x[1] for x in righe) or 1
     li = "".join(f'<li><span>{esc(n)}</span><span class="b"><i style="width:{round(e / mx * 100)}%"></i></span>'
-                 f'<span class="n">{migliaia(e, lang)} · {migliaia(d, lang)} {"dal 2000" if it else "since 2000"}</span></li>' for n, e, d in sorted(righe, key=lambda x: -x[1]))
-    nota = ("Registrazioni collegate all'autore in ogni catalogo: ogni edizione o ristampa conta una volta, comprese le collaborazioni. "
-            "Dicono quanto un autore è già pubblicato in ogni paese." if it else
-            "Records linked to the author in each catalogue: each edition or reprint counts once, collaborations included. "
-            "They show how much an author is already published in each country.")
+                 f'<span class="n">{migliaia(e, lang)} · {migliaia(d, lang)} {testo_l(lang, 'dal 2000', 'since 2000')}</span></li>' for n, e, d in sorted(righe, key=lambda x: -x[1]))
+    nota = (testo_l(lang, "Registrazioni collegate all'autore in ogni catalogo: ogni edizione o ristampa conta una volta, comprese le collaborazioni. Dicono quanto un autore è già pubblicato in ogni paese.", 'Records linked to the author in each catalogue: each edition or reprint counts once, collaborations included. They show how much an author is already published in each country.'))
     return f'<ul class="cat">{li}</ul>\n<p class="sa-nota">{esc(nota)}</p>\n'
 
 
@@ -891,13 +866,13 @@ def domande(a, lang):
     nome = pulisci(a["nome"])
     D = anno_di(a.get("morte"))
     out = []
-    T = (lambda x, y: x) if it else (lambda x, y: y)
+    T = traduttore(lang)
     # «Quando entra in pubblico dominio?» ora è la frase di risposta in cima alla scheda (frase_risposta, 21/11/2026)
     liberi = [t for t in a.get("_liberi_usa", [])]
     if liberi:
         el = ", ".join(liberi[:6])
-        out.append((T(f"Quali opere di {nome} sono già libere negli USA?", f"Which works by {nome} are already free in the USA?"),
-                    T(f"Tra le opere principali, con l'anno confermato da due fonti: {el}.", f"Among the main works, with the year confirmed by two sources: {el}.")))
+        out.append((T('Quali opere di {nome} sono già libere negli USA?', 'Which works by {nome} are already free in the USA?', nome=nome),
+                    T("Tra le opere principali, con l'anno confermato da due fonti: {el}.", 'Among the main works, with the year confirmed by two sources: {el}.', el=el)))
     return out
 
 
@@ -1003,14 +978,14 @@ def testa_scheda(lang, titolo, descr, url, alterne_, jsonld, altra, cnt, og_tipo
   <div class="cnt">{esc(cnt)}</div>
   <div class="r">{altra}<button id="mbtn" type="button">MENU</button></div>
 </header>
-<div class="menu" id="menu"><button class="x" id="mx" type="button">{"CHIUDI" if it else "CLOSE"}</button><nav aria-label="{"Sezioni del sito" if it else "Site sections"}">{menu}</nav></div>
+<div class="menu" id="menu"><button class="x" id="mx" type="button">{testo_l(lang, 'CHIUDI', 'CLOSE')}</button><nav aria-label="{testo_l(lang, 'Sezioni del sito', 'Site sections')}">{menu}</nav></div>
 <main{f' class="{main_cls}"' if main_cls else ''}>
 """
 
 
 def piede_scheda(lang, fonti=None):
     it = lang == "it"
-    T = (lambda x, y: x) if it else (lambda x, y: y)
+    T = traduttore(lang)
     lk = " · ".join(f'<a href="{h}">{esc(t)}</a>' for h, t in _piede_link(lang))
     return f"""</main>
 <footer class="end">
@@ -1023,7 +998,7 @@ def piede_scheda(lang, fonti=None):
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 $('#mbtn').onclick=()=>$('#menu').classList.add('on'); $('#mx').onclick=()=>$('#menu').classList.remove('on');
 const nm=$('#name'); if(nm) addEventListener('scroll',()=>document.body.classList.toggle('past',nm.getBoundingClientRect().bottom<0),{{passive:true}});
-const gg=$('#days'); if(gg){{ const t=new Date(+gg.dataset.y,0,1)-new Date(); if(t>0) gg.textContent=Math.ceil(t/864e5).toLocaleString('{"it-IT" if it else "en-GB"}'); }}
+const gg=$('#days'); if(gg){{ const t=new Date(+gg.dataset.y,0,1)-new Date(); if(t>0) gg.textContent=Math.ceil(t/864e5).toLocaleString('{T('it-IT', 'en-GB')}'); }}
 const cat=$('#cat'); if(cat) new IntersectionObserver(([e],o)=>{{ if(e.isIntersecting){{ cat.classList.add('on'); o.disconnect(); }} }},{{threshold:.4}}).observe(cat);
 $$('.why button').forEach(b=>b.onclick=()=>{{ const w=b.parentElement; w.classList.toggle('on'); b.querySelector('span').textContent=w.classList.contains('on')?'[–]':'[+]'; }});
 $$('.acc button').forEach(b=>b.onclick=()=>{{ const a=b.parentElement; a.classList.toggle('on'); b.querySelector('span').textContent=a.classList.contains('on')?'[–]':'[+]'; }});
@@ -1037,7 +1012,7 @@ $$('#op sup').forEach(s=>s.onclick=()=>{{ const n=$('#nt'+s.dataset.n); if(!n) r
 def _paesi_riga(a, lang):
     """Righe «paese per paese»: (paese, anno o None, regola, classe)."""
     it = lang == "it"
-    T = (lambda x, y: x) if it else (lambda x, y: y)
+    T = traduttore(lang)
     D = anno_di(a.get("morte"))
     mpf = è_mpf(a)
     ue = T("70 anni dalla morte", "70 years after death")
@@ -1075,10 +1050,10 @@ def blocco_vicini_n(a, lang):
     """«Altri scrittori liberi dal…» con le foto (grafica nuova); stessi scrittori e stesso ordine di blocco_vicini."""
     q = a["wikidata"]
     it = lang == "it"
-    T = (lambda x, y: x) if it else (lambda x, y: y)
+    T = traduttore(lang)
     cta = f'<a href="{"/radar/" if it else "/en/radar/"}#/autore/{esc(q)}">{T("Apri nel radar", "Open in the radar")} →</a>'
     if q in MEMBRI and MEMBRI[q][1] == ANNO_PROSSIMO:   # 25/11/2026: l'elenco completo sta nella pagina del paese
-        _pp = ("spagna" if it else "spain") if MEMBRI[q][0] == "es" else ("italia" if it else "united-kingdom")
+        _pp = (T('spagna', 'spain')) if MEMBRI[q][0] == "es" else (T('italia', 'united-kingdom'))
         cta = (f'<a href="{"/pubblico-dominio/" if it else "/en/public-domain/"}{_pp}/">'
                f'{T("Tutti gli scrittori liberi in Spagna", "All writers free in Spain") if MEMBRI[q][0] == "es" else T("Tutti gli scrittori liberi in Italia", "All writers free in the UK")} →</a>'
                f' <a href="{"/pubblico-dominio/" if it else "/en/public-domain/"}">{T("Gli altri paesi", "Other countries")} →</a>')
@@ -1093,16 +1068,15 @@ def blocco_vicini_n(a, lang):
     scelti = (stessi + [x for x in lista if x not in stessi])[:6]
     morti = anno - (71 if tipo == "ue" else 81)
     nome = pulisci(a["nome"])
-    ordine = (T(f"Prima quelli {del_paese(c)}, poi quelli con la pagina Wikipedia più visitata.", "Same country first, then those whose Wikipedia page gets the most visits.") if stessi
+    ordine = (T('Prima quelli {v1}, poi quelli con la pagina Wikipedia più visitata.', 'Same country first, then those whose Wikipedia page gets the most visits.', v1=del_paese(c)) if stessi
               else T("Prima quelli con la pagina Wikipedia più visitata.", "Those whose Wikipedia page gets the most visits first."))
     if tipo == "ue":
-        tit = T(f"Altri scrittori liberi dal 1° gennaio {anno}", f"Other writers free from 1 January {anno}")
+        tit = T('Altri scrittori liberi dal 1° gennaio {anno}', 'Other writers free from 1 January {anno}', anno=anno)
         dove = T("in Italia, Francia, Germania e Regno Unito", "in Italy, France, Germany and the UK")
     else:
-        tit = T(f"Altri scrittori liberi in Spagna dal 1° gennaio {anno}", f"Other writers free in Spain from 1 January {anno}")
+        tit = T('Altri scrittori liberi in Spagna dal 1° gennaio {anno}', 'Other writers free in Spain from 1 January {anno}', anno=anno)
         dove = T("in Spagna", "in Spain")
-    lede = T(f"Sono morti nel {morti} come {nome}: {dove} i loro testi originali si possono pubblicare dallo stesso giorno. {ordine}",
-             f"They died in {morti}, like {nome}: {dove} their original texts can be published from the same day. {ordine}")
+    lede = T('Sono morti nel {morti} come {nome}: {dove} i loro testi originali si possono pubblicare dallo stesso giorno. {ordine}', 'They died in {morti}, like {nome}: {dove} their original texts can be published from the same day. {ordine}', morti=morti, nome=nome, dove=dove, ordine=ordine)
     carte = []
     for x in scelti:
         X = AUT[x]
@@ -1126,7 +1100,7 @@ def blocco_vicini_n(a, lang):
     tutti_l = ""
     if tipo == "ue":
         dest = f"/pubblico-dominio-{anno}/#autori" if it else f"/en/public-domain-{anno}/#autori"
-        tutti_l = f'<a href="{dest}">{T(f"Tutti i {len(tutti)} scrittori del {anno} con una scheda", f"All {len(tutti)} writers of {anno} with a page")} →</a>'
+        tutti_l = f'<a href="{dest}">{T('Tutti i {v1} scrittori del {anno} con una scheda', 'All {v1} writers of {anno} with a page', v1=len(tutti), anno=anno)} →</a>'
     corpo = (f'<p class="lede">{esc(lede)}</p>\n<div class="others">{"".join(carte)}</div>\n' if carte else "")
     return (f'<section class="blk"><span class="m"><b>{esc(tit)}</b>{T("Stesso anno, stessa data", "Same year, same date")}</span>\n<div>{corpo}'
             f'<div class="lnk">{tutti_l}{cta}</div></div></section>\n')
@@ -1135,7 +1109,7 @@ def blocco_vicini_n(a, lang):
 def scheda_nuova(a, lang, bd):
     """Corpo della pagina autore con la grafica nuova. Stessi dati e stessi testi della scheda di prima, in un altro ordine."""
     it = lang == "it"
-    T = (lambda x, y: x) if it else (lambda x, y: y)
+    T = traduttore(lang)
     nome = pulisci(a["nome"])
     nasc, D = anno_di(a.get("nascita")), anno_di(a.get("morte"))
     oggi = datetime.date.today()
@@ -1143,7 +1117,7 @@ def scheda_nuova(a, lang, bd):
     # percorso in alto
     if a["wikidata"] in MEMBRI and MEMBRI[a["wikidata"]][0] == "ue":
         an = MEMBRI[a["wikidata"]][1]
-        su = (f"/pubblico-dominio-{an}/#autori" if it else f"/en/public-domain-{an}/#autori", T(f"← Morti nel {D}", f"← Died in {D}"))
+        su = (f"/pubblico-dominio-{an}/#autori" if it else f"/en/public-domain-{an}/#autori", T('← Morti nel {D}', '← Died in {D}', D=D))
     else:
         su = ("/autore/" if it else "/en/author/", T("← Indice degli autori", "← Author index"))
     prof = ", ".join((a.get("professioni") or [])[:2]) if it else ""
@@ -1197,8 +1171,7 @@ def scheda_nuova(a, lang, bd):
     v = a.get("verifica") or {}
     if v.get("esito") == "verificato":
         nomi = [NOMI_FONTE[lang][k] for k in v.get("fonti", {}) if k in NOMI_FONTE[lang]]
-        conf = T(f"Anno di morte <b>{D}</b>, confermato da <b>{len(nomi)} fonti</b>: {esc(', '.join(nomi))}.",
-                 f"Year of death <b>{D}</b>, confirmed by <b>{len(nomi)} sources</b>: {esc(', '.join(nomi))}.")
+        conf = T('Anno di morte <b>{D}</b>, confermato da <b>{v1} fonti</b>: {v2}.', 'Year of death <b>{D}</b>, confirmed by <b>{v1} sources</b>: {v2}.', D=D, v1=len(nomi), v2=esc(', '.join(nomi)))
         conf = f'<p class="conf">{conf}</p>\n'
     else:
         conf = "".join(x.replace('<p class="sotto">', '<p class="conf">').replace("<p><strong>", '<p class="conf warn"><strong>') for x in blocco_verifica(a, lang))
@@ -1214,18 +1187,16 @@ def scheda_nuova(a, lang, bd):
             if liberi:
                 el = ", ".join(f"<a href=\"#works\">{esc(t)}</a>" for t in liberi[:4])
                 n = len(liberi)
-                gia = T(f"Tra le opere principali di {esc(nome)} {'una è già libera' if n == 1 else f'{n} sono già libere'}: {el}; le altre hanno ognuna la sua data, nella tabella <a href=\"#works\">qui sotto ↓</a>",
-                        f"Among the main works of {esc(nome)}, {'one is already free' if n == 1 else f'{n} are already free'}: {el}; the others each have their own date, in the table <a href=\"#works\">below ↓</a>")
+                gia = T('Tra le opere principali di {v1} {v2}: {el}; le altre hanno ognuna la sua data, nella tabella <a href="#works">qui sotto ↓</a>', 'Among the main works of {v1}, {v3}: {el}; the others each have their own date, in the table <a href="#works">below ↓</a>', v1=esc(nome), v2='una è già libera' if n == 1 else f'{n} sono già libere', el=el, v3='one is already free' if n == 1 else f'{n} are already free')
             elif corpo_usa:
                 gia = T('Ogni opera principale ha la sua data, nella tabella <a href="#works">qui sotto ↓</a>', 'Each main work has its own date, in the table <a href="#works">below ↓</a>')
             else:
                 gia = T("Per questo autore non abbiamo ancora le date di uscita delle opere.", "We do not have the publication dates of this author's works yet.")
-            spieg = T(f"Negli USA non conta la morte dell'autore: ogni libro diventa libero per conto suo, 95 anni dopo la prima uscita. {gia}.",
-                      f"In the USA the author's death does not count: each book becomes free on its own, 95 years after first publication. {gia}.")
+            spieg = T("Negli USA non conta la morte dell'autore: ogni libro diventa libero per conto suo, 95 anni dopo la prima uscita. {gia}.", "In the USA the author's death does not count: each book becomes free on its own, 95 years after first publication. {gia}.", gia=gia)
             righe.append(f'<li class="usa"><span class="c">USA<small>{esc(regola)}</small></span><span class="v">{T("opera per opera", "work by work")}</span><p class="usa-n">{spieg}</p></li>')
             continue
         libero = anno <= oggi.year
-        val = (T(f"libero dal {anno}", f"free since {anno}") if libero else _data_breve(lang, anno))
+        val = (T('libero dal {anno}', 'free since {anno}', anno=anno) if libero else _data_breve(lang, anno))
         cl = "cur" if primo else ("free" if libero else ("later" if anno > anno_ue else ""))
         primo = False
         righe.append(f'<li class="{cl}"><span class="c">{esc(paese)}<small>{esc(regola)}</small></span><span class="v">{esc(val)}</span></li>')
@@ -1241,7 +1212,7 @@ def scheda_nuova(a, lang, bd):
     # opere principali
     if corpo_usa:
         n_op = a.get("n_opere") or 0
-        sotto = (T(f"Le più note delle {migliaia(n_op)} su Wikidata", f"The best known of {migliaia(n_op, lang)} on Wikidata") if n_op > 10
+        sotto = (T('Le più note delle {v1} su Wikidata', 'The best known of {v2} on Wikidata', v1=migliaia(n_op), v2=migliaia(n_op, lang)) if n_op > 10
                  else T("Su Wikidata", "On Wikidata"))
         o.append(f'<section class="blk" id="works"><span class="m"><b>{T("Opere principali", "Main works")}</b>{sotto}</span>\n<div>{corpo_usa}</div></section>\n')
     # quanto è già pubblicato
@@ -1261,7 +1232,7 @@ def scheda_nuova(a, lang, bd):
         else:
             num, sp = "—", T("nessuna pagina in italiano", "no page in English")
         rg = RANGHI.get((a["wikidata"], m))
-        rk = f'<span class="rk">{T(f"{rg[0]}° su {rg[1]}", f"#{rg[0]} of {rg[1]}")}</span>' if rg else ""
+        rk = f'<span class="rk">{T('{v1}° su {v2}', '#{v1} of {v2}', v1=rg[0], v2=rg[1])}</span>' if rg else ""
         due.append(f'<div><span class="m g">{esc(etich)}</span><div class="n">{num}</div><p>{esc(sp)}</p>{rk}</div>')
     if due:
         o.append(f'<section class="blk"><span class="m"><b>{T("Quanto è conosciuto", "How well known")}</b>{T("Visite a Wikipedia, non vendite", "Wikipedia views, not sales")}</span>\n<div><div class="two">{"".join(due)}</div><p class="src">{T("Misura la curiosità per l’autore (visite alle pagine Wikipedia), non le vendite dei suoi libri.", "Measures curiosity about the author (Wikipedia page views), not sales of their books.")}</p></div></section>\n')
@@ -1276,10 +1247,10 @@ def scheda_nuova(a, lang, bd):
         rr = []
         for x in ill:
             if x.get("morte"):
-                quando = T(f"libere {dove_libero(None, x['morte'], lang)} dal {data_l(lang, R.anno_libero(x['morte'], 'it'))}", f"free {dove_libero(None, x['morte'], lang)} from {data_l(lang, R.anno_libero(x['morte'], 'it'))}")
-                rr.append(T(f"{x['opera']}: illustrazioni di {x['nome']} (morto nel {x['morte']}), {quando}", f"{x['opera']}: illustrations by {x['nome']} (died {x['morte']}), {quando}"))
+                quando = T('libere {v1} dal {v2}', 'free {v1} from {v2}', v1=dove_libero(None, x['morte'], lang), v2=data_l(lang, R.anno_libero(x['morte'], 'it')))
+                rr.append(T('{v1}: illustrazioni di {v2} (morto nel {v3}), {quando}', '{v1}: illustrations by {v2} (died {v3}), {quando}', v1=x['opera'], v2=x['nome'], v3=x['morte'], quando=quando))
             else:
-                rr.append(T(f"{x['opera']}: illustrazioni di {x['nome']}, data di morte non nota", f"{x['opera']}: illustrations by {x['nome']}, year of death unknown"))
+                rr.append(T('{v1}: illustrazioni di {v2}, data di morte non nota', '{v1}: illustrations by {v2}, year of death unknown', v1=x['opera'], v2=x['nome']))
         li_ill = "<ul>" + "".join(f"<li>{esc(r)}</li>" for r in rr) + "</ul>"
     acc = []
     for i, (q, r_) in enumerate(faq):
@@ -1297,7 +1268,7 @@ def scheda_nuova(a, lang, bd):
 def opere_usa_n(a, lang):
     """Tabella delle opere principali (titolo, anno, stato negli USA) con le note dei coautori come rimandi numerati."""
     it = lang == "it"
-    T = (lambda x, y: x) if it else (lambda x, y: y)
+    T = traduttore(lang)
     note = note_coautori(a, lang)
     righe, liberi, usate = [], [], []
     for o in a.get("opere", [])[:10]:
@@ -1306,10 +1277,10 @@ def opere_usa_n(a, lang):
             continue
         st, y = stato_usa(a, o)
         if st == "libero":
-            et, cl = (T(f"libero dal {y}", f"free since {y}") if y else T("libero", "free")), "free"
+            et, cl = (T('libero dal {y}', 'free since {y}', y=y) if y else T("libero", "free")), "free"
             liberi.append(t)
         elif st == "dal":
-            et, cl = T(f"dal {y}", f"from {y}"), ""
+            et, cl = T('dal {y}', 'from {y}', y=y), ""
         elif st == "verifica":
             et, cl = T("da verificare", "to be checked"), "ver"
         else:
@@ -1324,7 +1295,7 @@ def opere_usa_n(a, lang):
         anno = anno_opera(a, o)
         if not isinstance(anno, int):
             v_ = VER_OPERE.get(f"{a['wikidata']}|{o.get('titolo')}")
-            anno = T(f"entro il {v_['entro']}", f"by {v_['entro']}") if v_ else ""
+            anno = T('entro il {v1}', 'by {v1}', v1=v_['entro']) if v_ else ""
         righe.append(f'<li><span class="t">{esc(t)}{sup}</span><span class="y">{anno}</span><span class="u {cl}">{esc(et)}</span></li>')
     a["_liberi_usa"] = liberi
     if not righe:
@@ -1342,11 +1313,11 @@ def opere_usa_n(a, lang):
 def cataloghi_n(a, lang):
     """Registrazioni nei cataloghi nazionali come barre (in tutto e dal 2000), con la spiegazione nel [+]."""
     it = lang == "it"
-    T = (lambda x, y: x) if it else (lambda x, y: y)
+    T = traduttore(lang)
     tr = a.get("traduzioni") or {}
     nomi = {"sbn_it": (T("Italia", "Italy"), "SBN"), "bnf_fr": (T("Francia", "France"), "BnF"), "bne_es": (T("Spagna", "Spain"), "BNE"),
             "bl_en": (T("Regno Unito", "United Kingdom"), "British Library"), "loc_en": ("USA", "Library of Congress")}
-    mio = "sbn_it" if it else "bl_en"
+    mio = T('sbn_it', 'bl_en')
     righe, sospesi = [], []
     for k in ("bnf_fr", "sbn_it", "bl_en", "loc_en", "bne_es"):
         g = tr.get(k)
@@ -1367,7 +1338,7 @@ def cataloghi_n(a, lang):
     leg = (f'<div class="cleg"><span><i style="background:var(--ink)"></i>{T("registrazioni in tutto", "records in total")}</span>'
            f'<span><i style="background:var(--box)"></i>{T("di cui dal 2000", "of which since 2000")}</span></div>') if righe else ""
     g = tr.get(mio) or {}
-    ult = (T(f" Nel catalogo {nomi[mio][1]}, la più recente con anno certo è del {g['ultimo']}.", f" In the {nomi[mio][1]} catalogue, the latest with a certain year is from {g['ultimo']}.")
+    ult = (T(' Nel catalogo {v1}, la più recente con anno certo è del {v2}.', ' In the {v1} catalogue, the latest with a certain year is from {v2}.', v1=nomi[mio][1], v2=g['ultimo'])
            if g.get("ultimo") and mio in [x[0] for x in righe] else "")
     met = ""
     if it and g.get("metodo") == "nome":
@@ -1381,7 +1352,7 @@ def cataloghi_n(a, lang):
         cosa += " Nel catalogo SBN: registrazioni bibliografiche in italiano collegate all'autore, comprese ristampe e antologie."
     if not it and "bl_en" in [x[0] for x in righe]:
         cosa += " In the British Library catalogue the author is searched by surname and years of birth and death; a record counts only if surname and years belong to the same person. Some records catalogued differently may be missed."
-    sosp = (f'<p class="cat-n">{esc(T("Dati in verifica per " + ", ".join(sospesi) + ": i numeri del catalogo non sono ancora sicuri, quindi non li mostriamo.", "Data under review for " + ", ".join(sospesi) + ": the catalogue figures are not yet reliable, so we do not show them."))}</p>' if sospesi else "")
+    sosp = (f'<p class="cat-n">{esc(T("Dati in verifica per {sospesi}: i numeri del catalogo non sono ancora sicuri, quindi non li mostriamo.", "Data under review for {sospesi}: the catalogue figures are not yet reliable, so we do not show them.", sospesi=", ".join(sospesi)))}</p>' if sospesi else "")
     return (f'<div class="cat" id="cat">{html_r}</div>{leg}{sosp}'
             f'<div class="why"><button type="button">{T("Che cos’è una registrazione", "What a record is")} <span>[+]</span></button><p>{esc(cosa + ult + met)}</p></div>\n')
 
@@ -1420,14 +1391,14 @@ def pagina_autore(a, slug, lang, ha_altra):
         persona["deathDate"] = a["morte"]
     briciole = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
         {"@type": "ListItem", "position": 1, "name": "Public Domain Radar", "item": SITO + ("/" if it else "/en/")},
-        {"@type": "ListItem", "position": 2, "name": "Autori" if it else "Authors", "item": url_pagina(lang)},
+        {"@type": "ListItem", "position": 2, "name": testo_l(lang, 'Autori', 'Authors'), "item": url_pagina(lang)},
         {"@type": "ListItem", "position": 3, "name": nome, "item": url}]}
     jsonld = "".join('<script type="application/ld+json">' + json.dumps(j, ensure_ascii=False).replace("</", "<\\/") + "</script>\n" for j in (persona, briciole))
     altra = ""
     if ha_altra:
         altra = (f'<a href="{url_pagina("en" if it else "it", slug)}" hreflang="{"en" if it else "it"}">{"EN" if it else "IT"}</a>')
     # grafica nuova (21/11/2026): testata, corpo e piede della scheda «Indice»
-    cnt = (f"{nome} · libero dal {data_l(lang, R.anno_libero(D, 'it'))}" if it else f"{nome} · free from {data_l(lang, R.anno_libero(D, 'it'))}")
+    cnt = (testo_l(lang, '{nome} · libero dal {v1}', '{nome} · free from {v1}', nome=nome, v1=data_l(lang, R.anno_libero(D, 'it'))))
     out = [testa_scheda(lang, esc(titolo), esc(descr), url, alterne(lang, slug) if ha_altra else "", jsonld, altra, cnt)
            .replace("@@MARCHIO_S@@", marchio_html(56).replace('<span class="pdr" style="--w:56px">', "").rsplit("</span>", 1)[0])]
     out.append(scheda_nuova(a, lang, bd))
@@ -1443,11 +1414,10 @@ def pagina_indice(voci, lang):
     """Indice degli autori, grafica «Indice» (mockup rdr-indice-autori.html, approvato da Marco il 21/11/2026).
     L'elenco è tutto scritto nella pagina (Google lo legge); i due filtri, paese e anno, nascondono solo le voci."""
     it = lang == "it"
-    T = (lambda x, y: x) if it else (lambda x, y: y)
+    T = traduttore(lang)
     url = url_pagina(lang)
-    titolo = "Indice degli autori in pubblico dominio · Public Domain Radar" if it else "Index of authors entering the public domain · Public Domain Radar"
-    descr = (f"{len(voci)} autori con la data di pubblico dominio paese per paese (UE, Italia, Francia, Germania, Spagna, Regno Unito), da dati aperti." if it else
-             f"{len(voci)} authors with the public-domain date country by country (EU, Italy, France, Germany, Spain, UK), from open data.")
+    titolo = T('Indice degli autori in pubblico dominio · Public Domain Radar', 'Index of authors entering the public domain · Public Domain Radar')
+    descr = (T('{v1} autori con la data di pubblico dominio paese per paese (UE, Italia, Francia, Germania, Spagna, Regno Unito), da dati aperti.', '{v1} authors with the public-domain date country by country (EU, Italy, France, Germany, Spain, UK), from open data.', v1=len(voci)))
     gruppi = {}
     for nome, slug, anni in voci:
         k = unicodedata.normalize("NFD", nome[:1] or "#")[:1].upper()
@@ -1458,10 +1428,9 @@ def pagina_indice(voci, lang):
     A = ANNO_PROSSIMO
     paesi = [("tutti", T("Tutti", "All")), ("it", T("Italia", "Italy")), ("fr", T("Francia", "France")), ("de", T("Germania", "Germany")),
              ("uk", T("Regno Unito", "United Kingdom")), ("es", T("Spagna", "Spain"))]
-    anni_f = [("tutti", T("Tutti gli anni", "All years"))] + [(str(y), T(f"1° gennaio {y}", f"1 January {y}")) for y in (A,)]   # l'anno dopo compare il 7 gennaio (Marco, 21 e 25/11/2026)
+    anni_f = [("tutti", T("Tutti gli anni", "All years"))] + [(str(y), T('1° gennaio {y}', '1 January {y}', y=y)) for y in (A,)]   # l'anno dopo compare il 7 gennaio (Marco, 21 e 25/11/2026)
     sel = lambda nid, op: f'<select id="{nid}">' + "".join(f'<option value="{v}">{esc(t)}</option>' for v, t in op) + "</select>"
-    lead_n = (f"{len(voci)} autori con una pagina dedicata: biografia, opere e data di pubblico dominio paese per paese." if it else
-              f"{len(voci)} authors with a dedicated page: biography, Italian editions and the public-domain date country by country.")
+    lead_n = (T('{v1} autori con una pagina dedicata: biografia, opere e data di pubblico dominio paese per paese.', '{v1} authors with a dedicated page: biography, Italian editions and the public-domain date country by country.', v1=len(voci)))
     out = [testa_scheda(lang, esc(titolo), esc(descr), url, "", "", f'<a href="{T("/en/author/", "/autore/")}" hreflang="{T("en", "it")}">{T("EN", "IT")}</a>', "", og_tipo="website", css_extra=CSS_INDICE, main_cls="idx")
            .replace("@@MARCHIO_S@@", marchio_html(56).replace('<span class="pdr" style="--w:56px">', "").rsplit("</span>", 1)[0]),
            '<p class="m" style="color:var(--redt)">Public Domain Radar</p>\n',
@@ -1842,7 +1811,7 @@ def blocco_vicini(a, lang):
     if q not in MEMBRI:
         return ""
     it = lang == "it"
-    T = (lambda x, y: x) if it else (lambda x, y: y)
+    T = traduttore(lang)
     tipo, anno = MEMBRI[q]
     tutti = [x for x in POOL.get((tipo, anno), []) if it or x in EN_OK]
     lista = [x for x in tutti if x != q]
@@ -1855,23 +1824,22 @@ def blocco_vicini(a, lang):
     morti = anno - (71 if tipo == "ue" else 81)
     nome = pulisci(a["nome"])
     if stessi:
-        ordine = T(f"Prima quelli {del_paese(c)}, poi quelli con la pagina Wikipedia più visitata.", "Same country first, then those whose Wikipedia page gets the most visits.")
+        ordine = T('Prima quelli {v1}, poi quelli con la pagina Wikipedia più visitata.', 'Same country first, then those whose Wikipedia page gets the most visits.', v1=del_paese(c))
     else:
         ordine = T("Prima quelli con la pagina Wikipedia più visitata.", "Those whose Wikipedia page gets the most visits first.")
     if tipo == "ue":
-        tit = T(f"Altri scrittori liberi dal 1° gennaio {anno}", f"Other writers free from 1 January {anno}")
+        tit = T('Altri scrittori liberi dal 1° gennaio {anno}', 'Other writers free from 1 January {anno}', anno=anno)
         dove = T("in Italia, Francia, Germania e Regno Unito", "in Italy, France, Germany and the UK")
     else:
-        tit = T(f"Altri scrittori liberi in Spagna dal 1° gennaio {anno}", f"Other writers free in Spain from 1 January {anno}")
+        tit = T('Altri scrittori liberi in Spagna dal 1° gennaio {anno}', 'Other writers free in Spain from 1 January {anno}', anno=anno)
         dove = T("in Spagna", "in Spain")
-    testo = T(f"Sono morti nel {morti} come {nome}: {dove} i loro testi originali si possono pubblicare dallo stesso giorno. {ordine}",
-              f"They died in {morti}, like {nome}: {dove} their original texts can be published from the same day. {ordine}")
+    testo = T('Sono morti nel {morti} come {nome}: {dove} i loro testi originali si possono pubblicare dallo stesso giorno. {ordine}', 'They died in {morti}, like {nome}: {dove} their original texts can be published from the same day. {ordine}', morti=morti, nome=nome, dove=dove, ordine=ordine)
     o = [f'<section class="sa-sez sa-vicini">\n<p class="sa-occ">{T("Stesso anno, stessa data", "Same year, same date")}</p>\n'
          f'<h2>{tit}</h2>\n<p class="sa-testo">{esc(testo)}</p>\n<ul class="vic">'
          + "".join(_tessera_vicino(x, lang) for x in scelti) + "</ul>\n"]
     if tipo == "ue":
         dest = f"/pubblico-dominio-{anno}/#autori" if it else f"/en/public-domain-{anno}/#autori"
-        o.append(f'<p class="vic-tutti"><a href="{dest}">{T(f"Tutti i {len(tutti)} scrittori del {anno} con una scheda →", f"All {len(tutti)} writers of {anno} with a page →")}</a></p>\n')
+        o.append(f'<p class="vic-tutti"><a href="{dest}">{T('Tutti i {v1} scrittori del {anno} con una scheda →', 'All {v1} writers of {anno} with a page →', v1=len(tutti), anno=anno)}</a></p>\n')
     o.append("</section>\n")
     return "".join(o)
 
@@ -1884,15 +1852,15 @@ def _cognome(nome):
 def elenco_az(aut, lang, morti):
     """Sezione della pagina dell'anno: tutti gli scrittori con una scheda, per cognome, con le lettere per saltare."""
     it = lang == "it"
-    T = (lambda x, y: x) if it else (lambda x, y: y)
-    pag = "pagina" if it else "pagina_en"
+    T = traduttore(lang)
+    pag = T('pagina', 'pagina_en')
     gruppi = {}
     for a in sorted(aut, key=lambda a: (_cognome(a["nome"]), slug_base(a["nome"]))):
         k = _cognome(a["nome"])[:1].upper()
         gruppi.setdefault(k if k.isalpha() else "#", []).append(a)
     o = [f'<section class="pd-sez" id="autori"><div class="pd-in">\n<p class="pd-et">{T("Europa e Regno Unito · elenco completo", "Europe and the UK · full list")}</p>\n'
          f'<h2>{T("Tutti gli scrittori con una scheda", "All the writers with a page")}</h2>\n'
-         f'<p class="lead">{T(f"I {len(aut)} scrittori morti nel {morti} per cui abbiamo una scheda, in ordine di cognome. Ogni scheda ha la data paese per paese, le opere principali e le fonti.", f"The {len(aut)} writers who died in {morti} that have a page, by surname. Each page has the date country by country, the main works and the sources.")}</p>\n'
+         f'<p class="lead">{T('I {v1} scrittori morti nel {morti} per cui abbiamo una scheda, in ordine di cognome. Ogni scheda ha la data paese per paese, le opere principali e le fonti.', 'The {v1} writers who died in {morti} that have a page, by surname. Each page has the date country by country, the main works and the sources.', v1=len(aut), morti=morti)}</p>\n'
          f'<nav class="al-nav" aria-label="{T("Lettere", "Letters")}">' + "".join(f'<a href="#al-{k}">{k}</a>' for k in gruppi) + '</nav>\n<div class="al">']
     for k, lista in gruppi.items():
         o.append(f'<div class="al-g" id="al-{k}"><p class="al-l">{k}</p><ul>')
@@ -1961,10 +1929,10 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
     oggi = datetime.date.today()
     url = url_landing(lang, anno)
     it = lang == "it"
-    T = (lambda a, b: a) if it else (lambda a, b: b)
+    T = traduttore(lang)
     app = "/radar/" if it else "/en/radar/"
     pp = "/pubblico-dominio/" if it else "/en/public-domain/"   # 25/11/2026: i «tutti» portano alle pagine dei paesi
-    pp_it, pp_es, pp_us = pp + ("italia/" if it else "italy/"), pp + ("spagna/" if it else "spain/"), pp + ("stati-uniti/" if it else "united-states/")
+    pp_it, pp_es, pp_us = pp + (T('italia/', 'italy/')), pp + (T('spagna/', 'spain/')), pp + (T('stati-uniti/', 'united-states/'))
     pub = opere_us["anno_pubblicazione"] if opere_us else R.pubblicate_libere_usa_nel(anno)
     morti = R.morti_liberi_nel(anno, "it")
     morti_es = R.morti_liberi_nel(anno, "es")
@@ -2061,11 +2029,11 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
     jsonld = '<script type="application/ld+json">' + json.dumps(jl, ensure_ascii=False).replace("</", "<\\/") + "</script>"
     alt = (f'<link rel="alternate" hreflang="it" href="{url_landing("it", anno)}">\n'
            f'<link rel="alternate" hreflang="en" href="{url_landing("en", anno)}">\n')
-    altra = (f'<a href="/en/public-domain-{anno}/" hreflang="en">EN</a>' if it else f'<a href="/pubblico-dominio-{anno}/" hreflang="it">IT</a>')
+    altra = (T('<a href="/en/public-domain-{anno}/" hreflang="en">EN</a>', '<a href="/pubblico-dominio-{anno}/" hreflang="it">IT</a>', anno=anno))
     gg_ = max(0, (datetime.date.fromisoformat(libero) - oggi).days)
     n_ = lambda x: migliaia(x, lang)
-    data_l_ = T(f"1° gennaio {anno}", f"1 January {anno}")
-    cnt_html = (f'<span id="cnt"><i class="lg">{data_l_} · </i><i class="sm">{T(f"1° gen {anno}", f"1 Jan {anno}")} · </i>'
+    data_l_ = T('1° gennaio {anno}', '1 January {anno}', anno=anno)
+    cnt_html = (f'<span id="cnt"><i class="lg">{data_l_} · </i><i class="sm">{T('1° gen {anno}', '1 Jan {anno}', anno=anno)} · </i>'
                 f'{T("tra", "in")} <b id="pd-giorni" data-d="{libero}" style="font-weight:inherit">{migliaia(gg_, lang)}</b> {T("giorni", "days")}</span>') if gg_ > 0 else \
                f'<span id="cnt">{data_l_}</span>'
     testa = testa_scheda(lang, esc(titolo), esc(descr), url, alt, jsonld, altra, "@@CNT@@", og_tipo="website",
@@ -2077,26 +2045,25 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
     w = lambda t: f'<span class="w"><span>{t}</span></span>'
     out.append(f"""<section class="open">
 <p class="m k" id="pd-k">Public Domain Day · {data_l_}</p>
-<h1 class="h1" id="pd-h1">{w(T("Cosa diventa", "What becomes"))} <br>{w(T("libero", "free"))} {w(T(f"nel {anno}", f"in {anno}"))}</h1>
-<p class="say" id="say">{T(f"Il 1° gennaio {anno} scadono i diritti di centinaia di scrittori e libri. Chi, dove e con quali cautele, da dati aperti e con le fonti.",
-                   f"On 1 January {anno} copyright expires for hundreds of writers and books. Who, where and with what caveats, from open data with sources.")}</p>
+<h1 class="h1" id="pd-h1">{w(T("Cosa diventa", "What becomes"))} <br>{w(T("libero", "free"))} {w(T('nel {anno}', 'in {anno}', anno=anno))}</h1>
+<p class="say" id="say">{T('Il 1° gennaio {anno} scadono i diritti di centinaia di scrittori e libri. Chi, dove e con quali cautele, da dati aperti e con le fonti.', 'On 1 January {anno} copyright expires for hundreds of writers and books. Who, where and with what caveats, from open data with sources.', anno=anno)}</p>
 <div style="margin-top:34px">{_tendina(lang)}</div>
 </section>
 """)
     nums = [(n_ue, T("scrittori liberi in Italia, Francia, Germania e Regno Unito", "writers free in Italy, France, Germany and the UK"),
-             T(f"morti nel {morti}", f"died in {morti}"), "#ix1" if aut else pp)]
+             T('morti nel {morti}', 'died in {morti}', morti=morti), "#ix1" if aut else pp)]
     if n_es:
-        nums.append((n_es, T("scrittori liberi in Spagna", "writers free in Spain"), T(f"morti nel {morti_es}", f"died in {morti_es}"), pp_es))
+        nums.append((n_es, T("scrittori liberi in Spagna", "writers free in Spain"), T('morti nel {morti_es}', 'died in {morti_es}', morti_es=morti_es), pp_es))
     if n_us:
         nums.append((n_us, T("libri liberi negli USA", "books free in the USA"),
-                     T(f"usciti nel {pub} · {n_st['verificata']} verificati, {n_st['edizione']} con l'edizione confermata", f"published in {pub} · {n_st['verificata']} verified, {n_st['edizione']} edition confirmed"), "#ix2"))
+                     T("usciti nel {pub} · {v1} verificati, {v2} con l'edizione confermata", 'published in {pub} · {v1} verified, {v2} edition confirmed', pub=pub, v1=n_st['verificata'], v2=n_st['edizione']), "#ix2"))
     out.append('<div class="nums">' + "".join(f'<a href="{h}"><span class="n">{n_(x)}</span><span class="c">{esc(c)}</span><span class="m">{esc(m)}</span></a>'
                                               for x, c, m, h in nums) + "</div>\n")
 
     # 2. i nomi più attesi
     if aut:
-        out.append(f'<section class="sec ix" id="ix1">\n<div class="sh m"><h2 id="pd-attesi">{T("I nomi più attesi", "The most awaited names")}</h2><span>{T(f"Europa e Regno Unito · morti nel {morti}", f"Europe and the UK · died in {morti}")}</span></div>\n'
-                   f'<p class="lede">{T(f"Gli scrittori morti nel {morti}, in ordine di visite alla loro pagina Wikipedia negli ultimi 12 mesi (in italiano, inglese, francese, tedesco e spagnolo): misura quanto sono conosciuti oggi, non quanto si vendono i loro libri. Dal 1° gennaio i loro testi originali si possono pubblicare senza permesso in Italia, Francia, Germania e Regno Unito.", f"The writers who died in {morti}, ranked by visits to their Wikipedia page over the last 12 months (in Italian, English, French, German and Spanish): it measures how well known they are today, not how well their books sell. From 1 January their original texts can be published without permission in Italy, France, Germany and the UK.")}</p>\n'
+        out.append(f'<section class="sec ix" id="ix1">\n<div class="sh m"><h2 id="pd-attesi">{T("I nomi più attesi", "The most awaited names")}</h2><span>{T('Europa e Regno Unito · morti nel {morti}', 'Europe and the UK · died in {morti}', morti=morti)}</span></div>\n'
+                   f'<p class="lede">{T('Gli scrittori morti nel {morti}, in ordine di visite alla loro pagina Wikipedia negli ultimi 12 mesi (in italiano, inglese, francese, tedesco e spagnolo): misura quanto sono conosciuti oggi, non quanto si vendono i loro libri. Dal 1° gennaio i loro testi originali si possono pubblicare senza permesso in Italia, Francia, Germania e Regno Unito.', 'The writers who died in {morti}, ranked by visits to their Wikipedia page over the last 12 months (in Italian, English, French, German and Spanish): it measures how well known they are today, not how well their books sell. From 1 January their original texts can be published without permission in Italy, France, Germany and the UK.', morti=morti)}</p>\n'
                    '<ol class="rows" style="margin-top:28px">\n')
         crediti = []
         for k, a in enumerate(aut[:8]):
@@ -2117,16 +2084,16 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
                 sotto = f"died {_data_lunga(a['morte'], 'en')}"
             mt = (esc(ruolo) + "<br>" if ruolo else "") + esc(sotto)
             out.append(f'<li class="row"{df} data-i="{esc(iniziali_nome(nome))}"><span class="no">{k + 1:02d}</span><span class="nm"><a href="{href}">{esc(nome)}</a></span><span class="mt">{mt}</span></li>\n')
-        out.append(f'</ol>\n<a href="#autori" class="more">{T(f"Tutti i {len(aut)} scrittori con una scheda →", f"All {len(aut)} writers with a page →")}</a>'
-                   f'<a href="{pp}" class="more">{T(f"Tutti gli {n_(n_ue)}, paese per paese →", f"All {n_(n_ue)}, country by country →")}</a>\n')
+        out.append(f'</ol>\n<a href="#autori" class="more">{T('Tutti i {v1} scrittori con una scheda →', 'All {v1} writers with a page →', v1=len(aut))}</a>'
+                   f'<a href="{pp}" class="more">{T('Tutti gli {v1}, paese per paese →', 'All {v1}, country by country →', v1=n_(n_ue))}</a>\n')
         if crediti:
             out.append(crediti_foto(lang, T("Ritratti da Wikimedia Commons", "Portraits from Wikimedia Commons"), crediti))
         out.append("</section>\n")
 
     # 3. i libri USA
     if opere:
-        out.append(f'<section class="sec ix" id="ix2">\n<div class="sh m"><h2>{T(f"I libri del {pub}", f"The books of {pub}")}</h2><span>{T("Stati Uniti · 95 anni dall’uscita", "United States · 95 years from publication")}</span></div>\n'
-                   f'<p class="lede" id="pd-us">{T(f"Negli USA conta l&#39;anno della prima uscita: il 1° gennaio {anno} diventano liberi i libri usciti per la prima volta nel {pub}. Per ogni libro diciamo a che punto è il controllo. «Verificato»: la prima uscita (libro, rivista o registrazione) è documentata da due fonti indipendenti o da una scheda del registro americano del copyright, e nessuna fonte indica un&#39;uscita precedente. «Edizione confermata»: una fonte diversa da Wikidata conferma l&#39;anno dell&#39;edizione, ma la prima uscita non è ancora verificata. «Da confermare»: negli altri casi. In ordine di visite alla pagina del libro su Wikipedia in inglese, negli ultimi 12 mesi.", f"In the USA what counts is the year of first publication: on 1 January {anno} books first published in {pub} become free. For each book we say how far the check has got. «Verified»: the first publication (book, magazine or registration) is documented by two independent sources or by a record in the US copyright register, and no source points to an earlier publication. «Edition confirmed»: a source other than Wikidata confirms the year of the edition, but the first publication is not verified yet. «To be confirmed»: all other cases. Ranked by visits to the book\'s English Wikipedia page over the last 12 months.")}</p>\n'
+        out.append(f'<section class="sec ix" id="ix2">\n<div class="sh m"><h2>{T('I libri del {pub}', 'The books of {pub}', pub=pub)}</h2><span>{T("Stati Uniti · 95 anni dall’uscita", "United States · 95 years from publication")}</span></div>\n'
+                   f'<p class="lede" id="pd-us">{T('Negli USA conta l&#39;anno della prima uscita: il 1° gennaio {anno} diventano liberi i libri usciti per la prima volta nel {pub}. Per ogni libro diciamo a che punto è il controllo. «Verificato»: la prima uscita (libro, rivista o registrazione) è documentata da due fonti indipendenti o da una scheda del registro americano del copyright, e nessuna fonte indica un&#39;uscita precedente. «Edizione confermata»: una fonte diversa da Wikidata conferma l&#39;anno dell&#39;edizione, ma la prima uscita non è ancora verificata. «Da confermare»: negli altri casi. In ordine di visite alla pagina del libro su Wikipedia in inglese, negli ultimi 12 mesi.', "In the USA what counts is the year of first publication: on 1 January {anno} books first published in {pub} become free. For each book we say how far the check has got. «Verified»: the first publication (book, magazine or registration) is documented by two independent sources or by a record in the US copyright register, and no source points to an earlier publication. «Edition confirmed»: a source other than Wikidata confirms the year of the edition, but the first publication is not verified yet. «To be confirmed»: all other cases. Ranked by visits to the book's English Wikipedia page over the last 12 months.", anno=anno, pub=pub)}</p>\n'
                    '<ol class="rows" style="margin-top:28px">\n')
         crediti_us, visti_us = [], set()
         for k, o in enumerate(vetrina_us[:12]):
@@ -2153,38 +2120,38 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
                     crediti_us.append(f'{esc(pulisci(fa["nome"]))}: <a href="{esc(fa["foto"].get("pagina", ""))}" rel="noopener">{esc(" · ".join(x for x in (chi_f, pulisci(fa["foto"].get("licenza"))) if x) or "Wikimedia Commons")}</a>')
             out.append(f'<li class="row"{df} data-i="{esc(iniziali_nome(chi.split(", ")[0]))}"><span class="no">{k + 1:02d}</span>'
                        f'<span class="nm"><a href="{app}#/opera/{o["qid"]}">{esc(t)}</a></span><span class="mt">{esc(chi)}<br>{badge}</span></li>\n')
-        out.append(f'</ol>\n<a href="{pp_us}" class="more">{T(f"Tutti i {n_us} libri: {n_st['verificata']} con la prima uscita verificata, {n_st['edizione']} con l&#39;anno dell&#39;edizione confermato, {n_st['da_confermare']} da confermare →", f"All {n_us} books: {n_st['verificata']} with the first publication verified, {n_st['edizione']} with the edition year confirmed, {n_st['da_confermare']} to be confirmed →")}</a>\n')
+        out.append(f'</ol>\n<a href="{pp_us}" class="more">{T('Tutti i {n_us} libri: {v1} con la prima uscita verificata, {v2} con l&#39;anno dell&#39;edizione confermato, {v3} da confermare →', 'All {n_us} books: {v1} with the first publication verified, {v2} with the edition year confirmed, {v3} to be confirmed →', n_us=n_us, v1=n_st['verificata'], v2=n_st['edizione'], v3=n_st['da_confermare'])}</a>\n')
         if crediti_us:
             out.append(crediti_foto(lang, T("Ritratti degli autori da Wikimedia Commons", "Authors' portraits from Wikimedia Commons"), crediti_us))
         out.append("</section>\n")
 
     # 4. paese per paese
     righe = [
-        (T("Italia", "Italy"), T(f"Autori morti nel {morti}", f"Authors who died in {morti}"),
+        (T("Italia", "Italy"), T('Autori morti nel {morti}', 'Authors who died in {morti}', morti=morti),
          T("70 anni dalla morte. Per le opere uscite prima del 1940 di autori di paesi alleati c'è chi sostiene una proroga (Trattato di pace del 1947): i tribunali finora non l'hanno applicata.", "70 years after death. For works published before 1940 by authors from Allied countries some argue for an extension (1947 Peace Treaty): courts have not applied it so far."),
-         f"{app}#/{anno}", T(f"{n_(n_ue)} scrittori →", f"{n_(n_ue)} writers →"), ""),
-        (T("Francia", "France"), T(f"Autori morti nel {morti}", f"Authors who died in {morti}"),
+         f"{app}#/{anno}", T('{v1} scrittori →', '{v1} writers →', v1=n_(n_ue)), ""),
+        (T("Francia", "France"), T('Autori morti nel {morti}', 'Authors who died in {morti}', morti=morti),
          T("70 anni; 30 in più per chi è «morto per la Francia».", "70 years; 30 more for authors who «died for France»."),
-         f"{app}#/{anno}", T(f"{n_(n_ue)} scrittori →", f"{n_(n_ue)} writers →"), ""),
-        (T("Germania", "Germany"), T(f"Autori morti nel {morti}", f"Authors who died in {morti}"),
-         T("70 anni dalla morte.", "70 years after death."), f"{app}#/{anno}", T(f"{n_(n_ue)} scrittori →", f"{n_(n_ue)} writers →"), ""),
-        (T("Regno Unito", "United Kingdom"), T(f"Autori morti nel {morti}", f"Authors who died in {morti}"),
+         f"{app}#/{anno}", T('{v1} scrittori →', '{v1} writers →', v1=n_(n_ue)), ""),
+        (T("Germania", "Germany"), T('Autori morti nel {morti}', 'Authors who died in {morti}', morti=morti),
+         T("70 anni dalla morte.", "70 years after death."), f"{app}#/{anno}", T('{v1} scrittori →', '{v1} writers →', v1=n_(n_ue)), ""),
+        (T("Regno Unito", "United Kingdom"), T('Autori morti nel {morti}', 'Authors who died in {morti}', morti=morti),
          T("70 anni; le opere uscite dopo il 1988 di autori morti prima del 1969 restano protette fino al 2039.", "70 years; works first published after 1988 by authors who died before 1969 stay protected until 2039."),
-         f"{app}#/{anno}", T(f"{n_(n_ue)} scrittori →", f"{n_(n_ue)} writers →"), ""),
+         f"{app}#/{anno}", T('{v1} scrittori →', '{v1} writers →', v1=n_(n_ue)), ""),
     ]
     if n_es:
         nomi = (T(": entrano ", ": in come ") + ", ".join(es_nomi)) if es_nomi else ""
-        righe.append(("Spagna" if it else "Spain", T(f"Autori morti nel {morti_es}", f"Authors who died in {morti_es}"),
-                      T(f"80 anni per chi è morto prima del 1987{nomi}.", f"80 years for authors who died before 1987{nomi}."),
-                      f"{app}#/{anno}", T(f"{n_(n_es)} scrittori →", f"{n_(n_es)} writers →"), "es"))
+        righe.append((T('Spagna', 'Spain'), T('Autori morti nel {morti_es}', 'Authors who died in {morti_es}', morti_es=morti_es),
+                      T('80 anni per chi è morto prima del 1987{nomi}.', '80 years for authors who died before 1987{nomi}.', nomi=nomi),
+                      f"{app}#/{anno}", T('{v1} scrittori →', '{v1} writers →', v1=n_(n_es)), "es"))
     if n_us:
-        righe.append(("USA", T(f"Libri pubblicati nel {pub}", f"Books published in {pub}"),
+        righe.append(("USA", T('Libri pubblicati nel {pub}', 'Books published in {pub}', pub=pub),
                       T("95 anni dalla pubblicazione, opera per opera.", "95 years after publication, work by work."),
-                      f"{app}#/us/{anno}", T(f"{n_us} libri →", f"{n_us} books →"), "us"))
+                      f"{app}#/us/{anno}", T('{n_us} libri →', '{n_us} books →', n_us=n_us), "us"))
     # ogni riga porta alla pagina del paese (ristrutturazione del 25/11/2026; indirizzi in scripts/pagine_paese.py)
     pp = ["italia", "francia", "germania", "regno-unito"] if it else ["italy", "france", "germany", "united-kingdom"]
-    if n_es: pp.append("spagna" if it else "spain")
-    if n_us: pp.append("stati-uniti" if it else "united-states")
+    if n_es: pp.append(T('spagna', 'spain'))
+    if n_us: pp.append(T('stati-uniti', 'united-states'))
     base = "/pubblico-dominio/" if it else "/en/public-domain/"
     righe = [(p_, c, r, base + pp[i] + "/", l, cl) for i, (p_, c, r, h, l, cl) in enumerate(righe)]
     out.append(f'<section class="sec">\n<div class="sh m"><h2>{T("Chi entra, dove", "Who enters, where")}</h2>'
@@ -2198,7 +2165,7 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
     if duke:
         y, t_en, t_it, a_dk = duke
         dl = dove_libero(a_dk.get("paesi"), anno_di(a_dk.get("morte")), lang)
-        dove = T(f"«{t_it}» è libero negli USA dal {y} e {dl} solo dal {anno}.", f"«{t_en}» has been free in the USA since {y}, and {dl} only from {anno}.")
+        dove = T('«{t_it}» è libero negli USA dal {y} e {dl} solo dal {anno}.', '«{t_en}» has been free in the USA since {y}, and {dl} only from {anno}.', t_it=t_it, y=y, dl=dl, anno=anno, t_en=t_en)
     else:
         dove = ""
     out.append(f"""<section class="sec">
@@ -2219,14 +2186,14 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
 
     # 7. tutti gli scrittori con una scheda (collegamenti interni verso ogni scheda)
     if aut:
-        pag = "pagina" if it else "pagina_en"
+        pag = T('pagina', 'pagina_en')
         gruppi = {}
         for a in sorted(aut, key=lambda a: (_cognome(a["nome"]), slug_base(a["nome"]))):
             k = _cognome(a["nome"])[:1].upper()
             gruppi.setdefault(k if k.isalpha() else "#", []).append(a)
         out.append(f'<section class="sec" id="autori">\n<div class="sh m"><h2>{T("Tutti gli scrittori con una scheda", "All the writers with a page")}</h2>'
-                   f'<span>{T(f"{len(aut)} · in ordine di cognome", f"{len(aut)} · by surname")}</span></div>\n'
-                   f'<p class="lede">{T(f"I {len(aut)} scrittori morti nel {morti} per cui abbiamo una scheda, in ordine di cognome. Ogni scheda ha la data paese per paese, le opere principali e le fonti.", f"The {len(aut)} writers who died in {morti} that have a page, by surname. Each page has the date country by country, the main works and the sources.")}</p>\n'
+                   f'<span>{T('{v1} · in ordine di cognome', '{v1} · by surname', v1=len(aut))}</span></div>\n'
+                   f'<p class="lede">{T('I {v1} scrittori morti nel {morti} per cui abbiamo una scheda, in ordine di cognome. Ogni scheda ha la data paese per paese, le opere principali e le fonti.', 'The {v1} writers who died in {morti} that have a page, by surname. Each page has the date country by country, the main works and the sources.', v1=len(aut), morti=morti)}</p>\n'
                    f'<nav class="letters" aria-label="{T("Lettere", "Letters")}">' + "".join(f'<a href="#al-{k}">{k}</a>' for k in gruppi) + '</nav>\n<div class="az">')
         for k, lista in gruppi.items():
             out.append(f'<div class="L" id="al-{k}"><b>{k}</b>')
@@ -2242,7 +2209,7 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
     cal = ""
     if CALENDARIO_ON and anno == _cal:
         href = f"/calendario/{anno}/" if it else f"/en/calendar/{anno}/"
-        cal = (f' {T("Il Public Domain Day è la prima voce del", "Public Domain Day is the first entry of the")} <a href="{href}">{T(f"calendario degli anniversari letterari {anno}", f"{anno} literary anniversaries calendar")}</a>.')
+        cal = (f' {T("Il Public Domain Day è la prima voce del", "Public Domain Day is the first entry of the")} <a href="{href}">{T('calendario degli anniversari letterari {anno}', '{anno} literary anniversaries calendar', anno=anno)}</a>.')
     metodo = "https://github.com/mnovali90-byte/publicdomain/blob/main/docs/metodo-anni-opere.md"
     fonti = (T("Fonti e metodo", "Sources and method"), T(
         "Wikidata (CC0) per autori, opere e anni; biblioteche nazionali per confermare gli anni di morte. Per gli anni di uscita dei libri USA: registro del copyright americano (Catalog of Copyright Entries, trascritto dalla New York Public Library, CC0), Duke University (CC BY 4.0), Open Library, Library of Congress, BnF e il catalogo collettivo tedesco K10plus. Visite: Wikipedia in 5 lingue.",
@@ -2253,16 +2220,14 @@ def pagina_landing(anno, pacchetto_ue, opere_us, lang="en", pacchetto_es=None, v
     # (scripts/regole.py, fase_sito), senza aspettare un giro: prima «diventa libero», il 1° gennaio «oggi», dopo «è diventato»
     fasi = {"oggi": {"k": T("Public Domain Day · oggi", "Public Domain Day · today"),
                      "h1": [T("Cosa è", "What is"), T("libero", "free"), T("da oggi", "from today")],
-                     "say": T(f"Oggi, 1° gennaio {anno}, scadono i diritti di centinaia di scrittori e libri. Chi, dove e con quali cautele, da dati aperti e con le fonti.",
-                              f"Today, 1 January {anno}, copyright expires for hundreds of writers and books. Who, where and with what caveats, from open data with sources.")},
+                     "say": T('Oggi, 1° gennaio {anno}, scadono i diritti di centinaia di scrittori e libri. Chi, dove e con quali cautele, da dati aperti e con le fonti.', 'Today, 1 January {anno}, copyright expires for hundreds of writers and books. Who, where and with what caveats, from open data with sources.', anno=anno)},
             "dal": {"k": f"Public Domain Day · {data_l_}",
-                    "h1": [T("Cosa è diventato", "What became"), T("libero", "free"), T(f"nel {anno}", f"in {anno}")],
-                    "say": T(f"Il 1° gennaio {anno} sono scaduti i diritti di centinaia di scrittori e libri. Chi, dove e con quali cautele, da dati aperti e con le fonti.",
-                             f"On 1 January {anno} copyright expired for hundreds of writers and books. Who, where and with what caveats, from open data with sources.")},
+                    "h1": [T("Cosa è diventato", "What became"), T("libero", "free"), T('nel {anno}', 'in {anno}', anno=anno)],
+                    "say": T('Il 1° gennaio {anno} sono scaduti i diritti di centinaia di scrittori e libri. Chi, dove e con quali cautele, da dati aperti e con le fonti.', 'On 1 January {anno} copyright expired for hundreds of writers and books. Who, where and with what caveats, from open data with sources.', anno=anno)},
             "attesi": T("I nomi più letti", "The most read names"),
-            "us": [T("il 1° gennaio diventano liberi", f"on 1 January books published in {pub} become free"),
-                   T(f"il 1° gennaio {anno} sono diventati liberi", f"on 1 January {anno} books published in {pub} became free")],
-            "cnt_festa": "Public Domain Day", "cnt_dopo": T(f"Liberi dal {data_l_}", f"Free since {data_l_}")}
+            "us": [T('il 1° gennaio diventano liberi', 'on 1 January books published in {pub} become free', pub=pub),
+                   T('il 1° gennaio {anno} sono diventati liberi', 'on 1 January {anno} books published in {pub} became free', anno=anno, pub=pub)],
+            "cnt_festa": "Public Domain Day", "cnt_dopo": T('Liberi dal {data_l_}', 'Free since {data_l_}', data_l_=data_l_)}
     out.append("<script>(()=>{const A=" + str(anno) + ",F=" + json.dumps(fasi, ensure_ascii=False) + """;
 const ora=new Date(); if(ora<new Date(A,0,1))return;
 const fs=window.REGOLE_PAESI?REGOLE_PAESI.faseSito(ora):["conto",A+1], festa=fs[0]==="festa"&&fs[1]===A;
@@ -2276,7 +2241,7 @@ if($("pd-us"))$("pd-us").innerHTML=$("pd-us").innerHTML.replace(F.us[0],F.us[1])
 const c=$("cnt"); if(c){c.textContent=festa?F.cnt_festa:F.cnt_dopo; if(festa)c.style.color="var(--redt)";}
 })();</script>
 """)
-    out.append(JS_ANNO.replace("@@LOC@@", "it-IT" if it else "en-GB"))
+    out.append(JS_ANNO.replace("@@LOC@@", T('it-IT', 'en-GB')))
     out.append(piede_scheda(lang, fonti))
     return "".join(out), url
 
