@@ -1,0 +1,35 @@
+name: Titoli e descrizioni in tedesco, francese e spagnolo per Già pubblici e calendario (non cambia le pagine)
+
+# 26/11/2026, con l'ok di Marco: per le pagine in tedesco, francese e spagnolo (scripts/lingue.py).
+# Parte cambiando docs/registro/passo-etichette-lingue.txt (o a mano da GitHub). Scrive solo data/lingue_etichette.json: non tocca liste, date, regole né pagine.
+on:
+  push:
+    paths:
+      - "docs/registro/passo-etichette-lingue.txt"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: etichette-lingue
+  cancel-in-progress: false
+
+jobs:
+  bio:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Etichette, descrizioni e pagine Wikipedia da Wikidata
+        run: python scripts/etichette_lingue.py
+      - name: Salva solo il file delle lingue
+        if: ${{ !cancelled() }}
+        run: |
+          git add data/lingue_etichette.json 2>/dev/null || true
+          bash scripts/salva.sh "Titoli e descrizioni in tedesco, francese e spagnolo per Già pubblici e calendario"
