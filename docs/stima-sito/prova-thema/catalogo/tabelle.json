@@ -1,0 +1,3453 @@
+[
+{
+"id": "forma-Q5185279",
+"campo": "forma",
+"q": "Q5185279",
+"en": "poem",
+"it": "poema",
+"opere": 7589,
+"codici": [
+{
+"c": "DCF",
+"it": "Poesia di singoli poeti",
+"en": "Poetry / poems by individual poets"
+}
+],
+"condizione": ""
+},
+{
+"id": "forma-Q8261",
+"campo": "forma",
+"q": "Q8261",
+"en": "novel",
+"it": "romanzo",
+"opere": 5535,
+"codici": [
+{
+"c": "FBC",
+"it": "Narrativa classica: generale e letteraria",
+"en": "Classic fiction: literary and general"
+}
+],
+"condizione": ""
+},
+{
+"id": "forma-Q49084",
+"campo": "forma",
+"q": "Q49084",
+"en": "short story",
+"it": "racconto",
+"opere": 3479,
+"codici": [
+{
+"c": "FYB",
+"it": "Racconti",
+"en": "Short stories"
+}
+],
+"condizione": ""
+},
+{
+"id": "forma-Q25379",
+"campo": "forma",
+"q": "Q25379",
+"en": "play",
+"it": "opera teatrale",
+"opere": 3425,
+"codici": [
+{
+"c": "DDA",
+"it": "Letteratura teatrale classica",
+"en": "Classic plays / drama"
+}
+],
+"condizione": ""
+},
+{
+"id": "forma-Q80056",
+"campo": "forma",
+"q": "Q80056",
+"en": "sonnet",
+"it": "sonetto",
+"opere": 825,
+"codici": [
+{
+"c": "DCF",
+"it": "Poesia di singoli poeti",
+"en": "Poetry / poems by individual poets"
+},
+{
+"c": "DCRS",
+"it": "Poesia per forma o stile: Sonetto",
+"en": "Poetry / poems by form or style: Sonnet"
+}
+],
+"condizione": ""
+},
+{
+"id": "forma-Q1279564",
+"campo": "forma",
+"q": "Q1279564",
+"en": "short story collection",
+"it": "raccolta di racconti",
+"opere": 610,
+"codici": [
+{
+"c": "FYB",
+"it": "Racconti",
+"en": "Short stories"
+}
+],
+"condizione": ""
+},
+{
+"id": "forma-Q12106333",
+"campo": "forma",
+"q": "Q12106333",
+"en": "poetry collection",
+"it": "raccolta di poesie",
+"opere": 593,
+"codici": [
+{
+"c": "DCF",
+"it": "Poesia di singoli poeti",
+"en": "Poetry / poems by individual poets"
+}
+],
+"condizione": ""
+},
+{
+"id": "forma-Q149537",
+"campo": "forma",
+"q": "Q149537",
+"en": "novella",
+"it": "novella",
+"opere": 570,
+"codici": [
+{
+"c": "FYC",
+"it": "Novella",
+"en": "Novella (short novel)"
+}
+],
+"condizione": ""
+},
+{
+"id": "forma-Q693",
+"campo": "forma",
+"q": "Q693",
+"en": "fable",
+"it": "favola",
+"opere": 261,
+"codici": [
+{
+"c": "FNF",
+"it": "Fiabe e racconti popolari/Rivisitazioni di fiabe",
+"en": "Fairy and folk tales / fairy tale retellings"
+}
+],
+"condizione": ""
+},
+{
+"id": "forma-Q7366",
+"campo": "forma",
+"q": "Q7366",
+"en": "song",
+"it": "canzone",
+"opere": 143,
+"codici": [
+{
+"c": "AVQ",
+"it": "Spartiti, partiture, testi e libretti musicali",
+"en": "Musical scores, lyrics and libretti"
+}
+],
+"condizione": ""
+},
+{
+"id": "forma-Q5292",
+"campo": "forma",
+"q": "Q5292",
+"en": "encyclopedia",
+"it": "enciclopedia",
+"opere": 84,
+"codici": [
+{
+"c": "GBC",
+"it": "Opere di consultazione",
+"en": "Reference works"
+}
+],
+"condizione": ""
+},
+{
+"id": "forma-Q472808",
+"campo": "forma",
+"q": "Q472808",
+"en": "novelette",
+"it": "romanzo breve",
+"opere": 77,
+"codici": [
+{
+"c": "FYC",
+"it": "Novella",
+"en": "Novella (short novel)"
+}
+],
+"condizione": ""
+},
+{
+"id": "forma-Q27036528",
+"campo": "forma",
+"q": "Q27036528",
+"en": "Erzählung",
+"it": "",
+"opere": 73,
+"codici": [
+{
+"c": "FYB",
+"it": "Racconti",
+"en": "Short stories"
+}
+],
+"condizione": ""
+},
+{
+"id": "forma-Q25372",
+"campo": "forma",
+"q": "Q25372",
+"en": "drama",
+"it": "dramma",
+"opere": 65,
+"codici": [
+{
+"c": "DDA",
+"it": "Letteratura teatrale classica",
+"en": "Classic plays / drama"
+}
+],
+"condizione": ""
+},
+{
+"id": "forma-Q1344",
+"campo": "forma",
+"q": "Q1344",
+"en": "opera",
+"it": "opera lirica",
+"opere": 65,
+"codici": [
+{
+"c": "AVLF",
+"it": "Opera",
+"en": "Opera"
+},
+{
+"c": "AVQ",
+"it": "Spartiti, partiture, testi e libretti musicali",
+"en": "Musical scores, lyrics and libretti"
+}
+],
+"condizione": ""
+},
+{
+"id": "forma-Q27560760",
+"campo": "forma",
+"q": "Q27560760",
+"en": "collection of fairy tales",
+"it": "raccolta di fiabe",
+"opere": 41,
+"codici": [
+{
+"c": "FNF",
+"it": "Fiabe e racconti popolari/Rivisitazioni di fiabe",
+"en": "Fairy and folk tales / fairy tale retellings"
+}
+],
+"condizione": ""
+},
+{
+"id": "forma-Q16324495",
+"campo": "forma",
+"q": "Q16324495",
+"en": "essay collection",
+"it": "raccolta di saggi",
+"opere": 37,
+"codici": [
+{
+"c": "DNL",
+"it": "Saggi letterari",
+"en": "Essays"
+}
+],
+"condizione": ""
+},
+{
+"id": "forma-Q23622",
+"campo": "forma",
+"q": "Q23622",
+"en": "dictionary",
+"it": "dizionario",
+"opere": 35,
+"codici": [
+{
+"c": "CBD",
+"it": "Dizionari",
+"en": "Dictionaries"
+}
+],
+"condizione": ""
+},
+{
+"id": "forma-Q1091366",
+"campo": "forma",
+"q": "Q1091366",
+"en": "ci",
+"it": "ci",
+"opere": 35,
+"codici": [
+{
+"c": "DCF",
+"it": "Poesia di singoli poeti",
+"en": "Poetry / poems by individual poets"
+}
+],
+"condizione": ""
+},
+{
+"id": "forma-Q72406516",
+"campo": "forma",
+"q": "Q72406516",
+"en": "poem in alexandrines",
+"it": "poema in alessandrini",
+"opere": 31,
+"codici": [
+{
+"c": "DCF",
+"it": "Poesia di singoli poeti",
+"en": "Poetry / poems by individual poets"
+}
+],
+"condizione": ""
+},
+{
+"id": "forma-Q182659",
+"campo": "forma",
+"q": "Q182659",
+"en": "ballad",
+"it": "ballata popolare",
+"opere": 28,
+"codici": [
+{
+"c": "DCF",
+"it": "Poesia di singoli poeti",
+"en": "Poetry / poems by individual poets"
+}
+],
+"condizione": ""
+},
+{
+"id": "forma-Q1194583",
+"campo": "forma",
+"q": "Q1194583",
+"en": "one-act play",
+"it": "atto unico",
+"opere": 27,
+"codici": [
+{
+"c": "DDA",
+"it": "Letteratura teatrale classica",
+"en": "Classic plays / drama"
+}
+],
+"condizione": ""
+},
+{
+"id": "forma-Q873000",
+"campo": "forma",
+"q": "Q873000",
+"en": "canzone",
+"it": "canzone",
+"opere": 24,
+"codici": [
+{
+"c": "DCF",
+"it": "Poesia di singoli poeti",
+"en": "Poetry / poems by individual poets"
+}
+],
+"condizione": ""
+},
+{
+"id": "forma-Q17991521",
+"campo": "forma",
+"q": "Q17991521",
+"en": "tale",
+"it": "",
+"opere": 20,
+"codici": [
+{
+"c": "FYB",
+"it": "Racconti",
+"en": "Short stories"
+}
+],
+"condizione": ""
+},
+{
+"id": "forma-Q17370328",
+"campo": "forma",
+"q": "Q17370328",
+"en": "lüshi with lines of five characters",
+"it": "lüshi con linee di cinque caratteri",
+"opere": 19,
+"codici": [
+{
+"c": "DCF",
+"it": "Poesia di singoli poeti",
+"en": "Poetry / poems by individual poets"
+}
+],
+"condizione": ""
+},
+{
+"id": "forma-Q86730311",
+"campo": "forma",
+"q": "Q86730311",
+"en": "qijue",
+"it": "",
+"opere": 18,
+"codici": [
+{
+"c": "DCF",
+"it": "Poesia di singoli poeti",
+"en": "Poetry / poems by individual poets"
+}
+],
+"condizione": ""
+},
+{
+"id": "forma-Q254554",
+"campo": "forma",
+"q": "Q254554",
+"en": "picture book",
+"it": "albo illustrato",
+"opere": 17,
+"codici": [],
+"condizione": "bambini"
+},
+{
+"id": "forma-Q216860",
+"campo": "forma",
+"q": "Q216860",
+"en": "Lied",
+"it": "lied",
+"opere": 17,
+"codici": [
+{
+"c": "DCF",
+"it": "Poesia di singoli poeti",
+"en": "Poetry / poems by individual poets"
+}
+],
+"condizione": ""
+},
+{
+"id": "forma-Q12799318",
+"campo": "forma",
+"q": "Q12799318",
+"en": "short novel",
+"it": "povest",
+"opere": 16,
+"codici": [
+{
+"c": "FYC",
+"it": "Novella",
+"en": "Novella (short novel)"
+}
+],
+"condizione": ""
+},
+{
+"id": "forma-Q9378549",
+"campo": "forma",
+"q": "Q9378549",
+"en": "seven-character poetry",
+"it": "",
+"opere": 15,
+"codici": [
+{
+"c": "DCF",
+"it": "Poesia di singoli poeti",
+"en": "Poetry / poems by individual poets"
+}
+],
+"condizione": ""
+},
+{
+"id": "forma-Q5707594",
+"campo": "forma",
+"q": "Q5707594",
+"en": "news article",
+"it": "articolo di giornale",
+"opere": 15,
+"codici": [
+{
+"c": "DNP",
+"it": "Reportage, scritti giornalistici e raccolte di articoli",
+"en": "Reportage, journalism or collected columns"
+}
+],
+"condizione": ""
+},
+{
+"id": "forma-Q1161145",
+"campo": "forma",
+"q": "Q1161145",
+"en": "prose poetry",
+"it": "poesia in prosa",
+"opere": 14,
+"codici": [
+{
+"c": "DCF",
+"it": "Poesia di singoli poeti",
+"en": "Poetry / poems by individual poets"
+}
+],
+"condizione": ""
+},
+{
+"id": "forma-Q17367286",
+"campo": "forma",
+"q": "Q17367286",
+"en": "lüshi with lines of seven characters",
+"it": "",
+"opere": 14,
+"codici": [
+{
+"c": "DCF",
+"it": "Poesia di singoli poeti",
+"en": "Poetry / poems by individual poets"
+}
+],
+"condizione": ""
+},
+{
+"id": "forma-Q1497584",
+"campo": "forma",
+"q": "Q1497584",
+"en": "cycle of poems",
+"it": "",
+"opere": 13,
+"codici": [
+{
+"c": "DCF",
+"it": "Poesia di singoli poeti",
+"en": "Poetry / poems by individual poets"
+}
+],
+"condizione": ""
+},
+{
+"id": "forma-Q656042",
+"campo": "forma",
+"q": "Q656042",
+"en": "cywydd",
+"it": "",
+"opere": 13,
+"codici": [
+{
+"c": "DCF",
+"it": "Poesia di singoli poeti",
+"en": "Poetry / poems by individual poets"
+}
+],
+"condizione": ""
+},
+{
+"id": "forma-Q338699",
+"campo": "forma",
+"q": "Q338699",
+"en": "madrigal",
+"it": "madrigale",
+"opere": 12,
+"codici": [
+{
+"c": "DCF",
+"it": "Poesia di singoli poeti",
+"en": "Poetry / poems by individual poets"
+}
+],
+"condizione": ""
+},
+{
+"id": "forma-Q861911",
+"campo": "forma",
+"q": "Q861911",
+"en": "oration",
+"it": "discorso",
+"opere": 11,
+"codici": [
+{
+"c": "DNS",
+"it": "Discorsi",
+"en": "Speeches"
+}
+],
+"condizione": ""
+},
+{
+"id": "forma-Q72408184",
+"campo": "forma",
+"q": "Q72408184",
+"en": "drama in Alexandrine verse",
+"it": "",
+"opere": 11,
+"codici": [
+{
+"c": "DDA",
+"it": "Letteratura teatrale classica",
+"en": "Classic plays / drama"
+}
+],
+"condizione": ""
+},
+{
+"id": "forma-Q482",
+"campo": "forma",
+"q": "Q482",
+"en": "poetry",
+"it": "poesia",
+"opere": 10,
+"codici": [
+{
+"c": "DCF",
+"it": "Poesia di singoli poeti",
+"en": "Poetry / poems by individual poets"
+}
+],
+"condizione": ""
+},
+{
+"id": "forma-Q19357149",
+"campo": "forma",
+"q": "Q19357149",
+"en": "poetry anthology",
+"it": "antologia di poesie",
+"opere": 9,
+"codici": [
+{
+"c": "DCQ",
+"it": "Antologie di poesia (vari poeti)",
+"en": "Poetry anthologies (various poets)"
+}
+],
+"condizione": ""
+},
+{
+"id": "forma-Q10916116",
+"campo": "forma",
+"q": "Q10916116",
+"en": "history book",
+"it": "libro storico",
+"opere": 9,
+"codici": [
+{
+"c": "NH",
+"it": "Storia",
+"en": "History"
+}
+],
+"condizione": ""
+},
+{
+"id": "forma-Q10882175",
+"campo": "forma",
+"q": "Q10882175",
+"en": "five-character ancient verse",
+"it": "",
+"opere": 9,
+"codici": [
+{
+"c": "DCF",
+"it": "Poesia di singoli poeti",
+"en": "Poetry / poems by individual poets"
+}
+],
+"condizione": ""
+},
+{
+"id": "forma-Q36279",
+"campo": "forma",
+"q": "Q36279",
+"en": "biography",
+"it": "biografia",
+"opere": 8,
+"codici": [
+{
+"c": "DNB",
+"it": "Biografie: generale",
+"en": "Biography: general"
+}
+],
+"condizione": ""
+},
+{
+"id": "forma-Q59126",
+"campo": "forma",
+"q": "Q59126",
+"en": "xiaoshuo",
+"it": "",
+"opere": 8,
+"codici": [
+{
+"c": "FBC",
+"it": "Narrativa classica: generale e letteraria",
+"en": "Classic fiction: literary and general"
+}
+],
+"condizione": ""
+},
+{
+"id": "forma-Q1782649",
+"campo": "forma",
+"q": "Q1782649",
+"en": "long poem",
+"it": "",
+"opere": 7,
+"codici": [
+{
+"c": "DCF",
+"it": "Poesia di singoli poeti",
+"en": "Poetry / poems by individual poets"
+}
+],
+"condizione": ""
+},
+{
+"id": "forma-Q65085460",
+"campo": "forma",
+"q": "Q65085460",
+"en": "letter collection",
+"it": "raccolta di lettere",
+"opere": 7,
+"codici": [
+{
+"c": "DND",
+"it": "Diari, lettere e taccuini",
+"en": "Published diaries, letters and journals"
+}
+],
+"condizione": ""
+},
+{
+"id": "forma-Q191067",
+"campo": "forma",
+"q": "Q191067",
+"en": "article",
+"it": "articolo",
+"opere": 7,
+"codici": [
+{
+"c": "DNP",
+"it": "Reportage, scritti giornalistici e raccolte di articoli",
+"en": "Reportage, journalism or collected columns"
+}
+],
+"condizione": ""
+},
+{
+"id": "forma-Q465821",
+"campo": "forma",
+"q": "Q465821",
+"en": "epistolary novel",
+"it": "romanzo epistolare",
+"opere": 6,
+"codici": [
+{
+"c": "FBC",
+"it": "Narrativa classica: generale e letteraria",
+"en": "Classic fiction: literary and general"
+}
+],
+"condizione": ""
+},
+{
+"id": "forma-Q133492",
+"campo": "forma",
+"q": "Q133492",
+"en": "letter",
+"it": "lettera",
+"opere": 6,
+"codici": [
+{
+"c": "DND",
+"it": "Diari, lettere e taccuini",
+"en": "Published diaries, letters and journals"
+}
+],
+"condizione": ""
+},
+{
+"id": "forma-Q80930",
+"campo": "forma",
+"q": "Q80930",
+"en": "tragedy",
+"it": "tragedia",
+"opere": 6,
+"codici": [
+{
+"c": "DDA",
+"it": "Letteratura teatrale classica",
+"en": "Classic plays / drama"
+},
+{
+"c": "DDT",
+"it": "Letteratura teatrale: tragedia",
+"en": "Tragic plays"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q482",
+"campo": "genere",
+"q": "Q482",
+"en": "poetry",
+"it": "poesia",
+"opere": 2112,
+"codici": [
+{
+"c": "DCF",
+"it": "Poesia di singoli poeti",
+"en": "Poetry / poems by individual poets"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q35760",
+"campo": "genere",
+"q": "Q35760",
+"en": "essay",
+"it": "saggio",
+"opere": 1327,
+"codici": [
+{
+"c": "DNL",
+"it": "Saggi letterari",
+"en": "Essays"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q693",
+"campo": "genere",
+"q": "Q693",
+"en": "fable",
+"it": "favola",
+"opere": 635,
+"codici": [
+{
+"c": "FNF",
+"it": "Fiabe e racconti popolari/Rivisitazioni di fiabe",
+"en": "Fairy and folk tales / fairy tale retellings"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q40831",
+"campo": "genere",
+"q": "Q40831",
+"en": "comedy",
+"it": "commedia",
+"opere": 485,
+"codici": [
+{
+"c": "DDA",
+"it": "Letteratura teatrale classica",
+"en": "Classic plays / drama"
+},
+{
+"c": "DDL",
+"it": "Letteratura teatrale: commedia",
+"en": "Comedic plays"
+}
+],
+"condizione": "teatro"
+},
+{
+"id": "genere-Q699",
+"campo": "genere",
+"q": "Q699",
+"en": "fairy tale",
+"it": "fiaba",
+"opere": 467,
+"codici": [
+{
+"c": "FNF",
+"it": "Fiabe e racconti popolari/Rivisitazioni di fiabe",
+"en": "Fairy and folk tales / fairy tale retellings"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q16575965",
+"campo": "genere",
+"q": "Q16575965",
+"en": "horror fiction",
+"it": "orrore",
+"opere": 431,
+"codici": [
+{
+"c": "FK",
+"it": "Narrativa dell’orrore/sovrannaturale e storie di fantasmi",
+"en": "Horror, ghost stories and supernatural fiction"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q24925",
+"campo": "genere",
+"q": "Q24925",
+"en": "science fiction",
+"it": "fantascienza",
+"opere": 427,
+"codici": [
+{
+"c": "FL",
+"it": "Fantascienza",
+"en": "Science fiction"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q132311",
+"campo": "genere",
+"q": "Q132311",
+"en": "fantasy",
+"it": "fantasy",
+"opere": 409,
+"codici": [
+{
+"c": "FM",
+"it": "Fantasy",
+"en": "Fantasy"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q80930",
+"campo": "genere",
+"q": "Q80930",
+"en": "tragedy",
+"it": "tragedia",
+"opere": 408,
+"codici": [
+{
+"c": "DDA",
+"it": "Letteratura teatrale classica",
+"en": "Classic plays / drama"
+},
+{
+"c": "DDT",
+"it": "Letteratura teatrale: tragedia",
+"en": "Tragic plays"
+}
+],
+"condizione": "teatro"
+},
+{
+"id": "genere-Q36279",
+"campo": "genere",
+"q": "Q36279",
+"en": "biography",
+"it": "biografia",
+"opere": 399,
+"codici": [
+{
+"c": "DNB",
+"it": "Biografie: generale",
+"en": "Biography: general"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q1196408",
+"campo": "genere",
+"q": "Q1196408",
+"en": "historical fiction",
+"it": "fiction storica",
+"opere": 372,
+"codici": [
+{
+"c": "FV",
+"it": "Narrativa di ambientazione storica",
+"en": "Historical fiction"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q182357",
+"campo": "genere",
+"q": "Q182357",
+"en": "lyric poetry",
+"it": "poesia lirica",
+"opere": 362,
+"codici": [
+{
+"c": "DCF",
+"it": "Poesia di singoli poeti",
+"en": "Poetry / poems by individual poets"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q21802675",
+"campo": "genere",
+"q": "Q21802675",
+"en": "adventure fiction",
+"it": "fiction d'avventura",
+"opere": 331,
+"codici": [
+{
+"c": "FJ",
+"it": "Narrativa di avventura/di azione",
+"en": "Adventure / action or military fiction"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q4184",
+"campo": "genere",
+"q": "Q4184",
+"en": "autobiography",
+"it": "autobiografia",
+"opere": 213,
+"codici": [
+{
+"c": "DNC",
+"it": "Memorie",
+"en": "Memoirs"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q1164267",
+"campo": "genere",
+"q": "Q1164267",
+"en": "travel book",
+"it": "libro di viaggio",
+"opere": 193,
+"codici": [
+{
+"c": "WTL",
+"it": "Letteratura di viaggio",
+"en": "Travel writing"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q6585139",
+"campo": "genere",
+"q": "Q6585139",
+"en": "mystery fiction",
+"it": "letteratura del mistero",
+"opere": 193,
+"codici": [
+{
+"c": "FF",
+"it": "Narrativa poliziesca e libri gialli",
+"en": "Crime and / or mystery fiction"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q193121",
+"campo": "genere",
+"q": "Q193121",
+"en": "epigram",
+"it": "epigramma",
+"opere": 191,
+"codici": [
+{
+"c": "DCF",
+"it": "Poesia di singoli poeti",
+"en": "Poetry / poems by individual poets"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q5937792",
+"campo": "genere",
+"q": "Q5937792",
+"en": "crime fiction",
+"it": "giallo",
+"opere": 191,
+"codici": [
+{
+"c": "FF",
+"it": "Narrativa poliziesca e libri gialli",
+"en": "Crime and / or mystery fiction"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q24723",
+"campo": "genere",
+"q": "Q24723",
+"en": "literary fairy tale",
+"it": "fiaba letteraria",
+"opere": 180,
+"codici": [
+{
+"c": "FNF",
+"it": "Fiabe e racconti popolari/Rivisitazioni di fiabe",
+"en": "Fairy and folk tales / fairy tale retellings"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q37484",
+"campo": "genere",
+"q": "Q37484",
+"en": "epic poem",
+"it": "poema epico",
+"opere": 175,
+"codici": [
+{
+"c": "DCF",
+"it": "Poesia di singoli poeti",
+"en": "Poetry / poems by individual poets"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q186424",
+"campo": "genere",
+"q": "Q186424",
+"en": "detective fiction",
+"it": "poliziesco",
+"opere": 168,
+"codici": [
+{
+"c": "FFD",
+"it": "Narrativa poliziesca e libri gialli: investigatori privati/detective amatoriali",
+"en": "Crime and mystery: private investigator / amateur detectives"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q185363",
+"campo": "genere",
+"q": "Q185363",
+"en": "chronicle",
+"it": "cronaca",
+"opere": 162,
+"codici": [
+{
+"c": "NH",
+"it": "Storia",
+"en": "History"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q1072723",
+"campo": "genere",
+"q": "Q1072723",
+"en": "travel literature",
+"it": "letteratura di viaggio",
+"opere": 148,
+"codici": [
+{
+"c": "WTL",
+"it": "Letteratura di viaggio",
+"en": "Travel writing"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q56451354",
+"campo": "genere",
+"q": "Q56451354",
+"en": "children's fiction",
+"it": "narrativa per ragazzi",
+"opere": 145,
+"codici": [],
+"condizione": "bambini"
+},
+{
+"id": "genere-Q128758",
+"campo": "genere",
+"q": "Q128758",
+"en": "satire",
+"it": "satira",
+"opere": 145,
+"codici": [
+{
+"c": "FUP",
+"it": "Narrativa satirica e parodie",
+"en": "Satirical fiction and parodies"
+}
+],
+"condizione": "narrativa"
+},
+{
+"id": "genere-Q116953130",
+"campo": "genere",
+"q": "Q116953130",
+"en": "hymn text",
+"it": "",
+"opere": 130,
+"codici": [
+{
+"c": "AVLK",
+"it": "Musica sacra e religiosa",
+"en": "Sacred and religious music"
+},
+{
+"c": "QRVJ",
+"it": "Preghiere e materiale liturgico",
+"en": "Prayers and liturgical material"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q25372",
+"campo": "genere",
+"q": "Q25372",
+"en": "drama",
+"it": "dramma",
+"opere": 129,
+"codici": [
+{
+"c": "DDA",
+"it": "Letteratura teatrale classica",
+"en": "Classic plays / drama"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q34620",
+"campo": "genere",
+"q": "Q34620",
+"en": "Greek tragedy",
+"it": "tragedia greca",
+"opere": 127,
+"codici": [
+{
+"c": "DBSG",
+"it": "Letteratura dell’Antica Grecia e di Roma Antica",
+"en": "Ancient Greek and Roman literature"
+},
+{
+"c": "DDT",
+"it": "Letteratura teatrale: tragedia",
+"en": "Tragic plays"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q474090",
+"campo": "genere",
+"q": "Q474090",
+"en": "narrative poetry",
+"it": "poesia narrativa",
+"opere": 111,
+"codici": [
+{
+"c": "DCF",
+"it": "Poesia di singoli poeti",
+"en": "Poetry / poems by individual poets"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q112983",
+"campo": "genere",
+"q": "Q112983",
+"en": "memoir",
+"it": "memorie",
+"opere": 103,
+"codici": [
+{
+"c": "DNC",
+"it": "Memorie",
+"en": "Memoirs"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q19765983",
+"campo": "genere",
+"q": "Q19765983",
+"en": "romantic fiction",
+"it": "",
+"opere": 100,
+"codici": [],
+"condizione": "niente"
+},
+{
+"id": "genere-Q131539",
+"campo": "genere",
+"q": "Q131539",
+"en": "children's literature",
+"it": "letteratura per ragazzi",
+"opere": 99,
+"codici": [],
+"condizione": "bambini"
+},
+{
+"id": "genere-Q182015",
+"campo": "genere",
+"q": "Q182015",
+"en": "thriller",
+"it": "thriller",
+"opere": 88,
+"codici": [
+{
+"c": "FH",
+"it": "Thriller/Suspense",
+"en": "Thriller / suspense fiction"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q3236984",
+"campo": "genere",
+"q": "Q3236984",
+"en": "Tang poetry",
+"it": "poesia Tang",
+"opere": 85,
+"codici": [
+{
+"c": "DCF",
+"it": "Poesia di singoli poeti",
+"en": "Poetry / poems by individual poets"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q5151421",
+"campo": "genere",
+"q": "Q5151421",
+"en": "comedy",
+"it": "",
+"opere": 79,
+"codici": [
+{
+"c": "DDA",
+"it": "Letteratura teatrale classica",
+"en": "Classic plays / drama"
+},
+{
+"c": "DDL",
+"it": "Letteratura teatrale: commedia",
+"en": "Comedic plays"
+}
+],
+"condizione": "teatro"
+},
+{
+"id": "genere-Q136472",
+"campo": "genere",
+"q": "Q136472",
+"en": "historical fiction",
+"it": "",
+"opere": 73,
+"codici": [
+{
+"c": "FV",
+"it": "Narrativa di ambientazione storica",
+"en": "Historical fiction"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q20669641",
+"campo": "genere",
+"q": "Q20669641",
+"en": "Gothic fiction",
+"it": "Letteratura gotica",
+"opere": 70,
+"codici": [
+{
+"c": "FYL",
+"it": "Narrativa: gotico",
+"en": "Fiction: gothic"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q5292",
+"campo": "genere",
+"q": "Q5292",
+"en": "encyclopedia",
+"it": "enciclopedia",
+"opere": 66,
+"codici": [
+{
+"c": "GBC",
+"it": "Opere di consultazione",
+"en": "Reference works"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q465821",
+"campo": "genere",
+"q": "Q465821",
+"en": "epistolary novel",
+"it": "romanzo epistolare",
+"opere": 64,
+"codici": [
+{
+"c": "FBC",
+"it": "Narrativa classica: generale e letteraria",
+"en": "Classic fiction: literary and general"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q5891",
+"campo": "genere",
+"q": "Q5891",
+"en": "philosophy",
+"it": "filosofia",
+"opere": 56,
+"codici": [
+{
+"c": "QD",
+"it": "Filosofia",
+"en": "Philosophy"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q208628",
+"campo": "genere",
+"q": "Q208628",
+"en": "hagiography",
+"it": "agiografia",
+"opere": 51,
+"codici": [
+{
+"c": "DNBX",
+"it": "Biografie: figure religiose e spirituali",
+"en": "Biography: religious and spiritual"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q732782",
+"campo": "genere",
+"q": "Q732782",
+"en": "weird fiction",
+"it": "Weird",
+"opere": 51,
+"codici": [
+{
+"c": "FK",
+"it": "Narrativa dell’orrore/sovrannaturale e storie di fantasmi",
+"en": "Horror, ghost stories and supernatural fiction"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q223945",
+"campo": "genere",
+"q": "Q223945",
+"en": "Bildungsroman",
+"it": "romanzo di formazione",
+"opere": 50,
+"codici": [
+{
+"c": "FXB",
+"it": "Tema narrativo: transizione all’età adulta",
+"en": "Narrative theme: coming of age"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q185598",
+"campo": "genere",
+"q": "Q185598",
+"en": "diary",
+"it": "diario",
+"opere": 48,
+"codici": [
+{
+"c": "DND",
+"it": "Diari, lettere e taccuini",
+"en": "Published diaries, letters and journals"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q12799318",
+"campo": "genere",
+"q": "Q12799318",
+"en": "short novel",
+"it": "povest",
+"opere": 48,
+"codici": [
+{
+"c": "FYC",
+"it": "Novella",
+"en": "Novella (short novel)"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q182659",
+"campo": "genere",
+"q": "Q182659",
+"en": "ballad",
+"it": "ballata popolare",
+"opere": 47,
+"codici": [
+{
+"c": "DCF",
+"it": "Poesia di singoli poeti",
+"en": "Poetry / poems by individual poets"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q1161145",
+"campo": "genere",
+"q": "Q1161145",
+"en": "prose poetry",
+"it": "poesia in prosa",
+"opere": 47,
+"codici": [
+{
+"c": "DCF",
+"it": "Poesia di singoli poeti",
+"en": "Poetry / poems by individual poets"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q192881",
+"campo": "genere",
+"q": "Q192881",
+"en": "tragicomedy",
+"it": "tragicommedia",
+"opere": 44,
+"codici": [
+{
+"c": "DDA",
+"it": "Letteratura teatrale classica",
+"en": "Classic plays / drama"
+}
+],
+"condizione": "teatro"
+},
+{
+"id": "genere-Q20664530",
+"campo": "genere",
+"q": "Q20664530",
+"en": "crime literature",
+"it": "letteratura gialla",
+"opere": 40,
+"codici": [
+{
+"c": "FF",
+"it": "Narrativa poliziesca e libri gialli",
+"en": "Crime and / or mystery fiction"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q21803247",
+"campo": "genere",
+"q": "Q21803247",
+"en": "military fiction",
+"it": "narrativa bellica",
+"opere": 39,
+"codici": [
+{
+"c": "FJM",
+"it": "Narrativa di avventura di guerra/di combattimento/militare",
+"en": "War, combat and military fiction"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q2254211",
+"campo": "genere",
+"q": "Q2254211",
+"en": "political fiction",
+"it": "fantapolitica",
+"opere": 37,
+"codici": [
+{
+"c": "FXP",
+"it": "Tema narrativo: politica/economia",
+"en": "Narrative theme: politics / economics"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q30277550",
+"campo": "genere",
+"q": "Q30277550",
+"en": "historiography",
+"it": "storiografia",
+"opere": 37,
+"codici": [
+{
+"c": "NH",
+"it": "Storia",
+"en": "History"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q3056541",
+"campo": "genere",
+"q": "Q3056541",
+"en": "autobiographical novel",
+"it": "romanzo autobiografico",
+"opere": 37,
+"codici": [
+{
+"c": "FC",
+"it": "Narrativa biografica/autobiografica",
+"en": "Biographical fiction / autobiographical fiction"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q178985",
+"campo": "genere",
+"q": "Q178985",
+"en": "ode",
+"it": "ode",
+"opere": 36,
+"codici": [
+{
+"c": "DCF",
+"it": "Poesia di singoli poeti",
+"en": "Poetry / poems by individual poets"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q110540276",
+"campo": "genere",
+"q": "Q110540276",
+"en": "satirical fiction",
+"it": "",
+"opere": 35,
+"codici": [
+{
+"c": "FUP",
+"it": "Narrativa satirica e parodie",
+"en": "Satirical fiction and parodies"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q104100753",
+"campo": "genere",
+"q": "Q104100753",
+"en": "social fiction",
+"it": "",
+"opere": 34,
+"codici": [
+{
+"c": "FXS",
+"it": "Tema narrativo: Problemi e questioni sociali",
+"en": "Narrative theme: social issues / social problems"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q10916116",
+"campo": "genere",
+"q": "Q10916116",
+"en": "history book",
+"it": "libro storico",
+"opere": 33,
+"codici": [
+{
+"c": "NH",
+"it": "Storia",
+"en": "History"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q650175",
+"campo": "genere",
+"q": "Q650175",
+"en": "New Comedy",
+"it": "commedia nuova",
+"opere": 33,
+"codici": [
+{
+"c": "DBSG",
+"it": "Letteratura dell’Antica Grecia e di Roma Antica",
+"en": "Ancient Greek and Roman literature"
+},
+{
+"c": "DDL",
+"it": "Letteratura teatrale: commedia",
+"en": "Comedic plays"
+}
+],
+"condizione": "teatro"
+},
+{
+"id": "genere-Q367591",
+"campo": "genere",
+"q": "Q367591",
+"en": "western fiction",
+"it": "narrativa western",
+"opere": 33,
+"codici": [
+{
+"c": "FJW",
+"it": "Narrativa di avventura: Western",
+"en": "Western fiction"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q181001",
+"campo": "genere",
+"q": "Q181001",
+"en": "erotica",
+"it": "pubblicazioni erotiche",
+"opere": 32,
+"codici": [
+{
+"c": "FP",
+"it": "Narrativa erotica",
+"en": "Erotic fiction / erotica"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q747483",
+"campo": "genere",
+"q": "Q747483",
+"en": "erotic literature",
+"it": "letteratura erotica",
+"opere": 32,
+"codici": [
+{
+"c": "FP",
+"it": "Narrativa erotica",
+"en": "Erotic fiction / erotica"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q17991521",
+"campo": "genere",
+"q": "Q17991521",
+"en": "tale",
+"it": "",
+"opere": 30,
+"codici": [
+{
+"c": "FYB",
+"it": "Racconti",
+"en": "Short stories"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q20737414",
+"campo": "genere",
+"q": "Q20737414",
+"en": "philosophical fiction",
+"it": "fiction filosofica",
+"opere": 30,
+"codici": [
+{
+"c": "FDV",
+"it": "Narrativa metafisica/filosofica",
+"en": "Metaphysical / philosophical fiction"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q861911",
+"campo": "genere",
+"q": "Q861911",
+"en": "oration",
+"it": "discorso",
+"opere": 30,
+"codici": [
+{
+"c": "DNS",
+"it": "Discorsi",
+"en": "Speeches"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q101240581",
+"campo": "genere",
+"q": "Q101240581",
+"en": "psychological fiction",
+"it": "",
+"opere": 29,
+"codici": [
+{
+"c": "FXM",
+"it": "Tema narrativo: vita interiore/narrativa psicologica",
+"en": "Narrative theme: interior life / psychological fiction"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q7440128",
+"campo": "genere",
+"q": "Q7440128",
+"en": "nautical fiction",
+"it": "narrativa marinaresca",
+"opere": 29,
+"codici": [
+{
+"c": "FJN",
+"it": "Storie di mare",
+"en": "Sea stories"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q740919",
+"campo": "genere",
+"q": "Q740919",
+"en": "social novel",
+"it": "romanzo a sfondo sociale",
+"opere": 28,
+"codici": [
+{
+"c": "FXS",
+"it": "Tema narrativo: Problemi e questioni sociali",
+"en": "Narrative theme: social issues / social problems"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q2561390",
+"campo": "genere",
+"q": "Q2561390",
+"en": "comic novel",
+"it": "romanzo comico",
+"opere": 28,
+"codici": [
+{
+"c": "FU",
+"it": "Narrativa umoristica",
+"en": "Humorous fiction"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q58854",
+"campo": "genere",
+"q": "Q58854",
+"en": "literary criticism",
+"it": "critica letteraria",
+"opere": 28,
+"codici": [
+{
+"c": "DS",
+"it": "Letteratura: storia e critica",
+"en": "Literature: history and criticism"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q1469987",
+"campo": "genere",
+"q": "Q1469987",
+"en": "fabula palliata",
+"it": "palliata",
+"opere": 27,
+"codici": [
+{
+"c": "DBSG",
+"it": "Letteratura dell’Antica Grecia e di Roma Antica",
+"en": "Ancient Greek and Roman literature"
+},
+{
+"c": "DDL",
+"it": "Letteratura teatrale: commedia",
+"en": "Comedic plays"
+}
+],
+"condizione": "teatro"
+},
+{
+"id": "genere-Q5774663",
+"campo": "genere",
+"q": "Q5774663",
+"en": "historical play",
+"it": "dramma storico",
+"opere": 27,
+"codici": [
+{
+"c": "DDA",
+"it": "Letteratura teatrale classica",
+"en": "Classic plays / drama"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q2250271",
+"campo": "genere",
+"q": "Q2250271",
+"en": "epistolary fiction",
+"it": "epistolario",
+"opere": 26,
+"codici": [
+{
+"c": "FBC",
+"it": "Narrativa classica: generale e letteraria",
+"en": "Classic fiction: literary and general"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q1619411",
+"campo": "genere",
+"q": "Q1619411",
+"en": "jizhuanti",
+"it": "Kidentai",
+"opere": 26,
+"codici": [
+{
+"c": "NHF",
+"it": "Storia dell’Asia",
+"en": "Asian history"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q21590660",
+"campo": "genere",
+"q": "Q21590660",
+"en": "Western",
+"it": "western",
+"opere": 26,
+"codici": [
+{
+"c": "FJW",
+"it": "Narrativa di avventura: Western",
+"en": "Western fiction"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q23622",
+"campo": "genere",
+"q": "Q23622",
+"en": "dictionary",
+"it": "dizionario",
+"opere": 26,
+"codici": [
+{
+"c": "CBD",
+"it": "Dizionari",
+"en": "Dictionaries"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q193979",
+"campo": "genere",
+"q": "Q193979",
+"en": "farce",
+"it": "farsa",
+"opere": 26,
+"codici": [
+{
+"c": "DDA",
+"it": "Letteratura teatrale classica",
+"en": "Classic plays / drama"
+},
+{
+"c": "DDL",
+"it": "Letteratura teatrale: commedia",
+"en": "Comedic plays"
+}
+],
+"condizione": "teatro"
+},
+{
+"id": "genere-Q1050848",
+"campo": "genere",
+"q": "Q1050848",
+"en": "satyr play",
+"it": "dramma satiresco",
+"opere": 25,
+"codici": [
+{
+"c": "DBSG",
+"it": "Letteratura dell’Antica Grecia e di Roma Antica",
+"en": "Ancient Greek and Roman literature"
+}
+],
+"condizione": "teatro"
+},
+{
+"id": "genere-Q1248788",
+"campo": "genere",
+"q": "Q1248788",
+"en": "realist novel",
+"it": "romanzo realistico",
+"opere": 24,
+"codici": [
+{
+"c": "FBC",
+"it": "Narrativa classica: generale e letteraria",
+"en": "Classic fiction: literary and general"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q8275050",
+"campo": "genere",
+"q": "Q8275050",
+"en": "children's book",
+"it": "libro per bambini",
+"opere": 24,
+"codici": [],
+"condizione": "bambini"
+},
+{
+"id": "genere-Q1787111",
+"campo": "genere",
+"q": "Q1787111",
+"en": "biographical dictionary",
+"it": "dizionario biografico",
+"opere": 24,
+"codici": [
+{
+"c": "GBCB",
+"it": "Dizionari biografici",
+"en": "Dictionaries of biography"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q111984153",
+"campo": "genere",
+"q": "Q111984153",
+"en": "young adult fiction",
+"it": "narrativa per giovani adulti",
+"opere": 23,
+"codici": [],
+"condizione": "bambini"
+},
+{
+"id": "genere-Q174864",
+"campo": "genere",
+"q": "Q174864",
+"en": "elegy",
+"it": "elegia",
+"opere": 23,
+"codici": [
+{
+"c": "DCF",
+"it": "Poesia di singoli poeti",
+"en": "Poetry / poems by individual poets"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q50637",
+"campo": "genere",
+"q": "Q50637",
+"en": "art history",
+"it": "storia dell'arte",
+"opere": 23,
+"codici": [
+{
+"c": "AGA",
+"it": "Storia dell’arte",
+"en": "History of art"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q192782",
+"campo": "genere",
+"q": "Q192782",
+"en": "Gothic novel",
+"it": "romanzo gotico",
+"opere": 22,
+"codici": [
+{
+"c": "FYL",
+"it": "Narrativa: gotico",
+"en": "Fiction: gothic"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q191489",
+"campo": "genere",
+"q": "Q191489",
+"en": "melodrama",
+"it": "melodramma",
+"opere": 22,
+"codici": [
+{
+"c": "DDA",
+"it": "Letteratura teatrale classica",
+"en": "Classic plays / drama"
+}
+],
+"condizione": "teatro"
+},
+{
+"id": "genere-Q192239",
+"campo": "genere",
+"q": "Q192239",
+"en": "historical novel",
+"it": "romanzo storico",
+"opere": 21,
+"codici": [
+{
+"c": "FV",
+"it": "Narrativa di ambientazione storica",
+"en": "Historical fiction"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q111143082",
+"campo": "genere",
+"q": "Q111143082",
+"en": "pirate fiction",
+"it": "",
+"opere": 20,
+"codici": [
+{
+"c": "FJN",
+"it": "Storie di mare",
+"en": "Sea stories"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q961849",
+"campo": "genere",
+"q": "Q961849",
+"en": "bourgeois tragedy",
+"it": "",
+"opere": 20,
+"codici": [
+{
+"c": "DDA",
+"it": "Letteratura teatrale classica",
+"en": "Classic plays / drama"
+},
+{
+"c": "DDT",
+"it": "Letteratura teatrale: tragedia",
+"en": "Tragic plays"
+}
+],
+"condizione": "teatro"
+},
+{
+"id": "genere-Q133492",
+"campo": "genere",
+"q": "Q133492",
+"en": "letter",
+"it": "lettera",
+"opere": 20,
+"codici": [
+{
+"c": "DND",
+"it": "Diari, lettere e taccuini",
+"en": "Published diaries, letters and journals"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q856713",
+"campo": "genere",
+"q": "Q856713",
+"en": "Christian hymn",
+"it": "inno cristiano",
+"opere": 19,
+"codici": [
+{
+"c": "AVLK",
+"it": "Musica sacra e religiosa",
+"en": "Sacred and religious music"
+},
+{
+"c": "QRVJ",
+"it": "Preghiere e materiale liturgico",
+"en": "Prayers and liturgical material"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q44342",
+"campo": "genere",
+"q": "Q44342",
+"en": "legend",
+"it": "leggenda",
+"opere": 19,
+"codici": [
+{
+"c": "FNM",
+"it": "Miti e leggende/Narrativa mitologica",
+"en": "Myths and legends / mythic fiction"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q1312571",
+"campo": "genere",
+"q": "Q1312571",
+"en": "developmental novel",
+"it": "",
+"opere": 19,
+"codici": [
+{
+"c": "FXB",
+"it": "Tema narrativo: transizione all’età adulta",
+"en": "Narrative theme: coming of age"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q3026054",
+"campo": "genere",
+"q": "Q3026054",
+"en": "Socratic dialogue",
+"it": "dialogo socratico",
+"opere": 19,
+"codici": [
+{
+"c": "QDHA",
+"it": "Filosofia greca e romana antica",
+"en": "Ancient Greek and Roman philosophy"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q64448878",
+"campo": "genere",
+"q": "Q64448878",
+"en": "futuristic fiction",
+"it": "",
+"opere": 19,
+"codici": [
+{
+"c": "FL",
+"it": "Fantascienza",
+"en": "Science fiction"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q1784733",
+"campo": "genere",
+"q": "Q1784733",
+"en": "correspondence",
+"it": "corrispondenza",
+"opere": 18,
+"codici": [
+{
+"c": "DND",
+"it": "Diari, lettere e taccuini",
+"en": "Published diaries, letters and journals"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q20665028",
+"campo": "genere",
+"q": "Q20665028",
+"en": "detective literature",
+"it": "letteratura poliziesca",
+"opere": 18,
+"codici": [
+{
+"c": "FF",
+"it": "Narrativa poliziesca e libri gialli",
+"en": "Crime and / or mystery fiction"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q11635",
+"campo": "genere",
+"q": "Q11635",
+"en": "theatre",
+"it": "teatro",
+"opere": 18,
+"codici": [
+{
+"c": "DDA",
+"it": "Letteratura teatrale classica",
+"en": "Classic plays / drama"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q12042160",
+"campo": "genere",
+"q": "Q12042160",
+"en": "scientific literature",
+"it": "letteratura scientifica",
+"opere": 17,
+"codici": [],
+"condizione": "niente"
+},
+{
+"id": "genere-Q15062348",
+"campo": "genere",
+"q": "Q15062348",
+"en": "dystopian fiction",
+"it": "",
+"opere": 17,
+"codici": [
+{
+"c": "FDB",
+"it": "Narrativa distopica e utopica",
+"en": "Dystopian and utopian fiction"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q512207",
+"campo": "genere",
+"q": "Q512207",
+"en": "roman à clef",
+"it": "romanzo a chiave",
+"opere": 17,
+"codici": [
+{
+"c": "FBC",
+"it": "Narrativa classica: generale e letteraria",
+"en": "Classic fiction: literary and general"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q1562657",
+"campo": "genere",
+"q": "Q1562657",
+"en": "Lustspiel",
+"it": "",
+"opere": 17,
+"codici": [
+{
+"c": "DDA",
+"it": "Letteratura teatrale classica",
+"en": "Classic plays / drama"
+},
+{
+"c": "DDL",
+"it": "Letteratura teatrale: commedia",
+"en": "Comedic plays"
+}
+],
+"condizione": "teatro"
+},
+{
+"id": "genere-Q339380",
+"campo": "genere",
+"q": "Q339380",
+"en": "Bahá'í literature",
+"it": "letteratura bahai",
+"opere": 17,
+"codici": [
+{
+"c": "QRRB",
+"it": "Baha’i",
+"en": "Baha’i"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q20664331",
+"campo": "genere",
+"q": "Q20664331",
+"en": "spy fiction",
+"it": "fiction di spionaggio",
+"opere": 17,
+"codici": [
+{
+"c": "FHD",
+"it": "Spionaggio e thriller spionistico",
+"en": "Espionage and spy thriller"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q1221280",
+"campo": "genere",
+"q": "Q1221280",
+"en": "folk tale",
+"it": "racconto popolare",
+"opere": 16,
+"codici": [
+{
+"c": "FNF",
+"it": "Fiabe e racconti popolari/Rivisitazioni di fiabe",
+"en": "Fairy and folk tales / fairy tale retellings"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q1519335",
+"campo": "genere",
+"q": "Q1519335",
+"en": "ghost story",
+"it": "storia di fantasmi",
+"opere": 16,
+"codici": [
+{
+"c": "FK",
+"it": "Narrativa dell’orrore/sovrannaturale e storie di fantasmi",
+"en": "Horror, ghost stories and supernatural fiction"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q777828",
+"campo": "genere",
+"q": "Q777828",
+"en": "didactic poetry",
+"it": "poesia didascalica",
+"opere": 16,
+"codici": [
+{
+"c": "DCF",
+"it": "Poesia di singoli poeti",
+"en": "Poetry / poems by individual poets"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q3985225",
+"campo": "genere",
+"q": "Q3985225",
+"en": "rabbinic literature",
+"it": "testi sacri ebraici",
+"opere": 16,
+"codici": [
+{
+"c": "QRJ",
+"it": "Ebraismo",
+"en": "Judaism"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q908667",
+"campo": "genere",
+"q": "Q908667",
+"en": "war novel",
+"it": "romanzo di guerra",
+"opere": 15,
+"codici": [
+{
+"c": "FJM",
+"it": "Narrativa di avventura di guerra/di combattimento/militare",
+"en": "War, combat and military fiction"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q605076",
+"campo": "genere",
+"q": "Q605076",
+"en": "cookbook",
+"it": "ricettario",
+"opere": 15,
+"codici": [
+{
+"c": "WB",
+"it": "Cucina, cibi e bevande, food writing, ricettari",
+"en": "Cookery / food and drink / food writing / cookbooks"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q60548032",
+"campo": "genere",
+"q": "Q60548032",
+"en": "humor",
+"it": "umoristico",
+"opere": 15,
+"codici": [
+{
+"c": "WH",
+"it": "Umorismo",
+"en": "Humour"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q951215",
+"campo": "genere",
+"q": "Q951215",
+"en": "lay",
+"it": "lai",
+"opere": 15,
+"codici": [
+{
+"c": "DCF",
+"it": "Poesia di singoli poeti",
+"en": "Poetry / poems by individual poets"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q1080374",
+"campo": "genere",
+"q": "Q1080374",
+"en": "science fantasy",
+"it": "science fantasy",
+"opere": 14,
+"codici": [
+{
+"c": "FL",
+"it": "Fantascienza",
+"en": "Science fiction"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q67467614",
+"campo": "genere",
+"q": "Q67467614",
+"en": "merveilleux scientifique",
+"it": "",
+"opere": 14,
+"codici": [
+{
+"c": "FL",
+"it": "Fantascienza",
+"en": "Science fiction"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q13408937",
+"campo": "genere",
+"q": "Q13408937",
+"en": "philosophical non-fiction literature",
+"it": "letteratura filosofica",
+"opere": 14,
+"codici": [
+{
+"c": "QD",
+"it": "Filosofia",
+"en": "Philosophy"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q7168625",
+"campo": "genere",
+"q": "Q7168625",
+"en": "historical drama",
+"it": "dramma storico",
+"opere": 14,
+"codici": [
+{
+"c": "DDA",
+"it": "Letteratura teatrale classica",
+"en": "Classic plays / drama"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q156035",
+"campo": "genere",
+"q": "Q156035",
+"en": "opinion journalism",
+"it": "giornalismo d'opinione",
+"opere": 14,
+"codici": [
+{
+"c": "DNP",
+"it": "Reportage, scritti giornalistici e raccolte di articoli",
+"en": "Reportage, journalism or collected columns"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q309",
+"campo": "genere",
+"q": "Q309",
+"en": "history",
+"it": "storia",
+"opere": 14,
+"codici": [
+{
+"c": "NH",
+"it": "Storia",
+"en": "History"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q19715429",
+"campo": "genere",
+"q": "Q19715429",
+"en": "Gothic literature",
+"it": "letteratura gotica",
+"opere": 13,
+"codici": [
+{
+"c": "FYL",
+"it": "Narrativa: gotico",
+"en": "Fiction: gothic"
+}
+],
+"condizione": ""
+},
+{
+"id": "genere-Q2084705",
+"campo": "genere",
+"q": "Q2084705",
+"en": "Jewish commentaries on the Bible",
+"it": "Commentari ebraici sulla Bibbia",
+"opere": 13,
+"codici": [
+{
+"c": "QRJ",
+"it": "Ebraismo",
+"en": "Judaism"
+}
+],
+"condizione": ""
+},
+{
+"id": "tipo-Q191067",
+"campo": "tipo",
+"q": "Q191067",
+"en": "article",
+"it": "articolo",
+"opere": 5542,
+"codici": [
+{
+"c": "DNP",
+"it": "Reportage, scritti giornalistici e raccolte di articoli",
+"en": "Reportage, journalism or collected columns"
+}
+],
+"condizione": "riserva"
+},
+{
+"id": "tipo-Q116476516",
+"campo": "tipo",
+"q": "Q116476516",
+"en": "dramatic work",
+"it": "opera drammatica",
+"opere": 502,
+"codici": [
+{
+"c": "DDA",
+"it": "Letteratura teatrale classica",
+"en": "Classic plays / drama"
+}
+],
+"condizione": ""
+},
+{
+"id": "tipo-Q699",
+"campo": "tipo",
+"q": "Q699",
+"en": "fairy tale",
+"it": "fiaba",
+"opere": 252,
+"codici": [
+{
+"c": "FNF",
+"it": "Fiabe e racconti popolari/Rivisitazioni di fiabe",
+"en": "Fairy and folk tales / fairy tale retellings"
+}
+],
+"condizione": ""
+},
+{
+"id": "tipo-Q861911",
+"campo": "tipo",
+"q": "Q861911",
+"en": "oration",
+"it": "discorso",
+"opere": 179,
+"codici": [
+{
+"c": "DNS",
+"it": "Discorsi",
+"en": "Speeches"
+}
+],
+"condizione": ""
+},
+{
+"id": "tipo-Q693",
+"campo": "tipo",
+"q": "Q693",
+"en": "fable",
+"it": "favola",
+"opere": 176,
+"codici": [
+{
+"c": "FNF",
+"it": "Fiabe e racconti popolari/Rivisitazioni di fiabe",
+"en": "Fairy and folk tales / fairy tale retellings"
+}
+],
+"condizione": ""
+},
+{
+"id": "tipo-Q133492",
+"campo": "tipo",
+"q": "Q133492",
+"en": "letter",
+"it": "lettera",
+"opere": 164,
+"codici": [
+{
+"c": "DND",
+"it": "Diari, lettere e taccuini",
+"en": "Published diaries, letters and journals"
+}
+],
+"condizione": ""
+},
+{
+"id": "tipo-Q189867",
+"campo": "tipo",
+"q": "Q189867",
+"en": "papal bull",
+"it": "bolla pontificia",
+"opere": 157,
+"codici": [
+{
+"c": "QRMB1",
+"it": "Cattolicesimo Romano, Chiesa Cattolica Romana",
+"en": "Roman Catholicism, Roman Catholic Church"
+}
+],
+"condizione": ""
+},
+{
+"id": "tipo-Q602446",
+"campo": "tipo",
+"q": "Q602446",
+"en": "lyrics",
+"it": "lirica musicale",
+"opere": 155,
+"codici": [
+{
+"c": "AVQ",
+"it": "Spartiti, partiture, testi e libretti musicali",
+"en": "Musical scores, lyrics and libretti"
+}
+],
+"condizione": ""
+},
+{
+"id": "tipo-Q24723",
+"campo": "tipo",
+"q": "Q24723",
+"en": "literary fairy tale",
+"it": "fiaba letteraria",
+"opere": 143,
+"codici": [
+{
+"c": "FNF",
+"it": "Fiabe e racconti popolari/Rivisitazioni di fiabe",
+"en": "Fairy and folk tales / fairy tale retellings"
+}
+],
+"condizione": ""
+},
+{
+"id": "tipo-Q5707594",
+"campo": "tipo",
+"q": "Q5707594",
+"en": "news article",
+"it": "articolo di giornale",
+"opere": 134,
+"codici": [
+{
+"c": "DNP",
+"it": "Reportage, scritti giornalistici e raccolte di articoli",
+"en": "Reportage, journalism or collected columns"
+}
+],
+"condizione": "riserva"
+},
+{
+"id": "tipo-Q221409",
+"campo": "tipo",
+"q": "Q221409",
+"en": "encyclical",
+"it": "enciclica",
+"opere": 128,
+"codici": [
+{
+"c": "QRMB1",
+"it": "Cattolicesimo Romano, Chiesa Cattolica Romana",
+"en": "Roman Catholicism, Roman Catholic Church"
+}
+],
+"condizione": ""
+},
+{
+"id": "tipo-Q131084",
+"campo": "tipo",
+"q": "Q131084",
+"en": "libretto",
+"it": "libretto",
+"opere": 107,
+"codici": [
+{
+"c": "AVQ",
+"it": "Spartiti, partiture, testi e libretti musicali",
+"en": "Musical scores, lyrics and libretti"
+}
+],
+"condizione": ""
+},
+{
+"id": "tipo-Q3374808",
+"campo": "tipo",
+"q": "Q3374808",
+"en": "penny dreadful",
+"it": "penny dreadful",
+"opere": 105,
+"codici": [
+{
+"c": "FBC",
+"it": "Narrativa classica: generale e letteraria",
+"en": "Classic fiction: literary and general"
+}
+],
+"condizione": ""
+},
+{
+"id": "tipo-Q43303440",
+"campo": "tipo",
+"q": "Q43303440",
+"en": "novella in the Decameron",
+"it": "novella del Decameron",
+"opere": 100,
+"codici": [
+{
+"c": "FYB",
+"it": "Racconti",
+"en": "Short stories"
+}
+],
+"condizione": ""
+},
+{
+"id": "tipo-Q1347298",
+"campo": "tipo",
+"q": "Q1347298",
+"en": "serialized fiction",
+"it": "romanzo d'appendice",
+"opere": 90,
+"codici": [
+{
+"c": "FBC",
+"it": "Narrativa classica: generale e letteraria",
+"en": "Classic fiction: literary and general"
+}
+],
+"condizione": ""
+},
+{
+"id": "tipo-Q856713",
+"campo": "tipo",
+"q": "Q856713",
+"en": "Christian hymn",
+"it": "inno cristiano",
+"opere": 89,
+"codici": [
+{
+"c": "AVLK",
+"it": "Musica sacra e religiosa",
+"en": "Sacred and religious music"
+},
+{
+"c": "QRVJ",
+"it": "Preghiere e materiale liturgico",
+"en": "Prayers and liturgical material"
+}
+],
+"condizione": ""
+},
+{
+"id": "tipo-Q7366",
+"campo": "tipo",
+"q": "Q7366",
+"en": "song",
+"it": "canzone",
+"opere": 67,
+"codici": [
+{
+"c": "AVQ",
+"it": "Spartiti, partiture, testi e libretti musicali",
+"en": "Musical scores, lyrics and libretti"
+}
+],
+"condizione": ""
+},
+{
+"id": "tipo-Q23622",
+"campo": "tipo",
+"q": "Q23622",
+"en": "dictionary",
+"it": "dizionario",
+"opere": 51,
+"codici": [
+{
+"c": "CBD",
+"it": "Dizionari",
+"en": "Dictionaries"
+}
+],
+"condizione": ""
+},
+{
+"id": "tipo-Q474090",
+"campo": "tipo",
+"q": "Q474090",
+"en": "narrative poetry",
+"it": "poesia narrativa",
+"opere": 48,
+"codici": [
+{
+"c": "DCF",
+"it": "Poesia di singoli poeti",
+"en": "Poetry / poems by individual poets"
+}
+],
+"condizione": ""
+},
+{
+"id": "tipo-Q858157",
+"campo": "tipo",
+"q": "Q858157",
+"en": "German folklore",
+"it": "",
+"opere": 47,
+"codici": [
+{
+"c": "FNF",
+"it": "Fiabe e racconti popolari/Rivisitazioni di fiabe",
+"en": "Fairy and folk tales / fairy tale retellings"
+}
+],
+"condizione": ""
+},
+{
+"id": "tipo-Q47114558",
+"campo": "tipo",
+"q": "Q47114558",
+"en": "art catalog",
+"it": "catalogo d'arte",
+"opere": 43,
+"codici": [
+{
+"c": "AGC",
+"it": "Cataloghi di mostre e collezioni",
+"en": "Exhibition catalogues and specific collections"
+}
+],
+"condizione": ""
+},
+{
+"id": "tipo-Q185598",
+"campo": "tipo",
+"q": "Q185598",
+"en": "diary",
+"it": "diario",
+"opere": 41,
+"codici": [
+{
+"c": "DND",
+"it": "Diari, lettere e taccuini",
+"en": "Published diaries, letters and journals"
+}
+],
+"condizione": ""
+},
+{
+"id": "tipo-Q185363",
+"campo": "tipo",
+"q": "Q185363",
+"en": "chronicle",
+"it": "cronaca",
+"opere": 39,
+"codici": [
+{
+"c": "NH",
+"it": "Storia",
+"en": "History"
+}
+],
+"condizione": ""
+},
+{
+"id": "tipo-Q37484",
+"campo": "tipo",
+"q": "Q37484",
+"en": "epic poem",
+"it": "poema epico",
+"opere": 39,
+"codici": [
+{
+"c": "DCF",
+"it": "Poesia di singoli poeti",
+"en": "Poetry / poems by individual poets"
+}
+],
+"condizione": ""
+},
+{
+"id": "tipo-Q1517777",
+"campo": "tipo",
+"q": "Q1517777",
+"en": "historical non-fiction work",
+"it": "opera storica",
+"opere": 37,
+"codici": [
+{
+"c": "NH",
+"it": "Storia",
+"en": "History"
+}
+],
+"condizione": ""
+},
+{
+"id": "tipo-Q47485959",
+"campo": "tipo",
+"q": "Q47485959",
+"en": "noh play",
+"it": "",
+"opere": 37,
+"codici": [
+{
+"c": "DDA",
+"it": "Letteratura teatrale classica",
+"en": "Classic plays / drama"
+}
+],
+"condizione": ""
+},
+{
+"id": "tipo-Q1497584",
+"campo": "tipo",
+"q": "Q1497584",
+"en": "cycle of poems",
+"it": "",
+"opere": 34,
+"codici": [
+{
+"c": "DCF",
+"it": "Poesia di singoli poeti",
+"en": "Poetry / poems by individual poets"
+}
+],
+"condizione": ""
+},
+{
+"id": "tipo-Q204698",
+"campo": "tipo",
+"q": "Q204698",
+"en": "limerick",
+"it": "Limerick",
+"opere": 33,
+"codici": [
+{
+"c": "DCF",
+"it": "Poesia di singoli poeti",
+"en": "Poetry / poems by individual poets"
+},
+{
+"c": "WH",
+"it": "Umorismo",
+"en": "Humour"
+}
+],
+"condizione": ""
+},
+{
+"id": "formula-_d_4_poem_sonnet_epigram_ballad_ode_b",
+"campo": "descrizione",
+"q": "",
+"en": "^(\\d{4} )?(poem|sonnet|epigram|ballad|ode)\\b",
+"it": "",
+"opere": 0,
+"codici": [
+{
+"c": "DCF",
+"it": "Poesia di singoli poeti",
+"en": "Poetry / poems by individual poets"
+}
+],
+"condizione": ""
+},
+{
+"id": "formula-_poesia_sonetto_epigramma_ballata_ode_b",
+"campo": "descrizione",
+"q": "",
+"en": "^(poesia|sonetto|epigramma|ballata|ode)\\b",
+"it": "",
+"opere": 0,
+"codici": [
+{
+"c": "DCF",
+"it": "Poesia di singoli poeti",
+"en": "Poetry / poems by individual poets"
+}
+],
+"condizione": ""
+},
+{
+"id": "formula-_d_4_play_tragedy_comedy_by_written_by_b",
+"campo": "descrizione",
+"q": "",
+"en": "^(\\d{4} )?(play|tragedy|comedy) (by|written by)\\b",
+"it": "",
+"opere": 0,
+"codici": [
+{
+"c": "DDA",
+"it": "Letteratura teatrale classica",
+"en": "Classic plays / drama"
+}
+],
+"condizione": ""
+},
+{
+"id": "formula-_opera_teatrale_tragedia_commedia_di_b",
+"campo": "descrizione",
+"q": "",
+"en": "^(opera teatrale|tragedia|commedia) di\\b",
+"it": "",
+"opere": 0,
+"codici": [
+{
+"c": "DDA",
+"it": "Letteratura teatrale classica",
+"en": "Classic plays / drama"
+}
+],
+"condizione": ""
+},
+{
+"id": "formula-_d_4_novel_by_written_by_b",
+"campo": "descrizione",
+"q": "",
+"en": "^(\\d{4} )?novel (by|written by)\\b",
+"it": "",
+"opere": 0,
+"codici": [
+{
+"c": "FBC",
+"it": "Narrativa classica: generale e letteraria",
+"en": "Classic fiction: literary and general"
+}
+],
+"condizione": ""
+},
+{
+"id": "formula-_romanzo_di_scritto_da_b",
+"campo": "descrizione",
+"q": "",
+"en": "^romanzo (di|scritto da)\\b",
+"it": "",
+"opere": 0,
+"codici": [
+{
+"c": "FBC",
+"it": "Narrativa classica: generale e letteraria",
+"en": "Classic fiction: literary and general"
+}
+],
+"condizione": ""
+},
+{
+"id": "formula-_d_4_short_story_by_written_by_b",
+"campo": "descrizione",
+"q": "",
+"en": "^(\\d{4} )?short story (by|written by)\\b",
+"it": "",
+"opere": 0,
+"codici": [
+{
+"c": "FYB",
+"it": "Racconti",
+"en": "Short stories"
+}
+],
+"condizione": ""
+},
+{
+"id": "formula-_racconto_di_b",
+"campo": "descrizione",
+"q": "",
+"en": "^racconto di\\b",
+"it": "",
+"opere": 0,
+"codici": [
+{
+"c": "FYB",
+"it": "Racconti",
+"en": "Short stories"
+}
+],
+"condizione": ""
+},
+{
+"id": "formula-_d_4_novella_by_written_by_b",
+"campo": "descrizione",
+"q": "",
+"en": "^(\\d{4} )?novella (by|written by)\\b",
+"it": "",
+"opere": 0,
+"codici": [
+{
+"c": "FYC",
+"it": "Novella",
+"en": "Novella (short novel)"
+}
+],
+"condizione": ""
+},
+{
+"id": "formula-_d_4_fable_fairy_tale_folk_tale_b",
+"campo": "descrizione",
+"q": "",
+"en": "^(\\d{4} )?(fable|fairy tale|folk tale)\\b",
+"it": "",
+"opere": 0,
+"codici": [
+{
+"c": "FNF",
+"it": "Fiabe e racconti popolari/Rivisitazioni di fiabe",
+"en": "Fairy and folk tales / fairy tale retellings"
+}
+],
+"condizione": ""
+},
+{
+"id": "formula-_favola_fiaba_b",
+"campo": "descrizione",
+"q": "",
+"en": "^(favola|fiaba)\\b",
+"it": "",
+"opere": 0,
+"codici": [
+{
+"c": "FNF",
+"it": "Fiabe e racconti popolari/Rivisitazioni di fiabe",
+"en": "Fairy and folk tales / fairy tale retellings"
+}
+],
+"condizione": ""
+},
+{
+"id": "formula-_aesop_s_fable_fable_attributed_to_aesop",
+"campo": "descrizione",
+"q": "",
+"en": "^(aesop's fable|fable attributed to aesop)",
+"it": "",
+"opere": 0,
+"codici": [
+{
+"c": "FNF",
+"it": "Fiabe e racconti popolari/Rivisitazioni di fiabe",
+"en": "Fairy and folk tales / fairy tale retellings"
+}
+],
+"condizione": ""
+},
+{
+"id": "formula-_d_4_essay_by_written_by_b",
+"campo": "descrizione",
+"q": "",
+"en": "^(\\d{4} )?essay (by|written by)\\b",
+"it": "",
+"opere": 0,
+"codici": [
+{
+"c": "DNL",
+"it": "Saggi letterari",
+"en": "Essays"
+}
+],
+"condizione": ""
+},
+{
+"id": "formula-_saggio_di_b",
+"campo": "descrizione",
+"q": "",
+"en": "^saggio di\\b",
+"it": "",
+"opere": 0,
+"codici": [
+{
+"c": "DNL",
+"it": "Saggi letterari",
+"en": "Essays"
+}
+],
+"condizione": ""
+},
+{
+"id": "formula-_german_article_in_die_gartenlaube",
+"campo": "descrizione",
+"q": "",
+"en": "^german article in die gartenlaube",
+"it": "",
+"opere": 0,
+"codici": [
+{
+"c": "DNP",
+"it": "Reportage, scritti giornalistici e raccolte di articoli",
+"en": "Reportage, journalism or collected columns"
+}
+],
+"condizione": ""
+},
+{
+"id": "formula-_d_4_hymn_christian_hymn_b",
+"campo": "descrizione",
+"q": "",
+"en": "^(\\d{4} )?(hymn|christian hymn)\\b",
+"it": "",
+"opere": 0,
+"codici": [
+{
+"c": "AVLK",
+"it": "Musica sacra e religiosa",
+"en": "Sacred and religious music"
+},
+{
+"c": "QRVJ",
+"it": "Preghiere e materiale liturgico",
+"en": "Prayers and liturgical material"
+}
+],
+"condizione": ""
+}
+]
