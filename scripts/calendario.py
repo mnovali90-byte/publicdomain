@@ -312,6 +312,7 @@ def scheda(v, lang, anno):
 
 def pagina(dati, lang):
     from pagine import testa_scheda, piede_scheda, marchio_html  # evita l'import circolare all'avvio
+    import pagine_paese as PP   # 27/11/2026: riquadro del calendario da muro (stesso blocco dello Shop)
     anno = dati["anno"]
     t = _testi_lingua(lang)
     it = lang == "it"
@@ -358,7 +359,7 @@ def pagina(dati, lang):
         alt, altra = L.hreflang(case, SITO, x_default=False), L.selettore(lang, case)
     cal_lab = X("Calendario ", "Calendar ") + str(anno)
     testa = testa_scheda(lang, esc(t["titolo"].format(a=anno)), esc(t["descr"].format(a=anno)), url, alt, jsonld, altra, "@@CNT@@",
-                         og_tipo="website", css_extra=CSS_CAL + SCH.CSS, main_cls="calm", body_cls="cal-b")
+                         og_tipo="website", css_extra=CSS_CAL + SCH.CSS + PP.CSS_CALBOX, main_cls="calm", body_cls="cal-b")
     testa = testa.replace('<div class="cnt">@@CNT@@</div>', f'<div class="cnt"><span id="cnt" data-l="{esc(cal_lab)}">{esc(cal_lab)}</span></div>')
     testa = testa.replace("@@MARCHIO_S@@", marchio_html(56).replace('<span class="pdr" style="--w:56px">', "").rsplit("</span>", 1)[0])
     h1a = t["h1a"].strip()
@@ -369,7 +370,7 @@ def pagina(dati, lang):
 <h1 class="h1"><span class="w"><span>{esc(p1)}</span></span> <br><span class="w"><span>{esc(p2)} <em>{anno}</em></span></span></h1>
 <p class="say" id="say">{esc(t["lead"])}</p>
 <div class="dl"><a href="{ics_nome}">{esc(t["ics"])}</a><a href="{base_csv}">{esc(t["csv"])}</a></div>
-</section>
+{PP.striscia_calendario(lang, anno)}</section>
 <div class="bar" id="bar"><nav class="months" id="months" aria-label="{X("Mesi", "Months")}">{"".join(nav)}</nav><button class="ft" id="ft" type="button">{esc(t["filtri"])} <b id="fn"></b> <span>[+]</span></button></div>
 <div class="fp" id="fp"><div class="in">
 <span class="m" style="color:var(--grey)">{esc(t["tipo"])}</span><div class="chips">{tipi_btn}</div>

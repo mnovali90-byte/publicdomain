@@ -630,6 +630,42 @@ def pagina_come(lang):
 POSTER = [(p["img"], p["etsy"], p["frase"], p["opera"], p["autore"], p["anno"], p["prezzo"], p["serie"])
           for p in json.loads((Path(__file__).resolve().parent.parent / "data" / "poster.json").read_text(encoding="utf-8"))["poster"]]
 ETSY = "https://publicdomainradar.etsy.com"
+# 27/11/2026 (Marco): il calendario da muro, nello stesso file dei poster; lo mostrano lo Shop e la pagina del calendario dello stesso anno
+CALENDARI = json.loads((Path(__file__).resolve().parent.parent / "data" / "poster.json").read_text(encoding="utf-8")).get("calendari", [])
+
+
+def link_etsy(lang, cod):
+    """Link all'inserzione nel formato publicdomainradar.etsy.com (Share & Save): «/it/» solo in italiano."""
+    return f"{ETSY}/{'it/' if lang == 'it' else ''}listing/{cod}"
+
+
+CSS_CALBOX = (".calbox{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:48px;align-items:center;margin-top:34px}"
+              ".calbox .wall{aspect-ratio:4/3}.calbox .wall img{width:84%}"
+              ".calbox h3{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:clamp(30px,2.8vw,44px);line-height:.92;margin:0}"
+              ".calbox .say{margin:14px 0 0;font-size:17px;line-height:1.5;max-width:46ch}"
+              ".calbox .facts{margin-top:18px}.calbox .calprice{font-family:var(--disp);font-weight:800;font-size:clamp(30px,2.6vw,40px);line-height:.95;margin:18px 0 0}"
+              "@media (max-width:900px){.calbox{grid-template-columns:1fr;gap:22px}}"
+              ".calshop{display:grid;grid-template-columns:132px minmax(0,1fr) auto;gap:18px;align-items:center;margin:26px 0 0;padding:14px 0;border-top:1px solid var(--ink);border-bottom:1px solid var(--hair);text-decoration:none;color:var(--ink)}"
+              ".calshop img{width:132px;height:auto;display:block;box-shadow:0 1px 2px rgba(12,12,16,.18),0 10px 24px -12px rgba(12,12,16,.45)}"
+              ".calshop .m{display:block;color:var(--redt);margin-bottom:4px}.calshop b{font-weight:600}.calshop .go{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap}"
+              "@media (max-width:640px){.calshop{grid-template-columns:96px minmax(0,1fr)}.calshop img{width:96px}.calshop .go{grid-column:2}}")
+
+
+def calendario_di(anno):
+    return next((c for c in CALENDARI if c.get("anno") == anno), None)
+
+
+def striscia_calendario(lang, anno):
+    """Riquadro per la pagina del calendario anniversari: rimanda al calendario da muro dello stesso anno, se c'è."""
+    c = calendario_di(anno)
+    if not c:
+        return ""
+    T = traduttore(lang)
+    return (f'<a class="calshop" href="{link_etsy(lang, c["etsy"])}" rel="noopener" target="_blank">'
+            f'<img src="/shop/img/{c["img"]}.webp" width="{c["larghezza"]}" height="{c["altezza"]}" loading="lazy" alt="{esc(T("Copertina del Literary Calendar {a}", "Cover of the Literary Calendar {a}", a=anno))}">'
+            f'<span><span class="m">{T("Da appendere al muro", "For your wall")}</span>'
+            f'<b>{esc(c["titolo"])}</b>: {esc(T("dodici anniversari, dodici illustrazioni originali. Calendario A4.", "twelve anniversaries, twelve original illustrations. A4 calendar."))}</span>'
+            f'<span class="go">{T("Su Etsy", "On Etsy")} →</span></a>\n')
 CSS_SHOP = (".shop-hd{display:grid;grid-template-columns:minmax(0,1fr) min(32vw,440px);gap:6vw;align-items:end}"
             ".shop-hd .say{margin:0;max-width:440px}"
             ".facts{margin:22px 0 0;padding:0;list-style:none;border-top:1px solid var(--ink)}"
@@ -667,19 +703,24 @@ def pagina_shop(lang):
                "Shop: typographic posters from public domain books · Public Domain Radar")
     descr = T("Poster tipografici dai libri in pubblico dominio: prime righe, frasi famose e la serie Distant Reading. Stampati su richiesta, si comprano sul negozio Etsy di Public Domain Radar.",
               "Typographic posters from public domain books: opening lines, famous phrases and the Distant Reading series. Printed on demand, sold on Public Domain Radar's Etsy shop.")
-    lk = lambda c: f"{ETSY}/{'it/' if it else ''}listing/{c}"
+    lk = lambda c: link_etsy(lang, c)
     # 25/11/2026 (analisi SEO): i poster come prodotti, con gli stessi dati che si vedono in pagina (nome, immagine, prezzo, link Etsy)
     prodotti = [{"@type": "Product", "name": f"{frase} · {opera}", "image": f"{P.SITO}/shop/img/{img}.webp",
                  "description": T('Poster tipografico 50 × 70 cm da {opera} di {autore} ({anno}).', 'Typographic poster, 50 × 70 cm, from {opera} by {autore} ({anno}).', opera=opera, autore=autore, anno=anno),
                  "brand": {"@type": "Brand", "name": "Public Domain Radar"},
                  "offers": {"@type": "Offer", "url": lk(cod), "price": prezzo, "priceCurrency": "EUR", "availability": "https://schema.org/MadeToOrder"}}
                 for img, cod, frase, opera, autore, anno, prezzo, serie in POSTER if prezzo]
+    prodotti = [{"@type": "Product", "name": c["titolo"], "image": f"{P.SITO}/shop/img/{c['img']}.webp",   # 27/11/2026: il calendario da muro
+                 "description": T("Calendario da muro A4 con dodici illustrazioni originali e gli anniversari letterari del {a}.", "A4 wall calendar with twelve original illustrations and the literary anniversaries of {a}.", a=c["anno"]),
+                 "brand": {"@type": "Brand", "name": "Public Domain Radar"},
+                 "offers": {"@type": "Offer", "url": lk(c["etsy"]), "price": c["prezzo"], "priceCurrency": "EUR", "availability": "https://schema.org/MadeToOrder"}}
+                for c in CALENDARI if c.get("prezzo")] + prodotti
     jl = {"@context": "https://schema.org", "@graph": [
         {"@type": "CollectionPage", "@id": url, "url": url, "name": titolo, "description": descr, "inLanguage": lang},
         {"@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": i + 1, "item": pr} for i, pr in enumerate(prodotti)]}]}
     jsonld = '<script type="application/ld+json">' + json.dumps(jl, ensure_ascii=False).replace("</", "<\\/") + "</script>"
     alt, altra = tasti_lingua(None, lang, url_shop)
-    out = [apri(lang, titolo, descr, url, alt, jsonld, altra, P.ANNO_PROSSIMO, CSS_SHOP)]
+    out = [apri(lang, titolo, descr, url, alt, jsonld, altra, P.ANNO_PROSSIMO, CSS_SHOP + CSS_CALBOX)]
     w = lambda t: f'<span class="w"><span>{t}</span></span>'
     out.append(f'<section class="open">\n<nav class="bc m" aria-label="{T("Sei qui", "You are here")}"><a href="{casa(lang)}">{testo_l(lang, "Home", "Home")}</a> › <span>Shop</span></nav>\n'
                f'<p class="m k">{T("Stampa su richiesta", "Printed on demand")}</p>\n'
@@ -687,7 +728,20 @@ def pagina_shop(lang):
                f'<p class="say" id="say">{esc(T("Poster tipografici dai libri in pubblico dominio: frasi famose e romanzi interi.", "Typographic posters from public domain books: famous lines and whole novels."))}</p>'
                f'<ul class="facts m"><li><span>{T("Stampa", "Printing")}</span><span class="g">{T("su richiesta, con Gelato", "on demand, by Gelato")}</span></li>'
                f'<li><span>{T("Acquisto", "Purchase")}</span><span class="g">{T("sul nostro negozio Etsy", "on our Etsy shop")}</span></li>'
-               f'<li><span>Poster</span><span class="g">50 × 70 cm</span></li></ul></div></div>\n</section>\n')
+               f'<li><span>Poster</span><span class="g">50 × 70 cm</span></li>'
+               + (f'<li><span>{T("Calendario", "Calendar")}</span><span class="g">A4</span></li>' if CALENDARI else "") + '</ul></div></div>\n</section>\n')
+    for c in CALENDARI:   # 27/11/2026: il calendario da muro prima dei poster
+        foto = T("Copertina del {t}: dodici illustrazioni originali", "Cover of the {t}: twelve original illustrations", t=c["titolo"])
+        out.append(sezione(T("Il calendario {a}", "The {a} calendar", a=c["anno"]), "A4",
+                           f'<div class="calbox"><a class="wall" href="{lk(c["etsy"])}" rel="noopener" target="_blank">'
+                           f'<img src="/shop/img/{c["img"]}.webp" width="{c["larghezza"]}" height="{c["altezza"]}" loading="lazy" alt="{esc(foto)}"></a>'
+                           f'<div><h3>{esc(c["titolo"])}</h3>'
+                           f'<p class="say">{esc(T("Dodici libri e scrittori con un anniversario tondo nel {a}, uno per mese, con dodici illustrazioni originali.", "Twelve books and writers with a round anniversary in {a}, one per month, with twelve original illustrations.", a=c["anno"]))}</p>'
+                           f'<ul class="facts m"><li><span>{T("Formato", "Format")}</span><span class="g">{T("A4 orizzontale, 297 × 210 mm", "A4 landscape, 297 × 210 mm")}</span></li>'
+                           f'<li><span>{T("Pagine", "Pages")}</span><span class="g">{T("copertina e 12 mesi", "cover and 12 months")}</span></li>'
+                           f'<li><span>{T("Stampa", "Printing")}</span><span class="g">{T("su richiesta, con Gelato", "on demand, by Gelato")}</span></li></ul>'
+                           + (f'<p class="calprice">{c["prezzo"]} €</p>' if c.get("prezzo") else "")
+                           + f'<a class="buy" href="{lk(c["etsy"])}" rel="noopener" target="_blank"><span>{T("Acquista su Etsy", "Buy on Etsy")}</span><span>→</span></a></div></div>\n'))
     card = []
     for img, cod, frase, opera, autore, anno, prezzo, serie in POSTER:
         alt = T('Poster tipografico: «{frase}…», da {opera} di {autore}', 'Typographic poster: “{frase}…”, from {opera} by {autore}', frase=frase, opera=opera, autore=autore)

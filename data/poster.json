@@ -1,9 +1,60 @@
 {
-  "nota": "Unico elenco dei poster (25/11/2026). Lo leggono lo Shop (scripts/pagine_paese.py) e Già pubblici («Poster disponibile» nella scheda dell'opera). qid = l'opera su Wikidata; etsy = codice dell'inserzione.",
-  "poster": [
-    {"qid": "Q92640", "img": "alice", "etsy": "4624523730/alice-was-beginning-to-get-very-tired", "frase": "Alice was beginning to get very tired", "opera": "Alice's Adventures in Wonderland", "autore": "Lewis Carroll", "anno": 1865, "prezzo": 35, "serie": null},
-    {"qid": "Q308918", "img": "tale-of-two-cities", "etsy": "4624515025/it-was-the-best-of-times-a-tale-of-two", "frase": "It was the best of times", "opera": "A Tale of Two Cities", "autore": "Charles Dickens", "anno": 1859, "prezzo": 35, "serie": null},
-    {"qid": "Q202975", "img": "wuthering-heights", "etsy": "4625383799/i-am-heathcliff-wuthering-heights-emily", "frase": "I am Heathcliff!", "opera": "Wuthering Heights", "autore": "Emily Brontë", "anno": 1847, "prezzo": 35, "serie": "Distant Reading"},
-    {"qid": "Q600461", "img": "white-nights", "etsy": "4625419690/a-whole-moment-of-happiness-white-nights", "frase": "A whole moment of happiness!", "opera": "White Nights", "autore": "Fyodor Dostoevsky", "anno": 1848, "prezzo": 35, "serie": "Distant Reading"}
-  ]
+ "nota": "Unico elenco dei poster (25/11/2026). Lo leggono lo Shop (scripts/pagine_paese.py) e Già pubblici («Poster disponibile» nella scheda dell'opera). qid = l'opera su Wikidata; etsy = codice dell'inserzione. calendari = i calendari da muro (27/11/2026): li leggono lo Shop e la pagina del calendario dello stesso anno.",
+ "poster": [
+  {
+   "qid": "Q92640",
+   "img": "alice",
+   "etsy": "4624523730/alice-was-beginning-to-get-very-tired",
+   "frase": "Alice was beginning to get very tired",
+   "opera": "Alice's Adventures in Wonderland",
+   "autore": "Lewis Carroll",
+   "anno": 1865,
+   "prezzo": 35,
+   "serie": null
+  },
+  {
+   "qid": "Q308918",
+   "img": "tale-of-two-cities",
+   "etsy": "4624515025/it-was-the-best-of-times-a-tale-of-two",
+   "frase": "It was the best of times",
+   "opera": "A Tale of Two Cities",
+   "autore": "Charles Dickens",
+   "anno": 1859,
+   "prezzo": 35,
+   "serie": null
+  },
+  {
+   "qid": "Q202975",
+   "img": "wuthering-heights",
+   "etsy": "4625383799/i-am-heathcliff-wuthering-heights-emily",
+   "frase": "I am Heathcliff!",
+   "opera": "Wuthering Heights",
+   "autore": "Emily Brontë",
+   "anno": 1847,
+   "prezzo": 35,
+   "serie": "Distant Reading"
+  },
+  {
+   "qid": "Q600461",
+   "img": "white-nights",
+   "etsy": "4625419690/a-whole-moment-of-happiness-white-nights",
+   "frase": "A whole moment of happiness!",
+   "opera": "White Nights",
+   "autore": "Fyodor Dostoevsky",
+   "anno": 1848,
+   "prezzo": 35,
+   "serie": "Distant Reading"
+  }
+ ],
+ "calendari": [
+  {
+   "img": "calendario-2027",
+   "etsy": "4626868223/literary-calendar-2027-12-original",
+   "titolo": "Literary Calendar 2027",
+   "anno": 2027,
+   "prezzo": 30,
+   "larghezza": 1400,
+   "altezza": 994
+  }
+ ]
 }
